@@ -2,32 +2,60 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Lock, User, ArrowRight, Loader2 } from "lucide-react";
+import { Lock, User, ArrowRight, Loader2, Mail, UserPlus, FileText } from "lucide-react";
 import Link from "next/link";
+import { toast } from "sonner"; // Assuming sonner or similar might be used later, but for now standard alerts or state error
 
-export default function LoginPage() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+export default function AuthPage() {
+    const [isLogin, setIsLogin] = useState(true);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        password: "",
+    });
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
     const router = useRouter();
 
-    const handleLogin = async (e: React.FormEvent) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setError("");
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
         setError("");
 
-        // Simulate network delay for effect
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+        const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
 
-        // Simple mock validation
-        if (email && password) {
-            // Set cookie
-            document.cookie = "auth_token=valid_token; path=/; max-age=86400; SameSite=Strict";
-            router.push("/");
-            router.refresh(); // Refresh to update middleware/server state check
-        } else {
-            setError("Please enter valid credentials");
+        try {
+            const res = await fetch(endpoint, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || "Something went wrong");
+            }
+
+            if (isLogin) {
+                router.push("/");
+                router.refresh();
+            } else {
+                // Switch to login mode after successful signup
+                setIsLogin(true);
+                setError("");
+                setFormData(prev => ({ ...prev, password: "" })); // Clear password
+                // Optional: show success message
+                alert("Account created! Please sign in.");
+            }
+        } catch (err: any) {
+            setError(err.message);
+        } finally {
             setIsLoading(false);
         }
     };
@@ -46,25 +74,55 @@ export default function LoginPage() {
 
                     <div className="text-center mb-10">
                         <div className="w-16 h-16 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center shadow-lg shadow-blue-600/20 mb-6 transform rotate-3 hover:rotate-6 transition-transform">
-                            <Lock className="w-8 h-8 text-white" />
+                            {isLogin ? <Lock className="w-8 h-8 text-white" /> : <UserPlus className="w-8 h-8 text-white" />}
                         </div>
-                        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Welcome Back</h1>
-                        <p className="text-zinc-500 dark:text-zinc-400">Enter your credentials to access the planner</p>
+                        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+                            {isLogin ? "Welcome Back" : "Create Account"}
+                        </h1>
+                        <p className="text-zinc-500 dark:text-zinc-400">
+                            {isLogin
+                                ? "Enter your credentials to access the planner"
+                                : "Join to start tracking your study progress"}
+                        </p>
                     </div>
 
-                    <form onSubmit={handleLogin} className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-5">
+
+                        {!isLogin && (
+                            <div className="space-y-2 animate-in fade-in slide-in-from-top-4">
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                    Full Name
+                                </label>
+                                <div className="relative group">
+                                    <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
+                                        <User className="w-5 h-5" />
+                                    </div>
+                                    <input
+                                        name="name"
+                                        type="text"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                        className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                        placeholder="John Doe"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                        )}
+
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
                                 Email
                             </label>
                             <div className="relative group">
                                 <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
-                                    <User className="w-5 h-5" />
+                                    <Mail className="w-5 h-5" />
                                 </div>
                                 <input
+                                    name="email"
                                     type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={formData.email}
+                                    onChange={handleInputChange}
                                     className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
                                     placeholder="name@example.com"
                                     required
@@ -81,12 +139,14 @@ export default function LoginPage() {
                                     <Lock className="w-5 h-5" />
                                 </div>
                                 <input
+                                    name="password"
                                     type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    value={formData.password}
+                                    onChange={handleInputChange}
                                     className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
                                     placeholder="••••••••"
                                     required
+                                    minLength={6}
                                 />
                             </div>
                         </div>
@@ -106,23 +166,35 @@ export default function LoginPage() {
                                 <Loader2 className="w-5 h-5 animate-spin" />
                             ) : (
                                 <>
-                                    Sign In
+                                    {isLogin ? "Sign In" : "Create Account"}
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </>
                             )}
                         </button>
                     </form>
 
-                    <p className="mt-8 text-center text-sm text-zinc-500">
-                        Don't have an account?{" "}
-                        <Link href="#" className="text-blue-600 hover:text-blue-500 font-semibold hover:underline">
-                            Contact Admin
-                        </Link>
-                    </p>
+                    <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800 text-center">
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                            {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
+                            <button
+                                onClick={() => {
+                                    setIsLogin(!isLogin);
+                                    setError("");
+                                    setFormData({ name: "", email: "", password: "" });
+                                }}
+                                className="text-blue-600 hover:text-blue-500 font-semibold hover:underline bg-transparent border-none cursor-pointer ml-1"
+                            >
+                                {isLogin ? "Sign up" : "Sign in"}
+                            </button>
+                        </p>
+                    </div>
                 </div>
 
-                <div className="mt-8 text-center text-zinc-400 text-sm">
-                    Protected by Secure Auth System
+                <div className="mt-8 text-center text-zinc-400 text-sm flex items-center justify-center gap-2">
+                    <div className="px-2 py-1 bg-green-500/10 text-green-600 rounded text-xs font-medium border border-green-500/20">
+                        v1.0.0
+                    </div>
+                    <span>Secure Study Planner System</span>
                 </div>
             </div>
         </div>

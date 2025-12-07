@@ -1,0 +1,73 @@
+import fs from 'fs';
+import path from 'path';
+import bcrypt from 'bcryptjs';
+
+const DB_PATH = path.join(process.cwd(), 'src', 'data', 'users.json');
+
+export interface User {
+    id: string;
+    email: string;
+    name: string;
+    passwordHash: string;
+    createdAt: string;
+}
+
+// Ensure DB file exists
+function ensureDb() {
+    if (!fs.existsSync(DB_PATH)) {
+        // directory might not exist if data folder was empty
+        const dir = path.dirname(DB_PATH);
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir, { recursive: true });
+        }
+        fs.writeFileSync(DB_PATH, JSON.stringify([], null, 2));
+    }
+}
+
+export function getAllUsers(): User[] {
+    ensureDb();
+    try {
+        const data = fs.readFileSync(DB_PATH, 'utf-8');
+        return JSON.parse(data);
+    } catch (error) {
+        return [];
+    }
+}
+
+export function getUserByEmail(email: string): User | undefined {
+    const users = getAllUsers();
+    return users.find((u) => u.email.toLowerCase() === email.toLowerCase());
+}
+
+export async function createUser(email: string, password: string, name: string): Promise<User> {
+    const users = getAllUsers();
+
+    if (getUserByEmail(email)) {
+        throw new Error('User already exists');
+    }
+
+    const passwordHash = await bcrypt.hash(password, 10);
+
+    const newUser: User = {
+        id: crypto.randomUUID(),
+        email,
+        name,
+        passwordHash,
+        createdAt: new Date().toISOString(),
+    };
+
+    users.push(newUser);
+    fs.writeFileSync(DB_PATH, JSON.stringify(users, null, 2));
+
+    return newUser;
+}
+
+export async function verifyUser(email: string, password: string): Promise<User | null> {
+    const user = getUserByEmail(email);
+    if (!user) return null;
+
+    const isValid = await bcrypt.compare(password, user.passwordHash);
+    if (!isValid) return null;
+
+    return user;
+}
