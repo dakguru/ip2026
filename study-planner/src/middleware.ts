@@ -3,15 +3,21 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
     const token = request.cookies.get('auth_token');
-    const isLoginPage = request.nextUrl.pathname === '/login';
+    const { pathname } = request.nextUrl;
 
-    // If user is on login page and has a valid token, redirect to dashboard
+    const isLoginPage = pathname === '/login';
+    const isPublicPath = pathname === '/' || pathname.startsWith('/guide') || pathname.startsWith('/api/auth');
+
+    // If user is on login page and has a valid token, redirect to planner
     if (isLoginPage && token) {
-        return NextResponse.redirect(new URL('/', request.url));
+        return NextResponse.redirect(new URL('/planner', request.url));
     }
 
-    // If user is not on login page and has no token, redirect to login
-    if (!isLoginPage && !token) {
+    // Protected Routes Logic
+    // If it's not a public path and not login page, it requires authentication
+    const isProtectedRoute = !isPublicPath && !isLoginPage;
+
+    if (isProtectedRoute && !token) {
         return NextResponse.redirect(new URL('/login', request.url));
     }
 
@@ -28,6 +34,6 @@ export const config = {
          * - favicon.ico (favicon file)
          * - public files (images etc)
          */
-        '/((?!api|_next/static|_next/image|favicon.ico).*)',
+        '/((?!api|_next/static|_next/image|favicon.ico|.*\\.png$|.*\\.jpg$|.*\\.svg$).*)',
     ],
 };

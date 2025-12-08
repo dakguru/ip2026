@@ -64,6 +64,17 @@ export function UserMenu() {
 
     if (!mounted) return null;
 
+    if (!session) {
+        return (
+            <button
+                onClick={() => router.push('/login')}
+                className="px-4 py-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+            >
+                Log In
+            </button>
+        );
+    }
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -167,7 +178,10 @@ export function UserMenu() {
                         </button>
                     )}
 
-                    <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95">
+                    <button
+                        onClick={() => router.push('/pricing')}
+                        className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95"
+                    >
                         <span>Upgrade to Pro</span>
                     </button>
                 </div>

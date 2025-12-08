@@ -1,20 +1,27 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from 'next/image';
 import { Lock, User, ArrowRight, Loader2, Mail, UserPlus } from "lucide-react";
 
-export default function AuthPage() {
+function AuthForm() {
+    const searchParams = useSearchParams();
+    const router = useRouter();
     const [isLogin, setIsLogin] = useState(true);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         password: "",
     });
+
+    useEffect(() => {
+        if (searchParams.get("mode") === "signup") {
+            setIsLogin(false);
+        }
+    }, [searchParams]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
-    const router = useRouter();
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -198,5 +205,13 @@ export default function AuthPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+export default function AuthPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Loader2 className="w-8 h-8 animate-spin text-blue-600" /></div>}>
+            <AuthForm />
+        </Suspense>
     );
 }

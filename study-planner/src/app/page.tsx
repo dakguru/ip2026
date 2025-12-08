@@ -1,8 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { BookOpen, Calendar, GraduationCap, BrainCircuit, LibraryBig } from 'lucide-react';
+import { BookOpen, Calendar, GraduationCap, BrainCircuit, LibraryBig, LogIn, UserPlus } from 'lucide-react';
 
-export default function Home() {
+import { cookies } from 'next/headers';
+
+export default async function Home() {
+  const cookieStore = await cookies();
+  const isLoggedIn = cookieStore.has('auth_token');
+
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-50 selection:bg-blue-100 dark:selection:bg-blue-900/30">
 
@@ -26,12 +31,25 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-400">
-            <Link href="/planner" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-200 dark:shadow-blue-900/20 flex items-center gap-2">
-              <Calendar className="w-5 h-5" /> Start Planning
-            </Link>
-            <Link href="/guide" className="px-8 py-4 bg-white hover:bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm flex items-center gap-2">
-              <LibraryBig className="w-5 h-5" /> View Guide
-            </Link>
+            {isLoggedIn ? (
+              <>
+                <Link href="/planner" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-200 dark:shadow-blue-900/20 flex items-center gap-2">
+                  <Calendar className="w-5 h-5" /> Go to Planner
+                </Link>
+                <Link href="/guide" className="px-8 py-4 bg-white hover:bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm flex items-center gap-2">
+                  <LibraryBig className="w-5 h-5" /> View Guide
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link href="/login" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-200 dark:shadow-blue-900/20 flex items-center gap-2">
+                  <LogIn className="w-5 h-5" /> Login
+                </Link>
+                <Link href="/login?mode=signup" className="px-8 py-4 bg-white hover:bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm flex items-center gap-2">
+                  <UserPlus className="w-5 h-5" /> Create Account
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
