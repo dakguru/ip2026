@@ -35,6 +35,7 @@ interface HistoryItem {
 const RAPID_API_KEY = "1bc39bde08msh044dfa558b1e89fp10d0d8jsn64cd63789ee0";
 const NEWS_API_HOST = "real-time-news-data.p.rapidapi.com";
 const AFFAIRS_API_HOST = "current-affairs-of-india.p.rapidapi.com";
+const NEWSAPI_ORG_KEY = "78307967c577440ea972024a7bce20c4";
 
 // --- Components ---
 
