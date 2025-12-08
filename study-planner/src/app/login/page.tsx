@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Lock, User, ArrowRight, Loader2, Mail, UserPlus, FileText } from "lucide-react";
-import Link from "next/link";
-import { toast } from "sonner"; // Assuming sonner or similar might be used later, but for now standard alerts or state error
+import { Lock, User, ArrowRight, Loader2, Mail, UserPlus } from "lucide-react";
 
 export default function AuthPage() {
     const [isLogin, setIsLogin] = useState(true);
@@ -53,8 +51,9 @@ export default function AuthPage() {
                 // Optional: show success message
                 alert("Account created! Please sign in.");
             }
-        } catch (err: any) {
-            setError(err.message);
+        } catch (err) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            setError((err as any).message);
         } finally {
             setIsLoading(false);
         }

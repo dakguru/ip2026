@@ -109,7 +109,14 @@ const ALL_SETS_DATA = {
 };
 
 // Helper to convert the user's flat format into our app's rich format
-const convertToQuizSet = (setId: number, title: string, data: any[]) => {
+interface RawQuestion {
+    q: string;
+    o: string[];
+    a: number;
+    e?: string;
+}
+
+const convertToQuizSet = (setId: number, title: string, data: RawQuestion[]) => {
     return {
         id: `set-${setId}`,
         title: title,

@@ -1,6 +1,6 @@
 import { PlanItem, ProgressData } from "@/lib/types";
 import { format, isSameDay, isToday, parseISO } from "date-fns";
-import { CheckCircle2, Circle, Clock, Check } from "lucide-react";
+import { CheckCircle2, Circle, Clock } from "lucide-react";
 import { useRef, useEffect } from "react";
 import clsx from 'clsx';
 import { twMerge } from "tailwind-merge";
@@ -33,7 +33,7 @@ export default function ListView({ plan, progress, selectedDate, onSelectDate }:
             </h2>
 
             <div className="flex-1 overflow-y-auto space-y-2 pr-2">
-                {plan.map((item, idx) => {
+                {plan.map((item) => {
                     const date = parseISO(item.date);
                     const isSelected = isSameDay(date, selectedDate);
                     const isDayToday = isToday(date);

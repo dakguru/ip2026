@@ -5,5 +5,13 @@
     "name": "Arun S",
     "passwordHash": "$2b$10$DWKJHbDGlsb1eXvV75XHpOEfagNUEotDCgOoNonHmp5.Tk.JuoYci",
     "createdAt": "2025-12-07T16:56:59.221Z"
+  },
+  {
+    "id": "8400a18d-19da-44b8-9fe2-48ff2110e3fa",
+    "email": "admin@studyplanner.com",
+    "name": "System Admin",
+    "role": "admin",
+    "passwordHash": "$2b$10$/zajJELmqHvTHdYi1t3pROtNv8jzWb0l3iWVdJ6U7szy9siVdwnmO",
+    "createdAt": "2025-12-08T02:35:11.851Z"
   }
 ]

@@ -37,7 +37,7 @@ export async function POST(request: Request) {
         });
 
         // Set a client-readable cookie for UI state (non-httpOnly)
-        response.cookies.set('user_session', JSON.stringify({ name: user.name }), {
+        response.cookies.set('user_session', JSON.stringify({ name: user.name, email: user.email }), {
             httpOnly: false,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
         });
 
         return response;
-    } catch (error: any) {
+    } catch (error) {
         console.error('Login error:', error);
         return NextResponse.json(
             { error: 'Internal server error' },

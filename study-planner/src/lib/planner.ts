@@ -12,8 +12,8 @@ export function generateStudyPlan(): PlanItem[] {
     const lightTopics = SYLLABUS_DATA.filter(t => t.type === 'light');
 
     // Trackers for multi-day topics
-    let heavyState = { index: 0, dayProgress: 1 };
-    let lightState = { index: 0, dayProgress: 1 };
+    const heavyState = { index: 0, dayProgress: 1 };
+    const lightState = { index: 0, dayProgress: 1 };
 
     let saturdayNonMockCount = 0;
     let currentDate = startDate;
@@ -29,7 +29,7 @@ export function generateStudyPlan(): PlanItem[] {
         const dateString = format(currentDate, 'yyyy-MM-dd');
         const dayOfMonth = getDate(currentDate);
 
-        let item: PlanItem = {
+        const item: PlanItem = {
             date: dateString,
             title: '',
             type: 'light'

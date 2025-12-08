@@ -1,4 +1,4 @@
-import { BookOpen, Search, Clock, CalendarDays, ArrowRight, Menu } from "lucide-react";
+import { Search, Clock, CalendarDays, ArrowRight, Menu } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { PlanItem } from "@/lib/types";
 import { format, parseISO } from "date-fns";
@@ -10,7 +10,7 @@ interface NavbarProps {
     onMenuClick?: () => void;
 }
 
-export default function Navbar({ onSearch, plan, onSelectDate, onMenuClick }: NavbarProps) {
+export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps) {
     const [query, setQuery] = useState("");
     const [results, setResults] = useState<PlanItem[]>([]);
     const [showResults, setShowResults] = useState(false);

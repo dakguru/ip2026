@@ -1,6 +1,6 @@
 import { PlanItem, ProgressData } from "@/lib/types";
 import { format, parseISO, isPast, isToday } from "date-fns";
-import { CheckCircle2, Circle, AlertCircle, Clock } from "lucide-react";
+import { CheckCircle2, AlertCircle, Clock } from "lucide-react";
 import clsx from 'clsx';
 import { twMerge } from "tailwind-merge";
 

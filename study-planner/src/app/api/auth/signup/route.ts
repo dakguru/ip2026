@@ -22,10 +22,11 @@ export async function POST(request: Request) {
         await createUser(email, password, name);
 
         return NextResponse.json({ success: true, message: 'Account created successfully' });
-    } catch (error: any) {
+    } catch (error) {
         console.error('Signup error:', error);
         return NextResponse.json(
-            { error: error.message || 'Internal server error' },
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            { error: (error as any).message || 'Internal server error' },
             { status: 500 }
         );
     }

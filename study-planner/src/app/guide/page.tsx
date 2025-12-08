@@ -3,11 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, FileText, Download, Eye } from "lucide-react";
 
-interface GuideFile {
-    name: string;
-    path: string;
-    category: 'Paper I' | 'Paper II' | 'Paper III';
-}
+
 
 const PAPER_I_FILES = [
     "Annual_Report_2024-2025 & Book of Information.pdf",

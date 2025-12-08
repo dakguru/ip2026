@@ -28,6 +28,7 @@ export default function PlannerPage() {
     useEffect(() => {
         const saved = localStorage.getItem('progressData');
         if (saved) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setProgress(JSON.parse(saved));
         }
         setMounted(true);

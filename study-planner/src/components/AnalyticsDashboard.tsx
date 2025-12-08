@@ -28,7 +28,7 @@ export default function AnalyticsDashboard({ plan, progress }: DashboardProps) {
     };
 
     const p1 = getPaperProgress("Paper I");
-    const p2 = getPaperProgress("Paper II"); // Note: Paper II is Drafting practice mostly
+    // const p2 = getPaperProgress("Paper II"); // Note: Paper II is Drafting practice mostly
     const p3 = getPaperProgress("Paper III");
 
     // 3. Pie Chart Data: Completed vs Pending vs Overdue

@@ -1,0 +1,182 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+    Laptop,
+    Moon,
+    Sun,
+    LayoutDashboard,
+    User,
+    PlusCircle,
+    Keyboard,
+    Home as HomeIcon,
+    LogOut,
+    Shield
+} from "lucide-react";
+
+interface UserSession {
+    name: string;
+    email?: string;
+}
+
+export function UserMenu() {
+    const { theme, setTheme } = useTheme();
+    const router = useRouter();
+    const [session, setSession] = useState<UserSession | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setMounted(true);
+        // Parse cookie for basic session info
+        const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+        if (match) {
+            try {
+                const decoded = decodeURIComponent(match[2]);
+                setSession(JSON.parse(decoded));
+            } catch (e) {
+                console.error("Failed to parse session", e);
+            }
+        }
+    }, []);
+
+    const handleLogout = async () => {
+        try {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            router.push('/login');
+            router.refresh();
+        } catch (error) {
+            console.error('Logout failed', error);
+        }
+    };
+
+    if (!mounted) return null;
+
+    return (
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <button className="rounded-full ring-offset-2 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all hover:opacity-80">
+                    <Avatar className="h-9 w-9 border border-zinc-200 dark:border-zinc-700">
+                        <AvatarImage src={`https://api.dicebear.com/9.x/notionists/svg?seed=${session?.name || 'User'}`} />
+                        <AvatarFallback>{session?.name?.[0]?.toUpperCase() || 'U'}</AvatarFallback>
+                    </Avatar>
+                </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-64" align="end" forceMount>
+                {/* User Stats/Info Header */}
+                <div className="flex flex-col space-y-1 p-2">
+                    <p className="font-medium text-sm leading-none">{session?.name || 'Guest User'}</p>
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-none">
+                        {session?.email || 'user@example.com'}
+                    </p>
+                </div>
+
+                <DropdownMenuSeparator />
+
+                <DropdownMenuGroup>
+                    <DropdownMenuItem onClick={() => router.push('/planner')}>
+                        <LayoutDashboard className="mr-2 h-4 w-4 text-zinc-500" />
+                        <span>Dashboard</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => router.push('/settings')}>
+                        <User className="mr-2 h-4 w-4 text-zinc-500" />
+                        <span>Account Settings</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                        <PlusCircle className="mr-2 h-4 w-4 text-zinc-500" />
+                        <span>Create Team</span>
+                    </DropdownMenuItem>
+                </DropdownMenuGroup>
+
+                <DropdownMenuSeparator />
+
+                <DropdownMenuGroup>
+                    <DropdownMenuItem>
+                        <Keyboard className="mr-2 h-4 w-4 text-zinc-500" />
+                        <span>Command Menu</span>
+                        <span className="ml-auto text-xs tracking-widest text-zinc-500 border border-zinc-200 dark:border-zinc-700 px-1 rounded bg-zinc-100 dark:bg-zinc-800">
+                            ⌘K
+                        </span>
+                    </DropdownMenuItem>
+
+                    {/* Custom Theme Switcher Row */}
+                    <div className="flex items-center justify-between px-2 py-2 text-sm">
+                        <span className="flex items-center">Themes</span>
+                        <div className="flex items-center p-1 bg-zinc-100 dark:bg-zinc-800 rounded-full border border-zinc-200 dark:border-zinc-700">
+                            <button
+                                onClick={() => setTheme("system")}
+                                className={`p-1 rounded-full transition-all ${theme === 'system' ? 'bg-white dark:bg-zinc-600 shadow-sm text-zinc-900 dark:text-zinc-100' : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300'}`}
+                                title="System"
+                            >
+                                <Laptop className="h-3.5 w-3.5" />
+                            </button>
+                            <button
+                                onClick={() => setTheme("light")}
+                                className={`p-1 rounded-full transition-all ${theme === 'light' ? 'bg-white dark:bg-zinc-600 shadow-sm text-zinc-900 dark:text-zinc-100' : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300'}`}
+                                title="Light"
+                            >
+                                <Sun className="h-3.5 w-3.5" />
+                            </button>
+                            <button
+                                onClick={() => setTheme("dark")}
+                                className={`p-1 rounded-full transition-all ${theme === 'dark' ? 'bg-white dark:bg-zinc-600 shadow-sm text-zinc-900 dark:text-zinc-100' : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300'}`}
+                                title="Dark"
+                            >
+                                <Moon className="h-3.5 w-3.5" />
+                            </button>
+                        </div>
+                    </div>
+                </DropdownMenuGroup>
+
+                <DropdownMenuSeparator />
+
+                <DropdownMenuItem onClick={() => router.push('/')}>
+                    <HomeIcon className="mr-2 h-4 w-4 text-zinc-500" />
+                    <span>Home Page</span>
+                    <span className="ml-auto text-xs text-zinc-400">⇧⌘H</span>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem onClick={handleLogout} className="text-red-500 dark:text-red-400 focus:text-red-500 focus:bg-red-50 dark:focus:bg-red-900/10">
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Log Out</span>
+                    <span className="ml-auto text-xs opacity-60">⇧⌘Q</span>
+                </DropdownMenuItem>
+
+                <DropdownMenuSeparator />
+
+                <div className="p-2 space-y-2">
+                    {/* Admin Link if role is admin - Basic check */
+                        /* Note: session check is client side only here, real protection is on the page/api */
+                        /* We don't have role in session cookie yet, so we might need to rely on API or updated cookie. */
+                        /* For now, let's just show it or check if we can add role to cookie in login route. */
+                        /* Assuming we updated login route to include role in cookie? Not yet. */
+                        /* Let's just add the link for now, it will be protected by the page logic. */
+                    }
+                    <button
+                        onClick={() => router.push('/admin')}
+                        className="w-full flex items-center justify-center gap-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 text-sm font-semibold py-2 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all"
+                    >
+                        <Shield className="w-4 h-4" />
+                        <span>Admin Panel</span>
+                    </button>
+
+                    <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95">
+                        <span>Upgrade to Pro</span>
+                    </button>
+                </div>
+
+            </DropdownMenuContent>
+        </DropdownMenu>
+    );
+}

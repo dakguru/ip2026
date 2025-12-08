@@ -10,6 +10,7 @@ export function ThemeToggle() {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
     }, []);
 
@@ -20,8 +21,8 @@ export function ThemeToggle() {
             <button
                 onClick={() => setTheme("light")}
                 className={`p-1.5 rounded-full transition-all ${theme === "light"
-                        ? "bg-white text-yellow-600 shadow-sm"
-                        : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
+                    ? "bg-white text-yellow-600 shadow-sm"
+                    : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
                     }`}
                 title="Light Mode"
             >
@@ -30,8 +31,8 @@ export function ThemeToggle() {
             <button
                 onClick={() => setTheme("dark")}
                 className={`p-1.5 rounded-full transition-all ${theme === "dark"
-                        ? "bg-zinc-700 text-blue-400 shadow-sm"
-                        : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
+                    ? "bg-zinc-700 text-blue-400 shadow-sm"
+                    : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
                     }`}
                 title="Dark Mode"
             >
@@ -40,8 +41,8 @@ export function ThemeToggle() {
             <button
                 onClick={() => setTheme("system")}
                 className={`p-1.5 rounded-full transition-all ${theme === "system"
-                        ? "bg-zinc-200 dark:bg-zinc-600 text-zinc-900 dark:text-zinc-100 shadow-sm"
-                        : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
+                    ? "bg-zinc-200 dark:bg-zinc-600 text-zinc-900 dark:text-zinc-100 shadow-sm"
+                    : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
                     }`}
                 title="System Preference"
             >

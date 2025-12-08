@@ -9,6 +9,7 @@ export interface User {
     email: string;
     name: string;
     passwordHash: string;
+    role?: 'user' | 'admin';
     createdAt: string;
 }
 
@@ -29,7 +30,7 @@ export function getAllUsers(): User[] {
     try {
         const data = fs.readFileSync(DB_PATH, 'utf-8');
         return JSON.parse(data);
-    } catch (error) {
+    } catch {
         return [];
     }
 }
@@ -39,7 +40,7 @@ export function getUserByEmail(email: string): User | undefined {
     return users.find((u) => u.email.toLowerCase() === email.toLowerCase());
 }
 
-export async function createUser(email: string, password: string, name: string): Promise<User> {
+export async function createUser(email: string, password: string, name: string, role: 'user' | 'admin' = 'user'): Promise<User> {
     const users = getAllUsers();
 
     if (getUserByEmail(email)) {
@@ -52,6 +53,7 @@ export async function createUser(email: string, password: string, name: string):
         id: crypto.randomUUID(),
         email,
         name,
+        role,
         passwordHash,
         createdAt: new Date().toISOString(),
     };
@@ -70,4 +72,25 @@ export async function verifyUser(email: string, password: string): Promise<User 
     if (!isValid) return null;
 
     return user;
+}
+
+export function updateUser(currentEmail: string, updates: Partial<Pick<User, 'name' | 'email'>>): User | null {
+    const users = getAllUsers();
+    const userIndex = users.findIndex((u) => u.email.toLowerCase() === currentEmail.toLowerCase());
+
+    if (userIndex === -1) return null;
+
+    // If email is being changed, check if new email is taken
+    if (updates.email && updates.email.toLowerCase() !== currentEmail.toLowerCase()) {
+        const existing = getUserByEmail(updates.email);
+        if (existing) {
+            throw new Error("Email already in use");
+        }
+    }
+
+    const updatedUser = { ...users[userIndex], ...updates };
+    users[userIndex] = updatedUser;
+
+    fs.writeFileSync(DB_PATH, JSON.stringify(users, null, 2));
+    return updatedUser;
 }

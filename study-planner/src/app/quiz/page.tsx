@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
-import { QuizSet, Question } from '@/lib/quizTypes';
+import { QuizSet } from '@/lib/quizTypes';
 
 export default function QuizDashboard() {
     const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
@@ -17,7 +17,7 @@ export default function QuizDashboard() {
 
     // Helpers
     const activeTopic = QUIZ_DATA.find(t => t.id === selectedTopic);
-    const completedCount = Object.keys(answers).length;
+    // const completedCount = Object.keys(answers).length;
     const currentQ = selectedSet?.questions[currentQIndex];
 
     const handleStartSet = (set: QuizSet) => {
