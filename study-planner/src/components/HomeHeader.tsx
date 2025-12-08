@@ -57,7 +57,7 @@ export default function HomeHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
                                     </div>
                                 </div>
 
-                                <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400">About Us</Link>
+                                <Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About Us</Link>
                             </nav>
                         </div>
 
