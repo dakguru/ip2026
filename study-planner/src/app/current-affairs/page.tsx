@@ -26,6 +26,10 @@ interface QuizItem {
 }
 
 interface HistoryItem {
+    year: string;
+    event: string;
+    description?: string;
+}
 
 function QuizSection() {
     const [questions, setQuestions] = useState<any[]>([]);
