@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import Link from "next/link";
 import Image from "next/image";
-import { Check, Smartphone, Mail, MapPin, Phone, ArrowRight, Star, Youtube, Instagram, Twitter, Facebook, MessageCircle } from "lucide-react";
+import { Check, Smartphone, Mail, MapPin, Phone, ArrowRight, Star, Youtube, Instagram, Twitter, Facebook, MessageCircle, CheckCircle2, BookOpen, Zap, FileText, Layout, Award } from "lucide-react";
 import { redirect } from "next/navigation";
 import HomeHeader from "@/components/HomeHeader";
 import ContactForm from "@/components/ContactForm";
@@ -32,11 +32,11 @@ export default async function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {[
-            { title: "MCQs", desc: "Practice Questions", color: "from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20", icon: MessageCircle, link: "/quiz" },
-            { title: "Study Planner", desc: "Organize Learning", color: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20", icon: Check, link: "/planner" },
-            { title: "Web Guide", desc: "Comprehensive Resources", color: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20", icon: Star, link: "/guide" },
-            { title: "Flash Cards", desc: "Quick Revision", color: "from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20", icon: Youtube, link: "/flashcards" },
-            { title: "PDF Notes", desc: "Downloadable Content", color: "from-red-50 to-rose-50 dark:from-red-900/20 dark:to-rose-900/20", icon: Mail, link: "/notes" }
+            { title: "MCQs", desc: "Practice Questions", color: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20", icon: CheckCircle2, link: "/quiz" },
+            { title: "Study Planner", desc: "Organize Learning", color: "from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20", icon: Layout, link: "/planner" },
+            { title: "Web Guide", desc: "Comprehensive Resources", color: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20", icon: BookOpen, link: "/guide" },
+            { title: "Flash Cards", desc: "Quick Revision", color: "from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20", icon: Zap, link: "/flashcards" },
+            { title: "PDF Notes", desc: "Downloadable Content", color: "from-red-50 to-rose-50 dark:from-red-900/20 dark:to-rose-900/20", icon: FileText, link: "/notes" }
           ].map((item, idx) => (
             <Link key={idx} href={item.link} className="group cursor-pointer hover:-translate-y-2 transition-all duration-300 block">
               <div className={`relative aspect-square rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all border border-zinc-100 dark:border-zinc-800 mb-3 bg-gradient-to-br ${item.color} flex flex-col items-center justify-center p-4`}>
