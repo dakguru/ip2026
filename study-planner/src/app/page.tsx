@@ -32,13 +32,13 @@ export default async function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {[
-            { title: "MCQs", desc: "Practice Questions", color: "from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20", icon: MessageCircle },
-            { title: "Study Planner", desc: "Organize Learning", color: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20", icon: Check },
-            { title: "Web Guide", desc: "Comprehensive Resources", color: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20", icon: Star },
-            { title: "Flash Cards", desc: "Quick Revision", color: "from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20", icon: Youtube },
-            { title: "PDF Notes", desc: "Downloadable Content", color: "from-red-50 to-rose-50 dark:from-red-900/20 dark:to-rose-900/20", icon: Mail }
+            { title: "MCQs", desc: "Practice Questions", color: "from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20", icon: MessageCircle, link: "/quiz" },
+            { title: "Study Planner", desc: "Organize Learning", color: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20", icon: Check, link: "/planner" },
+            { title: "Web Guide", desc: "Comprehensive Resources", color: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20", icon: Star, link: "/guide" },
+            { title: "Flash Cards", desc: "Quick Revision", color: "from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20", icon: Youtube, link: "/flashcards" },
+            { title: "PDF Notes", desc: "Downloadable Content", color: "from-red-50 to-rose-50 dark:from-red-900/20 dark:to-rose-900/20", icon: Mail, link: "/notes" }
           ].map((item, idx) => (
-            <div key={idx} className="group cursor-pointer hover:-translate-y-2 transition-all duration-300">
+            <Link key={idx} href={item.link} className="group cursor-pointer hover:-translate-y-2 transition-all duration-300 block">
               <div className={`relative aspect-square rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all border border-zinc-100 dark:border-zinc-800 mb-3 bg-gradient-to-br ${item.color} flex flex-col items-center justify-center p-4`}>
                 <div className="mb-3 p-3 bg-white/60 dark:bg-black/20 rounded-full shadow-sm group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="w-8 h-8 text-zinc-700 dark:text-zinc-200" />
@@ -48,7 +48,7 @@ export default async function Home() {
                   <p className="text-xs text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">{item.desc}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
