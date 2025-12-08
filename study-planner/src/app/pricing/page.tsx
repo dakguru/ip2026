@@ -6,18 +6,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function PricingPage() {
-    const [selectedPlan, setSelectedPlan] = useState<'monthly' | 'yearly' | 'lifetime'>('yearly');
+    const [selectedPlanKey, setSelectedPlanKey] = useState<'monthly' | 'yearly' | 'lifetime'>('yearly');
+    const [activeTab, setActiveTab] = useState<'pro' | 'pass'>('pro');
+    const [showCouponInput, setShowCouponInput] = useState(false);
+    const [couponCode, setCouponCode] = useState("");
+    const [discount, setDiscount] = useState(0);
 
-    const plans = {
+    // Pro Plans Data
+    const proPlans = {
         monthly: {
-            id: 'monthly',
+            id: 'monthly_pro',
             name: 'Monthly Pass Pro',
             validity: 'Valid for 31 Days',
             price: 599,
             originalPrice: 1199,
+            isPopular: false,
         },
         yearly: {
-            id: 'yearly',
+            id: 'yearly_pro',
             name: 'Yearly Pass Pro',
             validity: 'Valid for 365 Days',
             price: 649,
@@ -25,20 +31,67 @@ export default function PricingPage() {
             isPopular: true,
         },
         lifetime: {
-            id: 'lifetime',
+            id: 'lifetime_pro',
             name: '18 Months Pass Pro',
             validity: 'Valid for 548 Days',
             price: 799,
             originalPrice: 1999,
+            isPopular: false,
         }
     };
 
+    // Basic Pass Plans Data
+    const basicPlans = {
+        monthly: {
+            id: 'monthly_basic',
+            name: 'Monthly Pass',
+            validity: 'Valid for 31 Days',
+            price: 299,
+            originalPrice: 599,
+            isPopular: false,
+        },
+        yearly: {
+            id: 'yearly_basic',
+            name: 'Yearly Pass',
+            validity: 'Valid for 365 Days',
+            price: 399,
+            originalPrice: 999,
+            isPopular: true,
+        },
+        lifetime: {
+            id: 'lifetime_basic',
+            name: 'Lifetime Pass',
+            validity: 'Valid for 3 Years',
+            price: 599,
+            originalPrice: 1499,
+            isPopular: false,
+        }
+    };
+
+    const currentPlans = activeTab === 'pro' ? proPlans : basicPlans;
+    const selectedPlan = currentPlans[selectedPlanKey];
+
+    // Coupon Logic
+    const handleApplyCoupon = () => {
+        if (couponCode.trim().toUpperCase() === 'DISCOUNT50') {
+            setDiscount(50);
+            alert("Coupon Applied: ₹50 off!");
+        } else {
+            alert("Invalid Coupon Code");
+            setDiscount(0);
+        }
+    };
+
+    const finalPrice = selectedPlan.price - discount;
+
     const benefits = [
-        { name: "70,000+ Mock Tests", pro: true, basic: true },
-        { name: "Unlimited Pro Live Tests", pro: true, basic: false },
-        { name: "Unlimited Practice Pro Questions", pro: true, basic: false },
-        { name: "17,000+ Previous Year Papers", pro: true, basic: false },
+        { name: "Live Mock Tests", pro: true, basic: true },
+        { name: "Updated Notes as per recent Amendments", pro: true, basic: false },
+        { name: "Web Guide", pro: true, basic: true },
+        { name: "Flash Cards", pro: true, basic: false },
+        { name: "Current Affairs", pro: true, basic: true },
         { name: "Unlimited Re-Attempt mode", pro: true, basic: false },
+        { name: "Previous year question papers", pro: true, basic: false },
     ];
 
     return (
@@ -53,7 +106,7 @@ export default function PricingPage() {
                             <span>Mission Officer</span>
                         </div>
                         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-sm">
-                            Your Journey to Government Job Starts Here
+                            Your Journey to Inspector Posts Starts Here
                         </h1>
                         <p className="text-blue-200 max-w-2xl mx-auto text-lg mb-8">
                             Unlock unlimited access to the best resources and skyrocket your preparation.
@@ -71,12 +124,22 @@ export default function PricingPage() {
                     {/* Left Column: Plan Comparison */}
                     <div className="lg:col-span-7 space-y-8">
 
-                        {/* Tab Switcher (Visual only for now matching reference) */}
-                        <div className="bg-white dark:bg-zinc-900 rounded-2xl p-2 inline-flex shadow-sm border border-zinc-200 dark:border-zinc-800 w-full md:w-auto">
-                            <button className="flex-1 md:flex-none px-8 py-3 rounded-xl bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 font-bold text-sm transition-all shadow-sm ring-1 ring-yellow-200 dark:ring-yellow-800">
-                                Pass Pro <span className="ml-2 bg-yellow-400 text-yellow-900 text-[10px] px-1.5 py-0.5 rounded uppercase">Recommended</span>
+                        {/* Tab Switcher */}
+                        <div className="bg-white dark:bg-zinc-900 rounded-2xl p-2 inline-flex shadow-sm border border-zinc-200 dark:border-zinc-800 w-full md:w-auto gap-2">
+                            <button
+                                onClick={() => { setActiveTab('pro'); setDiscount(0); }}
+                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 ${activeTab === 'pro'
+                                    ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 ring-yellow-200 dark:ring-yellow-800'
+                                    : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}`}
+                            >
+                                Pass Pro {activeTab === 'pro' && <span className="ml-2 bg-yellow-400 text-yellow-900 text-[10px] px-1.5 py-0.5 rounded uppercase">Recommended</span>}
                             </button>
-                            <button className="flex-1 md:flex-none px-8 py-3 rounded-xl text-zinc-500 dark:text-zinc-400 font-medium text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all">
+                            <button
+                                onClick={() => { setActiveTab('pass'); setDiscount(0); }}
+                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 ${activeTab === 'pass'
+                                    ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 ring-blue-200 dark:ring-blue-800'
+                                    : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}`}
+                            >
                                 Pass
                             </button>
                         </div>
@@ -85,8 +148,8 @@ export default function PricingPage() {
                         <div className="bg-white dark:bg-zinc-900 rounded-3xl shadow-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
                             <div className="grid grid-cols-4 p-6 border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/20">
                                 <div className="col-span-2 font-bold text-zinc-500 dark:text-zinc-400 text-sm uppercase tracking-wider">Plan Benefits</div>
-                                <div className="text-center font-bold text-zinc-900 dark:text-zinc-100">Pass Pro</div>
-                                <div className="text-center font-bold text-zinc-400 dark:text-zinc-500">Pass</div>
+                                <div className={`text-center font-bold ${activeTab === 'pro' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Pass Pro</div>
+                                <div className={`text-center font-bold ${activeTab === 'pass' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Pass</div>
                             </div>
 
                             <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
@@ -95,7 +158,7 @@ export default function PricingPage() {
                                         <div className="col-span-2 text-sm sm:text-base font-medium text-zinc-700 dark:text-zinc-300">
                                             {benefit.name}
                                         </div>
-                                        <div className="flex justify-center">
+                                        <div className={`flex justify-center transition-all ${activeTab === 'pro' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
                                             {benefit.pro ? (
                                                 <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 shadow-sm">
                                                     <Check className="w-5 h-5" />
@@ -104,7 +167,7 @@ export default function PricingPage() {
                                                 <X className="w-5 h-5 text-zinc-300" />
                                             )}
                                         </div>
-                                        <div className="flex justify-center">
+                                        <div className={`flex justify-center transition-all ${activeTab === 'pass' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
                                             {benefit.basic ? (
                                                 <div className="w-6 h-6 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-500 dark:text-blue-400">
                                                     <Check className="w-3.5 h-3.5" />
@@ -131,29 +194,55 @@ export default function PricingPage() {
                     <div className="lg:col-span-5 space-y-6">
 
                         {/* Offer Box */}
-                        <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/20 dark:to-rose-950/20 rounded-2xl p-5 border border-pink-100 dark:border-pink-900/30 flex items-start gap-3">
-                            <Tag className="w-5 h-5 text-pink-600 dark:text-pink-400 mt-1 shrink-0" />
-                            <div>
-                                <h3 className="font-bold text-pink-700 dark:text-pink-300 text-sm mb-1">Exciting offers available</h3>
-                                <p className="text-pink-600/80 dark:text-pink-400/80 text-xs">Grab the best deals now! Hurry up, offer ends soon.</p>
-                                <button className="mt-2 text-xs font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 hover:underline">
-                                    Apply Coupon
-                                </button>
+                        <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/20 dark:to-rose-950/20 rounded-2xl p-5 border border-pink-100 dark:border-pink-900/30 flex flex-col gap-3">
+                            <div className="flex items-start gap-3">
+                                <Tag className="w-5 h-5 text-pink-600 dark:text-pink-400 mt-1 shrink-0" />
+                                <div>
+                                    <h3 className="font-bold text-pink-700 dark:text-pink-300 text-sm mb-1">Exciting offers available</h3>
+                                    <p className="text-pink-600/80 dark:text-pink-400/80 text-xs">Grab the best deals now! Hurry up, offer ends soon.</p>
+
+                                    {!showCouponInput && (
+                                        <button
+                                            onClick={() => setShowCouponInput(true)}
+                                            className="mt-2 text-xs font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 hover:underline"
+                                        >
+                                            Apply Coupon
+                                        </button>
+                                    )}
+                                </div>
                             </div>
+
+                            {showCouponInput && (
+                                <div className="mt-2 flex gap-2 animate-in fade-in slide-in-from-top-1">
+                                    <input
+                                        type="text"
+                                        placeholder="Enter Code (try DISCOUNT50)"
+                                        value={couponCode}
+                                        onChange={(e) => setCouponCode(e.target.value)}
+                                        className="flex-1 bg-white dark:bg-zinc-800 border border-pink-200 dark:border-pink-900/50 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-pink-500/20"
+                                    />
+                                    <button
+                                        onClick={handleApplyCoupon}
+                                        className="bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold px-4 py-1.5 rounded-lg transition-colors"
+                                    >
+                                        Apply
+                                    </button>
+                                </div>
+                            )}
                         </div>
 
                         {/* Plan Selection Cards */}
                         <div className="space-y-4">
-                            <h3 className="font-bold text-zinc-900 dark:text-zinc-100 text-lg">Select your Pass Pro Plan:</h3>
+                            <h3 className="font-bold text-zinc-900 dark:text-zinc-100 text-lg">Select your {activeTab === 'pro' ? 'Pass Pro' : 'Pass'} Plan:</h3>
 
-                            {(Object.keys(plans) as Array<keyof typeof plans>).map((key) => {
-                                const plan = plans[key];
-                                const isSelected = selectedPlan === key;
+                            {(Object.keys(currentPlans) as Array<keyof typeof currentPlans>).map((key) => {
+                                const plan = currentPlans[key];
+                                const isSelected = selectedPlanKey === key;
 
                                 return (
                                     <div
                                         key={plan.id}
-                                        onClick={() => setSelectedPlan(key)}
+                                        onClick={() => setSelectedPlanKey(key)}
                                         className={`relative cursor-pointer rounded-2xl p-4 border-2 transition-all duration-200 flex items-center gap-4 group
                                             ${isSelected
                                                 ? 'bg-white dark:bg-zinc-800 border-green-500 shadow-md ring-1 ring-green-500/20'
@@ -191,10 +280,17 @@ export default function PricingPage() {
 
                         {/* Summary & Checkout */}
                         <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 shadow-xl border border-zinc-200 dark:border-zinc-800 sticky top-24">
-                            <div className="flex justify-between items-center mb-6 text-sm text-zinc-600 dark:text-zinc-400">
+                            <div className="flex justify-between items-center mb-2 text-sm text-zinc-600 dark:text-zinc-400">
                                 <span>Total Amount to Pay</span>
-                                <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">₹{plans[selectedPlan].price}</span>
+                                <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">₹{finalPrice}</span>
                             </div>
+
+                            {discount > 0 && (
+                                <div className="flex justify-between items-center mb-6 text-xs text-green-600 font-medium">
+                                    <span>Coupon Discount Applied</span>
+                                    <span>- ₹{discount}</span>
+                                </div>
+                            )}
 
                             <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
                                 <Zap className="w-5 h-5 fill-current" />

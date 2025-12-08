@@ -1,140 +1,248 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { BookOpen, Calendar, GraduationCap, BrainCircuit, LibraryBig, LogIn, UserPlus } from 'lucide-react';
-
-import { cookies } from 'next/headers';
+import { cookies } from "next/headers";
+import Link from "next/link";
+import Image from "next/image";
+import { Check, Smartphone, Mail, MapPin, Phone, ArrowRight, Star, Youtube, Instagram, Twitter, Facebook, MessageCircle } from "lucide-react";
+import { redirect } from "next/navigation";
+import HomeHeader from "@/components/HomeHeader";
 
 export default async function Home() {
   const cookieStore = await cookies();
-  const isLoggedIn = cookieStore.has('auth_token');
+  const authToken = cookieStore.get("auth_token");
+  const isLoggedIn = !!authToken;
 
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-50 selection:bg-blue-100 dark:selection:bg-blue-900/30">
+    <div className="min-h-screen font-sans bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+      {/* 1. Navbar */}
+      {/* 1. Navbar */}
+      <HomeHeader isLoggedIn={isLoggedIn} />
 
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-white dark:bg-zinc-900 border-b border-zinc-100 dark:border-zinc-800">
-        <div className="absolute inset-0 bg-grid-zinc-100/50 dark:bg-grid-zinc-800/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:[mask-image:linear-gradient(0deg,rgba(0,0,0,1),rgba(0,0,0,0.4))] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 pt-24 pb-20 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <Image src="/logo.jpg" alt="Vidyālaya Academy Logo" width={20} height={20} className="rounded-full" />
-            <span>LDCE 2026 Preparation Portal</span>
+      {/* 2. Hero Section */}
+      <section className="pt-16 pb-12 text-center px-4">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-blue-600 dark:text-blue-400 mb-4">
+          Welcome to Vidyālaya Academy
+        </h1>
+
+        <p className="text-zinc-600 dark:text-zinc-300 text-xl max-w-3xl mx-auto">
+          Most Trustworthy Study Platform for Preparation of All Limited Departmental Competition Exams
+        </p>
+      </section>
+
+      {/* 3. Feature Tiles */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {[
+            { title: "MCQs", desc: "Practice Questions", color: "from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20", icon: MessageCircle },
+            { title: "Study Planner", desc: "Organize Learning", color: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20", icon: Check },
+            { title: "Web Guide", desc: "Comprehensive Resources", color: "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20", icon: Star },
+            { title: "Flash Cards", desc: "Quick Revision", color: "from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20", icon: Youtube },
+            { title: "PDF Notes", desc: "Downloadable Content", color: "from-red-50 to-rose-50 dark:from-red-900/20 dark:to-rose-900/20", icon: Mail }
+          ].map((item, idx) => (
+            <div key={idx} className="group cursor-pointer hover:-translate-y-2 transition-all duration-300">
+              <div className={`relative aspect-square rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all border border-zinc-100 dark:border-zinc-800 mb-3 bg-gradient-to-br ${item.color} flex flex-col items-center justify-center p-4`}>
+                <div className="mb-3 p-3 bg-white/60 dark:bg-black/20 rounded-full shadow-sm group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="w-8 h-8 text-zinc-700 dark:text-zinc-200" />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-bold text-zinc-800 dark:text-zinc-100 text-lg mb-1">{item.title}</h3>
+                  <p className="text-xs text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">{item.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 4. Join Section */}
+      <section className="bg-sky-50 dark:bg-sky-900/10 py-20 mb-20">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-800 dark:text-zinc-100 mb-4 leading-tight">
+            Join Recorded Batch for<br />
+            Inspector Posts Exam 2026
+          </h2>
+          <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-8 max-w-2xl mx-auto">
+            Recorded Lecture for Paper-I, II, III, PDF Printable Notes both English & Hindi, Mock Test of All Topic and Paper wise.
+          </p>
+          <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-bold text-lg shadow-xl shadow-blue-500/30 transition-all hover:scale-105 active:scale-95">
+            Join Now
+          </button>
+          <div className="w-24 h-1 bg-blue-500 mx-auto mt-12 rounded-full"></div>
+        </div>
+      </section>
+
+      {/* 5. Why Choose Us */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold text-zinc-800 dark:text-zinc-100 uppercase tracking-tight">
+            Why Choose Vidyālaya Academy
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            {[
+              "An ISO 9001:2015 & MSME (Govt. of India) Certified Publication Institution.",
+              "Faculties having expertise in their field and having more than 15 Years of Experience in Department",
+              "Unique Teaching Method through visual ads on PPT",
+              "Doubt Clear Session at the end of every Live Class",
+              "Updated Contents and Unique Notes",
+              "Evaluation of Preparation through Mock Tests",
+              "Any time Study through App or Website."
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-4">
+                <div className="mt-1 shrink-0">
+                  <Check className="w-6 h-6 text-zinc-800 dark:text-zinc-200 storke-[3]" />
+                </div>
+                <p className="text-lg text-zinc-600 dark:text-zinc-300 font-medium leading-relaxed">
+                  {item}
+                </p>
+              </div>
+            ))}
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 mb-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-            Vidyālaya Academy
-          </h1>
-          <p className="text-xl md:text-2xl text-zinc-500 dark:text-zinc-400 font-medium mb-10 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-            Founder : <span className="text-blue-600 dark:text-blue-400">Vidyā A</span>
-          </p>
-          <p className="text-zinc-400 dark:text-zinc-500 mb-12 max-w-lg mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-            Your comprehensive suite for mastering the Postal Inspector Examination.
-            Detailed study plans, interactive quizzes, and expert resources.
-          </p>
 
-          <div className="flex justify-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-400">
-            {isLoggedIn ? (
-              <>
-                <Link href="/planner" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-200 dark:shadow-blue-900/20 flex items-center gap-2">
-                  <Calendar className="w-5 h-5" /> Go to Planner
-                </Link>
-                <Link href="/guide" className="px-8 py-4 bg-white hover:bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm flex items-center gap-2">
-                  <LibraryBig className="w-5 h-5" /> View Guide
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link href="/login" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-200 dark:shadow-blue-900/20 flex items-center gap-2">
-                  <LogIn className="w-5 h-5" /> Login
-                </Link>
-                <Link href="/login?mode=signup" className="px-8 py-4 bg-white hover:bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-bold rounded-full transition-all hover:scale-105 shadow-sm flex items-center gap-2">
-                  <UserPlus className="w-5 h-5" /> Create Account
-                </Link>
-              </>
-            )}
+          <div className="bg-purple-100 dark:bg-purple-900/30 rounded-3xl p-8 md:p-12 relative overflow-hidden flex flex-col items-center text-center">
+            <div className="z-10">
+              <h3 className="text-3xl font-extrabold text-purple-900 dark:text-purple-100 mb-2">DOWNLOAD</h3>
+              <p className="text-xl font-semibold text-zinc-700 dark:text-zinc-300 mb-8">Study Planner App</p>
+
+              {/* QR Code Placeholder */}
+              <div className="bg-white p-4 rounded-xl shadow-lg mb-6 mx-auto w-48 h-48 flex items-center justify-center border-2 border-zinc-900">
+                <Smartphone className="w-24 h-24 text-zinc-800" />
+              </div>
+
+              <p className="text-sm font-bold text-zinc-500 mb-4">www.studyplanner.in</p>
+
+              <div className="bg-black text-white px-6 py-2 rounded-lg flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity mx-auto w-fit">
+                <div className="w-6 h-6 relative">
+                  {/* Play Store generic icon */}
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" /></svg>
+                </div>
+                <div className="text-left">
+                  <p className="text-[10px] uppercase font-medium">Get it on</p>
+                  <p className="text-sm font-bold">Google Play</p>
+                </div>
+              </div>
+            </div>
+            {/* Decorative Hand/Phone */}
+            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-purple-200 dark:bg-purple-800 rounded-full blur-3xl opacity-50"></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Modules Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-16 text-zinc-800 dark:text-zinc-100">Everything you need to succeed</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          {/* Planner Card */}
-          <Link href="/planner" className="group relative bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-sm hover:shadow-xl dark:shadow-zinc-900/50 transition-all duration-300 border border-zinc-100 dark:border-zinc-800 hover:-translate-y-1">
-            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Calendar className="w-32 h-32 text-blue-600 dark:text-blue-500" />
-            </div>
-            <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Calendar className="w-7 h-7" />
-            </div>
-            <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Study Planner</h3>
-            <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
-              Interactive calendar and list views mapped to the 2026 syllabus. Track your daily progress and never miss a topic.
+      {/* 6. Contact Us */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="text-center lg:text-left">
+            <h2 className="text-5xl font-extrabold text-zinc-800 dark:text-zinc-100 mb-4">Contact-Us</h2>
+            <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-12">
+              Send your queries and doubts to us. We will reply you soon.
             </p>
-          </Link>
 
-          {/* Quiz Card */}
-          <Link href="/quiz" className="group relative bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-sm hover:shadow-xl dark:shadow-zinc-900/50 transition-all duration-300 border border-zinc-100 dark:border-zinc-800 hover:-translate-y-1">
-            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <BrainCircuit className="w-32 h-32 text-purple-600 dark:text-purple-500" />
-            </div>
-            <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-              <BrainCircuit className="w-7 h-7" />
-            </div>
-            <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Quiz Zone</h3>
-            <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
-              Test your knowledge with topic-wise quizzes. Instant feedback and performance tracking for Paper I, II & III.
-            </p>
-          </Link>
+            {/* Illustration Placeholder */}
+            <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[4/3] bg-gradient-to-b from-yellow-50 to-white dark:from-yellow-900/10 dark:to-zinc-950 rounded-full/50 flex items-center justify-center">
+              {/* Simple CSS Art Lamp */}
+              <div className="absolute left-10 top-20 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-purple-600"></div>
+              <div className="absolute left-[68px] top-[130px] w-1 h-32 bg-zinc-400"></div>
+              {/* Cone of light */}
+              <div className="absolute left-[-20px] top-[70px] w-[140px] h-[200px] bg-yellow-400/20 blur-xl rounded-full skew-x-12"></div>
 
-          {/* Flashcards Card */}
-          <Link href="/flashcards" className="group relative bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-sm hover:shadow-xl dark:shadow-zinc-900/50 transition-all duration-300 border border-zinc-100 dark:border-zinc-800 hover:-translate-y-1">
-            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <BookOpen className="w-32 h-32 text-orange-600 dark:text-orange-500" />
+              {/* Person */}
+              <div className="relative z-10 flex flex-col items-center mt-20">
+                <div className="w-20 h-20 bg-pink-500 rounded-full mb-2"></div>
+                <div className="w-32 h-16 bg-blue-600 rounded-t-full"></div>
+                <div className="w-48 h-32 bg-zinc-400 rounded-lg -mt-4 border-b-4 border-zinc-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-white/50"></div>
+                </div>
+              </div>
             </div>
-            <div className="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center text-orange-600 dark:text-orange-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-              <BookOpen className="w-7 h-7" />
-            </div>
-            <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Flashcards</h3>
-            <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
-              Quick revision tool for Act sections, Rule numbers, and key definitions. Perfect for last-minute review.
-            </p>
-          </Link>
+          </div>
 
-          {/* Syllabus Card */}
-          <Link href="/planner" className="group relative bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-sm hover:shadow-xl dark:shadow-zinc-900/50 transition-all duration-300 border border-zinc-100 dark:border-zinc-800 hover:-translate-y-1">
-            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <GraduationCap className="w-32 h-32 text-emerald-600 dark:text-emerald-500" />
-            </div>
-            <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-2xl flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-              <GraduationCap className="w-7 h-7" />
-            </div>
-            <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Syllabus Tracker</h3>
-            <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
-              Complete breakdown of the syllabus into manageable chunks. Visualize your mastery over the entire curriculum.
-            </p>
-          </Link>
+          <div className="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-xl border border-zinc-100 dark:border-zinc-800">
+            <form className="space-y-4">
+              <div className="space-y-4">
+                <input type="text" placeholder="Enter your first name." className="w-full p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20" />
+                <input type="text" placeholder="Enter your last name." className="w-full p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20" />
+                <input type="email" placeholder="Enter your email ID." className="w-full p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20" />
+                <div className="flex">
+                  <select className="p-4 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-l-lg border-r-0 outline-none">
+                    <option>🇮🇳 +91</option>
+                  </select>
+                  <input type="tel" placeholder="Mobile Number" className="flex-1 p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-r-lg outline-none focus:ring-2 focus:ring-blue-500/20" />
+                </div>
+                <textarea placeholder="Write your Message here." rows={4} className="w-full p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 Resize-none"></textarea>
+              </div>
 
-          {/* Guide Card */}
-          <Link href="/guide" className="group relative bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-sm hover:shadow-xl dark:shadow-zinc-900/50 transition-all duration-300 border border-zinc-100 dark:border-zinc-800 hover:-translate-y-1 md:col-span-2 lg:col-span-2">
-            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <LibraryBig className="w-32 h-32 text-pink-600 dark:text-pink-500" />
-            </div>
-            <div className="w-14 h-14 bg-pink-100 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center text-pink-600 dark:text-pink-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-              <LibraryBig className="w-7 h-7" />
-            </div>
-            <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-3 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">Web Guide & Resources</h3>
-            <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg">
-              Curated study materials, previous year question papers, and official department manuals for download. Your library for success.
-            </p>
-          </Link>
-
+              <button type="submit" className="w-full py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition-colors shadow-lg shadow-blue-500/30">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <footer className="bg-white dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800 py-12 text-center">
-        <p className="text-zinc-400 dark:text-zinc-500 text-sm">© 2025 Vidyālaya Academy by Arun Selvaraj. All rights reserved.</p>
+      {/* 7. Footer */}
+      <footer className="bg-blue-500 text-white pt-16 pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div className="col-span-1 md:col-span-1">
+              <h3 className="text-2xl font-bold mb-4">Get in touch</h3>
+              <p className="text-blue-100 text-sm leading-relaxed mb-6">
+                We love to hear from you. Our friendly team is always here to chat.
+              </p>
+              <div className="flex gap-4">
+                <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Facebook className="w-5 h-5" /></Link>
+                <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Instagram className="w-5 h-5" /></Link>
+                <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Twitter className="w-5 h-5" /></Link>
+                <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Youtube className="w-5 h-5" /></Link>
+              </div>
+            </div>
+
+            <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+              <div className="space-y-2">
+                <div className="flex gap-3">
+                  <Mail className="w-5 h-5 text-blue-200 shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1">Chat to us</h4>
+                    <p className="text-blue-100 mb-1">Our friendly team is here to help.</p>
+                    <a href="mailto:info@studyplanner.in" className="font-bold hover:underline">info@studyplanner.in</a>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex gap-3">
+                  <MapPin className="w-5 h-5 text-blue-200 shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1">Office</h4>
+                    <p className="text-blue-100">
+                      Vidyālaya Academy<br />
+                      Near Delhi GPO<br />
+                      Delhi - 110 006
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex gap-3">
+                  <Phone className="w-5 h-5 text-blue-200 shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1">Phone</h4>
+                    <p className="text-blue-100 mb-1">Mon - Sat from 10am to 6pm</p>
+                    <p className="font-bold">+91 8000661414</p>
+                    <p className="font-bold">+91 8209243859</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-blue-400/50 pt-8 flex flex-col md:flex-row justify-center gap-6 text-sm font-medium text-blue-100">
+            <Link href="#" className="hover:text-white transition-colors">About Us</Link>
+            <Link href="#" className="hover:text-white transition-colors">Contact Us</Link>
+            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-white transition-colors">Term and Conditions</Link>
+            <Link href="#" className="hover:text-white transition-colors">Cancellation and Refund</Link>
+            <Link href="#" className="hover:text-white transition-colors">Shipping Policy</Link>
+          </div>
+        </div>
       </footer>
     </div>
   );

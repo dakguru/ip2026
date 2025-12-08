@@ -9,7 +9,7 @@ import { UserMenu } from "./UserMenu";
 export default function GlobalNavigation() {
     const pathname = usePathname();
 
-    if (pathname === "/login") return null;
+    if (pathname === "/login" || pathname === "/") return null;
 
     return (
         <div className="fixed top-4 right-4 z-[100] flex items-center gap-3">
