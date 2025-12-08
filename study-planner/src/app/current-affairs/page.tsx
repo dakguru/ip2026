@@ -27,113 +27,66 @@ interface QuizItem {
 
 interface HistoryItem {
     year: string;
-    event: string;
-    description?: string;
+    setLoading(false);
 }
-
-// --- Configuration ---
-const RAPID_API_KEY = "1bc39bde08msh044dfa558b1e89fp10d0d8jsn64cd63789ee0";
-const RAPID_API_HOST = "real-time-news-data.p.rapidapi.com";
-const BASE_URL = `https://${RAPID_API_HOST}`;
-
-// --- Components ---
-
-function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "international" }) {
-    const [data, setData] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    const fetchData = async () => {
-        setLoading(true);
-        setError(null);
-        try {
-            // Determine query based on type
-            const query = type === "recent" ? "India" : "World";
-            const country = type === "recent" ? "IN" : "US"; // Defaulting International to US/Global mix
-
-            const params = new URLSearchParams({
-                query: query,
-                limit: "20",
-                time_published: "anytime",
-                country: country,
-                lang: "en"
-            });
-
-            const res = await fetch(`${BASE_URL}/search?${params.toString()}`, {
-                headers: {
-                    'x-rapidapi-key': RAPID_API_KEY,
-                    'x-rapidapi-host': RAPID_API_HOST
-                }
-            });
-
-            if (!res.ok) throw new Error(`Failed to fetch ${type} news`);
-            const json = await res.json();
-
-            // Real-Time News Data API usually returns { data: [...] }
-            setData(json.data || []);
-        } catch (err: any) {
-            setError(err.message || "An error occurred");
-        } finally {
-            setLoading(false);
-        }
     };
 
-    useEffect(() => { fetchData(); }, [endpoint, type]);
+useEffect(() => { fetchData(); }, [endpoint, type]);
 
-    if (loading) return <div className="flex justify-center p-10"><Loader2 className="animate-spin text-blue-500 w-8 h-8" /></div>;
-    if (error) return <ErrorDisplay message={error} retry={fetchData} />;
+if (loading) return <div className="flex justify-center p-10"><Loader2 className="animate-spin text-blue-500 w-8 h-8" /></div>;
+if (error) return <ErrorDisplay message={error} retry={fetchData} />;
 
-    // Fallback if empty
-    if (data.length === 0) return <div className="text-center p-10 text-zinc-500">No updates found for today.</div>;
+// Fallback if empty
+if (data.length === 0) return <div className="text-center p-10 text-zinc-500">No updates found for today.</div>;
 
-    return (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((item, idx) => (
-                <div key={idx} className="group bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800 hover:shadow-md transition-all overflow-hidden flex flex-col h-full">
-                    {/* Image handling for this API */}
-                    {item.photo_url && (
-                        <div className="relative h-48 w-full overflow-hidden bg-zinc-200 dark:bg-zinc-800">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={item.photo_url} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                            {item.source_logo_url && (
-                                <div className="absolute top-2 right-2 bg-white/90 p-1 rounded-full shadow-sm">
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img src={item.source_logo_url} alt="Source" className="w-6 h-6 object-contain" />
-                                </div>
-                            )}
-                        </div>
-                    )}
-
-                    <div className="p-5 flex flex-col flex-grow">
-                        <div className="flex items-center gap-2 text-xs text-zinc-500 mb-3">
-                            <Newspaper className="w-3 h-3" />
-                            <span>{item.source_name || "News Source"}</span>
-                            {item.published_datetime_utc && (
-                                <span>• {format(new Date(item.published_datetime_utc), "MMM dd")}</span>
-                            )}
-                        </div>
-
-                        <h3 className="font-bold text-lg text-zinc-800 dark:text-zinc-100 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                            {item.title}
-                        </h3>
-
-                        <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4 line-clamp-3 leading-relaxed flex-grow">
-                            {item.snippet || "Click to read more..."}
-                        </p>
-
-                        <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-auto inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-                        >
-                            Read Full Story <ArrowLeft className="w-4 h-4 rotate-180 ml-1" />
-                        </a>
+return (
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {data.map((item, idx) => (
+            <div key={idx} className="group bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800 hover:shadow-md transition-all overflow-hidden flex flex-col h-full">
+                {/* Image handling for this API */}
+                {item.photo_url && (
+                    <div className="relative h-48 w-full overflow-hidden bg-zinc-200 dark:bg-zinc-800">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={item.photo_url} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        {item.source_logo_url && (
+                            <div className="absolute top-2 right-2 bg-white/90 p-1 rounded-full shadow-sm">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src={item.source_logo_url} alt="Source" className="w-6 h-6 object-contain" />
+                            </div>
+                        )}
                     </div>
+                )}
+
+                <div className="p-5 flex flex-col flex-grow">
+                    <div className="flex items-center gap-2 text-xs text-zinc-500 mb-3">
+                        <Newspaper className="w-3 h-3" />
+                        <span>{item.source_name || "News Source"}</span>
+                        {item.published_datetime_utc && (
+                            <span>• {format(new Date(item.published_datetime_utc), "MMM dd")}</span>
+                        )}
+                    </div>
+
+                    <h3 className="font-bold text-lg text-zinc-800 dark:text-zinc-100 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                        {item.title}
+                    </h3>
+
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4 line-clamp-3 leading-relaxed flex-grow">
+                        {item.snippet || "Click to read more..."}
+                    </p>
+
+                    <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-auto inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                    >
+                        Read Full Story <ArrowLeft className="w-4 h-4 rotate-180 ml-1" />
+                    </a>
                 </div>
-            ))}
-        </div>
-    );
+            </div>
+        ))}
+    </div>
+);
 }
 
 function QuizSection() {
