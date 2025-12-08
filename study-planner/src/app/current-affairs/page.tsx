@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, Globe, Newspaper, BrainCircuit, History, Loader2, RefreshCw, AlertCircle, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowLeft, Globe, Newspaper, BrainCircuit, History, Loader2, RefreshCw, AlertCircle, CheckCircle2, XCircle, Trophy } from "lucide-react";
 import { format } from "date-fns";
 
 // --- Types ---
@@ -38,7 +38,7 @@ const AFFAIRS_API_HOST = "current-affairs-of-india.p.rapidapi.com";
 
 // --- Components ---
 
-function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "international" }) {
+function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "international" | "sports" }) {
     const [data, setData] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -48,8 +48,17 @@ function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "inte
         setError(null);
         try {
             // Determine query based on type
-            const query = type === "recent" ? "India" : "World";
-            const country = type === "recent" ? "IN" : "US"; // Defaulting International to US/Global mix
+            // Determine query based on type
+            let query = "India";
+            let country = "IN";
+
+            if (type === "international") {
+                query = "World";
+                country = "US";
+            } else if (type === "sports") {
+                query = "Sports";
+                country = "IN";
+            }
 
             const params = new URLSearchParams({
                 query: query,
@@ -333,11 +342,12 @@ function ErrorDisplay({ message, retry }: { message: string, retry: () => void }
 // --- Main Page ---
 
 export default function CurrentAffairsPage() {
-    const [activeTab, setActiveTab] = useState<"recent" | "international" | "quiz" | "history">("recent");
+    const [activeTab, setActiveTab] = useState<"recent" | "international" | "quiz" | "history" | "sports">("recent");
 
     const tabs = [
         { id: "recent", label: "India Updates", icon: Newspaper, color: "text-blue-500" },
         { id: "international", label: "International", icon: Globe, color: "text-green-500" },
+        { id: "sports", label: "Global Sports", icon: Trophy, color: "text-yellow-500" },
         { id: "quiz", label: "Today's Quiz", icon: BrainCircuit, color: "text-orange-500" },
         { id: "history", label: "History of Today", icon: History, color: "text-purple-500" },
     ] as const;
@@ -360,7 +370,7 @@ export default function CurrentAffairsPage() {
                             {tabs.map((tab) => (
                                 <button
                                     key={tab.id}
-                                    onClick={() => setActiveTab(tab.id)}
+                                    onClick={() => setActiveTab(tab.id as any)}
                                     className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all ${activeTab === tab.id
                                         ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md transform scale-105"
                                         : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700"
@@ -382,6 +392,9 @@ export default function CurrentAffairsPage() {
                 </div>
                 <div className={`transition-opacity duration-300 ${activeTab === "international" ? "block" : "hidden"}`}>
                     <NewsList endpoint="/international-today" type="international" />
+                </div>
+                <div className={`transition-opacity duration-300 ${activeTab === "sports" ? "block" : "hidden"}`}>
+                    <NewsList endpoint="/sports" type="sports" />
                 </div>
                 <div className={`transition-opacity duration-300 ${activeTab === "quiz" ? "block" : "hidden"}`}>
                     <QuizSection />
