@@ -37,7 +37,7 @@ export async function POST(request: Request) {
         });
 
         // Set a client-readable cookie for UI state (non-httpOnly)
-        response.cookies.set('user_session', JSON.stringify({ name: user.name, email: user.email }), {
+        response.cookies.set('user_session', JSON.stringify({ name: user.name, email: user.email, role: user.role }), {
             httpOnly: false,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',

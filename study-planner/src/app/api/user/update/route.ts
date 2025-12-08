@@ -28,7 +28,7 @@ export async function POST(request: Request) {
         // Re-calculate maxAge or preserve it? For simplicity, reset to 1 day.
         const maxAge = 60 * 60 * 24;
 
-        response.cookies.set('user_session', JSON.stringify({ name: updatedUser.name, email: updatedUser.email }), {
+        response.cookies.set('user_session', JSON.stringify({ name: updatedUser.name, email: updatedUser.email, role: updatedUser.role }), {
             httpOnly: false,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',

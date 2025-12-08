@@ -28,6 +28,7 @@ import {
 interface UserSession {
     name: string;
     email?: string;
+    role?: 'user' | 'admin';
 }
 
 export function UserMenu() {
@@ -156,20 +157,15 @@ export function UserMenu() {
                 <DropdownMenuSeparator />
 
                 <div className="p-2 space-y-2">
-                    {/* Admin Link if role is admin - Basic check */
-                        /* Note: session check is client side only here, real protection is on the page/api */
-                        /* We don't have role in session cookie yet, so we might need to rely on API or updated cookie. */
-                        /* For now, let's just show it or check if we can add role to cookie in login route. */
-                        /* Assuming we updated login route to include role in cookie? Not yet. */
-                        /* Let's just add the link for now, it will be protected by the page logic. */
-                    }
-                    <button
-                        onClick={() => router.push('/admin')}
-                        className="w-full flex items-center justify-center gap-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 text-sm font-semibold py-2 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all"
-                    >
-                        <Shield className="w-4 h-4" />
-                        <span>Admin Panel</span>
-                    </button>
+                    {session?.role === 'admin' && (
+                        <button
+                            onClick={() => router.push('/admin')}
+                            className="w-full flex items-center justify-center gap-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 text-sm font-semibold py-2 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all"
+                        >
+                            <Shield className="w-4 h-4" />
+                            <span>Admin Panel</span>
+                        </button>
+                    )}
 
                     <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95">
                         <span>Upgrade to Pro</span>
