@@ -161,10 +161,10 @@ function QuizSection() {
         try {
             // Note: Keeping generic fetch for now or update if a specific Quiz API is available
             // Using a placeholder response for demonstration if API fails or is not configured for quizzes
-            const res = await fetch(`${BASE_URL}/today-quiz`, {
+            const res = await fetch(`https://${AFFAIRS_API_HOST}/today-quiz`, {
                 headers: {
-                    'X-RapidAPI-Key': RAPID_API_KEY,
-                    'X-RapidAPI-Host': RAPID_API_HOST
+                    'x-rapidapi-key': RAPID_API_KEY,
+                    'x-rapidapi-host': AFFAIRS_API_HOST
                 }
             });
             if (!res.ok) throw new Error("Failed to fetch today's quiz");
@@ -272,10 +272,10 @@ function HistorySection() {
         setLoading(true);
         setError(null);
         try {
-            const res = await fetch(`${BASE_URL}/history-of-today`, {
+            const res = await fetch(`https://${AFFAIRS_API_HOST}/history-of-today`, {
                 headers: {
-                    'X-RapidAPI-Key': RAPID_API_KEY,
-                    'X-RapidAPI-Host': RAPID_API_HOST
+                    'x-rapidapi-key': RAPID_API_KEY,
+                    'x-rapidapi-host': AFFAIRS_API_HOST
                 }
             });
             if (!res.ok) throw new Error("Failed to fetch history");
