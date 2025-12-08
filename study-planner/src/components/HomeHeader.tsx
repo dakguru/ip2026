@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Search, ChevronDown, MessageCircle } from "lucide-react";
+import { Search, ChevronDown, MessageCircle, Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
 import { useEffect, useState } from "react";
