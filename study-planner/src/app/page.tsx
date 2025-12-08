@@ -32,22 +32,29 @@ export default async function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
           {[
-            { title: "Current Affairs", desc: "Daily News & Updates", color: "from-sky-50 to-blue-50 dark:from-sky-900/20 dark:to-blue-900/20", icon: Newspaper, link: "/current-affairs" },
-            { title: "Postal Updates", desc: "Circulars & Orders", color: "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20", icon: Mail, link: "/postal-updates" },
-            { title: "MCQs", desc: "Practice Questions", color: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20", icon: CheckCircle2, link: "/quiz" },
-            { title: "Study Planner", desc: "Organize Learning", color: "from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20", icon: Layout, link: "/planner" },
-            { title: "Web Guide", desc: "Comprehensive Resources", color: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20", icon: BookOpen, link: "/guide" },
-            { title: "Flash Cards", desc: "Quick Revision", color: "from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20", icon: Zap, link: "/flashcards" },
-            { title: "PDF Notes", desc: "Downloadable Content", color: "from-red-50 to-rose-50 dark:from-red-900/20 dark:to-rose-900/20", icon: FileText, link: "/notes" }
+            { title: "MCQs", desc: "Practice Questions", color: "from-green-400 to-emerald-600", icon: CheckCircle2, link: "/quiz" },
+            { title: "Study Planner", desc: "Organize Learning", color: "from-purple-400 to-violet-600", icon: Layout, link: "/planner" },
+            { title: "Web Guide", desc: "Comprehensive Resources", color: "from-blue-400 to-cyan-600", icon: BookOpen, link: "/guide" },
+            { title: "Flash Cards", desc: "Quick Revision", color: "from-yellow-400 to-amber-600", icon: Zap, link: "/flashcards" },
+            { title: "PDF Notes", desc: "Downloadable Content", color: "from-red-400 to-rose-600", icon: FileText, link: "/notes" },
+            { title: "Current Affairs", desc: "Daily News & Updates", color: "from-sky-400 to-indigo-600", icon: Newspaper, link: "/current-affairs" },
+            { title: "Postal Updates", desc: "Circulars & Orders", color: "from-orange-400 to-pink-600", icon: Mail, link: "/postal-updates" }
           ].map((item, idx) => (
-            <Link key={idx} href={item.link} className="group cursor-pointer hover:-translate-y-2 transition-all duration-300 block">
-              <div className={`relative aspect-square rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all border border-zinc-100 dark:border-zinc-800 mb-3 bg-gradient-to-br ${item.color} flex flex-col items-center justify-center p-4`}>
-                <div className="mb-3 p-3 bg-white/60 dark:bg-black/20 rounded-full shadow-sm group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="w-8 h-8 text-zinc-700 dark:text-zinc-200" />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-bold text-zinc-800 dark:text-zinc-100 text-lg mb-1">{item.title}</h3>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">{item.desc}</p>
+            <Link key={idx} href={item.link} className="group cursor-pointer block h-full">
+              <div className={`relative h-full aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-${item.color.split('-')[1]}-500/30 transition-all duration-300 transform hover:-translate-y-2 border border-white/20 dark:border-zinc-800 bg-gradient-to-br ${item.color} p-1`}>
+                <div className="absolute inset-0 bg-white/10 dark:bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                <div className="relative h-full w-full bg-white/90 dark:bg-zinc-950/90 rounded-[20px] flex flex-col items-center justify-center p-6 backdrop-blur-sm">
+                  <div className={`mb-4 p-4 rounded-2xl bg-gradient-to-br ${item.color} bg-opacity-10 shadow-inner group-hover:scale-110 transition-transform duration-300`}>
+                    <item.icon className="w-10 h-10 text-white" fill="currentColor" fillOpacity={0.2} strokeWidth={1.5} />
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-zinc-800 to-zinc-600 dark:from-white dark:to-zinc-400 mb-2 group-hover:from-zinc-900 group-hover:to-zinc-700 dark:group-hover:from-white dark:group-hover:to-white transition-all">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm font-medium text-zinc-500 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             </Link>
