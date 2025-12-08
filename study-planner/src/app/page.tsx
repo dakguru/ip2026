@@ -30,7 +30,7 @@ export default async function Home() {
 
       {/* 3. Feature Tiles */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
+        <div className="flex flex-wrap justify-center gap-6">
           {[
             { title: "MCQs", desc: "Practice Questions", color: "from-green-400 to-emerald-600", icon: CheckCircle2, link: "/quiz" },
             { title: "Study Planner", desc: "Organize Learning", color: "from-purple-400 to-violet-600", icon: Layout, link: "/planner" },
@@ -40,7 +40,7 @@ export default async function Home() {
             { title: "Current Affairs", desc: "Daily News & Updates", color: "from-sky-400 to-indigo-600", icon: Newspaper, link: "/current-affairs" },
             { title: "Postal Updates", desc: "Circulars & Orders", color: "from-orange-400 to-pink-600", icon: Mail, link: "/postal-updates" }
           ].map((item, idx) => (
-            <Link key={idx} href={item.link} className="group cursor-pointer block h-full">
+            <Link key={idx} href={item.link} className="group cursor-pointer block w-full sm:w-64 md:w-72 aspect-square">
               <div className={`relative h-full aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-${item.color.split('-')[1]}-500/30 transition-all duration-300 transform hover:-translate-y-2 border border-white/20 dark:border-zinc-800 bg-gradient-to-br ${item.color} p-1`}>
                 <div className="absolute inset-0 bg-white/10 dark:bg-black/10 group-hover:bg-transparent transition-colors"></div>
                 <div className="relative h-full w-full bg-white/90 dark:bg-zinc-950/90 rounded-[20px] flex flex-col items-center justify-center p-6 backdrop-blur-sm">
