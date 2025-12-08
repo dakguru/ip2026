@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 import { Lock, User, ArrowRight, Loader2, Mail, UserPlus } from "lucide-react";
 
 export default function AuthPage() {
@@ -72,15 +73,15 @@ export default function AuthPage() {
                 <div className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border border-white/20 dark:border-zinc-800 shadow-2xl rounded-3xl p-8 md:p-10">
 
                     <div className="text-center mb-10">
-                        <div className="w-16 h-16 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center shadow-lg shadow-blue-600/20 mb-6 transform rotate-3 hover:rotate-6 transition-transform">
-                            {isLogin ? <Lock className="w-8 h-8 text-white" /> : <UserPlus className="w-8 h-8 text-white" />}
+                        <div className="w-20 h-20 rounded-full mx-auto flex items-center justify-center shadow-lg shadow-blue-600/20 mb-6 border-2 border-white dark:border-zinc-700 overflow-hidden transform hover:scale-105 transition-transform bg-white">
+                            <Image src="/logo.jpg" alt="Logo" width={80} height={80} className="object-cover" />
                         </div>
                         <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
-                            {isLogin ? "Welcome Back" : "Create Account"}
+                            {isLogin ? "Welcome to Vidyālaya Academy" : "Create Account"}
                         </h1>
                         <p className="text-zinc-500 dark:text-zinc-400">
                             {isLogin
-                                ? "Enter your credentials to access the planner"
+                                ? "Enter your credentials"
                                 : "Join to start tracking your study progress"}
                         </p>
                     </div>
@@ -193,7 +194,7 @@ export default function AuthPage() {
                     <div className="px-2 py-1 bg-green-500/10 text-green-600 rounded text-xs font-medium border border-green-500/20">
                         v1.0.0
                     </div>
-                    <span>Secure Study Planner System</span>
+                    <span>Advanced Preparation Master</span>
                 </div>
             </div>
         </div>

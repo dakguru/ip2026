@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Home } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { UserMenu } from "./UserMenu";
@@ -14,10 +15,10 @@ export default function GlobalNavigation() {
         <div className="fixed top-4 right-4 z-[100] flex items-center gap-3">
             <Link
                 href="/"
-                className="p-2 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200 dark:border-zinc-700 rounded-full text-zinc-600 dark:text-zinc-300 hover:text-blue-600 hover:border-blue-200 dark:hover:text-blue-400 transition-all shadow-sm group"
-                title="Go to Home"
+                className="p-1.5 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200 dark:border-zinc-700 rounded-full hover:border-blue-300 dark:hover:border-blue-700 transition-all shadow-sm group overflow-hidden"
+                title="Vidyālaya Academy"
             >
-                <Home className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <Image src="/logo.jpg" alt="Logo" width={32} height={32} className="rounded-full w-8 h-8 object-cover group-hover:scale-110 transition-transform" />
             </Link>
 
             <div className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm rounded-full shadow-sm">

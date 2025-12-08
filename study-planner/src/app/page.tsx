@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { BookOpen, Calendar, GraduationCap, BrainCircuit, LibraryBig } from 'lucide-react';
 
 export default function Home() {
@@ -10,11 +11,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-zinc-100/50 dark:bg-grid-zinc-800/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:[mask-image:linear-gradient(0deg,rgba(0,0,0,1),rgba(0,0,0,0.4))] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 pt-24 pb-20 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <GraduationCap className="w-4 h-4" />
+            <Image src="/logo.jpg" alt="Vidyālaya Academy Logo" width={20} height={20} className="rounded-full" />
             <span>LDCE 2026 Preparation Portal</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 mb-6 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-            Higher Post Academy
+            Vidyālaya Academy
           </h1>
           <p className="text-xl md:text-2xl text-zinc-500 dark:text-zinc-400 font-medium mb-10 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
             by <span className="text-blue-600 dark:text-blue-400">Arun Selvaraj</span>
@@ -115,7 +116,7 @@ export default function Home() {
       </div>
 
       <footer className="bg-white dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800 py-12 text-center">
-        <p className="text-zinc-400 dark:text-zinc-500 text-sm">© 2025 Higher Post Academy by Arun Selvaraj. All rights reserved.</p>
+        <p className="text-zinc-400 dark:text-zinc-500 text-sm">© 2025 Vidyālaya Academy by Arun Selvaraj. All rights reserved.</p>
       </footer>
     </div>
   );
