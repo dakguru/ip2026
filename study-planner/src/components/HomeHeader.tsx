@@ -36,7 +36,7 @@ export default function HomeHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
                             </Link>
 
                             <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                                <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400">Current Affairs</Link>
+                                <Link href="/current-affairs" className="hover:text-blue-600 dark:hover:text-blue-400">Current Affairs</Link>
                                 <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400">Postal Updates</Link>
                                 <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400">Syllabus</Link>
 
