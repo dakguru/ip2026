@@ -20,7 +20,7 @@ export default async function Home() {
       {/* 2. Hero Section */}
       <section className="pt-16 pb-12 text-center px-4">
         <h1 className="text-3xl md:text-5xl font-extrabold text-blue-600 dark:text-blue-400 mb-4">
-          Step Into Vidyālaya Academy – Let’s Level Up Together
+          Welcome Aspirant
         </h1>
 
         <p className="text-zinc-600 dark:text-zinc-300 text-xl max-w-3xl mx-auto">
@@ -30,31 +30,32 @@ export default async function Home() {
 
       {/* 3. Feature Tiles */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            { title: "MCQs", desc: "Practice Questions", color: "from-green-400 to-emerald-600", icon: CheckCircle2, link: "/quiz" },
-            { title: "Study Planner", desc: "Organize Learning", color: "from-purple-400 to-violet-600", icon: Layout, link: "/planner" },
-            { title: "Web Guide", desc: "Comprehensive Resources", color: "from-blue-400 to-cyan-600", icon: BookOpen, link: "/guide" },
-            { title: "Flash Cards", desc: "Quick Revision", color: "from-yellow-400 to-amber-600", icon: Zap, link: "/flashcards" },
-            { title: "PDF Notes", desc: "Downloadable Content", color: "from-red-400 to-rose-600", icon: FileText, link: "/notes" },
-            { title: "Current Affairs", desc: "Daily News & Updates", color: "from-sky-400 to-indigo-600", icon: Newspaper, link: "/current-affairs" },
-            { title: "Postal Updates", desc: "Circulars & Orders", color: "from-orange-400 to-pink-600", icon: Mail, link: "/postal-updates" }
+            { title: "MCQs", desc: "Practice Questions", color: "text-emerald-600", bg: "bg-emerald-50 dark:bg-emerald-900/20", border: "group-hover:border-emerald-500", shadow: "group-hover:shadow-emerald-500/20", icon: CheckCircle2, link: "/quiz" },
+            { title: "Study Planner", desc: "Organize Learning", color: "text-violet-600", bg: "bg-violet-50 dark:bg-violet-900/20", border: "group-hover:border-violet-500", shadow: "group-hover:shadow-violet-500/20", icon: Layout, link: "/planner" },
+            { title: "Web Guide", desc: "Comprehensive Resources", color: "text-blue-600", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-500", shadow: "group-hover:shadow-blue-500/20", icon: BookOpen, link: "/guide" },
+            { title: "Flash Cards", desc: "Quick Revision", color: "text-amber-600", bg: "bg-amber-50 dark:bg-amber-900/20", border: "group-hover:border-amber-500", shadow: "group-hover:shadow-amber-500/20", icon: Zap, link: "/flashcards" },
+            { title: "PDF Notes", desc: "Downloadable Content", color: "text-rose-600", bg: "bg-rose-50 dark:bg-rose-900/20", border: "group-hover:border-rose-500", shadow: "group-hover:shadow-rose-500/20", icon: FileText, link: "/notes" },
+            { title: "Current Affairs", desc: "Daily News & Updates", color: "text-indigo-600", bg: "bg-indigo-50 dark:bg-indigo-900/20", border: "group-hover:border-indigo-500", shadow: "group-hover:shadow-indigo-500/20", icon: Newspaper, link: "/current-affairs" },
+            { title: "Postal Updates", desc: "Circulars & Orders", color: "text-pink-600", bg: "bg-pink-50 dark:bg-pink-900/20", border: "group-hover:border-pink-500", shadow: "group-hover:shadow-pink-500/20", icon: Mail, link: "/postal-updates" }
           ].map((item, idx) => (
-            <Link key={idx} href={item.link} className="group cursor-pointer block w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] aspect-square">
-              <div className={`relative h-full aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-${item.color.split('-')[1]}-500/30 transition-all duration-300 transform hover:-translate-y-2 border border-white/20 dark:border-zinc-800 bg-gradient-to-br ${item.color} p-1`}>
-                <div className="absolute inset-0 bg-white/10 dark:bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                <div className="relative h-full w-full bg-white/90 dark:bg-zinc-950/90 rounded-[20px] flex flex-col items-center justify-center p-6 backdrop-blur-sm">
-                  <div className={`mb-4 p-4 rounded-2xl bg-gradient-to-br ${item.color} bg-opacity-10 shadow-inner group-hover:scale-110 transition-transform duration-300`}>
-                    <item.icon className="w-10 h-10 text-white" fill="currentColor" fillOpacity={0.2} strokeWidth={1.5} />
+            <Link key={idx} href={item.link} className="group relative block w-full aspect-[4/3] sm:aspect-square">
+              <div className={`relative h-full w-full rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 border-b-4 ${item.border} transition-all duration-300 ease-out shadow-sm hover:shadow-xl ${item.shadow} hover:-translate-y-1 overflow-hidden group-hover:border-b-4`}>
+                {/* Background decoration */}
+                <div className={`absolute top-0 right-0 w-24 h-24 ${item.bg} rounded-bl-[100px] opacity-60 transition-transform duration-500 group-hover:scale-150`}></div>
+
+                <div className="relative h-full flex flex-col items-center justify-center p-6 text-center z-10 transition-transform duration-300">
+                  <div className={`mb-4 p-4 rounded-2xl ${item.bg} ${item.color} shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                    <item.icon className="w-8 h-8" strokeWidth={2} />
                   </div>
-                  <div className="text-center">
-                    <h3 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-zinc-800 to-zinc-600 dark:from-white dark:to-zinc-400 mb-2 group-hover:from-zinc-900 group-hover:to-zinc-700 dark:group-hover:from-white dark:group-hover:to-white transition-all">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm font-medium text-zinc-500 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors">
-                      {item.desc}
-                    </p>
-                  </div>
+
+                  <h3 className="text-xl font-bold text-zinc-800 dark:text-zinc-100 mb-1 leading-tight group-hover:text-black dark:group-hover:text-white transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             </Link>
@@ -148,20 +149,15 @@ export default async function Home() {
             </p>
 
             {/* Illustration Placeholder */}
-            <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[4/3] bg-gradient-to-b from-yellow-50 to-white dark:from-yellow-900/10 dark:to-zinc-950 rounded-full/50 flex items-center justify-center">
-              {/* Simple CSS Art Lamp */}
-              <div className="absolute left-10 top-20 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-purple-600"></div>
-              <div className="absolute left-[68px] top-[130px] w-1 h-32 bg-zinc-400"></div>
-              {/* Cone of light */}
-              <div className="absolute left-[-20px] top-[70px] w-[140px] h-[200px] bg-yellow-400/20 blur-xl rounded-full skew-x-12"></div>
-
-              {/* Person */}
-              <div className="relative z-10 flex flex-col items-center mt-20">
-                <div className="w-20 h-20 bg-pink-500 rounded-full mb-2"></div>
-                <div className="w-32 h-16 bg-blue-600 rounded-t-full"></div>
-                <div className="w-48 h-32 bg-zinc-400 rounded-lg -mt-4 border-b-4 border-zinc-600 flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-white/50"></div>
-                </div>
+            <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[4/3] flex items-center justify-center p-6">
+              <div className="relative w-full h-full">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl -z-10 animate-pulse"></div>
+                <Image
+                  src="/contact-illustration.png"
+                  alt="Contact Us Illustration"
+                  fill
+                  className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </div>
           </div>

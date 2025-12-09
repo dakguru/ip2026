@@ -80,7 +80,7 @@ export function UserMenu() {
             <DropdownMenuTrigger asChild>
                 <button className="rounded-full ring-offset-2 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all hover:opacity-80">
                     <Avatar className="h-9 w-9 border border-zinc-200 dark:border-zinc-700">
-                        <AvatarImage src={`https://api.dicebear.com/9.x/notionists/svg?seed=${session?.name || 'User'}`} />
+                        <AvatarImage src="/user-avatar.png" className="object-cover" />
                         <AvatarFallback>{session?.name?.[0]?.toUpperCase() || 'U'}</AvatarFallback>
                     </Avatar>
                 </button>
