@@ -8,6 +8,12 @@ export interface User {
     id: string;
     email: string;
     name: string;
+    mobile?: string;
+    designation?: string;
+    pincode?: string;
+    officeName?: string;
+    division?: string;
+    circle?: string;
     passwordHash: string;
     role?: 'user' | 'admin';
     createdAt: string;
@@ -40,7 +46,13 @@ export function getUserByEmail(email: string): User | undefined {
     return users.find((u) => u.email.toLowerCase() === email.toLowerCase());
 }
 
-export async function createUser(email: string, password: string, name: string, role: 'user' | 'admin' = 'user'): Promise<User> {
+export async function createUser(
+    email: string,
+    password: string,
+    name: string,
+    additionalData: Partial<User> = {},
+    role: 'user' | 'admin' = 'user'
+): Promise<User> {
     const users = getAllUsers();
 
     if (getUserByEmail(email)) {
@@ -56,6 +68,7 @@ export async function createUser(email: string, password: string, name: string, 
         role,
         passwordHash,
         createdAt: new Date().toISOString(),
+        ...additionalData // Spread additional fields
     };
 
     users.push(newUser);

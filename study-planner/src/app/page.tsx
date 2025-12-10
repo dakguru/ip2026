@@ -45,8 +45,8 @@ export default async function Home() {
                 {/* Badge */}
                 {item.badge && (
                   <span className={`absolute top-3 right-3 z-20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
-                      item.badge === 'Pass' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300' :
-                        'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100'
+                    item.badge === 'Pass' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300' :
+                      'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100'
                     }`}>
                     {item.badge}
                   </span>
@@ -93,7 +93,7 @@ export default async function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-zinc-800 dark:text-zinc-100 uppercase tracking-tight">
-            Why Choose Vidyālaya Academy
+            Why Choose Dak Gyan
           </h2>
         </div>
 
@@ -212,7 +212,7 @@ export default async function Home() {
                   <div>
                     <h4 className="font-bold mb-1">Office</h4>
                     <p className="text-blue-100">
-                      Vidyālaya Academy<br />
+                      Dak Gyan<br />
                       Near Delhi GPO<br />
                       Delhi - 110 006
                     </p>

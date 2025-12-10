@@ -5,33 +5,149 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Image from 'next/image';
 import { Lock, User, ArrowRight, Loader2, Mail, UserPlus } from "lucide-react";
 
+const DESIGNATIONS = [
+    "GDS", "MTS", "Postman", "PA", "IP", "ASP", "PS Gr 'B'", "Group A Officer"
+];
+
 function AuthForm() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const [isLogin, setIsLogin] = useState(true);
+
+    // Form State
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         password: "",
+        mobile: "",
+        otp: "",
+        designation: "",
+        pincode: "",
+        officeName: "",
+        division: "",
+        circle: ""
     });
+
+    // Pincode/Office Fetch State
+    const [officeList, setOfficeList] = useState<any[]>([]);
+    const [isFetchingOffices, setIsFetchingOffices] = useState(false);
+
+    // OTP State
+    const [otpSent, setOtpSent] = useState(false);
+    const [otpVerified, setOtpVerified] = useState(false); // In real app, verify on backend
+    const [generatedOtp, setGeneratedOtp] = useState(""); // For simulation only
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState("");
 
     useEffect(() => {
         if (searchParams.get("mode") === "signup") {
             setIsLogin(false);
         }
     }, [searchParams]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState("");
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
         setError("");
+
+        // Reset verification if mobile changes
+        if (name === "mobile") {
+            setOtpSent(false);
+            setOtpVerified(false);
+            setGeneratedOtp("");
+        }
+
+        // Fetch offices when pincode reaches 6 digits
+        if (name === "pincode") {
+            if (value.length === 6) {
+                fetchOffices(value);
+            } else {
+                setOfficeList([]);
+                setFormData(prev => ({ ...prev, officeName: "", division: "", circle: "" }));
+            }
+        }
+    };
+
+    const fetchOffices = async (pincode: string) => {
+        setIsFetchingOffices(true);
+        try {
+            const res = await fetch(`/api/pincode?pincode=${pincode}`);
+            const data = await res.json();
+            if (data.found && data.offices.length > 0) {
+                setOfficeList(data.offices);
+                // Auto-fill Division/Circle from the first result (usually same for a pincode)
+                const first = data.offices[0];
+                setFormData(prev => ({
+                    ...prev,
+                    division: first.division,
+                    circle: first.circle
+                }));
+            } else {
+                setOfficeList([]);
+                setError("No offices found for this pincode.");
+            }
+        } catch (err) {
+            console.error(err);
+        } finally {
+            setIsFetchingOffices(false);
+        }
+    };
+
+    const handleOfficeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const officeName = e.target.value;
+        const selectedOffice = officeList.find(o => o.name === officeName);
+        if (selectedOffice) {
+            setFormData(prev => ({
+                ...prev,
+                officeName: officeName,
+                division: selectedOffice.division,
+                circle: selectedOffice.circle
+            }));
+        } else {
+            setFormData(prev => ({ ...prev, officeName: officeName }));
+        }
+    };
+
+    const sendOtp = () => {
+        if (formData.mobile.length < 10) {
+            setError("Please enter a valid mobile number.");
+            return;
+        }
+        // Simulation
+        const mockOtp = Math.floor(100000 + Math.random() * 900000).toString();
+        setGeneratedOtp(mockOtp);
+        setOtpSent(true);
+        alert(`OTP sent to ${formData.mobile}: ${mockOtp}`); // Using alert for simulation visibility
+    };
+
+    const verifyOtp = () => {
+        if (formData.otp === generatedOtp) {
+            setOtpVerified(true);
+            setError("");
+        } else {
+            setError("Invalid OTP. Please try again.");
+        }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
         setError("");
+
+        // Basic Signup Validation
+        if (!isLogin) {
+            if (!otpVerified) {
+                setError("Please verify your mobile number first.");
+                setIsLoading(false);
+                return;
+            }
+            if (!formData.designation) {
+                setError("Please select a designation.");
+                setIsLoading(false);
+                return;
+            }
+        }
 
         const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
 
@@ -55,8 +171,7 @@ function AuthForm() {
                 // Switch to login mode after successful signup
                 setIsLogin(true);
                 setError("");
-                setFormData(prev => ({ ...prev, password: "" })); // Clear password
-                // Optional: show success message
+                setFormData(prev => ({ ...prev, password: "", otp: "" }));
                 alert("Account created! Please sign in.");
             }
         } catch (err) {
@@ -76,15 +191,15 @@ function AuthForm() {
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
             </div>
 
-            <div className="w-full max-w-md relative z-10 animate-in fade-in zoom-in-95 duration-500">
+            <div className={`w-full ${isLogin ? 'max-w-md' : 'max-w-2xl'} relative z-10 animate-in fade-in zoom-in-95 duration-500`}>
                 <div className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border border-white/20 dark:border-zinc-800 shadow-2xl rounded-3xl p-8 md:p-10">
 
                     <div className="text-center mb-10">
                         <div className="w-20 h-20 rounded-full mx-auto flex items-center justify-center shadow-lg shadow-blue-600/20 mb-6 border-2 border-white dark:border-zinc-700 overflow-hidden transform hover:scale-105 transition-transform bg-white">
-                            <Image src="/logo.jpg" alt="Logo" width={80} height={80} className="object-cover" />
+                            <Image src="/dakgyan-logo.png" alt="Logo" width={80} height={80} className="object-cover" />
                         </div>
                         <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
-                            {isLogin ? "Welcome to Vidyālaya Academy" : "Create Account"}
+                            {isLogin ? "Welcome to Dak Gyan" : "Create Account"}
                         </h1>
                         <p className="text-zinc-500 dark:text-zinc-400">
                             {isLogin
@@ -96,67 +211,255 @@ function AuthForm() {
                     <form onSubmit={handleSubmit} className="space-y-5">
 
                         {!isLogin && (
-                            <div className="space-y-2 animate-in fade-in slide-in-from-top-4">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                    Full Name
-                                </label>
-                                <div className="relative group">
-                                    <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
-                                        <User className="w-5 h-5" />
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div className="space-y-2 col-span-1 md:col-span-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Full Name of the Aspirant
+                                    </label>
+                                    <div className="relative group">
+                                        <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
+                                            <User className="w-5 h-5" />
+                                        </div>
+                                        <input
+                                            name="name"
+                                            type="text"
+                                            value={formData.name}
+                                            onChange={handleInputChange}
+                                            className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                            placeholder="John Doe"
+                                            required
+                                        />
                                     </div>
+                                </div>
+
+                                {/* Mobile & OTP */}
+                                <div className="space-y-2 col-span-1 md:col-span-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Mobile No.
+                                    </label>
+                                    <div className="flex gap-2">
+                                        <div className="relative group flex-grow">
+                                            <input
+                                                name="mobile"
+                                                type="tel"
+                                                value={formData.mobile}
+                                                onChange={handleInputChange}
+                                                className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                                placeholder="9876543210"
+                                                required
+                                                disabled={otpVerified}
+                                            />
+                                        </div>
+                                        {!otpVerified && (
+                                            <button
+                                                type="button"
+                                                onClick={sendOtp}
+                                                disabled={otpSent || formData.mobile.length < 10}
+                                                className="bg-blue-600 text-white px-4 rounded-2xl text-sm font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                                            >
+                                                {otpSent ? "Sent" : "Send OTP"}
+                                            </button>
+                                        )}
+                                        {otpVerified && (
+                                            <div className="bg-green-100 text-green-700 px-4 rounded-2xl text-sm font-semibold flex items-center">Verified</div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* OTP Input */}
+                                {otpSent && !otpVerified && (
+                                    <div className="space-y-2 col-span-1 md:col-span-2 animate-in fade-in slide-in-from-top-2">
+                                        <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                            Enter OTP
+                                        </label>
+                                        <div className="flex gap-2">
+                                            <input
+                                                name="otp"
+                                                type="text"
+                                                value={formData.otp}
+                                                onChange={handleInputChange}
+                                                className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-lg py-2 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all"
+                                                placeholder="Enter 6 digit OTP"
+                                            />
+                                            <button
+                                                type="button"
+                                                onClick={verifyOtp}
+                                                className="bg-green-600 text-white px-4 rounded-lg text-sm font-semibold hover:bg-green-700"
+                                            >
+                                                Verify
+                                            </button>
+                                        </div>
+                                        <p className="text-xs text-zinc-500">For demo: Use {generatedOtp}</p>
+                                    </div>
+                                )}
+
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Email ID
+                                    </label>
                                     <input
-                                        name="name"
-                                        type="text"
-                                        value={formData.name}
+                                        name="email"
+                                        type="email"
+                                        value={formData.email}
                                         onChange={handleInputChange}
-                                        className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
-                                        placeholder="John Doe"
+                                        className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                        placeholder="name@example.com"
                                         required
                                     />
                                 </div>
+
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Designation
+                                    </label>
+                                    <div className="relative">
+                                        <select
+                                            name="designation"
+                                            value={formData.designation}
+                                            onChange={handleInputChange}
+                                            className="w-full appearance-none bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all cursor-pointer"
+                                            required
+                                        >
+                                            <option value="">Select Designation</option>
+                                            {DESIGNATIONS.map(d => <option key={d} value={d}>{d}</option>)}
+                                        </select>
+                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500">▼</div>
+                                    </div>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Pincode (6 digits)
+                                    </label>
+                                    <input
+                                        name="pincode"
+                                        type="text"
+                                        maxLength={6}
+                                        value={formData.pincode}
+                                        onChange={handleInputChange}
+                                        className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                        placeholder="110001"
+                                        required
+                                    />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Office of working
+                                    </label>
+                                    {isFetchingOffices ? (
+                                        <div className="w-full py-3.5 px-4 bg-zinc-50 rounded-2xl text-zinc-400 text-sm">Loading offices...</div>
+                                    ) : (
+                                        <select
+                                            name="officeName"
+                                            value={formData.officeName}
+                                            onChange={handleOfficeSelect}
+                                            className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all"
+                                            required
+                                            disabled={officeList.length === 0}
+                                        >
+                                            <option value="">{officeList.length > 0 ? "Select Office" : "Enter Pincode first"}</option>
+                                            {officeList.map((o, idx) => (
+                                                <option key={idx} value={o.name}>{o.name}</option>
+                                            ))}
+                                        </select>
+                                    )}
+                                </div>
+
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Division
+                                    </label>
+                                    <input
+                                        name="division"
+                                        type="text"
+                                        value={formData.division}
+                                        readOnly
+                                        className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-500 cursor-not-allowed"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Circle
+                                    </label>
+                                    <input
+                                        name="circle"
+                                        type="text"
+                                        value={formData.circle}
+                                        readOnly
+                                        className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-500 cursor-not-allowed"
+                                    />
+                                </div>
+
                             </div>
                         )}
 
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                Email
+                                {isLogin ? "Email" : "Password"}
                             </label>
-                            <div className="relative group">
-                                <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
-                                    <Mail className="w-5 h-5" />
+
+                            {isLogin ? (
+                                <div className="relative group">
+                                    <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
+                                        <Mail className="w-5 h-5" />
+                                    </div>
+                                    <input
+                                        name="email"
+                                        type="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                        placeholder="name@example.com"
+                                        required
+                                    />
                                 </div>
-                                <input
-                                    name="email"
-                                    type="email"
-                                    value={formData.email}
-                                    onChange={handleInputChange}
-                                    className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
-                                    placeholder="name@example.com"
-                                    required
-                                />
-                            </div>
+                            ) : (
+                                <>
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1 mt-2 block">
+                                        Create Password
+                                    </label>
+                                    <div className="relative group">
+                                        <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
+                                            <Lock className="w-5 h-5" />
+                                        </div>
+                                        <input
+                                            name="password"
+                                            type="password"
+                                            value={formData.password}
+                                            onChange={handleInputChange}
+                                            className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                            placeholder="••••••••"
+                                            required
+                                            minLength={6}
+                                        />
+                                    </div>
+                                </>
+                            )}
                         </div>
 
-                        <div className="space-y-2">
-                            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                Password
-                            </label>
-                            <div className="relative group">
-                                <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
-                                    <Lock className="w-5 h-5" />
+                        {isLogin && (
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                    Password
+                                </label>
+                                <div className="relative group">
+                                    <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
+                                        <Lock className="w-5 h-5" />
+                                    </div>
+                                    <input
+                                        name="password"
+                                        type="password"
+                                        value={formData.password}
+                                        onChange={handleInputChange}
+                                        className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                        placeholder="••••••••"
+                                        required
+                                        minLength={6}
+                                    />
                                 </div>
-                                <input
-                                    name="password"
-                                    type="password"
-                                    value={formData.password}
-                                    onChange={handleInputChange}
-                                    className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
-                                    placeholder="••••••••"
-                                    required
-                                    minLength={6}
-                                />
                             </div>
-                        </div>
+                        )}
 
                         {error && (
                             <div className="text-red-500 text-sm text-center bg-red-50 dark:bg-red-900/20 py-2 rounded-lg animate-in fade-in slide-in-from-top-2">
@@ -187,7 +490,7 @@ function AuthForm() {
                                 onClick={() => {
                                     setIsLogin(!isLogin);
                                     setError("");
-                                    setFormData({ name: "", email: "", password: "" });
+                                    setFormData({ name: "", email: "", password: "", mobile: "", otp: "", designation: "", pincode: "", officeName: "", division: "", circle: "" });
                                 }}
                                 className="text-blue-600 hover:text-blue-500 font-semibold hover:underline bg-transparent border-none cursor-pointer ml-1"
                             >

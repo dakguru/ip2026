@@ -3,7 +3,7 @@ import { createUser } from '@/lib/db';
 
 export async function POST(request: Request) {
     try {
-        const { email, password, name } = await request.json();
+        const { email, password, name, mobile, designation, pincode, officeName, division, circle } = await request.json();
 
         if (!email || !password || !name) {
             return NextResponse.json(
@@ -19,7 +19,14 @@ export async function POST(request: Request) {
             );
         }
 
-        await createUser(email, password, name);
+        await createUser(email, password, name, {
+            mobile,
+            designation,
+            pincode,
+            officeName,
+            division,
+            circle
+        });
 
         return NextResponse.json({ success: true, message: 'Account created successfully' });
     } catch (error) {

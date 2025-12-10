@@ -11,10 +11,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LDCE 2026 Study Planner",
+  title: "Dak Gyan - LDCE 2026 Study Planner",
   description: "Detailed study syllabus and calendar for Inspector Posts LDCE 2026",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/dakgyan-logo.png",
   },
   manifest: "/manifest.json",
 };
