@@ -2,8 +2,9 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from 'next/link';
 import Image from 'next/image';
-import { Lock, User, ArrowRight, Loader2, Mail, UserPlus } from "lucide-react";
+import { Lock, User, ArrowRight, Loader2, Mail, UserPlus, Phone } from "lucide-react";
 
 const DESIGNATIONS = [
     "GDS", "MTS", "Postman", "PA", "IP", "ASP", "PS Gr 'B'", "Group A Officer"
