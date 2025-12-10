@@ -6,7 +6,9 @@
     "passwordHash": "$2b$10$DWKJHbDGlsb1eXvV75XHpOEfagNUEotDCgOoNonHmp5.Tk.JuoYci",
     "createdAt": "2025-12-07T16:56:59.221Z",
     "role": "user",
-    "membershipLevel": "silver"
+    "membershipLevel": "silver",
+    "resetToken": "c38b17d0d48d9db9f9569234da9873c7c5e424b39e5ac66e9aa650d8856710e3",
+    "resetTokenExpiry": 1765390216318
   },
   {
     "id": "8400a18d-19da-44b8-9fe2-48ff2110e3fa",
