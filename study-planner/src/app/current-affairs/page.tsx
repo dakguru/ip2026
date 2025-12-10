@@ -329,13 +329,21 @@ function HistorySection() {
 
 function ErrorDisplay({ message, retry }: { message: string, retry: () => void }) {
     return (
-        <div className="flex flex-col items-center justify-center p-10 text-center bg-red-50 dark:bg-red-900/10 rounded-xl border border-red-100 dark:border-red-900/30">
-            <AlertCircle className="w-10 h-10 text-red-500 mb-4" />
-            <h3 className="text-lg font-bold text-red-700 dark:text-red-400 mb-2">Unable to Load Data</h3>
-            <p className="text-red-600 dark:text-red-300/80 mb-6 max-w-md">{message}</p>
-            <button onClick={retry} className="px-5 py-2 bg-white dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/50 transition-colors">
-                Try Again
+        <div className="flex flex-col items-center justify-center p-10 text-center bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
+            <RefreshCw className="w-10 h-10 text-blue-500 mb-4 animate-pulse" />
+            <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-2">
+                Click to fetch/refresh to retrieve latest updates
+            </h3>
+            <p className="text-zinc-500 dark:text-zinc-400 mb-6 font-medium">
+                for {format(new Date(), "MMMM dd, yyyy")}
+            </p>
+            <button
+                onClick={retry}
+                className="px-6 py-2 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 shadow-lg shadow-blue-500/30 transition-all active:scale-95 flex items-center gap-2"
+            >
+                <RefreshCw className="w-4 h-4" /> Fetch Updates
             </button>
+            <p className="text-xs text-zinc-400 mt-4 opacity-50">{message}</p>
         </div>
     );
 }
