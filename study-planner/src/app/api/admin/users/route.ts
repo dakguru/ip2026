@@ -38,7 +38,14 @@ export async function GET(request: Request) {
             id: user.id,
             name: user.name,
             email: user.email,
+            mobile: user.mobile,
+            designation: user.designation,
+            pincode: user.pincode,
+            officeName: user.officeName,
+            division: user.division,
+            circle: user.circle,
             role: user.role || 'user',
+            membershipLevel: user.membershipLevel,
             createdAt: user.createdAt
         }));
 
