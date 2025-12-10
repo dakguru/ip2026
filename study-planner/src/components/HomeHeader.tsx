@@ -57,28 +57,21 @@ export default function HomeHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
                             </Link>
 
                             <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                                <Link href="/current-affairs" className="hover:text-blue-600 dark:hover:text-blue-400">Current Affairs</Link>
+                                <Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About Us</Link>
                                 <Link href="/postal-updates" className="hover:text-blue-600 dark:hover:text-blue-400">Postal Updates</Link>
+                                <Link href="/current-affairs" className="hover:text-blue-600 dark:hover:text-blue-400">Current Affairs</Link>
                                 <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400">Syllabus</Link>
 
-                                {/* Pass Dropdown */}
-                                <div className="relative group">
-                                    <button className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 py-4">
-                                        Pass <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
-                                    </button>
-                                    <div className="absolute top-full left-0 w-40 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0 z-50">
-                                        <div className="p-1">
-                                            <Link href="/pricing" className="block px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded text-sm text-zinc-700 dark:text-zinc-300">
-                                                Pass
-                                            </Link>
-                                            <Link href="/pricing" className="block px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded text-sm text-zinc-700 dark:text-zinc-300">
-                                                Pass Pro
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About Us</Link>
+                                <Link
+                                    href="/pricing"
+                                    className="relative px-6 py-2 rounded-full font-bold text-white bg-gradient-to-r from-amber-400 to-yellow-600 shadow-lg shadow-amber-500/30 overflow-hidden group hover:scale-105 transition-transform"
+                                >
+                                    <span className="relative z-10 flex items-center gap-1">
+                                        Upgrade <span className="animate-pulse">✨</span>
+                                    </span>
+                                    {/* Shine effect */}
+                                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12" />
+                                </Link>
                             </nav>
                         </div>
 
@@ -150,11 +143,11 @@ export default function HomeHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
 
                             <nav className="flex flex-col space-y-2 mt-4">
                                 <Link
-                                    href="/current-affairs"
+                                    href="/about"
                                     className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    Current Affairs
+                                    About Us
                                 </Link>
                                 <Link
                                     href="/postal-updates"
@@ -164,23 +157,26 @@ export default function HomeHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
                                     Postal Updates
                                 </Link>
                                 <Link
+                                    href="/current-affairs"
+                                    className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Current Affairs
+                                </Link>
+                                <Link
                                     href="#"
                                     className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Syllabus
                                 </Link>
-                                <div className="p-3 border-t border-b border-zinc-100 dark:border-zinc-900 py-4 my-2">
-                                    <p className="text-xs font-semibold text-zinc-400 uppercase mb-3">Courses</p>
-                                    <Link href="/pricing" className="block py-2 text-zinc-700 dark:text-zinc-300" onClick={() => setMobileMenuOpen(false)}>Pass</Link>
-                                    <Link href="/pricing" className="block py-2 text-zinc-700 dark:text-zinc-300" onClick={() => setMobileMenuOpen(false)}>Pass Pro</Link>
-                                </div>
+
                                 <Link
-                                    href="/about"
-                                    className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
+                                    href="/pricing"
+                                    className="p-3 rounded-lg bg-gradient-to-r from-amber-100 to-yellow-100 dark:from-amber-900/40 dark:to-yellow-900/40 text-amber-900 dark:text-amber-200 font-bold flex items-center gap-2"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    About Us
+                                    Upgrade <span>✨</span>
                                 </Link>
                             </nav>
 
