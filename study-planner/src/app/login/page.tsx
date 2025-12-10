@@ -364,17 +364,9 @@ function AuthForm() {
 
                         {isLogin && (
                             <div className="space-y-2">
-                                <div className="flex items-center justify-between">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                        Password
-                                    </label>
-                                    <a
-                                        href="/forgot-password"
-                                        className="text-xs font-semibold text-blue-600 hover:text-blue-500 hover:underline relative z-50 cursor-pointer"
-                                    >
-                                        Forgot Password?
-                                    </a>
-                                </div>
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                    Password
+                                </label>
                                 <div className="relative group">
                                     <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
                                         <Lock className="w-5 h-5" />
@@ -389,6 +381,14 @@ function AuthForm() {
                                         required
                                         minLength={6}
                                     />
+                                </div>
+                                <div className="text-right">
+                                    <Link
+                                        href="/forgot-password"
+                                        className="text-xs font-semibold text-blue-600 hover:text-blue-500 hover:underline inline-block px-1 py-1"
+                                    >
+                                        Forgot Password?
+                                    </Link>
                                 </div>
                             </div>
                         )}
