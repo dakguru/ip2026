@@ -7,32 +7,32 @@ import Link from "next/link";
 
 export default function PricingPage() {
     const [selectedPlanKey, setSelectedPlanKey] = useState<'monthly' | 'yearly' | 'lifetime'>('yearly');
-    const [activeTab, setActiveTab] = useState<'pro' | 'pass'>('pro');
+    const [activeTab, setActiveTab] = useState<'gold' | 'silver'>('gold');
     const [showCouponInput, setShowCouponInput] = useState(false);
     const [couponCode, setCouponCode] = useState("");
     const [discount, setDiscount] = useState(0);
 
-    // Pro Plans Data
-    const proPlans = {
+    // Gold Plans Data
+    const goldPlans = {
         monthly: {
-            id: 'monthly_pro',
-            name: 'Monthly Pass Pro',
+            id: 'monthly_gold',
+            name: 'Monthly Gold Plan',
             validity: 'Valid for 31 Days',
             price: 599,
             originalPrice: 1199,
             isPopular: false,
         },
         yearly: {
-            id: 'yearly_pro',
-            name: 'Yearly Pass Pro',
+            id: 'yearly_gold',
+            name: 'Yearly Gold Plan',
             validity: 'Valid for 365 Days',
             price: 649,
             originalPrice: 1799,
             isPopular: true,
         },
         lifetime: {
-            id: 'lifetime_pro',
-            name: '18 Months Pass Pro',
+            id: 'lifetime_gold',
+            name: '18 Months Gold Plan',
             validity: 'Valid for 548 Days',
             price: 799,
             originalPrice: 1999,
@@ -40,27 +40,27 @@ export default function PricingPage() {
         }
     };
 
-    // Basic Pass Plans Data
-    const basicPlans = {
+    // Silver Plans Data
+    const silverPlans = {
         monthly: {
-            id: 'monthly_basic',
-            name: 'Monthly Pass',
+            id: 'monthly_silver',
+            name: 'Monthly Silver Plan',
             validity: 'Valid for 31 Days',
             price: 299,
             originalPrice: 599,
             isPopular: false,
         },
         yearly: {
-            id: 'yearly_basic',
-            name: 'Yearly Pass',
+            id: 'yearly_silver',
+            name: 'Yearly Silver Plan',
             validity: 'Valid for 365 Days',
             price: 399,
             originalPrice: 999,
             isPopular: true,
         },
         lifetime: {
-            id: 'lifetime_basic',
-            name: 'Lifetime Pass',
+            id: 'lifetime_silver',
+            name: 'Lifetime Silver Plan',
             validity: 'Valid for 3 Years',
             price: 599,
             originalPrice: 1499,
@@ -68,7 +68,7 @@ export default function PricingPage() {
         }
     };
 
-    const currentPlans = activeTab === 'pro' ? proPlans : basicPlans;
+    const currentPlans = activeTab === 'gold' ? goldPlans : silverPlans;
     const selectedPlan = currentPlans[selectedPlanKey];
 
     // Coupon Logic
@@ -85,13 +85,13 @@ export default function PricingPage() {
     const finalPrice = selectedPlan.price - discount;
 
     const benefits = [
-        { name: "Live Mock Tests", pro: true, basic: true },
-        { name: "Updated Notes as per recent Amendments", pro: true, basic: false },
-        { name: "Web Guide", pro: true, basic: true },
-        { name: "Flash Cards", pro: true, basic: false },
-        { name: "Current Affairs", pro: true, basic: true },
-        { name: "Unlimited Re-Attempt mode", pro: true, basic: false },
-        { name: "Previous year question papers", pro: true, basic: false },
+        { name: "Live Mock Tests", gold: true, silver: true },
+        { name: "Updated Notes as per recent Amendments", gold: true, silver: false },
+        { name: "Web Guide", gold: true, silver: true },
+        { name: "Flash Cards", gold: true, silver: false },
+        { name: "Current Affairs", gold: true, silver: true },
+        { name: "Unlimited Re-Attempt mode", gold: true, silver: false },
+        { name: "Previous year question papers", gold: true, silver: false },
     ];
 
     return (
@@ -127,20 +127,20 @@ export default function PricingPage() {
                         {/* Tab Switcher */}
                         <div className="bg-white dark:bg-zinc-900 rounded-2xl p-2 inline-flex shadow-sm border border-zinc-200 dark:border-zinc-800 w-full md:w-auto gap-2">
                             <button
-                                onClick={() => { setActiveTab('pro'); setDiscount(0); }}
-                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 ${activeTab === 'pro'
+                                onClick={() => { setActiveTab('gold'); setDiscount(0); }}
+                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 ${activeTab === 'gold'
                                     ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 ring-yellow-200 dark:ring-yellow-800'
                                     : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}`}
                             >
-                                Pass Pro {activeTab === 'pro' && <span className="ml-2 bg-yellow-400 text-yellow-900 text-[10px] px-1.5 py-0.5 rounded uppercase">Recommended</span>}
+                                Gold Plan {activeTab === 'gold' && <span className="ml-2 bg-yellow-400 text-yellow-900 text-[10px] px-1.5 py-0.5 rounded uppercase">Recommended</span>}
                             </button>
                             <button
-                                onClick={() => { setActiveTab('pass'); setDiscount(0); }}
-                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 ${activeTab === 'pass'
-                                    ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 ring-blue-200 dark:ring-blue-800'
+                                onClick={() => { setActiveTab('silver'); setDiscount(0); }}
+                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 ${activeTab === 'silver'
+                                    ? 'bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-400 ring-slate-200 dark:ring-slate-800'
                                     : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}`}
                             >
-                                Pass
+                                Silver Plan
                             </button>
                         </div>
 
@@ -148,8 +148,8 @@ export default function PricingPage() {
                         <div className="bg-white dark:bg-zinc-900 rounded-3xl shadow-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
                             <div className="grid grid-cols-4 p-6 border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/20">
                                 <div className="col-span-2 font-bold text-zinc-500 dark:text-zinc-400 text-sm uppercase tracking-wider">Plan Benefits</div>
-                                <div className={`text-center font-bold ${activeTab === 'pro' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Pass Pro</div>
-                                <div className={`text-center font-bold ${activeTab === 'pass' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Pass</div>
+                                <div className={`text-center font-bold ${activeTab === 'gold' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Gold</div>
+                                <div className={`text-center font-bold ${activeTab === 'silver' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Silver</div>
                             </div>
 
                             <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
@@ -158,18 +158,18 @@ export default function PricingPage() {
                                         <div className="col-span-2 text-sm sm:text-base font-medium text-zinc-700 dark:text-zinc-300">
                                             {benefit.name}
                                         </div>
-                                        <div className={`flex justify-center transition-all ${activeTab === 'pro' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
-                                            {benefit.pro ? (
-                                                <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 shadow-sm">
+                                        <div className={`flex justify-center transition-all ${activeTab === 'gold' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
+                                            {benefit.gold ? (
+                                                <div className="w-8 h-8 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400 shadow-sm">
                                                     <Check className="w-5 h-5" />
                                                 </div>
                                             ) : (
                                                 <X className="w-5 h-5 text-zinc-300" />
                                             )}
                                         </div>
-                                        <div className={`flex justify-center transition-all ${activeTab === 'pass' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
-                                            {benefit.basic ? (
-                                                <div className="w-6 h-6 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-500 dark:text-blue-400">
+                                        <div className={`flex justify-center transition-all ${activeTab === 'silver' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
+                                            {benefit.silver ? (
+                                                <div className="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-900/20 flex items-center justify-center text-slate-500 dark:text-slate-400">
                                                     <Check className="w-3.5 h-3.5" />
                                                 </div>
                                             ) : (
@@ -183,7 +183,7 @@ export default function PricingPage() {
                             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/10 text-center">
                                 <p className="text-sm text-yellow-800 dark:text-yellow-200 font-medium flex items-center justify-center gap-2">
                                     <ShieldCheck className="w-4 h-4" />
-                                    100% Satisfaction Guarantee on Pro Plans
+                                    100% Satisfaction Guarantee on Gold Plans
                                 </p>
                             </div>
                         </div>
@@ -233,7 +233,7 @@ export default function PricingPage() {
 
                         {/* Plan Selection Cards */}
                         <div className="space-y-4">
-                            <h3 className="font-bold text-zinc-900 dark:text-zinc-100 text-lg">Select your {activeTab === 'pro' ? 'Pass Pro' : 'Pass'} Plan:</h3>
+                            <h3 className="font-bold text-zinc-900 dark:text-zinc-100 text-lg">Select your {activeTab === 'gold' ? 'Gold' : 'Silver'} Plan:</h3>
 
                             {(Object.keys(currentPlans) as Array<keyof typeof currentPlans>).map((key) => {
                                 const plan = currentPlans[key];
