@@ -191,12 +191,15 @@ export function UserMenu() {
                         </button>
                     )}
 
-                    {(!session?.membershipLevel || session.membershipLevel === 'free') && (
+                    {session?.membershipLevel !== 'gold' && (
                         <button
                             onClick={() => router.push('/pricing')}
-                            className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95"
+                            className={`w-full flex items-center justify-center gap-2 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95 ${session?.membershipLevel === 'silver'
+                                    ? 'bg-gradient-to-r from-amber-400 to-yellow-600 text-white'
+                                    : 'bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900'
+                                }`}
                         >
-                            <span>Upgrade to Pro</span>
+                            <span>{session?.membershipLevel === 'silver' ? 'Upgrade to Gold' : 'Upgrade to Pro'}</span>
                         </button>
                     )}
                 </div>
