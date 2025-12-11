@@ -1,7 +1,10 @@
-import { Search, Clock, CalendarDays, ArrowRight, Menu } from "lucide-react";
+import { Search, Clock, CalendarDays, ArrowRight, Menu, Home } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { PlanItem } from "@/lib/types";
 import { format, parseISO } from "date-fns";
+import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
+import { UserMenu } from "./UserMenu";
 
 interface NavbarProps {
     onSearch: (query: string) => void;
@@ -51,8 +54,8 @@ export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps)
     };
 
     return (
-        <nav className="flex items-center justify-between px-4 md:px-6 py-4 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 transition-colors" ref={searchRef}>
-            <div className="flex flex-1 items-center gap-4 max-w-xl mr-auto md:mr-8 relative">
+        <nav className="flex items-center justify-between px-4 md:px-6 py-4 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 transition-colors shrink-0" ref={searchRef}>
+            <div className="flex flex-1 items-center gap-4 max-w-2xl mr-auto md:mr-8 relative">
                 {/* Mobile Menu Button */}
                 <button
                     onClick={onMenuClick}
@@ -61,7 +64,7 @@ export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps)
                     <Menu className="w-6 h-6" />
                 </button>
 
-                <div className="relative z-20 flex-1">
+                <div className="relative z-20 flex-1 max-w-lg">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 dark:text-zinc-500" />
                     <input
                         type="text"
@@ -100,9 +103,19 @@ export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps)
                 )}
             </div>
 
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-200 dark:border-orange-900/30 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-400 text-xs font-medium shrink-0">
-                <Clock className="w-3.5 h-3.5" />
-                <span>Strategy: 2-3 Hrs/Day</span>
+            <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+                <Link
+                    href="/"
+                    className="p-2 text-zinc-500 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400 transition-colors"
+                    title="Back to Home"
+                >
+                    <Home className="w-5 h-5" />
+                </Link>
+                <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-800 hidden sm:block"></div>
+                <div className="hidden sm:block">
+                    <ThemeToggle />
+                </div>
+                <UserMenu />
             </div>
         </nav>
     );
