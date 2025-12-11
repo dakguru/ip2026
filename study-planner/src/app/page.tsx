@@ -14,6 +14,7 @@ export default async function Home() {
 
   let displayName = "Aspirant";
   let membershipLevel = "free";
+  let role = "user";
   const isLoggedIn = !!authToken;
 
   if (isLoggedIn && userSession?.value) {
@@ -25,9 +26,11 @@ export default async function Home() {
         if (user) {
           displayName = user.name;
           membershipLevel = user.membershipLevel || "free";
+          role = user.role || "user";
         } else {
           // Fallback to session data if DB fetch fails (rare)
           displayName = sessionData.name || "Aspirant";
+          role = sessionData.role || "user";
         }
       }
     } catch (e) {
@@ -61,7 +64,7 @@ export default async function Home() {
 
       {/* 3. Feature Tiles */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <FeatureGrid membershipLevel={membershipLevel} />
+        <FeatureGrid membershipLevel={membershipLevel} role={role} />
       </section>
 
       {/* 4. Join Section */}

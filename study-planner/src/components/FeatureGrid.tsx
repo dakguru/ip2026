@@ -1,19 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion } from "lucide-react";
+import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion, Shield } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 interface FeatureGridProps {
     membershipLevel: string;
+    role?: string;
 }
 
-export default function FeatureGrid({ membershipLevel }: FeatureGridProps) {
+export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps) {
     const router = useRouter();
 
     // Helper to check access
     const hasAccess = (requiredBadge: string) => {
         if (requiredBadge === "Free") return true;
+        if (requiredBadge === "Admin") return role === 'admin';
         if (requiredBadge === "Silver" && (membershipLevel === "silver" || membershipLevel === "gold")) return true;
         if (requiredBadge === "Gold" && membershipLevel === "gold") return true;
         return false;
@@ -30,6 +32,38 @@ export default function FeatureGrid({ membershipLevel }: FeatureGridProps) {
         { title: "PYQ Papers", desc: "Previous Years", color: "text-cyan-600", bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "group-hover:border-cyan-500", shadow: "group-hover:shadow-cyan-500/20", icon: FileQuestion, link: "/pyq", badge: "Silver" },
         { title: "Dak Gyan Community", desc: "Ask & Discuss", color: "text-teal-600", bg: "bg-teal-50 dark:bg-teal-900/20", border: "group-hover:border-teal-500", shadow: "group-hover:shadow-teal-500/20", icon: MessageCircleQuestion, link: "/queries", badge: "Free", className: "col-span-2 lg:col-start-2 aspect-[2.5/1]" }
     ];
+
+    if (role === 'admin') {
+        // Insert Postal Docs CMS before "Dak Gyan Community" (fill left gap)
+        features.splice(8, 0, {
+            title: "Postal Docs CMS",
+            desc: "Manage Updates",
+            color: "text-pink-600",
+            bg: "bg-pink-50 dark:bg-pink-900/20",
+            border: "group-hover:border-pink-500",
+            shadow: "group-hover:shadow-pink-500/20",
+            icon: FileText,
+            link: "/developer/postal-updates",
+            badge: "Admin",
+            // @ts-ignore
+            className: "col-span-1"
+        });
+
+        // Push Developer CMS to the end (fill right gap)
+        features.push({
+            title: "Developer CMS",
+            desc: "Manage System",
+            color: "text-zinc-600",
+            bg: "bg-zinc-100 dark:bg-zinc-800",
+            border: "group-hover:border-zinc-500",
+            shadow: "group-hover:shadow-zinc-500/20",
+            icon: Shield,
+            link: "/developer",
+            badge: "Admin",
+            // @ts-ignore
+            className: "col-span-1"
+        });
+    }
 
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
@@ -64,7 +98,8 @@ export default function FeatureGrid({ membershipLevel }: FeatureGridProps) {
                                 {item.badge && (
                                     <span className={`px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
                                         item.badge === 'Silver' ? 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300' :
-                                            'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300'
+                                            item.badge === 'Gold' ? 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300' :
+                                                'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900' // Default/Admin
                                         }`}>
                                         {item.badge}
                                     </span>
@@ -74,7 +109,6 @@ export default function FeatureGrid({ membershipLevel }: FeatureGridProps) {
                             {/* Background decoration */}
                             <div className={`absolute top-0 right-0 w-16 h-16 md:w-24 md:h-24 ${item.bg} rounded-bl-[60px] md:rounded-bl-[100px] opacity-60 transition-transform duration-500 group-hover:scale-150`}></div>
 
-                            {/* Content Overlay when Locked */}
                             {/* Content Overlay when Locked */}
                             {!isUnlocked && (
                                 <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-white/95 dark:bg-zinc-950/90 backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 p-4">
