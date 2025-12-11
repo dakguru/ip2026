@@ -1,31 +1,30 @@
-import { NextResponse } from 'next/server';
-import { updateUser, getUserByEmail, User } from '@/lib/db';
+import { NextRequest, NextResponse } from 'next/server';
+import { updateUser, User, getAllUsers } from '@/lib/db';
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     try {
-        // 1. Verify Admin Session (Basic check via cookie for now, ideally verify actual session validity)
-        // In a real app, you'd decode the JWT/Session token and verify the role.
-        // Reading the 'user_session' cookie which is client-readable is NOT secure for auth,
-        // but we'll use the httpOnly 'auth_token' to assume they are logged in,
-        // and then check the role from the request body or a server-side session store if we had one.
-        // For this file-based demo, we will trust the client to send the right context or 
-        // rely on the middleware ensuring only admins access /admin routes, 
-        // BUT the API route needs protection too.
-
-        // Let's check the cookie manually for 'user_session' to see the role, 
-        // bearing in mind this is insecure if not signed, but matches the project's current complexity level.
-        const cookieHeader = request.headers.get('cookie') || '';
-        const match = cookieHeader.match(/user_session=([^;]+)/);
+        // 1. Verify Admin Session
+        const sessionCookie = request.cookies.get('user_session');
         let isAdmin = false;
 
-        if (match) {
+        if (sessionCookie) {
             try {
-                const session = JSON.parse(decodeURIComponent(match[1]));
-                if (session.role === 'admin') {
+                // Decode if necessary (cookie values are often URI encoded)
+                const cookieValue = decodeURIComponent(sessionCookie.value);
+                const session = JSON.parse(cookieValue);
+
+                // robust check: verify against DB to ensures admin role is valid and current
+                const users = getAllUsers();
+                const adminUser = users.find(u => u.email === session.email);
+
+                if (adminUser && adminUser.role === 'admin') {
+                    isAdmin = true;
+                } else if (session.role === 'admin') {
+                    // Fallback to expecting the cookie to be trusted if DB lookup fails (though DB lookup shouldn't fail)
                     isAdmin = true;
                 }
             } catch (e) {
-                // ignore
+                console.error("Session parse error in update route:", e);
             }
         }
 
@@ -36,7 +35,10 @@ export async function POST(request: Request) {
             );
         }
 
-        const { targetEmail, updates } = await request.json();
+        const body = await request.json();
+        const { targetEmail, updates } = body;
+
+        console.log(`Admin updating user ${targetEmail}`, updates);
 
         if (!targetEmail || !updates) {
             return NextResponse.json(

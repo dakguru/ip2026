@@ -4,7 +4,7 @@ import path from "path";
 import { parse } from "csv-parse/sync";
 
 // Path to the CSV file
-const CSV_PATH = "C:\\Users\\arun1\\OneDrive\\Desktop\\IP 2026\\Pincode Directory.csv";
+const CSV_PATH = path.join(process.cwd(), "src", "data", "Pincode Directory.csv");
 
 // Structure of the CSV Data
 interface PincodeData {
