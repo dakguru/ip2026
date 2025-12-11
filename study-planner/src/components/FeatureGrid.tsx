@@ -21,7 +21,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
         return false;
     };
 
-    const features = [
+    const defaultFeatures = [
         { title: "MCQs", desc: "Practice Questions", color: "text-emerald-600", bg: "bg-emerald-50 dark:bg-emerald-900/20", border: "group-hover:border-emerald-500", shadow: "group-hover:shadow-emerald-500/20", icon: CheckCircle2, link: "/quiz", badge: "Silver" },
         { title: "Study Planner", desc: "Organize Learning", color: "text-violet-600", bg: "bg-violet-50 dark:bg-violet-900/20", border: "group-hover:border-violet-500", shadow: "group-hover:shadow-violet-500/20", icon: Layout, link: "/planner", badge: "Free" },
         { title: "Web Guide", desc: "Comprehensive Resources", color: "text-blue-600", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-500", shadow: "group-hover:shadow-blue-500/20", icon: BookOpen, link: "/guide", badge: "Free" },
@@ -30,39 +30,49 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
         { title: "Current Affairs", desc: "Daily News & Updates", color: "text-indigo-600", bg: "bg-indigo-50 dark:bg-indigo-900/20", border: "group-hover:border-indigo-500", shadow: "group-hover:shadow-indigo-500/20", icon: Newspaper, link: "/current-affairs", badge: "Free" },
         { title: "Postal Updates", desc: "Circulars & Orders", color: "text-pink-600", bg: "bg-pink-50 dark:bg-pink-900/20", border: "group-hover:border-pink-500", shadow: "group-hover:shadow-pink-500/20", icon: Mail, link: "/postal-updates", badge: "Free" },
         { title: "PYQ Papers", desc: "Previous Years", color: "text-cyan-600", bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "group-hover:border-cyan-500", shadow: "group-hover:shadow-cyan-500/20", icon: FileQuestion, link: "/pyq", badge: "Silver" },
-        { title: "Dak Gyan Community", desc: "Ask & Discuss", color: "text-teal-600", bg: "bg-teal-50 dark:bg-teal-900/20", border: "group-hover:border-teal-500", shadow: "group-hover:shadow-teal-500/20", icon: MessageCircleQuestion, link: "/queries", badge: "Free", className: "col-span-2 lg:col-start-2 aspect-[2.5/1]" }
     ];
 
-    if (role === 'admin') {
-        // Insert Postal Docs CMS before "Dak Gyan Community" (fill left gap)
-        features.splice(8, 0, {
-            title: "Postal Docs CMS",
-            desc: "Manage Updates",
-            color: "text-pink-600",
-            bg: "bg-pink-50 dark:bg-pink-900/20",
-            border: "group-hover:border-pink-500",
-            shadow: "group-hover:shadow-pink-500/20",
-            icon: FileText,
-            link: "/developer/postal-updates",
-            badge: "Admin",
-            // @ts-ignore
-            className: "col-span-1"
-        });
+    let features = [...defaultFeatures];
 
-        // Push Developer CMS to the end (fill right gap)
-        features.push({
-            title: "Developer CMS",
-            desc: "Manage System",
-            color: "text-zinc-600",
-            bg: "bg-zinc-100 dark:bg-zinc-800",
-            border: "group-hover:border-zinc-500",
-            shadow: "group-hover:shadow-zinc-500/20",
-            icon: Shield,
-            link: "/developer",
-            badge: "Admin",
-            // @ts-ignore
-            className: "col-span-1"
-        });
+    // Dak Gyan Community definition
+    const dakGyanTile = { title: "Dak Gyan Community", desc: "Ask & Discuss", color: "text-teal-600", bg: "bg-teal-50 dark:bg-teal-900/20", border: "group-hover:border-teal-500", shadow: "group-hover:shadow-teal-500/20", icon: MessageCircleQuestion, link: "/queries", badge: "Free", className: "col-span-1" };
+
+
+    if (role === 'admin') {
+        // Admin View: Prioritize Admin Tiles + Community
+        features = [
+            {
+                title: "Postal Docs CMS",
+                desc: "Manage Updates",
+                color: "text-pink-600",
+                bg: "bg-pink-50 dark:bg-pink-900/20",
+                border: "group-hover:border-pink-500",
+                shadow: "group-hover:shadow-pink-500/20",
+                icon: FileText,
+                link: "/developer/postal-updates",
+                badge: "Admin",
+                // @ts-ignore
+                className: "col-span-1"
+            },
+            dakGyanTile,
+            {
+                title: "Developer CMS",
+                desc: "Manage System",
+                color: "text-zinc-600",
+                bg: "bg-zinc-100 dark:bg-zinc-800",
+                border: "group-hover:border-zinc-500",
+                shadow: "group-hover:shadow-zinc-500/20",
+                icon: Shield,
+                link: "/developer",
+                badge: "Admin",
+                // @ts-ignore
+                className: "col-span-1"
+            },
+            ...defaultFeatures
+        ];
+    } else {
+        // Regular User: Add Community and expand it to fill row if needed (optional styling)
+        features.push({ ...dakGyanTile, className: "col-span-2 lg:col-start-2 aspect-[2.5/1]" });
     }
 
     return (

@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { PlanItem } from "@/lib/types";
 import { format, parseISO } from "date-fns";
 import Link from "next/link";
+import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
 
@@ -55,7 +56,7 @@ export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps)
 
     return (
         <nav className="flex items-center justify-between px-4 md:px-6 py-4 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 transition-colors shrink-0" ref={searchRef}>
-            <div className="flex flex-1 items-center gap-4 max-w-2xl mr-auto md:mr-8 relative">
+            <div className="flex flex-1 items-center gap-4 max-w-3xl mr-auto md:mr-8 relative">
                 {/* Mobile Menu Button */}
                 <button
                     onClick={onMenuClick}
@@ -63,6 +64,16 @@ export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps)
                 >
                     <Menu className="w-6 h-6" />
                 </button>
+
+                {/* Branding */}
+                <Link href="/" className="flex items-center gap-2 shrink-0 mr-2 md:mr-4">
+                    <div className="relative w-8 h-8 overflow-hidden rounded">
+                        <Image src="/dakgyan-logo.png" alt="Dak Gyan" fill className="object-cover" />
+                    </div>
+                    <span className="hidden md:block text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+                        Dak Gyan
+                    </span>
+                </Link>
 
                 <div className="relative z-20 flex-1 max-w-lg">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 dark:text-zinc-500" />
@@ -104,14 +115,6 @@ export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps)
             </div>
 
             <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-                <Link
-                    href="/"
-                    className="p-2 text-zinc-500 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400 transition-colors"
-                    title="Back to Home"
-                >
-                    <Home className="w-5 h-5" />
-                </Link>
-                <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-800 hidden sm:block"></div>
                 <div className="hidden sm:block">
                     <ThemeToggle />
                 </div>
