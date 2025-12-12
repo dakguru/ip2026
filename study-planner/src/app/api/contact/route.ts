@@ -25,7 +25,7 @@ export async function POST(req: Request) {
                 to: "arun18@live.in", // Receiver address
                 subject: `New Contact Form: ${firstName} ${lastName}`,
                 text: `
-You have received a new message from the Dak Gyan contact form.
+You have received a new message from the Dak Guru contact form.
 
 Details:
 Name: ${firstName} ${lastName}

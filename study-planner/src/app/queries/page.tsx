@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Search,
     User,
@@ -83,7 +83,7 @@ const FEED_DATA = [
         followers: "89",
         views: "850",
         answer: {
-            author: "Dak Gyan Team",
+            author: "Dak Guru Team",
             role: "Official Mentor",
             level: "Admin",
             avatar: "DG",
@@ -182,7 +182,7 @@ export default function QueriesPage() {
                             DG
                         </div>
                         <span className="hidden md:block font-bold text-xl text-zinc-800 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                            Dak Gyan Community
+                            Dak Guru Community
                         </span>
                     </Link>
 
@@ -306,7 +306,7 @@ export default function QueriesPage() {
                         </div>
                     ) : (
                         <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 text-center border border-blue-100 dark:border-blue-800/30 transition-shadow hover:shadow-sm">
-                            <h3 className="font-bold text-lg text-zinc-800 dark:text-zinc-100 mb-2">Join the Dak Gyan Community</h3>
+                            <h3 className="font-bold text-lg text-zinc-800 dark:text-zinc-100 mb-2">Join the Dak Guru Community</h3>
                             <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">Register to get relevant Questions & Discussions on your feed regarding IP Exam 2026.</p>
                             <div className="flex gap-2 justify-center">
                                 <Link href="/login" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-bold text-sm shadow-lg shadow-blue-500/20 transition-all hover:shadow-blue-500/30 hover:-translate-y-0.5">
@@ -320,7 +320,7 @@ export default function QueriesPage() {
                     )}
 
                     {/* Web Resources Widget (Replaced Expert Panel) */}
-                    <SidebarCard title="Dak Gyan Resources" color="teal">
+                    <SidebarCard title="Dak Guru Resources" color="teal">
                         <div className="space-y-3">
                             <Link href="/planner" className="flex items-center gap-3 p-3 rounded-lg hover:bg-teal-50 dark:hover:bg-teal-900/20 group transition-colors cursor-pointer border border-transparent hover:border-teal-100">
                                 <div className="w-8 h-8 rounded-lg bg-teal-100 flex items-center justify-center text-teal-600 group-hover:scale-110 transition-transform">

@@ -87,7 +87,7 @@ export default async function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-zinc-800 dark:text-zinc-100 uppercase tracking-tight">
-            Why Choose Dak Gyan
+            Why Choose Dak Guru
           </h2>
         </div>
 
@@ -206,7 +206,7 @@ export default async function Home() {
                   <div>
                     <h4 className="font-bold mb-1">Office</h4>
                     <p className="text-blue-100">
-                      Dak Gyan<br />
+                      Dak Guru<br />
                       Near Delhi GPO<br />
                       Delhi - 110 006
                     </p>

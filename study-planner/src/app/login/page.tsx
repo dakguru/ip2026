@@ -158,10 +158,10 @@ function AuthForm() {
 
                     <div className="text-center mb-10">
                         <div className="w-20 h-20 rounded-full mx-auto flex items-center justify-center shadow-lg shadow-blue-600/20 mb-6 border-2 border-white dark:border-zinc-700 overflow-hidden transform hover:scale-105 transition-transform bg-white">
-                            <Image src="/dakgyan-logo.png" alt="Logo" width={80} height={80} className="object-cover" />
+                            <Image src="/dak-guru-logo.png" alt="Logo" width={80} height={80} className="object-cover" />
                         </div>
                         <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
-                            {isLogin ? "Welcome to Dak Gyan" : "Create Account"}
+                            {isLogin ? "Welcome to Dak Guru" : "Create Account"}
                         </h1>
                         <p className="text-zinc-500 dark:text-zinc-400">
                             {isLogin

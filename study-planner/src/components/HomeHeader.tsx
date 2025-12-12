@@ -51,10 +51,10 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                         <div className="flex items-center gap-8">
                             <Link href="/" className="flex items-center gap-2 shrink-0">
                                 <div className="relative w-8 h-8 overflow-hidden rounded">
-                                    <Image src="/dakgyan-logo.png" alt="StudyPlanner" fill className="object-cover" />
+                                    <Image src="/dak-guru-logo.png" alt="Dak Guru" fill className="object-cover" />
                                 </div>
                                 <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-                                    Dak Gyan
+                                    Dak Guru
                                 </span>
                             </Link>
 
@@ -66,8 +66,8 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                                 {isPremium ? (
                                     <span className={`px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-wide shadow-sm border ${membershipLevel === 'gold'
-                                            ? 'bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-amber-900 border-amber-200'
-                                            : 'bg-gradient-to-r from-slate-200 via-zinc-300 to-slate-400 text-slate-900 border-slate-300'
+                                        ? 'bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-amber-900 border-amber-200'
+                                        : 'bg-gradient-to-r from-slate-200 via-zinc-300 to-slate-400 text-slate-900 border-slate-300'
                                         }`}>
                                         {membershipLevel === 'gold' ? '★ Gold Member' : '★ Silver Member'}
                                     </span>
@@ -184,8 +184,8 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                                 {isPremium ? (
                                     <div className={`p-3 rounded-lg font-bold text-center ${membershipLevel === 'gold'
-                                            ? 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-900'
-                                            : 'bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-800'
+                                        ? 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-900'
+                                        : 'bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-800'
                                         }`}>
                                         {membershipLevel === 'gold' ? '★ Gold Member' : '★ Silver Member'}
                                     </div>
