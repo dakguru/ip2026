@@ -9,7 +9,8 @@ import {
     BookOpen,
     Layout,
     FileText,
-    MessageCircle
+    MessageCircle,
+    Home
 } from 'lucide-react';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
@@ -291,6 +292,9 @@ export default function QueriesPage() {
                     </div>
 
                     <div className="flex items-center gap-4 text-sm font-medium">
+                        <Link href="/" className="p-2 text-zinc-500 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400 transition-colors" title="Back to Home">
+                            <Home className="w-5 h-5" />
+                        </Link>
                         {user ? (
                             <div className="hidden md:flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                                 <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center font-bold">

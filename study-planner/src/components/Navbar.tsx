@@ -75,7 +75,7 @@ export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps)
                     </span>
                 </Link>
 
-                <div className="relative z-20 flex-1 max-w-lg">
+                <div className="relative z-20 flex-1 max-w-lg hidden md:block">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 dark:text-zinc-500" />
                     <input
                         type="text"
@@ -115,9 +115,12 @@ export default function Navbar({ plan, onSelectDate, onMenuClick }: NavbarProps)
             </div>
 
             <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-                <div className="hidden sm:block">
-                    <ThemeToggle />
-                </div>
+                <Link
+                    href="/"
+                    className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors hidden sm:block"
+                >
+                    Home
+                </Link>
                 <UserMenu />
             </div>
         </nav>

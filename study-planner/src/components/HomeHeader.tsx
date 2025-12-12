@@ -101,10 +101,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                         {/* 3. Right: Actions */}
                         <div className="flex items-center gap-3 sm:gap-4 shrink-0">
 
-                            {/* Theme Toggle Button */}
-                            <div className="hidden sm:block">
-                                <ThemeToggle />
-                            </div>
+
 
                             {isLoggedIn ? (
                                 <UserMenu />
@@ -201,10 +198,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             </nav>
 
                             <div className="pt-4 mt-4 border-t border-zinc-200 dark:border-zinc-800 flex flex-col gap-3">
-                                <div className="flex items-center justify-between p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900/50">
-                                    <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Theme</span>
-                                    <ThemeToggle />
-                                </div>
+
 
                                 {!isLoggedIn && (
                                     <>
