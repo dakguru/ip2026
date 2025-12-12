@@ -196,7 +196,7 @@ export default async function Home() {
                   <div>
                     <h4 className="font-bold mb-1">Chat to us</h4>
                     <p className="text-blue-100 mb-1">Our friendly team is here to help.</p>
-                    <a href="mailto:info@studyplanner.in" className="font-bold hover:underline">info@studyplanner.in</a>
+                    <a href="mailto:admin@dakguru.com" className="font-bold hover:underline">admin@dakguru.com</a>
                   </div>
                 </div>
               </div>

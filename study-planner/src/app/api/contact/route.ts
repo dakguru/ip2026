@@ -22,7 +22,7 @@ export async function POST(req: Request) {
 
             const mailOptions = {
                 from: process.env.EMAIL_USER, // Sender address
-                to: "arun18@live.in", // Receiver address
+                to: "admin@dakguru.com", // Receiver address
                 subject: `New Contact Form: ${firstName} ${lastName}`,
                 text: `
 You have received a new message from the Dak Guru contact form.
