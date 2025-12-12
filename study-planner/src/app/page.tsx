@@ -116,15 +116,15 @@ export default async function Home() {
 
           <div className="bg-purple-100 dark:bg-purple-900/30 rounded-3xl p-8 md:p-12 relative overflow-hidden flex flex-col items-center text-center">
             <div className="z-10">
-              <h3 className="text-3xl font-extrabold text-purple-900 dark:text-purple-100 mb-2">DOWNLOAD</h3>
-              <p className="text-xl font-semibold text-zinc-700 dark:text-zinc-300 mb-8">Study Planner App</p>
+              <h3 className="text-3xl font-extrabold text-purple-900 dark:text-purple-100 mb-2">Dak Guru App</h3>
+              <p className="text-xl font-semibold text-zinc-700 dark:text-zinc-300 mb-8">Launching Soon</p>
 
               {/* QR Code Placeholder */}
               <div className="bg-white p-4 rounded-xl shadow-lg mb-6 mx-auto w-48 h-48 flex items-center justify-center border-2 border-zinc-900">
                 <Smartphone className="w-24 h-24 text-zinc-800" />
               </div>
 
-              <p className="text-sm font-bold text-zinc-500 mb-4">www.studyplanner.in</p>
+              <p className="text-sm font-bold text-zinc-500 mb-4">www.dakguru.com</p>
 
               <div className="bg-black text-white px-6 py-2 rounded-lg flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity mx-auto w-fit">
                 <div className="w-6 h-6 relative">
@@ -157,8 +157,8 @@ export default async function Home() {
               <div className="relative w-full h-full">
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl -z-10 animate-pulse"></div>
                 <Image
-                  src="/contact-illustration.png"
-                  alt="Contact Us Illustration"
+                  src="/dak-guru-logo.png"
+                  alt="Dak Guru Logo"
                   fill
                   className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                 />

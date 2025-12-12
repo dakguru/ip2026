@@ -16,15 +16,40 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Message exceeds 500 words' }, { status: 400 });
         }
 
-        // In a real application, you would use a transactional email service like Resend, SendGrid, or Nodemailer here.
-        // For now, we will log the message as if it were sent.
-        console.log(`--- NEW DM TO ADMIN ---`);
-        console.log(`From: ${userName} (${userEmail})`);
-        console.log(`Message: ${message}`);
-        console.log(`-----------------------`);
+        // Send email using Nodemailer if credentials exist
+        if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+            const nodemailer = await import("nodemailer");
+            const transporter = nodemailer.createTransport({
+                host: "smtp.office365.com",
+                port: 587,
+                secure: false,
+                auth: {
+                    user: process.env.EMAIL_USER,
+                    pass: process.env.EMAIL_PASS,
+                },
+            });
 
-        // Simulate network delay
-        await new Promise(resolve => setTimeout(resolve, 500));
+            await transporter.sendMail({
+                from: process.env.EMAIL_USER,
+                to: "admin@dakguru.com",
+                subject: `New DM from ${userName}`,
+                text: `
+You have received a new Direct Message (DM).
+
+From: ${userName}
+Email: ${userEmail || 'Not provided'}
+
+Message:
+${message}
+                `,
+            });
+        } else {
+            // Fallback logging
+            console.log(`--- NEW DM TO ADMIN (Email creds missing) ---`);
+            console.log(`From: ${userName} (${userEmail})`);
+            console.log(`Message: ${message}`);
+            console.log(`-----------------------`);
+        }
 
         return NextResponse.json({ success: true });
     } catch (error) {
