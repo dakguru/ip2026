@@ -181,7 +181,7 @@ export default async function Home() {
             <div className="lg:col-span-5 space-y-6">
               <div className="flex items-center gap-2">
                 <div className="relative w-10 h-10 overflow-hidden rounded-full bg-white/10 p-1">
-                  <Image src="/dak-guru-logo.png" alt="Dak Guru" fill className="object-contain" />
+                  <Image src="/dak-guru-new-logo.png" alt="Dak Guru" fill className="object-contain" />
                 </div>
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
                   Dak Guru
