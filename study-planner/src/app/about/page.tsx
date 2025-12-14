@@ -28,11 +28,14 @@ export default function AboutPage() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
                 <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-8 md:p-12 border border-zinc-100 dark:border-zinc-800">
+                    <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-100 mb-6 text-center md:text-left">
+                        Dak Guru: Your Partner in Postal Excellence
+                    </h2>
                     <p className="text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed mb-6">
-                        <span className="font-bold text-blue-600 dark:text-blue-400">Dak Guru</span> is a dedicated learning platform created to support aspirants preparing for Limited Departmental Competitive Examinations (LDCE) of the Department of Posts. With a clear focus on quality, clarity, and reliability, we bring together all essential study tools in one place—so that every aspirant can prepare confidently at their own pace.
+                        <span className="font-bold text-blue-600 dark:text-blue-400">Dak Guru</span> is a specialized learning platform dedicated exclusively to aspirants of the Department of Posts' Limited Departmental Competitive Examinations (LDCE). Registered as an MSME (Govt. of India) and mentored by Retired Postal Officers, we bridge the gap between syllabus and success.
                     </p>
                     <p className="text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                        Rooted in traditional learning values yet built with modern technology, Dak Guru aims to make exam preparation simple, structured, and effective. Whether you are preparing for Inspector Posts or any other departmental examination, our resources are designed to guide you step-by-step towards success.
+                        We combine expert insights with modern learning tools to create a structured, self-paced preparation environment. Whether you are aiming for Inspector Posts or other departmental cadres, Dak Guru provides the precise resources—from comprehensive study materials to real-time mock tests—needed to secure your promotion with confidence.
                     </p>
                 </div>
             </div>

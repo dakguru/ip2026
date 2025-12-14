@@ -1,26 +1,5 @@
 [
   {
-    "id": 1765637084824,
-    "title": "IP 2025",
-    "description": "Paper I and II was easy and good. Paper III was tough",
-    "author": "Arun Selvaraj",
-    "role": "user",
-    "followers": "0",
-    "views": "0",
-    "answer": null,
-    "tags": [
-      "Exam Review",
-      "Inspector Posts (IP)",
-      "Community"
-    ],
-    "comments": [],
-    "createdAt": "2025-12-13T14:44:44.824Z",
-    "likes": 1,
-    "likedBy": [
-      "Arun Selvaraj"
-    ]
-  },
-  {
     "id": 1765557713908,
     "title": "Dear Aspirants and Colleagues,\n\nWelcome to the Dak Guru Community! We are thrilled to introduce this dedicated space designed to help you prepare, practice, and succeed in your departmental exams. Whether you are preparing for LDCE IP 2026, exploring PO Regulations 2024, or mastering SB Orders, this platform is your new study companion.",
     "author": "Vidhya A",
@@ -39,12 +18,6 @@
         "author": "Vidhya A",
         "text": "I am Vidhya. Admin of this Platform. I welcome you all once again.",
         "timestamp": "12/12/2025"
-      },
-      {
-        "id": 1765637109268,
-        "author": "Arun Selvaraj",
-        "text": "Hi All, I am Arun S from TN Circle",
-        "timestamp": "12/13/2025"
       }
     ],
     "createdAt": "2025-12-12T16:41:53.908Z",

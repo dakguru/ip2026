@@ -217,11 +217,17 @@ export default async function Home() {
             <div className="lg:col-span-3">
               <h3 className="text-lg font-bold mb-6 text-white text-left">Quick Links</h3>
               <ul className="space-y-4">
-                {["About Us", "Contact Us", "Postal Updates", "Current Affairs", "Login"].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-zinc-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-2 group">
+                {[
+                  { label: "About Us", href: "/about" },
+                  { label: "Contact Us", href: "/contact" },
+                  { label: "Postal Updates", href: "/postal-updates" },
+                  { label: "Current Affairs", href: "/current-affairs" },
+                  { label: "Dak Guru Community", href: "/community" }
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-zinc-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-2 group">
                       <span className="w-1.5 h-1.5 rounded-full bg-zinc-700 group-hover:bg-blue-500 transition-colors"></span>
-                      {item}
+                      {item.label}
                     </Link>
                   </li>
                 ))}
