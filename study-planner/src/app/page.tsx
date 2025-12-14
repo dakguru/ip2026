@@ -206,9 +206,8 @@ export default async function Home() {
                   <div>
                     <h4 className="font-bold mb-1">Office</h4>
                     <p className="text-blue-100">
-                      Dak Guru<br />
-                      Near Delhi GPO<br />
-                      Delhi - 110 006
+                      Virtual Office<br />
+                      Dak Guru
                     </p>
                   </div>
                 </div>
@@ -219,8 +218,7 @@ export default async function Home() {
                   <div>
                     <h4 className="font-bold mb-1">Phone</h4>
                     <p className="text-blue-100 mb-1">Mon - Sat from 10am to 6pm</p>
-                    <p className="font-bold">+91 8000661414</p>
-                    <p className="font-bold">+91 8209243859</p>
+                    <p className="font-bold">+91 9363030396</p>
                   </div>
                 </div>
               </div>
