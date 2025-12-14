@@ -10,7 +10,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Token and password are required' }, { status: 400 });
         }
 
-        const user = getUserByResetToken(token);
+        const user = await getUserByResetToken(token);
 
         if (!user) {
             return NextResponse.json({ error: 'Invalid or expired reset token' }, { status: 400 });
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
         const passwordHash = await bcrypt.hash(password, 10);
 
         // Update user: set new password, clear reset token fields
-        updateUser(user.email, {
+        await updateUser(user.email, {
             passwordHash,
             resetToken: undefined,
             resetTokenExpiry: undefined

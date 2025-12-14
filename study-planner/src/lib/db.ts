@@ -1,11 +1,9 @@
-import fs from 'fs';
-import path from 'path';
+import dbConnect from './mongoose';
+import UserModel from '@/models/User';
 import bcrypt from 'bcryptjs';
 
-const DB_PATH = path.join(process.cwd(), 'src', 'data', 'users.json');
-
 export interface User {
-    id: string;
+    id: string; // Mapped from _id
     email: string;
     name: string;
     mobile?: string;
@@ -15,7 +13,7 @@ export interface User {
     division?: string;
     circle?: string;
     gender?: string;
-    passwordHash: string;
+    passwordHash?: string; // Optional in interface, but mostly present
     role?: 'user' | 'admin';
     membershipLevel?: 'free' | 'silver' | 'gold';
     resetToken?: string;
@@ -23,36 +21,47 @@ export interface User {
     createdAt: string;
 }
 
-// Ensure DB file exists
-function ensureDb() {
-    if (!fs.existsSync(DB_PATH)) {
-        // directory might not exist if data folder was empty
-        const dir = path.dirname(DB_PATH);
-        if (!fs.existsSync(dir)) {
-            fs.mkdirSync(dir, { recursive: true });
-        }
-        fs.writeFileSync(DB_PATH, JSON.stringify([], null, 2));
-    }
+// Helper to map Mongoose document to User interface
+function mapUser(doc: any): User {
+    return {
+        id: doc._id.toString(),
+        email: doc.email,
+        name: doc.name,
+        mobile: doc.mobile,
+        designation: doc.designation,
+        pincode: doc.pincode,
+        officeName: doc.officeName,
+        division: doc.division,
+        circle: doc.circle,
+        gender: doc.gender,
+        passwordHash: doc.password, // Mapped from password field in DB
+        role: doc.role,
+        membershipLevel: doc.membershipLevel,
+        resetToken: doc.resetToken,
+        resetTokenExpiry: doc.resetTokenExpiry,
+        createdAt: doc.createdAt ? new Date(doc.createdAt).toISOString() : new Date().toISOString(),
+    };
 }
 
-export function getAllUsers(): User[] {
-    ensureDb();
-    try {
-        const data = fs.readFileSync(DB_PATH, 'utf-8');
-        return JSON.parse(data);
-    } catch {
-        return [];
-    }
+export async function getAllUsers(): Promise<User[]> {
+    await dbConnect();
+    const users = await UserModel.find({});
+    return users.map(mapUser);
 }
 
-export function getUserByEmail(email: string): User | undefined {
-    const users = getAllUsers();
-    return users.find((u) => u.email.toLowerCase() === email.toLowerCase());
+export async function getUserByEmail(email: string): Promise<User | null> {
+    await dbConnect();
+    const user = await UserModel.findOne({ email });
+    return user ? mapUser(user) : null;
 }
 
-export function getUserByResetToken(token: string): User | undefined {
-    const users = getAllUsers();
-    return users.find((u) => u.resetToken === token && u.resetTokenExpiry && u.resetTokenExpiry > Date.now());
+export async function getUserByResetToken(token: string): Promise<User | null> {
+    await dbConnect();
+    const user = await UserModel.findOne({
+        resetToken: token,
+        resetTokenExpiry: { $gt: Date.now() }
+    });
+    return user ? mapUser(user) : null;
 }
 
 export async function createUser(
@@ -62,57 +71,68 @@ export async function createUser(
     additionalData: Partial<User> = {},
     role: 'user' | 'admin' = 'user'
 ): Promise<User> {
-    const users = getAllUsers();
+    await dbConnect();
 
-    if (getUserByEmail(email)) {
+    const existingUser = await UserModel.findOne({ email });
+    if (existingUser) {
         throw new Error('User already exists');
     }
 
     const passwordHash = await bcrypt.hash(password, 10);
 
-    const newUser: User = {
-        id: crypto.randomUUID(),
+    const newUser = await UserModel.create({
         email,
+        password: passwordHash, // Store hash in 'password' field
         name,
         role,
-        passwordHash,
-        createdAt: new Date().toISOString(),
-        ...additionalData // Spread additional fields
-    };
+        ...additionalData
+    });
 
-    users.push(newUser);
-    fs.writeFileSync(DB_PATH, JSON.stringify(users, null, 2));
-
-    return newUser;
+    return mapUser(newUser);
 }
 
 export async function verifyUser(email: string, password: string): Promise<User | null> {
-    const user = getUserByEmail(email);
+    await dbConnect();
+    const user = await UserModel.findOne({ email });
     if (!user) return null;
 
-    const isValid = await bcrypt.compare(password, user.passwordHash);
+    const isValid = await bcrypt.compare(password, user.password);
     if (!isValid) return null;
 
-    return user;
+    return mapUser(user);
 }
 
-export function updateUser(currentEmail: string, updates: Partial<User>): User | null {
-    const users = getAllUsers();
-    const userIndex = users.findIndex((u) => u.email.toLowerCase() === currentEmail.toLowerCase());
+export async function updateUser(currentEmail: string, updates: Partial<User>): Promise<User | null> {
+    await dbConnect();
 
-    if (userIndex === -1) return null;
-
-    // If email is being changed, check if new email is taken
+    // Check if email check is needed
     if (updates.email && updates.email.toLowerCase() !== currentEmail.toLowerCase()) {
-        const existing = getUserByEmail(updates.email);
+        const existing = await UserModel.findOne({ email: updates.email });
         if (existing) {
             throw new Error("Email already in use");
         }
     }
 
-    const updatedUser = { ...users[userIndex], ...updates };
-    users[userIndex] = updatedUser;
+    // Map User interface fields to Mongoose schema fields
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const mongoUpdates: any = { ...updates };
 
-    fs.writeFileSync(DB_PATH, JSON.stringify(users, null, 2));
-    return updatedUser;
+    // Map passwordHash -> password
+    if (mongoUpdates.passwordHash) {
+        mongoUpdates.password = mongoUpdates.passwordHash;
+        delete mongoUpdates.passwordHash;
+    }
+
+    // Remove id if present (cannot update _id)
+    if (mongoUpdates.id) {
+        delete mongoUpdates.id;
+    }
+
+    const user = await UserModel.findOneAndUpdate(
+        { email: currentEmail },
+        { $set: mongoUpdates },
+        { new: true } // Return updated document
+    );
+
+    return user ? mapUser(user) : null;
 }

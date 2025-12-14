@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
                 const session = JSON.parse(cookieValue);
 
                 // robust check: verify against DB to ensures admin role is valid and current
-                const users = getAllUsers();
+                const users = await getAllUsers();
                 const adminUser = users.find(u => u.email === session.email);
 
                 if (adminUser && adminUser.role === 'admin') {
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
         }
 
         // 2. Perform Update
-        const updatedUser = updateUser(targetEmail, updates);
+        const updatedUser = await updateUser(targetEmail, updates);
 
         if (!updatedUser) {
             return NextResponse.json(

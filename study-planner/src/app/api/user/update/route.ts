@@ -12,7 +12,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const updatedUser = updateUser(currentEmail, {
+        const updatedUser = await updateUser(currentEmail, {
             name,
             email,
             mobile,

@@ -22,7 +22,7 @@ export default async function Home() {
       const sessionData = JSON.parse(userSession.value);
       if (sessionData.email) {
         // Fetch fresh user data to get latest membership status
-        const user = getUserByEmail(sessionData.email);
+        const user = await getUserByEmail(sessionData.email);
         if (user) {
           displayName = user.name;
           membershipLevel = user.membershipLevel || "free";

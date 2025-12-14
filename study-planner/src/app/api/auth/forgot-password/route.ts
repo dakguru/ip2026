@@ -11,7 +11,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Email is required' }, { status: 400 });
         }
 
-        const user = getUserByEmail(email);
+        const user = await getUserByEmail(email);
 
         if (user) {
             // Generate temporary password (8 chars)
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
             const passwordHash = await bcrypt.hash(tempPassword, 10);
 
             // Update user with new password hash
-            updateUser(email, {
+            await updateUser(email, {
                 passwordHash
             });
 

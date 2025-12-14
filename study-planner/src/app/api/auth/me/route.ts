@@ -26,7 +26,7 @@ export async function GET() {
             return NextResponse.json({ error: 'Session email missing' }, { status: 401 });
         }
 
-        const user = getUserByEmail(email);
+        const user = await getUserByEmail(email);
 
         if (!user) {
             return NextResponse.json({ error: 'User not found' }, { status: 404 });

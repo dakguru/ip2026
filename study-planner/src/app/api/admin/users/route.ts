@@ -15,7 +15,7 @@ export async function GET(request: Request) {
                 const session = JSON.parse(decodeURIComponent(match[1]));
                 // Verify against DB to ensure role is actually admin
                 // (In a real app, you'd use a secure httpOnly token and verify signature)
-                const users = getAllUsers();
+                const users = await getAllUsers();
                 const user = users.find(u => u.email === session.email);
                 if (user && user.role === 'admin') {
                     isAdmin = true;
@@ -32,7 +32,7 @@ export async function GET(request: Request) {
             );
         }
 
-        const users = getAllUsers();
+        const users = await getAllUsers();
         // Return safe user data (exclude passwordHash)
         const safeUsers = users.map(user => ({
             id: user.id,
