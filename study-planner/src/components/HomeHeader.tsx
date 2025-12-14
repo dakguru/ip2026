@@ -2,14 +2,26 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Search, ChevronDown, MessageCircle, Menu, X } from "lucide-react";
+import { Search, ChevronDown, MessageCircle, Menu, X, LogOut } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
 import { useEffect, useState } from "react";
 
 export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn: boolean, membershipLevel?: 'free' | 'silver' | 'gold' }) {
+    const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    const handleLogout = async () => {
+        try {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            router.push('/login');
+            router.refresh();
+        } catch (error) {
+            console.error('Logout failed', error);
+        }
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -200,7 +212,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             <div className="pt-4 mt-4 border-t border-zinc-200 dark:border-zinc-800 flex flex-col gap-3">
 
 
-                                {!isLoggedIn && (
+                                {!isLoggedIn ? (
                                     <>
                                         <Link
                                             href="/login"
@@ -217,6 +229,17 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                             Get Started
                                         </Link>
                                     </>
+                                ) : (
+                                    <button
+                                        onClick={() => {
+                                            handleLogout();
+                                            setMobileMenuOpen(false);
+                                        }}
+                                        className="w-full flex items-center justify-center gap-2 p-3 rounded-lg font-semibold text-red-600 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 hover:bg-red-100 dark:hover:bg-red-900/20 transition-colors"
+                                    >
+                                        <LogOut className="w-5 h-5" />
+                                        Log Out
+                                    </button>
                                 )}
                             </div>
                         </div>
