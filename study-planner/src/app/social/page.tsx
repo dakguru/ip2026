@@ -282,7 +282,7 @@ export default function QueriesPage() {
                         </span>
                     </Link>
 
-                    <div className="flex-1 max-w-2xl relative">
+                    <div className="flex-1 max-w-2xl relative hidden md:block">
                         <input
                             type="text"
                             placeholder="Search Exams, Questions, Rules..."
@@ -296,22 +296,22 @@ export default function QueriesPage() {
                             <Home className="w-5 h-5" />
                         </Link>
                         {user ? (
-                            <div className="hidden md:flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
                                 <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center font-bold">
                                     {user.name[0]}
                                 </div>
-                                <span className="font-semibold">{user.name}</span>
+                                <span className="font-semibold hidden md:block">{user.name}</span>
                             </div>
                         ) : (
-                            <Link href="/login" className="hidden md:flex items-center gap-1 text-zinc-600 hover:text-blue-600 dark:text-zinc-400 transition-colors">
-                                <User className="w-4 h-4" /> Login
+                            <Link href="/login" className="flex items-center gap-1 text-zinc-600 hover:text-blue-600 dark:text-zinc-400 transition-colors">
+                                <User className="w-4 h-4" /> <span className="hidden md:block">Login</span>
                             </Link>
                         )}
                         <button
                             onClick={() => setIsDMModalOpen(true)}
-                            className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-orange-500/20 hover:-translate-y-0.5 transform flex items-center gap-2"
+                            className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-orange-500/20 hover:-translate-y-0.5 transform flex items-center gap-2"
                         >
-                            <MessageCircle className="w-4 h-4" /> DM to Admin
+                            <MessageCircle className="w-4 h-4" /> <span className="hidden md:inline">DM to Admin</span>
                         </button>
                     </div>
                 </div>
