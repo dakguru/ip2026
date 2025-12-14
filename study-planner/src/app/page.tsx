@@ -181,6 +181,15 @@ export default async function Home() {
               <p className="text-blue-100 text-sm leading-relaxed mb-6">
                 We love to hear from you. Our friendly team is always here to chat.
               </p>
+
+              <div className="mb-6 space-y-2">
+                <p className="text-sm font-semibold text-white">
+                  Owned and Operated by: <span className="text-amber-300">Dak Guru InfoTech</span>
+                </p>
+                <div className="inline-block border border-blue-400/30 bg-blue-600/30 px-3 py-1.5 rounded-lg text-xs text-blue-50 font-medium tracking-wide shadow-sm">
+                  ★ A Government of India Registered MSME Enterprise
+                </div>
+              </div>
               <div className="flex gap-4">
                 <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Facebook className="w-5 h-5" /></Link>
                 <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Instagram className="w-5 h-5" /></Link>
