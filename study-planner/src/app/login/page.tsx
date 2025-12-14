@@ -7,7 +7,27 @@ import Image from 'next/image';
 import { Lock, User, ArrowRight, Loader2, Mail, UserPlus, Phone } from "lucide-react";
 
 const DESIGNATIONS = [
-    "GDS", "MTS", "Postman", "PA", "IP", "ASP", "PS Gr 'B'", "Group A Officer"
+    "Gramin Dak Sevak (GDS)",
+    "Multi Tasking Staff (MTS)",
+    "Postman",
+    "Mail Guard",
+    "Postal Assistant",
+    "Sorting Assistant",
+    "Inspector Posts",
+    "Assistant Superintendent of Posts",
+    "Postal Services Group 'B'",
+    "Group A Officer",
+    "Others"
+];
+
+const OTHER_OFFICE_TYPES = [
+    "CEPT", "Civil Division", "Directorate", "DO/RO/CO", "MMS", "Others", "PAO", "PSD/CSD", "PTC", "RLO", "RMS"
+].sort();
+
+const CIRCLES = [
+    "Andhra Pradesh", "Assam", "Bihar", "Chhattisgarh", "Delhi", "Gujarat", "Haryana", "Himachal Pradesh",
+    "Jammu & Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "North East",
+    "Odisha", "Punjab", "Rajasthan", "Tamil Nadu", "Telangana", "Uttar Pradesh", "Uttarakhand", "West Bengal"
 ];
 
 function AuthForm() {
@@ -25,7 +45,9 @@ function AuthForm() {
         pincode: "",
         officeName: "",
         division: "",
-        circle: ""
+        circle: "",
+        gender: "",
+        confirmPassword: ""
     });
 
     // Pincode/Office Fetch State
@@ -62,8 +84,9 @@ function AuthForm() {
         try {
             const res = await fetch(`/api/pincode?pincode=${pincode}`);
             const data = await res.json();
+            let offices = [];
             if (data.found && data.offices.length > 0) {
-                setOfficeList(data.offices);
+                offices = data.offices;
                 // Auto-fill Division/Circle from the first result (usually same for a pincode)
                 const first = data.offices[0];
                 setFormData(prev => ({
@@ -72,11 +95,13 @@ function AuthForm() {
                     circle: first.circle
                 }));
             } else {
-                setOfficeList([]);
                 setError("No offices found for this pincode.");
             }
+            // Always append 'Others'
+            setOfficeList([...offices, { name: "Others", division: "", circle: "" }]);
         } catch (err) {
             console.error(err);
+            setOfficeList([{ name: "Others", division: "", circle: "" }]);
         } finally {
             setIsFetchingOffices(false);
         }
@@ -84,6 +109,17 @@ function AuthForm() {
 
     const handleOfficeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const officeName = e.target.value;
+
+        if (officeName === "Others") {
+            setFormData(prev => ({
+                ...prev,
+                officeName: "Others",
+                division: "", // User must select type
+                circle: ""    // User must select circle
+            }));
+            return;
+        }
+
         const selectedOffice = officeList.find(o => o.name === officeName);
         if (selectedOffice) {
             setFormData(prev => ({
@@ -97,6 +133,11 @@ function AuthForm() {
         }
     };
 
+    const handleOfficeTypeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const val = e.target.value;
+        setFormData(prev => ({ ...prev, division: val }));
+    }
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
@@ -106,6 +147,21 @@ function AuthForm() {
         if (!isLogin) {
             if (!formData.designation) {
                 setError("Please select a designation.");
+                setIsLoading(false);
+                return;
+            }
+            if (!formData.gender) {
+                setError("Please select a gender.");
+                setIsLoading(false);
+                return;
+            }
+            if (formData.officeName === "Others" && (!formData.division || !formData.circle)) {
+                setError("Please select Office Type and Circle.");
+                setIsLoading(false);
+                return;
+            }
+            if (formData.password !== formData.confirmPassword) {
+                setError("Password not matching reenter");
                 setIsLoading(false);
                 return;
             }
@@ -166,7 +222,7 @@ function AuthForm() {
                         <p className="text-zinc-500 dark:text-zinc-400">
                             {isLogin
                                 ? "Enter your credentials"
-                                : "Join to start tracking your study progress"}
+                                : "Explore Dak Guru"}
                         </p>
                     </div>
 
@@ -191,6 +247,47 @@ function AuthForm() {
                                             placeholder="John Doe"
                                             required
                                         />
+                                    </div>
+                                </div>
+
+
+                                {/* Gender Selection */}
+                                <div className="space-y-2 col-span-1 md:col-span-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
+                                        Gender
+                                    </label>
+                                    <div className="flex items-center gap-6 px-1">
+                                        <label className="flex items-center gap-2 cursor-pointer group">
+                                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${formData.gender === 'Male' ? 'border-blue-600' : 'border-zinc-300 dark:border-zinc-600 group-hover:border-blue-400'}`}>
+                                                {formData.gender === 'Male' && <div className="w-2.5 h-2.5 rounded-full bg-blue-600" />}
+                                            </div>
+                                            <input
+                                                type="radio"
+                                                name="gender"
+                                                value="Male"
+                                                checked={formData.gender === 'Male'}
+                                                onChange={handleInputChange}
+                                                className="hidden"
+                                                required
+                                            />
+                                            <span className="text-zinc-700 dark:text-zinc-300">Male</span>
+                                        </label>
+
+                                        <label className="flex items-center gap-2 cursor-pointer group">
+                                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${formData.gender === 'Female' ? 'border-pink-600' : 'border-zinc-300 dark:border-zinc-600 group-hover:border-pink-400'}`}>
+                                                {formData.gender === 'Female' && <div className="w-2.5 h-2.5 rounded-full bg-pink-600" />}
+                                            </div>
+                                            <input
+                                                type="radio"
+                                                name="gender"
+                                                value="Female"
+                                                checked={formData.gender === 'Female'}
+                                                onChange={handleInputChange}
+                                                className="hidden"
+                                                required
+                                            />
+                                            <span className="text-zinc-700 dark:text-zinc-300">Female</span>
+                                        </label>
                                     </div>
                                 </div>
 
@@ -267,18 +364,20 @@ function AuthForm() {
                                     />
                                 </div>
 
-                                <div className="space-y-2">
+                                <div className="space-y-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 p-4 border border-zinc-200 dark:border-zinc-800">
                                     <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                        Office of working
+                                        Office / Unit Details
                                     </label>
+
+                                    {/* Office Select */}
                                     {isFetchingOffices ? (
-                                        <div className="w-full py-3.5 px-4 bg-zinc-50 rounded-2xl text-zinc-400 text-sm">Loading offices...</div>
+                                        <div className="w-full py-3.5 px-4 bg-zinc-100 dark:bg-zinc-800 rounded-2xl text-zinc-400 text-sm">Loading offices...</div>
                                     ) : (
                                         <select
                                             name="officeName"
                                             value={formData.officeName}
                                             onChange={handleOfficeSelect}
-                                            className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all"
+                                            className="w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all"
                                             required
                                             disabled={officeList.length === 0}
                                         >
@@ -288,31 +387,65 @@ function AuthForm() {
                                             ))}
                                         </select>
                                     )}
-                                </div>
 
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                        Division
-                                    </label>
-                                    <input
-                                        name="division"
-                                        type="text"
-                                        value={formData.division}
-                                        readOnly
-                                        className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-500 cursor-not-allowed"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                        Circle
-                                    </label>
-                                    <input
-                                        name="circle"
-                                        type="text"
-                                        value={formData.circle}
-                                        readOnly
-                                        className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-500 cursor-not-allowed"
-                                    />
+                                    {/* Conditional: Office Type (if Others) */}
+                                    {formData.officeName === "Others" && (
+                                        <div className="space-y-2 animate-in fade-in slide-in-from-top-2">
+                                            <label className="text-xs font-medium text-zinc-500 dark:text-zinc-400 ml-1 uppercase">
+                                                Select Office Type
+                                            </label>
+                                            <select
+                                                value={formData.division} // Using division field to store the Type
+                                                onChange={handleOfficeTypeSelect}
+                                                className="w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all"
+                                                required
+                                            >
+                                                <option value="">Select Category</option>
+                                                {OTHER_OFFICE_TYPES.map(type => (
+                                                    <option key={type} value={type}>{type}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    )}
+
+                                    {/* Division (Readonly or updated by Office Type) */}
+                                    {formData.officeName !== "Others" && (
+                                        <div className="space-y-1">
+                                            <label className="text-xs text-zinc-400 ml-1">Division</label>
+                                            <input
+                                                name="division"
+                                                type="text"
+                                                value={formData.division}
+                                                readOnly
+                                                className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-2 px-4 text-zinc-500 text-sm cursor-not-allowed"
+                                            />
+                                        </div>
+                                    )}
+
+                                    {/* Circle (Readonly normally, Editable if Others) */}
+                                    <div className="space-y-1">
+                                        <label className="text-xs text-zinc-400 ml-1">Circle</label>
+                                        {formData.officeName === "Others" ? (
+                                            <select
+                                                name="circle"
+                                                value={formData.circle}
+                                                onChange={handleInputChange}
+                                                className="w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl py-2 px-4 text-zinc-900 dark:text-zinc-100 text-sm outline-none focus:ring-2 focus:ring-blue-600/20"
+                                                required
+                                            >
+                                                <option value="">Select Circle</option>
+                                                {CIRCLES.map(c => <option key={c} value={c}>{c}</option>)}
+                                            </select>
+                                        ) : (
+                                            <input
+                                                name="circle"
+                                                type="text"
+                                                value={formData.circle}
+                                                readOnly
+                                                className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-2 px-4 text-zinc-500 text-sm cursor-not-allowed"
+                                            />
+                                        )}
+                                    </div>
                                 </div>
 
                             </div>
@@ -351,6 +484,24 @@ function AuthForm() {
                                             name="password"
                                             type="password"
                                             value={formData.password}
+                                            onChange={handleInputChange}
+                                            className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
+                                            placeholder="••••••••"
+                                            required
+                                            minLength={6}
+                                        />
+                                    </div>
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1 mt-2 block">
+                                        Confirm Password
+                                    </label>
+                                    <div className="relative group">
+                                        <div className="absolute left-4 top-3.5 text-zinc-400 group-focus-within:text-blue-600 dark:group-focus-within:text-blue-400 transition-colors">
+                                            <Lock className="w-5 h-5" />
+                                        </div>
+                                        <input
+                                            name="confirmPassword"
+                                            type="password"
+                                            value={formData.confirmPassword}
                                             onChange={handleInputChange}
                                             className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
                                             placeholder="••••••••"
@@ -422,7 +573,8 @@ function AuthForm() {
                                 onClick={() => {
                                     setIsLogin(!isLogin);
                                     setError("");
-                                    setFormData({ name: "", email: "", password: "", mobile: "", designation: "", pincode: "", officeName: "", division: "", circle: "" });
+                                    setFormData({ name: "", email: "", password: "", mobile: "", designation: "", pincode: "", officeName: "", division: "", circle: "", gender: "", confirmPassword: "" });
+
                                 }}
                                 className="text-blue-600 hover:text-blue-500 font-semibold hover:underline bg-transparent border-none cursor-pointer ml-1"
                             >
@@ -430,7 +582,7 @@ function AuthForm() {
                             </button>
                         </p>
                     </div>
-                </div>
+                </div >
 
                 <div className="mt-8 text-center text-zinc-400 text-sm flex items-center justify-center gap-2">
                     <div className="px-2 py-1 bg-green-500/10 text-green-600 rounded text-xs font-medium border border-green-500/20">
@@ -438,8 +590,8 @@ function AuthForm() {
                     </div>
                     <span>Advanced Preparation Master</span>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 

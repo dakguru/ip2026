@@ -222,7 +222,7 @@ export default async function Home() {
                   { label: "Contact Us", href: "/contact" },
                   { label: "Postal Updates", href: "/postal-updates" },
                   { label: "Current Affairs", href: "/current-affairs" },
-                  { label: "Dak Guru Community", href: "/community" }
+                  { label: "Dak Guru Community", href: "/social" }
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="text-zinc-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-2 group">

@@ -56,5 +56,20 @@
     "officeName": "Karur H.O",
     "division": "Karur Division",
     "circle": "TAMIL NADU"
+  },
+  {
+    "id": "3fa2ee77-db42-477b-8d7d-40cd59d8b88f",
+    "email": "testuser@gmail.com",
+    "name": "Test User",
+    "role": "user",
+    "passwordHash": "$2b$10$Akl7miAhlRQ4ONgq.n5Hfus..VEblgLzznShOg99OdF9V3G3RPGyi",
+    "createdAt": "2025-12-14T16:24:31.210Z",
+    "mobile": "9876543210",
+    "designation": "Inspector Posts",
+    "pincode": "535001",
+    "officeName": "Others",
+    "division": "PTC",
+    "circle": "Tamil Nadu",
+    "gender": "Male"
   }
 ]

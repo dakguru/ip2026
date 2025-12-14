@@ -46,7 +46,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
     let features = [...defaultFeatures];
 
     // Dak Guru Community definition
-    const dakGuruTile = { title: "Dak Guru Community", desc: "Ask & Discuss", color: "text-teal-600", bg: "bg-teal-50 dark:bg-teal-900/20", border: "group-hover:border-teal-500", shadow: "group-hover:shadow-teal-500/20", icon: MessageCircleQuestion, link: "/queries", badge: "Free", className: "col-span-1" };
+    const dakGuruTile = { title: "Dak Guru Community", desc: "Ask & Discuss", color: "text-teal-600", bg: "bg-teal-50 dark:bg-teal-900/20", border: "group-hover:border-teal-500", shadow: "group-hover:shadow-teal-500/20", icon: MessageCircleQuestion, link: "/social", badge: "Free", className: "col-span-1" };
 
 
     if (role === 'admin') {

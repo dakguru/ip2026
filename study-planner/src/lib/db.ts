@@ -14,6 +14,7 @@ export interface User {
     officeName?: string;
     division?: string;
     circle?: string;
+    gender?: string;
     passwordHash: string;
     role?: 'user' | 'admin';
     membershipLevel?: 'free' | 'silver' | 'gold';

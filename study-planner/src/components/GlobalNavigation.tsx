@@ -8,7 +8,7 @@ import { UserMenu } from "./UserMenu";
 export default function GlobalNavigation() {
     const pathname = usePathname();
     // Start by hiding on home page, same as before
-    if (pathname === "/" || pathname === "/queries" || pathname.startsWith("/planner")) return null;
+    if (pathname === "/" || pathname === "/social" || pathname.startsWith("/planner")) return null;
 
     return (
         <header className="sticky top-0 z-50 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 py-3 shadow-sm">
