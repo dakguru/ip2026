@@ -70,16 +70,28 @@ export default async function Home() {
       {/* 4. Join Section */}
       <section className="bg-sky-50 dark:bg-sky-900/10 py-20 mb-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-800 dark:text-zinc-100 mb-4 leading-tight">
+          <div className="mb-6">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-bold text-sm tracking-wide uppercase shadow-sm">
+              Be a Smart Aspirant, Not a Passive Viewer
+            </span>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-800 dark:text-zinc-100 mb-6 leading-tight">
             Prepare for Inspector Posts Exam 2026 with Confidence
           </h2>
-          <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-8 max-w-3xl mx-auto">
+
+          <p className="text-zinc-700 dark:text-zinc-200 text-xl font-medium mb-4 max-w-3xl mx-auto leading-relaxed">
+            Master the Inspector Posts Syllabus in half the time. No long videos. Just high-yield notes, instant quizzes, and rapid revision.
+          </p>
+
+          <p className="text-zinc-500 dark:text-zinc-400 text-base mb-10 max-w-3xl mx-auto">
             Practice-rich MCQs, structured Study Planner, comprehensive Web Guide, quick-revision Flash Cards, and printable PDF Notes — everything you need to level up your preparation.
           </p>
-          <Link href="/pricing" className="inline-block px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-bold text-lg shadow-xl shadow-blue-500/30 transition-all hover:scale-105 active:scale-95">
+
+          <Link href="/pricing" className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold text-lg shadow-xl shadow-blue-600/30 transition-all hover:scale-105 active:scale-95">
             Join Now
           </Link>
-          <div className="w-24 h-1 bg-blue-500 mx-auto mt-12 rounded-full"></div>
+          <div className="w-24 h-1 bg-zinc-200 dark:bg-zinc-800 mx-auto mt-12 rounded-full"></div>
         </div>
       </section>
 
