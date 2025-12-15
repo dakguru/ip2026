@@ -180,7 +180,7 @@ export default function PricingPage() {
 
                         if (verifyRes.ok) {
                             alert("Payment Successful! Membership Updated.");
-                            router.push('/settings'); // Redirect to membership details
+                            router.push('/membership'); // Redirect to membership details
                             router.refresh();
                         } else {
                             alert("Payment verification failed: " + verifyData.error);

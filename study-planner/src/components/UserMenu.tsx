@@ -24,7 +24,8 @@ import {
     LogOut,
     Shield,
     BarChart3,
-    Bookmark
+    Bookmark,
+    CreditCard
 } from "lucide-react";
 
 interface UserSession {
@@ -120,9 +121,14 @@ export function UserMenu() {
                         <span>My Progress</span>
                     </DropdownMenuItem>
 
+                    <DropdownMenuItem onClick={() => router.push('/membership')}>
+                        <CreditCard className="mr-2 h-4 w-4 text-zinc-500" />
+                        <span>Membership Details</span>
+                    </DropdownMenuItem>
+
                     <DropdownMenuItem onClick={() => router.push('/settings')}>
                         <User className="mr-2 h-4 w-4 text-zinc-500" />
-                        <span>Membership Details</span>
+                        <span>Account Settings</span>
                     </DropdownMenuItem>
 
 

@@ -16,6 +16,10 @@ export interface User {
     passwordHash?: string; // Optional in interface, but mostly present
     role?: 'user' | 'admin';
     membershipLevel?: 'free' | 'silver' | 'gold';
+    membershipValidity?: string;
+    planId?: string;
+    planName?: string;
+    purchaseDate?: string;
     resetToken?: string;
     resetTokenExpiry?: number;
     createdAt: string;
@@ -37,6 +41,10 @@ function mapUser(doc: any): User {
         passwordHash: doc.password, // Mapped from password field in DB
         role: doc.role,
         membershipLevel: doc.membershipLevel,
+        membershipValidity: doc.membershipValidity ? new Date(doc.membershipValidity).toISOString() : undefined,
+        planId: doc.planId,
+        planName: doc.planName,
+        purchaseDate: doc.purchaseDate ? new Date(doc.purchaseDate).toISOString() : undefined,
         resetToken: doc.resetToken,
         resetTokenExpiry: doc.resetTokenExpiry,
         createdAt: doc.createdAt ? new Date(doc.createdAt).toISOString() : new Date().toISOString(),
