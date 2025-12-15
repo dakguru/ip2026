@@ -1,16 +1,41 @@
 "use client";
 
-import { useState } from "react";
-import { Check, X, Tag, ShieldCheck, Zap } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Check, X, Tag, ShieldCheck, Zap, Loader2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import Script from "next/script";
+
+declare global {
+    interface Window {
+        Razorpay: any;
+    }
+}
 
 export default function PricingPage() {
+    const router = useRouter();
     const [selectedPlanKey, setSelectedPlanKey] = useState<'monthly' | 'yearly' | 'lifetime'>('yearly');
     const [activeTab, setActiveTab] = useState<'gold' | 'silver'>('gold');
     const [showCouponInput, setShowCouponInput] = useState(false);
     const [couponCode, setCouponCode] = useState("");
     const [discount, setDiscount] = useState(0);
+    const [isProcessing, setIsProcessing] = useState(false);
+    const [userEmail, setUserEmail] = useState<string | null>(null);
+
+    // Check login status
+    useEffect(() => {
+        const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+        if (match) {
+            try {
+                const decoded = decodeURIComponent(match[2]);
+                const session = JSON.parse(decoded);
+                setUserEmail(session.email);
+            } catch (e) {
+                console.error("Session parse error", e);
+            }
+        }
+    }, []);
 
     // Gold Plans Data
     const goldPlans = {
@@ -84,6 +109,90 @@ export default function PricingPage() {
 
     const finalPrice = selectedPlan.price - discount;
 
+    const handlePayment = async () => {
+        if (!userEmail) {
+            router.push('/login?redirect=/pricing');
+            return;
+        }
+
+        setIsProcessing(true);
+
+        try {
+            // 1. Create Order
+            const res = await fetch('/api/payment/create-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ amount: finalPrice, currency: 'INR' }),
+            });
+
+            const order = await res.json();
+
+            if (!res.ok) {
+                throw new Error(order.error || 'Failed to create order');
+            }
+
+            // 2. Open Razorpay
+            const options = {
+                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || 'rzp_test_placeholder', // Should be env var in client
+                amount: order.amount,
+                currency: order.currency,
+                name: "Dak Guru Study Planner",
+                description: selectedPlan.name,
+                image: "/dak-guru-new-logo.png",
+                order_id: order.id,
+                handler: async function (response: any) {
+                    // 3. Verify Payment
+                    try {
+                        const verifyRes = await fetch('/api/payment/verify', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                razorpay_order_id: response.razorpay_order_id,
+                                razorpay_payment_id: response.razorpay_payment_id,
+                                razorpay_signature: response.razorpay_signature,
+                                email: userEmail,
+                                planType: activeTab // 'gold' or 'silver'
+                            }),
+                        });
+
+                        const verifyData = await verifyRes.json();
+
+                        if (verifyRes.ok) {
+                            alert("Payment Successful! Membership Updated.");
+                            router.push('/planner');
+                            router.refresh();
+                        } else {
+                            alert("Payment verification failed: " + verifyData.error);
+                        }
+                    } catch (err) {
+                        console.error("Verification error", err);
+                        alert("Payment successful but verification failed. Please contact support.");
+                    }
+                },
+                prefill: {
+                    name: "User", // Ideally prepopulate name if available
+                    email: userEmail,
+                    contact: ""
+                },
+                theme: {
+                    color: "#2563eb"
+                }
+            };
+
+            const rzp1 = new window.Razorpay(options);
+            rzp1.on('payment.failed', function (response: any) {
+                alert("Payment Failed: " + response.error.description);
+            });
+            rzp1.open();
+
+        } catch (error: any) {
+            console.error("Payment Error:", error);
+            alert("Something went wrong: " + error.message);
+        } finally {
+            setIsProcessing(false);
+        }
+    };
+
     const benefits = [
         { name: "Live Mock Tests", gold: true, silver: true },
         { name: "Updated Notes as per recent Amendments", gold: true, silver: false },
@@ -96,6 +205,7 @@ export default function PricingPage() {
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans pt-20 pb-12">
+            <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
 
             {/* Banner Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
@@ -292,9 +402,22 @@ export default function PricingPage() {
                                 </div>
                             )}
 
-                            <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
-                                <Zap className="w-5 h-5 fill-current" />
-                                Proceed to Payment
+                            <button
+                                onClick={handlePayment}
+                                disabled={isProcessing}
+                                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                            >
+                                {isProcessing ? (
+                                    <>
+                                        <Loader2 className="w-5 h-5 animate-spin" />
+                                        Processing...
+                                    </>
+                                ) : (
+                                    <>
+                                        <Zap className="w-5 h-5 fill-current" />
+                                        Proceed to Payment
+                                    </>
+                                )}
                             </button>
 
                             <p className="mt-4 text-center text-xs text-zinc-400">
