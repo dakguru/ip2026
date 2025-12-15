@@ -11,7 +11,7 @@ export async function POST(request: Request) {
             razorpay_payment_id,
             razorpay_signature,
             email, // We'll pass email from client for now, but ideally get it from session
-            planType // 'gold' or 'silver'
+            plan // { id, name, type, validityDays }
         } = await request.json();
 
         // 1. Verify Signature
@@ -26,13 +26,25 @@ export async function POST(request: Request) {
         }
 
         // 2. Payment Verified - Update User in DB
-        if (email && planType) {
+        if (email && plan) {
             await dbConnect();
+
+            // Calculate validity date
+            const purchaseDate = new Date();
+            const validityDays = plan.validityDays || 0;
+            const validityDate = new Date(purchaseDate);
+            validityDate.setDate(validityDate.getDate() + validityDays);
 
             // Using findOneAndUpdate to locate and update user
             const updatedUser = await User.findOneAndUpdate(
                 { email: email },
-                { membershipLevel: planType },
+                {
+                    membershipLevel: plan.type, // 'gold' or 'silver'
+                    membershipValidity: validityDate,
+                    planId: plan.id,
+                    planName: plan.name,
+                    purchaseDate: purchaseDate
+                },
                 { new: true }
             );
 

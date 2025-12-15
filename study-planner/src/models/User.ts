@@ -14,6 +14,10 @@ const UserSchema = new mongoose.Schema({
     gender: { type: String },
     role: { type: String, default: 'user', enum: ['user', 'admin'] },
     membershipLevel: { type: String, default: 'free', enum: ['free', 'silver', 'gold'] },
+    membershipValidity: { type: Date }, // Date when membership expires
+    planId: { type: String }, // ID of the plan purchased
+    planName: { type: String }, // Name of the plan purchased
+    purchaseDate: { type: Date }, // Date when plan was purchased
     resetToken: { type: String },
     resetTokenExpiry: { type: Number },
     createdAt: { type: Date, default: Date.now },

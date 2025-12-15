@@ -22,6 +22,7 @@ export default function PricingPage() {
     const [discount, setDiscount] = useState(0);
     const [isProcessing, setIsProcessing] = useState(false);
     const [userEmail, setUserEmail] = useState<string | null>(null);
+    const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>('free');
 
     // Check login status
     useEffect(() => {
@@ -31,6 +32,12 @@ export default function PricingPage() {
                 const decoded = decodeURIComponent(match[2]);
                 const session = JSON.parse(decoded);
                 setUserEmail(session.email);
+                setCurrentMembership(session.membershipLevel || 'free');
+
+                // Auto-select upgrade plan if applicable
+                if (session.membershipLevel === 'silver') {
+                    setActiveTab('gold');
+                }
             } catch (e) {
                 console.error("Session parse error", e);
             }
@@ -109,6 +116,15 @@ export default function PricingPage() {
 
     const finalPrice = selectedPlan.price - discount;
 
+    // Determine validity days based on plan ID
+    const getValidityDays = (planId: string) => {
+        if (planId.includes('monthly')) return 31;
+        if (planId.includes('yearly')) return 365;
+        if (planId.includes('lifetime') && planId.includes('gold')) return 548;
+        if (planId.includes('lifetime') && planId.includes('silver')) return 1095; // 3 years
+        return 30;
+    };
+
     const handlePayment = async () => {
         if (!userEmail) {
             router.push('/login?redirect=/pricing');
@@ -151,7 +167,12 @@ export default function PricingPage() {
                                 razorpay_payment_id: response.razorpay_payment_id,
                                 razorpay_signature: response.razorpay_signature,
                                 email: userEmail,
-                                planType: activeTab // 'gold' or 'silver'
+                                plan: {
+                                    id: selectedPlan.id,
+                                    name: selectedPlan.name,
+                                    type: activeTab,
+                                    validityDays: getValidityDays(selectedPlan.id)
+                                }
                             }),
                         });
 
@@ -159,7 +180,7 @@ export default function PricingPage() {
 
                         if (verifyRes.ok) {
                             alert("Payment Successful! Membership Updated.");
-                            router.push('/planner');
+                            router.push('/settings'); // Redirect to membership details
                             router.refresh();
                         } else {
                             alert("Payment verification failed: " + verifyData.error);
@@ -238,19 +259,29 @@ export default function PricingPage() {
                         <div className="bg-white dark:bg-zinc-900 rounded-2xl p-2 inline-flex shadow-sm border border-zinc-200 dark:border-zinc-800 w-full md:w-auto gap-2">
                             <button
                                 onClick={() => { setActiveTab('gold'); setDiscount(0); }}
-                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 ${activeTab === 'gold'
-                                    ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 ring-yellow-200 dark:ring-yellow-800'
-                                    : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}`}
+                                disabled={currentMembership === 'gold'}
+                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 
+                                    ${activeTab === 'gold'
+                                        ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 ring-yellow-200 dark:ring-yellow-800'
+                                        : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}
+                                    ${currentMembership === 'gold' ? 'opacity-50 cursor-not-allowed' : ''}
+                                 `}
                             >
                                 Gold Plan {activeTab === 'gold' && <span className="ml-2 bg-yellow-400 text-yellow-900 text-[10px] px-1.5 py-0.5 rounded uppercase">Recommended</span>}
+                                {currentMembership === 'gold' && <span className="block text-[10px] uppercase mt-1">(Current Plan)</span>}
                             </button>
                             <button
                                 onClick={() => { setActiveTab('silver'); setDiscount(0); }}
-                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 ${activeTab === 'silver'
-                                    ? 'bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-400 ring-slate-200 dark:ring-slate-800'
-                                    : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}`}
+                                disabled={currentMembership === 'silver' || currentMembership === 'gold'}
+                                className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 
+                                    ${activeTab === 'silver'
+                                        ? 'bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-400 ring-slate-200 dark:ring-slate-800'
+                                        : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}
+                                    ${(currentMembership === 'silver' || currentMembership === 'gold') ? 'opacity-50 cursor-not-allowed' : ''}
+                                `}
                             >
                                 Silver Plan
+                                {(currentMembership === 'silver' || currentMembership === 'gold') && <span className="block text-[10px] uppercase mt-1">(Already Active/Upgraded)</span>}
                             </button>
                         </div>
 
