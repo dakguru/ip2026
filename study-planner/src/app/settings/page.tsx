@@ -205,11 +205,11 @@ export default function SettingsPage() {
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 relative">
             <div className="max-w-3xl mx-auto">
                 <Link
-                    href="/planner"
+                    href="/"
                     className="inline-flex items-center text-sm text-zinc-500 hover:text-blue-600 transition-colors mb-8"
                 >
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Dashboard
+                    Back to Home
                 </Link>
 
                 <div className="bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">

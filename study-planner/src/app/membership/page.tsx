@@ -64,11 +64,11 @@ export default function MembershipPage() {
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 relative">
             <div className="max-w-3xl mx-auto">
                 <Link
-                    href="/planner"
+                    href="/"
                     className="inline-flex items-center text-sm text-zinc-500 hover:text-blue-600 transition-colors mb-8"
                 >
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Dashboard
+                    Back to Home
                 </Link>
 
                 <div className="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm relative">
@@ -122,8 +122,8 @@ export default function MembershipPage() {
                                         <div>
                                             <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold mb-1">Plan Name</p>
                                             <div className={`inline-flex items-center px-4 py-2 rounded-lg font-bold shadow-sm uppercase tracking-wider text-sm ${isGold
-                                                    ? 'bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-amber-200 dark:shadow-none'
-                                                    : 'bg-gradient-to-r from-slate-300 to-zinc-400 text-slate-900 shadow-zinc-200 dark:shadow-none'
+                                                ? 'bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-amber-200 dark:shadow-none'
+                                                : 'bg-gradient-to-r from-slate-300 to-zinc-400 text-slate-900 shadow-zinc-200 dark:shadow-none'
                                                 }`}>
                                                 {membershipData.planName || (isGold ? 'Gold Plan' : 'Silver Plan')}
                                             </div>
