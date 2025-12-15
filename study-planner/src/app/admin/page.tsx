@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Shield, Users, ArrowLeft, Loader2, Search } from "lucide-react";
+import { Shield, Users, ArrowLeft, Loader2, Search, CreditCard, Calendar, CheckCircle, Smartphone } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
 
@@ -19,6 +19,10 @@ interface UserData {
     officeName?: string;
     division?: string;
     circle?: string;
+    planId?: string;
+    planName?: string;
+    purchaseDate?: string;
+    membershipValidity?: string;
 }
 
 import {
@@ -38,6 +42,7 @@ export default function AdminDashboard() {
 
     // Edit State
     const [editingUser, setEditingUser] = useState<UserData | null>(null);
+    const [viewingPaymentUser, setViewingPaymentUser] = useState<UserData | null>(null);
     const [isSaving, setIsSaving] = useState(false);
 
     const router = useRouter();
@@ -202,6 +207,15 @@ export default function AdminDashboard() {
                                                 }`}>
                                                 {user.membershipLevel || 'free'}
                                             </span>
+
+                                            {user.membershipLevel !== 'free' && (
+                                                <button
+                                                    onClick={() => setViewingPaymentUser(user)}
+                                                    className="block mt-1 text-[10px] text-blue-600 hover:underline cursor-pointer"
+                                                >
+                                                    View Payment
+                                                </button>
+                                            )}
                                         </td>
                                         <td className="py-4 px-6 text-sm text-zinc-600 dark:text-zinc-300">
                                             {format(new Date(user.createdAt), 'MMM d, yyyy')}
@@ -227,6 +241,72 @@ export default function AdminDashboard() {
                     </div>
                 </div>
             </div>
+
+            {/* Payment Details Dialog */}
+            <Dialog open={!!viewingPaymentUser} onOpenChange={(open) => !open && setViewingPaymentUser(null)}>
+                <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                        <DialogTitle>Payment Details</DialogTitle>
+                        <DialogDescription>
+                            Payment and membership information for {viewingPaymentUser?.name}
+                        </DialogDescription>
+                    </DialogHeader>
+
+                    {viewingPaymentUser && (
+                        <div className="space-y-4 py-4">
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="col-span-2 bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-700 flex items-center justify-between">
+                                    <div>
+                                        <p className="text-xs text-zinc-500 uppercase font-semibold">Current Plan</p>
+                                        <p className="font-bold text-lg text-zinc-900 dark:text-zinc-100">{viewingPaymentUser.planName || 'N/A'}</p>
+                                    </div>
+                                    <div className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${viewingPaymentUser.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-800'
+                                        }`}>
+                                        {viewingPaymentUser.membershipLevel}
+                                    </div>
+                                </div>
+
+                                <div className="space-y-1">
+                                    <p className="text-xs text-zinc-500 uppercase font-semibold">Payment ID / Order</p>
+                                    <p className="text-sm font-mono text-zinc-700 dark:text-zinc-300 break-all">{viewingPaymentUser.planId || 'N/A'}</p>
+                                </div>
+
+                                <div className="space-y-1">
+                                    <p className="text-xs text-zinc-500 uppercase font-semibold">Amount Paid</p>
+                                    <p className="text-sm font-medium text-green-600">
+                                        {viewingPaymentUser.planName?.includes('Yearly Gold') ? '₹649' :
+                                            viewingPaymentUser.planName?.includes('Monthly Gold') ? '₹599' :
+                                                viewingPaymentUser.planName?.includes('18 Months') ? '₹799' : 'Paid'}
+                                    </p>
+                                </div>
+
+                                <div className="space-y-1">
+                                    <p className="text-xs text-zinc-500 uppercase font-semibold">Purchase Date</p>
+                                    <p className="text-sm text-zinc-700 dark:text-zinc-300">
+                                        {viewingPaymentUser.purchaseDate
+                                            ? format(new Date(viewingPaymentUser.purchaseDate), 'PP pp')
+                                            : 'N/A'}
+                                    </p>
+                                </div>
+
+                                <div className="space-y-1">
+                                    <p className="text-xs text-zinc-500 uppercase font-semibold">Valid Until</p>
+                                    <p className="text-sm text-zinc-700 dark:text-zinc-300">
+                                        {viewingPaymentUser.membershipValidity
+                                            ? format(new Date(viewingPaymentUser.membershipValidity), 'PP')
+                                            : 'N/A'}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    <DialogFooter>
+                        <button onClick={() => setViewingPaymentUser(null)} className="w-full sm:w-auto px-4 py-2 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-900 dark:text-zinc-100 rounded-lg font-medium transition-colors">
+                            Close
+                        </button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
 
             {/* Edit User Dialog */}
             <Dialog open={!!editingUser} onOpenChange={(open) => !open && setEditingUser(null)}>

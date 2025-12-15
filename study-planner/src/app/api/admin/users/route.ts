@@ -46,6 +46,10 @@ export async function GET(request: Request) {
             circle: user.circle,
             role: user.role || 'user',
             membershipLevel: user.membershipLevel,
+            planId: user.planId,
+            planName: user.planName,
+            purchaseDate: user.purchaseDate,
+            membershipValidity: user.membershipValidity,
             createdAt: user.createdAt
         }));
 
