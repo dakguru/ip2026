@@ -73,6 +73,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
                                 <Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About Us</Link>
                                 <Link href="/postal-updates" className="hover:text-blue-600 dark:hover:text-blue-400">Postal Updates</Link>
+                                <Link href="/social" className="hover:text-blue-600 dark:hover:text-blue-400">DG Community</Link>
                                 <Link href="/current-affairs" className="hover:text-blue-600 dark:hover:text-blue-400">Current Affairs</Link>
                                 <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400">Syllabus</Link>
 
@@ -175,6 +176,13 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Postal Updates
+                                </Link>
+                                <Link
+                                    href="/social"
+                                    className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    DG Community
                                 </Link>
                                 <Link
                                     href="/current-affairs"
