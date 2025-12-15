@@ -120,15 +120,12 @@ export function UserMenu() {
                         <span>My Progress</span>
                     </DropdownMenuItem>
 
-                    <DropdownMenuItem onClick={() => router.push('/bookmarks')}>
-                        <Bookmark className="mr-2 h-4 w-4 text-zinc-500" />
-                        <span>Bookmarks</span>
-                    </DropdownMenuItem>
-
                     <DropdownMenuItem onClick={() => router.push('/settings')}>
                         <User className="mr-2 h-4 w-4 text-zinc-500" />
-                        <span>Account Settings</span>
+                        <span>Membership Details</span>
                     </DropdownMenuItem>
+
+
                 </DropdownMenuGroup>
 
                 <DropdownMenuSeparator />
@@ -195,8 +192,8 @@ export function UserMenu() {
                         <button
                             onClick={() => router.push('/pricing')}
                             className={`w-full flex items-center justify-center gap-2 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95 ${session?.membershipLevel === 'silver'
-                                    ? 'bg-gradient-to-r from-amber-400 to-yellow-600 text-white'
-                                    : 'bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900'
+                                ? 'bg-gradient-to-r from-amber-400 to-yellow-600 text-white'
+                                : 'bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900'
                                 }`}
                         >
                             <span>{session?.membershipLevel === 'silver' ? 'Upgrade to Gold' : 'Upgrade to Pro'}</span>
