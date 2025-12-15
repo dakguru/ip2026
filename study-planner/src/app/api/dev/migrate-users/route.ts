@@ -1,0 +1,132 @@
+import { NextResponse } from 'next/server';
+import dbConnect from '@/lib/mongoose';
+import User from '@/models/User';
+
+const OLD_USERS = [
+    {
+        "id": "e07d45c9-4e63-4d7f-aa22-11c8427c429c",
+        "email": "sarunkrr@gmail.com",
+        "name": "Arun Selvaraj",
+        "passwordHash": "$2b$10$DWKJHbDGlsb1eXvV75XHpOEfagNUEotDCgOoNonHmp5.Tk.JuoYci",
+        "createdAt": "2025-12-07T16:56:59.221Z",
+        "role": "user",
+        "membershipLevel": "silver",
+        "resetToken": "c38b17d0d48d9db9f9569234da9873c7c5e424b39e5ac66e9aa650d8856710e3",
+        "resetTokenExpiry": 1765390216318
+    },
+    {
+        "id": "8400a18d-19da-44b8-9fe2-48ff2110e3fa",
+        "email": "admin@studyplanner.com",
+        "name": "Developer",
+        "role": "admin",
+        "passwordHash": "$2b$10$/zajJELmqHvTHdYi1t3pROtNv8jzWb0l3iWVdJ6U7szy9siVdwnmO",
+        "createdAt": "2025-12-08T02:35:11.851Z",
+        "membershipLevel": "gold"
+    },
+    {
+        "id": "b48a51a3-11fb-4344-ad0c-f47f7c8313f6",
+        "email": "arunvidya0709@gmail.com",
+        "name": "Vidhya A",
+        "role": "admin",
+        "passwordHash": "$2b$10$Bd1700aikVtA506toDJpnuKVxDqYjeMJfOCpYVe6CJzwmgyh27Hlu",
+        "createdAt": "2025-12-08T13:58:55.823Z",
+        "membershipLevel": "gold"
+    },
+    {
+        "id": "269a4310-ed1c-473a-893d-dabf0aa4a980",
+        "email": "sarundop@gmail.com",
+        "name": "Arun Selvaraj",
+        "role": "user",
+        "passwordHash": "$2b$10$d15LMrWzTvlfJwz8.WWc8uUUzVDhTan1K8J85afzHZNdORwRC579S",
+        "createdAt": "2025-12-10T15:33:00.520Z",
+        "mobile": "7904478591",
+        "designation": "PA",
+        "pincode": "639104",
+        "officeName": "Kulittalai H.O",
+        "division": "Karur Division",
+        "circle": "TAMIL NADU",
+        "membershipLevel": "free"
+    },
+    {
+        "id": "8dedb1a9-21c9-46b5-8109-03ae10f61204",
+        "email": "gold@gmail.com",
+        "name": "Gold Test",
+        "role": "user",
+        "passwordHash": "$2b$10$Ab21jolLwgojIYRv5SR49OsHPgX.Q.L2ZGwVGaUDNx5iM9TCe7tPa",
+        "createdAt": "2025-12-10T17:17:31.663Z",
+        "mobile": "9966996699",
+        "designation": "PA",
+        "pincode": "639001",
+        "officeName": "Karur H.O",
+        "division": "Karur Division",
+        "circle": "TAMIL NADU"
+    },
+    {
+        "id": "3fa2ee77-db42-477b-8d7d-40cd59d8b88f",
+        "email": "testuser@gmail.com",
+        "name": "Test User",
+        "role": "user",
+        "passwordHash": "$2b$10$Akl7miAhlRQ4ONgq.n5Hfus..VEblgLzznShOg99OdF9V3G3RPGyi",
+        "createdAt": "2025-12-14T16:24:31.210Z",
+        "mobile": "9876543210",
+        "designation": "Inspector Posts",
+        "pincode": "535001",
+        "officeName": "Others",
+        "division": "PTC",
+        "circle": "Tamil Nadu",
+        "gender": "Male"
+    }
+];
+
+export async function GET(request: Request) {
+    try {
+        const { searchParams } = new URL(request.url);
+        const secret = searchParams.get('key');
+
+        if (secret !== 'ip2026_migration_secure') {
+            return NextResponse.json({ error: 'Invalid migration key' }, { status: 403 });
+        }
+
+        await dbConnect();
+
+        const results = [];
+
+        for (const oldUser of OLD_USERS) {
+            // Check if user exists
+            const existing = await User.findOne({ email: oldUser.email });
+
+            if (existing) {
+                results.push({ email: oldUser.email, status: 'Skipped (Already Exists)' });
+            } else {
+                // Map old fields to new model
+                await User.create({
+                    name: oldUser.name,
+                    email: oldUser.email,
+                    password: oldUser.passwordHash, // Map hash directly
+                    mobile: oldUser.mobile,
+                    designation: oldUser.designation,
+                    pincode: oldUser.pincode,
+                    officeName: oldUser.officeName,
+                    division: oldUser.division,
+                    circle: oldUser.circle,
+                    gender: oldUser.gender,
+                    role: oldUser.role || 'user',
+                    membershipLevel: oldUser.membershipLevel || 'free',
+                    resetToken: oldUser.resetToken,
+                    resetTokenExpiry: oldUser.resetTokenExpiry,
+                    createdAt: oldUser.createdAt ? new Date(oldUser.createdAt) : new Date()
+                });
+                results.push({ email: oldUser.email, status: 'Migrated Success' });
+            }
+        }
+
+        return NextResponse.json({
+            message: 'User migration completed',
+            details: results
+        });
+
+    } catch (error: any) {
+        console.error("Migration Error:", error);
+        return NextResponse.json({ error: 'Migration failed', details: error.message }, { status: 500 });
+    }
+}
