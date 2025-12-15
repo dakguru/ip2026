@@ -358,7 +358,7 @@ export default function QueriesPage() {
                                 onClick={handleAskQuestion}
                                 className="bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-600 active:bg-orange-700 transition-colors shadow-sm"
                             >
-                                Next
+                                Post
                             </button>
                         </div>
                         <p className="text-xs text-zinc-400 mt-2 flex items-center gap-1">
