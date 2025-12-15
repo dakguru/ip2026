@@ -65,6 +65,19 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 // @ts-ignore
                 className: "col-span-1"
             },
+            {
+                title: "Admin Messages",
+                desc: "Read & Reply",
+                color: "text-violet-600",
+                bg: "bg-violet-50 dark:bg-violet-900/20",
+                border: "group-hover:border-violet-500",
+                shadow: "group-hover:shadow-violet-500/20",
+                icon: Mail,
+                link: "/admin/messages",
+                badge: "Admin",
+                // @ts-ignore
+                className: "col-span-1"
+            },
             dakGuruTile,
             {
                 title: "Developer CMS",
