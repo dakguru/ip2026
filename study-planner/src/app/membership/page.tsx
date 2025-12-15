@@ -82,7 +82,7 @@ export default function MembershipPage() {
                         }`}>
                         <div className="flex items-center gap-4">
                             <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-md ${isGold ? 'bg-yellow-400 text-yellow-900' :
-                                    isSilver ? 'bg-slate-300 text-slate-800' : 'bg-zinc-300 text-zinc-600'
+                                isSilver ? 'bg-slate-300 text-slate-800' : 'bg-zinc-300 text-zinc-600'
                                 }`}>
                                 <Crown className="w-8 h-8" fill="currentColor" />
                             </div>
@@ -120,8 +120,13 @@ export default function MembershipPage() {
                                             <ShieldCheck className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold">Plan Name</p>
-                                            <p className="text-zinc-900 dark:text-zinc-100 font-medium text-lg">{membershipData.planName || 'Custom Plan'}</p>
+                                            <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold mb-1">Plan Name</p>
+                                            <div className={`inline-flex items-center px-4 py-2 rounded-lg font-bold shadow-sm uppercase tracking-wider text-sm ${isGold
+                                                    ? 'bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-amber-200 dark:shadow-none'
+                                                    : 'bg-gradient-to-r from-slate-300 to-zinc-400 text-slate-900 shadow-zinc-200 dark:shadow-none'
+                                                }`}>
+                                                {membershipData.planName || (isGold ? 'Gold Plan' : 'Silver Plan')}
+                                            </div>
                                         </div>
                                     </div>
 
@@ -131,7 +136,7 @@ export default function MembershipPage() {
                                         </div>
                                         <div>
                                             <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold">Ordered via</p>
-                                            <p className="text-zinc-900 dark:text-zinc-100 font-mono text-sm">{membershipData.planId || 'N/A'}</p>
+                                            <p className="text-zinc-900 dark:text-zinc-100 font-medium">App/Website</p>
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +163,7 @@ export default function MembershipPage() {
                                             <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold">Expires On</p>
                                             <p className="text-zinc-900 dark:text-zinc-100 font-medium">{formatDate(membershipData.membershipValidity)}</p>
                                             <span className={`text-xs px-2 py-0.5 rounded-full font-bold mt-1 inline-block ${daysRemaining < 0 ? 'bg-red-100 text-red-700' :
-                                                    daysRemaining < 7 ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-700'
+                                                daysRemaining < 7 ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-700'
                                                 }`}>
                                                 {daysRemaining < 0 ? 'Expired' : `${daysRemaining} days remaining`}
                                             </span>
