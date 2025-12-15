@@ -1,27 +1,25 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-
-// Path to the data file
-const DATA_FILE_PATH = path.join(process.cwd(), 'src', 'data', 'postal-updates.json');
-
-// Helper to read data
-function getPostalUpdates() {
-    if (!fs.existsSync(DATA_FILE_PATH)) {
-        return [];
-    }
-    const fileContent = fs.readFileSync(DATA_FILE_PATH, 'utf-8');
-    try {
-        return JSON.parse(fileContent);
-    } catch (e) {
-        return [];
-    }
-}
+import dbConnect from '@/lib/mongoose';
+import PostalUpdateModel from '@/models/PostalUpdate';
 
 // GET: Fetch all updates
 export async function GET() {
-    const updates = getPostalUpdates();
-    return NextResponse.json(updates);
+    try {
+        await dbConnect();
+        const updates = await PostalUpdateModel.find({}).sort({ createdAt: -1 });
+        // Map to simpler structure if needed, or return docs
+        const mappedUpdates = updates.map(u => ({
+            id: u.id,
+            title: u.title,
+            date: u.date,
+            category: u.category,
+            description: u.description || "",
+            link: u.link || "#"
+        }));
+        return NextResponse.json(mappedUpdates);
+    } catch (e) {
+        return NextResponse.json({ error: 'Failed to fetch updates' }, { status: 500 });
+    }
 }
 
 // POST: Create a new update
@@ -37,24 +35,28 @@ export async function POST(request: Request) {
             );
         }
 
-        const updates = getPostalUpdates();
+        await dbConnect();
 
-        const newUpdate = {
+        const newUpdate = await PostalUpdateModel.create({
             id: crypto.randomUUID(),
             title,
             date,
             category,
             description: description || "",
             link: link || "#"
-        };
+        });
 
-        // Add to beginning of array
-        updates.unshift(newUpdate);
-
-        // Save back to file
-        fs.writeFileSync(DATA_FILE_PATH, JSON.stringify(updates, null, 2));
-
-        return NextResponse.json({ success: true, update: newUpdate });
+        return NextResponse.json({
+            success: true,
+            update: {
+                id: newUpdate.id,
+                title: newUpdate.title,
+                date: newUpdate.date,
+                category: newUpdate.category,
+                description: newUpdate.description,
+                link: newUpdate.link
+            }
+        });
 
     } catch (error) {
         console.error('Failed to save update:', error);
@@ -79,18 +81,16 @@ export async function DELETE(request: Request) {
             );
         }
 
-        let updates = getPostalUpdates();
-        const initialLength = updates.length;
-        updates = updates.filter((u: any) => u.id !== id);
+        await dbConnect();
 
-        if (updates.length === initialLength) {
+        const result = await PostalUpdateModel.deleteOne({ id: id });
+
+        if (result.deletedCount === 0) {
             return NextResponse.json(
                 { error: 'Update not found' },
                 { status: 404 }
             );
         }
-
-        fs.writeFileSync(DATA_FILE_PATH, JSON.stringify(updates, null, 2));
 
         return NextResponse.json({ success: true });
 

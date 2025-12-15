@@ -12,7 +12,7 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Missing data' }, { status: 400 });
         }
 
-        const result = addComment(postId, comment);
+        const result = await addComment(postId, comment);
         console.log(`[Comments API] Add result:`, result);
 
         if (result) {
@@ -31,7 +31,7 @@ export async function PUT(req: Request) {
     try {
         const body = await req.json();
         const { postId, commentId, text } = body;
-        updateComment(postId, commentId, text);
+        await updateComment(postId, commentId, text);
         return NextResponse.json({ success: true });
     } catch (error) {
         return NextResponse.json({ error: 'Failed to update comment' }, { status: 500 });
@@ -45,7 +45,7 @@ export async function DELETE(req: Request) {
         const commentId = searchParams.get('commentId');
 
         if (postId && commentId) {
-            deleteComment(Number(postId), Number(commentId));
+            await deleteComment(Number(postId), Number(commentId));
             return NextResponse.json({ success: true });
         }
         return NextResponse.json({ error: 'Missing params' }, { status: 400 });

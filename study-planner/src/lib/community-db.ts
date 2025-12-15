@@ -1,8 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+import dbConnect from './mongoose';
+import PostModel from '@/models/Post';
 
-const POSTS_DB_PATH = path.join(process.cwd(), 'src', 'data', 'posts.json');
-
+// Re-export interfaces for use in other files
 export interface Comment {
     id: number;
     author: string;
@@ -16,117 +15,124 @@ export interface Post {
     description?: string;
     author: string;
     role: string;
-    followers: string; // string for now to match existing UI (Legacy, but keeping for type safety with old data)
-    views: string;     // string for now
-    answer: any | null; // Keeping legacy structure for "Featured Answer" if needed
+    followers: string;
+    views: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    answer: any | null;
     comments: Comment[];
     tags: string[];
     createdAt: string;
     likes?: number;
-    likedBy?: string[]; // Array of usernames who liked
+    likedBy?: string[];
 }
 
-// Ensure DB file exists
-function ensureDb() {
-    if (!fs.existsSync(POSTS_DB_PATH)) {
-        const dir = path.dirname(POSTS_DB_PATH);
-        if (!fs.existsSync(dir)) {
-            fs.mkdirSync(dir, { recursive: true });
-        }
-        // Seed with empty array or initial data if needed
-        fs.writeFileSync(POSTS_DB_PATH, JSON.stringify([], null, 2));
-    }
+// Helper: Map Mongoose doc to Post interface
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function mapPost(doc: any): Post {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const comments = doc.comments?.map((c: any) => ({
+        id: c.id,
+        author: c.author,
+        text: c.text,
+        timestamp: c.timestamp
+    })) || [];
+
+    return {
+        id: doc.id,
+        title: doc.title,
+        description: doc.description,
+        author: doc.author,
+        role: doc.role,
+        followers: doc.followers,
+        views: doc.views,
+        answer: doc.answer,
+        comments: comments,
+        tags: doc.tags || [],
+        createdAt: doc.createdAt,
+        likes: doc.likes,
+        likedBy: doc.likedBy || []
+    };
 }
 
-export function getAllPosts(): Post[] {
-    ensureDb();
-    try {
-        const data = fs.readFileSync(POSTS_DB_PATH, 'utf-8');
-        return JSON.parse(data);
-    } catch {
-        return [];
-    }
+export async function getAllPosts(): Promise<Post[]> {
+    await dbConnect();
+    const posts = await PostModel.find({}).sort({ createdAt: -1 }); // Newest first
+    return posts.map(mapPost);
 }
 
-export function savePosts(posts: Post[]) {
-    ensureDb();
-    fs.writeFileSync(POSTS_DB_PATH, JSON.stringify(posts, null, 2));
+// No longer needed for external consumers, but kept for compatibility logic if any
+export async function savePosts(posts: Post[]) {
+    // No-op or bulk write if really needed, but generally we operate on individual items
+    // This signature was for replacing the whole JSON.
+    // For Mongoose, we shouldn't really use this pattern.
 }
 
-export function addPost(post: Post): Post {
-    // Ensure comments array exists
-    if (!post.comments) post.comments = [];
-    post.likes = 0;
-    post.likedBy = [];
-
-    const posts = getAllPosts();
-    // Prepend to show newest first
-    posts.unshift(post);
-    savePosts(posts);
-    return post;
+export async function addPost(post: Post): Promise<Post> {
+    await dbConnect();
+    // Ensure defaults
+    const newPost = await PostModel.create({
+        ...post,
+        likes: 0,
+        likedBy: [],
+        comments: []
+    });
+    return mapPost(newPost);
 }
 
-export function deletePost(id: number) {
-    let posts = getAllPosts();
-    posts = posts.filter(p => p.id !== id);
-    savePosts(posts);
+export async function deletePost(id: number): Promise<boolean> {
+    await dbConnect();
+    const result = await PostModel.deleteOne({ id });
+    return result.deletedCount > 0;
 }
 
 // Comments
-export function addComment(postId: number, comment: Comment) {
-    const posts = getAllPosts();
-    const post = posts.find(p => p.id === postId);
-    if (post) {
-        if (!post.comments) post.comments = [];
-        post.comments.push(comment);
-        savePosts(posts);
-        return true;
-    }
-    return false;
+export async function addComment(postId: number, comment: Comment): Promise<boolean> {
+    await dbConnect();
+    const result = await PostModel.updateOne(
+        { id: postId },
+        { $push: { comments: comment } }
+    );
+    return result.modifiedCount > 0;
 }
 
-export function updateComment(postId: number, commentId: number, newText: string) {
-    const posts = getAllPosts();
-    const post = posts.find(p => p.id === postId);
-    if (post && post.comments) {
-        const comment = post.comments.find(c => c.id === commentId);
-        if (comment) {
-            comment.text = newText;
-            savePosts(posts);
-            return true;
-        }
-    }
-    return false;
+export async function updateComment(postId: number, commentId: number, newText: string): Promise<boolean> {
+    await dbConnect();
+    // Use array filters to update specific comment
+    const result = await PostModel.updateOne(
+        { id: postId, "comments.id": commentId },
+        { $set: { "comments.$.text": newText } }
+    );
+    return result.modifiedCount > 0;
 }
 
-export function deleteComment(postId: number, commentId: number) {
-    const posts = getAllPosts();
-    const post = posts.find(p => p.id === postId);
-    if (post && post.comments) {
-        post.comments = post.comments.filter(c => c.id !== commentId);
-        savePosts(posts);
-        return true;
-    }
-    return false;
+export async function deleteComment(postId: number, commentId: number): Promise<boolean> {
+    await dbConnect();
+    const result = await PostModel.updateOne(
+        { id: postId },
+        { $pull: { comments: { id: commentId } } }
+    );
+    return result.modifiedCount > 0;
 }
 
-export function toggleLike(postId: number, username: string): { likes: number, liked: boolean } | null {
-    const posts = getAllPosts();
-    const post = posts.find(p => p.id === postId);
-    if (post) {
-        if (!post.likedBy) post.likedBy = [];
-        if (!post.likes) post.likes = 0;
+export async function toggleLike(postId: number, username: string): Promise<{ likes: number, liked: boolean } | null> {
+    await dbConnect();
+    const post = await PostModel.findOne({ id: postId });
+    if (!post) return null;
 
-        const alreadyLiked = post.likedBy.includes(username);
-        if (alreadyLiked) {
-            post.likedBy = post.likedBy.filter(u => u !== username);
-            post.likes = Math.max(0, post.likes - 1);
-        } else {
-            post.likedBy.push(username);
-            post.likes += 1;
-        }
-        savePosts(posts);
-        return { likes: post.likes, liked: !alreadyLiked };
+    let likedBy = post.likedBy || [];
+    let likes = post.likes || 0;
+    const alreadyLiked = likedBy.includes(username);
+
+    if (alreadyLiked) {
+        likedBy = likedBy.filter((u: string) => u !== username);
+        likes = Math.max(0, likes - 1);
+    } else {
+        likedBy.push(username);
+        likes += 1;
     }
-    return null;
+
+    // Update DB
+    await PostModel.updateOne({ id: postId }, { likes, likedBy });
+
+    return { likes, liked: !alreadyLiked };
 }
