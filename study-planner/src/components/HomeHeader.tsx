@@ -7,11 +7,13 @@ import { useRouter } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
 import { useEffect, useState } from "react";
+import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
 export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn: boolean, membershipLevel?: 'free' | 'silver' | 'gold' }) {
     const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const isMobileApp = useIsMobileApp();
 
     const handleLogout = async () => {
         try {
@@ -135,9 +137,9 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 </>
                             )}
 
-                            {/* Mobile Menu Button */}
+                            {/* Mobile Menu Button - Hide on Native App */}
                             <button
-                                className="lg:hidden p-2 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md"
+                                className={`lg:hidden p-2 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md ${isMobileApp ? 'hidden' : ''}`}
                                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             >
                                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

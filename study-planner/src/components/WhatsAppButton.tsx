@@ -2,15 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
 export default function WhatsAppButton() {
+    const isMobileApp = useIsMobileApp();
     return (
         <Link
             href="https://wa.me/919363030396"
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-3 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 group"
+            className={`fixed right-6 z-50 flex items-center justify-center p-3 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 group ${isMobileApp ? 'bottom-20' : 'bottom-6'}`}
             aria-label="Contact us on WhatsApp"
         >
             {/* WhatsApp SVG Logo */}

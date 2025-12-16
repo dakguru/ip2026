@@ -1,11 +1,16 @@
 import { cookies } from "next/headers";
 import Link from "next/link";
 import Image from "next/image";
-import { Check, Smartphone, Mail, MapPin, Phone, Lock, Unlock, CheckCircle2, BookOpen, Zap, FileText, Layout, Newspaper, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Check, Smartphone, Mail, MapPin, Phone } from "lucide-react";
 import HomeHeader from "@/components/HomeHeader";
 import ContactForm from "@/components/ContactForm";
 import FeatureGrid from "@/components/FeatureGrid";
+import WelcomeSection from "@/components/WelcomeSection";
 import { getUserByEmail } from "@/lib/db";
+
+// Social Icons - Simple components or import from lucide if available, 
+// but footer used custom SVG paths or lucide. Let's assume Lucide has them or we use generic.
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export default async function Home() {
   const cookieStore = await cookies();
@@ -38,29 +43,13 @@ export default async function Home() {
     }
   }
 
-  // Helper to check access
-  const hasAccess = (requiredBadge: string) => {
-    if (requiredBadge === "Free") return true;
-    if (requiredBadge === "Silver" && (membershipLevel === "silver" || membershipLevel === "gold")) return true;
-    if (requiredBadge === "Gold" && membershipLevel === "gold") return true;
-    return false;
-  };
-
   return (
     <div className="min-h-screen font-sans bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
       {/* 1. Navbar */}
       <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
 
       {/* 2. Hero Section */}
-      <section className="pt-16 pb-12 text-center px-4">
-        <h1 className="text-3xl md:text-5xl font-extrabold text-blue-600 dark:text-blue-400 mb-4 capitalize flex items-center justify-center gap-3 flex-wrap">
-          <span>Welcome {displayName}</span>
-        </h1>
-
-        <p className="text-zinc-600 dark:text-zinc-300 text-xl max-w-3xl mx-auto">
-          Prepare Smart. Progress Fast. Get Promoted.
-        </p>
-      </section>
+      <WelcomeSection displayName={displayName} />
 
       {/* 3. Feature Tiles */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
@@ -303,13 +292,5 @@ export default async function Home() {
         </div>
       </footer>
     </div>
-  );
-}
-
-function StarIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-    </svg>
   );
 }

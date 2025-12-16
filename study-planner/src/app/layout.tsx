@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MobileBottomNav from "@/components/MobileBottomNav";
+import NativeMobileSpacer from "@/components/NativeMobileSpacer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -37,7 +39,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <GlobalNavigation />
-          {children}
+          <NativeMobileSpacer>
+            {children}
+          </NativeMobileSpacer>
+          <MobileBottomNav />
           <WhatsAppButton />
         </ThemeProvider>
       </body>
