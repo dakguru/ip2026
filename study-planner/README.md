@@ -48,3 +48,23 @@ This is a Next.js application designed to help candidates prepare for the **Insp
 
 To change the study plan rules, edit `src/lib/planner.ts`.
 To update the syllabus content, edit `src/data/syllabus.ts`.
+
+## Environment Variables
+
+To enable features like email sending (Forgot Password), you need to configure environment variables.
+
+Create a `.env.local` file in the root directory:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-specific-password
+```
+
+### How to generate a Gmail App Password:
+1. Go to your **Google Account** settings.
+2. Select **Security** from the left navigation.
+3. Under "How you sign in to Google", ensure **2-Step Verification** is ON.
+4. Search for **"App Passwords"** in the search bar at the top or look under 2-Step Verification settings.
+5. Create a new app password (name it "Dak Guru").
+6. Copy the 16-character code (without spaces) and paste it as `EMAIL_PASS`.
