@@ -85,9 +85,14 @@ Dak Guru Team
             console.log("---------------------------------------------------");
             console.warn("EMAIL_USER/EMAIL_PASS not set. Email not sent, but logged.");
 
-            // Still return success to frontend to avoid breaking flow in dev, but logically we should warn.
-            // However, seeing as the user wants it FIXED, and they likely have creds if they are complaining it doesn't send,
-            // we will proceed.
+            // In development, return the password to the UI for testing
+            if (process.env.NODE_ENV !== 'production') {
+                return NextResponse.json({
+                    success: true,
+                    message: `DEV MODE: Creds missing. Password: ${tempPassword}`
+                });
+            }
+
             return NextResponse.json({ success: true, message: "Temporary password generated (Check Console - Dev Mode)" });
         }
 
