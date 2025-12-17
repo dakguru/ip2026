@@ -22,13 +22,15 @@ export default function ForgotPasswordPage() {
                 body: JSON.stringify({ email }),
             });
 
+            const data = await res.json();
+
             if (!res.ok) {
-                throw new Error("Something went wrong");
+                throw new Error(data.error || "Something went wrong");
             }
 
             setIsSubmitted(true);
-        } catch (err) {
-            setError("Failed to process request. Please try again.");
+        } catch (err: any) {
+            setError(err.message || "Failed to process request. Please try again.");
         } finally {
             setIsLoading(false);
         }

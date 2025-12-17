@@ -1,0 +1,4 @@
+admin_db_user
+fnu7IX85OAV5EFpk
+
+mongodb+srv://admin_db_user:fnu7IX85OAV5EFpk@cluster0.jawkuep.mongodb.net/?appName=Cluster0
