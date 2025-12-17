@@ -8,6 +8,7 @@ export default function ForgotPasswordPage() {
     const [email, setEmail] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [successMessage, setSuccessMessage] = useState("");
     const [error, setError] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -28,6 +29,7 @@ export default function ForgotPasswordPage() {
                 throw new Error(data.error || "Something went wrong");
             }
 
+            setSuccessMessage(data.message);
             setIsSubmitted(true);
         } catch (err: any) {
             setError(err.message || "Failed to process request. Please try again.");
@@ -60,7 +62,7 @@ export default function ForgotPasswordPage() {
                         </div>
                         <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Check your inbox</h3>
                         <p className="text-zinc-500 text-sm mb-6">
-                            If an account exists for <strong>{email}</strong>, we have sent a temporary password to it.
+                            {successMessage || `If an account exists for ${email}, we have sent a temporary password to it.`}
                         </p>
                         <button
                             onClick={() => setIsSubmitted(false)}
