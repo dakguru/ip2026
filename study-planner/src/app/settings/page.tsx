@@ -39,6 +39,15 @@ export default function SettingsPage() {
     const [generatedOtp, setGeneratedOtp] = useState("");
     const [verificationStep, setVerificationStep] = useState(false);
 
+    // Password State
+    const [passwordData, setPasswordData] = useState({
+        currentPassword: "",
+        newPassword: "",
+        confirmPassword: ""
+    });
+    const [passwordMessage, setPasswordMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+    const [isPasswordLoading, setIsPasswordLoading] = useState(false);
+
     useEffect(() => {
         fetchProfile();
     }, []);
@@ -193,6 +202,54 @@ export default function SettingsPage() {
         }
     };
 
+    const handlePasswordChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setPasswordData(prev => ({ ...prev, [name]: value }));
+        setPasswordMessage(null);
+    };
+
+    const savePassword = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setPasswordMessage(null);
+
+        if (passwordData.newPassword !== passwordData.confirmPassword) {
+            setPasswordMessage({ type: 'error', text: "New passwords do not match" });
+            return;
+        }
+
+        if (passwordData.newPassword.length < 6) {
+            setPasswordMessage({ type: 'error', text: "Password must be at least 6 characters" });
+            return;
+        }
+
+        setIsPasswordLoading(true);
+        try {
+            const res = await fetch("/api/user/change-password", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    currentPassword: passwordData.currentPassword,
+                    newPassword: passwordData.newPassword
+                }),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || "Failed to change password");
+            }
+
+            setPasswordMessage({ type: 'success', text: "Password changed successfully!" });
+            setPasswordData({ currentPassword: "", newPassword: "", confirmPassword: "" });
+
+        } catch (err) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            setPasswordMessage({ type: 'error', text: (err as any).message });
+        } finally {
+            setIsPasswordLoading(false);
+        }
+    };
+
     if (!initialData) {
         return (
             <div className="min-h-screen flex items-center justify-center">
@@ -203,7 +260,7 @@ export default function SettingsPage() {
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 relative">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto space-y-8">
                 <Link
                     href="/"
                     className="inline-flex items-center text-sm text-zinc-500 hover:text-blue-600 transition-colors mb-8"
@@ -387,6 +444,91 @@ export default function SettingsPage() {
                                     <>
                                         <Save className="w-5 h-5" />
                                         Save Changes
+                                    </>
+                                )}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                {/* Password Change Card */}
+                <div className="bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                    <div className="flex items-center gap-4 mb-8 pb-8 border-b border-zinc-100 dark:border-zinc-800">
+                        <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-600 dark:text-purple-400">
+                            <Hash className="w-8 h-8" />
+                        </div>
+                        <div>
+                            <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Security</h1>
+                            <p className="text-zinc-500 dark:text-zinc-400">Update your password to keep your account secure.</p>
+                        </div>
+                    </div>
+
+                    <form onSubmit={savePassword} className="space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Current Password */}
+                            <div className="space-y-2 col-span-1 md:col-span-2">
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Current Password</label>
+                                <input
+                                    name="currentPassword"
+                                    type="password"
+                                    value={passwordData.currentPassword}
+                                    onChange={handlePasswordChangeInput}
+                                    placeholder="Enter current password"
+                                    className="w-full bg-zinc-50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-purple-500 transition-all"
+                                    required
+                                />
+                            </div>
+
+                            {/* New Password */}
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">New Password</label>
+                                <input
+                                    name="newPassword"
+                                    type="password"
+                                    value={passwordData.newPassword}
+                                    onChange={handlePasswordChangeInput}
+                                    placeholder="Enter new password"
+                                    className="w-full bg-zinc-50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-purple-500 transition-all"
+                                    required
+                                />
+                            </div>
+
+                            {/* Confirm Password */}
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Confirm New Password</label>
+                                <input
+                                    name="confirmPassword"
+                                    type="password"
+                                    value={passwordData.confirmPassword}
+                                    onChange={handlePasswordChangeInput}
+                                    placeholder="Confirm new password"
+                                    className="w-full bg-zinc-50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-purple-500 transition-all"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        {passwordMessage && (
+                            <div className={`text-sm text-center py-3 rounded-xl animate-in fade-in slide-in-from-top-2 ${passwordMessage.type === 'success'
+                                ? 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400'
+                                : 'bg-red-50 dark:bg-red-900/20 text-red-500'
+                                }`}>
+                                {passwordMessage.text}
+                            </div>
+                        )}
+
+                        <div className="pt-4">
+                            <button
+                                type="submit"
+                                disabled={isPasswordLoading}
+                                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-2xl transition-all hover:scale-[1.02] shadow-lg shadow-purple-600/25 disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center gap-2 group"
+                            >
+                                {isPasswordLoading ? (
+                                    <Loader2 className="w-5 h-5 animate-spin" />
+                                ) : (
+                                    <>
+                                        <Save className="w-5 h-5" />
+                                        Update Password
                                     </>
                                 )}
                             </button>
