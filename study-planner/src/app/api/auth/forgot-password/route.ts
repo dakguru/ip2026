@@ -3,14 +3,16 @@ import { getUserByEmail, updateUser } from '@/lib/db';
 import crypto from 'crypto';
 import bcrypt from 'bcryptjs';
 import nodemailer from 'nodemailer';
+import UserModel from '@/models/User';
 
 export async function POST(request: Request) {
     try {
-        const { email } = await request.json();
-
-        if (!email) {
+        const rawEmail = (await request.json()).email;
+        if (!rawEmail) {
             return NextResponse.json({ error: 'Email is required' }, { status: 400 });
         }
+
+        const email = rawEmail.trim().toLowerCase();
 
         const user = await getUserByEmail(email);
 
