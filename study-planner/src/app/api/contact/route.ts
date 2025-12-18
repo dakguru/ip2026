@@ -11,9 +11,9 @@ export async function POST(req: Request) {
         // 1. If we have credentials, send real email
         if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
             const transporter = nodemailer.createTransport({
-                host: "smtp.office365.com", // Standard Outlook/Live SMTP
-                port: 587,
-                secure: false, // true for 465, false for other ports
+                host: process.env.EMAIL_HOST || "smtp.office365.com",
+                port: Number(process.env.EMAIL_PORT) || 587,
+                secure: Number(process.env.EMAIL_PORT) === 465, // true for 465, false for other ports
                 auth: {
                     user: process.env.EMAIL_USER,
                     pass: process.env.EMAIL_PASS,
