@@ -1,0 +1,576 @@
+**Q.1. According to the Consumer Protection Act, 2019, which of the following categories of persons is EXCLUDED from the definition of a "Consumer"?**
+
+A. A person who buys goods for consideration paid in part and promised in part.
+B. A person who avails of any service for deferred payment.
+C. A person who obtains goods for resale or for any commercial purpose.
+D. A person who uses goods with the approval of the buyer, exclusively for the purpose of earning his livelihood by means of self-employment.
+
+**Correct Answer: C**
+**Explanation:**
+The Act defines a "consumer" but explicitly states it "does not include a person who obtains such goods for resale or for any commercial purpose". However, the explanation clarifies that "commercial purpose" does *not* include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood by means of self-employment.
+
+---
+
+**Q.2. Consider the following statements regarding the definition of "Complainant" under the Act:**
+
+1. A minor cannot be a complainant even through a parent or legal guardian.
+2. In the case of the death of a consumer, his legal heir or representative can be a complainant.
+3. The Central Authority (CCPA) is considered a complainant.
+
+**Which of the statements given above is/are correct?**
+
+A. 1 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+**Explanation:**
+Statement 1 is incorrect because the Act includes "in case of a consumer being a minor, his parent or legal guardian" as a complainant.
+Statement 2 is correct as "in case of death of a consumer, his legal heir or legal representative" is a complainant.
+Statement 3 is correct as the "Central Authority" is listed as a complainant.
+
+---
+
+**Q.3. Which of the following practices constitutes an "Unfair Contract" under the Consumer Protection Act, 2019?**
+
+A. A contract requiring a security deposit that is manifestly excessive for the performance of contractual obligations.
+B. A contract allowing the consumer to terminate the contract unilaterally with reasonable cause.
+C. A contract where the trader refuses to accept early repayment of debts even without penalty.
+D. A contract that imposes a penalty on the trader for breach of contract proportionate to the loss.
+
+**Correct Answer: A**
+**Explanation:**
+An "unfair contract" includes terms "requiring manifestly excessive security deposits to be given by a consumer for the performance of contractual obligations". It also includes refusing to accept early repayment of debts *on payment of applicable penalty* and entitling a party to terminate unilaterally *without* reasonable cause.
+
+---
+
+### **Part 2: Central Consumer Protection Authority (CCPA)**
+
+**Q.4. The Central Consumer Protection Authority (Central Authority) has the power to inquire or investigate into violations of consumer rights. In this context, consider the following statements:**
+
+1. The Central Authority can initiate an inquiry suo motu (on its own motion).
+2. The Central Authority cannot file complaints before the National Commission.
+3. The Investigation Wing is headed by a Director-General.
+
+**Which of the statements given above is/are correct?**
+
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: C**
+**Explanation:**
+Statement 1 is correct: The Central Authority may inquire "either suo motu or on a complaint received".
+Statement 2 is incorrect: The Central Authority is empowered to "file complaints before the District Commission, the State Commission or the National Commission".
+Statement 3 is correct: The Central Authority shall have an Investigation Wing headed by a "Director-General".
+
+---
+
+**Q.5. Regarding the powers of the Central Authority to issue directions and penalties for false or misleading advertisements, which of the following is correct?**
+
+A. The Authority can impose a penalty on an endorser extending to ten lakh rupees for a first contravention.
+B. The Authority may prohibit an endorser from making an endorsement for a period extending up to three years for the first contravention.
+C. No endorser shall be liable to a penalty if they have exercised due diligence to verify the veracity of the claims.
+D. The penalty for a manufacturer for a subsequent contravention is limited to twenty-five lakh rupees.
+
+**Correct Answer: C**
+**Explanation:**
+Option C is correct: "No endorser shall be liable to a penalty... if he has exercised due diligence to verify the veracity of the claims".
+Option A is correct regarding the amount (10 lakh) , but Option B is incorrect because the prohibition for the *first* contravention is up to one year, not three (three years is for subsequent contravention).
+Option D is incorrect because the penalty for subsequent contravention for a manufacturer may extend to "fifty lakh rupees".
+
+---
+
+### **Part 3: Dispute Redressal Jurisdiction & Procedures**
+
+**Q.6. According to the Gazette Notification (Source 1), what is the pecuniary jurisdiction of the District Consumer Disputes Redressal Commission (District Commission)?**
+
+A. Complaints where the value of goods or services does not exceed Rupees Fifty Lakhs.
+B. Complaints where the value of goods or services does not exceed Rupees One Crore.
+C. Complaints where the value of goods or services exceeds Rupees One Crore but does not exceed Rupees Ten Crore.
+D. Complaints where the value of goods or services exceeds Rupees Ten Crore.
+
+**Correct Answer: B**
+**Explanation:**
+According to the Act text in the Gazette, the District Commission has jurisdiction to entertain complaints where the value of the goods or services paid as consideration "does not exceed one crore rupees".
+*(Note: While Source 2 mentions 50 Lakhs in its summary table, the primary Act text in Source 1 explicitly states One Crore).*
+
+---
+
+**Q.7. Where can a complaint be instituted in a District Commission?**
+
+A. Only where the Opposite Party resides or carries on business.
+B. Only where the Cause of Action arises.
+C. Where the Complainant resides or personally works for gain.
+D. All of the above.
+
+**Correct Answer: D**
+**Explanation:**
+A complaint can be instituted within the local limits where:
+
+1. The opposite party resides/carries on business.
+
+
+2. The cause of action, wholly or in part, arises.
+
+
+3. The complainant resides or personally works for gain.
+
+
+
+---
+
+**Q.8. What is the statutory time limit prescribed for a District Commission to decide the admissibility of a complaint?**
+
+A. 7 days
+B. 15 days
+C. 21 days
+D. 30 days
+
+**Correct Answer: C**
+**Explanation:**
+The admissibility of the complaint shall ordinarily be decided within "twenty-one days" from the date on which the complaint was filed. If not decided within this period, it shall be deemed to have been admitted.
+
+---
+
+**Q.9. Match the appellate authorities with the required pre-deposit amount for filing an appeal by a person required to pay an amount in terms of an order:**
+
+| Authority (Appeal to) | Condition (Deposit) |
+| --- | --- |
+| 1. State Commission | a. 50% of the amount |
+| 2. National Commission | b. 25% of the amount |
+| 3. Supreme Court | c. 75% of the amount |
+
+**Select the correct matching based on the Act:**
+
+A. 1-b, 2-b, 3-b
+B. 1-a, 2-a, 3-a
+C. 1-a, 2-b, 3-c
+D. 1-b, 2-a, 3-b
+
+**Correct Answer: B**
+**Explanation:**
+For appeal to State Commission: "deposited fifty per cent of that amount".
+For appeal to National Commission: "deposited fifty per cent of that amount".
+For appeal to Supreme Court: "deposited fifty per cent of that amount".
+All three levels require a 50% deposit.
+
+---
+
+### **Part 4: Product Liability**
+
+**Q.10. A "Product Seller" (who is not the manufacturer) can be held liable in a product liability action under which of the following circumstances?**
+
+A. The product contains a manufacturing defect, even if the seller did not alter it.
+B. The product does not conform to the express warranty made by the manufacturer.
+C. The identity of the product manufacturer is not known, and the service of notice cannot be effected on them.
+D. The product was sold as a component to be used in another product.
+
+**Correct Answer: C**
+**Explanation:**
+A product seller is liable if "the identity of product manufacturer of such product is not known, or if known, the service of notice... cannot be effected on him".
+Options A and B generally fall under manufacturer liability unless the seller made an independent express warranty or altered the product.
+
+---
+
+**Q.11. Assertion (A): A product manufacturer shall not be liable for failure to instruct or warn about a danger which is obvious or commonly known to the user.**
+**Reason (R): The Act provides specific exceptions to product liability action to protect manufacturers from frivolous claims regarding common knowledge.**
+
+A. Both A and R are true and R is the correct explanation of A.
+B. Both A and R are true but R is NOT the correct explanation of A.
+C. A is true but R is false.
+D. A is false but R is true.
+
+**Correct Answer: A**
+**Explanation:**
+The Assertion is correct based on the text: "A product manufacturer shall not be liable for failure to instruct or warn about a danger which is obvious or commonly known to the user". The Reason is the logical basis provided within the exceptions section of the Act.
+
+---
+
+### **Part 5: Mediation**
+
+**Q.12. Consider the following statements regarding the Mediation process under the Consumer Protection Act, 2019:**
+
+1. Mediation can be referred if the District Commission believes there are elements of a settlement.
+2. The mediator must decide the dispute within 30 days.
+3. If an agreement is reached, the terms must be reduced to writing and signed by the parties.
+
+**Which of the statements is/are correct?**
+
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+**Explanation:**
+Statement 1 is correct: The Commission may direct parties to consent to mediation if "there exists elements of a settlement".
+Statement 3 is correct: "the terms of such agreement shall be reduced to writing accordingly, and signed by the parties".
+Statement 2 is incorrect regarding the specific "30 days" in the Act text provided; the Act says the mediator shall conduct mediation "within such time... as may be specified by regulations". Source 2 mentions mediation stands terminated on expiry of "three months".
+
+---
+
+### **Part 6: Dark Patterns (Source 2 Specific)**
+
+**Q.13. According to the study material (Source 2), the practice of prohibiting a user from continuing with the use of a product for the consideration originally paid unless they upgrade for a higher fee is known as:**
+
+A. Basket Sneaking
+B. Subscription Trap
+C. Forced Action
+D. Interface Interference
+
+**Correct Answer: C**
+**Explanation:**
+"Forced action" is defined as prohibiting a user from continuing with the use of product or service for the consideration originally paid and contracted for, unless they upgrade for a higher rate or fees.
+
+---
+
+**Q.14. Which of the following scenarios best describes "Drip Pricing" as a Dark Pattern?**
+
+A. A website asks a user to download their app repeatedly.
+B. Automatically adding travel insurance to a flight ticket purchase.
+C. Presenting false data on high demand (e.g., "Only 2 rooms left").
+D. Showing a lower price at the selection stage but charging a higher price at the payment stage by disclosing hidden costs.
+
+**Correct Answer: D**
+**Explanation:**
+"Drip pricing" is exemplified when an online platform showcases the price as X at the checkout page, and when payment is being made, price Y (which is more than X) has been charged.
+(Note: Option B is "Basket sneaking" , Option C is "False Urgency" ).
+
+---
+
+### **Part 7: Offences and Penalties**
+
+**Q.15. What is the punishment prescribed for a person who manufactures for sale a product containing an adulterant, if such act results in the death of a consumer?**
+
+A. Imprisonment for life and a fine of not less than Rs. 10 Lakh.
+B. Imprisonment not less than 7 years extending to life, and a fine not less than Rs. 10 Lakh.
+C. Imprisonment up to 7 years and a fine up to Rs. 5 Lakh.
+D. Imprisonment up to 10 years and a fine of Rs. 1 Crore.
+
+**Correct Answer: B**
+**Explanation:**
+For an act containing an adulterant resulting in death, the punishment is "imprisonment for a term which shall not be less than seven years, but which may extend to imprisonment for life and with fine which shall not be less than ten lakh rupees".
+
+---
+
+**Q.16. Whoever fails to comply with any order made by the District Commission, State Commission, or National Commission shall be punishable with:**
+
+A. Imprisonment not less than 1 month extending to 3 years, OR fine not less than Rs. 25,000 extending to Rs. 1 Lakh, OR both.
+B. Imprisonment up to 6 months only.
+C. Fine up to Rs. 10 Lakh only.
+D. Civil imprisonment only.
+
+**Correct Answer: A**
+**Explanation:**
+The penalty for non-compliance with orders is "imprisonment for a term which shall not be less than one month, but which may extend to three years, or with fine, which shall not be less than twenty-five thousand rupees, but which may extend to one lakh rupees, or with both".
+
+---
+
+### **Part 8: Advanced/Analytical (UPSC Style)**
+
+**Q.17. Consider the following statements regarding the "Product Manufacturer" definition under the Act:**
+
+1. A person who only assembles parts made by others is NOT considered a manufacturer.
+2. A person who puts his own mark on goods made by another person is considered a manufacturer.
+3. A product seller who is also a manufacturer of such product falls under the definition of manufacturer.
+
+**Which of the statements given above is/are correct?**
+
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+**Explanation:**
+Statement 1 is incorrect: A manufacturer includes a person who "assembles parts thereof made by others".
+Statement 2 is correct: It includes one who "puts or causes to be put his own mark on any products made by any other person".
+Statement 3 is correct: It includes "being a product seller of a product, is also a manufacturer of such product".
+
+---
+
+**Q.18. With reference to the Consumer Protection Act, 2019, which of the following statements is INCORRECT regarding the State Consumer Protection Council (State Council)?**
+
+A. It is an advisory council.
+B. It is established by the State Government by notification.
+C. The Chairperson is the Chief Minister of the State.
+D. It must meet at least two times every year.
+
+**Correct Answer: C**
+**Explanation:**
+Option C is incorrect because the Chairperson of the State Council is the "Minister-in-charge of Consumer Affairs in the State Government", not the Chief Minister.
+Options A, B, and D are correct: It is an advisory council , established by notification , and must hold "not less than two meetings" every year.
+
+---
+
+**Q.19. Which of the following is NOT a defined "Consumer Right" under Section 2(9) of the Act?**
+
+A. The right to be protected against the marketing of goods which are hazardous to life and property.
+B. The right to consumer awareness.
+C. The right to free legal aid for all consumers in District Commissions.
+D. The right to be heard and assured that consumer's interests will receive due consideration.
+
+**Correct Answer: C**
+**Explanation:**
+The Act lists six specific consumer rights . These include protection against hazardous goods , consumer awareness , and the right to be heard. "Free legal aid" is not explicitly listed as a definition of "Consumer Rights" in this section (though legal aid is a general constitutional concept, it is not in the specific definition clause 2(9) of this Act).
+
+---
+
+**Q.20. Under the Consumer Protection Act, 2019, a "Misleading Advertisement" includes an advertisement that:**
+
+1. Falsely describes a product or service.
+2. Deliberately conceals important information.
+3. Conveys an implied representation which would constitute an unfair trade practice.
+
+**Select the correct answer using the code given below:**
+
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: D**
+**Explanation:**
+"Misleading advertisement" means an advertisement which "falsely describes such product or service" , "deliberately conceals important information" , and conveys a representation which would "constitute an unfair trade practice". All three statements are correct.
+
+Q.21. According to the study material (Source 2), "Bait and Switch" is a Dark Pattern that involves:
+
+A. Forcing a user to provide payment details for a free subscription. B. Prohibiting a user from continuing to use a service unless they upgrade. C. Offering a quality product at a cheap price but later stating it is unavailable and offering a more expensive alternative. D. Designing a light-colored option for selecting "No" to trick the user.
+
+Correct Answer: C Explanation: Source 2 defines "Bait and Switch" as a scenario where a seller offers a quality product at a cheap price but when the consumer is about to buy, states it is no longer available and offers a similar but more expensive product. (Option A is Subscription Trap, Option B is Forced Action, Option D is Interface Interference).
+
+Q.22. Which of the following Dark Patterns is described as "using ransomware or scareware to mislead a user into believing there is a virus on their computer"?
+
+A. Interface Interference B. Rogue Malwares C. Nagging D. Confirm Shaming
+
+Correct Answer: B Explanation: "Rogue Malwares" means using ransomware or scareware to trick a user into believing there is a virus on their computer to convince them to pay for a fake removal tool.
+
+Part 10: Mediation Procedures and Exclusions
+Q.23. According to the study notes (Source 2), which of the following matters is explicitly EXCLUDED from being referred to mediation?
+
+A. Disputes involving defective goods under warranty. B. Cases involving medical negligence resulting in grievous injury or death. C. Disputes regarding pricing of services. D. Claims for compensation under Rs. 50 Lakhs.
+
+Correct Answer: B Explanation: Source 2 lists matters not to be referred to mediation. Clause (a) explicitly excludes "matters relating to proceedings in respect of medical negligence resulting in grievous injury or death".
+
+Q.24. What is the validity period of the panel of mediators prepared by the Commission under Section 75 of the Act?
+
+A. 2 years B. 3 years C. 5 years D. 7 years
+
+Correct Answer: C Explanation: The panel of mediators prepared under sub-section (1) shall be valid for a period of "five years".
+
+Part 11: Appeals and Limitation Periods
+Q.25. A person aggrieved by an order of the District Commission may prefer an appeal to the State Commission within how many days?
+
+A. 30 days B. 45 days C. 60 days D. 90 days
+
+Correct Answer: B Explanation: Section 41 states that any person aggrieved by an order made by the District Commission may prefer an appeal to the State Commission within a period of "forty-five days" from the date of the order. (Note: Appeals to National Commission and Supreme Court are typically 30 days; the District-to-State appeal is distinct at 45 days).
+
+Q.26. Under Section 69, the District Commission shall not admit a complaint unless it is filed within _____ from the date on which the cause of action has arisen.
+
+A. One year B. Two years C. Three years D. Five years
+
+Correct Answer: B Explanation: Section 69(1) states the Commission shall not admit a complaint unless it is filed within "two years" from the date on which the cause of action has arisen.
+
+Part 12: Search, Seizure, and Specific Penalties
+Q.27. Which Code applies to the search and seizure operations conducted under the Consumer Protection Act, 2019?
+
+A. The Civil Procedure Code, 1908 B. The Indian Penal Code, 1860 C. The Code of Criminal Procedure, 1973 D. The Consumer Protection Rules, 1986
+
+Correct Answer: C Explanation: Section 22(2) states: "The provisions of the Code of Criminal Procedure, 1973, relating to search and seizure shall apply, as far as may be, for search and seizure under this Act".
+
+Q.28. If a Director-General or an authorized officer conducts a "Vexatious Search" (searches premises without reasonable grounds), what is the prescribed punishment?
+
+A. Fine up to Rs. 1 Lakh. B. Imprisonment up to 1 year, or fine up to Rs. 10,000, or both. C. Imprisonment up to 3 years. D. Disciplinary action only; no criminal penalty.
+
+Correct Answer: B Explanation: Section 93 states that any officer who searches or seizes without reasonable grounds shall be punished with "imprisonment for a term which may extend to one year, or with fine which may extend to ten thousand rupees or with both".
+
+Part 13: Product Liability Exceptions
+Q.29. In a product liability action based on failure to provide adequate warnings, the manufacturer is NOT liable if the complainant was under the influence of:
+
+A. Alcohol or any prescription drug not prescribed by a medical practitioner. B. Any medication, even if prescribed by a doctor. C. Extreme emotional distress. D. Fatigue or sleep deprivation.
+
+Correct Answer: A Explanation: Section 87(2)(d) provides an exception to liability if "the complainant, while using such product, was under the influence of alcohol or any prescription drug which had not been prescribed by a medical practitioner".
+
+Part 14: Commission Members & Constitution
+Q.30. According to the Act, the President and members of the National Commission shall not hold office after attaining which of the following ages?
+
+A. President: 65 years; Member: 62 years B. President: 70 years; Member: 67 years C. President: 67 years; Member: 65 years D. President: 75 years; Member: 70 years
+
+Correct Answer: B Explanation: Section 55 proviso states that no President or member shall hold office after attaining: "(a) in the case of the President, the age of seventy years; (b) in the case of any other member, the age of sixty-seven years".
+
+Part 15: Unfair Trade Practices (Specifics)
+Q.31. Under the definition of "Unfair Trade Practice", offering gifts or prizes with the intention of not providing them as offered is classified as:
+
+A. A Restrictive Trade Practice. B. A Misleading Advertisement. C. An Unfair Trade Practice. D. A Product Liability issue.
+
+Correct Answer: C Explanation: Section 2(47)(iii)(a) defines "Unfair Trade Practice" to include "the offering of gifts, prizes or other items with the intention of not providing them as offered".
+
+Q.32. "Spurious Goods" under the Act are defined as:
+
+A. Goods that are defective in design. B. Goods that are falsely claimed to be genuine. C. Goods that are sold above the MRP. D. Goods that do not have a warranty.
+
+Correct Answer: B Explanation: Section 2(43) states: "'spurious goods' means such goods which are falsely claimed to be genuine".
+
+Part 16: Miscellaneous
+Q.33. Which Section of the Consumer Protection Act, 2019 protects actions taken in "Good Faith" by the Presidents, Members, and Officers of the Commissions?
+
+A. Section 92 B. Section 98 C. Section 100 D. Section 107
+
+Correct Answer: B Explanation: Section 98 protects authorities: "No suit, prosecution or other legal proceeding shall lie against... for any act which is in good faith done or intended to be done in pursuance of this Act".
+
+Q.34. Consider the following regarding the "Central Consumer Protection Council" (Central Council):
+
+The Chairperson is the Prime Minister of India.
+
+It must meet at least one time every year.
+
+It is an advisory body.
+
+Which of the statements given above is/are correct?
+
+A. 1 and 2 only B. 2 and 3 only C. 1 and 3 only D. 1, 2 and 3
+
+Correct Answer: B Explanation: Statement 1 is incorrect: The Chairperson is the "Minister-in-charge of the Department of Consumer Affairs in the Central Government". Statement 2 is correct: "at least one meeting of the Council shall be held every year". Statement 3 is correct: "The Central Council shall be an advisory council".
+
+
+
+Q.35. "Deficiency" in service includes which of the following?
+
+Any act of negligence or omission which causes loss to the consumer.
+
+Deliberate withholding of relevant information by the service provider.
+
+Select the correct answer:
+
+A. 1 only B. 2 only C. Both 1 and 2 D. Neither 1 nor 2
+
+Correct Answer: C Explanation: The definition of "deficiency" in Section 2(11) includes "(i) any act of negligence or omission or commission... which causes loss or injury" and "(ii) deliberate withholding of relevant information by such person to the consumer".
+
+Here is the regenerated set of high-quality MCQs (Part 17 to Part 25), refined to be direct and exam-oriented, strictly removing references to "study notes" or "source material."
+
+Part 17: Mediation Fees and Rules
+Q.36. In the event of an "unsuccessful mediation" under the Consumer Protection Act, how is the mediator's fee handled?
+
+A. No fee is paid to the mediator. B. The full consolidated fee is paid regardless of the outcome. C. Half of the fixed fee is paid to the mediator. D. The fee is forfeited by the parties.
+
+Correct Answer: C Explanation: For an unsuccessful mediation, half of the fixed fee is paid to the mediator. In a successful mediation, the full consolidated fee is paid.
+
+Q.37. Consider the following statements regarding the "Consumer Mediation Cell":
+
+It is attached to the District, State, and National Commissions.
+
+It must submit a quarterly report to the Commission it is attached to.
+
+The mediation shall stand terminated on the expiry of three months from the date of first appearance unless extended.
+
+Which of the statements given above is/are correct?
+
+A. 1 and 2 only B. 2 and 3 only C. 1 and 3 only D. 1, 2, and 3
+
+Correct Answer: D Explanation: All statements are correct. Mediation cells are established/attached to each Commission . Every cell shall submit a quarterly report. Mediation stands terminated on the expiry of three months unless extended.
+
+
+
+Part 18: Definitions (Deep Dive)
+Q.38. The term "Harm" in relation to Product Liability includes all of the following EXCEPT:
+
+A. Damage to any property other than the product itself. B. Mental agony or emotional distress attendant to personal injury. C. Any harm caused to the product itself. D. Loss of consortium resulting from personal injury.
+
+Correct Answer: C Explanation: The definition of "Harm" explicitly excludes any harm caused to the product itself or any damage to the property on account of breach of warranty conditions.
+
+Q.39. Which of the following entities falls under the definition of a "Person" under the Act?
+
+A Hindu Undivided Family (HUF).
+
+A Co-operative Society.
+
+An association of persons whether registered or not.
+
+Select the correct answer:
+
+A. 1 and 2 only B. 2 and 3 only C. 1 and 3 only D. 1, 2, and 3
+
+Correct Answer: D Explanation: The definition of "Person" is broad and includes a Hindu undivided family, a co-operative society, and an association of persons whether registered or not .
+
+Part 19: Administrative Control & Procedures
+Q.40. Which authority acts as the "Monitoring Cell" to oversee the functioning of the State Commissions from an administrative perspective?
+
+A. The Central Consumer Protection Authority (CCPA). B. The Ministry of Consumer Affairs. C. A cell constituted by the President of the National Commission. D. The Supreme Court of India.
+
+Correct Answer: C Explanation: There shall be a monitoring cell constituted by the President of the National Commission to oversee the functioning of the State Commissions from the administrative point of view.
+
+Q.41. Regarding the service of notice to an "Electronic Service Provider" (e.g., an e-commerce platform), the Act mandates that:
+
+A. Notices must be physically delivered to the headquarters only. B. The provider must designate a nodal officer to accept and process such notices. C. Notices are deemed served only if acknowledged by the CEO. D. Electronic service providers are exempt from direct service of notice.
+
+Correct Answer: B Explanation: The electronic service provider shall designate a nodal officer to accept and process such notices.
+
+Part 20: Offences and Compounding
+Q.42. Under Section 92, a court can take cognizance of offences related to non-compliance with orders (Section 88) or misleading advertisements (Section 89) ONLY on a complaint filed by:
+
+A. The aggrieved consumer. B. The District Collector. C. The Central Authority or an officer authorized by it. D. The State Government.
+
+Correct Answer: C Explanation: No cognizance shall be taken by a competent court of any offence under sections 88 and 89 except on a complaint filed by the Central Authority or any officer authorized by it in this behalf.
+
+Q.43. Regarding the "Compounding of Offences", which of the following is correct?
+
+Offences punishable under Section 88 (non-compliance) and Section 89 (misleading ads) may be compounded.
+
+No compounding is allowed if the same or similar offence is committed within three years of a previous compounding.
+
+Select the correct answer:
+
+A. 1 only B. 2 only C. Both 1 and 2 D. Neither 1 nor 2
+
+Correct Answer: C Explanation: Statement 1 is correct: Offences punishable under sections 88 and 89 may be compounded. Statement 2 is correct: Compounding does not apply to a person who commits the same or similar offence within three years of the first offence being compounded.
+
+
+Part 21: Court Fees
+Q.44. What is the prescribed court fee for filing a fresh complaint where the value of goods or services is "Above 5 Lakh - up to 10 Lakh"?
+
+A. Nil B. Rs. 200/- C. Rs. 400/- D. Rs. 500/-
+
+Correct Answer: B Explanation: The court fee for a complaint where the value of goods/services is above 5 Lakh and up to 10 Lakh is Rs. 200/-.
+
+Part 22: Dark Patterns - Specific Types
+Q.45. Which of the following practices is termed "Basket Sneaking"?
+
+A. A website asks a user to download their app repeatedly. B. Automatically adding travel insurance to a flight ticket purchase without explicit consent. C. Presenting false data on high demand (e.g., "Only 2 rooms left"). D. Showing a lower price at the selection stage but charging a higher price at the payment stage.
+
+Correct Answer: B Explanation: "Basket sneaking" includes practices like automatically adding travel insurance while a user purchases a flight ticket.
+
+Q.46. In the context of prohibited trade practices, "Nagging" refers to:
+
+A. Websites asking a user to download their app again and again. B. Forcing a user to share contacts to unlock a feature. C. Making the cancellation button invisible. D. Charging a higher price at the checkout.
+
+Correct Answer: A Explanation: "Nagging" is defined as websites asking a user to download their app, again and again.
+
+Part 23: Commission Composition (Detailed)
+Q.47. What is the minimum number of members (excluding the President) required for the State Consumer Disputes Redressal Commission?
+
+A. Two B. Three C. Four D. Six
+
+Correct Answer: C Explanation: The State Commission shall consist of a President and not less than four members.
+
+Q.48. If the President of the National Commission is unable to perform his duties due to absence, who shall preside over the Commission?
+
+A. A Judge of the Supreme Court nominated by the Chief Justice. B. The senior-most member of the National Commission. C. The Secretary of the Department of Consumer Affairs. D. A member nominated by the Central Government.
+
+Correct Answer: B Explanation: When the office of the President is vacant or he is absent, his duties shall be performed by the senior-most member of the National Commission.
+
+Part 24: Unfair Contracts
+Q.49. A contract term that entitles a party to the contract to terminate such contract unilaterally without reasonable cause is classified as:
+
+A. A Restrictive Trade Practice. B. A Voidable Contract. C. An Unfair Contract. D. A Deficiency in Service.
+
+Correct Answer: C Explanation: An "unfair contract" includes terms entitling a party to the contract to terminate such contract unilaterally, without reasonable cause.
+
+Part 25: Legal Procedures
+Q.50. Every order made by a District, State, or National Commission shall be enforced in the same manner as:
+
+A. An FIR filed by the Police. B. A decree made by a Court in a suit. C. An administrative order by a Collector. D. An arbitration award.
+
+Correct Answer: B Explanation: Every order made by a Commission shall be enforced by it in the same manner as if it were a decree made by a Court in a suit before it.

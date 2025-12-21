@@ -1,0 +1,1377 @@
+[
+    {
+        "q": "Which Section of The Post Office Act, 2023 empowers the Director General to make regulations?",
+        "o": [
+            "Section 13",
+            "Section 4",
+            "Section 2",
+            "Section 8"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "Which Section of The Post Office Act, 2023 exempts the Post Office and its officers from liabilities related to service provided by the Post Office?",
+        "o": [
+            "Section 10",
+            "Section 14",
+            "Section 7",
+            "Section 16"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "As per AML/CFT guidelines issued by the Department, who is not a customer:",
+        "o": [
+            "An individual that maintains an account with Post office",
+            "An individual who purchases a cash certificate with Post Office",
+            "An individual who has a business relationship with the Post Office Savings Bank.",
+            "Anyone who is not covered in A, B, C above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Please refer to following aspects of AML/CFT activities and state that as per AML/CFT guidelines issued by the Department, which of the aspects are covered:(i) Customer Acceptance Policy.(ii) Risk Management(iii) Customer Identification Procedure.",
+        "o": [
+            "Only (i) and (ii) are covered",
+            "Only (ii) and (iii) are covered",
+            "Only (i) and (iii) are covered",
+            "All (i), (ii) and (iii) are covered"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "As per current AML/CFT guidelines issued by the Department, where the customer opens account or applies for purchase of certificates or applies for credit of maturity/prematurity value of any existing savings instrument with an amount exceeding 50,000/- but up to 10 lakh and balance in all accounts and savings certificates does not exceed 10 lakh, he will be categorised in:",
+        "o": [
+            "Low Risk Category",
+            "Medium Risk Category",
+            "High Risk Category",
+            "Categorised as per discretion of the Post Master"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "As per current AML/CFT guidelines issued by the Department, which of the following cannot be used as a valid \"Address Proof\":",
+        "o": [
+            "Passport",
+            "Driving License",
+            "Voter's Identity Card issued by Election Commission of India",
+            "Certificate given by headmaster of local school"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which section of Information Technology Act 2000 provides for \"Legal recognition of electronic signatures\":",
+        "o": [
+            "Section 13",
+            "Section 5",
+            "Section 21",
+            "Section 16"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "\"Cyber Terrorism\" is punishable under which section of Information Technology Act 2000?",
+        "o": [
+            "Section 5",
+            "Section 64",
+            "Section 66F",
+            "Section 12"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "Which of the following is not true as per different provisions contained in Information Technology Act 2000?",
+        "o": [
+            "It recognises Contracts formed through electronic means",
+            "It recognises electronic signatures",
+            "It recognises publication of rule, regulation, etc., in Electronic Gazette",
+            "It confers full right to any person to insist that a document should be accepted in electronic form only"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "A police officer not below which rank cannot investigate any offence under Information Technology Act 2000?",
+        "o": [
+            "Inspector",
+            "Deputy Superintendent of Police",
+            "Superintendent of Police",
+            "None of the above"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "Which of the following schemes is not mentioned as one of the savings schemes in the schedule part A of the Government Savings Promotion Act 1873:",
+        "o": [
+            "Post Office Savings Account",
+            "National Savings Monthly Income (Account)",
+            "National Savings Recurring Deposit",
+            "Sovereign Gold Bond Scheme"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Minor of which age can open and operate an account in the Government Savings Bank scheme as per Government savings Promotion Act 1873:",
+        "o": [
+            "Ten",
+            "Eight",
+            "Seven",
+            "Five"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "Which section of Government savings Promotion Act 1873 provides for \"Nomination by depositor\"?",
+        "o": [
+            "Section 3",
+            "Section 4",
+            "Section 11",
+            "Section 15"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "The PMLA Act 2002 has been passed as:",
+        "o": [
+            "Act No. 10 of 2007",
+            "ACT No. 15 OF 2005",
+            "ACT No. 15 OF 2003",
+            "Act No. 6 of 2009"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "The provisions of PMLA Act 2002 came into force on which date:",
+        "o": [
+            "$1^{st}$ July 2005",
+            "$1^{st}$ July 2006",
+            "1st September 2006",
+            "$15^{th}$ April 2007"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "The Offence of money-laundering has been defined in which section of PMLA Act 2002?",
+        "o": [
+            "Section 3",
+            "Section 17",
+            "Section 19",
+            "Section 21"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "The power for Attachment of property involved in money-laundering has been provided in which section of PMLA Act 2002?",
+        "o": [
+            "Section 4",
+            "Section 5",
+            "Section 7",
+            "Section 9"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "Which one of the following cannot be a \"Complainant\" within the meaning of Consumer Protection Act 2019?",
+        "o": [
+            "A consumer",
+            "The Central Government or any State Government;",
+            "The Central Authority",
+            "A consumer who is a minor"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "As per provisions of Consumer Protection Act 2019, the \"consumer rights\" does not include?",
+        "o": [
+            "The right to be protected against the marketing of goods, products or services which are hazardous to life and property,",
+            "The right to seek redressal against unfair trade practice",
+            "Right to get minimum 25% discount",
+            "The right to consumer awareness"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "Which of the following is not true in the light of the definition of \"Person\" within the provisions of Consumer Protection Act 2019?",
+        "o": [
+            "Any corporation is a person",
+            "A firm, whether registered or not, is a person",
+            "A Hindu undivided family is a person",
+            "A Co-operative Society is not a person"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "A person aggrieved by any order passed by the Central Authority under sections 20 and 21 of Consumer Protection Act 2019 may file an appeal to the National Commission within a period of how many days from the date of receipt of such order:",
+        "o": [
+            "45 days",
+            "30 days",
+            "21 days",
+            "60 days"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "The District Commission, the State Commission or the National Commission established under Consumer Protection Act 2019 shall not admit a complaint unless it is filed within how many years from the date on which the cause of action has arisen?",
+        "o": [
+            "One year",
+            "Two Year",
+            "Three year",
+            "None of the above"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "A product liability action under section 82 of Consumer Protection Act 2019 may not be brought by a complainant against:",
+        "o": [
+            "A product manufacturer",
+            "A product service provider",
+            "A product seller",
+            "Against a celebrity who endorses the product (advertiser)"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which section of Consumer Protection Act 2019 contains provisions related to \"Exceptions to product liability action\":",
+        "o": [
+            "Section 84",
+            "Section 95",
+            "Section 87",
+            "Section 99"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "Which of the following bodies are empowered to make Rules as per Consumer Protection Act 2019?",
+        "o": [
+            "Central Government",
+            "National Commission",
+            "Central Authority",
+            "None of these"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "The Post Office Act 2023 came into force on:",
+        "o": [
+            "$18^{th}$ June 2024",
+            "$18^{th}$ July 2024",
+            "$25^{th}$ July 2024",
+            "None of the Above"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "Which of the following statements is not true in respect of Post Office Act 2023?",
+        "o": [
+            "The term \"Director General\" has been defined in Post Office Act 2023",
+            "The Term \"Post Office\" has been defined in Post Office Act 2023",
+            "Post Office Act 2023 has taken away the exclusive privilege of issuing postage stamps by Post office.",
+            "The Director General may make regulations relating to the supply and sale of postage stamps and postal stationery"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which of the following statements is not true in respect of Post Office Act 2023?",
+        "o": [
+            "It has abolished the exclusive privilege of conveying letters reserved to the Government as per Post Office Act 1898",
+            "A postage stamp may be in physical form",
+            "A postage stamp cannot be in digital form",
+            "\"Postal stationery\" means stationery, issued by the Post Office such as envelopes, letter cards"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "As per provisions contained in The Post Office Act, 2023, which of the following statements is not true:",
+        "o": [
+            "Central Government may prescribe standards for addressing on the items",
+            "Central Government may prescribe standards for address identifiers",
+            "Central Government may prescribe standards for usage of postcodes",
+            "Prescribing standards for addressing or identifiers or postcodes on the items is within the jurisdiction of parliament which will pass law on that.."
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which Section of The Post Office Act, 2023 empowers the Central Government to make rules?",
+        "o": [
+            "Section 9",
+            "Section 12",
+            "Section 10",
+            "Section 14"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which of the following is not a valid type of National Savings Certificate account:",
+        "o": [
+            "Single Holder Type Account",
+            "Joint A- Type Account",
+            "Joint B-Type Account",
+            "Joint C-Type Account"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "What is the maximum limit for deposit in an account opened under National Savings Certificate account scheme 2019 by an account holder?",
+        "o": [
+            "5 lacs",
+            "10 Lacs",
+            "15 lacs",
+            "There is no maximum limit"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "As per Kisan Vikas Patra Scheme 2019, what is the maximum number of accounts that an account holder can hold in his name?",
+        "o": [
+            "An individual may open any number of accounts.",
+            "An individual may open only 2 accounts",
+            "An individual may open only 3 accounts",
+            "An individual may open only 5 accounts"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "Which one of the following is not a valid reason for pre-mature closure of a KVP account?",
+        "o": [
+            "On the death of the account holder in a single account, or any or all the account holders in a joint account;",
+            "On forfeiture by a pledgee, being a Gazetted Officer;",
+            "When ordered by a court",
+            "To meet the expenses for purchase of Consumer goods like TV, Mobile etc"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which of the following statement is not true in respect of a Public Provident Fund Scheme, 2019?",
+        "o": [
+            "An individual may open an account by making an application in Form-1.",
+            "Joint account can also be opened under this Scheme.",
+            "PPF Account for a minor may be opened by a guardian",
+            "PPF Account for a person of unsound mind can be opened by a guardian"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "As per Public Provident Fund Scheme, 2019, what is the maximum limit of subscription amount that can be made in a PPF Account during a financial year?",
+        "o": [
+            "150000",
+            "125000",
+            "100000",
+            "175000"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "As per Public Provident Fund Scheme, 2019, a subscription to a PPF Account must be in the multiple of:",
+        "o": [
+            "Rs 10",
+            "Rs 20",
+            "Rs 50",
+            "Rs 100"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "A Sukanya Samriddhi Account may be opened by one of the guardian in the name of a girl child, who has not attained the age of ... years as on the date of opening of the account:",
+        "o": [
+            "Eight",
+            "Ten",
+            "Twelve",
+            "Eleven"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "The total amount deposited in a Sukanya Samriddhi Account shall not exceed Rs. ........in a financial year:",
+        "o": [
+            "100000",
+            "175000",
+            "150000",
+            "200000"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "The maximum amount of Policy/ies that a person can avail should not exceed the maximum amount of sum assured of:",
+        "o": [
+            "Rs 50 Lacs",
+            "Rs 75 Lacs",
+            "Rs One Crore",
+            "None of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which of the following is not an acceptable mode of payment of postage or other charges as per Post Office Rules 2024?",
+        "o": [
+            "Payment in cash;",
+            "Payment through digital mode",
+            "Payment using crypto currency",
+            "Payment by postage stamp"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "Which of the following is not true in respect of compensation to be paid as per Rule 19 of Post Office Rules 2024?",
+        "o": [
+            "The compensation shall not exceed the amount of the loss or damage",
+            "The compensation shall not be paid for loss or damage caused by the fault or negligence of the sender",
+            "The compensation shall not be paid on prohibited items",
+            "The compensation shall also be paid for loss caused due to circumstances arising from force majeure"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "As per Regulation 4 of Post Office regulations 2024, who is not empowered to specify the duty period of each of the post offices under their jurisdiction, during which business is transacted with the public or customer and the time at which items are delivered and dispatched:",
+        "o": [
+            "The Circle Head",
+            "Regional Head",
+            "Divisional Head",
+            "Sub-Divisional Head"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which of the Following terms has not been defined in Regulation 2 of Post Office Regulations 2024?",
+        "o": [
+            "Accountable items",
+            "Letter Box",
+            "Head of Department",
+            "Addressee"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "The weight of a letter should not exceed ... grams as per Regulation 87 of Post Office Regulations 2024:",
+        "o": [
+            "400 grams",
+            "500 grams",
+            "600 grams",
+            "750 grams"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "Aerogramme shall be sold by the post offices specified by the ...?",
+        "o": [
+            "Member (Operations)",
+            "Circle Head",
+            "Regional PMG",
+            "DPS (HQ)"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "A Small packet can have maximum weight upto. ... kg?",
+        "o": [
+            "2 kg",
+            "3 kg",
+            "4 kg",
+            "None of the above"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "Which of the following may not be refunded to the sender in the event of suspension of services of international mail to a particular country?",
+        "o": [
+            "The postage",
+            "special fee",
+            "air surcharges",
+            "TA bill to customer for coming to the post office."
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "Which of the following domestic products of mails services is not offered by the Post Office under the Universal Postal Services:",
+        "o": [
+            "Letters",
+            "Post Card",
+            "Adhaar enabled Payment Services",
+            "India Post Parcel"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "As per provisions contained in Government Savings Promotion Rules 2018, the number of nominees in an account, cannot be more than?",
+        "o": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "As per Post Office Savings Account Scheme, 2019, an SB Account can be opened with a minimum amount of Rs. .....?",
+        "o": [
+            "200",
+            "500",
+            "1000",
+            "1500"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "As per Post Office Savings Account Scheme, 2019, a Savings Account shall be treated as a \"silent Account\" if there is no deposit or withdrawal in an account for complete ... years.",
+        "o": [
+            "1 year",
+            "2 years",
+            "3 years",
+            "4 years"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "The maturity period of an account opened under the National Savings Recurring Deposit Scheme, 2019 is how many years?",
+        "o": [
+            "5 years",
+            "2 years",
+            "3 years",
+            "4 years"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "An account opened under the National Savings Recurring Deposit Scheme, 2019 is treated as discontinued if there are defaults for more than ........ monthly deposits?",
+        "o": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "As per National Savings Time Deposit Scheme, 2019, a Time Deposit Account cannot be opened for a period of.",
+        "o": [
+            "One Year",
+            "Two Years",
+            "Four Years",
+            "Five Years"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "As per National Savings Time Deposit Scheme, 2019, a Joint Time Deposit Account can be opened in the name of maximum of how many persons?",
+        "o": [
+            "Seven",
+            "Eight",
+            "Three",
+            "Four"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "As per National Savings (Monthly Income Account) Scheme, 2019 an MIS Account may be opened with a minimum deposit of how much rupees?",
+        "o": [
+            "One Thousand Rupees",
+            "Two Thousand Rupees",
+            "Three Thousand Rupees",
+            "Four Thousand Rupees56. As per National Savings (Monthly Income Account) Scheme, 2019, the Deposits in all the accounts taken together for an individual shall not exceed:"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Four lakh rupees",
+            "Four lakh fifty thousand rupees",
+            "Five lakh Rupees",
+            "None of the above59. As per Senior Citizens' Savings Scheme, 2019, a civilian person must have attained age of ...years to be eligible to open an account under this scheme?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "55 years",
+            "58 years",
+            "60 years",
+            "61 years60. As per Senior Citizens' Savings Scheme, 2019, how many times deposits can be made in a Senior Citizens' Savings Scheme account?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "Only one",
+            "Only two",
+            "Only three",
+            "Only four61. Which of the following is true about an officer appointed to perform the current duties of an appointment:"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "He cannot exercise administrative powers vested in the full-fledge incumbent of the post",
+            "He cannot exercise financial powers vested in the full-fledge incumbent of the post",
+            "He cannot exercise statutory powers vested in the full-Fledge incumbent of the post",
+            "None of the above are true 62. As per Rule 18 of Postal Manual Volume VIII, who is competent to fix the extent and the headquarters of each Inspector's sub- division:"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "The Head of Circle",
+            "The Head of the Region",
+            "The Director Postal Service of the Region",
+            "None of the Above63. During which months of the year Half-yearly enumeration exercise is made to note the daily of the number of ordinary unregistered articles of the letter mail and unregistered parcels given out for delivery by all post offices?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "January and July",
+            "February and August",
+            "March and September",
+            "April and October64. Who can fix the minimum and maximum cash balance of the first class Head office?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "The Senior Superintendent of Post Offices",
+            "The Regional PMG",
+            "The Regional DPS",
+            "The DPS (HQ) of the Circle65. A \"Form A\" order is issued by the Superintendent of Railway Mail Service to communicate"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "Any change in a sorting list",
+            "An Increase in DA",
+            "A punishment order",
+            "A suspension order of an employee66. The STS officer who heads a First-Class Head Office is called."
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Senior Postmaster",
+            "Chief Postmaster",
+            "Junior Postmaster",
+            "LSG Postmaster67. A Transit mail Office deals with?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "Only Closed Bags",
+            "Only open Bags",
+            "Both open Bags as well as closed bags",
+            "Neither open Bags nor closed bags68. Which of the following is a due bag?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Cash bag",
+            "Transit bag",
+            "Packet bag",
+            "Parcel bag69. A \"Book of Post Mark\" is not mandatory to be maintained in?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "Every Post Office,",
+            "In each set of a Mail Office",
+            "In every Divisional Office",
+            "in every record office70. As per rule 4 of Postal Manual Volume VI, who is competent to approve the \"Memorandum of Distribution of Work\" for the staff posted in a Post office?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "The Superintendent",
+            "The ASP(HQ)",
+            "The Sub Divisional Head",
+            "None of the above71. What is the preservation period of Postmaster's Order Book as per Rule 25 of Postal Manual Volume VI?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "1 year",
+            "2 years",
+            "3 years",
+            "4 years72. Which of the following records of the Post Office is a permanent record?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "Monthly statistical register",
+            "Monthly statistical abstract",
+            "Correspondence register",
+            "Nominal Roll73. Which of the following is not the work of a record officer?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "taking over the work-papers for the previous trips and spells of duty.",
+            "issuing the work-papers for the next trips and spells of duty",
+            "Approving the distribution of work among the officials of the Record office",
+            "None of the above 74. Which one of the following is not a Part of Jan Suraksha Schemes?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "Sukanya Samriddhi Yojna",
+            "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+            "Pradhan Mantri Suraksha Bima Yojana",
+            "Atal Pension Yojana75. The maximum amount of Money Order cannot exceed"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Five thousand rupees",
+            "Ten Thousand Rupees",
+            "Fifteen Thousand Rupees",
+            "Twenty Five thousand Rupees76. What is the maximum number of permissible IFS Money Order transactions per person per year?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "20",
+            "25",
+            "30",
+            "3577. In which of the following cases, insurance is not compulsory:"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "A letter carrying bank notes,",
+            "A letter carrying gold",
+            "A letter carrying precious stones",
+            "A letter containing birthday greetings78. In the foreign post, the term \"Letter Post\" does not include which classes of postal articles:"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Letter",
+            "Post Cards",
+            "Literature for the Blind.",
+            "Article included in \"parcel post\" category79. What can be maximum weight of International postal article under category Letters, Printed papers and Small packets"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "up to 1 kg",
+            "up to 2 kg",
+            "Up to 3 kg",
+            "Up to 4 kg80. Digipin divides India into the grids of which dimension?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "4m x 4m grids",
+            "$10m \\times 10m$ grids",
+            "$20m \\times 20m$ grids",
+            "$25m \\times 25m$ grids81. The minimum age at entry for an Anticipated Endowment Assurance plan cannot be less than how many years on the next birth day:"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "18 years",
+            "19 years",
+            "20 years",
+            "21 years82. The minimum sum assured for a 10 year Rural Postal Life Insurance Policy (Gram Priya) cannot be less than Rs. ... :"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "1000",
+            "5000",
+            "10000",
+            "10000083. What is 'Maximum aggregated sum assured limit of non-medical RPLI policy/ies with non -standard age proof:"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "Rs. 25000",
+            "Rs. 50000",
+            "Rs. 75000",
+            "Rs. 1000084. Which of the following statement is correct as per Post office Life Insurance Scheme, 2011?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Loan may be granted on the security of an Anticipated Endowment Assurance Policy,",
+            "Loan may be granted on the security of Ten year Rural PLI Policy",
+            "Loan may be granted on the security of a Children Insurance Policy",
+            "Loan may be granted on the security of a Whole Life policy, if it has been in force for at least four years and is otherwise unencumbered. 85. As per Rule 64 of Branch Post Office Rules, what should be the colour of Check slip for ordinary sorting bundles?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "White",
+            "Blue",
+            "Green",
+            "None of the above86. Which of the following is not true as per Branch Post Office Rules?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "A labelled bundle is a collection of faced unregistered articles of the letter mail, securely tied with a checkslip at the top.",
+            "Labelled bundles are of two classes, viz., station bundles and sorting bundles",
+            "Labelled bundles are due.",
+            "Sorting bundles may be of two kinds, viz., express bundles and deferred bundles87. As per Rule 288 of Postal Manual Volume II, what is the periodicity for review of Master Schedule of Forms?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "Three Years",
+            "Four Years",
+            "Five Years",
+            "Six Years88. As per Rule 453 of Postal Manual Volume II, which is not a category of Building Projects?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Original works",
+            "Reconstruction work",
+            "Repairs or Maintenance",
+            "Artificial Buildings89. As per Rule 637 of Postal Manual Volume II, the case mark \"C\" in office of a Superintendent of Post Offices denotes cases related to:"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Post office buildings and runners' huts",
+            "Pensions and gratuities.",
+            "Experimental establishments",
+            "Information for annual report90. As per Postal Manual Volume III, which of the following recoveries does not require consent of the suspended official?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "P.L.I. premia.",
+            "Dues of the Co-operative stores and Co-operative Societies.",
+            "Refund of advance taken from the G.P.F",
+            "income tax and super tax91. Which of the following services is not offered by the India Post Payments Bank?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Aadhaar Enabled Payment Services (AePS)",
+            "Child Enrolment Lite Client (CELC) Services",
+            "Foreign Exchange conversion services",
+            "Loan Referral services92. Which of the following type of accounts may not be opened by the India Post Payments Bank?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "Savings Account",
+            "Current Account",
+            "Merchant Account",
+            "Recurring Deposit Account93. The provisions of CCS(Conduct) Rules 1964 are not applicable to which of the following?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "A Gramin Dak Sevak",
+            "The Divisional Superintendent",
+            "The Regional Director",
+            "The Regional Post Master General94. The previous sanction of the prescribed authority needs to be obtained by the Government servant if any transaction in immovable property is to be done with whom of the following?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "His wife",
+            "His Parents",
+            "His Children",
+            "A person having official dealing with him. 95. Which rule of CCS(Conduct) Rule, 1964 prohibits bringing of non-official or other outside influence into service matters?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Rule 15",
+            "Rule 20",
+            "Rule 9",
+            "Rule 896. As per CCS (Conduct) rule 1964, children below which age cannot be employed?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "Below 14 years",
+            "Below 16 years",
+            "Below 18 years",
+            "Below 21 years97. A Government servant, without the previous sanction of the Government, cannot do which of the following activity?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Undertake honorary work of a social or charitable nature,",
+            "Undertake occasional work of a literary, artistic or scientific character,",
+            "Participate in sports activities as an amateur,",
+            "Negotiate for, or undertake any other employment98. As per Central Civil Services (Temporary Service) Rules, 1965, the period of which of the following is not included in term \"Government service\"."
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Periods of duty",
+            "Periods of leave",
+            "Periods of extraordinary leave",
+            "Service rendered on contract basis with a private party before joining the temporary service99. What is the period of notice as per Rule 5 of Central Civil Services (Temporary Service) Rules, 1965 to be served by the employee or the Government servant for termination of service?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "3 months",
+            "2 months",
+            "1 month",
+            "None of these100. When action is taken as under Rule 5 to terminate the services of a temporary employee, the order of termination, which should be passed by the appointing authority:"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "must mention the reasons for such termination",
+            "should not mention the reasons for such termination.",
+            "may be mentioned or not mentioned as per the orders of Divisional head",
+            "may be mentioned or not mentioned as per the orders of DPS(HQ)101. Who is competent to fix the authorized stock of pass books for each sub post office?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "The Sub- Divisional Head",
+            "The Divisional Head",
+            "The Regional Head",
+            "The Circle Head102. Which of the following pair of activity and the form used in SB accounts is not correctly matched?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "Application for Withdrawal - SB-7",
+            "Application for Closure on Maturity SB-7A",
+            "Application for Premature Closure- SB-7B",
+            "Application for Loan- SB-26103. Which of the following statement is not true in respect of a transfer of POSB Savings Account?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Account opened in APS and subsequently transferred to Post Office is not treated as transfer of SB Account as it is done on administrative ground.",
+            "Transfer of a POSB account is not allowed after the death of the depositor.",
+            "Transfer of a silent Savings Account is allowed.",
+            "Transfer of savings accounts is not allowed after an account has been ordered to be closed.104. Which one of the following statement is Not Correct in respect of a Passbook?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "The passbook or deposit receipt or statement of account should be duly stamped and signed by the authorised officer of the post office.",
+            "Passbook for the accounts opened via e-Banking and Mobile Banking is necessary",
+            "A depositor may obtain account statement of his/her Account from any CBS Post Office on payment of requisite fee.",
+            "Balance and transactions shown in the passbook or statement of accounts shall be for the information of the depositor. 105. No fee up to how many cheque leaves in a calendar year is charged."
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "10",
+            "32",
+            "25",
+            "None of the above106. Pledging of certificate account as security can be done through only:"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Branch Post Office",
+            "Sub Post Office",
+            "Head Post Office",
+            "Divisional Office107. As per Annual Report 2023-24 of India Post, how many postal circles are there?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "23",
+            "21",
+            "22",
+            "20108. As per Annual Report 2023-24 of India Post, interest earned upto which limit is in a financial year is exempt from Income Tax?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Rs 5000",
+            "Rs 7000",
+            "Rs 10000",
+            "Rs 15000109. Which of the following articles are delivered through nodal delivery centres?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "Ordinary letters",
+            "Parcels",
+            "Money Orders",
+            "None of the above110. Deen Dayal SPARSH Yojna has been introduced to promote which of the following?:"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "Philately among Children",
+            "ADHAR registration",
+            "Opening of Sukanya Samriddhi Accounts",
+            "None of the above111. Which of the following is a major penalty as per CCS(CCA) rule 1965?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Censure",
+            "Compulsory retirement",
+            "Withholding of his promotion",
+            "Withholding of increments of pay112. A Government servant may not prefer an appeal against which of the following orders?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "an order of suspension",
+            "An order of deemed suspension",
+            "an order enhancing any penalty imposed under rule 11",
+            "any order made by the President;113. An appeal must be preferred within a period of how many days of supply of order appealed against?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Thirty days",
+            "Forty-five days",
+            "Sixty days",
+            "Ninety days114. As per Gramin Dak Sevaks (Conduct and Engagement) Rules, 2020, Gramin Dak Sevaks other than Branch Postmasters (BPMs) and working in Branch Post offices are designated and called as:"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "Assistant Branch Postmasters (ABPMs)",
+            "Dak Sevak",
+            "Extra Departmental Delivery Agent (EDDA)",
+            "None of the above115. Gramin Dak Sevaks (Conduct and Engagement) Rules, 2020, a Sevak shall not be required to perform duty beyond a maximum period of how many hours in a day?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "3 hours",
+            "4 hours",
+            "5 hours",
+            "6 hours 116. As per Gramin Dak Sevaks (Conduct and Engagement) Rules, 2020, what is the maximum age for the purpose of engagement to GDS posts as on the date of notification of the vacancy?"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    },
+    {
+        "q": "",
+        "o": [
+            "32 years",
+            "40 years",
+            "46 years",
+            "48 years117. As per Gramin Dak Sevaks (Conduct and Engagement) Rules, 2020, the Gramin Dak Sevaks may be granted paid leave at the rate of how many days in a year?"
+        ],
+        "a": 1,
+        "e": "Correct Answer: B"
+    },
+    {
+        "q": "",
+        "o": [
+            "20 days",
+            "25 days",
+            "30 days",
+            "15 days118. As per Gramin Dak Sevaks (Conduct and Engagement) Rules, 2020, which of the following is a minor penalty?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Removal from engagement",
+            "Dismissal from engagement",
+            "Compulsory Discharge from engagement",
+            "Recovery from Time Related Continuity Allowance (TRCA)119. As per SOP on Dakghar Niryat Kendra issued on 15.09.2022, which of the type of Dakghar Niryat Kendra (DNK) does not exist?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Category A: Minimum Four (4) Postal Assistant",
+            "Category B: Minimum three (3) Postal Assistant",
+            "Category C: Minimum Two (2) Postal Assistant",
+            "Category D: Minimum one (1) Postal Assistant120. Which one of the following of Aadhaar services is not free?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "Document update at Aadhaar Centre",
+            "Aadhaar generation of residents in 0-5 age group",
+            "Aadhaar generation of residents more than 5 years age",
+            "Mandatory Biometric update (05 to <07 years and 15 to <17 years)121. Under Central Civil Services (Temporary Service) Rules, 1965, a temporary servant is not entitled for terminal Gratuity in the case of?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Retirement on superannuation",
+            "Discharge from service",
+            "declared invalid for further service by a medical board",
+            "Resignation from Service122. What is the minimum period of the service for a Temporary servant, as per CCS (TS) Rules, to be eligible for grant of Gratuity on being declared permanently invalid for continuation in government service by a competent Medical Authority?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "10 years",
+            "11 Years",
+            "12 Years",
+            "13 Years123. The provisions of CCS (CCA) Rules apply to:"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "All members of the All India Services,",
+            "All persons in casual employment",
+            "All persons subject to discharge from service on less than one month's notice",
+            "to every Government servant including every civilian Government servant in the Defence Services124. If any doubt arises, as to whether CCS(CCA) Rules 1965 applies to any person or not, the matter will be referred to whom for decision?"
+        ],
+        "a": 3,
+        "e": "Correct Answer: D"
+    },
+    {
+        "q": "",
+        "o": [
+            "The President,",
+            "The Prime Minister",
+            "The Home Minister",
+            "None of these125. An order of suspension made or deemed to have been made under sub-rule (1) or (2) of Rule 10 of CCS(CCA) rule 1965 shall not be valid after a period of how many days unless it is extended after review?"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A"
+    },
+    {
+        "q": "",
+        "o": [
+            "Sixty days",
+            "Seventy-Five days",
+            "Ninety days",
+            "One Hundred days"
+        ],
+        "a": 2,
+        "e": "Correct Answer: C"
+    }
+]

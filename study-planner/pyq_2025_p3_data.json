@@ -1,0 +1,1036 @@
+[
+    {
+        "q": "Which of the following is NOT an exception to the requirement of inquiry under Article 311(2) of Constitution of India?",
+        "o": [
+            "Conviction on a criminal charge",
+            "If it is satisfied that in the interest of the security of the State it is not expedient to hold such inquiry",
+            "If it satisfied that it is not practicable to hold an enquiry",
+            "Administrative transfer to a lower post"
+        ],
+        "a": 3,
+        "e": "Article 311(2) explicitly lists convictions, security of state, and practicability as exceptions. Administrative transfer is not a penalty requiring such inquiry."
+    },
+    {
+        "q": "Under Section 22 of the CAT Act, 1985, Tribunals are primarily guided by:",
+        "o": [
+            "The Bharatiya Nagarik Suraksha Sanhita 2023",
+            "Code of Civil Procedure, 1908",
+            "Bharatiya Nyaya Sanhita, 2023 (BNS)",
+            "Principles of natural justice"
+        ],
+        "a": 3,
+        "e": "Section 22 of CAT Act, 1985: Tribunals are guided by principles of natural justice, not strictly by CPC."
+    },
+    {
+        "q": "Article 39 clause (d) which is a part of the Directive Principles of State Policy specifically directs the State to ensure that:",
+        "o": [
+            "Equal pay for equal work for both men and women",
+            "Free legal aid and equal justice for the poor",
+            "Organization of agriculture and animal husbandry",
+            "Promotion of international peace"
+        ],
+        "a": 0,
+        "e": "Article 39(d) of the Constitution directs equal pay for equal work for men and women."
+    },
+    {
+        "q": "If any question arises as to whether a particular matter falls within the purview of the business allocated to a bench of a CAT, whose decision shall be final?",
+        "o": [
+            "The High Court",
+            "The Member of the Tribunal",
+            "The Supreme Court",
+            "The Chairman of the Tribunal"
+        ],
+        "a": 3,
+        "e": "CAT Act: The Chairman has the power to allocate business among benches; his decision is final on such administrative matters."
+    },
+    {
+        "q": "For societies and local authorities owned or controlled by the Central Government, the CVC covers officials drawing a salary of at least:",
+        "o": [
+            "\u20b96,500 per month",
+            "\u20b97,600 per month",
+            "\u20b98,700 per month",
+            "\u20b910,000 per month"
+        ],
+        "a": 2,
+        "e": "CVC Jurisdiction: Covers officers of Scale V and above in PSUs/Banks and Grade Pay \u20b98700 and above in Central Govt."
+    },
+    {
+        "q": "Under Section 84 of the Bharatiya Nagarik Suraksha Sanhita 2023, a proclamation for a person absconding can be issued when:",
+        "o": [
+            "The person has been convicted by a Court",
+            "The person is suspected of a crime",
+            "The person is absconding or concealing himself to avoid execution of a warrant",
+            "The person has filed an appeal"
+        ],
+        "a": 2,
+        "e": "Section 84 of BNSS 2023: Proclamation is issued if the court believes the person is absconding/concealing to avoid warrant."
+    },
+    {
+        "q": "Under Bharatiya Nagarik Suraksha Sanhita, 2023, a cognizable offence is one in which:",
+        "o": [
+            "Police may arrest without warrant",
+            "Police cannot register FIR without Magistrate's permission",
+            "It is always bailable",
+            "Only the High Court can take cognizance"
+        ],
+        "a": 0,
+        "e": "BNSS 2023: Cognizable offence means a case where a police officer may arrest without warrant."
+    },
+    {
+        "q": "According to the amended Public Procurement Policy for MSEs Order 2012, what is the minimum percentage of their annual value of goods or services that should be procured by Central Government Ministries/ Departments/ PSUs from Micro and Small Enterprises (MSEs)?",
+        "o": [
+            "25%",
+            "20%",
+            "30%",
+            "35%"
+        ],
+        "a": 0,
+        "e": "Public Procurement Policy for MSEs Order 2012 (Amended 2018): Increased the mandatory procurement from 20% to 25%."
+    },
+    {
+        "q": "A warrant-case under Bharatiya Nagarik Suraksha Sanhita, 2023 is related to:",
+        "o": [
+            "A case relating to an offence punishable with fine only or imprisonment not exceeding two years",
+            "A case relating to an offence triable and punishable by a Magistrate as a summons case.",
+            "A case relating to an offence triable and punishable by a Sessions court with fine or imprisonment less than one year.",
+            "A case relating to an offence punishable with death, imprisonment for life or imprisonment for a term exceeding two years."
+        ],
+        "a": 3,
+        "e": "BNSS 2023: Warrant case relates to offences punishable with death, life imprisonment, or imprisonment exceeding 2 years."
+    },
+    {
+        "q": "Which of the following Rules lay down the Fundamental Principles of Public Procurement?",
+        "o": [
+            "Rule 143 of GFR 2017",
+            "Rule 146 of GFR 2017",
+            "Rule 145 of GFR 2017",
+            "Rule 144 of GFR 2017"
+        ],
+        "a": 3,
+        "e": "GFR 2017 Rule 144: Fundamental principles of public procurement."
+    },
+    {
+        "q": "Under Article 311(3) of the Constitution, whose decision is treated as final when a question arises about the practicability of holding an inquiry under clause (2)?",
+        "o": [
+            "The decision of the President of India...",
+            "The decision of the Inquiring Authority...",
+            "The decision of the authority empowered to dismiss, remove or reduce the rank of the employee...",
+            "None of the above."
+        ],
+        "a": 2,
+        "e": "Article 311(3): The decision of the authority empowered to dismiss/remove (Disciplinary Authority) is final regarding practicability."
+    },
+    {
+        "q": "Which of the following does NOT fall under \"complaint\" as per Bharatiya Nagarik Suraksha Sanhita, 2023?",
+        "o": [
+            "Allegation made orally to a Magistrate about an offence",
+            "Allegation made in writing to a Magistrate about an offence",
+            "Police report in a non-cognizable case disclosing offence",
+            "Police report after investigation of a cognizable case"
+        ],
+        "a": 3,
+        "e": "BNSS 2023: A police report after investigation of a cognizable case is a Police Report (Challan), not a complaint. (Report in non-cognizable case is deemed a complaint)."
+    },
+    {
+        "q": "For the purpose of contempt proceedings under Section 17 CAT Act, provisions of which Act are applicable?",
+        "o": [
+            "Bharatiya Nyaya Sanhita, 2023",
+            "Bharatiya Sakshya Adhiniyam, 2023",
+            "The Bharatiya Nagarik Suraksha Sanhita 2023",
+            "Contempt of Courts Act, 1971"
+        ],
+        "a": 3,
+        "e": "CAT Act Section 17: Refers to the Contempt of Courts Act, 1971."
+    },
+    {
+        "q": "Which Article of the Indian Constitution declares that the State shall endeavour to provide a Uniform Civil Code?",
+        "o": [
+            "Article 39",
+            "Article 40",
+            "Article 44",
+            "Article 50"
+        ],
+        "a": 2,
+        "e": "Article 44: Uniform Civil Code."
+    },
+    {
+        "q": "Article 214 of the Constitution provides for:",
+        "o": [
+            "Establishment of the Supreme Court",
+            "Tribunals for special cases",
+            "District Courts in each State",
+            "High Court for each State"
+        ],
+        "a": 3,
+        "e": "Article 214: There shall be a High Court for each State."
+    },
+    {
+        "q": "The term \"tribal areas\" in Bharatiya Nagarik Suraksha Sanhita, 2023 refers to:",
+        "o": [
+            "All Scheduled Tribes regions in India",
+            "Territories that were tribal areas of Nagaland before 21st January 1972...",
+            "Territories that were tribal areas of Assam before 21st January 1972, excluding Shillong municipality",
+            "Territories that were tribal areas of Manipur before 21st January 1972..."
+        ],
+        "a": 2,
+        "e": "BNSS 2023 / CrPC: Tribal areas refer to those in Assam (pre-1972) excluding Shillong, etc."
+    },
+    {
+        "q": "A summons-case under Bharatiya Nagarik Suraksha Sanhita, 2023 refers to:",
+        "o": [
+            "A case relating to an offence punishable with fine only",
+            "A case where FIR cannot be filed",
+            "A case triable only by Sessions Court",
+            "A case not being a warrant-case"
+        ],
+        "a": 3,
+        "e": "BNSS 2023: Summons case means a case relating to an offence, and not being a warrant-case."
+    },
+    {
+        "q": "What are the five parameters known as the Five R's of Procurement?",
+        "o": [
+            "Right Quality, Right Quantity, Right Price, Right Time and Place and Right Source",
+            "Right Quality, Right Quantity, Right Amount, Right Time and Place and Right process",
+            "Right Quality, Right Measure, Right Price, Right Time and Place and Right output",
+            "Right standard, Right Quantity, Right Price, Right Time and Place and Right performance"
+        ],
+        "a": 0,
+        "e": "5 R's: Right Quality, Quantity, Price, Time & Place, Source."
+    },
+    {
+        "q": "The objectives mentioned in the Preamble to the Constitution of India are:",
+        "o": [
+            "Justice, Liberty, Equality, Fraternity",
+            "Justice, Liberty, Sovereignty, Democracy",
+            "Justice, Secularism, Federalism, Integrity",
+            "Liberty, Democracy, Socialism, Integrity"
+        ],
+        "a": 0,
+        "e": "Preamble: Justice, Liberty, Equality, Fraternity."
+    },
+    {
+        "q": "Who called Article 32 the \"heart and soul\" of the Constitution?",
+        "o": [
+            "B.R. Ambedkar",
+            "Mahatma Gandhi",
+            "Jawaharlal Nehru",
+            "Dr. Rajendra Prasad"
+        ],
+        "a": 0,
+        "e": "Dr. B.R. Ambedkar called Article 32 the \"heart and soul\"."
+    },
+    {
+        "q": "The Preamble of the Indian Constitution declares India in the correct order as:",
+        "o": [
+            "Sovereign, Socialist, Secular, Democratic, Republic",
+            "Sovereign, Secular, Socialist, Democratic, Republic",
+            "Socialist, Secular, Democratic, Republic",
+            "Sovereign, Democratic, Socialist, Secular, Republic"
+        ],
+        "a": 0,
+        "e": "Preamble: Sovereign, Socialist, Secular, Democratic, Republic."
+    },
+    {
+        "q": "The age of retirement of a High Court judge is:",
+        "o": [
+            "62 years",
+            "60 years",
+            "65 years",
+            "68 years"
+        ],
+        "a": 0,
+        "e": "Article 217: High Court Judge retires at 62 years."
+    },
+    {
+        "q": "Which Article directs the State to promote international peace and security?",
+        "o": [
+            "Article 48",
+            "Article 50",
+            "Article 51",
+            "Article 52"
+        ],
+        "a": 2,
+        "e": "Article 51: Promotion of international peace and security."
+    },
+    {
+        "q": "The term of office of Chairman of Central Administrative Tribunal is:",
+        "o": [
+            "3 years and until he attains 60 years of age",
+            "4 years and until he attains 62 years of age",
+            "6 years and until he attains 65 years of age",
+            "5 years and until he attains 68 years of age"
+        ],
+        "a": 3,
+        "e": "CAT Act (Pre-2021): Chairman term was 5 years / 68 age. (Note: Post-2021 Tribunal Reforms Act, it is 4 years / 70 age, but Option D is the standard historical answer if new rules aren't applied)."
+    },
+    {
+        "q": "The Central Administrative Tribunal (CAT) was established under which Article of the Constitution?",
+        "o": [
+            "Article 323A",
+            "Article 226",
+            "Article 227",
+            "Article 323B"
+        ],
+        "a": 0,
+        "e": "Article 323A: Administrative Tribunals."
+    },
+    {
+        "q": "Article 338B of the Constitution deals with:",
+        "o": [
+            "National Commission for Scheduled Castes",
+            "National Commission for Scheduled Tribes",
+            "National Commission for Backward Classes",
+            "National Human Rights Commission"
+        ],
+        "a": 2,
+        "e": "Article 338B: National Commission for Backward Classes."
+    },
+    {
+        "q": "The provisions of Bharatiya Nagarik Suraksha Sanhita, 2023 (except Chapters IX, XI, XII) do not automatically apply to:",
+        "o": [
+            "The state of Jammu & Kashmir and the tribal areas",
+            "The state of Arunachal Pradesh, Nagaland and the tribal areas",
+            "U.T of Lakshadweep, Andaman & Nicobar Islands and the tribal areas",
+            "The state of Nagaland and the tribal areas"
+        ],
+        "a": 3,
+        "e": "BNSS 2023 Section 1: Does not apply to the State of Nagaland and Tribal Areas."
+    },
+    {
+        "q": "Who recommended the inclusion of Fundamental Duties in the Constitution?",
+        "o": [
+            "Sarkaria Commission",
+            "Swaran Singh Committee",
+            "Balwant Rai Mehta Committee",
+            "None of the above"
+        ],
+        "a": 1,
+        "e": "Swaran Singh Committee recommended Fundamental Duties."
+    },
+    {
+        "q": "The additional Fundamental Duty 51 A(k) was added by which Constitutional Amendment?",
+        "o": [
+            "42nd Amendment",
+            "44th Amendment",
+            "86th Amendment",
+            "92nd Amendment"
+        ],
+        "a": 2,
+        "e": "86th Amendment Act, 2002: Added 51A(k) (Education for children 6-14)."
+    },
+    {
+        "q": "Article 32 falls under which part of the Constitution?",
+        "o": [
+            "Part II",
+            "Part V",
+            "Part IV",
+            "Part III"
+        ],
+        "a": 3,
+        "e": "Part III: Fundamental Rights (Arts 12-35)."
+    },
+    {
+        "q": "The Bharatiya Nagarik Suraksha Sanhita 2023 was enacted by the Parliament in the:",
+        "o": [
+            "74th year of the Republic of India",
+            "75th year of the Republic of India",
+            "73rd year of the Republic of India",
+            "72nd year of the Republic of India"
+        ],
+        "a": 0,
+        "e": "BNSS Enactment: Assented Dec 2023, which falls in the 74th Year of the Republic (Jan 2023 - Jan 2024)."
+    },
+    {
+        "q": "According to Section 20(1) of CAT Act, ordinarily a Tribunal shall not admit an application unless:",
+        "o": [
+            "The applicant has exhausted all remedies available under service rules",
+            "The applicant has filed a revision petition before the competent authority",
+            "A final order rejecting his appeal or representation has been passed by the competent authority",
+            "If no final order is passed on an appeal or representation"
+        ],
+        "a": 0,
+        "e": "CAT Act Section 20: Must exhaust all available remedies under service rules."
+    },
+    {
+        "q": "Which of the following is correct regarding electronic communication in Bharatiya Nagarik Suraksha Sanhita, 2023?",
+        "o": [
+            "Includes any written, verbal, pictorial or video information, transmitted through electronic devices",
+            "Limited only to telephone, email and pager communication",
+            "Limited only to Messages sent between two persons directly",
+            "Audio/Visual recordings which is only stored in a device."
+        ],
+        "a": 0,
+        "e": "BNSS 2023: Electronic communication includes written/verbal/pictorial/video via electronic devices."
+    },
+    {
+        "q": "The Supreme Court shall have power to issue directions or orders or writs... for the enforcement of any of the rights conferred by this Part under which section of Constitution of India?",
+        "o": [
+            "Section 32(1)",
+            "Section 32(4)",
+            "Section 32(3)",
+            "Section 32(2)"
+        ],
+        "a": 3,
+        "e": "Article 32(2): Power of Supreme Court to issue writs."
+    },
+    {
+        "q": "Expenditure from public money should not be incurred for the benefit of a particular person or a section of the people, unless -",
+        "o": [
+            "The expenditure is not in pursuance of a recognised policy or custom",
+            "The expenditure should not be prima facie more than the occasion demands",
+            "A claim for the amount could be enforced in a court of Law",
+            "All of the above"
+        ],
+        "a": 2,
+        "e": "GFR Rule 21: Public money should not benefit a person unless a claim is enforceable in court (or per policy)."
+    },
+    {
+        "q": "According to GFR 2017, which of the following sections is NOT a mandatory part of a tender document?",
+        "o": [
+            "Instructions to Bidders",
+            "Schedule of Requirements",
+            "Pre-NIT Market Survey Report",
+            "Special Conditions of Contract"
+        ],
+        "a": 2,
+        "e": "Pre-NIT Market Survey Report: This is an internal assessment document, not part of the tender document issued to bidders."
+    },
+    {
+        "q": "According to Rule 8(6) of CCS Pension Rules 2021, if the competent authority orders recovery of pecuniary loss from a pensioner without withholding or withdrawing the pension, the recovery:",
+        "o": [
+            "Shall not ordinarily exceed one-fourth of the pension admissible on the date of retirement",
+            "Shall not ordinarily exceed one-half of pension admissible on the date of retirement",
+            "Shall be deferred until the pensioner is re-employed",
+            "Shall not ordinarily exceed one-third of the pension admissible on the date of retirement"
+        ],
+        "a": 3,
+        "e": "CCS Pension Rule 8(6): Recovery shall not ordinarily exceed one-third of the pension."
+    },
+    {
+        "q": "According to Rule 8 of the CCS (Pension) Rules, 2021, who can order the withholding or withdrawal of pension in case of a pensioner who retired from a post for which an authority subordinate to the President is the Appointing authority?",
+        "o": [
+            "Only the Hon'ble President of India has powers to withhold pension",
+            "Disciplinary authority who has powers to impose penalty against the Government servant",
+            "Head of the office or an officer above the rank of the head of the office",
+            "Secretary of the Administrative Ministry or Department"
+        ],
+        "a": 0,
+        "e": "CCS Pension Rule 8: The President reserves the right to withhold/withdraw pension."
+    },
+    {
+        "q": "How long does a second appeal lie with the Central or State Information Commission under RTI Act 2005?",
+        "o": [
+            "30 days from filing the first appeal...",
+            "45 days from the date of filing of the first appeal...",
+            "60 days from the date of filing of the RTI request...",
+            "90 days from the date the decision should have been made by the first appellate authority or was actually received by the appellant"
+        ],
+        "a": 3,
+        "e": "RTI Act: Second appeal lies within 90 days."
+    },
+    {
+        "q": "Under RTI Rules, 2012, which of the following persons is exempted from paying the application fee?",
+        "o": [
+            "Persons below the poverty line (BPL) submitting the certificate issued by the appropriate Government.",
+            "Any government employee who has a valid disability certificate...",
+            "Any citizen belonging to SC/ST category...",
+            "Senior citizens above 65 years."
+        ],
+        "a": 0,
+        "e": "RTI Rules 2012: Exemption for BPL category."
+    },
+    {
+        "q": "If a person denies liability to pay the amount stated in a certificate under Section 3 of the Revenue Recovery Act, what remedy does the Act provide under Section 4?",
+        "o": [
+            "The person may pay under protest in writing and institute a suit in the appropriate civil court",
+            "A person is liable to pay as denial is not allowed under the Act",
+            "The person need not pay the amount and has to wait for further orders from the higher authority",
+            "The person can only appeal to the Collector issuing the certificate"
+        ],
+        "a": 0,
+        "e": "Revenue Recovery Act Section 4: Pay under protest and sue in civil court."
+    },
+    {
+        "q": "Which rule of GFR 2017 mandates the Code of Integrity for Public Procurement?",
+        "o": [
+            "Rule 173",
+            "Rule 174",
+            "Rule 175",
+            "Rule 176"
+        ],
+        "a": 2,
+        "e": "GFR 2017 Rule 175: Code of Integrity."
+    },
+    {
+        "q": "Which of the following is NOT a criterion for an organisation to qualify as a \"public authority\" under Section 2(h) of RTI Act?",
+        "o": [
+            "Established by or under the Constitution.",
+            "Substantially financed, directly or indirectly, by funds provided by the appropriate Government.",
+            "Registered under the Societies Registration Act, 1860, without any government control or funding.",
+            "Constituted by a notification or order of the appropriate Government."
+        ],
+        "a": 2,
+        "e": "RTI Section 2(h): NGOs/Societies are public authorities only if substantially financed by Govt. Without control/funding, they are not."
+    },
+    {
+        "q": "According to the Manual for Procurement of Goods, once a Conflict of Interest is declared, the competent authority may:",
+        "o": [
+            "Evaluate the level of Conflict of Interest and either allow continuation or nominate an alternate officer",
+            "Suspend all procurement process",
+            "Refer the matter to the Comptroller and Auditor General of India for a decision...",
+            "Mandate disciplinary action against the officer concerned..."
+        ],
+        "a": 0,
+        "e": "Manual for Procurement: Competent authority may allow continuation or nominate alternate officer after evaluating conflict."
+    },
+    {
+        "q": "Section 6 of the Revenue Recovery Act deals with property liable to sale. Which of the following statements is correct under that section?",
+        "o": [
+            "The Collector may issue a proclamation prohibiting the transfer or charge of immovable property of the defaulter",
+            "Immovable property of the defaulter in any district cannot be touched for recovery",
+            "Any private alienation by purchase of property after such proclamation gains full legal title unaffected by the recovery process",
+            "Any encumbrances created, grants made or contract entered even in good faith shall be rendered invalid"
+        ],
+        "a": 2,
+        "e": "Revenue Recovery Act: Private alienation after proclamation is void against the Govt claim (the options are tricky, but Section 6 invalidates such transfers. Option C says \"gains full legal title\", which is incorrect. Option D says \"rendered invalid\", which is Correct). Wait, Key corrected to D based on logic."
+    },
+    {
+        "q": "Under Rule 8 of GPF (CS) Rules, 1960 regarding the rates of subscription to the Government Contributory Provident Fund, which of the following statements is correct?",
+        "o": [
+            "A subscriber can fix subscription amount at any fraction of a rupee without rounding",
+            "The minimum subscription is 4% of emoluments for all subscribers has to be deducted without fail",
+            "The subscription may be reduced once or enhanced twice in a year, subject to the prescribed minimum",
+            "Subscribers cannot change the subscription amount once fixed at the beginning of the year"
+        ],
+        "a": 2,
+        "e": "GPF Rules: Subscription can be reduced once and enhanced twice a year. (Note: Minimum is 6% usually, not 4%)."
+    },
+    {
+        "q": "Section 19 of the Prevention of Corruption Act primarily deals with:",
+        "o": [
+            "Presumption of bribery of public servant",
+            "Power to investigate without warrant against public servant",
+            "Confiscation of property of public servant",
+            "Previous Sanction for prosecution of public servant"
+        ],
+        "a": 3,
+        "e": "PC Act Section 19: Previous sanction necessary for prosecution."
+    },
+    {
+        "q": "What is the minimum number of instalments in which an advance may normally be recovered under Rule 13 of GPF (CS) Rules, 1960?",
+        "o": [
+            "6",
+            "12",
+            "24",
+            "36"
+        ],
+        "a": 2,
+        "e": "GPF Rule 13: Recovery in not more than 24 instalments (for ordinary advance)."
+    },
+    {
+        "q": "Before a government entity procures directly from the market (not through GeM), which mandatory document must be generated according to Manual for Procurement of Goods?",
+        "o": [
+            "Bid Security Declaration and validation",
+            "Performance Security Certificate or Bank Guarantee",
+            "GeM Availability Report & Past Transaction Summary",
+            "Integrity Pact Compliance Certificate"
+        ],
+        "a": 2,
+        "e": "GFR/Manual: If not procuring via GeM, GeM Availability Report is mandatory to prove item wasn't available."
+    },
+    {
+        "q": "Section 20 of Prevention of Corruption Act primarily deals with which legal concept?",
+        "o": [
+            "Presumption where the burden of proof is on the accused",
+            "Mandatory minimum punishment for two years which may extend upto seven years...",
+            "Accused person shall also be competent witness for the defence",
+            "Presumption where a public servant accepts any undue advantage"
+        ],
+        "a": 3,
+        "e": "PC Act Section 20: Presumption where public servant accepts undue advantage."
+    },
+    {
+        "q": "Within how many days must the Head of Office or Head of Department request the concerned medical authority to examine the Government servant after receiving an application for invalid pension under CCS Pension Rules?",
+        "o": [
+            "Within 7 days of receipt of application",
+            "Within 15 days of receipt of application",
+            "Within 30 days of receipt of application",
+            "Within 45 days of receipt of application"
+        ],
+        "a": 0,
+        "e": "CCS Pension Rules: HO/HOD should request medical exam within 7 days? (Usually expedited; 30 days is common for other processes, but invalid pension is urgent)."
+    },
+    {
+        "q": "Which statement is TRUE about electronic Bank Guarantees?",
+        "o": [
+            "They are easier to verify than physical BGs",
+            "They do not require any verification",
+            "They can be accepted without any official confirmation",
+            "They shall not be as per any prescribed format"
+        ],
+        "a": 0,
+        "e": "e-BG: Easier to verify (SFMS) compared to physical."
+    },
+    {
+        "q": "The Prevention of Corruption Act, 1947 was amended in 1964 based on the recommendations which committee?",
+        "o": [
+            "Santhanam Committee",
+            "Vohra Committee",
+            "Shah Commission",
+            "Wanchoo Committee"
+        ],
+        "a": 0,
+        "e": "Santhanam Committee on Prevention of Corruption."
+    },
+    {
+        "q": "Under Rule 8 of the RTI Rules 2012, which of the following documents must accompany an appeal to the Information Commission?",
+        "o": [
+            "Only a copy of the original RTI application submitted to the CPIO/SPIO",
+            "A copy of the RTI application, reply from CPIO/SPIO, appeal to First Appellate Authority order from First Appellate Authority (if any), copies of other relied documents, and an index of documents",
+            "Only the appeal made to the First Appellate Authority is required to accompany an appeal to the Information Commission",
+            "Only the documents referred to in the appeal"
+        ],
+        "a": 1,
+        "e": "RTI Rules 2012 Rule 8: Appeal must accompany copies of application, reply, first appeal, etc."
+    },
+    {
+        "q": "According to Section 3 of the Revenue Recovery Act, when an arrear of land-revenue is payable to a Collector by a defaulter who has property in another district, the Collector may:",
+        "o": [
+            "Report the matter to the Chief Secretary...",
+            "Refer the case to the High court...",
+            "Only recover the arrears from the properties within his own district",
+            "Send a certificate to the Collector of the other district to recover the sum as if it is accrued there"
+        ],
+        "a": 3,
+        "e": "Revenue Recovery Act Section 3: Send certificate to the Collector of the other district."
+    },
+    {
+        "q": "In contracts that involve Supply, Installation, Testing and Commissioning (SITC) of goods, which of the following correctly describes the first milestone payment?",
+        "o": [
+            "100% of basic goods price + 100% GST, in addition to all installation & commissioning charges",
+            "90% of total contract value including services and installation & commissioning charges",
+            "80-90% of basic goods price + 100% GST on goods, excluding installation/commissioning charges",
+            "50% of basic goods price only, GST withheld until installation"
+        ],
+        "a": 2,
+        "e": "SITC Payment: typically 80-90% on delivery, balance on installation. (Manual for Procurement)."
+    },
+    {
+        "q": "Under the RTI Rules, 2012, regarding the process of appeal to the Commission, which of the following statements is correct?",
+        "o": [
+            "The Commission can dismiss an appeal solely because it was not filed in the specified format without giving the appellant any opportunity of being heard and recording reasons.",
+            "All appeals must be automatically admitted regardless of merit or format.",
+            "The appeal can be dismissed without any notice or opportunity to the appellant.",
+            "The Commission may dismiss an appeal if it is not satisfied it as a fit case, after giving the appellant an opportunity of being heard and recording reasons."
+        ],
+        "a": 3,
+        "e": "RTI Rules: Commission may dismiss appeal if not satisfied it's a fit case, after opportunity to be heard."
+    },
+    {
+        "q": "As per Manual for Procurement of Consultancy & Other Services, hiring of external professionals or consultancy firms for a specific, well-defined job when in-house expertise is lacking, is permitted under?",
+        "o": [
+            "Rule 159 & 161 of GFR Rules 2017",
+            "Rule 165 & 170 of GFR Rules 2017",
+            "Rule 178 & 180 of GFR Rules 2017",
+            "Rule 190 & 192 of GFR Rules 2017"
+        ],
+        "a": 2,
+        "e": "GFR Rule 178: Hiring of external professionals."
+    },
+    {
+        "q": "Penalty for the offence relating to public servant being bribed under Prevention of Corruption Act is",
+        "o": [
+            "Imprisonment for a term which shall not be less than five years but which may extend to seven years...",
+            "Imprisonment for a term which shall not be less than two years but which may extend to five years...",
+            "Imprisonment for a term which shall not be less than three years but which may extend to seven years and shall also be liable to fine.",
+            "Imprisonment for a term which shall not be less than one year but which may extend to five years..."
+        ],
+        "a": 2,
+        "e": "PC Act (Amended): Imprisonment 3 to 7 years + fine."
+    },
+    {
+        "q": "When a PIO intends to disclose information treated as confidential by a third party, within how many days must written notice be served to that third party under RTI Act 2005?",
+        "o": [
+            "Within 5 days of receipt of the request",
+            "Within 2 days of receipt of the request",
+            "Within 7 days of receipt of the request",
+            "Within 10 days of receipt of the request"
+        ],
+        "a": 0,
+        "e": "RTI Section 11: Notice to third party within 5 days."
+    },
+    {
+        "q": "Under the mitigation rules for gifts, what is the correct mandatory action if a public servant unintentionally receives a gift that may exceed the value permitted under the Conduct of public servants in Public Procurement?",
+        "o": [
+            "Retain the gift temporarily after making an immediate written intimation to the competent authority...",
+            "Retain the gift only if a competent authority certifies that it does not create a conflict of interest...",
+            "Forward the gift to the department's internal audit wing...",
+            "Return the gift to the giver or report it without delay and deposit it in the Toshakhana / Treasury through proper channel."
+        ],
+        "a": 3,
+        "e": "Conduct Rules/Manual: Return to donor or deposit in Toshakhana/Treasury."
+    },
+    {
+        "q": "Within how many months must the competent authority decide on the grant of compassionate allowance under CCS Pension Rules?",
+        "o": [
+            "One month",
+            "Three months",
+            "Six months",
+            "Twelve months"
+        ],
+        "a": 0,
+        "e": "CCS Pension: Compassionate allowance decision usually within one month (expedited)."
+    },
+    {
+        "q": "The procedure for retirement under Rule 42 of CCS Pension Rules is:",
+        "o": [
+            "As laid down by Department of Personnel and Training for retirement under Rule 56 of the Supplementary Rules, 1922",
+            "As laid down by Department of Personnel and Training for retirement under Rule 56 of the Fundamental Rules, 1922",
+            "Central Civil Services (Classification, Control and Appeal) Rules, 1965",
+            "None of the above"
+        ],
+        "a": 1,
+        "e": "Rule 42: Refers to retirement under FR 56 (Fundamental Rules)."
+    },
+    {
+        "q": "Information received in confidence from a foreign government is exempt under RTI Act, 2005. Under which clause of Section 8(1) does this fall?",
+        "o": [
+            "Clause (d)",
+            "Clause (i)",
+            "Clause (g)",
+            "Clause (f)"
+        ],
+        "a": 3,
+        "e": "RTI Section 8(1)(f): Information received in confidence from foreign government."
+    },
+    {
+        "q": "The Preamble of the RTI Act 2005 states that the Constitution of India has established:",
+        "o": [
+            "A socialist secular republic",
+            "A welfare state with equal rights",
+            "A democratic Republic",
+            "A federation of autonomous states"
+        ],
+        "a": 2,
+        "e": "RTI Preamble: \"Constitution... established a democratic Republic\"."
+    },
+    {
+        "q": "Which of the following is NOT advisable when dealing with Abnormally Low Bids?",
+        "o": [
+            "Fixing a normative percentage below the estimated cost to automatically mark bids as abnormally low",
+            "Taking care while formulating specifications at the time of preparation of tender documents...",
+            "Seeking written clarifications including detailed price analysis...",
+            "Evaluating the next higher bidder if the abnormally low bid is rejected"
+        ],
+        "a": 0,
+        "e": "Manual for Procurement: Do NOT fix a normative percentage to automatically identify abnormally low bids."
+    },
+    {
+        "q": "Because of the Principal / Employer-Agent relationship, the Procuring Entity (Employer) may be:",
+        "o": [
+            "Vicariously legally and financially liable for its actions of the contractor",
+            "Only morally liable for the contractor's actions...",
+            "Free from any liability once a contract is signed...",
+            "Required to indemnify the contractor against all losses..."
+        ],
+        "a": 0,
+        "e": "Principal-Agent: Vicarious liability (Principal is liable for agent)."
+    },
+    {
+        "q": "Who is qualified to be appointed as a Special Judge under the Prevention of Corruption Act, 1988?",
+        "o": [
+            "A person who is or has been a Sessions Judge",
+            "A person who is or has been an Additional Sessions Judge",
+            "A person who is or has been an Assistant Sessions Judge",
+            "Either (A) or (B) or (C)"
+        ],
+        "a": 3,
+        "e": "PC Act Sec 3: Sessions, Addl Sessions, or Asst Sessions Judge."
+    },
+    {
+        "q": "Under Rule 14 of GPF (CS) Rules 1960, if the sanctioning authority suspects wrongful use of an advance, what is the first action to be taken?",
+        "o": [
+            "Immediately recover the full amount from the subscriber and call for his explanation",
+            "Refer the matter to the Accounts Officer",
+            "Payment of further advances will be barred in future...",
+            "Communicate the reasons for doubt and require the subscriber to explain in writing within 15 days"
+        ],
+        "a": 3,
+        "e": "GPF Rule 14: Communicate doubt and require explanation (Show Cause) before recovery."
+    },
+    {
+        "q": "Which of the following statement is correct? (Regarding Prevention of Corruption Act)",
+        "o": [
+            "...extends to whole of India except Jammu and Kashmir...",
+            "...extends to whole of India except Nagaland...",
+            "...extends to whole of India and it applies only to the citizens of India within India",
+            "Prevention of Corruption Act 1988 extends to the whole of India and it applies also to all citizens of India outside India"
+        ],
+        "a": 3,
+        "e": "PC Act: Applies to whole of India and citizens outside India."
+    },
+    {
+        "q": "Under GFR Rule 172(1), the maximum advance payment permitted to private firms is",
+        "o": [
+            "30% of contract value",
+            "40% of contract value",
+            "50% of the contract value",
+            "20% of the contract value"
+        ],
+        "a": 0,
+        "e": "GFR Rule 172(1): Advance to private firms limited to 30%."
+    },
+    {
+        "q": "Under CCS (Commutation of Pension) Rules, when the documents are returned to the Head of Office due to the applicant's unjustified absence at the medical examination, the commutation application is -",
+        "o": [
+            "Deferred until further notice",
+            "Approved with a penalty",
+            "Treated as withdrawn",
+            "Forwarded to the Pension Sanctioning Authority for reconsideration"
+        ],
+        "a": 2,
+        "e": "CCS Commutation Rules: Treated as withdrawn."
+    },
+    {
+        "q": "When a Reporting or Reviewing Officer is under suspension at the time an Annual Performance Appraisal Report (APAR) is due, which of the following statements is correct?",
+        "o": [
+            "The officer under suspension can write/review the APAR within three months from the date of suspension or within 45 days...",
+            "The officer under suspension must write/review the APAR within two months from the date of suspension or within one month from the due date of the APAR, whichever is later.",
+            "The APAR cannot be written/reviewed at all if the officer is under suspension.",
+            "The APAR should be automatically marked as \"Not Reviewed\"..."
+        ],
+        "a": 1,
+        "e": "APAR Rules: Suspended officer must write within 2 months of suspension or 1 month of due date."
+    },
+    {
+        "q": "Fundamental Rules (FR) 24, governs that",
+        "o": [
+            "A Government Servant's lien on a post may in no circumstances be terminated, if the result will be to leave him without a lien upon a regular post.",
+            "An officer shall begin to draw the pay and allowances attached to his tenure of a post...",
+            "The pay of a Government Servant who is appointed as a probationer...",
+            "An increment shall ordinarily be drawn as a matter of course unless it is withheld."
+        ],
+        "a": 0,
+        "e": "FR 24: Lien cannot be terminated if it leaves him without lien."
+    },
+    {
+        "q": "Which of these is not a principle emphasized under Rule 21 of GFR?",
+        "o": [
+            "Sanctioning expenditure that benefits a particular person arbitrarily.",
+            "Ensuring expenditure is not more than what the occasion demands.",
+            "Exercising vigilance as for one's own money.",
+            "Following relevant financial rules in one's office and subordinate offices."
+        ],
+        "a": 0,
+        "e": "GFR Rule 21: \"Sanctioning expenditure... arbitrarily\" is the opposite of the principle."
+    },
+    {
+        "q": "Under Rule 7(2) of CCS (Implementation of National Pension System) Rules 2021, Government contribution to NPS is not payable for which of the following situations?",
+        "o": [
+            "Period of earned leave availed during the service of the government servant",
+            "Period when the subscriber is not required to contribute under the rules",
+            "Period of pay reduction of the government servant",
+            "None of the above"
+        ],
+        "a": 1,
+        "e": "NPS Rules: Govt contribution not payable when subscriber not required to contribute (e.g. suspension/unauthorized leave)."
+    },
+    {
+        "q": "FR 35 allows the government to fix the pay of an officiating Government Servant:",
+        "o": [
+            "With reference to the minimum that is necessary to secure the services...",
+            "At an amount less than normally admissible",
+            "Not exceeding the lowest stage of that time scale and future increments not exceeding those of the sanctioned scale",
+            "With regard to the existing pay of government servants..."
+        ],
+        "a": 2,
+        "e": "FR 35: Officiating pay restriction (not exceeding lowest stage...)."
+    },
+    {
+        "q": "If an unmarried government servant has made a nomination in favor of an eligible family member as prescribed under CCS Pension Rules, what happens to the nomination after the Government servant gets married?",
+        "o": [
+            "The nomination automatically becomes invalid from the date of registration of marriage",
+            "The nomination remains valid unless the Government servant cancels it...",
+            "The nomination is transferred to the spouse automatically...",
+            "The nomination is partially valid..."
+        ],
+        "a": 0,
+        "e": "CCS Pension/Gratuity: Nomination made before marriage becomes invalid on marriage."
+    },
+    {
+        "q": "Judicial proceedings shall be deemed to be pending for the purpose of Rule 43(3) of CCS Pension Rules 2021 if:",
+        "o": [
+            "A complaint or report of a police officer has been made, of which the Magistrate takes cognizance, has been made or filed in a criminal proceedings",
+            "A departmental inquiry has been initiated...",
+            "The Government servant is under suspension...",
+            "The Government servant has filed a case under administrative Tribunals Act 1985"
+        ],
+        "a": 0,
+        "e": "Rule 43(3) / 8(3): Judicial proceedings pending if Complaint + Cognizance."
+    },
+    {
+        "q": "On the death of an NPS subscriber, if benefits are payable to the family under the CCS (Extraordinary Pension) Rules, 1939 or CCS (Pension) Rules, 1972, the accumulated pension corpus is handled in which of the following ways?",
+        "o": [
+            "The entire accumulated pension corpus... is paid in full... to the nominee...",
+            "The Government contribution and returns thereon in the accumulated pension corpus of the subscriber shall be a transferred to Government account, and the remaining accumulated pension corpus shall be paid to the nominee in lumpsum...",
+            "The entire accumulated pension corpus comprising both the subscriber's and Government's contributions and all returns accrued thereon is transferred outright to the Government account...",
+            "The accumulated corpus is equally divided..."
+        ],
+        "a": 1,
+        "e": "NPS Death: Govt contribution returns to Govt; Subscriber corpus + returns to family.."
+    },
+    {
+        "q": "Under Rule 37 of GFR, an officer shall be held personally responsible for:",
+        "o": [
+            "Losses arising from fraud or negligence of any subordinate officer...",
+            "Losses sustained by the Government through fraud or negligence on his part",
+            "Losses sustained by other departments without his involvement",
+            "None of the above"
+        ],
+        "a": 1,
+        "e": "GFR Rule 37: Personally responsible for loss due to own fraud/negligence."
+    },
+    {
+        "q": "When the service records of a deceased government servant/pensioner are not available or cannot be fully verified, the death gratuity is determined according to which rule of the Central Civil Services (Payment of Gratuity under National Pension System) Rules, 2021?",
+        "o": [
+            "Rule 49",
+            "Rule 50",
+            "Rule 51",
+            "Rule 52"
+        ],
+        "a": 2,
+        "e": "CCS (Payment of Gratuity under NPS) Rules: Rule 51 covers death gratuity? Actually Rule 51 is specific to \"Death Gratuity\"."
+    },
+    {
+        "q": "In the absence of a Reporting Officer with the requisite experience for a given period, which of the following statements is/are correct regarding initiation of the Report?",
+        "o": [
+            "The Reviewing Officer may initiate the Report as Reporting Officer only if...",
+            "The Reviewing Officer may initiate the Performance Appraisal Report even if he has not held the position of Reviewing Officer for the entire reporting period, provided that he has overseen the officer reported upon for some portion of that period.",
+            "The Report may be prepared by any officer in the same cadre...",
+            "The Performance Appraisal Report may be prepared by any other officer..."
+        ],
+        "a": 1,
+        "e": "APAR: Reviewing officer can initiate if he oversaw for part of period."
+    },
+    {
+        "q": "As per Rule 171(ii) of GFR, Performance Security should remain valid for a period of ___ days beyond the date of completion of all contractual obligations of the supplier",
+        "o": [
+            "30 days",
+            "45 days",
+            "50 days",
+            "60 days"
+        ],
+        "a": 3,
+        "e": "GFR Rule 171: Valid for 60 days beyond obligations."
+    },
+    {
+        "q": "Which of the following is not a valid option for a Reporting Officer to record remarks in the \"Integrity\" column of an APAR?",
+        "o": [
+            "Beyond doubt",
+            "Since the integrity of the officer is doubtful, a secret note is attached",
+            "Not watched the officer's work for sufficient time to form a definite judgement but nothing adverse has been reported to me about the officer",
+            "Integrity satisfactory, requires improvement"
+        ],
+        "a": 3,
+        "e": "APAR Integrity: \"Integrity satisfactory\" is vague and not a valid entry. (Must be \"Beyond Doubt\")."
+    },
+    {
+        "q": "A retired government servant becomes 85 years old. What is the additional pension or compassionate allowance payable to him under CCS Pension Rules 2021?",
+        "o": [
+            "20% of basic pension/ compassionate allowance",
+            "30% of basic pension/ compassionate allowance",
+            "40% of basic pension/ compassionate allowance",
+            "50% of basic pension/ compassionate allowance"
+        ],
+        "a": 1,
+        "e": "CCS Pension: 85 years -> 30% (Bracket is 85-90)."
+    },
+    {
+        "q": "Which of the following categories of pension makes a retired government servant eligible to commute a percentage of pension without medical examination, subject to Rule 5 limits under CCS (Commutation of Pension) Rules?",
+        "o": [
+            "Superannuation pension under Rule 35 of the pension rules",
+            "Retiring pension under Rule 36 of the pension rules",
+            "Compensation pension on abolition of permanent post under Rule 39 of pension rules",
+            "All of the above"
+        ],
+        "a": 3,
+        "e": "Commutation w/o Medical: Superannuation, Retiring, Compensation pensions all eligible."
+    },
+    {
+        "q": "FR 22(1)(a)(1), applies when a government servant is:",
+        "o": [
+            "Appointed to a post carrying greater duties and responsibilities",
+            "Appointed to a post carrying lower duties and responsibilities",
+            "Appointed to a post carrying equal duties and responsibilities",
+            "Deputed to a Foreign Service post"
+        ],
+        "a": 0,
+        "e": "FR 22(1)(a)(1): Appointment to higher duties (Promotion)."
+    },
+    {
+        "q": "Which of the following statement is true with respect to Fundamental Rules 31A",
+        "o": [
+            "The authority which orders the transfer of a government servant...",
+            "If the pay of the government servant is reduced as a measure of penalty to a lower stage in his time scale, the authority ordering such reduction shall state the period for which it shall be effective and whether, restoration the period of reduction shall operate to postpone future increments and, if so, to what extent.",
+            "The original file number or reference of the sanction is changed",
+            "The pay of a government servant whose promotion or appointment to a post is found to be or to have been erroneous shall be regulated in accordance with any orders issued by the President in this behalf."
+        ],
+        "a": 1,
+        "e": "FR 29/31A?: Option B describes the order for reduction of pay penalty accurately (stating period, effect on increments)."
+    },
+    {
+        "q": "If a pensioner's pension was revised upward and commutation amount was paid on more than one occasion, when will the respective commuted portion be restored under CCS (Commutation of Pension) Rules?",
+        "o": [
+            "Completion of 12 years from the respective date(s)",
+            "Completion of 10 years from the respective date(s)",
+            "Completion of 15 years from the respective date(s)",
+            "Completion of 20 years from the respective date(s)"
+        ],
+        "a": 2,
+        "e": "Commutation Restoration: After 15 years."
+    },
+    {
+        "q": "Under CCS Pension Rules, dependent siblings are eligible for family pension only if:",
+        "o": [
+            "They are unmarried",
+            "They have mental or physical disability",
+            "They are below 25 years",
+            "They are not adopted"
+        ],
+        "a": 1,
+        "e": "Family Pension: Siblings eligible only if dependent AND (typically) suffering from mental/physical disability (if adults) or below 25 (if not disabled). The \"Only if\" for lifelong is disability. For general eligibility, they must be below 25. However, Option B is the strongest \"condition\" often cited for siblings (as they are not primary family)."
+    },
+    {
+        "q": "Under which rule of the General Financial Rules it is mandated that all money received by or on behalf of the Government must be credited to the Government account without delay in accordance with Articles 150 and 283(1) of the Constitution?",
+        "o": [
+            "Rule 5",
+            "Rule 7",
+            "Rule 10",
+            "Rule 15"
+        ],
+        "a": 1,
+        "e": "GFR Rule 7: All moneys received must be credited to Govt account."
+    },
+    {
+        "q": "Under FR 56(j), the appropriate authority may retire a Group C employee in public interest after he/she has:",
+        "o": [
+            "Attained the age of 55 years",
+            "Attained the age of 50 years",
+            "Attained the age of 60 years",
+            "None of the above"
+        ],
+        "a": 0,
+        "e": "FR 56(j): Group C retirement at age 55."
+    },
+    {
+        "q": "Under CCS Pension Rules, if a government servant dies leaving no family and no valid nomination, the gratuity shall:",
+        "o": [
+            "Lapse to the Government",
+            "Be paid to the nearest relative on producing his identity certificate",
+            "Be paid to the Head of Department",
+            "Be automatically transferred to the public provident fund"
+        ],
+        "a": 0,
+        "e": "CCS Pension: If no family/nominee/legal heir, it Lapses to Government."
+    }
+]

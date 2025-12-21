@@ -15,6 +15,6 @@ export interface QuizSet {
 export interface QuizTopic {
     id: string; // Matches syllabus ID preferably, e.g., 'p1-act-1'
     title: string;
-    category: 'Paper I' | 'Paper II' | 'Paper III';
+    category: 'Paper I' | 'Paper II' | 'Paper III' | 'PYQ';
     sets: QuizSet[];
 }
