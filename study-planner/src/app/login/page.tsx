@@ -4,31 +4,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from 'next/link';
 import Image from 'next/image';
-import { Lock, User, ArrowRight, Loader2, Mail, UserPlus, Phone } from "lucide-react";
-
-const DESIGNATIONS = [
-    "Gramin Dak Sevak (GDS)",
-    "Multi Tasking Staff (MTS)",
-    "Postman",
-    "Mail Guard",
-    "Postal Assistant",
-    "Sorting Assistant",
-    "Inspector Posts",
-    "Assistant Superintendent of Posts",
-    "Postal Services Group 'B'",
-    "Group A Officer",
-    "Others"
-];
-
-const OTHER_OFFICE_TYPES = [
-    "CEPT", "Civil Division", "Directorate", "DO/RO/CO", "MMS", "Others", "PAO", "PSD/CSD", "PTC", "RLO", "RMS"
-].sort();
-
-const CIRCLES = [
-    "Andhra Pradesh", "Assam", "Bihar", "Chhattisgarh", "Delhi", "Gujarat", "Haryana", "Himachal Pradesh",
-    "Jammu & Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "North East",
-    "Odisha", "Punjab", "Rajasthan", "Tamil Nadu", "Telangana", "Uttar Pradesh", "Uttarakhand", "West Bengal"
-];
+import { Lock, User, ArrowRight, Loader2, Mail, Phone } from "lucide-react";
 
 function AuthForm() {
     const searchParams = useSearchParams();
@@ -41,18 +17,9 @@ function AuthForm() {
         email: "",
         password: "",
         mobile: "",
-        designation: "",
-        pincode: "",
-        officeName: "",
-        division: "",
-        circle: "",
         gender: "",
         confirmPassword: ""
     });
-
-    // Pincode/Office Fetch State
-    const [officeList, setOfficeList] = useState<any[]>([]);
-    const [isFetchingOffices, setIsFetchingOffices] = useState(false);
 
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
@@ -67,76 +34,7 @@ function AuthForm() {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
         setError("");
-
-        // Fetch offices when pincode reaches 6 digits
-        if (name === "pincode") {
-            if (value.length === 6) {
-                fetchOffices(value);
-            } else {
-                setOfficeList([]);
-                setFormData(prev => ({ ...prev, officeName: "", division: "", circle: "" }));
-            }
-        }
     };
-
-    const fetchOffices = async (pincode: string) => {
-        setIsFetchingOffices(true);
-        try {
-            const res = await fetch(`/api/pincode?pincode=${pincode}`);
-            const data = await res.json();
-            let offices = [];
-            if (data.found && data.offices.length > 0) {
-                offices = data.offices;
-                // Auto-fill Division/Circle from the first result (usually same for a pincode)
-                const first = data.offices[0];
-                setFormData(prev => ({
-                    ...prev,
-                    division: first.division,
-                    circle: first.circle
-                }));
-            } else {
-                setError("No offices found for this pincode.");
-            }
-            // Always append 'Others'
-            setOfficeList([...offices, { name: "Others", division: "", circle: "" }]);
-        } catch (err) {
-            console.error(err);
-            setOfficeList([{ name: "Others", division: "", circle: "" }]);
-        } finally {
-            setIsFetchingOffices(false);
-        }
-    };
-
-    const handleOfficeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const officeName = e.target.value;
-
-        if (officeName === "Others") {
-            setFormData(prev => ({
-                ...prev,
-                officeName: "Others",
-                division: "", // User must select type
-                circle: ""    // User must select circle
-            }));
-            return;
-        }
-
-        const selectedOffice = officeList.find(o => o.name === officeName);
-        if (selectedOffice) {
-            setFormData(prev => ({
-                ...prev,
-                officeName: officeName,
-                division: selectedOffice.division,
-                circle: selectedOffice.circle
-            }));
-        } else {
-            setFormData(prev => ({ ...prev, officeName: officeName }));
-        }
-    };
-
-    const handleOfficeTypeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const val = e.target.value;
-        setFormData(prev => ({ ...prev, division: val }));
-    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -145,18 +43,8 @@ function AuthForm() {
 
         // Basic Signup Validation
         if (!isLogin) {
-            if (!formData.designation) {
-                setError("Please select a designation.");
-                setIsLoading(false);
-                return;
-            }
             if (!formData.gender) {
                 setError("Please select a gender.");
-                setIsLoading(false);
-                return;
-            }
-            if (formData.officeName === "Others" && (!formData.division || !formData.circle)) {
-                setError("Please select Office Type and Circle.");
                 setIsLoading(false);
                 return;
             }
@@ -189,7 +77,7 @@ function AuthForm() {
                 // Switch to login mode after successful signup
                 setIsLogin(true);
                 setError("");
-                setFormData(prev => ({ ...prev, password: "", otp: "" }));
+                setFormData(prev => ({ ...prev, password: "", confirmPassword: "" }));
                 alert("Account created! Please sign in.");
             }
         } catch (err) {
@@ -209,7 +97,7 @@ function AuthForm() {
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
             </div>
 
-            <div className={`w-full ${isLogin ? 'max-w-md' : 'max-w-2xl'} relative z-10 animate-in fade-in zoom-in-95 duration-500`}>
+            <div className={`w-full max-w-md relative z-10 animate-in fade-in zoom-in-95 duration-500`}>
                 <div className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border border-white/20 dark:border-zinc-800 shadow-2xl rounded-3xl p-8 md:p-10">
 
                     <div className="text-center mb-10">
@@ -229,8 +117,8 @@ function AuthForm() {
                     <form onSubmit={handleSubmit} className="space-y-5">
 
                         {!isLogin && (
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div className="space-y-2 col-span-1 md:col-span-2">
+                            <>
+                                <div className="space-y-2">
                                     <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
                                         Full Name of the Aspirant
                                     </label>
@@ -252,7 +140,7 @@ function AuthForm() {
 
 
                                 {/* Gender Selection */}
-                                <div className="space-y-2 col-span-1 md:col-span-2">
+                                <div className="space-y-2">
                                     <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
                                         Gender
                                     </label>
@@ -292,7 +180,7 @@ function AuthForm() {
                                 </div>
 
                                 {/* Mobile No */}
-                                <div className="space-y-2 col-span-1 md:col-span-2">
+                                <div className="space-y-2">
                                     <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
                                         Mobile No.
                                     </label>
@@ -328,127 +216,7 @@ function AuthForm() {
                                         required
                                     />
                                 </div>
-
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                        Designation
-                                    </label>
-                                    <div className="relative">
-                                        <select
-                                            name="designation"
-                                            value={formData.designation}
-                                            onChange={handleInputChange}
-                                            className="w-full appearance-none bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all cursor-pointer"
-                                            required
-                                        >
-                                            <option value="">Select Designation</option>
-                                            {DESIGNATIONS.map(d => <option key={d} value={d}>{d}</option>)}
-                                        </select>
-                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500">▼</div>
-                                    </div>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                        Pincode (6 digits)
-                                    </label>
-                                    <input
-                                        name="pincode"
-                                        type="text"
-                                        maxLength={6}
-                                        value={formData.pincode}
-                                        onChange={handleInputChange}
-                                        className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all placeholder:text-zinc-400"
-                                        placeholder="110001"
-                                        required
-                                    />
-                                </div>
-
-                                <div className="space-y-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 p-4 border border-zinc-200 dark:border-zinc-800">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">
-                                        Office / Unit Details
-                                    </label>
-
-                                    {/* Office Select */}
-                                    {isFetchingOffices ? (
-                                        <div className="w-full py-3.5 px-4 bg-zinc-100 dark:bg-zinc-800 rounded-2xl text-zinc-400 text-sm">Loading offices...</div>
-                                    ) : (
-                                        <select
-                                            name="officeName"
-                                            value={formData.officeName}
-                                            onChange={handleOfficeSelect}
-                                            className="w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all"
-                                            required
-                                            disabled={officeList.length === 0}
-                                        >
-                                            <option value="">{officeList.length > 0 ? "Select Office" : "Enter Pincode first"}</option>
-                                            {officeList.map((o, idx) => (
-                                                <option key={idx} value={o.name}>{o.name}</option>
-                                            ))}
-                                        </select>
-                                    )}
-
-                                    {/* Conditional: Office Type (if Others) */}
-                                    {formData.officeName === "Others" && (
-                                        <div className="space-y-2 animate-in fade-in slide-in-from-top-2">
-                                            <label className="text-xs font-medium text-zinc-500 dark:text-zinc-400 ml-1 uppercase">
-                                                Select Office Type
-                                            </label>
-                                            <select
-                                                value={formData.division} // Using division field to store the Type
-                                                onChange={handleOfficeTypeSelect}
-                                                className="w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 dark:focus:border-blue-400 transition-all"
-                                                required
-                                            >
-                                                <option value="">Select Category</option>
-                                                {OTHER_OFFICE_TYPES.map(type => (
-                                                    <option key={type} value={type}>{type}</option>
-                                                ))}
-                                            </select>
-                                        </div>
-                                    )}
-
-                                    {/* Division (Readonly or updated by Office Type) */}
-                                    {formData.officeName !== "Others" && (
-                                        <div className="space-y-1">
-                                            <label className="text-xs text-zinc-400 ml-1">Division</label>
-                                            <input
-                                                name="division"
-                                                type="text"
-                                                value={formData.division}
-                                                readOnly
-                                                className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-2 px-4 text-zinc-500 text-sm cursor-not-allowed"
-                                            />
-                                        </div>
-                                    )}
-
-                                    {/* Circle (Readonly normally, Editable if Others) */}
-                                    <div className="space-y-1">
-                                        <label className="text-xs text-zinc-400 ml-1">Circle</label>
-                                        {formData.officeName === "Others" ? (
-                                            <select
-                                                name="circle"
-                                                value={formData.circle}
-                                                onChange={handleInputChange}
-                                                className="w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl py-2 px-4 text-zinc-900 dark:text-zinc-100 text-sm outline-none focus:ring-2 focus:ring-blue-600/20"
-                                                required
-                                            >
-                                                <option value="">Select Circle</option>
-                                                {CIRCLES.map(c => <option key={c} value={c}>{c}</option>)}
-                                            </select>
-                                        ) : (
-                                            <input
-                                                name="circle"
-                                                type="text"
-                                                value={formData.circle}
-                                                readOnly
-                                                className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-2 px-4 text-zinc-500 text-sm cursor-not-allowed"
-                                            />
-                                        )}
-                                    </div>
-                                </div>
-
-                            </div>
+                            </>
                         )}
 
                         <div className="space-y-2">
@@ -573,7 +341,7 @@ function AuthForm() {
                                 onClick={() => {
                                     setIsLogin(!isLogin);
                                     setError("");
-                                    setFormData({ name: "", email: "", password: "", mobile: "", designation: "", pincode: "", officeName: "", division: "", circle: "", gender: "", confirmPassword: "" });
+                                    setFormData({ name: "", email: "", password: "", mobile: "", gender: "", confirmPassword: "" });
 
                                 }}
                                 className="text-blue-600 hover:text-blue-500 font-semibold hover:underline bg-transparent border-none cursor-pointer ml-1"

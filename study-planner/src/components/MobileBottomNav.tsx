@@ -16,7 +16,7 @@ export default function MobileBottomNav() {
         { label: "Home", href: "/", icon: Home },
         { label: "Planner", href: "/planner", icon: Layout },
         { label: "Community", href: "/social", icon: MessageCircle },
-        { label: "Updates", href: "/postal-updates", icon: Menu },
+        { label: "Updates", href: "/blog", icon: Menu },
     ];
 
     return (
@@ -29,8 +29,8 @@ export default function MobileBottomNav() {
                             key={item.href}
                             href={item.href}
                             className={`flex flex-col items-center justify-center w-full h-full space-y-1 ${isActive
-                                    ? "text-blue-600 dark:text-blue-400"
-                                    : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+                                ? "text-blue-600 dark:text-blue-400"
+                                : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
                                 }`}
                         >
                             <item.icon

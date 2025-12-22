@@ -4,14 +4,14 @@ import { Newspaper, FileText, ArrowLeft, Mail, Calendar, Tag, ChevronRight, Exte
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function PostalUpdatesPage() {
+export default function BlogPage() {
     const [updates, setUpdates] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchUpdates = async () => {
             try {
-                const res = await fetch('/api/postal-updates', { cache: 'no-store' });
+                const res = await fetch('/api/blog', { cache: 'no-store' });
                 if (res.ok) {
                     const data = await res.json();
                     setUpdates(data);
@@ -38,7 +38,7 @@ export default function PostalUpdatesPage() {
                         <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
                             <Mail className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                         </div>
-                        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Departmental Updates</h1>
+                        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">DG Blog</h1>
                         <p className="text-zinc-600 dark:text-zinc-400 max-w-lg mx-auto">
                             Latest circulars, notifications, and orders relevant to the Department of Posts.
                         </p>
@@ -53,7 +53,7 @@ export default function PostalUpdatesPage() {
                             </div>
                         ) : updates.length > 0 ? (
                             updates.map((update) => (
-                                <Link key={update.id} href={`/postal-updates/${update.id}`} className="block group">
+                                <Link key={update.id} href={`/blog/${update.id}`} className="block group">
                                     <div className="p-5 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:shadow-lg transition-all flex flex-col md:flex-row gap-6">
 
                                         {/* Image / Thumbnail */}
@@ -66,8 +66,8 @@ export default function PostalUpdatesPage() {
                                                 </div>
                                             )}
                                             <div className={`absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${update.category === 'Order' ? 'bg-red-500 text-white' :
-                                                    update.category === 'Circular' ? 'bg-blue-500 text-white' :
-                                                        'bg-amber-500 text-white'
+                                                update.category === 'Circular' ? 'bg-blue-500 text-white' :
+                                                    'bg-amber-500 text-white'
                                                 }`}>
                                                 {update.category}
                                             </div>

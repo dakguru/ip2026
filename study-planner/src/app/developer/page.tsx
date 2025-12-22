@@ -72,10 +72,10 @@ export default function DeveloperPage() {
                         <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Postal Documentation</h3>
                         <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">Compile and publish departmental updates, circulars, and notifications.</p>
                         <div className="flex flex-col gap-2">
-                            <Link href="/developer/postal-updates/new" className="w-full py-2 px-4 rounded-lg bg-pink-50 dark:bg-pink-900/10 text-pink-600 dark:text-pink-400 font-medium hover:bg-pink-100 dark:hover:bg-pink-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
+                            <Link href="/developer/blog/new" className="w-full py-2 px-4 rounded-lg bg-pink-50 dark:bg-pink-900/10 text-pink-600 dark:text-pink-400 font-medium hover:bg-pink-100 dark:hover:bg-pink-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
                                 <Plus className="w-4 h-4" /> Add Update
                             </Link>
-                            <Link href="/developer/postal-updates" className="w-full py-2 px-4 rounded-lg border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 text-sm flex items-center justify-center gap-2 transition-colors">
+                            <Link href="/developer/blog" className="w-full py-2 px-4 rounded-lg border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 text-sm flex items-center justify-center gap-2 transition-colors">
                                 View All
                             </Link>
                         </div>

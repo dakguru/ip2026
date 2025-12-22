@@ -5,7 +5,7 @@ import { ArrowLeft, Calendar, ExternalLink, FileText, Share2, Printer, Tag } fro
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default function PostalUpdateDetailPage({ params }: { params: Promise<{ id: string }> }) {
+export default function BlogDetailPage({ params }: { params: Promise<{ id: string }> }) {
     // Correctly unwrap params using React.use()
     const { id } = use(params);
 
@@ -16,7 +16,7 @@ export default function PostalUpdateDetailPage({ params }: { params: Promise<{ i
     useEffect(() => {
         const fetchUpdate = async () => {
             try {
-                const res = await fetch(`/api/postal-updates/${id}`);
+                const res = await fetch(`/api/blog/${id}`);
                 if (!res.ok) {
                     setError(true);
                     return;
@@ -60,8 +60,8 @@ export default function PostalUpdateDetailPage({ params }: { params: Promise<{ i
             <div className="max-w-4xl mx-auto">
                 {/* Header Navigation */}
                 <div className="flex items-center justify-between mb-8">
-                    <Link href="/postal-updates" className="inline-flex items-center gap-2 text-zinc-500 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400 transition-colors font-medium">
-                        <ArrowLeft className="w-4 h-4" /> Back to Updates
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-zinc-500 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400 transition-colors font-medium">
+                        <ArrowLeft className="w-4 h-4" /> Back to Blog
                     </Link>
                     <div className="flex gap-2">
                         <button className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 transition-colors" title="Share">
@@ -86,8 +86,8 @@ export default function PostalUpdateDetailPage({ params }: { params: Promise<{ i
                         {/* Meta Tags */}
                         <div className="flex flex-wrap items-center gap-4 mb-6 text-sm">
                             <span className={`px-3 py-1 rounded-full font-bold uppercase tracking-wider text-xs ${update.category === 'Order' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
-                                    update.category === 'Circular' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :
-                                        'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300'
+                                update.category === 'Circular' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :
+                                    'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300'
                                 }`}>
                                 {update.category}
                             </span>

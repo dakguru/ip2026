@@ -8,7 +8,7 @@ export async function GET(
 ) {
     try {
         const { id } = await params;
-        const DATA_FILE_PATH = path.join(process.cwd(), 'src', 'data', 'postal-updates.json');
+        const DATA_FILE_PATH = path.join(process.cwd(), 'src', 'data', 'blog-posts.json');
 
         if (!fs.existsSync(DATA_FILE_PATH)) {
             return NextResponse.json({ error: 'Data file not found' }, { status: 404 });

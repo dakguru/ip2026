@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, Save, Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-export default function AddPostalUpdatePage() {
+export default function AddBlogPostPage() {
     const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ export default function AddPostalUpdatePage() {
         setIsSubmitting(true);
 
         try {
-            const res = await fetch('/api/postal-updates', {
+            const res = await fetch('/api/blog', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -35,8 +35,8 @@ export default function AddPostalUpdatePage() {
                 throw new Error(errorData.error || 'Failed to create update');
             }
 
-            alert("Update published successfully!");
-            router.push("/developer/postal-updates");
+            alert("Post published successfully!");
+            router.push("/developer/blog");
             router.refresh(); // Refresh current route to update server components if needed
 
         } catch (error) {
@@ -50,12 +50,12 @@ export default function AddPostalUpdatePage() {
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12">
             <div className="max-w-2xl mx-auto">
-                <Link href="/developer/postal-updates" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-6 transition-colors">
+                <Link href="/developer/blog" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-6 transition-colors">
                     <ArrowLeft className="w-4 h-4" /> Back to List
                 </Link>
 
                 <h1 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-8">
-                    Add New Postal Update
+                    Add New Blog Post
                 </h1>
 
                 <form onSubmit={handleSubmit} className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 md:p-8 shadow-sm space-y-6">
@@ -132,7 +132,7 @@ export default function AddPostalUpdatePage() {
                     </div>
 
                     <div className="pt-4 flex items-center justify-end gap-3">
-                        <Link href="/developer/postal-updates" className="px-6 py-2.5 text-sm font-medium text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 border border-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors">
+                        <Link href="/developer/blog" className="px-6 py-2.5 text-sm font-medium text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 border border-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors">
                             Cancel
                         </Link>
                         <button
@@ -141,7 +141,7 @@ export default function AddPostalUpdatePage() {
                             className="px-6 py-2.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-lg shadow-blue-500/20 transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:hover:scale-100 flex items-center gap-2"
                         >
                             {isSubmitting && <Loader2 className="w-4 h-4 animate-spin" />}
-                            Publish Update
+                            Publish Post
                         </button>
                     </div>
                 </form>

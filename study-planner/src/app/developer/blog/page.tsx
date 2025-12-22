@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, Plus, Trash2, Edit, FileText, Loader2 } from "lucide-react";
 
-export default function ManagePostalUpdatesPage() {
+export default function ManageBlogPage() {
     const [updates, setUpdates] = useState<any[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -14,7 +14,7 @@ export default function ManagePostalUpdatesPage() {
 
     const fetchUpdates = async () => {
         try {
-            const res = await fetch('/api/postal-updates', { cache: 'no-store' }); // Ensure fresh data
+            const res = await fetch('/api/blog', { cache: 'no-store' }); // Ensure fresh data
             if (res.ok) {
                 const data = await res.json();
                 setUpdates(data);
@@ -30,7 +30,7 @@ export default function ManagePostalUpdatesPage() {
         if (!confirm("Are you sure you want to delete this update?")) return;
 
         try {
-            const res = await fetch('/api/postal-updates', {
+            const res = await fetch('/api/blog', {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id })
@@ -56,11 +56,11 @@ export default function ManagePostalUpdatesPage() {
                             <ArrowLeft className="w-4 h-4" /> Back to Dashboard
                         </Link>
                         <h1 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">
-                            Manage Postal Updates
+                            Manage Blog Posts
                         </h1>
                     </div>
-                    <Link href="/developer/postal-updates/new" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium flex items-center gap-2 transition-colors">
-                        <Plus className="w-4 h-4" /> Add New Update
+                    <Link href="/developer/blog/new" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium flex items-center gap-2 transition-colors">
+                        <Plus className="w-4 h-4" /> Add New Post
                     </Link>
                 </div>
 
