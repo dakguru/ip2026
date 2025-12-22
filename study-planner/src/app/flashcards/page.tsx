@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Clock, Zap, Star, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -112,6 +113,27 @@ export default function FlashcardsPage() {
                         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent skew-x-12 translate-x-[-100%] animate-[shimmer_3s_infinite]" />
 
                         <div className="relative z-10">
+                            {/* Logo */}
+                            <motion.div
+                                initial={{ scale: 0, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
+                                className="mb-8 relative w-24 h-24 mx-auto"
+                            >
+                                {/* Sun Glow Effect */}
+                                <div className="absolute inset-0 bg-amber-500 rounded-full blur-2xl opacity-60 animate-pulse"></div>
+
+                                {/* Logo Container with rounded clipping */}
+                                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-amber-200/50 shadow-[0_0_30px_rgba(251,191,36,0.6)] z-10 bg-white">
+                                    <Image
+                                        src="/dak-guru-new-logo.png"
+                                        alt="Dak Guru Logo"
+                                        fill
+                                        className="object-cover scale-110"
+                                    />
+                                </div>
+                            </motion.div>
+
                             {/* Icon & Label */}
                             <motion.div
                                 initial={{ scale: 0 }}
