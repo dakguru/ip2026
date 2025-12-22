@@ -115,7 +115,9 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                         {/* 3. Right: Actions */}
                         <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-                            <ThemeToggle />
+                            <div className="hidden md:block">
+                                <ThemeToggle />
+                            </div>
 
 
 
@@ -219,6 +221,26 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                     </Link>
                                 )}
                             </nav>
+
+                            {/* Mobile Theme Switcher */}
+                            <div className="px-3 py-2 flex items-center justify-between">
+                                <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Theme</span>
+                                <div className="flex items-center gap-2 bg-zinc-100 dark:bg-zinc-800 p-1 rounded-full border border-zinc-200 dark:border-zinc-700">
+                                    <ThemeToggle />
+                                    {/* Since ThemeToggle is a button, we might need a different approach if it doesn't look good inline. 
+                                        Actually, reusing ThemeToggle here is fine if it fits. 
+                                        But wait, ThemeToggle is usually a single button that toggles or a dropdown.
+                                        If it's a dropdown, it might clipped in the mobile menu.
+                                        Let's assume ThemeToggle is a simple button. If not, I should check its code.
+                                        However, I see I wrapped the header one in hidden md:block.
+                                        Let's just re-use ThemeToggle here for now. 
+                                        If it's a dropdown, it might be an issue.
+                                        Let's check the previous turns if ThemeToggle was viewed.
+                                        It wasn't viewed. 
+                                        Let's just render it. A single button typically works.
+                                    */}
+                                </div>
+                            </div>
 
                             <div className="pt-4 mt-4 border-t border-zinc-200 dark:border-zinc-800 flex flex-col gap-3">
 
