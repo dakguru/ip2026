@@ -55,7 +55,7 @@ export default function PricingPage() {
         full_2026: {
             id: 'gold_2026_cracker',
             name: 'LDCE IP 2026 Gold Plan',
-            validity: 'Valid till Exam 2026',
+            validity: 'Valid for One Year',
             price: 7500,
             originalPrice: 12000,
             isPopular: true,
@@ -68,7 +68,7 @@ export default function PricingPage() {
         full_2026: {
             id: 'silver_2026_cracker',
             name: 'LDCE IP 2026 Silver Plan',
-            validity: 'Valid till Exam 2026',
+            validity: 'Valid for One Year',
             price: 4000,
             originalPrice: 7000,
             isPopular: false,
@@ -90,9 +90,7 @@ export default function PricingPage() {
 
     // Determine validity days based on plan ID
     const getValidityDays = (planId: string) => {
-        // Assuming ~18 months or specific exam date logic on backend. 
-        // Returning 500 days as a safe "till 2026" placeholder for now.
-        return 500;
+        return 365;
     };
 
     const handlePayment = async () => {
