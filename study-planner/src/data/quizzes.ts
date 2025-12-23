@@ -1098,10 +1098,11 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-30', 'CCS (Conduct) Rules, 1964', 'Paper I', [54, 55]),
   createTopic('p1-31', 'CCS (CCA) Rules, 1965', 'Paper I', [50, 51, 52, 53]),
   createTopic('p1-32', 'CCS (Temporary Service) Rules 1965', 'Paper I'),
-  createTopic('p1-33', 'GDS Conduct and Engagement Rules, 2020 & SDBS,2011', 'Paper I'),
+  createTopic('p1-33', 'GDS Conduct and Engagement Rules, 2020', 'Paper I'),
   createTopic('p1-34', 'GDS General Rules', 'Paper I'),
   createTopic('p1-35', 'Preservation & Disposal of Records', 'Paper I'),
   createTopic('p1-36', 'Postal Manual Volume III', 'Paper I'),
+  createTopic('p1-37', 'SDBS, 2011', 'Paper I'),
 
   // --- PAPER III ---
   createTopic('p3-1', 'The Constitution of India', 'Paper III'),
@@ -1119,10 +1120,11 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-13', 'CCS (Conduct) Rules, 1964', 'Paper III'),
   createTopic('p3-14', 'CCS (CCA) Rules, 1965', 'Paper III'),
   createTopic('p3-15', 'CCS (Temporary Service) Rules 1965', 'Paper III'),
-  createTopic('p3-16', 'GDS Conduct and Engagement Rules, 2020 & SDBS,2011', 'Paper III'),
+  createTopic('p3-16', 'GDS Conduct and Engagement Rules, 2020', 'Paper III'),
   createTopic('p3-17', 'GDS General Rules', 'Paper III'),
   createTopic('p3-18', 'Preservation & Disposal of Records', 'Paper III'),
   createTopic('p3-19', 'Postal Manual Volume III', 'Paper III'),
+  createTopic('p3-21', 'SDBS, 2011', 'Paper III'),
 
   createTopic('p1-29', 'LDCE IP 2025 - Paper I PYQ', 'PYQ', [22, 23, 24, 25, 26]),
   createTopic('p3-20', 'LDCE IP 2025 - Paper III PYQ', 'PYQ', [27, 28, 29, 30, 31, 32]),
