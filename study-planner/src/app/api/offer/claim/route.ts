@@ -1,6 +1,6 @@
 
 import { NextResponse } from 'next/server';
-import dbConnect from '@/lib/db';
+import dbConnect from '@/lib/mongoose';
 import Coupon from '@/models/Coupon';
 import nodemailer from 'nodemailer';
 
