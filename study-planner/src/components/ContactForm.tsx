@@ -41,64 +41,71 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="grid grid-cols-2 gap-5">
                 <input
                     name="firstName"
                     required
                     type="text"
-                    placeholder="Enter your first name."
-                    className="w-full p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20"
+                    placeholder="First Name"
+                    className="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-slate-500"
                 />
                 <input
                     name="lastName"
                     required
                     type="text"
-                    placeholder="Enter your last name."
-                    className="w-full p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20"
+                    placeholder="Last Name"
+                    className="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-slate-500"
                 />
-                <input
-                    name="email"
-                    required
-                    type="email"
-                    placeholder="Enter your email ID."
-                    className="w-full p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20"
-                />
-                <div className="flex">
-                    <select className="p-4 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-l-lg border-r-0 outline-none">
-                        <option>🇮🇳 +91</option>
-                    </select>
-                    <input
-                        name="mobile"
-                        required
-                        type="tel"
-                        placeholder="Mobile Number"
-                        className="flex-1 p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-r-lg outline-none focus:ring-2 focus:ring-blue-500/20"
-                    />
-                </div>
-                <textarea
-                    name="message"
-                    required
-                    placeholder="Write your Message here."
-                    rows={4}
-                    className="w-full p-4 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 Resize-none"
-                ></textarea>
             </div>
+
+            <input
+                name="email"
+                required
+                type="email"
+                placeholder="Email Address"
+                className="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-slate-500"
+            />
+
+            <div className="flex gap-3">
+                <div className="p-4 bg-white/5 border border-white/10 rounded-xl text-slate-400 flex items-center justify-center min-w-[80px]">
+                    🇮🇳 +91
+                </div>
+                <input
+                    name="mobile"
+                    required
+                    type="tel"
+                    placeholder="Mobile Number"
+                    className="flex-1 p-4 bg-white/5 border border-white/10 rounded-xl text-white outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-slate-500"
+                />
+            </div>
+
+            <textarea
+                name="message"
+                required
+                placeholder="How can we help you?"
+                rows={4}
+                className="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-slate-500 resize-none"
+            ></textarea>
 
             <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition-colors shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 disabled:opacity-70"
+                className="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed transform active:scale-[0.98]"
             >
                 {isLoading && <Loader2 className="w-5 h-5 animate-spin" />}
-                {isLoading ? "Sending..." : "Submit"}
+                {isLoading ? "Sending Message..." : "Send Message"}
             </button>
 
             {status === "success" && (
-                <p className="text-green-600 font-medium text-center">Message sent successfully!</p>
+                <div className="p-3 rounded-lg bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium text-center">
+                    Message sent successfully! We'll allow you to know shortly.
+                </div>
             )}
             {status === "error" && (
-                <p className="text-red-500 font-medium text-center">Something went wrong. Please try again.</p>
+                <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium text-center">
+                    Something went wrong. Please try again.
+                </div>
             )}
         </form>
     );

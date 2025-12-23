@@ -89,29 +89,75 @@ export default async function Home() {
 
       {/* 6. Contact Us */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="text-center lg:text-left">
-            <h2 className="text-5xl font-extrabold text-zinc-800 dark:text-zinc-100 mb-4">Contact-Us</h2>
-            <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-12">
-              Send your queries and doubts to us. We will reply you soon.
-            </p>
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-[#0A0F1C] border border-white/5 shadow-2xl">
+          {/* Background Effects */}
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
 
-            {/* Illustration Placeholder */}
-            <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[4/3] flex items-center justify-center p-6">
-              <div className="relative w-full h-full">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl -z-10 animate-pulse"></div>
-                <Image
-                  src="/dak-guru-logo.png"
-                  alt="Dak Guru Logo"
-                  fill
-                  className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-                />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 relative z-10">
+            {/* Left Content */}
+            <div className="p-10 md:p-16 flex flex-col justify-between h-full bg-white/0">
+              <div>
+                <span className="inline-block py-1 px-3 rounded-full bg-blue-500/10 text-blue-400 font-medium text-xs tracking-widest uppercase mb-6 border border-blue-500/20">
+                  Contact Us
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                  Let's Discuss Your <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Preparation Strategy</span>
+                </h2>
+                <p className="text-slate-400 text-lg leading-relaxed max-w-md mb-12">
+                  Have questions about the syllabus, notes, or the planner? We are here to help you clear every doubt before you start.
+                </p>
+
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4 group cursor-pointer">
+                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-blue-500/10 group-hover:border-blue-500/30 transition-all">
+                      <Mail className="w-5 h-5 text-slate-300 group-hover:text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Mail Us</p>
+                      <p className="text-slate-200 font-medium group-hover:text-white transition-colors">support@dakguru.com</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 group cursor-pointer">
+                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-purple-500/10 group-hover:border-purple-500/30 transition-all">
+                      <Phone className="w-5 h-5 text-slate-300 group-hover:text-purple-400" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Call Support</p>
+                      <p className="text-slate-200 font-medium group-hover:text-white transition-colors">+91 98765 43210</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 group cursor-pointer">
+                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-green-500/10 group-hover:border-green-500/30 transition-all">
+                      <MapPin className="w-5 h-5 text-slate-300 group-hover:text-green-400" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Office</p>
+                      <p className="text-slate-200 font-medium group-hover:text-white transition-colors">New Delhi, India</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-12 pt-8 border-t border-white/5">
+                <p className="text-slate-500 text-sm">
+                  Operating Hours: <span className="text-slate-300">Mon - Sat, 10AM - 7PM</span>
+                </p>
               </div>
             </div>
-          </div>
 
-          <div className="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-xl border border-zinc-100 dark:border-zinc-800">
-            <ContactForm />
+            {/* Right Content (Form) */}
+            <div className="p-8 md:p-16 lg:border-l border-white/5 flex flex-col justify-center bg-white/5 backdrop-blur-sm lg:bg-transparent">
+              <div className="bg-[#111827] border border-white/10 rounded-3xl p-8 shadow-2xl relative">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow-lg shadow-blue-600/20">
+                  Send a Message
+                </div>
+                <ContactForm />
+              </div>
+            </div>
           </div>
         </div>
       </section>
