@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Check, X, Tag, ShieldCheck, Zap, Loader2 } from "lucide-react";
+import { Check, X, Tag, ShieldCheck, Zap, Loader2, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
+import { DiscountRequestModal } from "@/components/DiscountRequestModal";
 
 declare global {
     interface Window {
@@ -23,6 +24,7 @@ export default function PricingPage() {
     const [isProcessing, setIsProcessing] = useState(false);
     const [userEmail, setUserEmail] = useState<string | null>(null);
     const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>('free');
+    const [isOfferModalOpen, setIsOfferModalOpen] = useState(false);
 
     // Check login status
     useEffect(() => {
@@ -337,6 +339,29 @@ export default function PricingPage() {
                             )}
                         </div>
 
+                        {/* Launch Offer Banner */}
+                        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 p-1 shadow-lg shadow-orange-500/20 group cursor-pointer hover:scale-[1.01] transition-transform duration-300">
+                            <div className="absolute top-0 right-0 -mt-4 -mr-4 w-20 h-20 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+                            <div className="bg-white dark:bg-zinc-900 rounded-xl p-4 flex flex-col gap-3 relative z-10 h-full">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <Sparkles className="w-5 h-5 text-yellow-500 fill-yellow-500 animate-spin-slow" />
+                                    <span className="text-xs font-black tracking-widest text-orange-600 uppercase">Limited Time Launch Offer</span>
+                                </div>
+                                <h3 className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-red-600 leading-tight">
+                                    50% DISCOUNT FOR FIRST 50 SUBSCRIBERS ONLY!
+                                </h3>
+                                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                                    Don't have a code? Contact Admin to check eligibility and claim your discount now.
+                                </p>
+                                <button
+                                    onClick={() => setIsOfferModalOpen(true)}
+                                    className="mt-2 w-full py-3 bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-white dark:to-zinc-200 text-white dark:text-black font-bold rounded-lg shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 group-hover:gap-3"
+                                >
+                                    Contact Admin for Code <span className="text-lg group-hover:rotate-45 transition-transform">→</span>
+                                </button>
+                            </div>
+                        </div>
+
                         {/* Plan Selection Cards */}
                         <div className="space-y-4">
                             <h3 className="font-bold text-zinc-900 dark:text-zinc-100 text-lg">Select your {activeTab === 'gold' ? 'Gold' : 'Silver'} Plan:</h3>
@@ -425,6 +450,11 @@ export default function PricingPage() {
                     </div>
                 </div>
             </div>
+            <DiscountRequestModal
+                isOpen={isOfferModalOpen}
+                onClose={() => setIsOfferModalOpen(false)}
+                userEmail={userEmail}
+            />
         </div>
     );
 }
