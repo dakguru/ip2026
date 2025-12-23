@@ -9,7 +9,15 @@ export default function Footer() {
     const pathname = usePathname();
 
     if (pathname?.startsWith("/quiz")) {
-        return null;
+        return (
+            <footer className="bg-zinc-950 text-white py-6 border-t border-zinc-900 mt-auto">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p className="text-zinc-500 text-sm">
+                        &copy; {new Date().getFullYear()} Dak Guru InfoTech. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        );
     }
 
     return (
