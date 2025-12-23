@@ -120,28 +120,13 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 return (
                     <Link
                         key={idx}
-                        href={isUnlocked ? item.link : "/pricing"}
-                        className={`group relative block w-full ${customClass} ${!isUnlocked ? 'cursor-not-allowed' : ''}`}
-                        onClick={(e) => {
-                            if (!isUnlocked) {
-                                e.preventDefault();
-                                // You can trigger a modal here instead if you want
-                                // For now, let it fall through to the href='/pricing' or just block
-                                router.push("/pricing");
-                            }
-                        }}
+                        href={item.link}
+                        className={`group relative block w-full ${customClass}`}
                     >
-                        <div className={`relative h-full w-full bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 ${borderBottom} ${borderRadius} ${item.border} transition-all duration-300 ease-out shadow-sm ${isUnlocked ? `hover:shadow-xl ${item.shadow} hover:-translate-y-1` : 'opacity-80 grayscale-[0.5]'} overflow-hidden group-hover:border-b-4`}>
+                        <div className={`relative h-full w-full bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 ${borderBottom} ${borderRadius} ${item.border} transition-all duration-300 ease-out shadow-sm hover:shadow-xl ${item.shadow} hover:-translate-y-1 overflow-hidden group-hover:border-b-4`}>
 
-                            {/* Badge & Lock Icon */}
+                            {/* Badge & Visit Icon */}
                             <div className={`absolute z-20 flex items-center gap-2 ${isMobileApp ? 'top-1.5 right-1.5' : 'top-3 right-3'}`}>
-                                {/* Lock Status */}
-                                {(!isMobileApp || !isUnlocked) && (
-                                    <div className={`rounded-full shadow-sm backdrop-blur-sm ${isUnlocked ? 'bg-green-100/80 text-green-700' : 'bg-zinc-100/80 text-zinc-500'} ${isMobileApp ? 'p-1' : 'p-1.5'}`}>
-                                        {isUnlocked ? <Unlock className={isMobileApp ? "w-2.5 h-2.5" : "w-3 h-3"} /> : <Lock className={isMobileApp ? "w-2.5 h-2.5" : "w-3 h-3"} />}
-                                    </div>
-                                )}
-
                                 {item.badge && !isMobileApp && (
                                     <span className={`px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
                                         item.badge === 'Silver' ? 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300' :
@@ -152,27 +137,6 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                                     </span>
                                 )}
                             </div>
-
-                            {/* Background decoration */}
-                            <div className={`absolute top-0 right-0 ${isMobileApp ? 'w-12 h-12 rounded-bl-[40px]' : 'w-16 h-16 md:w-24 md:h-24 rounded-bl-[60px] md:rounded-bl-[100px]'} ${item.bg} opacity-60 transition-transform duration-500 group-hover:scale-150`}></div>
-
-                            {/* Content Overlay when Locked */}
-                            {!isUnlocked && (
-                                <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-white/95 dark:bg-zinc-950/90 backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 p-4">
-                                    <div className={`
-                                        w-full py-2.5 rounded-full font-bold text-xs md:text-sm shadow-xl transform hover:scale-105 transition-transform flex items-center justify-center gap-2 animate-pulse
-                                        ${item.badge === 'Gold'
-                                            ? 'bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-amber-900 border border-amber-200'
-                                            : 'bg-gradient-to-r from-slate-200 via-zinc-300 to-slate-400 text-slate-900 border border-slate-300'}
-                                    `}>
-                                        <Lock className="w-4 h-4" />
-                                        <span>Upgrade</span>
-                                    </div>
-                                    {!isMobileApp && <p className="text-[10px] font-medium text-zinc-500 dark:text-zinc-400 mt-2 text-center leading-tight">
-                                        Click to unlock this feature
-                                    </p>}
-                                </div>
-                            )}
 
                             <div className={`relative h-full flex flex-col items-center justify-center text-center z-10 transition-transform duration-300 ${padding}`}>
                                 <div className={`${iconContainer} ${item.bg} ${item.color} shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
