@@ -883,6 +883,13 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-26', 'IT Modernization Project 2.0 (APT)', 'Paper I'),
   createTopic('p1-27', 'Working Knowledge on CBS, CIS & APT 2.0', 'Paper I'),
   createTopic('p1-28', 'India Post Payments Bank', 'Paper I'),
+  createTopic('p1-30', 'CCS (Conduct) Rules, 1964', 'Paper I'),
+  createTopic('p1-31', 'CCS (CCA) Rules, 1965', 'Paper I'),
+  createTopic('p1-32', 'CCS (Temporary Service) Rules 1965', 'Paper I'),
+  createTopic('p1-33', 'GDS Conduct and Engagement Rules, 2020 & SDBS,2011', 'Paper I'),
+  createTopic('p1-34', 'GDS General Rules', 'Paper I'),
+  createTopic('p1-35', 'Preservation & Disposal of Records', 'Paper I'),
+  createTopic('p1-36', 'Postal Manual Volume III', 'Paper I'),
 
   // --- PAPER III ---
   createTopic('p3-1', 'The Constitution of India', 'Paper III'),
