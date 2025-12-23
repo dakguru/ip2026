@@ -51,7 +51,7 @@ export default function PricingPage() {
             name: 'LDCE IP 2026 Gold Plan',
             validity: 'Valid till Exam 2026',
             price: 7500,
-            originalPrice: 7500,
+            originalPrice: 12000,
             isPopular: true,
             // tag: '50% OFF' // Applied via coupon now
         }
@@ -64,7 +64,7 @@ export default function PricingPage() {
             name: 'LDCE IP 2026 Silver Plan',
             validity: 'Valid till Exam 2026',
             price: 4000,
-            originalPrice: 4000,
+            originalPrice: 7000,
             isPopular: false,
             // tag: '50% OFF' 
         }
