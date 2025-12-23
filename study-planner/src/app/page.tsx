@@ -131,15 +131,7 @@ export default async function Home() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 group cursor-pointer">
-                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-green-500/10 group-hover:border-green-500/30 transition-all">
-                      <MapPin className="w-5 h-5 text-slate-300 group-hover:text-green-400" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Office</p>
-                      <p className="text-slate-200 font-medium group-hover:text-white transition-colors">New Delhi, India</p>
-                    </div>
-                  </div>
+
                 </div>
               </div>
 

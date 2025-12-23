@@ -11,9 +11,9 @@ export async function POST(req: Request) {
         // 1. If we have credentials, send real email
         if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
             const transporter = nodemailer.createTransport({
-                host: process.env.EMAIL_HOST || "smtp.office365.com",
-                port: Number(process.env.EMAIL_PORT) || 587,
-                secure: Number(process.env.EMAIL_PORT) === 465, // true for 465, false for other ports
+                host: process.env.EMAIL_HOST || "smtp.zoho.in",
+                port: Number(process.env.EMAIL_PORT) || 465,
+                secure: Number(process.env.EMAIL_PORT) === 465,
                 auth: {
                     user: process.env.EMAIL_USER,
                     pass: process.env.EMAIL_PASS,
@@ -21,13 +21,11 @@ export async function POST(req: Request) {
             });
 
             const mailOptions = {
-                from: process.env.EMAIL_USER, // Sender address
-                to: "admin@dakguru.com", // Receiver address
-                subject: `New Contact Form: ${firstName} ${lastName}`,
+                from: `"Dak Guru Contact" <${process.env.EMAIL_USER}>`,
+                to: "admin@dakguru.com",
+                replyTo: email,
+                subject: `Contact Request: ${firstName} ${lastName}`,
                 text: `
-You have received a new message from the Dak Guru contact form.
-
-Details:
 Name: ${firstName} ${lastName}
 Email: ${email}
 Phone: ${mobile}
