@@ -130,7 +130,7 @@ export default function QueriesPage() {
     const [user, setUser] = useState<{ name: string; role?: string; email?: string } | null>(null);
 
     // Data State
-    const [feedData, setFeedData] = useState<any[]>([]);
+    const [feedData, setFeedData] = useState<any[]>(FEED_DATA);
     const [savedPostIds, setSavedPostIds] = useState<number[]>([]);
     const [myQuestionIds, setMyQuestionIds] = useState<number[]>([]);
 
@@ -141,7 +141,9 @@ export default function QueriesPage() {
             const res = await fetch('/api/community/posts');
             if (res.ok) {
                 const data = await res.json();
-                setFeedData(data);
+                // Prepend fetched data to the static FEED_DATA
+                // This ensures content is always visible, and new posts appear at the top
+                setFeedData([...data, ...FEED_DATA]);
             }
         } catch (e) {
             console.error("Failed to fetch posts", e);
