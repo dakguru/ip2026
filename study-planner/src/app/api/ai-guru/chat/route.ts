@@ -42,10 +42,10 @@ export async function POST(req: Request) {
 
         return NextResponse.json({ reply: text });
 
-    } catch (error) {
+    } catch (error: any) {
         console.error("AI Guru Error:", error);
         return NextResponse.json(
-            { error: "Failed to process your request." },
+            { error: error.message || "Failed to process your request." },
             { status: 500 }
         );
     }
