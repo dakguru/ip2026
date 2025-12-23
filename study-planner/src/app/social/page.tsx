@@ -120,7 +120,7 @@ const SidebarCard = ({ title, children, color = "orange" }: { title: string, chi
 );
 
 export default function QueriesPage() {
-    const [activeTab, setActiveTab] = useState("Home");
+    const [activeTab, setActiveTab] = useState("Q&A Home");
     const [questionInput, setQuestionInput] = useState("");
     const [detailsInput, setDetailsInput] = useState("");
     const [showDetailsInput, setShowDetailsInput] = useState(false);
@@ -129,7 +129,6 @@ export default function QueriesPage() {
     const [isDMModalOpen, setIsDMModalOpen] = useState(false);
     const [user, setUser] = useState<{ name: string; role?: string; email?: string } | null>(null);
 
-    // Data State
     // Data State
     const [feedData, setFeedData] = useState<any[]>([]);
     const [savedPostIds, setSavedPostIds] = useState<number[]>([]);
@@ -253,10 +252,11 @@ export default function QueriesPage() {
 
     const getFeedData = () => {
         if (activeTab === "Success Stories") {
-            return SUCCESS_STORIES_DATA;
+            const apiSuccessStories = feedData.filter(post => post.tags && post.tags.includes("Success Story"));
+            return [...SUCCESS_STORIES_DATA, ...apiSuccessStories];
         }
         if (activeTab === "Unanswered Questions") {
-            return feedData.filter(post => !post.answer);
+            return feedData.filter(post => !post.answer && (!post.tags || !post.tags.includes("Success Story")));
         }
         if (activeTab === "My Questions") {
             return feedData.filter(post => myQuestionIds.includes(post.id));
@@ -264,8 +264,8 @@ export default function QueriesPage() {
         if (activeTab === "Saved Answers") {
             return feedData.filter(post => savedPostIds.includes(post.id));
         }
-        // "Q&A Home"
-        return feedData;
+        // "Q&A Home" - Filter out Success Stories
+        return feedData.filter(post => !post.tags || !post.tags.includes("Success Story"));
     };
 
     return (
@@ -381,6 +381,41 @@ export default function QueriesPage() {
                         </div>
 
                         <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                            {/* Success Story Intro Banner */}
+                            {activeTab === "Success Stories" && (
+                                <div className="p-6 bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/10 dark:to-orange-900/20 border-b border-orange-200 dark:border-orange-800/30">
+                                    <div className="flex gap-2 mb-3">
+                                        <span className="px-2 py-1 bg-white dark:bg-zinc-800 text-xs font-bold rounded shadow-sm text-zinc-600 dark:text-zinc-300">Success Story</span>
+                                        <span className="px-2 py-1 bg-white dark:bg-zinc-800 text-xs font-bold rounded shadow-sm text-zinc-600 dark:text-zinc-300">Inspector Posts (IP)</span>
+                                        <span className="px-2 py-1 bg-white dark:bg-zinc-800 text-xs font-bold rounded shadow-sm text-zinc-600 dark:text-zinc-300">Community</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-100 mb-2">Share your Success Story</h3>
+                                    <div className="prose prose-sm text-zinc-600 dark:text-zinc-400">
+                                        <p className="mb-2">Dear Aspirants,</p>
+                                        <p className="mb-2">Please note that the posts currently visible below were created for testing purposes during the development of this platform.</p>
+                                        <p className="mb-4">Now that we are live, we invite you to start using the community! Please feel free to share your success stories regarding the LDCE. Your experience and insights will be incredibly valuable to help fellow aspirants succeed.</p>
+                                        <p>- Admin</p>
+                                    </div>
+                                    <div className="flex items-center gap-2 mt-4">
+                                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">
+                                            A
+                                        </div>
+                                        <div className="text-xs">
+                                            <span className="font-bold text-zinc-800 dark:text-zinc-200">Admin - Dak Guru</span>
+                                            <span className="mx-1 text-zinc-400">•</span>
+                                            <span className="text-zinc-500">admin</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-3 mt-4">
+                                        <button className="flex items-center gap-1.5 px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition-colors">
+                                            <MessageCircle className="w-4 h-4" /> Comment
+                                        </button>
+                                        <button className="flex items-center gap-1.5 px-4 py-1.5 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-md text-sm font-medium transition-colors">
+                                            <Star className="w-4 h-4" /> Like
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
                             {/* Simulated Feed Content */}
                             {getFeedData().length > 0 ? (
                                 getFeedData().map((post) => (
