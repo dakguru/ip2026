@@ -72,15 +72,21 @@ Please send the discount code to this user.`;
     };
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-            <div className="bg-white dark:bg-zinc-900 rounded-3xl w-full max-w-md shadow-2xl border-2 border-yellow-400/50 overflow-hidden scale-100 animate-in zoom-in-95 duration-200 relative">
+        <div
+            onClick={onClose}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
+        >
+            <div
+                onClick={(e) => e.stopPropagation()}
+                className="bg-white dark:bg-zinc-900 rounded-3xl w-full max-w-md shadow-2xl border-2 border-yellow-400/50 overflow-hidden scale-100 animate-in zoom-in-95 duration-200 relative"
+            >
 
                 {/* Decorative Background Elements */}
                 <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-yellow-400/20 rounded-full blur-2xl"></div>
                 <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl"></div>
 
                 {/* Header */}
-                <div className="px-6 py-5 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-950/20 dark:to-orange-950/20">
+                <div className="px-6 py-5 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-950/20 dark:to-orange-950/20 relative z-20">
                     <div className="flex items-center gap-2 text-yellow-700 dark:text-yellow-500">
                         <Gift className="w-5 h-5 fill-yellow-400" />
                         <h3 className="font-bold text-lg">Claim Launch Offer</h3>
@@ -159,22 +165,31 @@ Please send the discount code to this user.`;
 
                             {error && <p className="text-xs text-red-500 font-bold text-center">{error}</p>}
 
-                            <button
-                                type="submit"
-                                disabled={sending}
-                                className="w-full py-4 mt-2 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white font-bold text-lg rounded-xl shadow-lg shadow-orange-500/20 disabled:opacity-70 disabled:grayscale transition-all transform active:scale-[0.98] flex items-center justify-center gap-2"
-                            >
-                                {sending ? (
-                                    <>
-                                        <Loader2 className="w-5 h-5 animate-spin" />
-                                        Submitting...
-                                    </>
-                                ) : (
-                                    <>
-                                        Get Discount Code <Send className="w-5 h-5" />
-                                    </>
-                                )}
-                            </button>
+                            <div className="flex gap-3 pt-2">
+                                <button
+                                    type="button"
+                                    onClick={onClose}
+                                    className="flex-1 py-3 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-bold rounded-xl transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    type="submit"
+                                    disabled={sending}
+                                    className="flex-[2] py-3 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white font-bold text-lg rounded-xl shadow-lg shadow-orange-500/20 disabled:opacity-70 disabled:grayscale transition-all transform active:scale-[0.98] flex items-center justify-center gap-2"
+                                >
+                                    {sending ? (
+                                        <>
+                                            <Loader2 className="w-5 h-5 animate-spin" />
+                                            Wait...
+                                        </>
+                                    ) : (
+                                        <>
+                                            Get Code <Send className="w-5 h-5" />
+                                        </>
+                                    )}
+                                </button>
+                            </div>
                         </form>
                     )}
                 </div>
