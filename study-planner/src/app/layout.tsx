@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -46,6 +47,7 @@ export default function RootLayout({
           </NativeMobileSpacer>
           <MobileBottomNav />
           <WhatsAppButton />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
