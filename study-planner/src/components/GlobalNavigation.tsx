@@ -15,8 +15,8 @@ export default function GlobalNavigation() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                 {/* Left: Logo */}
                 <Link href="/" className="flex items-center gap-2">
-                    <div className="relative w-8 h-8 rounded overflow-hidden">
-                        <Image src="/dak-guru-new-logo.png" alt="Dak Guru" fill className="object-cover" />
+                    <div className="relative w-9 h-9 rounded-full overflow-hidden shadow-[0_0_12px_rgba(59,130,246,0.5)] ring-1 ring-blue-500/20">
+                        <Image src="/dak-guru-new-logo.png" alt="Dak Guru" fill className="object-cover scale-110" />
                     </div>
                     <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
                         Dak Guru
