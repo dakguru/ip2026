@@ -43,30 +43,22 @@ export const DiscountRequestModal = ({ isOpen, onClose, userEmail, userName, use
         setSending(true);
 
         try {
-            // We use the existing DM API to send these details to Admin
-            const messageBody = `LAUNCH OFFER REQUEST (50% OFF):
-            
-Name: ${formData.name}
-Mobile: ${formData.mobile}
-Email: ${formData.email}
-
-Please send the discount code to this user.`;
-
-            const res = await fetch('/api/dm', {
+            // Call the coupon claim API
+            const res = await fetch('/api/offer/claim', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    message: messageBody,
                     userName: formData.name,
-                    userEmail: formData.email
+                    userEmail: formData.email,
+                    userMobile: formData.mobile
                 })
             });
 
+            const data = await res.json();
+
             if (res.ok) {
                 setSuccess(true);
-                // Auto close after 5 seconds or let user close
             } else {
-                const data = await res.json();
                 setError(data.error || "Failed to submit request.");
             }
         } catch (err) {

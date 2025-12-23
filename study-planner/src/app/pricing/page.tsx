@@ -80,10 +80,35 @@ export default function PricingPage() {
     const selectedPlan = currentPlans[selectedPlanKey];
 
     // Coupon Logic
-    const handleApplyCoupon = () => {
-        // All codes disabled for now
-        alert("Invalid Coupon Code");
-        setDiscount(0);
+    const handleApplyCoupon = async () => {
+        if (!couponCode.trim()) return;
+        setIsProcessing(true); // Re-using isProcessing for loader
+
+        try {
+            const res = await fetch('/api/offer/validate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code: couponCode })
+            });
+
+            const data = await res.json();
+
+            if (res.ok && data.valid) {
+                // Calculate 50% discount
+                const discountAmount = selectedPlan.price * 0.5;
+                setDiscount(discountAmount);
+                alert(`Coupon Applied! You saved ₹${discountAmount}`);
+                setShowCouponInput(false);
+            } else {
+                alert(data.error || "Invalid Coupon Code");
+                setDiscount(0);
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Failed to validate coupon");
+        } finally {
+            setIsProcessing(false);
+        }
     };
 
     const finalPrice = selectedPlan.price - discount;
