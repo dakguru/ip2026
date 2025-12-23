@@ -350,14 +350,14 @@ export default function PricingPage() {
                                 <h3 className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-red-600 leading-tight">
                                     50% DISCOUNT FOR FIRST 50 SUBSCRIBERS ONLY!
                                 </h3>
-                                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                                    Don't have a code? Contact Admin to check eligibility and claim your discount now.
+                                <p className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                                    Gold @ 3500 and Silver @ 2000. Submit your details check your eligibility and claim your discount now.
                                 </p>
                                 <button
                                     onClick={() => setIsOfferModalOpen(true)}
                                     className="mt-2 w-full py-3 bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-white dark:to-zinc-200 text-white dark:text-black font-bold rounded-lg shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 group-hover:gap-3"
                                 >
-                                    Contact Admin for Code <span className="text-lg group-hover:rotate-45 transition-transform">→</span>
+                                    Check Eligibility <span className="text-lg group-hover:rotate-45 transition-transform">→</span>
                                 </button>
                             </div>
                         </div>

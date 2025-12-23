@@ -104,7 +104,7 @@ Please send the discount code to this user.`;
                             </p>
                             <button
                                 onClick={onClose}
-                                className="px-6 py-2 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-semibold rounded-lg transition-colors"
+                                className="mt-6 px-6 py-2 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-semibold rounded-lg transition-colors"
                             >
                                 Close
                             </button>
