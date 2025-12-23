@@ -895,7 +895,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-4', 'Consumer Protection Act, 2019', 'Paper I', [17, 18, 19, 20, 21]),
   createTopic('p1-5', 'IT Act, 2000', 'Paper I', [40, 41]),
   createTopic('p1-6', 'The Post Office Regulations, 2024', 'Paper I'),
-  createTopic('p1-7', 'Government Savings Promotion General Rules, 2018', 'Paper I'),
+  createTopic('p1-7', 'Government Savings Promotion General Rules, 2018', 'Paper I', [49]),
   createTopic('p1-8', 'Small Savings Scheme, 2019', 'Paper I', [37, 38, 39]),
   createTopic('p1-9', 'PLI Rules 2011 & Its Amendments', 'Paper I', [42, 46, 47, 48]),
   createTopic('p1-10', 'Book of BO Rules', 'Paper I', [43, 44, 45]),
