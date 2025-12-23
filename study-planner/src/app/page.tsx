@@ -115,8 +115,8 @@ export default async function Home() {
                       <Mail className="w-5 h-5 text-slate-300 group-hover:text-blue-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Mail Us</p>
-                      <p className="text-slate-200 font-medium group-hover:text-white transition-colors">support@dakguru.com</p>
+                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Email Us</p>
+                      <p className="text-slate-200 font-medium group-hover:text-white transition-colors">admin@dakguru.com</p>
                     </div>
                   </div>
 
@@ -125,8 +125,9 @@ export default async function Home() {
                       <Phone className="w-5 h-5 text-slate-300 group-hover:text-purple-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Call Support</p>
-                      <p className="text-slate-200 font-medium group-hover:text-white transition-colors">+91 98765 43210</p>
+                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Call Us</p>
+                      <p className="text-slate-200 font-medium group-hover:text-white transition-colors block">+91 93630 30396</p>
+                      <p className="text-[10px] text-slate-500 mt-0.5 font-medium">Mon - Sat (10am - 6pm)</p>
                     </div>
                   </div>
 
@@ -142,7 +143,7 @@ export default async function Home() {
                 </div>
               </div>
 
-              <div className="mt-12 pt-8 border-t border-white/5">
+              <div className="mt-12 pt-8 border-t border-white/5 hidden">
                 <p className="text-slate-500 text-sm">
                   Operating Hours: <span className="text-slate-300">Mon - Sat, 10AM - 7PM</span>
                 </p>
