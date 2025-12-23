@@ -81,11 +81,12 @@ export default function AIGuruWidget() {
 
             setMessages(prev => [...prev, botMsg]);
 
-        } catch (error) {
+        } catch (error: any) {
+            console.error(error);
             setMessages(prev => [...prev, {
                 id: Date.now().toString(),
                 role: 'assistant',
-                content: "I'm having trouble connecting to the server right now. Please check if the API Key is configured or try again later.",
+                content: error.message || "I'm having trouble connecting to the server right now. Please check if the API Key is configured in Vercel Environment Variables.",
                 timestamp: new Date()
             }]);
         } finally {
@@ -149,8 +150,8 @@ export default function AIGuruWidget() {
 
                                         <div
                                             className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm shadow-sm ${msg.role === 'user'
-                                                    ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-tr-none'
-                                                    : 'bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 border border-zinc-100 dark:border-zinc-700 rounded-tl-none'
+                                                ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-tr-none'
+                                                : 'bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 border border-zinc-100 dark:border-zinc-700 rounded-tl-none'
                                                 }`}
                                         >
                                             {msg.role === 'assistant' ? (
@@ -220,8 +221,8 @@ export default function AIGuruWidget() {
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsOpen(!isOpen)}
                     className={`h-14 w-14 md:h-16 md:w-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 relative group ${isOpen
-                            ? 'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900 rotate-90'
-                            : 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white'
+                        ? 'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900 rotate-90'
+                        : 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white'
                         }`}
                 >
                     {isOpen ? <X className="w-6 h-6 md:w-8 md:h-8" /> : <MessageSquare className="w-6 h-6 md:w-8 md:h-8 fill-current" />}
