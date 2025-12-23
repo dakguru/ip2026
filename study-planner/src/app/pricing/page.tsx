@@ -351,7 +351,7 @@ export default function PricingPage() {
                                     50% DISCOUNT FOR FIRST 50 SUBSCRIBERS ONLY!
                                 </h3>
                                 <p className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
-                                    Gold @ 3500 and Silver @ 2000. Submit your details check your eligibility and claim your discount now.
+                                    Gold @ Rs. 3,750/- and Silver @ Rs. 2,000/-. Submit your details check your eligibility and claim your discount now.
                                 </p>
                                 <button
                                     onClick={() => setIsOfferModalOpen(true)}
