@@ -15,8 +15,11 @@ export async function POST(req: Request) {
         const { message, history } = await req.json();
 
         const genAI = new GoogleGenerativeAI(apiKey);
+        // Initialize with gemini-1.5-pro (more stable/widely available than flash sometimes)
+        // If this fails, we might need to fallback to gemini-pro (1.0) but that doesn't support systemInstruction.
+        // For now, let's try gemini-1.5-pro.
         const model = genAI.getGenerativeModel({
-            model: "gemini-1.5-flash-001",
+            model: "gemini-1.5-pro",
             systemInstruction: AI_GURU_SYSTEM_PROMPT
         });
 
