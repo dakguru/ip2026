@@ -15,7 +15,7 @@ declare global {
 
 export default function PricingPage() {
     const router = useRouter();
-    const [selectedPlanKey, setSelectedPlanKey] = useState<'monthly' | 'yearly' | 'lifetime'>('yearly');
+    const [selectedPlanKey, setSelectedPlanKey] = useState<string>('full_2026');
     const [activeTab, setActiveTab] = useState<'gold' | 'silver'>('gold');
     const [showCouponInput, setShowCouponInput] = useState(false);
     const [couponCode, setCouponCode] = useState("");
@@ -45,58 +45,28 @@ export default function PricingPage() {
     }, []);
 
     // Gold Plans Data
-    const goldPlans = {
-        monthly: {
-            id: 'monthly_gold',
-            name: 'Monthly Gold Plan',
-            validity: 'Valid for 31 Days',
-            price: 599,
-            originalPrice: 1199,
-            isPopular: false,
-        },
-        yearly: {
-            id: 'yearly_gold',
-            name: 'Yearly Gold Plan',
-            validity: 'Valid for 365 Days',
-            price: 649,
-            originalPrice: 1799,
+    const goldPlans: Record<string, any> = {
+        full_2026: {
+            id: 'gold_2026_cracker',
+            name: 'LDCE IP 2026 Gold Plan',
+            validity: 'Valid till Exam 2026',
+            price: 3750,
+            originalPrice: 7500,
             isPopular: true,
-        },
-        lifetime: {
-            id: 'lifetime_gold',
-            name: '18 Months Gold Plan',
-            validity: 'Valid for 548 Days',
-            price: 799,
-            originalPrice: 1999,
-            isPopular: false,
+            tag: '50% OFF'
         }
     };
 
     // Silver Plans Data
-    const silverPlans = {
-        monthly: {
-            id: 'monthly_silver',
-            name: 'Monthly Silver Plan',
-            validity: 'Valid for 31 Days',
-            price: 299,
-            originalPrice: 599,
+    const silverPlans: Record<string, any> = {
+        full_2026: {
+            id: 'silver_2026_cracker',
+            name: 'LDCE IP 2026 Silver Plan',
+            validity: 'Valid till Exam 2026',
+            price: 2000,
+            originalPrice: 4000,
             isPopular: false,
-        },
-        yearly: {
-            id: 'yearly_silver',
-            name: 'Yearly Silver Plan',
-            validity: 'Valid for 365 Days',
-            price: 399,
-            originalPrice: 999,
-            isPopular: true,
-        },
-        lifetime: {
-            id: 'lifetime_silver',
-            name: 'Lifetime Silver Plan',
-            validity: 'Valid for 3 Years',
-            price: 599,
-            originalPrice: 1499,
-            isPopular: false,
+            tag: '50% OFF'
         }
     };
 
@@ -105,9 +75,9 @@ export default function PricingPage() {
 
     // Coupon Logic
     const handleApplyCoupon = () => {
-        if (couponCode.trim().toUpperCase() === 'DISCOUNT50') {
-            setDiscount(50);
-            alert("Coupon Applied: ₹50 off!");
+        if (couponCode.trim().toUpperCase() === 'FIRST50') {
+            setDiscount(500); // Example extra discount
+            alert("Coupon Applied: Extra ₹500 off!");
         } else {
             alert("Invalid Coupon Code");
             setDiscount(0);
@@ -118,11 +88,9 @@ export default function PricingPage() {
 
     // Determine validity days based on plan ID
     const getValidityDays = (planId: string) => {
-        if (planId.includes('monthly')) return 31;
-        if (planId.includes('yearly')) return 365;
-        if (planId.includes('lifetime') && planId.includes('gold')) return 548;
-        if (planId.includes('lifetime') && planId.includes('silver')) return 1095; // 3 years
-        return 30;
+        // Assuming ~18 months or specific exam date logic on backend. 
+        // Returning 500 days as a safe "till 2026" placeholder for now.
+        return 500;
     };
 
     const handlePayment = async () => {
@@ -230,17 +198,18 @@ export default function PricingPage() {
 
             {/* Banner Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white shadow-2xl p-8 md:p-12 text-center">
+                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white shadow-2xl p-8 md:p-12 text-center ring-4 ring-yellow-400/20">
                     <div className="relative z-10">
-                        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-white/20">
-                            <Zap className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                            <span>Mission Officer</span>
+                        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-amber-500 text-amber-900 px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg animate-pulse">
+                            <Zap className="w-4 h-4" />
+                            <span>HURRY! 50% DISCOUNT FOR FIRST 50 SUBSCRIBERS ONLY!</span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-sm">
-                            Your Journey to Inspector Posts Starts Here
+                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-b from-white to-blue-100 drop-shadow-sm font-heading">
+                            LDCE IP 2026 EXAM CRACKER!
                         </h1>
-                        <p className="text-blue-200 max-w-2xl mx-auto text-lg mb-8">
-                            Unlock unlimited access to the best resources and skyrocket your preparation.
+                        <p className="text-blue-100 max-w-2xl mx-auto text-xl mb-8 font-medium">
+                            Gold & Silver Subscription Plans Now Open. <br />
+                            <span className="text-yellow-300">Learn. Practice. Succeed.</span>
                         </p>
                     </div>
                     {/* Abstract shapes for background */}
