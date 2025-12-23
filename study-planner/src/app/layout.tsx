@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import GlobalNavigation from "@/components/GlobalNavigation";
-import WhatsAppButton from "@/components/WhatsAppButton";
+
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import NativeMobileSpacer from "@/components/NativeMobileSpacer";
@@ -47,7 +47,7 @@ export default function RootLayout({
             <Footer />
           </NativeMobileSpacer>
           <MobileBottomNav />
-          <WhatsAppButton />
+
           <AIGuruWidget />
           <SpeedInsights />
         </ThemeProvider>
