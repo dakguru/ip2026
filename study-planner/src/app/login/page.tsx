@@ -356,7 +356,7 @@ function AuthForm() {
                     <div className="px-2 py-1 bg-green-500/10 text-green-600 rounded text-xs font-medium border border-green-500/20">
                         v1.0.0
                     </div>
-                    <span>Advanced Preparation Master</span>
+                    <span>Strategize. Practice. Excel.</span>
                 </div>
             </div >
         </div >
