@@ -299,12 +299,43 @@ export default function PricingPage() {
                     {/* Right Column: Plan Selection */}
                     <div className="lg:col-span-5 space-y-6">
 
-                        {/* Offer Box Removed as per request */}
-                        {/* 
-                        <div className="bg-gradient-to-br from-pink-50 to-rose-50 ...">
-                           ...
-                        </div> 
-                        */}
+                        {/* Offer Box */}
+                        <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/20 dark:to-rose-950/20 rounded-2xl p-5 border border-pink-100 dark:border-pink-900/30 flex flex-col gap-3">
+                            <div className="flex items-start gap-3">
+                                <Tag className="w-5 h-5 text-pink-600 dark:text-pink-400 mt-1 shrink-0" />
+                                <div>
+                                    <h3 className="font-bold text-pink-700 dark:text-pink-300 text-sm mb-1">Exciting offers available</h3>
+                                    <p className="text-pink-600/80 dark:text-pink-400/80 text-xs">Have a coupon code? Apply it here for extra discounts.</p>
+
+                                    {!showCouponInput && (
+                                        <button
+                                            onClick={() => setShowCouponInput(true)}
+                                            className="mt-2 text-xs font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 hover:underline"
+                                        >
+                                            Apply Coupon
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+
+                            {showCouponInput && (
+                                <div className="mt-2 flex gap-2 animate-in fade-in slide-in-from-top-1">
+                                    <input
+                                        type="text"
+                                        placeholder="Enter Coupon Code"
+                                        value={couponCode}
+                                        onChange={(e) => setCouponCode(e.target.value)}
+                                        className="flex-1 bg-white dark:bg-zinc-800 border border-pink-200 dark:border-pink-900/50 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-pink-500/20"
+                                    />
+                                    <button
+                                        onClick={handleApplyCoupon}
+                                        className="bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold px-4 py-1.5 rounded-lg transition-colors"
+                                    >
+                                        Apply
+                                    </button>
+                                </div>
+                            )}
+                        </div>
 
                         {/* Plan Selection Cards */}
                         <div className="space-y-4">
