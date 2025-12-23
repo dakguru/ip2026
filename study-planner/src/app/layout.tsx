@@ -8,6 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import NativeMobileSpacer from "@/components/NativeMobileSpacer";
+import AIGuruWidget from "@/components/AIGuruWidget";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -47,6 +48,7 @@ export default function RootLayout({
           </NativeMobileSpacer>
           <MobileBottomNav />
           <WhatsAppButton />
+          <AIGuruWidget />
           <SpeedInsights />
         </ThemeProvider>
       </body>

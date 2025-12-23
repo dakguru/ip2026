@@ -71,8 +71,42 @@ export default function QuizDashboard() {
         setAnswers(prev => ({ ...prev, [qId]: idx }));
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
+        if (!generatedSet) return;
+
+        // Calculate score for submission
+        let score = 0;
+        let correct = 0;
+        let wrong = 0;
+        generatedSet.questions.forEach(q => {
+            const ans = answers[q.id];
+            if (ans === q.correctAnswer) {
+                score++;
+                correct++;
+            } else if (ans !== undefined) {
+                wrong++;
+            }
+        });
+
         setIsSubmitted(true);
+
+        try {
+            // Fire and forget (or await if we want to show saving state)
+            await fetch('/api/quiz/result', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    topicId: selectedTopic?.id || 'unknown',
+                    topicTitle: generatedSet.title.replace('Practice: ', ''),
+                    score,
+                    totalQuestions: generatedSet.questions.length,
+                    correctAnswers: correct,
+                    wrongAnswers: wrong
+                })
+            });
+        } catch (err) {
+            console.error('Failed to save progress:', err);
+        }
     };
 
     const calculateScore = () => {
