@@ -13,40 +13,65 @@ export async function POST(req: Request) {
         }
 
         const { message, history } = await req.json();
-
         const genAI = new GoogleGenerativeAI(apiKey);
-        // Initialize with gemini-1.5-pro (more stable/widely available than flash sometimes)
-        // If this fails, we might need to fallback to gemini-pro (1.0) but that doesn't support systemInstruction.
-        // For now, let's try gemini-1.5-pro.
-        const model = genAI.getGenerativeModel({
-            model: "gemini-1.5-pro",
-            systemInstruction: AI_GURU_SYSTEM_PROMPT
-        });
 
-        // Convert frontend history format to Gemini format if needed, 
-        // or just use the last message + context if history is complex.
-        // Gemini 'chat' format: parts: [{text: "..."}], role: "user" | "model"
+        // Helper to run chat with specific model config
+        const runChat = async (modelName: string, useSystemInstruction: boolean) => {
+            const config: any = { model: modelName };
+            if (useSystemInstruction) {
+                config.systemInstruction = AI_GURU_SYSTEM_PROMPT;
+            }
 
-        const chatHistory = history.map((msg: any) => ({
-            role: msg.role === 'user' ? 'user' : 'model',
-            parts: [{ text: msg.content }]
-        }));
+            const model = genAI.getGenerativeModel(config);
 
-        const chat = model.startChat({
-            history: chatHistory,
-            generationConfig: {
-                maxOutputTokens: 1000,
-            },
-        });
+            let chatHistory = history.map((msg: any) => ({
+                role: msg.role === 'user' ? 'user' : 'model',
+                parts: [{ text: msg.content }]
+            }));
 
-        const result = await chat.sendMessage(message);
-        const response = result.response;
-        const text = response.text();
+            // If not using system instruction (fallback models), prepend it to context
+            if (!useSystemInstruction) {
+                const systemMsg = {
+                    role: 'user',
+                    parts: [{ text: "System Instructions: " + AI_GURU_SYSTEM_PROMPT + "\n\nUser Question: " + (chatHistory[0]?.parts[0]?.text || "") }]
+                };
+                // Replace first message or prepend
+                if (chatHistory.length > 0) {
+                    chatHistory[0] = systemMsg;
+                } else {
+                    chatHistory = [systemMsg];
+                }
+            }
 
-        return NextResponse.json({ reply: text });
+            const chat = model.startChat({
+                history: chatHistory,
+                generationConfig: { maxOutputTokens: 1000 },
+            });
+
+            const result = await chat.sendMessage(message);
+            return result.response.text();
+        };
+
+        try {
+            // Attempt 1: Gemini 1.5 Flash (Best Balance)
+            const text = await runChat("gemini-1.5-flash", true);
+            return NextResponse.json({ reply: text });
+        } catch (flashError: any) {
+            console.warn("Gemini 1.5 Flash failed, trying fallback:", flashError.message);
+
+            try {
+                // Attempt 2: Gemini Pro (Legacy Stable)
+                // Note: gemini-pro often needs system prompt in the message, not config
+                const text = await runChat("gemini-pro", false);
+                return NextResponse.json({ reply: text });
+            } catch (proError: any) {
+                console.error("All Gemini models failed:", proError);
+                throw proError; // Throw to outer catch to return error JSON
+            }
+        }
 
     } catch (error: any) {
-        console.error("AI Guru Error:", error);
+        console.error("AI Guru Final Error:", error);
         return NextResponse.json(
             { error: error.message || "Failed to process your request." },
             { status: 500 }
