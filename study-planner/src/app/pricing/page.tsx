@@ -23,6 +23,8 @@ export default function PricingPage() {
     const [discount, setDiscount] = useState(0);
     const [isProcessing, setIsProcessing] = useState(false);
     const [userEmail, setUserEmail] = useState<string | null>(null);
+    const [userName, setUserName] = useState<string | null>(null);
+    const [userMobile, setUserMobile] = useState<string | null>(null);
     const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>('free');
     const [isOfferModalOpen, setIsOfferModalOpen] = useState(false);
 
@@ -34,6 +36,8 @@ export default function PricingPage() {
                 const decoded = decodeURIComponent(match[2]);
                 const session = JSON.parse(decoded);
                 setUserEmail(session.email);
+                setUserName(session.name);
+                setUserMobile(session.mobile);
                 setCurrentMembership(session.membershipLevel || 'free');
 
                 // Auto-select upgrade plan if applicable
@@ -454,6 +458,8 @@ export default function PricingPage() {
                 isOpen={isOfferModalOpen}
                 onClose={() => setIsOfferModalOpen(false)}
                 userEmail={userEmail}
+                userName={userName}
+                userMobile={userMobile}
             />
         </div>
     );

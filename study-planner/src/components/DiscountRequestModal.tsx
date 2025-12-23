@@ -5,24 +5,29 @@ interface DiscountRequestModalProps {
     isOpen: boolean;
     onClose: () => void;
     userEmail?: string | null;
+    userName?: string | null;
+    userMobile?: string | null;
 }
 
-export const DiscountRequestModal = ({ isOpen, onClose, userEmail }: DiscountRequestModalProps) => {
+export const DiscountRequestModal = ({ isOpen, onClose, userEmail, userName, userMobile }: DiscountRequestModalProps) => {
     const [formData, setFormData] = useState({
-        name: '',
-        mobile: '',
+        name: userName || '',
+        mobile: userMobile || '',
         email: userEmail || ''
     });
     const [sending, setSending] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState("");
 
-    // Update email when prop changes
+    // Update form when props change
     useEffect(() => {
-        if (userEmail) {
-            setFormData(prev => ({ ...prev, email: userEmail }));
-        }
-    }, [userEmail]);
+        setFormData(prev => ({
+            ...prev,
+            email: userEmail || prev.email,
+            name: userName || prev.name,
+            mobile: userMobile || prev.mobile
+        }));
+    }, [userEmail, userName, userMobile]);
 
     if (!isOpen) return null;
 
@@ -129,7 +134,10 @@ Please send the discount code to this user.`;
                                     type="text"
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                    className="w-full p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all"
+                                    disabled={!!userName}
+                                    className={`w-full p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all
+                                        ${userName ? 'opacity-70 cursor-not-allowed bg-zinc-100 dark:bg-zinc-800' : ''}
+                                    `}
                                     placeholder="Enter your full name"
                                     required
                                 />
@@ -143,7 +151,10 @@ Please send the discount code to this user.`;
                                     type="tel"
                                     value={formData.mobile}
                                     onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                                    className="w-full p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all"
+                                    disabled={!!userMobile}
+                                    className={`w-full p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all
+                                        ${userMobile ? 'opacity-70 cursor-not-allowed bg-zinc-100 dark:bg-zinc-800' : ''}
+                                    `}
                                     placeholder="Enter mobile number"
                                     required
                                 />
@@ -157,7 +168,10 @@ Please send the discount code to this user.`;
                                     type="email"
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    className="w-full p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all"
+                                    disabled={!!userEmail}
+                                    className={`w-full p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none transition-all
+                                        ${userEmail ? 'opacity-70 cursor-not-allowed bg-zinc-100 dark:bg-zinc-800' : ''}
+                                    `}
                                     placeholder="Enter your email"
                                     required
                                 />
