@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Shield, Headphones, Coins, PenTool, Layout, TrendingUp, Zap, Award, Users } from "lucide-react";
 import React from "react";
 
-const cardVariants = {
+const cardVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
         opacity: 1,
