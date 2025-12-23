@@ -6,6 +6,50 @@ import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Tim
 import { QUIZ_DATA } from '@/data/quizzes';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
 
+// Custom styles for range slider
+const sliderStyles = `
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9333ea, #3b82f6);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(147, 51, 234, 0.4);
+    transition: all 0.2s ease;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.6);
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.1);
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9333ea, #3b82f6);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(147, 51, 234, 0.4);
+    transition: all 0.2s ease;
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.6);
+  }
+  
+  input[type="range"]::-moz-range-thumb:active {
+    transform: scale(1.1);
+  }
+`;
+
 export default function QuizDashboard() {
     // Navigation State
     const [view, setView] = useState<'topics' | 'config' | 'quiz'>('topics');
@@ -307,67 +351,142 @@ export default function QuizDashboard() {
         const availableQuestions = selectedTopic.sets.reduce((acc, set) => acc + set.questions.length, 0);
 
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 flex items-center justify-center transition-colors">
-                <div className="w-full max-w-lg bg-white dark:bg-zinc-900 rounded-3xl shadow-xl dark:shadow-purple-900/10 border border-zinc-100 dark:border-zinc-800 p-8">
-                    <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2 mb-6">
-                        <ArrowLeft className="w-4 h-4" /> Change Topic
-                    </button>
+            <>
+                <style dangerouslySetInnerHTML={{ __html: sliderStyles }} />
+                <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 flex items-center justify-center transition-colors">
+                    <div className="w-full max-w-lg bg-white dark:bg-zinc-900 rounded-3xl shadow-xl dark:shadow-purple-900/10 border border-zinc-100 dark:border-zinc-800 p-8">
+                        <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2 mb-6">
+                            <ArrowLeft className="w-4 h-4" /> Change Topic
+                        </button>
 
-                    <div className="mb-8">
-                        <span className="text-purple-600 dark:text-purple-400 font-bold uppercase text-xs tracking-wider">{selectedTopic.category}</span>
-                        <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100 mt-2">{selectedTopic.title}</h2>
-                        <p className="text-zinc-500 dark:text-zinc-400 mt-2 flex items-center gap-2">
-                            <BrainCircuit className="w-4 h-4" />
-                            {availableQuestions} Questions available
-                        </p>
-                    </div>
-
-                    {availableQuestions > 0 ? (
-                        <>
-                            <div className="mb-8">
-                                <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-4">How many questions do you want to attempt?</label>
-                                <div className="grid grid-cols-2 gap-3">
-                                    {[10, 20, 50].filter(n => n <= availableQuestions).map((num) => (
-                                        <button
-                                            key={num}
-                                            onClick={() => setDesiredCount(num)}
-                                            className={`p-3 rounded-xl border text-sm font-semibold transition-all
-                                                ${desiredCount === num
-                                                    ? 'bg-purple-50 dark:bg-purple-900/30 border-purple-500 text-purple-700 dark:text-purple-300'
-                                                    : 'bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300'}
-                                            `}
-                                        >
-                                            {num} Questions
-                                        </button>
-                                    ))}
-                                    <button
-                                        onClick={() => setDesiredCount(-1)}
-                                        className={`p-3 rounded-xl border text-sm font-semibold transition-all
-                                            ${desiredCount === -1
-                                                ? 'bg-purple-50 dark:bg-purple-900/30 border-purple-500 text-purple-700 dark:text-purple-300'
-                                                : 'bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300'}
-                                        `}
-                                    >
-                                        All Questions ({availableQuestions})
-                                    </button>
-                                </div>
-                            </div>
-
-                            <button
-                                onClick={startQuiz}
-                                className="w-full py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-purple-200 dark:shadow-purple-900/20 transition-all active:scale-95 flex items-center justify-center gap-2"
-                            >
-                                <PlayCircle className="w-5 h-5" /> Start Practice
-                            </button>
-                        </>
-                    ) : (
-                        <div className="bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 p-4 rounded-xl text-sm flex items-start gap-3">
-                            <AlertCircle className="w-5 h-5 shrink-0" />
-                            <p>We are currently updating the question bank for this topic. Please check back later or try another topic.</p>
+                        <div className="mb-8">
+                            <span className="text-purple-600 dark:text-purple-400 font-bold uppercase text-xs tracking-wider">{selectedTopic.category}</span>
+                            <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100 mt-2">{selectedTopic.title}</h2>
+                            <p className="text-zinc-500 dark:text-zinc-400 mt-2 flex items-center gap-2">
+                                <BrainCircuit className="w-4 h-4" />
+                                {availableQuestions} Questions available
+                            </p>
                         </div>
-                    )}
+
+                        {availableQuestions > 0 ? (
+                            <>
+                                <div className="mb-8">
+                                    <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-6">How many questions do you want to attempt?</label>
+
+                                    {/* Slider and Input Container */}
+                                    <div className="space-y-6">
+                                        {/* Input Box */}
+                                        <div className="flex items-center justify-center gap-4">
+                                            <div className="relative">
+                                                <input
+                                                    type="number"
+                                                    min="1"
+                                                    max={availableQuestions}
+                                                    value={desiredCount === -1 ? availableQuestions : desiredCount}
+                                                    onChange={(e) => {
+                                                        const val = parseInt(e.target.value) || 1;
+                                                        if (val >= availableQuestions) {
+                                                            setDesiredCount(-1);
+                                                        } else {
+                                                            setDesiredCount(Math.max(1, Math.min(val, availableQuestions)));
+                                                        }
+                                                    }}
+                                                    className="w-32 px-4 py-3 text-center text-2xl font-bold bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border-2 border-purple-300 dark:border-purple-700 rounded-xl text-purple-700 dark:text-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                                />
+                                                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-zinc-500 dark:text-zinc-400 whitespace-nowrap">
+                                                    {desiredCount === -1 ? 'All Questions' : 'Questions'}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Slider */}
+                                        <div className="px-2">
+                                            <div className="relative">
+                                                {/* Slider Track Background */}
+                                                <div className="absolute top-1/2 left-0 right-0 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full transform -translate-y-1/2"></div>
+
+                                                {/* Slider Track Fill */}
+                                                <div
+                                                    className="absolute top-1/2 left-0 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full transform -translate-y-1/2 transition-all duration-200"
+                                                    style={{
+                                                        width: `${((desiredCount === -1 ? availableQuestions : desiredCount) / availableQuestions) * 100}%`
+                                                    }}
+                                                ></div>
+
+                                                {/* Slider Input */}
+                                                <input
+                                                    type="range"
+                                                    min="1"
+                                                    max={availableQuestions}
+                                                    value={desiredCount === -1 ? availableQuestions : desiredCount}
+                                                    onChange={(e) => {
+                                                        const val = parseInt(e.target.value);
+                                                        if (val >= availableQuestions) {
+                                                            setDesiredCount(-1);
+                                                        } else {
+                                                            setDesiredCount(val);
+                                                        }
+                                                    }}
+                                                    className="relative w-full h-2 bg-transparent appearance-none cursor-pointer z-10"
+                                                    style={{
+                                                        WebkitAppearance: 'none',
+                                                    }}
+                                                />
+                                            </div>
+
+                                            {/* Min/Max Labels */}
+                                            <div className="flex justify-between mt-3 text-xs text-zinc-500 dark:text-zinc-400 font-medium">
+                                                <span>1</span>
+                                                <span>{availableQuestions}</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Quick Select Chips */}
+                                        <div className="flex items-center justify-center gap-2 flex-wrap">
+                                            <span className="text-xs text-zinc-500 dark:text-zinc-400 mr-2">Quick select:</span>
+                                            {[10, 20, 50].filter(n => n <= availableQuestions).map((num) => (
+                                                <button
+                                                    key={num}
+                                                    onClick={() => setDesiredCount(num)}
+                                                    className={`px-3 py-1 rounded-full text-xs font-semibold transition-all
+                                                    ${desiredCount === num
+                                                            ? 'bg-purple-600 text-white shadow-md'
+                                                            : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700'}
+                                                `}
+                                                >
+                                                    {num}
+                                                </button>
+                                            ))}
+                                            <button
+                                                onClick={() => setDesiredCount(-1)}
+                                                className={`px-3 py-1 rounded-full text-xs font-semibold transition-all
+                                                ${desiredCount === -1
+                                                        ? 'bg-purple-600 text-white shadow-md'
+                                                        : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700'}
+                                            `}
+                                            >
+                                                All
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button
+                                    onClick={startQuiz}
+                                    className="w-full py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-purple-200 dark:shadow-purple-900/20 transition-all active:scale-95 flex items-center justify-center gap-2"
+                                >
+                                    <PlayCircle className="w-5 h-5" /> Start Practice
+                                </button>
+                            </>
+                        ) : (
+                            <div className="bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 p-4 rounded-xl text-sm flex items-start gap-3">
+                                <AlertCircle className="w-5 h-5 shrink-0" />
+                                <p>We are currently updating the question bank for this topic. Please check back later or try another topic.</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>
+            </>
         )
     }
 
