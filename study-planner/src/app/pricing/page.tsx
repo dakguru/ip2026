@@ -50,10 +50,10 @@ export default function PricingPage() {
             id: 'gold_2026_cracker',
             name: 'LDCE IP 2026 Gold Plan',
             validity: 'Valid till Exam 2026',
-            price: 3750,
+            price: 7500,
             originalPrice: 7500,
             isPopular: true,
-            tag: '50% OFF'
+            // tag: '50% OFF' // Applied via coupon now
         }
     };
 
@@ -63,10 +63,10 @@ export default function PricingPage() {
             id: 'silver_2026_cracker',
             name: 'LDCE IP 2026 Silver Plan',
             validity: 'Valid till Exam 2026',
-            price: 2000,
+            price: 4000,
             originalPrice: 4000,
             isPopular: false,
-            tag: '50% OFF'
+            // tag: '50% OFF' 
         }
     };
 
@@ -75,9 +75,11 @@ export default function PricingPage() {
 
     // Coupon Logic
     const handleApplyCoupon = () => {
-        if (couponCode.trim().toUpperCase() === 'FIRST50') {
-            setDiscount(500); // Example extra discount
-            alert("Coupon Applied: Extra ₹500 off!");
+        const code = couponCode.trim().toUpperCase();
+        if (code === 'FIRST50' || code === 'DAKGURU50') {
+            const discountAmount = selectedPlan.price * 0.5;
+            setDiscount(discountAmount);
+            alert(`Coupon Applied! You saved ₹${discountAmount}`);
         } else {
             alert("Invalid Coupon Code");
             setDiscount(0);
