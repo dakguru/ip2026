@@ -256,7 +256,7 @@ export default function StudyPlanner() {
         if (Object.keys(openMonths).length === 0 && Object.keys(groupedSchedule).length > 0) {
             const keys = Object.keys(groupedSchedule);
             // Default open all for better search UX, or just first
-            const initial = {};
+            const initial: Record<string, boolean> = {};
             keys.forEach(k => initial[k] = true);
             setOpenMonths(initial);
         }
