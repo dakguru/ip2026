@@ -173,11 +173,27 @@ export default function NotesPage() {
 
                         {/* Content */}
                         <div className="flex-1 bg-slate-100 relative">
-                            <iframe
-                                src={selectedPdf}
-                                className="w-full h-full absolute inset-0"
-                                title="PDF Viewer"
-                            />
+                            <object
+                                data={selectedPdf}
+                                type="application/pdf"
+                                className="w-full h-full absolute inset-0 rounded-b-2xl"
+                            >
+                                <div className="flex flex-col items-center justify-center h-full p-8 text-center bg-white">
+                                    <FileText className="w-12 h-12 text-slate-300 mb-4" />
+                                    <p className="text-slate-600 font-medium mb-2">Unable to display PDF directly.</p>
+                                    <p className="text-slate-400 text-sm mb-6 max-w-md">
+                                        Your browser might not support embedding PDFs, or the file size is too large for the viewer.
+                                    </p>
+                                    <a
+                                        href={selectedPdf}
+                                        download
+                                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 text-white font-bold shadow-lg hover:shadow-purple-500/30 hover:bg-purple-700 transition-all"
+                                    >
+                                        <Download className="w-4 h-4" />
+                                        Download Instead
+                                    </a>
+                                </div>
+                            </object>
                         </div>
                     </div>
                 </div>
