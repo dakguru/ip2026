@@ -1,0 +1,851 @@
+Here are 75 high-quality MCQs based strictly on the **CCS (Classification, Control & Appeal) Rules, 1965** PDF provided.
+
+### **Part I: General & Definitions**
+
+**Q. 1.** On which date did the CCS (CCA) Rules, 1965 come into force?
+A. 1st January 1965
+B. 1st April 1965
+C. 1st December 1965
+D. 31st December 1965
+
+**Correct Answer: C**
+
+
+**Explanation:** According to Rule 1(2), the rules came into force from the 01 December 1965. 
+
+**Q. 2.** To which of the following categories do the CCS (CCA) Rules, 1965 **NOT** apply?
+A. Civilian Government servants in the Defence Services
+B. Members of the All India Service
+C. Government servants in the Ministry of Defence paid out of Defence Services Estimates
+D. Government servants holding civil posts under the Union
+
+**Correct Answer: B**
+**Explanation:** Rule 3(1)(b) explicitly states that these rules shall not apply to a member of the All India Service. They also do not apply to Railway servants and casual employment. 
+
+**Q. 3.** Under Rule 2, who is defined as the "Appointing Authority" in relation to a Government servant?
+A. Only the authority empowered to make appointments to the Service
+B. Only the authority empowered to make appointments to the post held
+C. The highest authority among those empowered to make appointments to the Service, post, or grade
+D. The President of India in all cases
+
+**Correct Answer: C**
+
+
+**Explanation:** The "Appointing Authority" is the authority empowered to make appointments to the Service, the post, or the grade, whichever authority is the highest authority. 
+
+**Q. 4.** Which of the following is excluded from the operation of the CCS (CCA) Rules, 1965 under Rule 3?
+A. Extra-Departmental Agents
+B. Group 'A' Officers
+C. Group 'B' Officers
+D. Civilian staff in Defence
+
+**Correct Answer: A**
+
+
+**Explanation:** Rule 3(1)(e) excludes Extra-Departmental Agents from the application of these rules. 
+
+### **Part II: Classification of Services**
+
+**Q. 5.** According to the classification table in the PDF, Civil Posts under Level 10 to 18 are classified as:
+A. Group 'B'
+B. Group 'A'
+C. Group 'C'
+D. Group 'D'
+
+**Correct Answer: B**
+
+
+**Explanation:** The table on Page 3 classifies posts with Pay Level from 10 to 18 as Group 'A'. 
+
+**Q. 6.** If a Central Civil post does not fall under any specific Central Civil Service, it is deemed to be included in the:
+A. General Central Service
+B. All India Service
+C. Union Public Service
+D. Special Central Service
+
+**Correct Answer: A**
+
+
+**Explanation:** Under Rule 7, Central Civil posts not included in any other Central Civil Service are deemed to be included in the General Central Service of the corresponding Group. 
+
+**Q. 7.** Which authority has the power to make appointments to Central Civil Services, Group 'A'?
+A. The Prime Minister
+B. The President
+C. The Cabinet Secretary
+D. The UPSC Chairman
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 8 states that all appointments to Central Civil Services, Group 'A' shall be made by the President. 
+
+### **Part III & IV: Suspension**
+
+**Q. 8.** A Government servant is deemed to have been placed under suspension if they are detained in custody for a period exceeding:
+A. 24 hours
+B. 48 hours
+C. 72 hours
+D. 96 hours
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 10(2)(a) states deemed suspension takes effect if detained in custody for a period exceeding 48 hours. 
+
+**Q. 9.** An order of suspension must be reviewed by the competent authority before the expiry of how many days from the effective date of suspension?
+A. 45 days
+B. 60 days
+C. 90 days
+D. 180 days
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 10(6) mandates that an order of suspension shall be reviewed before the expiry of 90 days from the effective date of suspension. 
+
+**Q. 10.** When extending suspension, the period of extension shall not exceed ______ at a time.
+A. 90 days
+B. 120 days
+C. 180 days
+D. 365 days
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 10(6) states that extension of suspension shall not be for a period exceeding 180 days at a time. 
+
+**Q. 11.** Under Rule 10(2)(b), a Government servant is deemed suspended upon conviction if sentenced to imprisonment exceeding:
+A. 24 hours
+B. 48 hours
+C. 1 week
+D. 1 month
+
+**Correct Answer: B**
+
+
+**Explanation:** Deemed suspension applies if, in the event of conviction, the servant is sentenced to a term of imprisonment exceeding 48 hours. 
+
+**Q. 12.** If no charge sheet is issued, the total period of suspension generally shall not exceed ______ days from the date of order, if suspended under Rule 10(1)(a) (contemplated proceedings).
+A. 90 days
+B. 180 days
+C. 270 days
+D. 365 days
+
+**Correct Answer: C**
+
+
+**Explanation:** Provided that where no charge sheet is issued, the total period under suspension shall not exceed 270 days from the date of order in terms of clause (a) of sub-rule (1). 
+
+**Q. 13.** If a penalty of dismissal is set aside by a Court of Law and the disciplinary authority decides to hold a further inquiry, the Government servant:
+A. Is immediately reinstated
+B. Is deemed to be under suspension from the date of the original order of dismissal
+C. Is placed on leave without pay
+D. Is treated as a fresh recruit
+
+**Correct Answer: B**
+
+
+**Explanation:** Under Rule 10(4), the Government servant shall be deemed to have been placed under suspension by the Appointing Authority from the date of the original order of dismissal. 
+
+### **Part V: Penalties (Rule 11)**
+
+**Q. 14.** Which of the following is listed as a **Minor Penalty** under Rule 11?
+A. Reduction to a lower time-scale of pay
+B. Compulsory retirement
+C. Censure
+D. Dismissal from service
+
+**Correct Answer: C**
+
+
+**Explanation:** "Censure" is listed as a minor penalty under Rule 11(i). 
+
+**Q. 15.** Which of the following constitutes a **Major Penalty**?
+A. Withholding of increments of pay
+B. Withholding of promotion
+C. Recovery of pecuniary loss
+D. Compulsory Retirement
+
+**Correct Answer: D**
+
+
+**Explanation:** Compulsory retirement is listed as a Major Penalty under Rule 11(vii). 
+
+**Q. 16.** According to Government Decisions, which of the following is true regarding "Warning"?
+A. Warning is a minor penalty.
+B. Warning is a major penalty.
+C. "Censure" is a penalty but "warning" is not a penalty.
+D. Warning leads to a break in service.
+
+**Correct Answer: C**
+
+
+**Explanation:** Government decisions clarify that "Censure" is a penalty but "warning" is not a penalty. 
+
+**Q. 17.** The penalty of "reduction to a lower stage in the time-scale of pay by one stage for a period not exceeding three years, without cumulative effect" is classified as:
+A. A Major Penalty
+B. A Minor Penalty
+C. An Administrative Action
+D. A Recordable Warning
+
+**Correct Answer: B**
+
+
+**Explanation:** This specific condition (Rule 11 (iii)(a)) is classified under Minor Penalties. 
+
+**Q. 18.** Which penalty **must** be imposed if a charge of possession of assets disproportionate to known sources of income is established?
+A. Withholding of increments
+B. Reduction in rank
+C. Removal or Dismissal from service
+D. Compulsory Retirement
+
+**Correct Answer: C**
+
+
+**Explanation:** The proviso to Rule 11 states that if the charge of disproportionate assets is established, the penalty of Removal or Dismissal shall be imposed. 
+
+**Q. 19.** Which of the following does **NOT** amount to a penalty under Rule 11?
+A. Censure
+B. Non-promotion of a government servant who is eligible, after consideration of his case
+C. Withholding of increments
+D. Recovery from pay
+
+**Correct Answer: B**
+
+
+**Explanation:** Explanation to Rule 11 lists non-promotion of a government servant after consideration as something that does not amount to a penalty. 
+
+**Q. 20.** Compensation awarded on the recommendation of the Complaints Committee regarding sexual harassment constitutes:
+A. A fine under Criminal Procedure Code
+B. A penalty under Rule 11
+C. A departmental fine
+D. A voluntary contribution
+
+**Correct Answer: B**
+
+
+**Explanation:** Any compensation awarded on the recommendation of the Complaints Committee regarding sexual harassment is considered a penalty under Rule 11(ix). 
+
+**Q. 21.** What is the effect of "Removal from service" as a penalty?
+A. It is a disqualification for future employment under the Government.
+B. It is NOT a disqualification for future employment under the Government.
+C. It bars employment only in the same department.
+D. It allows retention of 50% pension.
+
+**Correct Answer: B**
+
+
+**Explanation:** Removal from service shall not be a disqualification for future employment under the Government, unlike Dismissal. 
+
+### **Disciplinary Authorities & Inquiry Officers**
+
+**Q. 22.** Who is the competent authority to impose minor penalties on a probationer undergoing training at the Lal Bahadur Shastri National Academy of Administration?
+A. The President
+B. The Director of the said Academy
+C. The Cabinet Secretary
+D. The UPSC
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 12(4) states the Director of the Academy shall be the authority competent to impose penalties specified in clauses (i) and (iii) on such probationers. 
+
+**Q. 23.** What is the ceiling on the number of disciplinary cases a **retired official** can handle as an Inquiry Officer in a year?
+A. 4 cases
+B. 8 cases
+C. 10 cases
+D. 12 cases
+
+**Correct Answer: B**
+
+
+**Explanation:** A retired official can handle 8 cases in a year, and not more than 4 cases at a time. 
+
+**Q. 24.** For a serving official acting as a Defense Assistant, the ceiling is not more than ______ cases at a time.
+A. 2
+B. 3
+C. 4
+D. 5
+
+**Correct Answer: B**
+
+
+**Explanation:** The ceiling for a serving official acting as a Defense Assistant is not more than 3 cases at a time. 
+
+**Q. 25.** What is the rate of Honorarium for a serving Inquiry Officer (Part-time)?
+A. Rs. 40,000 per case
+B. Equal to 10% of Basic Pay drawn
+C. Equal to 15% of Basic Pay drawn
+D. Equal to 50% of Basic Pay drawn
+
+**Correct Answer: C**
+
+
+**Explanation:** The table on Page 8 specifies the rate as "Equal to 15% of Basic pay drawn". 
+
+**Q. 26.** The time limit for conducting major penalty proceedings is ______ from the date of issue of the charge sheet.
+A. 6 months
+B. 12 months
+C. 18 months
+D. 24 months
+
+**Correct Answer: C**
+
+
+**Explanation:** Govt decisions state the time limit for conducting major penalty proceedings is 18 months from the date of issue of the charge sheet. 
+
+### **Part VI: Procedure for Imposing Penalties**
+
+**Q. 27.** Which Rule outlines the procedure for imposing **Major Penalties**?
+A. Rule 11
+B. Rule 14
+C. Rule 16
+D. Rule 18
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 14 deals with the procedure for imposing major penalties. 
+
+**Q. 28.** Under Rule 14, who prepares the report after the conclusion of the inquiry?
+A. The Disciplinary Authority
+B. The Presenting Officer
+C. The Inquiring Authority
+D. The Charged Officer
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 14 implies the inquiry is held by an authority who then prepares a report containing findings on each article of charge. 
+
+**Q. 29.** The time limit for furnishing written representation by a Charged Official on the advice of UPSC is:
+A. 10 days
+B. 15 days
+C. 30 days
+D. 45 days
+
+**Correct Answer: B**
+
+
+**Explanation:** The time limit for furnishing written representation on the advice of UPSC is 15 days. 
+
+**Q. 30.** Rule 16 deals with the procedure for imposing:
+A. Major Penalties
+B. Minor Penalties
+C. Suspension
+D. Revision
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 16 is titled "Procedure for imposing minor penalties". 
+
+**Q. 31.** In a "Common Proceeding" (Rule 18), who directs that disciplinary action be taken in a common proceeding?
+A. The Head of Office
+B. The President or any other authority competent to impose the penalty of dismissal
+C. The Inquiry Officer
+D. The Complaints Committee
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 18 states the President or any other authority competent to impose the penalty of dismissal on all such servants may make the order. 
+
+**Q. 32.** Under Rule 19(i), the special procedure applies where a penalty is imposed on a Government servant on the ground of:
+A. Corruption
+B. Insubordination
+C. Conduct which has led to his conviction on a criminal charge
+D. Unauthorized absence
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 19(i) applies where a penalty is imposed on the ground of conduct which has led to his conviction on a criminal charge. 
+
+**Q. 33.** Under Rule 19(ii), an inquiry can be dispensed with if:
+A. The servant admits guilt
+B. The disciplinary authority records reasons that it is not reasonably practicable to hold an inquiry
+C. The case is old
+D. The witnesses are unavailable
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 19(ii) applies where the disciplinary authority is satisfied for reasons recorded in writing that it is not reasonably practicable to hold an inquiry. 
+
+**Q. 34.** Under Rule 15, if the disciplinary authority disagrees with the inquiry authority's findings, it must forward the report to the Government servant with:
+A. A new charge sheet
+B. Its own tentative reasons for disagreement
+C. A final penalty order
+D. A show-cause notice for dismissal
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 15(2) requires forwarding the report together with its own tentative reasons for disagreement. 
+
+**Q. 35.** Is a formal inquiry mandatory for imposing a Minor Penalty?
+A. Yes, always.
+B. No, never.
+C. Generally no, unless the disciplinary authority thinks it necessary or holds an inquiry under Rule 16(1)(b).
+D. Only if the servant requests it.
+
+**Correct Answer: C**
+**Explanation:** Rule 16 outlines a simpler procedure (informing in writing, opportunity to represent). It does not mandate a full Rule 14 inquiry unless decided otherwise. 
+
+### **Part VII: Appeals**
+
+**Q. 36.** Against which of the following orders does **NO** appeal lie under Rule 22?
+A. An order of suspension
+B. An order made by the President
+C. An order enhancing a penalty
+D. An order denying pay allowances
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 22(i) states that no appeal lies against any order made by the President. 
+
+**Q. 37.** The limitation period for preferring an appeal is ______ days from the date of delivery of the order.
+A. 30
+B. 45
+C. 60
+D. 90
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 25 states no appeal shall be entertained unless preferred within a period of 45 days. 
+
+**Q. 38.** Can the appellate authority entertain an appeal after the expiry of the limitation period?
+A. No, never.
+B. Yes, if satisfied that the appellant had sufficient cause.
+C. Yes, upon payment of a fine.
+D. Only if the President permits.
+
+**Correct Answer: B**
+
+
+**Explanation:** The proviso to Rule 25 allows the authority to entertain the appeal if satisfied that the appellant had sufficient cause. 
+
+**Q. 39.** To whom must the appeal be presented?
+A. Directly to the President.
+B. To the authority to whom the appeal lies, with a copy to the authority which made the order.
+C. To the Central Administrative Tribunal.
+D. To the Head of Office only.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 26(ii) states the appeal shall be presented to the authority to whom the appeal lies, a copy being forwarded to the authority which made the order. 
+
+**Q. 40.** In the case of an appeal against an order of suspension, the appellate authority must consider:
+A. Whether the penalty is adequate.
+B. Whether the suspension is justified or not under Rule 10.
+C. Whether to dismiss the employee.
+D. The past record of the employee.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 27(i) states the appellate authority shall consider whether in the light of Rule 10 provisions and circumstances, the order of suspension is justified or not. 
+
+### **Part VIII: Revision and Review**
+
+**Q. 41.** Who among the following is **NOT** listed as a competent authority for Revision under Rule 29?
+A. The President
+B. The Comptroller and Auditor-General (for Audit & Accounts Dept)
+C. The Inquiry Officer
+D. The Appellate Authority
+
+**Correct Answer: C**
+**Explanation:** Rule 29 lists the President, CAG, Head of Department, and Appellate Authority as revising authorities. The Inquiry Officer has no revision power. 
+
+**Q. 42.** The Appellate Authority can exercise the power of revision only within ______ months of the date of the order proposed to be revised.
+A. 3
+B. 6
+C. 12
+D. 24
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 29(v) specifies the appellate authority can revise within six months of the date of the order. 
+
+**Q. 43.** "Review" under Rule 29-A is exercisable by the President when:
+A. The penalty is too harsh.
+B. New material or evidence comes to notice which was not available earlier.
+C. The employee requests a transfer.
+D. The limitation period for appeal has expired.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 29-A allows Review when new material or evidence which could not be produced or was not available comes to notice. 
+
+**Q. 44.** Can an authority who decided the appeal revise his own order under Rule 29?
+A. Yes
+B. No
+C. Only with Presidential approval
+D. Only in cases of corruption
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 29 states: "The Authority who decided the appeal cannot revise his order." 
+
+### **Borrowed/Lent Officers (Rules 20-21)**
+
+**Q. 45.** When a Government servant is lent to a State Government (Borrowing Authority), who has the power to suspend him?
+A. Only the Lending Authority
+B. Only the President
+C. The Borrowing Authority
+D. The UPSC
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 20(1) states the borrowing authority shall have the powers of the appointing authority for the purpose of placing such Government servant under suspension. 
+
+**Q. 46.** If the Borrowing Authority thinks a **Major Penalty** should be imposed on a borrowed officer:
+A. It can impose the penalty itself.
+B. It must replace the services at the disposal of the lending authority.
+C. It must ask the UPSC to impose the penalty.
+D. It must ask the Prime Minister.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 20(2)(ii) states if the borrowing authority is of the opinion that a major penalty should be imposed, it shall replace his services at the disposal of the lending authority. 
+
+### **Miscellaneous / Advanced / Data-Based**
+
+**Q. 47.** Which committee's recommendations regarding sexual harassment are significant in the context of Rule 11?
+A. Swaminathan Committee
+B. Vishakha Committee
+C. Complaints Committee
+D. Administrative Reforms Commission
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 11(ix) refers to the "Complaints Committee" inquiring into sexual harassment. 
+
+**Q. 48.** What is the rate of honorarium per case for a **Retired** Inquiry Officer if witnesses are more than 10?
+A. Rs. 20,000
+B. Rs. 30,000
+C. Rs. 40,000
+D. Rs. 50,000
+
+**Correct Answer: C**
+**Explanation:** The table on Page 8 sets the honorarium at Rs. 40,000 per case for retired IOs when witnesses are more than 10. 
+
+**Q. 49.** The time limit for final order after inquiry is:
+A. Within 1 month
+B. Within 3 months
+C. Within 6 months
+D. Within 1 year
+
+**Correct Answer: B**
+
+
+**Explanation:** The table on Page 9 lists the time limit for "Final order after inquiry" as "Within 3 months". 
+
+**Q. 50.** Proposal to CVC for first stage advice must be sent within:
+A. One month from receipt of investigation report
+B. Three months from receipt of investigation report
+C. 15 days from suspension
+D. 45 days from charge sheet
+
+**Correct Answer: A**
+
+
+**Explanation:** The table on Page 9 states: "One month from receipt of investigation report". 
+
+**Q. 51.** Under Rule 19(iii), who must be satisfied that in the interest of the security of the State, it is not expedient to hold an inquiry?
+A. The Disciplinary Authority
+B. The President
+C. The National Security Advisor
+D. The Head of Department
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 19(iii) specifically mentions "where the President is satisfied that in the interest of the security of the State...". 
+
+**Q. 52.** Disciplinary cases should be closed on the:
+A. Retirement of the official
+B. Promotion of the official
+C. Death of the charged official
+D. Transfer of the official
+
+**Correct Answer: C**
+
+
+**Explanation:** Govt decisions state that disciplinary cases should be closed on the death of the charged official. 
+
+**Q. 53.** An order of suspension made or deemed to have been made under Rule 10 shall NOT be valid after 90 days unless:
+A. A charge sheet is issued.
+B. It is extended after review.
+C. The employee consents.
+D. The court permits.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 10(7) states it shall not be valid after 90 days unless it is extended after review. 
+
+**Q. 54.** "Withholding of promotion" is a penalty. However, "Non-promotion" is not a penalty if:
+A. The employee is under suspension.
+B. The employee is eligible but found unsuitable after consideration.
+C. The employee is on leave.
+D. The vacancy doesn't exist.
+
+**Correct Answer: B**
+
+
+**Explanation:** Explanation to Rule 11 states non-promotion of a government servant who is eligible, constitutes no penalty. 
+
+**Q. 55.** Service of orders, notices, etc., under Rule 30 must be done:
+A. By email
+B. In person or by registered post
+C. By publication in newspaper
+D. By affixing on the office wall only
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 30 states orders shall be served in person on the Government servant concerned or communicated to him by registered post. 
+
+**Q. 56.** Which Rules were repealed by the CCS (CCA) Rules, 1965?
+A. The CCS (Conduct) Rules, 1964
+B. The CCS (CCA) Rules, 1957
+C. The Fundamental Rules
+D. The General Financial Rules
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 34 states that The CCS (CCA) Rules, 1957 and Civilian in Defense Services (CCA) Rules 1952 are hereby repealed. 
+
+**Q. 57.** For a common proceeding, an additional amount of Rs. ______ is payable to the Inquiry Officer.
+A. 1000
+B. 2000
+C. 5000
+D. 10000
+
+**Correct Answer: C**
+**Explanation:** In case of common proceedings, an additional amount of Rs. 5000/- will be payable to Inquiry officer. 
+
+**Q. 58.** If the disciplinary authority is not the inquiring authority, it must remit the case for further inquiry under Rule 15(1) for reasons recorded in:
+A. Verbal orders
+B. Writing
+C. Secret note
+D. Gazette notification
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 15(1) states the authority may, for reasons to be recorded by it in writing, remit the case. 
+
+**Q. 59.** Which form of communication in an appeal is explicitly prohibited under Rule 26(ii)?
+A. Typed text
+B. Handwritten text
+C. Disrespectful or improper language
+D. Lengthy arguments
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 26(ii) states the appeal shall not contain any disrespectful or improper language. 
+
+**Q. 60.** Under Rule 12(3), can a Head of Office impose penalties?
+A. Yes, if the Govt Servant is serving in that office and the Head is not lower in rank than the competent authority.
+B. No, never.
+C. Yes, any penalty including dismissal.
+D. Only on contract staff.
+
+**Correct Answer: A**
+
+
+**Explanation:** Rule 12(3) allows the Head of Office to impose penalties, except where he is lower in rank than the authority competent to impose the penalty. 
+
+### **Statement Based / Analytical (UPSC Style)**
+
+**Q. 61.** Consider the following statements regarding 'Suspension' under Rule 10:
+
+1. It is a penalty.
+2. It can be ordered if a disciplinary proceeding is contemplated.
+3. Deemed suspension applies if detained in custody for more than 48 hours.
+
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+
+
+**Explanation:** Suspension is an administrative action, not a penalty listed in Rule 11. Statements 2 and 3 are correct based on Rule 10(1) and 10(2). 
+
+**Q. 62.** Which of the following is **TRUE** regarding the distinction between Group 'A' and Group 'B' appointments?
+A. Both are appointed by the Prime Minister.
+B. Group 'A' is appointed by the President; Group 'B' by authorities specified by the President.
+C. Group 'B' appointments are made by UPSC.
+D. There is no distinction in appointing authority.
+
+**Correct Answer: B**
+**Explanation:** Rule 8 states Group 'A' are appointed by the President. Rule 9 states Group 'B' appointments are made by authorities specified by the President. 
+
+**Q. 63.** Match the Rule Number with its Subject:
+
+1. Rule 11  --- (i) Suspension
+2. Rule 10  --- (ii) Penalties
+3. Rule 14  --- (iii) Procedure for Major Penalties
+
+A. 1-(ii), 2-(i), 3-(iii)
+B. 1-(i), 2-(ii), 3-(iii)
+C. 1-(iii), 2-(i), 3-(ii)
+D. 1-(ii), 2-(iii), 3-(i)
+
+**Correct Answer: A**
+
+
+**Explanation:** Rule 10 is Suspension , Rule 11 is Penalties , Rule 14 is Procedure for Major Penalties.
+
+**Q. 64.** With respect to Rule 24 (Appellate Authority), where an order is made by an authority subordinate to the Appointing Authority, the appeal lies to:
+A. The President
+B. The Appointing Authority
+C. The Supreme Court
+D. The Prime Minister
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 24 states that for Group A and B, if the order is made by an authority subordinate to the Appointing Authority, the appeal lies to the Appointing Authority. 
+
+**Q. 65.** Regarding Rule 31, "Power to relax time-limit", who can exercise this power?
+A. Only the President
+B. The authority competent under these rules to make any order
+C. The Court
+D. The Charged Official
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 31 states "The authority competent under these rules to make any order may... extend the time". 
+
+### **Scenario / Application Based**
+
+**Q. 66.** An official is suspended on 1st January. No charge sheet is issued. By what date must the review of suspension generally be completed for it to remain valid?
+A. 1st February
+B. 1st March
+C. Before expiry of 90 days
+D. 1st July
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 10(6) requires review before the expiry of 90 days from the effective date. 
+
+**Q. 67.** A Disciplinary Authority wants to impose a penalty of "Dismissal". However, the authority is lower in rank than the Appointing Authority. Can they do it?
+A. Yes, with permission.
+B. No, Major penalties (v) to (ix) cannot be imposed by an authority lower than the Appointing Authority.
+C. Yes, in emergency.
+D. Yes, if the employee agrees.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 12(4) states Major penalties (v) to (ix) imposed not less than appointing authority. 
+
+**Q. 68.** An Inquiry Officer (Serving) submits the report. How is his honorarium payment structured?
+A. 100% after final order.
+B. 50% on submission of report, remaining within 45 days.
+C. Monthly salary only.
+D. 100% in advance.
+
+**Correct Answer: B**
+
+
+**Explanation:** Notes on Page 9 state: "50% will be paid on submission of the Inquiry Report and Remaining amount will be paid within 45 days." 
+
+**Q. 69.** A Government servant causes a pecuniary loss to the Government by negligence. Which penalty is most appropriate specifically for this under Rule 11?
+A. Censure
+B. Recovery from his pay of the whole or part of the loss
+C. Dismissal
+D. Warning
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 11(iii) specifically lists "recovery from his pay of the whole or part of any pecuniary loss caused by him to the Government by negligence..." as a penalty. 
+
+**Q. 70.** "Reduction to a lower stage in the time-scale of pay" is proposed. The order MUST specify:
+A. Whether the servant can appeal.
+B. Whether he will earn increments during the reduction period and effect on future increments.
+C. The name of his successor.
+D. The location of his next posting.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 11(v) states the order must specify directions as to whether or not he will earn increments and whether it will have the effect of postponing future increments. 
+
+### **Final Revision Set**
+
+**Q. 71.** Under Rule 23, which of the following is **NOT** an appealable order?
+A. An order of suspension.
+B. An order imposing a penalty.
+C. An order of an interlocutory nature (step-in-aid).
+D. An order enhancing a penalty.
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 22(ii) explicitly bars appeal against any order of an interlocutory nature or of the nature of a step-in-aid (other than suspension). 
+
+**Q. 72.** The "Commission" referred to in definitions (Rule 2) means:
+A. The Election Commission
+B. The Central Vigilance Commission
+C. The Union Public Service Commission
+D. The Planning Commission
+
+**Correct Answer: C**
+
+
+**Explanation:** Rule 2(d) states "Commission" means the Union Public Service Commission. 
+
+**Q. 73.** Which Group includes posts in Pay Level 6 to 9?
+A. Group A
+B. Group B
+C. Group C
+D. Group D
+
+**Correct Answer: B**
+
+
+**Explanation:** The table on Page 3 classifies Level from 6 to 9 as Group 'B'. 
+
+**Q. 74.** Who acts as the Disciplinary Authority for Group 'C' (PA/SA) staff in Postal Services?
+A. President
+B. DG (Posts)
+C. SSPOs / SPOs / SSRMs
+D. Inspector
+
+**Correct Answer: C**
+
+
+**Explanation:** The table on Page 13 lists SSPOs/SPOs/SSRMs/SRMs as the Disciplinary Authority for Group C (PA/SA). 
+
+**Q. 75.** Can a Government servant under suspension function as a Defense Assistant?
+A. No
+B. Yes
+C. Only with CVC permission
+D. Only if the suspension is revoked
+
+**Correct Answer: B**
+
+
+**Explanation:** Govt decision (k) states: "Govt. servant under suspension eligible to function as Defense counsel/Assistant."

@@ -1,0 +1,379 @@
+Jansuraksha Schemes
+
+### **Atal Pension Yojana (APY)**
+
+**Q. 1.** With reference to the institutional architecture of the Atal Pension Yojana (APY), which of the following bodies administers the scheme?
+A. Life Insurance Corporation of India (LIC)
+B. Employees' Provident Fund Organisation (EPFO)
+C. Pension Fund Regulatory and Development Authority (PFRDA)
+D. National Pension System Trust (NPS Trust)
+
+**Correct Answer: C**
+
+
+**Explanation:** The document explicitly states that APY is administered by the Pension Fund Regulatory and Development Authority (PFRDA). 
+
+---
+
+**Q. 2.** Consider the following statements regarding eligibility for the Atal Pension Yojana (APY):
+
+1. The minimum age of joining is 18 years and the maximum is 40 years.
+2. A savings bank account is optional if the subscriber provides Aadhaar.
+3. The scheme is open to Indian citizens only.
+
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+
+
+**Explanation:** Statement 1 is correct. Statement 3 is correct. Statement 2 is incorrect because a saving account is **mandatory** to opt for APY.
+
+---
+
+**Q. 3.** According to the guidelines effective from 1st October 2022, which category of individuals is explicitly ineligible to join the Atal Pension Yojana?
+A. Non-Resident Indians (NRIs)
+B. Individuals working in the organized sector
+C. Income-tax payers
+D. Individuals above the age of 50
+
+**Correct Answer: C**
+
+
+**Explanation:** From 1st October 2022, any citizen who is or has been an income-tax payer shall not be eligible to join APY. 
+
+---
+
+**Q. 4.** If an APY subscriber passes away, which of the following represents the correct order of benefit flow?
+A. Nominee receives pension  Spouse receives corpus
+B. Spouse receives pension  Nominee receives corpus
+C. Spouse receives corpus immediately  Pension stops
+D. Nominee receives corpus immediately  Pension stops
+
+**Correct Answer: B**
+**Explanation:** After the subscriber's demise, the spouse receives the same pension. After the demise of both, the nominee receives the accumulated pension wealth (corpus). 
+
+---
+
+**Q. 5.** What is the minimum period of contribution required by any subscriber under the Atal Pension Yojana?
+A. 10 years
+B. 15 years
+C. 20 years
+D. 25 years
+
+**Correct Answer: C**
+
+
+**Explanation:** Since the minimum age is 18 and maximum is 40, and pension starts at 60, the minimum period of contribution is 20 years or more. 
+
+---
+
+**Q. 6.** A subscriber to the Atal Pension Yojana wishes to upgrade their pension amount. Which of the following conditions applies to this request?
+A. It can be done at any time during the year without a fee.
+B. It is allowed only once per year, and a fee of Rs 50 is charged.
+C. It is allowed twice per year, and a fee of Rs 100 is charged.
+D. Upgradation is not permitted once the pension amount is selected.
+
+**Correct Answer: B**
+**Explanation:** The window to change the pension amount is available once throughout the year. For upgradation/downgradation (other than error cases), a fee of Rs. 50 is required. 
+
+---
+
+**Q. 7.** What is the penalty for default in contribution for the Atal Pension Yojana?
+A. Rs. 10 per month for every Rs. 500
+B. Rs. 1 per month for every Rs. 100 or part thereof
+C. Rs. 5 per month flat rate
+D. 2% of the contribution amount
+
+**Correct Answer: B**
+**Explanation:** The penalty of default is Rs. 1 per month for contribution for every Rs. 100/-, or part thereof, for each delayed monthly payment. 
+
+---
+
+**Q. 8.** Under the Central Government co-contribution eligibility for APY, the government contributed 50% of the total prescribed contribution up to a maximum of:
+A. Rs. 500 per annum
+B. Rs. 1000 per annum
+C. Rs. 2000 per annum
+D. Rs. 5000 per annum
+
+**Correct Answer: B**
+**Explanation:** The co-contribution by the Central Government is 50% of the total contribution, up to Rs. 1000 per annum. 
+
+---
+
+**Q. 9.** If an APY subscriber opts for a monthly pension of Rs. 5000, what is the indicative return of corpus amount payable to the nominee?
+A. Rs. 1.7 Lakh
+B. Rs. 5.1 Lakh
+C. Rs. 6.8 Lakh
+D. Rs. 8.5 Lakh
+
+**Correct Answer: D**
+**Explanation:** As per the table provided in the document, for a monthly pension of Rs. 5000, the return of corpus to the nominee is Rs. 8.5 Lakh. 
+
+---
+
+**Q. 10.** Regarding the closure of an APY account due to a subscriber becoming a "non-citizen" of the country, which of the following statements is true?
+A. The entire corpus including Government co-contribution is refunded.
+B. Only the Government co-contribution is refunded.
+C. Government co-contribution and interest earned on it are not returned.
+D. The account cannot be closed until maturity.
+
+**Correct Answer: C**
+**Explanation:** If a subscriber becomes a non-citizen, the APY account is closed. The Government co-contribution and interest earned on it shall **not** be returned to such subscribers. 
+
+---
+
+### **Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)**
+
+**Q. 11.** The Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) offers life insurance cover for death due to:
+A. Accidents only
+B. Natural causes only
+C. Any reason
+D. Critical illnesses only
+
+**Correct Answer: C**
+
+
+**Explanation:** PMJJBY is an insurance scheme offering life insurance cover for death due to **any reason**. 
+
+---
+
+**Q. 12.** What is the age limit for enrollment in the Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)?
+A. 18 to 40 years
+B. 18 to 50 years
+C. 18 to 60 years
+D. 18 to 70 years
+
+**Correct Answer: B**
+
+
+**Explanation:** The age limit for PMJJBY is 18 to 50 years. 
+
+---
+
+**Q. 13.** Under PMJJBY, what is the applicable lien period for subscribers enrolling for the first time (excluding death due to accident)?
+A. 15 days
+B. 30 days
+C. 45 days
+D. 60 days
+
+**Correct Answer: B**
+**Explanation:** A lien period of 30 days shall be applicable from the date of enrolment. Insurance cover is not available for death (other than accident) during this period. 
+
+---
+
+**Q. 14.** As of the updated rates (from 01.06.2022), if a person enrolls in PMJJBY in the month of October, what is the pro-rata premium payable?
+A. Rs. 436
+B. Rs. 342
+C. Rs. 228
+D. Rs. 114
+
+**Correct Answer: B**
+**Explanation:** For enrolment in September, October, and November, the pro-rata premium payable is Rs. 342. 
+
+---
+
+**Q. 15.** Which of the following institutions are termed as the "Master Policy Holders" for PMJJBY?
+A. The Reserve Bank of India
+B. Participating Banks / Post Offices
+C. The Nominees
+D. The District Magistrate
+
+**Correct Answer: B**
+
+
+**Explanation:** Participating Banks/ Post offices are the Master policy holders. 
+
+---
+
+**Q. 16.** At what age does the insurance cover under PMJJBY automatically terminate for a subscriber?
+A. 50 years
+B. 55 years
+C. 60 years
+D. 70 years
+
+**Correct Answer: B**
+
+
+**Explanation:** Termination occurs on attaining age 55 years (subject to annual renewal up to that date). 
+
+---
+
+**Q. 17.** Of the full annual premium of Rs. 436 collected under PMJJBY, what amount is appropriated as the "Insurance Premium to LIC/Insurance Company"?
+A. Rs. 400
+B. Rs. 395
+C. Rs. 380
+D. Rs. 425
+
+**Correct Answer: B**
+**Explanation:** According to the appropriation table, Rs. 395 goes to the LIC/Insurance Company out of the full Rs. 436 premium. 
+
+---
+
+**Q. 18.** If a member is covered under PMJJBY through more than one bank account and premium is received inadvertently for both:
+A. The subscriber gets double the insurance cover (Rs. 4 Lakhs).
+B. The premium for the second account is refunded with interest.
+C. The cover is restricted to Rs. 2 Lakh and duplicate premium is forfeited.
+D. The entire policy is cancelled.
+
+**Correct Answer: C**
+
+
+**Explanation:** Insurance cover will be restricted to 2 Lakh and the premium paid for duplicate insurance shall be liable to be forfeited. 
+
+---
+
+### **Pradhan Mantri Suraksha Bima Yojana (PMSBY)**
+
+**Q. 19.** What is the maximum age up to which a subscriber can continue coverage under the Pradhan Mantri Suraksha Bima Yojana (PMSBY)?
+A. 50 years
+B. 60 years
+C. 65 years
+D. 70 years
+
+**Correct Answer: D**
+**Explanation:** The scheme covers SB A/c holders in the age 18 to 70 years. Termination occurs on attaining age 70. 
+
+---
+
+**Q. 20.** What is the revised annual premium for PMSBY effective from 01.06.2022?
+A. Rs. 12
+B. Rs. 20
+C. Rs. 330
+D. Rs. 436
+
+**Correct Answer: B**
+**Explanation:** From 01.06.2022, the premium is Rs. 20/- per annum per member. 
+
+---
+
+**Q. 21.** Under PMSBY, what is the compensation amount for the "total and irrecoverable loss of sight of one eye"?
+A. Rs. 50,000
+B. Rs. 1 Lakh
+C. Rs. 1.5 Lakh
+D. Rs. 2 Lakh
+
+**Correct Answer: B**
+**Explanation:** For total and irrecoverable loss of sight of one eye, the amount is Rs. 1 Lakh. 
+
+---
+
+**Q. 22.** Which of the following represents the correct appropriation of the Rs. 20 premium under PMSBY?
+A. Rs. 18 to Insurance Company, Rs. 1 to BC/Agent, Rs. 1 to Bank
+B. Rs. 19 to Insurance Company, Rs. 1 to Bank
+C. Rs. 15 to Insurance Company, Rs. 5 to Bank
+D. Rs. 12 to Insurance Company, Rs. 8 to Bank
+
+**Correct Answer: A**
+**Explanation:** The appropriation is: Rs. 18 to Insurance Company, Rs. 1 to BC/Agent, and Rs. 1 to the participating Bank. 
+
+---
+
+**Q. 23.** In the context of PMSBY, the insurance cover is for a one-year period stretching from:
+A. 1st April to 31st March
+B. 1st January to 31st December
+C. 1st June to 31st May
+D. 1st July to 30th June
+
+**Correct Answer: C**
+
+
+**Explanation:** The cover shall be for the one-year period stretching from 1st June to 31st May. 
+
+---
+
+### **General / Comparative / Administrative**
+
+**Q. 24.** Which office is nominated as the "Nodal Office" for the settlement of death claims for PMJJBY and PMSBY?
+A. Sansad Marg Head Post Office, New Delhi
+B. GPO Mumbai
+C. RBI Headquarters
+D. PFRDA Head Office
+
+**Correct Answer: A**
+
+
+**Explanation:** Sansad Marg HO New Delhi is the nodal office for settlement of all death claim cases through respective insurance companies for PMJJBY & PMSBY. 
+
+---
+
+**Q. 25.** Which document acts as the primary KYC for identification of beneficiaries under APY, PMJJBY, and PMSBY?
+A. PAN Card
+B. Voter ID
+C. Aadhaar
+D. Driving License
+
+**Correct Answer: C**
+
+
+**Explanation:** Aadhaar would be primary KYC document for identification of beneficiaries/subscribers for APY , PMJJBY.
+
+---
+
+**Q. 26.** Consider the following pairs of schemes and their entry age limits as per the document:
+
+1. APY: 18 – 40 years
+2. PMJJBY: 18 – 55 years
+3. PMSBY: 18 – 70 years
+
+Which of the pairs given above is/are correctly matched?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+
+
+**Explanation:** Pair 1 is correct (APY 18-40). Pair 3 is correct (PMSBY 18-70). Pair 2 is incorrect because the entry age limit for PMJJBY is 18 to **50** years (cover continues to 55). 
+
+---
+
+**Q. 27.** An NRI (Non-Resident Indian) wants to join the Atal Pension Yojana. Which of the following statements is correct?
+A. NRIs are strictly prohibited from joining APY.
+B. NRIs can join, but the pension will be paid in US Dollars.
+C. NRIs can join if they have a bank account with an APY POP, aged 18-40.
+D. NRIs can only join as nominees, not subscribers.
+
+**Correct Answer: C**
+
+
+**Explanation:** NRI in the age group 18-40 years having a bank account with APY POP is eligible to open an APY account. 
+
+---
+
+**Q. 28.** For a subscriber entering APY at age 18 to get a pension of Rs. 1000/month, the monthly contribution is Rs. 42. What is the return of corpus to the nominee for this specific pension slab?
+A. Rs. 1.7 Lakh
+B. Rs. 2.5 Lakh
+C. Rs. 3.4 Lakh
+D. Rs. 8.5 Lakh
+
+**Correct Answer: A**
+**Explanation:** For a Minimum Guaranteed Pension of Rs. 1000/month, the Return of Corpus Amount to the Nominee is Rs. 1.7 Lakh. 
+
+---
+
+**Q. 29.** Regarding the "Window Period" for changing the pension amount in APY:
+A. It is available throughout the year without restriction.
+B. It is available only once throughout the year.
+C. It is available only during the month of April.
+D. It is not available; the pension amount is fixed at entry.
+
+**Correct Answer: B**
+
+
+**Explanation:** The window period to change the pension amount is available to Subscriber only once throughout the year. 
+
+---
+
+**Q. 30.** In the event of a "Total and irrecoverable loss of both Eyes" due to an accident, how much claim is payable under PMSBY?
+A. Rs. 50,000
+B. Rs. 1 Lakh
+C. Rs. 1.5 Lakh
+D. Rs. 2 Lakh
+
+**Correct Answer: D**
+**Explanation:** Total and irrecoverable loss of both Eyes falls under the category eligible for Rs. 2 Lakh coverage.

@@ -1,0 +1,448 @@
+Here are 30 high-quality MCQs based strictly on the **Government Savings Promotion General Rules, 2018** provided in the PDF.
+
+### **Batch 1: Basic Definitions & Eligibility**
+
+**Q. 1.** With reference to the Government Savings Promotion General Rules, 2018, what is the meaning of **"Eligible Balance"**?
+
+A. The total principal amount deposited by the account holder excluding interest.
+B. The balance at the credit of the account including accrued interest, after deducting outstanding loans and interest.
+C. The minimum balance required to maintain the account active.
+D. The amount available for withdrawal after deducting tax at source.
+
+**Correct Answer: B**
+
+
+**Explanation:** "Eligible Balance" means the amount of balance at the credit of the account, including interest accrued thereon, after effecting recoveries on account of outstanding principal and interest, if any, in respect of a loan availed by the depositor.
+
+---
+
+**Q. 2.** Which of the following statements regarding the opening of an account by a **Minor** is **CORRECT**?
+
+A. A minor can open an account only through a guardian; they cannot operate it independently.
+B. A minor who has attained the age of ten years may open and operate an account.
+C. A minor must be at least 15 years old to operate an account independently.
+D. Minors are not permitted to open accounts under these rules.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 4(2) states that a minor who has attained the age of ten years may open and operate an account in accordance with the provisions of a Savings Scheme.
+
+---
+
+**Q. 3.** If a depositor in a savings scheme subsequently becomes a **Non-Resident Indian (NRI)** during the period the account is in operation, which of the following consequences follow?
+
+1. The account must be closed immediately.
+2. The account may be continued till maturity.
+3. The benefits shall be available on a non-repatriation basis.
+4. The account can be extended for 5 years after maturity.
+
+Select the correct option:
+A. 1 and 3 only
+B. 2 and 3 only
+C. 2 and 4 only
+D. 1, 2, and 3
+
+**Correct Answer: B**
+**Explanation:** If a depositor becomes an NRI, the account may be continued till its maturity and benefits are available only on a non-repatriation basis. However, the account shall **not** be allowed to be extended or continued beyond maturity.
+
+---
+
+### **Batch 2: Opening of Accounts & KYC**
+
+**Q. 4.** Under Rule 6, if an individual has not submitted the Permanent Account Number (PAN) at the time of opening the account, they must submit it within two months of which of the following events?
+
+A. The balance in the account exceeds Rs. 10,000 at any point.
+B. The aggregate of all withdrawals and transfers in a month exceeds Rs. 10,000.
+C. The aggregate of all accounts in any financial year exceeds Rs. 50,000.
+D. The account completes one year of operation.
+
+**Correct Answer: B**
+**Explanation:** The PAN must be submitted if the aggregate of all withdrawals and transfers in a month from the account exceeds Rs. 10,000. Other triggers include balance exceeding Rs. 50,000  or aggregate of all accounts exceeding Rs. 1,00,000 in a financial year.
+
+---
+
+**Q. 5.** Which of the following is **NOT** listed as an "Officially Valid Document" for proof of address if the Aadhaar or PAN does not contain the present address?
+
+A. Utility bill (electricity/telephone) not more than two months old.
+B. Property or Municipal tax receipt.
+C. Letter from a Gazetted Officer confirming the address.
+D. Pension payment orders issued to retired employees by Public Sector Undertakings.
+
+**Correct Answer: C**
+
+
+**Explanation:** The rules list utility bills , property/municipal tax receipts , and pension payment orders  as valid. A letter from a Gazetted Officer is not explicitly mentioned in this list; whereas allotment letters from employers like State/Central Govt are mentioned.
+
+---
+
+**Q. 6.** Consider the following statements regarding **Joint Accounts**:
+
+1. A Joint 'A' type account is operated by all depositors jointly or surviving depositors.
+2. A Joint 'B' type account is operated by any of the depositors or surviving depositors severally.
+3. A Single Account can be converted into a Joint Account at any time.
+
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: B**
+
+
+**Explanation:** Statements 1 and 2 are correct definitions of Joint 'A' and Joint 'B' accounts. Statement 3 is incorrect because an account opened as a Single Account cannot be subsequently converted into a Joint Account or vice versa, except when a Joint Account is converted to single upon the death of a holder.
+
+---
+
+### **Batch 3: Operations & Interest**
+
+**Q. 7.** If a depositor ceases to be a **citizen of India**, how is the interest on their account calculated until closure?
+
+A. No interest is payable from the date they cease to be a citizen.
+B. Interest is paid at the specific Savings Scheme rate until the account is closed.
+C. Interest is paid at the rate applicable to the Post Office Savings Account.
+D. Interest is paid at the fixed rate of 4% per annum.
+
+**Correct Answer: C**
+
+
+**Explanation:** If a depositor ceases to be a citizen of India, the account is deemed closed from the last day of the preceding month, and interest at the rate applicable to the **Post Office Savings Account** shall be payable till its closure.
+
+---
+
+**Q. 8.** Regarding the operation of an account by a **blind or visually challenged** individual, which of the following statements is **FALSE**?
+
+A. They must personally visit the Accounts Office for authentication of signature/thumb impression.
+B. They cannot open a Joint Account with a literate depositor.
+C. They may operate the account through a literate person they authorize.
+D. They must be accompanied by a person known to the Accounts Office during opening.
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 5(5) explicitly states: "A blind or visually challenged or illiterate depositor **may open joint account** with literate depositor". Therefore, option B is false.
+
+---
+
+**Q. 9.** In the context of transferring an account from one Accounts Office to another, which Form is required to be submitted?
+
+A. Form-3
+B. Form-5
+C. Form-7
+D. Form-10
+
+**Correct Answer: B**
+
+
+**Explanation:** An account may be transferred by submitting an application in **Form-5**. (Form-3 is for Loan/Withdrawal , Form-7 is for Pledging , Form-10 is for Nomination ).
+
+---
+
+### **Batch 4: Nomination & Claims**
+
+**Q. 10.** What is the maximum number of individuals a depositor can nominate for a single account?
+
+A. One
+B. Two
+C. Three
+D. Four
+
+**Correct Answer: D**
+
+
+**Explanation:** A depositor shall nominate one or more individuals as nominee but **not exceeding four individuals**.
+
+---
+
+**Q. 11.** A nomination made under these rules stands **cancelled** automatically under which of the following circumstances?
+
+A. If the depositor becomes an NRI.
+B. If the account is transferred to another branch.
+C. If the account is transferred as security (pledged).
+D. If the nominee becomes a major.
+
+**Correct Answer: C**
+
+
+**Explanation:** Nomination stands cancelled if the account is transferred as security under rule 16 or upon the death of all nominees.
+
+---
+
+**Q. 12.** Can a **Non-Resident Indian (NRI)** be a nominee?
+
+A. No, NRIs cannot be nominees.
+B. Yes, but payment to them will be on a non-repatriation basis.
+C. Yes, but they must be present in India to claim the amount.
+D. Yes, only if they are joint account holders.
+
+**Correct Answer: B**
+
+
+**Explanation:** An NRI shall be eligible to be nominated as nominee subject to the condition that payment to such nominee shall be on **non-repatriation basis**.
+
+---
+
+**Q. 13.** In the case of the death of a depositor where **no nomination** is in force, up to what eligible amount can the Accounts Office settle the claim without requiring a succession certificate (based on legal heir certificate/discretion)?
+
+A. Rs. 1 Lakh
+B. Rs. 2 Lakh
+C. Rs. 5 Lakh
+D. Rs. 10 Lakh
+
+**Correct Answer: C**
+**Explanation:** If the eligible amount in the account does not exceed Rs. 5 lakh, the authorized officer may pay the same to the rightful claimant on submission of specific documents (Form-11, etc.) without a succession certificate.
+
+---
+
+**Q. 14.** Match the following **Forms** (Schedule I) with their purposes:
+
+| Form | Purpose |
+| --- | --- |
+| 1. Form-13 | a. Letter of disclaimer |
+| 2. Form-14 | b. Bond of Indemnity |
+| 3. Form-15 | c. Affidavit |
+
+Select the correct matching code:
+A. 1-c, 2-a, 3-b
+B. 1-a, 2-b, 3-c
+C. 1-b, 2-c, 3-a
+D. 1-c, 2-b, 3-a
+
+**Correct Answer: A**
+**Explanation:**
+
+* Form-13: Affidavit.
+
+
+* Form-14: Letter of disclaimer.
+
+
+* Form-15: Bond of Indemnity.
+
+
+
+---
+
+### **Batch 5: Pledging & Security**
+
+**Q. 15.** Under Rule 16, an account can be transferred as security (pledged) to all of the following entities **EXCEPT**:
+
+A. The President of India.
+B. A Scheduled Bank.
+C. A Non-Banking Financial Company (NBFC) not notified by the Central Government.
+D. A Housing Finance Company approved by the National Housing Bank and notified by Central Govt.
+
+**Correct Answer: C**
+
+
+**Explanation:** The rules permit pledging to the President/Governor , Reserve Bank/Scheduled Banks/Co-ops , Corporations/Govt Companies , Local Authorities , and notified Housing Finance Companies. An un-notified NBFC is not listed.
+
+---
+
+**Q. 16.** Is it permissible to pledge an account opened on behalf of a **minor**?
+
+A. No, minor accounts can never be pledged.
+B. Yes, by the guardian without any restrictions.
+C. Yes, if the guardian certifies it is for the benefit of the minor and the minor is alive.
+D. Yes, but only after the minor attains the age of 10.
+
+**Correct Answer: C**
+
+
+**Explanation:** Transfer of a minor's account as security is permitted if the guardian certifies in writing that the minor is alive and the transfer is for the **benefit of the minor**.
+
+---
+
+### **Batch 6: Fees & Schedules**
+
+**Q. 17.** According to Schedule II, what is the fee for the **transfer of an account**?
+
+A. Rs. 50
+B. Rs. 100
+C. Rs. 200
+D. Rs. 500
+
+**Correct Answer: B**
+**Explanation:** Schedule II, item (c) lists the fee for Transfer of account as Rs. 100.
+
+---
+
+**Q. 18.** What is the fee charged for the **dishonour of a cheque**?
+
+A. Rs. 50
+B. Rs. 100
+C. Rs. 150
+D. Rs. 200
+
+**Correct Answer: B**
+**Explanation:** Schedule II, item (f) lists the Charges on dishonour of cheque as Rs. 100.
+
+---
+
+**Q. 19.** Which form is used for the **Application for Premature closure of Account**?
+
+A. GSPR-8
+B. GSPR-9
+C. GSPR-10
+D. GSPR-5
+
+**Correct Answer: A**
+
+
+**Explanation:** GSPR-8 is the "Application for Premature closure of Account (SB-7B)". GSPR-9 is for Final Withdrawal.
+
+---
+
+### **Batch 7: Advanced & Miscellaneous**
+
+**Q. 20.** Regarding the **closure of accounts**, payment of eligible balance can be made by **cash** only if:
+
+A. The amount is below Rs. 50,000.
+B. The amount is below Rs. 10,000.
+C. The amount is below the limit prescribed under the Income Tax Act, 1961.
+D. The depositor specifically requests cash regardless of the amount.
+
+**Correct Answer: C**
+
+
+**Explanation:** Payment may be made by cash, "if the amount is below the limit prescribed in this regard under the **Income Tax Act, 1961**".
+
+---
+
+**Q. 21.** If an account holder serving in the **Army, Air Force, or Navy** dies or deserts, who has the authority to send a requisition for payment of the eligible amount?
+
+A. The District Magistrate of the soldier's home town.
+B. The Commanding Officer of the Corps/Unit or Committee of Adjustment.
+C. The immediate next of kin only.
+D. The Defence Minister.
+
+**Correct Answer: B**
+
+
+**Explanation:** The Commanding Officer of the Corps, department, unit or ship, or the Committee of Adjustment may send a requisition for payment.
+
+---
+
+**Q. 22.** If any interest is credited erroneously to an account, what is the immediate action required by the Accounts Office?
+
+A. It should be adjusted against future interest.
+B. It should be reversed immediately on detection under written intimation to the depositor.
+C. It can be retained if the amount is less than Rs. 100.
+D. It becomes the rightful property of the depositor.
+
+**Correct Answer: B**
+
+
+**Explanation:** Any interest credited erroneously shall be reversed immediately on the detection by the Accounts Office under written intimation to the depositor.
+
+---
+
+**Q. 23.** Which of the following Rules or Schemes was **NOT** repealed by the Government Savings Promotion General Rules, 2018?
+
+A. The Post Office Savings Bank General Rules, 1981.
+B. The Post Office Savings Certificates Rules, 1960.
+C. The Public Provident Fund Scheme, 1968.
+D. The Government Savings Promotion Act, 1873.
+
+**Correct Answer: D**
+
+
+**Explanation:** Rule 26 repeals the Post Office Savings Bank General Rules 1981, Post Office Savings Certificates Rules 1960, and PPF Scheme 1968. The 2018 rules are actually made *under* the Government Savings Promotion Act, 1873, so the Act itself is not repealed.
+
+---
+
+**Q. 24.** Who is the competent authority to **interpret** these rules if a question arises?
+
+A. Reserve Bank of India.
+B. Department of Economic Affairs, Ministry of Finance.
+C. The Supreme Court of India.
+D. The Post Master General.
+
+**Correct Answer: B**
+
+
+**Explanation:** The Department of Economic Affairs, Ministry of Finance shall be the competent authority to interpret the same and such interpretation shall be final.
+
+---
+
+**Q. 25.** Under what circumstances is the Accounts Office **NOT** responsible for a fraudulent withdrawal?
+
+A. When the withdrawal exceeds Rs. 1 Lakh.
+B. When the fraud is committed by an employee of the Accounts Office.
+C. When a person obtains possession of the passbook/cheque book while in custody of the depositor, and the Office applied due diligence.
+D. When the signature on the cheque does not match the specimen.
+
+**Correct Answer: C**
+
+
+**Explanation:** The responsibility shall not vest with the Accounts Office for fraudulent withdrawal by a person by obtaining possession of a passbook... while in the custody of the depositor, and where the Accounts Office has applied all due diligence.
+
+---
+
+**Q. 26.** What is the "Charge of Non-maintenance of Minimum balance" inclusive of GST?
+
+A. Rs. 20
+B. Rs. 50
+C. Rs. 100
+D. Rs. 10
+
+**Correct Answer: B**
+**Explanation:** Schedule II, item (h) states the charge is Rs. 50 (inclusive GST).
+
+---
+
+**Q. 27.** Consider the following regarding the **"Power to relax"** (Rule 28):
+Who has the power to relax the requirements of these provisions if they cause undue hardship?
+
+A. The Central Government.
+B. The RBI Governor.
+C. The Head Post Office.
+D. The State Government.
+
+**Correct Answer: A**
+
+
+**Explanation:** Where the **Central Government** is satisfied that the operation of any of these rules... causes undue hardship... it may, by order, relax the requirements.
+
+---
+
+**Q. 28.** A depositor wants to open a **Single Account**. Later, they wish to convert it into a **Joint Account**. Is this permissible?
+
+A. Yes, by submitting Form-5.
+B. Yes, if the new joint holder is a spouse.
+C. No, except in the case of a single surviving Joint Account holder converting to Single.
+D. Yes, on payment of a Rs. 100 fee.
+
+**Correct Answer: C**
+
+
+**Explanation:** An account opened as a Single Account cannot be subsequently converted into a Joint Account or vice versa provided that conversion of Joint Account into single account shall be allowed only in case of a single surviving Joint Account holder.
+
+---
+
+**Q. 29.** If a minor account holder dies, to whom shall the eligible balance be paid?
+
+A. The Government of India.
+B. The Guardian (if opened before 1st April 2018 without nomination) or the Nominee.
+C. The siblings of the minor only.
+D. It is transferred to a welfare fund.
+
+**Correct Answer: B**
+
+
+**Explanation:** The eligible balance shall be paid to the nominee. However, for accounts opened before 1st April 2018 where no nomination was permissible, it is paid to the guardian.
+
+---
+
+**Q. 30.** For an **illiterate depositor**, who must witness their thumb impression on **each occasion of withdrawal**?
+
+A. A Gazetted Officer.
+B. The Branch Manager.
+C. An independent witness acceptable to the Accounts Office.
+D. A family member.
+
+**Correct Answer: C**
+
+
+**Explanation:** The thumb impression of the illiterate depositor shall be witnessed by an **independent witness acceptable to the Accounts Office** on each occasion of withdrawal.

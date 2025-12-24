@@ -73,6 +73,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             </Link>
 
                             <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                                <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Home</Link>
                                 <Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About Us</Link>
                                 <Link href="/blog" className="hover:text-blue-600 dark:hover:text-blue-400">DG Blog</Link>
                                 <Link href="/social" className="hover:text-blue-600 dark:hover:text-blue-400">DG Community</Link>
@@ -101,17 +102,8 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             </nav>
                         </div>
 
-                        {/* 2. Middle: Search Bar (Hidden on mobile) */}
-                        <div className="hidden md:flex flex-1 max-w-md relative group">
-                            <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                                <Search className="w-4 h-4 text-zinc-400" />
-                            </div>
-                            <input
-                                type="text"
-                                placeholder="Search exams, mock tests..."
-                                className="w-full bg-zinc-100 dark:bg-zinc-900 border-none rounded-lg pl-10 pr-4 py-2.5 text-sm outline-none ring-1 ring-transparent focus:ring-blue-500/50 transition-all dark:text-zinc-200"
-                            />
-                        </div>
+                        {/* 2. Middle: Spacer (formerly search) */}
+                        <div className="hidden md:flex flex-1 max-w-md"></div>
 
                         {/* 3. Right: Actions */}
                         <div className="flex items-center gap-3 sm:gap-4 shrink-0">
@@ -155,19 +147,16 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                 {mobileMenuOpen && (
                     <div className="lg:hidden fixed inset-0 top-[60px] z-40 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 overflow-y-auto pb-20 p-4">
                         <div className="flex flex-col space-y-4">
-                            {/* Mobile Search */}
-                            <div className="relative group md:hidden">
-                                <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                                    <Search className="w-4 h-4 text-zinc-400" />
-                                </div>
-                                <input
-                                    type="text"
-                                    placeholder="Search..."
-                                    className="w-full bg-zinc-100 dark:bg-zinc-900 border-none rounded-lg pl-10 pr-4 py-3 text-sm outline-none ring-1 ring-transparent focus:ring-blue-500/50 transition-all dark:text-zinc-200"
-                                />
-                            </div>
+                            {/* Mobile Search - Removed */}
 
                             <nav className="flex flex-col space-y-2 mt-4">
+                                <Link
+                                    href="/"
+                                    className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Home
+                                </Link>
                                 <Link
                                     href="/about"
                                     className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
