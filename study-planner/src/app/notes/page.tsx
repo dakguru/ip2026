@@ -1,225 +1,156 @@
 "use client";
 
-import { useState } from 'react';
-import Link from "next/link";
-import {
-    Search,
-    FileText,
-    BookOpen,
-    Bookmark,
-    Clock,
-    Filter,
-    MoreVertical,
-    Download,
-    Share2,
-    Star,
-    ChevronRight,
-    Library,
-    Scale
-} from "lucide-react";
+import React, { useState } from 'react';
+import HomeHeader from '@/components/HomeHeader';
+import { FileText, Download, Eye, BookOpen, Layers } from 'lucide-react';
+
+// --- DATA ---
+const PDF_DATA = {
+    "Paper I": [
+        {
+            title: "The Post Office Act, 2023 & Rules 2024",
+            description: "Comprehensive notes on the new Post Office Act and its associated rules.",
+            filename: "PO_Act_2023_Rules_2024.pdf",
+            path: "/notes/paper-1/PO_Act_2023_Rules_2024.pdf",
+            size: "8.7 MB",
+            color: "blue"
+        },
+        {
+            title: "PMLA Act, 2002",
+            description: "Prevention of Money Laundering Act, 2002 - Key provisions and amendments.",
+            filename: "PMLA_Act_2002.pdf",
+            path: "/notes/paper-1/PMLA_Act_2002.pdf",
+            size: "8.8 MB",
+            color: "indigo"
+        }
+    ],
+    "Paper III": [
+        {
+            title: "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
+            description: "Detailed analysis of the BNSS, 2023 replacing the CrPC.",
+            filename: "BNSS_2023.pdf",
+            path: "/notes/paper-3/BNSS_2023.pdf",
+            size: "8.7 MB",
+            color: "purple"
+        }
+    ]
+};
 
 export default function NotesPage() {
-    const [activeCategory, setActiveCategory] = useState("All");
-
-    const categories = [
-        { id: "All", label: "All Materials" },
-        { id: "Manuals", label: "Postal Manuals" },
-        { id: "Acts", label: "Acts & Rules" },
-        { id: "Forms", label: "Official Forms" },
-        { id: "Saved", label: "Saved" },
-    ];
+    const [activeTab, setActiveTab] = useState("Paper I");
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-black font-sans pb-20 md:pb-0">
+        <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
+            <HomeHeader isLoggedIn={true} membershipLevel="silver" />
 
-            {/* Top Decoration */}
-            <div className="fixed top-0 left-0 right-0 h-64 bg-gradient-to-b from-blue-50/50 to-transparent dark:from-blue-950/20 pointer-events-none z-0" />
+            {/* --- HERO SECTION --- */}
+            <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white pb-20 pt-16 px-6 overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-10 -mb-10"></div>
 
-            {/* Header */}
-            <header className="sticky top-0 z-30 backdrop-blur-xl bg-white/70 dark:bg-black/70 border-b border-zinc-200/50 dark:border-zinc-800/50 supports-[backdrop-filter]:bg-white/60">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col gap-4 py-4">
-
-                        {/* Top Bar */}
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-                                    Study Material
-                                </h1>
-                                <p className="text-xs text-zinc-500 dark:text-zinc-400 font-medium mt-0.5">
-                                    Your complete digital library
-                                </p>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <button className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-300">
-                                    <Bookmark className="w-5 h-5" />
-                                </button>
-                                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 p-0.5">
-                                    <div className="w-full h-full rounded-full bg-white dark:bg-black flex items-center justify-center text-xs font-bold text-transparent bg-clip-text bg-gradient-to-tr from-blue-500 to-purple-500">
-                                        OP
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Search Bar */}
-                        <div className="relative group">
-                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <Search className="h-4 w-4 text-zinc-400 group-focus-within:text-blue-500 transition-colors" />
-                            </div>
-                            <input
-                                type="text"
-                                className="block w-full pl-10 pr-3 py-2.5 border-none rounded-2xl bg-zinc-100/50 dark:bg-zinc-900/50 text-zinc-900 dark:text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-white dark:focus:bg-zinc-900 transition-all font-medium text-sm shadow-sm"
-                                placeholder="Search for manuals, rules, or topics..."
-                            />
-                            <div className="absolute inset-y-0 right-0 pr-2 flex items-center">
-                                <button className="p-1.5 rounded-lg hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50 transition-colors">
-                                    <Filter className="w-4 h-4 text-zinc-400" />
-                                </button>
-                            </div>
-                        </div>
-
+                <div className="max-w-7xl mx-auto text-center relative z-10">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-800/50 rounded-full border border-purple-500/30 mb-6 backdrop-blur-sm">
+                        <BookOpen className="w-4 h-4 text-purple-300" />
+                        <span className="text-sm font-medium text-purple-100 tracking-wide">DIGITAL LIBRARY</span>
                     </div>
+                    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                        Study <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">Material</span>
+                    </h1>
+                    <p className="text-lg text-purple-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+                        Curated PDF notes and reference materials for your preparation.
+                    </p>
+                </div>
+            </div>
 
-                    {/* Categories Tab (Scrollable) */}
-                    <div className="flex items-center gap-6 overflow-x-auto hide-scrollbar pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 border-t border-zinc-100 dark:border-zinc-800/50 pt-2">
-                        {categories.map((cat) => (
+            {/* --- MAIN CONTENT --- */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+                {/* Tabs */}
+                <div className="flex justify-center mb-8">
+                    <div className="bg-white p-1.5 rounded-2xl shadow-lg border border-slate-200/60 inline-flex gap-2">
+                        {["Paper I", "Paper III"].map((tab) => (
                             <button
-                                key={cat.id}
-                                onClick={() => setActiveCategory(cat.id)}
-                                className={`flex flex-col items-center gap-1 pb-2 min-w-max transition-colors relative ${activeCategory === cat.id
-                                        ? 'text-blue-600 dark:text-blue-400'
-                                        : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200'
+                                key={tab}
+                                onClick={() => setActiveTab(tab)}
+                                className={`px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2 ${activeTab === tab
+                                        ? 'bg-purple-600 text-white shadow-md'
+                                        : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
                                     }`}
                             >
-                                <span className="text-sm font-semibold">{cat.label}</span>
-                                {activeCategory === cat.id && (
-                                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full layout-id" />
-                                )}
+                                <Layers className="w-4 h-4" />
+                                {tab}
                             </button>
                         ))}
                     </div>
                 </div>
-            </header>
 
-            {/* Main Content */}
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 z-10 relative">
-
-                {/* Quick Access / Featured */}
-                <section className="mb-8">
-                    <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-blue-500" />
-                        Recent & Featured
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {/* Promo/Feature Card 1 */}
-                        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 p-5 text-white shadow-lg shadow-blue-500/20 group cursor-pointer hover:shadow-xl hover:shadow-blue-500/30 transition-all">
-                            <div className="absolute top-0 right-0 p-3 opacity-10 font-black text-6xl leading-none">PDF</div>
-                            <div className="relative z-10">
-                                <span className="inline-block px-2 py-1 rounded-md bg-white/20 backdrop-blur-md text-xs font-bold mb-3 border border-white/20">
-                                    UPDATED
+                {/* Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20">
+                    {PDF_DATA[activeTab as keyof typeof PDF_DATA]?.map((file, index) => (
+                        <div
+                            key={index}
+                            className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-purple-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                        >
+                            <div className="flex items-start justify-between mb-4">
+                                <div className={`p-3 rounded-xl ${file.color === 'blue' ? 'bg-blue-50 text-blue-600' :
+                                        file.color === 'purple' ? 'bg-purple-50 text-purple-600' :
+                                            'bg-indigo-50 text-indigo-600'
+                                    }`}>
+                                    <FileText className="w-8 h-8" />
+                                </div>
+                                <span className="text-xs font-bold px-2 py-1 bg-slate-100 text-slate-500 rounded-md">
+                                    PDF
                                 </span>
-                                <h3 className="text-lg font-bold mb-1">PO Guide Part I</h3>
-                                <p className="text-blue-100 text-sm mb-4 line-clamp-2">Complete clauses and rules updated 2024 edition.</p>
-                                <div className="flex items-center gap-2 text-xs font-medium text-blue-50">
-                                    <span className="flex items-center gap-1"><BookOpen className="w-3 h-3" /> 240 Pages</span>
-                                </div>
                             </div>
-                        </div>
 
-                        {/* Promo/Feature Card 2 */}
-                        <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-5 shadow-sm hover:shadow-md hover:border-blue-500/30 transition-all group cursor-pointer relative overflow-hidden">
-                            <div className="absolute right-0 top-0 w-24 h-24 bg-purple-500/5 rounded-full blur-2xl -mr-12 -mt-12 group-hover:bg-purple-500/10 transition-colors"></div>
-                            <div className="flex items-start justify-between mb-3">
-                                <div className="p-2.5 rounded-xl bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400">
-                                    <Scale className="w-6 h-6" />
-                                </div>
-                                <button className="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200">
-                                    <MoreVertical className="w-4 h-4" />
-                                </button>
-                            </div>
-                            <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-1 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Complete IPO Act 1898</h3>
-                            <p className="text-zinc-500 dark:text-zinc-400 text-sm mb-4">Official Gazette notification with latest amendments.</p>
-                            <div className="flex items-center justify-between">
-                                <span className="text-xs font-medium text-zinc-400">PDF • 1.2 MB</span>
-                                <div className="flex items-center gap-2">
-                                    <button className="p-1.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover:text-purple-500 transition-colors">
-                                        <Star className="w-4 h-4" />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                            <h3 className="text-lg font-bold text-slate-800 mb-2 leading-tight group-hover:text-purple-700 transition-colors">
+                                {file.title}
+                            </h3>
+                            <p className="text-sm text-slate-500 mb-6 flex-grow leading-relaxed">
+                                {file.description}
+                            </p>
 
-                {/* Categories Grid */}
-                <section>
-                    <div className="flex items-center justify-between mb-4">
-                        <h2 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-                            <Library className="w-4 h-4 text-indigo-500" />
-                            Browse By Category
-                        </h2>
-                        <Link href="#" className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
-                            View All <ChevronRight className="w-3 h-3" />
-                        </Link>
-                    </div>
-
-                    <div className="space-y-3">
-                        {/* List Item Style */}
-                        <div className="group flex items-center justify-between p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/30 hover:shadow-md transition-all cursor-pointer">
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
-                                    <FileText className="w-5 h-5" />
-                                </div>
-                                <div>
-                                    <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 transition-colors">CCS (Conduct) Rules 1964</h4>
-                                    <p className="text-xs text-zinc-500 dark:text-zinc-400">Updated Jan 2024 • 45 Pages</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <button className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover:text-zinc-600 transition-colors">
+                            <div className="grid grid-cols-2 gap-3 mt-auto">
+                                <a
+                                    href={file.path}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-50 text-slate-700 font-semibold text-sm hover:bg-slate-100 transition-colors border border-slate-200"
+                                >
+                                    <Eye className="w-4 h-4" />
+                                    View
+                                </a>
+                                <a
+                                    href={file.path}
+                                    download={file.filename}
+                                    className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
+                                >
                                     <Download className="w-4 h-4" />
-                                </button>
+                                    Download
+                                </a>
+                            </div>
+                            <div className="mt-3 text-center">
+                                <span className="text-[10px] uppercase tracking-wider text-slate-300 font-semibold">{file.size}</span>
                             </div>
                         </div>
+                    ))}
 
-                        <div className="group flex items-center justify-between p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/30 hover:shadow-md transition-all cursor-pointer">
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
-                                    <BookOpen className="w-5 h-5" />
-                                </div>
-                                <div>
-                                    <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 transition-colors">Postal Manual Volume V</h4>
-                                    <p className="text-xs text-zinc-500 dark:text-zinc-400">Definitions & General Rules</p>
-                                </div>
+                    {(!PDF_DATA[activeTab as keyof typeof PDF_DATA] || PDF_DATA[activeTab as keyof typeof PDF_DATA].length === 0) && (
+                        <div className="col-span-full py-20 text-center">
+                            <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <BookOpen className="w-8 h-8 text-slate-300" />
                             </div>
-                            <div className="flex items-center gap-2">
-                                <button className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover:text-zinc-600 transition-colors">
-                                    <Download className="w-4 h-4" />
-                                </button>
-                            </div>
+                            <p className="text-slate-400">No notes available for {activeTab} yet.</p>
                         </div>
+                    )}
+                </div>
+            </div>
 
-                        <div className="group flex items-center justify-between p-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500/30 hover:shadow-md transition-all cursor-pointer">
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
-                                    <FileText className="w-5 h-5" />
-                                </div>
-                                <div>
-                                    <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 transition-colors">MNOP Project Guidelines</h4>
-                                    <p className="text-xs text-zinc-500 dark:text-zinc-400">Operational Guidelines v2.0</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <button className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover:text-zinc-600 transition-colors">
-                                    <Download className="w-4 h-4" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </main>
+            {/* --- FOOTER --- */}
+            <div className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+                <div className="max-w-7xl mx-auto px-6 text-center">
+                    <p>Dak Guru ~ Learn, Practice, Succeed.</p>
+                </div>
+            </div>
         </div>
     );
 }

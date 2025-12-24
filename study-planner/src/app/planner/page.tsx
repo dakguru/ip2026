@@ -617,7 +617,7 @@ export default function StudyPlanner() {
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <p className="mb-4">Designed for the 2026 LDCE Inspector Posts Examination.</p>
                     <p className="max-w-4xl mx-auto text-sm font-bold italic opacity-80 mt-6 leading-relaxed">
-                        Disclaimer: This schedule covers the theoretical syllabus for Paper I and Paper III based on standard notifications. Aspirants are advised to practice Drafting/Noting/Major Charge Sheet (Paper II) and General knowledge & Current Affairs/Reasoning/Aptitude/English language (Paper IV) continuously alongside this schedule, perhaps on weekends. Best Wishes..!!!
+                        Disclaimer: This schedule covers the theoretical syllabus for Paper I and Paper III based on standard notifications. Aspirants are advised to practice Drafting/Noting/Major Charge Sheet (Paper II) and General knowledge & Current Affairs/Reasoning/Aptitude/English language (Paper III) continuously alongside this schedule, perhaps on weekends. Best Wishes..!!!
                     </p>
 
                 </div>
