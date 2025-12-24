@@ -22,6 +22,14 @@ const PDF_DATA = {
             path: "/notes/paper-1/PMLA_Act_2002.pdf",
             size: "8.8 MB",
             color: "indigo"
+        },
+        {
+            title: "Government Savings Promotion Act, 1873",
+            description: "Detailed notes on the Government Savings Promotion Act, 1873.",
+            filename: "GSPA_1873.pdf",
+            path: "/notes/paper-1/GSPA_1873.pdf",
+            size: "8.7 MB",
+            color: "blue"
         }
     ],
     "Paper III": [
@@ -38,6 +46,7 @@ const PDF_DATA = {
 
 export default function NotesPage() {
     const [activeTab, setActiveTab] = useState("Paper I");
+    const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
@@ -72,8 +81,8 @@ export default function NotesPage() {
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2 ${activeTab === tab
-                                        ? 'bg-purple-600 text-white shadow-md'
-                                        : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
+                                    ? 'bg-purple-600 text-white shadow-md'
+                                    : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
                                     }`}
                             >
                                 <Layers className="w-4 h-4" />
@@ -92,8 +101,8 @@ export default function NotesPage() {
                         >
                             <div className="flex items-start justify-between mb-4">
                                 <div className={`p-3 rounded-xl ${file.color === 'blue' ? 'bg-blue-50 text-blue-600' :
-                                        file.color === 'purple' ? 'bg-purple-50 text-purple-600' :
-                                            'bg-indigo-50 text-indigo-600'
+                                    file.color === 'purple' ? 'bg-purple-50 text-purple-600' :
+                                        'bg-indigo-50 text-indigo-600'
                                     }`}>
                                     <FileText className="w-8 h-8" />
                                 </div>
@@ -110,15 +119,13 @@ export default function NotesPage() {
                             </p>
 
                             <div className="grid grid-cols-2 gap-3 mt-auto">
-                                <a
-                                    href={file.path}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <button
+                                    onClick={() => setSelectedPdf(file.path)}
                                     className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-50 text-slate-700 font-semibold text-sm hover:bg-slate-100 transition-colors border border-slate-200"
                                 >
                                     <Eye className="w-4 h-4" />
                                     View
-                                </a>
+                                </button>
                                 <a
                                     href={file.path}
                                     download={file.filename}
@@ -145,12 +152,38 @@ export default function NotesPage() {
                 </div>
             </div>
 
-            {/* --- FOOTER --- */}
-            <div className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <p>Dak Guru ~ Learn, Practice, Succeed.</p>
+            {/* --- PDF VIEWER MODAL --- */}
+            {selectedPdf && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-white rounded-2xl w-full h-full max-w-6xl flex flex-col shadow-2xl overflow-hidden relative">
+                        {/* Header */}
+                        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-white z-10 w-full">
+                            <h3 className="font-bold text-slate-800 flex items-center gap-2">
+                                <FileText className="w-5 h-5 text-purple-600" />
+                                Document Viewer
+                            </h3>
+                            <button
+                                onClick={() => setSelectedPdf(null)}
+                                className="p-2 rounded-full hover:bg-slate-100 text-slate-500 transition-colors"
+                            >
+                                <span className="sr-only">Close</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                            </button>
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1 bg-slate-100 relative">
+                            <iframe
+                                src={selectedPdf}
+                                className="w-full h-full absolute inset-0"
+                                title="PDF Viewer"
+                            />
+                        </div>
+                    </div>
                 </div>
-            </div>
+            )}
+
+            {/* --- FOOTER REMOVED --- */}
         </div>
     );
 }
