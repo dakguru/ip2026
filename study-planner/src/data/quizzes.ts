@@ -2252,7 +2252,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-16', 'Postal Manual Volume VII', 'Paper I', [63]),
   createTopic('p1-17', 'Jansuraksha Schemes', 'Paper I', [56]),
   createTopic('p1-18', 'Post Office Guide Part - I', 'Paper I', [78, 79, 80, 81]),
-  createTopic('p1-19', 'Post Office Guide Part - II', 'Paper I'),
+  createTopic('p1-19', 'Post Office Guide Part - II', 'Paper I', [82, 83, 84]),
   createTopic('p1-20', 'DIGIPIN', 'Paper I'),
   createTopic('p1-21', 'Dakghar Niryat Kendra', 'Paper I', [64]),
   createTopic('p1-22', 'MNOP PNOP', 'Paper I'),
