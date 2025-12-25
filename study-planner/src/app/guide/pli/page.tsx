@@ -515,7 +515,7 @@ export default function PLIGuide() {
                                     }`}
                             >
                                 {/* Clone element to change color if active */}
-                                {React.cloneElement(section.icon, {
+                                {React.cloneElement(section.icon as React.ReactElement<any>, {
                                     className: `w-5 h-5 ${activeSection === section.id ? 'text-indigo-200' : 'text-slate-400'}`
                                 })}
                                 <span className="truncate">{section.title}</span>
