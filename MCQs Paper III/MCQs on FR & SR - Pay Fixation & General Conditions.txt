@@ -1,0 +1,412 @@
+
+
+### **Set 1: Pay Fixation & General Conditions (Questions 1–50)**
+
+**Q1. Under FR 22(I)(a)(1), when a Government servant is promoted to a post involving higher responsibilities, how is the initial pay fixed?**
+A. One increment is added to the existing pay and then fixed at the next higher cell.
+B. At the same stage in the higher level.
+C. Two increments are added in the lower level.
+D. At the minimum of the higher pay level only.
+**Correct Answer: A**
+**Explanation:** Per **FR 22(I)(a)(1)**, one increment shall be given in the level from which the employee is promoted, and then he shall be placed at a cell equal to the figure so arrived at in the level of the post to which promoted. If no such cell is available, he is placed at the next higher cell.
+
+**Q2. As per the 2024-2025 updates, the ceiling of Retirement Gratuity and Death Gratuity has been increased to what amount due to DA reaching 50%?**
+A. ₹10 Lakh
+B. ₹20 Lakh
+C. **₹25 Lakh**
+D. ₹30 Lakh
+**Correct Answer: C**
+**Explanation:** Following the increase of Dearness Allowance (DA) to **50%** effective from **January 2024**, the Government of India enhanced the maximum limit of Retirement and Death Gratuity from ₹20 Lakh to **₹25 Lakh**.
+
+**Q3. Which Fundamental Rule governs the "Lien" of a Government servant on a permanent post?**
+A. FR 9
+B. FR 13
+C. FR 56
+D. FR 22
+**Correct Answer: B**
+**Explanation:** **FR 13** details the circumstances under which a Government servant holds a lien on a post. A lien represents the title of a Government servant to hold on a regular basis a post to which he has been appointed.
+
+**Q4. What is the minimum service required for a Government servant to be eligible for "Stepping up of Pay" to be at par with a junior?**
+A. 5 years
+B. 1 year
+C. Both must belong to the same cadre and the posts must be identical.
+D. No minimum service, only seniority matters.
+**Correct Answer: C**
+**Explanation:** Stepping up of pay is allowed when a senior official draws less pay than their junior, provided both belong to the **same cadre**, the posts are identical, and the anomaly is directly result of **FR 22** application.
+
+**Q5. Under the revised FR 56(j), the performance of a Government servant is reviewed to decide on premature retirement at what age?**
+A. 50 years (for Group A & B) or 55 years
+B. 58 years
+C. 45 years
+D. 59 years
+**Correct Answer: A**
+**Explanation:** **FR 56(j)** allows the Appropriate Authority to retire any Government servant in public interest by giving 3 months' notice or pay after they attain **50 years** (if they entered service before age 35) or **55 years** in other cases. Recent **2024 guidelines** emphasize "probity and efficacy."
+
+**Q6. When a Government servant is under suspension, they are entitled to a Subsistence Allowance under which rule?**
+A. FR 22
+B. FR 53
+C. FR 17
+D. FR 101
+**Correct Answer: B**
+**Explanation:** **FR 53** governs the payment of Subsistence Allowance. It is initially equal to the leave salary which the employee would have drawn if on half-pay leave.
+
+**Q7. If the period of suspension exceeds 3 months, the amount of subsistence allowance can be increased by up to what percentage if the delay is not attributable to the Government servant?**
+A. 25%
+B. 50%
+C. 10%
+D. 75%
+**Correct Answer: B**
+**Explanation:** Under **FR 53(1)(ii)(a)**, if the period of suspension exceeds **3 months**, the amount may be increased by up to **50%** of the subsistence allowance initially admissible if the delay in inquiry is not the official's fault.
+
+**Q8. A Government servant officiating in a post is allowed to draw the pay of the higher post under which rule?**
+A. FR 31
+B. FR 26
+C. FR 9(21)
+D. FR 49
+**Correct Answer: A**
+**Explanation:** **FR 31** states that a Government servant officiating in a post will draw the pay of that post, subject to the provisions of **FR 35** (which allows the Government to restrict the officiating pay).
+
+**Q9. Which of the following does NOT count as "duty" for the purpose of increments under FR 26?**
+A. Service on probation
+B. Joining Time
+C. Extra Ordinary Leave (EOL) without medical certificate
+D. Authorized Leave with pay
+**Correct Answer: C**
+**Explanation:** Per **FR 26**, all duty in a post on a time-scale counts for increments. **EOL** without a medical certificate does **not** count for increments unless granted for pursuing higher technical studies or due to inability to join duty on medical grounds.
+
+**Q10. What is the current rate of HRA for 'X' category cities as of July 2025 (DA having crossed 50%)?**
+A. 24%
+B. 27%
+C. **30%**
+D. 10%
+**Correct Answer: C**
+**Explanation:** Upon DA reaching **50%**, HRA rates were revised to **30%**, **20%**, and **10%** for X, Y, and Z category cities respectively, as per 7th CPC recommendations implemented via DoE orders.
+
+---
+
+**Q11. "Next Below Rule" (NBR) is associated with which Fundamental Rule?**
+A. FR 22
+B. FR 30
+C. FR 113
+D. FR 54
+**Correct Answer: B**
+**Explanation:** The "Next Below Rule" (Proforma Promotion) ensures that a Government servant working outside their regular line (e.g., on deputation) does not lose their seniority or pay benefits in their parent cadre. It is governed under **FR 30**.
+
+**Q12. What is the maximum period for which a Government servant can remain on "Foreign Service"?**
+A. 3 years
+B. 5 years
+C. 7 years
+D. 10 years
+**Correct Answer: B**
+**Explanation:** As per standard terms of deputation/foreign service, the normal period is **3 years**, extendable up to **5 years**. Extension beyond **5 years** requires special relaxation from the DoPT.
+
+**Q13. In the event of death while in service, what is the maximum amount payable under the Central Government Employees Group Insurance Scheme (CGEGIS) for a Group 'C' employee?**
+A. ₹15,000
+B. ₹30,000
+C. ₹60,000
+D. ₹1,20,000
+**Correct Answer: B**
+**Explanation:** For Group 'C' employees (MTS/Postman/PA), the CGEGIS insurance cover is **₹30,000**. (Group 'B' is **₹60,000** and Group 'A' is **₹1,20,000**).
+
+**Q14. An official is promoted on 15th October. He elects to fix his pay from the date of his next increment (1st January). Under which rule is this option exercised?**
+A. FR 22(I)(a)(1)
+B. FR 26
+C. SR 12
+D. FR 52
+**Correct Answer: A**
+**Explanation:** The Savings Clause of **FR 22(I)(a)(1)** allows a Government servant to opt for pay fixation either from the date of promotion or from the date of next increment in the lower post.
+
+**Q15. What is the "Personal Pay" defined under FR 9(23)?**
+A. Pay allowed to a Government servant to save him from a loss of substantive pay due to revision.
+B. Pay granted for exceptional merit.
+C. Pay for officiating in a higher post.
+D. Overtime allowance.
+**Correct Answer: A**
+**Explanation:** **FR 9(23)** defines Personal Pay as additional pay granted to save a Government servant from a loss of substantive pay in respect of a permanent post due to a revision of pay or reduction of pay otherwise than as a disciplinary measure.
+
+**Q16. As per FR 10, no person may be substantively appointed to a post in Government service without producing what?**
+A. A Degree Certificate
+B. A Medical Certificate of Health
+C. A Character Certificate
+D. A Bond of 5 years
+**Correct Answer: B**
+**Explanation:** **FR 10** mandates that no person shall be substantively appointed to a post in Government service without a **Medical Certificate of Health** issued by the competent medical authority.
+
+**Q17. Under FR 17, when does an officer begin to draw the pay and allowances of a post?**
+A. From the date the appointment order is issued.
+B. From the date he assumes the duties of that post.
+C. From the date he is relieved from his previous post.
+D. From the first of the month.
+**Correct Answer: B**
+**Explanation:** **FR 17** stipulates that an officer shall begin to draw the pay and allowances attached to his tenure of a post from the date he **assumes the duties** of that post.
+
+**Q18. A Government servant shall not be granted leave of any kind for a continuous period exceeding ______?**
+A. 1 year
+B. 3 years
+C. 5 years
+D. 2 years
+**Correct Answer: C**
+**Explanation:** **FR 18** states that except with the permission of the President, no Government servant shall be granted leave of any kind for a continuous period exceeding **five years**.
+
+**Q19. Which rule provides that a Government servant's whole time is at the disposal of the Government?**
+A. FR 11
+B. FR 15
+C. FR 22
+D. FR 56
+**Correct Answer: A**
+**Explanation:** **FR 11** declares that unless otherwise distinctly provided, the whole time of a Government servant is at the disposal of the Government which pays him.
+
+**Q20. When a Government servant is transferred from one post to another, he can be transferred to a post carrying less pay only on which grounds?**
+A. At his own request
+B. On account of inefficiency or misbehavior
+C. Both A and B
+D. Never
+**Correct Answer: C**
+**Explanation:** **FR 15** prohibits transferring a Government servant to a post carrying less pay except on account of **inefficiency/misbehavior** or **at his own written request**.
+
+---
+
+**Q21. What is the rate of stagnation increment as per recent 7th CPC guidelines?**
+A. Fixed at ₹500
+B. 3% of the basic pay
+C. One increment is granted every two years of stagnation (Max 3).
+D. There is no provision for stagnation increment.
+**Correct Answer: C**
+**Explanation:** Government servants who have reached the maximum of the Level in the Pay Matrix for two years are granted a **stagnation increment** (equal to the rate of the last increment) every **two years**, up to a maximum of **three** such increments.
+
+**Q22. "Date of Next Increment" (DNI) after promotion is governed by which rule?**
+A. Rule 10 of CCS (RP) Rules 2016
+B. FR 22
+C. FR 26
+D. SR 300
+**Correct Answer: A**
+**Explanation:** Under the 7th CPC, **Rule 10** of CCS (Revised Pay) Rules 2016 specifies two dates for increment: **1st January** and **1st July**. If an official is promoted and pay is fixed on 1st January, the next increment falls on 1st July after completing 6 months.
+
+**Q23. Which FR is used to restrict the pay of an officiating Government servant?**
+A. FR 22
+B. FR 35
+C. FR 49
+D. FR 17
+**Correct Answer: B**
+**Explanation:** **FR 35** gives the Government the power to fix the pay of an officiating Government servant at an amount less than that admissible under **FR 22**.
+
+**Q24. In the case of a Junior choosing to draw higher pay due to a "Deputation" and then returning to the parent cadre, is the Senior eligible for "Stepping up of Pay"?**
+A. Yes, always.
+B. No, as the anomaly is not due to FR 22.
+C. Yes, if the Senior also went on deputation.
+D. No, unless the Junior is from the same department.
+**Correct Answer: B**
+**Explanation:** Stepping up of pay is not admissible if the junior draws more pay due to **deputation**, officiating in a higher post, or getting an advance increment for merit.
+
+**Q25. What is the maximum amount of "Honorarium" that a Head of Department can grant to a Government servant in a financial year?**
+A. ₹2,500
+B. ₹5,000
+C. ₹10,000
+D. ₹25,000
+**Correct Answer: B**
+**Explanation:** Per **SR 11**, the power to grant honorarium to a Government servant is restricted. A Head of Department can grant up to **₹5,000** in a financial year.
+
+**Q26. If a Government servant is dismissed from service, when does his pay and allowances cease?**
+A. From the date of the order.
+B. From the date of dismissal/removal.
+C. At the end of the month.
+D. From the date of charge sheet.
+**Correct Answer: B**
+**Explanation:** **FR 52** states that the pay and allowances of a Government servant who is dismissed or removed from service cease from the **date of such dismissal or removal**.
+
+**Q27. How many days of Joining Time is admissible when a transfer involves a change of station and the distance is less than 1,000 km?**
+A. 5 days
+B. 10 days
+C. 12 days
+D. 15 days
+**Correct Answer: B**
+**Explanation:** As per **CCS (Joining Time) Rules**, for distance **≤ 1,000 km**, **10 days** of joining time is allowed. For **> 1,000 km**, **12 days** are allowed (if travel is by rail).
+
+**Q28. Can Joining Time be combined with Vacation?**
+A. Yes
+B. No
+C. Only with permission of the President.
+D. Only for teachers.
+**Correct Answer: A**
+**Explanation:** Joining time can be combined with **vacation** or any other kind of leave except **Casual Leave**.
+
+**Q29. What is the "Fee" as defined in FR 9(6-A)?**
+A. Recurring or non-recurring payment from a private source for service.
+B. Payment from the Consolidated Fund of India.
+C. Payment for working on holidays.
+D. Allowance for medical expenses.
+**Correct Answer: A**
+**Explanation:** **FR 9(6-A)** defines "Fee" as a payment from a source other than the **Consolidated Fund of India/State**, given to a Government servant for service rendered to a private body or person.
+
+**Q30. Which rule deals with the Pay of a Government servant whose dismissal is set aside by a court?**
+A. FR 22
+B. FR 54
+C. FR 56
+D. FR 18
+**Correct Answer: B**
+**Explanation:** **FR 54** governs the pay and allowances and treatment of service on reinstatement of a Government servant after dismissal, removal, or suspension is set aside.
+
+---
+
+**Q31. Under FR 26, does a period of "Suspension" count for increments?**
+A. Yes, always.
+B. No, unless the period is treated as duty or leave for which increments are admissible.
+C. Yes, if the official is acquitted.
+D. No, it is never counted.
+**Correct Answer: B**
+**Explanation:** Period of suspension does **not** count for increment unless the competent authority, while regularizing the period under **FR 54**, specifically directs that it shall count as **duty**.
+
+**Q32. What is the maximum duration of "Special Casual Leave" for donating blood?**
+A. 1 day
+B. 2 days
+C. 3 days
+D. 5 days
+**Correct Answer: A**
+**Explanation:** Government servants are eligible for **1 day** of Special Casual Leave on the day they donate blood.
+
+**Q33. Which Fundamental Rule allows the Government to prescribe a "Time-Scale" of pay?**
+A. FR 9(31)
+B. FR 22
+C. FR 5
+D. FR 29
+**Correct Answer: A**
+**Explanation:** **FR 9(31)** defines "Time-Scale" pay, which rises by periodical increments from a minimum to a maximum.
+
+**Q34. In the context of FR 56(j), what is the "Notice Period" required for the premature retirement of a Government servant?**
+A. 1 month
+B. 2 months
+C. 3 months
+D. 6 months
+**Correct Answer: C**
+**Explanation:** The Appropriate Authority must provide **three months' notice** in writing or **three months' pay and allowances** in lieu of notice.
+
+**Q35. As of 2025, if a Government servant is on "Child Care Leave" (CCL), what is the percentage of pay drawn during the second year (next 365 days)?**
+A. 100%
+B. **80%**
+C. 50%
+D. 0%
+**Correct Answer: B**
+**Explanation:** As per the 7th CPC recommendations, during the first 365 days of CCL, 100% of pay is paid. During the **next 365 days**, only **80%** of the pay is admissible.
+
+**Q36. What is the "Overstayal of Joining Time" treated as?**
+A. Leave on Average Pay
+B. Dies-non
+C. Misbehavior under Rule 3
+D. Willful absence from duty
+**Correct Answer: D**
+**Explanation:** Any overstayal of joining time is treated as **willful absence from duty**, which may lead to disciplinary action and does not count for increment/pension unless regularized.
+
+**Q37. Which FR defines "Month"?**
+A. FR 9(18)
+B. FR 10
+C. FR 15
+D. FR 21
+**Correct Answer: A**
+**Explanation:** **FR 9(18)** defines a "Month" as a calendar month. In calculating a period expressed in terms of months and days, complete calendar months should be calculated first.
+
+**Q38. "Lien" is suspended if a Government servant is appointed in a substantive capacity to a permanent post outside the cadre on which he is borne. True or False?**
+A. True
+B. False (Lien is terminated)
+C. True, but only for Group A
+D. False (Lien is never suspended)
+**Correct Answer: B**
+**Explanation:** Per **FR 14-A**, a Government servant’s lien on a post shall **stand terminated** on his acquiring a lien on a permanent post outside the cadre on which he is borne. The concept of "suspension of lien" was largely abolished in the 2010s amendments.
+
+**Q39. What is the "Presumptive Pay" of a post?**
+A. The pay to which a Government servant would be entitled if he held the post substantively.
+B. The lowest pay of the scale.
+C. The pay including HRA.
+D. The pay after 10 years of service.
+**Correct Answer: A**
+**Explanation:** **FR 9(24)** defines Presumptive Pay as the pay to which a Government servant would be entitled if he held the post substantively and were performing its duties.
+
+**Q40. Under FR 22-B, how is pay fixed for a Government servant who is appointed to another post through "Direct Recruitment" while in service?**
+A. He starts at the minimum of the new post.
+B. His pay is protected if the new post is in a higher or same level.
+C. He gets two increments.
+D. Pay is fixed as per FR 22(I)(a)(1).
+**Correct Answer: B**
+**Explanation:** **FR 22-B** (read with DoPT orders) ensures that for "in-service" direct recruits, pay is protected by fixing it at a stage in the new level equal to the pay in the old level.
+
+---
+
+**Q41. A Government servant is entitled to Travelling Allowance (TA) for "Transfer" if the transfer is in?**
+A. Public Interest
+B. Personal Request
+C. Disciplinary grounds
+D. Mutual Transfer
+**Correct Answer: A**
+**Explanation:** **SR 114** states that TA is admissible for a transfer made in the **public interest**. Transfers made at own request do not entitle the official to TA.
+
+**Q42. What is the maximum "Composite Transfer Grant" (CTG) for a transfer involving a distance exceeding 20 km?**
+A. 50% of Basic Pay
+B. 75% of Basic Pay
+C. **80% of Basic Pay**
+D. 100% of Basic Pay
+**Correct Answer: C**
+**Explanation:** For transfers involving change of station (> 20 km), the CTG is **80% of the last month's Basic Pay**. (For transfers to/from Andaman/Lakshadweep, it is 100%).
+
+**Q43. Which SR deals with the "Medical Certificate of Fitness" for the first entry into Government Service?**
+A. SR 4
+B. SR 10
+C. SR 2
+D. SR 330
+**Correct Answer: A**
+**Explanation:** While FR 10 mandates the certificate, **SR 4** (and surrounding rules) provides the detailed procedure and the form for the **Medical Certificate of Fitness**.
+
+**Q44. What is the "Daily Allowance" for food charges for an officer in Level 5 (Postman/PA/MTS) as of 2025?**
+A. ₹500
+B. ₹800
+C. **₹500 (plus 25% hike if DA > 50%) = ₹625**
+D. ₹1,000
+**Correct Answer: C**
+**Explanation:** 7th CPC fixed food charges at ₹500 for Levels 5 and below. However, allowances like TA/DA increase by **25%** whenever DA reaches **50%**. Thus, the current rate is **₹625**.
+
+**Q45. Can a Government servant be granted "Commuted Leave" without a medical certificate?**
+A. No
+B. Yes, for up to 90 days.
+C. Yes, for "Matrimony."
+D. Yes, for "Study Leave."
+**Correct Answer: D**
+**Explanation:** Under **CCS (Leave) Rule 30**, Commuted Leave (which is twice the number of HPL) is usually granted on a medical certificate, but can be granted without one for **Study Leave** or in continuation of Maternity Leave.
+
+**Q46. "Honorarium" is different from "Fee" because?**
+A. Honorarium is paid from the Consolidated Fund of India.
+B. Fee is paid by the Government.
+C. Honorarium is for private work.
+D. There is no difference.
+**Correct Answer: A**
+**Explanation:** **Honorarium** is a non-recurring payment from the **Consolidated Fund** for special work of an occasional character. **Fee** comes from non-Government sources.
+
+**Q47. If a Government servant is promoted and his pay is fixed under FR 22(I)(a)(1), when is the "Option" for pay fixation to be exercised?**
+A. Within 6 months
+B. Within 1 month
+C. Within 15 days
+D. Within 1 year
+**Correct Answer: B**
+**Explanation:** The option to fix pay from the date of next increment must be exercised in writing within **one month** from the date of promotion.
+
+**Q48. Which rule governs the "Grant of Increments" in a time-scale?**
+A. FR 24
+B. FR 10
+C. FR 45
+D. FR 56
+**Correct Answer: A**
+**Explanation:** **FR 24** states that an increment shall ordinarily be drawn as a matter of course unless it is withheld by a competent authority as a penalty.
+
+**Q49. What happens to the "Lien" of a Government servant if they are appointed to another post on a "Probation" basis?**
+A. Lien is terminated immediately.
+B. Lien is maintained in the parent post until they are confirmed in the new post.
+C. Lien is suspended.
+D. They lose their seniority in the parent department.
+**Correct Answer: B**
+**Explanation:** Under **FR 13**, a Government servant maintains their lien on the original post while on probation in another post. The lien is only terminated once they are **confirmed** in the new post.
+
+**Q50. Under FR 15-A, can a Government servant be transferred to a post in a different cadre?**
+A. No, never.
+B. Yes, only with their consent.
+C. Yes, provided the pay is the same.
+D. Yes, for administrative reasons.
+**Correct Answer: B**
+**Explanation:** **FR 15-A** specifies that a Government servant can be transferred from one post to another in a different cadre only if they **consent** to such a transfer (unless the transfer is as a result of a reorganization of cadres).
+

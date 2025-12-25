@@ -1,0 +1,920 @@
+As a subject matter expert for the Department of Posts, I have curated **75 high-quality MCQs** based on the **CCS (Implementation of NPS) Rules, 2021** and the **CCS (Payment of Gratuity under NPS) Rules, 2021**, incorporating the significant **2024/2025 updates**.
+
+---
+
+### **Part 1: CCS (Implementation of NPS) Rules, 2021**
+
+*(Focus: Registration, Contributions, and Rules 1–9)*
+
+**Q1. When did the CCS (Implementation of NPS) Rules, 2021 officially come into force?**
+A. 1st January 2004
+
+B. 30th March 2021
+
+C. 1st April 2021
+
+D. 1st January 2021
+
+**Correct Answer:** B
+
+**Explanation:** These rules were notified by the DoP&PW and came into effect on the date of their publication in the Gazette, which was 30.03.2021.
+
+**Q2. Which of the following is NOT covered under the CCS (Implementation of NPS) Rules, 2021?**
+A. Civilian Govt servants in Defence Services
+
+B. Persons appointed on or after 01.01.2004
+
+C. Railway servants
+
+D. Employees of the Department of Posts
+
+**Correct Answer:** C
+
+**Explanation:** As per Rule 2, these rules do not apply to Railway servants, who are governed by separate Railway-specific rules.
+
+**Q3. Under Rule 4, what is the timeline for a Head of Office to ensure a new Subscriber is registered in NPS?**
+A. Within 15 days of joining
+
+B. Immediately upon joining
+
+C. By the end of the joining month
+
+D. Within 30 days of joining
+
+**Correct Answer:** B
+
+**Explanation:** Rule 4 mandates that the process of registration must begin immediately on the date of joining Government service.
+
+**Q4. According to Rule 5, which of the following components constitute 'Emoluments' for NPS contributions?**
+A. Basic Pay only
+
+B. Basic Pay + HRA
+
+C. Basic Pay + Dearness Allowance (DA) + NPA (if any)
+
+D. Basic Pay + Transport Allowance
+
+**Correct Answer:** C
+
+**Explanation:** 'Emoluments' for the purpose of NPS include Basic Pay in the hierarchy, DA, and Non-Practicing Allowance (NPA).
+
+**Q5. What is the mandatory monthly contribution percentage for a Central Government Subscriber under NPS?**
+A. 10% of Basic Pay only
+
+B. 14% of Emoluments
+
+C. 10% of Emoluments
+
+D. 12% of Emoluments
+
+**Correct Answer:** C
+
+**Explanation:** Under Rule 6, the Subscriber's contribution is 10% of their emoluments (Pay + DA).
+
+**Q6. What is the current Government matching contribution for NPS subscribers in the Central Government?**
+A. 10%
+
+B. 12%
+
+C. 14%
+
+D. 15%
+
+**Correct Answer:** C
+
+**Explanation:** The Government contribution was enhanced to 14% effective from 01.04.2019 (as per Rule 7).
+
+**Q7. If an employee is on half-pay leave, how is the NPS contribution calculated?**
+A. 10% of full pay
+
+B. 10% of the half-pay actually drawn
+
+C. No contribution is required
+
+D. 5% of full pay
+
+**Correct Answer:** B
+
+**Explanation:** Contributions are based on the emoluments actually drawn during the period of leave.
+
+**Q8. Interest on delayed deposit of NPS contributions (Rule 8) is paid at which rate?**
+A. 8% fixed
+
+B. Bank Rate + 2%
+
+C. Public Provident Fund (PPF) rate
+
+D. GPF interest rate
+
+**Correct Answer:** C
+
+**Explanation:** Rule 8 stipulates that for delayed deposits, interest is payable at the rate applicable to the Public Provident Fund (PPF) from time to time.
+
+**Q9. Who is responsible for the payment of interest in case of an administrative lapse causing delay in NPS contribution?**
+A. The Subscriber
+
+B. The Government
+
+C. The delinquent official responsible for the delay
+
+D. PFRDA
+
+**Correct Answer:** C
+
+**Explanation:** If a delay is caused by an administrative lapse, the delinquent official may be liable to pay the amount of pecuniary loss to the Government.
+
+**Q10. For a Subscriber under suspension, what happens to their NPS contributions?**
+A. Subscriptions are stopped
+
+B. Subscriber pays 10% of Subsistence Allowance; Govt pays 14% of Pay
+
+C. Subscriber pays 10% of Subsistence Allowance; Govt pays 14% of Subsistence Allowance
+
+D. Contributions are deferred until reinstatement
+
+**Correct Answer:** C
+
+**Explanation:** During suspension, contributions are based on the subsistence allowance actually drawn.
+
+**Q11. Which form is used by a Subscriber to exercise an 'Option' to avail benefits under Rule 10?**
+A. Form 2
+
+B. Form 5
+
+C. Form 1
+
+D. Form 10-A
+
+**Correct Answer:** C
+
+**Explanation:** Form 1 is the prescribed form for exercising the option to avail benefits in case of death or disability.
+
+**Q12. If a Subscriber fails to exercise an option under Rule 10, what is the 'Default Option'?**
+A. Benefits under NPS
+
+B. Benefits under CCS (Pension) Rules for first 15 years, then NPS
+
+C. Benefits under CCS (Pension) Rules
+
+D. No benefits are paid until a claim is made
+
+**Correct Answer:** C
+
+**Explanation:** As per Rule 10(4), for the first 15 years of service, the default option is benefits under CCS (Pension) Rules (Old Pension Scheme). After 15 years, the default is NPS.
+
+**Q13. How often can a Subscriber revise the option exercised in Form 1?**
+A. Once in a lifetime
+
+B. Every 5 years
+
+C. Any number of times
+
+D. Only at the time of promotion
+
+**Correct Answer:** C
+
+**Explanation:** A Subscriber can revise the option at any time during service by submitting a fresh Form 1.
+
+**Q14. Form 2 in NPS Rules, 2021 is intended for:**
+A. Bank account details
+
+B. Details of Family
+
+C. Permanent address change
+
+D. Annuity plan selection
+
+**Correct Answer:** B
+
+**Explanation:** Every Subscriber must submit details of their family in Form 2 along with the Form 1 option.
+
+**Q15. Under Rule 11, 'Superannuation' occurs on the last day of the month in which the Subscriber attains:**
+A. 58 years
+
+B. 60 years
+
+C. 62 years
+
+D. 65 years
+
+**Correct Answer:** B
+
+**Explanation:** Retirement on superannuation occurs at age 60.
+
+**Q16. A Subscriber can opt for Voluntary Retirement under Rule 12 after completing:**
+A. 10 years of service
+
+B. 15 years of service
+
+C. 20 years of service
+
+D. 25 years of service
+
+**Correct Answer:** C
+
+**Explanation:** Rule 12 allows voluntary retirement after 20 years of regular service with a 3-month notice.
+
+**Q17. In case of voluntary retirement under Rule 12, what percentage of the corpus must be used for an annuity?**
+A. 40%
+
+B. 60%
+
+C. 80%
+
+D. 100%
+
+**Correct Answer:** C
+
+**Explanation:** For voluntary retirement, at least 80% must be used for an annuity (as per PFRDA regulations linked in the rules).
+
+**Q18. What happens to the PRAN in case of 'Technical Resignation' (Rule 14)?**
+A. PRAN is closed and a new one is issued
+
+B. PRAN remains the same and continues in the new department
+
+C. PRAN is frozen for 6 months
+
+D. Lump sum withdrawal is mandatory
+
+**Correct Answer:** B
+
+**Explanation:** Rule 14 ensures continuity of the PRAN and NPS account when the resignation is for taking up another Government post with proper permission.
+
+**Q19. Under Rule 18, what happens to the NPS corpus of a Subscriber who is 'Dismissed' from service?**
+A. Entire corpus is forfeited to the Govt
+
+B. Only Govt contribution is forfeited
+
+C. The Subscriber is paid the lump sum and annuity as per PFRDA regulations
+
+D. The account is frozen for 10 years
+
+**Correct Answer:** C
+
+**Explanation:** Unlike the Old Pension Scheme, Rule 18 states that on dismissal/removal, the lump sum and annuity shall be paid as per PFRDA exit regulations.
+
+**Q20. 'Compassionate Allowance' under Rule 18 is granted to:**
+A. Subscribers who retire voluntarily
+
+B. Subscribers dismissed/removed, if the case deserves special consideration
+
+C. Families of deceased subscribers only
+
+D. Subscribers with less than 5 years service
+
+**Correct Answer:** B
+
+**Explanation:** Compassionate allowance (not exceeding 2/3rd of pension/gratuity) may be granted by the competent authority to dismissed/removed employees in deserving cases.
+
+---
+
+### **Part 2: CCS (Payment of Gratuity under NPS) Rules, 2021**
+
+*(Focus: Gratuity, 2024 updates, and Death Gratuity)*
+
+**Q21. The CCS (Payment of Gratuity under NPS) Rules, 2021 are applicable to whom?**
+A. All Central Government employees
+
+B. Central Government employees covered under NPS
+
+C. GDS employees only
+
+D. Only employees in Pay Level 10 and above
+
+**Correct Answer:** B
+
+**Explanation:** These rules specifically provide gratuity benefits to employees covered under the National Pension System.
+
+**Q22. What is the minimum qualifying service required to be eligible for 'Retirement Gratuity'?**
+A. 1 year
+
+B. 3 years
+
+C. 5 years
+
+D. 10 years
+
+**Correct Answer:** C
+
+**Explanation:** Rule 22 states that retirement gratuity is payable after a minimum of 5 years of qualifying service.
+
+**Q23. As of January 1, 2024, what is the maximum limit of Retirement and Death Gratuity for Central Govt NPS subscribers?**
+A. ₹10 Lakh
+
+B. ₹20 Lakh
+
+C. ₹25 Lakh
+
+D. ₹30 Lakh
+
+**Correct Answer:** C
+
+**Explanation:** Following the DA hike to 50%, the maximum gratuity limit was increased from ₹20 Lakh to ₹25 Lakh (25% enhancement).
+
+**Q24. Under what condition was the Gratuity limit raised to ₹25 Lakh in 2024?**
+A. Recommendation of 8th CPC
+
+B. Dearness Allowance (DA) reaching 50%
+
+C. Annual budget announcement
+
+D. Increase in the cost of living index
+
+**Correct Answer:** B
+
+**Explanation:** Per the 7th CPC recommendations, the limit increases by 25% whenever DA reaches 50% of basic pay.
+
+**Q25. What is the formula for calculating 'Retirement Gratuity'?**
+A. 1/2 of emoluments for each year of service
+
+B. 1/4 of emoluments for each completed 6-monthly period
+
+C. 1 month pay for each year of service
+
+D. 1/3 of emoluments for each year of service
+
+**Correct Answer:** B
+
+**Explanation:** Calculation is based on 1/4th of emoluments (Pay + DA) for every six-monthly period of qualifying service.
+
+**Q26. What is the maximum number of times 'Emoluments' can be paid as Retirement Gratuity?**
+A. 15 times
+
+B. 16½ times
+
+C. 20 times
+
+D. 33 times
+
+**Correct Answer:** B
+
+**Explanation:** The gratuity is capped at 16½ times the emoluments, subject to the monetary ceiling (currently ₹25 Lakh).
+
+**Q27. If an NPS subscriber dies after 8 months of service, what is the rate of 'Death Gratuity' payable?**
+A. 1 month's emoluments
+
+B. 2 times of emoluments
+
+C. 6 times of emoluments
+
+D. No gratuity is paid
+
+**Correct Answer:** B
+
+**Explanation:** For service less than 1 year, the death gratuity rate is 2 times of emoluments.
+
+**Q28. An employee dies after 3 years and 4 months of service. The Death Gratuity payable is:**
+A. 2 times emoluments
+
+B. 6 times emoluments
+
+C. 12 times emoluments
+
+D. 20 times emoluments
+
+**Correct Answer:** B
+
+**Explanation:** For service of 1 year or more but less than 5 years, the rate is 6 times of emoluments.
+
+**Q29. For service of 11 years or more but less than 20 years, the Death Gratuity rate is:**
+A. 12 times emoluments
+
+B. 20 times emoluments
+
+C. 33 times emoluments
+
+D. Half of emoluments for each 6-month period
+
+**Correct Answer:** B
+
+**Explanation:** As per the defined slabs, service between 11 and 20 years qualifies for 20 times the emoluments.
+
+**Q30. What is the maximum rate (in multiples) for Death Gratuity for service of 20 years or more?**
+A. 20 times emoluments
+
+B. 33 times emoluments
+
+C. 40 times emoluments
+
+D. 16½ times emoluments
+
+**Correct Answer:** B
+
+**Explanation:** For 20 years or more, it is half of emoluments for each 6-month period, subject to a maximum of 33 times.
+
+---
+
+*(Continuing with 45 more questions to reach 75... Summarized for depth and variety)*
+
+### **Part 3: Advanced Scenarios and Miscellaneous Rules**
+
+**Q31. Which authority is the 'CRA' in NPS context?**
+A. Central Regulatory Authority
+
+B. Central Recordkeeping Agency
+
+C. Central Retirement Account
+
+D. Chief Registration Agency
+
+**Correct Answer:** B
+
+**Q32. In NPS, PRAN stands for:**
+A. Public Retirement Account Number
+
+B. Permanent Retirement Account Number
+
+C. Personal Retirement Access Number
+
+D. Pensioner's Registration and Access Number
+
+**Correct Answer:** B
+
+**Q33. What is the notice period required for voluntary retirement under Rule 12?**
+A. 1 month
+
+B. 2 months
+
+C. 3 months
+
+D. 6 months
+
+**Correct Answer:** C
+
+**Q34. If a Subscriber is on Extraordinary Leave (EOL) without medical certificate, does it count for NPS Government contribution?**
+A. Yes, at a reduced rate
+
+B. No contribution by Govt or Subscriber
+
+C. Subscriber pays for the period later
+
+D. Govt pays 14% of nominal pay
+
+**Correct Answer:** B
+
+**Explanation:** No contribution is payable during periods of EOL without pay.
+
+**Q35. Under Rule 10, the "accumulated pension corpus" includes:**
+A. Only Subscriber's contribution
+
+B. Only Government's contribution
+
+C. Both contributions and investment returns
+
+D. Subscriber's contribution + 8% interest
+
+**Correct Answer:** C
+
+**Q36. When a Subscriber chooses the NPS benefit under Rule 10, the family receives:**
+A. A fixed monthly pension from the Govt
+
+B. Lump sum and annuity from the accumulated corpus
+
+C. Only the Subscriber's portion of the corpus
+
+D. 50% of the last drawn pay
+
+**Correct Answer:** B
+
+**Q37. If "Default Option" of Old Pension Scheme is applied to a family, what happens to the NPS corpus?**
+A. It is paid to the family in addition to the pension
+
+B. The Government's contribution and interest are credited back to the Government
+
+C. Only the Subscriber's contribution is refunded
+
+D. The entire corpus is forfeited
+
+**Correct Answer:** B
+
+**Explanation:** If OPS benefits are chosen/defaulted, the Govt contribution in NPS is taken back by the Govt to fund the pension.
+
+**Q38. Rule 19 deals with "Departmental or judicial proceedings pending on retirement." In such cases:**
+A. NPS corpus is withheld
+
+B. Gratuity is withheld
+
+C. Both are withheld
+
+D. Lump sum and annuity are paid as per PFRDA; Gratuity is withheld
+
+**Correct Answer:** D
+
+**Explanation:** NPS corpus (Lump sum/Annuity) is not affected by pending proceedings; however, Gratuity can be withheld.
+
+**Q39. For calculating Gratuity, "Emoluments" for a Subscriber who retired while on 'Study Leave' is:**
+A. Stipend received
+
+B. Pay which he would have drawn but for the leave
+
+C. Half pay
+
+D. No gratuity for study leave period
+
+**Correct Answer:** B
+
+**Q40. The interest on delayed payment of Gratuity is payable if the delay is due to:**
+A. Subscriber not submitting papers
+
+B. Administrative lapses
+
+C. Court case filed by the family
+
+D. Verification of caste certificate
+
+**Correct Answer:** B
+
+**Q41. What is the rounding-off rule for qualifying service in Gratuity calculation?**
+A. 3 months or more is treated as 6 months
+
+B. Less than 6 months is ignored
+
+C. Fraction of a year equal to 3 months and above is treated as a completed six-monthly period
+
+**Correct Answer:** C
+
+**Q42. Rule 15 of NPS Rules 2021 covers benefits on:**
+A. Death during service
+
+B. Absorption in a Corporation/Company
+
+C. Invalidation
+
+D. Superannuation
+
+**Correct Answer:** B
+
+**Q43. A Subscriber with 12 years service is 'Boarded Out' due to disability. Under NPS Rules, they are entitled to:**
+A. Retirement Gratuity and Invalidation Pension (if opted)
+
+B. Only lump sum withdrawal
+
+C. Only 14% Govt contribution
+
+D. Refund of PRAN only
+
+**Correct Answer:** A
+
+**Q44. Which O.M. of Department of Posts recently reiterated Rule 10 implementation?**
+A. O.M. dated 2021
+
+B. O.M. dated Oct 2024
+
+C. O.M. dated Dec 2023
+
+D. O.M. dated Jan 2024
+
+**Correct Answer:** B
+
+**Q45. Who is the Nodal Officer for NPS in a Postal Division?**
+A. Postmaster General
+
+B. Senior Superintendent / Superintendent of Post Offices
+
+C. DDO (Drawing and Disbursing Officer)
+
+D. Inspector Posts
+
+**Correct Answer:** C
+
+**Q46. In NPS, 'Tier II' account is:**
+A. Mandatory
+
+B. For Government contribution only
+
+C. Voluntary savings account with no withdrawal restrictions
+
+D. Locked until age 60
+
+**Correct Answer:** C
+
+**Q47. If an employee is transferred to a post not covered by NPS, Rule 17 states:**
+A. PRAN is closed
+
+B. Subscriber can choose to continue NPS or switch to GPF
+
+C. Mandatory switch to GPF
+
+D. Corpus is frozen
+
+**Correct Answer:** B
+
+**Q48. The "Trustee Bank" in NPS is currently:**
+A. SBI
+
+B. RBI
+
+C. Axis Bank
+
+D. HDFC Bank
+
+**Correct Answer:** A (Note: Axis Bank also empanelled, but SBI is the primary)
+
+**Q49. Maximum age for entry into NPS (for All Citizens model, used for comparison) is:**
+A. 60
+
+B. 65
+
+C. 70
+
+D. 75
+
+**Correct Answer:** C
+
+**Q50. Under Rule 20, if a Subscriber dies, the "Head of Office" must initiate the claim:**
+A. Within 1 month
+
+B. Immediately
+
+C. After 6 months
+
+D. After the family applies
+
+**Correct Answer:** B
+
+---
+
+### **Part 4: Specific Limits and Calculations (Q51–Q75)**
+
+**Q51. What is the impact of DA reaching 50% on the Gratuity limit?**
+A. No impact
+
+B. Increased to 25 Lakh
+
+C. Increased to 30 Lakh
+
+D. Doubled
+
+**Correct Answer:** B
+
+**Q52. For calculating Death Gratuity, if basic pay is ₹30,000 and DA is ₹15,000, and service is 2 years, the amount is:**
+A. ₹90,000
+
+B. ₹1,80,000
+
+C. ₹2,70,000
+
+D. ₹4,50,000
+
+**Correct Answer:** C
+
+**Explanation:** (Pay + DA) = 45,000. For 1–5 years, it's 6 times. .
+
+**Q53. Under CCS (Gratuity under NPS) Rules, 2021, Rule 22, Retirement Gratuity is NOT payable on:**
+A. Superannuation
+
+B. Voluntary Retirement
+
+C. Resignation (unless technical)
+
+D. Invalidation
+
+**Correct Answer:** C
+
+**Q54. If an employee resigns to join a State Government post with permission, what happens to their Gratuity?**
+A. Forfeited
+
+B. Paid immediately
+
+C. Counted as service if the State Govt accepts liability
+
+D. Refunded as lump sum
+
+**Correct Answer:** C
+
+**Q55. Who is the "Competent Authority" to sanction Compassionate Allowance?**
+A. Head of Office
+
+B. Head of Department
+
+C. The authority competent to dismiss/remove the employee
+
+D. Secretary (Posts)
+
+**Correct Answer:** C
+
+**Q56. The maximum amount of Gratuity is ₹25 Lakh effective from:**
+A. 01.01.2023
+
+B. 01.01.2024
+
+C. 01.04.2024
+
+D. 30.03.2021
+
+**Correct Answer:** B
+
+**Q57. Rule 7(3) states that Govt contribution is rounded to the nearest:**
+A. Rupee
+
+B. Ten Rupees
+
+C. Five Rupees
+
+D. Paise
+
+**Correct Answer:** A
+
+**Q58. If a Subscriber is on 'Deputation', NPS contributions are paid to:**
+A. The parent department
+
+B. The borrowing organization
+
+C. Directly to CRA
+
+D. Parent department for onward transmission to CRA
+
+**Correct Answer:** D
+
+**Q59. Rule 23 of NPS Rules 2021 relates to:**
+A. Resignation
+
+B. Submission of claim on superannuation
+
+C. Family pension
+
+D. Interest rates
+
+**Correct Answer:** B
+
+**Q60. If a Subscriber retires on invalidation with less than 10 years service, they get:**
+A. Invalidation pension
+
+B. Lump sum and annuity from NPS corpus
+
+C. Only Subscriber's contribution
+
+D. Only Gratuity
+
+**Correct Answer:** B (unless they opted for OPS benefits under Rule 10)
+
+**Q61. What is the frequency of Govt contribution to NPS?**
+A. Quarterly
+
+B. Half-yearly
+
+C. Monthly
+
+D. Annually
+
+**Correct Answer:** C
+
+**Q62. If an employee dies, who is first in line for Gratuity (if no nomination exists)?**
+A. Spouse
+
+B. Eldest son
+
+C. Parents
+
+D. All family members equally
+
+**Correct Answer:** A
+
+**Q63. The term "Nodal Office" usually refers to:**
+A. Post Office
+
+B. PAO (Pay and Accounts Office)
+
+C. Directorate
+
+D. PFRDA
+
+**Correct Answer:** B
+
+**Q64. In Case of Death Gratuity, "Family" includes:**
+A. Married daughters
+
+B. Legally adopted children
+
+C. Dependent parents
+
+D. All of the above
+
+**Correct Answer:** D
+
+**Q65. Rule 8 interest is calculated for:**
+A. Each day of delay
+
+/B. Month-to-month basis
+
+C. Every 15 days
+
+D. Annually
+
+**Correct Answer:** B
+
+**Q66. NPS was introduced to replace:**
+A. Defined Benefit Pension Scheme
+
+B. Defined Contribution Pension Scheme
+
+C. Voluntary Retirement Scheme
+
+D. GPF
+
+**Correct Answer:** A
+
+**Q67. "Annuity Service Provider" (ASP) must be empanelled by:**
+A. IRDAI
+
+B. PFRDA
+
+C. RBI
+
+D. SEBI
+
+**Correct Answer:** B
+
+**Q68. Under Rule 10, Form 1 must be submitted:**
+A. Within 1 year of joining
+
+B. At the time of joining
+
+C. At the time of retirement
+
+D. Only if the employee wants OPS
+
+**Correct Answer:** B
+
+**Q69. If a Subscriber dies and had opted for "NPS Benefits", the family can withdraw what percentage as lump sum?**
+A. 20%
+
+B. 60%
+
+C. 80%
+
+D. 100% (if corpus is below ₹5 Lakh)
+
+**Correct Answer:** D (Note: Recent PFRDA threshold is ₹5 Lakh for full withdrawal)
+
+**Q70. "Service Gratuity" is paid when qualifying service is:**
+A. Less than 5 years
+
+B. Less than 10 years (for those not eligible for pension)
+
+C. Exactly 20 years
+
+D. More than 33 years
+
+**Correct Answer:** B
+
+**Q71. Pension Fund Managers (PFM) in NPS are selected by:**
+A. Subscriber
+
+B. Government
+
+C. CRA
+
+D. Postmaster
+
+**Correct Answer:** A (Subscriber can choose)
+
+**Q72. "Emoluments" for Death Gratuity include:**
+A. Last drawn Basic Pay + DA
+
+B. Average of last 10 months
+
+C. Basic Pay only
+
+D. Pay Level minimum
+
+**Correct Answer:** A
+
+**Q73. If a GDS is promoted to MTS, they are covered under NPS from:**
+A. Date of joining GDS
+
+B. Date of regular appointment as MTS
+
+C. After 2 years of MTS service
+
+D. 01.04.2011
+
+**Correct Answer:** B
+
+**Q74. Forfeit of service occurs on 'Resignation' under Rule:**
+A. Rule 14
+
+B. Rule 17
+
+C. Rule 22
+
+D. Rule 5
+
+**Correct Answer:** B (of Gratuity Rules) / Rule 14 (of NPS Rules)
+
+**Q75. The maximum retirement gratuity is 16.5 times of emoluments. For an employee with basic pay ₹50,000 and DA ₹25,000, the calculated gratuity (before limit check) is:**
+A. ₹8,25,000
+
+B. ₹12,37,500
+
+C. ₹25,00,000
+
+D. ₹16,50,000
+
+**Correct Answer:** B
+
+**Explanation:** .
+
+---
+
+Would you like me to compile these into a PDF format or generate more questions on a specific sub-topic like "Rule 10 Case Studies"?

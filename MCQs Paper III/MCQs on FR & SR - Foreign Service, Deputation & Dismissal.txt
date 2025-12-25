@@ -1,0 +1,410 @@
+### **Set 3: Foreign Service, Deputation & Dismissal (Questions 101–150)**
+
+**Q101. No Government servant shall be transferred to "Foreign Service" without:**
+A. The approval of the President.
+B. **His own consent.**
+C. A promotion order.
+D. Completion of 20 years of service.
+**Correct Answer: B**
+**Explanation:** Per **FR 110**, no Government servant may be transferred to foreign service against his will. However, this does not apply to the service of a body, wholly or substantially owned or controlled by the Government.
+
+**Q102. Who is responsible for paying the "Leave Salary and Pension Contributions" during Foreign Service?**
+A. The Government Servant.
+B. The Parent Department.
+C. **The Foreign Employer.**
+D. No contributions are required.
+**Correct Answer: C**
+**Explanation:** Under **FR 115**, the foreign employer is liable to pay contributions towards the pension and leave salary of the official at rates prescribed by the President.
+
+**Q103. If a Government servant on foreign service fails to pay pension contributions, can they be recovered from him?**
+A. Yes, always.
+B. **No, they must be recovered from the Foreign Employer.**
+C. Yes, if the Foreign Employer refuses.
+D. Only if he is Group 'A'.
+**Correct Answer: B**
+**Explanation:** **FR 120** states that these contributions are a liability of the foreign employer and cannot be recovered from the Government servant.
+
+**Q104. What is the current "Deputation (Duty) Allowance" rate for a transfer within the same station?**
+A. 10% of basic pay.
+B. **5% of basic pay (subject to a ceiling of ₹4,500).**
+C. 15% of basic pay.
+D. No allowance for same station.
+**Correct Answer: B**
+**Explanation:** For deputation within the same station, the allowance is **5%** of basic pay, capped at **₹4,500** per month. For outstation deputation, it is **10%** capped at **₹9,000**.
+
+**Q105. Under the "Cooling-off Period" rules, what is the minimum gap required between two periods of deputation?**
+A. 1 year.
+B. **3 years.**
+C. 5 years.
+D. 2 years.
+**Correct Answer: B**
+**Explanation:** According to DoPT guidelines, an officer must complete a "cooling-off" period of **3 years** in their parent cadre before becoming eligible for another deputation.
+
+**Q106. Which rule deals with the "Retirement on Superannuation" (the last day of the month of attaining 60 years)?**
+A. FR 22.
+B. **FR 56(a).**
+C. FR 13.
+D. FR 10.
+**Correct Answer: B**
+**Explanation:** **FR 56(a)** specifies that every Government servant shall retire from service on the afternoon of the last day of the month in which he attains the age of sixty years.
+
+**Q107. If a Government servant’s date of birth is the 1st of January, when do they retire?**
+A. 31st January of that year.
+B. **31st December of the previous year.**
+C. 1st January of that year.
+D. 30th June.
+**Correct Answer: B**
+**Explanation:** Per **FR 56**, those whose date of birth is the **1st of the month** shall retire on the afternoon of the **last day of the preceding month**.
+
+**Q108. As per the latest 2024-2025 guidelines on FR 56(j), "Integrity" is a ground for premature retirement. What is the frequency of these reviews?**
+A. Every year.
+B. **Quarterly (for officials reaching specific age/service limits).**
+C. Only once at age 50.
+D. Every 5 years.
+**Correct Answer: B**
+**Explanation:** Recent DoPT instructions (2024) mandate that the review of cases under **FR 56(j)** should be done **quarterly** to ensure that "deadwood" is removed and administrative efficiency is maintained.
+
+**Q109. What is the maximum "Subsistence Allowance" a Government servant can receive if the suspension is found to be unjustified later?**
+A. 50% of pay.
+B. 75% of pay.
+C. **Full Pay and Allowances.**
+D. 100% of pay minus HRA.
+**Correct Answer: C**
+**Explanation:** Under **FR 54**, if the suspension is held to be "wholly unjustified," the Government servant is entitled to the **full pay and allowances** they would have received had they not been suspended.
+
+**Q110. Under FR 17-A, a period of "unauthorized absence" (if treated as such) results in:**
+A. Reduction in Rank.
+B. **Break in Service.**
+C. Suspension.
+D. Extra increments.
+**Correct Answer: B**
+**Explanation:** **FR 17-A** provides that an unauthorized absence from duty shall be deemed to cause an **interruption or break in service** of the employee, affecting their seniority, increments, and pension eligibility.
+
+---
+
+**Q111. A "Lien" of a Government servant is never terminated under which condition?**
+A. On substantive appointment to a permanent post outside the cadre.
+B. On reaching superannuation.
+C. **While under suspension.**
+D. On dismissal.
+**Correct Answer: C**
+**Explanation:** Per **FR 13**, a Government servant's lien on a post remains intact even while they are under **suspension** or on leave.
+
+**Q112. In the case of "Foreign Service," who sanctions the leave for the official?**
+A. The Parent Department.
+B. **The Foreign Employer (for leave other than study/special leave).**
+C. The Ministry of Home Affairs.
+D. The President.
+**Correct Answer: B**
+**Explanation:** **FR 122** states that a Government servant in foreign service may be granted leave by his **foreign employer** on such conditions as the Government may determine.
+
+**Q113. Under the New Pension System (NPS), now Unified Pension Scheme (UPS) or NPS rules as of 2025, what is the maximum percentage of the corpus that can be withdrawn as a "Partial Withdrawal"?**
+A. 10%
+B. **25% of the employee's contribution.**
+C. 50%
+D. 100%
+**Correct Answer: B**
+**Explanation:** PFRDA rules (updated 2024-2025) allow for partial withdrawal up to **25%** of the **subscriber's own contributions** for specific reasons like marriage, education, or medical emergencies, after 3 years of joining.
+
+**Q114. If a Government servant is "Compulsorily Retired" as a penalty, are they eligible for pension?**
+A. No.
+B. **Yes, Compulsory Retirement Pension (not less than 2/3rd).**
+C. Only if they served 30 years.
+D. Yes, full pension.
+**Correct Answer: B**
+**Explanation:** Under **Rule 40** of CCS (Pension) Rules (linked to FR 56), a Government servant compulsorily retired as a penalty may be granted a pension or gratuity not less than **two-thirds** and not more than full compensation pension.
+
+**Q115. "Dies-non" stands for?**
+A. Day of duty.
+B. **A day which is not counted for any purpose (pension, increment, leave).**
+C. A day of mourning.
+D. Half-day leave.
+**Correct Answer: B**
+**Explanation:** "Dies-non" is a period which neither counts as service nor as a break in service for the purpose of pension, but it **does not count** for increments or leave earning.
+
+**Q116. Which authority has the power to waive the recovery of "Overpayment" to a Government servant?**
+A. Head of Office.
+B. **Head of Department (subject to limits) or Ministry of Finance.**
+C. Postmaster General.
+D. No one can waive recovery.
+**Correct Answer: B**
+**Explanation:** Recovery of overpayment can be waived by the **Ministry/Head of Department** if it is shown that the payment was not due to any fraud/misrepresentation by the employee and recovery would cause "extreme hardship" (as per Supreme Court *White Washer* judgment guidelines).
+
+**Q117. What is the limit for "Group Insurance Scheme" (CGEGIS) monthly subscription for a Level 5 official (Group C)?**
+A. ₹30
+B. **₹30**
+C. ₹60
+D. ₹120
+**Correct Answer: B**
+**Explanation:** For Group 'C' employees, the monthly subscription to CGEGIS is **₹30**. (Group 'B' is ₹60 and Group 'A' is ₹120).
+
+**Q118. Under FR 56(l), a Government servant who has been given notice of premature retirement can request for?**
+A. Re-employment.
+B. **Voluntary Retirement (VRS).**
+C. Extension of service.
+D. Promotion.
+**Correct Answer: B**
+**Explanation:** A Government servant who has been served a notice under **FR 56(j)** can apply for **Voluntary Retirement** within the notice period.
+
+**Q119. What is the "Lien" status of a Government servant who is on "Deputation" to another department?**
+A. It is terminated.
+B. **It is retained in the parent post.**
+C. it is transferred to the new department.
+D. It is suspended.
+**Correct Answer: B**
+**Explanation:** A Government servant on deputation retains a **lien** on their permanent post in the parent department.
+
+**Q120. Which Fundamental Rule allows a Government servant to "Resign" from service?**
+A. FR 22.
+B. **There is no specific FR; it is governed by CCS (Pension) and Leave Rules.**
+C. FR 56.
+D. FR 10.
+**Correct Answer: B**
+**Explanation:** Resignation is technically governed by **Rule 26** of CCS (Pension) Rules, which states that resignation from a service or post entails **forfeiture of past service**.
+
+---
+
+**Q121. Can a Government servant be "Dismissed" with retrospective effect?**
+A. Yes.
+B. **No, always prospective.**
+C. Only in cases of fraud.
+D. Only if the President orders.
+**Correct Answer: B**
+**Explanation:** An order of dismissal or removal cannot take effect from a date earlier than the date on which it is signed/issued.
+
+**Q122. Under FR 54-A, if a Government servant is "reinstated" because the court set aside the dismissal for "non-compliance of Article 311," what is the pay entitlement?**
+A. Full pay.
+B. **Pay as decided by the competent authority (not less than subsistence allowance).**
+C. No pay.
+D. Basic pay only.
+**Correct Answer: B**
+**Explanation:** **FR 54-A(2)** states that if dismissal is set aside for technical reasons (non-compliance of Art 311), the authority shall determine the pay for the period after giving notice to the official.
+
+**Q123. For "Voluntary Retirement" (VRS) under FR 56(k), a Government servant must give a notice of?**
+A. 1 month.
+/B. **3 months.**
+C. 6 months.
+D. 15 days.
+**Correct Answer: B**
+**Explanation:** Under **FR 56(k)**, any Government servant may, by giving notice of not less than **three months** in writing to the Appropriate Authority, retire from service after he has attained the age of **50/55 years**.
+
+**Q124. What is the age of retirement for a "Multi-Tasking Staff" (MTS) employee?**
+A. 58 years.
+B. **60 years.**
+C. 62 years.
+D. 65 years.
+**Correct Answer: B**
+**Explanation:** Since 1998, the age of retirement for all Central Government employees (Group A, B, C, including MTS) is **60 years**.
+
+**Q125. Which authority can "Extend the Service" of a Government servant beyond 60 years?**
+A. Head of Department.
+B. **The Cabinet Committee on Appointments (for specific high-level posts).**
+C. Postmaster General.
+D. Nobody.
+**Correct Answer: B**
+**Explanation:** Extension in service is strictly regulated and usually only granted to very high-level officials (e.g., Cabinet Secretary, ISRO Chairman) with the approval of the **Appointments Committee of the Cabinet (ACC)**.
+
+**Q126. A Government servant in "Foreign Service" is entitled to "Medical Facilities" provided by?**
+A. The Government of India.
+B. **The Foreign Employer.**
+C. CGHS.
+D. Insurance only.
+**Correct Answer: B**
+**Explanation:** **FR 114** states that the foreign employer must provide medical facilities to the official not inferior to those which he would have enjoyed in Government service.
+
+**Q127. Under FR 49, when a Government servant is appointed to hold "Full Charge" of another post in addition to his own, he is entitled to "Additional Post Allowance" for a maximum of?**
+A. 3 months.
+B. 6 months.
+C. **12 months.**
+D. Unlimited time.
+**Correct Answer: C**
+**Explanation:** Per **FR 49**, the additional post allowance (officially now called "Additional Charge Allowance") is granted for a maximum of **one year**.
+
+**Q128. What is the rate of "Additional Post Allowance" for holding full charge of another post?**
+A. 10% of basic pay.
+B. **Full pay of both posts.**
+C. **Amount equal to the "Deputation Allowance" (if admissible).**
+D. No extra pay.
+**Correct Answer: C**
+**Explanation:** As per 7th CPC revisions to **FR 49**, an official holding full charge of another post is entitled to **Additional Post Allowance** at a rate of 25% of the basic pay of the additional post (now restricted to deputation allowance limits).
+
+**Q129. If an official is "Suspended" while on "Tour," when does the suspension begin?**
+A. Immediately.
+B. **From the date they return to headquarters.**
+C. After the tour is over.
+D. From the date the order is received.
+**Correct Answer: D**
+**Explanation:** Suspension takes effect from the date and time of the **delivery of the order** to the Government servant or from the date specified in the order.
+
+**Q130. "Standard Rent" (License Fee) of Government Quarters is governed by which rule?**
+A. FR 22.
+B. **FR 45.**
+C. SR 311.
+D. FR 9.
+**Correct Answer: B**
+**Explanation:** **FR 45** governs the allotment of residence and the recovery of rent (License Fee) from Government servants.
+
+---
+
+**Q131. A Government servant is considered to be under "Deemed Suspension" if he is in custody for more than?**
+A. 12 hours.
+B. 24 hours.
+C. **48 hours.**
+D. 72 hours.
+**Correct Answer: C**
+**Explanation:** Under **Rule 10(2)** of CCS (CCA) Rules, a Government servant is deemed to have been placed under suspension if he is detained in custody for a period exceeding **48 hours**.
+
+**Q132. What is the "Subsistence Allowance" for an official under suspension for the first 3 months?**
+A. 50% of Basic Pay + DA.
+B. **Equal to Leave Salary on Half Pay + DA on that amount.**
+C. 100% of pay.
+D. ₹5,000 fixed.
+**Correct Answer: B**
+**Explanation:** Per **FR 53**, the allowance is equivalent to the leave salary which the official would have drawn if on **Half Pay Leave**.
+
+**Q133. Is "HRA" (House Rent Allowance) paid to a suspended employee?**
+A. No.
+B. **Yes, at the same rate he was drawing before suspension.**
+C. Yes, but only 50%.
+D. Only if he is not in Govt Quarters.
+**Correct Answer: B**
+**Explanation:** HRA is paid during suspension based on the station of duty, provided the official continues to reside at the station.
+
+**Q134. Which FR deals with "Dismissal, Removal, and Suspension"?**
+A. FR 10-20.
+B. **FR 52-55.**
+C. FR 100-110.
+D. FR 9.
+**Correct Answer: B**
+**Explanation:** Fundamental Rules **52 to 55** specifically deal with the cessation of pay and the grant of allowances during suspension/dismissal.
+
+**Q135. What is the minimum service required for "VRS" (Voluntary Retirement Scheme) for most Central Government employees?**
+A. 10 years.
+B. **20 years.**
+C. 30 years.
+D. 15 years.
+**Correct Answer: B**
+**Explanation:** Under **Rule 48-A** of CCS (Pension) Rules, a Government servant who has completed **20 years** of qualifying service can retire voluntarily by giving 3 months' notice.
+
+**Q136. As of 2025, what is the maximum "Compassionate Allowance" that can be granted to a dismissed employee?**
+A. Full pension.
+B. **2/3rd of the pension which would have been admissible.**
+C. 50% of pay.
+D. Zero.
+**Correct Answer: B**
+**Explanation:** Per **Rule 41**, an official who is dismissed/removed and is in deserving cases of "special compassion" may be granted a compassionate allowance not exceeding **two-thirds** of the regular pension.
+
+**Q137. Which Fundamental Rule defines "Lien"?**
+A. FR 9(10).
+B. **FR 9(13).**
+C. FR 13.
+D. FR 14.
+**Correct Answer: B**
+**Explanation:** **FR 9(13)** defines "Lien" as the title of a Government servant to hold substantively a permanent post to which he has been appointed substantively.
+
+**Q138. "Local Allowance" (like SCA) is defined under which rule?**
+A. FR 9(25).
+B. **FR 9(12).**
+C. FR 22.
+D. SR 2.
+**Correct Answer: B**
+**Explanation:** **FR 9(12)** defines "Leave Salary" and **FR 9(25)** defines "Special Pay." **Compensatory Allowance** is defined under **FR 9(5)**.
+
+**Q139. If a Government servant is "Suspended" and later exonerated, the period of suspension is treated as?**
+A. Leave.
+B. Dies-non.
+C. **Duty for all purposes.**
+D. Break in service.
+**Correct Answer: C**
+**Explanation:** If the official is fully exonerated, the period is treated as "Spent on Duty" (**FR 54**), and they are entitled to full pay/increments.
+
+**Q140. A Government servant who enters service at age 40 and retires at 60 is eligible for "Pension" if he has completed at least?**
+A. 20 years.
+B. **10 years.**
+C. 33 years.
+D. 5 years.
+**Correct Answer: B**
+**Explanation:** Under current rules, the minimum qualifying service for a **Retirement Pension** is **10 years**.
+
+---
+
+**Q141. "Foreign Service" is defined in which rule?**
+A. FR 9(3).
+B. **FR 9(7).**
+C. FR 110.
+D. SR 2.
+**Correct Answer: B**
+**Explanation:** **FR 9(7)** defines Foreign Service as service in which a Government servant receives his pay with the sanction of Government from any source other than the Consolidated Fund of India/State.
+
+**Q142. Can a Government servant on "Deputation" be promoted in his "Parent Department"?**
+A. No.
+B. **Yes, through Proforma Promotion (Next Below Rule).**
+C. Only after he returns.
+D. Only if the Foreign Employer agrees.
+**Correct Answer: B**
+**Explanation:** Under the "Next Below Rule" (**FR 30**), an official on deputation can be granted proforma promotion to a higher post in their parent cadre if their junior is promoted.
+
+**Q143. What is the "Maximum Age Limit" for an official to go on "Deputation" to a post?**
+A. 50 years.
+B. 55 years.
+C. **56 years (on the closing date of application).**
+D. 60 years.
+**Correct Answer: C**
+**Explanation:** As per standard DoPT deputation guidelines, the maximum age for appointment by deputation shall not exceed **56 years** on the closing date of receipt of applications.
+
+**Q144. "Joining Time Pay" is equal to?**
+A. Half Pay.
+B. **Pay drawn immediately before relinquishing charge of the old post.**
+C. Minimum of the new scale.
+D. No pay is given.
+**Correct Answer: B**
+**Explanation:** During joining time, a Government servant is entitled to the **pay of the post from which they were transferred** and allowances like DA.
+
+**Q145. If an official is "Reduced in Rank" for 2 years, what happens to their "Seniority"?**
+A. It is lost forever.
+B. **It is regained after 2 years unless the order specifies otherwise.**
+C. They become the junior-most in the lower rank.
+D. Seniority is not affected.
+**Correct Answer: B**
+**Explanation:** Unless the penalty order specifically states that the reduction will "postpone future increments" or affect seniority permanently, the official regains their original position after the penalty period.
+
+**Q146. Which rule provides for the "Grant of Subsistence Allowance" during suspension?**
+A. FR 22.
+B. **FR 53.**
+C. FR 54.
+D. FR 56.
+**Correct Answer: B**
+**Explanation:** **FR 53** is the specific rule governing the amount and admissibility of the subsistence allowance.
+
+**Q147. A "Female Government Servant" on "Foreign Service" is eligible for Maternity Leave. Who pays for it?**
+A. Parent Department.
+B. **Foreign Employer.**
+C. Shared 50-50.
+D. Employee herself.
+**Correct Answer: B**
+**Explanation:** During foreign service, all leave salary, including maternity leave pay, is the liability of the **foreign employer**.
+
+**Q148. Can "Extraordinary Leave" (EOL) be granted in combination with "Maternity Leave"?**
+A. No.
+B. **Yes, for up to 2 years without a medical certificate.**
+C. Only for 10 days.
+D. Only with the President's permission.
+**Correct Answer: B**
+**Explanation:** In continuation of Maternity Leave, a female official can be granted any leave, including EOL, for a maximum of **two years** (inclusive of 180 days maternity leave) without a medical certificate.
+
+**Q149. The "Date of Birth" recorded in the Service Book can be changed only with the sanction of?**
+A. Head of Office.
+/B. **Ministry/Department (within 5 years of entry into service).**
+C. Postmaster General.
+D. District Collector.
+**Correct Answer: B**
+**Explanation:** A request for alteration of date of birth can be considered only if made within **five years** of entry into service and with the approval of the Ministry/Department.
+
+**Q150. Under FR 56(j), if the Appropriate Authority decides to retire an official, what is given to the employee?**
+A. A charge sheet.
+B. **Three months' notice or three months' pay and allowances in lieu of notice.**
+C. A promotion.
+D. A transfer order.
+**Correct Answer: B**
+**Explanation:** Premature retirement under **FR 56(j)** is not a penalty; hence, a three-month notice or pay in lieu is mandatory.
+

@@ -1,0 +1,409 @@
+### **Set 4: Advanced Scenarios, TA/LTC & Miscellaneous (Questions 151–200)**
+
+**Q151. An official is transferred from Chennai to Delhi. He travels by air. As per latest SR, is he entitled to the "Taxi fare" from his residence to the airport?**
+A. No, it is included in CTG.
+B. **Yes, actual taxi fare or road mileage as per his entitlement level.**
+C. Only if he travels in a Government vehicle.
+D. Only if the distance is more than 50 km.
+**Correct Answer: B**
+**Explanation:** Under **SR 116**, for journeys on transfer, an official is entitled to reimbursement of **actual taxi fare** or mileage for the road journey at both ends (residence to airport/station and vice versa).
+
+**Q152. In a "LTC" claim, if the official fails to produce the "Boarding Pass" for an air journey, what is the procedure as per latest 2024-2025 DoPT guidelines?**
+A. The claim is rejected immediately.
+B. **A self-certification along with a copy of the ticket and a physical check of attendance may be accepted in rare cases.**
+C. 50% of the fare is deducted.
+D. Boarding pass is no longer required.
+**Correct Answer: B**
+**Explanation:** Recent clarifications (2024) state that while the **Boarding Pass** is the primary proof of travel, if lost, an undertaking/self-certification along with secondary evidence (attendance records, hotel bills) may be considered by the Head of Department to prevent "undue hardship."
+
+**Q153. What is the "Mileage Allowance" for travel by "Bicycle" as per current SR?**
+A. ₹1 per km.
+B. **₹1.20 per km (plus 25% hike if DA > 50%) = ₹1.50 per km.**
+C. Bicycle mileage is abolished.
+D. ₹5 per km.
+**Correct Answer: B**
+**Explanation:** The base rate for bicycle mileage was ₹1.20/km. With **50% DA**, this rate is increased by **25%** to **₹1.50 per km**.
+
+**Q154. Under SR 306, what is the maximum period of "Temporary Transfer" (Tour) for which Daily Allowance (DA) can be drawn?**
+A. 30 days.
+B. 90 days.
+C. **180 days.**
+D. 365 days.
+**Correct Answer: C**
+**Explanation:** Full Daily Allowance is admissible for the first **180 days** only. Beyond 180 days, no DA is admissible.
+
+**Q155. If an official is promoted and his pay is fixed under FR 22(I)(a)(1), and later the promotion is "Canceled" for administrative reasons (not fault of official), the pay is?**
+A. Recovered.
+B. **Protected as Personal Pay.**
+C. Reduced to the minimum.
+D. Increments are stopped.
+**Correct Answer: B**
+**Explanation:** If a promotion is canceled for administrative reasons (e.g., error in seniority list), the pay already drawn is typically **protected** to avoid financial hardship, provided there was no misrepresentation by the employee.
+
+**Q156. Which of the following is an "Admissible Expense" in a Transfer TA claim?**
+A. Cost of packing material.
+B. **Transportation of a personal Motor Car (if within entitlement).**
+C. Tips to porters.
+D. Hotel stay at the new station for 1 month.
+**Correct Answer: B**
+**Explanation:** **SR 116** allows for the reimbursement of the cost of transporting a motor car or motorcycle/scooter by rail/road, provided the official's pay level meets the criteria (usually Level 6 and above for cars).
+
+**Q157. For "Air Travel" on LTC/Tour, tickets must be booked only through which of the following?**
+A. Any online portal (MakeMyTrip/EaseMyTrip).
+B. **IRCTC, Balmer Lawrie, or Ashok Travels.**
+C. Directly from the airline website only.
+D. Any travel agent.
+**Correct Answer: B**
+**Explanation:** To ensure transparency, the Ministry of Finance mandates booking through three **Authorized Travel Agents (ATAs)**: IRCTC, Balmer Lawrie & Co., and Ashok Travels & Tours.
+
+**Q158. Under "Joining Time" rules, what constitutes "Distance" for the purpose of calculating days?**
+A. Distance as the crow flies.
+B. **Actual distance by the shortest route.**
+C. Distance by air only.
+D. 1.5 times the road distance.
+**Correct Answer: B**
+**Explanation:** The calculation of joining time is based on the **shortest route** (by rail or road) between the old and new headquarters.
+
+**Q159. What is the "Gratuity" calculation formula for a Government servant with 30 years of service?**
+A. (Last Pay + DA) × 15 days × 30 years.
+B. **1/4th of (Last Pay + DA) for each completed six-monthly period.**
+C. 1 month's pay for each year.
+D. Half month's pay for each year.
+**Correct Answer: B**
+**Explanation:** Retirement Gratuity is 1/4th of the emoluments for each completed six-monthly period of qualifying service, subject to a maximum of 16.5 times the emoluments or the ceiling of **₹25 Lakh**.
+
+**Q160. If an official on "Tour" stays in a "Government Guest House" for free, what happens to his "Daily Allowance"?**
+A. Full DA is paid.
+B. **Food charges are paid, but accommodation charges are not.**
+C. Only 25% DA is paid.
+D. No DA is paid.
+**Correct Answer: B**
+**Explanation:** Under the 7th CPC, TA/DA consists of three components: Travel, Hotel, and Food. If a Guest House is provided, the **Hotel component** is not reimbursed, but **Food charges** are still admissible.
+
+---
+
+**Q161. A Government servant's "Basic Pay" for the purpose of TA is defined as?**
+A. Pay in the Pay Matrix plus HRA.
+/B. **Pay in the Pay Matrix (Level) excluding all allowances.**
+C. Pay plus DA.
+D. Pay plus NPA (for doctors).
+**Correct Answer: B**
+**Explanation:** For the purpose of TA/LTC, "Pay" means the pay drawn in the prescribed **Level in the Pay Matrix** but does not include any other type of pay like special pay.
+
+**Q162. "Special Compensatory Allowance" (SCA) for difficult areas is hiked by what percentage when DA reaches 50%?**
+A. 10%
+B. 20%
+C. **25%**
+D. It remains fixed.
+**Correct Answer: C**
+**Explanation:** As per the 7th CPC recommendations, several allowances (SCA, Risk Allowance, Tough Location Allowance) are increased by **25%** automatically when DA reaches **50%**.
+
+**Q163. If a Government servant dies while on "Tour," his family is entitled to?**
+A. No TA.
+B. **TA for bringing the body to the headquarters or home town.**
+C. Only the DA for the day of death.
+D. Full salary for 1 year.
+**Correct Answer: B**
+**Explanation:** **SR 146** provides for the reimbursement of expenses for the transportation of the deceased official's remains to their home town or headquarters.
+
+**Q164. What is the "Maximum Weight" of personal effects allowed for transportation on transfer for Level 5?**
+A. 1,500 kg.
+B. **3,000 kg.**
+C. 6,000 kg.
+D. 1,000 kg.
+**Correct Answer: B**
+**Explanation:** Officials in **Levels 5 and below** are entitled to transport up to **3,000 kg** of personal effects. (Level 6 and above are entitled to 6,000 kg).
+
+**Q165. For "LTC" to the North-East Region (NER), Jammu & Kashmir, or Andaman & Nicobar, Group 'C' employees (Level 5) are allowed to travel by?**
+A. Rail only.
+B. **Air from their headquarters (if specifically relaxed by Govt) or from specified hubs.**
+C. Bus only.
+D. Only if they are above 50 years old.
+**Correct Answer: B**
+**Explanation:** Under the special dispensation scheme (extended till Dec 2024/2025), all levels of Government servants are allowed to travel by **Air** to NER, J&K, and A&N, though reimbursement is restricted to specific routes (e.g., from Kolkata/Guwahati).
+
+**Q166. Which rule defines the "Head of a Department" for the purpose of FR/SR?**
+A. FR 9(10).
+B. **SR 2(10).**
+C. FR 1.
+D. SR 335.
+**Correct Answer: B**
+**Explanation:** **SR 2(10)** defines "Head of Department" as any authority whom the President may declare to be a Head of Department.
+
+**Q167. "Compensatory City Allowance" (CCA) was?**
+A. Increased by 10% in 2024.
+B. **Abolished by the 7th CPC.**
+C. Merged with DA.
+D. Merged with Transport Allowance.
+**Correct Answer: B**
+**Explanation:** The 7th CPC recommended the **abolition** of CCA, and this was accepted by the Government.
+
+**Q168. If an official is "Suspended" and the inquiry lasts for 2 years, how often must the "Suspistence Allowance" be reviewed?**
+A. Once every year.
+B. **Once every 3 months.**
+C. After 6 months and then every 6 months.
+D. Never.
+**Correct Answer: B**
+**Explanation:** Under **FR 53**, the review of the subsistence allowance should be carried out after the first **3 months**, and subsequent reviews are guided by the progress of the inquiry.
+
+**Q169. What is the maximum "Tenure" of a Government servant in a sensitive post in the Department of Posts as per CVC/DoP guidelines?**
+A. 2 years.
+B. **3 years.**
+C. 5 years.
+D. 1 year.
+**Correct Answer: B**
+**Explanation:** As per CVC guidelines and Postal Department orders, officials in sensitive posts (like SB counters, cash handlers) should be rotated every **3 years**.
+
+**Q170. "Non-Practicing Allowance" (NPA) is treated as pay for which of the following?**
+A. TA only.
+B. **HRA, DA, and Pension.**
+C. LTC only.
+D. It is not treated as pay for anything.
+**Correct Answer: B**
+**Explanation:** For Medical Officers, **NPA** is treated as "Pay" for the calculation of DA, HRA, and Retirement Benefits.
+
+---
+
+**Q171. A "Fresh Recruit" is entitled to travel to their "Home Town" on LTC how many times in the first 8 years?**
+A. Once every 2 years.
+B. **Every year (for the first 8 years).**
+C. Only once.
+D. Every 4 years.
+**Correct Answer: B**
+**Explanation:** Fresh recruits are allowed to travel to their Home Town for the first three occasions in a block of four years, and the fourth occasion is for "Anywhere in India." This continues for the first **8 years** of service.
+
+**Q172. Under "Joining Time" rules, what happens if a Government servant is ordered to join a new post without any station change?**
+A. He gets 5 days.
+B. **No joining time is allowed (only time for preparation, usually 1 day).**
+C. He gets 10 days.
+D. He gets 15 days.
+**Correct Answer: B**
+**Explanation:** If the transfer is within the same station and doesn't involve residence change, **no joining time** is granted; the official is expected to join on the same day or the next.
+
+**Q173. What is the "Age Limit" for a dependent child to be eligible for "Medical Reimbursement" under CGHS/CS(MA) Rules?**
+A. 18 years.
+B. **25 years (unless disabled or a dependent daughter).**
+C. 21 years.
+D. 12 years.
+**Correct Answer: B**
+**Explanation:** A son is eligible until he attains the age of **25 years** or starts earning, whichever is earlier. A daughter is eligible until she starts earning or gets married.
+
+**Q174. A Government servant is entitled to "Constant Attendant Allowance" under which condition?**
+A. If they are Group 'D'.
+B. **If they have 100% disability due to service-related injury.**
+C. If they are over 80 years old.
+D. If they live alone.
+**Correct Answer: B**
+**Explanation:** This allowance is granted to pensioners who retired due to **100% service-attributable disability** and require a constant attendant.
+
+**Q175. For "Pay Fixation" on promotion, if a Government servant is already drawing the "Maximum" of the lower level, how is the increment calculated?**
+A. No increment is given.
+B. **A "Notional Increment" equal to the last increment drawn is added.**
+C. He is fixed at the minimum of the next level.
+D. He gets a 10% hike.
+**Correct Answer: B**
+**Explanation:** In cases of stagnation at the maximum of a level, a **notional increment** is used for fixation under FR 22(I)(a)(1).
+
+**Q176. Which Fundamental Rule provides for "Combination of Appointments"?**
+A. FR 22.
+B. **FR 49.**
+C. FR 35.
+D. FR 15.
+**Correct Answer: B**
+**Explanation:** **FR 49** allows the competent authority to appoint a Government servant to hold two or more independent posts at one time.
+
+**Q177. If an official is "Transferred" during leave, where does his "Joining Time" start from?**
+A. From the date of the order.
+B. **From the date he is relieved from the old station after returning from leave.**
+C. From the date the leave ends.
+D. Immediately.
+**Correct Answer: B**
+**Explanation:** If the transfer order is received while on leave, the joining time is calculated from the date he **hands over charge** at the old station after returning.
+
+**Q178. What is the "Incentive" for acquiring "Higher Qualifications" as of 2024-2025?**
+A. 2 increments.
+B. **A one-time lump sum grant ranging from ₹10,000 to ₹30,000.**
+C. Promotion.
+D. Extra leave.
+**Correct Answer: B**
+**Explanation:** The Government replaced the "advance increment" scheme with a **one-time lump sum incentive** (ranging from **₹10,000** for a PG Diploma to **₹30,000** for a Ph.D.) for acquiring fresh higher qualifications relevant to the post.
+
+**Q179. A "Group Insurance" (CGEGIS) claim is "Finalized" and paid when?**
+A. Every 10 years.
+B. **On retirement or death.**
+C. On promotion.
+D. At the official's request.
+**Correct Answer: B**
+**Explanation:** The "Savings" part of CGEGIS is paid back on **retirement/resignation**, while the "Insurance" part is paid only in the event of **death**.
+
+**Q180. "Night Duty Allowance" (NDA) is calculated based on which formula?**
+A. (Basic Pay + DA) / 200.
+B. **(Basic Pay + DA) / 200 per hour of night duty.**
+C. Fixed at ₹100 per night.
+D. 5% of pay.
+**Correct Answer: B**
+**Explanation:** NDA is granted for duty performed between **22:00 and 06:00**. The hourly rate is **(Basic Pay + DA) / 200**.
+
+---
+
+**Q181. Under FR 56(j), can a Government servant be retired for "Inefficiency" without a formal inquiry?**
+A. No.
+B. **Yes, it is not a punishment but a process of "strengthening administration."**
+C. Only if the official is Group 'D'.
+D. Only if he has 35 years of service.
+**Correct Answer: B**
+**Explanation:** The Supreme Court has upheld that **FR 56(j)** is not a penalty; hence, a formal inquiry under CCS(CCA) Rules is not required, provided the decision is based on a **bona fide** administrative review.
+
+**Q182. A Government servant is entitled to "Dress Allowance" of how much per year (for Postman/MTS)?**
+A. ₹2,500.
+B. **₹5,000.**
+C. ₹10,000.
+D. ₹1,000.
+**Correct Answer: B**
+**Explanation:** Postmen and MTS in the Department of Posts receive a **Dress Allowance of ₹5,000 per annum**, credited in the month of **July**.
+
+**Q183. Which authority can "Regularize" a period of "Unauthorized Absence" as leave?**
+A. Head of Office.
+B. **The authority competent to grant the leave.**
+C. Only the President.
+D. Pay and Accounts Officer.
+**Correct Answer: B**
+**Explanation:** The authority empowered to sanction leave can regularize unauthorized absence by granting **Extraordinary Leave (EOL)**.
+
+**Q184. In "LTC" encashment of 10 days EL, what is the formula for payment?**
+A. (Basic Pay + DA) / 30 × 10.
+B. **(Basic Pay + DA) / 30 × 10 (without any deduction for HRA).**
+C. Basic Pay / 30 × 10.
+D. 50% of the pay.
+**Correct Answer: B**
+**Explanation:** Encashment is calculated as (Pay + DA) / 30 for each day of leave encashed. **HRA/Transport Allowance** is not included.
+
+**Q185. "Traveling Allowance" (TA) for a "Personal Interview" for a post in another department is admissible if?**
+A. The official is permanent.
+B. **The official is invited for a departmental competitive exam/interview.**
+C. It is never admissible.
+D. The official takes EL for it.
+**Correct Answer: B**
+**Explanation:** Per **SR 130**, TA is admissible for journeys to attend a **departmental exam** or an interview for a post advertised by the Government.
+
+**Q186. If a Government servant is on "Foreign Service" in India, who pays for the "LTC" charges?**
+A. Parent Department.
+B. **Foreign Employer.**
+C. Shared 50-50.
+D. It is not allowed.
+**Correct Answer: B**
+**Explanation:** The **Foreign Employer** is liable for the LTC expenses of the official and their family as per the terms of deputation.
+
+**Q187. What is the "Maximum Period" of "Maternity Leave" for a case of "Miscarriage"?**
+A. 180 days.
+B. **45 days in the entire service.**
+C. 90 days.
+D. 15 days.
+**Correct Answer: B**
+**Explanation:** Under **Rule 43(3)**, leave not exceeding **45 days** may be granted in case of miscarriage or abortion, supported by a medical certificate.
+
+**Q188. Which rule allows the Government to "Withhold" an increment if the performance is poor?**
+A. FR 22.
+B. **FR 24.**
+C. FR 56.
+D. FR 10.
+**Correct Answer: B**
+**Explanation:** **FR 24** allows for withholding an increment if a Government servant’s conduct has not been good or their work has not been satisfactory.
+
+**Q189. A "Permanent" Government servant can be "Terminated" from service by giving?**
+A. 1 month's notice.
+B. **No notice; termination requires a formal inquiry under Rule 14.**
+C. 3 months' notice.
+D. 15 days' notice.
+**Correct Answer: B**
+**Explanation:** A permanent employee has a "lien" on their post and cannot be terminated without following the procedure under **Article 311** and **CCS (CCA) Rules**.
+
+**Q190. What is the "Subsistence Allowance" if a Government servant is in "Jail" for a criminal offense?**
+A. 50% of pay.
+B. **Nothing, but he is deemed suspended and subsistence allowance is paid after his release/review.**
+C. Full pay.
+D. Fixed at ₹1,000.
+**Correct Answer: B**
+**Explanation:** While in jail, no payment is made. However, once the official is placed under **deemed suspension**, subsistence allowance is sanctioned and paid for the period.
+
+---
+
+**Q191. If a Government servant "Retires" on 30th June, when is his last increment due?**
+A. 1st July (he misses it).
+B. **1st July (but he is granted a "Notional Increment" for pension purpose as per latest court/Govt orders).**
+C. 1st January.
+D. He gets it on 1st June.
+**Correct Answer: B**
+**Explanation:** As per latest 2023-2024 orders (following Supreme Court rulings), officials retiring on **30th June** or **31st December** (who have completed 1 year of service) are entitled to a **notional increment** for the purpose of calculating pensionary benefits.
+
+**Q192. "Deputation (Duty) Allowance" is NOT admissible if?**
+A. The official is promoted.
+B. **The official is on "Foreign Service" and opting for the pay of the foreign post.**
+C. The deputation is for 1 year.
+D. The distance is 500 km.
+**Correct Answer: B**
+**Explanation:** An official on foreign service/deputation can either opt for his parent pay + deputation allowance **OR** the pay of the deputation post. He cannot get both.
+
+**Q193. Under SR 48, a "Head of Office" is empowered to?**
+A. Dismiss an employee.
+B. **Grant leave to Group 'C' and 'D' staff.**
+C. Transfer an officer to another state.
+D. Increase the pay scale.
+**Correct Answer: B**
+**Explanation:** **SR 48** and the Delegation of Financial Power Rules (DFPR) empower the Head of Office to manage the leave and routine administrative matters of their staff.
+
+**Q194. What is the "Limit of Advance" for "LTC"?**
+A. 50% of fare.
+B. **90% of the estimated fare.**
+C. 100% of fare.
+D. ₹5,000 fixed.
+**Correct Answer: B**
+**Explanation:** An official can take an advance up to **90%** of the estimated travel cost for themselves and their family for LTC.
+
+**Q195. If an official travels by a "Lower Class" than entitled during a tour, what is the reimbursement?**
+A. Entitled class fare.
+B. **Actual fare of the lower class traveled.**
+C. No reimbursement.
+D. 50% of the entitled fare.
+**Correct Answer: B**
+**Explanation:** **SR 31** states that an official is entitled to the fare of the class actually used, or the class to which he is entitled, whichever is **lower**.
+
+**Q196. "Leave Salary" for "Half Pay Leave" (HPL) is?**
+A. 100% of pay.
+B. **Half of the pay drawn before proceeding on leave.**
+C. Only DA.
+D. Fixed at ₹10,000.
+**Correct Answer: B**
+**Explanation:** During HPL, the official receives leave salary equal to **half** the amount of pay drawn before the leave.
+
+**Q197. Which SR deals with the "Transfer of Charge" procedure?**
+A. SR 2.
+B. **SR 30.**
+C. SR 116.
+D. FR 56.
+**Correct Answer: B**
+**Explanation:** **SR 30** (along with GFR) describes the formalities for handing over and taking over charge of a post.
+
+**Q198. As of December 2025, if DA is 55%, the "Gratuity Ceiling" is?**
+A. ₹20 Lakh.
+B. **₹25 Lakh.**
+C. ₹30 Lakh.
+D. ₹22.5 Lakh.
+**Correct Answer: B**
+**Explanation:** The ceiling was raised to **₹25 Lakh** once DA touched **50%**. It does not increase further with every DA hike unless specifically notified.
+
+**Q199. "Lien" is terminated only when?**
+A. The official is on EOL for 2 years.
+B. **The official is confirmed in another permanent post.**
+C. The official is suspended.
+D. The official is transferred.
+**Correct Answer: B**
+**Explanation:** Under **FR 14-A**, the lien on the previous post is terminated only when the official is **confirmed** in another permanent post.
+
+**Q200. Who is the "Competent Authority" for the Department of Posts for the purpose of FR/SR interpretations?**
+A. Postmaster General.
+B. **Director General (Posts) or the Secretary (Posts).**
+C. Divisional Head.
+D. ASP.
+**Correct Answer: B**
+**Explanation:** The **Director General (Posts)** and the **Postal Services Board** are the ultimate authorities for interpreting and implementing FR/SR within the Department of Posts, subject to Ministry of Finance guidelines.

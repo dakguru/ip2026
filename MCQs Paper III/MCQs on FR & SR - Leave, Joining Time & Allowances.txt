@@ -1,0 +1,410 @@
+
+### **Set 2: Leave, Joining Time & Allowances (Questions 51–100)**
+
+**Q51. Which kind of leave is not debited to the leave account of a Government servant?**
+A. Earned Leave (EL)
+B. Half Pay Leave (HPL)
+C. **Casual Leave (CL)**
+D. Commuted Leave
+**Correct Answer: C**
+**Explanation:** **Casual Leave** is not a recognized form of leave under the CCS (Leave) Rules and is not debited to the regular leave account. It is governed by executive instructions.
+
+**Q52. What is the maximum number of days of Earned Leave (EL) that can be held in credit by a Government servant as per CCS Leave Rules?**
+A. 240 days
+B. **300 days** (plus 15 days in the current half-year)
+C. 180 days
+D. Unlimited
+**Correct Answer: B**
+**Explanation:** A Government servant can accumulate a maximum of **300 days** of EL. Any balance beyond this at the end of a half-year is generally lapsed, though an additional **15 days** can be credited at the start of the next half-year.
+
+**Q53. If a Government servant is transferred and the distance between the old and new headquarters is 1,200 km, how many days of Joining Time are admissible if travel is by rail?**
+A. 10 days
+B. **12 days**
+C. 15 days
+D. 5 days
+**Correct Answer: B**
+**Explanation:** Under **CCS (Joining Time) Rules**, for distances **> 1,000 km and ≤ 2,000 km**, the admissible joining time is **12 days**.
+
+**Q54. As per 2024-2025 updates, when DA reaches 50%, the Road Mileage Allowance (RMA) for own car/taxi is increased by what percentage?**
+A. 10%
+B. **25%**
+C. 50%
+D. 20%
+**Correct Answer: B**
+**Explanation:** Following the **50% DA** threshold, specific allowances including **Road Mileage Allowance**, **Hotel Charges**, and **Food Charges** are automatically increased by **25%** as per 7th CPC recommendations.
+
+**Q55. What is the maximum amount of "Leave Encashment" allowed at the time of retirement?**
+A. 150 days
+B. 240 days
+C. **300 days**
+D. 315 days
+**Correct Answer: C**
+**Explanation:** A Government servant is entitled to cash equivalent of leave salary for Earned Leave at their credit at the time of retirement, subject to a maximum of **300 days**.
+
+**Q56. Under which circumstances can "Commuted Leave" be granted to a Government employee?**
+A. For private affairs without any certificate.
+B. On medical certificate or for study purposes.
+C. For attending a wedding.
+D. Only during the last year of service.
+**Correct Answer: B**
+**Explanation:** **Rule 30** of CCS (Leave) Rules states that Commuted Leave is granted on a **medical certificate**. It can also be granted without a medical certificate for **Study Leave** or to a female employee in continuation of Maternity Leave.
+
+**Q57. A Government servant who is not in a vacation department is credited with how many days of Earned Leave in a calendar year?**
+A. 20 days
+B. **30 days**
+C. 15 days
+D. 45 days
+**Correct Answer: B**
+**Explanation:** EL is credited in two installments of **15 days** each on **1st January** and **1st July** every year, totaling **30 days** for a full year of service.
+
+**Q58. What is the maximum duration of "Maternity Leave" admissible to a female Government servant for each occasion?**
+A. 90 days
+B. 120 days
+C. **180 days**
+D. 135 days
+**Correct Answer: C**
+**Explanation:** **Rule 43** provides **180 days** of Maternity Leave. It can be combined with any other kind of leave.
+
+**Q59. "Paternity Leave" must be availed within how many months from the date of delivery of the child?**
+A. 1 month
+B. 3 months
+C. **6 months**
+D. 12 months
+**Correct Answer: C**
+**Explanation:** Paternity Leave of **15 days** must be availed within **6 months** of the delivery of the child; otherwise, it shall be treated as lapsed.
+
+**Q60. Which authority is competent to grant "Study Leave" to a Government servant?**
+A. Immediate Supervisor
+B. Head of Office
+C. **Ministry/Department/Head of Department**
+D. President of India only
+**Correct Answer: C**
+**Explanation:** Study Leave is usually sanctioned by the **Ministry or the Head of Department (HoD)**, as it involves specialized conditions regarding the relevance of the course to the official's duties.
+
+---
+
+**Q61. What is the maximum period of "Extra Ordinary Leave" (EOL) that can be granted to a permanent Government servant for reasons other than medical?**
+A. 3 months
+B. 6 months
+C. **18 months** (in special cases/higher studies)
+D. 5 years
+**Correct Answer: C**
+**Explanation:** While **FR 18** limits continuous leave to 5 years, **Rule 32** of CCS (Leave) Rules specifies limits for EOL. For a permanent employee, EOL can be granted for any period, but for non-permanent employees, specific limits (3, 6, 18, or 24 months) apply based on the reason.
+
+**Q62. If a Government servant is transferred within the same station, is he entitled to Joining Time?**
+A. No
+B. **Yes, 1 day**
+C. Yes, 5 days
+D. Yes, but only if he changes his residence
+**Correct Answer: B**
+**Explanation:** For a transfer within the same station or where the distance does not involve a change of residence, only **1 day** of joining time is allowed (inclusive of holidays).
+
+**Q63. What is the "LTC" (Leave Travel Concession) block year for the current cycle?**
+A. 2022-2025
+B. **2022-2025**
+C. 2024-2027
+D. 2020-2023
+**Correct Answer: B**
+**Explanation:** The current four-year block for LTC is **2022-2025**. The next four-year block will start from **2026-2029**.
+
+**Q64. An official in Pay Level 5 is entitled to travel by which class for "Tour" purposes by Rail?**
+A. 1st Class AC
+B. **2nd Class AC or AC Chair Car**
+C. 3rd Class AC
+D. Sleeper Class only
+**Correct Answer: B**
+**Explanation:** As per 7th CPC TA rules, officials in **Levels 1 to 5** are entitled to travel by **AC-III Tier / AC Chair Car**; however, those in Level 5 often qualify for **AC-II Tier** depending on the specific departmental relaxation or pay scale thresholds. (Standard: Level 5 = AC-III/Chair Car).
+
+**Q65. "Children Education Allowance" (CEA) as of 2025 is reimbursable at what monthly rate per child?**
+A. ₹1,500
+B. ₹2,250
+C. **₹2,812.50**
+D. ₹3,000
+**Correct Answer: C**
+**Explanation:** The base CEA was ₹2,250 per month. With DA reaching **50%**, this allowance increased by **25%**, making it **₹2,812.50** per month.
+
+**Q66. For a child with a disability, the Children Education Allowance is paid at?**
+A. Normal Rate
+B. **Double the Normal Rate**
+C. Triple the Normal Rate
+D. 1.5 times the Normal Rate
+**Correct Answer: B**
+**Explanation:** For children with disabilities, the reimbursement rate is **double** the normal rate, which as of 2025 is **₹5,625** per month.
+
+**Q67. "Special Disability Leave" is governed by which CCS Leave Rule?**
+A. Rule 43
+B. **Rule 44**
+C. Rule 22
+D. Rule 50
+**Correct Answer: B**
+**Explanation:** **Rule 44** governs Special Disability Leave for injuries intentionally inflicted or caused in the performance of official duties.
+
+**Q68. What is the limit for "Hospital Leave" for Group 'C' employees?**
+A. 120 days
+B. 3 months
+C. **There is no fixed limit** (as long as it is necessary for recovery)
+D. 24 months
+**Correct Answer: C**
+**Explanation:** Hospital Leave (now mostly merged/substituted by **WRIIL** - Work Related Illness and Injury Leave) was granted to certain categories of staff. Under current rules (WRIIL), full pay is granted for the entire period of hospitalization.
+
+**Q69. In case of "LTC," what is the maximum number of days of EL that can be encashed during the entire service?**
+A. 30 days
+B. **60 days**
+C. 100 days
+D. 300 days
+**Correct Answer: B**
+**Explanation:** A Government servant can encash up to **10 days** of EL at a time of availing LTC, subject to a maximum of **60 days** in the entire career. This is over and above the 300 days allowed at retirement.
+
+**Q70. If an official is on "Half Pay Leave" (HPL) on the date of his increment, what happens to the increment?**
+A. It is delayed by the period of leave.
+B. It is released on the due date but the financial benefit is drawn only upon joining duty.
+C. It is cancelled.
+D. It is drawn along with the leave salary.
+**Correct Answer: B**
+**Explanation:** Per **FR 24 and 26**, if an official is on leave (other than EOL without MC), the increment is not withheld, but the monetary benefit is only realized when the official **returns to duty**.
+
+---
+
+**Q71. "Joining Time" may be combined with which of the following?**
+A. Casual Leave
+B. **Earned Leave**
+C. Restricted Holiday
+D. None of the above
+**Correct Answer: B**
+**Explanation:** Joining time can be combined with any kind of regular leave (**EL, HPL, Commuted Leave**) but **cannot** be combined with Casual Leave.
+
+**Q72. What is the maximum "Mileage Allowance" for travel by Auto Rickshaw per km as of 2025?**
+A. ₹12
+B. **₹15** (plus 25% hike) = **₹18.75**
+C. ₹20
+D. ₹10
+**Correct Answer: B**
+**Explanation:** The base rate for Auto Rickshaw mileage was ₹15/km. With **50% DA**, this rate is hiked by **25%**, making it **₹18.75/km**.
+
+**Q73. When a Government servant is on "Transit" during transfer, he is treated as?**
+A. On Leave
+B. **On Duty**
+C. On Deputation
+D. Off Duty
+**Correct Answer: B**
+**Explanation:** The period of **Joining Time** is treated as **duty** for all purposes, including pay, increments, and pension.
+
+**Q74. Under CCS (Leave) Rules, "Leave not Due" (LND) is debited against which account?**
+A. Earned Leave
+B. **Half Pay Leave to be earned in the future**
+C. Personal Pay
+D. Commuted Leave
+**Correct Answer: B**
+**Explanation:** **Rule 31** allows the grant of "Leave Not Due" when no HPL is available. It is limited to **360 days** during the entire service and is debited against the HPL the official is expected to earn subsequently.
+
+**Q75. What is the time limit for submission of a "TA Claim" for a tour?**
+A. 30 days
+B. **60 days**
+C. 90 days
+D. 180 days
+**Correct Answer: B**
+**Explanation:** Per **SR 190**, TA claims must be submitted within **60 days** following the completion of the journey. If not submitted within this time, the claim may be forfeited unless the delay is condoned.
+
+**Q76. For a "Transfer TA" claim, what is the time limit for submission?**
+A. 60 days
+B. 90 days
+C. **180 days**
+D. 1 year
+**Correct Answer: C**
+**Explanation:** For **Transfer TA** (including transportation of personal effects), the claim must be submitted within **180 days** of the date of completion of the journey.
+
+**Q77. What is the "Leave Salary" admissible during "Child Care Leave"?**
+A. 100% of pay for all 730 days.
+B. **100% for first 365 days and 80% for the next 365 days.**
+C. 50% of pay.
+D. 100% for first 180 days only.
+**Correct Answer: B**
+**Explanation:** This revision was introduced following the 7th CPC. Previously it was 100% throughout. Now, the second year (366th day onwards) is paid at **80%**.
+
+**Q78. In the event of a "Transfer" for which TA is not admissible, is Joining Time admissible?**
+A. No
+B. Yes, but restricted to 5 days.
+C. **Yes, but only if it is in the public interest.**
+D. Yes, 10 days regardless.
+**Correct Answer: C**
+**Explanation:** Admissibility of Joining Time is linked to whether the transfer is in the **public interest**. If a transfer is at the employee's own request, joining time is not usually admissible unless specifically granted (often as "joining time without pay").
+
+**Q79. Which rule describes the "Calculation of Joining Time"?**
+A. SR 2
+B. **CCS (Joining Time) Rule 4**
+C. FR 10
+D. Rule 14
+**Correct Answer: B**
+**Explanation:** **Rule 4** of the CCS (Joining Time) Rules provides the scale of joining time based on distance.
+
+**Q80. Can a Government servant be granted leave while under "Suspension"?**
+A. Yes, EL.
+B. Yes, HPL.
+C. **No leave can be granted to an official under suspension.**
+D. Only on medical grounds.
+**Correct Answer: C**
+**Explanation:** Under **FR 55**, leave may **not** be granted to a Government servant at a time when he is under suspension.
+
+---
+
+**Q81. What is the rate of "HPL" (Half Pay Leave) credit per year?**
+A. 15 days
+B. **20 days**
+C. 30 days
+D. 10 days
+**Correct Answer: B**
+**Explanation:** HPL is credited at the rate of **10 days** on **1st January** and **10 days** on **1st July** every year.
+
+**Q82. Maximum "Commuted Leave" that can be granted during the entire service without a medical certificate for "Study" is?**
+A. 90 days
+B. **180 days**
+C. 360 days
+D. 45 days
+**Correct Answer: B**
+**Explanation:** **Rule 30(1)** allows commuted leave up to **180 days** during the entire service if utilized for a course of study certified to be in the public interest.
+
+**Q83. "Transport Allowance" (TPTA) for an employee in Level 1-2 residing in a non-TPTA city is?**
+A. ₹900 + DA
+B. **₹1,350 + DA**
+C. ₹1,800 + DA
+D. ₹3,600 + DA
+**Correct Answer: B**
+**Explanation:** For employees in **Levels 1 & 2**, the TPTA is ₹1,350 + DA (for non-TPTA cities) and ₹1,350 + DA (for TPTA cities if pay is less than ₹24,200). For those in **Level 3 and above**, it is ₹3,600 + DA or ₹1,800 + DA depending on the city.
+
+**Q84. What is the limit of "Transfer TA" for transportation of personal effects by road for Level 5?**
+A. ₹25 per km
+B. **₹15 per km (plus 25% hike) = ₹18.75 per km**
+C. ₹50 per km
+D. At actuals
+**Correct Answer: B**
+**Explanation:** For Levels 5 and below, the road transportation rate for personal effects is regulated. With **50% DA**, the rates have increased by **25%**.
+
+**Q85. Can "Child Care Leave" (CCL) be granted for more than 3 spells in a calendar year?**
+A. Yes
+B. **No**
+C. Only for single mothers.
+D. Only on medical grounds.
+**Correct Answer: B**
+**Explanation:** **Rule 43-C** stipulates that CCL shall not be granted in more than **3 spells** in a calendar year. For **single mothers**, this is increased to **6 spells**.
+
+**Q86. What is the maximum period of "Study Leave" admissible in one spell?**
+A. 12 months
+B. **24 months**
+C. 36 months
+D. 6 months
+**Correct Answer: B**
+**Explanation:** For most officials, Study Leave is limited to **24 months** in the entire service and can be granted in one spell or multiple spells. For **CHS (Medical) officers**, it is 36 months.
+
+**Q87. A Government servant is entitled to "LTC" for a "Home Town" visit once in a block of?**
+A. 1 year
+/B. **2 years**
+C. 4 years
+D. 5 years
+**Correct Answer: B**
+**Explanation:** LTC to "Home Town" is admissible once in a block of **two calendar years** (e.g., 2024-2025).
+
+**Q88. Which of the following is NOT a "Member of Family" for the purpose of LTC?**
+A. Dependent parents
+B. **Married daughter**
+C. Unmarried minor brother
+D. Wife
+**Correct Answer: B**
+**Explanation:** A married daughter is generally not considered a "dependent" family member for LTC unless she is widowed/divorced and wholly dependent on the Government servant.
+
+**Q89. If a Government servant resigns from service, what happens to their Earned Leave balance?**
+A. It is encashed up to 300 days.
+B. **It lapses, but encashment of 50% (up to 150 days) may be allowed.**
+C. It is transferred to the new employer.
+D. It is fully encashed.
+**Correct Answer: B**
+**Explanation:** Per **Rule 39(3)**, if a Government servant resigns, they can be paid cash equivalent of EL up to **half** of the EL at their credit, subject to a maximum of **150 days**.
+
+**Q90. What is the maximum "Encashment of HPL" allowed at the time of retirement?**
+A. 300 days
+B. **No separate limit, but total EL + HPL encashment cannot exceed 300 days.**
+C. 150 days
+D. HPL cannot be encashed.
+**Correct Answer: B**
+**Explanation:** If EL balance is less than 300 days, **HPL** can be encashed to make up the shortfall to **300 days**, but no HRA/CCA is paid on the HPL component of encashment.
+
+---
+
+**Q91. When a Government servant is on "Tour," they are entitled to "Hotel Accommodation" reimbursement. For Level 5, the limit as of 2025 is?**
+A. ₹450 per day
+B. **₹750 (plus 25% hike) = ₹937.50 per day**
+C. ₹1,000 per day
+D. ₹2,000 per day
+**Correct Answer: B**
+**Explanation:** The base limit for Level 5 was **₹750**. With **DA at 50%**, this increased by **25%** to **₹937.50**.
+
+**Q92. Which rule allows for "Suo-Motu" sanction of leave encashment on retirement?**
+A. Rule 10
+B. **Rule 39**
+C. Rule 5
+D. Rule 56
+**Correct Answer: B**
+**Explanation:** **Rule 39** of CCS (Leave) Rules 1972 allows for the automatic (suo-motu) sanction of leave encashment for officials retiring on superannuation.
+
+**Q93. A "Qualifying Service" of how many years is required to avail "Study Leave"?**
+A. 2 years
+B. **5 years**
+C. 10 years
+D. 1 year
+**Correct Answer: B**
+**Explanation:** Study Leave is generally granted to employees who have completed at least **5 years** of service and are not due to retire within the next 3 years.
+
+**Q94. What is the maximum amount of "Earned Leave" that can be granted at a time to a Group 'A' or 'B' officer?**
+A. 120 days
+B. **180 days**
+C. 300 days
+D. 90 days
+**Correct Answer: B**
+**Explanation:** The maximum EL that can be granted in one spell is **180 days**. However, for those on leave outside India, it can be 300 days.
+
+**Q95. In the case of "Extraordinary Leave" (EOL) on medical grounds, the increment is?**
+A. Postponed
+B. **Not postponed (counts for increment)**
+C. Cancelled
+D. Reduced
+**Correct Answer: B**
+**Explanation:** Per **FR 26**, EOL taken on medical grounds (supported by a certificate) **counts for increments**.
+
+**Q96. Which kind of leave is granted to a Government servant who is a victim of "Sexual Harassment"?**
+A. Special Casual Leave
+B. **Special Leave up to 90 days**
+C. Commuted Leave
+D. HPL
+**Correct Answer: B**
+**Explanation:** As per **Rule 48**, a woman Government servant who has filed a complaint of sexual harassment can be granted leave up to **90 days** during the pendency of inquiry.
+
+**Q97. Is "HRA" (House Rent Allowance) admissible during "Joining Time"?**
+A. No
+B. **Yes, at the rates of the old station.**
+C. Yes, at the rates of the new station.
+D. Only 50% is paid.
+**Correct Answer: B**
+**Explanation:** During Joining Time, HRA and other allowances are paid at the rates of the **station from which the employee was transferred**.
+
+**Q98. For "LTC," if the journey is performed by a "Private Transport" (not recognized/approved), what is the reimbursement?**
+A. Full reimbursement
+B. **Nil (No reimbursement)**
+C. Restricted to Rail fare.
+D. 50% of the fare.
+**Correct Answer: B**
+**Explanation:** LTC claims are only valid for travel by **Government-owned transport** or approved carriers (like Air India/authorized rail). Travel by private bus/taxi (unless authorized by the state) results in **forfeiture** of the claim.
+
+**Q99. What is the limit of "TA" for an official's family on transfer?**
+A. One fare for each member.
+B. **Actual fares for members including dependent parents.**
+C. Only for spouse and children.
+D. Restricted to ₹10,000.
+**Correct Answer: B**
+**Explanation:** Transfer TA includes the actual fares for the official and **all dependent family members** from the old station to the new station.
+
+**Q100. If a Government servant is on leave and is "Recalled to Duty," what are they entitled to?**
+A. No extra benefit.
+B. **TA for the journey to headquarters and leave salary for the period of transit.**
+C. Double pay.
+D. Bonus increments.
+**Correct Answer: B**
+**Explanation:** Per **Rule 70**, if an official is recalled to duty from leave, they are entitled to TA and their journey to HQ is treated as **duty**.
