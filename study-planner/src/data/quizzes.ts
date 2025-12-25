@@ -1860,5 +1860,13 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-29', 'LDCE IP 2025 - Paper I PYQ', 'PYQ', [22, 23, 24, 25, 26]),
   createTopic('p3-20', 'LDCE IP 2025 - Paper III PYQ', 'PYQ', [27, 28, 29, 30, 31, 32]),
   createTopic('p3-22', 'Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023', 'Paper III', [66]),
+  createTopic('p3-23', 'FR and SR', 'Paper III'),
+  createTopic('p3-24', 'Brochure on casual labourers', 'Paper III'),
+  createTopic('p3-25', 'Maintenance of APAR', 'Paper III'),
+  createTopic('p3-21', 'Service Discharge Benefit Scheme', 'Paper III', [65]),
+  createTopic('p3-26', 'Schedule of Financial Powers', 'Paper III'),
+  createTopic('p3-27', 'Welfare measures for Employees/GDS', 'Paper III'),
+  createTopic('p3-28', 'P&T FHB Volume I', 'Paper III'),
+  createTopic('p3-29', 'Postal FHB Volume II', 'Paper III'),
 ];
 
