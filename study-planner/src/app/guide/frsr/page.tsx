@@ -17,7 +17,9 @@ import {
     CheckCircle,
     Home,
     ShieldAlert,
-    Award
+    Award,
+    Plane,
+    Calendar
 } from 'lucide-react';
 
 // --- Data Content from PDF ---
@@ -152,6 +154,27 @@ const CONTENT_DATA: Record<string, any> = {
             { id: "SR-4", title: "Medical Fitness", content: "Medical Board (Gazetted) or Civil Surgeon (Non-Gazetted). Exemptions for competitive exam recruits already examined." },
             { id: "SR-11/12", title: "Fees", content: "Requires sanction. 1/3rd of amount > ₹5000/year credited to Govt." },
             { id: "SR-198", title: "Service Book", content: "Maintained from first appointment. Duplicate copy to employee. Annual verification by Head of Office. Cost of replacement if lost: ₹500." }
+        ]
+    },
+    "Supplementary Rules (TA)": {
+        icon: <Plane className="w-5 h-5" />,
+        color: "indigo",
+        rules: [
+            { id: "Entitlements", title: "Travel Entitlements", content: "Pay Level 14+: Business/Executive Class. Level 12-13A: Economy (Air). Level 6-11: Economy (Air - Tour only if permitted, else AC II). Level 5 & below: First Class/AC III." },
+            { id: "Daily Allowance", title: "Daily Allowance (Food)", content: "Reimbursement based on Pay Level. Level 14+: ₹1200. Level 12-13A: ₹1000. Level 9-11: ₹900. Level 6-8: ₹800. Level 5 & below: ₹500." },
+            { id: "Transfer Grant", title: "Composite Transfer Grant (CTG)", content: "80% of Basic Pay (if change of station > 20km). 100% of Basic Pay if transferred to/from Island/Remote Areas." },
+            { id: "Definition", title: "Family for TA", content: "Spouse, Children, Step-children, Parents, Minor brothers/sisters, Widowed sisters, Divorced/Widowed daughters (wholly dependent & residing with)." }
+        ]
+    },
+    "CCS (Leave) Rules, 1972": {
+        icon: <Calendar className="w-5 h-5" />,
+        color: "pink",
+        rules: [
+            { id: "Rule 26", title: "Earned Leave (EL)", content: "Credit: 15 days on 1st Jan & 1st July. Accumulation: Max 300 days (plus 15 days separate). Unavailed joining time can be credited." },
+            { id: "Rule 29", title: "Half Pay Leave (HPL)", content: "Credit: 10 days on 1st Jan & 1st July. No max accumulation limit. Can be commuted to Commuted Leave (medical/studies) on production of MC (1 Commuted = 2 HPL)." },
+            { id: "Rule 43", title: "Maternity Leave", content: "180 days for female employee (max 2 surviving children). 45 days for miscarriage/abortion in entire career." },
+            { id: "Rule 43-C", title: "Child Care Leave (CCL)", content: "Max 730 days in entire service for female employees (and single male parents). For 2 eldest children < 18 years. Paid 100% salary for first 365 days, 80% for next 365 days." },
+            { id: "Rule 48", title: "Special Disability Leave", content: "For injury intentionally inflicted or accidental during official duty. Max 24 months." }
         ]
     }
 };

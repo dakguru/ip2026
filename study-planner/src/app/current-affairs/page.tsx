@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, Globe, Newspaper, BrainCircuit, History, Loader2, RefreshCw, AlertCircle, CheckCircle2, XCircle, Trophy } from "lucide-react";
+import { ArrowLeft, Globe, Newspaper, History, Loader2, RefreshCw, AlertCircle, Trophy } from "lucide-react";
 import { format } from "date-fns";
 
 // --- Types ---
@@ -18,18 +18,7 @@ interface NewsItem {
     [key: string]: any;
 }
 
-interface QuizItem {
-    question: string;
-    options: string[];
-    answer: string; // Assuming the API returns the correct answer
-    explanation?: string;
-}
 
-interface HistoryItem {
-    year: string;
-    event: string;
-    description?: string;
-}
 
 // --- Configuration ---
 const RAPID_API_KEY = "1bc39bde08msh044dfa558b1e89fp10d0d8jsn64cd63789ee0";
@@ -48,7 +37,6 @@ function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "inte
         setLoading(true);
         setError(null);
         try {
-            // Determine query based on type
             // Determine query based on type
             let query = "India";
             let country = "IN";
@@ -74,7 +62,8 @@ function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "inte
                 headers: {
                     'x-rapidapi-key': RAPID_API_KEY,
                     'x-rapidapi-host': NEWS_API_HOST
-                }
+                },
+                cache: 'no-store'
             });
 
             if (!res.ok) throw new Error(`Failed to fetch ${type} news`);
@@ -147,123 +136,6 @@ function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "inte
     );
 }
 
-function QuizSection() {
-    const [questions, setQuestions] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-    const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: string }>({});
-    const [showResults, setShowResults] = useState(false);
-
-    const fetchQuiz = async () => {
-        setLoading(true);
-        setError(null);
-        setSelectedAnswers({});
-        setShowResults(false);
-        try {
-            // Note: Keeping generic fetch for now or update if a specific Quiz API is available
-            // Using a placeholder response for demonstration if API fails or is not configured for quizzes
-            const res = await fetch(`https://${AFFAIRS_API_HOST}/today-quiz`, {
-                headers: {
-                    'x-rapidapi-key': RAPID_API_KEY,
-                    'x-rapidapi-host': AFFAIRS_API_HOST
-                }
-            });
-            if (!res.ok) throw new Error("Failed to fetch today's quiz");
-            const json = await res.json();
-            setQuestions(Array.isArray(json) ? json : json.data || []);
-        } catch (err: any) {
-            console.log("Quiz API Error (Expected if using News Data API key):", err);
-            setError("Quiz service currently unavailable. Please check back later.");
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => { fetchQuiz(); }, []);
-
-    const handleSelect = (qIdx: number, option: string) => {
-        if (showResults) return;
-        selectedAnswers[qIdx] = option;
-        setSelectedAnswers({ ...selectedAnswers });
-    }
-
-    if (loading) return <div className="flex justify-center p-10"><Loader2 className="animate-spin text-blue-500 w-8 h-8" /></div>;
-    if (error) return <ErrorDisplay message={error} retry={fetchQuiz} />;
-    if (questions.length === 0) return <div className="text-center p-10 text-zinc-500">No quiz questions available for today.</div>;
-
-    return (
-        <div className="max-w-3xl mx-auto space-y-8">
-            <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">Daily Quiz Challenge</h2>
-                <button onClick={fetchQuiz} className="text-sm text-blue-600 hover:underline flex items-center gap-1"><RefreshCw className="w-3 h-3" /> Reset</button>
-            </div>
-
-            {questions.map((q, idx) => {
-                const questionText = q.question || q.Question || "Question " + (idx + 1);
-                const options = q.options || q.Options || ["True", "False"];
-                const correctAnswer = q.answer || q.correct_answer || q.CorrectAnswer || "";
-
-                const isCorrect = showResults && selectedAnswers[idx] === correctAnswer;
-                const isWrong = showResults && selectedAnswers[idx] !== correctAnswer && selectedAnswers[idx] !== undefined;
-
-                return (
-                    <div key={idx} className="bg-white dark:bg-zinc-900 rounded-xl p-6 border border-zinc-200 dark:border-zinc-800">
-                        <p className="font-semibold text-lg mb-4 text-zinc-900 dark:text-zinc-50"><span className="text-blue-500 mr-2">{idx + 1}.</span>{questionText}</p>
-                        <div className="space-y-2">
-                            {options.map((opt: string, oIdx: number) => {
-                                const isSelected = selectedAnswers[idx] === opt;
-                                const isThisCorrect = opt === correctAnswer;
-
-                                let btnClass = "w-full text-left p-3 rounded-lg border transition-all ";
-                                if (showResults) {
-                                    if (isThisCorrect) btnClass += "bg-green-100 border-green-500 text-green-800 dark:bg-green-900/30 dark:text-green-200 ";
-                                    else if (isSelected) btnClass += "bg-red-100 border-red-500 text-red-800 dark:bg-red-900/30 dark:text-red-200 ";
-                                    else btnClass += "bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 opacity-60 ";
-                                } else {
-                                    if (isSelected) btnClass += "bg-blue-50 border-blue-500 text-blue-700 dark:bg-blue-900/20 dark:border-blue-500 dark:text-blue-300 ";
-                                    else btnClass += "bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-700 ";
-                                }
-
-                                return (
-                                    <button
-                                        key={oIdx}
-                                        onClick={() => handleSelect(idx, opt)}
-                                        className={btnClass}
-                                        disabled={showResults}
-                                    >
-                                        <div className="flex items-center justify-between">
-                                            <span>{opt}</span>
-                                            {showResults && isThisCorrect && <CheckCircle2 className="w-5 h-5 text-green-600" />}
-                                            {showResults && isSelected && !isThisCorrect && <XCircle className="w-5 h-5 text-red-600" />}
-                                        </div>
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    </div>
-                );
-            })}
-
-            {!showResults && (
-                <button
-                    onClick={() => setShowResults(true)}
-                    disabled={Object.keys(selectedAnswers).length < questions.length}
-                    className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                    Submit Answers
-                </button>
-            )}
-
-            {showResults && (
-                <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-center">
-                    <h3 className="text-xl font-bold text-blue-800 dark:text-blue-300 mb-2">Quiz Completed!</h3>
-                    <p>Great job practicing today. Come back tomorrow for more!</p>
-                </div>
-            )}
-        </div>
-    );
-}
-
 function HistorySection() {
     const [data, setData] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
@@ -277,7 +149,8 @@ function HistorySection() {
                 headers: {
                     'x-rapidapi-key': RAPID_API_KEY,
                     'x-rapidapi-host': AFFAIRS_API_HOST
-                }
+                },
+                cache: 'no-store'
             });
             if (!res.ok) throw new Error("Failed to fetch history");
             const json = await res.json();
@@ -306,22 +179,38 @@ function HistorySection() {
             </div>
 
             <div className="relative border-l-2 border-purple-200 dark:border-purple-900/50 space-y-8 ml-4">
-                {data.map((item, idx) => (
-                    <div key={idx} className="relative pl-8">
-                        {/* Timeline dot */}
-                        <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-purple-500 border-4 border-white dark:border-zinc-950"></div>
+                {data.map((item, idx) => {
+                    // Parse the chaotic API response
+                    const rawDate = item.date || "";
+                    const rawDesc = item.description || item.details || item.snippet || "";
 
-                        <span className="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-bold rounded-full mb-2">
-                            {item.year || "Year Unknown"}
-                        </span>
-                        <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-100 mb-2">
-                            {item.title || item.event || "Historical Event"}
-                        </h3>
-                        <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                            {item.description || item.details || item.snippet}
-                        </p>
-                    </div>
-                ))}
+                    const cleanDate = rawDate.trim();
+                    const cleanDesc = rawDesc.trim().replace(/\s+/g, " ");
+
+                    // Extract year if possible (Format: 25-December-1763)
+                    let year = "Year Unknown";
+                    const dateParts = cleanDate.split("-");
+                    if (dateParts.length >= 3) {
+                        year = dateParts[dateParts.length - 1];
+                    }
+
+                    return (
+                        <div key={idx} className="relative pl-8">
+                            {/* Timeline dot */}
+                            <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-purple-500 border-4 border-white dark:border-zinc-950"></div>
+
+                            <span className="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-bold rounded-full mb-2">
+                                {year}
+                            </span>
+                            <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-100 mb-2">
+                                {item.title || item.event || "Historical Event"}
+                            </h3>
+                            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                                {cleanDesc}
+                            </p>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
@@ -343,7 +232,7 @@ function ErrorDisplay({ message, retry }: { message: string, retry: () => void }
             >
                 <RefreshCw className="w-4 h-4" /> Fetch Updates
             </button>
-            <p className="text-xs text-zinc-400 mt-4 opacity-50">{message}</p>
+
         </div>
     );
 }
@@ -351,13 +240,13 @@ function ErrorDisplay({ message, retry }: { message: string, retry: () => void }
 // --- Main Page ---
 
 export default function CurrentAffairsPage() {
-    const [activeTab, setActiveTab] = useState<"recent" | "international" | "quiz" | "history" | "sports">("recent");
+    const [activeTab, setActiveTab] = useState<"recent" | "international" | "history" | "sports">("recent");
 
     const tabs = [
         { id: "recent", label: "India Updates", icon: Newspaper, color: "text-blue-500" },
         { id: "international", label: "International", icon: Globe, color: "text-green-500" },
         { id: "sports", label: "Global Sports", icon: Trophy, color: "text-yellow-500" },
-        { id: "quiz", label: "Today's Quiz", icon: BrainCircuit, color: "text-orange-500" },
+
         { id: "history", label: "History of Today", icon: History, color: "text-purple-500" },
     ] as const;
 
@@ -405,9 +294,7 @@ export default function CurrentAffairsPage() {
                 <div className={`transition-opacity duration-300 ${activeTab === "sports" ? "block" : "hidden"}`}>
                     <NewsList endpoint="/sports" type="sports" />
                 </div>
-                <div className={`transition-opacity duration-300 ${activeTab === "quiz" ? "block" : "hidden"}`}>
-                    <QuizSection />
-                </div>
+
                 <div className={`transition-opacity duration-300 ${activeTab === "history" ? "block" : "hidden"}`}>
                     <HistorySection />
                 </div>
