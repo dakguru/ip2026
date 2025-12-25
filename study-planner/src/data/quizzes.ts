@@ -1855,14 +1855,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-10', 'Sexual Harassment at Work place (Prevention, prohibition & Redressal) Act, 2013', 'Paper III'),
   createTopic('p3-11', 'Central Civil Services (Implementation of NPS) Rules, 2021', 'Paper III'),
   createTopic('p3-12', 'General Financial Rules 2017', 'Paper III'),
-  createTopic('p3-13', 'CCS (Conduct) Rules, 1964', 'Paper III'),
-  createTopic('p3-14', 'CCS (CCA) Rules, 1965', 'Paper III'),
-  createTopic('p3-15', 'CCS (Temporary Service) Rules 1965', 'Paper III', [57]),
-  createTopic('p3-16', 'GDS Conduct and Engagement Rules, 2020', 'Paper III'),
-  createTopic('p3-17', 'GDS Rulings', 'Paper III'),
-  createTopic('p3-18', 'Preservation & Disposal of Records', 'Paper III'),
-  createTopic('p3-19', 'Postal Manual Volume III', 'Paper III', [60]),
-  createTopic('p3-21', 'SDBS, 2011', 'Paper III', [65]),
+
 
   createTopic('p1-29', 'LDCE IP 2025 - Paper I PYQ', 'PYQ', [22, 23, 24, 25, 26]),
   createTopic('p3-20', 'LDCE IP 2025 - Paper III PYQ', 'PYQ', [27, 28, 29, 30, 31, 32]),
