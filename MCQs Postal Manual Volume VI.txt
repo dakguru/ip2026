@@ -1,0 +1,567 @@
+Here are 50 high-quality MCQs based strictly on the provided Postal Manual Volume VI PDF.
+
+### **Part 1: General Rules, Records, and Distribution of Work**
+
+**Q. 1. Regarding the "Memorandum of Distribution of Work" (MS-11), which of the following statements is correct?**
+A. It is prepared by the Superintendent and approved by the Postmaster.
+B. It is prepared by the Postmaster where there is one or more PA and submitted to the Superintendent for approval.
+C. It is maintained only in Head Offices with a strength of more than 10 staff.
+D. It is a permanent record that never requires renewal.
+
+**Correct Answer: B**
+
+
+**Explanation:** According to the text, MS-11 is prepared by the Postmaster where there is one or more PA and is submitted to the Superintendent for approval. 
+
+**Q. 2. A Nominal Roll (MS-12) must be maintained for Postmen and Village Postmen in offices where their strength exceeds:**
+A. 10
+B. 15
+C. 20
+D. 25
+
+**Correct Answer: D**
+
+
+**Explanation:** A nominal roll may be maintained for Postmen and Village Postmen in offices where their strength is more than 25. 
+
+**Q. 3. Which of the following officials is strictly prohibited from being the treasurer of the office?**
+A. The Mail Overseer
+B. The PA discharging duties connected with money order, savings bank, or sub-account department
+C. The Head Postman in a Sub Office
+D. Any official with less than 5 years of service
+
+**Correct Answer: B**
+
+
+**Explanation:** In no case may the PA who discharges the duties connected with money order, saving bank, or sub-account department be the treasurer of the office. 
+
+**Q. 4. The "Yearly Village Return" should be kept by the sub-account PA during which period of the year?**
+A. First 14 days of April
+B. First 14 days of March ( to )
+C. Last 14 days of March
+D. First 14 days of January
+
+**Correct Answer: B**
+
+
+**Explanation:** During the first 14 days of the month of March in each year from  to  (both days inclusive), a return should be kept by the sub-account PA. 
+
+**Q. 5. Consider the following statements regarding the custody of Government Money and Iron Safes:**
+
+1. Every safe supplied to an office will have double locks.
+2. If an iron chest has 2 hasps, both locks should be Sparling locks.
+3. If an iron chest has 1 hasp, a Sparling lock should be used.
+
+**Which of the statements given above is/are correct?**
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+
+
+**Explanation:** Every safe has double locks. If the chest has 2 hasps, one should be a padlock and the other a Sparling lock. If it has 1 hasp, a Sparling lock should be used.
+
+**Q. 6. All circulars issued by the Head of Circles are to be destroyed after:**
+A. 1 year from the date of issue.
+B. 3 years counting from the month of April following the close of the official year in which they were issued.
+C. 5 years from the date of issue.
+D. They are permanent records.
+
+**Correct Answer: B**
+
+
+**Explanation:** All circulars issued by Head of Circles will be destroyed after 3 years counting from the month of April following the close of the official year in which they were issued. 
+
+**Q. 7. Match the following records with their preservation period:**
+| Record | Preservation Period |
+| :--- | :--- |
+| 1. Postmaster's Order Book | P. Permanent |
+| 2. Nominal Roll | Q. 3 Years |
+| 3. Stock Book of a Post Office | R. 2 Years |
+| 4. Registered List | S. 10 Years |
+
+A. 1-Q, 2-P, 3-S, 4-R
+B. 1-P, 2-Q, 3-R, 4-S
+C. 1-S, 2-R, 3-P, 4-Q
+D. 1-Q, 2-S, 3-P, 4-R
+
+**Correct Answer: A**
+
+
+**Explanation:** Postmaster's Order Book = 3 Years; Nominal roll = Permanent; Stock Book = 10 Years; Registered list = 2 Years.
+
+**Q. 8. Which of the following records requires special permission from the Head of Circle to be destroyed?**
+A. Parcel list received and dispatched
+B. Guard book containing depositors' application for duplicate passbook
+C. Post office Order book MS-8 (except in Branch office)
+D. Special error book maintained in saving bank dept
+
+**Correct Answer: C**
+
+
+**Explanation:** The Post office Order book MS-8 (except in Branch office) may not be destroyed without the special permission of the Head of Circle. 
+
+**Q. 9. How should Confidential Records and books of Postmarks be disposed of?**
+A. By burning
+B. By shredding method
+C. By auction
+D. By burying
+
+**Correct Answer: B**
+
+
+**Explanation:** Confidential records and books of Postmarks should be destroyed by shredding method. 
+
+**Q. 10. Regarding the remittance of cash, ordinarily, cash in excess of what amount should be enclosed in a cash bag?**
+A. Rs. 100
+B. Rs. 250
+C. Rs. 500
+D. Rs. 1000
+
+**Correct Answer: B**
+**Explanation:** Ordinarily cash in excess of Rs. 250 should be enclosed in a cash bag. 
+
+---
+
+### **Part 2: Money Order and Audit Procedures**
+
+**Q. 11. What is the due date for the submission of the "Money order issued and paid" return to the Audit office by Head Offices?**
+A.  and 
+B.  and 
+C.  only
+D.  only
+
+**Correct Answer: C**
+
+
+**Explanation:** Money order issued and paid – .  (Note: Returns are  and , but Void MO is . The text explicitly lists "Money order issued and paid – ").
+
+**Q. 12. For prepayment of postage in cash for inland unregistered packets, what is the minimum packet requirement for a "Big City"?**
+A. 100 packets
+B. 250 packets
+C. 500 packets
+D. 1000 packets
+
+**Correct Answer: C**
+
+
+**Explanation:** Big City – minimum 500 packets. 
+
+**Q. 13. Which form is used for the "Statistical Memorandum" prepared on the 1st of each month?**
+A. MS-14
+B. MS-14(a)
+C. M.O.-4
+D. M.S.-13
+
+**Correct Answer: B**
+
+
+**Explanation:** On the  of each month, a statistical memorandum will be prepared in prescribed form MS-14(a). 
+
+**Q. 14. In the context of Money Order forms, what does Form M.O.-4 represent?**
+A. MO issue
+B. MO paid
+C. Register of MO received
+D. Monthly Statistics Abstract
+
+**Correct Answer: B**
+
+
+**Explanation:** MO paid – M.O.-4. 
+
+**Q. 15. Where must the round and oblong MO Stamps be kept?**
+A. In the safe custody of the Head Clerk
+B. On the counter for easy access
+C. Under lock and key in the personal custody of the Postmaster
+D. With the Treasurer
+
+**Correct Answer: C**
+
+
+**Explanation:** The round and oblong MO Stamp must always remain under lock and key in the personal custody of the Postmaster. 
+
+**Q. 16. What date does the "Round Stamp" on a Money Order represent?**
+A. The date on which the amount is entered in the accounts.
+B. The date on which payment is actually authorized by the Postmaster.
+C. The date of booking the MO.
+D. The date of delivery to the payee.
+
+**Correct Answer: B**
+
+
+**Explanation:** In every case, the date of the round stamp will be the date on which payment is actually authorized by the postmaster. 
+
+**Q. 17. According to the limit of payment by a single Postman, what is the normal limit for a Postman/MTS doing delivery work in an Urban area?**
+A. Rs. 30,000/-
+B. Rs. 40,000/-
+C. Rs. 80,000/-
+D. Rs. 25,000/-
+
+**Correct Answer: B**
+**Explanation:** For Category "Postman/MTS", the Urban Normal limit is Rs. 40,000/-. 
+
+**Q. 18. What is the enhanced limit for a Rural Postman/MTS for payment if there is prior consultation with the Police?**
+A. Rs. 40,000/-
+B. Rs. 50,000/-
+C. Rs. 80,000/-
+D. Unlimited
+
+**Correct Answer: A**
+**Explanation:** For Rural Postman/MTS, the limit with prior consultation with Police is Rs. 40,000/-. 
+
+**Q. 19. If a Money Order is paid to the wrong person, to which head should the recovered amount be credited?**
+A. UCP
+B. UCR
+C. Void MO account
+D. Postmaster's personal account
+
+**Correct Answer: B**
+
+
+**Explanation:** Amount must recover from wrong person and credited to UCR. 
+
+**Q. 20. A Money Order issued in October 2021 becomes "Void" after which date?**
+A. 30th November 2021
+B. 31st December 2021
+C. 31st October 2022
+D. 1st January 2022
+
+**Correct Answer: B**
+**Explanation:** The currency expires with the close of the last day of the second month following the month of issue. Example: October 2021 will be current up to 31st December 2021. 
+
+---
+
+### **Part 3: MO Currency, Void Orders, and Remittance Limits**
+
+**Q. 21. Regarding the alteration of Payee Name in a Money Order:**
+A. It is allowed with a fee of Rs. 10.
+B. It is allowed only if the sender visits the office personally.
+C. There is no provision for the alteration of Payee Name.
+D. It is allowed free of cost.
+
+**Correct Answer: C**
+
+
+**Explanation:** Not provision of alteration of Payee Name. 
+
+**Q. 22. When a Money Order is treated as "Void", the Schedule of Void MOs for the home postal accounts office should be prepared in:**
+A. Triplicate
+B. Duplicate
+C. Quadruplicate
+D. Single copy
+
+**Correct Answer: B**
+
+
+**Explanation:** The schedule of void MOs for the home postal accounts office should be prepared in duplicate. 
+
+**Q. 23. What is the limit for remittance of loose cash through a Departmental Employee?**
+A. Rs. 1 Lakh
+B. Rs. 2 Lakh
+C. Rs. 5 Lakh
+D. Rs. 10 Lakh
+
+**Correct Answer: C**
+**Explanation:** Loose cash through Departmental Employee = Rs. 5 Lakh. 
+
+**Q. 24. What is the cash remittance limit for a Departmental MMS with MTS in addition to the driver (enclosed in account bag)?**
+A. Rs. 5 Lakh
+B. Rs. 10 Lakh
+C. Rs. 20 Lakh
+D. Unlimited
+
+**Correct Answer: C**
+**Explanation:** Departmental MMS with MTS in addition to driver for conveyance of cash in cash bags enclosed in account bag = Rs. 20 Lakh. 
+
+**Q. 25. What is the limit for cash remittance entrusted to a BPM/ABPM/GDS?**
+A. Rs. 50,000
+B. Rs. 1 Lakh
+C. Rs. 2 Lakh
+D. Rs. 5 Lakh
+
+**Correct Answer: B**
+**Explanation:** Cash through BPM/ABPM/GDS = Rs. 1 Lakh. 
+
+**Q. 26. For remittance purposes, "Night" in the winter season is defined as:**
+A. 07:00 PM to 05:30 AM
+B. 06:00 PM to 06:00 AM
+C. 06:30 PM to 06:00 AM
+D. 08:00 PM to 05:00 AM
+
+**Correct Answer: C**
+
+
+**Explanation:** In winter, this time will be 06:30 PM to 06:00 AM. 
+
+**Q. 27. When remitting money through a special carrier in a cash bag:**
+A. The carrier must count the cash personally.
+B. The bag should be closed and weighed in the presence of the carrier.
+C. The carrier does not need to sign any receipt.
+D. The bag is handed over without weighing.
+
+**Correct Answer: B**
+
+
+**Explanation:** The bag should be closed and weighed in the presence of carrier, who should require to grant a receipt for it. 
+
+**Q. 28. If the number of Registered Insured articles is 3 or more:**
+A. They must be sent in a separate bag.
+B. A list should be prepared on plain paper in duplicate by the Regd. PA.
+C. They are entered individually in the SO daily slip.
+D. The Postmaster must personally pack them.
+
+**Correct Answer: B**
+**Explanation:** Where the number of Registered Insured articles is 3 or more than 3, a list... should be prepared on plain paper in duplicate by the Regd. PA. 
+
+**Q. 29. Who is responsible for packing, closing, and sealing cash bags in a Sub Office?**
+A. The Sub Account Clerk
+B. The Treasurer personally in the presence of the sub-account clerk
+C. The Postmaster
+D. The Mail Peon
+
+**Correct Answer: B**
+
+
+**Explanation:** Cash bags must always be packed, closed and sealed by the treasurer personally in the presence of the sub account clerk. 
+
+**Q. 30. Which seal is used on the cash bag if a Sub Office is not supplied with a cash seal?**
+A. The Postmaster's personal seal
+B. The Date seal
+C. The Registration seal
+D. The Insurance seal
+
+**Correct Answer: B**
+
+
+**Explanation:** In sub office, which are not supplied with a cash seal, the date seal should be used in its place. 
+
+---
+
+### **Part 4: Sub Office and Head Office Accounts**
+
+**Q. 31. How long must the receipts and SO daily accounts be preserved?**
+A. 1 Year
+B. 18 Months
+C. 2 Years
+D. 3 Years
+
+**Correct Answer: B**
+
+
+**Explanation:** The receipts... be preserved along with the SO daily accounts for the same period as prescribed for SO daily account i.e., 18 Months. 
+
+**Q. 32. If an error is found in the daily account of an SO during checking at the HO:**
+A. The Daily Account is returned to the SO for correction.
+B. The SPM's figures are altered to the correct amount.
+C. The correct amount is entered in the HO account, but the SPM's figures are not altered.
+D. The account is kept pending until the SPM visits the HO.
+
+**Correct Answer: C**
+
+
+**Explanation:** The correct amount should be entered in the account of the HO but the SPM's figures in the daily accounts should not be corrected or altered in any way. 
+
+**Q. 33. Which of the following statements is true regarding the "Supplementary SO Summary"?**
+A. It is prepared every month for all SOs.
+B. It includes transactions of the concluding days of March not included in the March summary.
+C. It is part of the ordinary SO Summary of April.
+D. It is closed on the 15th of April.
+
+**Correct Answer: B**
+
+
+**Explanation:** The transactions of SO during the closing day of March which are not included in the SO summary for March, should be entered in a Supplementary SO Summary for March. 
+
+**Q. 34. BO Slips (PA-4) are prepared in duplicate. How are the copies managed?**
+A. Both copies are sent to the BO.
+B. The pencil copy is kept on record, and the carbon copy is sent to the BO.
+C. The carbon copy is kept on record, and the pencil copy is sent to the BO.
+D. Both copies are kept at the Account Office.
+
+**Correct Answer: B**
+**Explanation:** The pencil copy should be kept on record in the account office. The carbonic copy should be detached and sent to the branch office. 
+
+**Q. 35. In the "Visit Book" (MS-86), what does a "Red ink" entry signify?**
+A. The village must be visited regularly.
+B. The village is dangerous to visit.
+C. The ABPM is not obliged to visit on every trip but has to visit the village marked in Red entries.
+D. The village has a Branch Post Office.
+
+**Correct Answer: C**
+
+
+**Explanation:** Red ink used by Sub Account PA in MS-86 - The ABPM is not obliged to be visited on every trip but has to be visited the village marked in Red entries. 
+
+**Q. 36. In the "Visit Book" (MS-86), black ink entries indicate villages that:**
+A. Have to be visited regularly.
+B. Do not require visiting.
+C. Are visited only on Sundays.
+D. Have a population over 5000.
+
+**Correct Answer: A**
+
+
+**Explanation:** Black ink used by Sub Account PA in MS-86 The villages have to be visited regularly. 
+
+**Q. 37. When preparing the SO Account (PA-17) for June, if the daily account of 30th May is accounted for on 1st June, and 28th June is accounted for on 30th June, the SO Account should embrace dates from:**
+A. 1st June to 30th June
+B. 30th May to 28th June
+C. 30th May to 30th June
+D. 1st June to 28th June
+
+**Correct Answer: B**
+
+
+**Explanation:** The SO account for the month of June should embrace the dates from the 30th May to the 28th June, both days inclusive. 
+
+**Q. 38. Regarding "Authorized Balance" in a Sub Office:**
+A. The minimum and maximum balances are fixed by the Head Postmaster.
+B. The memo of authorized balances should be kept in the safe.
+C. The maximum cash balance includes the amounts with its village postmen.
+D. It does not apply to Night Post Offices.
+
+**Correct Answer: C**
+
+
+**Explanation:** The maximum cash balance of a sub office will include the amounts with its village postmen. 
+
+**Q. 39. A Postman is prohibited from keeping an undelivered article in his possession for more than:**
+A. 12 hours
+B. 24 hours
+C. 48 hours
+D. 7 days
+
+**Correct Answer: B**
+
+
+**Explanation:** A postman may in no circumstances keep an article in his possession more than 24 hours. 
+
+**Q. 40. Mail attendants are typically employed in post offices situated at:**
+A. Rural areas
+B. Market places
+C. At or near Railway Stations
+D. Circle Offices
+
+**Correct Answer: C**
+
+
+**Explanation:** Mail attendants are employed in post offices situated at or near Railway Stations. 
+
+---
+
+### **Part 5: Mixed Difficult & Conceptual Questions**
+
+**Q. 41. Identify the correct procedure regarding "Void Orders re-issued by PAO":**
+A. If unclaimed, they are returned to the office of issue.
+B. If unclaimed, they are returned to the PAO which re-issued it.
+C. They must be included in the list of Void MOs.
+D. They are treated as new Money Orders.
+
+**Correct Answer: B**
+
+
+**Explanation:** If a re-issued void MO is unclaimed, it will be returned to PAO which re-issued it... Such MOs must not be included in the list of Void MO. 
+
+**Q. 42. Under "Remittance by post", if money is remitted through a special carrier:**
+A. The treasurer must ensure an acknowledgement is granted by the receiving officer in the carrier's diary.
+B. No receipt is required in the treasurer's cash book.
+C. The carrier handles the cash loosely without a bag.
+D. The remittance limit is always Rs. 50,000.
+
+**Correct Answer: A**
+
+
+**Explanation:** The treasurer must see on the carriers return to the office that an acknowledgement for the remittance has been granted by the receiving officer in his book of diary. 
+
+**Q. 43. Which of the following is correct regarding the destruction of "Confidential Records and Character Sheets of officials"?**
+
+1. After 2 years from their death.
+2. After 5 years from retirement.
+3. After 6 years for officials dismissed as a disciplinary measure.
+
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: D**
+
+
+**Explanation:** After 2 Years from death , After 5 Years from retirement , After 6 years official who have been dismissed....
+
+**Q. 44. Regarding the "Disposal of COD Articles receipts", where should the amount realized be shown in the BO daily accounts?**
+A. Under "COD Receipts"
+B. Under "Money Order issued"
+C. Under "Cash remitted"
+D. Under "Unclassified Receipts"
+
+**Correct Answer: B**
+
+
+**Explanation:** The amount realized from addressees of COD articles delivered by Bos will be shown in the BO daily accounts under the head "Money Order issued". 
+
+**Q. 45. What is the limit for a "Cash bag enclosed in Account bag through RMS Section/Railway"?**
+A. Rs. 1 Lakh
+B. Rs. 2 Lakh
+C. Rs. 5 Lakh
+D. Rs. 10 Lakh
+
+**Correct Answer: B**
+**Explanation:** Cash bag enclosed in Account bag through RMS Section/Railway = Rs. 2 Lakh. 
+
+**Q. 46. For the "Schedule of UCR", what are the submission dates by Head Offices to the Audit Office?**
+A.  and 
+B.  and 
+C.  and 
+D.  of the following month
+
+**Correct Answer: B**
+
+
+**Explanation:** Schedule of UCR –  and . 
+
+**Q. 47. If a remittance to a HO from a SO is received *before* the daily account in which it is advised:**
+A. It is kept in deposit and not entered until the account arrives.
+B. It is credited in HO Summary and shown in SO Summary as a "minus entry".
+C. It is returned to the SO.
+D. It is treated as a discrepancy.
+
+**Correct Answer: B**
+
+
+**Explanation:** ...will be credited in the HO Summary... and will also be shown in the SO Summary as a minus entry until the daily account... is received. 
+
+**Q. 48. Complaints relating to Money Orders can be preferred by the public within:**
+A. 6 months from the date of issue.
+B. 12 months from the date of issue.
+C. 2 years from the date of issue.
+D. 3 years from the date of issue.
+
+**Correct Answer: B**
+
+
+**Explanation:** The complaints relating to MO can be preferred by the public within 12 months from the date of issue of MO. 
+
+**Q. 49. The amount of Money Order unpaid beyond which period is forfeited to the Government of India?**
+A. 1 Year
+B. 2 Years
+C. 3 Years
+D. 5 Years
+
+**Correct Answer: C**
+
+
+**Explanation:** The amount or value of money order unpaid beyond three years from the date of booking shall be forfeited. 
+
+**Q. 50. Before proceeding on his beat, a postman must ensure his special ink pad has sufficient ink for:**
+A. Stamping letters
+B. Taking thumb impressions
+C. Marking the beat map
+D. Signing the delivery slip
+
+**Correct Answer: B**
+
+
+**Explanation:** ...postman should be careful to see that there is sufficient printer ink in special ink pad supplied to him for taking thumb impression.

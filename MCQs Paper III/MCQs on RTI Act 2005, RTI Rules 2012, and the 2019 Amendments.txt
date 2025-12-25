@@ -1,0 +1,783 @@
+Here are 65 high-quality MCQs based strictly on the provided PDF, covering the RTI Act 2005, RTI Rules 2012, and the 2019 Amendments.
+
+### **Part 1: Preliminary & Definitions (Sections 1–2)**
+
+**Q. 1.** Consider the following statements regarding the commencement of the Right to Information Act, 2005:
+
+1. The Act extends to the whole of India.
+2. Sections 4, 5, 12, 13, 15, 16, 24, 27, and 28 came into force immediately on 15.06.2005.
+3. The remaining sections came into force after 100 days of enactment.
+
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+**Explanation:** Statement 1 is correct (extends to whole of India). Statement 2 is correct as per the document (sections effected from 15.06.2005). Statement 3 is incorrect because the remaining sections came into force after **120 days**, not 100 days. 
+
+**Q. 2.** According to Section 2(h) of the RTI Act, a "Public Authority" means any authority established by:
+A. The Constitution
+B. A law made by Parliament
+C. A notification issued by the appropriate Government
+D. All of the above
+
+**Correct Answer: D**
+
+
+**Explanation:** A "Public Authority" is established by or under the Constitution, by any other law made by Parliament, by any other law made by State Legislature, or by notification issued by the appropriate Government. 
+
+**Q. 3.** As per Section 2(f), the term "Information" includes which of the following?
+
+1. Memos and e-mails
+2. Logbooks and contracts
+3. Samples and models
+4. File notings (except those exempt under Section 8)
+
+Select the correct answer using the code below:
+A. 1 and 2 only
+B. 1, 2 and 3 only
+C. 2, 3 and 4 only
+D. 1, 2, 3 and 4
+
+**Correct Answer: D**
+
+
+**Explanation:** Section 2(f) defines information broadly to include memos, e-mails, logbooks, contracts, samples, models, etc. The document also clarifies in "Govt. Decisions" that file noting may be disclosed except those exempt under Section 8. 
+
+**Q. 4.** Who is designated as the "Competent Authority" in the case of the Supreme Court?
+A. The President of India
+B. The Chief Justice of India
+C. The Registrar General
+D. The Union Law Minister
+
+**Correct Answer: B**
+
+
+**Explanation:** Under Section 2(e)(ii), the Competent Authority in the case of the Supreme Court is the Chief Justice of India. 
+
+**Q. 5.** The term "Appropriate Government" refers to the Central Government in relation to a public authority that is:
+A. Established by the State Legislature
+B. Substantially financed by funds provided by the State Government
+C. Established by the UT administration
+D. None of the above
+
+**Correct Answer: C**
+
+
+**Explanation:** Appropriate Government means the Central Government in relation to a public authority established by Central Government or UT administration. 
+
+---
+
+### **Part 2: Obligations of Public Authorities (Sections 4–5)**
+
+**Q. 6.** Section 4(1)(b) mandates every public authority to publish specific information within how many days from the enactment of the Act?
+A. 30 days
+B. 60 days
+C. 100 days
+D. 120 days
+
+**Correct Answer: D**
+
+
+**Explanation:** Every public authority shall publish the particulars of its organization, functions, duties, etc., within 120 days from the enactment of the Act. 
+
+**Q. 7.** Which of the following is NOT required to be published suo motu by a public authority under Section 4?
+A. A directory of its officers and employees
+B. The monthly remuneration received by its officers
+C. Personal details of all applicants seeking information
+D. The budget allocated to each of its agencies
+
+**Correct Answer: C**
+**Explanation:** Section 4 lists directory of officers, remuneration, and budget as required publications. It does not mandate publishing personal details of all applicants; in fact, Section 8(1)(j) protects personal information. 
+
+**Q. 8.** Regarding the designation of officers under Section 5, consider the following statements:
+
+1. Public authorities must designate Central Public Information Officers (CPIOs) within 100 days of enactment.
+2. Central Assistant Public Information Officers (CAPIOs) are appointed at the sub-divisional level.
+3. If an application is submitted to a CAPIO, 5 days are added to the response period.
+
+Which of the statements is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: D**
+**Explanation:** All statements are correct. CPIOs are designated within 100 days. CAPIOs are appointed at sub-divisional levels. 5 days are added to the period when submitted to CAPIO.
+
+**Q. 9.** Under Section 4(3), who is appointed as the Nodal Officer to ensure compliance with proactive disclosure guidelines?
+A. Any Gazetted Officer
+B. An officer not below the rank of Joint Secretary
+C. The Head of the Department (HOD) only
+D. The CPIO
+
+**Correct Answer: B**
+
+
+**Explanation:** Each central ministry/public authority should appoint a senior officer not below the rank of a Joint-Secretary (or Additional HOD for attached offices) as a Nodal Officer. 
+
+---
+
+### **Part 3: Request & Disposal of Information (Sections 6–7)**
+
+**Q. 10.** A person desiring to obtain information under Section 6 must make a request in:
+A. English only
+B. Hindi only
+C. English, Hindi, or the official language of the area
+D. Any language mentioned in the 8th Schedule of the Constitution
+
+**Correct Answer: C**
+
+
+**Explanation:** The request must be in writing or electronic means in English or Hindi or in the official language of the area in which the application is being made. 
+
+**Q. 11.** What details is an applicant required to provide while requesting information?
+A. Reason for requesting information
+B. Personal details including Aadhar number
+C. Contact details only
+D. Proof of citizenship
+
+**Correct Answer: C**
+
+
+**Explanation:** There is no requirement to give any reason for requesting the information or any other personal details except contact details. 
+
+**Q. 12.** If an application is made to a public authority regarding a subject held by another public authority, the application must be transferred:
+A. Immediately within 24 hours
+B. Within 5 days from the date of receipt
+C. Within 10 days
+D. Within 30 days
+
+**Correct Answer: B**
+
+
+**Explanation:** The application shall be transferred as soon as practicable but in no case later than 05 days from the date of receipt of the application. 
+
+**Q. 13.** What is the standard time limit for a CPIO to provide information under Section 7(1)?
+A. 15 days
+B. 30 days
+C. 45 days
+D. 60 days
+
+**Correct Answer: B**
+
+
+**Explanation:** The CPIO must provide information or reject the request within 30 days of the receipt of the request. 
+
+**Q. 14.** In a case where the information sought concerns the life or liberty of a person, the information shall be provided within:
+A. 12 hours
+B. 24 hours
+C. 48 hours
+D. 72 hours
+
+**Correct Answer: C**
+
+
+**Explanation:** Where the information concerns the life or liberty of a person, it shall be provided within 48 hours of the receipt of the request. 
+
+**Q. 15.** If a CPIO fails to give a decision on the request within the specified period, it shall be deemed that:
+A. The request is pending
+B. The request has been refused
+C. The request has been accepted
+D. The fee needs to be refunded
+
+**Correct Answer: B**
+
+
+**Explanation:** If the CPIO fails to give a decision within the specified period, they shall be deemed to have refused the request. 
+
+**Q. 16.** Which category of applicants is exempted from paying any fee under the RTI Act?
+A. Senior Citizens
+B. Students
+C. Persons below the poverty line
+D. Government Employees
+
+**Correct Answer: C**
+
+
+**Explanation:** No fee shall be charged from persons who are below the poverty line as determined by the appropriate Government. 
+
+**Q. 17.** When a request is rejected by the CPIO, they must communicate which of the following to the applicant?
+
+1. The reasons for rejection
+2. The period for preferring an appeal
+3. The particulars of the appellate authority
+
+Select the correct option:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: D**
+
+
+**Explanation:** The rejection communication must include the reasons for rejection, the period for appeal, and the particulars of the appellate authority. 
+
+---
+
+### **Part 4: Exemptions (Section 8–10)**
+
+**Q. 18.** Which of the following is NOT an exemption from disclosure under Section 8(1)?
+A. Information prejudicial to the sovereignty of India
+B. Information expressly forbidden by a court of law
+C. Information related to corruption allegations in security agencies
+D. Cabinet papers including records of deliberations
+
+**Correct Answer: C**
+**Explanation:** While security agencies are generally exempt under Section 24, information pertaining to allegations of corruption is NOT exempt. Section 8 lists sovereignty, court orders, and cabinet papers as exemptions. 
+
+**Q. 19.** Information available to a person in his fiduciary relationship can be disclosed only if:
+A. The third party consents
+B. The Competent Authority is satisfied that larger public interest warrants disclosure
+C. The information is over 10 years old
+D. It is requested by a Member of Parliament
+
+**Correct Answer: B**
+
+
+**Explanation:** Fiduciary information is exempt unless the competent authority is satisfied that the larger public interest warrants the disclosure. 
+
+**Q. 20.** Under Section 8(3), exemptions under certain clauses cease to apply if the event occurred:
+A. 10 years ago
+B. 15 years ago
+C. 20 years ago
+D. 30 years ago
+
+**Correct Answer: C**
+
+
+**Explanation:** Information that occurred 20 years before the date of the request shall be provided, subject to clauses (a), (c), and (i). 
+
+**Q. 21.** What does Section 10 of the RTI Act deal with?
+A. Third Party Information
+B. Severability
+C. Penalties
+D. Constitution of CIC
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 10 deals with "Severability," allowing access to that part of the record which is not exempt from disclosure and can be reasonably severed from the exempt part. 
+
+**Q. 22.** Under Section 9, a request for information may be rejected if it involves an infringement of:
+A. Patent rights
+B. Copyright subsisting in a person other than the State
+C. Trademark laws
+D. Official Secrets Act
+
+**Correct Answer: B**
+
+
+**Explanation:** A request may be rejected if providing access would involve an infringement of copyright subsisting in a person other than the State. 
+
+---
+
+### **Part 5: Third Party Information (Section 11)**
+
+**Q. 23.** When a CPIO receives a request for third-party information, within how many days must they give notice to the third party?
+A. 3 days
+B. 5 days
+C. 7 days
+D. 10 days
+
+**Correct Answer: B**
+
+
+**Explanation:** The CPIO shall give a written notice to the third party within five days from the receipt of the request. 
+
+**Q. 24.** How many days does a third party have to make a representation against the proposed disclosure after receiving notice?
+A. 5 days
+B. 10 days
+C. 15 days
+D. 30 days
+
+**Correct Answer: B**
+
+
+**Explanation:** The third party shall be given the opportunity to make representation within 10 days from the date of receipt of such notice. 
+
+**Q. 25.** If a third party has been given an opportunity to make a representation, the CPIO must make a decision regarding disclosure within:
+A. 30 days
+B. 40 days
+C. 45 days
+D. 60 days
+
+**Correct Answer: B**
+
+
+**Explanation:** If the third party has been given an opportunity to make representation, the information shall be provided (or decided upon) within 40 days after receipt of the request. 
+
+---
+
+### **Part 6: Information Commissions (Sections 12–17)**
+
+**Q. 26.** The Chief Information Commissioner (CIC) is appointed by the President on the recommendation of a committee consisting of:
+
+1. The Prime Minister (Chairperson)
+2. The Chief Justice of India
+3. The Leader of Opposition in the Lok Sabha
+4. A Union Cabinet Minister nominated by the PM
+
+Select the correct code:
+A. 1, 2 and 3
+B. 1, 3 and 4
+C. 1 and 3 only
+D. 1, 2, 3 and 4
+
+**Correct Answer: B**
+**Explanation:** The committee consists of the Prime Minister, the Leader of Opposition in the Lok Sabha, and a Union Cabinet Minister nominated by the Prime Minister. The CJI is NOT part of this committee. 
+
+**Q. 27.** The number of Central Information Commissioners (excluding the Chief) shall not exceed:
+A. Five
+B. Seven
+C. Ten
+D. Twelve
+
+**Correct Answer: C**
+
+
+**Explanation:** The Commission consists of the Chief Information Commissioner and such number of Central Information Commissioners, not exceeding ten. 
+
+**Q. 28.** As per the 2019 Amendment/Rules mentioned in the document, what is the term of office for the Chief Information Commissioner?
+A. 5 years
+B. 3 years
+C. 6 years
+D. At the pleasure of the President
+
+**Correct Answer: B**
+
+
+**Explanation:** The document explicitly states under "RTI Rules Amendment 2019" that the term of office is 3 years. 
+
+**Q. 29.** The State Chief Information Commissioner is appointed by:
+A. The President of India
+B. The Governor of the State
+C. The Chief Justice of the High Court
+D. The Chief Minister
+
+**Correct Answer: B**
+
+
+**Explanation:** The State Chief Information Commissioner is appointed by the Governor. 
+
+**Q. 30.** Which of the following is a ground for the removal of the CIC or an Information Commissioner?
+A. Adjudged an insolvent
+B. Engaging in paid employment outside duties
+C. Conviction of an offense involving moral turpitude
+D. All of the above
+
+**Correct Answer: D**
+
+
+**Explanation:** The President may remove the CIC or IC if they are adjudged insolvent, engage in paid employment, or are convicted of an offense involving moral turpitude. 
+
+**Q. 31.** Who inquires into the proved misbehavior or incapacity of the CIC before removal?
+A. High Court of Delhi
+B. A Parliamentary Committee
+C. The Supreme Court
+D. The Central Vigilance Commission
+
+**Correct Answer: C**
+
+
+**Explanation:** Removal is by order of the President after the Supreme Court, on a reference made to it, has reported on the inquiry. 
+
+---
+
+### **Part 7: Powers, Appeals & Penalties (Sections 18–20)**
+
+**Q. 32.** While inquiring into a complaint, the Information Commission has the same powers as are vested in a:
+A. Criminal Court
+B. Civil Court
+C. Tribunal
+D. High Court
+
+**Correct Answer: B**
+
+
+**Explanation:** The CIC or SCIC has the same powers as are vested in a civil court while trying a suit under the CPC, 1908. 
+
+**Q. 33.** A first appeal under Section 19(1) must be filed within how many days from the expiry of the response period or receipt of decision?
+A. 15 days
+B. 30 days
+C. 45 days
+D. 60 days
+
+**Correct Answer: B**
+
+
+**Explanation:** An appeal may be preferred within 30 days from the expiry of such period or from the receipt of such a decision. 
+
+**Q. 34.** What is the time limit for filing a second appeal with the Central Information Commission?
+A. 30 days
+B. 60 days
+C. 90 days
+D. 120 days
+
+**Correct Answer: C**
+
+
+**Explanation:** A second appeal against the decision must be filed within 90 days. 
+
+**Q. 35.** A second appeal shall be disposed of by the CIC/SCIC within:
+A. 30 days
+B. 45 days
+C. 60 days
+D. No specific time limit is mentioned for the disposal of the second appeal in the text provided.
+
+**Correct Answer: D**
+**Explanation:** *Note: This is a trick question.* The document mentions time limits for the **first appeal** (30 days, extendable to 45). However, for the second appeal, the text says "A second appeal... with the CIC or SIC" but does not explicitly state a disposal deadline in Section 19(3) snippet, unlike Section 19(6) which applies to the appeal process generally but is often interpreted for First Appeals. *Correction based on text:* Section 19(6) says "An appeal shall be disposed of within 30 days... not exceeding 45 days." This usually applies to the First Appellate Authority. The text provided for Section 19(3) discusses filing time (90 days). The strict text of Section 19(6) simply says "An appeal", but contextually in legal practice, 2nd appeals take longer. However, strictly sticking to the provided text: Section 19(6) is listed under Section 19. If forced to choose based *only* on the text snippet "An appeal shall be disposed of within 30 days...", one might choose A/B. However, standard testing on RTI distinguishes 1st and 2nd appeals. Let's look at the text:  refers to "An appeal" without specifying 'first'. *Crucial:* Standard RTI knowledge knows 2nd appeals don't have a deadline, but 1st do. The text provided at  is technically for the First Appellate Authority in the full Act, but the snippet here puts it under generic "Section 19 Appeal".
+*Revised Question for Clarity based on text:*
+**Q. 35.** According to Section 19(6) as per the provided text, an appeal shall be disposed of within __ days of receipt.
+A. 30 days
+B. 60 days
+C. 90 days
+D. 120 days
+**Answer: A** (Explanation: Section 19(6) states disposal within 30 days, not exceeding 45. )
+
+**Q. 36.** Under Section 20, what is the penalty imposed on a CPIO for delaying information without reasonable cause?
+A. Rs. 100 per day
+B. Rs. 250 per day
+C. Rs. 500 per day
+D. Rs. 1000 per day
+
+**Correct Answer: B**
+**Explanation:** The penalty is Rs. 250/- per day. 
+
+**Q. 37.** What is the maximum penalty that can be imposed on a CPIO under Section 20?
+A. Rs. 10,000
+B. Rs. 25,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+
+**Correct Answer: B**
+**Explanation:** The total amount of such penalty shall not exceed Rs. 25,000/-. 
+
+---
+
+### **Part 8: Miscellaneous & RTI Rules 2012**
+
+**Q. 38.** Section 24 exempts which organizations from the purview of the Act?
+A. Public Sector Undertakings
+B. NGOs substantially financed by government
+C. Intelligence and security organizations specified in the Second Schedule
+D. Cooperative Societies
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 24 applies to Intelligence and security organizations specified in the Second Schedule. 
+
+**Q. 39.** Under Section 24, information can still be sought from exempt intelligence organizations if it pertains to:
+
+1. Allegations of corruption
+2. Human rights violations
+3. Administrative transfers
+
+Select the correct code:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: B**
+
+
+**Explanation:** Information pertaining to allegations of corruption and human rights violations is not exempt. 
+
+**Q. 40.** If information sought from an exempt organization relates to human rights violations, it must be provided within:
+A. 30 days
+B. 45 days (with CIC approval)
+C. 60 days
+D. 90 days
+
+**Correct Answer: B**
+
+
+**Explanation:** Such information shall be provided within 45 days from the receipt of request, after approval of the Central Information Commission. 
+
+**Q. 41.** According to RTI Rules 2012, the application fee under Section 6(1) is:
+A. Rs. 5
+B. Rs. 10
+C. Rs. 20
+D. Rs. 50
+
+**Correct Answer: B**
+
+
+**Explanation:** Rule 3 prescribes a fee of rupees ten (Rs. 10/-). 
+
+**Q. 42.** As per RTI Rules 2012, an RTI application should ordinarily not contain more than:
+A. 250 words
+B. 500 words
+C. 750 words
+D. 1000 words
+
+**Correct Answer: B**
+
+
+**Explanation:** The application shall ordinarily not contain more than 500 words, excluding annexures. 
+
+**Q. 43.** Can an application be rejected *solely* on the ground that it exceeds 500 words?
+A. Yes, immediately.
+B. No, provided no other ground exists.
+C. Yes, if the CPIO decides so.
+D. Only if it exceeds 1000 words.
+
+**Correct Answer: B**
+
+
+**Explanation:** The proviso to Rule 3 states that no application shall be rejected *only* on the ground that it contains more than five hundred words. 
+
+**Q. 44.** What is the fee for providing information in A-3 or smaller size paper under Rule 4?
+A. Re. 1 per page
+B. Rs. 2 per page
+C. Rs. 5 per page
+D. Actual cost
+
+**Correct Answer: B**
+**Explanation:** The fee is Rs. 2/- for each page in A-3 or smaller size paper. 
+
+**Q. 45.** What is the fee for inspection of records for the first hour?
+A. Rs. 5
+B. Rs. 10
+C. Rs. 20
+D. No fee
+
+**Correct Answer: D**
+
+
+**Explanation:** There is no fee for inspection of records for the first hour of inspection. 
+
+**Q. 46.** For each subsequent hour of inspection (after the first hour), the fee is:
+A. Rs. 2
+B. Rs. 5
+C. Rs. 10
+D. Rs. 20
+
+**Correct Answer: B**
+
+
+**Explanation:** A fee of rupees 5 for each subsequent hour or fraction thereof. 
+
+**Q. 47.** Under Rule 10 of RTI Rules 2012, the Commission may dismiss an appeal if:
+A. It is not in the specified format (sole ground)
+B. The appellant is absent
+C. The Commission is not satisfied that it is a fit case to proceed with
+D. The fee is paid by Cheque
+
+**Correct Answer: C**
+**Explanation:** The Commission may dismiss the appeal if it is not satisfied that it is a fit case to proceed with (after hearing the appellant). However, it cannot dismiss *only* on the ground of format. 
+
+**Q. 48.** The appellant shall be informed of the date of hearing at least how many clear days before the hearing?
+A. 3 days
+B. 5 days
+C. 7 days
+D. 14 days
+
+**Correct Answer: C**
+
+
+**Explanation:** The appellant shall be informed at least seven clear days before the date of hearing. 
+
+---
+
+### **Part 9: Advanced/Scenario & Amendment Specifics**
+
+**Q. 49.** The "RTI Week" is celebrated from:
+A. 1st to 7th October
+B. 5th to 12th October
+C. 12th to 19th October
+D. 15th to 22nd June
+
+**Correct Answer: B**
+
+
+**Explanation:** The document notes RTI Week celebration from 5th October to 12th October. 
+
+**Q. 50.** Regarding the 2019 Amendment on Salaries:
+
+1. The CIC's salary is fixed at Rs. 2,50,000.
+2. The IC's salary is fixed at Rs. 2,25,000.
+3. The salaries are prescribed by the Central Government.
+
+Which statement reflects the current legal position mentioned in the *notes* vs the *amended text* provided in the PDF?
+A. 1 and 2 are strictly correct as per 2019 rules.
+B. Salaries are fixed by the President.
+C. Salaries are prescribed by the Central Government.
+D. Salaries are equal to Election Commissioners.
+
+**Correct Answer: A**
+**Explanation:** The PDF page 19 explicitly lists under "(RTI Rules Amendment 2019)": CIC Pay - Rs. 2,50,000 (fixed) and IC Pay - Rs. 2,25,000 (fixed). 
+*(Note: While the Act text says "prescribed", the specific rule citation in the PDF gives the numbers).*
+
+**Q. 51.** Who is the Leave Sanctioning Authority for the State Chief Information Commissioner (SCIC)?
+A. The President
+B. The Governor
+C. The State Legislature
+D. The Chief Minister
+
+**Correct Answer: B**
+
+
+**Explanation:** The Governor is the leave sanctioning authority of SCIC. 
+
+**Q. 52.** The headquarters of the Central Information Commission shall be at:
+A. Mumbai
+B. Delhi
+C. Kolkata
+D. Chennai
+
+**Correct Answer: B**
+
+
+**Explanation:** The headquarters of the CIC shall be at Delhi. 
+
+**Q. 53.** Section 23 of the RTI Act bars the jurisdiction of:
+A. The Supreme Court
+B. The High Court
+C. Courts (Civil Courts)
+D. The Central Information Commission
+
+**Correct Answer: C**
+**Explanation:** "No court shall entertain any suit... in respect of any order made under this Act." This generally refers to the bar on civil court jurisdiction regarding orders made under the Act. 
+
+**Q. 54.** Which section provides protection for action taken in "Good Faith"?
+A. Section 20
+B. Section 21
+C. Section 22
+D. Section 23
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 21 titled "Protection of action taken in good faith." 
+
+**Q. 55.** Section 22 states that the RTI Act has an overriding effect over:
+A. The Constitution of India
+B. The Official Secrets Act, 1923
+C. Consumer Protection Act
+D. None of the above
+
+**Correct Answer: B**
+
+
+**Explanation:** The Act has effect notwithstanding anything inconsistent contained in the Official Secrets Act, 1923. 
+
+**Q. 56.** Match the following Sections with their provisions:
+
+1. Section 12  (a) Exemption from Disclosure
+2. Section 8   (b) Constitution of CIC
+3. Section 15  (c) Penalties
+4. Section 20  (d) Constitution of SIC
+
+Select the correct option:
+A. 1-b, 2-a, 3-d, 4-c
+B. 1-a, 2-b, 3-c, 4-d
+C. 1-b, 2-d, 3-a, 4-c
+D. 1-d, 2-c, 3-a, 4-b
+
+**Correct Answer: A**
+
+
+**Explanation:** Section 12 is Constitution of CIC. Section 8 is Exemptions. Section 15 is Constitution of SIC. Section 20 is Penalties.
+
+**Q. 57.** Under Rule 11, the Commission may receive evidence on:
+A. Oral testimony only
+B. Written submissions only
+C. Affidavits
+D. Hearsay
+
+**Correct Answer: C**
+
+
+**Explanation:** The Commission may receive evidence on affidavits from CPIO, CAPIO, etc. 
+
+**Q. 58.** If an appellant cannot attend the hearing, the Commission:
+A. Must dismiss the case immediately
+B. Must pass an ex-parte order
+C. May afford another opportunity or take appropriate action
+D. Must fine the appellant
+
+**Correct Answer: C**
+
+
+**Explanation:** The Commission may afford the appellant another opportunity of being heard or take appropriate action as it may deem fit. 
+
+**Q. 59.** What is the mode of service of notice by the Commission under Rule 14?
+A. Hand delivery (dasti)
+B. Registered post with acknowledgement due
+C. Electronic mail
+D. All of the above
+
+**Correct Answer: D**
+
+
+**Explanation:** Notices can be served by party itself, hand delivery, registered post, or electronic mail. 
+
+**Q. 60.** According to the 2019 Amendment notes, the CIC or IC is entitled to encashment of what percentage of earned leave?
+A. 100%
+B. 75%
+C. 50%
+D. 25%
+
+**Correct Answer: C**
+
+
+**Explanation:** They are entitled to encashment of fifty per cent (50%) of earned leave to their credit. 
+
+**Q. 61.** Who appoints the Secretary to the Central Information Commission?
+A. The CIC
+B. The President
+C. The Central Government
+D. The Parliament
+
+**Correct Answer: C**
+
+
+**Explanation:** The Central Government shall appoint an officer not below the rank of Additional Secretary... as Secretary to the Commission. 
+
+**Q. 62.** Section 26 encourages the Appropriate Government to:
+A. Impose higher penalties
+B. Develop and organize educational programs
+C. Restrict the number of RTI applications
+D. Reduce the number of PIOs
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 26 states the government may develop and organize educational programs to advance understanding of the public. 
+
+**Q. 63.** A "Third Party" under Section 2(n) includes:
+A. Only the person making the request
+B. Only private individuals
+C. A public authority other than the one receiving the request
+D. The CPIO
+
+**Correct Answer: C**
+
+
+**Explanation:** Third party means a person other than the citizen making a request and includes a public authority. 
+
+**Q. 64.** Which form of payment is NOT explicitly mentioned in Rule 6 for fee payment?
+A. Demand Draft
+B. Indian Postal Order
+C. Cash
+D. Cryptocurrency
+
+**Correct Answer: D**
+**Explanation:** Rule 6 lists Cash, DD, Banker's Cheque, IPO, and electronic means. Cryptocurrency is not mentioned. 
+
+**Q. 65.** The Freedom of Information Act, 2002 was repealed by:
+A. Section 30 of RTI Act
+B. Section 31 of RTI Act
+C. The Constitution Amendment Act
+D. It was never repealed
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 31 states: "The Freedom of Information Act, 2002 is hereby repealed."

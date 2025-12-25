@@ -1,0 +1,456 @@
+Here are 45 high-quality MCQs based strictly on the provided PDF on GPF (CS) Rules, 1960.
+
+### **Part 1: Basic Definitions and Eligibility (Easy to Moderate)**
+
+**Q. 1.** The General Provident Fund (Central Services) Rules, 1960 came into force on which date?
+A. 1st January, 1960
+B. 1st April, 1960
+C. 1st April, 1961
+D. 1st January, 2004
+
+**Correct Answer:** B
+**Explanation:** According to Rule 1, the GPF (CS) Rules, 1960 came into force from 1st April, 1960.
+
+**Q. 2.** Which of the following categories of employees are **NOT** eligible to subscribe to the GPF under these rules?
+A. Temporary Government servants after one year of continuous service
+B. Re-employed pensioners eligible for Contributory Provident Fund
+C. Permanent Government servants appointed before 2004
+D. Apprentices treated as temporary Government servants
+
+**Correct Answer:** B
+**Explanation:** Rule 4 states that re-employed pensioners *other than those eligible for admission to the Contributory Provident Fund* shall subscribe to the Fund. Therefore, those eligible for CPF are excluded.
+
+**Q. 3.** For a **male subscriber**, which of the following is **NOT** included in the definition of "Family" under Rule 2?
+A. Parents
+B. Minor brothers
+C. Deceased son's widow
+D. Maternal grandparents
+
+**Correct Answer:** D
+**Explanation:** Rule 2(c) defines family for a male subscriber to include parents and paternal grandparents (where no parents are alive), but it does not include maternal grandparents.
+
+**Q. 4.** Government servants appointed on or after which date are excluded from the application of these rules?
+A. 1st April, 2004
+B. 1st January, 2004
+C. 1st January, 2005
+D. 31st March, 2004
+
+**Correct Answer:** B
+**Explanation:** Rule 4(35-36) states that these rules shall not apply to Government servants appointed on or after the 1st day of January, 2004.
+
+**Q. 5.** Under Rule 4, a temporary Government servant must subscribe to the Fund after completing a continuous service of:
+A. Six months
+B. One year
+C. Two years
+D. Three years
+
+**Correct Answer:** B
+**Explanation:** Rule 4 states that all temporary Government servants shall subscribe to the Fund after a continuous service of one year.
+
+---
+
+### **Part 2: Nominations (Moderate)**
+
+**Q. 6.** If a subscriber has a family at the time of making a nomination, the nomination shall be made in favor of:
+A. Any person/persons of his choice
+B. Only a member or members of his family
+C. His family members and any one charitable trust
+D. The Head of Office
+
+**Correct Answer:** B
+**Explanation:** Rule 5(3) mandates that a subscriber who has a family at the time of making the nomination shall make such nomination *only* in favor of a member or members of his family.
+
+**Q. 7.** A subscriber is a minor. When is he required to make a nomination?
+A. At the time of joining the service
+B. Upon completing one year of service
+C. On attaining the age of majority
+D. Before drawing the first salary
+
+**Correct Answer:** C
+**Explanation:** Rule 5(2) states that if a subscriber is a minor, he shall be required to make the nomination only on his attaining the age of majority.
+
+**Q. 8.** Consider the following regarding the cancellation of a nomination:
+A. It can only be done after retirement.
+B. It requires the approval of the Head of Department.
+C. A subscriber may cancel it at any time by sending a notice in writing.
+D. It is not permitted once the nomination reaches the Accounts Officer.
+
+**Correct Answer:** C
+**Explanation:** Rule 5(5) allows a subscriber to cancel a nomination at any time by sending a notice in writing to the Accounts Officer and exercising a fresh nomination.
+
+**Q. 9.** If a nominee is facing trial for the murder of the Government servant, which of the following actions is correct?
+A. Payment is made immediately to the next nominee.
+B. Payment is denied till the Court’s decision.
+C. 50% payment is released.
+D. Payment is transferred to the Government account.
+
+**Correct Answer:** B
+**Explanation:** Rule 5 (Note/Govt Decision) states that a nominee facing trial for the murder of the Govt. Servant may be denied payment till the Court's decision.
+
+---
+
+### **Part 3: Subscription Conditions and Rates (Moderate to Difficult)**
+
+**Q. 10.** What is the minimum rate of subscription to the GPF?
+A. 10% of emoluments
+B. 6% of emoluments
+C. 8.33% of emoluments
+D. 12% of emoluments
+
+**Correct Answer:** B
+**Explanation:** Rule 8(1)(b) states the sum subscribed shall not be less than 6 per cent of his emoluments.
+
+**Q. 11.** Regarding the alteration of the subscription amount by the subscriber, which statement is **correct**?
+A. It can be reduced twice and enhanced twice a year.
+B. It can be reduced once and enhanced once a year.
+C. It can be reduced once and enhanced twice a year.
+D. It cannot be altered during the financial year.
+
+**Correct Answer:** C
+**Explanation:** Rule 8(3) states the amount of subscription may be reduced once at any time during the course of the year and enhanced twice during the course of the year.
+
+**Q. 12.** From the financial year 2022-2023, the maximum subscription in a financial year is capped at:
+A. Rs. 2.5 Lakhs
+B. Rs. 5 Lakhs
+C. Rs. 1.5 Lakhs
+D. Total basic pay of the year without limit
+
+**Correct Answer:** B
+**Explanation:** Rule 8(1)(b) specifies that subscription is subject to a maximum of five lakhs in a financial year from 2022-2023.
+
+**Q. 13.** During which of the following periods is a subscriber **NOT** required to subscribe to the Fund?
+A. During a period treated as 'dies non'
+B. During Foreign Service
+C. During deputation out of India
+D. During the first month of suspension
+
+**Correct Answer:** A
+**Explanation:** Rule 7(6) states that a subscriber need not subscribe during a period treated as dies non. (Note: During suspension, subscription is stopped, but foreign service/deputation requires adherence to fund rules).
+
+**Q. 14.** When must the subscription be compulsorily discontinued?
+A. Last 6 months of service
+B. Last 3 months of service on superannuation
+C. Last 1 month of service
+D. Upon submitting voluntary retirement application
+
+**Correct Answer:** B
+**Explanation:** Rule 8 (Note) states that subscription is to be compulsorily discontinued during the last 3 months of service on superannuation.
+
+---
+
+### **Part 4: Interest (Conceptual)**
+
+**Q. 15.** How is the interest on the GPF calculated?
+A. Simple interest credited monthly
+B. Compounded half-yearly
+C. Compounded annually
+D. Simple interest credited annually
+
+**Correct Answer:** C
+**Explanation:** Rule 11(1) states the interest is calculated compounded annually.
+
+**Q. 16.** If a subscriber draws an amount in excess of the credit standing to his account, what is the penal interest rate for recovery?
+A. 2% above the GPF rate
+B. 2.5% above the GPF rate
+C. Flat 10% interest
+D. No penal interest, only principal recovery
+
+**Correct Answer:** B
+**Explanation:** Rule 11 (Govt Decisions) states that recovery will be made with interest of 2.5% above the GPF rate of Interest.
+
+**Q. 17.** When a subscriber retires on superannuation, interest is allowed up to a maximum of how many months after the month in which the amount became payable?
+A. 3 months
+B. 6 months
+C. 1 year
+D. Until payment is made
+
+**Correct Answer:** B
+**Explanation:** Rule 11 (Govt Decisions) mentions that the period of six months for allowing interest excludes the immediate succeeding month. Generally, interest is payable up to 6 months.
+
+---
+
+### **Part 5: Advances from the Fund (Application)**
+
+**Q. 18.** What is the maximum limit of advance that can be sanctioned from the GPF under normal circumstances?
+A. 6 months' basic pay or 50% of credit
+B. 12 months' basic pay or three-fourth (3/4) of credit, whichever is less
+C. 24 months' basic pay or 90% of credit
+D. Fixed amount of Rs. 5 Lakhs
+
+**Correct Answer:** B
+**Explanation:** Rule 12(1) sets the limit of advance up to 12 months' Basic pay or three-fourth (3/4) of the amount standing to his credit, whichever is less.
+
+**Q. 19.** Which of the following is **NOT** a valid ground for taking an advance from GPF?
+A. Illness of self or family
+B. Obligatory expenses like betrothal or marriage
+C. Purchase of consumer durables
+D. Investment in Stock Market
+
+**Correct Answer:** D
+**Explanation:** Rule 12 lists valid grounds including illness, education, obligatory expenses, legal proceedings, consumer durables, and pilgrimage. Stock market investment is not listed.
+
+**Q. 20.** What is the normal time limit for the sanction of an advance?
+A. 30 Days
+B. 15 Days
+C. 7 Days
+D. 45 Days
+
+**Correct Answer:** B
+**Explanation:** According to the notes under Rule 12, under normal conditions, the maximum time limit for sanction of Advance is 15 Days.
+
+**Q. 21.** An advance from GPF shall be recovered in not more than:
+A. 24 installments
+B. 36 installments
+C. 50 installments
+D. 60 installments
+
+**Correct Answer:** D
+**Explanation:** Rule 13(1) states that an advance shall be recovered in not more than 60 installments.
+
+**Q. 22.** If the sanctioning authority doubts that the advance was utilized for a purpose other than sanctioned, within how many days must the subscriber explain?
+A. 7 days
+B. 15 days
+C. 30 days
+D. 60 days
+
+**Correct Answer:** B
+**Explanation:** Rule 14(2) states the sanctioning authority shall give a reasonable opportunity to explain the reason within 15 days from the receipt of communication.
+
+---
+
+### **Part 6: Withdrawals (Analytical/Scenario)**
+
+**Q. 23.** A subscriber can make a final withdrawal from the GPF after completion of how many years of service (if not retiring soon)?
+A. 15 years
+B. 20 years
+C. 10 years
+D. 5 years
+
+**Correct Answer:** C
+**Explanation:** Rule 15(1) permits withdrawal after completion of 10 years' service or within 10 years before the date of retirement on superannuation.
+
+**Q. 24.** For which of the following purposes is a withdrawal of up to **90%** of the amount standing at credit allowed?
+A. Purchase of consumer durables
+B. Illness of self or family
+C. Pilgrimage
+D. Legal proceedings
+
+**Correct Answer:** B
+**Explanation:** Rule 15(1) specifies that for illness, the withdrawal may be allowed up to 90% of the amount standing at credit.
+
+**Q. 25.** Under Rule 15, withdrawal for the purchase of a motor car is permitted. What is the quantum of withdrawal allowed?
+A. 90% of credit or cost of vehicle, whichever is less
+B. 3/4th of credit or cost of vehicle, whichever is less
+C. 50% of credit only
+D. 12 months' pay
+
+**Correct Answer:** B
+**Explanation:** Rule 15 (xi) permits withdrawal of three-fourth (3/4) of the amount standing at credit or Cost of Vehicle, whichever is less.
+
+**Q. 26.** Can a subscriber convert an advance already drawn into a final withdrawal?
+A. No, never.
+B. Yes, at the discretion of the Accounts Officer.
+C. Yes, by written request to the Accounts Officer through the sanctioning authority.
+D. Only if the subscriber is within 1 year of retirement.
+
+**Correct Answer:** C
+**Explanation:** Rule 16-A allows the conversion of an advance into a withdrawal by written request addressed to the Accounts Officer through the sanctioning authority.
+
+**Q. 27.** Within how many years before retirement can a subscriber withdraw up to 90% of the balance **without linking to any purpose**?
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+
+**Correct Answer:** B
+**Explanation:** Rule 15(3) states a subscriber can withdraw up to 90% of the amount standing to credit within 2 years before the date of retirement on superannuation without linking to any purpose.
+
+---
+
+### **Part 7: Death, Insurance, and Final Payments (Difficult/UPSC Style)**
+
+**Q. 28.** With reference to Rule 33 (Procedure on death), if a subscriber leaves no family and has made a valid nomination:
+A. The amount goes to the Government.
+B. The amount is payable to the nominee(s) in the proportion specified.
+C. The amount is distributed equally among legal heirs.
+D. The nomination becomes void.
+
+**Correct Answer:** B
+**Explanation:** Rule 33(ii) states that when the subscriber leaves no family, if a nomination made by him subsists, the amount shall become payable to his nominee(s) in the proportion specified.
+
+**Q. 29.** Under the Deposit-Linked Insurance Revised Scheme (Rule 33-B), what is the maximum additional amount payable?
+A. Rs. 30,000
+B. Rs. 60,000
+C. Rs. 1,00,000
+D. Rs. 7,00,000
+
+**Correct Answer:** B
+**Explanation:** Rule 33-B (b) explicitly states that the additional amount payable under this rule shall not exceed Rs. 60,000.
+
+**Q. 30.** To be eligible for the Deposit-Linked Insurance benefit, the subscriber must have put in at least how many years of service at the time of death?
+A. 3 years
+B. 5 years
+C. 10 years
+D. 20 years
+
+**Correct Answer:** B
+**Explanation:** Rule 33-B (c) requires the subscriber to have put in at least 5 years' service at the time of his/her death.
+
+**Q. 31.** In the context of "Family" for payment of shares upon death (Rule 33), which of the following is **excluded** from receiving a share?
+A. Widow of the subscriber
+B. Minor sons
+C. Sons who have attained majority
+D. Unmarried daughters
+
+**Correct Answer:** C
+**Explanation:** Rule 33 (Proviso) states that no share shall be payable to sons who have attained majority.
+
+**Q. 32.** If a subscriber goes missing (untraceable), after what period can the Deposit Linked Insurance benefit be paid to the successor?
+A. 1 year
+B. 3 years
+C. 5 years
+D. 7 years
+
+**Correct Answer:** D
+**Explanation:** Note under Rule 33-B states that benefit of Deposit Linked Insurance scheme to the successor of the untraceable subscriber is to be made only after a lapse of 7 years.
+
+---
+
+### **Part 8: Procedural and Miscellaneous (Moderate)**
+
+**Q. 33.** Is documentary proof required for obtaining an advance or withdrawal from GPF?
+A. Yes, for all cases.
+B. Yes, but only for housing withdrawals.
+C. No, a simple declaration is sufficient.
+D. Yes, for illness exceeding Rs. 1 Lakh.
+
+**Correct Answer:** C
+**Explanation:** The notes under Rule 12 and Rule 15 state that no documentary proof is required; a simple declaration by the subscriber explaining the reasons would be sufficient.
+
+**Q. 34.** When a Government servant is transferred to a corporate body owned by the Government, what happens to their GPF balance?
+A. It is refunded immediately.
+B. It is forfeited.
+C. It is transferred to the new body with their consent.
+D. It is kept frozen until retirement.
+
+**Correct Answer:** C
+**Explanation:** Rule 35-A/36 implies that amounts are transferred to the credit in the new fund (or vice versa) upon transfer of service.
+
+**Q. 35.** How many times can a subscriber request the Accounts Officer to inform them of their credit balance in a year (outside the annual statement)?
+A. Once
+B. Twice
+C. Three times
+D. Anytime
+
+**Correct Answer:** A
+**Explanation:** Rule 39(2) states the Accounts Officer shall, if required by a subscriber *once, but not more than once*, in a year inform the subscriber of the total amount standing to his credit.
+
+**Q. 36.** Grievances regarding the Annual Statement of Accounts must be resolved by the office within:
+A. 30 days
+B. 45 days
+C. 60 days
+D. 90 days
+
+**Correct Answer:** C
+**Explanation:** Rule 39(3) states the office maintaining the GPF account shall resolve the grievance within 60 days from the date of receipt.
+
+---
+
+### **Part 9: Statement Based & Complex Logic (UPSC/High-Level)**
+
+**Q. 37.** Consider the following statements regarding GPF Subscription:
+
+1. Subscription is deducted from the salary of the month it is drawn (e.g., Aug salary deduction counts for Sept).
+2. Subscription is optional during suspension.
+3. Subscription must be stopped 3 months before superannuation.
+
+Which of the statements given above is/are **correct**?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer:** B
+**Explanation:** Statement 1 is correct (Rule 10). Statement 3 is correct (Rule 8). Statement 2 is incorrect because Rule 7(1) says a subscriber shall subscribe monthly *except* during the period when he is under suspension (it's not optional, it's an exception/bar).
+
+**Q. 38.** Match the following Limits with their respective Rules/Conditions:
+| Condition | Limit |
+| :--- | :--- |
+| 1. Max Subscription in FY | a. 60 installments |
+| 2. Max Advance Recovery | b. 15 Days |
+| 3. Normal Sanction Time | c. Rs. 5 Lakhs |
+| 4. DLIS Max Benefit | d. Rs. 60,000 |
+
+Select the correct option:
+A. 1-c, 2-a, 3-b, 4-d
+B. 1-d, 2-b, 3-a, 4-c
+C. 1-c, 2-d, 3-b, 4-a
+D. 1-a, 2-c, 3-d, 4-b
+
+**Correct Answer:** A
+**Explanation:** Max Subscription = 5 Lakhs (Rule 8). Advance Recovery = 60 installments (Rule 13). Sanction Time = 15 Days (Rule 12). DLIS Max = Rs. 60,000 (Rule 33-B).
+
+**Q. 39.** **Assertion (A):** A subscriber can withdraw money for the education of family members.
+**Reason (R):** "Education" is limited only to higher education in professional streams.
+
+A. Both A and R are true and R is the correct explanation of A.
+B. Both A and R are true but R is NOT the correct explanation of A.
+C. A is true but R is false.
+D. A is false but R is true.
+
+**Correct Answer:** C
+**Explanation:** A is true (Rule 15). R is false because Rule 15(i) explicitly states that Education includes primary, secondary, and higher education covering *all* streams and institutions.
+
+**Q. 40.** Which of the following statements regarding the "Emoluments" for GPF subscription is **correct**?
+A. If a subscriber is not in Govt. service on 31st March of the preceding year, emoluments are calculated based on the date of joining the fund.
+B. It includes Dearness Allowance for all purposes.
+C. It strictly excludes subsistence grants.
+D. It is always calculated on the 1st of January.
+
+**Correct Answer:** A
+**Explanation:** Rule 8(2)(b) states: If the subscriber was not in Govt. service on 31st March of preceding year, the emoluments are those to which he was entitled on the day he joins the fund.
+
+**Q. 41.** Regarding the **Annual Statement of Accounts** (Rule 39), it is mandatory for offices to intimate missing credits:
+A. Once every month
+B. Once every financial year
+C. Only at the time of retirement
+D. Whenever the subscriber complains
+
+**Correct Answer:** B
+**Explanation:** Amendments to Rule 39 state it shall be mandatory for all offices to intimate the particulars of missing credits, *once every financial year*.
+
+**Q. 42.** A subscriber wants to withdraw money for **renovating an ancestral house**. Under Rule 15, what is the maximum amount admissible?
+A. 50% of credit
+B. 75% (3/4th) of credit
+C. 90% of credit
+D. Not permitted
+
+**Correct Answer:** C
+**Explanation:** Rule 15 (Section 1, point x) lists "Renovating, additions or alterations of ancestral house" under the category eligible for withdrawal of up to 90% of the amount standing at credit.
+
+**Q. 43.** Which among the following is **NOT** treated as the "Same Purpose" for restricting multiple withdrawals?
+A. Betrothal of the same child
+B. Marriage of different children
+C. Purchase of the same house twice
+D. Illness of the same person on the same occasion
+
+**Correct Answer:** B
+**Explanation:** Rule 15(5) states that only one withdrawal is allowed for the same purpose, *but* the marriage or education of different children or illness on different occasions shall not be treated as the same purpose.
+
+**Q. 44.** In the case of a person found absconding, interest on the GPF balance is allowed up to:
+A. The date of police report
+B. 6 months from the date of report from the police
+C. 1 year from the date of absconding
+D. No interest is paid
+
+**Correct Answer:** B
+**Explanation:** Rule 11 (Govt Decisions) states: In respect of persons found absconding, interest to be allowed up to 6 months from the date of report from the police that the employee has not been traced.
+
+**Q. 45.** A female subscriber wishes to nominate her family. Who among the following is **NOT** defined as "Family" for her under Rule 2?
+A. Husband
+B. Children
+C. Parents-in-law
+D. Parents
+
+**Correct Answer:** C
+**Explanation:** Rule 2(c) defines family for a female subscriber as husband, parents, children, minor brothers, unmarried sisters, etc. It does *not* list parents-in-law.

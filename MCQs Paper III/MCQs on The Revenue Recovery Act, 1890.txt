@@ -1,0 +1,358 @@
+Here are 25 high-quality MCQs based strictly on the provided PDF of **The Revenue Recovery Act, 1890**.
+
+### **Q. 1. Regarding the extent and commencement of the Revenue Recovery Act, 1890, consider the following statements:**
+
+1. The Act came into effect on 14 February 1890.
+2. It extends to the whole of India except the Union Territories of Jammu & Kashmir and Ladakh.
+
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+
+**Correct Answer: A**
+
+
+**Explanation:** Statement 1 is correct as the Act effects from 14 February 1890. Statement 2 is incorrect because the Act extends to the whole of India *including* J & K and Ladakh (w.e.f. 31.10.2019).
+
+---
+
+### **Q. 2. According to Section 2 of the Act, which of the following is explicitly included in the definition of a "Defaulter"?**
+
+A. Any public officer handling revenue.
+B. A person responsible as surety for the payment of an arrear.
+C. A Collector of a neighboring district.
+D. A local authority requesting recovery.
+
+**Correct Answer: B**
+
+
+**Explanation:** The term "Defaulter" means a person from whom an arrear is due and includes a person who is responsible as *surety* for the payment of any such arrear or sum.
+
+---
+
+### **Q. 3. Who is defined as the "Collector" under this Act?**
+
+A. The judicial magistrate of the district.
+B. The chief officer in charge of the land-revenue administration of a district.
+C. The highest-ranking police officer in the district.
+D. The municipal commissioner of a presidency-town.
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 2 defines "Collector" as the chief officer in charge of the land-revenue administration of a district.
+
+---
+
+### **Q. 4. Under Section 3, when an arrear is payable by a defaulter who has property in a district other than where the arrear accrued, what document must the Collector send to the Collector of the other district?**
+
+A. A warrant of arrest.
+B. A court order from a Civil Judge.
+C. A certificate stating the name of the defaulter and amount payable.
+D. A request letter for property attachment.
+
+**Correct Answer: C**
+
+
+**Explanation:** The Collector may send a *certificate* stating the name of the defaulter, particulars for identification, the amount payable, and the account on which it is due.
+
+---
+
+### **Q. 5. Once a Collector of another district receives a recovery certificate under Section 3, how must they proceed?**
+
+A. They must first verify the validity of the arrear in a Civil Court.
+B. They must return the certificate if the defaulter denies liability.
+C. They must proceed to recover the amount as if it were an arrear of land-revenue accrued in their own district.
+D. They must arrest the defaulter immediately without recovering the amount.
+
+**Correct Answer: C**
+
+
+**Explanation:** The Collector of the other district shall, on receiving the certificate, proceed to recover the amount stated therein *as if it were an arrear of land-revenue which had accrued in his own district*.
+
+---
+
+### **Q. 6. A person against whom proceedings are taken under Section 3 denies their liability to pay the amount. Which of the following conditions must be met for them to institute a suit for repayment?**
+
+A. They must obtain permission from the High Court.
+B. They must pay the amount under protest in writing at the time of payment.
+C. They must file an FIR against the Collector.
+D. They must provide two sureties to the District Court.
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 4(1) states that the person may institute a suit if they deny liability and pay the amount *under protest made in writing* at the time of payment and signed by him or his agent.
+
+---
+
+### **Q. 7. If a suit is instituted under Section 4 regarding the repayment of an amount paid under protest, which laws govern the determination of the suit?**
+
+A. The law in force at the place where the suit is instituted.
+B. The law in force at the place where the arrear accrued or liability arose.
+C. The law in force in the district where the defaulter currently resides.
+D. The Central Revenue Laws only.
+
+**Correct Answer: B**
+
+
+**Explanation:** The suit shall be determined in accordance with the *law in force at the place where the arrear accrued* or the liability for the payment of the sum arose.
+
+---
+
+### **Q. 8. In which court must a suit under Section 4(1) of the Revenue Recovery Act, 1890 be instituted?**
+
+A. A Civil Court having jurisdiction in the area where the arrear accrued.
+B. A Civil Court having jurisdiction in the area where the Collector who made the certificate is situated.
+C. The High Court of the respective State.
+D. The District Magistrate's tribunal.
+
+**Correct Answer: B**
+
+
+**Explanation:** The suit must be instituted in a Civil Court having jurisdiction in the local area in which the *office of the Collector who made the certificate is situate*.
+
+---
+
+### **Q. 9. Consider the following statements regarding Section 6 (Property liable to sale):**
+
+1. The Collector may issue a proclamation prohibiting the transfer of immovable property.
+2. Any private alienation of the property made after the proclamation is void against the Government.
+3. The proclamation acts as a permanent bar on property transfer even after the amount is recovered.
+
+Which of the statements above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: B**
+
+
+**Explanation:** Statement 1 is correct. Statement 2 is correct as alienation after proclamation is void. Statement 3 is incorrect because the proclamation is deemed withdrawn when the amount is recovered.
+
+---
+
+### **Q. 10. How is a proclamation under Section 6 required to be made public?**
+
+A. By publishing in the Official Gazette only.
+B. By sending a registered post to the defaulter.
+C. By beat of drum or other customary method and posting a copy in a conspicuous place.
+D. By oral announcement in the Collector's office.
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 6(4) states the proclamation shall be made by *beat of drum or other customary method* and by the posting of a copy on a conspicuous place in or near the property.
+
+---
+
+### **Q. 11. Section 5 of the Act allows the recovery of sums for which of the following entities?**
+
+A. Private money lenders.
+B. Public officers other than a Collector or local authorities.
+C. International banks.
+D. Non-Governmental Organizations (NGOs).
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 5 applies where any sum is recoverable as an arrear of land-revenue of *any public officer other than a Collector or by local authority*.
+
+---
+
+### **Q. 12. "When proceedings are taken against any immovable property under this Act... no incumbrances created... in good faith shall be rendered invalid." This provision serves to protect:**
+
+A. The Government's revenue interest.
+B. The defaulter's right to sell property during proceedings.
+C. Contracts entered into by the defaulter in good faith before the proceedings affected the interest.
+D. The Collector from legal liability.
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 6(3) ensures that the interest of the defaulter alone is proceeded against, and incumbrances created or contracts entered into *in good faith* shall not be rendered invalid.
+
+---
+
+### **Q. 13. Which Section of the Revenue Recovery Act, 1890 deals with the "Duty of Collectors to remit moneys collected in certain cases"?**
+
+A. Section 8
+B. Section 9
+C. Section 10
+D. Section 5
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 10 is titled "Duty of Collectors to remit moneys collected in certain cases".
+
+---
+
+### **Q. 14. Under Section 10, what is a Collector authorized to do before remitting the recovered sum to the issuing Collector?**
+
+A. Keep 10% as commission.
+B. Deduct his expenses in connection with the matter.
+C. Invest the money in a government bond.
+D. Wait for a confirmation order from the Central Government.
+
+**Correct Answer: B**
+
+
+**Explanation:** The Collector shall remit the sum *after deducting his expenses in connection with the matter*.
+
+---
+
+### **Q. 15. Regarding Section 9 (Recovery in India of land revenues accruing in Burma), who has the authority to direct such recovery?**
+
+A. The Collector of the district.
+B. The State Government.
+C. The Central Government.
+D. The High Court.
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 9(1) states: "The *Central Government* may direct that an arrear of land-revenue accruing in Burma... may be recovered under this Act in India".
+
+---
+
+### **Q. 16. What happens to a proclamation issued under Section 6 if the property is sold for the recovery of the amount stated in the certificate?**
+
+A. It must be renewed for the next owner.
+B. It is deemed to be withdrawn.
+C. It remains valid for 6 months.
+D. It is transferred to the defaulter's other properties automatically.
+
+**Correct Answer: B**
+
+
+**Explanation:** The proclamation shall be *deemed to be withdrawn* when either the amount is recovered or the property has been sold for the recovery of that amount.
+
+---
+
+### **Q. 17. Which of the following details is NOT explicitly required to be stated in the certificate sent by a Collector under Section 3?**
+
+A. The name of the defaulter.
+B. The amount payable by the defaulter.
+C. The account on which the amount is due.
+D. The list of all movable assets owned by the defaulter.
+
+**Correct Answer: D**
+**Explanation:** Section 3(2) requires the certificate to state the name, particulars for identification, amount payable, and the account on which it is due. It does *not* explicitly require a list of all movable assets.
+
+---
+
+### **Q. 18. Assertion (A): A plaintiff in a suit under Section 4 can give evidence with respect to any matter stated in the certificate.
+
+Reason (R): This is permitted notwithstanding anything in Section 3, but subject to the law in force at the place where the arrear accrued.**
+
+A. Both A and R are true and R is the correct explanation of A.
+B. Both A and R are true but R is NOT the correct explanation of A.
+C. A is true but R is false.
+D. A is false but R is true.
+
+**Correct Answer: A**
+
+
+**Explanation:** Section 4(3) states that in the suit the plaintiff may, *notwithstanding anything in the last foregoing section* (Section 3), but subject to the law in force at the place aforesaid (where arrear accrued), give evidence with respect to any matter stated in the certificate.
+
+---
+
+### **Q. 19. According to Section 8, the Act applies to the recovery of arrears accruing in a local area which is:**
+
+A. Part of India but under State administration.
+B. Under the administration of the Central Government but which is not part of India.
+C. A foreign territory with no diplomatic ties to India.
+D. An exclusive economic zone.
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 8 applies to any local area which is *under the administration of the Central Government but which is not part of India*.
+
+---
+
+### **Q. 20. When recovering arrears of tax or penalty due under enactments relating to income-tax in Burma under Section 9(2), the Collector has the powers similar to:**
+
+A. A Civil Court Judge.
+B. The case of Indian income-tax.
+C. A Customs Officer.
+D. A Police Commissioner.
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 9(2) states the Collector shall have such additional powers as he has in the *case of Indian income-tax*.
+
+---
+
+### **Q. 21. Under Section 2, the term "District" explicitly includes:**
+
+A. A Union Territory.
+B. A presidency-town.
+C. A village panchayat.
+D. A cantonment board only.
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 2(1) explicitly states: "District - includes a presidency-town".
+
+---
+
+### **Q. 22. With effect from which date does the Revenue Recovery Act, 1890 extend to Jammu & Kashmir and Ladakh?**
+
+A. 15 August 1947
+B. 26 January 1950
+C. 31 October 2019
+D. 14 February 1890
+
+**Correct Answer: C**
+
+
+**Explanation:** The source states it extends to the whole of India including J & K and Ladakh (w.e.f. 31.10.2019).
+
+---
+
+### **Q. 23. If a local authority wants to recover a sum as an arrear of land-revenue, whom must they request according to Section 5?**
+
+A. The Central Government directly.
+B. The Collector of the district in which the office of that authority is situate.
+C. The Superintendent of Police.
+D. The Collector of the district where the defaulter resides (directly).
+
+**Correct Answer: B**
+
+
+**Explanation:** They must request *the Collector of the district in which the office of that officer or authority is situate*.
+
+---
+
+### **Q. 24. A Collector issues a proclamation under Section 6. Subsequently, the defaulter gifts the property to his son before the withdrawal of the proclamation. What is the legal status of this gift?**
+
+A. Valid, as it is a gift within the family.
+B. Valid, provided the son pays the tax.
+C. Void as against the Government.
+D. Voidable at the option of the defaulter.
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 6(3) states that any private alienation (including gift) made after the issue of proclamation and before withdrawal shall be *void as against the Government* and any purchaser at the sale.
+
+---
+
+### **Q. 25. Section 4(4) mentions the application of the section if proceedings are taken against a person in which specific regions?**
+
+A. Nepal or Bhutan.
+B. Pakistan or Burma.
+C. Sri Lanka or Bangladesh.
+D. United Kingdom or France.
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 4(4) mentions proceedings taken against a person in *Pakistan or Burma* under this Act as in force as part of the law of those countries.

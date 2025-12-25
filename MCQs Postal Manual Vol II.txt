@@ -1,0 +1,491 @@
+Here are 50 high-quality MCQs based strictly on the provided Postal Manual Volume II PDF.
+
+### **Chapter I: Organization**
+
+**Q. 1. Which of the following States/Union Territories is NOT correctly matched with its Postal Circle jurisdiction?**
+A. Andaman and Nicobar Islands – West Bengal Circle
+B. Lakshadweep – Kerala Circle
+C. Goa – Gujarat Circle
+D. Chandigarh – Punjab Circle
+
+**Correct Answer: C**
+**Explanation:** According to the text, the jurisdiction of the Maharashtra Circle includes "Maharashtra + Goa". Gujarat Circle includes "Gujarat + Daman & Diu + Dadra and Nagar Haveli".
+
+**Q. 2. The Headquarters of the North Eastern Postal Circle is located in:**
+A. Guwahati
+B. Shillong
+C. Imphal
+D. Agartala
+
+**Correct Answer: B**
+**Explanation:** The table in the document lists the HQ of the North Eastern Circle as Shillong. (Assam Circle has its HQ in Guwahati).
+
+**Q. 3. Who heads the 'Base Office' in the Department of Posts organization?**
+A. Chief Postmaster General
+B. Director General Postal Services
+C. Additional Director General (Major General)
+D. Member (Operations)
+
+**Correct Answer: C**
+**Explanation:** The document states: "Base Office Headed by Major General called Additional Director General (75% Civil + 25% Armed)."
+
+---
+
+### **Chapter III: Appeals and Petitions**
+
+**Q. 4. Under Rule 118-D, a petition to a higher authority against the orders of a lower authority is liable to be rejected if submitted after what period?**
+A. Three months from the date of order
+B. Six months from the date of communication of the order
+C. One year from the date of the incident
+D. Two months from the date of rejection by lower authority
+
+**Correct Answer: B**
+**Explanation:** Rule 118-D states that petitions are liable to be rejected if submitted "more than six months after the date of communication to the petitioner of the order represented against."
+
+**Q. 5. Consider the following statements regarding petitions:**
+
+1. Joint petitions signed by multiple employees are admissible if the grievance is common.
+2. A petition must end with a specific prayer.
+3. Petitions regarding personal matters must be submitted separately by every employee.
+
+**Which of the statements given above is/are correct?**
+A. 1 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: B**
+**Explanation:** Rule 116 states explicitly: "Joint petitions are inadmissible." However, identical petitions are allowed. It also states petitions "should end with a specific prayer" and every employee "must do so separately."
+
+**Q. 6. To whom should a petition against the decision of the Head of a Circle be submitted?**
+A. Member (Personnel)
+B. Secretary (Posts)
+C. The President of India
+D. The Director General (D.G.)
+
+**Correct Answer: D**
+**Explanation:** Rule 117 states: "Petitions against the decisions of Heads of Circles must be submitted to the D.G."
+
+**Q. 7. In which of the following cases can a Head of Circle withhold a petition addressed to the Director General?**
+A. When the petition is against a transfer ordered in the interest of service.
+B. When the petition is against an order of dismissal for fraud.
+C. When the petition is submitted within 3 months of the order.
+D. When the petitioner has new facts to present.
+
+**Correct Answer: A**
+**Explanation:** Rule 120(a) empowers the withholding of petitions in cases of "transfer ordered in the interest of service or the refusal of an application for a transfer."
+
+---
+
+### **Chapter IV: Personal Matters**
+
+**Q. 8. Heads of Circles are NOT required to submit reports regarding civil suits in connection with Money Orders and Savings Bank transactions if the amount involved does not exceed:**
+A. Rs. 250
+B. Rs. 500
+C. Rs. 1,000
+D. Rs. 5,000
+
+**Correct Answer: B**
+**Explanation:** Exception (1) to Rule 127 states that reports are not needed for cases under Money Orders/SB transactions provided the amount involved "does not exceed Rs. 500."
+
+**Q. 9. Regarding the institution of criminal proceedings, an officer conducting the prosecution must remember that a person can be charged at one trial with only:**
+A. Two charges of the same kind committed within 6 months.
+B. Three charges of the same kind committed within 12 months.
+C. Five charges of the same kind committed within 3 years.
+D. Any number of charges if they are of the same kind.
+
+**Correct Answer: B**
+**Explanation:** Rule 138 states: "he can at one trail be charged with three charges only of the same kind... if the three offences were committed within the period of 12 months."
+
+**Q. 10. Who is the competent authority to sanction the employment of a Government pleader in cases where they are not obliged to appear without a special fee?**
+A. Divisional Superintendent
+B. Director of Postal Services
+C. Head of the Circle
+D. Director General
+
+**Correct Answer: C**
+**Explanation:** Rule 146 states: "his services may not be applied for without the sanction of the Head of the Circle."
+
+**Q. 11. How are funeral expenses for departmental employees who die on duty at out-stations handled?**
+A. They are borne by the employee's family immediately.
+B. They are debited to the Welfare Fund.
+C. They are debited to the Contingent grant of the office concerned.
+D. The Department does not bear funeral expenses.
+
+**Correct Answer: C**
+**Explanation:** Rule 174-A states funeral expenses "should be debited to the Contingent grant of the office concerned."
+
+---
+
+### **Chapter V: Security Deposits**
+
+**Q. 12. Which of the following officials is NOT required to furnish security?**
+A. Cashiers in Administrative Offices
+B. Sorting Assistants
+C. Mail Guards
+D. Retired Government servants temporarily employed as stamp vendors (at the discretion of HOC)
+
+**Correct Answer: D**
+**Explanation:** Rule 192 (2) states that "Heads of Circles may also at their discretion employ such retired Government servants as stamp vendors without requiring them to furnish security."
+
+**Q. 13. For Stamp Vendors, the amount of security required is:**
+A. Ten times the stamp vendor's pay.
+B. Twenty times the stamp vendor's pay.
+C. Fixed at Rs. 10,000.
+D. Equal to the maximum value of stamps held.
+
+**Correct Answer: B**
+**Explanation:** The Note under Rule 191 states: "In the case of stamp vendors the amount of security shall be twenty times the stamp vendor's pay."
+
+**Q. 14. What is the rank requirement for a witness in a personal security bond?**
+A. Must be a Gazetted Officer.
+B. Must be above the rank of Postman.
+C. Must be a Sub-Postmaster.
+D. Must be a Head Clerk.
+
+**Correct Answer: B**
+**Explanation:** Rule 211 states: "The witness in personal bond should be above the rank of Postman."
+
+**Q. 15. If a surety dies or becomes insolvent, and the principal official has less than ______ years of service, they must furnish fresh security.**
+A. 5 years
+B. 10 years
+C. 15 years
+D. 20 years
+
+**Correct Answer: B**
+**Explanation:** Rule 219 states: "when a bond is lost and the principal has less than ten years' service the latter will be required to furnish fresh security."
+
+**Q. 16. How long must a security bond be preserved after it is withdrawn or replaced?**
+A. 3 years
+B. 5 years
+C. 10 years
+D. 30 years
+
+**Correct Answer: B**
+**Explanation:** Rule 243 states: "the bond should be preserved for five years and may then be destroyed."
+
+**Q. 17. Security deposit accounts in POSB or Government securities should be pledged to:**
+A. The President of India.
+B. The Appointing Authority (if Gazetted).
+C. The Head of the Circle only.
+D. The Director of Accounts (Postal).
+
+**Correct Answer: B**
+**Explanation:** Rule 225 states security should be pledged "to the appointing authority, if of a Gazetted Status."
+
+**Q. 18. Which of the following is strictly inadmissible as a surety for a security bond?**
+A. A female relative who is a widow.
+B. A professional money-lender.
+C. A retired government servant.
+D. A landowner.
+
+**Correct Answer: B**
+**Explanation:** Rule 249 states: "The security of professional money-lenders should on no account be allowed."
+
+---
+
+### **Chapter VI: Stock**
+
+**Q. 19. According to Rule 269-B, how are "Consumable and perishable articles" classified?**
+A. Dead Stock
+B. Stores
+C. Immovable Property
+D. Contingent Stock
+
+**Correct Answer: B**
+**Explanation:** Rule 269-B states: "consumable and perishable articles come under the term 'Stores'." (Plant and machinery are Dead Stock).
+
+**Q. 20. If the key of a lock is lost, what is the correct procedure?**
+A. Get a duplicate key made locally.
+B. Use the duplicate key kept in the office safe.
+C. Break open the lock and send it to the Depot.
+D. Apply for a new key from the Head of Circle.
+
+**Correct Answer: C**
+**Explanation:** Rule 270 states: "If, in any case, the key of a lock is lost, the lock should be broken open and sent to the Depot... In no circumstances should a duplicate key be made or procured locally."
+
+**Q. 21. Which form is used for the "General Stock Book"?**
+A. S.K.-1
+B. S.K.-2
+C. S.K.-3
+D. S.K.-4
+
+**Correct Answer: A**
+**Explanation:** Rule 269-B and 272 mention: "The form of stock book (S.K.-1) should be used."
+
+**Q. 22. What is the prescribed margin for wastage regarding forms for departmental use?**
+A. 2%
+B. 5%
+C. 10%
+D. 15%
+
+**Correct Answer: A**
+**Explanation:** Rule 287 states margin is "2% in case of forms for departmental use only." (It is 10% for public use forms).
+
+**Q. 23. Identify the correct Fixed Stationary Charge per month for a Mail Peon.**
+A. Rs. 5/-
+B. Rs. 8/-
+C. Rs. 14/-
+D. Rs. 17/-
+
+**Correct Answer: B**
+**Explanation:** Rule 341-A states: "Cost of stationary for each mail peon and dept stamp vendor = Rs. 8/- once in month."
+
+**Q. 24. Where is the duplicate key of a steel almirah supplied to a Post Office kept?**
+A. In the safe of the same Post Office.
+B. In the custody of the Head Postmaster.
+C. In the Divisional Office.
+D. At the Regional Postal Store Depot.
+
+**Correct Answer: C**
+**Explanation:** Rule 271 states duplicate keys "should be kept locked up in the Divisional Office in whose jurisdiction the office is situated."
+
+**Q. 25. What is Form S.K.-3 used for?**
+A. Stock Register of Bags
+B. Indent for Stationary
+C. Invoice of articles supplied from or returned to Depot
+D. Master Schedule of Forms
+
+**Correct Answer: C**
+**Explanation:** Rule 282 and 302 mention Form S.K.-3 as the "invoice" for articles received from or returned to the Depot.
+
+---
+
+### **Chapter IX: Contracts**
+
+**Q. 26. Who is responsible for checking the Register of Contracts monthly in Circle Offices?**
+A. Office Superintendent
+B. Assistant Postmaster General (APMG)
+C. Director Postal Services
+D. Head Clerk
+
+**Correct Answer: B**
+**Explanation:** Rule 420/1 states: "In Circle offices the duty of checking the register monthly should be assigned to an officer not below the rank of an Assistant Postmaster General."
+
+**Q. 27. Copies of contracts must be furnished to the Audit Office if the value is:**
+A. Rs. 10,000 and above.
+B. Rs. 25,000 and above.
+C. Rs. 50,000 and above.
+D. Rs. 1,00,000 and above.
+
+**Correct Answer: C**
+**Explanation:** Rule 420/2 requires copies to be furnished for contracts "for Rs. 50,000 and above."
+
+**Q. 28. Generally, the earnest money deposit accompanying a tender should be what percentage of the estimated value?**
+A. 1-2%
+B. 2-5%
+C. 5-10%
+D. 10-15%
+
+**Correct Answer: B**
+**Explanation:** Rule 427 mentions "deposit of cash as earnest money (2-5% of estimated value of Goods)."
+
+**Q. 29. Which of the following is Form M-51?**
+A. Agreement for conveyance of mails by wheeled carriages.
+B. Agreement for conveyance of mails by mazdoors.
+C. The revised Agreement for conveyance of mails by motor vehicles.
+D. The revised Tender form (Price Bid).
+
+**Correct Answer: C**
+**Explanation:** Rule 431 lists Form M-51 as "The revised Agreement to be executed by contractors for conveyance of mails by motor vehicles."
+
+**Q. 30. Which entity is exempt from depositing earnest money?**
+A. Small Scale Industries registered with NSIC.
+B. Private Limited Companies with turnover > 1 Crore.
+C. Any contractor with 5 years experience.
+D. Registered partnerships.
+
+**Correct Answer: A**
+**Explanation:** Exception (b) under Rule 427 exempts "Small Scale Industries units which are registered with National Small Scale Industries Corporation."
+
+---
+
+### **Chapter X: Land & Buildings**
+
+**Q. 31. The ownership of Government buildings occupied by the Postal Department vests in the Department if they were in occupation on:**
+A. 15th August 1947
+B. 1st April 1921
+C. 26th January 1950
+D. 1st April 1964
+
+**Correct Answer: B**
+**Explanation:** Rule 450 states: "The ownership of all Government buildings occupied by the Indian Posts and Telegraphs Department on 1st April, 1921 vests in the Department."
+
+**Q. 32. What is the monetary limit for the Head of Circle to sanction the sale of permanent departmental buildings?**
+A. Rs. 50,000
+B. Rs. 1 Lakh
+C. Rs. 5 Lakhs
+D. Rs. 10 Lakhs
+
+**Correct Answer: B**
+**Explanation:** Rule 457 states buildings "the value of which does not exceed Rs. 1 Lakh may be sold under the sanction of Head of Circle."
+
+**Q. 33. When transferring land/buildings to or from the Railway Department, what charge is made?**
+A. No charge.
+B. Book value.
+C. Half market value.
+D. Full market value.
+
+**Correct Answer: D**
+**Explanation:** Rule 465 (3) states: "In the case of transfers to and from the Railway Department, the full market value will be charged in each case."
+
+**Q. 34. For RMS buildings at Railway stations, the maintenance charges for civil work are calculated as:**
+A. 1.5% of original cost.
+B. 2.4% of original cost (excluding land).
+C. 3.9% of original cost.
+D. 6% of market value.
+
+**Correct Answer: B**
+**Explanation:** Rule 529 (b)(II) specifies "Maintenance Charges = 2.4% of original cost including but excluding cost of the land."
+
+**Q. 35. A Rest Room must be provided for delivery staff in offices where the minimum strength per shift of delivery staff is:**
+A. 5
+B. 10
+C. 15
+D. 20
+
+**Correct Answer: B**
+**Explanation:** Rule 559 [Correctly 707 in text context, labeled 559/707 area] states rest rooms are for offices with a "minimum strength per shift of delivery staff of 10."
+
+**Q. 36. If a non-residential departmental building is let out to a private person, the rent charged should be:**
+A. Standard Rent under F.R. 45-B only.
+B. Nominal rent of Re. 1.
+C. Higher of Standard Rent (F.R. 45-B) or local prevailing rent.
+D. 10% of the market value of the building.
+
+**Correct Answer: C**
+**Explanation:** Rule 588 states: "if the rate of rent prevailing in the locality for similar purposes is higher than the standard rent calculated under F.R. 45-B, the higher local rent should be charged."
+
+**Q. 37. What is the nominal rent charged for departmentally owned accommodation provided for co-operative societies run by employees?**
+A. Free of cost
+B. Re. 1 per month
+C. Rs. 100 per month
+D. 5% of capital cost
+
+**Correct Answer: B**
+**Explanation:** Rule 539 states: "a nominal rent of Re. 1 per mensem should be charged."
+
+---
+
+### **Chapter XI: Miscellaneous Rules**
+
+**Q. 38. The "National Week" is celebrated from:**
+A. 1st to 7th April
+B. 6th to 13th April
+C. 15th to 22nd August
+D. 2nd to 9th October
+
+**Correct Answer: B**
+**Explanation:** The text under Chapter XI states: "National week is celebrated from 6 to 13 April."
+
+**Q. 39. In official correspondence, which ink color is specifically prescribed for use?**
+A. Black
+B. Blue
+C. Green
+D. Red
+
+**Correct Answer: B**
+**Explanation:** Rule 616 states: "Except where it is specifically prescribed ink, other that blue, should not be used on official correspondence."
+
+**Q. 40. Which form is used for "unimportant correspondence" where no special form is prescribed?**
+A. Corr-22
+B. Corr-40
+C. Genl-8
+D. MS-95
+
+**Correct Answer: A**
+**Explanation:** Rule 630 A states: "Form Corr-22 should be used... for unimportant correspondence." (Corr-40 is for important nature).
+
+**Q. 41. In the Office of a Superintendent of Post Offices, "File Head F" corresponds to:**
+A. Accounts and Audit
+B. Robberies, losses, and fraud
+C. Buildings
+D. Establishment
+
+**Correct Answer: B**
+**Explanation:** The table in Rule 637 lists File Head F as "Robberies; losses; fraud; serious irregularities."
+
+**Q. 42. When the National Flag is flown along with the United Nations flag:**
+A. The UN flag must be on the right.
+B. The National Flag must be on the left.
+C. The UN flag can be displayed on either side of the National Flag.
+D. The UN flag must be smaller in size.
+
+**Correct Answer: C**
+**Explanation:** The text states: "When the United Nation flag is flown along with the national flag, it can be displayed on either side of the National Flag."
+
+**Q. 43. The Annual Report to the Director General (DG) must be submitted before:**
+A. 1st April
+B. 1st May
+C. 16th June
+D. 30th September
+
+**Correct Answer: C**
+**Explanation:** Rule 696 states: "annual reports to the DG must be submitted before 16th June." (To Head of Circle is 1st May).
+
+**Q. 44. What is the normal life of a Departmental Identity Card (Ms-95)?**
+A. 3 years
+B. 4 years
+C. 5 years
+D. 10 years
+
+**Correct Answer: B**
+**Explanation:** Rule 721 states: "The normal life of Ms-95 is 4 years."
+
+---
+
+### **Budget and Mixed Concepts**
+
+**Q. 45. The "Budget Control Unit (BCU)" at the Postal Accounts Office (PAO) functions under the overall supervision of:**
+A. The Finance Minister
+B. The Head of Circle (HOC)
+C. The Director General
+D. The Auditor General
+
+**Correct Answer: B**
+**Explanation:** The organizational chart/text for Budget Control states: "wherein BCU and BOU shall be looked after... as per the overall supervision of HOC."
+
+**Q. 46. Items of expenditure which are classed as "Charged" are sanctioned by:**
+A. The Parliament
+B. The Department of Posts
+C. The Govt of India in the Ministry of Finance
+D. The Public Accounts Committee
+
+**Correct Answer: C**
+**Explanation:** The text states: "The Govt of India in the Ministry of Finance in respect of items which are classed as 'charged'." (Parliament sanctions "Voted" items).
+
+**Q. 47. A "Skelton Postal Map" of the circle should be submitted to the DG in which month?**
+A. January
+B. April
+C. June
+D. September
+
+**Correct Answer: C**
+**Explanation:** Rule 694-C states: "A Skelton Postal Map of the circle should be submitted to DG in the month of June each year."
+
+**Q. 48. In the Office of a Superintendent RMS, which File Head deals with "Sorting Lists and Due Bag Statements"?**
+A. A
+B. B
+C. D
+D. E
+
+**Correct Answer: C**
+**Explanation:** The table for RMS offices lists File Head D as "Rules regarding sorting lists... due bag statements."
+
+**Q. 49. Regarding personal files, when an official is transferred for a period exceeding 3 months, how should their personal file be sent?**
+A. By ordinary post.
+B. Handed over to the official personally.
+C. In a service registered cover.
+D. Retained at the old office.
+
+**Correct Answer: C**
+**Explanation:** The text mentions: "his personal file or bundle should be forwarded in a service registered cover."
+
+**Q. 50. Which of the following statements about 'Non-Plan/Revenue Expenditure' is correct based on the provided text?**
+A. It pertains to money set aside for productive purposes like projects.
+B. It includes salaries, subsidies, and interest.
+C. It was introduced strictly in the 2020 budget.
+D. It is managed solely by the BOU.
+
+**Correct Answer: B**
+**Explanation:** Rule 756-A states: "Non-plan/Non-Scheme/Revenue expenditure is what the government spends on the so-called non-productive areas, such as salaries, subsidies, loans and interest."

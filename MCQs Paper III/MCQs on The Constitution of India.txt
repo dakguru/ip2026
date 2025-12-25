@@ -1,0 +1,732 @@
+Here are 75 high-quality MCQs based strictly on the provided text from "The Constitution of India."
+
+### **Section I: Preamble & Nature of State**
+
+**Q.1. According to the Preamble, the Constitution derives its authority from:**
+A. The Constituent Assembly
+B. The British Parliament
+C. The People of India
+D. The Supreme Court of India
+
+**Correct Answer: C**
+**Explanation:** The Preamble states "We, THE PEOPLE OF INDIA... do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION," indicating the source of authority is the people.
+
+**Q.2. Which of the following words were added to the Preamble by the 42nd Constitutional Amendment Act (1976)?**
+A. Socialist, Secular, and Republic
+B. Sovereign, Democratic, and Integrity
+C. Socialist, Secular, and Integrity
+D. Liberty, Equality, and Fraternity
+
+**Correct Answer: C**
+**Explanation:** The 42nd Amendment Act (1976) added three new words to the Preamble: Socialist, Secular, and Integrity.
+
+**Q.3. Which eminent jurist described the Preamble as the 'identity card of the Constitution'?**
+A. Dr. B.R. Ambedkar
+B. N A Palkhivala
+C. K.M. Munshi
+D. Sir Ernest Barker
+
+**Correct Answer: B**
+**Explanation:** N A Palkhivala, an eminent jurist and constitutional expert, called the Preamble the 'identity card of the Constitution.'
+
+**Q.4. Consider the following statements regarding the 'Republic' nature of the Indian State:**
+
+1. Political sovereignty is vested in a single individual like a king.
+2. The head of the state is elected directly or indirectly for a fixed period.
+3. All public offices are open to every citizen without discrimination.
+
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: C**
+**Explanation:** A republic implies vesting of political sovereignty in the people, not a single individual (Statement 1 is incorrect). It means the head of state is elected for a fixed period and public offices are open to all (Statements 2 and 3 are correct).
+
+**Q.5. In which case did the Supreme Court reject the opinion that the Preamble is not a part of the Constitution?**
+A. Berubari Union case (1960)
+B. Kesavananda Bharati case (1973)
+C. LIC of India case (1995)
+D. Golak Nath case (1967)
+
+**Correct Answer: B**
+**Explanation:** In the Kesavananda Bharati case (1973), the Supreme Court rejected the earlier opinion (Berubari case) and held that the Preamble is an integral part of the Constitution.
+
+**Q.6. Which of the following statements regarding the amendability of the Preamble is correct?**
+A. The Preamble cannot be amended as it is not part of the Constitution.
+B. The Preamble can be amended without any restrictions.
+C. The Preamble can be amended, provided the 'basic features' are not altered.
+D. The Preamble has never been amended since 1950.
+
+**Correct Answer: C**
+**Explanation:** The Supreme Court held in the Kesavananda Bharati case that the Preamble can be amended under Article 368, subject to the condition that no amendment is done to the 'basic features'.
+
+**Q.7. Who described the Preamble as the 'horoscope of our sovereign democratic republic'?**
+A. Pandit Thakur Das Bhargava
+B. Sir Alladi Krishnaswami Iyer
+C. K.M. Munshi
+D. Dr. B.R. Ambedkar
+
+**Correct Answer: C**
+**Explanation:** K.M. Munshi, a member of the Drafting Committee, described the Preamble as the 'horoscope of our sovereign democratic republic'.
+
+**Q.8. The ideals of 'Liberty, Equality and Fraternity' in the Preamble were borrowed from:**
+A. The American Revolution
+B. The Russian Revolution
+C. The French Revolution
+D. The Irish Constitution
+
+**Correct Answer: C**
+**Explanation:** The ideals of liberty, equality, and fraternity in the Preamble have been taken from the French Revolution (1789-1799).
+
+---
+
+### **Section II: Fundamental Rights (Articles 12-35)**
+
+**Q.9. Which Article of the Constitution abolishes 'untouchability' and forbids its practice in any form?**
+A. Article 16
+B. Article 17
+C. Article 18
+D. Article 23
+
+**Correct Answer: B**
+**Explanation:** Article 17 abolishes 'untouchability' and forbids its practice in any form.
+
+**Q.10. Fundamental Rights are available against the arbitrary action of the State. Which Article grants protection against "double jeopardy" (being punished for the same offence more than once)?**
+A. Article 20
+B. Article 21
+C. Article 22
+D. Article 23
+
+**Correct Answer: A**
+**Explanation:** Article 20 contains the provision for "No double jeopardy," stating that no person shall be prosecuted and punished for the same offence more than once.
+
+**Q.11. The 'Right to Elementary Education' (Article 21A) was added by which Constitutional Amendment?**
+A. 42nd Amendment Act
+B. 44th Amendment Act
+C. 86th Amendment Act
+D. 97th Amendment Act
+
+**Correct Answer: C**
+**Explanation:** The 86th Constitutional Amendment Act of 2002 made elementary education a fundamental right under Article 21A.
+
+**Q.12. Consider the following statements regarding the Writ Jurisdiction under Article 32:**
+
+1. Mandamus cannot be issued against a private individual.
+2. Prohibition directs activity, whereas Mandamus directs inactivity.
+3. Quo-Warranto can be sought by any interested person, not necessarily the aggrieved person.
+
+Which of the statements above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: C**
+**Explanation:** Mandamus cannot be issued against private individuals (Statement 1 is correct). Prohibition directs inactivity, while Mandamus directs activity (Statement 2 is incorrect). Quo-Warranto can be sought by any interested person (Statement 3 is correct).
+
+**Q.13. Which Fundamental Right cannot be suspended even during a National Emergency?**
+A. Article 14 and 15
+B. Article 19
+C. Article 20 and 21
+D. Article 29 and 30
+
+**Correct Answer: C**
+**Explanation:** The text explicitly states that Article 20 and 21 cannot be suspended during a national emergency.
+
+**Q.14. Under Article 22, the protection against preventive detention includes the right for the detention not to exceed _____ unless an advisory board reports sufficient cause.**
+A. One month
+B. Two months
+C. Three months
+D. Six months
+
+**Correct Answer: C**
+**Explanation:** The detention of a person cannot exceed three months unless an advisory board reports sufficient cause for extended detention.
+
+**Q.15. Which of the following rights is available ONLY to citizens of India and NOT to foreigners?**
+A. Equality before law (Article 14)
+B. Protection of life and personal liberty (Article 21)
+C. Equality of opportunity in public employment (Article 16)
+D. Freedom of religion (Article 25)
+
+**Correct Answer: C**
+**Explanation:** Article 16 (Equality of opportunity in matters of public employment) is listed as a Fundamental Right available only to citizens, whereas Articles 14, 21, and 25 are available to both citizens and foreigners.
+
+**Q.16. Match the following Writs with their literal meanings:**
+
+| Writ | Literal Meaning |
+| --- | --- |
+| 1. Habeas Corpus | a. We Command |
+| 2. Mandamus | b. To have the body of |
+| 3. Quo-Warranto | c. By what authority |
+| 4. Certiorari | d. To be certified |
+
+A. 1-b, 2-a, 3-c, 4-d
+B. 1-a, 2-b, 3-d, 4-c
+C. 1-b, 2-c, 3-a, 4-d
+D. 1-d, 2-a, 3-c, 4-b
+
+**Correct Answer: A**
+**Explanation:** Habeas Corpus means 'to have the body of'; Mandamus means 'we command'; Quo-Warranto means 'by what authority'; Certiorari means 'to be certified'.
+
+**Q.17. Article 24 prohibits the employment of children below the age of ____ in factories or mines.**
+A. 12 years
+B. 14 years
+C. 16 years
+D. 18 years
+
+**Correct Answer: B**
+**Explanation:** Article 24 prohibits the employment of children below the age of 14 years in any factory, mine, or hazardous activities.
+
+**Q.18. Which Article empowers the Parliament to restrict or abrogate the fundamental rights of the members of armed forces?**
+A. Article 32
+B. Article 33
+C. Article 34
+D. Article 35
+
+**Correct Answer: B**
+**Explanation:** Article 33 empowers the Parliament to restrict or abrogate the fundamental rights of the members of armed forces to ensure proper discharge of duties and maintenance of discipline.
+
+**Q.19. The "Right to Property" was deleted from the list of Fundamental Rights by which Amendment?**
+A. 42nd Amendment Act
+B. 44th Amendment Act
+C. 52nd Amendment Act
+D. 73rd Amendment Act
+
+**Correct Answer: B**
+**Explanation:** The right to property was deleted from the list of Fundamental Rights by the 44th Amendment Act, 1978, and made a legal right under Article 300-A.
+
+**Q.20. Under Article 19, which of the following is NOT explicitly mentioned but held to be included by the Supreme Court?**
+A. Freedom of movement
+B. Freedom of press
+C. Freedom to assemble peaceably
+D. Freedom to form associations
+
+**Correct Answer: B**
+**Explanation:** The text notes that Article 19 guarantees freedom of speech and expression, and the Supreme Court held that this includes "Freedom of the press" (it is implied, not explicitly listed as a separate sub-clause in the text of the Constitution).
+
+**Q.21. Article 30 grants rights to minorities based on:**
+A. Religion only
+B. Language only
+C. Religion or Language
+D. Religion, Language, or Script
+
+**Correct Answer: C**
+**Explanation:** Article 30 grants rights to minorities, whether religious or linguistic, to establish and administer educational institutions.
+
+**Q.22. Which writ is described as a "bulwark of individual liberty against arbitrary detention"?**
+A. Certiorari
+B. Quo-Warranto
+C. Habeas Corpus
+D. Prohibition
+
+**Correct Answer: C**
+**Explanation:** Habeas Corpus is described as a bulwark of individual liberty against arbitrary detention as it secures the release of a person found to be detained illegally.
+
+**Q.23. The scope of Article 21 (Protection of life and personal liberty) was expanded significantly by the Supreme Court in which famous case?**
+A. Golak Nath case
+B. Menaka Gandhi case
+C. Kesavananda Bharati case
+D. Minerva Mills case
+
+**Correct Answer: B**
+**Explanation:** The text mentions that the Supreme Court reaffirmed its judgement in the Menaka case, declaring various rights (like privacy, livelihood, etc.) as part of Article 21.
+
+**Q.24. Article 25 guarantees freedom of conscience and religion. However, this right does NOT include:**
+A. Right to propagate one's views
+B. Right to wear Kirpans (for Sikhs)
+C. Right to convert another person forcibly
+D. Right to practice religious rituals
+
+**Correct Answer: C**
+**Explanation:** The right to propagate does not include a right to convert another person to one's own religion forcibly, as forcible conversions impinge on the freedom of conscience.
+
+**Q.25. Which Article provides for the abolition of titles except military and academic distinctions?**
+A. Article 17
+B. Article 18
+C. Article 19
+D. Article 20
+
+**Correct Answer: B**
+**Explanation:** Article 18 abolishes titles and prohibits the state from conferring titles except for military or academic distinctions.
+
+---
+
+### **Section III: Directive Principles of State Policy (DPSP)**
+
+**Q.26. The Directive Principles of State Policy (Part IV) were borrowed from the Constitution of:**
+A. USA
+B. Canada
+C. Ireland
+D. USSR
+
+**Correct Answer: C**
+**Explanation:** The framers of the Constitution borrowed the idea of DPSP from the Irish Constitution of 1937.
+
+**Q.27. Which Article directs the State to secure a 'Uniform Civil Code' for all citizens?**
+A. Article 40
+B. Article 44
+C. Article 45
+D. Article 50
+
+**Correct Answer: B**
+**Explanation:** Article 44 directs the State to secure for all citizens a uniform civil code throughout the country.
+
+**Q.28. Which of the following is a 'Gandhian Principle' among the Directive Principles?**
+A. To separate the judiciary from the executive (Article 50)
+B. To organise village panchayats (Article 40)
+C. To secure equal pay for equal work (Article 39)
+D. To protect monuments of national importance (Article 49)
+
+**Correct Answer: B**
+**Explanation:** Article 40 (organizing village panchayats) is classified under Gandhian Principles.
+
+**Q.29. Article 51 of the Directive Principles relates to:**
+A. Separation of judiciary from executive
+B. Promotion of international peace and security
+C. Uniform Civil Code
+D. Protection of environment
+
+**Correct Answer: B**
+**Explanation:** Article 51 directs the state to promote international peace and security and maintain just and honourable relations between nations.
+
+**Q.30. The 97th Amendment Act of 2011 added a new Directive Principle (Article 43B) relating to:**
+A. Free legal aid
+B. Participation of workers in management
+C. Protection of environment
+D. Co-operative societies
+
+**Correct Answer: D**
+**Explanation:** The 97th Amendment Act of 2011 added Article 43B requiring the state to promote the voluntary formation and democratic control of co-operative societies.
+
+**Q.31. Which of the following statements distinguishes DPSP from Fundamental Rights (FR)?**
+A. DPSP are justiciable, FR are non-justiciable.
+B. DPSP require legislation for implementation; FR are automatically enforced.
+C. DPSP are negative prohibitions; FR are positive instructions.
+D. Courts can declare a law invalid if it violates DPSP.
+
+**Correct Answer: B**
+**Explanation:** Fundamental Rights do not require legislation for implementation (automatically enforced), while DPSP require legislation for their implementation. Also, DPSP are non-justiciable.
+
+**Q.32. The separation of the judiciary from the executive is prescribed in:**
+A. Article 48
+B. Article 49
+C. Article 50
+D. Article 51
+
+**Correct Answer: C**
+**Explanation:** Article 50 directs the state to separate the judiciary from the executive in the public services of the State.
+
+**Q.33. Which amendment added the directive to "promote equal justice and provide free legal aid to the poor" (Article 39A)?**
+A. 42nd Amendment
+B. 44th Amendment
+C. 86th Amendment
+D. 97th Amendment
+
+**Correct Answer: A**
+**Explanation:** The 42nd Amendment Act of 1976 added Article 39A regarding equal justice and free legal aid.
+
+---
+
+### **Section IV: Fundamental Duties**
+
+**Q.34. The Fundamental Duties were incorporated into the Constitution based on the recommendations of:**
+A. Verma Committee
+B. Sarkaria Commission
+C. Swaran Singh Committee
+D. Mandal Commission
+
+**Correct Answer: C**
+**Explanation:** In 1976, the Congress Party set up the Sardar Swaran Singh Committee to make recommendations about fundamental duties.
+
+**Q.35. Which of the following is NOT a Fundamental Duty under Article 51A?**
+A. To pay taxes
+B. To safeguard public property
+C. To protect the natural environment
+D. To defend the country
+
+**Correct Answer: A**
+**Explanation:** The Swaran Singh Committee recommended the duty to pay taxes, but it was *not* accepted and hence is not incorporated in the Constitution.
+
+**Q.36. The duty to provide opportunities for education to a child between the age of six and fourteen years was added by:**
+A. 42nd Amendment Act
+B. 44th Amendment Act
+C. 86th Amendment Act
+D. 91st Amendment Act
+
+**Correct Answer: C**
+**Explanation:** The 86th Constitutional Amendment Act, 2002 added the 11th Fundamental Duty (k) regarding education for children between six and fourteen years.
+
+**Q.37. Fundamental Duties are inspired by the Constitution of:**
+A. USA
+B. France
+C. Erstwhile USSR
+D. Japan
+
+**Correct Answer: C**
+**Explanation:** The Fundamental Duties in the Indian Constitution are inspired by the Constitution of the erstwhile USSR.
+
+---
+
+### **Section V: Supreme Court**
+
+**Q.38. Who appoints the judges of the Supreme Court?**
+A. The Chief Justice of India
+B. The Prime Minister
+C. The President
+D. The Parliament
+
+**Correct Answer: C**
+**Explanation:** The judges of the Supreme Court are appointed by the President.
+
+**Q.39. A judge of the Supreme Court holds office until he attains the age of:**
+A. 60 years
+B. 62 years
+C. 65 years
+D. 70 years
+
+**Correct Answer: C**
+**Explanation:** A Supreme Court judge holds office until he attains the age of 65 years.
+
+**Q.40. Which of the following is a qualification for appointment as a Supreme Court Judge?**
+A. Must have been a High Court judge for 3 years.
+B. Must have been an advocate of a High Court for 10 years.
+C. Must be a minimum of 35 years of age.
+D. Must be a member of the Rajya Sabha.
+
+**Correct Answer: B**
+**Explanation:** The qualifications are: Citizen of India, and either a High Court judge for 5 years, OR an advocate of a High Court for 10 years, OR a distinguished jurist. There is no minimum age prescribed.
+
+**Q.41. The removal of a Supreme Court judge requires an address supported by:**
+A. Simple majority in Parliament
+B. Special majority in each House of Parliament
+C. Consent of the Chief Justice of India
+D. Order of the Prime Minister
+
+**Correct Answer: B**
+**Explanation:** Removal requires a special majority of each House of Parliament (majority of total membership and not less than two-thirds of members present and voting).
+
+**Q.42. The "Original Jurisdiction" of the Supreme Court (Article 131) includes disputes between:**
+A. Centre and States
+B. Two private citizens regarding fundamental rights
+C. A citizen and the state regarding contract
+D. Matters referred to the Finance Commission
+
+**Correct Answer: A**
+**Explanation:** Original Jurisdiction covers federal disputes: Centre vs State(s), or State(s) vs State(s). It does not cover private disputes or matters referred to the Finance Commission.
+
+**Q.43. Under Article 143, the Supreme Court has:**
+A. Original Jurisdiction
+B. Appellate Jurisdiction
+C. Advisory Jurisdiction
+D. Writ Jurisdiction
+
+**Correct Answer: C**
+**Explanation:** Article 143 authorizes the President to seek the opinion of the Supreme Court, which constitutes its Advisory Jurisdiction.
+
+**Q.44. The power of "Judicial Review" (Article 137) allows the Supreme Court to:**
+A. Review its own judgements
+B. Review the wisdom of the electorate
+C. Examine the constitutionality of legislative enactments and executive orders
+D. Review the foreign policy of the government
+
+**Correct Answer: C**
+**Explanation:** Judicial review is the power to examine the constitutionality of legislative enactments and executive orders and declare them void if they violate the Constitution. (Note: While Art 137 specifically refers to review of its *own* judgments, the general concept of Judicial Review described in the text refers to examining constitutionality).
+
+**Q.45. Which of the following regarding the independence of the Supreme Court is FALSE?**
+A. Judges are appointed by the President in consultation with the judiciary.
+B. Judges' salaries are votable by the Parliament.
+C. Parliament cannot discuss the conduct of judges (except during impeachment).
+D. Retired judges are banned from pleading in any court.
+
+**Correct Answer: B**
+**Explanation:** The administrative expenses, salaries, and allowances are charged on the Consolidated Fund of India and are *non-votable* by the Parliament.
+
+**Q.46. Who was the first Chief Justice of India?**
+A. H.J. Kania
+B. M. Hidayatullah
+C. V. Ramaswami
+D. P.N. Bhagwati
+
+**Correct Answer: A**
+**Explanation:** The Supreme Court was inaugurated on January 28, 1950, attended by the first Chief Justice of India, Harilal J. Kania.
+
+**Q.47. The Supreme Court's power to punish for contempt of court is derived from its status as:**
+A. A Federal Court
+B. A Court of Record (Article 129)
+C. The highest court of appeal
+D. The guardian of the Constitution
+
+**Correct Answer: B**
+**Explanation:** As a Court of Record (Article 129), the Supreme Court has the power to punish for contempt of court.
+
+**Q.48. In the case of appointment of a Supreme Court judge other than the Chief Justice, consultation with the ________ is obligatory.**
+A. Prime Minister
+B. Chief Justice of India
+C. Vice President
+D. Law Minister
+
+**Correct Answer: B**
+**Explanation:** The consultation with the Chief Justice is obligatory in the case of appointment of a judge other than the Chief Justice.
+
+---
+
+### **Section VI: High Court**
+
+**Q.49. The institution of the High Court originated in India in 1862 with the establishment of High Courts at:**
+A. Delhi, Bombay, and Madras
+B. Calcutta, Bombay, and Madras
+C. Calcutta, Allahabad, and Lahore
+D. Bombay, Madras, and Bangalore
+
+**Correct Answer: B**
+**Explanation:** High courts were set up at Calcutta, Bombay, and Madras in 1862.
+
+**Q.50. A judge of a High Court holds office until he attains the age of:**
+A. 60 years
+B. 62 years
+C. 65 years
+D. 70 years
+
+**Correct Answer: B**
+**Explanation:** A High Court judge holds office until he attains the age of 62 years (unlike 65 for Supreme Court).
+
+**Q.51. Which of the following statements regarding the Writ Jurisdiction of the High Court (Article 226) is correct?**
+A. It is narrower than that of the Supreme Court.
+B. It can only be exercised for the enforcement of Fundamental Rights.
+C. It is wider than that of the Supreme Court as it covers "any other purpose".
+D. It is exclusive and cannot be exercised by the Supreme Court.
+
+**Correct Answer: C**
+**Explanation:** The High Court's writ jurisdiction is wider because it can issue writs for the enforcement of Fundamental Rights *and* for "any other purpose" (ordinary legal rights), whereas the SC is limited to Fundamental Rights only (unless Parliament extends it).
+
+**Q.52. High Court judges are appointed by:**
+A. The Governor of the State
+B. The Chief Justice of the High Court
+C. The President of India
+D. The Chief Minister
+
+**Correct Answer: C**
+**Explanation:** The judges of a high court are appointed by the President (after consulting the CJI, Governor, etc.).
+
+**Q.53. Can a distinguished jurist be appointed as a judge of a High Court?**
+A. Yes, similar to the Supreme Court.
+B. No, the Constitution makes no such provision for High Courts.
+C. Yes, if the Governor recommends.
+D. Yes, if the Parliament passes a law.
+
+**Correct Answer: B**
+**Explanation:** Unlike the Supreme Court, the Constitution makes no provision for the appointment of a distinguished jurist as a judge of a high court.
+
+**Q.54. The salaries and allowances of High Court judges are charged on:**
+A. Consolidated Fund of India
+B. Consolidated Fund of the State
+C. Contingency Fund of India
+D. Public Account of India
+
+**Correct Answer: B**
+**Explanation:** Salaries and allowances are charged on the Consolidated Fund of the State. (Note: Pensions are charged on the Consolidated Fund of India).
+
+**Q.55. Who determines the strength of a High Court?**
+A. The Parliament
+B. The State Legislature
+C. The President
+D. The Governor
+
+**Correct Answer: C**
+**Explanation:** The Constitution does not specify the strength; it leaves it to the discretion of the President to determine it from time to time.
+
+**Q.56. Which Union Territories have their own High Courts?**
+A. Delhi and Puducherry
+B. Delhi and Jammu & Kashmir
+C. Chandigarh and Ladakh
+D. Andaman & Nicobar and Lakshadweep
+
+**Correct Answer: B**
+**Explanation:** The text states "Delhi and Jammu & Kashmir are the union territory that has a high court of its own."
+
+**Q.57. An appeal from the judgements of a sessions court lies to the High Court if the sentence of imprisonment is for more than:**
+A. 3 years
+B. 5 years
+C. 7 years
+D. 10 years
+
+**Correct Answer: C**
+**Explanation:** Appeals lie to the high court if the sentence is one of imprisonment for more than seven years.
+
+**Q.58. Which Article deals with the "Control over Subordinate Courts" by the High Court?**
+A. Article 226
+B. Article 227
+C. Article 228
+D. Article 229
+
+**Correct Answer: B**
+**Explanation:** Article 227 deals with the power of superintendence and control over subordinate courts.
+
+---
+
+### **Section VII: Services & Commissions**
+
+**Q.59. Article 311 provides safeguards to civil servants. Which of the following is NOT an exception where the inquiry can be dispensed with?**
+A. Conviction on a criminal charge.
+B. Where it is not reasonably practicable to hold an inquiry.
+C. Interest of the security of the State.
+D. Where the civil servant refuses to attend the inquiry.
+
+**Correct Answer: D**
+**Explanation:** The three specific exceptions listed are: conviction on criminal charge, not reasonably practicable (recorded in writing), and security of the state. Refusal to attend is not a constitutional exception listed in the text.
+
+**Q.60. The "Doctrine of Pleasure" implies that civil servants hold office during the pleasure of:**
+A. The Parliament
+B. The President (Centre) or Governor (State)
+C. The Supreme Court
+D. The UPSC
+
+**Correct Answer: B**
+**Explanation:** Members of civil services hold office during the pleasure of the President (Centre) or the Governor (State).
+
+**Q.61. The National Commission for Scheduled Castes (Article 338) presents its annual report to:**
+A. The Parliament
+B. The President
+C. The Prime Minister
+D. The Chief Justice of India
+
+**Correct Answer: B**
+**Explanation:** The Commission presents an annual report to the President.
+
+**Q.62. Which Constitutional Amendment bifurcated the combined National Commission for SCs and STs into two separate bodies?**
+A. 65th Amendment Act
+B. 86th Amendment Act
+C. 89th Amendment Act
+D. 92nd Amendment Act
+
+**Correct Answer: C**
+**Explanation:** The 89th Constitutional Amendment Act of 2003 bifurcated the combined commission into separate bodies for SCs (Art 338) and STs (Art 338A).
+
+**Q.63. The National Commission for Backward Classes (NCBC) was given constitutional status by which Amendment?**
+A. 100th Amendment
+B. 101st Amendment
+C. 102nd Amendment
+D. 103rd Amendment
+
+**Correct Answer: C**
+**Explanation:** The Constitution (102nd Amendment) Act, 2018 gave NCBC constitutional status and inserted Article 338(B).
+
+**Q.64. What is the tenure of the Chairperson and Members of the National Commission for SCs?**
+A. 3 years
+B. 5 years
+C. 6 years
+D. Fixed by Parliament
+
+**Correct Answer: A**
+**Explanation:** The tenure of Chairperson, Vice-Chairperson, and Members is 3 years.
+
+**Q.65. Under Article 338, who has the power to specify the list of Scheduled Castes?**
+A. The Parliament alone
+B. The President
+C. The Governor
+D. The National Commission for SCs
+
+**Correct Answer: B**
+**Explanation:** The text mentions regarding Backward Classes (similar to SC/ST context) that the President may specify them, though amending the list requires a law of Parliament. (Context: Art 338/338B discussions).
+
+---
+
+### **Section VIII: Mixed / Conceptual / Advanced**
+
+**Q.66. Consider the following regarding the difference between Prohibition and Certiorari:**
+
+1. Prohibition is only preventive.
+2. Certiorari is both preventive and curative.
+3. Both are issued only against judicial and quasi-judicial authorities (historically).
+
+Which of the above statements is/are correct?
+A. 1 only
+B. 2 only
+C. 1 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: D**
+**Explanation:** All statements are correct based on the text. Prohibition directs inactivity (preventive). Certiorari quashes orders (curative) or transfers cases (preventive).
+
+**Q.67. Which Article describes India as a 'Union of States'?**
+A. Preamble
+B. Article 1
+C. Article 3
+D. Article 12
+
+**Correct Answer: B**
+**Explanation:** Article 1 of the Constitution describes India as a 'Union of States'.
+
+**Q.68. Which case established the "Basic Structure" doctrine, preventing the Parliament from damaging the basic features of the Constitution?**
+A. Shankari Prasad case
+B. Golak Nath case
+C. Kesavananda Bharati case
+D. Minerva Mills case
+
+**Correct Answer: C**
+**Explanation:** In the Kesavananda Bharati case (1973), the Supreme Court held that the amending power cannot be used to destroy the 'basic features' of the Constitution.
+
+**Q.69. Which of the following is an "Intellectual-Liberal" Directive Principle?**
+A. Organization of Village Panchayats
+B. Promotion of Cottage Industries
+C. Separation of Judiciary from Executive
+D. Prohibition of slaughter of cows
+
+**Correct Answer: C**
+**Explanation:** Separation of Judiciary from Executive (Article 50) is classified as a Liberal-Intellectual principle. The others are Gandhian.
+
+**Q.70. Regarding the National Commission for Scheduled Tribes (NCST), which new Ministry was created in 1999 to focus on tribal welfare?**
+A. Ministry of Social Justice
+B. Ministry of Tribal Affairs
+C. Ministry of Human Resource Development
+D. Ministry of Home Affairs
+
+**Correct Answer: B**
+**Explanation:** In 1999, a new Ministry of Tribal Affairs was created to provide a sharp focus to the welfare and development of the STs.
+
+**Q.71. The 44th Amendment Act of 1978 abolished the provision for a "second opportunity" for civil servants during an inquiry. This "second opportunity" referred to:**
+A. Making representation against the charges.
+B. Cross-examining witnesses.
+C. Making representation against the proposed punishment.
+D. Appealing to the High Court.
+
+**Correct Answer: C**
+**Explanation:** The 42nd Amendment abolished the provision for the second opportunity, which was the right to make representation against the *punishment proposed* as a result of the findings. (Note: Question refers to the abolition event described in the text).
+
+**Q.72. Which writ prevents illegal usurpation of public office by a person?**
+A. Mandamus
+B. Certiorari
+C. Quo-Warranto
+D. Prohibition
+
+**Correct Answer: C**
+**Explanation:** Quo-Warranto asks "by what authority" a person holds office, thus preventing illegal usurpation.
+
+**Q.73. Article 21A (Right to Education) applies to children of which age group?**
+A. 0 to 6 years
+B. 6 to 14 years
+C. 6 to 18 years
+D. Up to 14 years
+
+**Correct Answer: B**
+**Explanation:** Article 21A provides free and compulsory education to all children of the age of six to fourteen years.
+
+**Q.74. Which of the following is NOT true about the "Socialist" nature of the Indian State as per the text?**
+A. It was added by the 42nd Amendment.
+B. It leans heavily towards Gandhian socialism.
+C. It involves nationalisation of all means of production and abolition of private property.
+D. It is a 'democratic socialism'.
+
+**Correct Answer: C**
+**Explanation:** The text explicitly states that Indian socialism is 'democratic socialism' and *not* 'communistic socialism' (which involves nationalisation of all means of production and abolition of private property).
+
+**Q.75. The "Protection of Civil Rights Act, 1955" was previously known as:**
+A. The Untouchability (Offences) Act, 1955
+B. The Scheduled Castes Act, 1955
+C. The Human Rights Act, 1955
+D. The Civil Liberties Act, 1955
+
+**Correct Answer: A**
+**Explanation:** In 1976, the Untouchability (Offences) Act, 1955 was amended and renamed as the Protection of Civil Rights Act, 1955.

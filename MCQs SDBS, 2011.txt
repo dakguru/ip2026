@@ -1,0 +1,287 @@
+As a senior question setter for the Department of Posts, I have drafted these 30 MCQs specifically tailored for GDS to MTS/Postman/PA exams and LDCE. These questions are based on the **Service Discharge Benefit Scheme (SDBS), 2011**, incorporating updates up to the 2018 social security revisions.
+
+---
+
+### Part 1: Easy Level (Direct Facts & Basics)
+
+**Q1. On which date did the Service Discharge Benefit Scheme (SDBS) officially come into effect?**
+A. 01.01.2011
+B. 01.04.2011
+C. 01.07.2011
+D. 01.01.2010
+
+**Correct Answer: B**
+**Explanation:** Although mandatory for new entrants from 01.01.2011, the scheme was officially operationalized w.e.f. 1st April 2011 via OM No. 6-11/2009-PE-II.
+
+**Q2. SDBS is managed by which Nodal Agency in India?**
+A. Department of Posts
+B. PFRDA
+C. IRDA
+D. Ministry of Finance
+
+**Correct Answer: B**
+**Explanation:** The Pension Fund Regulatory and Development Authority (PFRDA) is the Nodal Agency for the administration of SDBS.
+
+**Q3. What is the full form of CRA in the context of SDBS?**
+A. Centralized Record Account
+B. Central Recordkeeping Agency
+C. Circle Registration Authority
+D. Chief Retired Accountant
+
+**Correct Answer: B**
+**Explanation:** CRA (Central Recordkeeping Agency) is responsible for maintaining the records of GDS subscribers. Protean (formerly NSDL) serves this role.
+
+**Q4. Under SDBS, what is the age of "Normal Discharge" for a Gramin Dak Sevak?**
+A. 58 years
+B. 60 years
+C. 62 years
+D. 65 years
+
+**Correct Answer: D**
+**Explanation:** As per GDS Service Rules, the age of discharge (retirement) is 65 years.
+
+**Q5. At the time of normal discharge at age 65, what is the minimum percentage of the accumulated fund that MUST be invested in an annuity?**
+A. 20%
+B. 40%
+C. 60%
+D. 80%
+
+**Correct Answer: B**
+**Explanation:** Under the SDBS exit rules, a minimum of 40% must be used for an annuity to provide a monthly pension; the remaining 60% is paid in lump sum.
+
+**Q6. What is the minimum length of "satisfactory service" required for an existing GDS to be eligible to join SDBS?**
+A. 6 months
+B. 1 year
+C. 3 years
+D. 5 years
+
+**Correct Answer: B**
+**Explanation:** Existing GDS who completed one year of satisfactory service were eligible to opt for the scheme.
+
+**Q7. Which identification number is issued to every GDS enrolled in SDBS?**
+A. PAN
+B. PRAN
+C. PPO
+D. GDSID
+
+**Correct Answer: B**
+**Explanation:** PRAN stands for Permanent Retirement Account Number, which is unique to each subscriber under the NPS/SDBS platform.
+
+**Q8. The SDBS is modeled after which existing national scheme?**
+A. APY (Atal Pension Yojana)
+B. NPS-Lite (Swavalamban)
+C. EPS-95
+D. GPF
+
+**Correct Answer: B**
+**Explanation:** SDBS was introduced utilizing the platform of the "NPS-Lite" scheme of the PFRDA.
+
+**Q9. Who is the current Central Recordkeeping Agency (CRA) for SDBS?**
+A. SBI Pension Funds
+B. Protean (NSDL)
+C. LIC
+D. CEPT Mysore
+
+**Correct Answer: B**
+**Explanation:** NSDL e-Governance (now Protean) is the CRA appointed by PFRDA to maintain GDS data.
+
+**Q10. What is the original monthly contribution amount by the Government at the launch of the scheme in 2011?**
+A. ₹100
+B. ₹150
+C. ₹200
+D. ₹500
+
+**Correct Answer: C**
+**Explanation:** At the time of introduction in 2011, the Government contribution was fixed at ₹200 per month.
+
+---
+
+### Part 2: Moderate Level (Procedures & Limits)
+
+**Q11. Following the 2018 revision (Kamlesh Chandra Committee), what is the current monthly contribution to SDBS from the Department?**
+A. ₹200
+B. ₹300
+C. ₹500
+D. 10% of TRCA
+
+**Correct Answer: B**
+**Explanation:** Effective from 01.07.2018, the monthly contribution was revised to ₹300 per month.
+
+**Q12. If a GDS is placed under "Put off duty", what happens to the SDBS contribution for that period?**
+A. Department pays double after reinstatement
+B. GDS must pay the full ₹600
+C. No contribution is made by the Department
+D. Contribution continues as usual
+
+**Correct Answer: C**
+**Explanation:** No contribution is made for the period a GDS is on "Put off duty" or unauthorized absence.
+
+**Q13. What is the fee for the issuance of a duplicate PRAN card for the first time?**
+A. ₹10
+B. ₹20
+C. ₹50
+D. ₹100
+
+**Correct Answer: B**
+**Explanation:** A fee of ₹20 is charged for the first duplicate PRAN card; subsequent requests cost ₹30.
+
+**Q14. If an existing GDS opted for SDBS in 2011, what happened to their accrued "Severance Amount" benefit up to that date?**
+A. It was forfeited
+B. It was paid in cash immediately
+C. It was added to the SDBS accumulation for annuitization at discharge
+D. It was converted into a bonus
+
+**Correct Answer: C**
+**Explanation:** For those who switched, the Severance Amount accrued (at the old rate of ₹1500 per year) is added to the fund at the time of discharge for annuity purposes.
+
+**Q15. A GDS wants to exit the scheme prematurely after reaching the age of 58. What percentage of the corpus can they withdraw as a lump sum?**
+A. 10%
+B. 20%
+C. 40%
+D. 60%
+
+**Correct Answer: B**
+**Explanation:** For premature exit after age 58, only 20% can be withdrawn as a lump sum, while 80% must be annuitized.
+
+**Q16. Who is the "Nodal Officer" at the Divisional level for SDBS matters?**
+A. Postmaster of the HO
+B. Divisional Head (Sr. Suptd / Suptd of Post Offices)
+C. ASP/IP of the Sub-division
+D. Circle Accounts Officer
+
+**Correct Answer: B**
+**Explanation:** The Divisional Heads are designated as the Nodal Officers for enrollment and grievance redressal under SDBS.
+
+**Q17. Which of the following GDS categories are NOT eligible for SDBS?**
+A. BPM (Branch Postmaster)
+B. ABPM (Assistant Branch Postmaster)
+C. Provisionally engaged GDS
+D. Regularly appointed Dak Sevak
+
+**Correct Answer: C**
+**Explanation:** Provisionally engaged GDS and substitutes are strictly ineligible for SDBS.
+
+**Q18. If a GDS resigns before reaching the age of 58, what is the mandatory percentage of the fund that must be used for an annuity?**
+A. 40%
+B. 60%
+C. 80%
+D. 85%
+
+**Correct Answer: D**
+**Explanation:** In case of resignation (before normal discharge age), the subscriber must invest 85% in an annuity; only 15% is paid as a lump sum.
+
+**Q19. Severance Amount is applicable only to which category of GDS?**
+A. Those appointed after 01.01.2011
+B. Those who opted to stay out of SDBS
+C. Those who were dismissed from service
+D. All GDS get Severance Amount along with SDBS
+
+**Correct Answer: B**
+**Explanation:** Severance Amount is only for those existing GDS who did NOT opt for SDBS. New entrants (post-2011) are mandatorily under SDBS.
+
+**Q20. What is the maximum ceiling for "Severance Amount" as per the 2018 revised orders?**
+A. ₹60,000
+B. ₹1,00,000
+C. ₹1,50,000
+D. ₹5,00,000
+
+**Correct Answer: C**
+**Explanation:** The maximum ceiling for both GDS Gratuity and Severance Amount was increased to ₹1,50,000 in July 2018.
+
+---
+
+### Part 3: Difficult Level (Claims, Death & Scenarios)
+
+**Q21. A GDS is dismissed from service following a disciplinary case. What is the rule regarding their SDBS accumulations?**
+A. They get 100% of the accumulation
+B. They get only their own contribution (if any)
+C. They forfeit the government contribution, and it is credited back to the Govt account
+D. They get 40% as a lump sum
+
+**Correct Answer: C**
+**Explanation:** Upon dismissal or removal, the GDS forfeits the benefit; the government contribution and earnings thereon are credited to the Central Government.
+
+**Q22. In the event of the death of a GDS while in service, what choice does the nominee have?**
+A. Only 100% lump sum withdrawal
+B. Only mandatory annuity
+C. Either 100% lump sum OR continue the scheme by paying self-contributions till age 65
+D. Forfeit all benefits
+
+**Correct Answer: C**
+**Explanation:** Nominees can either take the full amount as a lump sum or continue the account by paying the contributions themselves (Govt stops paying).
+
+**Q23. If a GDS is absorbed/appointed as a regular Postman, what happens to the SDBS account?**
+A. It is closed and paid in cash
+B. It is transferred to the individual's new NPS Tier-I account
+C. It continues as a separate account
+D. It is merged with the Welfare Fund
+
+**Correct Answer: B**
+**Explanation:** Upon permanent absorption into a departmental post, the SDBS accumulations are transferred to the subscriber's regular NPS account.
+
+**Q24. A GDS was appointed on 15.02.2011. Is SDBS mandatory for them?**
+A. No, it is optional
+B. Yes, it is mandatory
+C. They are ineligible
+D. Mandatory only if they have 20 years of service
+
+**Correct Answer: B**
+**Explanation:** SDBS is mandatory for all GDS appointed on or after 01.01.2011.
+
+**Q25. Which committee's recommendation led to the introduction of SDBS in the Department of Posts?**
+A. Justice Talwar Committee
+B. Nataraja Murti Committee
+C. Kamlesh Chandra Committee
+D. GDS Committee 2020
+
+**Correct Answer: B**
+**Explanation:** The SDBS was introduced based on the recommendations of the Shri R.S. Nataraja Murti Committee.
+
+**Q26. What is the rate of "Severance Amount" for GDS who did NOT opt for SDBS, for service rendered after 01.01.2016?**
+A. ₹1,500 per year
+B. ₹3,000 per year
+C. ₹4,000 per year
+D. ₹5,000 per year
+
+**Correct Answer: C**
+**Explanation:** The Severance Amount was increased from ₹1,500 to ₹4,000 per completed year of service w.e.f. 01.01.2016.
+
+**Q27. For an existing GDS (in service as on 01.01.2011), what was the cut-off condition for being ineligible to join SDBS?**
+A. Having less than 3 years of service left as on 01.01.2011
+B. Having less than 10 years of service left
+C. Being a BPM
+D. Being over 50 years of age
+
+**Correct Answer: A**
+**Explanation:** GDS who were due for discharge within 3 years or less as on 01.01.2011 were not eligible to join SDBS.
+
+**Q28. Under the revised 2018 rules, the SDBS contribution is ₹300 per month. Who pays this amount?**
+A. Only Department pays ₹300
+B. Department pays ₹300 and GDS pays ₹300 (Total ₹600)
+C. Department pays ₹150 and GDS pays ₹150
+D. Ministry of Finance pays the whole amount
+
+**Correct Answer: B**
+**Explanation:** Post-2018 revision, the contribution is ₹300 from BOTH sides (Department and GDS).
+
+**Q29. A GDS joined in 2012 (mandatory SDBS). At age 65, the total accumulation is ₹5,00,000. What is the maximum lump sum they can take?**
+A. ₹2,00,000
+B. ₹3,00,000
+C. ₹4,00,000
+D. ₹5,00,000
+
+**Correct Answer: B**
+**Explanation:** Maximum lump sum is 60% of accumulation. 60% of 5,00,000 = ₹3,00,000.
+
+**Q30. If a GDS wishes to buy an annuity for 100% of their accumulation at discharge (instead of taking any lump sum), is it allowed?**
+A. No, only 40% allowed
+B. Yes, there is no restriction on purchasing an annuity exceeding the minimum 40%
+C. Only with permission from CPMG
+D. Only if the amount is less than ₹1 Lakh
+
+**Correct Answer: B**
+**Explanation:** While 40% is the minimum mandatory annuity, the GDS has the option to invest the entire 100% in an annuity if they so desire.
+
+---
+
+Would you like me to generate a set of **Scenario-Based Flashcards** for these rules to help with quick revision?

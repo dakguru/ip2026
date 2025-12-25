@@ -1,0 +1,459 @@
+Here are 30 high-quality MCQs based strictly on the provided Postal Manual Volume-IV PDF, designed for a competitive examination level.
+
+### **Part 1: Establishment Norms & Proposals**
+
+**Q. 1.**
+With respect to the submission of proposals for the creation or revision of establishments, what is the prescribed timeline for submitting the proposal to the Director General prior to the date from which sanction is desired?
+
+A. 2 months for fixed establishment and 1 month for temporary establishment
+B. 3 months for fixed establishment and 2 months for temporary establishment
+C. 6 months for fixed establishment and 3 months for temporary establishment
+D. 1 month for both fixed and temporary establishments
+
+**Correct Answer:** B
+
+
+**Explanation:** According to the manual, every proposal must be submitted to the Director General at least three months in advance in case of fixed establishment and two months in case of temporary establishment. 
+
+---
+
+**Q. 2.**
+Proposals relating to BD and Marketing, PLI Postal Directorate, and Civil Wing should be sent through which of the following channels?
+
+A. Directly to the Minister of Communications
+B. Through the Head of the Circle to the Circle IFA
+C. Through the respective CGMs/DDGs/Chief Engineer (C)
+D. Through the Superintendent of Post Offices
+
+**Correct Answer:** C
+
+
+**Explanation:** The manual explicitly states that proposals relating to BD and Marketing, PLI Postal Directorate, and Civil Wing should be sent through the respective CGMs/DDGs/Chief Engineer (C). 
+
+---
+
+**Q. 3.**
+In the context of establishment charges for a Head Office, which of the following is NOT classified under the four standard portions of establishment charges?
+
+A. Clerical establishment
+B. Delivery establishment
+C. Pension establishment
+D. Class IV (Now MTS) establishment
+
+**Correct Answer:** C
+**Explanation:** Establishment charges are divided into four portions: (1) Clerical establishment, (2) Delivery establishment, (3) Class IV (MTS) establishment, and (4) Other items (contingent allowance, rent, etc.). Pension establishment is not mentioned as a category here. 
+
+---
+
+**Q. 4.**
+When proposing to transfer an appointment from one office to another, the proposal must contain:
+
+A. Only the justification for the new appointment
+B. The abolition of the appointment in the old office and simultaneous creation in the new office
+C. Only the financial effect on the new office
+D. A request for a temporary 3-month trial period
+
+**Correct Answer:** B
+
+
+**Explanation:** When it is proposed to transfer an appointment, the proposal should contain (a) the abolition of the appointment or charge in its old office or division, and (b) simultaneous creation of the appointment or charge in the new office or division. 
+
+---
+
+### **Part 2: Reviews and Forms**
+
+**Q. 5.**
+A value return in Form Est.5 or Est.6(a) is required to be submitted with a proposal in all the following cases EXCEPT:
+
+A. For converting a branch office into a sub office
+B. For closing an office on the ground of its being un-remunerative
+C. For increasing the cost of mail lines which benefits branch offices only
+D. For the routine annual transfer of a Sorting Assistant
+
+**Correct Answer:** D
+**Explanation:** A value return is required for experimental POs, increasing BO establishment charges, converting BO to SO, closing un-remunerative offices, and increasing cost of mail lines benefiting BOs. Routine transfers are not listed under this requirement. 
+
+---
+
+**Q. 6.**
+Match the following office types with their prescribed interval for the periodic review of establishment:
+
+| List I (Office Type) | List II (Review Interval) |
+| --- | --- |
+| 1. All GPOs/HOs/MDGs | P. Every 3 years |
+| 2. LSG/HSG SOs | Q. Every year |
+| 3. Divisional Office |  |
+
+A. 1-Q, 2-P, 3-P
+B. 1-P, 2-Q, 3-P
+C. 1-Q, 2-Q, 3-P
+D. 1-P, 2-P, 3-Q
+
+**Correct Answer:** A
+**Explanation:** GPOs/HOs/MDGs are reviewed every year. LSG/HSG SOs are reviewed every 3 years. The Establishment review of the Divisional Office is carried out after every 3 years. 
+
+---
+
+### **Part 3: Opening of Post Offices (Norms)**
+
+**Q. 7.**
+Consider the following statements regarding the norms for opening a Branch Post Office in "Normal Areas":
+
+1. The population required is 3000 in a group of villages.
+2. The minimum distance from the nearest office must be 5 K.M.
+3. The minimum anticipated revenue must be 33.33% of the cost.
+
+Which of the statements given above is/are correct?
+
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer:** B
+**Explanation:** For normal areas, the population requirement is 3000 in a group of villages, and the minimum anticipated revenue is 33.33% of the cost. However, the minimum distance from the nearest office is 3 K.M., not 5 K.M. 
+
+---
+
+**Q. 8.**
+For a Branch Post Office located in a hilly, tribal, or desert area, what is the minimum anticipated income required as a percentage of the cost?
+
+A. 10%
+B. 15%
+C. 25%
+D. 33.33%
+
+**Correct Answer:** B
+
+
+**Explanation:** In hilly, tribal, desert, and inaccessible areas, the minimum anticipated income will be 15% of the cost. 
+
+---
+
+**Q. 9.**
+Under what condition can an experimental post office be made permanent (except those in large towns)?
+
+A. If it operates for 5 years regardless of income
+B. If its total income covers its total cost plus 10% of the cost
+C. If its total income covers its total cost plus 25% of the cost
+D. If it is recommended by the local MP
+
+**Correct Answer:** C
+
+
+**Explanation:** No experimental office may be made permanent unless its total income covers its total cost plus 25% of the cost. 
+
+---
+
+### **Part 4: Financial Calculations & Income**
+
+**Q. 10.**
+While calculating the income of a Post Office, what percentage of the money order commission is attributed to the office for "Money Orders Paid"?
+
+A. 24%
+B. 33%
+C. 38%
+D. 50%
+
+**Correct Answer:** C
+**Explanation:** The calculation method attributes 38% of the money order commission on money orders *paid* by the office. (Note: It is 24% for money orders *issued*). 
+
+---
+
+**Q. 11.**
+According to the method of calculation of income (F.Y. 2023-24), what is the reimbursement rate per POSB Live Account per annum?
+
+A. Rs. 35.61
+B. Rs. 73.92
+C. Rs. 219.23
+D. Rs. 24.88
+
+**Correct Answer:** C
+**Explanation:** For F.Y. 2023-24, the rate is Rs. 219.23 per POSB (Per Live Account per annum). Rs. 35.61 is for silent accounts. 
+
+---
+
+### **Part 5: Departmental Examinations**
+
+**Q. 12.**
+Regarding Departmental Examinations, which of the following statements is INCORRECT?
+
+A. Advance notice of a minimum period of 40 days should be given.
+B. Revaluation of answer scripts is permissible if applied within 30 days.
+C. Result sheets should be preserved for a period of 3 years.
+D. Candidates generally cannot withdraw candidature after assignment of roll numbers except in circumstances beyond control.
+
+**Correct Answer:** B
+
+
+**Explanation:** The manual explicitly states: "Revaluation of answer scripts is not permissible in any case or under any circumstances." 
+
+---
+
+**Q. 13.**
+What is the preservation period for CCTV footage recorded during a departmental examination?
+
+A. 6 months from the date of examination
+B. 1 year from the declaration of results
+C. 2 years from the declaration of results
+D. Until the next examination is conducted
+
+**Correct Answer:** C
+
+
+**Explanation:** After the examination, CCTV footage is to be preserved in the personal custody of DPS (HQ) till 2 years of declaration of results. 
+
+---
+
+**Q. 14.**
+Identify the correct level of officer required to be a paper setter for the "LDCE PS Group B" examination:
+
+A. JAG & above
+B. STS/JAG & above
+C. SAG
+D. HAG
+
+**Correct Answer:** D
+
+
+**Explanation:** The level of officer for paper setter for LDCE PS Group B is HAG. 
+
+---
+
+**Q. 15.**
+To ascertain the accuracy of mechanical evaluation in examinations, what percentage of OMR sheets must undergo manual cross-checking?
+
+A. 5%
+B. 10%
+C. 15%
+D. 20%
+
+**Correct Answer:** B
+
+
+**Explanation:** For ascertaining accuracy of mechanical evaluation, cross-checking of 10% OMR sheets through manual evaluation is to be carried out. 
+
+---
+
+### **Part 6: Recruitment & Seniority**
+
+**Q. 16.**
+Who has the authority to sanction the re-employment of pensioners in non-gazetted posts?
+
+A. Divisional Head only
+B. Director General only
+C. Head of a Circle
+D. Any Gazetted Officer
+
+**Correct Answer:** C
+**Explanation:** The Head of a Circle may sanction the re-employment of pensioners in non-gazetted posts. An appointing authority of gazetted rank in charge of a division/first class HO may also exercise this power. 
+
+---
+
+**Q. 17.**
+In a cadre where recruitment is made partly from departmental candidates and partly from outsiders through a competitive examination, how is seniority determined?
+
+A. Both rank equally based on marks.
+B. Outsiders always rank senior to departmental candidates.
+C. Departmental candidates always rank senior to outsiders.
+D. Seniority is based solely on date of joining.
+
+**Correct Answer:** C
+
+
+**Explanation:** Where recruitment is made partly from departmental candidates and partly from outsiders, the former (departmental candidates) should always rank senior to the latter. 
+
+---
+
+**Q. 18.**
+What is the sanctioned percentage of operative clerical staff to form a "Leave Reserve" (LR)?
+
+A. 5%
+B. 10%
+C. 15%
+D. 20%
+
+**Correct Answer:** B
+
+
+**Explanation:** A staff of assistants not exceeding 10% of the operative clerical staff is sanctioned to form a leave reserve. 
+
+---
+
+**Q. 19.**
+How frequently should the **Circle** Gradation List be published?
+
+A. Every year
+B. Once in 3 years
+C. Once in 5 years
+D. Once in 2 years
+
+**Correct Answer:** C
+**Explanation:** The Head of Circle publishes the Circle Gradation list once in 5 years. (Note: Divisional lists are every 3 years). 
+
+---
+
+### **Part 7: Transfers (Rule 38 etc.)**
+
+**Q. 20.**
+Under Rule 38, what is the minimum service required for an official to be eligible for transfer (excluding specific exceptions like terminal illness)?
+
+A. Probation period completion
+B. 1 year
+C. 2 years
+D. 3 years
+
+**Correct Answer:** B
+
+
+**Explanation:** Only such official who completed one year of service shall be eligible for transfer under Rule 38. 
+
+---
+
+**Q. 21.**
+Which of the following statements regarding the number of permissible transfers under Rule 38 is correct?
+
+A. An official is eligible for only one inter-circle transfer in their entire service.
+B. An official is eligible for two inter-circle and two intra-circle transfers during the entire service.
+C. There is no limit on the number of transfers.
+D. Transfers are only allowed for PWD candidates.
+
+**Correct Answer:** B
+
+
+**Explanation:** Under Rule 38, an official will be eligible for two inter-circle and two intra-circle transfers during the entire service. 
+
+---
+
+**Q. 22.**
+If an employee declines a provisionally approved transfer on the online portal within 72 hours, what is the consequence?
+
+A. They are debarred from transfer for 1 year.
+B. They are deemed to have availed one chance of transfer.
+C. There is no adverse consequence, and the request is simply withdrawn.
+D. They must pay a fine.
+
+**Correct Answer:** C
+**Explanation:** The employee has the opportunity to decline within 72 hours. However, *after* the expiry of 72 hours and issue of final transfer order, if they cancel, they will be deemed to have availed one chance. Therefore, declining *within* 72 hours implies no loss of chance. 
+
+---
+
+**Q. 23.**
+Who is the competent authority to approve an **Inter-Circle** transfer under Rule 38?
+
+A. Director General
+B. CPMG of the receiving Circle only
+C. CPMG of Both Circles
+D. PMG of the Region
+
+**Correct Answer:** C
+
+
+**Explanation:** The authority competent to approve Inter-Circle transfer is the CPMG of Both Circles. 
+
+---
+
+**Q. 24.**
+Under Rule 38, relieving of an official shall NOT be denied solely on the ground of shortage of staff if the working strength of the cadre in the unit is not less than:
+
+A. 50%
+B. 60%
+C. 66.66%
+D. 75%
+
+**Correct Answer:** C
+
+
+**Explanation:** Relieving shall not be denied solely on ground of shortage of staff if working strength of the cadre in the Division/Unit is not less than 66.66%. 
+
+---
+
+### **Part 8: Tenure and Officiating**
+
+**Q. 25.**
+According to Rule 50 of Postal Manual Vol. IV, officiating arrangements for short-term vacancies should not exceed:
+
+A. 2 months
+B. 4 months
+C. 6 months
+D. 1 year
+
+**Correct Answer:** B
+**Explanation:** Rule 50 of Postal Manual Vol. IV provides for Officiating arrangement not more than 4 months for short term vacancies. 
+
+---
+
+**Q. 26.**
+What is the standard "Station Tenure" for a Superintendent of Post Office?
+
+A. 3 years
+B. 4 years
+C. 5 years
+D. 6 years
+
+**Correct Answer:** D
+
+
+**Explanation:** While the Post tenure is 3 years, the Station tenure shall be 6 years at one station. 
+
+---
+
+### **Part 9: Advanced/Analytical**
+
+**Q. 27.**
+Regarding the "Road Establishment" for mail lines:
+Assertion (A): Wherever practicable, the same ABPM will carry mails in both directions over his stage.
+Reason (R): The number of ABPMs employed depends on the length of the line and the weight of mails.
+
+A. Both A and R are true.
+B. Only A is true.
+C. Only R is true.
+D. Both A and R are false.
+
+**Correct Answer:** A
+**Explanation:** The manual states that the road establishment depends on the length of the line and weight of mails. It also states that wherever practicable, the same ABPM will carry mails in both directions. Thus, both statements are derived directly from the text and are true. 
+
+---
+
+**Q. 28.**
+If an experimental office in a village proves to be unremunerative, when may it be closed?
+
+A. Immediately upon showing a loss.
+B. After 6 months.
+C. After 12 months.
+D. After 24 months.
+
+**Correct Answer:** D
+
+
+**Explanation:** If an experimental office in villages proves to be unremunerative even after 24 months, the office may be closed. 
+
+---
+
+**Q. 29.**
+Which of the following officials is eligible for Inter-Circle transfer under Rule 38 starting from 01.06.2024, despite the usual restrictions?
+
+A. MTS
+B. Postman
+C. IP/ASP
+D. Sorting Assistant
+
+**Correct Answer:** C
+
+
+**Explanation:** The text mentions "IP/ASP for inter circle transfer under Rule-38 from 01.06.2024" as a specific inclusion/exception in the context of service eligibility rules. 
+
+---
+
+**Q. 30.**
+In the context of Rule 38 transfers, what is the mandatory gap required for a "same category transfer" for the second time?
+
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+
+**Correct Answer:** C
+
+
+**Explanation:** A gap of 3 years shall be mandatory for same category transfer for the second time.

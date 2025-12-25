@@ -1,0 +1,355 @@
+Here are 30 high-quality MCQs based strictly on the provided PDF content, designed for competitive examinations like UPSC, SSC, and State PSCs.
+
+**Q. 1.** Consider the following statements regarding the Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023:
+
+1. It is Act No. 46 of 2023.
+2. It was enacted in the 75th Year of the Republic of India.
+3. It repeals the Code of Criminal Procedure Act, 1973.
+
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: C**
+**Explanation:** Statement 1 is correct (Source 7). Statement 3 is correct (Source 11). Statement 2 is incorrect because the Act was enacted by Parliament in the **74th Year** of the Republic of India, not the 75th (Source 10).
+
+---
+
+**Q. 2.** On which date did the Bharatiya Nagarik Suraksha Sanhita, 2023 come into force?
+A. 25th December 2023
+B. 26th January 2024
+C. 1st April 2024
+D. 1st July 2024
+
+**Correct Answer: D**
+**Explanation:** While the enactment date was 25 December 2023 (Source 8), the Act came into force on **01th July, 2024** (Source 28).
+
+---
+
+**Q. 3.** According to the classification of offences in the BNSS 2023, a "Bailable offence" is defined as:
+A. An offence punishable with imprisonment of less than three years.
+B. An offence shown as bailable in the First Schedule or made bailable by any other law.
+C. Any offence where bail is granted by the Station House Officer only.
+D. An offence which is not a cognizable offence.
+
+**Correct Answer: B**
+**Explanation:** The PDF defines "Bailable offence" as an offence which is shown as bailable in the **First Schedule**, or which is made bailable by any other law for the time being in force (Source 33).
+
+---
+
+**Q. 4.** Which of the following correctly describes the structural composition of the BNSS 2023?
+A. 484 Sections, 37 Chapters, 2 Schedules
+B. 531 Sections, 39 Chapters, 2 Schedules
+C. 511 Sections, 23 Chapters, 1 Schedule
+D. 531 Sections, 39 Chapters, 1 Schedule
+
+**Correct Answer: B**
+**Explanation:** The BNSS 2023 contains Total Section-531 (Source 12), Total Chapter-39 (Source 13), and Total Schedule-2 (Source 16).
+
+---
+
+**Q. 5.** With reference to the applicability of the BNSS 2023 to the State of Nagaland and tribal areas, which of the following statements is correct?
+A. The entire Code applies to these areas without exception.
+B. No provisions of this Sanhita apply to these areas under any circumstances.
+C. Provisions relating to Chapters IX, XI, and XII apply, while others do not unless notified by the State Government.
+D. Only the Central Government can issue a notification to apply the provisions to these areas.
+
+**Correct Answer: C**
+**Explanation:** The provisions of the Sanhita, **other than** those relating to Chapters IX, XI and XII, shall not apply to the State of Nagaland and tribal areas. However, the concerned State Government may apply other provisions by notification (Source 20-26).
+
+---
+
+**Q. 6.** In the context of definitions under BNSS 2023, "Tribal Areas" refers to territories included in the tribal areas of Assam as referred to in the Sixth Schedule of the Constitution, specifically excluding:
+A. The local limits of the municipality of Guwahati.
+B. The local limits of the municipality of Shillong.
+C. The Bodoland Territorial Council areas.
+D. The autonomous districts of Karbi Anglong.
+
+**Correct Answer: B**
+**Explanation:** The definition of "tribal areas" explicitly excludes those within the local limits of the **municipality of Shillong** (Source 27).
+
+---
+
+**Q. 7.** Which of the following is NOT included in the definition of "Audio-video electronic means"?
+A. Video conferencing
+B. Recording of processes of identification
+C. Written postal correspondence
+D. Transmission of electronic communication
+
+**Correct Answer: C**
+**Explanation:** "Audio-video electronic means" includes video conferencing, recording of identification/search and seizure, and transmission of electronic communication. Written postal correspondence is not mentioned in this definition (Source 29).
+
+---
+
+**Q. 8.** According to Section 2, what is the distinction between a "Bail Bond" and a "Bond"?
+A. A Bail Bond is for non-bailable offences, while a Bond is for bailable offences.
+B. A Bail Bond requires a surety, while a Bond is an undertaking for release without surety.
+C. A Bail Bond is signed before a Court, while a Bond is signed before a Police Officer.
+D. Both terms are used interchangeably with no legal difference.
+
+**Correct Answer: B**
+**Explanation:** "Bail Bond" means an undertaking for release **with surety** (Source 45), whereas "Bond" means a personal bond or an undertaking for release **without surety** (Source 47).
+
+---
+
+**Q. 9.** Under the definition of "Cognizable offence", a police officer may arrest:
+A. Only with a warrant issued by a Magistrate.
+B. Without warrant in accordance with the First Schedule.
+C. Only after receiving a formal complaint.
+D. Only with the permission of the Public Prosecutor.
+
+**Correct Answer: B**
+**Explanation:** A "Cognizable offence" is one in which a police officer may, in accordance with the First Schedule or under any other law, **arrest without warrant** (Source 51-52).
+
+---
+
+**Q. 10.** Consider the following statements regarding a "Complaint":
+
+1. It must be made in writing only.
+2. It is made to a Magistrate.
+3. It includes a police report.
+
+Which of the statements given above is/are correct?
+A. 2 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+**Correct Answer: A**
+**Explanation:** A Complaint can be made **orally or in writing** (so statement 1 is wrong). It is made to a Magistrate (Source 53). It explicitly **does not include** a police report (Source 53).
+
+---
+
+**Q. 11.** A report made by a police officer, which discloses after investigation the commission of a non-cognizable offence, is deemed to be:
+A. A Police Report.
+B. A Complaint.
+C. A First Information Report (FIR).
+D. A Case Diary entry.
+
+**Correct Answer: B**
+**Explanation:** The Explanation under definition (h) states that a report by a police officer which discloses, after investigation, the commission of a non-cognizable offence shall be **deemed to be a complaint** (Source 54).
+
+---
+
+**Q. 12.** Who among the following is deemed to be the "Complainant" in a case where a police report discloses the commission of a non-cognizable offence after investigation?
+A. The victim of the crime.
+B. The Magistrate who ordered the investigation.
+C. The police officer by whom such report is made.
+D. The Public Prosecutor.
+
+**Correct Answer: C**
+**Explanation:** In such cases, the **police officer by whom such report is made** shall be deemed to be the complainant (Source 55).
+
+---
+
+**Q. 13.** The definition of "Electronic communication" includes communication transmitted by which of the following devices?
+
+1. Mobile phone
+2. Computer
+3. Camera
+4. Wireless telecommunication device
+
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 1, 2 and 4 only
+C. 2, 3 and 4 only
+D. 1, 2, 3 and 4
+
+**Correct Answer: D**
+**Explanation:** "Electronic communication" includes transmission by an electronic device including a telephone, mobile phone, wireless telecommunication device, computer, audio-video player, or **camera** (Source 56).
+
+---
+
+**Q. 14.** "Inquiry" under the BNSS 2023 is defined as:
+A. Every inquiry, including a trial, conducted by a Magistrate.
+B. Every inquiry, other than a trial, conducted by a Magistrate or Court.
+C. Proceedings for the collection of evidence conducted by a police officer.
+D. A judicial proceeding where evidence is taken on oath by a Public Prosecutor.
+
+**Correct Answer: B**
+**Explanation:** "Inquiry" means every inquiry, **other than a trial**, conducted under this Sanhita by a **Magistrate or Court** (Source 67).
+
+---
+
+**Q. 15.** Which of the following statements is true regarding "Investigation"?
+A. It is conducted exclusively by a Magistrate.
+B. It includes proceedings for the collection of evidence.
+C. It cannot be conducted by any person other than a police officer.
+D. It is synonymous with "Inquiry".
+
+**Correct Answer: B**
+**Explanation:** "Investigation" includes all proceedings for the **collection of evidence** conducted by a police officer or by any person (other than a Magistrate) who is authorised by a Magistrate (Source 68).
+
+---
+
+**Q. 16.** In the absence of the Officer in charge of a police station, who assumes the duties of such officer?
+A. Any constable present at the station-house.
+B. The police officer present at the station-house who is next in rank to such officer and above the rank of constable.
+C. The Magistrate of the local jurisdiction.
+D. The senior-most administrative clerk of the station.
+
+**Correct Answer: B**
+**Explanation:** It includes the police officer present at the station-house who is **next in rank** to such officer and is **above the rank of constable** (Source 86).
+
+---
+
+**Q. 17.** The term "Place" under the definitions includes which of the following?
+A. House and Building only.
+B. House, Building, and Tent only.
+C. House, Building, Tent, and Vehicle only.
+D. House, Building, Tent, Vehicle, and Vessel.
+
+**Correct Answer: D**
+**Explanation:** "Place" includes a house, building, tent, vehicle and **vessel** (Source 88).
+
+---
+
+**Q. 18.** A "Police Report" refers to a report forwarded by a police officer to a Magistrate under which specific section of the BNSS?
+A. Sub-section (2) of Section 154
+B. Sub-section (3) of Section 193
+C. Sub-section (1) of Section 173
+D. Sub-section (4) of Section 200
+
+**Correct Answer: B**
+**Explanation:** "Police report" means a report forwarded by a police officer to a Magistrate under **sub-section (3) of section 193** (Source 90).
+
+---
+
+**Q. 19.** A "Warrant-case" is defined as a case relating to an offence punishable with:
+A. Imprisonment for a term exceeding one year.
+B. Imprisonment for a term exceeding two years, imprisonment for life, or death.
+C. Imprisonment for a term exceeding three years.
+D. Imprisonment for a term exceeding seven years.
+
+**Correct Answer: B**
+**Explanation:** "Warrant-case" means a case relating to an offence punishable with death, imprisonment for life or imprisonment for a term **exceeding two years** (Source 103).
+
+---
+
+**Q. 20.** Which of the following is CORRECT regarding the definition of "Victim"?
+A. It refers only to the person who has directly suffered loss or injury.
+B. It includes the guardian or legal heir of the person who suffered loss or injury.
+C. It applies only to cases of physical injury, not financial loss.
+D. It excludes minors.
+
+**Correct Answer: B**
+**Explanation:** The expression victim **includes his or her guardian or legal heir** (Source 102).
+
+---
+
+**Q. 21.** Under Section 84, if a Court has reason to believe that a person against whom a warrant has been issued has absconded, it may publish a written proclamation requiring appearance at a specified place and time. What is the minimum time period required for this appearance?
+A. Not less than 15 days from the date of publishing.
+B. Not less than 30 days from the date of publishing.
+C. Not less than 60 days from the date of publishing.
+D. Not less than 90 days from the date of publishing.
+
+**Correct Answer: B**
+**Explanation:** The proclamation requires him to appear at a specified place and time **not less than 30 days** from the date of publishing such proclamation (Source 106).
+
+---
+
+**Q. 22.** Which of the following is NOT a prescribed method for publishing a proclamation under Section 84(2)?
+A. Publicly reading it in a conspicuous place of the town/village where the person resides.
+B. Affixing it to a conspicuous part of the house where the person resides.
+C. Affixing it to a conspicuous part of the Court-house.
+D. Broadcasting it on national television news channels.
+
+**Correct Answer: D**
+**Explanation:** The valid methods are reading publicly (Source 119), affixing to the house/homestead (Source 121), and affixing to the Court-house (Source 123). Broadcasting on television is not mentioned; however, publishing in a daily newspaper is permitted if the Court thinks fit (Source 126).
+
+---
+
+**Q. 23.** What constitutes "conclusive evidence" that the requirements of Section 84 regarding proclamation have been complied with?
+A. A video recording of the proclamation being read.
+B. A statement in writing by the Court issuing the proclamation.
+C. A verbal confirmation by the police officer in charge.
+D. A copy of the newspaper where the proclamation was published.
+
+**Correct Answer: B**
+**Explanation:** A **statement in writing by the Court** issuing the proclamation to the effect that the proclamation was duly published... shall be conclusive evidence (Source 127).
+
+---
+
+**Q. 24.** Under Section 84(4), a Court may pronounce a person a "proclaimed offender" if they fail to appear when charged with an offence punishable with:
+A. Imprisonment of 7 years or more.
+B. Imprisonment of 10 years or more, imprisonment for life, or death.
+C. Imprisonment of 3 years or more.
+D. Only offences punishable with death.
+
+**Correct Answer: B**
+**Explanation:** The section applies to an offence which is made punishable with **imprisonment of 10 years or more**, or imprisonment for life or with death (Source 128).
+
+---
+
+**Q. 25.** Match the following terms with their definitions as per BNSS 2023:
+| Term | Definition |
+| :--- | :--- |
+| 1. Summons-case | a. Case relating to an offence, and not being a warrant-case |
+| 2. Non-cognizable offence | b. Police officer has no authority to arrest without warrant |
+| 3. High Court (Union Territory) | c. Highest Court of criminal appeal other than Supreme Court |
+
+Select the correct option:
+A. 1-a, 2-b, 3-c
+B. 1-b, 2-c, 3-a
+C. 1-c, 2-a, 3-b
+D. 1-a, 2-c, 3-b
+
+**Correct Answer: A**
+**Explanation:** Summons-case is a case not being a warrant-case (Source 98). Non-cognizable offence is one where police cannot arrest without warrant (Source 80-81). High Court in relation to a UT (where state HC jurisdiction isn't extended) is the highest Court of criminal appeal other than SC (Source 66).
+
+---
+
+**Q. 26.** Words and expressions used in BNSS 2023 but not defined therein shall have the meanings assigned to them in:
+A. The Constitution of India and The Indian Penal Code.
+B. The Information Technology Act 2000 and The Bharatiya Nyaya Sanhita 2023.
+C. The Code of Criminal Procedure 1973 and The Indian Evidence Act.
+D. The General Clauses Act 1897.
+
+**Correct Answer: B**
+**Explanation:** They shall have meanings assigned in the **Information Technology Act 2000** and **The Bharatiya Nyaya Sanhita 2023** (Source 104).
+
+---
+
+**Q. 27.** In relation to a Union territory to which the jurisdiction of the High Court for a State has been extended by law, the term "High Court" refers to:
+A. The Supreme Court of India.
+B. The highest criminal court located within that Union Territory.
+C. That High Court (of the State).
+D. A special tribunal appointed by the Central Government.
+
+**Correct Answer: C**
+**Explanation:** In relation to a Union territory to which the jurisdiction of the High Court for a State has been extended by law, it means **that High Court** (Source 65).
+
+---
+
+**Q. 28.** "Judicial proceeding" includes any proceeding in the course of which:
+A. Investigation is conducted by the police.
+B. Evidence is or may be legally taken on oath.
+C. A suspect is arrested without a warrant.
+D. A Public Prosecutor frames the charges.
+
+**Correct Answer: B**
+**Explanation:** "Judicial proceeding" includes any proceeding in the course of which **evidence is or may be legally taken on oath** (Source 69).
+
+---
+
+**Q. 29.** "Local jurisdiction" in relation to a Court or Magistrate means:
+A. The local area within which they may exercise their powers under the Sanhita.
+B. The specific building where the Court is located.
+C. The area within 10 kilometers of the Court.
+D. The entire territory of India.
+
+**Correct Answer: A**
+**Explanation:** It means the **local area within which the Court or Magistrate may exercise all or any of its or his powers** under this Sanhita (Source 70).
+
+---
+
+**Q. 30.** Which section of the BNSS 2023 deals with the "Short Title, commencement and extent"?
+A. Section 2
+B. Section 1
+C. Section 84
+D. Section 531
+
+**Correct Answer: B**
+**Explanation:** **Section-1** covers Short Title, commencement and extent (Source 15).

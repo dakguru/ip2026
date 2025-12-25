@@ -1,0 +1,499 @@
+Here are 50 high-quality MCQs based strictly on the provided Postal Manual Volume V PDF, ranging from easy recall to analytical UPSC-style questions.
+
+### **Section 1: General Definitions and RMS Structure**
+
+**Q. 1.** With reference to the Railway Mail Service (RMS), which of the following statements is correct regarding a "Transit Office"?
+A. It is a branch of RMS where sorting of letters is performed.
+B. It is an office that opens all bags received to check their contents.
+C. It receives and sorts bags intended for offices in advance without opening them.
+D. It functions solely to book money orders through V-SAT.
+
+**Correct Answer: C**
+**Explanation:** A Transit Office is any Post Office situated on a line of through mail communication that receives and sorts bags intended for offices in advance without opening them. The bags forwarded onwards unopened are termed forward bags.
+
+**Q. 2.** Consider the following statements regarding a Transit Mail Office (TMO):
+
+1. It is a branch of RMS where closed bags are received and dispatched.
+2. Detailed sorting of letters is the primary function of a TMO.
+3. The Mail Agent or Mail Guard is the in-charge of this unit.
+
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: B**
+**Explanation:** A TMO is a branch of RMS where closed bags are received and dispatched. Sorting of letters is **not** done in this unit. The in-charge is a Mail Agent or Mail Guard.
+
+**Q. 3.** What is the primary function of a "Nodal Post Office" in important cities?
+A. To act as the headquarters for the Zonal Returned Letter Office.
+B. To reduce peak hour pressure in local sorting offices by receiving and sorting mail from neighboring Post Offices.
+C. To exclusively handle foreign mail exchanges.
+D. To manage the auction of old and damaged mail bags.
+
+**Correct Answer: B**
+**Explanation:** Nodal Post Offices are authorized to receive letters from neighboring Post Offices and sort the mail to reduce peak hour pressure in local sorting offices.
+
+**Q. 4.** Which of the following best describes the "Hybrid Mail Service"?
+A. Physical transmission of money orders using satellite technology.
+B. Electronic transmission of written material using VSAT, delivered to addressees at the receiving station.
+C. A service combining rail and road transport for heavy parcels.
+D. The exchange of mail between a Foreign Post Office and a Sub-Foreign Post Office.
+
+**Correct Answer: B**
+**Explanation:** Hybrid Mail Service involves the electronic transmission of written material from one place to another using computer terminals connected through VSAT.
+
+**Q. 5.** In the context of a "Central Bagging Unit" (KBU), how are bundles processed?
+A. Bundles are opened and re-sorted letter by letter.
+B. Bundles reaching in 'L'/'R' bags are grouped by destination (Circle/District/PO) and enclosed in direct bags.
+C. Bundles are sent directly to the delivery postman without entering a bag.
+D. Bundles are exclusively prepared for foreign countries.
+
+**Correct Answer: B**
+**Explanation:** The KBU opens 'L'/'R' bags and groups the bundles with reference to the destination (Circles-wise, District-wise, etc.) and includes them in respective bags for further transmission.
+
+---
+
+### **Section 2: International Mail and Offices of Exchange**
+
+**Q. 6.** Which of the following is correct regarding an "Office of Exchange of Transit"?
+A. It performs customs examination and assessment of duty.
+B. It exchanges closed mail bags with foreign administrations but does not open them.
+C. It is responsible for booking registered foreign mail only.
+D. It acts as a delivery office for international parcels.
+
+**Correct Answer: B**
+**Explanation:** An Office of Exchange of Transit receives and dispatches only *closed* mail bags addressed to or received from OEs in India and foreign countries. It does not perform customs examination.
+
+**Q. 7.** A "Sub-Foreign Post Office" differs from a "Foreign Post Office" because the Sub-Foreign Post Office:
+A. Does not exchange mail directly with other countries.
+B. Does not handle customs examination.
+C. Does not maintain accounts related to customs duty.
+D. Deals only with outbound mail, not inbound.
+
+**Correct Answer: A**
+**Explanation:** A Sub-Foreign Post Office receives and dispatches international mail to and from mapped offices within the country but has **no exchange of mail with other countries**.
+
+**Q. 8.** Match the Zonal Returned Letter Office (RLO) with its location correctly:
+| Zone | Location |
+| :--- | :--- |
+| 1. Eastern | i. Chennai |
+| 2. Western | ii. Lucknow |
+| 3. Northern | iii. Mumbai |
+| 4. Southern | iv. Kolkata |
+
+Select the correct option:
+A. 1-iv, 2-iii, 3-ii, 4-i
+B. 1-iii, 2-iv, 3-i, 4-ii
+C. 1-ii, 2-iii, 3-iv, 4-i
+D. 1-iv, 2-ii, 3-iii, 4-i
+
+**Correct Answer: A**
+**Explanation:** Eastern - Kolkata; Western - Mumbai; Northern - Lucknow; Southern - Chennai.
+
+**Q. 9.** According to the classification of Transit OEs, "Raxaul SO" is associated with which circle and country?
+A. West Bengal - Bangladesh
+B. Bihar - Nepal
+C. Punjab - Pakistan
+D. West Bengal - Bhutan
+
+**Correct Answer: B**
+**Explanation:** Raxaul SO (Nepal) is listed under the Bihar Circle in the Transit OEs table.
+
+**Q. 10.** Which of the following Foreign Post Offices is marked as "In process" (as per the provided text status)?
+A. Foreign Post Office, Jaipur
+B. Foreign Post Office, Leh
+C. Foreign Post Office, Varanasi
+D. Foreign Post Office, Mumbai
+
+**Correct Answer: B**
+**Explanation:** Foreign Post Office, Leh (Jammu & Kashmir) is listed as "In process." Jaipur, Varanasi, and Mumbai are listed as "Functional."
+
+---
+
+### **Section 3: Sorting, Bundles, and Check Slips**
+
+**Q. 11.** What is the minimum number of articles required to prepare a "Territorial Bundle"?
+A. 10
+B. 15
+C. 25
+D. 50
+
+**Correct Answer: C**
+**Explanation:** Territorial bundles are prepared when the number of articles is 25 and more.
+
+**Q. 12.** A "Station Bundle" is prepared when:
+A. There are more than 25 registered articles.
+B. There are unregistered articles for a particular station (exceeding 14).
+C. There are unregistered articles for a particular station (exceeding 10).
+D. There are unregistered articles for a particular station (exceeding 5).
+
+**Correct Answer: B**
+**Explanation:** The diagram for Labelled Bundle indicates "Station >= 15". This implies the bundle is formed when articles are 15 or more (i.e., exceeding 14).
+
+**Q. 13.** Which color check-slip is used for "Ordinary Station Paid and Unpaid Bundles"?
+A. White
+B. Blue
+C. Pink
+D. Green
+
+**Correct Answer: C**
+**Explanation:** Pink check-slips are used for Ordinary Station Paid and Unpaid Bundles.
+
+**Q. 14.** If a White check-slip has "Green strips," it indicates the bundle contains:
+A. Rajdhani articles
+B. Local articles
+C. Metro articles
+D. Foreign air mail
+
+**Correct Answer: B**
+**Explanation:** Green strips on a check-slip denote local articles. (Yellow = Rajdhani, Blue strips = Metro).
+
+**Q. 15.** Which of the following statements about "Express Bundles" is correct?
+A. They are marked with two diagonal lines in blue pencil on the check-slip.
+B. They contain articles that can be disposed of later.
+C. They are always wrapped in blue paper.
+D. They must contain at least 50 articles.
+
+**Correct Answer: A**
+**Explanation:** The white check-slip is used for express bundles, marked on the face with 2 diagonal lines in blue pencil.
+
+---
+
+### **Section 4: Bags and Bag Offices**
+
+**Q. 16.** Which office is designated as the "Central Bag Office"?
+A. The Head Record Office (HRO) of the Circle.
+B. The Postal Stores Depot.
+C. "D" Section of the Postal Directorate.
+D. The General Post Office (GPO) in New Delhi.
+
+**Correct Answer: C**
+**Explanation:** "D" Section of Postal Directorate is the Central Bag Office.
+
+**Q. 17.** Consider the following hierarchy of Bag Offices. Which pair is correctly matched?
+A. Unit Bag Office (UBO) — Postal Stores Depot
+B. District Bag Office (DBO) — HRO/SRO
+C. Circle Bag Office (CBO) — Head Post Office
+D. Central Bag Office — Circle Office
+
+**Correct Answer: B**
+**Explanation:** HRO/SRO functions as the District Bag Office (DBO). (Postal Stores Depot is the Circle Bag Office).
+
+**Q. 18.** An "Airmail Bag" should typically be closed using which type of bag?
+A. Red dosuti bag
+B. Blue dosuti bag
+C. White canvas bag
+D. Jute bag
+
+**Correct Answer: B**
+**Explanation:** A blue dosuti bag should ordinarily be used for closing an airmail bag.
+
+**Q. 19.** When is the symbol "F" marked on the label of a Mail Bag?
+A. When it contains foreign mail.
+B. When it contains a Cash bag and Register bag.
+C. When it contains Fragile items.
+D. When it is a Forward bag.
+
+**Correct Answer: B**
+**Explanation:** When a cash bag and Register bag are included in a Mail bag, the symbol "F" is marked on the label.
+
+**Q. 20.** A "Registered Bundle" is prepared when the number of articles exceeds:
+A. 1
+B. 2
+C. 5
+D. 10
+
+**Correct Answer: B**
+**Explanation:** For Registered Bundles: Articles > 2. (Minimum 3 articles).
+
+**Q. 21.** Which of the following is classified as an "Unusual Bag"?
+A. Transit Bag
+B. Account Bag
+C. Registered Bag
+D. Special Bag
+
+**Correct Answer: D**
+**Explanation:** Special Bag is listed under "Unusual Bag". Transit, Account, and Registered bags are "Due Bags".
+
+---
+
+### **Section 5: RMS Offices and Personnel**
+
+**Q. 22.** Who is the in-charge of a "Head Record Office" (HRO)?
+A. Head Sorting Assistant
+B. Head Record Officer (HSG-I)
+C. Sub Record Officer (LSG)
+D. Mail Agent
+
+**Correct Answer: B**
+**Explanation:** The in-charge of an HRO is the Head Record Officer (HSG-I).
+
+**Q. 23.** What is a "Subsidiary Sorting Assistant"?
+A. An assistant who works in the Record Office permanently.
+B. A Sorting Assistant who works only for a portion of working hours to assist a heavy set.
+C. An official responsible for booking V-SAT money orders.
+D. An official who handles only subsidiary accounts.
+
+**Correct Answer: B**
+**Explanation:** A Subsidiary Sorting Assistant works with a Sorting Office over only a portion of its working hours to assist the set where the work is heavy.
+
+**Q. 24.** In the context of Mail Offices, what distinguishes a "Sorting Mail Office" from a "Transit Mail Office"?
+A. Sorting Mail Offices deal only with closed bags; TMOs deal with contents.
+B. Sorting Mail Offices deal with contents of L bags; TMOs deal only with closed bags.
+C. The in-charge of a Sorting Mail Office is a Mail Agent.
+D. TMOs are located in newspaper premises.
+
+**Correct Answer: B**
+**Explanation:** Sorting Mail Offices deal with the contents of Ordinary L Bags. Transit Mail Offices (TMO) deal only with closed bags.
+
+**Q. 25.** A "Press Sorting Office" (PSO) is situated:
+A. On the premises of a Newspaper.
+B. At the Railway Station platform.
+C. Within the Circle Office.
+D. At the airport sorting hub.
+
+**Correct Answer: A**
+**Explanation:** A Press Sorting Office is situated on the premises of the Newspaper.
+
+---
+
+### **Section 6: Orders, Lists, and Procedures**
+
+**Q. 26.** "A Orders" are issued by the Superintendent RMS for:
+A. Guidance on subjects other than sorting lists.
+B. Prescribing changes in sorting lists.
+C. Disposal of camp articles.
+D. Procurement of bags.
+
+**Correct Answer: B**
+**Explanation:** A orders are orders issued by a Superintendent, RMS prescribing changes in sorting lists.
+
+**Q. 27.** If a "B Order" is prefixed with the letter 'T', it relates to:
+A. Transit bags.
+B. Temporary arrangements.
+C. Disposal of camp articles and camp bags for high officials.
+D. Transfer of officials.
+
+**Correct Answer: C**
+**Explanation:** The letter 'T' is prefixed to 'B' orders in connection with the disposal of camp articles and camp bags for high officials on tour.
+
+**Q. 28.** What is a "Trial Card"?
+A. A card used to test the weight of a bag.
+B. A Service Post Card used to determine the relative advantage of alternative mail routes or causes of detention.
+C. A card used to verify the identity of the Mail Guard.
+D. A card used for trial balance in accounts.
+
+**Correct Answer: B**
+**Explanation:** Trial cards are service Post Cards [M 26 (a)] employed for determining the relative advantage of alternative mail routes or the cause of detention to articles.
+
+**Q. 29.** The "Due Mail List" shows:
+A. The list of defaulters in the post office.
+B. The details of bags to be received and dispatched by a Mail Office/Transit Section.
+C. The list of unpaid articles.
+D. The attendance list of sorting assistants.
+
+**Correct Answer: B**
+**Explanation:** The due mail list shows the details of bags to be received and dispatched by a Mail Office/Transit Section.
+
+**Q. 30.** "Late Letters" are those posted:
+A. Without any postage stamps.
+B. After the closing hour but within the interval allowed with a prescribed late fee.
+C. After the departure of the mail van.
+D. Without the prescribed late fee after closing hours.
+
+**Correct Answer: B**
+**Explanation:** Late Letters are posted after the hour of closing *with* prescribed late fee. (Note: Late fee is abolished, but the definition distinguishes it from "Too Late Letters" which are posted without the fee).
+
+**Q. 31.** How many copies of the "Inland Air Mail Delivery Bill" are prepared?
+A. 3
+B. 4
+C. 5
+D. 6
+
+**Correct Answer: D**
+**Explanation:** Six copies of the inland air mail delivery bills are prepared. (4 for Agent, 1 for Directorate, 1 Office copy/Pencil copy).
+
+---
+
+### **Section 7: Operational Limits and Rules**
+
+**Q. 32.** What is the maximum weight for a Parcel Bag conveyed by RMS when carried by trolley?
+A. 14 Kg
+B. 28 Kg
+C. 30 Kg
+D. 37 Kg
+
+**Correct Answer: D**
+**Explanation:** The maximum weight for a Parcel Bag conveyed by RMS is 37 Kg when it is carried by trolley.
+
+**Q. 33.** The weight of an Air Mail Bag or Air TB should not exceed:
+A. 15 Kg
+B. 20 Kg
+C. 30 Kg
+D. 35 Kg
+
+**Correct Answer: C**
+**Explanation:** The weight of an air mail bag or air TB should not exceed 30 kg.
+
+**Q. 34.** According to the weighment system, mail handed over to the stationmaster is weighed twice a year. What are the dates?
+A. 1st April and 1st October
+B. 21st January and 21st July
+C. 30th June and 31st December
+D. 15th January and 15th July
+
+**Correct Answer: B**
+**Explanation:** The mail is weighed on the 21st January and the 21st July of each year.
+
+**Q. 35.** Regarding the cancellation of foreign articles: If stamps are not cancelled by the office of origin, how should the receiving office cancel them?
+A. By impressing the date-stamp twice.
+B. By a thick stroke in ink or indelible pencil.
+C. By using a red marker.
+D. They should be left uncancelled.
+
+**Correct Answer: B**
+**Explanation:** Stamps not cancelled by the office of origin should be cancelled by a thick stroke in ink or in indelible pencil, not by impressing the date-stamp.
+
+**Q. 36.** How is the deficiency of postage calculated on foreign articles by the Office of Exchange?
+A. Equal to the deficiency.
+B. Twice the amount of deficient postage.
+C. Three times the deficiency.
+D. Fixed penalty of Rs. 10.
+
+**Correct Answer: B**
+**Explanation:** Mention an amount equal to twice the amount of deficient postage in paise.
+
+---
+
+### **Section 8: Investigations and Legal**
+
+**Q. 37.** Which of the following offenses is "Non-Cognizable" according to the manual?
+A. Highway robbery of mail.
+B. Theft of mail.
+C. Criminal breach of trust.
+D. Cheating (otherwise than by personation) and forgery.
+
+**Correct Answer: D**
+**Explanation:** Cheating (otherwise than by personation), forgery and all other offenses (except those punishable with imprisonment for 3 years or more) are non-cognizable. Robbery, theft, and breach of trust are cognizable.
+
+**Q. 38.** Who controls the action in "Cognizable cases" once information is given under Section 154 of the Criminal Procedure Code?
+A. The Head of the Circle.
+B. The Police.
+C. The RMS Superintendent.
+D. The Magistrate.
+
+**Correct Answer: B**
+**Explanation:** In cognizable cases, the action to be taken will be controlled by the Police.
+
+**Q. 39.** As per the revised monetary limits (w.e.f. 23.09.21), an Inspector/ASPOS can investigate loss and fraud cases up to:
+A. Rs. 1 Lakh
+B. Rs. 2 Lakh
+C. Rs. 5 Lakh
+D. Rs. 10 Lakh
+
+**Correct Answer: B**
+**Explanation:** The revised monetary limit for Inspector/ASPOS is "Up to Rs. 2 Lakh".
+
+**Q. 40.** If a fraud case involves a sum of Rs. 8 Lakh, who is the appropriate level of investigation officer?
+A. Divisional Head
+B. Director Postal Services
+C. AD/APMG of Regional and Circle Office
+D. Inspector
+
+**Correct Answer: C**
+**Explanation:** For amounts "Above Rs. 5 Lakh and up to Rs. 10 Lakh," the investigation officer is AD/APMG of Regional and Circle Office.
+
+---
+
+### **Section 9: Miscellaneous Technicalities**
+
+**Q. 41.** A "Connecting Section" is defined as:
+A. A section where the beats of two transit sections join.
+B. An RMS section working in a train in immediate connection with another train in which another RMS section works.
+C. A section that connects a sorting office to a transit office.
+D. A section that handles only registered mail.
+
+**Correct Answer: B**
+**Explanation:** Connecting Section: An RMS section working in a train in immediate connection with another train in which another RMS section works. (Beats of two transit sections joining is a "Changing Station").
+
+**Q. 42.** Regarding the "Book of Postmarks," which stamps are kept in a separate book in the personal custody of the Postmaster?
+A. All date stamps.
+B. Round and oblong money order stamps and unpaid stamps.
+C. Registration stamps only.
+D. Parcel stamps.
+
+**Correct Answer: B**
+**Explanation:** The impressions of the round and oblong money order stamps and the unpaid stamp should be taken in a separate book of postmarks kept in the personal custody of the Postmaster.
+
+**Q. 43.** Half-yearly enumeration returns are conducted during the second week of which months?
+A. January and July
+B. February and August
+C. March and September
+D. April and October
+
+**Correct Answer: B**
+**Explanation:** During the second week of the months of Feb and Aug of each year (8th to 21st).
+
+**Q. 44.** Interception of articles cannot be proceeded without the orders of:
+A. The Postmaster General.
+B. The Divisional Head (in all cases).
+C. Member (O) / Head of Circle / Regional Head.
+D. The Police Commissioner.
+
+**Correct Answer: C**
+**Explanation:** Interception cannot be proceeded without orders of the Member (O)/Head of the Circle/Regional Head/Regional Director. (Divisional Head can order only in emergency, requiring confirmation).
+
+**Q. 45.** If a sender wants to recall a domestic article from the post, what is the fee?
+A. Rs. 3/-
+B. Rs. 5/-
+C. Rs. 6/-
+D. Free of charge
+
+**Correct Answer: C**
+**Explanation:** The sender may avail the facility (recall or alteration) by paying a postal fee Rs. 6/-.
+
+**Q. 46.** "Plural Mail Bags" are considered:
+A. Due Bags used as Registered bags.
+B. Unusual Bags used as Parcel bags.
+C. Extra bags for overflow mail.
+D. Bags containing only empty sacks.
+
+**Correct Answer: A**
+**Explanation:** Plural Mail Bag is a Due Bag used as a Registered bag.
+
+**Q. 47.** An "Extra Mail Bag" is:
+A. A Due Bag.
+B. An Unusual Bag used as an unregistered bag.
+C. Always an Airmail bag.
+D. Used only for insured articles.
+
+**Correct Answer: B**
+**Explanation:** Extra Mail Bags are classified as "Unusual Bag" and used as unregistered bags.
+
+**Q. 48.** What does the term "Face" refer to in the context of a Check-Slip?
+A. The side with the address.
+B. The side where the diagonal lines are marked for express bundles.
+C. The sticky side.
+D. The bottom of the bundle.
+
+**Correct Answer: B**
+**Explanation:** The slip is marked on the "face" with 2 diagonal lines in blue pencil when used for an express bundle.
+
+**Q. 49.** Which officer is responsible for supplying Village Sorting Lists (M-52)?
+A. Head of Circle
+B. Superintendent of RMS
+C. Sub Division Head
+D. Head Record Officer
+
+**Correct Answer: C**
+**Explanation:** Village Sorting Lists (M-52) are prepared and supplied to HO, SO, or BO by the Sub Division Head.
+
+**Q. 50.** In the context of stamping, if two postage stamps appear together, how should they be defaced?
+A. By two separate impressions.
+B. By a single impression covering both.
+C. By a pen stroke.
+D. By tearing the corner.
+
+**Correct Answer: B**
+**Explanation:** They should be defaced by a single impression so placed that the date stamp covers both the postage stamps.

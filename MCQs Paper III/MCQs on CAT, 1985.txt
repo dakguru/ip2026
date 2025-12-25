@@ -1,0 +1,592 @@
+Here are 50 high-quality MCQs based strictly on the provided PDF content regarding The Central Administrative Tribunals Act, 1985.
+
+---
+
+### **Section I: Introduction, Scope, and Definitions**
+
+**Q. 1. Under which Article of the Constitution was the Central Administrative Tribunal (CAT) established?**
+A. Article 323-B
+B. Article 323-A
+C. Article 226
+D. Article 136
+
+**Correct Answer: B**
+
+
+**Explanation:** The document states that the Central Administrative Tribunal had been established under Article 323-A of the Constitution.
+
+**Q. 2. The Central Administrative Tribunals Act, 1985 extends to the whole of India with effect from:**
+A. 01 July 1985
+B. 27 Feb 1985
+C. 31 Oct 2019
+D. 01 Jan 2020
+
+**Correct Answer: C**
+**Explanation:** Section 1(2) states it extends to the whole of India w.e.f. 31 Oct. 2019.
+
+**Q. 3. Section 2 of the Act explicitly excludes the application of the Act to which of the following categories?**
+A. All Central Government employees
+B. Members of the naval, military, or air forces
+C. Employees of Local Authorities
+D. Persons appointed to public services in the Union Territories
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 2(a) states the Act does not apply to any member of the naval, military, or air forces or of any other armed forces of the Union.
+
+**Q. 4. According to the definitions in Section 3, an "Administrative Member" is defined as:**
+A. A member who is a retired IAS officer
+B. A Member of a Tribunal who is not a Judicial Member
+C. The Chairman of the Tribunal
+D. A member appointed solely by the State Government
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 3(a) defines "Administrative Member" as a Member of a Tribunal who is not a Judicial Member.
+
+**Q. 5. Which of the following is NOT included in the definition of "Service matters" under Section 3(q)?**
+A. Remuneration and pension
+B. Tenure including confirmation and promotion
+C. Private property disputes between employees
+D. Disciplinary matters
+
+**Correct Answer: C**
+
+
+**Explanation:** "Service matters" include remuneration, tenure, leave, disciplinary matters, etc. Private property disputes are not listed.
+
+---
+
+### **Section II: Establishment and Composition**
+
+**Q. 6. How many Benches and Circuit Benches are there in the Central Administrative Tribunal all over India according to the text?**
+A. 15 Benches and 10 Circuit Benches
+B. 19 Benches and 19 Circuit Benches
+C. 21 Benches and 5 Circuit Benches
+D. 17 Benches and 15 Circuit Benches
+
+**Correct Answer: B**
+
+
+**Explanation:** The text states there are 19 Benches and 19 Circuit Benches in the CAT all over India.
+
+**Q. 7. A Bench of the Tribunal shall consist of:**
+A. Two Judicial Members
+B. Two Administrative Members
+C. One Judicial Member and one Administrative Member
+D. The Chairman and two Vice-Chairmen
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 5(2) states that a Bench shall consist of one judicial member and one administrative member.
+
+**Q. 8. Who has the power to transfer any member from one bench to another?**
+A. The President of India
+B. The Chief Justice of India
+C. The Chairman
+D. The Appropriate Government
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 5(3) states that the Chairman of the Bench (Tribunal) may transfer any member from one bench to another.
+
+**Q. 9. The Principal Bench of the Central Administrative Tribunal shall ordinarily sit at:**
+A. Mumbai
+B. New Delhi
+C. Allahabad
+D. Bangalore
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 5(7) states that the Benches of the Central Administrative Tribunal shall ordinarily sit at New Delhi, known as Principal Bench.
+
+---
+
+### **Section III: Qualifications and Appointment**
+
+**Q. 10. To be qualified for appointment as the Chairman, a person must be or have been:**
+A. A Secretary to the Government of India
+B. A Judge of a High Court
+C. A District Judge for 10 years
+D. An Additional Secretary for 5 years
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 6(1) states a person shall not be qualified for appointment as the Chairman unless he is, or has been, a judge of a High Court.
+
+**Q. 11. What is the qualification requirement for an Administrative Member regarding the post of Secretary to the Government of India?**
+A. Must have held the post for at least 1 year
+B. Must have held the post for at least 2 years
+C. Must have held the post for at least 3 years
+D. Must have held the post for at least 5 years
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 6(2)(a) requires a person to have held the post of Secretary to the Govt of India (or equivalent) for 2 years.
+
+**Q. 12. For appointment as a Judicial Member, a person must have held the post of Additional Secretary to the Government of India in the Department of Legal Affairs for:**
+A. 2 years
+B. 3 years
+C. 4 years
+D. 5 years
+
+**Correct Answer: D**
+
+
+**Explanation:** Section 6(2)(b) states that for a Judicial Member, one must hold the post of Additional Secretary in the Department of Legal Affairs for 5 years.
+
+**Q. 13. Who appoints the Chairman and other Members of the Central Administrative Tribunal?**
+A. The Chief Justice of India
+B. The Prime Minister
+C. The President after consultation with the Chief Justice of India
+D. The Ministry of Personnel
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 6(3) states they shall be appointed by the President after consultation with the Chief Justice of India.
+
+**Q. 14. Who appoints the Members of a State Administrative Tribunal?**
+A. The Governor of the State exclusively
+B. The President after consultation with the Governor of the concerned State
+C. The Chief Justice of the High Court
+D. The State Public Service Commission
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 6(4) states they shall be appointed by the President after consultation with the Governor of the concerned State.
+
+---
+
+### **Section IV: Tenure and Conditions of Service**
+
+**Q. 15. According to the Tribunals Reforms Act 2021 mentioned in the text, what is the term of office for the Chairman?**
+A. 5 years or age attaining 68 years
+B. 5 years or age attaining 65 years
+C. 4 years or age attaining 70 years
+D. 4 years or age attaining 67 years
+
+**Correct Answer: C**
+
+
+**Explanation:** The text specifies "According to The Tribunals Reforms Act 2021", the Chairman's term is 4 years or age attaining 70 years, whichever is earlier.
+
+**Q. 16. The conditions of service of the Chairman and Members are the same as applicable to:**
+A. A Secretary to the Government of India
+B. A Judge of the High Court
+C. A Judge of the Supreme Court
+D. A Cabinet Minister
+
+**Correct Answer: B**
+
+
+**Explanation:** The conditions of service of Hon'ble Chairman and Members are the same as applicable to a Judge of High Court.
+
+**Q. 17. Under Section 9, a Member can be removed from office by the President only on the ground of:**
+A. Public interest
+B. Administrative inefficiency
+C. Proved misbehavior or incapacity
+D. Completion of tenure
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 9(2) states removal is on the ground of proved misbehavior or incapacity.
+
+**Q. 18. The inquiry for the removal of a Chairman or Member must be made by:**
+A. The Cabinet Secretary
+B. A Judge of the Supreme Court
+C. The Attorney General of India
+D. A Committee of Parliament
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 9(2) specifies the inquiry is made by a Judge of the Supreme Court.
+
+---
+
+### **Section V: Eligibility After Retirement**
+
+**Q. 19. According to Section 11, the Chairman of the CAT shall be:**
+A. Eligible for reappointment as Chairman
+B. Eligible for employment under the State Government
+C. Ineligible for employment either under the Central Govt. or State Govt.
+D. Eligible for appointment as Governor
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 11(1) states the Chairman of CAT shall be ineligible for employment either Central Govt. or State Govt..
+
+**Q. 20. Can a Member of a Tribunal appear or plead before any Tribunal of which he was a Member?**
+A. Yes, after a cooling-off period of 2 years
+B. Yes, with the permission of the President
+C. No, they shall not appear, act or plead
+D. Yes, but only in other States
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 11(4) states the Chairman or other Member shall not appear, act or plead before any Tribunal of which he was the Chairman or other Member.
+
+---
+
+### **Section VI: Jurisdiction and Powers**
+
+**Q. 21. Section 14 confers jurisdiction to the CAT regarding:**
+A. Criminal matters of central employees
+B. Civil disputes between employees
+C. Recruitment and service matters of persons appointed to public services
+D. Election disputes
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 14(1) and (2) confer jurisdiction regarding recruitment and service matters.
+
+**Q. 22. Under Section 17, the Tribunal has the power to punish for contempt. This power is equivalent to that of:**
+A. A District Court
+B. A High Court
+C. The Supreme Court
+D. A Magistrate
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 17 confers the power to exercise the same jurisdiction and authority in respect of contempt of itself as a High Court.
+
+**Q. 23. If a question arises whether a matter falls within the purview of business allocated to a Bench, whose decision is final?**
+A. The President of India
+B. The Chairman of the Tribunal
+C. The Supreme Court
+D. The Majority of Members
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 18(2) states that the decision of the Chairman thereon shall be final.
+
+**Q. 24. Is the Tribunal bound by the Code of Civil Procedure, 1908?**
+A. Yes, strictly
+B. No, but it shall be guided by the principles of natural justice
+C. No, it follows the Criminal Procedure Code
+D. Yes, except for Order 39
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 22(1) states the Tribunal shall not be bound by the procedure laid down in the CPC, 1908, but shall be guided by the principles of natural justice.
+
+---
+
+### **Section VII: Procedure and Limitation**
+
+**Q. 25. What is the nominal fee for filing an Original Application before the Tribunal?**
+A. Rs. 100/-
+B. Rs. 50/-
+C. Rs. 500/-
+D. Rs. 10/-
+
+**Correct Answer: B**
+**Explanation:** An Original Application can be filed by remitting a nominal fee of Rs. 50/-.
+
+**Q. 26. Section 20 states that a Tribunal shall not ordinarily admit an application unless:**
+A. The applicant has paid a higher fee
+B. The applicant has availed of all remedies available under relevant service rules
+C. The applicant has permission from the Department Head
+D. The applicant has approached the High Court first
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 20(1) states a Tribunal shall not admit an application unless it is satisfied that the applicant had availed of all the remedies available.
+
+**Q. 27. Under Section 20, if an appeal is filed with the competent authority and no final order is made, how long must an applicant wait before deeming remedies exhausted?**
+A. 3 months
+B. 6 months
+C. 1 year
+D. 90 days
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 20(2)(b) mentions a period of six months from the date on which such appeal was preferred.
+
+**Q. 28. What is the limitation period for filing an application after a final order has been made rejecting an appeal?**
+A. Six months
+B. One year
+C. Two years
+D. Three years
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 21(1)(a) limits admission unless within one year from the date on which such final order has been made.
+
+**Q. 29. Can a Tribunal make an interim order without hearing the other party?**
+A. Never
+B. Yes, as an exceptional measure for reasons recorded in writing
+C. Yes, if the Chairman approves verbally
+D. No, unless the Supreme Court directs
+
+**Correct Answer: B**
+
+
+**Explanation:** The Tribunal may make an interim order as an exceptional measure if it is satisfied... for preventing any loss.
+
+**Q. 30. How long does an interim order remain in effect if not vacated sooner, assuming requirements of furnishing copies were not met beforehand?**
+A. 7 days
+B. 14 days
+C. 1 month
+D. 6 months
+
+**Correct Answer: B**
+
+
+**Explanation:** Interim order shall cease to have effect on the expiry of a period of fourteen days from the date on which it is made.
+
+---
+
+### **Section VIII: Appeals and Miscellaneous**
+
+**Q. 31. Initially, decisions of the Tribunal could be challenged before the Supreme Court via SLP. Following the *L. Chandra Kumar* case, orders are now challenged before:**
+A. The Supreme Court only
+B. The respective High Court by way of Writ Petition
+C. The Law Minister
+D. A Special Appellate Tribunal
+
+**Correct Answer: B**
+**Explanation:** After L. Chandra Kumar's case, orders are challenged by way of Writ Petition under Article 226/227 before the respective High Court.
+
+**Q. 32. Appeals to the High Court must be heard by:**
+A. A Single Judge
+B. A Bench of two Judges
+C. A Full Bench of three Judges
+D. The Chief Justice only
+
+**Correct Answer: B**
+
+
+**Explanation:** Every appeal shall be heard by a bench of two judges of high court.
+
+**Q. 33. Section 26 states that if Members of a Bench are equally divided in opinion:**
+A. The Chairman's opinion prevails
+B. The application is dismissed
+C. They make a reference to the Chairman
+D. The Judicial Member's opinion prevails
+
+**Correct Answer: C**
+
+
+**Explanation:** If Members are equally divided... they shall make a reference to the Chairman who shall hear it himself or refer it to other Members.
+
+**Q. 34. Section 28 excludes the jurisdiction of all courts in service matters EXCEPT:**
+A. The High Courts
+B. The Supreme Court and Industrial Tribunals/Labour Courts
+C. The District Courts
+D. The Consumer Forums
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 28 excludes jurisdiction of courts except the Supreme Court and any Industrial tribunal, labour court.
+
+**Q. 35. According to Section 23, who can present a case before the Tribunal?**
+A. Only a legal practitioner
+B. The applicant in person or a legal practitioner
+C. Only a government advocate
+D. A trade union leader only
+
+**Correct Answer: B**
+
+
+**Explanation:** A person may either appear in person or take the assistance of a legal practitioner.
+
+---
+
+### **Section IX: Benches and Locations (Matching & Specifics)**
+
+**Q. 36. Which Bench of the CAT has jurisdiction over the State of Uttarakhand?**
+A. Allahabad Bench
+B. Lucknow Bench
+C. Principal Bench (New Delhi)
+D. Chandigarh Bench
+
+**Correct Answer: C**
+
+
+**Explanation:** The table shows Principal Bench (New Delhi) covers National Capital Territory of Delhi and State of Uttarakhand.
+
+**Q. 37. The Lakshadweep Union Territory falls under the jurisdiction of which Bench?**
+A. Mumbai Bench
+B. Chennai Bench
+C. Bangalore Bench
+D. Ernakulam Bench
+
+**Correct Answer: D**
+
+
+**Explanation:** The table lists Ernakulam Bench for Kerala and Union Territory of Lakshadweep.
+
+**Q. 38. Which Bench covers the states of Assam, Manipur, Meghalaya, Nagaland, Tripura, Arunachal Pradesh, and Mizoram?**
+A. Calcutta Bench
+B. Patna Bench
+C. Guwahati Bench
+D. Cuttack Bench
+
+**Correct Answer: C**
+
+
+**Explanation:** The Guwahati Bench covers these North Eastern states.
+
+**Q. 39. The Jurisdiction of the Allahabad Bench covers Uttar Pradesh EXCLUDING:**
+A. Districts under New Delhi Bench
+B. Districts under Lucknow Bench
+C. Districts under Patna Bench
+D. Western UP
+
+**Correct Answer: B**
+
+
+**Explanation:** Allahabad Bench covers "Uttar Pradesh excluding districts under Lucknow Bench".
+
+**Q. 40. The Andaman and Nicobar Islands fall under the jurisdiction of:**
+A. Chennai Bench
+B. Hyderabad Bench
+C. Calcutta Bench
+D. Mumbai Bench
+
+**Correct Answer: C**
+
+
+**Explanation:** The table assigns Union Territory of Andaman and Nicobar Islands to the Calcutta Bench.
+
+---
+
+### **Section X: Analytical & Statement Based**
+
+**Q. 41. Consider the following statements regarding the Staff of the Tribunal (Section 13):**
+
+1. The Appropriate Govt appoints officers.
+2. Officers discharge functions under the superintendence of the Chairman.
+Which of the statements is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 13(1) mentions appointment by Appropriate Govt , and Section 13(2) mentions superintendence of the Chairman.
+
+**Q. 42. Regarding the transfer of pending cases (Section 29), which court's pending proceedings were NOT transferred to the Tribunal upon its establishment?**
+A. District Court
+B. High Court
+C. Civil Court
+D. Munsiff Court
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 29(1) states every suit pending before any court "(except High court)" shall stand transferred.
+
+**Q. 43. Which of the following is correct regarding the filing of an appeal to the High Court?**
+A. It must be filed within 30 days.
+B. It must be filed within 60 days.
+C. It must be filed within 90 days.
+D. There is no time limit.
+
+**Correct Answer: B**
+
+
+**Explanation:** The text states: "Appeal to high court within 60 Days".
+
+**Q. 44. Who is the current (as mentioned in the text) Chairman of the Central Administrative Tribunal?**
+A. Justice L. Chandra Kumar
+B. Sh. Ranjit Vasantrao More
+C. Justice D.Y. Chandrachud
+D. The Law Minister
+
+**Correct Answer: B**
+
+
+**Explanation:** The text explicitly states: "The Central Administrative Tribunal is headed by Hon'ble Chairman Sh. Ranjit Vasantrao More".
+
+**Q. 45. Which of the following statements regarding the Members of the Tribunal is FALSE?**
+A. There are 69 Members total (excluding Chairman).
+B. There are 34 Judicial Members.
+C. There are 35 Administrative Members.
+D. The number of Judicial and Administrative members must always be equal.
+
+**Correct Answer: D**
+**Explanation:** The text states there are 69 Members: 34 Judicial and 35 Administrative. It does not state they must be equal, and the numbers provided (34 vs 35) contradict equality.
+
+**Q. 46. Under Section 4(2), the Central Government establishes a State Administrative Tribunal upon receipt of a request from:**
+A. The State High Court
+B. The State Government
+C. The State Governor
+D. The Parliament
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 4(2) states: "The Central Government on receipt of a request from State Government, establish an Administrative Tribunal for the State".
+
+**Q. 47. Match the Bench with its correct jurisdiction:**
+
+1. Cuttack Bench - Orissa
+2. Jabalpur Bench - Madhya Pradesh & Chhattisgarh
+3. Jodhpur Bench - Rajasthan (excluding Jaipur districts)
+Select the correct option:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: D**
+
+
+**Explanation:** All matches are correct according to the table: Cuttack-Orissa , Jabalpur-MP/Chhattisgarh , Jodhpur-Rajasthan.
+
+**Q. 48. What happens to a serving Government officer if they are appointed as a Member of the Tribunal?**
+A. They continue their service concurrently.
+B. They are on deputation.
+C. They are deemed to have retired from the service on the date they assume charge.
+D. They are suspended from service.
+
+**Correct Answer: C**
+
+
+**Explanation:** Section 10 mentions that where a serving Government officer is appointed, he shall be deemed to have retired from the service to which he belonged.
+
+**Q. 49. "Joint Administrative Tribunal" means an Administrative Tribunal for:**
+A. The Union and a State
+B. Two or more States
+C. A State and a Union Territory
+D. The Supreme Court and High Court
+
+**Correct Answer: B**
+
+
+**Explanation:** Section 4(3) and definitions refer to Joint Administrative Tribunal for two or more States.
+
+**Q. 50. According to the text, the procedural simplicity of the Act is highlighted by the fact that:**
+A. No fees are required.
+B. An aggrieved government employee can appear personally.
+C. All hearings are online.
+D. Decisions are made within 24 hours.
+
+**Correct Answer: B**
+
+
+**Explanation:** The text states: "The procedural simplicity of the Act can be appreciated from the fact that an aggrieved government employee can also appear personally before the Tribunal.".

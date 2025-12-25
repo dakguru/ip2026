@@ -1,0 +1,518 @@
+Here are 45 high-quality MCQs based strictly on the provided Postal Manual Volume VII PDF.
+
+### **Part 1: Organization & General Rules**
+
+**Q. 1. In a set under the charge of a selection grade Head Sorting Assistant, to whom are the duties connected with the receipt/dispatch of mails and the opening/closing of mail bags assigned?**
+A. Assistant Head Sorting Assistant only
+B. Senior Sorting Assistant designated as Mail Sorting Assistant
+C. The Head Sorting Assistant personally
+D. Any Sorting Assistant available on duty
+
+**Correct Answer: B**
+
+
+**Explanation:** According to the manual, in sets in charge of a selection grade HSA, these duties are assigned to a senior Sorting Assistant or Sorting Assistant who will be designated as Mail Sorting Assistant.
+
+**Q. 2. Which of the following statements regarding interruptions to mail movement is INCORRECT?**
+A. All interruptions due to breaches or accidents must be reported to the Superintendent and Record Office.
+B. If detention exceeds 6 hours, it must be reported immediately by fax/email to the Superintendent and Record Office.
+C. If detention is less than 6 hours, a report by fax/email should be sent to the Superintendent only.
+D. Interruptions can include causes like floods, railway breaches, or accidents.
+
+**Correct Answer: C**
+
+
+**Explanation:** In cases of detentions of less than 6 hours, a report by fax/email should be sent **only to the Record Office**, not the Superintendent.
+
+**Q. 3. Regarding the misconnection of air services, to whom should the Record Officer report the incident by the first post?**
+A. The Director General
+B. The Superintendent of RMS
+C. The Head of the Circle
+D. The Sub-Record Officer
+
+**Correct Answer: C**
+
+
+**Explanation:** The misconnection between air services should invariably be reported by Record Officers to the Head of the Circle by first post.
+
+**Q. 4. If a Sorting Assistant loses their sorting list, what amount is recovered as a nominal cost before a new copy is supplied?**
+A. Rs. 5/-
+B. Rs. 10/-
+C. Rs. 2/-
+D. Rs. 1/-
+
+**Correct Answer: D**
+**Explanation:** If a sorting list is lost, a sum of Rs. 1/- is recovered from the official as a nominal cost before a new copy is supplied.
+
+**Q. 5. Consider the following statements regarding Metal Tokens:**
+
+1. They are issued to supervising officials.
+2. They are supplied from the stock depot to the Head Record Office.
+3. Every token holder must produce it before monthly salary disbursement.
+
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: B**
+
+
+**Explanation:** Statement 1 is incorrect because tokens are **not** issued for supervising officials. Statements 2 and 3 are correct.
+
+### **Part 2: Record Office & Documentation**
+
+**Q. 6. Who is initially responsible for preparing the Memorandum of Distribution of Work (MODW) for a mail office or section?**
+A. The Superintendent
+B. The Head Sorting Assistant
+C. The Inspector/ASRM
+D. The Head Record Officer
+
+**Correct Answer: C**
+
+
+**Explanation:** The Inspector/ASRM will initially prepare the MODW of the mail office or section and forward it to the Superintendent.
+
+**Q. 7. Which of the following records requires special permission from the Head of Circle to be destroyed?**
+A. Order Book of Record Office
+B. Gradation lists (3 years old)
+C. Register of sanctioned establishment (1 year old)
+D. Daily Reports
+
+**Correct Answer: A**
+
+
+**Explanation:** The Order Book of Record Office, Nominal Roll of Token Holders, and work papers under inquiry cannot be destroyed without special permission from the Head of Circle.
+
+**Q. 8. What is the prescribed method for the destruction of records in the presence of a record officer?**
+A. Burning them completely
+B. Shredding by machine only
+C. Tearing into pieces so they cannot be used again, then sold as waste paper
+D. Burying them in a designated pit
+
+**Correct Answer: C**
+**Explanation:** Destruction should be done by tearing them into pieces in such a manner that they cannot be used again. They should be sold as waste paper.
+
+**Q. 9. In the Head Record Office, how many keys to the safe are there, and who retains them?**
+A. One key; retained by the Head Record Officer only.
+B. Two keys; one with the Head Record Officer and one with the Accountant.
+C. Two keys; both kept by the Superintendent.
+D. One key; kept by the Senior Accountant.
+
+**Correct Answer: B**
+
+
+**Explanation:** One key of the safe will be retained in the custody of the Head Record Officer and the other in that of the accountant.
+
+**Q. 10. Which of the following items is NOT carried in the Sealed Bag but is part of the Portfolio or general equipment?**
+A. Sweeping brush
+B. Labels of Bags
+C. Sealing wax
+D. Order Book
+
+**Correct Answer: D**
+
+
+**Explanation:** The Order Book is listed under general portfolio contents. Items like Sweeping brush, Labels, and Sealing wax are listed under "In Sealed Bag".
+
+### **Part 3: Operational Duties & Procedures**
+
+**Q. 11. Who is strictly prohibited from being utilized for stamp sales?**
+A. The Mail Sorting Assistant
+B. An official employed to deface postage stamps
+C. The Head Sorting Assistant
+D. The Record Officer
+
+**Correct Answer: B**
+
+
+**Explanation:** The service of an official who is employed to deface postage stamps should not be utilized for stamp sale.
+
+**Q. 12. Which specific stamp/seal must always remain in the possession of the Head Sorting Assistant?**
+A. Date Stamp
+B. Name Stamp
+C. Insurance Seal
+D. Detained Late Fee Stamp
+
+**Correct Answer: C**
+
+
+**Explanation:** The Insurance seal must always remain in the possession of the Head Sorting Assistant.
+
+**Q. 13. Regarding the "Daily Report" (MS-83), which of the following statements is correct?**
+A. It is submitted directly to the Head of Circle.
+B. It is written by the HSA from the rough notebook of the set.
+C. It is prepared by the Record Officer based on verbal feedback.
+D. It only records financial irregularities.
+
+**Correct Answer: B**
+
+
+**Explanation:** The daily report should be written by the HSA from the rough notebook of the set.
+
+**Q. 14. What is the attendance requirement for a relieving set at a changing station?**
+A. 15 minutes before the arrival of the train.
+B. At least half an hour before the departure of the train.
+C. At the exact time of the train's arrival.
+D. One hour before the train's departure.
+
+**Correct Answer: B**
+
+
+**Explanation:** At all changing stations, the relieving set should be present on the platform before the arrival of the train at least half an hour before the departure of it.
+
+**Q. 15. Match the Mail Abstract form with the correct entity:**
+
+| Form | Entity |
+| --- | --- |
+| 1. M-42 | i. Mail Offices |
+| 2. M-43 | ii. Transit Section |
+
+A. 1-i, 2-ii
+B. 1-ii, 2-i
+C. Both use M-42
+D. Both use M-43
+
+**Correct Answer: B**
+
+
+**Explanation:** M-42 is for Transit Section , and M-43 is for Mail Offices.
+
+### **Part 4: Sorting & Handling Norms**
+
+**Q. 16. What is the penalty for a Sorting Assistant who habitually missends clearly addressed articles?**
+A. A fine of Rs. 100
+B. Mandatory training for 1 week
+C. Removal or reduction to a lower grade
+D. Transfer to a different circle
+
+**Correct Answer: C**
+
+
+**Explanation:** A sorting assistant who habitually missent articles... will be considered unfit for his post and will be liable to removal or reduction to a lower grade.
+
+**Q. 17. How should reply halves of Postcards from foreign countries be treated if they do not bear the date stamp of the delivery office?**
+A. As fully paid
+B. As unpaid
+C. As registered mail
+D. As insufficient address
+
+**Correct Answer: B**
+
+
+**Explanation:** They should be treated as unpaid if they do not bear the date stamp of the office of delivery of the reply cards on the left hand of the address side.
+
+**Q. 18. According to mail operation norms, the rehandling of articles should not exceed what average per article?**
+A. 1.0
+B. 1.6
+C. 1.8
+D. 3.0
+
+**Correct Answer: C**
+
+
+**Explanation:** The rehandling should not exceed 1.8 per article on an average. (Note: 1.6 is the handling rate , 3 is the maximum times an article can be rehandled ).
+
+**Q. 19. Detailed sorting for a Circle should normally be done on a full sorting case if the mail quantum exceeds:**
+A. 500 articles
+B. 3000 articles
+C. 5000 articles
+D. 6000 articles
+
+**Correct Answer: D**
+
+
+**Explanation:** Detailed sorting should normally be done on a full sorting case for a Circle if the quantum of mail for that circle exceeds 6000.
+
+**Q. 20. Selections on sorting cases should be based on the actual traffic pattern of:**
+A. The last 6 months
+B. The last 1 year
+C. The last 2 years
+D. The last 5 years
+
+**Correct Answer: C**
+
+
+**Explanation:** All selections provided on the sorting cases should be based on the actual traffic pattern of the last two years.
+
+### **Part 5: Statistical Justification & Inspections**
+
+**Q. 21. What is the statistical justification for closing an Air Mail Bag?**
+A. More than 50 articles
+B. Between 50 to 150 articles
+C. More than 150 articles
+D. More than 6 registered letters
+
+**Correct Answer: C**
+
+
+**Explanation:** (d) Air mail bags: More than 150 articles. (50-150 is for Air Mail PC ).
+
+**Q. 22. What is the minimum visit frequency for an SSRM/SRM of a City Division to a Mail Office?**
+A. Once a week
+B. 3 visits a week
+C. Once a fortnight
+D. Daily
+
+**Correct Answer: B**
+
+
+**Explanation:** SSRM/SRM/ASRM of Divisional office of City Division: 3 Visits a week to mail office.
+
+**Q. 23. If the set-to-set transfer of mail exceeds 48 hours, to whom must it be reported?**
+A. Divisional Superintendent
+B. Head of the Circle and P.M.G.
+C. Director-General (Posts)
+D. Inspector of Posts
+
+**Correct Answer: B**
+
+
+**Explanation:** In case it exceeds 48 hours it should be brought to the notice of the Heads of the Circle and P.M.G..
+
+### **Part 6: Mail Surveys**
+
+**Q. 24. Which cities are covered under the "Metro Mail Survey"?**
+A. Delhi, Mumbai, Kolkata, Chennai only
+B. Delhi, Mumbai, Kolkata, Chennai, Hyderabad, Bangalore
+C. All State Capitals
+D. Delhi, Mumbai, Bangalore, Pune
+
+**Correct Answer: B**
+
+
+**Explanation:** This survey has to cover Delhi, Mumbai, Kolkata, Chennai, Hyderabad and Bangalore.
+
+**Q. 25. During the All India Mail Survey, what percentage of selected Post Offices must be in rural areas?**
+A. 10%
+B. 25%
+C. 40%
+D. 50%
+
+**Correct Answer: B**
+
+
+**Explanation:** The Heads of Circles will chalk out the Survey Programme in such a way that at least 25% of the Post Offices selected are in rural areas.
+
+**Q. 26. Which survey is conducted monthly?**
+A. Metro Mail Survey
+B. All India Mail Survey
+C. Live Mail Survey
+D. Rural Mail Survey
+
+**Correct Answer: C**
+
+
+**Explanation:** Live Mail Survey is conducted monthly. The others are generally in September.
+
+### **Part 7: Bag Accounting**
+
+**Q. 27. Which office acts as the District Bag Office (DBO) in normal circumstances?**
+A. Head Post Office (HO)
+B. Postal Stores Depot (PSD)
+C. HRO / SRO
+D. Unit Bag Office (UBO)
+
+**Correct Answer: C**
+**Explanation:** HRO/SRO is DBO. In exception cases HO can also work DBO.
+
+**Q. 28. To whom does the Circle Bag Office (CBO) send a report on the 5th of every month?**
+A. The Head Record Officer
+B. D Section of Directorate (Central Bag Office)
+C. The Postmaster General
+D. The Superintendent of RMS
+
+**Correct Answer: B**
+
+
+**Explanation:** CBO sends report to D Section of Directorate (Central Bag Office) on 5th of every month.
+
+**Q. 29. When is the Due Bag List (MS-74) issued, and up to what date is it corrected?**
+A. Issued 1st April; corrected to 31st March
+B. Issued 15th November; corrected to 31st October
+C. Issued 1st January; corrected to 31st December
+D. Issued 1st July; corrected to 30th June
+
+**Correct Answer: B**
+
+
+**Explanation:** The list corrected up to 31st of October will be issued by 15th November.
+
+**Q. 30. What is the maximum authorized bag balance for a Unit Bag Office?**
+A. Dispatch + 10%
+B. Minimum + 50%
+C. Minimum + 25% of minimum (for surplus offices)
+D. No limit
+
+**Correct Answer: C**
+
+
+**Explanation:** For surplus offices, the maximum is Minimum + 25% of minimum.
+
+**Q. 31. Physical verification of bags is done twice a year on which dates?**
+A. 1st January and 1st July
+B. 1st April and 15th October
+C. 31st March and 30th September
+D. 15th May and 15th November
+
+**Correct Answer: B**
+
+
+**Explanation:** Physical verification of bags will be done twice in a year on 1st April and 15 October.
+
+**Q. 32. What is the preservation period for the "Day Bag book in CBO"?**
+A. 2 Years
+B. 3 Years
+C. 5 Years
+D. 10 Years
+
+**Correct Answer: D**
+
+
+**Explanation:** Day Bag book in CBO... - 10 Years.
+
+### **Part 8: Revised Norms (NSH/ICH) & Miscellaneous**
+
+**Q. 33. What is the revised time factor for "Scanning of article in receipt" at NSH/ICH?**
+A. 0.063 minutes
+B. 0.04 minutes
+C. 0.1 minutes
+D. 0.02 minutes
+
+**Correct Answer: B**
+
+
+**Explanation:** Scanning of article in receipt: 0.04 (25 articles per minute or 1500 per hour).
+
+**Q. 34. What is the Supervisor norm at NSH/ICH?**
+A. 1 on 10 SAs/RSAs
+B. 1 on 8 SAs/RSAs
+C. 1 on 6 SAs/RSAs
+D. 1 on 4 SAs/RSAs
+
+**Correct Answer: C**
+
+
+**Explanation:** Supervisor: 1 on 6 SAs/RSAs.
+
+**Q. 35. Camp bags should generally NOT be delivered:**
+A. After 20:00 and before 08:00
+B. After 21:00 or before 06:00
+C. After 22:00 or before 05:00
+D. On Sundays
+
+**Correct Answer: B**
+
+
+**Explanation:** Camp bags should not be delivered late in night i.e., after 21:00 or very early morning i.e., before 6 Hrs.
+
+**Q. 36. Who issues "Tour Orders"?**
+A. The Superintendent RMS
+B. The Inspector
+C. The Record Officer
+D. The Head Sorting Assistant
+
+**Correct Answer: C**
+
+
+**Explanation:** Tour Order are issued by Record Officer. (Note: TB orders are issued by Supdt. RMS ).
+
+**Q. 37. Second-class mail handling norms state that:**
+A. All second-class mail is handled by the Mail Office.
+B. Greetings and invitations should be handled in the Mail Office only.
+C. All second-class mail goes to the Paper Sorting Office (PSO) without exception.
+D. PSOs handle first-class mail only.
+
+**Correct Answer: B**
+
+
+**Explanation:** Normally second-class mail is handled by Paper Sorting Office (PSO) but greetings, invitations should be handled in mail office only.
+
+**Q. 38. With regards to checking the quality of sorting, how many bags should the Head Sorting Assistant check daily?**
+A. Minimum 3 sorting bags and 5 station bags
+B. Minimum 5 sorting bags and 5 station bags
+C. Minimum 10 sorting bags
+D. All bags received
+
+**Correct Answer: A**
+
+
+**Explanation:** The HSA... should check a minimum of three sorting bags and five stations bags received and dispatched daily.
+
+**Q. 39. Who is responsible for the physical verification of bags in the Circle Bag Office (CBO) in Jan, April, July, and Oct?**
+A. Supdt (PSD)
+B. APMG/ADPS (Mail)
+C. The Director General
+D. The Inspector
+
+**Correct Answer: B**
+
+
+**Explanation:** APMG/ADPS(Mail) will carry out the physical verification of bags in the CBO in Jan, April, July and Oct of every year.
+
+**Q. 40. The misconnection between mail-carrying buses, trains, and air services at junction stations should be reported to:**
+A. The Superintendent
+B. The Head Record Officer
+C. The Local Police
+D. The Transport Ministry
+
+**Correct Answer: A**
+
+
+**Explanation:** The misconnection... should invariably be reported to the Superintendent as early as possible.
+
+**Q. 41. How frequently must the Indent for Stationery be submitted by the Record Officer?**
+A. Monthly
+B. Quarterly
+C. Half Yearly
+D. Annually
+
+**Correct Answer: C**
+
+
+**Explanation:** Indent for Stationery: Half Yearly.
+
+**Q. 42. In the context of sorting, B Orders are copied into the guidance book, while TB Orders are:**
+A. Discarded after reading
+B. Copied into the order book
+C. Filed in the guard book
+D. Returned to the Superintendent
+
+**Correct Answer: C**
+
+
+**Explanation:** A & TB Order filed in the guard book.
+
+**Q. 43. Every Sorting Assistant must be conversant with the PIN CODE of:**
+A. Their own district only
+B. Their own circle only
+C. All Pin Sorting Districts in India
+D. Major metro cities only
+
+**Correct Answer: C**
+
+
+**Explanation:** Every Sorting Assistant should be conversant with the PIN CODE of all Pin Sorting Districts in India.
+
+**Q. 44. What is the prescribed rate of handling per article within one office?**
+A. 1.0
+B. 1.4
+C. 1.6
+D. 2.0
+
+**Correct Answer: C**
+
+
+**Explanation:** The rate of handling within one office as per the accepted practice should not exceed 1.6 per article.
+
+**Q. 45. Which register is used for Public Complaints in Record Officers in the selection grade?**
+A. Form Corr.9
+B. Form Corr.2
+C. Form MS-83
+D. Form M-42
+
+**Correct Answer: B**
+
+
+**Explanation:** An inward correspondence register (in Form Corr.2) for entry of reference concerning Public complaints.

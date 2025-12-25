@@ -1,0 +1,580 @@
+Here are 50 high-quality MCQs based strictly on the provided Dak Ghar Niryat Kendra (DNK) PDF, designed for competitive examinations.
+
+### **Section 1: Overview and Features (Page 1)**
+
+**Q. 1.** With reference to the Dak Ghar Niryat Kendra (DNK), consider the following statements regarding its integration with other systems:
+
+1. It is integrated with the Public Financial Management System (PFMS).
+2. It is linked with the Export Data Processing & Monitoring System (EDPMS) of the RBI.
+3. The integration facilitates the automation of IGST refunds.
+
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Correct Answer: D**
+
+
+**Explanation:** The DNK portal is integrated with ICEGATE, ICES, PFMS, and EDPMS of RBI to streamline data flow and automate IGST refunds.
+
+**Q. 2.** The Dak Ghar Niryat Kendra (DNK) initiative aligns with which specific government scheme to boost rural exports?
+A. Make in India
+B. One District-One Product
+C. Digital India
+D. Skill India
+
+**Correct Answer: B**
+
+
+**Explanation:** The PDF explicitly states that DNK aims to boost rural exports and promote local products, aligned with the "One District-One Product" initiative.
+
+**Q. 3.** Regarding the key features of Dak Ghar Niryat Kendra, which of the following statements is **incorrect**?
+A. There is no need for manual filing of the Postal Bill of Export (PBE).
+B. Product samples must be physically submitted to the Foreign Post Office (FPO) for verification.
+C. Necessary documents like invoices and licenses can be uploaded on the portal.
+D. A customs house agent is not required for the process.
+
+**Correct Answer: B**
+
+
+**Explanation:** One of the key features is that there is "No need to bring product samples to the Foreign Post Office (FPO)".
+
+**Q. 4.** Through the DNK network, products can be exported to over 219 countries. What is the specific coverage count for **ITPS** (International Tracked Packet Service)?
+A. 191 Countries
+B. 106 Countries
+C. 46 Countries
+D. 219 Countries
+
+**Correct Answer: C**
+
+
+**Explanation:** The coverage is: Speed Post (106), ITPS (46), and International Parcel (191).
+
+**Q. 5.** Which of the following electronic systems is **NOT** mentioned as being integrated with the DNK portal?
+A. ICEGATE
+B. GSTN
+C. ICES
+D. PFMS
+
+**Correct Answer: B**
+**Explanation:** The PDF lists ICEGATE, ICES, PFMS, and EDPMS (RBI). GSTN is not explicitly listed in the integration section, although GSTIN is a required document.
+
+---
+
+### **Section 2: Process Flow and Registration (Page 2)**
+
+**Q. 6.** During the process flow at a Dak Niryat Kendra, when is the Postal Bill of Export (PBE) number allotted?
+A. Immediately after user registration.
+B. Upon submission of the duly and correctly filled-up electronic PBE form.
+C. After the physical examination at the Foreign Post Office.
+D. After the Let Export Order (LEO) is granted.
+
+**Correct Answer: B**
+
+
+**Explanation:** A PBE number is allotted by customs "Upon submission of the duly and correctly filled-up form".
+
+**Q. 7.** In the event of an issue or requirement for additional documents during the export process, how is the query raised by Customs?
+A. Via a physical letter sent to the exporter's address.
+B. Through a phone call from the Divisional Head.
+C. Through the DNK portal.
+D. Via an email from the Foreign Post Office.
+
+**Correct Answer: C**
+
+
+**Explanation:** A query will be raised by customs "through the DNK portal".
+
+**Q. 8.** Which customs declaration label must be affixed on articles presented for booking at the DNK?
+A. CN 22/CN 23
+B. CP 72/CP 73
+C. PBE-III
+D. SDR-11
+
+**Correct Answer: A**
+
+
+**Explanation:** The customer presents articles with a label "CN 22/CN 23 customs declaration" affixed on them.
+
+**Q. 9.** For registration on the DNK portal, which of the following details is **mandatory** to be filled in the profile once?
+A. Driving License Number
+B. Authorized Dealer (AD) Code
+C. Udyog Aadhar
+D. Employee Provident Fund Number
+
+**Correct Answer: B**
+
+
+**Explanation:** Necessary details like IEC, PAN, GSTIN, and AD (Authorized Dealer) code have to be filled up once in the profile.
+
+**Q. 10.** What is the final step in the customs process on the DNK portal before the PBE becomes available for download?
+A. Physical Examination
+B. Submission of KYC
+C. Granting of Let Export Order (LEO)
+D. Generation of Login ID
+
+**Correct Answer: C**
+
+
+**Explanation:** Once the query is resolved, Customs will grant Let Export Order (LEO), and then the PBE would be available for download.
+
+---
+
+### **Section 3: Article Booking and Technical Details (Page 3)**
+
+**Q. 11.** Which specific PBE forms are applicable for the Dak Ghar Niryat Kendra (DNK)?
+A. PBE-I and PBE-II
+B. PBE-II and PBE-III
+C. PBE-III and PBE-IV
+D. PBE-I and PBE-IV
+
+**Correct Answer: C**
+
+
+**Explanation:** The PDF specifies "Select PBE - Postal Bill of Export (PBE-III or PBE-IV for DNK)".
+
+**Q. 12.** If an exporter is sending goods to countries in the **European Union**, what specific reference number must be entered against the 'Sender's Customs reference'?
+A. GSTIN
+B. IEC
+C. IOSS (Import One Stop Shop)
+D. LUT Number
+
+**Correct Answer: C**
+
+
+**Explanation:** IOSS (Import One Stop Shop) shall be entered against Sender's Customs reference number if the export is being done to EU countries.
+
+**Q. 13.** Regarding the gross weight of a parcel, the weight of the packaging must not exceed what percentage of the primary content?
+A. 5%
+B. 10%
+C. 15%
+D. 20%
+
+**Correct Answer: B**
+
+
+**Explanation:** Gross weight - Weight of Parcel with Packaging should be "Not more than 10% of primary content".
+
+**Q. 14.** According to the PBE filing method table, which PBE form type is used for **Electronic eCommerce** exports?
+A. PBE-I
+B. PBE-II
+C. PBE-III
+D. PBE-IV
+
+**Correct Answer: C**
+
+
+**Explanation:** The table shows that under the Electronic filing method, 'eCommerce' export type corresponds to PBE-III.
+
+**Q. 15.** What is the default DOP Customer ID displayed by the DNK portal for non-contractual customers?
+A. 1000048090
+B. 2000048090
+C. 3000048090
+D. 4000048090
+
+**Correct Answer: C**
+
+
+**Explanation:** The default customer ID (3000048090) is displayed by the DNK portal for all non-contractual customers.
+
+**Q. 16.** Which document is required from the Assistant Drugs Controller (ADC) if an exporter is sending drugs?
+A. Manufacturing License
+B. NOC (No Objection Certificate)
+C. Sale Deed
+D. Purchase Invoice
+
+**Correct Answer: B**
+
+
+**Explanation:** If sending drugs, you need a NOC from the Assistant Drugs Controller (ADC).
+
+**Q. 17.** Which of the following is **NOT** allowed prior to Customs Clearance?
+A. Printing of USPS Harmonized label
+B. Printing of CN 22/CN 23
+C. Printing of Address Slip
+D. Printing of PBE form & Let Export Order
+
+**Correct Answer: D**
+
+
+**Explanation:** "Printing of PBE form & Let export order is not allowed prior to Customs Clearance".
+
+---
+
+### **Section 4: Discounts and Revenue Structure (Page 4)**
+
+**Q. 18.** For a contractual customer using **EMS** services, what is the discount percentage (A) if the monthly revenue (excluding taxes) is between **INR 1,00,001 and 5,00,000**?
+A. 3%
+B. 6%
+C. 10%
+D. 13%
+
+**Correct Answer: B**
+
+
+**Explanation:** According to the EMS discount table, for revenue between 1,00,001 to 5,00,000, the discount is 6%.
+
+**Q. 19.** What is the "Additional discount" (B) available for booking through DNK for **ITPS** customers (both contractual and non-contractual)?
+A. 1%
+B. 2%
+C. 3%
+D. 5%
+
+**Correct Answer: B**
+
+
+**Explanation:** The ITPS table shows the "Additional discount for booking through DNK" is consistently 2% across all slabs.
+
+**Q. 20.** Consider a contractual customer with a monthly revenue of **INR 60,00,000** using **EMS**. What is the base discount percentage (A) applicable?
+A. 10%
+B. 13%
+C. 16%
+D. 18%
+
+**Correct Answer: C**
+
+
+**Explanation:** For EMS, the slab "5000001 & above" attracts a 16% discount.
+
+**Q. 21.** What is the maximum base discount percentage available for **ITPS** contractual customers with revenue above 75,00,001?
+A. 14%
+B. 16%
+C. 18%
+D. 20%
+
+**Correct Answer: C**
+
+
+**Explanation:** The highest slab for ITPS (7500001 & above) offers an 18% discount.
+
+**Q. 22.** Which document needs to be updated at the beginning of each financial year for profile management?
+A. IEC
+B. LUT (Letter of Undertaking)
+C. PAN
+D. GSTIN
+
+**Correct Answer: B**
+
+
+**Explanation:** The user must "Update LUT document at the beginning of each financial year".
+
+---
+
+### **Section 5: Eligibility and Administration (Page 5)**
+
+**Q. 23.** To be defined as a "Contractual Bulk Customer" at a **Single Location**, what is the minimum monthly revenue required?
+A. ₹ 25,000
+B. ₹ 50,000
+C. ₹ 1,00,000
+D. ₹ 2,00,000
+
+**Correct Answer: B**
+
+
+**Explanation:** For a Single Location, the Monthly Revenue requirement is 50,000.
+
+**Q. 24.** Who is the Approving Authority for the Credit Facility/National Account Facility for cases falling under a specific region?
+A. Divisional Head
+B. PMG (Postmaster General)
+C. Director General
+D. ASP
+
+**Correct Answer: B**
+
+
+**Explanation:** The approving authority is "PMG for all cases falling under his region".
+
+**Q. 25.** Under the discount eligibility rules, what happens if a customer does not provide booking data in soft copy?
+A. No discount is given.
+B. The discount shall be half of the mentioned rate.
+C. A penalty of 2% is levied.
+D. The booking is rejected.
+
+**Correct Answer: B**
+
+
+**Explanation:** "This discount shall be half of the above-mentioned rate, if data is not given in soft copy".
+
+**Q. 26.** Who is the designated **Signing Authority** for agreements with contractual customers?
+A. PMG
+B. CPMG
+C. Divisional Head
+D. Postmaster
+
+**Correct Answer: C**
+
+
+**Explanation:** Point 10 clearly states: "Signing Authority - Designation authority - Divisional Head".
+
+**Q. 27.** Regarding "Free Pick Up" facilities, what is the standard radius limit from the booking centre?
+A. 10 Km
+B. 15 Km
+C. 20 Km
+D. 25 Km
+
+**Correct Answer: C**
+
+
+**Explanation:** Free pick up will be limited to the municipal area or "within a radius of 20 Km from the centre".
+
+**Q. 28.** Who is empowered to extend the jurisdiction for free pick-up beyond the municipal limit?
+A. Divisional Head
+B. HOCs (Head of Circles)
+C. PMG
+D. ASP
+
+**Correct Answer: B**
+
+
+**Explanation:** "HOCs are empowered to extend the jurisdiction... in consultation with CIFA".
+
+**Q. 29.** For a "Contractual Bulk Customer" operating from **Multiple Locations**, the minimum monthly revenue required is:
+A. ₹ 50,000
+B. ₹ 1,00,000
+C. ₹ 2,00,000
+D. ₹ 5,00,000
+
+**Correct Answer: C**
+
+
+**Explanation:** For Multiple Locations, the revenue requirement is 2,00,000.
+
+---
+
+### **Section 6: Billing, Security Deposit, and Penalties (Page 6)**
+
+**Q. 30.** Once a credit facility is approved, the customer must furnish a security deposit in the form of a Bank Guarantee equal to:
+A. One month's anticipated postage.
+B. Two months' anticipated postage.
+C. Three billing cycles' anticipated postage.
+D. Six billing cycles' anticipated postage.
+
+**Correct Answer: C**
+
+
+**Explanation:** The Bank Guarantee should be "equal to three billing cycles anticipated postage".
+
+**Q. 31.** How often is the amount of the Bank Guarantee reviewed by the authority?
+A. Monthly
+B. Quarterly
+C. Half-yearly
+D. Annually
+
+**Correct Answer: B**
+
+
+**Explanation:** The amount of Bank Guarantee shall be reviewed "on a quarterly basis".
+
+**Q. 32.** For Government Organizations or PSUs, what is required instead of a Bank Guarantee?
+A. Cash Deposit
+B. Fixed Deposit
+C. Undertaking in prescribed Performa
+D. Letter of Credit
+
+**Correct Answer: C**
+
+
+**Explanation:** "Only UNDERTAKING TO BE PROVIDED BY GOVERNMENT ORGANISATIONS... in prescribed Performa".
+
+**Q. 33.** Contractual customers availing "Advance Deposit facility" at a **single location** must open a deposit account with a minimum amount of:
+A. ₹ 1,000
+B. ₹ 5,000
+C. ₹ 10,000
+D. ₹ 50,000
+
+**Correct Answer: B**
+
+
+**Explanation:** For a single location, the minimum amount is "Rs. 5,000/- product wise".
+
+**Q. 34.** For the Advance Deposit facility at **multiple locations**, what is the minimum deposit amount required per product?
+A. ₹ 25,000
+B. ₹ 50,000
+C. ₹ 75,000
+D. ₹ 1,00,000
+
+**Correct Answer: B**
+
+
+**Explanation:** "In case of booking at multiple locations, minimum amount of advance deposit would be Rs.50,000/- product wise".
+
+**Q. 35.** If the billing cycle is "15 days/fortnightly", on which date is the bill generated?
+A. 1st of the month
+B. 7th of the following month
+C. 15th of the month
+D. 22nd of the month
+
+**Correct Answer: D**
+
+
+**Explanation:** For the 15 days/fortnightly cycle (Cycle 1), the "Date of bill generation" is the "22nd of the month".
+
+**Q. 36.** For a monthly billing cycle (30 days), what is the last date of payment for a BNPL customer?
+A. 15th of the month of Bill Generation
+B. 22nd of the month of Bill Generation
+C. 30th/31st of the month of Bill Generation
+D. 7th of the following month
+
+**Correct Answer: C**
+
+
+**Explanation:** For Cycle 2 (30 days), the last date of payment is "30th/31st of the month of Bill Generation".
+*(Self-Correction: The table indicates the bill is generated on the 7th of the *following* month, and payment is due by the end of the month of bill generation. This implies the bill generated on 7th Oct covers Sept, and payment is due 30th Oct).*
+
+**Q. 37.** What is the penalty rate imposed on a customer for late payment of bills?
+A. 6% per annum
+B. 10% per annum
+C. 12% per annum
+D. 18% per annum
+
+**Correct Answer: C**
+
+
+**Explanation:** "Penalty at the rate of 12% per annum (to be calculated daily)... shall be imposed".
+
+**Q. 38.** After how much time from the due date of payment will the booking of International mail consignments be stopped for a defaulting customer?
+A. 15 days
+B. One month
+C. Two months
+D. Three months
+
+**Correct Answer: B**
+
+
+**Explanation:** No booking will be allowed "after one month from the due date of the payment of bill".
+
+**Q. 39.** When will the designated authority initiate action to invoke the Bank Guarantee for recovery of outstanding dues?
+A. Immediately after the due date.
+B. After 1 month from the bill date.
+C. After 2 months from the bill date.
+D. At the end of the financial year.
+
+**Correct Answer: C**
+
+
+**Explanation:** "In case of non-payment of bill even after 2 months from the bill date, action will be taken... for invoking the Bank Guarantee".
+
+---
+
+### **Section 7: Abbreviations and Miscellaneous (Page 7)**
+
+**Q. 40.** Who is the "Designated Authority" for the "Office of Posting"?
+A. Postmaster
+B. Divisional Head
+C. Inspector of Posts
+D. ASP
+
+**Correct Answer: B**
+
+
+**Explanation:** The table lists "Divisional Head" as the Designated Authority for Office of Posting, DNK, IBC, and FPO.
+
+**Q. 41.** What does the abbreviation **AD Code** stand for in the context of export documents?
+A. Authorized Distributor Code
+B. Authorised Dealer Code
+C. Administrative Department Code
+D. Advance Deposit Code
+
+**Correct Answer: B**
+
+
+**Explanation:** "AD Code - Authorised Dealer Code (Provided by Bank)".
+
+**Q. 42.** The **IEC** (Import Export Code) is provided by which body?
+A. Reserve Bank of India (RBI)
+B. Ministry of Finance
+C. DGFT - Directorate General of Foreign Trade
+D. GST Council
+
+**Correct Answer: C**
+
+
+**Explanation:** "IEC-Import Export Code (Provided by DGFT-Directorate General of Foreign Trade | Ministry of Commerce)".
+
+**Q. 43.** Which entity provides the **LUT** (Letter of Undertaking)?
+A. Bank
+B. GST Department
+C. DGFT
+D. Department of Posts
+
+**Correct Answer: B**
+
+
+**Explanation:** "LUT-Letter of Undertaking (Provide by GST Dept...)".
+
+**Q. 44.** What does **CTH** stand for?
+A. Central Tax Heading
+B. Customs Tariff Heading
+C. Central Transport Hub
+D. Customs Transit Hub
+
+**Correct Answer: B**
+
+
+**Explanation:** "CTH-Custom Tarriff Heading".
+
+**Q. 45.** In the "Process of DNK Customer Portal" registration, a confirmation email is sent after:
+A. Entering the Mobile Number.
+B. Creating a password.
+C. Validation.
+D. Clicking "Register Now".
+
+**Correct Answer: C**
+
+
+**Explanation:** "After validation, a confirmation email will be sent, and the registration is complete".
+
+**Q. 46.** To login to the DNK Customer Portal, one can enter the password and either the Username or:
+A. Email ID
+B. Mobile Number
+C. IEC Code
+D. PAN Number
+
+**Correct Answer: B**
+
+
+**Explanation:** "Enter the username and password or mobile number".
+
+**Q. 47.** Which of the following is NOT a browser recommended in the PDF for accessing the DNK Portal?
+A. Google Chrome
+B. Safari
+C. Mozilla Firefox
+D. Microsoft Edge
+
+**Correct Answer: B**
+**Explanation:** The PDF lists Google Chrome, Mozilla Firefox, and Microsoft Edge. Safari is not mentioned.
+
+**Q. 48.** What functionality allows a user to enter multiple articles at once using an Excel template?
+A. Batch Processing
+B. Bulk Upload
+C. Mass Entry
+D. Group Booking
+
+**Correct Answer: B**
+
+
+**Explanation:** "Utilize the bulk upload feature to enter multiple articles using an Excel template".
+
+**Q. 49.** If a customer claims a discount, can this claim be adjusted against the advance payment/dues of BNPL?
+A. Yes, fully.
+B. Yes, up to 50%.
+C. No.
+D. Only with PMG approval.
+
+**Correct Answer: C**
+
+
+**Explanation:** "Any claim of customer shall not be adjusted against advance payment/dues of BNPL".
+
+**Q. 50.** The contractual customers booking from multiple locations are allowed consolidation of accounts under which facility?
+A. Centralized Booking Facility
+B. National Account Facility
+C. Unified Billing System
+D. One Nation One Post
+
+**Correct Answer: B**
+
+
+**Explanation:** "...allowed consolidation of accounts under National Account Facility at all booking location".
