@@ -134,26 +134,10 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Article 311", description: "Constitution: Services under the Union and the States", color: "amber", comingSoon: true },
         { title: "Articles 338, 338(a), 338(b)", description: "Constitution: Special Provisions", color: "amber", comingSoon: true },
 
-        // 9-11. BNSS 2023
+        // 9. BNSS 2023
         {
-            title: "BNSS 2023: Section 1",
-            description: "Short Title, extent and commencement.",
-            filename: "BNSS_2023.pdf",
-            path: "/notes/paper-3/BNSS_2023.pdf",
-            size: "8.7 MB",
-            color: "purple"
-        },
-        {
-            title: "BNSS 2023: Section 2",
-            description: "Definitions.",
-            filename: "BNSS_2023.pdf",
-            path: "/notes/paper-3/BNSS_2023.pdf",
-            size: "8.7 MB",
-            color: "purple"
-        },
-        {
-            title: "BNSS 2023: Section 84",
-            description: "Proclamation for person absconding.",
+            title: "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
+            description: "Detailed analysis of the BNSS, 2023 replacing the CrPC.",
             filename: "BNSS_2023.pdf",
             path: "/notes/paper-3/BNSS_2023.pdf",
             size: "8.7 MB",
