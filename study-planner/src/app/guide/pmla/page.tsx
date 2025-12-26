@@ -179,7 +179,7 @@ const PMLAStudyGuide = () => {
                             <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-sm mb-2">
                                 <Clock size={16} /> Last Updated: Dec 2025
                             </div>
-                            <h2 className="text-4xl font-black text-gray-900 dark:text-white tracking-tight leading-tight">
+                            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight leading-tight">
                                 Prevention of Money Laundering Act, 2002
                             </h2>
                             <div className="mt-4 flex flex-wrap gap-3">
@@ -194,7 +194,7 @@ const PMLAStudyGuide = () => {
                             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden">
                                 <SectionHeader num="Sec 1-2" title="Preliminary Definitions" id="preliminary" />
                                 {expandedSections.preliminary && (
-                                    <div className="p-6 font-serif text-lg leading-relaxed text-gray-700 dark:text-gray-300 space-y-6">
+                                    <div className="p-6 font-serif text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 space-y-6">
                                         <p>
                                             The PMLA extends to the <Highlight>whole of India</Highlight>. It provides for the confiscation of property derived from money-laundering.
                                         </p>
@@ -226,7 +226,7 @@ const PMLAStudyGuide = () => {
                             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden">
                                 <SectionHeader num="Sec 3-4" title="Offence of Money Laundering" id="offence" />
                                 {expandedSections.offence && (
-                                    <div className="p-6 font-serif text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                                    <div className="p-6 font-serif text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                                         <p className="mb-4">
                                             Whosoever directly or indirectly attempts to indulge or knowingly assists is guilty if involved in:
                                         </p>
@@ -255,7 +255,7 @@ const PMLAStudyGuide = () => {
                             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden">
                                 <SectionHeader num="Sec 5-11" title="Attachment & Confiscation" id="attachment" />
                                 {expandedSections.attachment && (
-                                    <div className="p-6 font-serif text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                                    <div className="p-6 font-serif text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                                         <div className="space-y-4">
                                             <p>
                                                 Where the Director has reason to believe that any person is in possession of any proceeds of crime and such proceeds of crime are likely to be <Highlight>concealed, transferred or dealt with</Highlight> in any manner, he may provisionally attach such property for a period not exceeding <Highlight>180 days</Highlight>.
@@ -276,7 +276,7 @@ const PMLAStudyGuide = () => {
                             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden">
                                 <SectionHeader num="Sec 12-15" title="Obligations of Banking Companies, FIs & Intermediaries" id="obligations" />
                                 {expandedSections.obligations && (
-                                    <div className="p-6 font-serif text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                                    <div className="p-6 font-serif text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                                         <ul className="list-disc list-inside space-y-3 marker:text-indigo-500">
                                             <li><Highlight>Verification of Identity</Highlight>: Maintain records of the identity of all its clients.</li>
                                             <li><Highlight>Maintenance of Records</Highlight>: Maintain record of all transactions for a period of <Highlight>5 years</Highlight> from the date of transaction between a client and the reporting entity.</li>
@@ -291,7 +291,7 @@ const PMLAStudyGuide = () => {
                             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden">
                                 <SectionHeader num="Sec 16-24" title="Summons, Searches and Seizures" id="investigation" />
                                 {expandedSections.investigation && (
-                                    <div className="p-6 font-serif text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                                    <div className="p-6 font-serif text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                                         <p className="mb-4">
                                             The Director or any other officer authorised by him shall have power to:
                                         </p>
@@ -318,7 +318,7 @@ const PMLAStudyGuide = () => {
                             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden">
                                 <SectionHeader num="Sec 25-42" title="Appellate Tribunal" id="appellate" />
                                 {expandedSections.appellate && (
-                                    <div className="p-6 font-serif text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                                    <div className="p-6 font-serif text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                                         <p>
                                             Any person aggrieved by an order made by the Adjudicating Authority may prefer an appeal to the Appellate Tribunal within a period of <Highlight>45 days</Highlight>.
                                         </p>

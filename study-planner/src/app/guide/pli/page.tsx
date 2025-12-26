@@ -31,7 +31,7 @@ const SmartText = ({ text }: { text: string }) => {
     const parts = text.split(/((?:Rs\.?\s?[\d,]*\d+(?:\s?lakhs?)?)|(?:\d+(?:\.\d+)?%)|(?:\d+\s?years?))/gi);
 
     return (
-        <span className="leading-relaxed text-slate-700 font-serif text-lg">
+        <span className="leading-relaxed text-slate-700 font-serif text-base md:text-lg">
             {parts.map((part, i) => {
                 if (part.match(/Rs\.?\s?[\d,]*\d+/i)) {
                     return <span key={i} className="inline-flex items-center px-2 py-0.5 mx-1 rounded-md bg-emerald-100 text-emerald-800 font-bold text-sm font-sans tracking-wide shadow-sm border border-emerald-200">₹ {part.replace(/Rs\.?\s?/i, '')}</span>;
@@ -581,7 +581,7 @@ export default function PLIGuide() {
                                                     onClick={() => toggleAccordion(section.id, idx)}
                                                     className="px-6 py-4 flex justify-between items-center cursor-pointer bg-gradient-to-r from-white to-slate-50 border-b border-slate-100"
                                                 >
-                                                    <h3 className="text-lg font-bold text-slate-800 font-sans">{item.subtitle}</h3>
+                                                    <h3 className="text-base md:text-lg font-bold text-slate-800 font-sans">{item.subtitle}</h3>
                                                     <button className={`p-1 rounded-full bg-slate-100 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
                                                         <ChevronDown className="w-5 h-5 text-slate-500" />
                                                     </button>

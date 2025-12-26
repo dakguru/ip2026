@@ -279,8 +279,8 @@ const SectionHeader = ({ title, icon, color }: any) => (
 // --- Visual Components ---
 
 const SuspensionFlow = () => (
-    <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 my-8">
-        <h3 className="text-lg font-bold text-slate-800 mb-6 flex items-center">
+    <div className="bg-slate-50 p-4 md:p-6 rounded-2xl border border-slate-200 my-6 md:my-8">
+        <h3 className="text-lg font-bold text-slate-800 mb-4 md:mb-6 flex items-center">
             <AlertTriangle className="w-5 h-5 mr-2 text-rose-500" />
             Suspension & Subsistence Allowance Flow
         </h3>
@@ -318,33 +318,33 @@ const SuspensionFlow = () => (
 );
 
 const JoiningTimeTable = () => (
-    <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm my-6">
+    <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm my-4 md:my-6">
         <table className="w-full text-sm text-left">
             <thead className="bg-slate-100 text-slate-700 uppercase font-bold">
                 <tr>
-                    <th className="px-6 py-4">Distance Between Stations</th>
-                    <th className="px-6 py-4">Normal Joining Time</th>
-                    <th className="px-6 py-4">If Road Journey &gt; 200km</th>
+                    <th className="px-4 py-3 md:px-6 md:py-4">Distance Between Stations</th>
+                    <th className="px-4 py-3 md:px-6 md:py-4">Normal Joining Time</th>
+                    <th className="px-4 py-3 md:px-6 md:py-4">If Road Journey &gt; 200km</th>
                 </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 bg-white">
                 {TABLES.joiningTime.map((row, idx) => (
                     <tr key={idx} className="hover:bg-slate-50 transition-colors">
-                        <td className="px-6 py-4 font-medium text-slate-800">{row.distance}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.time}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.road}</td>
+                        <td className="px-4 py-3 md:px-6 md:py-4 font-medium text-slate-800">{row.distance}</td>
+                        <td className="px-4 py-3 md:px-6 md:py-4 text-slate-600">{row.time}</td>
+                        <td className="px-4 py-3 md:px-6 md:py-4 text-slate-600">{row.road}</td>
                     </tr>
                 ))}
             </tbody>
         </table>
-        <div className="bg-cyan-50 px-6 py-3 text-xs text-cyan-800 border-t border-cyan-100">
+        <div className="bg-cyan-50 px-4 py-2 md:px-6 md:py-3 text-xs text-cyan-800 border-t border-cyan-100">
             * Additional 2 days for North-East, Sikkim, Andaman & Nicobar, Lakshadweep, Ladakh.
         </div>
     </div>
 );
 
 const TablesSection = () => (
-    <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 my-8">
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-8 my-6 md:my-8">
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
             <div className="bg-teal-600 px-6 py-4 border-b border-teal-700">
                 <h3 className="font-bold text-white flex items-center">
@@ -418,26 +418,26 @@ const SearchBar = ({ onSearch }: { onSearch: (val: string) => void }) => (
 );
 
 const HomeDashboard = ({ setCategory }: { setCategory: (val: string) => void }) => (
-    <div className="space-y-8 animate-fade-in">
-        <div className="relative bg-gradient-to-r from-blue-700 to-indigo-800 rounded-3xl p-8 md:p-12 text-white overflow-hidden shadow-2xl">
+    <div className="space-y-6 md:space-y-8 animate-fade-in">
+        <div className="relative bg-gradient-to-r from-blue-700 to-indigo-800 rounded-2xl md:rounded-3xl p-6 md:p-12 text-white overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl"></div>
             <div className="relative z-10 max-w-2xl">
-                <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Master the <br />Fundamental Rules</h1>
-                <p className="text-blue-100 text-lg mb-8">
+                <h1 className="text-3xl md:text-5xl font-extrabold mb-3 md:mb-4 leading-tight">Master the <br />Fundamental Rules</h1>
+                <p className="text-blue-100 text-sm md:text-lg mb-6 md:mb-8">
                     The comprehensive digital guide to FRSR Part-I. Simplified definitions, visualize complex rules, and access critical data instantly.
                 </p>
                 <button
                     onClick={() => setCategory("Chapter II: Definitions")}
-                    className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-3 rounded-lg font-bold shadow-lg transition-transform transform hover:-translate-y-1"
+                    className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-2.5 md:px-8 md:py-3 rounded-lg font-bold shadow-lg transition-transform transform hover:-translate-y-1 text-sm md:text-base"
                 >
                     Start with Definitions
                 </button>
             </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div onClick={() => setCategory("Chapter IV: Pay & Increments")} className="group cursor-pointer bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
-                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div onClick={() => setCategory("Chapter IV: Pay & Increments")} className="group cursor-pointer bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <DollarSign className="w-6 h-6 text-emerald-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">Pay & Fixation</h3>

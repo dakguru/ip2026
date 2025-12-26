@@ -173,7 +173,7 @@ const SmartText = ({ text }: { text: string }) => {
     const parts = text.split(boldPattern);
 
     return (
-        <span className="leading-relaxed text-slate-700 dark:text-slate-300 font-serif">
+        <span className="leading-relaxed text-slate-700 dark:text-slate-300 font-serif text-base md:text-lg">
             {parts.map((part, index) => {
                 // If index is odd, it was wrapped in **, so bold it
                 const isBold = index % 2 === 1;
@@ -323,8 +323,8 @@ export default function CCSConductGuide() {
                                 key={rule.id}
                                 onClick={() => scrollToSection(rule.id)}
                                 className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200 ${activeRule === rule.id
-                                        ? "bg-violet-50 text-violet-700 font-semibold dark:bg-violet-900/20 dark:text-violet-300 shadow-sm border-l-4 border-violet-600"
-                                        : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 border-l-4 border-transparent"
+                                    ? "bg-violet-50 text-violet-700 font-semibold dark:bg-violet-900/20 dark:text-violet-300 shadow-sm border-l-4 border-violet-600"
+                                    : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200 border-l-4 border-transparent"
                                     }`}
                             >
                                 <span className={activeRule === rule.id ? "text-violet-600" : "text-slate-400"}>
@@ -402,7 +402,7 @@ function RuleCard({ rule, index }: { rule: any, index: number }) {
                         <span className="block text-xs font-bold text-violet-600 dark:text-violet-400 uppercase tracking-wider mb-1">
                             {rule.ruleNumber}
                         </span>
-                        <h2 className="text-xl font-serif font-bold text-slate-900 dark:text-white">
+                        <h2 className="text-lg md:text-xl font-serif font-bold text-slate-900 dark:text-white">
                             {rule.title}
                         </h2>
                     </div>
@@ -426,7 +426,7 @@ function RuleCard({ rule, index }: { rule: any, index: number }) {
                                 {rule.content.map((paragraph: string, idx: number) => (
                                     <div key={idx} className="flex items-start gap-3">
                                         <div className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-slate-300 dark:bg-slate-600" />
-                                        <p className="text-base text-slate-700 dark:text-slate-300 leading-7">
+                                        <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-7">
                                             <SmartText text={paragraph} />
                                         </p>
                                     </div>

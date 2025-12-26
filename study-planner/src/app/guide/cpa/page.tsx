@@ -749,7 +749,7 @@ export default function CPA2019Guide() {
                                                     sub.content.map((block, idx) => (
                                                         <div key={idx} className="mb-4 last:mb-0">
                                                             {block.type === 'text' && (
-                                                                <p className="font-serif text-lg"><MetricParser text={block.content as string} /></p>
+                                                                <p className="font-serif text-base md:text-lg leading-relaxed"><MetricParser text={block.content as string} /></p>
                                                             )}
 
                                                             {block.type === 'list' && Array.isArray(block.content) && (
