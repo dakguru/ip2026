@@ -54,9 +54,18 @@ export default function GuidePage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-lg md:text-xl text-slate-400 leading-relaxed"
+                        className="text-lg md:text-xl text-slate-400 leading-relaxed mb-8"
                     >
-                        Dive into our comprehensive, interactive digital guides designed for Civil Service Aspirants. Simplified, updated, and built for mastery.
+                        Dive into our comprehensive, interactive web guides designed for Important Rules and Acts for the Aspirants. Simplified, updated, and built for mastery.
+                    </motion.p>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="text-indigo-400 font-medium italic"
+                    >
+                        "Designed for the eye, engineered for the mind."
                     </motion.p>
                 </div>
 
