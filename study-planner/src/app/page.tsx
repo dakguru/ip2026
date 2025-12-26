@@ -25,18 +25,12 @@ export default async function Home() {
   if (isLoggedIn && userSession?.value) {
     try {
       const sessionData = JSON.parse(userSession.value);
-      if (sessionData.email) {
-        // Fetch fresh user data to get latest membership status
-        const user = await getUserByEmail(sessionData.email);
-        if (user) {
-          displayName = user.name;
-          membershipLevel = user.membershipLevel || "free";
-          role = user.role || "user";
-        } else {
-          // Fallback to session data if DB fetch fails (rare)
-          displayName = sessionData.name || "Aspirant";
-          role = sessionData.role || "user";
-        }
+      if (sessionData) {
+        // PERF: Use session data directly to avoid blocking DB call (improves TTFB significantly)
+        // The actual access control is handled on individual protected pages/middleware.
+        displayName = sessionData.name || "Aspirant";
+        membershipLevel = sessionData.membershipLevel || "free";
+        role = sessionData.role || "user";
       }
     } catch (e) {
       console.error("Failed to parse user session", e);
