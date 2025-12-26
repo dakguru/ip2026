@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Shield, Headphones, Coins, PenTool, Layout, TrendingUp, Zap, Award, Users } from "lucide-react";
+import { Shield, ClipboardCheck, Calendar, Brain, Layers, FileText, Users, Newspaper } from "lucide-react";
 import React from "react";
 
 const cardVariants: Variants = {
@@ -57,46 +57,53 @@ const FeatureCard = ({ feature, index, className = "" }: { feature: any, index: 
 export default function WhyChooseUs() {
     const features = [
         {
-            title: "Expert-Curated Content",
-            desc: "Study material crafted meticulously by subject matter experts who know the exam inside out.",
-            icon: Award,
+            title: "Interactive 'Learn-Mode' Tests",
+            desc: "Unlike traditional mocks, our Interactive Mode gives you immediate feedback and detailed explanations the moment you answer. Customize the question count to fit your schedule and practice \"On the GO.\"",
+            icon: ClipboardCheck,
             gradient: "from-blue-500 to-indigo-600",
-            colSpan: "md:col-span-2"
+            colSpan: "md:col-span-1"
         },
         {
             title: "Smart Study Planner",
-            desc: "Stay organized with our dynamic study schedules that adjust to your pace.",
-            icon: PenTool,
+            desc: "Stay organized with our dynamic study schedules that automatically adjust to your pace, ensuring you cover the syllabus efficiently without the burnout.",
+            icon: Calendar,
             gradient: "from-violet-500 to-purple-600",
             colSpan: "md:col-span-1"
         },
         {
-            title: "Rapid Revision Tools",
-            desc: "Boost retention with high-yield Flashcards and Quick Notes designed for last-minute prep.",
-            icon: Zap,
+            title: "Scientifically Engineered Web Guide",
+            desc: "Designed for the Eye, Engineered for the Mind. Our study material leverages the science of sight to make content stand longer in memory, ensuring high-yield concepts stick without mental fatigue.",
+            icon: Brain,
             gradient: "from-amber-400 to-orange-500",
             colSpan: "md:col-span-1"
         },
         {
-            title: "Affordable Pricing",
-            desc: "Premium quality education made accessible. Best-in-class features at unmatched prices.",
-            icon: Coins,
+            title: "Mastery Through Active Recall",
+            desc: "Forget passive reading. Our Flashcards use Active Recall to build muscle memory and Smart Revision to focus strictly on weak areas, giving you the instant truth about your preparation levels.",
+            icon: Layers,
             gradient: "from-emerald-400 to-teal-500",
             colSpan: "md:col-span-1"
         },
         {
-            title: "Real-time Analytics",
-            desc: "Track your progress with detailed performance insights and improve your weak areas.",
-            icon: TrendingUp,
+            title: "Printable PDF Notes & Question Banks",
+            desc: "Get the best of both worlds. Download concise Printable PDF Notes for offline study and access exhaustive practice questions with detailed answer keys for every single topic.",
+            icon: FileText,
             gradient: "from-pink-500 to-rose-600",
             colSpan: "md:col-span-1"
         },
         {
-            title: "24/7 Community Support",
-            desc: "Never study alone. Get your doubts resolved instantly by our active aspirant community.",
+            title: "The Dak Guru Community",
+            desc: "Never study alone. Join the exclusive Dak Guru Community for 24/7 live interactions. Resolve doubts instantly, discuss strategies, and stay motivated by connecting with fellow active aspirants.",
             icon: Users,
             gradient: "from-blue-400 to-cyan-500",
-            colSpan: "md:col-span-2"
+            colSpan: "md:col-span-1"
+        },
+        {
+            title: "Real-Time Updates & Affairs",
+            desc: "Stay ahead of the curve. Keep your finger on the pulse with the DG Blog and our dedicated Current Affairs module, delivering the latest departmental updates and national happenings straight to you.",
+            icon: Newspaper,
+            gradient: "from-fuchsia-500 to-pink-600",
+            colSpan: "md:col-span-2 lg:col-span-1 lg:col-start-2"
         },
     ];
 
@@ -125,11 +132,11 @@ export default function WhyChooseUs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-6xl font-black text-zinc-900 dark:text-zinc-100 mb-4 md:mb-6 tracking-tight leading-tight"
+                        className="text-3xl md:text-5xl lg:text-6xl font-black text-zinc-900 dark:text-zinc-100 mb-4 md:mb-6 tracking-tight leading-tight"
                     >
-                        Why Prepare with <br />
+                        Why Dak Guru is <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400">
-                            Dak Guru
+                            Your Unfair Advantage
                         </span>
                     </motion.h2>
 
@@ -140,12 +147,12 @@ export default function WhyChooseUs() {
                         transition={{ delay: 0.2 }}
                         className="text-base md:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed px-4 md:px-0"
                     >
-                        Don’t just study hard, study smart. We provide the complete ecosystem you need to crack the Inspector Posts LDCE.
+                        Don’t just study hard, study smart. From scientifically designed notes to 'learn-as-you-go' testing, we provide the complete ecosystem you need to crack the Inspector Posts LDCE.
                     </motion.p>
                 </div>
 
-                {/* Bento Grid Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+                {/* Bento Grid Layout - Updated grid columns */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {features.map((feature, index) => (
                         <FeatureCard
                             key={index}
