@@ -124,14 +124,94 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "GDS (Conduct & Engagement) Rules, 2020", description: "Rules related to Gramin Dak Sevaks.", color: "red", comingSoon: true },
     ],
     "Paper III": [
+        // 1-8. Constitution
+        { title: "Preamble to Constitution of India", description: "Constitution Topic 1", color: "amber", comingSoon: true },
+        { title: "Fundamental Rights", description: "Constitution Topic 2", color: "amber", comingSoon: true },
+        { title: "Directive Principles of State Policy", description: "Constitution Topic 3", color: "amber", comingSoon: true },
+        { title: "Fundamental Duties", description: "Constitution Topic 4", color: "amber", comingSoon: true },
+        { title: "Articles 124-147", description: "Constitution: The Union Judiciary", color: "amber", comingSoon: true },
+        { title: "Articles 214-232", description: "Constitution: High Courts in the States", color: "amber", comingSoon: true },
+        { title: "Article 311", description: "Constitution: Services under the Union and the States", color: "amber", comingSoon: true },
+        { title: "Articles 338, 338(a), 338(b)", description: "Constitution: Special Provisions", color: "amber", comingSoon: true },
+
+        // 9-11. BNSS 2023
         {
-            title: "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
-            description: "Detailed analysis of the BNSS, 2023 replacing the CrPC.",
+            title: "BNSS 2023: Section 1",
+            description: "Short Title, extent and commencement.",
             filename: "BNSS_2023.pdf",
             path: "/notes/paper-3/BNSS_2023.pdf",
             size: "8.7 MB",
             color: "purple"
-        }
+        },
+        {
+            title: "BNSS 2023: Section 2",
+            description: "Definitions.",
+            filename: "BNSS_2023.pdf",
+            path: "/notes/paper-3/BNSS_2023.pdf",
+            size: "8.7 MB",
+            color: "purple"
+        },
+        {
+            title: "BNSS 2023: Section 84",
+            description: "Proclamation for person absconding.",
+            filename: "BNSS_2023.pdf",
+            path: "/notes/paper-3/BNSS_2023.pdf",
+            size: "8.7 MB",
+            color: "purple"
+        },
+
+        // 12. CAT Act
+        { title: "Central Administrative Tribunal Act, 1985", description: "CAT Act provisions.", color: "indigo", comingSoon: true },
+
+        // 13. Revenue Recovery
+        { title: "Revenue Recovery Act, 1890", description: "Act for recovery of public revenue.", color: "blue", comingSoon: true },
+
+        // 14. POCA
+        { title: "Prevention of Corruption Act, 1988", description: "As amended.", color: "red", comingSoon: true },
+
+        // 15. RTI
+        { title: "RTI Act, 2005 and RTI Rules, 2012", description: "Right to Information framework.", color: "cyan", comingSoon: true },
+
+        // 16-18. Procurement Manual
+        { title: "Manual on Procurement of Goods", description: "Procurement Manual Part i", color: "slate", comingSoon: true },
+        { title: "Manual on Procurement of Works", description: "Procurement Manual Part ii", color: "slate", comingSoon: true },
+        { title: "Manual on Procurement of Consultancy", description: "Procurement Manual Part iii", color: "slate", comingSoon: true },
+
+        // 19-21. CCS Rules
+        { title: "CCS (GPF) Rules, 1961", description: "General Provident Fund rules.", color: "teal", comingSoon: true },
+        { title: "CCS (Pension) Rules, 2021", description: "New pension rules and amendments.", color: "teal", comingSoon: true },
+        { title: "CCS (Commutation of Pension) Rules, 1981", description: "Commutation rules.", color: "teal", comingSoon: true },
+
+        // 22. Sexual Harassment
+        { title: "Sexual Harassment of Women at Workplace Act, 2013", description: "Prevention, Prohibition and Redressal.", color: "pink", comingSoon: true },
+
+        // 23-24. NPS
+        { title: "CCS (Implementation of NPS) Rules, 2021", description: "National Pension System implementation.", color: "emerald", comingSoon: true },
+        { title: "CCS (Payment of Gratuity under NPS) Rules, 2021", description: "Gratuity rules for NPS employees.", color: "emerald", comingSoon: true },
+
+        // 25. GFR
+        { title: "General Financial Rules, 2017", description: "Chapter 2 and 6 (and amendments).", color: "gray", comingSoon: true },
+
+        // 26. FR & SR
+        { title: "Fundamental Rules (FR) and Supplementary Rules (SR)", description: "Core service rules.", color: "indigo", comingSoon: true },
+
+        // 27. Casual Labourers
+        { title: "Brochure on Casual Labourers", description: "Instructions issued by DoP&T.", color: "amber", comingSoon: true },
+
+        // 28. APAR
+        { title: "Maintenance of APAR", description: "Instructions by Directorate and DoP&T.", color: "orange", comingSoon: true },
+
+        // 29. Service Discharge
+        { title: "Service Discharge Benefit Scheme, 2010", description: "SDBS details.", color: "rose", comingSoon: true },
+
+        // 30. Financial Powers
+        { title: "Schedule of Financial Powers", description: "Divisional Heads, Heads of Circle.", color: "blue", comingSoon: true },
+
+        // 31. Welfare Measures
+        { title: "Welfare Measures", description: "For Departmental Employees and GDS.", color: "green", comingSoon: true },
+
+        // 32. FHB
+        { title: "P&T FHB Vol I and Postal FHB Vol II", description: "Financial Hand Book.", color: "violet", comingSoon: true },
     ]
 };
 
@@ -189,25 +269,25 @@ export default function NotesPage() {
                         <div
                             key={index}
                             className={`group bg-white rounded-2xl p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
-                                    ? 'border-zinc-200 opacity-90'
-                                    : 'border-slate-100 hover:border-purple-200 hover:shadow-xl hover:-translate-y-1'
+                                ? 'border-zinc-200 opacity-90'
+                                : 'border-slate-100 hover:border-purple-200 hover:shadow-xl hover:-translate-y-1'
                                 }`}
                         >
                             <div className="flex items-start justify-between mb-4">
                                 <div className={`p-3 rounded-xl ${file.comingSoon
-                                        ? 'bg-zinc-100 text-zinc-400'
-                                        : file.color === 'blue' ? 'bg-blue-50 text-blue-600' :
-                                            file.color === 'purple' ? 'bg-purple-50 text-purple-600' :
-                                                file.color === 'emerald' ? 'bg-emerald-50 text-emerald-600' :
-                                                    file.color === 'rose' ? 'bg-rose-50 text-rose-600' :
-                                                        file.color === 'amber' ? 'bg-amber-50 text-amber-600' :
-                                                            file.color === 'orange' ? 'bg-orange-50 text-orange-600' :
-                                                                file.color === 'cyan' ? 'bg-cyan-50 text-cyan-600' :
-                                                                    file.color === 'violet' ? 'bg-violet-50 text-violet-600' :
-                                                                        file.color === 'fuchsia' ? 'bg-fuchsia-50 text-fuchsia-600' :
-                                                                            file.color === 'teal' ? 'bg-teal-50 text-teal-600' :
-                                                                                file.color === 'sky' ? 'bg-sky-50 text-sky-600' :
-                                                                                    'bg-indigo-50 text-indigo-600'
+                                    ? 'bg-zinc-100 text-zinc-400'
+                                    : file.color === 'blue' ? 'bg-blue-50 text-blue-600' :
+                                        file.color === 'purple' ? 'bg-purple-50 text-purple-600' :
+                                            file.color === 'emerald' ? 'bg-emerald-50 text-emerald-600' :
+                                                file.color === 'rose' ? 'bg-rose-50 text-rose-600' :
+                                                    file.color === 'amber' ? 'bg-amber-50 text-amber-600' :
+                                                        file.color === 'orange' ? 'bg-orange-50 text-orange-600' :
+                                                            file.color === 'cyan' ? 'bg-cyan-50 text-cyan-600' :
+                                                                file.color === 'violet' ? 'bg-violet-50 text-violet-600' :
+                                                                    file.color === 'fuchsia' ? 'bg-fuchsia-50 text-fuchsia-600' :
+                                                                        file.color === 'teal' ? 'bg-teal-50 text-teal-600' :
+                                                                            file.color === 'sky' ? 'bg-sky-50 text-sky-600' :
+                                                                                'bg-indigo-50 text-indigo-600'
                                     }`}>
                                     <FileText className="w-8 h-8" />
                                 </div>
