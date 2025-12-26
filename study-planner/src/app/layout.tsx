@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   description: "Detailed study syllabus and calendar for Inspector Posts LDCE 2026",
   icons: {
     icon: "/dak-guru-new-logo.png",
+    apple: "/dak-guru-new-logo.png",
   },
   manifest: "/manifest.json",
 };
