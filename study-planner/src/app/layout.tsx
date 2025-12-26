@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   title: "Dak Guru. Learn, Practice, Succeed",
   description: "Detailed study syllabus and calendar for Inspector Posts LDCE 2026",
   icons: {
-    icon: "/dak-guru-new-logo.png",
-    apple: "/dak-guru-new-logo.png",
+    icon: "/dak-guru-round.png",
+    apple: "/dak-guru-round.png",
   },
   manifest: "/manifest.json",
 };
