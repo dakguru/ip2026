@@ -189,7 +189,8 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Welfare Measures", description: "For Departmental Employees and GDS.", color: "green", comingSoon: true },
 
         // 32. FHB
-        { title: "P&T FHB Vol I and Postal FHB Vol II", description: "Financial Hand Book.", color: "violet", comingSoon: true },
+        { title: "P&T FHB Vol I", description: "P&T Financial Hand Book Volume I.", color: "violet", comingSoon: true },
+        { title: "Postal FHB Vol II", description: "Postal Financial Hand Book Volume II.", color: "violet", comingSoon: true },
     ]
 };
 
