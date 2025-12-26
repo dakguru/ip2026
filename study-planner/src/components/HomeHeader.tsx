@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Search, ChevronDown, MessageCircle, Menu, X, LogOut } from "lucide-react";
+import { Search, ChevronDown, MessageCircle, Menu, X, LogOut, User } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
@@ -136,6 +136,14 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                         className="hidden sm:inline-flex bg-green-600 hover:bg-green-700 text-white text-sm font-bold px-5 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95"
                                     >
                                         Get Started
+                                    </Link>
+                                    {/* Mobile Login Icon */}
+                                    <Link
+                                        href="/login"
+                                        className="sm:hidden p-2 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+                                        aria-label="Log in"
+                                    >
+                                        <User className="w-6 h-6" />
                                     </Link>
                                 </>
                             )}
