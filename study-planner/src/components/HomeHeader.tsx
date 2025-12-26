@@ -62,7 +62,15 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                     <div className="flex items-center justify-between gap-4 md:gap-8">
 
                         {/* 1. Left: Logo & Nav */}
-                        <div className="flex items-center gap-8">
+                        <div className="flex items-center gap-4 md:gap-8">
+                            {/* Mobile Menu Button - Hide on Native App */}
+                            <button
+                                className={`lg:hidden p-2 -ml-2 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md ${isMobileApp ? 'hidden' : ''}`}
+                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            >
+                                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            </button>
+
                             <Link href="/" className="flex items-center gap-2 shrink-0">
                                 <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-white shadow-[0_0_20px_rgba(59,130,246,0.8)]">
                                     <Image src="/dak-guru-new-logo.png" alt="Dak Guru" fill className="object-cover scale-110" priority />
@@ -132,13 +140,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 </>
                             )}
 
-                            {/* Mobile Menu Button - Hide on Native App */}
-                            <button
-                                className={`lg:hidden p-2 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md ${isMobileApp ? 'hidden' : ''}`}
-                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            >
-                                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                            </button>
+
                         </div>
                     </div>
                 </div>
