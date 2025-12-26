@@ -125,14 +125,8 @@ const PDF_DATA: Record<string, Note[]> = {
     ],
     "Paper III": [
         // 1-8. Constitution
-        { title: "Preamble to Constitution of India", description: "Constitution Topic 1", color: "amber", comingSoon: true },
-        { title: "Fundamental Rights", description: "Constitution Topic 2", color: "amber", comingSoon: true },
-        { title: "Directive Principles of State Policy", description: "Constitution Topic 3", color: "amber", comingSoon: true },
-        { title: "Fundamental Duties", description: "Constitution Topic 4", color: "amber", comingSoon: true },
-        { title: "Articles 124-147", description: "Constitution: The Union Judiciary", color: "amber", comingSoon: true },
-        { title: "Articles 214-232", description: "Constitution: High Courts in the States", color: "amber", comingSoon: true },
-        { title: "Article 311", description: "Constitution: Services under the Union and the States", color: "amber", comingSoon: true },
-        { title: "Articles 338, 338(a), 338(b)", description: "Constitution: Special Provisions", color: "amber", comingSoon: true },
+        // 1. Constitution
+        { title: "Constitution of India", description: "Comprehensive notes on Preamble, Fundamental Rights, Duties, and key Articles.", color: "amber", comingSoon: true },
 
         // 9. BNSS 2023
         {
