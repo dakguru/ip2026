@@ -291,7 +291,10 @@ export default function StudyPlanner() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button
-                            onClick={() => setActiveTab('planner')}
+                            onClick={() => {
+                                setActiveTab('planner');
+                                document.getElementById('main-content')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
                             className={`px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl flex items-center justify-center gap-2 ${activeTab === 'planner'
                                 ? 'bg-white text-blue-900'
                                 : 'bg-blue-600 hover:bg-blue-500 text-white'
@@ -300,7 +303,10 @@ export default function StudyPlanner() {
                             <Calendar className="w-5 h-5" /> Start Studying
                         </button>
                         <button
-                            onClick={() => setActiveTab('overview')}
+                            onClick={() => {
+                                setActiveTab('overview');
+                                document.getElementById('main-content')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
                             className={`px-8 py-4 rounded-xl font-bold text-lg transition-all border-2 flex items-center justify-center gap-2 ${activeTab === 'overview'
                                 ? 'bg-white text-blue-900 border-white'
                                 : 'border-white/30 hover:bg-white/10 text-white'
@@ -358,7 +364,7 @@ export default function StudyPlanner() {
             </div>
 
             {/* --- CONTENT AREA --- */}
-            <div className="max-w-7xl mx-auto px-6 py-12 print:px-0 print:py-0">
+            <div id="main-content" className="max-w-7xl mx-auto px-6 py-12 print:px-0 print:py-0 scroll-mt-24">
 
                 {activeTab === 'overview' && (
                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
