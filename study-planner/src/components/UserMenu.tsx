@@ -116,7 +116,7 @@ export function UserMenu() {
                         <span>Dashboard</span>
                     </DropdownMenuItem>
 
-                    <DropdownMenuItem onClick={() => router.push('/quiz/results')}>
+                    <DropdownMenuItem onClick={() => router.push('/progress')}>
                         <BarChart3 className="mr-2 h-4 w-4 text-zinc-500" />
                         <span>My Progress</span>
                     </DropdownMenuItem>

@@ -6,7 +6,7 @@ import PostalUpdateModel from '@/models/PostalUpdate';
 export async function GET() {
     try {
         await dbConnect();
-        const updates = await PostalUpdateModel.find({}).sort({ createdAt: -1 });
+        const updates = await PostalUpdateModel.find({}).sort({ date: -1 });
         // Map to simpler structure if needed, or return docs
         const mappedUpdates = updates.map(u => ({
             id: u.id,
@@ -14,7 +14,8 @@ export async function GET() {
             date: u.date,
             category: u.category,
             description: u.description || "",
-            link: u.link || "#"
+            link: u.link || "#",
+            image: u.image
         }));
         return NextResponse.json(mappedUpdates);
     } catch (e) {

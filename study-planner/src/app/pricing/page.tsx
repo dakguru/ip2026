@@ -452,13 +452,27 @@ export default function PricingPage() {
 
                             <button
                                 onClick={handlePayment}
-                                disabled={isProcessing}
-                                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                disabled={isProcessing || currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')}
+                                className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed
+                                    ${(currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver'))
+                                        ? 'bg-zinc-200 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-500 shadow-none'
+                                        : 'bg-green-600 hover:bg-green-700 text-white shadow-green-600/20 active:scale-[0.98]'
+                                    }`}
                             >
                                 {isProcessing ? (
                                     <>
                                         <Loader2 className="w-5 h-5 animate-spin" />
                                         Processing...
+                                    </>
+                                ) : currentMembership === 'gold' ? (
+                                    <>
+                                        <ShieldCheck className="w-5 h-5" />
+                                        Gold Plan Active
+                                    </>
+                                ) : (currentMembership === 'silver' && activeTab === 'silver') ? (
+                                    <>
+                                        <ShieldCheck className="w-5 h-5" />
+                                        Silver Plan Active
                                     </>
                                 ) : (
                                     <>

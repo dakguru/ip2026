@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import dbConnect from '@/lib/mongoose';
+import PostalUpdateModel from '@/models/PostalUpdate';
 
 export async function GET(
     request: Request,
@@ -8,24 +8,61 @@ export async function GET(
 ) {
     try {
         const { id } = await params;
-        const DATA_FILE_PATH = path.join(process.cwd(), 'src', 'data', 'blog-posts.json');
 
-        if (!fs.existsSync(DATA_FILE_PATH)) {
-            return NextResponse.json({ error: 'Data file not found' }, { status: 404 });
-        }
+        await dbConnect();
 
-        const fileContent = fs.readFileSync(DATA_FILE_PATH, 'utf-8');
-        const updates = JSON.parse(fileContent);
-
-        const update = updates.find((u: any) => u.id === id);
+        const update = await PostalUpdateModel.findOne({ id: id });
 
         if (!update) {
             return NextResponse.json({ error: 'Update not found' }, { status: 404 });
         }
 
-        return NextResponse.json(update);
+        // Return the clean object
+        return NextResponse.json({
+            id: update.id,
+            title: update.title,
+            date: update.date,
+            category: update.category,
+            description: update.description || "",
+            link: update.link || "#",
+            // Include other fields if your schema has them, e.g. image
+            image: update.image
+        });
     } catch (error) {
         console.error("Error fetching update:", error);
+        return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    }
+}
+
+export async function PUT(
+    request: Request,
+    { params }: { params: Promise<{ id: string }> }
+) {
+    try {
+        const { id } = await params;
+        const body = await request.json();
+
+        await dbConnect();
+
+        const update = await PostalUpdateModel.findOne({ id: id });
+
+        if (!update) {
+            return NextResponse.json({ error: 'Update not found' }, { status: 404 });
+        }
+
+        // Update fields
+        update.title = body.title || update.title;
+        update.date = body.date || update.date;
+        update.category = body.category || update.category;
+        update.description = body.description || update.description;
+        update.link = body.link || update.link;
+        update.image = body.image || update.image;
+
+        await update.save();
+
+        return NextResponse.json({ success: true, update });
+    } catch (error) {
+        console.error("Error updating update:", error);
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
 }

@@ -7,7 +7,8 @@ const PostalUpdateSchema = new mongoose.Schema({
     date: { type: String, required: true },
     category: { type: String, required: true },
     description: { type: String },
-    link: { type: String }
+    link: { type: String },
+    image: { type: String }
 }, { timestamps: true });
 
 export default mongoose.models.PostalUpdate || mongoose.model('PostalUpdate', PostalUpdateSchema);

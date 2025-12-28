@@ -13,6 +13,24 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
     const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>(membershipLevel || 'free');
+
+    useEffect(() => {
+        // Sync membership from cookie to ensure immediate update after payment
+        const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+        if (match) {
+            try {
+                const decoded = decodeURIComponent(match[2]);
+                const session = JSON.parse(decoded);
+                if (session.membershipLevel) {
+                    setCurrentMembership(session.membershipLevel);
+                }
+            } catch (e) {
+                console.error("Session parse error", e);
+            }
+        }
+    }, [membershipLevel]); // Re-run if prop changes, but also run on mount
+
     const isMobileApp = useIsMobileApp();
 
     const handleLogout = async () => {
@@ -24,6 +42,60 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
             console.error('Logout failed', error);
         }
     };
+
+    useEffect(() => {
+        const validateSession = async () => {
+            // 1. Initial sync from cookie
+            const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+            let sessionData: any = {};
+            if (match) {
+                try {
+                    const decoded = decodeURIComponent(match[2]);
+                    sessionData = JSON.parse(decoded);
+                    if (sessionData.membershipLevel) {
+                        setCurrentMembership(sessionData.membershipLevel);
+                    }
+                } catch (e) {
+                    console.error("Session parse error", e);
+                }
+            }
+
+            // 2. Fetch fresh data from server to catch DB changes (admin updates)
+            if (isLoggedIn || match) {
+                try {
+                    const res = await fetch('/api/auth/me');
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data.user && data.user.membershipLevel) {
+                            const distinct = data.user.membershipLevel !== currentMembership;
+                            // If DB says something different than what we have (or what was in cookie)
+                            if (distinct || data.user.membershipLevel !== sessionData.membershipLevel) {
+                                console.log("Updating membership from server:", data.user.membershipLevel);
+                                setCurrentMembership(data.user.membershipLevel);
+
+                                // Update the cookie
+                                const newSession = { ...sessionData, ...data.user };
+                                // recreate cookie string
+                                const expires = new Date();
+                                expires.setDate(expires.getDate() + 1); // 1 day
+                                document.cookie = `user_session=${encodeURIComponent(JSON.stringify(newSession))}; path=/; max-age=86400`;
+
+                                // Trigger a router refresh to propagate changes if needed
+                                router.refresh();
+                            }
+                        }
+                    }
+                } catch (err) {
+                    console.error("Failed to validate session", err);
+                }
+            }
+        };
+
+        validateSession();
+    }, [isLoggedIn, currentMembership, router]); // Dependency on currentMembership might cause loop if not careful, but we check for distinct value. 
+    // Actually, distinct check prevents infinite loop.
+
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -53,7 +125,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
         }
     }, [mobileMenuOpen]);
 
-    const isPremium = membershipLevel === 'gold' || membershipLevel === 'silver';
+    const isPremium = currentMembership === 'gold' || currentMembership === 'silver';
 
     return (
         <>
@@ -86,14 +158,14 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 <Link href="/blog" className="hover:text-blue-600 dark:hover:text-blue-400">DG Blog</Link>
                                 <Link href="/social" className="hover:text-blue-600 dark:hover:text-blue-400">DG Community</Link>
                                 <Link href="/current-affairs" className="hover:text-blue-600 dark:hover:text-blue-400">Current Affairs</Link>
-                                <Link href="#" className="hover:text-blue-600 dark:hover:text-blue-400">Syllabus</Link>
+                                <Link href="/syllabus" className="hover:text-blue-600 dark:hover:text-blue-400">Syllabus</Link>
 
                                 {isPremium ? (
-                                    <span className={`px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-wide shadow-sm border ${membershipLevel === 'gold'
+                                    <span className={`px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-wide shadow-sm border ${currentMembership === 'gold'
                                         ? 'bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-amber-900 border-amber-200'
                                         : 'bg-gradient-to-r from-slate-200 via-zinc-300 to-slate-400 text-slate-900 border-slate-300'
                                         }`}>
-                                        {membershipLevel === 'gold' ? '★ Gold Member' : '★ Silver Member'}
+                                        {currentMembership === 'gold' ? '★ Gold Member' : '★ Silver Member'}
                                     </span>
                                 ) : (
                                     <Link
@@ -204,11 +276,11 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 </Link>
 
                                 {isPremium ? (
-                                    <div className={`p-3 rounded-lg font-bold text-center ${membershipLevel === 'gold'
+                                    <div className={`p-3 rounded-lg font-bold text-center ${currentMembership === 'gold'
                                         ? 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-900'
                                         : 'bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-800'
                                         }`}>
-                                        {membershipLevel === 'gold' ? '★ Gold Member' : '★ Silver Member'}
+                                        {currentMembership === 'gold' ? '★ Gold Member' : '★ Silver Member'}
                                     </div>
                                 ) : (
                                     <Link

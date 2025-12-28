@@ -1,6 +1,6 @@
 "use client";
 
-import { Newspaper, FileText, ArrowLeft, Mail, Calendar, Tag, ChevronRight, ExternalLink } from "lucide-react";
+import { Newspaper, FileText, ArrowLeft, Mail, Calendar, Tag, ChevronRight, ExternalLink, Gavel, Bell } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -57,20 +57,43 @@ export default function BlogPage() {
                                     <div className="p-5 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:shadow-lg transition-all flex flex-col md:flex-row gap-6">
 
                                         {/* Image / Thumbnail */}
-                                        <div className="shrink-0 w-full md:w-48 h-32 bg-zinc-100 dark:bg-zinc-800 rounded-lg overflow-hidden relative">
+                                        {/* Image / Thumbnail */}
+                                        <div className="shrink-0 w-full md:w-48 h-32 rounded-lg overflow-hidden relative shadow-sm">
                                             {update.image ? (
                                                 <img src={update.image} alt={update.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                             ) : (
-                                                <div className="w-full h-full flex items-center justify-center text-zinc-300 dark:text-zinc-700 bg-zinc-50 dark:bg-zinc-800/50">
-                                                    <FileText className="w-12 h-12 opacity-50" />
+                                                <div className={`w-full h-full flex flex-col items-center justify-center p-4 text-white relative overflow-hidden ${update.category === 'Order' ? 'bg-gradient-to-br from-red-500 to-orange-600' :
+                                                    update.category === 'Circular' ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
+                                                        update.category === 'Notification' ? 'bg-gradient-to-br from-purple-500 to-fuchsia-600' :
+                                                            'bg-gradient-to-br from-zinc-500 to-stone-600'
+                                                    }`}>
+                                                    {/* Background Pattern */}
+                                                    <div className="absolute inset-0 opacity-10 pointer-events-none">
+                                                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full blur-2xl"></div>
+                                                        <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-black rounded-full blur-2xl"></div>
+                                                    </div>
+
+                                                    <div className="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
+                                                        {update.category === 'Order' ? <Gavel className="w-10 h-10 mb-2 opacity-90" /> :
+                                                            update.category === 'Circular' ? <FileText className="w-10 h-10 mb-2 opacity-90" /> :
+                                                                <Bell className="w-10 h-10 mb-2 opacity-90" />}
+                                                    </div>
+
+                                                    <span className="relative z-10 text-xs font-bold uppercase tracking-widest opacity-90">
+                                                        {update.category}
+                                                    </span>
                                                 </div>
                                             )}
-                                            <div className={`absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${update.category === 'Order' ? 'bg-red-500 text-white' :
-                                                update.category === 'Circular' ? 'bg-blue-500 text-white' :
-                                                    'bg-amber-500 text-white'
-                                                }`}>
-                                                {update.category}
-                                            </div>
+
+                                            {/* Floating Badge (Only show if image is present to avoid double labeling, or keep for consistency) */}
+                                            {update.image && (
+                                                <div className={`absolute top-2 left-2 px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider shadow-sm backdrop-blur-md ${update.category === 'Order' ? 'bg-red-500/90 text-white' :
+                                                    update.category === 'Circular' ? 'bg-blue-500/90 text-white' :
+                                                        'bg-amber-500/90 text-white'
+                                                    }`}>
+                                                    {update.category}
+                                                </div>
+                                            )}
                                         </div>
 
                                         {/* Content */}

@@ -91,9 +91,9 @@ export default function ManageBlogPage() {
                                     </td>
                                     <td className="py-4 px-6 text-right">
                                         <div className="flex items-center justify-end gap-2">
-                                            <button className="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded text-blue-600 dark:text-blue-400">
+                                            <Link href={`/developer/blog/${update.id}`} className="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded text-blue-600 dark:text-blue-400">
                                                 <Edit className="w-4 h-4" />
-                                            </button>
+                                            </Link>
                                             <button onClick={() => handleDelete(update.id)} className="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded text-red-600 dark:text-red-400">
                                                 <Trash2 className="w-4 h-4" />
                                             </button>

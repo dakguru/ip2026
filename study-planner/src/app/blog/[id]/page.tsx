@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, use } from "react";
-import { ArrowLeft, Calendar, ExternalLink, FileText, Share2, Printer, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, ExternalLink, FileText, Share2, Printer, Tag, Gavel, Bell } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -76,11 +76,28 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
                 <article className="bg-white dark:bg-zinc-900 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-800 overflow-hidden">
 
                     {/* Featured Image (if exists) */}
-                    {update.image && (
-                        <div className="w-full h-64 md:h-96 relative bg-zinc-100 dark:bg-zinc-800">
+                    {/* Featured Image or Category Banner */}
+                    <div className="w-full h-64 md:h-80 relative bg-zinc-100 dark:bg-zinc-800">
+                        {update.image ? (
                             <img src={update.image} alt={update.title} className="w-full h-full object-cover" />
-                        </div>
-                    )}
+                        ) : (
+                            <div className={`w-full h-full flex flex-col items-center justify-center p-8 text-white relative overflow-hidden ${update.category === 'Order' ? 'bg-gradient-to-br from-red-500 to-orange-600' :
+                                update.category === 'Circular' ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
+                                    update.category === 'Notification' ? 'bg-gradient-to-br from-purple-500 to-fuchsia-600' :
+                                        'bg-gradient-to-br from-zinc-500 to-stone-600'
+                                }`}>
+                                <div className="absolute inset-0 opacity-10 pointer-events-none">
+                                    <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+                                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-black rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+                                </div>
+                                <div className="relative z-10 opacity-90 scale-150 mb-4">
+                                    {update.category === 'Order' ? <Gavel className="w-16 h-16" /> :
+                                        update.category === 'Circular' ? <FileText className="w-16 h-16" /> :
+                                            <Bell className="w-16 h-16" />}
+                                </div>
+                            </div>
+                        )}
+                    </div>
 
                     <div className="p-8 md:p-12">
                         {/* Meta Tags */}
