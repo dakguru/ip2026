@@ -31,22 +31,28 @@ const syllabusData = {
         description: "Comprehensive coverage of the core departmental acts, rules, regulations and manuals governing the postal operations.",
         sections: [
             {
-                category: "1. Acts",
+                category: "1. Law Papers",
                 icon: <Scale className="w-5 h-5" />,
                 items: [
-                    { name: "The Post Office Act, 2023 (Act No.43 of 2023)", link: "https://www.indiacode.nic.in/bitstream/123456789/20064/1/A2023-43.pdf" },
-                    { name: "Government Savings Promotion Act, 1873", link: "https://www.indiacode.nic.in/bitstream/123456789/2281/3/a1873-05.pdf" },
                     { name: "Prevention of Money Laundering Act, 2002 (AML/CFT)", link: "https://enforcementdirectorate.gov.in/sites/default/files/Act%26rules/THE%20PREVENTION%20OF%20MONEY%20LAUNDERING%20ACT%2C%202002.pdf" },
                     { name: "Consumer Protection Act, 2019", link: "https://www.indiacode.nic.in/handle/123456789/15256" },
                     { name: "Information Technology Act, 2000", link: "https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf" }
                 ]
             },
             {
-                category: "2. Rules & Savings Schemes",
+                category: "2. PO Acts and Rules",
+                icon: <Landmark className="w-5 h-5" />,
+                items: [
+                    { name: "The Post Office Act, 2023 (Act No.43 of 2023)", link: "https://www.indiacode.nic.in/bitstream/123456789/20064/1/A2023-43.pdf" },
+                    { name: "The Post Office Rules, 2024", link: "https://www.indiapost.gov.in/api/documents/file/U2FsdGVkX18YbtCQjFfkRpBCxl80aj4z8YmbyGSl0f5DTjV136-tGje7mBJaziCYk9yIi-9-H0CaZe1Iza0Img" },
+                    { name: "The Post Office Regulations, 2024", link: "https://www.indiapost.gov.in/api/documents/file/U2FsdGVkX19OMUO4CSet8nPAf5rWenidP9IbZAf-3m0kDaEgT12dQeoHm_zUGsd7uQeHhdPfnGLO8ESRmGivzg" }
+                ]
+            },
+            {
+                category: "3. Savings Schemes",
                 icon: <Calculator className="w-5 h-5" />,
                 items: [
-                    { name: "The Post Office Rules, 2024", link: "https://www.indiapost.gov.in/api/documents/file/U2FsdGVkX18YbtCQjFfkRpBCxl80aj4z8YmbyGSl0f5DTjV136-tGje7mBJaziCYk9yIi-9-H0CaZe1Iza0Img" },
-                    { name: "The Post Office Regulations, 2024", link: "https://www.indiapost.gov.in/api/documents/file/U2FsdGVkX19OMUO4CSet8nPAf5rWenidP9IbZAf-3m0kDaEgT12dQeoHm_zUGsd7uQeHhdPfnGLO8ESRmGivzg" },
+                    { name: "Government Savings Promotion Act, 1873", link: "https://www.indiacode.nic.in/bitstream/123456789/2281/3/a1873-05.pdf" },
                     { name: "Government Savings Promotion Rules, 2018", link: "https://dea.gov.in/sites/default/files/GSPR%202018.pdf" },
                     { name: "Post Office Savings Account Scheme, 2019", link: "http://www.nsiindia.gov.in/InternalPage.aspx?Id_Pk=142" },
                     { name: "National Savings Recurring Deposit Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/565706591_RD_Scheme_2019.pdf" },
@@ -56,42 +62,50 @@ const syllabusData = {
                     { name: "National Savings Certificate (VIII Issue) Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/891334860_NSC_Scheme_2019.pdf" },
                     { name: "Kisan Vikas Patra Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/619047901_KVP_Scheme_2019.pdf" },
                     { name: "Public Provident Fund Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/126137356_PPF_2019.pdf" },
-                    { name: "Sukanya Samriddhi Account Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/323382441_SSA_2019.pdf" }
+                    { name: "Sukanya Samriddhi Account Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/323382441_SSA_2019.pdf" },
+                    { name: "CBS Manual", link: "https://www.indiapost.gov.in/Financial/Pages/Content/SB-Orders.aspx" },
+                    { name: "SB Orders", link: "https://www.indiapost.gov.in/Financial/Pages/Content/SB-Orders.aspx" },
+                    { name: "India Post Payments Bank (IPPB)", link: "https://www.ippbonline.com/" }
                 ]
             },
             {
-                category: "3. Postal Life Insurance",
+                category: "4. Postal Manuals and Guide",
+                icon: <Book className="w-5 h-5" />,
+                items: [
+                    { name: "Book of BO Rules", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "Postal Manual Volume II", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "Postal Manual Volume III", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "Postal Manual Volume IV", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "Postal Manual Volume V", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "Postal Manual Volume VI (Parts I, II, III)", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "Postal Manual Volume VII", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "Postal Manual Volume VIII", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "PO Guide Part I", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "PO Guide Part II", link: "https://www.indiapost.gov.in/documents/guidelines" }
+                ]
+            },
+            {
+                category: "5. Postal Life Insurance",
                 icon: <Shield className="w-5 h-5" />,
                 items: [
                     { name: "PLI Scheme 2011 & Amendments (SANKALAN)", link: "https://www.indiapost.gov.in/Financial/Pages/Content/pli-rules.aspx" }
                 ]
             },
             {
-                category: "4. Postal Manuals",
-                icon: <Book className="w-5 h-5" />,
-                items: [
-                    { name: "Book of BO Rules", link: "https://www.indiapost.gov.in/documents/guidelines" },
-                    { name: "Postal Manual Volume II, III, IV, VIII", link: "https://www.indiapost.gov.in/documents/guidelines" },
-                    { name: "Mail Ops: Vol V, VI (Parts I, II, III), VII", link: "https://www.indiapost.gov.in/documents/guidelines" }
-                ]
-            },
-            {
-                category: "5-9. Ops & Guidelines",
+                category: "6. Ops & Guidelines",
                 icon: <Mail className="w-5 h-5" />,
                 items: [
                     { name: "Jansuraksha Schemes (PMJJBY, PMSBY, APY)", link: "https://jansuraksha.gov.in/" },
-                    { name: "PO Guide Part I & II", link: "https://www.indiapost.gov.in/documents/guidelines" },
                     { name: "DIGIPIN (Digital Personal Identification Number)", link: "https://www.indiapost.gov.in/" },
                     { name: "Operational: MNOP, PNOP, Niryat Kendra", link: "https://www.indiapost.gov.in/MBE/Pages/Content/Parcel-Network.aspx" },
                     { name: "Preservation & Disposal of Records", link: "https://swachhportal.gov.in/" }
                 ]
             },
             {
-                category: "10-18. General Services & IT",
-                icon: <Globe className="w-5 h-5" />,
+                category: "7. Service Rules",
+                icon: <Briefcase className="w-5 h-5" />,
                 items: [
-                    { name: "POSB Manuals (Vol I, II, III) & CBS Manual", link: "https://www.indiapost.gov.in/Financial/Pages/Content/SB-Orders.aspx" },
-                    { name: "India Post Payments Bank (IPPB)", link: "https://www.ippbonline.com/" },
+
                     { name: "CCS (Conduct) Rules, 1964", link: "https://dopt.gov.in/sites/default/files/CCS_Conduct_Rules_1964_Updated_27Feb15_0.pdf" },
                     { name: "CCS (CCA) Rules, 1965", link: "https://dopt.gov.in/sites/default/files/CCS-CCA-Rules-FINAL.pdf" },
                     { name: "GDS (Conduct & Engagement) Rules, 2020", link: "https://utilities.cept.gov.in/dop/pdfbind.ashx?id=4323" }
