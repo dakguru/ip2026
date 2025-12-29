@@ -45,7 +45,9 @@ const syllabusData = {
                 items: [
                     { name: "The Post Office Act, 2023 (Act No.43 of 2023)", link: "https://www.indiacode.nic.in/bitstream/123456789/20064/1/A2023-43.pdf" },
                     { name: "The Post Office Rules, 2024", link: "https://www.indiapost.gov.in/api/documents/file/U2FsdGVkX18YbtCQjFfkRpBCxl80aj4z8YmbyGSl0f5DTjV136-tGje7mBJaziCYk9yIi-9-H0CaZe1Iza0Img" },
-                    { name: "The Post Office Regulations, 2024", link: "https://www.indiapost.gov.in/api/documents/file/U2FsdGVkX19OMUO4CSet8nPAf5rWenidP9IbZAf-3m0kDaEgT12dQeoHm_zUGsd7uQeHhdPfnGLO8ESRmGivzg" }
+                    { name: "The Post Office Regulations, 2024", link: "https://www.indiapost.gov.in/api/documents/file/U2FsdGVkX19OMUO4CSet8nPAf5rWenidP9IbZAf-3m0kDaEgT12dQeoHm_zUGsd7uQeHhdPfnGLO8ESRmGivzg" },
+                    { name: "PO Guide Part I", link: "https://www.indiapost.gov.in/documents/guidelines" },
+                    { name: "PO Guide Part II", link: "https://www.indiapost.gov.in/documents/guidelines" }
                 ]
             },
             {
@@ -54,15 +56,7 @@ const syllabusData = {
                 items: [
                     { name: "Government Savings Promotion Act, 1873", link: "https://www.indiacode.nic.in/bitstream/123456789/2281/3/a1873-05.pdf" },
                     { name: "Government Savings Promotion Rules, 2018", link: "https://dea.gov.in/sites/default/files/GSPR%202018.pdf" },
-                    { name: "Post Office Savings Account Scheme, 2019", link: "http://www.nsiindia.gov.in/InternalPage.aspx?Id_Pk=142" },
-                    { name: "National Savings Recurring Deposit Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/565706591_RD_Scheme_2019.pdf" },
-                    { name: "National Savings Time Deposit Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/838933226_TD_Scheme_2019.pdf" },
-                    { name: "National Savings (MIA) Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/731174983_MIS_Scheme_2019.pdf" },
-                    { name: "Senior Citizens' Savings Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/567228834_SCSS_2019.pdf" },
-                    { name: "National Savings Certificate (VIII Issue) Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/891334860_NSC_Scheme_2019.pdf" },
-                    { name: "Kisan Vikas Patra Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/619047901_KVP_Scheme_2019.pdf" },
-                    { name: "Public Provident Fund Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/126137356_PPF_2019.pdf" },
-                    { name: "Sukanya Samriddhi Account Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/323382441_SSA_2019.pdf" },
+                    { name: "PO Small Savings Schemes", link: "http://www.nsiindia.gov.in/" },
                     { name: "CBS Manual", link: "https://www.indiapost.gov.in/Financial/Pages/Content/SB-Orders.aspx" },
                     { name: "SB Orders", link: "https://www.indiapost.gov.in/Financial/Pages/Content/SB-Orders.aspx" },
                     { name: "India Post Payments Bank (IPPB)", link: "https://www.ippbonline.com/" },
@@ -80,9 +74,7 @@ const syllabusData = {
                     { name: "Postal Manual Volume V", link: "https://www.indiapost.gov.in/documents/guidelines" },
                     { name: "Postal Manual Volume VI (Parts I, II, III)", link: "https://www.indiapost.gov.in/documents/guidelines" },
                     { name: "Postal Manual Volume VII", link: "https://www.indiapost.gov.in/documents/guidelines" },
-                    { name: "Postal Manual Volume VIII", link: "https://www.indiapost.gov.in/documents/guidelines" },
-                    { name: "PO Guide Part I", link: "https://www.indiapost.gov.in/documents/guidelines" },
-                    { name: "PO Guide Part II", link: "https://www.indiapost.gov.in/documents/guidelines" }
+                    { name: "Postal Manual Volume VIII", link: "https://www.indiapost.gov.in/documents/guidelines" }
                 ]
             },
             {
