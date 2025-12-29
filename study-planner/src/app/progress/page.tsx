@@ -3,7 +3,7 @@
 
 import { useEffect, useState, useMemo } from "react";
 import HomeHeader from "@/components/HomeHeader";
-import { FULL_SCHEDULE } from "@/app/planner/page";
+import { FULL_SCHEDULE } from "@/data/schedule";
 import {
     CheckCircle2,
     Trophy,
