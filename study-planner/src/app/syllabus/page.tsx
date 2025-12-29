@@ -49,7 +49,7 @@ const syllabusData = {
                 ]
             },
             {
-                category: "3. Savings Schemes",
+                category: "3. Small Savings Schemes",
                 icon: <Calculator className="w-5 h-5" />,
                 items: [
                     { name: "Government Savings Promotion Act, 1873", link: "https://www.indiacode.nic.in/bitstream/123456789/2281/3/a1873-05.pdf" },
@@ -65,7 +65,8 @@ const syllabusData = {
                     { name: "Sukanya Samriddhi Account Scheme, 2019", link: "http://www.nsiindia.gov.in/writereaddata/FileUploads/323382441_SSA_2019.pdf" },
                     { name: "CBS Manual", link: "https://www.indiapost.gov.in/Financial/Pages/Content/SB-Orders.aspx" },
                     { name: "SB Orders", link: "https://www.indiapost.gov.in/Financial/Pages/Content/SB-Orders.aspx" },
-                    { name: "India Post Payments Bank (IPPB)", link: "https://www.ippbonline.com/" }
+                    { name: "India Post Payments Bank (IPPB)", link: "https://www.ippbonline.com/" },
+                    { name: "Jansuraksha Schemes (PMJJBY, PMSBY, APY)", link: "https://jansuraksha.gov.in/" }
                 ]
             },
             {
@@ -95,10 +96,11 @@ const syllabusData = {
                 category: "6. Ops & Guidelines",
                 icon: <Mail className="w-5 h-5" />,
                 items: [
-                    { name: "Jansuraksha Schemes (PMJJBY, PMSBY, APY)", link: "https://jansuraksha.gov.in/" },
                     { name: "DIGIPIN (Digital Personal Identification Number)", link: "https://www.indiapost.gov.in/" },
                     { name: "Operational: MNOP, PNOP, Niryat Kendra", link: "https://www.indiapost.gov.in/MBE/Pages/Content/Parcel-Network.aspx" },
-                    { name: "Preservation & Disposal of Records", link: "https://swachhportal.gov.in/" }
+                    { name: "Preservation & Disposal of Records", link: "https://swachhportal.gov.in/" },
+                    { name: "APT Knowledge (IT 2.0)", link: "https://www.indiapost.gov.in/" },
+                    { name: "Working knowledge on Core Banking Solutions, PLI-CIS", link: "https://www.indiapost.gov.in/" }
                 ]
             },
             {
