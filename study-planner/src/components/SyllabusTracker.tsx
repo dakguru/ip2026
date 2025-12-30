@@ -117,7 +117,7 @@ export default function SyllabusTracker({ plan, progress, onComplete, onUncomple
 
     return (
         <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800 p-6 h-[600px] xl:h-[800px] overflow-hidden flex flex-col transition-colors">
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-wrap gap-4 items-center justify-between mb-6">
                 <h2 className="text-lg font-bold text-zinc-800 dark:text-zinc-100 flex items-center gap-2">
                     {viewMode === 'syllabus' ? <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" /> : <BarChart className="w-5 h-5 text-orange-600 dark:text-orange-400" />}
                     {filter === 'all' ? (

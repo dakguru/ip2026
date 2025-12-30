@@ -251,9 +251,31 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                 {mobileMenuOpen && (
                     <div className="lg:hidden fixed inset-0 top-[60px] z-40 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 overflow-y-auto pb-20 p-4">
                         <div className="flex flex-col space-y-4">
-                            {/* Mobile Search - Removed */}
+                            {/* Mobile Search */}
+                            <form
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    const query = (e.currentTarget.elements.namedItem('search') as HTMLInputElement).value;
+                                    if (query.trim()) {
+                                        router.push(`/search?q=${encodeURIComponent(query)}`);
+                                        setMobileMenuOpen(false);
+                                    }
+                                }}
+                                className="relative w-full group mt-2"
+                            >
+                                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <Search className="h-4 w-4 text-zinc-400 group-focus-within:text-blue-500 transition-colors" />
+                                </div>
+                                <input
+                                    type="text"
+                                    name="search"
+                                    className="block w-full pl-10 pr-4 py-3 border border-zinc-200 dark:border-zinc-800 rounded-lg leading-5 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:bg-white dark:focus:bg-zinc-950 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-base transition-all duration-200"
+                                    placeholder="Search topic, notes..."
+                                    autoComplete="off"
+                                />
+                            </form>
 
-                            <nav className="flex flex-col space-y-2 mt-4">
+                            <nav className="flex flex-col space-y-2">
                                 <Link
                                     href="/"
                                     className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"

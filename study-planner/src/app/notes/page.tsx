@@ -455,21 +455,31 @@ export default function NotesPage() {
 
             {/* --- PDF VIEWER MODAL --- */}
             {selectedPdf && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="bg-white rounded-2xl w-full h-full max-w-6xl flex flex-col shadow-2xl overflow-hidden relative">
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-white rounded-none sm:rounded-2xl w-full h-full max-w-6xl flex flex-col shadow-2xl overflow-hidden relative">
                         {/* Header */}
-                        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-white z-10 w-full">
-                            <h3 className="font-bold text-slate-800 flex items-center gap-2">
-                                <FileText className="w-5 h-5 text-purple-600" />
-                                Document Viewer
+                        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-100 bg-white z-10 w-full shrink-0">
+                            <h3 className="font-bold text-slate-800 flex items-center gap-2 text-sm sm:text-base truncate mr-2">
+                                <FileText className="w-5 h-5 text-purple-600 shrink-0" />
+                                <span className="truncate">Document Viewer</span>
                             </h3>
-                            <button
-                                onClick={() => setSelectedPdf(null)}
-                                className="p-2 rounded-full hover:bg-slate-100 text-slate-500 transition-colors"
-                            >
-                                <span className="sr-only">Close</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
-                            </button>
+                            <div className="flex items-center gap-2">
+                                <a
+                                    href={selectedPdf}
+                                    download
+                                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 font-semibold text-xs transition-colors"
+                                >
+                                    <Download className="w-4 h-4" />
+                                    <span className="hidden sm:inline">Download</span>
+                                </a>
+                                <button
+                                    onClick={() => setSelectedPdf(null)}
+                                    className="p-2 rounded-full hover:bg-slate-100 text-slate-500 transition-colors"
+                                >
+                                    <span className="sr-only">Close</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                                </button>
+                            </div>
                         </div>
 
                         {/* Content */}

@@ -167,7 +167,7 @@ export default function StudyPlanner() {
                         <Target className="w-4 h-4 text-blue-300" />
                         <span className="text-sm font-medium text-blue-100 tracking-wide">TARGET: SEPTEMBER 2026</span>
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
                         <span className="text-red-500">Mission</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">"IP 2026"</span> 🎯
                     </h1>
                     <p className="text-xl text-blue-200 max-w-2xl mx-auto mb-10 leading-relaxed">

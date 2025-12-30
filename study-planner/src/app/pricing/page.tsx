@@ -281,38 +281,42 @@ export default function PricingPage() {
 
                         {/* Comparison Table */}
                         <div className="bg-white dark:bg-zinc-900 rounded-3xl shadow-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
-                            <div className="grid grid-cols-4 p-6 border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/20">
-                                <div className="col-span-2 font-bold text-zinc-500 dark:text-zinc-400 text-sm uppercase tracking-wider">Plan Benefits</div>
-                                <div className={`text-center font-bold ${activeTab === 'gold' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Gold</div>
-                                <div className={`text-center font-bold ${activeTab === 'silver' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Silver</div>
-                            </div>
-
-                            <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
-                                {benefits.map((benefit, index) => (
-                                    <div key={index} className="grid grid-cols-4 p-5 items-center hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
-                                        <div className="col-span-2 text-sm sm:text-base font-medium text-zinc-700 dark:text-zinc-300">
-                                            {benefit.name}
-                                        </div>
-                                        <div className={`flex justify-center transition-all ${activeTab === 'gold' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
-                                            {benefit.gold ? (
-                                                <div className="w-8 h-8 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400 shadow-sm">
-                                                    <Check className="w-5 h-5" />
-                                                </div>
-                                            ) : (
-                                                <X className="w-5 h-5 text-zinc-300" />
-                                            )}
-                                        </div>
-                                        <div className={`flex justify-center transition-all ${activeTab === 'silver' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
-                                            {benefit.silver ? (
-                                                <div className="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-900/20 flex items-center justify-center text-slate-500 dark:text-slate-400">
-                                                    <Check className="w-3.5 h-3.5" />
-                                                </div>
-                                            ) : (
-                                                <X className="w-5 h-5 text-red-300 dark:text-red-900/50" />
-                                            )}
-                                        </div>
+                            <div className="overflow-x-auto">
+                                <div className="min-w-[500px]">
+                                    <div className="grid grid-cols-4 p-6 border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/20">
+                                        <div className="col-span-2 font-bold text-zinc-500 dark:text-zinc-400 text-sm uppercase tracking-wider">Plan Benefits</div>
+                                        <div className={`text-center font-bold ${activeTab === 'gold' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Gold</div>
+                                        <div className={`text-center font-bold ${activeTab === 'silver' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Silver</div>
                                     </div>
-                                ))}
+
+                                    <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                                        {benefits.map((benefit, index) => (
+                                            <div key={index} className="grid grid-cols-4 p-5 items-center hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
+                                                <div className="col-span-2 text-sm sm:text-base font-medium text-zinc-700 dark:text-zinc-300">
+                                                    {benefit.name}
+                                                </div>
+                                                <div className={`flex justify-center transition-all ${activeTab === 'gold' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
+                                                    {benefit.gold ? (
+                                                        <div className="w-8 h-8 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400 shadow-sm">
+                                                            <Check className="w-5 h-5" />
+                                                        </div>
+                                                    ) : (
+                                                        <X className="w-5 h-5 text-zinc-300" />
+                                                    )}
+                                                </div>
+                                                <div className={`flex justify-center transition-all ${activeTab === 'silver' ? 'opacity-100 scale-110' : 'opacity-70'}`}>
+                                                    {benefit.silver ? (
+                                                        <div className="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-900/20 flex items-center justify-center text-slate-500 dark:text-slate-400">
+                                                            <Check className="w-3.5 h-3.5" />
+                                                        </div>
+                                                    ) : (
+                                                        <X className="w-5 h-5 text-red-300 dark:text-red-900/50" />
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/10 text-center">
