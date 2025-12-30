@@ -159,6 +159,17 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
 
     return (
         <div className="p-6 transition-colors hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 text-left">
+            {/* Post Author Info */}
+            <div className="flex items-center gap-2 mb-2 text-xs">
+                {/* Avatar for Post Author */}
+                <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-[10px] border border-blue-200 dark:border-blue-800">
+                    {post.author ? post.author[0].toUpperCase() : 'U'}
+                </div>
+                <span className="font-semibold text-zinc-800 dark:text-zinc-200">{post.author}</span>
+                <span className="text-zinc-400">•</span>
+                <span className="text-zinc-500">{post.role}</span>
+            </div>
+
             {/* Tags */}
             <div className="flex gap-2 mb-3">
                 {post.tags.map((tag: string) => (
@@ -177,17 +188,6 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                     <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-2 whitespace-pre-line">{post.description}</p>
                 )}
             </Link>
-
-            {/* Post Author Info */}
-            <div className="flex items-center gap-2 mb-2 text-xs">
-                {/* Avatar for Post Author */}
-                <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-[10px] border border-blue-200 dark:border-blue-800">
-                    {post.author ? post.author[0].toUpperCase() : 'U'}
-                </div>
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">{post.author}</span>
-                <span className="text-zinc-400">•</span>
-                <span className="text-zinc-500">{post.role}</span>
-            </div>
 
             {/* Meta */}
             <div className="flex items-center gap-4 text-xs text-zinc-500 mb-4 ml-8">
