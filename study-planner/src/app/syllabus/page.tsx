@@ -180,7 +180,7 @@ const syllabusData = {
 };
 
 // Sleek Sticky Sub-Nav for Mobile & Desktop
-const StickyTabNav = ({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: (tab: string) => void }) => (
+const StickyTabNav = React.memo(({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: (tab: string) => void }) => (
     <div className="sticky top-[57px] z-40 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="py-2 md:py-3">
@@ -212,10 +212,12 @@ const StickyTabNav = ({ activeTab, setActiveTab }: { activeTab: string, setActiv
             </div>
         </div>
     </div>
-);
+));
+
+StickyTabNav.displayName = "StickyTabNav";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const SyllabusCard = ({ section }: { section: any }) => (
+const SyllabusCard = React.memo(({ section }: { section: any }) => (
     <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm hover:shadow-xl border border-zinc-200 dark:border-zinc-800 overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
         <div className="bg-gradient-to-r from-slate-50 to-zinc-50 dark:from-zinc-800 dark:to-zinc-900 px-5 py-4 border-b border-zinc-100 dark:border-zinc-700 flex items-center space-x-3">
             <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-xl text-blue-600 dark:text-blue-400 shadow-sm">
@@ -260,7 +262,9 @@ const SyllabusCard = ({ section }: { section: any }) => (
             </ul>
         </div>
     </div>
-);
+));
+
+SyllabusCard.displayName = "SyllabusCard";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const HeroSection = ({ activeData }: { activeData: any }) => (
@@ -295,44 +299,7 @@ const HeroSection = ({ activeData }: { activeData: any }) => (
     </div>
 );
 
-const Footer = () => (
-    <footer className="bg-[#0F172A] text-zinc-400 py-12 border-t border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div>
-                    <div className="flex items-center gap-2 mb-4 text-white">
-                        <Image src="/dak-guru-round.png" width={30} height={30} alt="Logo" className="grayscale opacity-80" />
-                        <span className="font-bold text-lg">Dak Guru Syllabus</span>
-                    </div>
-                    <p className="text-sm leading-relaxed text-zinc-500">
-                        A dedicated portal for the Limited Departmental Competitive Examination (LDCE).
-                        Aggregating official notifications, gazettes, and rulebooks in one clean interface.
-                    </p>
-                </div>
-                <div>
-                    <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4">Important Links</h3>
-                    <ul className="space-y-3 text-sm">
-                        <li><a href="https://www.indiapost.gov.in" target="_blank" className="hover:text-blue-400 transition-colors flex items-center gap-2"><ExternalLink className="w-3 h-3" /> India Post Official</a></li>
-                        <li><a href="https://dopt.gov.in" target="_blank" className="hover:text-blue-400 transition-colors flex items-center gap-2"><ExternalLink className="w-3 h-3" /> DoPT</a></li>
-                        <li><a href="https://egazette.gov.in" target="_blank" className="hover:text-blue-400 transition-colors flex items-center gap-2"><ExternalLink className="w-3 h-3" /> e-Gazette</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4">Disclaimer</h3>
-                    <div className="bg-zinc-900/50 p-4 rounded-xl border border-zinc-800">
-                        <p className="text-xs leading-relaxed">
-                            This is an informational interface. Official links are provided for direct reference.
-                            Always verify the latest amendments through official channels.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="mt-12 pt-8 border-t border-zinc-900 text-center text-xs text-zinc-600">
 
-            </div>
-        </div>
-    </footer>
-);
 
 export default function SyllabusPage() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -389,8 +356,6 @@ export default function SyllabusPage() {
                     )}
                 </div>
             </main>
-
-            <Footer />
         </div>
     );
 }

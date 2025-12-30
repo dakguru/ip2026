@@ -22,18 +22,35 @@ export async function middleware(request: NextRequest) {
             return NextResponse.redirect(new URL('/login', request.url));
         }
 
-        // Validate session
+        // Parse token safely
+        let email = "";
+        let sessionId = "";
+
         try {
-            const [email, sessionId] = token.value.split(':');
-
-            if (!email || !sessionId) {
-                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
-                response.cookies.delete('auth_token');
-                response.cookies.delete('user_session');
-                return response;
+            const parts = token.value.split(':');
+            if (parts.length === 2) {
+                [email, sessionId] = parts;
             }
+        } catch (e) {
+            console.error("Token parse error", e);
+        }
 
-            // Call internal API for validation (middleware can't use DB directly easily)
+        if (!email || !sessionId) {
+            const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+            response.cookies.delete('auth_token');
+            response.cookies.delete('user_session');
+            response.cookies.delete('session_v');
+            return response;
+        }
+
+        // Check if session was verified recently (avoid DB call)
+        const isVerified = request.cookies.get('session_v');
+        if (isVerified && isVerified.value === sessionId) {
+            return NextResponse.next();
+        }
+
+        // Validate session via internal API
+        try {
             const baseUrl = request.nextUrl.origin;
             const validateRes = await fetch(`${baseUrl}/api/auth/session`, {
                 method: 'POST',
@@ -42,10 +59,10 @@ export async function middleware(request: NextRequest) {
             });
 
             if (!validateRes.ok) {
-                // Critical error or unauthorized
                 const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
                 response.cookies.delete('auth_token');
                 response.cookies.delete('user_session');
+                response.cookies.delete('session_v');
                 return response;
             }
 
@@ -55,15 +72,27 @@ export async function middleware(request: NextRequest) {
                 const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
                 response.cookies.delete('auth_token');
                 response.cookies.delete('user_session');
+                response.cookies.delete('session_v');
                 return response;
             }
+
+            // Valid session! Set verification cookie for 10 minutes to skip DB check
+            const response = NextResponse.next();
+            response.cookies.set('session_v', sessionId, {
+                maxAge: 600, // 10 minutes
+                path: '/',
+                httpOnly: true,
+                sameSite: 'strict',
+                secure: process.env.NODE_ENV === 'production'
+            });
+            return response;
         } catch (error) {
-            console.error('Middleware session check failed:', error);
-            // On error, let the request through or handle fallback? 
-            // Better to fail safe (require login)
+            console.error('Middleware validation error:', error);
+            // On internal error, we fallback to login for security
             const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
             response.cookies.delete('auth_token');
             response.cookies.delete('user_session');
+            response.cookies.delete('session_v');
             return response;
         }
     }

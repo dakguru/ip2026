@@ -61,11 +61,16 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
             }
 
             // 2. Fetch fresh data from server to catch DB changes (admin updates)
-            if (isLoggedIn || match) {
+            // Throttle: only check once every 2 minutes unless membershipLevel prop changed
+            const now = Date.now();
+            const lastCheck = parseInt(sessionStorage.getItem('last_session_check') || '0');
+
+            if ((isLoggedIn || match) && (now - lastCheck > 120000)) {
                 try {
                     const res = await fetch('/api/auth/me');
                     if (res.ok) {
                         const data = await res.json();
+                        sessionStorage.setItem('last_session_check', now.toString());
                         if (data.user && data.user.membershipLevel) {
                             const distinct = data.user.membershipLevel !== currentMembership;
                             // If DB says something different than what we have (or what was in cookie)
@@ -78,7 +83,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 // recreate cookie string
                                 const expires = new Date();
                                 expires.setDate(expires.getDate() + 1); // 1 day
-                                document.cookie = `user_session=${encodeURIComponent(JSON.stringify(newSession))}; path=/; max-age=86400`;
+                                document.cookie = `user_session=${encodeURIComponent(JSON.stringify(newSession))}; path=/; max-age=86400; samesite=strict`;
 
                                 // Trigger a router refresh to propagate changes if needed
                                 router.refresh();
@@ -312,7 +317,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                     Current Affairs
                                 </Link>
                                 <Link
-                                    href="#"
+                                    href="/syllabus"
                                     className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
