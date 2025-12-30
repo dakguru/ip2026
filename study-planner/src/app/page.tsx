@@ -82,7 +82,7 @@ export default async function Home() {
       <WhyChooseUs />
 
       {/* 6. Contact Us */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-[#0A0F1C] border border-white/5 shadow-2xl">
           {/* Background Effects */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
@@ -146,6 +146,20 @@ export default async function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Mobile App Banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <Image
+            src="/mobile-app-banner.png"
+            alt="Mobile App Banner"
+            width={1280}
+            height={400}
+            className="w-full h-auto object-cover"
+            priority
+          />
         </div>
       </section>
 
