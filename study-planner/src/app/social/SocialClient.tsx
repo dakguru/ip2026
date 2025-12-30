@@ -28,6 +28,7 @@ const SUCCESS_STORIES_DATA = [
         followers: "450",
         views: "5.2k",
         likes: 210,
+        createdAt: "2023-10-15T10:30:00.000Z",
         answer: {
             author: "Vikram Singh",
             role: "Inspector Posts",
@@ -47,6 +48,7 @@ const SUCCESS_STORIES_DATA = [
         followers: "320",
         views: "3.8k",
         likes: 156,
+        createdAt: "2023-11-20T14:45:00.000Z",
         answer: {
             author: "Meera Patel",
             role: "Postal Assistant",
@@ -70,6 +72,7 @@ const FEED_DATA = [
         followers: "125",
         views: "1.2k",
         likes: 45,
+        createdAt: "2024-01-05T09:15:00.000Z",
         answer: {
             author: "Suresh Kumar",
             role: "Inspector Posts (2019 Batch)",
@@ -89,6 +92,7 @@ const FEED_DATA = [
         followers: "89",
         views: "850",
         likes: 128,
+        createdAt: "2024-01-10T16:20:00.000Z",
         answer: {
             author: "Dak Guru Team",
             role: "Official Mentor",
@@ -108,6 +112,7 @@ const FEED_DATA = [
         followers: "302",
         views: "2.5k",
         likes: 12,
+        createdAt: "2024-01-12T11:00:00.000Z",
         answer: null, // Unanswered for demo
         tags: ["Time Management", "Advice"]
     }

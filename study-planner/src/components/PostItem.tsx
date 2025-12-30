@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import Link from "next/link";
-import { Users, MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X } from 'lucide-react';
+import { Users, MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X, Clock } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { format } from 'date-fns';
 
 export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefresh }: { post: any, onSave?: (id: number) => void, isSaved?: boolean, currentUser?: any, onDelete?: (id: number) => void, onRefresh?: () => void }) => {
     const [showCommentBox, setShowCommentBox] = useState(false);
@@ -162,19 +163,24 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
         });
     };
 
-    // ... (rest of the file)
+    const formattedDate = post.createdAt ? format(new Date(post.createdAt), 'MMM d, yyyy • h:mm a') : 'Recently';
 
     return (
         <div className="p-6 transition-colors hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 text-left">
             {/* Post Author Info */}
-            <div className="flex items-center gap-2 mb-2 text-xs">
+            <div className="flex items-center gap-2 mb-3 text-xs">
                 {/* Avatar for Post Author */}
-                <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-[10px] border border-blue-200 dark:border-blue-800">
+                <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xs border border-blue-200 dark:border-blue-800">
                     {post.author ? post.author[0].toUpperCase() : 'U'}
                 </div>
-                <span className="font-semibold text-zinc-800 dark:text-zinc-200">{post.author}</span>
-                <span className="text-zinc-400">•</span>
-                <span className="text-zinc-500">{post.role}</span>
+                <div className="flex flex-col">
+                    <span className="font-bold text-zinc-800 dark:text-zinc-200">{post.author}</span>
+                    <span className="text-zinc-500">{post.role}</span>
+                </div>
+                <div className="ml-auto flex items-center gap-1.5 text-zinc-400 font-medium whitespace-nowrap">
+                    <Clock className="w-3.5 h-3.5" />
+                    {formattedDate}
+                </div>
             </div>
 
             {/* Tags */}
@@ -197,7 +203,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
             </Link>
 
             {/* Meta */}
-            <div className="flex items-center gap-4 text-xs text-zinc-500 mb-4 ml-8">
+            <div className="flex items-center gap-4 text-xs text-zinc-500 mb-4 ml-10">
                 {/* Removed Followers */}
                 <span>{post.views} Views</span>
             </div>
