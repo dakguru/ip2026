@@ -123,10 +123,17 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
     };
 
     const [likesCount, setLikesCount] = useState<number>(post.likes || 0);
-    const [hasLiked, setHasLiked] = useState<boolean>(() => {
-        if (!currentUser || !post.likedBy) return false;
-        return post.likedBy.includes(currentUser.name);
-    });
+    const [hasLiked, setHasLiked] = useState<boolean>(false);
+
+    // Sync state with props
+    React.useEffect(() => {
+        setLikesCount(post.likes || 0);
+        if (currentUser && post.likedBy) {
+            setHasLiked(post.likedBy.includes(currentUser.name));
+        } else {
+            setHasLiked(false);
+        }
+    }, [post.likes, post.likedBy, currentUser]);
 
     const handleLike = () => {
         checkAuthAndExecute(async () => {

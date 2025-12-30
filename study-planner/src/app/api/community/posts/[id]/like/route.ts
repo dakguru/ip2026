@@ -17,7 +17,7 @@ export async function POST(
             return NextResponse.json({ error: 'Username required' }, { status: 400 });
         }
 
-        const result = toggleLike(Number(id), username);
+        const result = await toggleLike(Number(id), username);
 
         console.log(`[Like API] Toggle result:`, result);
 

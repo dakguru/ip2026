@@ -27,6 +27,7 @@ const SUCCESS_STORIES_DATA = [
         role: "Inspector Posts",
         followers: "450",
         views: "5.2k",
+        likes: 210,
         answer: {
             author: "Vikram Singh",
             role: "Inspector Posts",
@@ -45,6 +46,7 @@ const SUCCESS_STORIES_DATA = [
         role: "Postal Assistant",
         followers: "320",
         views: "3.8k",
+        likes: 156,
         answer: {
             author: "Meera Patel",
             role: "Postal Assistant",
@@ -67,6 +69,7 @@ const FEED_DATA = [
         role: "Aspirant",
         followers: "125",
         views: "1.2k",
+        likes: 45,
         answer: {
             author: "Suresh Kumar",
             role: "Inspector Posts (2019 Batch)",
@@ -85,6 +88,7 @@ const FEED_DATA = [
         role: "GDS to PA Aspirant",
         followers: "89",
         views: "850",
+        likes: 128,
         answer: {
             author: "Dak Guru Team",
             role: "Official Mentor",
@@ -103,6 +107,7 @@ const FEED_DATA = [
         role: "Postal Assistant",
         followers: "302",
         views: "2.5k",
+        likes: 12,
         answer: null, // Unanswered for demo
         tags: ["Time Management", "Advice"]
     }
@@ -136,6 +141,15 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
     const [isWriteModalOpen, setIsWriteModalOpen] = useState(false);
     const [isDMModalOpen, setIsDMModalOpen] = useState(false);
     const [user, setUser] = useState<{ name: string; role?: string; email?: string } | null>(null);
+
+    // Banner Like State
+    const [bannerLiked, setBannerLiked] = useState(false);
+    const [bannerLikes, setBannerLikes] = useState(342);
+
+    const handleBannerLike = () => {
+        setBannerLiked(!bannerLiked);
+        setBannerLikes(prev => bannerLiked ? prev - 1 : prev + 1);
+    };
 
     // Initial Data merged from Server Prop + Mock
     const [feedData, setFeedData] = useState<PostType[]>([...initialPosts, ...FEED_DATA]);
@@ -423,8 +437,12 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                                         <button className="flex items-center gap-1.5 px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition-colors">
                                             <MessageCircle className="w-4 h-4" /> Comment
                                         </button>
-                                        <button className="flex items-center gap-1.5 px-4 py-1.5 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-md text-sm font-medium transition-colors">
-                                            <Star className="w-4 h-4" /> Like
+                                        <button
+                                            onClick={handleBannerLike}
+                                            className={`flex items-center gap-1.5 px-4 py-1.5 border rounded-md text-sm font-medium transition-colors ${bannerLiked ? 'bg-orange-100 border-orange-200 text-orange-600' : 'bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-300'}`}
+                                        >
+                                            <Star className={`w-4 h-4 ${bannerLiked ? 'fill-orange-600' : ''}`} />
+                                            {bannerLikes} Likes
                                         </button>
                                     </div>
                                 </div>
