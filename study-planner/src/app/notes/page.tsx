@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HomeHeader from '@/components/HomeHeader';
-import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles } from 'lucide-react';
+import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock } from 'lucide-react';
+import Link from 'next/link';
 
 // --- DATA ---
 interface Note {
@@ -13,10 +14,93 @@ interface Note {
     size?: string;
     color: string;
     comingSoon?: boolean;
+    subtitle?: string;
 }
+
+// Map for scheduled dates
+const SCHEDULE_MAPPING: Record<string, string> = {
+    "Consumer Protection Act, 2019": "19-01-2026",
+    "Information Technology Act, 2000": "21-01-2026",
+    "Government Savings Promotion Rules, 2018": "26-01-2026",
+    "Post Office Savings Account Scheme, 2019": "27-01-2026",
+    "National Savings Recurring Deposit Scheme, 2019": "28-01-2026",
+    "National Savings Time Deposit Scheme, 2019": "29-01-2026",
+    "National Savings (MIA) Scheme, 2019": "30-01-2026",
+    "Senior Citizens' Savings Scheme, 2019": "31-01-2026",
+    "National Savings Certificate (VIII Issue) Scheme": "02-02-2026",
+    "Kisan Vikas Patra Scheme, 2019": "03-02-2026",
+    "Public Provident Fund Scheme, 2019": "04-02-2026",
+    "Sukanya Samriddhi Account Scheme, 2019": "05-02-2026",
+    "Post Office Life Insurance Scheme, 2011": "06-02-2026",
+    "Book of BO Rules": "16-02-2026",
+    "Postal Manual Volume II": "16-02-2026",
+    "Postal Manual Volume III": "16-02-2026",
+    "Postal Manual Volume IV": "16-02-2026",
+    "Postal Manual Volume V": "16-02-2026",
+    "Postal Manual Volume VI, Part-I": "16-02-2026",
+    "Postal Manual Volume VI, Part-II": "16-02-2026",
+    "Postal Manual Volume VI, Part-III": "16-02-2026",
+    "Postal Manual Volume VII": "18-02-2026",
+    "Postal Manual Volume VIII": "18-02-2026",
+    "Mail Operations and Money Remittances": "18-02-2026",
+    "Jansuraksha Schemes": "20-02-2026",
+    "Post Office Guide Part-I": "21-02-2026",
+    "Post Office Guide Part-II": "24-02-2026",
+    "Domestic/Foreign Post Guidelines": "26-02-2026",
+    "DIGIPIN": "27-02-2026",
+    "MNOP & PNOP Guidelines": "28-02-2026",
+    "Centralized Delivery Policy": "03-03-2026",
+    "Dak Ghar Niryat Kendra (DNKs)": "04-03-2026",
+    "Product Consolidation Guidelines": "05-03-2026",
+    "SB Manual Vol I, II & III": "06-03-2026",
+    "POSB (CBS) Manual": "09-03-2026",
+    "Annual Reports & Book of Information": "11-03-2026",
+    "APT Knowledge (IT 2.0)": "12-03-2026",
+    "Core Banking Solutions, PLI-CIS": "13-03-2026",
+    "India Post Payments Bank": "14-03-2026",
+    "Preservation of Records": "16-03-2026",
+    "CCS (Conduct) Rules, 1964": "17-03-2026",
+    "CCS (CCA) Rules, 1965": "18-03-2026",
+    "CCS (Temporary Service) Rules, 1965": "20-03-2026",
+    "GDS (Conduct & Engagement) Rules, 2020": "20-03-2026",
+    "Constitution of India": "21-03-2026",
+    "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023": "31-03-2026",
+    "Central Administrative Tribunal Act, 1985": "01-04-2026",
+    "Revenue Recovery Act, 1890": "02-04-2026",
+    "Prevention of Corruption Act, 1988": "03-04-2026",
+    "RTI Act, 2005 and RTI Rules, 2012": "06-04-2026",
+    "Manual on Procurement of Goods": "08-04-2026",
+    "Manual on Procurement of Works": "10-04-2026",
+    "Manual on Procurement of Consultancy": "13-04-2026",
+    "CCS (GPF) Rules, 1961": "15-04-2026",
+    "CCS (Pension) Rules, 2021": "16-04-2026",
+    "CCS (Commutation of Pension) Rules, 1981": "18-04-2026",
+    "Sexual Harassment of Women at Workplace Act, 2013": "20-04-2026",
+    "CCS (Implementation of NPS) Rules, 2021": "21-04-2026",
+    "CCS (Payment of Gratuity under NPS) Rules, 2021": "22-04-2026",
+    "General Financial Rules, 2017": "23-04-2026",
+    "Fundamental Rules (FR) and Supplementary Rules (SR)": "25-04-2026",
+    "Brochure on Casual Labourers": "28-04-2026",
+    "Maintenance of APAR": "29-04-2026",
+    "Service Discharge Benefit Scheme, 2010": "30-04-2026",
+    "Schedule of Financial Powers": "01-05-2026",
+    "Welfare Measures": "02-05-2026",
+    "P&T FHB Vol I": "05-05-2026",
+    "Postal FHB Vol II": "07-05-2026",
+};
 
 const PDF_DATA: Record<string, Note[]> = {
     "Paper I": [
+        // 6. Rules (Moved to top as per request)
+        {
+            title: "The PO Regulations, 2024",
+            subtitle: "(and its recent amendments/changes as on 31.12.2025)",
+            description: "Detailed rules and regulations under the new Post Office Act.",
+            filename: "PO_Regulations_2025.pdf",
+            path: "/notes/paper-1/PO_Regulations_2025.pdf",
+            size: "8.7 MB",
+            color: "emerald"
+        },
         // 1. Acts
         {
             title: "The Post Office Act, 2023",
@@ -46,14 +130,7 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Information Technology Act, 2000", description: "Legal framework for electronic governance and cyber crimes.", color: "blue", comingSoon: true },
 
         // 6. Rules
-        {
-            title: "The Post Office Rules, 2024 & PO Regulations",
-            description: "Detailed rules and regulations under the new Post Office Act.",
-            filename: "PO_Act_2023_Rules_2024.pdf",
-            path: "/notes/paper-1/PO_Act_2023_Rules_2024.pdf",
-            size: "8.7 MB",
-            color: "emerald"
-        },
+
         { title: "Government Savings Promotion Rules, 2018", description: "General rules applicable to all Government Savings Schemes.", color: "emerald", comingSoon: true },
         { title: "Post Office Savings Account Scheme, 2019", description: "Rules governing POSA accounts.", color: "emerald", comingSoon: true },
         { title: "National Savings Recurring Deposit Scheme, 2019", description: "Rules for RD accounts.", color: "emerald", comingSoon: true },
@@ -197,10 +274,33 @@ const PDF_DATA: Record<string, Note[]> = {
 export default function NotesPage() {
     const [activeTab, setActiveTab] = useState("Paper I");
     const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
+    const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
+
+    useEffect(() => {
+        const checkMembership = () => {
+            const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+            if (match) {
+                try {
+                    const session = JSON.parse(decodeURIComponent(match[2]));
+                    if (session.membershipLevel) {
+                        setMembershipLevel(session.membershipLevel);
+                    }
+                } catch (e) {
+                    console.error("Failed to parse session", e);
+                }
+            }
+        };
+
+        checkMembership();
+    }, []);
+
+    const getReleaseDate = (title: string, fallback: string = "As per schedule") => {
+        return SCHEDULE_MAPPING[title] || fallback;
+    };
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
-            <HomeHeader isLoggedIn={true} membershipLevel="silver" />
+            <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel} />
 
             {/* --- HERO SECTION --- */}
             <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white pb-20 pt-16 px-6 overflow-hidden">
@@ -254,7 +354,7 @@ export default function NotesPage() {
                         >
                             <div className="flex items-start justify-between mb-4">
                                 <div className={`p-3 rounded-xl ${file.comingSoon
-                                    ? 'bg-zinc-100 text-zinc-400'
+                                    ? membershipLevel === 'gold' ? 'bg-zinc-100 text-zinc-400' : 'bg-red-50 text-red-400'
                                     : file.color === 'blue' ? 'bg-blue-50 text-blue-600' :
                                         file.color === 'purple' ? 'bg-purple-50 text-purple-600' :
                                             file.color === 'emerald' ? 'bg-emerald-50 text-emerald-600' :
@@ -268,7 +368,11 @@ export default function NotesPage() {
                                                                             file.color === 'sky' ? 'bg-sky-50 text-sky-600' :
                                                                                 'bg-indigo-50 text-indigo-600'
                                     }`}>
-                                    <FileText className="w-8 h-8" />
+                                    {file.comingSoon && membershipLevel !== 'gold' ? (
+                                        <Lock className="w-8 h-8" />
+                                    ) : (
+                                        <FileText className="w-8 h-8" />
+                                    )}
                                 </div>
                                 <span className={`text-xs font-bold px-2 py-1 rounded-md ${file.comingSoon ? 'bg-zinc-100 text-zinc-400' : 'bg-slate-100 text-slate-500'
                                     }`}>
@@ -279,19 +383,38 @@ export default function NotesPage() {
                             <h3 className={`text-lg font-bold mb-2 leading-tight transition-colors ${file.comingSoon ? 'text-zinc-600' : 'text-slate-800 group-hover:text-purple-700'
                                 }`}>
                                 {file.title}
+                                {file.subtitle && (
+                                    <span className="block text-sm font-normal italic text-slate-500 mt-1">
+                                        {file.subtitle}
+                                    </span>
+                                )}
                             </h3>
                             <p className="text-sm text-slate-500 mb-6 flex-grow leading-relaxed">
                                 {file.description}
                             </p>
 
                             {file.comingSoon ? (
-                                <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-zinc-50 to-zinc-100 border border-zinc-200 p-3 flex items-center justify-center group-hover:from-zinc-100 group-hover:to-zinc-200 transition-all">
-                                    <div className="absolute inset-0 bg-white/50 backdrop-blur-[1px]" />
-                                    <div className="relative flex items-center gap-2 text-zinc-500 font-semibold text-sm">
-                                        <Sparkles className="w-4 h-4 text-amber-400" />
-                                        <span>Coming Soon</span>
+                                membershipLevel === 'gold' ? (
+                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 p-3 flex flex-col items-center justify-center text-center group-hover:from-amber-100 group-hover:to-amber-200 transition-all">
+                                        <div className="relative flex items-center gap-2 text-amber-900 font-bold text-sm mb-1">
+                                            <Sparkles className="w-4 h-4 text-amber-600" />
+                                            <span>Coming Soon</span>
+                                        </div>
+                                        <p className="text-xs text-amber-800 font-medium">
+                                            Materials will be uploaded on {getReleaseDate(file.title)}
+                                        </p>
                                     </div>
-                                </div>
+                                ) : (
+                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 border border-zinc-200 p-3 flex flex-col items-center justify-center text-center">
+                                        <div className="relative flex items-center gap-2 text-zinc-500 font-bold text-sm mb-1">
+                                            <Lock className="w-3 h-3 text-zinc-400" />
+                                            <span>LOCKED</span>
+                                        </div>
+                                        <Link href="/pricing" className="text-xs text-blue-600 hover:underline font-medium">
+                                            Upgrade to Gold to view schedule
+                                        </Link>
+                                    </div>
+                                )
                             ) : (
                                 <>
                                     <div className="grid grid-cols-2 gap-3 mt-auto">

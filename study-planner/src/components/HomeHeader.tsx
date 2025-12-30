@@ -182,8 +182,30 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             </nav>
                         </div>
 
-                        {/* 2. Middle: Spacer (formerly search) */}
-                        <div className="hidden md:flex flex-1 max-w-md"></div>
+                        {/* 2. Middle: Search Bar */}
+                        <div className="hidden md:flex flex-1 max-w-md mx-6">
+                            <form
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    const query = (e.currentTarget.elements.namedItem('search') as HTMLInputElement).value;
+                                    if (query.trim()) {
+                                        router.push(`/search?q=${encodeURIComponent(query)}`);
+                                    }
+                                }}
+                                className="relative w-full group"
+                            >
+                                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <Search className="h-4 w-4 text-zinc-400 group-focus-within:text-blue-500 transition-colors" />
+                                </div>
+                                <input
+                                    type="text"
+                                    name="search"
+                                    className="block w-full pl-10 pr-4 py-2 border border-zinc-200 dark:border-zinc-800 rounded-full leading-5 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:bg-white dark:focus:bg-zinc-950 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 sm:text-sm transition-all duration-200"
+                                    placeholder="Search topic, notes..."
+                                    autoComplete="off"
+                                />
+                            </form>
+                        </div>
 
                         {/* 3. Right: Actions */}
                         <div className="flex items-center gap-3 sm:gap-4 shrink-0">

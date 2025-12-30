@@ -486,6 +486,10 @@ export default function PricingPage() {
                                 By proceeding you agree to our Terms & Conditions.
                                 <br />Secure payment powered by Razorpay.
                             </p>
+                            <p className="mt-3 text-center text-xs text-zinc-500 font-medium bg-zinc-50 dark:bg-zinc-800/50 py-2 rounded-lg border border-zinc-100 dark:border-zinc-700/50">
+                                <span className="font-bold text-zinc-700 dark:text-zinc-300">Note:</span> Make sure the payment is being made to <br />
+                                <span className="font-bold text-blue-600 dark:text-blue-400">"Dak Guru = Vidhya A"</span>
+                            </p>
                         </div>
 
                     </div>
