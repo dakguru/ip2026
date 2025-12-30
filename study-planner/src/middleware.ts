@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
     const token = request.cookies.get('auth_token');
     const { pathname } = request.nextUrl;
 
@@ -17,8 +17,55 @@ export function middleware(request: NextRequest) {
     // If it's not a public path and not login page, it requires authentication
     const isProtectedRoute = !isPublicPath && !isLoginPage;
 
-    if (isProtectedRoute && !token) {
-        return NextResponse.redirect(new URL('/login', request.url));
+    if (isProtectedRoute) {
+        if (!token) {
+            return NextResponse.redirect(new URL('/login', request.url));
+        }
+
+        // Validate session
+        try {
+            const [email, sessionId] = token.value.split(':');
+
+            if (!email || !sessionId) {
+                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+                response.cookies.delete('auth_token');
+                response.cookies.delete('user_session');
+                return response;
+            }
+
+            // Call internal API for validation (middleware can't use DB directly easily)
+            const baseUrl = request.nextUrl.origin;
+            const validateRes = await fetch(`${baseUrl}/api/auth/session`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, sessionId })
+            });
+
+            if (!validateRes.ok) {
+                // Critical error or unauthorized
+                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+                response.cookies.delete('auth_token');
+                response.cookies.delete('user_session');
+                return response;
+            }
+
+            const { valid } = await validateRes.json();
+
+            if (!valid) {
+                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+                response.cookies.delete('auth_token');
+                response.cookies.delete('user_session');
+                return response;
+            }
+        } catch (error) {
+            console.error('Middleware session check failed:', error);
+            // On error, let the request through or handle fallback? 
+            // Better to fail safe (require login)
+            const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+            response.cookies.delete('auth_token');
+            response.cookies.delete('user_session');
+            return response;
+        }
     }
 
     return NextResponse.next();

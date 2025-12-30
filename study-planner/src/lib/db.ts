@@ -22,6 +22,7 @@ export interface User {
     purchaseDate?: string;
     resetToken?: string;
     resetTokenExpiry?: number;
+    currentSessionId?: string;
     createdAt: string;
 }
 
@@ -47,6 +48,7 @@ function mapUser(doc: any): User {
         purchaseDate: doc.purchaseDate ? new Date(doc.purchaseDate).toISOString() : undefined,
         resetToken: doc.resetToken,
         resetTokenExpiry: doc.resetTokenExpiry,
+        currentSessionId: doc.currentSessionId,
         createdAt: doc.createdAt ? new Date(doc.createdAt).toISOString() : new Date().toISOString(),
     };
 }
@@ -143,4 +145,20 @@ export async function updateUser(currentEmail: string, updates: Partial<User>): 
     );
 
     return user ? mapUser(user) : null;
+}
+
+export async function updateSession(email: string, sessionId: string): Promise<boolean> {
+    await dbConnect();
+    const result = await UserModel.updateOne(
+        { email },
+        { $set: { currentSessionId: sessionId } }
+    );
+    return result.modifiedCount > 0;
+}
+
+export async function validateSession(email: string, sessionId: string): Promise<boolean> {
+    await dbConnect();
+    const user = await UserModel.findOne({ email });
+    if (!user) return false;
+    return user.currentSessionId === sessionId;
 }

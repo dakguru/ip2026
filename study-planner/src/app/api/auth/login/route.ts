@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { verifyUser } from '@/lib/db';
+import { verifyUser, updateSession } from '@/lib/db';
 
 export async function POST(request: Request) {
     try {
@@ -21,14 +21,18 @@ export async function POST(request: Request) {
             );
         }
 
+        // Generate a unique session ID
+        const sessionId = crypto.randomUUID();
+        await updateSession(user.email, sessionId);
+
         // specific maxAge in seconds (1 day)
         const maxAge = 60 * 60 * 24;
 
         // Create response
         const response = NextResponse.json({ success: true, user: { name: user.name, email: user.email } });
 
-        // Set cookie
-        response.cookies.set('auth_token', 'valid_token', {
+        // Set cookie - auth_token now holds email and sessionId
+        response.cookies.set('auth_token', `${user.email}:${sessionId}`, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
@@ -37,7 +41,14 @@ export async function POST(request: Request) {
         });
 
         // Set a client-readable cookie for UI state (non-httpOnly)
-        response.cookies.set('user_session', JSON.stringify({ name: user.name, email: user.email, mobile: user.mobile, role: user.role, membershipLevel: user.membershipLevel }), {
+        response.cookies.set('user_session', JSON.stringify({
+            name: user.name,
+            email: user.email,
+            mobile: user.mobile,
+            role: user.role,
+            membershipLevel: user.membershipLevel,
+            sessionId: sessionId
+        }), {
             httpOnly: false,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',

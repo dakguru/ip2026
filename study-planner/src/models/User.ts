@@ -20,6 +20,7 @@ const UserSchema = new mongoose.Schema({
     purchaseDate: { type: Date }, // Date when plan was purchased
     resetToken: { type: String },
     resetTokenExpiry: { type: Number },
+    currentSessionId: { type: String },
     createdAt: { type: Date, default: Date.now },
 }, { timestamps: true });
 

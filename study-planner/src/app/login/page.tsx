@@ -28,6 +28,9 @@ function AuthForm() {
         if (searchParams.get("mode") === "signup") {
             setIsLogin(false);
         }
+        if (searchParams.get("reason") === "session_expired") {
+            setError("Your session has expired or you've logged in on another device. Please sign in again.");
+        }
     }, [searchParams]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
