@@ -7,6 +7,7 @@ import ContactForm from "@/components/ContactForm";
 import FeatureGrid from "@/components/FeatureGrid";
 import WelcomeSection from "@/components/WelcomeSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import LaunchPopup from "@/components/LaunchPopup";
 import { getUserByEmail } from "@/lib/db";
 
 // Social Icons - Simple components or import from lucide if available, 
@@ -41,6 +42,9 @@ export default async function Home() {
     <div className="min-h-screen font-sans bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
       {/* 1. Navbar */}
       <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
+
+      {/* 1.5. Launch Popup */}
+      <LaunchPopup />
 
       {/* 2. Hero Section */}
       <WelcomeSection displayName={displayName} />
