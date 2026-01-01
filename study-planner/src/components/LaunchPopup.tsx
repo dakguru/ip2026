@@ -59,10 +59,10 @@ export default function LaunchPopup() {
                             {/* Title */}
                             <div className="space-y-2">
                                 <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
-                                    We Are Launching <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Soon!</span>
+                                    We Officially <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Launched!</span>
                                 </h2>
-                                <p className="text-sm text-zinc-400">
-                                    We are delighted to announce the official launch of our website.
+                                <p className="text-sm text-zinc-400 font-medium">
+                                    From January 01, 2026. Welcome!
                                 </p>
                             </div>
 
@@ -75,7 +75,7 @@ export default function LaunchPopup() {
                                 </div>
                                 <div className="bg-amber-500/5 rounded-2xl p-3 border border-amber-500/20 flex flex-col items-center justify-center gap-1 hover:bg-amber-500/10 transition-colors">
                                     <Sparkles className="w-6 h-6 text-amber-400 mb-1" />
-                                    <p className="text-[10px] text-amber-500/80 uppercase tracking-wider font-bold">Free Access</p>
+                                    <p className="text-[10px] text-amber-500/80 uppercase tracking-wider font-bold">Free Access Upto</p>
                                     <p className="text-sm font-bold text-white">04 Jan 2026</p>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ export default function LaunchPopup() {
                             {/* Announcement Text */}
                             <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-xl p-3">
                                 <p className="text-xs text-indigo-200/80 leading-relaxed font-medium">
-                                    Enjoy complete access to all features and resources until <span className="text-indigo-200 font-bold">13:00 Hours</span> on the free access date.
+                                    Users can try our website upto 04.01.2026.
                                 </p>
                             </div>
 
