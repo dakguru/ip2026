@@ -275,6 +275,7 @@ export default function NotesPage() {
     const [activeTab, setActiveTab] = useState("Paper I");
     const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
+    const [pdfDarkMode, setPdfDarkMode] = useState(false);
 
     useEffect(() => {
         const checkMembership = () => {
@@ -464,6 +465,16 @@ export default function NotesPage() {
                                 <span className="truncate">Document Viewer</span>
                             </h3>
                             <div className="flex items-center gap-2">
+                                <button
+                                    onClick={() => setPdfDarkMode(!pdfDarkMode)}
+                                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold text-xs transition-colors border ${pdfDarkMode
+                                        ? 'bg-zinc-800 text-zinc-100 border-zinc-700'
+                                        : 'bg-zinc-100 text-zinc-600 border-zinc-200'
+                                        }`}
+                                >
+                                    {pdfDarkMode ? <div className="w-4 h-4 rounded-full bg-yellow-400" /> : <div className="w-4 h-4 rounded-full bg-zinc-400" />}
+                                    <span className="hidden sm:inline">{pdfDarkMode ? 'Light' : 'Dark'}</span>
+                                </button>
                                 <a
                                     href={selectedPdf}
                                     download
@@ -483,11 +494,14 @@ export default function NotesPage() {
                         </div>
 
                         {/* Content */}
-                        <div className="flex-1 bg-slate-100 relative">
+                        <div className={`flex-1 relative ${pdfDarkMode ? 'bg-zinc-900' : 'bg-slate-100'}`}>
                             <object
                                 data={selectedPdf}
                                 type="application/pdf"
-                                className="w-full h-full absolute inset-0 rounded-b-2xl"
+                                className="w-full h-full absolute inset-0 rounded-b-2xl transition-all duration-300"
+                                style={{
+                                    filter: pdfDarkMode ? 'invert(1) hue-rotate(180deg) contrast(0.8)' : 'none'
+                                }}
                             >
                                 <div className="flex flex-col items-center justify-center h-full p-8 text-center bg-white">
                                     <FileText className="w-12 h-12 text-slate-300 mb-4" />

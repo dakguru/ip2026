@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Layout, MessageCircle, Menu } from "lucide-react";
+import { Home, Layout, MessageCircle, Menu, PlayCircle, User } from "lucide-react";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
 export default function MobileBottomNav() {
@@ -14,9 +14,10 @@ export default function MobileBottomNav() {
 
     const navItems = [
         { label: "Home", href: "/", icon: Home },
-        { label: "Planner", href: "/planner", icon: Layout },
-        { label: "Community", href: "/social", icon: MessageCircle },
-        { label: "Updates", href: "/blog", icon: Menu },
+        { label: "My Plan", href: "/planner", icon: Layout },
+        { label: "Tests", href: "/quiz", icon: PlayCircle }, // Changed icon to PlayCircle or similar if available, or keep Layout? Let's use PlayCircle from lucide-react (imported below)
+        { label: "Doubts", href: "/social", icon: MessageCircle },
+        { label: "Profile", href: "/settings", icon: User },
     ];
 
     return (

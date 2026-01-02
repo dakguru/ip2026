@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
+import { useIsMobileApp } from '@/hooks/use-mobile-app';
+import NativeQuizRunner from '@/components/quiz/NativeQuizRunner';
+import NativeResultScreen from '@/components/quiz/NativeResultScreen';
 
 // Custom styles for range slider
 const sliderStyles = `
@@ -56,6 +59,8 @@ export default function QuizDashboard() {
     const [selectedTopic, setSelectedTopic] = useState<QuizTopic | null>(null);
     const [generatedSet, setGeneratedSet] = useState<QuizSet | null>(null);
 
+    const isMobileApp = useIsMobileApp();
+
     // Config State
     const [desiredCount, setDesiredCount] = useState<number>(10);
 
@@ -63,6 +68,7 @@ export default function QuizDashboard() {
     const [currentQIndex, setCurrentQIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({}); // qId -> optionIndex
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [timeTaken, setTimeTaken] = useState(0);
 
     // Helpers
     // const activeTopic = QUIZ_DATA.find(t => t.id === selectedTopic);
@@ -115,10 +121,34 @@ export default function QuizDashboard() {
         setAnswers(prev => ({ ...prev, [qId]: idx }));
     };
 
+    const submitQuizResults = async (finalAnswers: Record<string, number>, finalScore: number, correct: number, wrong: number) => {
+        setIsSubmitted(true);
+        // Update local state to show results (if we are in web mode OR if we want to show shared result view)
+        // For native mode, we might want to stay in native result view or just use the same result view.
+        // Let's reuse the existing result view infrastructure by syncing the answers up.
+        setAnswers(finalAnswers);
+
+        try {
+            await fetch('/api/quiz/result', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    topicId: selectedTopic?.id || 'unknown',
+                    topicTitle: generatedSet?.title.replace('Practice: ', '') || 'Practice',
+                    score: finalScore,
+                    totalQuestions: generatedSet?.questions.length || 0,
+                    correctAnswers: correct,
+                    wrongAnswers: wrong
+                })
+            });
+        } catch (err) {
+            console.error('Failed to save progress:', err);
+        }
+    };
+
     const handleSubmit = async () => {
         if (!generatedSet) return;
 
-        // Calculate score for submission
         let score = 0;
         let correct = 0;
         let wrong = 0;
@@ -132,25 +162,29 @@ export default function QuizDashboard() {
             }
         });
 
-        setIsSubmitted(true);
+        await submitQuizResults(answers, score, correct, wrong);
+    };
 
-        try {
-            // Fire and forget (or await if we want to show saving state)
-            await fetch('/api/quiz/result', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    topicId: selectedTopic?.id || 'unknown',
-                    topicTitle: generatedSet.title.replace('Practice: ', ''),
-                    score,
-                    totalQuestions: generatedSet.questions.length,
-                    correctAnswers: correct,
-                    wrongAnswers: wrong
-                })
-            });
-        } catch (err) {
-            console.error('Failed to save progress:', err);
-        }
+    const handleNativeComplete = async (finalAnswers: Record<string, number>, timeTaken: number) => {
+        if (!generatedSet) return;
+
+        let score = 0;
+        let correct = 0;
+        let wrong = 0;
+        generatedSet.questions.forEach(q => {
+            const ans = finalAnswers[q.id];
+            if (ans === q.correctAnswer) {
+                score++;
+                correct++;
+            } else if (ans !== undefined) {
+                wrong++;
+            }
+        });
+
+        // Sync state back to parent so we can show result screen
+        setAnswers(finalAnswers);
+        setTimeTaken(timeTaken);
+        await submitQuizResults(finalAnswers, score, correct, wrong);
     };
 
     const calculateScore = () => {
@@ -164,6 +198,33 @@ export default function QuizDashboard() {
 
     // --- VIEW: ACTIVE QUIZ & RESULTS ---
     if (view === 'quiz' && generatedSet && currentQ) {
+
+        // Native App Quiz Runner (Only when active doing quiz, loop back to web results for now or keep consistency)
+        // If submitted, show shared result view
+        if (isMobileApp && !isSubmitted) {
+            return (
+                <NativeQuizRunner
+                    quizTitle={generatedSet.title}
+                    questions={generatedSet.questions}
+                    onComplete={handleNativeComplete}
+                    onExit={resetToDashboard}
+                />
+            );
+        }
+
+        if (isMobileApp && isSubmitted) {
+            return (
+                <NativeResultScreen
+                    score={calculateScore()}
+                    totalQuestions={generatedSet.questions.length}
+                    questions={generatedSet.questions}
+                    answers={answers}
+                    timeTaken={timeTaken}
+                    onBack={resetToDashboard}
+                />
+            );
+        }
+
         const total = generatedSet.questions.length;
         const score = calculateScore();
         const isAnswered = answers[currentQ.id] !== undefined;

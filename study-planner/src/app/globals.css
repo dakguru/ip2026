@@ -22,4 +22,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  overscroll-behavior-y: none;
+  /* Prevent pull-to-refresh on mobile */
+  -webkit-tap-highlight-color: transparent;
+  /* Remove tap highlight */
 }
