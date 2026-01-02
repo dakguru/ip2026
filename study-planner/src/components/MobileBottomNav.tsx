@@ -15,8 +15,8 @@ export default function MobileBottomNav() {
     const navItems = [
         { label: "Home", href: "/", icon: Home },
         { label: "My Plan", href: "/planner", icon: Layout },
-        { label: "Tests", href: "/quiz", icon: PlayCircle }, // Changed icon to PlayCircle or similar if available, or keep Layout? Let's use PlayCircle from lucide-react (imported below)
-        { label: "Doubts", href: "/social", icon: MessageCircle },
+        { label: "MCQs", href: "/quiz", icon: PlayCircle },
+        { label: "Community", href: "/social", icon: MessageCircle },
         { label: "Profile", href: "/settings", icon: User },
     ];
 
