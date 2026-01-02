@@ -40,6 +40,25 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 {/* 1. Carousel */}
                 <DashboardCarousel />
 
+                {/* PRO UPGRADE CARD (Prominent) */}
+                <div className="px-4">
+                    <Link href="/pricing" className="block relative overflow-hidden rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-all">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                        <div className="relative z-10 p-5 flex items-center justify-between">
+                            <div className="text-white">
+                                <h3 className="text-lg font-bold flex items-center gap-2">
+                                    <span className="bg-white/20 p-1 rounded text-xs px-2">PRO</span>
+                                    Upgrade to Gold
+                                </h3>
+                                <p className="text-xs text-orange-50 mt-1 font-medium opacity-90">Unlock Full Tests, PDF Notes & Video Classes</p>
+                            </div>
+                            <div className="bg-white text-orange-600 px-4 py-2 rounded-lg font-bold text-xs shadow-sm whitespace-nowrap">
+                                Upgrade Now
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+
                 {/* 2. Main Features Grid */}
                 <div className="px-4">
                     <div className="flex items-center justify-between mb-3">
