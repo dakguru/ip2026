@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart as ReBarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
-import { ArrowLeft, Share2, Award, TrendingUp, Target, Clock } from 'lucide-react';
+import { ArrowLeft, Share2, Award, TrendingUp, Target, Clock, CheckCircle2, XCircle } from 'lucide-react';
 import { QuizSet, Question } from "@/lib/quizTypes";
 
 interface NativeResultScreenProps {
@@ -14,6 +15,8 @@ interface NativeResultScreenProps {
 }
 
 export default function NativeResultScreen({ score, totalQuestions, questions, answers, timeTaken, onBack }: NativeResultScreenProps) {
+    const [showSolutions, setShowSolutions] = useState(false);
+
     const percentage = Math.round((score / totalQuestions) * 100);
     const correct = score;
     const wrong = Object.keys(answers).length - correct;
@@ -41,6 +44,71 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
         const s = seconds % 60;
         return `${m}m ${s}s`;
     };
+
+    if (showSolutions) {
+        return (
+            <div className="min-h-screen bg-zinc-50 dark:bg-black pb-20">
+                <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 p-4 sticky top-0 z-30 flex items-center gap-3">
+                    <button onClick={() => setShowSolutions(false)} className="p-2 -ml-2 text-zinc-600 dark:text-zinc-400">
+                        <ArrowLeft className="w-5 h-5" />
+                    </button>
+                    <h1 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Solutions</h1>
+                </div>
+                <div className="p-4 space-y-4">
+                    {questions.map((q, idx) => {
+                        const userAnswer = answers[q.id];
+                        const isCorrect = userAnswer === q.correctAnswer;
+                        const isSkipped = userAnswer === undefined;
+
+                        return (
+                            <div key={q.id} className={`p-4 rounded-xl border bg-white dark:bg-zinc-900 space-y-3
+                                ${isCorrect ? 'border-green-200 dark:border-green-900' :
+                                    isSkipped ? 'border-zinc-200 dark:border-zinc-800' :
+                                        'border-red-200 dark:border-red-900'}
+                            `}>
+                                <div className="flex gap-3">
+                                    <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold
+                                        ${isCorrect ? 'bg-green-100 text-green-700' :
+                                            isSkipped ? 'bg-zinc-100 text-zinc-500' :
+                                                'bg-red-100 text-red-700'}
+                                    `}>
+                                        {idx + 1}
+                                    </span>
+                                    <div className="flex-1">
+                                        <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-2">{q.text}</p>
+                                        <div className="space-y-1.5">
+                                            {q.options.map((opt, oIdx) => {
+                                                const isOptCorrect = oIdx === q.correctAnswer;
+                                                const isOptSelected = oIdx === userAnswer;
+
+                                                let style = "text-zinc-500 dark:text-zinc-400 border-transparent bg-transparent";
+                                                if (isOptCorrect) style = "text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/20 border-green-200";
+                                                else if (isOptSelected) style = "text-red-700 dark:text-red-400 bg-red-50 dark:bg-red-900/20 border-red-200";
+
+                                                return (
+                                                    <div key={oIdx} className={`text-xs p-2 rounded-lg border ${style} flex items-center justify-between`}>
+                                                        <span>{opt}</span>
+                                                        {isOptCorrect && <CheckCircle2 className="w-3 h-3 text-green-600" />}
+                                                        {isOptSelected && !isOptCorrect && <XCircle className="w-3 h-3 text-red-600" />}
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                        {q.explanation && (
+                                            <div className="mt-3 text-xs bg-zinc-50 dark:bg-zinc-800/50 p-2 rounded-lg text-zinc-600 dark:text-zinc-400">
+                                                <span className="font-bold text-zinc-500 block text-[10px] uppercase mb-1">Explanation</span>
+                                                {q.explanation}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-black pb-20">
@@ -171,7 +239,10 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
                     <button onClick={onBack} className="flex-1 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-bold rounded-xl active:scale-95 transition-transform">
                         Go Dashboard
                     </button>
-                    <button className="flex-1 py-3 bg-blue-600 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 active:scale-95 transition-transform">
+                    <button
+                        onClick={() => setShowSolutions(true)}
+                        className="flex-1 py-3 bg-blue-600 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 active:scale-95 transition-transform"
+                    >
                         View Solutions
                     </button>
                 </div>

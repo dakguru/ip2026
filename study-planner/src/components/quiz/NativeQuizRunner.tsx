@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { ArrowLeft, Clock, Grid, ChevronLeft, ChevronRight, Bookmark, Save, Send } from "lucide-react";
+import { ArrowLeft, Clock, Grid, ChevronLeft, ChevronRight, Bookmark, Send } from "lucide-react";
 import { Question } from "@/lib/quizTypes";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -19,6 +19,69 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     const [visited, setVisited] = useState<Set<string>>(new Set([questions[0]?.id]));
     const [isPaletteOpen, setIsPaletteOpen] = useState(false);
     const [timeLeft, setTimeLeft] = useState(questions.length * 60); // 1 min per question
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
+
+    // Haptic Feedback Helper
+    const vibrate = (ms: number = 10) => {
+        if (typeof navigator !== 'undefined' && navigator.vibrate) {
+            navigator.vibrate(ms);
+        }
+    };
+
+    // Load progress from local storage
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem(`quiz_progress_${quizTitle}`);
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    // Basic validation to ensure it matches current quiz
+                    if (parsed.totalQuestions === questions.length) {
+                        setAnswers(parsed.answers || {});
+                        setMarkedForReview(new Set(parsed.marked || []));
+                        setCurrentIndex(parsed.currentIndex || 0);
+                        setTimeLeft(parsed.timeLeft || questions.length * 60);
+                        setVisited(new Set(parsed.visited || [questions[0]?.id]));
+                    }
+                } catch (e) {
+                    console.error("Failed to load saved quiz progress", e);
+                }
+            }
+        }
+    }, [quizTitle, questions]);
+
+    // Save progress to local storage
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const stateToSave = {
+                answers,
+                marked: Array.from(markedForReview),
+                currentIndex,
+                timeLeft,
+                visited: Array.from(visited),
+                totalQuestions: questions.length
+            };
+            localStorage.setItem(`quiz_progress_${quizTitle}`, JSON.stringify(stateToSave));
+        }
+    }, [answers, markedForReview, currentIndex, timeLeft, visited, quizTitle, questions]);
+
+    // Clear storage on complete/exit
+    const clearProgress = () => {
+        if (typeof window !== 'undefined') {
+            localStorage.removeItem(`quiz_progress_${quizTitle}`);
+        }
+    };
+
+    const handleExitRequest = () => {
+        vibrate(20);
+        setShowExitConfirm(true);
+    };
+
+    const confirmExit = () => {
+        clearProgress();
+        vibrate(20);
+        onExit();
+    };
 
     // Track time taken
     useEffect(() => {
@@ -42,22 +105,42 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     const currentQ = questions[currentIndex];
 
     const handleSelect = (optionIdx: number) => {
+        vibrate(5);
         setAnswers(prev => ({ ...prev, [currentQ.id]: optionIdx }));
     };
 
     const handleNext = () => {
         if (currentIndex < questions.length - 1) {
+            vibrate(10);
             setCurrentIndex(prev => prev + 1);
         }
     };
 
     const handlePrev = () => {
         if (currentIndex > 0) {
+            vibrate(10);
             setCurrentIndex(prev => prev - 1);
         }
     };
 
+    // Swipe handlers
+    const swipeConfidenceThreshold = 10000;
+    const swipePower = (offset: number, velocity: number) => {
+        return Math.abs(offset) * velocity;
+    };
+
+    const handleDragEnd = (e: any, { offset, velocity }: any) => {
+        const swipe = swipePower(offset.x, velocity.x);
+
+        if (swipe < -swipeConfidenceThreshold) {
+            handleNext();
+        } else if (swipe > swipeConfidenceThreshold) {
+            handlePrev();
+        }
+    };
+
     const toggleMarkRef = () => {
+        vibrate(10);
         setMarkedForReview(prev => {
             const next = new Set(prev);
             if (next.has(currentQ.id)) {
@@ -70,6 +153,8 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     };
 
     const handleSubmit = () => {
+        vibrate(30);
+        clearProgress();
         const totalTime = (questions.length * 60) - timeLeft;
         onComplete(answers, totalTime);
     };
@@ -97,7 +182,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
             {/* 1. Top Bar */}
             <div className="h-14 px-4 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm z-20">
                 <div className="flex items-center gap-3">
-                    <button onClick={onExit} className="p-2 -ml-2 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400">
+                    <button onClick={handleExitRequest} className="p-2 -ml-2 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400">
                         <ArrowLeft className="w-5 h-5" />
                     </button>
                     <div className="flex flex-col">
@@ -110,12 +195,15 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                     </div>
                 </div>
                 <div className="flex items-center gap-3">
-                    <div className="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 px-3 py-1 rounded-full text-sm font-mono font-bold flex items-center gap-1.5 border border-red-100 dark:border-red-900/30">
+                    <div className={`px-3 py-1 rounded-full text-sm font-mono font-bold flex items-center gap-1.5 border ${timeLeft < 60 ? 'bg-red-50 text-red-600 border-red-200 animate-pulse' : 'bg-zinc-100 text-zinc-600 border-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:border-zinc-700'}`}>
                         <Clock className="w-3.5 h-3.5" />
                         {formatTime(timeLeft)}
                     </div>
                     <button
-                        onClick={() => setIsPaletteOpen(true)}
+                        onClick={() => {
+                            vibrate(10);
+                            setIsPaletteOpen(true);
+                        }}
                         className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-lg text-zinc-600 dark:text-zinc-300"
                     >
                         <Grid className="w-5 h-5" />
@@ -124,16 +212,25 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
             </div>
 
             {/* 2. Questions Area (Swipeable) */}
-            <div className="flex-1 overflow-y-auto pb-24 bg-zinc-50 dark:bg-black">
-                <AnimatePresence mode="wait">
+            <div className="flex-1 overflow-y-auto pb-24 bg-zinc-50 dark:bg-black overflow-x-hidden">
+                <AnimatePresence mode="popLayout" custom={currentIndex}>
                     <motion.div
                         key={currentIndex}
-                        initial={{ opacity: 0, x: 20 }}
+                        initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        className="p-5"
+                        exit={{ opacity: 0, x: -50 }}
+                        transition={{ duration: 0.2 }}
+                        drag="x"
+                        dragConstraints={{ left: 0, right: 0 }}
+                        dragElastic={0.2}
+                        onDragEnd={handleDragEnd}
+                        className="p-5 h-full"
                     >
-                        <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800 mb-6">
+                        <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800 mb-6 relative">
+                            {/* Swipe Hint */}
+                            <div className="absolute -right-2 top-1/2 -translate-y-1/2 opacity-0 animate-pulse sm:hidden">
+                                <ChevronRight className="w-6 h-6 text-zinc-300" />
+                            </div>
                             <p className="text-lg font-medium text-zinc-800 dark:text-zinc-100 leading-relaxed select-none">
                                 {currentQ.text}
                             </p>
@@ -199,9 +296,9 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                         ) : (
                             <button
                                 onClick={handleNext}
-                                className="flex-1 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white rounded-lg font-bold text-sm shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2 transition-all"
+                                className="flex-1 px-4 py-2.5 bg-zinc-900 dark:bg-white dark:text-zinc-900 active:scale-95 text-white rounded-lg font-bold text-sm shadow-lg flex items-center justify-center gap-2 transition-all"
                             >
-                                Save & Next <ChevronRight className="w-4 h-4" />
+                                Next <ChevronRight className="w-4 h-4" />
                             </button>
                         )}
                     </div>
@@ -231,6 +328,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                 <button
                                     key={q.id}
                                     onClick={() => {
+                                        vibrate(5);
                                         setCurrentIndex(idx);
                                         setIsPaletteOpen(false);
                                     }}
@@ -248,6 +346,37 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                 <div className="flex items-center gap-2"><div className="w-3 h-3 bg-red-50 border border-red-200 rounded-full" /> Visited</div>
                                 <div className="flex items-center gap-2"><div className="w-3 h-3 bg-zinc-50 border border-zinc-200 rounded-full" /> Not Visited</div>
                             </div>
+                        </div>
+                    </motion.div>
+                </div>
+            )}
+
+            {/* 5. Exit Confirmation */}
+            {showExitConfirm && (
+                <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+                    <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowExitConfirm(false)} />
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="bg-white dark:bg-zinc-900 rounded-2xl p-6 w-full max-w-sm relative shadow-xl z-10"
+                    >
+                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Quit Quiz?</h3>
+                        <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+                            Your progress will be lost if you leave now. Are you sure?
+                        </p>
+                        <div className="flex gap-3">
+                            <button
+                                onClick={() => setShowExitConfirm(false)}
+                                className="flex-1 px-4 py-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-bold"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={confirmExit}
+                                className="flex-1 px-4 py-3 rounded-xl bg-red-600 text-white font-bold"
+                            >
+                                Quit
+                            </button>
                         </div>
                     </motion.div>
                 </div>

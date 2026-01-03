@@ -1,14 +1,58 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, Scale, Briefcase, BookOpen, ChevronRight, Zap, Star, Gavel } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Scale, Briefcase, BookOpen, ChevronRight, Zap, Star, Gavel, Lock } from "lucide-react";
 import { motion } from "framer-motion";
 
-// ... (imports remain same) we need to update the import block if we add useIsMobile, but pure CSS is better for "mobile browsers"
-// Actually I will just update the purely visual classes.
-
 export default function GuidePage() {
+    const [isLocked, setIsLocked] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        try {
+            const cookie = document.cookie.split('; ').find(row => row.startsWith('user_session='));
+            if (cookie) {
+                const value = cookie.split('=')[1];
+                const decoded = decodeURIComponent(value);
+                const session = JSON.parse(decoded);
+                if (session && (session.membershipLevel === 'gold' || session.membershipLevel === 'silver')) {
+                    setIsLocked(false);
+                }
+            }
+        } catch (e) {
+            console.error("Failed to parse session", e);
+        } finally {
+            setIsLoading(false);
+        }
+    }, []);
+
+    if (isLoading) {
+        return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-slate-400">Loading access...</div>;
+    }
+
+    if (isLocked) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
+                <div className="bg-slate-900/50 p-8 rounded-3xl border border-slate-800 max-w-md w-full">
+                    <div className="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Lock className="w-8 h-8 text-slate-400" />
+                    </div>
+                    <h1 className="text-2xl font-bold text-white mb-2">Premium Content</h1>
+                    <p className="text-slate-400 mb-8">Access to the Web Guide is restricted to Silver and Gold members. Upgrade your plan to unlock comprehensive resources.</p>
+                    <div className="flex flex-col gap-3">
+                        <Link href="/pricing" className="w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold rounded-xl transition-all">
+                            Upgrade Now
+                        </Link>
+                        <Link href="/" className="w-full py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-xl transition-all">
+                            Back to Home
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white overflow-hidden relative">
 

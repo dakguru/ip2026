@@ -35,21 +35,43 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
         badge: string;
         className?: string;
     }[] = [
-            { title: "PDF Notes", desc: "Downloadable Content", color: "text-rose-600", bg: "bg-rose-50 dark:bg-rose-900/20", border: "group-hover:border-rose-500", shadow: "group-hover:shadow-rose-500/20", icon: FileText, link: "/notes", badge: "Gold" },
+            { title: "Syllabus", desc: "Detailed Course Map", color: "text-orange-600", bg: "bg-orange-50 dark:bg-orange-900/20", border: "group-hover:border-orange-500", shadow: "group-hover:shadow-orange-500/20", icon: BookOpen, link: "/syllabus", badge: "Free" },
             { title: "Study Planner", desc: "Organize Learning", color: "text-violet-600", bg: "bg-violet-50 dark:bg-violet-900/20", border: "group-hover:border-violet-500", shadow: "group-hover:shadow-violet-500/20", icon: Layout, link: "/planner", badge: "Free" },
+            { title: "PDF Notes", desc: "Downloadable Content", color: "text-rose-600", bg: "bg-rose-50 dark:bg-rose-900/20", border: "group-hover:border-rose-500", shadow: "group-hover:shadow-rose-500/20", icon: FileText, link: "/notes", badge: "Gold" },
             { title: "MCQs", desc: "Practice Questions", color: "text-emerald-600", bg: "bg-emerald-50 dark:bg-emerald-900/20", border: "group-hover:border-emerald-500", shadow: "group-hover:shadow-emerald-500/20", icon: CheckCircle2, link: "/quiz", badge: "Silver" },
             { title: "Flash Cards", desc: "Quick Revision", color: "text-amber-600", bg: "bg-amber-50 dark:bg-amber-900/20", border: "group-hover:border-amber-500", shadow: "group-hover:shadow-amber-500/20", icon: Zap, link: "/flashcards", badge: "Silver" },
-            { title: "Web Guide", desc: "Comprehensive Resources", color: "text-blue-600", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-500", shadow: "group-hover:shadow-blue-500/20", icon: BookOpen, link: "/guide", badge: "Free" },
-            { title: "PYQ Papers", desc: "Previous Years", color: "text-cyan-600", bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "group-hover:border-cyan-500", shadow: "group-hover:shadow-cyan-500/20", icon: FileQuestion, link: "/pyq", badge: "Silver" },
-            { title: "Syllabus", desc: "Detailed Course Map", color: "text-orange-600", bg: "bg-orange-50 dark:bg-orange-900/20", border: "group-hover:border-orange-500", shadow: "group-hover:shadow-orange-500/20", icon: BookOpen, link: "/syllabus", badge: "Free" },
-            { title: "Current Affairs", desc: "Daily News & Updates", color: "text-indigo-600", bg: "bg-indigo-50 dark:bg-indigo-900/20", border: "group-hover:border-indigo-500", shadow: "group-hover:shadow-indigo-500/20", icon: Newspaper, link: "/current-affairs", badge: "Free" },
-            { title: "DG Blog", desc: "Circulars & Orders", color: "text-pink-600", bg: "bg-pink-50 dark:bg-pink-900/20", border: "group-hover:border-pink-500", shadow: "group-hover:shadow-pink-500/20", icon: Mail, link: "/blog", badge: "Free" },
+            { title: "Web Guide", desc: "Comprehensive Resources", color: "text-blue-600", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-500", shadow: "group-hover:shadow-blue-500/20", icon: BookOpen, link: "/guide", badge: "Silver" },
+            { title: "Previous Year Questions", desc: "Previous Years", color: "text-cyan-600", bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "group-hover:border-cyan-500", shadow: "group-hover:shadow-cyan-500/20", icon: FileQuestion, link: "/pyq", badge: "Silver" },
+            { title: "Current Affairs", desc: "Daily News & Updates", color: "text-indigo-600", bg: "bg-indigo-50 dark:bg-indigo-900/20", border: "group-hover:border-indigo-500", shadow: "group-hover:shadow-indigo-500/20", icon: Newspaper, link: "/current-affairs", badge: "Silver" },
+            {
+                title: "DG Blog",
+                desc: "Circulars & Orders",
+                color: "text-white",
+                bg: "bg-gradient-to-br from-pink-500 to-rose-600",
+                border: "border-transparent",
+                shadow: "shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40",
+                icon: Mail,
+                link: "/blog",
+                badge: "Free",
+                className: "lg:col-span-2 aspect-[2.5/1]"
+            },
         ];
 
     let features = [...defaultFeatures];
 
     // Dak Guru Community definition
-    const dakGuruTile = { title: "Dak Guru Community", desc: "Ask & Discuss", color: "text-teal-600", bg: "bg-teal-50 dark:bg-teal-900/20", border: "group-hover:border-teal-500", shadow: "group-hover:shadow-teal-500/20", icon: MessageCircleQuestion, link: "/social", badge: "Free", className: "col-span-1" };
+    const dakGuruTile = {
+        title: "Dak Guru Community",
+        desc: "Ask & Discuss",
+        color: "text-white",
+        bg: "bg-gradient-to-br from-teal-500 to-emerald-600",
+        border: "border-transparent",
+        shadow: "shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40",
+        icon: MessageCircleQuestion,
+        link: "/social",
+        badge: "Free",
+        className: "col-span-1 lg:col-span-2 aspect-[2.5/1]"
+    };
 
 
     if (role === 'admin') {
@@ -98,8 +120,8 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
             ...defaultFeatures
         ];
     } else {
-        // Regular User: Add Community and expand it to fill row if needed (optional styling)
-        features.push({ ...dakGuruTile, className: "col-span-2 lg:col-start-2 aspect-[2.5/1]" });
+        // Regular User: Add Community
+        features.push(dakGuruTile);
     }
 
     return (
@@ -127,15 +149,22 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                         <div className={`relative h-full w-full bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 ${borderBottom} ${borderRadius} ${item.border} transition-all duration-300 ease-out shadow-sm hover:shadow-xl ${item.shadow} hover:-translate-y-1 overflow-hidden group-hover:border-b-4`}>
 
                             {/* Badge & Visit Icon */}
-                            <div className={`absolute z-20 flex items-center gap-2 ${isMobileApp ? 'top-1.5 right-1.5' : 'top-3 right-3'}`}>
+                            <div className={`absolute z-20 flex items-center gap-1 ${isMobileApp ? 'top-1.5 right-1.5' : 'top-3 right-3'}`}>
                                 {item.badge && !isMobileApp && (
-                                    <span className={`px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
-                                        item.badge === 'Silver' ? 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300' :
-                                            item.badge === 'Gold' ? 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300' :
-                                                'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900' // Default/Admin
-                                        }`}>
-                                        {item.badge}
-                                    </span>
+                                    <>
+                                        <span className={`px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
+                                            item.badge === 'Silver' ? 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300' :
+                                                item.badge === 'Gold' ? 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300' :
+                                                    'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900' // Default/Admin
+                                            }`}>
+                                            {item.badge}
+                                        </span>
+                                        {item.badge === 'Silver' && (
+                                            <span className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300">
+                                                Gold
+                                            </span>
+                                        )}
+                                    </>
                                 )}
                             </div>
 

@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle } from 'lucide-react';
+import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
@@ -53,6 +53,8 @@ const sliderStyles = `
   }
 `;
 
+const ALLOWED_FREE_TOPICS = ['p1-4', 'p1-5', 'p1-32'];
+
 export default function QuizDashboard() {
     // Navigation State
     const [view, setView] = useState<'topics' | 'config' | 'quiz'>('topics');
@@ -60,6 +62,25 @@ export default function QuizDashboard() {
     const [generatedSet, setGeneratedSet] = useState<QuizSet | null>(null);
 
     const isMobileApp = useIsMobileApp();
+
+    // Membership State
+    const [membershipLevel, setMembershipLevel] = useState<string>('free');
+
+    useEffect(() => {
+        try {
+            const cookie = document.cookie.split('; ').find(row => row.startsWith('user_session='));
+            if (cookie) {
+                const value = cookie.split('=')[1];
+                const decoded = decodeURIComponent(value);
+                const session = JSON.parse(decoded);
+                if (session && session.membershipLevel) {
+                    setMembershipLevel(session.membershipLevel);
+                }
+            }
+        } catch (e) {
+            console.error("Failed to parse session", e);
+        }
+    }, []);
 
     // Config State
     const [desiredCount, setDesiredCount] = useState<number>(10);
@@ -84,6 +105,14 @@ export default function QuizDashboard() {
     };
 
     const handleTopicSelect = (topic: QuizTopic) => {
+        // Double check locked state (though UI should prevent it)
+        const isLocked = !['gold', 'silver'].includes(membershipLevel.toLowerCase()) && !ALLOWED_FREE_TOPICS.includes(topic.id);
+
+        if (isLocked) {
+            // Optional: Show upgrade modal or redirect
+            return;
+        }
+
         setSelectedTopic(topic);
         setView('config');
         setDesiredCount(10); // Default
@@ -555,6 +584,10 @@ export default function QuizDashboard() {
     const paper1Topics = QUIZ_DATA.filter(t => t.category === 'Paper I');
     const paper3Topics = QUIZ_DATA.filter(t => t.category === 'Paper III');
 
+    const isUnlocked = (topicId: string) => {
+        return ['gold', 'silver'].includes(membershipLevel.toLowerCase()) || ALLOWED_FREE_TOPICS.includes(topicId);
+    };
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 transition-colors">
             <div className="max-w-6xl mx-auto">
@@ -581,7 +614,12 @@ export default function QuizDashboard() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {paper1Topics.map(topic => (
-                                <TopicCard key={topic.id} topic={topic} onSelect={handleTopicSelect} />
+                                <TopicCard
+                                    key={topic.id}
+                                    topic={topic}
+                                    onSelect={handleTopicSelect}
+                                    isLocked={!isUnlocked(topic.id)}
+                                />
                             ))}
                         </div>
                     </section>
@@ -594,7 +632,12 @@ export default function QuizDashboard() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {paper3Topics.map(topic => (
-                                <TopicCard key={topic.id} topic={topic} onSelect={handleTopicSelect} />
+                                <TopicCard
+                                    key={topic.id}
+                                    topic={topic}
+                                    onSelect={handleTopicSelect}
+                                    isLocked={!isUnlocked(topic.id)}
+                                />
                             ))}
                         </div>
                     </section>
@@ -604,35 +647,67 @@ export default function QuizDashboard() {
     );
 }
 
-function TopicCard({ topic, onSelect }: { topic: QuizTopic, onSelect: (t: QuizTopic) => void }) {
+function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, onSelect: (t: QuizTopic) => void, isLocked?: boolean }) {
     const qCount = topic.sets.reduce((acc, s) => acc + s.questions.length, 0);
 
-    return (
-        <button
-            onClick={() => onSelect(topic)}
-            className="group bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-purple-900/10 transition-all text-left flex flex-col h-full relative overflow-hidden"
-        >
-            <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+    const Content = () => (
+        <>
+            <div className={`absolute top-0 right-0 p-4 transition-opacity ${isLocked ? 'opacity-10' : 'opacity-5 group-hover:opacity-10'}`}>
                 <BrainCircuit className="w-24 h-24 text-purple-600" />
             </div>
 
             <span className={`text-xs font-bold uppercase tracking-wider mb-2
                 ${topic.category === 'Paper I' ? 'text-blue-600 dark:text-blue-400' : 'text-pink-600 dark:text-pink-400'}
             `}>{topic.category}</span>
-            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors z-10">{topic.title}</h3>
+            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors z-10 pr-2">{topic.title}</h3>
 
-            <div className="mt-auto pt-4 flex items-center gap-2 text-zinc-400 dark:text-zinc-500 text-sm font-medium z-10">
-                {qCount > 0 ? (
-                    <span className="flex items-center gap-2 text-green-600 dark:text-green-400">
-                        <CheckCircle2 className="w-4 h-4" /> {qCount} Questions
-                    </span>
-                ) : (
-                    <span className="flex items-center gap-2">
-                        <Settings className="w-4 h-4" /> Coming Soon
-                    </span>
+            <div className="mt-auto pt-4 flex items-center justify-between z-10 w-full">
+                <div className="text-zinc-400 dark:text-zinc-500 text-sm font-medium">
+                    {isLocked ? (
+                        <div className="flex items-center gap-2 text-zinc-500">
+                            <Lock className="w-4 h-4" />
+                            <span>Locked</span>
+                        </div>
+                    ) : (
+                        qCount > 0 ? (
+                            <span className="flex items-center gap-2 text-green-600 dark:text-green-400">
+                                <CheckCircle2 className="w-4 h-4" /> {qCount} Questions
+                            </span>
+                        ) : (
+                            <span className="flex items-center gap-2">
+                                <Settings className="w-4 h-4" /> Coming Soon
+                            </span>
+                        )
+                    )}
+                </div>
+
+                {isLocked && (
+                    <Link href="/pricing" className="relative z-20 px-3 py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold rounded-full shadow hover:shadow-lg transition-shadow hover:scale-105 active:scale-95">
+                        Upgrade
+                    </Link>
                 )}
             </div>
+        </>
+    );
+
+    const baseClasses = `group bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 transition-all text-left flex flex-col h-full relative overflow-hidden
+        ${isLocked ? 'opacity-70 grayscale-[0.5]' : 'hover:border-purple-200 dark:hover:border-purple-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-purple-900/10 cursor-pointer'}
+    `;
+
+    if (isLocked) {
+        return (
+            <div className={baseClasses}>
+                <Content />
+            </div>
+        );
+    }
+
+    return (
+        <button
+            onClick={() => onSelect(topic)}
+            className={baseClasses}
+        >
+            <Content />
         </button>
     );
 }
-

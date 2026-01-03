@@ -11,7 +11,7 @@ export default function GlobalNavigation() {
     if (pathname === "/" || pathname === "/social" || pathname.startsWith("/planner") || pathname.startsWith("/progress") || pathname.startsWith("/notes") || pathname.startsWith("/guide/pmla") || pathname.startsWith("/guide/cpa") || pathname.startsWith("/guide/pli") || pathname.startsWith("/guide/ccs")) return null;
 
     return (
-        <header className="sticky top-0 z-50 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 py-3 shadow-sm">
+        <header className="sticky top-0 z-50 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 py-3 shadow-sm pt-[max(12px,env(safe-area-inset-top))]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                 {/* Left: Logo */}
                 <Link href="/" className="flex items-center gap-2">

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, Globe, Newspaper, History, Loader2, RefreshCw, AlertCircle, Trophy } from "lucide-react";
+import { ArrowLeft, Globe, Newspaper, History, Loader2, RefreshCw, AlertCircle, Trophy, Lock } from "lucide-react";
 import { format } from "date-fns";
 
 // --- Types ---
@@ -20,12 +20,6 @@ interface NewsItem {
 
 
 
-// --- Configuration ---
-const RAPID_API_KEY = "1bc39bde08msh044dfa558b1e89fp10d0d8jsn64cd63789ee0";
-const NEWS_API_HOST = "real-time-news-data.p.rapidapi.com";
-const AFFAIRS_API_HOST = "current-affairs-of-india.p.rapidapi.com";
-const NEWSAPI_ORG_KEY = "78307967c577440ea972024a7bce20c4";
-
 // --- Components ---
 
 function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "international" | "sports" }) {
@@ -37,41 +31,18 @@ function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "inte
         setLoading(true);
         setError(null);
         try {
-            // Determine query based on type
-            let query = "India";
-            let country = "IN";
+            // Call internal proxy
+            const res = await fetch(`/api/proxy/current-affairs?type=${type}`, { cache: 'no-store' });
 
-            if (type === "international") {
-                query = "World";
-                country = "US";
-            } else if (type === "sports") {
-                query = "Sports";
-                country = "IN";
+            if (!res.ok) {
+                const errorData = await res.json().catch(() => ({}));
+                throw new Error(errorData.error || `Failed to fetch ${type} news`);
             }
 
-            const params = new URLSearchParams({
-                query: query,
-                limit: "20",
-                time_published: "anytime",
-                country: country,
-                lang: "en"
-            });
-
-            // Use Real-Time News Data API
-            const res = await fetch(`https://${NEWS_API_HOST}/search?${params.toString()}`, {
-                headers: {
-                    'x-rapidapi-key': RAPID_API_KEY,
-                    'x-rapidapi-host': NEWS_API_HOST
-                },
-                cache: 'no-store'
-            });
-
-            if (!res.ok) throw new Error(`Failed to fetch ${type} news`);
             const json = await res.json();
-
-            // Real-Time News Data API usually returns { data: [...] }
             setData(json.data || []);
         } catch (err: any) {
+            console.error("News Fetch Error:", err);
             setError(err.message || "An error occurred");
         } finally {
             setLoading(false);
@@ -145,16 +116,13 @@ function HistorySection() {
         setLoading(true);
         setError(null);
         try {
-            const res = await fetch(`https://${AFFAIRS_API_HOST}/history-of-today`, {
-                headers: {
-                    'x-rapidapi-key': RAPID_API_KEY,
-                    'x-rapidapi-host': AFFAIRS_API_HOST
-                },
-                cache: 'no-store'
-            });
+            const res = await fetch(`/api/proxy/current-affairs?type=history`, { cache: 'no-store' });
             if (!res.ok) throw new Error("Failed to fetch history");
             const json = await res.json();
-            setData(Array.isArray(json) ? json : json.data || []);
+            // Proxy returns { data: ... }
+            const historyData = json.data;
+            // Handles if API returns array directly or wrap
+            setData(Array.isArray(historyData) ? historyData : (historyData?.data || []));
         } catch (err: any) {
             console.log("History API Error", err);
             setError("History data currently unavailable.");
@@ -223,6 +191,9 @@ function ErrorDisplay({ message, retry }: { message: string, retry: () => void }
             <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-2">
                 Click to fetch/refresh to retrieve latest updates
             </h3>
+            <p className="text-red-500 mb-4 font-medium text-sm">
+                Error: {message}
+            </p>
             <p className="text-zinc-500 dark:text-zinc-400 mb-6 font-medium">
                 for {format(new Date(), "MMMM dd, yyyy")}
             </p>
@@ -249,6 +220,53 @@ export default function CurrentAffairsPage() {
 
         { id: "history", label: "History of Today", icon: History, color: "text-purple-500" },
     ] as const;
+
+    const [isLocked, setIsLocked] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        try {
+            const cookie = document.cookie.split('; ').find(row => row.startsWith('user_session='));
+            if (cookie) {
+                const value = cookie.split('=')[1];
+                const decoded = decodeURIComponent(value);
+                const session = JSON.parse(decoded);
+                if (session && (session.membershipLevel === 'gold' || session.membershipLevel === 'silver')) {
+                    setIsLocked(false);
+                }
+            }
+        } catch (e) {
+            console.error("Failed to parse session", e);
+        } finally {
+            setIsLoading(false);
+        }
+    }, []);
+
+    if (isLoading) {
+        return <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center text-zinc-400">Loading access...</div>;
+    }
+
+    if (isLocked) {
+        return (
+            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-6 text-center">
+                <div className="bg-white dark:bg-zinc-900 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 max-w-md w-full shadow-xl">
+                    <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Lock className="w-8 h-8 text-zinc-400" />
+                    </div>
+                    <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Premium Content</h1>
+                    <p className="text-zinc-500 dark:text-zinc-400 mb-8">Current Affairs and Daily News updates are reserved for Silver and Gold members. Stay updated with the latest events by upgrading your plan.</p>
+                    <div className="flex flex-col gap-3">
+                        <Link href="/pricing" className="w-full py-3 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                            Upgrade Now
+                        </Link>
+                        <Link href="/" className="w-full py-3 bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium rounded-xl transition-all">
+                            Back to Home
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 transition-colors pb-20">

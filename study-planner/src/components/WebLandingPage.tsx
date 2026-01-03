@@ -53,9 +53,11 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
                         Practice-rich MCQs, structured Study Planner, comprehensive Web Guide, quick-revision Flash Cards, and printable PDF Notes — everything you need to level up your preparation.
                     </p>
 
-                    <Link href="/pricing" className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold text-lg shadow-xl shadow-blue-600/30 transition-all hover:scale-105 active:scale-95">
-                        Join Now
-                    </Link>
+                    {!["gold", "silver"].includes(membershipLevel.toLowerCase()) && (
+                        <Link href="/pricing" className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold text-lg shadow-xl shadow-blue-600/30 transition-all hover:scale-105 active:scale-95">
+                            Join Now
+                        </Link>
+                    )}
                     <div className="w-24 h-1 bg-zinc-200 dark:bg-zinc-800 mx-auto mt-12 rounded-full"></div>
                 </div>
             </section>

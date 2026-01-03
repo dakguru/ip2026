@@ -97,10 +97,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
         };
 
         validateSession();
-    }, [isLoggedIn, currentMembership, router]); // Dependency on currentMembership might cause loop if not careful, but we check for distinct value. 
-    // Actually, distinct check prevents infinite loop.
-
-
+    }, [isLoggedIn, currentMembership, router]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -134,7 +131,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
     return (
         <>
-            <header className={`sticky top-0 z-50 bg-white dark:bg-zinc-950 transition-all border-b border-zinc-200 dark:border-zinc-800 ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
+            <header className={`sticky top-0 z-50 bg-white dark:bg-zinc-950 transition-all border-b border-zinc-200 dark:border-zinc-800 pt-[max(12px,env(safe-area-inset-top))] ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between gap-4 md:gap-8">
 
@@ -218,8 +215,6 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 <ThemeToggle />
                             </div>
 
-
-
                             {isLoggedIn ? (
                                 <UserMenu />
                             ) : (
@@ -254,7 +249,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                 {/* Mobile Navigation Menu */}
                 {mobileMenuOpen && (
-                    <div className="lg:hidden fixed inset-0 top-[60px] z-40 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 overflow-y-auto pb-20 p-4">
+                    <div className="lg:hidden fixed inset-0 top-[60px] z-40 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 overflow-y-auto pb-20 p-4 pt-[max(20px,env(safe-area-inset-top))]">
                         <div className="flex flex-col space-y-4">
                             {/* Mobile Search */}
                             <form
@@ -347,24 +342,10 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Theme</span>
                                 <div className="flex items-center gap-2 bg-zinc-100 dark:bg-zinc-800 p-1 rounded-full border border-zinc-200 dark:border-zinc-700">
                                     <ThemeToggle />
-                                    {/* Since ThemeToggle is a button, we might need a different approach if it doesn't look good inline. 
-                                        Actually, reusing ThemeToggle here is fine if it fits. 
-                                        But wait, ThemeToggle is usually a single button that toggles or a dropdown.
-                                        If it's a dropdown, it might clipped in the mobile menu.
-                                        Let's assume ThemeToggle is a simple button. If not, I should check its code.
-                                        However, I see I wrapped the header one in hidden md:block.
-                                        Let's just re-use ThemeToggle here for now. 
-                                        If it's a dropdown, it might be an issue.
-                                        Let's check the previous turns if ThemeToggle was viewed.
-                                        It wasn't viewed. 
-                                        Let's just render it. A single button typically works.
-                                    */}
                                 </div>
                             </div>
 
                             <div className="pt-4 mt-4 border-t border-zinc-200 dark:border-zinc-800 flex flex-col gap-3">
-
-
                                 {!isLoggedIn ? (
                                     <>
                                         <Link
@@ -399,9 +380,6 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                     </div>
                 )}
             </header>
-
-            {/* WhatsApp Float Button */}
-
         </>
     );
 }
