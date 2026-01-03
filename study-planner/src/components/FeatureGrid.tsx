@@ -53,7 +53,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 icon: Mail,
                 link: "/blog",
                 badge: "Free",
-                className: "lg:col-span-2 aspect-[2.5/1]"
+                className: "col-span-1 aspect-[4/3] sm:aspect-square lg:col-span-2 lg:aspect-[2.5/1]"
             },
         ];
 
@@ -70,7 +70,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
         icon: MessageCircleQuestion,
         link: "/social",
         badge: "Free",
-        className: "col-span-1 lg:col-span-2 aspect-[2.5/1]"
+        className: "col-span-1 aspect-[4/3] sm:aspect-square lg:col-span-2 lg:aspect-[2.5/1]"
     };
 
 
@@ -149,10 +149,11 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                         <div className={`relative h-full w-full bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 ${borderBottom} ${borderRadius} ${item.border} transition-all duration-300 ease-out shadow-sm hover:shadow-xl ${item.shadow} hover:-translate-y-1 overflow-hidden group-hover:border-b-4`}>
 
                             {/* Badge & Visit Icon */}
-                            <div className={`absolute z-20 flex items-center gap-1 ${isMobileApp ? 'top-1.5 right-1.5' : 'top-3 right-3'}`}>
+                            {/* Badge & Visit Icon */}
+                            <div className={`absolute z-20 flex items-center gap-0.5 md:gap-1 ${isMobileApp ? 'top-1.5 right-1.5' : 'top-2 right-2 md:top-3 md:right-3'}`}>
                                 {item.badge && !isMobileApp && (
                                     <>
-                                        <span className={`px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
+                                        <span className={`px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
                                             item.badge === 'Silver' ? 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300' :
                                                 item.badge === 'Gold' ? 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300' :
                                                     'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900' // Default/Admin
@@ -160,7 +161,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                                             {item.badge}
                                         </span>
                                         {item.badge === 'Silver' && (
-                                            <span className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300">
+                                            <span className="px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300">
                                                 Gold
                                             </span>
                                         )}
