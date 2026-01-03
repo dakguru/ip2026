@@ -104,6 +104,7 @@ export const DiscountRequestModal = ({ isOpen, onClose, userEmail, userName, use
                             <p className="text-zinc-600 dark:text-zinc-400 mb-6">
                                 The discount code will be sent to your email
                                 <span className="block font-semibold text-blue-600 mt-1">{formData.email}</span>
+                                <span className="block text-xs mt-2 text-zinc-500 italic">(Check your Spam/Junk folder also, for the Coupon Code)</span>
                             </p>
                             <button
                                 onClick={onClose}
@@ -200,6 +201,6 @@ export const DiscountRequestModal = ({ isOpen, onClose, userEmail, userName, use
                     )}
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
