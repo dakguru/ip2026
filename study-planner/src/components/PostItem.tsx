@@ -294,18 +294,18 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                         <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xs shrink-0 mt-1 shadow-md">
                             {currentUser?.name ? currentUser.name[0].toUpperCase() : 'U'}
                         </div>
-                        <div className="flex-1 flex gap-2">
+                        <div className="flex-1 flex gap-2 items-center">
                             <input
                                 type="text"
                                 value={commentText}
                                 onChange={(e) => setCommentText(e.target.value)}
                                 placeholder="Write a meaningful comment..."
-                                className="flex-1 border border-zinc-200 dark:border-zinc-700 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-zinc-900 shadow-sm"
+                                className="flex-1 border border-zinc-200 dark:border-zinc-700 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-zinc-900 shadow-sm min-w-0"
                                 autoFocus
                             />
                             <button
                                 onClick={handlePostComment}
-                                className="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-black dark:hover:bg-zinc-200 transition-colors shadow-sm"
+                                className="shrink-0 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-black dark:hover:bg-zinc-200 transition-colors shadow-sm"
                             >
                                 Post
                             </button>
