@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, X, Rocket, Zap, Info, Calendar } from "lucide-react";
+import { Sparkles, X, Rocket, Zap, Info, Calendar, Trophy } from "lucide-react";
 
 export default function LaunchPopup() {
     const [isOpen, setIsOpen] = useState(false);
@@ -83,30 +83,45 @@ export default function LaunchPopup() {
                                 </div>
                             </div>
 
-                            {/* Announcement Card */}
-                            <div className="w-full bg-gradient-to-br from-indigo-900/40 to-blue-900/40 border border-indigo-500/20 rounded-xl p-5 backdrop-blur-sm relative overflow-hidden text-left group hover:border-indigo-500/40 transition-colors duration-500">
-                                <div className="flex items-start gap-3">
-                                    <Calendar className="w-5 h-5 text-indigo-300 mt-1 flex-shrink-0" />
-                                    <div className="space-y-2">
-                                        <p className="text-sm font-bold text-indigo-200">
+                            {/* Announcement Card - Revamped */}
+                            <div className="w-full relative group overflow-hidden rounded-2xl p-[2px] shadow-2xl shadow-indigo-500/20 transition-all hover:scale-[1.01] duration-500">
+                                {/* Gradient Border Animation */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-spin-slow opacity-70 group-hover:opacity-100 transition-opacity" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 blur-sm opacity-50" />
+
+                                {/* Inner Content */}
+                                <div className="relative bg-slate-950 rounded-2xl p-4 sm:p-5 h-full flex items-start gap-3 sm:gap-4 overflow-hidden">
+                                    {/* Background Effects */}
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none" />
+
+                                    <div className="relative p-2 sm:p-2.5 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30 shrink-0 group-hover:from-indigo-500/30 group-hover:to-purple-500/30 transition-colors">
+                                        <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-300 group-hover:text-white drop-shadow-lg transition-colors" />
+                                    </div>
+
+                                    <div className="space-y-1 sm:space-y-1.5 text-left relative z-10">
+                                        <h3 className="text-sm sm:text-base font-black text-white tracking-wide flex items-center gap-2 leading-tight">
                                             All India Live Mock Tests
-                                        </p>
-                                        <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                                            Prepare for LDCE IP 2026 with our Live Mock Tests starting from <span className="text-white font-semibold">January 17, 2026</span>. Don't miss out!
+                                            <span className="flex h-1.5 w-1.5 sm:h-2 sm:w-2 relative">
+                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                                                <span className="relative inline-flex rounded-full h-full w-full bg-pink-500"></span>
+                                            </span>
+                                        </h3>
+                                        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
+                                            Prepare for LDCE IP 2026 with our Live Mock Tests starting from <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-yellow-400 font-extrabold">January 17, 2026</span>. <span className="text-pink-300 font-bold block sm:inline mt-0.5 sm:mt-0">Don't miss out!</span>
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="space-y-4 w-full">
-                                <p className="text-sm font-medium text-zinc-400 italic">
+                            <div className="space-y-3 sm:space-y-4 w-full">
+                                <p className="text-xs sm:text-sm font-medium text-zinc-400 italic">
                                     Welcome back to Dak Guru!
                                 </p>
 
                                 {/* CTA */}
                                 <button
                                     onClick={() => setIsOpen(false)}
-                                    className="w-full py-4 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-900 font-black text-base shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all transform hover:-translate-y-1 active:translate-y-0 active:scale-[0.98] ring-1 ring-white/20"
+                                    className="w-full py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-gray-900 font-black text-sm sm:text-base shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all transform hover:-translate-y-1 active:translate-y-0 active:scale-[0.98] ring-1 ring-white/20"
                                 >
                                     Explore the Portal
                                 </button>
