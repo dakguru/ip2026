@@ -32,16 +32,16 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
                 </span>
             </div>
 
-            <div className="mt-10 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-                <Link href="/mock-tests" className="relative group inline-block">
+            <div className="mt-6 md:mt-10 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 w-full max-w-full px-2">
+                <Link href="/mock-tests" className="relative group inline-block w-full sm:w-auto">
                     {/* Glowing effect background */}
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500 via-orange-500 to-red-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200 animate-pulse"></div>
-                    <div className="relative px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg leading-none flex items-center gap-3 shadow-xl transform transition-transform hover:scale-[1.02] active:scale-95 border border-white/20">
-                        <span className="relative flex h-3 w-3 shrink-0">
+                    <div className="relative px-4 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg leading-none flex items-center justify-center gap-2 sm:gap-3 shadow-xl transform transition-transform hover:scale-[1.02] active:scale-95 border border-white/20 w-full">
+                        <span className="relative flex h-2 w-2 sm:h-3 sm:w-3 shrink-0">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 sm:h-3 sm:w-3 bg-white"></span>
                         </span>
-                        <span className="text-white font-bold tracking-wide uppercase text-sm sm:text-base drop-shadow-md text-nowrap">
+                        <span className="text-white font-bold tracking-wide uppercase text-xs sm:text-sm md:text-base drop-shadow-md whitespace-normal sm:whitespace-nowrap text-center">
                             Live : All India Mock Tests for LDCE IP 2026
                         </span>
                     </div>
