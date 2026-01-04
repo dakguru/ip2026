@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, X, Rocket, Zap, Info } from "lucide-react";
+import { Sparkles, X, Rocket, Zap, Info, Calendar } from "lucide-react";
 
 export default function LaunchPopup() {
     const [isOpen, setIsOpen] = useState(false);
@@ -83,16 +83,16 @@ export default function LaunchPopup() {
                                 </div>
                             </div>
 
-                            {/* Important Update Card */}
+                            {/* Announcement Card */}
                             <div className="w-full bg-gradient-to-br from-indigo-900/40 to-blue-900/40 border border-indigo-500/20 rounded-xl p-5 backdrop-blur-sm relative overflow-hidden text-left group hover:border-indigo-500/40 transition-colors duration-500">
                                 <div className="flex items-start gap-3">
-                                    <Info className="w-5 h-5 text-indigo-300 mt-1 flex-shrink-0" />
+                                    <Calendar className="w-5 h-5 text-indigo-300 mt-1 flex-shrink-0" />
                                     <div className="space-y-2">
                                         <p className="text-sm font-bold text-indigo-200">
-                                            Important Update on PDF Notes
+                                            All India Live Mock Tests
                                         </p>
                                         <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                                            To ensure <span className="text-white font-semibold">99.99% accuracy</span>, our team is currently updating all notes to include the latest amendments up to <span className="text-white font-semibold">31.12.2025</span>. We appreciate your patience while we craft the highest quality content for you.
+                                            Prepare for LDCE IP 2026 with our Live Mock Tests starting from <span className="text-white font-semibold">January 17, 2026</span>. Don't miss out!
                                         </p>
                                     </div>
                                 </div>

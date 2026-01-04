@@ -324,6 +324,34 @@ export default function NotesPage() {
 
             {/* --- MAIN CONTENT --- */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+
+                {/* Marquee Banner */}
+                <div className="mb-8 bg-amber-50 border border-amber-200/60 rounded-2xl py-3 px-4 shadow-sm overflow-hidden relative flex items-center">
+                    <div className="shrink-0 bg-amber-100 text-amber-800 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mr-4 shadow-sm z-10 relative">
+                        Important Update
+                    </div>
+                    <div className="overflow-hidden relative flex-1 mask-linear-fade">
+                        <div className="animate-marquee whitespace-nowrap inline-block text-amber-900 font-medium text-sm md:text-base">
+                            <span className="mr-8"></span>
+                            To ensure 99.99% accuracy, our team is currently updating all notes to include the latest amendments up to 31.12.2025. We appreciate your patience while we craft the highest quality content for you.
+                        </div>
+                    </div>
+                    <style jsx>{`
+                        @keyframes marquee {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-100%); }
+                        }
+                        .animate-marquee {
+                            animation: marquee 25s linear infinite;
+                            padding-left: 100%;
+                            display: inline-block;
+                        }
+                        .animate-marquee:hover {
+                            animation-play-state: paused;
+                        }
+                    `}</style>
+                </div>
+
                 {/* Tabs */}
                 <div className="flex justify-center mb-8">
                     <div className="bg-white p-1.5 rounded-2xl shadow-lg border border-slate-200/60 inline-flex gap-2">
@@ -334,7 +362,7 @@ export default function NotesPage() {
                                 className={`px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2 ${activeTab === tab
                                     ? 'bg-purple-600 text-white shadow-md'
                                     : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
-                                    }`}
+                                    } `}
                             >
                                 <Layers className="w-4 h-4" />
                                 {tab}
