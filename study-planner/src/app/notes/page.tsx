@@ -15,6 +15,7 @@ interface Note {
     color: string;
     comingSoon?: boolean;
     subtitle?: string;
+    isFree?: boolean;
 }
 
 // Map for scheduled dates
@@ -99,7 +100,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "PO_Regulations_2024.pdf",
             path: "/notes/paper-1/PO_Regulations_2024.pdf",
             size: "0.9 MB",
-            color: "emerald"
+            color: "emerald",
+            isFree: true
         },
         // 1. Acts
         {
@@ -132,7 +134,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Consumer_Protection_Act_2019.pdf",
             path: "/notes/paper-1/Consumer_Protection_Act_2019.pdf",
             size: "0.7 MB",
-            color: "blue"
+            color: "blue",
+            isFree: true
         },
         {
             title: "Information Technology Act, 2000",
@@ -508,28 +511,40 @@ export default function NotesPage() {
                                     </div>
                                 )
                             ) : (
-                                <>
-                                    <div className="grid grid-cols-2 gap-3 mt-auto">
-                                        <button
-                                            onClick={() => setSelectedPdf(file.path || null)}
-                                            className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-50 text-slate-700 font-semibold text-sm hover:bg-slate-100 transition-colors border border-slate-200"
-                                        >
-                                            <Eye className="w-4 h-4" />
-                                            View
-                                        </button>
-                                        <a
-                                            href={file.path}
-                                            download={file.filename}
-                                            className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
-                                        >
-                                            <Download className="w-4 h-4" />
-                                            Download
-                                        </a>
+                                membershipLevel === 'gold' || file.isFree ? (
+                                    <>
+                                        <div className="grid grid-cols-2 gap-3 mt-auto">
+                                            <button
+                                                onClick={() => setSelectedPdf(file.path || null)}
+                                                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-50 text-slate-700 font-semibold text-sm hover:bg-slate-100 transition-colors border border-slate-200"
+                                            >
+                                                <Eye className="w-4 h-4" />
+                                                View
+                                            </button>
+                                            <a
+                                                href={file.path}
+                                                download={file.filename}
+                                                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
+                                            >
+                                                <Download className="w-4 h-4" />
+                                                Download
+                                            </a>
+                                        </div>
+                                        <div className="mt-3 text-center">
+                                            <span className="text-[10px] uppercase tracking-wider text-slate-300 font-semibold">{file.size}</span>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 border border-zinc-200 p-3 flex flex-col items-center justify-center text-center">
+                                        <div className="relative flex items-center gap-2 text-zinc-500 font-bold text-sm mb-1">
+                                            <Lock className="w-3 h-3 text-zinc-400" />
+                                            <span>PREMIUM</span>
+                                        </div>
+                                        <Link href="/pricing" className="text-xs text-blue-600 hover:underline font-medium">
+                                            Upgrade to Gold to unlock
+                                        </Link>
                                     </div>
-                                    <div className="mt-3 text-center">
-                                        <span className="text-[10px] uppercase tracking-wider text-slate-300 font-semibold">{file.size}</span>
-                                    </div>
-                                </>
+                                )
                             )}
                         </div>
                     ))}
