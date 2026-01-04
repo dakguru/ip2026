@@ -23,6 +23,7 @@ import {
     ChevronUp
 } from 'lucide-react';
 import { FULL_SCHEDULE } from '@/data/schedule';
+import { generatePlannerPDF } from '@/lib/pdf-generator';
 
 // --- DATA: Full Schedule based on the final optimizations ---
 // --- DATA: Full Schedule imported from @/data/schedule ---
@@ -62,6 +63,10 @@ export default function StudyPlanner() {
 
     }, []);
 
+
+
+
+
     // Scroll to today logic
     const scrollToToday = () => {
         // In real app, match current date. For demo, finding first uncompleted.
@@ -80,9 +85,7 @@ export default function StudyPlanner() {
         }
     };
 
-    const handlePrint = () => {
-        window.print();
-    };
+
 
     // Save progress
     const toggleDay = (date: string, topicName: string = '') => {
@@ -155,6 +158,10 @@ export default function StudyPlanner() {
     const totalTasks = schedule.filter(i => i.paper !== 'Revision' && i.paper !== 'End').length;
     const completedTasks = schedule.filter(i => i.paper !== 'Revision' && i.paper !== 'End' && completedDays[i.date]).length;
     const progress = Math.round((completedTasks / totalTasks) * 100) || 0;
+
+    const handlePrint = () => {
+        generatePlannerPDF(schedule, progress);
+    };
 
     return (
         <div ref={topRef} className="min-h-screen bg-slate-50 font-sans text-slate-800 print:bg-white">
