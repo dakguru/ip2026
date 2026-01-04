@@ -357,11 +357,7 @@ function MockTestCard({ mock, onClick }: { mock: MockTest, onClick: () => void }
                     `}>
                         <FileTextIcon className="w-8 h-8" />
                     </div>
-                    {!isExpired && (
-                        <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold rounded-full">
-                            FREE
-                        </span>
-                    )}
+
                 </div>
 
                 <h3 className={`text-xl font-bold mb-2 transition-colors
