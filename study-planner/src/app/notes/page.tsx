@@ -94,11 +94,11 @@ const PDF_DATA: Record<string, Note[]> = {
         // 6. Rules (Moved to top as per request)
         {
             title: "The PO Regulations, 2024",
-            subtitle: "(and its recent amendments/changes as on 31.12.2025)",
+            subtitle: "(and its recent amendments/changes)",
             description: "Detailed rules and regulations under the new Post Office Act.",
-            filename: "PO_Regulations_2025.pdf",
-            path: "/notes/paper-1/PO_Regulations_2025.pdf",
-            size: "8.7 MB",
+            filename: "PO_Regulations_2024.pdf",
+            path: "/notes/paper-1/PO_Regulations_2024.pdf",
+            size: "0.9 MB",
             color: "emerald"
         },
         // 1. Acts
@@ -126,8 +126,22 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "8.8 MB",
             color: "purple"
         },
-        { title: "Consumer Protection Act, 2019", description: "Notes on rights of consumers and redressal mechanisms.", color: "blue", comingSoon: true },
-        { title: "Information Technology Act, 2000", description: "Legal framework for electronic governance and cyber crimes.", color: "blue", comingSoon: true },
+        {
+            title: "Consumer Protection Act, 2019",
+            description: "Notes on rights of consumers and redressal mechanisms.",
+            filename: "Consumer_Protection_Act_2019.pdf",
+            path: "/notes/paper-1/Consumer_Protection_Act_2019.pdf",
+            size: "0.7 MB",
+            color: "blue"
+        },
+        {
+            title: "Information Technology Act, 2000",
+            description: "Legal framework for electronic governance and cyber crimes.",
+            filename: "IT_Act_2000.pdf",
+            path: "/notes/paper-1/IT_Act_2000.pdf",
+            size: "0.8 MB",
+            color: "blue"
+        },
 
         // 6. Rules
 
@@ -146,13 +160,48 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Post Office Life Insurance Scheme, 2011", description: "POLI Rules 2011 & amendments (SANKALAN).", color: "rose", comingSoon: true },
 
         // 18. Postal Manuals
-        { title: "Book of BO Rules", description: "Rules for Branch Post Offices.", color: "amber", comingSoon: true },
-        { title: "Postal Manual Volume II", description: "Organization and general regulations.", color: "amber", comingSoon: true },
-        { title: "Postal Manual Volume III", description: "Discipline and Appeal rules.", color: "amber", comingSoon: true },
-        { title: "Postal Manual Volume IV", description: "Leave, pension, gratuities, and establishment rules.", color: "amber", comingSoon: true },
+        {
+            title: "Book of BO Rules",
+            description: "Rules for Branch Post Offices.",
+            filename: "Book_of_BO_Rules.pdf",
+            path: "/notes/paper-1/Book_of_BO_Rules.pdf",
+            size: "0.6 MB",
+            color: "amber"
+        },
+        {
+            title: "Postal Manual Volume II",
+            description: "Organization and general regulations.",
+            filename: "Postal_Manual_Vol_II.pdf",
+            path: "/notes/paper-1/Postal_Manual_Vol_II.pdf",
+            size: "0.8 MB",
+            color: "amber"
+        },
+        {
+            title: "Postal Manual Volume III",
+            description: "Discipline and Appeal rules.",
+            filename: "Postal_Manual_Vol_III.pdf",
+            path: "/notes/paper-1/Postal_Manual_Vol_III.pdf",
+            size: "0.7 MB",
+            color: "amber"
+        },
+        {
+            title: "Postal Manual Volume IV",
+            description: "Leave, pension, gratuities, and establishment rules.",
+            filename: "Postal_Manual_Vol_IV.pdf",
+            path: "/notes/paper-1/Postal_Manual_Vol_IV.pdf",
+            size: "0.6 MB",
+            color: "amber"
+        },
         { title: "Postal Manual Volume VIII", description: "Manual for various postal operations.", color: "amber", comingSoon: true },
         { title: "Mail Operations and Money Remittances", description: "Guidelines on mail handling and remittances.", color: "amber", comingSoon: true },
-        { title: "Postal Manual Volume V", description: "Except Appendix-1.", color: "amber", comingSoon: true },
+        {
+            title: "Postal Manual Volume V",
+            description: "Except Appendix-1.",
+            filename: "Postal_Manual_Vol_V.pdf",
+            path: "/notes/paper-1/Postal_Manual_Vol_V.pdf",
+            size: "0.7 MB",
+            color: "amber"
+        },
         { title: "Postal Manual Volume VI, Part-I", description: "Chapter-1 details.", color: "amber", comingSoon: true },
         { title: "Postal Manual Volume VI, Part-II", description: "Except telegraphic money orders.", color: "amber", comingSoon: true },
         { title: "Postal Manual Volume VI, Part-III", description: "Except Appendices.", color: "amber", comingSoon: true },
@@ -195,8 +244,22 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Preservation of Records", description: "Disposal and preservation of postal records.", color: "gray", comingSoon: true },
 
         // 45. Conduct Rules
-        { title: "CCS (Conduct) Rules, 1964", description: "Code of conduct for government servants.", color: "red", comingSoon: true },
-        { title: "CCS (CCA) Rules, 1965", description: "Classification, Control and Appeal rules.", color: "red", comingSoon: true },
+        {
+            title: "CCS (Conduct) Rules, 1964",
+            description: "Code of conduct for government servants.",
+            filename: "CCS_Conduct_Rules_1965.pdf",
+            path: "/notes/paper-1/CCS_Conduct_Rules_1965.pdf",
+            size: "0.6 MB",
+            color: "red"
+        },
+        {
+            title: "CCS (CCA) Rules, 1965",
+            description: "Classification, Control and Appeal rules.",
+            filename: "CCS_CCA_Rules_1965.pdf",
+            path: "/notes/paper-1/CCS_CCA_Rules_1965.pdf",
+            size: "0.8 MB",
+            color: "red"
+        },
         { title: "CCS (Temporary Service) Rules, 1965", description: "Rules for temporary service.", color: "red", comingSoon: true },
         { title: "GDS (Conduct & Engagement) Rules, 2020", description: "Rules related to Gramin Dak Sevaks.", color: "red", comingSoon: true },
     ],

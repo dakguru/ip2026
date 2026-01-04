@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Shield, Users, ArrowLeft, Loader2, Search, CreditCard, Calendar, CheckCircle, Smartphone } from "lucide-react";
+import { Shield, Users, ArrowLeft, Loader2, Search, CreditCard, Calendar, CheckCircle, Smartphone, Download, FileText } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
+
 
 interface UserData {
     id: string;
@@ -101,6 +104,63 @@ export default function AdminDashboard() {
         }
     };
 
+    const downloadCSV = () => {
+        const headers = ['ID', 'Name', 'Email', 'Role', 'Status', 'Joined', 'Mobile', 'Designation', 'Office', 'Division', 'Circle', 'Plan', 'Amount'];
+        const csvContent = [
+            headers.join(','),
+            ...users.map(u => [
+                u.id,
+                `"${u.name}"`,
+                u.email,
+                u.role,
+                u.membershipLevel || 'free',
+                format(new Date(u.createdAt), 'yyyy-MM-dd'),
+                u.mobile || '',
+                u.designation || '',
+                `"${u.officeName || ''}"`,
+                `"${u.division || ''}"`,
+                `"${u.circle || ''}"`,
+                u.planName || '',
+                u.planName?.includes('Yearly Gold') ? '649' : u.planName?.includes('Monthly Gold') ? '599' : u.planName?.includes('18 Months') ? '799' : '0'
+            ].join(','))
+        ].join('\n');
+
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `users_export_${format(new Date(), 'yyyy-MM-dd')}.csv`;
+        link.click();
+    };
+
+    const downloadPDF = () => {
+        const doc = new jsPDF();
+
+        doc.setFontSize(18);
+        doc.text("User Report", 14, 22);
+        doc.setFontSize(11);
+        doc.text(`Generated on ${format(new Date(), 'PPP')}`, 14, 30);
+
+        const tableBody = users.map(u => [
+            u.name,
+            u.email,
+            u.role,
+            u.membershipLevel || 'free',
+            format(new Date(u.createdAt), 'MMM d, yyyy'),
+            u.mobile || '-',
+            u.planName?.includes('Yearly Gold') ? '649' : u.planName?.includes('Monthly Gold') ? '599' : u.planName?.includes('18 Months') ? '799' : '-'
+        ]);
+
+        autoTable(doc, {
+            startY: 40,
+            head: [['Name', 'Email', 'Role', 'Status', 'Joined', 'Mobile', 'Paid']],
+            body: tableBody,
+            styles: { fontSize: 8 },
+            headStyles: { fillColor: [63, 63, 70] }
+        });
+
+        doc.save(`users_report_${format(new Date(), 'yyyy-MM-dd')}.pdf`);
+    };
+
     const filteredUsers = users.filter(u =>
         u.name.toLowerCase().includes(search.toLowerCase()) ||
         u.email.toLowerCase().includes(search.toLowerCase())
@@ -154,8 +214,8 @@ export default function AdminDashboard() {
 
                 <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 overflow-hidden">
                     {/* Toolbar */}
-                    <div className="p-4 border-b border-zinc-100 dark:border-zinc-800 flex items-center gap-4">
-                        <div className="relative flex-1 max-w-md">
+                    <div className="p-4 border-b border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <div className="relative flex-1 max-w-md w-full">
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
                             <input
                                 type="text"
@@ -164,6 +224,22 @@ export default function AdminDashboard() {
                                 onChange={(e) => setSearch(e.target.value)}
                                 className="w-full pl-10 pr-4 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg text-sm text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-500/20"
                             />
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <button
+                                onClick={downloadCSV}
+                                className="flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 hover:bg-green-100 dark:bg-green-900/20 dark:text-green-300 dark:hover:bg-green-900/30 rounded-lg text-sm font-medium transition-colors"
+                            >
+                                <FileText className="w-4 h-4" />
+                                Export CSV
+                            </button>
+                            <button
+                                onClick={downloadPDF}
+                                className="flex items-center gap-2 px-4 py-2 bg-red-50 text-red-700 hover:bg-red-100 dark:bg-red-900/20 dark:text-red-300 dark:hover:bg-red-900/30 rounded-lg text-sm font-medium transition-colors"
+                            >
+                                <Download className="w-4 h-4" />
+                                Export PDF
+                            </button>
                         </div>
                     </div>
 
@@ -181,7 +257,12 @@ export default function AdminDashboard() {
                             </thead>
                             <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
                                 {filteredUsers.map((user) => (
-                                    <tr key={user.id} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
+                                    <tr
+                                        key={user.id}
+                                        className={`hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors ${user.membershipLevel === 'gold' ? 'bg-amber-50/50 dark:bg-amber-900/10' :
+                                                user.membershipLevel === 'silver' ? 'bg-slate-50/50 dark:bg-slate-900/10' : ''
+                                            }`}
+                                    >
                                         <td className="py-4 px-6">
                                             <div>
                                                 <p className="font-semibold text-zinc-900 dark:text-zinc-100">{user.name}</p>
