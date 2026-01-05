@@ -172,15 +172,42 @@ export default function MockTestsPage() {
                         </div>
                     )}
 
-                    <div className="bg-white/50 dark:bg-zinc-900/50 backdrop-blur-xl rounded-2xl md:rounded-3xl p-5 md:p-8 border border-zinc-200/50 dark:border-zinc-800/50">
-                        <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 flex items-center gap-3">
-                            <Calendar className="w-5 h-5 md:w-6 md:h-6 text-blue-500" />
-                            Complete Schedule ({upcomingMocks.length} Tests)
-                        </h2>
-                        <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                            {upcomingMocks.map(mock => (
-                                <MockTestCard key={mock.id} mock={mock} onClick={() => setSelectedMock(mock)} />
-                            ))}
+                    {/* Revamped Schedule Section */}
+                    <div className="relative group">
+                        {/* Animated Gradient Border Effect */}
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-[2rem] opacity-30 blur-md group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                        <div className="relative bg-white dark:bg-zinc-950 rounded-[1.9rem] p-6 md:p-10 shadow-2xl overflow-hidden ring-1 ring-zinc-900/5 dark:ring-white/10">
+
+                            {/* Decorative Background Blobs */}
+                            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+                            <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+                            <div className="relative z-10">
+                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                                    <div>
+                                        <h2 className="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-zinc-800 to-zinc-600 dark:from-white dark:to-zinc-400 flex items-center gap-3">
+                                            <Calendar className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                                            Complete Schedule
+                                        </h2>
+                                        <p className="mt-2 text-zinc-500 dark:text-zinc-400 font-medium">
+                                            Your roadmap to success. Stay consistent and track your progress.
+                                        </p>
+                                    </div>
+                                    <div className="flex items-center gap-2 px-4 py-2 bg-zinc-100 dark:bg-zinc-800/80 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">
+                                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                        <span className="font-bold text-zinc-700 dark:text-zinc-300 text-sm">
+                                            {upcomingMocks.length} Upcoming Tests
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="grid gap-5 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                                    {upcomingMocks.map(mock => (
+                                        <MockTestCard key={mock.id} mock={mock} onClick={() => setSelectedMock(mock)} />
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
