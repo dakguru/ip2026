@@ -35,9 +35,9 @@ export async function POST(request: Request) {
             const validityDate = new Date(purchaseDate);
             validityDate.setDate(validityDate.getDate() + validityDays);
 
-            // Using findOneAndUpdate to locate and update user
+            // Using findOneAndUpdate to locate and update user with case-insensitive email
             const updatedUser = await User.findOneAndUpdate(
-                { email: email },
+                { email: { $regex: new RegExp(`^${email.trim()}$`, 'i') } },
                 {
                     membershipLevel: plan.type, // 'gold' or 'silver'
                     membershipValidity: validityDate,
@@ -49,9 +49,11 @@ export async function POST(request: Request) {
             );
 
             if (!updatedUser) {
-                console.warn(`User with email ${email} not found during payment update.`);
-                // We still return success for payment, but log the error. 
-                // In real app, might want to handle this manually or webhook.
+                console.error(`CRITICAL: User with email ${email} not found during payment update. OrderID: ${razorpay_order_id}`);
+                return NextResponse.json({
+                    error: 'Payment verified but User not found. Please contact support.',
+                    debug_email: email
+                }, { status: 404 });
             }
         }
 
