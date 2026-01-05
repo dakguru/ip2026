@@ -263,7 +263,14 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.8 MB",
             color: "red"
         },
-        { title: "CCS (Temporary Service) Rules, 1965", description: "Rules for temporary service.", color: "red", comingSoon: true },
+        {
+            title: "CCS (Temporary Service) Rules, 1965",
+            description: "Rules for temporary service.",
+            filename: "CCS_Temporary_Services_Rules_1965.pdf",
+            path: "/notes/paper-1/CCS_Temporary_Services_Rules_1965.pdf",
+            size: "0.2 MB",
+            color: "red"
+        },
         { title: "GDS (Conduct & Engagement) Rules, 2020", description: "Rules related to Gramin Dak Sevaks.", color: "red", comingSoon: true },
     ],
     "Paper III": [
