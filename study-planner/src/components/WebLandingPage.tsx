@@ -22,7 +22,8 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
             <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
 
             {/* 1.5. Launch Popup */}
-            <LaunchPopup />
+            {/* 1.5. Launch Popup - Only for Free Users */}
+            {!["gold", "silver"].includes(membershipLevel.toLowerCase()) && <LaunchPopup />}
 
             {/* 2. Hero Section */}
             <WelcomeSection displayName={displayName} />

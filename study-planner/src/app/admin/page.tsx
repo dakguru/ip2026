@@ -87,7 +87,8 @@ export default function AdminDashboard() {
                     updates: {
                         name: editingUser.name,
                         role: editingUser.role,
-                        membershipLevel: editingUser.membershipLevel
+                        membershipLevel: editingUser.membershipLevel,
+                        membershipValidity: editingUser.membershipValidity
                     }
                 })
             });
@@ -260,7 +261,7 @@ export default function AdminDashboard() {
                                     <tr
                                         key={user.id}
                                         className={`hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors ${user.membershipLevel === 'gold' ? 'bg-amber-50/50 dark:bg-amber-900/10' :
-                                                user.membershipLevel === 'silver' ? 'bg-slate-50/50 dark:bg-slate-900/10' : ''
+                                            user.membershipLevel === 'silver' ? 'bg-slate-50/50 dark:bg-slate-900/10' : ''
                                             }`}
                                     >
                                         <td className="py-4 px-6">
@@ -475,6 +476,18 @@ export default function AdminDashboard() {
                                     <option value="gold">Gold Member</option>
                                 </select>
                             </div>
+
+                            {["gold", "silver"].includes(editingUser.membershipLevel || "") && (
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Membership Validity</label>
+                                    <input
+                                        type="date"
+                                        value={editingUser.membershipValidity ? new Date(editingUser.membershipValidity).toISOString().split('T')[0] : ''}
+                                        onChange={(e) => setEditingUser({ ...editingUser, membershipValidity: new Date(e.target.value).toISOString() })}
+                                        className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500/20"
+                                    />
+                                </div>
+                            )}
                             <DialogFooter>
                                 <button
                                     type="button"

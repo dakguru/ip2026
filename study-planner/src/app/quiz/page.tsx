@@ -83,7 +83,7 @@ export default function QuizDashboard() {
     }, []);
 
     // Config State
-    const [desiredCount, setDesiredCount] = useState<number>(10);
+    const [quizRange, setQuizRange] = useState<{ start: number; end: number }>({ start: 1, end: 10 });
 
     // Quiz Session State
     const [currentQIndex, setCurrentQIndex] = useState(0);
@@ -115,21 +115,27 @@ export default function QuizDashboard() {
 
         setSelectedTopic(topic);
         setView('config');
-        setDesiredCount(10); // Default
+        // Reset range to default 1-10 or max available
+        const total = topic.sets.reduce((acc, s) => acc + s.questions.length, 0);
+        setQuizRange({ start: 1, end: Math.min(10, total) });
     };
 
     const startQuiz = () => {
         if (!selectedTopic) return;
 
-        // 1. Gather all questions from all sets in this topic
+        // 1. Gather all questions
         let allQuestions = selectedTopic.sets.flatMap(s => s.questions);
 
-        // 2. Shuffle
-        allQuestions = allQuestions.sort(() => Math.random() - 0.5);
+        // 2. Select Range (1-based inputs converted to 0-based indices)
+        const startIdx = Math.max(0, quizRange.start - 1);
+        const endIdx = Math.min(allQuestions.length, quizRange.end);
 
-        // 3. Slice
-        const count = desiredCount === -1 ? allQuestions.length : Math.min(desiredCount, allQuestions.length);
-        const finalQuestions = allQuestions.slice(0, count);
+        const selectedQuestions = allQuestions.slice(startIdx, endIdx);
+
+        if (selectedQuestions.length === 0) return;
+
+        // 3. Shuffle SELECTED questions (Optional, but good for quiz feel)
+        const finalQuestions = selectedQuestions.sort(() => Math.random() - 0.5);
 
         // 4. Create a temporary set
         const tempSet: QuizSet = {
@@ -440,6 +446,14 @@ export default function QuizDashboard() {
     if (view === 'config' && selectedTopic) {
         const availableQuestions = selectedTopic.sets.reduce((acc, set) => acc + set.questions.length, 0);
 
+        // Calculate 20% Chunks
+        const chunkSize = Math.ceil(availableQuestions / 5);
+        const chunks = Array.from({ length: 5 }, (_, i) => {
+            const start = i * chunkSize + 1;
+            const end = Math.min((i + 1) * chunkSize, availableQuestions);
+            return { start, end };
+        }).filter(c => c.start <= availableQuestions);
+
         return (
             <>
                 <style dangerouslySetInnerHTML={{ __html: sliderStyles }} />
@@ -465,98 +479,196 @@ export default function QuizDashboard() {
 
                                     {/* Slider and Input Container */}
                                     <div className="space-y-6">
-                                        {/* Input Box */}
+
+                                        {/* Dual Input Box */}
                                         <div className="flex items-center justify-center gap-4">
+                                            {/* Start Input */}
                                             <div className="relative">
                                                 <input
                                                     type="number"
                                                     min="1"
-                                                    max={availableQuestions}
-                                                    value={desiredCount === -1 ? availableQuestions : desiredCount}
+                                                    max={quizRange.end}
+                                                    value={quizRange.start}
                                                     onChange={(e) => {
-                                                        const val = parseInt(e.target.value) || 1;
-                                                        if (val >= availableQuestions) {
-                                                            setDesiredCount(-1);
-                                                        } else {
-                                                            setDesiredCount(Math.max(1, Math.min(val, availableQuestions)));
-                                                        }
+                                                        const val = Math.max(1, Math.min(parseInt(e.target.value) || 1, quizRange.end));
+                                                        setQuizRange(prev => ({ ...prev, start: val }));
                                                     }}
-                                                    className="w-32 px-4 py-3 text-center text-2xl font-bold bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border-2 border-purple-300 dark:border-purple-700 rounded-xl text-purple-700 dark:text-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                                    className="w-24 px-3 py-3 text-center text-xl font-bold bg-zinc-50 dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-xl text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-purple-500 transition-all"
                                                 />
-                                                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-zinc-500 dark:text-zinc-400 whitespace-nowrap">
-                                                    {desiredCount === -1 ? 'All Questions' : 'Questions'}
+                                                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
+                                                    Start
+                                                </div>
+                                            </div>
+
+                                            <div className="text-zinc-300 dark:text-zinc-600 font-bold">——</div>
+
+                                            {/* End Input */}
+                                            <div className="relative">
+                                                <input
+                                                    type="number"
+                                                    min={quizRange.start}
+                                                    max={availableQuestions}
+                                                    value={quizRange.end}
+                                                    onChange={(e) => {
+                                                        const val = Math.max(quizRange.start, Math.min(parseInt(e.target.value) || availableQuestions, availableQuestions));
+                                                        setQuizRange(prev => ({ ...prev, end: val }));
+                                                    }}
+                                                    className="w-24 px-3 py-3 text-center text-xl font-bold bg-zinc-50 dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-xl text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-purple-500 transition-all"
+                                                />
+                                                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
+                                                    End
                                                 </div>
                                             </div>
                                         </div>
 
-                                        {/* Slider */}
-                                        <div className="px-2">
-                                            <div className="relative">
-                                                {/* Slider Track Background */}
-                                                <div className="absolute top-1/2 left-0 right-0 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full transform -translate-y-1/2"></div>
+                                        {/* Dual Handle Slider */}
+                                        <div className="px-2 py-4">
+                                            <div className="relative w-full h-8 flex items-center">
+                                                {/* Track Background */}
+                                                <div className="absolute left-0 right-0 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
 
-                                                {/* Slider Track Fill */}
+                                                {/* Active Range Highlight */}
                                                 <div
-                                                    className="absolute top-1/2 left-0 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full transform -translate-y-1/2 transition-all duration-200"
+                                                    className="absolute h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full z-10 pointer-events-none"
                                                     style={{
-                                                        width: `${((desiredCount === -1 ? availableQuestions : desiredCount) / availableQuestions) * 100}%`
+                                                        left: `${((quizRange.start - 1) / availableQuestions) * 100}%`,
+                                                        width: `${((quizRange.end - quizRange.start + 1) / availableQuestions) * 100}%`
                                                     }}
                                                 ></div>
 
-                                                {/* Slider Input */}
+                                                {/* Hidden Dual Inputs for Thumb Interaction */}
+                                                {/* Start Thumb Input - Controls 'start' */}
                                                 <input
                                                     type="range"
                                                     min="1"
                                                     max={availableQuestions}
-                                                    value={desiredCount === -1 ? availableQuestions : desiredCount}
+                                                    value={quizRange.start}
                                                     onChange={(e) => {
-                                                        const val = parseInt(e.target.value);
-                                                        if (val >= availableQuestions) {
-                                                            setDesiredCount(-1);
-                                                        } else {
-                                                            setDesiredCount(val);
-                                                        }
+                                                        const val = Math.min(parseInt(e.target.value), quizRange.end);
+                                                        setQuizRange(prev => ({ ...prev, start: Math.max(1, val) }));
                                                     }}
-                                                    className="relative w-full h-2 bg-transparent appearance-none cursor-pointer z-10"
-                                                    style={{
-                                                        WebkitAppearance: 'none',
+                                                    className="absolute w-full h-2 opacity-0 cursor-pointer z-20"
+                                                    style={{ pointerEvents: 'none' }}
+                                                />
+                                                {/* Note: Standard Range inputs don't allow multi-handle easily.
+                                                    We need to use the trick where input has 'pointer-events: none' but the thumb has 'auto'.
+                                                    However, standard CSS 'pointer-events' on pseudo-elements is not universally supported or easy to inline.
+                                                    
+                                                    Alternative simplified approach for reliability without libraries:
+                                                    Just use the two inputs absolute positioned.
+                                                    The problem is 'zIndex' interaction. The one on top blocks the one below.
+                                                    
+                                                    Trick: 
+                                                    If we really want dual handles, we need to be clever.
+                                                    Or we can just rely on the number inputs above for precise control and just use a visual representation here?
+                                                    No, the design requires knobs.
+                                                    
+                                                    Let's try to implement the pointer-events trick via the style tag we already inject.
+                                                 */}
+                                                <style jsx>{`
+                                                    input[type=range].dual-range {
+                                                        pointer-events: none;
+                                                        position: absolute;
+                                                        left: 0;
+                                                        top: 0;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        -webkit-appearance: none;
+                                                        background: transparent;
+                                                        z-index: 20;
+                                                    }
+                                                    input[type=range].dual-range::-webkit-slider-thumb {
+                                                        pointer-events: auto; /* Enable pointer events on thumb */
+                                                        position: relative;
+                                                        z-index: 30;
+                                                        -webkit-appearance: none;
+                                                        width: 24px;
+                                                        height: 24px;
+                                                        border-radius: 50%;
+                                                        background: linear-gradient(135deg, #9333ea, #3b82f6);
+                                                        cursor: pointer;
+                                                        box-shadow: 0 2px 8px rgba(147, 51, 234, 0.4);
+                                                        border: 2px solid white;
+                                                        margin-top: -10px; /* Center vertially relative to track if track is standard, but here we set h-full */
+                                                    }
+                                                    /* For Firefox */
+                                                    input[type=range].dual-range::-moz-range-thumb {
+                                                        pointer-events: auto;
+                                                        z-index: 30;
+                                                        width: 24px;
+                                                        height: 24px;
+                                                        border-radius: 50%;
+                                                        background: linear-gradient(135deg, #9333ea, #3b82f6);
+                                                        cursor: pointer;
+                                                        border: 2px solid white;
+                                                    }
+                                                 `}</style>
+
+                                                <input
+                                                    type="range"
+                                                    min="1"
+                                                    max={availableQuestions}
+                                                    value={quizRange.start}
+                                                    onChange={(e) => {
+                                                        const val = Math.min(parseInt(e.target.value), quizRange.end);
+                                                        setQuizRange(prev => ({ ...prev, start: Math.max(1, val) }));
                                                     }}
+                                                    className="dual-range"
+                                                />
+                                                <input
+                                                    type="range"
+                                                    min="1"
+                                                    max={availableQuestions}
+                                                    value={quizRange.end}
+                                                    onChange={(e) => {
+                                                        const val = Math.max(parseInt(e.target.value), quizRange.start);
+                                                        setQuizRange(prev => ({ ...prev, end: val }));
+                                                    }}
+                                                    className="dual-range"
                                                 />
                                             </div>
 
-                                            {/* Min/Max Labels */}
-                                            <div className="flex justify-between mt-3 text-xs text-zinc-500 dark:text-zinc-400 font-medium">
+                                            <div className="flex justify-between mt-4 text-xs font-semibold text-zinc-400">
                                                 <span>1</span>
                                                 <span>{availableQuestions}</span>
                                             </div>
                                         </div>
 
-                                        {/* Quick Select Chips */}
-                                        <div className="flex items-center justify-center gap-2 flex-wrap">
-                                            <span className="text-xs text-zinc-500 dark:text-zinc-400 mr-2">Quick select:</span>
-                                            {[10, 20, 50].filter(n => n <= availableQuestions).map((num) => (
+                                        {/* Smart Batches (20% Segments) */}
+                                        <div className="space-y-3">
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Select Batch (20%)</span>
+                                                <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
+                                            </div>
+
+                                            <div className="flex flex-wrap gap-2">
+                                                {chunks.map((chunk, index) => {
+                                                    const isActive = quizRange.start === chunk.start && quizRange.end === chunk.end;
+                                                    return (
+                                                        <button
+                                                            key={index}
+                                                            onClick={() => setQuizRange({ start: chunk.start, end: chunk.end })}
+                                                            className={`px-3 py-2 rounded-lg text-xs font-bold transition-all border
+                                                                ${isActive
+                                                                    ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-700 shadow-sm'
+                                                                    : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-purple-300 dark:hover:border-purple-600 hover:text-purple-600 dark:hover:text-purple-400'}
+                                                            `}
+                                                        >
+                                                            {chunk.start}-{chunk.end}
+                                                        </button>
+                                                    );
+                                                })}
                                                 <button
-                                                    key={num}
-                                                    onClick={() => setDesiredCount(num)}
-                                                    className={`px-3 py-1 rounded-full text-xs font-semibold transition-all
-                                                    ${desiredCount === num
-                                                            ? 'bg-purple-600 text-white shadow-md'
-                                                            : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700'}
-                                                `}
+                                                    onClick={() => setQuizRange({ start: 1, end: availableQuestions })}
+                                                    className={`px-3 py-2 rounded-lg text-xs font-bold transition-all border
+                                                        ${quizRange.start === 1 && quizRange.end === availableQuestions
+                                                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 shadow-sm'
+                                                            : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400'}
+                                                    `}
                                                 >
-                                                    {num}
+                                                    All ({availableQuestions})
                                                 </button>
-                                            ))}
-                                            <button
-                                                onClick={() => setDesiredCount(-1)}
-                                                className={`px-3 py-1 rounded-full text-xs font-semibold transition-all
-                                                ${desiredCount === -1
-                                                        ? 'bg-purple-600 text-white shadow-md'
-                                                        : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700'}
-                                            `}
-                                            >
-                                                All
-                                            </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
