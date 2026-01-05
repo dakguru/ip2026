@@ -1,13 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import { Shield, Users, ArrowLeft, Loader2, Search, CreditCard, Calendar, CheckCircle, Smartphone, Download, FileText } from "lucide-react";
+import {
+    Shield, Users, ArrowLeft, Loader2, Search, Download, FileText,
+    Crown, Star, Zap, Filter, MoreHorizontal, ChevronDown, Check,
+    CreditCard, Calendar
+} from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
-import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
-
+import jsPDF from 'jspdf';
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+} from "@/components/ui/dialog";
 
 interface UserData {
     id: string;
@@ -28,20 +39,14 @@ interface UserData {
     membershipValidity?: string;
 }
 
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from "@/components/ui/dialog";
-
 export default function AdminDashboard() {
     const [users, setUsers] = useState<UserData[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState("");
     const [search, setSearch] = useState("");
+
+    // Filters
+    const [filterStatus, setFilterStatus] = useState<'all' | 'gold' | 'silver' | 'free'>('all');
 
     // Edit State
     const [editingUser, setEditingUser] = useState<UserData | null>(null);
@@ -105,6 +110,25 @@ export default function AdminDashboard() {
         }
     };
 
+    const stats = useMemo(() => {
+        return {
+            total: users.length,
+            gold: users.filter(u => u.membershipLevel === 'gold').length,
+            silver: users.filter(u => u.membershipLevel === 'silver').length,
+            free: users.filter(u => !u.membershipLevel || u.membershipLevel === 'free').length,
+        };
+    }, [users]);
+
+    const filteredUsers = users.filter(u => {
+        const matchesSearch = u.name.toLowerCase().includes(search.toLowerCase()) ||
+            u.email.toLowerCase().includes(search.toLowerCase());
+
+        const userLevel = u.membershipLevel || 'free';
+        const matchesStatus = filterStatus === 'all' ? true : userLevel === filterStatus;
+
+        return matchesSearch && matchesStatus;
+    });
+
     const downloadCSV = () => {
         const headers = ['ID', 'Name', 'Email', 'Role', 'Status', 'Joined', 'Mobile', 'Designation', 'Office', 'Division', 'Circle', 'Plan', 'Amount'];
         const csvContent = [
@@ -162,11 +186,6 @@ export default function AdminDashboard() {
         doc.save(`users_report_${format(new Date(), 'yyyy-MM-dd')}.pdf`);
     };
 
-    const filteredUsers = users.filter(u =>
-        u.name.toLowerCase().includes(search.toLowerCase()) ||
-        u.email.toLowerCase().includes(search.toLowerCase())
-    );
-
     if (isLoading) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-950">
@@ -189,137 +208,216 @@ export default function AdminDashboard() {
     }
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 transition-colors">
-            <div className="max-w-6xl mx-auto">
-                <div className="flex items-center justify-between mb-8">
+        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 transition-colors font-sans">
+            <div className="max-w-7xl mx-auto space-y-8">
+
+                {/* Header */}
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
-                        <Link href="/planner" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-4">
+                        <Link href="/planner" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-2 transition-colors">
                             <ArrowLeft className="w-4 h-4" /> Back to Planner
                         </Link>
                         <h1 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
                             <Shield className="w-8 h-8 text-blue-600" />
                             Admin Dashboard
                         </h1>
-                        <p className="text-zinc-500 dark:text-zinc-400">Manage users and system settings</p>
+                        <p className="text-zinc-500 dark:text-zinc-400 mt-1">Manage users, track growth, and oversee system settings.</p>
                     </div>
-                    <div className="bg-white dark:bg-zinc-900 p-4 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex items-center gap-4">
-                        <div className="p-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg">
-                            <Users className="w-6 h-6" />
+                    <div className="flex gap-3">
+                        <button onClick={downloadCSV} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shadow-sm">
+                            <FileText className="w-4 h-4 text-green-600" />
+                            CSV
+                        </button>
+                        <button onClick={downloadPDF} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shadow-sm">
+                            <Download className="w-4 h-4 text-red-600" />
+                            PDF
+                        </button>
+                    </div>
+                </div>
+
+                {/* Statistics Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="p-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg">
+                                <Users className="w-5 h-5" />
+                            </div>
+                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Total</span>
                         </div>
-                        <div>
-                            <p className="text-xs text-zinc-500 dark:text-zinc-400 font-bold uppercase tracking-wider">Total Users</p>
-                            <p className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">{users.length}</p>
+                        <div className="flex flex-col">
+                            <span className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">{stats.total}</span>
+                            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Registered Users</span>
+                        </div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/10 dark:to-amber-900/10 p-5 rounded-2xl shadow-sm border border-yellow-100 dark:border-yellow-900/30 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="p-2 bg-yellow-100 dark:bg-yellow-900/40 text-yellow-600 dark:text-yellow-400 rounded-lg">
+                                <Crown className="w-5 h-5" />
+                            </div>
+                            <span className="text-xs font-bold text-yellow-600/60 dark:text-yellow-400/60 uppercase tracking-wider">Gold</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-3xl font-extrabold text-yellow-700 dark:text-yellow-400">{stats.gold}</span>
+                            <span className="text-xs text-yellow-600/70 dark:text-yellow-400/70 mt-1">Premium Members</span>
+                        </div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-slate-50 to-zinc-50 dark:from-slate-900/10 dark:to-zinc-900/10 p-5 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="p-2 bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg">
+                                <Star className="w-5 h-5" />
+                            </div>
+                            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Silver</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-3xl font-extrabold text-slate-700 dark:text-slate-300">{stats.silver}</span>
+                            <span className="text-xs text-slate-500 dark:text-slate-400 mt-1">Standard Members</span>
+                        </div>
+                    </div>
+
+                    <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="p-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 rounded-lg">
+                                <Zap className="w-5 h-5" />
+                            </div>
+                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Free</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-3xl font-extrabold text-zinc-700 dark:text-zinc-300">{stats.free}</span>
+                            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Basic Users</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+                {/* Main Content Area */}
+                <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col">
+
                     {/* Toolbar */}
-                    <div className="p-4 border-b border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                        <div className="relative flex-1 max-w-md w-full">
+                    <div className="p-5 border-b border-zinc-100 dark:border-zinc-800 flex flex-col lg:flex-row items-center justify-between gap-4">
+
+                        {/* Filter Tabs */}
+                        <div className="flex items-center bg-zinc-100 dark:bg-zinc-800/50 p-1 rounded-xl w-full lg:w-auto overflow-x-auto no-scrollbar">
+                            {(['all', 'gold', 'silver', 'free'] as const).map((tab) => (
+                                <button
+                                    key={tab}
+                                    onClick={() => setFilterStatus(tab)}
+                                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all capitalize whitespace-nowrap
+                                        ${filterStatus === tab
+                                            ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm'
+                                            : 'text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200'
+                                        }`}
+                                >
+                                    {tab} Users
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Search */}
+                        <div className="relative w-full lg:w-80">
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
                             <input
                                 type="text"
-                                placeholder="Search users..."
+                                placeholder="Search by name or email..."
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
-                                className="w-full pl-10 pr-4 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg text-sm text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-500/20"
+                                className="w-full pl-10 pr-4 py-2.5 bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/50 rounded-xl text-sm outline-none focus:ring-2 focus:ring-blue-500/20 transition-all font-medium"
                             />
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <button
-                                onClick={downloadCSV}
-                                className="flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 hover:bg-green-100 dark:bg-green-900/20 dark:text-green-300 dark:hover:bg-green-900/30 rounded-lg text-sm font-medium transition-colors"
-                            >
-                                <FileText className="w-4 h-4" />
-                                Export CSV
-                            </button>
-                            <button
-                                onClick={downloadPDF}
-                                className="flex items-center gap-2 px-4 py-2 bg-red-50 text-red-700 hover:bg-red-100 dark:bg-red-900/20 dark:text-red-300 dark:hover:bg-red-900/30 rounded-lg text-sm font-medium transition-colors"
-                            >
-                                <Download className="w-4 h-4" />
-                                Export PDF
-                            </button>
                         </div>
                     </div>
 
-                    {/* Table */}
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left border-collapse">
-                            <thead className="bg-zinc-50 dark:bg-zinc-800/50">
-                                <tr>
-                                    <th className="py-3 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">User</th>
-                                    <th className="py-3 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Role</th>
-                                    <th className="py-3 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Status</th>
-                                    <th className="py-3 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Joined</th>
-                                    <th className="py-3 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider text-right">Actions</th>
+                    {/* Users Table */}
+                    <div className="overflow-x-auto min-h-[400px]">
+                        <table className="w-full text-left">
+                            <thead>
+                                <tr className="border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/20">
+                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">User Details</th>
+                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Plan Status</th>
+                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Role</th>
+                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Joined On</th>
+                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider text-right">Actions</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
-                                {filteredUsers.map((user) => (
-                                    <tr
-                                        key={user.id}
-                                        className={`hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors ${user.membershipLevel === 'gold' ? 'bg-amber-50/50 dark:bg-amber-900/10' :
-                                            user.membershipLevel === 'silver' ? 'bg-slate-50/50 dark:bg-slate-900/10' : ''
-                                            }`}
-                                    >
-                                        <td className="py-4 px-6">
-                                            <div>
-                                                <p className="font-semibold text-zinc-900 dark:text-zinc-100">{user.name}</p>
-                                                <p className="text-sm text-zinc-500 dark:text-zinc-400">{user.email}</p>
-                                            </div>
-                                        </td>
-                                        <td className="py-4 px-6">
-                                            <div className="flex flex-col gap-2">
-                                                <span className={`inline-flex items-center w-fit px-2.5 py-0.5 rounded-full text-xs font-medium capitalize
+                                {filteredUsers.length > 0 ? (
+                                    filteredUsers.map((user) => (
+                                        <tr
+                                            key={user.id}
+                                            className="group hover:bg-zinc-50 dark:hover:bg-zinc-800/40 transition-colors"
+                                        >
+                                            <td className="py-4 px-6">
+                                                <div className="flex items-center gap-3">
+                                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-sm
+                                                        ${user.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30' :
+                                                            user.membershipLevel === 'silver' ? 'bg-slate-100 text-slate-600 dark:bg-slate-800' :
+                                                                'bg-zinc-100 text-zinc-500 dark:bg-zinc-800'
+                                                        }`}>
+                                                        {user.name.charAt(0).toUpperCase()}
+                                                    </div>
+                                                    <div>
+                                                        <p className="font-semibold text-zinc-900 dark:text-zinc-100">{user.name}</p>
+                                                        <p className="text-sm text-zinc-500 dark:text-zinc-400">{user.email}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="py-4 px-6">
+                                                <div className="flex flex-col items-start gap-1">
+                                                    <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wide border shadow-sm
+                                                        ${user.membershipLevel === 'gold'
+                                                            ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50'
+                                                            : user.membershipLevel === 'silver'
+                                                                ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800/50'
+                                                                : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-500 dark:border-zinc-800/50'
+                                                        }`}>
+                                                        {user.membershipLevel === 'gold' && <Crown className="w-3 h-3 fill-current" />}
+                                                        {user.membershipLevel === 'silver' && <Star className="w-3 h-3 fill-current" />}
+                                                        {user.membershipLevel || 'Free'}
+                                                    </span>
+                                                    {user.membershipLevel && user.membershipLevel !== 'free' && (
+                                                        <button
+                                                            onClick={() => setViewingPaymentUser(user)}
+                                                            className="text-[10px] items-center gap-1 text-blue-600 hover:text-blue-700 dark:text-blue-400 font-semibold ml-1 flex hover:underline"
+                                                        >
+                                                            <CreditCard className="w-3 h-3" /> View Details
+                                                        </button>
+                                                    )}
+                                                </div>
+                                            </td>
+                                            <td className="py-4 px-6">
+                                                <span className={`inline-flex px-2 py-0.5 rounded text-xs font-medium border
                                                     ${user.role === 'admin'
-                                                        ? 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300'
-                                                        : 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300'
+                                                        ? 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-900/20 dark:text-purple-300 dark:border-purple-800'
+                                                        : 'bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-800'
                                                     }`}>
                                                     {user.role}
                                                 </span>
+                                            </td>
+                                            <td className="py-4 px-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                                                {format(new Date(user.createdAt), 'MMM d, yyyy')}
+                                            </td>
+                                            <td className="py-4 px-6 text-right">
+                                                <button
+                                                    onClick={() => setEditingUser(user)}
+                                                    className="px-3 py-1.5 text-xs font-semibold text-zinc-600 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+                                                >
+                                                    Edit
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))
+                                ) : (
+                                    <tr>
+                                        <td colSpan={5} className="py-12 text-center">
+                                            <div className="flex flex-col items-center justify-center text-zinc-400">
+                                                <Search className="w-12 h-12 mb-3 text-zinc-200 dark:text-zinc-800" />
+                                                <p className="text-lg font-semibold text-zinc-500">No users found</p>
+                                                <p className="text-sm">Try adjusting your search or filter</p>
                                             </div>
                                         </td>
-                                        <td className="py-4 px-6">
-                                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide
-                                                ${user.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-800 border border-amber-200' :
-                                                    user.membershipLevel === 'silver' ? 'bg-slate-100 text-slate-800 border border-slate-200' :
-                                                        'bg-zinc-100 text-zinc-500 border border-zinc-200'
-                                                }`}>
-                                                {user.membershipLevel || 'free'}
-                                            </span>
-
-                                            {user.membershipLevel !== 'free' && (
-                                                <button
-                                                    onClick={() => setViewingPaymentUser(user)}
-                                                    className="block mt-1 text-[10px] text-blue-600 hover:underline cursor-pointer"
-                                                >
-                                                    View Payment
-                                                </button>
-                                            )}
-                                        </td>
-                                        <td className="py-4 px-6 text-sm text-zinc-600 dark:text-zinc-300">
-                                            {format(new Date(user.createdAt), 'MMM d, yyyy')}
-                                        </td>
-                                        <td className="py-4 px-6 text-right">
-                                            <button
-                                                onClick={() => setEditingUser(user)}
-                                                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 font-medium cursor-pointer"
-                                            >
-                                                Edit
-                                            </button>
-                                        </td>
                                     </tr>
-                                ))}
+                                )}
                             </tbody>
                         </table>
-
-                        {filteredUsers.length === 0 && (
-                            <div className="p-12 text-center text-zinc-500 dark:text-zinc-400">
-                                No users found matching &quot;{search}&quot;
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>
@@ -452,11 +550,11 @@ export default function AdminDashboard() {
                                     <input value={editingUser.circle || ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
                                 </div>
                             </div>
+
                             <div className="space-y-2">
                                 <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Role</label>
                                 <select
                                     value={editingUser.role}
-
                                     onChange={(e) => setEditingUser({ ...editingUser, role: e.target.value as 'user' | 'admin' })}
                                     className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500/20"
                                 >
