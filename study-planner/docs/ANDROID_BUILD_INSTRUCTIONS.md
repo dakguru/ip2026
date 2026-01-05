@@ -20,7 +20,14 @@ I have set up the project to wrap your live website (`https://ip2026.vercel.app`
     *   Once synced, click the **Green Play Button (▶)** in the top toolbar.
     *   Select a device (pixel, etc.) to run it.
 
-4.  **Build APK (for sharing)**:
+4.  **Build Android App Bundle (.aab) for Play Store**:
+    *   Go to menu: **Build > Generate Signed Bundle / APK...**
+    *   Select **Android App Bundle** and click Next.
+    *   You will need to create a **Key store path** if you don't have one (Click "Create new..." and fill in the details). Remember these passwords!
+    *   Select the **release** build variant and click **Finish**.
+    *   Once done, click the "locate" link in the notification to find your `.aab` file.
+
+5.  **Build APK (for testing/sharing)**:
     *   Go to menu: **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
     *   Once it finishes, a notification will appear. Click "locate" to find the `.apk` file.
     *   You can send this APK to your phone and install it!
