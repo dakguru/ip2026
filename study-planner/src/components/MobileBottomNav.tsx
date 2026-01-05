@@ -2,48 +2,47 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Layout, MessageCircle, PlayCircle, User } from "lucide-react";
-import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import { Home, BookOpen, Trophy, Users, User, LayoutDashboard } from "lucide-react";
 
 export default function MobileBottomNav() {
     const pathname = usePathname();
-    const isMobileApp = useIsMobileApp();
-
-    // ONLY render if it is the native app
-    if (!isMobileApp) return null;
 
     const navItems = [
         { label: "Home", href: "/", icon: Home },
-        { label: "My Plan", href: "/planner", icon: Layout },
-        { label: "MCQs", href: "/quiz", icon: PlayCircle },
-        { label: "Community", href: "/social", icon: MessageCircle },
+        { label: "Learn", href: "/planner", icon: BookOpen },
+        { label: "Practice", href: "/mock-tests", icon: Trophy },
+        { label: "Community", href: "/social", icon: Users },
         { label: "Profile", href: "/settings", icon: User },
     ];
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-t border-zinc-200 dark:border-zinc-800 z-50 pb-[env(safe-area-inset-bottom)] transition-all">
-            <div className="flex items-center justify-around h-16">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-lg border-t border-zinc-200 dark:border-zinc-800 pb-[env(safe-area-inset-bottom)] z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+            <div className="flex items-center justify-between px-2 sm:px-6 h-16">
                 {navItems.map((item) => {
                     const isActive = pathname === item.href;
                     return (
                         <Link
-                            key={item.href}
+                            key={item.label}
                             href={item.href}
-                            className={`flex flex-col items-center justify-center w-full h-full space-y-1 active:scale-90 transition-transform ${isActive
-                                ? "text-blue-600 dark:text-blue-400"
-                                : "text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200"
-                                }`}
+                            className={`flex flex-col items-center justify-center w-full h-full gap-1 active:scale-95 transition-all duration-200 group relative`}
                         >
-                            <div className="relative">
-                                <item.icon
-                                    className={`w-6 h-6 ${isActive ? "fill-current" : ""}`}
-                                    strokeWidth={isActive ? 2.5 : 1.5}
-                                />
-                                {isActive && (
-                                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-current rounded-full" />
-                                )}
+                            {/* Active Indicator */}
+                            {isActive && (
+                                <span className="absolute -top-[1px] w-8 h-1 bg-blue-600 rounded-b-full shadow-blue-500/50 shadow-sm" />
+                            )}
+
+                            <div className={`p-1.5 rounded-xl transition-colors ${isActive
+                                ? "text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10"
+                                : "text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300"
+                                }`}>
+                                <item.icon className={`w-6 h-6 ${isActive ? "fill-current" : "stroke-[1.5px]"}`} />
                             </div>
-                            <span className="text-[10px] font-medium">{item.label}</span>
+                            <span className={`text-[10px] font-medium tracking-tight ${isActive
+                                ? "text-blue-600 dark:text-blue-400"
+                                : "text-zinc-400 dark:text-zinc-500"
+                                }`}>
+                                {item.label}
+                            </span>
                         </Link>
                     );
                 })}

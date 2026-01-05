@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { ArrowLeft, Clock, Grid, ChevronLeft, ChevronRight, Bookmark, Send } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowLeft, Clock, Grid, ChevronLeft, ChevronRight, Bookmark, Send, CheckCircle2, XCircle, HelpCircle, AlertCircle } from "lucide-react";
 import { Question } from "@/lib/quizTypes";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -16,10 +16,12 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [markedForReview, setMarkedForReview] = useState<Set<string>>(new Set());
-    const [visited, setVisited] = useState<Set<string>>(new Set([questions[0]?.id]));
     const [isPaletteOpen, setIsPaletteOpen] = useState(false);
     const [timeLeft, setTimeLeft] = useState(questions.length * 60); // 1 min per question
     const [showExitConfirm, setShowExitConfirm] = useState(false);
+
+    // New: Explanation State
+    const [showExplanation, setShowExplanation] = useState<Set<string>>(new Set());
 
     // Haptic Feedback Helper
     const vibrate = (ms: number = 10) => {
@@ -28,20 +30,21 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
         }
     };
 
-    // Load progress from local storage
+    // Load progress
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const saved = localStorage.getItem(`quiz_progress_${quizTitle}`);
             if (saved) {
                 try {
                     const parsed = JSON.parse(saved);
-                    // Basic validation to ensure it matches current quiz
                     if (parsed.totalQuestions === questions.length) {
                         setAnswers(parsed.answers || {});
                         setMarkedForReview(new Set(parsed.marked || []));
                         setCurrentIndex(parsed.currentIndex || 0);
                         setTimeLeft(parsed.timeLeft || questions.length * 60);
-                        setVisited(new Set(parsed.visited || [questions[0]?.id]));
+                        // Restore shown explanations based on answers
+                        const answeredIds = Object.keys(parsed.answers || {});
+                        setShowExplanation(new Set(answeredIds));
                     }
                 } catch (e) {
                     console.error("Failed to load saved quiz progress", e);
@@ -50,7 +53,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
         }
     }, [quizTitle, questions]);
 
-    // Save progress to local storage
+    // Save progress
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const stateToSave = {
@@ -58,19 +61,11 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                 marked: Array.from(markedForReview),
                 currentIndex,
                 timeLeft,
-                visited: Array.from(visited),
                 totalQuestions: questions.length
             };
             localStorage.setItem(`quiz_progress_${quizTitle}`, JSON.stringify(stateToSave));
         }
-    }, [answers, markedForReview, currentIndex, timeLeft, visited, quizTitle, questions]);
-
-    // Clear storage on complete/exit
-    const clearProgress = () => {
-        if (typeof window !== 'undefined') {
-            localStorage.removeItem(`quiz_progress_${quizTitle}`);
-        }
-    };
+    }, [answers, markedForReview, currentIndex, timeLeft, quizTitle, questions]);
 
     const handleExitRequest = () => {
         vibrate(20);
@@ -78,12 +73,12 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     };
 
     const confirmExit = () => {
-        clearProgress();
+        localStorage.removeItem(`quiz_progress_${quizTitle}`);
         vibrate(20);
         onExit();
     };
 
-    // Track time taken
+    // Timer
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft((prev) => {
@@ -98,15 +93,16 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
         return () => clearInterval(timer);
     }, []);
 
-    useEffect(() => {
-        setVisited(prev => new Set(prev).add(questions[currentIndex].id));
-    }, [currentIndex, questions]);
-
     const currentQ = questions[currentIndex];
+    const isAnswered = answers[currentQ.id] !== undefined;
 
     const handleSelect = (optionIdx: number) => {
-        vibrate(5);
+        if (isAnswered) return; // Prevent changing answer in "Learn Mode" if strictly instant validation
+        vibrate(10);
         setAnswers(prev => ({ ...prev, [currentQ.id]: optionIdx }));
+
+        // Auto-show explanation on answer
+        setShowExplanation(prev => new Set(prev).add(currentQ.id));
     };
 
     const handleNext = () => {
@@ -120,22 +116,6 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
         if (currentIndex > 0) {
             vibrate(10);
             setCurrentIndex(prev => prev - 1);
-        }
-    };
-
-    // Swipe handlers
-    const swipeConfidenceThreshold = 10000;
-    const swipePower = (offset: number, velocity: number) => {
-        return Math.abs(offset) * velocity;
-    };
-
-    const handleDragEnd = (e: any, { offset, velocity }: any) => {
-        const swipe = swipePower(offset.x, velocity.x);
-
-        if (swipe < -swipeConfidenceThreshold) {
-            handleNext();
-        } else if (swipe > swipeConfidenceThreshold) {
-            handlePrev();
         }
     };
 
@@ -154,7 +134,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
 
     const handleSubmit = () => {
         vibrate(30);
-        clearProgress();
+        localStorage.removeItem(`quiz_progress_${quizTitle}`);
         const totalTime = (questions.length * 60) - timeLeft;
         onComplete(answers, totalTime);
     };
@@ -166,137 +146,160 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     };
 
     const getStatusColor = (qId: string, idx: number) => {
-        const isAnswered = answers[qId] !== undefined;
+        const ans = answers[qId];
         const isMarked = markedForReview.has(qId);
         const isCurrent = questions[idx].id === currentQ.id;
 
-        if (isCurrent) return "border-2 border-blue-600 ring-2 ring-blue-100";
-        if (isMarked) return "bg-purple-100 text-purple-700 border-purple-300";
-        if (isAnswered) return "bg-green-100 text-green-700 border-green-300";
-        if (visited.has(qId)) return "bg-red-50 text-red-600 border-red-200"; // Visited but not answered
-        return "bg-zinc-50 text-zinc-400 border-zinc-200"; // Not visited
+        if (isCurrent) return "border-2 border-blue-600 ring-2 ring-blue-100 dark:ring-blue-900";
+        if (isMarked) return "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-300 dark:border-purple-800";
+        if (ans !== undefined) return "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-300 dark:border-green-800";
+        return "bg-zinc-50 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 border-zinc-200 dark:border-zinc-700";
     };
 
     return (
-        <div className="fixed inset-0 z-50 bg-white dark:bg-zinc-950 flex flex-col">
-            {/* 1. Top Bar */}
-            <div className="h-14 px-4 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm z-20">
+        <div className="fixed inset-0 z-50 bg-[#F8F9FB] dark:bg-black flex flex-col font-sans">
+            {/* 1. Modern Header */}
+            <div className="h-16 px-4 flex items-center justify-between bg-white dark:bg-zinc-950 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] z-20 pt-[env(safe-area-inset-top)]">
                 <div className="flex items-center gap-3">
-                    <button onClick={handleExitRequest} className="p-2 -ml-2 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400">
-                        <ArrowLeft className="w-5 h-5" />
+                    <button onClick={handleExitRequest} className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
+                        <ArrowLeft className="w-5 h-5 stroke-[2.5px]" />
                     </button>
-                    <div className="flex flex-col">
-                        <span className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-1 max-w-[200px]">
-                            {quizTitle}
-                        </span>
-                        <span className="text-sm font-bold text-zinc-800 dark:text-zinc-100">
-                            Q.{currentIndex + 1}
-                        </span>
+                    <div>
+                        <h2 className="text-sm font-extrabold text-zinc-800 dark:text-zinc-100 tracking-tight flex items-center gap-2">
+                            Question {currentIndex + 1} <span className="text-zinc-400 font-medium">/ {questions.length}</span>
+                        </h2>
                     </div>
                 </div>
                 <div className="flex items-center gap-3">
-                    <div className={`px-3 py-1 rounded-full text-sm font-mono font-bold flex items-center gap-1.5 border ${timeLeft < 60 ? 'bg-red-50 text-red-600 border-red-200 animate-pulse' : 'bg-zinc-100 text-zinc-600 border-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:border-zinc-700'}`}>
+                    <div className={`px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-sm border ${timeLeft < 60 ? 'bg-red-50 text-red-600 border-red-100 animate-pulse' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border-zinc-200 dark:border-zinc-700'}`}>
                         <Clock className="w-3.5 h-3.5" />
                         {formatTime(timeLeft)}
                     </div>
-                    <button
-                        onClick={() => {
-                            vibrate(10);
-                            setIsPaletteOpen(true);
-                        }}
-                        className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-lg text-zinc-600 dark:text-zinc-300"
-                    >
+                    <button onClick={() => setIsPaletteOpen(true)} className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
                         <Grid className="w-5 h-5" />
                     </button>
                 </div>
             </div>
 
-            {/* 2. Questions Area (Swipeable) */}
-            <div className="flex-1 overflow-y-auto pb-24 bg-zinc-50 dark:bg-black overflow-x-hidden">
-                <AnimatePresence mode="popLayout" custom={currentIndex}>
-                    <motion.div
-                        key={currentIndex}
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -50 }}
-                        transition={{ duration: 0.2 }}
-                        drag="x"
-                        dragConstraints={{ left: 0, right: 0 }}
-                        dragElastic={0.2}
-                        onDragEnd={handleDragEnd}
-                        className="p-5 h-full"
-                    >
-                        <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800 mb-6 relative">
-                            {/* Swipe Hint */}
-                            <div className="absolute -right-2 top-1/2 -translate-y-1/2 opacity-0 animate-pulse sm:hidden">
-                                <ChevronRight className="w-6 h-6 text-zinc-300" />
+            {/* 2. Scrollable Content */}
+            <div className="flex-1 overflow-y-auto pb-32 pt-6 px-4 md:px-0 scroll-smooth">
+                <div className="max-w-2xl mx-auto">
+                    <AnimatePresence mode="popLayout" custom={currentIndex}>
+                        <motion.div
+                            key={currentIndex}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration: 0.3, ease: "easeOut" }}
+                        >
+                            {/* Question Card */}
+                            <div className="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-[2rem] shadow-[0_8px_30px_-6px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-6">
+                                <p className="text-lg md:text-xl font-bold text-zinc-900 dark:text-zinc-100 leading-relaxed font-serif">
+                                    {currentQ.text}
+                                </p>
                             </div>
-                            <p className="text-lg font-medium text-zinc-800 dark:text-zinc-100 leading-relaxed select-none">
-                                {currentQ.text}
-                            </p>
-                        </div>
 
-                        <div className="space-y-3">
-                            {currentQ.options.map((option, idx) => (
-                                <button
-                                    key={idx}
-                                    onClick={() => handleSelect(idx)}
-                                    className={`w-full text-left p-4 rounded-xl border-2 transition-all active:scale-[0.98] flex items-start gap-3
-                                ${answers[currentQ.id] === idx
-                                            ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-sm"
-                                            : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
+                            {/* Options */}
+                            <div className="space-y-3">
+                                {currentQ.options.map((option, idx) => {
+                                    const isSelected = answers[currentQ.id] === idx;
+                                    const isCorrect = idx === currentQ.correctAnswer;
+                                    const showResult = isAnswered; // Instant feedback
+
+                                    // Determine Styling
+                                    let containerClass = "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800";
+                                    let textClass = "text-zinc-700 dark:text-zinc-300";
+                                    let icon = <div className="w-5 h-5 rounded-full border-2 border-zinc-300 dark:border-zinc-600"></div>;
+
+                                    if (showResult) {
+                                        if (isCorrect) {
+                                            containerClass = "border-green-500 bg-green-50 dark:bg-green-900/20 shadow-md shadow-green-500/10";
+                                            textClass = "text-green-800 dark:text-green-300 font-bold";
+                                            icon = <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 fill-green-100 dark:fill-green-900" />;
+                                        } else if (isSelected) {
+                                            containerClass = "border-red-500 bg-red-50 dark:bg-red-900/20 shadow-md shadow-red-500/10";
+                                            textClass = "text-red-800 dark:text-red-300 font-bold";
+                                            icon = <XCircle className="w-5 h-5 text-red-600 dark:text-red-400 fill-red-100 dark:fill-red-900" />;
+                                        } else {
+                                            // Other unselected options when answered
+                                            containerClass = "border-zinc-100 dark:border-zinc-800 opacity-60 bg-zinc-50 dark:bg-zinc-900";
                                         }
-                            `}
+                                    } else if (isSelected) {
+                                        // Selected but not revealed (never happens in instant mode unless we delay)
+                                        containerClass = "border-blue-500 bg-blue-50 dark:bg-blue-900/20";
+                                    }
+
+                                    return (
+                                        <button
+                                            key={idx}
+                                            onClick={() => handleSelect(idx)}
+                                            disabled={isAnswered}
+                                            className={`relative w-full text-left p-5 rounded-2xl border-2 transition-all duration-300 active:scale-[0.99] flex items-start gap-4 ${containerClass}`}
+                                        >
+                                            <div className="mt-0.5 shrink-0 transition-transform duration-300">
+                                                {icon}
+                                            </div>
+                                            <span className={`text-sm md:text-base leading-snug ${textClass}`}>
+                                                {option}
+                                            </span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+
+                            {/* Explanation Accordion (Auto-reveals) */}
+                            {isAnswered && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10, height: 0 }}
+                                    animate={{ opacity: 1, y: 0, height: "auto" }}
+                                    className="mt-6 overflow-hidden"
                                 >
-                                    <div className={`w-5 h-5 rounded-full border-2 mt-0.5 flex items-center justify-center shrink-0
-                                ${answers[currentQ.id] === idx
-                                            ? "border-blue-500 bg-blue-500"
-                                            : "border-zinc-300 dark:border-zinc-600"
-                                        }
-                            `}>
-                                        {answers[currentQ.id] === idx && <div className="w-2 h-2 bg-white rounded-full" />}
+                                    <div className="bg-blue-50 dark:bg-blue-900/10 p-5 rounded-2xl border border-blue-100 dark:border-blue-800">
+                                        <div className="flex items-center gap-2 mb-2 text-blue-700 dark:text-blue-300 font-bold text-xs uppercase tracking-wider">
+                                            <HelpCircle className="w-4 h-4" /> Explanation
+                                        </div>
+                                        <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">
+                                            {currentQ.explanation}
+                                        </p>
                                     </div>
-                                    <span className={`${answers[currentQ.id] === idx ? "text-blue-700 dark:text-blue-300 font-medium" : "text-zinc-700 dark:text-zinc-300"}`}>
-                                        {option}
-                                    </span>
-                                </button>
-                            ))}
-                        </div>
-                    </motion.div>
-                </AnimatePresence>
+                                </motion.div>
+                            )}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
             </div>
 
-            {/* 3. Bottom Control Bar */}
-            <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 p-3 px-4 z-20 pb-[env(safe-area-inset-bottom)]">
-                <div className="flex items-center justify-between gap-3">
+            {/* 3. Bottom Actions Bar */}
+            <div className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 p-4 pb-[max(20px,env(safe-area-inset-bottom))] z-40">
+                <div className="flex items-center justify-between gap-4 max-w-2xl mx-auto">
                     <button
                         onClick={toggleMarkRef}
-                        className={`flex flex-col items-center gap-1 min-w-[60px] ${markedForReview.has(currentQ.id) ? "text-purple-600" : "text-zinc-400"}`}
+                        className={`flex flex-col items-center gap-1 min-w-[64px] transition-colors ${markedForReview.has(currentQ.id) ? "text-purple-600" : "text-zinc-400 hover:text-zinc-600"}`}
                     >
-                        <Bookmark className={`w-5 h-5 ${markedForReview.has(currentQ.id) ? "fill-current" : ""}`} />
-                        <span className="text-[10px] font-medium">Review</span>
+                        <Bookmark className={`w-6 h-6 ${markedForReview.has(currentQ.id) ? "fill-current" : "stroke-current"}`} strokeWidth={1.5} />
+                        <span className="text-[10px] font-bold">Review</span>
                     </button>
 
-                    <div className="flex items-center gap-3 flex-1 justify-end">
+                    <div className="flex flex-1 items-center gap-3 justify-end">
                         <button
                             onClick={handlePrev}
                             disabled={currentIndex === 0}
-                            className="px-4 py-2.5 rounded-lg font-bold text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 disabled:opacity-30 disabled:cursor-not-allowed"
+                            className="w-12 h-12 flex items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 transition-colors"
                         >
-                            <ChevronLeft className="w-5 h-5" />
+                            <ChevronLeft className="w-6 h-6" />
                         </button>
 
                         {currentIndex === questions.length - 1 ? (
                             <button
                                 onClick={handleSubmit}
-                                className="flex-1 px-4 py-2.5 bg-green-600 hover:bg-green-700 active:scale-95 text-white rounded-lg font-bold text-sm shadow-lg shadow-green-600/20 flex items-center justify-center gap-2 transition-all"
+                                className="flex-1 px-6 h-12 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition-transform active:scale-95"
                             >
-                                Submit Test <Send className="w-4 h-4" />
+                                Finish Test <Send className="w-4 h-4" />
                             </button>
                         ) : (
                             <button
                                 onClick={handleNext}
-                                className="flex-1 px-4 py-2.5 bg-zinc-900 dark:bg-white dark:text-zinc-900 active:scale-95 text-white rounded-lg font-bold text-sm shadow-lg flex items-center justify-center gap-2 transition-all"
+                                className="flex-1 px-6 h-12 bg-blue-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 transition-transform active:scale-95 hover:bg-blue-700"
                             >
                                 Next <ChevronRight className="w-4 h-4" />
                             </button>
@@ -305,82 +308,94 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                 </div>
             </div>
 
-            {/* 4. Question Palette (Bottom Sheet) */}
-            {isPaletteOpen && (
-                <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center">
-                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsPaletteOpen(false)} />
-                    <motion.div
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        exit={{ y: "100%" }}
-                        className="relative bg-white dark:bg-zinc-900 w-full max-w-md sm:rounded-2xl rounded-t-2xl p-6 shadow-2xl max-h-[80vh] overflow-hidden flex flex-col"
-                    >
-                        <div className="flex items-center justify-between mb-6">
-                            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Question Palette</h3>
-                            <button onClick={() => setIsPaletteOpen(false)} className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-full">
-                                <span className="sr-only">Close</span>
-                                <ChevronLeft className="w-5 h-5 rotate-90" />
-                            </button>
-                        </div>
-
-                        <div className="grid grid-cols-5 gap-3 overflow-y-auto p-1 pb-20">
-                            {questions.map((q, idx) => (
-                                <button
-                                    key={q.id}
-                                    onClick={() => {
-                                        vibrate(5);
-                                        setCurrentIndex(idx);
-                                        setIsPaletteOpen(false);
-                                    }}
-                                    className={`h-10 w-10 rounded-full flex items-center justify-center text-sm font-bold border ${getStatusColor(q.id, idx)}`}
-                                >
-                                    {idx + 1}
+            {/* 4. Palette Drawer */}
+            <AnimatePresence>
+                {isPaletteOpen && (
+                    <div className="fixed inset-0 z-50 flex items-end justify-center">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+                            onClick={() => setIsPaletteOpen(false)}
+                        />
+                        <motion.div
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            exit={{ y: "100%" }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                            className="relative bg-white dark:bg-zinc-900 w-full max-w-lg rounded-t-[2.5rem] p-6 shadow-2xl max-h-[85vh] flex flex-col z-50"
+                        >
+                            <div className="flex items-center justify-center mb-6 relative">
+                                <div className="w-12 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full mb-2 absolute -top-3"></div>
+                                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Question Palette</h3>
+                                <button onClick={() => setIsPaletteOpen(false)} className="absolute right-0 p-2 bg-zinc-50 dark:bg-zinc-800 rounded-full text-zinc-500">
+                                    <XCircle className="w-5 h-5" />
                                 </button>
-                            ))}
-                        </div>
-
-                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-white dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800">
-                            <div className="grid grid-cols-2 gap-2 text-xs text-zinc-500">
-                                <div className="flex items-center gap-2"><div className="w-3 h-3 bg-green-100 border border-green-300 rounded-full" /> Answered</div>
-                                <div className="flex items-center gap-2"><div className="w-3 h-3 bg-purple-100 border border-purple-300 rounded-full" /> Marked</div>
-                                <div className="flex items-center gap-2"><div className="w-3 h-3 bg-red-50 border border-red-200 rounded-full" /> Visited</div>
-                                <div className="flex items-center gap-2"><div className="w-3 h-3 bg-zinc-50 border border-zinc-200 rounded-full" /> Not Visited</div>
                             </div>
-                        </div>
-                    </motion.div>
-                </div>
-            )}
 
-            {/* 5. Exit Confirmation */}
-            {showExitConfirm && (
-                <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-                    <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowExitConfirm(false)} />
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="bg-white dark:bg-zinc-900 rounded-2xl p-6 w-full max-w-sm relative shadow-xl z-10"
-                    >
-                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Quit Quiz?</h3>
-                        <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-                            Your progress will be lost if you leave now. Are you sure?
-                        </p>
-                        <div className="flex gap-3">
-                            <button
-                                onClick={() => setShowExitConfirm(false)}
-                                className="flex-1 px-4 py-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-bold"
-                            >
-                                Cancel
-                            </button>
-                            <button
-                                onClick={confirmExit}
-                                className="flex-1 px-4 py-3 rounded-xl bg-red-600 text-white font-bold"
-                            >
-                                Quit
-                            </button>
-                        </div>
-                    </motion.div>
-                </div>
-            )}
+                            <div className="grid grid-cols-5 gap-3 overflow-y-auto p-1 pb-20 custom-scrollbar">
+                                {questions.map((q, idx) => (
+                                    <button
+                                        key={q.id}
+                                        onClick={() => {
+                                            vibrate(5);
+                                            setCurrentIndex(idx);
+                                            setIsPaletteOpen(false);
+                                        }}
+                                        className={`h-12 w-12 rounded-2xl flex items-center justify-center text-sm font-bold border-2 transition-all ${getStatusColor(q.id, idx)}`}
+                                    >
+                                        {idx + 1}
+                                    </button>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
+
+            {/* 5. Exit Alert */}
+            <AnimatePresence>
+                {showExitConfirm && (
+                    <div className="fixed inset-0 z-[60] flex items-center justify-center p-6">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                            onClick={() => setShowExitConfirm(false)}
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="bg-white dark:bg-zinc-900 rounded-[2rem] p-8 w-full max-w-sm relative shadow-2xl z-10 text-center"
+                        >
+                            <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500">
+                                <AlertCircle className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Leave Quiz?</h3>
+                            <p className="text-zinc-500 dark:text-zinc-400 mb-8 font-medium">
+                                Your progress will be lost. Are you sure you want to exit?
+                            </p>
+                            <div className="flex gap-4">
+                                <button
+                                    onClick={() => setShowExitConfirm(false)}
+                                    className="flex-1 px-6 py-3.5 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-bold"
+                                >
+                                    Stay
+                                </button>
+                                <button
+                                    onClick={confirmExit}
+                                    className="flex-1 px-6 py-3.5 rounded-2xl bg-red-600 text-white font-bold shadow-lg shadow-red-500/30"
+                                >
+                                    Leave
+                                </button>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
