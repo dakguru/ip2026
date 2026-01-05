@@ -23,17 +23,19 @@ export async function GET(request: Request) {
 
         switch (type) {
             case 'recent':
-                // Special handling for 'recent' with fallback logic
+                // Use country=in for more reliable "Top News in India"
                 isNewsApi = true;
-                const primaryUrl = `https://newsapi.org/v2/top-headlines?q=India&apiKey=${NEWSAPI_KEY}`;
+                const timestamp = Date.now();
+                const primaryUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${NEWSAPI_KEY}&_t=${timestamp}`;
+
                 let response = await fetch(primaryUrl, fetchOptions);
 
                 if (!response.ok) {
                     const errorText = await response.text();
                     console.error(`Upstream API error (recent primary):`, response.status, errorText);
-                    // If primary fetch fails, try fallback
+                    // Fallback to everything q=India if top-headlines fails
                     console.log("Fallback: Primary fetch failed for India news, trying /everything.");
-                    const fallbackUrl = `https://newsapi.org/v2/everything?q=India&sortBy=publishedAt&language=en&pageSize=20&apiKey=${NEWSAPI_KEY}`;
+                    const fallbackUrl = `https://newsapi.org/v2/everything?q=India&sortBy=publishedAt&language=en&pageSize=20&apiKey=${NEWSAPI_KEY}&_t=${timestamp}`;
                     response = await fetch(fallbackUrl, fetchOptions);
                 }
 
@@ -42,7 +44,7 @@ export async function GET(request: Request) {
                 // If primary fetch was successful but returned no articles, try fallback
                 if (response.ok && (!json.articles || json.articles.length === 0)) {
                     console.log("Fallback: No articles from top-headlines for India, trying /everything.");
-                    const fallbackUrl = `https://newsapi.org/v2/everything?q=India&sortBy=publishedAt&language=en&pageSize=20&apiKey=${NEWSAPI_KEY}`;
+                    const fallbackUrl = `https://newsapi.org/v2/everything?q=India&sortBy=publishedAt&language=en&pageSize=20&apiKey=${NEWSAPI_KEY}&_t=${timestamp}`;
                     const fallbackResponse = await fetch(fallbackUrl, fetchOptions);
                     if (fallbackResponse.ok) {
                         json = await fallbackResponse.json();
