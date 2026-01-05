@@ -1,0 +1,150 @@
+Here is a comprehensive design and logic proposal to implement the **Dual-Handle Slider** and the **20% Segment Selector** while keeping your existing clean UI style.
+
+---
+
+### 1. UI Redesign Concepts
+
+#### A. The Dual-Handle Slider (Range Selector)
+
+Instead of a single knob, the slider track will now have two knobs.
+
+* **Left Knob:** Sets the `startQuestion` index.
+* **Right Knob:** Sets the `endQuestion` index.
+* **Visuals:** The track between the two knobs should be filled with the purple gradient (active state), while the outside edges are grey (inactive).
+
+#### B. The Display Box
+
+Currently, you have a big box showing `10`. This needs to change to reflect the range.
+
+* **New Design:** Split the big box into two smaller input fields or a joined display.
+* **Format:** `[ Start: 1 ]`  `—`  `[ End: 10 ]`
+* *UX Note:* Allow users to type directly into these boxes as well, in case they want to jump from Q1 to Q49 without dragging.
+
+#### C. The "20% Segments" (Smart Batches)
+
+This replaces the "Quick select: 10, 20, 50" row. You will dynamically generate "Part" buttons based on the total questions available.
+
+* **Logic:** Divide Total Questions () by 5.
+* **Labels:** "Part 1", "Part 2", etc., or explicit ranges "1-10", "11-20".
+
+---
+
+### 2. Proposed Layout (Wireframe)
+
+Here is how the new card content should flow:
+
+> **How many questions do you want to attempt?**
+> [ **1** ] ——— [ **10** ]  *(Editable Start & End Inputs)*
+> `(o)=============(o)------------------`
+> *(Dual slider visual: Active range is purple)*
+> **Select Batch (20%):**
+> [1-10]  [11-20]  [21-30]  [31-40]  [41-50]
+> *(These are clickable chips/pills)*
+> **[ Start Practice ]**
+
+---
+
+### 3. Implementation Logic
+
+Here is the logic you will need to apply in your frontend (works for React, Flutter, or Native).
+
+#### A. The Math for 20% Segments
+
+You need to generate the buttons dynamically because the `totalQuestions` changes per topic.
+
+**The Formula:**
+
+1. **Segment Size:**  (Round up if necessary).
+2. **Loop:** Create 5 buttons.
+* **Button 1:** Start: 1, End: 
+* **Button 2:** Start: , End: 
+* ...and so on.
+
+
+
+**Example (Your User's Scenario with 50 Questions):**
+
+* Total: 50
+* Segment Size: .
+* **Buttons Generated:**
+1. **1 - 10**
+2. **11 - 20**
+3. **21 - 30**
+4. **31 - 40**
+5. **41 - 50**
+
+
+
+**Example (Odd number, e.g., 53 Questions):**
+
+* Segment Size: 
+* Last segment takes the remainder (e.g., 45-53).
+
+#### B. Interaction Rules (State Management)
+
+1. **Slider Movement:**
+* Moving the *Left Knob* updates the "Start" input.
+* Moving the *Right Knob* updates the "End" input.
+* *Constraint:* Start cannot be greater than End. (Usually `minDistance = 1`).
+
+
+2. **Batch Button Click:**
+* Clicking `[11-20]` immediately snaps the *Left Knob* to 11 and the *Right Knob* to 20.
+
+
+
+---
+
+### 4. Technical Suggestion (React/JS Example)
+
+If you are using a library for the slider, here are the standard settings you should look for:
+
+**For the Slider (e.g., `rc-slider` or Material UI Slider):**
+
+```javascript
+<Slider
+  range // Enables two handles
+  min={1}
+  max={50} // dynamic totalQuestions
+  defaultValue={[1, 10]}
+  value={[startSerial, endSerial]}
+  onChange={(newValue) => {
+     setStartSerial(newValue[0]);
+     setEndSerial(newValue[1]);
+  }}
+/>
+
+```
+
+**For the Batch Buttons:**
+
+```javascript
+const totalQ = 50;
+const chunkSize = Math.ceil(totalQ / 5); // 20% chunks
+
+// Helper to generate chunks
+const chunks = Array.from({ length: 5 }, (_, i) => {
+  const start = i * chunkSize + 1;
+  const end = Math.min((i + 1) * chunkSize, totalQ);
+  return { start, end };
+});
+
+// Render logic
+{chunks.map((chunk, index) => (
+  <button
+    key={index}
+    onClick={() => {
+      setStartSerial(chunk.start);
+      setEndSerial(chunk.end);
+    }}
+    className="badge-style-button"
+  >
+    {chunk.start}-{chunk.end}
+  </button>
+))}
+
+```
+
+### 5. Design Refinement Tip
+
+Since you have a "Quick Select" row currently, I recommend renaming the new row to **"Jump to Section"** or **"Study Batches"** so the user understands that these buttons control the range slider above them.

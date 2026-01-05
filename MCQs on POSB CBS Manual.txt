@@ -1,0 +1,765 @@
+MCQs on POSB CBS Manual (Corrected up to 31.12.2021)
+
+### [PART 1: Questions 1-25]
+
+**Q1. Under the Core Banking Solution (CBS) environment, all Departmental Post Offices including Head Offices and Sub Offices are technically referred to as:**
+A. Profit Centers
+B. Service Outlets (SOL)
+C. Transaction Points
+D. Banking Units
+
+**Q2. According to the standard tenure policy for SB/SC Counter Assistants, what is the prescribed tenure in a specific seat before rotation?**
+A. 2 years
+B. 3 years
+C. 4 years
+D. 5 years
+
+**Q3. Which form is used for maintaining the Stock Register of Passbooks in Head and Sub Post Offices?**
+A. SB-28
+B. SB-4(a)
+C. SB-43
+D. SB-5
+
+**Q4. A depositor wishes to deposit cash into their Savings Account. Which form must accompany the cash at the counter?**
+A. SB-7
+B. SB-103 (Pay-in-Slip)
+C. SB-26
+D. SB-5A
+
+**Q5. When a Branch Postmaster (BPM) accepts an initial deposit for opening a new account at a GDS Branch Office, which preliminary receipt is issued to the depositor?**
+A. SB-26
+B. SB-28
+C. SB-103
+D. MS-87
+
+**Q6. If a depositor's Passbook is retained by the Post Office for interest posting or checking, which receipt must be issued to the depositor?**
+A. SB-26
+B. SB-28
+C. SB-27
+D. SB-5
+
+**Q7. As per current KYC norms, which of the following is NOT categorized as an "Officially Valid Document" (OVD) for address proof?**
+A. Aadhaar Card
+B. Valid Passport
+C. Electricity Bill (not more than 2 months old)
+D. A letter from a Gazetted Officer (without an accompanying OVD)
+
+**Q8. What is the minimum balance required to be maintained in a Post Office Savings Account (SB) to avoid the deduction of account maintenance fees?**
+A. Rs. 100
+B. Rs. 500
+C. Rs. 1,000
+D. Rs. 50
+
+**Q9. Which of the following statements regarding Nomination in Post Office Savings Accounts is CORRECT?**
+A. Nomination is optional for all accounts.
+B. Nomination is mandatory for all accounts opened on or after 18.12.2019.
+C. Nomination can be made for a maximum of two individuals only.
+D. A minor cannot be a nominee.
+
+**Q10. A "Joint B" type account in the Post Office Savings Bank is operated by:**
+A. All depositors jointly.
+B. Any of the depositors severally or the survivor(s).
+C. The first holder only.
+D. The guardian of the depositors.
+
+**Q11. At what age can a minor independently open and operate a Post Office Savings Account in their own name?**
+A. 8 years
+B. 10 years
+C. 12 years
+D. 18 years
+
+**Q12. If a Savings Account has had no deposit or withdrawal transactions for a continuous period of _____ financial years, it is treated as a "Silent Account".**
+A. Two
+B. Three
+C. Four
+D. Five
+
+**Q13. What is the prescribed fee for the Transfer of an Account from one Post Office to another?**
+A. Rs. 50 + GST
+B. Rs. 100 + GST
+C. Rs. 20 + GST
+D. Free of cost
+
+**Q14. In the event of a depositor's death, if the eligible balance in the account is paid to the nominee, interest is payable up to:**
+A. The date of death of the depositor.
+B. The date of maturity of the account.
+C. The date of closure/payment.
+D. The end of the financial year in which death occurred.
+
+**Q15. For an illiterate depositor, who can attest the thumb impression on a withdrawal form (SB-7)?**
+A. The Branch Postmaster (BPM) only.
+B. Any person known to the Post Office and the depositor (Witness).
+C. The illiterate depositor’s agent.
+D. No attestation is required if the BPM knows the depositor.
+
+**Q16. A Post Office Savings Bank cheque is valid for a period of _____ from the date of issue.**
+A. 1 month
+B. 3 months
+C. 6 months
+D. 12 months
+
+**Q17. What is the maximum number of individuals that can be appointed as nominees in a single account?**
+A. One
+B. Two
+C. Three
+D. Four
+
+**Q18. Which menu in Finacle CBS is used to verify the signature of a depositor?**
+A. HACLI
+B. IES
+C. CTM
+D. HAFSM
+
+**Q19. Under Section 194N of the Income Tax Act, TDS is deducted at 2% if cash withdrawals by a non-filer of ITR exceed _____ in a financial year.**
+A. Rs. 10 Lakh
+B. Rs. 20 Lakh
+C. Rs. 50 Lakh
+D. Rs. 1 Crore
+
+**Q20. When an account is transferred from one Head Office to another, which document serves as the primary instruction for the transfer in the CBS system?**
+A. SB-10(b) (Transfer Application)
+B. The Passbook
+C. The KYC Form
+D. The AT (Advice of Transfer)
+
+**Q21. Can a Single Account be converted into a Joint Account in the Post Office Savings Bank?**
+A. Yes, by paying a fee.
+B. Yes, if the new holder is a spouse.
+C. No, conversion is not allowed w.e.f 18.12.2019.
+D. Yes, with the approval of the Head Postmaster.
+
+**Q22. What is the minimum amount for which a POSB Cheque can be issued?**
+A. Rs. 5
+B. Rs. 20
+C. Rs. 50
+D. Rs. 100
+
+**Q23. Which report must be generated and tallied by the Counter Assistant at the end of the day to verify all transactions?**
+A. Long Book Detailed Report
+B. Consolidation Journal
+C. Error Book
+D. LOT (List of Transactions)
+
+**Q24. If a duplicate passbook is issued in lieu of a lost one, what is the prescribed service charge?**
+A. Rs. 10 + GST
+B. Rs. 20 + GST
+C. Rs. 50 + GST
+D. Rs. 100 + GST
+
+**Q25. A "Cash Transaction Report" (CTR) must be generated and reported for cash transactions exceeding:**
+A. Rs. 50,000
+B. Rs. 2 Lakh
+C. Rs. 5 Lakh
+D. Rs. 10 Lakh
+
+---
+
+### [PART 2: Questions 26-50]
+
+**Q26. What is the minimum monthly installment for opening a 5-Year Recurring Deposit (RD) account?**
+A. Rs. 10
+B. Rs. 50
+C. Rs. 100
+D. Rs. 500
+
+**Q27. Premature closure of a Recurring Deposit (RD) account is permissible only after the expiry of ______ from the date of opening.**
+A. 1 year
+B. 2 years
+C. 3 years
+D. 4 years
+
+**Q28. A loan can be availed from a Recurring Deposit (RD) account after the account has been in operation for at least:**
+A. 6 months
+B. 1 year
+C. 2 years
+D. 3 years
+
+**Q29. What is the minimum deposit amount required to open a Time Deposit (TD) account?**
+A. Rs. 200
+B. Rs. 500
+C. Rs. 1,000
+D. Rs. 5,000
+
+**Q30. Interest on Time Deposit (TD) accounts is calculated quarterly but is payable:**
+A. Monthly
+B. Quarterly
+C. Annually
+D. At Maturity only
+
+**Q31. Following the 2023 amendment, what is the maximum investment limit in a Single Account under the Monthly Income Scheme (MIS)?**
+A. Rs. 4.5 Lakh
+B. Rs. 9 Lakh
+C. Rs. 15 Lakh
+D. Rs. 30 Lakh
+
+**Q32. If an MIS account is closed prematurely after 1 year but before 3 years, what percentage of the principal is deducted as a penalty?**
+A. 0.5%
+B. 1.0%
+C. 2.0%
+D. No penalty
+
+**Q33. Which of the following is the standard age of eligibility to open a Senior Citizen Savings Scheme (SCSS) account?**
+A. 50 years
+B. 55 years
+C. 58 years
+D. 60 years
+
+**Q34. Following the 2023 amendment, what is the maximum deposit limit for an individual in the Senior Citizen Savings Scheme (SCSS)?**
+A. Rs. 15 Lakh
+B. Rs. 20 Lakh
+C. Rs. 30 Lakh
+D. Rs. 50 Lakh
+
+**Q35. Under the Public Provident Fund (PPF) scheme, what is the minimum and maximum deposit limit per financial year?**
+A. Min Rs. 100, Max Rs. 1 Lakh
+B. Min Rs. 500, Max Rs. 1.5 Lakh
+C. Min Rs. 500, Max Rs. 2.5 Lakh
+D. Min Rs. 1,000, Max Rs. 1.5 Lakh
+
+**Q36. A PPF subscriber can take a loan from the fund from the:**
+A. 1st financial year.
+B. 3rd financial year up to the 6th financial year.
+C. 7th financial year onwards.
+D. 10th financial year onwards.
+
+**Q37. Partial withdrawals from a PPF account are permitted from the:**
+A. 5th financial year.
+B. 6th financial year.
+C. 7th financial year.
+D. 15th financial year.
+
+**Q38. A Sukanya Samriddhi Account (SSA) can be opened for a girl child up to the age of:**
+A. 5 years
+B. 8 years
+C. 10 years
+D. 12 years
+
+**Q39. What is the maximum annual deposit limit in a Sukanya Samriddhi Account (SSA)?**
+A. Rs. 1 Lakh
+B. Rs. 1.5 Lakh
+C. Rs. 4.5 Lakh
+D. Unlimited
+
+**Q40. An SSA account matures after the completion of _____ years from the date of opening.**
+A. 15 years
+B. 18 years
+C. 21 years
+D. 25 years
+
+**Q41. In the Kisan Vikas Patra (KVP) scheme, what is the minimum lock-in period during which premature encashment is generally not allowed?**
+A. 1 year
+B. 2 years
+C. 2 years and 6 months
+D. 3 years
+
+**Q42. Which authority is competent to sanction the transfer of a KVP/NSC certificate from one person to another?**
+A. The Counter Assistant
+B. The Sub Postmaster
+C. The Head Postmaster
+D. The Divisional Superintendent
+
+**Q43. Under the PM CARES for Children Scheme, 2021, the account is opened as a joint account with the:**
+A. Mother
+B. Legal Guardian
+C. District Magistrate
+D. Postmaster
+
+**Q44. Interest on a Post Office Savings Account is calculated on the lowest balance between:**
+A. The 1st and the last day of the month.
+B. The 5th and the last day of the month.
+C. The 10th and the last day of the month.
+D. The 15th and the last day of the month.
+
+**Q45. TDS is applicable on interest earned from SCSS if the total interest paid in a financial year exceeds:**
+A. Rs. 10,000
+B. Rs. 40,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+
+**Q46. The maturity period for a National Savings Certificate (NSC VIII Issue) is:**
+A. 3 years
+B. 5 years
+C. 6 years
+D. 10 years
+
+**Q47. Can a discontinued RD account be revived?**
+A. No, never.
+B. Yes, within the maturity period by paying defaulted installments with default fee.
+C. Yes, without any default fee.
+D. Yes, only after approval from the Circle Head.
+
+**Q48. In case of a joint account under SCSS, the age eligibility (60 years) applies to:**
+A. Both holders.
+B. The first holder only.
+C. The second holder only.
+D. The younger of the two holders.
+
+**Q49. Deposits in a 5-Year Time Deposit (TD) account qualify for income tax deduction under:**
+A. Section 80C
+B. Section 80D
+C. Section 80TTA
+D. Section 10(10D)
+
+**Q50. If a PPF account holder becomes a Non-Resident Indian (NRI) during the currency of the account:**
+A. The account must be closed immediately.
+B. The account can be continued until maturity on a non-repatriation basis.
+C. The account is converted to a standard savings account.
+D. No interest is payable from the date of becoming an NRI.
+
+---
+
+### [PART 3: Questions 51-75]
+
+**Q51. Which system generates the "Common List of Transactions" (Long Book) in a CBS Post Office?**
+A. Sanchay Post
+B. Finacle (via HFINRPT)
+C. Meghdoot
+D. Treasury Module
+
+**Q52. Under the Standardized Agency System (SAS), agents are eligible for commission on investments in:**
+A. PPF
+B. Senior Citizen Savings Scheme (SCSS)
+C. Time Deposits (TD) and Recurring Deposits (RD)
+D. Post Office Savings Account (SB)
+
+**Q53. A "Silent Account" in the Post Office Savings Bank can be revived by:**
+A. Depositing Rs. 50.
+B. Submitting a fresh application for opening a new account.
+C. Submitting a written application with fresh KYC documents and undergoing due diligence.
+D. It cannot be revived; it must be closed.
+
+**Q54. The "Senior Citizen Welfare Fund" rules mandate that deposits in savings accounts unclaimed for a period of ______ years shall be transferred to the fund.**
+A. 5 years
+B. 7 years
+C. 10 years
+D. 15 years
+
+**Q55. Who is the competent authority to settle a Deceased Claim case where the amount is Rs. 4,50,000 and there is NO nomination?**
+A. The Sub Postmaster
+B. The Head Postmaster (Group B) / Divisional Head
+C. The Director of Postal Services
+D. The Chief Postmaster General
+
+**Q56. When a cheque deposited for clearance is dishonoured, the cheque dishonour fee is:**
+A. Rs. 50 + GST
+B. Rs. 100 + GST
+C. Rs. 200 + GST
+D. Rs. 500 + GST
+
+**Q57. Which menu is used in Finacle to "Freeze" an account (e.g., for pledging or court attachment)?**
+A. HAFSM
+B. HACLI
+C. HCAAC
+D. HINTTM
+
+**Q58. The preservation period for Savings Bank vouchers (deposits/withdrawals) in the SBCO is:**
+A. 2 years
+B. 3 years
+C. 5 years
+D. 10 years
+
+**Q59. If a depositor requires an "Interest Certificate" for their POSB accounts for Income Tax purposes, the Post Office should:**
+A. Charge Rs. 50 for the certificate.
+B. Charge Rs. 20 for the certificate.
+C. Provide it free of cost.
+D. Direct the depositor to the Income Tax Department.
+
+**Q60. A "Suspicious Transaction Report" (STR) must be furnished to the Financial Intelligence Unit (FIU) within _____ days of arriving at a conclusion that the transaction is suspicious.**
+A. 3 days
+B. 7 days
+C. 15 days
+D. 30 days
+
+**Q61. Which scheme allows the enrollment of subscribers between the ages of 18 and 40 years for a guaranteed pension?**
+A. PMJJBY
+B. PMSBY
+C. Atal Pension Yojana (APY)
+D. SCSS
+
+**Q62. What is the maximum age limit for joining the Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)?**
+A. 40 years
+B. 50 years
+C. 60 years
+D. 70 years
+
+**Q63. If a post office is migrated to CBS, passbooks for accounts standing at Branch Offices (BOs) are printed/updated at:**
+A. The Branch Office itself manually.
+B. The Account Office (SO/HO) using a passbook printer.
+C. The Circle Processing Centre (CPC).
+D. The Head Office only.
+
+**Q64. In the case of a "High Value Withdrawal" (exceeding Rs. 20,000) at a Branch Post Office, the BPM must:**
+A. Pay the amount immediately from cash balance.
+B. Send the Passbook and Withdrawal Form to the Account Office for passing/approval.
+C. Issue a cheque to the depositor.
+D. Refuse the payment as it exceeds the limit.
+
+**Q65. The "Date of Birth" of a minor account holder is mandatory to be entered in the system for which of the following reasons?**
+A. To calculate interest.
+B. To determine when the minor attains majority and the account status changes.
+C. To issue a cheque book.
+D. To determine the Branch Office jurisdiction.
+
+**Q66. Which form is used for the "Application for Transfer of Account"?**
+A. SB-3
+B. SB-10(b)
+C. SB-7A
+D. SB-83
+
+**Q67. If a literate depositor wants to change their agent for an RD account, they must:**
+A. Close the account and open a new one.
+B. Submit a fresh letter of authority and application to the Post Office.
+C. Obtain permission from the Circle Head.
+D. It is not permitted to change the agent.
+
+**Q68. In case of the death of a depositor where a nomination exists, the nominee can claim the amount by submitting:**
+A. A Claim Form along with the Death Certificate and KYC documents.
+B. A Succession Certificate from a court.
+C. A Probate of Will.
+D. A Letter of Administration.
+
+**Q69. Which Finacle menu is used to generate the "Long Book Consolidation Report"?**
+A. HFINRPT
+B. HACLI
+C. HCASH
+D. HPR
+
+**Q70. Which of the following is strictly prohibited regarding the handling of agents in the Post Office?**
+A. Allowing agents to enter the public hall.
+B. Post Office staff filling out forms on behalf of depositors/agents.
+C. Agents depositing money on behalf of investors.
+D. Agents updating passbooks.
+
+**Q71. Under the "Agency System", if an agent dies, the commission due to them is paid to:**
+A. The Agency District Authority.
+B. The Postal Department's Welfare Fund.
+C. Their heir(s) as a death claim.
+D. It is forfeited.
+
+**Q72. When a TD account is pledged as security, who is entitled to the interest generated during the pledge period?**
+A. The Depositor (Pledger).
+B. The Pledgee (unless stipulated otherwise).
+C. The Post Office.
+D. The Government of India.
+
+**Q73. The "SBCO" (Savings Bank Control Organization) is primarily responsible for:**
+A. Opening new accounts.
+B. Auditing and checking the daily vouchers and Long Book of the HO/SOs.
+C. Delivering passbooks to depositors.
+D. Managing the cash balance of the HO.
+
+**Q74. For an account to be treated as a "PM CARES for Children" account, the beneficiary must have lost:**
+A. Only the father.
+B. Only the mother.
+C. Both parents or the surviving parent/legal guardian/adoptive parents due to COVID-19.
+D. Employment due to COVID-19.
+
+**Q75. The "List of Transactions" (LOT) generated in a CBS Post Office arranges vouchers based on:**
+A. Scheme type (SB, RD, TD).
+B. Amount (Ascending order).
+C. Transaction ID (Sequence of creation).
+D. The name of the depositor.
+
+---
+
+### [CONSOLIDATED ANSWER KEY & EXPLANATIONS]
+
+**Q1: B**
+*Concept:* In the Core Banking Solution (CBS) terminology used by India Post, all operational units (HOs, SOs) are referred to as Service Outlets (SOLs).
+*Reference:* Chapter 1, Rule 1.
+
+**Q2: B**
+*Concept:* The standard tenure for SB/SC Counter Assistants in HOs and large SOs is fixed at 3 years to prevent monopoly and fraud.
+*Reference:* Chapter 1, Rule 2(9).
+
+**Q3: B**
+*Concept:* Form SB-4(a) is the designated Stock Register for maintaining records of Passbooks (SB-5 and SB-5A) in Head and Sub Offices.
+*Reference:* Chapter 2, Rule 4(6).
+
+**Q4: B**
+*Concept:* Form SB-103 (Pay-in-Slip) is the standard voucher used for depositing cash or cheques into Savings Bank accounts.
+*Reference:* Chapter 2, Rule 5.
+
+**Q5: A**
+*Concept:* SB-26 is the Preliminary Receipt issued by Branch Postmasters for initial deposits when opening new accounts, acknowledging receipt of money and documents before the passbook is generated.
+*Reference:* Chapter 2, Rule 7.
+
+**Q6: B**
+*Concept:* Form SB-28 is the formal receipt given to a depositor when their passbook is retained by the Post Office for any official purpose (like interest entry or audit).
+*Reference:* Chapter 2, Rule 8.
+
+**Q7: D**
+*Concept:* A letter from a Gazetted Officer is only valid if accompanied by another OVD containing the address. Standalone letters are no longer primary OVDs under strict KYC/AML norms.
+*Reference:* Chapter 3, Rule 11 (Note 1 & 2).
+
+**Q8: B**
+*Concept:* The minimum balance for a standard Post Office Savings Account is Rs. 500. Non-maintenance attracts a fee.
+*Regulatory Update:* This limit was revised from Rs. 50 to Rs. 500 w.e.f. 11.12.2020.
+
+**Q9: B**
+*Concept:* Nomination has been made mandatory for all National Savings Schemes accounts opened on or after 18.12.2019 to facilitate smooth claim settlements.
+*Reference:* Chapter 3, Rule 12(1).
+
+**Q10: B**
+*Concept:* A "Joint B" account is an "Either or Survivor" account, meaning any of the account holders can operate it independently. "Joint A" requires all holders to operate jointly.
+*Reference:* Chapter 3, Rule 13(2).
+
+**Q11: B**
+*Concept:* A minor who has attained the age of 10 years can open and operate an account in their own name. Below 10, it must be operated by a guardian.
+*Reference:* Chapter 3, Rule 14(1).
+
+**Q12: B**
+*Concept:* An account is classified as "Silent" if no deposit or withdrawal transaction takes place for three continuous financial years.
+*Reference:* Chapter 4, Rule 62.
+
+**Q13: B**
+*Concept:* The fee for transferring an account is Rs. 100 plus applicable taxes (GST).
+*Reference:* Chapter 3, Rule 21 & Fee Schedule.
+
+**Q14: C**
+*Concept:* In the case of a deceased claim, interest is payable on the balance up to the date of payment/closure of the account.
+*Reference:* Chapter 19, Rule 172.
+
+**Q15: B**
+*Concept:* For an illiterate depositor, the thumb impression must be attested by a witness known to both the depositor and the Post Office. The BPM can witness but an independent witness is preferred/required in specific contexts.
+*Reference:* Chapter 4, Rule 57(1)(b).
+
+**Q16: B**
+*Concept:* As per RBI guidelines adopted by POSB, the validity of a cheque is 3 months from the date of issue.
+*Reference:* Chapter 4, Rule 57(2).
+
+**Q17: D**
+*Concept:* A depositor can nominate up to four individuals in a single account.
+*Reference:* Chapter 3, Rule 12(1).
+
+**Q18: B**
+*Concept:* IES (Inquire on Signatures) is the Finacle menu command used to view and verify the specimen signature and photograph of the depositor.
+*Reference:* Chapter 4, Rule 48.
+
+**Q19: B**
+*Concept:* Section 194N mandates TDS deduction @ 2% on cash withdrawals exceeding Rs. 20 Lakh in a year for persons who have not filed Income Tax Returns for the previous three years.
+*Reference:* Chapter 3, Rule 46.
+
+**Q20: A**
+*Concept:* SB-10(b) is the application form used by a depositor to request the transfer of their account from one SOL to another.
+*Reference:* Chapter 3, Rule 22.
+
+**Q21: C**
+*Concept:* Conversion of a Single account to a Joint account (or vice versa) is not permitted under the new rules effective 18.12.2019. To add a name, the account must be closed and a new one opened.
+*Reference:* Chapter 3, Rule 38.
+
+**Q22: C**
+*Concept:* A POSB cheque cannot be issued for an amount less than Rs. 50.
+*Reference:* Chapter 4, Rule 57(2)(a)(iii).
+
+**Q23: A**
+*Concept:* The Long Book Detailed Report (BRN) lists all transactions of the day and must be verified against vouchers by the staff.
+*Reference:* Chapter 3, Rule 33.
+
+**Q24: C**
+*Concept:* The fee for issuing a duplicate passbook is Rs. 50 + GST.
+*Reference:* Chapter 2, Rule 25.
+
+**Q25: D**
+*Concept:* Under PMLA rules, any cash transaction (deposit or withdrawal) exceeding Rs. 10 Lakh must be reported in the Cash Transaction Report (CTR).
+*Reference:* Appendix I (KYC/AML Norms).
+
+**Q26: C**
+*Concept:* The minimum monthly installment for an RD account is Rs. 100 or multiples of Rs. 10.
+*Reference:* Chapter 6.
+
+**Q27: C**
+*Concept:* An RD account can be closed prematurely only after 3 years (36 months) from the date of opening.
+*Reference:* Chapter 6, Rule 94.
+
+**Q28: B**
+*Concept:* A loan facility is available on RD accounts after the account has been in operation for 1 year and 12 installments have been paid.
+*Reference:* Chapter 6, Rule 89.
+
+**Q29: C**
+*Concept:* The minimum deposit for opening a Time Deposit (TD) account is Rs. 1,000.
+*Reference:* Chapter 7.
+
+**Q30: C**
+*Concept:* While TD interest is compounded quarterly, it is payable annually.
+*Reference:* Chapter 7, Rule 98.
+
+**Q31: B**
+*Regulatory Update:* The limit for a Single MIS account was enhanced from Rs. 4.5 Lakh to Rs. 9 Lakh in Budget 2023. For Joint accounts, it is Rs. 15 Lakh.
+*Concept:* This reflects the "Dynamic Currency Protocol" update.
+
+**Q32: C**
+*Concept:* If an MIS account is closed between 1 and 3 years, a 2% deduction from the principal is applied. After 3 years, the deduction is 1%.
+*Reference:* Chapter 8, Rule 105(5).
+
+**Q33: D**
+*Concept:* The standard eligibility age for SCSS is 60 years. Exceptions exist for superannuation (55-60) and Defence personnel (50+).
+*Reference:* Chapter 9.
+
+**Q34: C**
+*Regulatory Update:* The maximum deposit limit for SCSS was enhanced from Rs. 15 Lakh to Rs. 30 Lakh in Budget 2023.
+*Concept:* This reflects the current rule superseding the older manual text.
+
+**Q35: B**
+*Concept:* PPF deposits require a minimum of Rs. 500 and a maximum of Rs. 1.5 Lakh per financial year.
+*Reference:* Chapter 10.
+
+**Q36: B**
+*Concept:* A loan from a PPF account can be taken from the 3rd financial year up to the end of the 6th financial year.
+*Reference:* Chapter 10.
+
+**Q37: C**
+*Concept:* Partial withdrawals from PPF are allowed from the 7th financial year onwards (i.e., after completing 6 financial years).
+*Reference:* Chapter 10.
+
+**Q38: C**
+*Concept:* An SSA can be opened for a girl child from birth up to 10 years of age.
+*Reference:* Chapter 11.
+
+**Q39: B**
+*Concept:* The maximum deposit in an SSA account in a financial year is Rs. 1.5 Lakh.
+*Reference:* Chapter 11.
+
+**Q40: C**
+*Concept:* An SSA matures after 21 years from the date of opening.
+*Reference:* Chapter 11, Rule 128.
+
+**Q41: C**
+*Concept:* KVP has a mandatory lock-in period of 2 years and 6 months (30 months) before it can be encashed prematurely.
+*Reference:* Chapter 14.
+
+**Q42: C**
+*Concept:* The Head Postmaster (of the office where the certificate stands) is competent to sanction the transfer of certificates from one person to another.
+*Reference:* Chapter 13, Rule 145.
+
+**Q43: C**
+*Concept:* For a minor beneficiary under the PM CARES scheme, the account is operated jointly with the District Magistrate.
+*Reference:* Chapter 17, Rule 165.
+
+**Q44: C**
+*Concept:* Interest is calculated on the lowest balance maintained between the close of the 10th day and the end of the month.
+*Reference:* Chapter 4, Rule 60(1).
+
+**Q45: C**
+*Concept:* TDS is deducted on SCSS interest if the total interest payable in a financial year exceeds Rs. 50,000 (for senior citizens).
+*Reference:* Chapter 9, Rule 115.
+
+**Q46: B**
+*Concept:* The maturity period for NSC VIII Issue is 5 years.
+*Reference:* Chapter 15.
+
+**Q47: B**
+*Concept:* A discontinued RD account can be revived within the maturity period by depositing the defaulted installments along with the prescribed default fee.
+*Reference:* Chapter 6, Rule 84.
+
+**Q48: B**
+*Concept:* In a joint SCSS account, only the first holder needs to meet the age eligibility criterion (e.g., 60 years). The spouse (second holder) can be of any age.
+*Reference:* Chapter 9, Rule 110.
+
+**Q49: A**
+*Concept:* Investment in a 5-Year Time Deposit qualifies for tax benefits under Section 80C of the Income Tax Act.
+*Reference:* Chapter 7.
+
+**Q50: B**
+*Concept:* If a PPF subscriber becomes an NRI, the account can continue until maturity on a non-repatriation basis, but it cannot be extended further.
+*Reference:* Chapter 3, Rule 10 (Note 1) & Chapter 10.
+
+**Q51: B**
+*Concept:* In the CBS environment, the "Long Book" (Common List of Transactions) is generated via the Finacle system using the HFINRPT menu.
+*Reference:* Chapter 3, Rule 33.
+
+**Q52: C**
+*Concept:* Agents under the Standardized Agency System (SAS) receive commission for mobilizing investments in Time Deposits (TD) and Recurring Deposits (RD/MIS/KVP/NSC). (Note: PPF/SCSS agency discontinued).
+*Reference:* Chapter 18.
+
+**Q53: C**
+*Concept:* A silent account is revived by submitting an application and fresh KYC documents. The Post Office performs due diligence before unfreezing it.
+*Reference:* Chapter 4, Rule 63.
+
+**Q54: C**
+*Concept:* Amounts in accounts that have remained unclaimed/inoperative for 10 years are transferred to the Senior Citizen Welfare Fund (SCWF).
+*Reference:* Appendix IX.
+
+**Q55: B**
+*Regulatory Update:* Per SB Order 36/2020, the financial powers for Deceased Claims were revised. For claims involving legal evidence or no nomination but within limits (e.g., up to Rs. 5 Lakh), the Head Postmaster (Group B) or Divisional Head is the competent authority.
+*Concept:* Reflects updated delegation of financial powers.
+
+**Q56: B**
+*Concept:* The fee for cheque dishonour is Rs. 100 + GST.
+*Reference:* Chapter 2, Rule 25.
+
+**Q57: A**
+*Concept:* HAFSM (Account Freeze Maintenance) is the menu used to apply freeze codes (like Total Freeze, Debit Freeze) on accounts.
+*Reference:* Chapter 3, Rule 43.
+
+**Q58: C**
+*Concept:* The preservation period for vouchers in SBCO is 5 years.
+*Reference:* Appendix XIX.
+
+**Q59: C**
+*Concept:* The issue of an Interest Certificate for Income Tax purposes is a service provided free of cost to depositors.
+*Reference:* Chapter 3, Rule 45.
+
+**Q60: B**
+*Concept:* An STR must be filed within 7 days of the transaction being identified as suspicious.
+*Reference:* Appendix I (AML/CFT).
+
+**Q61: C**
+*Concept:* Atal Pension Yojana (APY) is open to subscribers aged 18 to 40 years.
+*Reference:* Appendix XIV/Chapter 20.
+
+**Q62: B**
+*Concept:* PMJJBY entry age is 18-50 years.
+*Reference:* Chapter 20.
+
+**Q63: B**
+*Concept:* Passbooks for BO accounts must be updated at the Account Office (SO/HO) using passbook printers, as BOs may not have printers.
+*Reference:* Chapter 5.
+
+**Q64: B**
+*Concept:* GDS BPMs have limited cash retention. For high-value withdrawals, the documents are sent to the Account Office for verification and approval before payment.
+*Reference:* Chapter 5, Rule 69.
+
+**Q65: B**
+*Concept:* The DOB determines when the minor attains majority (18 years), at which point the account operation rights shift from the guardian to the former minor.
+*Reference:* Chapter 3, Rule 14.
+
+**Q66: B**
+*Concept:* SB-10(b) is the prescribed application form for transferring an account.
+*Reference:* Chapter 3, Rule 22.
+
+**Q67: B**
+*Concept:* To change an agent, the depositor must submit a fresh authority letter. The old authority is cancelled.
+*Reference:* Chapter 3, Rule 37.
+
+**Q68: A**
+*Concept:* If a valid nomination exists, the nominee needs only to prove their identity (KYC) and the death of the depositor to claim the funds; legal evidence like a succession certificate is not required.
+*Reference:* Chapter 19.
+
+**Q69: A**
+*Concept:* HFINRPT is the general report generation menu in Finacle used for Long Books, Lot, etc.
+*Reference:* Chapter 3, Rule 33.
+
+**Q70: B**
+*Concept:* To prevent fraud, Post Office staff are strictly prohibited from filling out forms or writing cheques on behalf of depositors or agents.
+*Reference:* Chapter 1, Rule 2.
+
+**Q71: C**
+*Concept:* Commission due to a deceased agent is payable to their legal heirs as a death claim.
+*Reference:* Chapter 18.
+
+**Q72: B**
+*Concept:* When an account is pledged, the rights (including interest) are transferred to the Pledgee unless the pledge agreement specifies otherwise.
+*Reference:* Chapter 7, Rule 103.
+
+**Q73: B**
+*Concept:* The SBCO (Savings Bank Control Organization) acts as an internal auditor, verifying the daily vouchers against the Long Book to ensure accuracy and prevent fraud.
+*Reference:* Appendix XVI.
+
+**Q74: C**
+*Concept:* The PM CARES for Children scheme is specifically for children who lost both parents (or surviving parent/legal guardian) to the COVID-19 pandemic.
+*Reference:* Chapter 17.
+
+**Q75: C**
+*Concept:* The LOT arranges transactions based on the unique Transaction ID generated by the system, preserving the chronological order of operations.
+*Reference:* Chapter 3, Rule 33.

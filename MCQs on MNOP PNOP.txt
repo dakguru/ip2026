@@ -1,0 +1,641 @@
+These questions focus on the fundamentals of the Mail Network Optimization Project (MNOP), Key Performance Indicators (KPIs), and the introductory framework of the Parcel Network Optimization Project (PNOP).
+
+---
+
+**Q1.** The Mail Network Optimization Project (MNOP) was originally initiated as part of which plan scheme before being adopted by the Department of Posts in November 2010?
+A) 10th Plan Scheme
+B) 11th Plan Scheme
+C) 12th Plan Scheme
+D) National Postal Policy 2012
+
+**Q2.** Under the MNOP simplification of the network, the Speed Post network was optimized by creating how many National Sorting Hubs (NSHs)?
+A) 89
+B) 95
+C) 163
+D) 315
+
+**Q3.** In the context of MNOP process streamlining, which of the following statements regarding sorting logic is correct?
+A) TD sorting is scheduled before NTD sorting.
+B) Speed-Net NTD sorting is scheduled before TD sorting to optimize D+X.
+C) Sorting logic is based purely on pincode proximity, not volume.
+D) Labour specialization is removed to allow multi-tasking.
+
+**Q4.** What is the prescribed target for the Key Performance Indicator (KPI) "D+X (NTD)"?
+A) Average Time 1.28 days
+B) Average Time 2 days
+C) Average Time 3 days
+D) Average Time 48 hours
+
+**Q5.** Which of the following is the target for the "Share of bags without 'correct' bag labels" KPI?
+A) 0%
+B) 0.5%
+C) 1%
+D) 5%
+
+**Q6.** How many unique Key Performance Indicators (KPIs) were established under MNOP to ensure the monitoring of every mail activity?
+A) 9
+B) 11
+C) 15
+D) 21
+
+**Q7.** For the calculation of KPI "D+X (TD)", what constitutes a "TD Article"?
+A) An article booked and delivered within the same municipal limit.
+B) An article booked and delivered within the same State.
+C) An article booked at offices in the local TD/catchment area of a given NSH and delivered at Post Offices in the local TD/catchment area of the *same* NSH.
+D) An article booked at an Intra Circle Hub and delivered to a National Sorting Hub.
+
+**Q8.** Regarding "Inbound Operational Performance" for metros, which time window is considered for articles received at the Sorting Hub?
+A) 6:00 AM on day D-1 to 6:00 AM on day D
+B) 7:00 AM on day D-1 to 7:00 AM on day D
+C) 3:00 AM on day D-1 to 3:00 AM on day D
+D) 12:00 AM on day D to 12:00 PM on day D
+
+**Q9.** If the Pin code of the Delivery PO differs from the Pin code of Delivery POs mapped to the particular destination Sorting Hub to which the article is bagged, it is recorded under which KPI?
+A) Share of mis-sorted articles (TD)
+B) Share of mis-sorted articles (NTD)
+C) Share of articles with missing Pin Codes
+D) Share of bags without correct bag labels
+
+**Q10.** What is the "Full Scan Compliance" target percentage for TD articles?
+A) 80%
+B) 90%
+C) 95%
+D) 100%
+
+**Q11.** Under the MNOP scheme, how many mandatory scans are prescribed for NTD (National Transport Delivery) articles booked at a PO/NSH/ICH?
+A) 8 Scans
+B) 9 Scans
+C) 11 Scans
+D) 12 Scans
+
+**Q12.** For BNPL-NTD category articles, how many scans are mandatory?
+A) 8
+B) 9
+C) 10
+D) 12
+
+**Q13.** Which of the following is NOT a component of the MNOP Project?
+A) Optimization and consolidation of mail operation network.
+B) Process redesign in mail operations.
+C) Decentralization of all Speed Post Centres to the Taluk level.
+D) Development of an effective online performance monitoring system based on KPIs.
+
+**Q14.** As per the MNOP concept (w.e.f. 01.04.2025), how many Level-1 (L1) hubs are designated for First Class Unregistered mail?
+A) 79
+B) 95
+C) 96
+D) 110
+
+**Q15.** What is the Delivery Norm for Speed Post articles "Between Metro Cities" (Delhi, Mumbai, Chennai, Bangalore, Kolkata, and Hyderabad)?
+A) 1-2 days
+B) 1-3 days
+C) 2-3 days
+D) 3-4 days
+
+**Q16.** According to the Postman Ad-hoc Establishment Norms for 2-wheeler beats, what is the time allocated per km in a "Congested area"?
+A) 3 Minutes/KM
+B) 5 Minutes/KM
+C) 6 Minutes/KM
+D) 10 Minutes/KM
+
+**Q17.** To be eligible for fuel reimbursement charges under the 2-wheeler scheme, what percentage of accountable articles must be processed through the Postman Mobile App (IMA)?
+A) At least 80%
+B) At least 90%
+C) At least 95%
+D) 100%
+
+**Q18.** Under the Parcel Network Optimization Project (PNOP), the network structure includes which of the following?
+A) 95 NSHs and 163 ICHs
+B) 79 NPH/Level-1 hubs and 110 PH/Level-2 hubs
+C) 56 L1 hubs and 200 L2 hubs
+D) 189 NPHs and 79 PHs
+
+**Q19.** Which color label is used for Parcel bags intended for "Air connectivity" (Speed Post Parcel)?
+A) Blue
+B) Yellow
+C) Red
+D) Green
+
+**Q20.** A Nodal Delivery Centre (NDC) is established in cities/towns where the parcel density exceeds:
+A) 0.5 Parcel per Sq K.M.
+B) 1 Parcel per Sq K.M.
+C) 2 Parcels per Sq K.M.
+D) 5 Parcels per Sq K.M.
+
+**Q21.** What are the dimensions fixed for Postman delivery bags under the NDC setup?
+A) 38cm x 27cm x 20cm
+B) 45cm x 35cm x 56cm
+C) 50cm x 40cm x 60cm
+D) 60cm x 60cm x 60cm
+
+**Q22.** Under the "Bring Your Own Device" (BYOD) scheme (w.e.f. 25.06.2025), what is the fixed incentive per smartphone per month?
+A) Rs. 200/-
+B) Rs. 250/-
+C) Rs. 300/-
+D) Rs. 500/-
+
+**Q23.** In the context of Parcel Hub design, "Blue Color" floor marking is used to indicate:
+A) Aisles and common passages.
+B) Equipment and workstations position.
+C) Different processing areas (e.g., Bag Opening Area, Staging Area).
+D) Hazardous materials storage.
+
+**Q24.** A "Small Category Parcel Hub" is defined as having an operational area of 1200 Sq ft and a throughput of:
+A) Less than 120 parcels per hour.
+B) 121 to 250 parcels per hour.
+C) 251 to 500 parcels per hour.
+D) 501 to 1400 parcels per hour.
+
+**Q25.** What is the "Carrying Capacity" (in terms of parcels) of a Standard Roller Container used in Parcel Hubs?
+A) 100 parcels
+B) 150 parcels
+C) 200 parcels
+D) 300 parcels
+
+
+**Q26.** In a Parcel Hub facility, what is the specific function of a "SWS" (Static Weighing System)?
+A) To sort parcels automatically based on pin code.
+B) To measure the weight and dimensions of parcels received for booking.
+C) To weigh closed bags before dispatch.
+D) To print barcode labels for unlabelled articles.
+
+**Q27.** According to the equipment specifications for Parcel Hubs, what is the maximum weight capacity of the Static Weighing System (SWS)?
+A) 20 Kg
+B) 30 Kg
+C) 35 Kg
+D) 50 Kg
+
+**Q28.** Which color is used for floor marking to indicate "Equipment and workstations position/placement" (e.g., roller containers, bag stands, sorting cases)?
+A) Blue
+B) Yellow
+C) Red
+D) Green
+
+**Q29.** In the context of Parcel Hub operations, if a bag or parcel is not traced within 5 days, what action is prescribed regarding "Presumptive Loss"?
+A) It is written off as a bad debt.
+B) The loss is recovered from the customer insurance.
+C) Presumptive loss is recovered from the officials at fault.
+D) A police complaint is mandatorily filed.
+
+**Q30.** What is the "Floor Footprint" (Area) required for a standard "Package Trolley" used in the facility?
+A) 4 sq. ft.
+B) 6 sq. ft.
+C) 9 sq. ft.
+D) 15 sq. ft.
+
+**Q31.** Regarding the "Bag Stand" equipment in a Parcel Hub, which of the following is NOT a standard configuration for bag holding positions?
+A) 6 bags
+B) 8 bags
+C) 10 bags
+D) 12 bags
+
+**Q32.** Under PNOP, what is the "Minimum object size" (LxBxH) that can be measured by the Static Weighing System?
+A) 10mm x 10mm x 10mm
+B) 50mm x 50mm x 20mm
+C) 100mm x 50mm x 20mm
+D) 150mm x 100mm x 50mm
+
+**Q33.** For a "Large Category Parcel Hub" (throughput 501–1400 parcels/hour), which of the following operational areas must have a "Dedicated separate space"?
+A) Post-sort staging area
+B) Data Admin & Booking Area
+C) Returns Processing Area
+D) All of the above
+
+**Q34.** In a Nodal Delivery Centre (NDC), the "Beat Sorting Area" is used for which specific activity?
+A) Opening received bags and segregating parcels into sectors.
+B) Sorting sector-sorted parcels into delivery beats and sequencing them.
+C) Storing undelivered parcels for 7 days.
+D) Data entry and COD reconciliation.
+
+**Q35.** What is the standard "Ad hoc Norm" for **bagging** parcels (putting parcels into bags) at the booking stage?
+A) 30 Seconds per bag
+B) 45 Seconds per bag
+C) 60 Seconds per bag
+D) 90 Seconds per bag
+
+**Q36.** For a "Manual Parcel Processing Centre" (Middle Mile), what is the norm for **primary sorting** of parcels?
+A) 350 parcels/hour
+B) 500 parcels/hour
+C) 700 parcels/hour
+D) 1200 parcels/hour
+
+**Q37.** In the "Last Mile - Delivery Office" process, the delivery bag or vehicle must be loaded using which concept?
+A) FIFO (First-In-First-Out)
+B) LIFO (Last-In-First-Out)
+C) Weight-based loading (Heaviest first)
+D) Random sequence
+
+**Q38.** Speed Post articles qualify as a "Parcel" under PNOP if they meet which of the following conditions?
+A) Weight exceeding 200 grams.
+B) Dimensions beyond 38cms X 27cms X 2cms.
+C) The article contains documents only.
+D) The article is addressed to a foreign country.
+
+**Q39.** The "Joint Parcel Product" (JPP) is a collaborative service between India Post and which entity?
+A) Indian Airlines
+B) Indian Railways
+C) Road Transport Corporation
+D) National Highways Authority
+
+**Q40.** Under the JPP (Joint Parcel Product), who is responsible for the "Middle Mile"?
+A) India Post
+B) Third-party Logistics Provider
+C) Indian Railways
+D) The Customer (Self-transport)
+
+**Q41.** What is the delivery norm for "Speed Post" articles within the "Same State"?
+A) 1-2 days
+B) 1-3 days
+C) 1-4 days
+D) 2-3 days
+
+**Q42.** Which Parcel Hub category requires an operational area of **2840 Sq ft**?
+A) Very-Small Category Parcel Hub
+B) Small Category Parcel Hub
+C) Medium Category Parcel Hub
+D) Large Category Parcel Hub
+
+**Q43.** The "Primary Sorting Area" in a Parcel Hub is responsible for:
+A) Detailed sorting to specific delivery beats.
+B) Preliminary sorting (First level sorting) of parcels.
+C) Final delivery scanning.
+D) Storage of closed bags before dispatch.
+
+**Q44.** The "PNOP Dashboard" created by CEPT Mysore is primarily used for:
+A) Tracking individual customer complaints.
+B) Monitoring project activities like civil works, equipment procurement, and layout implementation.
+C) Calculating the salary of Postmen.
+D) Generating bar codes for parcels.
+
+**Q45.** In the "Bring Your Own Device" (BYOD) scheme, if a delivery staff member uses their own device for the full month, what is the total remuneration (Incentive + Data/SIM charges)?
+A) Rs. 300/-
+B) Rs. 400/-
+C) Rs. 500/-
+D) Rs. 600/-
+
+**Q46.** Under the BYOD scheme, full remuneration is granted in exceptional cases if the employee processes what percentage of articles through the App (IMA) before proceeding on sanctioned leave?
+A) Minimum 80%
+B) Minimum 85%
+C) Minimum 90%
+D) Minimum 95%
+
+**Q47.** What is the norm for "Parcel bag facility in-scan" at a Manual Parcel Processing Centre?
+A) 2 bags/minute
+B) 4 bags/minute
+C) 6 bags/minute
+D) 8 bags/minute
+
+**Q48.** Which document is NOT required to be checked by the APM/Postmaster before allowing fuel reimbursement for a delivery staff's own 2-wheeler?
+A) Valid 2-wheeler driving license.
+B) Registration certificate of the vehicle.
+C) Insurance certificate of the vehicle.
+D) Pollution Under Control (PUC) certificate.
+
+**Q49.** In the context of "Inward Errors," if the in-charge of a defaulting Set fails to give a satisfactory reply within **3 days**, who initiates the recovery of presumptive loss?
+A) The Divisional Head
+B) The HRO/SRO
+C) The Circle Office
+D) The Inspector of Posts
+
+**Q50.** The "Secure Parcel Storage Area" in an NDC is designed to store undelivered parcels for a period of:
+A) 24 hours
+B) 3 days
+C) 5 days
+D) 7 days
+
+
+**Q51.** According to the timeline for the allocation of Annual Sales Targets, by which date must the **Region** allocate the monthly sales target to the **Divisions**?
+A) Before 5th April
+B) Before 10th April
+C) Before 15th April
+D) Before 25th April 
+
+**Q52.** In the Department's parlance, a "Bulk Customer" is defined as a customer who provides business of what value per month?
+A) INR 5,000 and above
+B) INR 10,000 and above
+C) INR 25,000 and above
+D) INR 50,000 and above 
+
+**Q53.** Which of the following officials may be designated as a "Marketing Executive" (ME) by the Division?
+A) Only Inspector of Posts (IPO)
+B) Postal Assistant, Sorting Assistant, or PRIs
+C) Only ASPs and above
+D) Only outsourced marketing professionals 
+
+**Q54.** The "Sales Process" is divided into six specific stages. Which of the following represents the correct chronological order of the first three stages?
+A) Preparation → Prospecting → Presentation
+B) Prospecting → Preparation → Presentation
+C) Prospecting → Presentation → Closing
+D) Lead Generation → Closing → Follow-up 
+
+**Q55.** What is the prescribed target for "Lead Generation" for each Marketing Executive (ME) on a daily basis?
+A) Identify basic information on 1 lead daily.
+B) Identify basic information on 2 leads daily.
+C) Identify basic information on 5 leads daily.
+D) Identify basic information on 10 leads daily. 
+
+**Q56.** A lead is categorized as a "Qualified Lead" if the projected monthly business from the lead is:
+A) Rs. 5,000 and above
+B) Rs. 10,000 and above
+C) Rs. 20,000 and above
+D) Rs. 50,000 and above 
+
+**Q57.** What is considered a "Good Target" for a Marketing Executive (ME) regarding customer acquisition?
+A) Close 1 sale in one month.
+B) Close 2 sales in one week.
+C) Close 5 sales in one quarter.
+D) Close 10 sales in one year. 
+
+**Q58.** For a sales presentation, the "10-20-30 Rule" implies which of the following?
+A) 10 minutes, 20 slides, 30 font size.
+B) 10 slides, 20 minutes, 30 point font size.
+C) 10 people, 20 minutes, 30 slides.
+D) 10 products, 20 benefits, 30 minutes. 
+
+**Q59.** If a sales opportunity has an approximate monthly demand value of **greater than INR 8 lacs**, which level of official is required to be directly involved in the sales process?
+A) Marketing Executive only
+B) Divisional Head
+C) Regional Head
+D) Chief Postmaster General 
+
+**Q60.** Which of the following locations is identified as a "Trans-Shipment Centre" under PNOP for the Road Transport Network?
+A) Mumbai
+B) Sagar (Madhya Pradesh)
+C) Jaipur
+D) Patna 
+
+**Q61.** In the Joint Parcel Product (JPP) with Indian Railways, how are the "Middle Mile Charges" calculated for trains running at "R" Scale?
+A) R Scale rates exactly.
+B) R + 5%
+C) R + 10%
+D) R + 20% 
+
+**Q62.** For the Joint Parcel Product (JPP), what is the "First Mile" (Pick up & Booking) charge levied per Kg (inclusive of GST)?
+A) Rs. 2 per Kg
+B) Rs. 4 per Kg
+C) Rs. 6 per Kg
+D) Rs. 10 per Kg 
+
+**Q63.** The insurance charges for the Joint Parcel Product are levied at what rate?
+A) 0.01% of Content Value
+B) 0.03% of Content Value
+C) 0.05% of Content Value
+D) 0.10% of Content Value 
+
+**Q64.** According to the Parcel Packaging Policy, what is the specified thickness for a "Plastic Flyer/bag"?
+A) 40 microns
+B) 50-55 microns
+C) 55-60 microns
+D) 100-150 microns 
+
+**Q65.** Which packaging material has a thickness of **40 microns** and is used for "Securing & fastening"?
+A) Plastic Flyer
+B) Paper Flyer
+C) BOPP Tape
+D) Stretch wrap 
+
+**Q66.** The "Large Parcel Processing Area" in a Parcel Hub is specifically defined as an area for processing parcels that:
+A) Weigh more than 10 Kg.
+B) Are large enough to fill a single bag.
+C) Require a two-person lift.
+D) Cannot be scanned by the SWS. 
+
+**Q67.** What is the operational area required for a "Very-Small Category Parcel Hub"?
+A) 575 Sq ft
+B) 800 Sq ft
+C) 1200 Sq ft
+D) 1595 Sq ft 
+
+**Q68.** For "India Post Parcels" (Surface connectivity), the parcel bag label used is:
+A) Yellow
+B) Blue
+C) White
+D) Pink 
+
+**Q69.** Which form number is designated for "Receipt of Bag" at a Mail Agency/TMO?
+A) Form 1A
+B) Form 1B
+C) Form 2A
+D) Form 3A 
+
+**Q70.** "Form 2D" corresponds to which document in the Parcel Hub operations?
+A) Parcel Abstract
+B) Receipt & Despatch Summary
+C) TB Summary
+D) Inward Error Register 
+
+**Q71.** In the case of inward errors, if the discrepancy is not resolved, the Divisional Office must ensure recovery of presumptive loss within what period from the day of discrepancy?
+A) 30 days
+B) 45 days
+C) 60 days
+D) 90 days 
+
+**Q72.** The review of sales target achievement should preferably be done in which month to consider inputs for the next financial year?
+A) March
+B) April
+C) September
+D) December 
+
+**Q73.** "Cold Canvassing" is defined as:
+A) Contacting leads through email only.
+B) A traditional method of contacting leads (generally through phone) to market products and collect info.
+C) Getting referrals from existing customers.
+D) Web-based research on potential clients. 
+
+**Q74.** Performance monitoring of the MNOP scheme is conducted through video conference chaired by the Secretary at what frequency?
+A) Weekly
+B) Every Fortnight
+C) Monthly
+D) Quarterly 
+
+**Q75.** Which of the following is NOT listed as a source for "Web Based Research" for lead generation?
+A) Justdial
+B) India Mart
+C) Tik Tok
+D) Yellowbot 
+
+
+Here is **Part 4** of the Question Bank, covering **Questions 76–100**, followed by the **Comprehensive Answer Key** for all 100 questions.
+
+---
+
+### **Part 4: Questions 76–100**
+
+**Q76.** For a "Medium Category Parcel Hub," what is the defined operational area and throughput capacity?
+A) 1200 Sq ft; 121-250 parcels/hour
+B) 2840 Sq ft; 251-500 parcels/hour
+C) 5000 Sq ft; 500-1000 parcels/hour
+D) 8456 Sq ft; 501-1400 parcels/hour
+
+**Q77.** Which form is prescribed for the "Dispatch of Article" from a Parcel Hub?
+A) Form 2A
+B) Form 2B
+C) Form 2C
+D) Form 2D
+
+**Q78.** In the context of Nodal Delivery Centre (NDC) operations, the "Data Admin Area" is responsible for which of the following activities?
+A) Physical sorting of beats.
+B) COD amount reconciliation and treasury functions.
+C) Storage of stationery.
+D) Opening of closed bags.
+
+**Q79.** Under the MNOP Key Performance Indicators, "KPI # (8)" measures:
+A) Share of mis-sorted articles.
+B) Share of Duplicate barcodes.
+C) Share of bags without correct labels.
+D) D+X (TD).
+
+**Q80.** For the Joint Parcel Product (JPP), if a customer opts for **both** First Mile and Last Mile services, the handling charge (inclusive of GST) is:
+A) Rs. 4 per Kg
+B) Rs. 6 per Kg
+C) Rs. 10 per Kg
+D) Rs. 12 per Kg
+
+**Q81.** Which specific "Floor Marking Color" is used to mark **aisles** and **common passages** in a Parcel Hub?
+A) Green
+B) Blue
+C) Yellow
+D) White
+
+**Q82.** A "Roller Container" used in Parcel Hubs has a carrying capacity of how many closed parcel bags?
+A) 10 bags
+B) 15 bags
+C) 20 bags
+D) 25 bags
+
+**Q83.** In a Semi-Automated Parcel Processing Centre, what is the Ad Hoc Norm for "parcel feeding on automated sorter"?
+A) 500 parcels/hour
+B) 700 parcels/hour
+C) 1000 parcels/hour
+D) 1200 parcels/hour
+
+**Q84.** The "Presumptive Loss" recovery process must be initiated by the HRO/SRO if the Record Officer's error report is not satisfactorily replied to by the Set In-charge within:
+A) 2 days
+B) 3 days
+C) 5 days
+D) 7 days
+
+**Q85.** Which form is known as the "Inward Error Register" for the **Record Office**?
+A) Form 3A
+B) Form 3B
+C) Form 3C
+D) Form 3D
+
+**Q86.** In the Parcel Sales process, "Prospecting" is immediately followed by which stage?
+A) Presentation
+B) Preparation
+C) Managing Objections
+D) Closing
+
+**Q87.** What is the minimum object size (LxBxH) required for measurement by the Static Weighing System (SWS)?
+A) 
+B) 
+C) 
+D) 
+
+**Q88.** Which of the following is **NOT** a mandatory scan for NTD articles (out of the 12 scans)?
+A) Origin Sorting Hub Bag Opening Scan
+B) Destination Sorting Hub Bag Closing Scan
+C) Intermediate Transit Hub Receipt Scan
+D) Destination PO Receipt Scan
+
+**Q89.** The "Delivery Norm" for First Class (Registered) mail between Metro cities is:
+A) 1-2 days
+B) 2-3 days
+C) 3-4 days
+D) 4-5 days
+
+**Q90.** For fuel reimbursement, the "Observation Period" to calculate average distance travelled consists of:
+A) 3 consecutive working days.
+B) 6 working days.
+C) 15 working days.
+D) One full calendar month.
+
+**Q91.** In a Parcel Hub, if the throughput is "Category 3" (251-500 parcels/hour), which areas may be **combined** to save space?
+A) Bag receipt area and bag dispatch area.
+B) Bag opening area and Primary sorting area.
+C) Data Admin & Booking area and Returns Processing area.
+D) All of the above.
+
+**Q92.** The "MN OP Dashboard" allows field units to update data regarding:
+A) Only RTN movements.
+B) Only Layout Design.
+C) Layout Design, Standard Equipment, IT Equipment, and Civil Works.
+D) Staff Attendance only.
+
+**Q93.** What is the dimension of the "Bag Opening Table" specified in the equipment list?
+A) 3 x 2 feet
+B) 4 x 2.5 feet
+C) 5 x 3 feet
+D) 6 x 4 feet
+
+**Q94.** Which official sanctions the bills for Fuel Reimbursement charges by the 10th of each month?
+A) Postmaster
+B) Divisional Head
+C) Regional Director
+D) Circle Head
+
+**Q95.** Under PNOP, the "Sector Sorting" activity in an NDC involves:
+A) Detailed sorting into beats.
+B) Preliminary sorting of parcels into sectors based on delivery address.
+C) Scanning parcels for "Out for Delivery".
+D) Returning parcels to the shipper.
+
+**Q96.** The "Paper Flyer/bag" used for parcel packaging has a specified thickness of:
+A) 50-60 microns
+B) 60-80 microns
+C) 80-100 microns
+D) 100-150 microns
+
+**Q97.** According to the sales manual, "Referrals" are considered a high-potential source of leads because of:
+A) Low cost.
+B) Accurate targeting and trust factor.
+C) Speed of acquisition.
+D) Ease of data entry.
+
+**Q98.** For "Ordinary Letters," the correct bag label prefix prescribed under MNOP is:
+A) EB
+B) RB
+C) CB
+D) LB
+
+**Q99.** A "Large Category Parcel Hub" has a sorting capacity for how many destinations?
+A) 140
+B) 144
+C) 180
+D) 192
+
+**Q100.** The deadline for the "Allocation of monthly sales target to MEs by Divisions" is:
+A) Before 10th April
+B) Before 15th April
+C) Before 20th April
+D) Before 25th April
+
+---
+
+---
+
+### **Comprehensive Answer Key & Explanations**
+
+#### **Part 1 (Q1 – Q25)**
+
+**Q1: B** – The project was initiated as part of an **11th plan scheme** in March 2010. **Q2: B** – Speed Post Network was optimized by creating **95 National Sorting Hubs (NSHs)**. **Q3: B** – Speed-Net NTD sorting is scheduled **before TD sorting** to optimize D+X. **Q4: B** – The target for D+X (NTD) is **Average Time 2 days**. **Q5: A** – The target for Share of bags without 'correct' bag labels is **0%**. **Q6: B** – **Eleven (11) Unique KPIs** are set up to ensure every mail activity. **Q7: C** – TD articles are booked at offices in the local TD/catchment area of a given NSH and delivered at POs in the **same** local TD/catchment area. **Q8: B** – For metros, articles received from **7:00 AM on day D-1 to 7:00 AM on day D** are considered. **Q9: B** – This is classified as **Share of mis-sorted articles (NTD)**. **Q10: B** – The Full Scan Compliance (TD) target is **90%**. **Q11: D** – **12 NTD Scans** are mandatory for articles booked at PO/NSH/ICH. **Q12: B** – For BNPL-NTD category articles, **9 Scans** are mandatory. 
+**Q13: C** – Decentralization to Taluk level is **not** a component; MNOP focuses on consolidation (NSHs/ICHs). **Q14: C** – There are **96 L1** hubs for First Class Unregistered mail. **Q15: B** – The Delivery Norm for Speed Post between Metro Cities is **1-3 days**. **Q16: B** – The norm for 2-wheeler beats in a congested area is **5 Minutes/KM**. **Q17: C** – At least **95%** of accountable articles must be processed through IMA. **Q18: B** – The network consists of **79 NPH/Level-1 (L1) and 110 PH/Level-2 (L2)** hubs. **Q19: B** – The parcel bag label is **Yellow** for Air connectivity (Speed Post Parcel). **Q20: B** – NDCs are set up where parcel density exceeds **1 Parcel per Sq K.M.** **Q21: B** – The fixed dimensions are **45cm x 35cm x 56cm**. 
+**Q22: C** – The fixed incentive is Rs. 300/- per smartphone per month. **Q23: C** – **Blue Color** is used to mark different **processing areas**. **Q24: B** – Small Category Parcel Hubs have a throughput of **121 to 250 parcels per hour**. **Q25: C** – A Roller Container can hold up to **200 parcels** (20 bags x 10 parcels). 
+
+#### **Part 2 (Q26 – Q50)**
+
+**Q26: B** – SWS is used for measuring **weight and dimensions** of parcels received for booking. **Q27: C** – The maximum weight capacity is **35 Kg**. **Q28: D** – **Green Color** is used to mark equipment and workstations position. **Q29: C** – Presumptive loss is recovered from the **officials at fault**. **Q30: B** – The Floor Footprint for a Package Trolley is **6 sq. ft.** 
+**Q31: D** – Bag Stands come in configurations of **6, 8, or 10 bags**; 12 is not listed. **Q32: C** – The minimum object size is **100mm x 50mm x 20mm**. **Q33: D** – Large Category Hubs require **dedicated separate space** for all listed areas. **Q34: B** – Detailed sorting into **delivery beats** and **sequencing** occurs here. **Q35: C** – The norm for bagging is **60 Seconds per bag**. **Q36: C** – The norm for primary sorting is **700 parcels/hour**. **Q37: B** – Loading is done using the **LIFO (Last-In-First-Out)** concept. **Q38: B** – Dimensions beyond **38cms X 27cms X 2cms** qualify it as a parcel. **Q39: B** – JPP is a collaborative product of India Post and **Indian Railways**. **Q40: C** – **Indian Railways** provides the Middle Mile (Transportation). **Q41: C** – The norm for Speed Post within the Same State is **1-4 days**. **Q42: C** – A **Medium Category Parcel Hub** has an operational area of 2840 Sq ft. **Q43: B** – It is responsible for **Preliminary sorting (First level sorting)**. **Q44: B** – It monitors **civil works, procurement, and operationalization** of hubs/NDCs. 
+**Q45: C** – Total remuneration is Rs. 500/- (Rs. 300 incentive + Rs. 200 SIM/Data). **Q46: C** – The employee must process minimum **90% articles**. **Q47: B** – The norm is **4 bags/minute** (15 seconds/bag). **Q48: D** – **PUC certificate** is not listed in the documents to be checked. **Q49: B** – The **HRO/SRO** will initiate the process of recovery. **Q50: D** – Undelivered parcels are stored for over a period of **7 days**. 
+
+#### **Part 3 (Q51 – Q75)**
+
+**Q51: C** – Monthly sales targets are allocated to Divisions by **Before 15th April**. **Q52: B** – Bulk customers give business of **INR 10,000 and above per month**. **Q53: B** – **Postal Assistant, Sorting Assistant, PRIs** may be designated as MEs. **Q54: B** – The order is **Prospecting → Preparation → Presentation**. **Q55: B** – MEs should identify basic information on **two leads daily**. 
+**Q56: B** – A lead is qualified if projected monthly business is Rs. 10,000 and above. **Q57: B** – A good target is to close **2 sales in one week**. **Q58: B** – **10 slides, 20 minutes, 30 point font size**. **Q59: C** – The **Regional Head** is involved for value > INR 8 lacs per month. **Q60: B** – **Sagar (Madhya Pradesh)** is listed as a Trans-Shipment Centre. **Q61: C** – Charges for "R" Scale trains are **R + 10%**. 
+**Q62: B** – The First Mile charge is Rs. 4 per Kg. **Q63: B** – Insurance charges are **0.03%** of Content Value. **Q64: C** – Plastic Flyer thickness is **55-60 microns**. **Q65: C** – **BOPP Tape** has a thickness of 40 microns. **Q66: B** – Defined as parcels large enough to **fill a single bag**. **Q67: A** – The area is **575 Sq ft**. **Q68: B** – The label is **Blue** for Surface connectivity (India Post Parcel). **Q69: A** – Form **1A** is for Receipt of Bag. **Q70: A** – Form 2D is the **Parcel Abstract**. **Q71: B** – Recovery must be made within **45 days** from the day of discrepancy. **Q72: D** – This exercise should preferably be done in **December**. **Q73: B** – Cold Canvassing is contacting leads (generally through **phone**) to market products. **Q74: B** – Performance monitoring is done **every fortnight**. **Q75: C** – **Tik Tok** is not listed; sources include Justdial, India Mart, Yellowbot, etc. 
+
+#### **Part 4 (Q76 – Q100)**
+
+**Q76: B** – Medium Category Hub: **2840 Sq ft** and **251-500 parcels/hour**. **Q77: B** – Form **2B** is for Despatch of Article. **Q78: B** – **COD amount reconciliation** and treasury functions are done here. **Q79: B** – KPI # (8) measures **Share of Duplicate barcodes**. 
+**Q80: B** – For both First & Last Mile, the charge is Rs. 6 per Kg. **Q81: C** – **Yellow Color** is used to mark aisles. **Q82: C** – A Roller Container can hold up to **20 closed parcel bags**. **Q83: D** – The norm is **1200 parcels/hour**. **Q84: B** – If the Set In-charge fails to reply within **3 days**. **Q85: A** – Form **3A** is the Inward Error Register for Record Office. **Q86: B** – Prospecting is followed by **Preparation**. **Q87: B** – Minimum object size is **100mm x 50mm x 20mm**. **Q88: C** – Intermediate Transit Hub Receipt Scan is **not** one of the 12 mandatory scans. **Q89: B** – The norm is **2-3 days**. **Q90: B** – The observation period is **6 working days**. **Q91: D** – **All of the above** combinations are permitted for Category 3 hubs. **Q92: C** – Dashboard tracks **Layout Design, Standard Equipment, IT Equipment, and Civil Work**. **Q93: B** – Dimensions are **4 ft. x 2.5 ft.** **Q94: B** – The **Divisional Head** sanctions the bills by the 10th. **Q95: B** – **Preliminary sorting** of parcels into sectors based on delivery address. **Q96: D** – Paper Flyer thickness is **100-150 microns**. **Q97: B** – Referrals are high potential due to **accurate targeting and trust factor**. **Q98: D** – The prefix for Ordinary Letter is **LB**. **Q99: D** – Large Category Hubs sort for **192 destinations**. **Q100: D** – Target allocation to MEs must be done **Before 25th April**.

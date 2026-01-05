@@ -1,0 +1,1178 @@
+Post Office Regulations, 2024 (Amended up to 31.12.2025).
+
+### **Part 1: Definitions, General Provisions, and Duties of Officers**
+
+**(Questions 1 – 25)**
+
+**1. Under Regulation 1 of the Post Office Regulations, 2024, these regulations shall come into force on:**
+A) The date of their publication in the Official Gazette
+B) 1st April, 2024
+C) 1st January, 2025
+D) The date notified by the Director General in a separate order
+
+**2. As per the definitions provided in Regulation 2, "Authorised Officer" refers to:**
+A) Any officer of the Department of Posts not below the rank of Inspector
+B) An officer empowered by the Director General to perform specific functions under these regulations
+C) The Postmaster of a Head Post Office only
+D) The Circle Head
+
+**3. Which of the following is NOT included in the definition of "Postal Article" under the 2024 Regulations?**
+A) A letter
+B) A parcel
+C) A courier consignment delivered by a private operator
+D) A money order
+
+**4. The "Board" referred to in the Post Office Regulations, 2024 means:**
+A) The Postal Services Board constituted under the Department of Posts
+B) The Board of Directors of the India Post Payments Bank
+C) The Union Cabinet
+D) The Circle Management Board
+
+**5. "Gyan Post," introduced via amendment (Regulation 92A), is primarily defined as a category of service for:**
+A) Sending registered newspapers
+B) Sending educational materials and books at concessional rates
+C) Digital transmission of money
+D) E-commerce returns
+
+**6. Regulation 4 deals with the "Power to fix rates." Who has the ultimate authority to revise the rates of inland postage unless specified otherwise by the Act?**
+A) The Director General Postal Services
+B) The Central Government
+C) The Postal Services Board
+D) The Minister of Communications
+
+**7. Regarding "Recall of Postal Articles" (Regulation 9), a sender may recall an article:**
+A) Only if it has not left the office of posting
+B) Only if it hasn't been delivered to the addressee, subject to payment of a prescribed fee
+C) At any time, provided they pay double the postage
+D) Recall of articles is strictly prohibited under the new regulations
+
+**8. Which officer is empowered to detain a postal article if it is suspected to contain prohibited goods as per Regulation 12?**
+A) Any Postal Assistant
+B) The Postmaster General
+C) An officer in charge of a Post Office or Mail Office
+D) The Delivery Agent
+
+**9. Under the "General Prohibitions" (Regulation 15), transmitting which of the following is strictly strictly forbidden?**
+A) Coins exceeding ₹50 in value in an uninsured letter
+B) Any sharp instrument not properly protected
+C) Any living creature (with specific exceptions like bees/leeches)
+D) All of the above
+
+**10. If an article is found to contravene the packaging conditions prescribed in Regulation 18, it shall be:**
+A) Immediately destroyed
+B) Returned to the sender marked "Refused"
+C) Treated as a "Breach of Conditions" article and charged accordingly
+D) Forwarded to the Returned Letter Office (RLO) without any charge
+
+**11. The term "Franking Machine" under Regulation 22 implies a machine used for:**
+A) Sorting letters automatically
+B) Impressing postage stamps of specific value on postal articles
+C) Scanning the address of the recipient
+D) Sealing the postal bags
+
+**12. Who is the competent authority to grant a license for the use of a Remotely Managed Franking Machine (RMFM) under the 2024 Regulations?**
+A) The Divisional Head (SP/SSP)
+B) The Sub Postmaster
+C) The Circle Head
+D) The Director General
+
+**13. With the 2025 amendment, the validity of a Franking Machine License is now:**
+A) 1 year
+B) 3 years
+C) 5 years
+D) Lifetime unless revoked
+
+**14. Regulation 28 regarding "Post Restante" states that such articles are kept in the Post Office for a period not exceeding:**
+A) 7 days
+B) 15 days
+C) 1 month
+D) 3 months
+
+**15. "Late Fee" letters are those which are posted:**
+A) Without any postage stamps
+B) After the prescribed closing hours of the mail but within the interval allowed for late posting
+C) On a Sunday or Postal Holiday
+D) Outside the jurisdiction of the delivery post office
+
+**16. Under Regulation 32, "Certificate of Posting" is:**
+A) Mandatory for all unregistered parcels
+B) Proof of delivery of the article to the addressee
+C) Only proof that the article was handed over to the Post Office, not proof of delivery
+D) Abolished and no longer available for any category
+
+**17. The dimension limits for a standard "Letter" category under Regulation 35 must not exceed:**
+A) 60 cm in length, width, and depth combined
+B) 90 cm in length, width, and depth combined, with greatest dimension not exceeding 60 cm
+C) 100 cm in length
+D) A3 Size paper
+
+**18. For "Blind Literature Packets" (Regulation 42), which of the following statements is FALSE?**
+A) They are exempted from postage
+B) They are exempted from registration fees
+C) They are exempted from airmail surcharge (if applicable)
+D) They must not contain any written or printed communication
+
+**19. Under the amended provisions for 2025, the maximum weight limit for a "Book Packet" containing printed books is:**
+A) 2 kg
+B) 4 kg
+C) 5 kg
+D) 10 kg
+
+**20. Regulation 50 deals with "Redirection." A postal article can be redirected:**
+A) Only by the sender
+B) Only by the office of posting
+C) By the office of destination free of charge if redirected to an inland address
+D) By the delivery agent upon verbal request
+
+**21. When a postal article is refused by the addressee, it is governed by Regulation 55. Such an article is:**
+A) Kept in deposit for 7 days
+B) Immediately returned to the sender
+C) Sold by public auction
+D) Sent to the RLO for destruction
+
+**22. The "Post Box and Post Bag" system (Regulation 60) allows a renter to:**
+A) Receive registered mails without signature
+B) Receive fully prepaid unregistered articles
+C) Use the facility for a minimum period of 15 days
+D) Claim ownership of the physical box
+
+**23. Under Regulation 65, if a "Registered Article" is lost in transit, the compensation payable (as revised in 2024) is:**
+A) ₹100
+B) Twice the registration fee
+C) Actual value of contents or 30 SDR, whichever is less
+D) The amount declared by the sender
+
+**24. The "Business Reply Service" (Regulation 70) requires a permit issued by:**
+A) The Head Postmaster
+B) The Divisional Superintendent
+C) The Postmaster General
+D) The Assistant Director (Business Development)
+
+**25. Assertion (A): Officers of the Post Office are exempt from liability for loss, misdelivery, or delay of any postal article, except in cases of fraud or willful misconduct.
+Reason (R): This protection is granted under the statutory provisions to ensure the smooth functioning of the vast postal network.**
+A) Both A and R are true, and R is the correct explanation of A
+B) Both A and R are true, but R is NOT the correct explanation of A
+C) A is true, but R is false
+D) A is false, but R is true
+
+Here is **Part 2 of 7** of the Comprehensive Question Bank.
+
+### **Part 2: Mailing Services, Classifications, and Prohibitions**
+
+**(Questions 26 – 50)**
+
+**26. Under Regulation 85 of the Post Office Regulations, 2024, postal articles are broadly divided into which two main classes?**
+A) Ordinary Mails and Premium Mails
+B) First Class Mails and Second Class Mails
+C) Surface Mails and Air Mails
+D) Standard Mails and Express Mails
+
+**27. According to the 2025 amendment regarding "Second Class Mails," which of the following articles is entitled to free air transmission without surcharge?**
+A) Book Packets
+B) Registered Newspapers
+C) Blind Literature Packets
+D) None of the above; they require air surcharge for air transmission
+
+**28. Regulation 92 (Prohibitions) specifically forbids the transmission of "Gold Coin or Bullion" in an uninsured letter if the value exceeds:**
+A) ₹10,000
+B) ₹20,000
+C) ₹50,000
+D) ₹1,00,000
+
+**29. When transmitting "Turpentine" or "Varnish" through the post, Regulation 95 mandates that:**
+A) It is strictly prohibited under all circumstances
+B) It must be packed in a hermetically sealed tin inside a stout wooden box with sawdust
+C) It can be sent only via Surface Mail with a "Dangerous Goods" label
+D) It must be insured compulsorily
+
+**30. Regarding the transmission of "Live Bees," Regulation 98 allows them to be sent:**
+A) Only in Letter Post
+B) Only in Parcel Post
+C) In both Letter and Parcel Post, provided they are enclosed in suitable receptacles
+D) Live Bees are completely prohibited under the 2024 Regulations
+
+**31. Which of the following constitutes "Indecent or Obscene" matter under Regulation 101, leading to the detention of the article?**
+A) A medical textbook with anatomical diagrams
+B) A sealed letter containing a private adult joke
+C) A postcard depicting a grossly offensive or indecent picture on the reverse side
+D) A scientific journal on reproductive health
+
+**32. Match the following "Breach of Conditions" (Column A) with their Treatment (Column B) under Regulation 105:**
+
+
+| 1. Unpaid Article found in Letter Box | i. Returned to sender |
+| 2. Breach of "Book Packet" conditions | ii. Charged double the deficiency on delivery |
+| 3. Prohibited item (Explosive) | iii. Charged at Letter or Parcel rates (whichever is less) |
+| 4. Oversized Postcard | iv. Handed over to Police/Authorities |
+
+A) 1-ii, 2-iii, 3-iv, 4-ii
+B) 1-iii, 2-i, 3-iv, 4-ii
+C) 1-ii, 2-i, 3-iii, 4-iv
+D) 1-iv, 2-ii, 3-i, 4-iii
+
+**33. The dimensions of a "Privately Printed Postcard" under Regulation 110 must strictly adhere to:**
+A) Max: 15 cm x 10.5 cm; Min: 10 cm x 7 cm
+B) Max: 14 cm x 9 cm; Min: 10 cm x 7 cm
+C) Max: 21 cm x 14.8 cm; Min: 14 cm x 9 cm
+D) A standard A6 size
+
+**34. For an "Inland Letter Card" (Regulation 115), the maximum weight allowed is:**
+A) 3 grams
+B) 5 grams
+C) 10 grams
+D) 20 grams
+
+**35. A "Book Packet" (Regulation 120) may contain which of the following?**
+A) A written letter of personal nature
+B) A distinct written communication in the nature of a letter
+C) Manuscripts of works or for newspapers
+D) Paper money
+
+**36. Under the 2025 Amendment, "Pattern and Sample Packets" are restricted to a maximum weight of:**
+A) 1 kg
+B) 2 kg
+C) 4 kg
+D) 500 grams
+
+**37. Assertion (A): A "Blind Literature Packet" is exempt from the payment of registration fee, fee for acknowledgment, and postage.
+Reason (R): This exemption applies even if the packet is sent by air mail.**
+A) Both A and R are true
+B) Both A and R are false
+C) A is true, but R is false
+D) A is false, but R is true
+
+**38. Regulation 130 states that a "Registered Newspaper" must be published at intervals of not more than:**
+A) 15 days
+B) 31 days
+C) 45 days
+D) 60 days
+
+**39. If a Registered Newspaper is posted without complying with the condition of "posting on specified days/dates," it shall be:**
+A) Treated as a Book Packet
+B) Treated as a Regular Newspaper but charged double postage
+C) Charged at the "Book Packet" rate or "Parcel" rate, whichever is higher
+D) Returned to the publisher
+
+**40. The maximum weight limit for an Unregistered Parcel (Regulation 140) is:**
+A) 2 kg
+B) 4 kg
+C) 10 kg
+D) 20 kg
+
+**41. Which of the following items requires "Compulsory Registration" under Regulation 145?**
+A) Any parcel exceeding 4 kg in weight
+B) Any insured article
+C) Any article bearing the word "Registered" on the cover
+D) All of the above
+
+**42. Regulation 150 regarding "Dangerous Goods" was amended in 2025 to strictly align with IATA regulations for air transmission. Which item is now explicitly listed as prohibited in air mail but allowed in surface mail (with restrictions)?**
+A) Lithium-ion batteries (standalone)
+B) Perfumes with alcohol content
+C) Matches
+D) Aerosols
+
+**43. A postal article bearing a "Fictitious Stamp" (Regulation 155) is an offense under:**
+A) Section 263A of the Indian Penal Code
+B) Section 420 of the Indian Penal Code
+C) Section 11 of the Post Office Act
+D) Consumer Protection Act
+
+**44. What is the "Redirection Fee" for a Parcel transmitted by inland post (Regulation 160)?**
+A) Free of charge
+B) Half the prepaid rate
+C) Full prepaid rate (excluding registration fee)
+D) Flat fee of ₹10
+
+**45. Under Regulation 165, if a parcel is addressed to a "Poste Restante" at a Head Post Office, it is kept for:**
+A) 7 days
+B) 15 days
+C) 1 month
+D) Until called for, up to 3 months
+
+**46. Which of the following is NOT permitted to be enclosed in a "Book Packet containing Periodicals"?**
+A) The price of the periodical
+B) The name and address of the publisher
+C) A personal message greeting the subscriber
+D) An entry regarding the subscription period
+
+**47. "Blind Literature Packets" must bear the following inscription on the top right-hand corner:**
+A) "Literature for the Blind"
+B) "Braille Material"
+C) "Blind Post"
+D) "Free Service"
+
+**48. In the event of a breach of conditions regarding the "Maximum Weight" of a letter, the article is:**
+A) Returned to sender
+B) Treated as a Parcel and charged accordingly
+C) Destroyed
+D) Delivered after charging double the letter postage
+
+**49. Articles addressed to "Deceased Persons" (Regulation 175) should be:**
+A) Delivered to any near relative immediately
+B) Delivered only on production of legal document/succession certificate if there is a dispute or doubt
+C) Returned to RLO immediately
+D) Opened by the Postmaster to ascertain contents
+
+**50. Under the "Prohibitions" section, a "Sharp Instrument" can be transmitted ONLY if:**
+A) The sender declares it at the counter
+B) It is insured
+C) The points or edges are securely covered and packed to prevent injury to officers
+D) It is sent via Speed Post
+
+Here is **Part 3 of 7** of the Comprehensive Question Bank.
+
+### **Part 3: Delivery Norms, Undelivered Mail, and Redirection**
+
+**(Questions 51 – 75)**
+
+**51. Under Regulation 180 (Delivery of Mails), the delivery of a postal article to the addressee or their authorized agent is deemed complete when:**
+A) The article reaches the delivery Post Office
+B) The intimation slip is prepared
+C) The article is handed over, and the signature (where required) is obtained on the delivery slip or digital device
+D) The Postman leaves the Post Office for his beat
+
+**52. Regarding the "Delivery of Registered Articles" (Regulation 185), if the addressee refuses to sign the acknowledgment/delivery slip:**
+A) The article shall be left in the letterbox
+B) The article shall be withheld and returned to the sender as "Refused"
+C) The article shall be delivered without signature in the presence of a witness
+D) The Postmaster shall sign on behalf of the addressee
+
+**53. According to the 2024 Regulations, the limit for the value of an Insured Article that can be delivered at the doorstep of the addressee has been enhanced to:**
+A) ₹500
+B) ₹2,000
+C) ₹5,000
+D) ₹10,000
+
+**54. When a Registered Article is addressed to a "Minor" (Regulation 190), it should typically be delivered to:**
+A) The minor directly, regardless of age
+B) The minor’s parent or guardian
+C) The headmaster of the school the minor attends
+D) The nearest police station
+
+**55. Regulation 195 deals with articles addressed to "Deceased Persons." If there is no legal proof of succession produced immediately, an uninsured registered article may be delivered to a near relative:**
+A) At the discretion of the Postman
+B) At the discretion of the Postmaster, provided the claimant signs an indemnity bond (if required) and there is no counter-claimant
+C) Only after a period of 6 months
+D) Under no circumstances; it must be returned to sender
+
+**56. Delivery of "Damaged Insured Articles" (Regulation 200) must be effected:**
+A) By the Postman at the doorstep
+B) Only at the Post Office window, in the presence of the Postmaster, after weighing and examining the contents
+C) By the Divisional Superintendent personally
+D) Without opening the packet
+
+**57. Under the 2025 Amendment regarding "Digital Delivery Proof," which of the following is now accepted as a valid signature for Registered Articles?**
+A) Verbal confirmation
+B) Biometric authentication or digital signature on the Postman's mobile device
+C) A phone call to the Postmaster
+D) A photograph of the addressee
+
+**58. Regulation 210 regarding "Poste Restante" specifies that articles superscribed "To be kept till called for" are retained in the delivery office for:**
+A) 7 days
+B) 15 days
+C) 1 month
+D) 3 months
+
+**59. However, the retention period (Poste Restante) for "Value Payable (VP)" articles mentioned in Regulation 210 is restricted to:**
+A) 3 days
+B) 7 days
+C) 10 days
+D) 14 days
+
+**60. If an addressee authorizes an agent to receive registered mail on their behalf, the "Letter of Authority" is valid for:**
+A) 1 year only
+B) 3 years (unless revoked earlier)
+C) Indefinitely
+D) 6 months
+
+**61. Regulation 220 covers "Refusal of Article." If an addressee accepts a registered article but strictly refuses to sign the Acknowledgment Card (AD), the article is:**
+A) Taken back by the Postman immediately
+B) Delivered, and a remark regarding the refusal to sign AD is made by the Postman
+C) Kept in deposit for 7 days
+D) Treated as "Unclaimed"
+
+**62. "Undelivered Articles" (Regulation 230) that constitute "Letter Mail" (excluding parcels) and have no sender's address on the outside are sent to:**
+A) The local dustbin
+B) The Returned Letter Office (RLO)
+C) The Circle Office
+D) The nearest Head Post Office for auction
+
+**63. Match the following Retention Periods for Undelivered Mail (Regulation 235):**
+
+| Column A (Article Type) | Column B (Retention Period at Delivery Office) |
+| --- | --- |
+| 1. Refused Registered Article | i. 7 days |
+| 2. Unclaimed Registered Packet | ii. Returned immediately |
+| 3. Unclaimed Inland Parcel | iii. 7 days |
+
+A) 1-ii, 2-i, 3-iii
+B) 1-i, 2-ii, 3-iii
+C) 1-iii, 2-i, 3-ii
+D) 1-ii, 2-iii, 3-i
+
+**64. Under Regulation 240 (Redirection), which of the following conditions renders a redirection request INVALID?**
+A) The article has been opened by the agent of the addressee
+B) The article is being redirected to a new address within the same delivery zone
+C) The article is being redirected to a different post town
+D) The request is made by the addressee
+
+**65. What is the fee for "Redirection" of an Inland Letter (Regulation 245)?**
+A) ₹5 per article
+B) Equal to half the postage
+C) Free of charge
+D) Equal to the registration fee
+
+**66. What is the fee for "Redirection" of an Inland Parcel (Regulation 246)?**
+A) Free of charge
+B) Half the prepaid postage rates
+C) Full postage rates (excluding registration fee)
+D) A flat fee of ₹20
+
+**67. A "Change of Address" instruction given by an addressee to the Post Office is valid for a period of:**
+A) 1 month
+B) 3 months
+C) 6 months
+D) 1 year
+
+**68. Assertion (A): Parcels received from foreign countries cannot be redirected out of India without additional postage.
+Reason (R): The Universal Postal Union (UPU) acts prohibit free redirection of parcels across international borders.**
+A) Both A and R are true, and R is the correct explanation of A
+B) Both A and R are true, but R is NOT the correct explanation of A
+C) A is true, but R is false
+D) A is false, but R is true
+
+**69. Articles addressed to "Prisoners" (Regulation 255) must be delivered to:**
+A) The prisoner personally in their cell
+B) The Jailor or the officer deputed by the Jailor
+C) The family members of the prisoner
+D) The District Magistrate
+
+**70. Regulation 260 covers delivery to "Firms." If a registered letter is addressed to a firm which has dissolved, delivery should be made to:**
+A) Any former partner
+B) The person who winds up the firm or the liquidator legally appointed
+C) The sender immediately
+D) The postmaster's discretion
+
+**71. Under the "Safe Custody of Articles" (Regulation 265), if a person residing within the beat of a postman wishes to take delivery of their mail at the Post Office window instead, they must:**
+A) Pay a "Window Delivery Fee" of ₹100 per annum
+B) Submit a written application to the Postmaster (free of charge for Post Box holders, else standard rules apply)
+C) Rent a Post Box compulsorily
+D) It is not permitted; Postman must deliver to the address
+
+**72. An article found in the "Letter Box" which contains a clearly written address of the sender but no postage stamps (Regulation 270) is:**
+A) Delivered to the addressee charging double the postage
+B) Returned to the sender for affixing postage
+C) Destroyed
+D) Sent to RLO
+
+**73. The "Instruction to Withhold Delivery" (Regulation 275) empowers whom to stop the delivery of an article and return it to the sender before it is delivered?**
+A) The Sender (via a recall application)
+B) The Addressee
+C) The Postman
+D) The Local Police Station
+
+**74. Regulation 280 regarding "Customs Duty": If a postal article contains goods liable to customs duty, the duty must be paid by:**
+A) The Sender
+B) The Department of Posts
+C) The Addressee before delivery
+D) The Customs Department
+
+**75. Under the 2024 Regulations, "Smart Delivery" refers to:**
+A) Delivery by drones
+B) GPS-tagged delivery of accountable articles ensuring location-based tracking
+C) Delivery within 2 hours of booking
+D) Delivery without any physical contact
+
+Here is **Part 4 of 7** of the Comprehensive Question Bank.
+
+### **Part 4: New Products, Book Packets, and Parcels**
+
+**(Questions 76 – 100)**
+
+**76. Regulation 92A, introduced in 2025, formally established "Gyan Post." Which of the following entities is primarily eligible to avail of this service?**
+A) E-commerce companies selling electronics
+B) Recognized Educational Institutions and Publishers of educational books
+C) Banks and Financial Institutions
+D) Any individual sending a book
+
+**77. What is the key concession offered under the "Gyan Post" service compared to standard Book Packets?**
+A) Free registration
+B) A subsidized tariff rate for bulk transmission of textbooks and educational material
+C) Free air transmission
+D) Doorstep pickup without any fee
+
+**78. Under Regulation 122 (Book Packets containing Printed Books), the packet must NOT contain:**
+A) A complimentary card or bookmark
+B) A single copy of a catalogue
+C) Any advertisements or publicity material (other than on the cover)
+D) The name of the printer
+
+**79. Regarding the sealing of Book Packets (Regulation 125), which of the following is TRUE?**
+A) They must be sealed with wax to prevent tampering
+B) They must be posted in "Open" condition (i.e., easy to examine contents) or in transparent envelopes
+C) They must be stapled securely at all four corners
+D) They cannot be sent in envelopes at all; only rolls are allowed
+
+**80. For "Blind Literature Packets" (Regulation 128), sound recordings (audio CDs/USBs) are:**
+A) Strictly prohibited
+B) Allowed only if sent by a recognized institution for the blind or addressed to such an institution
+C) Allowed for anyone
+D) Allowed only if they contain music
+
+**81. The maximum length of an Inland Parcel (Regulation 135) must not exceed:**
+A) 0.5 meter
+B) 1.0 meter
+C) 1.5 meters
+D) 1.8 meters
+
+**82. Furthermore, the combined length and girth of an Inland Parcel (Regulation 135) must not exceed:**
+A) 2.0 meters
+B) 2.5 meters
+C) 3.0 meters
+D) 4.0 meters
+
+**83. Under the 2024 Regulations, the "Parcel Post" service is divided into which two primary categories based on speed and value addition?**
+A) Standard Parcel and Premium Parcel
+B) Ordinary Parcel and Speed Post Parcel
+C) Surface Parcel and Air Parcel
+D) Registered Parcel and Unregistered Parcel (only)
+
+**84. If a "Book Packet" is found to contain a personal letter closed against inspection, it will be:**
+A) Returned to the sender
+B) Charged at "Letter" rates, and the deficiency (or double deficiency) collected
+C) Destroyed immediately
+D) Sent to the RLO
+
+**85. "Pattern and Sample Packets" (Regulation 138) are intended primarily for:**
+A) Sale of small goods
+B) Bona fide trade patterns or samples of merchandise having no saleable value
+C) Sending gifts to relatives
+D) Sending medicines
+
+**86. A parcel weighing above ______ must be presented at the counter and cannot be posted in a letterbox (Regulation 142).**
+A) 500 grams
+B) 1 kg
+C) 2 kg
+D) 4 kg
+
+**87. Under the "Click & Book" service (Regulation 148, amended 2024), customers can:**
+A) Book a money order online
+B) Generate a shipping label and pay postage online for parcels before visiting the Post Office
+C) Request a Postman to write a letter
+D) Order stamps for home delivery
+
+**88. "Logistics Post" (Regulation 152) is designed for consignments that:**
+A) Weigh less than 2 kg
+B) Have no specific weight limit (Less than Truck Load and Full Truck Load)
+C) Are strictly documents only
+D) Are prohibited in standard mail
+
+**89. Regarding "Air Parcels" (Regulation 158), if the volumetric weight exceeds the actual weight:**
+A) Actual weight is charged
+B) Volumetric weight is charged
+C) The average of both is charged
+D) The parcel is rejected
+
+**90. Under the 2025 amendment, the "Dak Niryat Kendra" (DNK) integration facilitates:**
+A) Import of electronics
+B) Simplified commercial exports for MSMEs via the postal network
+C) Printing of Aadhaar cards
+D) Rural banking services
+
+**91. Match the Product (Column A) with its Max Weight Limit (Column B) under standard inland regulations:**
+
+| Column A | Column B |
+| --- | --- |
+| 1. Unregistered Parcel | i. 4 kg |
+| 2. Registered Parcel | ii. 10 kg (at BO) / 20 kg (others) |
+| 3. Book Packet | iii. 5 kg |
+| 4. Blind Lit. Packet | iv. 7 kg |
+
+A) 1-i, 2-ii, 3-iii, 4-iv
+B) 1-i, 2-ii, 3-iv, 4-iii
+C) 1-ii, 2-i, 3-iii, 4-iv
+D) 1-iv, 2-ii, 3-i, 4-iii
+
+**92. "Business Parcel" (Regulation 162) is a contractual service. Which of the following is a mandatory requirement to avail this service?**
+A) The sender must be a government employee
+B) The customer must provide a pre-sorted bundle
+C) Cash on Delivery is mandatory
+D) Insurance is mandatory
+
+**93. Assertion (A): Parcels containing fluid or substances that easily liquefy must be packed in a double receptacle.
+Reason (R): This is to ensure that if the primary container breaks, the secondary container with absorbent material prevents leakage into the mail bag.**
+A) Both A and R are true, and R is the correct explanation of A
+B) Both A and R are true, but R is NOT the correct explanation of A
+C) A is true, but R is false
+D) A is false, but R is true
+
+**94. If a parcel is suspected to contain a "Prohibited Article" (e.g., narcotics), the Post Office is empowered to:**
+A) Open it in the absence of the addressee
+B) Detain it and invite the addressee to attend the opening of the parcel
+C) Return it to the sender immediately
+D) Deliver it and inform the police later
+
+**95. The "Cash on Delivery" (COD) facility (Regulation 168) is available for:**
+A) Ordinary Parcels
+B) Registered Parcels, Speed Post, and Business Parcels
+C) Book Packets only
+D) Unregistered mail
+
+**96. The maximum value of a COD consignment (as updated in 2024) is:**
+A) ₹5,000
+B) ₹20,000
+C) ₹50,000
+D) ₹1,00,000
+
+**97. "Bill Mail Service" (Regulation 172) requires a minimum posting of how many articles at a time?**
+A) 500
+B) 1,000
+C) 2,000
+D) 5,000
+
+**98. "National Addressing Grid" (Regulation 178, new insertion) encourages users to:**
+A) Use Digital Address Codes (DAC) on parcels for faster sorting
+B) Write addresses in red ink only
+C) Use only capital letters
+D) Include the phone number of the Postmaster
+
+**99. If a parcel is received in a damaged condition from a foreign country, it must be:**
+A) Delivered immediately to avoid delay
+B) Enclosed in a fresh cover, noted with "Received Damaged," and weighed before delivery
+C) Returned to the country of origin
+D) Auctioned
+
+**100. A "Periodical" registered with the Registrar of Newspapers for India (RNI) can be sent at concessional rates only if the registration number is:**
+A) Printed on the first or last page of the issue
+B) Written by hand on the wrapper
+C) Communicated verbally to the Postmaster
+D) Printed on a separate slip inside the magazine
+
+Here is **Part 5 of 7** of the Comprehensive Question Bank.
+
+### **Part 5: Registration, Insurance, and Value-Added Services**
+
+**(Questions 101 – 125)**
+
+**101. Under Regulation 182, the "Registration" of a postal article is intended to:**
+A) Ensure faster delivery than ordinary mail
+B) Secure a record of posting and delivery, and provide limited indemnification
+C) Guarantee delivery within 24 hours
+D) Exempt the article from customs examination
+
+**102. Which of the following postal articles MUST be registered compulsorily under Regulation 185?**
+A) Any parcel exceeding 4 kg in weight
+B) Any insured article
+C) Any article bearing the word "Registered" on the cover
+D) All of the above
+
+**103. If a sender wishes to register an article that is not compulsorily registrable, they must:**
+A) Pay the registration fee in cash only
+B) Affix postage stamps (or frank) representing the registration fee and ordinary postage
+C) Obtain a license from the Superintendent
+D) Use a specific red-colored envelope
+
+**104. As per the 2024 revised norms (Regulation 188), the compensation for the loss of a Registered Inland Letter is:**
+A) ₹100
+B) ₹500
+C) 30 SDR (Special Drawing Rights) or actual value, whichever is less
+D) Fixed at ₹1,000 regardless of content
+
+**105. "Acknowledgment Due" (AD) card (Regulation 192) for a registered article:**
+A) Is mandatory for all registered articles
+B) Can be attached at the time of posting upon payment of a prescribed fee
+C) Is provided free of charge for all Speed Post articles
+D) Is no longer available; replaced entirely by SMS alerts
+
+**106. Under Regulation 205 (Insurance), the maximum limit for which an article can be insured at a Branch Post Office (BO) is:**
+A) ₹600
+B) ₹10,000
+C) ₹20,000
+D) ₹1,00,000
+
+**107. The maximum insurance limit for an article booked at a Head Post Office or Sub Post Office (Regulation 205) is:**
+A) ₹20,000
+B) ₹50,000
+C) ₹1,00,000
+D) ₹5,00,000
+
+**108. An article containing which of the following MUST be insured compulsorily?**
+A) Coin, bullion, platinum, precious stones, or currency notes
+B) Important legal documents
+C) Electronics worth more than ₹1,000
+D) Glassware
+
+**109. If an article is insured for a value greater than the actual value of its contents (Over-insurance), and it is lost:**
+A) The Post Office pays the insured value (higher amount)
+B) The Post Office pays the actual value of the contents only
+C) The Post Office pays nothing due to fraud
+D) The sender is fined
+
+**110. Which of the following is NOT a condition for Insurance (Regulation 208)?**
+A) The article must be a registered letter or parcel
+B) The article must be sealed in a manner that it cannot be opened without leaving visible traces
+C) The stamps must be affixed apart from each other so they don't overlap seals
+D) The article must be packed in a transparent cover
+
+**111. "Speed Post" (Regulation 215) was laid down as a premium service. The compensation for "Delay" in delivery of a Speed Post article is:**
+A) ₹1,000
+B) Refund of the Speed Post charges only
+C) Double the Speed Post charges
+D) No compensation for delay
+
+**112. For "Loss or Total Theft" of a Speed Post article, the compensation payable (amended 2024) is:**
+A) ₹500
+B) ₹1,000 or actual value whichever is less
+C) Double the Speed Post charges or ₹1,000 whichever is less
+D) 30 SDR
+
+**113. "Business Post" (Regulation 220) offers which of the following pre-mailing activities?**
+A) Collection, franking, gumming, and addressing
+B) Free delivery of mail
+C) Discount on money orders
+D) Insurance of ordinary letters
+
+**114. "Media Post" (Regulation 225) allows:**
+A) Journalists to send articles for free
+B) Corporate entities to use postcards, envelopes, and aerogrammes as a medium for advertisement
+C) Sending CDs/DVDs at lower rates
+D) Post offices to sell newspapers
+
+**115. Under "Direct Post" (Regulation 228), the minimum quantity of unaddressed promotional mail to be accepted is:**
+A) 500 pieces
+B) 1,000 pieces
+C) 5,000 pieces
+D) 10,000 pieces
+
+**116. Match the Value-Added Service (Column A) with its Primary Feature (Column B):**
+
+| Column A | Column B |
+| --- | --- |
+| 1. Retail Post | i. Collection of bills/taxes for third parties |
+| 2. e-Post | ii. Physical delivery of messages sent electronically |
+| 3. Logistics Post | iii. Transportation of bulk/heavy consignments |
+| 4. Bill Mail | iv. Sending financial statements/bills (min 5000) |
+
+A) 1-i, 2-ii, 3-iii, 4-iv
+B) 1-ii, 2-iii, 3-iv, 4-i
+C) 1-iii, 2-i, 3-ii, 4-iv
+D) 1-iv, 2-ii, 3-i, 4-iii
+
+**117. Regulation 235 regarding "Post Office Identity Cards" states that the card is valid for:**
+A) 1 year
+B) 3 years
+C) 5 years
+D) Lifetime
+
+**118. To obtain a Post Office Identity Card, the applicant must submit:**
+A) An application with a photograph and proof of residence
+B) A recommendation from a Gazetted Officer
+C) A bank guarantee
+D) An affidavit
+
+**119. Assertion (A): An insured article cannot be delivered to the addressee unless they sign the delivery receipt and the acknowledgment.
+Reason (R): The signature is the only proof required for the Department to settle accounts with the insurance provider.**
+A) Both A and R are true
+B) Both A and R are false
+C) A is true, but R is false
+D) A is false, but R is true
+
+**120. If a sender wants to "Insure" a parcel, the sender must write on the cover:**
+A) The value for which it is insured in words and figures
+B) "Handle with Care"
+C) "Valuable Contents"
+D) The list of all items inside
+
+**121. Under Regulation 242, which service provides a "Proof of Delivery" (POD) accessible online for bulk customers?**
+A) Ordinary Post
+B) Speed Post and Express Parcel
+C) Book Packet
+D) UPC
+
+**122. "Express Parcel" (Regulation 245) is a product specifically designed for:**
+A) Retail customers sending gifts
+B) Corporate/Business customers needing time-bound delivery
+C) Sending books only
+D) International shipments only
+
+**123. The "International Tracked Packet" service is available for packets up to:**
+A) 1 kg
+B) 2 kg
+C) 5 kg
+D) 10 kg
+
+**124. Regarding "Compensation for Insured Articles" (Regulation 250), no compensation is payable if:**
+A) The loss was caused by the fault or negligence of the sender (e.g., defective packing)
+B) The article contained prohibited items
+C) The claim is made after 3 months from the date of posting
+D) All of the above
+
+**125. Can a "Speed Post" article be Insured?**
+A) No, Speed Post cannot be insured
+B) Yes, up to a limit of ₹1,00,000
+C) Yes, but only for documents
+D) Yes, up to ₹500 only
+
+Here is **Part 6 of 7** of the Comprehensive Question Bank.
+
+### **Part 6: Remittance Services, Digital Services, and IDs**
+
+**(Questions 126 – 150)**
+
+**126. Under Regulation 255 of the Post Office Regulations 2024, the "Electronic Money Order" (eMO) service allows the remission of an amount NOT exceeding:**
+A) ₹2,000
+B) ₹5,000
+C) ₹10,000
+D) ₹50,000
+
+**127. The commission chargeable on an electronic Money Order (eMO) is:**
+A) 2% of the value
+B) 5% of the value
+C) 1% of the value
+D) Flat ₹10 per order
+
+**128. Regarding the "Alteration of Payee’s Name" in a Money Order (Regulation 260), the remitter may request this change:**
+A) Only by paying a second commission equal to the first
+B) Free of charge, provided the money order has not yet been paid
+C) Only if the amount is less than ₹1,000
+D) It is not permitted; the sender must cancel and book a new one
+
+**129. If a Money Order is not paid to the payee and is returned to the remitter, the commission paid initially is:**
+A) Refunded in full
+B) Refunded half
+C) Not refundable
+D) Credited to the remitter's savings account
+
+**130. A Money Order becomes "Void" (Regulation 265) if it remains unpaid at the end of:**
+A) The month of issue
+B) The month following the month of issue
+C) 6 months from the date of issue
+D) 1 year from the date of issue
+
+**131. The "Instant Money Order" (iMO) service (Regulation 268) allows for immediate transfer of sums ranging from ₹1,000 up to a maximum of:**
+A) ₹10,000
+B) ₹25,000
+C) ₹50,000
+D) ₹1,00,000
+
+**132. Under the "International Financial System" (IFS) for money orders (Regulation 272), the maximum limit for an OUTWARD money order per remitter per year is governed by:**
+A) The Postmaster General
+B) RBI Guidelines under FEMA (Foreign Exchange Management Act)
+C) Universal Postal Union (UPU) acts only
+D) The receiving country's rules only
+
+**133. Regarding "Indian Postal Orders" (IPOs) (Regulation 275), the highest denomination available is:**
+A) ₹50
+B) ₹100
+C) ₹500
+D) ₹1,000
+
+**134. If a user needs to make up a broken amount on an Indian Postal Order (e.g., ₹107), they may affix unused postage stamps on the face of the IPO up to a maximum number of:**
+A) 2 stamps
+B) 3 stamps
+C) 4 stamps
+D) 5 stamps
+
+**135. The validity of an Indian Postal Order (Regulation 278) is:**
+A) 6 months from the last day of the month of issue
+B) 12 months from the last day of the month of issue
+C) 24 months from the last day of the month of issue
+D) Unlimited
+
+**136. If an Indian Postal Order is presented for payment after the validity period but within 36 months, it can be paid:**
+A) Without any deduction
+B) Only after deduction of a second commission
+C) Only with the approval of the Circle Head
+D) It cannot be paid at all
+
+**137. Which 2024 amendment (Regulation 282) integrated "NEFT/RTGS" services directly into Post Office Savings Bank (POSB) accounts?**
+A) The Digital Payments Amendment
+B) The Core Banking Solution (CBS) mandate
+C) The POSB (NEFT/RTGS) Facility Rules
+D) The IPPB Merger Act
+
+**138. The "Aadhaar Enabled Payment System" (AePS) provided by the Post Office (via IPPB) allows a customer of ANY bank to:**
+A) Open a new account
+B) Withdraw cash, check balance, and get a mini statement
+C) Apply for a loan
+D) Close their bank account
+
+**139. "Digital Life Certificate" (Jeevan Pramaan) services offered at Post Offices (Regulation 288) are primarily for:**
+A) Minors opening accounts
+B) Pensioners to submit proof of life securely
+C) Life Insurance claimants
+D) Employees joining the postal service
+
+**140. Assertion (A): The Department of Posts is not liable for any loss or injury arising from the delay in payment of a Money Order.
+Reason (R): Money Order services are provided on a "best effort" basis and are subject to the availability of cash at the destination office.**
+A) Both A and R are true
+B) Both A and R are false
+C) A is true, but R is false
+D) A is false, but R is true
+
+**141. Under Regulation 292, "Philately Deposit Accounts" (PDA) can be opened with a minimum deposit of:**
+A) ₹100
+B) ₹200
+C) ₹500
+D) ₹1,000
+
+**142. "My Stamp" (Regulation 295) is a personalized sheet of postage stamps. The personalized portion (thumbnail image):**
+A) Is valid for postage
+B) Is not valid for postage; only the attached stamp is valid
+C) Can be used separately as a stamp
+D) Is valid for international mail only
+
+**143. Regulation 300 regarding "e-Post Office" (portal) allows customers to:**
+A) Send emails to the Postmaster
+B) Buy Philatelic stamps and PLI premiums online
+C) Track the Postman's live location
+D) File RTI applications only
+
+**144. In the context of "International Money Transfer Service" (IMTS) (e.g., Western Union/MoneyGram via Post Office), the payment to the beneficiary in India is made:**
+A) In US Dollars
+B) In Indian Rupees (Cash up to ₹50,000, rest by Cheque/Account transfer)
+C) Entirely by Cheque
+D) In Indian Rupees (Cash up to ₹1,00,000)
+
+**145. "Gangman" or "Trackman" insurance policies are NOT part of Postal Regulations, but "Postal Life Insurance" (PLI) is. The "Rural Postal Life Insurance" (RPLI) was introduced in:**
+A) 1984
+B) 1995
+C) 2005
+D) 2014
+
+**146. Which of the following is considered a "Wrong Payment" of a Money Order?**
+A) Payment to the person named in the MO
+B) Payment to a person who claimed to be the payee and produced a valid ID, which later turned out to be forged
+C) Payment to the payee's authorized agent
+D) Payment to the payee at the Post Office window
+
+**147. If a Money Order is lost in transit, a "Duplicate Money Order" is issued:**
+A) Only after the remitter pays a fresh commission
+B) Free of charge
+C) Only after 6 months
+D) By the Head Post Office of the destination only
+
+**148. The "Jan Suraksha Schemes" (PMJJBY, PMSBY, APY) are available through Post Offices. The age limit for entering Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) is:**
+A) 18 to 40 years
+B) 18 to 50 years
+C) 18 to 60 years
+D) 18 to 70 years
+
+**149. The "Sukanya Samriddhi Account" (Regulation 310) can be opened for a girl child up to the age of:**
+A) 5 years
+B) 8 years
+C) 10 years
+D) 12 years
+
+**150. Under the "Mahila Samman Savings Certificate" (introduced 2023-24), the maximum deposit limit is:**
+A) ₹1 Lakh
+B) ₹2 Lakhs
+C) ₹5 Lakhs
+D) ₹10 Lakhs
+
+Here is **Part 7 of 7** of the Comprehensive Question Bank. This final part includes Advanced Scenario-based questions, Miscellaneous provisions, and the **Master Answer Key** for all 175 questions.
+
+### **Part 7: Advanced Scenario-based Questions & Miscellaneous Provisions**
+
+**(Questions 151 – 175)**
+
+**151. Scenario:** Mr. A posts a Registered Letter to Mr. B. Before delivery, Mr. A discovers he sent the wrong document. He applies for "Recall of Article" (Regulation 9). The article is intercepted at the delivery office. However, Mr. B (the addressee) demands to know the sender's name.
+**Question:** Is the Postmaster bound to disclose the sender's name to the addressee?
+A) Yes, under the RTI Act.
+B) Yes, because the addressee is the rightful owner of the mail.
+C) No, the sender's identity shall not be disclosed to the addressee when an article is recalled.
+D) Yes, but only if Mr. B pays a fee.
+
+**152. Scenario:** A "Cash on Delivery" (COD) parcel is tendered to the addressee. The addressee wants to open the parcel to check the quality of the goods before paying the COD amount.
+**Question:** What should the Postman do?
+A) Allow him to open it, as customer satisfaction is priority.
+B) Allow him to open it only in the presence of the Postmaster.
+C) Refuse delivery unless the amount is paid first; opening is allowed only after payment.
+D) Return the parcel to the sender immediately.
+
+**153. Scenario:** A Registered Letter is addressed to "The District Collector." The Collector is on leave, and the letter is marked "Personal." The Office Superintendent offers to sign for it.
+**Question:** Can the Postman deliver it to the Superintendent?
+A) Yes, official mail is always delivered to the office staff.
+B) No, articles marked "Personal" or "Confidential" addressed to officials by name must be delivered to the addressee or an agent specifically authorized to receive *such* articles.
+C) Yes, if the Superintendent gives a stamped receipt.
+D) No, it must be redirected to the Collector's home address.
+
+**154. Regulation 315 deals with "Complaints." The preservation period for "Complaints regarding Registered Articles" is:**
+A) 6 months
+B) 12 months
+C) 18 months
+D) 2 years
+
+**155. If a sender uses a "Reuse of Used Stamps" (Regulation 320), and it is detected at the office of posting:**
+A) The article is forwarded, and the addressee is charged.
+B) The article is detained, and the sender is prosecuted under the Indian Penal Code.
+C) The stamps are defaced, and the article is returned.
+D) The Postmaster warns the sender and accepts it.
+
+**156. Regarding "Postal Holidays" (Regulation 325), which of the following is NOT a mandatory closed holiday for all Post Offices in India?**
+A) Republic Day (26th Jan)
+B) Independence Day (15th Aug)
+C) Mahatma Gandhi's Birthday (2nd Oct)
+D) Good Friday
+
+**157. Match the Official with their Jurisdiction/Role:**
+
+| Column A | Column B |
+| --- | --- |
+| 1. Director General | i. Head of a Postal Circle |
+| 2. Chief Postmaster General | ii. Head of a Postal Division |
+| 3. Superintendent of Post Offices | iii. Head of the Department of Posts |
+| 4. Inspector of Posts | iv. Head of a Sub-Division |
+
+A) 1-iii, 2-i, 3-ii, 4-iv
+B) 1-i, 2-iii, 3-ii, 4-iv
+C) 1-iii, 2-ii, 3-i, 4-iv
+D) 1-ii, 2-i, 3-iv, 4-iii
+
+**158. Scenario:** An insured parcel is delivered to Mr. X. He notices the seal is intact but the weight feels light. He signs the receipt but later opens it and finds a stone inside. He claims compensation the next day.
+**Question:** Is the Department liable?
+A) Yes, because the contents were missing.
+B) Yes, provided he produces the stone.
+C) No, because he gave a "Clean Receipt" and accepted the article; the Department's liability ceases upon delivery.
+D) Partial liability is accepted.
+
+**159. Under the "Right to Information (RTI) Act" provisions within Postal Rules, the fee for an initial application (IPO/Cash) is:**
+A) ₹5
+B) ₹10
+C) ₹20
+D) ₹50
+
+**160. Which "Register" is maintained for "Articles Received in Damaged Condition"?**
+A) Error Book
+B) Order Book
+C) Register of Damaged Articles
+D) Nominal Roll
+
+**161. Scenario:** A foreigner wishes to send a parcel from India. He does not have a permanent address in India.
+**Question:** Can he be the sender?
+A) No, only Indian citizens can send parcels.
+B) Yes, but he must provide the address of the hotel where he is staying or a local reference.
+C) Yes, without any address.
+D) Only if he has an Aadhaar card.
+
+**162. Assertion (A): It is prohibited to apply oil, grease, or any other substance to the cover of a postal article that might damage other mails.
+Reason (R): High-speed sorting machines (AMPC) cannot process oily or sticky surfaces.**
+A) Both A and R are true
+B) Both A and R are false
+C) A is true, but R is false
+D) A is false, but R is true
+
+**163. The term "Camp Correspondence" refers to:**
+A) Mail sent to soldiers in a camp.
+B) Mail addressed to high dignitaries (e.g., President, Ministers) while they are on tour.
+C) Mail sent to summer camps for children.
+D) Internal departmental memos.
+
+**164. "Special Bags" are used for enclosing correspondence for:**
+A) The President, Vice-President, and Prime Minister
+B) The Director General
+C) Foreign Embassies
+D) Military Commanders
+
+**165. If a "Post Card" is posted with a stamp of insufficient value, it is charged on delivery:**
+A) The amount of deficiency
+B) Double the amount of deficiency
+C) A fixed fine of ₹5
+D) Treated as a letter
+
+**166. Under Regulation 52 (amended), "Refused" articles are returned to the sender. If the sender also "Refuses" to take it back (e.g., to avoid paying due charges):**
+A) The article is destroyed immediately.
+B) The article is sold, and proceeds are credited to the Government.
+C) The Post Office can recover the due amount from the sender as an "Arrear of Land Revenue."
+D) The Postman keeps the article.
+
+**167. Scenario:** A Postman is delivering a Money Order. The payee is illiterate.
+**Question:** How should the payment be effected?
+A) By obtaining a thumb impression attested by a witness who is known to the Postman.
+B) By obtaining a thumb impression only.
+C) By asking a relative to sign.
+D) By refusing payment until the payee learns to sign.
+
+**168. The "preservation period" for "Order Book" of a Post Office is:**
+A) 3 years
+B) 5 years
+C) 10 years
+D) Permanent
+
+**169. Which "Section" of the Post Office Act gives the Government the power to intercept articles for public safety?**
+A) Section 19
+B) Section 26
+C) Section 35
+D) Section 4
+
+**170. Scenario:** An article is addressed to "The care of the Postmaster."
+**Question:** This is technically treated as:
+A) Service Money Order
+B) Poste Restante
+C) Official Article
+D) Missent Article
+
+**171. Who is the "Head of the Circle"?**
+A) Director General
+B) Chief Postmaster General (CPMG)
+C) Member (Operations)
+D) Postmaster General (PMG)
+
+**172. The "Book of Post Marks" must be maintained by:**
+A) Head Offices only
+B) Every Post Office and Mail Office
+C) RMS offices only
+D) Circle Office
+
+**173. Under the "Postal Manual Vol V" (often cited in Regulations regarding security), can a Postman deviate from his beat to deliver an urgent letter?**
+A) Yes, if the addressee requests it.
+B) No, he must strictly follow the beat map approved by the Overseer/Inspector.
+C) Yes, for a tip.
+D) Yes, if it is a Speed Post article.
+
+**174. If a "Franking Machine" user fails to reset the meter or renew the license in time, the license can be cancelled by:**
+A) The Inspector
+B) The Head of the Division (SP/SSP)
+C) The Postmaster
+D) The Vendor
+
+**175. Final Question:** In the context of the 2024 Regulations, "Hybrid Mail" refers to:
+A) Mail that travels partly by air and partly by surface.
+B) Mail where the content is transmitted electronically to the destination print center and physically delivered (e.g., e-Post).
+C) Mail carried by private couriers but delivered by Postman.
+D) Registered parcels.
+
+---
+
+---
+
+### **MASTER ANSWER KEY (Questions 1 – 175)**
+
+| Q.No | Ans | Q.No | Ans | Q.No | Ans | Q.No | Ans | Q.No | Ans | Q.No | Ans | Q.No | Ans |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **1** | A | **26** | B | **51** | C | **76** | B | **101** | B | **126** | B | **151** | C |
+| **2** | B | **27** | D | **52** | B | **77** | B | **102** | D | **127** | B | **152** | C |
+| **3** | C | **28** | B | **53** | C | **78** | C | **103** | B | **128** | B | **153** | B |
+| **4** | A | **29** | B | **54** | B | **79** | B | **104** | C | **129** | C | **154** | B |
+| **5** | B | **30** | C | **55** | B | **80** | B | **105** | B | **130** | A | **155** | B |
+| **6** | B | **31** | C | **56** | B | **81** | B | **106** | A | **131** | C | **156** | D |
+| **7** | B | **32** | A | **57** | B | **82** | D | **107** | C | **132** | B | **157** | A |
+| **8** | C | **33** | B | **58** | C | **83** | A | **108** | A | **133** | B | **158** | C |
+| **9** | D | **34** | A | **59** | B | **84** | B | **109** | B | **134** | C | **159** | B |
+| **10** | B | **35** | C | **60** | B | **85** | B | **110** | D | **135** | C | **160** | C |
+| **11** | B | **36** | B | **61** | A | **86** | D | **111** | B | **136** | B | **161** | B |
+| **12** | A | **37** | C | **62** | B | **87** | B | **112** | C | **137** | C | **162** | A |
+| **13** | C | **38** | B | **63** | A | **88** | B | **113** | A | **138** | B | **163** | B |
+| **14** | C | **39** | B | **64** | A | **89** | B | **114** | B | **139** | B | **164** | A |
+| **15** | B | **40** | B | **65** | C | **90** | B | **115** | B | **140** | A | **165** | B |
+| **16** | C | **41** | D | **66** | B | **91** | A | **116** | B | **141** | B | **166** | C |
+| **17** | B | **42** | A | **67** | B | **92** | B | **117** | B | **142** | B | **167** | A |
+| **18** | D | **43** | A | **68** | A | **93** | A | **118** | A | **143** | B | **168** | D |
+| **19** | C | **44** | B | **69** | B | **94** | B | **119** | C | **144** | B | **169** | B |
+| **20** | C | **45** | A | **70** | B | **95** | B | **120** | A | **145** | B | **170** | B |
+| **21** | B | **46** | C | **71** | B | **96** | C | **121** | B | **146** | B | **171** | B |
+| **22** | B | **47** | A | **72** | B | **97** | D | **122** | B | **147** | B | **172** | B |
+| **23** | C | **48** | B | **73** | A | **98** | A | **123** | B | **148** | B | **173** | B |
+| **24** | C | **49** | B | **74** | C | **99** | B | **124** | D | **149** | C | **174** | B |
+| **25** | A | **50** | C | **75** | B | **100** | A | **125** | B | **150** | B | **175** | B |
+
