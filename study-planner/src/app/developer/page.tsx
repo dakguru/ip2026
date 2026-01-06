@@ -81,6 +81,23 @@ export default function DeveloperPage() {
                         </div>
                     </div>
 
+                    {/* Mock Test Results (New) */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
+                        <div className="flex items-start justify-between mb-4">
+                            <div className="p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                                <FileText className="w-6 h-6" />
+                            </div>
+                            <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-zinc-100 dark:bg-zinc-800 text-zinc-500 rounded-md">Results</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Mock Test Results</h3>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">View user submissions and scores for the Admin Sample Test.</p>
+                        <div className="flex flex-col gap-2">
+                            <Link href="/developer/mock-results" className="w-full py-2 px-4 rounded-lg bg-indigo-50 dark:bg-indigo-900/10 text-indigo-600 dark:text-indigo-400 font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
+                                <FileText className="w-4 h-4" /> View Results
+                            </Link>
+                        </div>
+                    </div>
+
                     {/* Admin Panel (New) */}
                     <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
                         <div className="flex items-start justify-between mb-4">

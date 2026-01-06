@@ -143,6 +143,20 @@ export default function MockTestsPage() {
                         Compete with aspirants across India. Real-time ranking, detailed analysis, and exam-like environment.
                     </p>
 
+                    <div className="flex justify-center mb-10 w-full animate-in zoom-in duration-500">
+                        <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-2xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                            <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
+                            <span className="relative px-8 py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[14px] group-hover:bg-opacity-0 flex items-center gap-3">
+                                <span className="relative flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                </span>
+                                <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white">Attempt Live Sample Test</span>
+                                <ArrowLeft className="w-5 h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
+                            </span>
+                        </Link>
+                    </div>
+
                     <div className="flex flex-wrap justify-center gap-3 md:gap-4 text-xs md:text-sm font-medium text-zinc-300">
                         <div className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
                             <Users className="w-4 h-4 text-blue-400" />

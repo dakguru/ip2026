@@ -250,6 +250,20 @@ export default function AdminDashboard() {
 
                 {/* Statistics Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    {/* Admin Mock Test Card */}
+                    <Link href="/admin/test-runner" className="col-span-1 bg-gradient-to-br from-purple-600 to-indigo-600 p-5 rounded-2xl shadow-lg shadow-purple-500/20 border border-purple-500/50 hover:shadow-xl hover:scale-[1.02] transition-all group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-8 -mt-8 blur-xl"></div>
+                        <div className="flex items-center justify-between mb-4 relative z-10">
+                            <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
+                                <FileText className="w-5 h-5 text-white" />
+                            </div>
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-white/20 text-white uppercase tracking-wider backdrop-blur-sm">New</span>
+                        </div>
+                        <div className="flex flex-col relative z-10">
+                            <span className="text-lg font-bold text-white leading-tight mb-1">Sample Mock Test</span>
+                            <span className="text-xs text-purple-100/80 font-medium">Click to Launch</span>
+                        </div>
+                    </Link>
                     <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-16 h-16 bg-green-500/10 rounded-bl-full -mr-8 -mt-8"></div>
                         <div className="flex items-center justify-between mb-4">
@@ -428,8 +442,8 @@ export default function AdminDashboard() {
                                             <td className="py-4 px-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                                                 {user.lastActiveAt ? (
                                                     <span className={`inline-flex items-center gap-1.5 ${new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000
-                                                            ? 'text-green-600 dark:text-green-400 font-bold'
-                                                            : ''
+                                                        ? 'text-green-600 dark:text-green-400 font-bold'
+                                                        : ''
                                                         }`}>
                                                         {new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000 && (
                                                             <span className="relative flex h-2 w-2">
