@@ -18,6 +18,7 @@ const UserSchema = new mongoose.Schema({
     resetToken: { type: String },
     resetTokenExpiry: { type: Number },
     currentSessionId: { type: String },
+    lastActiveAt: { type: Date },
     createdAt: { type: Date, default: Date.now },
 }, { timestamps: true });
 

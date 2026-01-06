@@ -9,6 +9,7 @@ import GlobalNavigation from "@/components/GlobalNavigation";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import NativeMobileSpacer from "@/components/NativeMobileSpacer";
+import UserActivityTracker from "@/components/UserActivityTracker";
 
 
 const inter = Inter({
@@ -43,6 +44,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <UserActivityTracker />
           <GlobalNavigation />
           <NativeMobileSpacer>
             {children}

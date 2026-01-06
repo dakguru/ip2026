@@ -19,7 +19,9 @@ export interface User {
     purchaseDate?: string;
     resetToken?: string;
     resetTokenExpiry?: number;
+
     currentSessionId?: string;
+    lastActiveAt?: string;
     createdAt: string;
 }
 
@@ -42,7 +44,9 @@ function mapUser(doc: any): User {
         purchaseDate: doc.purchaseDate ? new Date(doc.purchaseDate).toISOString() : undefined,
         resetToken: doc.resetToken,
         resetTokenExpiry: doc.resetTokenExpiry,
+
         currentSessionId: doc.currentSessionId,
+        lastActiveAt: doc.lastActiveAt ? new Date(doc.lastActiveAt).toISOString() : undefined,
         createdAt: doc.createdAt ? new Date(doc.createdAt).toISOString() : new Date().toISOString(),
     };
 }

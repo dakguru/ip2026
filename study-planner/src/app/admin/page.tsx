@@ -42,6 +42,7 @@ export default function AdminDashboard() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState("");
     const [search, setSearch] = useState("");
+    const [onlineCount, setOnlineCount] = useState(0);
 
     // Filters
     const [filterStatus, setFilterStatus] = useState<'all' | 'gold' | 'silver' | 'free'>('all');
@@ -55,7 +56,20 @@ export default function AdminDashboard() {
 
     useEffect(() => {
         fetchUsers();
+        fetchOnlineCount();
     }, []);
+
+    const fetchOnlineCount = async () => {
+        try {
+            const res = await fetch('/api/admin/stats/online');
+            if (res.ok) {
+                const data = await res.json();
+                setOnlineCount(data.count);
+            }
+        } catch (e) {
+            console.error("Failed to fetch online count", e);
+        }
+    };
 
     const fetchUsers = async () => {
         try {
@@ -232,7 +246,23 @@ export default function AdminDashboard() {
                 </div>
 
                 {/* Statistics Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-16 h-16 bg-green-500/10 rounded-bl-full -mr-8 -mt-8"></div>
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="p-2 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg animate-pulse">
+                                <span className="relative flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                                </span>
+                            </div>
+                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Online</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">{onlineCount}</span>
+                            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Active Now</span>
+                        </div>
+                    </div>
                     <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
                         <div className="flex items-center justify-between mb-4">
                             <div className="p-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg">
