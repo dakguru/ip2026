@@ -6,7 +6,7 @@ export default function NativeMobileSpacer({ children }: { children: React.React
     const isMobileApp = useIsMobileApp();
 
     return (
-        <div className={isMobileApp ? "pb-16" : ""}>
+        <div className="pb-24 md:pb-0"> {/* Increased padding for both web and app on mobile */}
             {children}
         </div>
     );

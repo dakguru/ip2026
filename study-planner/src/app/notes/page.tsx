@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import HomeHeader from '@/components/HomeHeader';
-import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock } from 'lucide-react';
+import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check } from 'lucide-react';
 import Link from 'next/link';
 
 // --- DATA ---
@@ -368,6 +368,15 @@ export default function NotesPage() {
         checkMembership();
     }, []);
 
+    const [showDownloadToast, setShowDownloadToast] = useState(false);
+
+    useEffect(() => {
+        if (showDownloadToast) {
+            const timer = setTimeout(() => setShowDownloadToast(false), 7000);
+            return () => clearTimeout(timer);
+        }
+    }, [showDownloadToast]);
+
     const getReleaseDate = (title: string, fallback: string = "As per schedule") => {
         return SCHEDULE_MAPPING[title] || fallback;
     };
@@ -531,6 +540,7 @@ export default function NotesPage() {
                                             <a
                                                 href={file.path}
                                                 download={file.filename}
+                                                onClick={() => setShowDownloadToast(true)}
                                                 className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-[10px] md:text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
                                             >
                                                 <Download className="w-3 h-3 md:w-4 md:h-4" />
@@ -591,6 +601,7 @@ export default function NotesPage() {
                                 <a
                                     href={selectedPdf}
                                     download
+                                    onClick={() => setShowDownloadToast(true)}
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 font-semibold text-xs transition-colors"
                                 >
                                     <Download className="w-4 h-4" />
@@ -625,6 +636,7 @@ export default function NotesPage() {
                                     <a
                                         href={selectedPdf}
                                         download
+                                        onClick={() => setShowDownloadToast(true)}
                                         className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-purple-600 text-white font-bold shadow-lg hover:shadow-purple-500/30 hover:bg-purple-700 transition-all"
                                     >
                                         <Download className="w-4 h-4" />
@@ -633,6 +645,18 @@ export default function NotesPage() {
                                 </div>
                             </object>
                         </div>
+                    </div>
+                </div>
+            )}
+            {/* --- DOWNLOAD TOAST --- */}
+            {showDownloadToast && (
+                <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] bg-zinc-900 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5 fade-in duration-300">
+                    <div className="bg-green-500 rounded-full p-1">
+                        <Check className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="flex flex-col">
+                        <span className="font-bold text-sm">Download Started</span>
+                        <span className="text-xs text-zinc-400">Check your Downloads folder</span>
                     </div>
                 </div>
             )}

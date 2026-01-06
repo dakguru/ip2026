@@ -35,6 +35,7 @@ interface UserData {
     planName?: string;
     purchaseDate?: string;
     membershipValidity?: string;
+    lastActiveAt?: string;
 }
 
 export default function AdminDashboard() {
@@ -142,7 +143,7 @@ export default function AdminDashboard() {
     });
 
     const downloadCSV = () => {
-        const headers = ['ID', 'Name', 'Email', 'Role', 'Status', 'Joined', 'Mobile', 'Exam', 'Joining Date', 'Plan', 'Amount'];
+        const headers = ['ID', 'Name', 'Email', 'Role', 'Status', 'Joined', 'Last Active', 'Mobile', 'Exam', 'Joining Date', 'Plan', 'Amount'];
         const csvContent = [
             headers.join(','),
             ...users.map(u => [
@@ -152,6 +153,7 @@ export default function AdminDashboard() {
                 u.role,
                 u.membershipLevel || 'free',
                 format(new Date(u.createdAt), 'yyyy-MM-dd'),
+                u.lastActiveAt ? format(new Date(u.lastActiveAt), 'yyyy-MM-dd HH:mm') : 'Never',
                 u.mobile || '',
                 u.examPreparingFor || '',
                 u.dateOfJoining ? format(new Date(u.dateOfJoining), 'yyyy-MM-dd') : '',
@@ -181,13 +183,14 @@ export default function AdminDashboard() {
             u.role,
             u.membershipLevel || 'free',
             format(new Date(u.createdAt), 'MMM d, yyyy'),
+            u.lastActiveAt ? format(new Date(u.lastActiveAt), 'MMM d, HH:mm') : '-',
             u.mobile || '-',
             u.planName?.includes('Yearly Gold') ? '649' : u.planName?.includes('Monthly Gold') ? '599' : u.planName?.includes('18 Months') ? '799' : '-'
         ]);
 
         autoTable(doc, {
             startY: 40,
-            head: [['Name', 'Email', 'Role', 'Status', 'Joined', 'Mobile', 'Paid']],
+            head: [['Name', 'Email', 'Role', 'Status', 'Joined', 'Last Active', 'Mobile', 'Paid']],
             body: tableBody,
             styles: { fontSize: 8 },
             headStyles: { fillColor: [63, 63, 70] }
@@ -361,6 +364,7 @@ export default function AdminDashboard() {
                                     <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Plan Status</th>
                                     <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Role</th>
                                     <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Joined On</th>
+                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Last Active</th>
                                     <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider text-right">Actions</th>
                                 </tr>
                             </thead>
@@ -421,6 +425,24 @@ export default function AdminDashboard() {
                                             <td className="py-4 px-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                                                 {format(new Date(user.createdAt), 'MMM d, yyyy')}
                                             </td>
+                                            <td className="py-4 px-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                                                {user.lastActiveAt ? (
+                                                    <span className={`inline-flex items-center gap-1.5 ${new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000
+                                                            ? 'text-green-600 dark:text-green-400 font-bold'
+                                                            : ''
+                                                        }`}>
+                                                        {new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000 && (
+                                                            <span className="relative flex h-2 w-2">
+                                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                                                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                                            </span>
+                                                        )}
+                                                        {format(new Date(user.lastActiveAt), 'MMM d, HH:mm')}
+                                                    </span>
+                                                ) : (
+                                                    <span className="text-zinc-400 dark:text-zinc-600 text-xs italic">Never</span>
+                                                )}
+                                            </td>
                                             <td className="py-4 px-6 text-right">
                                                 <button
                                                     onClick={() => setEditingUser(user)}
@@ -433,7 +455,7 @@ export default function AdminDashboard() {
                                     ))
                                 ) : (
                                     <tr>
-                                        <td colSpan={5} className="py-12 text-center">
+                                        <td colSpan={6} className="py-12 text-center">
                                             <div className="flex flex-col items-center justify-center text-zinc-400">
                                                 <Search className="w-12 h-12 mb-3 text-zinc-200 dark:text-zinc-800" />
                                                 <p className="text-lg font-semibold text-zinc-500">No users found</p>
