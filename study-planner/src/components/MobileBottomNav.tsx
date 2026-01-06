@@ -2,16 +2,48 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookOpen, Trophy, Users, User, LayoutDashboard } from "lucide-react";
+import { Home, BookOpen, Trophy, Users, User, LayoutDashboard, Crown } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function MobileBottomNav() {
     const pathname = usePathname();
+    const [membershipLevel, setMembershipLevel] = useState<string>('free');
+
+    useEffect(() => {
+        const checkSession = () => {
+            const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+            if (match) {
+                try {
+                    const decoded = decodeURIComponent(match[2]);
+                    const session = JSON.parse(decoded);
+                    if (session && session.membershipLevel) {
+                        setMembershipLevel(session.membershipLevel);
+                    } else {
+                        setMembershipLevel('free');
+                    }
+                } catch (e) {
+                    console.error("Failed to parse session", e);
+                    setMembershipLevel('free');
+                }
+            } else {
+                setMembershipLevel('free');
+            }
+        };
+
+        checkSession();
+    }, [pathname]);
+
+    const isPaidUser = ['gold', 'silver'].includes(membershipLevel.toLowerCase());
 
     const navItems = [
         { label: "Home", href: "/", icon: Home },
         { label: "Learn", href: "/planner", icon: BookOpen },
-        { label: "Practice", href: "/mock-tests", icon: Trophy },
-        { label: "Community", href: "/social", icon: Users },
+        { label: "Practice", href: "/quiz", icon: Trophy },
+        {
+            label: isPaidUser ? "Community" : "Upgrade",
+            href: isPaidUser ? "/social" : "/pricing",
+            icon: isPaidUser ? Users : Crown
+        },
         { label: "Profile", href: "/settings", icon: User },
     ];
 

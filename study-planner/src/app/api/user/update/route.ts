@@ -3,7 +3,7 @@ import { updateUser } from '@/lib/db';
 
 export async function POST(request: Request) {
     try {
-        const { currentEmail, name, email, mobile, designation, pincode, officeName, division, circle } = await request.json();
+        const { currentEmail, name, email, mobile, examPreparingFor, dateOfJoining } = await request.json();
 
         if (!currentEmail) {
             return NextResponse.json(
@@ -16,11 +16,8 @@ export async function POST(request: Request) {
             name,
             email,
             mobile,
-            designation,
-            pincode,
-            officeName,
-            division,
-            circle
+            examPreparingFor,
+            dateOfJoining
         });
 
         if (!updatedUser) {

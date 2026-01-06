@@ -6,11 +6,8 @@ const UserSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true }, // Hashed password
     mobile: { type: String },
-    designation: { type: String },
-    pincode: { type: String },
-    officeName: { type: String },
-    division: { type: String },
-    circle: { type: String },
+    examPreparingFor: { type: String },
+    dateOfJoining: { type: Date },
     gender: { type: String },
     role: { type: String, default: 'user', enum: ['user', 'admin'] },
     membershipLevel: { type: String, default: 'free', enum: ['free', 'silver', 'gold'] },

@@ -714,6 +714,13 @@ export default function QuizDashboard() {
                     <div>
                         <h1 className="text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">Quiz Zone</h1>
                         <p className="text-zinc-500 dark:text-zinc-400 text-lg">Select a topic to start practicing.</p>
+                        <Link href="/mock-tests" className="inline-flex items-center gap-2 px-4 py-2 mt-3 rounded-xl bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-200 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-colors border border-amber-200 dark:border-amber-800 group">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                            </span>
+                            <span>Looking for Live All India Mock Tests? <span className="group-hover:underline decoration-amber-400 underline-offset-2 font-bold ml-1">Click here</span></span>
+                        </Link>
                     </div>
                 </div>
 
@@ -724,7 +731,7 @@ export default function QuizDashboard() {
                             <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">Paper I</h2>
                             <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
                             {paper1Topics.map(topic => (
                                 <TopicCard
                                     key={topic.id}
@@ -742,7 +749,7 @@ export default function QuizDashboard() {
                             <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">Paper III</h2>
                             <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
                             {paper3Topics.map(topic => (
                                 <TopicCard
                                     key={topic.id}
@@ -764,17 +771,17 @@ function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, on
 
     const Content = () => (
         <>
-            <div className={`absolute top-0 right-0 p-4 transition-opacity ${isLocked ? 'opacity-10' : 'opacity-5 group-hover:opacity-10'}`}>
-                <BrainCircuit className="w-24 h-24 text-purple-600" />
+            <div className={`absolute top-0 right-0 p-3 md:p-4 transition-opacity ${isLocked ? 'opacity-10' : 'opacity-5 group-hover:opacity-10'}`}>
+                <BrainCircuit className="w-16 h-16 md:w-24 md:h-24 text-purple-600" />
             </div>
 
             <span className={`text-xs font-bold uppercase tracking-wider mb-2
                 ${topic.category === 'Paper I' ? 'text-blue-600 dark:text-blue-400' : 'text-pink-600 dark:text-pink-400'}
             `}>{topic.category}</span>
-            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors z-10 pr-2">{topic.title}</h3>
+            <h3 className="text-sm md:text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors z-10 pr-2 leading-tight">{topic.title}</h3>
 
-            <div className="mt-auto pt-4 flex items-center justify-between z-10 w-full">
-                <div className="text-zinc-400 dark:text-zinc-500 text-sm font-medium">
+            <div className="mt-auto pt-3 md:pt-4 flex items-center justify-between z-10 w-full">
+                <div className="text-zinc-400 dark:text-zinc-500 text-xs md:text-sm font-medium">
                     {isLocked ? (
                         <div className="flex items-center gap-2 text-zinc-500">
                             <Lock className="w-4 h-4" />
@@ -794,7 +801,7 @@ function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, on
                 </div>
 
                 {isLocked && (
-                    <Link href="/pricing" className="relative z-20 px-3 py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold rounded-full shadow hover:shadow-lg transition-shadow hover:scale-105 active:scale-95">
+                    <Link href="/pricing" className="relative z-20 px-2 py-0.5 md:px-3 md:py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[10px] md:text-xs font-bold rounded-full shadow hover:shadow-lg transition-shadow hover:scale-105 active:scale-95">
                         Upgrade
                     </Link>
                 )}
@@ -802,7 +809,7 @@ function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, on
         </>
     );
 
-    const baseClasses = `group bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 transition-all text-left flex flex-col h-full relative overflow-hidden
+    const baseClasses = `group bg-white dark:bg-zinc-900 p-4 md:p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 transition-all text-left flex flex-col h-full relative overflow-hidden
         ${isLocked ? 'opacity-70 grayscale-[0.5]' : 'hover:border-purple-200 dark:hover:border-purple-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-purple-900/10 cursor-pointer'}
     `;
 

@@ -445,17 +445,17 @@ export default function NotesPage() {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 pb-20">
                     {PDF_DATA[activeTab as keyof typeof PDF_DATA]?.map((file, index) => (
                         <div
                             key={index}
-                            className={`group bg-white rounded-2xl p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
+                            className={`group bg-white rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
                                 ? 'border-zinc-200 opacity-90'
                                 : 'border-slate-100 hover:border-purple-200 hover:shadow-xl hover:-translate-y-1'
                                 }`}
                         >
                             <div className="flex items-start justify-between mb-4">
-                                <div className={`p-3 rounded-xl ${file.comingSoon
+                                <div className={`p-2 md:p-3 rounded-xl ${file.comingSoon
                                     ? membershipLevel === 'gold' ? 'bg-zinc-100 text-zinc-400' : 'bg-red-50 text-red-400'
                                     : file.color === 'blue' ? 'bg-blue-50 text-blue-600' :
                                         file.color === 'purple' ? 'bg-purple-50 text-purple-600' :
@@ -471,27 +471,27 @@ export default function NotesPage() {
                                                                                 'bg-indigo-50 text-indigo-600'
                                     }`}>
                                     {file.comingSoon && membershipLevel !== 'gold' ? (
-                                        <Lock className="w-8 h-8" />
+                                        <Lock className="w-6 h-6 md:w-8 md:h-8" />
                                     ) : (
-                                        <FileText className="w-8 h-8" />
+                                        <FileText className="w-6 h-6 md:w-8 md:h-8" />
                                     )}
                                 </div>
-                                <span className={`text-xs font-bold px-2 py-1 rounded-md ${file.comingSoon ? 'bg-zinc-100 text-zinc-400' : 'bg-slate-100 text-slate-500'
+                                <span className={`text-[10px] md:text-sm font-bold px-2 py-1 rounded-md ${file.comingSoon ? 'bg-zinc-100 text-zinc-400' : 'bg-slate-100 text-slate-500'
                                     }`}>
                                     {file.comingSoon ? 'SOON' : 'PDF'}
                                 </span>
                             </div>
 
-                            <h3 className={`text-lg font-bold mb-2 leading-tight transition-colors ${file.comingSoon ? 'text-zinc-600' : 'text-slate-800 group-hover:text-purple-700'
+                            <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-2 leading-tight transition-colors ${file.comingSoon ? 'text-zinc-600' : 'text-slate-800 group-hover:text-purple-700'
                                 }`}>
                                 {file.title}
                                 {file.subtitle && (
-                                    <span className="block text-sm font-normal italic text-slate-500 mt-1">
+                                    <span className="block text-[10px] md:text-sm font-normal italic text-slate-500 mt-1">
                                         {file.subtitle}
                                     </span>
                                 )}
                             </h3>
-                            <p className="text-sm text-slate-500 mb-6 flex-grow leading-relaxed">
+                            <p className="text-[10px] md:text-sm text-slate-500 mb-4 md:mb-6 flex-grow leading-relaxed line-clamp-2 md:line-clamp-none">
                                 {file.description}
                             </p>
 
@@ -520,20 +520,20 @@ export default function NotesPage() {
                             ) : (
                                 membershipLevel === 'gold' || file.isFree ? (
                                     <>
-                                        <div className="grid grid-cols-2 gap-3 mt-auto">
+                                        <div className="grid grid-cols-2 gap-1.5 md:gap-3 mt-auto">
                                             <button
                                                 onClick={() => setSelectedPdf(file.path || null)}
-                                                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-50 text-slate-700 font-semibold text-sm hover:bg-slate-100 transition-colors border border-slate-200"
+                                                className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-slate-50 text-slate-700 font-semibold text-[10px] md:text-sm hover:bg-slate-100 transition-colors border border-slate-200"
                                             >
-                                                <Eye className="w-4 h-4" />
+                                                <Eye className="w-3 h-3 md:w-4 md:h-4" />
                                                 View
                                             </button>
                                             <a
                                                 href={file.path}
                                                 download={file.filename}
-                                                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
+                                                className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-[10px] md:text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
                                             >
-                                                <Download className="w-4 h-4" />
+                                                <Download className="w-3 h-3 md:w-4 md:h-4" />
                                                 Download
                                             </a>
                                         </div>

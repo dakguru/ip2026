@@ -133,7 +133,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
         <>
             <header className={`sticky top-0 z-50 bg-white dark:bg-zinc-950 transition-all border-b border-zinc-200 dark:border-zinc-800 pt-[max(12px,env(safe-area-inset-top))] ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between gap-4 md:gap-8">
+                    <div className="flex items-center justify-between md:justify-start gap-4 md:gap-8">
 
                         {/* 1. Left: Logo & Nav */}
                         <div className="flex items-center gap-4 md:gap-8">
@@ -161,60 +161,39 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 <Link href="/social" className="hover:text-blue-600 dark:hover:text-blue-400">DG Community</Link>
                                 <Link href="/current-affairs" className="hover:text-blue-600 dark:hover:text-blue-400">Current Affairs</Link>
                                 <Link href="/syllabus" className="hover:text-blue-600 dark:hover:text-blue-400">Syllabus</Link>
-
-                                {isPremium ? (
-                                    <span className={`px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-wide shadow-sm border ${currentMembership === 'gold'
-                                        ? 'bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-amber-900 border-amber-200'
-                                        : 'bg-gradient-to-r from-slate-200 via-zinc-300 to-slate-400 text-slate-900 border-slate-300'
-                                        }`}>
-                                        {currentMembership === 'gold' ? '★ Gold Member' : '★ Silver Member'}
-                                    </span>
-                                ) : (
-                                    <Link
-                                        href="/pricing"
-                                        className="relative px-6 py-2 rounded-full font-bold text-white bg-gradient-to-r from-amber-400 to-yellow-600 shadow-lg shadow-amber-500/30 overflow-hidden group hover:scale-105 transition-transform"
-                                    >
-                                        <span className="relative z-10 flex items-center gap-1">
-                                            Upgrade <span className="animate-pulse">✨</span>
-                                        </span>
-                                        {/* Shine effect */}
-                                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12" />
-                                    </Link>
-                                )}
                             </nav>
                         </div>
 
-                        {/* 2. Middle: Search Bar */}
-                        <div className="hidden md:flex flex-1 max-w-md mx-6">
-                            <form
-                                onSubmit={(e) => {
-                                    e.preventDefault();
-                                    const query = (e.currentTarget.elements.namedItem('search') as HTMLInputElement).value;
-                                    if (query.trim()) {
-                                        router.push(`/search?q=${encodeURIComponent(query)}`);
-                                    }
-                                }}
-                                className="relative w-full group"
-                            >
-                                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <Search className="h-4 w-4 text-zinc-400 group-focus-within:text-blue-500 transition-colors" />
-                                </div>
-                                <input
-                                    type="text"
-                                    name="search"
-                                    className="block w-full pl-10 pr-4 py-2 border border-zinc-200 dark:border-zinc-800 rounded-full leading-5 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:bg-white dark:focus:bg-zinc-950 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 sm:text-sm transition-all duration-200"
-                                    placeholder="Search topic, notes..."
-                                    autoComplete="off"
-                                />
-                            </form>
-                        </div>
+                        {/* Spacer removed */}
 
                         {/* 3. Right: Actions */}
-                        <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+                        <div className="flex items-center gap-2 sm:gap-2 shrink-0 md:ml-8 lg:ml-12">
                             <div className="hidden md:block">
                                 <ThemeToggle />
                             </div>
 
+                            {isLoggedIn && (
+                                <Link href="/pricing" className="mr-1">
+                                    {currentMembership === 'gold' ? (
+                                        <div className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-amber-900 text-[10px] md:text-xs font-bold border border-amber-200 shadow-sm flex items-center gap-1">
+                                            <span className="hidden md:inline">★</span>
+                                            <span>GOLD</span>
+                                        </div>
+                                    ) : currentMembership === 'silver' ? (
+                                        <div className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-slate-200 via-zinc-300 to-slate-400 text-slate-900 text-[10px] md:text-xs font-bold border border-slate-300 shadow-sm flex items-center gap-1">
+                                            <span className="hidden md:inline">★</span>
+                                            <span>SILVER</span>
+                                        </div>
+                                    ) : (
+                                        <div className="relative group flex items-center">
+                                            <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-400 to-yellow-600 rounded-full opacity-50 group-hover:opacity-100 blur-[4px] transition duration-200 animate-pulse"></div>
+                                            <div className="relative px-3 py-1 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 rounded-full flex items-center gap-1 border border-amber-200 shadow-sm">
+                                                <span className="text-amber-950 text-[10px] uppercase font-black tracking-wider">Upgrade</span>
+                                            </div>
+                                        </div>
+                                    )}
+                                </Link>
+                            )}
                             {isLoggedIn ? (
                                 <UserMenu />
                             ) : (

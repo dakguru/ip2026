@@ -2,12 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash } from "lucide-react";
+import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-const DESIGNATIONS = [
-    "GDS", "MTS", "Postman", "PA", "IP", "ASP", "PS Gr 'B'", "Group A Officer"
+const EXAM_OPTIONS = [
+    "CE for GDS to PA/SA",
+    "LDCE - PA/SA",
+    "LDCE - PM/MG",
+    "LDCE - IP",
+    "LDCE - PS Gr 'B'"
 ];
 
 export default function SettingsPage() {
@@ -22,16 +26,9 @@ export default function SettingsPage() {
         name: "",
         email: "",
         mobile: "",
-        designation: "",
-        pincode: "",
-        officeName: "",
-        division: "",
-        circle: ""
+        examPreparingFor: "",
+        dateOfJoining: ""
     });
-
-    // Pincode/Office Fetch State
-    const [officeList, setOfficeList] = useState<any[]>([]);
-    const [isFetchingOffices, setIsFetchingOffices] = useState(false);
 
     // OTP State
     const [showOtpModal, setShowOtpModal] = useState(false);
@@ -62,19 +59,11 @@ export default function SettingsPage() {
                     name: user.name || "",
                     email: user.email || "",
                     mobile: user.mobile || "",
-                    designation: user.designation || "",
-                    pincode: user.pincode || "",
-                    officeName: user.officeName || "",
-                    division: user.division || "",
-                    circle: user.circle || ""
+                    examPreparingFor: user.examPreparingFor || "",
+                    dateOfJoining: user.dateOfJoining ? new Date(user.dateOfJoining).toISOString().split('T')[0] : ""
                 };
                 setFormData(userData);
                 setInitialData(userData);
-
-                // If pincode exists, fetch offices to populate dropdown correctly
-                if (user.pincode && user.pincode.length === 6) {
-                    fetchOffices(user.pincode);
-                }
             } else {
                 // If fetching profile fails (likely auth error or manual cookie edit), redirect to login
                 // router.push("/login");
@@ -84,52 +73,10 @@ export default function SettingsPage() {
         }
     };
 
-    const fetchOffices = async (pincode: string) => {
-        setIsFetchingOffices(true);
-        try {
-            const res = await fetch(`/api/pincode?pincode=${pincode}`);
-            const data = await res.json();
-            if (data.found && data.offices.length > 0) {
-                setOfficeList(data.offices);
-            } else {
-                setOfficeList([]);
-                setMessage({ type: 'error', text: "No offices found for this pincode" });
-            }
-        } catch (err) {
-            console.error(err);
-        } finally {
-            setIsFetchingOffices(false);
-        }
-    };
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
         setMessage(null);
-
-        if (name === "pincode") {
-            if (value.length === 6) {
-                fetchOffices(value);
-            } else {
-                setOfficeList([]);
-                setFormData(prev => ({ ...prev, officeName: "", division: "", circle: "" }));
-            }
-        }
-    };
-
-    const handleOfficeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const officeName = e.target.value;
-        const selectedOffice = officeList.find(o => o.name === officeName);
-        if (selectedOffice) {
-            setFormData(prev => ({
-                ...prev,
-                officeName: officeName,
-                division: selectedOffice.division,
-                circle: selectedOffice.circle
-            }));
-        } else {
-            setFormData(prev => ({ ...prev, officeName: officeName }));
-        }
     };
 
     const initiateSave = (e: React.FormEvent) => {
@@ -331,92 +278,36 @@ export default function SettingsPage() {
                                 </div>
                             </div>
 
-                            {/* Designation */}
+                            {/* Exam Preparing For */}
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Designation</label>
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Exam Preparing for</label>
                                 <div className="relative group">
                                     <div className="absolute left-4 top-3.5 text-zinc-400"><Briefcase className="w-5 h-5" /></div>
                                     <select
-                                        name="designation"
-                                        value={formData.designation}
+                                        name="examPreparingFor"
+                                        value={formData.examPreparingFor}
                                         onChange={handleChange}
                                         className="w-full bg-zinc-50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-blue-500 transition-all appearance-none"
                                         required
                                     >
-                                        <option value="">Select Designation</option>
-                                        {DESIGNATIONS.map(d => <option key={d} value={d}>{d}</option>)}
+                                        <option value="">Select Exam</option>
+                                        {EXAM_OPTIONS.map(e => <option key={e} value={e}>{e}</option>)}
                                     </select>
                                 </div>
                             </div>
 
-                            {/* Pincode */}
+                            {/* Date of Joining */}
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Office Pincode</label>
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Date of Joining in DOP</label>
                                 <div className="relative group">
-                                    <div className="absolute left-4 top-3.5 text-zinc-400"><Hash className="w-5 h-5" /></div>
+                                    <div className="absolute left-4 top-3.5 text-zinc-400"><Calendar className="w-5 h-5" /></div>
                                     <input
-                                        name="pincode"
-                                        type="text"
-                                        maxLength={6}
-                                        value={formData.pincode}
+                                        name="dateOfJoining"
+                                        type="date"
+                                        value={formData.dateOfJoining}
                                         onChange={handleChange}
                                         className="w-full bg-zinc-50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-blue-500 transition-all"
                                         required
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Office */}
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Office Name</label>
-                                <div className="relative group">
-                                    <div className="absolute left-4 top-3.5 text-zinc-400"><Building className="w-5 h-5" /></div>
-                                    {isFetchingOffices ? (
-                                        <div className="w-full bg-zinc-50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 text-zinc-400">Loading...</div>
-                                    ) : (
-                                        <select
-                                            name="officeName"
-                                            value={formData.officeName}
-                                            onChange={handleOfficeSelect}
-                                            className="w-full bg-zinc-50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-blue-500 transition-all appearance-none"
-                                            required
-                                        >
-                                            <option value="">{officeList.length > 0 ? "Select Office" : "Enter Pincode first"}</option>
-                                            {officeList.map((o, idx) => (
-                                                <option key={idx} value={o.name}>{o.name}</option>
-                                            ))}
-                                            <option value={formData.officeName}>{formData.officeName}</option>
-                                        </select>
-                                    )}
-                                </div>
-                            </div>
-
-                            {/* Division */}
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Division</label>
-                                <div className="relative group">
-                                    <div className="absolute left-4 top-3.5 text-zinc-400"><MapPin className="w-5 h-5" /></div>
-                                    <input
-                                        name="division"
-                                        type="text"
-                                        value={formData.division}
-                                        readOnly
-                                        className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-500 cursor-not-allowed"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Circle */}
-                            <div className="space-y-2">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Circle</label>
-                                <div className="relative group">
-                                    <div className="absolute left-4 top-3.5 text-zinc-400"><MapPin className="w-5 h-5" /></div>
-                                    <input
-                                        name="circle"
-                                        type="text"
-                                        value={formData.circle}
-                                        readOnly
-                                        className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-500 cursor-not-allowed"
                                     />
                                 </div>
                             </div>

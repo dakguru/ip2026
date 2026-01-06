@@ -7,11 +7,8 @@ export interface User {
     email: string;
     name: string;
     mobile?: string;
-    designation?: string;
-    pincode?: string;
-    officeName?: string;
-    division?: string;
-    circle?: string;
+    examPreparingFor?: string;
+    dateOfJoining?: Date;
     gender?: string;
     passwordHash?: string; // Optional in interface, but mostly present
     role?: 'user' | 'admin';
@@ -33,11 +30,8 @@ function mapUser(doc: any): User {
         email: doc.email,
         name: doc.name,
         mobile: doc.mobile,
-        designation: doc.designation,
-        pincode: doc.pincode,
-        officeName: doc.officeName,
-        division: doc.division,
-        circle: doc.circle,
+        examPreparingFor: doc.examPreparingFor,
+        dateOfJoining: doc.dateOfJoining,
         gender: doc.gender,
         passwordHash: doc.password, // Mapped from password field in DB
         role: doc.role,
