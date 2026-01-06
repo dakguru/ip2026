@@ -39,11 +39,10 @@ export async function GET(request: Request) {
             name: user.name,
             email: user.email,
             mobile: user.mobile,
-            designation: user.designation,
-            pincode: user.pincode,
-            officeName: user.officeName,
-            division: user.division,
-            circle: user.circle,
+            designation: (user as any).designation, // Kept for backward compat if needed, or remove
+            // But better to just remove them if they are gone from the types
+            examPreparingFor: user.examPreparingFor,
+            dateOfJoining: user.dateOfJoining,
             role: user.role || 'user',
             membershipLevel: user.membershipLevel,
             planId: user.planId,

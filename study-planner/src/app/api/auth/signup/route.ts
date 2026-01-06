@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
     try {
-        const { email, password, name, mobile, designation, pincode, officeName, division, circle, gender } = await request.json();
+        const { email, password, name, mobile, gender } = await request.json();
 
         if (!email || !password || !name) {
             return NextResponse.json(
@@ -22,11 +22,6 @@ export async function POST(request: Request) {
 
         await createUser(email, password, name, {
             mobile,
-            designation,
-            pincode,
-            officeName,
-            division,
-            circle,
             gender
         });
 

@@ -28,11 +28,9 @@ interface UserData {
     membershipLevel?: 'free' | 'silver' | 'gold';
     createdAt: string;
     mobile?: string;
-    designation?: string;
-    pincode?: string;
-    officeName?: string;
-    division?: string;
-    circle?: string;
+    examPreparingFor?: string;
+    dateOfJoining?: string; // or Date, but string is easier for UI display
+    gender?: string;
     planId?: string;
     planName?: string;
     purchaseDate?: string;
@@ -130,7 +128,7 @@ export default function AdminDashboard() {
     });
 
     const downloadCSV = () => {
-        const headers = ['ID', 'Name', 'Email', 'Role', 'Status', 'Joined', 'Mobile', 'Designation', 'Office', 'Division', 'Circle', 'Plan', 'Amount'];
+        const headers = ['ID', 'Name', 'Email', 'Role', 'Status', 'Joined', 'Mobile', 'Exam', 'Joining Date', 'Plan', 'Amount'];
         const csvContent = [
             headers.join(','),
             ...users.map(u => [
@@ -141,10 +139,8 @@ export default function AdminDashboard() {
                 u.membershipLevel || 'free',
                 format(new Date(u.createdAt), 'yyyy-MM-dd'),
                 u.mobile || '',
-                u.designation || '',
-                `"${u.officeName || ''}"`,
-                `"${u.division || ''}"`,
-                `"${u.circle || ''}"`,
+                u.examPreparingFor || '',
+                u.dateOfJoining ? format(new Date(u.dateOfJoining), 'yyyy-MM-dd') : '',
                 u.planName || '',
                 u.planName?.includes('Yearly Gold') ? '649' : u.planName?.includes('Monthly Gold') ? '599' : u.planName?.includes('18 Months') ? '799' : '0'
             ].join(','))
@@ -524,31 +520,14 @@ export default function AdminDashboard() {
                                     <input value={editingUser.mobile || ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Designation</label>
-                                    <input value={editingUser.designation || ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
+                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Exam</label>
+                                    <input value={editingUser.examPreparingFor || ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Office</label>
-                                    <input value={editingUser.officeName || ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Pincode</label>
-                                    <input value={editingUser.pincode || ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
-                                </div>
-                            </div>
-
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Division</label>
-                                    <input value={editingUser.division || ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Circle</label>
-                                    <input value={editingUser.circle || ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
-                                </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Date of Joining</label>
+                                <input value={editingUser.dateOfJoining ? format(new Date(editingUser.dateOfJoining), 'PP') : ''} disabled className="w-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-500" />
                             </div>
 
                             <div className="space-y-2">
