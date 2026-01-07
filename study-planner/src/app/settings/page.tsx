@@ -83,6 +83,23 @@ export default function SettingsPage() {
         e.preventDefault();
         setMessage(null);
 
+        // Validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            setMessage({ type: 'error', text: "Please enter a valid email address." });
+            return;
+        }
+
+        const mobileRegex = /^[0-9]{10}$/;
+        if (!mobileRegex.test(formData.mobile)) {
+            setMessage({ type: 'error', text: "Please enter a valid 10-digit mobile number." });
+            return;
+        }
+        if (formData.mobile === "1234567890" || formData.mobile === "0000000000") {
+            setMessage({ type: 'error', text: "Please enter a valid, real mobile number." });
+            return;
+        }
+
         // Check if sensitive fields changed
         const emailChanged = formData.email !== initialData.email;
         const mobileChanged = formData.mobile !== initialData.mobile;

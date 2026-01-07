@@ -56,6 +56,27 @@ function AuthForm() {
                 setIsLoading(false);
                 return;
             }
+
+            // Email Validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                setError("Please enter a valid email address.");
+                setIsLoading(false);
+                return;
+            }
+
+            // Mobile Validation
+            const mobileRegex = /^[0-9]{10}$/;
+            if (!mobileRegex.test(formData.mobile)) {
+                setError("Please enter a valid 10-digit mobile number.");
+                setIsLoading(false);
+                return;
+            }
+            if (formData.mobile === "1234567890" || formData.mobile === "0000000000") {
+                setError("Please enter a valid, real mobile number.");
+                setIsLoading(false);
+                return;
+            }
         }
 
         const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
