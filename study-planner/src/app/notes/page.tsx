@@ -4,6 +4,12 @@ import React, { useState, useEffect } from 'react';
 import HomeHeader from '@/components/HomeHeader';
 import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check } from 'lucide-react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
+    loading: () => <div className="flex items-center justify-center h-full text-slate-400">Loading viewer...</div>,
+    ssr: false
+});
 import { Capacitor } from '@capacitor/core';
 
 // --- DATA ---
@@ -631,38 +637,9 @@ export default function NotesPage() {
                         </div>
 
                         {/* Content */}
-                        <div className={`flex-1 relative ${pdfDarkMode ? 'bg-zinc-900' : 'bg-slate-100'}`}>
-                            <object
-                                data={selectedPdf}
-                                type="application/pdf"
-                                className="w-full h-full absolute inset-0 rounded-b-2xl transition-all duration-300"
-                                style={{
-                                    filter: pdfDarkMode ? 'invert(1) hue-rotate(180deg) contrast(0.8)' : 'none'
-                                }}
-                            >
-                                <div className="flex flex-col items-center justify-center h-full p-8 text-center bg-white">
-                                    <FileText className="w-12 h-12 text-slate-300 mb-4" />
-                                    <p className="text-slate-600 font-medium mb-2">Unable to display PDF directly.</p>
-                                    <p className="text-slate-400 text-sm mb-6 max-w-md">
-                                        Your browser might not support embedding PDFs, or the file size is too large for the viewer.
-                                    </p>
-                                    <a
-                                        href={selectedPdf}
-                                        download
-                                        onClick={(e) => {
-                                            if (Capacitor.isNativePlatform()) {
-                                                e.preventDefault();
-                                                window.open(selectedPdf, '_system');
-                                            }
-                                            setShowDownloadToast(true);
-                                        }}
-                                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-purple-600 text-white font-bold shadow-lg hover:shadow-purple-500/30 hover:bg-purple-700 transition-all"
-                                    >
-                                        <Download className="w-4 h-4" />
-                                        Download Instead
-                                    </a>
-                                </div>
-                            </object>
+                        <div className={`flex-1 relative overflow-hidden ${pdfDarkMode ? 'bg-zinc-900' : 'bg-slate-100'}`}>
+                            {/* Use React-PDF for consistent viewing across all platforms */}
+                            <PdfViewer url={selectedPdf} darkMode={pdfDarkMode} />
                         </div>
                     </div>
                 </div>
