@@ -147,17 +147,17 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 6. Rules
+        {
+            title: "PO Small Savings Schemes & Practice Questions",
+            description: "Comprehensive notes on Small Savings Schemes including practice questions.",
+            filename: "PO_Small_Savings_Schemes_Practice_Questions.pdf",
+            path: "/notes/paper-1/PO_Small_Savings_Schemes_Practice_Questions.pdf",
+            size: "33.5 MB",
+            color: "emerald"
+        },
 
         { title: "Government Savings Promotion Rules, 2018", description: "General rules applicable to all Government Savings Schemes.", color: "emerald", comingSoon: true },
-        { title: "Post Office Savings Account Scheme, 2019", description: "Rules governing POSA accounts.", color: "emerald", comingSoon: true },
-        { title: "National Savings Recurring Deposit Scheme, 2019", description: "Rules for RD accounts.", color: "emerald", comingSoon: true },
-        { title: "National Savings Time Deposit Scheme, 2019", description: "Rules for TD accounts (1, 2, 3, 5 years).", color: "emerald", comingSoon: true },
-        { title: "National Savings (MIA) Scheme, 2019", description: "Monthly Income Account scheme details.", color: "emerald", comingSoon: true },
-        { title: "Senior Citizens' Savings Scheme, 2019", description: "SCSS rules and regulations.", color: "emerald", comingSoon: true },
-        { title: "National Savings Certificate (VIII Issue) Scheme", description: "NSC 2019 rules.", color: "emerald", comingSoon: true },
-        { title: "Kisan Vikas Patra Scheme, 2019", description: "KVP rules and regulations.", color: "emerald", comingSoon: true },
-        { title: "Public Provident Fund Scheme, 2019", description: "PPF rules and operation guidelines.", color: "emerald", comingSoon: true },
-        { title: "Sukanya Samriddhi Account Scheme, 2019", description: "SSA rules for girl child welfare.", color: "emerald", comingSoon: true },
+
 
         // 17. PLI
         { title: "Post Office Life Insurance Scheme, 2011", description: "POLI Rules 2011 & amendments (SANKALAN).", color: "rose", comingSoon: true },
