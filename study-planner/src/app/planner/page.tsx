@@ -24,6 +24,8 @@ import {
 } from 'lucide-react';
 import { FULL_SCHEDULE } from '@/data/schedule';
 import { generatePlannerPDF } from '@/lib/pdf-generator';
+import { useIsMobileApp } from '@/hooks/use-mobile-app';
+import NativeStudyPlanner from '@/components/planner/NativeStudyPlanner';
 
 // --- DATA: Full Schedule based on the final optimizations ---
 // --- DATA: Full Schedule imported from @/data/schedule ---
@@ -40,6 +42,22 @@ export default function StudyPlanner() {
         date: null,
         topic: ''
     });
+
+    const isMobileApp = useIsMobileApp();
+    const [userName, setUserName] = useState<string | null>(null);
+
+    // Get username for native view
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+            if (match) {
+                try {
+                    const session = JSON.parse(decodeURIComponent(match[2]));
+                    setUserName(session.name);
+                } catch (e) { }
+            }
+        }
+    }, []);
 
     const todayRef = useRef<HTMLDivElement>(null);
     const topRef = useRef<HTMLDivElement>(null);
@@ -162,6 +180,18 @@ export default function StudyPlanner() {
     const handlePrint = () => {
         generatePlannerPDF(schedule, progress);
     };
+
+    if (isMobileApp) {
+        return (
+            <NativeStudyPlanner
+                schedule={schedule}
+                completedDays={completedDays}
+                toggleDay={toggleDay}
+                progress={progress}
+                userName={userName}
+            />
+        );
+    }
 
     return (
         <div ref={topRef} className="min-h-screen bg-slate-50 font-sans text-slate-800 print:bg-white">

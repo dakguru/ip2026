@@ -7,6 +7,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
 import { DiscountRequestModal } from "@/components/DiscountRequestModal";
+import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import NativePricing from "@/components/pricing/NativePricing";
 
 declare global {
     interface Window {
@@ -27,6 +29,7 @@ export default function PricingPage() {
     const [userMobile, setUserMobile] = useState<string | null>(null);
     const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>('free');
     const [isOfferModalOpen, setIsOfferModalOpen] = useState(false);
+    const isMobileApp = useIsMobileApp();
 
     // Check login status
     useEffect(() => {
@@ -111,6 +114,24 @@ export default function PricingPage() {
         }
     };
 
+    const validateCoupon = async (code: string) => {
+        try {
+            const res = await fetch('/api/offer/validate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code })
+            });
+            const data = await res.json();
+            if (res.ok && data.valid) {
+                return { valid: true, discount: 0 }; // Discount amount calculated by component or fixed logic
+            } else {
+                return { valid: false, discount: 0, error: data.error || "Invalid Coupon" };
+            }
+        } catch (error) {
+            return { valid: false, discount: 0, error: "Validation failed" };
+        }
+    };
+
     const finalPrice = selectedPlan.price - discount;
 
     // Determine validity days based on plan ID
@@ -118,7 +139,20 @@ export default function PricingPage() {
         return 365;
     };
 
-    const handlePayment = async () => {
+    const handlePayment = async (
+        overridePlanKey?: string,
+        overrideActiveTab?: 'gold' | 'silver',
+        overrideDiscount?: number
+    ) => {
+        // Determine values to use (Override or State)
+        const planKeyToUse = overridePlanKey || selectedPlanKey;
+        const tabToUse = overrideActiveTab || activeTab;
+        const discountToUse = overrideDiscount !== undefined ? overrideDiscount : discount;
+
+        const effectivePlans = tabToUse === 'gold' ? goldPlans : silverPlans;
+        const effectivePlan = effectivePlans[planKeyToUse];
+        const effectiveFinalPrice = effectivePlan.price - discountToUse;
+
         if (!userEmail) {
             router.push('/login?redirect=/pricing');
             return;
@@ -131,7 +165,7 @@ export default function PricingPage() {
             const res = await fetch('/api/payment/create-order', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ amount: finalPrice, currency: 'INR' }),
+                body: JSON.stringify({ amount: effectiveFinalPrice, currency: 'INR' }),
             });
 
             const order = await res.json();
@@ -146,7 +180,7 @@ export default function PricingPage() {
                 amount: order.amount,
                 currency: order.currency,
                 name: "Dak Guru Study Planner",
-                description: selectedPlan.name,
+                description: effectivePlan.name,
                 image: "/dak-guru-new-logo.png",
                 order_id: order.id,
                 handler: async function (response: any) {
@@ -161,10 +195,10 @@ export default function PricingPage() {
                                 razorpay_signature: response.razorpay_signature,
                                 email: userEmail,
                                 plan: {
-                                    id: selectedPlan.id,
-                                    name: selectedPlan.name,
-                                    type: activeTab,
-                                    validityDays: getValidityDays(selectedPlan.id)
+                                    id: effectivePlan.id,
+                                    name: effectivePlan.name,
+                                    type: tabToUse,
+                                    validityDays: getValidityDays(effectivePlan.id)
                                 }
                             }),
                         });
@@ -206,6 +240,30 @@ export default function PricingPage() {
             setIsProcessing(false);
         }
     };
+
+    if (isMobileApp) {
+        return (
+            <>
+                <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+                <NativePricing
+                    userEmail={userEmail}
+                    userName={userName}
+                    currentMembership={currentMembership}
+                    onPayment={(key, tab, disc) => handlePayment(key, tab, disc)}
+                    onApplyCoupon={validateCoupon}
+                    isProcessing={isProcessing}
+                    setIsOfferModalOpen={setIsOfferModalOpen}
+                />
+                <DiscountRequestModal
+                    isOpen={isOfferModalOpen}
+                    onClose={() => setIsOfferModalOpen(false)}
+                    userEmail={userEmail}
+                    userName={userName}
+                    userMobile={userMobile}
+                />
+            </>
+        );
+    }
 
     const benefits = [
         { name: "Live Mock Tests", gold: true, silver: true },
@@ -455,7 +513,7 @@ export default function PricingPage() {
                             )}
 
                             <button
-                                onClick={handlePayment}
+                                onClick={() => handlePayment()}
                                 disabled={isProcessing || currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')}
                                 className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed
                                     ${(currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver'))

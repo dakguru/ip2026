@@ -1,5 +1,14 @@
 
-export const FULL_SCHEDULE = [
+export interface ScheduleItem {
+    date: string;
+    day: string;
+    paper: string;
+    topic: string;
+    subTopic: string;
+    duration: string;
+}
+
+export const FULL_SCHEDULE: ScheduleItem[] = [
 
     { date: "14-01-2026", day: "Wednesday", paper: "Paper I", topic: "Acts", subTopic: "The Post Office Act, 2023", duration: "1 Day" },
     { date: "15-01-2026", day: "Thursday", paper: "Paper I", topic: "Acts", subTopic: "Government Savings Promotion Act-1873", duration: "1 Day" },

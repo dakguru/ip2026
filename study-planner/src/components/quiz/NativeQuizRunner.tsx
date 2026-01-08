@@ -157,9 +157,9 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     };
 
     return (
-        <div className="fixed inset-0 z-50 bg-[#F8F9FB] dark:bg-black flex flex-col font-sans">
+        <div className="fixed inset-0 z-[100] bg-[#F8F9FB] dark:bg-black flex flex-col font-sans">
             {/* 1. Modern Header */}
-            <div className="h-16 px-4 flex items-center justify-between bg-white dark:bg-zinc-950 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] z-20 pt-[env(safe-area-inset-top)]">
+            <div className="h-14 px-4 flex items-center justify-between bg-white dark:bg-zinc-950 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] z-20 pt-[env(safe-area-inset-top)]">
                 <div className="flex items-center gap-3">
                     <button onClick={handleExitRequest} className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
                         <ArrowLeft className="w-5 h-5 stroke-[2.5px]" />
@@ -171,7 +171,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                     </div>
                 </div>
                 <div className="flex items-center gap-3">
-                    <div className={`px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-sm border ${timeLeft < 60 ? 'bg-red-50 text-red-600 border-red-100 animate-pulse' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border-zinc-200 dark:border-zinc-700'}`}>
+                    <div className={`px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-sm border ${timeLeft < 60 ? 'bg-red-50 text-red-600 border-red-100 animate-pulse' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border-zinc-200 dark:border-zinc-700'}`}>
                         <Clock className="w-3.5 h-3.5" />
                         {formatTime(timeLeft)}
                     </div>
@@ -182,7 +182,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
             </div>
 
             {/* 2. Scrollable Content */}
-            <div className="flex-1 overflow-y-auto pb-32 pt-6 px-4 md:px-0 scroll-smooth">
+            <div className="flex-1 overflow-y-auto pb-32 pt-4 px-4 md:px-0 scroll-smooth">
                 <div className="max-w-2xl mx-auto">
                     <AnimatePresence mode="popLayout" custom={currentIndex}>
                         <motion.div
@@ -193,14 +193,14 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                             transition={{ duration: 0.3, ease: "easeOut" }}
                         >
                             {/* Question Card */}
-                            <div className="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-[2rem] shadow-[0_8px_30px_-6px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-6">
-                                <p className="text-lg md:text-xl font-bold text-zinc-900 dark:text-zinc-100 leading-relaxed font-serif">
+                            <div className="bg-white dark:bg-zinc-900 p-5 md:p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4">
+                                <p className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans">
                                     {currentQ.text}
                                 </p>
                             </div>
 
                             {/* Options */}
-                            <div className="space-y-3">
+                            <div className="space-y-2.5">
                                 {currentQ.options.map((option, idx) => {
                                     const isSelected = answers[currentQ.id] === idx;
                                     const isCorrect = idx === currentQ.correctAnswer;
@@ -209,17 +209,17 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                     // Determine Styling
                                     let containerClass = "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800";
                                     let textClass = "text-zinc-700 dark:text-zinc-300";
-                                    let icon = <div className="w-5 h-5 rounded-full border-2 border-zinc-300 dark:border-zinc-600"></div>;
+                                    let icon = <div className="w-4 h-4 rounded-full border-2 border-zinc-300 dark:border-zinc-600"></div>;
 
                                     if (showResult) {
                                         if (isCorrect) {
                                             containerClass = "border-green-500 bg-green-50 dark:bg-green-900/20 shadow-md shadow-green-500/10";
                                             textClass = "text-green-800 dark:text-green-300 font-bold";
-                                            icon = <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 fill-green-100 dark:fill-green-900" />;
+                                            icon = <CheckCircle2 className="w-4 h-4 text-green-600 dark:text-green-400 fill-green-100 dark:fill-green-900" />;
                                         } else if (isSelected) {
                                             containerClass = "border-red-500 bg-red-50 dark:bg-red-900/20 shadow-md shadow-red-500/10";
                                             textClass = "text-red-800 dark:text-red-300 font-bold";
-                                            icon = <XCircle className="w-5 h-5 text-red-600 dark:text-red-400 fill-red-100 dark:fill-red-900" />;
+                                            icon = <XCircle className="w-4 h-4 text-red-600 dark:text-red-400 fill-red-100 dark:fill-red-900" />;
                                         } else {
                                             // Other unselected options when answered
                                             containerClass = "border-zinc-100 dark:border-zinc-800 opacity-60 bg-zinc-50 dark:bg-zinc-900";
@@ -234,12 +234,12 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                             key={idx}
                                             onClick={() => handleSelect(idx)}
                                             disabled={isAnswered}
-                                            className={`relative w-full text-left p-5 rounded-2xl border-2 transition-all duration-300 active:scale-[0.99] flex items-start gap-4 ${containerClass}`}
+                                            className={`relative w-full text-left p-4 rounded-xl border transition-all duration-200 active:scale-[0.99] flex items-start gap-3.5 ${containerClass}`}
                                         >
                                             <div className="mt-0.5 shrink-0 transition-transform duration-300">
                                                 {icon}
                                             </div>
-                                            <span className={`text-sm md:text-base leading-snug ${textClass}`}>
+                                            <span className={`text-sm leading-snug ${textClass}`}>
                                                 {option}
                                             </span>
                                         </button>
@@ -270,13 +270,13 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
             </div>
 
             {/* 3. Bottom Actions Bar */}
-            <div className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 p-4 pb-[max(20px,env(safe-area-inset-bottom))] z-40">
-                <div className="flex items-center justify-between gap-4 max-w-2xl mx-auto">
+            <div className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 p-3 pb-[max(12px,env(safe-area-inset-bottom))] z-[110]">
+                <div className="flex items-center justify-between gap-3 max-w-2xl mx-auto">
                     <button
                         onClick={toggleMarkRef}
-                        className={`flex flex-col items-center gap-1 min-w-[64px] transition-colors ${markedForReview.has(currentQ.id) ? "text-purple-600" : "text-zinc-400 hover:text-zinc-600"}`}
+                        className={`flex flex-col items-center gap-1 min-w-[56px] transition-colors ${markedForReview.has(currentQ.id) ? "text-purple-600" : "text-zinc-400 hover:text-zinc-600"}`}
                     >
-                        <Bookmark className={`w-6 h-6 ${markedForReview.has(currentQ.id) ? "fill-current" : "stroke-current"}`} strokeWidth={1.5} />
+                        <Bookmark className={`w-5 h-5 ${markedForReview.has(currentQ.id) ? "fill-current" : "stroke-current"}`} strokeWidth={2} />
                         <span className="text-[10px] font-bold">Review</span>
                     </button>
 
@@ -284,7 +284,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                         <button
                             onClick={handlePrev}
                             disabled={currentIndex === 0}
-                            className="w-12 h-12 flex items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 transition-colors"
+                            className="w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 transition-colors"
                         >
                             <ChevronLeft className="w-6 h-6" />
                         </button>
