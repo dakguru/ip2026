@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
@@ -14,18 +14,72 @@ const bannerData = [
 
 export default function DashboardCarousel() {
     const [current, setCurrent] = useState(0);
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Min distance for swipe detection
+    const minSwipeDistance = 50;
+
+    const startTimer = () => {
+        if (timerRef.current) clearInterval(timerRef.current);
+        timerRef.current = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % bannerData.length);
+        }, 4000);
+    };
 
     // Auto-scroll
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrent((prev) => (prev + 1) % bannerData.length);
-        }, 4000);
-        return () => clearInterval(timer);
+        startTimer();
+        return () => {
+            if (timerRef.current) clearInterval(timerRef.current);
+        };
     }, []);
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+        // Pause timer on touch interaction
+        if (timerRef.current) clearInterval(timerRef.current);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) {
+            // If just a tap or no move, restart timer
+            startTimer();
+            return;
+        }
+
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe || isRightSwipe) {
+            if (isLeftSwipe) {
+                // Next slide
+                setCurrent((prev) => (prev + 1) % bannerData.length);
+            } else {
+                // Prev slide
+                setCurrent((prev) => (prev - 1 + bannerData.length) % bannerData.length);
+            }
+        }
+
+        // Restart timer after interaction
+        startTimer();
+    };
 
     return (
         <div className="w-full px-4 pt-4 pb-2">
-            <div className="relative w-full h-48 md:h-56 rounded-3xl overflow-hidden shadow-lg transform transition-all duration-300 hover:shadow-xl">
+            <div
+                className="relative w-full h-48 md:h-56 rounded-3xl overflow-hidden shadow-lg transform transition-all duration-300 hover:shadow-xl touch-pan-y"
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+            >
                 <div
                     className="flex transition-transform duration-500 ease-out h-full"
                     style={{ transform: `translateX(-${current * 100}%)` }}

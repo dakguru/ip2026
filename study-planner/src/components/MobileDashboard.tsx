@@ -131,8 +131,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 </div>
 
                 <div className="flex items-center gap-3">
-                    {/* Glowing UPGRADE Button - Hidden for Gold Users */}
-                    {!isGold && (
+                    {/* Glowing UPGRADE Button - Hidden for Free & Gold Users (Only for Silver) */}
+                    {membership === 'silver' && (
                         <Link href="/pricing" className="relative group">
                             <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-600 rounded-full opacity-60 group-hover:opacity-100 blur-[6px] transition duration-200 animate-pulse"></div>
                             <div className="relative px-4 py-1.5 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-500 rounded-full flex items-center justify-center shadow-lg border border-amber-300/50">
@@ -159,8 +159,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
             <div className="space-y-8 pt-4">
                 {/* Welcome Message */}
                 <div className="px-5 pt-2 pb-0">
-                    <h1 className="text-xl font-semibold text-zinc-700 dark:text-zinc-300 truncate">
-                        Welcome, <span className="text-zinc-900 dark:text-white font-bold">{displayName}</span>
+                    <h1 className="text-xl font-bold text-blue-600 dark:text-blue-400 truncate">
+                        Welcome {displayName}
                     </h1>
                 </div>
 
