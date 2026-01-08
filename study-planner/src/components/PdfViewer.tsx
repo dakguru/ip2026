@@ -7,7 +7,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
 // Configure worker
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 interface PdfViewerProps {
     url: string;
@@ -20,6 +20,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     const [scale, setScale] = useState(1.0);
     const [loading, setLoading] = useState(true);
     const [containerWidth, setContainerWidth] = useState<number>(0);
+    const containerRef = useState<HTMLDivElement | null>(null); // Note: using callback ref pattern or useRef below would be better, but let's stick to simple ref first
 
     function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
         setNumPages(numPages);
@@ -29,12 +30,9 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     // Adjust scale based on container width
     useEffect(() => {
         const updateWidth = () => {
-            const container = document.getElementById('pdf-container');
+            const container = document.getElementById('pdf-container'); // Keeping ID for now as ref switch requires changing JSX return too
             if (container) {
                 setContainerWidth(container.clientWidth);
-                // Default scale to fit width (approximate logic)
-                // A4 is roughly 600px wide at scale 1.0, but it varies.
-                // We'll let `width={containerWidth}` on Page handle fitting.
             }
         };
 

@@ -595,7 +595,7 @@ export default function NotesPage() {
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
                     <div className="bg-white rounded-none sm:rounded-2xl w-full h-full max-w-6xl flex flex-col shadow-2xl overflow-hidden relative">
                         {/* Header */}
-                        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-100 bg-white z-10 w-full shrink-0">
+                        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-100 bg-white z-[60] w-full shrink-0">
                             <h3 className="font-bold text-slate-800 flex items-center gap-2 text-sm sm:text-base truncate mr-2">
                                 <FileText className="w-5 h-5 text-purple-600 shrink-0" />
                                 <span className="truncate">Document Viewer</span>
