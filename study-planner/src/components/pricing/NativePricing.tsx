@@ -93,22 +93,8 @@ export default function NativePricing({
     const finalPrice = selectedPlan.price - discount;
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans pb-32">
-            {/* Header */}
-            <div className="sticky top-0 z-30 bg-black/80 backdrop-blur-xl border-b border-white/10 px-4 h-16 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 relative rounded-full overflow-hidden border border-white/20">
-                        <Image src="/dak-guru-logo-new.jpg" alt="Logo" fill className="object-cover" />
-                    </div>
-                    <span className="font-bold text-lg bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Dak Guru
-                    </span>
-                </div>
-                {/* User Avatar Tiny */}
-                <div className="w-8 h-8 rounded-full bg-linear-to-tr from-purple-500 to-blue-500 flex items-center justify-center font-bold text-xs ring-2 ring-white/10">
-                    {userName ? userName.charAt(0).toUpperCase() : 'U'}
-                </div>
-            </div>
+        <div className="min-h-screen bg-black text-white font-sans pb-48">
+
 
             <div className="p-4 space-y-6">
 
@@ -149,8 +135,8 @@ export default function NativePricing({
                         <button
                             onClick={() => { setActiveTab('gold'); setDiscount(0); }}
                             className={`py-3 rounded-xl font-bold text-sm transition-all flex flex-col items-center gap-1 ${activeTab === 'gold'
-                                    ? 'bg-zinc-800 text-yellow-400 shadow-lg ring-1 ring-white/10'
-                                    : 'text-zinc-500 hover:text-zinc-300'
+                                ? 'bg-zinc-800 text-yellow-400 shadow-lg ring-1 ring-white/10'
+                                : 'text-zinc-500 hover:text-zinc-300'
                                 }`}
                         >
                             <span>Gold Plan</span>
@@ -159,8 +145,8 @@ export default function NativePricing({
                         <button
                             onClick={() => { setActiveTab('silver'); setDiscount(0); }}
                             className={`py-3 rounded-xl font-bold text-sm transition-all ${activeTab === 'silver'
-                                    ? 'bg-zinc-800 text-white shadow-lg ring-1 ring-white/10'
-                                    : 'text-zinc-500 hover:text-zinc-300'
+                                ? 'bg-zinc-800 text-white shadow-lg ring-1 ring-white/10'
+                                : 'text-zinc-500 hover:text-zinc-300'
                                 }`}
                         >
                             Silver Plan
@@ -189,8 +175,8 @@ export default function NativePricing({
                             return (
                                 <div key={idx} className={`flex items-center gap-3 ${isIncluded ? 'opacity-100' : 'opacity-30'}`}>
                                     <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${isIncluded
-                                            ? (activeTab === 'gold' ? 'bg-yellow-400/20 text-yellow-400' : 'bg-white/20 text-white')
-                                            : 'bg-zinc-800 text-zinc-600'
+                                        ? (activeTab === 'gold' ? 'bg-yellow-400/20 text-yellow-400' : 'bg-white/20 text-white')
+                                        : 'bg-zinc-800 text-zinc-600'
                                         }`}>
                                         {isIncluded ? <Check className="w-3 h-3" strokeWidth={3} /> : <X className="w-3 h-3" />}
                                     </div>
@@ -230,7 +216,7 @@ export default function NativePricing({
             </div>
 
             {/* Sticky Bottom Bar */}
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-zinc-950/90 backdrop-blur-xl border-t border-white/5 z-40 pb-[max(20px,env(safe-area-inset-bottom))]">
+            <div className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] left-0 right-0 p-4 bg-zinc-950/90 backdrop-blur-xl border-t border-white/5 z-40">
                 <div className="flex justify-between items-center mb-3 px-1">
                     <div>
                         <p className="text-xs text-zinc-400">Total Payable</p>
@@ -248,8 +234,8 @@ export default function NativePricing({
                     onClick={() => onPayment(selectedPlanKey, activeTab, discount)}
                     disabled={isProcessing}
                     className={`w-full py-4 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${isProcessing
-                            ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
-                            : 'bg-green-600 hover:bg-green-500 text-white shadow-green-500/20 active:scale-[0.98] transition-all'
+                        ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
+                        : 'bg-green-600 hover:bg-green-500 text-white shadow-green-500/20 active:scale-[0.98] transition-all'
                         }`}
                 >
                     {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Zap className="w-5 h-5 fill-current" />}

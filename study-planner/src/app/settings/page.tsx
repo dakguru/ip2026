@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar } from "lucide-react";
+import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import AnalyticsDashboard from "@/components/AnalyticsDashboard";
+import { generateStudyPlan } from "@/lib/planner";
+import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
 const EXAM_OPTIONS = [
     "CE for GDS to PA/SA",
@@ -45,9 +48,30 @@ export default function SettingsPage() {
     const [passwordMessage, setPasswordMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
     const [isPasswordLoading, setIsPasswordLoading] = useState(false);
 
+    // Progress Data for Dashboard
+    const [progressData, setProgressData] = useState<Record<string, any>>({});
+    const [studyPlan, setStudyPlan] = useState<any[]>([]);
+    const isMobileApp = useIsMobileApp();
+
     useEffect(() => {
         fetchProfile();
+        // Load Progress
+        const savedProgress = localStorage.getItem('ldce2026_progress');
+        if (savedProgress) {
+            setProgressData(JSON.parse(savedProgress));
+        }
+        // Load Plan
+        setStudyPlan(generateStudyPlan());
     }, []);
+
+    const handleLogout = async () => {
+        try {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            window.location.href = '/login';
+        } catch (error) {
+            console.error("Logout failed", error);
+        }
+    };
 
     const fetchProfile = async () => {
         try {
@@ -225,22 +249,80 @@ export default function SettingsPage() {
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 relative">
             <div className="max-w-3xl mx-auto space-y-8">
-                <Link
-                    href="/"
-                    className="inline-flex items-center text-sm text-zinc-500 hover:text-blue-600 transition-colors mb-8"
-                >
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Home
-                </Link>
+                {!isMobileApp && (
+                    <Link
+                        href="/"
+                        className="inline-flex items-center text-sm text-zinc-500 hover:text-blue-600 transition-colors mb-8"
+                    >
+                        <ArrowLeft className="w-4 h-4 mr-2" />
+                        Back to Home
+                    </Link>
+                )}
 
-                <div className="bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                {/* Mobile Header (App View) */}
+                {isMobileApp && (
+                    <div className="flex items-center justify-between mb-6">
+                        <h1 className="text-2xl font-black text-zinc-900 dark:text-zinc-100">My Profile</h1>
+                        {/* Avatar */}
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 p-[2px]">
+                            <div className="w-full h-full rounded-full bg-white dark:bg-black flex items-center justify-center">
+                                <User className="w-5 h-5 text-zinc-700 dark:text-zinc-300" />
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* 1. Progress Dashboard (Embedded) */}
+                <div className="space-y-4">
+                    <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+                        <span className="w-1.5 h-6 bg-blue-600 rounded-full"></span>
+                        My Progress
+                    </h2>
+                    <AnalyticsDashboard plan={studyPlan} progress={progressData} />
+                </div>
+
+                {/* 2. Membership Card */}
+                <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 text-white rounded-3xl p-6 shadow-xl relative overflow-hidden group">
+                    {/* Background Glow */}
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-blue-500/20 transition-all"></div>
+
+                    <div className="relative z-10">
+                        <div className="flex justify-between items-start mb-6">
+                            <div>
+                                <p className="text-zinc-400 text-xs font-bold uppercase tracking-wider mb-1">Current Membership</p>
+                                <h3 className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">
+                                    {formData.email ? (initialData?.membershipLevel === 'gold' ? 'GOLD PLAN' : initialData?.membershipLevel === 'silver' ? 'SILVER PLAN' : 'FREE TIER') : 'LOADING...'}
+                                </h3>
+                            </div>
+                            <div className={`p-3 rounded-2xl ${initialData?.membershipLevel === 'gold' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-zinc-800 text-zinc-400'}`}>
+                                <Crown className="w-6 h-6 fill-current" />
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-4 text-sm text-zinc-300 mb-6">
+                            <div className="flex items-center gap-2">
+                                <Shield className="w-4 h-4 text-emerald-400" />
+                                <span>Valid until: Sep 2026</span>
+                            </div>
+                        </div>
+
+                        {initialData?.membershipLevel !== 'gold' && (
+                            <Link href="/pricing" className="block w-full bg-white text-black font-bold py-3.5 rounded-xl text-center hover:bg-zinc-200 transition-colors">
+                                Upgrade Plan
+                            </Link>
+                        )}
+                    </div>
+                </div>
+
+                {/* 3. Account Settings */}
+                <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <div className="flex items-center gap-4 mb-8 pb-8 border-b border-zinc-100 dark:border-zinc-800">
-                        <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400">
-                            <User className="w-8 h-8" />
+                        <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400">
+                            <User className="w-6 h-6" />
                         </div>
                         <div>
-                            <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Account Settings</h1>
-                            <p className="text-zinc-500 dark:text-zinc-400">Manage your profile and preferences.</p>
+                            <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Personal Details</h1>
+                            <p className="text-xs text-zinc-500 dark:text-zinc-400">Update your basic information.</p>
                         </div>
                     </div>
 
@@ -443,7 +525,19 @@ export default function SettingsPage() {
                         </div>
                     </form>
                 </div>
+
+                {/* Logout Button */}
+                <button
+                    onClick={handleLogout}
+                    className="w-full bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 font-bold py-4 rounded-3xl border border-red-100 dark:border-red-900/30 hover:bg-red-100 dark:hover:bg-red-900/20 transition-all flex items-center justify-center gap-2"
+                >
+                    <LogOut className="w-5 h-5" />
+                    Log Out
+                </button>
             </div>
+
+            {/* Bottom Padding for Mobile Nav */}
+            <div className="h-20 md:hidden"></div>
 
             {/* OTP Modal */}
             {showOtpModal && (

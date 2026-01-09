@@ -17,6 +17,8 @@ import { useRouter } from 'next/navigation';
 import { WriteArticleModal } from '@/components/WriteArticleModal';
 import { DMModal } from '@/components/DMModal';
 import { PostItem } from '@/components/PostItem';
+import { useIsMobileApp } from '@/hooks/use-mobile-app';
+import NativeSocialFeed from '@/components/social/NativeSocialFeed';
 
 // Mock Data for Success Stories
 const SUCCESS_STORIES_DATA = [
@@ -163,6 +165,7 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
     const [myQuestionIds, setMyQuestionIds] = useState<number[]>([]);
 
     const router = useRouter();
+    const isMobileApp = useIsMobileApp();
 
     const fetchPosts = async () => {
         try {
@@ -299,6 +302,51 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return feedData.filter((post: any) => !post.tags || !post.tags.includes("Success Story"));
     };
+
+    if (isMobileApp) {
+        return (
+            <NativeSocialFeed
+                posts={feedData}
+                user={user}
+                onFetchPosts={fetchPosts}
+                onAskQuestion={(text, details) => {
+                    // Reuse checkAuthAndExecute indirectly or logic duplication for simplicity since hook doesn't expose it
+                    if (!user) { router.push('/login'); return; }
+                    setQuestionInput(text);
+                    setDetailsInput(details);
+                    // Trigger post immediately
+                    // We need to call logic similar to handleAskQuestion but with the passed args
+                    const postLogic = async () => {
+                        const newPost = {
+                            id: Date.now(),
+                            title: text,
+                            author: user?.name || "Aspirant",
+                            role: user?.role || "Aspirant",
+                            followers: "0",
+                            views: "0",
+                            answer: null,
+                            description: details,
+                            tags: ["New", "Community"],
+                            comments: [],
+                            createdAt: new Date().toISOString()
+                        };
+                        try {
+                            const res = await fetch('/api/community/posts', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(newPost)
+                            });
+                            if (res.ok) await fetchPosts();
+                        } catch (e) { console.error(e); }
+                    };
+                    postLogic();
+                }}
+                savedPostIds={savedPostIds}
+                onSavePost={handleSavePost}
+                onDeletePost={handleDeletePost}
+            />
+        );
+    }
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans text-zinc-800 dark:text-zinc-200">

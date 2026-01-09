@@ -8,6 +8,7 @@ import { QuizSet, QuizTopic } from '@/lib/quizTypes';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 import NativeQuizRunner from '@/components/quiz/NativeQuizRunner';
 import NativeResultScreen from '@/components/quiz/NativeResultScreen';
+import NativeQuizDashboard from '@/components/quiz/NativeQuizDashboard';
 
 // Custom styles for range slider
 const sliderStyles = `
@@ -699,6 +700,17 @@ export default function QuizDashboard() {
     const isUnlocked = (topicId: string) => {
         return ['gold', 'silver'].includes(membershipLevel.toLowerCase()) || ALLOWED_FREE_TOPICS.includes(topicId);
     };
+
+    if (isMobileApp) {
+        return (
+            <NativeQuizDashboard
+                paper1Topics={paper1Topics}
+                paper3Topics={paper3Topics}
+                onSelectTopic={handleTopicSelect}
+                isUnlocked={isUnlocked}
+            />
+        );
+    }
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 transition-colors">
