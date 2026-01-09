@@ -10,9 +10,10 @@ interface NativeQuizRunnerProps {
     questions: Question[];
     onComplete: (answers: Record<string, number>, timeTaken: number) => void;
     onExit: () => void;
+    mode?: 'practice' | 'exam';
 }
 
-export default function NativeQuizRunner({ quizTitle, questions, onComplete, onExit }: NativeQuizRunnerProps) {
+export default function NativeQuizRunner({ quizTitle, questions, onComplete, onExit, mode = 'practice' }: NativeQuizRunnerProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [markedForReview, setMarkedForReview] = useState<Set<string>>(new Set());
@@ -97,12 +98,17 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     const isAnswered = answers[currentQ.id] !== undefined;
 
     const handleSelect = (optionIdx: number) => {
-        if (isAnswered) return; // Prevent changing answer in "Learn Mode" if strictly instant validation
+        // In practice mode, prevent changing if already answered (instant validation)
+        // In exam mode, allow changing anytime
+        if (mode === 'practice' && isAnswered) return;
+
         vibrate(10);
         setAnswers(prev => ({ ...prev, [currentQ.id]: optionIdx }));
 
-        // Auto-show explanation on answer
-        setShowExplanation(prev => new Set(prev).add(currentQ.id));
+        // Auto-show explanation on answer ONLY in practice mode
+        if (mode === 'practice') {
+            setShowExplanation(prev => new Set(prev).add(currentQ.id));
+        }
     };
 
     const handleNext = () => {
@@ -194,9 +200,32 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                         >
                             {/* Question Card */}
                             <div className="bg-white dark:bg-zinc-900 p-5 md:p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4">
-                                <p className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans">
+                                <p className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
                                     {currentQ.text}
                                 </p>
+
+                                {currentQ.table && (
+                                    <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                                        <table className="w-full text-left text-xs md:text-sm">
+                                            <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
+                                                <tr>
+                                                    {currentQ.table.headers.map((h, i) => (
+                                                        <th key={i} className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100">{h}</th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                                                {currentQ.table.rows.map((row, i) => (
+                                                    <tr key={i} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
+                                                        {row.map((cell, j) => (
+                                                            <td key={j} className="px-4 py-3 text-zinc-700 dark:text-zinc-300 font-medium">{cell}</td>
+                                                        ))}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Options */}
@@ -204,7 +233,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                 {currentQ.options.map((option, idx) => {
                                     const isSelected = answers[currentQ.id] === idx;
                                     const isCorrect = idx === currentQ.correctAnswer;
-                                    const showResult = isAnswered; // Instant feedback
+                                    const showResult = mode === 'practice' && isAnswered;
 
                                     // Determine Styling
                                     let containerClass = "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800";
@@ -221,19 +250,19 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                             textClass = "text-red-800 dark:text-red-300 font-bold";
                                             icon = <XCircle className="w-4 h-4 text-red-600 dark:text-red-400 fill-red-100 dark:fill-red-900" />;
                                         } else {
-                                            // Other unselected options when answered
                                             containerClass = "border-zinc-100 dark:border-zinc-800 opacity-60 bg-zinc-50 dark:bg-zinc-900";
                                         }
                                     } else if (isSelected) {
-                                        // Selected but not revealed (never happens in instant mode unless we delay)
-                                        containerClass = "border-blue-500 bg-blue-50 dark:bg-blue-900/20";
+                                        containerClass = "border-blue-600 bg-blue-50 dark:bg-blue-900/20 ring-1 ring-blue-100 dark:ring-blue-900";
+                                        textClass = "text-blue-700 dark:text-blue-300 font-bold";
+                                        icon = <div className="w-4 h-4 rounded-full border-[5px] border-blue-600"></div>;
                                     }
 
                                     return (
                                         <button
                                             key={idx}
                                             onClick={() => handleSelect(idx)}
-                                            disabled={isAnswered}
+                                            disabled={mode === 'practice' && isAnswered}
                                             className={`relative w-full text-left p-4 rounded-xl border transition-all duration-200 active:scale-[0.99] flex items-start gap-3.5 ${containerClass}`}
                                         >
                                             <div className="mt-0.5 shrink-0 transition-transform duration-300">
@@ -247,8 +276,8 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                 })}
                             </div>
 
-                            {/* Explanation Accordion (Auto-reveals) */}
-                            {isAnswered && (
+                            {/* Explanation Accordion (In Practice Mode Only) */}
+                            {mode === 'practice' && isAnswered && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 10, height: 0 }}
                                     animate={{ opacity: 1, y: 0, height: "auto" }}

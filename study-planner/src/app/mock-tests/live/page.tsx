@@ -7,6 +7,8 @@ import { format } from "date-fns";
 import { LIVE_MOCK_QUESTIONS, Question } from "@/data/live_mock_data";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
+import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import NativeQuizRunner from "@/components/quiz/NativeQuizRunner";
 
 interface LeaderboardEntry {
     _id: string;
@@ -16,6 +18,7 @@ interface LeaderboardEntry {
 }
 
 export default function LiveMockTestPage() {
+    const isMobileApp = useIsMobileApp();
     const [gameState, setGameState] = useState<'rules' | 'test' | 'leaderboard'>('rules');
     const [currentQIndex, setCurrentQIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({});
@@ -33,6 +36,7 @@ export default function LiveMockTestPage() {
     const total = questions.length;
     const currentQ = questions[currentQIndex];
 
+    // Removed unused hasChecked state if not used, or keep it if unsure. It was in previous file but unused in visible logic. keeping strictly to restore.
     const [hasChecked, setHasChecked] = useState(false);
 
     useEffect(() => {
@@ -77,7 +81,8 @@ export default function LiveMockTestPage() {
 
     useEffect(() => {
         let timer: NodeJS.Timeout;
-        if (gameState === 'test' && timeLeft > 0) {
+        // Only run web timer if NOT mobile app (Mobile app handles its own timer in NativeQuizRunner)
+        if (gameState === 'test' && timeLeft > 0 && !isMobileApp) {
             timer = setInterval(() => {
                 setTimeLeft(prev => {
                     if (prev <= 1) {
@@ -90,7 +95,7 @@ export default function LiveMockTestPage() {
             }, 1000);
         }
         return () => clearInterval(timer);
-    }, [gameState, timeLeft]);
+    }, [gameState, timeLeft, isMobileApp]);
 
     const fetchLeaderboard = async () => {
         try {
@@ -112,13 +117,20 @@ export default function LiveMockTestPage() {
         setAnswers(prev => ({ ...prev, [qId]: idx }));
     };
 
-    const handleSubmit = async (auto = false) => {
-        if (!auto && !confirm("Are you sure you want to submit the test?")) return;
+    const handleSubmit = async (auto = false, mobileAnswers?: Record<string, number>) => {
+        if (!auto && !mobileAnswers && !confirm("Are you sure you want to submit the test?")) return;
 
         setIsSubmitting(true);
+        const finalAnswers = mobileAnswers || answers;
+
+        // Sync state if coming from mobile
+        if (mobileAnswers) {
+            setAnswers(mobileAnswers);
+        }
+
         let newScore = 0;
         questions.forEach(q => {
-            if (answers[q.id] === q.correctAnswer) {
+            if (finalAnswers[q.id] === q.correctAnswer) {
                 newScore += 2; // 2 marks per question
             }
         });
@@ -133,7 +145,7 @@ export default function LiveMockTestPage() {
                         userEmail: userEmail,
                         score: newScore,
                         totalQuestions: total,
-                        answers: answers,
+                        answers: finalAnswers,
                         testId: 'live-sample'
                     })
                 });
@@ -399,6 +411,21 @@ export default function LiveMockTestPage() {
 
     // --- TEST SCREEN ---
     if (gameState === 'test') {
+        if (isMobileApp) {
+            return (
+                <NativeQuizRunner
+                    quizTitle="Live Mock Test"
+                    questions={questions}
+                    onComplete={(mobileAnswers, timeTaken) => {
+                        // Pass answers to submit
+                        handleSubmit(false, mobileAnswers);
+                    }}
+                    onExit={() => setGameState('rules')}
+                    mode="exam"
+                />
+            );
+        }
+
         return (
             <div className="min-h-screen bg-zinc-50 text-zinc-900 font-sans selection:bg-indigo-500/30 transition-colors relative">
                 {/* Header */}

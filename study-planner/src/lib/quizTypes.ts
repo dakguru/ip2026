@@ -1,9 +1,15 @@
+export interface TableData {
+    headers: string[];
+    rows: string[][];
+}
+
 export interface Question {
     id: string;
     text: string;
     options: string[];
     correctAnswer: number; // Index 0-3
     explanation?: string;
+    table?: TableData;
 }
 
 export interface QuizSet {
