@@ -19,6 +19,8 @@ export const DiscountRequestModal = ({ isOpen, onClose, userEmail, userName, use
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState("");
 
+    const [claimedCode, setClaimedCode] = useState<string | null>(null);
+
     // Update form when props change
     useEffect(() => {
         setFormData(prev => ({
@@ -57,6 +59,7 @@ export const DiscountRequestModal = ({ isOpen, onClose, userEmail, userName, use
             const data = await res.json();
 
             if (res.ok) {
+                setClaimedCode(data.code);
                 setSuccess(true);
             } else {
                 setError(data.error || "Failed to submit request.");
@@ -100,17 +103,34 @@ export const DiscountRequestModal = ({ isOpen, onClose, userEmail, userName, use
                             <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full flex items-center justify-center mb-6 shadow-sm border border-green-200">
                                 <Sparkles className="w-10 h-10 fill-current" />
                             </div>
-                            <h4 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Request Sent!</h4>
-                            <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-                                The discount code will be sent to your email
-                                <span className="block font-semibold text-blue-600 mt-1">{formData.email}</span>
-                                <span className="block text-xs mt-2 text-zinc-500 italic">(Check your Spam/Junk folder also, for the Coupon Code)</span>
+                            <h4 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Here is your Code!</h4>
+
+                            {/* INSTANT COUPON DISPLAY */}
+                            {claimedCode && (
+                                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 border-2 border-dashed border-orange-300 dark:border-orange-700 p-4 rounded-xl my-4 w-full relative">
+                                    <p className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-widest mb-1">Copy Your Coupon</p>
+                                    <div
+                                        className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600 tracking-widest select-all"
+                                        style={{ fontFamily: '"Verdana", "Arial", sans-serif' }}
+                                    >
+                                        {claimedCode}
+                                    </div>
+                                    <div className="mt-2 text-[10px] text-zinc-500">Tap and hold to copy</div>
+                                </div>
+                            )}
+
+                            <p className="text-red-600 dark:text-red-400 font-bold text-xs mb-4 animate-pulse">
+                                ⚠️ Use Coupon before it expires soon!
+                            </p>
+
+                            <p className="text-zinc-600 dark:text-zinc-400 mb-6 text-sm">
+                                A copy has also been sent to <span className="font-semibold text-blue-600">{formData.email}</span>
                             </p>
                             <button
                                 onClick={onClose}
-                                className="mt-6 px-6 py-2 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-semibold rounded-lg transition-colors"
+                                className="mt-2 px-6 py-2 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-semibold rounded-lg transition-colors"
                             >
-                                Close
+                                Close & Apply
                             </button>
                         </div>
                     ) : (

@@ -44,6 +44,7 @@ export default function AdminDashboard() {
     const [error, setError] = useState("");
     const [search, setSearch] = useState("");
     const [onlineCount, setOnlineCount] = useState(0);
+    const [couponStats, setCouponStats] = useState({ total: 0, claimed: 0, redeemed: 0, available: 0 });
 
     // Filters
     const [filterStatus, setFilterStatus] = useState<'all' | 'gold' | 'silver' | 'free'>('all');
@@ -58,7 +59,20 @@ export default function AdminDashboard() {
     useEffect(() => {
         fetchUsers();
         fetchOnlineCount();
+        fetchCouponStats();
     }, []);
+
+    const fetchCouponStats = async () => {
+        try {
+            const res = await fetch('/api/admin/stats/coupons');
+            if (res.ok) {
+                const data = await res.json();
+                setCouponStats(data.stats);
+            }
+        } catch (e) {
+            console.error("Failed to fetch coupon stats", e);
+        }
+    };
 
     const fetchOnlineCount = async () => {
         try {
@@ -316,6 +330,49 @@ export default function AdminDashboard() {
                         <div className="flex flex-col">
                             <span className="text-3xl font-extrabold text-zinc-700 dark:text-zinc-300">{stats.free}</span>
                             <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Basic Users</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Coupon Statistics */}
+                <div>
+                    <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-4 flex items-center gap-2">
+                        <CreditCard className="w-5 h-5 text-pink-500" /> Coupon Insights
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Total Coupons</span>
+                                <span className="p-1 px-2 text-xs bg-zinc-100 dark:bg-zinc-800 rounded text-zinc-600 dark:text-zinc-400">All</span>
+                            </div>
+                            <span className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">{couponStats.total}</span>
+                        </div>
+                        <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-wider">Claimed</span>
+                                <span className="p-1 px-2 text-xs bg-green-100 dark:bg-green-900/20 rounded text-green-600 dark:text-green-400">Assigned</span>
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-2xl font-extrabold text-green-600 dark:text-green-400">{couponStats.claimed}</span>
+                                <span className="text-xs text-zinc-400">Users requested code</span>
+                            </div>
+                        </div>
+                        <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Redeemed</span>
+                                <span className="p-1 px-2 text-xs bg-blue-100 dark:bg-blue-900/20 rounded text-blue-600 dark:text-blue-400">Used</span>
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">{couponStats.redeemed}</span>
+                                <span className="text-xs text-zinc-400">Applied in payment</span>
+                            </div>
+                        </div>
+                        <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
+                            <div className="flex items-center justify-between mb-2">
+                                <span className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider">Available</span>
+                                <span className="p-1 px-2 text-xs bg-orange-100 dark:bg-orange-900/20 rounded text-orange-600 dark:text-orange-400">Left</span>
+                            </div>
+                            <span className="text-2xl font-extrabold text-orange-600 dark:text-orange-400">{couponStats.available}</span>
                         </div>
                     </div>
                 </div>

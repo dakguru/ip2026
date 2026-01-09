@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import crypto from 'crypto';
 import dbConnect from '@/lib/mongoose';
 import User from '@/models/User';
-import { getAllUsers } from '@/lib/db';
+import Coupon from '@/models/Coupon';
 
 export async function POST(request: Request) {
     try {
@@ -11,7 +11,8 @@ export async function POST(request: Request) {
             razorpay_payment_id,
             razorpay_signature,
             email, // We'll pass email from client for now, but ideally get it from session
-            plan // { id, name, type, validityDays }
+            plan, // { id, name, type, validityDays }
+            couponCode // Optional: identifying used coupon
         } = await request.json();
 
         // 1. Verify Signature
@@ -54,6 +55,20 @@ export async function POST(request: Request) {
                     error: 'Payment verified but User not found. Please contact support.',
                     debug_email: email
                 }, { status: 404 });
+            }
+
+            // 3. Mark Coupon as Redeemed (if used)
+            if (couponCode) {
+                await Coupon.findOneAndUpdate(
+                    { code: couponCode },
+                    {
+                        $set: {
+                            isRedeemed: true,
+                            redeemedAt: new Date(),
+                            redeemedByEmail: email
+                        }
+                    }
+                );
             }
         }
 

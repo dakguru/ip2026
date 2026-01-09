@@ -20,7 +20,6 @@ export default function PricingPage() {
     const router = useRouter();
     const [selectedPlanKey, setSelectedPlanKey] = useState<string>('full_2026');
     const [activeTab, setActiveTab] = useState<'gold' | 'silver'>('gold');
-    const [showCouponInput, setShowCouponInput] = useState(false);
     const [couponCode, setCouponCode] = useState("");
     const [discount, setDiscount] = useState(0);
     const [isProcessing, setIsProcessing] = useState(false);
@@ -101,7 +100,6 @@ export default function PricingPage() {
                 const discountAmount = selectedPlan.price * 0.5;
                 setDiscount(discountAmount);
                 alert(`Coupon Applied! You saved ₹${discountAmount}`);
-                setShowCouponInput(false);
             } else {
                 alert(data.error || "Invalid Coupon Code");
                 setDiscount(0);
@@ -142,12 +140,14 @@ export default function PricingPage() {
     const handlePayment = async (
         overridePlanKey?: string,
         overrideActiveTab?: 'gold' | 'silver',
-        overrideDiscount?: number
+        overrideDiscount?: number,
+        overrideCouponCode?: string
     ) => {
         // Determine values to use (Override or State)
         const planKeyToUse = overridePlanKey || selectedPlanKey;
         const tabToUse = overrideActiveTab || activeTab;
         const discountToUse = overrideDiscount !== undefined ? overrideDiscount : discount;
+        const couponCodeToUse = overrideCouponCode || couponCode;
 
         const effectivePlans = tabToUse === 'gold' ? goldPlans : silverPlans;
         const effectivePlan = effectivePlans[planKeyToUse];
@@ -199,7 +199,8 @@ export default function PricingPage() {
                                     name: effectivePlan.name,
                                     type: tabToUse,
                                     validityDays: getValidityDays(effectivePlan.id)
-                                }
+                                },
+                                couponCode: couponCodeToUse // Pass coupon code here
                             }),
                         });
 
@@ -249,7 +250,7 @@ export default function PricingPage() {
                     userEmail={userEmail}
                     userName={userName}
                     currentMembership={currentMembership}
-                    onPayment={(key, tab, disc) => handlePayment(key, tab, disc)}
+                    onPayment={(key, tab, disc, code) => handlePayment(key, tab, disc, code)}
                     onApplyCoupon={validateCoupon}
                     isProcessing={isProcessing}
                     setIsOfferModalOpen={setIsOfferModalOpen}
@@ -398,34 +399,24 @@ export default function PricingPage() {
                                     <h3 className="font-bold text-pink-700 dark:text-pink-300 text-sm mb-1">Exciting offers available</h3>
                                     <p className="text-pink-600/80 dark:text-pink-400/80 text-xs">Have a coupon code? Apply it here for extra discounts.</p>
 
-                                    {!showCouponInput && (
-                                        <button
-                                            onClick={() => setShowCouponInput(true)}
-                                            className="mt-2 text-xs font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 hover:underline"
-                                        >
-                                            Apply Coupon
-                                        </button>
-                                    )}
                                 </div>
                             </div>
 
-                            {showCouponInput && (
-                                <div className="mt-2 flex gap-2 animate-in fade-in slide-in-from-top-1">
-                                    <input
-                                        type="text"
-                                        placeholder="Enter Coupon Code"
-                                        value={couponCode}
-                                        onChange={(e) => setCouponCode(e.target.value)}
-                                        className="flex-1 bg-white dark:bg-zinc-800 border border-pink-200 dark:border-pink-900/50 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-pink-500/20"
-                                    />
-                                    <button
-                                        onClick={handleApplyCoupon}
-                                        className="bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold px-4 py-1.5 rounded-lg transition-colors"
-                                    >
-                                        Apply
-                                    </button>
-                                </div>
-                            )}
+                            <div className="mt-2 flex gap-2">
+                                <input
+                                    type="text"
+                                    placeholder="Enter your Coupon code"
+                                    value={couponCode}
+                                    onChange={(e) => setCouponCode(e.target.value)}
+                                    className="flex-1 bg-white dark:bg-zinc-800 border border-pink-200 dark:border-pink-900/50 rounded-lg px-3 py-1.5 text-sm outline-none focus:ring-2 focus:ring-pink-500/20"
+                                />
+                                <button
+                                    onClick={handleApplyCoupon}
+                                    className="bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold px-4 py-1.5 rounded-lg transition-colors"
+                                >
+                                    Apply
+                                </button>
+                            </div>
                         </div>
 
                         {/* Launch Offer Banner */}

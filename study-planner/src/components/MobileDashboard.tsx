@@ -2,7 +2,7 @@
 
 import DashboardCarousel from "@/components/dashboard/DashboardCarousel";
 import Link from "next/link";
-import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info } from "lucide-react";
+import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"; // Assuming you have shadcn Sheet
@@ -85,6 +85,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                     <Link href="/syllabus" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
                                         <BookOpen className="w-5 h-5 text-purple-500" /> Syllabus
                                     </Link>
+                                    <Link href="/pyq" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
+                                        <History className="w-5 h-5 text-orange-500" /> Previous Year Qs
+                                    </Link>
                                     <Link href="/social" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
                                         <MessageCircle className="w-5 h-5 text-indigo-500" /> Community
                                     </Link>
@@ -143,13 +146,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
                     {/* User Avatar - Matches Screenshot */}
                     <Link href="/settings">
-                        <div className="w-10 h-10 rounded-full p-[2px] bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-600">
-                            <div className="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center overflow-hidden relative">
-                                {/* Use an actual image if valid, otherwise fallback to Initial */}
-                                <div className="absolute inset-0 bg-blue-600/20 flex items-center justify-center">
-                                    <span className="text-sm font-bold text-blue-100">{displayName.charAt(0)}</span>
-                                </div>
-                                {/* If we had a user image URL, we would put Image here */}
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-600 p-[2px]">
+                            <div className="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center relative overflow-hidden">
+                                <User className="w-5 h-5 text-white" />
                             </div>
                         </div>
                     </Link>
@@ -158,9 +157,10 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
             <div className="space-y-8 pt-4">
                 {/* Welcome Message */}
-                <div className="px-5 pt-2 pb-0">
-                    <h1 className="text-xl font-bold text-blue-600 dark:text-blue-400 truncate">
-                        Welcome {displayName}
+                <div className="px-5 pt-4 pb-2">
+                    <p className="text-zinc-500 dark:text-zinc-400 text-xs font-bold uppercase tracking-widest mb-1">Hello, Aspirant</p>
+                    <h1 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-800 dark:from-white dark:via-zinc-200 dark:to-zinc-400 truncate tracking-tight">
+                        Welcome, {displayName.split(' ')[0]} <span className="text-3xl align-middle">👋</span>
                     </h1>
                 </div>
 

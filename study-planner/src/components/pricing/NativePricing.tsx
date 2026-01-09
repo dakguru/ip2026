@@ -16,7 +16,7 @@ interface NativePricingProps {
     userEmail: string | null;
     userName: string | null;
     currentMembership: 'free' | 'silver' | 'gold';
-    onPayment: (planKey: string, activeTab: 'gold' | 'silver', discount: number) => void;
+    onPayment: (planKey: string, activeTab: 'gold' | 'silver', discount: number, couponCode?: string) => void;
     onApplyCoupon: (code: string) => Promise<{ valid: boolean; discount: number; error?: string }>;
     isProcessing: boolean;
     setIsOfferModalOpen: (isOpen: boolean) => void;
@@ -34,7 +34,6 @@ export default function NativePricing({
     const [activeTab, setActiveTab] = useState<'gold' | 'silver'>('gold');
     const [couponCode, setCouponCode] = useState("");
     const [discount, setDiscount] = useState(0);
-    const [showCouponInput, setShowCouponInput] = useState(false);
 
     // Plan Data (Mirrored from main page)
     const goldPlans: Record<string, Plan> = {
@@ -77,12 +76,8 @@ export default function NativePricing({
         if (!couponCode) return;
         const res = await onApplyCoupon(couponCode);
         if (res.valid) {
-            // Calculate 50% discount based on plan price Logic duplicated/passed from parent? 
-            // Ideally parent handles calculation, but for now we trust the hook or calculate here if static
-            // Parent expects amount, so let's use the same logic: 50% flat for valid web coupons
             const discountAmount = selectedPlan.price * 0.5;
             setDiscount(discountAmount);
-            setShowCouponInput(false);
             alert(`Coupon Applied! You saved ₹${discountAmount}`);
         } else {
             setDiscount(0);
@@ -188,21 +183,15 @@ export default function NativePricing({
                 </div>
 
                 {/* 4. Coupon Section */}
-                {!showCouponInput && discount === 0 && (
-                    <button
-                        onClick={() => setShowCouponInput(true)}
-                        className="flex items-center gap-2 text-sm text-blue-400 font-medium px-2"
-                    >
-                        <Tag className="w-4 h-4" /> Have a coupon code?
-                    </button>
-                )}
-
-                {showCouponInput && (
+                <div className="flex flex-col gap-2">
+                    <label className="text-sm font-medium text-zinc-400 flex items-center gap-2">
+                        <Tag className="w-4 h-4 text-blue-400" /> Have a coupon code?
+                    </label>
                     <div className="flex gap-2">
                         <input
                             value={couponCode}
                             onChange={(e) => setCouponCode(e.target.value)}
-                            placeholder="Enter Code"
+                            placeholder="Enter your Coupon code"
                             className="bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 flex-1 text-sm outline-none focus:border-blue-500 transition-colors"
                         />
                         <button
@@ -212,7 +201,7 @@ export default function NativePricing({
                             Apply
                         </button>
                     </div>
-                )}
+                </div>
             </div>
 
             {/* Sticky Bottom Bar */}
@@ -231,15 +220,15 @@ export default function NativePricing({
                 </div>
 
                 <button
-                    onClick={() => onPayment(selectedPlanKey, activeTab, discount)}
+                    onClick={() => onPayment(selectedPlanKey, activeTab, discount, discount > 0 ? couponCode : undefined)}
                     disabled={
                         isProcessing ||
                         currentMembership === 'gold' ||
                         (currentMembership === 'silver' && activeTab === 'silver')
                     }
                     className={`w-full py-4 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${isProcessing || currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')
-                            ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed shadow-none'
-                            : 'bg-green-600 hover:bg-green-500 text-white shadow-green-500/20 active:scale-[0.98] transition-all'
+                        ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed shadow-none'
+                        : 'bg-green-600 hover:bg-green-500 text-white shadow-green-500/20 active:scale-[0.98] transition-all'
                         }`}
                 >
                     {isProcessing ? (
