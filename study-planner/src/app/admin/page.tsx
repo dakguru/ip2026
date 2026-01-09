@@ -44,6 +44,8 @@ export default function AdminDashboard() {
     const [error, setError] = useState("");
     const [search, setSearch] = useState("");
     const [onlineCount, setOnlineCount] = useState(0);
+    const [onlineUsersList, setOnlineUsersList] = useState<UserData[]>([]);
+    const [showOnlineUsersModal, setShowOnlineUsersModal] = useState(false);
     const [couponStats, setCouponStats] = useState({ total: 0, claimed: 0, redeemed: 0, available: 0 });
 
     // Filters
@@ -80,6 +82,7 @@ export default function AdminDashboard() {
             if (res.ok) {
                 const data = await res.json();
                 setOnlineCount(data.count);
+                setOnlineUsersList(data.users || []); // Store full list
             }
         } catch (e) {
             console.error("Failed to fetch online count", e);
@@ -265,7 +268,10 @@ export default function AdminDashboard() {
                 {/* Statistics Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
 
-                    <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow relative overflow-hidden">
+                    <div
+                        onClick={() => setShowOnlineUsersModal(true)}
+                        className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-all relative overflow-hidden cursor-pointer active:scale-95"
+                    >
                         <div className="absolute top-0 right-0 w-16 h-16 bg-green-500/10 rounded-bl-full -mr-8 -mt-8"></div>
                         <div className="flex items-center justify-between mb-4">
                             <div className="p-2 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg animate-pulse">
@@ -591,6 +597,36 @@ export default function AdminDashboard() {
                             Close
                         </button>
                     </DialogFooter>
+                </DialogContent>
+            </Dialog>
+
+
+            {/* Online Users Modal */}
+            <Dialog open={showOnlineUsersModal} onOpenChange={setShowOnlineUsersModal}>
+                <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                        <DialogTitle>Online Users Now</DialogTitle>
+                        <DialogDescription>
+                            Users active in the last 5 minutes ({onlineUsersList.length})
+                        </DialogDescription>
+                    </DialogHeader>
+                    <div className="max-h-[300px] overflow-y-auto pr-2 space-y-2 py-2">
+                        {onlineUsersList.length > 0 ? (
+                            onlineUsersList.map((u, i) => (
+                                <div key={i} className="flex items-center gap-3 p-2 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg">
+                                    <div className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-xs">
+                                        {u.name.charAt(0).toUpperCase()}
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{u.name}</p>
+                                        <p className="text-xs text-zinc-500">{u.email}</p>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <p className="text-center text-sm text-zinc-500 py-4">No users found.</p>
+                        )}
+                    </div>
                 </DialogContent>
             </Dialog>
 

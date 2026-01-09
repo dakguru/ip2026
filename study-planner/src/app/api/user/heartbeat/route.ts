@@ -27,7 +27,7 @@ export async function POST() {
         // No, currentSessionId is what we want.
 
         await UserModel.updateOne(
-            { email },
+            { email: { $regex: new RegExp(`^${email}$`, 'i') } },
             { $set: { lastActiveAt: new Date() } }
         );
 

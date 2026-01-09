@@ -167,7 +167,14 @@ const PDF_DATA: Record<string, Note[]> = {
 
 
         // 17. PLI
-        { title: "Post Office Life Insurance Scheme, 2011", description: "POLI Rules 2011 & amendments (SANKALAN).", color: "rose", comingSoon: true },
+        {
+            title: "Post Office Life Insurance Scheme, 2011",
+            description: "POLI Rules 2011 & amendments (SANKALAN).",
+            filename: "poli-rules-2011.pdf",
+            path: "/notes/paper-1/poli-rules-2011.pdf",
+            size: "0.4 MB",
+            color: "rose"
+        },
 
         // 18. Postal Manuals
         {
@@ -218,7 +225,14 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Postal Manual Volume VII", description: "RMS work and innovative guidelines.", color: "amber", comingSoon: true },
 
         // 29. Jansuraksha
-        { title: "Jansuraksha Schemes", description: "PMJJBY, PMSBY, APY guidelines.", color: "orange", comingSoon: true },
+        {
+            title: "Jansuraksha Schemes",
+            description: "PMJJBY, PMSBY, APY guidelines.",
+            filename: "jan-suraksha-schemes.pdf",
+            path: "/notes/paper-1/jan-suraksha-schemes.pdf",
+            size: "0.6 MB",
+            color: "orange"
+        },
 
         // 30. Inland/Foreign
         { title: "Post Office Guide Part-I", description: "Rules for Inland Post.", color: "cyan", comingSoon: true },
