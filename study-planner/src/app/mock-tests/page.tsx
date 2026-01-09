@@ -6,6 +6,7 @@ import { FULL_SCHEDULE } from "@/data/schedule";
 import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval, parse } from "date-fns";
 import { useMemo, useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
 // Mock Test Interface
 interface MockTest {
@@ -21,6 +22,7 @@ interface MockTest {
 }
 
 export default function MockTestsPage() {
+    const isMobileApp = useIsMobileApp();
     const mockTests = useMemo(() => {
         const mocks: MockTest[] = [];
         const today = startOfToday();
@@ -110,69 +112,143 @@ export default function MockTestsPage() {
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pb-20 transition-colors">
             {/* Hero Section */}
-            <div className="relative bg-zinc-900 border-b border-zinc-800 overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-                    <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-                    <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-                </div>
+            {isMobileApp ? (
+                // Mobile App Optimized Hero (Compact & Beautiful)
+                <div className="relative bg-zinc-950 border-b border-zinc-900 overflow-hidden pt-4 pb-8">
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="absolute top-10 right-0 w-40 h-40 bg-purple-600 rounded-full mix-blend-screen filter blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl"></div>
+                    </div>
 
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 text-center">
-                    <Link href="/" className="inline-flex items-center text-zinc-400 hover:text-white mb-6 md:mb-8 transition-colors text-sm md:text-base">
-                        <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-                    </Link>
-
-                    {activeMocks.length > 0 && (
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-xs md:text-sm mb-6 animate-pulse">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                            </span>
-                            LIVE NOW
-                        </div>
-                    )}
-
-                    <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight">
-                        All India Mock Tests <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                            for LDCE IP 2026
-                        </span>
-                    </h1>
-
-                    <p className="text-base md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8 md:mb-10 px-2 leading-relaxed">
-                        Compete with aspirants across India. Real-time ranking, detailed analysis, and exam-like environment.
-                    </p>
-
-                    <div className="flex justify-center mb-10 w-full animate-in zoom-in duration-500">
-                        <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-2xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-                            <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
-                            <span className="relative px-8 py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[14px] group-hover:bg-opacity-0 flex items-center gap-3">
-                                <span className="relative flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                                </span>
-                                <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white">Attempt Live Sample Test</span>
-                                <ArrowLeft className="w-5 h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
-                            </span>
+                    <div className="relative z-10 px-5">
+                        <Link href="/" className="inline-flex items-center text-zinc-500 hover:text-zinc-300 mb-4 transition-colors">
+                            <ArrowLeft className="w-5 h-5" />
+                            <span className="ml-1 text-sm font-medium">Back</span>
                         </Link>
-                    </div>
 
-                    <div className="flex flex-wrap justify-center gap-3 md:gap-4 text-xs md:text-sm font-medium text-zinc-300">
-                        <div className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
-                            <Users className="w-4 h-4 text-blue-400" />
-                            <span>1000+ Aspirants</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-4 py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
-                            <Trophy className="w-4 h-4 text-yellow-400" />
-                            <span>All India Rank</span>
-                        </div>
-                        <div className="flex items-center gap-2 px-4 py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
-                            <Clock className="w-4 h-4 text-green-400" />
-                            <span>Latest Pattern</span>
+                        <div className="flex flex-col items-center text-center">
+                            {/* Live Badge */}
+                            {activeMocks.length > 0 && (
+                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[10px] mb-4">
+                                    <span className="relative flex h-1.5 w-1.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
+                                    </span>
+                                    LIVE NOW
+                                </div>
+                            )}
+
+                            <h1 className="text-3xl font-black text-white leading-tight mb-2">
+                                All India Mock Tests
+                                <span className="block text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                                    LDCE IP 2026
+                                </span>
+                            </h1>
+
+                            <p className="text-sm text-zinc-400 max-w-xs mx-auto mb-6 leading-relaxed">
+                                Compete globally. Real-time ranking.
+                            </p>
+
+                            {/* CTA Button - Enhanced */}
+                            <Link href="/mock-tests/live" className="w-full max-w-[280px] group relative inline-flex items-center justify-center p-[1px] mb-6 overflow-hidden rounded-xl">
+                                <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 opacity-70 group-hover:opacity-100 transition-opacity"></span>
+                                <span className="relative w-full py-3 bg-zinc-900 rounded-[11px] flex items-center justify-center gap-2 group-hover:bg-opacity-0 transition-all">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                    </span>
+                                    <span className="font-bold text-white text-sm">Attempt Live Sample Test</span>
+                                    <ArrowLeft className="w-4 h-4 text-white rotate-180" />
+                                </span>
+                            </Link>
+
+                            {/* Stats Grid - Compact */}
+                            <div className="grid grid-cols-3 gap-2 w-full max-w-sm">
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
+                                    <Users className="w-4 h-4 text-blue-400 mb-1" />
+                                    <span className="text-[10px] font-bold text-white">1000+</span>
+                                    <span className="text-[9px] text-zinc-500">Aspirants</span>
+                                </div>
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
+                                    <Trophy className="w-4 h-4 text-yellow-400 mb-1" />
+                                    <span className="text-[10px] font-bold text-white">Rank</span>
+                                    <span className="text-[9px] text-zinc-500">All India</span>
+                                </div>
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
+                                    <Clock className="w-4 h-4 text-green-400 mb-1" />
+                                    <span className="text-[10px] font-bold text-white">Latest</span>
+                                    <span className="text-[9px] text-zinc-500">Pattern</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            ) : (
+                // Original Desktop/Web Hero
+                <div className="relative bg-zinc-900 border-b border-zinc-800 overflow-hidden">
+                    <div className="absolute inset-0 opacity-20">
+                        <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+                        <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+                        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+                    </div>
+
+                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 text-center">
+                        <Link href="/" className="inline-flex items-center text-zinc-400 hover:text-white mb-6 md:mb-8 transition-colors text-sm md:text-base">
+                            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+                        </Link>
+
+                        {activeMocks.length > 0 && (
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-xs md:text-sm mb-6 animate-pulse">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                </span>
+                                LIVE NOW
+                            </div>
+                        )}
+
+                        <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight">
+                            All India Mock Tests <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                                for LDCE IP 2026
+                            </span>
+                        </h1>
+
+                        <p className="text-base md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8 md:mb-10 px-2 leading-relaxed">
+                            Compete with aspirants across India. Real-time ranking, detailed analysis, and exam-like environment.
+                        </p>
+
+                        <div className="flex justify-center mb-10 w-full animate-in zoom-in duration-500">
+                            <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-2xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                                <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
+                                <span className="relative px-8 py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[14px] group-hover:bg-opacity-0 flex items-center gap-3">
+                                    <span className="relative flex h-3 w-3">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                    </span>
+                                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white">Attempt Live Sample Test</span>
+                                    <ArrowLeft className="w-5 h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                            </Link>
+                        </div>
+
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 text-xs md:text-sm font-medium text-zinc-300">
+                            <div className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
+                                <Users className="w-4 h-4 text-blue-400" />
+                                <span>1000+ Aspirants</span>
+                            </div>
+                            <div className="flex items-center gap-2 px-4 py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
+                                <Trophy className="w-4 h-4 text-yellow-400" />
+                                <span>All India Rank</span>
+                            </div>
+                            <div className="flex items-center gap-2 px-4 py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
+                                <Clock className="w-4 h-4 text-green-400" />
+                                <span>Latest Pattern</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Test Cards Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">

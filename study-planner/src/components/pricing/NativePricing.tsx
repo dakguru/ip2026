@@ -232,14 +232,34 @@ export default function NativePricing({
 
                 <button
                     onClick={() => onPayment(selectedPlanKey, activeTab, discount)}
-                    disabled={isProcessing}
-                    className={`w-full py-4 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${isProcessing
-                        ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed'
-                        : 'bg-green-600 hover:bg-green-500 text-white shadow-green-500/20 active:scale-[0.98] transition-all'
+                    disabled={
+                        isProcessing ||
+                        currentMembership === 'gold' ||
+                        (currentMembership === 'silver' && activeTab === 'silver')
+                    }
+                    className={`w-full py-4 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${isProcessing || currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')
+                            ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed shadow-none'
+                            : 'bg-green-600 hover:bg-green-500 text-white shadow-green-500/20 active:scale-[0.98] transition-all'
                         }`}
                 >
-                    {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Zap className="w-5 h-5 fill-current" />}
-                    {isProcessing ? "Processing..." : "Proceed to Payment"}
+                    {isProcessing ? (
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                    ) : currentMembership === 'gold' ? (
+                        <>
+                            <ShieldCheck className="w-5 h-5" />
+                            Gold Plan Active
+                        </>
+                    ) : (currentMembership === 'silver' && activeTab === 'silver') ? (
+                        <>
+                            <ShieldCheck className="w-5 h-5" />
+                            Silver Plan Active
+                        </>
+                    ) : (
+                        <>
+                            <Zap className="w-5 h-5 fill-current" />
+                            {activeTab === 'gold' && currentMembership === 'silver' ? "Upgrade to Gold" : "Proceed to Payment"}
+                        </>
+                    )}
                 </button>
             </div>
         </div>

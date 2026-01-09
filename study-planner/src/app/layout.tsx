@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import NativeMobileSpacer from "@/components/NativeMobileSpacer";
 import UserActivityTracker from "@/components/UserActivityTracker";
+import BackButtonHandler from "@/components/BackButtonHandler";
 
 
 const inter = Inter({
@@ -45,6 +46,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <UserActivityTracker />
+          <BackButtonHandler />
           <GlobalNavigation />
           <NativeMobileSpacer>
             {children}

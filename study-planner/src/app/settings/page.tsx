@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { format } from "date-fns";
 import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -84,7 +85,9 @@ export default function SettingsPage() {
                     email: user.email || "",
                     mobile: user.mobile || "",
                     examPreparingFor: user.examPreparingFor || "",
-                    dateOfJoining: user.dateOfJoining ? new Date(user.dateOfJoining).toISOString().split('T')[0] : ""
+                    dateOfJoining: user.dateOfJoining ? new Date(user.dateOfJoining).toISOString().split('T')[0] : "",
+                    membershipLevel: user.membershipLevel,
+                    membershipValidity: user.membershipValidity
                 };
                 setFormData(userData);
                 setInitialData(userData);
@@ -302,7 +305,7 @@ export default function SettingsPage() {
                         <div className="flex items-center gap-4 text-sm text-zinc-300 mb-6">
                             <div className="flex items-center gap-2">
                                 <Shield className="w-4 h-4 text-emerald-400" />
-                                <span>Valid until: Sep 2026</span>
+                                <span>Valid until: {initialData?.membershipValidity ? format(new Date(initialData.membershipValidity), 'MMM yyyy') : 'Lifetime'}</span>
                             </div>
                         </div>
 
