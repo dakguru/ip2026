@@ -266,7 +266,7 @@ export default function AdminDashboard() {
                 </div>
 
                 {/* Statistics Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4">
 
                     <div
                         onClick={() => setShowOnlineUsersModal(true)}
@@ -345,7 +345,7 @@ export default function AdminDashboard() {
                     <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-4 flex items-center gap-2">
                         <CreditCard className="w-5 h-5 text-pink-500" /> Coupon Insights
                     </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
                             <div className="flex items-center justify-between mb-2">
                                 <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Total Coupons</span>
