@@ -367,10 +367,15 @@
         const Sidebar = ({ activeTab, setActiveTab, setView, isMobile, closeMenu }) => (
             <div className={`bg-slate-900 text-white h-full fixed overflow-y-auto shadow-2xl z-30 transition-transform duration-300 ease-in-out ${isMobile ? 'top-0 left-0 w-64 pt-16' : 'w-64 top-0 left-0'} ${isMobile && !closeMenu ? '-translate-x-full' : 'translate-x-0'}`}>
                 <div className="p-6 border-b border-slate-700 hidden md:block">
-                    <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
-                        FHB Vol-I
+                    <div className="flex items-center mb-4 justify-center">
+                        <div className="bg-white/10 p-3 rounded-full shadow-lg ring-2 ring-blue-500/30">
+                            <img src="/dak-guru-logo.png" alt="Dak Guru" className="w-12 h-12 object-contain" />
+                        </div>
+                    </div>
+                    <h1 className="text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
+                        Dak Guru
                     </h1>
-                    <p className="text-xs text-slate-400 mt-1">Interactive Guide</p>
+                    <p className="text-[10px] text-slate-400 mt-1 font-medium tracking-widest uppercase text-center">FHB Volume I</p>
                 </div>
                 <nav className="mt-4 pb-20 md:pb-0">
                     <button
@@ -613,10 +618,10 @@
                                             onClick={() => handleAnswer(idx)}
                                             disabled={selected !== null}
                                             className={`w-full text-left p-3 md:p-4 rounded-xl border text-sm md:text-base transition-all ${selected === idx
-                                                    ? idx === quizQuestions[currentQ].correct
-                                                        ? 'bg-green-100 border-green-500 text-green-700'
-                                                        : 'bg-red-100 border-red-500 text-red-700'
-                                                    : 'bg-slate-50 border-slate-200 hover:bg-blue-50 hover:border-blue-300'
+                                                ? idx === quizQuestions[currentQ].correct
+                                                    ? 'bg-green-100 border-green-500 text-green-700'
+                                                    : 'bg-red-100 border-red-500 text-red-700'
+                                                : 'bg-slate-50 border-slate-200 hover:bg-blue-50 hover:border-blue-300'
                                                 }`}
                                         >
                                             {opt}
@@ -688,7 +693,10 @@
                                     <span className="block w-6 h-0.5 bg-white"></span>
                                 </div>
                             </button>
-                            <span className="font-bold text-lg">FHB Guide</span>
+                            <div className="flex items-center ml-2 space-x-2">
+                                <img src="/dak-guru-logo.png" alt="Dak Guru" className="w-6 h-6 object-contain" />
+                                <span className="font-bold text-lg">Dak Guru</span>
+                            </div>
                         </div>
                         {/* Optional: Add a logo or other indicator here */}
                     </div>

@@ -663,9 +663,14 @@
                     <nav className="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="flex items-center justify-between h-16">
-                                <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setActiveSection('home')}>
-                                    <BookOpen className="w-6 h-6" />
-                                    <span className="font-bold text-xl tracking-tight">Procurement Mastery</span>
+                                <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setActiveSection('home')}>
+                                    <div className="bg-white p-1 rounded-full shadow-md">
+                                        <img src="/dak-guru-logo.png" alt="Dak Guru" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="font-bold text-lg md:text-xl tracking-tight leading-none text-indigo-50">Dak Guru</span>
+                                        <span className="text-[10px] md:text-xs font-medium opacity-80 uppercase tracking-widest text-indigo-200">Procurement</span>
+                                    </div>
                                 </div>
 
                                 {/* Desktop Menu */}

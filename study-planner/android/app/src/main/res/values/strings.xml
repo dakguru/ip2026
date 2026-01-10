@@ -4,4 +4,6 @@
     <string name="title_activity_main">Dak Guru</string>
     <string name="package_name">com.studyplanner.app</string>
     <string name="custom_url_scheme">com.studyplanner.app</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

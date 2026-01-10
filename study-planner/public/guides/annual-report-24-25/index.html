@@ -703,11 +703,15 @@
                     <div className={`fixed md:relative z-30 w-72 bg-white h-full shadow-xl transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
                         <div className="p-6 border-b flex justify-between items-center bg-blue-600 text-white">
                             <div>
-                                <h1 className="text-xl font-extrabold flex items-center">
-                                    <BookOpen className="w-6 h-6 mr-2" />
-                                    Exam Master
-                                </h1>
-                                <p className="text-xs text-blue-100 mt-1">Annual Report 2024-25</p>
+                                <div className="flex items-center space-x-2">
+                                    <div className="bg-white/10 p-1.5 rounded-lg backdrop-blur-sm border border-white/20">
+                                        <img src="/dak-guru-logo.png" alt="Dak Guru" className="w-8 h-8 object-contain" />
+                                    </div>
+                                    <div>
+                                        <h1 className="text-xl font-extrabold tracking-tight">Dak Guru</h1>
+                                        <p className="text-[10px] text-blue-100 font-medium uppercase tracking-wider">Annual Report 24-25</p>
+                                    </div>
+                                </div>
                             </div>
                             <button onClick={() => setIsSidebarOpen(false)} className="md:hidden">
                                 <X className="w-6 h-6" />
@@ -723,8 +727,8 @@
                                         setIsSidebarOpen(false);
                                     }}
                                     className={`w-full flex items-center p-3 rounded-lg transition-all duration-200 ${activeSection === section.id
-                                            ? 'bg-blue-50 text-blue-700 font-bold shadow-sm border-r-4 border-blue-600'
-                                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                        ? 'bg-blue-50 text-blue-700 font-bold shadow-sm border-r-4 border-blue-600'
+                                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                         }`}
                                 >
                                     <span className={`mr-3 ${activeSection === section.id ? 'text-blue-600' : 'text-gray-400'}`}>
@@ -750,7 +754,10 @@
                             <button onClick={() => setIsSidebarOpen(true)} className="text-gray-600">
                                 <Menu className="w-6 h-6" />
                             </button>
-                            <span className="font-bold text-gray-800">Exam Guide</span>
+                            <div className="flex items-center space-x-2">
+                                <img src="/dak-guru-logo.png" alt="Dak Guru" className="w-6 h-6 object-contain" />
+                                <span className="font-bold text-gray-800 text-lg">Dak Guru</span>
+                            </div>
                             <div className="w-6"></div>
                         </div>
 
