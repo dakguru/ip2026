@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution of India Guide</title>
+
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // --- ICONS (Inline to avoid dependencies) ---
+        const IconWrapper = ({ children, size = 20, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                {children}
+            </svg>
+        );
+
+        const BookOpen = (props) => (
+            <IconWrapper {...props}><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></IconWrapper>
+        );
+        const Scale = (props) => (
+            <IconWrapper {...props}><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></IconWrapper>
+        );
+        const Shield = (props) => (
+            <IconWrapper {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></IconWrapper>
+        );
+        const Users = (props) => (
+            <IconWrapper {...props}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></IconWrapper>
+        );
+        const Landmark = (props) => (
+            <IconWrapper {...props}><line x1="3" y1="22" x2="21" y2="22" /><line x1="6" y1="18" x2="6" y2="11" /><line x1="10" y1="18" x2="10" y2="11" /><line x1="14" y1="18" x2="14" y2="11" /><line x1="18" y1="18" x2="18" y2="11" /><polygon points="12 2 20 7 4 7" /></IconWrapper>
+        );
+        const Scroll = (props) => (
+            <IconWrapper {...props}><path d="M8 17.8a9 9 0 1 0 8 0V4.3a4.2 4.2 0 1 0-5.8 0v2.7" /><path d="M2 12h20" /><path d="M12 2v20" /></IconWrapper>
+        ); // Approximating 'Scroll' or 'FileText' style, using simplified path or Lucide 'Scroll' equivalent
+        // Lucide 'Scroll': <path d="M8 19V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2Z"/><path d="M15 3h6v18h-6"/>
+        // Let's use simpler 'Scroll' logic or just replace with 'FileText' if complex path. Let's try standard Scroll path.
+        // Actually for reliability let's use 'FileText' path but call it Scroll for this context or use the one provided in earlier examples if standard.
+        // Let's use 'FileText' icon visually for DPSP.
+        const ScrollIcon = (props) => (
+            <IconWrapper {...props}><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /></IconWrapper>
+        );
+
+        const Flag = (props) => (
+            <IconWrapper {...props}><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" y1="22" x2="4" y2="15" /></IconWrapper>
+        );
+        const Menu = (props) => (
+            <IconWrapper {...props}><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" /></IconWrapper>
+        );
+        const X = (props) => (
+            <IconWrapper {...props}><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></IconWrapper>
+        );
+        const CheckCircle = (props) => (
+            <IconWrapper {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></IconWrapper>
+        );
+
+        const App = () => {
+            const [activeSection, setActiveSection] = useState('preamble');
+            const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+            // Navigation Items
+            const navItems = [
+                { id: 'preamble', label: 'The Preamble', icon: <BookOpen size={20} /> },
+                { id: 'rights', label: 'Fundamental Rights', icon: <Shield size={20} /> },
+                { id: 'dpsp', label: 'Directive Principles', icon: <ScrollIcon size={20} /> },
+                { id: 'duties', label: 'Fundamental Duties', icon: <Flag size={20} /> },
+                { id: 'judiciary', label: 'The Judiciary', icon: <Scale size={20} /> },
+                { id: 'commissions', label: 'Commissions & Services', icon: <Users size={20} /> },
+            ];
+
+            const renderContent = () => {
+                switch (activeSection) {
+                    case 'preamble': return <PreambleSection />;
+                    case 'rights': return <RightsSection />;
+                    case 'dpsp': return <DPSPSection />;
+                    case 'duties': return <DutiesSection />;
+                    case 'judiciary': return <JudiciarySection />;
+                    case 'commissions': return <CommissionsSection />;
+                    default: return <PreambleSection />;
+                }
+            };
+
+            return (
+                <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col md:flex-row">
+                    {/* Mobile Header */}
+                    <div className="md:hidden bg-indigo-900 text-white p-4 flex justify-between items-center shadow-md z-50 sticky top-0">
+                        <div className="flex items-center space-x-2">
+                            <Landmark size={24} className="text-amber-400" />
+                            <h1 className="font-bold text-lg">Constitution Portal</h1>
+                        </div>
+                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                            {isMobileMenuOpen ? <X /> : <Menu />}
+                        </button>
+                    </div>
+
+                    {/* Sidebar Navigation */}
+                    <nav className={`
+                fixed md:sticky top-0 h-screen w-64 bg-indigo-900 text-slate-100 shadow-xl z-40 transition-transform duration-300 ease-in-out
+                ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 flex flex-col
+              `}>
+                        <div className="p-6 border-b border-indigo-800 flex flex-col items-center">
+                            <div className="bg-white p-3 rounded-full mb-3 shadow-lg ring-4 ring-amber-400/30">
+                                <Landmark size={32} className="text-indigo-900" />
+                            </div>
+                            <h1 className="text-xl font-bold text-center">Constitution of India</h1>
+                            <p className="text-xs text-indigo-300 mt-1 text-center">Exam Syllabus Companion</p>
+                        </div>
+
+                        <div className="flex-1 overflow-y-auto py-4">
+                            {navItems.map((item) => (
+                                <button
+                                    key={item.id}
+                                    onClick={() => {
+                                        setActiveSection(item.id);
+                                        setIsMobileMenuOpen(false);
+                                    }}
+                                    className={`
+                        w-full flex items-center space-x-3 px-6 py-4 transition-all duration-200
+                        ${activeSection === item.id
+                                            ? 'bg-amber-500 text-white border-r-4 border-white font-semibold'
+                                            : 'hover:bg-indigo-800 text-indigo-100'}
+                      `}
+                                >
+                                    {item.icon}
+                                    <span>{item.label}</span>
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className="p-4 bg-indigo-950 text-xs text-center text-indigo-400">
+                            Based on uploaded syllabus PDF
+                        </div>
+                    </nav>
+
+                    {/* Main Content Area */}
+                    <main className="flex-1 overflow-y-auto h-screen p-4 md:p-8 scroll-smooth pb-20 md:pb-8">
+                        <div className="max-w-5xl mx-auto">
+                            {renderContent()}
+                        </div>
+                    </main>
+                </div>
+            );
+        };
+
+        /* --- Section Components --- */
+
+        const PreambleSection = () => {
+            return (
+                <div className="space-y-8 animate-fadeIn">
+                    <Header title="The Preamble" subtitle="The Identity Card of the Constitution" color="bg-amber-500" />
+
+                    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div className="bg-amber-50 p-6 border-b border-amber-100">
+                            <h3 className="text-xl font-serif text-amber-900 font-bold text-center mb-4">TEXT OF THE PREAMBLE</h3>
+                            <p className="text-center font-serif italic text-lg leading-relaxed text-slate-700">
+                                "We, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a
+                                <span className="font-bold text-amber-700"> SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC</span> and to secure to all its citizens:<br /><br />
+                                <span className="font-bold">JUSTICE</span>, Social, Economic and Political;<br />
+                                <span className="font-bold">LIBERTY</span> of thought, expression, belief, faith and worship;<br />
+                                <span className="font-bold">EQUALITY</span> of status and of opportunity; and to promote among them all;<br />
+                                <span className="font-bold">FRATERNITY</span> assuring the dignity of the individual and the unity and integrity of the Nation;<br /><br />
+                                IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION".
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <InfoCard title="Key Facts" icon={<BookOpen className="text-blue-600" />}>
+                            <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700">
+                                <li>Based on <strong>'Objectives Resolution'</strong> moved by Pandit Nehru.</li>
+                                <li>Amended by <strong>42nd Constitutional Amendment Act (1976)</strong>: Added 'Socialist', 'Secular', and 'Integrity'.</li>
+                                <li><strong>N.A. Palkhivala</strong> called it the 'Identity Card of the Constitution'.</li>
+                                <li><strong>K.M. Munshi</strong> called it the 'Horoscope of our Sovereign Democratic Republic'.</li>
+                            </ul>
+                        </InfoCard>
+
+                        <InfoCard title="Ingredients" icon={<Users className="text-green-600" />}>
+                            <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700">
+                                <li><strong>Source:</strong> People of India.</li>
+                                <li><strong>Nature of State:</strong> Sovereign, Socialist, Secular, Democratic, Republic.</li>
+                                <li><strong>Objectives:</strong> Justice, Liberty, Equality, Fraternity.</li>
+                                <li><strong>Date of Adoption:</strong> November 26, 1949.</li>
+                            </ul>
+                        </InfoCard>
+                    </div>
+
+                    <h3 className="text-2xl font-bold text-slate-800 mt-8">Key Words Explained</h3>
+                    <div className="grid md:grid-cols-3 gap-4">
+                        <KeywordCard title="Sovereign" desc="India is independent, no authority above it. Can acquire/cede territory." />
+                        <KeywordCard title="Socialist" desc="Democratic Socialism (mixed economy), not Communistic. Added by 42nd Amendment." />
+                        <KeywordCard title="Secular" desc="Positive concept: All religions have same status. Articles 25-28. Added by 42nd Amendment." />
+                        <KeywordCard title="Democratic" desc="Doctrine of popular sovereignty. Representative Parliamentary Democracy." />
+                        <KeywordCard title="Republic" desc="Elected head (President), not hereditary. Political sovereignty in people." />
+                        <KeywordCard title="Justice" desc="Social, Economic, Political. Taken from Russian Revolution (1917)." />
+                        <KeywordCard title="Liberty" desc="Absence of restraints + opportunity for development. Not absolute. French Revolution." />
+                        <KeywordCard title="Equality" desc="Absence of special privileges. Civic (Art 14-18), Political (325-326), Economic (39)." />
+                        <KeywordCard title="Fraternity" desc="Brotherhood. Single citizenship. Dignity of individual & Unity/Integrity of Nation." />
+                    </div>
+
+                    <div className="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-600">
+                        <h4 className="font-bold text-indigo-900 text-lg mb-2">Is Preamble part of the Constitution?</h4>
+                        <div className="space-y-3">
+                            <div className="flex items-start">
+                                <div className="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mr-2 mt-1">1960</div>
+                                <p className="text-sm"><span className="font-semibold">Berubari Union Case:</span> SC said Preamble is NOT part of the Constitution.</p>
+                            </div>
+                            <div className="flex items-start">
+                                <div className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded mr-2 mt-1">1973</div>
+                                <p className="text-sm"><span className="font-semibold">Kesavananda Bharati Case:</span> SC rejected earlier opinion. Held Preamble IS an integral part. Can be amended without altering 'Basic Structure'.</p>
+                            </div>
+                            <div className="flex items-start">
+                                <div className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded mr-2 mt-1">1995</div>
+                                <p className="text-sm"><span className="font-semibold">LIC of India Case:</span> Again held as integral part.</p>
+                            </div>
+                            <p className="text-xs text-slate-500 mt-2 italic">Note: Preamble is non-justiciable and neither a source of power nor a prohibition on legislature.</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const RightsSection = () => {
+            return (
+                <div className="space-y-8 animate-fadeIn">
+                    <Header title="Fundamental Rights" subtitle="Part III (Articles 12-35) • Magna Carta of India" color="bg-blue-600" />
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {/* Right to Equality */}
+                        <div className="col-span-3 md:col-span-3">
+                            <h3 className="text-xl font-bold text-blue-800 mb-4 border-b pb-2">1. Right to Equality (Art 14-18)</h3>
+                            <div className="grid md:grid-cols-5 gap-2">
+                                <ArticleBadge art="14" text="Equality before law & equal protection of laws." />
+                                <ArticleBadge art="15" text="Prohibition of discrimination on religion, race, caste, sex, place of birth." />
+                                <ArticleBadge art="16" text="Equality of opportunity in public employment." />
+                                <ArticleBadge art="17" text="Abolition of Untouchability." />
+                                <ArticleBadge art="18" text="Abolition of Titles (except military/academic)." />
+                            </div>
+                        </div>
+
+                        {/* Right to Freedom */}
+                        <div className="col-span-3 md:col-span-3">
+                            <h3 className="text-xl font-bold text-blue-800 mb-4 border-b pb-2">2. Right to Freedom (Art 19-22)</h3>
+                            <div className="space-y-4">
+                                <div className="bg-white p-4 rounded-lg shadow-sm border border-l-4 border-l-blue-500">
+                                    <span className="font-bold text-lg text-blue-700">Article 19</span>
+                                    <p className="text-sm text-slate-600 mb-2">Protection of 6 Rights:</p>
+                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-xs">
+                                        <span className="bg-slate-100 p-1 rounded">Speech & Expression</span>
+                                        <span className="bg-slate-100 p-1 rounded">Assembly (Peaceful)</span>
+                                        <span className="bg-slate-100 p-1 rounded">Association/Unions</span>
+                                        <span className="bg-slate-100 p-1 rounded">Movement (Freely)</span>
+                                        <span className="bg-slate-100 p-1 rounded">Residence</span>
+                                        <span className="bg-slate-100 p-1 rounded">Profession</span>
+                                    </div>
+                                </div>
+                                <div className="grid md:grid-cols-3 gap-3">
+                                    <ArticleCard art="20" title="Conviction Protection" desc="No ex-post-facto law, No double jeopardy, No self-incrimination." />
+                                    <ArticleCard art="21" title="Life & Liberty" desc="Right to life and personal liberty. Includes Privacy, Health, Shelter, etc." />
+                                    <ArticleCard art="21A" title="Education" desc="Free & compulsory education (6-14 yrs). Added by 86th Amd (2002)." />
+                                </div>
+                                <ArticleCard art="22" title="Arrest Protection" desc="Rights against arrest & detention (Punitive & Preventive). 24hr magistrate rule." />
+                            </div>
+                        </div>
+
+                        {/* Exploitation & Religion */}
+                        <div className="col-span-3 md:col-span-1 bg-white p-4 rounded-xl shadow-sm">
+                            <h4 className="font-bold text-slate-800 mb-2">3. Against Exploitation</h4>
+                            <ul className="space-y-2 text-sm">
+                                <li className="flex gap-2"><span className="font-bold text-blue-600">Art 23:</span> Prohibition of human traffic & forced labour.</li>
+                                <li className="flex gap-2"><span className="font-bold text-blue-600">Art 24:</span> Prohibition of child labour in factories (under 14).</li>
+                            </ul>
+                        </div>
+
+                        <div className="col-span-3 md:col-span-2 bg-white p-4 rounded-xl shadow-sm">
+                            <h4 className="font-bold text-slate-800 mb-2">4. Freedom of Religion (Art 25-28)</h4>
+                            <div className="grid grid-cols-2 gap-2 text-sm">
+                                <div><span className="font-bold text-blue-600">Art 25:</span> Conscience, practice & propagation.</div>
+                                <div><span className="font-bold text-blue-600">Art 26:</span> Manage religious affairs.</div>
+                                <div><span className="font-bold text-blue-600">Art 27:</span> Freedom from taxes for religion.</div>
+                                <div><span className="font-bold text-blue-600">Art 28:</span> No religious instruction in state-funded institutes.</div>
+                            </div>
+                        </div>
+
+                        {/* Cultural & Remedies */}
+                        <div className="col-span-3 md:col-span-1 bg-white p-4 rounded-xl shadow-sm">
+                            <h4 className="font-bold text-slate-800 mb-2">5. Cultural & Educational</h4>
+                            <ul className="space-y-2 text-sm">
+                                <li className="flex gap-2"><span className="font-bold text-blue-600">Art 29:</span> Protection of minorities' interests (Language, Script).</li>
+                                <li className="flex gap-2"><span className="font-bold text-blue-600">Art 30:</span> Right of minorities to establish educational institutions.</li>
+                            </ul>
+                        </div>
+
+                        <div className="col-span-3 md:col-span-2 bg-blue-50 p-4 rounded-xl shadow-sm border border-blue-100">
+                            <h4 className="font-bold text-blue-900 mb-2 flex items-center"><Shield size={18} className="mr-2" /> 6. Constitutional Remedies (Art 32)</h4>
+                            <p className="text-xs text-blue-800 mb-2">"Heart and Soul of Constitution" - Dr. Ambedkar</p>
+                            <div className="flex flex-wrap gap-2">
+                                {['Habeas Corpus', 'Mandamus', 'Prohibition', 'Certiorari', 'Quo-Warranto'].map(w => (
+                                    <span key={w} className="bg-white px-2 py-1 rounded border border-blue-200 text-xs font-semibold text-blue-700">{w}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-6">
+                        <h3 className="text-lg font-bold mb-3">Writs Explained</h3>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-sm text-left border-collapse bg-white rounded-lg shadow-sm overflow-hidden">
+                                <thead className="bg-slate-100 text-slate-700 uppercase text-xs">
+                                    <tr>
+                                        <th className="px-4 py-3">Writ</th>
+                                        <th className="px-4 py-3">Meaning</th>
+                                        <th className="px-4 py-3">Purpose</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-slate-200">
+                                    <tr><td className="px-4 py-2 font-semibold">Habeas Corpus</td><td className="px-4 py-2 italic">To have the body of</td><td className="px-4 py-2">Release person unlawfully detained.</td></tr>
+                                    <tr><td className="px-4 py-2 font-semibold">Mandamus</td><td className="px-4 py-2 italic">We Command</td><td className="px-4 py-2">Direct public official to perform duty.</td></tr>
+                                    <tr><td className="px-4 py-2 font-semibold">Prohibition</td><td className="px-4 py-2 italic">To forbid</td><td className="px-4 py-2">Higher court stops lower court from exceeding jurisdiction.</td></tr>
+                                    <tr><td className="px-4 py-2 font-semibold">Certiorari</td><td className="px-4 py-2 italic">To be certified</td><td className="px-4 py-2">Higher court quashes order of lower court.</td></tr>
+                                    <tr><td className="px-4 py-2 font-semibold">Quo-Warranto</td><td className="px-4 py-2 italic">By what authority</td><td className="px-4 py-2">Check legality of claim to public office.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div className="bg-yellow-50 p-4 rounded-lg text-sm border border-yellow-200">
+                        <strong>Note:</strong> <span className="font-semibold">Right to Property (Art 31)</span> was deleted by 44th Amendment (1978) and made a legal right under Art 300-A.
+                        <br />
+                        <strong>Art 33:</strong> Parliament can restrict FR of Armed Forces.
+                    </div>
+                </div>
+            );
+        };
+
+        const DPSPSection = () => {
+            return (
+                <div className="space-y-8 animate-fadeIn">
+                    <Header title="Directive Principles of State Policy" subtitle="Part IV (Articles 36-51) • Irish Constitution" color="bg-green-600" />
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div className="col-span-3">
+                            <div className="bg-white p-6 rounded-xl shadow-sm">
+                                <h3 className="font-bold text-lg mb-4">Three Broad Categories</h3>
+                                <div className="grid md:grid-cols-3 gap-4">
+                                    <CategoryBox title="Socialistic" color="bg-red-50 text-red-800" border="border-red-200">
+                                        Promote welfare, social order, equal justice, right to work, public assistance, living wage. (Art 38, 39, 39A, 41, 42, 43, 43A, 47)
+                                    </CategoryBox>
+                                    <CategoryBox title="Gandhian" color="bg-orange-50 text-orange-800" border="border-orange-200">
+                                        Village Panchayats, Cottage industries, Co-ops, SC/ST interests, Prohibit intoxicants & cow slaughter. (Art 40, 43, 43B, 46, 47, 48)
+                                    </CategoryBox>
+                                    <CategoryBox title="Liberal-Intellectual" color="bg-blue-50 text-blue-800" border="border-blue-200">
+                                        Uniform Civil Code, Early childhood care, Agriculture, Environment, Monuments, Separation of Judiciary, Int'l Peace. (Art 44, 45, 48, 48A, 49, 50, 51)
+                                    </CategoryBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <div className="bg-green-50 p-4 border-b border-green-100">
+                            <h3 className="font-bold text-green-900">Comparison: Fundamental Rights vs DPSP</h3>
+                        </div>
+                        <div className="p-0 overflow-x-auto">
+                            <table className="w-full text-sm">
+                                <thead className="bg-slate-50 text-slate-500 text-xs uppercase">
+                                    <tr>
+                                        <th className="px-6 py-3 text-left">Fundamental Rights</th>
+                                        <th className="px-6 py-3 text-left">Directive Principles</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-slate-100">
+                                    <tr><td className="px-6 py-3">Negative (Prohibit State actions)</td><td className="px-6 py-3">Positive (Require State actions)</td></tr>
+                                    <tr><td className="px-6 py-3">Justiciable (Enforceable by courts)</td><td className="px-6 py-3">Non-justiciable (Not enforceable)</td></tr>
+                                    <tr><td className="px-6 py-3">Political Democracy</td><td className="px-6 py-3">Social & Economic Democracy</td></tr>
+                                    <tr><td className="px-6 py-3">Legal Sanctions</td><td className="px-6 py-3">Moral & Political Sanctions</td></tr>
+                                    <tr><td className="px-6 py-3">Individualistic (Personal welfare)</td><td className="px-6 py-3">Societarian (Community welfare)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                        <div className="bg-slate-100 p-4 rounded-lg">
+                            <h4 className="font-bold text-sm mb-2">New DPSPs Added</h4>
+                            <ul className="text-xs space-y-1 text-slate-700 list-disc pl-4">
+                                <li><strong>42nd Amd (1976):</strong> Healthy development of children (39), Free legal aid (39A), Workers in management (43A), Environment (48A).</li>
+                                <li><strong>44th Amd (1978):</strong> Minimize inequalities (38).</li>
+                                <li><strong>86th Amd (2002):</strong> Changed Art 45 (Early childhood care).</li>
+                                <li><strong>97th Amd (2011):</strong> Co-operative societies (43B).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const DutiesSection = () => {
+            return (
+                <div className="space-y-8 animate-fadeIn">
+                    <Header title="Fundamental Duties" subtitle="Part IV-A (Article 51A) • USSR Inspiration" color="bg-teal-600" />
+
+                    <div className="grid md:grid-cols-1 gap-6">
+                        <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
+                            <div className="flex justify-between items-start mb-4">
+                                <h3 className="font-bold text-lg">Context</h3>
+                                <span className="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded font-bold">42nd Amendment (1976)</span>
+                            </div>
+                            <p className="text-sm text-slate-600 mb-2">
+                                Added on recommendation of <strong>Swaran Singh Committee</strong> during Emergency.
+                                Original constitution did not contain duties.
+                            </p>
+                            <p className="text-sm text-slate-600">
+                                Originally 10 duties. 11th added by 86th Amendment (2002).
+                            </p>
+                        </div>
+
+                        <div className="bg-white rounded-xl shadow-sm p-6">
+                            <h3 className="font-bold text-lg mb-4 border-b pb-2">List of 11 Duties</h3>
+                            <ul className="space-y-3 text-sm text-slate-700">
+                                <DutyItem text="Abide by Constitution, respect National Flag & Anthem." />
+                                <DutyItem text="Cherish ideals of national struggle for freedom." />
+                                <DutyItem text="Uphold sovereignty, unity and integrity of India." />
+                                <DutyItem text="Defend country and render national service." />
+                                <DutyItem text="Promote harmony, brotherhood, renounce derogatory practices against women." />
+                                <DutyItem text="Preserve rich heritage of composite culture." />
+                                <DutyItem text="Protect natural environment (forests, lakes, wildlife)." />
+                                <DutyItem text="Develop scientific temper, humanism, inquiry." />
+                                <DutyItem text="Safeguard public property and abjure violence." />
+                                <DutyItem text="Strive for excellence in all spheres." />
+                                <DutyItem text="Provide education opportunities to child (6-14 yrs) [Added 2002]." highlight />
+                            </ul>
+                        </div>
+
+                        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <h4 className="font-bold text-sm mb-2">Verma Committee (1999)</h4>
+                            <p className="text-xs text-slate-600">
+                                Identified legal provisions enforcing duties: Prevention of Insults to National Honour Act, IPC, Wildlife Protection Act, etc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const JudiciarySection = () => {
+            const [view, setView] = useState('sc'); // sc or hc
+
+            return (
+                <div className="space-y-6 animate-fadeIn">
+                    <Header title="The Judiciary" subtitle="Integrated Judicial System" color="bg-indigo-700" />
+
+                    <div className="flex justify-center space-x-4 mb-6">
+                        <button onClick={() => setView('sc')} className={`px-6 py-2 rounded-full font-bold transition-colors ${view === 'sc' ? 'bg-indigo-700 text-white' : 'bg-white text-indigo-700 border border-indigo-200'}`}>Supreme Court</button>
+                        <button onClick={() => setView('hc')} className={`px-6 py-2 rounded-full font-bold transition-colors ${view === 'hc' ? 'bg-indigo-700 text-white' : 'bg-white text-indigo-700 border border-indigo-200'}`}>High Court</button>
+                    </div>
+
+                    {view === 'sc' ? (
+                        <div className="space-y-6">
+                            <div className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-indigo-700">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-2xl font-bold text-indigo-900">Supreme Court (Part V)</h3>
+                                    <span className="text-xs font-mono bg-slate-100 px-2 py-1 rounded">Art 124-147</span>
+                                </div>
+                                <div className="grid md:grid-cols-2 gap-6 text-sm">
+                                    <div>
+                                        <h4 className="font-bold text-indigo-600 mb-2">Organization (Art 124)</h4>
+                                        <ul className="list-disc pl-4 space-y-1 text-slate-600">
+                                            <li>34 Judges (1 CJI + 33). Increased in 2019.</li>
+                                            <li>Appointed by President (Consultation/Collegium).</li>
+                                            <li><strong>Oath:</strong> Before President.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-indigo-600 mb-2">Tenure & Removal</h4>
+                                        <ul className="list-disc pl-4 space-y-1 text-slate-600">
+                                            <li>Retirement Age: <strong>65 Years</strong>.</li>
+                                            <li>Removal: Order of President after Parliament address (Special Majority).</li>
+                                            <li>Grounds: Misbehaviour or Incapacity.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="grid md:grid-cols-3 gap-4">
+                                <JurisdictionCard title="Establishment" art="124" desc="Constitution & Establishment of SC." />
+                                <JurisdictionCard title="Original" art="131" desc="Disputes between Centre vs State, State vs State." />
+                                <JurisdictionCard title="Writ" art="32" desc="Enforce Fundamental Rights. Habeas Corpus, etc." />
+                                <JurisdictionCard title="Appellate" art="132-136" desc="Const., Civil, Criminal appeals. Special Leave Petition (Art 136)." />
+                                <JurisdictionCard title="Advisory" art="143" desc="President can seek opinion. Not binding." />
+                                <JurisdictionCard title="Court of Record" art="129" desc="Judgments are precedents. Power to punish for contempt." />
+                                <JurisdictionCard title="Judicial Review" art="137" desc="Examine constitutionality of laws/orders." />
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="space-y-6">
+                            <div className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-indigo-500">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-2xl font-bold text-indigo-900">High Courts (Part VI)</h3>
+                                    <span className="text-xs font-mono bg-slate-100 px-2 py-1 rounded">Art 214-231</span>
+                                </div>
+                                <div className="grid md:grid-cols-2 gap-6 text-sm">
+                                    <div>
+                                        <h4 className="font-bold text-indigo-600 mb-2">Organization</h4>
+                                        <ul className="list-disc pl-4 space-y-1 text-slate-600">
+                                            <li>25 High Courts total. 3 Common HCs.</li>
+                                            <li>Appointed by President (Consult CJI + Governor).</li>
+                                            <li><strong>Oath:</strong> Before Governor.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-indigo-600 mb-2">Tenure & Removal</h4>
+                                        <ul className="list-disc pl-4 space-y-1 text-slate-600">
+                                            <li>Retirement Age: <strong>62 Years</strong>.</li>
+                                            <li>Removal: Same manner as SC Judge (by President).</li>
+                                            <li>Transfer: By President (consult CJI).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 className="font-bold text-indigo-800 mb-2 mt-2">Important Articles</h4>
+                            <div className="grid md:grid-cols-3 gap-4">
+                                <JurisdictionCard title="Establishment" art="214" desc="High Court for each State." />
+                                <JurisdictionCard title="Court of Record" art="215" desc="Power to punish for contempt." />
+                                <JurisdictionCard title="Constitution" art="216" desc="Chief Justice + Other Judges." />
+                                <JurisdictionCard title="Appointment" art="217" desc="By President after consultation." />
+                                <JurisdictionCard title="Writ Jurisdiction" art="226" desc="Broader than SC. FRs + Legal Rights." />
+                                <JurisdictionCard title="Superintendence" art="227" desc="Over all subordinate courts." />
+                                <JurisdictionCard title="Common HC" art="231" desc="Parliament can establish common HC." />
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        const CommissionsSection = () => {
+            return (
+                <div className="space-y-8 animate-fadeIn">
+                    <Header title="Commissions & Services" subtitle="Safeguards and Constitutional Bodies" color="bg-slate-700" />
+
+                    <div className="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 className="font-bold text-xl text-slate-800 mb-4 border-b pb-2">Article 311: Civil Servants</h3>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 className="font-bold text-sm text-slate-600 mb-2">Doctrine of Pleasure</h4>
+                                <p className="text-sm text-slate-600">Civil servants hold office during pleasure of President/Governor.</p>
+                            </div>
+                            <div className="bg-slate-50 p-4 rounded">
+                                <h4 className="font-bold text-sm text-slate-800 mb-2">Two Safeguards</h4>
+                                <ul className="list-decimal pl-4 text-sm text-slate-700 space-y-1">
+                                    <li>Cannot be dismissed by subordinate authority.</li>
+                                    <li>Right to inquiry and reasonable opportunity to be heard (exceptions apply e.g., criminal conviction, security of state).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="font-bold text-xl text-slate-800 mb-4">National Commissions</h3>
+                        <div className="grid md:grid-cols-3 gap-4">
+                            <CommissionCard
+                                title="NC for SCs"
+                                art="Article 338"
+                                history="89th Amd (2003) bifurcated SC/ST commission."
+                                details="Investigate safeguards, inquire complaints regarding Scheduled Castes."
+                                color="bg-purple-50 border-purple-200"
+                            />
+                            <CommissionCard
+                                title="NC for STs"
+                                art="Article 338-A"
+                                history="Created by 89th Amd (2003)."
+                                details="Specific focus on tribal rights, forest rights, alienation of land."
+                                color="bg-green-50 border-green-200"
+                            />
+                            <CommissionCard
+                                title="NC for BCs"
+                                art="Article 338-B"
+                                history="Constitutional status by 102nd Amd (2018)."
+                                details="Socially & Educationally Backward Classes (SEBCs). Powers of Civil Court."
+                                color="bg-yellow-50 border-yellow-200"
+                            />
+                        </div>
+                        <div className="mt-4 bg-white p-4 rounded shadow-sm text-sm text-slate-600">
+                            <p><strong>Structure:</strong> Chairperson + Vice-Chairperson + 3 Members.</p>
+                            <p><strong>Appointed by:</strong> President.</p>
+                            <p><strong>Report:</strong> To President (tabled in Parliament).</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        /* --- Reusable UI Components --- */
+
+        const Header = ({ title, subtitle, color }) => (
+            <div className={`${color} text-white p-8 rounded-2xl shadow-lg mb-6 relative overflow-hidden`}>
+                <div className="relative z-10">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2">{title}</h2>
+                    <p className="text-white/90 font-medium">{subtitle}</p>
+                </div>
+                <div className="absolute right-0 top-0 h-full w-1/3 bg-white/10 skew-x-12 transform origin-bottom-right"></div>
+            </div>
+        );
+
+        const InfoCard = ({ title, icon, children }) => (
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <div className="flex items-center space-x-3 mb-4">
+                    <div className="p-2 bg-slate-50 rounded-lg">{icon}</div>
+                    <h3 className="font-bold text-lg text-slate-800">{title}</h3>
+                </div>
+                {children}
+            </div>
+        );
+
+        const KeywordCard = ({ title, desc }) => (
+            <div className="bg-white p-4 rounded-lg border border-slate-200 hover:border-amber-400 transition-colors">
+                <h4 className="font-bold text-amber-700 mb-1">{title}</h4>
+                <p className="text-xs text-slate-600 leading-relaxed">{desc}</p>
+            </div>
+        );
+
+        const ArticleBadge = ({ art, text }) => (
+            <div className="bg-slate-50 p-3 rounded border border-slate-200 hover:bg-blue-50 transition-colors group">
+                <div className="font-bold text-blue-600 text-lg mb-1 group-hover:text-blue-800">Art {art}</div>
+                <div className="text-xs text-slate-600 leading-tight">{text}</div>
+            </div>
+        );
+
+        const ArticleCard = ({ art, title, desc }) => (
+            <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                <div className="flex justify-between items-center mb-2">
+                    <h5 className="font-bold text-slate-800 text-sm">{title}</h5>
+                    <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Art {art}</span>
+                </div>
+                <p className="text-xs text-slate-600">{desc}</p>
+            </div>
+        );
+
+        const CategoryBox = ({ title, color, border, children }) => (
+            <div className={`p-4 rounded-lg border ${border} ${color} h-full`}>
+                <h4 className="font-bold mb-2 text-sm">{title}</h4>
+                <p className="text-xs leading-relaxed opacity-90">{children}</p>
+            </div>
+        );
+
+        const DutyItem = ({ text, highlight }) => (
+            <li className={`flex gap-3 items-start ${highlight ? 'bg-teal-50 p-2 rounded border border-teal-100' : ''}`}>
+                <div className="mt-1 min-w-[6px] h-[6px] rounded-full bg-teal-500"></div>
+                <span>{text}</span>
+            </li>
+        );
+
+        const JurisdictionCard = ({ title, art, desc }) => (
+            <div className="bg-white p-4 rounded-lg border border-indigo-100 hover:shadow-md transition-all">
+                <h5 className="font-bold text-indigo-800 text-sm mb-1">{title}</h5>
+                <span className="text-xs font-mono text-slate-400 block mb-2">Art {art}</span>
+                <p className="text-xs text-slate-600">{desc}</p>
+            </div>
+        );
+
+        const CommissionCard = ({ title, art, history, details, color }) => (
+            <div className={`p-4 rounded-xl border ${color} bg-white`}>
+                <div className="flex justify-between items-center mb-2">
+                    <h4 className="font-bold text-slate-800">{title}</h4>
+                    <span className="text-xs font-bold px-2 py-1 bg-slate-100 rounded">{art}</span>
+                </div>
+                <p className="text-xs text-slate-500 mb-2 italic">{history}</p>
+                <p className="text-sm text-slate-700">{details}</p>
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

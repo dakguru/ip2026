@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurement Guide</title>
+
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // --- ICONS (Inline to avoid dependencies) ---
+        const IconWrapper = ({ children, size = 20, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                {children}
+            </svg>
+        );
+
+        const BookOpen = (props) => (
+            <IconWrapper {...props}><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></IconWrapper>
+        );
+        const Search = (props) => (
+            <IconWrapper {...props}><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></IconWrapper>
+        );
+        const ShoppingCart = (props) => (
+            <IconWrapper {...props}><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></IconWrapper>
+        );
+        const ShieldCheck = (props) => (
+            <IconWrapper {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></IconWrapper>
+        );
+        const Award = (props) => (
+            <IconWrapper {...props}><circle cx="12" cy="8" r="7" /><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" /></IconWrapper>
+        );
+        const Zap = (props) => (
+            <IconWrapper {...props}><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></IconWrapper>
+        );
+        const Truck = (props) => (
+            <IconWrapper {...props}><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></IconWrapper>
+        );
+        const AlertTriangle = (props) => (
+            <IconWrapper {...props}><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></IconWrapper>
+        );
+        const CheckCircle = (props) => (
+            <IconWrapper {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></IconWrapper>
+        );
+        const Gavel = (props) => (
+            <IconWrapper {...props}><path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L11 10" /><path d="m16 16 6-6" /><path d="m8 8 6-6" /><path d="m9 7 8 8" /><path d="m21 11-8-8" /></IconWrapper>
+        );
+        const Recycle = (props) => (
+            <IconWrapper {...props}><polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></IconWrapper>
+        );
+        const Menu = (props) => (
+            <IconWrapper {...props}><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" /></IconWrapper>
+        );
+        const X = (props) => (
+            <IconWrapper {...props}><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></IconWrapper>
+        );
+        const ChevronDown = (props) => (
+            <IconWrapper {...props}><polyline points="6 9 12 15 18 9" /></IconWrapper>
+        );
+        const ChevronUp = (props) => (
+            <IconWrapper {...props}><polyline points="18 15 12 9 6 15" /></IconWrapper>
+        );
+        const DollarSign = (props) => (
+            <IconWrapper {...props}><line x1="12" y1="2" x2="12" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></IconWrapper>
+        );
+        const FileText = (props) => (
+            <IconWrapper {...props}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></IconWrapper>
+        );
+        const Globe = (props) => (
+            <IconWrapper {...props}><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></IconWrapper>
+        );
+
+
+        // --- Helper Components ---
+
+        const InfoCard = ({ title, icon, points }) => (
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4 space-x-3">
+                    <div className="p-2 bg-indigo-50 rounded-lg">{icon}</div>
+                    <h3 className="font-bold text-slate-800 text-lg">{title}</h3>
+                </div>
+                <ul className="space-y-3">
+                    {points.map((point, idx) => (
+                        <li key={idx} className="flex items-start text-base text-slate-600 leading-relaxed">
+                            <span className="mr-3 mt-1.5 w-1.5 h-1.5 bg-indigo-400 rounded-full flex-shrink-0"></span>
+                            {point}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        );
+
+        const ModeCard = ({ title, limit, desc }) => (
+            <div className="bg-white p-5 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all">
+                <div className="flex justify-between items-start mb-3">
+                    <h3 className="font-bold text-slate-800 text-lg">{title}</h3>
+                    {limit && <span className="text-xs font-bold bg-slate-100 text-slate-600 px-2 py-1 rounded whitespace-nowrap ml-2">{limit}</span>}
+                </div>
+                <p className="text-base text-slate-600 leading-relaxed">{desc}</p>
+            </div>
+        );
+
+
+        // --- Sub-Components ---
+
+        const HomeSection = () => (
+            <div className="space-y-8 animate-fade-in">
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-white">
+                        <h1 className="text-3xl font-bold mb-2">Welcome to Procurement Simplified</h1>
+                        <p className="text-indigo-100 text-lg">
+                            Master the Manual for Procurement of Goods & Services beyond GFR 2017.
+                        </p>
+                    </div>
+                    <div className="p-8">
+                        <h3 className="text-xl font-semibold mb-6 text-slate-700">The 5 R's of Procurement</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                            {[
+                                { r: 'Right Quality', icon: <ShieldCheck className="w-8 h-8 text-emerald-500" />, desc: 'Tech specs met' },
+                                { r: 'Right Quantity', icon: <ShoppingCart className="w-8 h-8 text-blue-500" />, desc: 'No stock out/over' },
+                                { r: 'Right Price', icon: <DollarSign className="w-8 h-8 text-amber-500" />, desc: 'Cost effective' },
+                                { r: 'Right Time', icon: <Zap className="w-8 h-8 text-purple-500" />, desc: 'Timely delivery' },
+                                { r: 'Right Source', icon: <Globe className="w-8 h-8 text-rose-500" />, desc: 'Reliable vendor' },
+                            ].map((item, idx) => (
+                                <div key={idx} className="flex flex-col items-center text-center p-4 bg-slate-50 rounded-xl hover:shadow-md transition-shadow hover:bg-white border border-transparent hover:border-slate-100 cursor-default">
+                                    <div className="bg-white p-3 rounded-full shadow-sm mb-3">
+                                        {item.icon}
+                                    </div>
+                                    <span className="font-bold text-slate-800">{item.r}</span>
+                                    <span className="text-xs text-slate-500 mt-1">{item.desc}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <InfoCard
+                        title="What constitutes 'Goods'?"
+                        icon={<Truck className="w-5 h-5 text-indigo-600" />}
+                        points={[
+                            "Articles, material, commodities, livestock, medicines",
+                            "Furniture, fixtures, raw materials, spares",
+                            "Machinery, equipment, industrial plants, vehicles",
+                            "Intangible products: Software, technology transfer, patents",
+                            "Includes incidental services (transport, installation, training)"
+                        ]}
+                    />
+                    <InfoCard
+                        title="Fundamental Principles"
+                        icon={<Gavel className="w-5 h-5 text-indigo-600" />}
+                        points={[
+                            "Transparency: Unrestricted dissemination of info (CPPP, GeM)",
+                            "Professionalism: Economy, efficiency, effectiveness, integrity",
+                            "Fairness: Equal opportunity to all eligible bidders",
+                            "Accountability: Responsible for decisions made"
+                        ]}
+                    />
+                </div>
+            </div>
+        );
+
+        const ModesSection = () => {
+            const [value, setValue] = useState(25000); // Default value for slider
+
+            const getModeSuggestion = (val) => {
+                if (val <= 50000) return {
+                    title: "Direct Procurement (Without Quotation)",
+                    code: "Petty Purchase",
+                    desc: "Simplest mode. No formal quotation needed. Certificate of reasonability required.",
+                    limit: "Up to ₹50,000",
+                    color: "bg-green-50 border-green-200 text-green-800 ring-green-500"
+                };
+                if (val <= 500000) return {
+                    title: "Purchase Committee",
+                    code: "Local Committee",
+                    desc: "Committee of 3 members. Market survey required. Identify suitable supplier and certify reasonableness.",
+                    limit: "₹50,000 - ₹5 Lakh",
+                    color: "bg-teal-50 border-teal-200 text-teal-800 ring-teal-500"
+                };
+                if (val <= 2500000) return { // Adjusted visually for slider range
+                    title: "Limited Tender Enquiry (LTE)",
+                    code: "LTE",
+                    desc: "Send to registered vendors (>3). Simplified process. Can be used up to ₹50 Lakh normally.",
+                    limit: "₹5 Lakh - ₹50 Lakh",
+                    color: "bg-blue-50 border-blue-200 text-blue-800 ring-blue-500"
+                };
+                return {
+                    title: "Open Tender Enquiry (OTE)",
+                    code: "OTE",
+                    desc: "Advertised tender on CPPP/GeM. Widest competition. Mandatory for > ₹50 Lakh.",
+                    limit: "Above ₹50 Lakh",
+                    color: "bg-purple-50 border-purple-200 text-purple-800 ring-purple-500"
+                };
+            };
+
+            const suggestion = getModeSuggestion(value);
+
+            return (
+                <div className="space-y-8 animate-fade-in">
+                    {/* Interactive Tool */}
+                    <div className="bg-white rounded-2xl shadow-lg border border-indigo-100 p-8">
+                        <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                            <Search className="w-6 h-6 mr-2 text-indigo-600" />
+                            Procurement Mode Finder
+                        </h2>
+
+                        <div className="mb-8 p-4 bg-slate-50 rounded-xl">
+                            <label className="block text-sm font-medium text-slate-600 mb-4">
+                                Estimated Value of Procurement: <span className="text-indigo-700 font-bold text-2xl ml-2">₹{value.toLocaleString()}</span>
+                            </label>
+                            <input
+                                type="range"
+                                min="0"
+                                max="6000000"
+                                step="10000"
+                                value={value}
+                                onChange={(e) => setValue(Number(e.target.value))}
+                                className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600 hover:accent-indigo-700 transition-all"
+                            />
+                            <div className="flex justify-between text-xs text-slate-400 mt-2 font-mono">
+                                <span>₹0</span>
+                                <span>₹50k</span>
+                                <span>₹5L</span>
+                                <span>₹50L</span>
+                                <span>₹60L+</span>
+                            </div>
+                        </div>
+
+                        <div className={`p-6 rounded-xl border-l-8 shadow-sm transition-all duration-300 ${suggestion.color}`}>
+                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                                <div>
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <h3 className="text-xl font-bold">{suggestion.title}</h3>
+                                        <span className="px-2 py-0.5 bg-white/60 rounded text-xs font-bold uppercase tracking-wider border border-current opacity-75">
+                                            {suggestion.code}
+                                        </span>
+                                    </div>
+                                    <p className="text-sm opacity-90 leading-relaxed max-w-2xl">{suggestion.desc}</p>
+                                </div>
+                                <div className="text-left md:text-right min-w-[140px] bg-white/40 p-3 rounded-lg">
+                                    <span className="block text-xs uppercase tracking-wide opacity-70 mb-1">Limit Range</span>
+                                    <span className="font-mono font-bold text-lg whitespace-nowrap">{suggestion.limit}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Detailed Modes Grid */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <ModeCard
+                            title="Global Tender (GTE)"
+                            limit="> ₹200 Crores"
+                            desc="Used when goods are not available in India or intl. standards required. No GTE < 200Cr without approval."
+                        />
+                        <ModeCard
+                            title="Proprietary (PAC)"
+                            limit="No Specific Limit"
+                            desc="Only one source (OEM). Requires specific certificate. Re-test market every 3 years."
+                        />
+                        <ModeCard
+                            title="Single Tender (STE)"
+                            limit="Emergency / Standardization"
+                            desc="Emergency operational needs or standardization of machinery. Non-PAC single source."
+                        />
+                    </div>
+
+                    <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 flex items-start space-x-4">
+                        <div className="bg-orange-100 p-2 rounded-full">
+                            <AlertTriangle className="w-6 h-6 text-orange-600" />
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-orange-800 text-lg">GeM Mandate (Rule 149)</h4>
+                            <div className="text-sm text-orange-700 mt-2 space-y-2">
+                                <p>If goods/services are available on GeM (Government e-Marketplace), procurement is <strong>mandatory</strong> through GeM.</p>
+                                <ul className="list-disc list-inside bg-white/50 p-3 rounded-lg space-y-1">
+                                    <li>Up to ₹50k: Any available supplier.</li>
+                                    <li>₹50k - ₹10L: Lowest (L1) among at least 3 sellers.</li>
+                                    <li>Above ₹10L: Mandatory online bidding/Reverse Auction.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const PoliciesSection = () => (
+            <div className="space-y-8 animate-fade-in">
+                <div className="flex items-center gap-3 mb-6">
+                    <Award className="w-8 h-8 text-indigo-600" />
+                    <h2 className="text-2xl font-bold text-slate-800">Government Priorities</h2>
+                </div>
+
+                {/* MSE Policy */}
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-pink-500">
+                    <div className="p-6">
+                        <div className="flex items-center mb-4 pb-4 border-b border-pink-100">
+                            <div className="bg-pink-100 p-2 rounded-lg mr-3">
+                                <Award className="w-5 h-5 text-pink-600" />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800">MSE Purchase Preference</h3>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div className="space-y-4">
+                                <p className="text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                    <strong>Goal:</strong> Minimum <span className="text-pink-600 font-bold">25%</span> of annual procurement from Micro & Small Enterprises (MSEs).
+                                </p>
+                                <div className="bg-pink-50 p-4 rounded-lg border border-pink-100">
+                                    <h4 className="font-semibold text-pink-800 mb-2 flex items-center">
+                                        <ChevronDown className="w-4 h-4 mr-1" />
+                                        Price Band Logic (L1 + 15%)
+                                    </h4>
+                                    <p className="text-sm text-slate-700 mb-2">
+                                        If L1 is Non-MSE, and an MSE quotes within <strong>L1 + 15%</strong>:
+                                    </p>
+                                    <ul className="list-disc list-inside text-base text-slate-600 space-y-1 ml-1">
+                                        <li>MSE allowed to match L1 price.</li>
+                                        <li>If matched, they get up to 25% of quantity.</li>
+                                        <li>If cannot split, MSE may get full quantity (spirit of policy).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="bg-slate-50 p-5 rounded-lg flex flex-col justify-center border border-slate-200">
+                                <h4 className="font-semibold text-slate-700 mb-3 flex items-center">
+                                    <FileText className="w-4 h-4 mr-2" />
+                                    Timely Payments (MSMED Act)
+                                </h4>
+                                <ul className="space-y-3 text-base text-slate-600">
+                                    <li className="flex items-start bg-white p-2 rounded border border-slate-100 shadow-sm">
+                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                                        <span>Payment max 45 days from acceptance.</span>
+                                    </li>
+                                    <li className="flex items-start bg-white p-2 rounded border border-slate-100 shadow-sm">
+                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                                        <span>Deemed acceptance if no objection within 15 days.</span>
+                                    </li>
+                                    <li className="flex items-start bg-white p-2 rounded border border-slate-100 shadow-sm">
+                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                                        <span>Compound interest (3x Bank Rate) for delays.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Make in India */}
+                <div className="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-indigo-500">
+                    <div className="p-6">
+                        <div className="flex items-center mb-4 pb-4 border-b border-indigo-100">
+                            <div className="bg-indigo-100 p-2 rounded-lg mr-3">
+                                <Globe className="w-5 h-5 text-indigo-600" />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800">Make in India (MII)</h3>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div className="bg-indigo-50 p-4 rounded-lg text-center border border-indigo-100 hover:shadow-md transition-shadow">
+                                <div className="text-2xl font-bold text-indigo-700">50% +</div>
+                                <div className="font-semibold text-slate-700 mt-1">Class-I Local Supplier</div>
+                                <div className="text-xs text-slate-500 mt-2 bg-white rounded-full py-1 px-2 inline-block shadow-sm">Gets Purchase Preference</div>
+                            </div>
+                            <div className="bg-slate-50 p-4 rounded-lg text-center border border-slate-200 hover:shadow-md transition-shadow">
+                                <div className="text-2xl font-bold text-slate-700">20% - 50%</div>
+                                <div className="font-semibold text-slate-700 mt-1">Class-II Local Supplier</div>
+                                <div className="text-xs text-slate-500 mt-2 bg-white rounded-full py-1 px-2 inline-block shadow-sm">Can bid, no preference</div>
+                            </div>
+                            <div className="bg-red-50 p-4 rounded-lg text-center border border-red-100 hover:shadow-md transition-shadow">
+                                <div className="text-2xl font-bold text-red-700">&lt; 20%</div>
+                                <div className="font-semibold text-slate-700 mt-1">Non-Local Supplier</div>
+                                <div className="text-xs text-slate-500 mt-2 bg-white rounded-full py-1 px-2 inline-block shadow-sm">Restricted in many tenders</div>
+                            </div>
+                        </div>
+
+                        <div className="bg-indigo-900 text-indigo-100 p-5 rounded-lg shadow-inner">
+                            <h4 className="font-bold mb-2 flex items-center">
+                                <Zap className="w-4 h-4 mr-2 text-yellow-400" />
+                                Preference Logic (L1 + 20%)
+                            </h4>
+                            <p className="text-sm opacity-90 leading-relaxed">
+                                If L1 is not Class-I, the lowest Class-I supplier within the margin of purchase preference (L1 + 20%)
+                                is invited to match the L1 price to get 50% order (or full order if not divisible).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const FinancialsSection = () => (
+            <div className="space-y-6 animate-fade-in">
+                <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h3 className="text-lg font-bold text-slate-800 mb-6 flex items-center">
+                            <div className="bg-green-100 p-2 rounded-lg mr-3">
+                                <DollarSign className="w-5 h-5 text-green-600" />
+                            </div>
+                            Security Deposits
+                        </h3>
+                        <div className="space-y-6">
+                            <div className="relative pl-4 border-l-2 border-slate-200 hover:border-green-400 transition-colors">
+                                <div className="flex justify-between items-center mb-1">
+                                    <span className="font-semibold text-slate-800">Bid Security (EMD)</span>
+                                    <span className="text-sm font-mono bg-green-50 text-green-700 font-bold px-2 py-1 rounded border border-green-200">2% - 5%</span>
+                                </div>
+                                <p className="text-xs text-slate-500">Not required for tenders up to ₹5 Lakh. Valid 45 days beyond bid validity.</p>
+                            </div>
+                            <div className="relative pl-4 border-l-2 border-slate-200 hover:border-green-400 transition-colors">
+                                <div className="flex justify-between items-center mb-1">
+                                    <span className="font-semibold text-slate-800">Performance Security</span>
+                                    <span className="text-sm font-mono bg-green-50 text-green-700 font-bold px-2 py-1 rounded border border-green-200">3% - 5%</span>
+                                </div>
+                                <p className="text-xs text-slate-500">
+                                    Valid 60 days beyond completion of obligations (including warranty).
+                                    <br /><span className="text-indigo-600 italic font-medium mt-1 inline-block">Note: Reduced value updated from 1.1.2024</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h3 className="text-lg font-bold text-slate-800 mb-6 flex items-center">
+                            <div className="bg-blue-100 p-2 rounded-lg mr-3">
+                                <FileText className="w-5 h-5 text-blue-600" />
+                            </div>
+                            Key Contract Clauses
+                        </h3>
+                        <ul className="space-y-4">
+                            <li className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <span className="font-bold text-slate-700 block text-sm mb-1">Liquidated Damages (LD)</span>
+                                <span className="text-xs text-slate-600">0.5% per week of delay. Max 10% of contract value.</span>
+                            </li>
+                            <li className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <span className="font-bold text-slate-700 block text-sm mb-1">Option Clause</span>
+                                <span className="text-xs text-slate-600">Right to increase/decrease quantity by up to 25-30% at same rates.</span>
+                            </li>
+                            <li className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <span className="font-bold text-slate-700 block text-sm mb-1">Force Majeure</span>
+                                <span className="text-xs text-slate-600">Acts of God, War, etc. If &gt; 90 days, can terminate without penalty.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Scrap Disposal */}
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+                    <div className="flex items-center mb-6">
+                        <div className="bg-amber-100 p-2 rounded-lg mr-3">
+                            <Recycle className="w-6 h-6 text-amber-700" />
+                        </div>
+                        <h3 className="text-lg font-bold text-amber-900">Disposal of Scrap</h3>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-4">
+                        <div className="bg-white/80 p-4 rounded-xl border border-amber-100 shadow-sm">
+                            <div className="text-xs text-amber-800 font-bold uppercase tracking-wide mb-2">Summary Quotation</div>
+                            <div className="text-2xl font-bold text-amber-900 mb-1">Up to ₹15k</div>
+                            <div className="text-xs text-amber-700">Direct to local scrap dealers</div>
+                        </div>
+                        <div className="bg-white/80 p-4 rounded-xl border border-amber-100 shadow-sm">
+                            <div className="text-xs text-amber-800 font-bold uppercase tracking-wide mb-2">Limited Tender</div>
+                            <div className="text-2xl font-bold text-amber-900 mb-1">Up to ₹4L</div>
+                            <div className="text-xs text-amber-700">To locally known dealers</div>
+                        </div>
+                        <div className="bg-white/80 p-4 rounded-xl border border-amber-100 shadow-sm">
+                            <div className="text-xs text-amber-800 font-bold uppercase tracking-wide mb-2">E-Auction / Public</div>
+                            <div className="text-2xl font-bold text-amber-900 mb-1">Above ₹4L</div>
+                            <div className="text-xs text-amber-700">Preferred mode (MSTC/NIC)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const QuizSection = () => {
+            const [activeQuestion, setActiveQuestion] = useState(0);
+            const [showResult, setShowResult] = useState(false);
+            const [score, setScore] = useState(0);
+
+            const questions = [
+                {
+                    q: "What is the monetary limit for purchasing goods directly without quotation?",
+                    options: ["₹25,000", "₹50,000", "₹1,00,000", "₹2,50,000"],
+                    correct: 1 // Index of correct answer
+                },
+                {
+                    q: "The 'Option Clause' normally allows the purchaser to increase/decrease quantity by how much?",
+                    options: ["10%", "50%", "25%", "100%"],
+                    correct: 2
+                },
+                {
+                    q: "For a supplier to be 'Class-I Local Supplier', the local content must be at least:",
+                    options: ["20%", "40%", "50%", "100%"],
+                    correct: 2
+                },
+                {
+                    q: "What is the standard penalty (Liquidated Damages) for delay in supply per week?",
+                    options: ["1%", "0.5%", "2%", "5%"],
+                    correct: 1
+                },
+                {
+                    q: "Procurement through GeM is mandatory for:",
+                    options: ["Services only", "Goods only", "Goods & Services available on GeM", "Works contracts only"],
+                    correct: 2
+                }
+            ];
+
+            const handleAnswer = (index) => {
+                if (index === questions[activeQuestion].correct) {
+                    setScore(score + 1);
+                }
+
+                if (activeQuestion + 1 < questions.length) {
+                    setActiveQuestion(activeQuestion + 1);
+                } else {
+                    setShowResult(true);
+                }
+            };
+
+            const resetQuiz = () => {
+                setActiveQuestion(0);
+                setScore(0);
+                setShowResult(false);
+            };
+
+            return (
+                <div className="max-w-2xl mx-auto animate-fade-in py-6">
+                    <div className="bg-white rounded-2xl shadow-xl border border-indigo-100 overflow-hidden">
+                        <div className="bg-gradient-to-r from-indigo-600 to-indigo-700 p-8 text-white text-center">
+                            <h2 className="text-3xl font-bold mb-2">Procurement Quiz</h2>
+                            <p className="text-indigo-100">Test your memory of the manual</p>
+                        </div>
+
+                        <div className="p-8">
+                            {showResult ? (
+                                <div className="text-center space-y-8 py-4">
+                                    <div className={`inline-flex items-center justify-center p-6 rounded-full ${score > 3 ? 'bg-green-100' : 'bg-orange-100'}`}>
+                                        <Award className={`w-16 h-16 ${score > 3 ? 'text-green-600' : 'text-orange-500'}`} />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-3xl font-bold text-slate-800 mb-2">You scored {score} / {questions.length}</h3>
+                                        <p className="text-slate-500 text-lg">
+                                            {score === questions.length ? "Perfect Score! You are a GFR Expert." : score > 3 ? "Great job! Almost there." : "Good effort! Review the sections to improve."}
+                                        </p>
+                                    </div>
+                                    <button
+                                        onClick={resetQuiz}
+                                        className="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                                    >
+                                        Try Again
+                                    </button>
+                                </div>
+                            ) : (
+                                <div className="space-y-8">
+                                    <div className="flex justify-between text-sm text-slate-500 font-bold uppercase tracking-wide">
+                                        <span>Question {activeQuestion + 1} of {questions.length}</span>
+                                        <span>Current Score: {score}</span>
+                                    </div>
+
+                                    <h3 className="text-xl font-bold text-slate-800 leading-relaxed min-h-[3.5rem]">
+                                        {questions[activeQuestion].q}
+                                    </h3>
+
+                                    <div className="space-y-4">
+                                        {questions[activeQuestion].options.map((option, idx) => (
+                                            <button
+                                                key={idx}
+                                                onClick={() => handleAnswer(idx)}
+                                                className="w-full text-left p-4 rounded-xl border-2 border-slate-100 hover:border-indigo-500 hover:bg-indigo-50 transition-all duration-200 group"
+                                            >
+                                                <div className="flex items-center">
+                                                    <span className="w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center mr-4 group-hover:bg-indigo-200 group-hover:text-indigo-700 font-bold text-sm transition-colors">
+                                                        {String.fromCharCode(65 + idx)}
+                                                    </span>
+                                                    <span className="font-medium text-slate-700 group-hover:text-indigo-900">{option}</span>
+                                                </div>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                        {/* Progress Bar */}
+                        {!showResult && (
+                            <div className="h-2 bg-slate-100">
+                                <div
+                                    className="h-full bg-indigo-500 transition-all duration-300 ease-out"
+                                    style={{ width: `${((activeQuestion + 1) / questions.length) * 100}%` }}
+                                ></div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
+        // Main App Component
+
+        const App = () => {
+            const [activeSection, setActiveSection] = useState('home');
+            const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+            const sections = [
+                { id: 'home', label: 'Overview', icon: <BookOpen className="w-4 h-4" /> },
+                { id: 'modes', label: 'Procurement Modes', icon: <ShoppingCart className="w-4 h-4" /> },
+                { id: 'policies', label: 'Key Policies', icon: <Award className="w-4 h-4" /> },
+                { id: 'financials', label: 'Financials & Contracts', icon: <DollarSign className="w-4 h-4" /> },
+                { id: 'quiz', label: 'Quick Quiz', icon: <Zap className="w-4 h-4" /> },
+            ];
+
+            const renderContent = () => {
+                switch (activeSection) {
+                    case 'home': return <HomeSection />;
+                    case 'modes': return <ModesSection />;
+                    case 'policies': return <PoliciesSection />;
+                    case 'financials': return <FinancialsSection />;
+                    case 'quiz': return <QuizSection />;
+                    default: return <HomeSection />;
+                }
+            };
+
+            return (
+                <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
+                    {/* Navigation */}
+                    <nav className="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="flex items-center justify-between h-16">
+                                <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setActiveSection('home')}>
+                                    <BookOpen className="w-6 h-6" />
+                                    <span className="font-bold text-xl tracking-tight">Procurement Mastery</span>
+                                </div>
+
+                                {/* Desktop Menu */}
+                                <div className="hidden md:flex space-x-4">
+                                    {sections.map((section) => (
+                                        <button
+                                            key={section.id}
+                                            onClick={() => setActiveSection(section.id)}
+                                            className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-1
+                            ${activeSection === section.id
+                                                    ? 'bg-indigo-800 text-white shadow-inner'
+                                                    : 'text-indigo-100 hover:bg-indigo-600'}`}
+                                        >
+                                            {section.icon}
+                                            <span>{section.label}</span>
+                                        </button>
+                                    ))}
+                                </div>
+
+                                {/* Mobile Menu Button */}
+                                <div className="md:hidden">
+                                    <button
+                                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                                        className="p-2 rounded-md text-indigo-100 hover:bg-indigo-600 focus:outline-none"
+                                    >
+                                        {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Mobile Menu */}
+                        {mobileMenuOpen && (
+                            <div className="md:hidden bg-indigo-800 pb-4 shadow-xl">
+                                {sections.map((section) => (
+                                    <button
+                                        key={section.id}
+                                        onClick={() => {
+                                            setActiveSection(section.id);
+                                            setMobileMenuOpen(false);
+                                        }}
+                                        className={`block w-full text-left px-4 py-3 text-base font-medium border-l-4 transition-colors
+                          ${activeSection === section.id
+                                                ? 'bg-indigo-900 border-indigo-300 text-white'
+                                                : 'border-transparent text-indigo-100 hover:bg-indigo-700 hover:border-indigo-400'}`}
+                                    >
+                                        <div className="flex items-center space-x-3">
+                                            {section.icon}
+                                            <span>{section.label}</span>
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                    </nav>
+
+                    {/* Main Content */}
+                    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-[calc(100vh-160px)]">
+                        {renderContent()}
+                    </main>
+
+                    {/* Footer */}
+                    <footer className="bg-slate-800 text-slate-300 py-6 mt-12 border-t border-slate-700">
+                        <div className="max-w-7xl mx-auto px-4 text-center">
+                            <p className="text-sm font-medium">Based on Manual for Procurement of Goods & Services (GFR 2017 compliant)</p>
+                            <p className="text-xs mt-2 text-slate-500">Designed for easy revision</p>
+                        </div>
+                    </footer>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

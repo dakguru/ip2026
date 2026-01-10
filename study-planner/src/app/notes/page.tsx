@@ -219,7 +219,14 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.7 MB",
             color: "amber"
         },
-        { title: "Postal Manual Volume VI, Part-I", description: "Chapter-1 details.", color: "amber", comingSoon: true },
+        {
+            title: "Postal Manual Volume VI, Part-I",
+            description: "Chapter-1 details.",
+            filename: "postal-manual-vol-vi-part-1.pdf",
+            path: "/notes/paper-1/postal-manual-vol-vi-part-1.pdf",
+            size: "0.8 MB",
+            color: "amber"
+        },
         { title: "Postal Manual Volume VI, Part-II", description: "Except telegraphic money orders.", color: "amber", comingSoon: true },
         { title: "Postal Manual Volume VI, Part-III", description: "Except Appendices.", color: "amber", comingSoon: true },
         { title: "Postal Manual Volume VII", description: "RMS work and innovative guidelines.", color: "amber", comingSoon: true },

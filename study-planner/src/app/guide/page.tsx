@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, Scale, Briefcase, BookOpen, ChevronRight, Zap, Star, Gavel, Lock } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Scale, Briefcase, BookOpen, ChevronRight, Zap, Star, Gavel, Lock, ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function GuidePage() {
@@ -141,6 +141,39 @@ export default function GuidePage() {
                         delay={0.4}
                     />
 
+                    {/* Card 3: Annual Report 24-25 */}
+                    <GuideCard
+                        href="/guides/annual-report-24-25/index.html"
+                        title="Annual Report"
+                        badge="New 2024-25"
+                        description="Essential exam guide covering Department stats, policies, and key metrics for 2024-2025."
+                        icon={<BookOpen className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="blue"
+                        delay={0.45}
+                    />
+
+                    {/* Card 4: Constitution of India */}
+                    <GuideCard
+                        href="/guides/constitution/index.html"
+                        title="Constitution of India"
+                        badge="Preamble & Rights"
+                        description="Comprehensive guide to Indian Constitution: Fundamental Rights, Duties, Judiciary, and more."
+                        icon={<Scale className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="indigo"
+                        delay={0.5}
+                    />
+
+                    {/* Card 5: Procurement Guide */}
+                    <GuideCard
+                        href="/guides/procurement/index.html"
+                        title="Procurement Guide"
+                        badge="GFR 2017+"
+                        description="Master Procurement of Goods & Services. Modes, Policies (MSE/MII), and Financials simplified."
+                        icon={<ShoppingCart className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="purple"
+                        delay={0.4}
+                    />
+
                     {/* Card 3: CPA */}
                     <GuideCard
                         href="/guide/cpa"
@@ -163,7 +196,29 @@ export default function GuidePage() {
                         delay={0.6}
                     />
 
-                    {/* Card 5: CCS Conduct Rules */}
+                    {/* Card 5: FHB Vol-I */}
+                    <GuideCard
+                        href="/guides/fhb-vol-1/index.html"
+                        title="FHB Vol-I"
+                        badge="Financial"
+                        description="Interactive master guide for Financial Handbook Volume I. Accounting rules, payments, and loss limits."
+                        icon={<Briefcase className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="amber"
+                        delay={0.65}
+                    />
+
+                    {/* Card 6: FHB Vol-II */}
+                    <GuideCard
+                        href="/guides/fhb-vol-2/index.html"
+                        title="FHB Vol-II"
+                        badge="Financial"
+                        description="Supply of Stamps, Revenue Receipts, and Post Office Accounts. Essential guide for Vol-II."
+                        icon={<BookOpen className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="emerald"
+                        delay={0.68}
+                    />
+
+                    {/* Card 7: CCS Conduct Rules */}
                     <GuideCard
                         href="/guide/ccs"
                         title="CCS Conduct Rules"
@@ -201,6 +256,7 @@ function GuideCard({ href, title, badge, description, icon, color, delay }: any)
         amber: "group-hover:shadow-amber-500/20 group-hover:border-amber-500/50 from-amber-500/20 to-transparent",
         indigo: "group-hover:shadow-indigo-500/20 group-hover:border-indigo-500/50 from-indigo-500/20 to-transparent",
         violet: "group-hover:shadow-violet-500/20 group-hover:border-violet-500/50 from-violet-500/20 to-transparent",
+        purple: "group-hover:shadow-purple-500/20 group-hover:border-purple-500/50 from-purple-500/20 to-transparent",
     };
 
     const iconColors: any = {
@@ -209,6 +265,7 @@ function GuideCard({ href, title, badge, description, icon, color, delay }: any)
         amber: "text-amber-400 group-hover:text-amber-300 bg-amber-500/10 group-hover:bg-amber-500/20",
         indigo: "text-indigo-400 group-hover:text-indigo-300 bg-indigo-500/10 group-hover:bg-indigo-500/20",
         violet: "text-violet-400 group-hover:text-violet-300 bg-violet-500/10 group-hover:bg-violet-500/20",
+        purple: "text-purple-400 group-hover:text-purple-300 bg-purple-500/10 group-hover:bg-purple-500/20",
     };
 
     return (

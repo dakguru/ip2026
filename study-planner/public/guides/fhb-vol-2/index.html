@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Handbook Vol-II Guide</title>
+
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .animate-in {
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+        }
+
+        .fade-in {
+            animation-name: fadeIn;
+        }
+
+        .slide-in-from-bottom-4 {
+            animation-name: slideUp;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(1rem);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Custom Scrollbar for Sidebar */
+        aside::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        aside::-webkit-scrollbar-track {
+            background: #1e1b4b;
+        }
+
+        aside::-webkit-scrollbar-thumb {
+            background: #4338ca;
+            border-radius: 3px;
+        }
+
+        aside::-webkit-scrollbar-thumb:hover {
+            background: #6366f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // --- ICONS (Inline to avoid dependencies) ---
+        const IconWrapper = ({ children, size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                {children}
+            </svg>
+        );
+
+        const BookOpen = (props) => (
+            <IconWrapper {...props}><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></IconWrapper>
+        );
+        const Users = (props) => (
+            <IconWrapper {...props}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></IconWrapper>
+        );
+        const DollarSign = (props) => (
+            <IconWrapper {...props}><line x1="12" y1="2" x2="12" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></IconWrapper>
+        );
+        const FileText = (props) => (
+            <IconWrapper {...props}><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><line x1="10" y1="9" x2="8" y2="9" /></IconWrapper>
+        );
+        const Train = (props) => (
+            <IconWrapper {...props}><rect x="6" y="3" width="12" height="13" rx="2" /><path d="m9 16-5 5" /><path d="m15 16 5 5" /><path d="M4 11h16" /><path d="M12 3v8" /><circle cx="10" cy="11" r="1" /><circle cx="14" cy="11" r="1" /></IconWrapper>
+        );
+        const Stamp = (props) => (
+            <IconWrapper {...props}><path d="M5 22h14" /><path d="M19.27 13.73A2.665 2.665 0 0 0 22 10.98c0-2.02-2.5-4-2.5-4s-2.5 1.98-2.5 4a2.665 2.665 0 0 0 2.27 2.75" /><path d="M4.73 13.73A2.665 2.665 0 0 1 2 10.98c0-2.02 2.5-4 2.5-4s2.5 1.98 2.5 4a2.665 2.665 0 0 1-2.27 2.75" /><path d="M10 22v-6.57" /><path d="M14 22v-6.57" /><path d="M7 16l5-6 5 6" /></IconWrapper>
+        ); // Approximation/Alternative for Stamp if not perfectly standard, used Mails icon or similar. Using a custom path or generic. Let's use a simpler "Badge/Certificate" or "Stamp" like shape.
+        // Actually, let's use a simpler standardized "Award" or "Stamp" approximation for simplicity in paths.
+        // Re-defining Stamp to be simpler or use generic "Award" style if specific Stamp lucide path is complex. 
+        // Using "Award" path as placeholder for Stamp if exact path unknown, or generic "Stamp".
+        // Let's use "RubberStamp" concept:
+        const RubberStamp = (props) => (
+            <IconWrapper {...props}><path d="M5 22h14" /><path d="M19.27 13.73A2.665 2.665 0 0 0 22 10.98c0-2.02-2.5-4-2.5-4s-2.5 1.98-2.5 4a2.665 2.665 0 0 0 2.27 2.75" /><path d="M4.73 13.73A2.665 2.665 0 0 1 2 10.98c0-2.02 2.5-4 2.5-4s2.5 1.98 2.5 4a2.665 2.665 0 0 1-2.27 2.75" /><path d="M10 22v-8" /><path d="M14 22v-8" /><rect x="8" y="5" width="8" height="9" rx="2" /></IconWrapper>
+        );
+
+        const CreditCard = (props) => (
+            <IconWrapper {...props}><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></IconWrapper>
+        );
+        const Briefcase = (props) => (
+            <IconWrapper {...props}><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></IconWrapper>
+        );
+        const Activity = (props) => (
+            <IconWrapper {...props}><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></IconWrapper>
+        );
+        const ChevronRight = (props) => (
+            <IconWrapper {...props}><polyline points="9 18 15 12 9 6" /></IconWrapper>
+        );
+        const Info = (props) => (
+            <IconWrapper {...props}><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></IconWrapper>
+        );
+        const AlertCircle = (props) => (
+            <IconWrapper {...props}><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></IconWrapper>
+        );
+        const CheckCircle = (props) => (
+            <IconWrapper {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></IconWrapper>
+        );
+        const Menu = (props) => (
+            <IconWrapper {...props}><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" /></IconWrapper>
+        );
+        const X = (props) => (
+            <IconWrapper {...props}><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></IconWrapper>
+        );
+
+
+        // --- MAIN APP ---
+
+        const App = () => {
+            const [activeSection, setActiveSection] = useState('intro');
+            const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+            const sections = [
+                { id: 'intro', title: 'Introduction & Definitions', icon: <BookOpen size={20} /> },
+                { id: 'stamps', title: 'Stamps & Philately', icon: <RubberStamp size={20} /> },
+                { id: 'revenue', title: 'Revenue Receipts', icon: <DollarSign size={20} /> },
+                { id: 'accounts', title: 'Post Office Accounts', icon: <FileText size={20} /> },
+                { id: 'rms', title: 'RMS Accounts', icon: <Train size={20} /> },
+                { id: 'taxes', title: 'Statutory Taxes (GST/TDS)', icon: <CreditCard size={20} /> },
+                { id: 'pension', title: 'Pension Payments', icon: <Users size={20} /> },
+                { id: 'misc', title: 'Miscellaneous', icon: <Briefcase size={20} /> },
+            ];
+
+            const renderContent = () => {
+                switch (activeSection) {
+                    case 'intro': return <IntroSection />;
+                    case 'stamps': return <StampsSection />;
+                    case 'revenue': return <RevenueSection />;
+                    case 'accounts': return <AccountsSection />;
+                    case 'rms': return <RMSSection />;
+                    case 'taxes': return <TaxesSection />;
+                    case 'pension': return <PensionSection />;
+                    case 'misc': return <MiscSection />;
+                    default: return <IntroSection />;
+                }
+            };
+
+            return (
+                <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col md:flex-row">
+                    {/* Mobile Header */}
+                    <div className="md:hidden bg-indigo-900 text-white p-4 flex justify-between items-center shadow-md z-50 sticky top-0">
+                        <h1 className="font-bold text-lg flex items-center gap-2">
+                            <BookOpen className="text-yellow-400" /> FHB Vol-II
+                        </h1>
+                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                            {isMobileMenuOpen ? <X /> : <Menu />}
+                        </button>
+                    </div>
+
+                    {/* Sidebar Navigation */}
+                    <aside className={`
+                fixed inset-y-0 left-0 transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} 
+                md:relative md:translate-x-0 transition-transform duration-200 ease-in-out
+                w-64 bg-indigo-900 text-slate-100 flex flex-col shadow-xl z-40
+                pt-16 md:pt-0
+              `}>
+                        <div className="p-6 border-b border-indigo-800 hidden md:block">
+                            <h1 className="text-2xl font-bold flex items-center gap-2 text-white">
+                                <BookOpen className="text-yellow-400" />
+                                FHB Vol-II
+                            </h1>
+                            <p className="text-indigo-300 text-xs mt-2 uppercase tracking-wider">Digital Guide</p>
+                        </div>
+
+                        <nav className="flex-1 overflow-y-auto py-4">
+                            <ul className="space-y-1">
+                                {sections.map((section) => (
+                                    <li key={section.id}>
+                                        <button
+                                            onClick={() => {
+                                                setActiveSection(section.id);
+                                                setIsMobileMenuOpen(false);
+                                            }}
+                                            className={`w-full flex items-center gap-3 px-6 py-3 transition-colors duration-200 text-left
+                            ${activeSection === section.id
+                                                    ? 'bg-indigo-800 text-white border-l-4 border-yellow-400'
+                                                    : 'text-indigo-200 hover:bg-indigo-800 hover:text-white'
+                                                }`}
+                                        >
+                                            {section.icon}
+                                            <span className="font-medium text-sm">{section.title}</span>
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+
+                        <div className="p-4 bg-indigo-950 text-xs text-indigo-400 text-center">
+                            Based on Edition 2022
+                        </div>
+                    </aside>
+
+                    {/* Main Content Area */}
+                    <main className="flex-1 overflow-y-auto h-screen p-4 md:p-8 pt-6 md:pt-10 pb-20 md:pb-8">
+                        <div className="max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
+                            {renderContent()}
+                        </div>
+                    </main>
+                </div>
+            );
+        };
+
+        // --- SECTIONS ---
+
+        const IntroSection = () => (
+            <div className="space-y-6">
+                <Header
+                    title="Introduction & Definitions"
+                    subtitle="Chapter I: Understanding the basic terminology and structure."
+                    color="indigo"
+                />
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Card title="Key Authorities" color="blue">
+                        <Definition term="DDO" desc="Drawing and Disbursing Officer. Responsible for drawing bills, handling money, and submitting accounts to CGA." />
+                        <Definition term="NCDDO" desc="Non-Cheque Drawing DDOs (e.g., RO, CO, HRO). They do not have cheque drawing powers." />
+                        <Definition term="Head of Circle" desc="Chief Postmaster General (CPMG) or designated officer." />
+                        <Definition term="Head Post Office (HPO)" desc="Account office for Sub Offices (SO) and Branch Offices (BO). Led by Head Postmaster." />
+                    </Card>
+
+                    <Card title="Types of Offices" color="purple">
+                        <ul className="space-y-3">
+                            <ListItem label="GPO" text="General Post Office. First-class HO at Circle HQ." />
+                            <ListItem label="Transit Mail Office (TMO)" text="RMS branch where closed bags are received/dispatched. No sorting of letters." />
+                            <ListItem label="AMPC" text="Automatic Mail Processing Centers (High speed sorting machines)." />
+                            <ListItem label="CRC" text="Computerized Registration Centre. Registration branch of Mail Office." />
+                        </ul>
+                    </Card>
+                </div>
+
+                <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                    <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <Activity className="text-indigo-500" />
+                        Head of Accounts Structure (15 Digits)
+                    </h3>
+                    <div className="grid grid-cols-2 md:grid-cols-6 gap-2 text-center text-sm">
+                        <DigitBox label="Major Heads" digits="4" />
+                        <DigitBox label="Sub-Major" digits="2" />
+                        <DigitBox label="Minor Heads" digits="3" />
+                        <DigitBox label="Sub-Heads" digits="2" />
+                        <DigitBox label="Detailed" digits="2" />
+                        <DigitBox label="Object Heads" digits="2" />
+                    </div>
+                    <p className="text-center text-slate-500 text-xs mt-3">Total: 15 Digits used for classification in DOP</p>
+                </div>
+            </div>
+        );
+
+        const StampsSection = () => (
+            <div className="space-y-6">
+                <Header
+                    title="Supply of Stamps & Philately"
+                    subtitle="Chapter II: Procurement, stock limits, and Philatelic activities."
+                    color="pink"
+                />
+
+                <div className="grid md:grid-cols-3 gap-6">
+                    <div className="md:col-span-2 space-y-6">
+                        <Card title="Supply Chain" color="pink">
+                            <div className="flex flex-col gap-4">
+                                <Step number="1" text="HO obtains stamps from Postal Stores Depot (PSD) up to authorized maximum." />
+                                <Step number="2" text="HO obtains Revenue Stamps from Treasuries on cash payment." />
+                                <Step number="3" text="Post Offices follow 'End-to-End' electronic process for procurement and sales." />
+                                <Step number="4" text="Invoice copy returned to PSD within 3 days of receipt." />
+                            </div>
+                        </Card>
+
+                        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                            <h4 className="font-bold text-yellow-800 flex items-center gap-2">
+                                <AlertCircle size={16} /> Important Rule
+                            </h4>
+                            <p className="text-sm text-yellow-800 mt-1">
+                                Unserviceable stamps are exchanged for serviceable ones from PSD. Lost/Damaged stamps must be written off by competent authority.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="space-y-6">
+                        <Card title="Philately" color="indigo">
+                            <p className="text-sm text-slate-600 mb-4">
+                                The art of collecting and studying stamps.
+                            </p>
+                            <ul className="space-y-3">
+                                <ListItem label="Bureau" text="Branch of HO/SO dealing with special stamps & First Day Covers." />
+                                <ListItem label="Deposit Acc" text="Can be opened with min Rs. 200/- security deposit." />
+                                <ListItem label="My Stamps" text="Personalized sheets with customer's thumbnail image." />
+                            </ul>
+                        </Card>
+
+                        <Card title="Stock Limits" color="emerald">
+                            <div className="text-xs space-y-2">
+                                <div className="flex justify-between border-b pb-1">
+                                    <span>Non-Gazetted PM:</span>
+                                    <span className="font-bold">Divisional Head</span>
+                                </div>
+                                <div className="flex justify-between border-b pb-1">
+                                    <span>Group 'B' PM:</span>
+                                    <span className="font-bold">DPS</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span>Group 'A' PM:</span>
+                                    <span className="font-bold">CPMG/PMG</span>
+                                </div>
+                            </div>
+                        </Card>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const RevenueSection = () => (
+            <div className="space-y-6">
+                <Header
+                    title="Revenue Receipts"
+                    subtitle="Chapter III: How the Department earns money (Major Head 1201)."
+                    color="emerald"
+                />
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Card title="Modes of Collection" color="emerald">
+                        <div className="grid grid-cols-2 gap-4">
+                            <Badge text="Cash" />
+                            <Badge text="Cheque/DD" />
+                            <Badge text="Debit/Credit Card" />
+                            <Badge text="UPI / QR Code" />
+                            <Badge text="Franking" />
+                            <Badge text="Advance Payments" />
+                        </div>
+                    </Card>
+
+                    <Card title="Book Now Pay Later (BNPL)" color="blue">
+                        <ul className="space-y-3">
+                            <ListItem label="Eligibility" text="Bulk customer providing ₹10,000+ business in Speed Post/Business Post per month." />
+                            <ListItem label="Contract" text="Valid for 1 year. Renewable." />
+                            <ListItem label="Billing" text="Monthly bill raised by 7th of following month." />
+                            <ListItem label="Payment" text="Due by last day of the month." />
+                            <ListItem label="Penalty" text="12% per annum if not paid by due date." />
+                        </ul>
+                    </Card>
+                </div>
+
+                <Card title="Sources of Receipt" color="slate">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-sm text-slate-600">
+                        <span>• Postage (Cash)</span>
+                        <span>• Speed Post</span>
+                        <span>• Business/Logistic Post</span>
+                        <span>• PLI/RPLI</span>
+                        <span>• Money Order Commission</span>
+                        <span>• PO Box Rent</span>
+                        <span>• Philately Sales</span>
+                        <span>• Aadhaar Services</span>
+                        <span>• Passport Services</span>
+                        <span>• Railway Tickets</span>
+                        <span>• Western Union (Formerly)</span>
+                        <span>• Gangajal Services</span>
+                    </div>
+                </Card>
+            </div>
+        );
+
+        const AccountsSection = () => (
+            <div className="space-y-6">
+                <Header
+                    title="Post Office Accounts"
+                    subtitle="Chapter IV: Duties of the Treasurer and Accounting Procedures."
+                    color="blue"
+                />
+
+                <div className="bg-white rounded-xl shadow-sm border-l-4 border-blue-500 p-6">
+                    <h3 className="text-lg font-bold text-slate-800 mb-4">The Treasurer's Responsibilities</h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                        <CheckItem text="Safe custody of cash, stamps, and valuable documents." />
+                        <CheckItem text="Supply funds to subordinate offices (SO/BO)." />
+                        <CheckItem text="Receive collections from Postmen/Window PA." />
+                        <CheckItem text="Process drawings/remittances from Bank." />
+                        <CheckItem text="Maintain e-Treasurer's Cash Book (Form ACG-2)." />
+                        <CheckItem text="Ensure closing balance matches physical cash." />
+                    </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Card title="Daily Transaction Report (DTR)" color="orange">
+                        <p className="text-sm text-slate-600 mb-4">
+                            The DTR (ZFR DAY_NEW) is the account of Head of Account wise cash receipts and disbursements.
+                        </p>
+                        <div className="bg-orange-50 p-3 rounded text-sm text-orange-900">
+                            <strong>Key Rule:</strong> Opening Balance + Receipts = Payments + Closing Balance.
+                        </div>
+                    </Card>
+
+                    <Card title="Head Postmaster's Duties" color="indigo">
+                        <ul className="space-y-2">
+                            <ListItem label="Verification" text="Must verify DTR personally (or delegated subordinate)." />
+                            <ListItem label="Cash Balance" text="Count cash daily and match with DTR closing balance." />
+                            <ListItem label="Unpaid Postage" text="Calculate due on unpaid articles (Form ACG-45)." />
+                            <ListItem label="Submission" text="Submit Monthly Cash Account to PAO by 5th of next month." />
+                        </ul>
+                    </Card>
+                </div>
+            </div>
+        );
+
+        const RMSSection = () => (
+            <div className="space-y-6">
+                <Header
+                    title="Railway Mail Service (RMS) Accounts"
+                    subtitle="Chapter V & X: Managing accounts on the move."
+                    color="red"
+                />
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Card title="Head Record Officer (HRO)" color="red">
+                        <p className="mb-3 text-sm">Personally responsible for all monetary transactions of the division.</p>
+                        <ul className="space-y-2">
+                            <ListItem label="Cash" text="Obtains cash from DDO/HO. Maintains 'Imprest'." />
+                            <ListItem label="Support" text="Assisted by Accountant (Sorter) but HRO retains full responsibility." />
+                            <ListItem label="Safe" text="Joint custody with Accountant." />
+                        </ul>
+                    </Card>
+
+                    <Card title="Mail Van Haulage" color="slate">
+                        <p className="text-xs text-slate-500 mb-2">Cost of RMS Vans (ACG-69)</p>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-xs text-left">
+                                <thead className="bg-slate-100 font-bold">
+                                    <tr>
+                                        <th className="p-2">Type</th>
+                                        <th className="p-2">Usage</th>
+                                        <th className="p-2">Berths</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y">
+                                    <tr><td className="p-2">S.W Full</td><td>{`> 3/4 Coach`}</td><td>72</td></tr>
+                                    <tr><td className="p-2">S.T Van</td><td>{`1/2 to 3/4`}</td><td>54</td></tr>
+                                    <tr><td className="p-2">S.H Half</td><td>{`1/4 to 1/2`}</td><td>36</td></tr>
+                                    <tr><td className="p-2">S.Q Qtr</td><td>{`< 1/4 Coach`}</td><td>18</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </Card>
+                </div>
+            </div>
+        );
+
+        const TaxesSection = () => (
+            <div className="space-y-6">
+                <Header
+                    title="Statutory Taxes"
+                    subtitle="Chapter VI: TDS and GST Regulations."
+                    color="purple"
+                />
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Card title="TDS (Income Tax)" color="purple">
+                        <p className="text-sm mb-3">DDO is responsible for deduction under Section 192.</p>
+                        <div className="space-y-2 text-sm">
+                            <Badge text="Salary (Sec 192)" />
+                            <Badge text="Contractors (Sec 194C)" />
+                            <Badge text="Commission (Sec 194H)" />
+                            <Badge text="Rent (Sec 194I)" />
+                        </div>
+                        <div className="mt-4 bg-purple-50 p-2 rounded text-xs">
+                            <strong>Returns:</strong> Form 24Q (Salary), 26Q (Others).
+                        </div>
+                    </Card>
+
+                    <Card title="GST (Goods & Service Tax)" color="teal">
+                        <ul className="space-y-3">
+                            <ListItem label="CGST" text="Central GST (Central Govt)" />
+                            <ListItem label="SGST" text="State GST (Within State)" />
+                            <ListItem label="IGST" text="Integrated GST (Inter-State)" />
+                            <ListItem label="TDS on GST" text="2% (1% CGST + 1% SGST) if value > 2.5 Lakhs." />
+                        </ul>
+                        <div className="mt-4 text-xs text-red-600 font-bold">
+                            Penalty: Rs. 100/day (Max Rs. 5000) for late return filing.
+                        </div>
+                    </Card>
+                </div>
+            </div>
+        );
+
+        const PensionSection = () => (
+            <div className="space-y-6">
+                <Header
+                    title="Pension Payments"
+                    subtitle="Chapter VIII: Rules for paying retired employees."
+                    color="orange"
+                />
+
+                <div className="bg-white p-6 rounded-xl border border-orange-200 shadow-sm">
+                    <h3 className="font-bold text-lg mb-4 text-orange-900">Pension Payment Process</h3>
+                    <div className="flex flex-col md:flex-row gap-4 justify-between items-start">
+                        <StepBox num="1" title="PPO Issue" text="Issued by CPAO. Consists of Disburser's Half and Pensioner's Half." />
+                        <ChevronRight className="hidden md:block text-orange-300 mt-6" />
+                        <StepBox num="2" title="Identification" text="First payment requires personal identification or exemption certificate." />
+                        <ChevronRight className="hidden md:block text-orange-300 mt-6" />
+                        <StepBox num="3" title="Payment" text="Credited to POSB Account. Due on last working day of month (except March)." />
+                    </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Card title="Important Rules" color="orange">
+                        <ul className="space-y-2">
+                            <ListItem label="Life Certificate" text="Submit in November each year. (Oct 1st for 80+ years)." />
+                            <ListItem label="Undrawn Pension" text="If undrawn > 1 year, ceases to be payable. Needs revival." />
+                            <ListItem label="Arrears (Death)" text="Heirs must apply within 1 year. Up to Rs. 50,000 paid by authority; >50k needs Indemnity Bond." />
+                        </ul>
+                    </Card>
+                    <Card title="Commutation" color="slate">
+                        <p className="text-sm mb-2">Lump sum payment in exchange for a portion of pension.</p>
+                        <p className="text-sm font-bold text-slate-700">Restoration: After 15 years from date of payment.</p>
+                    </Card>
+                </div>
+            </div>
+        );
+
+        const MiscSection = () => (
+            <div className="space-y-6">
+                <Header
+                    title="Miscellaneous"
+                    subtitle="Refunds and other procedures."
+                    color="gray"
+                />
+                <div className="grid md:grid-cols-2 gap-6">
+                    <Card title="Refund of Postage" color="gray">
+                        <ul className="space-y-3">
+                            <ListItem label="Spoilt Stamps" text="Refund allowed subject to 6.25% deduction." />
+                            <ListItem label="Spoilt Stationery" text="Refund subject to 20% deduction." />
+                            <ListItem label="Franking Error" text="Refund after deduction of 5% face value." />
+                            <ListItem label="Rejection" text="No refund for complete sheets or serviceable stamps." />
+                        </ul>
+                    </Card>
+                    <Card title="NCDDO Units" color="gray">
+                        <p className="text-sm text-gray-600 mb-3">
+                            Non-Cheque Drawing units (e.g., MMS, PSD, PTC).
+                        </p>
+                        <p className="text-sm text-gray-600">
+                            They obtain funds through workflow application. Remittances shown under Major Head <b>8782</b>.
+                        </p>
+                    </Card>
+                </div>
+            </div>
+        );
+
+        // --- HELPER COMPONENTS ---
+
+        const Header = ({ title, subtitle, color }) => {
+            const colorClasses = {
+                indigo: "text-indigo-900 border-indigo-200",
+                pink: "text-pink-900 border-pink-200",
+                emerald: "text-emerald-900 border-emerald-200",
+                blue: "text-blue-900 border-blue-200",
+                red: "text-red-900 border-red-200",
+                purple: "text-purple-900 border-purple-200",
+                orange: "text-orange-900 border-orange-200",
+                gray: "text-slate-900 border-slate-200",
+                teal: "text-teal-900 border-teal-200"
+            };
+
+            return (
+                <div className={`border-b pb-4 ${colorClasses[color] || colorClasses.gray}`}>
+                    <h2 className="text-3xl font-bold">{title}</h2>
+                    <p className="text-slate-500 mt-1 text-lg">{subtitle}</p>
+                </div>
+            );
+        };
+
+        const Card = ({ title, children, color }) => {
+            const borderColors = {
+                blue: "border-blue-500",
+                pink: "border-pink-500",
+                purple: "border-purple-500",
+                emerald: "border-emerald-500",
+                indigo: "border-indigo-500",
+                orange: "border-orange-500",
+                red: "border-red-500",
+                slate: "border-slate-500",
+                teal: "border-teal-500",
+                gray: "border-gray-500"
+            };
+
+            return (
+                <div className={`bg-white rounded-xl shadow-sm p-5 border-t-4 ${borderColors[color] || "border-slate-500"}`}>
+                    <h3 className="font-bold text-lg mb-4 text-slate-800">{title}</h3>
+                    {children}
+                </div>
+            );
+        };
+
+        const Definition = ({ term, desc }) => (
+            <div className="mb-3 last:mb-0">
+                <span className="font-bold text-indigo-700 block">{term}</span>
+                <span className="text-sm text-slate-600 leading-snug">{desc}</span>
+            </div>
+        );
+
+        const ListItem = ({ label, text }) => (
+            <li className="flex flex-col sm:flex-row sm:items-baseline gap-1 text-sm">
+                <span className="font-semibold text-slate-700 min-w-[100px]">{label}:</span>
+                <span className="text-slate-600">{text}</span>
+            </li>
+        );
+
+        const CheckItem = ({ text }) => (
+            <div className="flex items-start gap-3">
+                <CheckCircle className="text-blue-500 mt-1 shrink-0" size={16} />
+                <span className="text-sm text-slate-700">{text}</span>
+            </div>
+        );
+
+        const Badge = ({ text }) => (
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">
+                {text}
+            </span>
+        );
+
+        const Step = ({ number, text }) => (
+            <div className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-pink-100 text-pink-700 font-bold flex items-center justify-center shrink-0">
+                    {number}
+                </div>
+                <p className="text-sm text-slate-700">{text}</p>
+            </div>
+        );
+
+        const DigitBox = ({ label, digits }) => (
+            <div className="flex flex-col items-center p-2 bg-slate-50 rounded border border-slate-200">
+                <span className="text-xs text-slate-400 uppercase font-bold">{label}</span>
+                <span className="text-xl font-mono font-bold text-indigo-600">{digits}</span>
+            </div>
+        );
+
+        const StepBox = ({ num, title, text }) => (
+            <div className="flex-1 bg-orange-50 p-4 rounded-lg border border-orange-100">
+                <div className="text-2xl font-bold text-orange-300 mb-2">{num}</div>
+                <h4 className="font-bold text-orange-900 mb-1">{title}</h4>
+                <p className="text-xs text-orange-800">{text}</p>
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

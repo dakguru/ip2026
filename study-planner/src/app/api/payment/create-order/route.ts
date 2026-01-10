@@ -4,7 +4,7 @@ import shortid from 'shortid';
 
 export async function POST(request: Request) {
     try {
-        const { amount, currency = 'INR' } = await request.json();
+        const { amount, currency = 'INR', email, plan, couponCode } = await request.json();
 
         // 1. Basic Validation
         if (!amount) {
@@ -17,6 +17,14 @@ export async function POST(request: Request) {
             currency,
             receipt: shortid.generate(),
             payment_capture: 1, // Auto capture
+            notes: {
+                user_email: String(email || ''),
+                plan_id: String(plan?.id || ''),
+                plan_name: String(plan?.name || ''),
+                plan_type: String(plan?.type || ''),
+                validity_days: String(plan?.validityDays || '365'),
+                coupon_code: String(couponCode || '')
+            }
         };
 
         // 3. Create Order via Razorpay SDK

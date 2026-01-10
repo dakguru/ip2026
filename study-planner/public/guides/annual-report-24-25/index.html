@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Report 2024-25 Guide</title>
+
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // --- ICONS (Inline to avoid dependencies) ---
+        const IconWrapper = ({ children, size = 20, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                {children}
+            </svg>
+        );
+
+        const BookOpen = (props) => (
+            <IconWrapper {...props}><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></IconWrapper>
+        );
+        const Users = (props) => (
+            <IconWrapper {...props}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></IconWrapper>
+        );
+        const Globe = (props) => (
+            <IconWrapper {...props}><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></IconWrapper>
+        );
+        const Landmark = (props) => (
+            <IconWrapper {...props}><line x1="3" y1="22" x2="21" y2="22" /><line x1="6" y1="18" x2="6" y2="11" /><line x1="10" y1="18" x2="10" y2="11" /><line x1="14" y1="18" x2="14" y2="11" /><line x1="18" y1="18" x2="18" y2="11" /><polygon points="12 2 20 7 4 7" /></IconWrapper>
+        );
+        const Truck = (props) => (
+            <IconWrapper {...props}><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></IconWrapper>
+        );
+        const CreditCard = (props) => (
+            <IconWrapper {...props}><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></IconWrapper>
+        );
+        const Stamp = (props) => (
+            <IconWrapper {...props}><path d="M5 22h14" /><path d="M19.27 13.73A2.665 2.665 0 0 0 22 10.98c0-2.02-2.5-4-2.5-4s-2.5 1.98-2.5 4a2.665 2.665 0 0 0 2.27 2.75" /><path d="M4.73 13.73A2.665 2.665 0 0 1 2 10.98c0-2.02 2.5-4 2.5-4s2.5 1.98 2.5 4a2.665 2.665 0 0 1-2.27 2.75" /><path d="M10 22v-8" /><path d="M14 22v-8" /><rect x="8" y="5" width="8" height="9" rx="2" /></IconWrapper>
+        );
+        const Award = (props) => (
+            <IconWrapper {...props}><circle cx="12" cy="8" r="7" /><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" /></IconWrapper>
+        );
+        const Calendar = (props) => (
+            <IconWrapper {...props}><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></IconWrapper>
+        );
+        const ChevronRight = (props) => (
+            <IconWrapper {...props}><polyline points="9 18 15 12 9 6" /></IconWrapper>
+        );
+        const Menu = (props) => (
+            <IconWrapper {...props}><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" /></IconWrapper>
+        );
+        const X = (props) => (
+            <IconWrapper {...props}><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></IconWrapper>
+        );
+        const TrendingUp = (props) => (
+            <IconWrapper {...props}><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></IconWrapper>
+        );
+        const MapPin = (props) => (
+            <IconWrapper {...props}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></IconWrapper>
+        );
+        const Zap = (props) => (
+            <IconWrapper {...props}><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></IconWrapper>
+        );
+        const FileText = (props) => (
+            <IconWrapper {...props}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></IconWrapper>
+        );
+
+
+        // --- Data Constants ---
+
+        const FACTS_HISTORY = [
+            { year: "1727", event: "First Post Office set up in Kolkata." },
+            { year: "1774", event: "GPO set up in Kolkata." },
+            { year: "1786", event: "GPO set up in Chennai." },
+            { year: "1793", event: "GPO set up in Mumbai." },
+            { year: "1852", event: "First adhesive postage stamp in Asia issued in Sindh (Scinde Dawks)." },
+            { year: "1854", event: "1st Oct: First postage stamp valid across the country issued (Uniform rate based on weight)." },
+            { year: "1882", event: "POSB (Post Office Savings Bank) facilities started." },
+            { year: "1911", event: "18th Feb: World's first airmail flight (Allahabad to Naini, 18 KM across Ganga)." },
+            { year: "1944", event: "Mail Motor Service (MMS) came into existence." },
+            { year: "2023", event: "New 'Post Office Act, 2023' passed (Dec 24: President assent)." },
+            { year: "2024", event: "18th June: Post Office Act, 2023 came into force (repealing Act of 1898)." },
+        ];
+
+        const STATS = {
+            totalPO: "1,64,987",
+            ruralPO: "1,49,164",
+            urbanPO: "15,823",
+            ruralPercent: "90.41%",
+            urbanPercent: "9.59%",
+            deptPO: "25,096",
+            branchPO: "1,39,891",
+            deptEmployees: "1,90,161",
+            gds: "2,67,836",
+            avgPopulation: "8,490",
+            ruralAvgPop: "6,068",
+            urbanAvgPop: "31,327",
+            avgArea: "19.92 sq.km"
+        };
+
+        const CIRCLES = [
+            "Andhra Pradesh", "Assam", "Bihar", "Chhattisgarh", "Delhi", "Gujarat",
+            "Haryana", "Himachal Pradesh", "J & K", "Jharkhand", "Karnataka", "Kerala",
+            "Madhya Pradesh", "Maharashtra", "North Eastern", "Orissa", "Punjab",
+            "Rajasthan", "Tamil Nadu", "Telangana", "Uttar Pradesh", "Uttaranchal", "West Bengal"
+        ];
+
+        const FUNCTIONAL_UNITS = [
+            { name: "Speed Post Hubs", count: "258" },
+            { name: "Unregistered Mail Offices", count: "303" },
+            { name: "Business Processing Centers (BPC)", count: "823" },
+            { name: "Transit Mail Offices (TMOs)", count: "411" },
+            { name: "BNPL Centers", count: "47" },
+            { name: "RFID Mail Exchange Hubs", count: "42" },
+            { name: "Parcel Hubs (L1)", count: "79" },
+            { name: "Parcel Hubs (L2)", count: "110" },
+            { name: "Nodal Delivery Centres (NDC)", count: "233 (covering 1600+ pincodes)" },
+            { name: "Parcel Packaging Units", count: "1,408" }
+        ];
+
+        const BANKING_DATA = [
+            { title: "ATMs", value: "1,000", desc: "Interoperable since 31.12.2016. Management handed to IPPB from 30.08.2022." },
+            { title: "Internet Banking", value: "14.12.2018", desc: "Launch date for customers." },
+            { title: "Mobile Banking", value: "15.10.2019", desc: "Launch date for customers." },
+            { title: "E-Passbook", value: "12.10.2022", desc: "Facility launched." },
+            { title: "NEFT", value: "18.05.2022", desc: "Interoperability solution deployed." },
+            { title: "RTGS", value: "31.05.2022", desc: "Deployed with IFSC IPOS0000DOP." }
+        ];
+
+        const IPPB_STATS = [
+            { label: "Deposit Balance", value: "₹ 15,319 Crore+" },
+            { label: "Women Customers", value: "48%" },
+            { label: "Women's Accounts (Doorstep)", value: "98%" },
+            { label: "Financial Txns", value: "1,101 Crore" },
+            { label: "DBT Transactions", value: "42.60 Crore (Worth ₹66,375 Cr)" },
+            { label: "AEPS Transactions", value: "11.17 Crore (Worth ₹33,199 Cr)" },
+        ];
+
+        const EXAM_SECTIONS = [
+            { id: 'overview', title: 'Overview & Legal', icon: <Landmark className="w-5 h-5" /> },
+            { id: 'stats', title: 'Network Statistics', icon: <Users className="w-5 h-5" /> },
+            { id: 'history', title: 'History Timeline', icon: <Calendar className="w-5 h-5" /> },
+            { id: 'structure', title: 'Organizational Structure', icon: <Users className="w-5 h-5" /> },
+            { id: 'banking', title: 'Banking & IPPB', icon: <CreditCard className="w-5 h-5" /> },
+            { id: 'logistics', title: 'Mail & Logistics', icon: <Truck className="w-5 h-5" /> },
+            { id: 'services', title: 'Citizen Services', icon: <Globe className="w-5 h-5" /> },
+            { id: 'philately', title: 'Philately', icon: <Stamp className="w-5 h-5" /> },
+            { id: 'hr', title: 'HR & Welfare', icon: <Award className="w-5 h-5" /> },
+            { id: 'events', title: 'Events & Campaigns', icon: <Zap className="w-5 h-5" /> },
+        ];
+
+        // --- Components ---
+
+        const StatCard = ({ label, value, subtext, color }) => (
+            <div className={`p-4 rounded-xl shadow-md border-l-4 ${color} bg-white hover:shadow-lg transition-shadow`}>
+                <h3 className="text-gray-500 text-sm font-semibold uppercase">{label}</h3>
+                <p className="text-2xl font-bold text-gray-800 my-1">{value}</p>
+                {subtext && <p className="text-xs text-gray-600">{subtext}</p>}
+            </div>
+        );
+
+        const SectionHeading = ({ title, icon }) => (
+            <div className="flex items-center space-x-3 mb-6 border-b pb-2 border-gray-200">
+                <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
+                    {icon}
+                </div>
+                <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+            </div>
+        );
+
+        const TableRow = ({ label, value, isHeader = false }) => (
+            <div className={`flex justify-between p-3 ${isHeader ? 'bg-blue-600 text-white font-bold rounded-t-lg' : 'border-b hover:bg-gray-50'}`}>
+                <span className={isHeader ? '' : 'font-medium text-gray-700'}>{label}</span>
+                <span className={isHeader ? '' : 'text-gray-900 font-semibold text-right'}>{value}</span>
+            </div>
+        );
+
+        const InfoBox = ({ title, points, type = "info" }) => {
+            const styles = {
+                info: "bg-blue-50 border-blue-200 text-blue-900",
+                success: "bg-green-50 border-green-200 text-green-900",
+                warning: "bg-orange-50 border-orange-200 text-orange-900",
+                purple: "bg-purple-50 border-purple-200 text-purple-900"
+            };
+
+            return (
+                <div className={`p-4 rounded-lg border ${styles[type]} mb-4`}>
+                    <h4 className="font-bold text-lg mb-2 flex items-center">
+                        {type === 'warning' && <Zap className="w-4 h-4 mr-2" />}
+                        {title}
+                    </h4>
+                    <ul className="list-disc list-inside space-y-1 text-sm">
+                        {points.map((p, i) => <li key={i}>{p}</li>)}
+                    </ul>
+                </div>
+            );
+        };
+
+        // --- Main App Component ---
+
+        function App() {
+            const [activeSection, setActiveSection] = useState('overview');
+            const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+            const renderContent = () => {
+                switch (activeSection) {
+                    case 'overview':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="Department Overview & Legal" icon={<Landmark />} />
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <InfoBox
+                                        title="Vision"
+                                        points={[
+                                            "India Post's products and services will be the customer's first choice."
+                                        ]}
+                                        type="purple"
+                                    />
+                                    <InfoBox
+                                        title="Mission"
+                                        points={[
+                                            "Sustain position as largest postal network.",
+                                            "Provide mail, parcel, money transfer, banking, insurance, retail with speed.",
+                                            "Value-for-money services.",
+                                            "Employees are proud to serve with a human touch.",
+                                            "Enable last mile connectivity as GoI platform."
+                                        ]}
+                                        type="info"
+                                    />
+                                </div>
+
+                                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                        <FileText className="w-5 h-5 mr-2 text-red-500" />
+                                        Constitutional & Legal Provisions
+                                    </h3>
+                                    <div className="space-y-4">
+                                        <div className="bg-red-50 p-4 rounded-md">
+                                            <span className="font-bold block text-red-800">Article 246 (1)</span>
+                                            <p className="text-sm text-red-700">Parliament has exclusive power to make laws. Listed at Entry No. 31 of List I (Union List) in Seventh Schedule.</p>
+                                        </div>
+                                        <div className="bg-green-50 p-4 rounded-md border-l-4 border-green-500">
+                                            <span className="font-bold block text-green-800 text-lg">The Post Office Act, 2023</span>
+                                            <ul className="mt-2 space-y-2 text-sm text-green-700">
+                                                <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-1" /> Passed by Parliament: 2023 (Act 43 of 2023)</li>
+                                                <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-1" /> President's Assent: 24th December 2023</li>
+                                                <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-1" /> <span className="font-bold bg-green-200 px-1 rounded">Came into force: 18th June 2024</span></li>
+                                                <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-1" /> Notification No: S.O. 2352(E) dated 17th June 2024</li>
+                                                <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-1" /> Repealed: Indian Post Office Act, 1898</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+
+                    case 'stats':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="Network Statistics (As on 31.03.2024)" icon={<Users />} />
+
+                                {/* Main Stats Grid */}
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <StatCard label="Total Post Offices" value={STATS.totalPO} color="border-blue-500" />
+                                    <StatCard label="Employees" value={STATS.deptEmployees} subtext={`+ ${STATS.gds} GDS`} color="border-indigo-500" />
+                                    <StatCard label="Avg Area Served" value={STATS.avgArea} color="border-green-500" />
+                                    <StatCard label="Avg Population" value={STATS.avgPopulation} color="border-orange-500" />
+                                </div>
+
+                                {/* Urban vs Rural Visualization */}
+                                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                                    <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                                        <h3 className="font-bold text-gray-700 mb-4 text-center">Urban vs Rural Post Offices</h3>
+                                        <div className="flex h-8 rounded-full overflow-hidden mb-4 text-xs font-bold text-white text-center leading-8">
+                                            <div style={{ width: '9.59%' }} className="bg-blue-600">9.6%</div>
+                                            <div style={{ width: '90.41%' }} className="bg-green-500">90.4%</div>
+                                        </div>
+                                        <div className="flex justify-between text-sm">
+                                            <div className="text-blue-700 font-semibold">
+                                                <div className="text-xl">{STATS.urbanPO}</div>
+                                                Urban ({STATS.urbanPercent})
+                                                <div className="text-xs text-gray-500 font-normal">Avg Pop: {STATS.urbanAvgPop}</div>
+                                            </div>
+                                            <div className="text-green-700 font-semibold text-right">
+                                                <div className="text-xl">{STATS.ruralPO}</div>
+                                                Rural ({STATS.ruralPercent})
+                                                <div className="text-xs text-gray-500 font-normal">Avg Pop: {STATS.ruralAvgPop}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                                        <h3 className="font-bold text-gray-700 mb-4 text-center">Workforce Composition</h3>
+                                        <div className="space-y-4">
+                                            <div className="flex items-center justify-between">
+                                                <span className="flex items-center"><Users className="w-4 h-4 mr-2 text-indigo-500" /> Departmental</span>
+                                                <span className="font-bold">{STATS.deptEmployees}</span>
+                                            </div>
+                                            <div className="flex items-center justify-between">
+                                                <span className="flex items-center"><Users className="w-4 h-4 mr-2 text-green-500" /> Gramin Dak Sevaks</span>
+                                                <span className="font-bold">{STATS.gds}</span>
+                                            </div>
+                                            <div className="h-px bg-gray-200"></div>
+                                            <div className="flex items-center justify-between text-sm text-gray-500">
+                                                <span>Departmental POs</span>
+                                                <span>{STATS.deptPO}</span>
+                                            </div>
+                                            <div className="flex items-center justify-between text-sm text-gray-500">
+                                                <span>Branch POs</span>
+                                                <span>{STATS.branchPO}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bg-blue-50 p-4 rounded-lg mt-4">
+                                    <h4 className="font-bold text-blue-800 mb-2">Armed Forces Network</h4>
+                                    <p className="text-sm">
+                                        • 2 Circle Base Post Offices (CBPO): 56 APO & 99 APO.<br />
+                                        • Headed by Addl. DG (Major General rank).<br />
+                                        • 75% ranks from DoP, remaining recruited by Army.<br />
+                                        • 1 Circle Stamp Depot & 26 Postal Store Depots.
+                                    </p>
+                                </div>
+                            </div>
+                        );
+
+                    case 'history':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="Historical Timeline" icon={<Calendar />} />
+                                <div className="relative border-l-4 border-blue-200 ml-6 space-y-8">
+                                    {FACTS_HISTORY.map((item, index) => (
+                                        <div key={index} className="relative pl-6">
+                                            <div className="absolute -left-[1.3rem] top-0 bg-blue-600 w-6 h-6 rounded-full border-4 border-white"></div>
+                                            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                                                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-2">
+                                                    {item.year}
+                                                </span>
+                                                <p className="text-gray-800 font-medium">{item.event}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        );
+
+                    case 'structure':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="Organizational Structure" icon={<Users />} />
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="bg-white p-5 rounded-lg shadow border-t-4 border-blue-600">
+                                        <h3 className="font-bold text-lg mb-3">Leadership</h3>
+                                        <ul className="space-y-3 text-sm">
+                                            <li className="flex justify-between border-b pb-2">
+                                                <span className="text-gray-600">Head of Dept & PSB Chairman</span>
+                                                <span className="font-semibold">Secretary (Posts)</span>
+                                            </li>
+                                            <li className="flex justify-between border-b pb-2">
+                                                <span className="text-gray-600">Operations Head</span>
+                                                <span className="font-semibold">Director General Postal Services</span>
+                                            </li>
+                                            <li className="flex justify-between border-b pb-2">
+                                                <span className="text-gray-600">Finance Wing Head</span>
+                                                <span className="font-semibold">Addl. Secretary & Financial Advisor (AS&FA)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="bg-white p-5 rounded-lg shadow border-t-4 border-purple-600">
+                                        <h3 className="font-bold text-lg mb-3">Postal Service Board (PSB)</h3>
+                                        <p className="text-sm text-gray-600 mb-2">Apex management body comprising Chairperson + 7 Members:</p>
+                                        <div className="grid grid-cols-2 gap-2 text-xs font-semibold text-purple-700">
+                                            <span className="bg-purple-50 p-2 rounded">Personnel</span>
+                                            <span className="bg-purple-50 p-2 rounded">Operations</span>
+                                            <span className="bg-purple-50 p-2 rounded">Technology</span>
+                                            <span className="bg-purple-50 p-2 rounded">PLI</span>
+                                            <span className="bg-purple-50 p-2 rounded">Banking</span>
+                                            <span className="bg-purple-50 p-2 rounded">HRD</span>
+                                            <span className="bg-purple-50 p-2 rounded">Planning</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bg-gray-50 p-6 rounded-xl">
+                                    <h3 className="font-bold text-center mb-6">Network of 23 Postal Circles</h3>
+                                    <div className="flex flex-wrap gap-2 justify-center">
+                                        {CIRCLES.map(circle => (
+                                            <span key={circle} className="px-3 py-1 bg-white border border-gray-300 rounded-full text-sm hover:bg-blue-50 cursor-default">
+                                                {circle}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        );
+
+                    case 'banking':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="Financial Services & IPPB" icon={<CreditCard />} />
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    {/* POSB Milestones */}
+                                    <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                                        <div className="bg-green-600 p-3 text-white font-bold">POSB Tech Milestones</div>
+                                        <div className="p-4 space-y-3">
+                                            {BANKING_DATA.map((item, idx) => (
+                                                <div key={idx} className="flex flex-col border-b border-gray-100 last:border-0 pb-2">
+                                                    <span className="text-green-700 font-bold">{item.value}</span>
+                                                    <span className="text-gray-800 font-medium">{item.title}</span>
+                                                    <span className="text-xs text-gray-500">{item.desc}</span>
+                                                </div>
+                                            ))}
+                                            <div className="pt-2 text-xs text-gray-500 bg-yellow-50 p-2 rounded border border-yellow-100">
+                                                <span className="font-bold text-yellow-700">Important:</span> PAN validation via NSDL implemented in Finacle w.e.f. 25.01.2022.
+                                                Max 5 CIF linked to one mobile number.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* IPPB Stats */}
+                                    <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                                        <div className="bg-indigo-600 p-3 text-white font-bold">India Post Payments Bank (IPPB)</div>
+                                        <div className="p-4">
+                                            <div className="grid grid-cols-2 gap-4">
+                                                {IPPB_STATS.map((stat, i) => (
+                                                    <div key={i} className="text-center p-2 bg-indigo-50 rounded-lg">
+                                                        <div className="text-lg font-bold text-indigo-800">{stat.value}</div>
+                                                        <div className="text-xs text-indigo-600 uppercase tracking-wide">{stat.label}</div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            <div className="mt-4 p-3 bg-indigo-100 rounded text-sm text-indigo-900">
+                                                <strong>Did you know?</strong> 8.50 Crore CELC (Child Enrolment Lite Client) done.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                                    <h4 className="font-bold text-orange-800">Jan Suraksha Schemes</h4>
+                                    <ul className="list-disc list-inside text-sm text-orange-900 mt-2">
+                                        <li>PMSBY & PMJJBY launched: <strong>07.09.2015</strong> in all CBS POs.</li>
+                                        <li>APY launched: <strong>01.12.2015</strong> in 808 CBS HOs.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        );
+
+                    case 'logistics':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="Mail, Parcel & Logistics" icon={<Truck />} />
+
+                                {/* Functional Units Table */}
+                                <div className="bg-white rounded-lg shadow overflow-hidden">
+                                    <TableRow label="Facility Type" value="Count" isHeader />
+                                    {FUNCTIONAL_UNITS.map((unit, idx) => (
+                                        <TableRow key={idx} label={unit.name} value={unit.count} />
+                                    ))}
+                                </div>
+
+                                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                                    <div className="bg-blue-50 p-4 rounded-lg">
+                                        <h4 className="font-bold text-blue-900 flex items-center mb-2">
+                                            <MapPin className="w-4 h-4 mr-2" /> Technology & Automation
+                                        </h4>
+                                        <ul className="text-sm space-y-2 text-blue-800">
+                                            <li><strong>AMPC:</strong> Delhi & Kolkata. Equipped with Letter Sorting Machine (35k/hr) & Mixed Mail Sorter (18k/hr).</li>
+                                            <li><strong>Semi-Automated Sorting:</strong> 8 Cities (Delhi, Mumbai, Bengaluru, Vijayawada, Jaipur, Kolkata, Lucknow, Hyderabad).</li>
+                                            <li><strong>Click N Book:</strong> Online booking for up to 5kg.</li>
+                                            <li><strong>E-Clearance:</strong> Implemented for 53,792 Letter boxes.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="bg-teal-50 p-4 rounded-lg">
+                                        <h4 className="font-bold text-teal-900 flex items-center mb-2">
+                                            <Truck className="w-4 h-4 mr-2" /> Special Services
+                                        </h4>
+                                        <ul className="text-sm space-y-2 text-teal-800">
+                                            <li><strong>Tarang Post:</strong> Sea-link mail via RoPex Ferry (Hazira to Ghogha). Inaugurated 20th Jan 2023. Reduces 440km to 62km.</li>
+                                            <li><strong>MMS:</strong> 1414 Vehicles. 230 CNG vans. 103 MMS Units.</li>
+                                            <li><strong>RTN:</strong> 76 National Routes covering 50,000+ Kms/day.</li>
+                                            <li><strong>Magazine Post:</strong> Launched 01.04.2022. Tracking facility. Rate: ₹12 (Outside municipal), ₹8 (Inside) for 200g.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                                    <h4 className="font-bold text-gray-800 mb-2">Dak Ghar Niryat Kendra (DNK)</h4>
+                                    <p className="text-sm text-gray-600">
+                                        Initiative with CBIC. 1,013 DNKs operationalized by Dec 2024. Small exporters file Postal Bill of Export electronically.
+                                    </p>
+                                </div>
+                            </div>
+                        );
+
+                    case 'services':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="Citizen Centric Services" icon={<Globe />} />
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <InfoBox
+                                        title="Aadhaar Services (UIDAI)"
+                                        points={[
+                                            "First center: Lucknow (30.06.2017).",
+                                            "Total Centers: 13,352.",
+                                            "Highest Center: Siachin (operationalized this fiscal).",
+                                            "APS Centers: 110.",
+                                            "Services: Enrollment & Updation (Demographic + Biometric)."
+                                        ]}
+                                        type="info"
+                                    />
+
+                                    <InfoBox
+                                        title="Passport Seva (MEA)"
+                                        points={[
+                                            "Pilot: 25.01.2017 (Mysuru & Dahod).",
+                                            "Target: 491 POPSKs.",
+                                            "Operational: 442 (as of 31.12.2024)."
+                                        ]}
+                                        type="purple"
+                                    />
+
+                                    <InfoBox
+                                        title="Common Service Centre (CSC)"
+                                        points={[
+                                            "Pilot: May 2020.",
+                                            "On-boarded: 1,43,513 POs as of 31.12.2024.",
+                                            "Offers G2C and B2C services."
+                                        ]}
+                                        type="success"
+                                    />
+
+                                    <InfoBox
+                                        title="Other Key Partnerships"
+                                        points={[
+                                            "Railways (PRS): MoU 31.07.2017. 316 Centers available.",
+                                            "PMEGP (KVIC): Physical verification of units. MoU 20.08.2024. 20,162 units verified.",
+                                            "KYC (UTI/SUUTI): Door-to-door collection. 4.01 Lakh verifications done."
+                                        ]}
+                                        type="warning"
+                                    />
+                                </div>
+                            </div>
+                        );
+
+                    case 'philately':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="Philately" icon={<Stamp />} />
+
+                                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                                    <div className="grid md:grid-cols-3 gap-6 text-center">
+                                        <div className="p-4 bg-yellow-50 rounded-lg">
+                                            <h3 className="font-bold text-3xl text-yellow-600">43</h3>
+                                            <p className="text-sm text-gray-600">Commemorative Stamps (Jan-Dec 2024)</p>
+                                        </div>
+                                        <div className="p-4 bg-yellow-50 rounded-lg">
+                                            <h3 className="font-bold text-3xl text-yellow-600">60</h3>
+                                            <p className="text-sm text-gray-600">Corporate My Stamps (2023)</p>
+                                        </div>
+                                        <div className="p-4 bg-yellow-50 rounded-lg">
+                                            <h3 className="font-bold text-3xl text-yellow-600">61</h3>
+                                            <p className="text-sm text-gray-600">Special Covers (Tribal products etc.)</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="mt-6 space-y-4">
+                                        <h4 className="font-bold text-gray-800 border-b pb-2">Key Highlights</h4>
+                                        <ul className="space-y-2 text-sm text-gray-700">
+                                            <li>• <strong>Ram Janm Bhoomi:</strong> 6 Stamps released on 18.01.2024. Printed with water/sand from site, sandalwood fragrance, gold foil.</li>
+                                            <li>• <strong>PM Vishwakarma:</strong> Corporate My Stamp on 18 trades released 17.09.2023.</li>
+                                            <li>• <strong>Dhai Akhar:</strong> Started 2017-18. Theme: "The Joy of Writing".</li>
+                                            <li>• <strong>PAC:</strong> Philatelic Advisory Committee. Chaired by Minister for Communications.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+
+                    case 'hr':
+                    case 'events':
+                        return (
+                            <div className="space-y-6 animate-fade-in">
+                                <SectionHeading title="HR, Welfare & Events" icon={<Award />} />
+
+                                {/* Mission Karmayogi */}
+                                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg p-6 text-white mb-6">
+                                    <h3 className="font-bold text-xl mb-2">Mission Karmayogi</h3>
+                                    <p className="opacity-90 text-sm mb-4">E-Learning Portal 'Dak Karmyogi' launched 28th June 2022.</p>
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-semibold">
+                                        <div className="bg-white/20 p-2 rounded">Content: WTDET (Watch, Think, Do...)</div>
+                                        <div className="bg-white/20 p-2 rounded">Pass Mark: 60%</div>
+                                        <div className="bg-white/20 p-2 rounded">Languages: 12</div>
+                                        <div className="bg-white/20 p-2 rounded">Leading Content Provider</div>
+                                    </div>
+                                </div>
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    {/* Training */}
+                                    <div className="bg-white p-4 shadow rounded-lg">
+                                        <h4 className="font-bold text-gray-800 mb-2">Training Infrastructure</h4>
+                                        <ul className="text-sm space-y-1 text-gray-600">
+                                            <li>• <strong>Apex:</strong> RAKNPA Ghaziabad</li>
+                                            <li>• <strong>6 PTCs:</strong> Darbhanga, Guwahati, Madurai, Mysuru, Saharanpur, Vadodara</li>
+                                            <li>• <strong>4 RTCs:</strong> Bhuvaneshwar, Delhi, Nashik, Hubballi</li>
+                                            <li>• <strong>6 ZTCs:</strong> For PAO employees</li>
+                                        </ul>
+                                    </div>
+
+                                    {/* Welfare */}
+                                    <div className="bg-white p-4 shadow rounded-lg">
+                                        <h4 className="font-bold text-gray-800 mb-2">Women's Welfare</h4>
+                                        <ul className="text-sm space-y-1 text-gray-600">
+                                            <li>• <strong>Creche:</strong> ₹60,000 start-up. ₹1,500/child/month recurring.</li>
+                                            <li>• <strong>Tailoring:</strong> ₹5,000 non-recurring. ₹750/month salary.</li>
+                                            <li>• <strong>CPLO:</strong> Central Postal Ladies Organization.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                {/* Swachhta & Weeks */}
+                                <div className="mt-6 bg-green-50 p-5 rounded-lg border border-green-200">
+                                    <h4 className="font-bold text-green-900 mb-3 flex items-center">
+                                        <Calendar className="w-5 h-5 mr-2" />
+                                        Important Dates & Campaigns
+                                    </h4>
+                                    <div className="space-y-3 text-sm text-green-800">
+                                        <p><strong>National Postal Week (Oct 7-11, 2024):</strong></p>
+                                        <ul className="ml-4 space-y-1 opacity-80">
+                                            <li>• Oct 9: World Post Day (Theme: 150 years...)</li>
+                                            <li>• Oct 10: Antyodaya Diwas</li>
+                                            <li>• Oct 11: Vittiya Sashaktikaran Diwas</li>
+                                        </ul>
+                                        <div className="h-px bg-green-200 my-2"></div>
+                                        <p><strong>Swachhta Campaign 4.0:</strong> ₹1.15 Cr revenue from scrap. Theme: "Swabhav Swachhata Sanskaar Swachhata".</p>
+                                        <p><strong>Vigilance Week 2024:</strong> Oct 28 - Nov 3. Theme: "Culture of Integrity for Nation's Prosperity".</p>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+
+                    default:
+                        return null;
+                }
+            };
+
+            return (
+                <div className="flex h-screen bg-gray-100 font-sans text-gray-900 overflow-hidden">
+
+                    {/* Mobile Sidebar Overlay */}
+                    {isSidebarOpen && (
+                        <div
+                            className="fixed inset-0 bg-black/50 z-20 md:hidden"
+                            onClick={() => setIsSidebarOpen(false)}
+                        />
+                    )}
+
+                    {/* Sidebar Navigation */}
+                    <div className={`fixed md:relative z-30 w-72 bg-white h-full shadow-xl transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+                        <div className="p-6 border-b flex justify-between items-center bg-blue-600 text-white">
+                            <div>
+                                <h1 className="text-xl font-extrabold flex items-center">
+                                    <BookOpen className="w-6 h-6 mr-2" />
+                                    Exam Master
+                                </h1>
+                                <p className="text-xs text-blue-100 mt-1">Annual Report 2024-25</p>
+                            </div>
+                            <button onClick={() => setIsSidebarOpen(false)} className="md:hidden">
+                                <X className="w-6 h-6" />
+                            </button>
+                        </div>
+
+                        <nav className="p-4 space-y-1 overflow-y-auto h-[calc(100vh-80px)]">
+                            {EXAM_SECTIONS.map((section) => (
+                                <button
+                                    key={section.id}
+                                    onClick={() => {
+                                        setActiveSection(section.id);
+                                        setIsSidebarOpen(false);
+                                    }}
+                                    className={`w-full flex items-center p-3 rounded-lg transition-all duration-200 ${activeSection === section.id
+                                            ? 'bg-blue-50 text-blue-700 font-bold shadow-sm border-r-4 border-blue-600'
+                                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                        }`}
+                                >
+                                    <span className={`mr-3 ${activeSection === section.id ? 'text-blue-600' : 'text-gray-400'}`}>
+                                        {section.icon}
+                                    </span>
+                                    {section.title}
+                                </button>
+                            ))}
+
+                            <div className="mt-8 p-4 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-lg border border-yellow-200">
+                                <h4 className="font-bold text-yellow-800 text-sm mb-1 flex items-center"><TrendingUp className="w-4 h-4 mr-2" /> Exam Tip</h4>
+                                <p className="text-xs text-yellow-900">
+                                    Focus on <strong>18th June 2024</strong> (New Act implementation) and <strong>9.59%</strong> (Urban PO percentage).
+                                </p>
+                            </div>
+                        </nav>
+                    </div>
+
+                    {/* Main Content Area */}
+                    <div className="flex-1 flex flex-col h-full overflow-hidden">
+                        {/* Mobile Header */}
+                        <div className="bg-white p-4 shadow-sm md:hidden flex items-center justify-between">
+                            <button onClick={() => setIsSidebarOpen(true)} className="text-gray-600">
+                                <Menu className="w-6 h-6" />
+                            </button>
+                            <span className="font-bold text-gray-800">Exam Guide</span>
+                            <div className="w-6"></div>
+                        </div>
+
+                        {/* Scrollable Content */}
+                        <main className="flex-1 overflow-y-auto p-4 md:p-8">
+                            <div className="max-w-4xl mx-auto pb-20">
+                                {renderContent()}
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>
