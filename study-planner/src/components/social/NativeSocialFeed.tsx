@@ -69,7 +69,7 @@ export default function NativeSocialFeed({
             {/* Mobile Header: Compact & Modern */}
             <div className="sticky top-0 z-20 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 pt-[env(safe-area-inset-top)] px-4 py-3">
                 <div className="flex items-center justify-between mb-3">
-                    <h1 className="text-xl font-black text-zinc-900 dark:text-white tracking-tight">Community</h1>
+                    <h1 className="text-xl font-black text-zinc-900 dark:text-white tracking-tight">DG Community</h1>
                     <div className="flex gap-2">
                         <button
                             className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
@@ -93,8 +93,8 @@ export default function NativeSocialFeed({
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-bold transition-all ${activeTab === tab
-                                        ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md transform scale-105'
-                                        : 'bg-white dark:bg-zinc-900 text-zinc-500 border border-zinc-200 dark:border-zinc-800'
+                                    ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md transform scale-105'
+                                    : 'bg-white dark:bg-zinc-900 text-zinc-500 border border-zinc-200 dark:border-zinc-800'
                                     }`}
                             >
                                 {tab}

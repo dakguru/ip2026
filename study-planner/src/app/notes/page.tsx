@@ -11,6 +11,8 @@ const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
     ssr: false
 });
 import { Capacitor } from '@capacitor/core';
+import { Filesystem, Directory } from '@capacitor/filesystem';
+import { Toast } from '@capacitor/toast';
 
 // --- DATA ---
 interface Note {
@@ -50,7 +52,7 @@ const SCHEDULE_MAPPING: Record<string, string> = {
     "Postal Manual Volume VI, Part-III": "16-02-2026",
     "Postal Manual Volume VII": "18-02-2026",
     "Postal Manual Volume VIII": "18-02-2026",
-    "Mail Operations and Money Remittances": "18-02-2026",
+
     "Jansuraksha Schemes": "20-02-2026",
     "Post Office Guide Part-I": "21-02-2026",
     "Post Office Guide Part-II": "24-02-2026",
@@ -163,7 +165,14 @@ const PDF_DATA: Record<string, Note[]> = {
             color: "emerald"
         },
 
-        { title: "Government Savings Promotion Rules, 2018", description: "General rules applicable to all Government Savings Schemes.", color: "emerald", comingSoon: true },
+        {
+            title: "Government Savings Promotion Rules, 2018",
+            description: "General rules applicable to all Government Savings Schemes.",
+            filename: "Government Savings Promotion Rules, 2018 FINAL.pdf",
+            path: "/notes/paper-1/Government Savings Promotion Rules, 2018 FINAL.pdf",
+            size: "0.7 MB",
+            color: "emerald"
+        },
 
 
         // 17. PLI
@@ -210,7 +219,7 @@ const PDF_DATA: Record<string, Note[]> = {
             color: "amber"
         },
         { title: "Postal Manual Volume VIII", description: "Manual for various postal operations.", color: "amber", comingSoon: true },
-        { title: "Mail Operations and Money Remittances", description: "Guidelines on mail handling and remittances.", color: "amber", comingSoon: true },
+
         {
             title: "Postal Manual Volume V",
             description: "Except Appendix-1.",
@@ -409,6 +418,80 @@ export default function NotesPage() {
         return SCHEDULE_MAPPING[title] || fallback;
     };
 
+    const handleDownload = async (url: string, filename: string) => {
+        try {
+            if (!Capacitor.isNativePlatform()) {
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setShowDownloadToast(true);
+                return;
+            }
+
+            // Native Download Logic
+            await Toast.show({
+                text: 'Starting download...',
+                duration: 'short'
+            });
+
+            // 1. Fetch the file
+            const response = await fetch(url);
+            const blob = await response.blob();
+
+            // 2. Convert to base64
+            const reader = new FileReader();
+            reader.readAsDataURL(blob);
+            reader.onloadend = async () => {
+                const base64data = reader.result as string;
+                // Remove the "data:application/pdf;base64," part
+                const data = base64data.split(',')[1];
+
+                try {
+                    // 3. Write via Filesystem
+                    const result = await Filesystem.writeFile({
+                        path: `Download/${filename}`,
+                        data: data,
+                        directory: Directory.ExternalStorage,
+                        recursive: true
+                    });
+
+                    // 4. Notify success
+                    await Toast.show({
+                        text: `File saved to Downloads folder`,
+                        duration: 'long'
+                    });
+
+                } catch (writeError) {
+                    console.error("Write failed, trying Documents", writeError);
+                    // Fallback to Documents if Download fails (less likely on Android 10+ but good safety)
+                    try {
+                        await Filesystem.writeFile({
+                            path: filename,
+                            data: data,
+                            directory: Directory.Documents,
+                        });
+                        await Toast.show({
+                            text: `File saved to Documents`,
+                            duration: 'long'
+                        });
+                    } catch (fallbackError) {
+                        throw fallbackError;
+                    }
+                }
+            };
+
+        } catch (error) {
+            console.error("Download failed", error);
+            await Toast.show({
+                text: 'Download failed. Please check permissions.',
+                duration: 'long'
+            });
+        }
+    };
+
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
             <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel} />
@@ -565,21 +648,13 @@ export default function NotesPage() {
                                                 <Eye className="w-3 h-3 md:w-4 md:h-4" />
                                                 View
                                             </button>
-                                            <a
-                                                href={file.path}
-                                                download={file.filename}
-                                                onClick={(e) => {
-                                                    if (Capacitor.isNativePlatform()) {
-                                                        e.preventDefault();
-                                                        window.open(file.path, '_system');
-                                                    }
-                                                    setShowDownloadToast(true);
-                                                }}
+                                            <button
+                                                onClick={() => handleDownload(file.path || '', file.filename || 'document.pdf')}
                                                 className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-[10px] md:text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
                                             >
                                                 <Download className="w-3 h-3 md:w-4 md:h-4" />
                                                 Download
-                                            </a>
+                                            </button>
                                         </div>
                                         <div className="mt-3 text-center">
                                             <span className="text-[10px] uppercase tracking-wider text-slate-300 font-semibold">{file.size}</span>
@@ -632,21 +707,13 @@ export default function NotesPage() {
                                     {pdfDarkMode ? <div className="w-4 h-4 rounded-full bg-yellow-400" /> : <div className="w-4 h-4 rounded-full bg-zinc-400" />}
                                     <span className="hidden sm:inline">{pdfDarkMode ? 'Light' : 'Dark'}</span>
                                 </button>
-                                <a
-                                    href={selectedPdf}
-                                    download
-                                    onClick={(e) => {
-                                        if (Capacitor.isNativePlatform()) {
-                                            e.preventDefault();
-                                            window.open(selectedPdf, '_system');
-                                        }
-                                        setShowDownloadToast(true);
-                                    }}
+                                <button
+                                    onClick={() => handleDownload(selectedPdf, selectedPdf.split('/').pop() || 'download.pdf')}
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 font-semibold text-xs transition-colors"
                                 >
                                     <Download className="w-4 h-4" />
                                     <span className="hidden sm:inline">Download</span>
-                                </a>
+                                </button>
                                 <button
                                     onClick={() => setSelectedPdf(null)}
                                     className="p-2 rounded-full hover:bg-slate-100 text-slate-500 transition-colors"

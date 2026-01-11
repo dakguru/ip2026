@@ -145,8 +145,8 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
 
                     <div className="grid grid-cols-3 gap-4 border-t border-zinc-100 dark:border-zinc-800 pt-6">
                         <div className="flex flex-col items-center">
-                            <span className="text-xl font-bold text-zinc-800 dark:text-zinc-200">142</span>
-                            <span className="text-[10px] uppercase font-bold text-zinc-400">Rank</span>
+                            <span className="text-xl font-bold text-zinc-800 dark:text-zinc-200">High</span>
+                            <span className="text-[10px] uppercase font-bold text-zinc-400">Consistency</span>
                         </div>
                         <div className="flex flex-col items-center border-l border-r border-zinc-100 dark:border-zinc-800">
                             <span className="text-xl font-bold text-zinc-800 dark:text-zinc-200">{formatTime(timeTaken)}</span>
