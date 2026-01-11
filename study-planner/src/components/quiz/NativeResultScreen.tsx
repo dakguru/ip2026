@@ -23,6 +23,15 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
     const skipped = totalQuestions - Object.keys(answers).length;
     const accuracy = Object.keys(answers).length > 0 ? Math.round((correct / Object.keys(answers).length) * 100) : 0;
 
+    // Consistency Logic based on percentage
+    let consistency = "Improving";
+    if (percentage >= 80) consistency = "High";
+    else if (percentage >= 50) consistency = "Medium";
+
+    // Percentile - simple simulation based on percentage for now as requested
+    // Mapping 0-100 score to 0-99 percentile roughly
+    const displayPercentile = Math.min(99, Math.max(1, percentage));
+
     // Mock Topper Score (usually top 1-5% get 90%+)
     const topperScore = Math.max(score + 2, Math.min(totalQuestions, Math.ceil(totalQuestions * 0.92)));
     const averageScore = Math.round(totalQuestions * 0.65);
@@ -145,7 +154,9 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
 
                     <div className="grid grid-cols-3 gap-4 border-t border-zinc-100 dark:border-zinc-800 pt-6">
                         <div className="flex flex-col items-center">
-                            <span className="text-xl font-bold text-zinc-800 dark:text-zinc-200">High</span>
+                            <span className={`text-xl font-bold ${consistency === 'High' ? 'text-green-600' : consistency === 'Medium' ? 'text-amber-600' : 'text-zinc-600 dark:text-zinc-400'}`}>
+                                {consistency}
+                            </span>
                             <span className="text-[10px] uppercase font-bold text-zinc-400">Consistency</span>
                         </div>
                         <div className="flex flex-col items-center border-l border-r border-zinc-100 dark:border-zinc-800">
@@ -153,7 +164,7 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
                             <span className="text-[10px] uppercase font-bold text-zinc-400">Time</span>
                         </div>
                         <div className="flex flex-col items-center">
-                            <span className="text-xl font-bold text-zinc-800 dark:text-zinc-200">92%</span>
+                            <span className="text-xl font-bold text-zinc-800 dark:text-zinc-200">{displayPercentile}%</span>
                             <span className="text-[10px] uppercase font-bold text-zinc-400">Percentile</span>
                         </div>
                     </div>

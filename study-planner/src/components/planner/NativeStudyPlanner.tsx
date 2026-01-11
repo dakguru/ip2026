@@ -81,7 +81,7 @@ export default function NativeStudyPlanner({
             {/* Header */}
             <div className="sticky top-0 z-30 bg-black/80 backdrop-blur-xl border-b border-white/10 px-4 h-16 flex items-center justify-between pt-[env(safe-area-inset-top)]">
                 <div className="flex flex-col">
-                    <span className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Study Planner</span>
+                    <span className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Dak Guru Study Planner - LDCE IP</span>
                     <h1 className="text-lg font-bold text-slate-100 leading-none">Your Timeline</h1>
                 </div>
                 <div className="flex items-center gap-3">
@@ -103,8 +103,8 @@ export default function NativeStudyPlanner({
                         key={filter}
                         onClick={() => setFilterPaper(filter)}
                         className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all border ${filterPaper === filter
-                                ? 'bg-slate-100 text-black border-slate-100'
-                                : 'bg-zinc-900 text-slate-400 border-white/10'
+                            ? 'bg-slate-100 text-black border-slate-100'
+                            : 'bg-zinc-900 text-slate-400 border-white/10'
                             }`}
                     >
                         {filter}
@@ -177,8 +177,8 @@ export default function NativeStudyPlanner({
                                                     <div className={`flex-1 pl-4 ${borderClass}`}>
                                                         <div className="flex justify-between items-start mb-1">
                                                             <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider ${item.paper === 'Paper I' ? 'bg-blue-500/10 text-blue-400' :
-                                                                    item.paper === 'Paper III' ? 'bg-red-500/10 text-red-400' :
-                                                                        'bg-amber-500/10 text-amber-400'
+                                                                item.paper === 'Paper III' ? 'bg-red-500/10 text-red-400' :
+                                                                    'bg-amber-500/10 text-amber-400'
                                                                 }`}>
                                                                 {item.paper}
                                                             </span>

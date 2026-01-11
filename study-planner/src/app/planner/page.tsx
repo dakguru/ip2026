@@ -26,6 +26,9 @@ import { FULL_SCHEDULE } from '@/data/schedule';
 import { generatePlannerPDF } from '@/lib/pdf-generator';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 import NativeStudyPlanner from '@/components/planner/NativeStudyPlanner';
+import PlannerDashboard from '@/components/planner/PlannerDashboard';
+import FlexibleStudyPlanner from '@/components/planner/FlexibleStudyPlanner';
+import { LayoutGrid, List } from 'lucide-react';
 
 // --- DATA: Full Schedule based on the final optimizations ---
 // --- DATA: Full Schedule imported from @/data/schedule ---
@@ -42,6 +45,10 @@ export default function StudyPlanner() {
         date: null,
         topic: ''
     });
+
+    // Flexible Mode State
+    const [viewMode, setViewMode] = useState<'recommended' | 'flexible'>('recommended');
+    const [topicMetadata, setTopicMetadata] = useState<Record<string, { mastery?: 'confident' | 'partially-confident' | 'not-confident'; completionDate?: string }>>({});
 
     const isMobileApp = useIsMobileApp();
     const [userName, setUserName] = useState<string | null>(null);
@@ -79,6 +86,14 @@ export default function StudyPlanner() {
             setCompletedDays(JSON.parse(saved));
         }
 
+    }, []);
+
+    // Load metadata
+    useEffect(() => {
+        const savedMeta = localStorage.getItem('ldce2026_metadata');
+        if (savedMeta) {
+            setTopicMetadata(JSON.parse(savedMeta));
+        }
     }, []);
 
 
@@ -124,13 +139,39 @@ export default function StudyPlanner() {
         }
     };
 
+
+
     const confirmCompletion = () => {
         if (completionDialog.date) {
             const updated = { ...completedDays, [completionDialog.date]: true };
+            const meta = topicMetadata[completionDialog.date] || {};
+
+            // Auto-set completion date if not flexible mode (or just update metadata anyway)
+            if (!meta.completionDate) {
+                const newMeta = { ...meta, completionDate: new Date().toISOString() };
+                updateMetadataByDate(completionDialog.date, newMeta);
+            }
+
             setCompletedDays(updated);
             localStorage.setItem('ldce2026_progress', JSON.stringify(updated));
         }
         setCompletionDialog(prev => ({ ...prev, open: false }));
+    };
+
+    const updateMetadataByDate = (date: string, meta: any) => {
+        const updated = { ...topicMetadata, [date]: meta };
+        setTopicMetadata(updated);
+        localStorage.setItem('ldce2026_metadata', JSON.stringify(updated));
+    };
+
+    const handleFlexibleStatusUpdate = (item: any, isCompleted: boolean) => {
+        const updated = { ...completedDays, [item.date]: isCompleted };
+        setCompletedDays(updated);
+        localStorage.setItem('ldce2026_progress', JSON.stringify(updated));
+    };
+
+    const handleFlexibleMetadataUpdate = (item: any, meta: any) => {
+        updateMetadataByDate(item.date, meta);
     };
 
     // Filter Logic
@@ -369,155 +410,196 @@ export default function StudyPlanner() {
 
                 {activeTab === 'planner' && (
                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                        {/* --- CONTROLS SECTION (Sticky) --- */}
-                        <div className="sticky top-0 z-30 bg-slate-50/95 backdrop-blur-md py-4 -mx-6 px-6 border-b border-slate-200 mb-8 transition-all print:hidden">
-                            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-                                <div className="flex items-center gap-2 bg-white p-1 rounded-lg border border-slate-200 shadow-sm">
-                                    <button
-                                        onClick={() => setFilterPaper('All')}
-                                        className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${filterPaper === 'All' ? 'bg-slate-100 text-slate-900' : 'text-slate-500 hover:text-slate-900'}`}
-                                    >
-                                        All
-                                    </button>
-                                    <button
-                                        onClick={() => setFilterPaper('Paper I')}
-                                        className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${filterPaper === 'Paper I' ? 'bg-blue-50 text-blue-700' : 'text-slate-500 hover:text-slate-900'}`}
-                                    >
-                                        Paper I
-                                    </button>
-                                    <button
-                                        onClick={() => setFilterPaper('Paper III')}
-                                        className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${filterPaper === 'Paper III' ? 'bg-red-50 text-red-700' : 'text-slate-500 hover:text-slate-900'}`}
-                                    >
-                                        Paper III
-                                    </button>
-                                </div>
+                        {/* --- NEW DASHBOARD --- */}
+                        <div className="mb-8 print:hidden">
+                            <PlannerDashboard
+                                schedule={schedule}
+                                completedDays={completedDays}
+                                topicMetadata={topicMetadata}
+                                totalDuration={128}
+                                startDate={new Date(2026, 0, 14)} // Jan 14, 2026
+                            />
+                        </div>
 
-                                <div className="flex items-center gap-3 w-full md:w-auto">
-                                    <div className="relative w-full md:w-auto flex-1">
-                                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                                        <input
-                                            type="text"
-                                            placeholder="Search topics..."
-                                            className="w-full md:w-64 pl-10 pr-4 py-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-sm"
-                                            value={searchQuery}
-                                            onChange={(e) => setSearchQuery(e.target.value)}
-                                        />
-                                    </div>
-                                    <button
-                                        onClick={scrollToToday}
-                                        className="p-2 bg-white border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors shadow-sm tooltip"
-                                        title="Jump to Today's Task"
-                                    >
-                                        <ArrowDownCircle className="w-5 h-5" />
-                                    </button>
-                                    <button
-                                        onClick={handlePrint}
-                                        className="p-2 bg-white border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors shadow-sm"
-                                        title="Print Schedule"
-                                    >
-                                        <Printer className="w-5 h-5" />
-                                    </button>
-                                </div>
+                        {/* --- MODE SWITCHER --- */}
+                        <div className="flex justify-center mb-8 print:hidden">
+                            <div className="bg-slate-100 p-1 rounded-xl flex gap-1 shadow-inner">
+                                <button
+                                    onClick={() => setViewMode('recommended')}
+                                    className={`px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 transition-all ${viewMode === 'recommended' ? 'bg-white shadow text-blue-700' : 'text-slate-500 hover:text-slate-800'}`}
+                                >
+                                    <List className="w-4 h-4" /> Dak Guru Recommended Schedule
+                                </button>
+                                <button
+                                    onClick={() => setViewMode('flexible')}
+                                    className={`px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 transition-all ${viewMode === 'flexible' ? 'bg-white shadow text-emerald-600' : 'text-slate-500 hover:text-slate-800'}`}
+                                >
+                                    <LayoutGrid className="w-4 h-4" /> Flexible Completion Schedule
+                                </button>
                             </div>
                         </div>
 
-                        {/* --- TIMELINE (Grouped) --- */}
-                        <div className="space-y-8">
-                            {Object.entries(groupedSchedule).map(([month, items]) => (
-                                <div key={month} className="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                                    {/* Month Header */}
-                                    <button
-                                        onClick={() => toggleMonth(month)}
-                                        className="w-full flex items-center justify-between p-6 bg-slate-50/50 hover:bg-slate-100/50 transition-colors cursor-pointer border-b border-slate-100"
-                                    >
-                                        <h3 className="text-xl font-bold text-slate-800 flex items-center gap-3">
-                                            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                                            {month}
-                                            <span className="text-sm font-normal text-slate-400 ml-2">({items.length} tasks)</span>
-                                        </h3>
-                                        {openMonths[month] ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
-                                    </button>
+                        {viewMode === 'flexible' ? (
+                            <FlexibleStudyPlanner
+                                schedule={schedule}
+                                completedDays={completedDays}
+                                topicMetadata={topicMetadata}
+                                onUpdateStatus={handleFlexibleStatusUpdate}
+                                onUpdateMetadata={handleFlexibleMetadataUpdate}
+                            />
+                        ) : (
+                            <>
+                                {/* --- CONTROLS SECTION (Sticky) --- */}
+                                <div className="sticky top-0 z-30 bg-slate-50/95 backdrop-blur-md py-4 -mx-6 px-6 border-b border-slate-200 mb-8 transition-all print:hidden">
+                                    <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                                        <div className="flex items-center gap-2 bg-white p-1 rounded-lg border border-slate-200 shadow-sm">
+                                            <button
+                                                onClick={() => setFilterPaper('All')}
+                                                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${filterPaper === 'All' ? 'bg-slate-100 text-slate-900' : 'text-slate-500 hover:text-slate-900'}`}
+                                            >
+                                                All
+                                            </button>
+                                            <button
+                                                onClick={() => setFilterPaper('Paper I')}
+                                                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${filterPaper === 'Paper I' ? 'bg-blue-50 text-blue-700' : 'text-slate-500 hover:text-slate-900'}`}
+                                            >
+                                                Paper I
+                                            </button>
+                                            <button
+                                                onClick={() => setFilterPaper('Paper III')}
+                                                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${filterPaper === 'Paper III' ? 'bg-red-50 text-red-700' : 'text-slate-500 hover:text-slate-900'}`}
+                                            >
+                                                Paper III
+                                            </button>
+                                        </div>
 
-                                    {/* Month Items (Collapsible) */}
-                                    <div className={`transition-all duration-300 ${openMonths[month] ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                                        <div className="p-4 grid gap-4">
-                                            {items.map((item, index) => {
-                                                const isCompleted = completedDays[item.date];
-                                                const isRevision = item.paper === 'Revision';
-
-                                                return (
-                                                    <div
-                                                        key={index}
-                                                        id={`date-${item.date}`}
-                                                        onClick={() => !isRevision && toggleDay(item.date, item.subTopic)}
-                                                        className={`group relative rounded-xl p-4 border transition-all cursor-pointer
-                                                            ${isRevision
-                                                                ? 'bg-amber-50/50 border-amber-100'
-                                                                : isCompleted
-                                                                    ? 'bg-emerald-50/30 border-emerald-100 opacity-60'
-                                                                    : 'bg-white border-slate-100 hover:border-blue-300 hover:shadow-md hover:translate-x-1'}
-                                                        `}
-                                                    >
-                                                        <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
-                                                            {/* Date & Tag */}
-                                                            <div className="flex items-center gap-4 min-w-[150px]">
-                                                                <div className={`p-2 rounded-lg text-center min-w-[50px] ${isRevision ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-600'}`}>
-                                                                    <div className="text-xs font-bold uppercase">{item.day.substring(0, 3)}</div>
-                                                                    <div className="text-lg font-bold">{item.date.split('-')[0]}</div>
-                                                                </div>
-                                                                <div className="flex flex-col">
-                                                                    <span className="text-xs text-slate-400 font-medium">{item.date.substring(3)}</span>
-                                                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full w-fit mt-1 tracking-wider uppercase
-                                                                        ${item.paper === 'Paper I' ? 'bg-blue-100 text-blue-700' :
-                                                                            item.paper === 'Paper III' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-700'}
-                                                                    `}>
-                                                                        {item.paper}
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-
-                                                            {/* Content */}
-                                                            <div className="flex-1">
-                                                                <h4 className={`text-base font-bold ${isCompleted ? 'text-slate-500 line-through decoration-slate-400' : 'text-blue-950'}`}>
-                                                                    {item.subTopic}
-                                                                </h4>
-                                                                <p className={`text-sm mt-0.5 ${isCompleted ? 'text-slate-400' : 'text-slate-600'}`}>
-                                                                    {item.topic}
-                                                                </p>
-                                                            </div>
-
-                                                            {/* Status/Duration */}
-                                                            <div className="flex items-center gap-4 min-w-[120px] justify-between md:justify-end w-full md:w-auto mt-2 md:mt-0">
-                                                                {!isRevision && (
-                                                                    <span className="text-xs font-semibold text-slate-400 bg-slate-50 px-2 py-1 rounded border border-slate-100">
-                                                                        {item.duration}
-                                                                    </span>
-                                                                )}
-
-                                                                {!isRevision && (
-                                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300
-                                                                        ${isCompleted ? 'bg-emerald-500 text-white shadow-emerald-200 shadow-md' : 'bg-slate-100 text-slate-300 group-hover:bg-blue-100 group-hover:text-blue-500'}
-                                                                    `}>
-                                                                        <CheckCircle2 className="w-5 h-5" />
-                                                                    </div>
-                                                                )}
-
-                                                                {isRevision && (
-                                                                    <div className="flex items-center gap-2 text-amber-600 bg-amber-100/50 px-3 py-1 rounded-full text-xs font-bold border border-amber-100">
-                                                                        <Coffee className="w-3 h-3" /> Weekly Break
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                );
-                                            })}
+                                        <div className="flex items-center gap-3 w-full md:w-auto">
+                                            <div className="relative w-full md:w-auto flex-1">
+                                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                                                <input
+                                                    type="text"
+                                                    placeholder="Search topics..."
+                                                    className="w-full md:w-64 pl-10 pr-4 py-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-sm"
+                                                    value={searchQuery}
+                                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                                />
+                                            </div>
+                                            <button
+                                                onClick={scrollToToday}
+                                                className="p-2 bg-white border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors shadow-sm tooltip"
+                                                title="Jump to Today's Task"
+                                            >
+                                                <ArrowDownCircle className="w-5 h-5" />
+                                            </button>
+                                            <button
+                                                onClick={handlePrint}
+                                                className="p-2 bg-white border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-colors shadow-sm"
+                                                title="Print Schedule"
+                                            >
+                                                <Printer className="w-5 h-5" />
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+
+                                {/* --- TIMELINE (Grouped) --- */}
+                                <div className="space-y-8">
+                                    {Object.entries(groupedSchedule).map(([month, items]) => (
+                                        <div key={month} className="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                                            {/* Month Header */}
+                                            <button
+                                                onClick={() => toggleMonth(month)}
+                                                className="w-full flex items-center justify-between p-6 bg-slate-50/50 hover:bg-slate-100/50 transition-colors cursor-pointer border-b border-slate-100"
+                                            >
+                                                <h3 className="text-xl font-bold text-slate-800 flex items-center gap-3">
+                                                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                                                    {month}
+                                                    <span className="text-sm font-normal text-slate-400 ml-2">({items.length} tasks)</span>
+                                                </h3>
+                                                {openMonths[month] ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
+                                            </button>
+
+                                            {/* Month Items (Collapsible) */}
+                                            <div className={`transition-all duration-300 ${openMonths[month] ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                                                <div className="p-4 grid gap-4">
+                                                    {items.map((item, index) => {
+                                                        const isCompleted = completedDays[item.date];
+                                                        const isRevision = item.paper === 'Revision';
+
+                                                        return (
+                                                            <div
+                                                                key={index}
+                                                                id={`date-${item.date}`}
+                                                                onClick={() => !isRevision && toggleDay(item.date, item.subTopic)}
+                                                                className={`group relative rounded-xl p-4 border transition-all cursor-pointer
+                                                            ${isRevision
+                                                                        ? 'bg-amber-50/50 border-amber-100'
+                                                                        : isCompleted
+                                                                            ? 'bg-emerald-50/30 border-emerald-100 opacity-60'
+                                                                            : 'bg-white border-slate-100 hover:border-blue-300 hover:shadow-md hover:translate-x-1'}
+                                                        `}
+                                                            >
+                                                                <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+                                                                    {/* Date & Tag */}
+                                                                    <div className="flex items-center gap-4 min-w-[150px]">
+                                                                        <div className={`p-2 rounded-lg text-center min-w-[50px] ${isRevision ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-600'}`}>
+                                                                            <div className="text-xs font-bold uppercase">{item.day.substring(0, 3)}</div>
+                                                                            <div className="text-lg font-bold">{item.date.split('-')[0]}</div>
+                                                                        </div>
+                                                                        <div className="flex flex-col">
+                                                                            <span className="text-xs text-slate-400 font-medium">{item.date.substring(3)}</span>
+                                                                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full w-fit mt-1 tracking-wider uppercase
+                                                                        ${item.paper === 'Paper I' ? 'bg-blue-100 text-blue-700' :
+                                                                                    item.paper === 'Paper III' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-700'}
+                                                                    `}>
+                                                                                {item.paper}
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    {/* Content */}
+                                                                    <div className="flex-1">
+                                                                        <h4 className={`text-base font-bold ${isCompleted ? 'text-slate-500 line-through decoration-slate-400' : 'text-blue-950'}`}>
+                                                                            {item.subTopic}
+                                                                        </h4>
+                                                                        <p className={`text-sm mt-0.5 ${isCompleted ? 'text-slate-400' : 'text-slate-600'}`}>
+                                                                            {item.topic}
+                                                                        </p>
+                                                                    </div>
+
+                                                                    {/* Status/Duration */}
+                                                                    <div className="flex items-center gap-4 min-w-[120px] justify-between md:justify-end w-full md:w-auto mt-2 md:mt-0">
+                                                                        {!isRevision && (
+                                                                            <span className="text-xs font-semibold text-slate-400 bg-slate-50 px-2 py-1 rounded border border-slate-100">
+                                                                                {item.duration}
+                                                                            </span>
+                                                                        )}
+
+                                                                        {!isRevision && (
+                                                                            <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300
+                                                                        ${isCompleted ? 'bg-emerald-500 text-white shadow-emerald-200 shadow-md' : 'bg-slate-100 text-slate-300 group-hover:bg-blue-100 group-hover:text-blue-500'}
+                                                                    `}>
+                                                                                <CheckCircle2 className="w-5 h-5" />
+                                                                            </div>
+                                                                        )}
+
+                                                                        {isRevision && (
+                                                                            <div className="flex items-center gap-2 text-amber-600 bg-amber-100/50 px-3 py-1 rounded-full text-xs font-bold border border-amber-100">
+                                                                                <Coffee className="w-3 h-3" /> Weekly Break
+                                                                            </div>
+                                                                        )}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </>
+                        )}
 
                         {/* Empty State */}
                         {filteredSchedule.length === 0 && (
