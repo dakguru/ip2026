@@ -2,10 +2,10 @@
 
 import DashboardCarousel from "@/components/dashboard/DashboardCarousel";
 import Link from "next/link";
-import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell } from "lucide-react";
+import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetHeader } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
 import { useRouter } from "next/navigation";
 
@@ -17,6 +17,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     const router = useRouter();
     const [membership, setMembership] = useState<'free' | 'silver' | 'gold'>('free');
     const [menuOpen, setMenuOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
+    const [notifOpen, setNotifOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");
 
     // Sync membership for accurate display
     useEffect(() => {
@@ -36,6 +39,30 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         router.push('/login');
     };
 
+    const handleSearch = (e: React.FormEvent) => {
+        e.preventDefault();
+        const q = searchQuery.toLowerCase();
+        setSearchOpen(false);
+
+        if (q.includes("syllabus")) {
+            router.push("/syllabus");
+        } else if (q.includes("mock") || q.includes("test") || q.includes("quiz")) {
+            router.push("/quiz");
+        } else if (q.includes("flash")) {
+            router.push("/flashcards");
+        } else if (q.includes("note") || q.includes("pdf")) {
+            router.push("/notes");
+        } else if (q.includes("conduct") || q.includes("ccs")) {
+            router.push("/quiz?topic=p1-04"); // Assuming ID for CCS Rules or general quiz page
+        } else if (q.includes("community")) {
+            router.push("/social");
+        } else {
+            // Fallback or generic search page if it existed
+            // For now redirect to home/explore or just stay
+            alert("No direct match found. Try 'Syllabus', 'Mock Tests', etc.");
+        }
+    };
+
     const mainFeatures = [
         { label: "Web Guide", icon: BookOpen, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/guide" },
         { label: "Flashcards", icon: Layers, color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-900/20", href: "/flashcards" },
@@ -46,6 +73,13 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     ];
 
     const isGold = membership === 'gold';
+
+    const recentNotifications = [
+        { title: "Back Button Fixed", desc: "Navigation issues resolved in the latest update.", time: "2h ago", icon: Info, color: "text-blue-500" },
+        { title: "New Syllabus Added", desc: "Updated LDCE IP 2026 syllabus is now available.", time: "5h ago", icon: BookOpen, color: "text-purple-500" },
+        { title: "Dark Mode Improved", desc: "Better contrast for late-night study sessions.", time: "1d ago", icon: Sparkles, color: "text-amber-500" },
+        { title: "Mock Test Live", desc: "All India Mock Test 3 is now live. Attempt now!", time: "2d ago", icon: TrendingUp, color: "text-red-500" },
+    ];
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
@@ -63,8 +97,10 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                             <SheetContent side="left" className="w-[85%] sm:w-[350px] p-0 border-r-zinc-800 bg-white dark:bg-zinc-950">
                                 {/* ... existing drawer content ... */}
                                 <div className="h-full flex flex-col">
-                                    <SheetTitle className="sr-only">Menu</SheetTitle>
-                                    <SheetDescription className="sr-only">Navigation Menu</SheetDescription>
+                                    <SheetHeader className="sr-only">
+                                        <SheetTitle>Menu</SheetTitle>
+                                        <SheetDescription>Navigation Menu</SheetDescription>
+                                    </SheetHeader>
                                     <div className="p-6 border-b border-slate-100 dark:border-zinc-800 flex items-center gap-4 bg-slate-50 dark:bg-zinc-900">
                                         <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-white shadow-md">
                                             <Image src="/dak-guru-round.png" alt="Logo" fill className="object-cover" />
@@ -116,20 +152,127 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                         <div className="relative w-8 h-8 md:w-9 md:h-9 overflow-hidden rounded-full border border-slate-700 shadow-sm">
                             <Image src="/dak-guru-round.png" alt="Branding" fill className="object-cover" />
                         </div>
-                        <span className="text-xl md:text-2xl font-bold text-white tracking-wide">
+                        {/* UPDATE: Branding Text Color */}
+                        <span className="text-xl md:text-2xl font-bold text-blue-500 tracking-wide">
                             Dak Guru
                         </span>
                     </div>
 
                     {/* Right: Icons & Profile */}
                     <div className="flex items-center gap-4 md:gap-6">
-                        <button className="text-slate-300 hover:text-white transition-colors relative">
-                            <Search className="w-5 h-5" />
-                        </button>
-                        <button className="text-slate-300 hover:text-white transition-colors relative">
-                            <Bell className="w-5 h-5" />
-                            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full border-2 border-slate-900"></span>
-                        </button>
+
+                        {/* SEARCH SHEET */}
+                        <Sheet open={searchOpen} onOpenChange={setSearchOpen}>
+                            <SheetTrigger asChild>
+                                <button className="text-slate-300 hover:text-white transition-colors relative">
+                                    <Search className="w-5 h-5" />
+                                </button>
+                            </SheetTrigger>
+                            <SheetContent side="top" className="h-[90vh] sm:h-auto w-full p-0 bg-slate-50 dark:bg-zinc-950 border-b-0 rounded-b-2xl">
+                                <div className="p-4 pt-[max(16px,env(safe-area-inset-top))]">
+                                    <SheetHeader className="sr-only">
+                                        <SheetTitle>Search</SheetTitle>
+                                    </SheetHeader>
+                                    <form onSubmit={handleSearch} className="flex items-center gap-3 relative mb-6">
+                                        <Search className="w-5 h-5 text-slate-400 absolute left-4" />
+                                        <div className="flex-1">
+                                            <input
+                                                type="text"
+                                                placeholder="Search (e.g., 'Syllabus', 'Mock Test')"
+                                                value={searchQuery}
+                                                onChange={(e) => setSearchQuery(e.target.value)}
+                                                autoFocus
+                                                className="w-full bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-700 rounded-xl py-3.5 pl-12 pr-4 text-slate-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-500/50 placeholder:text-slate-400 font-medium"
+                                            />
+                                        </div>
+                                        <button type="button" onClick={() => setSearchOpen(false)} className="p-2 bg-slate-200 dark:bg-zinc-800 rounded-full">
+                                            <X className="w-5 h-5 text-slate-600 dark:text-zinc-400" />
+                                        </button>
+                                    </form>
+
+                                    <div className="px-1">
+                                        <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">Trending Now</h3>
+                                        <div className="space-y-2">
+                                            <button onClick={() => { setSearchOpen(false); router.push('/quiz'); }} className="w-full flex items-center justify-between p-4 bg-white dark:bg-zinc-900/50 rounded-xl border border-slate-100 dark:border-zinc-800 hover:border-blue-500/30 transition-all group text-left">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
+                                                        <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                                                    </div>
+                                                    <span className="font-semibold text-slate-700 dark:text-zinc-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">Live Mock Test</span>
+                                                </div>
+                                                <ArrowIcon className="w-4 h-4 text-slate-400" />
+                                            </button>
+
+                                            <button onClick={() => { setSearchOpen(false); router.push('/syllabus'); }} className="w-full flex items-center justify-between p-4 bg-white dark:bg-zinc-900/50 rounded-xl border border-slate-100 dark:border-zinc-800 hover:border-purple-500/30 transition-all group text-left">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="bg-purple-100 dark:bg-purple-900/30 p-2 rounded-lg">
+                                                        <BookOpen className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                                                    </div>
+                                                    <span className="font-semibold text-slate-700 dark:text-zinc-200 group-hover:text-purple-600 dark:group-hover:text-purple-400">Syllabus</span>
+                                                </div>
+                                                <ArrowIcon className="w-4 h-4 text-slate-400" />
+                                            </button>
+
+                                            <button onClick={() => { setSearchOpen(false); router.push('/flashcards'); }} className="w-full flex items-center justify-between p-4 bg-white dark:bg-zinc-900/50 rounded-xl border border-slate-100 dark:border-zinc-800 hover:border-amber-500/30 transition-all group text-left">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="bg-amber-100 dark:bg-amber-900/30 p-2 rounded-lg">
+                                                        <Layers className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                                                    </div>
+                                                    <span className="font-semibold text-slate-700 dark:text-zinc-200 group-hover:text-amber-600 dark:group-hover:text-amber-400">Flash Cards</span>
+                                                </div>
+                                                <ArrowIcon className="w-4 h-4 text-slate-400" />
+                                            </button>
+
+                                            <button onClick={() => { setSearchOpen(false); router.push('/quiz?topic=ccs-rules'); }} className="w-full flex items-center justify-between p-4 bg-white dark:bg-zinc-900/50 rounded-xl border border-slate-100 dark:border-zinc-800 hover:border-emerald-500/30 transition-all group text-left">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="bg-emerald-100 dark:bg-emerald-900/30 p-2 rounded-lg">
+                                                        <FileText className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                                                    </div>
+                                                    <span className="font-semibold text-slate-700 dark:text-zinc-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">CCS Conduct Rules MCQs</span>
+                                                </div>
+                                                <ArrowIcon className="w-4 h-4 text-slate-400" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SheetContent>
+                        </Sheet>
+
+                        {/* NOTIFICATIONS SHEET */}
+                        <Sheet open={notifOpen} onOpenChange={setNotifOpen}>
+                            <SheetTrigger asChild>
+                                <button className="text-slate-300 hover:text-white transition-colors relative">
+                                    <Bell className="w-5 h-5" />
+                                    <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full border-2 border-slate-900"></span>
+                                </button>
+                            </SheetTrigger>
+                            <SheetContent side="right" className="w-[85%] sm:w-[400px] p-0 bg-white dark:bg-zinc-950 border-l-zinc-800">
+                                <div className="h-full flex flex-col">
+                                    <div className="p-5 border-b border-slate-100 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900 pt-[max(20px,env(safe-area-inset-top))]">
+                                        <SheetHeader className="text-left">
+                                            <SheetTitle className="text-lg font-bold text-slate-900 dark:text-zinc-100">Notifications</SheetTitle>
+                                            <SheetDescription className="text-xs text-slate-500">Stay updated with latest changes</SheetDescription>
+                                        </SheetHeader>
+                                    </div>
+
+                                    <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                                        {recentNotifications.map((note, i) => (
+                                            <div key={i} className="flex gap-4 p-4 rounded-xl bg-white dark:bg-zinc-900/30 border border-slate-100 dark:border-zinc-800 shadow-sm">
+                                                <div className={`mt-1 p-2 rounded-lg h-fit ${note.color.replace('text-', 'bg-')}/10`}>
+                                                    <note.icon className={`w-5 h-5 ${note.color}`} />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-sm font-bold text-slate-900 dark:text-zinc-100 leading-tight mb-1">{note.title}</h4>
+                                                    <p className="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed mb-2">{note.desc}</p>
+                                                    <span className="text-[10px] font-semibold text-slate-400">{note.time}</span>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </SheetContent>
+                        </Sheet>
+
                         {/* User Avatar */}
                         <Link href="/settings">
                             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-200 to-amber-500 p-[1.5px]">
