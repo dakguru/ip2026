@@ -155,7 +155,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
         checkAuthAndExecute(async () => {
             const newLiked = !hasLikedAnswer;
             setHasLikedAnswer(newLiked);
-            setAnswerLikes(prev => newLiked ? prev + 1 : prev - 1);
+            setAnswerLikes((prev: number) => newLiked ? prev + 1 : prev - 1);
 
             try {
                 await fetch(`/api/community/posts/${post.id}/answer/interact`, {
@@ -169,7 +169,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
             } catch (e) {
                 console.error(e);
                 setHasLikedAnswer(!newLiked);
-                setAnswerLikes(prev => !newLiked ? prev + 1 : prev - 1);
+                setAnswerLikes((prev: number) => !newLiked ? prev + 1 : prev - 1);
             }
         });
     };
@@ -185,7 +185,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                 timestamp: "Just now"
             };
 
-            setAnswerCommentsList(prev => [...prev, newComment]);
+            setAnswerCommentsList((prev: any[]) => [...prev, newComment]);
             setAnswerCommentText("");
 
             try {
