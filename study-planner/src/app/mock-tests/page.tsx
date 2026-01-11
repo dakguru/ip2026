@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info } from "lucide-react";
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval, parse } from "date-fns";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
@@ -444,14 +444,59 @@ function MockTestDetail({ mock }: { mock: MockTest }) {
     );
 }
 
+
+function MockCountdown({ targetDate }: { targetDate: Date }) {
+    const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
+
+    useEffect(() => {
+        // Set target date to 00:00:00 of the given date if it's just a date object,
+        // but inputs are usually specific. Assuming startDate is correct.
+        // Actually, let's ensure we target the *start* of the day if it's implicit,
+        // but `mock.startDate` comes from `new Date(2026, 0, 17) which defaults to 00:00.
+
+        const calculateTimeLeft = () => {
+            const difference = +targetDate - +new Date();
+            if (difference > 0) {
+                return {
+                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                    minutes: Math.floor((difference / 1000 / 60) % 60),
+                    seconds: Math.floor((difference / 1000) % 60),
+                };
+            }
+            return null;
+        };
+
+        setTimeLeft(calculateTimeLeft());
+
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [targetDate]);
+
+    if (!timeLeft) {
+        return <span>View Details</span>;
+    }
+
+    return (
+        <span className="font-mono font-bold tracking-tight text-zinc-900 dark:text-zinc-100 tabular-nums">
+            {timeLeft.days}d : {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
+        </span>
+    );
+}
+
 function MockTestCard({ mock, onClick }: { mock: MockTest, onClick: () => void }) {
     const isLive = mock.status === 'live';
     const isExpired = mock.status === 'expired';
+    const isUpcoming = mock.status === 'upcoming';
 
     return (
         <div onClick={onClick} className={`cursor-pointer bg-white dark:bg-zinc-900 rounded-2xl border shadow-sm md:shadow-lg overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full
             ${isLive ? 'border-red-500 shadow-red-500/20' : 'border-zinc-200 dark:border-zinc-800 hover:border-blue-500/50'}
         `}>
+            {/* Header */}
             <div className={`px-4 py-2 flex justify-between items-center border-b
                 ${isLive ? 'bg-red-500 text-white' : 'bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700'}
             `}>
@@ -474,7 +519,6 @@ function MockTestCard({ mock, onClick }: { mock: MockTest, onClick: () => void }
                     `}>
                         <FileTextIcon className="w-8 h-8" />
                     </div>
-
                 </div>
 
                 <h3 className={`text-xl font-bold mb-2 transition-colors
@@ -521,7 +565,8 @@ function MockTestCard({ mock, onClick }: { mock: MockTest, onClick: () => void }
                     </button>
                 ) : (
                     <button className="w-full py-3 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:border-zinc-400 hover:text-zinc-900 dark:hover:text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2">
-                        View Details
+                        {/* Only show timer for upcoming mocks, specifically targeting the first one usually, but good for all upcoming */}
+                        {isUpcoming ? <MockCountdown targetDate={mock.startDate} /> : "View Details"}
                     </button>
                 )}
             </div>

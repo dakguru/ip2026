@@ -126,6 +126,12 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
     const [likesCount, setLikesCount] = useState<number>(post.likes || 0);
     const [hasLiked, setHasLiked] = useState<boolean>(false);
 
+    // Answer Interaction State
+    const [answerLikes, setAnswerLikes] = useState(post.answer?.upvotes || 0);
+    const [answerCommentsList, setAnswerCommentsList] = useState(post.answer?.commentsList || []);
+    const [hasLikedAnswer, setHasLikedAnswer] = useState(false);
+    const [answerCommentText, setAnswerCommentText] = useState("");
+
     // Sync state with props
     React.useEffect(() => {
         setLikesCount(post.likes || 0);
@@ -134,7 +140,69 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
         } else {
             setHasLiked(false);
         }
-    }, [post.likes, post.likedBy, currentUser]);
+
+        // Sync Answer State
+        if (post.answer) {
+            setAnswerLikes(post.answer.upvotes || 0);
+            setAnswerCommentsList(post.answer.commentsList || []);
+            if (currentUser && post.answer.likedBy) {
+                setHasLikedAnswer(post.answer.likedBy.includes(currentUser.name));
+            }
+        }
+    }, [post.likes, post.likedBy, post.answer, currentUser]);
+
+    const handleAnswerLike = () => {
+        checkAuthAndExecute(async () => {
+            const newLiked = !hasLikedAnswer;
+            setHasLikedAnswer(newLiked);
+            setAnswerLikes(prev => newLiked ? prev + 1 : prev - 1);
+
+            try {
+                await fetch(`/api/community/posts/${post.id}/answer/interact`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        action: 'like',
+                        username: currentUser?.name || "User"
+                    })
+                });
+            } catch (e) {
+                console.error(e);
+                setHasLikedAnswer(!newLiked);
+                setAnswerLikes(prev => !newLiked ? prev + 1 : prev - 1);
+            }
+        });
+    };
+
+    const handlePostAnswerComment = () => {
+        checkAuthAndExecute(async () => {
+            if (!answerCommentText.trim()) return;
+
+            const newComment = {
+                id: Date.now(),
+                author: currentUser?.name || "User",
+                text: answerCommentText,
+                timestamp: "Just now"
+            };
+
+            setAnswerCommentsList(prev => [...prev, newComment]);
+            setAnswerCommentText("");
+
+            try {
+                await fetch(`/api/community/posts/${post.id}/answer/interact`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        action: 'comment',
+                        username: currentUser?.name || "User",
+                        comment: { ...newComment, timestamp: new Date().toLocaleDateString() }
+                    })
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        });
+    };
 
     const handleLike = () => {
         checkAuthAndExecute(async () => {
@@ -411,32 +479,54 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                     </button>
 
                     <div className="flex items-center gap-4 pt-4 border-t border-zinc-100 dark:border-zinc-800">
-                        <button className="flex items-center gap-1 text-zinc-500 hover:text-blue-600 text-xs transition-colors font-medium">
-                            <ThumbsUp className="w-4 h-4" /> {post.answer.upvotes} Helpful
+                        <button
+                            onClick={handleAnswerLike}
+                            className={`flex items-center gap-1 text-xs transition-colors font-bold border px-3 py-1.5 rounded-full ${hasLikedAnswer ? 'bg-blue-50 border-blue-200 text-blue-600 shadow-sm' : 'text-zinc-500 hover:text-blue-600 border-transparent hover:bg-zinc-50'}`}
+                        >
+                            <ThumbsUp className={`w-3.5 h-3.5 ${hasLikedAnswer ? 'fill-blue-600' : ''}`} /> {answerLikes} Helpful
                         </button>
                         <span className="text-zinc-300 text-xs">|</span>
                         <button
                             onClick={toggleCommentsList}
                             className="text-zinc-500 hover:text-blue-600 text-xs text-center transition-colors font-medium hover:underline"
                         >
-                            {post.answer.comments} Comments
+                            {answerCommentsList.length} Comments
                         </button>
                     </div>
 
-                    {/* Answer Specific Comments (Mocked) */}
+                    {/* Answer Specific Comments (Real) */}
                     {showCommentsList && (
                         <div className="mt-4 space-y-3 pl-4 border-l-2 border-zinc-200 dark:border-zinc-700 animate-in fade-in duration-300">
-                            <div className="text-xs">
-                                <span className="font-bold text-zinc-900 dark:text-zinc-100">Arun Kumar</span>
-                                <span className="text-zinc-500 ml-2">Very helpful explanation, thank you sir!</span>
+                            {/* Comment Input */}
+                            <div className="flex gap-2 mb-4">
+                                <input
+                                    type="text"
+                                    value={answerCommentText}
+                                    onChange={(e) => setAnswerCommentText(e.target.value)}
+                                    placeholder="Reply to this answer..."
+                                    className="flex-1 text-xs border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-blue-500 outline-none"
+                                />
+                                <button
+                                    onClick={handlePostAnswerComment}
+                                    className="bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-3 py-1 rounded-lg text-xs font-bold hover:opacity-90"
+                                >
+                                    Post
+                                </button>
                             </div>
-                            <div className="text-xs">
-                                <span className="font-bold text-zinc-900 dark:text-zinc-100">Priya Singh</span>
-                                <span className="text-zinc-500 ml-2">Can you elaborate on Article 15 mock questions?</span>
-                            </div>
-                            <div className="text-xs text-blue-600 cursor-pointer hover:underline">
-                                View all {post.answer.comments} comments
-                            </div>
+
+                            {answerCommentsList.length > 0 ? (
+                                answerCommentsList.map((comment: any, idx: number) => (
+                                    <div key={idx} className="text-xs group bg-zinc-50 dark:bg-zinc-800/50 p-2 rounded-lg">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="font-bold text-zinc-900 dark:text-zinc-100">{comment.author}</span>
+                                            <span className="text-[10px] text-zinc-400">{comment.timestamp}</span>
+                                        </div>
+                                        <span className="text-zinc-600 dark:text-zinc-300 leading-relaxed">{comment.text}</span>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="text-xs text-zinc-400 italic">No comments yet.</p>
+                            )}
                         </div>
                     )}
                 </div>

@@ -1,10 +1,61 @@
 "use client";
 
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 interface WelcomeSectionProps {
     displayName: string;
+}
+
+
+function CountdownTimer() {
+    const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
+
+    useEffect(() => {
+        const targetDate = new Date('2026-01-17T00:00:00');
+
+        const calculateTimeLeft = () => {
+            const difference = +targetDate - +new Date();
+            if (difference > 0) {
+                return {
+                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                    minutes: Math.floor((difference / 1000 / 60) % 60),
+                    seconds: Math.floor((difference / 1000) % 60),
+                };
+            }
+            return null;
+        };
+
+        setTimeLeft(calculateTimeLeft());
+
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    if (!timeLeft) {
+        return <span>Live : All India Mock Tests for LDCE IP 2026</span>;
+    }
+
+    return (
+        <span className="flex items-center gap-2">
+            <span className="flex items-baseline gap-1">
+                <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.days}d</span>
+                <span className="text-[10px] sm:text-xs opacity-80 decoration-0"> : </span>
+                <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.hours}h</span>
+                <span className="text-[10px] sm:text-xs opacity-80 decoration-0"> : </span>
+                <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.minutes}m</span>
+                <span className="text-[10px] sm:text-xs opacity-80 decoration-0"> : </span>
+                <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.seconds}s</span>
+            </span>
+            <span className="mx-1 opacity-50">|</span>
+            <span>All India Mock Tests for LDCE IP 2026</span>
+        </span>
+    );
 }
 
 export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
@@ -42,7 +93,7 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
                             <span className="relative inline-flex rounded-full h-2 w-2 sm:h-3 sm:w-3 bg-white"></span>
                         </span>
                         <span className="text-white font-bold tracking-wide uppercase text-xs sm:text-sm md:text-base drop-shadow-md whitespace-normal sm:whitespace-nowrap text-center">
-                            Live : All India Mock Tests for LDCE IP 2026
+                            <CountdownTimer />
                         </span>
                     </div>
                 </Link>
@@ -50,3 +101,4 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
         </section>
     );
 }
+
