@@ -2,10 +2,10 @@
 
 import DashboardCarousel from "@/components/dashboard/DashboardCarousel";
 import Link from "next/link";
-import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History } from "lucide-react";
+import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"; // Assuming you have shadcn Sheet
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
 import { useRouter } from "next/navigation";
 
@@ -37,215 +37,204 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     };
 
     const mainFeatures = [
-        { label: "Web Guide", icon: BookOpen, color: "text-blue-600 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/guide" },
-        { label: "Flashcards", icon: Layers, color: "text-orange-600 dark:text-orange-400", bg: "bg-orange-50 dark:bg-orange-900/20", href: "/flashcards" },
-        { label: "Community", icon: GraduationCap, color: "text-indigo-600 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "/social" },
-        { label: "PDF Notes", icon: FileText, color: "text-rose-600 dark:text-rose-400", bg: "bg-rose-50 dark:bg-rose-900/20", href: "/notes" },
-        { label: "Curr. Affairs", icon: Globe, color: "text-emerald-600 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/current-affairs" },
-        { label: "DG Blog", icon: PenTool, color: "text-purple-600 dark:text-purple-400", bg: "bg-purple-50 dark:bg-purple-900/20", href: "/blog" },
+        { label: "Web Guide", icon: BookOpen, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/guide" },
+        { label: "Flashcards", icon: Layers, color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-900/20", href: "/flashcards" },
+        { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "/social" },
+        { label: "PDF Notes", icon: FileText, color: "text-rose-700 dark:text-rose-400", bg: "bg-rose-50 dark:bg-rose-900/20", href: "/notes" },
+        { label: "Curr. Affairs", icon: Globe, color: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/current-affairs" },
+        { label: "DG Blog", icon: PenTool, color: "text-purple-700 dark:text-purple-400", bg: "bg-purple-50 dark:bg-purple-900/20", href: "/blog" },
     ];
 
     const isGold = membership === 'gold';
 
     return (
-        <div className="min-h-screen bg-[#FAFAFA] dark:bg-black pb-32 font-sans">
-            {/* Custom Header - Matches Screenshot 2 */}
-            <header className="sticky top-0 z-40 bg-zinc-950 px-4 py-3 flex items-center justify-between pt-[max(12px,env(safe-area-inset-top))] border-b border-zinc-900">
-                <div className="flex items-center gap-4">
-                    {/* Hamburger Menu (Left Panel Trigger) */}
-                    <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
-                        <SheetTrigger asChild>
-                            <button className="text-zinc-400 hover:text-white transition-colors">
-                                <Menu className="w-7 h-7" />
-                            </button>
-                        </SheetTrigger>
-                        <SheetContent side="left" className="w-[85%] sm:w-[350px] p-0 border-r-zinc-800 bg-zinc-50 dark:bg-zinc-950">
-                            <div className="h-full flex flex-col">
-                                <SheetTitle className="sr-only">Menu</SheetTitle> {/* Accessibility fix */}
-                                <SheetDescription className="sr-only">Navigation Menu</SheetDescription>
-                                {/* Sheet Header */}
-                                <div className="p-5 border-b border-zinc-200 dark:border-zinc-800 flex items-center gap-3 bg-white dark:bg-zinc-900">
-                                    <div className="relative w-10 h-10 overflow-hidden rounded-full border border-zinc-200 dark:border-zinc-700">
-                                        <Image src="/dak-guru-round.png" alt="Logo" fill className="object-cover" />
+        <div className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
+            {/* --- ROYAL HEADER --- */}
+            <header className="sticky top-0 z-40 bg-slate-900 dark:bg-black px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] border-b border-slate-800 shadow-xl shadow-slate-900/20">
+                <div className="flex items-center justify-between">
+                    {/* Left: Hamburger + Brand */}
+                    <div className="flex items-center gap-3">
+                        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+                            <SheetTrigger asChild>
+                                <button className="text-slate-300 hover:text-white transition-colors p-1 -ml-1">
+                                    <Menu className="w-6 h-6" />
+                                </button>
+                            </SheetTrigger>
+                            <SheetContent side="left" className="w-[85%] sm:w-[350px] p-0 border-r-zinc-800 bg-white dark:bg-zinc-950">
+                                {/* ... existing drawer content ... */}
+                                <div className="h-full flex flex-col">
+                                    <SheetTitle className="sr-only">Menu</SheetTitle>
+                                    <SheetDescription className="sr-only">Navigation Menu</SheetDescription>
+                                    <div className="p-6 border-b border-slate-100 dark:border-zinc-800 flex items-center gap-4 bg-slate-50 dark:bg-zinc-900">
+                                        <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-white shadow-md">
+                                            <Image src="/dak-guru-round.png" alt="Logo" fill className="object-cover" />
+                                        </div>
+                                        <div>
+                                            <h2 className="text-lg font-bold text-slate-900 dark:text-zinc-100 tracking-tight">Dak Guru</h2>
+                                            <p className="text-xs text-slate-500 font-medium">Professional Learning</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Dak Guru</h2>
-                                        <p className="text-xs text-zinc-500">Learning App</p>
+
+                                    <div className="flex-1 overflow-y-auto p-4 space-y-1">
+                                        {[
+                                            { href: "/", icon: Home, label: "Home", color: "text-slate-500" },
+                                            { href: "/guide", icon: Lightbulb, label: "Web Guide", color: "text-blue-600" },
+                                            { href: "/syllabus", icon: BookOpen, label: "Syllabus", color: "text-purple-600" },
+                                            { href: "/pyq", icon: History, label: "Previous Year Qs", color: "text-orange-600" },
+                                            { href: "/social", icon: MessageCircle, label: "Community", color: "text-indigo-600" },
+                                            { href: "/current-affairs", icon: Globe, label: "Current Affairs", color: "text-emerald-600" },
+                                            { href: "/notes", icon: FileText, label: "PDF Notes", color: "text-rose-600" },
+                                            { href: "/about", icon: Info, label: "About Us", color: "text-slate-500" },
+                                        ].map((item) => (
+                                            <Link
+                                                key={item.href}
+                                                href={item.href}
+                                                className="flex items-center gap-3 p-3.5 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-medium transition-colors"
+                                                onClick={() => setMenuOpen(false)}
+                                            >
+                                                <item.icon className={`w-5 h-5 ${item.color}`} /> {item.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+
+                                    <div className="p-4 border-t border-slate-100 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900/50 space-y-4">
+                                        <div className="flex items-center justify-between px-2">
+                                            <span className="text-sm font-medium text-slate-600 dark:text-zinc-400">Appearance</span>
+                                            <ThemeToggle />
+                                        </div>
+                                        <button
+                                            onClick={handleLogout}
+                                            className="w-full flex items-center justify-center gap-2 p-3 rounded-lg font-semibold text-white bg-red-600 hover:bg-red-700 shadow-sm transition-all"
+                                        >
+                                            <LogOut className="w-4 h-4" /> Sign Out
+                                        </button>
                                     </div>
                                 </div>
+                            </SheetContent>
+                        </Sheet>
 
-                                {/* Menu Items */}
-                                <div className="flex-1 overflow-y-auto p-4 space-y-2">
-                                    <Link href="/" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
-                                        <Home className="w-5 h-5 text-zinc-400" /> Home
-                                    </Link>
-                                    <Link href="/guide" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
-                                        <Lightbulb className="w-5 h-5 text-blue-500" /> Web Guide
-                                    </Link>
-                                    <Link href="/syllabus" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
-                                        <BookOpen className="w-5 h-5 text-purple-500" /> Syllabus
-                                    </Link>
-                                    <Link href="/pyq" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
-                                        <History className="w-5 h-5 text-orange-500" /> Previous Year Qs
-                                    </Link>
-                                    <Link href="/social" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
-                                        <MessageCircle className="w-5 h-5 text-indigo-500" /> Community
-                                    </Link>
-                                    <Link href="/current-affairs" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
-                                        <Globe className="w-5 h-5 text-emerald-500" /> Current Affairs
-                                    </Link>
-                                    <Link href="/notes" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
-                                        <FileText className="w-5 h-5 text-rose-500" /> PDF Notes
-                                    </Link>
-                                    <Link href="/about" className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium transition-colors" onClick={() => setMenuOpen(false)}>
-                                        <Info className="w-5 h-5 text-zinc-400" /> About Us
-                                    </Link>
-                                </div>
-
-                                {/* Sheet Footer */}
-                                <div className="p-4 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 space-y-4">
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Theme</span>
-                                        <ThemeToggle />
-                                    </div>
-                                    <button
-                                        onClick={handleLogout}
-                                        className="w-full flex items-center justify-center gap-2 p-3 rounded-xl font-semibold text-red-600 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 hover:bg-red-100 transition-colors"
-                                    >
-                                        <LogOut className="w-5 h-5" /> Log Out
-                                    </button>
-                                </div>
-                            </div>
-                        </SheetContent>
-                    </Sheet>
-
-                    {/* Logo & Text - Matches Screenshot */}
-                    <Link href="/" className="flex items-center gap-3">
-                        <div className="relative w-10 h-10 overflow-hidden rounded-full border border-zinc-800 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-                            <Image src="/dak-guru-round.png" alt="Logo" fill className="object-cover" />
+                        <div className="relative w-8 h-8 md:w-9 md:h-9 overflow-hidden rounded-full border border-slate-700 shadow-sm">
+                            <Image src="/dak-guru-round.png" alt="Branding" fill className="object-cover" />
                         </div>
-                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400 hidden sm:inline-block md:inline-block">
+                        <span className="text-xl md:text-2xl font-bold text-white tracking-wide">
                             Dak Guru
                         </span>
-                        <span className="text-xl font-bold text-blue-400 sm:hidden">
-                            Dak Guru
-                        </span>
-                    </Link>
-                </div>
+                    </div>
 
-                <div className="flex items-center gap-3">
-                    {/* Glowing UPGRADE Button - Hidden for Free & Gold Users (Only for Silver) */}
-                    {membership === 'silver' && (
-                        <Link href="/pricing" className="relative group">
-                            <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-600 rounded-full opacity-60 group-hover:opacity-100 blur-[6px] transition duration-200 animate-pulse"></div>
-                            <div className="relative px-4 py-1.5 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-500 rounded-full flex items-center justify-center shadow-lg border border-amber-300/50">
-                                <span className="text-amber-950 text-[11px] font-black uppercase tracking-widest whitespace-nowrap drop-shadow-sm">Upgrade</span>
+                    {/* Right: Icons & Profile */}
+                    <div className="flex items-center gap-4 md:gap-6">
+                        <button className="text-slate-300 hover:text-white transition-colors relative">
+                            <Search className="w-5 h-5" />
+                        </button>
+                        <button className="text-slate-300 hover:text-white transition-colors relative">
+                            <Bell className="w-5 h-5" />
+                            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full border-2 border-slate-900"></span>
+                        </button>
+                        {/* User Avatar */}
+                        <Link href="/settings">
+                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-200 to-amber-500 p-[1.5px]">
+                                <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
+                                    <User className="w-4 h-4 text-amber-100" />
+                                </div>
                             </div>
                         </Link>
-                    )}
+                    </div>
+                </div>
 
-                    {/* User Avatar - Matches Screenshot */}
-                    <Link href="/settings">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-600 p-[2px]">
-                            <div className="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center relative overflow-hidden">
-                                <User className="w-5 h-5 text-white" />
-                            </div>
-                        </div>
-                    </Link>
+                {/* User Greeting - Inside Header for Royal Feel */}
+                <div className="mt-5 mb-1 flex items-center justify-between">
+                    <div>
+                        <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Hello,</p>
+                        <h1 className="text-xl font-bold text-white flex items-center gap-2">
+                            {displayName} <span className="text-lg">👋</span>
+                        </h1>
+                    </div>
                 </div>
             </header>
 
-            <div className="space-y-6 pt-1">
-                {/* Welcome Message */}
-                <div className="px-5 pt-2 pb-1">
-                    <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">Hello,</p>
-                    <h1 className="text-2xl font-black tracking-tight flex items-center gap-2">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400">
-                            {displayName.split(' ')[0]}
-                        </span>
-                        <span className="text-2xl animate-wave">👋</span>
-                    </h1>
-                </div>
+            <div className="space-y-6 pt-5">
 
-                {/* --- ANDROID ANNOUNCEMENT BANNER --- */}
-                <div className="px-5">
-                    <div className="mx-auto max-w-[95%] relative overflow-hidden rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 p-3 shadow-md shadow-indigo-500/20">
-                        {/* Background Deco */}
-                        <div className="absolute top-0 right-0 -mr-4 -mt-4 w-16 h-16 rounded-full bg-white/10 blur-xl"></div>
-
-                        <div className="relative z-10 flex items-center justify-center gap-3 text-center">
-                            <div className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 shrink-0">
-                                <Info className="w-4 h-4 text-indigo-100" />
-                            </div>
-                            <div>
-                                <h4 className="text-xs font-bold text-white mb-0.5">Update Coming Soon!</h4>
-                                <p className="text-[10px] text-indigo-100 leading-tight font-medium opacity-90">
-                                    "Back Button" fix will be in the next Play Store update.
-                                </p>
-                            </div>
+                {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
+                <div className="px-4 md:px-6">
+                    <div className="relative overflow-hidden rounded-lg bg-blue-900/5 dark:bg-blue-900/20 border-l-4 border-blue-600 bg-white dark:bg-zinc-900 shadow-sm p-4 flex items-start gap-4">
+                        <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full shrink-0">
+                            <Info className="w-5 h-5 text-blue-700 dark:text-blue-400" />
+                        </div>
+                        <div>
+                            <h4 className="text-sm font-bold text-slate-900 dark:text-zinc-100 mb-1">Update Coming Soon</h4>
+                            <p className="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
+                                "Back Button" fix will be available in the next Play Store update.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                {/* 1. Carousel */}
-                <div className="pl-4">
-                    <DashboardCarousel />
+                {/* --- CAROUSEL (Royal) --- */}
+                <div className="pl-4 md:pl-6 overflow-visible">
+                    <div className="rounded-xl overflow-hidden shadow-lg shadow-blue-900/10">
+                        <DashboardCarousel />
+                    </div>
                 </div>
 
-                {/* PRO UPGRADE CARD - Hidden for Gold Users */}
+                {/* --- PRO UPGRADE CARD (Royal Theme) --- */}
                 {!isGold && (
-                    <div className="px-5">
-                        <Link href="/pricing" className="block relative overflow-hidden rounded-[2rem] shadow-xl shadow-amber-500/20 group transform transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
-                            <div className="absolute inset-0 bg-gradient-to-br from-amber-400 via-orange-500 to-red-600"></div>
+                    <div className="px-4 md:px-6">
+                        <Link href="/pricing" className="block relative overflow-hidden rounded-2xl shadow-xl shadow-slate-900/5 group transform transition-all duration-300 hover:scale-[1.01]">
+                            {/* Deep Royal Gradient Background */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-800"></div>
 
-                            {/* Decorative Patterns */}
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-white/15 transition-colors duration-500"></div>
-                            <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-300/20 rounded-full blur-2xl -ml-12 -mb-12"></div>
+                            {/* Gold Accents */}
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                            <div className="absolute bottom-0 left-0 w-32 h-32 bg-amber-600/10 rounded-full blur-2xl -ml-8 -mb-8"></div>
 
-                            <div className="relative z-10 p-4 flex flex-row items-center justify-between gap-3">
-                                <div className="text-white space-y-1">
-                                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-white/20 backdrop-blur-md border border-white/20 text-[9px] font-bold uppercase tracking-widest shadow-sm">
-                                        <Crown className="w-2.5 h-2.5 text-yellow-200 fill-current" />
-                                        <span>Premium Access</span>
+                            <div className="relative z-10 p-5 flex flex-row items-center justify-between gap-4">
+                                <div className="space-y-2">
+                                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/20 border border-amber-500/30 text-[10px] font-bold text-amber-300 uppercase tracking-wider">
+                                        <Crown className="w-3 h-3 fill-current" />
+                                        <span>Premium</span>
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-black leading-tight mb-0.5 drop-shadow-sm">
+                                        <h3 className="text-lg font-bold text-white leading-tight">
                                             Upgrade to Gold
                                         </h3>
-                                        <p className="text-xs text-amber-50 font-medium leading-relaxed max-w-[200px]">
-                                            Unlock full syllabus mock tests & PDF library.
+                                        <p className="text-xs text-slate-400 font-medium mt-1">
+                                            Unlock full mock tests & PDF library.
                                         </p>
                                     </div>
                                 </div>
 
                                 <div className="shrink-0">
-                                    <span className="inline-flex items-center gap-1.5 bg-white text-orange-600 px-3.5 py-2 rounded-xl font-bold text-xs shadow-xl shadow-black/10 group-hover:bg-orange-50 transition-colors">
-                                        Get Started <ChevronRight className="w-3.5 h-3.5" />
-                                    </span>
+                                    <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-2.5 rounded-lg font-semibold text-xs shadow-lg hover:shadow-amber-500/25 transition-all flex items-center gap-1">
+                                        Get Started <ChevronRight className="w-3 h-3" />
+                                    </div>
                                 </div>
                             </div>
                         </Link>
                     </div>
                 )}
 
-                {/* 2. Main Features Grid (Crisp Shadows) */}
-                <div className="px-5">
-                    <div className="flex items-center justify-between mb-5 px-1">
-                        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 tracking-tight flex items-center gap-2">
-                            <Sparkles className="w-4 h-4 text-purple-500" /> Quick Actions
+                {/* --- QUICK ACTIONS (Symmetrical Grid) --- */}
+                <div className="px-4 md:px-6">
+                    <div className="flex items-center gap-2 mb-5">
+                        <div className="h-4 w-1 bg-blue-600 rounded-full"></div>
+                        <h3 className="text-base font-bold text-slate-900 dark:text-zinc-100 tracking-tight">
+                            Quick Actions
                         </h3>
                     </div>
-                    <div className="grid grid-cols-3 gap-4">
+
+                    <div className="grid grid-cols-3 gap-x-4 gap-y-8">
                         {mainFeatures.map((item) => (
                             <Link
                                 key={item.label}
                                 href={item.href}
                                 className="flex flex-col items-center gap-3 group"
                             >
-                                <div className={`w-[84px] h-[84px] rounded-[1.5rem] flex items-center justify-center ${item.bg} ${item.color} shadow-[0_4px_16px_-4px_rgba(0,0,0,0.06)] border border-white dark:border-zinc-800 active:scale-95 transition-all duration-300 group-hover:shadow-[0_8px_24px_-6px_rgba(0,0,0,0.12)] group-hover:-translate-y-1`}>
-                                    <item.icon className="w-8 h-8 opacity-100 drop-shadow-sm" strokeWidth={1.8} />
+                                <div className={`w-[72px] h-[72px] sm:w-[80px] sm:h-[80px] rounded-2xl flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden`}>
+                                    {/* Subtle shine effect */}
+                                    <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                    <item.icon className={`w-8 h-8 ${item.color} drop-shadow-sm`} strokeWidth={1.5} />
                                 </div>
-                                <span className="text-xs font-semibold text-center text-zinc-600 dark:text-zinc-400 leading-tight group-hover:text-zinc-900 dark:group-hover:text-zinc-200 transition-colors">
+                                <span className="text-[11px] font-bold text-center text-slate-600 dark:text-zinc-400 leading-tight group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
                                     {item.label}
                                 </span>
                             </Link>
@@ -253,31 +242,22 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </div>
                 </div>
 
-                {/* 3. Community Highlights (Stunning Card) */}
-                <div className="px-5">
-                    <div className="group relative overflow-hidden rounded-[2rem] bg-indigo-600 shadow-[0_10px_30px_-10px_rgba(79,70,229,0.4)] active:scale-[0.98] transition-all">
-                        {/* Background Image/Gradient */}
-                        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
-                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 via-indigo-600 to-violet-700"></div>
-
-                        <div className="relative z-10 p-6 sm:p-8 text-white flex flex-col items-start">
-                            <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-4 border border-white/20 shadow-inner">
-                                <GraduationCap className="w-6 h-6 text-indigo-100" />
+                {/* --- COMMUNITY (Professional Card) --- */}
+                <div className="px-4 md:px-6 pb-4">
+                    <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 shadow-lg shadow-slate-200/50 dark:shadow-none">
+                        <div className="p-5 flex items-center gap-4">
+                            <div className="w-12 h-12 rounded-full bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center shrink-0">
+                                <GraduationCap className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                             </div>
-
-                            <h3 className="text-xl font-bold mb-2">Join the Community</h3>
-                            <p className="text-indigo-100 text-sm mb-6 leading-relaxed max-w-xs font-medium opacity-90">
-                                Connect with thousands of aspirants. Discuss doubts, share strategies, and grow together.
-                            </p>
-
-                            <Link href="/social" className="w-full sm:w-auto text-center bg-white text-indigo-700 px-6 py-3.5 rounded-xl font-bold text-sm shadow-xl hover:bg-indigo-50 transition-colors">
-                                Enter Discussion Forum
+                            <div className="flex-1">
+                                <h3 className="text-sm font-bold text-slate-900 dark:text-zinc-100">Join the Community</h3>
+                                <p className="text-xs text-slate-500 dark:text-zinc-400 mt-0.5 leading-snug">
+                                    Connect with aspirants, discuss, and grow.
+                                </p>
+                            </div>
+                            <Link href="/social" className="px-4 py-2 bg-slate-900 dark:bg-zinc-800 text-white rounded-lg text-xs font-bold hover:bg-slate-800 transition-colors">
+                                Join
                             </Link>
-                        </div>
-
-                        {/* Decorative 3D Effect */}
-                        <div className="absolute -right-8 -bottom-8 opacity-10 transform rotate-12 pointer-events-none group-hover:scale-110 transition-transform duration-700">
-                            <GraduationCap className="w-48 h-48" />
                         </div>
                     </div>
                 </div>
