@@ -230,6 +230,9 @@ export default function StudyPlanner() {
                 toggleDay={toggleDay}
                 progress={progress}
                 userName={userName}
+                topicMetadata={topicMetadata}
+                onUpdateStatus={handleFlexibleStatusUpdate}
+                onUpdateMetadata={handleFlexibleMetadataUpdate}
             />
         );
     }
