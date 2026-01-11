@@ -175,9 +175,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                 <Info className="w-5 h-5 text-indigo-100" />
                             </div>
                             <div>
-                                <h4 className="text-sm font-bold text-white mb-1">App Update Available!</h4>
+                                <h4 className="text-sm font-bold text-white mb-1">Update Coming Soon!</h4>
                                 <p className="text-xs text-indigo-100 leading-relaxed font-medium opacity-90">
-                                    We've fixed the "Back Button" issue. Please update your app from the Play Store for a smoother experience.
+                                    The "Back Button" handling has been fixed and will be available in the upcoming Live App update on the Play Store.
                                 </p>
                             </div>
                         </div>
