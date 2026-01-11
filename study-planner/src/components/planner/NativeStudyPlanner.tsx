@@ -88,19 +88,34 @@ export default function NativeStudyPlanner({
     return (
         <div className="min-h-screen bg-black text-slate-200 font-sans pb-32">
             {/* Header */}
-            <div className="sticky top-0 z-30 bg-black/80 backdrop-blur-xl border-b border-white/10 px-4 h-16 flex items-center justify-between pt-[env(safe-area-inset-top)]">
-                <div className="flex flex-col">
-                    <span className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Dak Guru Study Planner - LDCE IP</span>
-                    <h1 className="text-lg font-bold text-slate-100 leading-none">Your Timeline</h1>
+            <div className="sticky top-0 z-30 bg-black/80 backdrop-blur-xl border-b border-white/10 px-4 py-3 flex items-center justify-between pt-[calc(env(safe-area-inset-top)+12px)]">
+                <div>
+                    <h1 className="text-xl font-bold text-slate-100">Study Planner</h1>
+                    <p className="text-xs text-slate-500 font-medium">Track your journey to IP 2026</p>
                 </div>
-                <div className="flex items-center gap-3">
-                    <div className="text-right">
-                        <p className="text-[10px] text-slate-500 font-bold uppercase">Progress</p>
-                        <p className="text-sm font-bold text-blue-400">{progress}% Done</p>
+                <div className="flex items-center gap-3 bg-zinc-900/50 px-3 py-1.5 rounded-full border border-white/5">
+                    <div className="text-right mr-1">
+                        <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider">Progress</p>
+                        <p className="text-xs font-bold text-emerald-400">{progress}%</p>
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center p-0.5 relative">
-                        <div className="absolute inset-0 rounded-full border-2 border-blue-500/30" style={{ clipPath: `inset(0 0 0 ${100 - progress}%)` }} />
-                        <span className="text-[10px] font-bold text-blue-400">{Math.round(progress)}</span>
+                    <div className="w-8 h-8 md:w-10 md:h-10">
+                        <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                            <path
+                                className="text-zinc-800"
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                            />
+                            <path
+                                className="text-emerald-500"
+                                strokeDasharray={`${progress}, 100`}
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                            />
+                        </svg>
                     </div>
                 </div>
             </div>

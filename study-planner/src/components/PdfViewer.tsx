@@ -19,18 +19,24 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     const [pageNumber, setPageNumber] = useState(1);
     const [scale, setScale] = useState(1.0);
     const [loading, setLoading] = useState(true);
+    const [loadProgress, setLoadProgress] = useState(0);
     const [containerWidth, setContainerWidth] = useState<number>(0);
-    const containerRef = useState<HTMLDivElement | null>(null); // Note: using callback ref pattern or useRef below would be better, but let's stick to simple ref first
 
     function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
         setNumPages(numPages);
         setLoading(false);
     }
 
+    function onDocumentLoadProgress({ loaded, total }: { loaded: number; total: number }) {
+        if (total > 0) {
+            setLoadProgress(Math.round((loaded / total) * 100));
+        }
+    }
+
     // Adjust scale based on container width
     useEffect(() => {
         const updateWidth = () => {
-            const container = document.getElementById('pdf-container'); // Keeping ID for now as ref switch requires changing JSX return too
+            const container = document.getElementById('pdf-container');
             if (container) {
                 setContainerWidth(container.clientWidth);
             }
@@ -40,6 +46,47 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         window.addEventListener('resize', updateWidth);
         return () => window.removeEventListener('resize', updateWidth);
     }, []);
+
+    const LoadingUI = () => (
+        <div className="flex flex-col items-center justify-center gap-4 mt-20 p-6">
+            <div className="relative w-16 h-16">
+                {/* Circular Progress Background */}
+                <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                    <path
+                        className="text-slate-200 dark:text-zinc-800"
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                    />
+                    <path
+                        className="text-purple-600 drop-shadow-md transition-all duration-300 ease-out"
+                        strokeDasharray={`${loadProgress || 30}, 100`}
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                    />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <Loader2 className="w-5 h-5 text-purple-600 animate-spin" />
+                </div>
+            </div>
+
+            <div className="text-center space-y-1">
+                <p className="font-bold text-slate-700 dark:text-slate-200 text-lg">
+                    {loadProgress > 0 ? `${loadProgress}%` : 'Loading...'}
+                </p>
+                <p className="text-xs text-slate-400 font-medium">Preparing document for view</p>
+
+                {/* Mock "Retrying" text if it takes too long, to comfort user */}
+                <p className="text-[10px] text-slate-300 dark:text-zinc-600 pt-2 animate-pulse">
+                    Optimizing for Android...
+                </p>
+            </div>
+        </div>
+    );
 
     return (
         <div className="flex flex-col h-full bg-slate-50 dark:bg-zinc-900" id="pdf-container">
@@ -86,27 +133,12 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
 
             {/* Document Area */}
             <div className={`flex-1 overflow-auto flex justify-center p-4 min-h-0 ${darkMode ? 'bg-zinc-900 invert-pdf' : 'bg-slate-100'}`}>
-                {loading && (
-                    <div className="flex items-center justify-center h-full">
-                        <Loader2 className="w-8 h-8 animate-spin text-purple-600" />
-                    </div>
-                )}
-
                 <Document
                     file={url}
                     onLoadSuccess={onDocumentLoadSuccess}
-                    loading={
-                        <div className="flex flex-col items-center gap-2 mt-20">
-                            <Loader2 className="w-8 h-8 animate-spin text-purple-500" />
-                            <span className="text-sm text-slate-400">Loading document...</span>
-                        </div>
-                    }
-                    error={
-                        <div className="flex flex-col items-center gap-2 mt-20 text-red-500">
-                            <span className="font-bold">Failed to load PDF</span>
-                            <span className="text-sm">Please try downloading instead.</span>
-                        </div>
-                    }
+                    onLoadProgress={onDocumentLoadProgress}
+                    loading={<LoadingUI />}
+                    error={<LoadingUI />}
                     className="max-w-full"
                 >
                     <div className="shadow-lg">
