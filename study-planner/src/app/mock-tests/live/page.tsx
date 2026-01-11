@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowLeft, Timer, CheckCircle2, History, Trophy, AlertCircle, Play, XCircle, LayoutGrid, X, FileDown } from "lucide-react";
+import { ArrowLeft, Timer, CheckCircle2, History, Trophy, AlertCircle, Play, XCircle, LayoutGrid, X, FileDown, Lock, Sparkles, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
 import { LIVE_MOCK_QUESTIONS, Question } from "@/data/live_mock_data";
@@ -9,12 +9,19 @@ import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import NativeQuizRunner from "@/components/quiz/NativeQuizRunner";
+import Script from "next/script";
 
 interface LeaderboardEntry {
     _id: string;
     userName: string;
     score: number;
     submittedAt: string;
+}
+
+declare global {
+    interface Window {
+        Razorpay: any;
+    }
 }
 
 export default function LiveMockTestPage() {
@@ -32,12 +39,15 @@ export default function LiveMockTestPage() {
     const [submissionStatus, setSubmissionStatus] = useState<'just_submitted' | 'already_submitted'>('just_submitted');
     const [showDownloadNotification, setShowDownloadNotification] = useState(false);
 
+    // Payment & Membership States (Unused for this free sample test, but kept for consistency)
+    const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
+
+    // Sample Test is ALWAYS FREE
+    const canStart = true;
+
     const questions: Question[] = LIVE_MOCK_QUESTIONS;
     const total = questions.length;
     const currentQ = questions[currentQIndex];
-
-    // Removed unused hasChecked state if not used, or keep it if unsure. It was in previous file but unused in visible logic. keeping strictly to restore.
-    const [hasChecked, setHasChecked] = useState(false);
 
     useEffect(() => {
         // Get user session
@@ -51,6 +61,9 @@ export default function LiveMockTestPage() {
                 }
                 if (session.name) {
                     setUserName(session.name);
+                }
+                if (session.membershipLevel) {
+                    setMembershipLevel(session.membershipLevel);
                 }
             } catch (e) {
                 console.error("Session parse error");
@@ -81,13 +94,12 @@ export default function LiveMockTestPage() {
 
     useEffect(() => {
         let timer: NodeJS.Timeout;
-        // Only run web timer if NOT mobile app (Mobile app handles its own timer in NativeQuizRunner)
         if (gameState === 'test' && timeLeft > 0 && !isMobileApp) {
             timer = setInterval(() => {
                 setTimeLeft(prev => {
                     if (prev <= 1) {
                         clearInterval(timer);
-                        handleSubmit(true); // Auto-submit
+                        handleSubmit(true);
                         return 0;
                     }
                     return prev - 1;
@@ -123,7 +135,6 @@ export default function LiveMockTestPage() {
         setIsSubmitting(true);
         const finalAnswers = mobileAnswers || answers;
 
-        // Sync state if coming from mobile
         if (mobileAnswers) {
             setAnswers(mobileAnswers);
         }
@@ -131,7 +142,7 @@ export default function LiveMockTestPage() {
         let newScore = 0;
         questions.forEach(q => {
             if (finalAnswers[q.id] === q.correctAnswer) {
-                newScore += 2; // 2 marks per question
+                newScore += 2;
             }
         });
         setScore(newScore);
@@ -161,11 +172,7 @@ export default function LiveMockTestPage() {
 
     const handleDownloadPDF = async () => {
         const doc = new jsPDF();
-
-        // Set global font
         doc.setFont("helvetica", "normal");
-
-        // Add Logo
         try {
             const logoPath = '/android-logo.jpg';
             const img = new Image();
@@ -178,24 +185,19 @@ export default function LiveMockTestPage() {
         } catch (err) {
             console.error("Error adding logo", err);
         }
-
-        // Title Section (Centered relative to page width 210mm)
         doc.setFont("helvetica", "bold");
         doc.setFontSize(20);
-        doc.setTextColor(79, 70, 229); // Indigo 600
+        doc.setTextColor(79, 70, 229);
         doc.text("All India Live Mock Test Results", 105, 22, { align: "center" });
 
-        // Branding
         doc.setFont("helvetica", "normal");
         doc.setFontSize(10);
         doc.setTextColor(128, 128, 128);
         doc.text("Powered by Dak Guru www.dakguru.com", 105, 29, { align: "center" });
 
-        // Separator Line
         doc.setDrawColor(230, 230, 230);
         doc.line(15, 40, 195, 40);
 
-        // User Details Grid
         doc.setFont("helvetica", "bold");
         doc.setFontSize(11);
         doc.setTextColor(0, 0, 0);
@@ -215,19 +217,16 @@ export default function LiveMockTestPage() {
         doc.setTextColor(score >= 15 ? 22 : 220, score >= 15 ? 163 : 38, score >= 15 ? 74 : 38);
         doc.text(`${score} / 30`, 50, 60);
 
-        doc.setTextColor(0, 0, 0); // Reset
+        doc.setTextColor(0, 0, 0);
 
-        // content start y
         let yPos = 75;
 
         questions.forEach((q, index) => {
-            // Check page break
             if (yPos > 270) {
                 doc.addPage();
                 yPos = 20;
             }
 
-            // Question Text
             doc.setFont("helvetica", "bold");
             doc.setFontSize(11);
             doc.setTextColor(0, 0, 0);
@@ -236,10 +235,9 @@ export default function LiveMockTestPage() {
             doc.text(qNumber, 15, yPos);
 
             const splitQTitle = doc.splitTextToSize(q.text, 170);
-            doc.text(splitQTitle, 25, yPos); // Indent question text slightly
+            doc.text(splitQTitle, 25, yPos);
             yPos += splitQTitle.length * 5 + 4;
 
-            // Render Table if exists
             if (q.table) {
                 autoTable(doc, {
                     startY: yPos,
@@ -249,17 +247,15 @@ export default function LiveMockTestPage() {
                     headStyles: { fillColor: [79, 70, 229], textColor: 255, fontSize: 10, font: "helvetica", fontStyle: "bold" },
                     styles: { fontSize: 9, cellPadding: 3, font: "helvetica" },
                     margin: { left: 25, right: 15 },
-                    columnStyles: { 0: { cellWidth: 'auto' } }, // Auto width
+                    columnStyles: { 0: { cellWidth: 'auto' } },
                 });
                 yPos = (doc as any).lastAutoTable.finalY + 6;
             }
 
-            // Options
             doc.setFont("helvetica", "normal");
             doc.setFontSize(10);
 
             q.options.forEach((opt, optIndex) => {
-                // Check page break for options
                 if (yPos > 275) {
                     doc.addPage();
                     yPos = 20;
@@ -268,40 +264,34 @@ export default function LiveMockTestPage() {
                 const isSelected = answers[q.id] === optIndex;
                 const isCorrect = q.correctAnswer === optIndex;
 
-                let color = [50, 50, 50]; // Dark Grey default
+                let color = [50, 50, 50];
 
                 if (isCorrect) {
-                    color = [22, 163, 74]; // Green 600
+                    color = [22, 163, 74];
                 } else if (isSelected && !isCorrect) {
-                    color = [220, 38, 38]; // Red 600
+                    color = [220, 38, 38];
                 } else if (isSelected) {
-                    // Should be covered by above, but just in case
-                    color = [79, 70, 229]; // Indigo
+                    color = [79, 70, 229];
                 }
 
                 doc.setTextColor(color[0], color[1], color[2]);
 
-                // Draw Letter
                 const letter = String.fromCharCode(65 + optIndex);
                 doc.setFont("helvetica", isCorrect || isSelected ? "bold" : "normal");
 
-                // Align Letter at previous icon position
                 doc.text(`${letter}.`, 25, yPos);
 
-                // Draw Option Text
                 doc.setFont("helvetica", "normal");
-                const splitOpt = doc.splitTextToSize(opt, 160); // Increased width slightly since shifted left
+                const splitOpt = doc.splitTextToSize(opt, 160);
                 doc.text(splitOpt, 35, yPos);
 
                 yPos += splitOpt.length * 5 + 1;
             });
 
-            doc.setTextColor(0, 0, 0); // Reset to black
+            doc.setTextColor(0, 0, 0);
             yPos += 3;
 
-            // Explanation
             if (q.explanation) {
-                // Check page break for explanation
                 const explText = `Explanation: ${q.explanation}`;
                 const splitExpl = doc.splitTextToSize(explText, 165);
 
@@ -310,18 +300,17 @@ export default function LiveMockTestPage() {
                     yPos = 20;
                 }
 
-                // Background box for explanation
                 const boxHeight = splitExpl.length * 4 + 4;
-                doc.setFillColor(249, 250, 251); // Gray 50
-                doc.setDrawColor(229, 231, 235); // Gray 200
-                doc.rect(25, yPos - 3, 170, boxHeight, 'FD'); // Fill and Draw
+                doc.setFillColor(249, 250, 251);
+                doc.setDrawColor(229, 231, 235);
+                doc.rect(25, yPos - 3, 170, boxHeight, 'FD');
 
                 doc.setFont("helvetica", "italic");
                 doc.setFontSize(9);
-                doc.setTextColor(75, 85, 99); // Gray 600
+                doc.setTextColor(75, 85, 99);
 
                 doc.text(splitExpl, 28, yPos);
-                yPos += boxHeight + 8; // Extra padding after question
+                yPos += boxHeight + 8;
             } else {
                 yPos += 8;
             }
@@ -355,6 +344,7 @@ export default function LiveMockTestPage() {
                         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"></div>
                         <h1 className="text-3xl font-extrabold mb-2 relative z-10">All India Live Mock Test</h1>
                         <p className="text-indigo-100 relative z-10">Sample Test for LDCE IP 2026 Aspirants</p>
+                        <div className="mt-2 inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold ring-1 ring-white/30">Free for Everyone</div>
                     </div>
 
                     <div className="p-8">
@@ -395,6 +385,7 @@ export default function LiveMockTestPage() {
                             </div>
                         </div>
 
+                        {/* ACCESS CONTROL AREA - ALWAYS OPEN FOR SAMPLE */}
                         <div className="flex gap-4">
                             <Link href="/mock-tests" className="flex-1 py-3 text-center rounded-xl font-bold text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                                 Cancel
@@ -408,7 +399,6 @@ export default function LiveMockTestPage() {
             </div>
         );
     }
-
     // --- TEST SCREEN ---
     if (gameState === 'test') {
         if (isMobileApp) {

@@ -6,7 +6,8 @@ import ContactForm from "@/components/ContactForm";
 import FeatureGrid from "@/components/FeatureGrid";
 import WelcomeSection from "@/components/WelcomeSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import LaunchPopup from "@/components/LaunchPopup";
+import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
+// import LaunchPopup from "@/components/LaunchPopup";
 
 interface WebLandingPageProps {
     displayName: string;
@@ -23,6 +24,9 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
 
             {/* 1.5. Launch Popup - Disabled as per request */}
             {/* {!["gold", "silver"].includes(membershipLevel.toLowerCase()) && <LaunchPopup />} */}
+
+            {/* 1.6. Mock Test Description Popup */}
+            <MockTestAnnouncementPopup />
 
             {/* 2. Hero Section */}
             <WelcomeSection displayName={displayName} />

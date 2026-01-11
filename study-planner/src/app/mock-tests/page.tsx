@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2 } from "lucide-react";
 import { FULL_SCHEDULE } from "@/data/schedule";
-import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval, parse } from "date-fns";
+import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval } from "date-fns";
 import { useMemo, useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import Script from "next/script";
 
 // Mock Test Interface
 interface MockTest {
@@ -21,8 +22,41 @@ interface MockTest {
     duration: number; // minutes
 }
 
+declare global {
+    interface Window {
+        Razorpay: any;
+    }
+}
+
 export default function MockTestsPage() {
     const isMobileApp = useIsMobileApp();
+    const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
+    const [paidTests, setPaidTests] = useState<string[]>([]);
+    const [userEmail, setUserEmail] = useState<string | null>(null);
+    const [userName, setUserName] = useState<string>("Aspirant");
+    const [processingId, setProcessingId] = useState<string | null>(null);
+
+    useEffect(() => {
+        // Get user session
+        const cookie = document.cookie.split('; ').find(row => row.startsWith('user_session='));
+        if (cookie) {
+            try {
+                const session = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
+                if (session.email) setUserEmail(session.email);
+                if (session.name) setUserName(session.name);
+                if (session.membershipLevel) setMembershipLevel(session.membershipLevel);
+            } catch (e) {
+                console.error("Session parse error");
+            }
+        }
+
+        // Load paid tests
+        const paid = localStorage.getItem('paid_mock_tests');
+        if (paid) {
+            setPaidTests(paid.split(','));
+        }
+    }, []);
+
     const mockTests = useMemo(() => {
         const mocks: MockTest[] = [];
         const today = startOfToday();
@@ -34,17 +68,13 @@ export default function MockTestsPage() {
         });
 
         let currentDate = new Date(2026, 0, 17); // Start from Jan 17, 2026 (Saturday)
-        const endDate = new Date(2026, 4, 10);   // Extend till end of schedule (approx May for provided data)
+        const endDate = new Date(2026, 4, 10);   // Extend till end of schedule
 
         let mockCount = 1;
 
         while (currentDate <= endDate) {
             const saturdayDate = currentDate;
             const sundayDate = addDays(saturdayDate, 1);
-
-            // Get topics from CURRENT week (Monday to Friday before this Saturday)
-            // Example: For Sat Jan 17, take Jan 12 (Mon) to Jan 16 (Fri)
-            // Note: Jan 14 is start, so for first week it will just pick up Jan 14, 15, 16
 
             const mondayDate = addDays(saturdayDate, -5);
             const fridayDate = addDays(saturdayDate, -1);
@@ -55,10 +85,9 @@ export default function MockTestsPage() {
             const interval = eachDayOfInterval({ start: mondayDate, end: fridayDate });
 
             interval.forEach(d => {
-                const dateStr = format(d, 'dd-MM-yyyy'); // Match format in FULL_SCHEDULE (e.g. 14-01-2026)
+                const dateStr = format(d, 'dd-MM-yyyy');
                 const item = planMap.get(dateStr);
 
-                // Only add valid topics, ignoring revisions/breaks
                 if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
                     const cleanTopic = item.subTopic.trim();
                     if (!weekTopics.includes(cleanTopic)) {
@@ -78,10 +107,7 @@ export default function MockTestsPage() {
                 status = 'expired';
             }
 
-            // Push Mock Test
-            // Only push if we have topics OR if it's the first one (which might have partial topics)
-            // Actually, we should just push all scheduled Saturdays to maintain continuity
-            if (weekTopics.length > 0 || mockCount === 1) { // Ensure at least first one shows even if partial
+            if (weekTopics.length > 0 || mockCount === 1) {
                 mocks.push({
                     id: `mock-${format(saturdayDate, 'yyyy-MM-dd')}`,
                     title: `Weekly Mock Test - ${mockCount.toString().padStart(2, '0')}`,
@@ -109,8 +135,75 @@ export default function MockTestsPage() {
     // Dialog State
     const [selectedMock, setSelectedMock] = useState<MockTest | null>(null);
 
+    const handleEnroll = async (mock: MockTest) => {
+        if (!userEmail) {
+            alert("Please log in to enroll.");
+            window.location.href = '/login';
+            return;
+        }
+
+        setProcessingId(mock.id);
+
+        try {
+            // Simulate API call for order creation
+            // In production: const res = await fetch('/api/create-order', ...);
+
+            // Allow simulated success for UI testing if backend not ready
+            const order = {
+                id: "order_mock_" + Date.now(),
+                amount: 4900,
+                currency: "INR"
+            };
+
+            const options = {
+                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || 'rzp_test_placeholder',
+                amount: order.amount,
+                currency: order.currency,
+                name: "Dak Guru",
+                description: `Enrollment: ${mock.title}`,
+                image: "/dak-guru-round.png",
+                order_id: order.id.startsWith('order_') ? undefined : order.id, // Use valid ID in prod
+                handler: async function (response: any) {
+                    // Success
+                    const newPaidList = [...paidTests, mock.id];
+                    setPaidTests(newPaidList);
+                    localStorage.setItem('paid_mock_tests', newPaidList.join(','));
+                    alert("Enrollment Successful! You can now access this test when it goes live.");
+                    setProcessingId(null);
+                },
+                prefill: {
+                    name: userName,
+                    email: userEmail,
+                    contact: ""
+                },
+                theme: {
+                    color: "#dc2626"
+                },
+                modal: {
+                    ondismiss: function () {
+                        setProcessingId(null);
+                    }
+                }
+            };
+
+            const rzp = new window.Razorpay(options);
+            rzp.on('payment.failed', function (response: any) {
+                alert("Payment Failed: " + response.error.description);
+                setProcessingId(null);
+            });
+            rzp.open();
+
+        } catch (error: any) {
+            console.error("Enrollment Error:", error);
+            alert("Enrollment failed. Please try again.");
+            setProcessingId(null);
+        }
+    };
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pb-20 transition-colors">
+            <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+
             {/* Hero Section */}
             {isMobileApp ? (
                 // Mobile App Optimized Hero (Compact & Beautiful)
@@ -226,25 +319,10 @@ export default function MockTestsPage() {
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                                     </span>
-                                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white">Attempt Live Sample Test</span>
+                                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white">Attempt Free Sample Test</span>
                                     <ArrowLeft className="w-5 h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Link>
-                        </div>
-
-                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 text-xs md:text-sm font-medium text-zinc-300">
-                            <div className="flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
-                                <Users className="w-4 h-4 text-blue-400" />
-                                <span>1000+ Aspirants</span>
-                            </div>
-                            <div className="flex items-center gap-2 px-4 py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
-                                <Trophy className="w-4 h-4 text-yellow-400" />
-                                <span>All India Rank</span>
-                            </div>
-                            <div className="flex items-center gap-2 px-4 py-2 bg-zinc-800/50 rounded-full backdrop-blur-sm border border-zinc-700">
-                                <Clock className="w-4 h-4 text-green-400" />
-                                <span>Latest Pattern</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -257,7 +335,15 @@ export default function MockTestsPage() {
                     {activeMocks.length > 0 && (
                         <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                             {activeMocks.map(mock => (
-                                <MockTestCard key={mock.id} mock={mock} onClick={() => setSelectedMock(mock)} />
+                                <MockTestCard
+                                    key={mock.id}
+                                    mock={mock}
+                                    onClick={() => setSelectedMock(mock)}
+                                    isPaid={paidTests.includes(mock.id)}
+                                    membershipLevel={membershipLevel}
+                                    onEnroll={() => handleEnroll(mock)}
+                                    isProcessing={processingId === mock.id}
+                                />
                             ))}
                         </div>
                     )}
@@ -294,7 +380,15 @@ export default function MockTestsPage() {
 
                                 <div className="grid gap-5 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                                     {upcomingMocks.map(mock => (
-                                        <MockTestCard key={mock.id} mock={mock} onClick={() => setSelectedMock(mock)} />
+                                        <MockTestCard
+                                            key={mock.id}
+                                            mock={mock}
+                                            onClick={() => setSelectedMock(mock)}
+                                            isPaid={paidTests.includes(mock.id)}
+                                            membershipLevel={membershipLevel}
+                                            onEnroll={() => handleEnroll(mock)}
+                                            isProcessing={processingId === mock.id}
+                                        />
                                     ))}
                                 </div>
                             </div>
@@ -309,7 +403,14 @@ export default function MockTestsPage() {
                             </h2>
                             <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
                                 {previousMocks.map(mock => (
-                                    <MockTestCard key={mock.id} mock={mock} onClick={() => setSelectedMock(mock)} />
+                                    <MockTestCard
+                                        key={mock.id}
+                                        mock={mock}
+                                        onClick={() => setSelectedMock(mock)}
+                                        isPaid={true} // Previous tests always viewable/result (or handle appropriately)
+                                        membershipLevel={membershipLevel}
+                                        onEnroll={() => { }}
+                                    />
                                 ))}
                             </div>
                         </div>
@@ -346,7 +447,15 @@ export default function MockTestsPage() {
 
             <Dialog open={!!selectedMock} onOpenChange={(open) => !open && setSelectedMock(null)}>
                 <DialogContent className="max-w-2xl w-[95%] max-h-[85vh] overflow-y-auto rounded-2xl">
-                    {selectedMock && <MockTestDetail mock={selectedMock} />}
+                    {selectedMock && (
+                        <MockTestDetail
+                            mock={selectedMock}
+                            membershipLevel={membershipLevel}
+                            isPaid={paidTests.includes(selectedMock.id)}
+                            onEnroll={() => handleEnroll(selectedMock)}
+                            isProcessing={processingId === selectedMock.id}
+                        />
+                    )}
                 </DialogContent>
             </Dialog>
 
@@ -354,8 +463,16 @@ export default function MockTestsPage() {
     );
 }
 
-function MockTestDetail({ mock }: { mock: MockTest }) {
+function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing }: {
+    mock: MockTest;
+    membershipLevel: string;
+    isPaid: boolean;
+    onEnroll: () => void;
+    isProcessing?: boolean;
+}) {
     const isLive = mock.status === 'live';
+    const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
+    const canAccess = isExempt || isPaid;
 
     return (
         <>
@@ -430,9 +547,20 @@ function MockTestDetail({ mock }: { mock: MockTest }) {
                 </div>
 
                 {isLive ? (
-                    <button className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 transition-all flex items-center justify-center gap-2">
-                        <PlayCircle className="w-6 h-6" /> Start Test Now
-                    </button>
+                    canAccess ? (
+                        <button className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 transition-all flex items-center justify-center gap-2">
+                            <PlayCircle className="w-6 h-6" /> Start Test Now
+                        </button>
+                    ) : (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                            disabled={isProcessing}
+                            className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/50 flex items-center justify-center gap-2 transition-all transform active:scale-95 animate-pulse"
+                        >
+                            {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
+                            Enroll Now - ₹49
+                        </button>
+                    )
                 ) : (
                     <button disabled className="w-full py-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold flex items-center justify-center gap-2 cursor-not-allowed">
                         <Lock className="w-5 h-5" />
@@ -449,11 +577,6 @@ function MockCountdown({ targetDate }: { targetDate: Date }) {
     const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
 
     useEffect(() => {
-        // Set target date to 00:00:00 of the given date if it's just a date object,
-        // but inputs are usually specific. Assuming startDate is correct.
-        // Actually, let's ensure we target the *start* of the day if it's implicit,
-        // but `mock.startDate` comes from `new Date(2026, 0, 17) which defaults to 00:00.
-
         const calculateTimeLeft = () => {
             const difference = +targetDate - +new Date();
             if (difference > 0) {
@@ -487,10 +610,26 @@ function MockCountdown({ targetDate }: { targetDate: Date }) {
     );
 }
 
-function MockTestCard({ mock, onClick }: { mock: MockTest, onClick: () => void }) {
+function MockTestCard({
+    mock,
+    onClick,
+    membershipLevel,
+    isPaid,
+    onEnroll,
+    isProcessing
+}: {
+    mock: MockTest;
+    onClick: () => void;
+    membershipLevel: string;
+    isPaid: boolean;
+    onEnroll: () => void;
+    isProcessing?: boolean;
+}) {
     const isLive = mock.status === 'live';
     const isExpired = mock.status === 'expired';
     const isUpcoming = mock.status === 'upcoming';
+    const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
+    const canAccess = isExempt || isPaid;
 
     return (
         <div onClick={onClick} className={`cursor-pointer bg-white dark:bg-zinc-900 rounded-2xl border shadow-sm md:shadow-lg overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full
@@ -519,6 +658,19 @@ function MockTestCard({ mock, onClick }: { mock: MockTest, onClick: () => void }
                     `}>
                         <FileTextIcon className="w-8 h-8" />
                     </div>
+                    {/* Membership Badge if Included */}
+                    {isExempt && (
+                        <div className="px-2 py-1 bg-gradient-to-r from-amber-200 to-yellow-400 text-yellow-900 text-[10px] font-bold rounded shadow-sm">
+                            {membershipLevel === 'gold' ? 'GOLD' : 'SILVER'} ACCESS
+                        </div>
+                    )}
+                    {/* Paid Enrolled Badge - Explicitly for paid users */}
+                    {isPaid && !isExempt && (
+                        <div className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold rounded-full border border-green-200 dark:border-green-800 flex items-center gap-1 shadow-sm animate-in fade-in zoom-in duration-300">
+                            <CheckCircle2 className="w-3 h-3" />
+                            PAID & ENROLLED
+                        </div>
+                    )}
                 </div>
 
                 <h3 className={`text-xl font-bold mb-2 transition-colors
@@ -549,25 +701,43 @@ function MockTestCard({ mock, onClick }: { mock: MockTest, onClick: () => void }
                         <Clock className="w-4 h-4 mr-3 text-zinc-400" />
                         <span>{mock.duration} Minutes</span>
                     </div>
-                    <div className="flex items-center text-sm text-zinc-600 dark:text-zinc-300">
-                        <CheckCircle2 className="w-4 h-4 mr-3 text-zinc-400" />
-                        <span>{mock.questionCount} Questions • {mock.marks} Marks</span>
-                    </div>
                 </div>
 
                 {isLive ? (
-                    <button className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/30 flex items-center justify-center gap-2">
-                        <PlayCircle className="w-5 h-5" /> Attempt Now
-                    </button>
+                    canAccess ? (
+                        <button className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/30 flex items-center justify-center gap-2">
+                            <PlayCircle className="w-5 h-5" /> Attempt Now
+                        </button>
+                    ) : (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                            disabled={isProcessing}
+                            className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/50 flex items-center justify-center gap-2 animate-pulse"
+                        >
+                            {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
+                            Enroll Now - ₹49
+                        </button>
+                    )
                 ) : isExpired ? (
                     <button className="w-full py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold cursor-not-allowed flex items-center justify-center gap-2">
                         View Result
                     </button>
                 ) : (
-                    <button className="w-full py-3 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:border-zinc-400 hover:text-zinc-900 dark:hover:text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2">
-                        {/* Only show timer for upcoming mocks, specifically targeting the first one usually, but good for all upcoming */}
-                        {isUpcoming ? <MockCountdown targetDate={mock.startDate} /> : "View Details"}
-                    </button>
+                    // Upcoming Logic
+                    canAccess ? (
+                        <button className="w-full py-3 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:border-zinc-400 hover:text-zinc-900 dark:hover:text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2">
+                            <MockCountdown targetDate={mock.startDate} />
+                        </button>
+                    ) : (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                            disabled={isProcessing}
+                            className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/50 flex items-center justify-center gap-2"
+                        >
+                            {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
+                            Enroll Now - ₹49
+                        </button>
+                    )
                 )}
             </div>
         </div>
