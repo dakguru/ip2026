@@ -95,54 +95,65 @@ export default function FlexibleStudyPlanner({
     return (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             {/* Controls */}
+            {/* Controls */}
             <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4 mb-6 sticky top-24 z-20">
-                <div className="flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center">
+                <div className="flex flex-col gap-4">
 
-                    {/* Filters Left */}
-                    <div className="flex flex-wrap gap-2">
-                        <div className="flex items-center bg-slate-50 rounded-lg p-1 border border-slate-200">
+                    {/* Top Row: Search */}
+                    <div className="relative w-full">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                        <input
+                            type="text"
+                            placeholder="Search topics..."
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                    </div>
+
+                    {/* Filters Row - Horizontal Scrollable */}
+                    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+                        {/* Paper Filter */}
+                        <div className="flex items-center bg-slate-50 rounded-lg p-1 border border-slate-200 shrink-0">
                             {['All', 'Paper I', 'Paper III'].map(p => (
                                 <button
                                     key={p}
                                     onClick={() => setFilterPaper(p)}
-                                    className={`px-3 py-1.5 rounded-md text-xs font-bold transition-all ${filterPaper === p ? 'bg-white shadow-sm text-blue-700' : 'text-slate-500 hover:text-slate-900'}`}
+                                    className={`whitespace-nowrap px-3 py-2 rounded-md text-xs font-bold transition-all ${filterPaper === p ? 'bg-white shadow-sm text-blue-700' : 'text-slate-500 hover:text-slate-900'}`}
                                 >
                                     {p}
                                 </button>
                             ))}
                         </div>
 
-                        <select
-                            className="bg-slate-50 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500/20"
-                            value={filterStatus}
-                            onChange={(e) => setFilterStatus(e.target.value)}
-                        >
-                            <option value="All">All Status</option>
-                            <option value="Completed">Completed</option>
-                            <option value="Not Started">Not Started</option>
-                        </select>
-                        <select
-                            className="bg-slate-50 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500/20"
-                            value={filterMastery}
-                            onChange={(e) => setFilterMastery(e.target.value)}
-                        >
-                            <option value="All">All Mastery</option>
-                            <option value="Confident">Confident</option>
-                            <option value="Weak">Weak / Partial</option>
-                            <option value="Unrated">Unrated</option>
-                        </select>
-                    </div>
+                        {/* Status Filter */}
+                        <div className="shrink-0 relative">
+                            <select
+                                className="appearance-none bg-slate-50 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg pl-3 pr-8 py-2.5 outline-none focus:ring-2 focus:ring-blue-500/20 h-full"
+                                value={filterStatus}
+                                onChange={(e) => setFilterStatus(e.target.value)}
+                            >
+                                <option value="All">All Status</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Not Started">Not Started</option>
+                            </select>
+                            <ChevronDown className="w-3 h-3 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                        </div>
 
-                    {/* Search Right */}
-                    <div className="relative w-full lg:w-64">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                        <input
-                            type="text"
-                            placeholder="Search topics..."
-                            className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
+                        {/* Mastery Filter */}
+                        <div className="shrink-0 relative">
+                            <select
+                                className="appearance-none bg-slate-50 border border-slate-200 text-slate-700 text-xs font-bold rounded-lg pl-3 pr-8 py-2.5 outline-none focus:ring-2 focus:ring-blue-500/20 h-full"
+                                value={filterMastery}
+                                onChange={(e) => setFilterMastery(e.target.value)}
+                            >
+                                <option value="All">All Mastery</option>
+                                <option value="Confident">Confident</option>
+                                <option value="Weak">Weak / Partial</option>
+                                <option value="Unrated">Unrated</option>
+                            </select>
+                            <ChevronDown className="w-3 h-3 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                        </div>
                     </div>
                 </div>
 
