@@ -164,6 +164,26 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </h1>
                 </div>
 
+                {/* --- ANDROID ANNOUNCEMENT BANNER --- */}
+                <div className="px-5">
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 p-4 shadow-lg shadow-indigo-500/20">
+                        {/* Background Deco */}
+                        <div className="absolute top-0 right-0 -mr-4 -mt-4 w-24 h-24 rounded-full bg-white/10 blur-xl"></div>
+
+                        <div className="relative z-10 flex items-start gap-3">
+                            <div className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 shrink-0">
+                                <Info className="w-5 h-5 text-indigo-100" />
+                            </div>
+                            <div>
+                                <h4 className="text-sm font-bold text-white mb-1">App Update Available!</h4>
+                                <p className="text-xs text-indigo-100 leading-relaxed font-medium opacity-90">
+                                    We've fixed the "Back Button" issue. Please update your app from the Play Store for a smoother experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* 1. Carousel */}
                 <div className="pl-4">
                     <DashboardCarousel />
