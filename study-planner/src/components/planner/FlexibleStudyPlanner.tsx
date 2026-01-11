@@ -197,8 +197,8 @@ export default function FlexibleStudyPlanner({
                         `}>
                             {/* Status Stripe */}
                             <div className={`absolute left-0 top-0 bottom-0 w-1 ${isCompleted
-                                    ? (mastery === 'confident' ? 'bg-emerald-500' : mastery === 'partially-confident' ? 'bg-amber-500' : 'bg-red-500')
-                                    : (darkMode ? 'bg-zinc-800' : 'bg-slate-200')
+                                ? (mastery === 'confident' ? 'bg-emerald-500' : mastery === 'partially-confident' ? 'bg-amber-500' : 'bg-red-500')
+                                : (darkMode ? 'bg-zinc-800' : 'bg-slate-200')
                                 }`} />
 
                             <div className="pl-3">
@@ -219,8 +219,8 @@ export default function FlexibleStudyPlanner({
 
                                 {/* Title */}
                                 <h3 className={`text-sm font-bold leading-snug mb-1 ${isCompleted
-                                        ? 'line-through decoration-slate-500 text-slate-500'
-                                        : (darkMode ? 'text-slate-100' : 'text-slate-800')
+                                    ? 'line-through decoration-slate-500 text-slate-500'
+                                    : (darkMode ? 'text-slate-100' : 'text-slate-800')
                                     }`}>
                                     {item.subTopic}
                                 </h3>
@@ -299,21 +299,24 @@ export default function FlexibleStudyPlanner({
                             </button>
                         </div>
 
-                        <div className="mt-6 pt-4 border-t border-white/5 flex gap-3">
+                        <div className="mt-6 pt-4 border-t border-white/5 grid grid-cols-2 gap-3">
                             <button
                                 onClick={() => setMasteryDialog({ open: false, item: null })}
-                                className={`flex-1 py-3 rounded-xl font-bold text-sm ${darkMode ? 'hover:bg-white/5 text-slate-400' : 'hover:bg-slate-100 text-slate-500'}`}
+                                className={`py-3 rounded-xl font-bold text-sm ${darkMode ? 'bg-zinc-800 text-slate-300 hover:bg-zinc-700' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'} transition-colors`}
                             >
                                 Cancel
                             </button>
+
                             {/* Only show Mark Incomplete if it is currently complete */}
-                            {completedDays[masteryDialog.item.date] && (
+                            {completedDays[masteryDialog.item.date] ? (
                                 <button
                                     onClick={handleMarkIncomplete}
-                                    className="flex-1 py-3 rounded-xl font-bold text-sm text-red-400 hover:bg-red-500/10 transition-colors"
+                                    className="py-3 rounded-xl font-bold text-sm text-red-500 bg-red-500/10 hover:bg-red-500/20 transition-colors"
                                 >
                                     Mark Incomplete
                                 </button>
+                            ) : (
+                                <div /> /* Spacer if no incompletion button */
                             )}
                         </div>
                     </div>
