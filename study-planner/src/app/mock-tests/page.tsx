@@ -206,359 +206,361 @@ export default function MockTestsPage() {
             alert("Enrollment failed. Please try again.");
             setProcessingId(null);
         }
-        const handleViewEnrollments = async (mock: MockTest) => {
-            setSelectedTestForEnrollment(mock.title);
-            setEnrollmentModalOpen(true);
-            setLoadingEnrollments(true);
-            try {
-                const res = await fetch(`/api/admin/mock-test/enrollments?testId=${mock.id}`);
-                if (res.ok) {
-                    const data = await res.json();
-                    setEnrollmentList(data.enrollments);
-                } else {
-                    alert("Failed to fetch enrollments");
-                }
-            } catch (error) {
-                console.error(error);
-                alert("Error fetching data");
-            } finally {
-                setLoadingEnrollments(false);
+    };
+
+    const handleViewEnrollments = async (mock: MockTest) => {
+        setSelectedTestForEnrollment(mock.title);
+        setEnrollmentModalOpen(true);
+        setLoadingEnrollments(true);
+        try {
+            const res = await fetch(`/api/admin/mock-test/enrollments?testId=${mock.id}`);
+            if (res.ok) {
+                const data = await res.json();
+                setEnrollmentList(data.enrollments);
+            } else {
+                alert("Failed to fetch enrollments");
             }
-        };
+        } catch (error) {
+            console.error(error);
+            alert("Error fetching data");
+        } finally {
+            setLoadingEnrollments(false);
+        }
+    };
 
-        return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pb-20 transition-colors">
-                <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+    return (
+        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pb-20 transition-colors">
+            <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
 
-                {/* Hero Section */}
-                {isMobileApp ? (
-                    // Mobile App Optimized Hero (Compact & Beautiful)
-                    <div className="relative bg-zinc-950 border-b border-zinc-900 overflow-hidden pt-4 pb-8">
-                        <div className="absolute inset-0 opacity-10">
-                            <div className="absolute top-10 right-0 w-40 h-40 bg-purple-600 rounded-full mix-blend-screen filter blur-3xl"></div>
-                            <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl"></div>
-                        </div>
-
-                        <div className="relative z-10 px-5">
-                            <Link href="/" className="inline-flex items-center text-zinc-500 hover:text-zinc-300 mb-4 transition-colors">
-                                <ArrowLeft className="w-5 h-5" />
-                                <span className="ml-1 text-sm font-medium">Back</span>
-                            </Link>
-
-                            <div className="flex flex-col items-center text-center">
-                                {/* Live Badge */}
-                                {activeMocks.length > 0 && (
-                                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[10px] mb-4">
-                                        <span className="relative flex h-1.5 w-1.5">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-                                        </span>
-                                        LIVE NOW
-                                    </div>
-                                )}
-
-                                <h1 className="text-3xl font-black text-white leading-tight mb-2">
-                                    All India Mock Tests
-                                    <span className="block text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                        LDCE IP 2026
-                                    </span>
-                                </h1>
-
-                                <p className="text-sm text-zinc-400 max-w-xs mx-auto mb-6 leading-relaxed">
-                                    Compete globally. Real-time ranking.
-                                </p>
-
-                                {/* CTA Button - Enhanced */}
-                                <Link href="/mock-tests/live" className="w-full max-w-[280px] group relative inline-flex items-center justify-center p-[1px] mb-6 overflow-hidden rounded-xl">
-                                    <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 opacity-70 group-hover:opacity-100 transition-opacity"></span>
-                                    <span className="relative w-full py-3 bg-zinc-900 rounded-[11px] flex items-center justify-center gap-2 group-hover:bg-opacity-0 transition-all">
-                                        <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                                        </span>
-                                        <span className="font-bold text-white text-sm">Attempt Live Sample Test</span>
-                                        <ArrowLeft className="w-4 h-4 text-white rotate-180" />
-                                    </span>
-                                </Link>
-
-                                {/* Stats Grid - Compact */}
-                                <div className="grid grid-cols-3 gap-2 w-full max-w-sm">
-                                    <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
-                                        <Users className="w-4 h-4 text-blue-400 mb-1" />
-                                        <span className="text-[10px] font-bold text-white">1000+</span>
-                                        <span className="text-[9px] text-zinc-500">Aspirants</span>
-                                    </div>
-                                    <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
-                                        <Trophy className="w-4 h-4 text-yellow-400 mb-1" />
-                                        <span className="text-[10px] font-bold text-white">Rank</span>
-                                        <span className="text-[9px] text-zinc-500">All India</span>
-                                    </div>
-                                    <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
-                                        <Clock className="w-4 h-4 text-green-400 mb-1" />
-                                        <span className="text-[10px] font-bold text-white">Latest</span>
-                                        <span className="text-[9px] text-zinc-500">Pattern</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            {/* Hero Section */}
+            {isMobileApp ? (
+                // Mobile App Optimized Hero (Compact & Beautiful)
+                <div className="relative bg-zinc-950 border-b border-zinc-900 overflow-hidden pt-4 pb-8">
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="absolute top-10 right-0 w-40 h-40 bg-purple-600 rounded-full mix-blend-screen filter blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl"></div>
                     </div>
-                ) : (
-                    // Original Desktop/Web Hero
-                    <div className="relative bg-zinc-900 border-b border-zinc-800 overflow-hidden">
-                        <div className="absolute inset-0 opacity-20">
-                            <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-                            <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-                            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-                        </div>
 
-                        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 text-center">
-                            <Link href="/" className="inline-flex items-center text-zinc-400 hover:text-white mb-6 md:mb-8 transition-colors text-sm md:text-base">
-                                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-                            </Link>
+                    <div className="relative z-10 px-5">
+                        <Link href="/" className="inline-flex items-center text-zinc-500 hover:text-zinc-300 mb-4 transition-colors">
+                            <ArrowLeft className="w-5 h-5" />
+                            <span className="ml-1 text-sm font-medium">Back</span>
+                        </Link>
 
+                        <div className="flex flex-col items-center text-center">
+                            {/* Live Badge */}
                             {activeMocks.length > 0 && (
-                                <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-xs md:text-sm mb-6 animate-pulse">
-                                    <span className="relative flex h-2 w-2">
+                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[10px] mb-4">
+                                    <span className="relative flex h-1.5 w-1.5">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
                                     </span>
                                     LIVE NOW
                                 </div>
                             )}
 
-                            <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight">
-                                All India Mock Tests <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                    for LDCE IP 2026
+                            <h1 className="text-3xl font-black text-white leading-tight mb-2">
+                                All India Mock Tests
+                                <span className="block text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                                    LDCE IP 2026
                                 </span>
                             </h1>
 
-                            <p className="text-base md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8 md:mb-10 px-2 leading-relaxed">
-                                Compete with aspirants across India. Real-time ranking, detailed analysis, and exam-like environment.
+                            <p className="text-sm text-zinc-400 max-w-xs mx-auto mb-6 leading-relaxed">
+                                Compete globally. Real-time ranking.
                             </p>
 
-                            <div className="flex justify-center mb-10 w-full animate-in zoom-in duration-500">
-                                <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-2xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-                                    <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
-                                    <span className="relative px-8 py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[14px] group-hover:bg-opacity-0 flex items-center gap-3">
-                                        <span className="relative flex h-3 w-3">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                                        </span>
-                                        <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white">Attempt Free Sample Test</span>
-                                        <ArrowLeft className="w-5 h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
+                            {/* CTA Button - Enhanced */}
+                            <Link href="/mock-tests/live" className="w-full max-w-[280px] group relative inline-flex items-center justify-center p-[1px] mb-6 overflow-hidden rounded-xl">
+                                <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 opacity-70 group-hover:opacity-100 transition-opacity"></span>
+                                <span className="relative w-full py-3 bg-zinc-900 rounded-[11px] flex items-center justify-center gap-2 group-hover:bg-opacity-0 transition-all">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                                     </span>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                )}
+                                    <span className="font-bold text-white text-sm">Attempt Live Sample Test</span>
+                                    <ArrowLeft className="w-4 h-4 text-white rotate-180" />
+                                </span>
+                            </Link>
 
-                {/* Test Cards Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
-                    <div className="space-y-12">
-
-                        {activeMocks.length > 0 && (
-                            <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                                {activeMocks.map(mock => (
-                                    <MockTestCard
-                                        key={mock.id}
-                                        mock={mock}
-                                        onClick={() => setSelectedMock(mock)}
-                                        isPaid={paidTests.includes(mock.id)}
-                                        membershipLevel={membershipLevel}
-                                        onEnroll={() => handleEnroll(mock)}
-                                        isProcessing={processingId === mock.id}
-                                        role={role}
-                                        onViewEnrollments={() => handleViewEnrollments(mock)}
-                                    />
-                                ))}
-                            </div>
-                        )}
-
-                        {/* Revamped Schedule Section */}
-                        <div className="relative group">
-                            {/* Animated Gradient Border Effect */}
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-[2rem] opacity-30 blur-md group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-
-                            <div className="relative bg-white dark:bg-zinc-950 rounded-[1.9rem] p-6 md:p-10 shadow-2xl overflow-hidden ring-1 ring-zinc-900/5 dark:ring-white/10">
-
-                                {/* Decorative Background Blobs */}
-                                <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
-                                <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
-
-                                <div className="relative z-10">
-                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-                                        <div>
-                                            <h2 className="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-zinc-800 to-zinc-600 dark:from-white dark:to-zinc-400 flex items-center gap-3">
-                                                <Calendar className="w-8 h-8 text-purple-600 dark:text-purple-400" />
-                                                Complete Schedule
-                                            </h2>
-                                            <p className="mt-2 text-zinc-500 dark:text-zinc-400 font-medium">
-                                                Your roadmap to success. Stay consistent and track your progress.
-                                            </p>
-                                        </div>
-                                        <div className="flex items-center gap-2 px-4 py-2 bg-zinc-100 dark:bg-zinc-800/80 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">
-                                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                                            <span className="font-bold text-zinc-700 dark:text-zinc-300 text-sm">
-                                                {upcomingMocks.length} Upcoming Tests
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className="grid gap-5 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                                        {upcomingMocks.map(mock => (
-                                            <MockTestCard
-                                                key={mock.id}
-                                                mock={mock}
-                                                onClick={() => setSelectedMock(mock)}
-                                                isPaid={paidTests.includes(mock.id)}
-                                                membershipLevel={membershipLevel}
-                                                onEnroll={() => handleEnroll(mock)}
-                                                isProcessing={processingId === mock.id}
-                                                role={role}
-                                                onViewEnrollments={() => handleViewEnrollments(mock)}
-                                            />
-                                        ))}
-                                    </div>
+                            {/* Stats Grid - Compact */}
+                            <div className="grid grid-cols-3 gap-2 w-full max-w-sm">
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
+                                    <Users className="w-4 h-4 text-blue-400 mb-1" />
+                                    <span className="text-[10px] font-bold text-white">1000+</span>
+                                    <span className="text-[9px] text-zinc-500">Aspirants</span>
                                 </div>
-                            </div>
-                        </div>
-
-                        {previousMocks.length > 0 && (
-                            <div className="opacity-75">
-                                <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
-                                    <Clock className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
-                                    Previous Tests
-                                </h2>
-                                <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
-                                    {previousMocks.map(mock => (
-                                        <MockTestCard
-                                            key={mock.id}
-                                            mock={mock}
-                                            onClick={() => setSelectedMock(mock)}
-                                            isPaid={true} // Previous tests always viewable/result (or handle appropriately)
-                                            membershipLevel={membershipLevel}
-                                            onEnroll={() => { }}
-                                        />
-                                    ))}
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
+                                    <Trophy className="w-4 h-4 text-yellow-400 mb-1" />
+                                    <span className="text-[10px] font-bold text-white">Rank</span>
+                                    <span className="text-[9px] text-zinc-500">All India</span>
                                 </div>
-                            </div>
-                        )}
-                    </div>
-
-                    <div className="mt-12 md:mt-16 text-center">
-                        <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Why Attempt Mock Tests?</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-6 md:mt-8">
-                            <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
-                                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 dark:text-blue-400">
-                                    <Timer className="w-6 h-6" />
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
+                                    <Clock className="w-4 h-4 text-green-400 mb-1" />
+                                    <span className="text-[10px] font-bold text-white">Latest</span>
+                                    <span className="text-[9px] text-zinc-500">Pattern</span>
                                 </div>
-                                <h3 className="font-bold mb-2">Time Management</h3>
-                                <p className="text-sm text-zinc-500">Practice completing the exam within the stipulated time limit.</p>
-                            </div>
-                            <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
-                                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-600 dark:text-purple-400">
-                                    <CheckCircle2 className="w-6 h-6" />
-                                </div>
-                                <h3 className="font-bold mb-2">Performance Analysis</h3>
-                                <p className="text-sm text-zinc-500">Get detailed insights into your strong and weak areas.</p>
-                            </div>
-                            <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
-                                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-orange-400">
-                                    <Trophy className="w-6 h-6" />
-                                </div>
-                                <h3 className="font-bold mb-2">All India Ranking</h3>
-                                <p className="text-sm text-zinc-500">Know where you stand among thousands of other aspirants.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            ) : (
+                // Original Desktop/Web Hero
+                <div className="relative bg-zinc-900 border-b border-zinc-800 overflow-hidden">
+                    <div className="absolute inset-0 opacity-20">
+                        <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+                        <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+                        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+                    </div>
 
-                <Dialog open={!!selectedMock} onOpenChange={(open) => !open && setSelectedMock(null)}>
-                    <DialogContent className="max-w-2xl w-[95%] max-h-[85vh] overflow-y-auto rounded-2xl">
-                        {selectedMock && (
-                            <MockTestDetail
-                                mock={selectedMock}
-                                membershipLevel={membershipLevel}
-                                isPaid={paidTests.includes(selectedMock.id)}
-                                onEnroll={() => handleEnroll(selectedMock)}
-                                isProcessing={processingId === selectedMock.id}
-                            />
+                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 text-center">
+                        <Link href="/" className="inline-flex items-center text-zinc-400 hover:text-white mb-6 md:mb-8 transition-colors text-sm md:text-base">
+                            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+                        </Link>
+
+                        {activeMocks.length > 0 && (
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-xs md:text-sm mb-6 animate-pulse">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                </span>
+                                LIVE NOW
+                            </div>
                         )}
-                    </DialogContent>
-                </Dialog>
 
-                {/* Admin Enrollment List Dialog */}
-                <Dialog open={enrollmentModalOpen} onOpenChange={setEnrollmentModalOpen}>
-                    <DialogContent className="max-w-4xl w-[95%] max-h-[85vh] overflow-hidden flex flex-col rounded-2xl p-0 bg-white dark:bg-zinc-900">
-                        <div className="p-6 border-b border-zinc-200 dark:border-zinc-800 flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/50">
-                            <div>
-                                <DialogTitle className="text-xl font-bold flex items-center gap-2 text-zinc-900 dark:text-zinc-100">
-                                    <Users className="w-5 h-5 text-blue-600" /> Enrollments
-                                </DialogTitle>
-                                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-                                    Users enrolled for <span className="font-semibold text-zinc-800 dark:text-zinc-200">{selectedTestForEnrollment}</span>
-                                </p>
-                            </div>
-                            <div className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-bold">
-                                Total: {enrollmentList.length}
+                        <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight">
+                            All India Mock Tests <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                                for LDCE IP 2026
+                            </span>
+                        </h1>
+
+                        <p className="text-base md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8 md:mb-10 px-2 leading-relaxed">
+                            Compete with aspirants across India. Real-time ranking, detailed analysis, and exam-like environment.
+                        </p>
+
+                        <div className="flex justify-center mb-10 w-full animate-in zoom-in duration-500">
+                            <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-2xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                                <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
+                                <span className="relative px-8 py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[14px] group-hover:bg-opacity-0 flex items-center gap-3">
+                                    <span className="relative flex h-3 w-3">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                    </span>
+                                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white">Attempt Free Sample Test</span>
+                                    <ArrowLeft className="w-5 h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Test Cards Section */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+                <div className="space-y-12">
+
+                    {activeMocks.length > 0 && (
+                        <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            {activeMocks.map(mock => (
+                                <MockTestCard
+                                    key={mock.id}
+                                    mock={mock}
+                                    onClick={() => setSelectedMock(mock)}
+                                    isPaid={paidTests.includes(mock.id)}
+                                    membershipLevel={membershipLevel}
+                                    onEnroll={() => handleEnroll(mock)}
+                                    isProcessing={processingId === mock.id}
+                                    role={role}
+                                    onViewEnrollments={() => handleViewEnrollments(mock)}
+                                />
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Revamped Schedule Section */}
+                    <div className="relative group">
+                        {/* Animated Gradient Border Effect */}
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-[2rem] opacity-30 blur-md group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+
+                        <div className="relative bg-white dark:bg-zinc-950 rounded-[1.9rem] p-6 md:p-10 shadow-2xl overflow-hidden ring-1 ring-zinc-900/5 dark:ring-white/10">
+
+                            {/* Decorative Background Blobs */}
+                            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+                            <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+                            <div className="relative z-10">
+                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                                    <div>
+                                        <h2 className="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-zinc-800 to-zinc-600 dark:from-white dark:to-zinc-400 flex items-center gap-3">
+                                            <Calendar className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                                            Complete Schedule
+                                        </h2>
+                                        <p className="mt-2 text-zinc-500 dark:text-zinc-400 font-medium">
+                                            Your roadmap to success. Stay consistent and track your progress.
+                                        </p>
+                                    </div>
+                                    <div className="flex items-center gap-2 px-4 py-2 bg-zinc-100 dark:bg-zinc-800/80 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">
+                                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                        <span className="font-bold text-zinc-700 dark:text-zinc-300 text-sm">
+                                            {upcomingMocks.length} Upcoming Tests
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="grid gap-5 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                                    {upcomingMocks.map(mock => (
+                                        <MockTestCard
+                                            key={mock.id}
+                                            mock={mock}
+                                            onClick={() => setSelectedMock(mock)}
+                                            isPaid={paidTests.includes(mock.id)}
+                                            membershipLevel={membershipLevel}
+                                            onEnroll={() => handleEnroll(mock)}
+                                            isProcessing={processingId === mock.id}
+                                            role={role}
+                                            onViewEnrollments={() => handleViewEnrollments(mock)}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div className="flex-1 overflow-auto p-0">
-                            {loadingEnrollments ? (
-                                <div className="flex flex-col items-center justify-center py-20">
-                                    <Loader2 className="w-8 h-8 animate-spin text-blue-600 mb-2" />
-                                    <span className="text-sm text-zinc-500">Loading enrollment data...</span>
-                                </div>
-                            ) : enrollmentList.length > 0 ? (
-                                <div className="w-full">
-                                    <table className="w-full text-left text-sm">
-                                        <thead className="bg-zinc-50 dark:bg-zinc-900/50 sticky top-0 z-10 border-b border-zinc-200 dark:border-zinc-800">
-                                            <tr>
-                                                <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400 w-16">S.No</th>
-                                                <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">User Name</th>
-                                                <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">Phone</th>
-                                                <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">Payment Date</th>
-                                                <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">Payment For</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800/50">
-                                            {enrollmentList.map((user, idx) => (
-                                                <tr key={idx} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/20 transition-colors">
-                                                    <td className="px-6 py-3 text-zinc-500">{user.serialNo}</td>
-                                                    <td className="px-6 py-3 font-medium text-zinc-900 dark:text-zinc-100">{user.name}</td>
-                                                    <td className="px-6 py-3 text-zinc-600 dark:text-zinc-300">{user.mobile}</td>
-                                                    <td className="px-6 py-3 text-zinc-600 dark:text-zinc-300">
-                                                        {user.dateOfPayment ? format(new Date(user.dateOfPayment), 'dd MMM yyyy') : '-'}
-                                                    </td>
-                                                    <td className="px-6 py-3">
-                                                        <span className={`px-2 py-0.5 rounded text-xs font-bold border ${user.paymentMadeFor?.toLowerCase().includes('gold')
-                                                            ? 'bg-yellow-50 text-yellow-700 border-yellow-200 dark:bg-yellow-900/20 dark:text-yellow-400 dark:border-yellow-900/30'
-                                                            : 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800'
-                                                            }`}>
-                                                            {user.paymentMadeFor}
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            ) : (
-                                <div className="py-20 text-center text-zinc-500 dark:text-zinc-400">
-                                    No enrollments found for this test.
-                                </div>
-                            )}
+                    {previousMocks.length > 0 && (
+                        <div className="opacity-75">
+                            <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
+                                <Clock className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
+                                Previous Tests
+                            </h2>
+                            <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
+                                {previousMocks.map(mock => (
+                                    <MockTestCard
+                                        key={mock.id}
+                                        mock={mock}
+                                        onClick={() => setSelectedMock(mock)}
+                                        isPaid={true} // Previous tests always viewable/result (or handle appropriately)
+                                        membershipLevel={membershipLevel}
+                                        onEnroll={() => { }}
+                                    />
+                                ))}
+                            </div>
                         </div>
-                    </DialogContent>
-                </Dialog>
+                    )}
+                </div>
 
+                <div className="mt-12 md:mt-16 text-center">
+                    <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Why Attempt Mock Tests?</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-6 md:mt-8">
+                        <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+                            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 dark:text-blue-400">
+                                <Timer className="w-6 h-6" />
+                            </div>
+                            <h3 className="font-bold mb-2">Time Management</h3>
+                            <p className="text-sm text-zinc-500">Practice completing the exam within the stipulated time limit.</p>
+                        </div>
+                        <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+                            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-600 dark:text-purple-400">
+                                <CheckCircle2 className="w-6 h-6" />
+                            </div>
+                            <h3 className="font-bold mb-2">Performance Analysis</h3>
+                            <p className="text-sm text-zinc-500">Get detailed insights into your strong and weak areas.</p>
+                        </div>
+                        <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+                            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-orange-400">
+                                <Trophy className="w-6 h-6" />
+                            </div>
+                            <h3 className="font-bold mb-2">All India Ranking</h3>
+                            <p className="text-sm text-zinc-500">Know where you stand among thousands of other aspirants.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        );
-    }
+
+            <Dialog open={!!selectedMock} onOpenChange={(open) => !open && setSelectedMock(null)}>
+                <DialogContent className="max-w-2xl w-[95%] max-h-[85vh] overflow-y-auto rounded-2xl">
+                    {selectedMock && (
+                        <MockTestDetail
+                            mock={selectedMock}
+                            membershipLevel={membershipLevel}
+                            isPaid={paidTests.includes(selectedMock.id)}
+                            onEnroll={() => handleEnroll(selectedMock)}
+                            isProcessing={processingId === selectedMock.id}
+                        />
+                    )}
+                </DialogContent>
+            </Dialog>
+
+            {/* Admin Enrollment List Dialog */}
+            <Dialog open={enrollmentModalOpen} onOpenChange={setEnrollmentModalOpen}>
+                <DialogContent className="max-w-4xl w-[95%] max-h-[85vh] overflow-hidden flex flex-col rounded-2xl p-0 bg-white dark:bg-zinc-900">
+                    <div className="p-6 border-b border-zinc-200 dark:border-zinc-800 flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/50">
+                        <div>
+                            <DialogTitle className="text-xl font-bold flex items-center gap-2 text-zinc-900 dark:text-zinc-100">
+                                <Users className="w-5 h-5 text-blue-600" /> Enrollments
+                            </DialogTitle>
+                            <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                                Users enrolled for <span className="font-semibold text-zinc-800 dark:text-zinc-200">{selectedTestForEnrollment}</span>
+                            </p>
+                        </div>
+                        <div className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-bold">
+                            Total: {enrollmentList.length}
+                        </div>
+                    </div>
+
+                    <div className="flex-1 overflow-auto p-0">
+                        {loadingEnrollments ? (
+                            <div className="flex flex-col items-center justify-center py-20">
+                                <Loader2 className="w-8 h-8 animate-spin text-blue-600 mb-2" />
+                                <span className="text-sm text-zinc-500">Loading enrollment data...</span>
+                            </div>
+                        ) : enrollmentList.length > 0 ? (
+                            <div className="w-full">
+                                <table className="w-full text-left text-sm">
+                                    <thead className="bg-zinc-50 dark:bg-zinc-900/50 sticky top-0 z-10 border-b border-zinc-200 dark:border-zinc-800">
+                                        <tr>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400 w-16">S.No</th>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">User Name</th>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">Phone</th>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">Payment Date</th>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">Payment For</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800/50">
+                                        {enrollmentList.map((user, idx) => (
+                                            <tr key={idx} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/20 transition-colors">
+                                                <td className="px-6 py-3 text-zinc-500">{user.serialNo}</td>
+                                                <td className="px-6 py-3 font-medium text-zinc-900 dark:text-zinc-100">{user.name}</td>
+                                                <td className="px-6 py-3 text-zinc-600 dark:text-zinc-300">{user.mobile}</td>
+                                                <td className="px-6 py-3 text-zinc-600 dark:text-zinc-300">
+                                                    {user.dateOfPayment ? format(new Date(user.dateOfPayment), 'dd MMM yyyy') : '-'}
+                                                </td>
+                                                <td className="px-6 py-3">
+                                                    <span className={`px-2 py-0.5 rounded text-xs font-bold border ${user.paymentMadeFor?.toLowerCase().includes('gold')
+                                                        ? 'bg-yellow-50 text-yellow-700 border-yellow-200 dark:bg-yellow-900/20 dark:text-yellow-400 dark:border-yellow-900/30'
+                                                        : 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800'
+                                                        }`}>
+                                                        {user.paymentMadeFor}
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        ) : (
+                            <div className="py-20 text-center text-zinc-500 dark:text-zinc-400">
+                                No enrollments found for this test.
+                            </div>
+                        )}
+                    </div>
+                </DialogContent>
+            </Dialog>
+
+        </div>
+    );
 }
+
 
 function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing }: {
     mock: MockTest;
