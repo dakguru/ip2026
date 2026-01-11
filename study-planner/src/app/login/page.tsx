@@ -395,7 +395,7 @@ function AuthForm() {
                 </div >
 
                 <div className="mt-8 text-center text-gray-400 text-xs flex items-center justify-center gap-2">
-                    <span className="opacity-70">Strategize. Practice. Excel.</span>
+                    <span className="opacity-70">Learn, Practice, Succeed</span>
                 </div>
             </div >
         </div >

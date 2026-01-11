@@ -42,7 +42,7 @@ export const generatePlannerPDF = (schedule: any[], progressPercentage: number) 
 
     // Logo / Brand
     centerText("DAK GURU", 40, 30, 'helvetica', 'bold', [255, 255, 255]);
-    centerText("Learn. Practice. Succeed.", 50, 12, 'helvetica', 'normal', [200, 200, 200]);
+    centerText("Learn, Practice, Succeed", 50, 12, 'helvetica', 'normal', [200, 200, 200]);
 
     // Title
     centerText("MISSION IP 2026", 110, 40, 'helvetica', 'bold', [255, 255, 255]);

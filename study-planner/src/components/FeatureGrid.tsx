@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion, Shield } from "lucide-react";
+import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion, Shield, Bell } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
@@ -76,7 +76,24 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
 
     if (role === 'admin') {
         // Admin View: Prioritize Admin Tiles + Community
+        // Force single column for all tiles in Admin view to ensure perfect grid alignment
+        const dakGuruTileSimple = { ...dakGuruTile, className: "col-span-1" };
+        const standardFeatures = defaultFeatures.map(f => ({ ...f, className: "col-span-1" }));
+
         features = [
+            {
+                title: "System Notifications",
+                desc: "Activity & Alerts",
+                color: "text-red-600",
+                bg: "bg-red-50 dark:bg-red-900/20",
+                border: "group-hover:border-red-500",
+                shadow: "group-hover:shadow-red-500/20",
+                icon: Bell,
+                link: "/admin/notifications",
+                badge: "Admin",
+                // @ts-ignore
+                className: "col-span-1"
+            },
             {
                 title: "Postal Docs CMS",
                 desc: "Manage Updates",
@@ -103,7 +120,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 // @ts-ignore
                 className: "col-span-1"
             },
-            dakGuruTile,
+            dakGuruTileSimple,
             {
                 title: "Developer CMS",
                 desc: "Manage System",
@@ -117,7 +134,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 // @ts-ignore
                 className: "col-span-1"
             },
-            ...defaultFeatures
+            ...standardFeatures
         ];
     } else {
         // Regular User: Add Community

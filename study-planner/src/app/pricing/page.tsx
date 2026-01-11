@@ -304,7 +304,7 @@ export default function PricingPage() {
                         </h1>
                         <p className="text-blue-100 max-w-2xl mx-auto text-xl mb-8 font-medium">
                             Gold & Silver Subscription Plans Now Open. <br />
-                            <span className="text-yellow-300">Learn. Practice. Succeed.</span>
+                            <span className="text-yellow-300">Learn, Practice, Succeed</span>
                         </p>
                     </div>
                     {/* Abstract shapes for background */}

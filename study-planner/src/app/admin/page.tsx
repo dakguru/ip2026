@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import {
     Shield, Users, ArrowLeft, Loader2, Search, Download, FileText,
     Crown, Star, Zap, Filter, MoreHorizontal, ChevronDown, Check,
-    CreditCard, Calendar
+    CreditCard, Calendar, Bell, Clock
 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -63,6 +63,8 @@ export default function AdminDashboard() {
         fetchOnlineCount();
         fetchCouponStats();
     }, []);
+
+
 
     const fetchCouponStats = async () => {
         try {
@@ -230,8 +232,8 @@ export default function AdminDashboard() {
                 <Shield className="w-16 h-16 text-red-500 mb-4" />
                 <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Access Restricted</h1>
                 <p className="text-zinc-500 dark:text-zinc-400 mb-8">{error}</p>
-                <Link href="/planner" className="px-6 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-medium">
-                    Return to Planner
+                <Link href="/" className="px-6 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-medium">
+                    Return to Home
                 </Link>
             </div>
         );
@@ -244,8 +246,8 @@ export default function AdminDashboard() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
-                        <Link href="/planner" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-2 transition-colors">
-                            <ArrowLeft className="w-4 h-4" /> Back to Planner
+                        <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-2 transition-colors">
+                            <ArrowLeft className="w-4 h-4" /> Back to Home
                         </Link>
                         <h1 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
                             <Shield className="w-8 h-8 text-blue-600" />
@@ -382,6 +384,8 @@ export default function AdminDashboard() {
                         </div>
                     </div>
                 </div>
+
+
 
                 {/* Main Content Area */}
                 <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col">
