@@ -96,7 +96,7 @@ export default function FlexibleStudyPlanner({
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             {/* Controls */}
             {/* Controls */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4 mb-6 sticky top-24 z-20">
+            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-sm border border-slate-100 p-4 mb-6 sticky top-20 md:top-24 z-20 transition-all">
                 <div className="flex flex-col gap-4">
 
                     {/* Top Row: Search */}
@@ -171,7 +171,8 @@ export default function FlexibleStudyPlanner({
                     const mastery = meta.mastery;
 
                     return (
-                        <div key={idx} className={`bg-white rounded-xl border p-5 transition-all hover:shadow-md
+
+                        <div key={idx} className={`bg-white rounded-xl border p-4 md:p-5 transition-all hover:shadow-md
                             ${isCompleted ? 'border-emerald-100 bg-emerald-50/10' : 'border-slate-100'}
                             ${mastery === 'not-confident' ? 'ring-1 ring-red-100' : ''}
                         `}>

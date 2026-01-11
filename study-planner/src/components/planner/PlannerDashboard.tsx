@@ -63,7 +63,7 @@ export default function PlannerDashboard({
     // Actually, if ratedCount is 0 but completedTasks > 0, we might want to prompt user.
 
     return (
-        <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 mb-8">
+        <div className="bg-white rounded-3xl p-4 md:p-8 shadow-sm border border-slate-100 mb-6 md:mb-8">
             <h2 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
                 <Target className="w-6 h-6 text-blue-600" /> Unified Progress Dashboard
             </h2>
