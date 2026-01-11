@@ -260,9 +260,8 @@ export default function FlexibleStudyPlanner({
                 </div>
             )}
 
-            {/* Mastery Pop-up Modal */}
             {masteryDialog.open && masteryDialog.item && (
-                <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+                <div className="fixed inset-0 z-[60] flex items-end md:items-center justify-center p-4 pb-24 md:pb-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
                     <div className={`w-full max-w-sm rounded-2xl p-6 shadow-2xl animate-in slide-in-from-bottom-10 duration-300 ${darkMode ? 'bg-zinc-900 border border-white/10' : 'bg-white'}`}>
                         <div className="text-center mb-6">
                             <h3 className={`text-lg font-bold mb-2 ${darkMode ? 'text-white' : 'text-slate-900'}`}>
