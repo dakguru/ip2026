@@ -155,29 +155,32 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 </div>
             </header>
 
-            <div className="space-y-8 pt-4">
+            <div className="space-y-6 pt-1">
                 {/* Welcome Message */}
-                <div className="px-5 pt-4 pb-2">
-                    <p className="text-zinc-500 dark:text-zinc-400 text-xs font-bold uppercase tracking-widest mb-1">Hello, Aspirant</p>
-                    <h1 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-800 dark:from-white dark:via-zinc-200 dark:to-zinc-400 truncate tracking-tight">
-                        Welcome, {displayName.split(' ')[0]} <span className="text-3xl align-middle">👋</span>
+                <div className="px-5 pt-2 pb-1">
+                    <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-bold uppercase tracking-widest mb-0.5">Hello,</p>
+                    <h1 className="text-2xl font-black tracking-tight flex items-center gap-2">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400">
+                            {displayName.split(' ')[0]}
+                        </span>
+                        <span className="text-2xl animate-wave">👋</span>
                     </h1>
                 </div>
 
                 {/* --- ANDROID ANNOUNCEMENT BANNER --- */}
                 <div className="px-5">
-                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 p-4 shadow-lg shadow-indigo-500/20">
+                    <div className="mx-auto max-w-[95%] relative overflow-hidden rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 p-3 shadow-md shadow-indigo-500/20">
                         {/* Background Deco */}
-                        <div className="absolute top-0 right-0 -mr-4 -mt-4 w-24 h-24 rounded-full bg-white/10 blur-xl"></div>
+                        <div className="absolute top-0 right-0 -mr-4 -mt-4 w-16 h-16 rounded-full bg-white/10 blur-xl"></div>
 
-                        <div className="relative z-10 flex items-start gap-3">
-                            <div className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 shrink-0">
-                                <Info className="w-5 h-5 text-indigo-100" />
+                        <div className="relative z-10 flex items-center justify-center gap-3 text-center">
+                            <div className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 shrink-0">
+                                <Info className="w-4 h-4 text-indigo-100" />
                             </div>
                             <div>
-                                <h4 className="text-sm font-bold text-white mb-1">Update Coming Soon!</h4>
-                                <p className="text-xs text-indigo-100 leading-relaxed font-medium opacity-90">
-                                    The "Back Button" handling has been fixed and will be available in the upcoming Live App update on the Play Store.
+                                <h4 className="text-xs font-bold text-white mb-0.5">Update Coming Soon!</h4>
+                                <p className="text-[10px] text-indigo-100 leading-tight font-medium opacity-90">
+                                    "Back Button" fix will be in the next Play Store update.
                                 </p>
                             </div>
                         </div>
