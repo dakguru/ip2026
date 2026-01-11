@@ -1,34 +1,53 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { App } from '@capacitor/app';
 import { useRouter, usePathname } from 'next/navigation';
-import { LogOut, X, AlertCircle } from 'lucide-react';
+import { LogOut } from 'lucide-react';
+import { Capacitor } from '@capacitor/core';
 
 export default function BackButtonHandler() {
     const router = useRouter();
     const pathname = usePathname();
     const [showExitDialog, setShowExitDialog] = useState(false);
 
+    // Store pathname in a ref so the listener always has the latest value
+    // without needing to re-bind the listener (which causes gaps).
+    const pathnameRef = useRef(pathname);
+
+    // Update ref whenever path changes
     useEffect(() => {
+        pathnameRef.current = pathname;
+    }, [pathname]);
+
+    useEffect(() => {
+        if (!Capacitor.isNativePlatform()) {
+            return;
+        }
+
         let listenerHandle: any;
 
         const setupListener = async () => {
-            listenerHandle = await App.addListener('backButton', (data) => {
-                // Determine if we are on a "Home" screen
-                // You can add other root tabs here if needed (e.g., /learn, /practice) 
-                // but usually user expects exit only from the main Home dashboard.
-                const rootPaths = ['/', '/login'];
+            // Remove any existing listeners first to be safe
+            await App.removeAllListeners();
 
-                if (rootPaths.includes(pathname)) {
-                    // Logic for root pages: Show confirmation dialog
+            listenerHandle = await App.addListener('backButton', (data) => {
+                // Use the ref to get current path inside the static listener
+                const currentPath = pathnameRef.current;
+                const rootPaths = ['/', '/login', '/home'];
+
+                // Check for open modals/overlays if possible? 
+                // For now, simple path check.
+
+                if (rootPaths.includes(currentPath)) {
+                    // We are at home/root -> Ask to exit
                     setShowExitDialog(true);
                 } else {
-                    // Logic for other pages: Go back
-                    // Check if there is history? 
-                    // In Next.js, router.back() attempts to go back. 
-                    // If there is no history, it might fail silently or do nothing, 
-                    // effectively preventing exit, which is safer than crashing.
+                    // We are deeper in the app -> Go back
+                    // Check if we have history...
+                    // In a hybrid app, sometimes router.back() fails if history is empty.
+                    // Fallback to exit if "canGoBack" is false is tricky in Next.js.
+                    // But generally, navigating back is safe.
                     router.back();
                 }
             });
@@ -36,12 +55,13 @@ export default function BackButtonHandler() {
 
         setupListener();
 
+        // Cleanup only on unmount
         return () => {
             if (listenerHandle) {
                 listenerHandle.remove();
             }
         };
-    }, [router, pathname]);
+    }, []); // Empty dependency array = persistent listener
 
     const handleConfirmExit = () => {
         App.exitApp();
