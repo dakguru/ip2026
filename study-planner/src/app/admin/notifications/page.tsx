@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
-import { Shield, Users, ArrowLeft, Loader2, FileText, Crown, Zap, Bell, Clock, Search } from "lucide-react";
+import { Shield, Users, ArrowLeft, Loader2, FileText, Crown, Zap, Bell, Clock, Search, Check, CheckCheck } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
 
@@ -25,6 +25,36 @@ export default function AdminNotificationsPage() {
             console.error("Failed to fetch notifications", e);
         } finally {
             setIsLoading(false);
+        }
+    };
+
+    const handleMarkAllRead = async () => {
+        try {
+            const res = await fetch('/api/admin/notifications', {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ markAll: true })
+            });
+            if (res.ok) {
+                setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
+            }
+        } catch (e) {
+            console.error("Failed to mark all read", e);
+        }
+    };
+
+    const handleMarkRead = async (id: string) => {
+        try {
+            const res = await fetch('/api/admin/notifications', {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id })
+            });
+            if (res.ok) {
+                setNotifications(prev => prev.map(n => n._id === id ? { ...n, isRead: true } : n));
+            }
+        } catch (e) {
+            console.error("Failed to mark read", e);
         }
     };
 
@@ -64,9 +94,19 @@ export default function AdminNotificationsPage() {
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
                             <Bell className="w-5 h-5 text-blue-600" /> Notification Feed
                         </h3>
-                        <span className="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold rounded-full">
-                            {notifications.length} Total
-                        </span>
+                        <div className="flex items-center gap-3">
+                            <span className="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold rounded-full">
+                                {notifications.length} Total
+                            </span>
+                            {notifications.some(n => !n.isRead) && (
+                                <button
+                                    onClick={handleMarkAllRead}
+                                    className="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-bold transition-colors"
+                                >
+                                    <CheckCheck className="w-3.5 h-3.5" /> Mark all read
+                                </button>
+                            )}
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -125,7 +165,12 @@ export default function AdminNotificationsPage() {
                                     <div className="flex-1 min-w-0">
                                         <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
                                             <div className="flex items-center gap-3">
-                                                <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100 truncate">{notif.title}</h4>
+                                                <h4 className={`text-base font-bold truncate ${notif.isRead ? 'text-zinc-600 dark:text-zinc-400' : 'text-zinc-900 dark:text-zinc-100'}`}>
+                                                    {notif.title}
+                                                </h4>
+                                                {!notif.isRead && (
+                                                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                                                )}
                                                 <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border ${notif.type === 'enrollment' ? 'bg-green-50 text-green-600 border-green-200' :
                                                     notif.type === 'purchase' ? 'bg-yellow-50 text-yellow-600 border-yellow-200' :
                                                         'bg-zinc-100 text-zinc-500 border-zinc-200 dark:bg-zinc-800 dark:border-zinc-700'
@@ -133,12 +178,25 @@ export default function AdminNotificationsPage() {
                                                     {notif.type.replace(/_/g, ' ')}
                                                 </span>
                                             </div>
-                                            <span className="flex items-center gap-1.5 text-xs text-zinc-400 font-semibold bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 px-3 py-1 rounded-full shadow-sm w-fit">
-                                                <Clock className="w-3.5 h-3.5" />
-                                                {format(new Date(notif.createdAt), 'PPP p')}
-                                            </span>
+                                            <div className="flex items-center gap-2">
+                                                <span className="flex items-center gap-1.5 text-xs text-zinc-400 font-semibold bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 px-3 py-1 rounded-full shadow-sm w-fit">
+                                                    <Clock className="w-3.5 h-3.5" />
+                                                    {format(new Date(notif.createdAt), 'PPP p')}
+                                                </span>
+                                                {!notif.isRead && (
+                                                    <button
+                                                        onClick={() => handleMarkRead(notif._id)}
+                                                        className="p-1.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-400 hover:text-green-600 transition-colors"
+                                                        title="Mark as read"
+                                                    >
+                                                        <Check className="w-4 h-4" />
+                                                    </button>
+                                                )}
+                                            </div>
                                         </div>
-                                        <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">{notif.message}</p>
+                                        <p className={`text-sm leading-relaxed font-medium ${notif.isRead ? 'text-zinc-400 dark:text-zinc-500' : 'text-zinc-600 dark:text-zinc-400'}`}>
+                                            {notif.message}
+                                        </p>
                                     </div>
                                 </div>
                             ))
@@ -152,6 +210,6 @@ export default function AdminNotificationsPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

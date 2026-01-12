@@ -34,3 +34,26 @@ export async function GET() {
         return NextResponse.json({ error: 'Failed to fetch notifications' }, { status: 500 });
     }
 }
+
+export async function PATCH(req: Request) {
+    try {
+        await connectDB();
+        const { id, markAll } = await req.json();
+
+        if (markAll) {
+            await Notification.updateMany({ isRead: false }, { $set: { isRead: true } });
+            return NextResponse.json({ success: true, message: 'All notifications marked as read' });
+        }
+
+        if (id) {
+            await Notification.findByIdAndUpdate(id, { $set: { isRead: true } });
+            return NextResponse.json({ success: true, message: 'Notification marked as read' });
+        }
+
+        return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+
+    } catch (error) {
+        console.error("Error updating notifications:", error);
+        return NextResponse.json({ error: 'Failed to update notifications' }, { status: 500 });
+    }
+}

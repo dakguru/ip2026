@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion, Shield, Bell } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import { useState, useEffect } from "react";
 
 interface FeatureGridProps {
     membershipLevel: string;
@@ -13,6 +14,30 @@ interface FeatureGridProps {
 export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps) {
     const router = useRouter();
     const isMobileApp = useIsMobileApp();
+    const [unreadCount, setUnreadCount] = useState(0);
+
+    useEffect(() => {
+        if (role === 'admin') {
+            const fetchUnread = async () => {
+                try {
+                    // Optimized: In a real app, create a dedicated 'count' endpoint or lightweight fetch
+                    // For now, fetching notifications and filtering locally is okay for MVP
+                    const res = await fetch('/api/admin/notifications');
+                    if (res.ok) {
+                        const data = await res.json();
+                        const unread = data.notifications ? data.notifications.filter((n: any) => !n.isRead).length : 0;
+                        setUnreadCount(unread);
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch unread count", e);
+                }
+            };
+            fetchUnread();
+            // Poll every 30 seconds for updates
+            const interval = setInterval(fetchUnread, 30000);
+            return () => clearInterval(interval);
+        }
+    }, [role]);
 
     // Helper to check access
     const hasAccess = (requiredBadge: string) => {
@@ -34,6 +59,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
         link: string;
         badge: string;
         className?: string;
+        customBadge?: number;
     }[] = [
             { title: "Syllabus", desc: "Detailed Course Map", color: "text-orange-600", bg: "bg-orange-50 dark:bg-orange-900/20", border: "group-hover:border-orange-500", shadow: "group-hover:shadow-orange-500/20", icon: BookOpen, link: "/syllabus", badge: "Free" },
             { title: "Study Planner", desc: "Organize Learning", color: "text-violet-600", bg: "bg-violet-50 dark:bg-violet-900/20", border: "group-hover:border-violet-500", shadow: "group-hover:shadow-violet-500/20", icon: Layout, link: "/planner", badge: "Free" },
@@ -92,7 +118,8 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 link: "/admin/notifications",
                 badge: "Admin",
                 // @ts-ignore
-                className: "col-span-1"
+                className: "col-span-1",
+                customBadge: unreadCount > 0 ? unreadCount : undefined
             },
             {
                 title: "Postal Docs CMS",
@@ -168,6 +195,15 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                             {/* Badge & Visit Icon */}
                             {/* Badge & Visit Icon */}
                             <div className={`absolute z-20 flex items-center gap-0.5 md:gap-1 ${isMobileApp ? 'top-1.5 right-1.5' : 'top-2 right-2 md:top-3 md:right-3'}`}>
+                                {/* New Unread Count Badge */}
+                                {/* @ts-ignore */}
+                                {item.customBadge && (
+                                    <span className="flex items-center justify-center w-5 h-5 md:w-6 md:h-6 text-[10px] md:text-xs font-bold text-white bg-red-600 rounded-full shadow-md animate-bounce">
+                                        {/* @ts-ignore */}
+                                        {item.customBadge > 99 ? '99+' : item.customBadge}
+                                    </span>
+                                )}
+
                                 {item.badge && !isMobileApp && (
                                     <>
                                         <span className={`px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :

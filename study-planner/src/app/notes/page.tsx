@@ -13,6 +13,7 @@ const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
 import { Capacitor } from '@capacitor/core';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Toast } from '@capacitor/toast';
+import { ShieldAlert, Info } from 'lucide-react';
 
 // --- DATA ---
 interface Note {
@@ -251,7 +252,14 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 30. Inland/Foreign
-        { title: "Post Office Guide Part-I", description: "Rules for Inland Post.", color: "cyan", comingSoon: true },
+        {
+            title: "Post Office Guide Part-I",
+            description: "Rules for Inland Post.",
+            filename: "PO_Guide_Part_I.pdf",
+            path: "/notes/paper-1/PO_Guide_Part_I.pdf",
+            size: "0.4 MB",
+            color: "cyan"
+        },
         { title: "Post Office Guide Part-II", description: "Except Section VII & VIII.", color: "cyan", comingSoon: true },
         { title: "Domestic/Foreign Post Guidelines", description: "Issued by Directorate.", color: "cyan", comingSoon: true },
 
@@ -387,6 +395,29 @@ export default function NotesPage() {
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
     const [pdfDarkMode, setPdfDarkMode] = useState(false);
 
+    // Advisory Modal State
+    const [showAdvisory, setShowAdvisory] = useState(false);
+    const [advisoryAgreed, setAdvisoryAgreed] = useState(false);
+    const [pendingAction, setPendingAction] = useState<{ type: 'view' | 'download', url: string, filename?: string } | null>(null);
+
+    const handleActionRequest = (type: 'view' | 'download', url: string, filename?: string) => {
+        setPendingAction({ type, url, filename });
+        setAdvisoryAgreed(false); // Reset agreement
+        setShowAdvisory(true);
+    };
+
+    const handleAdvisoryConfirm = () => {
+        setShowAdvisory(false);
+        if (pendingAction) {
+            if (pendingAction.type === 'view') {
+                setSelectedPdf(pendingAction.url);
+            } else if (pendingAction.type === 'download' && pendingAction.filename) {
+                performDownload(pendingAction.url, pendingAction.filename);
+            }
+            setPendingAction(null);
+        }
+    };
+
     useEffect(() => {
         const checkMembership = () => {
             const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
@@ -418,7 +449,9 @@ export default function NotesPage() {
         return SCHEDULE_MAPPING[title] || fallback;
     };
 
-    const handleDownload = async (url: string, filename: string) => {
+
+
+    const performDownload = async (url: string, filename: string) => {
         try {
             if (!Capacitor.isNativePlatform()) {
                 const link = document.createElement('a');
@@ -642,14 +675,14 @@ export default function NotesPage() {
                                     <>
                                         <div className="grid grid-cols-2 gap-1.5 md:gap-3 mt-auto">
                                             <button
-                                                onClick={() => setSelectedPdf(file.path || null)}
+                                                onClick={() => handleActionRequest('view', file.path || '')}
                                                 className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-slate-50 text-slate-700 font-semibold text-[10px] md:text-sm hover:bg-slate-100 transition-colors border border-slate-200"
                                             >
                                                 <Eye className="w-3 h-3 md:w-4 md:h-4" />
                                                 View
                                             </button>
                                             <button
-                                                onClick={() => handleDownload(file.path || '', file.filename || 'document.pdf')}
+                                                onClick={() => handleActionRequest('download', file.path || '', file.filename || 'document.pdf')}
                                                 className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-[10px] md:text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
                                             >
                                                 <Download className="w-3 h-3 md:w-4 md:h-4" />
@@ -708,7 +741,7 @@ export default function NotesPage() {
                                     <span className="hidden sm:inline">{pdfDarkMode ? 'Light' : 'Dark'}</span>
                                 </button>
                                 <button
-                                    onClick={() => handleDownload(selectedPdf, selectedPdf.split('/').pop() || 'download.pdf')}
+                                    onClick={() => handleActionRequest('download', selectedPdf, selectedPdf.split('/').pop() || 'download.pdf')}
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 font-semibold text-xs transition-colors"
                                 >
                                     <Download className="w-4 h-4" />
@@ -732,6 +765,82 @@ export default function NotesPage() {
                     </div>
                 </div>
             )}
+            {/* --- ETHICS ADVISORY POPUP --- */}
+            {showAdvisory && (
+                <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-white dark:bg-zinc-900 rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
+                        <div className="bg-gradient-to-r from-red-600 to-rose-600 p-5 sm:p-6 text-white relative overflow-hidden shrink-0">
+                            <ShieldAlert className="w-10 h-10 sm:w-12 sm:h-12 absolute -bottom-2 -right-2 text-white/20" />
+                            <h3 className="text-lg sm:text-xl font-bold flex items-center gap-2">
+                                <Info className="w-5 h-5 sm:w-6 sm:h-6" />
+                                Ethical Use Advisory
+                            </h3>
+                            <p className="text-red-100 text-xs sm:text-sm mt-1">Please read carefully before proceeding</p>
+                        </div>
+
+                        <div className="p-5 sm:p-6 max-h-[50vh] sm:max-h-[60vh] overflow-y-auto space-y-3 sm:space-y-4 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700">
+                            <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                                Paid members are respectfully advised not to share, circulate, forward, or distribute Dak Guru PDF Notes or other premium study materials to colleagues or non-paid users.
+                            </p>
+                            <p>
+                                These materials are the result of extensive academic research, subject-matter expertise, and sustained effort by our dedicated content creators. Every note is carefully crafted to align with the latest syllabus, examination trends, and conceptual clarity required for departmental examinations.
+                            </p>
+                            <div className="p-3 sm:p-4 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-xl">
+                                <p className="text-red-800 dark:text-red-200 font-medium text-xs sm:text-sm">
+                                    Sharing paid content without authorization is not only a violation of professional ethics, but also undermines the Guru–Shishya values of respect, fairness, and integrity.
+                                </p>
+                            </div>
+                            <p>
+                                It directly affects the morale and livelihood of the educators and contributors who work tirelessly to support aspirants through high-quality resources. We sincerely request all paid members to uphold moral responsibility and professional discipline by using the materials strictly for personal academic purposes.
+                            </p>
+                            <ul className="list-disc pl-5 space-y-1 marker:text-red-500 text-xs sm:text-sm">
+                                <li>Encouraging quality content creation</li>
+                                <li>Sustaining affordable learning resources</li>
+                                <li>Maintaining academic credibility and trust</li>
+                            </ul>
+                            <p className="font-bold text-center pt-2 text-zinc-800 dark:text-zinc-200 text-sm">
+                                "Let us grow together by respecting knowledge, effort, and integrity." <br />
+                                <span className="text-xs font-normal text-zinc-500">~ Team Dak Guru</span>
+                            </p>
+                        </div>
+
+                        <div className="p-5 sm:p-6 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 shrink-0">
+                            <label className="flex items-start gap-3 cursor-pointer group mb-5 select-none">
+                                <div className="relative flex items-center mt-0.5">
+                                    <input
+                                        type="checkbox"
+                                        className="peer sr-only"
+                                        checked={advisoryAgreed}
+                                        onChange={(e) => setAdvisoryAgreed(e.target.checked)}
+                                    />
+                                    <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-zinc-300 rounded transition-colors peer-checked:bg-red-600 peer-checked:border-red-600 dark:border-zinc-600"></div>
+                                    <Check className="absolute w-3.5 h-3.5 sm:w-4 sm:h-4 text-white left-1 top-0.5 sm:left-1 sm:top-1 opacity-0 peer-checked:opacity-100 transition-opacity" strokeWidth={3} />
+                                </div>
+                                <span className="text-xs sm:text-sm font-medium text-zinc-700 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors leading-snug">
+                                    I have read the advisory and agree to use these materials ethically for my personal use only.
+                                </span>
+                            </label>
+
+                            <div className="flex gap-3">
+                                <button
+                                    onClick={() => setShowAdvisory(false)}
+                                    className="flex-1 py-3 sm:py-3.5 rounded-xl font-bold text-sm text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-150"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={handleAdvisoryConfirm}
+                                    disabled={!advisoryAgreed}
+                                    className="flex-[2] py-3 sm:py-3.5 rounded-xl font-bold text-sm bg-red-600 text-white shadow-lg shadow-red-500/30 hover:bg-red-700 hover:shadow-red-500/40 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 duration-150"
+                                >
+                                    Confirm & Proceed
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* --- DOWNLOAD TOAST --- */}
             {showDownloadToast && (
                 <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] bg-zinc-900 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5 fade-in duration-300">

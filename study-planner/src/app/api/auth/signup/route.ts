@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createUser } from '@/lib/db';
 import nodemailer from 'nodemailer';
+import { createNotification } from '@/lib/notifications';
 
 export async function POST(request: Request) {
     try {
@@ -21,9 +22,16 @@ export async function POST(request: Request) {
         }
 
         await createUser(email, password, name, {
-            mobile,
             gender
         });
+
+        // Trigger Notification
+        await createNotification(
+            'system',
+            'New User Registration',
+            `A new user ${name} (${email}) has joined the platform.`,
+            { userId: email, name, email }
+        );
 
         // Send Welcome Email
         if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {

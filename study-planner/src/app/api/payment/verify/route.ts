@@ -3,6 +3,7 @@ import crypto from 'crypto';
 import dbConnect from '@/lib/mongoose';
 import User from '@/models/User';
 import Coupon from '@/models/Coupon';
+import { createNotification } from '@/lib/notifications';
 
 export async function POST(request: Request) {
     try {
@@ -57,6 +58,14 @@ export async function POST(request: Request) {
                 }, { status: 404 });
             }
 
+            // Trigger Notification for Upgrade
+            await createNotification(
+                'membership_upgrade',
+                'Membership Upgraded',
+                `User ${email} upgraded to ${plan.type.toUpperCase()} using ${plan.name}`,
+                { userId: email, plan: plan.name, level: plan.type }
+            );
+
             // 3. Mark Coupon as Redeemed (if used)
             if (couponCode) {
                 await Coupon.findOneAndUpdate(
@@ -68,6 +77,14 @@ export async function POST(request: Request) {
                             redeemedByEmail: email
                         }
                     }
+                );
+
+                // Notification for Redemption
+                await createNotification(
+                    'coupon_redeem',
+                    'Coupon Redeemed',
+                    `User ${email} redeemed coupon ${couponCode}`,
+                    { userId: email, code: couponCode }
                 );
             }
         }

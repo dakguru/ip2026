@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getAllPosts, addPost } from '@/lib/community-db';
+import { createNotification } from '@/lib/notifications';
 
 export async function GET() {
     const posts = await getAllPosts();
@@ -11,6 +12,15 @@ export async function POST(req: Request) {
         const body = await req.json();
         // Basic validation could go here
         const newPost = await addPost(body);
+
+        // Notification for new post
+        await createNotification(
+            'community_post',
+            'New Community Post',
+            `New post by ${body.author || 'User'}: ${body.title}`,
+            { postId: newPost.id, author: body.author }
+        );
+
         return NextResponse.json(newPost);
     } catch (error) {
         return NextResponse.json({ error: 'Failed to create post' }, { status: 500 });

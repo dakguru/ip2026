@@ -3,81 +3,90 @@ import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import Coupon from '@/models/Coupon';
 import nodemailer from 'nodemailer';
+import { createNotification } from '@/lib/notifications';
 
 export async function POST(request: Request) {
-    try {
-        await dbConnect();
-        const { userName, userEmail, userMobile } = await request.json();
+  try {
+    await dbConnect();
+    const { userName, userEmail, userMobile } = await request.json();
 
-        if (!userEmail || !userName || !userMobile) {
-            return NextResponse.json({ error: 'Missing required details' }, { status: 400 });
-        }
-
-        // 1. Check if user already has a coupon assigned
-        const existingAssignment = await Coupon.findOne({ assignedToEmail: userEmail });
-        if (existingAssignment) {
-            // Optional: Resend email if they lost it, but for now just return success so the frontend feels "done"
-            // Or return specific message. Let's return success but maybe note it.
-            // Actually, let's just resend the email to be helpful.
-            await sendCouponEmail(userEmail, userName, existingAssignment.code);
-            return NextResponse.json({ success: true, message: 'Coupon already assigned. Email resent.', code: existingAssignment.code });
-        }
-
-        // 2. Find first unassigned coupon
-        // We sort by _id or createdAt to ensure serial assignment order if imported in order
-        const coupon = await Coupon.findOneAndUpdate(
-            { isAssigned: false, isValid: true },
-            {
-                $set: {
-                    isAssigned: true,
-                    assignedToEmail: userEmail,
-                    assignedToName: userName,
-                    assignedToMobile: userMobile,
-                    assignedAt: new Date()
-                }
-            },
-            { sort: { createdAt: 1 }, new: true } // Get the updated document
-        );
-
-        if (!coupon) {
-            return NextResponse.json({ error: 'Sorry, all launch offer coupons have been claimed! Please contact support for other offers.' }, { status: 410 });
-        }
-
-        // 3. Send Email
-        await sendCouponEmail(userEmail, userName, coupon.code);
-
-        // 4. Also Send Admin Notification (Silent)
-        await sendAdminNotification(userEmail, userName, userMobile, coupon.code);
-
-        return NextResponse.json({ success: true, message: 'Coupon assigned and email sent!', code: coupon.code });
-
-    } catch (error: any) {
-        console.error('Coupon claim error:', error);
-        return NextResponse.json({ error: error.message || 'Internal server error' }, { status: 500 });
+    if (!userEmail || !userName || !userMobile) {
+      return NextResponse.json({ error: 'Missing required details' }, { status: 400 });
     }
+
+    // 1. Check if user already has a coupon assigned
+    const existingAssignment = await Coupon.findOne({ assignedToEmail: userEmail });
+    if (existingAssignment) {
+      // Optional: Resend email if they lost it, but for now just return success so the frontend feels "done"
+      // Or return specific message. Let's return success but maybe note it.
+      // Actually, let's just resend the email to be helpful.
+      await sendCouponEmail(userEmail, userName, existingAssignment.code);
+      return NextResponse.json({ success: true, message: 'Coupon already assigned. Email resent.', code: existingAssignment.code });
+    }
+
+    // 2. Find first unassigned coupon
+    // We sort by _id or createdAt to ensure serial assignment order if imported in order
+    const coupon = await Coupon.findOneAndUpdate(
+      { isAssigned: false, isValid: true },
+      {
+        $set: {
+          isAssigned: true,
+          assignedToEmail: userEmail,
+          assignedToName: userName,
+          assignedToMobile: userMobile,
+          assignedAt: new Date()
+        }
+      },
+      { sort: { createdAt: 1 }, new: true } // Get the updated document
+    );
+
+    if (!coupon) {
+      return NextResponse.json({ error: 'Sorry, all launch offer coupons have been claimed! Please contact support for other offers.' }, { status: 410 });
+    }
+
+    // 3. Send Email
+    await sendCouponEmail(userEmail, userName, coupon.code);
+
+    // 4. Also Send Admin Notification (Silent)
+    await sendAdminNotification(userEmail, userName, userMobile, coupon.code);
+
+    // System Notification
+    await createNotification(
+      'coupon_claim',
+      'Coupon Claimed',
+      `User ${userName} claimed coupon ${coupon.code}`,
+      { userId: userEmail, code: coupon.code }
+    );
+
+    return NextResponse.json({ success: true, message: 'Coupon assigned and email sent!', code: coupon.code });
+
+  } catch (error: any) {
+    console.error('Coupon claim error:', error);
+    return NextResponse.json({ error: error.message || 'Internal server error' }, { status: 500 });
+  }
 }
 
 async function sendCouponEmail(email: string, name: string, code: string) {
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-        console.warn("Email credentials not set. Skipping email.");
-        return;
-    }
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.warn("Email credentials not set. Skipping email.");
+    return;
+  }
 
-    const transporter = nodemailer.createTransport({
-        host: process.env.EMAIL_HOST || "smtp.zoho.in",
-        port: Number(process.env.EMAIL_PORT) || 465,
-        secure: Number(process.env.EMAIL_PORT) === 465,
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
-        },
-    });
+  const transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST || "smtp.zoho.in",
+    port: Number(process.env.EMAIL_PORT) || 465,
+    secure: Number(process.env.EMAIL_PORT) === 465,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
 
-    const mailOptions = {
-        from: `Dak Guru Offers <${process.env.EMAIL_USER}>`,
-        to: email,
-        subject: '🎉 Congratulations! Here is your 50% OFF Launch Offer Code',
-        html: `
+  const mailOptions = {
+    from: `Dak Guru Offers <${process.env.EMAIL_USER}>`,
+    to: email,
+    subject: '🎉 Congratulations! Here is your 50% OFF Launch Offer Code',
+    html: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -178,28 +187,28 @@ async function sendCouponEmail(email: string, name: string, code: string) {
 </body>
 </html>
         `
-    };
+  };
 
-    await transporter.sendMail(mailOptions);
+  await transporter.sendMail(mailOptions);
 }
 
 async function sendAdminNotification(userEmail: string, userName: string, userMobile: string, code: string) {
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) return;
-    // ... Simplified admin notification logic (reuse transporter) ...
-    const transporter = nodemailer.createTransport({
-        host: process.env.EMAIL_HOST || "smtp.zoho.in",
-        port: Number(process.env.EMAIL_PORT) || 465,
-        secure: Number(process.env.EMAIL_PORT) === 465,
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
-        },
-    });
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) return;
+  // ... Simplified admin notification logic (reuse transporter) ...
+  const transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST || "smtp.zoho.in",
+    port: Number(process.env.EMAIL_PORT) || 465,
+    secure: Number(process.env.EMAIL_PORT) === 465,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
 
-    await transporter.sendMail({
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_USER, // Admin receives it too
-        subject: `[Admin] New Coupon Claimed by ${userName}`,
-        text: `User ${userName} (${userEmail}, ${userMobile}) has claimed coupon code: ${code}.`
-    });
+  await transporter.sendMail({
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER, // Admin receives it too
+    subject: `[Admin] New Coupon Claimed by ${userName}`,
+    text: `User ${userName} (${userEmail}, ${userMobile}) has claimed coupon code: ${code}.`
+  });
 }

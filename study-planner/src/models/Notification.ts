@@ -5,7 +5,7 @@ const NotificationSchema = new mongoose.Schema({
     type: {
         type: String,
         required: true,
-        enum: ['system', 'enrollment', 'purchase', 'community_post', 'community_comment', 'deployment']
+        enum: ['system', 'enrollment', 'purchase', 'coupon_claim', 'coupon_redeem', 'membership_upgrade', 'community_post', 'community_comment', 'admin_message', 'deployment']
     },
     title: { type: String, required: true },
     message: { type: String, required: true },

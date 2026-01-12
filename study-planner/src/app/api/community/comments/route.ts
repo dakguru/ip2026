@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { addComment, updateComment, deleteComment } from '@/lib/community-db';
+import { createNotification } from '@/lib/notifications';
 
 export async function POST(req: Request) {
     try {
@@ -15,7 +16,17 @@ export async function POST(req: Request) {
         const result = await addComment(postId, comment);
         console.log(`[Comments API] Add result:`, result);
 
+
+
         if (result) {
+            // Notification for comment
+            await createNotification(
+                'community_comment',
+                'New Comment',
+                `New comment by ${comment.author} on post #${postId}`,
+                { postId, author: comment.author }
+            );
+
             return NextResponse.json({ success: true });
         } else {
             console.error('[Comments API] Post not found for comment');
