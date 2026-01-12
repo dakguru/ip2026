@@ -219,7 +219,14 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.6 MB",
             color: "amber"
         },
-        { title: "Postal Manual Volume VIII", description: "Manual for various postal operations.", color: "amber", comingSoon: true },
+        {
+            title: "Postal Manual Volume VIII",
+            description: "Manual for various postal operations.",
+            filename: "Postal_Manual_Vol_VIII.pdf",
+            path: "/notes/paper-1/Postal_Manual_Vol_VIII.pdf",
+            size: "0.2 MB",
+            color: "amber"
+        },
 
         {
             title: "Postal Manual Volume V",
@@ -237,7 +244,14 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.8 MB",
             color: "amber"
         },
-        { title: "Postal Manual Volume VI, Part-II", description: "Except telegraphic money orders.", color: "amber", comingSoon: true },
+        {
+            title: "Postal Manual Volume VI, Part-II",
+            description: "Except telegraphic money orders.",
+            filename: "postal-manual-vol-vi-part-2.pdf",
+            path: "/notes/paper-1/postal-manual-vol-vi-part-2.pdf",
+            size: "0.3 MB",
+            color: "amber"
+        },
         { title: "Postal Manual Volume VI, Part-III", description: "Except Appendices.", color: "amber", comingSoon: true },
         { title: "Postal Manual Volume VII", description: "RMS work and innovative guidelines.", color: "amber", comingSoon: true },
 
