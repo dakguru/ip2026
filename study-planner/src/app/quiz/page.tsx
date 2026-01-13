@@ -302,61 +302,70 @@ export default function QuizDashboard() {
                     {!isSubmitted ? (
                         <div className="space-y-6 md:space-y-8">
                             {/* Question Card */}
-                            <div className="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-800">
-                                <h3 className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed mb-6 md:mb-8 whitespace-pre-wrap">
-                                    {currentQ.text}
-                                </h3>
-                                <div className="space-y-3">
-                                    {currentQ.options.map((opt, idx) => {
-                                        const isSelected = answers[currentQ.id] === idx;
-                                        const isAnsweredAlready = answers[currentQ.id] !== undefined;
+                            <div className="relative bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-800 overflow-hidden">
+                                {/* Watermark */}
+                                <img
+                                    src="/official-logo.png"
+                                    alt=""
+                                    className="absolute inset-0 m-auto w-40 opacity-[0.12] pointer-events-none select-none z-0 object-contain"
+                                />
 
-                                        // Visual Feedback Logic
-                                        // If answered: show correctness immediately if that's the desired UX (Instant Feedback)
-                                        // Based on existing code, it does show instant feedback.
+                                <div className="relative z-10">
+                                    <h3 className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed mb-6 md:mb-8 whitespace-pre-wrap">
+                                        {currentQ.text}
+                                    </h3>
+                                    <div className="space-y-3">
+                                        {currentQ.options.map((opt, idx) => {
+                                            const isSelected = answers[currentQ.id] === idx;
+                                            const isAnsweredAlready = answers[currentQ.id] !== undefined;
 
-                                        const isCorrect = idx === currentQ.correctAnswer;
-                                        const showCorrect = isAnsweredAlready && isCorrect;
-                                        const showWrong = isAnsweredAlready && isSelected && !isCorrect;
+                                            // Visual Feedback Logic
+                                            // If answered: show correctness immediately if that's the desired UX (Instant Feedback)
+                                            // Based on existing code, it does show instant feedback.
 
-                                        let buttonStyle = "border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 text-zinc-700 dark:text-zinc-300";
-                                        let iconStyle = "border-zinc-300 dark:border-zinc-600";
+                                            const isCorrect = idx === currentQ.correctAnswer;
+                                            const showCorrect = isAnsweredAlready && isCorrect;
+                                            const showWrong = isAnsweredAlready && isSelected && !isCorrect;
 
-                                        if (showCorrect) {
-                                            buttonStyle = "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 font-medium";
-                                            iconStyle = "border-green-500 bg-green-500 text-white";
-                                        } else if (showWrong) {
-                                            buttonStyle = "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 font-medium";
-                                            iconStyle = "border-red-500 bg-red-500 text-white";
-                                        } else if (isAnsweredAlready) {
-                                            buttonStyle = "border-zinc-100 dark:border-zinc-800 opacity-50 dark:text-zinc-500";
-                                        }
+                                            let buttonStyle = "border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 text-zinc-700 dark:text-zinc-300";
+                                            let iconStyle = "border-zinc-300 dark:border-zinc-600";
 
-                                        return (
-                                            <button
-                                                key={idx}
-                                                onClick={() => handleOptionSelect(currentQ.id, idx)}
-                                                disabled={isAnsweredAlready}
-                                                className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-center gap-4 ${buttonStyle}`}
-                                            >
-                                                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors ${iconStyle}`}>
-                                                    {showCorrect && <CheckCircle2 className="w-4 h-4 text-white" />}
-                                                    {showWrong && <XCircle className="w-4 h-4 text-white" />}
-                                                </div>
-                                                {opt}
-                                            </button>
-                                        );
-                                    })}
-                                </div>
+                                            if (showCorrect) {
+                                                buttonStyle = "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 font-medium";
+                                                iconStyle = "border-green-500 bg-green-500 text-white";
+                                            } else if (showWrong) {
+                                                buttonStyle = "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 font-medium";
+                                                iconStyle = "border-red-500 bg-red-500 text-white";
+                                            } else if (isAnsweredAlready) {
+                                                buttonStyle = "border-zinc-100 dark:border-zinc-800 opacity-50 dark:text-zinc-500";
+                                            }
 
-                                {isAnswered && (
-                                    <div className="mt-8 animate-in fade-in slide-in-from-top-4 duration-300">
-                                        <div className={`p-4 rounded-xl border-l-4 ${answers[currentQ.id] === currentQ.correctAnswer ? 'bg-green-50 dark:bg-green-900/10 border-green-500' : 'bg-red-50 dark:bg-red-900/10 border-red-500'}`}>
-                                            <p className="font-bold text-sm mb-1 uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Explanation</p>
-                                            <p className="text-zinc-700 dark:text-zinc-300">{currentQ.explanation}</p>
-                                        </div>
+                                            return (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => handleOptionSelect(currentQ.id, idx)}
+                                                    disabled={isAnsweredAlready}
+                                                    className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-center gap-4 ${buttonStyle}`}
+                                                >
+                                                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors ${iconStyle}`}>
+                                                        {showCorrect && <CheckCircle2 className="w-4 h-4 text-white" />}
+                                                        {showWrong && <XCircle className="w-4 h-4 text-white" />}
+                                                    </div>
+                                                    {opt}
+                                                </button>
+                                            );
+                                        })}
                                     </div>
-                                )}
+
+                                    {isAnswered && (
+                                        <div className="mt-8 animate-in fade-in slide-in-from-top-4 duration-300">
+                                            <div className={`p-4 rounded-xl border-l-4 ${answers[currentQ.id] === currentQ.correctAnswer ? 'bg-green-50 dark:bg-green-900/10 border-green-500' : 'bg-red-50 dark:bg-red-900/10 border-red-500'}`}>
+                                                <p className="font-bold text-sm mb-1 uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Explanation</p>
+                                                <p className="text-zinc-700 dark:text-zinc-300">{currentQ.explanation}</p>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
 
                             {/* Navigation */}

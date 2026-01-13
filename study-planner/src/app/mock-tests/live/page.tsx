@@ -461,61 +461,70 @@ export default function LiveMockTestPage() {
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                         {/* Question Area */}
                         <div className="md:col-span-8 space-y-6">
-                            <div className="bg-white rounded-2xl p-6 md:p-8 border border-zinc-200 shadow-sm min-h-[400px]">
-                                <div className="flex justify-between items-start mb-6">
-                                    <span className="text-zinc-500 font-mono text-sm font-medium">Question {currentQIndex + 1} of {total}</span>
-                                    <span className="bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded-md font-bold uppercase tracking-wide border border-indigo-100">+2 Marks</span>
-                                </div>
-                                <h2 className="text-xl font-medium leading-relaxed mb-8 whitespace-pre-wrap text-zinc-800">
-                                    {currentQ.text}
-                                </h2>
+                            <div className="relative bg-white rounded-2xl p-6 md:p-8 border border-zinc-200 shadow-sm min-h-[400px] overflow-hidden">
+                                {/* Watermark */}
+                                <img
+                                    src="/official-logo.png"
+                                    alt=""
+                                    className="absolute inset-0 m-auto w-40 opacity-[0.12] pointer-events-none select-none z-0 object-contain"
+                                />
 
-                                {currentQ.table && (
-                                    <div className="mb-8 overflow-hidden rounded-xl border border-zinc-200 shadow-sm">
-                                        <table className="w-full text-left text-sm">
-                                            <thead className="bg-zinc-50 border-b border-zinc-200">
-                                                <tr>
-                                                    {currentQ.table.headers.map((h, i) => (
-                                                        <th key={i} className="px-6 py-4 font-bold text-zinc-900">{h}</th>
-                                                    ))}
-                                                </tr>
-                                            </thead>
-                                            <tbody className="divide-y divide-zinc-100">
-                                                {currentQ.table.rows.map((row, i) => (
-                                                    <tr key={i} className="hover:bg-zinc-50/50 transition-colors">
-                                                        {row.map((cell, j) => (
-                                                            <td key={j} className="px-6 py-4 text-zinc-700 font-medium">{cell}</td>
+                                <div className="relative z-10">
+                                    <div className="flex justify-between items-start mb-6">
+                                        <span className="text-zinc-500 font-mono text-sm font-medium">Question {currentQIndex + 1} of {total}</span>
+                                        <span className="bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded-md font-bold uppercase tracking-wide border border-indigo-100">+2 Marks</span>
+                                    </div>
+                                    <h2 className="text-xl font-medium leading-relaxed mb-8 whitespace-pre-wrap text-zinc-800">
+                                        {currentQ.text}
+                                    </h2>
+
+                                    {currentQ.table && (
+                                        <div className="mb-8 overflow-hidden rounded-xl border border-zinc-200 shadow-sm">
+                                            <table className="w-full text-left text-sm">
+                                                <thead className="bg-zinc-50 border-b border-zinc-200">
+                                                    <tr>
+                                                        {currentQ.table.headers.map((h, i) => (
+                                                            <th key={i} className="px-6 py-4 font-bold text-zinc-900">{h}</th>
                                                         ))}
                                                     </tr>
-                                                ))}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                )}
+                                                </thead>
+                                                <tbody className="divide-y divide-zinc-100">
+                                                    {currentQ.table.rows.map((row, i) => (
+                                                        <tr key={i} className="hover:bg-zinc-50/50 transition-colors">
+                                                            {row.map((cell, j) => (
+                                                                <td key={j} className="px-6 py-4 text-zinc-700 font-medium">{cell}</td>
+                                                            ))}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    )}
 
-                                <div className="space-y-3">
-                                    {currentQ.options.map((option, idx) => {
-                                        const isSelected = answers[currentQ.id] === idx;
-                                        return (
-                                            <button
-                                                key={idx}
-                                                onClick={() => handleOptionSelect(currentQ.id, idx)}
-                                                className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-center gap-4 group
-                                                    ${isSelected
-                                                        ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
-                                                        : 'border-zinc-100 bg-zinc-50 text-zinc-600 hover:border-zinc-300 hover:bg-white'
-                                                    }
-                                                `}
-                                            >
-                                                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors
-                                                    ${isSelected ? 'border-indigo-600 bg-indigo-600' : 'border-zinc-300 group-hover:border-zinc-400'}
-                                                `}>
-                                                    {isSelected && <div className="w-2 h-2 bg-white rounded-full" />}
-                                                </div>
-                                                <span className="font-medium">{option}</span>
-                                            </button>
-                                        );
-                                    })}
+                                    <div className="space-y-3">
+                                        {currentQ.options.map((option, idx) => {
+                                            const isSelected = answers[currentQ.id] === idx;
+                                            return (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => handleOptionSelect(currentQ.id, idx)}
+                                                    className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-center gap-4 group
+                                                        ${isSelected
+                                                            ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                                                            : 'border-zinc-100 bg-zinc-50 text-zinc-600 hover:border-zinc-300 hover:bg-white'
+                                                        }
+                                                    `}
+                                                >
+                                                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors
+                                                        ${isSelected ? 'border-indigo-600 bg-indigo-600' : 'border-zinc-300 group-hover:border-zinc-400'}
+                                                    `}>
+                                                        {isSelected && <div className="w-2 h-2 bg-white rounded-full" />}
+                                                    </div>
+                                                    <span className="font-medium">{option}</span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                             </div>
 

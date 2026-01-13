@@ -199,33 +199,43 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                             transition={{ duration: 0.3, ease: "easeOut" }}
                         >
                             {/* Question Card */}
-                            <div className="bg-white dark:bg-zinc-900 p-5 md:p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4">
-                                <p className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
-                                    {currentQ.text}
-                                </p>
+                            {/* Question Card */}
+                            <div className="relative bg-white dark:bg-zinc-900 p-5 md:p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4 overflow-hidden">
+                                {/* Branding Watermark */}
+                                <img
+                                    src="/official-logo.png"
+                                    alt=""
+                                    className="absolute inset-0 m-auto w-32 md:w-40 opacity-[0.12] pointer-events-none select-none z-0 object-contain"
+                                />
 
-                                {currentQ.table && (
-                                    <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                                        <table className="w-full text-left text-xs md:text-sm">
-                                            <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
-                                                <tr>
-                                                    {currentQ.table.headers.map((h, i) => (
-                                                        <th key={i} className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100">{h}</th>
-                                                    ))}
-                                                </tr>
-                                            </thead>
-                                            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
-                                                {currentQ.table.rows.map((row, i) => (
-                                                    <tr key={i} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
-                                                        {row.map((cell, j) => (
-                                                            <td key={j} className="px-4 py-3 text-zinc-700 dark:text-zinc-300 font-medium">{cell}</td>
+                                <div className="relative z-10">
+                                    <p className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
+                                        {currentQ.text}
+                                    </p>
+
+                                    {currentQ.table && (
+                                        <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                                            <table className="w-full text-left text-xs md:text-sm">
+                                                <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
+                                                    <tr>
+                                                        {currentQ.table.headers.map((h, i) => (
+                                                            <th key={i} className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100">{h}</th>
                                                         ))}
                                                     </tr>
-                                                ))}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                )}
+                                                </thead>
+                                                <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                                                    {currentQ.table.rows.map((row, i) => (
+                                                        <tr key={i} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
+                                                            {row.map((cell, j) => (
+                                                                <td key={j} className="px-4 py-3 text-zinc-700 dark:text-zinc-300 font-medium">{cell}</td>
+                                                            ))}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
 
                             {/* Options */}
