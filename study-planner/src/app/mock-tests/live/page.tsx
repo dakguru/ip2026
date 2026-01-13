@@ -412,6 +412,7 @@ export default function LiveMockTestPage() {
                     }}
                     onExit={() => setGameState('rules')}
                     mode="exam"
+                    aspirantName={userName}
                 />
             );
         }

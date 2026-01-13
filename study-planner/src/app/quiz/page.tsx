@@ -66,6 +66,7 @@ export default function QuizDashboard() {
 
     // Membership State
     const [membershipLevel, setMembershipLevel] = useState<string>('free');
+    const [userName, setUserName] = useState<string>("Aspirant");
 
     useEffect(() => {
         try {
@@ -76,6 +77,9 @@ export default function QuizDashboard() {
                 const session = JSON.parse(decoded);
                 if (session && session.membershipLevel) {
                     setMembershipLevel(session.membershipLevel);
+                }
+                if (session && session.name) {
+                    setUserName(session.name);
                 }
             }
         } catch (e) {
@@ -244,6 +248,7 @@ export default function QuizDashboard() {
                     questions={generatedSet.questions}
                     onComplete={handleNativeComplete}
                     onExit={resetToDashboard}
+                    aspirantName={userName}
                 />
             );
         }

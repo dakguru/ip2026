@@ -11,9 +11,10 @@ interface NativeQuizRunnerProps {
     onComplete: (answers: Record<string, number>, timeTaken: number) => void;
     onExit: () => void;
     mode?: 'practice' | 'exam';
+    aspirantName?: string;
 }
 
-export default function NativeQuizRunner({ quizTitle, questions, onComplete, onExit, mode = 'practice' }: NativeQuizRunnerProps) {
+export default function NativeQuizRunner({ quizTitle, questions, onComplete, onExit, mode = 'practice', aspirantName = "Aspirant" }: NativeQuizRunnerProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [markedForReview, setMarkedForReview] = useState<Set<string>>(new Set());
@@ -170,10 +171,19 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                     <button onClick={handleExitRequest} className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
                         <ArrowLeft className="w-5 h-5 stroke-[2.5px]" />
                     </button>
-                    <div>
-                        <h2 className="text-sm font-extrabold text-zinc-800 dark:text-zinc-100 tracking-tight flex items-center gap-2">
-                            Question {currentIndex + 1} <span className="text-zinc-400 font-medium">/ {questions.length}</span>
-                        </h2>
+                    <div className="flex flex-col">
+                        <span className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider leading-none mb-0.5">
+                            {aspirantName}
+                        </span>
+                        <div className="flex items-center gap-2">
+                            <span className="text-sm font-black text-indigo-600 dark:text-indigo-400 tracking-tight leading-none">
+                                DAK GURU
+                            </span>
+                            <span className="w-0.5 h-3 bg-zinc-200 dark:bg-zinc-700 rounded-full"></span>
+                            <span className="text-sm font-bold text-zinc-800 dark:text-zinc-100 leading-none">
+                                Q {currentIndex + 1} <span className="text-zinc-400 font-medium text-xs">/ {questions.length}</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div className="flex items-center gap-3">

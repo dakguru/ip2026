@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2 } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight } from "lucide-react";
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval } from "date-fns";
 import { useMemo, useState, useEffect } from "react";
@@ -42,6 +42,21 @@ export default function MockTestsPage() {
     const [enrollmentList, setEnrollmentList] = useState<any[]>([]);
     const [loadingEnrollments, setLoadingEnrollments] = useState(false);
     const [selectedTestForEnrollment, setSelectedTestForEnrollment] = useState<string>("");
+    const [enrollmentCounts, setEnrollmentCounts] = useState<Record<string, number>>({});
+    const [universalCount, setUniversalCount] = useState(0);
+
+    const fetchEnrollmentCounts = async () => {
+        try {
+            const res = await fetch('/api/admin/mock-test/counts');
+            if (res.ok) {
+                const data = await res.json();
+                setEnrollmentCounts(data.counts || {});
+                setUniversalCount(data.universalCount || 0);
+            }
+        } catch (error) {
+            console.error("Failed to fetch counts", error);
+        }
+    };
 
     useEffect(() => {
         // Get user session
@@ -63,6 +78,8 @@ export default function MockTestsPage() {
         if (paid) {
             setPaidTests(paid.split(','));
         }
+
+        fetchEnrollmentCounts();
     }, []);
 
     const mockTests = useMemo(() => {
@@ -153,36 +170,63 @@ export default function MockTestsPage() {
         setProcessingId(mock.id);
 
         try {
-            // Simulate API call for order creation
-            // In production: const res = await fetch('/api/create-order', ...);
+            // 1. Create Order via server
+            const orderRes = await fetch('/api/payment/create-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    amount: 49,
+                    email: userEmail,
+                    plan: { id: mock.id, name: mock.title, type: 'mock_test' }
+                })
+            });
 
-            // Allow simulated success for UI testing if backend not ready
-            const order = {
-                id: "order_mock_" + Date.now(),
-                amount: 4900,
-                currency: "INR"
-            };
+            if (!orderRes.ok) throw new Error("Order creation failed");
+            const order = await orderRes.json();
 
             const options = {
-                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || 'rzp_test_placeholder',
+                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
                 amount: order.amount,
                 currency: order.currency,
                 name: "Dak Guru",
                 description: `Enrollment: ${mock.title}`,
                 image: "/dak-guru-round.png",
-                order_id: order.id.startsWith('order_') ? undefined : order.id, // Use valid ID in prod
+                order_id: order.id,
                 handler: async function (response: any) {
-                    // Success
-                    const newPaidList = [...paidTests, mock.id];
-                    setPaidTests(newPaidList);
-                    localStorage.setItem('paid_mock_tests', newPaidList.join(','));
-                    alert("Enrollment Successful! You can now access this test when it goes live.");
+                    // 2. Verify Payment via server
+                    try {
+                        const verifyRes = await fetch('/api/mock-test/enroll/verify', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                razorpay_order_id: response.razorpay_order_id,
+                                razorpay_payment_id: response.razorpay_payment_id,
+                                razorpay_signature: response.razorpay_signature,
+                                email: userEmail,
+                                testId: mock.id,
+                                testTitle: mock.title,
+                                userName: userName
+                            })
+                        });
+
+                        if (verifyRes.ok) {
+                            const newPaidList = [...paidTests, mock.id];
+                            setPaidTests(newPaidList);
+                            localStorage.setItem('paid_mock_tests', newPaidList.join(','));
+                            alert("Enrollment Successful! You can now access this test when it goes live.");
+                            fetchEnrollmentCounts(); // Refresh counts
+                        } else {
+                            alert("Payment verification failed. Please contact support.");
+                        }
+                    } catch (e) {
+                        console.error(e);
+                        alert("Error verifying payment");
+                    }
                     setProcessingId(null);
                 },
                 prefill: {
                     name: userName,
-                    email: userEmail,
-                    contact: ""
+                    email: userEmail
                 },
                 theme: {
                     color: "#dc2626"
@@ -194,11 +238,7 @@ export default function MockTestsPage() {
                 }
             };
 
-            const rzp = new window.Razorpay(options);
-            rzp.on('payment.failed', function (response: any) {
-                alert("Payment Failed: " + response.error.description);
-                setProcessingId(null);
-            });
+            const rzp = new (window as any).Razorpay(options);
             rzp.open();
 
         } catch (error: any) {
@@ -373,6 +413,7 @@ export default function MockTestsPage() {
                                     isProcessing={processingId === mock.id}
                                     role={role}
                                     onViewEnrollments={() => handleViewEnrollments(mock)}
+                                    enrollmentCount={enrollmentCounts[mock.id] || universalCount}
                                 />
                             ))}
                         </div>
@@ -420,6 +461,7 @@ export default function MockTestsPage() {
                                             isProcessing={processingId === mock.id}
                                             role={role}
                                             onViewEnrollments={() => handleViewEnrollments(mock)}
+                                            enrollmentCount={enrollmentCounts[mock.id] || universalCount}
                                         />
                                     ))}
                                 </div>
@@ -442,6 +484,7 @@ export default function MockTestsPage() {
                                         isPaid={true} // Previous tests always viewable/result (or handle appropriately)
                                         membershipLevel={membershipLevel}
                                         onEnroll={() => { }}
+                                        enrollmentCount={enrollmentCounts[mock.id] || universalCount}
                                     />
                                 ))}
                             </div>
@@ -717,7 +760,8 @@ function MockTestCard({
     onEnroll,
     isProcessing,
     role,
-    onViewEnrollments
+    onViewEnrollments,
+    enrollmentCount
 }: {
     mock: MockTest;
     onClick: () => void;
@@ -727,6 +771,7 @@ function MockTestCard({
     isProcessing?: boolean;
     role?: string;
     onViewEnrollments?: () => void;
+    enrollmentCount?: number;
 }) {
     const isLive = mock.status === 'live';
     const isExpired = mock.status === 'expired';
@@ -748,19 +793,27 @@ function MockTestCard({
                     `}>
                         {isLive ? 'Live Now' : isExpired ? 'Ended' : 'Upcoming'}
                     </span>
-                    {/* Admin View Icon */}
-                    {role === 'admin' && onViewEnrollments && (
-                        <button
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                onViewEnrollments();
-                            }}
-                            className="p-1 rounded hover:bg-black/10 transition-colors"
-                            title="View Enrolled Users"
-                        >
-                            <Users className="w-4 h-4" />
-                        </button>
-                    )}
+
+                    {/* Enrollment Count - Global Visibility */}
+                    <div className="flex items-center gap-1.5 ml-1">
+                        <Users className={`w-3.5 h-3.5 ${isLive ? 'text-white' : 'text-zinc-400'}`} />
+                        <span className={`text-[11px] font-bold ${isLive ? 'text-white' : 'text-zinc-500'}`}>
+                            {enrollmentCount || 0}
+                        </span>
+
+                        {role === 'admin' && onViewEnrollments && (
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    onViewEnrollments();
+                                }}
+                                className={`p-1 rounded hover:bg-black/10 transition-colors ml-0.5`}
+                                title="View Enrolled Users"
+                            >
+                                <ChevronRight className="w-3 h-3" />
+                            </button>
+                        )}
+                    </div>
                 </div>
                 <span className={`text-xs font-bold
                     ${isLive ? 'text-white' : 'text-blue-600'}
