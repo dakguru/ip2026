@@ -166,7 +166,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
     return (
         <div className="fixed inset-0 z-[100] bg-[#F8F9FB] dark:bg-black flex flex-col font-sans">
             {/* 1. Modern Header */}
-            <div className="h-14 px-4 flex items-center justify-between bg-white dark:bg-zinc-950 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] z-20 pt-[env(safe-area-inset-top)]">
+            <div className="min-h-[3.5rem] py-2 px-4 flex items-center justify-between bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 z-20 pt-[env(safe-area-inset-top)]">
                 <div className="flex items-center gap-3">
                     <button onClick={handleExitRequest} className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
                         <ArrowLeft className="w-5 h-5 stroke-[2.5px]" />
