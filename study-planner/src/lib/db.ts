@@ -149,7 +149,7 @@ export async function updateSession(email: string, sessionId: string): Promise<b
     await dbConnect();
     const result = await UserModel.updateOne(
         { email },
-        { $set: { currentSessionId: sessionId } }
+        { $set: { currentSessionId: sessionId, lastActiveAt: new Date() } }
     );
     return result.modifiedCount > 0;
 }
@@ -158,5 +158,12 @@ export async function validateSession(email: string, sessionId: string): Promise
     await dbConnect();
     const user = await UserModel.findOne({ email });
     if (!user) return false;
-    return user.currentSessionId === sessionId;
+
+    const isValid = user.currentSessionId === sessionId;
+    if (isValid) {
+        // Fire and forget update to keep validation fast
+        UserModel.updateOne({ _id: user._id }, { $set: { lastActiveAt: new Date() } }).catch(err => console.error("Failed to update activity", err));
+    }
+
+    return isValid;
 }
