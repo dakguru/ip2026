@@ -407,7 +407,7 @@ export default function QuizDashboard() {
                                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-tr from-yellow-400 to-orange-500 text-white rounded-full shadow-lg mb-6">
                                     <Trophy className="w-12 h-12" />
                                 </div>
-                                <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-2">Pactice Completed!</h2>
+                                <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-2">Practice Completed!</h2>
                                 <p className="text-zinc-500 dark:text-zinc-400 text-lg">
                                     You scored <span className="text-zinc-900 dark:text-zinc-100 font-bold">{score} / {total} {total > 0 && `(${Math.round(score / total * 100)}%)`}</span>
                                 </p>
