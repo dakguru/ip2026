@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Capacitor } from '@capacitor/core';
+import { SplashScreen as CapacitorSplashScreen } from '@capacitor/splash-screen';
 
 export default function SplashScreen() {
     // Default to false so it doesn't show on Web (prevents flash)
@@ -11,13 +12,23 @@ export default function SplashScreen() {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        // Check if we are running on Android
-        const platform = Capacitor.getPlatform();
-        if (platform === 'android') {
-            setIsVisible(true);
-            document.body.style.overflow = 'hidden';
-        }
+        const init = async () => {
+            // Check if we are running on Android
+            const platform = Capacitor.getPlatform();
+            if (platform === 'android') {
+                setIsVisible(true);
+                document.body.style.overflow = 'hidden';
 
+                // Hide the native static splash screen so our animated one takes over
+                try {
+                    await CapacitorSplashScreen.hide();
+                } catch (e) {
+                    console.error("Error hiding native splash screen", e);
+                }
+            }
+        };
+
+        init();
         setIsMounted(true);
     }, []);
 
