@@ -126,7 +126,7 @@ export default function SplashScreen() {
                             Dak Guru
                         </h1>
                         <p className="mt-4 text-sm md:text-base font-light tracking-[0.2em] text-slate-300/80 uppercase">
-                            Learn Smart. Lead Confident.
+                            Learn, Practice, Succeed
                         </p>
                     </motion.div>
                 </div>
