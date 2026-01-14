@@ -103,7 +103,7 @@ export default function AppLoadingScreen() {
                             className="text-center space-y-3"
                         >
                             {/* Brand Name */}
-                            <h1 className="text-3xl font-medium tracking-tight text-slate-900 font-sans">
+                            <h1 className="text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 font-sans">
                                 Dak Guru
                             </h1>
 
