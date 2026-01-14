@@ -5,7 +5,52 @@ import { createNotification } from '@/lib/notifications';
 
 export async function POST(request: Request) {
     try {
-        const { email, password, name, mobile, gender } = await request.json();
+        const { email, password, name, mobile, gender, website, turnstileToken } = await request.json();
+
+        // Honeypot check: If website is filled, it's a bot.
+        // Return success to fool the bot, but do nothing.
+        if (website) {
+            console.log(`Bot signup blocked (Honeypot): ${email}`);
+            return NextResponse.json({ success: true, message: 'Account created successfully' });
+        }
+
+        // Turnstile Verification
+        if (turnstileToken) {
+            const secretKey = process.env.TURNSTILE_SECRET_KEY;
+            const verificationUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+
+            if (secretKey) {
+                const res = await fetch(verificationUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        secret: secretKey,
+                        response: turnstileToken,
+                    }),
+                });
+
+                const data = await res.json();
+                if (!data.success) {
+                    console.error("Turnstile verification failed:", data);
+                    return NextResponse.json(
+                        { error: 'Security check failed. Please try again.' },
+                        { status: 400 }
+                    );
+                }
+            } else {
+                console.warn("TURNSTILE_SECRET_KEY not found in env. Skipping server-side verification.");
+            }
+        } else {
+            // For now, if no token is provided, we might want to block it, 
+            // but during dev/rollout we might be lenient or enforce it.
+            // Let's enforce it.
+            if (process.env.TURNSTILE_SECRET_KEY) {
+                return NextResponse.json(
+                    { error: 'Security check missing.' },
+                    { status: 400 }
+                );
+            }
+        }
 
         if (!email || !password || !name) {
             return NextResponse.json(

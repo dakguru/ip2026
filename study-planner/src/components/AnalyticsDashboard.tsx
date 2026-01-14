@@ -37,9 +37,18 @@ export default function AnalyticsDashboard({ plan, progress }: DashboardProps) {
     let overdueCount = 0;
     let pendingFutureCount = 0;
 
+    const isOverdue = (dateStr: string) => {
+        // check if DD-MM-YYYY
+        if (dateStr.match(/^\d{2}-\d{2}-\d{4}$/)) {
+            const [d, m, y] = dateStr.split('-');
+            return `${y}-${m}-${d}` < today;
+        }
+        return dateStr < today;
+    };
+
     studyItems.forEach(p => {
         if (!progress[p.date]?.completed) {
-            if (p.date < today) overdueCount++;
+            if (isOverdue(p.date)) overdueCount++;
             else pendingFutureCount++;
         }
     });

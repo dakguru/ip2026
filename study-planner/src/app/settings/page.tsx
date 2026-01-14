@@ -7,7 +7,7 @@ import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcas
 import Link from "next/link";
 import Image from "next/image";
 import AnalyticsDashboard from "@/components/AnalyticsDashboard";
-import { generateStudyPlan } from "@/lib/planner";
+import { FULL_SCHEDULE } from "@/data/schedule";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
 const EXAM_OPTIONS = [
@@ -59,10 +59,30 @@ export default function SettingsPage() {
         // Load Progress
         const savedProgress = localStorage.getItem('ldce2026_progress');
         if (savedProgress) {
-            setProgressData(JSON.parse(savedProgress));
+            // The saved progress in planner/page.tsx is Record<string, boolean>
+            // But AnalyticsDashboard expects Record<string, { completed: boolean }>
+            // We need to check the format.
+            // planner/page.tsx stores: const updated = { ...completedDays, [date]: true }; -> So it's boolean.
+            // AnalyticsDashboard usage: progress[p.date]?.completed
+            // So we need to adapt the boolean record to object record if needed.
+
+            const raw = JSON.parse(savedProgress);
+            const adapted: Record<string, any> = {};
+            Object.keys(raw).forEach(k => {
+                adapted[k] = { completed: raw[k] };
+            });
+            setProgressData(adapted);
         }
-        // Load Plan
-        setStudyPlan(generateStudyPlan());
+
+        // Load Plan from FULL_SCHEDULE to match Planner Page
+        // Transform schedule items to PlanItem format
+        const adaptedPlan: any[] = FULL_SCHEDULE.map(item => ({
+            date: item.date, // Keeps "DD-MM-YYYY" format to match storage keys
+            title: `${item.paper}: ${item.subTopic}`,
+            type: (item.paper === 'Revision' || item.paper === 'End') ? 'revision' : 'light',
+            category: item.paper
+        }));
+        setStudyPlan(adaptedPlan);
     }, []);
 
     const handleLogout = async () => {

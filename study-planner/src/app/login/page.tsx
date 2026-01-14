@@ -6,11 +6,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Lock, User, ArrowRight, Loader2, Mail, Phone, Eye, EyeOff } from "lucide-react";
 
+import Turnstile from 'react-turnstile';
+
 function AuthForm() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const [isLogin, setIsLogin] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
+    const [turnstileToken, setTurnstileToken] = useState("");
 
     // Form State
     const [formData, setFormData] = useState({
@@ -19,7 +22,8 @@ function AuthForm() {
         password: "",
         mobile: "",
         gender: "",
-        confirmPassword: ""
+        confirmPassword: "",
+        website: "" // Honeypot field
     });
 
     const [isLoading, setIsLoading] = useState(false);
@@ -62,6 +66,13 @@ function AuthForm() {
                 return;
             }
 
+            // Turnstile Validation
+            if (!turnstileToken) {
+                setError("Please complete the security check.");
+                setIsLoading(false);
+                return;
+            }
+
             // Email Validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(formData.email)) {
@@ -90,10 +101,12 @@ function AuthForm() {
             const res = await fetch(endpoint, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, turnstileToken }),
             });
 
             const data = await res.json();
+
+
 
             if (!res.ok) {
                 throw new Error(data.error || "Something went wrong");
@@ -146,6 +159,18 @@ function AuthForm() {
 
                         {!isLogin && (
                             <>
+                                {/* Honeypot Field - Invisible to humans */}
+                                <div className="opacity-0 absolute top-0 -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+                                    <input
+                                        type="text"
+                                        name="website"
+                                        value={formData.website || ""}
+                                        onChange={handleInputChange}
+                                        tabIndex={-1}
+                                        autoComplete="off"
+                                        placeholder="Website"
+                                    />
+                                </div>
                                 <div className="space-y-1.5">
                                     <label className="text-xs font-semibold text-gray-600 ml-1">
                                         Full Name
@@ -354,6 +379,17 @@ function AuthForm() {
                             </div>
                         )}
 
+                        {/* Turnstile / Captcha */}
+                        {!isLogin && (
+                            <div className="flex justify-center my-4">
+                                <Turnstile
+                                    sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                                    onVerify={(token) => setTurnstileToken(token)}
+                                    theme="light"
+                                />
+                            </div>
+                        )}
+
                         {error && (
                             <div className="text-red-500 text-xs text-center bg-red-50 py-2 rounded-lg animate-in fade-in slide-in-from-top-2">
                                 {error}
@@ -383,7 +419,7 @@ function AuthForm() {
                                 onClick={() => {
                                     setIsLogin(!isLogin);
                                     setError("");
-                                    setFormData({ name: "", email: "", password: "", mobile: "", gender: "", confirmPassword: "" });
+                                    setFormData({ name: "", email: "", password: "", mobile: "", gender: "", confirmPassword: "", website: "" });
 
                                 }}
                                 className="text-blue-600 hover:text-blue-500 font-bold hover:underline bg-transparent border-none cursor-pointer ml-1"
