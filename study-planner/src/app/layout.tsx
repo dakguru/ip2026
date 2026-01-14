@@ -11,6 +11,7 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 import NativeMobileSpacer from "@/components/NativeMobileSpacer";
 import UserActivityTracker from "@/components/UserActivityTracker";
 import BackButtonHandler from "@/components/BackButtonHandler";
+import AppLoadingScreen from "@/components/AppLoadingScreen";
 
 
 const inter = Inter({
@@ -45,6 +46,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <AppLoadingScreen />
           <UserActivityTracker />
           <BackButtonHandler />
           <GlobalNavigation />
