@@ -7,14 +7,6 @@ const config: CapacitorConfig = {
   server: {
     url: 'https://ip2026.vercel.app',
     androidScheme: 'https'
-  },
-  plugins: {
-    SplashScreen: {
-      launchAutoHide: false,
-      backgroundColor: "#000000",
-      showSpinner: false,
-      androidSplashResourceName: "splash"
-    }
   }
 };
 
