@@ -381,12 +381,15 @@ function AuthForm() {
 
                         {/* Turnstile / Captcha */}
                         {!isLogin && (
-                            <div className="flex justify-center my-4">
+                            <div className="flex flex-col items-center justify-center my-4">
                                 <Turnstile
                                     sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
                                     onVerify={(token) => setTurnstileToken(token)}
                                     theme="light"
                                 />
+                                <p className="text-[10px] text-gray-400 mt-2 text-center max-w-[250px]">
+                                    If the security check box doesn&apos;t appear above, please disable your ad blocker or try a different browser.
+                                </p>
                             </div>
                         )}
 

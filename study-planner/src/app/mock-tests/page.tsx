@@ -529,6 +529,7 @@ export default function MockTestsPage() {
                             isPaid={paidTests.includes(selectedMock.id)}
                             onEnroll={() => handleEnroll(selectedMock)}
                             isProcessing={processingId === selectedMock.id}
+                            role={role}
                         />
                     )}
                 </DialogContent>
@@ -605,16 +606,17 @@ export default function MockTestsPage() {
 }
 
 
-function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing }: {
+function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing, role }: {
     mock: MockTest;
     membershipLevel: string;
     isPaid: boolean;
     onEnroll: () => void;
     isProcessing?: boolean;
+    role?: string;
 }) {
-    const isLive = mock.status === 'live';
+    const isLive = mock.status === 'live' || role === 'admin';
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
-    const canAccess = isExempt || isPaid;
+    const canAccess = isExempt || isPaid || role === 'admin';
 
     return (
         <>
@@ -690,9 +692,9 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing 
 
                 {isLive ? (
                     canAccess ? (
-                        <button className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 transition-all flex items-center justify-center gap-2">
+                        <Link href={`/mock-tests/weekly/${mock.id}`} className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 transition-all flex items-center justify-center gap-2">
                             <PlayCircle className="w-6 h-6" /> Start Test Now
-                        </button>
+                        </Link>
                     ) : (
                         <button
                             onClick={(e) => { e.stopPropagation(); onEnroll(); }}
@@ -773,11 +775,11 @@ function MockTestCard({
     onViewEnrollments?: () => void;
     enrollmentCount?: number;
 }) {
-    const isLive = mock.status === 'live';
+    const isLive = mock.status === 'live' || role === 'admin';
     const isExpired = mock.status === 'expired';
-    const isUpcoming = mock.status === 'upcoming';
+    const isUpcoming = mock.status === 'upcoming' && role !== 'admin';
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
-    const canAccess = isExempt || isPaid;
+    const canAccess = isExempt || isPaid || role === 'admin';
 
     return (
         <div onClick={onClick} className={`cursor-pointer bg-white dark:bg-zinc-900 rounded-2xl border shadow-sm md:shadow-lg overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full
