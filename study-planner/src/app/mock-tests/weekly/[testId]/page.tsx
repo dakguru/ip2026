@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, use, useCallback, memo } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, CheckCircle2, AlertCircle, Timer, Save, FileDown, Flag, ChevronLeft, ChevronRight, X, LayoutGrid, Clock, Bookmark, Send, HelpCircle, XCircle } from "lucide-react";
 import Link from "next/link";
@@ -19,6 +19,200 @@ const TEST_DATA_MAP: Record<string, Question[]> = {
 interface PageProps {
     params: Promise<{ testId: string }>;
 }
+
+// Optimization: Memoized Mobile Content Component
+const MemoizedMobileContent = memo(({
+    currentQ,
+    currentQIndex,
+    questions,
+    answers,
+    markedForReview,
+    isMobilePaletteOpen,
+    handleOptionSelect,
+    toggleMarkReview,
+    setCurrentQIndex,
+    handleSubmit,
+    setIsMobilePaletteOpen,
+    vibrate
+}: any) => {
+
+    const getStatusColor = (qId: string, idx: number) => {
+        const ans = answers[qId];
+        const isMarked = markedForReview.includes(qId);
+        const isCurrent = questions[idx].id === currentQ?.id;
+
+        if (isCurrent) return "border-2 border-blue-600 ring-2 ring-blue-100 dark:ring-blue-900";
+        if (isMarked) return "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-300 dark:border-purple-800";
+        if (ans !== undefined) return "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-300 dark:border-green-800";
+        return "bg-zinc-50 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 border-zinc-200 dark:border-zinc-700";
+    };
+
+    if (!currentQ) return null;
+
+    return (
+        <div className="flex-1 overflow-y-auto pb-32 pt-4 px-4 md:px-0 scroll-smooth bg-[#F8F9FB] dark:bg-zinc-950">
+            <div className="max-w-2xl mx-auto">
+                <AnimatePresence mode="popLayout" custom={currentQIndex}>
+                    <motion.div
+                        key={currentQIndex}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                    >
+                        <div className="relative bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4 overflow-hidden">
+                            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
+                                <h1 className="text-6xl font-black text-black dark:text-white transform -rotate-12">DAK GURU</h1>
+                            </div>
+                            <div className="relative z-10">
+                                <p className="text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
+                                    {currentQ.text}
+                                </p>
+                                {currentQ.table && (
+                                    <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                                        <table className="w-full text-left text-xs">
+                                            <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
+                                                <tr>
+                                                    {currentQ.table.headers.map((h: any, i: number) => (
+                                                        <th key={i} className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100">{h}</th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                                                {currentQ.table.rows.map((row: any, i: number) => (
+                                                    <tr key={i} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
+                                                        {row.map((cell: any, j: number) => (
+                                                            <td key={j} className="px-4 py-3 text-zinc-700 dark:text-zinc-300 font-medium">{cell}</td>
+                                                        ))}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        <div className="space-y-2.5">
+                            {currentQ.options.map((option: string, idx: number) => {
+                                const isSelected = answers[currentQ.id] === idx;
+                                let containerClass = "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800";
+                                let textClass = "text-zinc-700 dark:text-zinc-300";
+                                let icon = <div className="w-4 h-4 rounded-full border-2 border-zinc-300 dark:border-zinc-600"></div>;
+
+                                if (isSelected) {
+                                    containerClass = "border-blue-600 bg-blue-50 dark:bg-blue-900/20 ring-1 ring-blue-100 dark:ring-blue-900";
+                                    textClass = "text-blue-700 dark:text-blue-300 font-bold";
+                                    icon = <div className="w-4 h-4 rounded-full border-[5px] border-blue-600"></div>;
+                                }
+
+                                return (
+                                    <button
+                                        key={idx}
+                                        onClick={() => handleOptionSelect(idx)}
+                                        className={`relative w-full text-left p-4 rounded-xl border transition-all duration-200 active:scale-[0.99] flex items-start gap-3.5 ${containerClass}`}
+                                    >
+                                        <div className="mt-0.5 shrink-0 transition-transform duration-300">
+                                            {icon}
+                                        </div>
+                                        <span className={`text-sm leading-snug ${textClass}`}>
+                                            {option}
+                                        </span>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </motion.div>
+                </AnimatePresence>
+            </div>
+
+            {/* Bottom Actions Bar */}
+            <div className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 p-3 pb-[max(12px,env(safe-area-inset-bottom))] z-[110]">
+                <div className="flex items-center justify-between gap-3 max-w-2xl mx-auto">
+                    <button
+                        onClick={toggleMarkReview}
+                        className={`flex flex-col items-center gap-1 min-w-[56px] transition-colors ${markedForReview.includes(currentQ.id) ? "text-purple-600" : "text-zinc-400 hover:text-zinc-600"}`}
+                    >
+                        <Bookmark className={`w-5 h-5 ${markedForReview.includes(currentQ.id) ? "fill-current" : "stroke-current"}`} strokeWidth={2} />
+                        <span className="text-[10px] font-bold">Review</span>
+                    </button>
+
+                    <div className="flex flex-1 items-center gap-3 justify-end">
+                        <button
+                            onClick={() => { vibrate(10); setCurrentQIndex((prev: number) => Math.max(0, prev - 1)); }}
+                            disabled={currentQIndex === 0}
+                            className="w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 transition-colors"
+                        >
+                            <ChevronLeft className="w-6 h-6" />
+                        </button>
+
+                        {currentQIndex === questions.length - 1 ? (
+                            <button
+                                onClick={handleSubmit}
+                                className="flex-1 px-6 h-12 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition-transform active:scale-95"
+                            >
+                                Submit Test <Send className="w-4 h-4" />
+                            </button>
+                        ) : (
+                            <button
+                                onClick={() => { vibrate(10); setCurrentQIndex((prev: number) => prev + 1); }}
+                                className="flex-1 px-6 h-12 bg-blue-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 transition-transform active:scale-95 hover:bg-blue-700"
+                            >
+                                Next <ChevronRight className="w-4 h-4" />
+                            </button>
+                        )}
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile Palette Drawer */}
+            <AnimatePresence>
+                {isMobilePaletteOpen && (
+                    <div className="fixed inset-0 z-[120] flex items-end justify-center">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+                            onClick={() => setIsMobilePaletteOpen(false)}
+                        />
+                        <motion.div
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            exit={{ y: "100%" }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                            className="relative bg-white dark:bg-zinc-900 w-full max-w-lg rounded-t-[2.5rem] p-6 shadow-2xl max-h-[85vh] flex flex-col z-50 pb-[env(safe-area-inset-bottom)]"
+                        >
+                            <div className="flex items-center justify-center mb-6 relative">
+                                <div className="w-12 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full mb-2 absolute -top-3"></div>
+                                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Question Palette</h3>
+                                <button onClick={() => setIsMobilePaletteOpen(false)} className="absolute right-0 p-2 bg-zinc-50 dark:bg-zinc-800 rounded-full text-zinc-500">
+                                    <XCircle className="w-5 h-5" />
+                                </button>
+                            </div>
+
+                            <div className="grid grid-cols-5 gap-3 overflow-y-auto p-1 pb-20 custom-scrollbar">
+                                {questions.map((q: any, idx: number) => (
+                                    <button
+                                        key={q.id}
+                                        onClick={() => {
+                                            vibrate(5);
+                                            setCurrentQIndex(idx);
+                                            setIsMobilePaletteOpen(false);
+                                        }}
+                                        className={`h-12 w-12 rounded-2xl flex items-center justify-center text-sm font-bold border-2 transition-all ${getStatusColor(q.id, idx)}`}
+                                    >
+                                        {idx + 1}
+                                    </button>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+});
 
 export default function WeeklyMockTestRunner({ params }: PageProps) {
     // Unwrap params using React.use()
@@ -107,22 +301,31 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
         loadTest();
     }, [testId, router]);
 
-    // Timer Logic
+    // OPTIMIZED Timer Logic - prevents constant re-subscriptions
     useEffect(() => {
-        if (!isLoading && isAuthorized && !isSubmitted && timeLeft > 0) {
-            const timer = setInterval(() => {
+        let timer: NodeJS.Timeout;
+        if (!isLoading && isAuthorized && !isSubmitted) {
+            timer = setInterval(() => {
                 setTimeLeft(prev => {
                     if (prev <= 1) {
                         clearInterval(timer);
-                        handleSubmit();
                         return 0;
                     }
                     return prev - 1;
                 });
             }, 1000);
-            return () => clearInterval(timer);
         }
-    }, [isLoading, isAuthorized, isSubmitted, timeLeft]);
+        return () => {
+            if (timer) clearInterval(timer);
+        };
+    }, [isLoading, isAuthorized, isSubmitted]); // Removed timeLeft
+
+    // Handle Time up
+    useEffect(() => {
+        if (timeLeft === 0 && !isSubmitted && !isLoading && isAuthorized) {
+            handleSubmit();
+        }
+    }, [timeLeft, isSubmitted, isLoading, isAuthorized]);
 
     const formatTime = (seconds: number) => {
         const mins = Math.floor(seconds / 60);
@@ -130,29 +333,43 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
         return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     };
 
-    const vibrate = (ms: number = 10) => {
+    const vibrate = useCallback((ms: number = 10) => {
         if (typeof navigator !== 'undefined' && navigator.vibrate) {
             navigator.vibrate(ms);
         }
-    };
+    }, []);
 
-    const handleOptionSelect = (idx: number) => {
+    const handleOptionSelect = useCallback((idx: number) => {
         if (isSubmitted) return;
         vibrate(10);
-        const qId = questions[currentQIndex].id;
-        setAnswers(prev => ({ ...prev, [qId]: idx }));
-    };
+        setAnswers(prev => {
+            if (questions.length === 0) return prev;
+            // We use state functional update so we just need access to questions/index
+            // But we don't have access to currentQIndex inside here unless we add it to dep array of callback
+            // So we rely on currentQIndex being a dependency of this callback
+            // The questions array is stable after load.
+            const currentQ = questions[currentQIndex]; // This closure will update when currentQIndex changes
+            if (!currentQ) return prev;
+            return { ...prev, [currentQ.id]: idx };
+        });
+    }, [isSubmitted, currentQIndex, questions, vibrate]);
 
-    const toggleMarkReview = () => {
+    const toggleMarkReview = useCallback(() => {
         vibrate(10);
-        const qId = questions[currentQIndex].id;
-        setMarkedForReview(prev =>
-            prev.includes(qId) ? prev.filter(id => id !== qId) : [...prev, qId]
-        );
-    };
+        setMarkedForReview(prev => {
+            const currentQ = questions[currentQIndex];
+            if (!currentQ) return prev;
+            return prev.includes(currentQ.id) ? prev.filter(id => id !== currentQ.id) : [...prev, currentQ.id];
+        });
+    }, [currentQIndex, questions, vibrate]);
 
-    const handleSubmit = () => {
-        if (!confirm("Are you sure you want to submit the test?")) return;
+    const handleSubmit = useCallback(() => {
+        // Since this is used in timer effect (indirectly via time check effect) and manual click
+        // It needs to be stable or up to date.
+        // We use refs if we want to avoid re-creating, but here just re-creating it when dependencies change is fine
+        // as long as dependencies don't change every second.
+        // Answers change on user interaction. Questions are stable.
+        if (timeLeft > 0 && !confirm("Are you sure you want to submit the test?")) return;
         vibrate(30);
 
         let newScore = 0;
@@ -164,7 +381,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
         setScore(newScore);
         setIsSubmitted(true);
         window.scrollTo(0, 0);
-    };
+    }, [timeLeft, questions, answers, vibrate]);
 
     const generatePDF = async () => {
         const doc = new jsPDF();
@@ -429,173 +646,26 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
                         </div>
                     </div>
 
-                    {/* Scrollable Content */}
-                    <div className="flex-1 overflow-y-auto pb-32 pt-4 px-4 md:px-0 scroll-smooth bg-[#F8F9FB] dark:bg-zinc-950">
-                        <div className="max-w-2xl mx-auto">
-                            <AnimatePresence mode="popLayout" custom={currentQIndex}>
-                                <motion.div
-                                    key={currentQIndex}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -20 }}
-                                    transition={{ duration: 0.3, ease: "easeOut" }}
-                                >
-                                    <div className="relative bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4 overflow-hidden">
-                                        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
-                                            <h1 className="text-6xl font-black text-black dark:text-white transform -rotate-12">DAK GURU</h1>
-                                        </div>
-                                        <div className="relative z-10">
-                                            <p className="text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
-                                                {currentQ.text}
-                                            </p>
-                                            {currentQ.table && (
-                                                <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                                                    <table className="w-full text-left text-xs">
-                                                        <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
-                                                            <tr>
-                                                                {currentQ.table.headers.map((h, i) => (
-                                                                    <th key={i} className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100">{h}</th>
-                                                                ))}
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
-                                                            {currentQ.table.rows.map((row, i) => (
-                                                                <tr key={i} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
-                                                                    {row.map((cell, j) => (
-                                                                        <td key={j} className="px-4 py-3 text-zinc-700 dark:text-zinc-300 font-medium">{cell}</td>
-                                                                    ))}
-                                                                </tr>
-                                                            ))}
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-2.5">
-                                        {currentQ.options.map((option, idx) => {
-                                            const isSelected = answers[currentQ.id] === idx;
-                                            let containerClass = "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800";
-                                            let textClass = "text-zinc-700 dark:text-zinc-300";
-                                            let icon = <div className="w-4 h-4 rounded-full border-2 border-zinc-300 dark:border-zinc-600"></div>;
-
-                                            if (isSelected) {
-                                                containerClass = "border-blue-600 bg-blue-50 dark:bg-blue-900/20 ring-1 ring-blue-100 dark:ring-blue-900";
-                                                textClass = "text-blue-700 dark:text-blue-300 font-bold";
-                                                icon = <div className="w-4 h-4 rounded-full border-[5px] border-blue-600"></div>;
-                                            }
-
-                                            return (
-                                                <button
-                                                    key={idx}
-                                                    onClick={() => handleOptionSelect(idx)}
-                                                    className={`relative w-full text-left p-4 rounded-xl border transition-all duration-200 active:scale-[0.99] flex items-start gap-3.5 ${containerClass}`}
-                                                >
-                                                    <div className="mt-0.5 shrink-0 transition-transform duration-300">
-                                                        {icon}
-                                                    </div>
-                                                    <span className={`text-sm leading-snug ${textClass}`}>
-                                                        {option}
-                                                    </span>
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
-                    </div>
-
-                    {/* Bottom Actions Bar */}
-                    <div className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 p-3 pb-[max(12px,env(safe-area-inset-bottom))] z-[110]">
-                        <div className="flex items-center justify-between gap-3 max-w-2xl mx-auto">
-                            <button
-                                onClick={toggleMarkReview}
-                                className={`flex flex-col items-center gap-1 min-w-[56px] transition-colors ${markedForReview.includes(currentQ.id) ? "text-purple-600" : "text-zinc-400 hover:text-zinc-600"}`}
-                            >
-                                <Bookmark className={`w-5 h-5 ${markedForReview.includes(currentQ.id) ? "fill-current" : "stroke-current"}`} strokeWidth={2} />
-                                <span className="text-[10px] font-bold">Review</span>
-                            </button>
-
-                            <div className="flex flex-1 items-center gap-3 justify-end">
-                                <button
-                                    onClick={() => { vibrate(10); setCurrentQIndex(prev => Math.max(0, prev - 1)); }}
-                                    disabled={currentQIndex === 0}
-                                    className="w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 transition-colors"
-                                >
-                                    <ChevronLeft className="w-6 h-6" />
-                                </button>
-
-                                {currentQIndex === questions.length - 1 ? (
-                                    <button
-                                        onClick={handleSubmit}
-                                        className="flex-1 px-6 h-12 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition-transform active:scale-95"
-                                    >
-                                        Submit Test <Send className="w-4 h-4" />
-                                    </button>
-                                ) : (
-                                    <button
-                                        onClick={() => { vibrate(10); setCurrentQIndex(prev => prev + 1); }}
-                                        className="flex-1 px-6 h-12 bg-blue-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 transition-transform active:scale-95 hover:bg-blue-700"
-                                    >
-                                        Next <ChevronRight className="w-4 h-4" />
-                                    </button>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Mobile Palette Drawer */}
-                    <AnimatePresence>
-                        {isMobilePaletteOpen && (
-                            <div className="fixed inset-0 z-[120] flex items-end justify-center">
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-                                    onClick={() => setIsMobilePaletteOpen(false)}
-                                />
-                                <motion.div
-                                    initial={{ y: "100%" }}
-                                    animate={{ y: 0 }}
-                                    exit={{ y: "100%" }}
-                                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                                    className="relative bg-white dark:bg-zinc-900 w-full max-w-lg rounded-t-[2.5rem] p-6 shadow-2xl max-h-[85vh] flex flex-col z-50 pb-[env(safe-area-inset-bottom)]"
-                                >
-                                    <div className="flex items-center justify-center mb-6 relative">
-                                        <div className="w-12 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full mb-2 absolute -top-3"></div>
-                                        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Question Palette</h3>
-                                        <button onClick={() => setIsMobilePaletteOpen(false)} className="absolute right-0 p-2 bg-zinc-50 dark:bg-zinc-800 rounded-full text-zinc-500">
-                                            <XCircle className="w-5 h-5" />
-                                        </button>
-                                    </div>
-
-                                    <div className="grid grid-cols-5 gap-3 overflow-y-auto p-1 pb-20 custom-scrollbar">
-                                        {questions.map((q, idx) => (
-                                            <button
-                                                key={q.id}
-                                                onClick={() => {
-                                                    vibrate(5);
-                                                    setCurrentQIndex(idx);
-                                                    setIsMobilePaletteOpen(false);
-                                                }}
-                                                className={`h-12 w-12 rounded-2xl flex items-center justify-center text-sm font-bold border-2 transition-all ${getStatusColor(q.id, idx)}`}
-                                            >
-                                                {idx + 1}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            </div>
-                        )}
-                    </AnimatePresence>
+                    {/* Memoized Mobile Content */}
+                    <MemoizedMobileContent
+                        currentQ={currentQ}
+                        currentQIndex={currentQIndex}
+                        questions={questions}
+                        answers={answers}
+                        markedForReview={markedForReview}
+                        isMobilePaletteOpen={isMobilePaletteOpen}
+                        handleOptionSelect={handleOptionSelect}
+                        toggleMarkReview={toggleMarkReview}
+                        setCurrentQIndex={setCurrentQIndex}
+                        handleSubmit={handleSubmit}
+                        setIsMobilePaletteOpen={setIsMobilePaletteOpen}
+                        vibrate={vibrate}
+                    />
                 </div>
             )}
 
-            {/* DESKTOP VIEW (Hidden on Mobile) */}
-            <div className={`hidden lg:block ${!isSubmitted ? 'pb-20' : ''}`}>
+            {/* DESKTOP VIEW (Hidden on Mobile UNLESS Submitted) */}
+            <div className={isSubmitted ? "w-full" : "hidden lg:block pb-20"}>
                 <header className="sticky top-0 z-30 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-300">
                     <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
                         <div className="flex items-center gap-3">
