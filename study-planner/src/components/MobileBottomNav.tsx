@@ -33,6 +33,11 @@ export default function MobileBottomNav() {
         checkSession();
     }, [pathname]);
 
+    // Hide on Mock Test Runner - Check AFTER hooks
+    if (pathname && pathname.startsWith('/mock-tests/weekly/') && pathname.split('/').length > 3) {
+        return null;
+    }
+
     const isPaidUser = ['gold', 'silver'].includes(membershipLevel.toLowerCase());
 
     const navItems = [

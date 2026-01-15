@@ -614,7 +614,7 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
     isProcessing?: boolean;
     role?: string;
 }) {
-    const isLive = mock.status === 'live' || role === 'admin';
+    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17');
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
 
@@ -775,7 +775,7 @@ function MockTestCard({
     onViewEnrollments?: () => void;
     enrollmentCount?: number;
 }) {
-    const isLive = mock.status === 'live' || role === 'admin';
+    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17');
     const isExpired = mock.status === 'expired';
     const isUpcoming = mock.status === 'upcoming' && role !== 'admin';
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
