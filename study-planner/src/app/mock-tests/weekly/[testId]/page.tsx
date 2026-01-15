@@ -4,6 +4,7 @@ import { useState, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, CheckCircle2, AlertCircle, Timer, Save, FileDown, Flag, ChevronLeft, ChevronRight, X, LayoutGrid, Clock, Bookmark, Send, HelpCircle, XCircle } from "lucide-react";
 import Link from "next/link";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
 import { Question } from "@/data/live_mock_data";
 import jsPDF from "jspdf";
@@ -391,210 +392,207 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
         return "bg-zinc-50 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 border-zinc-200 dark:border-zinc-700";
     };
 
-    // --- MOBILE/APP OVERLAY VIEW ---
-    const MobileAppView = () => (
-        <div className="fixed inset-0 z-[100] bg-[#F8F9FB] dark:bg-black flex flex-col font-sans lg:hidden">
-            {/* Header */}
-            <div className="min-h-[3.5rem] py-2 px-4 flex items-center justify-between bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 z-20 pt-[env(safe-area-inset-top)]">
-                <div className="flex items-center gap-3">
-                    <Link href="/mock-tests" className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
-                        <ArrowLeft className="w-5 h-5 stroke-[2.5px]" />
-                    </Link>
-                    <div className="flex flex-col">
-                        <span className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider leading-none mb-0.5">
-                            {userName}
-                        </span>
-                        <div className="flex items-center gap-2">
-                            <span className="text-sm font-black text-indigo-600 dark:text-indigo-400 tracking-tight leading-none">
-                                DAK GURU
-                            </span>
-                            <span className="w-0.5 h-3 bg-zinc-200 dark:bg-zinc-700 rounded-full"></span>
-                            <span className="text-sm font-bold text-zinc-800 dark:text-zinc-100 leading-none">
-                                Q {currentQIndex + 1} <span className="text-zinc-400 font-medium text-xs">/ {questions.length}</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-center gap-3">
-                    <div className={`px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-sm border ${timeLeft < 300 ? 'bg-red-50 text-red-600 border-red-100 animate-pulse' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border-zinc-200 dark:border-zinc-700'}`}>
-                        <Clock className="w-3.5 h-3.5" />
-                        {formatTime(timeLeft)}
-                    </div>
-                    <button onClick={() => setIsMobilePaletteOpen(true)} className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
-                        <LayoutGrid className="w-5 h-5" />
-                    </button>
-                </div>
-            </div>
-
-            {/* Scrollable Content */}
-            <div className="flex-1 overflow-y-auto pb-32 pt-4 px-4 md:px-0 scroll-smooth bg-[#F8F9FB] dark:bg-zinc-950">
-                <div className="max-w-2xl mx-auto">
-                    <AnimatePresence mode="popLayout" custom={currentQIndex}>
-                        <motion.div
-                            key={currentQIndex}
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -20 }}
-                            transition={{ duration: 0.3, ease: "easeOut" }}
-                        >
-                            <div className="relative bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4 overflow-hidden">
-                                <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
-                                    <h1 className="text-6xl font-black text-black dark:text-white transform -rotate-12">DAK GURU</h1>
-                                </div>
-                                <div className="relative z-10">
-                                    <p className="text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
-                                        {currentQ.text}
-                                    </p>
-                                    {currentQ.table && (
-                                        <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                                            <table className="w-full text-left text-xs">
-                                                <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
-                                                    <tr>
-                                                        {currentQ.table.headers.map((h, i) => (
-                                                            <th key={i} className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100">{h}</th>
-                                                        ))}
-                                                    </tr>
-                                                </thead>
-                                                <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
-                                                    {currentQ.table.rows.map((row, i) => (
-                                                        <tr key={i} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
-                                                            {row.map((cell, j) => (
-                                                                <td key={j} className="px-4 py-3 text-zinc-700 dark:text-zinc-300 font-medium">{cell}</td>
-                                                            ))}
-                                                        </tr>
-                                                    ))}
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            <div className="space-y-2.5">
-                                {currentQ.options.map((option, idx) => {
-                                    const isSelected = answers[currentQ.id] === idx;
-                                    let containerClass = "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800";
-                                    let textClass = "text-zinc-700 dark:text-zinc-300";
-                                    let icon = <div className="w-4 h-4 rounded-full border-2 border-zinc-300 dark:border-zinc-600"></div>;
-
-                                    if (isSelected) {
-                                        containerClass = "border-blue-600 bg-blue-50 dark:bg-blue-900/20 ring-1 ring-blue-100 dark:ring-blue-900";
-                                        textClass = "text-blue-700 dark:text-blue-300 font-bold";
-                                        icon = <div className="w-4 h-4 rounded-full border-[5px] border-blue-600"></div>;
-                                    }
-
-                                    return (
-                                        <button
-                                            key={idx}
-                                            onClick={() => handleOptionSelect(idx)}
-                                            className={`relative w-full text-left p-4 rounded-xl border transition-all duration-200 active:scale-[0.99] flex items-start gap-3.5 ${containerClass}`}
-                                        >
-                                            <div className="mt-0.5 shrink-0 transition-transform duration-300">
-                                                {icon}
-                                            </div>
-                                            <span className={`text-sm leading-snug ${textClass}`}>
-                                                {option}
-                                            </span>
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        </motion.div>
-                    </AnimatePresence>
-                </div>
-            </div>
-
-            {/* Bottom Actions Bar */}
-            <div className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 p-3 pb-[max(12px,env(safe-area-inset-bottom))] z-[110]">
-                <div className="flex items-center justify-between gap-3 max-w-2xl mx-auto">
-                    <button
-                        onClick={toggleMarkReview}
-                        className={`flex flex-col items-center gap-1 min-w-[56px] transition-colors ${markedForReview.includes(currentQ.id) ? "text-purple-600" : "text-zinc-400 hover:text-zinc-600"}`}
-                    >
-                        <Bookmark className={`w-5 h-5 ${markedForReview.includes(currentQ.id) ? "fill-current" : "stroke-current"}`} strokeWidth={2} />
-                        <span className="text-[10px] font-bold">Review</span>
-                    </button>
-
-                    <div className="flex flex-1 items-center gap-3 justify-end">
-                        <button
-                            onClick={() => { vibrate(10); setCurrentQIndex(prev => Math.max(0, prev - 1)); }}
-                            disabled={currentQIndex === 0}
-                            className="w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 transition-colors"
-                        >
-                            <ChevronLeft className="w-6 h-6" />
-                        </button>
-
-                        {currentQIndex === questions.length - 1 ? (
-                            <button
-                                onClick={handleSubmit}
-                                className="flex-1 px-6 h-12 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition-transform active:scale-95"
-                            >
-                                Submit Test <Send className="w-4 h-4" />
-                            </button>
-                        ) : (
-                            <button
-                                onClick={() => { vibrate(10); setCurrentQIndex(prev => prev + 1); }}
-                                className="flex-1 px-6 h-12 bg-blue-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 transition-transform active:scale-95 hover:bg-blue-700"
-                            >
-                                Next <ChevronRight className="w-4 h-4" />
-                            </button>
-                        )}
-                    </div>
-                </div>
-            </div>
-
-            {/* Mobile Palette Drawer */}
-            <AnimatePresence>
-                {isMobilePaletteOpen && (
-                    <div className="fixed inset-0 z-[120] flex items-end justify-center">
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-                            onClick={() => setIsMobilePaletteOpen(false)}
-                        />
-                        <motion.div
-                            initial={{ y: "100%" }}
-                            animate={{ y: 0 }}
-                            exit={{ y: "100%" }}
-                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="relative bg-white dark:bg-zinc-900 w-full max-w-lg rounded-t-[2.5rem] p-6 shadow-2xl max-h-[85vh] flex flex-col z-50 pb-[env(safe-area-inset-bottom)]"
-                        >
-                            <div className="flex items-center justify-center mb-6 relative">
-                                <div className="w-12 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full mb-2 absolute -top-3"></div>
-                                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Question Palette</h3>
-                                <button onClick={() => setIsMobilePaletteOpen(false)} className="absolute right-0 p-2 bg-zinc-50 dark:bg-zinc-800 rounded-full text-zinc-500">
-                                    <XCircle className="w-5 h-5" />
-                                </button>
-                            </div>
-
-                            <div className="grid grid-cols-5 gap-3 overflow-y-auto p-1 pb-20 custom-scrollbar">
-                                {questions.map((q, idx) => (
-                                    <button
-                                        key={q.id}
-                                        onClick={() => {
-                                            vibrate(5);
-                                            setCurrentQIndex(idx);
-                                            setIsMobilePaletteOpen(false);
-                                        }}
-                                        className={`h-12 w-12 rounded-2xl flex items-center justify-center text-sm font-bold border-2 transition-all ${getStatusColor(q.id, idx)}`}
-                                    >
-                                        {idx + 1}
-                                    </button>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
-                )}
-            </AnimatePresence>
-        </div>
-    );
-
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans selection:bg-purple-500/30">
             {/* RENDER MOBILE VIEW IF NOT SUBMITTED */}
-            {!isSubmitted && <MobileAppView />}
+            {!isSubmitted && (
+                <div className="fixed inset-0 z-[100] bg-[#F8F9FB] dark:bg-black flex flex-col font-sans lg:hidden">
+                    {/* Header */}
+                    <div className="min-h-[3.5rem] py-2 px-4 flex items-center justify-between bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 z-20 pt-[env(safe-area-inset-top)]">
+                        <div className="flex items-center gap-3">
+                            <Link href="/mock-tests" className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
+                                <ArrowLeft className="w-5 h-5 stroke-[2.5px]" />
+                            </Link>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider leading-none mb-0.5">
+                                    {userName}
+                                </span>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-sm font-black text-indigo-600 dark:text-indigo-400 tracking-tight leading-none">
+                                        DAK GURU
+                                    </span>
+                                    <span className="w-0.5 h-3 bg-zinc-200 dark:bg-zinc-700 rounded-full"></span>
+                                    <span className="text-sm font-bold text-zinc-800 dark:text-zinc-100 leading-none">
+                                        Q {currentQIndex + 1} <span className="text-zinc-400 font-medium text-xs">/ {questions.length}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <div className={`px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-sm border ${timeLeft < 300 ? 'bg-red-50 text-red-600 border-red-100 animate-pulse' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border-zinc-200 dark:border-zinc-700'}`}>
+                                <Clock className="w-3.5 h-3.5" />
+                                {formatTime(timeLeft)}
+                            </div>
+                            <button onClick={() => setIsMobilePaletteOpen(true)} className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+                                <LayoutGrid className="w-5 h-5" />
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Scrollable Content */}
+                    <div className="flex-1 overflow-y-auto pb-32 pt-4 px-4 md:px-0 scroll-smooth bg-[#F8F9FB] dark:bg-zinc-950">
+                        <div className="max-w-2xl mx-auto">
+                            <AnimatePresence mode="popLayout" custom={currentQIndex}>
+                                <motion.div
+                                    key={currentQIndex}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -20 }}
+                                    transition={{ duration: 0.3, ease: "easeOut" }}
+                                >
+                                    <div className="relative bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4 overflow-hidden">
+                                        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
+                                            <h1 className="text-6xl font-black text-black dark:text-white transform -rotate-12">DAK GURU</h1>
+                                        </div>
+                                        <div className="relative z-10">
+                                            <p className="text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
+                                                {currentQ.text}
+                                            </p>
+                                            {currentQ.table && (
+                                                <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                                                    <table className="w-full text-left text-xs">
+                                                        <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
+                                                            <tr>
+                                                                {currentQ.table.headers.map((h, i) => (
+                                                                    <th key={i} className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100">{h}</th>
+                                                                ))}
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                                                            {currentQ.table.rows.map((row, i) => (
+                                                                <tr key={i} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
+                                                                    {row.map((cell, j) => (
+                                                                        <td key={j} className="px-4 py-3 text-zinc-700 dark:text-zinc-300 font-medium">{cell}</td>
+                                                                    ))}
+                                                                </tr>
+                                                            ))}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-2.5">
+                                        {currentQ.options.map((option, idx) => {
+                                            const isSelected = answers[currentQ.id] === idx;
+                                            let containerClass = "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800";
+                                            let textClass = "text-zinc-700 dark:text-zinc-300";
+                                            let icon = <div className="w-4 h-4 rounded-full border-2 border-zinc-300 dark:border-zinc-600"></div>;
+
+                                            if (isSelected) {
+                                                containerClass = "border-blue-600 bg-blue-50 dark:bg-blue-900/20 ring-1 ring-blue-100 dark:ring-blue-900";
+                                                textClass = "text-blue-700 dark:text-blue-300 font-bold";
+                                                icon = <div className="w-4 h-4 rounded-full border-[5px] border-blue-600"></div>;
+                                            }
+
+                                            return (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => handleOptionSelect(idx)}
+                                                    className={`relative w-full text-left p-4 rounded-xl border transition-all duration-200 active:scale-[0.99] flex items-start gap-3.5 ${containerClass}`}
+                                                >
+                                                    <div className="mt-0.5 shrink-0 transition-transform duration-300">
+                                                        {icon}
+                                                    </div>
+                                                    <span className={`text-sm leading-snug ${textClass}`}>
+                                                        {option}
+                                                    </span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </motion.div>
+                            </AnimatePresence>
+                        </div>
+                    </div>
+
+                    {/* Bottom Actions Bar */}
+                    <div className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 p-3 pb-[max(12px,env(safe-area-inset-bottom))] z-[110]">
+                        <div className="flex items-center justify-between gap-3 max-w-2xl mx-auto">
+                            <button
+                                onClick={toggleMarkReview}
+                                className={`flex flex-col items-center gap-1 min-w-[56px] transition-colors ${markedForReview.includes(currentQ.id) ? "text-purple-600" : "text-zinc-400 hover:text-zinc-600"}`}
+                            >
+                                <Bookmark className={`w-5 h-5 ${markedForReview.includes(currentQ.id) ? "fill-current" : "stroke-current"}`} strokeWidth={2} />
+                                <span className="text-[10px] font-bold">Review</span>
+                            </button>
+
+                            <div className="flex flex-1 items-center gap-3 justify-end">
+                                <button
+                                    onClick={() => { vibrate(10); setCurrentQIndex(prev => Math.max(0, prev - 1)); }}
+                                    disabled={currentQIndex === 0}
+                                    className="w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 transition-colors"
+                                >
+                                    <ChevronLeft className="w-6 h-6" />
+                                </button>
+
+                                {currentQIndex === questions.length - 1 ? (
+                                    <button
+                                        onClick={handleSubmit}
+                                        className="flex-1 px-6 h-12 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition-transform active:scale-95"
+                                    >
+                                        Submit Test <Send className="w-4 h-4" />
+                                    </button>
+                                ) : (
+                                    <button
+                                        onClick={() => { vibrate(10); setCurrentQIndex(prev => prev + 1); }}
+                                        className="flex-1 px-6 h-12 bg-blue-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 transition-transform active:scale-95 hover:bg-blue-700"
+                                    >
+                                        Next <ChevronRight className="w-4 h-4" />
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mobile Palette Drawer */}
+                    <AnimatePresence>
+                        {isMobilePaletteOpen && (
+                            <div className="fixed inset-0 z-[120] flex items-end justify-center">
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+                                    onClick={() => setIsMobilePaletteOpen(false)}
+                                />
+                                <motion.div
+                                    initial={{ y: "100%" }}
+                                    animate={{ y: 0 }}
+                                    exit={{ y: "100%" }}
+                                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                                    className="relative bg-white dark:bg-zinc-900 w-full max-w-lg rounded-t-[2.5rem] p-6 shadow-2xl max-h-[85vh] flex flex-col z-50 pb-[env(safe-area-inset-bottom)]"
+                                >
+                                    <div className="flex items-center justify-center mb-6 relative">
+                                        <div className="w-12 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full mb-2 absolute -top-3"></div>
+                                        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Question Palette</h3>
+                                        <button onClick={() => setIsMobilePaletteOpen(false)} className="absolute right-0 p-2 bg-zinc-50 dark:bg-zinc-800 rounded-full text-zinc-500">
+                                            <XCircle className="w-5 h-5" />
+                                        </button>
+                                    </div>
+
+                                    <div className="grid grid-cols-5 gap-3 overflow-y-auto p-1 pb-20 custom-scrollbar">
+                                        {questions.map((q, idx) => (
+                                            <button
+                                                key={q.id}
+                                                onClick={() => {
+                                                    vibrate(5);
+                                                    setCurrentQIndex(idx);
+                                                    setIsMobilePaletteOpen(false);
+                                                }}
+                                                className={`h-12 w-12 rounded-2xl flex items-center justify-center text-sm font-bold border-2 transition-all ${getStatusColor(q.id, idx)}`}
+                                            >
+                                                {idx + 1}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            </div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            )}
 
             {/* DESKTOP VIEW (Hidden on Mobile) */}
             <div className={`hidden lg:block ${!isSubmitted ? 'pb-20' : ''}`}>
@@ -772,10 +770,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
                             </div>
                         </div>
                     ) : (
-                        // Results View - Shared (can be improved for mobile too if needed, but primary request was runner)
-                        // ... (Results view content same as before, simplified copy for conciseness in this thought)
-                        // Actually, I should probably render the full results view here.
-                        // Since I replaced the file, I must provide the full code.
+                        // Results View - Shared
                         <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-500 py-12">
                             <div className="text-center pt-8 pb-12">
                                 <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full mb-6">
