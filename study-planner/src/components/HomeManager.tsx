@@ -13,7 +13,7 @@ interface HomeManagerProps {
 }
 
 export default function HomeManager({ displayName, membershipLevel, role, isLoggedIn }: HomeManagerProps) {
-    const isMobile = useIsMobileApp();
+    const isNativeApp = useIsMobileApp();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -25,8 +25,8 @@ export default function HomeManager({ displayName, membershipLevel, role, isLogg
         return <WebLandingPage displayName={displayName} membershipLevel={membershipLevel} role={role} isLoggedIn={isLoggedIn} />;
     }
 
-    // Show Mobile Dashboard ONLY if it's the Native App (Kapcitor)
-    if (isMobile) {
+    // Show Mobile Dashboard ONLY if it's the Native App (as per user request to revert mobile browser view)
+    if (isNativeApp) {
         return <MobileDashboard displayName={displayName} />;
     }
 

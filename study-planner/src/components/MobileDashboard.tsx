@@ -2,7 +2,7 @@
 
 import DashboardCarousel from "@/components/dashboard/DashboardCarousel";
 import Link from "next/link";
-import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon } from "lucide-react";
+import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetHeader } from "@/components/ui/sheet";
@@ -298,16 +298,50 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
             <div className="space-y-6 pt-5">
 
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
+                {/* --- LIVE MOCK TEST BANNER (Royal & Urgent) --- */}
                 <div className="px-4 md:px-6">
-                    <div className="relative overflow-hidden rounded-lg bg-blue-900/5 dark:bg-blue-900/20 border-l-4 border-blue-600 bg-white dark:bg-zinc-900 shadow-sm p-4 flex items-start gap-4">
-                        <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full shrink-0">
-                            <Info className="w-5 h-5 text-blue-700 dark:text-blue-400" />
-                        </div>
-                        <div>
-                            <h4 className="text-sm font-bold text-slate-900 dark:text-zinc-100 mb-1">Update Coming Soon</h4>
-                            <p className="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
-                                "Back Button" fix will be available in the next Play Store update.
-                            </p>
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-950 shadow-xl shadow-purple-900/20 p-5">
+                        {/* Background Effects */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -ml-10 -mb-10"></div>
+
+                        <div className="relative z-10">
+                            <div className="flex items-center justify-between mb-4">
+                                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-red-300 font-bold text-[10px] uppercase tracking-wider animate-pulse">
+                                    <span className="relative flex h-1.5 w-1.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
+                                    </span>
+                                    Live Now
+                                </div>
+                                <span className="text-[10px] font-medium text-purple-200 bg-white/10 px-2 py-0.5 rounded-md">
+                                    Ends Jan 18
+                                </span>
+                            </div>
+
+                            <h3 className="text-xl font-bold text-white mb-2 leading-tight">
+                                All India <br /> Mock Test - 01
+                            </h3>
+
+                            <div className="bg-black/20 rounded-lg p-3 border border-white/5 mb-4">
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Syllabus</p>
+                                <ul className="space-y-1">
+                                    <li className="text-xs text-slate-200 flex items-center gap-1.5">
+                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> Post Office Act, 2023
+                                    </li>
+                                    <li className="text-xs text-slate-200 flex items-center gap-1.5">
+                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> Savings Promotion Act
+                                    </li>
+                                    <li className="text-xs text-slate-200 flex items-center gap-1.5">
+                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> PMLA Act & Amendments
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <Link href="/quiz" className="w-full bg-white text-indigo-900 py-3 rounded-xl font-bold text-sm shadow-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                                <PlayCircle className="w-4 h-4 fill-indigo-900" />
+                                Attempt Now
+                            </Link>
                         </div>
                     </div>
                 </div>

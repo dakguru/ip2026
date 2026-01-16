@@ -22,6 +22,8 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
             {/* 1. Navbar */}
             <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
 
+            {/* LIVE MOCK TEST BANNER REMOVED AS PER USER REQUEST */}
+
             {/* 1.5. Launch Popup - Disabled as per request */}
             {/* {!["gold", "silver"].includes(membershipLevel.toLowerCase()) && <LaunchPopup />} */}
 

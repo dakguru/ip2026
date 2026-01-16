@@ -606,6 +606,8 @@ export default function MockTestsPage() {
 }
 
 
+// ... (previous code)
+
 function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing, role }: {
     mock: MockTest;
     membershipLevel: string;
@@ -614,7 +616,16 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
     isProcessing?: boolean;
     role?: string;
 }) {
-    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17');
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+    useEffect(() => {
+        // Update time every minute to check for test activation
+        const timer = setInterval(() => setCurrentTime(new Date()), 60000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const isTimeReached = currentTime >= mock.startDate;
+    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || isTimeReached;
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
 
@@ -717,7 +728,7 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
 }
 
 
-function MockCountdown({ targetDate }: { targetDate: Date }) {
+function MockCountdown({ targetDate, onComplete }: { targetDate: Date, onComplete?: () => void }) {
     const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
 
     useEffect(() => {
@@ -734,14 +745,24 @@ function MockCountdown({ targetDate }: { targetDate: Date }) {
             return null;
         };
 
-        setTimeLeft(calculateTimeLeft());
+        const initialTime = calculateTimeLeft();
+        setTimeLeft(initialTime);
+
+        if (!initialTime) {
+            onComplete?.();
+        }
 
         const timer = setInterval(() => {
-            setTimeLeft(calculateTimeLeft());
+            const time = calculateTimeLeft();
+            setTimeLeft(time);
+            if (!time) {
+                clearInterval(timer);
+                onComplete?.();
+            }
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [targetDate]);
+    }, [targetDate, onComplete]);
 
     if (!timeLeft) {
         return <span>View Details</span>;
@@ -775,11 +796,20 @@ function MockTestCard({
     onViewEnrollments?: () => void;
     enrollmentCount?: number;
 }) {
-    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17');
+    const [isTimerExpired, setIsTimerExpired] = useState(false);
+    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || isTimerExpired;
     const isExpired = mock.status === 'expired';
-    const isUpcoming = mock.status === 'upcoming' && role !== 'admin';
+    // If it's effectively live, it's not upcoming anymore
+    const isUpcoming = mock.status === 'upcoming' && role !== 'admin' && !isTimerExpired;
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
+
+    // Check on mount if already expired
+    useEffect(() => {
+        if (new Date() >= mock.startDate) {
+            setIsTimerExpired(true);
+        }
+    }, [mock.startDate]);
 
     return (
         <div onClick={onClick} className={`cursor-pointer bg-white dark:bg-zinc-900 rounded-2xl border shadow-sm md:shadow-lg overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full
@@ -796,26 +826,28 @@ function MockTestCard({
                         {isLive ? 'Live Now' : isExpired ? 'Ended' : 'Upcoming'}
                     </span>
 
-                    {/* Enrollment Count - Global Visibility */}
-                    <div className="flex items-center gap-1.5 ml-1">
-                        <Users className={`w-3.5 h-3.5 ${isLive ? 'text-white' : 'text-zinc-400'}`} />
-                        <span className={`text-[11px] font-bold ${isLive ? 'text-white' : 'text-zinc-500'}`}>
-                            {enrollmentCount || 0}
-                        </span>
+                    {/* Enrollment Count - Admin Only Visibility */}
+                    {role === 'admin' && (
+                        <div className="flex items-center gap-1.5 ml-1">
+                            <Users className={`w-3.5 h-3.5 ${isLive ? 'text-white' : 'text-zinc-400'}`} />
+                            <span className={`text-[11px] font-bold ${isLive ? 'text-white' : 'text-zinc-500'}`}>
+                                {enrollmentCount || 0}
+                            </span>
 
-                        {role === 'admin' && onViewEnrollments && (
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    onViewEnrollments();
-                                }}
-                                className={`p-1 rounded hover:bg-black/10 transition-colors ml-0.5`}
-                                title="View Enrolled Users"
-                            >
-                                <ChevronRight className="w-3 h-3" />
-                            </button>
-                        )}
-                    </div>
+                            {onViewEnrollments && (
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        onViewEnrollments();
+                                    }}
+                                    className={`p-1 rounded hover:bg-black/10 transition-colors ml-0.5`}
+                                    title="View Enrolled Users"
+                                >
+                                    <ChevronRight className="w-3 h-3" />
+                                </button>
+                            )}
+                        </div>
+                    )}
                 </div>
                 <span className={`text-xs font-bold
                     ${isLive ? 'text-white' : 'text-blue-600'}
@@ -878,9 +910,13 @@ function MockTestCard({
 
                 {isLive ? (
                     canAccess ? (
-                        <button className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/30 flex items-center justify-center gap-2">
+                        <Link
+                            href={`/mock-tests/weekly/${mock.id}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/30 flex items-center justify-center gap-2"
+                        >
                             <PlayCircle className="w-5 h-5" /> Attempt Now
-                        </button>
+                        </Link>
                     ) : (
                         <button
                             onClick={(e) => { e.stopPropagation(); onEnroll(); }}
@@ -899,7 +935,7 @@ function MockTestCard({
                     // Upcoming Logic
                     canAccess ? (
                         <button className="w-full py-3 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:border-zinc-400 hover:text-zinc-900 dark:hover:text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2">
-                            <MockCountdown targetDate={mock.startDate} />
+                            <MockCountdown targetDate={mock.startDate} onComplete={() => setIsTimerExpired(true)} />
                         </button>
                     ) : (
                         <button

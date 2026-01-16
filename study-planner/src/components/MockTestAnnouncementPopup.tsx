@@ -11,13 +11,14 @@ export default function MockTestAnnouncementPopup() {
     useEffect(() => {
         // Show popup after a short delay for better UX
         const timer = setTimeout(() => {
-            // Check session storage to avoid spamming every refresh if desired, 
-            // but user asked for "stunning pop-up", so let's show it by default for now 
-            // or maybe use a session key to show once per session.
-            const hasSeen = sessionStorage.getItem("seen_mock_announcement_jan17");
-            if (!hasSeen) {
-                setIsOpen(true);
-            }
+            // ALWAYS SHOW for now as per user request to "fix it" (making sure it appears)
+            setIsOpen(true);
+
+            // Original logic preserved in comments if needed later:
+            // const hasSeen = sessionStorage.getItem("seen_mock_announcement_jan17");
+            // if (!hasSeen) {
+            //     setIsOpen(true);
+            // }
         }, 1500);
 
         return () => clearTimeout(timer);
@@ -88,9 +89,9 @@ export default function MockTestAnnouncementPopup() {
                                 </div>
 
                                 <h2 className="text-3xl font-black text-white mb-2 leading-tight">
-                                    First All India <br />
+                                    All India <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-                                        Mock Test Live
+                                        Mock Test is Live NOW..!
                                     </span>
                                 </h2>
 
@@ -106,9 +107,12 @@ export default function MockTestAnnouncementPopup() {
                                     </div>
                                 </div>
 
-                                <p className="text-zinc-400 text-sm mb-8 max-w-xs mx-auto leading-relaxed">
-                                    Compete with aspirants across India. Check your Global Rank instantly.
-                                </p>
+                                <div className="text-left bg-black/20 rounded-xl p-3 border border-white/5 mb-6 text-xs text-zinc-300 space-y-1">
+                                    <p className="font-bold text-zinc-500 uppercase tracking-wider mb-2 text-[10px]">Syllabus Covered:</p>
+                                    <p className="flex items-center gap-2"><span className="text-green-400">✔</span> The Post Office Act, 2023</p>
+                                    <p className="flex items-center gap-2"><span className="text-green-400">✔</span> Government Savings Promotion Act</p>
+                                    <p className="flex items-center gap-2"><span className="text-green-400">✔</span> PMLA Act, 2002 & Amendments</p>
+                                </div>
 
                                 <div className="space-y-3">
                                     <Link
@@ -118,7 +122,7 @@ export default function MockTestAnnouncementPopup() {
                                     >
                                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity"></span>
                                         <span className="relative flex items-center gap-2">
-                                            Enroll Now
+                                            Attempt Now
                                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         </span>
                                     </Link>

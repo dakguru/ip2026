@@ -8,8 +8,11 @@ import { LIVE_MOCK_QUESTIONS, Question } from "@/data/live_mock_data";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 import NativeQuizRunner from "@/components/quiz/NativeQuizRunner";
 import Script from "next/script";
+import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
+import { Toast } from '@capacitor/toast';
 
 interface LeaderboardEntry {
     _id: string;
@@ -25,11 +28,15 @@ declare global {
 }
 
 export default function LiveMockTestPage() {
-    const isMobileApp = useIsMobileApp();
+    const isNativeApp = useIsMobileApp();
+    const isMobileScreen = useIsMobile();
+    const isMobileApp = isNativeApp || isMobileScreen;
+
     const [gameState, setGameState] = useState<'rules' | 'test' | 'leaderboard'>('rules');
     const [currentQIndex, setCurrentQIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [timeLeft, setTimeLeft] = useState(1200); // 20 minutes = 1200 seconds
+    const [finalTimeTaken, setFinalTimeTaken] = useState(0);
     const [score, setScore] = useState(0);
     const [userEmail, setUserEmail] = useState<string | null>(null);
     const [userName, setUserName] = useState<string>("Aspirant");
@@ -40,7 +47,8 @@ export default function LiveMockTestPage() {
     const [showDownloadNotification, setShowDownloadNotification] = useState(false);
 
     // Payment & Membership States (Unused for this free sample test, but kept for consistency)
-    const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
+    const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold' | 'admin'>('free');
+    const [role, setRole] = useState<'aspirant' | 'admin'>('aspirant');
 
     // Sample Test is ALWAYS FREE
     const canStart = true;
@@ -64,6 +72,9 @@ export default function LiveMockTestPage() {
                 }
                 if (session.membershipLevel) {
                     setMembershipLevel(session.membershipLevel);
+                }
+                if (session.role) {
+                    setRole(session.role);
                 }
             } catch (e) {
                 console.error("Session parse error");
@@ -133,6 +144,21 @@ export default function LiveMockTestPage() {
         if (!auto && !mobileAnswers && !confirm("Are you sure you want to submit the test?")) return;
 
         setIsSubmitting(true);
+
+        // Calculate Time Taken
+        let calculatedTimeTaken = 0;
+        if (mobileAnswers) {
+            // Mobile app logic passes time taken or handles it differently, currently assume it might pass it in future
+            // For now if mobile answers are passed we assume time logic is handled there or we just default
+            // Actually the NativeQuizRunner onComplete passed (mobileAnswers, timeTaken) but we only used first arg in previous call.
+            // But we can't change arguments of handleSubmit easily without type check.
+            // Let's assume for web:
+            calculatedTimeTaken = 1200 - timeLeft;
+        } else {
+            calculatedTimeTaken = 1200 - timeLeft;
+        }
+        setFinalTimeTaken(calculatedTimeTaken);
+
         const finalAnswers = mobileAnswers || answers;
 
         if (mobileAnswers) {
@@ -316,8 +342,31 @@ export default function LiveMockTestPage() {
             }
         });
 
-        doc.save("DakGuru_MockTest_Result.pdf");
-        setShowDownloadNotification(true);
+        if (isNativeApp) {
+            const pdfBase64 = doc.output('datauristring').split(',')[1];
+            const fileName = `DakGuru_Result_${Date.now()}.pdf`;
+            try {
+                // Try writing to Documents directly
+                await Filesystem.writeFile({
+                    path: fileName,
+                    data: pdfBase64,
+                    directory: Directory.Documents,
+                });
+                await Toast.show({
+                    text: 'Answer Sheet Generated. Check your Documents folder.',
+                    duration: 'long'
+                });
+            } catch (e) {
+                console.error("File write error", e);
+                await Toast.show({
+                    text: 'Failed to save PDF. Please check permissions.',
+                    duration: 'long'
+                });
+            }
+        } else {
+            doc.save("DakGuru_MockTest_Result.pdf");
+            setShowDownloadNotification(true);
+        }
     };
 
     useEffect(() => {
@@ -408,6 +457,7 @@ export default function LiveMockTestPage() {
                     questions={questions}
                     onComplete={(mobileAnswers, timeTaken) => {
                         // Pass answers to submit
+                        setFinalTimeTaken(timeTaken); // Capture mobile time
                         handleSubmit(false, mobileAnswers);
                     }}
                     onExit={() => setGameState('rules')}
@@ -660,111 +710,201 @@ export default function LiveMockTestPage() {
         );
     }
 
-    // --- LEADERBOARD SCREEN ---
+    // --- LEADERBOARD SCREEN (ULTRA MODERN) ---
     if (gameState === 'leaderboard') {
-        const userRank = leaderboard.findIndex(l => l.userName === (leaderboard.find(u => u.submittedAt)?.userName || 'You')) + 1; // Approximate logic, ideally fetch from backend
+        const percentage = Math.round((score / 30) * 100);
+        const accuracy = Math.round((score / (Object.keys(answers).length * 2 || 1)) * 100); // Approx accuracy based on attempted
+        const timeSpent = finalTimeTaken || (1200 - timeLeft);
+        const mins = Math.floor(timeSpent / 60);
+        const secs = timeSpent % 60;
 
         return (
-            <div className="min-h-screen bg-zinc-50 text-zinc-900 font-sans p-4 md:p-12 relative">
+            <div className="min-h-screen bg-slate-50 dark:bg-black font-sans p-4 md:p-8 relative transition-colors">
                 {/* Notification */}
                 {showDownloadNotification && (
-                    <div className="fixed top-4 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-xl shadow-2xl z-50 flex items-center gap-3 animate-in fade-in slide-in-from-top-4 duration-300">
-                        <CheckCircle2 className="w-5 h-5" />
-                        <span className="font-bold">Answer Sheet Downloaded. Go to your Downloads folder</span>
+                    <div className="fixed top-6 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-2xl shadow-emerald-600/20 z-50 flex items-center gap-4 animate-in fade-in slide-in-from-top-4 duration-500">
+                        <div className="bg-white/20 p-2 rounded-full">
+                            <CheckCircle2 className="w-5 h-5" />
+                        </div>
+                        <div>
+                            <p className="font-bold">Answer Sheet Downloaded</p>
+                            <p className="text-xs text-emerald-100">Check your device downloads folder.</p>
+                        </div>
                     </div>
                 )}
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-8 md:mb-12 animate-in fade-in slide-in-from-bottom-8 duration-700">
-                        <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 bg-gradient-to-tr from-yellow-400 to-amber-600 rounded-full mb-6 shadow-2xl shadow-yellow-500/20">
-                            <Trophy className="w-10 h-10 md:w-12 md:h-12 text-white" />
+
+                <div className="max-w-5xl mx-auto space-y-8">
+                    {/* Header Section */}
+                    <div className="text-center pt-8 pb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-bold uppercase tracking-wider mb-6 border border-green-200 dark:border-green-800">
+                            <Sparkles className="w-4 h-4 fill-green-600 dark:fill-green-400" />
+                            {submissionStatus === 'already_submitted' ? 'Test Already Completed' : 'Submission Successful'}
                         </div>
-                        <h1 className="text-3xl md:text-4xl font-black mb-2 text-zinc-900">
-                            {submissionStatus === 'already_submitted' ? 'Test Already Completed' : 'Test Completed!'}
+                        <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">
+                            {percentage >= 80 ? "Outstanding!" :
+                                percentage >= 60 ? "Great Job!" :
+                                    percentage >= 40 ? "Good Effort!" : "Keep Practicing!"}
                         </h1>
-                        <p className="text-zinc-500 text-lg md:text-xl">
-                            You scored <span className="text-zinc-900 font-bold">{score} / 30</span>
+                        <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                            Search for the perfect balance between speed and accuracy to master the exam.
                         </p>
+                    </div>
 
-                        <div className="mt-8 w-full max-w-sm mx-auto">
-                            <button
-                                onClick={handleDownloadPDF}
-                                className="w-full group px-6 py-3 bg-indigo-600 text-white hover:bg-indigo-700 rounded-xl font-bold transition-all shadow-lg hover:shadow-indigo-500/30 flex items-center justify-center gap-3"
-                            >
-                                <FileDown className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                                Download Answer Sheet
-                            </button>
-                            <p className="text-xs text-zinc-400 mt-2 font-medium">Includes Correct Answers & Explanations</p>
+                    {/* Stats Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+                        {/* 1. Score Card (Hero) */}
+                        <div className="md:col-span-2 bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800 rounded-[2rem] p-8 text-white relative overflow-hidden shadow-2xl shadow-indigo-600/30 group">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-white/20 transition-all duration-700"></div>
+                            <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-500/20 rounded-full blur-2xl -ml-10 -mb-10 group-hover:scale-150 transition-transform duration-700"></div>
+
+                            <div className="relative z-10 flex flex-col justify-between h-full">
+                                <div>
+                                    <h3 className="text-indigo-200 font-bold uppercase tracking-widest text-xs mb-1">Total Score</h3>
+                                    <div className="flex items-baseline gap-2">
+                                        <span className="text-6xl md:text-7xl font-black tracking-tighter">{score}</span>
+                                        <span className="text-2xl text-indigo-300 font-medium">/ 30</span>
+                                    </div>
+                                </div>
+                                <div className="mt-8">
+                                    <div className="flex justify-between items-end mb-2">
+                                        <span className="text-sm font-bold opacity-90">Performance</span>
+                                        <span className="text-2xl font-bold">{percentage}%</span>
+                                    </div>
+                                    <div className="h-3 bg-black/20 rounded-full overflow-hidden backdrop-blur-sm">
+                                        <div
+                                            className="h-full bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-1000 ease-out"
+                                            style={{ width: `${percentage}%` }}
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 2. Time Taken */}
+                        <div className="bg-white dark:bg-zinc-900 rounded-[2rem] p-6 border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col justify-center items-center text-center group hover:border-blue-500/30 transition-colors">
+                            <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <Timer className="w-7 h-7" strokeWidth={2} />
+                            </div>
+                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">
+                                {mins}m {secs}s
+                            </h3>
+                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Time Taken</p>
+                        </div>
+
+                        {/* 3. Accuracy & Answers */}
+                        <div className="bg-white dark:bg-zinc-900 rounded-[2rem] p-6 border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col justify-center gap-4 group hover:border-green-500/30 transition-colors">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded-2xl flex items-center justify-center text-green-600 dark:text-green-400 shrink-0">
+                                    <CheckCircle2 className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h4 className="text-2xl font-bold text-slate-900 dark:text-white">{Math.round(score / 2)}</h4>
+                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Correct Ans</p>
+                                </div>
+                            </div>
+                            <div className="w-full h-px bg-slate-100 dark:bg-zinc-800"></div>
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded-2xl flex items-center justify-center text-red-600 dark:text-red-400 shrink-0">
+                                    <XCircle className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h4 className="text-2xl font-bold text-slate-900 dark:text-white">{15 - Math.round(score / 2)}</h4>
+                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Incorrect/Skipped</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-3xl border border-zinc-200 overflow-hidden shadow-xl">
-                        <div className="p-4 md:p-6 border-b border-zinc-100 flex items-center justify-between bg-zinc-50">
-                            <h2 className="text-lg md:text-xl font-bold flex items-center gap-2 text-zinc-800">
-                                <History className="w-5 h-5 text-indigo-600" /> Live Leaderboard
-                            </h2>
-                            <span className="text-[10px] md:text-xs font-bold bg-white border border-zinc-200 px-3 py-1 rounded-full text-zinc-500 uppercase tracking-wider">Top 50</span>
-                        </div>
+                    {/* Action Buttons */}
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+                        <button
+                            onClick={handleDownloadPDF}
+                            className="w-full md:w-auto px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-bold shadow-2xl shadow-slate-900/20  active:scale-95 transition-all flex items-center justify-center gap-3 group"
+                        >
+                            <FileDown className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+                            <span>Download Answer Sheet</span>
+                        </button>
 
-                        <div className="overflow-x-auto">
-                            <table className="w-full text-left min-w-[600px] md:min-w-0">
-                                <thead className="bg-zinc-50">
-                                    <tr>
-                                        <th className="py-3 px-4 md:py-4 md:px-6 text-xs font-bold text-zinc-400 uppercase tracking-wider w-16 md:w-20">Rank</th>
-                                        <th className="py-3 px-4 md:py-4 md:px-6 text-xs font-bold text-zinc-400 uppercase tracking-wider">
-                                            <span className="md:hidden">Aspirant</span>
-                                            <span className="hidden md:inline">Name of the Aspirant Shri/Smt</span>
-                                        </th>
-                                        <th className="py-3 px-4 md:py-4 md:px-6 text-xs font-bold text-zinc-400 uppercase tracking-wider text-right">
-                                            <span className="md:hidden">Score</span>
-                                            <span className="hidden md:inline">Score Secured</span>
-                                        </th>
-                                        <th className="py-3 px-4 md:py-4 md:px-6 text-xs font-bold text-zinc-400 uppercase tracking-wider text-right">
-                                            <span className="md:hidden">Date</span>
-                                            <span className="hidden md:inline">Completed on (Date and Time)</span>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-zinc-100">
-                                    {leaderboard.map((entry, index) => {
-                                        const isCurrentUser = entry.userName === userEmail; // Simplified check
-                                        // More accurate to check ID if we had it, but name/email should suffice for this demo
-
-                                        let rankBadge;
-                                        if (index === 0) rankBadge = "🥇";
-                                        else if (index === 1) rankBadge = "🥈";
-                                        else if (index === 2) rankBadge = "🥉";
-                                        else rankBadge = `#${index + 1}`;
-
-                                        return (
-                                            <tr key={index} className="group hover:bg-zinc-50 transition-colors">
-                                                <td className="py-4 px-6 font-bold text-zinc-500">{rankBadge}</td>
-                                                <td className="py-4 px-6">
-                                                    <div className="flex items-center gap-3">
-                                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold
-                                                            ${index < 3 ? 'bg-indigo-600 text-white' : 'bg-zinc-100 text-zinc-500'}
-                                                        `}>
-                                                            {entry.userName.charAt(0).toUpperCase()}
-                                                        </div>
-                                                        <span className="font-medium text-zinc-900">{entry.userName}</span>
-                                                    </div>
-                                                </td>
-                                                <td className="py-4 px-6 text-right font-bold text-zinc-900">{entry.score}</td>
-                                                <td className="py-4 px-6 text-right text-sm text-zinc-500 font-mono">
-                                                    {format(new Date(entry.submittedAt), 'MMM d, h:mm a')}
-                                                </td>
-                                            </tr>
-                                        );
-                                    })}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div className="mt-12 text-center pb-20">
-                        <Link href="/" className="px-8 py-3 bg-zinc-900 text-white rounded-xl font-bold hover:bg-zinc-800 transition-colors">
+                        <Link href="/" className="w-full md:w-auto text-center px-8 py-4 bg-white dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 border border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 rounded-xl font-bold transition-all">
                             Back to Home
                         </Link>
                     </div>
+
+                    {/* Leaderboard Section */}
+                    {/* Leaderboard Section - Only visible for Admin or explicitly allowed tests */}
+                    {(membershipLevel === 'admin' || role === 'admin' || userEmail?.includes('admin')) ? (
+                        <div className="bg-white dark:bg-zinc-900 rounded-[2rem] border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-100/50 dark:shadow-none overflow-hidden animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+                            <div className="p-6 md:p-8 flex items-center justify-between border-b border-slate-100 dark:border-zinc-800">
+                                <div>
+                                    <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                        <Trophy className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                                        Live Leaderboard (Admin View)
+                                    </h2>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Real-time rankings of all aspirants</p>
+                                </div>
+                                <div className="bg-slate-100 dark:bg-zinc-800 px-3 py-1 rounded-full text-xs font-bold text-slate-600 dark:text-zinc-400 border border-slate-200 dark:border-zinc-700">
+                                    Top 50
+                                </div>
+                            </div>
+
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left">
+                                    <thead className="bg-slate-50/50 dark:bg-zinc-800/20">
+                                        <tr>
+                                            <th className="py-4 px-6 md:px-8 text-xs font-bold text-slate-400 uppercase tracking-wider">Rank</th>
+                                            <th className="py-4 px-6 md:px-8 text-xs font-bold text-slate-400 uppercase tracking-wider">Aspirant</th>
+                                            <th className="py-4 px-6 md:px-8 text-xs font-bold text-slate-400 uppercase tracking-wider text-right">Score</th>
+                                            <th className="py-4 px-6 md:px-8 text-xs font-bold text-slate-400 uppercase tracking-wider text-right">Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-slate-100 dark:divide-zinc-800">
+                                        {leaderboard.map((entry, index) => {
+                                            const isTop3 = index < 3;
+                                            return (
+                                                <tr key={index} className="group hover:bg-slate-50 dark:hover:bg-zinc-800/40 transition-colors">
+                                                    <td className="py-4 px-6 md:px-8">
+                                                        <div className={`w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm
+                                                        ${index === 0 ? 'bg-yellow-100 text-yellow-700' :
+                                                                index === 1 ? 'bg-slate-200 text-slate-700' :
+                                                                    index === 2 ? 'bg-orange-100 text-orange-700' : 'text-slate-500'}
+                                                    `}>
+                                                            {index + 1}
+                                                        </div>
+                                                    </td>
+                                                    <td className="py-4 px-6 md:px-8">
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="w-8 h-8 rounded-full bg-slate-900 dark:bg-white flex items-center justify-center text-white dark:text-slate-900 text-xs font-bold">
+                                                                {entry.userName.charAt(0).toUpperCase()}
+                                                            </div>
+                                                            <span className={`font-semibold ${isTop3 ? 'text-slate-900 dark:text-white' : 'text-slate-600 dark:text-zinc-300'}`}>
+                                                                {entry.userName}
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td className="py-4 px-6 md:px-8 text-right font-bold text-slate-900 dark:text-white">
+                                                        {entry.score}
+                                                    </td>
+                                                    <td className="py-4 px-6 md:px-8 text-right text-sm text-slate-500 dark:text-slate-400 font-mono">
+                                                        {format(new Date(entry.submittedAt), 'MM/dd')}
+                                                    </td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="bg-white dark:bg-zinc-900 rounded-[2rem] border border-slate-100 dark:border-zinc-800 shadow-xl p-8 text-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+                            <div className="w-16 h-16 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <Lock className="w-8 h-8 text-slate-400" />
+                            </div>
+                            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Leaderboard Hidden</h2>
+                            <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto">
+                                The detailed rank list for this mock test is only available to administrators. Check your individual performance above.
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
         );

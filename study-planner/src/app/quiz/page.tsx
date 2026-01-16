@@ -6,6 +6,7 @@ import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Tim
 import { QUIZ_DATA } from '@/data/quizzes';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
+import { useIsMobile } from '@/hooks/use-is-mobile';
 import NativeQuizRunner from '@/components/quiz/NativeQuizRunner';
 import NativeResultScreen from '@/components/quiz/NativeResultScreen';
 import NativeQuizDashboard from '@/components/quiz/NativeQuizDashboard';
@@ -62,7 +63,10 @@ export default function QuizDashboard() {
     const [selectedTopic, setSelectedTopic] = useState<QuizTopic | null>(null);
     const [generatedSet, setGeneratedSet] = useState<QuizSet | null>(null);
 
-    const isMobileApp = useIsMobileApp();
+    const isNativeApp = useIsMobileApp();
+    const isMobileScreen = useIsMobile();
+    // Treat mobile browser as "Mobile App" for UI purposes
+    const isMobileApp = isNativeApp || isMobileScreen;
 
     // Membership State
     const [membershipLevel, setMembershipLevel] = useState<string>('free');

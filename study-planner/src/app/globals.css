@@ -24,6 +24,25 @@ body {
   font-family: var(--font-sans);
   overscroll-behavior-y: none;
   /* Prevent pull-to-refresh on mobile */
+  /* Prevent pull-to-refresh on mobile */
   -webkit-tap-highlight-color: transparent;
   /* Remove tap highlight */
+  touch-action: manipulation;
+  /* Remove 300ms click delay */
+}
+
+/* Optimize clicks for interactive elements */
+a,
+button,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+/* Hardware acceleration for smooth animations */
+.transform-gpu {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }

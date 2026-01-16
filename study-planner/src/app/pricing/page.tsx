@@ -28,6 +28,7 @@ export default function PricingPage() {
     const [userMobile, setUserMobile] = useState<string | null>(null);
     const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>('free');
     const [isOfferModalOpen, setIsOfferModalOpen] = useState(false);
+
     const isMobileApp = useIsMobileApp();
 
     // Check login status

@@ -66,6 +66,15 @@ export default function MockResultsPage() {
                         </h1>
                         <p className="text-zinc-500 dark:text-zinc-400 mt-1">View submissions for the Admin Sample Test.</p>
                     </div>
+                    <div>
+                        <Link
+                            href="/developer/mock-results/mock-01"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-sm shadow-lg shadow-indigo-600/20 transition-all hover:-translate-y-0.5"
+                        >
+                            <CheckCircle2 className="w-4 h-4" />
+                            View Mock Test - 01 Results
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col">
@@ -120,7 +129,7 @@ export default function MockResultsPage() {
                                                 <td className="py-4 px-6">
                                                     <div className="flex items-center gap-2">
                                                         <span className={`text-lg font-bold ${(result.score / result.totalQuestions) >= 0.7 ? 'text-green-600' :
-                                                                (result.score / result.totalQuestions) >= 0.4 ? 'text-yellow-600' : 'text-red-600'
+                                                            (result.score / result.totalQuestions) >= 0.4 ? 'text-yellow-600' : 'text-red-600'
                                                             }`}>
                                                             {result.score}
                                                         </span>
