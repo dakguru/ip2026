@@ -27,7 +27,7 @@ export default function MockResultsPage() {
 
     const fetchResults = async () => {
         try {
-            const res = await fetch('/api/admin/mock-test/results');
+            const res = await fetch('/api/admin/mock-test/results', { cache: 'no-store' });
             if (res.ok) {
                 const data = await res.json();
                 setResults(data.results);

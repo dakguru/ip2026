@@ -122,7 +122,7 @@ export default function LiveMockTestPage() {
 
     const fetchLeaderboard = async () => {
         try {
-            const res = await fetch('/api/mock-test/live/leaderboard');
+            const res = await fetch('/api/mock-test/live/leaderboard', { cache: 'no-store' });
             if (res.ok) {
                 const data = await res.json();
                 setLeaderboard(data.leaderboard);

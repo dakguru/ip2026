@@ -28,7 +28,7 @@ export default function MockTest01ResultsPage() {
     const fetchResults = async () => {
         try {
             // Fetch specifically for 'live-sample' which represents Mock Test - 01
-            const res = await fetch('/api/admin/mock-test/results?testId=live-sample');
+            const res = await fetch('/api/admin/mock-test/results?testId=live-sample', { cache: 'no-store' });
             if (res.ok) {
                 const data = await res.json();
                 setResults(data.results);
