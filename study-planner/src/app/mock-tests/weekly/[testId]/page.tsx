@@ -236,6 +236,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
 
     // UI State for Mobile Palette
     const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
+    const [hasStarted, setHasStarted] = useState(false);
 
     // Load Data & Check Access
     useEffect(() => {
@@ -330,7 +331,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
     // OPTIMIZED Timer Logic - prevents constant re-subscriptions
     useEffect(() => {
         let timer: NodeJS.Timeout;
-        if (!isLoading && isAuthorized && !isSubmitted) {
+        if (!isLoading && isAuthorized && !isSubmitted && hasStarted) {
             timer = setInterval(() => {
                 setTimeLeft(prev => {
                     if (prev <= 1) {
@@ -344,7 +345,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
         return () => {
             if (timer) clearInterval(timer);
         };
-    }, [isLoading, isAuthorized, isSubmitted]); // Removed timeLeft
+    }, [isLoading, isAuthorized, isSubmitted, hasStarted]); // Removed timeLeft
 
     // Handle Time up
     useEffect(() => {
@@ -434,7 +435,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
 
     // Prevent Back Navigation & Refresh
     useEffect(() => {
-        if (isSubmitted || isLoading || !isAuthorized) return;
+        if (isSubmitted || isLoading || !isAuthorized || !hasStarted) return;
 
         // Push state to trap back button
         window.history.pushState(null, '', window.location.href);
@@ -464,7 +465,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
             window.removeEventListener('popstate', handlePopState);
             window.removeEventListener('beforeunload', handleBeforeUnload);
         };
-    }, [isSubmitted, isLoading, isAuthorized]);
+    }, [isSubmitted, isLoading, isAuthorized, hasStarted]);
 
     const generatePDF = async () => {
         const doc = new jsPDF();
@@ -678,6 +679,81 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
     }
 
     if (!isAuthorized) return null;
+
+    if (!hasStarted && !isSubmitted) {
+        return (
+            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-4">
+                <div className="max-w-2xl w-full bg-white dark:bg-zinc-900 rounded-3xl shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
+                    <div className="p-8 md:p-12 space-y-8">
+                        <div className="text-center space-y-4">
+                            <h1 className="text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
+                                Weekly Mock Test - 01
+                            </h1>
+                            <p className="text-zinc-500 dark:text-zinc-400 text-lg">
+                                Read the instructions carefully before starting.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-3 gap-4">
+                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
+                                <Clock className="w-6 h-6 mx-auto mb-2 text-blue-600" />
+                                <div className="font-bold text-zinc-900 dark:text-zinc-100">60 Min</div>
+                                <div className="text-xs text-zinc-500">Duration</div>
+                            </div>
+                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
+                                <HelpCircle className="w-6 h-6 mx-auto mb-2 text-purple-600" />
+                                <div className="font-bold text-zinc-900 dark:text-zinc-100">{questions.length} Qs</div>
+                                <div className="text-xs text-zinc-500">questions</div>
+                            </div>
+                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
+                                <CheckCircle2 className="w-6 h-6 mx-auto mb-2 text-green-600" />
+                                <div className="font-bold text-zinc-900 dark:text-zinc-100">100 Marks</div>
+                                <div className="text-xs text-zinc-500">Total Score</div>
+                            </div>
+                        </div>
+
+                        <div className="space-y-4 bg-amber-50 dark:bg-amber-900/10 p-6 rounded-2xl border border-amber-100 dark:border-amber-900/20">
+                            <h3 className="font-bold text-amber-900 dark:text-amber-200 flex items-center gap-2">
+                                <AlertCircle className="w-5 h-5" /> Important Rules
+                            </h3>
+                            <ul className="space-y-3 text-sm text-amber-800 dark:text-amber-300">
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                                    This test can only be attempted <strong>ONCE</strong>.
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                                    Do not refresh the page or press the back button during the test.
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                                    The test will auto-submit when the timer reaches zero.
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                                    Once the test starts, you cannot go back without submitting the test.
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
+                                    Ensure you have a stable internet connection.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button
+                            onClick={() => {
+                                vibrate(20);
+                                setHasStarted(true);
+                            }}
+                            className="w-full h-14 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-lg shadow-xl shadow-zinc-200 dark:shadow-none hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                        >
+                            Start Test Now <ArrowLeft className="w-5 h-5 rotate-180" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     const currentQ = questions[currentQIndex];
 
