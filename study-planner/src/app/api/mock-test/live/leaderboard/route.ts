@@ -17,7 +17,9 @@ export async function GET(req: NextRequest) {
             .limit(50) // Top 50
             .lean();
 
-        return NextResponse.json({ leaderboard });
+        const response = NextResponse.json({ leaderboard });
+        response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+        return response;
 
     } catch (error) {
         console.error("Error fetching leaderboard:", error);

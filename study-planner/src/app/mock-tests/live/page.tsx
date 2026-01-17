@@ -88,7 +88,7 @@ export default function LiveMockTestPage() {
             const res = await fetch('/api/mock-test/live/status', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email })
+                body: JSON.stringify({ email, testId: 'live-sample' })
             });
             if (res.ok) {
                 const data = await res.json();
@@ -133,6 +133,11 @@ export default function LiveMockTestPage() {
     };
 
     const handleStartTest = () => {
+        if (!userEmail) {
+            alert("Please login to attempt the test and see your rank.");
+            window.location.href = '/login';
+            return;
+        }
         setGameState('test');
     };
 
@@ -188,6 +193,7 @@ export default function LiveMockTestPage() {
                 });
             } catch (e) {
                 console.error("Failed to submit results", e);
+                alert("Failed to submit results. Please check your connection.");
             }
         }
 

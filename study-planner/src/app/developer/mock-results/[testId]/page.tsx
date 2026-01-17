@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowLeft, Search, CheckCircle2, XCircle, FileText, ChevronDown, ChevronUp, Clock, Calendar, Download } from "lucide-react";
+import { ArrowLeft, Search, CheckCircle2, ChevronDown, ChevronUp, Clock, Calendar, Download, FileText, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
+import { useParams } from "next/navigation";
 
 interface MockResult {
     _id: string;
@@ -15,20 +16,34 @@ interface MockResult {
     answers?: Record<string, number>;
 }
 
-export default function MockTest01ResultsPage() {
+export default function MockTestDetailResultsPage() {
+    const params = useParams();
+    const testId = params.testId as string;
+
+    // Helper to format test ID for display
+    const formatTestName = (id: string) => {
+        if (id === 'live-sample') return 'Sample Mock Test';
+        if (id.startsWith('mock-')) {
+            // mock-2026-01-17 -> Weekly Mock Test (Jan 17)
+            return `Weekly Mock Test (${id.replace('mock-', '')})`;
+        }
+        return id;
+    };
+
     const [results, setResults] = useState<MockResult[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [search, setSearch] = useState("");
     const [expandedRow, setExpandedRow] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchResults();
-    }, []);
+        if (testId) {
+            fetchResults();
+        }
+    }, [testId]);
 
     const fetchResults = async () => {
         try {
-            // Fetch specifically for 'live-sample' which represents Mock Test - 01
-            const res = await fetch('/api/admin/mock-test/results?testId=live-sample', { cache: 'no-store' });
+            const res = await fetch(`/api/admin/mock-test/results?testId=${testId}`, { cache: 'no-store' });
             if (res.ok) {
                 const data = await res.json();
                 setResults(data.results);
@@ -53,35 +68,45 @@ export default function MockTest01ResultsPage() {
         }
     };
 
+    // Calculate Stats
+    const totalAttempts = results.length;
+    const avgScore = totalAttempts > 0
+        ? Math.round(results.reduce((acc, curr) => acc + curr.score, 0) / totalAttempts)
+        : 0;
+
+    const highestScore = totalAttempts > 0
+        ? Math.max(...results.map(r => r.score))
+        : 0;
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 transition-colors">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
                     <Link href="/developer/mock-results" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-2 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to All Results
+                        <ArrowLeft className="w-4 h-4" /> Back to All Tests
                     </Link>
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mt-4">
+                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mt-4">
                         <div>
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider mb-2">
-                                <FileText className="w-3 h-3" /> Live Mock Test
+                                <FileText className="w-3 h-3" /> Result Dashboard
                             </div>
-                            <h1 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">
-                                Mock Test - 01 Results
+                            <h1 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 capitalize">
+                                {formatTestName(testId)}
                             </h1>
-                            <p className="text-zinc-500 dark:text-zinc-400 mt-1">Detailed performance report and rankings.</p>
+                            <p className="text-zinc-500 dark:text-zinc-400 mt-1">Detailed performance report and aspirants ranking.</p>
                         </div>
-                        <div className="flex gap-3">
-                            <div className="px-4 py-2 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                                <span className="block text-xs text-zinc-500 uppercase font-bold">Total Attempts</span>
-                                <span className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{results.length}</span>
+                        <div className="grid grid-cols-3 gap-3">
+                            <div className="px-5 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center justify-center">
+                                <span className="block text-xs text-zinc-500 uppercase font-bold mb-1">Attempts</span>
+                                <span className="text-2xl font-black text-zinc-900 dark:text-zinc-100">{totalAttempts}</span>
                             </div>
-                            <div className="px-4 py-2 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                                <span className="block text-xs text-zinc-500 uppercase font-bold">Avg Score</span>
-                                <span className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
-                                    {results.length > 0
-                                        ? Math.round(results.reduce((acc, curr) => acc + curr.score, 0) / results.length)
-                                        : 0}
-                                </span>
+                            <div className="px-5 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center justify-center">
+                                <span className="block text-xs text-zinc-500 uppercase font-bold mb-1">Avg Score</span>
+                                <span className="text-2xl font-black text-blue-600 dark:text-blue-400">{avgScore}</span>
+                            </div>
+                            <div className="px-5 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center justify-center">
+                                <span className="block text-xs text-zinc-500 uppercase font-bold mb-1">Top Score</span>
+                                <span className="text-2xl font-black text-green-600 dark:text-green-400">{highestScore}</span>
                             </div>
                         </div>
                     </div>
@@ -120,20 +145,17 @@ export default function MockTest01ResultsPage() {
                             <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
                                 {isLoading ? (
                                     <tr>
-                                        <td colSpan={5} className="py-12 text-center">
+                                        <td colSpan={5} className="py-20 text-center">
                                             <div className="flex justify-center flex-col items-center gap-2">
-                                                <div className="w-6 h-6 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
+                                                <Loader2 className="w-8 h-8 text-indigo-600 animate-spin" />
                                                 <span className="text-zinc-500 text-sm">Loading data...</span>
                                             </div>
                                         </td>
                                     </tr>
                                 ) : filteredResults.length > 0 ? (
                                     filteredResults.map((result, index) => {
-                                        // Rank is essentially index + 1 since the list is already sorted by score desc
                                         const rank = index + 1;
-                                        const percentage = (result.score / result.totalQuestions) * 100; // Assuming totalQuestions is 50*2=100 marks? No score is raw.
-                                        // Wait, score is marks. totalQuestions is count.
-                                        // Usually score comes as total marks obtained.
+                                        const maxMarks = result.totalQuestions ? result.totalQuestions * 2 : 0; // Assuming 2 marks/q
 
                                         return (
                                             <>
@@ -149,7 +171,7 @@ export default function MockTest01ResultsPage() {
                                                     </td>
                                                     <td className="py-4 px-6">
                                                         <div className="flex items-center gap-3">
-                                                            <div className="w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-sm">
+                                                            <div className="w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-sm shrink-0">
                                                                 {result.userName.charAt(0).toUpperCase()}
                                                             </div>
                                                             <div>
@@ -161,7 +183,7 @@ export default function MockTest01ResultsPage() {
                                                     <td className="py-4 px-6">
                                                         <div className="flex flex-col">
                                                             <span className={`text-lg font-bold ${result.score >= 40 ? 'text-green-600' : 'text-zinc-900 dark:text-zinc-100'}`}>
-                                                                {result.score} <span className="text-zinc-400 text-sm font-normal">/ {result.totalQuestions * 2}</span>
+                                                                {result.score} <span className="text-zinc-400 text-sm font-normal">/ {maxMarks || 'N/A'}</span>
                                                             </span>
                                                         </div>
                                                     </td>
@@ -253,7 +275,7 @@ export default function MockTest01ResultsPage() {
                                                 </div>
                                                 <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">No results found</h3>
                                                 <p className="text-zinc-500 dark:text-zinc-400 max-w-xs mx-auto mt-1">
-                                                    We couldn't find any submissions matching your search.
+                                                    No submissions found for <span className="font-mono text-zinc-600 font-bold">{testId}</span>.
                                                 </p>
                                             </div>
                                         </td>

@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
     try {
         await connectDB();
 
-        const { email } = await req.json();
+        const { email, testId } = await req.json();
 
         if (!email) {
             return NextResponse.json({ hasSubmitted: false });
@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
 
         const existingResult = await MockResult.findOne({
             userEmail: email,
-            testId: 'live-sample'
+            testId: testId || 'live-sample'
         });
 
         if (existingResult) {

@@ -22,7 +22,9 @@ export async function GET(req: NextRequest) {
             .sort({ score: -1, submittedAt: 1 }) // Rank logic: High score first, then early submission
             .lean();
 
-        return NextResponse.json({ results });
+        const response = NextResponse.json({ results });
+        response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+        return response;
 
     } catch (error) {
         console.error("Error fetching mock results:", error);

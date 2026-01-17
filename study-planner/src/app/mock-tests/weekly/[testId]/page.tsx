@@ -232,6 +232,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
     const [timeLeft, setTimeLeft] = useState(3600); // 60 mins
     const [isAdmin, setIsAdmin] = useState(false);
     const [userName, setUserName] = useState("Aspirant");
+    const [userEmail, setUserEmail] = useState("");
 
     // UI State for Mobile Palette
     const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
@@ -248,6 +249,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
             }
             setQuestions(data);
 
+
             // 2. Check User Session
             const cookie = document.cookie.split('; ').find(row => row.startsWith('user_session='));
             let userRole = 'user';
@@ -259,8 +261,32 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
                     const session = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
                     userRole = session.role || 'user';
                     userPlan = session.membershipLevel || 'free';
-                    userEmail = session.email || '';
+                    const email = session.email || '';
+                    if (email) setUserEmail(email);
                     if (session.name) setUserName(session.name);
+
+                    // Check for previous submission
+                    if (email) {
+                        try {
+                            const statusRes = await fetch('/api/mock-test/live/status', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ email: email, testId })
+                            });
+
+                            if (statusRes.ok) {
+                                const statusData = await statusRes.json();
+                                if (statusData.hasSubmitted) {
+                                    setIsSubmitted(true);
+                                    setScore(statusData.score);
+                                    // We can optionally fetch answers if we want to show them
+                                }
+                            }
+                        } catch (e) {
+                            console.error("Failed to check submission status", e);
+                        }
+                    }
+
                 } catch (e) {
                     console.error("Session error", e);
                 }
@@ -363,12 +389,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
         });
     }, [currentQIndex, questions, vibrate]);
 
-    const handleSubmit = useCallback(() => {
-        // Since this is used in timer effect (indirectly via time check effect) and manual click
-        // It needs to be stable or up to date.
-        // We use refs if we want to avoid re-creating, but here just re-creating it when dependencies change is fine
-        // as long as dependencies don't change every second.
-        // Answers change on user interaction. Questions are stable.
+    const handleSubmit = useCallback(async () => {
         if (timeLeft > 0 && !confirm("Are you sure you want to submit the test?")) return;
         vibrate(30);
 
@@ -379,9 +400,31 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
             }
         });
         setScore(newScore);
+
+        // Submit to Server
+        if (userEmail) { // userEmail needs to be accessible here. It's defined inside useEffect currently. 
+            // I need to move userEmail to state to access it here.
+            try {
+                await fetch('/api/mock-test/live/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        userEmail: userEmail,
+                        score: newScore,
+                        totalQuestions: questions.length,
+                        answers: answers,
+                        testId: testId
+                    })
+                });
+            } catch (e) {
+                console.error("Failed to save results", e);
+                alert("Failed to save result. Please check connection.");
+            }
+        }
+
         setIsSubmitted(true);
         window.scrollTo(0, 0);
-    }, [timeLeft, questions, answers, vibrate]);
+    }, [timeLeft, questions, answers, vibrate, userEmail, testId]);
 
     const generatePDF = async () => {
         const doc = new jsPDF();

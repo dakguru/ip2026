@@ -1,61 +1,52 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ArrowLeft, Search, User, Download, FileText, CheckCircle2, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
+import { ArrowLeft, FileText, CheckCircle2, ChevronRight, BarChart3, Users, Clock, Loader2 } from "lucide-react";
 import Link from "next/link";
-import { format } from "date-fns";
+import { addDays, format, startOfToday } from "date-fns";
 
-interface MockResult {
-    _id: string;
-    userName: string;
-    userEmail: string;
-    score: number;
-    totalQuestions: number;
-    submittedAt: string;
-    answers?: Record<string, number>;
-}
-
-export default function MockResultsPage() {
-    const [results, setResults] = useState<MockResult[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [search, setSearch] = useState("");
-    const [expandedRow, setExpandedRow] = useState<string | null>(null);
-
-    useEffect(() => {
-        fetchResults();
-    }, []);
-
-    const fetchResults = async () => {
-        try {
-            const res = await fetch('/api/admin/mock-test/results', { cache: 'no-store' });
-            if (res.ok) {
-                const data = await res.json();
-                setResults(data.results);
+export default function MockResultsDashboard() {
+    // Generate the list of mock tests dynamically (similar to user side)
+    const generateMockTests = () => {
+        const tests = [
+            {
+                id: 'live-sample',
+                title: 'Sample Mock Test',
+                date: 'Always Live',
+                status: 'Live',
+                type: 'sample'
             }
-        } catch (error) {
-            console.error("Failed to fetch results", error);
-        } finally {
-            setIsLoading(false);
+        ];
+
+        let currentDate = new Date(2026, 0, 17); // Jan 17, 2026
+        const endDate = new Date(2026, 2, 31);   // Generate a few months
+
+        let count = 1;
+        while (currentDate <= endDate) {
+            tests.push({
+                id: `mock-${format(currentDate, 'yyyy-MM-dd')}`,
+                title: `Weekly Mock Test - ${count.toString().padStart(2, '0')}`,
+                date: format(currentDate, 'MMM dd, yyyy'),
+                status: 'Scheduled',
+                type: 'weekly'
+            });
+            currentDate = addDays(currentDate, 7);
+            count++;
         }
+        return tests;
     };
 
-    const filteredResults = results.filter(r =>
-        r.userName.toLowerCase().includes(search.toLowerCase()) ||
-        r.userEmail.toLowerCase().includes(search.toLowerCase())
+    const mockTests = generateMockTests();
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const filteredTests = mockTests.filter(test =>
+        test.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
-    const toggleRow = (id: string) => {
-        if (expandedRow === id) {
-            setExpandedRow(null);
-        } else {
-            setExpandedRow(id);
-        }
-    };
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 transition-colors">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
                     <div>
                         <Link href="/developer" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-2 transition-colors">
                             <ArrowLeft className="w-4 h-4" /> Back to Developer CMS
@@ -64,118 +55,51 @@ export default function MockResultsPage() {
                             <FileText className="w-8 h-8 text-indigo-600" />
                             Mock Test Results
                         </h1>
-                        <p className="text-zinc-500 dark:text-zinc-400 mt-1">View submissions for the Admin Sample Test.</p>
-                    </div>
-                    <div>
-                        <Link
-                            href="/developer/mock-results/mock-01"
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-sm shadow-lg shadow-indigo-600/20 transition-all hover:-translate-y-0.5"
-                        >
-                            <CheckCircle2 className="w-4 h-4" />
-                            View Mock Test - 01 Results
-                        </Link>
+                        <p className="text-zinc-500 dark:text-zinc-400 mt-1">Select a test to view its leaderboard and detailed submissions.</p>
                     </div>
                 </div>
 
-                <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col">
-                    {/* Toolbar */}
-                    <div className="p-5 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between gap-4">
-                        <div className="relative w-full md:w-80">
-                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
-                            <input
-                                type="text"
-                                placeholder="Search student..."
-                                value={search}
-                                onChange={(e) => setSearch(e.target.value)}
-                                className="w-full pl-10 pr-4 py-2 bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/50 rounded-xl text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all font-medium"
-                            />
-                        </div>
-                        <div className="text-sm text-zinc-500 font-medium">
-                            Total Submissions: {results.length}
-                        </div>
-                    </div>
+                {/* Dashboard Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredTests.map((test) => (
+                        <Link
+                            href={`/developer/mock-results/${test.id}`}
+                            key={test.id}
+                            className="group block bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6 shadow-sm hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-900 transition-all duration-300 relative overflow-hidden"
+                        >
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/10 dark:to-purple-900/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
 
-                    {/* Table */}
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left">
-                            <thead className="bg-zinc-50/50 dark:bg-zinc-800/20">
-                                <tr>
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">User</th>
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Score</th>
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Submitted</th>
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider text-right">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
-                                {isLoading ? (
-                                    <tr>
-                                        <td colSpan={4} className="py-12 text-center text-zinc-500">Loading results...</td>
-                                    </tr>
-                                ) : filteredResults.length > 0 ? (
-                                    filteredResults.map((result) => (
-                                        <>
-                                            <tr key={result._id} className="group hover:bg-zinc-50 dark:hover:bg-zinc-800/40 transition-colors">
-                                                <td className="py-4 px-6">
-                                                    <div className="flex items-center gap-3">
-                                                        <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
-                                                            {result.userName.charAt(0).toUpperCase()}
-                                                        </div>
-                                                        <div>
-                                                            <p className="font-semibold text-zinc-900 dark:text-zinc-100">{result.userName}</p>
-                                                            <p className="text-sm text-zinc-500 dark:text-zinc-400">{result.userEmail}</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td className="py-4 px-6">
-                                                    <div className="flex items-center gap-2">
-                                                        <span className={`text-lg font-bold ${(result.score / result.totalQuestions) >= 0.7 ? 'text-green-600' :
-                                                            (result.score / result.totalQuestions) >= 0.4 ? 'text-yellow-600' : 'text-red-600'
-                                                            }`}>
-                                                            {result.score}
-                                                        </span>
-                                                        <span className="text-zinc-400 text-sm">/ {result.totalQuestions}</span>
-                                                    </div>
-                                                </td>
-                                                <td className="py-4 px-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
-                                                    {format(new Date(result.submittedAt), 'MMM d, h:mm a')}
-                                                </td>
-                                                <td className="py-4 px-6 text-right">
-                                                    <button
-                                                        onClick={() => toggleRow(result._id)}
-                                                        className="px-3 py-1.5 text-xs font-semibold text-zinc-600 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 rounded-lg transition-colors inline-flex items-center gap-1"
-                                                    >
-                                                        Details {expandedRow === result._id ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            {expandedRow === result._id && (
-                                                <tr className="bg-zinc-50/50 dark:bg-zinc-800/20">
-                                                    <td colSpan={4} className="p-6">
-                                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                                                            <div className="space-y-2">
-                                                                <p className="font-bold text-zinc-500 uppercase text-xs">Submission ID</p>
-                                                                <p className="font-mono text-zinc-700 dark:text-zinc-300">{result._id}</p>
-                                                            </div>
-                                                            <div className="space-y-2">
-                                                                <p className="font-bold text-zinc-500 uppercase text-xs">Raw Answers JSON</p>
-                                                                <pre className="p-3 bg-zinc-100 dark:bg-zinc-900 rounded-lg text-xs overflow-x-auto font-mono text-zinc-600 dark:text-zinc-400 max-h-40">
-                                                                    {JSON.stringify(result.answers, null, 2)}
-                                                                </pre>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            )}
-                                        </>
-                                    ))
-                                ) : (
-                                    <tr>
-                                        <td colSpan={4} className="py-12 text-center text-zinc-500">No results found</td>
-                                    </tr>
-                                )}
-                            </tbody>
-                        </table>
-                    </div>
+                            <div className="flex justify-between items-start mb-4 relative z-10">
+                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg
+                                    ${test.type === 'sample'
+                                        ? 'bg-gradient-to-br from-green-500 to-emerald-600 shadow-green-500/20'
+                                        : 'bg-gradient-to-br from-indigo-500 to-purple-600 shadow-indigo-500/20'}
+                                `}>
+                                    {test.type === 'sample' ? 'S' : test.id.split('-').pop()?.substring(8, 10) || 'M'}
+                                </div>
+                                <div className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-zinc-50 border-zinc-200 text-zinc-500 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400">
+                                    {test.type === 'sample' ? 'Sample' : 'Weekly'}
+                                </div>
+                            </div>
+
+                            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                {test.title}
+                            </h3>
+                            <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6 flex items-center gap-1.5">
+                                <Clock className="w-3.5 h-3.5" />
+                                {test.date}
+                            </p>
+
+                            <div className="flex items-center justify-between pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                                <span className="text-xs font-semibold text-zinc-400 flex items-center gap-1.5 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                    <BarChart3 className="w-3.5 h-3.5" /> View Results
+                                </span>
+                                <span className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                                    <ChevronRight className="w-4 h-4" />
+                                </span>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
             </div>
         </div>
