@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use, useCallback, memo } from "react";
+import { useState, useEffect, use, useCallback, memo, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, CheckCircle2, AlertCircle, Timer, Save, FileDown, Flag, ChevronLeft, ChevronRight, X, LayoutGrid, Clock, Bookmark, Send, HelpCircle, XCircle } from "lucide-react";
 import Link from "next/link";
@@ -425,6 +425,46 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
         setIsSubmitted(true);
         window.scrollTo(0, 0);
     }, [timeLeft, questions, answers, vibrate, userEmail, testId]);
+
+    // Refs for stable access inside event listeners
+    const handleSubmitRef = useRef(handleSubmit);
+    useEffect(() => {
+        handleSubmitRef.current = handleSubmit;
+    }, [handleSubmit]);
+
+    // Prevent Back Navigation & Refresh
+    useEffect(() => {
+        if (isSubmitted || isLoading || !isAuthorized) return;
+
+        // Push state to trap back button
+        window.history.pushState(null, '', window.location.href);
+
+        const handlePopState = (event: PopStateEvent) => {
+            // "Do you want to end the test?"
+            if (window.confirm("Do you want to end the test? Click OK to Submit, Cancel to Continue.")) {
+                // Yes -> Submit
+                if (handleSubmitRef.current) {
+                    handleSubmitRef.current();
+                }
+            } else {
+                // No -> Stay (Restore "Forward" state)
+                window.history.pushState(null, '', window.location.href);
+            }
+        };
+
+        const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+            e.preventDefault();
+            e.returnValue = ''; // Trigger browser's standard "Leave site?" dialog
+        };
+
+        window.addEventListener('popstate', handlePopState);
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('popstate', handlePopState);
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, [isSubmitted, isLoading, isAuthorized]);
 
     const generatePDF = async () => {
         const doc = new jsPDF();
