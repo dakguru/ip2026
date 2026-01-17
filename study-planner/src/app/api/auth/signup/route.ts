@@ -67,7 +67,8 @@ export async function POST(request: Request) {
         }
 
         await createUser(email, password, name, {
-            gender
+            gender,
+            mobile
         });
 
         // Trigger Notification
