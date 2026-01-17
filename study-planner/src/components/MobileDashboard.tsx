@@ -74,12 +74,65 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     const isGold = membership === 'gold';
 
-    const recentNotifications = [
-        { title: "Back Button Fixed", desc: "Navigation issues resolved in the latest update.", time: "2h ago", icon: Info, color: "text-blue-500" },
-        { title: "New Syllabus Added", desc: "Updated LDCE IP 2026 syllabus is now available.", time: "5h ago", icon: BookOpen, color: "text-purple-500" },
-        { title: "Dark Mode Improved", desc: "Better contrast for late-night study sessions.", time: "1d ago", icon: Sparkles, color: "text-amber-500" },
-        { title: "Mock Test Live", desc: "All India Mock Test 3 is now live. Attempt now!", time: "2d ago", icon: TrendingUp, color: "text-red-500" },
-    ];
+    const [recentNotifications, setRecentNotifications] = useState<any[]>([]);
+
+    useEffect(() => {
+        const fetchNotifications = async () => {
+            try {
+                const res = await fetch('/api/admin/notifications');
+                const data = await res.json();
+                if (data.notifications) {
+                    const mapped = data.notifications.map((n: any) => {
+                        let icon = Info;
+                        let color = "text-blue-500";
+
+                        // Map type to icon/color
+                        switch (n.type) {
+                            case 'system':
+                            case 'deployment':
+                                icon = Info; color = "text-blue-500"; break;
+                            case 'enrollment':
+                            case 'membership_upgrade':
+                                icon = Sparkles; color = "text-amber-500"; break;
+                            case 'purchase':
+                            case 'coupon_claim':
+                                icon = TrendingUp; color = "text-green-500"; break;
+                            case 'community_post':
+                            case 'community_comment':
+                                icon = MessageCircle; color = "text-indigo-500"; break;
+                            case 'admin_message':
+                                icon = Bell; color = "text-red-500"; break;
+                            default:
+                                icon = Info; color = "text-slate-500";
+                        }
+
+                        // Calculate time ago
+                        const diff = Math.floor((new Date().getTime() - new Date(n.createdAt).getTime()) / 1000);
+                        let timeStr = "";
+                        if (diff < 60) timeStr = "Now";
+                        else if (diff < 3600) timeStr = `${Math.floor(diff / 60)}m ago`;
+                        else if (diff < 86400) timeStr = `${Math.floor(diff / 3600)}h ago`;
+                        else timeStr = `${Math.floor(diff / 86400)}d ago`;
+
+                        return {
+                            title: n.title,
+                            desc: n.message,
+                            time: timeStr,
+                            icon,
+                            color
+                        };
+                    });
+                    setRecentNotifications(mapped);
+                }
+            } catch (e) {
+                console.error("Failed to fetch notifications", e);
+            }
+        };
+
+        if (notifOpen) {
+            fetchNotifications();
+        }
+    }, [notifOpen]);
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
@@ -347,8 +400,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 </div>
 
                 {/* --- CAROUSEL (Royal) --- */}
-                <div className="pl-4 md:pl-6 overflow-visible">
-                    <div className="rounded-xl overflow-hidden shadow-lg shadow-blue-900/10">
+                <div className="px-4 md:px-6">
+                    <div className="rounded-2xl overflow-hidden shadow-lg shadow-blue-900/10">
                         <DashboardCarousel />
                     </div>
                 </div>

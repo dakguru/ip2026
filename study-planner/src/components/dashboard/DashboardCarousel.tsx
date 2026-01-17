@@ -73,9 +73,9 @@ export default function DashboardCarousel() {
     };
 
     return (
-        <div className="w-full px-4 pt-4 pb-2">
+        <div className="w-full">
             <div
-                className="relative w-full h-48 md:h-56 rounded-3xl overflow-hidden shadow-lg transform transition-all duration-300 hover:shadow-xl touch-pan-y"
+                className="relative w-full h-40 md:h-48 rounded-2xl overflow-hidden shadow-md transform transition-all duration-300 hover:shadow-lg touch-pan-y"
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}

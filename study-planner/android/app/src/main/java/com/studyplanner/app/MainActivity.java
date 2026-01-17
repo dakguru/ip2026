@@ -11,12 +11,25 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
 import com.google.android.material.navigation.NavigationView;
 import com.getcapacitor.BridgeActivity;
+import androidx.core.splashscreen.SplashScreen;
 
 public class MainActivity extends BridgeActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
+
+        // Optimization: Enhance WebView Performance
+        WebView webView = bridge.getWebView();
+        if (webView != null) {
+            android.webkit.WebSettings settings = webView.getSettings();
+            settings.setDomStorageEnabled(true);
+            settings.setDatabaseEnabled(true);
+            
+            // Enable hardware acceleration if not already handled
+            webView.setLayerType(android.view.View.LAYER_TYPE_HARDWARE, null);
+        }
 
         // Native UI Initialization
         Toolbar toolbar = findViewById(R.id.toolbar);

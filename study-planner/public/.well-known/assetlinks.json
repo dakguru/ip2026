@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.studyplanner.app",
+            "sha256_cert_fingerprints": [
+                "B1:18:20:BA:FD:18:BA:E2:1E:E2:75:A9:FE:ED:F3:E3:AD:5C:BD:DD:BA:61:26:AE:17:B9:16:42:3D:38:61:9A"
+            ]
+        }
+    }
+]
