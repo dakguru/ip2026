@@ -59,7 +59,8 @@ export async function GET(request: Request) {
                 apiUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${NEWSAPI_KEY}`;
                 break;
             case 'sports':
-                apiUrl = `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=${NEWSAPI_KEY}`;
+                // Use /everything for broader, global sports coverage
+                apiUrl = `https://newsapi.org/v2/everything?q=sports&sortBy=publishedAt&language=en&pageSize=20&apiKey=${NEWSAPI_KEY}`;
                 break;
             case 'history':
                 isNewsApi = false;

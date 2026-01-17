@@ -66,7 +66,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     const mainFeatures = [
         { label: "Web Guide", icon: BookOpen, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/guide" },
         { label: "Flashcards", icon: Layers, color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-900/20", href: "/flashcards" },
-        { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "/social" },
+        { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50" },
         { label: "PDF Notes", icon: FileText, color: "text-rose-700 dark:text-rose-400", bg: "bg-rose-50 dark:bg-rose-900/20", href: "/notes" },
         { label: "Curr. Affairs", icon: Globe, color: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/current-affairs" },
         { label: "DG Blog", icon: PenTool, color: "text-purple-700 dark:text-purple-400", bg: "bg-purple-50 dark:bg-purple-900/20", href: "/blog" },
@@ -404,6 +404,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                             <Link
                                 key={item.label}
                                 href={item.href}
+                                target={item.href.startsWith("http") ? "_blank" : undefined}
+                                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                                 className="flex flex-col items-center gap-3 group"
                             >
                                 <div className={`w-[72px] h-[72px] sm:w-[80px] sm:h-[80px] rounded-2xl flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden`}>
@@ -432,9 +434,14 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                     Connect with aspirants, discuss, and grow.
                                 </p>
                             </div>
-                            <Link href="/social" className="px-4 py-2 bg-slate-900 dark:bg-zinc-800 text-white rounded-lg text-xs font-bold hover:bg-slate-800 transition-colors">
-                                Join
-                            </Link>
+                            <a
+                                href="https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-4 py-2 bg-[#25D366] text-white rounded-lg text-xs font-bold hover:bg-[#128C7E] transition-colors shadow-lg shadow-green-500/20"
+                            >
+                                Join WhatsApp
+                            </a>
                         </div>
                     </div>
                 </div>
