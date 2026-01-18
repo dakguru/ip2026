@@ -79,7 +79,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     useEffect(() => {
         const fetchNotifications = async () => {
             try {
-                const res = await fetch('/api/admin/notifications');
+                const res = await fetch('/api/admin/notifications?scope=public');
                 const data = await res.json();
                 if (data.notifications) {
                     const mapped = data.notifications.map((n: any) => {

@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import connectDB from '@/lib/mongoose';
 import Notification from '@/models/Notification';
 
-export async function GET() {
+export async function GET(req: Request) {
     try {
         await connectDB();
 
@@ -24,7 +24,20 @@ export async function GET() {
             });
         }
 
-        const notifications = await Notification.find({})
+        const { searchParams } = new URL(req.url);
+        const scope = searchParams.get('scope');
+
+        let filter: any = {};
+
+        // If scope is public, ONLY show community updates and app deployments/updates
+        // Hide sensitive info like 'enrollment', 'purchase', 'system' (used for user registration), etc.
+        if (scope === 'public') {
+            filter.type = {
+                $in: ['community_post', 'community_comment', 'deployment', 'admin_message']
+            };
+        }
+
+        const notifications = await Notification.find(filter)
             .sort({ createdAt: -1 })
             .limit(100);
 

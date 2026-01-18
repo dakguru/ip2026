@@ -5,6 +5,8 @@ import { ArrowLeft, Search, CheckCircle2, ChevronDown, ChevronUp, Clock, Calenda
 import Link from "next/link";
 import { format } from "date-fns";
 import { useParams } from "next/navigation";
+import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
+import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 
 interface MockResult {
     _id: string;
@@ -71,11 +73,11 @@ export default function MockTestDetailResultsPage() {
     // Calculate Stats
     const totalAttempts = results.length;
     const avgScore = totalAttempts > 0
-        ? Math.round(results.reduce((acc, curr) => acc + curr.score, 0) / totalAttempts)
+        ? Math.round(results.reduce((acc, curr) => acc + curr.score * 2, 0) / totalAttempts)
         : 0;
 
     const highestScore = totalAttempts > 0
-        ? Math.max(...results.map(r => r.score))
+        ? Math.max(...results.map(r => r.score * 2))
         : 0;
 
     return (
@@ -155,7 +157,9 @@ export default function MockTestDetailResultsPage() {
                                 ) : filteredResults.length > 0 ? (
                                     filteredResults.map((result, index) => {
                                         const rank = index + 1;
-                                        const maxMarks = result.totalQuestions ? result.totalQuestions * 2 : 0; // Assuming 2 marks/q
+                                        const isSample = testId === 'live-sample';
+                                        const actualTotalQuestions = isSample ? 30 : result.totalQuestions;
+                                        const maxMarks = actualTotalQuestions ? actualTotalQuestions * 2 : 0;
 
                                         return (
                                             <>
@@ -182,8 +186,8 @@ export default function MockTestDetailResultsPage() {
                                                     </td>
                                                     <td className="py-4 px-6">
                                                         <div className="flex flex-col">
-                                                            <span className={`text-lg font-bold ${result.score >= 40 ? 'text-green-600' : 'text-zinc-900 dark:text-zinc-100'}`}>
-                                                                {result.score} <span className="text-zinc-400 text-sm font-normal">/ {maxMarks || 'N/A'}</span>
+                                                            <span className={`text-lg font-bold ${result.score * 2 >= 40 ? 'text-green-600' : 'text-zinc-900 dark:text-zinc-100'}`}>
+                                                                {result.score * 2} <span className="text-zinc-400 text-sm font-normal">/ {maxMarks || 'N/A'}</span>
                                                             </span>
                                                         </div>
                                                     </td>
@@ -200,16 +204,45 @@ export default function MockTestDetailResultsPage() {
                                                         </div>
                                                     </td>
                                                     <td className="py-4 px-6 text-right">
-                                                        <button
-                                                            onClick={() => toggleRow(result._id)}
-                                                            className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors inline-flex items-center gap-1 border
-                                                                ${expandedRow === result._id
-                                                                    ? 'bg-indigo-50 text-indigo-600 border-indigo-200 dark:bg-indigo-900/30 dark:border-indigo-800 dark:text-indigo-400'
-                                                                    : 'bg-white text-zinc-600 border-zinc-200 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 dark:border-zinc-700 dark:hover:bg-zinc-800'}
-                                                            `}
-                                                        >
-                                                            View Answer Sheet {expandedRow === result._id ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
-                                                        </button>
+                                                        <div className="flex items-center justify-end gap-2">
+                                                            <button
+                                                                onClick={() => toggleRow(result._id)}
+                                                                className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors inline-flex items-center gap-1 border
+                                                                    ${expandedRow === result._id
+                                                                        ? 'bg-indigo-50 text-indigo-600 border-indigo-200 dark:bg-indigo-900/30 dark:border-indigo-800 dark:text-indigo-400'
+                                                                        : 'bg-white text-zinc-600 border-zinc-200 hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 dark:border-zinc-700 dark:hover:bg-zinc-800'}
+                                                                `}
+                                                            >
+                                                                View {expandedRow === result._id ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+                                                            </button>
+                                                            <button
+                                                                onClick={async () => {
+                                                                    const questions = testId === 'mock-2026-01-17' ? WEEKLY_MOCK_01_QUESTIONS : [];
+                                                                    if (questions.length === 0) {
+                                                                        alert("Questions data not found for this test ID.");
+                                                                        return;
+                                                                    }
+                                                                    try {
+                                                                        await generateMockTestAnswerSheetPDF({
+                                                                            userName: result.userName,
+                                                                            score: result.score,
+                                                                            totalQuestions: result.totalQuestions,
+                                                                            questions: questions as any,
+                                                                            answers: result.answers || {},
+                                                                            testName: formatTestName(testId),
+                                                                            submittedAt: result.submittedAt
+                                                                        });
+                                                                    } catch (e) {
+                                                                        console.error(e);
+                                                                        alert("Failed to generate PDF");
+                                                                    }
+                                                                }}
+                                                                className="p-1.5 text-zinc-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 rounded-lg transition-colors"
+                                                                title="Download Answer Sheet PDF"
+                                                            >
+                                                                <Download className="w-4 h-4" />
+                                                            </button>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 {expandedRow === result._id && (
@@ -227,7 +260,7 @@ export default function MockTestDetailResultsPage() {
                                                                         <div className="space-y-2 text-sm">
                                                                             <div className="flex justify-between py-1 border-b border-zinc-100 dark:border-zinc-800">
                                                                                 <span className="text-zinc-600 dark:text-zinc-400">Total Questions</span>
-                                                                                <span className="font-medium">{result.totalQuestions}</span>
+                                                                                <span className="font-medium">{actualTotalQuestions}</span>
                                                                             </div>
                                                                             <div className="flex justify-between py-1 border-b border-zinc-100 dark:border-zinc-800">
                                                                                 <span className="text-zinc-600 dark:text-zinc-400">Questions Attempted</span>
@@ -238,14 +271,14 @@ export default function MockTestDetailResultsPage() {
                                                                             <div className="flex justify-between py-1 border-b border-zinc-100 dark:border-zinc-800">
                                                                                 <span className="text-zinc-600 dark:text-zinc-400">Correct Answers</span>
                                                                                 <span className="font-medium text-green-600">
-                                                                                    {Math.round(result.score / 2)} {/* Assuming 2 marks per Q */}
+                                                                                    {result.score}
                                                                                 </span>
                                                                             </div>
                                                                             <div className="flex justify-between py-1">
                                                                                 <span className="text-zinc-600 dark:text-zinc-400">Accuracy</span>
                                                                                 <span className="font-medium text-blue-600">
                                                                                     {result.answers && Object.keys(result.answers).length > 0
-                                                                                        ? Math.round((Math.round(result.score / 2) / Object.keys(result.answers).length) * 100)
+                                                                                        ? Math.round((result.score / Object.keys(result.answers).length) * 100)
                                                                                         : 0}%
                                                                                 </span>
                                                                             </div>
