@@ -838,13 +838,13 @@ export default function LiveMockTestPage() {
 
                     {/* Leaderboard Section */}
                     {/* Leaderboard Section - Only visible for Admin or explicitly allowed tests */}
-                    {(membershipLevel === 'admin' || role === 'admin' || userEmail?.includes('admin')) ? (
+                    {true ? (
                         <div className="bg-white dark:bg-zinc-900 rounded-[2rem] border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-100/50 dark:shadow-none overflow-hidden animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
                             <div className="p-6 md:p-8 flex items-center justify-between border-b border-slate-100 dark:border-zinc-800">
                                 <div>
                                     <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
                                         <Trophy className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                                        Live Leaderboard (Admin View)
+                                        Live Leaderboard
                                     </h2>
                                     <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Real-time rankings of all aspirants</p>
                                 </div>

@@ -355,9 +355,11 @@ export default function MockTestsPage() {
                     </div>
 
                     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 text-center">
-                        <Link href="/" className="inline-flex items-center text-zinc-400 hover:text-white mb-6 md:mb-8 transition-colors text-sm md:text-base">
-                            <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-                        </Link>
+                        <div className="flex justify-center w-full mb-6 md:mb-8">
+                            <Link href="/" className="inline-flex items-center text-zinc-400 hover:text-white transition-colors text-sm md:text-base">
+                                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+                            </Link>
+                        </div>
 
                         {activeMocks.length > 0 && (
                             <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-xs md:text-sm mb-6 animate-pulse">
@@ -1039,7 +1041,9 @@ function RankListModal({ mock, isOpen, onClose }: { mock: MockTest | null, isOpe
                     <DialogTitle className="text-2xl font-black uppercase tracking-tight text-white drop-shadow-sm relative z-10">
                         Top 7 Rank Holders
                     </DialogTitle>
-                    <p className="text-amber-100 font-medium text-sm relative z-10">All India Weekly Mock Test</p>
+                    <p className="text-amber-100 font-medium text-sm relative z-10">
+                        {mock ? `${mock.title} (held on ${format(mock.startDate, 'dd.MM.yyyy')} & ${format(mock.endDate, 'dd.MM.yyyy')})` : 'All India Weekly Mock Test'}
+                    </p>
                 </div>
 
                 <div className="p-0 max-h-[60vh] overflow-y-auto">

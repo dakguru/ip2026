@@ -3,7 +3,7 @@ import { QuizTopic, QuizSet } from "@/lib/quizTypes";
 // ----- EXISTING QUESTION DATA -----
 const ALL_SETS_DATA: Record<number, any[]> = {
   1: [
-    { q: "On which date did the Post Office Act, 2023 come into force?", o: ["1st Jan 2024", "24th Dec 2023", "16th Dec 2024", "1st April 2023"], a: 1 },
+    { q: "On which date did the Post Office Act, 2023 come into force?", o: ["1st Jan 2024", "24th Dec 2023", "18th June 2024", "1st April 2023"], a: 2, e: "The Post Office Act, 2023 came into force on **18th June 2024**." },
     { q: "According to Section 2(b), what is an 'item'?", o: ["Any letter", "An indivisible article accepted for service", "A parcel > 10kg", "Government document"], a: 1 },
     { q: "Who provides the services prescribed under the Act?", o: ["State Govt", "Post Office", "Private Couriers", "Foreign Post"], a: 1 },
     { q: "Who has the power to make 'regulations' under the Act?", o: ["Parliament", "Central Govt", "Director General", "Circle Head"], a: 2 },

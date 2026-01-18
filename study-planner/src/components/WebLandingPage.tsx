@@ -28,7 +28,8 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
             {/* {!["gold", "silver"].includes(membershipLevel.toLowerCase()) && <LaunchPopup />} */}
 
             {/* 1.6. Mock Test Description Popup */}
-            <MockTestAnnouncementPopup />
+            {/* 1.6. Mock Test Description Popup - Removed */}
+            {/* <MockTestAnnouncementPopup /> */}
 
             {/* 2. Hero Section */}
             <WelcomeSection displayName={displayName} />
