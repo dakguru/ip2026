@@ -825,106 +825,126 @@ function MockTestCard({
     enrollmentCount?: number;
     onShowRankList?: () => void;
 }) {
-    const [isTimerExpired, setIsTimerExpired] = useState(false);
-    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || isTimerExpired;
+    const isTimeReached = new Date() >= mock.startDate;
+    const isEnded = new Date() > mock.endDate;
+    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || (isTimeReached && !isEnded);
     const isCompleted = mock.status === 'completed';
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
 
-    // Blue background for completed tests
+    // Dynamic styles based on state
     const cardBgClass = isCompleted
-        ? "bg-blue-50/50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-900/50"
-        : "bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800";
+        ? "bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/20 dark:to-zinc-900 border-blue-100 dark:border-blue-900/50"
+        : "bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700";
 
     return (
         <div
             onClick={onClick}
-            className={`relative flex flex-col p-5 rounded-2xl shadow-sm border transition-all hover:shadow-lg group cursor-pointer ${cardBgClass}`}
+            className={`relative flex flex-col p-5 sm:p-6 rounded-3xl shadow-sm border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group cursor-pointer overflow-hidden ${cardBgClass}`}
         >
+            {/* Decorative Background Elements */}
+            <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br rounded-full blur-3xl opacity-20 -mr-10 -mt-10 
+                ${isLive ? 'from-red-400 to-orange-400' : isCompleted ? 'from-blue-400 to-indigo-400' : 'from-zinc-200 to-zinc-400'}
+            `}></div>
 
-            {/* Status & Access Badges */}
-            <div className="absolute top-4 right-4 flex flex-col items-end gap-2 z-10">
-                {/* Live Indicator */}
-                {!isCompleted && isLive && (
-                    <div className="animate-pulse">
-                        <span className="relative flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            {/* Header: Access Badges & Status */}
+            <div className="flex justify-between items-start mb-4 relative z-10">
+                <div className="flex flex-col gap-1">
+                    <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest">Weekly Test</span>
+                    <span className="text-xs font-medium text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md w-fit">
+                        {format(mock.startDate, 'dd MMM')} - {format(mock.endDate, 'dd MMM')}
+                    </span>
+                </div>
+
+                <div className="flex flex-col items-end gap-1.5">
+                    {/* Live Pulse */}
+                    {!isCompleted && isLive && (
+                        <div className="flex items-center gap-1.5 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 px-2 py-0.5 rounded-full border border-red-200 dark:border-red-800 animate-pulse">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                            </span>
+                            <span className="text-[10px] font-black uppercase tracking-wider">Live Now</span>
+                        </div>
+                    )}
+
+                    {/* Completed Badge */}
+                    {isCompleted && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                            <CheckCircle2 className="w-3 h-3" /> Completed
                         </span>
-                    </div>
-                )}
+                    )}
 
-                {/* Completed Indicator */}
-                {isCompleted && (
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
-                        <CheckCircle2 className="w-3.5 h-3.5" /> Completed
-                    </span>
-                )}
-
-                {/* Access Level Badges */}
-                {membershipLevel === 'gold' && (
-                    <span className="px-2 py-0.5 rounded-md text-[10px] uppercase tracking-wider font-bold border bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800">
-                        Gold Access
-                    </span>
-                )}
-                {membershipLevel === 'silver' && (
-                    <span className="px-2 py-0.5 rounded-md text-[10px] uppercase tracking-wider font-bold border bg-slate-100 text-slate-700 border-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700">
-                        Silver Access
-                    </span>
-                )}
-                {membershipLevel !== 'gold' && membershipLevel !== 'silver' && isPaid && (
-                    <span className="px-2 py-0.5 rounded-md text-[10px] uppercase tracking-wider font-bold border bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800">
-                        Paid & Enrolled
-                    </span>
-                )}
+                    {/* Membership Badges */}
+                    {membershipLevel === 'gold' && (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 border border-amber-200 shadow-sm">
+                            🏆 Gold Access
+                        </span>
+                    )}
+                    {membershipLevel === 'silver' && (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-700 border border-slate-200 shadow-sm">
+                            🥈 Silver Access
+                        </span>
+                    )}
+                    {membershipLevel !== 'gold' && membershipLevel !== 'silver' && isPaid && (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 border border-green-200 shadow-sm">
+                            ✅ Purchased
+                        </span>
+                    )}
+                </div>
             </div>
 
-            <div className="flex-1">
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2 pr-8">{mock.title}</h3>
+            {/* Title & Info */}
+            <div className="flex-1 relative z-10 mb-6">
+                <h3 className="text-lg sm:text-xl font-black text-zinc-900 dark:text-zinc-50 leading-tight mb-3 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                    {mock.title}
+                </h3>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                     {mock.topics.slice(0, 2).map((t, i) => (
-                        <span key={i} className="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2 py-1 rounded-md font-medium border border-zinc-200 dark:border-zinc-700">
+                        <span key={i} className="text-[11px] sm:text-xs bg-zinc-50 dark:bg-zinc-800/50 text-zinc-600 dark:text-zinc-400 px-2 py-1 rounded-lg font-medium border border-zinc-100 dark:border-zinc-800/50 truncate max-w-[150px]">
                             {t}
                         </span>
                     ))}
                     {mock.topics.length > 2 && (
-                        <span className="text-xs text-zinc-400 px-1 py-1">+ {mock.topics.length - 2} more</span>
+                        <span className="text-[11px] sm:text-xs text-zinc-400 px-1 py-1 font-medium">+ {mock.topics.length - 2} more</span>
                     )}
                 </div>
 
-                <div className="flex items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400 mb-6">
-                    <div className="flex items-center gap-1.5">
-                        <Clock className="w-4 h-4" />
-                        <span>{mock.duration} Mins</span>
+                <div className="flex items-center gap-4 text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
+                    <div className="flex items-center gap-1.5 bg-zinc-50 dark:bg-zinc-800 px-2 py-1 rounded-md">
+                        <Clock className="w-3.5 h-3.5" />
+                        <span className="font-semibold">{mock.duration} Mins</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                        <AlertCircle className="w-4 h-4" />
-                        <span>{mock.questionCount} Qs</span>
+                    <div className="flex items-center gap-1.5 bg-zinc-50 dark:bg-zinc-800 px-2 py-1 rounded-md">
+                        <AlertCircle className="w-3.5 h-3.5" />
+                        <span className="font-semibold">{mock.questionCount} Questions</span>
                     </div>
                 </div>
             </div>
 
-            <div className="space-y-3 mt-auto">
+            {/* Actions */}
+            <div className="mt-auto space-y-3 relative z-10">
                 {/* Top 7 Rank Holders Button */}
                 {(isCompleted || role === 'admin') && onShowRankList && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
-                        className="w-full py-2.5 bg-gradient-to-r from-amber-200 to-yellow-400 hover:from-amber-300 hover:to-yellow-500 dark:from-amber-700 dark:to-yellow-600 text-amber-900 dark:text-amber-100 rounded-xl font-bold text-sm shadow-sm flex items-center justify-center gap-2 mb-2 transition-all transform hover:scale-[1.02]"
+                        className="w-full py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl font-bold text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-95"
                     >
-                        <Trophy className="w-4 h-4" /> Top 7 Rank Holders
+                        <Trophy className="w-4 h-4 text-white fill-current" /> View Top Rankers
                     </button>
                 )}
 
                 {/* Main CTA */}
-                <div className="flex gap-2">
-                    {/* Admin: View Enrollments Button */}
+                <div className="flex gap-3">
+                    {/* Admin: Enrollments */}
                     {role === 'admin' && onViewEnrollments && (
                         <button
                             onClick={(e) => { e.stopPropagation(); onViewEnrollments(); }}
-                            className="flex-1 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-1"
+                            className="px-4 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors"
+                            title="View Enrollments"
                         >
-                            <Users className="w-4 h-4" /> {enrollmentCount}
+                            <Users className="w-4 h-4" /> <span className="hidden sm:inline">{enrollmentCount}</span>
                         </button>
                     )}
 
@@ -933,42 +953,42 @@ function MockTestCard({
                             <Link
                                 href={`/mock-tests/weekly/${mock.id}`}
                                 onClick={(e) => e.stopPropagation()}
-                                className="flex-1 py-3 bg-white dark:bg-zinc-800 border-2 border-blue-600 dark:border-blue-500 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors"
+                                className="flex-1 py-3 bg-white dark:bg-zinc-800 border-2 border-blue-600 dark:border-blue-500 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
                             >
-                                <History className="w-4 h-4" /> Reattempt
+                                <History className="w-4 h-4" /> Reattempt Test
                             </Link>
                         ) : (
                             <button
                                 onClick={(e) => { e.stopPropagation(); onEnroll(); }}
                                 disabled={isProcessing}
-                                className="flex-1 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30"
+                                className="flex-1 py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform active:scale-95"
                             >
-                                {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
-                                Unlock - ₹49
+                                {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-200 fill-current" />}
+                                Unlock Now - ₹49
                             </button>
                         )
                     ) : isLive ? (
                         <button
                             onClick={onClick}
-                            className="flex-1 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-transform active:scale-95"
+                            className="flex-1 py-3 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-95 animate-pulse-slow"
                         >
-                            <PlayCircle className="w-4 h-4" /> Attempt Now
+                            <PlayCircle className="w-4 h-4 fill-current" /> Attempt Now
                         </button>
                     ) : !canAccess ? (
                         <button
                             onClick={(e) => { e.stopPropagation(); onEnroll(); }}
                             disabled={isProcessing}
-                            className="flex-1 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 animate-pulse"
+                            className="flex-1 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-[1.02] active:scale-95"
                         >
                             {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
-                            Enroll Test - ₹49
+                            Pre-Book - ₹49
                         </button>
                     ) : (
                         <button
                             onClick={onClick}
-                            className="flex-1 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold text-sm flex items-center justify-center gap-2 cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                            className="flex-1 py-3 bg-zinc-50 dark:bg-zinc-800/50 text-zinc-400 dark:text-zinc-500 rounded-xl font-bold text-sm flex items-center justify-center gap-2 cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors border border-dashed border-zinc-200 dark:border-zinc-700"
                         >
-                            <Lock className="w-4 h-4" /> Upcoming
+                            <Lock className="w-4 h-4" /> Schedule Details
                         </button>
                     )}
                 </div>
