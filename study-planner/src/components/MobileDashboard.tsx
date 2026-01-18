@@ -486,27 +486,32 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </div>
                 </div>
 
-                {/* --- COMMUNITY (Professional Card) --- */}
+                {/* --- COMMUNITY (Creative & Attractive Banner) --- */}
                 <div className="px-4 md:px-6 pb-4">
-                    <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 shadow-lg shadow-slate-200/50 dark:shadow-none">
-                        <div className="p-5 flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-full bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center shrink-0">
-                                <GraduationCap className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+                    <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-600 via-indigo-600 to-blue-600 shadow-xl shadow-indigo-500/30 transition-shadow hover:shadow-indigo-500/50">
+                        {/* Decorative background elements */}
+                        <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-black/10 rounded-full blur-2xl -ml-10 -mb-10 pointer-events-none"></div>
+
+                        <div className="relative p-6 flex items-center justify-between gap-4">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/20 shadow-inner">
+                                    <MessageCircle className="w-6 h-6 text-white fill-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-base font-bold text-white tracking-wide">Join Community</h3>
+                                    <p className="text-xs text-indigo-100 mt-1 leading-snug font-medium opacity-90">
+                                        Connect, discuss & grow with toppers.
+                                    </p>
+                                </div>
                             </div>
-                            <div className="flex-1">
-                                <h3 className="text-sm font-bold text-slate-900 dark:text-zinc-100">Join the Community</h3>
-                                <p className="text-xs text-slate-500 dark:text-zinc-400 mt-0.5 leading-snug">
-                                    Connect with aspirants, discuss, and grow.
-                                </p>
-                            </div>
-                            <a
-                                href="https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-4 py-2 bg-[#25D366] text-white rounded-lg text-xs font-bold hover:bg-[#128C7E] transition-colors shadow-lg shadow-green-500/20"
+
+                            <Link
+                                href="/social"
+                                className="shrink-0 px-4 py-2 bg-white text-indigo-700 rounded-lg text-[11px] font-extrabold uppercase tracking-wider hover:bg-indigo-50 transition-transform active:scale-95 shadow-lg shadow-black/20"
                             >
-                                Join WhatsApp
-                            </a>
+                                Join Now
+                            </Link>
                         </div>
                     </div>
                 </div>
