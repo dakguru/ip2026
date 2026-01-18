@@ -659,18 +659,16 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
                     {mock.title}
                 </DialogTitle>
                 <DialogDescription className="text-base pt-2">
-                    <div className="flex flex-col gap-2">
-                        <span>Scheduled for <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.startDate, 'MMMM dd, yyyy')}</span> to <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.endDate, 'MMMM dd, yyyy')}</span>.</span>
-
-                        {targetDate && !isEnded && (
-                            <div className="inline-flex items-center gap-2 mt-1 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-lg w-fit">
-                                <Timer className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                                <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">{timerLabel}</span>
-                                <MockCountdown targetDate={targetDate} />
-                            </div>
-                        )}
-                    </div>
+                    Scheduled for <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.startDate, 'MMMM dd, yyyy')}</span> to <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.endDate, 'MMMM dd, yyyy')}</span>.
                 </DialogDescription>
+
+                {targetDate && !isEnded && (
+                    <div className="inline-flex items-center gap-2 mt-2 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-lg w-fit">
+                        <Timer className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                        <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">{timerLabel}</span>
+                        <MockCountdown targetDate={targetDate} />
+                    </div>
+                )}
             </DialogHeader>
 
             <div className="mt-4 space-y-6">
@@ -749,7 +747,7 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
                 ) : (
                     <button disabled className="w-full py-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold flex items-center justify-center gap-2 cursor-not-allowed">
                         <Lock className="w-5 h-5" />
-                        {mock.status === 'completed' ? 'Test Completed' : (mock.status === 'expired' ? 'Test Ended' : 'Test Not Yet Active')}
+                        {mock.status === 'completed' ? 'Test Completed' : 'Test Not Yet Active'}
                     </button>
                 )}
             </div>
@@ -844,24 +842,42 @@ function MockTestCard({
             className={`relative flex flex-col p-5 rounded-2xl shadow-sm border transition-all hover:shadow-lg group cursor-pointer ${cardBgClass}`}
         >
 
-            {/* Live Indicator - ONLY if not completed */}
-            {!isCompleted && isLive && (
-                <div className="absolute top-4 right-4 animate-pulse">
-                    <span className="relative flex h-3 w-3">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                    </span>
-                </div>
-            )}
+            {/* Status & Access Badges */}
+            <div className="absolute top-4 right-4 flex flex-col items-end gap-2 z-10">
+                {/* Live Indicator */}
+                {!isCompleted && isLive && (
+                    <div className="animate-pulse">
+                        <span className="relative flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                        </span>
+                    </div>
+                )}
 
-            {/* Completed Indicator */}
-            {isCompleted && (
-                <div className="absolute top-4 right-4">
+                {/* Completed Indicator */}
+                {isCompleted && (
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
                         <CheckCircle2 className="w-3.5 h-3.5" /> Completed
                     </span>
-                </div>
-            )}
+                )}
+
+                {/* Access Level Badges */}
+                {membershipLevel === 'gold' && (
+                    <span className="px-2 py-0.5 rounded-md text-[10px] uppercase tracking-wider font-bold border bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800">
+                        Gold Access
+                    </span>
+                )}
+                {membershipLevel === 'silver' && (
+                    <span className="px-2 py-0.5 rounded-md text-[10px] uppercase tracking-wider font-bold border bg-slate-100 text-slate-700 border-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700">
+                        Silver Access
+                    </span>
+                )}
+                {membershipLevel !== 'gold' && membershipLevel !== 'silver' && isPaid && (
+                    <span className="px-2 py-0.5 rounded-md text-[10px] uppercase tracking-wider font-bold border bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800">
+                        Paid & Enrolled
+                    </span>
+                )}
+            </div>
 
             <div className="flex-1">
                 <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2 pr-8">{mock.title}</h3>
@@ -931,34 +947,28 @@ function MockTestCard({
                                 Unlock - ₹49
                             </button>
                         )
+                    ) : isLive ? (
+                        <button
+                            onClick={onClick}
+                            className="flex-1 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-transform active:scale-95"
+                        >
+                            <PlayCircle className="w-4 h-4" /> Attempt Now
+                        </button>
+                    ) : !canAccess ? (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                            disabled={isProcessing}
+                            className="flex-1 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 animate-pulse"
+                        >
+                            {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
+                            Enroll Test - ₹49
+                        </button>
                     ) : (
                         <button
-                            onClick={(e) => {
-                                // This button's click will bubble up to the parent div's onClick,
-                                // which opens the modal. No need for e.stopPropagation() here if the intent
-                                // is for clicking this button to also open the modal.
-                                // If it had a different action, we'd stop propagation.
-                                // Since the parent div handles the primary click (opening details),
-                                // and this button's purpose is to show status/trigger action,
-                                // we let the parent handle the modal opening.
-                            }}
-                            className={`flex-1 py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-shadow shadow-md hover:shadow-lg
-                                 ${isLive
-                                    ? 'bg-red-600 hover:bg-red-700 text-white shadow-red-500/30'
-                                    : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400'
-                                }
-                             `}
-                        // Removed disabled attribute so it is clickable and opens the modal
+                            onClick={onClick}
+                            className="flex-1 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold text-sm flex items-center justify-center gap-2 cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
                         >
-                            {isLive ? (
-                                <>
-                                    <PlayCircle className="w-4 h-4" /> Attempt Now
-                                </>
-                            ) : (
-                                <>
-                                    <Lock className="w-4 h-4" /> Upcoming
-                                </>
-                            )}
+                            <Lock className="w-4 h-4" /> Upcoming
                         </button>
                     )}
                 </div>
