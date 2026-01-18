@@ -133,9 +133,9 @@ const PDF_DATA: Record<string, Note[]> = {
         {
             title: "PMLA Act, 2002",
             description: "Prevention of Money Laundering Act, 2002 and its Amendments (AML/CFT Norms).",
-            filename: "PMLA_Act_2002.pdf",
-            path: "/notes/paper-1/PMLA_Act_2002.pdf",
-            size: "8.8 MB",
+            filename: "PMLA_2002.pdf",
+            path: "/notes/paper-1/PMLA_2002.pdf",
+            size: "0.3 MB",
             color: "purple"
         },
         {
@@ -252,8 +252,22 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.3 MB",
             color: "amber"
         },
-        { title: "Postal Manual Volume VI, Part-III", description: "Except Appendices.", color: "amber", comingSoon: true },
-        { title: "Postal Manual Volume VII", description: "RMS work and innovative guidelines.", color: "amber", comingSoon: true },
+        {
+            title: "Postal Manual Volume VI, Part-III",
+            description: "Except Appendices.",
+            filename: "postal-manual-vol-vi-part-3.pdf",
+            path: "/notes/paper-1/postal-manual-vol-vi-part-3.pdf",
+            size: "0.7 MB",
+            color: "amber"
+        },
+        {
+            title: "Postal Manual Volume VII",
+            description: "RMS work and innovative guidelines.",
+            filename: "postal-manual-vol-vii.pdf",
+            path: "/notes/paper-1/postal-manual-vol-vii.pdf",
+            size: "0.8 MB",
+            color: "amber"
+        },
 
         // 29. Jansuraksha
         {

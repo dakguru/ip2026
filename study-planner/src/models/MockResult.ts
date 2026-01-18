@@ -8,7 +8,8 @@ const MockResultSchema = new mongoose.Schema({
     totalQuestions: { type: Number, required: true },
     answers: { type: Map, of: Number }, // Map of questionId -> optionIndex
     submittedAt: { type: Date, default: Date.now },
-    testId: { type: String, default: 'admin-sample' } // To identify different tests
+    testId: { type: String, default: 'admin-sample' }, // To identify different tests
+    isLeaderboardEligible: { type: Boolean, default: true }
 });
 
 export default mongoose.models.MockResult || mongoose.model("MockResult", MockResultSchema);

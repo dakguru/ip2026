@@ -20,8 +20,46 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: "User not found" }, { status: 404 });
         }
 
-        // We can optionally check if user already submitted this test if we want to restrict to 1 attempt.
-        // For now, allowing multiple attempts or just saving every attempt.
+        let isLeaderboardEligible = true;
+
+        if (testId && testId.startsWith('mock-')) {
+            try {
+                // Format: mock-2026-01-17
+                const datePart = testId.replace('mock-', '');
+                const startDate = new Date(datePart); // UTC Midnight
+
+                // End Date: Sunday 23:59:59
+                const endDate = new Date(startDate);
+                endDate.setDate(startDate.getDate() + 1);
+                endDate.setHours(23, 59, 59, 999);
+
+                const now = new Date(); // Server time (likely UTC)
+
+                if (now > endDate) {
+                    // Test is Completed (Post-Live window)
+                    // Allow unlimited reattempts, but not for leaderboard
+                    isLeaderboardEligible = false;
+                } else {
+                    // Test is Live
+                    // Strictly ENFORCE Single Attempt
+                    const existingResult = await MockResult.findOne({
+                        userEmail: user.email,
+                        testId: testId
+                    });
+
+                    if (existingResult) {
+                        return NextResponse.json({
+                            error: "Only one attempt is allowed during the live window. You can reattempt unlimited times after the test closes (Monday onwards)."
+                        }, { status: 403 });
+                    }
+
+                    isLeaderboardEligible = true;
+                }
+            } catch (e) {
+                console.error("Date parsing error for testId:", testId, e);
+                // Fallback: Assume eligible if logic fails, or generic handling
+            }
+        }
 
         const newResult = new MockResult({
             userId: user._id.toString(),
@@ -31,7 +69,8 @@ export async function POST(req: NextRequest) {
             totalQuestions,
             answers,
             submittedAt: new Date(),
-            testId: testId || 'live-sample' // Add testId to distinguish from admin mock
+            testId: testId || 'live-sample', // Add testId to distinguish from admin mock
+            isLeaderboardEligible
         });
 
         await newResult.save();

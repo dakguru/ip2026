@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight, History } from "lucide-react";
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval } from "date-fns";
 import { useMemo, useState, useEffect } from "react";
@@ -16,7 +16,7 @@ interface MockTest {
     topics: string[];
     startDate: Date; // Saturday
     endDate: Date;   // Sunday
-    status: 'live' | 'upcoming' | 'expired';
+    status: 'live' | 'upcoming' | 'completed';
     questionCount: number;
     marks: number;
     duration: number; // minutes
@@ -122,14 +122,14 @@ export default function MockTestsPage() {
             });
 
             // Determine Status
-            let status: 'live' | 'upcoming' | 'expired' = 'upcoming';
+            let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
 
             if ((isSameDay(today, saturdayDate) || isSameDay(today, sundayDate))) {
                 status = 'live';
             } else if (isBefore(today, saturdayDate)) {
                 status = 'upcoming';
             } else {
-                status = 'expired';
+                status = 'completed';
             }
 
             if (weekTopics.length > 0 || mockCount === 1) {
@@ -155,10 +155,11 @@ export default function MockTestsPage() {
 
     const activeMocks = mockTests.filter(m => m.status === 'live');
     const upcomingMocks = mockTests.filter(m => m.status === 'upcoming');
-    const previousMocks = mockTests.filter(m => m.status === 'expired').reverse();
+    const completedMocks = mockTests.filter(m => m.status === 'completed').reverse();
 
     // Dialog State
     const [selectedMock, setSelectedMock] = useState<MockTest | null>(null);
+    const [selectedMockForRank, setSelectedMockForRank] = useState<MockTest | null>(null);
 
     const handleEnroll = async (mock: MockTest) => {
         if (!userEmail) {
@@ -414,6 +415,7 @@ export default function MockTestsPage() {
                                     role={role}
                                     onViewEnrollments={() => handleViewEnrollments(mock)}
                                     enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                    onShowRankList={() => setSelectedMockForRank(mock)}
                                 />
                             ))}
                         </div>
@@ -469,14 +471,14 @@ export default function MockTestsPage() {
                         </div>
                     </div>
 
-                    {previousMocks.length > 0 && (
+                    {completedMocks.length > 0 && (
                         <div className="opacity-75">
                             <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
                                 <Clock className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
                                 Previous Tests
                             </h2>
                             <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
-                                {previousMocks.map(mock => (
+                                {completedMocks.map(mock => (
                                     <MockTestCard
                                         key={mock.id}
                                         mock={mock}
@@ -485,6 +487,7 @@ export default function MockTestsPage() {
                                         membershipLevel={membershipLevel}
                                         onEnroll={() => { }}
                                         enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                        onShowRankList={() => setSelectedMockForRank(mock)}
                                     />
                                 ))}
                             </div>
@@ -601,12 +604,16 @@ export default function MockTestsPage() {
                 </DialogContent>
             </Dialog>
 
+            <RankListModal
+                mock={selectedMockForRank}
+                isOpen={!!selectedMockForRank}
+                onClose={() => setSelectedMockForRank(null)}
+            />
+
         </div>
     );
 }
 
-
-// ... (previous code)
 
 function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing, role }: {
     mock: MockTest;
@@ -625,9 +632,22 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
     }, []);
 
     const isTimeReached = currentTime >= mock.startDate;
-    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || isTimeReached;
+    const isEnded = currentTime > mock.endDate;
+    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || (isTimeReached && !isEnded);
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
+
+    // Determine target date for countdown
+    let targetDate = null;
+    let timerLabel = "";
+
+    if (mock.status === 'upcoming') {
+        targetDate = mock.startDate;
+        timerLabel = "Test Starts In:";
+    } else if (isLive) {
+        targetDate = mock.endDate;
+        timerLabel = "Test Ends In:";
+    }
 
     return (
         <>
@@ -639,7 +659,17 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
                     {mock.title}
                 </DialogTitle>
                 <DialogDescription className="text-base pt-2">
-                    Scheduled for <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.startDate, 'MMMM dd, yyyy')}</span> to <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.endDate, 'MMMM dd, yyyy')}</span>.
+                    <div className="flex flex-col gap-2">
+                        <span>Scheduled for <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.startDate, 'MMMM dd, yyyy')}</span> to <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.endDate, 'MMMM dd, yyyy')}</span>.</span>
+
+                        {targetDate && !isEnded && (
+                            <div className="inline-flex items-center gap-2 mt-1 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-lg w-fit">
+                                <Timer className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                                <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">{timerLabel}</span>
+                                <MockCountdown targetDate={targetDate} />
+                            </div>
+                        )}
+                    </div>
                 </DialogDescription>
             </DialogHeader>
 
@@ -661,7 +691,7 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
 
                 <div>
                     <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-3 flex items-center gap-2">
-                        <Info className="w-4 h-4 text-purple-500" /> Syllabus Covered
+                        <Info className="w-4 h-4 text-purple-500" /> Test Topics
                     </h3>
                     <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-4 border border-purple-100 dark:border-purple-900/20">
                         <ul className="space-y-2">
@@ -677,7 +707,7 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
 
                 <div>
                     <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-3 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4 text-amber-500" /> Rules & Regulations
+                        <AlertCircle className="w-4 h-4 text-amber-500" /> Test Instructions
                     </h3>
                     <div className="bg-amber-50 dark:bg-amber-900/10 rounded-xl p-4 border border-amber-100 dark:border-amber-900/20">
                         <ul className="space-y-3 text-sm text-zinc-700 dark:text-zinc-300">
@@ -719,14 +749,13 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
                 ) : (
                     <button disabled className="w-full py-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold flex items-center justify-center gap-2 cursor-not-allowed">
                         <Lock className="w-5 h-5" />
-                        {mock.status === 'expired' ? 'Test Ended' : 'Test Not Yet Active'}
+                        {mock.status === 'completed' ? 'Test Completed' : (mock.status === 'expired' ? 'Test Ended' : 'Test Not Yet Active')}
                     </button>
                 )}
             </div>
         </>
     );
 }
-
 
 function MockCountdown({ targetDate, onComplete }: { targetDate: Date, onComplete?: () => void }) {
     const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
@@ -784,7 +813,8 @@ function MockTestCard({
     isProcessing,
     role,
     onViewEnrollments,
-    enrollmentCount
+    enrollmentCount,
+    onShowRankList
 }: {
     mock: MockTest;
     onClick: () => void;
@@ -795,161 +825,241 @@ function MockTestCard({
     role?: string;
     onViewEnrollments?: () => void;
     enrollmentCount?: number;
+    onShowRankList?: () => void;
 }) {
     const [isTimerExpired, setIsTimerExpired] = useState(false);
     const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || isTimerExpired;
-    const isExpired = mock.status === 'expired';
-    // If it's effectively live, it's not upcoming anymore
-    const isUpcoming = mock.status === 'upcoming' && role !== 'admin' && !isTimerExpired;
+    const isCompleted = mock.status === 'completed';
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
 
-    // Check on mount if already expired
-    useEffect(() => {
-        if (new Date() >= mock.startDate) {
-            setIsTimerExpired(true);
-        }
-    }, [mock.startDate]);
+    // Blue background for completed tests
+    const cardBgClass = isCompleted
+        ? "bg-blue-50/50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-900/50"
+        : "bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800";
 
     return (
-        <div onClick={onClick} className={`cursor-pointer bg-white dark:bg-zinc-900 rounded-2xl border shadow-sm md:shadow-lg overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full
-            ${isLive ? 'border-red-500 shadow-red-500/20' : 'border-zinc-200 dark:border-zinc-800 hover:border-blue-500/50'}
-        `}>
-            {/* Header */}
-            <div className={`px-4 py-2 flex justify-between items-center border-b
-                ${isLive ? 'bg-red-500 text-white' : 'bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700'}
-            `}>
-                <div className="flex items-center gap-2">
-                    <span className={`text-xs font-bold uppercase tracking-wider
-                        ${isLive ? 'text-white' : 'text-zinc-500'}
-                    `}>
-                        {isLive ? 'Live Now' : isExpired ? 'Ended' : 'Upcoming'}
+        <div
+            onClick={onClick}
+            className={`relative flex flex-col p-5 rounded-2xl shadow-sm border transition-all hover:shadow-lg group cursor-pointer ${cardBgClass}`}
+        >
+
+            {/* Live Indicator - ONLY if not completed */}
+            {!isCompleted && isLive && (
+                <div className="absolute top-4 right-4 animate-pulse">
+                    <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                     </span>
+                </div>
+            )}
 
-                    {/* Enrollment Count - Admin Only Visibility */}
-                    {role === 'admin' && (
-                        <div className="flex items-center gap-1.5 ml-1">
-                            <Users className={`w-3.5 h-3.5 ${isLive ? 'text-white' : 'text-zinc-400'}`} />
-                            <span className={`text-[11px] font-bold ${isLive ? 'text-white' : 'text-zinc-500'}`}>
-                                {enrollmentCount || 0}
-                            </span>
+            {/* Completed Indicator */}
+            {isCompleted && (
+                <div className="absolute top-4 right-4">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                        <CheckCircle2 className="w-3.5 h-3.5" /> Completed
+                    </span>
+                </div>
+            )}
 
-                            {onViewEnrollments && (
-                                <button
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        onViewEnrollments();
-                                    }}
-                                    className={`p-1 rounded hover:bg-black/10 transition-colors ml-0.5`}
-                                    title="View Enrolled Users"
-                                >
-                                    <ChevronRight className="w-3 h-3" />
-                                </button>
-                            )}
-                        </div>
+            <div className="flex-1">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2 pr-8">{mock.title}</h3>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {mock.topics.slice(0, 2).map((t, i) => (
+                        <span key={i} className="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2 py-1 rounded-md font-medium border border-zinc-200 dark:border-zinc-700">
+                            {t}
+                        </span>
+                    ))}
+                    {mock.topics.length > 2 && (
+                        <span className="text-xs text-zinc-400 px-1 py-1">+ {mock.topics.length - 2} more</span>
                     )}
                 </div>
-                <span className={`text-xs font-bold
-                    ${isLive ? 'text-white' : 'text-blue-600'}
-                `}>
-                    {format(mock.startDate, 'MMM dd')} - {format(mock.endDate, 'dd')}
-                </span>
+
+                <div className="flex items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400 mb-6">
+                    <div className="flex items-center gap-1.5">
+                        <Clock className="w-4 h-4" />
+                        <span>{mock.duration} Mins</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                        <AlertCircle className="w-4 h-4" />
+                        <span>{mock.questionCount} Qs</span>
+                    </div>
+                </div>
             </div>
 
-            <div className="p-5 md:p-6 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-4">
-                    <div className={`p-3 rounded-xl
-                        ${isLive ? 'bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400' : 'bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'}
-                    `}>
-                        <FileTextIcon className="w-8 h-8" />
-                    </div>
-                    {/* Membership Badge if Included */}
-                    {isExempt && (
-                        <div className="px-2 py-1 bg-gradient-to-r from-amber-200 to-yellow-400 text-yellow-900 text-[10px] font-bold rounded shadow-sm">
-                            {membershipLevel === 'gold' ? 'GOLD' : 'SILVER'} ACCESS
-                        </div>
-                    )}
-                    {/* Paid Enrolled Badge - Explicitly for paid users */}
-                    {isPaid && !isExempt && (
-                        <div className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold rounded-full border border-green-200 dark:border-green-800 flex items-center gap-1 shadow-sm animate-in fade-in zoom-in duration-300">
-                            <CheckCircle2 className="w-3 h-3" />
-                            PAID & ENROLLED
-                        </div>
-                    )}
-                </div>
-
-                <h3 className={`text-xl font-bold mb-2 transition-colors
-                    ${isLive ? 'text-zinc-900 dark:text-zinc-100 group-hover:text-red-600' : 'text-zinc-900 dark:text-zinc-100'}
-                `}>
-                    {mock.title}
-                </h3>
-
-                <div className="mb-6 flex-1">
-                    <p className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Syllabus Covered</p>
-                    <ul className="space-y-1">
-                        {mock.topics.slice(0, 3).map((topic, idx) => (
-                            <li key={idx} className="text-sm text-zinc-600 dark:text-zinc-300 flex items-start gap-2">
-                                <span className="mt-1.5 w-1 h-1 rounded-full bg-zinc-400 shrink-0"></span>
-                                <span className="line-clamp-1">{topic}</span>
-                            </li>
-                        ))}
-                        {mock.topics.length > 3 && (
-                            <li className="text-xs text-zinc-400 pl-3">
-                                + {mock.topics.length - 3} more topics
-                            </li>
-                        )}
-                    </ul>
-                </div>
-
-                <div className="space-y-3 mb-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
-                    <div className="flex items-center text-sm text-zinc-600 dark:text-zinc-300">
-                        <Clock className="w-4 h-4 mr-3 text-zinc-400" />
-                        <span>{mock.duration} Minutes</span>
-                    </div>
-                </div>
-
-                {isLive ? (
-                    canAccess ? (
-                        <Link
-                            href={`/mock-tests/weekly/${mock.id}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/30 flex items-center justify-center gap-2"
-                        >
-                            <PlayCircle className="w-5 h-5" /> Attempt Now
-                        </Link>
-                    ) : (
-                        <button
-                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
-                            disabled={isProcessing}
-                            className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/50 flex items-center justify-center gap-2 animate-pulse"
-                        >
-                            {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
-                            Enroll Now - ₹49
-                        </button>
-                    )
-                ) : isExpired ? (
-                    <button className="w-full py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold cursor-not-allowed flex items-center justify-center gap-2">
-                        View Result
+            <div className="space-y-3 mt-auto">
+                {/* Top 7 Rank Holders Button */}
+                {(isCompleted || role === 'admin') && onShowRankList && (
+                    <button
+                        onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
+                        className="w-full py-2.5 bg-gradient-to-r from-amber-200 to-yellow-400 hover:from-amber-300 hover:to-yellow-500 dark:from-amber-700 dark:to-yellow-600 text-amber-900 dark:text-amber-100 rounded-xl font-bold text-sm shadow-sm flex items-center justify-center gap-2 mb-2 transition-all transform hover:scale-[1.02]"
+                    >
+                        <Trophy className="w-4 h-4" /> Top 7 Rank Holders
                     </button>
-                ) : (
-                    // Upcoming Logic
-                    canAccess ? (
-                        <button className="w-full py-3 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:border-zinc-400 hover:text-zinc-900 dark:hover:text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2">
-                            <MockCountdown targetDate={mock.startDate} onComplete={() => setIsTimerExpired(true)} />
+                )}
+
+                {/* Main CTA */}
+                <div className="flex gap-2">
+                    {/* Admin: View Enrollments Button */}
+                    {role === 'admin' && onViewEnrollments && (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onViewEnrollments(); }}
+                            className="flex-1 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-1"
+                        >
+                            <Users className="w-4 h-4" /> {enrollmentCount}
                         </button>
+                    )}
+
+                    {isCompleted ? (
+                        canAccess ? (
+                            <Link
+                                href={`/mock-tests/weekly/${mock.id}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="flex-1 py-3 bg-white dark:bg-zinc-800 border-2 border-blue-600 dark:border-blue-500 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors"
+                            >
+                                <History className="w-4 h-4" /> Reattempt
+                            </Link>
+                        ) : (
+                            <button
+                                onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                                disabled={isProcessing}
+                                className="flex-1 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30"
+                            >
+                                {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
+                                Unlock - ₹49
+                            </button>
+                        )
                     ) : (
                         <button
-                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
-                            disabled={isProcessing}
-                            className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-500/50 flex items-center justify-center gap-2"
+                            onClick={(e) => {
+                                // This button's click will bubble up to the parent div's onClick,
+                                // which opens the modal. No need for e.stopPropagation() here if the intent
+                                // is for clicking this button to also open the modal.
+                                // If it had a different action, we'd stop propagation.
+                                // Since the parent div handles the primary click (opening details),
+                                // and this button's purpose is to show status/trigger action,
+                                // we let the parent handle the modal opening.
+                            }}
+                            className={`flex-1 py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-shadow shadow-md hover:shadow-lg
+                                 ${isLive
+                                    ? 'bg-red-600 hover:bg-red-700 text-white shadow-red-500/30'
+                                    : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400'
+                                }
+                             `}
+                        // Removed disabled attribute so it is clickable and opens the modal
                         >
-                            {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
-                            Enroll Now - ₹49
+                            {isLive ? (
+                                <>
+                                    <PlayCircle className="w-4 h-4" /> Attempt Now
+                                </>
+                            ) : (
+                                <>
+                                    <Lock className="w-4 h-4" /> Upcoming
+                                </>
+                            )}
                         </button>
-                    )
-                )}
+                    )}
+                </div>
             </div>
         </div>
+    );
+}
+
+function RankListModal({ mock, isOpen, onClose }: { mock: MockTest | null, isOpen: boolean, onClose: () => void }) {
+    const [leaderboard, setLeaderboard] = useState<any[]>([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        if (isOpen && mock) {
+            setLoading(true);
+            fetch(`/api/mock-test/live/leaderboard?testId=${mock.id}&limit=7`)
+                .then(res => res.json())
+                .then(data => {
+                    setLeaderboard(data.leaderboard || []);
+                })
+                .catch(err => console.error(err))
+                .finally(() => setLoading(false));
+        }
+    }, [isOpen, mock]);
+
+    // Helper to mask email: bhu***dra***17@gmail.com
+    const maskEmail = (email: string) => {
+        if (!email) return "";
+        const [local, domain] = email.split('@');
+        if (!local || local.length < 3) return email; // Too short to mask nicely
+
+        // Show first 3 chars, mask middle, show last 2 chars of local part if possible
+        const start = local.substring(0, 3);
+        const end = local.length > 5 ? local.substring(local.length - 2) : "";
+        const maskedLocal = `${start}***${end}`;
+
+        return `${maskedLocal}@${domain}`;
+    };
+
+    return (
+        <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+            <DialogContent className="max-w-md w-[95%] rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-0">
+                <div className="bg-gradient-to-br from-amber-400 to-orange-500 p-6 text-white text-center relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-20"></div>
+                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-yellow-300 rounded-full blur-2xl opacity-50"></div>
+
+                    <Trophy className="w-12 h-12 mx-auto mb-3 text-white drop-shadow-md" />
+                    <DialogTitle className="text-2xl font-black uppercase tracking-tight text-white drop-shadow-sm relative z-10">
+                        Top 7 Rank Holders
+                    </DialogTitle>
+                    <p className="text-amber-100 font-medium text-sm relative z-10">All India Weekly Mock Test</p>
+                </div>
+
+                <div className="p-0 max-h-[60vh] overflow-y-auto">
+                    {loading ? (
+                        <div className="py-12 flex flex-col items-center justify-center text-zinc-400">
+                            <Loader2 className="w-8 h-8 animate-spin mb-2 text-amber-500" />
+                            Loading Champions...
+                        </div>
+                    ) : leaderboard.length === 0 ? (
+                        <div className="py-12 text-center text-zinc-500 p-6">
+                            No ranks generated yet. Be the first!
+                        </div>
+                    ) : (
+                        <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                            {leaderboard.map((user, idx) => (
+                                <div key={idx} className="flex items-center gap-4 p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center font-black text-lg shadow-sm shrink-0
+                                        ${idx === 0 ? 'bg-yellow-100 text-yellow-600 ring-4 ring-yellow-50' :
+                                            idx === 1 ? 'bg-slate-100 text-slate-600 ring-4 ring-slate-50' :
+                                                idx === 2 ? 'bg-orange-100 text-orange-600 ring-4 ring-orange-50' :
+                                                    'bg-zinc-100 text-zinc-500'
+                                        }
+                                    `}>
+                                        {idx + 1}
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        <h4 className="font-bold text-zinc-900 dark:text-zinc-100 truncate flex items-center gap-2">
+                                            {user.userName}
+                                        </h4>
+                                        <p className="text-xs text-zinc-400 dark:text-zinc-500 truncate font-mono mt-0.5">
+                                            {maskEmail(user.userEmail)}
+                                        </p>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="font-black text-indigo-600 dark:text-indigo-400 text-lg">{user.score * 2}</div>
+                                        <div className="text-[10px] font-bold text-zinc-400 uppercase">Marks</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                <div className="p-4 bg-zinc-50 dark:bg-zinc-900 text-center border-t border-zinc-100 dark:border-zinc-800">
+                    <button onClick={onClose} className="text-sm font-bold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">
+                        Close Leaderboard
+                    </button>
+                </div>
+            </DialogContent>
+        </Dialog>
     );
 }
 

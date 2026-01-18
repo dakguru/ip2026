@@ -7,7 +7,15 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
 // Configure worker - Use CDN for better compatibility in Capacitor/Android
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
+const pdfOptions = {
+    cMapUrl: 'https://unpkg.com/pdfjs-dist@4.4.168/cmaps/',
+    cMapPacked: true,
+    standardFontDataUrl: 'https://unpkg.com/pdfjs-dist@4.4.168/standard_fonts/',
+    disableRange: true,
+    disableStream: true,
+};
 
 interface PdfViewerProps {
     url: string;
@@ -191,7 +199,8 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                         onLoadProgress={onDocumentLoadProgress}
                         onLoadError={onDocumentLoadError}
                         loading={<LoadingUI />}
-                        error={<ErrorUI />} // Should not be needed if we handle state, but good backup
+                        error={<ErrorUI />}
+                        options={pdfOptions}
                         className="max-w-full"
                     >
                         <div className="shadow-lg transition-transform duration-200">
