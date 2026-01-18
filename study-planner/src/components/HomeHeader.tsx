@@ -168,6 +168,17 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                         {/* 3. Right: Actions */}
                         <div className="flex items-center gap-2 sm:gap-2 shrink-0 md:ml-8 lg:ml-12">
+                            {/* WhatsApp Group - Desktop */}
+                            <a
+                                href="https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hidden lg:inline-flex items-center gap-2 px-3 py-1.5 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full text-xs font-bold transition-all shadow-sm hover:shadow-md mr-2"
+                            >
+                                <MessageCircle className="w-4 h-4 fill-white text-white" />
+                                <span>Join Group</span>
+                            </a>
+
                             <div className="hidden md:block">
                                 <ThemeToggle />
                             </div>
@@ -255,6 +266,17 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             </form>
 
                             <nav className="flex flex-col space-y-2">
+                                {/* WhatsApp Group - Mobile Menu */}
+                                <a
+                                    href="https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-3 rounded-lg bg-[#25D366]/10 text-[#128C7E] dark:text-[#25D366] font-bold flex items-center gap-3 border border-[#25D366]/20 hover:bg-[#25D366]/20 transition-colors"
+                                >
+                                    <MessageCircle className="w-5 h-5 fill-current" />
+                                    Join WhatsApp Group
+                                </a>
+
                                 <Link
                                     href="/"
                                     className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"

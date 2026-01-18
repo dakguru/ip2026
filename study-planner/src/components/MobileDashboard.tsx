@@ -165,6 +165,17 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                     </div>
 
                                     <div className="flex-1 overflow-y-auto p-4 space-y-1">
+                                        {/* WhatsApp Group Button - Sidebar */}
+                                        <a
+                                            href="https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-3 p-3.5 mb-2 rounded-lg bg-[#25D366]/10 text-[#128C7E] dark:text-[#25D366] font-bold border border-[#25D366]/20 hover:bg-[#25D366]/20 transition-colors"
+                                        >
+                                            <MessageCircle className="w-5 h-5 fill-current" />
+                                            Join WhatsApp Group
+                                        </a>
+
                                         {[
                                             { href: "/", icon: Home, label: "Home", color: "text-slate-500" },
                                             { href: "/guide", icon: Lightbulb, label: "Web Guide", color: "text-blue-600" },
@@ -345,6 +356,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                             {displayName} <span className="text-lg">👋</span>
                         </h1>
                     </div>
+
                 </div>
             </header>
 

@@ -36,6 +36,14 @@ export default function MockTestDetailResultsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [search, setSearch] = useState("");
     const [expandedRow, setExpandedRow] = useState<string | null>(null);
+    const [showNotification, setShowNotification] = useState(false);
+
+    useEffect(() => {
+        if (showNotification) {
+            const timer = setTimeout(() => setShowNotification(false), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [showNotification]);
 
     useEffect(() => {
         if (testId) {
@@ -232,6 +240,7 @@ export default function MockTestDetailResultsPage() {
                                                                             testName: formatTestName(testId),
                                                                             submittedAt: result.submittedAt
                                                                         });
+                                                                        setShowNotification(true);
                                                                     } catch (e) {
                                                                         console.error(e);
                                                                         alert("Failed to generate PDF");
@@ -319,6 +328,17 @@ export default function MockTestDetailResultsPage() {
                     </div>
                 </div>
             </div>
+
+            {/* Notification Toast */}
+            {showNotification && (
+                <div className="fixed top-6 left-1/2 -translate-x-1/2 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-6 py-3 rounded-full shadow-2xl z-50 flex items-center gap-3 animate-in fade-in slide-in-from-top-4 duration-300">
+                    <CheckCircle2 className="w-5 h-5 text-green-500" />
+                    <div>
+                        <p className="font-bold text-sm">Answer Sheet Generated</p>
+                        <p className="text-xs opacity-80">Check your Downloads folder</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
