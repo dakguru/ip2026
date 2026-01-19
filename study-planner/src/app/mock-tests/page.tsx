@@ -403,6 +403,40 @@ export default function MockTestsPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
                 <div className="space-y-12">
 
+                    {/* Attractive Marquee Notification */}
+                    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white shadow-lg border-y border-white/10">
+                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+                        <div className="max-w-7xl mx-auto flex items-center h-12 relative z-10">
+                            <div className="flex-shrink-0 bg-white/20 backdrop-blur-md px-4 h-full flex items-center justify-center z-20 shadow-xl border-r border-white/10">
+                                <span className="font-black text-xs md:text-sm tracking-wider uppercase flex items-center gap-2">
+                                    <span className="relative flex h-2.5 w-2.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-yellow-400"></span>
+                                    </span>
+                                    Why Top 7 Rankings?
+                                </span>
+                            </div>
+                            <div className="flex-1 overflow-hidden relative h-full flex items-center group cursor-default">
+                                <div className="animate-scroll flex items-center">
+                                    {/* Block 1 */}
+                                    <div className="flex items-center gap-4 px-4 font-medium text-sm md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
+                                        <span className="inline-block mx-4">★</span>
+                                        <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
+                                    </div>
+                                    {/* Block 2 (Duplicate for Seamless Loop) */}
+                                    <div className="flex items-center gap-4 px-4 font-medium text-sm md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
+                                        <span className="inline-block mx-4">★</span>
+                                        <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
+                                    </div>
+                                </div>
+
+                                {/* Gradient Overlays for Smooth Fade Effect */}
+                                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-indigo-600 to-transparent z-10 pointer-events-none"></div>
+                                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-indigo-600 to-transparent z-10 pointer-events-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
                     {activeMocks.length > 0 && (
                         <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                             {activeMocks.map(mock => (
@@ -420,6 +454,30 @@ export default function MockTestsPage() {
                                     onShowRankList={() => setSelectedMockForRank(mock)}
                                 />
                             ))}
+                        </div>
+                    )}
+
+
+                    {completedMocks.length > 0 && (
+                        <div className="opacity-100 mb-12">
+                            <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
+                                <History className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
+                                Previous Tests
+                            </h2>
+                            <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
+                                {completedMocks.map(mock => (
+                                    <MockTestCard
+                                        key={mock.id}
+                                        mock={mock}
+                                        onClick={() => setSelectedMock(mock)}
+                                        isPaid={paidTests.includes(mock.id)}
+                                        membershipLevel={membershipLevel}
+                                        onEnroll={() => handleEnroll(mock)}
+                                        enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                        onShowRankList={() => setSelectedMockForRank(mock)}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     )}
 
@@ -473,28 +531,7 @@ export default function MockTestsPage() {
                         </div>
                     </div>
 
-                    {completedMocks.length > 0 && (
-                        <div className="opacity-75">
-                            <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
-                                <Clock className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
-                                Previous Tests
-                            </h2>
-                            <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
-                                {completedMocks.map(mock => (
-                                    <MockTestCard
-                                        key={mock.id}
-                                        mock={mock}
-                                        onClick={() => setSelectedMock(mock)}
-                                        isPaid={true} // Previous tests always viewable/result (or handle appropriately)
-                                        membershipLevel={membershipLevel}
-                                        onEnroll={() => { }}
-                                        enrollmentCount={enrollmentCounts[mock.id] || universalCount}
-                                        onShowRankList={() => setSelectedMockForRank(mock)}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    )}
+
                 </div>
 
                 <div className="mt-12 md:mt-16 text-center">
@@ -746,10 +783,25 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
                             Enroll Now - ₹49
                         </button>
                     )
+                ) : mock.status === 'completed' ? (
+                    canAccess ? (
+                        <Link href={`/mock-tests/weekly/${mock.id}?reattempt=true`} className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center gap-2">
+                            <History className="w-6 h-6" /> Reattempt Test
+                        </Link>
+                    ) : (
+                        <button
+                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                            disabled={isProcessing}
+                            className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/50 flex items-center justify-center gap-2 transition-all transform active:scale-95 animate-pulse"
+                        >
+                            {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
+                            Unlock Test - ₹49
+                        </button>
+                    )
                 ) : (
                     <button disabled className="w-full py-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold flex items-center justify-center gap-2 cursor-not-allowed">
                         <Lock className="w-5 h-5" />
-                        {mock.status === 'completed' ? 'Test Completed' : 'Test Not Yet Active'}
+                        Test Not Yet Active
                     </button>
                 )}
             </div>
@@ -933,7 +985,7 @@ function MockTestCard({
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         className="w-full py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl font-bold text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-95"
                     >
-                        <Trophy className="w-4 h-4 text-white fill-current" /> View Top Rankers
+                        <Trophy className="w-4 h-4 text-white fill-current" /> View Top 7 Rankers
                     </button>
                 )}
 
@@ -953,7 +1005,7 @@ function MockTestCard({
                     {isCompleted ? (
                         canAccess ? (
                             <Link
-                                href={`/mock-tests/weekly/${mock.id}`}
+                                href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
                                 onClick={(e) => e.stopPropagation()}
                                 className="flex-1 py-3 bg-white dark:bg-zinc-800 border-2 border-blue-600 dark:border-blue-500 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
                             >

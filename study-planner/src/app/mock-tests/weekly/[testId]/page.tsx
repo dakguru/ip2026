@@ -18,6 +18,7 @@ const TEST_DATA_MAP: Record<string, Question[]> = {
 
 interface PageProps {
     params: Promise<{ testId: string }>;
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 // Optimization: Memoized Mobile Content Component
@@ -214,9 +215,11 @@ const MemoizedMobileContent = memo(({
     );
 });
 
-export default function WeeklyMockTestRunner({ params }: PageProps) {
+export default function WeeklyMockTestRunner({ params, searchParams }: PageProps) {
     // Unwrap params using React.use()
     const { testId } = use(params);
+    const query = use(searchParams);
+    const isReattempt = query?.reattempt === 'true';
     const router = useRouter();
 
     const [questions, setQuestions] = useState<Question[]>([]);
@@ -266,8 +269,8 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
                     if (email) setUserEmail(email);
                     if (session.name) setUserName(session.name);
 
-                    // Check for previous submission
-                    if (email) {
+                    // Check for previous submission (Skip if reattempting)
+                    if (email && !isReattempt) {
                         try {
                             const statusRes = await fetch('/api/mock-test/live/status', {
                                 method: 'POST',
@@ -403,7 +406,7 @@ export default function WeeklyMockTestRunner({ params }: PageProps) {
         setScore(newScore);
 
         // Submit to Server
-        if (userEmail) { // userEmail needs to be accessible here. It's defined inside useEffect currently. 
+        if (userEmail && !isReattempt) { // Skip server submission for reattempts 
             // I need to move userEmail to state to access it here.
             try {
                 await fetch('/api/mock-test/live/submit', {

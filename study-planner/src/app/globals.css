@@ -46,3 +46,25 @@ textarea {
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  /* Changed to flex to align children */
+  width: max-content;
+  /* Ensure width fits content */
+  animation: scroll 45s linear infinite;
+}
+
+.group:hover .animate-scroll {
+  animation-play-state: paused;
+}

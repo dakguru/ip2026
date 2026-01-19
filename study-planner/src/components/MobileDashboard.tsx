@@ -372,40 +372,39 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
                         <div className="relative z-10">
                             <div className="flex items-center justify-between mb-4">
-                                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-red-300 font-bold text-[10px] uppercase tracking-wider animate-pulse">
+                                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-200 font-bold text-[10px] uppercase tracking-wider">
                                     <span className="relative flex h-1.5 w-1.5">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
+                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-400"></span>
                                     </span>
-                                    Live Now
+                                    Upcoming
                                 </div>
                                 <span className="text-[10px] font-medium text-purple-200 bg-white/10 px-2 py-0.5 rounded-md">
-                                    Ends Jan 18
+                                    Jan 24 - 25
                                 </span>
                             </div>
 
                             <h3 className="text-xl font-bold text-white mb-2 leading-tight">
-                                All India <br /> Mock Test - 01
+                                All India <br /> Mock Test - 02
                             </h3>
 
                             <div className="bg-black/20 rounded-lg p-3 border border-white/5 mb-4">
                                 <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Syllabus</p>
                                 <ul className="space-y-1">
                                     <li className="text-xs text-slate-200 flex items-center gap-1.5">
-                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> Post Office Act, 2023
+                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> Consumer Protection Act, 2019
                                     </li>
                                     <li className="text-xs text-slate-200 flex items-center gap-1.5">
-                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> Savings Promotion Act
+                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> IT Act, 2000
                                     </li>
                                     <li className="text-xs text-slate-200 flex items-center gap-1.5">
-                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> PMLA Act & Amendments
+                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> PO Rules & Regulations 2024
                                     </li>
                                 </ul>
                             </div>
 
                             <Link href="/quiz" className="w-full bg-white text-indigo-900 py-3 rounded-xl font-bold text-sm shadow-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
                                 <PlayCircle className="w-4 h-4 fill-indigo-900" />
-                                Attempt Now
+                                View Details
                             </Link>
                         </div>
                     </div>
