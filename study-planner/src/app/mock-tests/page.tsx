@@ -690,51 +690,56 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
 
     return (
         <>
-            <DialogHeader>
-                <DialogTitle className="text-2xl font-bold flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
-                        <FileTextIcon className="w-6 h-6" />
+            <DialogHeader className="space-y-2 pt-2 text-left">
+                <DialogTitle className="text-xl md:text-2xl font-bold flex items-center gap-2.5">
+                    <span className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
+                        <FileTextIcon className="w-5 h-5 md:w-6 md:h-6" />
                     </span>
-                    {mock.title}
+                    <span className="line-clamp-1">{mock.title}</span>
                 </DialogTitle>
-                <DialogDescription className="text-base pt-2">
-                    Scheduled for <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.startDate, 'MMMM dd, yyyy')}</span> to <span className="font-bold text-zinc-900 dark:text-zinc-100">{format(mock.endDate, 'MMMM dd, yyyy')}</span>.
+                <DialogDescription className="text-xs md:text-base text-zinc-500 dark:text-zinc-400">
+                    <span className="block md:inline">Scheduled for </span>
+                    <span className="font-bold text-zinc-900 dark:text-zinc-100 block md:inline">
+                        {format(mock.startDate, 'MMM dd, yyyy')} - {format(mock.endDate, 'MMM dd, yyyy')}
+                    </span>
                 </DialogDescription>
 
                 {targetDate && !isEnded && (
-                    <div className="inline-flex items-center gap-2 mt-2 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-lg w-fit">
-                        <Timer className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                        <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">{timerLabel}</span>
-                        <MockCountdown targetDate={targetDate} />
+                    <div className="inline-flex items-center gap-1.5 mt-1 px-2.5 py-1 bg-zinc-100 dark:bg-zinc-800 rounded-lg w-fit">
+                        <Timer className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                        <span className="text-xs font-medium text-zinc-600 dark:text-zinc-400">{timerLabel}</span>
+                        <div className="text-xs font-bold font-mono text-zinc-900 dark:text-zinc-100">
+                            <MockCountdown targetDate={targetDate} />
+                        </div>
                     </div>
                 )}
             </DialogHeader>
 
-            <div className="mt-4 space-y-6">
-                <div className="grid grid-cols-3 gap-4">
-                    <div className="p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl text-center border border-zinc-100 dark:border-zinc-800">
-                        <div className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">{mock.duration}</div>
-                        <div className="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Minutes</div>
+            <div className="mt-4 space-y-4 md:space-y-6">
+                <div className="grid grid-cols-3 gap-2 md:gap-4">
+                    <div className="p-2 md:p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl text-center border border-zinc-100 dark:border-zinc-800">
+                        <div className="text-lg md:text-2xl font-bold text-zinc-900 dark:text-zinc-100">{mock.duration}</div>
+                        <div className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider font-semibold">Minutes</div>
                     </div>
-                    <div className="p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl text-center border border-zinc-100 dark:border-zinc-800">
-                        <div className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">{mock.questionCount}</div>
-                        <div className="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Questions</div>
+                    <div className="p-2 md:p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl text-center border border-zinc-100 dark:border-zinc-800">
+                        <div className="text-lg md:text-2xl font-bold text-zinc-900 dark:text-zinc-100">{mock.questionCount}</div>
+                        <div className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider font-semibold">Questions</div>
                     </div>
-                    <div className="p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl text-center border border-zinc-100 dark:border-zinc-800">
-                        <div className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">{mock.marks}</div>
-                        <div className="text-xs text-zinc-500 uppercase tracking-wider font-semibold">Marks</div>
+                    <div className="p-2 md:p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl text-center border border-zinc-100 dark:border-zinc-800">
+                        <div className="text-lg md:text-2xl font-bold text-zinc-900 dark:text-zinc-100">{mock.marks}</div>
+                        <div className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider font-semibold">Marks</div>
                     </div>
                 </div>
 
                 <div>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-3 flex items-center gap-2">
+                    <h3 className="text-base md:text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 md:mb-3 flex items-center gap-2">
                         <Info className="w-4 h-4 text-purple-500" /> Test Topics
                     </h3>
-                    <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-4 border border-purple-100 dark:border-purple-900/20">
-                        <ul className="space-y-2">
+                    <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-3 md:p-4 border border-purple-100 dark:border-purple-900/20">
+                        <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-zinc-700 dark:text-zinc-300">
                             {mock.topics.map((topic, idx) => (
-                                <li key={idx} className="flex items-start gap-3 text-sm text-zinc-700 dark:text-zinc-300">
-                                    <CheckCircle2 className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 shrink-0" />
+                                <li key={idx} className="flex items-start gap-2.5 md:gap-3 leading-snug">
+                                    <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-purple-600 dark:text-purple-400 mt-0.5 shrink-0" />
                                     <span>{topic}</span>
                                 </li>
                             ))}
@@ -743,26 +748,26 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
                 </div>
 
                 <div>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-3 flex items-center gap-2">
+                    <h3 className="text-base md:text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 md:mb-3 flex items-center gap-2">
                         <AlertCircle className="w-4 h-4 text-amber-500" /> Test Instructions
                     </h3>
-                    <div className="bg-amber-50 dark:bg-amber-900/10 rounded-xl p-4 border border-amber-100 dark:border-amber-900/20">
-                        <ul className="space-y-3 text-sm text-zinc-700 dark:text-zinc-300">
-                            <li className="flex gap-3">
-                                <span className="font-bold text-amber-600 dark:text-amber-500">1.</span>
-                                The test window is open from Saturday 00:00 AM to Sunday 11:59 PM. You can attempt the test at any time within this window.
+                    <div className="bg-amber-50 dark:bg-amber-900/10 rounded-xl p-3 md:p-4 border border-amber-100 dark:border-amber-900/20">
+                        <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-snug">
+                            <li className="flex gap-2.5 md:gap-3">
+                                <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">1.</span>
+                                <span>The test window is open from Saturday 00:00 AM to Sunday 11:59 PM. You can attempt the test at any time within this window.</span>
                             </li>
-                            <li className="flex gap-3">
-                                <span className="font-bold text-amber-600 dark:text-amber-500">2.</span>
-                                Once started, the timer cannot be paused. Ensure you have a stable internet connection.
+                            <li className="flex gap-2.5 md:gap-3">
+                                <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">2.</span>
+                                <span>Once started, the timer cannot be paused. Ensure you have a stable internet connection.</span>
                             </li>
-                            <li className="flex gap-3">
-                                <span className="font-bold text-amber-600 dark:text-amber-500">3.</span>
-                                There is <strong>no negative marking</strong> for this test series.
+                            <li className="flex gap-2.5 md:gap-3">
+                                <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">3.</span>
+                                <span>There is <strong>no negative marking</strong> for this test series.</span>
                             </li>
-                            <li className="flex gap-3">
-                                <span className="font-bold text-amber-600 dark:text-amber-500">4.</span>
-                                All India Rank will be generated on the following Monday at 10:00 AM.
+                            <li className="flex gap-2.5 md:gap-3">
+                                <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">4.</span>
+                                <span>All India Rank will be generated on the following Monday at 10:00 AM.</span>
                             </li>
                         </ul>
                     </div>

@@ -73,7 +73,7 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
                 )}
             </h1>
 
-            <p className={`text-zinc-600 dark:text-zinc-300 mx-auto ${isMobileApp ? 'text-sm max-w-sm' : 'text-xl max-w-3xl'}`}>
+            <p className={`text-zinc-600 dark:text-zinc-300 mx-auto ${isMobileApp ? 'text-xs max-w-sm' : 'text-xs sm:text-xl max-w-3xl'}`}>
                 Prepare Smart. Progress Fast. Get Promoted.
             </p>
 
@@ -92,7 +92,7 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 sm:h-3 sm:w-3 bg-white"></span>
                         </span>
-                        <span className="text-white font-bold tracking-wide uppercase text-xs sm:text-sm md:text-base drop-shadow-md whitespace-normal sm:whitespace-nowrap text-center">
+                        <span className="text-white font-bold tracking-wide uppercase text-[10px] sm:text-sm md:text-base drop-shadow-md whitespace-nowrap text-center">
                             <CountdownTimer />
                         </span>
                     </div>
