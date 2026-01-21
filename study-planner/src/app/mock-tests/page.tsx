@@ -1207,7 +1207,7 @@ function MockTestCard({
                             className="flex-1 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-[1.02] active:scale-95"
                         >
                             {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
-                            Pre-Book - â‚¹49
+                            Enroll for Rs.49/-
                         </button>
                     ) : (
                         <button
