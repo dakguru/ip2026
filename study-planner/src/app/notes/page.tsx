@@ -288,7 +288,14 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.4 MB",
             color: "cyan"
         },
-        { title: "Post Office Guide Part-II", description: "Except Section VII & VIII.", color: "cyan", comingSoon: true },
+        {
+            title: "Post Office Guide Part-II",
+            description: "Except Section VII & VIII.",
+            filename: "PO Guide Part - II.pdf",
+            path: "/notes/paper-1/PO Guide Part - II.pdf",
+            size: "0.5 MB",
+            color: "cyan"
+        },
         { title: "Domestic/Foreign Post Guidelines", description: "Issued by Directorate.", color: "cyan", comingSoon: true },
 
         // 33. DIGIPIN

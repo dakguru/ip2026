@@ -385,13 +385,13 @@ export default function MockTestsPage() {
                         <div className="flex justify-center mb-10 w-full animate-in zoom-in duration-500">
                             <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-2xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
                                 <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
-                                <span className="relative px-8 py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[14px] group-hover:bg-opacity-0 flex items-center gap-3">
-                                    <span className="relative flex h-3 w-3">
+                                <span className="relative px-5 py-3 md:px-8 md:py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[14px] group-hover:bg-opacity-0 flex items-center gap-2 md:gap-3">
+                                    <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-red-500"></span>
                                     </span>
-                                    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white">Attempt Free Sample Test</span>
-                                    <ArrowLeft className="w-5 h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
+                                    <span className="text-base md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white whitespace-nowrap">Attempt Free Sample Test</span>
+                                    <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Link>
                         </div>
@@ -407,24 +407,24 @@ export default function MockTestsPage() {
                     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white shadow-lg border-y border-white/10">
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
                         <div className="max-w-7xl mx-auto flex items-center h-12 relative z-10">
-                            <div className="flex-shrink-0 bg-white/20 backdrop-blur-md px-4 h-full flex items-center justify-center z-20 shadow-xl border-r border-white/10">
-                                <span className="font-black text-xs md:text-sm tracking-wider uppercase flex items-center gap-2">
+                            <div className="flex-shrink-0 w-[40%] md:w-auto bg-white/20 backdrop-blur-md px-2 md:px-4 h-full flex items-center justify-center z-20 shadow-xl border-r border-white/10">
+                                <span className="font-black text-[10px] md:text-sm tracking-wider uppercase flex items-center gap-1 md:gap-2 whitespace-nowrap">
                                     <span className="relative flex h-2.5 w-2.5">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-yellow-400"></span>
                                     </span>
-                                    Why Top 7 Rankings?
+                                    Why Top 7?
                                 </span>
                             </div>
-                            <div className="flex-1 overflow-hidden relative h-full flex items-center group cursor-default">
+                            <div className="w-[60%] md:flex-1 overflow-hidden relative h-full flex items-center group cursor-default">
                                 <div className="animate-scroll flex items-center">
                                     {/* Block 1 */}
-                                    <div className="flex items-center gap-4 px-4 font-medium text-sm md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
+                                    <div className="flex items-center gap-4 px-4 font-medium text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
                                         <span className="inline-block mx-4">★</span>
                                         <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
                                     </div>
                                     {/* Block 2 (Duplicate for Seamless Loop) */}
-                                    <div className="flex items-center gap-4 px-4 font-medium text-sm md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
+                                    <div className="flex items-center gap-4 px-4 font-medium text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
                                         <span className="inline-block mx-4">★</span>
                                         <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
                                     </div>
