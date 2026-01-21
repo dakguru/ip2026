@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight, History } from "lucide-react";
@@ -8,6 +8,14 @@ import { useMemo, useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import Script from "next/script";
+import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
+import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
+import { FileDown } from "lucide-react";
+
+// Map IDs to Question Data for PDF Generation
+const TEST_QUESTIONS_MAP: Record<string, any[]> = {
+    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS
+};
 
 // Mock Test Interface
 interface MockTest {
@@ -43,7 +51,12 @@ export default function MockTestsPage() {
     const [loadingEnrollments, setLoadingEnrollments] = useState(false);
     const [selectedTestForEnrollment, setSelectedTestForEnrollment] = useState<string>("");
     const [enrollmentCounts, setEnrollmentCounts] = useState<Record<string, number>>({});
+
     const [universalCount, setUniversalCount] = useState(0);
+
+    // User Results State
+    const [userResults, setUserResults] = useState<Record<string, any>>({});
+    const [downloadingId, setDownloadingId] = useState<string | null>(null);
 
     const fetchEnrollmentCounts = async () => {
         try {
@@ -64,12 +77,24 @@ export default function MockTestsPage() {
         if (cookie) {
             try {
                 const session = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
-                if (session.email) setUserEmail(session.email);
+                if (session.email) {
+                    setUserEmail(session.email);
+                    // Fetch User Results
+                    fetch('/api/mock-test/user-results', {
+                        method: 'POST',
+                        body: JSON.stringify({ email: session.email })
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.results) setUserResults(data.results);
+                        })
+                        .catch(err => console.error('Error fetching results', err));
+                }
                 if (session.name) setUserName(session.name);
                 if (session.membershipLevel) setMembershipLevel(session.membershipLevel);
                 if (session.role) setRole(session.role);
             } catch (e) {
-                console.error("Session parse error");
+                console.error('Session parse error');
             }
         }
 
@@ -269,6 +294,34 @@ export default function MockTestsPage() {
         }
     };
 
+    const handleDownloadAnalytics = async (mock: MockTest, result: any) => {
+        if (!result) return;
+        setDownloadingId(mock.id);
+        try {
+            const questions = TEST_QUESTIONS_MAP[mock.id];
+            if (!questions) {
+                alert("Question data not found for PDF generation.");
+                return;
+            }
+
+            await generateMockTestAnswerSheetPDF({
+                userName: userName,
+                score: result.score,
+                totalQuestions: result.totalQuestions, // Use result's total questions in case it changed
+                questions: questions,
+                answers: result.answers || {},
+                testName: mock.title,
+                submittedAt: result.submittedAt
+            });
+
+        } catch (error) {
+            console.error("PDF Gen Error", error);
+            alert("Failed to generate PDF");
+        } finally {
+            setDownloadingId(null);
+        }
+    };
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pb-20 transition-colors">
             <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
@@ -420,12 +473,12 @@ export default function MockTestsPage() {
                                 <div className="animate-scroll flex items-center">
                                     {/* Block 1 */}
                                     <div className="flex items-center gap-4 px-4 font-medium text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
-                                        <span className="inline-block mx-4">★</span>
+                                        <span className="inline-block mx-4">â˜…</span>
                                         <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
                                     </div>
                                     {/* Block 2 (Duplicate for Seamless Loop) */}
                                     <div className="flex items-center gap-4 px-4 font-medium text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
-                                        <span className="inline-block mx-4">★</span>
+                                        <span className="inline-block mx-4">â˜…</span>
                                         <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
                                     </div>
                                 </div>
@@ -452,6 +505,9 @@ export default function MockTestsPage() {
                                     onViewEnrollments={() => handleViewEnrollments(mock)}
                                     enrollmentCount={enrollmentCounts[mock.id] || universalCount}
                                     onShowRankList={() => setSelectedMockForRank(mock)}
+                                    userResult={userResults[mock.id]}
+                                    onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
+                                    isDownloading={downloadingId === mock.id}
                                 />
                             ))}
                         </div>
@@ -475,6 +531,9 @@ export default function MockTestsPage() {
                                         onEnroll={() => handleEnroll(mock)}
                                         enrollmentCount={enrollmentCounts[mock.id] || universalCount}
                                         onShowRankList={() => setSelectedMockForRank(mock)}
+                                        userResult={userResults[mock.id]}
+                                        onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
+                                        isDownloading={downloadingId === mock.id}
                                     />
                                 ))}
                             </div>
@@ -572,6 +631,9 @@ export default function MockTestsPage() {
                             onEnroll={() => handleEnroll(selectedMock)}
                             isProcessing={processingId === selectedMock.id}
                             role={role}
+                            userResult={userResults[selectedMock.id]}
+                            onDownloadResult={() => handleDownloadAnalytics(selectedMock, userResults[selectedMock.id])}
+                            isDownloading={downloadingId === selectedMock.id}
                         />
                     )}
                 </DialogContent>
@@ -654,13 +716,26 @@ export default function MockTestsPage() {
 }
 
 
-function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing, role }: {
+function MockTestDetail({
+    mock,
+    membershipLevel,
+    isPaid,
+    onEnroll,
+    isProcessing,
+    role,
+    userResult,
+    onDownloadResult,
+    isDownloading
+}: {
     mock: MockTest;
     membershipLevel: string;
     isPaid: boolean;
     onEnroll: () => void;
     isProcessing?: boolean;
     role?: string;
+    userResult?: any;
+    onDownloadResult?: () => void;
+    isDownloading?: boolean;
 }) {
     const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -775,9 +850,36 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
 
                 {isLive ? (
                     canAccess ? (
-                        <Link href={`/mock-tests/weekly/${mock.id}`} className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 transition-all flex items-center justify-center gap-2">
-                            <PlayCircle className="w-6 h-6" /> Start Test Now
-                        </Link>
+                        userResult ? (
+                            <div className="flex flex-col gap-3">
+                                <div className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-100 dark:border-green-900/30">
+                                    <div className="flex items-center gap-2">
+                                        <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400" />
+                                        <span className="font-bold text-green-700 dark:text-green-300 text-sm">Attempted</span>
+                                    </div>
+                                    <span className="font-bold text-zinc-900 dark:text-zinc-100">
+                                        Score: {userResult.score}/{userResult.totalQuestions}
+                                    </span>
+                                </div>
+                                <div className="flex gap-3">
+                                    <Link href={`/mock-tests/weekly/${mock.id}?reattempt=true`} className="flex-1 py-4 bg-white dark:bg-zinc-800 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-700 dark:text-indigo-400 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all">
+                                        <History className="w-5 h-5" /> Reattempt
+                                    </Link>
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); onDownloadResult?.(); }}
+                                        disabled={isDownloading}
+                                        className="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2 transition-all active:scale-95"
+                                    >
+                                        {isDownloading ? <Loader2 className="w-5 h-5 animate-spin" /> : <FileDown className="w-5 h-5" />}
+                                        Analysis PDF
+                                    </button>
+                                </div>
+                            </div>
+                        ) : (
+                            <Link href={`/mock-tests/weekly/${mock.id}`} className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 transition-all flex items-center justify-center gap-2">
+                                <PlayCircle className="w-6 h-6" /> Start Test Now
+                            </Link>
+                        )
                     ) : (
                         <button
                             onClick={(e) => { e.stopPropagation(); onEnroll(); }}
@@ -790,9 +892,34 @@ function MockTestDetail({ mock, membershipLevel, isPaid, onEnroll, isProcessing,
                     )
                 ) : mock.status === 'completed' ? (
                     canAccess ? (
-                        <Link href={`/mock-tests/weekly/${mock.id}?reattempt=true`} className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center gap-2">
-                            <History className="w-6 h-6" /> Reattempt Test
-                        </Link>
+                        <div className="flex flex-col gap-3">
+                            {userResult && (
+                                <div className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-100 dark:border-green-900/30">
+                                    <div className="flex items-center gap-2">
+                                        <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400" />
+                                        <span className="font-bold text-green-700 dark:text-green-300 text-sm">Attempted</span>
+                                    </div>
+                                    <span className="font-bold text-zinc-900 dark:text-zinc-100">
+                                        Score: {userResult.score}/{userResult.totalQuestions}
+                                    </span>
+                                </div>
+                            )}
+                            <div className="flex gap-3">
+                                <Link href={`/mock-tests/weekly/${mock.id}?reattempt=true`} className="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center gap-2">
+                                    <History className="w-6 h-6" /> Reattempt Test
+                                </Link>
+                                {userResult && (
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); onDownloadResult?.(); }}
+                                        disabled={isDownloading}
+                                        className="flex-1 py-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95"
+                                    >
+                                        {isDownloading ? <Loader2 className="w-5 h-5 animate-spin" /> : <FileDown className="w-5 h-5" />}
+                                        PDF
+                                    </button>
+                                )}
+                            </div>
+                        </div>
                     ) : (
                         <button
                             onClick={(e) => { e.stopPropagation(); onEnroll(); }}
@@ -871,7 +998,10 @@ function MockTestCard({
     role,
     onViewEnrollments,
     enrollmentCount,
-    onShowRankList
+    onShowRankList,
+    userResult,
+    onDownloadResult,
+    isDownloading
 }: {
     mock: MockTest;
     onClick: () => void;
@@ -883,6 +1013,9 @@ function MockTestCard({
     onViewEnrollments?: () => void;
     enrollmentCount?: number;
     onShowRankList?: () => void;
+    userResult?: any;
+    onDownloadResult?: () => void;
+    isDownloading?: boolean;
 }) {
     const isTimeReached = new Date() >= mock.startDate;
     const isEnded = new Date() > mock.endDate;
@@ -890,9 +1023,10 @@ function MockTestCard({
     const isCompleted = mock.status === 'completed';
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
+    const hasAttempted = !!userResult;
 
     // Dynamic styles based on state
-    const cardBgClass = isCompleted
+    const cardBgClass = isCompleted || hasAttempted
         ? "bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/20 dark:to-zinc-900 border-blue-100 dark:border-blue-900/50"
         : "bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700";
 
@@ -917,13 +1051,25 @@ function MockTestCard({
 
                 <div className="flex flex-col items-end gap-1.5">
                     {/* Live Pulse */}
-                    {!isCompleted && isLive && (
+                    {!isCompleted && isLive && !hasAttempted && (
                         <div className="flex items-center gap-1.5 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 px-2 py-0.5 rounded-full border border-red-200 dark:border-red-800 animate-pulse">
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                             </span>
                             <span className="text-[10px] font-black uppercase tracking-wider">Live Now</span>
+                        </div>
+                    )}
+
+                    {/* Attempted Badge */}
+                    {hasAttempted && (
+                        <div className="flex flex-col items-end">
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300 border border-green-200 dark:border-green-800 mb-1">
+                                <CheckCircle2 className="w-3 h-3" /> Attempted
+                            </span>
+                            <span className="text-xs font-bold text-zinc-600 dark:text-zinc-400">
+                                Score: {userResult.score}/{userResult.totalQuestions}
+                            </span>
                         </div>
                     )}
 
@@ -947,7 +1093,7 @@ function MockTestCard({
                     )}
                     {membershipLevel !== 'gold' && membershipLevel !== 'silver' && isPaid && (
                         <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 border border-green-200 shadow-sm">
-                            ✅ Purchased
+                            ✅ Paid & Enrolled
                         </span>
                     )}
                 </div>
@@ -1027,12 +1173,33 @@ function MockTestCard({
                             </button>
                         )
                     ) : isLive ? (
-                        <button
-                            onClick={onClick}
-                            className="flex-1 py-3 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-95 animate-pulse-slow"
-                        >
-                            <PlayCircle className="w-4 h-4 fill-current" /> Attempt Now
-                        </button>
+                        hasAttempted ? (
+                            <div className="flex gap-2 w-full">
+                                <Link
+                                    href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="flex-1 py-3 bg-white dark:bg-zinc-800 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-700 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
+                                >
+                                    <History className="w-4 h-4" /> Reattempt
+                                </Link>
+                                <button
+                                    onClick={(e) => { e.stopPropagation(); onDownloadResult?.(); }}
+                                    disabled={isDownloading}
+                                    className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all active:scale-95"
+                                >
+                                    {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <FileDown className="w-4 h-4" />}
+                                    Analysis PDF
+                                </button>
+                            </div>
+                        ) : (
+                            <Link
+                                href={`/mock-tests/weekly/${mock.id}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="flex-1 py-3 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-95 animate-pulse-slow"
+                            >
+                                <PlayCircle className="w-4 h-4 fill-current" /> Attempt Test
+                            </Link>
+                        )
                     ) : !canAccess ? (
                         <button
                             onClick={(e) => { e.stopPropagation(); onEnroll(); }}
@@ -1040,7 +1207,7 @@ function MockTestCard({
                             className="flex-1 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-[1.02] active:scale-95"
                         >
                             {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
-                            Pre-Book - ₹49
+                            Pre-Book - â‚¹49
                         </button>
                     ) : (
                         <button
@@ -1175,3 +1342,4 @@ function FileTextIcon({ className }: { className?: string }) {
         </svg>
     );
 }
+
