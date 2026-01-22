@@ -10,11 +10,13 @@ import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import Script from "next/script";
 import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
+import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
 import { FileDown } from "lucide-react";
 
 // Map IDs to Question Data for PDF Generation
 const TEST_QUESTIONS_MAP: Record<string, any[]> = {
-    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS
+    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
+    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS
 };
 
 // Mock Test Interface
@@ -747,7 +749,7 @@ function MockTestDetail({
 
     const isTimeReached = currentTime >= mock.startDate;
     const isEnded = currentTime > mock.endDate;
-    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || (isTimeReached && !isEnded);
+    const isLive = mock.status === 'live' || role === 'admin' || (isTimeReached && !isEnded);
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
 

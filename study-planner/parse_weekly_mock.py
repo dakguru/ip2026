@@ -6,7 +6,14 @@ def parse_mock_test(file_path):
         content = f.read()
 
     # Split into Question Paper and Answer Key
-    parts = content.split("### **SECTION 2: ANSWER KEY & DETAILED EXPLANATIONS**")
+    # Split into Question Paper and Answer Key
+    if "### **SECTION 2: ANSWER KEY & DETAILED EXPLANATIONS**" in content:
+        parts = content.split("### **SECTION 2: ANSWER KEY & DETAILED EXPLANATIONS**")
+    elif "**PART 2: ANSWER KEY & DETAILED EXPLANATIONS**" in content:
+        parts = content.split("**PART 2: ANSWER KEY & DETAILED EXPLANATIONS**")
+    else:
+        parts = [content]
+
     questions_part = parts[0]
     answers_part = parts[1] if len(parts) > 1 else ""
 
@@ -38,11 +45,15 @@ def parse_mock_test(file_path):
         # Options usually start with A. 
         # But we need to handle "1. ... 2. ..." statements before options
         
-        # Find the start of options "A."
+        # Find the start of options "A." or "A)"
         options_start = full_q_text.find("A. ")
         if options_start == -1:
              # Try newline A.
              options_start = full_q_text.find("\nA.")
+        if options_start == -1:
+             options_start = full_q_text.find("A) ")
+        if options_start == -1:
+             options_start = full_q_text.find("\nA)")
         
         if options_start != -1:
             q_body = full_q_text[:options_start].strip()
@@ -58,6 +69,8 @@ def parse_mock_test(file_path):
                 line = line.strip()
                 if line.startswith("A. ") or line.startswith("B. ") or line.startswith("C. ") or line.startswith("D. "):
                    options.append(line[3:].strip())
+                elif line.startswith("A) ") or line.startswith("B) ") or line.startswith("C) ") or line.startswith("D) "):
+                   options.append(line[3:].strip())
         else:
             q_body = q_match.group(2) + "\n" + full_q_text
             options = []
@@ -72,15 +85,20 @@ def parse_mock_test(file_path):
         })
 
     # Parse Answers
-    # Format: **Q1: B** ... * **Concept**: ...
+    # Format 1: **Q1: B**
+    # Format 2: **Q1: Correct Answer [B]**
     
-    a_pattern = re.compile(r'\*\*Q(\d+):\s+([A-D])\*\*')
+    # Unified Regex to capture both
+    # Group 1: Q Number
+    # Group 2: Option (Single letter)
+    # Group 3: Option (Inside brackets)
+    a_pattern = re.compile(r'\*\*Q(\d+):\s+(?:([A-D])|Correct Answer \[([A-D])\])\*\*')
     a_matches = list(a_pattern.finditer(answers_part))
     
     for i in range(len(a_matches)):
         a_match = a_matches[i]
         q_num = a_match.group(1)
-        correct_opt = a_match.group(2)
+        correct_opt = a_match.group(2) if a_match.group(2) else a_match.group(3)
         
         # Map A,B,C,D to 0,1,2,3
         correct_idx = {'A': 0, 'B': 1, 'C': 2, 'D': 3}.get(correct_opt, -1)
@@ -101,10 +119,20 @@ def parse_mock_test(file_path):
                 q['explanation'] = explanation
                 break
                 
-    # Clean up and Format for TS
-    ts_output = """import { Question } from "./live_mock_data";
+    
+    # Generate Output based on file name or argument
+    output_filename = 'src/data/weekly_mock_data_02.ts' if '02' in file_path else 'src/data/weekly_mock_data_01.ts'
+    variable_name = 'WEEKLY_MOCK_02_QUESTIONS' if '02' in file_path else 'WEEKLY_MOCK_01_QUESTIONS'
+    id_prefix = 'weekly-02' if '02' in file_path else 'weekly-01'
 
-export const WEEKLY_MOCK_01_QUESTIONS: Question[] = [
+    # Update IDs in questions list
+    for q in questions:
+        q['id'] = q['id'].replace("weekly-01", id_prefix)
+
+    # Clean up and Format for TS
+    ts_output = f"""import {{ Question }} from "./live_mock_data";
+
+export const {variable_name}: Question[] = [
 """
     
     for q in questions:
@@ -130,10 +158,11 @@ export const WEEKLY_MOCK_01_QUESTIONS: Question[] = [
 """
     ts_output += "];\n"
     
-    with open('src/data/weekly_mock_data_01.ts', 'w', encoding='utf-8') as f:
+    with open(output_filename, 'w', encoding='utf-8') as f:
         f.write(ts_output)
 
-    print(f"Generated src/data/weekly_mock_data_01.ts with {len(questions)} questions.")
+    print(f"Generated {output_filename} with {len(questions)} questions.")
 
 if __name__ == "__main__":
-    parse_mock_test(r"C:\Users\arun1\OneDrive\Desktop\IP 2026\Weekly Mock Test - 01.txt")
+    # parse_mock_test(r"C:\Users\arun1\OneDrive\Desktop\IP 2026\Weekly Mock Test - 01.txt")
+    parse_mock_test(r"D:\IP 2026\Weekly Mock Test - 02.txt")

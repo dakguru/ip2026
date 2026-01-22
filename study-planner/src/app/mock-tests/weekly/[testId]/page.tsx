@@ -2,10 +2,11 @@
 
 import { useState, useEffect, use, useCallback, memo, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, CheckCircle2, AlertCircle, Timer, Save, FileDown, Flag, ChevronLeft, ChevronRight, X, LayoutGrid, Clock, Bookmark, Send, HelpCircle, XCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle2, AlertCircle, Timer, Save, FileDown, Flag, ChevronLeft, ChevronRight, X, LayoutGrid, Clock, Bookmark, Send, HelpCircle, XCircle, History, Home } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
+import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
 import { Question } from "@/data/live_mock_data";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -13,7 +14,19 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Map IDs to Data
 const TEST_DATA_MAP: Record<string, Question[]> = {
-    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS
+    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
+    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS
+};
+
+interface TestConfig {
+    startDate: Date;
+    endDate?: Date;
+    title: string;
+}
+
+const TEST_CONFIG_MAP: Record<string, TestConfig> = {
+    "mock-2026-01-17": { startDate: new Date("2026-01-17T00:00:00+05:30"), title: "Weekly Mock Test - 01" },
+    "mock-2026-01-24": { startDate: new Date("2026-01-24T00:00:00+05:30"), title: "Weekly Mock Test - 02" }
 };
 
 interface PageProps {
@@ -280,7 +293,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
                             if (statusRes.ok) {
                                 const statusData = await statusRes.json();
-                                if (statusData.hasSubmitted) {
+                                if (statusData.hasSubmitted && userRole !== 'admin') {
                                     setIsSubmitted(true);
                                     setScore(statusData.score);
                                     // We can optionally fetch answers if we want to show them
@@ -305,14 +318,17 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
             // 4. Date Check
             const now = new Date();
-            const startDate = new Date("2026-01-17T00:00:00+05:30"); // IST
+            const config = TEST_CONFIG_MAP[testId];
+            const startDate = config ? config.startDate : new Date("2026-01-17T00:00:00+05:30"); // Default Fallback
             const isStarted = now >= startDate;
 
             if (userRole === 'admin') {
                 setIsAuthorized(true); // Admins bypass everything
             } else {
                 if (!isStarted) {
-                    alert("This test becomes active on Jan 17, 2026, 00:00 AM.");
+                    // Format start date for alert
+                    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+                    alert(`This test becomes active on ${startDate.toLocaleDateString('en-IN', options)}.`);
                     router.push("/mock-tests");
                     return;
                 }
@@ -406,7 +422,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         setScore(newScore);
 
         // Submit to Server
-        if (userEmail && !isReattempt) { // Skip server submission for reattempts 
+        // Submit to Server
+        if (userEmail && !isReattempt && !isAdmin) { // Skip server submission for reattempts AND Admins
             // I need to move userEmail to state to access it here.
             try {
                 await fetch('/api/mock-test/live/submit', {
@@ -539,7 +556,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
         doc.setFontSize(14);
         doc.setTextColor(60, 60, 60);
-        doc.text("Weekly Mock Test – 01", margin + logoSize + 15, 36);
+        doc.text(TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test", margin + logoSize + 15, 36);
 
         doc.setDrawColor(230, 230, 230);
         doc.line(margin + logoSize + 10, 42, margin + boxWidth - 5, 42);
@@ -670,7 +687,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             doc.line(margin, yPos - 5, margin + contentWidth, yPos - 5);
         });
 
-        doc.save(`Dak_Guru_Weekly_Test_01_${userName.replace(/\s+/g, '_')}.pdf`);
+        const safeTitle = (TEST_CONFIG_MAP[testId]?.title || "Weekly_Mock_Test").replace(/[^a-z0-9]/gi, '_');
+        doc.save(`Dak_Guru_${safeTitle}_${userName.replace(/\s+/g, '_')}.pdf`);
     };
 
     if (isLoading) {
@@ -690,7 +708,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                     <div className="p-8 md:p-12 space-y-8">
                         <div className="text-center space-y-4">
                             <h1 className="text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
-                                Weekly Mock Test - 01
+                                {TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test"}
                             </h1>
                             <p className="text-zinc-500 dark:text-zinc-400 text-lg">
                                 Read the instructions carefully before starting.
@@ -835,7 +853,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                 <ArrowLeft className="w-5 h-5 text-zinc-700 dark:text-zinc-300" />
                             </Link>
                             <div>
-                                <h1 className="font-bold text-lg leading-tight">Weekly Mock Test – 01</h1>
+                                <h1 className="font-bold text-lg leading-tight">{TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test"}</h1>
                             </div>
                         </div>
 
@@ -1021,6 +1039,30 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                 </div>
 
                                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                                    {(() => {
+                                        const config = TEST_CONFIG_MAP[testId];
+                                        const startDate = config ? config.startDate : new Date("2026-01-17T00:00:00+05:30");
+                                        const reattemptDate = new Date(startDate);
+                                        reattemptDate.setDate(startDate.getDate() + 2); // Monday
+                                        reattemptDate.setHours(0, 0, 0, 0);
+                                        const now = new Date();
+                                        const canReattempt = now >= reattemptDate || isAdmin;
+
+                                        if (!canReattempt) return null;
+
+                                        return (
+                                            <button
+                                                onClick={() => {
+                                                    if (confirm("Reattempting will not save your score to the leaderboard. This is for practice only.\n\nContinue?")) {
+                                                        window.location.href = `${window.location.pathname}?reattempt=true`;
+                                                    }
+                                                }}
+                                                className="px-6 py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition-all flex items-center gap-2 shadow-lg shadow-purple-500/20"
+                                            >
+                                                <History className="w-4 h-4" /> Reattempt Test
+                                            </button>
+                                        );
+                                    })()}
                                     <button
                                         onClick={generatePDF}
                                         className="px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-bold hover:opacity-90 transition-all flex items-center gap-2"
@@ -1028,10 +1070,10 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                         <FileDown className="w-4 h-4" /> Download Result PDF
                                     </button>
                                     <Link
-                                        href="/mock-tests"
-                                        className="px-6 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-xl font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all"
+                                        href="/"
+                                        className="px-6 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-xl font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all flex items-center gap-2"
                                     >
-                                        Gear Up for Next Week
+                                        <Home className="w-4 h-4" /> Return to Home
                                     </Link>
                                 </div>
 
