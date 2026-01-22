@@ -7,26 +7,54 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function MockTestAnnouncementPopup() {
     const [isOpen, setIsOpen] = useState(false);
+    const [timeLeft, setTimeLeft] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
 
     useEffect(() => {
+        // Target Date: Jan 24, 2026 00:00:00
+        const targetDate = new Date("2026-01-24T00:00:00").getTime();
+
+        const calculateTimeLeft = () => {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                setTimeLeft({
+                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                    minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+                    seconds: Math.floor((difference % (1000 * 60)) / 1000)
+                });
+            } else {
+                // Timer expired
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            }
+        };
+
+        calculateTimeLeft(); // Initial call
+        const timerInterval = setInterval(calculateTimeLeft, 1000);
+
         // Show popup after a short delay for better UX
         const timer = setTimeout(() => {
-            // ALWAYS SHOW for now as per user request to "fix it" (making sure it appears)
-            setIsOpen(true);
-
-            // Original logic preserved in comments if needed later:
-            // const hasSeen = sessionStorage.getItem("seen_mock_announcement_jan17");
-            // if (!hasSeen) {
-            //     setIsOpen(true);
-            // }
+            const hasSeen = sessionStorage.getItem("seen_mock_announcement_test_02");
+            if (!hasSeen) {
+                setIsOpen(true);
+            }
         }, 1500);
 
-        return () => clearTimeout(timer);
+        return () => {
+            clearTimeout(timer);
+            clearInterval(timerInterval);
+        };
     }, []);
 
     const handleClose = () => {
         setIsOpen(false);
-        sessionStorage.setItem("seen_mock_announcement_jan17", "true");
+        sessionStorage.setItem("seen_mock_announcement_test_02", "true");
     };
 
     return (
@@ -85,44 +113,48 @@ export default function MockTestAnnouncementPopup() {
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
                                     </span>
-                                    Official Announcement
+                                    Upcoming Event
                                 </div>
 
                                 <h2 className="text-3xl font-black text-white mb-2 leading-tight">
                                     All India <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-                                        Mock Test is Live NOW..!
+                                        Weekly Mock Test - 02
                                     </span>
                                 </h2>
 
-                                <div className="flex items-center justify-center gap-3 my-5">
-                                    <div className="flex flex-col items-center bg-white/5 border border-white/10 rounded-xl px-4 py-2 min-w-[80px]">
-                                        <span className="text-xs text-zinc-400 uppercase font-bold">JAN</span>
-                                        <span className="text-2xl font-black text-white">17</span>
-                                    </div>
-                                    <span className="text-zinc-500 font-medium">&</span>
-                                    <div className="flex flex-col items-center bg-white/5 border border-white/10 rounded-xl px-4 py-2 min-w-[80px]">
-                                        <span className="text-xs text-zinc-400 uppercase font-bold">JAN</span>
-                                        <span className="text-2xl font-black text-white">18</span>
-                                    </div>
+                                {/* Timer Section */}
+                                <div className="grid grid-cols-4 gap-2 my-6 max-w-xs mx-auto">
+                                    {[
+                                        { label: "Days", value: timeLeft.days },
+                                        { label: "Hrs", value: timeLeft.hours },
+                                        { label: "Mins", value: timeLeft.minutes },
+                                        { label: "Secs", value: timeLeft.seconds },
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="flex flex-col items-center bg-white/5 border border-white/10 rounded-lg py-2">
+                                            <span className="text-lg font-bold text-white font-mono leading-none">{String(item.value).padStart(2, '0')}</span>
+                                            <span className="text-[10px] text-zinc-500 uppercase font-medium mt-1">{item.label}</span>
+                                        </div>
+                                    ))}
                                 </div>
+
 
                                 <div className="text-left bg-black/20 rounded-xl p-3 border border-white/5 mb-6 text-xs text-zinc-300 space-y-1">
                                     <p className="font-bold text-zinc-500 uppercase tracking-wider mb-2 text-[10px]">Syllabus Covered:</p>
-                                    <p className="flex items-center gap-2"><span className="text-green-400">✔</span> The Post Office Act, 2023</p>
-                                    <p className="flex items-center gap-2"><span className="text-green-400">✔</span> Government Savings Promotion Act</p>
-                                    <p className="flex items-center gap-2"><span className="text-green-400">✔</span> PMLA Act, 2002 & Amendments</p>
+                                    <p className="flex items-start gap-2 text-left"><span className="text-green-400 shrink-0 mt-0.5">✔</span> Consumer Protection Act, 2019</p>
+                                    <p className="flex items-start gap-2 text-left"><span className="text-green-400 shrink-0 mt-0.5">✔</span> Information Technology Act, 2000</p>
+                                    <p className="flex items-start gap-2 text-left"><span className="text-green-400 shrink-0 mt-0.5">✔</span> PO Rules 2024 & PO Regulations 2024</p>
                                 </div>
 
                                 <div className="space-y-3">
                                     <Link
                                         href="/mock-tests"
-                                        onClick={() => setIsOpen(false)} // Don't persist close on navigation, just close
+                                        onClick={() => setIsOpen(false)}
                                         className="group relative w-full flex items-center justify-center px-8 py-4 bg-white text-zinc-900 rounded-xl font-bold text-lg overflow-hidden transition-transform active:scale-95"
                                     >
                                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity"></span>
                                         <span className="relative flex items-center gap-2">
-                                            Attempt Now
+                                            View Details
                                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         </span>
                                     </Link>
