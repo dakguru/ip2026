@@ -5,12 +5,14 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, PanInfo, useMotionValue, useTransform } from "framer-motion";
 import { ArrowLeft, CheckCircle, XCircle, RotateCcw, AlertTriangle, ChevronRight, ChevronLeft } from "lucide-react";
 import { pmlaFlashcards } from "./pmla_data";
+import { poActData } from "./po_act_data";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function FlashcardsPage() {
     const router = useRouter();
     const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
+    const [selectedDeck, setSelectedDeck] = useState<'pmla' | 'poact' | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
     const [direction, setDirection] = useState(0); // -1 for left, 1 for right
@@ -49,8 +51,12 @@ export default function FlashcardsPage() {
         }
     }, [isAdmin, router]);
 
+    const activeDeck = selectedDeck === 'pmla' ? pmlaFlashcards : (selectedDeck === 'poact' ? poActData : []);
+    const themeColor = selectedDeck === 'pmla' ? 'indigo' : 'cyan';
+    const isPmla = selectedDeck === 'pmla';
+
     const handleNext = () => {
-        if (currentIndex < pmlaFlashcards.length - 1) {
+        if (currentIndex < activeDeck.length - 1) {
             setDirection(1);
             setIsFlipped(false);
             setCurrentIndex((prev) => prev + 1);
@@ -95,7 +101,55 @@ export default function FlashcardsPage() {
         );
     }
 
-    const currentCard = pmlaFlashcards[currentIndex];
+    // --- DECK SELECTION VIEW ---
+    if (!selectedDeck) {
+        return (
+            <div className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center p-6 space-y-8 font-sans">
+                <header className="fixed top-0 left-0 right-0 p-5 flex items-center z-20">
+                    <Link href="/dashboard" className="p-2 -ml-2 text-neutral-400 hover:text-white transition-colors">
+                        <ArrowLeft className="w-6 h-6" />
+                    </Link>
+                </header>
+
+                <div className="text-center space-y-2">
+                    <h1 className="text-3xl font-bold text-white tracking-tight">Flashcard Revision</h1>
+                    <p className="text-neutral-400">Select a topic to start your session</p>
+                </div>
+
+                <div className="w-full max-w-md grid gap-4">
+                    <button
+                        onClick={() => setSelectedDeck('poact')}
+                        className="group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border border-cyan-500/20 hover:border-cyan-500/50 transition-all text-left"
+                    >
+                        <div className="absolute inset-0 bg-cyan-500/5 group-hover:bg-cyan-500/10 transition-colors" />
+                        <div className="relative z-10 flex items-center justify-between">
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-1">PO Act 2023 & Rules 2024</h3>
+                                <p className="text-sm text-cyan-200/60">20 Cards • Recent Legislation</p>
+                            </div>
+                            <ChevronRight className="w-5 h-5 text-cyan-500" />
+                        </div>
+                    </button>
+
+                    <button
+                        onClick={() => setSelectedDeck('pmla')}
+                        className="group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-500/20 hover:border-indigo-500/50 transition-all text-left"
+                    >
+                        <div className="absolute inset-0 bg-indigo-500/5 group-hover:bg-indigo-500/10 transition-colors" />
+                        <div className="relative z-10 flex items-center justify-between">
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-1">PMLA, 2002</h3>
+                                <p className="text-sm text-indigo-200/60">20 Cards • Money Laundering Act</p>
+                            </div>
+                            <ChevronRight className="w-5 h-5 text-indigo-500" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    const currentCard = activeDeck[currentIndex];
 
     // Animation variants
     const cardVariants = {
@@ -133,12 +187,14 @@ export default function FlashcardsPage() {
         <div className="min-h-screen bg-neutral-950 flex flex-col overflow-hidden font-sans selection:bg-purple-500/30">
             {/* --- Header --- */}
             <header className="px-5 py-4 flex items-center justify-between z-20 bg-neutral-950/80 backdrop-blur-md border-b border-white/5 sticky top-0 pb-[max(16px,env(safe-area-inset-top))]">
-                <Link href="/dashboard" className="p-2 -ml-2 text-neutral-400 hover:text-white transition-colors">
+                <button onClick={() => setSelectedDeck(null)} className="p-2 -ml-2 text-neutral-400 hover:text-white transition-colors">
                     <ArrowLeft className="w-6 h-6" />
-                </Link>
+                </button>
                 <div className="text-center">
                     <h1 className="text-sm font-bold text-neutral-500 uppercase tracking-widest text-[10px] mb-0.5">Flashcard Revision</h1>
-                    <p className="text-sm font-bold text-white">PMLA, 2002</p>
+                    <p className={`text-sm font-bold ${isPmla ? 'text-indigo-400' : 'text-cyan-400'}`}>
+                        {isPmla ? "PMLA, 2002" : "PO Act 2023 & Rules 2024"}
+                    </p>
                 </div>
                 <div className="w-8" /> {/* Spacer */}
             </header>
@@ -146,8 +202,11 @@ export default function FlashcardsPage() {
             {/* --- Progress Bar --- */}
             <div className="w-full h-1 bg-neutral-900">
                 <div
-                    className="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 transition-all duration-300 ease-out"
-                    style={{ width: `${((currentIndex + 1) / pmlaFlashcards.length) * 100}%` }}
+                    className={`h-full transition-all duration-300 ease-out ${isPmla
+                            ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"
+                            : "bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500"
+                        }`}
+                    style={{ width: `${((currentIndex + 1) / activeDeck.length) * 100}%` }}
                 />
             </div>
 
@@ -156,8 +215,8 @@ export default function FlashcardsPage() {
 
                 {/* Background Decor */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-1/4 -left-20 w-80 h-80 bg-purple-900/10 rounded-full blur-[100px]" />
-                    <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-indigo-900/10 rounded-full blur-[100px]" />
+                    <div className={`absolute top-1/4 -left-20 w-80 h-80 rounded-full blur-[100px] ${isPmla ? 'bg-purple-900/10' : 'bg-cyan-900/10'}`} />
+                    <div className={`absolute bottom-1/4 -right-20 w-80 h-80 rounded-full blur-[100px] ${isPmla ? 'bg-indigo-900/10' : 'bg-blue-900/10'}`} />
                 </div>
 
                 {/* Card Container */}
@@ -192,9 +251,9 @@ export default function FlashcardsPage() {
                                     style={{ backfaceVisibility: "hidden" }}
                                 >
                                     {/* Watermark */}
-                                    <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-[0.05] pointer-events-none">
                                         <div className="relative w-48 h-48">
-                                            <Image src="/dak-guru-logo.png" alt="Watermark" fill className="object-contain" />
+                                            <Image src="/official-logo.png" alt="Watermark" fill className="object-contain grayscale" />
                                         </div>
                                     </div>
 
@@ -202,10 +261,10 @@ export default function FlashcardsPage() {
                                     <div className="flex justify-between items-center mb-6">
                                         <div className="bg-white/5 border border-white/5 px-3 py-1 rounded-full">
                                             <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
-                                                Card {currentIndex + 1} / {pmlaFlashcards.length}
+                                                Card {currentIndex + 1} / {activeDeck.length}
                                             </span>
                                         </div>
-                                        <span className="text-[10px] font-bold text-neutral-600 uppercase">Tap to Flip</span>
+                                        <span className={`text-[10px] font-bold uppercase ${isPmla ? 'text-indigo-400' : 'text-cyan-400'}`}>Tap to Flip</span>
                                     </div>
 
                                     {/* Question */}
@@ -231,7 +290,7 @@ export default function FlashcardsPage() {
 
                                 {/* --- BACK SIDE --- */}
                                 <div
-                                    className="absolute inset-0 w-full h-full bg-neutral-800 border border-indigo-500/30 rounded-3xl p-6 md:p-8 flex flex-col shadow-2xl shadow-indigo-900/20 overflow-hidden"
+                                    className={`absolute inset-0 w-full h-full bg-neutral-800 border rounded-3xl p-6 md:p-8 flex flex-col shadow-2xl overflow-hidden ${isPmla ? 'border-indigo-500/30' : 'border-cyan-500/30'} ${isPmla ? 'shadow-indigo-900/20' : 'shadow-cyan-900/20'}`}
                                     style={{
                                         backfaceVisibility: "hidden",
                                         transform: "rotateY(180deg)"
@@ -240,8 +299,8 @@ export default function FlashcardsPage() {
                                     {/* Answer Header */}
                                     <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
                                         <span className="text-xs font-bold text-neutral-400 uppercase">Correct Answer</span>
-                                        <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
-                                            <span className="text-lg font-bold text-green-400">{currentCard.correctAnswer}</span>
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isPmla ? 'bg-green-500/20' : 'bg-cyan-500/20'} `}>
+                                            <span className={`text-lg font-bold ${isPmla ? 'text-green-400' : 'text-cyan-400'}`}>{currentCard.correctAnswer}</span>
                                         </div>
                                     </div>
 
@@ -253,8 +312,8 @@ export default function FlashcardsPage() {
                                             </p>
                                         </div>
 
-                                        <div className="bg-indigo-500/10 border-l-2 border-indigo-500 p-4 rounded-r-lg">
-                                            <h3 className="text-xs font-bold text-indigo-300 uppercase mb-2">Explanation</h3>
+                                        <div className={`border-l-2 p-4 rounded-r-lg ${isPmla ? 'bg-indigo-500/10 border-indigo-500' : 'bg-cyan-500/10 border-cyan-500'}`}>
+                                            <h3 className={`text-xs font-bold uppercase mb-2 ${isPmla ? 'text-indigo-300' : 'text-cyan-300'}`}>Explanation</h3>
                                             <p className="text-sm text-neutral-300 leading-relaxed">
                                                 {currentCard.explanation}
                                             </p>
@@ -283,14 +342,14 @@ export default function FlashcardsPage() {
 
                     <button
                         onClick={() => setIsFlipped(!isFlipped)}
-                        className="px-6 py-3 rounded-full bg-indigo-600 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 active:scale-95 transition-transform"
+                        className={`px-6 py-3 rounded-full text-white font-bold text-sm shadow-lg active:scale-95 transition-transform ${isPmla ? 'bg-indigo-600 shadow-indigo-600/30' : 'bg-cyan-600 shadow-cyan-600/30'}`}
                     >
                         {isFlipped ? "Show Question" : "Reveal Answer"}
                     </button>
 
                     <button
                         onClick={handleNext}
-                        disabled={currentIndex === pmlaFlashcards.length - 1}
+                        disabled={currentIndex === activeDeck.length - 1}
                         className="p-3 rounded-full bg-neutral-800 text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-700 transition"
                     >
                         <ChevronRight className="w-6 h-6" />
