@@ -1,65 +1,141 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, PanInfo, useMotionValue, useTransform } from "framer-motion";
-import { ArrowLeft, CheckCircle, XCircle, RotateCcw, AlertTriangle, ChevronRight, ChevronLeft } from "lucide-react";
+import {
+    ArrowLeft, AlertTriangle, ChevronRight, ChevronLeft,
+    RotateCcw, Sun, Moon, Sparkles, Layers, BookOpen
+} from "lucide-react";
+import { useTheme } from "next-themes";
 import { pmlaFlashcards } from "./pmla_data";
 import { poActData } from "./po_act_data";
 import Link from "next/link";
 import Image from "next/image";
 
+// --- Types ---
+type FlashcardDeck = typeof pmlaFlashcards;
+
+// --- Constants & Themes ---
+const CARD_THEMES = [
+    {
+        name: "Navy Teal",
+        gradient: "from-slate-900 to-teal-900",
+        lightGradient: "from-slate-100 to-teal-50",
+        accent: "text-teal-400",
+        lightAccent: "text-teal-700",
+        border: "border-teal-500/20",
+        shadow: "shadow-teal-900/20",
+        badge: "bg-teal-500/10 text-teal-400"
+    },
+    {
+        name: "Deep Purple",
+        gradient: "from-indigo-900 to-purple-900",
+        lightGradient: "from-indigo-50 to-purple-50",
+        accent: "text-purple-400",
+        lightAccent: "text-purple-700",
+        border: "border-purple-500/20",
+        shadow: "shadow-purple-900/20",
+        badge: "bg-purple-500/10 text-purple-400"
+    },
+    {
+        name: "Emerald Cyan",
+        gradient: "from-emerald-900 to-cyan-900",
+        lightGradient: "from-emerald-50 to-cyan-50",
+        accent: "text-cyan-400",
+        lightAccent: "text-cyan-700",
+        border: "border-cyan-500/20",
+        shadow: "shadow-cyan-900/20",
+        badge: "bg-cyan-500/10 text-cyan-400"
+    },
+    {
+        name: "Amber Orange",
+        gradient: "from-amber-900 to-orange-900",
+        lightGradient: "from-amber-50 to-orange-50",
+        accent: "text-orange-400",
+        lightAccent: "text-orange-700",
+        border: "border-orange-500/20",
+        shadow: "shadow-orange-900/20",
+        badge: "bg-orange-500/10 text-orange-400"
+    },
+    {
+        name: "Rose Pink",
+        gradient: "from-rose-900 to-pink-900",
+        lightGradient: "from-rose-50 to-pink-50",
+        accent: "text-pink-400",
+        lightAccent: "text-pink-700",
+        border: "border-pink-500/20",
+        shadow: "shadow-pink-900/20",
+        badge: "bg-pink-500/10 text-pink-400"
+    }
+];
+
 export default function FlashcardsPage() {
     const router = useRouter();
+    const { theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    // Auth & Deck State
     const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
     const [selectedDeck, setSelectedDeck] = useState<'pmla' | 'poact' | null>(null);
+    const [activeDeck, setActiveDeck] = useState<FlashcardDeck>([]);
+
+    // Card State
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
-    const [direction, setDirection] = useState(0); // -1 for left, 1 for right
-    const [isDraggable, setIsDraggable] = useState(true);
+    const [direction, setDirection] = useState(0);
 
     // --- Access Control ---
     useEffect(() => {
+        setMounted(true);
         const checkAuth = () => {
             const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
             if (match) {
                 try {
                     const session = JSON.parse(decodeURIComponent(match[2]));
-                    // FEATURE FLAG: FLASHCARDS_ADMIN_ONLY
-                    // Check if user has role 'admin' or membershipLevel 'admin' (adjust based on actual schema)
-                    // For now, assuming 'admin' role or a specific email if role isn't clear.
-                    // Based on MobileDashboard, we see membershipLevel. Let's assume 'admin' is a valid membershipLevel or there is a 'role' field.
-                    // If unsure, we can strictly check if role is present. 
-                    // Let's assume session.role === 'admin' is the standard way.
                     if (session.role === 'admin' || session.isAdmin === true || session.membershipLevel === 'admin') {
                         setIsAdmin(true);
                         return;
                     }
-                } catch (e) {
-                    console.error("Auth check failed", e);
-                }
+                } catch (e) { console.error(e); }
             }
             setIsAdmin(false);
         };
         checkAuth();
     }, []);
 
-    // Redirect if not admin
+    // Set active deck data
     useEffect(() => {
-        if (isAdmin === false) {
-            // router.replace("/dashboard"); // Or show access denied
-        }
-    }, [isAdmin, router]);
+        if (selectedDeck === 'pmla') setActiveDeck(pmlaFlashcards);
+        else if (selectedDeck === 'poact') setActiveDeck(poActData);
+        else setActiveDeck([]);
+        setCurrentIndex(0);
+        setIsFlipped(false);
+    }, [selectedDeck]);
 
-    const activeDeck = selectedDeck === 'pmla' ? pmlaFlashcards : (selectedDeck === 'poact' ? poActData : []);
-    const themeColor = selectedDeck === 'pmla' ? 'indigo' : 'cyan';
-    const isPmla = selectedDeck === 'pmla';
+    // Keyboard Navigation
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (!selectedDeck) return;
+            switch (e.key) {
+                case "ArrowRight": handleNext(); break;
+                case "ArrowLeft": handlePrev(); break;
+                case " ":
+                case "Enter":
+                    e.preventDefault();
+                    setIsFlipped(prev => !prev);
+                    break;
+            }
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [selectedDeck, currentIndex, isFlipped]);
 
     const handleNext = () => {
         if (currentIndex < activeDeck.length - 1) {
             setDirection(1);
             setIsFlipped(false);
-            setCurrentIndex((prev) => prev + 1);
+            setCurrentIndex(prev => prev + 1);
         }
     };
 
@@ -67,24 +143,23 @@ export default function FlashcardsPage() {
         if (currentIndex > 0) {
             setDirection(-1);
             setIsFlipped(false);
-            setCurrentIndex((prev) => prev - 1);
+            setCurrentIndex(prev => prev - 1);
         }
     };
 
-    const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-        if (info.offset.x < -100) {
-            handleNext();
-        } else if (info.offset.x > 100) {
-            handlePrev();
-        }
+    const handleDragEnd = (event: any, info: PanInfo) => {
+        if (info.offset.x < -100) handleNext();
+        else if (info.offset.x > 100) handlePrev();
     };
 
-    // Toggle flip
-    const handleCardClick = () => {
-        setIsFlipped(!isFlipped);
-    };
+    // --- RENDER HELPERS ---
 
-    if (isAdmin === null) return <div className="min-h-screen bg-neutral-900 flex items-center justify-center text-white">Loading...</div>;
+    // Theme Colors
+    const currentTheme = CARD_THEMES[currentIndex % CARD_THEMES.length];
+
+    // Conditional Access Rendering
+    if (!mounted) return null;
+    if (isAdmin === null) return <div className="min-h-screen grid place-items-center bg-zinc-50 dark:bg-neutral-950 text-zinc-500">Loading...</div>;
 
     if (isAdmin === false) {
         return (
@@ -93,139 +168,105 @@ export default function FlashcardsPage() {
                     <AlertTriangle className="w-8 h-8 text-red-500" />
                 </div>
                 <h1 className="text-2xl font-bold text-white">Restricted Access</h1>
-                <p className="text-neutral-400">This feature is currently available for Administrators only.</p>
-                <Link href="/dashboard" className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-neutral-200 transition-colors">
-                    Return to Dashboard
-                </Link>
+                <p className="text-neutral-400">This feature is strictly for Admin users.</p>
+                <Link href="/dashboard" className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-neutral-200 transition-colors">Return to Dashboard</Link>
             </div>
         );
     }
 
-    // --- DECK SELECTION VIEW ---
+    // --- DECK SELECTION SCREEN ---
     if (!selectedDeck) {
         return (
-            <div className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center p-6 space-y-8 font-sans">
-                <header className="fixed top-0 left-0 right-0 p-5 flex items-center z-20">
-                    <Link href="/dashboard" className="p-2 -ml-2 text-neutral-400 hover:text-white transition-colors">
+            <div className="min-h-screen bg-zinc-50 dark:bg-neutral-950 transition-colors duration-500 flex flex-col items-center justify-center p-6 font-sans">
+                <header className="fixed top-0 left-0 right-0 p-5 flex items-center justify-between z-20">
+                    <Link href="/dashboard" className="p-2 -ml-2 text-zinc-500 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-white transition-colors">
                         <ArrowLeft className="w-6 h-6" />
                     </Link>
+                    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 rounded-full bg-zinc-200 dark:bg-neutral-800 text-zinc-700 dark:text-neutral-300">
+                        {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                    </button>
                 </header>
 
-                <div className="text-center space-y-2">
-                    <h1 className="text-3xl font-bold text-white tracking-tight">Flashcard Revision</h1>
-                    <p className="text-neutral-400">Select a topic to start your session</p>
+                <div className="text-center space-y-3 mb-12">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 mx-auto flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                        <Layers className="w-8 h-8 text-white" />
+                    </div>
+                    <h1 className="text-3xl font-bold text-zinc-900 dark:text-white tracking-tight">Flashcard Revision</h1>
+                    <p className="text-zinc-500 dark:text-neutral-400">Select a topic to begin your session</p>
                 </div>
 
                 <div className="w-full max-w-md grid gap-4">
-                    <button
+                    <DeckButton
+                        title="PO Act 2023 & Rules 2024"
+                        subtitle="20 Cards • Recent Legislation"
+                        icon={<Sparkles className="w-5 h-5" />}
                         onClick={() => setSelectedDeck('poact')}
-                        className="group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border border-cyan-500/20 hover:border-cyan-500/50 transition-all text-left"
-                    >
-                        <div className="absolute inset-0 bg-cyan-500/5 group-hover:bg-cyan-500/10 transition-colors" />
-                        <div className="relative z-10 flex items-center justify-between">
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-1">PO Act 2023 & Rules 2024</h3>
-                                <p className="text-sm text-cyan-200/60">20 Cards • Recent Legislation</p>
-                            </div>
-                            <ChevronRight className="w-5 h-5 text-cyan-500" />
-                        </div>
-                    </button>
-
-                    <button
+                        colorClass="from-cyan-500 to-blue-500"
+                    />
+                    <DeckButton
+                        title="PMLA, 2002"
+                        subtitle="20 Cards • Money Laundering Act"
+                        icon={<BookOpen className="w-5 h-5" />}
                         onClick={() => setSelectedDeck('pmla')}
-                        className="group relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-500/20 hover:border-indigo-500/50 transition-all text-left"
-                    >
-                        <div className="absolute inset-0 bg-indigo-500/5 group-hover:bg-indigo-500/10 transition-colors" />
-                        <div className="relative z-10 flex items-center justify-between">
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-1">PMLA, 2002</h3>
-                                <p className="text-sm text-indigo-200/60">20 Cards • Money Laundering Act</p>
-                            </div>
-                            <ChevronRight className="w-5 h-5 text-indigo-500" />
-                        </div>
-                    </button>
+                        colorClass="from-indigo-500 to-purple-500"
+                    />
                 </div>
             </div>
         );
     }
 
-    const currentCard = activeDeck[currentIndex];
+    const card = activeDeck[currentIndex];
 
-    // Animation variants
-    const cardVariants = {
-        enter: (direction: number) => ({
-            x: direction > 0 ? 500 : -500,
-            opacity: 0,
-            scale: 0.9,
-            rotateY: direction > 0 ? 45 : -45
-        }),
-        center: {
-            zIndex: 1,
-            x: 0,
-            opacity: 1,
-            scale: 1,
-            rotateY: 0,
-            transition: {
-                duration: 0.4,
-                ease: "easeInOut"
-            }
-        },
-        exit: (direction: number) => ({
-            zIndex: 0,
-            x: direction < 0 ? 500 : -500,
-            opacity: 0,
-            scale: 0.9,
-            rotateY: direction < 0 ? -45 : 45,
-            transition: {
-                duration: 0.4,
-                ease: "easeInOut"
-            }
-        })
+    // Animation Variants
+    const variants = {
+        enter: (d: number) => ({ x: d > 0 ? 500 : -500, opacity: 0, scale: 0.9, rotateY: d > 0 ? 45 : -45 }),
+        center: { zIndex: 1, x: 0, opacity: 1, scale: 1, rotateY: 0, transition: { duration: 0.4, ease: "circOut" } },
+        exit: (d: number) => ({ zIndex: 0, x: d < 0 ? 500 : -500, opacity: 0, scale: 0.9, rotateY: d < 0 ? -45 : 45, transition: { duration: 0.4, ease: "circIn" } })
     };
 
     return (
-        <div className="min-h-screen bg-neutral-950 flex flex-col overflow-hidden font-sans selection:bg-purple-500/30">
+        <div className="min-h-screen bg-zinc-100 dark:bg-neutral-950 flex flex-col overflow-hidden font-sans transition-colors duration-500 selection:bg-indigo-500/30">
             {/* --- Header --- */}
-            <header className="px-5 py-4 flex items-center justify-between z-20 bg-neutral-950/80 backdrop-blur-md border-b border-white/5 sticky top-0 pb-[max(16px,env(safe-area-inset-top))]">
-                <button onClick={() => setSelectedDeck(null)} className="p-2 -ml-2 text-neutral-400 hover:text-white transition-colors">
+            <header className="px-5 py-4 flex items-center justify-between z-20 backdrop-blur-md sticky top-0 pb-[max(16px,env(safe-area-inset-top))]">
+                <button onClick={() => setSelectedDeck(null)} className="p-2 -ml-2 text-zinc-500 dark:text-neutral-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
                     <ArrowLeft className="w-6 h-6" />
                 </button>
                 <div className="text-center">
-                    <h1 className="text-sm font-bold text-neutral-500 uppercase tracking-widest text-[10px] mb-0.5">Flashcard Revision</h1>
-                    <p className={`text-sm font-bold ${isPmla ? 'text-indigo-400' : 'text-cyan-400'}`}>
-                        {isPmla ? "PMLA, 2002" : "PO Act 2023 & Rules 2024"}
+                    <p className={`text-xs font-bold uppercase tracking-widest mb-0.5 ${theme === 'dark' ? currentTheme.accent : currentTheme.lightAccent}`}>
+                        {selectedDeck === 'pmla' ? "PMLA, 2002" : "PO Act 2023"}
+                    </p>
+                    <p className="text-xs font-medium text-zinc-500 dark:text-neutral-500">
+                        Card {currentIndex + 1} of {activeDeck.length}
                     </p>
                 </div>
-                <div className="w-8" /> {/* Spacer */}
+                <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 rounded-full bg-white dark:bg-neutral-800 text-zinc-700 dark:text-neutral-300 shadow-sm">
+                    {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                </button>
             </header>
 
             {/* --- Progress Bar --- */}
-            <div className="w-full h-1 bg-neutral-900">
-                <div
-                    className={`h-full transition-all duration-300 ease-out ${isPmla
-                            ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"
-                            : "bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500"
-                        }`}
-                    style={{ width: `${((currentIndex + 1) / activeDeck.length) * 100}%` }}
+            <div className="w-full h-1 bg-zinc-200 dark:bg-neutral-900 overflow-hidden">
+                <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${((currentIndex + 1) / activeDeck.length) * 100}%` }}
+                    className={`h-full bg-gradient-to-r ${theme === 'dark' ? currentTheme.gradient : currentTheme.lightGradient}`}
                 />
             </div>
 
-            {/* --- Main Content Area --- */}
-            <main className="flex-1 flex flex-col items-center justify-center p-6 relative">
-
-                {/* Background Decor */}
+            {/* --- Main Stage --- */}
+            <main className="flex-1 flex flex-col items-center justify-center p-6 relative perspective-1000">
+                {/* Background Glow */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className={`absolute top-1/4 -left-20 w-80 h-80 rounded-full blur-[100px] ${isPmla ? 'bg-purple-900/10' : 'bg-cyan-900/10'}`} />
-                    <div className={`absolute bottom-1/4 -right-20 w-80 h-80 rounded-full blur-[100px] ${isPmla ? 'bg-indigo-900/10' : 'bg-blue-900/10'}`} />
+                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full blur-[120px] opacity-30 dark:opacity-20 bg-gradient-to-br ${theme === 'dark' ? currentTheme.gradient : currentTheme.lightGradient}`} />
                 </div>
 
                 {/* Card Container */}
-                <div className="w-full max-w-sm aspect-[3/4] md:aspect-[4/5] relative perspective-1000">
+                <div className="w-full max-w-sm aspect-[3/4] md:aspect-[4/5] relative">
                     <AnimatePresence initial={false} custom={direction}>
                         <motion.div
                             key={currentIndex}
                             custom={direction}
-                            variants={cardVariants}
+                            variants={variants}
                             initial="enter"
                             animate="center"
                             exit="exit"
@@ -233,96 +274,85 @@ export default function FlashcardsPage() {
                             dragConstraints={{ left: 0, right: 0 }}
                             dragElastic={0.2}
                             onDragEnd={handleDragEnd}
-                            className="w-full h-full absolute inset-0 cursor-pointer touch-none"
-                            style={{ transformStyle: "preserve-3d" }}
+                            className="w-full h-full absolute inset-0 cursor-pointer touch-none preserve-3d"
                         >
                             {/* Inner Flipper */}
                             <motion.div
-                                className="w-full h-full relative"
-                                initial={false}
+                                className="w-full h-full relative preserve-3d"
                                 animate={{ rotateY: isFlipped ? 180 : 0 }}
-                                transition={{ duration: 0.5, ease: "easeInOut" }}
-                                style={{ transformStyle: "preserve-3d" }}
-                                onClick={handleCardClick}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                onClick={() => setIsFlipped(!isFlipped)}
                             >
-                                {/* --- FRONT SIDE --- */}
-                                <div
-                                    className="absolute inset-0 w-full h-full bg-neutral-900 border border-white/10 rounded-3xl p-6 md:p-8 flex flex-col shadow-2xl shadow-black/50 overflow-hidden backface-hidden"
-                                    style={{ backfaceVisibility: "hidden" }}
-                                >
+                                {/* === FRONT SIDE === */}
+                                <div className={`absolute inset-0 w-full h-full rounded-[32px] p-8 flex flex-col shadow-2xl backface-hidden border
+                                    bg-white dark:bg-neutral-900 
+                                    ${theme === 'dark' ? 'border-white/5 shadow-black/50' : 'border-zinc-200 shadow-zinc-200/50'}
+                                `}>
                                     {/* Watermark */}
-                                    <div className="absolute inset-0 flex items-center justify-center opacity-[0.05] pointer-events-none">
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
                                         <div className="relative w-48 h-48">
                                             <Image src="/official-logo.png" alt="Watermark" fill className="object-contain grayscale" />
                                         </div>
                                     </div>
 
-                                    {/* Card Header */}
-                                    <div className="flex justify-between items-center mb-6">
-                                        <div className="bg-white/5 border border-white/5 px-3 py-1 rounded-full">
-                                            <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
-                                                Card {currentIndex + 1} / {activeDeck.length}
-                                            </span>
-                                        </div>
-                                        <span className={`text-[10px] font-bold uppercase ${isPmla ? 'text-indigo-400' : 'text-cyan-400'}`}>Tap to Flip</span>
+                                    {/* Top Metadata */}
+                                    <div className="flex justify-between items-center mb-8 relative z-10">
+                                        <span className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-zinc-100 dark:bg-white/10 text-zinc-500 dark:text-neutral-400`}>
+                                            ID: #{card.id}
+                                        </span>
+                                        <span className={`text-[10px] font-bold uppercase tracking-widest ${theme === 'dark' ? currentTheme.accent : currentTheme.lightAccent}`}>
+                                            {card.tag}
+                                        </span>
                                     </div>
 
                                     {/* Question */}
                                     <div className="flex-1 flex flex-col justify-center relative z-10">
-                                        <h2 className="text-xl md:text-2xl font-bold text-white leading-relaxed mb-8">
-                                            {currentCard.question}
+                                        <h2 className="text-2xl md:text-3xl font-bold leading-tight text-zinc-900 dark:text-white">
+                                            {card.question}
                                         </h2>
-
-                                        {/* Options Preview (Front) */}
-                                        <div className="space-y-3">
-                                            {Object.entries(currentCard.options).map(([key, value]) => (
-                                                <div key={key} className="flex gap-3 items-start p-3 rounded-xl bg-white/5 border border-white/5">
-                                                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-neutral-800 flex items-center justify-center text-xs font-bold text-neutral-400">
-                                                        {key}
-                                                    </div>
-                                                    <p className="text-sm text-neutral-300 leading-snug pt-0.5">{value}</p>
-                                                </div>
-                                            ))}
-                                        </div>
                                     </div>
 
+                                    {/* Bottom Hint */}
+                                    <div className="mt-8 pt-6 border-t border-zinc-100 dark:border-white/5 flex justify-between items-center relative z-10">
+                                        <span className="text-xs font-semibold text-zinc-400 dark:text-neutral-500">Tap to Flip</span>
+                                        <RotateCcw className="w-4 h-4 text-zinc-300 dark:text-neutral-600" />
+                                    </div>
                                 </div>
 
-                                {/* --- BACK SIDE --- */}
+                                {/* === BACK SIDE === */}
                                 <div
-                                    className={`absolute inset-0 w-full h-full bg-neutral-800 border rounded-3xl p-6 md:p-8 flex flex-col shadow-2xl overflow-hidden ${isPmla ? 'border-indigo-500/30' : 'border-cyan-500/30'} ${isPmla ? 'shadow-indigo-900/20' : 'shadow-cyan-900/20'}`}
-                                    style={{
-                                        backfaceVisibility: "hidden",
-                                        transform: "rotateY(180deg)"
-                                    }}
+                                    className={`absolute inset-0 w-full h-full rounded-[32px] p-8 flex flex-col shadow-2xl overflow-hidden backface-hidden border
+                                        ${theme === 'dark' ? 'bg-neutral-900 border-white/5' : 'bg-white border-zinc-200'}
+                                    `}
+                                    style={{ transform: "rotateY(180deg)" }}
                                 >
-                                    {/* Answer Header */}
-                                    <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-                                        <span className="text-xs font-bold text-neutral-400 uppercase">Correct Answer</span>
-                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isPmla ? 'bg-green-500/20' : 'bg-cyan-500/20'} `}>
-                                            <span className={`text-lg font-bold ${isPmla ? 'text-green-400' : 'text-cyan-400'}`}>{currentCard.correctAnswer}</span>
+                                    {/* Answer Indicator */}
+                                    <div className="flex justify-center mb-8">
+                                        <div className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider ${theme === 'dark' ? currentTheme.badge : 'bg-zinc-100 text-zinc-600'}`}>
+                                            Correct Answer
                                         </div>
                                     </div>
 
-                                    {/* Explanation Content */}
-                                    <div className="flex-1 overflow-y-auto pr-2 relative z-10 custom-scrollbar">
-                                        <div className="mb-4">
-                                            <p className="text-lg font-semibold text-white mb-2">
-                                                {currentCard.options[currentCard.correctAnswer]}
-                                            </p>
-                                        </div>
-
-                                        <div className={`border-l-2 p-4 rounded-r-lg ${isPmla ? 'bg-indigo-500/10 border-indigo-500' : 'bg-cyan-500/10 border-cyan-500'}`}>
-                                            <h3 className={`text-xs font-bold uppercase mb-2 ${isPmla ? 'text-indigo-300' : 'text-cyan-300'}`}>Explanation</h3>
-                                            <p className="text-sm text-neutral-300 leading-relaxed">
-                                                {currentCard.explanation}
-                                            </p>
-                                        </div>
+                                    {/* The Answer */}
+                                    <div className="relative z-10 mb-8 text-center">
+                                        <h3 className={`text-2xl font-bold leading-snug ${theme === 'dark' ? currentTheme.accent : currentTheme.lightAccent}`}>
+                                            {card.answer}
+                                        </h3>
                                     </div>
 
-                                    {/* Footer Helper */}
-                                    <div className="mt-4 pt-4 border-t border-white/10 text-center">
-                                        <p className="text-[10px] text-neutral-500">Swipe Left for Next • Swipe Right for Prev</p>
+                                    {/* Explanation */}
+                                    <div className={`flex-1 overflow-y-auto p-4 rounded-2xl relative z-10 text-sm leading-relaxed
+                                        ${theme === 'dark' ? 'bg-white/5 text-neutral-300' : 'bg-zinc-50 text-zinc-600'}
+                                    `}>
+                                        <span className={`block text-xs font-bold uppercase mb-2 ${theme === 'dark' ? 'text-neutral-500' : 'text-zinc-400'}`}>Explanation</span>
+                                        {card.explanation}
+                                    </div>
+
+                                    {/* Footer Nav Hint */}
+                                    <div className="mt-6 text-center">
+                                        <p className="text-[10px] text-zinc-400 dark:text-neutral-600 font-medium">
+                                            Keyboard: Space to Flip • Arrows to Navigate
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -330,35 +360,47 @@ export default function FlashcardsPage() {
                     </AnimatePresence>
                 </div>
 
-                {/* --- Bottom Controls --- */}
-                <div className="w-full max-w-sm flex items-center justify-between mt-8 z-20">
-                    <button
-                        onClick={handlePrev}
-                        disabled={currentIndex === 0}
-                        className="p-3 rounded-full bg-neutral-800 text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-700 transition"
+                {/* --- Bottom Controls (Mobile/Desktop) --- */}
+                <div className="w-full max-w-sm flex items-center justify-between mt-8 z-20 gap-4">
+                    <button onClick={handlePrev} disabled={currentIndex === 0}
+                        className="p-4 rounded-full bg-white dark:bg-neutral-800 text-zinc-900 dark:text-white shadow-lg disabled:opacity-30 disabled:scale-95 active:scale-90 transition-all"
                     >
                         <ChevronLeft className="w-6 h-6" />
                     </button>
 
-                    <button
-                        onClick={() => setIsFlipped(!isFlipped)}
-                        className={`px-6 py-3 rounded-full text-white font-bold text-sm shadow-lg active:scale-95 transition-transform ${isPmla ? 'bg-indigo-600 shadow-indigo-600/30' : 'bg-cyan-600 shadow-cyan-600/30'}`}
+                    <button onClick={handleNext} disabled={currentIndex === activeDeck.length - 1}
+                        className={`flex-1 py-4 rounded-full font-bold text-white shadow-lg active:scale-95 transition-all bg-gradient-to-r ${theme === 'dark' ? currentTheme.gradient : currentTheme.lightGradient} disabled:opacity-50`}
                     >
-                        {isFlipped ? "Show Question" : "Reveal Answer"}
+                        {currentIndex === activeDeck.length - 1 ? "Finish" : "Next Card"}
                     </button>
 
-                    <button
-                        onClick={handleNext}
-                        disabled={currentIndex === activeDeck.length - 1}
-                        className="p-3 rounded-full bg-neutral-800 text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-700 transition"
-                    >
-                        <ChevronRight className="w-6 h-6" />
-                    </button>
+                    {/* Shuffle or random can go here, but omitted for simplicity as per MVP */}
                 </div>
             </main>
         </div>
     );
 }
 
-// Add some CSS for scrollbar if needed, or rely on Tailwind
-// .custom-scrollbar definitions should be in global css, but usually default is okay.
+// Reusable Deck Button Component
+function DeckButton({ title, subtitle, icon, onClick, colorClass }: any) {
+    return (
+        <button
+            onClick={onClick}
+            className="group relative overflow-hidden p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-zinc-200 dark:border-white/5 hover:border-transparent transition-all text-left shadow-sm hover:shadow-xl"
+        >
+            <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity bg-gradient-to-r ${colorClass}`} />
+            <div className="relative z-10 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br ${colorClass} text-white shadow-md`}>
+                        {icon}
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-0.5">{title}</h3>
+                        <p className="text-xs text-zinc-500 dark:text-neutral-400">{subtitle}</p>
+                    </div>
+                </div>
+                <ChevronRight className="w-5 h-5 text-zinc-300 dark:text-neutral-600 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
+            </div>
+        </button>
+    );
+}
