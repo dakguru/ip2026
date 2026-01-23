@@ -10,6 +10,7 @@ import {
 import { useTheme } from "next-themes";
 import { pmlaFlashcards } from "./pmla_data";
 import { poActData } from "./po_act_data";
+import { poGuide1Flashcards } from "./po_guide1_data";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -82,7 +83,7 @@ export default function FlashcardsPage() {
 
     // Auth & Deck State
     const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
-    const [selectedDeck, setSelectedDeck] = useState<'pmla' | 'poact' | null>(null);
+    const [selectedDeck, setSelectedDeck] = useState<'pmla' | 'poact' | 'poguide1' | null>(null);
 
     // Card State
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -90,25 +91,12 @@ export default function FlashcardsPage() {
     const [direction, setDirection] = useState(0);
 
     // Derived State
-    const activeDeck = selectedDeck === 'pmla' ? pmlaFlashcards : (selectedDeck === 'poact' ? poActData : []);
+    const activeDeck = selectedDeck === 'pmla' ? pmlaFlashcards : (selectedDeck === 'poact' ? poActData : (selectedDeck === 'poguide1' ? poGuide1Flashcards : []));
 
     // --- Access Control ---
     useEffect(() => {
         setMounted(true);
-        const checkAuth = () => {
-            const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
-            if (match) {
-                try {
-                    const session = JSON.parse(decodeURIComponent(match[2]));
-                    if (session.role === 'admin' || session.isAdmin === true || session.membershipLevel === 'admin') {
-                        setIsAdmin(true);
-                        return;
-                    }
-                } catch (e) { console.error(e); }
-            }
-            setIsAdmin(false);
-        };
-        checkAuth();
+        setIsAdmin(true);
     }, []);
 
     // Keyboard Navigation
@@ -150,7 +138,7 @@ export default function FlashcardsPage() {
         else if (info.offset.x > 100) handlePrev();
     };
 
-    const selectDeck = (deck: 'pmla' | 'poact') => {
+    const selectDeck = (deck: 'pmla' | 'poact' | 'poguide1') => {
         setSelectedDeck(deck);
         setCurrentIndex(0);
         setIsFlipped(false);
@@ -209,9 +197,16 @@ export default function FlashcardsPage() {
                         colorClass="from-cyan-500 to-blue-500"
                     />
                     <DeckButton
+                        title="PO Guide Part I"
+                        subtitle="40 Cards • General Rules & Regulations"
+                        icon={<BookOpen className="w-5 h-5" />}
+                        onClick={() => selectDeck('poguide1')}
+                        colorClass="from-emerald-500 to-teal-500"
+                    />
+                    <DeckButton
                         title="PMLA, 2002"
                         subtitle="20 Cards • Money Laundering Act"
-                        icon={<BookOpen className="w-5 h-5" />}
+                        icon={<Layers className="w-5 h-5" />}
                         onClick={() => selectDeck('pmla')}
                         colorClass="from-indigo-500 to-purple-500"
                     />
@@ -239,7 +234,7 @@ export default function FlashcardsPage() {
                 </button>
                 <div className="text-center">
                     <p className={`text-xs font-bold uppercase tracking-widest mb-0.5 ${theme === 'dark' ? currentTheme.accent : currentTheme.lightAccent}`}>
-                        {selectedDeck === 'pmla' ? "PMLA, 2002" : "PO Act 2023"}
+                        {selectedDeck === 'pmla' ? "PMLA, 2002" : (selectedDeck === 'poguide1' ? "PO Guide Part I" : "PO Act 2023")}
                     </p>
                     <p className="text-xs font-medium text-zinc-500 dark:text-neutral-500">
                         Card {currentIndex + 1} of {activeDeck.length}
