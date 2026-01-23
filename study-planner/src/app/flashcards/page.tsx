@@ -78,12 +78,14 @@ export default function FlashcardsPage() {
     // Auth & Deck State
     const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
     const [selectedDeck, setSelectedDeck] = useState<'pmla' | 'poact' | null>(null);
-    const [activeDeck, setActiveDeck] = useState<FlashcardDeck>([]);
 
     // Card State
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
     const [direction, setDirection] = useState(0);
+
+    // Derived State
+    const activeDeck = selectedDeck === 'pmla' ? pmlaFlashcards : (selectedDeck === 'poact' ? poActData : []);
 
     // --- Access Control ---
     useEffect(() => {
@@ -103,15 +105,6 @@ export default function FlashcardsPage() {
         };
         checkAuth();
     }, []);
-
-    // Set active deck data
-    useEffect(() => {
-        if (selectedDeck === 'pmla') setActiveDeck(pmlaFlashcards);
-        else if (selectedDeck === 'poact') setActiveDeck(poActData);
-        else setActiveDeck([]);
-        setCurrentIndex(0);
-        setIsFlipped(false);
-    }, [selectedDeck]);
 
     // Keyboard Navigation
     useEffect(() => {
@@ -150,6 +143,13 @@ export default function FlashcardsPage() {
     const handleDragEnd = (event: any, info: PanInfo) => {
         if (info.offset.x < -100) handleNext();
         else if (info.offset.x > 100) handlePrev();
+    };
+
+    const selectDeck = (deck: 'pmla' | 'poact') => {
+        setSelectedDeck(deck);
+        setCurrentIndex(0);
+        setIsFlipped(false);
+        setDirection(0);
     };
 
     // --- RENDER HELPERS ---
@@ -200,14 +200,14 @@ export default function FlashcardsPage() {
                         title="PO Act 2023 & Rules 2024"
                         subtitle="20 Cards • Recent Legislation"
                         icon={<Sparkles className="w-5 h-5" />}
-                        onClick={() => setSelectedDeck('poact')}
+                        onClick={() => selectDeck('poact')}
                         colorClass="from-cyan-500 to-blue-500"
                     />
                     <DeckButton
                         title="PMLA, 2002"
                         subtitle="20 Cards • Money Laundering Act"
                         icon={<BookOpen className="w-5 h-5" />}
-                        onClick={() => setSelectedDeck('pmla')}
+                        onClick={() => selectDeck('pmla')}
                         colorClass="from-indigo-500 to-purple-500"
                     />
                 </div>
@@ -216,6 +216,7 @@ export default function FlashcardsPage() {
     }
 
     const card = activeDeck[currentIndex];
+    if (!card) return null; // Safety fallback
 
     // Animation Variants
     const variants = {
