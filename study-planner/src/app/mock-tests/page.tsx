@@ -475,12 +475,12 @@ export default function MockTestsPage() {
                                 <div className="animate-scroll flex items-center">
                                     {/* Block 1 */}
                                     <div className="flex items-center gap-4 px-4 font-medium text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
-                                        <span className="inline-block mx-4">â˜…</span>
+                                        <span className="inline-block mx-4">★</span>
                                         <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
                                     </div>
                                     {/* Block 2 (Duplicate for Seamless Loop) */}
                                     <div className="flex items-center gap-4 px-4 font-medium text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
-                                        <span className="inline-block mx-4">â˜…</span>
+                                        <span className="inline-block mx-4">★</span>
                                         <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
                                     </div>
                                 </div>
@@ -490,6 +490,21 @@ export default function MockTestsPage() {
                                 <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-indigo-600 to-transparent z-10 pointer-events-none"></div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Previous Tests Quick Link */}
+                    <div className="flex justify-center -mt-4 mb-2 relative z-20">
+                        <a
+                            href="#previous-tests"
+                            className="group inline-flex items-center gap-2 px-6 py-2.5 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-full shadow-lg border border-zinc-200 dark:border-zinc-700 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all transform hover:-translate-y-0.5 active:scale-95 text-xs md:text-sm font-bold"
+                        >
+                            <span className="flex h-2 w-2 relative">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                            </span>
+                            Looking for Previous Mock Tests? Click Here
+                            <ArrowLeft className="w-4 h-4 rotate-[270deg] group-hover:translate-y-1 transition-transform" />
+                        </a>
                     </div>
 
                     {activeMocks.length > 0 && (
@@ -515,32 +530,6 @@ export default function MockTestsPage() {
                         </div>
                     )}
 
-
-                    {completedMocks.length > 0 && (
-                        <div className="opacity-100 mb-12">
-                            <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
-                                <History className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
-                                Previous Tests
-                            </h2>
-                            <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
-                                {completedMocks.map(mock => (
-                                    <MockTestCard
-                                        key={mock.id}
-                                        mock={mock}
-                                        onClick={() => setSelectedMock(mock)}
-                                        isPaid={paidTests.includes(mock.id)}
-                                        membershipLevel={membershipLevel}
-                                        onEnroll={() => handleEnroll(mock)}
-                                        enrollmentCount={enrollmentCounts[mock.id] || universalCount}
-                                        onShowRankList={() => setSelectedMockForRank(mock)}
-                                        userResult={userResults[mock.id]}
-                                        onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
-                                        isDownloading={downloadingId === mock.id}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    )}
 
                     {/* Revamped Schedule Section */}
                     <div className="relative group">
@@ -591,6 +580,32 @@ export default function MockTestsPage() {
                             </div>
                         </div>
                     </div>
+
+                    {completedMocks.length > 0 && (
+                        <div id="previous-tests" className="opacity-100 mb-12 scroll-mt-24">
+                            <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
+                                <History className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
+                                Previous Tests
+                            </h2>
+                            <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
+                                {completedMocks.map(mock => (
+                                    <MockTestCard
+                                        key={mock.id}
+                                        mock={mock}
+                                        onClick={() => setSelectedMock(mock)}
+                                        isPaid={paidTests.includes(mock.id)}
+                                        membershipLevel={membershipLevel}
+                                        onEnroll={() => handleEnroll(mock)}
+                                        enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                        onShowRankList={() => setSelectedMockForRank(mock)}
+                                        userResult={userResults[mock.id]}
+                                        onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
+                                        isDownloading={downloadingId === mock.id}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    )}
 
 
                 </div>
@@ -786,7 +801,7 @@ function MockTestDetail({
                         <Timer className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                         <span className="text-xs font-medium text-zinc-600 dark:text-zinc-400">{timerLabel}</span>
                         <div className="text-xs font-bold font-mono text-zinc-900 dark:text-zinc-100">
-                            <MockCountdown targetDate={targetDate} />
+                            <MockCountdown targetDate={targetDate} onComplete={() => setCurrentTime(new Date())} />
                         </div>
                     </div>
                 )}

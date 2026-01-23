@@ -26,7 +26,11 @@ interface TestConfig {
 
 const TEST_CONFIG_MAP: Record<string, TestConfig> = {
     "mock-2026-01-17": { startDate: new Date("2026-01-17T00:00:00+05:30"), title: "Weekly Mock Test - 01" },
-    "mock-2026-01-24": { startDate: new Date("2026-01-24T00:00:00+05:30"), title: "Weekly Mock Test - 02" }
+    "mock-2026-01-24": {
+        startDate: new Date("2026-01-24T00:00:00+05:30"),
+        endDate: new Date("2026-01-25T23:59:59+05:30"),
+        title: "Weekly Mock Test - 02"
+    }
 };
 
 interface PageProps {
@@ -129,7 +133,7 @@ const MemoizedMobileContent = memo(({
                                         <div className="mt-0.5 shrink-0 transition-transform duration-300">
                                             {icon}
                                         </div>
-                                        <span className={`text-sm leading-snug ${textClass}`}>
+                                        <span className={`text-[15px] md:text-base leading-snug font-medium ${textClass}`}>
                                             {option}
                                         </span>
                                     </button>
@@ -320,7 +324,10 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             const now = new Date();
             const config = TEST_CONFIG_MAP[testId];
             const startDate = config ? config.startDate : new Date("2026-01-17T00:00:00+05:30"); // Default Fallback
+            const endDate = config?.endDate || new Date(startDate.getTime() + 48 * 60 * 60 * 1000); // Default +48h
+
             const isStarted = now >= startDate;
+            const isEnded = now > endDate;
 
             if (userRole === 'admin') {
                 setIsAuthorized(true); // Admins bypass everything
@@ -332,6 +339,14 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                     router.push("/mock-tests");
                     return;
                 }
+
+                // BLOCK RE-ATTEMPTS DURING LIVE WINDOW
+                if (!isEnded && isReattempt) {
+                    alert("Re-attempts are not allowed during the live test period. You can reattempt after the test window closes.");
+                    router.push("/mock-tests");
+                    return;
+                }
+
                 if (isPlanEligible || hasPaid) {
                     setIsAuthorized(true);
                 } else {
@@ -413,13 +428,14 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         if (timeLeft > 0 && !confirm("Are you sure you want to submit the test?")) return;
         vibrate(30);
 
-        let newScore = 0;
+        let correctCount = 0;
         questions.forEach(q => {
             if (answers[q.id] === q.correctAnswer) {
-                newScore++;
+                correctCount++;
             }
         });
-        setScore(newScore);
+        const marks = correctCount * 2;
+        setScore(marks);
 
         // Submit to Server
         // Submit to Server
@@ -431,7 +447,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         userEmail: userEmail,
-                        score: newScore,
+                        score: marks,
                         totalQuestions: questions.length,
                         answers: answers,
                         testId: testId
@@ -580,14 +596,14 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         const dateStr = `${today.getDate().toString().padStart(2, '0')}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getFullYear()}`;
         doc.text(dateStr, margin + logoSize + 122, 52);
 
-        const percentage = ((score / questions.length) * 100).toFixed(1);
+        const percentage = ((score / (questions.length * 2)) * 100).toFixed(1);
         doc.setFillColor(245, 245, 245);
         doc.roundedRect(pageWidth - margin - 45, 20, 40, 18, 2, 2, 'F');
 
         doc.setFontSize(14);
         doc.setFont("helvetica", "bold");
         doc.setTextColor(220, 38, 38);
-        doc.text(`${score} / ${questions.length}`, pageWidth - margin - 25, 28, { align: "center" });
+        doc.text(`${score} / ${questions.length * 2}`, pageWidth - margin - 25, 28, { align: "center" });
 
         doc.setFontSize(9);
         doc.setTextColor(80, 80, 80);
@@ -703,9 +719,9 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
     if (!hasStarted && !isSubmitted) {
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-4">
+            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-4 pt-[calc(env(safe-area-inset-top)+20px)] pb-10">
                 <div className="max-w-2xl w-full bg-white dark:bg-zinc-900 rounded-3xl shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
-                    <div className="p-8 md:p-12 space-y-8">
+                    <div className="p-6 md:p-12 space-y-6 md:space-y-8">
                         <div className="text-center space-y-4">
                             <h1 className="text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
                                 {TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test"}
@@ -1028,7 +1044,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                 </div>
                                 <h1 className="text-3xl md:text-4xl font-black mb-4 text-zinc-900 dark:text-white">Test Submitted!</h1>
                                 <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-8">
-                                    You scored <span className="font-bold text-zinc-900 dark:text-white">{score}</span> out of <span className="font-bold text-zinc-900 dark:text-white">{questions.length}</span>
+                                    You scored <span className="font-bold text-zinc-900 dark:text-white">{score}</span> out of <span className="font-bold text-zinc-900 dark:text-white">{questions.length * 2}</span>
                                 </p>
 
                                 <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-6 border border-amber-100 dark:border-amber-900/20 max-w-lg mx-auto mb-8">
@@ -1067,7 +1083,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                         onClick={generatePDF}
                                         className="px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-bold hover:opacity-90 transition-all flex items-center gap-2"
                                     >
-                                        <FileDown className="w-4 h-4" /> Download Result PDF
+                                        <FileDown className="w-4 h-4" /> Download Answer Sheet
                                     </button>
                                     <Link
                                         href="/"
