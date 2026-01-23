@@ -26,7 +26,8 @@ const CARD_THEMES = [
         lightAccent: "text-teal-700",
         border: "border-teal-500/20",
         shadow: "shadow-teal-900/20",
-        badge: "bg-teal-500/10 text-teal-400"
+        badge: "bg-teal-500/10 text-teal-400",
+        lightButton: "from-teal-600 to-teal-500"
     },
     {
         name: "Deep Purple",
@@ -36,7 +37,8 @@ const CARD_THEMES = [
         lightAccent: "text-purple-700",
         border: "border-purple-500/20",
         shadow: "shadow-purple-900/20",
-        badge: "bg-purple-500/10 text-purple-400"
+        badge: "bg-purple-500/10 text-purple-400",
+        lightButton: "from-indigo-600 to-purple-600"
     },
     {
         name: "Emerald Cyan",
@@ -46,7 +48,8 @@ const CARD_THEMES = [
         lightAccent: "text-cyan-700",
         border: "border-cyan-500/20",
         shadow: "shadow-cyan-900/20",
-        badge: "bg-cyan-500/10 text-cyan-400"
+        badge: "bg-cyan-500/10 text-cyan-400",
+        lightButton: "from-emerald-600 to-cyan-600"
     },
     {
         name: "Amber Orange",
@@ -56,7 +59,8 @@ const CARD_THEMES = [
         lightAccent: "text-orange-700",
         border: "border-orange-500/20",
         shadow: "shadow-orange-900/20",
-        badge: "bg-orange-500/10 text-orange-400"
+        badge: "bg-orange-500/10 text-orange-400",
+        lightButton: "from-amber-600 to-orange-600"
     },
     {
         name: "Rose Pink",
@@ -66,7 +70,8 @@ const CARD_THEMES = [
         lightAccent: "text-pink-700",
         border: "border-pink-500/20",
         shadow: "shadow-pink-900/20",
-        badge: "bg-pink-500/10 text-pink-400"
+        badge: "bg-pink-500/10 text-pink-400",
+        lightButton: "from-rose-600 to-pink-600"
     }
 ];
 
@@ -288,7 +293,7 @@ export default function FlashcardsPage() {
                                 <div className={`absolute inset-0 w-full h-full rounded-[32px] p-8 flex flex-col shadow-2xl backface-hidden border
                                     bg-white dark:bg-neutral-900 
                                     ${theme === 'dark' ? 'border-white/5 shadow-black/50' : 'border-zinc-200 shadow-zinc-200/50'}
-                                `}>
+                                `} style={{ backfaceVisibility: 'hidden' }}>
                                     {/* Watermark */}
                                     <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
                                         <div className="relative w-48 h-48">
@@ -325,7 +330,7 @@ export default function FlashcardsPage() {
                                     className={`absolute inset-0 w-full h-full rounded-[32px] p-8 flex flex-col shadow-2xl overflow-hidden backface-hidden border
                                         ${theme === 'dark' ? 'bg-neutral-900 border-white/5' : 'bg-white border-zinc-200'}
                                     `}
-                                    style={{ transform: "rotateY(180deg)" }}
+                                    style={{ transform: "rotateY(180deg)", backfaceVisibility: 'hidden' }}
                                 >
                                     {/* Answer Indicator */}
                                     <div className="flex justify-center mb-8">
@@ -370,7 +375,7 @@ export default function FlashcardsPage() {
                     </button>
 
                     <button onClick={handleNext} disabled={currentIndex === activeDeck.length - 1}
-                        className={`flex-1 py-4 rounded-full font-bold text-white shadow-lg active:scale-95 transition-all bg-gradient-to-r ${theme === 'dark' ? currentTheme.gradient : currentTheme.lightGradient} disabled:opacity-50`}
+                        className={`flex-1 py-4 rounded-full font-bold text-white shadow-lg active:scale-95 transition-all ${theme === 'dark' ? currentTheme.gradient : 'bg-gradient-to-r ' + currentTheme.lightButton} disabled:opacity-50`}
                     >
                         {currentIndex === activeDeck.length - 1 ? "Finish" : "Next Card"}
                     </button>
