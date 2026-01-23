@@ -284,13 +284,14 @@ export default function FlashcardsPage() {
                         >
                             {/* Inner Flipper */}
                             <motion.div
-                                className="w-full h-full relative preserve-3d"
+                                className="w-full h-full relative"
                                 animate={{ rotateY: isFlipped ? 180 : 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
+                                style={{ transformStyle: "preserve-3d" }}
                                 onClick={() => setIsFlipped(!isFlipped)}
                             >
                                 {/* === FRONT SIDE === */}
-                                <div className={`absolute inset-0 w-full h-full rounded-[32px] p-8 flex flex-col shadow-2xl backface-hidden border
+                                <div className={`absolute inset-0 w-full h-full rounded-[32px] p-8 flex flex-col shadow-2xl border
                                     bg-white dark:bg-neutral-900 
                                     ${theme === 'dark' ? 'border-white/5 shadow-black/50' : 'border-zinc-200 shadow-zinc-200/50'}
                                 `} style={{ backfaceVisibility: 'hidden' }}>
