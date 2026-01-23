@@ -15,6 +15,7 @@ interface MobileDashboardProps {
 
 export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     const router = useRouter();
+    const [isAdmin, setIsAdmin] = useState(false);
     const [membership, setMembership] = useState<'free' | 'silver' | 'gold'>('free');
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
@@ -28,6 +29,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
             try {
                 const session = JSON.parse(decodeURIComponent(match[2]));
                 if (session.membershipLevel) setMembership(session.membershipLevel);
+                if (session.role === 'admin' || session.membershipLevel === 'admin' || session.isAdmin === true) {
+                    setIsAdmin(true);
+                }
             } catch (e) {
                 console.error("Session parse error", e);
             }
@@ -65,7 +69,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     const mainFeatures = [
         { label: "Web Guide", icon: BookOpen, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/guide" },
-        { label: "Flashcards", icon: Layers, color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-900/20", href: "/flashcards" },
+        ...(isAdmin ? [{ label: "Flashcards", icon: Layers, color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-900/20", href: "/flashcards" }] : []),
         { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50" },
         { label: "PDF Notes", icon: FileText, color: "text-rose-700 dark:text-rose-400", bg: "bg-rose-50 dark:bg-rose-900/20", href: "/notes" },
         { label: "Curr. Affairs", icon: Globe, color: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/current-affairs" },
@@ -277,15 +281,17 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                                 <ArrowIcon className="w-4 h-4 text-slate-400" />
                                             </button>
 
-                                            <button onClick={() => { setSearchOpen(false); router.push('/flashcards'); }} className="w-full flex items-center justify-between p-4 bg-white dark:bg-zinc-900/50 rounded-xl border border-slate-100 dark:border-zinc-800 hover:border-amber-500/30 transition-all group text-left">
-                                                <div className="flex items-center gap-3">
-                                                    <div className="bg-amber-100 dark:bg-amber-900/30 p-2 rounded-lg">
-                                                        <Layers className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                                            {isAdmin && (
+                                                <button onClick={() => { setSearchOpen(false); router.push('/flashcards'); }} className="w-full flex items-center justify-between p-4 bg-white dark:bg-zinc-900/50 rounded-xl border border-slate-100 dark:border-zinc-800 hover:border-amber-500/30 transition-all group text-left">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="bg-amber-100 dark:bg-amber-900/30 p-2 rounded-lg">
+                                                            <Layers className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                                                        </div>
+                                                        <span className="font-semibold text-slate-700 dark:text-zinc-200 group-hover:text-amber-600 dark:group-hover:text-amber-400">Flash Cards</span>
                                                     </div>
-                                                    <span className="font-semibold text-slate-700 dark:text-zinc-200 group-hover:text-amber-600 dark:group-hover:text-amber-400">Flash Cards</span>
-                                                </div>
-                                                <ArrowIcon className="w-4 h-4 text-slate-400" />
-                                            </button>
+                                                    <ArrowIcon className="w-4 h-4 text-slate-400" />
+                                                </button>
+                                            )}
 
                                             <button onClick={() => { setSearchOpen(false); router.push('/quiz?topic=ccs-rules'); }} className="w-full flex items-center justify-between p-4 bg-white dark:bg-zinc-900/50 rounded-xl border border-slate-100 dark:border-zinc-800 hover:border-emerald-500/30 transition-all group text-left">
                                                 <div className="flex items-center gap-3">
