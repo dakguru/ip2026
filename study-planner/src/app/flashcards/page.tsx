@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence, PanInfo, useMotionValue, useTransform } from "framer-motion";
+import { motion, AnimatePresence, PanInfo, useMotionValue, useTransform, Variants } from "framer-motion";
 import {
     ArrowLeft, AlertTriangle, ChevronRight, ChevronLeft,
     RotateCcw, Sun, Moon, Sparkles, Layers, BookOpen
@@ -224,10 +224,10 @@ export default function FlashcardsPage() {
     if (!card) return null; // Safety fallback
 
     // Animation Variants
-    const variants = {
+    const variants: Variants = {
         enter: (d: number) => ({ x: d > 0 ? 500 : -500, opacity: 0, scale: 0.9, rotateY: d > 0 ? 45 : -45 }),
-        center: { zIndex: 1, x: 0, opacity: 1, scale: 1, rotateY: 0, transition: { duration: 0.4, ease: "circOut" } },
-        exit: (d: number) => ({ zIndex: 0, x: d < 0 ? 500 : -500, opacity: 0, scale: 0.9, rotateY: d < 0 ? -45 : 45, transition: { duration: 0.4, ease: "circIn" } })
+        center: { zIndex: 1, x: 0, opacity: 1, scale: 1, rotateY: 0, transition: { duration: 0.4, ease: "easeInOut" } },
+        exit: (d: number) => ({ zIndex: 0, x: d < 0 ? 500 : -500, opacity: 0, scale: 0.9, rotateY: d < 0 ? -45 : 45, transition: { duration: 0.4, ease: "easeInOut" } })
     };
 
     return (
