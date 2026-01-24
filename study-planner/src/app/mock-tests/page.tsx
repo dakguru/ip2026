@@ -59,6 +59,14 @@ export default function MockTestsPage() {
     // User Results State
     const [userResults, setUserResults] = useState<Record<string, any>>({});
     const [downloadingId, setDownloadingId] = useState<string | null>(null);
+    const [showDownloadNotification, setShowDownloadNotification] = useState(false);
+
+    useEffect(() => {
+        if (showDownloadNotification) {
+            const timer = setTimeout(() => setShowDownloadNotification(false), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [showDownloadNotification]);
 
     const fetchEnrollmentCounts = async () => {
         try {
@@ -315,6 +323,7 @@ export default function MockTestsPage() {
                 testName: mock.title,
                 submittedAt: result.submittedAt
             });
+            setShowDownloadNotification(true);
 
         } catch (error) {
             console.error("PDF Gen Error", error);
@@ -728,6 +737,19 @@ export default function MockTestsPage() {
                 onClose={() => setSelectedMockForRank(null)}
             />
 
+            {/* Download Notification */}
+            {showDownloadNotification && (
+                <div className="fixed top-20 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-2xl shadow-emerald-600/20 z-[100] flex items-center gap-4 animate-in fade-in slide-in-from-top-4 duration-500">
+                    <div className="bg-white/20 p-2 rounded-full">
+                        <CheckCircle2 className="w-5 h-5" />
+                    </div>
+                    <div>
+                        <p className="font-bold">Answer Sheet Downloaded</p>
+                        <p className="text-xs text-emerald-100">Check your Downloads Folder</p>
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 }
@@ -875,7 +897,7 @@ function MockTestDetail({
                                         <span className="font-bold text-green-700 dark:text-green-300 text-sm">Attempted</span>
                                     </div>
                                     <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                                        Score: {userResult.score}/{userResult.totalQuestions}
+                                        Score: {userResult.score}/{mock.marks}
                                     </span>
                                 </div>
                                 <div className="flex gap-3">
@@ -917,7 +939,7 @@ function MockTestDetail({
                                         <span className="font-bold text-green-700 dark:text-green-300 text-sm">Attempted</span>
                                     </div>
                                     <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                                        Score: {userResult.score}/{userResult.totalQuestions}
+                                        Score: {userResult.score}/{mock.marks}
                                     </span>
                                 </div>
                             )}
@@ -1043,9 +1065,12 @@ function MockTestCard({
     const hasAttempted = !!userResult;
 
     // Dynamic styles based on state
+    // Dynamic styles based on state
     const cardBgClass = isCompleted || hasAttempted
         ? "bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/20 dark:to-zinc-900 border-blue-100 dark:border-blue-900/50"
-        : "bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700";
+        : isLive
+            ? "bg-white dark:bg-zinc-900 border-red-500/50 dark:border-red-500/50 shadow-[0_0_30px_-5px_rgba(239,68,68,0.3)] dark:shadow-[0_0_30px_-5px_rgba(239,68,68,0.2)] ring-1 ring-red-500/20 transform scale-[1.02]"
+            : "bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700";
 
     return (
         <div
@@ -1085,7 +1110,7 @@ function MockTestCard({
                                 <CheckCircle2 className="w-3 h-3" /> Attempted
                             </span>
                             <span className="text-xs font-bold text-zinc-600 dark:text-zinc-400">
-                                Score: {userResult.score}/{userResult.totalQuestions}
+                                Score: {userResult.score}/{mock.marks}
                             </span>
                         </div>
                     )}
@@ -1319,7 +1344,7 @@ function RankListModal({ mock, isOpen, onClose }: { mock: MockTest | null, isOpe
                                         </p>
                                     </div>
                                     <div className="text-right">
-                                        <div className="font-black text-indigo-600 dark:text-indigo-400 text-lg">{user.score * 2}</div>
+                                        <div className="font-black text-indigo-600 dark:text-indigo-400 text-lg">{user.score}</div>
                                         <div className="text-[10px] font-bold text-zinc-400 uppercase">Marks</div>
                                     </div>
                                 </div>

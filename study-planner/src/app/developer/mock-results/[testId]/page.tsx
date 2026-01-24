@@ -81,11 +81,11 @@ export default function MockTestDetailResultsPage() {
     // Calculate Stats
     const totalAttempts = results.length;
     const avgScore = totalAttempts > 0
-        ? Math.round(results.reduce((acc, curr) => acc + curr.score * 2, 0) / totalAttempts)
+        ? Math.round(results.reduce((acc, curr) => acc + curr.score, 0) / totalAttempts)
         : 0;
 
     const highestScore = totalAttempts > 0
-        ? Math.max(...results.map(r => r.score * 2))
+        ? Math.max(...results.map(r => r.score))
         : 0;
 
     return (
@@ -194,8 +194,8 @@ export default function MockTestDetailResultsPage() {
                                                     </td>
                                                     <td className="py-4 px-6">
                                                         <div className="flex flex-col">
-                                                            <span className={`text-lg font-bold ${result.score * 2 >= 40 ? 'text-green-600' : 'text-zinc-900 dark:text-zinc-100'}`}>
-                                                                {result.score * 2} <span className="text-zinc-400 text-sm font-normal">/ {maxMarks || 'N/A'}</span>
+                                                            <span className={`text-lg font-bold ${result.score >= 40 ? 'text-green-600' : 'text-zinc-900 dark:text-zinc-100'}`}>
+                                                                {result.score} <span className="text-zinc-400 text-sm font-normal">/ {maxMarks || 'N/A'}</span>
                                                             </span>
                                                         </div>
                                                     </td>
@@ -278,7 +278,7 @@ export default function MockTestDetailResultsPage() {
                                                                                 </span>
                                                                             </div>
                                                                             <div className="flex justify-between py-1 border-b border-zinc-100 dark:border-zinc-800">
-                                                                                <span className="text-zinc-600 dark:text-zinc-400">Correct Answers</span>
+                                                                                <span className="text-zinc-600 dark:text-zinc-400">Marks Secured</span>
                                                                                 <span className="font-medium text-green-600">
                                                                                     {result.score}
                                                                                 </span>

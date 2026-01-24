@@ -7,37 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function MockTestAnnouncementPopup() {
     const [isOpen, setIsOpen] = useState(false);
-    const [timeLeft, setTimeLeft] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0
-    });
-
     useEffect(() => {
-        // Target Date: Jan 24, 2026 00:00:00
-        const targetDate = new Date("2026-01-24T00:00:00").getTime();
-
-        const calculateTimeLeft = () => {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            if (difference > 0) {
-                setTimeLeft({
-                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                    minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-                    seconds: Math.floor((difference % (1000 * 60)) / 1000)
-                });
-            } else {
-                // Timer expired
-                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-            }
-        };
-
-        calculateTimeLeft(); // Initial call
-        const timerInterval = setInterval(calculateTimeLeft, 1000);
-
         // Show popup after a short delay for better UX
         const timer = setTimeout(() => {
             const hasSeen = sessionStorage.getItem("seen_mock_announcement_test_02");
@@ -48,7 +18,6 @@ export default function MockTestAnnouncementPopup() {
 
         return () => {
             clearTimeout(timer);
-            clearInterval(timerInterval);
         };
     }, []);
 
@@ -108,12 +77,12 @@ export default function MockTestAnnouncementPopup() {
                                 </div>
 
                                 {/* Badge */}
-                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 font-bold text-xs uppercase tracking-wider mb-4">
+                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-xs uppercase tracking-wider mb-4 animate-pulse">
                                     <span className="relative flex h-2 w-2">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                                     </span>
-                                    Upcoming Event
+                                    Live Now
                                 </div>
 
                                 <h2 className="text-3xl font-black text-white mb-2 leading-tight">
@@ -123,20 +92,7 @@ export default function MockTestAnnouncementPopup() {
                                     </span>
                                 </h2>
 
-                                {/* Timer Section */}
-                                <div className="grid grid-cols-4 gap-2 my-6 max-w-xs mx-auto">
-                                    {[
-                                        { label: "Days", value: timeLeft.days },
-                                        { label: "Hrs", value: timeLeft.hours },
-                                        { label: "Mins", value: timeLeft.minutes },
-                                        { label: "Secs", value: timeLeft.seconds },
-                                    ].map((item, idx) => (
-                                        <div key={idx} className="flex flex-col items-center bg-white/5 border border-white/10 rounded-lg py-2">
-                                            <span className="text-lg font-bold text-white font-mono leading-none">{String(item.value).padStart(2, '0')}</span>
-                                            <span className="text-[10px] text-zinc-500 uppercase font-medium mt-1">{item.label}</span>
-                                        </div>
-                                    ))}
-                                </div>
+
 
 
                                 <div className="text-left bg-black/20 rounded-xl p-3 border border-white/5 mb-6 text-xs text-zinc-300 space-y-1">
@@ -154,7 +110,7 @@ export default function MockTestAnnouncementPopup() {
                                     >
                                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity"></span>
                                         <span className="relative flex items-center gap-2">
-                                            View Details
+                                            Attempt Now
                                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         </span>
                                     </Link>

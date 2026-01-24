@@ -24,7 +24,7 @@ Mock tests serve as a critical component in the preparatory lifecycle by:
 The application implements a dynamic ranking algorithm that benchmarks a candidate's performance against the entire pool of test-takers. Rankings are generated post-test window closure to ensure a standardized comparison baseline.
 
 ### Time-Bound Test Window
-Tests are governed by strict temporal constraints. A specific "Live Window" (e.g., 24 to 48 hours) is defined during which the assessment is active. This enforces discipline and ensures all candidates attempt the test under similar temporal conditions.
+Tests are governed by strict temporal constraints. A specific "Live Window" (e.g., 24 to 48 hours) is defined during which the assessment is active. This enforces discipline and ensures all candidates attempt the test under similar temporal conditions. The "Live Now" status is visually highlighted with distinct styling (e.g., red glow/border) to signal urgency.
 
 ### Auto Evaluation and Instant Score
 The system utilizes an automated evaluation engine that processes responses immediately upon submission. While raw scores are often available instantly, detailed analytics and rankings may be withheld until the testing window concludes to maintain integrity.
@@ -114,6 +114,7 @@ If the timer reaches zero (00:00), the system automatically locks the interface 
 *   **Correct Answer:** +2 Marks
 *   **Incorrect Answer:** 0 Marks (No negative marking for current test series)
 *   **Unattempted:** 0 Marks
+*   **Display Logic:** Scores are displayed as `Marks Secured / Total Marks` (e.g., 58/100) across all dashboards to ensure clarity, as opposed to raw question counts.
 
 ### Rank Generation
 *   **Live Rank:** Preliminary rank based on current submissions (optional feature).
@@ -128,7 +129,7 @@ If the timer reaches zero (00:00), the system automatically locks the interface 
 
 ### Scorecard Details
 A summary view presenting:
-*   Total Score obtained (out of 100).
+*   **Marks Secured** (out of total marks, e.g., 100).
 *   Percentage.
 *   Percentile against the cohort.
 
@@ -138,7 +139,7 @@ A detailed review mode allowing the candidate to traverse the entire test, viewi
 *   The marked answer.
 *   The correct answer.
 *   Detailed explanatory notes or references.
-*   **Download Answer Sheet:** Ability to download a PDF version of the attempted paper.
+*   **Download Answer Sheet:** Ability to download a PDF version of the attempted paper. Includes a visual confirmation notification upon successful download initiation.
 
 ### Performance Indicators
 *   **Accuracy:** (Correct Answers / Total Attempted) * 100.
@@ -229,3 +230,4 @@ A: Rankings are typically published on the Monday following the weekend test win
 | :--- | :--- | :--- | :--- |
 | 1.0.0 | 2026-01-24 | Initial release of product documentation. | Documentation Team |
 | 1.1.0 | 2026-01-24 | Updated scoring logic (2 marks/question), single attempt enforcement, and UI terminology. | Technical Team |
+| 1.2.0 | 2026-01-24 | Added "Live Now" visual highlighting, updated Announcement Popup to "Attempt Now" banner, fixed leaderboard score doubling, corrected score denominators, and added download confirmation notifications. | Technical Team |
