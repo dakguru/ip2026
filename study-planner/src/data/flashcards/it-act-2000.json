@@ -1,0 +1,376 @@
+[
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Introduction",
+        "card_no": 1,
+        "question": "When did the IT Act, 2000 come into force?",
+        "answer": "17th October 2000 (Enacted on 9th June 2000).",
+        "exam_weight": "Medium",
+        "keywords": [
+            "commencement",
+            "date"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Definitions",
+        "card_no": 2,
+        "question": "What is an 'Asymmetric Crypto System'?",
+        "answer": "A system of a secure key pair consisting of a private key for creating a digital signature and a public key to verify it.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "crypto system",
+            "private key",
+            "public key"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Certifying Authorities",
+        "card_no": 3,
+        "question": "What is the fee for renewal of a Certifying Authority (CA) license?",
+        "answer": "Not exceeding Rs. 5,000.",
+        "exam_weight": "Low",
+        "keywords": [
+            "license",
+            "renewal",
+            "fee"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Certifying Authorities",
+        "card_no": 4,
+        "question": "How many days notice must be given before suspending a CA license?",
+        "answer": "Reasonable opportunity, but suspension cannot exceed 10 days without hearing.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "suspension",
+            "10 days"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Penalties (Civil)",
+        "card_no": 5,
+        "question": "What is the penalty for failure to furnish documents/returns to the Controller (Section 44)?",
+        "answer": "Penalty not exceeding Rs. 1,50,000 for each failure.",
+        "exam_weight": "High",
+        "keywords": [
+            "penalty",
+            "furnish documents",
+            "1.5 lakh"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Penalties (Civil)",
+        "card_no": 6,
+        "question": "What is the penalty for failure to file return within specified time?",
+        "answer": "Rs. 5,000 for every day the failure continues.",
+        "exam_weight": "High",
+        "keywords": [
+            "penalty",
+            "file return",
+            "5000"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Adjudication",
+        "card_no": 7,
+        "question": "What is the maximum claim amount an Adjudicating Officer can handle?",
+        "answer": "Rs. 5 Crore. (Claims above this go to competent Court).",
+        "exam_weight": "High",
+        "keywords": [
+            "adjudicating officer",
+            "jurisdiction",
+            "5 crore"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Appellate Tribunal",
+        "card_no": 8,
+        "question": "Which body serves as the Appellate Tribunal for the IT Act purposes?",
+        "answer": "TDSAT (Telecom Disputes Settlement and Appellate Tribunal).",
+        "exam_weight": "High",
+        "keywords": [
+            "TDSAT",
+            "tribunal"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Appellate Tribunal",
+        "card_no": 9,
+        "question": "What is the limitation period for filing an appeal to the Appellate Tribunal?",
+        "answer": "45 days from the date of receipt of the order.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "appeal",
+            "limitation",
+            "45 days"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Offences",
+        "card_no": 10,
+        "question": "What is the punishment for Tampering with Computer Source Documents (Section 65)?",
+        "answer": "Imprisonment up to 3 years OR Fine up to Rs. 2 Lakhs OR Both.",
+        "exam_weight": "High",
+        "keywords": [
+            "tampering",
+            "source code",
+            "section 65"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Offences",
+        "card_no": 11,
+        "question": "What is the punishment for Cyber Terrorism (Section 66F)?",
+        "answer": "Imprisonment which may extend to Imprisonment for Life.",
+        "exam_weight": "High",
+        "keywords": [
+            "cyber terrorism",
+            "life imprisonment",
+            "section 66F"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Offences",
+        "card_no": 12,
+        "question": "Section 66A was struck down by the Supreme Court in which case?",
+        "answer": "Shreya Singhal v. Union of India (2015).",
+        "exam_weight": "High",
+        "keywords": [
+            "Section 66A",
+            "Shreya Singhal",
+            "struck down"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Offences",
+        "card_no": 13,
+        "question": "What is the punishment for Identity Theft (Section 66C)?",
+        "answer": "Imprisonment up to 3 years and Fine up to Rs. 1 Lakh.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "identity theft",
+            "section 66C"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Offences",
+        "card_no": 14,
+        "question": "What is the punishment for publishing sexually explicit acts (Section 67A) on first conviction?",
+        "answer": "Imprisonment up to 5 years and Fine up to Rs. 10 Lakhs.",
+        "exam_weight": "High",
+        "keywords": [
+            "sexually explicit",
+            "section 67A",
+            "5 years"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Miscellaneous",
+        "card_no": 15,
+        "question": "Does the IT Act apply to Negotiable Instruments?",
+        "answer": "No, EXCEPT Cheques. (Cheques are covered).",
+        "exam_weight": "High",
+        "keywords": [
+            "negotiable instruments",
+            "cheques",
+            "applicability"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Sections",
+        "card_no": 16,
+        "question": "Which Section provides legal recognition to electronic records?",
+        "answer": "Section 4.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "legal recognition",
+            "section 4"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Sections",
+        "card_no": 17,
+        "question": "Which Section deals with the 'Acknowledgement of Receipt'?",
+        "answer": "Section 12.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "acknowledgement",
+            "section 12"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Sections",
+        "card_no": 18,
+        "question": "Section 43A deals with compensation for failure to protect data by whom?",
+        "answer": "A Body Corporate.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "section 43A",
+            "body corporate",
+            "data protection"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Government Powers",
+        "card_no": 19,
+        "question": "Which section grants power to block public access to information (Website Blocking)?",
+        "answer": "Section 69A.",
+        "exam_weight": "High",
+        "keywords": [
+            "blocking",
+            "section 69A"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Government Powers",
+        "card_no": 20,
+        "question": "Who is the national agency for cyber security appointed under Section 70B?",
+        "answer": "CERT-In (Indian Computer Emergency Response Team).",
+        "exam_weight": "Medium",
+        "keywords": [
+            "CERT-In",
+            "cyber security"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Offences",
+        "card_no": 21,
+        "question": "What is the punishment for Child Pornography (Section 67B) on first conviction?",
+        "answer": "Imprisonment up to 5 years and Fine up to Rs. 10 Lakhs.",
+        "exam_weight": "High",
+        "keywords": [
+            "child pornography",
+            "section 67B"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Miscellaneous",
+        "card_no": 22,
+        "question": "Does the Act apply to Real Estate Contracts?",
+        "answer": "No. Contracts for sale/conveyance of immovable property are excluded (First Schedule).",
+        "exam_weight": "Medium",
+        "keywords": [
+            "real estate",
+            "exclusion"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Offences",
+        "card_no": 23,
+        "question": "Which section empowers Police Officer to enter and search public places without warrant?",
+        "answer": "Section 80.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "section 80",
+            "search",
+            "warrant"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "General",
+        "card_no": 24,
+        "question": "Is the Controller of Certifying Authorities (CCA) the top authority?",
+        "answer": "No, the Central Government is the top authority; CCA is the regulator.",
+        "exam_weight": "Low",
+        "keywords": [
+            "CCA",
+            "hierarchy"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Sections",
+        "card_no": 25,
+        "question": "Which section provides Safe Harbor protection to Intermediaries?",
+        "answer": "Section 79.",
+        "exam_weight": "High",
+        "keywords": [
+            "section 79",
+            "intermediaries",
+            "safe harbor"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Offences",
+        "card_no": 26,
+        "question": "Punishment for disclosure of information in breach of lawful contract (Section 72A)?",
+        "answer": "Imprisonment up to 3 Years or Fine up to Rs. 5 Lakhs.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "section 72A",
+            "breach of contract"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Sections",
+        "card_no": 27,
+        "question": "Which section deals with Cheating by Personation?",
+        "answer": "Section 66D.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "section 66D",
+            "cheating"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Sections",
+        "card_no": 28,
+        "question": "Which section deals with Violation of Privacy (capturing private images)?",
+        "answer": "Section 66E.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "section 66E",
+            "privacy"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Sections",
+        "card_no": 29,
+        "question": "Which section deals with Identity Theft?",
+        "answer": "Section 66C.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "section 66C",
+            "identity theft"
+        ]
+    },
+    {
+        "pdf_title": "Information Technology Act, 2000",
+        "topic": "Sections",
+        "card_no": 30,
+        "question": "Which section deals with Receiving Stolen Computer Resource?",
+        "answer": "Section 66B.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "section 66B",
+            "stolen resource"
+        ]
+    }
+]

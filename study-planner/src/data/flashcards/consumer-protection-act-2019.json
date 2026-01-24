@@ -1,0 +1,381 @@
+[
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Preliminary",
+        "card_no": 1,
+        "question": "What is the territorial extent of the Consumer Protection Act, 2019?",
+        "answer": "It extends to the whole of India except the State of Jammu and Kashmir. (Note: This is as per the specific PDF text provided, though J&K Reorganisation Act 2019 might apply generally).",
+        "exam_weight": "Low",
+        "keywords": [
+            "extent",
+            "Jammu and Kashmir"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Preliminary",
+        "card_no": 2,
+        "question": "When did the Consumer Protection Act, 2019 come into force for most provisions?",
+        "answer": "20th July 2020 (specifically 24th July 2020 for key sections like CCPA and Commissions).",
+        "exam_weight": "Medium",
+        "keywords": [
+            "commencement",
+            "July 2020",
+            "20th July"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Definitions",
+        "card_no": 3,
+        "question": "Does the definition of 'Consumer' include persons who obtain goods for resale or commercial purpose?",
+        "answer": "No. The definition explicitly excludes persons who obtain goods for resale or for any commercial purpose (except strictly for self-employment).",
+        "exam_weight": "High",
+        "keywords": [
+            "consumer",
+            "commercial purpose",
+            "resale"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Definitions",
+        "card_no": 4,
+        "question": "What is meant by 'E-commerce' under the Act?",
+        "answer": "Buying or selling of goods or services including digital products over digital or electronic network.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "e-commerce",
+            "digital network"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Definitions",
+        "card_no": 5,
+        "question": "Who falls under the definition of 'Product Seller'?",
+        "answer": "A person who imports, sells, distributes, leases, installs, prepares, packages, lables, markets, repairs, maintains, or is otherwise involved in placing a product for commercial purpose. It includes a service provider.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "product seller",
+            "importer",
+            "service provider"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Consumer Rights",
+        "card_no": 6,
+        "question": "How many consumer rights are defined under Section 2(9) / Section 5 objects?",
+        "answer": "Six Rights: (1) Right to Safety, (2) Right to be Informed, (3) Right to Choose, (4) Right to be Heard, (5) Right to Redressal, (6) Right to Consumer Awareness.",
+        "exam_weight": "High",
+        "keywords": [
+            "consumer rights",
+            "safety",
+            "informed",
+            "redressal"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Consumer Protection Councils",
+        "card_no": 7,
+        "question": "Who is the Chairperson of the Central Consumer Protection Council?",
+        "answer": "The Minister in charge of Consumer Affairs in the Central Government.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "Central Council",
+            "Chairperson",
+            "Minister"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Consumer Protection Councils",
+        "card_no": 8,
+        "question": "What is the minimum meeting frequency for the State Consumer Protection Council?",
+        "answer": "At least two meetings every year.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "State Council",
+            "meetings",
+            "frequency"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "CCPA",
+        "card_no": 9,
+        "question": "What does CCPA stand for?",
+        "answer": "Central Consumer Protection Authority.",
+        "exam_weight": "Low",
+        "keywords": [
+            "CCPA",
+            "full form"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "CCPA",
+        "card_no": 10,
+        "question": "Who heads the Investigation Wing of the Central Authority (CCPA)?",
+        "answer": "A Director-General.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "Investigation Wing",
+            "Director-General"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "CCPA Powers",
+        "card_no": 11,
+        "question": "What is the maximum penalty CCPA can impose on a manufacturer for a first offense of misleading advertisement?",
+        "answer": "Penalty extending up to Ten Lakh Rupees.",
+        "exam_weight": "High",
+        "keywords": [
+            "penalty",
+            "misleading advertisement",
+            "10 lakh"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "CCPA Powers",
+        "card_no": 12,
+        "question": "For how long can the CCPA prohibit an endorser from making endorsements for a first offense of misleading advertisement?",
+        "answer": "For a period extending up to one year.",
+        "exam_weight": "High",
+        "keywords": [
+            "endorser",
+            "ban",
+            "1 year"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Disputes Redressal Commission",
+        "card_no": 13,
+        "question": "What is the pecuniary jurisdiction of the District Commission under the 2019 Act?",
+        "answer": "Complaints where the value of goods or services paid as consideration does not exceed One Crore Rupees.",
+        "exam_weight": "High",
+        "keywords": [
+            "District Commission",
+            "jurisdiction",
+            "1 crore"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Disputes Redressal Commission",
+        "card_no": 14,
+        "question": "What is the pecuniary jurisdiction of the State Commission?",
+        "answer": "Complaints where the value of goods or services paid as consideration exceeds 1 Crore but does not exceed 10 Crore Rupees.",
+        "exam_weight": "High",
+        "keywords": [
+            "State Commission",
+            "jurisdiction",
+            "10 crore"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Disputes Redressal Commission",
+        "card_no": 15,
+        "question": "Where does an appeal lie against the order of the National Commission?",
+        "answer": "To the Supreme Court, within 30 days.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "appeal",
+            "Supreme Court",
+            "National Commission"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Procedure",
+        "card_no": 16,
+        "question": "What is the time limit for admitting or rejecting a complaint by the District Commission?",
+        "answer": "21 days from the date on which the complaint was filed.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "admissibility",
+            "21 days"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Mediation",
+        "card_no": 17,
+        "question": "Can a consumer dispute be referred to mediation?",
+        "answer": "Yes, if there exist elements of a settlement, the District Commission may refer the matter to mediation with the consent of parties.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "mediation",
+            "settlement"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Mediation",
+        "card_no": 18,
+        "question": "Is an appeal allowed against a settlement order passed through mediation?",
+        "answer": "No appeal shall lie from any order passed by the Commission pursuant to a settlement by mediation.",
+        "exam_weight": "High",
+        "keywords": [
+            "mediation",
+            "no appeal"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Product Liability",
+        "card_no": 19,
+        "question": "Can a product seller be held liable in a product liability action?",
+        "answer": "Yes, if they exercised substantial control over design/testing/packaging, altered the product, made an express warranty, or failed to identify the manufacturer.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "product seller",
+            "liability"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Product Liability",
+        "card_no": 20,
+        "question": "What are the exceptions to product liability action?",
+        "answer": "Misuse/alteration of product, failure to follow instructions, or compliance with mandatory statutory instructions.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "liability",
+            "exceptions",
+            "misuse"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Offences and Penalties",
+        "card_no": 21,
+        "question": "What is the punishment for manufacturing or selling products containing adulterants that cause death?",
+        "answer": "Imprisonment of not less than 7 years (extending to life) AND fine not less than 10 Lakh Rupees.",
+        "exam_weight": "High",
+        "keywords": [
+            "adulterant",
+            "death",
+            "penalty",
+            "7 years",
+            "life imprisonment"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Offences and Penalties",
+        "card_no": 22,
+        "question": "What is the penalty for failing to comply with an order of the District/State/National Commission?",
+        "answer": "Imprisonment (1 month to 3 years) OR Fine (Rs. 25,000 to Rs. 1 Lakh) OR Both.",
+        "exam_weight": "High",
+        "keywords": [
+            "non-compliance",
+            "penalty",
+            "imprisonment"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Miscellaneous",
+        "card_no": 23,
+        "question": "What is the limitation period for filing a complaint?",
+        "answer": "Two years from the date on which the cause of action has arisen.",
+        "exam_weight": "High",
+        "keywords": [
+            "limitation",
+            "2 years"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Miscellaneous",
+        "card_no": 24,
+        "question": "What is the deposit requirement for filing an appeal before the State Commission?",
+        "answer": "50% of the amount required to be paid in terms of the District Commission's order.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "appeal",
+            "deposit",
+            "50%"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Key Differences",
+        "card_no": 25,
+        "question": "How does the Pecuniary Jurisdiction of the National Commission differ in 2019 Act vs 1986 Act?",
+        "answer": "2019 Act: Above 10 Crore. (1986 Act was Above 1 Crore).",
+        "exam_weight": "High",
+        "keywords": [
+            "jurisdiction",
+            "national commission",
+            "difference"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Definitions",
+        "card_no": 26,
+        "question": "What is 'Caveat Gener' or is it 'Caveat Emptor'?",
+        "answer": "The Act defines 'Caveat Emptor' (Buyer Beware) and 'Caveat Venditor' (Seller Beware). Caveat Venditor means the seller is liable for defects.",
+        "exam_weight": "Low",
+        "keywords": [
+            "caveat emptor",
+            "caveat venditor"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Definitions",
+        "card_no": 27,
+        "question": "What is an 'Unfair Contract'?",
+        "answer": "A contract with significant change in consumer rights, e.g., excessive security deposits, disproportionate penalties, or unilateral termination.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "unfair contract",
+            "definition"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "E-Commerce",
+        "card_no": 28,
+        "question": "Are 'Dark Patterns' mentioned in the 2019 Act text directly?",
+        "answer": "Not in the original 2019 Act text, but the 2023 Guidelines classify them as 'Unfair Trade Practices'. They include False Urgency, Basket Sneaking, etc.",
+        "exam_weight": "Medium",
+        "keywords": [
+            "dark patterns",
+            "unfair trade practice"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "Offences",
+        "card_no": 29,
+        "question": "Who can compound offences under the Act?",
+        "answer": "The National Commission (Section 96).",
+        "exam_weight": "Low",
+        "keywords": [
+            "compounding",
+            "national commission"
+        ]
+    },
+    {
+        "pdf_title": "Consumer Protection Act, 2019",
+        "topic": "General",
+        "card_no": 30,
+        "question": "Can the Central Government supersede a State Commission?",
+        "answer": "Yes, if it defaults in duties or in public interest, after consulting the State Government.",
+        "exam_weight": "Low",
+        "keywords": [
+            "supersede",
+            "central government"
+        ]
+    }
+]
