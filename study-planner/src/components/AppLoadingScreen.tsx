@@ -30,36 +30,33 @@ export default function AppLoadingScreen() {
     useEffect(() => {
         if (!shouldRender) return;
 
-        const handleLoadComplete = async () => {
-            // Minimum display time to ensure branding is seen and animation is smooth
-            // even if the app loads instantly.
-            await new Promise(resolve => setTimeout(resolve, 2000));
+        // Safety timeout to ensure splash doesn't stay forever if image fails
+        const safetyTimer = setTimeout(() => {
+            handleImageReady();
+        }, 3000);
 
-            setIsVisible(false); // Trigger exit animation
-
-            // Wait for exit animation to finish before unblocking scroll
-            setTimeout(() => {
-                document.body.style.overflow = 'unset';
-            }, 800); // Matches exit duration
-        };
-
-        // In a real app, you might listen to a global "ready" state.
-        // For now, since this mounts in RootLayout, once we mount, the "app" is effectively loading.
-        // We'll treat "mounted + min delay" as "loaded".
-
-        // Hide native splash immediately so ours takes over
-        const hideNative = async () => {
-            try {
-                await CapacitorSplashScreen.hide();
-            } catch (e) {
-                console.error("Error hiding native splash", e);
-            }
-        };
-
-        hideNative();
-        handleLoadComplete();
-
+        return () => clearTimeout(safetyTimer);
     }, [shouldRender]);
+
+    const handleImageReady = async () => {
+        // Prevent double execution
+        if (!isVisible) return;
+
+        try {
+            await CapacitorSplashScreen.hide();
+        } catch (e) {
+            // console.warn("Splash hide error", e);
+        }
+
+        // Minimum branding display time
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        setIsVisible(false); // Trigger exit animation
+
+        setTimeout(() => {
+            document.body.style.overflow = 'unset';
+        }, 800);
+    };
 
     if (!shouldRender) return null;
 
@@ -84,6 +81,7 @@ export default function AppLoadingScreen() {
                             <img
                                 src="/official-logo.png"
                                 alt="Dak Guru Logo"
+                                onLoad={handleImageReady}
                                 className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-sm"
                             />
 
