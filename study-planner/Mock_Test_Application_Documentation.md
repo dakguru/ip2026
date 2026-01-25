@@ -118,7 +118,7 @@ If the timer reaches zero (00:00), the system automatically locks the interface 
 
 ### Rank Generation
 *   **Live Rank:** Preliminary rank based on current submissions (optional feature).
-*   **Final Rank:** Generated after the test window closes, normalizing for all participants.
+*   **Final Rank (Top 7):** To simulate a real LDCE vacancy scenario (e.g., 7 available positions), only the Top 7 ranks are published. This encourages candidates to focus on securing a position within the competitive threshold. Generated after the test window closes.
 *   **Batch Rank:** Ranking within a specific cohort or subscription group.
 
 ### Result Publication Timeline
@@ -167,6 +167,11 @@ Manual override controls to extend test windows or hide tests in emergency scena
 ### Result Publishing Controls
 Admins can toggle the visibility of the Leaderboard and detailed analytics to manage the result declaration schedule.
 
+### Enrollment & User Management
+Administrators have access to:
+*   **Enrollment Lists:** Real-time view of users enrolled for specific tests, including payment details and dates.
+*   **Admin PDF Generation:** Ability to generate and download detailed answer sheets for individual candidates from the results dashboard.
+
 ## 9. Security & Compliance
 
 ### Time Window Enforcement
@@ -180,6 +185,7 @@ Strict logic enforces a "One Attempt Per User" policy during the live window to 
 *   **Encryption:** Transmission of test data over HTTPS.
 
 ### Fair Examination Practices
+*   **Dark Mode Support:** All test interfaces, instruction pages, and result dashboards are optimized for Dark and Light modes, ensuring visual comfort during long study sessions.
 *   **Randomization:** (Optional) Shuffling question order to minimize peer collusion.
 *   **Anti-Copy:** Disabling right-click and text selection within the test interface.
 
@@ -220,8 +226,8 @@ A: Rankings are typically published on the Monday following the weekend test win
 ## 12. Versioning & Updates
 
 ### Reference
-**Document Version:** 1.1.0
-**Last Updated:** January 24, 2026
+**Document Version:** 1.3.0
+**Last Updated:** January 25, 2026
 **Status:** Active
 
 ### Change Log
@@ -231,3 +237,4 @@ A: Rankings are typically published on the Monday following the weekend test win
 | 1.0.0 | 2026-01-24 | Initial release of product documentation. | Documentation Team |
 | 1.1.0 | 2026-01-24 | Updated scoring logic (2 marks/question), single attempt enforcement, and UI terminology. | Technical Team |
 | 1.2.0 | 2026-01-24 | Added "Live Now" visual highlighting, updated Announcement Popup to "Attempt Now" banner, fixed leaderboard score doubling, corrected score denominators, and added download confirmation notifications. | Technical Team |
+| 1.3.0 | 2026-01-25 | Implemented end-of-day (23:59:59) test window logic, added Admin Enrollment viewing capability, blocked re-attempts during the live window, and ensured consistent Dark Mode support across assessment modules. | Technical Team |
