@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight, History } from "lucide-react";
 import { FULL_SCHEDULE } from "@/data/schedule";
-import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval } from "date-fns";
+import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval, endOfDay } from "date-fns";
 import { useMemo, useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
@@ -134,7 +134,7 @@ export default function MockTestsPage() {
 
         while (currentDate <= endDate) {
             const saturdayDate = currentDate;
-            const sundayDate = addDays(saturdayDate, 1);
+            const sundayDate = endOfDay(addDays(saturdayDate, 1));
 
             const mondayDate = addDays(saturdayDate, -5);
             const fridayDate = addDays(saturdayDate, -1);

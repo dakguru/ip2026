@@ -25,7 +25,11 @@ interface TestConfig {
 }
 
 const TEST_CONFIG_MAP: Record<string, TestConfig> = {
-    "mock-2026-01-17": { startDate: new Date("2026-01-17T00:00:00+05:30"), title: "Weekly Mock Test - 01" },
+    "mock-2026-01-17": {
+        startDate: new Date("2026-01-17T00:00:00+05:30"),
+        endDate: new Date("2026-01-18T23:59:59+05:30"),
+        title: "Weekly Mock Test - 01"
+    },
     "mock-2026-01-24": {
         startDate: new Date("2026-01-24T00:00:00+05:30"),
         endDate: new Date("2026-01-25T23:59:59+05:30"),
