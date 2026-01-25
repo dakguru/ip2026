@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from "next/link";
-import { Users, MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X, Clock } from 'lucide-react';
+import { Users, MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X, Clock, Send } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
 
@@ -362,7 +362,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                         <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xs shrink-0 mt-1 shadow-md">
                             {currentUser?.name ? currentUser.name[0].toUpperCase() : 'U'}
                         </div>
-                        <div className="flex-1 flex gap-2 items-center">
+                        <div className="flex-1 flex gap-2 items-center min-w-0">
                             <input
                                 type="text"
                                 value={commentText}
@@ -373,9 +373,10 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                             />
                             <button
                                 onClick={handlePostComment}
-                                className="shrink-0 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-black dark:hover:bg-zinc-200 transition-colors shadow-sm"
+                                className="shrink-0 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-3 py-2 md:px-4 md:py-2 rounded-lg text-sm font-bold hover:bg-black dark:hover:bg-zinc-200 transition-colors shadow-sm flex items-center justify-center"
                             >
-                                Post
+                                <span className="md:hidden"><Send className="w-4 h-4" /></span>
+                                <span className="hidden md:inline">Post</span>
                             </button>
                         </div>
                     </div>
