@@ -25,6 +25,7 @@ import {
 } from "../../data/flashcards";
 import Link from "next/link";
 import Image from "next/image";
+import FlashcardsIntroBanner from "@/components/FlashcardsIntroBanner";
 
 // --- Types ---
 interface UnifiedFlashcard {
@@ -90,9 +91,12 @@ const CARD_THEMES = [
     },
 ];
 
+
 export default function FlashcardsPage() {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+    const [userRole, setUserRole] = useState<string | null>(null);
+    const [isLoadingAuth, setIsLoadingAuth] = useState(true);
 
     // State
     const [selectedDeckId, setSelectedDeckId] = useState<string | null>(null);
@@ -102,7 +106,31 @@ export default function FlashcardsPage() {
     const [isShuffled, setIsShuffled] = useState(false);
     const [shuffledDeck, setShuffledDeck] = useState<UnifiedFlashcard[]>([]);
 
-    useEffect(() => { setMounted(true); }, []);
+    useEffect(() => {
+        setMounted(true);
+
+        // Check Auth
+        const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+        if (match) {
+            try {
+                const session = JSON.parse(decodeURIComponent(match[2]));
+                // Check if role includes admin (case insensitive) just to be safe, or exact match
+                // Based on UserMenu.tsx, role is usually 'admin'
+                setUserRole(session.role || 'user');
+            } catch (e) {
+                console.error("Failed to parse session", e);
+            }
+        }
+        setIsLoadingAuth(false);
+    }, []);
+
+    if (!mounted) return null;
+
+    // Access Control: Only Admin can see the flashcards
+    // Everyone else sees the Coming Soon Banner
+    if (!isLoadingAuth && userRole !== 'admin') {
+        return <FlashcardsIntroBanner />;
+    }
 
     // Derived State
     const baseDeck = selectedDeckId ? deckData[selectedDeckId] : [];
