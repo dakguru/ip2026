@@ -195,6 +195,8 @@ export default function PricingPage() {
                 description: effectivePlan.name,
                 image: "/dak-guru-new-logo.png",
                 order_id: order.id,
+                callback_url: `${window.location.origin}/pricing`,
+                redirect: false,
                 handler: async function (response: any) {
                     // 3. Verify Payment
                     try {

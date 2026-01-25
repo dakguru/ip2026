@@ -228,6 +228,8 @@ export default function MockTestsPage() {
                 description: `Enrollment: ${mock.title}`,
                 image: "/dak-guru-round.png",
                 order_id: order.id,
+                callback_url: `${window.location.origin}/mock-tests`,
+                redirect: false,
                 handler: async function (response: any) {
                     // 2. Verify Payment via server
                     try {

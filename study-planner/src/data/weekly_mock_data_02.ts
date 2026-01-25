@@ -12,8 +12,8 @@ export const WEEKLY_MOCK_02_QUESTIONS: Question[] = [
         id: "weekly-02-2",
         text: "According to the Post Office Rules, 2024, the \"Review Committee\" constituted to review interception orders passed by the Competent Authority shall meet at least:",
         options: ["Once every month", "Once every 45 days", "Once every two months", "Once every quarter (3 months)"],
-        correctAnswer: 2,
-        explanation: "Rule 16 of the Post Office Rules 2024 specifically mandates that the Review Committee must meet at least once in every two months to review interception orders."
+        correctAnswer: 3,
+        explanation: "Rule 16 of the Post Office Rules 2024 specifically mandates that the Review Committee must meet at least once in every quarter (3 months) to review interception orders."
     },
     {
         id: "weekly-02-3",
@@ -75,8 +75,8 @@ export const WEEKLY_MOCK_02_QUESTIONS: Question[] = [
         id: "weekly-02-11",
         text: "The general maximum weight limit for an \"International Tracked Packet\" (subject to destination country limits) as per the 2024 Regulations is:",
         options: ["1.5 kg", "2 kg", "5 kg", "10 kg"],
-        correctAnswer: 1,
-        explanation: "The standard weight limit for an International Tracked Packet is 2 kg. This aligns with Universal Postal Union (UPU) standards for \"Packets/Small Packets\"."
+        correctAnswer: 2,
+        explanation: "The standard weight limit for an International Tracked Packet is 5 kg. This aligns with Universal Postal Union (UPU) standards for \"Packets/Small Packets\"."
     },
     {
         id: "weekly-02-12",
