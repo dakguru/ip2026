@@ -143,7 +143,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Notes on rights of consumers and redressal mechanisms.",
             filename: "Consumer_Protection_Act_2019.pdf",
             path: "/notes/paper-1/Consumer_Protection_Act_2019.pdf",
-            size: "42.5 MB",
+            size: "0.7 MB",
             color: "blue",
             isFree: true
         },
@@ -152,7 +152,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Legal framework for electronic governance and cyber crimes.",
             filename: "IT_Act_2000.pdf",
             path: "/notes/paper-1/IT_Act_2000.pdf",
-            size: "0.8 MB",
+            size: "0.3 MB",
             color: "blue"
         },
 
