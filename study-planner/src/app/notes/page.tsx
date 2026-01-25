@@ -143,7 +143,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Notes on rights of consumers and redressal mechanisms.",
             filename: "Consumer_Protection_Act_2019.pdf",
             path: "/notes/paper-1/Consumer_Protection_Act_2019.pdf",
-            size: "0.7 MB",
+            size: "42.5 MB",
             color: "blue",
             isFree: true
         },
@@ -568,7 +568,7 @@ export default function NotesPage() {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
+        <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200">
             <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel} />
 
             {/* --- HERO SECTION --- */}
@@ -594,12 +594,12 @@ export default function NotesPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
 
                 {/* Marquee Banner */}
-                <div className="mb-8 bg-amber-50 border border-amber-200/60 rounded-2xl py-3 px-4 shadow-sm overflow-hidden relative flex items-center">
-                    <div className="shrink-0 bg-amber-100 text-amber-800 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mr-4 shadow-sm z-10 relative">
+                <div className="mb-8 bg-amber-50 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-800/50 rounded-2xl py-3 px-4 shadow-sm overflow-hidden relative flex items-center">
+                    <div className="shrink-0 bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mr-4 shadow-sm z-10 relative">
                         Important Update
                     </div>
                     <div className="overflow-hidden relative flex-1 mask-linear-fade">
-                        <div className="animate-marquee whitespace-nowrap inline-block text-amber-900 font-medium text-sm md:text-base">
+                        <div className="animate-marquee whitespace-nowrap inline-block text-amber-900 dark:text-amber-100 font-medium text-sm md:text-base">
                             <span className="mr-8"></span>
                             To ensure 99.99% accuracy, our team is currently updating all notes to include the latest amendments up to 31.12.2025. We appreciate your patience while we craft the highest quality content for you.
                         </div>
@@ -622,14 +622,14 @@ export default function NotesPage() {
 
                 {/* Tabs */}
                 <div className="flex justify-center mb-8">
-                    <div className="bg-white p-1.5 rounded-2xl shadow-lg border border-slate-200/60 inline-flex gap-2">
+                    <div className="bg-white dark:bg-zinc-900 p-1.5 rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 inline-flex gap-2">
                         {["Paper I", "Paper III"].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2 ${activeTab === tab
                                     ? 'bg-purple-600 text-white shadow-md'
-                                    : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
+                                    : 'text-slate-500 dark:text-zinc-400 hover:bg-slate-50 dark:hover:bg-zinc-800 hover:text-slate-700 dark:hover:text-zinc-200'
                                     } `}
                             >
                                 <Layers className="w-4 h-4" />
@@ -644,26 +644,26 @@ export default function NotesPage() {
                     {PDF_DATA[activeTab as keyof typeof PDF_DATA]?.map((file, index) => (
                         <div
                             key={index}
-                            className={`group bg-white rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
-                                ? 'border-zinc-200 opacity-90'
-                                : 'border-slate-100 hover:border-purple-200 hover:shadow-xl hover:-translate-y-1'
+                            className={`group bg-white dark:bg-zinc-900 rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
+                                ? 'border-zinc-200 dark:border-zinc-800 opacity-90'
+                                : 'border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
                                 }`}
                         >
                             <div className="flex items-start justify-between mb-4">
                                 <div className={`p-2 md:p-3 rounded-xl ${file.comingSoon
-                                    ? membershipLevel === 'gold' ? 'bg-zinc-100 text-zinc-400' : 'bg-red-50 text-red-400'
-                                    : file.color === 'blue' ? 'bg-blue-50 text-blue-600' :
-                                        file.color === 'purple' ? 'bg-purple-50 text-purple-600' :
-                                            file.color === 'emerald' ? 'bg-emerald-50 text-emerald-600' :
-                                                file.color === 'rose' ? 'bg-rose-50 text-rose-600' :
-                                                    file.color === 'amber' ? 'bg-amber-50 text-amber-600' :
-                                                        file.color === 'orange' ? 'bg-orange-50 text-orange-600' :
-                                                            file.color === 'cyan' ? 'bg-cyan-50 text-cyan-600' :
-                                                                file.color === 'violet' ? 'bg-violet-50 text-violet-600' :
-                                                                    file.color === 'fuchsia' ? 'bg-fuchsia-50 text-fuchsia-600' :
-                                                                        file.color === 'teal' ? 'bg-teal-50 text-teal-600' :
-                                                                            file.color === 'sky' ? 'bg-sky-50 text-sky-600' :
-                                                                                'bg-indigo-50 text-indigo-600'
+                                    ? membershipLevel === 'gold' ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
+                                    : file.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' :
+                                        file.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400' :
+                                            file.color === 'emerald' ? 'bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400' :
+                                                file.color === 'rose' ? 'bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400' :
+                                                    file.color === 'amber' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400' :
+                                                        file.color === 'orange' ? 'bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400' :
+                                                            file.color === 'cyan' ? 'bg-cyan-50 dark:bg-cyan-900/40 text-cyan-600 dark:text-cyan-400' :
+                                                                file.color === 'violet' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400' :
+                                                                    file.color === 'fuchsia' ? 'bg-fuchsia-50 dark:bg-fuchsia-900/40 text-fuchsia-600 dark:text-fuchsia-400' :
+                                                                        file.color === 'teal' ? 'bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400' :
+                                                                            file.color === 'sky' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400' :
+                                                                                'bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
                                     }`}>
                                     {file.comingSoon && membershipLevel !== 'gold' ? (
                                         <Lock className="w-6 h-6 md:w-8 md:h-8" />
@@ -671,43 +671,43 @@ export default function NotesPage() {
                                         <FileText className="w-6 h-6 md:w-8 md:h-8" />
                                     )}
                                 </div>
-                                <span className={`text-[10px] md:text-sm font-bold px-2 py-1 rounded-md ${file.comingSoon ? 'bg-zinc-100 text-zinc-400' : 'bg-slate-100 text-slate-500'
+                                <span className={`text-[10px] md:text-sm font-bold px-2 py-1 rounded-md ${file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
                                     }`}>
                                     {file.comingSoon ? 'SOON' : 'PDF'}
                                 </span>
                             </div>
 
-                            <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-2 leading-tight transition-colors ${file.comingSoon ? 'text-zinc-600' : 'text-slate-800 group-hover:text-purple-700'
+                            <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-2 leading-tight transition-colors ${file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
                                 }`}>
                                 {file.title}
                                 {file.subtitle && (
-                                    <span className="block text-[10px] md:text-sm font-normal italic text-slate-500 mt-1">
+                                    <span className="block text-[10px] md:text-sm font-normal italic text-slate-500 dark:text-zinc-500 mt-1">
                                         {file.subtitle}
                                     </span>
                                 )}
                             </h3>
-                            <p className="text-[10px] md:text-sm text-slate-500 mb-4 md:mb-6 flex-grow leading-relaxed line-clamp-2 md:line-clamp-none">
+                            <p className="text-[10px] md:text-sm text-slate-500 dark:text-zinc-400 mb-4 md:mb-6 flex-grow leading-relaxed line-clamp-2 md:line-clamp-none">
                                 {file.description}
                             </p>
 
                             {file.comingSoon ? (
                                 membershipLevel === 'gold' ? (
-                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 p-3 flex flex-col items-center justify-center text-center group-hover:from-amber-100 group-hover:to-amber-200 transition-all">
-                                        <div className="relative flex items-center gap-2 text-amber-900 font-bold text-sm mb-1">
-                                            <Sparkles className="w-4 h-4 text-amber-600" />
+                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-950/40 dark:to-amber-900/40 border border-amber-200 dark:border-amber-800/50 p-3 flex flex-col items-center justify-center text-center group-hover:from-amber-100 group-hover:to-amber-200 dark:group-hover:from-amber-900/60 dark:group-hover:to-amber-900/60 transition-all">
+                                        <div className="relative flex items-center gap-2 text-amber-900 dark:text-amber-100 font-bold text-sm mb-1">
+                                            <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                                             <span>Coming Soon</span>
                                         </div>
-                                        <p className="text-xs text-amber-800 font-medium">
+                                        <p className="text-xs text-amber-800 dark:text-amber-200 font-medium">
                                             Materials will be uploaded on {getReleaseDate(file.title)}
                                         </p>
                                     </div>
                                 ) : (
-                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 border border-zinc-200 p-3 flex flex-col items-center justify-center text-center">
-                                        <div className="relative flex items-center gap-2 text-zinc-500 font-bold text-sm mb-1">
-                                            <Lock className="w-3 h-3 text-zinc-400" />
+                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-3 flex flex-col items-center justify-center text-center">
+                                        <div className="relative flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm mb-1">
+                                            <Lock className="w-3 h-3 text-zinc-400 dark:text-zinc-500" />
                                             <span>LOCKED</span>
                                         </div>
-                                        <Link href="/pricing" className="text-xs text-blue-600 hover:underline font-medium">
+                                        <Link href="/pricing" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">
                                             Upgrade to Gold to view schedule
                                         </Link>
                                     </div>
@@ -718,7 +718,7 @@ export default function NotesPage() {
                                         <div className="grid grid-cols-2 gap-1.5 md:gap-3 mt-auto">
                                             <button
                                                 onClick={() => handleActionRequest('view', file.path || '')}
-                                                className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-slate-50 text-slate-700 font-semibold text-[10px] md:text-sm hover:bg-slate-100 transition-colors border border-slate-200"
+                                                className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-slate-50 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-semibold text-[10px] md:text-sm hover:bg-slate-100 dark:hover:bg-zinc-700 transition-colors border border-slate-200 dark:border-zinc-700"
                                             >
                                                 <Eye className="w-3 h-3 md:w-4 md:h-4" />
                                                 View
@@ -732,16 +732,16 @@ export default function NotesPage() {
                                             </button>
                                         </div>
                                         <div className="mt-3 text-center">
-                                            <span className="text-[10px] uppercase tracking-wider text-slate-300 font-semibold">{file.size}</span>
+                                            <span className="text-[10px] uppercase tracking-wider text-slate-300 dark:text-zinc-600 font-semibold">{file.size}</span>
                                         </div>
                                     </>
                                 ) : (
-                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 border border-zinc-200 p-3 flex flex-col items-center justify-center text-center">
-                                        <div className="relative flex items-center gap-2 text-zinc-500 font-bold text-sm mb-1">
-                                            <Lock className="w-3 h-3 text-zinc-400" />
+                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-3 flex flex-col items-center justify-center text-center">
+                                        <div className="relative flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm mb-1">
+                                            <Lock className="w-3 h-3 text-zinc-400 dark:text-zinc-500" />
                                             <span>PREMIUM</span>
                                         </div>
-                                        <Link href="/pricing" className="text-xs text-blue-600 hover:underline font-medium">
+                                        <Link href="/pricing" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">
                                             Upgrade to Gold to unlock
                                         </Link>
                                     </div>
@@ -752,10 +752,10 @@ export default function NotesPage() {
 
                     {(!PDF_DATA[activeTab as keyof typeof PDF_DATA] || PDF_DATA[activeTab as keyof typeof PDF_DATA].length === 0) && (
                         <div className="col-span-full py-20 text-center">
-                            <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <BookOpen className="w-8 h-8 text-slate-300" />
+                            <div className="bg-slate-100 dark:bg-zinc-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <BookOpen className="w-8 h-8 text-slate-300 dark:text-zinc-600" />
                             </div>
-                            <p className="text-slate-400">No notes available for {activeTab} yet.</p>
+                            <p className="text-slate-400 dark:text-zinc-500">No notes available for {activeTab} yet.</p>
                         </div>
                     )}
                 </div>
@@ -764,10 +764,10 @@ export default function NotesPage() {
             {/* --- PDF VIEWER MODAL --- */}
             {selectedPdf && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="bg-white rounded-none sm:rounded-2xl w-full h-full max-w-6xl flex flex-col shadow-2xl overflow-hidden relative">
+                    <div className="bg-white dark:bg-zinc-900 rounded-none sm:rounded-2xl w-full h-full max-w-6xl flex flex-col shadow-2xl overflow-hidden relative">
                         {/* Header */}
-                        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-100 bg-white z-[60] w-full shrink-0">
-                            <h3 className="font-bold text-slate-800 flex items-center gap-2 text-sm sm:text-base truncate mr-2">
+                        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-[60] w-full shrink-0">
+                            <h3 className="font-bold text-slate-800 dark:text-zinc-100 flex items-center gap-2 text-sm sm:text-base truncate mr-2">
                                 <FileText className="w-5 h-5 text-purple-600 shrink-0" />
                                 <span className="truncate">Document Viewer</span>
                             </h3>
@@ -791,7 +791,7 @@ export default function NotesPage() {
                                 </button>
                                 <button
                                     onClick={() => setSelectedPdf(null)}
-                                    className="p-2 rounded-full hover:bg-slate-100 text-slate-500 transition-colors"
+                                    className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-500 dark:text-zinc-400 transition-colors"
                                 >
                                     <span className="sr-only">Close</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
@@ -885,7 +885,7 @@ export default function NotesPage() {
 
             {/* --- DOWNLOAD TOAST --- */}
             {showDownloadToast && (
-                <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] bg-zinc-900 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5 fade-in duration-300">
+                <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] bg-zinc-900 dark:bg-zinc-800 dark:border dark:border-zinc-700 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5 fade-in duration-300">
                     <div className="bg-green-500 rounded-full p-1">
                         <Check className="w-4 h-4 text-white" />
                     </div>
