@@ -23,12 +23,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overscroll-behavior-y: none;
-  /* Prevent pull-to-refresh on mobile */
-  /* Prevent pull-to-refresh on mobile */
   -webkit-tap-highlight-color: transparent;
-  /* Remove tap highlight */
   touch-action: manipulation;
-  /* Remove 300ms click delay */
 }
 
 /* Optimize clicks for interactive elements */
@@ -69,9 +65,7 @@ textarea {
 
 .animate-scroll {
   display: flex;
-  /* Changed to flex to align children */
   width: max-content;
-  /* Ensure width fits content */
   animation: scroll 45s linear infinite;
 }
 
@@ -81,4 +75,23 @@ textarea {
 
 .group:hover .animate-scroll {
   animation-play-state: paused;
+}
+
+/* Custom 3D Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Safari support */
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
 }
