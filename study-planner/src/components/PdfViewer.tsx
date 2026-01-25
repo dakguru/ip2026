@@ -137,8 +137,83 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         </div>
     );
 
+    // --- TOUCH HANDLERS (Swipe & Zoom) ---
+    const [touchStart, setTouchStart] = useState<{ x: number, y: number } | null>(null);
+    const [initialPinchDistance, setInitialPinchDistance] = useState<number | null>(null);
+    const [initialScale, setInitialScale] = useState<number>(1.0);
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        if (e.touches.length === 1) {
+            // Single touch: Swipe start
+            setTouchStart({ x: e.touches[0].clientX, y: e.touches[0].clientY });
+        } else if (e.touches.length === 2) {
+            // Double touch: Pinch start
+            const touch1 = e.touches[0];
+            const touch2 = e.touches[1];
+            const dist = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
+            setInitialPinchDistance(dist);
+            setInitialScale(scale);
+        }
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        if (e.touches.length === 2 && initialPinchDistance !== null) {
+            // Pinch to zoom logic
+            const touch1 = e.touches[0];
+            const touch2 = e.touches[1];
+            const currentDist = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
+
+            // Calculate new scale
+            const ratio = currentDist / initialPinchDistance;
+            const newScale = Math.min(Math.max(initialScale * ratio, 0.5), 3.0); // Limit scale 0.5x to 3.0x
+
+            setScale(newScale);
+
+            // Prevent default to stop browser native zoom/scroll while pinching
+            if (e.cancelable) e.preventDefault();
+        }
+    };
+
+    const onTouchEnd = (e: React.TouchEvent) => {
+        if (touchStart && e.changedTouches.length === 1 && e.touches.length === 0) {
+            // Swipe end logic (only if not pinching)
+            if (initialPinchDistance !== null) {
+                // Was pinching, just reset
+                setInitialPinchDistance(null);
+                return;
+            }
+
+            // Calculate delta
+            const touchEnd = { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+            const deltaX = touchStart.x - touchEnd.x;
+            const deltaY = touchStart.y - touchEnd.y;
+
+            // Threshold for swipe (50px)
+            // Limit vertical movement to ensure it's a horizontal swipe intended
+            if (Math.abs(deltaX) > 50 && Math.abs(deltaY) < 30) {
+                if (deltaX > 0) {
+                    // Swiped Left -> Next Page
+                    if (pageNumber < (numPages || 1)) setPageNumber(p => p + 1);
+                } else {
+                    // Swiped Right -> Prev Page
+                    if (pageNumber > 1) setPageNumber(p => p - 1);
+                }
+            }
+        }
+
+        // Reset states
+        setTouchStart(null);
+        if (e.touches.length === 0) {
+            setInitialPinchDistance(null);
+        }
+    };
+
+
     return (
-        <div className="flex flex-col h-full bg-slate-50 dark:bg-zinc-900" id="pdf-container">
+        <div
+            className="flex flex-col h-full bg-slate-50 dark:bg-zinc-900"
+            id="pdf-container"
+        >
             {/* Toolbar */}
             <div className="flex items-center justify-between p-2 border-b border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-sm z-10 shrink-0 gap-2 overflow-x-auto">
                 <div className="flex items-center gap-2">
@@ -189,7 +264,12 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
             </div>
 
             {/* Document Area */}
-            <div className={`flex-1 overflow-auto flex justify-center p-4 min-h-0 ${darkMode ? 'bg-zinc-900 invert-pdf' : 'bg-slate-100'}`}>
+            <div
+                className={`flex-1 overflow-auto flex justify-center p-4 min-h-0 ${darkMode ? 'bg-zinc-900 invert-pdf' : 'bg-slate-100'}`}
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+            >
                 {error ? (
                     <ErrorUI />
                 ) : (
@@ -203,7 +283,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                         options={pdfOptions}
                         className="max-w-full"
                     >
-                        <div className="shadow-lg transition-transform duration-200">
+                        <div className="shadow-lg transition-transform duration-75 relative z-0">
                             <Page
                                 pageNumber={pageNumber}
                                 scale={scale}

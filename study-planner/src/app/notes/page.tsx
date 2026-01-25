@@ -311,7 +311,14 @@ const PDF_DATA: Record<string, Note[]> = {
 
         // 38. Savings Bank
         { title: "SB Manual Vol I, II & III", description: "Read with SB orders issued by Directorate.", color: "teal", comingSoon: true },
-        { title: "POSB (CBS) Manual", description: "Corrected up to 31.12.2021 and subsequent orders.", color: "teal", comingSoon: true },
+        {
+            title: "POSB (CBS) Manual",
+            description: "Corrected up to 31.12.2021 and subsequent orders.",
+            filename: "POSB_CBS_MANUAL.pdf",
+            path: "/notes/paper-1/POSB_CBS_MANUAL.pdf",
+            size: "0.5 MB",
+            color: "teal"
+        },
 
         // 40. Reports
         { title: "Annual Reports & Book of Information", description: "Department of Posts annual data.", color: "slate", comingSoon: true },
