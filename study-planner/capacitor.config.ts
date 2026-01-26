@@ -5,13 +5,13 @@ const config: CapacitorConfig = {
   appName: 'Dak Guru',
   webDir: 'public',
   server: {
-    url: 'https://ip2026.vercel.app',
-    androidScheme: 'https'
+    url: 'https://dakguru.com',
+    androidScheme: 'https',
+    allowNavigation: ['dakguru.com', '*.dakguru.com', 'ip2026.vercel.app']
   },
   plugins: {
     SplashScreen: {
-      launchAutoHide: true,
-      launchShowDuration: 500,
+      launchAutoHide: false,
       backgroundColor: "#ffffff",
       showSpinner: false,
       androidSplashResourceName: "splash"

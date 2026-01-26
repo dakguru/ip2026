@@ -14,6 +14,7 @@ import com.getcapacitor.BridgeActivity;
 import android.webkit.WebViewClient;
 import android.content.Intent;
 import android.net.Uri;
+import android.webkit.WebResourceRequest;
 import androidx.core.splashscreen.SplashScreen;
 
 public class MainActivity extends BridgeActivity {
@@ -37,11 +38,29 @@ public class MainActivity extends BridgeActivity {
             
             // Enable hardware acceleration
             webView.setLayerType(android.view.View.LAYER_TYPE_HARDWARE, null);
+            
+            // Fix White/Black flash by setting WebView background immediately
+            webView.setBackgroundColor(android.graphics.Color.WHITE);
 
-            // Razorpay Deep Linking Fix
+            // Razorpay Deep Linking Fix & Internal Navigation Enforcement
             webView.setWebViewClient(new com.getcapacitor.BridgeWebViewClient(bridge) {
                 @Override
+                public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                    String url = request.getUrl().toString();
+                    return handleNavigation(view, url);
+                }
+
+                @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                    return handleNavigation(view, url);
+                }
+
+                private boolean handleNavigation(WebView view, String url) {
+                    // Force Dak Guru domain to stay inside the app WebView
+                    if (url.contains("dakguru.com")) {
+                        return false; 
+                    }
+                    
                     if (url.startsWith("http") || url.startsWith("https")) {
                         return super.shouldOverrideUrlLoading(view, url);
                     } else {

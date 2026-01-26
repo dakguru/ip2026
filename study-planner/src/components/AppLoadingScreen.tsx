@@ -30,34 +30,24 @@ export default function AppLoadingScreen() {
     useEffect(() => {
         if (!shouldRender) return;
 
-        // Safety timeout to ensure splash doesn't stay forever if image fails
-        const safetyTimer = setTimeout(() => {
-            handleImageReady();
-        }, 3000);
+        const startAppTransition = async () => {
+            try {
+                // Hide native splash screen immediately when our custom loader is mounted
+                await CapacitorSplashScreen.hide();
+            } catch (e) { }
 
-        return () => clearTimeout(safetyTimer);
+            // branding display time (reduced to 1.5s for snappier feel)
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            setIsVisible(false); // Trigger exit animation
+
+            setTimeout(() => {
+                document.body.style.overflow = 'unset';
+            }, 800);
+        };
+
+        startAppTransition();
     }, [shouldRender]);
-
-    const handleImageReady = async () => {
-        // Prevent double execution
-        if (!isVisible) return;
-
-        try {
-            // Hide native splash screen as soon as our React app starts rendering
-            await CapacitorSplashScreen.hide();
-        } catch (e) {
-            // ignore
-        }
-
-        // minimum branding display time
-        await new Promise(resolve => setTimeout(resolve, 2000));
-
-        setIsVisible(false); // Trigger exit animation
-
-        setTimeout(() => {
-            document.body.style.overflow = 'unset';
-        }, 800);
-    };
 
     if (!shouldRender) return null;
 
@@ -65,7 +55,7 @@ export default function AppLoadingScreen() {
         <AnimatePresence>
             {isVisible && (
                 <motion.div
-                    className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white"
+                    className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950"
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -82,7 +72,6 @@ export default function AppLoadingScreen() {
                             <img
                                 src="/official-logo.png"
                                 alt="Dak Guru Logo"
-                                onLoad={handleImageReady}
                                 className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-sm"
                             />
 
