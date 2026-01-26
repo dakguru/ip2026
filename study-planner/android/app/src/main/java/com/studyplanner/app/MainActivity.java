@@ -11,6 +11,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
 import com.google.android.material.navigation.NavigationView;
 import com.getcapacitor.BridgeActivity;
+import android.webkit.WebViewClient;
+import android.content.Intent;
+import android.net.Uri;
 import androidx.core.splashscreen.SplashScreen;
 
 public class MainActivity extends BridgeActivity {
@@ -27,8 +30,31 @@ public class MainActivity extends BridgeActivity {
             settings.setDomStorageEnabled(true);
             settings.setDatabaseEnabled(true);
             
-            // Enable hardware acceleration if not already handled
+            // Disable Zoom functionality for native feel
+            settings.setBuiltInZoomControls(false);
+            settings.setDisplayZoomControls(false);
+            settings.setSupportZoom(false);
+            
+            // Enable hardware acceleration
             webView.setLayerType(android.view.View.LAYER_TYPE_HARDWARE, null);
+
+            // Razorpay Deep Linking Fix
+            webView.setWebViewClient(new com.getcapacitor.BridgeWebViewClient(bridge) {
+                @Override
+                public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                    if (url.startsWith("http") || url.startsWith("https")) {
+                        return super.shouldOverrideUrlLoading(view, url);
+                    } else {
+                        try {
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                            view.getContext().startActivity(intent);
+                        } catch (Exception e) {
+                            Log.e("DeepLink", "Error opening deep link: " + e.getMessage());
+                        }
+                        return true;
+                    }
+                }
+            });
         }
 
         // Native UI Initialization

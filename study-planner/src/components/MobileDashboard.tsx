@@ -166,7 +166,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                         </div>
                                         <div>
                                             <h2 className="text-lg font-bold text-slate-900 dark:text-zinc-100 tracking-tight">Dak Guru</h2>
-                                            <p className="text-xs text-slate-500 font-medium">Professional Learning</p>
+                                            <p className="text-xs text-slate-500 font-medium">A Self-Learning Portal</p>
                                         </div>
                                     </div>
 
@@ -402,74 +402,29 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </div>
                 </div>
 
-                {/* --- CAROUSEL (Royal) --- */}
-                <div className="px-4 md:px-6">
-                    <div className="rounded-2xl overflow-hidden shadow-lg shadow-blue-900/10">
-                        <DashboardCarousel />
-                    </div>
-                </div>
-
-                {/* --- PRO UPGRADE CARD (Royal Theme) --- */}
-                {!isGold && (
-                    <div className="px-4 md:px-6">
-                        <Link href="/pricing" className="block relative overflow-hidden rounded-2xl shadow-xl shadow-slate-900/5 group transform transition-all duration-300 hover:scale-[1.01]">
-                            {/* Deep Royal Gradient Background */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-800"></div>
-
-                            {/* Gold Accents */}
-                            <div className="absolute top-0 right-0 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
-                            <div className="absolute bottom-0 left-0 w-32 h-32 bg-amber-600/10 rounded-full blur-2xl -ml-8 -mb-8"></div>
-
-                            <div className="relative z-10 p-5 flex flex-row items-center justify-between gap-4">
-                                <div className="space-y-2">
-                                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/20 border border-amber-500/30 text-[10px] font-bold text-amber-300 uppercase tracking-wider">
-                                        <Crown className="w-3 h-3 fill-current" />
-                                        <span>Premium</span>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-bold text-white leading-tight">
-                                            Upgrade to Gold
-                                        </h3>
-                                        <p className="text-xs text-slate-400 font-medium mt-1">
-                                            Unlock full mock tests & PDF library.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="shrink-0">
-                                    <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-2.5 rounded-lg font-semibold text-xs shadow-lg hover:shadow-amber-500/25 transition-all flex items-center gap-1">
-                                        Get Started <ChevronRight className="w-3 h-3" />
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                )}
-
-                {/* --- QUICK ACTIONS (Symmetrical Grid) --- */}
-                <div className="px-4 md:px-6">
-                    <div className="flex items-center gap-2 mb-5">
+                {/* --- QUICK ACTIONS (NOW SECOND) --- */}
+                <div className="px-5">
+                    <div className="flex items-center gap-2 mb-4">
                         <div className="h-4 w-1 bg-blue-600 rounded-full"></div>
-                        <h3 className="text-base font-bold text-slate-900 dark:text-zinc-100 tracking-tight">
-                            Quick Actions
+                        <h3 className="text-xs font-black text-slate-800 dark:text-zinc-300 uppercase tracking-widest">
+                            Quick Study Tools
                         </h3>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-x-4 gap-y-8">
+                    <div className="grid grid-cols-3 gap-x-4 gap-y-6">
                         {mainFeatures.map((item) => (
                             <Link
                                 key={item.label}
                                 href={item.href}
                                 target={item.href.startsWith("http") ? "_blank" : undefined}
                                 rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                                className="flex flex-col items-center gap-3 group"
+                                className="flex flex-col items-center gap-2.5 group active:scale-95 transition-transform"
                             >
-                                <div className={`w-[72px] h-[72px] sm:w-[80px] sm:h-[80px] rounded-2xl flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden`}>
-                                    {/* Subtle shine effect */}
-                                    <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                    <item.icon className={`w-8 h-8 ${item.color} drop-shadow-sm`} strokeWidth={1.5} />
+                                <div className={`w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-[20px] flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden backdrop-blur-sm`}>
+                                    <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                    <item.icon className={`w-7 h-7 ${item.color} drop-shadow-sm`} strokeWidth={2} />
                                 </div>
-                                <span className="text-[11px] font-bold text-center text-slate-600 dark:text-zinc-400 leading-tight group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
+                                <span className="text-[10px] font-black text-center text-slate-500 dark:text-zinc-400 leading-tight uppercase tracking-tight">
                                     {item.label}
                                 </span>
                             </Link>
@@ -477,32 +432,59 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </div>
                 </div>
 
-                {/* --- COMMUNITY (Creative & Attractive Banner) --- */}
-                <div className="px-4 md:px-6 pb-4">
-                    <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-600 via-indigo-600 to-blue-600 shadow-xl shadow-indigo-500/30 transition-shadow hover:shadow-indigo-500/50">
-                        {/* Decorative background elements */}
-                        <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-black/10 rounded-full blur-2xl -ml-10 -mb-10 pointer-events-none"></div>
+                {/* --- CAROUSEL (NOW THIRD - THE "SECOND BANNER") --- */}
+                <div className="px-5">
+                    <div className="flex items-center gap-2 mb-4">
+                        <div className="h-4 w-1 bg-indigo-600 rounded-full"></div>
+                        <h3 className="text-xs font-black text-slate-800 dark:text-zinc-300 uppercase tracking-widest">
+                            Live Events & Updates
+                        </h3>
+                    </div>
+                    <div className="rounded-3xl overflow-hidden shadow-2xl shadow-indigo-900/10 border border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+                        <DashboardCarousel />
+                    </div>
+                </div>
 
-                        <div className="relative p-6 flex items-center justify-between gap-4">
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/20 shadow-inner">
-                                    <MessageCircle className="w-6 h-6 text-white fill-white/20" />
+                {/* --- PRO UPGRADE CARD --- */}
+                {!isGold && (
+                    <div className="px-5">
+                        <Link href="/pricing" className="block relative overflow-hidden rounded-3xl shadow-xl shadow-slate-900/10 group active:scale-[0.98] transition-all duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 to-zinc-800"></div>
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-amber-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+
+                            <div className="relative z-10 p-6 flex flex-row items-center justify-between gap-4">
+                                <div className="space-y-1.5">
+                                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/30 text-[9px] font-black text-amber-400 uppercase tracking-[0.1em]">
+                                        <Crown className="w-2.5 h-2.5 fill-current" />
+                                        <span>Pro Membership</span>
+                                    </div>
+                                    <h3 className="text-lg font-black text-white leading-tight">Upgrade to Gold</h3>
+                                    <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Full Mock Tests & PDF Library</p>
                                 </div>
-                                <div className="flex-1">
-                                    <h3 className="text-base font-bold text-white tracking-wide">Join Community</h3>
-                                    <p className="text-xs text-indigo-100 mt-1 leading-snug font-medium opacity-90">
-                                        Connect, discuss & grow with toppers.
-                                    </p>
+
+                                <div className="shrink-0 bg-amber-500 text-black px-4 py-2 rounded-xl font-black text-[10px] uppercase shadow-lg shadow-amber-500/20">
+                                    Go Pro
                                 </div>
                             </div>
+                        </Link>
+                    </div>
+                )}
 
-                            <Link
-                                href="/social"
-                                className="shrink-0 px-4 py-2 bg-white text-indigo-700 rounded-lg text-[11px] font-extrabold uppercase tracking-wider hover:bg-indigo-50 transition-transform active:scale-95 shadow-lg shadow-black/20"
-                            >
-                                Join Now
-                            </Link>
+                {/* --- COMMUNITY --- */}
+                <div className="px-5 pb-6">
+                    <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-700 to-blue-700 shadow-xl shadow-indigo-500/20 transition-all active:scale-[0.98]">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                        <div className="relative p-6 flex items-center justify-between gap-4">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                                    <MessageCircle className="w-6 h-6 text-white" />
+                                </div>
+                                <div>
+                                    <h3 className="text-base font-black text-white">Join Community</h3>
+                                    <p className="text-[10px] text-indigo-100 font-bold uppercase tracking-wider opacity-80 mt-1">Connect with Toppers</p>
+                                </div>
+                            </div>
+                            <Link href="/social" className="bg-white text-indigo-700 px-4 py-2 rounded-xl font-black text-[10px] uppercase shadow-lg">Join</Link>
                         </div>
                     </div>
                 </div>

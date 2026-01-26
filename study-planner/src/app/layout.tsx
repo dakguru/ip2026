@@ -20,6 +20,13 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
   title: "Dak Guru. Learn, Practice, Succeed",
   description: "Detailed study syllabus and calendar for Inspector Posts LDCE 2026",

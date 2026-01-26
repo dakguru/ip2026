@@ -43,13 +43,14 @@ export default function AppLoadingScreen() {
         if (!isVisible) return;
 
         try {
+            // Hide native splash screen as soon as our React app starts rendering
             await CapacitorSplashScreen.hide();
         } catch (e) {
-            // console.warn("Splash hide error", e);
+            // ignore
         }
 
-        // Minimum branding display time
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        // minimum branding display time
+        await new Promise(resolve => setTimeout(resolve, 2000));
 
         setIsVisible(false); // Trigger exit animation
 
