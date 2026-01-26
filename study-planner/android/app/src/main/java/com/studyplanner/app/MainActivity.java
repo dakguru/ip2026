@@ -41,39 +41,6 @@ public class MainActivity extends BridgeActivity {
             
             // Fix White/Black flash by setting WebView background immediately
             webView.setBackgroundColor(android.graphics.Color.WHITE);
-
-            // Razorpay Deep Linking Fix & Internal Navigation Enforcement
-            webView.setWebViewClient(new com.getcapacitor.BridgeWebViewClient(bridge) {
-                @Override
-                public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                    String url = request.getUrl().toString();
-                    return handleNavigation(view, url);
-                }
-
-                @Override
-                public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                    return handleNavigation(view, url);
-                }
-
-                private boolean handleNavigation(WebView view, String url) {
-                    // Force Dak Guru domain to stay inside the app WebView
-                    if (url.contains("dakguru.com")) {
-                        return false; 
-                    }
-                    
-                    if (url.startsWith("http") || url.startsWith("https")) {
-                        return super.shouldOverrideUrlLoading(view, url);
-                    } else {
-                        try {
-                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                            view.getContext().startActivity(intent);
-                        } catch (Exception e) {
-                            Log.e("DeepLink", "Error opening deep link: " + e.getMessage());
-                        }
-                        return true;
-                    }
-                }
-            });
         }
 
         // Native UI Initialization

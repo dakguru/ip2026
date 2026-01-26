@@ -30,23 +30,20 @@ export default function AppLoadingScreen() {
     useEffect(() => {
         if (!shouldRender) return;
 
-        const startAppTransition = async () => {
-            try {
-                // Hide native splash screen immediately when our custom loader is mounted
-                await CapacitorSplashScreen.hide();
-            } catch (e) { }
+        // 1. Hide native splash (fire and forget)
+        try {
+            CapacitorSplashScreen.hide();
+        } catch (e) { }
 
-            // branding display time (reduced to 1.5s for snappier feel)
-            await new Promise(resolve => setTimeout(resolve, 1500));
-
-            setIsVisible(false); // Trigger exit animation
-
+        // 2. Guaranteed transition to app after 1.8 seconds
+        const timer = setTimeout(() => {
+            setIsVisible(false);
             setTimeout(() => {
                 document.body.style.overflow = 'unset';
             }, 800);
-        };
+        }, 1800);
 
-        startAppTransition();
+        return () => clearTimeout(timer);
     }, [shouldRender]);
 
     if (!shouldRender) return null;
