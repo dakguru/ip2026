@@ -29,7 +29,7 @@ export default function Footer() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-zinc-500">
                         <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
-                        <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="/privacypolicy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
                         <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
                         <Link href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</Link>
