@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetHeader } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
 import { useRouter } from "next/navigation";
+import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 
 interface MobileDashboardProps {
     displayName: string;
@@ -140,6 +141,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
+            <MockTestAnnouncementPopup />
             {/* --- ROYAL HEADER --- */}
             <header className="sticky top-0 z-40 bg-slate-900 dark:bg-black px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] border-b border-slate-800 shadow-xl shadow-slate-900/20">
                 <div className="flex items-center justify-between">
@@ -364,47 +366,38 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
                 {/* --- LIVE MOCK TEST BANNER (Royal & Urgent) --- */}
                 <div className="px-4 md:px-6">
-                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-950 shadow-xl shadow-purple-900/20 p-5">
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-600 via-yellow-600 to-amber-700 shadow-xl shadow-amber-900/20 p-5 group">
                         {/* Background Effects */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -ml-10 -mb-10"></div>
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl -mr-10 -mt-10 animate-pulse"></div>
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-yellow-400/20 rounded-full blur-2xl -ml-10 -mb-10 animate-pulse delay-700"></div>
 
-                        <div className="relative z-10">
-                            <div className="flex items-center justify-between mb-4">
-                                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-200 font-bold text-[10px] uppercase tracking-wider">
-                                    <span className="relative flex h-1.5 w-1.5">
-                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-400"></span>
-                                    </span>
-                                    Upcoming
+                        <div className="relative z-10 text-center">
+                            <div className="flex items-center justify-center mb-3">
+                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 border border-white/30 text-white font-black text-[10px] uppercase tracking-[0.2em]">
+                                    <Trophy className="w-3.5 h-3.5" />
+                                    Results Live
                                 </div>
-                                <span className="text-[10px] font-medium text-purple-200 bg-white/10 px-2 py-0.5 rounded-md">
-                                    Jan 24 - 25
-                                </span>
                             </div>
 
-                            <h3 className="text-xl font-bold text-white mb-2 leading-tight">
-                                All India <br /> Mock Test - 02
+                            <h3 className="text-2xl font-black text-white mb-2 leading-tight drop-shadow-md">
+                                HALL OF FAME <br />
+                                <span className="text-yellow-200">MOCK TEST - 02</span>
                             </h3>
 
-                            <div className="bg-black/20 rounded-lg p-3 border border-white/5 mb-4">
-                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Syllabus</p>
-                                <ul className="space-y-1">
-                                    <li className="text-xs text-slate-200 flex items-center gap-1.5">
-                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> Consumer Protection Act, 2019
-                                    </li>
-                                    <li className="text-xs text-slate-200 flex items-center gap-1.5">
-                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> IT Act, 2000
-                                    </li>
-                                    <li className="text-xs text-slate-200 flex items-center gap-1.5">
-                                        <CheckCircle2 className="w-3 h-3 text-green-400" /> PO Rules & Regulations 2024
-                                    </li>
-                                </ul>
-                            </div>
+                            <p className="text-[10px] font-bold text-amber-100 uppercase tracking-widest mb-4 opacity-80">
+                                Congratulations to all Top 7 Rankers!
+                            </p>
 
-                            <Link href="/quiz" className="w-full bg-white text-indigo-900 py-3 rounded-xl font-bold text-sm shadow-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
-                                <PlayCircle className="w-4 h-4 fill-indigo-900" />
-                                View Details
-                            </Link>
+                            <button
+                                onClick={() => {
+                                    sessionStorage.removeItem("seen_mock_results_test_02_v2");
+                                    window.location.reload();
+                                }}
+                                className="w-full bg-white text-amber-700 py-3 rounded-xl font-black text-sm shadow-xl flex items-center justify-center gap-2 active:scale-95 transition-all hover:bg-amber-50"
+                            >
+                                <Crown className="w-4 h-4 fill-amber-700" />
+                                View Leaderboard
+                            </button>
                         </div>
                     </div>
                 </div>
