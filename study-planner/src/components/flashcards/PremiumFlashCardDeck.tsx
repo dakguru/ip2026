@@ -17,31 +17,57 @@ interface CardData {
 interface PremiumFlashCardDeckProps {
     cards: CardData[];
     title: string;
+    externalIndex?: number;
+    onIndexChange?: (index: number) => void;
+    initialShuffled?: boolean;
 }
 
-export default function PremiumFlashCardDeck({ cards, title }: PremiumFlashCardDeckProps) {
-    const [currentIndex, setCurrentIndex] = useState(0);
+export default function PremiumFlashCardDeck({
+    cards,
+    title,
+    externalIndex,
+    onIndexChange,
+    initialShuffled = false
+}: PremiumFlashCardDeckProps) {
+    const [internalIndex, setInternalIndex] = useState(0);
     const [isShuffled, setIsShuffled] = useState(false);
     const [displayCards, setDisplayCards] = useState(cards);
     const [direction, setDirection] = useState(0);
     const [bookmarks, setBookmarks] = useState<Set<string | number>>(new Set());
 
+    // Sync current index: prefer external if provided
+    const currentIndex = externalIndex !== undefined ? externalIndex : internalIndex;
+
     useEffect(() => {
-        setDisplayCards(cards);
-        setCurrentIndex(0);
-    }, [cards]);
+        if (initialShuffled) {
+            const shuffled = [...cards].sort(() => Math.random() - 0.5);
+            setDisplayCards(shuffled);
+            setIsShuffled(true);
+        } else {
+            setDisplayCards(cards);
+            setIsShuffled(false);
+        }
+
+        // Reset index when cards change
+        if (onIndexChange) onIndexChange(externalIndex || 0);
+        else setInternalIndex(0);
+    }, [cards, onIndexChange, initialShuffled]);
 
     const handleNext = () => {
         if (currentIndex < displayCards.length - 1) {
             setDirection(1);
-            setCurrentIndex(prev => prev + 1);
+            const nextIdx = currentIndex + 1;
+            if (onIndexChange) onIndexChange(nextIdx);
+            else setInternalIndex(nextIdx);
         }
     };
 
     const handlePrev = () => {
         if (currentIndex > 0) {
             setDirection(-1);
-            setCurrentIndex(prev => prev - 1);
+            const prevIdx = currentIndex - 1;
+            if (onIndexChange) onIndexChange(prevIdx);
+            else setInternalIndex(prevIdx);
         }
     };
 
@@ -55,7 +81,8 @@ export default function PremiumFlashCardDeck({ cards, title }: PremiumFlashCardD
         } else {
             setDisplayCards(cards);
         }
-        setCurrentIndex(0);
+        if (onIndexChange) onIndexChange(0);
+        else setInternalIndex(0);
         setDirection(0);
     };
 
@@ -67,6 +94,15 @@ export default function PremiumFlashCardDeck({ cards, title }: PremiumFlashCardD
             newBookmarks.add(id);
         }
         setBookmarks(newBookmarks);
+    };
+
+    const handleDragEnd = (event: any, info: any) => {
+        const swipeThreshold = 50;
+        if (info.offset.x < -swipeThreshold) {
+            handleNext();
+        } else if (info.offset.x > swipeThreshold) {
+            handlePrev();
+        }
     };
 
     const currentCard = displayCards[currentIndex];
@@ -84,37 +120,43 @@ export default function PremiumFlashCardDeck({ cards, title }: PremiumFlashCardD
     if (!currentCard) return null;
 
     return (
-        <div className="flex flex-col items-center w-full max-w-2xl mx-auto space-y-8">
-            {/* PROGRESS HEADER */}
-            <div className="w-full space-y-4 px-4">
-                <div className="flex justify-between items-end">
-                    <div className="space-y-1">
-                        <h2 className="text-2xl font-black text-slate-800 dark:text-white tracking-tight">{title}</h2>
-                        <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
+        <div className="flex flex-col w-full max-w-lg mx-auto h-full min-h-[600px] relative bg-transparent">
+            {/* ANDROID STYLE COMPACT HEADER (Matches Screenshot 1) */}
+            <div className="w-full pt-4 pb-2 px-6">
+                <div className="flex justify-between items-start mb-1">
+                    <div className="flex-1 min-w-0">
+                        <h2 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white truncate tracking-tight uppercase leading-tight">
+                            {title}
+                        </h2>
+                        <p className="text-[10px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-widest mt-0.5">
                             Card {currentIndex + 1} of {displayCards.length}
                         </p>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 ml-4">
                         <button
                             onClick={handleShuffle}
-                            className={`p-2.5 rounded-xl transition-all ${isShuffled ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/20' : 'bg-white dark:bg-slate-900 text-slate-400 border border-slate-200 dark:border-slate-800'}`}
-                            title="Shuffle Deck"
+                            className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${isShuffled ? 'bg-indigo-600 text-white shadow-lg' : 'bg-white dark:bg-white/5 text-slate-400 border border-slate-200 dark:border-white/10'}`}
+                            title="Shuffle"
                         >
                             <Shuffle className="w-4 h-4" />
                         </button>
                         <button
-                            onClick={() => setCurrentIndex(0)}
-                            className="p-2.5 rounded-xl bg-white dark:bg-slate-900 text-slate-400 border border-slate-200 dark:border-slate-800 transition-all hover:text-slate-600 dark:hover:text-slate-200"
-                            title="Reset Deck"
+                            onClick={() => {
+                                if (onIndexChange) onIndexChange(0);
+                                else setInternalIndex(0);
+                            }}
+                            className="w-10 h-10 rounded-xl bg-white dark:bg-white/5 text-slate-400 border border-slate-200 dark:border-white/10 flex items-center justify-center transition-all hover:text-indigo-600"
+                            title="Reset"
                         >
                             <RotateCcw className="w-4 h-4" />
                         </button>
                     </div>
                 </div>
 
-                <div className="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                {/* Linear Progress Bar */}
+                <div className="h-1 w-full bg-indigo-100 dark:bg-white/5 rounded-full overflow-hidden mt-4">
                     <motion.div
-                        className="h-full bg-blue-500"
+                        className="h-full bg-indigo-600"
                         initial={{ width: 0 }}
                         animate={{ width: `${progress}%` }}
                         transition={{ duration: 0.3 }}
@@ -122,16 +164,21 @@ export default function PremiumFlashCardDeck({ cards, title }: PremiumFlashCardD
                 </div>
             </div>
 
-            {/* CARD AREA */}
-            <div className="relative w-full aspect-[4/5] max-h-[500px] px-4">
-                <AnimatePresence mode="wait" initial={false}>
+            {/* CARD AREA WITH SWIPE */}
+            <div className="flex-1 relative w-full px-4 py-8 flex items-center justify-center">
+                <AnimatePresence mode="wait" initial={false} custom={direction}>
                     <motion.div
                         key={currentCard.id}
-                        initial={{ x: direction * 100, opacity: 0, scale: 0.95 }}
+                        custom={direction}
+                        initial={{ x: direction * 50, opacity: 0, scale: 0.98 }}
                         animate={{ x: 0, opacity: 1, scale: 1 }}
-                        exit={{ x: -direction * 100, opacity: 0, scale: 0.95 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="w-full h-full"
+                        exit={{ x: -direction * 50, opacity: 0, scale: 0.98 }}
+                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        drag="x"
+                        dragConstraints={{ left: 0, right: 0 }}
+                        dragElastic={0.4}
+                        onDragEnd={handleDragEnd}
+                        className="w-full cursor-grab active:cursor-grabbing"
                     >
                         <PremiumFlashCard
                             question={currentCard.question}
@@ -146,36 +193,37 @@ export default function PremiumFlashCardDeck({ cards, title }: PremiumFlashCardD
                 </AnimatePresence>
             </div>
 
-            {/* NAVIGATION CONTROLS */}
-            <div className="flex items-center gap-6 pb-12">
-                <button
-                    onClick={handlePrev}
-                    disabled={currentIndex === 0}
-                    className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-800 dark:text-white shadow-sm transition-all active:scale-90 disabled:opacity-30 disabled:grayscale"
-                >
-                    <ChevronLeft className="w-6 h-6 stroke-[2.5]" />
-                </button>
+            {/* ANDROID-STYLE NAVIGATION (BOTTOM - Matches Screenshot 2) */}
+            <div className="w-full px-6 py-6 flex flex-col items-center gap-4 mt-auto">
+                <div className="flex items-center justify-between w-full max-w-sm gap-8">
+                    <button
+                        onClick={handlePrev}
+                        disabled={currentIndex === 0}
+                        className="w-16 h-16 rounded-[24px] bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-slate-800 dark:text-white shadow-xl shadow-slate-200/50 dark:shadow-none transition-all active:scale-90 disabled:opacity-20"
+                    >
+                        <ChevronLeft className="w-8 h-8" />
+                    </button>
 
-                <div className="flex flex-col items-center">
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Navigation</p>
-                    <div className="flex gap-1.5">
-                        {Array.from({ length: Math.min(displayCards.length, 5) }).map((_, i) => {
-                            // Simple dot indicator
-                            const isActive = i === (currentIndex % 5);
-                            return (
-                                <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${isActive ? 'w-4 bg-blue-500' : 'w-1.5 bg-slate-200 dark:bg-slate-800'}`} />
-                            );
-                        })}
+                    <div className="flex flex-col items-center flex-none">
+                        <span className="text-[10px] font-black text-slate-300 dark:text-slate-700 uppercase tracking-[0.3em] mb-3 leading-none">Navigation</span>
+                        <div className="flex gap-1.5">
+                            {Array.from({ length: 5 }).map((_, i) => {
+                                const isActive = i === (currentIndex % 5);
+                                return (
+                                    <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${isActive ? 'w-6 bg-indigo-600 shadow-lg shadow-indigo-500/30' : 'w-1.5 bg-slate-200 dark:bg-white/10'}`} />
+                                );
+                            })}
+                        </div>
                     </div>
-                </div>
 
-                <button
-                    onClick={handleNext}
-                    disabled={currentIndex === displayCards.length - 1}
-                    className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-800 dark:text-white shadow-sm transition-all active:scale-90 disabled:opacity-30 disabled:grayscale"
-                >
-                    <ChevronRight className="w-6 h-6 stroke-[2.5]" />
-                </button>
+                    <button
+                        onClick={handleNext}
+                        disabled={currentIndex === displayCards.length - 1}
+                        className="w-16 h-16 rounded-[24px] bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-slate-800 dark:text-white shadow-xl shadow-slate-200/50 dark:shadow-none transition-all active:scale-90 disabled:opacity-20"
+                    >
+                        <ChevronRight className="w-8 h-8" />
+                    </button>
+                </div>
             </div>
         </div>
     );

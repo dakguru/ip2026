@@ -26737,7 +26737,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 1,
         "question": "Which Section of The Post Office Act, 2023 empowers the Director General to make regulations?",
         "answer": "Section 13",
-        "explanation": "Section 13.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -26754,7 +26754,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 2,
         "question": "Which Section of The Post Office Act, 2023 exempts the Post Office and its officers from liabilities related to service provided by the Post Office?",
         "answer": "Section 10",
-        "explanation": "Section 10.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -26771,7 +26771,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 3,
         "question": "What is defined as Which section of Information Technology Act 2000 provides for \"Legal recognition of electronic signatures\"?",
         "answer": "Section 5",
-        "explanation": "Section 5.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -26788,7 +26788,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 4,
         "question": "\"Cyber Terrorism\" is punishable under which section of Information Technology Act 2000?",
         "answer": "Section 66F",
-        "explanation": "Section 66F.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "cyber",
@@ -26805,7 +26805,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 5,
         "question": "What is defined as Minor of which age can open and operate an account in the Government Savings Bank scheme as per Government savings Promotion Act 1873?",
         "answer": "Ten",
-        "explanation": "Ten.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -26822,7 +26822,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 6,
         "question": "Which section of Government savings Promotion Act 1873 provides for \"Nomination by depositor\"?",
         "answer": "Section 4",
-        "explanation": "Section 4.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -26839,7 +26839,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 7,
         "question": "What is defined as The PMLA Act 2002 has been passed as?",
         "answer": "ACT No. 15 OF 2003",
-        "explanation": "ACT No. 15 OF 2003.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -26856,7 +26856,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 8,
         "question": "What is defined as The provisions of PMLA Act 2002 came into force on which date?",
         "answer": "1st July 2005",
-        "explanation": "1st July 2005.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -26873,7 +26873,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 9,
         "question": "The Offence of money-laundering has been defined in which section of PMLA Act 2002?",
         "answer": "Section 3",
-        "explanation": "Section 3.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "offence",
@@ -26890,7 +26890,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 10,
         "question": "The power for Attachment of property involved in money-laundering has been provided in which section of PMLA Act 2002?",
         "answer": "Section 5",
-        "explanation": "Section 5.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "power",
@@ -26907,7 +26907,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 11,
         "question": "A person aggrieved by any order passed by the Central Authority under sections 20 and 21 of Consumer Protection Act 2019 may file an appeal to the National Commission within a period of how many days from the date of receipt of such order",
         "answer": "30 days",
-        "explanation": "30 days.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "person",
@@ -26924,7 +26924,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 12,
         "question": "Which Section of The Post Office Act, 2023 empowers the Central Government to make rules?",
         "answer": "Section 12",
-        "explanation": "Section 12.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -26941,7 +26941,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 13,
         "question": "What is the maximum limit for deposit in an account opened under National Savings Certificate account scheme 2019 by an account holder?",
         "answer": "There is no maximum limit",
-        "explanation": "There is no maximum limit.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -26958,7 +26958,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 14,
         "question": "As per Public Provident Fund Scheme, 2019, what is the maximum limit of subscription amount that can be made in a PPF Account during a financial year?",
         "answer": "150000",
-        "explanation": "150000.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "public",
@@ -26975,7 +26975,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 15,
         "question": "What is defined as As per Public Provident Fund Scheme, 2019, a subscription to a PPF Account must be in the multiple of?",
         "answer": "Rs 50",
-        "explanation": "Rs 50.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -26992,7 +26992,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 16,
         "question": "Aerogramme shall be sold by the post offices specified by the ...?",
         "answer": "Circle Head",
-        "explanation": "Circle Head.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "aerogramme",
@@ -27009,7 +27009,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 17,
         "question": "As per Post Office Savings Account Scheme, 2019, an SB Account can be opened with a minimum amount of Rs. .....?",
         "answer": "500",
-        "explanation": "500.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "post",
@@ -27026,7 +27026,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 18,
         "question": "As per Post Office Savings Account Scheme, 2019, a Savings Account shall be treated as a \"silent Account\" if there is no deposit or withdrawal in an account for complete years,",
         "answer": "3 years",
-        "explanation": "3 years.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "post",
@@ -27043,7 +27043,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 19,
         "question": "The maturity period of an account opened under the National Savings Recurring Deposit Scheme, 2019 is how many years?",
         "answer": "5 years",
-        "explanation": "5 years.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "maturity",
@@ -27060,7 +27060,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 20,
         "question": "An account opened under the National Savings Recurring Deposit Scheme, 2019 is treated as discontinued if there are defaults for more than ........ monthly deposits?",
         "answer": "Four",
-        "explanation": "Four.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "account",
@@ -27077,7 +27077,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 21,
         "question": "As per National Savings Time Deposit Scheme, 2019, a Joint Time Deposit Account can be opened in the name of maximum of how many persons?",
         "answer": "Three",
-        "explanation": "Three.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "national",
@@ -27094,7 +27094,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 22,
         "question": "As per National Savings (Monthly Income Account) Scheme, 2019 an MIS Account may be opened with a minimum deposit of how much rupees?",
         "answer": "One Thousand Rupees",
-        "explanation": "One Thousand Rupees.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "national",
@@ -27111,7 +27111,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 23,
         "question": "As per Senior Citizens' Savings Scheme, 2019, a civilian person must have attained age of ...years to be eligible to open an account under this scheme?",
         "answer": "60 years",
-        "explanation": "60 years.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "senior",
@@ -27128,7 +27128,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 24,
         "question": "As per Senior Citizens' Savings Scheme, 2019, how many times deposits can be made in a Senior Citizens' Savings Scheme account?",
         "answer": "Only one",
-        "explanation": "Only one.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "senior",
@@ -27145,7 +27145,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 25,
         "question": "Who can fix the minimum and maximum cash balance of the first class Head office?",
         "answer": "The Senior Superintendent of Post Offices",
-        "explanation": "The Senior Superintendent of Post Offices.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "minimum",
@@ -27162,7 +27162,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 26,
         "question": "What is defined as A \"Form A\" order is issued by the Superintendent of Railway Mail Service to communicate?",
         "answer": "Any change in a sorting list",
-        "explanation": "Any change in a sorting list.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27179,7 +27179,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 27,
         "question": "The STS officer who heads a First-Class Head Office is called.",
         "answer": "Chief Postmaster",
-        "explanation": "Chief Postmaster.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "officer",
@@ -27196,7 +27196,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 28,
         "question": "A Transit mail Office deals with?",
         "answer": "Only Closed Bags",
-        "explanation": "Only Closed Bags.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "transit",
@@ -27213,7 +27213,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 29,
         "question": "What is the preservation period of Postmaster's Order Book as per Rule 25 of Postal Manual Volume VI?",
         "answer": "3 years",
-        "explanation": "3 years.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "preservation",
@@ -27230,7 +27230,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 30,
         "question": "What is the maximum number of permissible IFS Money Order transactions per person per year?",
         "answer": "30",
-        "explanation": "30.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -27247,7 +27247,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 31,
         "question": "What can be maximum weight of International postal article under category Letters, Printed papers and Small packets?",
         "answer": "up to 2 kg",
-        "explanation": "up to 2 kg.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -27264,7 +27264,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 32,
         "question": "Digipin divides India into the grids of which dimension?",
         "answer": "4m x 4m grids",
-        "explanation": "4m x 4m grids.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "digipin",
@@ -27281,7 +27281,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 33,
         "question": "What is 'Maximum aggregated sum assured limit of non-medical RPLI policy/ies with non -standard age proof?",
         "answer": "Rs. 25000",
-        "explanation": "Rs. 25000.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -27298,7 +27298,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 34,
         "question": "As per Rule 288 of Postal Manual Volume II, what is the periodicity for review of Master Schedule of Forms?",
         "answer": "Five Years",
-        "explanation": "Five Years.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "rule",
@@ -27315,7 +27315,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 35,
         "question": "Which rule of CCS(Conduct) Rule, 1964 prohibits bringing of non-official or other outside influence into service matters?",
         "answer": "Rule 20",
-        "explanation": "Rule 20.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -27332,7 +27332,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 36,
         "question": "What is defined as When action is taken as under Rule 5 to terminate the services of a temporary employee, the order of termination, which should be passed by the appointing authority?",
         "answer": "should not mention the reasons for such termination.",
-        "explanation": "should not mention the reasons for such termination..",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27349,7 +27349,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 37,
         "question": "Who is competent to fix the authorized stock of pass books for each sub post office?",
         "answer": "The Divisional Head",
-        "explanation": "The Divisional Head.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "competent",
@@ -27366,7 +27366,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 38,
         "question": "What is defined as Pledging of certificate account as security can be done through only?",
         "answer": "Head Post Office",
-        "explanation": "Head Post Office.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27383,7 +27383,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 39,
         "question": "As per Annual Report 2023-24 of India Post, how many postal circles are there?",
         "answer": "23",
-        "explanation": "23.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "annual",
@@ -27400,7 +27400,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 40,
         "question": "As per Annual Report 2023-24 of India Post, interest earned upto which limit is in a financial year is exempt from Income Tax?",
         "answer": "Rs 10000",
-        "explanation": "Rs 10000.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "annual",
@@ -27417,7 +27417,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 41,
         "question": "An appeal must be preferred within a period of how many days of supply of order appealed against?",
         "answer": "Forty-five days",
-        "explanation": "Forty-five days.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "appeal",
@@ -27434,7 +27434,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 42,
         "question": "As per Gramin Dak Sevaks (Conduct and Engagement) Rules, 2020, the Gramin Dak Sevaks may be granted paid leave at the rate of how many days in a year?",
         "answer": "20 days",
-        "explanation": "20 days.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "gramin",
@@ -27451,7 +27451,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 43,
         "question": "What is the minimum period of the service for a Temporary servant, as per CCS (TS) Rules, to be eligible for grant of Gratuity on being declared permanently invalid for continuation in government service by a competent Medical Authority?",
         "answer": "10 years",
-        "explanation": "10 years.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "minimum",
@@ -27468,7 +27468,7 @@ export const p1_29: FlashCard[] = [
         "card_no": 44,
         "question": "What is defined as The provisions of CCS (CCA) Rules apply to?",
         "answer": "to every Government servant including every civilian Government servant in the Defence Services",
-        "explanation": "to every Government servant including every civilian Government servant in the Defence Services.",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27488,7 +27488,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 1,
         "question": "What is defined as Under Section 22 of the CAT Act, 1985, Tribunals are primarily guided by?",
         "answer": "Principles of natural justice",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27505,7 +27505,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 2,
         "question": "What is defined as The Preamble of the Indian Constitution declares India in the correct order as?",
         "answer": "Sovereign, Socialist, Secular, Democratic, Republic",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27522,7 +27522,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 3,
         "question": "The Central Administrative Tribunal (CAT) was established under which Article of the Constitution?",
         "answer": "Article 323A",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "central",
@@ -27539,7 +27539,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 4,
         "question": "What is defined as Under Bharatiya Nagarik Suraksha Sanhita, 2023, a cognizable offence is one in which?",
         "answer": "Police may arrest without warrant",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27556,7 +27556,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 5,
         "question": "The Bharatiya Nagarik Suraksha Sanhita 2023 was enacted by the Parliament in the",
         "answer": "74th year of the Republic of India",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "bharatiya",
@@ -27573,7 +27573,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 6,
         "question": "What is defined as The objectives mentioned in the Preamble to the Constitution of India are?",
         "answer": "Justice, Secularism, Federalism, Integrity",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27590,7 +27590,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 7,
         "question": "What is defined as A summons-case under Bharatiya Nagarik Suraksha Sanhita, 2023 refers to?",
         "answer": "A case triable only by Sessions Court",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27607,7 +27607,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 8,
         "question": "What is defined as For societies and local authorities owned or controlled by the Central Government, the CVC covers officials drawing a salary of at least?",
         "answer": "₹8,700 per month",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27624,7 +27624,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 9,
         "question": "What is defined as The age of retirement of a High Court judge is?",
         "answer": "62 years",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27641,7 +27641,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 10,
         "question": "The Supreme Court shall have power to issue directions or orders or writs, including writs in the nature of habeas corpus, mandamus, prohibition, quo warranto and certiorari, whichever may be appropriate, for the enforcement of any of the rights conferred by this Part under which section of Constitution of India.",
         "answer": "Section 32(2)",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "supreme",
@@ -27658,7 +27658,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 11,
         "question": "What is defined as Under Section 84 of the Bharatiya Nagarik Suraksha Sanhita 2023, a proclamation for a person absconding can be issued when?",
         "answer": "The person is absconding or concealing himself to avoid execution of a warrant",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27675,7 +27675,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 12,
         "question": "The term \"tribal areas\" in Bharatiya Nagarik Suraksha Sanhita, 2023 refer",
         "answer": "Territories that were tribal areas of Assam before 21st January 1972, excluding Shillong municipality",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "term",
@@ -27692,7 +27692,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 13,
         "question": "Which Article directs the State to promote international peace and security?",
         "answer": "Article 51",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -27709,7 +27709,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 14,
         "question": "What are the five parameters known as the Five R's of Procurement.?",
         "answer": "Right Quality, Right Quantity, Right Price, Right Time and Place and Right Source",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "five",
@@ -27726,7 +27726,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 15,
         "question": "If any question arises as to whether a particular matter falls within the purview of the business allocated to a bench of a CAT, whose decision shall be final?",
         "answer": "The Chairman of the Tribunal",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "question",
@@ -27743,7 +27743,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 16,
         "question": "According to the amended Public Procurement Policy for MSEs Order 2012, what is the minimum percentage of their annual value of goods or services that should be procured by Central Government Ministries/ Departments/ PSUs from Micro and Small Enterprises (MSES)?",
         "answer": "25%",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -27760,7 +27760,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 17,
         "question": "What is defined as The term of office of Chairman of Central Administrative Tribunal is?",
         "answer": "5 years and until he attains 68 years of age",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27777,7 +27777,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 18,
         "question": "What is defined as A warrant-case under Bharatiya Nagarik Suraksha Sanhita, 2023 is related to?",
         "answer": "A case relating to an offence punishable with death, imprisonment for life or imprisonment for a term exceeding two years.",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27794,7 +27794,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 19,
         "question": "Who called Article 32 the \"heart and soul\" of the Constitution?",
         "answer": "Dr. Rajendra Prasad",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "called",
@@ -27811,7 +27811,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 20,
         "question": "Which Article of the Indian Constitution declares that the State shall endeavour to provide a Uniform Civil Code?",
         "answer": "Article 44",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -27828,7 +27828,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 21,
         "question": "For the purpose of contempt proceedings under Section 17 CAT Act, provisions of which Act are applicable?",
         "answer": "Contempt of Courts Act, 1971",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "purpose",
@@ -27845,7 +27845,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 22,
         "question": "What is defined as Article 214 of the Constitution provides for?",
         "answer": "High Court for each State",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27862,7 +27862,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 23,
         "question": "The additional Fundamental Duty 51A(k) was added by which Constitutional Amendment?",
         "answer": "86th Amendment",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "additional",
@@ -27879,7 +27879,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 24,
         "question": "Article 32 falls under which part of the Constitution?",
         "answer": "Part III",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "article",
@@ -27896,7 +27896,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 25,
         "question": "Article 39 clause (d) which is a part of the Directive Principles of State Policy specifically directs the State to ensure that",
         "answer": "Equal pay for equal work for both men and women",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "article",
@@ -27913,7 +27913,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 26,
         "question": "What is defined as Article 338B of the Constitution deals with?",
         "answer": "National Commission for Backward Classes",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27930,7 +27930,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 27,
         "question": "If a person denies liability to pay the amount stated in a certificate under Section 3 of the Revenue Recovery Act, what remedy does the Act provide under Section 4?",
         "answer": "The person may pay under protest in writing and institute a suit in the appropriate civil court",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "person",
@@ -27947,7 +27947,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 28,
         "question": "What is defined as Because of the Principal / Employer-Agent relationship, the Procuring Entity (Employer) may be?",
         "answer": "Vicariously legally and financially liable for its actions of the contractor",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -27964,7 +27964,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 29,
         "question": "Section 20 of Prevention of Corruption Act primarily deals with which legal concept?",
         "answer": "Presumption where a public servant accepts any undue advantage",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "section",
@@ -27981,7 +27981,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 30,
         "question": "Who is qualified to be appointed as a Special Judge under the Prevention of Corruption Act, 1988?",
         "answer": "Either (A) or (B) or (C)",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "qualified",
@@ -27998,7 +27998,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 31,
         "question": "What is the minimum number of instalments in which an advance may normally be recovered under Rule 13 of GPF (CS) Rules, 1960?",
         "answer": "6",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "minimum",
@@ -28015,7 +28015,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 32,
         "question": "Within how many days must the Head of Office or Head of Department request the medical authority to examine the Government servant after receiving an application for invalid pension under CCS Pension Rules?",
         "answer": "Within 15 days of receipt of application",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "within",
@@ -28032,7 +28032,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 33,
         "question": "Information received in confidence from a foreign government is exempt under RTI Act, 2005. Under which clause of Section 8(1) does this fall?",
         "answer": "Clause (f)",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "information",
@@ -28049,7 +28049,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 34,
         "question": "Within how many months must the competent authority decide on the grant of compassionate allowance after issuing the order of dismissal or removal under CCS Pension Rules?",
         "answer": "Three months",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "within",
@@ -28066,7 +28066,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 35,
         "question": "What is defined as The Preamble of the RTI Act 2005 has established?",
         "answer": "A democratic Republic",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28083,7 +28083,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 36,
         "question": "How long does a second appeal lie with the Central or State Information Commission under RTI Act 2005?",
         "answer": "90 days from the date the decision should have been made by the first appellate authority or was actually received by the appellant",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "long",
@@ -28100,7 +28100,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 37,
         "question": "Under the mitigation rules for gifts, what is the correct mandatory action if a public servant unintentionally receives a gift that may exceed the value permitted under the Conduct of public servants in Public Procurement?",
         "answer": "Return the gift to the giver or report it without delay and deposit it in the Toshakhana / Treasury through proper channel.",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "mitigation",
@@ -28117,7 +28117,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 38,
         "question": "What is defined as Section 19 of the Prevention of Corruption Act primarily deals with?",
         "answer": "Previous Sanction for prosecution of public servant",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28134,7 +28134,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 39,
         "question": "As per Manual for Procurement of Consultancy & Other Services, hiring of external professionals or consultancy firms for a specific, well-defined job when in-house expertise is lacking, is permitted under?",
         "answer": "Rule 178 & 180 of GFR Rules 2017",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "manual",
@@ -28151,7 +28151,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 40,
         "question": "What is defined as According to Rule 8(6) of CCS Pension Rules 2021, if the competent authority orders recovery of pecuniary loss from a pensioner without withholding or withdrawing the pension, the recovery?",
         "answer": "Shall not ordinarily exceed one-third of the pension admissible on the date of retirement",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28168,7 +28168,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 41,
         "question": "According to Rule 8 of the CCS (Pension) Rules, 2021, who can order withholding or withdrawal of pension in case of a pensioner who retired from a post for which an authority subordinate to the President is the Appointing authority?",
         "answer": "Secretary of the Administrative Ministry or Department",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -28185,7 +28185,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 42,
         "question": "Under Rule 14 of GPF (CS) Rules 1960, if the sanctioning authority suspects wrongful use of an advance, what is the first action to be taken?",
         "answer": "Communicate the reasons for doubt and require the subscriber to explain in writing within 15 days",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "rule",
@@ -28202,7 +28202,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 43,
         "question": "Which rule of GFR 2017 mandates the Code of Integrity for Public Procurement?",
         "answer": "Rule 175",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -28219,7 +28219,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 44,
         "question": "Penalty for the offence relating to public servant being bribed under Prevention of Corruption Act is",
         "answer": "Imprisonment for a term which shall not be less than three years but which may extend to seven years and shall also be liable to fine.",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "penalty",
@@ -28236,7 +28236,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 45,
         "question": "What is defined as According to the Manual for Procurement of Goods, once a Conflict of Interest is declared, the competent authority may?",
         "answer": "Evaluate the level of Conflict of Interest and either allow continuation or nominate an alternate officer",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28253,7 +28253,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 46,
         "question": "The Prevention of Corruption Act, 1947 was amended in 1964 based on the recommendations which committee?",
         "answer": "Santhanam Committee",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "prevention",
@@ -28270,7 +28270,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 47,
         "question": "If the percentage of pension chosen for commutation results in a fraction of a rupee, how is this handled under CCS (Commutation of Pension) Rules?",
         "answer": "Ignored for the purpose of commutation",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "percentage",
@@ -28287,7 +28287,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 48,
         "question": "Rule 29 of General Financial Rules 2017 relates to",
         "answer": "Procedure for communication of sanctions",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "rule",
@@ -28304,7 +28304,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 49,
         "question": "What is defined as Under CCS Pension Rules, dependent siblings are eligible for family pension only if?",
         "answer": "They have mental or physical disability",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28321,7 +28321,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 50,
         "question": "What is the effect of compulsorily retirement, dismissal, or removal from government service under CCS (Implementation of National Pension System) Rules 2021?",
         "answer": "The lumpsum and annuity out of his accumulated pension corpus shall be paid to him in accordance with the regulations notified by the Authority payable to the subscriber as admissible in the case of exit of a subscriber from the National Pension System before superannuation, provided he at his option may continue to subscribe to the NPS with the same Permanent Retirement Account number as a non-Government Subscriber.",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "effect",
@@ -28338,7 +28338,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 51,
         "question": "A retired government servant becomes 85 years old. What is the additional pension or compassionate allowance payable to him under CCS Pension Rules 2021?",
         "answer": "30% of basic pension/ compassionate allowance",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "retired",
@@ -28355,7 +28355,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 52,
         "question": "How is a fraction of a year equal to three months or more treated while calculating qualifying service for retirement or gratuity under Rule 45 of CCS Pension Rules?",
         "answer": "Treated as a completed six-monthly period and reckoned as qualifying service",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "fraction",
@@ -28372,7 +28372,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 53,
         "question": "If a pensioner's pension was revised upward and commutation amount was paid on more than one occasion, when will the respective commuted portion be restored under CCS (Commutation of Pension) Rules?",
         "answer": "Completion of 15 years from the respective date(s)",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "pensioners",
@@ -28389,7 +28389,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 54,
         "question": "Under which rule of the General Financial Rules it is mandated that all money received by or on behalf of the Government must be credited to the Government account without delay in accordance with Articles 150 and 283(1) of the Constitution?",
         "answer": "Rule 7",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -28406,7 +28406,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 55,
         "question": "Under Rule 48 of the CCS (Pension) Rules, 2021, if a person who is eligible for gratuity is convicted of murdering or abetting the murder of a government servant, what happens to their entitlement?",
         "answer": "They are debarred from receiving their share, which is payable to other eligible family members, if any",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "rule",
@@ -28423,7 +28423,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 56,
         "question": "What is defined as Judicial proceedings shall be deemed to be pending for the purpose of Rule 43(3) of CCS Pension Rules 2021 if?",
         "answer": "A complaint or report of a police officer has been made, of which the Magistrate takes cognizance, has been made or filed in a criminal proceedings",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28440,7 +28440,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 57,
         "question": "When is the qualifying service of a government servant required to be verified as per the Central Civil Services (Payment of Gratuity under National Pension System) Rules, 2021?",
         "answer": "After completion of eighteen years of service and again when five years remain before superannuation, or when transferred from a temporary department, department closure, or surplus post.",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "when",
@@ -28457,7 +28457,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 58,
         "question": "Under CCS (Commutation of Pension) Rules, when the documents are returned to the Head of Office due to the applicant's unjustified absence at the medical examination, the commutation application is -",
         "answer": "Treated as withdrawn",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "commutation",
@@ -28474,7 +28474,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 59,
         "question": "Which section of the Pension Fund Regulatory and Development Authority Act, 2013 is specifically referred to in the definition of the National Pension System?",
         "answer": "Section 20",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -28491,7 +28491,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 60,
         "question": "What is defined as Under CCS Pension Rules, if a government servant dies leaving no family and no valid nomination, the gratuity shall?",
         "answer": "Lapse to the Government",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28508,7 +28508,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 61,
         "question": "Under GFR Rule 172(1), the maximum advance payment permitted to private firms is",
         "answer": "30% of contract value",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "rule",
@@ -28525,7 +28525,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 62,
         "question": "What is defined as FR 22(1)(a)(1), applies when a government servant is?",
         "answer": "Appointed to a post carrying greater duties and responsibilities",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28542,7 +28542,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 63,
         "question": "What is defined as When casual workers perform the same nature of work as regular employees, their daily wage should be calculated as?",
         "answer": "1/30 of the minimum pay of the relevant scale plus dearness allowance for 8 hours work.",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28559,7 +28559,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 64,
         "question": "What is defined as FR 35 allows the government to fix the pay of an officiating Government Servant?",
         "answer": "At an amount less than normally admissible.",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28576,7 +28576,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 65,
         "question": "If an unmarried government servant has made a nomination in favor of an eligible family member as prescribed under CCS Pension Rules, what happens to the nomination after the Government servant gets married?",
         "answer": "The nomination remains valid unless the government servant cancels it and submits a fresh one",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "unmarried",
@@ -28593,7 +28593,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 66,
         "question": "As per Rule 171(ii) of GFR, Performance Security should remain valid for a period of days beyond the date of completion of all contractual obligations of the supplier",
         "answer": "60 days",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "rule",
@@ -28610,7 +28610,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 67,
         "question": "Fundamental Rules (FR) 24, governs that",
         "answer": "An increment shall ordinarily be drawn as a matter of course unless it is withheld.",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "fundamental",
@@ -28627,7 +28627,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 68,
         "question": "Which circumstance may amount to sexual harassment, even if the explicit acts are absent?",
         "answer": "Humiliating treatment likely to affect health/safety",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -28644,7 +28644,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 69,
         "question": "What is defined as All Gramin Dak Sevaks are eligible for the benefits of Circle Welfare Fund for Gramin Dak Sevaks, provided?",
         "answer": "They have been regularly engaged by the competent authority and engagement orders are on record.",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28661,7 +28661,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 70,
         "question": "Under the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013, if the aggrieved woman is unable to make a complaint due to physical or mental incapacity, death, or otherwise, who is permitted to make the complaint?",
         "answer": "Her legal heir or any other prescribed person",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "sexual",
@@ -28678,7 +28678,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 71,
         "question": "What is expressly prohibited as the basis for conciliation of a sexual harassment case under the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013?",
         "answer": "Monetary settlement",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "expressly",
@@ -28695,7 +28695,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 72,
         "question": "Goods and Services Tax in India is collected at which point",
         "answer": "Point of consumption",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "goods",
@@ -28712,7 +28712,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 73,
         "question": "What is the amount of scholarship granted to SC/ST employees for appearing Departmental examinations for promotion to the cadre of IPO/IRM/AAO?",
         "answer": "₹1800",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "amount",
@@ -28729,7 +28729,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 74,
         "question": "If an officer's APAR is graded between 8 and 10, how will it be treated for the purpose of calculating average scores for empanelment or promotion?",
         "answer": "Rated as \"Outstanding\" and given a score of 9",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "officers",
@@ -28746,7 +28746,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 75,
         "question": "What is defined as The headquarters of the International Court of Justice (ICJ) is at?",
         "answer": "The Hague",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28763,7 +28763,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 76,
         "question": "Rule 33 of GFR Rules relates to",
         "answer": "Report of Losses",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "rule",
@@ -28780,7 +28780,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 77,
         "question": "The \"Ring of Fire,\" known for frequent earthquakes and volcanoes, surrounds which ocean?",
         "answer": "Pacific Ocean",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "ring",
@@ -28797,7 +28797,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 78,
         "question": "A team member repeatedly submits late reports despite reminders. Which interpersonal approach is most likely to maintain rapport and correct the behavior?",
         "answer": "Schedule a private conversation, describe the impact of the delays, and agree on a realistic timeline together.",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "team",
@@ -28814,7 +28814,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 79,
         "question": "Which provision ensures confidentiality of the complaint and inquiry proceedings under Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013?",
         "answer": "Section 16 of the Act",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -28831,7 +28831,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 80,
         "question": "If in a code, LOGIC is written as MPHJD, how is BRAIN written?",
         "answer": "CSBJO",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "code",
@@ -28848,7 +28848,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 81,
         "question": "Pradhan Mantri Virasat Ka Samvardhan (PM VIKAS) is a flagship scheme of which ministry?",
         "answer": "Ministry of Minority Affairs",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "pradhan",
@@ -28865,7 +28865,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 82,
         "question": "Fully Vouched Contingencies means",
         "answer": "To comprise contingent charges, which require neither special sanction nor countersignature, but may be incurred by the Head of the Office on his own authority subject to the necessity of accounting for them.",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "fully",
@@ -28882,7 +28882,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 83,
         "question": "Which ministry is responsible for implementing \"Global Engagement Scheme\"?",
         "answer": "Ministry of Culture",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -28899,7 +28899,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 84,
         "question": "What is defined as The CRISPR-Cas9 system is primarily used for?",
         "answer": "Genome editing",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -28916,7 +28916,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 85,
         "question": "Which platform is used by SDBS for registration, record-keeping, and funds management?",
         "answer": "NPS-Lite scheme",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -28933,7 +28933,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 86,
         "question": "Which organization introduced the Single Girl Child Merit Scholarship Scheme?",
         "answer": "Central Board of Secondary Education (CBSE)",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -28950,7 +28950,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 87,
         "question": "The 2025 Union Budget of India set the fiscal deficit target at",
         "answer": "4.4% of GDP",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "2025",
@@ -28967,7 +28967,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 88,
         "question": "What happens when a GDS is absorbed into a regular departmental post?",
         "answer": "They must exit the SDBS and transfer their accumulations to the NPS",
-        "explanation": "A",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "happens",
@@ -28984,7 +28984,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 89,
         "question": "Under Circle Welfare Fund for GDS, the GDS will be eligible for loan at lower rate of interest of 5% per annum deductible in maximum instalments",
         "answer": "25",
-        "explanation": "D",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "circle",
@@ -29001,7 +29001,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 90,
         "question": "Average age of 30 students is 15 years. If 5 students with average age 10 years leave the group, what is the average age of remaining students?",
         "answer": "16 years",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "average",
@@ -29018,7 +29018,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 91,
         "question": "Fill in the blank with the most suitable word:\n\"The scientist's explanation was so ... that even experts struggled to follow it.\"",
         "answer": "recondite",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "fill",
@@ -29035,7 +29035,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 92,
         "question": "Read the short passage and answer:\nAlthough social media connects people across the globe, studies show excessive use can lead to feelings of isolation. Striking a balance is crucial to maintain real-world relationship.\nThe author's primary concern is",
         "answer": "Highlighting dangers of social media overuse",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "read",
@@ -29052,7 +29052,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 93,
         "question": "What is defined as The Montreal Protocol primarily deals with?",
         "answer": "Ozone-depleting substances",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -29069,7 +29069,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 94,
         "question": "What is defined as The term \"implementation gap\" in India's environmental commitments refers to?",
         "answer": "Challenges in meeting targets due to financial and capacity constraints",
-        "explanation": "C",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -29086,7 +29086,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 95,
         "question": "What is defined as The phrase \"transnational problems requiring collective action\" refers to?",
         "answer": "Climate change and biodiversity loss",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -29103,7 +29103,7 @@ export const p3_20: FlashCard[] = [
         "card_no": 96,
         "question": "From the passage, which sector is MOST affected by the Montreal Protocol in India?",
         "answer": "Cooling and refrigeration industries",
-        "explanation": "B",
+        "explanation": "",
         "exam_weight": "Medium",
         "keywords": [
             "from",

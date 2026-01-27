@@ -113,23 +113,28 @@ export default function PremiumFlashCard({
                         </div>
 
                         {explanation && (
-                            <div className={styles.explanationBox}>
-                                <div className="flex items-center gap-2 mb-2 font-bold text-[10px] uppercase tracking-wider text-slate-500">
-                                    <Info className="w-3 h-3" /> Explanation
+                            <div className={styles.explanationBox} onClick={(e) => e.stopPropagation()}>
+                                <div className="flex items-center gap-2 mb-2 font-black text-[9px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                                    <Info className="w-3.5 h-3.5" /> Explanation
                                 </div>
-                                <p className={clsx("transition-all duration-300", !isExpanded && "line-clamp-3")}>
-                                    {explanation}
-                                </p>
-                                {explanation.length > 150 && (
+                                <div className={clsx(
+                                    "transition-all duration-500 overflow-y-auto scrollbar-hide",
+                                    !isExpanded && explanation.length > 200 ? "max-h-[100px]" : "max-h-[250px]"
+                                )}>
+                                    <p className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed">
+                                        {explanation}
+                                    </p>
+                                </div>
+                                {explanation.length > 200 && (
                                     <button
-                                        className="mt-2 text-[11px] font-bold text-blue-500 hover:text-blue-600 uppercase tracking-tighter flex items-center gap-1"
+                                        className="mt-3 text-[10px] font-black text-indigo-600 hover:text-indigo-700 uppercase tracking-widest flex items-center gap-1 self-start transition-colors"
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             setIsExpanded(!isExpanded);
                                         }}
                                     >
                                         {isExpanded ? 'Show Less' : 'Read Full Explanation'}
-                                        <ChevronRight className={clsx("w-3 h-3 transition-transform", isExpanded && "rotate-90")} />
+                                        <ChevronRight className={clsx("w-3.5 h-3.5 transition-transform duration-300", isExpanded && "rotate-90")} />
                                     </button>
                                 )}
                             </div>

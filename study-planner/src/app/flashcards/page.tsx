@@ -55,11 +55,26 @@ const convertToUnified = (data: any[], tagPrefix: string): UnifiedFlashcard[] =>
 };
 
 // --- DATA ---
+const generatedDecksMapping = Object.entries(GeneratedCards).reduce((acc, [key, data]) => {
+    const firstCard = (data as any[])[0];
+    acc[key] = convertToUnified(data as any[], firstCard?.pdf_title || "General");
+    return acc;
+}, {} as Record<string, UnifiedFlashcard[]>);
+
+// Merge all PMLA related content into one
+const pMLAContent = [
+    ...pmlaFlashcards,
+    ...convertToUnified(pmla2002, "PMLA 2002"),
+    ...(generatedDecksMapping['p1_3'] || [])
+].map(card => ({ ...card, tag: "Prevention of Money Laundering Act, 2002" }));
+
+// Remove merged ones from individual mapping to avoid duplicates
+delete generatedDecksMapping['p1_3'];
+
 const deckData: Record<string, UnifiedFlashcard[]> = {
-    'pmla': pmlaFlashcards,
+    'pmla': pMLAContent,
     'poact': poActData,
     'poguide1': poGuide1Flashcards,
-    'pmla_new': convertToUnified(pmla2002, "PMLA 2002"),
     'poact_new': convertToUnified(poAct2023, "PO Act 2023"),
     'cpa2019': convertToUnified(consumerProtectionAct2019, "CPA 2019"),
     'vol6_2': convertToUnified(postalManualVolVIPartII, "Vol VI Part II"),
@@ -67,42 +82,8 @@ const deckData: Record<string, UnifiedFlashcard[]> = {
     'gspr': convertToUnified(gspr2018, "GSPR 2018"),
     'vol7': convertToUnified(postalManualVolVII, "Vol VII (RMS)"),
     'vol5': convertToUnified(postalManualVolV, "Vol V (Definitions)"),
-    // Add generated decks
-    ...Object.entries(GeneratedCards).reduce((acc, [key, data]) => {
-        const firstCard = (data as any[])[0];
-        acc[key] = convertToUnified(data as any[], firstCard?.pdf_title || "General");
-        return acc;
-    }, {} as Record<string, UnifiedFlashcard[]>)
+    ...generatedDecksMapping
 };
-
-// --- CONSTANTS ---
-const CARD_THEMES = [
-    {
-        name: "Navy Teal",
-        gradient: "from-slate-900 to-teal-900",
-        lightGradient: "from-slate-100 to-teal-50",
-        accent: "text-teal-400",
-        border: "border-teal-500/20",
-        badge: "bg-teal-500/10 text-teal-400",
-    },
-    {
-        name: "Deep Purple",
-        gradient: "from-indigo-900 to-purple-900",
-        lightGradient: "from-indigo-50 to-purple-50",
-        accent: "text-purple-400",
-        border: "border-purple-500/20",
-        badge: "bg-purple-500/10 text-purple-400",
-    },
-    {
-        name: "Emerald Cyan",
-        gradient: "from-emerald-900 to-cyan-900",
-        lightGradient: "from-emerald-50 to-cyan-50",
-        accent: "text-cyan-400",
-        border: "border-cyan-500/20",
-        badge: "bg-cyan-500/10 text-cyan-400",
-    },
-];
-
 
 export default function FlashcardsPage() {
     const { theme, setTheme } = useTheme();
@@ -112,285 +93,269 @@ export default function FlashcardsPage() {
 
     // State
     const [selectedDeckId, setSelectedDeckId] = useState<string | null>(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isFlipped, setIsFlipped] = useState(false);
-    const [direction, setDirection] = useState(0);
-    const [isShuffled, setIsShuffled] = useState(false);
-    const [shuffledDeck, setShuffledDeck] = useState<UnifiedFlashcard[]>([]);
     const [searchQuery, setSearchQuery] = useState("");
+    const [activeFilter, setActiveFilter] = useState("All");
+    const [currentCardIndex, setCurrentCardIndex] = useState(0);
+    const [isInitiallyShuffled, setIsInitiallyShuffled] = useState(false);
+    const [deckProgress, setDeckProgress] = useState<Record<string, number>>({});
 
     useEffect(() => {
         setMounted(true);
-
-        // Check Auth
         const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
         if (match) {
             try {
                 const session = JSON.parse(decodeURIComponent(match[2]));
-                // Check if role includes admin (case insensitive) just to be safe, or exact match
-                // Based on UserMenu.tsx, role is usually 'admin'
                 setUserRole(session.role || 'user');
             } catch (e) {
                 console.error("Failed to parse session", e);
             }
         }
+
+        // Load progress
+        const savedProgress = localStorage.getItem('flashcards_progress');
+        if (savedProgress) {
+            try {
+                setDeckProgress(JSON.parse(savedProgress));
+            } catch (e) {
+                console.error("Failed to parse progress", e);
+            }
+        }
+
         setIsLoadingAuth(false);
     }, []);
 
-    // Derived State
-    const baseDeck = selectedDeckId ? deckData[selectedDeckId] : [];
-    const activeDeck = isShuffled ? shuffledDeck : baseDeck;
-    const currentCard = activeDeck[currentIndex];
-    const progress = activeDeck.length > 0 ? ((currentIndex + 1) / activeDeck.length) * 100 : 0;
-    const currentTheme = CARD_THEMES[currentIndex % CARD_THEMES.length];
+    const handleSelectDeck = (id: string, startIdx: number = 0, shuffle: boolean = false) => {
+        setSelectedDeckId(id);
+        setCurrentCardIndex(startIdx);
+        setIsInitiallyShuffled(shuffle);
+    };
 
-    // Handlers
-    const handleNext = () => {
-        if (currentIndex < activeDeck.length - 1) {
-            setDirection(1);
-            setIsFlipped(false);
-            setCurrentIndex(prev => prev + 1);
+    // Save progress when it changes
+    useEffect(() => {
+        if (selectedDeckId !== null && mounted) {
+            const newProgress = { ...deckProgress, [selectedDeckId]: currentCardIndex };
+            setDeckProgress(newProgress);
+            localStorage.setItem('flashcards_progress', JSON.stringify(newProgress));
         }
-    };
-
-    const handlePrev = () => {
-        if (currentIndex > 0) {
-            setDirection(-1);
-            setIsFlipped(false);
-            setCurrentIndex(prev => prev - 1);
-        }
-    };
-
-    const handleDragEnd = (event: any, info: PanInfo) => {
-        const threshold = 50;
-        if (info.offset.x < -threshold) handleNext();
-        else if (info.offset.x > threshold) handlePrev();
-    };
+    }, [currentCardIndex, selectedDeckId, mounted]);
 
     const handleShare = async () => {
+        const activeDeck = selectedDeckId ? deckData[selectedDeckId] : [];
+        const currentCard = activeDeck[currentCardIndex];
         if (!currentCard) return;
-        const text = `Flashcard: ${currentCard.question}\n\nAnswer: ${currentCard.answer}\n\nShared via Dak Guru`;
+
+        const text = `Flashcard: ${currentCard.question}\n\nAnswer: ${currentCard.answer}\n\nshared from Dak Guru www.dakguru.com`;
+
         if (navigator.share) {
             try {
                 await navigator.share({
                     title: 'Dak Guru Flashcard',
                     text: text,
-                    url: window.location.href
+                    url: 'https://www.dakguru.com'
                 });
-            } catch (err) {
-                console.error("Error sharing:", err);
-            }
+            } catch (err) { }
         } else {
-            // Fallback: Copy to clipboard
             navigator.clipboard.writeText(text);
-            alert("Flashcard copied to clipboard!");
+            alert("Description copied with link!");
         }
     };
 
-    const toggleShuffle = () => {
-        if (!selectedDeckId) return;
-        if (!isShuffled) {
-            const newDeck = [...baseDeck];
-            for (let i = newDeck.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];
-            }
-            setShuffledDeck(newDeck);
-            setIsShuffled(true);
-        } else {
-            setIsShuffled(false);
-            setShuffledDeck([]);
-        }
-        setCurrentIndex(0);
-        setIsFlipped(false);
-    };
-
-    const handleSelectDeck = (id: string) => {
-        setSelectedDeckId(id);
-        setCurrentIndex(0);
-        setIsFlipped(false);
-        setDirection(0);
-        setIsShuffled(false);
-        setShuffledDeck([]);
-    };
-
-    // Keyboard support
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (!selectedDeckId) return;
-            if (e.key === "ArrowRight") handleNext();
-            if (e.key === "ArrowLeft") handlePrev();
-            if (e.key === " " || e.key === "Enter") {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
-                setIsFlipped(prev => !prev);
+                document.getElementById('flash-search')?.focus();
             }
         };
-        window.addEventListener("keydown", handleKeyDown);
-        return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [selectedDeckId, currentIndex]); // eslint-disable-line
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
 
     if (!mounted) return null;
 
-    // Access Control: Only Admin can see the flashcards
-    // Everyone else sees the Coming Soon Banner
+    // Access Control
     if (!isLoadingAuth && userRole !== 'admin') {
         return <FlashcardsIntroBanner />;
     }
 
-
-    // --- VIEW: DECK SELECTION ---
     if (!selectedDeckId) {
+        const filters = ["All", "Paper I", "Paper II", "Preliminary", "Acts", "Rules", "Schemes"];
+        const filteredDecks = Object.entries(deckData).filter(([id, deck]) => {
+            const title = deck[0]?.tag || id;
+            const category = deck[0]?.category || "";
+            const matchesSearch = title.toLowerCase().includes(searchQuery.toLowerCase());
+            const matchesFilter = activeFilter === "All" || category.includes(activeFilter) || title.includes(activeFilter) ||
+                (activeFilter === "Acts" && title.toLowerCase().includes("act")) ||
+                (activeFilter === "Rules" && title.toLowerCase().includes("rule"));
+            return matchesSearch && matchesFilter;
+        });
+
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-neutral-950 flex flex-col items-center p-4 md:p-8 font-sans transition-colors duration-300 pb-20">
-                <header className="w-full max-w-5xl flex items-center justify-between mb-6 pt-2">
-                    <Link href="/dashboard" className="p-3 rounded-2xl bg-white dark:bg-neutral-900 shadow-sm border border-zinc-100 dark:border-white/5 text-zinc-600 dark:text-zinc-400 active:scale-95 transition-transform">
-                        <ArrowLeft className="w-5 h-5" />
-                    </Link>
-                    <h1 className="text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-zinc-800 to-zinc-500 dark:from-white dark:to-zinc-500">Flashcards</h1>
-                    <div className="flex items-center gap-2">
-                        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 rounded-full bg-white dark:bg-neutral-800 shadow-sm text-zinc-600 dark:text-zinc-400">
-                            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                        </button>
-                    </div>
+            <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#f8fafc,_#eef2f7)] dark:bg-[radial-gradient(circle_at_top,_#0a0a0a,_#000000)] relative overflow-hidden selection:bg-indigo-100">
+                {/* Noise texture overlay */}
+                <div className="fixed inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05] z-0"
+                    style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} />
+
+                <header className="relative z-10 pt-8 pb-12 px-6 text-center max-w-4xl mx-auto">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white mb-4">Flashcards</h1>
+                        <p className="text-lg text-slate-500 dark:text-slate-400 font-medium mb-8">Master postal laws, rules & acts through smart revision.</p>
+                        <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 mx-auto rounded-full blur-[0.5px]">
+                            <motion.div className="w-full h-full bg-white/30" animate={{ x: ['-100%', '100%'] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }} />
+                        </div>
+                    </motion.div>
                 </header>
 
-                <div className="w-full max-w-5xl mb-6 sticky top-2 z-30">
+                <div className="relative z-10 px-6 max-w-3xl mx-auto mb-16">
                     <div className="relative group">
-                        <input
-                            type="text"
-                            placeholder="Find a topic (e.g. PO Act, PMLA)..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full p-4 pl-12 rounded-2xl bg-white dark:bg-neutral-900 border border-zinc-200 dark:border-white/10 shadow-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600"
-                        />
-                        <Sparkles className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-indigo-500 group-focus-within:animate-pulse" />
-                        {searchQuery && (
-                            <button
-                                onClick={() => setSearchQuery("")}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 p-1 rounded-full bg-zinc-100 dark:bg-white/10 text-zinc-400"
-                            >
-                                <RotateCcw className="w-3 h-3" />
+                        <div className="absolute inset-x-4 -bottom-4 h-10 bg-indigo-500/5 blur-2xl rounded-full" />
+                        <div className="relative bg-white/70 dark:bg-white/5 backdrop-blur-2xl border border-white dark:border-white/10 rounded-[28px] h-16 flex items-center px-6 shadow-2xl">
+                            <Sparkles className="w-5 h-5 text-indigo-500 mr-4" />
+                            <input type="text" id="flash-search" placeholder="Search Acts, Rules, Schemes (PO Act, FR SR, GPF…)" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
+                                className="flex-1 bg-transparent border-none outline-none text-slate-800 dark:text-white font-medium placeholder:text-slate-400 dark:placeholder:text-slate-600" />
+                            <div className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 text-[10px] font-bold text-slate-400">
+                                <span className="text-[14px]">⌘</span> K
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 overflow-x-auto py-8 no-scrollbar">
+                        {filters.map((f) => (
+                            <button key={f} onClick={() => setActiveFilter(f)}
+                                className={`px-5 py-2.5 rounded-2xl text-[13px] font-bold whitespace-nowrap transition-all border ${activeFilter === f ? 'bg-slate-900 border-slate-900 text-white shadow-xl dark:bg-white dark:border-white dark:text-black' : 'bg-white border-slate-200 dark:bg-white/5 dark:border-white/5 text-slate-500'}`}>
+                                {f}
                             </button>
-                        )}
+                        ))}
                     </div>
                 </div>
 
-                <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {/* Filtered Decks */}
-                    {Object.entries(deckData)
-                        .filter(([id, deck]) => {
-                            if (!searchQuery) return true;
-                            const title = deck[0]?.tag || id;
-                            return title.toLowerCase().includes(searchQuery.toLowerCase());
-                        })
-                        .sort((a, b) => {
-                            const titleA = a[1][0]?.tag || a[0];
-                            const titleB = b[1][0]?.tag || b[0];
-                            return titleA.localeCompare(titleB);
-                        })
-                        .map(([id, deck]) => {
-                            const title = deck[0]?.tag || id;
-                            const category = deck[0]?.category;
-                            const count = deck.length;
-                            return (
-                                <DeckButton
-                                    key={id}
-                                    title={title}
-                                    subtitle={category ? `${category} • ${count} Cards` : `${count} Cards`}
-                                    icon={<BookOpen className="w-5 h-5" />}
-                                    onClick={() => handleSelectDeck(id)}
-                                    colorClass={getDeckColor(id)}
-                                />
-                            );
-                        })}
-                </div>
+                <main className="relative z-10 px-6 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-20">
+                    {filteredDecks.map(([id, deck], i) => (
+                        <PremiumKnowledgeTile
+                            key={id}
+                            id={id}
+                            index={i}
+                            title={deck[0]?.tag || id}
+                            category={deck[0]?.category || "Paper I"}
+                            cardCount={deck.length}
+                            onAction={handleSelectDeck}
+                            lastIndex={deckProgress[id] || 0}
+                        />
+                    ))}
+                </main>
+
+                {userRole === 'admin' && (
+                    <button className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-black shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform group">
+                        <Sparkles className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                        <div className="absolute right-full mr-4 px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-black rounded-xl text-xs font-bold opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap shadow-xl">
+                            + Create Custom Deck
+                        </div>
+                    </button>
+                )}
+
+                <footer className="relative z-10 py-12 border-t border-slate-200 dark:border-white/5 text-center">
+                    <span className="text-xs font-black text-slate-400 dark:text-slate-600 tracking-widest uppercase">www.dakguru.com</span>
+                </footer>
             </div>
         );
     }
 
-    // --- VIEW: FLASHCARD APP MODE ---
+    // STUDY MODE (APP)
+    const activeDeck = deckData[selectedDeckId] || [];
+
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-black text-zinc-900 dark:text-white font-sans flex flex-col">
-            {/* Top Bar: Premium Header */}
-            <header className="sticky top-0 z-40 bg-white/80 dark:bg-black/80 backdrop-blur-xl border-b border-zinc-100 dark:border-white/10 px-4 py-4">
-                <div className="max-w-5xl mx-auto flex items-center justify-between">
+        <div className="min-h-screen bg-slate-50 dark:bg-black flex flex-col transition-colors duration-500">
+            {/* ROW 2: DECK CONTROLS (Matches Screenshot 1 control row) */}
+            <div className="sticky top-0 z-40 bg-white/95 dark:bg-black/95 backdrop-blur-md px-4 py-3 border-b border-slate-100 dark:border-white/5 shadow-sm">
+                <div className="max-w-xl mx-auto flex items-center justify-between">
                     <button
                         onClick={() => setSelectedDeckId(null)}
-                        className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-zinc-100 dark:hover:bg-white/5 transition-colors text-zinc-600 dark:text-zinc-400 font-bold text-sm"
+                        className="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 font-black text-sm active:scale-95 transition-transform"
                     >
-                        <ArrowLeft className="w-4 h-4" /> Exit Deck
+                        <ArrowLeft className="w-5 h-5" /> Exit Deck
                     </button>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
                         <button
                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                            className="p-2.5 rounded-xl bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-zinc-400 hover:text-indigo-500 transition-colors"
+                            className="p-2.5 rounded-2xl bg-slate-50 dark:bg-white/5 text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-white/10 transition-all hover:text-indigo-600"
                         >
                             {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                         </button>
                         <button
                             onClick={handleShare}
-                            className="p-2.5 rounded-xl bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-zinc-400 hover:text-indigo-500 transition-colors"
+                            className="p-2.5 rounded-2xl bg-slate-50 dark:bg-white/5 text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-white/10 transition-all hover:text-indigo-600"
                         >
                             <Share2 className="w-5 h-5" />
                         </button>
                     </div>
                 </div>
-            </header>
+            </div>
 
-            {/* Premium Deck Content */}
-            <main className="flex-1 container mx-auto px-4 py-8">
+            <main className="flex-1 flex flex-col pt-0 bg-transparent">
                 <PremiumFlashCardDeck
                     cards={activeDeck}
-                    title={activeDeck[0]?.tag || "Flashcards"}
+                    title={activeDeck[0]?.tag || "Study Session"}
+                    externalIndex={currentCardIndex}
+                    onIndexChange={setCurrentCardIndex}
+                    initialShuffled={isInitiallyShuffled}
                 />
             </main>
         </div>
     );
 }
 
-// Reusable Deck Color Utility
-function getDeckColor(id: string) {
-    const colors = [
-        "from-cyan-500 to-blue-500",
-        "from-emerald-500 to-teal-500",
-        "from-orange-500 to-amber-500",
-        "from-amber-500 to-orange-500",
-        "from-indigo-500 to-purple-500",
-        "from-pink-500 to-rose-500",
-        "from-green-500 to-lime-500",
-        "from-red-500 to-orange-500",
-        "from-cyan-600 to-blue-600",
-        "from-violet-500 to-fuchsia-500",
-        "from-sky-500 to-indigo-500"
+function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index, lastIndex }: any) {
+    const themes = [
+        { g: 'bg-blue-500', t: 'text-sky-600', b: 'bg-sky-50' },
+        { g: 'bg-emerald-500', t: 'text-emerald-600', b: 'bg-emerald-50' },
+        { g: 'bg-amber-500', t: 'text-orange-600', b: 'bg-orange-50' },
+        { g: 'bg-violet-500', t: 'text-violet-600', b: 'bg-violet-50' },
+        { g: 'bg-teal-500', t: 'text-teal-600', b: 'bg-teal-50' },
     ];
-    let hash = 0;
-    for (let i = 0; i < id.length; i++) {
-        hash = id.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    return colors[Math.abs(hash) % colors.length];
+    const theme = themes[index % themes.length];
+
+    return (
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * (index % 8) }} whileHover={{ y: -8 }}
+            className="group relative bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white dark:border-white/10 rounded-[22px] p-5 h-full flex flex-col shadow-xl shadow-slate-200/50 dark:shadow-none transition-all cursor-pointer hover:border-indigo-500/30 overflow-hidden"
+            onClick={() => onAction(id, 0, false)}>
+            <div className={`absolute -right-6 -top-6 w-24 h-24 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity ${theme.g}`} />
+            <div className="flex items-center justify-between mb-8">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center shadow-sm ${theme.b} dark:bg-white/5 ${theme.t}`}><BookOpen className="w-5 h-5" /></div>
+                <span className="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-[9px] font-black uppercase tracking-widest text-slate-500">{category}</span>
+            </div>
+            <div className="flex-1 mb-10">
+                <h3 className="text-[17px] font-black text-slate-800 dark:text-white leading-tight mb-2 group-hover:text-indigo-600 transition-colors uppercase tracking-tighter">{title}</h3>
+                <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.2em]">{cardCount} Smart Cards</p>
+            </div>
+            <div className="pt-4 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
+                <div className="flex-1 mr-4">
+                    <div className="h-1 w-full bg-slate-100 dark:bg-white/10 rounded-full overflow-hidden">
+                        <div className={`h-full transition-all duration-1000 ${theme.g}`} style={{ width: lastIndex > 0 ? `${((lastIndex + 1) / cardCount) * 100}%` : '0%' }} />
+                    </div>
+                </div>
+                <div className="w-8 h-8 rounded-lg bg-slate-50 dark:bg-white/5 flex items-center justify-center text-slate-300 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all">
+                    <ChevronRight className="w-4 h-4" />
+                </div>
+            </div>
+            <div className="absolute inset-x-0 bottom-0 p-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md translate-y-full group-hover:translate-y-0 transition-transform flex justify-center gap-1.5">
+                <ActionButton icon={<BookOpen className="w-3.5 h-3.5" />} label="Open" onClick={(e: any) => { e.stopPropagation(); onAction(id, 0, false); }} />
+                <ActionButton icon={<Shuffle className="w-3.5 h-3.5" />} label="Shuffle" onClick={(e: any) => { e.stopPropagation(); onAction(id, 0, true); }} />
+                {lastIndex > 0 && (
+                    <ActionButton icon={<RotateCcw className="w-3.5 h-3.5" />} label="Resume" onClick={(e: any) => { e.stopPropagation(); onAction(id, lastIndex, false); }} />
+                )}
+            </div>
+        </motion.div>
+    );
 }
 
-// Reusable Deck Button
-function DeckButton({ title, subtitle, icon, onClick, colorClass }: any) {
+function ActionButton({ icon, label, onClick }: any) {
     return (
         <button
             onClick={onClick}
-            className="group relative overflow-hidden p-4 md:p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-zinc-200 dark:border-white/5 hover:border-transparent transition-all text-left shadow-sm active:scale-95 touch-manipulation"
+            className="flex items-center gap-1 px-2.5 py-2 rounded-xl bg-slate-50 dark:bg-white/5 text-[9px] font-black uppercase text-slate-600 dark:text-slate-300 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all border border-slate-100 dark:border-white/10"
         >
-            <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 dark:group-hover:opacity-20 transition-opacity bg-gradient-to-r ${colorClass}`} />
-            <div className="relative z-10 flex items-center justify-between">
-                <div className="flex items-center gap-3 md:gap-4">
-                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center bg-gradient-to-br ${colorClass} text-white shadow-lg shadow-black/5`}>
-                        {icon}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                        <h3 className="text-sm md:text-lg font-black text-zinc-800 dark:text-white mb-0.5 truncate">{title}</h3>
-                        <p className="text-[10px] md:text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-tight">{subtitle}</p>
-                    </div>
-                </div>
-                <ChevronRight className="w-5 h-5 text-zinc-300 dark:text-neutral-700 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors flex-none" />
-            </div>
+            {icon} {label}
         </button>
     );
 }
