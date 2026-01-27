@@ -929,7 +929,7 @@ function MockTestDetail({
                                         onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
                                         className="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2 transition-all active:scale-95"
                                     >
-                                        <FileDown className="w-5 h-5" /> Download Sheets
+                                        <FileDown className="w-5 h-5" /> Download Answer Sheet
                                     </button>
                                 </div>
                             </div>
@@ -971,7 +971,7 @@ function MockTestDetail({
                                         onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
                                         className="flex-1 py-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95"
                                     >
-                                        <FileDown className="w-5 h-5" /> Download Sheets
+                                        <FileDown className="w-5 h-5" /> Download Answer Sheet
                                     </button>
                                 )}
                             </div>
@@ -1229,7 +1229,7 @@ function MockTestCard({
                                         onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
                                         className="w-full py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-700"
                                     >
-                                        <FileDown className="w-4 h-4" /> Download Sheets
+                                        <FileDown className="w-4 h-4" /> Download Answer Sheet
                                     </button>
                                 )}
                             </div>
@@ -1257,7 +1257,7 @@ function MockTestCard({
                                     onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
                                     className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all active:scale-95"
                                 >
-                                    <FileDown className="w-4 h-4" /> Download Sheets
+                                    <FileDown className="w-4 h-4" /> Download Answer Sheet
                                 </button>
                             </div>
                         ) : (
@@ -1405,7 +1405,7 @@ function AnswerSheetModal({ mock, attempts, isOpen, onClose, onDownload, isDownl
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-20"></div>
                     <FileDown className="w-12 h-12 mb-3 text-white drop-shadow-md mx-auto" />
                     <DialogTitle className="text-2xl font-black uppercase tracking-tight text-white drop-shadow-sm text-center relative z-10">
-                        Answer Sheets
+                        Download Answer Sheet
                     </DialogTitle>
                     <p className="text-indigo-100 font-medium text-sm text-center relative z-10 border-t border-white/20 pt-2 mt-2">
                         {mock?.title}
