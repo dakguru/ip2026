@@ -4,22 +4,23 @@
 import { useEffect, useState, use } from "react";
 import {
     ArrowLeft, FileText, BookOpen, Zap,
-    Info, Download, Share2, Printer, Loader2,
-    Calendar, Tag, Bookmark, Check
+    Info, Share2, Printer, Loader2,
+    Calendar, Bookmark, Check, Download
 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
 
-export default function DakSutraPreviewPage({ params }: { params: Promise<{ id: string }> }) {
+export default function DakSutraDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params);
     const [entry, setEntry] = useState<any>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [isSharing, setIsSharing] = useState(false);
 
     useEffect(() => {
-        fetch(`/api/admin/dak-sutra/${id}`)
+        fetch(`/api/dak-sutra/${id}`)
             .then(res => res.json())
             .then(data => {
-                setEntry(data.entry);
+                if (data.entry) setEntry(data.entry);
                 setIsLoading(false);
             })
             .catch(err => {
@@ -28,7 +29,24 @@ export default function DakSutraPreviewPage({ params }: { params: Promise<{ id: 
             });
     }, [id]);
 
-    const [isSharing, setIsSharing] = useState(false);
+    const handleShare = async () => {
+        const url = window.location.href;
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: `Dak Sutra: ${entry.title}`,
+                    text: `Check out this Postal Rule: ${entry.title}`,
+                    url: url
+                });
+            } catch (err) {
+                console.error("Share failed", err);
+            }
+        } else {
+            await navigator.clipboard.writeText(url);
+            setIsSharing(true);
+            setTimeout(() => setIsSharing(false), 2000);
+        }
+    };
 
     const handleDownload = async () => {
         const { generateDakSutraPDF } = await import("@/lib/pdf-generator-dak-sutra");
@@ -45,26 +63,6 @@ export default function DakSutraPreviewPage({ params }: { params: Promise<{ id: 
         });
     };
 
-    const handleShare = async () => {
-        const url = window.location.href;
-        if (navigator.share) {
-            try {
-                await navigator.share({
-                    title: `Dak Sutra: ${entry.title}`,
-                    text: `Check out this Postal Rule: ${entry.title}`,
-                    url: url
-                });
-            } catch (err) {
-                console.error("Share failed", err);
-            }
-        } else {
-            // Fallback: Copy to clipboard
-            await navigator.clipboard.writeText(url);
-            setIsSharing(true);
-            setTimeout(() => setIsSharing(false), 2000);
-        }
-    };
-
     if (isLoading) {
         return (
             <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center">
@@ -76,25 +74,22 @@ export default function DakSutraPreviewPage({ params }: { params: Promise<{ id: 
     if (!entry) {
         return (
             <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center">
-                <p className="text-zinc-500 text-lg font-bold">Entry not found</p>
+                <p className="text-zinc-500 text-lg font-bold">Rule not found or restricted</p>
             </div>
         );
     }
 
     return (
         <div className="min-h-screen bg-[#F8FAFC] dark:bg-zinc-950 pb-20">
-            {/* Header / Nav */}
+            {/* Header */}
             <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 sticky top-0 z-10">
-                <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-                    <Link href="/admin/dak-sutra" className="flex items-center gap-2 text-zinc-500 hover:text-zinc-900 transition-colors">
+                <div className="max-w-4xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+                    <Link href="/dak-sutra" className="flex items-center gap-2 text-zinc-500 hover:text-zinc-900 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
-                        <span className="font-medium text-sm">Back to List</span>
+                        <span className="font-medium text-sm">All Rules</span>
                     </Link>
-                    <div className="flex items-center gap-3">
-                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${entry.status === 'published' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}>
-                            {entry.status}
-                        </span>
-                        <Link href={`/admin/dak-sutra/edit/${entry._id}`} className="text-sm font-bold text-blue-600">Edit</Link>
+                    <div className="flex items-center gap-2">
+                        <span className="bg-blue-600/10 text-blue-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">{entry.category}</span>
                     </div>
                 </div>
             </div>
@@ -103,8 +98,7 @@ export default function DakSutraPreviewPage({ params }: { params: Promise<{ id: 
                 {/* Title Section */}
                 <div className="space-y-4">
                     <div className="flex flex-wrap gap-2">
-                        <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">{entry.category}</span>
-                        {entry.exam_tags.map((tag: string) => (
+                        {entry.exam_tags?.map((tag: string) => (
                             <span key={tag} className="bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase">{tag}</span>
                         ))}
                     </div>
@@ -187,7 +181,7 @@ export default function DakSutraPreviewPage({ params }: { params: Promise<{ id: 
                 </div>
 
                 {/* Quick Actions */}
-                <div className="flex justify-center pt-10 border-t border-zinc-200 dark:border-zinc-800">
+                <div className="flex items-center justify-center gap-4 pt-10 border-t border-zinc-200 dark:border-zinc-800">
                     <button
                         onClick={handleShare}
                         className="flex flex-col items-center gap-2 p-3 md:p-4 min-w-[100px] rounded-xl md:rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 transition-colors shadow-sm active:scale-95 group"
@@ -195,17 +189,14 @@ export default function DakSutraPreviewPage({ params }: { params: Promise<{ id: 
                         {isSharing ? <Check className="w-4 h-4 md:w-5 md:h-5 text-green-600" /> : <Share2 className="w-4 h-4 md:w-5 md:h-5 text-green-600 group-hover:scale-110 transition-transform" />}
                         <span className="text-[10px] md:text-xs font-bold text-zinc-600 dark:text-zinc-400 text-center">{isSharing ? 'Done' : 'Share'}</span>
                     </button>
+                    <button
+                        onClick={handleDownload}
+                        className="flex flex-col items-center gap-2 p-3 md:p-4 min-w-[100px] rounded-xl md:rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 transition-colors shadow-sm active:scale-95 group"
+                    >
+                        <Download className="w-4 h-4 md:w-5 md:h-5 text-blue-600 group-hover:scale-110 transition-transform" />
+                        <span className="text-[10px] md:text-xs font-bold text-zinc-600 dark:text-zinc-400 text-center uppercase tracking-widest">PDF</span>
+                    </button>
                 </div>
-
-                {entry.document_url && (
-                    <div className="p-4 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                            <FileText className="w-5 h-5 text-red-500" />
-                            <span className="text-sm font-bold text-zinc-700 dark:text-zinc-300">Original Document Attached</span>
-                        </div>
-                        <a href={entry.document_url} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-blue-600">Open PDF</a>
-                    </div>
-                )}
             </div>
         </div>
     );

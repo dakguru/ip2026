@@ -7,7 +7,9 @@ import {
     ArrowLeft, AlertTriangle, ChevronRight, ChevronLeft,
     RotateCcw, Sun, Moon, Sparkles, Layers, BookOpen, Scale, FileText, Bus, Shuffle,
     Home,
-    Settings
+    Settings,
+    Share2,
+    Download
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { pmlaFlashcards } from "./pmla_data";
@@ -23,6 +25,7 @@ import {
     postalManualVolVII,
     postalManualVolV
 } from "../../data/flashcards";
+import * as GeneratedCards from "../../data/flashcards/generated_from_mcq";
 import Link from "next/link";
 import Image from "next/image";
 import FlashcardsIntroBanner from "@/components/FlashcardsIntroBanner";
@@ -34,6 +37,7 @@ interface UnifiedFlashcard {
     answer: string;
     explanation?: string;
     tag: string;
+    category?: string;
     keywords?: string[];
 }
 
@@ -42,8 +46,9 @@ const convertToUnified = (data: any[], tagPrefix: string): UnifiedFlashcard[] =>
         id: item.card_no || index + 1,
         question: item.question,
         answer: item.answer,
-        explanation: item.keywords?.join(", "),
-        tag: item.topic || tagPrefix,
+        explanation: item.explanation || item.keywords?.join(", "),
+        tag: item.pdf_title || tagPrefix || item.topic,
+        category: item.topic || "", // Keep the category (Paper I etc) here
         keywords: item.keywords
     }));
 };
@@ -60,7 +65,13 @@ const deckData: Record<string, UnifiedFlashcard[]> = {
     'vol6_3': convertToUnified(postalManualVolVIPartIII, "Vol VI Part III"),
     'gspr': convertToUnified(gspr2018, "GSPR 2018"),
     'vol7': convertToUnified(postalManualVolVII, "Vol VII (RMS)"),
-    'vol5': convertToUnified(postalManualVolV, "Vol V (Definitions)")
+    'vol5': convertToUnified(postalManualVolV, "Vol V (Definitions)"),
+    // Add generated decks
+    ...Object.entries(GeneratedCards).reduce((acc, [key, data]) => {
+        const firstCard = (data as any[])[0];
+        acc[key] = convertToUnified(data as any[], firstCard?.pdf_title || "General");
+        return acc;
+    }, {} as Record<string, UnifiedFlashcard[]>)
 };
 
 // --- CONSTANTS ---
@@ -105,6 +116,7 @@ export default function FlashcardsPage() {
     const [direction, setDirection] = useState(0);
     const [isShuffled, setIsShuffled] = useState(false);
     const [shuffledDeck, setShuffledDeck] = useState<UnifiedFlashcard[]>([]);
+    const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
         setMounted(true);
@@ -123,14 +135,6 @@ export default function FlashcardsPage() {
         }
         setIsLoadingAuth(false);
     }, []);
-
-    if (!mounted) return null;
-
-    // Access Control: Only Admin can see the flashcards
-    // Everyone else sees the Coming Soon Banner
-    if (!isLoadingAuth && userRole !== 'admin') {
-        return <FlashcardsIntroBanner />;
-    }
 
     // Derived State
     const baseDeck = selectedDeckId ? deckData[selectedDeckId] : [];
@@ -160,6 +164,26 @@ export default function FlashcardsPage() {
         const threshold = 50;
         if (info.offset.x < -threshold) handleNext();
         else if (info.offset.x > threshold) handlePrev();
+    };
+
+    const handleShare = async () => {
+        if (!currentCard) return;
+        const text = `Flashcard: ${currentCard.question}\n\nAnswer: ${currentCard.answer}\n\nShared via Dak Guru`;
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Dak Guru Flashcard',
+                    text: text,
+                    url: window.location.href
+                });
+            } catch (err) {
+                console.error("Error sharing:", err);
+            }
+        } else {
+            // Fallback: Copy to clipboard
+            navigator.clipboard.writeText(text);
+            alert("Flashcard copied to clipboard!");
+        }
     };
 
     const toggleShuffle = () => {
@@ -206,84 +230,78 @@ export default function FlashcardsPage() {
 
     if (!mounted) return null;
 
+    // Access Control: Only Admin can see the flashcards
+    // Everyone else sees the Coming Soon Banner
+    if (!isLoadingAuth && userRole !== 'admin') {
+        return <FlashcardsIntroBanner />;
+    }
+
+
     // --- VIEW: DECK SELECTION ---
     if (!selectedDeckId) {
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-neutral-950 flex flex-col items-center p-4 md:p-8 font-sans transition-colors duration-300">
-                <header className="w-full max-w-5xl flex items-center justify-between mb-8">
-                    <Link href="/dashboard" className="p-2 rounded-full bg-white dark:bg-neutral-800 shadow-sm text-zinc-600 dark:text-zinc-400">
+            <div className="min-h-screen bg-zinc-50 dark:bg-neutral-950 flex flex-col items-center p-4 md:p-8 font-sans transition-colors duration-300 pb-20">
+                <header className="w-full max-w-5xl flex items-center justify-between mb-6 pt-2">
+                    <Link href="/dashboard" className="p-3 rounded-2xl bg-white dark:bg-neutral-900 shadow-sm border border-zinc-100 dark:border-white/5 text-zinc-600 dark:text-zinc-400 active:scale-95 transition-transform">
                         <ArrowLeft className="w-5 h-5" />
                     </Link>
-                    <h1 className="text-xl font-bold text-zinc-800 dark:text-white">Flashcards</h1>
-                    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 rounded-full bg-white dark:bg-neutral-800 shadow-sm text-zinc-600 dark:text-zinc-400">
-                        {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                    </button>
+                    <h1 className="text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-zinc-800 to-zinc-500 dark:from-white dark:to-zinc-500">Flashcards</h1>
+                    <div className="flex items-center gap-2">
+                        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-2 rounded-full bg-white dark:bg-neutral-800 shadow-sm text-zinc-600 dark:text-zinc-400">
+                            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                        </button>
+                    </div>
                 </header>
 
-                <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-20">
-                    <DeckButton
-                        title="PO Act 2023 & Rules"
-                        subtitle="20 Cards • Updated Legislation"
-                        icon={<Sparkles className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('poact_new')}
-                        colorClass="from-cyan-500 to-blue-500"
-                    />
-                    <DeckButton
-                        title="PO Guide Part I"
-                        subtitle="40 Cards • General Rules"
-                        icon={<BookOpen className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('poguide1')}
-                        colorClass="from-emerald-500 to-teal-500"
-                    />
-                    <DeckButton
-                        title="Postal Manual Vol VI Pt II"
-                        subtitle="10 Cards • Money Orders"
-                        icon={<Layers className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('vol6_2')}
-                        colorClass="from-orange-500 to-amber-500"
-                    />
-                    <DeckButton
-                        title="Postal Manual Vol VI Pt III"
-                        subtitle="10 Cards • Postmen Duties"
-                        icon={<Layers className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('vol6_3')}
-                        colorClass="from-amber-500 to-orange-500"
-                    />
-                    <DeckButton
-                        title="PMLA, 2002"
-                        subtitle="15 Cards • Money Laundering"
-                        icon={<Scale className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('pmla_new')}
-                        colorClass="from-indigo-500 to-purple-500"
-                    />
-                    <DeckButton
-                        title="Consumer Protection Act"
-                        subtitle="15 Cards • CPA 2019"
-                        icon={<Scale className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('cpa2019')}
-                        colorClass="from-pink-500 to-rose-500"
-                    />
-                    <DeckButton
-                        title="GSPR 2018"
-                        subtitle="32 Cards • Savings Rules"
-                        icon={<FileText className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('gspr')}
-                        colorClass="from-green-500 to-lime-500"
-                    />
-                    <DeckButton
-                        title="Postal Manual Vol VII"
-                        subtitle="45 Cards • RMS"
-                        icon={<Bus className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('vol7')}
-                        colorClass="from-red-500 to-orange-500"
-                    />
-                    <DeckButton
-                        title="Postal Manual Vol V"
-                        subtitle="50 Cards • Definitions"
-                        icon={<BookOpen className="w-5 h-5" />}
-                        onClick={() => handleSelectDeck('vol5')}
-                        colorClass="from-cyan-600 to-blue-600"
-                    />
+                <div className="w-full max-w-5xl mb-6 sticky top-2 z-30">
+                    <div className="relative group">
+                        <input
+                            type="text"
+                            placeholder="Find a topic (e.g. PO Act, PMLA)..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full p-4 pl-12 rounded-2xl bg-white dark:bg-neutral-900 border border-zinc-200 dark:border-white/10 shadow-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600"
+                        />
+                        <Sparkles className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-indigo-500 group-focus-within:animate-pulse" />
+                        {searchQuery && (
+                            <button
+                                onClick={() => setSearchQuery("")}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 p-1 rounded-full bg-zinc-100 dark:bg-white/10 text-zinc-400"
+                            >
+                                <RotateCcw className="w-3 h-3" />
+                            </button>
+                        )}
+                    </div>
+                </div>
+
+                <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {/* Filtered Decks */}
+                    {Object.entries(deckData)
+                        .filter(([id, deck]) => {
+                            if (!searchQuery) return true;
+                            const title = deck[0]?.tag || id;
+                            return title.toLowerCase().includes(searchQuery.toLowerCase());
+                        })
+                        .sort((a, b) => {
+                            const titleA = a[1][0]?.tag || a[0];
+                            const titleB = b[1][0]?.tag || b[0];
+                            return titleA.localeCompare(titleB);
+                        })
+                        .map(([id, deck]) => {
+                            const title = deck[0]?.tag || id;
+                            const category = deck[0]?.category;
+                            const count = deck.length;
+                            return (
+                                <DeckButton
+                                    key={id}
+                                    title={title}
+                                    subtitle={category ? `${category} • ${count} Cards` : `${count} Cards`}
+                                    icon={<BookOpen className="w-5 h-5" />}
+                                    onClick={() => handleSelectDeck(id)}
+                                    colorClass={getDeckColor(id)}
+                                />
+                            );
+                        })}
                 </div>
             </div>
         );
@@ -294,12 +312,12 @@ export default function FlashcardsPage() {
         <div className="fixed inset-0 bg-zinc-50 dark:bg-black text-zinc-900 dark:text-white font-sans flex flex-col overflow-hidden">
 
             {/* Top Bar: Compact Header */}
-            <div className="flex-none px-4 py-3 flex items-center justify-between z-20 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-100 dark:border-white/10">
+            <div className="flex-none px-4 py-3 flex items-center justify-between z-30 bg-white/90 dark:bg-black/90 backdrop-blur-xl border-b border-zinc-100 dark:border-white/10">
                 <button
                     onClick={() => setSelectedDeckId(null)}
-                    className="p-2 -ml-2 rounded-full active:bg-zinc-100 dark:active:bg-white/10 transition-colors"
+                    className="p-2 -ml-2 rounded-xl active:bg-zinc-100 dark:active:bg-white/10 transition-colors"
                 >
-                    <ArrowLeft className="w-6 h-6 text-zinc-600 dark:text-zinc-300" />
+                    <ArrowLeft className="w-6 h-6 text-zinc-800 dark:text-zinc-200" />
                 </button>
 
                 <div className="flex flex-col items-center">
@@ -317,6 +335,12 @@ export default function FlashcardsPage() {
 
                 <div className="flex gap-1">
                     <button
+                        onClick={handleShare}
+                        className="p-2 rounded-full text-zinc-400 dark:text-zinc-600 active:text-indigo-500"
+                    >
+                        <Share2 className="w-5 h-5" />
+                    </button>
+                    <button
                         onClick={toggleShuffle}
                         className={`p-2 rounded-full transition-colors ${isShuffled ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10' : 'text-zinc-400 dark:text-zinc-600'}`}
                     >
@@ -332,32 +356,36 @@ export default function FlashcardsPage() {
             </div>
 
             {/* Main Content Area */}
-            <div className="flex-1 relative flex flex-col items-center justify-center p-4 md:p-8">
+            <div className="flex-1 relative flex flex-col items-center justify-center p-6 md:p-8 touch-none">
+                {/* Background Glow */}
+                <div className={`absolute w-64 h-64 rounded-full blur-[100px] opacity-20 dark:opacity-30 -z-10 transition-colors duration-1000 bg-gradient-to-br ${currentTheme.gradient}`} />
+
                 {/* Card Container */}
-                <div className="w-full max-w-sm aspect-[3/4] md:aspect-[4/5] relative z-10">
+                <div className="w-full max-w-sm h-full max-h-[500px] md:max-h-[600px] aspect-[4/5] relative z-10">
                     <AnimatePresence initial={false} custom={direction} mode="wait">
                         <motion.div
                             key={currentIndex}
                             custom={direction}
                             variants={{
-                                enter: (d: number) => ({ x: d > 0 ? 300 : -300, opacity: 0, scale: 0.95 }),
-                                center: { zIndex: 1, x: 0, opacity: 1, scale: 1 },
-                                exit: (d: number) => ({ zIndex: 0, x: d < 0 ? 300 : -300, opacity: 0, scale: 0.95 })
+                                enter: (d: number) => ({ x: d > 0 ? "100%" : "-100%", opacity: 0, scale: 0.9, rotate: d > 0 ? 10 : -10 }),
+                                center: { zIndex: 1, x: 0, opacity: 1, scale: 1, rotate: 0 },
+                                exit: (d: number) => ({ zIndex: 0, x: d < 0 ? "100%" : "-100%", opacity: 0, scale: 0.9, rotate: d < 0 ? 10 : -10 })
                             }}
                             initial="enter"
                             animate="center"
                             exit="exit"
-                            transition={{ type: "spring", stiffness: 300, damping: 30, mass: 0.8 }}
+                            transition={{ type: "spring", stiffness: 260, damping: 25 }}
                             drag="x"
                             dragConstraints={{ left: 0, right: 0 }}
-                            dragElastic={0.2}
+                            dragElastic={1}
                             onDragEnd={handleDragEnd}
-                            className="absolute inset-0 w-full h-full cursor-pointer perspective-1000"
+                            className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing perspective-1000"
                             onClick={() => setIsFlipped(!isFlipped)}
                         >
                             <motion.div
-                                className="w-full h-full relative preserve-3d transition-transform duration-500"
+                                className="w-full h-full relative preserve-3d transition-transform"
                                 animate={{ rotateY: isFlipped ? 180 : 0 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 35 }}
                             >
                                 {/* FRONT */}
                                 <div className="absolute inset-0 backface-hidden bg-white dark:bg-neutral-900 rounded-[2rem] p-6 shadow-2xl border border-zinc-100 dark:border-white/5 flex flex-col">
@@ -366,12 +394,12 @@ export default function FlashcardsPage() {
                                             #{currentCard?.id}
                                         </span>
                                         <span className={`text-[10px] font-bold uppercase tracking-widest ${theme === 'dark' ? currentTheme.accent : 'text-indigo-600'}`}>
-                                            {currentCard?.tag}
+                                            {currentCard?.category || currentCard?.tag}
                                         </span>
                                     </div>
 
-                                    <div className="flex-1 flex items-center justify-center text-center">
-                                        <h2 className="text-2xl font-bold leading-tight text-zinc-800 dark:text-white select-none">
+                                    <div className="flex-1 overflow-y-auto px-6 py-4 flex flex-col items-center justify-center text-center">
+                                        <h2 className="text-xl md:text-2xl font-black leading-tight text-zinc-800 dark:text-white select-none tracking-tight">
                                             {currentCard?.question}
                                         </h2>
                                     </div>
@@ -389,15 +417,17 @@ export default function FlashcardsPage() {
                                         </span>
                                     </div>
 
-                                    <div className="flex-none text-center mb-6">
-                                        <h3 className={`text-xl font-bold leading-snug ${theme === 'dark' ? currentTheme.accent : 'text-indigo-600'}`}>
+                                    <div className="flex-none text-center mb-4">
+                                        <h3 className={`text-lg md:text-xl font-black leading-snug px-4 ${theme === 'dark' ? currentTheme.accent : 'text-indigo-600'}`}>
                                             {currentCard?.answer}
                                         </h3>
                                     </div>
 
-                                    <div className="flex-1 overflow-y-auto bg-white dark:bg-white/5 rounded-xl p-4 border border-zinc-100 dark:border-white/5">
-                                        <p className="text-xs text-zinc-400 uppercase font-bold mb-2">Explanation</p>
-                                        <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                                    <div className="flex-1 overflow-y-auto bg-white/50 dark:bg-white/5 rounded-2xl p-5 border border-zinc-100 dark:border-white/5 backdrop-blur-sm">
+                                        <p className="text-[10px] text-zinc-400 uppercase font-black mb-3 tracking-widest flex items-center gap-2">
+                                            <Sparkles className="w-3 h-3" /> Explanation
+                                        </p>
+                                        <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed font-medium">
                                             {currentCard?.explanation || "No additional explanation provided."}
                                         </p>
                                     </div>
@@ -409,39 +439,40 @@ export default function FlashcardsPage() {
             </div>
 
             {/* Bottom Navigation / Controls Bar */}
-            <div className="flex-none pb-[env(safe-area-inset-bottom)] bg-white dark:bg-neutral-900 border-t border-zinc-100 dark:border-white/5">
-                <div className="flex items-center justify-between px-6 py-4 max-w-md mx-auto w-full gap-6">
+            <div className="flex-none pb-[calc(env(safe-area-inset-bottom)+1rem)] pt-4 bg-white/95 dark:bg-black/95 backdrop-blur-xl border-t border-zinc-100 dark:border-white/10 px-6">
+                <div className="flex items-center justify-between max-w-md mx-auto w-full gap-4">
 
                     <button
                         onClick={handlePrev}
                         disabled={currentIndex === 0}
-                        className="flex flex-col items-center gap-1 group disabled:opacity-30 transition-opacity"
+                        className="flex-1 flex flex-col items-center gap-1.5 group disabled:opacity-20 transition-all active:scale-90"
                     >
-                        <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-white/5 flex items-center justify-center group-active:scale-95 transition-transform">
-                            <ChevronLeft className="w-6 h-6 text-zinc-600 dark:text-white" />
+                        <div className="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-white/5 flex items-center justify-center border border-zinc-200/50 dark:border-white/5 shadow-sm">
+                            <ChevronLeft className="w-6 h-6 text-zinc-900 dark:text-white" />
                         </div>
-                        <span className="text-[10px] font-medium text-zinc-500">Prev</span>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Prev</span>
                     </button>
 
                     <button
                         onClick={() => setIsFlipped(!isFlipped)}
-                        className="flex flex-col items-center gap-1 group"
+                        className="flex-none flex flex-col items-center gap-1.5 group active:scale-95 transition-all"
                     >
-                        <div className="w-14 h-14 rounded-full bg-indigo-500 dark:bg-indigo-600 shadow-lg shadow-indigo-500/20 flex items-center justify-center group-active:scale-95 transition-transform">
-                            <RotateCcw className="w-6 h-6 text-white" />
+                        <div className="w-16 h-16 rounded-[2rem] bg-indigo-600 dark:bg-indigo-500 shadow-2xl shadow-indigo-500/30 flex items-center justify-center relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
+                            <RotateCcw className="w-7 h-7 text-white" />
                         </div>
-                        <span className="text-[10px] font-medium text-indigo-500">Flip</span>
+                        <span className="text-[10px] font-extrabold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Flip</span>
                     </button>
 
                     <button
                         onClick={handleNext}
                         disabled={currentIndex === activeDeck.length - 1}
-                        className="flex flex-col items-center gap-1 group disabled:opacity-30 transition-opacity"
+                        className="flex-1 flex flex-col items-center gap-1.5 group disabled:opacity-20 transition-all active:scale-90"
                     >
-                        <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-white/5 flex items-center justify-center group-active:scale-95 transition-transform">
-                            <ChevronRight className="w-6 h-6 text-zinc-600 dark:text-white" />
+                        <div className="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-white/5 flex items-center justify-center border border-zinc-200/50 dark:border-white/5 shadow-sm">
+                            <ChevronRight className="w-6 h-6 text-zinc-900 dark:text-white" />
                         </div>
-                        <span className="text-[10px] font-medium text-zinc-500">Next</span>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Next</span>
                     </button>
 
                 </div>
@@ -451,25 +482,47 @@ export default function FlashcardsPage() {
     );
 }
 
+// Reusable Deck Color Utility
+function getDeckColor(id: string) {
+    const colors = [
+        "from-cyan-500 to-blue-500",
+        "from-emerald-500 to-teal-500",
+        "from-orange-500 to-amber-500",
+        "from-amber-500 to-orange-500",
+        "from-indigo-500 to-purple-500",
+        "from-pink-500 to-rose-500",
+        "from-green-500 to-lime-500",
+        "from-red-500 to-orange-500",
+        "from-cyan-600 to-blue-600",
+        "from-violet-500 to-fuchsia-500",
+        "from-sky-500 to-indigo-500"
+    ];
+    let hash = 0;
+    for (let i = 0; i < id.length; i++) {
+        hash = id.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return colors[Math.abs(hash) % colors.length];
+}
+
 // Reusable Deck Button
 function DeckButton({ title, subtitle, icon, onClick, colorClass }: any) {
     return (
         <button
             onClick={onClick}
-            className="group relative overflow-hidden p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-zinc-200 dark:border-white/5 hover:border-transparent transition-all text-left shadow-sm hover:shadow-xl active:scale-98"
+            className="group relative overflow-hidden p-4 md:p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-zinc-200 dark:border-white/5 hover:border-transparent transition-all text-left shadow-sm active:scale-95 touch-manipulation"
         >
-            <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity bg-gradient-to-r ${colorClass}`} />
+            <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 dark:group-hover:opacity-20 transition-opacity bg-gradient-to-r ${colorClass}`} />
             <div className="relative z-10 flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br ${colorClass} text-white shadow-md`}>
+                <div className="flex items-center gap-3 md:gap-4">
+                    <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center bg-gradient-to-br ${colorClass} text-white shadow-lg shadow-black/5`}>
                         {icon}
                     </div>
-                    <div>
-                        <h3 className="text-lg font-bold text-zinc-800 dark:text-white mb-0.5">{title}</h3>
-                        <p className="text-xs text-zinc-500 dark:text-zinc-400">{subtitle}</p>
+                    <div className="flex-1 min-w-0">
+                        <h3 className="text-sm md:text-lg font-black text-zinc-800 dark:text-white mb-0.5 truncate">{title}</h3>
+                        <p className="text-[10px] md:text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-tight">{subtitle}</p>
                     </div>
                 </div>
-                <ChevronRight className="w-5 h-5 text-zinc-300 dark:text-neutral-600 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
+                <ChevronRight className="w-5 h-5 text-zinc-300 dark:text-neutral-700 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors flex-none" />
             </div>
         </button>
     );

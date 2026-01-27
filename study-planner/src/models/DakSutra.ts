@@ -14,6 +14,8 @@ const DakSutraSchema = new mongoose.Schema({
     exam_tags: { type: [String], default: [] }, // Multi-select
     official_text: { type: String }, // Rich text
     guru_explanation: { type: String }, // Rich text
+    practical_example: { type: String }, // Optional rich text
+    exam_insight: { type: String }, // Optional rich text
     document_url: { type: String }, // PDF link
     featured_image: { type: String }, // Optional image
     status: {

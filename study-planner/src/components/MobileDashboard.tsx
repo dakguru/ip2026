@@ -2,13 +2,13 @@
 
 import DashboardCarousel from "@/components/dashboard/DashboardCarousel";
 import Link from "next/link";
-import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy } from "lucide-react";
+import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy, Newspaper } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetHeader } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
 import { useRouter } from "next/navigation";
-import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
+// import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 
 interface MobileDashboardProps {
     displayName: string;
@@ -59,6 +59,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
             router.push("/notes");
         } else if (q.includes("conduct") || q.includes("ccs")) {
             router.push("/quiz?topic=p1-04"); // Assuming ID for CCS Rules or general quiz page
+        } else if (q.includes("dak") || q.includes("sutra") || q.includes("rule")) {
+            router.push("/dak-sutra");
         } else if (q.includes("community")) {
             router.push("/social");
         } else {
@@ -73,6 +75,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         { label: "MCQs", icon: CheckCircle2, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/quiz" },
         { label: "Mock Tests", icon: Trophy, color: "text-purple-700 dark:text-purple-400", bg: "bg-purple-50 dark:bg-purple-900/20", href: "/mock-tests" },
         { label: "Flash Cards", icon: Layers, color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-900/20", href: "/flashcards" },
+        { label: "Dak Sutra", icon: Newspaper, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/dak-sutra" },
         { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50" },
         { label: "DG Blog", icon: PenTool, color: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/blog" },
     ];
@@ -141,7 +144,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
-            <MockTestAnnouncementPopup />
+            {/* <MockTestAnnouncementPopup /> */}
             {/* --- ROYAL HEADER --- */}
             <header className="sticky top-0 z-40 bg-slate-900 dark:bg-black px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] border-b border-slate-800 shadow-xl shadow-slate-900/20">
                 <div className="flex items-center justify-between">
@@ -364,43 +367,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
             <div className="space-y-6 pt-5">
 
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
-                {/* --- LIVE MOCK TEST BANNER (Royal & Urgent) --- */}
-                <div className="px-4 md:px-6">
-                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-600 via-yellow-600 to-amber-700 shadow-xl shadow-amber-900/20 p-5 group">
-                        {/* Background Effects */}
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl -mr-10 -mt-10 animate-pulse"></div>
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-yellow-400/20 rounded-full blur-2xl -ml-10 -mb-10 animate-pulse delay-700"></div>
-
-                        <div className="relative z-10 text-center">
-                            <div className="flex items-center justify-center mb-3">
-                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 border border-white/30 text-white font-black text-[10px] uppercase tracking-[0.2em]">
-                                    <Trophy className="w-3.5 h-3.5" />
-                                    Results Live
-                                </div>
-                            </div>
-
-                            <h3 className="text-2xl font-black text-white mb-2 leading-tight drop-shadow-md">
-                                HALL OF FAME <br />
-                                <span className="text-yellow-200">MOCK TEST - 02</span>
-                            </h3>
-
-                            <p className="text-[10px] font-bold text-amber-100 uppercase tracking-widest mb-4 opacity-80">
-                                Congratulations to all Top 7 Rankers!
-                            </p>
-
-                            <button
-                                onClick={() => {
-                                    sessionStorage.removeItem("seen_mock_results_test_02_v2");
-                                    window.location.reload();
-                                }}
-                                className="w-full bg-white text-amber-700 py-3 rounded-xl font-black text-sm shadow-xl flex items-center justify-center gap-2 active:scale-95 transition-all hover:bg-amber-50"
-                            >
-                                <Crown className="w-4 h-4 fill-amber-700" />
-                                View Leaderboard
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                {/* --- HALL OF FAME BANNER REMOVED --- */}
 
                 {/* --- QUICK ACTIONS (NOW SECOND) --- */}
                 <div className="px-5">
@@ -412,23 +379,25 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </div>
 
                     <div className="grid grid-cols-3 gap-x-4 gap-y-6">
-                        {mainFeatures.map((item) => (
-                            <Link
-                                key={item.label}
-                                href={item.href}
-                                target={item.href.startsWith("http") ? "_blank" : undefined}
-                                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                                className="flex flex-col items-center gap-2.5 group active:scale-95 transition-transform"
-                            >
-                                <div className={`w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-[20px] flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden backdrop-blur-sm`}>
-                                    <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                    <item.icon className={`w-7 h-7 ${item.color} drop-shadow-sm`} strokeWidth={2} />
-                                </div>
-                                <span className="text-[10px] font-black text-center text-slate-500 dark:text-zinc-400 leading-tight uppercase tracking-tight">
-                                    {item.label}
-                                </span>
-                            </Link>
-                        ))}
+                        {mainFeatures
+                            .filter(item => item.label !== "Dak Sutra" || isAdmin)
+                            .map((item) => (
+                                <Link
+                                    key={item.label}
+                                    href={item.href}
+                                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                                    className="flex flex-col items-center gap-2.5 group active:scale-95 transition-transform"
+                                >
+                                    <div className={`w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-[20px] flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden backdrop-blur-sm`}>
+                                        <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                        <item.icon className={`w-7 h-7 ${item.color} drop-shadow-sm`} strokeWidth={2} />
+                                    </div>
+                                    <span className="text-[10px] font-black text-center text-slate-500 dark:text-zinc-400 leading-tight uppercase tracking-tight">
+                                        {item.label}
+                                    </span>
+                                </Link>
+                            ))}
                     </div>
                 </div>
 

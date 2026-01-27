@@ -4,6 +4,7 @@ export interface FlashCard {
     card_no: number;
     question: string;
     answer: string;
+    explanation?: string;
     exam_weight: "High" | "Medium" | "Low";
     keywords: string[];
 }

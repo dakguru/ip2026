@@ -67,6 +67,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
             { title: "MCQs", desc: "Practice Questions", color: "text-emerald-600", bg: "bg-emerald-50 dark:bg-emerald-900/20", border: "group-hover:border-emerald-500", shadow: "group-hover:shadow-emerald-500/20", icon: CheckCircle2, link: "/quiz", badge: "Silver" },
             { title: "Flash Cards", desc: "Quick Revision", color: "text-amber-600", bg: "bg-amber-50 dark:bg-amber-900/20", border: "group-hover:border-amber-500", shadow: "group-hover:shadow-amber-500/20", icon: Zap, link: "/flashcards", badge: "Silver" },
             { title: "Web Guide", desc: "Comprehensive Resources", color: "text-blue-600", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-500", shadow: "group-hover:shadow-blue-500/20", icon: BookOpen, link: "/guide", badge: "Silver" },
+            { title: "Dak Sutra", desc: "Postal Rules Simplified", color: "text-blue-700", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-600", shadow: "group-hover:shadow-blue-600/20", icon: Newspaper, link: "/dak-sutra", badge: "Admin" },
             { title: "Previous Year Questions", desc: "Previous Years", color: "text-cyan-600", bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "group-hover:border-cyan-500", shadow: "group-hover:shadow-cyan-500/20", icon: FileQuestion, link: "/pyq", badge: "Silver" },
             { title: "Current Affairs", desc: "Daily News & Updates", color: "text-indigo-600", bg: "bg-indigo-50 dark:bg-indigo-900/20", border: "group-hover:border-indigo-500", shadow: "group-hover:shadow-indigo-500/20", icon: Newspaper, link: "/current-affairs", badge: "Silver" },
             {
@@ -79,7 +80,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 icon: Mail,
                 link: "/blog",
                 badge: "Free",
-                className: "col-span-1 aspect-[4/3] sm:aspect-square lg:col-span-2 lg:aspect-[2.5/1]"
+                className: "col-span-1 aspect-square"
             },
         ];
 
@@ -96,15 +97,14 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
         icon: MessageCircleQuestion,
         link: "/social",
         badge: "Free",
-        className: "col-span-1 aspect-[4/3] sm:aspect-square lg:col-span-2 lg:aspect-[2.5/1]"
+        className: "col-span-1 aspect-square"
     };
 
 
     if (role === 'admin') {
         // Admin View: Prioritize Admin Tiles + Community
-        // Force single column for all tiles in Admin view to ensure perfect grid alignment
-        const dakGuruTileSimple = { ...dakGuruTile, className: "col-span-1" };
-        const standardFeatures = defaultFeatures.map(f => ({ ...f, className: "col-span-1" }));
+        const dakGuruTileSimple = { ...dakGuruTile, className: "col-span-1 aspect-square" };
+        const standardFeatures = defaultFeatures.map(f => ({ ...f, className: "col-span-1 aspect-square" }));
 
         features = [
             {
@@ -117,8 +117,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 icon: Bell,
                 link: "/admin/notifications",
                 badge: "Admin",
-                // @ts-ignore
-                className: "col-span-1",
+                className: "col-span-1 aspect-square",
                 customBadge: unreadCount > 0 ? unreadCount : undefined
             },
             {
@@ -131,8 +130,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 icon: FileText,
                 link: "/developer/blog",
                 badge: "Admin",
-                // @ts-ignore
-                className: "col-span-1"
+                className: "col-span-1 aspect-square"
             },
             {
                 title: "Admin Messages",
@@ -144,8 +142,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 icon: Mail,
                 link: "/admin/messages",
                 badge: "Admin",
-                // @ts-ignore
-                className: "col-span-1"
+                className: "col-span-1 aspect-square"
             },
             dakGuruTileSimple,
             {
@@ -158,14 +155,16 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 icon: Shield,
                 link: "/developer",
                 badge: "Admin",
-                // @ts-ignore
-                className: "col-span-1"
+                className: "col-span-1 aspect-square"
             },
             ...standardFeatures
         ];
     } else {
-        // Regular User: Add Community
-        features.push(dakGuruTile);
+        // Regular User: Force uniform 1x1 columns for everything (Exclude Admin tiles)
+        const standardFeatures = defaultFeatures
+            .filter(f => f.badge !== 'Admin')
+            .map(f => ({ ...f, className: "col-span-1 aspect-square" }));
+        features = [...standardFeatures, { ...dakGuruTile, className: "col-span-1 aspect-square" }];
     }
 
     return (

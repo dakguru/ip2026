@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
     Save, Send, X, ArrowLeft, Loader2,
-    FileText, Info, BookOpen,
+    FileText, Info, BookOpen, Zap,
     Link as LinkIcon, Image as ImageIcon, Calendar, Tag
 } from "lucide-react";
 import Link from "next/link";
@@ -43,6 +43,8 @@ export default function DakSutraForm({ initialData, isEdit }: DakSutraFormProps)
         exam_tags: [] as string[],
         official_text: "",
         guru_explanation: "",
+        practical_example: "",
+        exam_insight: "",
         document_url: "",
         featured_image: "",
         status: "draft"
@@ -268,6 +270,40 @@ export default function DakSutraForm({ initialData, isEdit }: DakSutraFormProps)
                         placeholder="Simplify the rule for students..."
                         className="w-full bg-white/80 dark:bg-zinc-900/50 border border-blue-200 dark:border-blue-800 rounded-2xl px-4 py-4 min-h-[200px] outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                         required
+                    />
+                </section>
+
+                {/* Practical Example */}
+                <section className="bg-gradient-to-br from-amber-50/50 to-orange-50/50 dark:from-amber-900/10 dark:to-orange-900/10 p-6 rounded-3xl shadow-sm border border-amber-100 dark:border-amber-900/40 space-y-4">
+                    <div className="flex items-center gap-2 text-amber-700 dark:text-amber-400">
+                        <div className="p-2 bg-white dark:bg-zinc-800 rounded-lg shadow-sm">
+                            <Info className="w-5 h-5 text-amber-500" />
+                        </div>
+                        <h3 className="font-bold">Practical Example (Optional)</h3>
+                    </div>
+                    <textarea
+                        name="practical_example"
+                        value={formData.practical_example}
+                        onChange={handleChange}
+                        placeholder="Provide a real-world scenario or calculation..."
+                        className="w-full bg-white/80 dark:bg-zinc-900/50 border border-amber-200 dark:border-amber-800 rounded-2xl px-4 py-4 min-h-[150px] outline-none focus:ring-2 focus:ring-amber-500/20 transition-all"
+                    />
+                </section>
+
+                {/* LDCE Exam Insight */}
+                <section className="bg-gradient-to-br from-emerald-50/50 to-teal-50/50 dark:from-emerald-900/10 dark:to-teal-900/10 p-6 rounded-3xl shadow-sm border border-emerald-100 dark:border-emerald-900/40 space-y-4">
+                    <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400">
+                        <div className="p-2 bg-white dark:bg-zinc-800 rounded-lg shadow-sm">
+                            <Zap className="w-5 h-5 text-emerald-500" />
+                        </div>
+                        <h3 className="font-bold">LDCE Exam Insight (Optional)</h3>
+                    </div>
+                    <textarea
+                        name="exam_insight"
+                        value={formData.exam_insight}
+                        onChange={handleChange}
+                        placeholder="Important points for exams, frequency of questions, etc..."
+                        className="w-full bg-white/80 dark:bg-zinc-900/50 border border-emerald-200 dark:border-emerald-800 rounded-2xl px-4 py-4 min-h-[150px] outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
                     />
                 </section>
 

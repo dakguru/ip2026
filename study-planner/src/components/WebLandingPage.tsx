@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import FeatureGrid from "@/components/FeatureGrid";
 import WelcomeSection from "@/components/WelcomeSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
+// import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 import StoreButton from "@/components/StoreButton";
 // import LaunchPopup from "@/components/LaunchPopup";
 
@@ -29,7 +29,7 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
             {/* {!["gold", "silver"].includes(membershipLevel.toLowerCase()) && <LaunchPopup />} */}
 
             {/* 1.6. Mock Test Description Popup */}
-            <MockTestAnnouncementPopup />
+            {/* <MockTestAnnouncementPopup /> */}
 
             {/* 2. Hero Section */}
             <WelcomeSection displayName={displayName} />

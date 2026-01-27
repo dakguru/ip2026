@@ -1,0 +1,428 @@
+{
+  "total_mcqs_scanned": 2694,
+  "total_mcqs_rejected": 772,
+  "total_duplicates_removed": 26,
+  "total_flashcards_created": 1896,
+  "topics": [
+    {
+      "topic_name": "The Post Office Act, 2023 & The Post Office Rule, 2024",
+      "total_mcqs": 55,
+      "rejected_mcqs": 6,
+      "duplicates_removed": 0,
+      "flashcards_created": 49
+    },
+    {
+      "topic_name": "Government Saving Bank Act, 1873",
+      "total_mcqs": 27,
+      "rejected_mcqs": 8,
+      "duplicates_removed": 0,
+      "flashcards_created": 19
+    },
+    {
+      "topic_name": "PMLA, 2002",
+      "total_mcqs": 75,
+      "rejected_mcqs": 23,
+      "duplicates_removed": 0,
+      "flashcards_created": 52
+    },
+    {
+      "topic_name": "Consumer Protection Act, 2019",
+      "total_mcqs": 50,
+      "rejected_mcqs": 29,
+      "duplicates_removed": 0,
+      "flashcards_created": 21
+    },
+    {
+      "topic_name": "IT Act, 2000",
+      "total_mcqs": 40,
+      "rejected_mcqs": 15,
+      "duplicates_removed": 0,
+      "flashcards_created": 25
+    },
+    {
+      "topic_name": "The Post Office Regulations, 2024",
+      "total_mcqs": 175,
+      "rejected_mcqs": 46,
+      "duplicates_removed": 0,
+      "flashcards_created": 129
+    },
+    {
+      "topic_name": "Government Savings Promotion General Rules, 2018",
+      "total_mcqs": 30,
+      "rejected_mcqs": 13,
+      "duplicates_removed": 0,
+      "flashcards_created": 17
+    },
+    {
+      "topic_name": "Small Savings Scheme, 2019",
+      "total_mcqs": 59,
+      "rejected_mcqs": 20,
+      "duplicates_removed": 0,
+      "flashcards_created": 39
+    },
+    {
+      "topic_name": "PLI Rules 2011 & Its Amendments",
+      "total_mcqs": 75,
+      "rejected_mcqs": 15,
+      "duplicates_removed": 0,
+      "flashcards_created": 60
+    },
+    {
+      "topic_name": "Book of BO Rules",
+      "total_mcqs": 60,
+      "rejected_mcqs": 26,
+      "duplicates_removed": 0,
+      "flashcards_created": 34
+    },
+    {
+      "topic_name": "Postal Manual Volume II",
+      "total_mcqs": 50,
+      "rejected_mcqs": 9,
+      "duplicates_removed": 0,
+      "flashcards_created": 41
+    },
+    {
+      "topic_name": "Postal Volume IV-Establishment and Recruitments",
+      "total_mcqs": 30,
+      "rejected_mcqs": 14,
+      "duplicates_removed": 0,
+      "flashcards_created": 16
+    },
+    {
+      "topic_name": "Postal Manual Volume VIII",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Postal Manual Volume V",
+      "total_mcqs": 50,
+      "rejected_mcqs": 13,
+      "duplicates_removed": 0,
+      "flashcards_created": 37
+    },
+    {
+      "topic_name": "Postal Manual Volume VI",
+      "total_mcqs": 48,
+      "rejected_mcqs": 7,
+      "duplicates_removed": 0,
+      "flashcards_created": 41
+    },
+    {
+      "topic_name": "Postal Manual Volume VII",
+      "total_mcqs": 43,
+      "rejected_mcqs": 9,
+      "duplicates_removed": 0,
+      "flashcards_created": 34
+    },
+    {
+      "topic_name": "Jansuraksha Schemes",
+      "total_mcqs": 30,
+      "rejected_mcqs": 9,
+      "duplicates_removed": 0,
+      "flashcards_created": 21
+    },
+    {
+      "topic_name": "Post Office Guide Part - I",
+      "total_mcqs": 73,
+      "rejected_mcqs": 21,
+      "duplicates_removed": 1,
+      "flashcards_created": 51
+    },
+    {
+      "topic_name": "Post Office Guide Part - II",
+      "total_mcqs": 55,
+      "rejected_mcqs": 14,
+      "duplicates_removed": 0,
+      "flashcards_created": 41
+    },
+    {
+      "topic_name": "DIGIPIN",
+      "total_mcqs": 25,
+      "rejected_mcqs": 12,
+      "duplicates_removed": 0,
+      "flashcards_created": 13
+    },
+    {
+      "topic_name": "Dakghar Niryat Kendra",
+      "total_mcqs": 50,
+      "rejected_mcqs": 9,
+      "duplicates_removed": 0,
+      "flashcards_created": 41
+    },
+    {
+      "topic_name": "MNOP PNOP",
+      "total_mcqs": 100,
+      "rejected_mcqs": 20,
+      "duplicates_removed": 0,
+      "flashcards_created": 80
+    },
+    {
+      "topic_name": "POSB CBS Manual",
+      "total_mcqs": 75,
+      "rejected_mcqs": 11,
+      "duplicates_removed": 0,
+      "flashcards_created": 64
+    },
+    {
+      "topic_name": "SB Orders",
+      "total_mcqs": 100,
+      "rejected_mcqs": 16,
+      "duplicates_removed": 0,
+      "flashcards_created": 84
+    },
+    {
+      "topic_name": "Annual Report 2024-25",
+      "total_mcqs": 75,
+      "rejected_mcqs": 18,
+      "duplicates_removed": 0,
+      "flashcards_created": 57
+    },
+    {
+      "topic_name": "IPPB",
+      "total_mcqs": 75,
+      "rejected_mcqs": 17,
+      "duplicates_removed": 0,
+      "flashcards_created": 58
+    },
+    {
+      "topic_name": "CCS (Conduct) Rules, 1964",
+      "total_mcqs": 45,
+      "rejected_mcqs": 19,
+      "duplicates_removed": 0,
+      "flashcards_created": 26
+    },
+    {
+      "topic_name": "CCS (CCA) Rules, 1965",
+      "total_mcqs": 75,
+      "rejected_mcqs": 22,
+      "duplicates_removed": 0,
+      "flashcards_created": 53
+    },
+    {
+      "topic_name": "CCS (Temporary Service) Rules 1965",
+      "total_mcqs": 20,
+      "rejected_mcqs": 10,
+      "duplicates_removed": 0,
+      "flashcards_created": 10
+    },
+    {
+      "topic_name": "GDS Conduct and Engagement Rules, 2020",
+      "total_mcqs": 50,
+      "rejected_mcqs": 18,
+      "duplicates_removed": 0,
+      "flashcards_created": 32
+    },
+    {
+      "topic_name": "GDS Rulings",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Preservation & Disposal of Records",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Postal Manual Volume III",
+      "total_mcqs": 30,
+      "rejected_mcqs": 12,
+      "duplicates_removed": 0,
+      "flashcards_created": 18
+    },
+    {
+      "topic_name": "SDBS, 2011",
+      "total_mcqs": 30,
+      "rejected_mcqs": 5,
+      "duplicates_removed": 0,
+      "flashcards_created": 25
+    },
+    {
+      "topic_name": "The Constitution of India",
+      "total_mcqs": 75,
+      "rejected_mcqs": 22,
+      "duplicates_removed": 0,
+      "flashcards_created": 53
+    },
+    {
+      "topic_name": "Central Administrative Tribunals, Act 1985",
+      "total_mcqs": 50,
+      "rejected_mcqs": 12,
+      "duplicates_removed": 0,
+      "flashcards_created": 38
+    },
+    {
+      "topic_name": "Revenue Recovery Act, 1890",
+      "total_mcqs": 25,
+      "rejected_mcqs": 8,
+      "duplicates_removed": 0,
+      "flashcards_created": 17
+    },
+    {
+      "topic_name": "The Prevention of Corruption, Act 1988",
+      "total_mcqs": 50,
+      "rejected_mcqs": 17,
+      "duplicates_removed": 0,
+      "flashcards_created": 33
+    },
+    {
+      "topic_name": "RTI Act 2005 & RTI Rules 2012",
+      "total_mcqs": 65,
+      "rejected_mcqs": 23,
+      "duplicates_removed": 0,
+      "flashcards_created": 42
+    },
+    {
+      "topic_name": "MANUAL ON POLICIES AND PROCEDURES FOR PURCHASE OF GOODS AND SERVICES",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "GPF (CS) Rules 1960",
+      "total_mcqs": 45,
+      "rejected_mcqs": 16,
+      "duplicates_removed": 0,
+      "flashcards_created": 29
+    },
+    {
+      "topic_name": "CCS (Pension) Rules 2021",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "CCS (Commutation of Pension) Rules 1981",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Sexual Harassment at Work place (Prevention, prohibition & Redressal) Act, 2013",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Central Civil Services (Implementation of NPS) Rules, 2021",
+      "total_mcqs": 75,
+      "rejected_mcqs": 8,
+      "duplicates_removed": 0,
+      "flashcards_created": 67
+    },
+    {
+      "topic_name": "General Financial Rules 2017",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "LDCE IP 2025 - Paper I PYQ",
+      "total_mcqs": 125,
+      "rejected_mcqs": 81,
+      "duplicates_removed": 0,
+      "flashcards_created": 44
+    },
+    {
+      "topic_name": "LDCE IP 2025 - Paper III PYQ",
+      "total_mcqs": 150,
+      "rejected_mcqs": 54,
+      "duplicates_removed": 0,
+      "flashcards_created": 96
+    },
+    {
+      "topic_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
+      "total_mcqs": 30,
+      "rejected_mcqs": 13,
+      "duplicates_removed": 0,
+      "flashcards_created": 17
+    },
+    {
+      "topic_name": "FR & SR - Foreign Service, Deputation & Dismissal",
+      "total_mcqs": 49,
+      "rejected_mcqs": 5,
+      "duplicates_removed": 0,
+      "flashcards_created": 44
+    },
+    {
+      "topic_name": "FR & SR - Leave, Joining Time & Allowances",
+      "total_mcqs": 50,
+      "rejected_mcqs": 7,
+      "duplicates_removed": 0,
+      "flashcards_created": 43
+    },
+    {
+      "topic_name": "FR & SR - Pay Fixation & General Conditions",
+      "total_mcqs": 50,
+      "rejected_mcqs": 8,
+      "duplicates_removed": 0,
+      "flashcards_created": 42
+    },
+    {
+      "topic_name": "FR & SR - TA Rules & Miscellaneous",
+      "total_mcqs": 50,
+      "rejected_mcqs": 7,
+      "duplicates_removed": 0,
+      "flashcards_created": 43
+    },
+    {
+      "topic_name": "Brochure on casual labourers",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Maintenance of APAR",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Service Discharge Benefit Scheme",
+      "total_mcqs": 30,
+      "rejected_mcqs": 5,
+      "duplicates_removed": 25,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Schedule of Financial Powers",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Welfare measures for Employees/GDS",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "P&T FHB Volume I",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    },
+    {
+      "topic_name": "Postal FHB Volume II",
+      "total_mcqs": 0,
+      "rejected_mcqs": 0,
+      "duplicates_removed": 0,
+      "flashcards_created": 0
+    }
+  ]
+}
