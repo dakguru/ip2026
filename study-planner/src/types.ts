@@ -7,4 +7,5 @@ export interface FlashCard {
     explanation?: string;
     exam_weight: "High" | "Medium" | "Low";
     keywords: string[];
+    source_mcq_id?: string;
 }
