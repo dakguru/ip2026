@@ -59,14 +59,22 @@ export async function middleware(request: NextRequest) {
             return NextResponse.next();
         }
 
-        // Validate session via internal API
+        // Validate session via internal API with a timeout
         try {
             const baseUrl = request.nextUrl.origin;
+
+            // Set an 8-second timeout for session validation to prevent "white screen" hang
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 8000);
+
             const validateRes = await fetch(`${baseUrl}/api/auth/session`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, sessionId })
+                body: JSON.stringify({ email, sessionId }),
+                signal: controller.signal
             });
+
+            clearTimeout(timeoutId);
 
             if (!validateRes.ok) {
                 const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
