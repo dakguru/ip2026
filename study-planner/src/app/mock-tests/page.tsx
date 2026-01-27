@@ -58,6 +58,8 @@ export default function MockTestsPage() {
 
     // User Results State
     const [userResults, setUserResults] = useState<Record<string, any>>({});
+    const [userAttempts, setUserAttempts] = useState<Record<string, any[]>>({});
+    const [selectedMockForSheets, setSelectedMockForSheets] = useState<MockTest | null>(null);
     const [downloadingId, setDownloadingId] = useState<string | null>(null);
     const [showDownloadNotification, setShowDownloadNotification] = useState(false);
 
@@ -97,6 +99,7 @@ export default function MockTestsPage() {
                         .then(res => res.json())
                         .then(data => {
                             if (data.results) setUserResults(data.results);
+                            if (data.attempts) setUserAttempts(data.attempts);
                         })
                         .catch(err => console.error('Error fetching results', err));
                 }
@@ -609,6 +612,7 @@ export default function MockTestsPage() {
                                         onEnroll={() => handleEnroll(mock)}
                                         enrollmentCount={enrollmentCounts[mock.id] || universalCount}
                                         onShowRankList={() => setSelectedMockForRank(mock)}
+                                        onViewSheets={() => setSelectedMockForSheets(mock)}
                                         userResult={userResults[mock.id]}
                                         onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
                                         isDownloading={downloadingId === mock.id}
@@ -661,6 +665,10 @@ export default function MockTestsPage() {
                             role={role}
                             userResult={userResults[selectedMock.id]}
                             onDownloadResult={() => handleDownloadAnalytics(selectedMock, userResults[selectedMock.id])}
+                            onViewSheets={() => {
+                                setSelectedMock(null);
+                                setSelectedMockForSheets(selectedMock);
+                            }}
                             isDownloading={downloadingId === selectedMock.id}
                         />
                     )}
@@ -739,6 +747,15 @@ export default function MockTestsPage() {
                 onClose={() => setSelectedMockForRank(null)}
             />
 
+            <AnswerSheetModal
+                mock={selectedMockForSheets}
+                attempts={selectedMockForSheets ? userAttempts[selectedMockForSheets.id] || [] : []}
+                isOpen={!!selectedMockForSheets}
+                onClose={() => setSelectedMockForSheets(null)}
+                onDownload={handleDownloadAnalytics}
+                isDownloading={downloadingId}
+            />
+
             {/* Download Notification */}
             {showDownloadNotification && (
                 <div className="fixed top-20 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-2xl shadow-emerald-600/20 z-[100] flex items-center gap-4 animate-in fade-in slide-in-from-top-4 duration-500">
@@ -766,6 +783,7 @@ function MockTestDetail({
     role,
     userResult,
     onDownloadResult,
+    onViewSheets,
     isDownloading
 }: {
     mock: MockTest;
@@ -776,6 +794,7 @@ function MockTestDetail({
     role?: string;
     userResult?: any;
     onDownloadResult?: () => void;
+    onViewSheets?: () => void;
     isDownloading?: boolean;
 }) {
     const [currentTime, setCurrentTime] = useState(new Date());
@@ -907,12 +926,10 @@ function MockTestDetail({
                                         <History className="w-5 h-5" /> Reattempt
                                     </Link>
                                     <button
-                                        onClick={(e) => { e.stopPropagation(); onDownloadResult?.(); }}
-                                        disabled={isDownloading}
+                                        onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
                                         className="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2 transition-all active:scale-95"
                                     >
-                                        {isDownloading ? <Loader2 className="w-5 h-5 animate-spin" /> : <FileDown className="w-5 h-5" />}
-                                        Analysis PDF
+                                        <FileDown className="w-5 h-5" /> Download Sheets
                                     </button>
                                 </div>
                             </div>
@@ -951,12 +968,10 @@ function MockTestDetail({
                                 </Link>
                                 {userResult && (
                                     <button
-                                        onClick={(e) => { e.stopPropagation(); onDownloadResult?.(); }}
-                                        disabled={isDownloading}
+                                        onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
                                         className="flex-1 py-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95"
                                     >
-                                        {isDownloading ? <Loader2 className="w-5 h-5 animate-spin" /> : <FileDown className="w-5 h-5" />}
-                                        PDF
+                                        <FileDown className="w-5 h-5" /> Download Sheets
                                     </button>
                                 )}
                             </div>
@@ -1040,6 +1055,7 @@ function MockTestCard({
     onViewEnrollments,
     enrollmentCount,
     onShowRankList,
+    onViewSheets,
     userResult,
     onDownloadResult,
     isDownloading
@@ -1054,6 +1070,7 @@ function MockTestCard({
     onViewEnrollments?: () => void;
     enrollmentCount?: number;
     onShowRankList?: () => void;
+    onViewSheets?: () => void;
     userResult?: any;
     onDownloadResult?: () => void;
     isDownloading?: boolean;
@@ -1199,13 +1216,23 @@ function MockTestCard({
 
                     {isCompleted ? (
                         canAccess ? (
-                            <Link
-                                href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
-                                onClick={(e) => e.stopPropagation()}
-                                className="flex-1 py-3 bg-white dark:bg-zinc-800 border-2 border-blue-600 dark:border-blue-500 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
-                            >
-                                <History className="w-4 h-4" /> Reattempt Test
-                            </Link>
+                            <div className="flex flex-col gap-2 flex-1">
+                                <Link
+                                    href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="w-full py-3 bg-white dark:bg-zinc-800 border-2 border-blue-600 dark:border-blue-500 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
+                                >
+                                    <History className="w-4 h-4" /> Reattempt Test
+                                </Link>
+                                {hasAttempted && (
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
+                                        className="w-full py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-700"
+                                    >
+                                        <FileDown className="w-4 h-4" /> Download Sheets
+                                    </button>
+                                )}
+                            </div>
                         ) : (
                             <button
                                 onClick={(e) => { e.stopPropagation(); onEnroll(); }}
@@ -1227,12 +1254,10 @@ function MockTestCard({
                                     <History className="w-4 h-4" /> Reattempt
                                 </Link>
                                 <button
-                                    onClick={(e) => { e.stopPropagation(); onDownloadResult?.(); }}
-                                    disabled={isDownloading}
+                                    onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
                                     className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all active:scale-95"
                                 >
-                                    {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <FileDown className="w-4 h-4" />}
-                                    Analysis PDF
+                                    <FileDown className="w-4 h-4" /> Download Sheets
                                 </button>
                             </div>
                         ) : (
@@ -1358,6 +1383,80 @@ function RankListModal({ mock, isOpen, onClose }: { mock: MockTest | null, isOpe
                 <div className="p-4 bg-zinc-50 dark:bg-zinc-900 text-center border-t border-zinc-100 dark:border-zinc-800">
                     <button onClick={onClose} className="text-sm font-bold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">
                         Close Leaderboard
+                    </button>
+                </div>
+            </DialogContent>
+        </Dialog>
+    );
+}
+
+function AnswerSheetModal({ mock, attempts, isOpen, onClose, onDownload, isDownloading }: {
+    mock: MockTest | null,
+    attempts: any[],
+    isOpen: boolean,
+    onClose: () => void,
+    onDownload: (mock: MockTest, result: any) => void,
+    isDownloading: string | null
+}) {
+    return (
+        <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+            <DialogContent className="max-w-md w-[95%] rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-0">
+                <div className="bg-gradient-to-br from-indigo-500 via-purple-600 to-indigo-700 p-6 text-white relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-20"></div>
+                    <FileDown className="w-12 h-12 mb-3 text-white drop-shadow-md mx-auto" />
+                    <DialogTitle className="text-2xl font-black uppercase tracking-tight text-white drop-shadow-sm text-center relative z-10">
+                        Answer Sheets
+                    </DialogTitle>
+                    <p className="text-indigo-100 font-medium text-sm text-center relative z-10 border-t border-white/20 pt-2 mt-2">
+                        {mock?.title}
+                    </p>
+                </div>
+
+                <div className="p-4 max-h-[60vh] overflow-y-auto">
+                    {attempts.length === 0 ? (
+                        <div className="py-12 text-center text-zinc-500">
+                            No attempts found.
+                        </div>
+                    ) : (
+                        <div className="space-y-3">
+                            {attempts.map((attempt, idx) => (
+                                <div key={attempt._id || idx} className="flex items-center justify-between p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-700/50 group hover:border-indigo-500/30 transition-all">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-10 h-10 rounded-full bg-white dark:bg-zinc-800 flex items-center justify-center border border-zinc-200 dark:border-zinc-700 font-bold text-zinc-500">
+                                            {attempts.length - idx}
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-zinc-900 dark:text-zinc-100 text-sm">
+                                                {idx === attempts.length - 1 ? 'Live Attempt' : `Re-attempt ${attempts.length - 1 - idx}`}
+                                            </h4>
+                                            <p className="text-[10px] text-zinc-400 flex items-center gap-1 mt-0.5 font-bold uppercase tracking-wider">
+                                                <Calendar className="w-3 h-3" />
+                                                {format(new Date(attempt.submittedAt), 'dd MMM yyyy, hh:mm a')}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <div className="text-right hidden sm:block">
+                                            <div className="font-black text-indigo-600 dark:text-indigo-400">{attempt.score}/{attempt.totalQuestions * 2}</div>
+                                            <div className="text-[8px] font-bold text-zinc-400 uppercase tracking-widest">Score</div>
+                                        </div>
+                                        <button
+                                            onClick={() => mock && onDownload(mock, attempt)}
+                                            disabled={isDownloading === mock?.id}
+                                            className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/20 disabled:opacity-50"
+                                        >
+                                            <FileDown className="w-4 h-4" />
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                <div className="p-4 bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800">
+                    <button onClick={onClose} className="w-full py-3 text-sm font-bold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">
+                        Close
                     </button>
                 </div>
             </DialogContent>

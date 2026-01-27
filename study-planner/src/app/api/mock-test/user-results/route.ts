@@ -1,4 +1,3 @@
-
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/mongoose";
 import MockResult from "@/models/MockResult";
@@ -14,18 +13,25 @@ export async function POST(req: Request) {
 
         const results = await MockResult.find({ userEmail: email }).sort({ submittedAt: -1 });
 
-        // Convert to map: testId -> result
+        // Convert to map: testId -> latest result
         const resultMap: Record<string, any> = {};
+        // Group all attempts: testId -> list of results
+        const attemptMap: Record<string, any[]> = {};
+
         results.forEach((r) => {
-            // If multiple attempts exist, recent one (due to sort) or logic? 
-            // Usually we keep the latest or best. Let's keep the latest for now.
-            // Since we sorted by submittedAt desc, the first one encountered is the latest.
             if (!resultMap[r.testId]) {
                 resultMap[r.testId] = r;
             }
+            if (!attemptMap[r.testId]) {
+                attemptMap[r.testId] = [];
+            }
+            attemptMap[r.testId].push(r);
         });
 
-        return NextResponse.json({ results: resultMap });
+        return NextResponse.json({
+            results: resultMap,
+            attempts: attemptMap
+        });
     } catch (error) {
         console.error("Error fetching user results:", error);
         return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
