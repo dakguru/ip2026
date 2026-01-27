@@ -7,11 +7,19 @@ const config: CapacitorConfig = {
   server: {
     url: 'https://dakguru.com',
     androidScheme: 'https',
-    allowNavigation: ['dakguru.com', '*.dakguru.com', 'ip2026.vercel.app']
+    allowNavigation: [
+      'dakguru.com',
+      '*.dakguru.com',
+      'ip2026.vercel.app',
+      '*.razorpay.com',
+      'api.razorpay.com',
+      'checkout.razorpay.com'
+    ]
   },
   plugins: {
     SplashScreen: {
       launchAutoHide: false,
+      launchShowDuration: 0,
       backgroundColor: "#ffffff",
       showSpinner: false,
       androidSplashResourceName: "splash"

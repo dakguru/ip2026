@@ -29,6 +29,7 @@ import * as GeneratedCards from "../../data/flashcards/generated_from_mcq";
 import Link from "next/link";
 import Image from "next/image";
 import FlashcardsIntroBanner from "@/components/FlashcardsIntroBanner";
+import PremiumFlashCardDeck from "@/components/flashcards/PremiumFlashCardDeck";
 
 // --- Types ---
 interface UnifiedFlashcard {
@@ -309,175 +310,41 @@ export default function FlashcardsPage() {
 
     // --- VIEW: FLASHCARD APP MODE ---
     return (
-        <div className="fixed inset-0 bg-zinc-50 dark:bg-black text-zinc-900 dark:text-white font-sans flex flex-col overflow-hidden">
+        <div className="min-h-screen bg-zinc-50 dark:bg-black text-zinc-900 dark:text-white font-sans flex flex-col">
+            {/* Top Bar: Premium Header */}
+            <header className="sticky top-0 z-40 bg-white/80 dark:bg-black/80 backdrop-blur-xl border-b border-zinc-100 dark:border-white/10 px-4 py-4">
+                <div className="max-w-5xl mx-auto flex items-center justify-between">
+                    <button
+                        onClick={() => setSelectedDeckId(null)}
+                        className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-zinc-100 dark:hover:bg-white/5 transition-colors text-zinc-600 dark:text-zinc-400 font-bold text-sm"
+                    >
+                        <ArrowLeft className="w-4 h-4" /> Exit Deck
+                    </button>
 
-            {/* Top Bar: Compact Header */}
-            <div className="flex-none px-4 py-3 flex items-center justify-between z-30 bg-white/90 dark:bg-black/90 backdrop-blur-xl border-b border-zinc-100 dark:border-white/10">
-                <button
-                    onClick={() => setSelectedDeckId(null)}
-                    className="p-2 -ml-2 rounded-xl active:bg-zinc-100 dark:active:bg-white/10 transition-colors"
-                >
-                    <ArrowLeft className="w-6 h-6 text-zinc-800 dark:text-zinc-200" />
-                </button>
-
-                <div className="flex flex-col items-center">
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-zinc-400 dark:text-zinc-500">
-                        {currentIndex + 1} / {activeDeck.length}
-                    </span>
-                    <div className="w-24 h-1 bg-zinc-200 dark:bg-white/10 rounded-full mt-1 overflow-hidden">
-                        <motion.div
-                            className="h-full bg-indigo-500"
-                            initial={{ width: 0 }}
-                            animate={{ width: `${progress}%` }}
-                        />
+                    <div className="flex items-center gap-4">
+                        <button
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            className="p-2.5 rounded-xl bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-zinc-400 hover:text-indigo-500 transition-colors"
+                        >
+                            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                        </button>
+                        <button
+                            onClick={handleShare}
+                            className="p-2.5 rounded-xl bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-zinc-400 hover:text-indigo-500 transition-colors"
+                        >
+                            <Share2 className="w-5 h-5" />
+                        </button>
                     </div>
                 </div>
+            </header>
 
-                <div className="flex gap-1">
-                    <button
-                        onClick={handleShare}
-                        className="p-2 rounded-full text-zinc-400 dark:text-zinc-600 active:text-indigo-500"
-                    >
-                        <Share2 className="w-5 h-5" />
-                    </button>
-                    <button
-                        onClick={toggleShuffle}
-                        className={`p-2 rounded-full transition-colors ${isShuffled ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10' : 'text-zinc-400 dark:text-zinc-600'}`}
-                    >
-                        <Shuffle className="w-5 h-5" />
-                    </button>
-                    <button
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className="p-2 rounded-full text-zinc-400 dark:text-zinc-600"
-                    >
-                        {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                    </button>
-                </div>
-            </div>
-
-            {/* Main Content Area */}
-            <div className="flex-1 relative flex flex-col items-center justify-center p-6 md:p-8 touch-none">
-                {/* Background Glow */}
-                <div className={`absolute w-64 h-64 rounded-full blur-[100px] opacity-20 dark:opacity-30 -z-10 transition-colors duration-1000 bg-gradient-to-br ${currentTheme.gradient}`} />
-
-                {/* Card Container */}
-                <div className="w-full max-w-sm h-full max-h-[500px] md:max-h-[600px] aspect-[4/5] relative z-10">
-                    <AnimatePresence initial={false} custom={direction} mode="wait">
-                        <motion.div
-                            key={currentIndex}
-                            custom={direction}
-                            variants={{
-                                enter: (d: number) => ({ x: d > 0 ? "100%" : "-100%", opacity: 0, scale: 0.9, rotate: d > 0 ? 10 : -10 }),
-                                center: { zIndex: 1, x: 0, opacity: 1, scale: 1, rotate: 0 },
-                                exit: (d: number) => ({ zIndex: 0, x: d < 0 ? "100%" : "-100%", opacity: 0, scale: 0.9, rotate: d < 0 ? 10 : -10 })
-                            }}
-                            initial="enter"
-                            animate="center"
-                            exit="exit"
-                            transition={{ type: "spring", stiffness: 260, damping: 25 }}
-                            drag="x"
-                            dragConstraints={{ left: 0, right: 0 }}
-                            dragElastic={1}
-                            onDragEnd={handleDragEnd}
-                            className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing perspective-1000"
-                            onClick={() => setIsFlipped(!isFlipped)}
-                        >
-                            <motion.div
-                                className="w-full h-full relative preserve-3d transition-transform"
-                                animate={{ rotateY: isFlipped ? 180 : 0 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 35 }}
-                            >
-                                {/* FRONT */}
-                                <div className="absolute inset-0 backface-hidden bg-white dark:bg-neutral-900 rounded-[2rem] p-6 shadow-2xl border border-zinc-100 dark:border-white/5 flex flex-col">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <span className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-white/5 text-[10px] font-bold uppercase text-zinc-500 tracking-wider">
-                                            #{currentCard?.id}
-                                        </span>
-                                        <span className={`text-[10px] font-bold uppercase tracking-widest ${theme === 'dark' ? currentTheme.accent : 'text-indigo-600'}`}>
-                                            {currentCard?.category || currentCard?.tag}
-                                        </span>
-                                    </div>
-
-                                    <div className="flex-1 overflow-y-auto px-6 py-4 flex flex-col items-center justify-center text-center">
-                                        <h2 className="text-xl md:text-2xl font-black leading-tight text-zinc-800 dark:text-white select-none tracking-tight">
-                                            {currentCard?.question}
-                                        </h2>
-                                    </div>
-
-                                    <div className="pt-6 border-t border-zinc-100 dark:border-white/5 flex justify-center text-zinc-400 text-xs font-medium uppercase tracking-widest">
-                                        Tap to Flip
-                                    </div>
-                                </div>
-
-                                {/* BACK */}
-                                <div className="absolute inset-0 backface-hidden bg-zinc-50 dark:bg-neutral-900 rounded-[2rem] p-6 shadow-2xl border border-zinc-200 dark:border-white/5 flex flex-col rotate-y-180">
-                                    <div className="flex justify-center mb-6">
-                                        <span className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider ${theme === 'dark' ? currentTheme.badge : 'bg-indigo-100 text-indigo-700'}`}>
-                                            Answer
-                                        </span>
-                                    </div>
-
-                                    <div className="flex-none text-center mb-4">
-                                        <h3 className={`text-lg md:text-xl font-black leading-snug px-4 ${theme === 'dark' ? currentTheme.accent : 'text-indigo-600'}`}>
-                                            {currentCard?.answer}
-                                        </h3>
-                                    </div>
-
-                                    <div className="flex-1 overflow-y-auto bg-white/50 dark:bg-white/5 rounded-2xl p-5 border border-zinc-100 dark:border-white/5 backdrop-blur-sm">
-                                        <p className="text-[10px] text-zinc-400 uppercase font-black mb-3 tracking-widest flex items-center gap-2">
-                                            <Sparkles className="w-3 h-3" /> Explanation
-                                        </p>
-                                        <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed font-medium">
-                                            {currentCard?.explanation || "No additional explanation provided."}
-                                        </p>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        </motion.div>
-                    </AnimatePresence>
-                </div>
-            </div>
-
-            {/* Bottom Navigation / Controls Bar */}
-            <div className="flex-none pb-[calc(env(safe-area-inset-bottom)+1rem)] pt-4 bg-white/95 dark:bg-black/95 backdrop-blur-xl border-t border-zinc-100 dark:border-white/10 px-6">
-                <div className="flex items-center justify-between max-w-md mx-auto w-full gap-4">
-
-                    <button
-                        onClick={handlePrev}
-                        disabled={currentIndex === 0}
-                        className="flex-1 flex flex-col items-center gap-1.5 group disabled:opacity-20 transition-all active:scale-90"
-                    >
-                        <div className="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-white/5 flex items-center justify-center border border-zinc-200/50 dark:border-white/5 shadow-sm">
-                            <ChevronLeft className="w-6 h-6 text-zinc-900 dark:text-white" />
-                        </div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Prev</span>
-                    </button>
-
-                    <button
-                        onClick={() => setIsFlipped(!isFlipped)}
-                        className="flex-none flex flex-col items-center gap-1.5 group active:scale-95 transition-all"
-                    >
-                        <div className="w-16 h-16 rounded-[2rem] bg-indigo-600 dark:bg-indigo-500 shadow-2xl shadow-indigo-500/30 flex items-center justify-center relative overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
-                            <RotateCcw className="w-7 h-7 text-white" />
-                        </div>
-                        <span className="text-[10px] font-extrabold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Flip</span>
-                    </button>
-
-                    <button
-                        onClick={handleNext}
-                        disabled={currentIndex === activeDeck.length - 1}
-                        className="flex-1 flex flex-col items-center gap-1.5 group disabled:opacity-20 transition-all active:scale-90"
-                    >
-                        <div className="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-white/5 flex items-center justify-center border border-zinc-200/50 dark:border-white/5 shadow-sm">
-                            <ChevronRight className="w-6 h-6 text-zinc-900 dark:text-white" />
-                        </div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Next</span>
-                    </button>
-
-                </div>
-            </div>
-
+            {/* Premium Deck Content */}
+            <main className="flex-1 container mx-auto px-4 py-8">
+                <PremiumFlashCardDeck
+                    cards={activeDeck}
+                    title={activeDeck[0]?.tag || "Flashcards"}
+                />
+            </main>
         </div>
     );
 }

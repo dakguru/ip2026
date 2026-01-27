@@ -10,21 +10,12 @@ export default function AppLoadingScreen() {
     const [shouldRender, setShouldRender] = useState(false);
 
     useEffect(() => {
-        const initStart = async () => {
-            // Logic to only render this on mobile app if desired, 
-            // but user request implies "Usage Context: App Launch", usually mobile.
-            // We force it for consistency if running as a PWA/Mobile wrapper.
-            // Ideally check Capacitor.isNativePlatform() to avoid annoying web users.
-            if (Capacitor.isNativePlatform()) {
-                setShouldRender(true);
-                document.body.style.overflow = 'hidden';
-            } else {
-                // For web dev testing, you might want to uncomment this:
-                // setShouldRender(true);
-            }
-        };
-
-        initStart();
+        // Use a more direct check for Capacitor to be ready as early as possible
+        const isNative = Capacitor.isNativePlatform();
+        if (isNative) {
+            setShouldRender(true);
+            document.body.style.overflow = 'hidden';
+        }
     }, []);
 
     useEffect(() => {
