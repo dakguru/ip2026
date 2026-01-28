@@ -171,11 +171,16 @@ const convertToUnified = (data: FlashCard[], tagPrefix: string): UnifiedFlashcar
 ## User Interface
 
 ### Deck Selection Screen
-
+#### Visual Design
+- **Modern Background**: A creative, animated backdrop featuring large, colorful gradients (indigo, violet, fuchsia) that float softly, covered by a premium grain texture overlay.
+- **Header**:
+  - **Title**: A massive, ultra-bold "FLASHCARDS" heading with a striking dual-color gradient (Light: Indigo-Fuchsia; Dark: White-Violet).
+  - **Taglines**: Stylish "Master Postal Laws..." subheading and a sleek, uppercase "PREPARE FASTER..." tertiary line.
+  
 #### Layout
-- **Header**: Back button (left), title (center), theme toggle (right)
-- **Content**: Grid of deck cards
-- **Responsive**: 1 column (mobile), 2 columns (tablet), 3 columns (desktop)
+- **Navigation**: Search bar and intuitive filters at the top.
+- **Content**: Organized grid of deck tiles, categorized by paper.
+- **Responsive Grid**: Automatically adjusts from 2 columns (mobile) to 4 columns (desktop) for optimal viewing.
 
 #### Deck Card Components
 Each deck card displays:
@@ -251,42 +256,30 @@ Each deck card displays:
 
 ## Mobile Optimization
 
-### Full-Screen Experience
+### Immersive "App Mode"
 
-The flashcard view uses a fixed layout that occupies the entire viewport:
+The flashcard experience is designed to function like a native application on mobile devices, providing a distraction-free environment:
 
-```css
-.flashcard-container {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-```
+- **Viewport Locking**: The study interface is locked to `100dvh` (100% dynamic viewport height), preventing browser address bar scrolling and "bounce" effects.
+- **Global Navigation Suppression**: The app's global bottom navigation bar is hidden while in study mode, replaced by a dedicated, context-aware flashcard navigation bar.
+- **Overscroll Prevention**: `overscroll-none` and `touch-pan-x` CSS properties are used to ensure swipe gestures affect *only* the cards, not the browser window.
 
-### Safe Area Support
+### Touch & Haptics
 
-Respects device-specific safe areas (notches, gesture bars):
+- **Haptic Feedback**: The application uses the Vibration API to provide tactile feedback:
+  - **15ms**: Navigation (Next/Prev)
+  - **20ms**: Shuffle/Reset actions
+  - **10ms**: Bookmarking
+- **Optimized Touch Targets**: Interactive elements meet or exceed 48x48px size requirements.
+- **Swipe Gestures**: High-precision horizontal swipe detection for natural card flipping.
 
-```css
-padding-top: env(safe-area-inset-top);
-padding-bottom: env(safe-area-inset-bottom);
-```
+### Responsive Internal Grid
 
-### Touch Optimization
+- **Mobile**: Defaults to a **2-column grid** for deck selection, balancing information density with readability suitable for smaller screens.
+- **Tablet/Desktop**: Expands to 3 or 4 columns to utilize available screen real estate.
+- **Compact Tiles**: Metadata and icons on deck tiles are optimized (hidden or resized) on mobile to maintain a clean aesthetic.
 
-#### Large Touch Targets
-- Minimum button size: 48x48px (WCAG AAA standard)
-- Bottom navigation buttons: 56x56px for primary actions
-- Adequate spacing between interactive elements
-
-#### Gesture Support
-- **Swipe Threshold**: 50px horizontal movement to trigger navigation
-- **Drag Elastic**: 0.2 elasticity for natural feel
-- **Tap Area**: Entire card surface is tappable for flip action
-
-### Performance Optimizations
+### Performance
 
 #### Animation Performance
 ```typescript
@@ -1114,6 +1107,6 @@ This flashcard application is part of the Dak Guru Study Planner platform.
 
 ---
 
-**Document Version**: 2.0  
-**Last Updated**: January 24, 2026  
+**Document Version**: 2.1  
+**Last Updated**: January 28, 2026  
 **Maintained By**: Dak Guru Development Team

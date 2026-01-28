@@ -259,6 +259,10 @@ Study Notes
 │   ├── Part I - General Rules
 │   ├── Part II - Operations
 │   └── Part III - Procedures
+├── Paper III - Legal & Admin
+│   ├── Central Administrative Tribunal Act, 1985
+│   ├── Revenue Recovery Act, 1890
+│   └── Prevention of Corruption Act, 1988
 └── Quick References
     ├── Important Dates
     ├── Key Definitions
@@ -592,6 +596,6 @@ const searchConfig = {
 
 ---
 
-**Document Version**: 1.0  
-**Last Updated**: January 24, 2026  
+**Document Version**: 1.1  
+**Last Updated**: January 28, 2026  
 **Maintained By**: Dak Guru Development Team
