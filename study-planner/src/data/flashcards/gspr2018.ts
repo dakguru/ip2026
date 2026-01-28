@@ -15,7 +15,7 @@ export const gspr2018: FlashCard[] = [
         topic: "Definitions",
         card_no: 2,
         question: "What is a 'Joint Account' as per GSPR 2018?",
-        answer: "An account opened in the names of more than one and up to THREE individuals.",
+        answer: "An account opened in the names of more than one and up to three individuals.",
         exam_weight: "Medium",
         keywords: ["Joint Account", "Three Individuals"]
     },
@@ -24,7 +24,7 @@ export const gspr2018: FlashCard[] = [
         topic: "Definitions",
         card_no: 3,
         question: "What is a 'Single Account'?",
-        answer: "An account opened in the name of ONE individual.",
+        answer: "An account opened in the name of one individual.",
         exam_weight: "Low",
         keywords: ["Single Account", "One Individual"]
     },
@@ -41,7 +41,7 @@ export const gspr2018: FlashCard[] = [
         pdf_title: "Government Savings Promotion Rules, 2018",
         topic: "Eligibility",
         card_no: 5,
-        question: "Can a non-resident Indian (NRI) continue an account if they become NRI during the operation period?",
+        question: "Can a non-resident Indian (NRI) continue an account if they become an NRI during the operation period?",
         answer: "Yes, till maturity on a non-repatriation basis. No extension allowed.",
         exam_weight: "High",
         keywords: ["NRI", "Non-repatriation", "Maturity"]
@@ -68,7 +68,7 @@ export const gspr2018: FlashCard[] = [
         pdf_title: "Government Savings Promotion Rules, 2018",
         topic: "Identification",
         card_no: 8,
-        question: "When is PAN mandatory to be submitted existing account holders who haven't submitted it?",
+        question: "When is PAN mandatory to be submitted by existing account holders who haven't submitted it?",
         answer: "Within 2 months if balance > Rs. 50,000, credits > Rs. 1 Lakh in FY, or transfers > Rs. 10,000 in a month.",
         exam_weight: "High",
         keywords: ["PAN", "Limits", "Rs 50000"]
@@ -98,7 +98,7 @@ export const gspr2018: FlashCard[] = [
         question: "Can a Single Account be converted to a Joint Account?",
         answer: "No. (Exception: Joint to Single allowed only if single survivor).",
         exam_weight: "High",
-        keywords: ["Conversion", "Simple to Joint"]
+        keywords: ["Conversion", "Single to Joint"]
     },
     {
         pdf_title: "Government Savings Promotion Rules, 2018",
@@ -149,7 +149,7 @@ export const gspr2018: FlashCard[] = [
         pdf_title: "Government Savings Promotion Rules, 2018",
         topic: "Nomination",
         card_no: 17,
-        question: "which form is used for Nomination?",
+        question: "Which form is used for Nomination?",
         answer: "Form 10 (GSPR-10).",
         exam_weight: "Low",
         keywords: ["Form 10", "Nomination"]
@@ -258,7 +258,7 @@ export const gspr2018: FlashCard[] = [
         topic: "Fees",
         card_no: 29,
         question: "What is the fee for Cancellation or Change of Nomination?",
-        answer: "Rs. 50 + GST (Note: Recent amendments might treat this as free, verify current order. Text says 50).",
+        answer: "Rs. 50 + GST.",
         exam_weight: "Medium",
         keywords: ["Nomination Fee", "Rs 50"]
     },

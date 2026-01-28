@@ -132,7 +132,7 @@ export const postalManualVolII: FlashCard[] = [
         topic: "Stock",
         card_no: 15,
         question: "How is a duplicate key of a lock (other than manufacturer supplied) procured?",
-        answer: "It is strictly prohibited to manufacture locally. Lock must be broken and replaced.",
+        answer: "It is strictly prohibited to be manufactured locally. The lock must be broken and replaced.",
         exam_weight: "High",
         keywords: ["Duplicate Key", "Prohibited"]
     },

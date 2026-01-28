@@ -126,10 +126,13 @@ export default function PremiumFlashCard({
                                 <div className="flex items-center gap-2 mb-2 font-black text-[9px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
                                     <Info className="w-3.5 h-3.5" /> Explanation
                                 </div>
-                                <div className={clsx(
-                                    "transition-all duration-500 overflow-y-auto scrollbar-hide",
-                                    !isExpanded && explanation.length > 200 ? "max-h-[100px]" : "max-h-[250px]"
-                                )}>
+                                <div
+                                    className={clsx(
+                                        "transition-all duration-500 overflow-y-auto pr-2",
+                                        !isExpanded && explanation.length > 200 ? "max-h-[120px]" : "max-h-[250px]"
+                                    )}
+                                    onPointerDown={(e) => e.stopPropagation()}
+                                >
                                     <p className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed">
                                         {explanation}
                                     </p>

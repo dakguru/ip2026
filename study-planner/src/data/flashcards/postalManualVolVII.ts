@@ -311,7 +311,7 @@ export const postalManualVolVII: FlashCard[] = [
         pdf_title: "Postal Manual Vol VII",
         topic: "Safety",
         card_no: 35,
-        question: "In case of railway accident, what is the first priority?",
+        question: "In case of a railway accident, what is the first priority?",
         answer: "Safety of life, then safety of mails.",
         exam_weight: "High",
         keywords: ["Accident", "Priority"]

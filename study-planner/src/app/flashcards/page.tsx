@@ -566,13 +566,19 @@ export default function FlashcardsPage() {
         <div className="fixed inset-0 z-[100] h-[100dvh] w-screen overflow-hidden bg-slate-50 dark:bg-black flex flex-col transition-colors duration-500 overscroll-none touch-pan-x">
             {/* ROW 2: DECK CONTROLS (Matches Screenshot 1 control row) */}
             <div className="sticky top-0 z-40 bg-white/95 dark:bg-black/95 backdrop-blur-md px-4 py-3 border-b border-slate-100 dark:border-white/5 shadow-sm">
-                <div className="max-w-xl mx-auto flex items-center justify-between">
+                <div className="max-w-xl mx-auto flex items-center justify-between relative">
                     <button
                         onClick={() => setSelectedDeckId(null)}
                         className="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 font-black text-sm active:scale-95 transition-transform"
                     >
                         <ArrowLeft className="w-5 h-5" /> Exit
                     </button>
+
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <span className="text-xl font-black tracking-tighter">
+                            <span className="text-indigo-700 dark:text-indigo-400">DAK</span> <span className="text-violet-700 dark:text-violet-400">GURU</span>
+                        </span>
+                    </div>
 
                     <div className="flex items-center gap-2">
                         <button

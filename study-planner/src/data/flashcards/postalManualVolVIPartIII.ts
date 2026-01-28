@@ -23,7 +23,7 @@ export const postalManualVolVIPartIII: FlashCard[] = [
         pdf_title: "Postal Manual Vol VI Part III",
         topic: "Delivery",
         card_no: 3,
-        question: "What is the monetary limit for the delivery of Insured articles by a Postman at the doorstep (as per Manual text)?",
+        question: "What is the monetary limit for the delivery of insured articles by a Postman at the doorstep (as per Manual text)?",
         answer: "Rs. 500 (Note: Operational limits may be higher e.g. Rs. 20,000/40,000, but Manual says 500).",
         exam_weight: "High",
         keywords: ["Insured Article", "Limit", "Rs. 500"]

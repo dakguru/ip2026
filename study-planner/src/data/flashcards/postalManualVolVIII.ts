@@ -131,7 +131,7 @@ export const postalManualVolVIII: FlashCard[] = [
         pdf_title: "Postal Manual Vol VIII",
         topic: "Inspection",
         card_no: 15,
-        question: "How often must an Inspector Post Offices submit their diary?",
+        question: "How often must an Inspector of Post Offices submit their diary?",
         answer: "Fortnightly (on the 1st and 16th).",
         exam_weight: "Medium",
         keywords: ["IPO Diary", "Fortnightly"]
@@ -140,7 +140,7 @@ export const postalManualVolVIII: FlashCard[] = [
         pdf_title: "Postal Manual Vol VIII",
         topic: "Inspection",
         card_no: 16,
-        question: "How often must an Inspector RMS submit their diary?",
+        question: "How often must an Inspector of RMS submit their diary?",
         answer: "Weekly (on 1st, 8th, 16th, and 24th).",
         exam_weight: "Medium",
         keywords: ["RMS Diary", "Weekly"]
@@ -149,7 +149,7 @@ export const postalManualVolVIII: FlashCard[] = [
         pdf_title: "Postal Manual Vol VIII",
         topic: "Duties",
         card_no: 17,
-        question: "What is the minimum number of Money Orders an Inspector Posts must verify per month?",
+        question: "What is the minimum number of Money Orders an Inspector of Posts must verify per month?",
         answer: "25.",
         exam_weight: "Medium",
         keywords: ["MO Verification", "Inspector", "25"]

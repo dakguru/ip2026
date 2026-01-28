@@ -96,7 +96,7 @@ export const poGuidePartI: FlashCard[] = [
         topic: "Delivery",
         card_no: 11,
         question: "What is the maximum period a 'Poste Restante' article (excluding COD) is kept in the Post Office?",
-        answer: "30 days (General) / 1 month (some contexts say 1 month). The extracted text says 'Poste Restante ... not exceeding 3 months usage ... Detention: General 15 days, VP/COD 7 days'. Correction: Guide says strictly 1 month generally, but current notes say 15 days.",
+        answer: "1 month (General), 7 days (VP/COD).",
 
         exam_weight: "High",
         keywords: ["Poste Restante", "15 days", "7 days"]
@@ -123,7 +123,7 @@ export const poGuidePartI: FlashCard[] = [
         pdf_title: "Post Office Guide Part - I",
         topic: "Official Mail",
         card_no: 14,
-        question: "How addressed must defense personnel mail be to use 'Army Post Office' services?",
+        question: "How must defense personnel mail be addressed to use 'Army Post Office' services?",
         answer: "C/o 56 A.P.O. or C/o 99 A.P.O.",
         exam_weight: "High",
         keywords: ["APO", "56 APO", "99 APO"]

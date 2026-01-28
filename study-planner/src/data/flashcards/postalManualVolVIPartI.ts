@@ -267,7 +267,7 @@ export const postalManualVolVIPartI: FlashCard[] = [
         topic: "Insured Articles",
         card_no: 30,
         question: "What is the maximum insurance limit for Speed Post at authorized Head Offices?",
-        answer: "Rs. 10,00,000 (Ten Lakhs).",
+        answer: "Rs. 10,00,000 (Ten Lakh).",
         exam_weight: "High",
         keywords: ["Insurance Limit", "10 Lakhs"]
     },

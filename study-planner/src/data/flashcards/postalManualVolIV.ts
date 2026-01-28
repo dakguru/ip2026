@@ -59,7 +59,7 @@ export const postalManualVolIV: FlashCard[] = [
         pdf_title: "Postal Manual Vol IV",
         topic: "Revenue",
         card_no: 7,
-        question: "How much percentage of Money Order Commission (Issued) is calculated as office income?",
+        question: "How much percentage of money order commission (issued) is calculated as office income?",
         answer: "24%.",
         exam_weight: "High",
         keywords: ["Income Calculation", "MO Issued", "24%"]
@@ -96,7 +96,7 @@ export const postalManualVolIV: FlashCard[] = [
         topic: "Recruitment",
         card_no: 11,
         question: "Who can relax the maximum age limit for recruitment if no delegation exists?",
-        answer: "Government (referred to Director-General). Heads of Circle cannot relax.",
+        answer: "Government (referred to the Director-General). Heads of Circles cannot relax.",
         exam_weight: "High",
         keywords: ["Age Relaxation", "Director General"]
     },

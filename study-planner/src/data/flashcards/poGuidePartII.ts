@@ -33,7 +33,7 @@ export const poGuidePartII: FlashCard[] = [
         topic: "Letter Post",
         card_no: 4,
         question: "What does the term 'LCAO' stand for in Foreign Post?",
-        answer: "Letter et Cartes and Autres Object (Letters, Cards, and Other Objects).",
+        answer: "Lettres et Cartes et Autres Objets (Letters, Cards, and Other Objects).",
         exam_weight: "Medium",
         keywords: ["LCAO", "Letter Post"]
     },

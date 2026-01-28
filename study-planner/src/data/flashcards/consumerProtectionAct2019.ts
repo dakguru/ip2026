@@ -96,7 +96,7 @@ export const consumerProtectionAct2019: FlashCard[] = [
         topic: "Limitation",
         card_no: 11,
         question: "What is the limitation period for filing a complaint?",
-        answer: "2 years from the date on which the cause of action arisen.",
+        answer: "2 years from the date on which the cause of action arose.",
         exam_weight: "High",
         keywords: ["Limitation", "2 years"]
     },
@@ -114,7 +114,7 @@ export const consumerProtectionAct2019: FlashCard[] = [
         topic: "Offences",
         card_no: 13,
         question: "What is the punishment for selling adulterated goods that cause death?",
-        answer: "Imprisonment of 7 years to Life + Fine min Rs. 10 Lakhs.",
+        answer: "Imprisonment of 7 years to Life + Fine min Rs. 10 Lakh.",
         exam_weight: "High",
         keywords: ["Adulterated Goods", "Death", "Life Imprisonment"]
     },
@@ -122,7 +122,7 @@ export const consumerProtectionAct2019: FlashCard[] = [
         pdf_title: "Consumer Protection Act, 2019",
         topic: "Product Liability",
         card_no: 14,
-        question: "Can a product seller be liable even if they didn't manufacture the product?",
+        question: "Can a product seller be liable even if they did not manufacture the product?",
         answer: "Yes, if they exercised substantial control over design/modification or fail to identify the manufacturer.",
         exam_weight: "Medium",
         keywords: ["Product Seller", "Liability"]

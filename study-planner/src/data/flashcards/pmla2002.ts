@@ -14,7 +14,7 @@ export const pmla2002: FlashCard[] = [
         pdf_title: "Prevention of Money Laundering Act, 2002",
         topic: "Definitions",
         card_no: 2,
-        question: "What is the minimum punishment for Money Laundering?",
+        question: "What is the minimum punishment for money laundering?",
         answer: "Minimum 3 years rigorous imprisonment.",
         exam_weight: "High",
         keywords: ["Punishment", "3 years"]
@@ -23,7 +23,7 @@ export const pmla2002: FlashCard[] = [
         pdf_title: "Prevention of Money Laundering Act, 2002",
         topic: "Definitions",
         card_no: 3,
-        question: "What is the maximum punishment for Money Laundering involved with Narcotic Drugs?",
+        question: "What is the maximum punishment for money laundering involved with narcotic drugs?",
         answer: "Up to 10 years rigorous imprisonment.",
         exam_weight: "High",
         keywords: ["Punishment", "Narcotics", "10 years"]
@@ -50,7 +50,7 @@ export const pmla2002: FlashCard[] = [
         pdf_title: "Prevention of Money Laundering Act, 2002",
         topic: "Reporting Entities",
         card_no: 6,
-        question: "For how long must Reporting Entities maintain transaction records?",
+        question: "For how long must reporting entities maintain transaction records?",
         answer: "5 years from the date of transaction or end of business relationship.",
         exam_weight: "High",
         keywords: ["Records", "5 years"]
@@ -59,7 +59,7 @@ export const pmla2002: FlashCard[] = [
         pdf_title: "Prevention of Money Laundering Act, 2002",
         topic: "Reporting Entities",
         card_no: 7,
-        question: "What is the monetary penalty range for Reporting Entities for non-compliance?",
+        question: "What is the monetary penalty range for reporting entities for non-compliance?",
         answer: "Rs. 10,000 to Rs. 1,00,000 for each failure.",
         exam_weight: "High",
         keywords: ["Penalty", "Reporting Entity", "10000 to 1 Lakh"]
@@ -114,7 +114,7 @@ export const pmla2002: FlashCard[] = [
         topic: "KYC",
         card_no: 13,
         question: "What is the risk categorization threshold for 'High Risk' accounts?",
-        answer: "Balance/Maturity value exceeding Rs. 10 Lakh.",
+        answer: "Balance/maturity value exceeding Rs. 10 Lakh.",
         exam_weight: "Medium",
         keywords: ["High Risk", "10 Lakh"]
     },
@@ -122,7 +122,7 @@ export const pmla2002: FlashCard[] = [
         pdf_title: "Prevention of Money Laundering Act, 2002",
         topic: "KYC",
         card_no: 14,
-        question: "How often must CDD documents be reviewed for High Risk customers?",
+        question: "How often must CDD documents be reviewed for 'High Risk' customers?",
         answer: "Every 2 years.",
         exam_weight: "Medium",
         keywords: ["Re-KYC", "High Risk", "2 years"]

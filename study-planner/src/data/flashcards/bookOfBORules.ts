@@ -284,7 +284,7 @@ export const bookOfBORules: FlashCard[] = [
         pdf_title: "Book of BO Rules",
         topic: "Accounts",
         card_no: 32,
-        question: "What if there are no monetary transactions on a day?",
+        question: "What procedure is followed if there are no monetary transactions on a day?",
         answer: "Submit BO Daily Account in Form ACG-22(c) (Nil).",
         exam_weight: "Medium",
         keywords: ["ACG-22(c)", "Nil Transaction"]

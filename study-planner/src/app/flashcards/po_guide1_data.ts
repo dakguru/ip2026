@@ -157,7 +157,7 @@ export const poGuide1Flashcards: FlashcardData[] = [
     },
     {
         id: 22,
-        question: "What is the minimum deposit for a Foreigner to open a Philatelic Deposit Account (PDA)?",
+        question: "What is the minimum deposit for a foreigner to open a Philatelic Deposit Account (PDA)?",
         answer: "Rs. 1000/-",
         explanation: "Foreign customers need **Rs. 1000/-** and must open the account at the **Mumbai GPO**. Domestic customers need Rs. 200/-.",
         tag: "PO Guide Part I"
@@ -206,7 +206,7 @@ export const poGuide1Flashcards: FlashcardData[] = [
     },
     {
         id: 29,
-        question: "What is the date of issue and denomination of the First Stamp of Independent India?",
+        question: "What is the date of issue and denomination of the first stamp of Independent India?",
         answer: "21 Nov 1947; 3 ½ Annas",
         explanation: "Issued on **21 Nov 1947** with a value of **3 ½ Annas**. Shows the Indian Flag and 'Jai Hind'.",
         tag: "PO Guide Part I"

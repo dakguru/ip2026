@@ -167,7 +167,7 @@ export const postalManualVolIII: FlashCard[] = [
         pdf_title: "Postal Manual Vol III",
         topic: "Common Proceedings",
         card_no: 19,
-        question: "Which rule governs common proceedings for two or more Government servants?",
+        question: "Which rule governs common proceedings for two or more government servants?",
         answer: "Rule 18 of CCS (CCA) Rules.",
         exam_weight: "Medium",
         keywords: ["Common Proceedings", "Rule 18"]

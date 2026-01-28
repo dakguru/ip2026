@@ -42,7 +42,7 @@ export const postalManualVolV: FlashCard[] = [
         topic: "Definitions",
         "card_no": 5,
         question: "What is the difference between an 'Office of Exchange' (OE) and an 'Office of Exchange of Transit'?",
-        answer: "An OE exchanges mails with foreign countries and handles customs clearance. An Office of Exchange of Transit dealing only with CLOSED mail bags addressed to/from OEs and does not open them.",
+        answer: "An OE exchanges mails with foreign countries and handles customs clearance. An Office of Exchange of Transit deals only with CLOSED mail bags addressed to/from OEs and does not open them.",
         exam_weight: "High",
         keywords: ["Office of Exchange", "Transit OE", "Customs"]
     },
@@ -213,7 +213,7 @@ export const postalManualVolV: FlashCard[] = [
         topic: "Orders",
         "card_no": 24,
         question: "What are 'A Orders'?",
-        answer: "Orders issued by the Superintendent, RMS prescribing changes in sorting lists.",
+        answer: "Orders issued by the Superintendent of RMS prescribing changes in sorting lists.",
         exam_weight: "Medium",
         keywords: ["A Orders", "Sorting List"]
     },

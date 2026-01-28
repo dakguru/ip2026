@@ -104,7 +104,7 @@ export const itAct2000: FlashCard[] = [
         pdf_title: "Information Technology Act, 2000",
         topic: "Offences",
         card_no: 12,
-        question: "What is the punishment for Identity Theft (Section 66C)?",
+        question: "What is the punishment for identity theft (Section 66C)?",
         answer: "Imprisonment up to 3 years and fine up to Rs. 1 Lakh.",
         exam_weight: "High",
         keywords: ["Section 66C", "Identity Theft", "Rs 1 Lakh"]
@@ -113,7 +113,7 @@ export const itAct2000: FlashCard[] = [
         pdf_title: "Information Technology Act, 2000",
         topic: "Offences",
         card_no: 13,
-        question: "What is the punishment for Cyber Terrorism (Section 66F)?",
+        question: "What is the punishment for cyber terrorism (Section 66F)?",
         answer: "Imprisonment for Life.",
         exam_weight: "High",
         keywords: ["Cyber Terrorism", "Life Imprisonment", "Section 66F"]
@@ -149,8 +149,8 @@ export const itAct2000: FlashCard[] = [
         pdf_title: "Information Technology Act, 2000",
         topic: "Schedules",
         card_no: 17,
-        question: "Does the IT Act apply to Cheques?",
-        answer: "Yes. (Negotiable Instruments EXCEPT Cheques are excluded, meaning Cheques ARE included).",
+        question: "Does the IT Act apply to cheques?",
+        answer: "Yes. (Negotiable Instruments EXCEPT cheques are excluded, meaning cheques ARE included).",
         exam_weight: "High",
         keywords: ["Cheques", "Applicability"]
     },
@@ -158,7 +158,7 @@ export const itAct2000: FlashCard[] = [
         pdf_title: "Information Technology Act, 2000",
         topic: "Offences",
         card_no: 18,
-        question: "What is the punishment for Cheating by Personation (Section 66D)?",
+        question: "What is the punishment for cheating by personation (Section 66D)?",
         answer: "Imprisonment up to 3 years and fine up to Rs. 1 Lakh.",
         exam_weight: "Medium",
         keywords: ["Section 66D", "Personation"]
@@ -167,7 +167,7 @@ export const itAct2000: FlashCard[] = [
         pdf_title: "Information Technology Act, 2000",
         topic: "Offences",
         card_no: 19,
-        question: "What is the punishment for Violation of Privacy (Section 66E)?",
+        question: "What is the punishment for violation of privacy (Section 66E)?",
         answer: "Imprisonment up to 3 years or fine up to Rs. 2 Lakhs, or both.",
         exam_weight: "Medium",
         keywords: ["Section 66E", "Privacy", "2 Lakhs"]
