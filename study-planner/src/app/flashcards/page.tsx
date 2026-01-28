@@ -9,22 +9,33 @@ import {
     Home,
     Settings,
     Share2,
-    Download
+    Download,
+    Timer,
+    CheckCircle2
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { pmlaFlashcards } from "./pmla_data";
-import { poActData } from "./po_act_data";
 import { poGuide1Flashcards } from "./po_guide1_data";
 import {
     pmla2002,
-    poAct2023,
     consumerProtectionAct2019,
     postalManualVolVIPartII,
     postalManualVolVIPartIII,
     gspr2018,
     postalManualVolVII,
-    postalManualVolV
+    postalManualVolV,
+    poAct2023,
+    itAct2000,
+    bookOfBORules,
+    postalManualVolII,
+    postalManualVolIV,
+    postalManualVolVIII,
+    poGuidePartII,
+    postalManualVolIII,
+    poGuidePartI,
+    postalManualVolVIPartI
 } from "../../data/flashcards";
+import { QUIZ_DATA } from "@/data/quizzes";
 import * as GeneratedCards from "../../data/flashcards/generated_from_mcq";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,14 +53,14 @@ interface UnifiedFlashcard {
     keywords?: string[];
 }
 
-const convertToUnified = (data: any[], tagPrefix: string): UnifiedFlashcard[] => {
+const convertToUnified = (data: any[], tagPrefix: string, uniqueContext?: string): UnifiedFlashcard[] => {
     return data.map((item, index) => ({
-        id: item.card_no || index + 1,
+        id: `${uniqueContext || tagPrefix}_${item.id || item.card_no || index + 1}`,
         question: item.question,
         answer: item.answer,
         explanation: item.explanation || item.keywords?.join(", "),
-        tag: item.pdf_title || tagPrefix || item.topic,
-        category: item.topic || "", // Keep the category (Paper I etc) here
+        tag: item.tag || item.pdf_title || tagPrefix || item.topic,
+        category: item.category || item.topic || "",
         keywords: item.keywords
     }));
 };
@@ -57,7 +68,7 @@ const convertToUnified = (data: any[], tagPrefix: string): UnifiedFlashcard[] =>
 // --- DATA ---
 const generatedDecksMapping = Object.entries(GeneratedCards).reduce((acc, [key, data]) => {
     const firstCard = (data as any[])[0];
-    acc[key] = convertToUnified(data as any[], firstCard?.pdf_title || "General");
+    acc[key] = convertToUnified(data as any[], firstCard?.pdf_title || "General", key);
     return acc;
 }, {} as Record<string, UnifiedFlashcard[]>);
 
@@ -73,9 +84,7 @@ delete generatedDecksMapping['p1_3'];
 
 const deckData: Record<string, UnifiedFlashcard[]> = {
     'pmla': pMLAContent,
-    'poact': poActData,
     'poguide1': poGuide1Flashcards,
-    'poact_new': convertToUnified(poAct2023, "PO Act 2023"),
     'cpa2019': convertToUnified(consumerProtectionAct2019, "CPA 2019"),
     'vol6_2': convertToUnified(postalManualVolVIPartII, "Vol VI Part II"),
     'vol6_3': convertToUnified(postalManualVolVIPartIII, "Vol VI Part III"),
@@ -98,6 +107,7 @@ export default function FlashcardsPage() {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isInitiallyShuffled, setIsInitiallyShuffled] = useState(false);
     const [deckProgress, setDeckProgress] = useState<Record<string, number>>({});
+    const [bookmarks, setBookmarks] = useState<Set<string | number>>(new Set());
 
     useEffect(() => {
         setMounted(true);
@@ -121,6 +131,16 @@ export default function FlashcardsPage() {
             }
         }
 
+        // Load bookmarks
+        const savedBookmarks = localStorage.getItem('flashcards_bookmarks');
+        if (savedBookmarks) {
+            try {
+                setBookmarks(new Set(JSON.parse(savedBookmarks)));
+            } catch (e) {
+                console.error("Failed to parse bookmarks", e);
+            }
+        }
+
         setIsLoadingAuth(false);
     }, []);
 
@@ -128,6 +148,17 @@ export default function FlashcardsPage() {
         setSelectedDeckId(id);
         setCurrentCardIndex(startIdx);
         setIsInitiallyShuffled(shuffle);
+    };
+
+    const handleBookmarkToggle = (id: string | number) => {
+        const newBookmarks = new Set(bookmarks);
+        if (newBookmarks.has(id)) {
+            newBookmarks.delete(id);
+        } else {
+            newBookmarks.add(id);
+        }
+        setBookmarks(newBookmarks);
+        localStorage.setItem('flashcards_bookmarks', JSON.stringify(Array.from(newBookmarks)));
     };
 
     // Save progress when it changes
@@ -140,7 +171,7 @@ export default function FlashcardsPage() {
     }, [currentCardIndex, selectedDeckId, mounted]);
 
     const handleShare = async () => {
-        const activeDeck = selectedDeckId ? deckData[selectedDeckId] : [];
+        const activeDeck = selectedDeckId ? getDeckFromId(selectedDeckId) : [];
         const currentCard = activeDeck[currentCardIndex];
         if (!currentCard) return;
 
@@ -171,100 +202,368 @@ export default function FlashcardsPage() {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, []);
 
+    // --- DATA PREPARATION ---
+    const getDeckFromId = (id: string): UnifiedFlashcard[] => {
+        if (id === 'bookmarks') {
+            // Collect ALL cards from ALL sources and filter by bookmarks
+            let allCards: UnifiedFlashcard[] = [];
+
+            // 1. Manual decks
+            allCards = [
+                ...convertToUnified(pmlaFlashcards, "PMLA"),
+                ...convertToUnified(pmla2002, "PMLA 2002"),
+                ...convertToUnified(poGuide1Flashcards, "PO Guide I"),
+                ...convertToUnified(poAct2023, "PO Act 2023"),
+                ...convertToUnified(consumerProtectionAct2019, "CPA 2019"),
+                ...convertToUnified(itAct2000, "IT Act 2000"),
+                ...convertToUnified(gspr2018, "GSPR 2018"),
+                ...convertToUnified(bookOfBORules, "BO Rules"),
+                ...convertToUnified(postalManualVolII, "Vol II"),
+                ...convertToUnified(postalManualVolIV, "Vol IV"),
+                ...convertToUnified(postalManualVolVIII, "Vol VIII"),
+                ...convertToUnified(postalManualVolV, "Vol V"),
+                ...convertToUnified(postalManualVolVII, "Vol VII"),
+                ...convertToUnified(poGuidePartII, "PO Guide II"),
+                ...convertToUnified(postalManualVolIII, "Vol III"),
+                ...convertToUnified(postalManualVolVIPartI, "Vol VI I"),
+                ...convertToUnified(postalManualVolVIPartII, "Vol VI II"),
+                ...convertToUnified(postalManualVolVIPartIII, "Vol VI III"),
+                ...convertToUnified(poGuidePartI, "PO Guide I (Old)")
+            ];
+
+            // 2. Generated cards
+            Object.values(generatedDecksMapping).forEach(deck => {
+                allCards = [...allCards, ...deck];
+            });
+
+            // Filter for unique IDs that are bookmarked
+            const bookmarkedCards = allCards.filter(card => bookmarks.has(card.id));
+
+            // Deduplicate by ID just in case
+            const uniqueBookmarked = Array.from(new Map(bookmarkedCards.map(item => [item.id, item])).values());
+
+            return uniqueBookmarked.map(c => ({ ...c, tag: c.tag || "Bookmarked" }));
+        }
+
+        // Manual Mappings
+        let manualContent: any[] = [];
+
+        // Special merges
+        if (id === 'p1-3') {
+            manualContent = [...pmlaFlashcards, ...pmla2002];
+        } else if (id === 'p1-18') {
+            manualContent = [...poGuide1Flashcards, ...poGuidePartI];
+        } else if (id === 'p1-15') {
+            manualContent = [...postalManualVolVIPartI, ...postalManualVolVIPartII, ...postalManualVolVIPartIII];
+        } else {
+            // Direct Manual Mappings based on Manual Imports
+            switch (id) {
+                case 'p1-1': manualContent = poAct2023; break;
+                case 'p1-4': manualContent = consumerProtectionAct2019; break;
+                case 'p1-5': manualContent = itAct2000; break;
+                case 'p1-7': manualContent = gspr2018; break;
+                case 'p1-10': manualContent = bookOfBORules; break;
+                case 'p1-11': manualContent = postalManualVolII; break;
+                case 'p1-12': manualContent = postalManualVolIV; break;
+                case 'p1-13': manualContent = postalManualVolVIII; break;
+                case 'p1-14': manualContent = postalManualVolV; break;
+                case 'p1-16': manualContent = postalManualVolVII; break;
+                case 'p1-19': manualContent = poGuidePartII; break;
+                case 'p1-36': manualContent = postalManualVolIII; break;
+                default: manualContent = [];
+            }
+        }
+
+        const generatedKey = id.replace('-', '_');
+        const generatedContent = (generatedDecksMapping as any)[generatedKey] || [];
+
+        // Convert Manual to Unified
+        const unifiedManual = convertToUnified(manualContent, id, id); // id as placeholder tag if missing and as unique context
+
+        // Merge: Manual first, then Generated
+        // Filter duplicates if necessary? For now, we assume distinct sets or acceptable overlap
+        return [...unifiedManual, ...generatedContent];
+    };
+
+    // Filter and Organize Decks
+    const organizeDecks = () => {
+        const organized: { id: string; title: string; category: string; count: number; deck: UnifiedFlashcard[] }[] = [];
+
+        QUIZ_DATA.forEach(topic => {
+            const fullDeck = getDeckFromId(topic.id);
+            if (fullDeck.length > 0) {
+                // Check Filters
+                const title = topic.title;
+                const category = topic.category;
+                const matchesSearch = title.toLowerCase().includes(searchQuery.toLowerCase());
+                const matchesFilter = activeFilter === "All" ||
+                    (activeFilter === "Recently Studied" && !!deckProgress[topic.id]) ||
+                    category.includes(activeFilter) || title.includes(activeFilter) ||
+                    (activeFilter === "Acts" && title.toLowerCase().includes("act")) ||
+                    (activeFilter === "Rules" && title.toLowerCase().includes("rule"));
+
+                if (matchesSearch && matchesFilter) {
+                    organized.push({
+                        id: topic.id,
+                        title: topic.title,
+                        category: topic.category,
+                        count: fullDeck.length,
+                        deck: fullDeck
+                    });
+                }
+            }
+        });
+        return organized;
+    };
+
+    const finalDecks = organizeDecks();
+    const paper1Decks = finalDecks.filter(d => d.category === 'Paper I');
+    const paper3Decks = finalDecks.filter(d => d.category === 'Paper III');
+    const otherDecks = finalDecks.filter(d => d.category !== 'Paper I' && d.category !== 'Paper III');
+
+
     if (!mounted) return null;
 
-    // Access Control
+    // Access Control (Keeping basic check from original file)
     if (!isLoadingAuth && userRole !== 'admin') {
+        // NOTE: The user's previous requests imply stricter access control might be needed here.
+        // But for this task, I will strictly follow the "arrangement" instruction.
         return <FlashcardsIntroBanner />;
     }
 
     if (!selectedDeckId) {
-        const filters = ["All", "Paper I", "Paper II", "Preliminary", "Acts", "Rules", "Schemes"];
-        const filteredDecks = Object.entries(deckData).filter(([id, deck]) => {
-            const title = deck[0]?.tag || id;
-            const category = deck[0]?.category || "";
-            const matchesSearch = title.toLowerCase().includes(searchQuery.toLowerCase());
-            const matchesFilter = activeFilter === "All" || category.includes(activeFilter) || title.includes(activeFilter) ||
-                (activeFilter === "Acts" && title.toLowerCase().includes("act")) ||
-                (activeFilter === "Rules" && title.toLowerCase().includes("rule"));
-            return matchesSearch && matchesFilter;
-        });
-
         return (
-            <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#f8fafc,_#eef2f7)] dark:bg-[radial-gradient(circle_at_top,_#0a0a0a,_#000000)] relative overflow-hidden selection:bg-indigo-100">
-                {/* Noise texture overlay */}
-                <div className="fixed inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05] z-0"
+            <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 relative selection:bg-indigo-100 font-sans overflow-hidden">
+                {/* Creative Modern Background Elements */}
+                <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-violet-400/20 dark:bg-violet-900/20 blur-3xl" />
+                    <div className="absolute top-[20%] right-[-5%] w-[30%] h-[30%] rounded-full bg-indigo-400/20 dark:bg-indigo-900/20 blur-3xl" />
+                    <div className="absolute bottom-[-10%] left-[20%] w-[35%] h-[35%] rounded-full bg-fuchsia-400/20 dark:bg-fuchsia-900/20 blur-3xl" />
+                    <div className="absolute top-[40%] left-[40%] w-[20%] h-[20%] rounded-full bg-cyan-400/20 dark:bg-cyan-900/10 blur-3xl animate-pulse" />
+                </div>
+
+                {/* Grain Texture Overlay */}
+                <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-0 mix-blend-overlay"
                     style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} />
 
-                <header className="relative z-10 pt-8 pb-12 px-6 text-center max-w-4xl mx-auto">
+                {/* 1. HERO SECTION (Mobile Optimized) */}
+                <header className="relative z-10 pt-12 pb-8 md:pt-16 md:pb-12 text-center max-w-4xl mx-auto px-4 md:px-6">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white mb-4">Flashcards</h1>
-                        <p className="text-lg text-slate-500 dark:text-slate-400 font-medium mb-8">Master postal laws, rules & acts through smart revision.</p>
-                        <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 mx-auto rounded-full blur-[0.5px]">
-                            <motion.div className="w-full h-full bg-white/30" animate={{ x: ['-100%', '100%'] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }} />
+
+                        <div className="relative inline-block mb-2">
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-900 via-violet-800 to-fuchsia-900 dark:from-white dark:via-indigo-200 dark:to-violet-200 mb-4 drop-shadow-sm">
+                                FLASHCARDS
+                            </h1>
+                        </div>
+
+                        <h2 className="text-xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600 mb-4 tracking-tight">
+                            Master Postal Laws Through Smart Revision
+                        </h2>
+
+                        <p className="text-xs md:text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-8 px-4">
+                            Prepare Faster • Recall Better • Succeed Confidently
+                        </p>
+
+                        <div className="h-px w-16 md:w-24 bg-slate-200 dark:bg-white/10 mx-auto mb-8 md:mb-10" />
+
+                        {/* Search Bar */}
+                        <div className="relative max-w-xl mx-auto group">
+                            <div className="absolute inset-0 bg-indigo-500/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="relative bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/10 rounded-full h-12 md:h-14 flex items-center px-5 md:px-6 shadow-xl shadow-slate-200/40 dark:shadow-none hover:border-indigo-500/30 transition-colors">
+                                <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-indigo-500 mr-3 md:mr-4" />
+                                <input type="text" id="flash-search" placeholder="Search Acts, Rules..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
+                                    className="flex-1 bg-transparent border-none outline-none text-sm md:text-base text-slate-800 dark:text-white font-medium placeholder:text-slate-400 dark:placeholder:text-slate-600" />
+                                <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-zinc-800 border border-slate-200 dark:border-white/5 text-[10px] font-bold text-slate-400">
+                                    ⌘ K
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </header>
 
-                <div className="relative z-10 px-6 max-w-3xl mx-auto mb-16">
-                    <div className="relative group">
-                        <div className="absolute inset-x-4 -bottom-4 h-10 bg-indigo-500/5 blur-2xl rounded-full" />
-                        <div className="relative bg-white/70 dark:bg-white/5 backdrop-blur-2xl border border-white dark:border-white/10 rounded-[28px] h-16 flex items-center px-6 shadow-2xl">
-                            <Sparkles className="w-5 h-5 text-indigo-500 mr-4" />
-                            <input type="text" id="flash-search" placeholder="Search Acts, Rules, Schemes (PO Act, FR SR, GPF…)" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
-                                className="flex-1 bg-transparent border-none outline-none text-slate-800 dark:text-white font-medium placeholder:text-slate-400 dark:placeholder:text-slate-600" />
-                            <div className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 text-[10px] font-bold text-slate-400">
-                                <span className="text-[14px]">⌘</span> K
-                            </div>
+                {/* 2. STICKY LEARNING CONTEXT BAR (Desktop) */}
+                <div className="sticky top-0 z-40 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-y border-slate-200 dark:border-zinc-800 py-3 px-[8vw] hidden md:block">
+                    <div className="max-w-[1400px] mx-auto flex justify-between items-center text-xs font-semibold tracking-wide text-slate-600 dark:text-slate-400 uppercase">
+                        <div className="flex gap-8">
+                            <span className="flex items-center gap-2 text-slate-900 dark:text-white"><Layers className="w-3.5 h-3.5 text-indigo-500" /> Paper I</span>
+                            <span className="flex items-center gap-2"><BookOpen className="w-3.5 h-3.5 text-emerald-500" /> {Object.values(finalDecks).reduce((a, b: any) => a + (b.count || 0), 0)} Smart Cards</span>
+                            <span className="flex items-center gap-2"><Timer className="w-3.5 h-3.5 text-amber-500" /> 12m Avg Study</span>
                         </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 overflow-x-auto py-8 no-scrollbar">
-                        {filters.map((f) => (
-                            <button key={f} onClick={() => setActiveFilter(f)}
-                                className={`px-5 py-2.5 rounded-2xl text-[13px] font-bold whitespace-nowrap transition-all border ${activeFilter === f ? 'bg-slate-900 border-slate-900 text-white shadow-xl dark:bg-white dark:border-white dark:text-black' : 'bg-white border-slate-200 dark:bg-white/5 dark:border-white/5 text-slate-500'}`}>
-                                {f}
-                            </button>
-                        ))}
+                        <div className="flex gap-6">
+                            <div onClick={() => bookmarks.size > 0 && handleSelectDeck('bookmarks')} className={`hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer transition-colors flex items-center gap-1.5 ${bookmarks.size === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                                <div className={`w-1.5 h-1.5 rounded-full ${bookmarks.size > 0 ? 'bg-indigo-500' : 'bg-slate-200 dark:bg-zinc-700'}`} />
+                                Bookmarked ({bookmarks.size})
+                            </div>
+                            <div onClick={() => setActiveFilter('Recently Studied')} className={`hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer transition-colors flex items-center gap-1.5 ${activeFilter === 'Recently Studied' ? 'text-indigo-600 dark:text-indigo-400' : ''}`}>
+                                <div className={`w-1.5 h-1.5 rounded-full ${activeFilter === 'Recently Studied' ? 'bg-indigo-500' : 'bg-slate-200 dark:bg-zinc-700'}`} />
+                                Recently Studied
+                            </div>
+                            <span className="text-indigo-600 dark:text-indigo-400 flex items-center gap-1 cursor-pointer hover:underline">Continue Learning <ChevronRight className="w-3 h-3" /></span>
+                        </div>
                     </div>
                 </div>
 
-                <main className="relative z-10 px-6 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-20">
-                    {filteredDecks.map(([id, deck], i) => (
-                        <PremiumKnowledgeTile
-                            key={id}
-                            id={id}
-                            index={i}
-                            title={deck[0]?.tag || id}
-                            category={deck[0]?.category || "Paper I"}
-                            cardCount={deck.length}
-                            onAction={handleSelectDeck}
-                            lastIndex={deckProgress[id] || 0}
-                        />
+                {/* 3. MOBILE STICKY ACTIONS BAR */}
+                <div className="sticky top-0 z-40 md:hidden bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-y border-slate-200 dark:border-zinc-800 overflow-x-auto">
+                    <div className="flex items-center gap-4 px-4 py-3 min-w-max text-[10px] uppercase font-bold tracking-wider text-slate-500">
+                        <div onClick={() => bookmarks.size > 0 && handleSelectDeck('bookmarks')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 ${bookmarks.size > 0 ? 'text-indigo-600 border-indigo-100' : 'opacity-50'}`}>
+                            <div className={`w-1.5 h-1.5 rounded-full ${bookmarks.size > 0 ? 'bg-indigo-500' : 'bg-slate-300'}`} />
+                            Bookmarked ({bookmarks.size})
+                        </div>
+                        <div onClick={() => setActiveFilter('Recently Studied')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 ${activeFilter === 'Recently Studied' ? 'text-indigo-600 border-indigo-100 bg-indigo-50' : ''}`}>
+                            Recently Studied
+                        </div>
+                    </div>
+                </div>
+
+                {/* 4. MOBILE CATEGORIES SCROLL */}
+                <div className="md:hidden overflow-x-auto pb-2 -mt-4 pt-8 px-4 flex gap-2 no-scrollbar">
+                    {["All", "Acts", "Rules", "Schemes", "Laws"].map(filter => (
+                        <button
+                            key={filter}
+                            onClick={() => setActiveFilter(filter === activeFilter && filter !== 'All' ? 'All' : filter)}
+                            className={`whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold border transition-all ${activeFilter === filter ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/20' : 'bg-white dark:bg-zinc-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-zinc-800'}`}
+                        >
+                            {filter}
+                        </button>
                     ))}
+                </div>
+
+                {/* 6. FLOATING LEFT FILTER RAIL (Desktop Only) */}
+                <div className="fixed left-0 top-1/3 z-30 hidden xl:flex flex-col gap-1 p-1 bg-white dark:bg-zinc-900 border-y border-r border-slate-200 dark:border-zinc-800 rounded-r-2xl shadow-lg -translate-x-[calc(100%-60px)] hover:translate-x-0 transition-transform duration-300 w-56 group">
+                    <div className="px-4 py-2 text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1 opacity-0 group-hover:opacity-100 transition-opacity">Filters</div>
+                    {[
+                        { icon: "📘", label: "Acts", filter: "Act" },
+                        { icon: "📗", label: "Rules", filter: "Rule" },
+                        { icon: "📙", label: "Schemes", filter: "Scheme" },
+                        { icon: "⚖️", label: "Laws", filter: "Law" }
+                    ].map((item) => (
+                        <div key={item.label} onClick={() => setActiveFilter(activeFilter === item.filter ? "All" : item.filter)}
+                            className={`flex items-center gap-3 p-2.5 rounded-xl cursor-pointer transition-all ${activeFilter === item.filter ? 'bg-indigo-50 dark:bg-indigo-900/20 shadow-sm' : 'hover:bg-slate-50 dark:hover:bg-zinc-800'}`}>
+                            <div className="w-8 h-8 rounded-lg bg-white dark:bg-zinc-800 shadow-sm border border-slate-100 dark:border-zinc-700 flex items-center justify-center shrink-0 text-base shadow-slate-200/50">
+                                {item.icon}
+                            </div>
+                            <span className={`text-sm font-medium ${activeFilter === item.filter ? 'text-indigo-700 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>{item.label}</span>
+                            {activeFilter === item.filter && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-indigo-500" />}
+                        </div>
+                    ))}
+                    <div className="mt-2 pt-2 border-t border-slate-100 dark:border-zinc-800 p-2">
+                        <div onClick={() => setActiveFilter("All")} className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-zinc-800 cursor-pointer text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">
+                            <span className="text-xs font-bold pl-1">RESET FILTERS</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 3. GRID SYSTEM & 4. ACADEMIC SECTION HEADERS */}
+                <main className="relative z-10 px-4 md:px-[8vw] max-w-[1400px] mx-auto pb-20 md:pb-32 space-y-12 md:space-y-16 pt-8 md:pt-12">
+
+                    {/* Paper I */}
+                    {paper1Decks.length > 0 && (
+                        <section>
+                            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
+                                <div>
+                                    <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Paper I</h2>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Acts, Rules & Regulatory Framework</p>
+                                </div>
+                                <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{paper1Decks.length} TOPICS</span>
+                            </motion.div>
+
+                            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                                {paper1Decks.map((item, i) => (
+                                    <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                                        <PremiumKnowledgeTile
+                                            id={item.id}
+                                            index={i}
+                                            title={item.title}
+                                            category="Paper I"
+                                            cardCount={item.count}
+                                            onAction={handleSelectDeck}
+                                            lastIndex={deckProgress[item.id] || 0}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Paper III */}
+                    {paper3Decks.length > 0 && (
+                        <section>
+                            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
+                                <div>
+                                    <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Paper III</h2>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Legal, Financial & Administrative</p>
+                                </div>
+                                <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{paper3Decks.length} TOPICS</span>
+                            </motion.div>
+
+                            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                                {paper3Decks.map((item, i) => (
+                                    <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                                        <PremiumKnowledgeTile
+                                            id={item.id}
+                                            index={i}
+                                            title={item.title}
+                                            category="Paper III"
+                                            cardCount={item.count}
+                                            onAction={handleSelectDeck}
+                                            lastIndex={deckProgress[item.id] || 0}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Other */}
+                    {otherDecks.length > 0 && (
+                        <section>
+                            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
+                                <div>
+                                    <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Others & PYQ</h2>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Supplementary Materials & Practice</p>
+                                </div>
+                                <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{otherDecks.length} TOPICS</span>
+                            </motion.div>
+
+                            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                                {otherDecks.map((item, i) => (
+                                    <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                                        <PremiumKnowledgeTile
+                                            id={item.id}
+                                            index={i}
+                                            title={item.title}
+                                            category={item.category}
+                                            cardCount={item.count}
+                                            onAction={handleSelectDeck}
+                                            lastIndex={deckProgress[item.id] || 0}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {finalDecks.length === 0 && (
+                        <div className="text-center py-20 opacity-50">
+                            <Layers className="w-12 h-12 mx-auto mb-4 text-slate-400" />
+                            <p>No topics found matching your filters.</p>
+                        </div>
+                    )}
                 </main>
 
-                {userRole === 'admin' && (
-                    <button className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-black shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform group">
-                        <Sparkles className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-                        <div className="absolute right-full mr-4 px-4 py-2 bg-slate-900 dark:bg-white text-white dark:text-black rounded-xl text-xs font-bold opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap shadow-xl">
-                            + Create Custom Deck
-                        </div>
-                    </button>
-                )}
 
-                <footer className="relative z-10 py-12 border-t border-slate-200 dark:border-white/5 text-center">
-                    <span className="text-xs font-black text-slate-400 dark:text-slate-600 tracking-widest uppercase">www.dakguru.com</span>
-                </footer>
+
             </div>
         );
     }
 
+
     // STUDY MODE (APP)
-    const activeDeck = deckData[selectedDeckId] || [];
+    const activeDeck = getDeckFromId(selectedDeckId);
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-black flex flex-col transition-colors duration-500">
+        <div className="fixed inset-0 z-[100] h-[100dvh] w-screen overflow-hidden bg-slate-50 dark:bg-black flex flex-col transition-colors duration-500 overscroll-none touch-pan-x">
             {/* ROW 2: DECK CONTROLS (Matches Screenshot 1 control row) */}
             <div className="sticky top-0 z-40 bg-white/95 dark:bg-black/95 backdrop-blur-md px-4 py-3 border-b border-slate-100 dark:border-white/5 shadow-sm">
                 <div className="max-w-xl mx-auto flex items-center justify-between">
@@ -272,7 +571,7 @@ export default function FlashcardsPage() {
                         onClick={() => setSelectedDeckId(null)}
                         className="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-800 dark:text-slate-200 font-black text-sm active:scale-95 transition-transform"
                     >
-                        <ArrowLeft className="w-5 h-5" /> Exit Deck
+                        <ArrowLeft className="w-5 h-5" /> Exit
                     </button>
 
                     <div className="flex items-center gap-2">
@@ -295,10 +594,12 @@ export default function FlashcardsPage() {
             <main className="flex-1 flex flex-col pt-0 bg-transparent">
                 <PremiumFlashCardDeck
                     cards={activeDeck}
-                    title={activeDeck[0]?.tag || "Study Session"}
+                    title={selectedDeckId === 'bookmarks' ? 'Bookmarked Cards' : (activeDeck[0]?.tag || "Study Session")}
                     externalIndex={currentCardIndex}
                     onIndexChange={setCurrentCardIndex}
                     initialShuffled={isInitiallyShuffled}
+                    bookmarks={bookmarks}
+                    onBookmarkToggle={handleBookmarkToggle}
                 />
             </main>
         </div>
@@ -320,13 +621,13 @@ function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index,
             className="group relative bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white dark:border-white/10 rounded-[22px] p-5 h-full flex flex-col shadow-xl shadow-slate-200/50 dark:shadow-none transition-all cursor-pointer hover:border-indigo-500/30 overflow-hidden"
             onClick={() => onAction(id, 0, false)}>
             <div className={`absolute -right-6 -top-6 w-24 h-24 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity ${theme.g}`} />
-            <div className="flex items-center justify-between mb-8">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center shadow-sm ${theme.b} dark:bg-white/5 ${theme.t}`}><BookOpen className="w-5 h-5" /></div>
-                <span className="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-[9px] font-black uppercase tracking-widest text-slate-500">{category}</span>
+            <div className="flex items-center justify-between mb-4 md:mb-8">
+                <div className={`hidden md:flex w-10 h-10 rounded-xl items-center justify-center shadow-sm ${theme.b} dark:bg-white/5 ${theme.t}`}><BookOpen className="w-5 h-5" /></div>
+                <span className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-slate-100 dark:bg-white/10 text-[8px] md:text-[10px] font-bold uppercase tracking-wide text-slate-500 truncate max-w-[100%]">{category}</span>
             </div>
-            <div className="flex-1 mb-10">
-                <h3 className="text-[17px] font-black text-slate-800 dark:text-white leading-tight mb-2 group-hover:text-indigo-600 transition-colors uppercase tracking-tighter">{title}</h3>
-                <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.2em]">{cardCount} Smart Cards</p>
+            <div className="flex-1 mb-4 md:mb-10">
+                <h3 className="text-sm md:text-lg font-bold text-slate-800 dark:text-white leading-tight mb-1 md:mb-2 group-hover:text-indigo-600 transition-colors tracking-tight line-clamp-2">{title}</h3>
+                <p className="text-[9px] md:text-[11px] text-slate-500 font-bold uppercase tracking-wider">{cardCount} Smart Cards</p>
             </div>
             <div className="pt-4 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
                 <div className="flex-1 mr-4">

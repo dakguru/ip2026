@@ -4274,8 +4274,119 @@ const ALL_SETS_DATA: Record<number, any[]> = {
       "a": 0,
       "e": "Rule 21-A explicitly prohibits discourteous behavior and dilatory tactics (delays) in official dealings."
     }
+  ],
+  "115": [
+    {
+      "q": "Selection to GDS posts is based on which of the following criteria?",
+      "o": [
+        "Written Examination",
+        "Interview",
+        "Merit list based on 10th standard marks",
+        "Seniority in registration"
+      ],
+      "a": 2,
+      "e": "Selection is purely based on a computer-generated merit list as per the marks obtained in the Secondary School Examination (10th standard)."
+    },
+    {
+      "q": "Is weightage given to higher educational qualifications (12th, Degree) in GDS selection?",
+      "o": [
+        "Yes, 10% extra marks",
+        "Yes, 5% extra marks",
+        "No weightage will be given",
+        "Only if marks are equal"
+      ],
+      "a": 2,
+      "e": "The rules specify that no weightage will be given for higher educational qualifications."
+    },
+    {
+      "q": "Knowledge of cycling is a prerequisite for all GDS posts. In this context, which statement is true?",
+      "o": [
+        "Candidate must have a cycling certificate.",
+        "Knowing how to ride a scooter/motorcycle satisfies this condition.",
+        "Cycling is only mandatory for BPM.",
+        "Cycling is only mandatory in hilly areas."
+      ],
+      "a": 1,
+      "e": "Knowledge of cycling is a prerequisite, and being able to ride a scooter or motorcycle is also considered as knowledge of cycling."
+    },
+    {
+      "q": "What is the mandatory condition for a GDS regarding their livelihood?",
+      "o": [
+        "They must be a full-time student.",
+        "They must have other sources of income to support themselves and family.",
+        "They must not have any other job.",
+        "They must be below the poverty line."
+      ],
+      "a": 1,
+      "e": "Every selected GDS must provide an undertaking that they have other sources of income besides the TRCA to provide adequate means of livelihood."
+    },
+    {
+      "q": "The selected candidate for BPM post must take up residence in the post village within ______ after selection but before engagement.",
+      "o": [
+        "15 days",
+        "30 days",
+        "60 days",
+        "90 days"
+      ],
+      "a": 1,
+      "e": "The BPM is required to reside in the village/delivery jurisdiction of the Post Office within 30 days of selection but before the engagement is offered."
+    },
+    {
+      "q": "For the purpose of calculating merit, if a candidate has both marks and grades in their 10th marksheet, which will be considered?",
+      "o": [
+        "Grades only",
+        "Marks only",
+        "Average of marks and grades",
+        "Whichever is higher"
+      ],
+      "a": 1,
+      "e": "If the marksheet contains both marks and grades, then only marks will be taken for selection purposes."
+    },
+    {
+      "q": "If grades are mentioned instead of marks, what multiplication factor is used to convert Grade Points (GPA) to marks (out of 100)?",
+      "o": [
+        "9.0",
+        "9.5",
+        "10.0",
+        "8.5"
+      ],
+      "a": 1,
+      "e": "For conversion of GPA to marks, the multiplication factor used is 9.5."
+    },
+    {
+      "q": "Can a person holding an elective office (like Sarpanch or Member of Panchayat) be engaged as a GDS?",
+      "o": [
+        "Yes, without conditions.",
+        "Yes, if the Divisional Head permits.",
+        "No, it is a disqualification.",
+        "Yes, if they work for 4 hours."
+      ],
+      "a": 2,
+      "e": "Engagement as a Sevak is denied to persons who are members of the Panchayat, Sarpanch, or hold any elective office."
+    },
+    {
+      "q": "What is the maximum number of choices a candidate can exercise in a single online application for GDS recruitment?",
+      "o": [
+        "5",
+        "10",
+        "20",
+        "Unlimited"
+      ],
+      "a": 2,
+      "e": "A candidate can give up to 20 preferences/choices in the online application."
+    },
+    {
+      "q": "In case of a tie in marks between two candidates, how is the seniority decided for selection?",
+      "o": [
+        "By alphabet",
+        "Higher age is given preference",
+        "First to apply",
+        "Based on gender (Female first)"
+      ],
+      "a": 1,
+      "e": "In case of tie, preference is given in order: Older in Age, ST (Female), SC (Female), OBC (Female), EWS (Female), UR (Female), etc."
+    }
   ]
-
 };
 
 interface RawQuestion {
@@ -4347,7 +4458,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-30', 'CCS (Conduct) Rules, 1964', 'Paper I', [54, 55]),
   createTopic('p1-31', 'CCS (CCA) Rules, 1965', 'Paper I', [50, 51, 52, 53]),
   createTopic('p1-32', 'CCS (Temporary Service) Rules 1965', 'Paper I', [57]),
-  createTopic('p1-33', 'GDS Conduct and Engagement Rules, 2020', 'Paper I', [113, 114]),
+  createTopic('p1-33', 'GDS Conduct and Engagement Rules, 2020', 'Paper I', [113, 114, 115]),
   createTopic('p1-34', 'GDS Rulings', 'Paper I'),
   createTopic('p1-35', 'Preservation & Disposal of Records', 'Paper I'),
   createTopic('p1-36', 'Postal Manual Volume III', 'Paper I', [60]),

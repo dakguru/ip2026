@@ -376,13 +376,34 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 12. CAT Act
-        { title: "Central Administrative Tribunal Act, 1985", description: "CAT Act provisions.", color: "indigo", comingSoon: true },
+        {
+            title: "Central Administrative Tribunal Act, 1985",
+            description: "CAT Act provisions.",
+            filename: "CENTRAL_ADMINISTRATIVE_TRIBUNALS_ACT_1985.pdf",
+            path: "/notes/paper-3/CENTRAL_ADMINISTRATIVE_TRIBUNALS_ACT_1985.pdf",
+            size: "0.6 MB",
+            color: "indigo"
+        },
 
         // 13. Revenue Recovery
-        { title: "Revenue Recovery Act, 1890", description: "Act for recovery of public revenue.", color: "blue", comingSoon: true },
+        {
+            title: "Revenue Recovery Act, 1890",
+            description: "Act for recovery of public revenue.",
+            filename: "Revenue_Recovery_Act_1890.pdf",
+            path: "/notes/paper-3/Revenue_Recovery_Act_1890.pdf",
+            size: "0.4 MB",
+            color: "blue"
+        },
 
         // 14. POCA
-        { title: "Prevention of Corruption Act, 1988", description: "As amended.", color: "red", comingSoon: true },
+        {
+            title: "Prevention of Corruption Act, 1988",
+            description: "As amended.",
+            filename: "Prevention_of_Corruption_Act_1988.pdf",
+            path: "/notes/paper-3/Prevention_of_Corruption_Act_1988.pdf",
+            size: "0.6 MB",
+            color: "red"
+        },
 
         // 15. RTI
         { title: "RTI Act, 2005 and RTI Rules, 2012", description: "Right to Information framework.", color: "cyan", comingSoon: true },

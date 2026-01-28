@@ -73,7 +73,16 @@ export default function PremiumFlashCard({
                     <div className={styles.contentContainer}>
                         <div className={styles.header}>
                             <div className={styles.tag}>{category || theme}</div>
-                            <HelpCircle className="w-5 h-5 text-slate-300 dark:text-slate-700" />
+                            <button
+                                className={clsx(styles.iconButton, isBookmarked && styles.active)}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    onBookmarkToggle?.();
+                                }}
+                                aria-label="Mark for revision"
+                            >
+                                <Bookmark className={clsx("w-5 h-5", isBookmarked && "fill-current")} />
+                            </button>
                         </div>
 
                         <div className={styles.questionText}>
