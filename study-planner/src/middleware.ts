@@ -29,7 +29,8 @@ export async function middleware(request: NextRequest) {
 
     if (isProtectedRoute) {
         if (!token) {
-            return NextResponse.redirect(new URL('/login', request.url));
+            // Use 303 to force a GET request to the login page, even if the current request is a POST (e.g. from Razorpay)
+            return NextResponse.redirect(new URL('/login', request.url), 303);
         }
 
         // Parse token safely
@@ -46,7 +47,7 @@ export async function middleware(request: NextRequest) {
         }
 
         if (!email || !sessionId) {
-            const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+            const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url), 303);
             response.cookies.delete('auth_token');
             response.cookies.delete('user_session');
             response.cookies.delete('session_v');
@@ -77,7 +78,7 @@ export async function middleware(request: NextRequest) {
             clearTimeout(timeoutId);
 
             if (!validateRes.ok) {
-                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url), 303);
                 response.cookies.delete('auth_token');
                 response.cookies.delete('user_session');
                 response.cookies.delete('session_v');
@@ -87,7 +88,7 @@ export async function middleware(request: NextRequest) {
             const { valid } = await validateRes.json();
 
             if (!valid) {
-                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url), 303);
                 response.cookies.delete('auth_token');
                 response.cookies.delete('user_session');
                 response.cookies.delete('session_v');
@@ -100,14 +101,14 @@ export async function middleware(request: NextRequest) {
                 maxAge: 600, // 10 minutes
                 path: '/',
                 httpOnly: true,
-                sameSite: 'strict',
+                sameSite: 'lax', // Use 'lax' for redirects
                 secure: process.env.NODE_ENV === 'production'
             });
             return response;
         } catch (error) {
             console.error('Middleware validation error:', error);
             // On internal error, we fallback to login for security
-            const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url));
+            const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url), 303);
             response.cookies.delete('auth_token');
             response.cookies.delete('user_session');
             response.cookies.delete('session_v');

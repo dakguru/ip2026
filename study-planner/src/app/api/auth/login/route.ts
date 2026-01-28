@@ -35,9 +35,10 @@ export async function POST(request: Request) {
         response.cookies.set('auth_token', `${user.email}:${sessionId}`, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
+            sameSite: 'lax', // Use 'lax' instead of 'strict' for redirects
             maxAge: maxAge,
             path: '/',
+            ...(process.env.NODE_ENV === 'production' ? { domain: '.dakguru.com' } : {})
         });
 
         // Set a client-readable cookie for UI state (non-httpOnly)
@@ -51,9 +52,10 @@ export async function POST(request: Request) {
         }), {
             httpOnly: false,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
+            sameSite: 'lax',
             maxAge: maxAge,
             path: '/',
+            ...(process.env.NODE_ENV === 'production' ? { domain: '.dakguru.com' } : {})
         });
 
         return response;
