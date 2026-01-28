@@ -2,7 +2,8 @@
 
 import DashboardCarousel from "@/components/dashboard/DashboardCarousel";
 import Link from "next/link";
-import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy, Newspaper } from "lucide-react";
+import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy, Newspaper, AlertCircle } from "lucide-react";
+import { Capacitor } from "@capacitor/core";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetHeader } from "@/components/ui/sheet";
@@ -365,6 +366,22 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
             </header>
 
             <div className="space-y-6 pt-5">
+                {/* Android App Payment Announcement */}
+                {Capacitor.getPlatform() === 'android' && (
+                    <div className="px-5">
+                        <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/50 rounded-2xl p-4 shadow-sm flex gap-4 items-start animate-in fade-in slide-in-from-top-4 duration-500">
+                            <div className="p-2 bg-amber-100 dark:bg-amber-900/50 rounded-xl text-amber-600 dark:text-amber-400 shrink-0">
+                                <AlertCircle className="w-5 h-5" />
+                            </div>
+                            <div className="space-y-1">
+                                <h4 className="text-sm font-black text-amber-900 dark:text-amber-100 uppercase tracking-tight">Payment Notice</h4>
+                                <p className="text-xs font-medium text-amber-800 dark:text-amber-200 leading-relaxed">
+                                    We're working on the payment issue for the Android App users. Aspirants are requested to use Desktop/Mobile Browers for making their payments using our direct website link <span className="font-black underline">www.dakguru.com</span>. Thanks for your continued support.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
                 {/* --- HALL OF FAME BANNER REMOVED --- */}
