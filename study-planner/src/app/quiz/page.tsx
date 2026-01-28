@@ -450,9 +450,9 @@ export default function QuizDashboard() {
                             </div>
 
                             <div className="flex justify-center mt-12">
-                                <button onClick={resetToDashboard} className="px-8 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors">
-                                    Back to Dashboard
-                                </button>
+                                <Link href="/" className="px-8 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors">
+                                    Back to Home
+                                </Link>
                             </div>
                         </div>
                     )}

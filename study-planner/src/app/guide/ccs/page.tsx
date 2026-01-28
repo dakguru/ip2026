@@ -292,8 +292,8 @@ export default function CCSConductGuide() {
                         <div className="text-xs font-medium px-3 py-1 bg-violet-100 text-violet-700 rounded-full dark:bg-violet-900/30 dark:text-violet-300">
                             CCS (Conduct) Rules, 1964
                         </div>
-                        <a href="/guide" className="text-sm font-medium text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white transition-colors cursor-pointer">
-                            Back to Dashboard
+                        <a href="/" className="text-sm font-medium text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white transition-colors cursor-pointer">
+                            Back to Home
                         </a>
                     </div>
 

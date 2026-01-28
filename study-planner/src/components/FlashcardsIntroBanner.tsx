@@ -7,8 +7,8 @@ export default function FlashcardsIntroBanner() {
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-4">
             <div className="max-w-md w-full text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <Link href="/dashboard" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 mb-8 transition-colors">
-                    <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+                <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 mb-8 transition-colors">
+                    <ArrowLeft className="w-4 h-4" /> Back to Home
                 </Link>
 
                 <div className="relative w-24 h-24 mx-auto">
@@ -44,7 +44,7 @@ export default function FlashcardsIntroBanner() {
 
                         <div className="mt-4 pt-4 border-t border-zinc-100 dark:border-zinc-800 w-full flex items-center justify-center gap-2 text-xs text-zinc-400">
                             <Lock className="w-3 h-3" />
-                            <span>Exclusive for Gold & Silver Members</span>
+                            <span>Exclusive for Gold Members</span>
                         </div>
                     </div>
                 </div>
