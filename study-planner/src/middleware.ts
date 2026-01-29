@@ -19,9 +19,21 @@ export async function middleware(request: NextRequest) {
         pathname === '/refund-policy' ||
         pathname === '/mock-tests';
 
+    const isLogout = request.nextUrl.searchParams.get('logout') === 'true';
+
     // If user is on login page and has a valid token, redirect to planner
-    if (isLoginPage && token) {
+    // UNLESS they are explicitly logging out
+    if (isLoginPage && token && !isLogout) {
         return NextResponse.redirect(new URL('/planner', request.url));
+    }
+
+    if (isLoginPage && isLogout) {
+        // If explicitly logging out, ensure we clear cookies and show login page
+        const response = NextResponse.next();
+        response.cookies.delete('auth_token');
+        response.cookies.delete('user_session');
+        response.cookies.delete('session_v');
+        return response;
     }
 
     // Protected Routes Logic

@@ -42,7 +42,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     const handleLogout = async () => {
         await fetch('/api/auth/logout', { method: 'POST' });
-        router.push('/login');
+        window.location.href = '/login?logout=true';
     };
 
     const handleSearch = (e: React.FormEvent) => {

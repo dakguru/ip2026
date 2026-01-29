@@ -60,8 +60,8 @@ export function UserMenu() {
         try {
             await fetch('/api/auth/logout', { method: 'POST' });
             // Force a hard navigation to ensure cookies are cleared and middleware sees the fresh state
-            // This prevents the issue where middleware redirects back to /planner because it still sees the token
-            window.location.href = '/login';
+            // Use ?logout=true to tell middleware to ignore any lingering tokens and force cookie deletion
+            window.location.href = '/login?logout=true';
         } catch (error) {
             console.error('Logout failed', error);
         }
