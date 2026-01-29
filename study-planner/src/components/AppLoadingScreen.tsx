@@ -21,21 +21,31 @@ export default function AppLoadingScreen() {
     useEffect(() => {
         if (!shouldRender) return;
 
-        // 1. Hide native splash (fire and forget)
-        try {
-            CapacitorSplashScreen.hide();
-        } catch (e) { }
+        // 1. Wait a moment to ensure DOM is painted, then Hide native splash
+        const hideNativeSplash = async () => {
+            try {
+                // Slight delay to ensure the white webview (before React paint) isn't visible
+                // This covers the gap between "JS Loaded" and "First Frame Painted"
+                await new Promise(resolve => setTimeout(resolve, 500));
+                await CapacitorSplashScreen.hide();
+            } catch (e) {
+                console.error("Error hiding splash", e);
+            }
+        };
 
-        // 2. Guaranteed transition to app after 1.8 seconds
+        hideNativeSplash();
+
+        // 2. Guaranteed transition to app after 2.5 seconds (giving enough time for 'app' feel)
         const timer = setTimeout(() => {
             setIsVisible(false);
             setTimeout(() => {
                 document.body.style.overflow = 'unset';
             }, 800);
-        }, 1800);
+        }, 2500);
 
         return () => clearTimeout(timer);
     }, [shouldRender]);
+
 
     if (!shouldRender) return null;
 
