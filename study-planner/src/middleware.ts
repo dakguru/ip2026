@@ -67,12 +67,6 @@ export async function middleware(request: NextRequest) {
             return response;
         }
 
-        // Check if session was verified recently (avoid DB call)
-        const isVerified = request.cookies.get('session_v');
-        if (isVerified && isVerified.value === sessionId) {
-            return NextResponse.next();
-        }
-
         // Validate session via internal API with a timeout
         try {
             const baseUrl = request.nextUrl.origin;
@@ -108,15 +102,9 @@ export async function middleware(request: NextRequest) {
                 return response;
             }
 
-            // Valid session! Set verification cookie for 10 minutes to skip DB check
+            // Valid session! 
+            // We force re-validation on every request (no session_v cookie) to ensure strict single-session enforcement.
             const response = NextResponse.next();
-            response.cookies.set('session_v', sessionId, {
-                maxAge: 600, // 10 minutes
-                path: '/',
-                httpOnly: true,
-                sameSite: 'lax', // Use 'lax' for redirects
-                secure: process.env.NODE_ENV === 'production'
-            });
             return response;
         } catch (error) {
             console.error('Middleware validation error:', error);
