@@ -31,6 +31,11 @@ public class MainActivity extends BridgeActivity {
             
             // Fix White/Black flash by setting background
             webView.setBackgroundColor(android.graphics.Color.WHITE);
+
+            // Hack: Remove "wv" from UserAgent to make 3rd party libs (Razorpay/Google) 
+            // think this is a real browser (Chrome) and enable features like UPI Intent.
+            String newUserAgent = settings.getUserAgentString().replace("; wv", "");
+            settings.setUserAgentString(newUserAgent);
             
             // NOTE: We REMOVED the manual setWebViewClient override.
             // Overriding the client breaks the Capacitor Bridge and prevents plugins 
