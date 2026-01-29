@@ -411,14 +411,6 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                     href={item.href}
                                     target={item.href.startsWith("http") ? "_blank" : undefined}
                                     rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                                    onClick={(e) => {
-                                        if (item.href.startsWith("http")) return; // Let external links work normally
-                                        // Force navigation via router if standard Link fails
-                                        if (!e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey) {
-                                            e.preventDefault();
-                                            router.push(item.href);
-                                        }
-                                    }}
                                     className="flex flex-col items-center gap-2.5 group active:scale-95 transition-transform"
                                 >
                                     <div className={`w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-[20px] flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden backdrop-blur-sm`}>
