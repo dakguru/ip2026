@@ -200,7 +200,13 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                                 key={item.href}
                                                 href={item.href}
                                                 className="flex items-center gap-3 p-3.5 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-medium transition-colors"
-                                                onClick={() => setMenuOpen(false)}
+                                                onClick={(e) => {
+                                                    setMenuOpen(false);
+                                                    if (!e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey) {
+                                                        e.preventDefault();
+                                                        router.push(item.href);
+                                                    }
+                                                }}
                                             >
                                                 <item.icon className={`w-5 h-5 ${item.color}`} /> {item.label}
                                             </Link>
@@ -398,12 +404,21 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     <div className="grid grid-cols-3 gap-x-4 gap-y-6">
                         {mainFeatures
                             .filter(item => item.label !== "Dak Sutra" || isAdmin)
+
                             .map((item) => (
                                 <Link
                                     key={item.label}
                                     href={item.href}
                                     target={item.href.startsWith("http") ? "_blank" : undefined}
                                     rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                                    onClick={(e) => {
+                                        if (item.href.startsWith("http")) return; // Let external links work normally
+                                        // Force navigation via router if standard Link fails
+                                        if (!e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey) {
+                                            e.preventDefault();
+                                            router.push(item.href);
+                                        }
+                                    }}
                                     className="flex flex-col items-center gap-2.5 group active:scale-95 transition-transform"
                                 >
                                     <div className={`w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-[20px] flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden backdrop-blur-sm`}>
@@ -475,6 +490,6 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

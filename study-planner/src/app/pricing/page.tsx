@@ -237,6 +237,34 @@ export default function PricingPage() {
                     email: userEmail,
                     contact: ""
                 },
+                config: {
+                    display: {
+                        blocks: {
+                            utib: { // name for UPI Intent Block
+                                name: "Pay via UPI App",
+                                instruments: [
+                                    {
+                                        method: "upi",
+                                        flows: ["intent"]
+                                    }
+                                ]
+                            },
+                            other: {
+                                name: "Other Payment Modes",
+                                instruments: [
+                                    { method: "card" },
+                                    { method: "netbanking" },
+                                    { method: "wallet" },
+                                    { method: "upi" } // Regular collect flow
+                                ]
+                            }
+                        },
+                        sequence: ["block.utib", "block.other"],
+                        preferences: {
+                            show_default_blocks: false // Only show our custom blocks
+                        }
+                    }
+                },
                 theme: {
                     color: "#2563eb"
                 }
@@ -259,7 +287,7 @@ export default function PricingPage() {
     if (isMobileApp) {
         return (
             <>
-                <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+                <Script src="https://checkout.razorpay.com/v1/checkout.js" />
                 <NativePricing
                     userEmail={userEmail}
                     userName={userName}
@@ -292,7 +320,7 @@ export default function PricingPage() {
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans pt-20 pb-12">
-            <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+            <Script src="https://checkout.razorpay.com/v1/checkout.js" />
 
             {/* Banner Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
