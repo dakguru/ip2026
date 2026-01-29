@@ -199,6 +199,14 @@ export default function MockTestsPage() {
     const [selectedMock, setSelectedMock] = useState<MockTest | null>(null);
     const [selectedMockForRank, setSelectedMockForRank] = useState<MockTest | null>(null);
 
+    const handleMockClick = (mock: MockTest) => {
+        if (!userEmail) {
+            window.location.href = '/login';
+            return;
+        }
+        setSelectedMock(mock);
+    };
+
     const handleEnroll = async (mock: MockTest) => {
         if (!userEmail) {
             alert("Please log in to enroll.");
@@ -527,7 +535,7 @@ export default function MockTestsPage() {
                                 <MockTestCard
                                     key={mock.id}
                                     mock={mock}
-                                    onClick={() => setSelectedMock(mock)}
+                                    onClick={() => handleMockClick(mock)}
                                     isPaid={paidTests.includes(mock.id)}
                                     membershipLevel={membershipLevel}
                                     onEnroll={() => handleEnroll(mock)}
@@ -580,7 +588,7 @@ export default function MockTestsPage() {
                                         <MockTestCard
                                             key={mock.id}
                                             mock={mock}
-                                            onClick={() => setSelectedMock(mock)}
+                                            onClick={() => handleMockClick(mock)}
                                             isPaid={paidTests.includes(mock.id)}
                                             membershipLevel={membershipLevel}
                                             onEnroll={() => handleEnroll(mock)}
@@ -606,7 +614,7 @@ export default function MockTestsPage() {
                                     <MockTestCard
                                         key={mock.id}
                                         mock={mock}
-                                        onClick={() => setSelectedMock(mock)}
+                                        onClick={() => handleMockClick(mock)}
                                         isPaid={paidTests.includes(mock.id)}
                                         membershipLevel={membershipLevel}
                                         onEnroll={() => handleEnroll(mock)}

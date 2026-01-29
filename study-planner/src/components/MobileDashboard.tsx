@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetHeader } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
 import { useRouter } from "next/navigation";
-// import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
+import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 
 interface MobileDashboardProps {
     displayName: string;
@@ -145,7 +145,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
-            {/* <MockTestAnnouncementPopup /> */}
+            <MockTestAnnouncementPopup />
             {/* --- ROYAL HEADER --- */}
             <header className="sticky top-0 z-40 bg-slate-900 dark:bg-black px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] border-b border-slate-800 shadow-xl shadow-slate-900/20">
                 <div className="flex items-center justify-between">

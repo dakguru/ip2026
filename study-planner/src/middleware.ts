@@ -16,7 +16,8 @@ export async function middleware(request: NextRequest) {
         pathname === '/privacypolicy' ||
         pathname === '/terms' ||
         pathname === '/disclaimer' ||
-        pathname === '/refund-policy';
+        pathname === '/refund-policy' ||
+        pathname === '/mock-tests';
 
     // If user is on login page and has a valid token, redirect to planner
     if (isLoginPage && token) {
