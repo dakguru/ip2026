@@ -207,6 +207,49 @@ export default function MockTestsPage() {
         setSelectedMock(mock);
     };
 
+    const verifyEnrollment = async (
+        orderId: string,
+        paymentId: string,
+        signature: string,
+        mock: MockTest
+    ) => {
+        setProcessingId(mock.id);
+        try {
+            const verifyRes = await fetch('/api/mock-test/enroll/verify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    razorpay_order_id: orderId,
+                    razorpay_payment_id: paymentId,
+                    razorpay_signature: signature,
+                    email: userEmail,
+                    testId: mock.id,
+                    testTitle: mock.title,
+                    userName: userName
+                })
+            });
+
+            if (verifyRes.ok) {
+                const newPaidList = [...paidTests, mock.id];
+                // Avoid duplicates
+                if (!paidTests.includes(mock.id)) {
+                    setPaidTests([...newPaidList]);
+                    localStorage.setItem('paid_mock_tests', [...newPaidList].join(','));
+                }
+
+                alert("Enrollment Successful! You can now access this test when it goes live.");
+                fetchEnrollmentCounts(); // Refresh counts
+            } else {
+                alert("Payment verification failed. Please contact support.");
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Error verifying payment");
+        } finally {
+            setProcessingId(null);
+        }
+    };
+
     const handleEnroll = async (mock: MockTest) => {
         if (!userEmail) {
             alert("Please log in to enroll.");
@@ -239,39 +282,16 @@ export default function MockTestsPage() {
                 description: `Enrollment: ${mock.title}`,
                 image: "/dak-guru-round.png",
                 order_id: order.id,
-                callback_url: `${window.location.origin}/mock-tests`,
-                redirect: false,
+                // Update callback_url to use the API route that handles POST and redirects to this page with query params
+                callback_url: `${window.location.origin}/api/payment/callback?to=/mock-tests&testId=${mock.id}`,
+                redirect: false, // Try to handle client side first, but if app redirects, callback_url is used
                 handler: async function (response: any) {
-                    // 2. Verify Payment via server
-                    try {
-                        const verifyRes = await fetch('/api/mock-test/enroll/verify', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                razorpay_order_id: response.razorpay_order_id,
-                                razorpay_payment_id: response.razorpay_payment_id,
-                                razorpay_signature: response.razorpay_signature,
-                                email: userEmail,
-                                testId: mock.id,
-                                testTitle: mock.title,
-                                userName: userName
-                            })
-                        });
-
-                        if (verifyRes.ok) {
-                            const newPaidList = [...paidTests, mock.id];
-                            setPaidTests(newPaidList);
-                            localStorage.setItem('paid_mock_tests', newPaidList.join(','));
-                            alert("Enrollment Successful! You can now access this test when it goes live.");
-                            fetchEnrollmentCounts(); // Refresh counts
-                        } else {
-                            alert("Payment verification failed. Please contact support.");
-                        }
-                    } catch (e) {
-                        console.error(e);
-                        alert("Error verifying payment");
-                    }
-                    setProcessingId(null);
+                    await verifyEnrollment(
+                        response.razorpay_order_id,
+                        response.razorpay_payment_id,
+                        response.razorpay_signature,
+                        mock
+                    );
                 },
                 prefill: {
                     name: userName,
@@ -296,6 +316,24 @@ export default function MockTestsPage() {
             setProcessingId(null);
         }
     };
+
+    // Handle Redirect Callback (e.g. UPI Intent on Mobile)
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const rpPaymentId = params.get('razorpay_payment_id');
+        const rpOrderId = params.get('razorpay_order_id');
+        const rpSignature = params.get('razorpay_signature');
+        const testId = params.get('testId');
+
+        if (rpPaymentId && rpOrderId && rpSignature && testId && userEmail) {
+            const mock = mockTests.find(m => m.id === testId);
+            if (mock) {
+                verifyEnrollment(rpOrderId, rpPaymentId, rpSignature, mock);
+                // Clear query params to prevent re-verification on refresh
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }
+    }, [userEmail, mockTests]);
 
     const handleViewEnrollments = async (mock: MockTest) => {
         setSelectedTestForEnrollment(mock.title);

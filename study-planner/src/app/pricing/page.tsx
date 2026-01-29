@@ -138,6 +138,52 @@ export default function PricingPage() {
         return 365;
     };
 
+    const verifyMembershipPayment = async (
+        orderId: string,
+        paymentId: string,
+        signature: string,
+        planKey: string,
+        tab: 'gold' | 'silver',
+        coupon: string
+    ) => {
+        const effectivePlans = tab === 'gold' ? goldPlans : silverPlans;
+        const effectivePlan = effectivePlans[planKey];
+        if (!effectivePlan) return; // Should not happen
+
+        try {
+            const verifyRes = await fetch('/api/payment/verify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    razorpay_order_id: orderId,
+                    razorpay_payment_id: paymentId,
+                    razorpay_signature: signature,
+                    email: userEmail,
+                    plan: {
+                        id: effectivePlan.id,
+                        name: effectivePlan.name,
+                        type: tab,
+                        validityDays: getValidityDays(effectivePlan.id)
+                    },
+                    couponCode: coupon // Pass coupon code here
+                }),
+            });
+
+            const verifyData = await verifyRes.json();
+
+            if (verifyRes.ok) {
+                alert("Payment Successful! Membership Updated.");
+                router.push('/membership'); // Redirect to membership details
+                router.refresh();
+            } else {
+                alert("Payment verification failed: " + verifyData.error);
+            }
+        } catch (err) {
+            console.error("Verification error", err);
+            alert("Payment successful but verification failed. Please contact support.");
+        }
+    };
+
     const handlePayment = async (
         overridePlanKey?: string,
         overrideActiveTab?: 'gold' | 'silver',
@@ -195,42 +241,18 @@ export default function PricingPage() {
                 description: effectivePlan.name,
                 image: "/dak-guru-new-logo.png",
                 order_id: order.id,
-                callback_url: `${window.location.origin}/pricing`,
+                // Update callback_url to use the API route that handles POST and redirects to this page with query params
+                callback_url: `${window.location.origin}/api/payment/callback?to=/pricing&planKey=${planKeyToUse}&activeTab=${tabToUse}&coupon=${couponCodeToUse}`,
                 redirect: false,
                 handler: async function (response: any) {
-                    // 3. Verify Payment
-                    try {
-                        const verifyRes = await fetch('/api/payment/verify', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                razorpay_order_id: response.razorpay_order_id,
-                                razorpay_payment_id: response.razorpay_payment_id,
-                                razorpay_signature: response.razorpay_signature,
-                                email: userEmail,
-                                plan: {
-                                    id: effectivePlan.id,
-                                    name: effectivePlan.name,
-                                    type: tabToUse,
-                                    validityDays: getValidityDays(effectivePlan.id)
-                                },
-                                couponCode: couponCodeToUse // Pass coupon code here
-                            }),
-                        });
-
-                        const verifyData = await verifyRes.json();
-
-                        if (verifyRes.ok) {
-                            alert("Payment Successful! Membership Updated.");
-                            router.push('/membership'); // Redirect to membership details
-                            router.refresh();
-                        } else {
-                            alert("Payment verification failed: " + verifyData.error);
-                        }
-                    } catch (err) {
-                        console.error("Verification error", err);
-                        alert("Payment successful but verification failed. Please contact support.");
-                    }
+                    await verifyMembershipPayment(
+                        response.razorpay_order_id,
+                        response.razorpay_payment_id,
+                        response.razorpay_signature,
+                        planKeyToUse,
+                        tabToUse,
+                        couponCodeToUse
+                    );
                 },
                 prefill: {
                     name: "User", // Ideally prepopulate name if available
@@ -256,6 +278,24 @@ export default function PricingPage() {
             setIsProcessing(false);
         }
     };
+
+    // Handle Redirect Callback (e.g. UPI Intent on Mobile)
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const rpPaymentId = params.get('razorpay_payment_id');
+        const rpOrderId = params.get('razorpay_order_id');
+        const rpSignature = params.get('razorpay_signature');
+
+        const planKey = params.get('planKey');
+        const tab = params.get('activeTab') as 'gold' | 'silver';
+        const coupon = params.get('coupon') || "";
+
+        if (rpPaymentId && rpOrderId && rpSignature && planKey && tab && userEmail) {
+            verifyMembershipPayment(rpOrderId, rpPaymentId, rpSignature, planKey, tab, coupon);
+            // Clear URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }, [userEmail]);
 
     if (isMobileApp) {
         return (
