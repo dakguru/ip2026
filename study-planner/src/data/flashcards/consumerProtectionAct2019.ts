@@ -60,27 +60,27 @@ export const consumerProtectionAct2019: FlashCard[] = [
         topic: "Jurisdiction",
         card_no: 7,
         question: "What is the pecuniary jurisdiction of the District Commission?",
-        answer: "Up to Rs. 1 Crore.",
+        answer: "Up to ₹50 Lakhs (As per Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021).",
         exam_weight: "High",
-        keywords: ["District Commission", "1 Crore"]
+        keywords: ["District Commission", "50 Lakhs"]
     },
     {
         pdf_title: "Consumer Protection Act, 2019",
         topic: "Jurisdiction",
         card_no: 8,
         question: "What is the pecuniary jurisdiction of the State Commission?",
-        answer: "From Rs. 1 Crore to Rs. 10 Crore.",
+        answer: "From ₹50 Lakhs to ₹2 Crores (As per Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021).",
         exam_weight: "High",
-        keywords: ["State Commission", "1 to 10 Crore"]
+        keywords: ["State Commission", "50 Lakhs to 2 Crores"]
     },
     {
         pdf_title: "Consumer Protection Act, 2019",
         topic: "Jurisdiction",
         card_no: 9,
         question: "What is the pecuniary jurisdiction of the National Commission?",
-        answer: "Above Rs. 10 Crore.",
+        answer: "Above ₹2 Crores (As per Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021).",
         exam_weight: "High",
-        keywords: ["National Commission", "Above 10 Crore"]
+        keywords: ["National Commission", "Above 2 Crores"]
     },
     {
         pdf_title: "Consumer Protection Act, 2019",
