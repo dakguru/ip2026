@@ -12,8 +12,7 @@ public class MainActivity extends BridgeActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        // 1. Install Android 12 Splash Screen
-        // 1. Install Android 12 Splash Screen with Exit Animation
+        // 1. Install Android 12 Splash Screen with custom Exit Animation
         SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
         splashScreen.setOnExitAnimationListener(splashScreenView -> {
             final android.view.View view = splashScreenView.getView();

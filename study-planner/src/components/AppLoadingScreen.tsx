@@ -7,47 +7,53 @@ import { SplashScreen as CapacitorSplashScreen } from '@capacitor/splash-screen'
 
 export default function AppLoadingScreen() {
     const [isVisible, setIsVisible] = useState(true);
-    const [shouldRender, setShouldRender] = useState(false);
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        // Use a more direct check for Capacitor to be ready as early as possible
-        const isNative = Capacitor.isNativePlatform();
-        if (isNative) {
-            setShouldRender(true);
-            document.body.style.overflow = 'hidden';
-        }
+        setIsClient(true);
+        // Ensure body is non-scrollable while splash is active
+        document.body.style.overflow = 'hidden';
     }, []);
 
     useEffect(() => {
-        if (!shouldRender) return;
+        if (!isClient) return;
 
         // 1. Wait a moment to ensure DOM is painted, then Hide native splash
+        // We only call hide if we are actually on a native platform
         const hideNativeSplash = async () => {
-            try {
-                // Slight delay to ensure the white webview (before React paint) isn't visible
-                // This covers the gap between "JS Loaded" and "First Frame Painted"
-                await new Promise(resolve => setTimeout(resolve, 500));
-                await CapacitorSplashScreen.hide();
-            } catch (e) {
-                console.error("Error hiding splash", e);
+            if (Capacitor.isNativePlatform()) {
+                try {
+                    // Slight delay to ensure React has rendered the first frame of its own splash
+                    await new Promise(resolve => setTimeout(resolve, 600));
+                    await CapacitorSplashScreen.hide();
+                } catch (e) {
+                    console.error("Error hiding native splash", e);
+                }
             }
         };
 
         hideNativeSplash();
 
-        // 2. Guaranteed transition to app after 2.5 seconds (giving enough time for 'app' feel)
+        // 2. Transition custom splash out after 2.5s
         const timer = setTimeout(() => {
             setIsVisible(false);
+            // Re-enable scrolling after animation is done
             setTimeout(() => {
                 document.body.style.overflow = 'unset';
             }, 800);
-        }, 2500);
+        }, 2200);
 
         return () => clearTimeout(timer);
-    }, [shouldRender]);
+    }, [isClient]);
 
-
-    if (!shouldRender) return null;
+    if (typeof window === 'undefined' || !isClient) {
+        return (
+            <div className="fixed inset-0 z-[9999] bg-[#0f172a] flex items-center justify-center">
+                {/* Minimal placeholder to match native splash while React loads */}
+                <div className="w-32 h-32 bg-[#0f172a] rounded-full" />
+            </div>
+        );
+    }
 
     return (
         <AnimatePresence>
