@@ -1,0 +1,729 @@
+### **Section 1: Definitions & Engagement Conditions (Rule 3, 3-A, 3-B)**
+
+**Q1. Under the GDS (Conduct and Engagement) Rules, 2020, what is the maximum number of duty hours a Sevak shall be required to perform in a day?**
+A. 4 hours
+B. 5 hours
+C. 6 hours
+D. 8 hours
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Terms and Conditions of Engagement.
+
+
+* **Logic:** The rules explicitly state that a Sevak shall not be required to perform duty beyond a maximum period of 5 hours in a day.
+
+**Q2. According to the Definitions (Rule 3), a "Dak Sevak" is defined as a GDS working in:**
+A. Branch Office as Postmaster
+B. Branch Office assisting the BPM
+C. Head Office, Sub Office, or RMS Office
+D. Circle Office
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Definitions Table.
+
+
+* **Logic:** Dak Sevaks are defined as GDS other than BPM/ABPM working in Head Office, Sub Office, or RMS Office.
+
+**Q3. A GDS shall not be retained in engagement beyond the age of:**
+A. 60 years
+B. 62 years
+C. 65 years
+D. 58 years
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Terms and Conditions of Engagement.
+
+
+* **Logic:** The maximum age limit for retention of a Sevak is strictly 65 years.
+
+**Q4. According to the definitions, a "Sevak" shall be outside of which service?**
+A. State Civil Service
+B. Civil Service of the Union
+C. Postal Civil Service
+D. Central Secretariat Service
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Terms and Conditions.
+
+
+* **Logic:** The rules explicitly state that a Sevak shall be outside the Civil Service of the Union.
+
+**Q5. Rule 3-A requires a selected Sevak to provide an undertaking regarding:**
+A. Political neutrality
+B. Non-participation in strikes
+C. Other sources of income for adequate livelihood
+D. Knowledge of computer operations
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 3-A Terms and Conditions.
+
+
+* **Logic:** A mandatory condition is that the Sevak must have other sources of income besides the allowances paid by the Government.
+
+**Q6. For a GDS, residence within the delivery jurisdiction is mandatory within how much time after selection but before engagement?**
+A. 15 days
+B. One month
+C. Three months
+D. Six months
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Terms and Conditions.
+
+
+* **Logic:** The selected candidate must take up residence in the post village/delivery jurisdiction within one month after selection but before engagement.
+
+**Q7. Can a Sevak transfer from one postal unit to another?**
+A. No, never.
+B. Yes, only on medical grounds.
+C. Yes, in public interest/vigilance and administrative grounds.
+D. Yes, but only after 10 years of service.
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Terms and Conditions.
+
+
+* **Logic:** The rules explicitly allow transfer from one unit to another on public interest, vigilance, and administrative grounds.
+
+**Q8. The educational qualification required for engagement as a GDS is:**
+A. 8th Standard Pass
+B. 10th Standard Pass
+C. 12th Standard Pass
+D. Graduate
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Educational Qualification.
+
+
+* **Logic:** The requirement is a Secondary School Examination Pass certificate of 10th Standard.
+
+**Q9. Knowledge of the Local Language is compulsory at least up to which standard?**
+A. 5th Standard
+B. 8th Standard
+C. 10th Standard
+D. 12th Standard
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Compulsory knowledge of Local Language.
+
+
+* **Logic:** The candidate should have studied the local language at least up to 10th standard.
+
+**Q10. Can a GDS claim to be at par with Central Government employees?**
+A. Yes, regarding status.
+B. Yes, regarding pension.
+C. No.
+D. Yes, after 10 years.
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Terms and Conditions.
+
+
+* **Logic:** The rules explicitly state: "A Sevak shall not claim to be at par with the Central Government employees."
+
+**Q11. Is the work performed for IPPB (India Post Payments Bank) included in the calculation of TRCA?**
+A. Yes, fully.
+B. Yes, 50%.
+C. No, it is done on an incentive basis.
+D. Yes, if approved by PMG.
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Method of Engagement.
+
+
+* **Logic:** The text states: "the work performed for IPPB will not be included in calculation of TRCA. Since the same is being done on incentive basis."
+
+**Q12. Who constitutes the "Members of Family" in relation to a GDS regarding dependency?**
+A. Parents only
+B. Wife, child, step-child, and dependent husband (for female Sevak)
+C. Any relative living in the same village
+D. Only the spouse
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Definitions.
+
+
+* **Logic:** The definition includes wife, child, step-child, and for a woman Sevak, the husband residing with and dependent on her.
+
+**Q13. Which document has to be submitted by a candidate declaring knowledge of computer operations?**
+A. Certificate from a private institute
+B. An undertaking
+C. Degree in Computer Science
+D. Marksheet of 12th Standard
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Basic Computer Training.
+
+
+* **Logic:** The requirement is specifically "An undertaking has to be submitted by the candidate declaring that he/she has adequate knowledge..."
+
+---
+
+### **Section 2: Recruitment & Reservation (Rule 3-B)**
+
+**Q14. What is the minimum and maximum age for engagement to GDS posts as on the date of notification of the vacancy?**
+A. 18 and 35 years
+B. 18 and 40 years
+C. 21 and 40 years
+D. 18 and 45 years
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Eligibility Criteria (Age).
+
+
+* **Logic:** The eligibility criteria set the minimum age at 18 and the maximum at 40 years.
+
+**Q15. The upper age relaxation for SC/ST candidates applying for GDS posts is:**
+A. 3 Years
+B. 5 Years
+C. 10 Years
+D. 15 Years
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Age Relaxation Table.
+
+
+* **Logic:** The table strictly prescribes a 5-year relaxation for SC/ST candidates.
+
+**Q16. Which of the following disabilities allows for an age relaxation of 15 years?**
+A. PwD/PH + OBC
+B. PwD/PH + SC/ST
+C. PwD/PH (Unreserved)
+D. Acid Attack Victim (Unreserved)
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Age Relaxation Table.
+
+
+* **Logic:** The combination of PwD/PH and SC/ST category grants a cumulative relaxation of 15 years.
+
+**Q17. For which category is the application fee exempted?**
+A. UR Male
+B. OBC Male
+C. Transwomen
+D. EWS Male
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Method of Engagement (Fee).
+
+
+* **Logic:** Fee exemption is granted to female candidates, SC/ST, PwD, and Transwomen candidates.
+
+---
+
+### **Section 3: Termination & Discharge (Rule 8)**
+
+**Q18. Which of the following statements regarding the "Termination of Engagement" under Rule 8 is INCORRECT?**
+A. It applies to Sevaks with less than three years of continuous engagement.
+B. Notice period required is one month.
+C. It acts as a disqualification for future employment.
+D. TRCA plus DA can be paid in lieu of notice.
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 8 Termination of Engagement.
+
+
+* **Logic:** Termination under Rule 8 is a discharge simpliciter for those with less than 3 years of service. It is not a penalty like "Dismissal" and does not inherently disqualify one from future employment.
+
+**Q19. The "Sevaks" are entitled to which allowance during the notice period of termination under Rule 8?**
+A. Basic Pay + DA
+B. Basic TRCA + Dearness Allowance
+C. Only Basic TRCA
+D. Subsistence Allowance
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 8 Termination.
+
+
+* **Logic:** The Sevak is entitled to claim a sum equivalent to the amount of Basic Time Related Continuity Allowance plus Dearness Allowance.
+
+---
+
+### **Section 4: Penalties (Rule 9)**
+
+**Q20. Which Rule of the GDS (Conduct and Engagement) Rules, 2020 deals with the "Nature of Penalties"?**
+A. Rule 8
+B. Rule 9
+C. Rule 10
+D. Rule 12
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 9 Nature of Penalties.
+
+
+* **Logic:** Rule 9 outlines the classification of Minor and Major penalties applicable to Sevaks.
+
+**Q21. Which of the following constitutes a "Major Penalty" under Rule 9?**
+A. Censure
+B. Withholding of annual increase in TRCA
+C. Recovery from TRCA
+D. Removal from engagement
+**Correct Answer: D**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 9 (Major Penalties).
+
+
+* **Logic:** Censure, withholding increments, and recovery are Minor Penalties. Removal from engagement is listed specifically as a Major Penalty (Item 8).
+
+**Q22. Which penalty under Rule 9 is described as "Reduction to a lower stage in the TRCA slab"?**
+A. Penalty No. 4
+B. Penalty No. 5
+C. Penalty No. 6
+D. Penalty No. 7
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 9 Major Penalties.
+
+
+* **Logic:** Clause (6) of Rule 9 defines the Major Penalty of reduction to a lower stage in the TRCA slab for a period exceeding three years.
+
+**Q23. If a GDS is dismissed from engagement (Rule 9, Penalty 9), what is the consequence regarding future engagement?**
+A. No disqualification
+B. Disqualification for 3 years
+C. Ordinarily a disqualification for future engagement
+D. Disqualification only within the same Circle
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 9, Clause 9.
+
+
+* **Logic:** Dismissal is distinct from Removal; Dismissal ordinarily implies disqualification for future engagement.
+
+**Q24. Which of the following is NOT a Minor Penalty under Rule 9?**
+A. Censure
+B. Compulsory Discharge
+C. Recovery from TRCA
+D. Withholding of annual increase in TRCA
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 9 Penalties.
+
+
+* **Logic:** Compulsory Discharge (Clause 7) is listed under Major Penalties.
+
+**Q25. "Reduction to a lower stage in the TRCA slab" as a Major Penalty shall not exceed a specified period of:**
+A. One year
+B. Two years
+C. Three years
+D. It must exceed three years
+**Correct Answer: D**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 9 Major Penalties.
+
+
+* **Logic:** The definition of this specific Major Penalty (Clause 6) is for a "specified period exceeding three years."
+
+**Q26. Under Rule 9, "Debarring of a Sevak from appearing in recruitment exam for MTS" is valid for a period not exceeding:**
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 9 Minor Penalties.
+
+
+* **Logic:** The penalty of debarring from recruitment exams is limited to a period "not exceeding 3 years."
+
+---
+
+### **Section 5: Disciplinary Authorities & Procedure (Rule 10, 10-A to G)**
+
+**Q27. Which of the following is designated as the "Engaging Authority" for a Branch Post Master (BPM)?**
+A. Inspector of Posts (IP)
+B. Assistant Superintendent of Posts (ASP)
+C. Divisional Head (Gr. "A" JTS/STS / Gr. "B")
+D. Director of Postal Services
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Competent Authority Schedule.
+
+
+* **Logic:** The schedule clearly identifies the Divisional Head as the Engaging Authority for the post of BPM.
+
+**Q28. Who is the Appellate Authority for an Assistant Branch Post Master (ABPM) regarding penalties imposed under Rule 9?**
+A. Sub-Divisional Head
+B. Divisional Head (Gr. "A" JTS/STS/ Gr. "B")
+C. Director of Postal Services
+D. Postmaster General
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Competent Authority Schedule.
+
+
+* **Logic:** For ABPM, the Disciplinary Authority is the Sub-Divisional Head, and the next superior authority, the Divisional Head, acts as the Appellate Authority.
+
+**Q29. In the case of an ABPM, who serves as the Disciplinary Authority for both Minor and Major Penalties?**
+A. Inspector of Posts only
+B. Senior Postmaster
+C. Sub-Divisional Head (ASP/IP)
+D. Divisional Head
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Competent Authority Schedule.
+
+
+* **Logic:** The Sub-Divisional Head (ASP or IP) is the Disciplinary Authority empowered to impose both Minor and Major penalties (1 to 9 of Rule 9) on an ABPM.
+
+**Q30. Which Rule governs the "Procedure for imposing Major Penalty"?**
+A. Rule 10-A
+B. Rule 10-B
+C. Rule 10-D
+D. Rule 11
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 10-B.
+
+
+* **Logic:** Rule 10-B specifically outlines the procedure required before imposing any Major Penalty.
+
+**Q31. Departmental proceedings instituted after the discharge of a Sevak (Rule 10-G) require the sanction of:**
+A. The Head of Circle
+B. The Director General
+C. The President
+D. The Engaging Authority
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 10-G.
+
+
+* **Logic:** Proceedings not instituted while the GDS was in engagement cannot be instituted after discharge without the sanction of the President.
+
+**Q32. According to Rule 10-D, if a GDS accepts the charge unconditionally, is an inquiry necessary for a Major Penalty?**
+A. Yes, always mandatory.
+B. Yes, for record-keeping.
+C. No, there would be no need for an inquiry.
+D. Only if the President directs.
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 10-D.
+
+
+* **Logic:** The rule states: "In case the charge is accepted by him/her unconditionally, there would obviously be no need for an inquiry for imposing major penalty."
+
+**Q33. Proceedings under Rule 10-G (Disciplinary proceedings after discharge) shall not be in respect of any event which took place more than _____ before such institution.**
+A. 1 year
+B. 2 years
+C. 3 years
+D. 4 years
+**Correct Answer: D**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 10-G.
+
+
+* **Logic:** There is a limitation: proceedings cannot be instituted for events that took place more than four years prior.
+
+**Q34. For a Dak Sevak, who is the Engaging Authority?**
+A. Inspector of Posts
+B. Sr. Postmaster (Gr. B) / ASP / ASRM / IP / IRM
+C. Divisional Head
+D. Postmaster General
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Competent Authority Schedule.
+
+
+* **Logic:** The schedule lists Senior Postmaster (Gr B), ASP, ASRM, IP, or IRM as the Engaging Authority for Dak Sevaks.
+
+**Q35. Rule 11 states that the provisions of Rule 10 (Procedure) do NOT apply when:**
+A. The Sevak is a union leader.
+B. The penalty is based on conduct leading to conviction on a criminal charge.
+C. The Sevak has already resigned.
+D. The penalty is only a Censure.
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 11.
+
+
+* **Logic:** Formal disciplinary procedure is waived if the penalty is based on a criminal conviction (Rule 11-i).
+
+---
+
+### **Section 6: Put Off Duty (Rule 12)**
+
+**Q36. If a GDS is put off duty, what percentage of TRCA is payable as ex-gratia compensation for the first 90 days?**
+A. 50%
+B. 25%
+C. 75%
+D. No compensation is paid
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 12 (Put off Duty).
+
+
+* **Logic:** A Sevak is entitled to ex-gratia payment equal to 25% of their TRCA plus admissible DA for the initial period.
+
+**Q37. Under Rule 12, who is competent to put a Sevak off duty in cases involving fraud or embezzlement if they are not the Engaging Authority?**
+A. Any Postal Assistant
+B. The Head Postmaster
+C. IP or ASP of the Sub-Division
+D. The District Collector
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 12 Put off Duty.
+
+
+* **Logic:** The IP or ASP of the Sub-Division may put a Sevak off duty in fraud cases under immediate intimation to the Engaging Authority.
+
+**Q38. If the period of put off duty exceeds 90 days, the compensation may be increased by a suitable amount not exceeding:**
+A. 25%
+B. 30%
+C. 50%
+D. 75%
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 12 Put off Duty.
+
+
+* **Logic:** If the delay is not attributable to the Sevak, the authority can increase the ex-gratia payment by up to 50% of the amount admissible during the first 90 days.
+
+**Q39. An order made by an ASP (who is not the Engaging Authority) to put a Sevak off duty ceases to be effective after how many days if not confirmed by the Engaging Authority?**
+A. 10 days
+B. 15 days
+C. 30 days
+D. 45 days
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 12 Put off Duty.
+
+
+* **Logic:** Such an interim order by a subordinate authority expires after 15 days unless confirmed or cancelled.
+
+**Q40. If a GDS is absconding and subsequently put off duty, are they entitled to ex-gratia payment?**
+A. Yes, 25%
+B. Yes, 50%
+C. No
+D. Yes, if the Divisional Head approves
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 12 Put off Duty.
+
+
+* **Logic:** The proviso explicitly states that a Sevak who has been absconding or remains absent unauthorizedly shall not be entitled to any compensation.
+
+---
+
+### **Section 7: Appeals, Revision & Review (Rule 13-20)**
+
+**Q41. What is the time limit for submitting an appeal under Rule 14?**
+A. 45 days
+B. 60 days
+C. Three months
+D. Six months
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 14 Period of limitation for Appeal.
+
+
+* **Logic:** No appeal shall be entertained unless submitted within three months from the date the appellant receives the order.
+
+**Q42. Under "Review" (Rule 20), who has the power to review an order passed under these rules?**
+A. The Head of Circle
+B. The President
+C. The Director General
+D. The Revision Authority
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 20 Review.
+
+
+* **Logic:** The Rule clearly vests the power of Review in The President.
+
+**Q43. Which authority acts as the Revision Authority for a BPM?**
+A. Divisional Head
+B. Director of Postal Services (DPS)
+C. Postmaster General (PMG) / CPMG
+D. President
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Competent Authority Schedule.
+
+
+* **Logic:** For a BPM, while the DPS is the Appellate Authority, the Revision Authority is the PMG or CPMG.
+
+**Q44. What is the limitation period for a Revision petition to be reopened by the appellate authority on its own motion?**
+A. 3 months
+B. 6 months
+C. 1 year
+D. 2 years
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 19 Revisions.
+
+
+* **Logic:** No case shall be reopened under this rule after the expiry of six months from the date of the order to be revised (with exceptions for Govt/Head of Circle/PMG).
+
+**Q45. Which authority is the "Review Authority" for all categories of GDS (BPM/ABPM/Dak Sevak)?**
+A. Chief Postmaster General
+B. Secretary (Posts)
+C. President
+D. Member (Personnel)
+**Correct Answer: C**
+**Explanation:**
+
+* 
+**Rule/Concept:** Competent Authority Schedule.
+
+
+* **Logic:** The schedule uniformly lists "President" as the Review Authority for all GDS posts.
+
+**Q46. The Appellate Authority must consider which of the following when reviewing an appeal?**
+A. Whether the penalty is excessive, adequate, or inadequate
+B. Whether the GDS has political connections
+C. Whether the GDS is close to retirement
+D. Whether the GDS has paid the appeal fee
+**Correct Answer: A**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 18 Consideration of Appeal.
+
+
+* **Logic:** The Appellate Authority looks at procedure compliance, justification of findings, and the proportionality of the penalty (excessive/adequate/inadequate).
+
+---
+
+### **Section 8: Conduct (Rule 21-29)**
+
+**Q47. Under Rule 21 (General), every Sevak shall maintain absolute integrity, devotion to duty, and:**
+A. Follow instructions of the Sarpanch
+B. Do nothing which is unbecoming of a Sevak
+C. Reside in the Post Office building
+D. Wear a uniform at all times
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 21 General.
+
+
+* **Logic:** The third pillar of the General conduct rule is to "do nothing which is unbecoming of a Sevak."
+
+**Q48. A Sevak acts as an agent for a private insurance company while holding the post of BPM. Which Rule is likely being violated?**
+A. Rule 21
+B. Rule 29-A
+C. Rule 23
+D. Rule 12
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 29-A.
+
+
+* **Logic:** Rule 29-A deals with "Prohibition regarding engaging in any business detrimental to the business of the Post Office/IPPB."
+
+**Q49. Rule 23 of the GDS Conduct Rules specifically prohibits:**
+A. Criticism of Government
+B. Strikes
+C. Political activities
+D. Insolvency
+**Correct Answer: B**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 23.
+
+
+* **Logic:** Rule 23 is titled "Strikes." (Rule 22 is Politics, Rule 24 is Criticism of Govt).
+
+**Q50. Which Rule pertains to "Promptness and Courtesy" in official duties?**
+A. Rule 21-A
+B. Rule 21-B
+C. Rule 22
+D. Rule 24
+**Correct Answer: A**
+**Explanation:**
+
+* 
+**Rule/Concept:** Rule 21-A.
+
+
+* **Logic:** Rule 21-A explicitly prohibits discourteous behavior and dilatory tactics (delays) in official dealings.

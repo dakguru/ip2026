@@ -1,0 +1,341 @@
+## SECTION 1: THE EXAM PAPER
+
+**Q1. What is the maximum number of individuals permitted to open a 'Joint Account' under the Government Savings Promotion General Rules, 2018?**
+A. Two individuals
+B. Three individuals
+C. Four individuals
+D. Five individuals
+
+**Q2. An account that has completed its term or extended term and has become due for payment is officially defined as a/an:**
+A. Dormant account
+B. Closed account
+C. Matured account
+D. Eligible account
+
+**Q3. Under the General Rules, if an Indian citizen depositor subsequently ceases to be a citizen of India, what is the status of their savings account?**
+A. It continues until maturity with normal interest.
+B. It is deemed closed from the last day of the month preceding the month of cessation of citizenship.
+C. It is transferred to a Non-resident Ordinary (NRO) account automatically.
+D. It continues to earn interest at the Savings Scheme rate until it is manually closed.
+
+**Q4. A minor who has attained a specific age is permitted to open and operate an account independently. What is this minimum age requirement?**
+A. 10 years
+B. 12 years
+C. 15 years
+D. 18 years
+
+**Q5. When an account is opened by a guardian on behalf of a minor, which of the following is a mandatory eligibility requirement?**
+A. Only the guardian must be a resident citizen of India.
+B. Only the minor must be a resident citizen of India.
+C. Both the guardian and the minor must be resident citizens of India.
+D. Residency is required, but citizenship is optional for the minor.
+
+**Q6. If a depositor fails to submit their PAN within the prescribed period after the account balance exceeds Rs. 50,000, what is the immediate consequence?**
+A. The account is permanently closed.
+B. A penalty of 10% is levied on the interest.
+C. The account ceases to be operational until the document is submitted.
+D. The balance is transferred to the Government's revenue account.
+
+**Q7. In the case of a 'Joint B' type account, how is the account operated according to the rules?**
+A. By all depositors jointly only.
+B. By any of the depositors or surviving depositors severally.
+C. By the first holder only.
+D. By all depositors and a witness jointly.
+
+**Q8. Which of the following is NOT classified as an "Officially Valid Document" for the purpose of identifying a depositor?**
+A. Driving licence
+B. Voter's Identity Card
+C. Job card issued by Mahatma Gandhi National Rural Employment Guarantee Act
+D. Ration Card
+
+**Q9. What is the prescribed timeline for a depositor to submit their Aadhaar Number if they only provided proof of enrollment at the time of opening the account?**
+A. Within 2 months
+B. Within 3 months
+C. Within 6 months
+D. Within 1 year
+
+**Q10. If a depositor becomes a Non-resident Indian (NRI) while an account is in operation, how is the interest handled after the date of maturity?**
+A. Interest is paid at the Post Office Savings Account rate.
+B. No interest shall be payable after the date of maturity.
+C. Interest continues at the original scheme rate.
+D. Interest is halved for the period post-maturity.
+
+**Q11. Regarding the conversion of accounts, which of the following statements is correct under Rule 8?**
+A. A Single Account can be converted into a Joint Account at any time.
+B. A Joint Account can be converted into a Single Account at the request of any one holder.
+C. Conversion of a Joint Account into a Single Account is allowed only in the case of a single surviving holder.
+D. No conversion between Single and Joint accounts is permitted under any circumstances.
+
+**Q12. What is the maximum number of nominees allowed for a single or joint account?**
+A. Two
+B. Three
+C. Four
+D. Unlimited
+
+**Q13. In the event of the death of a depositor with no nomination in force and an eligible balance exceeding Rs. 5 lakh, what is required for the claim?**
+A. An indemnity bond and two witnesses.
+B. A legal heir certificate from a Tahsildar only.
+C. Production of probate of will, letters of administration, or a succession certificate.
+D. A simple affidavit from all legal heirs.
+
+**Q14. If a deposit is made by means of a cheque, what is considered the "date of deposit"?**
+A. The date the cheque is handed over to the Accounts Office.
+B. The date written on the cheque leaf.
+C. The date of realization of the cheque.
+D. The date the entry is made in the passbook.
+
+**Q15. Under what condition can an account opened on behalf of a minor be pledged as security?**
+A. It cannot be pledged until the minor attains majority.
+B. It can be pledged only if the guardian certifies the minor is alive and the transfer is for the minor's benefit.
+C. It can be pledged by the guardian for any personal business requirement.
+D. It can be pledged only with the prior permission of a Court of Law.
+
+**Q16. What is the fee prescribed for the "Transfer of Account" from one Accounts Office to another?**
+A. Rs. 50
+B. Rs. 100
+C. Rs. 200
+D. No fee is charged for transfers.
+
+**Q17. Which authority is the competent body for the interpretation of the Government Savings Promotion General Rules, 2018?**
+A. Reserve Bank of India
+B. Department of Economic Affairs, Ministry of Finance
+C. Supreme Court of India
+D. Comptroller and Auditor General
+
+**Q18. If a depositor dies and the eligible amount is below Rs. 5 lakh with no nomination, how long must the claimant wait before the authorized officer can exercise powers to pay the rightful claimant without a succession certificate?**
+A. One month
+B. Three months
+C. Six months
+D. One year
+
+**Q19. What is the fee for the issue of a duplicate passbook?**
+A. Rs. 20
+B. Rs. 50
+C. Rs. 100
+D. Free of cost
+
+**Q20. Consider the following statements regarding NRI nominees:**
+**I. An NRI is eligible to be nominated as a nominee.**
+**II. Payment to an NRI nominee shall be on a non-repatriation basis.**
+*Which of the above is/are correct?*
+A. I only
+B. II only
+C. Both I and II
+D. Neither I nor II
+
+---
+
+## SECTION 2: ANSWER KEY & EXPLANATIONS
+
+**Q1: Correct Answer B**
+
+* 
+**Legal Concept:** Rule 3(1)(e) defines a "Joint Account" as an account opened in the names of more than one and up to three individuals.
+
+
+* 
+**Elimination:** Options A, C, and D are incorrect because the statutory limit is specifically capped at three.
+
+
+
+**Q2: Correct Answer C**
+
+* 
+**Legal Concept:** Rule 3(1)(f) defines a "Matured account" as one that has completed its term or extended term and is due for payment.
+
+
+* **Elimination:** "Dormant" and "Closed" are different stages of account status not matching this specific definition; "Eligible" refers to the balance amount.
+
+
+
+**Q3: Correct Answer B**
+
+* 
+**Legal Concept:** Rule 4(4) states that if a depositor ceases to be a citizen of India, the account is closed or deemed closed from the last day of the month preceding such cessation.
+
+
+* 
+**Elimination:** Unlike NRIs who can continue until maturity , non-citizens face immediate deemed closure.
+
+
+
+**Q4: Correct Answer A**
+
+* 
+**Legal Concept:** Rule 4(2) specifies that a minor who has attained the age of ten years may open and operate an account.
+
+
+* 
+**Elimination:** 18 is the age of majority, but the rules allow operational rights at 10.
+
+
+
+**Q5: Correct Answer C**
+
+* 
+**Legal Concept:** Rule 4(1) and its second proviso require that both the guardian and the minor (or person of unsound mind) shall be resident citizens of India.
+
+
+* 
+**Elimination:** Residency and citizenship are required for both parties, making A and B incomplete.
+
+
+
+**Q6: Correct Answer C**
+
+* **Legal Concept:** Rule 6(1)(b) states that failure to submit the PAN when the balance exceeds Rs. 50,000 results in the account ceasing to be operational until the document is submitted.
+
+
+* 
+**Elimination:** Closure (A) or penalties (B) are not the immediate prescribed actions; suspension of operations is the rule.
+
+
+
+**Q7: Correct Answer B**
+
+* 
+**Legal Concept:** Rule 8(2)(ii) defines 'Joint B' type as an account to be operated by any of the depositors or surviving depositors severally.
+
+
+* 
+**Elimination:** Joint operation (A) applies to 'Joint A' type accounts.
+
+
+
+**Q8: Correct Answer D**
+
+* 
+**Legal Concept:** Rule 3(1)(h) lists officially valid documents including Passport, Driving Licence, Voter ID, MGNREGA job card, and NPR letter.
+
+
+* 
+**Elimination:** Ration Card is not mentioned in the exhaustive list provided in the rules.
+
+
+
+**Q9: Correct Answer C**
+
+* 
+**Legal Concept:** Rule 6(1)(a) requires the Aadhaar number to be submitted within 6 months from the date of opening the account for linking.
+
+
+* 
+**Elimination:** 2 and 3 months refer to PAN submission events or address updates, not the initial Aadhaar linking window.
+
+
+
+**Q10: Correct Answer B**
+
+* 
+**Legal Concept:** Rules 4(3) and 9(4) specify that if a depositor becomes an NRI, the account can continue till maturity, but no interest shall be payable after the date of its maturity.
+
+
+* 
+**Elimination:** Post-maturity interest (A) is for resident accounts that haven't been closed, not for NRI-held accounts.
+
+
+
+**Q11: Correct Answer C**
+
+* 
+**Legal Concept:** Rule 8(3) states that a Single Account cannot be converted to Joint and vice-versa, with the sole exception that a Joint Account can become Single if there is only one surviving holder.
+
+
+* 
+**Elimination:** General conversion is explicitly barred, making A and B incorrect.
+
+
+
+**Q12: Correct Answer C**
+
+* 
+**Legal Concept:** Rule 14(1) allows a depositor to nominate one or more individuals, but not exceeding four individuals.
+
+
+* 
+**Elimination:** The rules provide a specific cap of four.
+
+
+
+**Q13: Correct Answer C**
+
+* **Legal Concept:** Rule 15(6)(ii) mandates that for amounts above Rs. 5 lakh, payment shall be made on submission of probate, letters of administration, or a succession certificate.
+
+
+* **Elimination:** The discretion of the authorized officer to pay a "rightful claimant" (B) is limited to amounts not exceeding Rs. 5 lakh.
+
+
+
+**Q14: Correct Answer C**
+
+* 
+**Legal Concept:** Rule 7(2) explicitly states that the date of realization of the cheque shall be the date of deposit.
+
+
+* 
+**Elimination:** Handover or cheque dates are irrelevant for interest and record purposes; realization is key.
+
+
+
+**Q15: Correct Answer B**
+
+* 
+**Legal Concept:** Rule 16(2) allows pledging of a minor's account provided the guardian certifies in writing that the minor is alive and the transfer is for their benefit.
+
+
+* 
+**Elimination:** It is permitted without a court order (D) if the specific certificate is provided.
+
+
+
+**Q16: Correct Answer B**
+
+* **Legal Concept:** Schedule II, item (c) specifies the fee for "Transfer of account" is Rs. 100.
+
+
+* **Elimination:** Rs. 50 (A) is for duplicate passbooks or nomination changes.
+
+
+
+**Q17: Correct Answer B**
+
+* 
+**Legal Concept:** Rule 27 identifies the Department of Economic Affairs, Ministry of Finance, as the final authority for interpretation.
+
+
+* 
+**Elimination:** While RBI (A) approves electronic modes, the Ministry of Finance holds interpretive power over the rules.
+
+
+
+**Q18: Correct Answer C**
+
+* **Legal Concept:** Rule 15(6) allows the authorized officer to pay a claimant for amounts up to Rs. 5 lakh if no legal documents (probate, etc.) are produced within six months from the death of the depositor.
+
+
+* 
+**Elimination:** The six-month window is the statutory waiting period before the officer can exercise this discretion.
+
+
+
+**Q19: Correct Answer B**
+
+* **Legal Concept:** Schedule II, item (a)(i) sets the fee for the issue of a duplicate passbook at Rs. 50.
+
+
+* **Elimination:** Rs. 20 (A) is for a statement of account or deposit receipt.
+
+
+
+**Q20: Correct Answer C**
+
+* 
+**Legal Concept:** Rule 14(9) states that an NRI is eligible to be nominated, provided the payment is on a non-repatriation basis.
+
+
+* 
+**Elimination:** Both statements align perfectly with the provision in Rule 14.
+
+
+
+Would you like me to increase the number of scenario-based questions or perhaps focus on the specific forms mentioned in Schedule I?

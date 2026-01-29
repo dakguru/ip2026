@@ -1,0 +1,443 @@
+Based on the provided PDF content regarding the Information Technology Act, 2000, here is the structured learning content.
+
+---
+
+Question:
+What is the date of enactment and the date of commencement for the Information Technology Act, 2000?
+
+Answer:
+Enacted on 09th June 2000; Came into force on 17th October 2000.
+
+Explanation:
+It is crucial to distinguish between the date the Act was passed (enactment) and the date it became operational (commencement). This Act provides legal recognition for electronic transactions and facilitates e-governance.
+
+---
+
+Question:
+Does the Information Technology Act, 2000 apply to offenses committed outside India?
+
+Answer:
+Yes, it extends to the whole of India and applies to any offense or contravention committed outside India by any person, provided the act involves a computer or network located in India.
+
+Explanation:
+The jurisdiction of the IT Act is extraterritorial. This means if a person (regardless of nationality) commits a cybercrime involving a computer system located in India, they can be prosecuted under this Act even if they are physically outside the country.
+
+---
+
+Question:
+How is an "Addressee" defined under the IT Act, 2000?
+
+Answer:
+"Addressee" means a person who is intended by the originator to receive the electronic record but does not include any intermediary.
+
+Explanation:
+This definition specifically excludes "intermediaries" (like internet service providers or platforms that transmit the message). An addressee is only the final intended recipient of the electronic data.
+
+---
+
+Question:
+What constitutes an "Asymmetric Crypto System"?
+
+Answer:
+A system of a secure key pair consisting of a private key for creating a digital signature and a public key to verify the digital signature.
+
+Explanation:
+This system uses two different but mathematically related keys.
+
+* 
+**Private Key:** Used by the sender to encrypt/sign the document.
+
+
+* 
+**Public Key:** Used by the receiver (verifier) to decrypt/verify the signature.
+
+
+
+---
+
+Question:
+What are the four criteria for a "Secure System" as defined in the Act?
+
+Answer:
+A computer hardware, software, and procedure that:
+
+1. Is reasonably secure from unauthorized access and misuse.
+2. Provides a reasonable level of reliability and correct operation.
+3. Is reasonably suited to performing the intended functions.
+4. Adheres to generally accepted security procedures.
+
+
+
+Explanation:
+For a system to be legally recognized as "secure" under the Act, it must meet these specific standards of security, reliability, functionality, and adherence to standard protocols.
+
+---
+
+Question:
+What is the maximum fee prescribed for an application for a license to issue electronic signature certificates?
+
+Answer:
+Rs. 25,000/-.
+
+Explanation:
+Individuals or entities wishing to become a Certifying Authority (CA) must apply to the Controller. The application fee payable to the Government for this license cannot exceed Rs. 25,000.
+
+---
+
+Question:
+What is the penalty if a Certifying Authority whose license is suspended or revoked fails to surrender the license immediately?
+
+Answer:
+Imprisonment is not specified, but the penalty may extend to Rs. 5,00,000/- (Five Lakhs).
+
+Explanation:
+Surrendering the license immediately upon suspension or revocation is mandatory. Failure to do so attracts a significant financial penalty up to 5 Lakhs.
+
+---
+
+Question:
+Under Section 44, what is the penalty for failure to furnish any document, return, or report to the Controller or Certifying Authority?
+
+Answer:
+A penalty not exceeding Rs. 1,50,000/- (One Lakh Fifty Thousand). *(Note: The source text says "Rs. 15,00,000/- (Fifteen Lakh)" in numeric but the context of similar sections often suggests 1.5 Lakh, however, strictly adhering to the PDF provided, it lists 15 Lakhs)*.
+*Correction based on standard PDF interpretation of source 130:* The text states "Rs. 15,00,000/- (Fifteen Lakh)".
+
+Explanation:
+Section 44 imposes financial penalties for administrative non-compliance:
+
+* **Failure to furnish documents:** Up to Rs. 15 Lakhs.
+
+
+* **Failure to file return:** Up to Rs. 5,000 per day.
+
+
+* **Failure to maintain books of account:** Up to Rs. 10,000 per day.
+*(Note: Please verify specific amounts with the latest amendment as PDF figures might differ from standard bare acts; strictly following PDF source 130 here).*
+
+
+
+---
+
+Question:
+What is the "Residuary Penalty" under Section 45 for contraventions where no separate penalty is provided?
+
+Answer:
+Compensation not exceeding Rs. 1,00,000/- (One Lakh) to the affected person, or a penalty not exceeding:
+
+* Rs. 10,00,000/- (Ten Lakhs) for an intermediary, company, or body corporate.
+* Rs. 1,00,000/- (One Lakh) for any other person.
+
+
+
+Explanation:
+This is a "catch-all" section. If the Act prescribes a rule but does not list a specific punishment for breaking it, Section 45 applies. The penalty is higher for corporate bodies (up to 10 Lakhs) compared to individuals (up to 1 Lakh).
+
+---
+
+Question:
+Which body serves as the Appellate Tribunal for the purposes of the IT Act, 2000?
+
+Answer:
+The Telecom Disputes Settlement and Appellate Tribunal (TDSAT).
+
+Explanation:
+Originally, the Act established a Cyber Appellate Tribunal. However, following amendments (Finance Act 2017), the jurisdiction was transferred to the TDSAT.
+
+---
+
+Question:
+What is the time limit for filing an appeal to the Appellate Tribunal against an order of the Controller or Adjudicating Officer?
+
+Answer:
+Within 45 days from the date the copy of the order is received.
+
+Explanation:
+An aggrieved person has 45 days to approach the Tribunal. The Tribunal acts as the first level of appeal against administrative orders passed by the Controller of Certifying Authorities or Adjudicating Officers.
+
+---
+
+Question:
+Under Section 66F, what is the punishment for cyber terrorism?
+
+Answer:
+Imprisonment which may extend to imprisonment for life.
+
+Explanation:
+Section 66F deals with acts committed with the intent to threaten the unity, integrity, security, or sovereignty of India (Cyber Terrorism). It carries the severest punishment under the Act—up to life imprisonment.
+
+---
+
+Question:
+What is the punishment for "Identity Theft" under Section 66C?
+
+Answer:
+Imprisonment of either description for a term extending to 3 years and a fine extending to Rs. 1,00,000/-.
+
+Explanation:
+This section penalizes the fraudulent or dishonest use of another person's electronic signature, password, or unique identification feature.
+
+---
+
+Question:
+What is the penalty for publishing or transmitting obscene material in electronic form under Section 67?
+
+Answer:
+
+* **First Conviction:** Imprisonment up to 3 years and fine up to Rs. 5 Lakhs.
+* **Second/Subsequent Conviction:** Imprisonment up to 5 years and fine up to Rs. 10 Lakhs.
+
+
+
+Explanation:
+Section 67 criminalizes general obscenity online. The law differentiates between first-time offenders and repeat offenders, enhancing the punishment for the latter.
+
+---
+
+Question:
+How does the punishment under Section 67B (Material depicting children in sexually explicit acts) differ from Section 67?
+
+Answer:
+
+* **First Conviction:** Imprisonment up to 5 years and fine up to Rs. 10 Lakhs.
+* **Second/Subsequent Conviction:** Imprisonment up to 7 years and fine up to Rs. 10 Lakhs.
+
+
+
+Explanation:
+Section 67B deals specifically with child pornography. It carries a harsher sentence (starting at 5 years) compared to general obscenity (which starts at 3 years) to provide greater protection for children.
+
+---
+
+Question:
+What are the responsibilities of Intermediaries regarding the preservation of information under Section 67C?
+
+Answer:
+Intermediaries must preserve and retain information for such duration and in such manner/format as specified by the Central Government.
+
+Explanation:
+Intermediaries (like ISPs, social media platforms) cannot delete data immediately. They are legally required to keep logs and data for a prescribed period to aid in investigations. Contravention is punishable under this section.
+
+---
+
+Question:
+Which agency is appointed as the national agency for incident response under Section 70B?
+
+Answer:
+The Indian Computer Emergency Response Team (CERT-In).
+
+Explanation:
+CERT-In is the nodal agency responsible for collecting, analyzing, and disseminating information on cyber incidents, issuing alerts, and coordinating emergency response measures.
+
+---
+
+Question:
+What documents or transactions are listed in the First Schedule to which the IT Act does **not** apply?
+
+Answer:
+
+1. Negotiable Instruments (except cheques).
+2. Power-of-Attorney.
+3. Trusts.
+4. Wills (and other testamentary dispositions).
+5. Contracts for the sale/conveyance of immovable property.
+
+
+
+Explanation:
+While the IT Act digitizes most processes, these specific high-value or sensitive legal documents still require traditional paper-based methods to be valid. Notably, "Cheques" are excluded from this list, meaning the IT Act *does* apply to cheques (e.g., Truncated cheques).
+
+---
+
+Question:
+What is the punishment for "Tampering with computer source documents" under Section 65?
+
+Answer:
+Imprisonment up to 3 years, or with fine up to Rs. 2,00,000/- (Two Lakhs), or with both.
+
+Explanation:
+This offense involves knowingly concealing, destroying, or altering computer source code that is required to be maintained by law.
+
+---
+
+Question:
+Under Section 66E, what constitutes the offense of "Violation of Privacy"?
+
+Answer:
+Intentionally or knowingly capturing, publishing, or transmitting the image of a private area of any person without their consent.
+
+Explanation:
+This section specifically addresses voyeurism and the non-consensual sharing of private images. The punishment is imprisonment up to 3 years or fine not exceeding Rs. 2 Lakhs, or both.
+
+
+---
+
+Question:
+Under Section 43, who is liable to pay compensation for "Damage to Computer, Computer System, etc."?
+
+Answer:
+Any person who, without the permission of the owner or person in charge, accesses, downloads, introduces a virus, or disrupts a computer system.
+
+Explanation:
+Section 43 deals with **Civil Liability**, not criminal imprisonment. If a person commits acts like downloading data, disrupting networks, or denying access *without permission*, they are liable to pay **compensation** (damages) to the affected person.
+
+---
+
+Question:
+What is the specific punishment for "Cheating by personation by using computer resource" under Section 66D?
+
+Answer:
+Imprisonment of either description for a term which may extend to **3 years** and a fine which may extend to **Rs. 1,00,000/-** (One Lakh).
+
+Explanation:
+This section covers scenarios like "Phishing" or creating fake profiles where a person cheats by pretending to be someone else using a communication device or computer resource.
+
+---
+
+Question:
+What is the distinction between Section 67 and Section 67A regarding the nature of the content?
+
+Answer:
+
+* **Section 67:** Publishes or transmits material which is **lascivious** or appeals to the prurient interest (General Obscenity).
+* **Section 67A:** Publishes or transmits material containing **sexually explicit acts** or conduct.
+
+Explanation:
+Section 67A is more severe than 67.
+
+* **Punishment for 67A:** First conviction implies imprisonment up to **5 years** and fine up to **Rs. 10 Lakhs**. (Note: Section 67 starts at 3 years).
+
+---
+
+Question:
+Who has the power to issue directions for the "Interception or Monitoring or Decryption" of information under Section 69?
+
+Answer:
+The **Central Government** or the **State Government**, or any of its officers specially authorized in this behalf.
+
+Explanation:
+This power is exercised in the interest of the sovereignty or integrity of India, defense, security of the State, or public order. Failure to assist the agency in decryption is punishable with imprisonment up to 7 years.
+
+---
+
+Question:
+Under Section 79, when is an "Intermediary" (e.g., Facebook, ISP) **not** liable for third-party information hosted by them?
+
+Answer:
+An intermediary is not liable if:
+
+1. Their function is limited to providing access/communication meant for transmission.
+2. They do not **initiate** the transmission, **select** the receiver, or **modify** the information.
+3. They observe "Due Diligence" as prescribed by the Central Government.
+
+Explanation:
+This is known as the **"Safe Harbor"** protection. However, if the intermediary conspires in the act or fails to remove content upon receiving a government order (or court order), they lose this immunity.
+
+---
+
+Question:
+What is the rank of the Police Officer competent to investigate offenses under the IT Act, 2000 (Section 78)?
+
+Answer:
+A Police Officer not below the rank of **Inspector**.
+
+Explanation:
+Due to the technical nature of cybercrimes, the Act restricts the power of investigation to officers of the rank of Inspector or above. (Note: Previously it was DSP, but amendments lowered it to Inspector to handle the volume of cases).
+
+---
+
+Question:
+Are offenses punishable with imprisonment of 3 years under the IT Act "Bailable" or "Non-Bailable"?
+
+Answer:
+**Bailable**.
+
+Explanation:
+**Section 77B** states that notwithstanding the CrPC (now BNSS), offenses punishable with imprisonment of **three years or less** are bailable. Offenses punishable with more than three years are non-bailable.
+
+---
+
+Question:
+What is the liability of a "Body Corporate" for failure to protect Sensitive Personal Data under Section 43A?
+
+Answer:
+They are liable to pay **damages by way of compensation** to the person affected. There is **no upper limit** prescribed for this compensation in the Act.
+
+Explanation:
+If a company possesses sensitive personal data (like bank details, medical records) and is negligent in maintaining "Reasonable Security Practices," resulting in wrongful loss/gain, they must compensate the victim.
+
+---
+
+Question:
+What is the penalty for "Breach of Confidentiality and Privacy" under Section 72?
+
+Answer:
+Imprisonment up to **2 years**, or fine up to **Rs. 1,00,000/-** (One Lakh), or both.
+
+Explanation:
+This applies to any person who has secured access to electronic records/books/registers under the powers given by this Act (e.g., a government official or auditor) and discloses that information without the consent of the person concerned.
+
+---
+
+Question:
+Under Section 66F (Cyber Terrorism), what specific act constitutes a "terrorist" intent regarding access to restricted data?
+
+Answer:
+Accessing information residing in a computer resource which is **restricted** for the interest of the sovereignty and integrity of India, security of the State, or foreign relations.
+
+Explanation:
+Cyber terrorism covers not just damaging systems (like power grids) but also penetrating "restricted" government computer systems with the intent to harm national security.
+
+---
+
+Question:
+What is the role of the "Examiner of Electronic Evidence" under Section 79A?
+
+Answer:
+To provide **expert opinion** on electronic form evidence before any court or other authority.
+
+Explanation:
+The Central Government notifies specific agencies/examiners as "Examiners of Electronic Evidence." Their expert opinion is critical in validating digital evidence in legal proceedings.
+
+---
+
+Question:
+Can offenses under the IT Act be "Compounded"?
+
+Answer:
+Yes, under **Section 77A**, provided the offense is **not** punishable with imprisonment for life or imprisonment exceeding 3 years.
+
+Explanation:
+"Compounding" means settling the case by paying a fee/penalty without a full trial. This is only allowed for minor offenses (punishment ≤ 3 years) and not for serious crimes like Cyber Terrorism or Child Pornography.
+
+---
+
+Question:
+Under Section 66B, what is the punishment for dishonestly receiving a stolen computer resource or communication device?
+
+Answer:
+Imprisonment up to **3 years** or fine up to **Rs. 1,00,000/-** (One Lakh), or both.
+
+Explanation:
+This operates similarly to the "Stolen Property" concept in general criminal law. If you buy a laptop or phone knowing (or having reason to believe) it was stolen/obtained via a cybercrime, you are liable under this section.
+
+---
+
+Question:
+Who constitutes the "Cyber Regulations Advisory Committee" (Section 88) and what is its purpose?
+
+Answer:
+constituted by the **Central Government**. Its purpose is to advise the Government on rules/regulations and advise the Controller of Certifying Authorities (CCA).
+
+Explanation:
+This committee includes representatives from the government, industry, and domain experts to ensure that IT regulations keep pace with technological changes.
+
+---
+
+Question:
+Does the IT Act, 2000 allow for the confiscation of equipment used in a crime?
+
+Answer:
+Yes, under **Section 76**. Any computer, computer system, floppies, compact disks, tape, or other accessories used in contravention of the Act are liable to confiscation.
+
+Explanation:
+However, if the owner proves that the device was used without their knowledge/connivance, the court may choose not to confiscate it.

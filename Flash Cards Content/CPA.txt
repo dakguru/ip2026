@@ -1,0 +1,585 @@
+Question:
+What is the date of enactment of the Consumer Protection Act, 2019?
+
+Answer:
+The Consumer Protection Act, 2019 was enacted on **09th August 2019**.
+
+Explanation:
+This is the official date when the Act received the necessary assent to become law. It is distinct from the date the provisions came into force. For example, many provisions of the Act came into force later, on July 20th and July 24th, 2020.
+
+---
+
+Question:
+Which previous Act was repealed by the Consumer Protection Act, 2019?
+
+Answer:
+The **Consumer Protection Act, 1986** was repealed by the 2019 Act.
+
+Explanation:
+Section 107 of the 2019 Act specifically provides for the repeal of the 1986 legislation, replacing it with the new framework to address modern consumer challenges like e-commerce and direct selling.
+
+---
+
+Question:
+Under the Consumer Protection Act, 2019, who serves as the Chairperson of the Central Consumer Protection Council?
+
+Answer:
+The **Minister-In-Charge of the Department of Consumer Affairs in the Central Government** serves as the Chairperson.
+
+Explanation:
+The Central Consumer Protection Council is an advisory body. Its composition includes the Union Minister (Chairperson) and the Minister of State (Vice-Chairperson), along with other official and non-official members, to advise on consumer protection matters.
+
+---
+
+Question:
+What is the minimum number of meetings that the District Consumer Protection Council must hold in a year?
+
+Answer:
+The District Consumer Protection Council must hold **at least two meetings** during the year.
+
+Explanation:
+This ensures regular oversight and discussion of consumer issues at the district level. The Chairperson of this council is the District Collector.
+
+---
+
+Question:
+Define "Complainant" according to the Consumer Protection Act, 2019.
+
+Answer:
+A "Complainant" includes:
+
+1. A consumer.
+
+
+2. Any voluntary consumer association registered under any law.
+
+
+3. The Central Government or any State Government.
+
+
+4. The Central Authority.
+
+
+5. One or more consumers, where there are numerous consumers having the same interest.
+
+
+6. In case of death, the consumer's legal heir or legal representative.
+
+
+7. In case of a minor, their parent or legal guardian.
+
+
+
+Explanation:
+The definition is broad to ensure access to justice. It allows not just the individual affected but also representative bodies, the government, and legal guardians to file complaints on behalf of consumers.
+
+---
+
+Question:
+What are the six consumer rights guaranteed under the Consumer Protection Act, 2019?
+
+Answer:
+The Act guarantees the following rights:
+
+1. **Right to Safety:** Protection against goods/services hazardous to life and property.
+2. **Right to Information:** To be informed about quality, quantity, potency, purity, standard, and price.
+3. **Right to Choice:** Access to a variety of goods/services at competitive prices.
+4. **Right to be Heard:** Assurance that consumer interests will receive due consideration.
+5. **Right to Redressal:** To seek redressal against unfair/restrictive trade practices.
+6. **Right to Consumer Awareness.**
+
+Explanation:
+These rights form the core framework of consumer protection in India. Violations of these rights can be grounds for filing complaints or interventions by the Central Consumer Protection Authority.
+
+---
+
+Question:
+What is the pecuniary jurisdiction of the District Consumer Disputes Redressal Commission under the Consumer Protection Act, 2019?
+
+Answer:
+The District Commission entertains complaints where the value of goods or services paid as consideration **does not exceed ₹50 Lakhs**.
+
+Explanation:
+Previously higher, the limit is specifically defined based on the "consideration paid" rather than the total value of goods/services or compensation claimed. This helps in categorizing cases appropriate for the district level.
+
+---
+
+Question:
+What is the time limit for the District Commission to decide on the admissibility of a complaint?
+
+Answer:
+The admissibility of a complaint shall ordinarily be decided within **21 days** from the date on which the complaint was filed.
+
+Explanation:
+This provision prevents delays at the initial stage. If the Commission fails to decide within this period, the complaint is deemed to have been admitted.
+
+---
+
+Question:
+What is the statutory time limit for disposing of a complaint by the District Commission if laboratory analysis of goods is required?
+
+Answer:
+If the complaint requires analysis or testing of commodities, it must be disposed of within **5 months**.
+
+Explanation:
+For complaints not requiring laboratory analysis, the disposal period is shorter, specifically **3 months** from the date of receipt of notice by the opposite party.
+
+---
+
+Question:
+What constitutes a "Restrictive Trade Practice" under the Act?
+
+Answer:
+A "Restrictive Trade Practice" is a practice that imposes unjustified costs or restrictions on consumers by manipulating price or supply. It includes:
+
+* Delay in supply leading to a price rise.
+
+
+* Requiring a consumer to buy, hire, or avail of distinct goods/services as a condition for buying/hiring others (tie-in arrangement).
+
+
+
+Explanation:
+This definition targets market manipulation tactics like hoarding to hike prices or forcing consumers to buy unwanted add-ons (e.g., forcing a warranty purchase with a product).
+
+---
+
+Question:
+Define "Dark Patterns" as per the Consumer Protection Act context provided.
+
+Answer:
+"Dark Patterns" refer to deceptive design patterns using user interface (UI) or user experience (UX) interactions designed to mislead or trick users into doing something they did not intend, thereby subverting consumer autonomy or choice.
+
+Explanation:
+Common examples include "False Urgency" (e.g., "Only 2 rooms left!"), "Basket Sneaking" (adding items without consent), and "Subscription Traps" (making it hard to cancel services). These are treated as unfair trade practices.
+
+---
+
+Question:
+What is the "cooling-off period" or limit for filing an appeal against an order of the District Commission to the State Commission?
+
+Answer:
+An appeal against a District Commission order must be filed to the State Commission within **45 days** from the date of the order.
+
+Explanation:
+The appellant must strictly adhere to this timeline. Furthermore, no appeal is entertained unless the appellant deposits **50%** of the amount required to be paid in terms of the order.
+
+---
+
+Question:
+Who is liable in a product liability action if a product contains a manufacturing defect or is defective in design?
+
+Answer:
+The **Product Manufacturer** is liable.
+
+Explanation:
+A manufacturer is liable even if they prove they were not negligent or fraudulent in making an express warranty. Grounds for liability include manufacturing defects, design defects, deviation from specifications, or failure to provide adequate usage instructions.
+
+---
+
+Question:
+Under what conditions can a Product Seller (who is not a manufacturer) be held liable in a product liability action?
+
+Answer:
+A product seller is liable if:
+
+1. They exercised substantial control over designing, testing, manufacturing, or packaging.
+
+
+2. They altered or modified the product, causing harm.
+
+
+3. They made an independent express warranty that the product failed to meet.
+
+
+4. The manufacturer is not known, or cannot be served legal notice/process.
+
+
+5. They failed to exercise reasonable care in assembling/maintaining the product or passing on warnings.
+
+
+
+Explanation:
+Generally, sellers are not liable for defects if they simply sold the product as is. However, if they modify it, make their own promises, or if the manufacturer is untraceable, liability shifts to them.
+
+---
+
+Question:
+What is the limitation period for filing a complaint under the Consumer Protection Act, 2019?
+
+Answer:
+A complaint must be filed within **2 years** from the date on which the cause of action has arisen.
+
+Explanation:
+The Commission (District, State, or National) will not admit a complaint filed after this period unless there is a sufficient cause for delay, which must be recorded.
+
+---
+
+Question:
+What is the penalty for failing to comply with an order made by the District, State, or National Commission?
+
+Answer:
+Failure to comply is punishable with:
+
+* 
+**Imprisonment:** Not less than 1 month, extending up to 3 years.
+
+
+* 
+**Fine:** Not less than ₹25,000, extending up to ₹1 Lakh.
+
+
+* Or both.
+
+
+
+Explanation:
+This provision (Section 72) ensures that the orders of the Consumer Commissions are enforced strictly and treated with the gravity of a court order.
+
+---
+
+Question:
+What is the pecuniary jurisdiction of the State Consumer Disputes Redressal Commission?
+
+Answer:
+The State Commission entertains complaints where the value of goods or services paid as consideration **exceeds ₹50 Lakhs but does not exceed ₹2 Crore**.
+
+Explanation:
+The State Commission also has appellate jurisdiction over orders passed by District Commissions within the state.
+
+---
+
+Question:
+What are the age limits for the President and members of the National Commission?
+
+Answer:
+
+* 
+**President:** Up to **70 years** of age.
+
+
+* 
+**Members:** Up to **67 years** of age.
+
+
+
+Explanation:
+The term of office is specified as up to 5 years, with eligibility for re-appointment, provided these age ceilings are not breached.
+
+---
+
+Question:
+Which matters are specifically excluded from being referred to mediation under the Consumer Protection Act, 2019?
+
+Answer:
+The following matters cannot be referred to mediation:
+
+1. Medical negligence resulting in grievous injury or death.
+
+
+2. Offences where compounding applications have been made.
+
+
+3. Cases involving serious allegations of fraud, forgery, coercion, or fabrication of documents.
+
+
+4. Criminal and non-compoundable offences.
+
+
+5. Public interest cases or cases involving numerous persons who are not parties before the Commission.
+
+
+
+Explanation:
+Mediation is intended for resolving civil disputes amicably. Cases involving serious crimes, fraud, or public interest are deemed unsuitable for private settlement mechanisms.
+
+---
+
+Question:
+What is the punishment for a first-time offence of publishing a false or misleading advertisement?
+
+Answer:
+The punishment may extend to **imprisonment for up to 2 years** and a **fine of up to ₹10 Lakhs**.
+
+Explanation:
+For every subsequent offence, the imprisonment can extend to 5 years and the fine up to ₹50 Lakhs. This is covered under Section 89 of the Act.
+
+---
+
+Question:
+What is the court fee for filing a complaint in the District Commission if the value of goods/services is between ₹5 Lakhs and ₹10 Lakhs?
+
+Answer:
+The court fee is **₹200/-**.
+
+Explanation:
+For values up to ₹5 Lakhs, the court fee is **Nil**. The fees increase progressively based on the value slab.
+
+---
+
+Question:
+What constitutes "Spurious Goods" regarding penalties under Section 91?
+
+Answer:
+Spurious goods are those that are fakes or imitations. Punishment for manufacturing, selling, or distributing spurious goods depends on the injury caused:
+
+* 
+**Injury not amounting to grievous hurt:** Imprisonment up to 1 year and fine up to ₹3 Lakhs.
+
+
+* 
+**Grievous hurt:** Imprisonment up to 7 years and fine up to ₹5 Lakhs.
+
+
+* 
+**Death:** Imprisonment not less than 7 years (up to life) and fine not less than ₹10 Lakhs.
+
+
+
+Explanation:
+These stringent penalties reflect the serious nature of selling fake goods, especially when they cause physical harm or death to consumers.
+
+---
+
+Question:
+What is the function of the Central Consumer Protection Authority (CCPA)?
+
+Answer:
+The CCPA's functions include:
+
+1. Protecting and enforcing consumer rights as a class.
+
+
+2. Preventing unfair trade practices.
+
+
+3. Ensuring no false or misleading advertisements are made.
+
+
+4. Conducting investigations (suo motu or on complaint).
+
+
+5. Filing complaints before Commissions.
+
+
+6. Issuing safety notices and guidelines.
+
+
+
+Explanation:
+The CCPA acts as a regulator (similar to TRAI or SEBI) with an investigative wing led by a Director General, allowing it to take proactive action rather than just adjudicating disputes.
+
+---
+
+Question:
+Who is eligible to be empaneled as a mediator in a Consumer Mediation Cell?
+
+Answer:
+Eligible persons include:
+
+1. Retired Judges (Supreme Court, High Court, District/Session Judges).
+
+
+2. Retired Members of Consumer Commissions.
+
+
+3. Retired Judicial Officers (10+ years experience).
+
+
+4. Advocates with minimum 10 years at the Bar.
+
+
+5. Mediators already empaneled with Courts.
+
+
+6. Persons with 5 years experience in mediation/conciliation.
+
+
+7. Experts/Bureaucrats with 15+ years experience.
+
+
+
+Explanation:
+This wide pool of eligible mediators ensures that the Mediation Cells attached to the Commissions have access to experienced legal and subject-matter professionals to facilitate settlements.
+
+
+Question:
+What constitutes a "Commercial Purpose" exclusion in the definition of a "Consumer" under the Act?
+
+Answer:
+A person is **not** considered a consumer if they obtain goods or avail services for:
+
+1. **Resale**.
+2. **Commercial purposes** (generating profit).
+
+**Exception:** It **does** include use by a person of goods bought and used by them exclusively for the purpose of earning their livelihood by means of **self-employment**.
+
+Explanation:
+This is a critical distinction. If a person buys a sewing machine to mass-produce clothes for a factory, they are not a consumer. If they buy it to stitch clothes at home to earn a living (self-employment), they are a consumer.
+
+---
+
+Question:
+What is the pecuniary jurisdiction of the National Consumer Disputes Redressal Commission (NCDRC)?
+
+Answer:
+The National Commission entertains complaints where the value of goods or services paid as consideration **exceeds ₹2 Crores**.
+
+Explanation:
+The National Commission acts as the highest forum in the hierarchy for original complaints of high value. It also holds appellate jurisdiction over orders passed by the State Commissions.
+
+---
+
+Question:
+What is the time limit and condition for filing an appeal before the Supreme Court against an order of the National Commission?
+
+Answer:
+An appeal must be filed within **30 days** from the date of the order.
+**Condition:** No appeal shall be entertained unless the appellant has deposited **50%** of the amount required to be paid in terms of the order.
+
+Explanation:
+This appeal lies only against orders passed by the National Commission in its exercise of *original* jurisdiction (i.e., cases starting directly at the National level), or when substantial questions of law are involved.
+
+---
+
+Question:
+Who heads the Investigation Wing of the Central Consumer Protection Authority (CCPA)?
+
+Answer:
+The Investigation Wing is headed by a **Director General**.
+
+Explanation:
+The Director General is appointed by the Central Government to conduct inquiries or investigations into violations of consumer rights, unfair trade practices, and false advertisements.
+
+---
+
+Question:
+Does the District Commission have the power to review its own orders?
+
+Answer:
+**Yes.** Under **Section 40**, the District Commission acts to review any order passed by it if there is an **error apparent on the face of the record**.
+
+Explanation:
+This review can be done either of its own motion or on an application made by any of the parties within **30 days** of such order. This power corrects obvious mistakes without needing a full appeal.
+
+---
+
+Question:
+What is the penalty for failure to comply with a direction issued by the Central Authority (CCPA) under Sections 20 or 21?
+
+Answer:
+The punishment is:
+
+* **Imprisonment:** Up to **6 months**.
+* **Fine:** Which may extend to **₹20 Lakhs**.
+* Or both.
+
+Explanation:
+This acts as a deterrent against ignoring the regulatory orders of the CCPA regarding recall of goods, reimbursement of prices, or discontinuation of unfair practices.
+
+---
+
+Question:
+Which Commissions have the jurisdiction to entertain complaints regarding "Unfair Contracts"?
+
+Answer:
+Complaints against Unfair Contracts can only be filed before the **State Commission** or the **National Commission**.
+
+Explanation:
+The **District Commission** does **not** have jurisdiction to entertain complaints specifically regarding "Unfair Contracts" (where terms are significantly one-sided or unreasonable), regardless of the pecuniary value.
+
+---
+
+Question:
+What is the composition of the District Consumer Disputes Redressal Commission?
+
+Answer:
+The District Commission consists of:
+
+1. A **President**.
+2. Not less than **two members**.
+
+Explanation:
+The exact number of members is prescribed by the State Government in consultation with the Central Government. This replaces the rigid "two members" rule of the 1986 Act, allowing flexibility for larger districts.
+
+---
+
+Question:
+If a settlement is reached during mediation, what is the legal status of the settlement agreement?
+
+Answer:
+The settlement agreement is reduced to writing and signed by the parties. The Commission then passes an order in terms of such settlement, which is **final** and usually **non-appealable**.
+
+Explanation:
+Once a mediation settlement is accepted and stamped by the Commission, the dispute is closed. No appeal lies against such an order because it is based on the mutual consent of the parties.
+
+---
+
+Question:
+What is the liability of an "Endorser" (e.g., a celebrity) for a false or misleading advertisement?
+
+Answer:
+The Central Authority may impose a penalty on an endorser which may extend to **₹10 Lakhs**. For every subsequent contravention, the penalty may extend to **₹50 Lakhs**.
+The endorser may also be prohibited from endorsing any product for a period of **1 year** (up to **3 years** for subsequent acts).
+
+Explanation:
+Endorsers are expected to do due diligence. However, they are not liable if they can prove they exercised due diligence to verify the veracity of the claims made in the advertisement.
+
+---
+
+Question:
+Define "E-commerce" under the Consumer Protection Act, 2019 rules.
+
+Answer:
+"E-commerce" means the buying or selling of goods or services including digital products over a digital or electronic network.
+
+Explanation:
+The 2019 Act specifically brings e-commerce platforms under its ambit, holding them accountable for unfair trade practices, defective goods, or deficiency in services sold online.
+
+---
+
+Question:
+What happens if the office of the President of a District Commission is vacant?
+
+Answer:
+The senior-most Member of the District Commission shall act as the President.
+
+Explanation:
+This ensures the continuous functioning of the Commission. Similar provisions apply to the State and National Commissions to prevent administrative paralysis.
+
+---
+
+Question:
+Under what circumstances can a complaint be dismissed as "Vexatious"?
+
+Answer:
+If the Commission finds that a complaint was instituted **frivolously or vexatiously**, it specifically dismisses the complaint and records reasons in writing.
+
+Explanation:
+The Commission may also order the complainant to pay costs to the opposite party (Cost not exceeding ₹10,000 in general practice, though the Act empowers the Commission to decide adequate costs) to discourage misuse of the legal machinery.
+
+---
+
+Question:
+What is the limitation for filing an appeal against the State Commission's order to the National Commission?
+
+Answer:
+The appeal must be filed within **30 days** from the date of the order.
+
+Explanation:
+Unlike the 45-day window for District-to-State appeals, the window for State-to-National appeals is strictly 30 days.
+
+---
+
+Question:
+Can a "Service Provider" be held liable in a product liability action?
+
+Answer:
+**Yes.** A service provider is liable if:
+
+1. The service provided was faulty, imperfect, or deficient.
+2. There was an act of omission or commission or negligence.
+3. They failed to issue adequate warnings or instructions to prevent harm.
+
+Explanation:
+Product liability is not limited to physical goods; it extends to services (e.g., installation, repair, maintenance) that, if done poorly, cause harm to the consumer.

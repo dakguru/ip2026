@@ -1,0 +1,348 @@
+Here is the complete set of 30 MCQs with the full Answer Key and detailed Explanations for every question, ensuring all logical steps and rule references are provided for your exam preparation.
+
+### Part I: Multiple Choice Questions
+
+Q1. An individual already holding a Post Office Savings Account (POSA) in their own name wishes to open another single account in the same capacity. Which of the following is correct regarding this?
+A. An individual can open up to two single accounts.
+B. Only one account can be opened by an individual as a single account.
+C. A second single account can be opened provided the balance in the first is below ₹50,000.
+D. Any number of single accounts can be opened across different post offices.
+
+Q2. What is the minimum amount required for subsequent deposits in a Post Office Savings Account?
+A. ₹500
+B. ₹100
+C. ₹10
+D. ₹50
+
+Q3. In a Post Office Savings Account, interest for a particular month is calculated based on the lowest balance held between:
+A. The first day and the last day of the month.
+B. The fifth day and the end of the month.
+C. The tenth day and the end of the month.
+D. The tenth day and the twenty-fifth day of the month.
+
+Q4. If a Post Office Savings Account holder fails to maintain the minimum average balance, what is the amount of the account maintenance fee deducted?
+A. ₹100 inclusive of GST
+B. ₹50 exclusive of GST
+C. ₹50 inclusive of GST
+D. ₹20 inclusive of GST
+
+Q5. A Post Office Savings Account is classified as a "Silent Account" if no transaction (deposit or withdrawal) occurs for:
+A. One financial year
+B. Two completed financial years
+C. Three completed financial years
+D. Five completed financial years
+
+Q6. Regarding the National Savings Recurring Deposit (RD) Scheme, 2019, which statement is correct regarding the maturity period?
+A. The account matures in 3 years.
+B. The account matures in 5 years.
+C. The account matures after 60 months of deposits or 6 years, whichever is earlier.
+D. The account matures in 10 years.
+
+Q7. In an RD account, if the account is opened on the 20th of a calendar month, subsequent deposits must be made:
+A. By the 15th of every month.
+B. By the 25th of every month.
+C. Up to the last working day of each month.
+D. Within 30 days of the previous deposit.
+
+Q8. A National Savings Recurring Deposit account is treated as "Discontinued" if the number of defaults exceeds:
+A. Two
+B. Three
+C. Four
+D. Six
+
+Q9. What is the rebate allowed for making 12 advance deposits in a Recurring Deposit account of ₹100 denomination?
+A. ₹10
+B. ₹40
+C. ₹50
+D. ₹100
+
+Q10. Premature closure of a National Savings Recurring Deposit account is permissible only after the completion of:
+A. One year from the date of opening.
+B. Two years from the date of opening.
+C. Three years from the date of opening.
+D. Four years from the date of opening.
+
+Q11. Under the National Savings Time Deposit (TD) Scheme, 2019, which of the following is NOT a valid category of account?
+A. One-year account
+B. Two-year account
+C. Four-year account
+D. Five-year account
+
+Q12. What is the minimum deposit required to open a Time Deposit account?
+A. ₹500
+B. ₹1,000
+C. ₹5,000
+D. ₹10,000
+
+Q13. For a Two-year Time Deposit account, the option for extension must be exercised within:
+A. Six months from the date of maturity.
+B. Twelve months from the date of maturity.
+C. Eighteen months from the date of maturity.
+D. Twenty-four months from the date of maturity.
+
+Q14. In the event of a Time Deposit account maturing but the extension option not being exercised, Post Maturity Interest (PMI) is paid at what rate?
+A. The rate applicable to the original TD category.
+B. The rate applicable to a 1-year TD.
+C. The rate applicable to the Post Office Savings Account.
+D. No interest is paid post-maturity.
+
+Q15. Consider the following regarding the interest on Time Deposits:
+
+1. Interest is compounded on a quarterly basis.
+2. Interest is payable to the account holder at the end of each year.
+3. No additional interest is payable on due interest that is not withdrawn.
+Which of the statements above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+Q16. A 5-year Time Deposit account is opened on 01.01.2024. As per the rules, what is the earliest this account can be closed prematurely?
+A. After 3 months
+B. After 6 months
+C. After 1 year
+D. After 2 years
+
+Q17. If a 3-year Time Deposit is closed prematurely after 1 year but before 2 years, the interest rate payable for the completed year will be:
+A. Post Office Savings Account rate.
+B. Interest rate of 1-year TD minus 1%.
+C. Interest rate of 1-year TD minus 2%.
+D. Interest rate of 2-year TD minus 1%.
+
+Q18. What is the maximum deposit limit for a single account under the National Savings (Monthly Income Account) Scheme, 2019?
+A. ₹4.5 Lakh
+B. ₹9 Lakh
+C. ₹15 Lakh
+D. ₹30 Lakh
+
+Q19. In a Joint MIS account held by three adults, how is the share of each account holder calculated for the purpose of the maximum deposit ceiling?
+A. The first holder owns 100% for ceiling purposes.
+B. Each holder is treated as having an equal one-third share.
+C. Each holder is treated as having a one-half share.
+D. There is no individual ceiling for joint accounts.
+
+Q20. Under the Monthly Income Account (MIS) Scheme, if a deposit is made on the 31st of a month and the following month has only 30 days, when is the interest due?
+A. On the 1st of the next month.
+B. On the last date of the following month.
+C. On the 31st of the next month (delayed).
+D. Interest for that month is forfeited.
+
+Q21. Premature closure of an MIS account is allowed only after the expiry of:
+A. Six months from opening.
+B. One year from opening.
+C. Two years from opening.
+D. Three years from opening.
+
+Q22. If an MIS account is closed prematurely after the expiry of one year but on or before the expiry of three years, what is the deduction from the principal?
+A. 1% of the deposit
+B. 2% of the deposit
+C. 5% of the deposit
+D. Only interest is recovered; no principal deduction.
+
+Q23. What happens to an MIS account in the event of the death of the account holder before maturity?
+A. The nominee must continue the account until the 5-year term ends.
+B. The account may be closed and the deposit refunded with interest up to the month preceding the month of refund.
+C. The account is converted to a POSA account automatically.
+D. The principal is refunded, but all interest paid is recovered.
+
+Q24. Assertion (A): An RD account holder can extend the maturity period to recover defaults.
+Reason (R): A status of 'Discontinued' is applied only if defaults exceed four.
+A. Both A and R are true and R is the correct explanation of A.
+B. Both A and R are true but R is not the correct explanation of A.
+C. A is true but R is false.
+D. A is false but R is true.
+
+Q25. Which of the following is INCORRECT regarding POSA ATM facilities?
+A. Joint-A Type accounts cannot avail ATM facilities.
+B. A minor through a guardian cannot be issued an ATM card.
+C. Each holder of a Joint-B account can avail an ATM card in their own name.
+D. A depositor must authorize a third party to receive the ATM card at the post office.
+
+Q26. What is the daily ATM cash withdrawal limit for Post Office Debit cards?
+A. ₹10,000
+B. ₹25,000
+C. ₹40,000
+D. ₹50,000
+
+Q27. The annual maintenance charge for a Post Office ATM/Debit card is:
+A. ₹50 + GST
+B. ₹100 + GST
+C. ₹125 + GST
+D. Free of cost
+
+Q28. For an RD account of ₹100 denomination, what is the rebate for making 6 advance deposits in a calendar month?
+A. ₹10
+B. ₹20
+C. ₹40
+D. Nil
+
+Q29. Consider the following statements about RD Account extension after maturity:
+
+1. An RD account can be extended for a maximum of 5 years.
+2. The extended account can be closed at any time.
+3. Interest during the extension period is always at the original RD rate.
+Which of the statements above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 only
+D. 1, 2, and 3
+
+Q30. Under the "Protected Savings Scheme" for RD accounts of ₹100 denomination, which of the following is a mandatory condition for the nominee to receive the full maturity value on the death of the holder?
+A. The account must have been in operation for at least 3 years.
+B. The first 24 monthly deposits must have been made without default.
+C. The holder must have been at least 21 years old at the time of opening.
+D. A loan must have been taken and repaid within the first year.
+
+---
+
+### Part II: Answer Key and Explanations
+
+**Q1. Correct Answer: B**
+
+* **Rule/Logic:** Rule 3(1) of the Post Office Savings Account Scheme, 2019, stipulates that an individual can open only one account as a single adult.
+* **Elimination:** While joint accounts can be multiple, single ownership is restricted to one account per individual across the entire POSB network.
+
+**Q2. Correct Answer: C**
+
+* **Rule/Logic:** Per the POSA 2019 rules, the minimum deposit to open is ₹500, but subsequent deposits can be as low as ₹10.
+* **Elimination:** ₹500 is the minimum balance; ₹100 is for other schemes; ₹50 is a common distractor.
+
+**Q3. Correct Answer: C**
+
+* **Rule/Logic:** Interest is calculated on the lowest balance between the 10th day and the last day of the month.
+* **Elimination:** Deposits made after the 10th do not earn interest for that month.
+
+**Q4. Correct Answer: C**
+
+* **Rule/Logic:** If the balance falls below ₹500 at the end of the financial year, a maintenance fee of ₹50 (inclusive of GST) is deducted.
+* **Elimination:** GST is not charged extra; it is built into the ₹50 fee.
+
+**Q5. Correct Answer: C**
+
+* **Rule/Logic:** An account is treated as silent/inoperative if no transaction occurs for three continuous financial years.
+* **Elimination:** Two years is the standard for commercial banks, but POSB uses a three-year window.
+
+**Q6. Correct Answer: B**
+
+* **Rule/Logic:** The National Savings Recurring Deposit Scheme, 2019, specifies a fixed maturity of 5 years (60 monthly deposits).
+* **Elimination:** 3 years is the premature closure eligibility; 10 years was an old provision no longer standard for RD.
+
+**Q7. Correct Answer: C**
+
+* **Rule/Logic:** For accounts opened between the 16th and the last day of a month, subsequent deposits must be made by the last working day of the month.
+* **Elimination:** The 15th is the deadline only for accounts opened between the 1st and 15th.
+
+**Q8. Correct Answer: C**
+
+* **Rule/Logic:** An account is discontinued after 4 defaults.
+* **Elimination:** Up to 4 defaults can be regularized within the next two months.
+
+**Q9. Correct Answer: B**
+
+* **Rule/Logic:** For a ₹100 denomination, a 6-month advance yields ₹10 rebate; a 12-month advance yields ₹40.
+* **Elimination:** ₹50 and ₹100 are incorrect math; rebates are calculated on fixed slabs per ₹100.
+
+**Q10. Correct Answer: C**
+
+* **Rule/Logic:** RD accounts can be closed prematurely only after the completion of 3 years from the date of opening.
+* **Elimination:** One/Two years are for TD/MIS; RD requires a longer commitment for PMC.
+
+**Q11. Correct Answer: C**
+
+* **Rule/Logic:** TD Scheme 2019 recognizes 1, 2, 3, and 5-year accounts. There is no 4-year TD category.
+* **Elimination:** 1, 2, and 5 are the most common; 3 is also valid, but 4 does not exist.
+
+**Q12. Correct Answer: B**
+
+* **Rule/Logic:** The minimum deposit for any TD account category is ₹1,000.
+* **Elimination:** ₹500 is for POSA; ₹5,000/₹10,000 are distractors based on older limits.
+
+**Q13. Correct Answer: B**
+
+* **Rule/Logic:** For a 2-year TD, the extension must be applied for within 12 months from the date of maturity.
+* **Elimination:** 6 months is for 1-year TD; 18 months is for 3/5-year TD.
+
+**Q14. Correct Answer: C**
+
+* **Rule/Logic:** If an account matures and is not extended or closed, interest is paid at the Post Office Savings Account (POSA) rate for the period it remains in the office.
+* **Elimination:** Original TD rates never apply post-maturity without a formal extension.
+
+**Q15. Correct Answer: D**
+
+* **Rule/Logic:** TD interest is compounded quarterly but payable annually. If not withdrawn, the interest does not earn further interest (no interest on interest).
+* **Elimination:** All three statements represent the statutory method of TD interest management.
+
+**Q16. Correct Answer: B**
+
+* **Rule/Logic:** No TD account can be closed before the expiry of 6 months from the date of deposit.
+* **Elimination:** 3 months is too early; 1 year is the threshold for receiving TD-linked interest rather than POSA interest.
+
+**Q17. Correct Answer: C**
+
+* **Rule/Logic:** If closed after 1 year, interest is paid at 2% less than the rate for the completed years (e.g., 3-year TD rate - 2%).
+* **Elimination:** Option B (minus 1%) is the old rule; the 2019 rules standardized the 2% penalty.
+
+**Q18. Correct Answer: B**
+
+* **Rule/Logic:** The maximum limit for a single MIS account was increased to ₹9,00,000.
+* **Elimination:** ₹4.5 Lakh is the old limit; ₹15 Lakh is the Joint limit.
+
+**Q19. Correct Answer: B**
+
+* **Rule/Logic:** For ceiling purposes, each joint holder in an MIS account is deemed to have an equal share.
+* **Elimination:** Ownership is always split equally among the 2 or 3 joint holders.
+
+**Q20. Correct Answer: B**
+
+* **Rule/Logic:** If the corresponding day does not exist in a month, interest is paid on the last day of that month.
+* **Elimination:** Interest is never "forfeited" or pushed to the 1st of the next month.
+
+**Q21. Correct Answer: B**
+
+* **Rule/Logic:** MIS accounts have a lock-in period of one year. No premature closure is allowed before 1 year.
+* **Elimination:** 6 months applies to TD; 3 years is for RD.
+
+**Q22. Correct Answer: B**
+
+* **Rule/Logic:** PMC between 1 and 3 years incurs a 2% penalty on the principal.
+* **Elimination:** 1% penalty applies only if the account is closed after 3 years.
+
+**Q23. Correct Answer: B**
+
+* **Rule/Logic:** On death, the account is closed. Interest is paid up to the preceding month of the refund.
+* **Elimination:** Nominees cannot "continue" the MIS account; it must be settled.
+
+**Q24. Correct Answer: A**
+
+* **Rule/Logic:** If a holder has defaults (up to 4), they can extend the account tenure to complete 60 deposits. This is linked to the fact that it is not yet "discontinued."
+* **Elimination:** Both statements accurately reflect the relationship between defaults and account status.
+
+**Q25. Correct Answer: D**
+
+* **Rule/Logic:** The depositor must personally collect the ATM card; third-party authorization is strictly prohibited by POSB ATM rules.
+* **Elimination:** A, B, and C are valid rules (Joint-A cannot have ATMs as it requires both signatures for transactions).
+
+**Q26. Correct Answer: B**
+
+* **Rule/Logic:** The standard daily cash withdrawal limit at ATMs for Post Office cards is ₹25,000.
+* **Elimination:** ₹10,000 is the per-transaction limit; ₹40,000 is common for private banks but not POSB.
+
+**Q27. Correct Answer: C**
+
+* **Rule/Logic:** The annual maintenance fee for the Debit card is ₹125 + GST.
+* **Elimination:** ₹50 and ₹100 are incorrect; ₹125 is the current statutory charge.
+
+**Q28. Correct Answer: A**
+
+* **Rule/Logic:** For a ₹100 denomination, a 6-month advance deposit gets a ₹10 rebate.
+* **Elimination:** Rebate is only 0 if the deposit is not for a minimum of 6 months.
+
+**Q29. Correct Answer: A**
+
+* **Rule/Logic:** RD can be extended for 5 years. During extension, it can be closed at any time. However, the interest rate is the rate applicable at the time of the original opening (not "always" the original if the extension happens under new notified rates).
+* **Elimination:** Statement 3 is slightly nuanced but 1 and 2 are the firm primary rules.
+
+**Q30. Correct Answer: B**
+
+* **Rule/Logic:** The "Protected Savings Scheme" (Life cover for RD) requires that the account was active for 24 months without any defaults.
+* **Elimination:** 3 years is the PMC rule; age 21 is not a requirement (minor accounts also qualify through guardians).

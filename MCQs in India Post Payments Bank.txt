@@ -1,0 +1,794 @@
+### PART 1: Questions 1-25
+
+**Q1. India Post Payments Bank (IPPB) was launched as a pilot project on 30 January 2017. Which two cities were selected for this pilot launch?**
+A. Varanasi and Patna
+B. Ranchi and Raipur
+C. Hyderabad and Pune
+D. Jaipur and Lucknow
+
+**Q2. What is the equity structure of India Post Payments Bank (IPPB)?**
+A. 51% Government of India, 49% Department of Posts
+B. 100% owned by the Department of Posts
+C. 100% equity owned by the Government of India
+D. 75% Government of India, 25% Public Shareholders
+
+**Q3. Which initiative was launched by the Department of Posts and IPPB to invite the fintech startup community to co-create solutions for financial inclusion?**
+A. Fincluvation
+B. DakPay Innovation
+C. PostTech Accelerator
+D. Gramin Digital Drive
+
+**Q4. Under the "Premium Aarogya Savings Account," what is the annual renewal subscription fee for an existing customer?**
+A. ₹149 + GST
+B. ₹99 + GST
+C. ₹199 + GST
+D. ₹50 + GST
+
+**Q5. Regarding the interest rates offered by IPPB on Savings Accounts (effective from 1st June 2022), which of the following statements is correct?**
+A. 2.00% p.a. for balances up to ₹1 Lakh; 2.25% p.a. for balances above ₹1 Lakh and up to ₹2 Lakh.
+B. 2.25% p.a. flat on all balances up to ₹2 Lakh.
+C. 2.50% p.a. for balances up to ₹50,000; 2.75% p.a. for balances above ₹50,000.
+D. 4.00% p.a. flat on all balances.
+
+**Q6. Identify the correct tagline of India Post Payments Bank.**
+A. Aapka Paisa, Aapka Bharosa
+B. Aapka Bank, Aapke Dwaar
+C. Banking for the Unbanked
+D. Desh ka Apna Bank
+
+**Q7. In the context of IPPB charges, what is the maximum capping of SMS charges per quarter for a customer?**
+A. ₹50 + GST
+B. ₹75 + GST
+C. ₹100 + GST
+D. ₹25 + GST
+
+**Q8. Which of the following is a specific feature of the "Basic Savings Account" regarding cash withdrawals?**
+A. Unlimited free cash withdrawals at any ATM.
+B. Free withdrawals are limited to 4 per month; charges apply thereafter.
+C. No withdrawals are permitted; only digital transfers are allowed.
+D. Withdrawals are free only at Head Post Offices.
+
+**Q9. Consider the following statements regarding the "DigiSmart Savings Account":**
+
+1. It can be opened effortlessly through the IPPB Mobile Banking App.
+2. The account is opened in a negative lien of ₹149 + GST.
+3. No monthly average balance is required to be maintained.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+**Q10. What is the "Cooling Period" limit for a new UPI user on the IPPB Mobile App, during which transactions are capped at ₹5,000?**
+A. First 12 hours
+B. First 24 hours
+C. First 48 hours
+D. First 7 days
+
+**Q11. When a Premium Savings Account (SBPRM) is auto-downgraded due to non-payment of renewal charges, it remains eligible for an upgrade only after a cooling period of:**
+A. 30 days
+B. 90 days
+C. 180 days
+D. 365 days
+
+**Q12. Which partner does IPPB collaborate with for International Money Transfer services?**
+A. Western Union
+B. MoneyGram
+C. Ria Money Transfer
+D. Wise
+
+**Q13. For a "Regular Savings Account," what is the charge for the issuance of a Virtual Debit Card?**
+A. Free
+B. ₹25 (inclusive of taxes)
+C. ₹50 + GST
+D. ₹100 + GST
+
+**Q14. The "Doorstep Banking" service charges (effective from 1st September 2021) are levied as:**
+A. ₹50 per visit regardless of distance.
+B. Flat ₹20 + GST per visit per customer serviced beyond 1km from the Post Office.
+C. Flat ₹20 + GST per transaction performed at the doorstep.
+D. Free for all account types indefinitely.
+
+**Q15. In the event of a "Sweep-in" from a linked POSA (Post Office Savings Account), what is the cumulative transaction limit for the first 3 days post successful linkage?**
+A. ₹25,000
+B. ₹50,000
+C. ₹1,00,000
+D. ₹2,00,000
+
+**Q16. Which of the following services attracts a charge of ₹50 + GST?**
+A. Account closure after 3 months of opening.
+B. Issuance of a QR Card.
+C. Updating email ID.
+D. Mobile number update in Aadhaar (CELC).
+
+**Q17. What is the maximum End of Day (EOD) balance limit for an IPPB Savings Account before the excess amount is swept out to a linked POSA?**
+A. ₹1,00,000
+B. ₹2,00,000
+C. ₹5,00,000
+D. No limit
+
+**Q18. For AePS (Aadhaar Enabled Payment System) transactions on a non-IPPB network, what is the charge for a mini statement after the free limit is exhausted?**
+A. ₹5 per transaction
+B. ₹10 per transaction
+C. ₹15 per transaction
+D. ₹20 per transaction
+
+**Q19. Which third-party insurance provider offers the "Group Accident Guard" (GAG) policy through IPPB?**
+A. LIC of India
+B. Tata AIG and Bajaj Allianz
+C. SBI Life
+D. ICICI Lombard
+
+**Q20. What is the specific benefit of the "Premium Aarogya Savings Account" regarding electricity bill payments?**
+A. 5% discount on every bill.
+B. ₹5 Cashback on Electricity Bill payment per month.
+C. Complete waiver of transaction fees.
+D. Free insurance cover linked to bill value.
+
+**Q21. To avail the "Digital Life Certificate" (DLC) service, what fee (inclusive of GST/CESS) is charged per successful generation?**
+A. ₹50
+B. ₹70
+C. ₹100
+D. ₹20
+
+**Q22. Which of the following is NOT a feature of the "Salary Account" offered by IPPB?**
+A. No minimum average balance required.
+B. Free quarterly account statement.
+C. Can be opened with zero balance.
+D. Complimentary accidental insurance of ₹50 Lakhs.
+
+**Q23. If a "DigiSmart Savings Account" holder fails to complete the biometric verification (full KYC) within 12 months, what are the account closure charges?**
+A. Nil
+B. ₹50 + GST
+C. ₹100 + GST
+D. ₹150 + GST
+
+**Q24. Under the "Antyodaya Shramik Suraksha Yojana," what is the annual premium for Plan A, which offers a Sum Insured of ₹10 Lakhs?**
+A. ₹289
+B. ₹399
+C. ₹499
+D. ₹557
+
+**Q25. Which IPPB account variant is specifically designed for individuals who prefer technology-driven banking and can be opened via the mobile app?**
+A. Basic Savings Account
+B. Regular Savings Account
+C. DigiSmart Savings Account
+D. Current Account
+
+---
+
+### PART 2: Questions 26-50
+
+**Q26. Match the following Finacle Menu Codes with their respective functions:**
+| Function | Menu Code |
+| :--- | :--- |
+| 1. Account Opening (New Customer) | P. HACCBAL |
+| 2. Balance Inquiry | Q. CKYCACOP |
+| 3. Cheque Book Request | R. HALM |
+| 4. Account Lien Marking | S. CNFTM/CHQREQ |
+
+A. 1-Q, 2-P, 3-S, 4-R
+B. 1-P, 2-Q, 3-R, 4-S
+C. 1-Q, 2-S, 3-P, 4-R
+D. 1-R, 2-P, 3-Q, 4-S
+
+**Q27. According to the "Domestic Money Transfer Limits" for Low KYC customers, what is the maximum cumulative amount allowed per day?**
+A. ₹5,000
+B. ₹10,000
+C. ₹25,000
+D. ₹50,000
+
+**Q28. What is the per-transaction limit for Cash Deposit at a Branch Post Office (GDS/Postman at Doorstep) for a Savings Account?**
+A. ₹10,000
+B. ₹20,000
+C. ₹25,000
+D. ₹50,000
+
+**Q29. For IMPS (Outward) transactions performed via Assisted Mode (at Access Point/Doorstep), what is the charge for a transaction amount between ₹2,001 and ₹5,000?**
+A. ₹5
+B. ₹10
+C. ₹20
+D. ₹50
+
+**Q30. Which of the following statements regarding the "Sweep-out" facility is correct?**
+A. Sweep-out services are available only between 9:00 AM and 5:00 PM.
+B. Sweep-out services are available 24x7 on all days.
+C. There is a maximum limit of ₹50,000 per sweep-out transaction.
+D. Sweep-out attracts a charge of ₹5 per transaction.
+
+**Q31. Which of the following is NOT covered under the "Group Accident Insurance" policy?**
+A. Terrorist Acts
+B. Accidental Death
+C. Bacterial Infections
+D. Permanent Total Disability
+
+**Q32. In the context of "Phone Banking" at IPPB, which toll-free number is used to access services and resolve queries?**
+A. 1800-180-1111
+B. 155299
+C. 1912
+D. 1098
+
+**Q33. What is the charge for "NACH Mandate Registration"?**
+A. Free
+B. ₹25 + GST
+C. ₹50 + GST
+D. ₹100 + GST
+
+**Q34. For a "Current Account," what is the charge for a balance certificate per instance?**
+A. Nil
+B. ₹25
+C. ₹50
+D. ₹100
+
+**Q35. With respect to RTGS Outward transactions via Mobile Banking, why might a transaction be restricted after 8:00 PM?**
+A. RTGS servers are offline at night.
+B. Due to the unavailability of Sweep-in from POSA and the ₹2 Lakh balance limit.
+C. Mobile Banking app undergoes maintenance daily at 8:00 PM.
+D. RBI regulations prohibit RTGS after banking hours.
+
+**Q36. Which Finacle menu is used for "Aadhaar Seeding/Inquiry" in an account?**
+A. CNFTM / CAAS
+B. CKYCACOP
+C. HAFSM
+D. HDEFCALC
+
+**Q37. Under the "Antyodaya Shramik Suraksha Yojana," the "Prolonged Hospitalisation Benefit" of ₹10,000 is applicable if the hospitalization exceeds:**
+A. 3 days
+B. 5 days
+C. 7 days
+D. 10 days
+
+**Q38. What is the incentive to the End User (L0) for a "Child Aadhaar Enrolment" service?**
+A. ₹5
+B. ₹10
+C. ₹20
+D. ₹50
+
+**Q39. The cooling period limit for a new UPI user restricts transactions to a maximum of _____ in the first 24 hours.**
+A. ₹2,000
+B. ₹5,000
+C. ₹10,000
+D. ₹25,000
+
+**Q40. Which of the following entities is NOT listed as a partner for Home Loans under IPPB's Loan Referral Service?**
+A. HDFC Bank
+B. Axis Bank
+C. LIC Housing Finance
+D. Aadhar Housing Finance
+
+**Q41. For a "Basic Savings Account," what are the charges for cash deposit?**
+A. Free up to ₹10,000, then 0.50% charge.
+B. Free
+C. ₹20 per transaction.
+D. Not permitted.
+
+**Q42. Identify the correct SMS keyword to block an account (Account Freeze).**
+A. BLOCK <Account Number>
+B. STOP <Account Number>
+C. FREEZE <SPACE> <12-digit IPPB a/c number>
+D. LOCK <SPACE> <CIF ID>
+
+**Q43. What is the "Education Benefit" provided under the Group Accident Guard (GAG) policy?**
+A. Flat ₹5,00,000 for one child.
+B. 10% of Sum Insured or ₹1,00,000 (whichever is less) for maximum 2 children.
+C. Full reimbursement of school fees for 5 years.
+D. ₹25,000 per child per year.
+
+**Q44. Which Finacle menu code is used for "Account Closure"?**
+A. HCAAC
+B. HAFSM
+C. HACLINQ
+D. HSOLSTAT
+
+**Q45. The "DigiSmart Savings Account" allows a maximum yearly cumulative deposit of:**
+A. ₹1,00,000
+B. ₹2,00,000
+C. ₹5,00,000
+D. ₹10,00,000
+
+**Q46. For the "Antyodaya Shramik Suraksha Yojana," the risk commencement date starts:**
+A. Immediately upon payment.
+B. 7 days after receipt of premium.
+C. 15 days post the receipt of premium.
+D. From the 1st of the next month.
+
+**Q47. If a customer loses their IPPB QR Card, what is the reissue fee?**
+A. ₹10
+B. ₹25
+C. ₹50
+D. ₹100
+
+**Q48. Which of the following accounts CANNOT be directly linked to a POSA (Post Office Savings Account)?**
+A. Regular Savings Account
+B. Basic Savings Account
+C. DigiSmart Savings Account (before full KYC)
+D. Premium Savings Account
+
+**Q49. For Mobile Banking Fund Transfers, what is the maximum per-transaction limit for NEFT (Outward)?**
+A. ₹50,000
+B. ₹1,00,000
+C. ₹2,00,000
+D. ₹5,00,000
+
+**Q50. The incentive to the End User (L0) for performing a "Digital Life Certificate" (DLC) transaction is:**
+A. ₹10.00
+B. ₹15.40
+C. ₹25.00
+D. ₹33.90
+
+---
+
+### PART 3: Questions 51-75
+
+**Q51. Consider the following statements regarding the "Premium Aarogya Savings Account":**
+
+1. It includes unlimited tele-consultations with General Practitioners.
+2. It offers up to 40% discount on diagnostic services.
+3. The benefit tenure is 1 year, auto-renewed with the subscription fee.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+**Q52. Under the "Group Accident Guard" (GAG) policy, the "Evacuation Benefit" is limited to:**
+A. ₹1,000
+B. ₹5,000
+C. ₹10,000
+D. ₹25,000
+
+**Q53. Which of the following charges applies to "Cash Withdrawal" from a Current Account after the free limit is exhausted?**
+A. 0.25% of transaction value (Min ₹20).
+B. 0.50% of transaction value (Min ₹25).
+C. Flat ₹50 per transaction.
+D. Flat ₹25 per transaction.
+
+**Q54. For a "Regular Savings Account," non-maintenance of the Monthly Average Balance (MAB) attracts a charge of:**
+A. ₹50 per month
+B. ₹100 per month
+C. ₹10 per month
+D. Nil (NA)
+
+**Q55. In the Bajaj Allianz Group Personal Accident Insurance (Option 2 - ₹10 Lakh Sum Assured), what is the "Road Ambulance" cover limit per claim?**
+A. ₹500
+B. ₹1,000
+C. ₹2,000
+D. ₹5,000
+
+**Q56. Which Finacle menu is used for "Standing Instructions Inquiry"?**
+A. HSIM
+B. HSOLSTAT
+C. HALI
+D. HOIQ
+
+**Q57. Regarding the "Family Transportation Benefits" in the Group Accident Insurance, the benefit is payable if the insured is hospitalized at a location situated more than _____ from their residence.**
+A. 50 km
+B. 100 km
+C. 150 km
+D. 200 km
+
+**Q58. What is the fee for "Mobile Number Updation in Aadhaar" under CELC services?**
+A. Nil
+B. ₹25
+C. ₹50 (inclusive of GST)
+D. ₹100
+
+**Q59. If a Virtual Debit Card is issued for a "Current Account," the annual maintenance charge is:**
+A. Nil
+B. ₹25
+C. ₹50
+D. ₹100
+
+**Q60. Which of the following is an "Official Valid Document" (OVD) validation method used for transactions via the QR Card?**
+A. Entering the PIN.
+B. Biometric authentication only.
+C. OTP verification & OVD validation.
+D. Signature verification.
+
+**Q61. For "Unified Payments Interface" (UPI) outward transactions via the Mobile App, the per-day maximum count is:**
+A. 5
+B. 10
+C. 15
+D. 20
+
+**Q62. Under the "Antyodaya Shramik Suraksha Yojana," Plan B (Sum Insured ₹5 Lakh) does NOT include which of the following benefits?**
+A. Permanent Partial Disability
+B. Accidental Dismemberment
+C. Education Benefit
+D. Funeral Expenses
+
+**Q63. What is the incentive to the End User (L0) for opening a Premium Account with Aadhaar seeding and Virtual Debit Card issuance?**
+A. ₹26.00
+B. ₹33.90
+C. ₹48.30
+D. ₹52.00
+
+**Q64. "Fincluvation" is a joint initiative of:**
+A. IPPB and NITI Aayog
+B. DoP and IPPB
+C. IPPB and RBI
+D. Ministry of Finance and IPPB
+
+**Q65. Which of the following statements about the "Basic Savings Account" is true regarding the Debit Card?**
+A. A physical RuPay Debit Card is issued free of cost.
+B. A Virtual RuPay Debit Card is available for online transactions.
+C. No Debit Card (Physical or Virtual) is available.
+D. Only Visa Cards are issued.
+
+**Q66. The "Doorstep Banking" charge for "Digital Life Certificate" issuance is:**
+A. ₹20 + GST
+B. ₹50 + GST
+C. Nil
+D. Included in the ₹70 issuance fee.
+
+**Q67. In the Tata AIG Group Accident Guard policy, the "Coma" benefit (paying 100% of Sum Insured) is paid as:**
+A. A monthly pension.
+B. A one-time benefit.
+C. Reimbursement of medical bills only.
+D. A yearly installment for 5 years.
+
+**Q68. Which Finacle menu code is utilized for "Deferred charges collection (Adhoc Statement)"?**
+A. HGCHRG
+B. HDEFCALC
+C. HPSP
+D. HCRT
+
+**Q69. For "Domestic Money Transfer" (DMT), the first money transfer is free up to ₹500 within how many days of account opening?**
+A. 30 days
+B. 60 days
+C. 90 days
+D. 180 days
+
+**Q70. What is the cumulative limit for "POSB Sweep-In" transactions per day via the Mobile Banking App?**
+A. ₹2,00,000
+B. ₹5,00,000
+C. ₹10,00,000
+D. ₹15,00,000
+
+**Q71. Which insurance company is the partner for "PMJJBY" offered through IPPB?**
+A. SBI Life
+B. PNB MetLife
+C. HDFC Life
+D. Bajaj Allianz
+
+**Q72. The "Permanent Partial Disability" coverage in the Group Accident Insurance covers disability that occurs within _____ days of the accident date.**
+A. 90
+B. 180
+C. 365
+D. 730
+
+**Q73. Arrange the following "Antyodaya Shramik Suraksha Yojana" benefits in descending order of the amount payable (Plan A):**
+
+1. Accidental Death
+2. Education Benefit (Max)
+3. Prolonged Hospitalisation Benefit
+4. Funeral Expenses
+A. 1 > 2 > 3 > 4
+B. 1 > 2 > 4 > 3
+C. 2 > 1 > 3 > 4
+D. 1 > 3 > 2 > 4
+
+**Q74. Which of the following is correct regarding the "Cash Deposit" charges for a Current Account?**
+A. Always free.
+B. Free up to ₹10,000 per month; 0.50% charge thereafter (Min ₹25).
+C. Free up to ₹25,000 per month; 0.50% charge thereafter.
+D. Charged at flat ₹20 per transaction from the first transaction.
+
+**Q75. The "Initial Waiting Period" for the health benefits under the Premium Aarogya Savings Account is:**
+A. 30 days
+B. 15 days
+C. 7 days
+D. Waived
+
+---
+
+### ANSWER KEY & EXPLANATIONS
+
+**Q1. Correct Answer: B**
+
+* **Concept:** IPPB was launched as a pilot project on 30 January 2017 in **Ranchi (Jharkhand) and Raipur (Chhattisgarh)**.
+* **Elimination:** Varanasi, Patna, Hyderabad, etc., are incorrect distractors not mentioned as pilot cities.
+
+**Q2. Correct Answer: C**
+
+* **Concept:** IPPB was set up under the Department of Posts with **100% equity owned by the Government of India**.
+
+**Q3. Correct Answer: A**
+
+* **Concept:** **Fincluvation** is the specific initiative by DoP & IPPB to invite fintech startups to co-create financial inclusion solutions.
+
+**Q4. Correct Answer: B**
+
+* **Concept:** For the Premium Aarogya Savings Account, the annual renewal subscription fee for existing customers is **₹99 + GST**. (New account opening is ₹149 + GST).
+
+**Q5. Correct Answer: A**
+
+* **Concept:** The interest rate slab is **2.00%** for balances up to ₹1 Lakh and **2.25%** for balances above ₹1 Lakh and up to ₹2 Lakh.
+
+**Q6. Correct Answer: B**
+
+* **Concept:** The tagline printed on the document is **"(Aapka Bank, Aapke Dwaar)"**.
+
+**Q7. Correct Answer: C**
+
+* **Concept:** For customers, the maximum capping of SMS charges per quarter is **₹100 + GST**. (For merchants, it is ₹50 + GST effective Oct 1, 2024).
+
+**Q8. Correct Answer: B**
+
+* **Concept:** The Basic Savings Account offers **4 free withdrawals** per month. Post the free limit, charges of 0.50% (Min ₹25) apply.
+
+**Q9. Correct Answer: D**
+
+* **Concept:** All three statements are correct. DigiSmart is app-based, opens in a negative lien of ₹149+GST, and has **No Monthly Average Balance** requirement.
+
+**Q10. Correct Answer: B**
+
+* **Concept:** For new UPI users, there is a cooling period limit where a maximum of ₹5,000 worth of transactions can be done in the **first 24 hours**.
+
+**Q11. Correct Answer: C**
+
+* **Concept:** Once a Premium (SBPRM) account is downgraded, it is eligible for an upgrade only after a **180-day cooling period**.
+
+**Q12. Correct Answer: C**
+
+* **Concept:** IPPB offers International Money Transfer services in partnership with **Ria Money Transfer**.
+
+**Q13. Correct Answer: B**
+
+* **Concept:** For a Regular Savings Account, the Virtual Debit Card issuance charge is **₹25 (inclusive of taxes)**.
+
+**Q14. Correct Answer: B**
+
+* **Concept:** Doorstep Banking charges are **Flat ₹20 + GST** per visit per customer serviced beyond 1 km from the Post Office.
+
+**Q15. Correct Answer: B**
+
+* **Concept:** The cumulative transaction limit for sweep-in from a linked POSA is **₹50,000** for the first 3 days post successful linkage.
+
+**Q16. Correct Answer: A**
+
+* **Concept:** Account closure charges are **₹50 + GST** if the account is closed after 3 months of opening/upgradation. (Charges like Mobile update are ₹50 inclusive of GST, not + GST; QR card reissue is ₹25).
+
+**Q17. Correct Answer: B**
+
+* **Concept:** The Maximum End of Day Balance is **₹2,00,000**. Any amount above this is swept to the linked POSA.
+
+**Q18. Correct Answer: A**
+
+* **Concept:** AePS Mini Statement charges over a non-IPPB network are **₹5 per transaction** post the free limit.
+
+**Q19. Correct Answer: B**
+
+* **Concept:** The document lists **Tata AIG** and **Bajaj Allianz** as providers for the Group Accident Guard (GAG) policy.
+
+**Q20. Correct Answer: B**
+
+* **Concept:** A key benefit of the Premium account is **₹5 Cashback on Electricity Bill payment per month**.
+
+**Q21. Correct Answer: B**
+
+* **Concept:** The fee for DLC generation is **₹70 (inclusive of GST/CESS)**.
+
+**Q22. Correct Answer: D**
+
+* **Concept:** The Salary Account features zero balance and free statements, but the document **does not** mention a complimentary accidental insurance cover of ₹50 Lakhs as a default feature.
+
+**Q23. Correct Answer: D**
+
+* **Concept:** Failure to complete biometric verification within 12 months for DigiSmart accounts results in closure with charges of **₹150 + GST**.
+
+**Q24. Correct Answer: C**
+
+* **Concept:** Plan A of the Antyodaya Shramik Suraksha Yojana (₹10 Lakh Sum Insured) has a premium of **₹499**.
+
+**Q25. Correct Answer: C**
+
+* **Concept:** The **DigiSmart Savings Account** is explicitly described as the solution for individuals preferring technology-driven banking, opened via the app.
+
+**Q26. Correct Answer: A**
+
+* **Concept:** 1-Q (CKYCACOP is Account Opening), 2-P (HACCBAL is Balance Inquiry), 3-S (CNFTM/CHQREQ is Cheque Request), 4-R (HALM is Lien Marking).
+
+**Q27. Correct Answer: A**
+
+* **Concept:** For **Low KYC** customers, the Domestic Money Transfer limit is **₹5,000** per transaction and per day (cumulative).
+
+**Q28. Correct Answer: C**
+
+* **Concept:** The Cash Deposit limit at a **Branch Post Office** (or via GDS/Postman) is **₹25,000** per customer per day. (Head/Sub Post Offices have a ₹2L limit).
+
+**Q29. Correct Answer: A**
+
+* **Concept:** For IMPS (Assisted Mode) between ₹2,001 and ₹5,000, the charge is **₹5**. (Note: The table shows Savings/Current Account charges for Mobile Banking vs Access Point. For Access Point/Doorstep, ₹2,001-5,000 is ₹20. Wait, let's re-verify the table. The table says "Charges at Access Point... Savings Account: INR 20" for 2,001-5,000. However, "Charges for Mobile Banking... Savings Account: INR 05". The question asks "Assisted Mode (Access Point)".
+* *Correction/Refinement based on Source 831:*
+* Access Point (Assisted): ₹2,001-5,000 = **INR 20**.
+* Mobile Banking: ₹2,001-5,000 = **INR 05**.
+* *Self-Correction:* The correct option based on the question "Assisted Mode" is **₹20**.
+* *Let's check the options provided in Q29:* A(5), B(10), C(20), D(50). Correct answer is **C (20)**.
+* *(Note: Explanation updated to match Option C).*
+
+
+
+**Q30. Correct Answer: B**
+
+* **Concept:** Sweep-out services are available **24x7 on all days**. (Sweep-in is restricted from BOD to 11:00 PM).
+
+**Q31. Correct Answer: C**
+
+* **Concept:** The Group Accident Insurance exclusions list includes **Bacterial Infections**, Disease, AIDS, etc. Terrorism is listed as "Covered".
+
+**Q32. Correct Answer: B**
+
+* **Concept:** The toll-free Phone Banking number is **155299**.
+
+**Q33. Correct Answer: C**
+
+* **Concept:** NACH Mandate Registration charges are **₹50 + GST**.
+
+**Q34. Correct Answer: C**
+
+* **Concept:** The Balance certificate charge is **₹50** per instance.
+
+**Q35. Correct Answer: B**
+
+* **Concept:** Mobile Banking outward RTGS is subject to availability of balance; sweep-in is unavailable after **8:00 PM**, limiting transactions if the core balance (max ₹2L) is insufficient.
+
+**Q36. Correct Answer: A**
+
+* **Concept:** The Menu for "Account Aadhaar Seeding / Inquiry" is **CNFTM / CAAS**.
+
+**Q37. Correct Answer: C**
+
+* **Concept:** The Prolonged Hospitalisation Benefit applies if hospitalized for a continuous period exceeding **7 days**.
+
+**Q38. Correct Answer: B**
+
+* **Concept:** The incentive to the End User (L0) for **CELC - Child Aadhaar Enrolment** is **₹10**.
+
+**Q39. Correct Answer: B**
+
+* **Concept:** The cooling period limits new UPI users to **₹5,000** in the first 24 hours.
+
+**Q40. Correct Answer: C**
+
+* **Concept:** The partners listed are HDFC, Axis, Homefirst, and Aadhar Housing Finance. **LIC Housing Finance** is not mentioned.
+
+**Q41. Correct Answer: B**
+
+* **Concept:** Cash deposit charges for Basic Savings Accounts are **Free**.
+
+**Q42. Correct Answer: C**
+
+* **Concept:** The format is **FREEZE <SPACE> <12-digit IPPB a/c number>**.
+
+**Q43. Correct Answer: B**
+
+* **Concept:** Education Benefit is **10% of SI or ₹1,00,000** (whichever is less) for maximum 2 children.
+
+**Q44. Correct Answer: A**
+
+* **Concept:** **HCAAC** is the menu for CASA Closure.
+
+**Q45. Correct Answer: B**
+
+* **Concept:** A maximum yearly cumulative deposit of **₹2,00,000** is allowed in the DigiSmart Savings Account.
+
+**Q46. Correct Answer: C**
+
+* **Concept:** Risk commencement starts **15 days post the receipt of premium** to eliminate fraud.
+
+**Q47. Correct Answer: B**
+
+* **Concept:** The QR Card reissue fee is **₹25**.
+
+**Q48. Correct Answer: C**
+
+* **Concept:** POSA linkage is **not available** with Digital (DigiSmart) savings accounts until they are converted to full KYC accounts.
+
+**Q49. Correct Answer: C**
+
+* **Concept:** The Maximum Amount Per Transaction limit for NEFT (Outward) via Mobile Banking is **₹2,00,000**.
+
+**Q50. Correct Answer: B**
+
+* **Concept:** The incentive for Digital Life Certificate (DLC) is **₹15.40**.
+
+**Q51. Correct Answer: D**
+
+* **Concept:** All listed benefits (Unlimited tele-consultations, up to 40% discount on diagnostics, 1-year tenure) are features of the **Premium Aarogya Savings Account**.
+
+**Q52. Correct Answer: B**
+
+* **Concept:** Evacuation Benefit in GAG is **₹5,000** (paid as a one-time benefit).
+
+**Q53. Correct Answer: B**
+
+* **Concept:** For Current Accounts, cash withdrawal after the free limit (₹25,000/month) is charged at **0.50% of transaction value subject to minimum ₹25**.
+
+**Q54. Correct Answer: D**
+
+* **Concept:** Non-maintenance charges on MAB for Regular Savings Accounts are **NA (Nil)** as there is no MAB requirement.
+
+**Q55. Correct Answer: B**
+
+* **Concept:** Under Bajaj Allianz Option 2, Road Ambulance cover is **₹1,000 per claim**.
+
+**Q56. Correct Answer: A**
+
+* **Concept:** **HSIM** is the menu for Standing Instruction Maintenance/Inquiry.
+
+**Q57. Correct Answer: C**
+
+* **Concept:** Family Transportation Benefits apply if the hospital is situated more than **150 km** from the residence.
+
+**Q58. Correct Answer: C**
+
+* **Concept:** The charge is **₹50** (inclusive of GST).
+
+**Q59. Correct Answer: B**
+
+* **Concept:** The Virtual Debit Card Annual Maintenance for a Current Account is **₹25**.
+
+**Q60. Correct Answer: C**
+
+* **Concept:** Transactions via QR Card are authenticated through **OTP verification & OVD validation**.
+
+**Q61. Correct Answer: D**
+
+* **Concept:** The Per Day Max Count for UPI (Outward) on the Mobile App is **20**.
+
+**Q62. Correct Answer: C**
+
+* **Concept:** Plan B (₹5 Lakh SI) of Antyodaya marks **Education Benefit** as "Not Available".
+
+**Q63. Correct Answer: C**
+
+* **Concept:** The incentive is **₹48.30** (Item 19 in the incentive list: Premium Account with Aadhaar seeding & Virtual Debit Card).
+
+**Q64. Correct Answer: B**
+
+* **Concept:** Fincluvation is an initiative of **DoP & IPPB**.
+
+**Q65. Correct Answer: B**
+
+* **Concept:** The Basic Savings Account offers a **RuPay Virtual Debit Card** for online transactions.
+
+**Q66. Correct Answer: C**
+
+* **Concept:** There are **Nil charges** (No doorstep charges) levied for DLC issuance; only the issuance fee of ₹70 applies.
+
+**Q67. Correct Answer: B**
+
+* **Concept:** The Coma benefit (₹1,00,000 or ₹50,000) is paid as a **one-time benefit**.
+
+**Q68. Correct Answer: B**
+
+* **Concept:** **HDEFCALC** is used for Deferred charges collection (Adhoc Statement).
+
+**Q69. Correct Answer: C**
+
+* **Concept:** The first money transfer is free up to ₹500 within **90 days** of account opening.
+
+**Q70. Correct Answer: C**
+
+* **Concept:** The Max Value Per Day for POSB Sweep-In via Mobile App (MB App) or CBS is **₹10,00,000**.
+
+**Q71. Correct Answer: B**
+
+* **Concept:** PMJJBY is offered via **pnb MetLife**.
+
+**Q72. Correct Answer: C**
+
+* **Concept:** Permanent Partial Disability covers disability occurring within **365 days** of the accident date.
+
+**Q73. Correct Answer: A**
+
+* **Concept:** Plan A amounts: Accidental Death (10L) > Education Benefit (1L) > Prolonged Hospitalisation (10k) > Funeral (5k). So **1 > 2 > 3 > 4**.
+
+**Q74. Correct Answer: B**
+
+* **Concept:** For Current Accounts, Cash Deposit is **Free up to ₹10,000 per month**, then charges of **0.50% (Min ₹25)** apply.
+
+**Q75. Correct Answer: D**
+
+* **Concept:** For the Premium Aarogya Savings Account, the Initial Waiting Period, Specific Disease waiting period, and PED waiting period are all **Waived**.
