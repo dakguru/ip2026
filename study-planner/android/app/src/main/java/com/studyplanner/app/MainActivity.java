@@ -13,7 +13,33 @@ public class MainActivity extends BridgeActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         // 1. Install Android 12 Splash Screen
-        SplashScreen.installSplashScreen(this);
+        // 1. Install Android 12 Splash Screen with Exit Animation
+        SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
+        splashScreen.setOnExitAnimationListener(splashScreenView -> {
+            final android.view.View view = splashScreenView.getView();
+            final android.view.View iconView = splashScreenView.getIconView();
+
+            // Fade out the entire splash view
+            android.animation.ObjectAnimator fade = android.animation.ObjectAnimator.ofFloat(view, android.view.View.ALPHA, 1f, 0f);
+            fade.setInterpolator(new android.view.animation.AccelerateInterpolator());
+            fade.setDuration(400L);
+
+            // Scale down the icon slightly
+            android.animation.ObjectAnimator scaleX = android.animation.ObjectAnimator.ofFloat(iconView, android.view.View.SCALE_X, 1f, 0.8f);
+            android.animation.ObjectAnimator scaleY = android.animation.ObjectAnimator.ofFloat(iconView, android.view.View.SCALE_Y, 1f, 0.8f);
+            scaleX.setDuration(400L);
+            scaleY.setDuration(400L);
+
+            android.animation.AnimatorSet set = new android.animation.AnimatorSet();
+            set.playTogether(fade, scaleX, scaleY);
+            set.addListener(new android.animation.AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(android.animation.Animator animation) {
+                    splashScreenView.remove();
+                }
+            });
+            set.start();
+        });
         super.onCreate(savedInstanceState);
 
         // 2. Optimization: Enhance WebView Performance

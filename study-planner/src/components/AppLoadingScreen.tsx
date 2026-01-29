@@ -53,54 +53,44 @@ export default function AppLoadingScreen() {
         <AnimatePresence>
             {isVisible && (
                 <motion.div
-                    className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950"
+                    // Match Native Gradient: 45deg, #0f172a, #dc2626, #7c3aed
+                    className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[linear-gradient(45deg,#0f172a,#dc2626,#7c3aed)]"
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                 >
                     <div className="flex flex-col items-center justify-center p-8 w-full max-w-md">
 
-                        {/* Logo Container */}
+                        {/* Logo Container - Matches Native Splash Icon Position */}
                         <motion.div
-                            initial={{ scale: 0.95, opacity: 0 }}
+                            initial={{ scale: 1, opacity: 1 }} // Start identical to native
                             animate={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 1.2, ease: "easeOut" }}
                             className="relative mb-8"
                         >
                             <img
-                                src="/official-logo.png"
+                                src="/dak-guru-round.png" // Use the round logo used in splash
                                 alt="Dak Guru Logo"
-                                className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-sm"
-                            />
-
-                            {/* Subtle Breathing Glow behind logo (Optional/Micro-interaction) */}
-                            <motion.div
-                                className="absolute inset-0 bg-yellow-400/20 blur-3xl rounded-full -z-10"
-                                animate={{ opacity: [0.3, 0.6, 0.3], scale: [0.9, 1.1, 0.9] }}
-                                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                                className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-lg"
                             />
                         </motion.div>
 
-                        {/* Text Container */}
+                        {/* Text Container - "Learn. Practice. Succeed" */}
                         <motion.div
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-                            className="text-center space-y-3"
+                            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }} // Delay to appear right after splash fade
+                            className="text-center space-y-4"
                         >
                             {/* Brand Name */}
-                            <h1 className="text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 font-sans">
+                            <h1 className="text-3xl font-bold tracking-tight text-white drop-shadow-md font-sans">
                                 Dak Guru
                             </h1>
 
                             {/* Tagline */}
-                            <p className="text-sm tracking-[0.15em] text-slate-500 font-light uppercase">
-                                Learn, Practice, Succeed
+                            <p className="text-sm tracking-[0.2em] text-white/90 font-medium uppercase drop-shadow-sm">
+                                Learn. Practice. Succeed
                             </p>
                         </motion.div>
-
-                        {/* Subtle Loader (if needed, but kept minimal aka "pulsing" as requested) */}
-                        {/* We use the logo glow for the 'active' feeling, no extra spinner needed as per 'calm' requirement */}
                     </div>
                 </motion.div>
             )}
