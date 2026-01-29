@@ -237,34 +237,7 @@ export default function PricingPage() {
                     email: userEmail,
                     contact: ""
                 },
-                config: {
-                    display: {
-                        blocks: {
-                            utib: { // name for UPI Intent Block
-                                name: "Pay via UPI App",
-                                instruments: [
-                                    {
-                                        method: "upi",
-                                        flows: ["intent"]
-                                    }
-                                ]
-                            },
-                            other: {
-                                name: "Other Payment Modes",
-                                instruments: [
-                                    { method: "card" },
-                                    { method: "netbanking" },
-                                    { method: "wallet" },
-                                    { method: "upi" } // Regular collect flow
-                                ]
-                            }
-                        },
-                        sequence: ["block.utib", "block.other"],
-                        preferences: {
-                            show_default_blocks: false // Only show our custom blocks
-                        }
-                    }
-                },
+
                 theme: {
                     color: "#2563eb"
                 }
