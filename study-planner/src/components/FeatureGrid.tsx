@@ -187,11 +187,20 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                     <Link
                         key={idx}
                         href={item.link}
+                        onClick={(e) => {
+                            // Force navigation via router if standard Link fails or for redundancy
+                            // We don't preventDefault here to allow middle-click/ctrl-click (new tab) to still potentially work
+                            // But usually router.push happens immediately. 
+                            // To be safe for "standard" left click:
+                            if (!e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey) {
+                                e.preventDefault();
+                                router.push(item.link);
+                            }
+                        }}
                         className={`group relative block w-full ${customClass}`}
                     >
                         <div className={`relative h-full w-full bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 ${borderBottom} ${borderRadius} ${item.border} transition-all duration-300 ease-out shadow-sm hover:shadow-xl ${item.shadow} hover:-translate-y-1 overflow-hidden group-hover:border-b-4`}>
 
-                            {/* Badge & Visit Icon */}
                             {/* Badge & Visit Icon */}
                             <div className={`absolute z-20 flex items-center gap-0.5 md:gap-1 ${isMobileApp ? 'top-1.5 right-1.5' : 'top-2 right-2 md:top-3 md:right-3'}`}>
                                 {/* New Unread Count Badge */}
