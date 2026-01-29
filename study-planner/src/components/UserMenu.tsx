@@ -59,8 +59,9 @@ export function UserMenu() {
     const handleLogout = async () => {
         try {
             await fetch('/api/auth/logout', { method: 'POST' });
-            router.push('/login');
-            router.refresh();
+            // Force a hard navigation to ensure cookies are cleared and middleware sees the fresh state
+            // This prevents the issue where middleware redirects back to /planner because it still sees the token
+            window.location.href = '/login';
         } catch (error) {
             console.error('Logout failed', error);
         }
