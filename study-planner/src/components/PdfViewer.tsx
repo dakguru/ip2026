@@ -5,6 +5,9 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Loader2, Download, AlertCircle, RefreshCw } from 'lucide-react';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
+import { Capacitor } from '@capacitor/core';
+import { Filesystem, Directory } from '@capacitor/filesystem';
+import { Toast } from '@capacitor/toast';
 
 // Configure worker - Use CDN for better compatibility in Capacitor/Android
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -63,13 +66,62 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         return () => window.removeEventListener('resize', updateWidth);
     }, []);
 
-    const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = url.split('/').pop() || 'document.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+    const handleDownload = async () => {
+        const filename = url.split('/').pop() || 'document.pdf';
+
+        if (!Capacitor.isNativePlatform()) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            return;
+        }
+
+        // Native Download Logic for PDF Viewer
+        try {
+            // 1. Permissions
+            try {
+                const permStatus = await Filesystem.checkPermissions();
+                if (permStatus.publicStorage !== 'granted') {
+                    await Filesystem.requestPermissions();
+                }
+            } catch (e) {
+                console.warn("Permission check failed", e);
+            }
+
+            await Toast.show({ text: 'Starting download...', duration: 'short' });
+
+            // 2. Fetch
+            const absoluteUrl = url.startsWith('http') ? url : window.location.origin + url;
+            const response = await fetch(absoluteUrl);
+            const blob = await response.blob();
+
+            // 3. Base64
+            const reader = new FileReader();
+            reader.readAsDataURL(blob);
+            reader.onloadend = async () => {
+                const base64data = reader.result as string;
+                const data = base64data.split(',')[1];
+
+                try {
+                    await Filesystem.writeFile({
+                        path: filename,
+                        data: data,
+                        directory: Directory.Documents,
+                        recursive: true
+                    });
+                    await Toast.show({ text: 'Saved to Documents folder', duration: 'long' });
+                } catch (err) {
+                    console.error("Write failed", err);
+                    await Toast.show({ text: 'Download failed to save', duration: 'long' });
+                }
+            };
+        } catch (error) {
+            console.error("Download failed", error);
+            await Toast.show({ text: 'Download failed', duration: 'long' });
+        }
     };
 
     const LoadingUI = () => (

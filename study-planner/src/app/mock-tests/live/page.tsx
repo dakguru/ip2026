@@ -19,6 +19,7 @@ interface LeaderboardEntry {
     userName: string;
     score: number;
     submittedAt: string;
+    timeTaken?: number;
 }
 
 declare global {
@@ -349,6 +350,16 @@ export default function LiveMockTestPage() {
         });
 
         if (isNativeApp) {
+            // Permission request
+            try {
+                const permStatus = await Filesystem.checkPermissions();
+                if (permStatus.publicStorage !== 'granted') {
+                    await Filesystem.requestPermissions();
+                }
+            } catch (e) {
+                console.warn("Permission check failed", e);
+            }
+
             const pdfBase64 = doc.output('datauristring').split(',')[1];
             const fileName = `DakGuru_Result_${Date.now()}.pdf`;
             try {
@@ -395,15 +406,15 @@ export default function LiveMockTestPage() {
         return (
             <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 flex items-center justify-center font-sans">
                 <div className="max-w-2xl w-full bg-white dark:bg-zinc-900 rounded-3xl shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
-                    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-white relative overflow-hidden">
+                    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 md:p-8 text-white relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-2xl"></div>
-                        <h1 className="text-3xl font-extrabold mb-2 relative z-10">All India Live Mock Test</h1>
-                        <p className="text-indigo-100 relative z-10">Sample Test for LDCE IP 2026 Aspirants</p>
-                        <div className="mt-2 inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold ring-1 ring-white/30">Free for Everyone</div>
+                        <h1 className="text-2xl md:text-3xl font-extrabold mb-1 relative z-10">All India Live Mock Test</h1>
+                        <p className="text-sm md:text-base text-indigo-100 relative z-10">Sample Test for LDCE IP 2026 Aspirants</p>
+                        <div className="mt-2 inline-block px-3 py-1 bg-white/20 rounded-full text-[10px] md:text-xs font-bold ring-1 ring-white/30">Free for Everyone</div>
                     </div>
 
-                    <div className="p-8">
-                        <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 flex items-center gap-2">
+                    <div className="p-5 md:p-8">
+                        <h2 className="text-lg md:text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-5 flex items-center gap-2">
                             <AlertCircle className="w-5 h-5 text-indigo-600" />
                             Rules & Regulations
                         </h2>
@@ -741,17 +752,17 @@ export default function LiveMockTestPage() {
 
                 <div className="max-w-5xl mx-auto space-y-8">
                     {/* Header Section */}
-                    <div className="text-center pt-8 pb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-bold uppercase tracking-wider mb-6 border border-green-200 dark:border-green-800">
-                            <Sparkles className="w-4 h-4 fill-green-600 dark:fill-green-400" />
+                    <div className="text-center pt-4 md:pt-8 pb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                        <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] md:text-sm font-bold uppercase tracking-wider mb-4 md:mb-6 border border-green-200 dark:border-green-800">
+                            <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 fill-green-600 dark:fill-green-400" />
                             {submissionStatus === 'already_submitted' ? 'Test Already Completed' : 'Submission Successful'}
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">
+                        <h1 className="text-3xl md:text-6xl font-black text-slate-900 dark:text-white mb-2 md:mb-4 tracking-tight">
                             {percentage >= 80 ? "Outstanding!" :
                                 percentage >= 60 ? "Great Job!" :
                                     percentage >= 40 ? "Good Effort!" : "Keep Practicing!"}
                         </h1>
-                        <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-slate-500 dark:text-slate-400 text-base md:text-xl max-w-2xl mx-auto leading-relaxed">
                             Search for the perfect balance between speed and accuracy to master the exam.
                         </p>
                     </div>
@@ -759,24 +770,24 @@ export default function LiveMockTestPage() {
                     {/* Stats Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
                         {/* 1. Score Card (Hero) */}
-                        <div className="md:col-span-2 bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800 rounded-[2rem] p-8 text-white relative overflow-hidden shadow-2xl shadow-indigo-600/30 group">
+                        <div className="md:col-span-2 bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800 rounded-3xl md:rounded-[2rem] p-6 md:p-8 text-white relative overflow-hidden shadow-2xl shadow-indigo-600/30 group">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-white/20 transition-all duration-700"></div>
                             <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-500/20 rounded-full blur-2xl -ml-10 -mb-10 group-hover:scale-150 transition-transform duration-700"></div>
 
                             <div className="relative z-10 flex flex-col justify-between h-full">
                                 <div>
-                                    <h3 className="text-indigo-200 font-bold uppercase tracking-widest text-xs mb-1">Total Score</h3>
+                                    <h3 className="text-indigo-200 font-bold uppercase tracking-widest text-[10px] md:text-xs mb-1">Total Score</h3>
                                     <div className="flex items-baseline gap-2">
-                                        <span className="text-6xl md:text-7xl font-black tracking-tighter">{score}</span>
-                                        <span className="text-2xl text-indigo-300 font-medium">/ 30</span>
+                                        <span className="text-5xl md:text-7xl font-black tracking-tighter">{score}</span>
+                                        <span className="text-lg md:text-2xl text-indigo-300 font-medium">/ 30</span>
                                     </div>
                                 </div>
-                                <div className="mt-8">
+                                <div className="mt-6 md:mt-8">
                                     <div className="flex justify-between items-end mb-2">
-                                        <span className="text-sm font-bold opacity-90">Performance</span>
-                                        <span className="text-2xl font-bold">{percentage}%</span>
+                                        <span className="text-xs md:text-sm font-bold opacity-90">Performance</span>
+                                        <span className="text-xl md:text-2xl font-bold">{percentage}%</span>
                                     </div>
-                                    <div className="h-3 bg-black/20 rounded-full overflow-hidden backdrop-blur-sm">
+                                    <div className="h-2.5 md:h-3 bg-black/20 rounded-full overflow-hidden backdrop-blur-sm">
                                         <div
                                             className="h-full bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-1000 ease-out"
                                             style={{ width: `${percentage}%` }}
@@ -787,69 +798,72 @@ export default function LiveMockTestPage() {
                         </div>
 
                         {/* 2. Time Taken */}
-                        <div className="bg-white dark:bg-zinc-900 rounded-[2rem] p-6 border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col justify-center items-center text-center group hover:border-blue-500/30 transition-colors">
-                            <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
-                                <Timer className="w-7 h-7" strokeWidth={2} />
+                        <div className="bg-white dark:bg-zinc-900 rounded-3xl md:rounded-[2rem] p-5 md:p-6 border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col justify-center items-center text-center group hover:border-blue-500/30 transition-colors">
+                            <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <Timer className="w-6 h-6 md:w-7 md:h-7" strokeWidth={2} />
                             </div>
-                            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-1">
+                            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-0.5 md:mb-1">
                                 {mins}m {secs}s
                             </h3>
-                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Time Taken</p>
+                            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Time Taken</p>
                         </div>
 
                         {/* 3. Accuracy & Answers */}
-                        <div className="bg-white dark:bg-zinc-900 rounded-[2rem] p-6 border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col justify-center gap-4 group hover:border-green-500/30 transition-colors">
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded-2xl flex items-center justify-center text-green-600 dark:text-green-400 shrink-0">
-                                    <CheckCircle2 className="w-6 h-6" />
+                        <div className="bg-white dark:bg-zinc-900 rounded-3xl md:rounded-[2rem] p-5 md:p-6 border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col justify-center gap-3 md:gap-4 group hover:border-green-500/30 transition-colors">
+                            <div className="flex items-center gap-3 md:gap-4">
+                                <div className="w-10 h-10 md:w-12 md:h-12 bg-green-50 dark:bg-green-900/20 rounded-xl md:rounded-2xl flex items-center justify-center text-green-600 dark:text-green-400 shrink-0">
+                                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6" />
                                 </div>
-                                <div>
-                                    <h4 className="text-2xl font-bold text-slate-900 dark:text-white">{Math.round(score / 2)}</h4>
-                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Correct Ans</p>
+                                <div className="min-w-0">
+                                    <h4 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white truncate">{Math.round(score / 2)}</h4>
+                                    <p className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-wider">Correct Ans</p>
                                 </div>
                             </div>
                             <div className="w-full h-px bg-slate-100 dark:bg-zinc-800"></div>
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded-2xl flex items-center justify-center text-red-600 dark:text-red-400 shrink-0">
-                                    <XCircle className="w-6 h-6" />
+                            <div className="flex items-center gap-3 md:gap-4">
+                                <div className="w-10 h-10 md:w-12 md:h-12 bg-red-50 dark:bg-red-900/20 rounded-xl md:rounded-2xl flex items-center justify-center text-red-600 dark:text-red-400 shrink-0">
+                                    <XCircle className="w-5 h-5 md:w-6 md:h-6" />
                                 </div>
-                                <div>
-                                    <h4 className="text-2xl font-bold text-slate-900 dark:text-white">{15 - Math.round(score / 2)}</h4>
-                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Incorrect/Skipped</p>
+                                <div className="min-w-0">
+                                    <h4 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white truncate">{total - Math.round(score / 2)}</h4>
+                                    <p className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-wider">Wrong/Skipped</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 px-4">
                         <button
                             onClick={handleDownloadPDF}
-                            className="w-full md:w-auto px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-bold shadow-2xl shadow-slate-900/20  active:scale-95 transition-all flex items-center justify-center gap-3 group"
+                            className="w-full md:w-auto px-6 md:px-8 py-3.5 md:py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-bold shadow-2xl shadow-slate-900/20 active:scale-95 transition-all flex items-center justify-center gap-2 md:gap-3 group text-sm md:text-base"
                         >
                             <FileDown className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
                             <span>Download Answer Sheet</span>
                         </button>
 
-                        <Link href="/" className="w-full md:w-auto text-center px-8 py-4 bg-white dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 border border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 rounded-xl font-bold transition-all">
+                        <Link href="/" className="w-full md:w-auto text-center px-6 md:px-8 py-3.5 md:py-4 bg-white dark:bg-zinc-900 text-slate-600 dark:text-zinc-400 border border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 rounded-xl font-bold transition-all text-sm md:text-base">
                             Back to Home
                         </Link>
                     </div>
 
                     {/* Leaderboard Section */}
                     {/* Leaderboard Section - Only visible for Admin or explicitly allowed tests */}
-                    {true ? (
+                    {role === 'admin' ? (
                         <div className="bg-white dark:bg-zinc-900 rounded-[2rem] border border-slate-100 dark:border-zinc-800 shadow-xl shadow-slate-100/50 dark:shadow-none overflow-hidden animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
                             <div className="p-6 md:p-8 flex items-center justify-between border-b border-slate-100 dark:border-zinc-800">
                                 <div>
-                                    <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                    <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center justify-center gap-2">
                                         <Trophy className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                                         Live Leaderboard
                                     </h2>
                                     <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Real-time rankings of all aspirants</p>
                                 </div>
-                                <div className="bg-slate-100 dark:bg-zinc-800 px-3 py-1 rounded-full text-xs font-bold text-slate-600 dark:text-zinc-400 border border-slate-200 dark:border-zinc-700">
-                                    Top 50
+                                <div className="flex flex-col items-end gap-2">
+                                    <div className="bg-slate-100 dark:bg-zinc-800 px-3 py-1 rounded-full text-xs font-bold text-slate-600 dark:text-zinc-400 border border-slate-200 dark:border-zinc-700">
+                                        Top 50
+                                    </div>
+                                    <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">Admin View</span>
                                 </div>
                             </div>
 
@@ -857,10 +871,10 @@ export default function LiveMockTestPage() {
                                 <table className="w-full text-left">
                                     <thead className="bg-slate-50/50 dark:bg-zinc-800/20">
                                         <tr>
-                                            <th className="py-4 px-6 md:px-8 text-xs font-bold text-slate-400 uppercase tracking-wider">Rank</th>
-                                            <th className="py-4 px-6 md:px-8 text-xs font-bold text-slate-400 uppercase tracking-wider">Aspirant</th>
-                                            <th className="py-4 px-6 md:px-8 text-xs font-bold text-slate-400 uppercase tracking-wider text-right">Score</th>
-                                            <th className="py-4 px-6 md:px-8 text-xs font-bold text-slate-400 uppercase tracking-wider text-right">Time</th>
+                                            <th className="py-3 px-4 md:px-8 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Rank</th>
+                                            <th className="py-3 px-4 md:px-8 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Aspirant</th>
+                                            <th className="py-3 px-4 md:px-8 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider text-right">Score</th>
+                                            <th className="py-3 px-4 md:px-8 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider text-right">Time</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-slate-100 dark:divide-zinc-800">
@@ -868,8 +882,8 @@ export default function LiveMockTestPage() {
                                             const isTop3 = index < 3;
                                             return (
                                                 <tr key={index} className="group hover:bg-slate-50 dark:hover:bg-zinc-800/40 transition-colors">
-                                                    <td className="py-4 px-6 md:px-8">
-                                                        <div className={`w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm
+                                                    <td className="py-3 px-4 md:px-8">
+                                                        <div className={`w-7 h-7 flex items-center justify-center rounded-full font-bold text-xs
                                                         ${index === 0 ? 'bg-yellow-100 text-yellow-700' :
                                                                 index === 1 ? 'bg-slate-200 text-slate-700' :
                                                                     index === 2 ? 'bg-orange-100 text-orange-700' : 'text-slate-500'}
@@ -877,21 +891,21 @@ export default function LiveMockTestPage() {
                                                             {index + 1}
                                                         </div>
                                                     </td>
-                                                    <td className="py-4 px-6 md:px-8">
-                                                        <div className="flex items-center gap-3">
-                                                            <div className="w-8 h-8 rounded-full bg-slate-900 dark:bg-white flex items-center justify-center text-white dark:text-slate-900 text-xs font-bold">
+                                                    <td className="py-3 px-4 md:px-8">
+                                                        <div className="flex items-center gap-2 md:gap-3">
+                                                            <div className="w-7 h-7 rounded-full bg-slate-900 dark:bg-white flex items-center justify-center text-white dark:text-slate-900 text-[10px] font-bold">
                                                                 {entry.userName.charAt(0).toUpperCase()}
                                                             </div>
-                                                            <span className={`font-semibold ${isTop3 ? 'text-slate-900 dark:text-white' : 'text-slate-600 dark:text-zinc-300'}`}>
+                                                            <span className={`font-semibold text-xs md:text-sm truncate ${isTop3 ? 'text-slate-900 dark:text-white' : 'text-slate-600 dark:text-zinc-300'}`}>
                                                                 {entry.userName}
                                                             </span>
                                                         </div>
                                                     </td>
-                                                    <td className="py-4 px-6 md:px-8 text-right font-bold text-slate-900 dark:text-white">
+                                                    <td className="py-3 px-4 md:px-8 text-right font-bold text-slate-900 dark:text-white text-sm">
                                                         {entry.score}
                                                     </td>
-                                                    <td className="py-4 px-6 md:px-8 text-right text-sm text-slate-500 dark:text-slate-400 font-mono">
-                                                        {format(new Date(entry.submittedAt), 'MM/dd')}
+                                                    <td className="py-3 px-4 md:px-8 text-right text-xs md:text-sm text-slate-500 dark:text-slate-400">
+                                                        {Math.floor((entry.timeTaken || 0) / 60)}m {(entry.timeTaken || 0) % 60}s
                                                     </td>
                                                 </tr>
                                             );
@@ -907,7 +921,7 @@ export default function LiveMockTestPage() {
                             </div>
                             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Leaderboard Hidden</h2>
                             <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto">
-                                The detailed rank list for this mock test is only available to administrators. Check your individual performance above.
+                                The detailed rank list for this mock test is only available to administrators during the live window. Check your individual performance above.
                             </p>
                         </div>
                     )}

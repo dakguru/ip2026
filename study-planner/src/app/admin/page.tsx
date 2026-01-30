@@ -11,6 +11,9 @@ import Link from "next/link";
 import { format } from "date-fns";
 import autoTable from 'jspdf-autotable';
 import jsPDF from 'jspdf';
+import { Capacitor } from "@capacitor/core";
+import { Filesystem, Directory } from "@capacitor/filesystem";
+import { Toast } from "@capacitor/toast";
 import {
     Dialog,
     DialogContent,
@@ -161,7 +164,7 @@ export default function AdminDashboard() {
         return matchesSearch && matchesStatus;
     });
 
-    const downloadCSV = () => {
+    const downloadCSV = async () => {
         const headers = ['ID', 'Name', 'Email', 'Role', 'Status', 'Joined', 'Last Active', 'Mobile', 'Exam', 'Joining Date', 'Plan', 'Amount'];
         const csvContent = [
             headers.join(','),
@@ -181,14 +184,33 @@ export default function AdminDashboard() {
             ].join(','))
         ].join('\n');
 
-        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = `users_export_${format(new Date(), 'yyyy-MM-dd')}.csv`;
-        link.click();
+        const filename = `users_export_${format(new Date(), 'yyyy-MM-dd')}.csv`;
+
+        if (!Capacitor.isNativePlatform()) {
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            link.click();
+            return;
+        }
+
+        // Native CSV save
+        try {
+            await Filesystem.writeFile({
+                path: filename,
+                data: btoa(csvContent), // Need to encode as base64 for writeFile
+                directory: Directory.Documents,
+                recursive: true
+            });
+            await Toast.show({ text: 'CSV saved to Documents', duration: 'long' });
+        } catch (err) {
+            console.error(err);
+            await Toast.show({ text: 'Failed to save CSV', duration: 'long' });
+        }
     };
 
-    const downloadPDF = () => {
+    const downloadPDF = async () => {
         const doc = new jsPDF();
 
         doc.setFontSize(18);
@@ -215,7 +237,27 @@ export default function AdminDashboard() {
             headStyles: { fillColor: [63, 63, 70] }
         });
 
-        doc.save(`users_report_${format(new Date(), 'yyyy-MM-dd')}.pdf`);
+        const filename = `users_report_${format(new Date(), 'yyyy-MM-dd')}.pdf`;
+
+        if (!Capacitor.isNativePlatform()) {
+            doc.save(filename);
+            return;
+        }
+
+        // Native PDF save
+        try {
+            const pdfBase64 = doc.output('datauristring').split(',')[1];
+            await Filesystem.writeFile({
+                path: filename,
+                data: pdfBase64,
+                directory: Directory.Documents,
+                recursive: true
+            });
+            await Toast.show({ text: 'PDF saved to Documents', duration: 'long' });
+        } catch (err) {
+            console.error(err);
+            await Toast.show({ text: 'Failed to save PDF', duration: 'long' });
+        }
     };
 
     if (isLoading) {

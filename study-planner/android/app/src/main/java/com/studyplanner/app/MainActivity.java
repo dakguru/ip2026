@@ -14,6 +14,15 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         // 1. Install Android 12 Splash Screen with custom Exit Animation
         SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
+
+        // Keep Splash Screen visible for a fixed duration to cover WebView initialization
+        final boolean[] keepSplashScreen = {true};
+        new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+            keepSplashScreen[0] = false;
+        }, 1500); // 1.5 seconds delay
+
+        splashScreen.setKeepOnScreenCondition(() -> keepSplashScreen[0]);
+
         splashScreen.setOnExitAnimationListener(splashScreenView -> {
             final android.view.View view = splashScreenView.getView();
             final android.view.View iconView = splashScreenView.getIconView();

@@ -10,7 +10,7 @@ The platform is specifically engineered for:
 *   **LDCE Aspirants:** Limited Departmental Competitive Examination candidates seeking promotion within postal or administrative cadres.
 *   **Departmental Candidates:** Government employees preparing for internal grading or promotional exams.
 *   **General Competitive Exam Aspirants:** Users preparing for broader competitive assessments requiring similar testing protocols.
-
+faci
 ### Role of Mock Tests in Exam Preparation
 Mock tests serve as a critical component in the preparatory lifecycle by:
 *   Familiarizing candidates with the examination interface and constraints.

@@ -528,16 +528,36 @@ export default function NotesPage() {
             }
 
             // Native Download Logic
+            // 1. Request Permissions
+            try {
+                const permStatus = await Filesystem.checkPermissions();
+                if (permStatus.publicStorage !== 'granted') {
+                    const reqStatus = await Filesystem.requestPermissions();
+                    if (reqStatus.publicStorage !== 'granted') {
+                        await Toast.show({
+                            text: 'Storage permission is required to download files.',
+                            duration: 'long'
+                        });
+                        return;
+                    }
+                }
+            } catch (permError) {
+                console.warn("Permission check failed, proceeding anyway", permError);
+            }
+
             await Toast.show({
                 text: 'Starting download...',
                 duration: 'short'
             });
 
-            // 1. Fetch the file
-            const response = await fetch(url);
+            // 2. Fetch the file
+            // Use window.location.origin to ensure absolute path if it's a relative one
+            const absoluteUrl = url.startsWith('http') ? url : window.location.origin + url;
+            const response = await fetch(absoluteUrl);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const blob = await response.blob();
 
-            // 2. Convert to base64
+            // 3. Convert to base64
             const reader = new FileReader();
             reader.readAsDataURL(blob);
             reader.onloadend = async () => {
@@ -546,31 +566,31 @@ export default function NotesPage() {
                 const data = base64data.split(',')[1];
 
                 try {
-                    // 3. Write via Filesystem
-                    const result = await Filesystem.writeFile({
-                        path: `Download/${filename}`,
+                    // 4. Write via Filesystem
+                    // Use Directory.Documents - it's more reliable across Android versions
+                    await Filesystem.writeFile({
+                        path: filename,
                         data: data,
-                        directory: Directory.ExternalStorage,
+                        directory: Directory.Documents,
                         recursive: true
                     });
 
-                    // 4. Notify success
+                    // 5. Notify success
                     await Toast.show({
-                        text: `File saved to Downloads folder`,
+                        text: `File saved to Documents folder`,
                         duration: 'long'
                     });
 
                 } catch (writeError) {
-                    console.error("Write failed, trying Documents", writeError);
-                    // Fallback to Documents if Download fails (less likely on Android 10+ but good safety)
+                    console.error("Write to Documents failed, trying Data", writeError);
                     try {
                         await Filesystem.writeFile({
                             path: filename,
                             data: data,
-                            directory: Directory.Documents,
+                            directory: Directory.Data,
                         });
                         await Toast.show({
-                            text: `File saved to Documents`,
+                            text: `File saved to App Data (Documents unreachable)`,
                             duration: 'long'
                         });
                     } catch (fallbackError) {
@@ -582,7 +602,7 @@ export default function NotesPage() {
         } catch (error) {
             console.error("Download failed", error);
             await Toast.show({
-                text: 'Download failed. Please check permissions.',
+                text: `Download failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
                 duration: 'long'
             });
         }

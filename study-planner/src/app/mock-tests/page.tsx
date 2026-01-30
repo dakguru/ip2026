@@ -973,9 +973,12 @@ function MockTestDetail({
                                     </span>
                                 </div>
                                 <div className="flex gap-3">
-                                    <Link href={`/mock-tests/weekly/${mock.id}?reattempt=true`} className="flex-1 py-4 bg-white dark:bg-zinc-800 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-700 dark:text-indigo-400 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all">
-                                        <History className="w-5 h-5" /> Reattempt
-                                    </Link>
+                                    <button
+                                        disabled
+                                        className="flex-1 py-4 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded-xl font-bold text-lg flex items-center justify-center gap-2 cursor-not-allowed border border-green-100 dark:border-green-900/30"
+                                    >
+                                        <CheckCircle2 className="w-5 h-5" /> Submitted
+                                    </button>
                                     <button
                                         onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
                                         className="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2 transition-all active:scale-95"
@@ -1297,19 +1300,20 @@ function MockTestCard({
                     ) : isLive ? (
                         hasAttempted ? (
                             <div className="flex gap-2 w-full">
-                                <Link
-                                    href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
-                                    onClick={(e) => e.stopPropagation()}
-                                    className="flex-1 py-3 bg-white dark:bg-zinc-800 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-700 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
-                                >
-                                    <History className="w-4 h-4" /> Reattempt
-                                </Link>
                                 <button
-                                    onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
-                                    className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all active:scale-95"
+                                    disabled
+                                    className="flex-1 py-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded-xl font-bold text-sm flex items-center justify-center gap-2 cursor-not-allowed border border-green-100 dark:border-green-900/30"
                                 >
-                                    <FileDown className="w-4 h-4" /> Download Answer Sheet
+                                    <CheckCircle2 className="w-4 h-4" /> Submitted
                                 </button>
+                                {hasAttempted && (
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
+                                        className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all active:scale-95"
+                                    >
+                                        <FileDown className="w-4 h-4" /> Download Sheet
+                                    </button>
+                                )}
                             </div>
                         ) : (
                             <Link
@@ -1377,16 +1381,16 @@ function RankListModal({ mock, isOpen, onClose }: { mock: MockTest | null, isOpe
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
             <DialogContent className="max-w-md w-[95%] rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-0">
-                <div className="bg-gradient-to-br from-amber-400 to-orange-500 p-6 text-white text-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-amber-400 to-orange-500 p-5 md:p-6 text-white text-center relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-20"></div>
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-yellow-300 rounded-full blur-2xl opacity-50"></div>
 
-                    <Trophy className="w-12 h-12 mx-auto mb-3 text-white drop-shadow-md" />
-                    <DialogTitle className="text-2xl font-black uppercase tracking-tight text-white drop-shadow-sm relative z-10">
+                    <Trophy className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 text-white drop-shadow-md" />
+                    <DialogTitle className="text-xl md:text-2xl font-black uppercase tracking-tight text-white drop-shadow-sm relative z-10">
                         Top 7 Rank Holders
                     </DialogTitle>
-                    <p className="text-amber-100 font-medium text-sm relative z-10">
-                        {mock ? `${mock.title} (held on ${format(mock.startDate, 'dd.MM.yyyy')} & ${format(mock.endDate, 'dd.MM.yyyy')})` : 'All India Weekly Mock Test'}
+                    <p className="text-amber-100 font-medium text-[10px] md:text-sm relative z-10">
+                        {mock ? `${mock.title} (${format(mock.startDate, 'dd.MM')} - ${format(mock.endDate, 'dd.MM')})` : 'All India Weekly Mock Test'}
                     </p>
                 </div>
 
@@ -1403,27 +1407,27 @@ function RankListModal({ mock, isOpen, onClose }: { mock: MockTest | null, isOpe
                     ) : (
                         <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
                             {leaderboard.map((user, idx) => (
-                                <div key={idx} className="flex items-center gap-4 p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
-                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center font-black text-lg shadow-sm shrink-0
-                                        ${idx === 0 ? 'bg-yellow-100 text-yellow-600 ring-4 ring-yellow-50' :
-                                            idx === 1 ? 'bg-slate-100 text-slate-600 ring-4 ring-slate-50' :
-                                                idx === 2 ? 'bg-orange-100 text-orange-600 ring-4 ring-orange-50' :
+                                <div key={idx} className="flex items-center gap-3 md:gap-4 p-3 md:p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
+                                    <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-black text-base md:text-lg shadow-sm shrink-0
+                                        ${idx === 0 ? 'bg-yellow-100 text-yellow-600 ring-2 md:ring-4 ring-yellow-50' :
+                                            idx === 1 ? 'bg-slate-100 text-slate-600 ring-2 md:ring-4 ring-slate-50' :
+                                                idx === 2 ? 'bg-orange-100 text-orange-600 ring-2 md:ring-4 ring-orange-50' :
                                                     'bg-zinc-100 text-zinc-500'
                                         }
                                     `}>
                                         {idx + 1}
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <h4 className="font-bold text-zinc-900 dark:text-zinc-100 truncate flex items-center gap-2">
+                                        <h4 className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100 truncate">
                                             {user.userName}
                                         </h4>
-                                        <p className="text-xs text-zinc-400 dark:text-zinc-500 truncate font-mono mt-0.5">
+                                        <p className="text-[10px] text-zinc-400 dark:text-zinc-500 truncate font-mono mt-0.5">
                                             {maskEmail(user.userEmail)}
                                         </p>
                                     </div>
                                     <div className="text-right">
-                                        <div className="font-black text-indigo-600 dark:text-indigo-400 text-lg">{user.score}</div>
-                                        <div className="text-[10px] font-bold text-zinc-400 uppercase">Marks</div>
+                                        <div className="font-black text-indigo-600 dark:text-indigo-400 text-base md:text-lg">{user.score}</div>
+                                        <div className="text-[9px] font-bold text-zinc-400 uppercase">Marks</div>
                                     </div>
                                 </div>
                             ))}

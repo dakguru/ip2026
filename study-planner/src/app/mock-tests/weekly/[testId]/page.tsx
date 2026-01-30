@@ -2,7 +2,7 @@
 
 import { useState, useEffect, use, useCallback, memo, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, CheckCircle2, AlertCircle, Timer, Save, FileDown, Flag, ChevronLeft, ChevronRight, X, LayoutGrid, Clock, Bookmark, Send, HelpCircle, XCircle, History, Home } from "lucide-react";
+import { Trophy, Loader2, Clock, HelpCircle, CheckCircle2, AlertCircle, History, FileDown, Home, ChevronLeft, ChevronRight, Send, Bookmark, XCircle, Flag, X, Lock as LockIcon, Sparkles, ArrowLeft, LayoutGrid, Timer, Save } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
@@ -19,6 +19,14 @@ const TEST_DATA_MAP: Record<string, Question[]> = {
     "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
     "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS
 };
+
+interface LeaderboardEntry {
+    _id: string;
+    userName: string;
+    userEmail: string;
+    score: number;
+    submittedAt: string;
+}
 
 interface TestConfig {
     startDate: Date;
@@ -89,12 +97,12 @@ const MemoizedMobileContent = memo(({
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
                     >
-                        <div className="relative bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-zinc-100 dark:border-zinc-800 mb-4 overflow-hidden">
-                            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
-                                <h1 className="text-6xl font-black text-black dark:text-white transform -rotate-12">DAK GURU</h1>
+                        <div className="relative bg-white dark:bg-zinc-900 p-4 md:p-5 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800 mb-3 overflow-hidden">
+                            <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none flex items-center justify-center">
+                                <h1 className="text-4xl font-black text-black dark:text-white transform -rotate-12">DAK GURU</h1>
                             </div>
                             <div className="relative z-10">
-                                <p className="text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
+                                <p className="text-[15px] md:text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
                                     {currentQ.text}
                                 </p>
                                 {currentQ.table && (
@@ -220,7 +228,7 @@ const MemoizedMobileContent = memo(({
                                 </button>
                             </div>
 
-                            <div className="grid grid-cols-5 gap-3 overflow-y-auto p-1 pb-20 custom-scrollbar">
+                            <div className="grid grid-cols-6 gap-2 overflow-y-auto p-1 pb-20 custom-scrollbar">
                                 {questions.map((q: any, idx: number) => (
                                     <button
                                         key={q.id}
@@ -229,7 +237,7 @@ const MemoizedMobileContent = memo(({
                                             setCurrentQIndex(idx);
                                             setIsMobilePaletteOpen(false);
                                         }}
-                                        className={`h-12 w-12 rounded-2xl flex items-center justify-center text-sm font-bold border-2 transition-all ${getStatusColor(q.id, idx)}`}
+                                        className={`h-11 w-11 rounded-xl flex items-center justify-center text-xs font-bold border-2 transition-all ${getStatusColor(q.id, idx)}`}
                                     >
                                         {idx + 1}
                                     </button>
@@ -268,6 +276,13 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     // UI State for Mobile Palette
     const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
     const [hasStarted, setHasStarted] = useState(false);
+    const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
+    const [isFetchingLeaderboard, setIsFetchingLeaderboard] = useState(false);
+
+    // Live Window Logic
+    const testConfig = TEST_CONFIG_MAP[testId];
+    const isLiveWindow = testConfig?.endDate ? new Date() < testConfig.endDate : false;
+    const canSeeLeaderboard = isAdmin || !isLiveWindow;
 
     // Load Data & Check Access
     useEffect(() => {
@@ -404,6 +419,27 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         const secs = seconds % 60;
         return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     };
+
+    const fetchLeaderboard = useCallback(async () => {
+        setIsFetchingLeaderboard(true);
+        try {
+            const res = await fetch(`/api/mock-test/live/leaderboard?testId=${testId}&limit=50`, { cache: 'no-store' });
+            if (res.ok) {
+                const data = await res.json();
+                setLeaderboard(data.leaderboard);
+            }
+        } catch (e) {
+            console.error("Failed to fetch leaderboard", e);
+        } finally {
+            setIsFetchingLeaderboard(false);
+        }
+    }, [testId]);
+
+    useEffect(() => {
+        if (isSubmitted) {
+            fetchLeaderboard();
+        }
+    }, [isSubmitted, fetchLeaderboard]);
 
     const vibrate = useCallback((ms: number = 10) => {
         if (typeof navigator !== 'undefined' && navigator.vibrate) {
@@ -744,58 +780,58 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         return (
             <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-4 pt-[calc(env(safe-area-inset-top)+20px)] pb-10">
                 <div className="max-w-2xl w-full bg-white dark:bg-zinc-900 rounded-3xl shadow-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
-                    <div className="p-6 md:p-12 space-y-6 md:space-y-8">
-                        <div className="text-center space-y-4">
-                            <h1 className="text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
+                    <div className="p-5 md:p-12 space-y-6 md:space-y-8">
+                        <div className="text-center space-y-2 md:space-y-4">
+                            <h1 className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">
                                 {TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test"}
                             </h1>
-                            <p className="text-zinc-500 dark:text-zinc-400 text-lg">
+                            <p className="text-zinc-500 dark:text-zinc-400 text-sm md:text-lg">
                                 Read the instructions carefully before starting.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-4">
-                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
-                                <Clock className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                                <div className="font-bold text-zinc-900 dark:text-zinc-100">60 Min</div>
-                                <div className="text-xs text-zinc-500">Duration</div>
+                        <div className="grid grid-cols-3 gap-2 md:gap-4">
+                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-2.5 md:p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
+                                <Clock className="w-5 h-5 md:w-6 md:h-6 mx-auto mb-1.5 md:mb-2 text-blue-600" />
+                                <div className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100">60 Min</div>
+                                <div className="text-[10px] md:text-xs text-zinc-500">Duration</div>
                             </div>
-                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
-                                <HelpCircle className="w-6 h-6 mx-auto mb-2 text-purple-600" />
-                                <div className="font-bold text-zinc-900 dark:text-zinc-100">{questions.length} Qs</div>
-                                <div className="text-xs text-zinc-500">questions</div>
+                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-2.5 md:p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
+                                <HelpCircle className="w-5 h-5 md:w-6 md:h-6 mx-auto mb-1.5 md:mb-2 text-purple-600" />
+                                <div className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100">{questions.length} Qs</div>
+                                <div className="text-[10px] md:text-xs text-zinc-500">Total</div>
                             </div>
-                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
-                                <CheckCircle2 className="w-6 h-6 mx-auto mb-2 text-green-600" />
-                                <div className="font-bold text-zinc-900 dark:text-zinc-100">100 Marks</div>
-                                <div className="text-xs text-zinc-500">Total Score</div>
+                            <div className="bg-zinc-50 dark:bg-zinc-800/50 p-2.5 md:p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
+                                <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 mx-auto mb-1.5 md:mb-2 text-green-600" />
+                                <div className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100">100 Marks</div>
+                                <div className="text-[10px] md:text-xs text-zinc-500">Marks</div>
                             </div>
                         </div>
 
-                        <div className="space-y-4 bg-amber-50 dark:bg-amber-900/10 p-6 rounded-2xl border border-amber-100 dark:border-amber-900/20">
-                            <h3 className="font-bold text-amber-900 dark:text-amber-200 flex items-center gap-2">
-                                <AlertCircle className="w-5 h-5" /> Important Rules
+                        <div className="space-y-4 bg-amber-50 dark:bg-amber-900/10 p-4 md:p-6 rounded-2xl border border-amber-100 dark:border-amber-900/20">
+                            <h3 className="font-bold text-amber-900 dark:text-amber-200 flex items-center gap-2 text-sm md:text-base">
+                                <AlertCircle className="w-4 h-4 md:w-5 md:h-5" /> Important Rules
                             </h3>
-                            <ul className="space-y-3 text-sm text-amber-800 dark:text-amber-300">
+                            <ul className="space-y-3 text-xs md:text-sm text-amber-800 dark:text-amber-300">
                                 <li className="flex items-start gap-2">
                                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                                    This test can only be attempted <strong>ONCE</strong>.
+                                    <span>This test can only be attempted <strong>ONCE</strong>.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                                    Do not refresh the page or press the back button during the test.
+                                    <span>Do not refresh the page or press the back button during the test.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                                    The test will auto-submit when the timer reaches zero.
+                                    <span>The test will auto-submit when the timer reaches zero.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                                    Once the test starts, you cannot go back without submitting the test.
+                                    <span>Once the test starts, you cannot go back without submitting the test.</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                                    Ensure you have a stable internet connection.
+                                    <span>Ensure you have a stable internet connection.</span>
                                 </li>
                             </ul>
                         </div>
@@ -1065,27 +1101,136 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                 <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full mb-6">
                                     <CheckCircle2 className="w-10 h-10 text-green-600 dark:text-green-400" />
                                 </div>
-                                <h1 className="text-3xl md:text-4xl font-black mb-4 text-zinc-900 dark:text-white">Test Submitted!</h1>
-                                <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-8">
+                                <h1 className="text-2xl md:text-4xl font-black mb-2 text-zinc-900 dark:text-white">Test Submitted!</h1>
+                                <p className="text-zinc-500 dark:text-zinc-400 text-base md:text-lg mb-8">
                                     You scored <span className="font-bold text-zinc-900 dark:text-white">{score}</span> out of <span className="font-bold text-zinc-900 dark:text-white">{questions.length * 2}</span>
                                 </p>
 
-                                <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-6 border border-amber-100 dark:border-amber-900/20 max-w-lg mx-auto mb-8">
-                                    <p className="font-medium text-amber-800 dark:text-amber-200 flex items-center justify-center gap-2">
-                                        <AlertCircle className="w-5 h-5" />
-                                        Rank List will be released on Monday.
+                                <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-4 md:p-6 border border-amber-100 dark:border-amber-900/20 max-w-lg mx-auto mb-8">
+                                    <p className="font-medium text-sm md:text-base text-amber-800 dark:text-amber-200 flex items-center justify-center gap-2">
+                                        <AlertCircle className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+                                        All India Rank List will be released on Monday.
                                     </p>
                                 </div>
+                            </div>
 
-                                <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                            <div className="max-w-4xl mx-auto space-y-12">
+                                {/* Live Leaderboard */}
+                                <div className="max-w-2xl mx-auto mb-12 bg-white dark:bg-zinc-900 rounded-[2rem] border border-zinc-100 dark:border-zinc-800 shadow-xl overflow-hidden">
+                                    <div className="p-6 md:p-8 flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/30">
+                                        <div>
+                                            <h2 className="text-xl font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+                                                <Trophy className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                                                {isLiveWindow ? "Live Leaderboard" : "Final Leaderboard"}
+                                            </h2>
+                                            <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                                                {isLiveWindow ? "Real-time ranking during live window" : "Official rankings for this assessment"}
+                                            </p>
+                                        </div>
+                                        <div className="flex flex-col items-end gap-2">
+                                            <div className="bg-zinc-100 dark:bg-zinc-800 px-3 py-1 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700">
+                                                Top 50
+                                            </div>
+                                            {isLiveWindow && isAdmin && (
+                                                <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">Admin View</span>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    <div className="overflow-x-auto min-h-[200px] flex flex-col justify-center">
+                                        {canSeeLeaderboard ? (
+                                            <table className="w-full text-left">
+                                                <thead className="bg-zinc-50/50 dark:bg-zinc-800/20">
+                                                    <tr>
+                                                        <th className="py-3 px-4 md:px-8 text-[10px] md:text-xs font-bold text-zinc-400 uppercase tracking-wider">Rank</th>
+                                                        <th className="py-3 px-4 md:px-8 text-[10px] md:text-xs font-bold text-zinc-400 uppercase tracking-wider">Aspirant</th>
+                                                        <th className="py-3 px-4 md:px-8 text-[10px] md:text-xs font-bold text-zinc-400 uppercase tracking-wider text-right">Score</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                                                    {isFetchingLeaderboard ? (
+                                                        <tr>
+                                                            <td colSpan={3} className="py-10 text-center text-zinc-400">
+                                                                <Loader2 className="w-5 h-5 animate-spin mx-auto mb-2" />
+                                                                Fetching Rankings...
+                                                            </td>
+                                                        </tr>
+                                                    ) : leaderboard.length === 0 ? (
+                                                        <tr>
+                                                            <td colSpan={3} className="py-10 text-center text-zinc-400 text-sm">No submissions yet. Be the first!</td>
+                                                        </tr>
+                                                    ) : (
+                                                        leaderboard.map((entry, index) => {
+                                                            const isCurrentUser = entry.userEmail === userEmail;
+                                                            return (
+                                                                <tr key={index} className={`group hover:bg-zinc-50 dark:hover:bg-zinc-800/40 transition-colors ${isCurrentUser ? 'bg-indigo-50/50 dark:bg-indigo-950/20' : ''}`}>
+                                                                    <td className="py-3 px-4 md:px-8">
+                                                                        <div className={`w-7 h-7 flex items-center justify-center rounded-full font-bold text-xs
+                                                                        ${index === 0 ? 'bg-yellow-100 text-yellow-700' :
+                                                                                index === 1 ? 'bg-zinc-200 text-zinc-700' :
+                                                                                    index === 2 ? 'bg-orange-100 text-orange-700' : 'text-zinc-500'}
+                                                                    `}>
+                                                                            {index + 1}
+                                                                        </div>
+                                                                    </td>
+                                                                    <td className="py-3 px-4 md:px-8">
+                                                                        <div className="flex items-center gap-2 md:gap-3">
+                                                                            <div className="w-7 h-7 rounded-full bg-zinc-900 dark:bg-zinc-700 flex items-center justify-center text-white text-[10px] font-bold shrink-0">
+                                                                                {entry.userName.charAt(0).toUpperCase()}
+                                                                            </div>
+                                                                            <div className="flex flex-col min-w-0">
+                                                                                <span className={`font-semibold text-xs md:text-sm truncate ${index < 3 ? 'text-zinc-900 dark:text-white' : 'text-zinc-600 dark:text-zinc-300'}`}>
+                                                                                    {entry.userName}
+                                                                                    {isCurrentUser && <span className="ml-1 text-[8px] font-bold bg-indigo-600 text-white px-1 py-0.5 rounded uppercase">You</span>}
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td className="py-3 px-4 md:px-8 text-right font-bold text-zinc-900 dark:text-white text-sm">
+                                                                        {entry.score}
+                                                                    </td>
+                                                                </tr>
+                                                            );
+                                                        })
+                                                    )}
+                                                </tbody>
+                                            </table>
+                                        ) : (
+                                            <div className="py-12 px-6 text-center space-y-3">
+                                                <div className="w-12 h-12 bg-amber-50 dark:bg-amber-900/20 rounded-full flex items-center justify-center mx-auto text-amber-600">
+                                                    <LockIcon className="w-6 h-6" />
+                                                </div>
+                                                <h3 className="font-bold text-zinc-900 dark:text-white">Leaderboard Restricted</h3>
+                                                <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-sm mx-auto">
+                                                    Real-time rankings are currently visible to moderators only. The public leaderboard will be enabled after the test window completes.
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {canSeeLeaderboard && (
+                                        <div className="p-4 bg-zinc-50/50 dark:bg-zinc-800/30 border-t border-zinc-100 dark:border-zinc-800 text-center">
+                                            <button
+                                                onClick={() => fetchLeaderboard()}
+                                                disabled={isFetchingLeaderboard}
+                                                className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 transition-colors flex items-center justify-center gap-2 mx-auto disabled:opacity-50"
+                                            >
+                                                <History className={`w-3.5 h-3.5 ${isFetchingLeaderboard ? 'animate-spin' : ''}`} />
+                                                Refresh Rankings
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 px-4 mb-12">
                                     {(() => {
                                         const config = TEST_CONFIG_MAP[testId];
                                         const startDate = config ? config.startDate : new Date("2026-01-17T00:00:00+05:30");
-                                        const reattemptDate = new Date(startDate);
-                                        reattemptDate.setDate(startDate.getDate() + 2); // Monday
-                                        reattemptDate.setHours(0, 0, 0, 0);
                                         const now = new Date();
-                                        const canReattempt = now >= reattemptDate || isAdmin;
+                                        // Strictly restrict reattempts during live window unless admin
+                                        // Use config.endDate or default to +48h from startDate
+                                        const endDateTime = config?.endDate || new Date(startDate.getTime() + 48 * 60 * 60 * 1000);
+                                        const canReattempt = (now > endDateTime) || isAdmin;
 
                                         if (!canReattempt) return null;
 
@@ -1096,7 +1241,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                                         window.location.href = `${window.location.pathname}?reattempt=true`;
                                                     }
                                                 }}
-                                                className="px-6 py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition-all flex items-center gap-2 shadow-lg shadow-purple-500/20"
+                                                className="w-full md:w-auto px-6 py-3.5 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20 text-sm md:text-base text-center"
                                             >
                                                 <History className="w-4 h-4" /> Reattempt Test
                                             </button>
@@ -1104,20 +1249,20 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                     })()}
                                     <button
                                         onClick={generatePDF}
-                                        className="px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-bold hover:opacity-90 transition-all flex items-center gap-2"
+                                        className="w-full md:w-auto px-6 py-3.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2 text-sm md:text-base"
                                     >
                                         <FileDown className="w-4 h-4" /> Download Answer Sheet
                                     </button>
                                     <Link
                                         href="/"
-                                        className="px-6 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-xl font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all flex items-center gap-2"
+                                        className="w-full md:w-auto px-6 py-3.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-xl font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all flex items-center justify-center gap-2 text-sm md:text-base"
                                     >
                                         <Home className="w-4 h-4" /> Return to Home
                                     </Link>
                                 </div>
 
                                 {isAdmin && (
-                                    <div className="mt-8 pt-8 border-t border-zinc-200 dark:border-zinc-800">
+                                    <div className="mb-12 pt-8 border-t border-zinc-200 dark:border-zinc-800">
                                         <div className="bg-blue-50 dark:bg-blue-900/10 rounded-2xl p-6 border border-blue-100 dark:border-blue-900/20 text-center">
                                             <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-2 flex items-center justify-center gap-2">
                                                 <Flag className="w-4 h-4 text-blue-600 dark:text-blue-400" />
@@ -1133,66 +1278,66 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                         </div>
                                     </div>
                                 )}
-                            </div>
 
-                            <div className="space-y-6 px-4">
-                                <h2 className="text-2xl font-bold text-zinc-900 dark:text-white px-1">Detailed Answer Key</h2>
-                                {questions.map((q, idx) => {
-                                    const userAnsIdx = answers[q.id];
-                                    const isCorrect = userAnsIdx === q.correctAnswer;
-                                    const isSkipped = userAnsIdx === undefined;
+                                <div className="space-y-6 px-4">
+                                    <h2 className="text-2xl font-bold text-zinc-900 dark:text-white px-1">Detailed Answer Key</h2>
+                                    {questions.map((q, idx) => {
+                                        const userAnsIdx = answers[q.id];
+                                        const isCorrect = userAnsIdx === q.correctAnswer;
+                                        const isSkipped = userAnsIdx === undefined;
 
-                                    return (
-                                        <div key={q.id} className={`rounded-2xl p-6 border-2 ${isCorrect ? 'border-green-100 dark:border-green-900/20 bg-green-50/50 dark:bg-green-900/5' : isSkipped ? 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900' : 'border-red-100 dark:border-red-900/20 bg-red-50/50 dark:bg-red-900/5'}`}>
-                                            <div className="flex gap-3 mb-4">
-                                                <span className="font-bold text-zinc-400">Q{idx + 1}.</span>
-                                                <div className="flex-1">
-                                                    <p className="font-medium text-zinc-900 dark:text-zinc-100 mb-4 whitespace-pre-wrap">{q.text}</p>
-                                                    {q.table && (
-                                                        <div className="my-4 overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                                            <table className="w-full text-left text-sm border-collapse">
-                                                                <thead>
-                                                                    <tr className="bg-zinc-100 dark:bg-zinc-800/80 border-b border-zinc-200 dark:border-zinc-700">
-                                                                        {q.table.headers.map((h, i) => (
-                                                                            <th key={i} className="px-4 py-2 font-bold text-zinc-700 dark:text-zinc-300">{h}</th>
-                                                                        ))}
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">
-                                                                    {q.table.rows.map((row, rIdx) => (
-                                                                        <tr key={rIdx} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/30">
-                                                                            {row.map((cell, cIdx) => (
-                                                                                <td key={cIdx} className="px-4 py-2 text-zinc-600 dark:text-zinc-300">{cell}</td>
+                                        return (
+                                            <div key={q.id} className={`rounded-2xl p-6 border-2 ${isCorrect ? 'border-green-100 dark:border-green-900/20 bg-green-50/50 dark:bg-green-900/5' : isSkipped ? 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900' : 'border-red-100 dark:border-red-900/20 bg-red-50/50 dark:bg-red-900/5'}`}>
+                                                <div className="flex gap-3 mb-4">
+                                                    <span className="font-bold text-zinc-400">Q{idx + 1}.</span>
+                                                    <div className="flex-1">
+                                                        <p className="font-medium text-zinc-900 dark:text-zinc-100 mb-4 whitespace-pre-wrap">{q.text}</p>
+                                                        {q.table && (
+                                                            <div className="my-4 overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800">
+                                                                <table className="w-full text-left text-sm border-collapse">
+                                                                    <thead>
+                                                                        <tr className="bg-zinc-100 dark:bg-zinc-800/80 border-b border-zinc-200 dark:border-zinc-700">
+                                                                            {q.table.headers.map((h, i) => (
+                                                                                <th key={i} className="px-4 py-2 font-bold text-zinc-700 dark:text-zinc-300">{h}</th>
                                                                             ))}
                                                                         </tr>
-                                                                    ))}
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    )}
-
-                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-                                                        {q.options.map((opt, oIdx) => (
-                                                            <div key={oIdx} className={`p-3 rounded-lg text-sm font-medium flex items-center justify-between
-                                                                ${oIdx === q.correctAnswer ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 ring-1 ring-green-500/50' :
-                                                                    oIdx === userAnsIdx ? 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 ring-1 ring-red-500/50' :
-                                                                        'bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500'}
-                                                            `}>
-                                                                <span>{opt}</span>
-                                                                {oIdx === q.correctAnswer && <CheckCircle2 className="w-4 h-4 text-green-600 dark:text-green-400" />}
-                                                                {oIdx === userAnsIdx && oIdx !== q.correctAnswer && <X className="w-4 h-4 text-red-600 dark:text-red-400" />}
+                                                                    </thead>
+                                                                    <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">
+                                                                        {q.table.rows.map((row, rIdx) => (
+                                                                            <tr key={rIdx} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/30">
+                                                                                {row.map((cell, cIdx) => (
+                                                                                    <td key={cIdx} className="px-4 py-2 text-zinc-600 dark:text-zinc-300">{cell}</td>
+                                                                                ))}
+                                                                            </tr>
+                                                                        ))}
+                                                                    </tbody>
+                                                                </table>
                                                             </div>
-                                                        ))}
-                                                    </div>
-                                                    <div className="bg-zinc-100 dark:bg-zinc-800/50 rounded-xl p-4 text-sm mt-4">
-                                                        <span className="font-bold text-purple-600 dark:text-purple-400 block mb-1">Explanation:</span>
-                                                        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed whitespace-pre-wrap">{q.explanation}</p>
+                                                        )}
+
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                                                            {q.options.map((opt, oIdx) => (
+                                                                <div key={oIdx} className={`p-3 rounded-lg text-sm font-medium flex items-center justify-between
+                                                                            ${oIdx === q.correctAnswer ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 ring-1 ring-green-500/50' :
+                                                                        oIdx === userAnsIdx ? 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 ring-1 ring-red-500/50' :
+                                                                            'bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500'}
+                                                            `}>
+                                                                    <span>{opt}</span>
+                                                                    {oIdx === q.correctAnswer && <CheckCircle2 className="w-4 h-4 text-green-600 dark:text-green-400" />}
+                                                                    {oIdx === userAnsIdx && oIdx !== q.correctAnswer && <X className="w-4 h-4 text-red-600 dark:text-red-400" />}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                        <div className="bg-zinc-100 dark:bg-zinc-800/50 rounded-xl p-4 text-sm mt-4">
+                                                            <span className="font-bold text-purple-600 dark:text-purple-400 block mb-1">Explanation:</span>
+                                                            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed whitespace-pre-wrap">{q.explanation}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    );
-                                })}
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
                     )}

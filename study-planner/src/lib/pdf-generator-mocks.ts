@@ -1,6 +1,9 @@
 
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
+import { Capacitor } from "@capacitor/core";
+import { Filesystem, Directory } from "@capacitor/filesystem";
+import { Toast } from "@capacitor/toast";
 
 interface Question {
     id: string;
@@ -249,5 +252,45 @@ export const generateMockTestAnswerSheetPDF = async ({
     });
 
     const safeFilename = userName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    doc.save(`Dak_Guru_AnswerSheet_${safeFilename}.pdf`);
+    const filename = `Dak_Guru_AnswerSheet_${safeFilename}.pdf`;
+
+    if (!Capacitor.isNativePlatform()) {
+        doc.save(filename);
+        return;
+    }
+
+    // Native Platform Download Logic
+    try {
+        // Request permissions
+        try {
+            const permStatus = await Filesystem.checkPermissions();
+            if (permStatus.publicStorage !== 'granted') {
+                await Filesystem.requestPermissions();
+            }
+        } catch (e) {
+            console.warn("Permission check failed", e);
+        }
+
+        // Get PDF as base64
+        const pdfBase64 = doc.output('datauristring').split(',')[1];
+
+        // Save to Documents
+        await Filesystem.writeFile({
+            path: filename,
+            data: pdfBase64,
+            directory: Directory.Documents,
+            recursive: true
+        });
+
+        await Toast.show({
+            text: `Answer sheet saved to Documents folder`,
+            duration: 'long'
+        });
+    } catch (error) {
+        console.error("Native PDF save failed", error);
+        await Toast.show({
+            text: 'Failed to save PDF to storage',
+            duration: 'long'
+        });
+    }
 };

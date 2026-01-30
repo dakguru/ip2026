@@ -27,8 +27,8 @@ export default function MockTestAnnouncementPopup() {
     }, []);
 
     useEffect(() => {
-        // Target Date: Jan 31, 2026 10:00:00 AM IST
-        const targetDate = new Date("2026-01-31T10:00:00+05:30").getTime();
+        // Target Date: Jan 31, 2026 00:00:00 AM IST
+        const targetDate = new Date("2026-01-31T00:00:00+05:30").getTime();
 
         const interval = setInterval(() => {
             const now = new Date().getTime();
