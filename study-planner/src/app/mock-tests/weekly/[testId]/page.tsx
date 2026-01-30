@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
 import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
+import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
 import { Question } from "@/data/live_mock_data";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -15,7 +16,8 @@ import { motion, AnimatePresence } from "framer-motion";
 // Map IDs to Data
 const TEST_DATA_MAP: Record<string, Question[]> = {
     "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
-    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS
+    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
+    "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS
 };
 
 interface TestConfig {
@@ -34,6 +36,11 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-01-24T00:00:00+05:30"),
         endDate: new Date("2026-01-25T23:59:59+05:30"),
         title: "Weekly Mock Test - 02"
+    },
+    "mock-2026-01-31": {
+        startDate: new Date("2026-01-31T00:00:00+05:30"),
+        endDate: new Date("2026-02-01T23:59:59+05:30"),
+        title: "Weekly Mock Test - 03"
     }
 };
 
@@ -669,16 +676,28 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                 }
                 if (isSelected && isCorrect) optLabel = " (Your & Correct Answer)";
 
-                const optText = `${String.fromCharCode(65 + optIndex)}. ${opt}${optLabel}`;
-                const splitOpt = doc.splitTextToSize(optText, contentWidth - 5);
+                const cleanOpt = opt.replace(/₹/g, 'Rs. ');
+                const optText = `${cleanOpt}${optLabel}`;
+                const label = `${String.fromCharCode(65 + optIndex)}.`;
+
+                // Calculate split text with hanging indent
+                const splitOpt = doc.splitTextToSize(optText, contentWidth - 12);
 
                 if (yPos + splitOpt.length * 5 > pageHeight - 20) {
                     doc.addPage();
                     addWatermark();
                     yPos = 20;
                 }
-                doc.text(splitOpt, margin + 5, yPos);
-                yPos += splitOpt.length * 5 + 1;
+
+                // Draw Label (A., B., etc)
+                doc.setFont("helvetica", isCorrect || isSelected ? "bold" : "normal");
+                doc.text(label, margin + 5, yPos);
+
+                // Draw Option Text with indent
+                doc.setFont("helvetica", isCorrect ? "bold" : "normal");
+                doc.text(splitOpt, margin + 12, yPos);
+
+                yPos += splitOpt.length * 5 + 2;
             });
 
             yPos += 4;
@@ -690,7 +709,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                 yPos += 5;
 
                 doc.setFont("helvetica", "normal");
-                const cleanExplanation = q.explanation.replace(/\*/g, '');
+                const cleanExplanation = q.explanation.replace(/\*/g, '').replace(/₹/g, 'Rs. ');
                 const splitExpl = doc.splitTextToSize(cleanExplanation, contentWidth);
 
                 if (yPos + splitExpl.length * 5 > pageHeight - 20) {

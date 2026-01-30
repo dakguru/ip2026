@@ -11,12 +11,14 @@ import Script from "next/script";
 import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
 import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
+import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
 import { FileDown } from "lucide-react";
 
 // Map IDs to Question Data for PDF Generation
 const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
-    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS
+    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
+    "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS
 };
 
 // Mock Test Interface
@@ -162,17 +164,20 @@ export default function MockTestsPage() {
             // Determine Status
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
 
+            const calculatedId = `mock-${format(saturdayDate, 'yyyy-MM-dd')}`;
+
             if ((isSameDay(today, saturdayDate) || isSameDay(today, sundayDate))) {
                 status = 'live';
             } else if (isBefore(today, saturdayDate)) {
-                status = 'upcoming';
+                // Only make the specific test being worked on live for admin testing
+                status = (role === 'admin' && calculatedId === 'mock-2026-01-31') ? 'live' : 'upcoming';
             } else {
                 status = 'completed';
             }
 
             if (weekTopics.length > 0 || mockCount === 1) {
                 mocks.push({
-                    id: `mock-${format(saturdayDate, 'yyyy-MM-dd')}`,
+                    id: calculatedId,
                     title: `Weekly Mock Test - ${mockCount.toString().padStart(2, '0')}`,
                     topics: weekTopics.length > 0 ? weekTopics : ["Introductory/General Topics"],
                     startDate: saturdayDate,
@@ -189,7 +194,7 @@ export default function MockTestsPage() {
         }
 
         return mocks;
-    }, []);
+    }, [role]);
 
     const activeMocks = mockTests.filter(m => m.status === 'live');
     const upcomingMocks = mockTests.filter(m => m.status === 'upcoming');
@@ -1123,7 +1128,7 @@ function MockTestCard({
 }) {
     const isTimeReached = new Date() >= mock.startDate;
     const isEnded = new Date() > mock.endDate;
-    const isLive = mock.status === 'live' || (role === 'admin' && mock.id === 'mock-2026-01-17') || (isTimeReached && !isEnded);
+    const isLive = mock.status === 'live' || (isTimeReached && !isEnded);
     const isCompleted = mock.status === 'completed';
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';
