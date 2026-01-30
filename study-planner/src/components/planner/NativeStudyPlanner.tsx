@@ -43,7 +43,7 @@ export default function NativeStudyPlanner({
     const [mounted, setMounted] = useState(false);
     useEffect(() => setMounted(true), []);
 
-    const [viewMode, setViewMode] = useState<'recommended' | 'flexible'>('recommended');
+    const [viewMode, setViewMode] = useState<'recommended' | 'flexible'>('flexible');
     const [filterPaper, setFilterPaper] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
     const [completionDialog, setCompletionDialog] = useState<{ open: boolean; date: string | null; topic: string }>({

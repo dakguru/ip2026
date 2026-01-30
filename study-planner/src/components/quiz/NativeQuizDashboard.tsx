@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Lock, Play, Star, Zap, BrainCircuit, ChevronRight } from 'lucide-react';
+import { ArrowRight, Lock, Play, Star, Zap, BrainCircuit, ChevronRight, Layers } from 'lucide-react';
 import { QuizTopic } from '@/lib/quizTypes';
 
 interface NativeQuizDashboardProps {
@@ -81,25 +81,66 @@ export default function NativeQuizDashboard({
             </div>
 
             <div className="p-6 space-y-8">
-                {/* Visual Banner */}
-                <Link href="/mock-tests" className="block group relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white shadow-xl shadow-indigo-500/20">
-                    <div className="absolute top-0 right-0 p-8 opacity-10">
-                        <Star className="w-32 h-32 rotate-12" />
-                    </div>
-                    <div className="relative p-6">
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-3 border border-white/10">
-                            <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-                            Live Now
+                {/* Banners Carousel */}
+                <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide -mx-6 px-6">
+                    {/* 1. All India Mock Test Banner */}
+                    <Link href="/mock-tests" className="flex-shrink-0 w-[85%] sm:w-[320px] block group relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white shadow-xl shadow-indigo-500/20">
+                        <div className="absolute top-0 right-0 p-8 opacity-10">
+                            <Star className="w-24 h-24 rotate-12" />
                         </div>
-                        <h2 className="text-xl font-bold mb-2 pr-12">All India Mock Tests</h2>
-                        <p className="text-indigo-100 text-xs font-medium max-w-[200px] mb-4 leading-relaxed">
-                            Compete with aspirants across India in real-time.
-                        </p>
-                        <div className="inline-flex items-center gap-2 bg-white text-indigo-600 px-4 py-2 rounded-xl text-xs font-bold group-active:scale-95 transition-transform">
-                            Join Series <ArrowRight className="w-3 h-3" />
+                        <div className="relative p-6">
+                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-3 border border-white/10">
+                                <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+                                Live Now
+                            </div>
+                            <h2 className="text-xl font-bold mb-2 pr-12">All India Mock Tests</h2>
+                            <p className="text-indigo-100 text-[11px] font-medium max-w-[200px] mb-4 leading-relaxed">
+                                Compete with aspirants across India in real-time.
+                            </p>
+                            <div className="inline-flex items-center gap-2 bg-white text-indigo-600 px-4 py-2 rounded-xl text-xs font-bold group-active:scale-95 transition-transform">
+                                Join Series <ArrowRight className="w-3 h-3" />
+                            </div>
                         </div>
-                    </div>
-                </Link>
+                    </Link>
+
+                    {/* 2. Quiz Zone Banner */}
+                    <button onClick={() => window.scrollTo({ top: 400, behavior: 'smooth' })} className="flex-shrink-0 w-[85%] sm:w-[320px] block group relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-xl shadow-emerald-500/20 text-left">
+                        <div className="absolute top-0 right-0 p-8 opacity-10">
+                            <BrainCircuit className="w-24 h-24 -rotate-12" />
+                        </div>
+                        <div className="relative p-6">
+                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-3 border border-white/10">
+                                Practice Mode
+                            </div>
+                            <h2 className="text-xl font-bold mb-2 pr-12">Topic-wise Quiz</h2>
+                            <p className="text-emerald-50 text-[11px] font-medium max-w-[200px] mb-4 leading-relaxed">
+                                Master specific topics with instant corrective feedback.
+                            </p>
+                            <div className="inline-flex items-center gap-2 bg-white text-emerald-600 px-4 py-2 rounded-xl text-xs font-bold group-active:scale-95 transition-transform">
+                                Start Quiz <Play className="w-3 h-3 fill-current" />
+                            </div>
+                        </div>
+                    </button>
+
+                    {/* 3. Flash Cards Banner */}
+                    <Link href="/flashcards" className="flex-shrink-0 w-[85%] sm:w-[320px] block group relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-500 to-rose-600 text-white shadow-xl shadow-orange-500/20">
+                        <div className="absolute top-0 right-0 p-8 opacity-10">
+                            <Layers className="w-24 h-24 rotate-45" />
+                        </div>
+                        <div className="relative p-6">
+                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-3 border border-white/10">
+                                Active Recall
+                            </div>
+                            <h2 className="text-xl font-bold mb-2 pr-12">Flash Cards</h2>
+                            <p className="text-orange-50 text-[11px] font-medium max-w-[200px] mb-4 leading-relaxed">
+                                Quickly memorize key points and manual rules.
+                            </p>
+                            <div className="inline-flex items-center gap-2 bg-white text-orange-600 px-4 py-2 rounded-xl text-xs font-bold group-active:scale-95 transition-transform">
+                                Open Cards <Layers className="w-3 h-3" />
+                            </div>
+                        </div>
+                    </Link>
+                </div>
 
                 {/* Paper I */}
                 <section>

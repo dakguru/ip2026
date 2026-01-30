@@ -47,7 +47,7 @@ export default function StudyPlanner() {
     });
 
     // Flexible Mode State
-    const [viewMode, setViewMode] = useState<'recommended' | 'flexible'>('recommended');
+    const [viewMode, setViewMode] = useState<'recommended' | 'flexible'>('flexible');
     const [topicMetadata, setTopicMetadata] = useState<Record<string, { mastery?: 'confident' | 'partially-confident' | 'not-confident'; completionDate?: string }>>({});
 
     const isMobileApp = useIsMobileApp();

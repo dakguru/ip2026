@@ -23,6 +23,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     const [searchOpen, setSearchOpen] = useState(false);
     const [notifOpen, setNotifOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
     // Sync membership for accurate display
     useEffect(() => {
@@ -143,8 +145,33 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         }
     }, [notifOpen]);
 
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchEnd - touchStart;
+        const isLeftToRight = distance > 80;
+        const startedFromEdge = touchStart < 60; // Start swipe from left edge
+
+        if (isLeftToRight && startedFromEdge) {
+            setMenuOpen(true);
+        }
+    };
+
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
+        <div
+            className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+        >
 
             {/* --- ROYAL HEADER --- */}
             <header className="sticky top-0 z-40 bg-slate-900 dark:bg-black px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] border-b border-slate-800 shadow-xl shadow-slate-900/20">
@@ -373,21 +400,6 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
             <div className="space-y-6 pt-5">
                 {/* Android App Payment Announcement */}
-                {Capacitor.getPlatform() === 'android' && (
-                    <div className="px-5">
-                        <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/50 rounded-2xl p-4 shadow-sm flex gap-4 items-start animate-in fade-in slide-in-from-top-4 duration-500">
-                            <div className="p-2 bg-amber-100 dark:bg-amber-900/50 rounded-xl text-amber-600 dark:text-amber-400 shrink-0">
-                                <AlertCircle className="w-5 h-5" />
-                            </div>
-                            <div className="space-y-1">
-                                <h4 className="text-sm font-black text-amber-900 dark:text-amber-100 uppercase tracking-tight">Payment Notice</h4>
-                                <p className="text-xs font-medium text-amber-800 dark:text-amber-200 leading-relaxed">
-                                    We're working on the payment issue for the Android App users. Aspirants are requested to use Desktop/Mobile Browers for making their payments using our direct website link <span className="font-black underline">www.dakguru.com</span>. Thanks for your continued support.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                )}
 
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
                 {/* --- HALL OF FAME BANNER REMOVED --- */}
@@ -427,15 +439,13 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
                 {/* --- CAROUSEL (NOW THIRD - THE "SECOND BANNER") --- */}
                 <div className="px-5">
-                    <div className="flex items-center gap-2 mb-4">
+                    <div className="flex items-center gap-2 mb-3">
                         <div className="h-4 w-1 bg-indigo-600 rounded-full"></div>
-                        <h3 className="text-xs font-black text-slate-800 dark:text-zinc-300 uppercase tracking-widest">
+                        <h3 className="text-[10px] font-black text-slate-500 dark:text-zinc-400 uppercase tracking-widest">
                             Live Events & Updates
                         </h3>
                     </div>
-                    <div className="rounded-3xl overflow-hidden shadow-2xl shadow-indigo-900/10 border border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-                        <DashboardCarousel />
-                    </div>
+                    <DashboardCarousel />
                 </div>
 
                 {/* --- PRO UPGRADE CARD --- */}
