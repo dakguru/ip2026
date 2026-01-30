@@ -12,6 +12,7 @@ import NativeMobileSpacer from "@/components/NativeMobileSpacer";
 import UserActivityTracker from "@/components/UserActivityTracker";
 import BackButtonHandler from "@/components/BackButtonHandler";
 import AppLoadingScreen from "@/components/AppLoadingScreen";
+import PushNotificationManager from "@/components/PushNotificationManager";
 
 
 const inter = Inter({
@@ -56,6 +57,7 @@ export default function RootLayout({
           <AppLoadingScreen />
           <UserActivityTracker />
           <BackButtonHandler />
+          <PushNotificationManager />
           <GlobalNavigation />
           <NativeMobileSpacer>
             {children}

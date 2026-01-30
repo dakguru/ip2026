@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "725931746201",
+    "project_id": "dak-guru-3e38a",
+    "storage_bucket": "dak-guru-3e38a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725931746201:android:77471be9d38224ad7fa908",
+        "android_client_info": {
+          "package_name": "com.studyplanner.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgwqA8tQk_xmdSsjRU-i3yMb10B5hOIow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
