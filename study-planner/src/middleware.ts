@@ -20,19 +20,24 @@ export async function middleware(request: NextRequest) {
         pathname === '/mock-tests';
 
     const isLogout = request.nextUrl.searchParams.get('logout') === 'true';
+    const isSessionExpired = request.nextUrl.searchParams.get('reason') === 'session_expired';
 
-    // If user is on login page and has a valid token, redirect to planner
-    // UNLESS they are explicitly logging out
-    if (isLoginPage && token && !isLogout) {
+    // If user is on login page and has a token, redirect to planner
+    // UNLESS they are explicitly logging out OR their session just expired
+    if (isLoginPage && token && !isLogout && !isSessionExpired) {
         return NextResponse.redirect(new URL('/planner', request.url));
     }
 
-    if (isLoginPage && isLogout) {
-        // If explicitly logging out, ensure we clear cookies and show login page
+    if (isLoginPage && (isLogout || isSessionExpired)) {
+        // If explicitly logging out or session expired, ensure we clear cookies and show login page
         const response = NextResponse.next();
-        response.cookies.delete('auth_token');
-        response.cookies.delete('user_session');
-        response.cookies.delete('session_v');
+        const cookieOptions = {
+            path: '/',
+            ...(process.env.NODE_ENV === 'production' ? { domain: '.dakguru.com' } : {})
+        };
+        response.cookies.set('auth_token', '', { ...cookieOptions, maxAge: 0 });
+        response.cookies.set('user_session', '', { ...cookieOptions, maxAge: 0 });
+        response.cookies.set('session_v', '', { ...cookieOptions, maxAge: 0 });
         return response;
     }
 
@@ -61,9 +66,13 @@ export async function middleware(request: NextRequest) {
 
         if (!email || !sessionId) {
             const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url), 303);
-            response.cookies.delete('auth_token');
-            response.cookies.delete('user_session');
-            response.cookies.delete('session_v');
+            const cookieOptions = {
+                path: '/',
+                ...(process.env.NODE_ENV === 'production' ? { domain: '.dakguru.com' } : {})
+            };
+            response.cookies.set('auth_token', '', { ...cookieOptions, maxAge: 0 });
+            response.cookies.set('user_session', '', { ...cookieOptions, maxAge: 0 });
+            response.cookies.set('session_v', '', { ...cookieOptions, maxAge: 0 });
             return response;
         }
 
@@ -84,21 +93,18 @@ export async function middleware(request: NextRequest) {
 
             clearTimeout(timeoutId);
 
-            if (!validateRes.ok) {
-                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url), 303);
-                response.cookies.delete('auth_token');
-                response.cookies.delete('user_session');
-                response.cookies.delete('session_v');
-                return response;
-            }
-
-            const { valid } = await validateRes.json();
+            const { valid, status } = await validateRes.json();
 
             if (!valid) {
-                const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url), 303);
-                response.cookies.delete('auth_token');
-                response.cookies.delete('user_session');
-                response.cookies.delete('session_v');
+                const reason = status === 'conflict' ? 'multiple_login' : 'session_expired';
+                const response = NextResponse.redirect(new URL(`/login?reason=${reason}`, request.url), 303);
+                const cookieOptions = {
+                    path: '/',
+                    ...(process.env.NODE_ENV === 'production' ? { domain: '.dakguru.com' } : {})
+                };
+                response.cookies.set('auth_token', '', { ...cookieOptions, maxAge: 0 });
+                response.cookies.set('user_session', '', { ...cookieOptions, maxAge: 0 });
+                response.cookies.set('session_v', '', { ...cookieOptions, maxAge: 0 });
                 return response;
             }
 

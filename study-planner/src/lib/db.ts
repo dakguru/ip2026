@@ -154,16 +154,17 @@ export async function updateSession(email: string, sessionId: string): Promise<b
     return result.modifiedCount > 0;
 }
 
-export async function validateSession(email: string, sessionId: string): Promise<boolean> {
+export async function validateSession(email: string, sessionId: string): Promise<'valid' | 'conflict' | 'invalid'> {
     await dbConnect();
-    const user = await UserModel.findOne({ email });
-    if (!user) return false;
+    const user = await UserModel.findOne({ email: { $regex: new RegExp(`^${email}$`, 'i') } });
+    if (!user) return 'invalid';
 
-    const isValid = user.currentSessionId === sessionId;
-    if (isValid) {
-        // Fire and forget update to keep validation fast
-        UserModel.updateOne({ _id: user._id }, { $set: { lastActiveAt: new Date() } }).catch(err => console.error("Failed to update activity", err));
+    if (user.currentSessionId !== sessionId) {
+        return 'conflict';
     }
 
-    return isValid;
+    // Fire and forget update to keep validation fast
+    UserModel.updateOne({ _id: user._id }, { $set: { lastActiveAt: new Date() } }).catch(err => console.error("Failed to update activity", err));
+
+    return 'valid';
 }

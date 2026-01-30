@@ -6,14 +6,23 @@ export async function POST(request: Request) {
         const { email, sessionId } = await request.json();
 
         if (!email || !sessionId) {
-            return NextResponse.json({ valid: false }, { status: 400 });
+            return NextResponse.json({ valid: false, status: 'invalid' }, { status: 400 });
         }
 
-        const isValid = await validateSession(email, sessionId);
+        const status = await validateSession(email, sessionId);
 
-        return NextResponse.json({ valid: isValid });
+        if (status === 'conflict') {
+            return NextResponse.json({
+                valid: false,
+                status: 'conflict',
+                code: 'SESSION_CONFLICT',
+                message: 'Logged in on another device'
+            }, { status: 401 });
+        }
+
+        return NextResponse.json({ valid: status === 'valid', status });
     } catch (error) {
         console.error('Session validation error:', error);
-        return NextResponse.json({ valid: false }, { status: 500 });
+        return NextResponse.json({ valid: false, status: 'error' }, { status: 500 });
     }
 }

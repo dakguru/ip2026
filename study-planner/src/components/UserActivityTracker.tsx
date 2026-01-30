@@ -10,17 +10,24 @@ export default function UserActivityTracker() {
         // Function to send heartbeat
         const sendHeartbeat = async () => {
             try {
-                await fetch('/api/user/heartbeat', { method: 'POST' });
+                const res = await fetch('/api/user/heartbeat', { method: 'POST' });
+                if (res.status === 401) {
+                    const data = await res.json();
+                    if (data.code === 'SESSION_CONFLICT') {
+                        // Force logout and redirect
+                        window.location.href = '/login?reason=multiple_login';
+                    }
+                }
             } catch (error) {
                 // Ignore errors silently
             }
         };
 
-        // Send immediately on mount (if likely logged in - api handles auth check)
+        // Send immediately on mount
         sendHeartbeat();
 
-        // Set up interval (every 2 minutes)
-        const intervalId = setInterval(sendHeartbeat, 2 * 60 * 1000);
+        // Set up interval (every 1 minute for better enforcement)
+        const intervalId = setInterval(sendHeartbeat, 60 * 1000);
 
         return () => clearInterval(intervalId);
     }, [pathname]); // Re-run/reset if pathname changes? No, actually just once on mount is fine, but keeping it simple. 

@@ -88,7 +88,8 @@ export default function SettingsPage() {
     const handleLogout = async () => {
         try {
             await fetch('/api/auth/logout', { method: 'POST' });
-            window.location.href = '/login';
+            // Use ?logout=true to tell middleware to ignore any lingering tokens and force cookie deletion
+            window.location.href = '/login?logout=true';
         } catch (error) {
             console.error("Logout failed", error);
         }

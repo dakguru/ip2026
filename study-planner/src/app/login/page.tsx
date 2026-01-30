@@ -36,6 +36,9 @@ function AuthForm() {
         if (searchParams.get("reason") === "session_expired") {
             setError("Your session has expired. Please sign in again.");
         }
+        if (searchParams.get("reason") === "multiple_login") {
+            setError("You have been signed out because your account was used on another device.");
+        }
     }, [searchParams]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {

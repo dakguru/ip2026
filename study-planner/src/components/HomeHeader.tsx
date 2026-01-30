@@ -36,8 +36,8 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
     const handleLogout = async () => {
         try {
             await fetch('/api/auth/logout', { method: 'POST' });
-            router.push('/login');
-            router.refresh();
+            // Use ?logout=true to tell middleware to ignore any lingering tokens and force cookie deletion
+            window.location.href = '/login?logout=true';
         } catch (error) {
             console.error('Logout failed', error);
         }
@@ -366,8 +366,8 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                     </>
                                 ) : (
                                     <button
-                                        onClick={() => {
-                                            handleLogout();
+                                        onClick={async () => {
+                                            await handleLogout();
                                             setMobileMenuOpen(false);
                                         }}
                                         className="w-full flex items-center justify-center gap-2 p-3 rounded-lg font-semibold text-red-600 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 hover:bg-red-100 dark:hover:bg-red-900/20 transition-colors"

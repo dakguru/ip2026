@@ -20,14 +20,23 @@ export async function POST() {
 
         await dbConnect();
 
-        // Update lastActiveAt for this user
-        // We also check sessionId to ensure it's the current valid session, 
-        // though strictly updating activity for the email is probably fine too.
-        // Let's being precise and check session match is good practice but might fail if session rotated? 
-        // No, currentSessionId is what we want.
+        const user = await UserModel.findOne({ email: { $regex: new RegExp(`^${email}$`, 'i') } });
 
+        if (!user) {
+            return NextResponse.json({ success: false, message: 'User not found' }, { status: 404 });
+        }
+
+        if (user.currentSessionId !== sessionId) {
+            return NextResponse.json({
+                success: false,
+                code: 'SESSION_CONFLICT',
+                message: 'Logged in on another device'
+            }, { status: 401 });
+        }
+
+        // Update lastActiveAt
         await UserModel.updateOne(
-            { email: { $regex: new RegExp(`^${email}$`, 'i') } },
+            { _id: user._id },
             { $set: { lastActiveAt: new Date() } }
         );
 
