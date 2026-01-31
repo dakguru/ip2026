@@ -4,6 +4,7 @@ import autoTable from "jspdf-autotable";
 import { Capacitor } from "@capacitor/core";
 import { Filesystem, Directory } from "@capacitor/filesystem";
 import { Toast } from "@capacitor/toast";
+import { FileOpener } from '@capacitor-community/file-opener';
 
 interface Question {
     id: string;
@@ -154,8 +155,17 @@ export const generateMockTestAnswerSheetPDF = async ({
 
     let yPos = 75;
 
+    // Helper to clean text and fix encoding issues
+    const cleanText = (text: string) => {
+        if (!text) return "";
+        return text.replace(/₹/g, "Rs. ").replace(/\t/g, " ");
+    };
+
     // --- QUESTIONS LOOP ---
     questions.forEach((q, index) => {
+        // Reset potentially polluted state
+        doc.setCharSpace(0);
+
         // Check page break for question title
         if (yPos > pageHeight - 40) {
             doc.addPage();
@@ -166,9 +176,9 @@ export const generateMockTestAnswerSheetPDF = async ({
         doc.setFontSize(11);
         doc.setFont("helvetica", "bold");
         doc.setTextColor(0, 0, 0);
-        const qTitle = `Q${index + 1}. ${q.text}`;
+        const qTitle = cleanText(`Q${index + 1}. ${q.text}`);
         const splitTitle = doc.splitTextToSize(qTitle, contentWidth);
-        doc.text(splitTitle, margin, yPos);
+        doc.text(splitTitle, margin, yPos, { align: "left" });
         yPos += splitTitle.length * 5 + 4;
 
         // Render Table if available
@@ -180,8 +190,8 @@ export const generateMockTestAnswerSheetPDF = async ({
             }
             autoTable(doc, {
                 startY: yPos,
-                head: [q.table.headers],
-                body: q.table.rows,
+                head: [q.table.headers.map(h => cleanText(h))],
+                body: q.table.rows.map(row => row.map(cell => cleanText(cell))),
                 theme: 'grid',
                 headStyles: { fillColor: [50, 50, 50] },
                 styles: { fontSize: 9, cellPadding: 2 },
@@ -211,7 +221,11 @@ export const generateMockTestAnswerSheetPDF = async ({
             }
             if (isSelected && isCorrect) optLabel = " (Your & Correct Answer)";
 
-            const optText = `${String.fromCharCode(65 + optIndex)}. ${opt}${optLabel}`;
+            const optText = cleanText(`${String.fromCharCode(65 + optIndex)}. ${opt}${optLabel}`);
+
+            // Ensure charSpace is 0 before measuring/rendering
+            doc.setCharSpace(0);
+
             const splitOpt = doc.splitTextToSize(optText, contentWidth - 5);
 
             if (yPos + splitOpt.length * 5 > pageHeight - 20) {
@@ -219,7 +233,7 @@ export const generateMockTestAnswerSheetPDF = async ({
                 addWatermark();
                 yPos = 20;
             }
-            doc.text(splitOpt, margin + 5, yPos);
+            doc.text(splitOpt, margin + 5, yPos, { align: "left" });
             yPos += splitOpt.length * 5 + 1;
         });
 
@@ -229,20 +243,20 @@ export const generateMockTestAnswerSheetPDF = async ({
         if (q.explanation) {
             doc.setTextColor(0, 0, 0);
             doc.setFont("helvetica", "bold");
-            doc.text("Explanation:", margin, yPos);
+            doc.text("Explanation:", margin, yPos, { align: "left" });
             yPos += 5;
 
             doc.setFont("helvetica", "normal");
-            const cleanExplanation = q.explanation.replace(/\*/g, '');
+            const cleanExplanation = cleanText(q.explanation.replace(/\*/g, ''));
             const splitExpl = doc.splitTextToSize(cleanExplanation, contentWidth);
 
             if (yPos + splitExpl.length * 5 > pageHeight - 20) {
                 doc.addPage();
                 addWatermark();
-                doc.text("Explanation (contd):", margin, 20);
+                doc.text("Explanation (contd):", margin, 20, { align: "left" });
                 yPos = 25;
             }
-            doc.text(splitExpl, margin, yPos);
+            doc.text(splitExpl, margin, yPos, { align: "left" });
             yPos += splitExpl.length * 5 + 10;
         }
 
@@ -259,37 +273,35 @@ export const generateMockTestAnswerSheetPDF = async ({
         return;
     }
 
-    // Native Platform Download Logic
+    // Native Platform Download Logic: Save to Cache & Open
     try {
-        // Request permissions
-        try {
-            const permStatus = await Filesystem.checkPermissions();
-            if (permStatus.publicStorage !== 'granted') {
-                await Filesystem.requestPermissions();
-            }
-        } catch (e) {
-            console.warn("Permission check failed", e);
-        }
-
         // Get PDF as base64
         const pdfBase64 = doc.output('datauristring').split(',')[1];
 
-        // Save to Documents
-        await Filesystem.writeFile({
+        // Save to Cache
+        const savedFile = await Filesystem.writeFile({
             path: filename,
             data: pdfBase64,
-            directory: Directory.Documents,
+            directory: Directory.Cache,
             recursive: true
         });
 
         await Toast.show({
-            text: `Answer sheet saved to Documents folder`,
-            duration: 'long'
+            text: 'Opening answer sheet...',
+            duration: 'short'
         });
-    } catch (error) {
-        console.error("Native PDF save failed", error);
+
+        // Open with FileOpener
+        await FileOpener.open({
+            filePath: savedFile.uri,
+            contentType: 'application/pdf',
+            openWithDefault: true,
+        });
+
+    } catch (error: any) {
+        console.error("Native PDF open failed", error);
         await Toast.show({
-            text: 'Failed to save PDF to storage',
+            text: `Failed to open PDF: ${error.message}`,
             duration: 'long'
         });
     }

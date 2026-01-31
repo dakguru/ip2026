@@ -565,7 +565,7 @@ export default function FlashcardsPage() {
     return (
         <div className="fixed inset-0 z-[100] h-[100dvh] w-screen overflow-hidden bg-slate-50 dark:bg-black flex flex-col transition-colors duration-500 overscroll-none touch-pan-x">
             {/* ROW 2: DECK CONTROLS (Matches Screenshot 1 control row) */}
-            <div className="sticky top-0 z-40 bg-white/95 dark:bg-black/95 backdrop-blur-md px-4 py-3 border-b border-slate-100 dark:border-white/5 shadow-sm">
+            <div className="sticky top-0 z-40 bg-white/95 dark:bg-black/95 backdrop-blur-md px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top))] border-b border-slate-100 dark:border-white/5 shadow-sm">
                 <div className="max-w-xl mx-auto flex items-center justify-between relative">
                     <button
                         onClick={() => setSelectedDeckId(null)}

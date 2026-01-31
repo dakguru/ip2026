@@ -79,7 +79,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         { label: "Mock Tests", icon: Trophy, color: "text-purple-700 dark:text-purple-400", bg: "bg-purple-50 dark:bg-purple-900/20", href: "/mock-tests" },
         { label: "Flash Cards", icon: Layers, color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-900/20", href: "/flashcards" },
         { label: "Dak Sutra", icon: Newspaper, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/dak-sutra" },
-        { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50" },
+        { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "/social" },
         { label: "DG Blog", icon: PenTool, color: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/blog" },
     ];
 

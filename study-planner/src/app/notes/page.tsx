@@ -13,6 +13,7 @@ const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
 import { Capacitor } from '@capacitor/core';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Toast } from '@capacitor/toast';
+import { FileOpener } from '@capacitor-community/file-opener';
 import { ShieldAlert, Info } from 'lucide-react';
 
 // --- DATA ---
@@ -514,6 +515,8 @@ export default function NotesPage() {
 
 
 
+
+
     const performDownload = async (url: string, filename: string) => {
         try {
             if (!Capacitor.isNativePlatform()) {
@@ -527,82 +530,54 @@ export default function NotesPage() {
                 return;
             }
 
-            // Native Download Logic
-            // 1. Request Permissions
-            try {
-                const permStatus = await Filesystem.checkPermissions();
-                if (permStatus.publicStorage !== 'granted') {
-                    const reqStatus = await Filesystem.requestPermissions();
-                    if (reqStatus.publicStorage !== 'granted') {
-                        await Toast.show({
-                            text: 'Storage permission is required to download files.',
-                            duration: 'long'
-                        });
-                        return;
-                    }
-                }
-            } catch (permError) {
-                console.warn("Permission check failed, proceeding anyway", permError);
-            }
-
+            // Native Logic: Download to Cache & Open
             await Toast.show({
-                text: 'Starting download...',
+                text: 'Opening document...',
                 duration: 'short'
             });
 
-            // 2. Fetch the file
-            // Use window.location.origin to ensure absolute path if it's a relative one
+            // 1. Fetch the file
             const absoluteUrl = url.startsWith('http') ? url : window.location.origin + url;
             const response = await fetch(absoluteUrl);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const blob = await response.blob();
 
-            // 3. Convert to base64
+            // 2. Convert to base64
             const reader = new FileReader();
             reader.readAsDataURL(blob);
             reader.onloadend = async () => {
                 const base64data = reader.result as string;
-                // Remove the "data:application/pdf;base64," part
                 const data = base64data.split(',')[1];
 
                 try {
-                    // 4. Write via Filesystem
-                    // Use Directory.Documents - it's more reliable across Android versions
-                    await Filesystem.writeFile({
+                    // 3. Write to Cache (Temporary)
+                    const savedFile = await Filesystem.writeFile({
                         path: filename,
                         data: data,
-                        directory: Directory.Documents,
+                        directory: Directory.Cache,
                         recursive: true
                     });
 
-                    // 5. Notify success
-                    await Toast.show({
-                        text: `File saved to Documents folder`,
-                        duration: 'long'
+                    // 4. Open with FileOpener
+                    await FileOpener.open({
+                        filePath: savedFile.uri,
+                        contentType: 'application/pdf',
+                        openWithDefault: true,
                     });
 
-                } catch (writeError) {
-                    console.error("Write to Documents failed, trying Data", writeError);
-                    try {
-                        await Filesystem.writeFile({
-                            path: filename,
-                            data: data,
-                            directory: Directory.Data,
-                        });
-                        await Toast.show({
-                            text: `File saved to App Data (Documents unreachable)`,
-                            duration: 'long'
-                        });
-                    } catch (fallbackError) {
-                        throw fallbackError;
-                    }
+                } catch (err: any) {
+                    console.error("File Opener Error", err);
+                    await Toast.show({
+                        text: `Could not open file: ${err.message}`,
+                        duration: 'long'
+                    });
                 }
             };
 
         } catch (error) {
             console.error("Download failed", error);
             await Toast.show({
-                text: `Download failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
+                text: `Failed to load document: ${error instanceof Error ? error.message : 'Unknown error'}`,
                 duration: 'long'
             });
         }
@@ -807,7 +782,7 @@ export default function NotesPage() {
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
                     <div className="bg-white dark:bg-zinc-900 rounded-none sm:rounded-2xl w-full h-full max-w-6xl flex flex-col shadow-2xl overflow-hidden relative">
                         {/* Header */}
-                        <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-[60] w-full shrink-0">
+                        <div className="flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top))] sm:py-4 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-[60] w-full shrink-0">
                             <h3 className="font-bold text-slate-800 dark:text-zinc-100 flex items-center gap-2 text-sm sm:text-base truncate mr-2">
                                 <FileText className="w-5 h-5 text-purple-600 shrink-0" />
                                 <span className="truncate">Document Viewer</span>
