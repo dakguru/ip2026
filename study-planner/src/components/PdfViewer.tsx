@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Loader2, Download, AlertCircle, RefreshCw } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Loader2, Download, AlertCircle, RefreshCw, BookOpen, FileText } from 'lucide-react';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { Capacitor } from '@capacitor/core';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Toast } from '@capacitor/toast';
+import LiquidReader from './LiquidReader';
 
 // Configure worker - Use CDN for better compatibility in Capacitor/Android
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -33,6 +34,36 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     const [error, setError] = useState<Error | null>(null);
     const [loadProgress, setLoadProgress] = useState(0);
     const [containerWidth, setContainerWidth] = useState<number>(0);
+
+    // Liquid Mode State
+    const [isLiquidMode, setIsLiquidMode] = useState(false);
+    const [isAndroid, setIsAndroid] = useState(false);
+
+    useEffect(() => {
+        // Check platform and load liquid mode preference
+        const checkPlatform = () => {
+            const platform = Capacitor.getPlatform();
+            const isAndroidPlatform = platform === 'android';
+            setIsAndroid(isAndroidPlatform);
+
+            if (isAndroidPlatform) {
+                const savedPref = localStorage.getItem('liquidModePref');
+                if (savedPref !== null) {
+                    setIsLiquidMode(savedPref === 'true');
+                } else {
+                    // Default ON for mobile (Android)
+                    setIsLiquidMode(true);
+                }
+            }
+        };
+        checkPlatform();
+    }, []);
+
+    const toggleLiquidMode = () => {
+        const newMode = !isLiquidMode;
+        setIsLiquidMode(newMode);
+        localStorage.setItem('liquidModePref', String(newMode));
+    };
 
     function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
         setNumPages(numPages);
@@ -268,89 +299,136 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         >
             {/* Toolbar */}
             <div className="flex items-center justify-between p-2 border-b border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-sm z-10 shrink-0 gap-2 overflow-x-auto">
-                <div className="flex items-center gap-2">
-                    <button
-                        onClick={() => setPageNumber(prev => Math.max(prev - 1, 1))}
-                        disabled={pageNumber <= 1 || loading}
-                        className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 disabled:opacity-30"
-                    >
-                        <ChevronLeft className="w-5 h-5 text-slate-600 dark:text-slate-300" />
-                    </button>
-                    <span className="text-sm font-medium text-slate-600 dark:text-slate-300 whitespace-nowrap min-w-[3rem] text-center">
-                        {loading ? '--' : `${pageNumber} / ${numPages || '--'}`}
-                    </span>
-                    <button
-                        onClick={() => setPageNumber(prev => Math.min(prev + 1, numPages || prev))}
-                        disabled={pageNumber >= (numPages || 1) || loading}
-                        className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 disabled:opacity-30"
-                    >
-                        <ChevronRight className="w-5 h-5 text-slate-600 dark:text-slate-300" />
-                    </button>
-                </div>
+
+                {/* Controls for Standard View */}
+                {!isLiquidMode && (
+                    <div className="flex items-center gap-2">
+                        <button
+                            onClick={() => setPageNumber(prev => Math.max(prev - 1, 1))}
+                            disabled={pageNumber <= 1 || loading}
+                            className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 disabled:opacity-30"
+                        >
+                            <ChevronLeft className="w-5 h-5 text-slate-600 dark:text-slate-300" />
+                        </button>
+                        <span className="text-sm font-medium text-slate-600 dark:text-slate-300 whitespace-nowrap min-w-[3rem] text-center">
+                            {loading ? '--' : `${pageNumber} / ${numPages || '--'}`}
+                        </span>
+                        <button
+                            onClick={() => setPageNumber(prev => Math.min(prev + 1, numPages || prev))}
+                            disabled={pageNumber >= (numPages || 1) || loading}
+                            className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 disabled:opacity-30"
+                        >
+                            <ChevronRight className="w-5 h-5 text-slate-600 dark:text-slate-300" />
+                        </button>
+                    </div>
+                )}
+
+                {/* Liquid Mode Title */}
+                {isLiquidMode && (
+                    <div className="flex-1 text-sm font-semibold text-slate-700 dark:text-slate-200 pl-2">
+                        Smart Reader View
+                    </div>
+                )}
 
                 <div className="flex items-center gap-2">
-                    <button
-                        onClick={handleDownload}
-                        className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 text-blue-600 dark:text-blue-400"
-                        title="Download PDF"
-                    >
-                        <Download className="w-5 h-5" />
-                    </button>
-                    <div className="w-px h-4 bg-slate-300 dark:bg-zinc-700 mx-1"></div>
-                    <button
-                        onClick={() => setScale(prev => Math.max(prev - 0.1, 0.5))}
-                        className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800"
-                    >
-                        <ZoomOut className="w-5 h-5 text-slate-600 dark:text-slate-300" />
-                    </button>
-                    <span className="text-xs font-medium text-slate-500 w-10 text-center">
-                        {Math.round(scale * 100)}%
-                    </span>
-                    <button
-                        onClick={() => setScale(prev => Math.min(prev + 0.1, 2.5))}
-                        className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800"
-                    >
-                        <ZoomIn className="w-5 h-5 text-slate-600 dark:text-slate-300" />
-                    </button>
+                    {/* Liquid Mode Toggle - Exclusive to Android/Mobile */}
+                    {isAndroid && (
+                        <button
+                            onClick={toggleLiquidMode}
+                            className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${isLiquidMode
+                                    ? 'bg-blue-600 text-white shadow-md'
+                                    : 'bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300'
+                                }`}
+                        >
+                            {isLiquidMode ? (
+                                <>
+                                    <BookOpen className="w-4 h-4" />
+                                    <span>Reader</span>
+                                </>
+                            ) : (
+                                <>
+                                    <FileText className="w-4 h-4" />
+                                    <span>PDF</span>
+                                </>
+                            )}
+                        </button>
+                    )}
+
+                    {!isLiquidMode && (
+                        <>
+                            <div className="w-px h-4 bg-slate-300 dark:bg-zinc-700 mx-1"></div>
+                            <button
+                                onClick={handleDownload}
+                                className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 text-blue-600 dark:text-blue-400"
+                                title="Download PDF"
+                            >
+                                <Download className="w-5 h-5" />
+                            </button>
+                            <div className="w-px h-4 bg-slate-300 dark:bg-zinc-700 mx-1"></div>
+                            <button
+                                onClick={() => setScale(prev => Math.max(prev - 0.1, 0.5))}
+                                className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800"
+                            >
+                                <ZoomOut className="w-5 h-5 text-slate-600 dark:text-slate-300" />
+                            </button>
+                            <span className="text-xs font-medium text-slate-500 w-10 text-center">
+                                {Math.round(scale * 100)}%
+                            </span>
+                            <button
+                                onClick={() => setScale(prev => Math.min(prev + 0.1, 2.5))}
+                                className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800"
+                            >
+                                <ZoomIn className="w-5 h-5 text-slate-600 dark:text-slate-300" />
+                            </button>
+                        </>
+                    )}
                 </div>
             </div>
 
             {/* Document Area */}
             <div
-                className={`flex-1 overflow-auto flex justify-center p-4 min-h-0 ${darkMode ? 'bg-zinc-900 invert-pdf' : 'bg-slate-100'}`}
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
+                className={`flex-1 overflow-auto flex justify-center min-h-0 ${darkMode ? 'invert-pdf' : 'bg-slate-100'}`}
+                onTouchStart={!isLiquidMode ? onTouchStart : undefined}
+                onTouchMove={!isLiquidMode ? onTouchMove : undefined}
+                onTouchEnd={!isLiquidMode ? onTouchEnd : undefined}
             >
-                {error ? (
-                    <ErrorUI />
+                {isLiquidMode ? (
+                    <div className="w-full h-full bg-white dark:bg-zinc-900 overflow-y-auto">
+                        <LiquidReader url={url} />
+                    </div>
                 ) : (
-                    <Document
-                        file={url}
-                        onLoadSuccess={onDocumentLoadSuccess}
-                        onLoadProgress={onDocumentLoadProgress}
-                        onLoadError={onDocumentLoadError}
-                        loading={<LoadingUI />}
-                        error={<ErrorUI />}
-                        options={pdfOptions}
-                        className="max-w-full"
-                    >
-                        <div className="shadow-lg transition-transform duration-75 relative z-0">
-                            <Page
-                                pageNumber={pageNumber}
-                                scale={scale}
-                                width={containerWidth ? Math.min(containerWidth - 32, 800) : undefined}
-                                renderTextLayer={false}
-                                renderAnnotationLayer={false}
-                                className="bg-white"
-                                loading={
-                                    <div className="h-[500px] w-full bg-white animate-pulse flex items-center justify-center">
-                                        <Loader2 className="w-8 h-8 text-slate-200 animate-spin" />
-                                    </div>
-                                }
-                            />
-                        </div>
-                    </Document>
+                    <div className={`p-4 ${darkMode ? 'bg-zinc-900' : ''}`}>
+                        {error ? (
+                            <ErrorUI />
+                        ) : (
+                            <Document
+                                file={url}
+                                onLoadSuccess={onDocumentLoadSuccess}
+                                onLoadProgress={onDocumentLoadProgress}
+                                onLoadError={onDocumentLoadError}
+                                loading={<LoadingUI />}
+                                error={<ErrorUI />}
+                                options={pdfOptions}
+                                className="max-w-full"
+                            >
+                                <div className="shadow-lg transition-transform duration-75 relative z-0">
+                                    <Page
+                                        pageNumber={pageNumber}
+                                        scale={scale}
+                                        width={containerWidth ? Math.min(containerWidth - 32, 800) : undefined}
+                                        renderTextLayer={false}
+                                        renderAnnotationLayer={false}
+                                        className="bg-white"
+                                        loading={
+                                            <div className="h-[500px] w-full bg-white animate-pulse flex items-center justify-center">
+                                                <Loader2 className="w-8 h-8 text-slate-200 animate-spin" />
+                                            </div>
+                                        }
+                                    />
+                                </div>
+                            </Document>
+                        )}
+                    </div>
                 )}
             </div>
 

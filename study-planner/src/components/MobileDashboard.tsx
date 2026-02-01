@@ -191,7 +191,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                         <SheetTitle>Menu</SheetTitle>
                                         <SheetDescription>Navigation Menu</SheetDescription>
                                     </SheetHeader>
-                                    <div className="p-6 border-b border-slate-100 dark:border-zinc-800 flex items-center gap-4 bg-slate-50 dark:bg-zinc-900">
+                                    <div className="p-6 pt-[max(32px,env(safe-area-inset-top))] border-b border-slate-100 dark:border-zinc-800 flex items-center gap-4 bg-slate-50 dark:bg-zinc-900">
                                         <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-white shadow-md">
                                             <Image src="/dak-guru-round.png" alt="Logo" fill className="object-cover" />
                                         </div>
@@ -240,7 +240,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                         ))}
                                     </div>
 
-                                    <div className="p-4 border-t border-slate-100 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900/50 space-y-4">
+                                    <div className="p-4 pb-[max(32px,env(safe-area-inset-bottom))] border-t border-slate-100 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900/50 space-y-4">
                                         <div className="flex items-center justify-between px-2">
                                             <span className="text-sm font-medium text-slate-600 dark:text-zinc-400">Appearance</span>
                                             <ThemeToggle />
