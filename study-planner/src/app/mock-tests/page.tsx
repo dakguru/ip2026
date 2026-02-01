@@ -165,14 +165,14 @@ export default function MockTestsPage() {
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
 
             const calculatedId = `mock-${format(saturdayDate, 'yyyy-MM-dd')}`;
+            const now = new Date();
 
-            if ((isSameDay(today, saturdayDate) || isSameDay(today, sundayDate))) {
-                status = 'live';
-            } else if (isBefore(today, saturdayDate)) {
-                // Only make the specific test being worked on live for admin testing
-                status = (role === 'admin' && calculatedId === 'mock-2026-01-31') ? 'live' : 'upcoming';
-            } else {
+            if (now > sundayDate) {
                 status = 'completed';
+            } else if (now >= saturdayDate) {
+                status = 'live';
+            } else {
+                status = 'upcoming';
             }
 
             if (weekTopics.length > 0 || mockCount === 1) {
@@ -1251,7 +1251,7 @@ function MockTestCard({
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
                 {/* Top 7 Rank Holders Button */}
-                {(isCompleted || role === 'admin') && onShowRankList && (
+                {(isCompleted) && onShowRankList && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         className="w-full py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl font-bold text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-95"
