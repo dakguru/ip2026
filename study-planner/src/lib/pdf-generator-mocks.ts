@@ -266,43 +266,79 @@ export const generateMockTestAnswerSheetPDF = async ({
     });
 
     const safeFilename = userName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    const filename = `Dak_Guru_AnswerSheet_${safeFilename}.pdf`;
+    const filename = `Dak_Guru_AnswerSheet_${safeFilename}_${Date.now()}.pdf`;
 
     if (!Capacitor.isNativePlatform()) {
         doc.save(filename);
         return;
     }
 
-    // Native Platform Download Logic: Save to Cache & Open
+    // Native Platform Download Logic
     try {
-        // Get PDF as base64
         const pdfBase64 = doc.output('datauristring').split(',')[1];
 
-        // Save to Cache
-        const savedFile = await Filesystem.writeFile({
-            path: filename,
-            data: pdfBase64,
-            directory: Directory.Cache,
-            recursive: true
-        });
+        // 1. Permission Check
+        try {
+            const permStatus = await Filesystem.checkPermissions();
+            if (permStatus.publicStorage !== 'granted') {
+                await Filesystem.requestPermissions();
+            }
+        } catch (e) {
+            console.warn("Permission check failed/skipped", e);
+        }
+
+        let fileUri = "";
+        let savedLocation = "Downloads";
+
+        // 2. Try saving to Downloads/DakGuru/ (Android 10+ scoped storage friendly for public downloads)
+        try {
+            const res = await Filesystem.writeFile({
+                path: `Download/DakGuru/${filename}`,
+                data: pdfBase64,
+                directory: Directory.ExternalStorage, // Maps to primary shared storage
+                recursive: true
+            });
+            fileUri = res.uri;
+        } catch (downloadErr) {
+            console.warn("Failed to save to Download folder, trying Documents...", downloadErr);
+            // 3. Fallback to Documents/DakGuru/
+            try {
+                const res = await Filesystem.writeFile({
+                    path: `DakGuru/${filename}`,
+                    data: pdfBase64,
+                    directory: Directory.Documents,
+                    recursive: true
+                });
+                fileUri = res.uri;
+                savedLocation = "Documents";
+            } catch (docErr) {
+                console.error("Failed to save to Documents", docErr);
+                throw new Error("Could not save PDF to storage.");
+            }
+        }
 
         await Toast.show({
-            text: 'Opening answer sheet...',
+            text: `Saved to ${savedLocation}. Opening...`,
             duration: 'short'
         });
 
-        // Open with FileOpener
-        await FileOpener.open({
-            filePath: savedFile.uri,
-            contentType: 'application/pdf',
-            openWithDefault: true,
-        });
+        // 4. Open File
+        try {
+            await FileOpener.open({
+                filePath: fileUri,
+                contentType: 'application/pdf',
+                openWithDefault: true,
+            });
+        } catch (openerErr) {
+            console.warn("FileOpener failed", openerErr);
+            await Toast.show({
+                text: "File saved but couldn't auto-open.",
+                duration: 'long'
+            });
+        }
 
     } catch (error: any) {
-        console.error("Native PDF open failed", error);
-        await Toast.show({
-            text: `Failed to open PDF: ${error.message}`,
-            duration: 'long'
-        });
+        console.error("Native PDF Generation/Save Error", error);
+        throw error; // Re-throw so the UI knows it failed
     }
 };
