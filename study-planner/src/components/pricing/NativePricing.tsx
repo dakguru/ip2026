@@ -105,13 +105,14 @@ export default function NativePricing({
                         </div>
 
                         <h2 className="text-2xl font-black mb-2 leading-tight">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">50% DISCOUNT</span> <br />
-                            FOR FIRST 50 SUBSCRIBERS!
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">50% OFF — ENDING SOON!</span>
                         </h2>
 
+                        <p className="text-base font-bold text-white mb-1">
+                            Gold @ ₹3,750 | Silver @ ₹2,000
+                        </p>
                         <p className="text-sm text-zinc-400 mb-6 leading-relaxed">
-                            Gold @ <span className="text-white font-bold">₹3,750</span> & Silver @ <span className="text-white font-bold">₹2,000</span>.
-                            Claim yours now.
+                            Complete your enrollment now before pricing resets.
                         </p>
 
                         <button
