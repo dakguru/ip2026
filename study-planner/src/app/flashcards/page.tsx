@@ -41,6 +41,8 @@ import Link from "next/link";
 import Image from "next/image";
 import FlashcardsIntroBanner from "@/components/FlashcardsIntroBanner";
 import PremiumFlashCardDeck from "@/components/flashcards/PremiumFlashCardDeck";
+import { Capacitor } from '@capacitor/core';
+import NativeFlashcardsHomeV2 from "@/components/flashcards/NativeFlashcardsHomeV2";
 
 // --- Types ---
 interface UnifiedFlashcard {
@@ -331,7 +333,29 @@ export default function FlashcardsPage() {
         return <FlashcardsIntroBanner />;
     }
 
+    // --- IMPORTS ADAPTATION ---
+    // Ensure you have these imports at top of file:
+    // import { Capacitor } from '@capacitor/core';
+    // import NativeFlashcardsHomeV2 from "@/components/flashcards/NativeFlashcardsHomeV2";
+
     if (!selectedDeckId) {
+        // ANDROID V2 IMMERSIVE HOME
+        if (Capacitor.isNativePlatform()) {
+            return (
+                <NativeFlashcardsHomeV2
+                    decks={finalDecks}
+                    progress={deckProgress}
+                    onDeckSelect={handleSelectDeck}
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
+                    activeFilter={activeFilter}
+                    setActiveFilter={setActiveFilter}
+                    bookmarks={bookmarks}
+                />
+            );
+        }
+
+        // DESKTOP / WEB HOME
         return (
             <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 relative selection:bg-indigo-100 font-sans overflow-hidden">
                 {/* Creative Modern Background Elements */}
@@ -551,9 +575,6 @@ export default function FlashcardsPage() {
                         </div>
                     )}
                 </main>
-
-
-
             </div>
         );
     }
