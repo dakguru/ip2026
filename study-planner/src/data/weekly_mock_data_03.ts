@@ -248,10 +248,10 @@ export const WEEKLY_MOCK_03_QUESTIONS: Question[] = [
     },
     {
         id: "weekly-03-36",
-        text: "A 5-year Time Deposit account is opened on 01.01.2024. As per the rules, what is the earliest this account can be closed prematurely?",
-        options: ["After 3 months", "After 6 months", "After 1 year", "After 2 years"],
-        correctAnswer: 1,
-        explanation: "No TD account can be closed before the expiry of 6 months from the date of deposit."
+        text: "A 5-year National Savings Time Deposit (TD) account is opened on 01.01.2024. As per the National Savings Time Deposit (Fourth Amendment) Scheme, 2023, what is the earliest possible date this account can be closed prematurely by the depositor?",
+        options: ["After 6 months from the date of deposit", "After 1 year from the date of deposit", "After 3 years from the date of deposit", "After 4 years from the date of deposit"],
+        correctAnswer: 3,
+        explanation: "As per the National Savings Time Deposit (Fourth Amendment) Scheme, 2023, a five-year Time Deposit account cannot be closed before the expiry of four years from the date of deposit. This specific amendment changed the premature closure rules for 5-year TD accounts."
     },
     {
         id: "weekly-03-37",
