@@ -11,6 +11,10 @@ interface TextBlock {
     id: string;
 }
 
+interface ExtractedBlock extends TextBlock {
+    size: number;
+}
+
 interface LiquidReaderProps {
     url: string;
     onLoadComplete?: () => void;
@@ -31,20 +35,18 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 setLoading(true);
                 setProgress(5);
 
-                // Load the PDF document
                 const loadingTask = pdfjs.getDocument(url);
-                loadingTask.onProgress = ({ loaded, total }) => {
-                    if (total > 0) setProgress(Math.round((loaded / total) * 30)); // Load phase is 30%
+                loadingTask.onProgress = ({ loaded, total }: { loaded: number; total: number }) => {
+                    if (total > 0) setProgress(Math.round((loaded / total) * 30));
                 };
 
                 const pdf = await loadingTask.promise;
 
                 if (!isMounted) return;
 
-                const extractedBlocks: TextBlock[] = [];
+                const extractedBlocks: ExtractedBlock[] = [];
                 const fontSizes: { [size: number]: number } = {};
 
-                // Helper to record font size frequency to find "Body" size
                 const recordFontSize = (size: number) => {
                     const rSize = Math.round(size);
                     fontSizes[rSize] = (fontSizes[rSize] || 0) + 1;
@@ -52,29 +54,16 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
 
                 const totalPages = pdf.numPages;
 
-                // We'll process pages in chunks to keep UI responsive? 
-                // For now, simple loop as demanded "fast conversion"
-
-                // First Pass: Extract all text items and determine structure
-                // We assume strict sequential reading order for now.
-
                 for (let i = 1; i <= totalPages; i++) {
                     const page = await pdf.getPage(i);
                     const textContent = await page.getTextContent();
 
-                    // Simple text extraction for this MVP
-                    // Real "Smart" extraction needs Y-sorting and line grouping
-
-                    // Group items by Y coordinate (lines)
-                    const items = textContent.items as any[];
-                    // items have transform[4] = x, transform[5] = y
-                    // origin is bottom-left usually
+                    const items = textContent.items as any[]; // Type assertion for pdf.js items
 
                     if (items.length === 0) continue;
 
-                    // 1. Group by Lines (Y position with tolerance)
                     const lines: { y: number; items: any[] }[] = [];
-                    const TOLERANCE = 5; // 5 units vertical tolerance
+                    const TOLERANCE = 5;
 
                     items.forEach(item => {
                         const y = item.transform[5];
@@ -86,40 +75,30 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                         }
                     });
 
-                    // 2. Sort Lines Top-to-Bottom (Y Descending)
                     lines.sort((a, b) => b.y - a.y);
 
-                    // 3. Process Lines
                     lines.forEach(line => {
-                        // Sort items Left-to-Right
                         line.items.sort((a, b) => a.transform[4] - b.transform[4]);
 
-                        // Construct line text
                         const lineText = line.items.map(item => item.str).join(' ').trim();
                         if (!lineText) return;
 
-                        // Identify Font Size (Max in line)
-                        // item.transform[0] is usually font scale/size
                         const maxFontSize = Math.max(...line.items.map(item => Math.abs(item.transform[0])));
                         recordFontSize(maxFontSize);
 
-                        // Temporary storage, we define types later
                         extractedBlocks.push({
-                            type: 'p', // placeholder
+                            type: 'p',
                             text: lineText,
                             id: `page-${i}-y-${line.y}`,
-                            // @ts-ignore - attaching temp size
                             size: maxFontSize
                         });
                     });
 
-                    // Update Progress
                     if (isMounted) {
                         setProgress(30 + Math.round((i / totalPages) * 60));
                     }
                 }
 
-                // Determine Body Font Size (Mode)
                 let bodySize = 12;
                 let maxCount = 0;
                 Object.entries(fontSizes).forEach(([size, count]) => {
@@ -129,8 +108,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                     }
                 });
 
-                // Classify Blocks
-                const structuredBlocks = extractedBlocks.map((block: any) => {
+                const structuredBlocks = extractedBlocks.map((block) => {
                     const size = block.size;
                     let type: TextBlock['type'] = 'p';
 
@@ -145,14 +123,6 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                     } as TextBlock;
                 });
 
-                // Post-Processing: Merge adjacent 'p' blocks that seem to be part of the same paragraph?
-                // For Liquid Mode to be "Continuous", we should probably merge lines unless they are headers or list items.
-                // Or simply rely on rendering with nice spacing.
-                // Simple Merge Strategy:
-                // If current is 'p' and prev is 'p', and neither ends with a hard stop (like .), maybe merge?
-                // For this MVP, let's keep lines separate but style them closely to look like a paragraph flow,
-                // OR attempt a merge.
-
                 const mergedBlocks: TextBlock[] = [];
                 let currentBuffer: TextBlock | null = null;
 
@@ -164,13 +134,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                         }
                         mergedBlocks.push(block);
                     } else {
-                        // It's a paragraph line
                         if (currentBuffer) {
-                            // Check if acts like continuation (previous didn't end in typical sentence end)
-                            // This is heuristic and can be buggy, but improves flow.
-                            const prevText = currentBuffer.text;
-
-                            // Simple merge: Just add space
                             currentBuffer.text += " " + block.text;
                         } else {
                             currentBuffer = block;
@@ -178,7 +142,6 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                     }
                 });
                 if (currentBuffer) mergedBlocks.push(currentBuffer);
-
 
                 setBlocks(mergedBlocks);
                 setLoading(false);
@@ -195,8 +158,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
         processPdf();
 
         return () => { isMounted = false; };
-    }, [url]);
-
+    }, [url, onLoadComplete]);
 
     if (loading) {
         return (
@@ -224,7 +186,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
     return (
         <div ref={containerRef} className="max-w-2xl mx-auto px-4 py-8 bg-white min-h-full">
             <article className="prose prose-slate prose-lg max-w-none">
-                {blocks.map((block, index) => {
+                {blocks.map((block) => {
                     switch (block.type) {
                         case 'h1':
                             return (
