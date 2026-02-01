@@ -6,7 +6,17 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { useParams } from "next/navigation";
 import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
+import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
+import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
+import { LIVE_MOCK_QUESTIONS } from "@/data/live_mock_data";
 import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
+
+const TEST_QUESTIONS_MAP: Record<string, any[]> = {
+    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
+    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
+    "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS,
+    "live-sample": LIVE_MOCK_QUESTIONS
+};
 
 interface MockResult {
     _id: string;
@@ -37,6 +47,8 @@ export default function MockTestDetailResultsPage() {
     const [search, setSearch] = useState("");
     const [expandedRow, setExpandedRow] = useState<string | null>(null);
     const [showNotification, setShowNotification] = useState(false);
+    const [isBulkDownloading, setIsBulkDownloading] = useState(false);
+    const [downloadProgress, setDownloadProgress] = useState(0);
 
     useEffect(() => {
         if (showNotification) {
@@ -88,6 +100,46 @@ export default function MockTestDetailResultsPage() {
         ? Math.max(...results.map(r => r.score))
         : 0;
 
+    const handleBulkDownload = async () => {
+        if (filteredResults.length === 0) return;
+
+        const questions = TEST_QUESTIONS_MAP[testId];
+        if (!questions) {
+            alert("Question data not found for this test.");
+            return;
+        }
+
+        if (!confirm(`Are you sure you want to download ${filteredResults.length} answer sheets? This might take a moment.`)) return;
+
+        setIsBulkDownloading(true);
+        setDownloadProgress(0);
+
+        for (let i = 0; i < filteredResults.length; i++) {
+            const result = filteredResults[i];
+            try {
+                await generateMockTestAnswerSheetPDF({
+                    userName: result.userName,
+                    score: result.score,
+                    totalQuestions: result.totalQuestions || questions.length,
+                    questions: questions as any,
+                    answers: result.answers || {},
+                    testName: formatTestName(testId),
+                    submittedAt: result.submittedAt
+                });
+
+                // Small delay between downloads to prevent browser issues
+                await new Promise(resolve => setTimeout(resolve, 800));
+            } catch (error) {
+                console.error(`Failed to download for ${result.userName}:`, error);
+            }
+            setDownloadProgress(Math.round(((i + 1) / filteredResults.length) * 100));
+        }
+
+        setIsBulkDownloading(false);
+        setDownloadProgress(0);
+        setShowNotification(true);
+    };
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 transition-colors">
             <div className="max-w-7xl mx-auto">
@@ -135,9 +187,27 @@ export default function MockTestDetailResultsPage() {
                                 className="w-full pl-10 pr-4 py-2.5 bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/50 rounded-xl text-sm outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all font-medium"
                             />
                         </div>
-                        <button className="flex items-center gap-2 px-4 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
-                            <Download className="w-4 h-4" /> Export CSV
-                        </button>
+                        <div className="flex gap-2">
+                            <button
+                                onClick={handleBulkDownload}
+                                disabled={isBulkDownloading || filteredResults.length === 0}
+                                className="flex items-center gap-2 px-4 py-2.5 bg-blue-600 dark:bg-blue-500 text-white rounded-xl font-semibold text-sm hover:bg-blue-700 transition-colors disabled:opacity-50"
+                            >
+                                {isBulkDownloading ? (
+                                    <>
+                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                        {downloadProgress}%
+                                    </>
+                                ) : (
+                                    <>
+                                        <FileText className="w-4 h-4" /> Download All PDFs
+                                    </>
+                                )}
+                            </button>
+                            <button className="flex items-center gap-2 px-4 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
+                                <Download className="w-4 h-4" /> Export CSV
+                            </button>
+                        </div>
                     </div>
 
                     {/* Table */}
@@ -225,8 +295,8 @@ export default function MockTestDetailResultsPage() {
                                                             </button>
                                                             <button
                                                                 onClick={async () => {
-                                                                    const questions = testId === 'mock-2026-01-17' ? WEEKLY_MOCK_01_QUESTIONS : [];
-                                                                    if (questions.length === 0) {
+                                                                    const questions = TEST_QUESTIONS_MAP[testId];
+                                                                    if (!questions) {
                                                                         alert("Questions data not found for this test ID.");
                                                                         return;
                                                                     }
@@ -234,7 +304,7 @@ export default function MockTestDetailResultsPage() {
                                                                         await generateMockTestAnswerSheetPDF({
                                                                             userName: result.userName,
                                                                             score: result.score,
-                                                                            totalQuestions: result.totalQuestions,
+                                                                            totalQuestions: result.totalQuestions || questions.length,
                                                                             questions: questions as any,
                                                                             answers: result.answers || {},
                                                                             testName: formatTestName(testId),
