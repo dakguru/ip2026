@@ -90,7 +90,6 @@ export default function AdminNotificationsPage() {
                 return n.type === 'purchase' && n.title.toLowerCase().includes('mock test');
             }
             if (filterType === 'membership') {
-                // Includes 'Membership Upgraded' or any purchase that is NOT a mock test
                 return n.type === 'purchase' && !n.title.toLowerCase().includes('mock test');
             }
 
@@ -103,9 +102,9 @@ export default function AdminNotificationsPage() {
         const oneDay = 86400000;
         return {
             posts: notifications.filter(n => n.type === 'community_post' && new Date(n.createdAt).getTime() > now - oneDay).length,
-            // Broaden user stat filter to catch potential type mismatches
             users: notifications.filter(n => ['enrollment', 'new_user', 'user_register'].includes(n.type) && new Date(n.createdAt).getTime() > now - oneDay).length,
-            sales: notifications.filter(n => n.type === 'purchase' && new Date(n.createdAt).getTime() > now - oneDay).length
+            membership: notifications.filter(n => n.type === 'purchase' && !n.title.toLowerCase().includes('mock test') && new Date(n.createdAt).getTime() > now - oneDay).length,
+            mockTests: notifications.filter(n => n.type === 'purchase' && n.title.toLowerCase().includes('mock test') && new Date(n.createdAt).getTime() > now - oneDay).length
         };
     }, [notifications]);
 
@@ -179,7 +178,7 @@ export default function AdminNotificationsPage() {
 
             <div className="max-w-7xl mx-auto px-6 -mt-12 relative z-10 space-y-8">
                 {/* Stats Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
                         className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl p-6 rounded-3xl border border-white/20 dark:border-zinc-800 shadow-xl shadow-zinc-200/20 dark:shadow-zinc-900/40 relative overflow-hidden group"
@@ -223,9 +222,25 @@ export default function AdminNotificationsPage() {
                             <div className="p-3 rounded-2xl bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400">
                                 <Crown className="w-6 h-6" />
                             </div>
-                            <span className="text-sm font-bold text-zinc-500 uppercase tracking-wider">Purchases (24h)</span>
+                            <span className="text-sm font-bold text-zinc-500 uppercase tracking-wider">Membership</span>
                         </div>
-                        <p className="text-4xl font-black text-zinc-900 dark:text-zinc-100">{stats.sales}</p>
+                        <p className="text-4xl font-black text-zinc-900 dark:text-zinc-100">{stats.membership}</p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
+                        className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl p-6 rounded-3xl border border-white/20 dark:border-zinc-800 shadow-xl shadow-zinc-200/20 dark:shadow-zinc-900/40 relative overflow-hidden group"
+                    >
+                        <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform duration-500">
+                            <FileText className="w-32 h-32 text-blue-500" />
+                        </div>
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="p-3 rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400">
+                                <FileText className="w-6 h-6" />
+                            </div>
+                            <span className="text-sm font-bold text-zinc-500 uppercase tracking-wider">Mock Tests</span>
+                        </div>
+                        <p className="text-4xl font-black text-zinc-900 dark:text-zinc-100">{stats.mockTests}</p>
                     </motion.div>
                 </div>
 
