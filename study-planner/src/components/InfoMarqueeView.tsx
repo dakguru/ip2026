@@ -4,10 +4,17 @@ import { useEffect, useState, useRef } from 'react';
 import { AlertCircle, ChevronRight, MessageCircle, Globe } from 'lucide-react';
 import Link from 'next/link';
 
+import { Capacitor } from '@capacitor/core';
+
 export default function InfoMarqueeView() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
+    const [isNative, setIsNative] = useState(false);
+
+    useEffect(() => {
+        setIsNative(Capacitor.isNativePlatform());
+    }, []);
 
     const messages = [
         {
@@ -23,6 +30,8 @@ export default function InfoMarqueeView() {
             action: { type: 'whatsapp', url: 'https://wa.me/919363030396', label: '+91 936 30 30 396' }
         }
     ];
+
+    if (!isNative) return null; // Only show on Android App
 
     useEffect(() => {
         if (isPaused) return;
@@ -82,8 +91,8 @@ export default function InfoMarqueeView() {
                         <div
                             key={idx}
                             className={`absolute inset-0 px-3 flex items-center transition-all duration-500 ease-in-out ${idx === currentIndex
-                                    ? 'opacity-100 translate-y-0'
-                                    : 'opacity-0 translate-y-4'
+                                ? 'opacity-100 translate-y-0'
+                                : 'opacity-0 translate-y-4'
                                 }`}
                             aria-hidden={idx !== currentIndex}
                         >
@@ -100,8 +109,8 @@ export default function InfoMarqueeView() {
                         <div
                             key={idx}
                             className={`w-1 h-1 rounded-full transition-all duration-300 ${idx === currentIndex
-                                    ? 'bg-amber-500 h-2'
-                                    : 'bg-amber-200 dark:bg-amber-800'
+                                ? 'bg-amber-500 h-2'
+                                : 'bg-amber-200 dark:bg-amber-800'
                                 }`}
                         />
                     ))}
