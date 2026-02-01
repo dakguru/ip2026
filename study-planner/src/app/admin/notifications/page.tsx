@@ -22,7 +22,7 @@ interface Notification {
 export default function AdminNotificationsPage() {
     const [notifications, setNotifications] = useState<Notification[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [filterType, setFilterType] = useState<'all' | 'users' | 'system' | 'sales'>('all');
+    const [filterType, setFilterType] = useState<'all' | 'users' | 'system' | 'membership' | 'mock_tests'>('all');
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
@@ -82,9 +82,17 @@ export default function AdminNotificationsPage() {
             if (!matchesSearch) return false;
 
             if (filterType === 'all') return true;
-            if (filterType === 'users') return ['enrollment', 'community_post'].includes(n.type);
+            if (filterType === 'users') return ['enrollment', 'community_post', 'new_user', 'user_register'].includes(n.type);
             if (filterType === 'system') return ['deployment', 'system', 'alert'].includes(n.type);
-            if (filterType === 'sales') return ['purchase'].includes(n.type);
+
+            // Split Purchase Logic
+            if (filterType === 'mock_tests') {
+                return n.type === 'purchase' && n.title.toLowerCase().includes('mock test');
+            }
+            if (filterType === 'membership') {
+                // Includes 'Membership Upgraded' or any purchase that is NOT a mock test
+                return n.type === 'purchase' && !n.title.toLowerCase().includes('mock test');
+            }
 
             return true;
         });
@@ -95,7 +103,8 @@ export default function AdminNotificationsPage() {
         const oneDay = 86400000;
         return {
             posts: notifications.filter(n => n.type === 'community_post' && new Date(n.createdAt).getTime() > now - oneDay).length,
-            users: notifications.filter(n => n.type === 'enrollment' && new Date(n.createdAt).getTime() > now - oneDay).length,
+            // Broaden user stat filter to catch potential type mismatches
+            users: notifications.filter(n => ['enrollment', 'new_user', 'user_register'].includes(n.type) && new Date(n.createdAt).getTime() > now - oneDay).length,
             sales: notifications.filter(n => n.type === 'purchase' && new Date(n.createdAt).getTime() > now - oneDay).length
         };
     }, [notifications]);
@@ -229,7 +238,8 @@ export default function AdminNotificationsPage() {
                             {[
                                 { id: 'all', label: 'All Updates', icon: Bell },
                                 { id: 'users', label: 'User Activity', icon: Users },
-                                { id: 'sales', label: 'Sales', icon: CreditCard },
+                                { id: 'membership', label: 'Membership', icon: Crown },
+                                { id: 'mock_tests', label: 'Mock Tests', icon: FileText },
                                 { id: 'system', label: 'System', icon: Server },
                             ].map((tab) => (
                                 <button
