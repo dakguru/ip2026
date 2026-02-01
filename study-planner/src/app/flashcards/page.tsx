@@ -11,7 +11,8 @@ import {
     Share2,
     Download,
     Timer,
-    CheckCircle2
+    CheckCircle2,
+    Lock
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { pmlaFlashcards } from "./pmla_data";
@@ -43,6 +44,8 @@ import FlashcardsIntroBanner from "@/components/FlashcardsIntroBanner";
 import PremiumFlashCardDeck from "@/components/flashcards/PremiumFlashCardDeck";
 import { Capacitor } from '@capacitor/core';
 import NativeFlashcardsHomeV2 from "@/components/flashcards/NativeFlashcardsHomeV2";
+
+import FlashcardsMarquee from "@/components/FlashcardsMarquee";
 
 // --- Types ---
 interface UnifiedFlashcard {
@@ -145,6 +148,30 @@ export default function FlashcardsPage() {
 
         setIsLoadingAuth(false);
     }, []);
+
+    // --- ACCESS CONTROL ---
+    // Enabled for all registered users
+    const hasAccess = true;
+
+    if (!isLoadingAuth && !hasAccess) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-screen text-center p-6 bg-slate-50 dark:bg-zinc-950">
+                <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900/20 rounded-2xl flex items-center justify-center mb-6">
+                    <Lock className="w-8 h-8 text-amber-600 dark:text-amber-500" />
+                </div>
+                <h1 className="text-3xl font-black text-slate-900 dark:text-white mb-3">Premium Feature</h1>
+                <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-sm">
+                    The free trial for Flashcards has ended. Upgrade to Gold to continue mastering Postal Laws.
+                </p>
+                <Link href="/pricing" className="px-8 py-3 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white rounded-xl font-bold tracking-wide shadow-lg shadow-amber-500/20 transition-all transform hover:scale-105 active:scale-95">
+                    Upgrade Now
+                </Link>
+                <Link href="/" className="mt-6 text-sm font-semibold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">
+                    Back to Dashboard
+                </Link>
+            </div>
+        );
+    }
 
     const handleSelectDeck = (id: string, startIdx: number = 0, shuffle: boolean = false) => {
         setSelectedDeckId(id);
@@ -299,10 +326,10 @@ export default function FlashcardsPage() {
                 const category = topic.category;
                 const matchesSearch = title.toLowerCase().includes(searchQuery.toLowerCase());
                 const matchesFilter = activeFilter === "All" ||
-                    (activeFilter === "Recently Studied" && !!deckProgress[topic.id]) ||
-                    category.includes(activeFilter) || title.includes(activeFilter) ||
-                    (activeFilter === "Acts" && title.toLowerCase().includes("act")) ||
-                    (activeFilter === "Rules" && title.toLowerCase().includes("rule"));
+                    (activeFilter === "Paper - I" && category === "Paper I") ||
+                    (activeFilter === "Paper - III" && category === "Paper III") ||
+                    (activeFilter === "PYQs" && (category.includes("PYQ") || title.includes("PYQ"))) ||
+                    (activeFilter === "Bookmarked FCs" && fullDeck.some(c => bookmarks.has(c.id)));
 
                 if (matchesSearch && matchesFilter) {
                     organized.push({
@@ -326,12 +353,7 @@ export default function FlashcardsPage() {
 
     if (!mounted) return null;
 
-    // Access Control (Keeping basic check from original file)
-    if (!isLoadingAuth && userRole !== 'admin') {
-        // NOTE: The user's previous requests imply stricter access control might be needed here.
-        // But for this task, I will strictly follow the "arrangement" instruction.
-        return <FlashcardsIntroBanner />;
-    }
+
 
     // --- IMPORTS ADAPTATION ---
     // Ensure you have these imports at top of file:
@@ -371,24 +393,24 @@ export default function FlashcardsPage() {
                     style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} />
 
                 {/* 1. HERO SECTION (Mobile Optimized) */}
-                <header className="relative z-10 pt-12 pb-8 md:pt-16 md:pb-12 text-center max-w-4xl mx-auto px-4 md:px-6">
+                <header className="relative z-10 pt-8 pb-4 md:pt-10 md:pb-6 text-center max-w-4xl mx-auto px-4 md:px-6">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
 
-                        <div className="relative inline-block mb-2">
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-900 via-violet-800 to-fuchsia-900 dark:from-white dark:via-indigo-200 dark:to-violet-200 mb-4 drop-shadow-sm">
+                        <div className="relative inline-block mb-1">
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-900 via-violet-800 to-fuchsia-900 dark:from-white dark:via-indigo-200 dark:to-violet-200 mb-2 drop-shadow-sm pb-2 pr-2">
                                 FLASHCARDS
                             </h1>
                         </div>
 
-                        <h2 className="text-xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600 mb-4 tracking-tight">
+                        <h2 className="text-xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600 mb-2 tracking-tight">
                             Master Postal Laws Through Smart Revision
                         </h2>
 
-                        <p className="text-xs md:text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-8 px-4">
+                        <p className="text-xs md:text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-4 px-4">
                             Prepare Faster • Recall Better • Succeed Confidently
                         </p>
 
-                        <div className="h-px w-16 md:w-24 bg-slate-200 dark:bg-white/10 mx-auto mb-8 md:mb-10" />
+                        <div className="h-px w-16 md:w-24 bg-slate-200 dark:bg-white/10 mx-auto mb-6 md:mb-8" />
 
                         {/* Search Bar */}
                         <div className="relative max-w-xl mx-auto group">
@@ -404,6 +426,10 @@ export default function FlashcardsPage() {
                         </div>
                     </motion.div>
                 </header>
+
+                <div className="md:mb-8">
+                    <FlashcardsMarquee />
+                </div>
 
                 {/* 2. STICKY LEARNING CONTEXT BAR (Desktop) */}
                 <div className="sticky top-0 z-40 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-y border-slate-200 dark:border-zinc-800 py-3 px-[8vw] hidden md:block">
@@ -442,7 +468,7 @@ export default function FlashcardsPage() {
 
                 {/* 4. MOBILE CATEGORIES SCROLL */}
                 <div className="md:hidden overflow-x-auto pb-2 -mt-4 pt-8 px-4 flex gap-2 no-scrollbar">
-                    {["All", "Acts", "Rules", "Schemes", "Laws"].map(filter => (
+                    {["All", "Paper - I", "Paper - III", "PYQs", "Bookmarked FCs"].map(filter => (
                         <button
                             key={filter}
                             onClick={() => setActiveFilter(filter === activeFilter && filter !== 'All' ? 'All' : filter)}

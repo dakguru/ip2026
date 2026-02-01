@@ -78,9 +78,9 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
             </p>
 
             <div className="mt-6 flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-500 delay-75 fill-mode-both">
-                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-xs sm:text-sm font-bold tracking-wide shadow-sm uppercase">
-                    🎯 Exclusively designed for LDCE IP 2026
-                </span>
+                <Link href="/flashcards" className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-indigo-300 dark:border-indigo-600 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-200 text-xs sm:text-sm font-black tracking-wide shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_25px_rgba(99,102,241,0.7)] uppercase hover:bg-indigo-200 dark:hover:bg-indigo-800 transition-all duration-300 animate-pulse">
+                    ✨ Unique Revision Tool : Flashcards - Free Access to everyone till Feb-03 🚀
+                </Link>
             </div>
 
             <div className="mt-6 md:mt-10 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 w-full max-w-full px-2">

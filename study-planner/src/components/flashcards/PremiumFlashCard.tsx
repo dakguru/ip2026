@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import styles from './PremiumFlashCard.module.css';
-import { RotateCcw, Bookmark, Info, ChevronRight, HelpCircle } from 'lucide-react';
+import { RotateCcw, Bookmark, Info } from 'lucide-react';
 import { clsx } from 'clsx';
 
 export type FlashCardTheme = 'Postal Law' | 'Accounts' | 'Conduct Rules' | 'Current Affairs' | 'General';
@@ -27,7 +27,6 @@ export default function PremiumFlashCard({
     onBookmarkToggle
 }: PremiumFlashCardProps) {
     const [isFlipped, setIsFlipped] = useState(false);
-    const [isExpanded, setIsExpanded] = useState(false);
 
     const handleFlip = (e: React.MouseEvent | React.KeyboardEvent) => {
         // Prevent flipping if clicking on action buttons
@@ -127,28 +126,14 @@ export default function PremiumFlashCard({
                                     <Info className="w-3.5 h-3.5" /> Explanation
                                 </div>
                                 <div
-                                    className={clsx(
-                                        "transition-all duration-500 overflow-y-auto pr-2",
-                                        !isExpanded && explanation.length > 200 ? "max-h-[120px]" : "max-h-[250px]"
-                                    )}
+                                    className="overflow-y-auto pr-2 max-h-[220px] overscroll-contain touch-pan-y cursor-auto"
                                     onPointerDown={(e) => e.stopPropagation()}
+                                    onTouchStart={(e) => e.stopPropagation()}
                                 >
-                                    <p className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed">
+                                    <p className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed pb-1">
                                         {explanation}
                                     </p>
                                 </div>
-                                {explanation.length > 200 && (
-                                    <button
-                                        className="mt-3 text-[10px] font-black text-indigo-600 hover:text-indigo-700 uppercase tracking-widest flex items-center gap-1 self-start transition-colors"
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            setIsExpanded(!isExpanded);
-                                        }}
-                                    >
-                                        {isExpanded ? 'Show Less' : 'Read Full Explanation'}
-                                        <ChevronRight className={clsx("w-3.5 h-3.5 transition-transform duration-300", isExpanded && "rotate-90")} />
-                                    </button>
-                                )}
                             </div>
                         )}
                     </div>

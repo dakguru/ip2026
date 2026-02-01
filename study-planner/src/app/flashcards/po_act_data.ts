@@ -51,7 +51,7 @@ export const poActData: FlashcardData[] = [
     },
     {
         id: 7,
-        question: "Under Section 9(1), which of the following is NOT a ground for intercepting items?",
+        question: "Under Section 9(1), what is NOT a ground for intercepting items?",
         answer: "Non-payment of postage",
         explanation: "Section 9(1) lists specific statutory grounds: Security of the State, Friendly relations with foreign states, Public order, Emergency, Public safety, Contravention of the Post Office Act or any other law.",
         tag: "PO Act 2023"
@@ -107,7 +107,7 @@ export const poActData: FlashcardData[] = [
     },
     {
         id: 15,
-        question: "Which of the following is NOT an approved mode of payment for postage under Rule 9?",
+        question: "What is NOT an approved mode of payment for postage under Rule 9?",
         answer: "Barter system",
         explanation: "The 2024 Rules explicitly recognize Cash, Digital mode, Postage stamp, Franking machine impressions, etc. Barter system is not an approved mode.",
         tag: "PO Rules 2024"

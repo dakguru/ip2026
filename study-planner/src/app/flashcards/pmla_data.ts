@@ -16,14 +16,14 @@ export const pmlaFlashcards: FlashcardData[] = [
     },
     {
         id: 2,
-        question: "Under Section 2 of the PMLA, 2002, \"attachment\" specifically refers to the prohibition of which of the following regarding property?",
+        question: "Under Section 2 of the PMLA, 2002, \"attachment\" specifically refers to the prohibition of what regarding property?",
         answer: "Transfer, conversion, disposition, or movement",
         explanation: "Section 2(d) defines \"attachment\" as the prohibition of transfer, conversion, disposition, or movement of property by an order issued under Chapter III. Seizure is taking possession; attachment is a prohibition on dealing with the property.",
         tag: "PMLA, 2002"
     },
     {
         id: 3,
-        question: "Which of the following entities is explicitly included in the definition of a \"financial institution\" under the PMLA, 2002?",
+        question: "Which entity is explicitly included in the definition of a \"financial institution\" under the PMLA, 2002?",
         answer: "The Department of Posts in the Government of India",
         explanation: "The definition of \"Financial Institution\" in the PMLA explicitly includes the Department of Posts (as mentioned in the study material).",
         tag: "PMLA, 2002"
@@ -37,7 +37,7 @@ export const pmlaFlashcards: FlashcardData[] = [
     },
     {
         id: 5,
-        question: "According to the definition of \"person\" under the Act, which of the following is NOT excluded?",
+        question: "According to the definition of \"person\" under the Act, who/what is NOT excluded?",
         answer: "Individuals, HUFs, Companies, Firms, AOPs, and Artificial Juridical Persons",
         explanation: "Section 2(s) defines \"person\" very broadly to include Individuals, HUFs, Companies, Firms, AOPs, and Artificial Juridical Persons. Therefore, none of these are excluded.",
         tag: "PMLA, 2002"
@@ -51,14 +51,14 @@ export const pmlaFlashcards: FlashcardData[] = [
     },
     {
         id: 7,
-        question: "Which of the following conditions constitutes an \"offence of cross border implications\"?",
+        question: "What is the condition that constitutes an \"offence of cross border implications\"?",
         answer: "Conduct in India with proceeds outside, or conduct outside with proceeds in India",
         explanation: "Section 2(ra) defines \"offence of cross border implications\" covering conduct in India with proceeds outside, or conduct outside with proceeds in India.",
         tag: "PMLA, 2002"
     },
     {
         id: 8,
-        question: "Under the PMLA, \"reporting entity\" includes which of the following?",
+        question: "Under the PMLA, \"reporting entity\" includes what?",
         answer: "Banking company, financial institution, intermediary, or a designated business/profession",
         explanation: "Section 2(wa) defines \"reporting entity\" as a banking company, financial institution, intermediary, or a person carrying on a designated business or profession.",
         tag: "PMLA, 2002"
@@ -72,7 +72,7 @@ export const pmlaFlashcards: FlashcardData[] = [
     },
     {
         id: 10,
-        question: "Section 3 of the PMLA clarifies that a person is guilty of money-laundering if they are involved in which of the following processes connected with proceeds of crime?",
+        question: "Section 3 of the PMLA clarifies that a person is guilty of money-laundering if they are involved in what processes connected with proceeds of crime?",
         answer: "Concealment, possession, acquisition, or use",
         explanation: "Section 3 states that whosoever directly or indirectly attempts to indulge, knowingly assists, or is a party to concealment, possession, acquisition, or use of proceeds of crime is guilty.",
         tag: "PMLA, 2002"
@@ -128,7 +128,7 @@ export const pmlaFlashcards: FlashcardData[] = [
     },
     {
         id: 18,
-        question: "Regarding the procedure of the Adjudicating Authority, which of the following statements is correct?",
+        question: "Regarding the procedure of the Adjudicating Authority, what is the correct practice?",
         answer: "It is not bound by the Code of Civil Procedure but shall be guided by the principles of natural justice.",
         explanation: "Section 6(15): The Adjudicating Authority is not bound by the Code of Civil Procedure but shall be guided by the principles of natural justice.",
         tag: "PMLA, 2002"
