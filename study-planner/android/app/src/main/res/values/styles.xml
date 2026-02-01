@@ -21,6 +21,12 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/dakguru_logo_splash</item>
         <item name="windowSplashScreenAnimationDuration">500</item>
         <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
+
+        
+        <!-- Prevent white / browser preview -->
+        <item name="android:windowBackground">@drawable/dakguru_splash_gradient</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
     </style>
 </resources>
