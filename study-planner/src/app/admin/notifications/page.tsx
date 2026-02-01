@@ -110,7 +110,10 @@ export default function AdminNotificationsPage() {
 
     const getIconForType = (type: string) => {
         switch (type) {
-            case 'enrollment': return <Users className="w-5 h-5 text-green-600" />;
+            case 'enrollment':
+            case 'new_user':
+            case 'user_register':
+                return <Users className="w-5 h-5 text-green-600" />;
             case 'purchase': return <CreditCard className="w-5 h-5 text-amber-500" />;
             case 'community_post': return <FileText className="w-5 h-5 text-blue-500" />;
             case 'deployment': return <Zap className="w-5 h-5 text-purple-500" />;
@@ -122,7 +125,10 @@ export default function AdminNotificationsPage() {
 
     const getColorClass = (type: string) => {
         switch (type) {
-            case 'enrollment': return "bg-green-100 dark:bg-green-900/30 border-green-200 dark:border-green-800";
+            case 'enrollment':
+            case 'new_user':
+            case 'user_register':
+                return "bg-green-100 dark:bg-green-900/30 border-green-200 dark:border-green-800";
             case 'purchase': return "bg-amber-100 dark:bg-amber-900/30 border-amber-200 dark:border-amber-800";
             case 'community_post': return "bg-blue-100 dark:bg-blue-900/30 border-blue-200 dark:border-blue-800";
             case 'deployment': return "bg-purple-100 dark:bg-purple-900/30 border-purple-200 dark:border-purple-800";

@@ -73,7 +73,7 @@ export async function POST(request: Request) {
 
         // Trigger Notification
         await createNotification(
-            'system',
+            'new_user',
             'New User Registration',
             `A new user ${name} (${email}) has joined the platform.`,
             { userId: email, name, email }
