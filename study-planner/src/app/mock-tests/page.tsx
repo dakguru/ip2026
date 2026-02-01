@@ -1316,13 +1316,24 @@ function MockTestCard({
                                 )}
                             </div>
                         ) : (
-                            <Link
-                                href={`/mock-tests/weekly/${mock.id}`}
-                                onClick={(e) => e.stopPropagation()}
-                                className="flex-1 py-3 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-95 animate-pulse-slow"
-                            >
-                                <PlayCircle className="w-4 h-4 fill-current" /> Attempt Test
-                            </Link>
+                            canAccess ? (
+                                <Link
+                                    href={`/mock-tests/weekly/${mock.id}`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="flex-1 py-3 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-95 animate-pulse-slow"
+                                >
+                                    <PlayCircle className="w-4 h-4 fill-current" /> Attempt Test
+                                </Link>
+                            ) : (
+                                <button
+                                    onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                                    disabled={isProcessing}
+                                    className="flex-1 py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform active:scale-95"
+                                >
+                                    {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-200 fill-current" />}
+                                    Enroll and Attempt
+                                </button>
+                            )
                         )
                     ) : !canAccess ? (
                         <button
