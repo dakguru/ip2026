@@ -138,14 +138,14 @@ export const generateMockTestAnswerSheetPDF = async ({
     doc.text(dateStr, margin + logoSize + 122, 52);
 
     // Score Box
-    const percentage = ((score / totalQuestions) * 100).toFixed(1);
+    const percentage = ((score / (totalQuestions * 2)) * 100).toFixed(1);
     doc.setFillColor(245, 245, 245);
     doc.roundedRect(pageWidth - margin - 45, 20, 40, 18, 2, 2, 'F');
 
     doc.setFontSize(14);
     doc.setFont("helvetica", "bold");
     doc.setTextColor(220, 38, 38);
-    doc.text(`${score} / ${totalQuestions}`, pageWidth - margin - 25, 28, { align: "center" });
+    doc.text(`${score} / ${totalQuestions * 2}`, pageWidth - margin - 25, 28, { align: "center" });
 
     doc.setFontSize(9);
     doc.setTextColor(80, 80, 80);
