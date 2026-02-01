@@ -98,60 +98,104 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     }, []);
 
     const handleDownload = async () => {
-        const filename = url.split('/').pop() || 'document.pdf';
+        const rawFilename = url.split('/').pop() || 'document.pdf';
 
+        // Web Fallback
         if (!Capacitor.isNativePlatform()) {
             const link = document.createElement('a');
             link.href = url;
-            link.download = filename;
+            link.download = rawFilename;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
             return;
         }
 
-        // Native Download Logic for PDF Viewer
+        // Native Android Download Logic
         try {
-            // 1. Permissions
+            await Toast.show({ text: 'Starting download...', duration: 'short' });
+
+            // 1. Permissions (Try/Catch as some Android versions don't need explicit request for public folders if scoped)
             try {
                 const permStatus = await Filesystem.checkPermissions();
                 if (permStatus.publicStorage !== 'granted') {
-                    await Filesystem.requestPermissions();
+                    const req = await Filesystem.requestPermissions();
+                    if (req.publicStorage !== 'granted') {
+                        // Continue anyway, as Android 10+ might allow writing without broad permission to own files
+                    }
                 }
             } catch (e) {
-                console.warn("Permission check failed", e);
+                console.warn("Permission check skipped", e);
             }
 
-            await Toast.show({ text: 'Starting download...', duration: 'short' });
-
-            // 2. Fetch
+            // 2. Fetch File Blob
             const absoluteUrl = url.startsWith('http') ? url : window.location.origin + url;
             const response = await fetch(absoluteUrl);
+            if (!response.ok) throw new Error("Network fetch failed");
             const blob = await response.blob();
 
-            // 3. Base64
+            // 3. Convert to Base64
             const reader = new FileReader();
             reader.readAsDataURL(blob);
             reader.onloadend = async () => {
                 const base64data = reader.result as string;
                 const data = base64data.split(',')[1];
 
+                // 4. Determine Filename with Timestamp
+                const timestamp = Math.floor(Date.now() / 1000);
+                // Strip extension to re-add it cleanly
+                const namePart = rawFilename.replace(/\.pdf$/i, '');
+                const savedFilename = `DakGuru_${namePart}_${timestamp}.pdf`;
+
+                // 5. Try Write to /Download/DakGuru/ (ExternalStorage) first, then fallback to Documents
+                let fileUri = "";
+                let savedPathDisplay = "Downloads";
+
                 try {
-                    await Filesystem.writeFile({
-                        path: filename,
+                    // Try writing to Download folder
+                    const res = await Filesystem.writeFile({
+                        path: `Download/DakGuru/${savedFilename}`,
                         data: data,
-                        directory: Directory.Documents,
+                        directory: Directory.ExternalStorage,
                         recursive: true
                     });
-                    await Toast.show({ text: 'Saved to Documents folder', duration: 'long' });
+                    fileUri = res.uri;
                 } catch (err) {
-                    console.error("Write failed", err);
-                    await Toast.show({ text: 'Download failed to save', duration: 'long' });
+                    console.warn("Failed to write to Downloads, trying Documents...", err);
+                    try {
+                        // Fallback to Documents
+                        const res = await Filesystem.writeFile({
+                            path: `DakGuru/${savedFilename}`,
+                            data: data,
+                            directory: Directory.Documents,
+                            recursive: true
+                        });
+                        fileUri = res.uri;
+                        savedPathDisplay = "Documents";
+                    } catch (finalErr) {
+                        throw new Error("Failed to save file to storage");
+                    }
+                }
+
+                await Toast.show({ text: `Saved to ${savedPathDisplay}. Opening...`, duration: 'short' });
+
+                // 6. Auto-Open
+                try {
+                    const { FileOpener } = await import('@capacitor-community/file-opener');
+                    await FileOpener.open({
+                        filePath: fileUri,
+                        contentType: 'application/pdf',
+                        openWithDefault: true,
+                    });
+                } catch (openerErr) {
+                    console.error("File Opener Failed", openerErr);
+                    await Toast.show({ text: 'File saved, but could not auto-open.', duration: 'long' });
                 }
             };
-        } catch (error) {
-            console.error("Download failed", error);
-            await Toast.show({ text: 'Download failed', duration: 'long' });
+
+        } catch (error: any) {
+            console.error("Download Error", error);
+            await Toast.show({ text: 'Download failed. Please check internet connection.', duration: 'long' });
         }
     };
 
@@ -336,8 +380,8 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                         <button
                             onClick={toggleLiquidMode}
                             className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${isLiquidMode
-                                    ? 'bg-blue-600 text-white shadow-md'
-                                    : 'bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300'
+                                ? 'bg-blue-600 text-white shadow-md'
+                                : 'bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300'
                                 }`}
                         >
                             {isLiquidMode ? (
