@@ -15,10 +15,15 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         // 1. Install Android 12 Splash Screen
         SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
-        
 
-        // Removed artificial delay to comply with "Strictly No Splash Screen" request.
-        // We defer splash dismissal control to the Capacitor Plugin (via JS code) or default behavior.
+        // Fix "Black Void": Keep native splash visible until app is ready
+        // We use a safe delay of 2000ms to allow Capacitor/JS to load
+        final boolean[] isReady = {false};
+        splashScreen.setKeepOnScreenCondition(() -> !isReady[0]);
+
+        new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+            isReady[0] = true;
+        }, 2000);
 
         super.onCreate(savedInstanceState);
 
