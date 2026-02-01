@@ -1185,7 +1185,7 @@ function MockTestCard({
                             <span className="text-xs font-bold text-zinc-600 dark:text-zinc-400">
                                 Score: {userResult.score}/{mock.marks}
                             </span>
-                            {userResult.rank && (
+                            {isCompleted && userResult.rank && (
                                 <span className="text-[10px] font-black text-amber-500 uppercase tracking-wider mt-0.5">
                                     Rank: #{userResult.rank}
                                 </span>
