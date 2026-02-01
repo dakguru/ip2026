@@ -2,25 +2,29 @@
 
 import { useEffect, useState, useRef, useMemo } from 'react';
 import { pdfjs } from 'react-pdf';
-import { Loader2, AlertCircle } from 'lucide-react';
+import { Loader2, AlertCircle, BookOpen, Quote, List } from 'lucide-react';
 
-// Enhanced Block Types for Legal/Academic Structure
-type BlockType = 'TITLE' | 'CHAPTER' | 'SECTION' | 'SUBSECTION' | 'BODY' | 'LIST_ITEM' | 'FOOTER' | 'HEADER';
+// --- Semantic Data Structures ---
 
-interface TextBlock {
-    type: BlockType;
-    text: string;
+type NodeType = 'TITLE' | 'CHAPTER' | 'SECTION' | 'SUBSECTION' | 'CLAUSE' | 'PARAGRAPH' | 'LIST_ITEM' | 'UNKNOWN';
+
+interface DocNode {
     id: string;
+    type: NodeType;
+    content: string;
+    level: number; // For indentation hierarchy
+    index: number; // Global reading position index
 }
 
-interface ExtractedBlock {
-    type: BlockType;
+interface RawLine {
     text: string;
-    id: string;
-    size: number;
-    y: number; // for header/footer detection
+    y: number;
+    x: number;
     page: number;
+    height: number;
+    fontName: string;
     isBold: boolean;
+    isAllCap: boolean;
 }
 
 interface LiquidReaderProps {
@@ -28,8 +32,216 @@ interface LiquidReaderProps {
     onLoadComplete?: () => void;
 }
 
+// --- Semantic Analysis Engine ---
+
+class SemanticAnalyzer {
+    private rawLines: RawLine[] = [];
+    private headerSignatures: Set<string> = new Set();
+    private footerSignatures: Set<string> = new Set();
+    private totalPages: number = 0;
+
+    constructor() { }
+
+    // Phase 1: Ingest & Global Noise Detection
+    public addPageLines(lines: RawLine[], pageNum: number, totalPages: number) {
+        this.rawLines.push(...lines);
+        this.totalPages = totalPages;
+    }
+
+    // Identify repeating headers/footers based on frequency at specific Y zones
+    public analyzeGlobalArtifacts() {
+        const topZone: string[] = [];
+        const bottomZone: string[] = [];
+
+        // Sample first 10 pages or all if < 10
+        const sampleLimit = Math.min(this.getMaxPage(), 10);
+
+        // This is a simplified heuristic: textual match in top/bottom 5%
+        // In a real robust system, we'd histogram Y-coords.
+    }
+
+    private getMaxPage() {
+        if (this.rawLines.length === 0) return 0;
+        return this.rawLines[this.rawLines.length - 1].page;
+    }
+
+    // Phase 2: The Pipeline
+    public process(): DocNode[] {
+        if (this.rawLines.length === 0) return [];
+
+        // 1. Filter Noise (Header/Footer/Watermarks)
+        const cleanLines = this.filterNoise(this.rawLines);
+
+        // 2. Structural Tagging (Line by Line)
+        const taggedLines = cleanLines.map(line => this.tagLine(line));
+
+        // 3. Semantic Reduction (Continuous Prose Engine)
+        const nodes = this.constructSemanticNodes(taggedLines);
+
+        return nodes;
+    }
+
+
+    private filterNoise(lines: RawLine[]): RawLine[] {
+        // Frequencies for Top/Bottom lines
+        const topFreq = new Map<string, number>();
+        const bottomFreq = new Map<string, number>();
+        const totalPages = this.getMaxPage();
+
+        lines.forEach(line => {
+            // Normalized text for frequency
+            const txt = line.text.trim();
+            if (!txt) return;
+
+            // Assume Page Height is roughly 800-ish (PDF units). 
+            // Top is usually > 780, Bottom < 50
+            // (Coordinate system: 0,0 is usually bottom-left in PDF, but we extracted raw)
+            // Let's rely on relative checks if we knew page height, but we stored raw PDF y.
+            // We'll trust rigid cutoff for now or frequency.
+
+            // Check specific watermarks
+            if (txt.includes("Dak Guru") || txt.includes("dakguru.com") || /^\d+$/.test(txt)) {
+                // Aggressive watermark/page number removal
+                line.text = ""; // Mark for deletion
+            }
+        });
+
+        return lines.filter(l => l.text !== "");
+    }
+
+    private tagLine(line: RawLine): { line: RawLine; type: NodeType } {
+        const text = line.text.trim();
+        const upper = text.toUpperCase();
+
+        // 1. Explicit Matches
+        if (/^CHAPTER\s+[IVX0-9]+/i.test(text)) return { line, type: 'CHAPTER' };
+        if (/^(THE\s+)?(ACT|CODE|RULES)\s+\d{4}$/.test(text)) return { line, type: 'TITLE' };
+
+        // 2. Sections
+        if (/^Section\s+\d+/i.test(text)) return { line, type: 'SECTION' };
+        if (/^Part\s+[IVX]+/i.test(text)) return { line, type: 'SECTION' }; // Parts treated as Sections/Headings
+
+        // 3. Subsections / Clauses
+        // (1), (a), 1. 2. 
+        if (/^\(\d+\)/.test(text)) return { line, type: 'CLAUSE' };
+        if (/^\([a-z]\)/.test(text)) return { line, type: 'CLAUSE' }; // or SUBSECTION
+        if (/^\d+\.\s/.test(text)) return { line, type: 'LIST_ITEM' };
+
+        // 4. Typography Heuristics
+        // Large + Bold = Title/Chapter
+        if (line.height > 14 && line.isBold) return { line, type: 'CHAPTER' };
+        if (line.isAllCap && line.isBold) return { line, type: 'SECTION' };
+
+        return { line, type: 'PARAGRAPH' }; // Default to Body
+    }
+
+    private constructSemanticNodes(taggedItems: { line: RawLine; type: NodeType }[]): DocNode[] {
+        const nodes: DocNode[] = [];
+        let buffer: { type: NodeType; text: string; level: number } | null = null;
+        let pidx = 0;
+
+        const flush = () => {
+            if (buffer) {
+                nodes.push({
+                    id: `node-${pidx++}`,
+                    type: buffer.type,
+                    content: buffer.text,
+                    level: buffer.level,
+                    index: pidx
+                });
+                buffer = null;
+            }
+        };
+
+        for (let i = 0; i < taggedItems.length; i++) {
+            const current = taggedItems[i];
+            const next = taggedItems[i + 1];
+
+            // Heading Types: Always flush immediately, never merge
+            if (['TITLE', 'CHAPTER', 'SECTION'].includes(current.type)) {
+                flush();
+                nodes.push({
+                    id: `node-${pidx++}`,
+                    type: current.type,
+                    content: current.line.text,
+                    level: 0,
+                    index: pidx
+                });
+                continue;
+            }
+
+            // List/Clauses: Flush previous, then maybe merge continuous list items? 
+            // Usually list items are distinct.
+            if (['CLAUSE', 'LIST_ITEM'].includes(current.type)) {
+                flush();
+                // Check if we should merge with NEXT line if it's a continuation?
+                // Logic: "Clause (a) starts here..."
+                //        "and continues here." -> Merge
+
+                // Start a buffer for this Clause
+                buffer = {
+                    type: current.type,
+                    text: current.line.text,
+                    level: 1
+                };
+
+                // Look ahead for "broken sentence" merging
+                // But generally, the loop structure handles the `else` (Paragraph) merging.
+                // We need to set `buffer` and fall through to merge check?
+                // No, explicit merge logic here is safer.
+                continue;
+            }
+
+            // PARAGRAPH / BODY merging logic
+            if (!buffer) {
+                buffer = {
+                    type: 'PARAGRAPH',
+                    text: current.line.text,
+                    level: 0
+                };
+            } else {
+                // We have a buffer (Paragraph OR Clause OR List Item)
+                // Decide to merge 'current' into 'buffer'
+
+                const prevText = buffer.text.trim();
+                const curText = current.line.text.trim();
+
+                // Merge Conditions:
+                // 1. Previous does NOT end in stop char (. : ! ?)
+                // 2. OR Previous ends in hyphen -
+                // 3. OR Current starts with lowercase (strong signal)
+
+                const endsWithStop = /[.:!?]$/.test(prevText);
+                const startsLower = /^[a-z]/.test(curText);
+                const endsHyphen = /-$/.test(prevText);
+
+                if (!endsWithStop || startsLower || endsHyphen) {
+                    // MERGE
+                    if (endsHyphen) {
+                        buffer.text = buffer.text.slice(0, -1) + curText;
+                    } else {
+                        buffer.text += " " + curText;
+                    }
+                } else {
+                    // Hardware Break -> Flush and Start New
+                    flush();
+                    buffer = {
+                        type: 'PARAGRAPH',
+                        text: current.line.text,
+                        level: 0
+                    };
+                }
+            }
+        }
+        flush();
+        return nodes;
+    }
+}
+
+// --- React Component ---
+
 export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps) {
-    const [blocks, setBlocks] = useState<TextBlock[]>([]);
+    const [nodes, setNodes] = useState<DocNode[]>([]);
     const [loading, setLoading] = useState(true);
     const [progress, setProgress] = useState(0);
     const [error, setError] = useState<string | null>(null);
@@ -37,293 +249,181 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
     useEffect(() => {
         let isMounted = true;
 
-        const processPdf = async () => {
+        const process = async () => {
             try {
                 setLoading(true);
-                setProgress(10);
+                setProgress(5);
 
                 const loadingTask = pdfjs.getDocument(url);
                 loadingTask.onProgress = ({ loaded, total }: { loaded: number; total: number }) => {
-                    if (total > 0) setProgress(Math.round((loaded / total) * 20)); // PDF Load is 20%
+                    if (total > 0) setProgress(Math.round((loaded / total) * 30));
                 };
-
                 const pdf = await loadingTask.promise;
-                if (!isMounted) return;
 
-                const extractedBlocks: ExtractedBlock[] = [];
-                const fontSizes: { [size: number]: number } = {};
-
-                // Helper to normalize font size
-                const getFontSize = (transform: number[]) => Math.round(Math.abs(transform[0]));
-
+                const analyzer = new SemanticAnalyzer();
                 const totalPages = pdf.numPages;
 
-                // 1. Extraction Pass
+                // Extraction Loop
                 for (let i = 1; i <= totalPages; i++) {
                     const page = await pdf.getPage(i);
-                    const viewport = page.getViewport({ scale: 1.0 });
-                    const pageHeight = viewport.height;
                     const textContent = await page.getTextContent();
-                    const items = textContent.items as any[]; // pdf.js item type
+                    const items = textContent.items as any[];
+                    // const viewport = page.getViewport({ scale: 1.0 }); // Needed? for height 
 
-                    if (items.length === 0) continue;
+                    if (items.length > 0) {
+                        // Extract Raw Lines
+                        // Group by Y
+                        const linesMap = new Map<number, RawLine>();
+                        const TOLERANCE = 4;
 
-                    // Group items into lines
-                    const lines: { y: number; items: any[]; size: number; isBold: boolean, text: string }[] = [];
-                    const TOLERANCE = 4; // reduced tolerance for better accuracy
+                        items.forEach(item => {
+                            const y = item.transform[5];
+                            const height = item.height || Math.abs(item.transform[0]);
+                            // Round Y to nearest bucket
+                            let foundY = -1;
+                            for (const existingY of linesMap.keys()) {
+                                if (Math.abs(existingY - y) < TOLERANCE) {
+                                    foundY = existingY;
+                                    break;
+                                }
+                            }
 
-                    // Pre-process items
-                    items.forEach(item => {
-                        // transform[5] is Y (origin bottom-left usually in PDF)
-                        // But we want top-down for logic, so let's keep PDF coords (bottom-up) but sort descending
-                        const y = item.transform[5];
+                            const key = foundY !== -1 ? foundY : y;
+                            const existing = linesMap.get(key);
 
-                        // Find existing line
-                        const existingLine = lines.find(l => Math.abs(l.y - y) < TOLERANCE);
-                        if (existingLine) {
-                            existingLine.items.push(item);
-                        } else {
-                            lines.push({
-                                y,
-                                items: [item],
-                                size: 0,
-                                isBold: false,
-                                text: "" // filled later 
-                            });
-                        }
-                    });
-
-                    // Sort lines Top -> Bottom (Y Descending)
-                    lines.sort((a, b) => b.y - a.y);
-
-                    // Process each line properties
-                    lines.forEach(line => {
-
-                        // Header/Footer Detection (Geometry based)
-                        // Top 5% or Bottom 7% (Footers are often larger)
-                        const isTop = line.y > pageHeight * 0.95;
-                        const isBottom = line.y < pageHeight * 0.07;
-
-                        // Sort items Left -> Right
-                        line.items.sort((a, b) => a.transform[4] - b.transform[4]);
-
-                        // Build Text
-                        const lineText = line.items.map(item => item.str).join(' ').trim();
-                        if (!lineText) return;
-
-                        // Identify properties
-                        // simple heuristic: if font name contains 'Bold'
-                        const isBold = line.items.some(item => item.fontName?.toLowerCase().includes('bold'));
-                        const maxFontSize = Math.max(...line.items.map(item => getFontSize(item.transform)));
-
-                        // Collect stats for body text detection
-                        if (!isTop && !isBottom) {
-                            fontSizes[maxFontSize] = (fontSizes[maxFontSize] || 0) + 1;
-                        }
-
-                        // Filter Noise/Watermarks
-                        if (lineText.includes("Dak Guru") || lineText.match(/^\s*\d+\s*$/) || lineText.includes("www.dakguru.com")) {
-                            // Likely watermark or page number
-                            return;
-                        }
-
-                        extractedBlocks.push({
-                            type: 'BODY', // default, will refine
-                            text: lineText,
-                            id: `p${i}-y${Math.round(line.y)}`,
-                            size: maxFontSize,
-                            y: line.y,
-                            page: i,
-                            isBold: isBold
+                            if (existing) {
+                                // Assume LTR mapping; textContent items usually disjoint
+                                // We append based on X, but simply concatenating string works for most PDFs
+                                // unless strict column layout (which we aren't handling perfectly yet)
+                                // Ideally sort items by X
+                                // For now, just append with space
+                                if (item.transform[4] > existing.x) {
+                                    existing.text += " " + item.str;
+                                } else {
+                                    existing.text = item.str + " " + existing.text;
+                                    existing.x = item.transform[4];
+                                }
+                                // Update metadata maxes
+                                existing.height = Math.max(existing.height, height);
+                                existing.isBold = existing.isBold || (item.fontName || "").toLowerCase().includes("bold");
+                                // isAllCap check on full string later
+                            } else {
+                                linesMap.set(key, {
+                                    text: item.str,
+                                    y: key,
+                                    x: item.transform[4],
+                                    page: i,
+                                    height: height,
+                                    fontName: item.fontName || "",
+                                    isBold: (item.fontName || "").toLowerCase().includes("bold"),
+                                    isAllCap: false // calc later
+                                });
+                            }
                         });
-                    });
 
-                    if (isMounted) setProgress(20 + Math.round((i / totalPages) * 50));
+                        // Convert to array and sort Y Desc (Top to Bottom)
+                        const rawPageLines = Array.from(linesMap.values())
+                            .sort((a, b) => b.y - a.y)
+                            .map(l => {
+                                l.text = l.text.trim();
+                                l.isAllCap = l.text.length > 3 && l.text === l.text.toUpperCase();
+                                return l;
+                            });
+
+                        analyzer.addPageLines(rawPageLines, i, totalPages);
+                    }
+
+                    if (isMounted) setProgress(30 + Math.round((i / totalPages) * 50));
                 }
 
-                // 2. Identify Body Font Size (Mode)
-                let bodySize = 12;
-                let maxCount = 0;
-                Object.entries(fontSizes).forEach(([size, count]) => {
-                    const s = parseFloat(size);
-                    if (count > maxCount && s > 0) {
-                        maxCount = count;
-                        bodySize = s;
-                    }
-                });
+                if (!isMounted) return;
 
-                // 3. Structure Classification & Refinement
-                const classifiedBlocks = extractedBlocks.map(block => {
-                    // Filter Header/Footer via explicit check if not already caught
-                    // (We did some filtering above, but lets be stricter)
-                    // Re-assert geometry check if needed, but we trust the extraction loop generally.
-
-                    let type: BlockType = 'BODY';
-
-                    const ratio = block.size / bodySize;
-                    const text = block.text;
-
-                    // Classification Rules
-                    if (ratio > 1.5 || (block.isBold && ratio > 1.2 && text === text.toUpperCase())) {
-                        type = 'TITLE';
-                    } else if (/^CHAPTER\s+[IVX0-9]+/i.test(text)) {
-                        type = 'CHAPTER';
-                    } else if (/^Section\s+\d+/i.test(text) || /^Part\s+[IVX]+/i.test(text)) {
-                        type = 'SECTION';
-                    } else if (/^\(\d+\)/.test(text) || /^\([a-z]\)/.test(text) || /^\d+\./.test(text)) {
-                        // Matches (1), (a), 1.
-                        // But if it's very bold/large, might be section.
-                        // Usually subsection
-                        if (block.isBold && ratio > 1.1) type = 'SECTION';
-                        else type = 'SUBSECTION'; // Will effectively look like list/subsection
-                    } else if (text.startsWith('•') || text.startsWith('- ')) {
-                        type = 'LIST_ITEM';
-                    } else if (ratio > 1.1 && block.isBold) {
-                        // Generic sub-heading
-                        type = 'SECTION';
-                    }
-
-                    return { ...block, type };
-                });
-
-                // 4. Paragraph Merging (The tricky part)
-                const mergedBlocks: TextBlock[] = [];
-                let currentBuffer: { type: BlockType, text: string, id: string } | null = null;
-
-                const flushBuffer = () => {
-                    if (currentBuffer) {
-                        mergedBlocks.push({ ...currentBuffer });
-                        currentBuffer = null;
-                    }
-                };
-
-                classifiedBlocks.forEach((block, index) => {
-                    const isHeading = ['TITLE', 'CHAPTER', 'SECTION'].includes(block.type);
-                    const isList = ['SUBSECTION', 'LIST_ITEM'].includes(block.type);
-
-                    if (isHeading || isList) {
-                        flushBuffer();
-                        mergedBlocks.push({
-                            type: block.type,
-                            text: block.text,
-                            id: block.id
-                        });
-                    } else {
-                        // It's BODY (or unclassified)
-                        if (currentBuffer) {
-                            // Check merge conditions
-                            // Don't merge if previous line ended with period? 
-                            // Actually, in PDF, a paragraph is split physically.
-                            // Valid Layout:   "This is a long sentence that" (no dot)
-                            //                 "continues on the next line." (dot)
-                            // We SHOULD merge these.
-
-                            // Invalid Merge:  "End of para."
-                            //                 "Start of new."
-
-                            // So, if buffer does NOT end in . or : or ?, merge.
-                            const endsWithStop = /[.:!?]$/.test(currentBuffer.text.trim());
-                            const currentStartsWithCap = /^[A-Z]/.test(block.text);
-
-                            if (!endsWithStop) {
-                                // Merge
-                                // Add space if needed (hyphenation check could go here)
-                                if (currentBuffer.text.endsWith('-')) {
-                                    currentBuffer.text = currentBuffer.text.slice(0, -1) + block.text;
-                                } else {
-                                    currentBuffer.text += " " + block.text;
-                                }
-                            } else {
-                                // Previous ended with stop. 
-                                // If current starts with Capital, it's likely new para.
-                                // If it starts with lowercase, it might be weird formatting, but usually PDF requires explicit breaks.
-                                flushBuffer();
-                                currentBuffer = {
-                                    type: 'BODY',
-                                    text: block.text,
-                                    id: block.id
-                                };
-                            }
-                        } else {
-                            currentBuffer = {
-                                type: 'BODY',
-                                text: block.text,
-                                id: block.id
-                            };
-                        }
-                    }
-                });
-                flushBuffer();
-
-                setBlocks(mergedBlocks);
+                // Run Analysis
+                const docNodes = analyzer.process();
+                setNodes(docNodes);
                 setLoading(false);
                 setProgress(100);
                 if (onLoadComplete) onLoadComplete();
 
             } catch (err: any) {
-                console.error("Liquid Mode Error:", err);
-                setError(err.message || "Failed to process PDF");
+                console.error("Smart Reader Engine Failed:", err);
+                setError("Failed to parse document structure.");
                 setLoading(false);
             }
         };
 
-        processPdf();
-
+        process();
         return () => { isMounted = false; };
     }, [url, onLoadComplete]);
 
-    const renderBlock = (block: TextBlock) => {
-        // Highlight logic for "Section X"
-        const processText = (text: string) => {
-            // Bold "Section X" or "(1)"
-            const parts = text.split(/(Section\s+\d+(?:[\.\)])?|^\(\d+\)|^\([a-z]\))/g);
-            if (parts.length === 1) return text;
+    // --- Renderer ---
 
+    const renderNode = (node: DocNode) => {
+        // Highlight Section refs
+        const highlightRefs = (text: string) => {
+            const parts = text.split(/(Section\s+\d+(\(\d+\))?|^\(\d+\)|^\([a-z]\))/g);
             return parts.map((part, i) => {
-                if (part.match(/(Section\s+\d+(?:[\.\)])?|^\(\d+\)|^\([a-z]\))/)) {
-                    return <span key={i} className="font-bold text-slate-900">{part}</span>;
+                if (!part) return null;
+                if (/^(Section\s+\d+|^\(\d+\)|^\([a-z]\))/.test(part)) {
+                    return <span key={i} className="font-bold text-slate-800">{part}</span>;
                 }
                 return part;
             });
         };
 
-        switch (block.type) {
+        const content = highlightRefs(node.content);
+
+        switch (node.type) {
             case 'TITLE':
                 return (
-                    <h1 key={block.id} className="text-[22px] font-bold text-center text-slate-900 mb-6 leading-tight uppercase tracking-wide">
-                        {block.text}
-                    </h1>
+                    <div key={node.id} className="mb-8 px-2 text-center">
+                        <h1 className="text-[22px] font-bold text-slate-900 leading-tight uppercase tracking-wide">
+                            {content}
+                        </h1>
+                        <div className="mx-auto mt-4 h-1 w-12 bg-slate-900 rounded-full opacity-20" />
+                    </div>
                 );
             case 'CHAPTER':
                 return (
-                    <h2 key={block.id} className="text-[18px] font-bold text-slate-800 mt-5 mb-3 uppercase tracking-wider border-b-2 border-slate-100 pb-1">
-                        {block.text}
-                    </h2>
+                    <div key={node.id} className="mt-8 mb-4">
+                        <h2 className="text-[18px] font-bold text-slate-800 uppercase tracking-widest border-b border-slate-200 pb-2">
+                            {content}
+                        </h2>
+                    </div>
                 );
             case 'SECTION':
                 return (
-                    <h3 key={block.id} className="text-[16px] font-semibold text-slate-800 mt-4 mb-2">
-                        {block.text}
+                    <h3 key={node.id} className="mt-6 mb-3 text-[17px] font-semibold text-slate-900 leading-snug">
+                        {content}
                     </h3>
                 );
-            case 'SUBSECTION':
+            case 'SUBSECTION': // (1)
+            case 'CLAUSE':     // (a)
                 return (
-                    <div key={block.id} className="text-[15px] font-medium text-slate-800 mt-2 mb-1 pl-4 indent-[-1rem] leading-relaxed">
-                        {processText(block.text)}
+                    <div key={node.id} className="mt-2 mb-2 pl-4 flex items-start gap-2">
+                        {/* We try to split index from content if possible, simplistic for now */}
+                        <div className="text-[15.5px] leading-[1.5] text-slate-800 text-justify">
+                            {content}
+                        </div>
                     </div>
                 );
             case 'LIST_ITEM':
                 return (
-                    <div key={block.id} className="flex gap-3 my-2 pl-4 text-slate-700">
-                        <span className="text-slate-900 font-bold">•</span>
-                        <span className="flex-1 leading-relaxed">{block.text.replace(/^[-•]\s*/, '')}</span>
+                    <div key={node.id} className="mt-1 mb-1 pl-6 relative">
+                        <div className="absolute left-2 top-2 w-1.5 h-1.5 bg-slate-400 rounded-full" />
+                        <p className="text-[15px] leading-[1.5] text-slate-700">
+                            {node.content.replace(/^[-•]\s*/, '')}
+                        </p>
                     </div>
                 );
-            case 'BODY':
+            case 'PARAGRAPH':
             default:
+                // Check if it looks like a Clause start that missed tagging?
+                // Logic: starts with "(1)" -> Indent
+                const isClause = /^\(\w+\)/.test(node.content);
                 return (
-                    <p key={block.id} className="text-[15px] leading-[1.6] text-slate-700 mb-3 text-justify font-normal tracking-normal">
-                        {processText(block.text)}
+                    <p key={node.id} className={`text-[15px] leading-[1.65] text-slate-700 mb-4 text-justify ${isClause ? 'pl-4 font-medium text-slate-800' : ''}`}>
+                        {content}
                     </p>
                 );
         }
@@ -331,43 +431,51 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
 
     if (loading) {
         return (
-            <div className="flex flex-col items-center justify-center h-full min-h-[60vh] p-6">
-                <div className="relative w-16 h-16 mb-4">
-                    <Loader2 className="w-16 h-16 text-blue-600 animate-spin opacity-20" />
-                    <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-blue-600">
+            <div className="flex flex-col items-center justify-center p-12 space-y-6 min-h-[60vh]">
+                <div className="relative w-20 h-20">
+                    <svg className="w-full h-full animate-spin text-blue-100" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                    </svg>
+                    <div className="absolute inset-0 flex items-center justify-center text-sm font-bold text-blue-600">
                         {progress}%
                     </div>
                 </div>
-                <p className="text-slate-500 text-sm font-medium animate-pulse">Converting to Smart Reader...</p>
-                <p className="text-slate-400 text-xs mt-2">Creating book-like layout</p>
+                <div className="text-center space-y-2">
+                    <h3 className="text-lg font-bold text-slate-800">Building Semantic Tree</h3>
+                    <p className="text-slate-500 text-xs uppercase tracking-wider">Analysis • Layout • Typography</p>
+                </div>
             </div>
         );
     }
 
     if (error) {
         return (
-            <div className="flex flex-col items-center justify-center h-full min-h-[50vh] p-8 text-center">
-                <div className="bg-red-50 p-4 rounded-full mb-4">
-                    <AlertCircle className="w-8 h-8 text-red-500" />
-                </div>
-                <h3 className="text-lg font-bold text-slate-800 mb-2">Could not switch to Smart View</h3>
-                <p className="text-slate-500 text-sm mb-6">{error}</p>
-                <button onClick={() => window.location.reload()} className="text-blue-600 font-medium text-sm">Tap to Retry</button>
+            <div className="flex flex-col items-center justify-center p-12 text-center h-full">
+                <AlertCircle className="w-12 h-12 text-red-500 mb-4" />
+                <h3 className="text-lg font-bold text-slate-800 mb-2">Reader Error</h3>
+                <p className="text-slate-500 max-w-xs mx-auto mb-6">{error}</p>
+                <button onClick={() => window.location.reload()} className="px-6 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium">Retry</button>
             </div>
         );
     }
 
     return (
-        <div className="max-w-3xl mx-auto px-5 py-8 bg-white min-h-screen">
-            {/* Legal Book Style Container */}
-            <article className="prose prose-slate max-w-none">
-                {blocks.map(renderBlock)}
-            </article>
+        <div className="h-full bg-slate-50 overflow-y-auto">
+            <div className="max-w-3xl mx-auto min-h-screen bg-white shadow-sm pb-24">
+                {/* Header Metadata (Simulated) */}
+                <div className="h-1 bg-blue-600 w-full mb-8" />
 
-            <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col items-center gap-2">
-                <div className="w-8 h-1 bg-slate-200 rounded-full"></div>
-                <p className="text-xs text-slate-400 uppercase tracking-widest font-medium">End of Document</p>
+                <div className="px-6 md:px-10 py-6">
+                    {nodes.map(renderNode)}
+
+                    <div className="mt-16 pt-8 border-t border-slate-100 text-center">
+                        <BookOpen className="w-6 h-6 text-slate-300 mx-auto mb-2" />
+                        <p className="text-xs text-slate-400 font-medium uppercase tracking-widest">End of Document</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
 }
+
