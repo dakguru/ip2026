@@ -31,8 +31,6 @@ export default function InfoMarqueeView() {
         }
     ];
 
-    if (!isNative) return null; // Only show on Android App
-
     useEffect(() => {
         if (isPaused) return;
 
@@ -42,6 +40,8 @@ export default function InfoMarqueeView() {
 
         return () => clearInterval(interval);
     }, [messages.length, isPaused]);
+
+    if (!isNative) return null;
 
     const currentMessage = messages[currentIndex];
 
