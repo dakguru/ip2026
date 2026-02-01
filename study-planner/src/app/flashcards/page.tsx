@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, PanInfo, Variants } from "framer-motion";
 import {
@@ -43,6 +43,7 @@ import Image from "next/image";
 import FlashcardsIntroBanner from "@/components/FlashcardsIntroBanner";
 import PremiumFlashCardDeck from "@/components/flashcards/PremiumFlashCardDeck";
 import { Capacitor } from '@capacitor/core';
+import { App } from '@capacitor/app';
 import NativeFlashcardsHomeV2 from "@/components/flashcards/NativeFlashcardsHomeV2";
 
 import FlashcardsMarquee from "@/components/FlashcardsMarquee";
@@ -113,6 +114,41 @@ export default function FlashcardsPage() {
     const [isInitiallyShuffled, setIsInitiallyShuffled] = useState(false);
     const [deckProgress, setDeckProgress] = useState<Record<string, number>>({});
     const [bookmarks, setBookmarks] = useState<Set<string | number>>(new Set());
+
+    const router = useRouter();
+
+    // --- ANDROID BACK BUTTON HANDLING ---
+    const selectedDeckIdRef = useRef(selectedDeckId);
+    useEffect(() => {
+        selectedDeckIdRef.current = selectedDeckId;
+    }, [selectedDeckId]);
+
+    useEffect(() => {
+        if (!Capacitor.isNativePlatform()) return;
+
+        let backListener: any;
+        const setupListener = async () => {
+            backListener = await App.addListener('backButton', (data) => {
+                if (selectedDeckIdRef.current) {
+                    // If in study mode, just close the deck
+                    setSelectedDeckId(null);
+                } else {
+                    // If on the main list, go back (or exit if no history)
+                    if (data.canGoBack) {
+                        router.back();
+                    } else {
+                        App.exitApp();
+                    }
+                }
+            });
+        };
+
+        setupListener();
+
+        return () => {
+            if (backListener) backListener.remove();
+        };
+    }, []);
 
     useEffect(() => {
         setMounted(true);
