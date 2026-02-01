@@ -22,12 +22,12 @@ export default function InfoMarqueeView() {
             action: null
         },
         {
-            text: "Please access PDF Notes via Mobile/Desktop Browser at www.dakguru.com",
+            text: "Please access PDF Notes via Mobile/Desktop Browser www.dakguru.com",
             action: { type: 'link', url: 'https://www.dakguru.com', label: 'www.dakguru.com' }
         },
         {
-            text: "For assistance, WhatsApp us directly: +91 936 30 30 396",
-            action: { type: 'whatsapp', url: 'https://wa.me/919363030396', label: '+91 936 30 30 396' }
+            text: "For assistance, WhatsApp us directly: +919363030396",
+            action: { type: 'whatsapp', url: 'https://wa.me/919363030396', label: '+919363030396' }
         }
     ];
 
