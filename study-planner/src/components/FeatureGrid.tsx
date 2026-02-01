@@ -15,25 +15,37 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
     const router = useRouter();
     const isMobileApp = useIsMobileApp();
     const [unreadCount, setUnreadCount] = useState(0);
+    const [unreadDetails, setUnreadDetails] = useState({
+        users: 0,
+        membership: 0,
+        mockTests: 0,
+        system: 0
+    });
 
     useEffect(() => {
         if (role === 'admin') {
             const fetchUnread = async () => {
                 try {
-                    // Optimized: In a real app, create a dedicated 'count' endpoint or lightweight fetch
-                    // For now, fetching notifications and filtering locally is okay for MVP
                     const res = await fetch('/api/admin/notifications');
                     if (res.ok) {
                         const data = await res.json();
-                        const unread = data.notifications ? data.notifications.filter((n: any) => !n.isRead).length : 0;
-                        setUnreadCount(unread);
+                        const ns = data.notifications || [];
+                        const unread = ns.filter((n: any) => !n.isRead);
+                        setUnreadCount(unread.length);
+
+                        // Calculate detailed stats
+                        setUnreadDetails({
+                            users: unread.filter((n: any) => ['enrollment', 'community_post', 'new_user', 'user_register'].includes(n.type)).length,
+                            mockTests: unread.filter((n: any) => n.type === 'purchase' && n.title.toLowerCase().includes('mock test')).length,
+                            membership: unread.filter((n: any) => n.type === 'purchase' && !n.title.toLowerCase().includes('mock test')).length,
+                            system: unread.filter((n: any) => ['deployment', 'system', 'alert'].includes(n.type)).length
+                        });
                     }
                 } catch (e) {
                     console.error("Failed to fetch unread count", e);
                 }
             };
             fetchUnread();
-            // Poll every 30 seconds for updates
             const interval = setInterval(fetchUnread, 30000);
             return () => clearInterval(interval);
         }
@@ -220,18 +232,50 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                                 )}
                             </div>
 
-                            <div className={`relative h-full flex flex-col items-center justify-center text-center z-10 transition-transform duration-300 ${padding}`}>
-                                <div className={`${iconContainer} ${item.bg} ${item.color} shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                                    <item.icon className={iconSize} strokeWidth={2} />
-                                </div>
+                            {item.title === 'System Notifications' && role === 'admin' ? (
+                                <div className="relative h-full flex flex-col p-4 z-10 w-full justify-between">
+                                    <div className="flex items-center gap-2">
+                                        <div className={`p-1.5 rounded-lg ${item.bg} ${item.color}`}>
+                                            <item.icon className="w-4 h-4" strokeWidth={2.5} />
+                                        </div>
+                                        <h3 className="text-sm font-bold text-zinc-800 dark:text-zinc-100 leading-tight">
+                                            Notifications
+                                        </h3>
+                                    </div>
 
-                                <h3 className={`${textSize} font-bold text-zinc-800 dark:text-zinc-100 mb-1 leading-tight group-hover:text-black dark:group-hover:text-white transition-colors line-clamp-2`}>
-                                    {item.title}
-                                </h3>
-                                {showDesc && <p className="text-[10px] md:text-xs font-semibold uppercase tracking-wide text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors hidden sm:block">
-                                    {item.desc}
-                                </p>}
-                            </div>
+                                    <div className="space-y-1 w-full mt-2">
+                                        <div className="flex justify-between items-center text-[10px] p-1 px-2 bg-zinc-50 dark:bg-zinc-800/50 rounded border border-zinc-100 dark:border-zinc-800">
+                                            <span className="text-zinc-500 font-semibold uppercase tracking-wide">Users</span>
+                                            <span className={`font-bold ${unreadDetails.users > 0 ? 'text-blue-600' : 'text-zinc-400'}`}>{unreadDetails.users}</span>
+                                        </div>
+                                        <div className="flex justify-between items-center text-[10px] p-1 px-2 bg-zinc-50 dark:bg-zinc-800/50 rounded border border-zinc-100 dark:border-zinc-800">
+                                            <span className="text-zinc-500 font-semibold uppercase tracking-wide">Mock Tests</span>
+                                            <span className={`font-bold ${unreadDetails.mockTests > 0 ? 'text-amber-600' : 'text-zinc-400'}`}>{unreadDetails.mockTests}</span>
+                                        </div>
+                                        <div className="flex justify-between items-center text-[10px] p-1 px-2 bg-zinc-50 dark:bg-zinc-800/50 rounded border border-zinc-100 dark:border-zinc-800">
+                                            <span className="text-zinc-500 font-semibold uppercase tracking-wide">Membership</span>
+                                            <span className={`font-bold ${unreadDetails.membership > 0 ? 'text-purple-600' : 'text-zinc-400'}`}>{unreadDetails.membership}</span>
+                                        </div>
+                                        <div className="flex justify-between items-center text-[10px] p-1 px-2 bg-zinc-50 dark:bg-zinc-800/50 rounded border border-zinc-100 dark:border-zinc-800">
+                                            <span className="text-zinc-500 font-semibold uppercase tracking-wide">System</span>
+                                            <span className={`font-bold ${unreadDetails.system > 0 ? 'text-red-600' : 'text-zinc-400'}`}>{unreadDetails.system}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className={`relative h-full flex flex-col items-center justify-center text-center z-10 transition-transform duration-300 ${padding}`}>
+                                    <div className={`${iconContainer} ${item.bg} ${item.color} shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                                        <item.icon className={iconSize} strokeWidth={2} />
+                                    </div>
+
+                                    <h3 className={`${textSize} font-bold text-zinc-800 dark:text-zinc-100 mb-1 leading-tight group-hover:text-black dark:group-hover:text-white transition-colors line-clamp-2`}>
+                                        {item.title}
+                                    </h3>
+                                    {showDesc && <p className="text-[10px] md:text-xs font-semibold uppercase tracking-wide text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors hidden sm:block">
+                                        {item.desc}
+                                    </p>}
+                                </div>
+                            )}
                         </div>
                     </Link>
                 );
