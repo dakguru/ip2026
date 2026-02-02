@@ -963,87 +963,129 @@ function MockTestDetail({
                     canAccess ? (
                         userResult ? (
                             <div className="flex flex-col gap-3">
-                                <div className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-100 dark:border-green-900/30">
-                                    <div className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400" />
-                                        <span className="font-bold text-green-700 dark:text-green-300 text-sm">Attempted</span>
+                                <div className="flex items-center justify-between p-3.5 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-2xl border border-emerald-100/50 dark:border-emerald-900/30">
+                                    <div className="flex items-center gap-2.5">
+                                        <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center">
+                                            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                                        </div>
+                                        <span className="font-bold text-emerald-700 dark:text-emerald-300 text-sm">Attempted Successfully</span>
                                     </div>
-                                    <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                                        Score: {userResult.score}/{mock.marks}
-                                    </span>
+                                    <div className="flex flex-col items-end">
+                                        <span className="text-[10px] font-bold text-emerald-600/60 dark:text-emerald-400/60 uppercase tracking-wider">Your Score</span>
+                                        <span className="font-black text-zinc-900 dark:text-white text-lg leading-none">
+                                            {userResult.score}<span className="text-zinc-400 text-xs font-bold ml-0.5">/{mock.marks}</span>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div className="flex gap-3">
+                                <div className="grid grid-cols-2 gap-3">
                                     <button
                                         disabled
-                                        className="flex-1 py-4 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded-xl font-bold text-lg flex items-center justify-center gap-2 cursor-not-allowed border border-green-100 dark:border-green-900/30"
+                                        className="py-4 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-400 dark:text-zinc-500 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 cursor-not-allowed border border-zinc-200 dark:border-zinc-700"
                                     >
-                                        <CheckCircle2 className="w-5 h-5" /> Submitted
+                                        <CheckCircle2 className="w-4 h-4" /> Submitted
                                     </button>
                                     <button
-                                        onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
-                                        className="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2 transition-all active:scale-95"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                            onViewSheets?.();
+                                        }}
+                                        className="py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold text-sm shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.97]"
                                     >
-                                        <FileDown className="w-5 h-5" /> Download Answer Sheet
+                                        <FileDown className="w-4 h-4" /> Answer Sheet
                                     </button>
                                 </div>
                             </div>
                         ) : (
-                            <Link href={`/mock-tests/weekly/${mock.id}`} className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 transition-all flex items-center justify-center gap-2">
-                                <PlayCircle className="w-6 h-6" /> Start Test Now
+                            <Link
+                                href={`/mock-tests/weekly/${mock.id}`}
+                                onClick={() => { if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20); }}
+                                className="w-full py-4.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-black text-base md:text-lg shadow-xl shadow-zinc-900/10 dark:shadow-none transition-all flex items-center justify-center gap-3 hover:scale-[1.01] active:scale-[0.98]"
+                            >
+                                <PlayCircle className="w-6 h-6 fill-current" /> Start Assessment Now
                             </Link>
                         )
                     ) : (
                         <button
-                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
+                                onEnroll();
+                            }}
                             disabled={isProcessing}
-                            className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/50 flex items-center justify-center gap-2 transition-all transform active:scale-95 animate-pulse"
+                            className="w-full py-4.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-red-500/40 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98] animate-pulse-slow"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Enroll Now - ₹49
+                            Unlock Test Access - ₹49
                         </button>
                     )
                 ) : mock.status === 'completed' ? (
                     canAccess ? (
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-4">
                             {userResult && (
-                                <div className="flex items-center justify-between p-3 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-100 dark:border-green-900/30">
-                                    <div className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400" />
-                                        <span className="font-bold text-green-700 dark:text-green-300 text-sm">Attempted</span>
+                                <div className="flex items-center justify-between p-3.5 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-2xl border border-emerald-100/50 dark:border-emerald-900/30">
+                                    <div className="flex items-center gap-2.5">
+                                        <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center">
+                                            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                                        </div>
+                                        <span className="font-bold text-emerald-700 dark:text-emerald-300 text-sm">Test Completed</span>
                                     </div>
-                                    <span className="font-bold text-zinc-900 dark:text-zinc-100">
-                                        Score: {userResult.score}/{mock.marks}
-                                    </span>
+                                    <div className="flex flex-col items-end">
+                                        <span className="text-[10px] font-bold text-emerald-600/60 dark:text-emerald-400/60 uppercase tracking-wider">Your Score</span>
+                                        <span className="font-black text-zinc-900 dark:text-white text-lg leading-none">
+                                            {userResult.score}<span className="text-zinc-400 text-xs font-bold ml-0.5">/{mock.marks}</span>
+                                        </span>
+                                    </div>
                                 </div>
                             )}
-                            <div className="flex gap-3">
-                                <Link href={`/mock-tests/weekly/${mock.id}?reattempt=true`} className="flex-1 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center gap-2">
-                                    <History className="w-6 h-6" /> Reattempt Test
+                            <div className="grid grid-cols-2 gap-3">
+                                <Link
+                                    href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
+                                    onClick={() => { if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15); }}
+                                    className="py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold text-sm shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center gap-2 active:scale-[0.97]"
+                                >
+                                    <History className="w-5 h-5" /> Reattempt
                                 </Link>
-                                {userResult && (
+                                {userResult ? (
                                     <button
-                                        onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
-                                        className="flex-1 py-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                            onViewSheets?.();
+                                        }}
+                                        className="py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-2xl font-bold text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-2 transition-all active:scale-[0.97]"
                                     >
-                                        <FileDown className="w-5 h-5" /> Download Answer Sheet
+                                        <FileDown className="w-5 h-5" /> Answer Sheet
                                     </button>
+                                ) : (
+                                    <Link
+                                        href={`/mock-tests/weekly/${mock.id}`}
+                                        onClick={() => { if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20); }}
+                                        className="py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-2xl font-bold text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-2 transition-all active:scale-[0.97]"
+                                    >
+                                        <PlayCircle className="w-5 h-5" /> Practice Now
+                                    </Link>
                                 )}
                             </div>
                         </div>
                     ) : (
                         <button
-                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
+                                onEnroll();
+                            }}
                             disabled={isProcessing}
-                            className="w-full py-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-red-500/50 flex items-center justify-center gap-2 transition-all transform active:scale-95 animate-pulse"
+                            className="w-full py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-indigo-500/30 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98]"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Unlock Test - ₹49
+                            Unlock All Papers - ₹49
                         </button>
                     )
                 ) : (
-                    <button disabled className="w-full py-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-xl font-bold flex items-center justify-center gap-2 cursor-not-allowed">
+                    <button disabled className="w-full py-4.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-400 rounded-2xl font-bold flex items-center justify-center gap-3 cursor-not-allowed border border-dashed border-zinc-200 dark:border-zinc-700">
                         <Lock className="w-5 h-5" />
-                        Test Not Yet Active
+                        Test Link Not Active Yet
                     </button>
                 )}
             </div>
@@ -1275,86 +1317,123 @@ function MockTestCard({
 
                     {isCompleted ? (
                         canAccess ? (
-                            <div className="flex flex-col gap-2 flex-1">
-                                <Link
-                                    href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
-                                    onClick={(e) => e.stopPropagation()}
-                                    className="w-full py-3 bg-white dark:bg-zinc-800 border-2 border-blue-600 dark:border-blue-500 text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
-                                >
-                                    <History className="w-4 h-4" /> Reattempt Test
-                                </Link>
-                                {hasAttempted && (
-                                    <button
-                                        onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
-                                        className="w-full py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all hover:bg-zinc-200 dark:hover:bg-zinc-700"
+                            <div className="flex flex-col gap-2.5 flex-1">
+                                <div className="grid grid-cols-2 gap-2.5">
+                                    <Link
+                                        href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                        }}
+                                        className="w-full py-3 bg-white dark:bg-zinc-800 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-700 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all active:scale-[0.97] shadow-sm"
                                     >
-                                        <FileDown className="w-4 h-4" /> Download Answer Sheet
-                                    </button>
-                                )}
+                                        <History className="w-3.5 h-3.5" /> Reattempt
+                                    </Link>
+                                    {hasAttempted ? (
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                                onViewSheets?.();
+                                            }}
+                                            className="w-full py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97]"
+                                        >
+                                            <FileDown className="w-3.5 h-3.5" /> Answer Sheet
+                                        </button>
+                                    ) : (
+                                        <Link
+                                            href={`/mock-tests/weekly/${mock.id}`}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                            }}
+                                            className="w-full py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97]"
+                                        >
+                                            <PlayCircle className="w-3.5 h-3.5" /> Practice
+                                        </Link>
+                                    )}
+                                </div>
                             </div>
                         ) : (
                             <button
-                                onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
+                                    onEnroll();
+                                }}
                                 disabled={isProcessing}
-                                className="flex-1 py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform active:scale-95"
+                                className="flex-1 py-3.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform active:scale-[0.97]"
                             >
                                 {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-200 fill-current" />}
-                                Unlock Now - ₹49
+                                Unlock All Content - ₹49
                             </button>
                         )
                     ) : isLive ? (
                         hasAttempted ? (
-                            <div className="flex gap-2 w-full">
+                            <div className="flex gap-2.5 w-full">
                                 <button
                                     disabled
-                                    className="flex-1 py-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded-xl font-bold text-sm flex items-center justify-center gap-2 cursor-not-allowed border border-green-100 dark:border-green-900/30"
+                                    className="flex-1 py-3 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-400 dark:text-zinc-500 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 cursor-not-allowed border border-zinc-200 dark:border-zinc-700"
                                 >
-                                    <CheckCircle2 className="w-4 h-4" /> Submitted
+                                    <CheckCircle2 className="w-3.5 h-3.5" /> Submitted
                                 </button>
-                                {hasAttempted && (
-                                    <button
-                                        onClick={(e) => { e.stopPropagation(); onViewSheets?.(); }}
-                                        className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all active:scale-95"
-                                    >
-                                        <FileDown className="w-4 h-4" /> Download Sheet
-                                    </button>
-                                )}
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                        onViewSheets?.();
+                                    }}
+                                    className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25 transition-all active:scale-[0.97]"
+                                >
+                                    <FileDown className="w-3.5 h-3.5" /> Answer Sheet
+                                </button>
                             </div>
                         ) : (
                             canAccess ? (
                                 <Link
                                     href={`/mock-tests/weekly/${mock.id}`}
-                                    onClick={(e) => e.stopPropagation()}
-                                    className="flex-1 py-3 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-95 animate-pulse-slow"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20);
+                                    }}
+                                    className="flex-1 py-3.5 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-2xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-[0.97] animate-pulse-slow"
                                 >
-                                    <PlayCircle className="w-4 h-4 fill-current" /> Attempt Test
+                                    <PlayCircle className="w-4 h-4 fill-current" /> Attempt Live Test
                                 </Link>
                             ) : (
                                 <button
-                                    onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
+                                        onEnroll();
+                                    }}
                                     disabled={isProcessing}
-                                    className="flex-1 py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform active:scale-95"
+                                    className="flex-1 py-3.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform active:scale-[0.97]"
                                 >
                                     {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-200 fill-current" />}
-                                    Enroll and Attempt
+                                    Enroll & Attempt
                                 </button>
                             )
                         )
                     ) : !canAccess ? (
                         <button
-                            onClick={(e) => { e.stopPropagation(); onEnroll(); }}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
+                                onEnroll();
+                            }}
                             disabled={isProcessing}
-                            className="flex-1 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-[1.02] active:scale-95"
+                            className="flex-1 py-3.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-2xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-[1.01] active:scale-[0.97]"
                         >
                             {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
-                            Enroll for Rs.49/-
+                            Enroll Now - ₹49
                         </button>
                     ) : (
                         <button
                             onClick={onClick}
-                            className="flex-1 py-3 bg-zinc-50 dark:bg-zinc-800/50 text-zinc-400 dark:text-zinc-500 rounded-xl font-bold text-sm flex items-center justify-center gap-2 cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors border border-dashed border-zinc-200 dark:border-zinc-700"
+                            className="flex-1 py-3 bg-zinc-50 dark:bg-zinc-800/50 text-zinc-400 dark:text-zinc-500 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors border border-dashed border-zinc-200 dark:border-zinc-700"
                         >
-                            <Lock className="w-4 h-4" /> Schedule Details
+                            <Lock className="w-3.5 h-3.5" /> View Schedule
                         </button>
                     )}
                 </div>

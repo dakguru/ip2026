@@ -300,7 +300,14 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Domestic/Foreign Post Guidelines", description: "Issued by Directorate.", color: "cyan", comingSoon: true },
 
         // 33. DIGIPIN
-        { title: "DIGIPIN", description: "Basic understanding of Digital Personal Identification Number.", color: "violet", comingSoon: true },
+        {
+            title: "DIGIPIN",
+            description: "Basic understanding of Digital Personal Identification Number.",
+            filename: "DIGIPIN.pdf",
+            path: "/notes/paper-1/DIGIPIN.pdf",
+            size: "0.5 MB",
+            color: "violet"
+        },
 
         // 34. Network Optimization
         { title: "MNOP & PNOP Guidelines", description: "Mail & Parcel Network Optimization Projects.", color: "fuchsia", comingSoon: true },
@@ -407,7 +414,14 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 15. RTI
-        { title: "RTI Act, 2005 and RTI Rules, 2012", description: "Right to Information framework.", color: "cyan", comingSoon: true },
+        {
+            title: "RTI Act, 2005 and RTI Rules, 2012",
+            description: "Right to Information framework.",
+            filename: "RTI_Act_2005_and_RTI_Rules_2012.pdf",
+            path: "/notes/paper-3/RTI_Act_2005_and_RTI_Rules_2012.pdf",
+            size: "0.7 MB",
+            color: "cyan"
+        },
 
         // 16-18. Procurement Manual
         { title: "Manual on Procurement of Goods", description: "Procurement Manual Part i", color: "slate", comingSoon: true },

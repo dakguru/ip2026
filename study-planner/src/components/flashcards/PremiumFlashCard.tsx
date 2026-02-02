@@ -73,11 +73,13 @@ export default function PremiumFlashCard({
                         <div className={styles.header}>
                             <div className={styles.tag}>{category || theme}</div>
                             <button
-                                className={clsx(styles.iconButton, isBookmarked && styles.active)}
+                                className={clsx(styles.iconButton, isBookmarked && styles.active, "active:scale-90 transition-transform")}
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     onBookmarkToggle?.();
                                 }}
+                                onPointerDown={(e) => e.stopPropagation()}
+                                onTouchStart={(e) => e.stopPropagation()}
                                 aria-label="Mark for revision"
                             >
                                 <Bookmark className={clsx("w-5 h-5", isBookmarked && "fill-current")} />
@@ -105,11 +107,13 @@ export default function PremiumFlashCard({
                         <div className={styles.header}>
                             <div className={styles.tag}>{category || theme}</div>
                             <button
-                                className={clsx(styles.iconButton, isBookmarked && styles.active)}
+                                className={clsx(styles.iconButton, isBookmarked && styles.active, "active:scale-90 transition-transform")}
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     onBookmarkToggle?.();
                                 }}
+                                onPointerDown={(e) => e.stopPropagation()}
+                                onTouchStart={(e) => e.stopPropagation()}
                                 aria-label="Mark for revision"
                             >
                                 <Bookmark className={clsx("w-5 h-5", isBookmarked && "fill-current")} />

@@ -147,12 +147,12 @@ const MemoizedMobileContent = memo(({
                                     <button
                                         key={idx}
                                         onClick={() => handleOptionSelect(idx)}
-                                        className={`relative w-full text-left p-4 rounded-xl border transition-all duration-200 active:scale-[0.99] flex items-start gap-3.5 ${containerClass}`}
+                                        className={`relative w-full text-left p-4.5 rounded-2xl border-2 transition-all duration-300 active:scale-[0.98] flex items-start gap-4 ${containerClass}`}
                                     >
-                                        <div className="mt-0.5 shrink-0 transition-transform duration-300">
+                                        <div className="mt-1 shrink-0 transition-all duration-300">
                                             {icon}
                                         </div>
-                                        <span className={`text-[15px] md:text-base leading-snug font-medium ${textClass}`}>
+                                        <span className={`text-[15px] md:text-base leading-snug ${textClass}`}>
                                             {option}
                                         </span>
                                     </button>
@@ -178,7 +178,7 @@ const MemoizedMobileContent = memo(({
                         <button
                             onClick={() => { vibrate(10); setCurrentQIndex((prev: number) => Math.max(0, prev - 1)); }}
                             disabled={currentQIndex === 0}
-                            className="w-11 h-11 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 transition-colors"
+                            className="w-12 h-12 flex items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all active:scale-90"
                         >
                             <ChevronLeft className="w-6 h-6" />
                         </button>
@@ -186,16 +186,16 @@ const MemoizedMobileContent = memo(({
                         {currentQIndex === questions.length - 1 ? (
                             <button
                                 onClick={handleSubmit}
-                                className="flex-1 px-6 h-12 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition-transform active:scale-95"
+                                className="flex-1 h-12 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-black text-sm shadow-xl shadow-zinc-900/10 dark:shadow-none flex items-center justify-center gap-2 transition-all transform active:scale-[0.96] hover:opacity-90"
                             >
-                                Submit Test <Send className="w-4 h-4" />
+                                Finish Assessment <Send className="w-4 h-4" />
                             </button>
                         ) : (
                             <button
-                                onClick={() => { vibrate(10); setCurrentQIndex((prev: number) => prev + 1); }}
-                                className="flex-1 px-6 h-12 bg-blue-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 transition-transform active:scale-95 hover:bg-blue-700"
+                                onClick={() => { vibrate(15); setCurrentQIndex((prev: number) => prev + 1); }}
+                                className="flex-1 h-12 bg-blue-600 text-white rounded-2xl font-black text-sm shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 transition-all transform active:scale-[0.96] hover:bg-blue-700"
                             >
-                                Next <ChevronRight className="w-4 h-4" />
+                                Next Question <ChevronRight className="w-4 h-4" />
                             </button>
                         )}
                     </div>
@@ -228,7 +228,7 @@ const MemoizedMobileContent = memo(({
                                 </button>
                             </div>
 
-                            <div className="grid grid-cols-6 gap-2 overflow-y-auto p-1 pb-20 custom-scrollbar">
+                            <div className="grid grid-cols-5 gap-3 overflow-y-auto p-1 pb-20 custom-scrollbar">
                                 {questions.map((q: any, idx: number) => (
                                     <button
                                         key={q.id}
@@ -237,7 +237,7 @@ const MemoizedMobileContent = memo(({
                                             setCurrentQIndex(idx);
                                             setIsMobilePaletteOpen(false);
                                         }}
-                                        className={`h-11 w-11 rounded-xl flex items-center justify-center text-xs font-bold border-2 transition-all ${getStatusColor(q.id, idx)}`}
+                                        className={`h-12 w-12 rounded-2xl flex items-center justify-center text-sm font-black border-2 transition-all active:scale-[0.9] ${getStatusColor(q.id, idx)}`}
                                     >
                                         {idx + 1}
                                     </button>
@@ -838,12 +838,12 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
                         <button
                             onClick={() => {
-                                vibrate(20);
+                                vibrate(25);
                                 setHasStarted(true);
                             }}
-                            className="w-full h-14 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-lg shadow-xl shadow-zinc-200 dark:shadow-none hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                            className="w-full h-15 bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-white dark:to-zinc-100 text-white dark:text-zinc-900 rounded-[1.25rem] font-black text-lg shadow-xl shadow-zinc-900/10 dark:shadow-none hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-3 group"
                         >
-                            Start Test Now <ArrowLeft className="w-5 h-5 rotate-180" />
+                            Start Assessment Now <ArrowLeft className="w-5 h-5 rotate-180 transition-transform group-active:translate-x-1" />
                         </button>
                     </div>
                 </div>
@@ -1222,13 +1222,11 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                     )}
                                 </div>
 
-                                <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 px-4 mb-12">
+                                <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 px-4 mb-12 w-full">
                                     {(() => {
                                         const config = TEST_CONFIG_MAP[testId];
                                         const startDate = config ? config.startDate : new Date("2026-01-17T00:00:00+05:30");
                                         const now = new Date();
-                                        // Strictly restrict reattempts during live window unless admin
-                                        // Use config.endDate or default to +48h from startDate
                                         const endDateTime = config?.endDate || new Date(startDate.getTime() + 48 * 60 * 60 * 1000);
                                         const canReattempt = (now > endDateTime) || isAdmin;
 
@@ -1237,25 +1235,27 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                         return (
                                             <button
                                                 onClick={() => {
+                                                    vibrate(15);
                                                     if (confirm("Reattempting will not save your score to the leaderboard. This is for practice only.\n\nContinue?")) {
                                                         window.location.href = `${window.location.pathname}?reattempt=true`;
                                                     }
                                                 }}
-                                                className="w-full md:w-auto px-6 py-3.5 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20 text-sm md:text-base text-center"
+                                                className="w-full md:w-auto px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black hover:bg-indigo-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/20 text-sm md:text-base text-center active:scale-[0.97]"
                                             >
                                                 <History className="w-4 h-4" /> Reattempt Test
                                             </button>
                                         );
                                     })()}
                                     <button
-                                        onClick={generatePDF}
-                                        className="w-full md:w-auto px-6 py-3.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2 text-sm md:text-base"
+                                        onClick={() => { vibrate(10); generatePDF(); }}
+                                        className="w-full md:w-auto px-8 py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-black hover:opacity-90 transition-all flex items-center justify-center gap-2 text-sm md:text-base active:scale-[0.97] shadow-xl shadow-zinc-900/5"
                                     >
-                                        <FileDown className="w-4 h-4" /> Download Answer Sheet
+                                        <FileDown className="w-4 h-4" /> Answer Sheet
                                     </button>
                                     <Link
                                         href="/"
-                                        className="w-full md:w-auto px-6 py-3.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-xl font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all flex items-center justify-center gap-2 text-sm md:text-base"
+                                        onClick={() => vibrate(5)}
+                                        className="w-full md:w-auto px-8 py-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-2xl font-black hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all flex items-center justify-center gap-2 text-sm md:text-base active:scale-[0.97]"
                                     >
                                         <Home className="w-4 h-4" /> Return to Home
                                     </Link>

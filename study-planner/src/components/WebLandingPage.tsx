@@ -167,7 +167,7 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
                                 {/* Google Play Button */}
                                 <StoreButton
                                     store="google"
-                                    href="/download/android"
+                                    href="https://play.google.com/store/apps/details?id=com.studyplanner.app"
                                     className="w-full sm:w-auto justify-center shadow-lg"
                                 />
 

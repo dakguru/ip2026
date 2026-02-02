@@ -5,12 +5,12 @@ const archiver = require('archiver');
 const chalk = require('chalk');
 const dotenv = require('dotenv');
 
-// Load environment variables from .env.local
-// (Next.js typically uses .env.local, but standard dotenv looks for .env.
-// We'll explicitly check .env.local first as per usual Next.js setup)
-const envLocalPath = path.resolve(__dirname, '../.env.local');
-const envPath = path.resolve(__dirname, '../.env');
+// Setup Paths
+const PROJECT_ROOT = path.resolve(__dirname, '../');
+const envLocalPath = path.join(PROJECT_ROOT, '.env.local');
+const envPath = path.join(PROJECT_ROOT, '.env');
 
+// Load Env
 if (fs.existsSync(envLocalPath)) {
     dotenv.config({ path: envLocalPath });
 } else {
@@ -24,8 +24,8 @@ if (!MONGODB_URI) {
     process.exit(1);
 }
 
-const BACKUPS_DIR = path.resolve(__dirname, '../backups');
-const TEMP_BACKUP_DIR = path.resolve(__dirname, '../temp_backup');
+const BACKUPS_DIR = path.join(PROJECT_ROOT, 'backups');
+const TEMP_BACKUP_DIR = path.join(PROJECT_ROOT, 'temp_backup');
 
 // Create backups directory if it doesn't exist
 if (!fs.existsSync(BACKUPS_DIR)) {
@@ -44,18 +44,16 @@ function getTimestamp() {
 }
 
 const timestamp = getTimestamp();
-const zipFileName = `backup-${timestamp}.zip`;
+const zipFileName = `FULL-PROJECT-BACKUP-${timestamp}.zip`;
 const zipFilePath = path.join(BACKUPS_DIR, zipFileName);
 
-console.log(chalk.blue(`🚀 Starting DB Backup...`));
+console.log(chalk.blue(`🚀 Starting COMPLETE Project Backup (Code + Assets + DB)...`));
 
 // 1. Run mongodump
-// WE FOUND THE PATH HERE: C:\Program Files\MongoDB\Tools\100\bin\mongodump.exe
-// We use quotes around the executable path because it contains spaces ("Program Files")
 const mongoDumpExec = '"C:\\Program Files\\MongoDB\\Tools\\100\\bin\\mongodump.exe"';
 const dumpCommand = `${mongoDumpExec} --uri="${MONGODB_URI}" --out="${TEMP_BACKUP_DIR}"`;
 
-console.log(chalk.gray(`Running mongodump...`));
+console.log(chalk.gray(`Step 1/3: Dumping Database...`));
 
 exec(dumpCommand, (error, stdout, stderr) => {
     if (error) {
@@ -63,34 +61,32 @@ exec(dumpCommand, (error, stdout, stderr) => {
         return;
     }
 
-    // Check if temp dir exists and has content (basic check)
     if (!fs.existsSync(TEMP_BACKUP_DIR)) {
-        console.error(chalk.red(`❌ Error: temp_backup directory was not created. Check if mongodump is installed and URI is correct.`));
+        console.error(chalk.red(`❌ Error: temp_backup directory was not created.`));
         return;
     }
 
-    console.log(chalk.green(`✓ Mongodump finished.`));
-    console.log(chalk.gray(`Zipping backup to ${zipFileName}...`));
+    console.log(chalk.green(`✓ Database dump finished.`));
+    console.log(chalk.gray(`Step 2/3: Archiving Project Files & Database to ${zipFileName}...`));
 
     // 2. Zip the folder
     const output = fs.createWriteStream(zipFilePath);
     const archive = archiver('zip', {
-        zlib: { level: 9 } // Sets the compression level.
+        zlib: { level: 9 } // Highest compression
     });
 
     output.on('close', function () {
-        console.log(chalk.green(`✓ Backup compressed: ${archive.pointer()} total bytes`));
+        const sizeMB = (archive.pointer() / 1024 / 1024).toFixed(2);
+        console.log(chalk.green(`✓ Backup compressed: ${sizeMB} MB`));
 
         // 3. Cleanup temp folder
-        console.log(chalk.gray(`Cleaning up temp files...`));
+        console.log(chalk.gray(`Step 3/3: Cleaning up temp files...`));
         fs.rm(TEMP_BACKUP_DIR, { recursive: true, force: true }, (err) => {
             if (err) {
                 console.error(chalk.yellow(`⚠️ Warning: Could not delete temp folder: ${err.message}`));
             } else {
-                console.log(chalk.green(`✓ Temp folder cleaned.`));
+                console.log(chalk.green(`✓ Cleanup complete.`));
             }
-
-            // 4. Auto-prune old backups
             pruneOldBackups();
         });
     });
@@ -100,7 +96,33 @@ exec(dumpCommand, (error, stdout, stderr) => {
     });
 
     archive.pipe(output);
-    archive.directory(TEMP_BACKUP_DIR, false);
+
+    // --- ADD CONTENT TO ZIP ---
+
+    // A. Add Database Dump
+    archive.directory(TEMP_BACKUP_DIR, 'database_backup');
+    console.log(chalk.cyan(`   + Added Database Dump`));
+
+    // B. Add Key Project Directories
+    const directoriesToInclude = ['src', 'public', 'scripts', 'android', 'docs'];
+    directoriesToInclude.forEach(dir => {
+        const fullPath = path.join(PROJECT_ROOT, dir);
+        if (fs.existsSync(fullPath)) {
+            archive.directory(fullPath, dir);
+            console.log(chalk.cyan(`   + Added Directory: ${dir}`));
+        }
+    });
+
+    // C. Add Root Files (Config, Readmes, Env, Scripts)
+    // We match any file in root, excluding directories and specific ignored files
+    archive.glob('*', {
+        cwd: PROJECT_ROOT,
+        nodir: true,
+        dot: true, // Include .env, .gitignore etc.
+        ignore: ['backup-*.zip', '*.log', '.DS_Store']
+    });
+    console.log(chalk.cyan(`   + Added Root Configuration Files`));
+
     archive.finalize();
 });
 
@@ -136,8 +158,6 @@ function pruneOldBackups() {
 
         if (deletedCount > 0) {
             console.log(chalk.green(`✓ Pruned ${deletedCount} old backup(s).`));
-        } else {
-            console.log(chalk.gray(`No old backups to prune.`));
         }
 
         finish();
@@ -146,6 +166,8 @@ function pruneOldBackups() {
 
 function finish() {
     console.log('\n');
-    console.log(chalk.bgGreen.bold.white(" ✅ BACKUP COMPLETE! "));
-    console.log(chalk.greenBright.bold("IMPORTANT: Right-click the new .zip file in the 'backups' folder and DOWNLOAD it to your computer immediately. This cloud environment is not permanent!"));
+    console.log(chalk.bgGreen.bold.white(" ✅ FULL PROJECT BACKUP COMPLETE! "));
+    console.log(chalk.greenBright.bold(`File: ${zipFileName}`));
+    console.log(chalk.white("This zip contains: Source Code (src), Assets (public/notes), Scripts, Android Project, and MongoDB Dump."));
+    console.log(chalk.yellow("IMPORTANT: Download this file from the 'backups' folder immediately."));
 }

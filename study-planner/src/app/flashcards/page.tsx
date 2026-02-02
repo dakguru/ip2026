@@ -270,35 +270,14 @@ export default function FlashcardsPage() {
     // --- DATA PREPARATION ---
     const getDeckFromId = (id: string): UnifiedFlashcard[] => {
         if (id === 'bookmarks') {
-            // Collect ALL cards from ALL sources and filter by bookmarks
+            // Collect ALL cards from ALL sources using the single source of truth: QUIZ_DATA
+            // This ensures that the IDs generated here match the IDs generated when viewing individual decks
             let allCards: UnifiedFlashcard[] = [];
 
-            // 1. Manual decks
-            allCards = [
-                ...convertToUnified(pmlaFlashcards, "PMLA"),
-                ...convertToUnified(pmla2002, "PMLA 2002"),
-                ...convertToUnified(poGuide1Flashcards, "PO Guide I"),
-                ...convertToUnified(poAct2023, "PO Act 2023"),
-                ...convertToUnified(consumerProtectionAct2019, "CPA 2019"),
-                ...convertToUnified(itAct2000, "IT Act 2000"),
-                ...convertToUnified(gspr2018, "GSPR 2018"),
-                ...convertToUnified(bookOfBORules, "BO Rules"),
-                ...convertToUnified(postalManualVolII, "Vol II"),
-                ...convertToUnified(postalManualVolIV, "Vol IV"),
-                ...convertToUnified(postalManualVolVIII, "Vol VIII"),
-                ...convertToUnified(postalManualVolV, "Vol V"),
-                ...convertToUnified(postalManualVolVII, "Vol VII"),
-                ...convertToUnified(poGuidePartII, "PO Guide II"),
-                ...convertToUnified(postalManualVolIII, "Vol III"),
-                ...convertToUnified(postalManualVolVIPartI, "Vol VI I"),
-                ...convertToUnified(postalManualVolVIPartII, "Vol VI II"),
-                ...convertToUnified(postalManualVolVIPartIII, "Vol VI III"),
-                ...convertToUnified(poGuidePartI, "PO Guide I (Old)")
-            ];
-
-            // 2. Generated cards
-            Object.values(generatedDecksMapping).forEach(deck => {
-                allCards = [...allCards, ...deck];
+            QUIZ_DATA.forEach(topic => {
+                if (topic.id !== 'bookmarks') {
+                    allCards.push(...getDeckFromId(topic.id));
+                }
             });
 
             // Filter for unique IDs that are bookmarked
@@ -307,7 +286,7 @@ export default function FlashcardsPage() {
             // Deduplicate by ID just in case
             const uniqueBookmarked = Array.from(new Map(bookmarkedCards.map(item => [item.id, item])).values());
 
-            return uniqueBookmarked.map(c => ({ ...c, tag: c.tag || "Bookmarked" }));
+            return uniqueBookmarked;
         }
 
         // Manual Mappings
@@ -365,7 +344,8 @@ export default function FlashcardsPage() {
                     (activeFilter === "Paper - I" && category === "Paper I") ||
                     (activeFilter === "Paper - III" && category === "Paper III") ||
                     (activeFilter === "PYQs" && (category.includes("PYQ") || title.includes("PYQ"))) ||
-                    (activeFilter === "Bookmarked FCs" && fullDeck.some(c => bookmarks.has(c.id)));
+                    (activeFilter === "Bookmarked FCs" && fullDeck.some(c => bookmarks.has(c.id))) ||
+                    (activeFilter === "Recently Studied" && deckProgress.hasOwnProperty(topic.id));
 
                 if (matchesSearch && matchesFilter) {
                     organized.push({
