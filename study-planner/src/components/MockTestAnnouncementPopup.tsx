@@ -5,11 +5,12 @@ import { X, Calendar, Clock, FileText, CheckCircle2, AlertCircle, ArrowRight } f
 import { motion, AnimatePresence } from "framer-motion";
 
 const TOPICS = [
-    "Government Savings Promotion Rules, 2018",
-    "PO Savings Account Scheme, 2019",
-    "National Savings Recurring Deposit Scheme",
-    "National Savings Time Deposit Scheme",
-    "MIS Scheme, 2019"
+    "NSC (VIII Issue) Scheme & KVP Scheme, 2019",
+    "PPF Scheme, 2019 & SSA Scheme, 2019",
+    "PM Cares & MSSC",
+    "SB Orders 2023",
+    "SB Orders 2024",
+    "SB Orders 2025"
 ];
 
 export default function MockTestAnnouncementPopup() {
@@ -17,8 +18,8 @@ export default function MockTestAnnouncementPopup() {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
-        // storage key updated to test 03
-        const hasSeen = sessionStorage.getItem("seen_mock_announcement_test_03");
+        // storage key updated to test 04
+        const hasSeen = sessionStorage.getItem("seen_mock_announcement_test_04");
         if (!hasSeen) {
             // Small delay to ensure animations play nicely after load
             const timer = setTimeout(() => setIsOpen(true), 1500);
@@ -27,8 +28,8 @@ export default function MockTestAnnouncementPopup() {
     }, []);
 
     useEffect(() => {
-        // Target Date: Jan 31, 2026 00:00:00 AM IST
-        const targetDate = new Date("2026-01-31T00:00:00+05:30").getTime();
+        // Target Date: Feb 07, 2026 00:00:00 AM IST
+        const targetDate = new Date("2026-02-07T00:00:00+05:30").getTime();
 
         const interval = setInterval(() => {
             const now = new Date().getTime();
@@ -52,7 +53,7 @@ export default function MockTestAnnouncementPopup() {
 
     const handleClose = () => {
         setIsOpen(false);
-        sessionStorage.setItem("seen_mock_announcement_test_03", "true");
+        sessionStorage.setItem("seen_mock_announcement_test_04", "true");
     };
 
     return (
@@ -98,11 +99,11 @@ export default function MockTestAnnouncementPopup() {
                             {/* Title & Date */}
                             <div className="text-center mb-8">
                                 <h2 className="text-3xl font-black text-zinc-900 dark:text-white mb-3 tracking-tight">
-                                    Weekly Mock Test - 03
+                                    Weekly Mock Test - 04
                                 </h2>
                                 <div className="inline-flex items-center justify-center gap-2 text-zinc-500 dark:text-zinc-400 font-medium text-sm">
                                     <Calendar className="w-4 h-4" />
-                                    <span>Jan 31, 2026 - Feb 01, 2026</span>
+                                    <span>Feb 07, 2026 - Feb 08, 2026</span>
                                 </div>
                             </div>
 

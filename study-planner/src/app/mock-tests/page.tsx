@@ -147,7 +147,7 @@ export default function MockTestsPage() {
             const weekTopics: string[] = [];
 
             // Iterate through each day of the study week
-            const interval = eachDayOfInterval({ start: mondayDate, end: fridayDate });
+            const interval = eachDayOfInterval({ start: mondayDate, end: saturdayDate });
 
             interval.forEach(d => {
                 const dateStr = format(d, 'dd-MM-yyyy');

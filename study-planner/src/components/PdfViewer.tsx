@@ -28,6 +28,23 @@ interface PdfViewerProps {
 
 export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     const [numPages, setNumPages] = useState<number | null>(null);
+
+    // Google Drive Embed Support
+    if (url.includes('drive.google.com')) {
+        // Ensure it's in preview mode for embedding
+        const embedUrl = url.includes('/preview') ? url : url.replace(/\/view.*/, '/preview');
+        return (
+            <div className="w-full h-full bg-zinc-900 flex flex-col">
+                <iframe
+                    src={embedUrl}
+                    className="flex-1 w-full h-full border-0"
+                    title="Document Viewer"
+                    allow="autoplay"
+                />
+            </div>
+        );
+    }
+
     const [pageNumber, setPageNumber] = useState(1);
     const [scale, setScale] = useState(1.0);
     const [loading, setLoading] = useState(true);

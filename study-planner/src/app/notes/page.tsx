@@ -314,11 +314,7 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Centralized Delivery Policy", description: "Guidelines for delivery staff.", color: "fuchsia", comingSoon: true },
         { title: "Dak Ghar Niryat Kendra (DNKs)", description: "Guidelines for export centers.", color: "fuchsia", comingSoon: true },
 
-        // 37. Product Consolidation
-        { title: "Product Consolidation Guidelines", description: "Directorate instructions on consolidation.", color: "blue", comingSoon: true },
 
-        // 38. Savings Bank
-        { title: "SB Manual Vol I, II & III", description: "Read with SB orders issued by Directorate.", color: "teal", comingSoon: true },
         {
             title: "POSB (CBS) Manual",
             description: "Corrected up to 31.12.2021 and subsequent orders.",
@@ -464,6 +460,143 @@ const PDF_DATA: Record<string, Note[]> = {
         // 32. FHB
         { title: "P&T FHB Vol I", description: "P&T Financial Hand Book Volume I.", color: "violet", comingSoon: true },
         { title: "Postal FHB Vol II", description: "Postal Financial Hand Book Volume II.", color: "violet", comingSoon: true },
+    ],
+    "SB Orders": [
+        {
+            title: "SB Orders 2025",
+            description: "Compendium of SB Orders issued in 2025.",
+            filename: "SB_Orders_2025.pdf",
+            path: "https://drive.google.com/file/d/1No5fp0eZ5qQvk0bxmQhBIMCnxJ245l7K/preview",
+            size: "PDF",
+            color: "violet",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2024",
+            description: "Compendium of SB Orders issued in 2024.",
+            filename: "SB_Orders_2024.pdf",
+            path: "https://drive.google.com/file/d/1iGLeBO--IOUncz7ZLSxEbeUHmYy25wxn/preview",
+            size: "PDF",
+            color: "indigo",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2023",
+            description: "Compendium of SB Orders issued in 2023.",
+            filename: "SB_Orders_2023.pdf",
+            path: "https://drive.google.com/file/d/1ckB55EjsE3dvDikd49USwzeTZ8slUrLH/preview",
+            size: "PDF",
+            color: "blue",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2022",
+            description: "Compendium of SB Orders issued in 2022.",
+            filename: "SB_Orders_2022.pdf",
+            path: "https://drive.google.com/file/d/1-TelumAU96DmQLFw18BSbwjuOsrPljON/preview",
+            size: "PDF",
+            color: "cyan",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2021",
+            description: "Compendium of SB Orders issued in 2021.",
+            filename: "SB_Orders_2021.pdf",
+            path: "https://drive.google.com/file/d/1JIKGCFvwr6Usf_lvtIlfTvwPQFTJk13d/preview",
+            size: "PDF",
+            color: "teal",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2020",
+            description: "Compendium of SB Orders issued in 2020.",
+            filename: "SB_Orders_2020.pdf",
+            path: "https://drive.google.com/file/d/1uUWA8dIhcwBok5ElsKj7TlOtKrjBekFO/preview",
+            size: "PDF",
+            color: "emerald",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2019",
+            description: "Compendium of SB Orders issued in 2019.",
+            filename: "SB_Orders_2019.pdf",
+            path: "https://drive.google.com/file/d/1lQgAaFvDV4Rm1SW8NsNHx9zPAHyyaZU8/preview",
+            size: "PDF",
+            color: "green",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2018",
+            description: "Compendium of SB Orders issued in 2018.",
+            filename: "SB_Orders_2018.pdf",
+            path: "https://drive.google.com/file/d/1Cs8wlEp-HKVA4MvNv95EmsDkCN3A6r8B/preview",
+            size: "PDF",
+            color: "lime",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2017",
+            description: "Compendium of SB Orders issued in 2017.",
+            filename: "SB_Orders_2017.pdf",
+            path: "https://drive.google.com/file/d/1drQqjgLOre3N3IwPJZgLhYWJhRu0kImj/preview",
+            size: "PDF",
+            color: "yellow",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2016",
+            description: "Compendium of SB Orders issued in 2016.",
+            filename: "SB_Orders_2016.pdf",
+            path: "https://drive.google.com/file/d/14vQfA5J6CKt6cBc0ld2rgDNjoKIRylnA/preview",
+            size: "PDF",
+            color: "amber",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2015",
+            description: "Compendium of SB Orders issued in 2015.",
+            filename: "SB_Orders_2015.pdf",
+            path: "https://drive.google.com/file/d/1O-kdD32Ubw2UvpFmqUVJ0wI5VtD2oU_u/preview",
+            size: "PDF",
+            color: "orange",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2014",
+            description: "Compendium of SB Orders issued in 2014.",
+            filename: "SB_Orders_2014.pdf",
+            path: "https://drive.google.com/file/d/1w6f0OKLeBSEAKXm142IQwtKNLcde0zJs/preview",
+            size: "PDF",
+            color: "red",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2013",
+            description: "Compendium of SB Orders issued in 2013.",
+            filename: "SB_Orders_2013.pdf",
+            path: "https://drive.google.com/file/d/1NPXrk9FcEXwbcqhIk_jmxIOZqDaDvayF/preview",
+            size: "PDF",
+            color: "rose",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2012",
+            description: "Compendium of SB Orders issued in 2012.",
+            filename: "SB_Orders_2012.pdf",
+            path: "https://drive.google.com/file/d/1lf7gD-g1GU2K9APiNHkeLWKKdB8JjWI2/preview",
+            size: "PDF",
+            color: "pink",
+            isFree: true
+        },
+        {
+            title: "SB Orders 2011",
+            description: "Compendium of SB Orders issued in 2011.",
+            filename: "SB_Orders_2011.pdf",
+            path: "https://drive.google.com/file/d/1CqyTfKpDurFWwfOJQxLgd00a7IFYEOHJ/preview",
+            size: "PDF",
+            color: "fuchsia",
+            isFree: true
+        }
     ]
 };
 
@@ -479,6 +612,16 @@ export default function NotesPage() {
     const [pendingAction, setPendingAction] = useState<{ type: 'view' | 'download', url: string, filename?: string } | null>(null);
 
     const handleActionRequest = (type: 'view' | 'download', url: string, filename?: string) => {
+        // Skip advisory for SB Orders
+        if (activeTab === "SB Orders") {
+            if (type === 'view') {
+                setSelectedPdf(url);
+            } else if (type === 'download' && filename) {
+                performDownload(url, filename);
+            }
+            return;
+        }
+
         setPendingAction({ type, url, filename });
         setAdvisoryAgreed(false); // Reset agreement
         setShowAdvisory(true);
@@ -653,7 +796,7 @@ export default function NotesPage() {
                 {/* Tabs */}
                 <div className="flex justify-center mb-8">
                     <div className="bg-white dark:bg-zinc-900 p-1.5 rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 inline-flex gap-2">
-                        {["Paper I", "Paper III"].map((tab) => (
+                        {["Paper I", "Paper III", "SB Orders"].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}

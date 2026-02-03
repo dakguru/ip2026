@@ -48,6 +48,7 @@ export default function FlexibleStudyPlanner({
 
     // Filter Logic
     const filteredItems = useMemo(() => {
+        const seenSubTopics = new Set<string>();
         return schedule.filter(item => {
             if (item.paper === 'Revision' || item.paper === 'End') return false;
 
@@ -74,7 +75,15 @@ export default function FlexibleStudyPlanner({
                 item.topic.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 item.subTopic.toLowerCase().includes(searchQuery.toLowerCase());
 
-            return matchesSearch;
+            if (!matchesSearch) return false;
+
+            // Deduplication
+            if (seenSubTopics.has(item.subTopic)) {
+                return false;
+            }
+            seenSubTopics.add(item.subTopic);
+
+            return true;
         });
     }, [schedule, completedDays, topicMetadata, filterPaper, filterStatus, filterMastery, searchQuery]);
 
@@ -213,7 +222,15 @@ export default function FlexibleStudyPlanner({
                                         {item.paper}
                                     </span>
                                     <div className={`flex items-center gap-1 text-[10px] px-2 py-0.5 rounded-full ${darkMode ? 'bg-white/5 text-slate-400' : 'bg-slate-50 text-slate-400'}`}>
-                                        <Clock className="w-3 h-3" /> {item.duration}
+                                        <Clock className="w-3 h-3" />
+                                        {(() => {
+                                            if (item.duration.toLowerCase().includes('of')) {
+                                                const parts = item.duration.split(' ');
+                                                const total = parts[parts.length - 1];
+                                                return `${total} Days`;
+                                            }
+                                            return item.duration;
+                                        })()}
                                     </div>
                                 </div>
 
