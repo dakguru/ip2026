@@ -2,18 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Search, ChevronDown, MessageCircle, Menu, X, LogOut, User } from "lucide-react";
+import { Search, ChevronDown, MessageCircle, Menu, X, LogOut, User, Bell } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
 import { useEffect, useState } from "react";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import UpdatesDrawer from "./UpdatesDrawer";
 
 export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn: boolean, membershipLevel?: 'free' | 'silver' | 'gold' }) {
     const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>(membershipLevel || 'free');
+    const [showUpdates, setShowUpdates] = useState(false);
 
     useEffect(() => {
         // Sync membership from cookie to ensure immediate update after payment
@@ -168,6 +170,16 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                         {/* 3. Right: Actions */}
                         <div className="flex items-center gap-2 sm:gap-2 shrink-0 md:ml-8 lg:ml-12">
+                            {/* Updates Bell - Visible on ALL screens */}
+                            <button
+                                onClick={() => setShowUpdates(true)}
+                                className="relative p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors mr-1 sm:mr-2"
+                                aria-label="Updates"
+                            >
+                                <Bell className="w-5 h-5 sm:w-5 sm:h-5" />
+                                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full ring-2 ring-white dark:ring-zinc-950 animate-pulse"></span>
+                            </button>
+
                             {/* WhatsApp Group - Desktop */}
                             <a
                                 href="https://chat.whatsapp.com/DnXoTNtRie2Hji6Be1lx50"
@@ -381,6 +393,8 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                     </div>
                 )}
             </header>
+
+            <UpdatesDrawer isOpen={showUpdates} onClose={() => setShowUpdates(false)} />
         </>
     );
 }
