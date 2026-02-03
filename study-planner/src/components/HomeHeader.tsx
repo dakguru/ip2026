@@ -170,10 +170,10 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                         {/* 3. Right: Actions */}
                         <div className="flex items-center gap-2 sm:gap-2 shrink-0 md:ml-8 lg:ml-12">
-                            {/* Updates Bell - Visible on ALL screens */}
+                            {/* Updates Bell - Visible on Desktop only */}
                             <button
                                 onClick={() => setShowUpdates(true)}
-                                className="relative p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors mr-1 sm:mr-2"
+                                className="hidden lg:block relative p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors mr-1 sm:mr-2"
                                 aria-label="Updates"
                             >
                                 <Bell className="w-5 h-5 sm:w-5 sm:h-5" />
@@ -331,6 +331,22 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 >
                                     Syllabus
                                 </Link>
+
+                                <button
+                                    onClick={() => {
+                                        setShowUpdates(true);
+                                        setMobileMenuOpen(false);
+                                    }}
+                                    className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium flex items-center gap-3 w-full text-left"
+                                >
+                                    <div className="relative">
+                                        <span>What&apos;s New</span>
+                                        <span className="absolute -top-1 -right-2 flex h-2 w-2">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                        </span>
+                                    </div>
+                                </button>
 
                                 {isPremium ? (
                                     <div className={`p-3 rounded-lg font-bold text-center ${currentMembership === 'gold'

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import HomeHeader from '@/components/HomeHeader';
 import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 
 const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
@@ -794,19 +795,32 @@ export default function NotesPage() {
                 </div>
 
                 {/* Tabs */}
-                <div className="flex justify-center mb-8">
-                    <div className="bg-white dark:bg-zinc-900 p-1.5 rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 inline-flex gap-2">
+                <div className="flex justify-center mb-6 md:mb-8 sticky top-[64px] z-30 px-4 md:px-0">
+                    <div className="w-full md:w-auto bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md p-1.5 md:p-2 rounded-xl md:rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 grid grid-cols-3 md:inline-flex md:grid-cols-none gap-2">
                         {["Paper I", "Paper III", "SB Orders"].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
-                                className={`px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2 ${activeTab === tab
-                                    ? 'bg-purple-600 text-white shadow-md'
-                                    : 'text-slate-500 dark:text-zinc-400 hover:bg-slate-50 dark:hover:bg-zinc-800 hover:text-slate-700 dark:hover:text-zinc-200'
-                                    } `}
+                                className={`
+                                    relative p-2 md:px-6 md:py-2.5 rounded-lg md:rounded-xl font-bold text-[11px] xs:text-xs md:text-sm transition-colors duration-200 flex items-center justify-center gap-1.5 md:gap-2 whitespace-nowrap outline-none
+                                    ${activeTab === tab
+                                        ? 'text-white'
+                                        : 'text-slate-500 dark:text-zinc-400 hover:text-slate-700 dark:hover:text-zinc-200'
+                                    } 
+                                `}
                             >
-                                <Layers className="w-4 h-4" />
-                                {tab}
+                                {activeTab === tab && (
+                                    <motion.div
+                                        layoutId="activeTab"
+                                        className="absolute inset-0 bg-purple-600 rounded-lg md:rounded-xl shadow-md"
+                                        initial={false}
+                                        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                                    />
+                                )}
+                                <span className="relative z-10 flex items-center gap-1.5 md:gap-2">
+                                    <Layers className="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
+                                    <span>{tab}</span>
+                                </span>
                             </button>
                         ))}
                     </div>
