@@ -371,14 +371,13 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
         return (
             <span>
                 {parts.map((part, i) => {
-                    // Regulation / Numbering -> Indigo
+                    // Regulation / Numbering
                     if (/^(\(?[0-9]+[A-Za-z]?\)|Section\s+\d+|Rule\s+\d+|Regulation\s+\d+)$/.test(part)) {
-                        return <span key={i} className="font-bold text-indigo-700 dark:text-indigo-400">{part}</span>;
+                        const colorClass = theme === 'dark' ? 'text-indigo-400' : theme === 'sepia' ? 'text-[#7c2d12]' : 'text-indigo-700';
+                        return <span key={i} className={`font-bold ${colorClass}`}>{part}</span>;
                     }
 
-                    // Specific Keywords -> Green (Dark Green)
-                    // We split inside the plain part to find keywords
-                    // Heuristic: only color FULL words
+                    // Specific Keywords
                     const lower = part.toLowerCase();
                     const keywords = ["prohibited", "penalty", "mandatory", "authorized", "illegal", "offence", "punishable", "contravention"];
 
@@ -389,7 +388,8 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                             <span key={i}>
                                 {part.split(/\b/).map((word, j) => {
                                     if (keywords.includes(word.toLowerCase())) {
-                                        return <span key={j} className="text-emerald-700 dark:text-emerald-400 font-semibold">{word}</span>;
+                                        const kwColor = theme === 'dark' ? 'text-emerald-400' : theme === 'sepia' ? 'text-[#134e4a]' : 'text-emerald-700';
+                                        return <span key={j} className={`${kwColor} font-semibold`}>{word}</span>;
                                     }
                                     return word;
                                 })}
@@ -408,27 +408,36 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
         // Base readability styles
         const baseStyle = { fontSize: `${fontSize}px`, lineHeight: '1.6' };
 
+        // Dynamic Colors based on internal theme (ignoring system/app dark mode for content)
+        const colors = {
+            title: theme === 'dark' ? 'text-blue-300' : theme === 'sepia' ? 'text-[#3e2723]' : 'text-blue-900',
+            chapter: theme === 'dark' ? 'text-slate-100' : theme === 'sepia' ? 'text-[#5b4636]' : 'text-slate-900',
+            section: theme === 'dark' ? 'text-blue-300' : theme === 'sepia' ? 'text-[#4e342e]' : 'text-blue-800',
+            body: theme === 'dark' ? 'text-slate-300' : theme === 'sepia' ? 'text-[#5b4636]' : 'text-slate-800',
+            border: theme === 'dark' ? 'border-slate-700' : theme === 'sepia' ? 'border-[#d7ccc8]' : 'border-slate-200'
+        };
+
         switch (node.type) {
             case 'TITLE':
                 return (
                     <div key={key} className="mb-10 text-center px-4 pt-8">
-                        <h1 className="text-2xl md:text-3xl font-bold text-blue-900 dark:text-blue-300 uppercase tracking-wider mb-4 font-serif leading-tight">
+                        <h1 className={`text-2xl md:text-3xl font-bold ${colors.title} uppercase tracking-wider mb-4 font-serif leading-tight`}>
                             {node.content}
                         </h1>
-                        <div className="h-1 w-24 bg-blue-900/20 mx-auto rounded-full" />
+                        <div className={`h-1 w-24 mx-auto rounded-full ${theme === 'dark' ? 'bg-blue-300/20' : 'bg-blue-900/20'}`} />
                     </div>
                 );
             case 'CHAPTER':
                 return (
                     <div key={key} className="mt-14 mb-8">
-                        <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 uppercase tracking-widest border-b-2 border-slate-200 dark:border-slate-700 pb-2 font-serif">
+                        <h2 className={`text-xl font-bold ${colors.chapter} uppercase tracking-widest border-b-2 ${colors.border} pb-2 font-serif`}>
                             {node.content}
                         </h2>
                     </div>
                 );
             case 'SECTION':
                 return (
-                    <h3 key={key} className="mt-8 mb-4 text-lg font-bold text-blue-800 dark:text-blue-300 leading-snug font-serif">
+                    <h3 key={key} className={`mt-8 mb-4 text-lg font-bold ${colors.section} leading-snug font-serif`}>
                         <SemanticText text={node.content} />
                     </h3>
                 );
@@ -436,7 +445,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
             case 'SUBSECTION':
                 return (
                     <div key={key} className="mt-3 mb-2 pl-4 md:pl-6 flex items-start gap-3">
-                        <div className="flex-1 text-slate-800 dark:text-slate-300 text-left font-serif" style={baseStyle}>
+                        <div className={`flex-1 ${colors.body} text-left font-serif`} style={baseStyle}>
                             <SemanticText text={node.content} />
                         </div>
                     </div>
@@ -444,16 +453,16 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
             case 'LIST_ITEM':
                 return (
                     <div key={key} className="mt-2 mb-2 pl-8 relative">
-                        {/* Teal bullet for sub-clauses/lists */}
-                        <div className="absolute left-3 top-[0.6em] w-1.5 h-1.5 bg-teal-600 rounded-full opacity-80" />
-                        <div className="text-slate-800 dark:text-slate-300 text-left font-serif" style={baseStyle}>
+                        {/* Bullet color */}
+                        <div className={`absolute left-3 top-[0.6em] w-1.5 h-1.5 rounded-full opacity-80 ${theme === 'sepia' ? 'bg-[#7c2d12]' : 'bg-teal-600'}`} />
+                        <div className={`text-left font-serif ${colors.body}`} style={baseStyle}>
                             {node.content}
                         </div>
                     </div>
                 );
             default: // PARAGRAPH
                 return (
-                    <p key={key} className="mb-6 text-slate-800 dark:text-slate-300 text-left font-serif" style={baseStyle}>
+                    <p key={key} className={`mb-6 text-left font-serif ${colors.body}`} style={baseStyle}>
                         <SemanticText text={node.content} />
                     </p>
                 );
