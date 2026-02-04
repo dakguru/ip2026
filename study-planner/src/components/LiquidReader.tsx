@@ -454,7 +454,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
     };
 
     return (
-        <div className={`relative h-full flex flex-col ${themeClasses[theme]}`}>
+        <div className={`relative h-full w-full ${themeClasses[theme]}`}>
 
             {/* Controls Bar */}
             <AnimatePresence>
@@ -463,7 +463,10 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                         initial={{ opacity: 0, y: 50, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 50, scale: 0.9 }}
-                        className="fixed bottom-24 right-6 z-50 flex flex-col items-end gap-2"
+                        className="fixed bottom-[140px] right-6 z-50 flex flex-col items-end gap-2"
+                        style={{
+                            paddingBottom: 'env(safe-area-inset-bottom)',
+                        }}
                     >
                         <div className="bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md border border-slate-200 dark:border-zinc-700 shadow-2xl rounded-2xl p-5 w-72 space-y-5">
 
@@ -532,38 +535,49 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
             {/* Floating Settings Button */}
             <button
                 onClick={() => setShowControls(!showControls)}
-                className={`fixed bottom-6 right-6 z-[60] p-4 rounded-full shadow-xl shadow-blue-900/20 transition-all active:scale-95 duration-200 ${showControls ? 'bg-slate-800 text-white rotate-0' : 'bg-blue-600 text-white hover:bg-blue-700 hover:scale-105'}`}
+                className={`fixed bottom-[80px] right-6 z-[60] p-4 rounded-full shadow-xl shadow-blue-900/20 transition-all active:scale-95 duration-200 ${showControls ? 'bg-slate-800 text-white rotate-0' : 'bg-blue-600 text-white hover:bg-blue-700 hover:scale-105'}`}
+                style={{
+                    marginBottom: 'env(safe-area-inset-bottom)',
+                }}
             >
                 {showControls ? <X className="w-6 h-6" /> : <Settings className="w-6 h-6" />}
             </button>
 
-            <div className="max-w-3xl mx-auto w-full min-h-screen relative overflow-hidden transition-colors duration-300">
+            {/* Scrollable Content Container */}
+            <div className="h-full w-full overflow-y-auto overflow-x-hidden overscroll-contain"
+                style={{
+                    WebkitOverflowScrolling: 'touch',
+                    paddingBottom: 'calc(80px + env(safe-area-inset-bottom))',
+                }}
+            >
+                <div className="max-w-3xl mx-auto w-full min-h-screen relative transition-colors duration-300">
 
-                {/* --- Watermark Layer --- */}
-                {watermarkEnabled && (
-                    <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-[0.06] select-none" style={{
-                        backgroundImage: `url('/dak-guru-round.png')`,
-                        backgroundRepeat: 'repeat',
-                        backgroundSize: '180px', // Larger pattern
-                        backgroundPosition: '0 0',
-                        filter: theme === 'dark' ? 'invert(1) opacity(0.5)' : 'grayscale(1)',
-                        transform: 'rotate(-10deg) scale(1.2)'
-                    }} />
-                )}
+                    {/* --- Watermark Layer --- */}
+                    {watermarkEnabled && (
+                        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-[0.06] select-none" style={{
+                            backgroundImage: `url('/dak-guru-round.png')`,
+                            backgroundRepeat: 'repeat',
+                            backgroundSize: '180px', // Larger pattern
+                            backgroundPosition: '0 0',
+                            filter: theme === 'dark' ? 'invert(1) opacity(0.5)' : 'grayscale(1)',
+                            transform: 'rotate(-10deg) scale(1.2)'
+                        }} />
+                    )}
 
-                {/* Content Layer */}
-                <div className="relative z-10 px-6 sm:px-8 py-8 md:py-12">
-                    {/* Header Branding */}
-                    <div className="flex items-center justify-center gap-2 mb-12 opacity-30 select-none">
-                        <BookOpen className="w-4 h-4" />
-                        <span className="text-[10px] font-bold uppercase tracking-[0.25em]">Dak Guru Smart Reader</span>
-                    </div>
+                    {/* Content Layer */}
+                    <div className="relative z-10 px-6 sm:px-8 py-8 md:py-12">
+                        {/* Header Branding */}
+                        <div className="flex items-center justify-center gap-2 mb-12 opacity-30 select-none">
+                            <BookOpen className="w-4 h-4" />
+                            <span className="text-[10px] font-bold uppercase tracking-[0.25em]">Dak Guru Smart Reader</span>
+                        </div>
 
-                    {nodes.map(renderNode)}
+                        {nodes.map(renderNode)}
 
-                    <div className="mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 text-center opacity-40 select-none">
-                        <BookOpen className="w-6 h-6 mx-auto mb-3" />
-                        <p className="text-[10px] uppercase tracking-widest">End of Document</p>
+                        <div className="mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 text-center opacity-40 select-none">
+                            <BookOpen className="w-6 h-6 mx-auto mb-3" />
+                            <p className="text-[10px] uppercase tracking-widest">End of Document</p>
+                        </div>
                     </div>
                 </div>
             </div>
