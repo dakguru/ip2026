@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from 'react';
-import { AlertCircle, ChevronRight, MessageCircle, Globe } from 'lucide-react';
+import { Info, ChevronRight, MessageCircle, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 import { Capacitor } from '@capacitor/core';
@@ -16,18 +16,25 @@ export default function InfoMarqueeView() {
         setIsNative(Capacitor.isNativePlatform());
     }, []);
 
-    const messages = [
+    interface LinkAction {
+        type: string;
+        url: string;
+        label: string;
+    }
+
+    interface MessageItem {
+        text: string;
+        action: LinkAction | null;
+    }
+
+    const messages: MessageItem[] = [
         {
-            text: "⚠️ PDF download is temporarily unavailable due to storage permission issue.",
+            text: "Visit PDF Notes page for Smart Reading Experience.",
             action: null
         },
         {
-            text: "Please access PDF Notes via Mobile/Desktop Browser www.dakguru.com",
-            action: { type: 'link', url: 'https://www.dakguru.com', label: 'www.dakguru.com' }
-        },
-        {
-            text: "For assistance, WhatsApp us directly: +919363030396",
-            action: { type: 'whatsapp', url: 'https://wa.me/919363030396', label: '+919363030396' }
+            text: "Contents are being updated. Thanks for your patience and support.",
+            action: null
         }
     ];
 
@@ -45,7 +52,7 @@ export default function InfoMarqueeView() {
 
     const currentMessage = messages[currentIndex];
 
-    const renderMessageContent = (msg: typeof messages[0]) => {
+    const renderMessageContent = (msg: MessageItem) => {
         if (!msg.action) {
             return <span className="text-slate-700 dark:text-slate-200">{msg.text}</span>;
         }
@@ -80,7 +87,7 @@ export default function InfoMarqueeView() {
                 {/* Left Icon Panel */}
                 <div className="h-full w-12 flex items-center justify-center shrink-0 bg-amber-100/50 dark:bg-amber-900/20 border-r border-amber-100 dark:border-amber-900/20">
                     <div className="relative">
-                        <AlertCircle className="w-5 h-5 text-amber-600 dark:text-amber-500" />
+                        <Info className="w-5 h-5 text-amber-600 dark:text-amber-500" />
                         <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                     </div>
                 </div>

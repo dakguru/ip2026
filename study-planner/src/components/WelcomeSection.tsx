@@ -78,8 +78,8 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
             </p>
 
             <div className="mt-6 flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-500 delay-75 fill-mode-both">
-                <Link href="/flashcards" className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-indigo-300 dark:border-indigo-600 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-200 text-xs sm:text-sm font-black tracking-wide shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_25px_rgba(99,102,241,0.7)] uppercase hover:bg-indigo-200 dark:hover:bg-indigo-800 transition-all duration-300 animate-pulse">
-                    ✨ Unique Revision Tool : Flashcards - Free Access to everyone till Feb-03 🚀
+                <Link href="https://play.google.com/store/apps/details?id=com.studyplanner.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-indigo-300 dark:border-indigo-600 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-200 text-xs sm:text-sm font-black tracking-wide shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_25px_rgba(99,102,241,0.7)] uppercase hover:bg-indigo-200 dark:hover:bg-indigo-800 transition-all duration-300 animate-pulse">
+                    Download our Android App
                 </Link>
             </div>
 

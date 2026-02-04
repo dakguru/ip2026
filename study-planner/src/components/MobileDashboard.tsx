@@ -5,7 +5,7 @@ import Link from "next/link";
 import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy, Newspaper, AlertCircle } from "lucide-react";
 import { Capacitor } from "@capacitor/core";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetHeader } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
 import { useRouter } from "next/navigation";
@@ -26,6 +26,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     const [searchQuery, setSearchQuery] = useState("");
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const popupTriggerRef = useRef<(() => void) | null>(null);
 
     // Sync membership for accurate display
     useEffect(() => {
@@ -175,6 +176,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         >
 
             {/* --- ROYAL HEADER --- */}
+            <MockTestAnnouncementPopup triggerRef={popupTriggerRef} />
             <header className="sticky top-0 z-40 bg-slate-900 dark:bg-black px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] border-b border-slate-800 shadow-xl shadow-slate-900/20">
                 <div className="flex items-center justify-between">
                     {/* Left: Hamburger + Brand */}
@@ -405,6 +407,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
                 <InfoMarqueeView />
 
+                {/* --- MOCK TEST 04 SCHEDULE TIMER --- */}
+                <MockTest04CompactTimer onOpen={() => popupTriggerRef.current?.()} />
+
                 {/* --- QUICK ACTIONS (NOW SECOND) --- */}
                 <div className="px-5">
                     <div className="flex items-center gap-2 mb-4">
@@ -494,5 +499,92 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 </div>
             </div>
         </div >
+    );
+}
+
+function MockTest04CompactTimer({ onOpen }: { onOpen: () => void }) {
+    const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
+
+    useEffect(() => {
+        const targetDate = new Date('2026-02-07T00:00:00+05:30');
+
+        const calculateTimeLeft = () => {
+            const difference = +targetDate - +new Date();
+            if (difference > 0) {
+                return {
+                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                    minutes: Math.floor((difference / 1000 / 60) % 60),
+                    seconds: Math.floor((difference / 1000) % 60),
+                };
+            }
+            return null;
+        };
+
+        setTimeLeft(calculateTimeLeft());
+
+        const timer = setInterval(() => {
+            // Recalculate time left
+            const difference = +targetDate - +new Date();
+            if (difference > 0) {
+                setTimeLeft({
+                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                    minutes: Math.floor((difference / 1000 / 60) % 60),
+                    seconds: Math.floor((difference / 1000) % 60),
+                });
+            } else {
+                setTimeLeft(null); // Or handle expire
+            }
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    if (!timeLeft) return null;
+
+    return (
+        <div className="px-5 mb-4 animate-in fade-in slide-in-from-bottom-2 duration-700">
+            <button
+                onClick={onOpen}
+                className="w-full relative overflow-hidden bg-gradient-to-r from-indigo-600 via-indigo-600 to-violet-600 rounded-xl p-3 shadow-lg shadow-indigo-500/20 active:scale-[0.98] transition-all group"
+            >
+                {/* Visual effects */}
+                <div className="absolute inset-0 bg-white/5 opacity-20 mix-blend-overlay"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-16 -mt-16"></div>
+
+                <div className="relative flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                        <div className="bg-white/20 backdrop-blur-md p-2 rounded-lg border border-white/20">
+                            {/* Calendar Icon SVG */}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-calendar w-5 h-5 text-white"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></svg>
+                        </div>
+                        <div className="text-left">
+                            <h4 className="text-xs font-bold text-indigo-100 uppercase tracking-wider mb-0.5">Upcoming Test</h4>
+                            <p className="text-sm font-black text-white leading-none">Mock Test - 04</p>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/10">
+                        <div className="text-center">
+                            <span className="block text-xs font-black text-white leading-none">{timeLeft.days}</span>
+                            <span className="block text-[8px] font-bold text-indigo-200">DAYS</span>
+                        </div>
+                        <span className="text-white/40 font-light">:</span>
+                        <div className="text-center">
+                            <span className="block text-xs font-black text-white leading-none">{String(timeLeft.hours).padStart(2, '0')}</span>
+                            <span className="block text-[8px] font-bold text-indigo-200">HRS</span>
+                        </div>
+                        <span className="text-white/40 font-light">:</span>
+                        <div className="text-center">
+                            <span className="block text-xs font-black text-white leading-none">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                            <span className="block text-[8px] font-bold text-indigo-200">MIN</span>
+                        </div>
+                        {/* Chevron Right SVG */}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right w-4 h-4 text-white ml-1 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6" /></svg>
+                    </div>
+                </div>
+            </button>
+        </div>
     );
 }

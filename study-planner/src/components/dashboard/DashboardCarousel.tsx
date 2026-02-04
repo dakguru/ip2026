@@ -9,25 +9,25 @@ import { ChevronRight } from "lucide-react";
 const bannerData = [
     {
         id: 1,
-        tag: "App Launch",
-        title: "Dak Guru Official App has been launched",
-        sub: "Experience learning on your Android device",
+        tag: "Study Planner",
+        title: "Create Impact",
+        sub: "Start your preparation now using our Smart Study Planner",
         color: "from-blue-600 via-indigo-600 to-violet-700",
-        link: "/"
+        link: "/planner"
     },
     {
         id: 2,
-        tag: "Special Offer",
-        title: "Flash Cards: Free Access till Feb-03",
-        sub: "All premium decks unlocked for a limited time",
+        tag: "Premium Tool",
+        title: "Smart Flashcards Exclusively designed for Gold Plan Members",
+        sub: "Upgrade to Gold to Unlock",
         color: "from-amber-500 to-orange-600",
         link: "/flashcards"
     },
     {
         id: 3,
         tag: "Active Now",
-        title: "Weekly Mock Test - 03 is Live Now..!",
-        sub: "Join the All-India test and check your ranking",
+        title: "Enroll for Weekly Mock Tests",
+        sub: "Gear up your preparation",
         color: "from-rose-500 to-red-700",
         link: "/mock-tests"
     },

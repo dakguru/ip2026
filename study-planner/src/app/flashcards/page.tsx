@@ -104,6 +104,7 @@ export default function FlashcardsPage() {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [userRole, setUserRole] = useState<string | null>(null);
+    const [membershipLevel, setMembershipLevel] = useState<string | null>(null);
     const [isLoadingAuth, setIsLoadingAuth] = useState(true);
 
     // State
@@ -157,6 +158,7 @@ export default function FlashcardsPage() {
             try {
                 const session = JSON.parse(decodeURIComponent(match[2]));
                 setUserRole(session.role || 'user');
+                setMembershipLevel(session.membershipLevel || 'free');
             } catch (e) {
                 console.error("Failed to parse session", e);
             }
@@ -186,8 +188,7 @@ export default function FlashcardsPage() {
     }, []);
 
     // --- ACCESS CONTROL ---
-    // Enabled for all registered users
-    const hasAccess = true;
+    const hasAccess = userRole === 'admin' || membershipLevel === 'gold';
 
     if (!isLoadingAuth && !hasAccess) {
         return (

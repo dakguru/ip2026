@@ -13,9 +13,21 @@ const TOPICS = [
     "SB Orders 2025"
 ];
 
-export default function MockTestAnnouncementPopup() {
+const MockTestAnnouncementPopup = ({
+    triggerRef
+}: { triggerRef?: React.MutableRefObject<(() => void) | null> }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+    const openPopup = () => {
+        setIsOpen(true);
+    };
+
+    useEffect(() => {
+        if (triggerRef) {
+            triggerRef.current = openPopup;
+        }
+    }, [triggerRef]);
 
     useEffect(() => {
         // storage key updated to test 04
@@ -182,3 +194,5 @@ export default function MockTestAnnouncementPopup() {
         </AnimatePresence>
     );
 }
+
+export default MockTestAnnouncementPopup;
