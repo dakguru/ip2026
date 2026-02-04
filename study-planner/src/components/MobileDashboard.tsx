@@ -176,7 +176,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         >
 
             {/* --- ROYAL HEADER --- */}
-            <MockTestAnnouncementPopup triggerRef={popupTriggerRef} />
+
             <header className="sticky top-0 z-40 bg-slate-900 dark:bg-black px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] border-b border-slate-800 shadow-xl shadow-slate-900/20">
                 <div className="flex items-center justify-between">
                     {/* Left: Hamburger + Brand */}
@@ -407,8 +407,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
                 <InfoMarqueeView />
 
-                {/* --- MOCK TEST 04 SCHEDULE TIMER --- */}
-                <MockTest04CompactTimer onOpen={() => popupTriggerRef.current?.()} />
+
 
                 {/* --- QUICK ACTIONS (NOW SECOND) --- */}
                 <div className="px-5">

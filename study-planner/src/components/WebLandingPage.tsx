@@ -149,9 +149,7 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
                     <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-6 md:p-16 gap-8 md:gap-10">
                         {/* Text Content */}
                         <div className="flex-1 text-center md:text-left w-full">
-                            <span className="inline-block py-1.5 px-4 mb-4 md:mb-6 rounded-full bg-amber-500/10 text-amber-400 font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase border border-amber-500/20 shadow-[0_0_15px_rgba(245,158,11,0.1)]">
-                                Coming Soon
-                            </span>
+
 
                             <h2 className="text-3xl md:text-6xl font-black text-white mb-3 md:mb-4 leading-[1.1] tracking-tight drop-shadow-lg">
                                 DAK GURU <br />
