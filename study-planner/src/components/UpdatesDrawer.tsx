@@ -15,6 +15,14 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "04.02.2026",
+        items: [
+            { title: "Smart Reader Experience", desc: "The Smart Reader now provides a fully immersive reading experience with smooth, native-feeling vertical scrolling." },
+            { title: "Layout Improvements", desc: "Fixed content overlap with navigation bars and ensured settings button is always fully accessible." },
+            { title: "Device Optimization", desc: "Added proper safe area handling for modern devices while maintaining full-screen reading mode." }
+        ]
+    },
+    {
         date: "03.02.2026",
         items: [
             { title: "Duplicate Topic Fix", desc: "Removed duplicate topics in the Flexible Study Planner view." },
