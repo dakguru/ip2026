@@ -88,6 +88,9 @@ class SemanticAnalyzer {
             text = text.normalize('NFKC');
         }
 
+        // Fix Bullet Points (Replace squares/empty boxes with dots)
+        text = text.replace(/[□◦]/g, "•");
+
         // 1. Explicit Matches
         if (/^CHAPTER\s+[IVX0-9]+/i.test(text)) return { line, type: 'CHAPTER' };
         if (/^(THE\s+)?(ACT|CODE|RULES)\s+\d{4}$/.test(text)) return { line, type: 'TITLE' };
@@ -100,6 +103,7 @@ class SemanticAnalyzer {
         if (/^\(\d+\)/.test(text)) return { line, type: 'CLAUSE' };
         if (/^\([a-z]\)/.test(text)) return { line, type: 'CLAUSE' };
         if (/^\d+\.\s/.test(text)) return { line, type: 'LIST_ITEM' };
+        if (text.startsWith("•")) return { line, type: 'LIST_ITEM' }; // Handle explicit bullets
 
         // 4. Typography Heuristics
         if (line.height > 14 && line.isBold) return { line, type: 'CHAPTER' };
@@ -129,13 +133,20 @@ class SemanticAnalyzer {
         for (let i = 0; i < taggedItems.length; i++) {
             const current = taggedItems[i];
 
+            // Fix bullet text in the line object too, although we used it for tagging
+            // We need to make sure the replacement persists in content
+            let cleanText = current.line.text.trim();
+            if (cleanText.normalize) cleanText = cleanText.normalize('NFKC');
+            cleanText = cleanText.replace(/[□◦]/g, "•");
+
+
             // Structural elements break flow
             if (['TITLE', 'CHAPTER', 'SECTION'].includes(current.type)) {
                 flush();
                 nodes.push({
                     id: `node-${pidx++}`,
                     type: current.type,
-                    content: current.line.text,
+                    content: cleanText,
                     level: 0,
                     index: pidx
                 });
@@ -147,7 +158,7 @@ class SemanticAnalyzer {
                 flush();
                 buffer = {
                     type: current.type,
-                    text: current.line.text,
+                    text: cleanText,
                     level: 1
                 };
                 continue;
@@ -157,13 +168,13 @@ class SemanticAnalyzer {
             if (!buffer) {
                 buffer = {
                     type: 'PARAGRAPH',
-                    text: current.line.text,
+                    text: cleanText,
                     level: 0
                 };
             } else {
                 // Merge decision
                 const prevText = buffer.text.trim();
-                const curText = current.line.text.trim();
+                const curText = cleanText;
 
                 const endsWithStop = /[.:!?]$/.test(prevText);
                 const startsLower = /^[a-z]/.test(curText);
@@ -179,7 +190,7 @@ class SemanticAnalyzer {
                     flush();
                     buffer = {
                         type: 'PARAGRAPH',
-                        text: current.line.text,
+                        text: cleanText,
                         level: 0
                     };
                 }
@@ -199,10 +210,27 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
     const [error, setError] = useState<string | null>(null);
 
     // Preferences
-    const [fontSize, setFontSize] = useState(18); // Default larger for readability
+    const [fontSize, setFontSize] = useState(18);
     const [theme, setTheme] = useState<'light' | 'sepia' | 'dark'>('light');
     const [showControls, setShowControls] = useState(false);
     const [watermarkEnabled, setWatermarkEnabled] = useState(true);
+
+    // Load Settings on Mount
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('liquid_theme');
+        if (savedTheme) setTheme(savedTheme as any);
+
+        const savedSize = localStorage.getItem('liquid_fontSize');
+        if (savedSize) setFontSize(parseInt(savedSize));
+
+        const savedWatermark = localStorage.getItem('liquid_watermark');
+        if (savedWatermark !== null) setWatermarkEnabled(savedWatermark === 'true');
+    }, []);
+
+    // Save Settings
+    useEffect(() => { localStorage.setItem('liquid_theme', theme); }, [theme]);
+    useEffect(() => { localStorage.setItem('liquid_fontSize', fontSize.toString()); }, [fontSize]);
+    useEffect(() => { localStorage.setItem('liquid_watermark', String(watermarkEnabled)); }, [watermarkEnabled]);
 
     useEffect(() => {
         let isMounted = true;

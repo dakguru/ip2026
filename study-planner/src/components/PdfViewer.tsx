@@ -387,7 +387,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                 {/* Liquid Mode Title */}
                 {isLiquidMode && (
                     <div className="flex-1 text-sm font-semibold text-slate-700 dark:text-slate-200 pl-2">
-                        Smart Reader View
+                        Dak Guru Smart Reader
                     </div>
                 )}
 

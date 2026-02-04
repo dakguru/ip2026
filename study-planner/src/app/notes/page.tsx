@@ -603,27 +603,27 @@ const PDF_DATA: Record<string, Note[]> = {
 
 export default function NotesPage() {
     const [activeTab, setActiveTab] = useState("Paper I");
-    const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
+    const [selectedPdf, setSelectedPdf] = useState<{ url: string, title: string } | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
     const [pdfDarkMode, setPdfDarkMode] = useState(false);
 
     // Advisory Modal State
     const [showAdvisory, setShowAdvisory] = useState(false);
     const [advisoryAgreed, setAdvisoryAgreed] = useState(false);
-    const [pendingAction, setPendingAction] = useState<{ type: 'view' | 'download', url: string, filename?: string } | null>(null);
+    const [pendingAction, setPendingAction] = useState<{ type: 'view' | 'download', url: string, title: string, filename?: string } | null>(null);
 
-    const handleActionRequest = (type: 'view' | 'download', url: string, filename?: string) => {
+    const handleActionRequest = (type: 'view' | 'download', url: string, title: string, filename?: string) => {
         // Skip advisory for SB Orders
         if (activeTab === "SB Orders") {
             if (type === 'view') {
-                setSelectedPdf(url);
+                setSelectedPdf({ url, title });
             } else if (type === 'download' && filename) {
                 performDownload(url, filename);
             }
             return;
         }
 
-        setPendingAction({ type, url, filename });
+        setPendingAction({ type, url, title, filename });
         setAdvisoryAgreed(false); // Reset agreement
         setShowAdvisory(true);
     };
@@ -632,7 +632,7 @@ export default function NotesPage() {
         setShowAdvisory(false);
         if (pendingAction) {
             if (pendingAction.type === 'view') {
-                setSelectedPdf(pendingAction.url);
+                setSelectedPdf({ url: pendingAction.url, title: pendingAction.title });
             } else if (pendingAction.type === 'download' && pendingAction.filename) {
                 performDownload(pendingAction.url, pendingAction.filename);
             }
@@ -904,14 +904,14 @@ export default function NotesPage() {
                                     <>
                                         <div className="grid grid-cols-2 gap-1.5 md:gap-3 mt-auto">
                                             <button
-                                                onClick={() => handleActionRequest('view', file.path || '')}
+                                                onClick={() => handleActionRequest('view', file.path || '', file.title)}
                                                 className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-slate-50 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-semibold text-[10px] md:text-sm hover:bg-slate-100 dark:hover:bg-zinc-700 transition-colors border border-slate-200 dark:border-zinc-700"
                                             >
                                                 <Eye className="w-3 h-3 md:w-4 md:h-4" />
                                                 View
                                             </button>
                                             <button
-                                                onClick={() => handleActionRequest('download', file.path || '', file.filename || 'document.pdf')}
+                                                onClick={() => handleActionRequest('download', file.path || '', file.title, file.filename || 'document.pdf')}
                                                 className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-[10px] md:text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
                                             >
                                                 <Download className="w-3 h-3 md:w-4 md:h-4" />
@@ -956,7 +956,7 @@ export default function NotesPage() {
                         <div className="flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top))] sm:py-4 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-[60] w-full shrink-0">
                             <h3 className="font-bold text-slate-800 dark:text-zinc-100 flex items-center gap-2 text-sm sm:text-base truncate mr-2">
                                 <FileText className="w-5 h-5 text-purple-600 shrink-0" />
-                                <span className="truncate">Document Viewer</span>
+                                <span className="truncate">{selectedPdf?.title || 'Document Viewer'}</span>
                             </h3>
                             <div className="flex items-center gap-2">
                                 <button
@@ -970,7 +970,7 @@ export default function NotesPage() {
                                     <span className="hidden sm:inline">{pdfDarkMode ? 'Light' : 'Dark'}</span>
                                 </button>
                                 <button
-                                    onClick={() => handleActionRequest('download', selectedPdf, selectedPdf.split('/').pop() || 'download.pdf')}
+                                    onClick={() => handleActionRequest('download', selectedPdf?.url || '', selectedPdf?.title || '', selectedPdf?.url.split('/').pop() || 'download.pdf')}
                                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 font-semibold text-xs transition-colors"
                                 >
                                     <Download className="w-4 h-4" />
@@ -989,7 +989,7 @@ export default function NotesPage() {
                         {/* Content */}
                         <div className={`flex-1 relative overflow-hidden ${pdfDarkMode ? 'bg-zinc-900' : 'bg-slate-100'}`}>
                             {/* Use React-PDF for consistent viewing across all platforms */}
-                            <PdfViewer url={selectedPdf} darkMode={pdfDarkMode} />
+                            <PdfViewer url={selectedPdf?.url || ''} darkMode={pdfDarkMode} />
                         </div>
                     </div>
                 </div>
