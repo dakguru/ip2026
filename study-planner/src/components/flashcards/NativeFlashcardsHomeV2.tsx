@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Search, SlidersHorizontal, Layers, BookOpen, Clock,
-    Zap, ChevronRight, Lock, Play, Star, Bookmark
+    Zap, ChevronRight, Lock, Play, Star, Bookmark, Crown
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import FlashcardsMarquee from "@/components/FlashcardsMarquee";
@@ -17,6 +17,7 @@ interface NativeFlashcardsHomeProps {
     setActiveFilter: (f: string) => void;
     bookmarks: Set<any>;
     userStreak?: number; // Optional
+    hasAccess?: boolean;
 }
 
 export default function NativeFlashcardsHomeV2({
@@ -28,7 +29,8 @@ export default function NativeFlashcardsHomeV2({
     activeFilter,
     setActiveFilter,
     bookmarks,
-    userStreak = 0
+    userStreak = 0,
+    hasAccess = true
 }: NativeFlashcardsHomeProps) {
     const { theme } = useTheme();
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -158,6 +160,7 @@ export default function NativeFlashcardsHomeV2({
                             index={i}
                             onSelect={() => onDeckSelect(deck.id)}
                             onLongPress={() => { }} // Could implement bookmarking deck or showing details
+                            locked={!hasAccess}
                         />
                     ))}
                 </AnimatePresence>
@@ -176,7 +179,7 @@ export default function NativeFlashcardsHomeV2({
 
 // --- SUB COMPONENTS ---
 
-function VerticalPaperCard({ deck, progress, index, onSelect }: any) {
+function VerticalPaperCard({ deck, progress, index, onSelect, locked }: any) {
     // Generate a consistent gradient based on index/id for visual variety but calmness
     // Generate a consistent gradient based on index/id
     const gradients = [
@@ -207,17 +210,30 @@ function VerticalPaperCard({ deck, progress, index, onSelect }: any) {
                     <span className="inline-flex items-center px-2.5 py-1.5 rounded-lg bg-white/60 dark:bg-white/5 border border-slate-100 dark:border-white/5 text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 shadow-sm dark:shadow-none">
                         {deck.category}
                     </span>
-                    {progressPercent > 0 && (
+                    {locked ? (
+                        <span className="flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-[9px] font-black uppercase tracking-wider text-amber-600 dark:text-amber-500 border border-amber-200 dark:border-amber-700/50">
+                            LOCKED
+                        </span>
+                    ) : (progressPercent > 0 && (
                         <div className="flex items-center gap-1.5 text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
                             <Zap className="w-3 h-3 fill-current" />
                             {progressPercent}%
                         </div>
-                    )}
+                    ))}
                 </div>
 
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1 leading-tight pr-8">
                     {deck.title}
                 </h3>
+
+                {locked && (
+                    <div className="flex items-center gap-1.5 mb-2">
+                        <Crown className="w-3.5 h-3.5 text-amber-500" />
+                        <span className="text-[10px] font-bold text-amber-600 dark:text-amber-500 uppercase tracking-wide">
+                            Only for Gold Members
+                        </span>
+                    </div>
+                )}
 
                 <div className="flex items-center justify-between mt-4">
                     <div className="flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-zinc-400">
@@ -226,7 +242,7 @@ function VerticalPaperCard({ deck, progress, index, onSelect }: any) {
                     </div>
 
                     <div className="w-8 h-8 rounded-full bg-white dark:bg-white/10 flex items-center justify-center text-slate-400 dark:text-white/50 group-hover:bg-indigo-50 dark:group-hover:bg-white group-hover:text-indigo-600 dark:group-hover:text-indigo-900 transition-colors border border-slate-100 dark:border-transparent shadow-sm dark:shadow-none">
-                        <Play className="w-3.5 h-3.5 ml-0.5 fill-current" />
+                        {locked ? <Lock className="w-3.5 h-3.5 ml-0.5 fill-current" /> : <Play className="w-3.5 h-3.5 ml-0.5 fill-current" />}
                     </div>
                 </div>
 

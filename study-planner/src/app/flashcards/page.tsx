@@ -12,7 +12,8 @@ import {
     Download,
     Timer,
     CheckCircle2,
-    Lock
+    Lock,
+    Crown
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { pmlaFlashcards } from "./pmla_data";
@@ -190,27 +191,14 @@ export default function FlashcardsPage() {
     // --- ACCESS CONTROL ---
     const hasAccess = userRole === 'admin' || membershipLevel === 'gold';
 
-    if (!isLoadingAuth && !hasAccess) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-screen text-center p-6 bg-slate-50 dark:bg-zinc-950">
-                <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900/20 rounded-2xl flex items-center justify-center mb-6">
-                    <Lock className="w-8 h-8 text-amber-600 dark:text-amber-500" />
-                </div>
-                <h1 className="text-3xl font-black text-slate-900 dark:text-white mb-3">Premium Feature</h1>
-                <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-sm">
-                    The free trial for Flashcards has ended. Upgrade to Gold to continue mastering Postal Laws.
-                </p>
-                <Link href="/pricing" className="px-8 py-3 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white rounded-xl font-bold tracking-wide shadow-lg shadow-amber-500/20 transition-all transform hover:scale-105 active:scale-95">
-                    Upgrade Now
-                </Link>
-                <Link href="/" className="mt-6 text-sm font-semibold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">
-                    Back to Dashboard
-                </Link>
-            </div>
-        );
-    }
+    // Early return removed to allow free users to see the library (but locked)
+
 
     const handleSelectDeck = (id: string, startIdx: number = 0, shuffle: boolean = false) => {
+        if (!hasAccess) {
+            router.push('/pricing'); // Redirect free users to pricing
+            return;
+        }
         setSelectedDeckId(id);
         setCurrentCardIndex(startIdx);
         setIsInitiallyShuffled(shuffle);
@@ -390,6 +378,7 @@ export default function FlashcardsPage() {
                     activeFilter={activeFilter}
                     setActiveFilter={setActiveFilter}
                     bookmarks={bookmarks}
+                    hasAccess={hasAccess}
                 />
             );
         }
@@ -546,6 +535,7 @@ export default function FlashcardsPage() {
                                             cardCount={item.count}
                                             onAction={handleSelectDeck}
                                             lastIndex={deckProgress[item.id] || 0}
+                                            locked={!hasAccess}
                                         />
                                     </div>
                                 ))}
@@ -575,6 +565,7 @@ export default function FlashcardsPage() {
                                             cardCount={item.count}
                                             onAction={handleSelectDeck}
                                             lastIndex={deckProgress[item.id] || 0}
+                                            locked={!hasAccess}
                                         />
                                     </div>
                                 ))}
@@ -604,6 +595,7 @@ export default function FlashcardsPage() {
                                             cardCount={item.count}
                                             onAction={handleSelectDeck}
                                             lastIndex={deckProgress[item.id] || 0}
+                                            locked={!hasAccess}
                                         />
                                     </div>
                                 ))}
@@ -676,7 +668,7 @@ export default function FlashcardsPage() {
     );
 }
 
-function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index, lastIndex }: any) {
+function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index, lastIndex, locked }: any) {
     const themes = [
         { g: 'bg-blue-500', t: 'text-sky-600', b: 'bg-sky-50' },
         { g: 'bg-emerald-500', t: 'text-emerald-600', b: 'bg-emerald-50' },
@@ -693,11 +685,23 @@ function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index,
             <div className={`absolute -right-6 -top-6 w-24 h-24 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity ${theme.g}`} />
             <div className="flex items-center justify-between mb-4 md:mb-8">
                 <div className={`hidden md:flex w-10 h-10 rounded-xl items-center justify-center shadow-sm ${theme.b} dark:bg-white/5 ${theme.t}`}><BookOpen className="w-5 h-5" /></div>
-                <span className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-slate-100 dark:bg-white/10 text-[8px] md:text-[10px] font-bold uppercase tracking-wide text-slate-500 truncate max-w-[100%]">{category}</span>
+                <div className="flex flex-col items-end gap-1">
+                    <span className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-slate-100 dark:bg-white/10 text-[8px] md:text-[10px] font-bold uppercase tracking-wide text-slate-500 truncate max-w-[100%]">{category}</span>
+                    {locked && (
+                        <span className="px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-900/30 text-[9px] font-black uppercase tracking-wider text-amber-600 dark:text-amber-500 border border-amber-200 dark:border-amber-700/50 flex items-center gap-1">
+                            LOCKED
+                        </span>
+                    )}
+                </div>
             </div>
             <div className="flex-1 mb-4 md:mb-10">
                 <h3 className="text-sm md:text-lg font-bold text-slate-800 dark:text-white leading-tight mb-1 md:mb-2 group-hover:text-indigo-600 transition-colors tracking-tight line-clamp-2">{title}</h3>
                 <p className="text-[9px] md:text-[11px] text-slate-500 font-bold uppercase tracking-wider">{cardCount} Smart Cards</p>
+                {locked && (
+                    <p className="text-[10px] font-bold text-amber-600 dark:text-amber-500 mt-3 flex items-center gap-1.5 animate-pulse">
+                        <Crown className="w-3.5 h-3.5" /> Only for Gold Members
+                    </p>
+                )}
             </div>
             <div className="pt-4 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
                 <div className="flex-1 mr-4">
@@ -706,13 +710,13 @@ function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index,
                     </div>
                 </div>
                 <div className="w-8 h-8 rounded-lg bg-slate-50 dark:bg-white/5 flex items-center justify-center text-slate-300 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all">
-                    <ChevronRight className="w-4 h-4" />
+                    {locked ? <Lock className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
                 </div>
             </div>
             <div className="absolute inset-x-0 bottom-0 p-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md translate-y-full group-hover:translate-y-0 transition-transform flex justify-center gap-1.5">
-                <ActionButton icon={<BookOpen className="w-3.5 h-3.5" />} label="Open" onClick={(e: any) => { e.stopPropagation(); onAction(id, 0, false); }} />
-                <ActionButton icon={<Shuffle className="w-3.5 h-3.5" />} label="Shuffle" onClick={(e: any) => { e.stopPropagation(); onAction(id, 0, true); }} />
-                {lastIndex > 0 && (
+                <ActionButton icon={locked ? <Lock className="w-3.5 h-3.5" /> : <BookOpen className="w-3.5 h-3.5" />} label={locked ? "Locked" : "Open"} onClick={(e: any) => { e.stopPropagation(); onAction(id, 0, false); }} />
+                {!locked && <ActionButton icon={<Shuffle className="w-3.5 h-3.5" />} label="Shuffle" onClick={(e: any) => { e.stopPropagation(); onAction(id, 0, true); }} />}
+                {!locked && lastIndex > 0 && (
                     <ActionButton icon={<RotateCcw className="w-3.5 h-3.5" />} label="Resume" onClick={(e: any) => { e.stopPropagation(); onAction(id, lastIndex, false); }} />
                 )}
             </div>
