@@ -89,10 +89,32 @@ export async function POST(request: Request) {
             }
         }
 
-        return NextResponse.json({
+        // Create response
+        const response = NextResponse.json({
             success: true,
             message: 'Payment verified and membership updated'
         });
+
+        // Re-set the user_session cookie with updated membership data to reflect changes immediately on client
+        const maxAge = 60 * 60 * 24; // 1 day
+
+        response.cookies.set('user_session', JSON.stringify({
+            name: updatedUser.name,
+            email: updatedUser.email,
+            mobile: updatedUser.mobile,
+            role: updatedUser.role,
+            membershipLevel: updatedUser.membershipLevel, // Updated
+            sessionId: updatedUser.currentSessionId || ''
+        }), {
+            httpOnly: false, // Client readable
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'lax',
+            maxAge: maxAge,
+            path: '/',
+            ...(process.env.NODE_ENV === 'production' ? { domain: '.dakguru.com' } : {})
+        });
+
+        return response;
 
     } catch (error: any) {
         console.error("Payment Verification Error:", error);
