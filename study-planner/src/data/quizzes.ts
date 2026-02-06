@@ -2257,7 +2257,7 @@ const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "Which of the following constitutes \"Indecent or Obscene\" matter under Regulation 101, leading to the detention of the article?", o: ["A medical textbook with anatomical diagrams", "A sealed letter containing a private adult joke", "A postcard depicting a grossly offensive or indecent picture on the reverse side", "A scientific journal on reproductive health"], a: 2, e: "\"Obscene\" on a postcard (which is open to view) is strictly prohibited and the article is detained." },
     { q: "Match the following \"Breach of Conditions\" (Column A) with their Treatment (Column B) under Regulation 105: | 1. Unpaid Article found in Letter Box | i. Returned to sender | | 2. Breach of \"Book Packet\" conditions | ii. Charged double the deficiency on delivery | | 3. Prohibited item (Explosive) | iii. Charged at Letter or Parcel rates (whichever is less) | | 4. Oversized Postcard | iv. Handed over to Police/Authorities |", o: ["1-ii, 2-iii, 3-iv, 4-ii", "1-iii, 2-i, 3-iv, 4-ii", "1-ii, 2-i, 3-iii, 4-iv", "1-iv, 2-ii, 3-i, 4-iii"], a: 0, e: "Unpaid=Charged on delivery; Breach of conditions=Charged deficiency; Prohibited=Handed to police; Oversized=Charged." },
     { q: "The dimensions of a \"Privately Printed Postcard\" under Regulation 110 must strictly adhere to:", o: ["Max: 15 cm x 10.5 cm; Min: 10 cm x 7 cm", "Max: 14 cm x 9 cm; Min: 10 cm x 7 cm", "Max: 21 cm x 14.8 cm; Min: 14 cm x 9 cm", "A standard A6 size"], a: 1, e: "Private postcards must match official dimensions: Max 14x9 cm, Min 10x7 cm." },
-    { q: "For an \"Inland Letter Card\" (Regulation 115), the maximum weight allowed is:", o: ["3 grams", "5 grams", "10 grams", "20 grams"], a: 0, e: "Inland Letter Cards (ILC) must not exceed **3 grams**." },
+    { q: "For an \"Inland Letter Card\", the maximum weight allowed is:", o: ["3 grams", "5 grams", "10 grams", "20 grams"], a: 1, e: "Inland Letter Cards (ILC) must not exceed **5 grams**." },
     { q: "A \"Book Packet\" (Regulation 120) may contain which of the following?", o: ["A written letter of personal nature", "A distinct written communication in the nature of a letter", "Manuscripts of works or for newspapers", "Paper money"], a: 2, e: "Book packets can contain manuscripts/books but **no** personal letters or messages in the nature of a letter." },
     { q: "Under the 2025 Amendment, \"Pattern and Sample Packets\" are restricted to a maximum weight of:", o: ["1 kg", "2 kg", "4 kg", "500 grams"], a: 1, e: "Pattern/Sample packets are limited to **2 kg**." },
     { q: "Assertion (A): A \"Blind Literature Packet\" is exempt from the payment of registration fee, fee for acknowledgment, and postage. Reason (R): This exemption applies even if the packet is sent by air mail.", o: ["Both A and R are true", "Both A and R are false", "A is true, but R is false", "A is false, but R is true"], a: 2, e: "Blind Literature is free of postage/reg fee, but air surcharge is **not** always exempt (except in specific new provisions, but technically air surcharge often applies). However, the answer key C implies the exemption doesn\'t automatically cover air lift unless specified." },
@@ -2355,7 +2355,7 @@ const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "If a sender wants to \"Insure\" a parcel, the sender must write on the cover:", o: ["The value for which it is insured in words and figures", "\"Handle with Care\"", "\"Valuable Contents\"", "The list of all items inside"], a: 0, e: "Insured value must be written in **words and figures**." },
     { q: "Under Regulation 242, which service provides a \"Proof of Delivery\" (POD) accessible online for bulk customers?", o: ["Ordinary Post", "Speed Post and Express Parcel", "Book Packet", "UPC"], a: 1, e: "Speed Post and Express Parcel provide online POD." },
     { q: "\"Express Parcel\" (Regulation 245) is a product specifically designed for:", o: ["Retail customers sending gifts", "Corporate/Business customers needing time-bound delivery", "Sending books only", "International shipments only"], a: 1, e: "Express Parcel is for corporate/business time-bound delivery (surface/air)." },
-    { q: "The \"International Tracked Packet\" service is available for packets up to:", o: ["1 kg", "2 kg", "5 kg", "10 kg"], a: 1, e: "International Tracked Packet is for small packets up to **2 kg**." },
+    { q: "The \"International Tracked Packet\" service is available for packets up to:", o: ["1 kg", "2 kg", "5 kg", "10 kg"], a: 2, e: "International Tracked Packet is for small packets up to **5 kg**." },
     { q: "Regarding \"Compensation for Insured Articles\" (Regulation 250), no compensation is payable if:", o: ["The loss was caused by the fault or negligence of the sender (e.g., defective packing)", "The article contained prohibited items", "The claim is made after 3 months from the date of posting", "All of the above"], a: 3, e: "No compensation for sender\'s negligence, prohibited items, or late claims." },
     { q: "Can a \"Speed Post\" article be Insured?", o: ["No, Speed Post cannot be insured", "Yes, up to a limit of ₹1,00,000", "Yes, but only for documents", "Yes, up to ₹500 only"], a: 1, e: "Yes, Speed Post can be insured (up to ₹1 Lakh)." },
   ],
@@ -3283,8 +3283,8 @@ const ALL_SETS_DATA: Record<number, any[]> = {
         "2 Kg",
         "5 Kg"
       ],
-      "a": 2,
-      "e": "ITPS is for packets up to **2 Kg**."
+      "a": 3,
+      "e": "ITPS is for packets up to **5 Kg**."
     },
     {
       "q": "Regarding the \"Senior Citizen Savings Scheme\" (SCSS), the maximum deposit limit has been enhanced to:",

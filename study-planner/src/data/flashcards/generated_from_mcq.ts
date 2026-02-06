@@ -3248,9 +3248,9 @@ export const p1_6: FlashCard[] = [
         "pdf_title": "The Post Office Regulations, 2024",
         "topic": "Paper I",
         "card_no": 25,
-        "question": "What is defined as For an \"Inland Letter Card\" (Regulation 115), the maximum weight allowed is?",
-        "answer": "3 grams",
-        "explanation": "Inland Letter Cards (ILC) must not exceed **3 grams**.",
+        "question": "What is defined as For an \"Inland Letter Card\", the maximum weight allowed is?",
+        "answer": "5 grams",
+        "explanation": "Inland Letter Cards (ILC) must not exceed **5 grams**.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17605,8 +17605,8 @@ export const p1_25: FlashCard[] = [
         "topic": "Paper I",
         "card_no": 24,
         "question": "What is defined as The \"International Tracked Packet System\" (ITPS) is designed for transmitting small packets to foreign countries up to a weight of?",
-        "answer": "2 Kg",
-        "explanation": "ITPS is for packets up to **2 Kg**.",
+        "answer": "5 Kg",
+        "explanation": "ITPS is for packets up to **5 Kg**.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
