@@ -10,7 +10,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetH
 import { ThemeToggle } from "./ThemeToggle";
 import { useRouter } from "next/navigation";
 import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
-import InfoMarqueeView from "@/components/InfoMarqueeView";
+import LiveMockTestBanner from "@/components/LiveMockTestBanner";
 
 interface MobileDashboardProps {
     displayName: string;
@@ -405,7 +405,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 {/* Android App Payment Announcement */}
 
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
-                <InfoMarqueeView />
+                <LiveMockTestBanner />
 
 
 
