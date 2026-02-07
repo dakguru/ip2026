@@ -363,7 +363,14 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.2 MB",
             color: "red"
         },
-        { title: "GDS (Conduct & Engagement) Rules, 2020", description: "Rules related to Gramin Dak Sevaks.", color: "red", comingSoon: true },
+        {
+            title: "GDS (Conduct & Engagement) Rules, 2020",
+            description: "Rules related to Gramin Dak Sevaks.",
+            filename: "GDS_CE_Rules_2020.pdf",
+            path: "/notes/paper-1/GDS_CE_Rules_2020.pdf",
+            size: "0.2 MB",
+            color: "red"
+        },
     ],
     "Paper III": [
         // 1-8. Constitution
@@ -431,7 +438,14 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "CCS (Commutation of Pension) Rules, 1981", description: "Commutation rules.", color: "teal", comingSoon: true },
 
         // 22. Sexual Harassment
-        { title: "Sexual Harassment of Women at Workplace Act, 2013", description: "Prevention, Prohibition and Redressal.", color: "pink", comingSoon: true },
+        {
+            title: "Sexual Harassment of Women at Workplace Act, 2013",
+            description: "Prevention, Prohibition and Redressal.",
+            filename: "POSH_Rules_2013.pdf",
+            path: "/notes/paper-3/POSH_Rules_2013.pdf",
+            size: "0.2 MB",
+            color: "pink"
+        },
 
         // 23-24. NPS
         { title: "CCS (Implementation of NPS) Rules, 2021", description: "National Pension System implementation.", color: "emerald", comingSoon: true },
