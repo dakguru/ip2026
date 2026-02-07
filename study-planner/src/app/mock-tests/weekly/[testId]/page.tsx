@@ -295,9 +295,26 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     useEffect(() => {
         const loadTest = async () => {
             // 1. Get Questions
-            const data = TEST_DATA_MAP[testId];
+            // 1. Get Questions
+            let data = TEST_DATA_MAP[testId];
+
+            // Debugging / Fallback for Mock 4
+            if (!data && testId === 'mock-2026-02-07') {
+                console.warn("Test ID matched but data lookup failed. Attempting direct assignment.");
+                data = WEEKLY_MOCK_04_QUESTIONS;
+            }
+
             if (!data) {
-                alert("Test data not found!");
+                console.error(`Test data not found for ID: ${testId}`);
+                console.log("Available Test IDs:", Object.keys(TEST_DATA_MAP));
+
+                // Check if Questions are loaded
+                if (testId === 'mock-2026-02-07' && !WEEKLY_MOCK_04_QUESTIONS) {
+                    alert("System Error: Mock Test 04 data is not loaded correctly. Please contact support.");
+                } else {
+                    alert(`Test data not found for ID: "${testId}". Please go back and try again.`);
+                }
+
                 router.push("/mock-tests");
                 return;
             }
