@@ -45,7 +45,7 @@ export default function LiveMockTestBanner() {
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-3xl -mr-10 -mt-10 animate-pulse"></div>
                     <div className="absolute bottom-0 left-0 w-24 h-24 bg-yellow-400/20 rounded-full blur-2xl -ml-8 -mb-8"></div>
 
-                    <div className="relative p-4 flex items-center justify-between gap-3">
+                    <div className="relative py-5 px-4 sm:py-6 sm:px-6 flex items-center justify-between gap-4">
 
                         {/* Left Side: Icon & Text */}
                         <div className="flex items-center gap-3.5 flex-1 min-w-0">
@@ -62,7 +62,7 @@ export default function LiveMockTestBanner() {
                                     <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse box-shadow-green"></span>
                                     Live Now
                                 </span>
-                                <h3 className="text-sm font-black text-white leading-tight truncate">
+                                <h3 className="text-sm font-black text-white leading-tight line-clamp-2">
                                     All India Weekly Mock - 04
                                 </h3>
                                 <p className="text-[10px] text-white/80 font-medium truncate mt-0.5">
@@ -73,7 +73,7 @@ export default function LiveMockTestBanner() {
 
                         {/* Right Side: Timer & Arrow */}
                         <div className="flex items-center gap-3 flex-shrink-0">
-                            <div className="flex flex-col items-end gap-0.5">
+                            <div className="flex flex-col items-end gap-1">
                                 <span className="text-[9px] font-bold text-white/70 uppercase tracking-wider text-right">Ends In</span>
                                 <div className="flex items-center gap-1 text-white tabular-nums leading-none">
                                     <Clock className="w-3 h-3 text-white/80" />
