@@ -591,6 +591,7 @@ export default function MockTestsPage() {
                                     onShowRankList={() => setSelectedMockForRank(mock)}
                                     userResult={userResults[mock.id]}
                                     onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
+                                    onViewSheets={() => setSelectedMockForSheets(mock)}
                                     isDownloading={downloadingId === mock.id}
                                 />
                             ))}
