@@ -15,6 +15,15 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "07.02.2026",
+        items: [
+            {
+                title: "PDF Notes Uploaded",
+                desc: "GDS (Conduct & Engagement) Rules, 2020 PDF is now linked in the 'Paper I' section. Sexual Harassment of Women at Workplace Act, 2013 PDF is now linked in the 'Paper III' section. Both documents are now accessible in the application."
+            }
+        ]
+    },
+    {
         date: "04.02.2026",
         items: [
             { title: "Smart Reader Experience", desc: "The Smart Reader now provides a fully immersive reading experience with smooth, native-feeling vertical scrolling." },
