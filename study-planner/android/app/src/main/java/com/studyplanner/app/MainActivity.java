@@ -82,6 +82,10 @@ public class MainActivity extends BridgeActivity {
 
     // --- PERMISSION & DOWNLOAD LOGIC ---
 
+    private String pendingDownloadUrl = null;
+    private String pendingMimeType = null;
+    private String pendingContentDisposition = null;
+
     // Permission Launcher
     private final androidx.activity.result.ActivityResultLauncher<String[]> requestPermissionLauncher =
             registerForActivityResult(new androidx.activity.result.contract.ActivityResultContracts.RequestMultiplePermissions(), result -> {
@@ -101,10 +105,6 @@ public class MainActivity extends BridgeActivity {
                     android.widget.Toast.makeText(this, "Permissions denied. Cannot download file.", android.widget.Toast.LENGTH_LONG).show();
                 }
             });
-
-    private String pendingDownloadUrl = null;
-    private String pendingMimeType = null;
-    private String pendingContentDisposition = null;
 
     private void checkPermissionsAndDownload(String url, String mimetype, String contentDisposition) {
         pendingDownloadUrl = url;
