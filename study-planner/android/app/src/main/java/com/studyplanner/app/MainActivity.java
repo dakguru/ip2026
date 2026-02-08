@@ -19,6 +19,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.webkit.CookieManager;
+import android.webkit.JavascriptInterface;
 import android.webkit.URLUtil;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -67,6 +68,23 @@ public class MainActivity extends BridgeActivity {
                 }
             });
 
+    // Expose a JS interface for the Web App to trigger downloads
+    public class WebAppInterface {
+        Context mContext;
+
+        WebAppInterface(Context context) {
+            mContext = context;
+        }
+
+        @JavascriptInterface
+        public void downloadPdf(String url) {
+             // Run on UI thread to handle UI and permissions
+             runOnUiThread(() -> {
+                 checkPermissionsAndDownload(url, "application/pdf", null);
+             });
+        }
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         // 1. Install Android 12 Splash Screen
@@ -100,6 +118,9 @@ public class MainActivity extends BridgeActivity {
             // Hack: Remove "wv" from UserAgent
             String newUserAgent = settings.getUserAgentString().replace("; wv", "");
             settings.setUserAgentString(newUserAgent);
+
+            // Register JS Interface
+            webView.addJavascriptInterface(new WebAppInterface(this), "AndroidNative");
 
             // --- PDF DOWNLOAD SUPPORT ---
             webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
@@ -140,11 +161,15 @@ public class MainActivity extends BridgeActivity {
     private void checkPermissionsOnLaunch() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-                 requestPermissionLauncher.launch(new String[]{Manifest.permission.POST_NOTIFICATIONS});
+                 showPermissionRationaleDialog(() -> {
+                     requestPermissionLauncher.launch(new String[]{Manifest.permission.POST_NOTIFICATIONS});
+                 });
             }
         } else if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
              if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                 requestPermissionLauncher.launch(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE});
+                 showPermissionRationaleDialog(() -> {
+                     requestPermissionLauncher.launch(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE});
+                 });
             }
         }
     }
