@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import HomeHeader from '@/components/HomeHeader';
-import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check } from 'lucide-react';
+import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
@@ -433,6 +433,14 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Manual on Procurement of Consultancy", description: "Procurement Manual Part iii", color: "slate", comingSoon: true },
 
         // 19-21. CCS Rules
+        {
+            title: "CCS (Leave) Rules, 1972",
+            description: "Central Civil Services (Leave) Rules, 1972.",
+            filename: "CCS_Leave_Rules_1972.pdf",
+            path: "/notes/paper-3/CCS_Leave_Rules_1972.pdf",
+            size: "0.3 MB",
+            color: "teal"
+        },
         { title: "CCS (GPF) Rules, 1961", description: "General Provident Fund rules.", color: "teal", comingSoon: true },
         { title: "CCS (Pension) Rules, 2021", description: "New pension rules and amendments.", color: "teal", comingSoon: true },
         { title: "CCS (Commutation of Pension) Rules, 1981", description: "Commutation rules.", color: "teal", comingSoon: true },
@@ -672,6 +680,9 @@ export default function NotesPage() {
         checkMembership();
     }, []);
 
+    const [downloadProgress, setDownloadProgress] = useState(0);
+    const [isDownloading, setIsDownloading] = useState(false);
+
     const [showDownloadToast, setShowDownloadToast] = useState(false);
 
     useEffect(() => {
@@ -685,9 +696,36 @@ export default function NotesPage() {
         return SCHEDULE_MAPPING[title] || fallback;
     };
 
+    useEffect(() => {
+        let listenerHandle: any;
 
+        const setupListeners = async () => {
+            // Dynamic import to avoid SSR issues
+            const { default: PdfDownloader } = await import('@/plugins/PdfDownloader');
 
+            listenerHandle = await PdfDownloader.addListener('downloadProgress', (data) => {
+                setDownloadProgress(data.progress);
+                if (data.status === 'completed') {
+                    setIsDownloading(false);
+                    setDownloadProgress(0);
+                } else if (data.status === 'failed') {
+                    setIsDownloading(false);
+                    setDownloadProgress(0);
+                    Toast.show({ text: 'Download failed.', duration: 'long' });
+                } else {
+                    setIsDownloading(true);
+                }
+            });
+        };
 
+        if (Capacitor.isNativePlatform()) {
+            setupListeners();
+        }
+
+        return () => {
+            if (listenerHandle) listenerHandle.remove();
+        };
+    }, []);
 
     const performDownload = async (url: string, filename: string) => {
         try {
@@ -702,54 +740,26 @@ export default function NotesPage() {
                 return;
             }
 
-            // Native Logic: Download to Cache & Open
+            // Native Logic: Use Custom Plugin
+            setIsDownloading(true);
+            setDownloadProgress(1); // Start progress
             await Toast.show({
-                text: 'Opening document...',
+                text: 'Starting download...',
                 duration: 'short'
             });
 
-            // 1. Fetch the file
-            const absoluteUrl = url.startsWith('http') ? url : window.location.origin + url;
-            const response = await fetch(absoluteUrl);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const blob = await response.blob();
+            // Dynamic import
+            const { default: PdfDownloader } = await import('@/plugins/PdfDownloader');
 
-            // 2. Convert to base64
-            const reader = new FileReader();
-            reader.readAsDataURL(blob);
-            reader.onloadend = async () => {
-                const base64data = reader.result as string;
-                const data = base64data.split(',')[1];
-
-                try {
-                    // 3. Write to Cache (Temporary)
-                    const savedFile = await Filesystem.writeFile({
-                        path: filename,
-                        data: data,
-                        directory: Directory.Cache,
-                        recursive: true
-                    });
-
-                    // 4. Open with FileOpener
-                    await FileOpener.open({
-                        filePath: savedFile.uri,
-                        contentType: 'application/pdf',
-                        openWithDefault: true,
-                    });
-
-                } catch (err: any) {
-                    console.error("File Opener Error", err);
-                    await Toast.show({
-                        text: `Could not open file: ${err.message}`,
-                        duration: 'long'
-                    });
-                }
-            };
+            // The plugin handles permissions, download, notification, and auto-open
+            await PdfDownloader.downloadPdf({ url });
 
         } catch (error) {
             console.error("Download failed", error);
+            setIsDownloading(false);
+            setDownloadProgress(0);
             await Toast.show({
-                text: `Failed to load document: ${error instanceof Error ? error.message : 'Unknown error'}`,
+                text: `Failed to initiate download: ${error instanceof Error ? error.message : 'Unknown error'}`,
                 duration: 'long'
             });
         }
@@ -779,6 +789,24 @@ export default function NotesPage() {
             </div>
 
             {/* --- MAIN CONTENT --- */}
+
+            {/* Native Download Progress Overlay */}
+            {isDownloading && (
+                <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-zinc-900/90 text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-3 backdrop-blur-md">
+                    <Loader2 className="w-5 h-5 animate-spin text-blue-400" />
+                    <div className="flex flex-col">
+                        <span className="text-sm font-bold">Downloading PDF...</span>
+                        <div className="w-32 h-1 bg-zinc-700 rounded-full mt-1 overflow-hidden">
+                            <div
+                                className="h-full bg-blue-500 transition-all duration-300"
+                                style={{ width: `${downloadProgress}%` }}
+                            />
+                        </div>
+                    </div>
+                    <span className="text-xs font-mono">{downloadProgress}%</span>
+                </div>
+            )}
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
 
                 {/* Marquee Banner */}
