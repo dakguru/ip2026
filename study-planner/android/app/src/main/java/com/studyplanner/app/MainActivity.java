@@ -92,6 +92,9 @@ public class MainActivity extends BridgeActivity {
 
         final boolean[] isReady = {false};
         splashScreen.setKeepOnScreenCondition(() -> !isReady[0]);
+        
+        // Register Custom Plugin
+        registerPlugin(com.studyplanner.app.plugins.PdfDownloaderPlugin.class);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             isReady[0] = true;
