@@ -1296,7 +1296,7 @@ function MockTestCard({
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
                 {/* Top 7 Rank Holders Button */}
-                {(isCompleted) && onShowRankList && (
+                {((isCompleted) || (isLive && mock.id === 'mock-2026-02-07')) && onShowRankList && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         className="w-full py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl font-bold text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-95"
