@@ -5,7 +5,9 @@ const CommentSchema = new mongoose.Schema({
     id: { type: Number, required: true }, // Keeping num ID for now to match interface, or could switch to ObjectId
     author: { type: String, required: true },
     text: { type: String, required: true },
-    timestamp: { type: String, default: () => new Date().toISOString() }
+    timestamp: { type: String, default: () => new Date().toISOString() },
+    likes: { type: Number, default: 0 },
+    likedBy: [String]
 });
 
 const PostSchema = new mongoose.Schema({

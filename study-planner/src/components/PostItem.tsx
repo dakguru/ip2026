@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from "next/link";
-import { Users, MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X, Clock, Send } from 'lucide-react';
+import { Users, MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X, Clock, Send, Star } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
 
@@ -10,10 +10,23 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
     const [showCommentBox, setShowCommentBox] = useState(false);
     const [showCommentsList, setShowCommentsList] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
+    const [localComments, setLocalComments] = useState<any[]>([]);
     const [commentText, setCommentText] = useState("");
     const router = useRouter();
 
-    const displayComments = post.comments || [];
+    React.useEffect(() => {
+        const initialComments = post.comments || [];
+        const username = currentUser?.name;
+
+        // Enhance comments with interaction state
+        const enhanced = initialComments.map((c: any) => ({
+            ...c,
+            isLiked: Array.isArray(c.likedBy) && username ? c.likedBy.includes(username) : false,
+            likes: c.likes || 0
+        }));
+
+        setLocalComments(enhanced);
+    }, [post.comments, currentUser]);
 
     // Comment Edit State
     const [editingCommentId, setEditingCommentId] = useState<number | null>(null);
@@ -28,6 +41,22 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
         }
     };
 
+    // Helper to get current user name reliably
+    const getCurrentUserName = () => {
+        if (currentUser?.name) return currentUser.name;
+
+        // Fallback to cookie
+        const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
+        if (match) {
+            try {
+                const decoded = decodeURIComponent(match[2]);
+                const user = JSON.parse(decoded);
+                return user.name;
+            } catch (e) { return null; }
+        }
+        return null;
+    };
+
     const handleCommentClick = () => {
         checkAuthAndExecute(() => setShowCommentBox(!showCommentBox));
     };
@@ -36,22 +65,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
         checkAuthAndExecute(async () => {
             if (!commentText.trim()) return;
 
-            let authorName = "User";
-            // Use current user from props or fallback to cookie (in case prop is stale/missing)
-            if (currentUser) {
-                authorName = currentUser.name;
-            } else {
-                const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
-                if (match) {
-                    try {
-                        const decoded = decodeURIComponent(match[2]);
-                        const user = JSON.parse(decoded);
-                        authorName = user.name || "User";
-                    } catch (e) {
-                        console.error(e);
-                    }
-                }
-            }
+            const authorName = getCurrentUserName() || "User";
 
             const newComment = {
                 id: Date.now(),
@@ -163,7 +177,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         action: 'like',
-                        username: currentUser?.name || "User"
+                        username: getCurrentUserName() || "User"
                     })
                 });
             } catch (e) {
@@ -178,9 +192,11 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
         checkAuthAndExecute(async () => {
             if (!answerCommentText.trim()) return;
 
+            const authorName = getCurrentUserName() || "User";
+
             const newComment = {
                 id: Date.now(),
-                author: currentUser?.name || "User",
+                author: authorName,
                 text: answerCommentText,
                 timestamp: "Just now"
             };
@@ -194,7 +210,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         action: 'comment',
-                        username: currentUser?.name || "User",
+                        username: authorName,
                         comment: { ...newComment, timestamp: new Date().toLocaleDateString() }
                     })
                 });
@@ -215,7 +231,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                 const res = await fetch(`/api/community/posts/${post.id}/like`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ username: currentUser?.name || "User" })
+                    body: JSON.stringify({ username: getCurrentUserName() || "User" })
                 });
 
                 if (!res.ok) {
@@ -231,6 +247,64 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
         });
     };
 
+    const handleReply = (author: string) => {
+        checkAuthAndExecute(() => {
+            if (!showCommentBox) setShowCommentBox(true);
+            setCommentText(`@${author} `);
+            const input = document.querySelector('input[placeholder="Write a meaningful comment..."]') as HTMLInputElement;
+            if (input) input.focus();
+        });
+    };
+
+    const handleCommentLike = (commentId: number) => {
+        checkAuthAndExecute(async () => {
+            const username = getCurrentUserName();
+            if (!username) return;
+
+            // Optimistic update
+            setLocalComments((prev: any[]) => prev.map((c: any) => {
+                if (c.id === commentId) {
+                    const isLiked = !c.isLiked;
+                    return { ...c, isLiked, likes: (c.likes || 0) + (isLiked ? 1 : -1) };
+                }
+                return c;
+            }));
+
+            try {
+                const res = await fetch('/api/community/comments/like', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        postId: post.id,
+                        commentId,
+                        username
+                    })
+                });
+
+                if (!res.ok) {
+                    // Revert
+                    setLocalComments((prev: any[]) => prev.map((c: any) => {
+                        if (c.id === commentId) {
+                            const isLiked = !c.isLiked; // Revert back
+                            return { ...c, isLiked, likes: (c.likes || 0) + (isLiked ? 1 : -1) };
+                        }
+                        return c;
+                    }));
+                }
+            } catch (e) {
+                console.error("Failed to like comment", e);
+                // Revert
+                setLocalComments((prev: any[]) => prev.map((c: any) => {
+                    if (c.id === commentId) {
+                        const isLiked = !c.isLiked;
+                        return { ...c, isLiked, likes: (c.likes || 0) + (isLiked ? 1 : -1) };
+                    }
+                    return c;
+                }));
+            }
+        });
+    };
+
     const formattedDate = post.createdAt ? format(new Date(post.createdAt), 'MMM d, yyyy • h:mm a') : 'Recently';
 
     // Helper for Admin Badge
@@ -240,18 +314,40 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
         return r.includes('admin') || n.includes('admin') || r.includes('mentor');
     };
 
+    const isGoldUser = (role?: string) => role?.toLowerCase().includes('gold');
+    const isSilverUser = (role?: string) => role?.toLowerCase().includes('silver');
+
     const AdminBadge = () => (
         <span className="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-blue-200 dark:border-blue-800 ml-2 shadow-sm">
             Admin <Check className="w-3 h-3 text-blue-600 dark:text-blue-400" />
         </span>
     );
 
+    const UserBadge = ({ role }: { role?: string }) => {
+        if (!role) return null;
+        if (isGoldUser(role)) {
+            return (
+                <span className="inline-flex items-center gap-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-amber-200 dark:border-amber-800 ml-2 shadow-sm">
+                    Gold <Star className="w-3 h-3 text-amber-600 dark:text-amber-400 fill-amber-600" />
+                </span>
+            );
+        }
+        if (isSilverUser(role)) {
+            return (
+                <span className="inline-flex items-center gap-1 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-slate-300 dark:border-slate-600 ml-2 shadow-sm">
+                    Silver <Star className="w-3 h-3 text-slate-500 dark:text-slate-400 fill-slate-500" />
+                </span>
+            );
+        }
+        return null;
+    };
+
     return (
-        <div className="p-6 transition-colors hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 text-left border-b border-zinc-100 dark:border-zinc-800/50 last:border-0">
+        <div className="p-4 md:p-6 transition-colors hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 text-left border-b border-zinc-100 dark:border-zinc-800/50 last:border-0">
             {/* Post Author Info */}
             <div className="flex items-center gap-3 mb-4">
                 {/* Avatar for Post Author */}
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/50 dark:to-indigo-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-sm border border-blue-200 dark:border-blue-800 shadow-sm">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/50 dark:to-indigo-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xs md:text-sm border border-blue-200 dark:border-blue-800 shadow-sm">
                     {post.author ? post.author[0].toUpperCase() : 'U'}
                 </div>
                 <div className="flex flex-col">
@@ -260,6 +356,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                             {post.author}
                         </span>
                         {isAdmin(post.role, post.author) && <AdminBadge />}
+                        <UserBadge role={post.role} />
                     </div>
                     <div className="flex items-center text-xs text-zinc-500 gap-2">
                         <span>{post.role}</span>
@@ -279,8 +376,8 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
             </div>
 
             {/* Question */}
-            <Link href="#" className="block group mb-4">
-                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
+            <Link href="#" className="block group mb-3 md:mb-4">
+                <h3 className="text-base md:text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
                     {post.title}
                 </h3>
                 {post.description && (
@@ -292,22 +389,22 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
             <div className="flex items-center gap-3 mb-4">
                 <button
                     onClick={handleCommentClick}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-bold hover:bg-blue-700 active:bg-blue-800 transition-all shadow-md shadow-blue-500/20 active:scale-95"
+                    className="flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 bg-blue-600 text-white rounded-lg text-xs md:text-sm font-bold hover:bg-blue-700 active:bg-blue-800 transition-all shadow-md shadow-blue-500/20 active:scale-95"
                 >
                     <MessageSquare className="w-4 h-4" />
-                    {displayComments.length > 0 ? `${displayComments.length} Comments` : 'Comment'}
+                    {localComments.length > 0 ? `${localComments.length} Comments` : 'Comment'}
                 </button>
 
                 <button
                     onClick={handleLike}
-                    className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-bold transition-all border ${hasLiked ? 'bg-pink-50 border-pink-200 text-pink-600' : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-600 hover:bg-zinc-50'}`}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-bold transition-all border ${hasLiked ? 'bg-pink-50 border-pink-200 text-pink-600' : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-600 hover:bg-zinc-50'}`}
                 >
                     <ThumbsUp className={`w-4 h-4 ${hasLiked ? 'fill-pink-600' : ''}`} /> {likesCount > 0 ? likesCount : 'Like'}
                 </button>
 
                 <button
                     onClick={() => onSave && onSave(post.id)}
-                    className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-bold transition-all border ${isSaved ? 'bg-orange-50 border-orange-200 text-orange-600' : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-600 hover:bg-zinc-50'}`}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-bold transition-all border ${isSaved ? 'bg-orange-50 border-orange-200 text-orange-600' : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-600 hover:bg-zinc-50'}`}
                 >
                     <Bookmark className={`w-4 h-4 ${isSaved ? 'fill-orange-600' : ''}`} /> {isSaved ? 'Saved' : 'Save'}
                 </button>
@@ -324,18 +421,18 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
             </div>
 
             {/* Comment Preview (Visible when Comment Box is Closed) */}
-            {!showCommentBox && displayComments.length > 0 && (
-                <div className="bg-zinc-50 dark:bg-zinc-900/40 rounded-xl p-4 border border-zinc-100 dark:border-zinc-800/50">
-                    {displayComments.length > 2 && (
+            {!showCommentBox && localComments.length > 0 && (
+                <div className="bg-zinc-50 dark:bg-zinc-900/40 rounded-xl p-3 md:p-4 border border-zinc-100 dark:border-zinc-800/50">
+                    {localComments.length > 2 && (
                         <button
                             onClick={handleCommentClick}
                             className="text-xs font-bold text-zinc-500 hover:text-blue-600 mb-3 flex items-center gap-1 transition-colors"
                         >
-                            View all {displayComments.length} comments
+                            View all {localComments.length} comments
                         </button>
                     )}
                     <div className="space-y-3">
-                        {displayComments.slice(-2).map((comment: any) => (
+                        {localComments.slice(-2).map((comment: any) => (
                             <div key={comment.id} className="flex gap-3">
                                 <div className="w-6 h-6 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-[10px] font-bold text-zinc-500 shrink-0">
                                     {comment.author ? comment.author[0] : 'U'}
@@ -344,9 +441,24 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                                     <div className="flex items-center gap-2">
                                         <span className="text-xs font-bold text-zinc-800 dark:text-zinc-200">{comment.author}</span>
                                         {isAdmin(comment.role, comment.author) && <span className="bg-blue-100 text-blue-700 text-[9px] px-1.5 py-0.5 rounded font-bold border border-blue-200">Admin</span>}
+                                        <UserBadge role={comment.role} />
                                         <span className="text-[10px] text-zinc-400">{comment.timestamp}</span>
                                     </div>
                                     <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-0.5 leading-relaxed">{comment.text}</p>
+                                    <div className="flex items-center gap-3 mt-1.5">
+                                        <button
+                                            onClick={() => handleCommentLike(comment.id)}
+                                            className={`flex items-center gap-1 text-[10px] font-medium transition-colors ${comment.isLiked ? 'text-blue-600' : 'text-zinc-500 hover:text-blue-600'}`}
+                                        >
+                                            <ThumbsUp className={`w-3 h-3 ${comment.isLiked ? 'fill-blue-600' : ''}`} /> {comment.likes > 0 ? comment.likes : 'Helpful'}
+                                        </button>
+                                        <button
+                                            onClick={() => handleReply(comment.author)}
+                                            className="text-[10px] text-zinc-500 hover:text-blue-600 font-medium transition-colors"
+                                        >
+                                            Reply
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -356,7 +468,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
 
             {/* Full Comment Box and List */}
             {showCommentBox && (
-                <div className="mb-6 animate-in fade-in slide-in-from-top-2 duration-300 bg-zinc-50 dark:bg-zinc-900/30 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800">
+                <div className="mb-4 md:mb-6 animate-in fade-in slide-in-from-top-2 duration-300 bg-zinc-50 dark:bg-zinc-900/30 p-3 md:p-4 rounded-xl border border-zinc-100 dark:border-zinc-800">
                     <div className="flex gap-3 items-start mb-6">
                         {/* Avatar for Current User in Input */}
                         <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xs shrink-0 mt-1 shadow-md">
@@ -382,9 +494,9 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                     </div>
 
                     {/* Display Comments */}
-                    {displayComments.length > 0 && (
+                    {localComments.length > 0 && (
                         <div className="space-y-4">
-                            {displayComments.map((comment: any) => (
+                            {localComments.map((comment: any) => (
                                 <div key={comment.id} className="flex gap-3 group/comment">
                                     {/* Avatar for Comment Author */}
                                     <div className="w-8 h-8 rounded-full bg-white dark:bg-zinc-800 flex items-center justify-center text-zinc-700 dark:text-zinc-300 font-bold text-xs shrink-0 border border-zinc-200 dark:border-zinc-700 shadow-sm">
@@ -396,6 +508,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                                             <div className="flex items-center gap-2">
                                                 <span className="font-bold text-sm text-zinc-900 dark:text-zinc-100">{comment.author}</span>
                                                 {isAdmin(comment.role, comment.author) && <AdminBadge />}
+                                                <UserBadge role={comment.role} />
                                             </div>
                                             <div className="flex items-center gap-2">
                                                 <span className="text-zinc-400 text-[10px]">{comment.timestamp}</span>
@@ -437,7 +550,23 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                                                 </button>
                                             </div>
                                         ) : (
-                                            <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">{comment.text}</p>
+                                            <>
+                                                <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">{comment.text}</p>
+                                                <div className="flex items-center gap-4 mt-2 border-t border-zinc-100 dark:border-zinc-700/50 pt-2">
+                                                    <button
+                                                        onClick={() => handleCommentLike(comment.id)}
+                                                        className={`flex items-center gap-1 text-xs font-bold transition-colors ${comment.isLiked ? 'text-blue-600' : 'text-zinc-500 hover:text-blue-600'}`}
+                                                    >
+                                                        <ThumbsUp className={`w-3.5 h-3.5 ${comment.isLiked ? 'fill-blue-600' : ''}`} /> {comment.likes > 0 ? comment.likes : 'Helpful'}
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleReply(comment.author)}
+                                                        className="text-xs text-zinc-500 hover:text-blue-600 font-bold transition-colors"
+                                                    >
+                                                        Reply
+                                                    </button>
+                                                </div>
+                                            </>
                                         )}
                                     </div>
                                 </div>
@@ -449,7 +578,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
 
             {/* Answer Section (Success Stories or Admin Answers) */}
             {post.answer && (
-                <div className="bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-900/50 rounded-xl p-5 border border-zinc-200 dark:border-zinc-800 shadow-sm mt-4">
+                <div className="bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-900/50 rounded-xl p-4 md:p-5 border border-zinc-200 dark:border-zinc-800 shadow-sm mt-4">
                     <div className="flex items-center gap-2 mb-3">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-green-600 bg-green-50 px-2 py-1 rounded">Answer</span>
                         {post.answer.level && <span className="text-[10px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-1 rounded">{post.answer.level}</span>}
@@ -463,6 +592,7 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                             <div className="flex items-baseline gap-2">
                                 <span className="font-bold text-sm text-zinc-900 dark:text-zinc-100">{post.answer.author}</span>
                                 {isAdmin(post.answer.role, post.answer.author) && <AdminBadge />}
+                                <UserBadge role={post.answer.role} />
                             </div>
                             <p className="text-xs text-zinc-500">{post.answer.role}</p>
                         </div>

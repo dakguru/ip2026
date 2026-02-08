@@ -121,11 +121,11 @@ const FEED_DATA = [
 ];
 
 const SidebarCard = ({ title, children, color = "orange" }: { title: string, children: React.ReactNode, color?: string }) => (
-    <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-sm border border-zinc-200 dark:border-zinc-800 overflow-hidden mb-6">
-        <div className="p-4 border-b border-zinc-100 dark:border-zinc-800">
+    <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-sm border border-zinc-200 dark:border-zinc-800 overflow-hidden mb-4 md:mb-6">
+        <div className="p-3 md:p-4 border-b border-zinc-100 dark:border-zinc-800">
             <h3 className={`font-bold text-sm uppercase text-${color}-600 tracking-wide`}>{title}</h3>
         </div>
-        <div className="p-4">
+        <div className="p-3 md:p-4">
             {children}
         </div>
     </div>
@@ -397,20 +397,20 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="max-w-7xl mx-auto px-2 md:px-4 py-3 md:py-6 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
 
                 {/* Main Content Area */}
                 <div className="lg:col-span-8 space-y-6">
 
                     {/* Ask Question Box */}
-                    <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-6 transition-all hover:shadow-md">
+                    <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-4 md:p-6 transition-all hover:shadow-md">
                         <h2 className="text-xl font-bold text-zinc-800 dark:text-zinc-100 mb-2">Need guidance on Departmental Exams or Topics? <span className="text-zinc-500 font-normal text-base">Ask our experts</span></h2>
 
                         <div className="relative mt-4">
                             <textarea
                                 value={questionInput}
                                 onChange={(e) => setQuestionInput(e.target.value)}
-                                className="w-full border border-zinc-300 dark:border-zinc-700 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[100px] resize-y bg-zinc-50 dark:bg-zinc-950 text-sm transition-all"
+                                className="w-full border border-zinc-300 dark:border-zinc-700 rounded-lg p-3 md:p-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[80px] md:min-h-[100px] resize-y bg-zinc-50 dark:bg-zinc-950 text-sm transition-all"
                                 placeholder="Type Your Question here..."
                             />
                             <span className="absolute bottom-3 right-3 text-xs text-zinc-400">{questionInput.length}/140</span>
@@ -453,7 +453,7 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
-                                    className={`flex-1 py-4 text-sm font-bold text-center border-b-2 transition-all ${activeTab === tab ? 'border-orange-500 text-orange-600 bg-orange-50 dark:bg-orange-900/10' : 'border-transparent text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
+                                    className={`flex-1 py-2 md:py-4 text-xs md:text-sm font-bold text-center border-b-2 transition-all ${activeTab === tab ? 'border-orange-500 text-orange-600 bg-orange-50 dark:bg-orange-900/10' : 'border-transparent text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
                                 >
                                     {tab}
                                 </button>
@@ -463,7 +463,7 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                         <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
                             {/* Success Story Intro Banner */}
                             {activeTab === "Success Stories" && (
-                                <div className="p-6 bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/10 dark:to-orange-900/20 border-b border-orange-200 dark:border-orange-800/30">
+                                <div className="p-4 md:p-6 bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/10 dark:to-orange-900/20 border-b border-orange-200 dark:border-orange-800/30">
                                     <div className="flex gap-2 mb-3">
                                         <span className="px-2 py-1 bg-white dark:bg-zinc-800 text-xs font-bold rounded shadow-sm text-zinc-600 dark:text-zinc-300">Success Story</span>
                                         <span className="px-2 py-1 bg-white dark:bg-zinc-800 text-xs font-bold rounded shadow-sm text-zinc-600 dark:text-zinc-300">Inspector Posts (IP)</span>
@@ -534,7 +534,7 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
 
                     {/* Login/Welcome Widget */}
                     {user ? (
-                        <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl p-6 text-center text-white shadow-lg relative overflow-hidden">
+                        <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl p-4 md:p-6 text-center text-white shadow-lg relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16 blur-2xl"></div>
                             <div className="relative z-10">
                                 <div className="w-16 h-16 mx-auto bg-white text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mb-3 shadow-md">
@@ -559,7 +559,7 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                             </div>
                         </div>
                     ) : (
-                        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 text-center border border-blue-100 dark:border-blue-800/30 transition-shadow hover:shadow-sm">
+                        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 md:p-6 text-center border border-blue-100 dark:border-blue-800/30 transition-shadow hover:shadow-sm">
                             <h3 className="font-bold text-lg text-zinc-800 dark:text-zinc-100 mb-2">Join the Dak Guru Community</h3>
                             <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">Register to get relevant Questions & Discussions on your feed regarding IP Exam 2026.</p>
                             <div className="flex gap-2 justify-center">

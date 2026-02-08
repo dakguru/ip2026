@@ -7,6 +7,8 @@ export interface Comment {
     author: string;
     text: string;
     timestamp: string;
+    likes?: number;
+    likedBy?: string[];
 }
 
 export interface Post {
@@ -34,7 +36,9 @@ function mapPost(doc: any): Post {
         id: c.id,
         author: c.author,
         text: c.text,
-        timestamp: c.timestamp
+        timestamp: c.timestamp,
+        likes: c.likes || 0,
+        likedBy: c.likedBy || []
     })) || [];
 
     return {
@@ -90,7 +94,7 @@ export async function addComment(postId: number, comment: Comment): Promise<bool
     await dbConnect();
     const result = await PostModel.updateOne(
         { id: postId },
-        { $push: { comments: comment } }
+        { $push: { comments: { ...comment, likes: 0, likedBy: [] } } }
     );
     return result.modifiedCount > 0;
 }
@@ -135,4 +139,38 @@ export async function toggleLike(postId: number, username: string): Promise<{ li
     await PostModel.updateOne({ id: postId }, { likes, likedBy });
 
     return { likes, liked: !alreadyLiked };
+}
+
+export async function toggleCommentLike(postId: number, commentId: number, username: string): Promise<{ likes: number, isLiked: boolean } | null> {
+    await dbConnect();
+    const post = await PostModel.findOne({ id: postId });
+    if (!post) return null;
+
+    const comment = post.comments.find((c: any) => c.id === commentId);
+    if (!comment) return null;
+
+    let likedBy = comment.likedBy || [];
+    let likes = comment.likes || 0;
+    const alreadyLiked = likedBy.includes(username);
+
+    if (alreadyLiked) {
+        likedBy = likedBy.filter((u: string) => u !== username);
+        likes = Math.max(0, likes - 1);
+    } else {
+        likedBy.push(username);
+        likes += 1;
+    }
+
+    // Update specific comment in array
+    await PostModel.updateOne(
+        { id: postId, "comments.id": commentId },
+        {
+            $set: {
+                "comments.$.likes": likes,
+                "comments.$.likedBy": likedBy
+            }
+        }
+    );
+
+    return { likes, isLiked: !alreadyLiked };
 }
