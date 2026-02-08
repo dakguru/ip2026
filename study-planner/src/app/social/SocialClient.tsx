@@ -26,7 +26,7 @@ const SUCCESS_STORIES_DATA = [
         id: 101,
         title: "How I cleared Inspector Posts Exam 2023 in my first attempt - My Strategy",
         author: "Vikram Singh",
-        role: "Inspector Posts",
+        role: "Inspector Posts (Gold Member)",
         followers: "450",
         views: "5.2k",
         likes: 210,
@@ -46,7 +46,7 @@ const SUCCESS_STORIES_DATA = [
         id: 102,
         title: "From GDS to PA: A journey of hard work and dedication",
         author: "Meera Patel",
-        role: "Postal Assistant",
+        role: "Postal Assistant (Silver Member)",
         followers: "320",
         views: "3.8k",
         likes: 156,
@@ -77,7 +77,7 @@ const FEED_DATA = [
         createdAt: "2024-01-05T09:15:00.000Z",
         answer: {
             author: "Suresh Kumar",
-            role: "Inspector Posts (2019 Batch)",
+            role: "Inspector Posts (Gold Member)",
             level: "Contributor-Level 9",
             avatar: "SK",
             content: "The Foreign Post rules can be tricky. My suggestion is to first understand the definitions in Part I thoroughly. Focus on the distinction between 'Letter Post' and 'Parcel Post'. \n\nFor memorization: \n1. Create flowcharts for the routing process. \n2. Use flashcards for specific Article numbers. \n3. Don't try to memorize verbatim; understand the procedure. \n\nMost questions in Paper II come from the practical application of these rules rather than direct theory.",
@@ -97,7 +97,7 @@ const FEED_DATA = [
         createdAt: "2024-01-10T16:20:00.000Z",
         answer: {
             author: "Dak Guru Team",
-            role: "Official Mentor",
+            role: "Official Mentor (Gold)",
             level: "Admin",
             avatar: "DG",
             content: "Yes, IT Modernization 2.0 is a crucial topic for the upcoming exams. While the core syllabus remains similar, expect more questions on: \n- DARPAN 2.0 implementation \n- McCamish System updates \n- Network connectivity standards \n\nWe have updated our 'Current Affairs' section with a dedicated PDF on IT 2.0. Please refer to that for detailed notes.",
@@ -129,6 +129,71 @@ const SidebarCard = ({ title, children, color = "orange" }: { title: string, chi
             {children}
         </div>
     </div>
+);
+
+const isGoldUser = (role?: string) => role?.toLowerCase().includes('gold');
+const isSilverUser = (role?: string) => role?.toLowerCase().includes('silver');
+
+// Reusing UserBadge logic locally for Sidebar display consistency
+const UserBadge = ({ role }: { role?: string }) => {
+    if (!role) return null;
+    if (isGoldUser(role)) {
+        return (
+            <span className="inline-flex items-center gap-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-amber-200 dark:border-amber-800 ml-2 shadow-sm">
+                Gold <Star className="w-3 h-3 text-amber-600 dark:text-amber-400 fill-amber-600" />
+            </span>
+        );
+    }
+    if (isSilverUser(role)) {
+        return (
+            <span className="inline-flex items-center gap-1 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-slate-300 dark:border-slate-600 ml-2 shadow-sm">
+                Silver <Star className="w-3 h-3 text-slate-500 dark:text-slate-400 fill-slate-500" />
+            </span>
+        );
+    }
+    return null;
+};
+
+const TopContributors = () => (
+    <SidebarCard title="Top Contributors" color="amber">
+        <div className="space-y-4">
+            {[
+                { name: "Vikram Singh", role: "Inspector Posts (Gold)", points: "15.2k", avatar: "V" },
+                { name: "Suresh Kumar", role: "Inspector Posts (Gold)", points: "12.8k", avatar: "S" },
+                { name: "Meera Patel", role: "Postal Assistant (Silver)", points: "9.5k", avatar: "M" },
+                { name: "R.K. Sharma", role: "ASP (Silver)", points: "8.1k", avatar: "R" },
+            ].map((user, idx) => (
+                <div key={idx} className="flex items-center gap-3 group cursor-pointer p-2 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors">
+                    <div className="relative">
+                        <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shadow-sm ${isGoldUser(user.role) ? 'bg-amber-100 text-amber-700 ring-2 ring-amber-100' : 'bg-slate-100 text-slate-600 ring-2 ring-slate-100'}`}>
+                            {user.avatar}
+                        </div>
+                        {isGoldUser(user.role) && (
+                            <div className="absolute -bottom-1 -right-1 bg-white dark:bg-zinc-900 rounded-full p-0.5 shadow-sm">
+                                <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
+                            </div>
+                        )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-1">
+                            <span className="font-bold text-sm text-zinc-900 dark:text-zinc-100 truncate">{user.name}</span>
+                            {/* Simplified badge for sidebar compact view */}
+                            {isGoldUser(user.role) && <span className="w-2 h-2 rounded-full bg-amber-500" title="Gold Member"></span>}
+                            {isSilverUser(user.role) && <span className="w-2 h-2 rounded-full bg-slate-400" title="Silver Member"></span>}
+                        </div>
+                        <p className="text-xs text-zinc-500 truncate">{user.role}</p>
+                    </div>
+                    <div className="text-right">
+                        <span className="block font-bold text-xs text-blue-600">{user.points}</span>
+                        <span className="text-[10px] text-zinc-400">Points</span>
+                    </div>
+                </div>
+            ))}
+            <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800 text-center">
+                <button className="text-xs font-bold text-zinc-500 hover:text-blue-600 transition-colors">View Leaderboard</button>
+            </div>
+        </div>
+    </SidebarCard>
 );
 
 // Define a loose type for now to match the mix of DB and Mock data
@@ -574,6 +639,8 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                     )}
 
                     {/* Web Resources Widget (Replaced Expert Panel) */}
+                    {/* Web Resources Widget */}
+                    <TopContributors />
                     <SidebarCard title="Dak Guru Resources" color="teal">
                         <div className="space-y-3">
                             <Link href="/planner" className="flex items-center gap-3 p-3 rounded-lg hover:bg-teal-50 dark:hover:bg-teal-900/20 group transition-colors cursor-pointer border border-transparent hover:border-teal-100">

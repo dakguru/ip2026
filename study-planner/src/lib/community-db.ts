@@ -1,5 +1,6 @@
 import dbConnect from './mongoose';
 import PostModel from '@/models/Post';
+import UserModel from '@/models/User';
 
 // Re-export interfaces for use in other files
 export interface Comment {
@@ -30,7 +31,9 @@ export interface Post {
 
 // Helper: Map Mongoose doc to Post interface
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function mapPost(doc: any): Post {
+// Helper: Map Mongoose doc to Post interface
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function mapPost(doc: any, userMap?: Map<string, any>): Post {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const comments = doc.comments?.map((c: any) => ({
         id: c.id,
@@ -46,11 +49,17 @@ function mapPost(doc: any): Post {
         title: doc.title,
         description: doc.description,
         author: doc.author,
-        role: doc.role,
+        role: getEnrichedRole(doc.author, doc.role, userMap),
         followers: doc.followers,
         views: doc.views,
-        answer: doc.answer,
-        comments: comments,
+        answer: doc.answer ? {
+            ...doc.answer,
+            role: getEnrichedRole(doc.answer.author, doc.answer.role, userMap)
+        } : null,
+        comments: comments.map((c: any) => ({
+            ...c,
+            role: getEnrichedRole(c.author, c.role, userMap)
+        })),
         tags: doc.tags || [],
         createdAt: doc.createdAt,
         likes: doc.likes,
@@ -58,10 +67,80 @@ function mapPost(doc: any): Post {
     };
 }
 
+// Helper to deterministically adding badges to old posts/comments
+// Helper to getting badges based on REAL user membership
+function getEnrichedRole(author: string, currentRole?: string, userMap?: Map<string, any>): string {
+    const role = currentRole || "Aspirant";
+
+    // 1. If we have a user map, assume it's the source of truth
+    if (userMap) {
+        const user = userMap.get(author);
+
+        // Clean up existing badge strings to avoid duplication if re-processing
+        let baseRole = role;
+        baseRole = baseRole.replace(/\s*\((Gold|Silver)\s*Member\)/i, "").trim();
+        baseRole = baseRole.replace(/\s*\(Gold\)/i, "").trim();
+        baseRole = baseRole.replace(/\s*\(Silver\)/i, "").trim();
+
+        if (!baseRole) baseRole = "Aspirant";
+
+        // Admin checks
+        if (!user || user.role === 'admin' || baseRole.toLowerCase().includes("admin") || author.toLowerCase().includes("dak guru")) {
+            return baseRole;
+        }
+
+        // Assign badge based on DB membership level
+        if (user.membershipLevel === 'gold') return `${baseRole} (Gold Member)`;
+        if (user.membershipLevel === 'silver') return `${baseRole} (Silver Member)`;
+
+        return baseRole; // Free user
+    }
+
+    // Fallback if no userMap provided (should rarely happen if getAllPosts is used)
+    const name = author.toLowerCase();
+
+    // 1. Skip admins/official accounts from getting extra badges
+    if (name.includes("admin") || name.includes("dak guru") || role.toLowerCase().includes("admin")) {
+        return role;
+    }
+
+    // 2. If already has a badge, return as is
+    if (role.toLowerCase().includes("gold") || role.toLowerCase().includes("silver")) {
+        return role;
+    }
+
+    // 3. Explicit overrides for the requested users
+    if (name.includes("sateesh") || name.includes("vikram") || name.includes("suresh") || name.includes("prabhu")) return `${role} (Gold Member)`;
+    if (name.includes("meera")) return `${role} (Silver Member)`;
+
+    // 4. Default: No badge for others (Free users)
+    return role;
+}
+
 export async function getAllPosts(): Promise<Post[]> {
     await dbConnect();
-    const posts = await PostModel.find({}).sort({ createdAt: -1 }); // Newest first
-    return posts.map(mapPost);
+    const posts = await PostModel.find({}).sort({ createdAt: -1 }).lean();
+
+    // Collect all unique authors
+    const authors = new Set<string>();
+    posts.forEach((p: any) => {
+        if (p.author) authors.add(p.author);
+        if (p.answer && p.answer.author) authors.add(p.answer.author);
+        if (p.comments) {
+            p.comments.forEach((c: any) => {
+                if (c.author) authors.add(c.author);
+            });
+        }
+    });
+
+    // Fetch user details for these authors
+    const users = await UserModel.find({ name: { $in: Array.from(authors) } }).select('name role membershipLevel').lean();
+
+    // Create lookup map
+    const userMap = new Map<string, any>();
+    users.forEach((u: any) => userMap.set(u.name, u));
+
+    return posts.map((post: any) => mapPost(post, userMap));
 }
 
 // No longer needed for external consumers, but kept for compatibility logic if any
@@ -80,7 +159,13 @@ export async function addPost(post: Post): Promise<Post> {
         likedBy: [],
         comments: []
     });
-    return mapPost(newPost);
+
+    // Fetch user for this author to return correct badge immediately
+    const user = await UserModel.findOne({ name: post.author }).select('name role membershipLevel').lean();
+    const userMap = new Map();
+    if (user) userMap.set(user.name, user);
+
+    return mapPost(newPost, userMap);
 }
 
 export async function deletePost(id: number): Promise<boolean> {
