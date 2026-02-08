@@ -53,8 +53,15 @@ public class MainActivity extends BridgeActivity {
             });
         }
         
-        // Register Download Complete Receiver
-        registerReceiver(onDownloadComplete, new android.content.IntentFilter(android.app.DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        // Register Download Complete Receiver with required flags for API 34+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(onDownloadComplete, 
+                new android.content.IntentFilter(android.app.DownloadManager.ACTION_DOWNLOAD_COMPLETE),
+                android.content.Context.RECEIVER_EXPORTED);
+        } else {
+            registerReceiver(onDownloadComplete, 
+                new android.content.IntentFilter(android.app.DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        }
 
         // 3. Centralized back button handling
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
