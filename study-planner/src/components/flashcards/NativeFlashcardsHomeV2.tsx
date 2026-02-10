@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Search, SlidersHorizontal, Layers, BookOpen, Clock,
-    Zap, ChevronRight, Lock, Play, Star, Bookmark, Crown
+    Zap, ChevronRight, Lock, Play, Star, Bookmark, Crown, Sparkles, Timer, ArrowRight
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import FlashcardsMarquee from "@/components/FlashcardsMarquee";
@@ -149,27 +149,67 @@ export default function NativeFlashcardsHomeV2({
                 </div>
             </div>
 
-            {/* 5. TOPICS / PAPERS SECTION (VERTICAL STACK - CORE CHANGE) */}
+            {/* 5. TOPICS / PAPERS SECTION (VERTICAL STACK) */}
             <div className="px-4 space-y-4">
-                <AnimatePresence mode="popLayout">
-                    {decks.map((deck, i) => (
-                        <VerticalPaperCard
-                            key={deck.id}
-                            deck={deck}
-                            progress={progress[deck.id] || 0}
-                            index={i}
-                            onSelect={() => onDeckSelect(deck.id)}
-                            onLongPress={() => { }} // Could implement bookmarking deck or showing details
-                            locked={!hasAccess && (deck.category === 'Paper I' || deck.category === 'Paper III' || deck.category === 'PYQ')}
+                {activeFilter === 'All' && !searchQuery ? (
+                    // CATEGORY VIEW
+                    <div className="grid grid-cols-1 gap-4 pb-20">
+                        <MobileCategoryCard
+                            title="Paper I"
+                            subtitle="Acts, Rules & Framework. The core foundation."
+                            icon={<Layers className="w-6 h-6" />}
+                            theme="indigo"
+                            actionText="Explore Topics"
+                            onClick={() => setActiveFilter('Paper - I')}
                         />
-                    ))}
-                </AnimatePresence>
-
-                {decks.length === 0 && (
-                    <div className="text-center py-20 opacity-50">
-                        <Layers className="w-12 h-12 mx-auto mb-4 text-slate-400 dark:text-zinc-700" />
-                        <p className="text-slate-500 dark:text-zinc-500 text-sm">No topics match your filter.</p>
+                        <MobileCategoryCard
+                            title="Paper III"
+                            subtitle="Legal, Financial, and Administrative Knowledge."
+                            icon={<BookOpen className="w-6 h-6" />}
+                            theme="emerald"
+                            actionText="Explore Topics"
+                            onClick={() => setActiveFilter('Paper - III')}
+                        />
+                        <MobileCategoryCard
+                            title="PYQs"
+                            subtitle="Previous Year Questions. Analyze patterns and practice."
+                            icon={<Timer className="w-6 h-6" />}
+                            theme="amber"
+                            actionText="Start Practicing"
+                            onClick={() => setActiveFilter('PYQs')}
+                        />
+                        <MobileCategoryCard
+                            title="Current Affairs"
+                            subtitle="Latest Updates, News, and General Awareness."
+                            icon={<Sparkles className="w-6 h-6" />}
+                            theme="rose"
+                            actionText="Read Now"
+                            onClick={() => setActiveFilter('Current Affairs')}
+                        />
                     </div>
+                ) : (
+                    // DECK LIST VIEW
+                    <>
+                        <AnimatePresence mode="popLayout">
+                            {decks.map((deck, i) => (
+                                <VerticalPaperCard
+                                    key={deck.id}
+                                    deck={deck}
+                                    progress={progress[deck.id] || 0}
+                                    index={i}
+                                    onSelect={() => onDeckSelect(deck.id)}
+                                    locked={!hasAccess && (deck.category === 'Paper I' || deck.category === 'Paper III' || deck.category === 'PYQ')}
+                                />
+                            ))}
+                        </AnimatePresence>
+
+                        {decks.length === 0 && (
+                            <div className="text-center py-20 opacity-50">
+                                <Layers className="w-12 h-12 mx-auto mb-4 text-slate-400 dark:text-zinc-700" />
+                                <p className="text-slate-500 dark:text-zinc-500 text-sm">No topics match your filter.</p>
+                            </div>
+                        )}
+                    </>
                 )}
             </div>
 
@@ -255,6 +295,38 @@ function VerticalPaperCard({ deck, progress, index, onSelect, locked }: any) {
                         />
                     </div>
                 )}
+            </div>
+        </motion.button>
+    );
+}
+
+function MobileCategoryCard({ title, subtitle, icon, theme, onClick, actionText }: any) {
+    const styles: any = {
+        indigo: { bgIcon: 'bg-indigo-100 dark:bg-indigo-900/30', textIcon: 'text-indigo-600 dark:text-indigo-400', accent: 'bg-indigo-500/10', text: 'text-indigo-600 dark:text-indigo-400' },
+        emerald: { bgIcon: 'bg-emerald-100 dark:bg-emerald-900/30', textIcon: 'text-emerald-600 dark:text-emerald-400', accent: 'bg-emerald-500/10', text: 'text-emerald-600 dark:text-emerald-400' },
+        amber: { bgIcon: 'bg-amber-100 dark:bg-amber-900/30', textIcon: 'text-amber-600 dark:text-amber-400', accent: 'bg-amber-500/10', text: 'text-amber-600 dark:text-amber-400' },
+        rose: { bgIcon: 'bg-rose-100 dark:bg-rose-900/30', textIcon: 'text-rose-600 dark:text-rose-400', accent: 'bg-rose-500/10', text: 'text-rose-600 dark:text-rose-400' }
+    };
+    const s = styles[theme] || styles.indigo;
+
+    return (
+        <motion.button
+            whileTap={{ scale: 0.98 }}
+            onClick={onClick}
+            className="group relative w-full bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 rounded-3xl p-6 text-left overflow-hidden shadow-sm hover:shadow-md transition-all"
+        >
+            <div className={`absolute top-0 right-0 w-24 h-24 ${s.accent} rounded-bl-[80px] -mr-6 -mt-6 transition-transform group-hover:scale-110`} />
+
+            <div className="relative z-10">
+                <div className={`w-12 h-12 rounded-xl ${s.bgIcon} ${s.textIcon} flex items-center justify-center mb-4`}>
+                    {icon}
+                </div>
+                <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-2 tracking-tight">{title}</h3>
+                <p className="text-slate-500 dark:text-slate-400 text-xs font-medium mb-5 pr-8 leading-relaxed max-w-[90%]">{subtitle}</p>
+
+                <div className={`flex items-center text-xs font-bold ${s.text} uppercase tracking-wide`}>
+                    {actionText} <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                </div>
             </div>
         </motion.button>
     );
