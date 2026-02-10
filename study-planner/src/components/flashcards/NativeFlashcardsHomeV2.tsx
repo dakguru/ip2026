@@ -45,10 +45,10 @@ export default function NativeFlashcardsHomeV2({
     // And "Floating Filter Chips".
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-white pb-24 font-sans selection:bg-indigo-500/30 transition-colors duration-500">
+        <div className="min-h-[100dvh] bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-white pb-[max(6rem,env(safe-area-inset-bottom))] font-sans selection:bg-indigo-500/30 transition-colors duration-500">
 
             {/* 1. HERO HEADER (Top 35% ish visually, simplified for scroll) */}
-            <div className="relative pt-8 pb-4 px-6 overflow-hidden">
+            <div className="relative pt-[max(2rem,env(safe-area-inset-top))] pb-4 px-6 overflow-hidden">
                 {/* Background Ambient Gradients */}
                 <div className="absolute top-[-50%] left-[-20%] w-[80%] h-[80%] rounded-full bg-indigo-600/20 blur-[100px] pointer-events-none" />
                 <div className="absolute top-[0%] right-[-20%] w-[60%] h-[60%] rounded-full bg-violet-600/10 blur-[80px] pointer-events-none" />
@@ -160,7 +160,7 @@ export default function NativeFlashcardsHomeV2({
                             index={i}
                             onSelect={() => onDeckSelect(deck.id)}
                             onLongPress={() => { }} // Could implement bookmarking deck or showing details
-                            locked={!hasAccess}
+                            locked={!hasAccess && (deck.category === 'Paper I' || deck.category === 'Paper III' || deck.category === 'PYQ')}
                         />
                     ))}
                 </AnimatePresence>

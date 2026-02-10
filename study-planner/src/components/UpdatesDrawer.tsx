@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
+import Link from "next/link";
 import { X, Calendar, CheckCircle2, Sparkles, Bell } from "lucide-react";
 
 interface UpdateItem {
     title: string;
-    desc: string;
+    desc: string | ReactNode;
 }
 
 interface UpdateGroup {
@@ -14,6 +15,29 @@ interface UpdateGroup {
 }
 
 const UPDATES_DATA: UpdateGroup[] = [
+    {
+        date: "10.02.2026",
+        items: [
+            {
+                title: "Flashcards Section Revamped – Now Live!",
+                desc: (
+                    <div className="space-y-2">
+                        <p>We’re excited to announce that the <strong>Flashcards Section</strong> has been completely revamped!</p>
+                        <div className="space-y-1">
+                            <p className="font-semibold">✨ What’s New:</p>
+                            <ul className="list-disc pl-4 space-y-1">
+                                <li>Added a dedicated <strong>Current Affairs</strong> category</li>
+                                <li>Flashcards for <strong>January 2026</strong> are now being added under major and important sub-categories</li>
+                                <li>The <strong>Current Affairs Flashcards page is open for FREE access</strong> to all users for a limited period</li>
+                            </ul>
+                        </div>
+                        <p>We invite you to explore the updated section and share your <strong>valuable feedback and suggestions</strong> to help us further improve the content and user interface.</p>
+                        <p className="pt-2">👉 Visit: <Link href="/flashcards" className="text-blue-600 hover:underline font-bold">www.dakguru.com/flashcards</Link> → Current Affairs Category</p>
+                    </div>
+                )
+            }
+        ]
+    },
     {
         date: "07.02.2026",
         items: [

@@ -4411,7 +4411,7 @@ const convertToQuizSet = (setId: number, title: string, data: RawQuestion[]) => 
 };
 
 // -- HELPER to create topics easily --
-const createTopic = (id: string, title: string, category: 'Paper I' | 'Paper II' | 'Paper III' | 'PYQ', setIds: number[] = []) => {
+const createTopic = (id: string, title: string, category: 'Paper I' | 'Paper II' | 'Paper III' | 'PYQ' | 'Current Affairs', setIds: number[] = []) => {
   const sets = setIds.map(setId => {
     const data = ALL_SETS_DATA[setId];
     return data ? convertToQuizSet(setId, "Practice Set " + setId, data) : null;
@@ -4493,6 +4493,16 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-27', 'Welfare measures for Employees/GDS', 'Paper III'),
   createTopic('p3-28', 'P&T FHB Volume I', 'Paper III'),
   createTopic('p3-29', 'Postal FHB Volume II', 'Paper III'),
+
+  // --- CURRENT AFFAIRS (JAN 2026) ---
+  createTopic('ca-jan26-1', 'Most Important Current Affairs (Jan 2026)', 'Current Affairs'),
+  createTopic('ca-jan26-2', 'Banking, Economy, Business & Finance (Jan 2026)', 'Current Affairs'),
+  createTopic('ca-jan26-3', 'Government Schemes (Jan 2026)', 'Current Affairs'),
+  createTopic('ca-jan26-4', 'National News (Jan 2026)', 'Current Affairs'),
+  createTopic('ca-jan26-5', 'Sports (Jan 2026)', 'Current Affairs'),
+  createTopic('ca-jan26-6', 'MoU’s & AGREEMENTS (Jan 2026)', 'Current Affairs'),
+  createTopic('ca-jan26-7', 'International Affairs (Jan 2026)', 'Current Affairs'),
+  createTopic('ca-jan26-8', 'Science and Tech (Jan 2026)', 'Current Affairs'),
 
 ];
 

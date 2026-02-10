@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, PanInfo, Variants } from "framer-motion";
 import {
-    ArrowLeft, AlertTriangle, ChevronRight, ChevronLeft,
+    ArrowLeft, AlertTriangle, ChevronRight, ChevronLeft, ArrowRight,
     RotateCcw, Sun, Moon, Sparkles, Layers, BookOpen, Scale, FileText, Bus, Shuffle,
     Home,
     Settings,
@@ -35,7 +35,15 @@ import {
     poGuidePartII,
     postalManualVolIII,
     poGuidePartI,
-    postalManualVolVIPartI
+    postalManualVolVIPartI,
+    jan2026MostImportant,
+    jan2026Banking,
+    jan2026GovtSchemes,
+    jan2026NationalNews,
+    jan2026Sports,
+    jan2026MoU,
+    jan2026International,
+    jan2026ScienceTech
 } from "../../data/flashcards";
 import { QUIZ_DATA } from "@/data/quizzes";
 import * as GeneratedCards from "../../data/flashcards/generated_from_mcq";
@@ -107,11 +115,34 @@ export default function FlashcardsPage() {
     const [userRole, setUserRole] = useState<string | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<string | null>(null);
     const [isLoadingAuth, setIsLoadingAuth] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
 
     // State
     const [selectedDeckId, setSelectedDeckId] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState("");
     const [activeFilter, setActiveFilter] = useState("All");
+    const [showCategories, setShowCategories] = useState(true); // New state for view mode
+
+    // Handle category selection
+    const handleCategorySelect = (category: string) => {
+        setActiveFilter(category);
+        setShowCategories(false);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Handle back to categories
+    const handleBackToCategories = () => {
+        setShowCategories(true);
+        setActiveFilter("All");
+        setSearchQuery("");
+    };
+
+    // Auto-switch to deck view if searching
+    useEffect(() => {
+        if (searchQuery.length > 0 && showCategories) {
+            setShowCategories(false);
+        }
+    }, [searchQuery]);
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isInitiallyShuffled, setIsInitiallyShuffled] = useState(false);
     const [deckProgress, setDeckProgress] = useState<Record<string, number>>({});
@@ -185,9 +216,15 @@ export default function FlashcardsPage() {
             }
         }
 
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
         setIsLoadingAuth(false);
+        return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    // --- ACCESS CONTROL ---
     // --- ACCESS CONTROL ---
     const hasAccess = userRole === 'admin' || membershipLevel === 'gold';
 
@@ -195,10 +232,18 @@ export default function FlashcardsPage() {
 
 
     const handleSelectDeck = (id: string, startIdx: number = 0, shuffle: boolean = false) => {
-        if (!hasAccess) {
-            router.push('/pricing'); // Redirect free users to pricing
-            return;
+        // Check for restricted categories
+        if (id !== 'bookmarks') {
+            const topic = QUIZ_DATA.find(t => t.id === id);
+            const category = topic?.category;
+            const isRestricted = category === 'Paper I' || category === 'Paper III' || category === 'PYQ';
+
+            if (isRestricted && !hasAccess) {
+                router.push('/pricing'); // Redirect free users to pricing only for restricted content
+                return;
+            }
         }
+
         setSelectedDeckId(id);
         setCurrentCardIndex(startIdx);
         setIsInitiallyShuffled(shuffle);
@@ -303,6 +348,17 @@ export default function FlashcardsPage() {
                 case 'p1-16': manualContent = postalManualVolVII; break;
                 case 'p1-19': manualContent = poGuidePartII; break;
                 case 'p1-36': manualContent = postalManualVolIII; break;
+
+                // Current Affairs - Jan 2026
+                case 'ca-jan26-1': manualContent = jan2026MostImportant; break;
+                case 'ca-jan26-2': manualContent = jan2026Banking; break;
+                case 'ca-jan26-3': manualContent = jan2026GovtSchemes; break;
+                case 'ca-jan26-4': manualContent = jan2026NationalNews; break;
+                case 'ca-jan26-5': manualContent = jan2026Sports; break;
+                case 'ca-jan26-6': manualContent = jan2026MoU; break;
+                case 'ca-jan26-7': manualContent = jan2026International; break;
+                case 'ca-jan26-8': manualContent = jan2026ScienceTech; break;
+
                 default: manualContent = [];
             }
         }
@@ -332,7 +388,8 @@ export default function FlashcardsPage() {
                 const matchesFilter = activeFilter === "All" ||
                     (activeFilter === "Paper - I" && category === "Paper I") ||
                     (activeFilter === "Paper - III" && category === "Paper III") ||
-                    (activeFilter === "PYQs" && (category.includes("PYQ") || title.includes("PYQ"))) ||
+                    (activeFilter === "PYQs" && category === "PYQ") ||
+                    (activeFilter === "Current Affairs" && category === "Current Affairs") ||
                     (activeFilter === "Bookmarked FCs" && fullDeck.some(c => bookmarks.has(c.id))) ||
                     (activeFilter === "Recently Studied" && deckProgress.hasOwnProperty(topic.id));
 
@@ -353,7 +410,9 @@ export default function FlashcardsPage() {
     const finalDecks = organizeDecks();
     const paper1Decks = finalDecks.filter(d => d.category === 'Paper I');
     const paper3Decks = finalDecks.filter(d => d.category === 'Paper III');
-    const otherDecks = finalDecks.filter(d => d.category !== 'Paper I' && d.category !== 'Paper III');
+    const pyqDecks = finalDecks.filter(d => d.category === 'PYQ');
+    const caDecks = finalDecks.filter(d => d.category === 'Current Affairs');
+    const otherDecks = finalDecks.filter(d => !['Paper I', 'Paper III', 'PYQ', 'Current Affairs'].includes(d.category));
 
 
     if (!mounted) return null;
@@ -367,7 +426,7 @@ export default function FlashcardsPage() {
 
     if (!selectedDeckId) {
         // ANDROID V2 IMMERSIVE HOME
-        if (Capacitor.isNativePlatform()) {
+        if (Capacitor.isNativePlatform() || isMobile) {
             return (
                 <NativeFlashcardsHomeV2
                     decks={finalDecks}
@@ -472,143 +531,322 @@ export default function FlashcardsPage() {
                     </div>
                 </div>
 
-                {/* 4. MOBILE CATEGORIES SCROLL */}
-                <div className="md:hidden overflow-x-auto pb-2 -mt-4 pt-8 px-4 flex gap-2 no-scrollbar">
-                    {["All", "Paper - I", "Paper - III", "PYQs", "Bookmarked FCs"].map(filter => (
+                {/* 4. MOBILE CATEGORIES SCROLL - HIDDEN IN LANDING VIEW */}
+                {!showCategories && (
+                    <div className="md:hidden overflow-x-auto pb-2 -mt-4 pt-8 px-4 flex gap-2 no-scrollbar">
                         <button
-                            key={filter}
-                            onClick={() => setActiveFilter(filter === activeFilter && filter !== 'All' ? 'All' : filter)}
-                            className={`whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold border transition-all ${activeFilter === filter ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/20' : 'bg-white dark:bg-zinc-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-zinc-800'}`}
+                            onClick={handleBackToCategories}
+                            className="whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold border bg-white dark:bg-zinc-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-zinc-800 flex items-center gap-2"
                         >
-                            {filter}
+                            <ChevronLeft className="w-3 h-3" /> Back
                         </button>
-                    ))}
-                </div>
+                        {["Paper - I", "Paper - III", "PYQs", "Current Affairs", "Bookmarked FCs"].map(filter => (
+                            <button
+                                key={filter}
+                                onClick={() => setActiveFilter(filter === activeFilter ? 'All' : filter)}
+                                className={`whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold border transition-all ${activeFilter === filter ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/20' : 'bg-white dark:bg-zinc-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-zinc-800'}`}
+                            >
+                                {filter}
+                            </button>
+                        ))}
+                    </div>
+                )}
 
-                {/* 6. FLOATING LEFT FILTER RAIL (Desktop Only) */}
-                <div className="fixed left-0 top-1/3 z-30 hidden xl:flex flex-col gap-1 p-1 bg-white dark:bg-zinc-900 border-y border-r border-slate-200 dark:border-zinc-800 rounded-r-2xl shadow-lg -translate-x-[calc(100%-60px)] hover:translate-x-0 transition-transform duration-300 w-56 group">
-                    <div className="px-4 py-2 text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1 opacity-0 group-hover:opacity-100 transition-opacity">Filters</div>
-                    {[
-                        { icon: "📘", label: "Acts", filter: "Act" },
-                        { icon: "📗", label: "Rules", filter: "Rule" },
-                        { icon: "📙", label: "Schemes", filter: "Scheme" },
-                        { icon: "⚖️", label: "Laws", filter: "Law" }
-                    ].map((item) => (
-                        <div key={item.label} onClick={() => setActiveFilter(activeFilter === item.filter ? "All" : item.filter)}
-                            className={`flex items-center gap-3 p-2.5 rounded-xl cursor-pointer transition-all ${activeFilter === item.filter ? 'bg-indigo-50 dark:bg-indigo-900/20 shadow-sm' : 'hover:bg-slate-50 dark:hover:bg-zinc-800'}`}>
-                            <div className="w-8 h-8 rounded-lg bg-white dark:bg-zinc-800 shadow-sm border border-slate-100 dark:border-zinc-700 flex items-center justify-center shrink-0 text-base shadow-slate-200/50">
-                                {item.icon}
-                            </div>
-                            <span className={`text-sm font-medium ${activeFilter === item.filter ? 'text-indigo-700 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>{item.label}</span>
-                            {activeFilter === item.filter && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-indigo-500" />}
+                {/* 6. FLOATING LEFT FILTER RAIL (Desktop Only) - HIDDEN IN LANDING VIEW */}
+                {!showCategories && (
+                    <div className="fixed left-0 top-1/3 z-30 hidden xl:flex flex-col gap-1 p-1 bg-white dark:bg-zinc-900 border-y border-r border-slate-200 dark:border-zinc-800 rounded-r-2xl shadow-lg -translate-x-[calc(100%-60px)] hover:translate-x-0 transition-transform duration-300 w-56 group">
+                        <div onClick={handleBackToCategories} className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-zinc-800 cursor-pointer text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors border-b border-slate-100 dark:border-zinc-800 mb-1">
+                            <ChevronLeft className="w-4 h-4" />
+                            <span className="text-xs font-bold pl-1">BACK TO HOME</span>
                         </div>
-                    ))}
-                    <div className="mt-2 pt-2 border-t border-slate-100 dark:border-zinc-800 p-2">
-                        <div onClick={() => setActiveFilter("All")} className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-zinc-800 cursor-pointer text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">
-                            <span className="text-xs font-bold pl-1">RESET FILTERS</span>
+                        <div className="px-4 py-2 text-[10px] font-black uppercase text-slate-400 tracking-widest mb-1 opacity-0 group-hover:opacity-100 transition-opacity">Filters</div>
+                        {[
+                            { icon: "📘", label: "Acts", filter: "Act" },
+                            { icon: "📗", label: "Rules", filter: "Rule" },
+                            { icon: "📙", label: "Schemes", filter: "Scheme" },
+                            { icon: "⚖️", label: "Laws", filter: "Law" }
+                        ].map((item) => (
+                            <div key={item.label} onClick={() => setActiveFilter(activeFilter === item.filter ? "All" : item.filter)}
+                                className={`flex items-center gap-3 p-2.5 rounded-xl cursor-pointer transition-all ${activeFilter === item.filter ? 'bg-indigo-50 dark:bg-indigo-900/20 shadow-sm' : 'hover:bg-slate-50 dark:hover:bg-zinc-800'}`}>
+                                <div className="w-8 h-8 rounded-lg bg-white dark:bg-zinc-800 shadow-sm border border-slate-100 dark:border-zinc-700 flex items-center justify-center shrink-0 text-base shadow-slate-200/50">
+                                    {item.icon}
+                                </div>
+                                <span className={`text-sm font-medium ${activeFilter === item.filter ? 'text-indigo-700 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>{item.label}</span>
+                                {activeFilter === item.filter && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-indigo-500" />}
+                            </div>
+                        ))}
+                        <div className="mt-2 pt-2 border-t border-slate-100 dark:border-zinc-800 p-2">
+                            <div onClick={() => setActiveFilter("All")} className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-zinc-800 cursor-pointer text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">
+                                <span className="text-xs font-bold pl-1">RESET FILTERS</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
 
                 {/* 3. GRID SYSTEM & 4. ACADEMIC SECTION HEADERS */}
                 <main className="relative z-10 px-4 md:px-[8vw] max-w-[1400px] mx-auto pb-20 md:pb-32 space-y-12 md:space-y-16 pt-8 md:pt-12">
 
-                    {/* Paper I */}
-                    {paper1Decks.length > 0 && (
-                        <section>
-                            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
-                                <div>
-                                    <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Paper I</h2>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Acts, Rules & Regulatory Framework</p>
+                    {/* CATEGORY LANDING VIEW */}
+                    {showCategories ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+                            {/* Paper I */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+                                onClick={() => handleCategorySelect('Paper - I')}
+                                className="group relative bg-white dark:bg-zinc-900/50 rounded-3xl border border-slate-200 dark:border-zinc-800 p-8 cursor-pointer hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110" />
+                                <div className="relative z-10">
+                                    <div className="w-14 h-14 rounded-2xl bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-6">
+                                        <Layers className="w-7 h-7" />
+                                    </div>
+                                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2">Paper I</h3>
+                                    <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">Acts, Rules, and Regulatory Framework. The core foundation.</p>
+                                    <div className="flex items-center text-sm font-bold text-indigo-600 dark:text-indigo-400">
+                                        Explore Topics <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                    </div>
                                 </div>
-                                <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{paper1Decks.length} TOPICS</span>
                             </motion.div>
 
-                            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-                                {paper1Decks.map((item, i) => (
-                                    <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
-                                        <PremiumKnowledgeTile
-                                            id={item.id}
-                                            index={i}
-                                            title={item.title}
-                                            category="Paper I"
-                                            cardCount={item.count}
-                                            onAction={handleSelectDeck}
-                                            lastIndex={deckProgress[item.id] || 0}
-                                            locked={!hasAccess}
-                                        />
+                            {/* Paper III */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
+                                onClick={() => handleCategorySelect('Paper - III')}
+                                className="group relative bg-white dark:bg-zinc-900/50 rounded-3xl border border-slate-200 dark:border-zinc-800 p-8 cursor-pointer hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110" />
+                                <div className="relative z-10">
+                                    <div className="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6">
+                                        <BookOpen className="w-7 h-7" />
                                     </div>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-
-                    {/* Paper III */}
-                    {paper3Decks.length > 0 && (
-                        <section>
-                            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
-                                <div>
-                                    <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Paper III</h2>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Legal, Financial & Administrative</p>
+                                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2">Paper III</h3>
+                                    <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">Legal, Financial, and Administrative Knowledge.</p>
+                                    <div className="flex items-center text-sm font-bold text-emerald-600 dark:text-emerald-400">
+                                        Explore Topics <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                    </div>
                                 </div>
-                                <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{paper3Decks.length} TOPICS</span>
                             </motion.div>
 
-                            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-                                {paper3Decks.map((item, i) => (
-                                    <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
-                                        <PremiumKnowledgeTile
-                                            id={item.id}
-                                            index={i}
-                                            title={item.title}
-                                            category="Paper III"
-                                            cardCount={item.count}
-                                            onAction={handleSelectDeck}
-                                            lastIndex={deckProgress[item.id] || 0}
-                                            locked={!hasAccess}
-                                        />
+                            {/* PYQs */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
+                                onClick={() => handleCategorySelect('PYQs')}
+                                className="group relative bg-white dark:bg-zinc-900/50 rounded-3xl border border-slate-200 dark:border-zinc-800 p-8 cursor-pointer hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110" />
+                                <div className="relative z-10">
+                                    <div className="w-14 h-14 rounded-2xl bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-6">
+                                        <Timer className="w-7 h-7" />
                                     </div>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-
-                    {/* Other */}
-                    {otherDecks.length > 0 && (
-                        <section>
-                            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
-                                <div>
-                                    <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Others & PYQ</h2>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Supplementary Materials & Practice</p>
+                                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2">PYQs</h3>
+                                    <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">Previous Year Questions. Analyze patterns and practice.</p>
+                                    <div className="flex items-center text-sm font-bold text-amber-600 dark:text-amber-400">
+                                        Start Practicing <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                    </div>
                                 </div>
-                                <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{otherDecks.length} TOPICS</span>
                             </motion.div>
 
-                            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-                                {otherDecks.map((item, i) => (
-                                    <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
-                                        <PremiumKnowledgeTile
-                                            id={item.id}
-                                            index={i}
-                                            title={item.title}
-                                            category={item.category}
-                                            cardCount={item.count}
-                                            onAction={handleSelectDeck}
-                                            lastIndex={deckProgress[item.id] || 0}
-                                            locked={!hasAccess}
-                                        />
+                            {/* Current Affairs */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
+                                onClick={() => handleCategorySelect('Current Affairs')}
+                                className="group relative bg-white dark:bg-zinc-900/50 rounded-3xl border border-slate-200 dark:border-zinc-800 p-8 cursor-pointer hover:border-rose-500/50 hover:shadow-2xl hover:shadow-rose-500/10 transition-all duration-300 overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110" />
+                                <div className="relative z-10">
+                                    <div className="w-14 h-14 rounded-2xl bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-6">
+                                        <Sparkles className="w-7 h-7" />
                                     </div>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-
-                    {finalDecks.length === 0 && (
-                        <div className="text-center py-20 opacity-50">
-                            <Layers className="w-12 h-12 mx-auto mb-4 text-slate-400" />
-                            <p>No topics found matching your filters.</p>
+                                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2">Current Affairs</h3>
+                                    <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">Latest Updates, News, and General Awareness.</p>
+                                    <div className="flex items-center text-sm font-bold text-rose-600 dark:text-rose-400">
+                                        Read Now <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
+                    ) : (
+                        <>
+                            {/* DECK LIST VIEWS - Only show if valid decks exist for the category or if strict category mode */}
+
+                            {/* BACK BUTTON (Desktop Enhanced) */}
+                            <div className="hidden md:flex mb-6">
+                                <button
+                                    onClick={handleBackToCategories}
+                                    className="group flex items-center text-sm font-bold text-slate-500 hover:text-indigo-600 transition-colors"
+                                >
+                                    <div className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-indigo-100 flex items-center justify-center mr-3 transition-colors">
+                                        <ChevronLeft className="w-4 h-4" />
+                                    </div>
+                                    Back to Categories
+                                </button>
+                            </div>
+
+                            {/* Paper I */}
+                            {(paper1Decks.length > 0 && (activeFilter === "All" || activeFilter === "Paper - I")) && (
+                                <section>
+                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
+                                        <div>
+                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Paper I</h2>
+                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Acts, Rules & Regulatory Framework</p>
+                                        </div>
+                                        <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{paper1Decks.length} TOPICS</span>
+                                    </motion.div>
+
+                                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                                        {paper1Decks.map((item, i) => (
+                                            <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                                                <PremiumKnowledgeTile
+                                                    id={item.id}
+                                                    index={i}
+                                                    title={item.title}
+                                                    category="Paper I"
+                                                    cardCount={item.count}
+                                                    onAction={handleSelectDeck}
+                                                    lastIndex={deckProgress[item.id] || 0}
+                                                    locked={!hasAccess}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {/* Paper III */}
+                            {(paper3Decks.length > 0 && (activeFilter === "All" || activeFilter === "Paper - III")) && (
+                                <section>
+                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
+                                        <div>
+                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Paper III</h2>
+                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Legal, Financial & Administrative</p>
+                                        </div>
+                                        <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{paper3Decks.length} TOPICS</span>
+                                    </motion.div>
+
+                                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                                        {paper3Decks.map((item, i) => (
+                                            <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                                                <PremiumKnowledgeTile
+                                                    id={item.id}
+                                                    index={i}
+                                                    title={item.title}
+                                                    category="Paper III"
+                                                    cardCount={item.count}
+                                                    onAction={handleSelectDeck}
+                                                    lastIndex={deckProgress[item.id] || 0}
+                                                    locked={!hasAccess}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {/* PYQs */}
+                            {(pyqDecks.length > 0 && (activeFilter === "All" || activeFilter === "PYQs")) && (
+                                <section>
+                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
+                                        <div>
+                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">PYQs</h2>
+                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Previous Year Questions & Analysis</p>
+                                        </div>
+                                        <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{pyqDecks.length} TOPICS</span>
+                                    </motion.div>
+
+                                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                                        {pyqDecks.map((item, i) => (
+                                            <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                                                <PremiumKnowledgeTile
+                                                    id={item.id}
+                                                    index={i}
+                                                    title={item.title}
+                                                    category="PYQ"
+                                                    cardCount={item.count}
+                                                    onAction={handleSelectDeck}
+                                                    lastIndex={deckProgress[item.id] || 0}
+                                                    locked={!hasAccess}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {/* Current Affairs */}
+                            {((caDecks.length > 0 || activeFilter === 'Current Affairs')) && (
+                                <section>
+                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
+                                        <div>
+                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Current Affairs</h2>
+                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Latest Updates & Happenings</p>
+                                        </div>
+                                        <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{caDecks.length} TOPICS</span>
+                                    </motion.div>
+
+                                    {caDecks.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                                            {caDecks.map((item, i) => (
+                                                <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                                                    <PremiumKnowledgeTile
+                                                        id={item.id}
+                                                        index={i}
+                                                        title={item.title}
+                                                        category="Current Affairs"
+                                                        cardCount={item.count}
+                                                        onAction={handleSelectDeck}
+                                                        lastIndex={deckProgress[item.id] || 0}
+                                                        locked={false}
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <div className="text-center py-10 opacity-60">
+                                            <p className="text-slate-500">Current Affairs cards coming shortly...</p>
+                                        </div>
+                                    )}
+                                </section>
+                            )}
+
+                            {/* Other */}
+                            {(otherDecks.length > 0 && activeFilter === "All") && (
+                                <section>
+                                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
+                                        <div>
+                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Others</h2>
+                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Supplementary Materials</p>
+                                        </div>
+                                        <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{otherDecks.length} TOPICS</span>
+                                    </motion.div>
+
+                                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                                        {otherDecks.map((item, i) => (
+                                            <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                                                <PremiumKnowledgeTile
+                                                    id={item.id}
+                                                    index={i}
+                                                    title={item.title}
+                                                    category={item.category || "General"}
+                                                    cardCount={item.count}
+                                                    onAction={handleSelectDeck}
+                                                    lastIndex={deckProgress[item.id] || 0}
+                                                    locked={!hasAccess}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {finalDecks.length === 0 && (
+                                <div className="text-center py-20 opacity-50">
+                                    <Layers className="w-12 h-12 mx-auto mb-4 text-slate-400" />
+                                    <p>No topics found matching your filters.</p>
+                                </div>
+                            )}
+                        </>
                     )}
+
                 </main>
             </div>
         );

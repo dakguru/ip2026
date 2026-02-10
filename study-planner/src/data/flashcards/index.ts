@@ -15,3 +15,4 @@ export * from "./postalManualVolIV";
 export * from "./consumerProtectionAct2019";
 export * from "./pmla2002";
 export * from "./poAct2023";
+export * from "./currentAffairs/jan2026";
