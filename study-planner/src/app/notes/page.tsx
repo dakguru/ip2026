@@ -441,9 +441,23 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.3 MB",
             color: "teal"
         },
-        { title: "CCS (GPF) Rules, 1961", description: "General Provident Fund rules.", color: "teal", comingSoon: true },
+        {
+            title: "CCS (GPF) Rules, 1961",
+            description: "General Provident Fund rules.",
+            filename: "CCS_GPF_Rules_1961.pdf",
+            path: "/notes/paper-3/CCS_GPF_Rules_1961.pdf",
+            size: "0.8 MB",
+            color: "teal"
+        },
         { title: "CCS (Pension) Rules, 2021", description: "New pension rules and amendments.", color: "teal", comingSoon: true },
-        { title: "CCS (Commutation of Pension) Rules, 1981", description: "Commutation rules.", color: "teal", comingSoon: true },
+        {
+            title: "CCS (Commutation of Pension) Rules, 1981",
+            description: "Commutation rules.",
+            filename: "CCS_Commutation_Pension_Rules_1981.pdf",
+            path: "/notes/paper-3/CCS_Commutation_Pension_Rules_1981.pdf",
+            size: "0.5 MB",
+            color: "teal"
+        },
 
         // 22. Sexual Harassment
         {
@@ -466,19 +480,47 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Fundamental Rules (FR) and Supplementary Rules (SR)", description: "Core service rules.", color: "indigo", comingSoon: true },
 
         // 27. Casual Labourers
-        { title: "Brochure on Casual Labourers", description: "Instructions issued by DoP&T.", color: "amber", comingSoon: true },
+        {
+            title: "Brochure on Casual Labourers",
+            description: "Instructions issued by DoP&T.",
+            filename: "Brochure_Casual_Labourers.pdf",
+            path: "/notes/paper-3/Brochure_Casual_Labourers.pdf",
+            size: "0.6 MB",
+            color: "amber"
+        },
 
         // 28. APAR
-        { title: "Maintenance of APAR", description: "Instructions by Directorate and DoP&T.", color: "orange", comingSoon: true },
+        {
+            title: "Maintenance of APAR",
+            description: "Instructions by Directorate and DoP&T.",
+            filename: "Maintenance_APAR.pdf",
+            path: "/notes/paper-3/Maintenance_APAR.pdf",
+            size: "0.6 MB",
+            color: "orange"
+        },
 
         // 29. Service Discharge
-        { title: "Service Discharge Benefit Scheme, 2010", description: "SDBS details.", color: "rose", comingSoon: true },
+        {
+            title: "Service Discharge Benefit Scheme, 2010",
+            description: "SDBS details.",
+            filename: "Service_Discharge_Benefit_Scheme.pdf",
+            path: "/notes/paper-3/Service_Discharge_Benefit_Scheme.pdf",
+            size: "0.7 MB",
+            color: "rose"
+        },
 
         // 30. Financial Powers
         { title: "Schedule of Financial Powers", description: "Divisional Heads, Heads of Circle.", color: "blue", comingSoon: true },
 
         // 31. Welfare Measures
-        { title: "Welfare Measures", description: "For Departmental Employees and GDS.", color: "green", comingSoon: true },
+        {
+            title: "Welfare Measures",
+            description: "For Departmental Employees and GDS.",
+            filename: "Welfare_Measures_Employees_GDS.pdf",
+            path: "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf",
+            size: "0.7 MB",
+            color: "green"
+        },
 
         // 32. FHB
         { title: "P&T FHB Vol I", description: "P&T Financial Hand Book Volume I.", color: "violet", comingSoon: true },
