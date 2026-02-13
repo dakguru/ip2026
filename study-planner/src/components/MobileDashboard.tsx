@@ -177,7 +177,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
             {/* --- ROYAL HEADER --- */}
 
-            <header className="sticky top-0 z-40 bg-slate-900 dark:bg-black px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] border-b border-slate-800 shadow-xl shadow-slate-900/20">
+            <header className="sticky top-0 z-40 bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#0f172a] dark:from-[#020617] dark:via-[#0f172a] dark:to-[#020617] px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] shadow-xl shadow-blue-900/20 relative">
+                {/* Rainbow gradient bottom border - matching desktop */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-orange-500 opacity-80"></div>
                 <div className="flex items-center justify-between">
                     {/* Left: Hamburger + Brand */}
                     <div className="flex items-center gap-3">
@@ -259,11 +261,10 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                             </SheetContent>
                         </Sheet>
 
-                        <div className="relative w-8 h-8 md:w-9 md:h-9 overflow-hidden rounded-full border border-slate-700 shadow-sm">
-                            <Image src="/dak-guru-round.png" alt="Branding" fill className="object-cover" />
+                        <div className="relative w-7 h-7 overflow-hidden rounded-full border-[1.5px] border-cyan-400/60 shadow-[0_0_14px_rgba(56,189,248,0.5)]">
+                            <Image src="/dak-guru-round.png" alt="Branding" fill className="object-cover scale-110" />
                         </div>
-                        {/* UPDATE: Branding Text Color */}
-                        <span className="text-xl md:text-2xl font-bold text-blue-500 tracking-wide">
+                        <span className="text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400">
                             Dak Guru
                         </span>
                     </div>

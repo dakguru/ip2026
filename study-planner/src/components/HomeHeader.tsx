@@ -133,7 +133,9 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
     return (
         <>
-            <header className={`sticky top-0 z-50 bg-white dark:bg-zinc-950 transition-all border-b border-zinc-200 dark:border-zinc-800 pt-[max(12px,env(safe-area-inset-top))] ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
+            <header className={`sticky top-0 z-50 bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#0f172a] dark:from-[#020617] dark:via-[#0f172a] dark:to-[#020617] transition-all pt-[max(12px,env(safe-area-inset-top))] ${scrolled ? 'shadow-lg shadow-blue-900/20 py-2' : 'py-3'}`}>
+                {/* Animated gradient bottom border */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-orange-500 opacity-80"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between md:justify-start gap-4 md:gap-8">
 
@@ -141,28 +143,28 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                         <div className="flex items-center gap-4 md:gap-8">
                             {/* Mobile Menu Button - Hide on Native App */}
                             <button
-                                className={`lg:hidden p-2 -ml-2 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md ${isMobileApp ? 'hidden' : ''}`}
+                                className={`lg:hidden p-2 -ml-2 text-white/80 hover:text-cyan-300 hover:bg-white/10 rounded-md transition-colors ${isMobileApp ? 'hidden' : ''}`}
                                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             >
                                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
 
-                            <Link href="/" className="flex items-center gap-2 shrink-0">
-                                <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-white shadow-[0_0_20px_rgba(59,130,246,0.8)]">
+                            <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
+                                <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-cyan-400/60 shadow-[0_0_20px_rgba(56,189,248,0.6)] group-hover:shadow-[0_0_28px_rgba(56,189,248,0.9)] transition-shadow duration-300">
                                     <Image src="/dak-guru-round.png" alt="Dak Guru" fill className="object-cover scale-110" priority />
                                 </div>
-                                <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+                                <span className="text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 drop-shadow-sm">
                                     Dak Guru
                                 </span>
                             </Link>
 
-                            <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                                <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Home</Link>
-                                <Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About Us</Link>
-                                <Link href="/blog" className="hover:text-blue-600 dark:hover:text-blue-400">DG Blog</Link>
-                                <Link href="/social" className="hover:text-blue-600 dark:hover:text-blue-400">DG Community</Link>
-                                <Link href="/current-affairs" className="hover:text-blue-600 dark:hover:text-blue-400">Current Affairs</Link>
-                                <Link href="/syllabus" className="hover:text-blue-600 dark:hover:text-blue-400">Syllabus</Link>
+                            <nav className="hidden lg:flex items-center gap-5 text-sm font-semibold">
+                                <Link href="/" className="text-white/80 hover:text-cyan-300 transition-colors duration-200">Home</Link>
+                                <Link href="/about" className="text-white/80 hover:text-pink-300 transition-colors duration-200">About Us</Link>
+                                <Link href="/blog" className="text-white/80 hover:text-amber-300 transition-colors duration-200">DG Blog</Link>
+                                <Link href="/social" className="text-white/80 hover:text-green-300 transition-colors duration-200">DG Community</Link>
+                                <Link href="/current-affairs" className="text-white/80 hover:text-purple-300 transition-colors duration-200">Current Affairs</Link>
+                                <Link href="/syllabus" className="text-white/80 hover:text-orange-300 transition-colors duration-200">Syllabus</Link>
                             </nav>
                         </div>
 
@@ -173,11 +175,11 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             {/* Updates Bell - Visible on Desktop only */}
                             <button
                                 onClick={() => setShowUpdates(true)}
-                                className="hidden lg:block relative p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors mr-1 sm:mr-2"
+                                className="hidden lg:block relative p-2 rounded-full hover:bg-white/10 text-white/70 hover:text-yellow-300 transition-colors mr-1 sm:mr-2"
                                 aria-label="Updates"
                             >
                                 <Bell className="w-5 h-5 sm:w-5 sm:h-5" />
-                                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full ring-2 ring-white dark:ring-zinc-950 animate-pulse"></span>
+                                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full ring-2 ring-slate-900 animate-pulse"></span>
                             </button>
 
                             {/* WhatsApp Group - Desktop */}
@@ -192,7 +194,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             </a>
 
                             <div className="hidden md:block">
-                                <ThemeToggle />
+                                <ThemeToggle variant="header" />
                             </div>
 
                             {isLoggedIn && (
@@ -223,7 +225,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 <>
                                     <Link
                                         href="/login"
-                                        className="hidden sm:inline-flex items-center justify-center font-semibold text-sm text-zinc-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400"
+                                        className="hidden sm:inline-flex items-center justify-center font-semibold text-sm text-white/70 hover:text-cyan-300 transition-colors"
                                     >
                                         Log in
                                     </Link>
@@ -236,7 +238,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                     {/* Mobile Login Icon */}
                                     <Link
                                         href="/login"
-                                        className="sm:hidden p-2 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+                                        className="sm:hidden p-2 text-white/70 hover:text-cyan-300 hover:bg-white/10 rounded-full transition-colors"
                                         aria-label="Log in"
                                     >
                                         <User className="w-6 h-6" />
