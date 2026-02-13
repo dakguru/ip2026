@@ -449,7 +449,14 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.8 MB",
             color: "teal"
         },
-        { title: "CCS (Pension) Rules, 2021", description: "New pension rules and amendments.", color: "teal", comingSoon: true },
+        {
+            title: "CCS (Pension) Rules, 2021",
+            description: "New pension rules and amendments.",
+            filename: "CCS_Pension_Rules_2021.pdf",
+            path: "/notes/paper-3/CCS_Pension_Rules_2021.pdf",
+            size: "0.8 MB",
+            color: "teal"
+        },
         {
             title: "CCS (Commutation of Pension) Rules, 1981",
             description: "Commutation rules.",
@@ -523,8 +530,22 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 32. FHB
-        { title: "P&T FHB Vol I", description: "P&T Financial Hand Book Volume I.", color: "violet", comingSoon: true },
-        { title: "Postal FHB Vol II", description: "Postal Financial Hand Book Volume II.", color: "violet", comingSoon: true },
+        {
+            title: "P&T FHB Vol I",
+            description: "P&T Financial Hand Book Volume I.",
+            filename: "FHB_Vol_I.pdf",
+            path: "/notes/paper-3/FHB_Vol_I.pdf",
+            size: "0.9 MB",
+            color: "violet"
+        },
+        {
+            title: "Postal FHB Vol II",
+            description: "Postal Financial Hand Book Volume II.",
+            filename: "FHB_Vol_II.pdf",
+            path: "/notes/paper-3/FHB_Vol_II.pdf",
+            size: "0.8 MB",
+            color: "violet"
+        },
     ],
     "SB Orders": [
         {

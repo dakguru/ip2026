@@ -16,6 +16,30 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "13.02.2026",
+        items: [
+            {
+                title: "New PDF Notes Added to Paper III",
+                desc: (
+                    <div className="space-y-2">
+                        <p>We have uploaded a comprehensive set of new PDF notes for <strong>Paper III</strong>. You can now access:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li>CCS (Pension) Rules, 2021</li>
+                            <li>Financial Hand Book (FHB) Vol - I & II</li>
+                            <li>CCS (GPF) Rules, 1961</li>
+                            <li>Brochure on Casual Labourers</li>
+                            <li>CCS (Commutation of Pension) Rules, 1981</li>
+                            <li>Service Discharge Benefit Scheme</li>
+                            <li>Maintenance of APAR</li>
+                            <li>Welfare Measures for Employees & GDS</li>
+                        </ul>
+                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Check them out in the Notes section!</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "10.02.2026",
         items: [
             {
