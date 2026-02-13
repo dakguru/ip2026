@@ -84,17 +84,34 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
             </div>
 
             <div className="mt-6 md:mt-10 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 w-full max-w-full px-2">
-                <Link href="/mock-tests" className="relative group inline-block w-full sm:w-auto">
-                    {/* Glowing effect background */}
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500 via-orange-500 to-red-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200 animate-pulse"></div>
-                    <div className="relative px-4 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg leading-none flex items-center justify-center gap-2 sm:gap-3 shadow-xl transform transition-transform hover:scale-[1.02] active:scale-95 border border-white/20 w-full">
-                        <span className="relative flex h-2 w-2 sm:h-3 sm:w-3 shrink-0">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 sm:h-3 sm:w-3 bg-white"></span>
-                        </span>
-                        <span className="text-white font-bold tracking-wide uppercase text-[10px] sm:text-sm md:text-base drop-shadow-md whitespace-nowrap text-center">
-                            <CountdownTimer />
-                        </span>
+                <Link href="/mock-tests" className="relative group inline-block w-full sm:w-auto max-w-xl">
+                    {/* Vibrant animated outer glow */}
+                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-yellow-400 via-orange-500 via-pink-500 to-violet-600 opacity-80 group-hover:opacity-100 blur-md transition-opacity duration-300 animate-pulse"></div>
+
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-orange-500 via-pink-600 to-violet-700 px-5 py-4 sm:px-8 sm:py-5 shadow-2xl shadow-pink-500/30 w-full border border-white/20">
+                        {/* Shimmer sweep */}
+                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
+
+                        {/* Decorative sparkles */}
+                        <div className="absolute top-1 right-4 text-yellow-200/70 text-lg animate-bounce" style={{ animationDelay: '0.2s' }}>✦</div>
+                        <div className="absolute bottom-1 left-6 text-white/40 text-sm animate-bounce" style={{ animationDelay: '0.8s' }}>✦</div>
+
+                        <div className="relative flex items-center justify-center gap-3 sm:gap-4">
+                            {/* Pulsing LIVE dot */}
+                            <span className="relative flex h-3 w-3 shrink-0">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-yellow-300 shadow-[0_0_10px_rgba(253,224,71,0.9)]"></span>
+                            </span>
+
+                            <span className="text-white font-extrabold tracking-wide uppercase text-xs sm:text-sm md:text-base drop-shadow-lg text-center">
+                                <CountdownTimer />
+                            </span>
+
+                            {/* Arrow */}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-200 shrink-0 group-hover:translate-x-1 transition-transform">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </div>
                     </div>
                 </Link>
             </div>
