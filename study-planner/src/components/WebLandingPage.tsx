@@ -8,6 +8,7 @@ import WelcomeSection from "@/components/WelcomeSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 import StoreButton from "@/components/StoreButton";
+import HomepageMarquee from "@/components/HomepageMarquee";
 // import LaunchPopup from "@/components/LaunchPopup";
 
 interface WebLandingPageProps {
@@ -22,6 +23,9 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
         <div className="min-h-screen font-sans bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
             {/* 1. Navbar */}
             <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
+
+            {/* 1.1. Marquee Announcement */}
+            <HomepageMarquee />
 
             {/* LIVE MOCK TEST BANNER REMOVED AS PER USER REQUEST */}
 
