@@ -105,6 +105,11 @@ public class PdfDownloaderPlugin extends Plugin {
             return;
         }
 
+        // Convert relative URLs to absolute — DownloadManager needs full https:// URLs
+        if (!url.startsWith("http://") && !url.startsWith("https://")) {
+            url = "https://dakguru.com" + (url.startsWith("/") ? url : "/" + url);
+        }
+
         try {
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
             

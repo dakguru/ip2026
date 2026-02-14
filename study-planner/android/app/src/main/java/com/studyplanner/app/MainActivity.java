@@ -300,6 +300,11 @@ public class MainActivity extends BridgeActivity {
     }
 
     private void startDownload(String url, String mimetype, String contentDisposition) {
+        // Convert relative URLs to absolute
+        if (!url.startsWith("http://") && !url.startsWith("https://")) {
+            url = "https://dakguru.com" + (url.startsWith("/") ? url : "/" + url);
+        }
+
         try {
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
             

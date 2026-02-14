@@ -814,8 +814,11 @@ export default function NotesPage() {
             // Dynamic import
             const { default: PdfDownloader } = await import('@/plugins/PdfDownloader');
 
+            // DownloadManager needs absolute URLs — convert relative paths
+            const downloadUrl = url.startsWith('http') ? url : `https://dakguru.com${url}`;
+
             // The plugin handles permissions, download, notification, and auto-open
-            await PdfDownloader.downloadPdf({ url });
+            await PdfDownloader.downloadPdf({ url: downloadUrl });
 
         } catch (error) {
             console.error("Download failed", error);
