@@ -55,40 +55,47 @@ public class PdfDownloaderPlugin extends Plugin {
 
     @PluginMethod
     public void downloadPdf(PluginCall call) {
-        if (!hasRequiredPermissions()) {
-            requestAllPermissions(call);
-        } else {
+        // On Android 9 and below, we NEED storage permission
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+            if (getPermissionState("storage") != PermissionState.GRANTED) {
+                requestPermissionForAlias("storage", call, "storagePermissionCallback");
+                return;
+            }
+        }
+
+        // On Android 13+, try to request notification permission (for download progress notification)
+        // But don't block the download if denied — notifications are optional
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (getPermissionState("notifications") != PermissionState.GRANTED) {
+                // Request notification permission, but start download regardless
+                try {
+                    requestPermissionForAlias("notifications", call, "notificationPermissionCallback");
+                } catch (Exception e) {
+                    // If permission request fails (e.g., already denied permanently), just download
+                    startDownload(call);
+                }
+                return;
+            }
+        }
+
+        // All good — start download directly
+        startDownload(call);
+    }
+
+    @PermissionCallback
+    private void storagePermissionCallback(PluginCall call) {
+        if (getPermissionState("storage") == PermissionState.GRANTED) {
             startDownload(call);
-        }
-    }
-
-    @Override
-    public boolean hasRequiredPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            return getPermissionState("notifications") == PermissionState.GRANTED;
-        } else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
-            return getPermissionState("storage") == PermissionState.GRANTED;
-        }
-        return true; // Android 10, 11, 12 don't need explicit storage permission for public downloads
-    }
-
-    private void requestAllPermissions(PluginCall call) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            requestPermissionForAlias("notifications", call, "permissionCallback");
-        } else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
-            requestPermissionForAlias("storage", call, "permissionCallback");
         } else {
-            startDownload(call); // Should not happen given hasRequiredPermissions logic, but safe fallback
+            call.reject("Storage permission is required to download PDFs.");
         }
     }
 
     @PermissionCallback
-    private void permissionCallback(PluginCall call) {
-        if (hasRequiredPermissions()) {
-            startDownload(call);
-        } else {
-            call.reject("Permission denied. Cannot download PDF.");
-        }
+    private void notificationPermissionCallback(PluginCall call) {
+        // Start download regardless of notification permission result
+        // Notifications are optional — the download still works without them
+        startDownload(call);
     }
 
     private void startDownload(PluginCall call) {
