@@ -33,7 +33,7 @@ export async function POST(request: Request) {
         const response = NextResponse.json({ success: true, user: safeUser });
 
         // Update the session cookie with new details
-        const maxAge = 60 * 60 * 24;
+        const maxAge = 60 * 60 * 24 * 30;
 
         response.cookies.set('user_session', JSON.stringify({ name: updatedUser.name, email: updatedUser.email, role: updatedUser.role }), {
             httpOnly: false,

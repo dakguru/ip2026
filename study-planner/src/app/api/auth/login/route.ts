@@ -25,8 +25,8 @@ export async function POST(request: Request) {
         const sessionId = crypto.randomUUID();
         await updateSession(user.email, sessionId);
 
-        // specific maxAge in seconds (1 day)
-        const maxAge = 60 * 60 * 24;
+        // maxAge in seconds (30 days — keep user logged in until they login on another device)
+        const maxAge = 60 * 60 * 24 * 30;
 
         // Create response
         const response = NextResponse.json({ success: true, user: { name: user.name, email: user.email } });

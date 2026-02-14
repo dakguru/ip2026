@@ -95,7 +95,7 @@ export async function POST(request: Request) {
             });
 
             // Re-set the user_session cookie with updated membership data to reflect changes immediately on client
-            const maxAge = 60 * 60 * 24; // 1 day
+            const maxAge = 60 * 60 * 24 * 30; // 30 days
 
             response.cookies.set('user_session', JSON.stringify({
                 name: updatedUser.name,
