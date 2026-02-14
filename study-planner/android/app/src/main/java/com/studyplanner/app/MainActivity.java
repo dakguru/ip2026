@@ -225,18 +225,28 @@ public class MainActivity extends BridgeActivity {
     }
 
     private void checkPermissionsOnLaunch() {
+        java.util.List<String> permissionsNeeded = new java.util.ArrayList<>();
+
+        // Notification permission (Android 13+)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-                 showPermissionRationaleDialog(() -> {
-                     requestPermissionLauncher.launch(new String[]{Manifest.permission.POST_NOTIFICATIONS});
-                 });
+                permissionsNeeded.add(Manifest.permission.POST_NOTIFICATIONS);
             }
-        } else if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
-             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                 showPermissionRationaleDialog(() -> {
-                     requestPermissionLauncher.launch(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE});
-                 });
+        }
+
+        // Storage permissions (Android 9 and below — scoped storage handles Android 10+)
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                permissionsNeeded.add(Manifest.permission.READ_EXTERNAL_STORAGE);
             }
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                permissionsNeeded.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            }
+        }
+
+        // Request all needed permissions at once
+        if (!permissionsNeeded.isEmpty()) {
+            requestPermissionLauncher.launch(permissionsNeeded.toArray(new String[0]));
         }
     }
 
