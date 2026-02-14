@@ -25,6 +25,13 @@ body {
   overscroll-behavior-y: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  /* Premium app launch fade-in */
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+body.app-ready {
+  opacity: 1;
 }
 
 /* Optimize clicks for interactive elements */

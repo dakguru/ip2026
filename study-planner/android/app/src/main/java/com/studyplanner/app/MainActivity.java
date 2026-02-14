@@ -1,6 +1,8 @@
 package com.studyplanner.app;
 
 import android.Manifest;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
@@ -18,12 +20,16 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.CookieManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.URLUtil;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
@@ -47,6 +53,10 @@ public class MainActivity extends BridgeActivity {
     private long downloadId = -1;
     private final Handler handler = new Handler(Looper.getMainLooper());
     private Runnable progressRunnable;
+
+    // Native splash overlay — sits on top of WebView until React signals ready
+    private View splashOverlay;
+    private boolean splashDismissed = false;
 
     // Permission Launcher
     private final ActivityResultLauncher<String[]> requestPermissionLauncher =
@@ -83,46 +93,54 @@ public class MainActivity extends BridgeActivity {
                  checkPermissionsAndDownload(url, "application/pdf", null);
              });
         }
+
+        @JavascriptInterface
+        public void appReady() {
+            // Called by React when the Home page is fully rendered
+            runOnUiThread(() -> {
+                hideSplashOverlay();
+            });
+        }
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        // 1. Install Android 12 Splash Screen
+        // 1. Install Android 12 Splash Screen (brief icon-only splash)
         SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
+        // Dismiss the Android 12 icon splash immediately —
+        // our custom branded overlay takes over right away
+        splashScreen.setKeepOnScreenCondition(() -> false);
 
-        final boolean[] isReady = {false};
-        splashScreen.setKeepOnScreenCondition(() -> !isReady[0]);
-        
         // Register Custom Plugin
         registerPlugin(com.studyplanner.app.plugins.PdfDownloaderPlugin.class);
 
-        new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            isReady[0] = true;
-        }, 2000);
-
         super.onCreate(savedInstanceState);
 
-        // 2. Optimization: Enhance WebView Performance
+        // 2. Add our beautiful branded splash overlay ON TOP of the WebView
+        //    The WebView loads behind it — completely invisible to the user
+        addSplashOverlay();
+
+        // 3. Optimize WebView Performance
         WebView webView = bridge.getWebView();
         if (webView != null) {
             WebSettings settings = webView.getSettings();
             settings.setJavaScriptEnabled(true);
             settings.setDomStorageEnabled(true);
             settings.setDatabaseEnabled(true);
-            
+
             // Disable Zoom functionality for native feel
             settings.setBuiltInZoomControls(false);
             settings.setDisplayZoomControls(false);
             settings.setSupportZoom(false);
-            
-            // Fix White Flash
+
+            // Match splash background to prevent any flash
             webView.setBackgroundColor(android.graphics.Color.parseColor("#0f172a"));
 
-            // Hack: Remove "wv" from UserAgent
+            // Remove "wv" from UserAgent for non-WebView behavior
             String newUserAgent = settings.getUserAgentString().replace("; wv", "");
             settings.setUserAgentString(newUserAgent);
 
-            // Register JS Interface
+            // Register JS Interface (includes appReady() for splash dismissal)
             webView.addJavascriptInterface(new WebAppInterface(this), "AndroidNative");
 
             // --- PDF DOWNLOAD SUPPORT ---
@@ -133,24 +151,29 @@ public class MainActivity extends BridgeActivity {
                 checkPermissionsAndDownload(url, mimetype, contentDisposition);
             });
         }
-        
+
+        // 4. Safety timeout — dismiss splash after 8s max (slow networks)
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            hideSplashOverlay();
+        }, 8000);
+
         // Register Download Complete Receiver
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(onDownloadComplete, 
+            registerReceiver(onDownloadComplete,
                 new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE),
                 Context.RECEIVER_EXPORTED);
         } else {
-            registerReceiver(onDownloadComplete, 
+            registerReceiver(onDownloadComplete,
                 new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
         }
 
-        // 3. Centralized back button handling
+        // 5. Centralized back button handling
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                WebView webView = bridge.getWebView();
-                if (webView != null && webView.canGoBack()) {
-                    webView.goBack();
+                WebView webView1 = bridge.getWebView();
+                if (webView1 != null && webView1.canGoBack()) {
+                    webView1.goBack();
                 } else {
                     showExitConfirmationDialog();
                 }
@@ -159,6 +182,46 @@ public class MainActivity extends BridgeActivity {
 
         // Request permissions on first launch if needed
         checkPermissionsOnLaunch();
+    }
+
+    /**
+     * Inflate and add the branded splash overlay on top of Capacitor's content view.
+     * The overlay sits at the highest z-order, covering the WebView completely.
+     */
+    private void addSplashOverlay() {
+        try {
+            ViewGroup rootView = (ViewGroup) getWindow().getDecorView().getRootView();
+            // Find the content frame (android.R.id.content) and add overlay to it
+            ViewGroup contentFrame = findViewById(android.R.id.content);
+            if (contentFrame != null) {
+                splashOverlay = LayoutInflater.from(this).inflate(R.layout.splash_overlay, contentFrame, false);
+                contentFrame.addView(splashOverlay);
+            }
+        } catch (Exception e) {
+            Log.e("MainActivity", "Error adding splash overlay", e);
+        }
+    }
+
+    /**
+     * Smoothly fade out the splash overlay to reveal the fully-rendered Home page.
+     * Called by React via AndroidNative.appReady() or by the safety timeout.
+     */
+    private void hideSplashOverlay() {
+        if (splashDismissed || splashOverlay == null) return;
+        splashDismissed = true;
+
+        splashOverlay.animate()
+            .alpha(0f)
+            .setDuration(500)
+            .setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    if (splashOverlay != null && splashOverlay.getParent() != null) {
+                        ((ViewGroup) splashOverlay.getParent()).removeView(splashOverlay);
+                        splashOverlay = null;
+                    }
+                }
+            });
     }
 
     private void checkPermissionsOnLaunch() {

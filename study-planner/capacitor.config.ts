@@ -16,6 +16,9 @@ const config: CapacitorConfig = {
       'checkout.razorpay.com'
     ]
   },
+  android: {
+    backgroundColor: '#0f172a'
+  },
   plugins: {
     SplashScreen: {
       launchAutoHide: false,
