@@ -623,18 +623,32 @@ export default function SettingsPage() {
         return (
             <div className="min-h-screen bg-white dark:bg-zinc-950">
                 {/* Header */}
-                <div className="px-5 pt-6 pb-1">
-                    <h1 className="text-xl font-bold text-center text-zinc-900 dark:text-zinc-100">Profile</h1>
-                </div>
+                {/* Enhanced User Card */}
+                <div className="mx-5 my-6 relative overflow-hidden bg-gradient-to-br from-blue-600 to-purple-700 rounded-[32px] p-6 text-white shadow-xl shadow-blue-900/20">
+                    {/* Decorative Background Elements */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-8 -mt-8 pointer-events-none"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500/20 rounded-full blur-xl -ml-4 -mb-4 pointer-events-none"></div>
 
-                {/* User Card */}
-                <div className="mx-5 my-5 flex items-center gap-4 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-4">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-900 flex items-center justify-center text-white text-xl font-bold shadow-lg shrink-0">
-                        {formData.name?.charAt(0)?.toUpperCase() || 'U'}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                        <p className="font-bold text-zinc-900 dark:text-zinc-100 text-[17px] truncate">{formData.name || 'User'}</p>
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400 truncate">{formData.email}</p>
+                    <div className="relative z-10 flex items-center gap-5">
+                        <div className="relative">
+                            <div className="w-16 h-16 rounded-full bg-white text-blue-600 flex items-center justify-center text-2xl font-black shadow-lg border-4 border-white/20">
+                                {formData.name?.charAt(0)?.toUpperCase() || 'U'}
+                            </div>
+                            <div className="absolute -bottom-1 -right-1 bg-amber-400 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full border-2 border-white shadow-sm flex items-center gap-0.5">
+                                <Crown className="w-3 h-3 fill-current" />
+                                <span>{membershipLabel.toUpperCase()}</span>
+                            </div>
+                        </div>
+
+                        <div className="flex-1 min-w-0">
+                            <h2 className="text-xl font-bold truncate leading-tight tracking-tight">
+                                {formData.name || 'User'}
+                            </h2>
+                            <div className="flex items-center gap-1.5 mt-1 text-blue-100">
+                                <Mail className="w-3.5 h-3.5 opacity-70" />
+                                <p className="text-sm font-medium truncate opacity-90">{formData.email}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
