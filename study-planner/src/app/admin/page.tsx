@@ -28,7 +28,7 @@ interface UserData {
     name: string;
     email: string;
     role: 'user' | 'admin';
-    membershipLevel?: 'free' | 'silver' | 'gold';
+    membershipLevel?: 'free' | 'silver' | 'gold' | 'diamond' | 'platinum';
     createdAt: string;
     mobile?: string;
     examPreparingFor?: string;
@@ -737,7 +737,7 @@ export default function AdminDashboard() {
                                 <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Membership Status</label>
                                 <select
                                     value={editingUser.membershipLevel || 'free'}
-                                    onChange={(e) => setEditingUser({ ...editingUser, membershipLevel: e.target.value as 'free' | 'silver' | 'gold' })}
+                                    onChange={(e) => setEditingUser({ ...editingUser, membershipLevel: e.target.value as 'free' | 'silver' | 'gold' | 'diamond' | 'platinum' })}
                                     className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500/20 capitalize"
                                 >
                                     <option value="free">Free Member</option>
