@@ -743,10 +743,12 @@ export default function AdminDashboard() {
                                     <option value="free">Free Member</option>
                                     <option value="silver">Silver Member</option>
                                     <option value="gold">Gold Member</option>
+                                    <option value="diamond">Diamond Member</option>
+                                    <option value="platinum">Platinum Member</option>
                                 </select>
                             </div>
 
-                            {["gold", "silver"].includes(editingUser.membershipLevel || "") && (
+                            {["gold", "silver", "diamond", "platinum"].includes(editingUser.membershipLevel || "") && (
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Membership Validity</label>
                                     <input

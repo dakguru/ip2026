@@ -3,19 +3,34 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { format } from "date-fns";
-import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight } from "lucide-react";
+import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight, FlaskConical, BarChart2, Bell, MessageSquare, Send, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import AnalyticsDashboard from "@/components/AnalyticsDashboard";
+import UpdatesDrawer from "@/components/UpdatesDrawer";
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import { useBetaAccess } from "@/hooks/useBetaAccess";
+import { useCourse } from "@/contexts/CourseContext";
 
-const EXAM_OPTIONS = [
-    "CE for GDS to PA/SA",
-    "LDCE - PA/SA",
-    "LDCE - PM/MG",
-    "LDCE - IP",
-    "LDCE - PS Gr 'B'"
+const DESIGNATION_OPTIONS = [
+    "Assistant Superintendent of Posts (ASP)",
+    "Inspector of Posts (IP)",
+    "Manager (Mail Motor Service)",
+    "Junior Accounts Officer (JAO)",
+    "Higher Selection Grade I (HSG-I)",
+    "Higher Selection Grade II (HSG-II)",
+    "Lower Selection Grade (LSG)",
+    "Postal Assistant (PA)",
+    "Sorting Assistant (SA)",
+    "Postman",
+    "Mail Guard",
+    "Staff Car Driver",
+    "Artisan (MMS)",
+    "Multi-Tasking Staff (MTS)",
+    "Branch Postmaster (BPM)",
+    "Assistant Branch Postmaster (ABPM)",
+    "Dak Sevak"
 ];
 
 export default function SettingsPage() {
@@ -53,6 +68,15 @@ export default function SettingsPage() {
     const [progressData, setProgressData] = useState<Record<string, any>>({});
     const [studyPlan, setStudyPlan] = useState<any[]>([]);
     const isMobileApp = useIsMobileApp();
+    const hasBetaAccess = useBetaAccess();
+    const { course, setCourse } = useCourse();
+    const [activeSection, setActiveSection] = useState<string | null>(null);
+    const [isMobileView, setIsMobileView] = useState(false);
+    const [showUpdates, setShowUpdates] = useState(false);
+    const [contactMessage, setContactMessage] = useState("");
+    const [contactSending, setContactSending] = useState(false);
+    const [contactSuccess, setContactSuccess] = useState(false);
+    const [contactError, setContactError] = useState("");
 
     useEffect(() => {
         fetchProfile();
@@ -83,6 +107,13 @@ export default function SettingsPage() {
             category: item.paper
         }));
         setStudyPlan(adaptedPlan);
+    }, []);
+
+    useEffect(() => {
+        const check = () => setIsMobileView(window.innerWidth < 768);
+        check();
+        window.addEventListener('resize', check);
+        return () => window.removeEventListener('resize', check);
     }, []);
 
     const handleLogout = async () => {
@@ -139,32 +170,12 @@ export default function SettingsPage() {
         }
 
         const mobileRegex = /^[0-9]{10}$/;
-        if (!mobileRegex.test(formData.mobile)) {
+        if (formData.mobile && !mobileRegex.test(formData.mobile)) {
             setMessage({ type: 'error', text: "Please enter a valid 10-digit mobile number." });
             return;
         }
-        if (formData.mobile === "1234567890" || formData.mobile === "0000000000") {
-            setMessage({ type: 'error', text: "Please enter a valid, real mobile number." });
-            return;
-        }
 
-        // Check if sensitive fields changed
-        const emailChanged = formData.email !== initialData.email;
-        const mobileChanged = formData.mobile !== initialData.mobile;
-
-        if (emailChanged || mobileChanged) {
-            // Trigger OTP
-            const mockOtp = Math.floor(100000 + Math.random() * 900000).toString();
-            setGeneratedOtp(mockOtp);
-            setShowOtpModal(true);
-            setVerificationStep(true);
-            // In a real app, send OTP to the NEW email/mobile here
-            // For now, alert it
-            alert(`OTP for verification (sent to new details): ${mockOtp}`);
-        } else {
-            // Safe to save directly
-            saveProfile();
-        }
+        saveProfile();
     };
 
     const verifyAndSave = () => {
@@ -270,6 +281,404 @@ export default function SettingsPage() {
         );
     }
 
+    // ---- MOBILE PROFILE VIEW (Android App + Mobile Browser) ----
+    if (isMobileView) {
+        const membershipLabel = initialData?.membershipLevel === 'gold' ? 'Gold'
+            : initialData?.membershipLevel === 'silver' ? 'Silver'
+                : initialData?.membershipLevel === 'diamond' ? 'Diamond'
+                    : initialData?.membershipLevel === 'platinum' ? 'Platinum'
+                        : 'Free';
+
+        const sectionTitles: Record<string, string> = {
+            profile: 'Manage Profile',
+            security: 'Password & Security',
+            course: 'Course Mode',
+            membership: 'Membership',
+            progress: 'My Progress',
+            contact: 'Contact Us',
+        };
+
+        const MobileMenuItem = ({ icon: Icon, label, right, onClick, danger }: {
+            icon: any; label: string; right?: string; onClick: () => void; danger?: boolean;
+        }) => (
+            <button
+                onClick={onClick}
+                className="w-full flex items-center gap-3.5 px-1 py-[14px] border-b border-zinc-100 dark:border-zinc-800 active:bg-zinc-50 dark:active:bg-zinc-800/50 transition-colors"
+            >
+                <div className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 ${danger ? 'bg-red-50 dark:bg-red-900/20' : 'bg-zinc-100 dark:bg-zinc-800'}`}>
+                    <Icon className={`w-[18px] h-[18px] ${danger ? 'text-red-500' : 'text-zinc-600 dark:text-zinc-400'}`} />
+                </div>
+                <span className={`flex-1 text-left font-medium text-[15px] ${danger ? 'text-red-500' : 'text-zinc-800 dark:text-zinc-200'}`}>{label}</span>
+                {right && <span className="text-[13px] text-zinc-400 dark:text-zinc-500 mr-1">{right}</span>}
+                {!danger && <ChevronRight className="w-4 h-4 text-zinc-300 dark:text-zinc-600" />}
+            </button>
+        );
+
+        // ---- Sub-section view ----
+        if (activeSection) {
+            return (
+                <div className="min-h-screen bg-white dark:bg-zinc-950">
+                    <div className="sticky top-0 z-10 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-xl border-b border-zinc-100 dark:border-zinc-800">
+                        <div className="flex items-center gap-3 px-5 py-3.5">
+                            <button onClick={() => setActiveSection(null)}
+                                className="p-1.5 -ml-1.5 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                                <ArrowLeft className="w-5 h-5 text-zinc-700 dark:text-zinc-300" />
+                            </button>
+                            <h1 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+                                {sectionTitles[activeSection] || 'Profile'}
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div className="px-5 py-6 pb-28">
+                        {/* Manage Profile */}
+                        {activeSection === 'profile' && (
+                            <form onSubmit={initiateSave} className="space-y-5">
+                                <div className="space-y-1.5">
+                                    <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400 ml-1">Full Name</label>
+                                    <div className="relative">
+                                        <User className="absolute left-3.5 top-3 w-5 h-5 text-zinc-400" />
+                                        <input name="name" type="text" value={formData.name} onChange={handleChange}
+                                            className="w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl py-3 pl-11 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-zinc-500 transition-colors text-[15px]" required />
+                                    </div>
+                                </div>
+                                <div className="space-y-1.5">
+                                    <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400 ml-1">Email Address</label>
+                                    <div className="relative">
+                                        <Mail className="absolute left-3.5 top-3 w-5 h-5 text-zinc-400" />
+                                        <input name="email" type="email" value={formData.email} onChange={handleChange}
+                                            className="w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl py-3 pl-11 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-zinc-500 transition-colors text-[15px]" required />
+                                    </div>
+                                </div>
+                                <div className="space-y-1.5">
+                                    <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400 ml-1">Mobile Number</label>
+                                    <div className="relative">
+                                        <Phone className="absolute left-3.5 top-3 w-5 h-5 text-zinc-400" />
+                                        <input name="mobile" type="tel" value={formData.mobile} onChange={handleChange}
+                                            className="w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl py-3 pl-11 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-zinc-500 transition-colors text-[15px]" required />
+                                    </div>
+                                </div>
+                                <div className="space-y-1.5">
+                                    <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400 ml-1">Designation</label>
+                                    <div className="relative">
+                                        <Briefcase className="absolute left-3.5 top-3 w-5 h-5 text-zinc-400" />
+                                        <select name="examPreparingFor" value={formData.examPreparingFor} onChange={handleChange}
+                                            className="w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl py-3 pl-11 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-zinc-500 transition-colors appearance-none text-[15px]" required>
+                                            <option value="">Select Designation</option>
+                                            {DESIGNATION_OPTIONS.map(d => <option key={d} value={d}>{d}</option>)}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="space-y-1.5">
+                                    <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400 ml-1">Date of Joining in DOP</label>
+                                    <div className="relative">
+                                        <Calendar className="absolute left-3.5 top-3 w-5 h-5 text-zinc-400" />
+                                        <input name="dateOfJoining" type="date" value={formData.dateOfJoining} onChange={handleChange}
+                                            className="w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl py-3 pl-11 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-zinc-500 transition-colors text-[15px]" required />
+                                    </div>
+                                </div>
+                                {message && (
+                                    <div className={`text-sm text-center py-3 rounded-xl ${message.type === 'success' ? 'bg-green-50 dark:bg-green-900/20 text-green-600' : 'bg-red-50 dark:bg-red-900/20 text-red-500'}`}>
+                                        {message.text}
+                                    </div>
+                                )}
+                                <button type="submit" disabled={isLoading}
+                                    className="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold py-3.5 rounded-xl transition-all disabled:opacity-60 flex items-center justify-center gap-2 mt-2">
+                                    {isLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : <><Save className="w-4 h-4" /> Save Changes</>}
+                                </button>
+                            </form>
+                        )}
+
+                        {/* Password & Security */}
+                        {activeSection === 'security' && (
+                            <form onSubmit={savePassword} className="space-y-5">
+                                <div className="space-y-1.5">
+                                    <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400 ml-1">Current Password</label>
+                                    <input name="currentPassword" type="password" value={passwordData.currentPassword}
+                                        onChange={handlePasswordChangeInput} placeholder="Enter current password"
+                                        className="w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl py-3 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-zinc-500 transition-colors text-[15px]" required />
+                                </div>
+                                <div className="space-y-1.5">
+                                    <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400 ml-1">New Password</label>
+                                    <input name="newPassword" type="password" value={passwordData.newPassword}
+                                        onChange={handlePasswordChangeInput} placeholder="Enter new password"
+                                        className="w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl py-3 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-zinc-500 transition-colors text-[15px]" required />
+                                </div>
+                                <div className="space-y-1.5">
+                                    <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400 ml-1">Confirm New Password</label>
+                                    <input name="confirmPassword" type="password" value={passwordData.confirmPassword}
+                                        onChange={handlePasswordChangeInput} placeholder="Confirm new password"
+                                        className="w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl py-3 px-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-zinc-500 transition-colors text-[15px]" required />
+                                </div>
+                                {passwordMessage && (
+                                    <div className={`text-sm text-center py-3 rounded-xl ${passwordMessage.type === 'success' ? 'bg-green-50 dark:bg-green-900/20 text-green-600' : 'bg-red-50 dark:bg-red-900/20 text-red-500'}`}>
+                                        {passwordMessage.text}
+                                    </div>
+                                )}
+                                <button type="submit" disabled={isPasswordLoading}
+                                    className="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold py-3.5 rounded-xl transition-all disabled:opacity-60 flex items-center justify-center gap-2 mt-2">
+                                    {isPasswordLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : <><Save className="w-4 h-4" /> Update Password</>}
+                                </button>
+                            </form>
+                        )}
+
+                        {/* Course Mode */}
+                        {activeSection === 'course' && (
+                            <div className="space-y-4">
+                                {hasBetaAccess ? (
+                                    <>
+                                        <p className="text-sm text-zinc-500 dark:text-zinc-400">Switch between exam categories. This changes the content across the app.</p>
+                                        <div className="grid grid-cols-2 gap-3">
+                                            <button onClick={() => setCourse('LDCE_IP')}
+                                                className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'LDCE_IP'
+                                                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500/20'
+                                                    : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
+                                                {course === 'LDCE_IP' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>}
+                                                <p className="font-bold text-zinc-900 dark:text-zinc-100">LDCE IP</p>
+                                                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Inspector Posts 2026</p>
+                                            </button>
+                                            <button onClick={() => setCourse('PS_GR_B')}
+                                                className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'PS_GR_B'
+                                                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 ring-2 ring-purple-500/20'
+                                                    : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
+                                                {course === 'PS_GR_B' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>}
+                                                <div className="flex items-center gap-2">
+                                                    <p className="font-bold text-zinc-900 dark:text-zinc-100">PS Group B</p>
+                                                    <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-300">BETA</span>
+                                                </div>
+                                                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">PS Group B Exam</p>
+                                            </button>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className="flex flex-col items-center justify-center py-12 px-4 text-center space-y-4 bg-zinc-50 dark:bg-zinc-900 rounded-3xl border border-zinc-100 dark:border-zinc-800 border-dashed">
+                                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/20 dark:to-blue-900/20 flex items-center justify-center mb-2">
+                                            <FlaskConical className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Coming Soon</h3>
+                                            <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-[280px] mx-auto mt-1">
+                                                We are working on bringing more exam categories like <span className="font-semibold text-purple-600 dark:text-purple-400">PS Group B</span> soon!
+                                            </p>
+                                        </div>
+                                        <div className="px-4 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-[11px] font-bold text-zinc-500 uppercase tracking-wider">
+                                            Under Development
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+
+                        {/* Membership */}
+                        {activeSection === 'membership' && (
+                            <div className="space-y-5">
+                                <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 text-white rounded-2xl p-5 relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl -mr-12 -mt-12"></div>
+                                    <div className="relative z-10">
+                                        <div className="flex justify-between items-start mb-4">
+                                            <div>
+                                                <p className="text-zinc-400 text-xs font-bold uppercase tracking-wider mb-1">Current Membership</p>
+                                                <h3 className="text-xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">
+                                                    {membershipLabel.toUpperCase()} {membershipLabel === 'Free' ? 'TIER' : 'PLAN'}
+                                                </h3>
+                                            </div>
+                                            <div className={`p-2.5 rounded-xl ${initialData?.membershipLevel === 'gold' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-zinc-800 text-zinc-400'}`}>
+                                                <Crown className="w-5 h-5 fill-current" />
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-2 text-sm text-zinc-300 mb-5">
+                                            <Shield className="w-4 h-4 text-emerald-400" />
+                                            <span>Valid until: {initialData?.membershipValidity ? format(new Date(initialData.membershipValidity), 'MMM yyyy') : 'Lifetime'}</span>
+                                        </div>
+                                        {initialData?.membershipLevel !== 'gold' && (
+                                            <Link href="/pricing" className="block w-full bg-white text-black font-bold py-3 rounded-xl text-center text-sm">
+                                                Upgrade Plan
+                                            </Link>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* My Progress */}
+                        {activeSection === 'progress' && (
+                            <AnalyticsDashboard plan={studyPlan} progress={progressData} />
+                        )}
+
+                        {/* Contact Us */}
+                        {activeSection === 'contact' && (
+                            <div className="space-y-6">
+                                {/* Hero Text */}
+                                <div>
+                                    <h2 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 leading-tight">
+                                        Let&apos;s Discuss Your{' '}
+                                        <span className="text-blue-600 dark:text-blue-400">Preparation Strategy</span>
+                                    </h2>
+                                    <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2 leading-relaxed">
+                                        Have questions about the syllabus, notes, or the planner? We are here to help you clear every doubt.
+                                    </p>
+                                </div>
+
+                                {/* Contact Cards */}
+                                <div className="space-y-3">
+                                    <a href="mailto:admin@dakguru.com"
+                                        className="flex items-center gap-4 p-4 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 active:scale-[0.98] transition-transform">
+                                        <div className="w-11 h-11 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
+                                            <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <p className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Email Us</p>
+                                            <p className="text-[15px] font-semibold text-zinc-900 dark:text-zinc-100">admin@dakguru.com</p>
+                                        </div>
+                                        <ExternalLink className="w-4 h-4 text-zinc-300 dark:text-zinc-600" />
+                                    </a>
+
+                                    <a href="tel:+919363030396"
+                                        className="flex items-center gap-4 p-4 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 active:scale-[0.98] transition-transform">
+                                        <div className="w-11 h-11 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center shrink-0">
+                                            <Phone className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <p className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Call Us</p>
+                                            <p className="text-[15px] font-semibold text-zinc-900 dark:text-zinc-100">+91 93630 30396</p>
+                                            <p className="text-xs text-zinc-400">Mon - Sat (10am - 6pm)</p>
+                                        </div>
+                                        <ExternalLink className="w-4 h-4 text-zinc-300 dark:text-zinc-600" />
+                                    </a>
+
+                                    <a href="https://wa.me/919363030396" target="_blank" rel="noopener noreferrer"
+                                        className="flex items-center gap-4 p-4 bg-green-50 dark:bg-green-900/10 rounded-2xl border border-green-100 dark:border-green-900/30 active:scale-[0.98] transition-transform">
+                                        <div className="w-11 h-11 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
+                                            <MessageSquare className="w-5 h-5 text-green-600 dark:text-green-400" />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <p className="text-[11px] font-bold text-green-600 dark:text-green-400 uppercase tracking-wider">WhatsApp</p>
+                                            <p className="text-[15px] font-semibold text-zinc-900 dark:text-zinc-100">Chat with us instantly</p>
+                                        </div>
+                                        <ExternalLink className="w-4 h-4 text-green-400 dark:text-green-600" />
+                                    </a>
+                                </div>
+
+                                {/* Inline DM Form */}
+                                <div className="bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 p-5">
+                                    <h3 className="font-bold text-zinc-900 dark:text-zinc-100 mb-1 text-[15px]">Send a Message</h3>
+                                    <p className="text-xs text-zinc-400 mb-4">We&apos;ll get back to you within 24 hours.</p>
+
+                                    {contactSuccess ? (
+                                        <div className="flex flex-col items-center py-6 text-center">
+                                            <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full flex items-center justify-center mb-3">
+                                                <Send className="w-6 h-6" />
+                                            </div>
+                                            <p className="font-bold text-zinc-800 dark:text-zinc-100">Message Sent!</p>
+                                            <p className="text-sm text-zinc-500 mt-1">We&apos;ll respond shortly.</p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={async (e) => {
+                                            e.preventDefault();
+                                            if (!contactMessage.trim()) return;
+                                            setContactSending(true);
+                                            setContactError("");
+                                            try {
+                                                const res = await fetch('/api/dm', {
+                                                    method: 'POST',
+                                                    headers: { 'Content-Type': 'application/json' },
+                                                    body: JSON.stringify({
+                                                        message: contactMessage,
+                                                        userName: formData.name || 'User',
+                                                        userEmail: formData.email || 'No Email'
+                                                    })
+                                                });
+                                                if (res.ok) {
+                                                    setContactSuccess(true);
+                                                    setTimeout(() => { setContactSuccess(false); setContactMessage(""); }, 3000);
+                                                } else {
+                                                    setContactError("Failed to send. Please try again.");
+                                                }
+                                            } catch { setContactError("Something went wrong."); }
+                                            finally { setContactSending(false); }
+                                        }} className="space-y-3">
+                                            <textarea
+                                                value={contactMessage}
+                                                onChange={(e) => setContactMessage(e.target.value)}
+                                                className="w-full h-28 p-3.5 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 text-[15px] outline-none focus:border-zinc-500 transition-colors resize-none placeholder:text-zinc-400"
+                                                placeholder="How can we help you?"
+                                                required
+                                            />
+                                            {contactError && <p className="text-xs text-red-500 font-medium">{contactError}</p>}
+                                            <button type="submit" disabled={contactSending || !contactMessage.trim()}
+                                                className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl disabled:opacity-50 transition-all flex items-center justify-center gap-2 text-[15px]">
+                                                {contactSending ? <Loader2 className="w-4 h-4 animate-spin" /> : <><Send className="w-4 h-4" /> Send Message</>}
+                                            </button>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        // ---- Main Menu View ----
+        return (
+            <div className="min-h-screen bg-white dark:bg-zinc-950">
+                {/* Header */}
+                <div className="px-5 pt-6 pb-1">
+                    <h1 className="text-xl font-bold text-center text-zinc-900 dark:text-zinc-100">Profile</h1>
+                </div>
+
+                {/* User Card */}
+                <div className="mx-5 my-5 flex items-center gap-4 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-4">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-900 flex items-center justify-center text-white text-xl font-bold shadow-lg shrink-0">
+                        {formData.name?.charAt(0)?.toUpperCase() || 'U'}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                        <p className="font-bold text-zinc-900 dark:text-zinc-100 text-[17px] truncate">{formData.name || 'User'}</p>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400 truncate">{formData.email}</p>
+                    </div>
+                </div>
+
+                {/* Menu Sections */}
+                <div className="px-5 space-y-6 pb-28">
+                    {/* Account */}
+                    <div>
+                        <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1 px-1">Account</p>
+                        <MobileMenuItem icon={User} label="Manage Profile" onClick={() => setActiveSection('profile')} />
+                        <MobileMenuItem icon={Shield} label="Password & Security" onClick={() => setActiveSection('security')} />
+                        <MobileMenuItem icon={Bell} label="What's New" onClick={() => setShowUpdates(true)} />
+                        <MobileMenuItem icon={FlaskConical} label="Course Mode"
+                            right={course === 'PS_GR_B' ? 'PS Gr. B' : 'LDCE IP'}
+                            onClick={() => setActiveSection('course')} />
+                    </div>
+
+                    {/* Membership */}
+                    <div>
+                        <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1 px-1">Membership</p>
+                        <MobileMenuItem icon={Crown} label="Current Plan" right={membershipLabel} onClick={() => setActiveSection('membership')} />
+                    </div>
+
+                    {/* Progress */}
+                    <div>
+                        <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1 px-1">Progress</p>
+                        <MobileMenuItem icon={BarChart2} label="My Progress" onClick={() => setActiveSection('progress')} />
+                    </div>
+
+                    {/* Support */}
+                    <div>
+                        <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1 px-1">Support</p>
+                        <MobileMenuItem icon={MessageSquare} label="Contact Us" onClick={() => setActiveSection('contact')} />
+                    </div>
+
+                    {/* Logout */}
+                    <div className="pt-2">
+                        <MobileMenuItem icon={LogOut} label="Log Out" onClick={handleLogout} danger />
+                    </div>
+                </div>
+                <UpdatesDrawer isOpen={showUpdates} onClose={() => setShowUpdates(false)} />
+            </div>
+        );
+    }
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 relative">
             <div className="max-w-3xl mx-auto space-y-8">
@@ -338,6 +747,54 @@ export default function SettingsPage() {
                     </div>
                 </div>
 
+                {/* Beta Course Mode Switcher — only for whitelisted users */}
+                {hasBetaAccess && (
+                    <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                        <div className="flex items-center gap-4 mb-6 pb-6 border-b border-zinc-100 dark:border-zinc-800">
+                            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <FlaskConical className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Course Mode</h2>
+                                <p className="text-xs text-zinc-500 dark:text-zinc-400">Switch between exam categories. This changes the content across the app.</p>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-3">
+                            <button
+                                onClick={() => setCourse('LDCE_IP')}
+                                className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'LDCE_IP'
+                                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500/20'
+                                    : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600'
+                                    }`}
+                            >
+                                {course === 'LDCE_IP' && (
+                                    <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>
+                                )}
+                                <p className="font-bold text-zinc-900 dark:text-zinc-100">LDCE IP</p>
+                                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Inspector Posts 2026</p>
+                            </button>
+
+                            <button
+                                onClick={() => setCourse('PS_GR_B')}
+                                className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'PS_GR_B'
+                                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 ring-2 ring-purple-500/20'
+                                    : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600'
+                                    }`}
+                            >
+                                {course === 'PS_GR_B' && (
+                                    <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>
+                                )}
+                                <div className="flex items-center gap-2">
+                                    <p className="font-bold text-zinc-900 dark:text-zinc-100">PS Group B</p>
+                                    <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-300">BETA</span>
+                                </div>
+                                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">PS Group B Exam</p>
+                            </button>
+                        </div>
+                    </div>
+                )}
+
                 {/* 3. Account Settings */}
                 <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">
                     <div className="flex items-center gap-4 mb-8 pb-8 border-b border-zinc-100 dark:border-zinc-800">
@@ -401,9 +858,9 @@ export default function SettingsPage() {
                                 </div>
                             </div>
 
-                            {/* Exam Preparing For */}
+                            {/* Designation */}
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Exam Preparing for</label>
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300 ml-1">Designation</label>
                                 <div className="relative group">
                                     <div className="absolute left-4 top-3.5 text-zinc-400"><Briefcase className="w-5 h-5" /></div>
                                     <select
@@ -413,8 +870,8 @@ export default function SettingsPage() {
                                         className="w-full bg-zinc-50 dark:bg-zinc-950/50 border border-zinc-200 dark:border-zinc-700 rounded-2xl py-3.5 pl-12 pr-4 text-zinc-900 dark:text-zinc-100 outline-none focus:border-blue-500 transition-all appearance-none"
                                         required
                                     >
-                                        <option value="">Select Exam</option>
-                                        {EXAM_OPTIONS.map(e => <option key={e} value={e}>{e}</option>)}
+                                        <option value="">Select Designation</option>
+                                        {DESIGNATION_OPTIONS.map(d => <option key={d} value={d}>{d}</option>)}
                                     </select>
                                 </div>
                             </div>
