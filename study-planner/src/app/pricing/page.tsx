@@ -9,6 +9,8 @@ import Script from "next/script";
 import { DiscountRequestModal } from "@/components/DiscountRequestModal";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import NativePricing from "@/components/pricing/NativePricing";
+import { useBetaAccess } from "@/hooks/useBetaAccess";
+import { useCourse } from "@/contexts/CourseContext";
 
 declare global {
     interface Window {
@@ -30,6 +32,9 @@ export default function PricingPage() {
     const [isOfferModalOpen, setIsOfferModalOpen] = useState(false);
 
     const isMobileApp = useIsMobileApp();
+    const hasBetaAccess = useBetaAccess();
+    const { course } = useCourse();
+    const isPsGroupB = hasBetaAccess && course === 'PS_GR_B';
 
     // Check login status
     useEffect(() => {
@@ -53,7 +58,7 @@ export default function PricingPage() {
         }
     }, []);
 
-    // Gold Plans Data
+    // LDCE IP Plans
     const goldPlans: Record<string, any> = {
         full_2026: {
             id: 'gold_2026_cracker',
@@ -62,11 +67,9 @@ export default function PricingPage() {
             price: 7500,
             originalPrice: 12000,
             isPopular: true,
-            // tag: '50% OFF' // Applied via coupon now
         }
     };
 
-    // Silver Plans Data
     const silverPlans: Record<string, any> = {
         full_2026: {
             id: 'silver_2026_cracker',
@@ -75,11 +78,38 @@ export default function PricingPage() {
             price: 4000,
             originalPrice: 7000,
             isPopular: false,
-            // tag: '50% OFF' 
         }
     };
 
-    const currentPlans = activeTab === 'gold' ? goldPlans : silverPlans;
+    // PS Group B Plans (Beta)
+    const diamondPlans: Record<string, any> = {
+        full_2026: {
+            id: 'diamond_ps_gr_b',
+            name: 'PS Group B Diamond Plan',
+            validity: 'Valid for One Year',
+            price: 4999,
+            originalPrice: 9999,
+            isPopular: true,
+        }
+    };
+
+    const platinumPlans: Record<string, any> = {
+        full_2026: {
+            id: 'platinum_ps_gr_b',
+            name: 'PS Group B Platinum Plan',
+            validity: 'Valid for One Year',
+            price: 3000,
+            originalPrice: 6000,
+            isPopular: false,
+        }
+    };
+
+    // Resolve plans based on mode
+    const primaryPlans = isPsGroupB ? diamondPlans : goldPlans;
+    const secondaryPlans = isPsGroupB ? platinumPlans : silverPlans;
+    const primaryLabel = isPsGroupB ? 'Diamond' : 'Gold';
+    const secondaryLabel = isPsGroupB ? 'Platinum' : 'Silver';
+    const currentPlans = activeTab === 'gold' ? primaryPlans : secondaryPlans;
     const selectedPlan = currentPlans[selectedPlanKey];
 
     // Coupon Logic
@@ -309,6 +339,7 @@ export default function PricingPage() {
                     onApplyCoupon={validateCoupon}
                     isProcessing={isProcessing}
                     setIsOfferModalOpen={setIsOfferModalOpen}
+                    isPsGroupB={isPsGroupB}
                 />
                 <DiscountRequestModal
                     isOpen={isOfferModalOpen}
@@ -321,7 +352,8 @@ export default function PricingPage() {
         );
     }
 
-    const benefits = [
+    // LDCE IP benefits
+    const ldceIpBenefits = [
         { name: "Live Mock Tests", gold: true, silver: true },
         { name: "Updated Notes as per recent Amendments", gold: true, silver: false },
         { name: "Web Guide", gold: true, silver: true },
@@ -331,29 +363,52 @@ export default function PricingPage() {
         { name: "Previous year question papers", gold: true, silver: false },
     ];
 
+    // PS Group B benefits (diamond = primary/gold, platinum = secondary/silver)
+    const psGroupBBenefits = [
+        { name: "Live Mock Tests", gold: true, silver: false },
+        { name: "Advanced Management Notes", gold: true, silver: false },
+        { name: "Previous Year Question Papers", gold: true, silver: false },
+        { name: "Unlimited Re-Attempts", gold: true, silver: false },
+        { name: "100% Satisfaction Guarantee", gold: true, silver: false },
+        { name: "Updated PDF Notes", gold: true, silver: true },
+        { name: "Web Guide", gold: true, silver: true },
+        { name: "Flash Cards", gold: true, silver: true },
+    ];
+
+    const benefits = isPsGroupB ? psGroupBBenefits : ldceIpBenefits;
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans pt-20 pb-12">
             <Script src="https://checkout.razorpay.com/v1/checkout.js" />
 
             {/* Banner Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white shadow-2xl p-8 md:p-12 text-center ring-4 ring-yellow-400/20">
+                <div className={`relative overflow-hidden rounded-3xl text-white shadow-2xl p-8 md:p-12 text-center ring-4 ${isPsGroupB
+                    ? 'bg-gradient-to-r from-purple-900 via-violet-800 to-fuchsia-900 ring-purple-400/20'
+                    : 'bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 ring-yellow-400/20'
+                    }`}>
                     <div className="relative z-10">
-                        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-amber-500 text-amber-900 px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg animate-pulse">
+                        <div className={`inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg animate-pulse ${isPsGroupB
+                            ? 'bg-gradient-to-r from-purple-400 to-fuchsia-500 text-white'
+                            : 'bg-gradient-to-r from-yellow-400 to-amber-500 text-amber-900'
+                            }`}>
                             <Zap className="w-4 h-4" />
-                            <span>HURRY! 50% DISCOUNT FOR FIRST 50 SUBSCRIBERS ONLY!</span>
+                            <span>{isPsGroupB ? 'BETA ACCESS — PS GROUP B PLANS!' : 'HURRY! 50% DISCOUNT FOR FIRST 50 SUBSCRIBERS ONLY!'}</span>
                         </div>
                         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-b from-white to-blue-100 drop-shadow-sm font-heading">
-                            LDCE IP 2026 EXAM CRACKER!
+                            {isPsGroupB ? 'PS GROUP B EXAM CRACKER!' : 'LDCE IP 2026 EXAM CRACKER!'}
                         </h1>
                         <p className="text-blue-100 max-w-2xl mx-auto text-xl mb-8 font-medium">
-                            Gold & Silver Subscription Plans Now Open. <br />
-                            <span className="text-yellow-300">Learn, Practice, Succeed</span>
+                            {isPsGroupB ? (
+                                <>Diamond & Platinum Subscription Plans Now Open. <br /><span className="text-purple-300">Master, Practice, Excel</span></>
+                            ) : (
+                                <>Gold & Silver Subscription Plans Now Open. <br /><span className="text-yellow-300">Learn, Practice, Succeed</span></>
+                            )}
                         </p>
                     </div>
                     {/* Abstract shapes for background */}
-                    <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-                    <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+                    <div className={`absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob ${isPsGroupB ? 'bg-purple-500' : 'bg-blue-500'}`}></div>
+                    <div className={`absolute -bottom-20 -left-20 w-80 h-80 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000 ${isPsGroupB ? 'bg-fuchsia-500' : 'bg-indigo-500'}`}></div>
                 </div>
             </div>
 
@@ -367,29 +422,31 @@ export default function PricingPage() {
                         <div className="bg-white dark:bg-zinc-900 rounded-2xl p-2 inline-flex shadow-sm border border-zinc-200 dark:border-zinc-800 w-full md:w-auto gap-2">
                             <button
                                 onClick={() => { setActiveTab('gold'); setDiscount(0); }}
-                                disabled={currentMembership === 'gold'}
+                                disabled={!isPsGroupB && currentMembership === 'gold'}
                                 className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 
                                     ${activeTab === 'gold'
-                                        ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 ring-yellow-200 dark:ring-yellow-800'
+                                        ? (isPsGroupB
+                                            ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 ring-purple-200 dark:ring-purple-800'
+                                            : 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 ring-yellow-200 dark:ring-yellow-800')
                                         : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}
-                                    ${currentMembership === 'gold' ? 'opacity-50 cursor-not-allowed' : ''}
+                                    ${!isPsGroupB && currentMembership === 'gold' ? 'opacity-50 cursor-not-allowed' : ''}
                                  `}
                             >
-                                Gold Plan {activeTab === 'gold' && <span className="ml-2 bg-yellow-400 text-yellow-900 text-[10px] px-1.5 py-0.5 rounded uppercase">Recommended</span>}
-                                {currentMembership === 'gold' && <span className="block text-[10px] uppercase mt-1">(Current Plan)</span>}
+                                {primaryLabel} Plan {activeTab === 'gold' && <span className={`ml-2 text-[10px] px-1.5 py-0.5 rounded uppercase ${isPsGroupB ? 'bg-purple-400 text-purple-900' : 'bg-yellow-400 text-yellow-900'}`}>Recommended</span>}
+                                {!isPsGroupB && currentMembership === 'gold' && <span className="block text-[10px] uppercase mt-1">(Current Plan)</span>}
                             </button>
                             <button
                                 onClick={() => { setActiveTab('silver'); setDiscount(0); }}
-                                disabled={currentMembership === 'silver' || currentMembership === 'gold'}
+                                disabled={!isPsGroupB && (currentMembership === 'silver' || currentMembership === 'gold')}
                                 className={`flex-1 md:flex-none px-8 py-3 rounded-xl font-bold text-sm transition-all shadow-sm ring-1 
                                     ${activeTab === 'silver'
                                         ? 'bg-slate-100 dark:bg-slate-900/30 text-slate-700 dark:text-slate-400 ring-slate-200 dark:ring-slate-800'
                                         : 'bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 ring-transparent hover:bg-zinc-50 dark:hover:bg-zinc-800'}
-                                    ${(currentMembership === 'silver' || currentMembership === 'gold') ? 'opacity-50 cursor-not-allowed' : ''}
+                                    ${!isPsGroupB && (currentMembership === 'silver' || currentMembership === 'gold') ? 'opacity-50 cursor-not-allowed' : ''}
                                 `}
                             >
-                                Silver Plan
-                                {(currentMembership === 'silver' || currentMembership === 'gold') && <span className="block text-[10px] uppercase mt-1">(Already Active/Upgraded)</span>}
+                                {secondaryLabel} Plan
+                                {!isPsGroupB && (currentMembership === 'silver' || currentMembership === 'gold') && <span className="block text-[10px] uppercase mt-1">(Already Active/Upgraded)</span>}
                             </button>
                         </div>
 
@@ -399,8 +456,8 @@ export default function PricingPage() {
                                 <div className="min-w-[500px]">
                                     <div className="grid grid-cols-4 p-6 border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/20">
                                         <div className="col-span-2 font-bold text-zinc-500 dark:text-zinc-400 text-sm uppercase tracking-wider">Plan Benefits</div>
-                                        <div className={`text-center font-bold ${activeTab === 'gold' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Gold</div>
-                                        <div className={`text-center font-bold ${activeTab === 'silver' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>Silver</div>
+                                        <div className={`text-center font-bold ${activeTab === 'gold' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>{primaryLabel}</div>
+                                        <div className={`text-center font-bold ${activeTab === 'silver' ? 'text-zinc-900 dark:text-zinc-100 scale-105' : 'text-zinc-400 dark:text-zinc-500'}`}>{secondaryLabel}</div>
                                     </div>
 
                                     <div className="divide-y divide-zinc-100 dark:divide-zinc-800">
@@ -433,10 +490,10 @@ export default function PricingPage() {
                                 </div>
                             </div>
 
-                            <div className="p-4 bg-yellow-50 dark:bg-yellow-900/10 text-center">
-                                <p className="text-sm text-yellow-800 dark:text-yellow-200 font-medium flex items-center justify-center gap-2">
+                            <div className={`p-4 text-center ${isPsGroupB ? 'bg-purple-50 dark:bg-purple-900/10' : 'bg-yellow-50 dark:bg-yellow-900/10'}`}>
+                                <p className={`text-sm font-medium flex items-center justify-center gap-2 ${isPsGroupB ? 'text-purple-800 dark:text-purple-200' : 'text-yellow-800 dark:text-yellow-200'}`}>
                                     <ShieldCheck className="w-4 h-4" />
-                                    100% Satisfaction Guarantee on Gold Plans
+                                    100% Satisfaction Guarantee on {primaryLabel} Plans
                                 </p>
                             </div>
                         </div>
@@ -499,7 +556,7 @@ export default function PricingPage() {
 
                         {/* Plan Selection Cards */}
                         <div className="space-y-4">
-                            <h3 className="font-bold text-zinc-900 dark:text-zinc-100 text-lg">Select your {activeTab === 'gold' ? 'Gold' : 'Silver'} Plan:</h3>
+                            <h3 className="font-bold text-zinc-900 dark:text-zinc-100 text-lg">Select your {activeTab === 'gold' ? primaryLabel : secondaryLabel} Plan:</h3>
 
                             {(Object.keys(currentPlans) as Array<keyof typeof currentPlans>).map((key) => {
                                 const plan = currentPlans[key];

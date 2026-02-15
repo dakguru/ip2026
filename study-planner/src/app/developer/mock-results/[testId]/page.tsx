@@ -5,18 +5,9 @@ import { ArrowLeft, Search, CheckCircle2, ChevronDown, ChevronUp, Clock, Calenda
 import Link from "next/link";
 import { format } from "date-fns";
 import { useParams } from "next/navigation";
-import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
-import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
-import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
-import { LIVE_MOCK_QUESTIONS } from "@/data/live_mock_data";
-import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
+import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
+import { generateMockTestAnswerSheetPDF, getMockTestAnswerSheetPDFBlob } from "@/lib/pdf-generator-mocks";
 
-const TEST_QUESTIONS_MAP: Record<string, any[]> = {
-    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
-    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
-    "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS,
-    "live-sample": LIVE_MOCK_QUESTIONS
-};
 
 interface MockResult {
     _id: string;
@@ -109,35 +100,59 @@ export default function MockTestDetailResultsPage() {
             return;
         }
 
-        if (!confirm(`Are you sure you want to download ${filteredResults.length} answer sheets? This might take a moment.`)) return;
+        if (!confirm(`Are you sure you want to download ${filteredResults.length} answer sheets as a ZIP file? This might take a moment.`)) return;
 
         setIsBulkDownloading(true);
         setDownloadProgress(0);
 
-        for (let i = 0; i < filteredResults.length; i++) {
-            const result = filteredResults[i];
-            try {
-                await generateMockTestAnswerSheetPDF({
-                    userName: result.userName,
-                    score: result.score,
-                    totalQuestions: result.totalQuestions || questions.length,
-                    questions: questions as any,
-                    answers: result.answers || {},
-                    testName: formatTestName(testId),
-                    submittedAt: result.submittedAt
-                });
+        try {
+            // Dynamically import libraries to avoid SSR issues and keep initial bundle small
+            const JSZip = (await import("jszip")).default;
+            const { saveAs } = (await import("file-saver"));
 
-                // Small delay between downloads to prevent browser issues
-                await new Promise(resolve => setTimeout(resolve, 800));
-            } catch (error) {
-                console.error(`Failed to download for ${result.userName}:`, error);
+            const zip = new JSZip();
+            const folderName = `AnswerSheets-${testId.replace('mock-', '')}`;
+            const folder = zip.folder(folderName);
+
+            if (!folder) {
+                throw new Error("Failed to create zip folder");
             }
-            setDownloadProgress(Math.round(((i + 1) / filteredResults.length) * 100));
-        }
 
-        setIsBulkDownloading(false);
-        setDownloadProgress(0);
-        setShowNotification(true);
+            for (let i = 0; i < filteredResults.length; i++) {
+                const result = filteredResults[i];
+                try {
+                    const { blob, filename } = await getMockTestAnswerSheetPDFBlob({
+                        userName: result.userName,
+                        score: result.score,
+                        totalQuestions: result.totalQuestions || questions.length,
+                        questions: questions as any,
+                        answers: result.answers || {},
+                        testName: formatTestName(testId),
+                        submittedAt: result.submittedAt
+                    });
+
+                    folder.file(filename, blob);
+
+                    // Tiny delay to keep UI responsive
+                    if (i % 5 === 0) await new Promise(resolve => setTimeout(resolve, 0));
+
+                } catch (error) {
+                    console.error(`Failed to generate PDF for ${result.userName}:`, error);
+                }
+                setDownloadProgress(Math.round(((i + 1) / filteredResults.length) * 100));
+            }
+
+            const content = await zip.generateAsync({ type: "blob" });
+            saveAs(content, `DakGuru_${folderName}_All_Answers.zip`);
+            setShowNotification(true);
+
+        } catch (e) {
+            console.error("Bulk download failed", e);
+            alert("Failed to generate zip file. Please try again.");
+        } finally {
+            setIsBulkDownloading(false);
+            setDownloadProgress(0);
+        }
     };
 
     return (

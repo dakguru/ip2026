@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/mongoose";
 import MockResult from "@/models/MockResult";
+import MockEnrollment from "@/models/MockEnrollment";
 
 export const dynamic = 'force-dynamic';
 
@@ -53,9 +54,14 @@ export async function POST(req: Request) {
             }
         }
 
+        // Fetch Enrollments
+        const enrollments = await MockEnrollment.find({ userEmail: email }).lean();
+        const enrolledTests = enrollments.map((e: any) => e.testId);
+
         return NextResponse.json({
             results: resultMap,
-            attempts: attemptMap
+            attempts: attemptMap,
+            enrolledTests: enrolledTests
         });
     } catch (error) {
         console.error("Error fetching user results:", error);

@@ -3,6 +3,7 @@
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useCourse } from "@/contexts/CourseContext";
 
 interface WelcomeSectionProps {
     displayName: string;
@@ -60,6 +61,11 @@ function CountdownTimer() {
 
 export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
     const isMobileApp = useIsMobileApp();
+    const { course } = useCourse();
+
+    const tagline = course === 'PS_GR_B'
+        ? 'Mission PS Group B: Start Now. Finish Strong.'
+        : 'Mission Inspector Posts: Start Now. Finish Strong.';
 
     return (
         <section className={`text-center px-4 ${isMobileApp ? 'pt-6 pb-6' : 'pt-16 pb-12'}`}>
@@ -74,7 +80,7 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
             </h1>
 
             <p className={`text-zinc-600 dark:text-zinc-300 mx-auto ${isMobileApp ? 'text-xs max-w-sm' : 'text-xs sm:text-xl max-w-3xl'}`}>
-                Prepare Smart. Progress Fast. Get Promoted.
+                {tagline}
             </p>
 
             <div className="mt-6 flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-500 delay-75 fill-mode-both">

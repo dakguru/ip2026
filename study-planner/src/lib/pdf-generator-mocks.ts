@@ -28,7 +28,7 @@ interface GeneratePDFParams {
     submittedAt: string;
 }
 
-export const generateMockTestAnswerSheetPDF = async ({
+export const createMockTestAnswerSheetPDFDoc = async ({
     userName,
     score,
     totalQuestions,
@@ -265,6 +265,13 @@ export const generateMockTestAnswerSheetPDF = async ({
         doc.line(margin, yPos - 5, margin + contentWidth, yPos - 5);
     });
 
+    return doc;
+};
+
+export const generateMockTestAnswerSheetPDF = async (params: GeneratePDFParams) => {
+    const doc = await createMockTestAnswerSheetPDFDoc(params);
+    const { userName } = params;
+
     const safeFilename = userName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
     const filename = `Dak_Guru_AnswerSheet_${safeFilename}_${Date.now()}.pdf`;
 
@@ -341,4 +348,16 @@ export const generateMockTestAnswerSheetPDF = async ({
         console.error("Native PDF Generation/Save Error", error);
         throw error; // Re-throw so the UI knows it failed
     }
+};
+
+export const getMockTestAnswerSheetPDFBlob = async (params: GeneratePDFParams) => {
+    const doc = await createMockTestAnswerSheetPDFDoc(params);
+    const { userName } = params;
+    const safeFilename = userName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    const filename = `Dak_Guru_AnswerSheet_${safeFilename}_${Date.now()}.pdf`;
+
+    return {
+        blob: doc.output('blob'),
+        filename
+    };
 };

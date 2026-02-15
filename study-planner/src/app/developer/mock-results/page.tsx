@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowLeft, FileText, CheckCircle2, ChevronRight, BarChart3, Users, Clock, Loader2 } from "lucide-react";
+import { ArrowLeft, FileText, CheckCircle2, ChevronRight, BarChart3, Users, Clock, Loader2, Download } from "lucide-react";
 import Link from "next/link";
 import { addDays, format, startOfToday } from "date-fns";
+import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
+import { getMockTestAnswerSheetPDFBlob } from "@/lib/pdf-generator-mocks";
 
 export default function MockResultsDashboard() {
     // Generate the list of mock tests dynamically (similar to user side)
@@ -38,10 +40,103 @@ export default function MockResultsDashboard() {
 
     const mockTests = generateMockTests();
     const [searchTerm, setSearchTerm] = useState("");
+    const [isGlobalDownloading, setIsGlobalDownloading] = useState(false);
+    const [downloadProgress, setDownloadProgress] = useState(0);
+    const [currentDownloadAction, setCurrentDownloadAction] = useState("");
 
     const filteredTests = mockTests.filter(test =>
         test.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    const handleGlobalBulkDownload = async () => {
+        const testIds = Object.keys(TEST_QUESTIONS_MAP);
+        if (testIds.length === 0) return;
+
+        if (!confirm(`This will download ALL answer sheets for ALL ${testIds.length} configured tests. This process may take a while. Continue?`)) return;
+
+        setIsGlobalDownloading(true);
+        setDownloadProgress(0);
+
+        try {
+            const JSZip = (await import("jszip")).default;
+            const { saveAs } = (await import("file-saver"));
+            const zip = new JSZip();
+            const mainFolder = zip.folder("DakGuru_All_Mock_Results");
+
+            if (!mainFolder) throw new Error("Failed to create zip folder");
+
+            let processedCount = 0;
+            // Rough estimate of total steps (fetching + generating)
+            // We don't know total users yet, so we'll just track progress by test ID roughly
+
+            for (let i = 0; i < testIds.length; i++) {
+                const testId = testIds[i];
+                const questions = TEST_QUESTIONS_MAP[testId];
+                const testInfo = mockTests.find(t => t.id === testId);
+                const testTitle = testInfo ? testInfo.title : testId;
+
+                setCurrentDownloadAction(`Fetching results for ${testTitle}...`);
+
+                // Create folder for this test
+                const testFolder = mainFolder.folder(testTitle.replace(/[^a-z0-9]/gi, '_'));
+                if (!testFolder) continue;
+
+                try {
+                    // Fetch results
+                    const res = await fetch(`/api/admin/mock-test/results?testId=${testId}`, { cache: 'no-store' });
+                    if (!res.ok) continue;
+
+                    const data = await res.json();
+                    const results: any[] = data.results || [];
+
+                    if (results.length === 0) continue;
+
+                    for (let j = 0; j < results.length; j++) {
+                        const result = results[j];
+                        setCurrentDownloadAction(`Generating PDF for ${result.userName} (${testTitle})...`);
+
+                        try {
+                            const { blob, filename } = await getMockTestAnswerSheetPDFBlob({
+                                userName: result.userName,
+                                score: result.score,
+                                totalQuestions: result.totalQuestions || questions.length,
+                                questions: questions,
+                                answers: result.answers || {},
+                                testName: testTitle,
+                                submittedAt: result.submittedAt
+                            });
+
+                            testFolder.file(filename, blob);
+
+                            // Yield to main thread
+                            if (j % 5 === 0) await new Promise(resolve => setTimeout(resolve, 0));
+
+                        } catch (err) {
+                            console.error(`Error generating PDF for ${result.userName} in ${testId}`, err);
+                        }
+                    }
+
+                } catch (err) {
+                    console.error(`Error processing test ${testId}`, err);
+                }
+
+                // Update progress based on tests processed
+                setDownloadProgress(Math.round(((i + 1) / testIds.length) * 100));
+            }
+
+            setCurrentDownloadAction("Zipping all files...");
+            const content = await zip.generateAsync({ type: "blob" });
+            saveAs(content, `DakGuru_Complete_Mock_History_${format(new Date(), 'yyyy-MM-dd')}.zip`);
+
+        } catch (error) {
+            console.error("Global download failed", error);
+            alert("Failed to complete global download. Check console for details.");
+        } finally {
+            setIsGlobalDownloading(false);
+            setDownloadProgress(0);
+            setCurrentDownloadAction("");
+        }
+    };
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 transition-colors">
@@ -56,6 +151,28 @@ export default function MockResultsDashboard() {
                             Mock Test Results
                         </h1>
                         <p className="text-zinc-500 dark:text-zinc-400 mt-1">Select a test to view its leaderboard and detailed submissions.</p>
+                    </div>
+                    <div>
+                        <button
+                            onClick={handleGlobalBulkDownload}
+                            disabled={isGlobalDownloading}
+                            className="flex items-center gap-2 px-5 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-bold shadow-lg shadow-zinc-500/20 hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                        >
+                            {isGlobalDownloading ? (
+                                <>
+                                    <Loader2 className="w-4 h-4 animate-spin" />
+                                    <div className="flex flex-col items-start text-xs">
+                                        <span>Processing... {downloadProgress}%</span>
+                                        <span className="opacity-75 font-normal max-w-[150px] truncate">{currentDownloadAction}</span>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <Download className="w-5 h-5" />
+                                    Download All Mock Data
+                                </>
+                            )}
+                        </button>
                     </div>
                 </div>
 

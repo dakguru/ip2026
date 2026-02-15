@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { CourseProvider } from "@/contexts/CourseContext";
 import GlobalNavigation from "@/components/GlobalNavigation";
 
 import Footer from "@/components/Footer";
@@ -55,22 +56,24 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AppLoadingScreen />
-          <UserActivityTracker />
-          <BackButtonHandler />
-          <PushNotificationManager />
-          <GlobalNavigation />
-          <NativeMobileSpacer>
-            {children}
-            <div className="hidden md:block">
-              <Footer />
-            </div>
-          </NativeMobileSpacer>
-          <MobileBottomNav />
+          <CourseProvider>
+            <AppLoadingScreen />
+            <UserActivityTracker />
+            <BackButtonHandler />
+            <PushNotificationManager />
+            <GlobalNavigation />
+            <NativeMobileSpacer>
+              {children}
+              <div className="hidden md:block">
+                <Footer />
+              </div>
+            </NativeMobileSpacer>
+            <MobileBottomNav />
 
 
-          <SpeedInsights />
-          <Analytics />
+            <SpeedInsights />
+            <Analytics />
+          </CourseProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
@@ -9,6 +11,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 import StoreButton from "@/components/StoreButton";
 import HomepageMarquee from "@/components/HomepageMarquee";
+import { useCourse } from "@/contexts/CourseContext";
 // import LaunchPopup from "@/components/LaunchPopup";
 
 interface WebLandingPageProps {
@@ -19,6 +22,10 @@ interface WebLandingPageProps {
 }
 
 export default function WebLandingPage({ displayName, membershipLevel, role, isLoggedIn }: WebLandingPageProps) {
+    const { course } = useCourse();
+    const isPsGroupB = course === 'PS_GR_B';
+    const examName = isPsGroupB ? "PS Group 'B'" : "Inspector Posts";
+
     return (
         <div className="min-h-screen font-sans bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
             {/* 1. Navbar */}
@@ -53,11 +60,11 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
                     </div>
 
                     <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-800 dark:text-zinc-100 mb-6 leading-tight">
-                        Prepare for Inspector Posts Exam 2026 with Confidence
+                        Prepare for {examName} Exam 2026 with Confidence
                     </h2>
 
                     <p className="text-zinc-700 dark:text-zinc-200 text-xl font-medium mb-4 max-w-3xl mx-auto leading-relaxed">
-                        Master the Inspector Posts Syllabus in half the time. No long videos. Just high-yield notes, instant quizzes, and rapid revision.
+                        Master the {examName} Syllabus in half the time. No long videos. Just high-yield notes, instant quizzes, and rapid revision.
                     </p>
 
                     <p className="text-zinc-500 dark:text-zinc-400 text-base mb-10 max-w-3xl mx-auto">

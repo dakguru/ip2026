@@ -20,6 +20,7 @@ interface NativePricingProps {
     onApplyCoupon: (code: string) => Promise<{ valid: boolean; discount: number; error?: string }>;
     isProcessing: boolean;
     setIsOfferModalOpen: (isOpen: boolean) => void;
+    isPsGroupB?: boolean;
 }
 
 export default function NativePricing({
@@ -29,13 +30,14 @@ export default function NativePricing({
     onPayment,
     onApplyCoupon,
     isProcessing,
-    setIsOfferModalOpen
+    setIsOfferModalOpen,
+    isPsGroupB = false
 }: NativePricingProps) {
     const [activeTab, setActiveTab] = useState<'gold' | 'silver'>('gold');
     const [couponCode, setCouponCode] = useState("");
     const [discount, setDiscount] = useState(0);
 
-    // Plan Data (Mirrored from main page)
+    // Plan Data
     const goldPlans: Record<string, Plan> = {
         full_2026: {
             id: 'gold_2026_cracker',
@@ -58,19 +60,59 @@ export default function NativePricing({
         }
     };
 
-    const currentPlans = activeTab === 'gold' ? goldPlans : silverPlans;
+    // PS Group B Plans
+    const diamondPlans: Record<string, Plan> = {
+        full_2026: {
+            id: 'diamond_ps_gr_b',
+            name: 'PS Group B Diamond Plan',
+            validity: 'Valid for One Year',
+            price: 4999,
+            originalPrice: 9999,
+            isPopular: true,
+        }
+    };
+
+    const platinumPlans: Record<string, Plan> = {
+        full_2026: {
+            id: 'platinum_ps_gr_b',
+            name: 'PS Group B Platinum Plan',
+            validity: 'Valid for One Year',
+            price: 3000,
+            originalPrice: 6000,
+            isPopular: false,
+        }
+    };
+
+    const primaryPlans = isPsGroupB ? diamondPlans : goldPlans;
+    const secondaryPlans = isPsGroupB ? platinumPlans : silverPlans;
+    const primaryLabel = isPsGroupB ? 'DIAMOND' : 'GOLD';
+    const secondaryLabel = isPsGroupB ? 'Platinum' : 'Silver';
+
+    const currentPlans = activeTab === 'gold' ? primaryPlans : secondaryPlans;
     const selectedPlanKey = 'full_2026';
     const selectedPlan = currentPlans[selectedPlanKey];
 
-    const benefits = [
+    const ldceIpBenefits = [
         { name: "Live Mock Tests", gold: true, silver: true },
         { name: "Updated Notes (Amendments)", gold: true, silver: false },
         { name: "Web Guide", gold: true, silver: true },
         { name: "Flash Cards", gold: true, silver: false },
         { name: "Current Affairs", gold: true, silver: true },
         { name: "Unlimited Re-Attempt mode", gold: true, silver: false },
-        // { name: "Previous year question papers", gold: true, silver: false },
     ];
+
+    const psGroupBBenefits = [
+        { name: "Live Mock Tests", gold: true, silver: false },
+        { name: "Advanced Management Notes", gold: true, silver: false },
+        { name: "Previous Year Qs", gold: true, silver: false },
+        { name: "Unlimited Re-Attempts", gold: true, silver: false },
+        { name: "100% Satisfaction Guarantee", gold: true, silver: false },
+        { name: "Updated PDF Notes", gold: true, silver: true },
+        { name: "Web Guide", gold: true, silver: true },
+        { name: "Flash Cards", gold: true, silver: true },
+    ];
+
+    const benefits = isPsGroupB ? psGroupBBenefits : ldceIpBenefits;
 
     const handleApply = async () => {
         if (!couponCode) return;
@@ -100,16 +142,18 @@ export default function NativePricing({
                         <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
 
                         <div className="flex items-center gap-2 mb-3">
-                            <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
-                            <span className="text-xs font-bold text-yellow-400 tracking-widest uppercase">Launch Offer</span>
+                            <Sparkles className={`w-4 h-4 animate-pulse ${isPsGroupB ? 'text-purple-400' : 'text-yellow-400'}`} />
+                            <span className={`text-xs font-bold tracking-widest uppercase ${isPsGroupB ? 'text-purple-400' : 'text-yellow-400'}`}>{isPsGroupB ? 'Beta Access' : 'Launch Offer'}</span>
                         </div>
 
                         <h2 className="text-2xl font-black mb-2 leading-tight">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">50% OFF — ENDING SOON!</span>
+                            <span className={`text-transparent bg-clip-text bg-gradient-to-r ${isPsGroupB ? 'from-purple-400 to-fuchsia-400' : 'from-yellow-400 to-orange-400'}`}>
+                                {isPsGroupB ? 'PS GROUP B PLANS!' : '50% OFF — ENDING SOON!'}
+                            </span>
                         </h2>
 
                         <p className="text-base font-bold text-white mb-1">
-                            Gold @ ₹3,750 | Silver @ ₹2,000
+                            {isPsGroupB ? 'Diamond @ ₹4,999 | Platinum @ ₹3,000' : 'Gold @ ₹3,750 | Silver @ ₹2,000'}
                         </p>
                         <p className="text-sm text-zinc-400 mb-6 leading-relaxed">
                             Complete your enrollment now before pricing resets.
@@ -131,12 +175,12 @@ export default function NativePricing({
                         <button
                             onClick={() => { setActiveTab('gold'); setDiscount(0); }}
                             className={`py-3 rounded-xl font-bold text-sm transition-all flex flex-col items-center gap-1 ${activeTab === 'gold'
-                                ? 'bg-zinc-800 text-yellow-400 shadow-lg ring-1 ring-white/10'
+                                ? `bg-zinc-800 shadow-lg ring-1 ring-white/10 ${isPsGroupB ? 'text-purple-400' : 'text-yellow-400'}`
                                 : 'text-zinc-500 hover:text-zinc-300'
                                 }`}
                         >
-                            <span>Gold Plan</span>
-                            {activeTab === 'gold' && <span className="text-[10px] bg-yellow-400/10 text-yellow-400 px-1.5 rounded uppercase tracking-wider">Recommended</span>}
+                            <span>{isPsGroupB ? 'Diamond' : 'Gold'} Plan</span>
+                            {activeTab === 'gold' && <span className={`text-[10px] px-1.5 rounded uppercase tracking-wider ${isPsGroupB ? 'bg-purple-400/10 text-purple-400' : 'bg-yellow-400/10 text-yellow-400'}`}>Recommended</span>}
                         </button>
                         <button
                             onClick={() => { setActiveTab('silver'); setDiscount(0); }}
@@ -145,7 +189,7 @@ export default function NativePricing({
                                 : 'text-zinc-500 hover:text-zinc-300'
                                 }`}
                         >
-                            Silver Plan
+                            {isPsGroupB ? 'Platinum' : 'Silver'} Plan
                         </button>
                     </div>
                 </div>
@@ -155,8 +199,8 @@ export default function NativePricing({
                     <div className="flex justify-between items-start mb-6">
                         <div>
                             <p className="text-sm text-zinc-400 mb-1">Benefits included in</p>
-                            <h3 className={`text-xl font-black ${activeTab === 'gold' ? 'text-yellow-400' : 'text-white'}`}>
-                                {activeTab === 'gold' ? 'GOLD' : 'SILVER'}
+                            <h3 className={`text-xl font-black ${activeTab === 'gold' ? (isPsGroupB ? 'text-purple-400' : 'text-yellow-400') : 'text-white'}`}>
+                                {activeTab === 'gold' ? primaryLabel : secondaryLabel.toUpperCase()}
                             </h3>
                         </div>
                         <div className="text-right">

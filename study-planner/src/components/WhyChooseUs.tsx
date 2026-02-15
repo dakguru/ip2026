@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { Shield, ClipboardCheck, Calendar, Brain, Layers, FileText, Users, Newspaper } from "lucide-react";
 import React from "react";
+import { useCourse } from "@/contexts/CourseContext";
 
 const cardVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
@@ -55,6 +56,9 @@ const FeatureCard = ({ feature, index, className = "" }: { feature: any, index: 
 };
 
 export default function WhyChooseUs() {
+    const { course } = useCourse();
+    const examLabel = course === 'PS_GR_B' ? "PS Group 'B' LDCE" : "Inspector Posts LDCE";
+
     const features = [
         {
             title: "Interactive 'Learn-Mode' Tests",
@@ -147,7 +151,7 @@ export default function WhyChooseUs() {
                         transition={{ delay: 0.2 }}
                         className="text-base md:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed px-4 md:px-0"
                     >
-                        Don’t just study hard, study smart. From scientifically designed notes to 'learn-as-you-go' testing, we provide the complete ecosystem you need to crack the Inspector Posts LDCE.
+                        {`Don't just study hard, study smart. From scientifically designed notes to 'learn-as-you-go' testing, we provide the complete ecosystem you need to crack the ${examLabel}.`}
                     </motion.p>
                 </div>
 

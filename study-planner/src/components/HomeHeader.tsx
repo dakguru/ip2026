@@ -158,13 +158,12 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 </span>
                             </Link>
 
-                            <nav className="hidden lg:flex items-center gap-5 text-sm font-semibold">
+                            <nav className="hidden lg:flex items-center gap-5 text-sm font-semibold whitespace-nowrap">
                                 <Link href="/" className="text-white/80 hover:text-cyan-300 transition-colors duration-200">Home</Link>
                                 <Link href="/about" className="text-white/80 hover:text-pink-300 transition-colors duration-200">About Us</Link>
                                 <Link href="/blog" className="text-white/80 hover:text-amber-300 transition-colors duration-200">DG Blog</Link>
                                 <Link href="/social" className="text-white/80 hover:text-green-300 transition-colors duration-200">DG Community</Link>
                                 <Link href="/current-affairs" className="text-white/80 hover:text-purple-300 transition-colors duration-200">Current Affairs</Link>
-                                <Link href="/syllabus" className="text-white/80 hover:text-orange-300 transition-colors duration-200">Syllabus</Link>
                             </nav>
                         </div>
 
