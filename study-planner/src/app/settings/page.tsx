@@ -623,24 +623,24 @@ export default function SettingsPage() {
         return (
             <div className="min-h-screen bg-white dark:bg-zinc-950">
                 {/* Header */}
-                {/* Shining Glassy User Card */}
-                <div className="mx-5 my-8 relative group">
-                    <div className="absolute inset-0 bg-blue-500 rounded-[32px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-[32px] p-[1px] shadow-2xl shadow-indigo-500/20">
-                        <div className="relative h-full bg-gradient-to-br from-indigo-600/90 to-purple-700/90 backdrop-blur-xl rounded-[31px] p-6 overflow-hidden">
+                {/* Royale Blue Glassy User Card */}
+                <div className="mx-4 mt-2 mb-8 relative group">
+                    <div className="absolute inset-0 bg-blue-600 rounded-[32px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    <div className="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-600 to-blue-500 rounded-[32px] p-[1px] shadow-2xl shadow-blue-500/20">
+                        <div className="relative h-full bg-gradient-to-br from-blue-800/95 to-blue-700/95 backdrop-blur-xl rounded-[31px] p-6 overflow-hidden">
                             {/* Glass Shine Effect */}
                             <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-40 pointer-events-none"></div>
 
                             <div className="relative z-10 flex items-center gap-6">
                                 <div className="relative">
                                     <div className="absolute inset-0 bg-white/20 blur-lg rounded-full transform scale-110"></div>
                                     <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-white to-white/90 flex items-center justify-center shadow-2xl ring-4 ring-white/10 backdrop-blur-md">
-                                        <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-purple-600">
+                                        <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-blue-800">
                                             {formData.name?.charAt(0)?.toUpperCase() || 'U'}
                                         </span>
                                     </div>
-                                    <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-amber-200 to-yellow-400 text-yellow-950 text-[10px] font-black px-3 py-1 rounded-full border-2 border-white/20 shadow-lg flex items-center gap-1 z-20">
+                                    <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-amber-300 to-yellow-500 text-yellow-950 text-[10px] font-black px-3 py-1 rounded-full border-2 border-white/20 shadow-lg flex items-center gap-1 z-20">
                                         <Crown className="w-3 h-3 fill-current" />
                                         <span className="tracking-wide uppercase">{membershipLabel}</span>
                                     </div>
@@ -651,7 +651,7 @@ export default function SettingsPage() {
                                         {formData.name || 'User'}
                                     </h2>
                                     <div className="inline-flex items-center gap-2 mt-2 px-3 py-1.5 rounded-xl bg-white/10 border border-white/10 backdrop-blur-md shadow-sm">
-                                        <Mail className="w-3.5 h-3.5 text-indigo-100" />
+                                        <Mail className="w-3.5 h-3.5 text-blue-100" />
                                         <p className="text-xs font-semibold truncate text-white/90 tracking-wide">{formData.email}</p>
                                     </div>
                                 </div>
