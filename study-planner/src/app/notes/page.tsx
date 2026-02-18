@@ -298,7 +298,7 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.5 MB",
             color: "cyan"
         },
-        { title: "Domestic/Foreign Post Guidelines", description: "Issued by Directorate.", color: "cyan", comingSoon: true },
+
 
         // 33. DIGIPIN
         {
@@ -311,9 +311,30 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 34. Network Optimization
-        { title: "MNOP & PNOP Guidelines", description: "Mail & Parcel Network Optimization Projects.", color: "fuchsia", comingSoon: true },
-        { title: "Centralized Delivery Policy", description: "Guidelines for delivery staff.", color: "fuchsia", comingSoon: true },
-        { title: "Dak Ghar Niryat Kendra (DNKs)", description: "Guidelines for export centers.", color: "fuchsia", comingSoon: true },
+        {
+            title: "MNOP & PNOP Guidelines",
+            description: "Mail & Parcel Network Optimization Projects.",
+            filename: "MNOP_PNOP.pdf",
+            path: "/notes/paper-1/MNOP_PNOP.pdf",
+            size: "0.7 MB",
+            color: "fuchsia"
+        },
+        {
+            title: "Consolidation of Products & Centralized Delivery Policy",
+            description: "Guidelines for delivery staff.",
+            filename: "Consolidation_Products_Centralized_Delivery_Policy.pdf",
+            path: "/notes/paper-1/Consolidation_Products_Centralized_Delivery_Policy.pdf",
+            size: "4.2 MB",
+            color: "fuchsia"
+        },
+        {
+            title: "Dak Ghar Niryat Kendra (DNKs)",
+            description: "Guidelines for export centers.",
+            filename: "Dak_Ghar_Niryat_Kendra.pdf",
+            path: "/notes/paper-1/Dak_Ghar_Niryat_Kendra.pdf",
+            size: "4.2 MB",
+            color: "fuchsia"
+        },
 
 
         {
