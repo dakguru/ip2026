@@ -695,31 +695,37 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                                                             <p className="text-sm text-blue-800 dark:text-blue-200">{report.adminReply}</p>
                                                         </div>
                                                     )}
-                                                    {/* Admin Actions */}
-                                                    {isUserAdmin(user) && (
-                                                        <div className="mt-3 flex items-center gap-2 flex-wrap">
-                                                            {report.status !== 'resolved' && (
+                                                    {/* Action Buttons */}
+                                                    <div className="mt-3 flex items-center gap-2 flex-wrap">
+                                                        {/* Admin-only: Resolve + Reply */}
+                                                        {isUserAdmin(user) && (
+                                                            <>
+                                                                {report.status !== 'resolved' && (
+                                                                    <button
+                                                                        onClick={() => handleResolveReport(report._id)}
+                                                                        className="px-3 py-1.5 bg-green-500 hover:bg-green-600 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
+                                                                    >
+                                                                        ✅ Resolve
+                                                                    </button>
+                                                                )}
                                                                 <button
-                                                                    onClick={() => handleResolveReport(report._id)}
-                                                                    className="px-3 py-1.5 bg-green-500 hover:bg-green-600 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
+                                                                    onClick={() => { setReplyingTo(replyingTo === report._id ? null : report._id); setReplyText(report.adminReply || ""); }}
+                                                                    className="px-3 py-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
                                                                 >
-                                                                    ✅ Resolve
+                                                                    💬 {report.adminReply ? 'Edit Reply' : 'Reply'}
                                                                 </button>
-                                                            )}
-                                                            <button
-                                                                onClick={() => { setReplyingTo(replyingTo === report._id ? null : report._id); setReplyText(report.adminReply || ""); }}
-                                                                className="px-3 py-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
-                                                            >
-                                                                💬 {report.adminReply ? 'Edit Reply' : 'Reply'}
-                                                            </button>
+                                                            </>
+                                                        )}
+                                                        {/* Delete: Admin or Owner */}
+                                                        {user && (isUserAdmin(user) || user.email === report.reportedByEmail || user.name === report.reportedBy) && (
                                                             <button
                                                                 onClick={() => handleDeleteReport(report._id)}
                                                                 className="px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
                                                             >
                                                                 🗑️ Delete
                                                             </button>
-                                                        </div>
-                                                    )}
+                                                        )}
+                                                    </div>
                                                     {/* Reply Input */}
                                                     {replyingTo === report._id && (
                                                         <div className="mt-3 flex gap-2">

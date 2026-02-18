@@ -262,16 +262,22 @@ export default function NativeSocialFeed({
                                                 <p className="text-xs text-blue-800 dark:text-blue-200">{report.adminReply}</p>
                                             </div>
                                         )}
-                                        {/* Admin Actions */}
-                                        {isUserAdmin(user) && (
-                                            <div className="mt-2 flex items-center gap-1.5 flex-wrap">
-                                                {report.status !== 'resolved' && (
-                                                    <button onClick={() => handleMobileResolve(report._id)} className="px-2.5 py-1 bg-green-500 text-white rounded-lg text-[10px] font-bold">✅ Resolve</button>
-                                                )}
-                                                <button onClick={() => { setMobileReplyingTo(mobileReplyingTo === report._id ? null : report._id); setMobileReplyText(report.adminReply || ""); }} className="px-2.5 py-1 bg-blue-500 text-white rounded-lg text-[10px] font-bold">💬 {report.adminReply ? 'Edit' : 'Reply'}</button>
+                                        {/* Action Buttons */}
+                                        <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+                                            {/* Admin-only: Resolve + Reply */}
+                                            {isUserAdmin(user) && (
+                                                <>
+                                                    {report.status !== 'resolved' && (
+                                                        <button onClick={() => handleMobileResolve(report._id)} className="px-2.5 py-1 bg-green-500 text-white rounded-lg text-[10px] font-bold">✅ Resolve</button>
+                                                    )}
+                                                    <button onClick={() => { setMobileReplyingTo(mobileReplyingTo === report._id ? null : report._id); setMobileReplyText(report.adminReply || ""); }} className="px-2.5 py-1 bg-blue-500 text-white rounded-lg text-[10px] font-bold">💬 {report.adminReply ? 'Edit' : 'Reply'}</button>
+                                                </>
+                                            )}
+                                            {/* Delete: Admin or Owner */}
+                                            {user && (isUserAdmin(user) || user.email === report.reportedByEmail || user.name === report.reportedBy) && (
                                                 <button onClick={() => handleMobileDelete(report._id)} className="px-2.5 py-1 bg-red-500 text-white rounded-lg text-[10px] font-bold">🗑️ Delete</button>
-                                            </div>
-                                        )}
+                                            )}
+                                        </div>
                                         {mobileReplyingTo === report._id && (
                                             <div className="mt-2 flex gap-1.5">
                                                 <input type="text" value={mobileReplyText} onChange={(e) => setMobileReplyText(e.target.value)} placeholder="Admin reply..." className="flex-1 border border-zinc-300 rounded-lg px-2.5 py-1.5 text-xs bg-white dark:bg-zinc-800" onKeyDown={(e) => { if (e.key === 'Enter') handleMobileReply(report._id); }} />
