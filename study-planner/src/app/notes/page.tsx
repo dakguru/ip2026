@@ -160,11 +160,11 @@ const PDF_DATA: Record<string, Note[]> = {
 
         // 6. Rules
         {
-            title: "PO Small Savings Schemes & Practice Questions",
+            title: "PO Small Savings Schemes",
             description: "Comprehensive notes on Small Savings Schemes including practice questions.",
-            filename: "PO_Small_Savings_Schemes_Practice_Questions.pdf",
-            path: "/notes/paper-1/PO_Small_Savings_Schemes_Practice_Questions.pdf",
-            size: "33.5 MB",
+            filename: "PO_Small_Savings_Schemes.pdf",
+            path: "/notes/paper-1/PO_Small_Savings_Schemes.pdf",
+            size: "4.3 MB",
             color: "emerald"
         },
 
