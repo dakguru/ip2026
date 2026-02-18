@@ -19,6 +19,7 @@ import { DMModal } from '@/components/DMModal';
 import { PostItem } from '@/components/PostItem';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 import NativeSocialFeed from '@/components/social/NativeSocialFeed';
+import ErrorReportForm from '@/components/social/ErrorReportForm';
 
 // Mock Data for Success Stories
 const SUCCESS_STORIES_DATA = [
@@ -206,9 +207,15 @@ interface SocialClientProps {
 
 export default function SocialClient({ initialPosts }: SocialClientProps) {
     const [activeTab, setActiveTab] = useState("Q&A Home");
+    const [topBoxTab, setTopBoxTab] = useState<"discuss" | "report">("discuss");
     const [questionInput, setQuestionInput] = useState("");
     const [detailsInput, setDetailsInput] = useState("");
     const [showDetailsInput, setShowDetailsInput] = useState(false);
+
+    // Error reports state
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const [errorReports, setErrorReports] = useState<any[]>([]);
+    const [loadingReports, setLoadingReports] = useState(false);
 
     const [isWriteModalOpen, setIsWriteModalOpen] = useState(false);
     const [isDMModalOpen, setIsDMModalOpen] = useState(false);
@@ -246,6 +253,64 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
         }
     };
 
+    const fetchErrorReports = async () => {
+        setLoadingReports(true);
+        try {
+            const res = await fetch('/api/community/error-reports');
+            if (res.ok) {
+                const data = await res.json();
+                setErrorReports(data);
+            }
+        } catch (e) {
+            console.error('Failed to fetch error reports', e);
+        } finally {
+            setLoadingReports(false);
+        }
+    };
+
+    // Admin helpers for error reports
+    const isUserAdmin = (u: { name: string; role?: string } | null) => {
+        if (!u) return false;
+        const r = u.role?.toLowerCase() || "";
+        const n = u.name?.toLowerCase() || "";
+        return r.includes('admin') || n.includes('admin') || r.includes('mentor');
+    };
+    const [replyingTo, setReplyingTo] = useState<string | null>(null);
+    const [replyText, setReplyText] = useState("");
+
+    const handleResolveReport = async (reportId: string) => {
+        try {
+            await fetch('/api/community/error-reports', {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ reportId, status: 'resolved' })
+            });
+            fetchErrorReports();
+        } catch (e) { console.error(e); }
+    };
+
+    const handleDeleteReport = async (reportId: string) => {
+        if (!confirm('Delete this error report?')) return;
+        try {
+            await fetch(`/api/community/error-reports?id=${reportId}`, { method: 'DELETE' });
+            fetchErrorReports();
+        } catch (e) { console.error(e); }
+    };
+
+    const handleAdminReply = async (reportId: string) => {
+        if (!replyText.trim()) return;
+        try {
+            await fetch('/api/community/error-reports', {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ reportId, adminReply: replyText.trim() })
+            });
+            setReplyingTo(null);
+            setReplyText("");
+            fetchErrorReports();
+        } catch (e) { console.error(e); }
+    };
+
     useEffect(() => {
         // Only load user session on mount
         const match = document.cookie.match(new RegExp('(^| )user_session=([^;]+)'));
@@ -258,6 +323,7 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                 console.error("Failed to parse session", e);
             }
         }
+        fetchErrorReports();
     }, []);
 
     // Effect to filtering for "My Questions" - dependent on feedData and user
@@ -351,9 +417,8 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
             const apiSuccessStories = feedData.filter((post: any) => post.tags && post.tags.includes("Success Story"));
             return [...SUCCESS_STORIES_DATA, ...apiSuccessStories];
         }
-        if (activeTab === "Unanswered Questions") {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            return feedData.filter((post: any) => !post.answer && (!post.tags || !post.tags.includes("Success Story")));
+        if (activeTab === "Error Reports") {
+            return []; // Error reports tab renders custom cards, not posts
         }
         if (activeTab === "My Questions") {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -467,54 +532,76 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                 {/* Main Content Area */}
                 <div className="lg:col-span-8 space-y-6">
 
-                    {/* Ask Question Box */}
-                    <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-4 md:p-6 transition-all hover:shadow-md">
-                        <h2 className="text-xl font-bold text-zinc-800 dark:text-zinc-100 mb-2">Need guidance on Departmental Exams or Topics? <span className="text-zinc-500 font-normal text-base">Ask our experts</span></h2>
-
-                        <div className="relative mt-4">
-                            <textarea
-                                value={questionInput}
-                                onChange={(e) => setQuestionInput(e.target.value)}
-                                className="w-full border border-zinc-300 dark:border-zinc-700 rounded-lg p-3 md:p-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[80px] md:min-h-[100px] resize-y bg-zinc-50 dark:bg-zinc-950 text-sm transition-all"
-                                placeholder="Type Your Question here..."
-                            />
-                            <span className="absolute bottom-3 right-3 text-xs text-zinc-400">{questionInput.length}/140</span>
+                    {/* Ask Question / Report Error Box */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800 overflow-hidden transition-all hover:shadow-md">
+                        {/* Top Box Tabs */}
+                        <div className="flex border-b border-zinc-200 dark:border-zinc-800">
+                            <button
+                                onClick={() => setTopBoxTab("discuss")}
+                                className={`flex-1 py-3 text-sm font-bold text-center border-b-2 transition-all ${topBoxTab === "discuss" ? 'border-blue-500 text-blue-600 bg-blue-50/50 dark:bg-blue-900/10' : 'border-transparent text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
+                            >
+                                💬 Discuss Topics
+                            </button>
+                            <button
+                                onClick={() => setTopBoxTab("report")}
+                                className={`flex-1 py-3 text-sm font-bold text-center border-b-2 transition-all ${topBoxTab === "report" ? 'border-red-500 text-red-600 bg-red-50/50 dark:bg-red-900/10' : 'border-transparent text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
+                            >
+                                ⚠️ Report Error
+                            </button>
                         </div>
 
-                        {showDetailsInput && (
-                            <div className="relative mt-4 animate-in fade-in slide-in-from-top-2">
-                                <textarea
-                                    value={detailsInput}
-                                    onChange={(e) => setDetailsInput(e.target.value)}
-                                    className="w-full border border-zinc-300 dark:border-zinc-700 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[100px] resize-y bg-zinc-50 dark:bg-zinc-950 text-sm transition-all"
-                                    placeholder="Add more details, context, or specific rules you are referring to..."
-                                />
+                        {topBoxTab === "discuss" ? (
+                            <div className="p-4 md:p-6">
+                                <h2 className="text-xl font-bold text-zinc-800 dark:text-zinc-100 mb-2">Need guidance on Departmental Exams or Topics? <span className="text-zinc-500 font-normal text-base">Ask our experts</span></h2>
+
+                                <div className="relative mt-4">
+                                    <textarea
+                                        value={questionInput}
+                                        onChange={(e) => setQuestionInput(e.target.value)}
+                                        className="w-full border border-zinc-300 dark:border-zinc-700 rounded-lg p-3 md:p-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[80px] md:min-h-[100px] resize-y bg-zinc-50 dark:bg-zinc-950 text-sm transition-all"
+                                        placeholder="Type Your Question here..."
+                                    />
+                                    <span className="absolute bottom-3 right-3 text-xs text-zinc-400">{questionInput.length}/140</span>
+                                </div>
+
+                                {showDetailsInput && (
+                                    <div className="relative mt-4 animate-in fade-in slide-in-from-top-2">
+                                        <textarea
+                                            value={detailsInput}
+                                            onChange={(e) => setDetailsInput(e.target.value)}
+                                            className="w-full border border-zinc-300 dark:border-zinc-700 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[100px] resize-y bg-zinc-50 dark:bg-zinc-950 text-sm transition-all"
+                                            placeholder="Add more details, context, or specific rules you are referring to..."
+                                        />
+                                    </div>
+                                )}
+
+                                <div className="mt-2 flex items-center justify-between">
+                                    <button
+                                        onClick={() => setShowDetailsInput(!showDetailsInput)}
+                                        className="text-blue-600 text-sm font-medium hover:underline flex items-center gap-1 hover:text-blue-700 transition-colors"
+                                    >
+                                        <PenSquare className="w-4 h-4" /> {showDetailsInput ? "Hide details" : "Add more details"}
+                                    </button>
+                                    <button
+                                        onClick={handleAskQuestion}
+                                        className="bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-600 active:bg-orange-700 transition-colors shadow-sm"
+                                    >
+                                        Post
+                                    </button>
+                                </div>
+                                <p className="text-xs text-zinc-400 mt-2 flex items-center gap-1">
+                                    <Star className="w-3 h-3" /> Keep it short & simple. Avoid abusive language.
+                                </p>
                             </div>
+                        ) : (
+                            <ErrorReportForm user={user} onLoginRedirect={() => router.push('/login')} onSuccess={fetchErrorReports} />
                         )}
-
-                        <div className="mt-2 flex items-center justify-between">
-                            <button
-                                onClick={() => setShowDetailsInput(!showDetailsInput)}
-                                className="text-blue-600 text-sm font-medium hover:underline flex items-center gap-1 hover:text-blue-700 transition-colors"
-                            >
-                                <PenSquare className="w-4 h-4" /> {showDetailsInput ? "Hide details" : "Add more details"}
-                            </button>
-                            <button
-                                onClick={handleAskQuestion}
-                                className="bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-600 active:bg-orange-700 transition-colors shadow-sm"
-                            >
-                                Post
-                            </button>
-                        </div>
-                        <p className="text-xs text-zinc-400 mt-2 flex items-center gap-1">
-                            <Star className="w-3 h-3" /> Keep it short & simple. Avoid abusive language.
-                        </p>
                     </div>
 
                     {/* Feed Tabs */}
                     <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800 overflow-hidden">
                         <div className="flex border-b border-zinc-200 dark:border-zinc-800">
-                            {["Q&A Home", "Success Stories", "Unanswered Questions"].map((tab) => (
+                            {["Q&A Home", "Success Stories", "Error Reports"].map((tab) => (
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
@@ -566,7 +653,103 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                                 </div>
                             )}
                             {/* Simulated Feed Content */}
-                            {getFeedData().length > 0 ? (
+                            {activeTab === "Error Reports" ? (
+                                loadingReports ? (
+                                    <div className="p-12 text-center text-zinc-400">
+                                        <div className="w-8 h-8 border-2 border-zinc-300 border-t-orange-500 rounded-full animate-spin mx-auto mb-3"></div>
+                                        <p className="text-sm">Loading error reports...</p>
+                                    </div>
+                                ) : errorReports.length > 0 ? (
+                                    errorReports.map((report: any) => (
+                                        <div key={report._id} className="p-4 md:p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
+                                            <div className="flex items-start gap-3">
+                                                <div className="w-9 h-9 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 font-bold text-sm shrink-0">
+                                                    {report.reportedBy?.[0] || "?"}
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                                                        <span className="font-bold text-sm text-zinc-900 dark:text-zinc-100">{report.reportedBy}</span>
+                                                        <span className="text-xs text-zinc-400">•</span>
+                                                        <span className="text-xs text-zinc-400">{new Date(report.createdAt).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}</span>
+                                                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${report.status === 'resolved' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' : report.status === 'dismissed' ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-500' : 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'}`}>
+                                                            {report.status === 'resolved' ? '✅ Resolved' : report.status === 'dismissed' ? 'Dismissed' : '⏳ Pending'}
+                                                        </span>
+                                                    </div>
+                                                    <div className="flex items-center gap-2 mb-2 flex-wrap">
+                                                        <span className="px-2 py-0.5 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded text-xs font-bold">{report.category}</span>
+                                                        <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded text-xs font-medium">{report.topic}</span>
+                                                    </div>
+                                                    <p className="text-sm text-zinc-700 dark:text-zinc-300 whitespace-pre-wrap">{report.description}</p>
+                                                    {report.screenshot && (
+                                                        <div className="mt-2">
+                                                            <img src={report.screenshot} alt="Error screenshot" className="max-w-xs rounded-lg border border-zinc-200 dark:border-zinc-700 shadow-sm" />
+                                                        </div>
+                                                    )}
+                                                    {/* Admin Reply Display */}
+                                                    {report.adminReply && (
+                                                        <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800/30">
+                                                            <div className="flex items-center gap-1.5 mb-1">
+                                                                <span className="bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-300 text-[10px] px-1.5 py-0.5 rounded font-bold">Admin</span>
+                                                                <span className="text-xs font-semibold text-blue-700 dark:text-blue-300">Reply</span>
+                                                            </div>
+                                                            <p className="text-sm text-blue-800 dark:text-blue-200">{report.adminReply}</p>
+                                                        </div>
+                                                    )}
+                                                    {/* Admin Actions */}
+                                                    {isUserAdmin(user) && (
+                                                        <div className="mt-3 flex items-center gap-2 flex-wrap">
+                                                            {report.status !== 'resolved' && (
+                                                                <button
+                                                                    onClick={() => handleResolveReport(report._id)}
+                                                                    className="px-3 py-1.5 bg-green-500 hover:bg-green-600 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
+                                                                >
+                                                                    ✅ Resolve
+                                                                </button>
+                                                            )}
+                                                            <button
+                                                                onClick={() => { setReplyingTo(replyingTo === report._id ? null : report._id); setReplyText(report.adminReply || ""); }}
+                                                                className="px-3 py-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
+                                                            >
+                                                                💬 {report.adminReply ? 'Edit Reply' : 'Reply'}
+                                                            </button>
+                                                            <button
+                                                                onClick={() => handleDeleteReport(report._id)}
+                                                                className="px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1"
+                                                            >
+                                                                🗑️ Delete
+                                                            </button>
+                                                        </div>
+                                                    )}
+                                                    {/* Reply Input */}
+                                                    {replyingTo === report._id && (
+                                                        <div className="mt-3 flex gap-2">
+                                                            <input
+                                                                type="text"
+                                                                value={replyText}
+                                                                onChange={(e) => setReplyText(e.target.value)}
+                                                                placeholder="Write admin reply..."
+                                                                className="flex-1 border border-zinc-300 dark:border-zinc-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                                onKeyDown={(e) => { if (e.key === 'Enter') handleAdminReply(report._id); }}
+                                                            />
+                                                            <button
+                                                                onClick={() => handleAdminReply(report._id)}
+                                                                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-bold transition-colors"
+                                                            >
+                                                                Send
+                                                            </button>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <div className="p-12 text-center text-zinc-500">
+                                        <p>No error reports yet.</p>
+                                        <p className="text-sm mt-2">Use the &quot;Report Error&quot; tab above to submit one!</p>
+                                    </div>
+                                )
+                            ) : getFeedData().length > 0 ? (
                                 getFeedData().map((post: any) => (
                                     <PostItem
                                         key={post.id}
