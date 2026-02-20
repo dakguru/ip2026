@@ -14,6 +14,7 @@ import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
 import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
 import { WEEKLY_MOCK_04_QUESTIONS } from "@/data/weekly_mock_data_04";
 import { WEEKLY_MOCK_05_QUESTIONS } from "@/data/weekly_mock_data_05";
+import { WEEKLY_MOCK_06_QUESTIONS } from "@/data/weekly_mock_data_06";
 import { FileDown } from "lucide-react";
 
 // Map IDs to Question Data for PDF Generation
@@ -22,7 +23,8 @@ const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
     "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS,
     "mock-2026-02-07": WEEKLY_MOCK_04_QUESTIONS,
-    "mock-2026-02-14": WEEKLY_MOCK_05_QUESTIONS
+    "mock-2026-02-14": WEEKLY_MOCK_05_QUESTIONS,
+    "mock-2026-02-21": WEEKLY_MOCK_06_QUESTIONS
 };
 
 // Mock Test Interface

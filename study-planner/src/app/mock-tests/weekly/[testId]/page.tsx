@@ -10,6 +10,7 @@ import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
 import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
 import { WEEKLY_MOCK_04_QUESTIONS } from "@/data/weekly_mock_data_04";
 import { WEEKLY_MOCK_05_QUESTIONS } from "@/data/weekly_mock_data_05";
+import { WEEKLY_MOCK_06_QUESTIONS } from "@/data/weekly_mock_data_06";
 import { Question } from "@/data/live_mock_data";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -21,7 +22,8 @@ const TEST_DATA_MAP: Record<string, Question[]> = {
     "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
     "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS,
     "mock-2026-02-07": WEEKLY_MOCK_04_QUESTIONS,
-    "mock-2026-02-14": WEEKLY_MOCK_05_QUESTIONS
+    "mock-2026-02-14": WEEKLY_MOCK_05_QUESTIONS,
+    "mock-2026-02-21": WEEKLY_MOCK_06_QUESTIONS
 };
 
 interface LeaderboardEntry {
@@ -58,6 +60,11 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-02-14T00:00:00+05:30"),
         endDate: new Date("2026-02-15T23:59:59+05:30"),
         title: "Weekly Mock Test - 05"
+    },
+    "mock-2026-02-21": {
+        startDate: new Date("2026-02-21T00:00:00+05:30"),
+        endDate: new Date("2026-02-22T23:59:59+05:30"),
+        title: "Weekly Mock Test - 06"
     }
 };
 
