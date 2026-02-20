@@ -49,6 +49,7 @@ export async function GET(request: Request) {
             planName: user.planName,
             purchaseDate: user.purchaseDate,
             membershipValidity: user.membershipValidity,
+            lastActiveAt: user.lastActiveAt,
             createdAt: user.createdAt
         }));
 

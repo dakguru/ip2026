@@ -4,8 +4,8 @@ import { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import {
     Shield, Users, ArrowLeft, Loader2, Search, Download, FileText,
-    Crown, Star, Zap, Filter, MoreHorizontal, ChevronDown, Check,
-    CreditCard, Calendar, Bell, Clock
+    Crown, Star, Zap, Filter, MoreHorizontal, ChevronDown, ChevronUp, Check,
+    CreditCard, Calendar, Bell, Clock, ArrowUpDown
 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -53,6 +53,27 @@ export default function AdminDashboard() {
 
     // Filters
     const [filterStatus, setFilterStatus] = useState<'all' | 'gold' | 'silver' | 'free'>('all');
+
+    // Sorting
+    type SortColumn = 'name' | 'plan' | 'role' | 'joined' | 'lastActive';
+    const [sortColumn, setSortColumn] = useState<SortColumn | null>('lastActive');
+    const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
+
+    const handleSort = (col: SortColumn) => {
+        if (sortColumn === col) {
+            setSortDirection(d => d === 'asc' ? 'desc' : 'asc');
+        } else {
+            setSortColumn(col);
+            setSortDirection('asc');
+        }
+    };
+
+    const SortIcon = ({ col }: { col: SortColumn }) => {
+        if (sortColumn !== col) return <ArrowUpDown className="w-3 h-3 ml-1 opacity-40" />;
+        return sortDirection === 'asc'
+            ? <ChevronUp className="w-3 h-3 ml-1 text-blue-500" />
+            : <ChevronDown className="w-3 h-3 ml-1 text-blue-500" />;
+    };
 
     // Edit State
     const [editingUser, setEditingUser] = useState<UserData | null>(null);
@@ -163,6 +184,41 @@ export default function AdminDashboard() {
 
         return matchesSearch && matchesStatus;
     });
+
+    const planOrder: Record<string, number> = { gold: 3, silver: 2, free: 1 };
+
+    const sortedUsers = useMemo(() => {
+        if (!sortColumn) return filteredUsers;
+        return [...filteredUsers].sort((a, b) => {
+            let aVal: number | string = 0;
+            let bVal: number | string = 0;
+            switch (sortColumn) {
+                case 'name':
+                    aVal = a.name.toLowerCase();
+                    bVal = b.name.toLowerCase();
+                    break;
+                case 'plan':
+                    aVal = planOrder[a.membershipLevel || 'free'] ?? 1;
+                    bVal = planOrder[b.membershipLevel || 'free'] ?? 1;
+                    break;
+                case 'role':
+                    aVal = a.role;
+                    bVal = b.role;
+                    break;
+                case 'joined':
+                    aVal = new Date(a.createdAt).getTime();
+                    bVal = new Date(b.createdAt).getTime();
+                    break;
+                case 'lastActive':
+                    aVal = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
+                    bVal = b.lastActiveAt ? new Date(b.lastActiveAt).getTime() : 0;
+                    break;
+            }
+            if (aVal < bVal) return sortDirection === 'asc' ? -1 : 1;
+            if (aVal > bVal) return sortDirection === 'asc' ? 1 : -1;
+            return 0;
+        });
+    }, [filteredUsers, sortColumn, sortDirection]);
 
     const downloadCSV = async () => {
         const headers = ['ID', 'Name', 'Email', 'Role', 'Status', 'Joined', 'Last Active', 'Mobile', 'Exam', 'Joining Date', 'Plan', 'Amount'];
@@ -282,147 +338,145 @@ export default function AdminDashboard() {
     }
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 transition-colors font-sans">
-            <div className="max-w-7xl mx-auto space-y-8">
+        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-4 md:p-8 transition-colors font-sans">
+            <div className="max-w-7xl mx-auto space-y-6">
 
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
                     <div>
-                        <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-2 transition-colors">
+                        <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-2 transition-colors text-sm">
                             <ArrowLeft className="w-4 h-4" /> Back to Home
                         </Link>
-                        <h1 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
-                            <Shield className="w-8 h-8 text-blue-600" />
+                        <h1 className="text-2xl md:text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+                            <Shield className="w-6 h-6 md:w-8 md:h-8 text-blue-600" />
                             Admin Dashboard
                         </h1>
-                        <p className="text-zinc-500 dark:text-zinc-400 mt-1">Manage users, track growth, and oversee system settings.</p>
+                        <p className="text-zinc-500 dark:text-zinc-400 mt-1 text-sm">Manage users, track growth, and oversee system settings.</p>
                     </div>
-                    <div className="flex gap-3">
-                        <button onClick={downloadCSV} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shadow-sm">
-                            <FileText className="w-4 h-4 text-green-600" />
-                            CSV
+                    <div className="flex gap-2">
+                        <button onClick={downloadCSV} className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shadow-sm">
+                            <FileText className="w-4 h-4 text-green-600" /> CSV
                         </button>
-                        <button onClick={downloadPDF} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shadow-sm">
-                            <Download className="w-4 h-4 text-red-600" />
-                            PDF
+                        <button onClick={downloadPDF} className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shadow-sm">
+                            <Download className="w-4 h-4 text-red-600" /> PDF
                         </button>
                     </div>
                 </div>
 
                 {/* Statistics Cards */}
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
 
                     <div
                         onClick={() => setShowOnlineUsersModal(true)}
-                        className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-all relative overflow-hidden cursor-pointer active:scale-95"
+                        className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-all relative overflow-hidden cursor-pointer active:scale-95"
                     >
                         <div className="absolute top-0 right-0 w-16 h-16 bg-green-500/10 rounded-bl-full -mr-8 -mt-8"></div>
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="p-2 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg animate-pulse">
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="p-1.5 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg animate-pulse">
                                 <span className="relative flex h-3 w-3">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                                 </span>
                             </div>
-                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Online</span>
+                            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">Online</span>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">{onlineCount}</span>
-                            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Active Now</span>
+                            <span className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">{onlineCount}</span>
+                            <span className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">Active Now</span>
                         </div>
                     </div>
-                    <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="p-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg">
-                                <Users className="w-5 h-5" />
+                    <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="p-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg">
+                                <Users className="w-4 h-4" />
                             </div>
-                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Total</span>
+                            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">Total</span>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">{stats.total}</span>
-                            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Registered Users</span>
-                        </div>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/10 dark:to-amber-900/10 p-5 rounded-2xl shadow-sm border border-yellow-100 dark:border-yellow-900/30 hover:shadow-md transition-shadow">
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="p-2 bg-yellow-100 dark:bg-yellow-900/40 text-yellow-600 dark:text-yellow-400 rounded-lg">
-                                <Crown className="w-5 h-5" />
-                            </div>
-                            <span className="text-xs font-bold text-yellow-600/60 dark:text-yellow-400/60 uppercase tracking-wider">Gold</span>
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-3xl font-extrabold text-yellow-700 dark:text-yellow-400">{stats.gold}</span>
-                            <span className="text-xs text-yellow-600/70 dark:text-yellow-400/70 mt-1">Premium Members</span>
+                            <span className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">{stats.total}</span>
+                            <span className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">Registered</span>
                         </div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-slate-50 to-zinc-50 dark:from-slate-900/10 dark:to-zinc-900/10 p-5 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="p-2 bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg">
-                                <Star className="w-5 h-5" />
+                    <div className="bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/10 dark:to-amber-900/10 p-4 rounded-2xl shadow-sm border border-yellow-100 dark:border-yellow-900/30 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="p-1.5 bg-yellow-100 dark:bg-yellow-900/40 text-yellow-600 dark:text-yellow-400 rounded-lg">
+                                <Crown className="w-4 h-4" />
                             </div>
-                            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Silver</span>
+                            <span className="text-[10px] font-bold text-yellow-600/60 dark:text-yellow-400/60 uppercase tracking-wider">Gold</span>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-3xl font-extrabold text-slate-700 dark:text-slate-300">{stats.silver}</span>
-                            <span className="text-xs text-slate-500 dark:text-slate-400 mt-1">Standard Members</span>
+                            <span className="text-2xl font-extrabold text-yellow-700 dark:text-yellow-400">{stats.gold}</span>
+                            <span className="text-[10px] text-yellow-600/70 dark:text-yellow-400/70 mt-0.5">Premium</span>
                         </div>
                     </div>
 
-                    <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="p-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 rounded-lg">
-                                <Zap className="w-5 h-5" />
+                    <div className="bg-gradient-to-br from-slate-50 to-zinc-50 dark:from-slate-900/10 dark:to-zinc-900/10 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="p-1.5 bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg">
+                                <Star className="w-4 h-4" />
                             </div>
-                            <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Free</span>
+                            <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Silver</span>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-3xl font-extrabold text-zinc-700 dark:text-zinc-300">{stats.free}</span>
-                            <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Basic Users</span>
+                            <span className="text-2xl font-extrabold text-slate-700 dark:text-slate-300">{stats.silver}</span>
+                            <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Standard</span>
+                        </div>
+                    </div>
+
+                    <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="p-1.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 rounded-lg">
+                                <Zap className="w-4 h-4" />
+                            </div>
+                            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">Free</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-2xl font-extrabold text-zinc-700 dark:text-zinc-300">{stats.free}</span>
+                            <span className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">Basic</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Coupon Statistics */}
                 <div>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-4 flex items-center gap-2">
-                        <CreditCard className="w-5 h-5 text-pink-500" /> Coupon Insights
+                    <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100 mb-3 flex items-center gap-2">
+                        <CreditCard className="w-4 h-4 text-pink-500" /> Coupon Insights
                     </h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
                             <div className="flex items-center justify-between mb-2">
-                                <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Total Coupons</span>
-                                <span className="p-1 px-2 text-xs bg-zinc-100 dark:bg-zinc-800 rounded text-zinc-600 dark:text-zinc-400">All</span>
+                                <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">Total Coupons</span>
+                                <span className="p-1 px-2 text-[10px] bg-zinc-100 dark:bg-zinc-800 rounded text-zinc-600 dark:text-zinc-400">All</span>
                             </div>
-                            <span className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">{couponStats.total}</span>
+                            <span className="text-xl font-extrabold text-zinc-900 dark:text-zinc-100">{couponStats.total}</span>
                         </div>
-                        <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
+                        <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
                             <div className="flex items-center justify-between mb-2">
-                                <span className="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-wider">Claimed</span>
-                                <span className="p-1 px-2 text-xs bg-green-100 dark:bg-green-900/20 rounded text-green-600 dark:text-green-400">Assigned</span>
+                                <span className="text-[10px] font-bold text-green-600 dark:text-green-400 uppercase tracking-wider">Claimed</span>
+                                <span className="p-1 px-2 text-[10px] bg-green-100 dark:bg-green-900/20 rounded text-green-600 dark:text-green-400">Assigned</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-2xl font-extrabold text-green-600 dark:text-green-400">{couponStats.claimed}</span>
-                                <span className="text-xs text-zinc-400">Users requested code</span>
+                                <span className="text-xl font-extrabold text-green-600 dark:text-green-400">{couponStats.claimed}</span>
+                                <span className="text-[10px] text-zinc-400">Requested code</span>
                             </div>
                         </div>
-                        <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
+                        <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
                             <div className="flex items-center justify-between mb-2">
-                                <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Redeemed</span>
-                                <span className="p-1 px-2 text-xs bg-blue-100 dark:bg-blue-900/20 rounded text-blue-600 dark:text-blue-400">Used</span>
+                                <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Redeemed</span>
+                                <span className="p-1 px-2 text-[10px] bg-blue-100 dark:bg-blue-900/20 rounded text-blue-600 dark:text-blue-400">Used</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">{couponStats.redeemed}</span>
-                                <span className="text-xs text-zinc-400">Applied in payment</span>
+                                <span className="text-xl font-extrabold text-blue-600 dark:text-blue-400">{couponStats.redeemed}</span>
+                                <span className="text-[10px] text-zinc-400">Applied in payment</span>
                             </div>
                         </div>
-                        <div className="bg-white dark:bg-zinc-900 p-5 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
+                        <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800">
                             <div className="flex items-center justify-between mb-2">
-                                <span className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider">Available</span>
-                                <span className="p-1 px-2 text-xs bg-orange-100 dark:bg-orange-900/20 rounded text-orange-600 dark:text-orange-400">Left</span>
+                                <span className="text-[10px] font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider">Available</span>
+                                <span className="p-1 px-2 text-[10px] bg-orange-100 dark:bg-orange-900/20 rounded text-orange-600 dark:text-orange-400">Left</span>
                             </div>
-                            <span className="text-2xl font-extrabold text-orange-600 dark:text-orange-400">{couponStats.available}</span>
+                            <span className="text-xl font-extrabold text-orange-600 dark:text-orange-400">{couponStats.available}</span>
                         </div>
                     </div>
                 </div>
@@ -433,15 +487,14 @@ export default function AdminDashboard() {
                 <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 flex flex-col">
 
                     {/* Toolbar */}
-                    <div className="p-5 border-b border-zinc-100 dark:border-zinc-800 flex flex-col lg:flex-row items-center justify-between gap-4">
-
+                    <div className="p-4 border-b border-zinc-100 dark:border-zinc-800 flex flex-col gap-3">
                         {/* Filter Tabs */}
-                        <div className="flex items-center bg-zinc-100 dark:bg-zinc-800/50 p-1 rounded-xl w-full lg:w-auto overflow-x-auto no-scrollbar">
+                        <div className="flex items-center bg-zinc-100 dark:bg-zinc-800/50 p-1 rounded-xl w-full overflow-x-auto no-scrollbar">
                             {(['all', 'gold', 'silver', 'free'] as const).map((tab) => (
                                 <button
                                     key={tab}
                                     onClick={() => setFilterStatus(tab)}
-                                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all capitalize whitespace-nowrap
+                                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all capitalize whitespace-nowrap flex-1
                                         ${filterStatus === tab
                                             ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm'
                                             : 'text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200'
@@ -451,9 +504,8 @@ export default function AdminDashboard() {
                                 </button>
                             ))}
                         </div>
-
                         {/* Search */}
-                        <div className="relative w-full lg:w-80">
+                        <div className="relative w-full">
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
                             <input
                                 type="text"
@@ -465,22 +517,111 @@ export default function AdminDashboard() {
                         </div>
                     </div>
 
-                    {/* Users Table */}
-                    <div className="overflow-x-auto min-h-[400px]">
+                    {/* ── MOBILE USER CARDS (shown on mobile, hidden on md+) ── */}
+                    <div className="md:hidden divide-y divide-zinc-100 dark:divide-zinc-800">
+                        {sortedUsers.length > 0 ? sortedUsers.map((user) => (
+                            <div key={user.id} className="p-4 space-y-3">
+                                {/* Row 1: Avatar + Name + Edit */}
+                                <div className="flex items-center justify-between gap-3">
+                                    <div className="flex items-center gap-3">
+                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-sm shrink-0
+                                            ${user.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30' :
+                                                user.membershipLevel === 'silver' ? 'bg-slate-100 text-slate-600 dark:bg-slate-800' :
+                                                    'bg-zinc-100 text-zinc-500 dark:bg-zinc-800'
+                                            }`}>
+                                            {user.name.charAt(0).toUpperCase()}
+                                        </div>
+                                        <div className="min-w-0">
+                                            <p className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm truncate">{user.name}</p>
+                                            <p className="text-xs text-zinc-500 dark:text-zinc-400 truncate">{user.email}</p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={() => setEditingUser(user)}
+                                        className="px-3 py-1.5 text-xs font-semibold text-zinc-600 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 rounded-lg transition-colors shrink-0"
+                                    >
+                                        Edit
+                                    </button>
+                                </div>
+                                {/* Row 2: Badges */}
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase border
+                                        ${user.membershipLevel === 'gold'
+                                            ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50'
+                                            : user.membershipLevel === 'silver'
+                                                ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800/50'
+                                                : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-500 dark:border-zinc-800/50'
+                                        }`}>
+                                        {user.membershipLevel === 'gold' && <Crown className="w-2.5 h-2.5 fill-current" />}
+                                        {user.membershipLevel === 'silver' && <Star className="w-2.5 h-2.5 fill-current" />}
+                                        {user.membershipLevel || 'Free'}
+                                    </span>
+                                    <span className={`inline-flex px-2 py-0.5 rounded text-[10px] font-medium border
+                                        ${user.role === 'admin'
+                                            ? 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-900/20 dark:text-purple-300 dark:border-purple-800'
+                                            : 'bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-800'
+                                        }`}>
+                                        {user.role}
+                                    </span>
+                                    {user.membershipLevel && user.membershipLevel !== 'free' && (
+                                        <button
+                                            onClick={() => setViewingPaymentUser(user)}
+                                            className="text-[10px] flex items-center gap-1 text-blue-600 hover:underline font-semibold"
+                                        >
+                                            <CreditCard className="w-3 h-3" /> Details
+                                        </button>
+                                    )}
+                                </div>
+                                {/* Row 3: Dates */}
+                                <div className="flex items-center gap-4 text-[10px] text-zinc-500 dark:text-zinc-400">
+                                    <span className="flex items-center gap-1">
+                                        <Calendar className="w-3 h-3" />
+                                        Joined: <span className="font-medium text-zinc-700 dark:text-zinc-300">{format(new Date(user.createdAt), 'MMM d, yyyy')}</span>
+                                    </span>
+                                    <span className="flex items-center gap-1">
+                                        <Clock className="w-3 h-3" />
+                                        {user.lastActiveAt ? (
+                                            <span className={new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000 ? 'text-green-600 dark:text-green-400 font-bold' : 'font-medium text-zinc-700 dark:text-zinc-300'}>
+                                                {format(new Date(user.lastActiveAt), 'MMM d, HH:mm')}
+                                            </span>
+                                        ) : <span className="italic">Never</span>}
+                                    </span>
+                                </div>
+                            </div>
+                        )) : (
+                            <div className="py-12 text-center">
+                                <Search className="w-10 h-10 mx-auto mb-3 text-zinc-200 dark:text-zinc-800" />
+                                <p className="text-sm font-semibold text-zinc-500">No users found</p>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* ── DESKTOP TABLE (hidden on mobile, shown on md+) ── */}
+                    <div className="hidden md:block overflow-x-auto min-h-[400px]">
                         <table className="w-full text-left">
                             <thead>
                                 <tr className="border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/20">
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">User Details</th>
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Plan Status</th>
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Role</th>
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Joined On</th>
-                                    <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Last Active</th>
+                                    <th onClick={() => handleSort('name')} className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider cursor-pointer hover:text-zinc-600 dark:hover:text-zinc-300 select-none transition-colors">
+                                        <span className="flex items-center">User Details <SortIcon col="name" /></span>
+                                    </th>
+                                    <th onClick={() => handleSort('plan')} className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider cursor-pointer hover:text-zinc-600 dark:hover:text-zinc-300 select-none transition-colors">
+                                        <span className="flex items-center">Plan Status <SortIcon col="plan" /></span>
+                                    </th>
+                                    <th onClick={() => handleSort('role')} className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider cursor-pointer hover:text-zinc-600 dark:hover:text-zinc-300 select-none transition-colors">
+                                        <span className="flex items-center">Role <SortIcon col="role" /></span>
+                                    </th>
+                                    <th onClick={() => handleSort('joined')} className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider cursor-pointer hover:text-zinc-600 dark:hover:text-zinc-300 select-none transition-colors">
+                                        <span className="flex items-center">Joined On <SortIcon col="joined" /></span>
+                                    </th>
+                                    <th onClick={() => handleSort('lastActive')} className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider cursor-pointer hover:text-zinc-600 dark:hover:text-zinc-300 select-none transition-colors">
+                                        <span className="flex items-center">Last Active <SortIcon col="lastActive" /></span>
+                                    </th>
                                     <th className="py-4 px-6 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider text-right">Actions</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
-                                {filteredUsers.length > 0 ? (
-                                    filteredUsers.map((user) => (
+                                {sortedUsers.length > 0 ? (
+                                    sortedUsers.map((user) => (
                                         <tr
                                             key={user.id}
                                             className="group hover:bg-zinc-50 dark:hover:bg-zinc-800/40 transition-colors"

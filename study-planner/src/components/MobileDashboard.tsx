@@ -2,7 +2,7 @@
 
 import DashboardCarousel from "@/components/dashboard/DashboardCarousel";
 import Link from "next/link";
-import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy, Newspaper, AlertCircle } from "lucide-react";
+import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy, Newspaper, AlertCircle, Shield } from "lucide-react";
 import { Capacitor } from "@capacitor/core";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -83,6 +83,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         { label: "Dak Sutra", icon: Newspaper, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/dak-sutra" },
         { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "/social" },
         { label: "DG Blog", icon: PenTool, color: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/blog" },
+        { label: "Admin Panel", icon: Shield, color: "text-red-700 dark:text-red-400", bg: "bg-red-50 dark:bg-red-900/20", href: "/admin", adminOnly: true },
     ];
 
     const isGold = membership === 'gold';
@@ -227,6 +228,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                             { href: "/current-affairs", icon: Globe, label: "Current Affairs", color: "text-emerald-600" },
                                             { href: "/notes", icon: FileText, label: "PDF Notes", color: "text-rose-600" },
                                             { href: "/about", icon: Info, label: "About Us", color: "text-slate-500" },
+                                            ...(isAdmin ? [{ href: "/admin", icon: Shield, label: "Admin Panel", color: "text-red-600" }] : []),
                                         ].map((item) => (
                                             <Link
                                                 key={item.href}
@@ -421,7 +423,11 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
                     <div className="grid grid-cols-3 gap-x-4 gap-y-6">
                         {mainFeatures
-                            .filter(item => item.label !== "Dak Sutra" || isAdmin)
+                            .filter(item => {
+                                if ((item as any).adminOnly) return isAdmin;
+                                if (item.label === "Dak Sutra") return isAdmin;
+                                return true;
+                            })
 
                             .map((item) => (
                                 <Link

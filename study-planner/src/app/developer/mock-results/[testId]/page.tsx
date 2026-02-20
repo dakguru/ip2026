@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ArrowLeft, Search, CheckCircle2, ChevronDown, ChevronUp, Clock, Calendar, Download, FileText, Loader2 } from "lucide-react";
+import { useEffect, useState, useRef, useCallback } from "react";
+import React from "react";
+import { ArrowLeft, Search, CheckCircle2, ChevronDown, ChevronUp, Clock, Calendar, Download, FileText, Loader2, RefreshCw, Radio } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
 import { useParams } from "next/navigation";
@@ -18,6 +19,17 @@ interface MockResult {
     submittedAt: string;
     answers?: Record<string, number>;
 }
+
+// Schedule map — determines when auto-refresh is active
+const TEST_SCHEDULE_MAP: Record<string, { start: Date; end: Date }> = {
+    "mock-2026-01-17": { start: new Date("2026-01-17T00:00:00+05:30"), end: new Date("2026-01-18T23:59:59+05:30") },
+    "mock-2026-01-24": { start: new Date("2026-01-24T00:00:00+05:30"), end: new Date("2026-01-25T23:59:59+05:30") },
+    "mock-2026-01-31": { start: new Date("2026-01-31T00:00:00+05:30"), end: new Date("2026-02-01T23:59:59+05:30") },
+    "mock-2026-02-07": { start: new Date("2026-02-07T00:00:00+05:30"), end: new Date("2026-02-08T23:59:59+05:30") },
+    "mock-2026-02-14": { start: new Date("2026-02-14T00:00:00+05:30"), end: new Date("2026-02-15T23:59:59+05:30") },
+    "mock-2026-02-21": { start: new Date("2026-02-21T00:00:00+05:30"), end: new Date("2026-02-22T23:59:59+05:30") },
+    "live-sample": { start: new Date(0), end: new Date("2099-12-31T23:59:59+05:30") },
+};
 
 export default function MockTestDetailResultsPage() {
     const params = useParams();
@@ -40,6 +52,15 @@ export default function MockTestDetailResultsPage() {
     const [showNotification, setShowNotification] = useState(false);
     const [isBulkDownloading, setIsBulkDownloading] = useState(false);
     const [downloadProgress, setDownloadProgress] = useState(0);
+    const [lastRefreshed, setLastRefreshed] = useState<Date | null>(null);
+    const [nextRefreshIn, setNextRefreshIn] = useState(20);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const countdownRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Determine if this test is currently live
+    const schedule = TEST_SCHEDULE_MAP[testId];
+    const now = new Date();
+    const isLive = schedule ? now >= schedule.start && now <= schedule.end : false;
 
     useEffect(() => {
         if (showNotification) {
@@ -48,25 +69,52 @@ export default function MockTestDetailResultsPage() {
         }
     }, [showNotification]);
 
-    useEffect(() => {
-        if (testId) {
-            fetchResults();
-        }
-    }, [testId]);
-
-    const fetchResults = async () => {
+    const fetchResults = useCallback(async (silent = false) => {
+        if (!silent) setIsLoading(true);
         try {
             const res = await fetch(`/api/admin/mock-test/results?testId=${testId}`, { cache: 'no-store' });
             if (res.ok) {
                 const data = await res.json();
                 setResults(data.results);
+                setLastRefreshed(new Date());
             }
         } catch (error) {
             console.error("Failed to fetch results", error);
         } finally {
-            setIsLoading(false);
+            if (!silent) setIsLoading(false);
         }
-    };
+    }, [testId]);
+
+    // Initial load
+    useEffect(() => {
+        if (testId) fetchResults(false);
+    }, [testId, fetchResults]);
+
+    // Auto-refresh every 20s ONLY during live window
+    useEffect(() => {
+        if (!isLive) return;
+
+        const INTERVAL_MS = 20_000;
+        setNextRefreshIn(20);
+
+        // Countdown ticker
+        countdownRef.current = setInterval(() => {
+            setNextRefreshIn(prev => {
+                if (prev <= 1) return 20;
+                return prev - 1;
+            });
+        }, 1000);
+
+        // Data poller
+        intervalRef.current = setInterval(() => {
+            fetchResults(true);
+        }, INTERVAL_MS);
+
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+            if (countdownRef.current) clearInterval(countdownRef.current);
+        };
+    }, [isLive, fetchResults]);
 
     const filteredResults = results.filter(r =>
         r.userName.toLowerCase().includes(search.toLowerCase()) ||
@@ -166,11 +214,22 @@ export default function MockTestDetailResultsPage() {
                         <div>
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider mb-2">
                                 <FileText className="w-3 h-3" /> Result Dashboard
+                                {isLive && (
+                                    <span className="ml-1 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] font-bold border border-red-200 dark:border-red-800/50 animate-pulse">
+                                        <Radio className="w-2.5 h-2.5" /> LIVE
+                                    </span>
+                                )}
                             </div>
                             <h1 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 capitalize">
                                 {formatTestName(testId)}
                             </h1>
                             <p className="text-zinc-500 dark:text-zinc-400 mt-1">Detailed performance report and aspirants ranking.</p>
+                            {isLive && lastRefreshed && (
+                                <p className="text-xs text-zinc-400 mt-1.5 flex items-center gap-1.5">
+                                    <RefreshCw className="w-3 h-3 animate-spin" style={{ animationDuration: '3s' }} />
+                                    Auto-refreshing every 20s &nbsp;·&nbsp; Next in <span className="font-bold text-indigo-500">{nextRefreshIn}s</span> &nbsp;·&nbsp; Last updated: {lastRefreshed.toLocaleTimeString()}
+                                </p>
+                            )}
                         </div>
                         <div className="grid grid-cols-3 gap-3">
                             <div className="px-5 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center justify-center">
@@ -203,6 +262,13 @@ export default function MockTestDetailResultsPage() {
                             />
                         </div>
                         <div className="flex gap-2">
+                            <button
+                                onClick={() => fetchResults(false)}
+                                className="flex items-center gap-2 px-3 py-2.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-xl font-semibold text-sm hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                                title="Refresh now"
+                            >
+                                <RefreshCw className="w-4 h-4" />
+                            </button>
                             <button
                                 onClick={handleBulkDownload}
                                 disabled={isBulkDownloading || filteredResults.length === 0}
@@ -255,8 +321,8 @@ export default function MockTestDetailResultsPage() {
                                         const maxMarks = actualTotalQuestions ? actualTotalQuestions * 2 : 0;
 
                                         return (
-                                            <>
-                                                <tr key={result._id} className="group hover:bg-zinc-50 dark:hover:bg-zinc-800/40 transition-colors">
+                                            <React.Fragment key={result._id}>
+                                                <tr className="group hover:bg-zinc-50 dark:hover:bg-zinc-800/40 transition-colors">
                                                     <td className="py-4 px-6">
                                                         <span className={`inline-flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm
                                                             ${rank === 1 ? 'bg-yellow-100 text-yellow-700' :
@@ -390,7 +456,7 @@ export default function MockTestDetailResultsPage() {
                                                         </td>
                                                     </tr>
                                                 )}
-                                            </>
+                                            </React.Fragment>
                                         );
                                     })
                                 ) : (
