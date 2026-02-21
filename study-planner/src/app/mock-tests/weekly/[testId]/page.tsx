@@ -12,8 +12,7 @@ import { WEEKLY_MOCK_04_QUESTIONS } from "@/data/weekly_mock_data_04";
 import { WEEKLY_MOCK_05_QUESTIONS } from "@/data/weekly_mock_data_05";
 import { WEEKLY_MOCK_06_QUESTIONS } from "@/data/weekly_mock_data_06";
 import { Question } from "@/data/live_mock_data";
-import jsPDF from "jspdf";
-import autoTable from "jspdf-autotable";
+import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Map IDs to Data
@@ -291,6 +290,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
     // UI State for Mobile Palette
     const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
+    const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
     const [hasStarted, setHasStarted] = useState(false);
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [isFetchingLeaderboard, setIsFetchingLeaderboard] = useState(false);
@@ -584,219 +584,25 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     }, [isSubmitted, isLoading, isAuthorized, hasStarted]);
 
     const generatePDF = async () => {
-        const doc = new jsPDF();
-
-        const pageHeight = doc.internal.pageSize.height;
-        const pageWidth = doc.internal.pageSize.width;
-        const margin = 14;
-        const contentWidth = 180;
-
-        const logoUrl = '/dak-guru-new-logo.png';
-        let logoData = "";
+        if (isGeneratingPDF) return;
+        setIsGeneratingPDF(true);
         try {
-            logoData = await new Promise((resolve, reject) => {
-                const img = new Image();
-                img.src = logoUrl;
-                img.onload = () => {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-                    const ctx = canvas.getContext('2d');
-                    if (ctx) {
-                        ctx.drawImage(img, 0, 0);
-                        resolve(canvas.toDataURL('image/png'));
-                    } else {
-                        reject("Canvas context failed");
-                    }
-                };
-                img.onerror = (e) => reject(e);
+            await generateMockTestAnswerSheetPDF({
+                userName,
+                score,
+                totalQuestions: questions.length,
+                questions: questions as any,
+                answers,
+                testName: TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test",
+                submittedAt: new Date().toISOString()
             });
-        } catch (e) {
-            console.error("Logo load failed", e);
+        } catch (error) {
+            console.error("PDF generation failed", error);
+            alert("Failed to generate PDF. Please try again.");
+        } finally {
+            setIsGeneratingPDF(false);
         }
 
-        const addWatermark = () => {
-            if (logoData) {
-                const wmWidth = 100;
-                const wmHeight = 100;
-                const wmX = (pageWidth - wmWidth) / 2;
-                const wmY = (pageHeight - wmHeight) / 2;
-                try {
-                    if ((doc as any).GState) {
-                        doc.setGState(new (doc as any).GState({ opacity: 0.1 }));
-                        doc.addImage(logoData, 'PNG', wmX, wmY, wmWidth, wmHeight);
-                        doc.setGState(new (doc as any).GState({ opacity: 1.0 }));
-                    }
-                } catch (e) {
-                    console.warn("Watermark opacity failed", e);
-                }
-            }
-        };
-
-        const boxHeight = 45;
-        const boxWidth = pageWidth - (margin * 2);
-
-        doc.setDrawColor(200, 200, 200);
-        doc.setLineWidth(0.5);
-        doc.rect(margin, 15, boxWidth, boxHeight);
-
-        const logoSize = 35;
-        if (logoData) {
-            doc.addImage(logoData, 'PNG', margin + 5, 20, logoSize, logoSize);
-        }
-
-        doc.setFontSize(22);
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(0, 0, 128);
-        doc.text("DAK GURU", margin + logoSize + 15, 28);
-
-        doc.setFontSize(14);
-        doc.setTextColor(60, 60, 60);
-        doc.text(TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test", margin + logoSize + 15, 36);
-
-        doc.setDrawColor(230, 230, 230);
-        doc.line(margin + logoSize + 10, 42, margin + boxWidth - 5, 42);
-
-        doc.setFontSize(10);
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(100, 100, 100);
-        doc.text("Candidate Name:", margin + logoSize + 15, 52);
-
-        doc.setFont("helvetica", "normal");
-        doc.setTextColor(0, 0, 0);
-        doc.text(userName, margin + logoSize + 50, 52);
-
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(100, 100, 100);
-        doc.text("Date:", margin + logoSize + 110, 52);
-
-        doc.setFont("helvetica", "normal");
-        doc.setTextColor(0, 0, 0);
-        const today = new Date();
-        const dateStr = `${today.getDate().toString().padStart(2, '0')}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getFullYear()}`;
-        doc.text(dateStr, margin + logoSize + 122, 52);
-
-        const percentage = ((score / (questions.length * 2)) * 100).toFixed(1);
-        doc.setFillColor(245, 245, 245);
-        doc.roundedRect(pageWidth - margin - 45, 20, 40, 18, 2, 2, 'F');
-
-        doc.setFontSize(14);
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(220, 38, 38);
-        doc.text(`${score} / ${questions.length * 2}`, pageWidth - margin - 25, 28, { align: "center" });
-
-        doc.setFontSize(9);
-        doc.setTextColor(80, 80, 80);
-        doc.text(`Score (${percentage}%)`, pageWidth - margin - 25, 34, { align: "center" });
-
-        addWatermark();
-
-        let yPos = 75;
-
-        questions.forEach((q, index) => {
-            if (yPos > pageHeight - 40) {
-                doc.addPage();
-                addWatermark();
-                yPos = 20;
-            }
-
-            doc.setFontSize(11);
-            doc.setFont("helvetica", "bold");
-            doc.setTextColor(0, 0, 0);
-            const qTitle = `Q${index + 1}. ${q.text}`;
-            const splitTitle = doc.splitTextToSize(qTitle, contentWidth);
-            doc.text(splitTitle, margin, yPos);
-            yPos += splitTitle.length * 5 + 4;
-
-            if (q.table) {
-                if (yPos > pageHeight - 60) {
-                    doc.addPage();
-                    addWatermark();
-                    yPos = 20;
-                }
-                autoTable(doc, {
-                    startY: yPos,
-                    head: [q.table.headers],
-                    body: q.table.rows,
-                    theme: 'grid',
-                    headStyles: { fillColor: [50, 50, 50] },
-                    styles: { fontSize: 9, cellPadding: 2 },
-                    margin: { left: margin },
-                    tableWidth: contentWidth
-                });
-                yPos = (doc as any).lastAutoTable.finalY + 8;
-            }
-
-            doc.setFontSize(10);
-            q.options.forEach((opt, optIndex) => {
-                const isCorrect = optIndex === q.correctAnswer;
-                const isSelected = answers[q.id] === optIndex;
-                let optLabel = "";
-                doc.setFont("helvetica", "normal");
-                doc.setTextColor(60, 60, 60);
-
-                if (isCorrect) {
-                    doc.setTextColor(0, 100, 0);
-                    doc.setFont("helvetica", "bold");
-                    optLabel = " (Correct Answer)";
-                } else if (isSelected && !isCorrect) {
-                    doc.setTextColor(220, 38, 38);
-                    optLabel = " (Your Answer)";
-                }
-                if (isSelected && isCorrect) optLabel = " (Your & Correct Answer)";
-
-                const cleanOpt = opt.replace(/₹/g, 'Rs. ');
-                const optText = `${cleanOpt}${optLabel}`;
-                const label = `${String.fromCharCode(65 + optIndex)}.`;
-
-                // Calculate split text with hanging indent
-                const splitOpt = doc.splitTextToSize(optText, contentWidth - 12);
-
-                if (yPos + splitOpt.length * 5 > pageHeight - 20) {
-                    doc.addPage();
-                    addWatermark();
-                    yPos = 20;
-                }
-
-                // Draw Label (A., B., etc)
-                doc.setFont("helvetica", isCorrect || isSelected ? "bold" : "normal");
-                doc.text(label, margin + 5, yPos);
-
-                // Draw Option Text with indent
-                doc.setFont("helvetica", isCorrect ? "bold" : "normal");
-                doc.text(splitOpt, margin + 12, yPos);
-
-                yPos += splitOpt.length * 5 + 2;
-            });
-
-            yPos += 4;
-
-            if (q.explanation) {
-                doc.setTextColor(0, 0, 0);
-                doc.setFont("helvetica", "bold");
-                doc.text("Explanation:", margin, yPos);
-                yPos += 5;
-
-                doc.setFont("helvetica", "normal");
-                const cleanExplanation = q.explanation.replace(/\*/g, '').replace(/₹/g, 'Rs. ');
-                const splitExpl = doc.splitTextToSize(cleanExplanation, contentWidth);
-
-                if (yPos + splitExpl.length * 5 > pageHeight - 20) {
-                    doc.addPage();
-                    addWatermark();
-                    doc.text("Explanation (contd):", margin, 20);
-                    yPos = 25;
-                }
-                doc.text(splitExpl, margin, yPos);
-                yPos += splitExpl.length * 5 + 10;
-            }
-
-            doc.setDrawColor(240, 240, 240);
-            doc.line(margin, yPos - 5, margin + contentWidth, yPos - 5);
-        });
-
-        const safeTitle = (TEST_CONFIG_MAP[testId]?.title || "Weekly_Mock_Test").replace(/[^a-z0-9]/gi, '_');
-        doc.save(`Dak_Guru_${safeTitle}_${userName.replace(/\s+/g, '_')}.pdf`);
     };
 
     if (isLoading) {
@@ -1281,9 +1087,11 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                     })()}
                                     <button
                                         onClick={() => { vibrate(10); generatePDF(); }}
-                                        className="w-full md:w-auto px-8 py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-black hover:opacity-90 transition-all flex items-center justify-center gap-2 text-sm md:text-base active:scale-[0.97] shadow-xl shadow-zinc-900/5"
+                                        disabled={isGeneratingPDF}
+                                        className="w-full md:w-auto px-8 py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-black hover:opacity-90 transition-all flex items-center justify-center gap-2 text-sm md:text-base active:scale-[0.97] shadow-xl shadow-zinc-900/5 disabled:opacity-60 disabled:cursor-not-allowed"
                                     >
-                                        <FileDown className="w-4 h-4" /> Answer Sheet
+                                        {isGeneratingPDF ? <Loader2 className="w-4 h-4 animate-spin" /> : <FileDown className="w-4 h-4" />}
+                                        {isGeneratingPDF ? 'Generating...' : 'Answer Sheet'}
                                     </button>
                                     <Link
                                         href="/"

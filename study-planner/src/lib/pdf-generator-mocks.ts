@@ -44,7 +44,10 @@ export const createMockTestAnswerSheetPDFDoc = async ({
     const margin = 14;
     const contentWidth = 180;
 
-    const logoUrl = '/dak-guru-new-logo.png';
+    // Use absolute URL on native platform to avoid relative URL resolution failures
+    const logoUrl = (typeof window !== 'undefined' && (window as any).Capacitor?.isNativePlatform?.())
+        ? 'https://dakguru.com/dak-guru-new-logo.png'
+        : '/dak-guru-new-logo.png';
     let logoData = "";
     try {
         logoData = await new Promise((resolve, reject) => {
@@ -295,31 +298,31 @@ export const generateMockTestAnswerSheetPDF = async (params: GeneratePDFParams) 
         }
 
         let fileUri = "";
-        let savedLocation = "Downloads";
+        let savedLocation = "Documents";
 
-        // 2. Try saving to Downloads/DakGuru/ (Android 10+ scoped storage friendly for public downloads)
+        // 2. Primary: Save to app's Documents/DakGuru/ folder (works reliably on Android 10+ scoped storage)
         try {
             const res = await Filesystem.writeFile({
-                path: `Download/DakGuru/${filename}`,
+                path: `DakGuru/${filename}`,
                 data: pdfBase64,
-                directory: Directory.ExternalStorage, // Maps to primary shared storage
+                directory: Directory.Documents,
                 recursive: true
             });
             fileUri = res.uri;
-        } catch (downloadErr) {
-            console.warn("Failed to save to Download folder, trying Documents...", downloadErr);
-            // 3. Fallback to Documents/DakGuru/
+        } catch (docsErr) {
+            console.warn("Failed to save to Documents, trying ExternalStorage...", docsErr);
+            // 3. Fallback to ExternalStorage Downloads folder
             try {
                 const res = await Filesystem.writeFile({
-                    path: `DakGuru/${filename}`,
+                    path: `Download/DakGuru/${filename}`,
                     data: pdfBase64,
-                    directory: Directory.Documents,
+                    directory: Directory.ExternalStorage,
                     recursive: true
                 });
                 fileUri = res.uri;
-                savedLocation = "Documents";
-            } catch (docErr) {
-                console.error("Failed to save to Documents", docErr);
+                savedLocation = "Downloads";
+            } catch (extErr) {
+                console.error("Failed to save to ExternalStorage", extErr);
                 throw new Error("Could not save PDF to storage.");
             }
         }
