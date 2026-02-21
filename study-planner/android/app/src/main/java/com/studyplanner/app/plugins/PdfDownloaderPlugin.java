@@ -1,6 +1,7 @@
 package com.studyplanner.app.plugins;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -53,11 +54,16 @@ public class PdfDownloaderPlugin extends Plugin {
     private long downloadId = -1;
     private Timer progressTimer;
 
-    @PluginMethod
+    @PluginMethod(returnType = PluginMethod.RETURN_CALLBACK)
     public void downloadPdf(PluginCall call) {
+        // Keep the call alive so progress events can be sent after permissions are resolved
+        call.setKeepAlive(true);
+
         // On Android 9 and below, we NEED storage permission
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
             if (getPermissionState("storage") != PermissionState.GRANTED) {
+                // Save the call before going async — Capacitor frees it otherwise
+                saveCall(call);
                 requestPermissionForAlias("storage", call, "storagePermissionCallback");
                 return;
             }
@@ -67,7 +73,8 @@ public class PdfDownloaderPlugin extends Plugin {
         // But don't block the download if denied — notifications are optional
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (getPermissionState("notifications") != PermissionState.GRANTED) {
-                // Request notification permission, but start download regardless
+                // Save the call before going async — Capacitor frees it otherwise
+                saveCall(call);
                 try {
                     requestPermissionForAlias("notifications", call, "notificationPermissionCallback");
                 } catch (Exception e) {
@@ -84,18 +91,24 @@ public class PdfDownloaderPlugin extends Plugin {
 
     @PermissionCallback
     private void storagePermissionCallback(PluginCall call) {
+        // Retrieve the saved call in case it was freed
+        PluginCall savedCall = getSavedCall();
+        PluginCall activeCall = (savedCall != null) ? savedCall : call;
         if (getPermissionState("storage") == PermissionState.GRANTED) {
-            startDownload(call);
+            startDownload(activeCall);
         } else {
-            call.reject("Storage permission is required to download PDFs.");
+            activeCall.reject("Storage permission is required to download PDFs.");
         }
     }
 
     @PermissionCallback
     private void notificationPermissionCallback(PluginCall call) {
+        // Retrieve the saved call — the original call object may have been freed
+        PluginCall savedCall = getSavedCall();
+        PluginCall activeCall = (savedCall != null) ? savedCall : call;
         // Start download regardless of notification permission result
         // Notifications are optional — the download still works without them
-        startDownload(call);
+        startDownload(activeCall);
     }
 
     private void startDownload(PluginCall call) {
@@ -168,6 +181,7 @@ public class PdfDownloaderPlugin extends Plugin {
         }, 0, 500);
     }
 
+    @SuppressLint("Range")
     private void checkDownloadProgress() {
         DownloadManager dm = (DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE);
         DownloadManager.Query query = new DownloadManager.Query();
@@ -220,6 +234,7 @@ public class PdfDownloaderPlugin extends Plugin {
         }
     };
 
+    @SuppressLint("Range")
     private void openDownloadedFile(long id) {
          try {
             DownloadManager dm = (DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE);

@@ -734,15 +734,16 @@ export default function NotesPage() {
         setShowAdvisory(true);
     };
 
-    const handleAdvisoryConfirm = () => {
+    const handleAdvisoryConfirm = async () => {
         setShowAdvisory(false);
         if (pendingAction) {
-            if (pendingAction.type === 'view') {
-                setSelectedPdf({ url: pendingAction.url, title: pendingAction.title });
-            } else if (pendingAction.type === 'download' && pendingAction.filename) {
-                performDownload(pendingAction.url, pendingAction.filename);
+            const action = pendingAction; // Capture before clearing
+            setPendingAction(null);       // Clear state immediately so UI closes cleanly
+            if (action.type === 'view') {
+                setSelectedPdf({ url: action.url, title: action.title });
+            } else if (action.type === 'download' && action.filename) {
+                await performDownload(action.url, action.filename);
             }
-            setPendingAction(null);
         }
     };
 
@@ -838,15 +839,21 @@ export default function NotesPage() {
             // DownloadManager needs absolute URLs — convert relative paths
             const downloadUrl = url.startsWith('http') ? url : `https://dakguru.com${url}`;
 
+            console.log('[PdfDownload] Downloading URL:', downloadUrl);
+
             // The plugin handles permissions, download, notification, and auto-open
             await PdfDownloader.downloadPdf({ url: downloadUrl });
 
-        } catch (error) {
+            // Show toast confirming download was initiated
+            setShowDownloadToast(true);
+
+        } catch (error: any) {
             console.error("Download failed", error);
             setIsDownloading(false);
             setDownloadProgress(0);
+            const message = error?.message || 'Unknown error';
             await Toast.show({
-                text: `Failed to initiate download: ${error instanceof Error ? error.message : 'Unknown error'}`,
+                text: `Download failed: ${message}`,
                 duration: 'long'
             });
         }
