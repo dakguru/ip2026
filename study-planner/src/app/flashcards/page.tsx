@@ -16,6 +16,7 @@ import {
     Crown
 } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useCourse } from "@/contexts/CourseContext";
 import { pmlaFlashcards } from "./pmla_data";
 import { poGuide1Flashcards } from "./po_guide1_data";
 import {
@@ -110,6 +111,7 @@ const deckData: Record<string, UnifiedFlashcard[]> = {
 };
 
 export default function FlashcardsPage() {
+    const { course } = useCourse();
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [userRole, setUserRole] = useState<string | null>(null);
@@ -447,10 +449,10 @@ export default function FlashcardsPage() {
             <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 relative selection:bg-indigo-100 font-sans overflow-hidden">
                 {/* Creative Modern Background Elements */}
                 <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-violet-400/20 dark:bg-violet-900/20 blur-3xl" />
-                    <div className="absolute top-[20%] right-[-5%] w-[30%] h-[30%] rounded-full bg-indigo-400/20 dark:bg-indigo-900/20 blur-3xl" />
-                    <div className="absolute bottom-[-10%] left-[20%] w-[35%] h-[35%] rounded-full bg-fuchsia-400/20 dark:bg-fuchsia-900/20 blur-3xl" />
-                    <div className="absolute top-[40%] left-[40%] w-[20%] h-[20%] rounded-full bg-cyan-400/20 dark:bg-cyan-900/10 blur-3xl animate-pulse" />
+                    <div className={`absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full ${course === 'PS_GR_B' ? 'bg-teal-400/20 dark:bg-teal-900/20' : 'bg-violet-400/20 dark:bg-violet-900/20'} blur-3xl`} />
+                    <div className={`absolute top-[20%] right-[-5%] w-[30%] h-[30%] rounded-full ${course === 'PS_GR_B' ? 'bg-indigo-400/20 dark:bg-indigo-900/20' : 'bg-indigo-400/20 dark:bg-indigo-900/20'} blur-3xl`} />
+                    <div className={`absolute bottom-[-10%] left-[20%] w-[35%] h-[35%] rounded-full ${course === 'PS_GR_B' ? 'bg-purple-400/20 dark:bg-purple-900/20' : 'bg-fuchsia-400/20 dark:bg-fuchsia-900/20'} blur-3xl`} />
+                    <div className={`absolute top-[40%] left-[40%] w-[20%] h-[20%] rounded-full ${course === 'PS_GR_B' ? 'bg-cyan-400/20 dark:bg-cyan-900/10' : 'bg-cyan-400/20 dark:bg-cyan-900/10'} blur-3xl animate-pulse`} />
                 </div>
 
                 {/* Grain Texture Overlay */}
@@ -462,12 +464,12 @@ export default function FlashcardsPage() {
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
 
                         <div className="relative inline-block mb-1">
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-900 via-violet-800 to-fuchsia-900 dark:from-white dark:via-indigo-200 dark:to-violet-200 mb-2 drop-shadow-sm pb-2 pr-2">
+                            <h1 className={`text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-transparent bg-clip-text ${course === 'PS_GR_B' ? 'bg-gradient-to-br from-teal-900 via-indigo-800 to-purple-900 dark:from-white dark:via-cyan-200 dark:to-indigo-200' : 'bg-gradient-to-br from-indigo-900 via-violet-800 to-fuchsia-900 dark:from-white dark:via-indigo-200 dark:to-violet-200'} mb-2 drop-shadow-sm pb-2 pr-2`}>
                                 FLASHCARDS
                             </h1>
                         </div>
 
-                        <h2 className="text-xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600 mb-2 tracking-tight">
+                        <h2 className={`text-xl md:text-3xl font-extrabold text-transparent bg-clip-text ${course === 'PS_GR_B' ? 'bg-gradient-to-r from-teal-600 to-indigo-600' : 'bg-gradient-to-r from-indigo-600 to-violet-600'} mb-2 tracking-tight`}>
                             Master Postal Laws Through Smart Revision
                         </h2>
 
@@ -479,9 +481,9 @@ export default function FlashcardsPage() {
 
                         {/* Search Bar */}
                         <div className="relative max-w-xl mx-auto group">
-                            <div className="absolute inset-0 bg-indigo-500/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="relative bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/10 rounded-full h-12 md:h-14 flex items-center px-5 md:px-6 shadow-xl shadow-slate-200/40 dark:shadow-none hover:border-indigo-500/30 transition-colors">
-                                <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-indigo-500 mr-3 md:mr-4" />
+                            <div className={`absolute inset-0 ${course === 'PS_GR_B' ? 'bg-teal-500/5' : 'bg-indigo-500/5'} blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity`} />
+                            <div className={`relative bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/10 rounded-full h-12 md:h-14 flex items-center px-5 md:px-6 shadow-xl shadow-slate-200/40 dark:shadow-none transition-colors ${course === 'PS_GR_B' ? 'hover:border-teal-500/30' : 'hover:border-indigo-500/30'}`}>
+                                <Sparkles className={`w-4 h-4 md:w-5 md:h-5 mr-3 md:mr-4 ${course === 'PS_GR_B' ? 'text-teal-500' : 'text-indigo-500'}`} />
                                 <input type="text" id="flash-search" placeholder="Search Acts, Rules..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
                                     className="flex-1 bg-transparent border-none outline-none text-sm md:text-base text-slate-800 dark:text-white font-medium placeholder:text-slate-400 dark:placeholder:text-slate-600" />
                                 <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-zinc-800 border border-slate-200 dark:border-white/5 text-[10px] font-bold text-slate-400">
@@ -597,12 +599,12 @@ export default function FlashcardsPage() {
                             >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110" />
                                 <div className="relative z-10">
-                                    <div className="w-14 h-14 rounded-2xl bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-6">
+                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${course === 'PS_GR_B' ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400' : 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400'}`}>
                                         <Layers className="w-7 h-7" />
                                     </div>
                                     <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2">Paper I</h3>
                                     <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">Acts, Rules, and Regulatory Framework. The core foundation.</p>
-                                    <div className="flex items-center text-sm font-bold text-indigo-600 dark:text-indigo-400">
+                                    <div className={`flex items-center text-sm font-bold ${course === 'PS_GR_B' ? 'text-teal-600 dark:text-teal-400' : 'text-indigo-600 dark:text-indigo-400'}`}>
                                         Explore Topics <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </div>

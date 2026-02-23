@@ -7,6 +7,7 @@ import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval, 
 import { useMemo, useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import { useCourse } from "@/contexts/CourseContext";
 import Script from "next/script";
 import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
@@ -48,6 +49,7 @@ declare global {
 
 export default function MockTestsPage() {
     const isMobileApp = useIsMobileApp();
+    const { course } = useCourse();
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
     const [paidTests, setPaidTests] = useState<string[]>([]);
     const [userEmail, setUserEmail] = useState<string | null>(null);
@@ -402,6 +404,36 @@ export default function MockTestsPage() {
             setDownloadingId(null);
         }
     };
+
+    if (course === 'PS_GR_B') {
+        return (
+            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-6 transition-colors">
+                <div className="relative w-full max-w-2xl text-center">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-75" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-2xl animate-pulse" />
+
+                    <div className="relative z-10 bg-white/60 dark:bg-zinc-900/60 backdrop-blur-2xl border border-white/40 dark:border-white/10 p-8 sm:p-12 rounded-[2rem] shadow-2xl">
+                        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-blue-600 mb-8 shadow-xl shadow-purple-500/30 ring-4 ring-white/50 dark:ring-zinc-800">
+                            <Sparkles className="w-10 h-10 text-white animate-pulse" />
+                        </div>
+
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 dark:from-purple-400 dark:to-blue-400 drop-shadow-sm">
+                            Coming Soon
+                        </h1>
+
+                        <p className="text-base sm:text-xl text-zinc-700 dark:text-zinc-300 font-medium leading-relaxed max-w-xl mx-auto mb-10">
+                            PS Group B Live Mock Test Series will be commenced soon.. Stay tuned for updates.
+                        </p>
+
+                        <Link href="/" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-bold hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                            <ArrowLeft className="w-5 h-5" />
+                            Back to Home
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pb-20 transition-colors">

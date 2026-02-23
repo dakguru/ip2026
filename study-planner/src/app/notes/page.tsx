@@ -6,6 +6,7 @@ import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import { useCourse } from '@/contexts/CourseContext';
 
 const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
     loading: () => <div className="flex items-center justify-center h-full text-slate-400">Loading viewer...</div>,
@@ -708,6 +709,7 @@ const PDF_DATA: Record<string, Note[]> = {
 };
 
 export default function NotesPage() {
+    const { course } = useCourse();
     const [activeTab, setActiveTab] = useState("Paper I");
     const [selectedPdf, setSelectedPdf] = useState<{ url: string, title: string } | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
@@ -864,19 +866,19 @@ export default function NotesPage() {
             <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel} />
 
             {/* --- HERO SECTION --- */}
-            <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white pb-20 pt-16 px-6 overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-10 -mb-10"></div>
+            <div className={`relative ${course === 'PS_GR_B' ? 'bg-gradient-to-br from-slate-900 via-teal-900 to-indigo-900' : 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'} text-white pb-20 pt-16 px-6 overflow-hidden`}>
+                <div className={`absolute top-0 right-0 w-96 h-96 ${course === 'PS_GR_B' ? 'bg-teal-500/10' : 'bg-purple-500/10'} rounded-full blur-3xl -mr-20 -mt-20`}></div>
+                <div className={`absolute bottom-0 left-0 w-64 h-64 ${course === 'PS_GR_B' ? 'bg-indigo-500/10' : 'bg-blue-500/10'} rounded-full blur-3xl -ml-10 -mb-10`}></div>
 
                 <div className="max-w-7xl mx-auto text-center relative z-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-800/50 rounded-full border border-purple-500/30 mb-6 backdrop-blur-sm">
-                        <BookOpen className="w-4 h-4 text-purple-300" />
-                        <span className="text-sm font-medium text-purple-100 tracking-wide">DIGITAL LIBRARY</span>
+                    <div className={`inline-flex items-center gap-2 px-4 py-2 ${course === 'PS_GR_B' ? 'bg-teal-800/50 border-teal-500/30' : 'bg-purple-800/50 border-purple-500/30'} rounded-full border mb-6 backdrop-blur-sm`}>
+                        <BookOpen className={`w-4 h-4 ${course === 'PS_GR_B' ? 'text-teal-300' : 'text-purple-300'}`} />
+                        <span className={`text-sm font-medium ${course === 'PS_GR_B' ? 'text-teal-100' : 'text-purple-100'} tracking-wide`}>DIGITAL LIBRARY</span>
                     </div>
                     <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-                        Study <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">Material</span>
+                        Study <span className={`text-transparent bg-clip-text bg-gradient-to-r ${course === 'PS_GR_B' ? 'from-teal-400 to-cyan-300' : 'from-purple-400 to-pink-300'}`}>Material</span>
                     </h1>
-                    <p className="text-lg text-purple-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+                    <p className={`text-lg ${course === 'PS_GR_B' ? 'text-teal-200' : 'text-purple-200'} max-w-2xl mx-auto mb-8 leading-relaxed`}>
                         Curated PDF notes and reference materials for your preparation.
                     </p>
                 </div>
@@ -948,7 +950,7 @@ export default function NotesPage() {
                                 {activeTab === tab && (
                                     <motion.div
                                         layoutId="activeTab"
-                                        className="absolute inset-0 bg-purple-600 rounded-lg md:rounded-xl shadow-md"
+                                        className={`absolute inset-0 ${course === 'PS_GR_B' ? 'bg-teal-600' : 'bg-purple-600'} rounded-lg md:rounded-xl shadow-md`}
                                         initial={false}
                                         transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                     />
@@ -1048,7 +1050,7 @@ export default function NotesPage() {
                                             </button>
                                             <button
                                                 onClick={() => handleActionRequest('download', file.path || '', file.title, file.filename || 'document.pdf')}
-                                                className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-purple-600 text-white font-semibold text-[10px] md:text-sm hover:bg-purple-700 transition-all shadow-md hover:shadow-lg hover:shadow-purple-500/20"
+                                                className={`flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg text-white font-semibold text-[10px] md:text-sm hover:shadow-lg transition-all shadow-md ${course === 'PS_GR_B' ? 'bg-teal-600 hover:bg-teal-700 hover:shadow-teal-500/20' : 'bg-purple-600 hover:bg-purple-700 hover:shadow-purple-500/20'}`}
                                             >
                                                 <Download className="w-3 h-3 md:w-4 md:h-4" />
                                                 Download

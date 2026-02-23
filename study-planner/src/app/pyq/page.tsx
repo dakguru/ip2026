@@ -5,8 +5,11 @@ import Link from 'next/link';
 import { ArrowLeft, FileQuestion, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, AlertCircle, Settings, Lock } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
+import { useCourse } from '@/contexts/CourseContext';
 
 export default function PyqDashboard() {
+    const { course } = useCourse();
+    const isPS = course === 'PS_GR_B';
     // Navigation State
     const [view, setView] = useState<'topics' | 'config' | 'quiz'>('topics');
     const [selectedTopic, setSelectedTopic] = useState<QuizTopic | null>(null);
@@ -131,7 +134,7 @@ export default function PyqDashboard() {
                                                 onClick={() => setDesiredCount(num)}
                                                 className={`p-3 rounded-xl border text-sm font-semibold transition-all
                                                     ${desiredCount === num
-                                                        ? 'bg-cyan-50 dark:bg-cyan-900/30 border-cyan-500 text-cyan-700 dark:text-cyan-300'
+                                                        ? (isPS ? 'bg-teal-50 dark:bg-teal-900/30 border-teal-500 text-teal-700 dark:text-teal-300' : 'bg-cyan-50 dark:bg-cyan-900/30 border-cyan-500 text-cyan-700 dark:text-cyan-300')
                                                         : 'bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300'}
                                                 `}
                                             >
@@ -142,7 +145,7 @@ export default function PyqDashboard() {
                                             onClick={() => setDesiredCount(-1)}
                                             className={`p-3 rounded-xl border text-sm font-semibold transition-all
                                                 ${desiredCount === -1
-                                                    ? 'bg-cyan-50 dark:bg-cyan-900/30 border-cyan-500 text-cyan-700 dark:text-cyan-300'
+                                                    ? (isPS ? 'bg-teal-50 dark:bg-teal-900/30 border-teal-500 text-teal-700 dark:text-teal-300' : 'bg-cyan-50 dark:bg-cyan-900/30 border-cyan-500 text-cyan-700 dark:text-cyan-300')
                                                     : 'bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300'}
                                             `}
                                         >
@@ -153,7 +156,7 @@ export default function PyqDashboard() {
 
                                 <button
                                     onClick={startQuiz}
-                                    className="w-full py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-cyan-200 dark:shadow-cyan-900/20 transition-all active:scale-95 flex items-center justify-center gap-2"
+                                    className={`w-full py-4 text-white rounded-xl font-bold text-lg shadow-lg ${isPS ? 'bg-gradient-to-r from-teal-600 to-indigo-600 hover:from-teal-700 hover:to-indigo-700 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 shadow-cyan-200 dark:shadow-cyan-900/20'} transition-all active:scale-95 flex items-center justify-center gap-2`}
                                 >
                                     <PlayCircle className="w-5 h-5" /> Start Practice
                                 </button>
@@ -192,7 +195,7 @@ export default function PyqDashboard() {
                     <div className="flex items-center gap-4 text-sm font-medium">
                         <span className="text-zinc-500 dark:text-zinc-400">Q {currentQIndex + 1} / {total}</span>
                         {!isSubmitted && (
-                            <div className="bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 px-3 py-1 rounded-full flex items-center gap-2">
+                            <div className={`px-3 py-1 rounded-full flex items-center gap-2 ${isPS ? 'bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300' : 'bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300'}`}>
                                 <Timer className="w-4 h-4" />
                                 <span>Time Running</span>
                             </div>
@@ -357,7 +360,7 @@ export default function PyqDashboard() {
                 </Link>
 
                 <div className="flex items-center gap-4 mb-12">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-cyan-200 dark:shadow-cyan-900/20">
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg ${isPS ? 'bg-gradient-to-br from-teal-500 to-indigo-600 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-br from-cyan-500 to-blue-600 shadow-cyan-200 dark:shadow-cyan-900/20'}`}>
                         <FileQuestion className="w-8 h-8" />
                     </div>
                     <div>
@@ -382,18 +385,20 @@ export default function PyqDashboard() {
 }
 
 function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, onSelect: (t: QuizTopic) => void, isLocked?: boolean }) {
+    const { course } = useCourse();
+    const isPS = course === 'PS_GR_B';
     const qCount = topic.sets.reduce((acc, s) => acc + s.questions.length, 0);
 
     const Content = () => (
         <>
             <div className={`absolute top-0 right-0 p-4 transition-opacity ${isLocked ? 'opacity-10' : 'opacity-5 group-hover:opacity-10'}`}>
-                <FileQuestion className="w-24 h-24 text-cyan-600" />
+                <FileQuestion className={`w-24 h-24 ${isPS ? 'text-teal-600' : 'text-cyan-600'}`} />
             </div>
 
-            <span className="text-xs font-bold uppercase tracking-wider mb-2 text-cyan-600 dark:text-cyan-400">
+            <span className={`text-xs font-bold uppercase tracking-wider mb-2 ${isPS ? 'text-teal-600 dark:text-teal-400' : 'text-cyan-600 dark:text-cyan-400'}`}>
                 {topic.category}
             </span>
-            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors z-10">{topic.title}</h3>
+            <h3 className={`text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 transition-colors z-10 ${isPS ? 'group-hover:text-teal-700 dark:group-hover:text-teal-400' : 'group-hover:text-cyan-700 dark:group-hover:text-cyan-400'}`}>{topic.title}</h3>
 
             <div className="mt-auto pt-4 flex items-center justify-between z-10 w-full">
                 <div className="text-zinc-400 dark:text-zinc-500 text-sm font-medium">
@@ -425,7 +430,7 @@ function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, on
     );
 
     const baseClasses = `group bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 transition-all text-left flex flex-col h-full relative overflow-hidden
-        ${isLocked ? 'opacity-70 grayscale-[0.5]' : 'hover:border-cyan-200 dark:hover:border-cyan-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-cyan-900/10 cursor-pointer'}
+        ${isLocked ? 'opacity-70 grayscale-[0.5]' : (isPS ? 'hover:border-teal-200 dark:hover:border-teal-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-teal-900/10 cursor-pointer' : 'hover:border-cyan-200 dark:hover:border-cyan-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-cyan-900/10 cursor-pointer')}
     `;
 
     if (isLocked) {

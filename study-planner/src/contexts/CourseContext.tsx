@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 export type CourseMode = "LDCE_IP" | "PS_GR_B";
 
@@ -15,7 +15,23 @@ const CourseContext = createContext<CourseContextType>({
 });
 
 export function CourseProvider({ children }: { children: ReactNode }) {
-    const [course, setCourse] = useState<CourseMode>("LDCE_IP");
+    const [course, setCourseState] = useState<CourseMode>("LDCE_IP");
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const savedCourse = localStorage.getItem("selectedCourseMode") as CourseMode;
+            if (savedCourse === "LDCE_IP" || savedCourse === "PS_GR_B") {
+                setCourseState(savedCourse);
+            }
+        }
+    }, []);
+
+    const setCourse = (mode: CourseMode) => {
+        setCourseState(mode);
+        if (typeof window !== "undefined") {
+            localStorage.setItem("selectedCourseMode", mode);
+        }
+    };
 
     return (
         <CourseContext.Provider value={{ course, setCourse }}>

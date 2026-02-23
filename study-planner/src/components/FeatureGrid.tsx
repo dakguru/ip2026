@@ -5,6 +5,7 @@ import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, U
 import { useRouter } from "next/navigation";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useState, useEffect } from "react";
+import { useCourse } from "@/contexts/CourseContext";
 
 interface FeatureGridProps {
     membershipLevel: string;
@@ -14,6 +15,7 @@ interface FeatureGridProps {
 export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps) {
     const router = useRouter();
     const isMobileApp = useIsMobileApp();
+    const { course } = useCourse();
     const [unreadCount, setUnreadCount] = useState(0);
     const [unreadDetails, setUnreadDetails] = useState({
         users: 0,
@@ -216,16 +218,20 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
 
                                 {item.badge && !isMobileApp && (
                                     <>
+                                        {/* Primary Badge */}
                                         <span className={`px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
-                                            item.badge === 'Silver' ? 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300' :
-                                                item.badge === 'Gold' ? 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300' :
+                                            item.badge === 'Silver' ? (course === 'PS_GR_B' ? 'bg-gradient-to-r from-slate-200 to-cyan-200 text-slate-800 border border-cyan-300' : 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300') :
+                                                item.badge === 'Gold' ? (course === 'PS_GR_B' ? 'bg-gradient-to-r from-cyan-200 to-blue-300 text-blue-900 dark:from-cyan-700 dark:to-blue-600 dark:text-cyan-100 border border-blue-300' : 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300') :
                                                     'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900' // Default/Admin
                                             }`}>
-                                            {item.badge}
+                                            {item.badge === 'Silver' && course === 'PS_GR_B' ? 'Platinum' :
+                                                item.badge === 'Gold' && course === 'PS_GR_B' ? 'Diamond' :
+                                                    item.badge}
                                         </span>
+                                        {/* Secondary "Gold"/"Diamond" Badge for "Silver" level features (since silver level usually includes both tags to show availability in both) */}
                                         {item.badge === 'Silver' && (
-                                            <span className="px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300">
-                                                Gold
+                                            <span className={`px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${course === 'PS_GR_B' ? 'bg-gradient-to-r from-cyan-200 to-blue-300 text-blue-900 dark:from-cyan-700 dark:to-blue-600 dark:text-cyan-100 border border-blue-300' : 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300'}`}>
+                                                {course === 'PS_GR_B' ? 'Diamond' : 'Gold'}
                                             </span>
                                         )}
                                     </>

@@ -9,6 +9,7 @@ export default function HomepageMarquee() {
             🧠 <span className="text-pink-300">Smart Flashcards</span> for Rapid Revision <span className="mx-2 text-indigo-300">•</span>
             📖 Smart PDF Reader for All Topics <span className="mx-2 text-indigo-300">•</span>
             🎯 Structured, Rule-Based, Exam-Oriented Learning <span className="mx-2 text-indigo-300">•</span>
+            🏆 All India Weekly <span className="text-orange-300">Live Mock Tests</span> with Answer Sheets in PDF for detailed analysis <span className="mx-2 text-indigo-300">•</span>
             <span className="italic text-yellow-200">Prepare Smarter</span> • <span className="italic text-yellow-200">Revise Faster</span> • <span className="italic text-yellow-200">Succeed Confidently</span> 🚀
         </>
     );

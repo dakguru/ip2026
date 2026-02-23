@@ -449,6 +449,12 @@ export default function SettingsPage() {
                                                 <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">PS Group B Exam</p>
                                             </button>
                                         </div>
+                                        <button
+                                            onClick={() => router.push('/')}
+                                            className="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 mt-6"
+                                        >
+                                            Change Course Mode & Go to Home
+                                        </button>
                                     </>
                                 ) : (
                                     <div className="flex flex-col items-center justify-center py-12 px-4 text-center space-y-4 bg-zinc-50 dark:bg-zinc-900 rounded-3xl border border-zinc-100 dark:border-zinc-800 border-dashed">
@@ -814,6 +820,15 @@ export default function SettingsPage() {
                                 <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">PS Group B Exam</p>
                             </button>
                         </div>
+
+                        <div className="mt-6">
+                            <button
+                                onClick={() => router.push('/')}
+                                className="w-full sm:w-auto px-8 py-3.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-bold rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2"
+                            >
+                                Change Course Mode & Go to Home
+                            </button>
+                        </div>
                     </div>
                 )}
 
@@ -1043,42 +1058,44 @@ export default function SettingsPage() {
             <div className="h-20 md:hidden"></div>
 
             {/* OTP Modal */}
-            {showOtpModal && (
-                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-200">
-                    <div className="bg-white dark:bg-zinc-900 w-full max-w-md rounded-3xl p-8 shadow-2xl scale-100 animate-in zoom-in-95 duration-200">
-                        <h2 className="text-2xl font-bold mb-4">Security Verification</h2>
-                        <p className="text-zinc-500 mb-6">
-                            You have changed your contact details. Please enter the OTP sent to your new mobile/email to verify this change.
-                        </p>
+            {
+                showOtpModal && (
+                    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-200">
+                        <div className="bg-white dark:bg-zinc-900 w-full max-w-md rounded-3xl p-8 shadow-2xl scale-100 animate-in zoom-in-95 duration-200">
+                            <h2 className="text-2xl font-bold mb-4">Security Verification</h2>
+                            <p className="text-zinc-500 mb-6">
+                                You have changed your contact details. Please enter the OTP sent to your new mobile/email to verify this change.
+                            </p>
 
-                        <div className="space-y-4">
-                            <input
-                                type="text"
-                                value={otp}
-                                onChange={(e) => setOtp(e.target.value)}
-                                placeholder="Enter OTP"
-                                className="w-full text-center text-2xl tracking-widest font-bold border rounded-2xl p-4 uppercase"
-                            />
-                            <p className="text-xs text-center text-zinc-400">Demo OTP: {generatedOtp}</p>
+                            <div className="space-y-4">
+                                <input
+                                    type="text"
+                                    value={otp}
+                                    onChange={(e) => setOtp(e.target.value)}
+                                    placeholder="Enter OTP"
+                                    className="w-full text-center text-2xl tracking-widest font-bold border rounded-2xl p-4 uppercase"
+                                />
+                                <p className="text-xs text-center text-zinc-400">Demo OTP: {generatedOtp}</p>
 
-                            <div className="flex gap-4">
-                                <button
-                                    onClick={() => setShowOtpModal(false)}
-                                    className="flex-1 py-3 rounded-xl font-semibold border hover:bg-zinc-50 dark:hover:bg-zinc-800"
-                                >
-                                    Cancel
-                                </button>
-                                <button
-                                    onClick={verifyAndSave}
-                                    className="flex-1 py-3 rounded-xl font-semibold bg-blue-600 text-white hover:bg-blue-700"
-                                >
-                                    Verify & Save
-                                </button>
+                                <div className="flex gap-4">
+                                    <button
+                                        onClick={() => setShowOtpModal(false)}
+                                        className="flex-1 py-3 rounded-xl font-semibold border hover:bg-zinc-50 dark:hover:bg-zinc-800"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        onClick={verifyAndSave}
+                                        className="flex-1 py-3 rounded-xl font-semibold bg-blue-600 text-white hover:bg-blue-700"
+                                    >
+                                        Verify & Save
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </div>
+                )
+            }
+        </div >
     );
 }

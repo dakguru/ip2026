@@ -10,6 +10,7 @@ import { useIsMobile } from '@/hooks/use-is-mobile';
 import NativeQuizRunner from '@/components/quiz/NativeQuizRunner';
 import NativeResultScreen from '@/components/quiz/NativeResultScreen';
 import NativeQuizDashboard from '@/components/quiz/NativeQuizDashboard';
+import { useCourse } from '@/contexts/CourseContext';
 
 // Custom styles for range slider
 const sliderStyles = `
@@ -52,12 +53,18 @@ const sliderStyles = `
   
   input[type="range"]::-moz-range-thumb:active {
     transform: scale(1.1);
+  input[type="range"]::-moz-range-thumb:active {
+    transform: scale(1.1);
   }
 `;
+
+const getSliderStyles = (isPS: boolean) => sliderStyles.replace(/#9333ea/g, isPS ? '#0d9488' : '#9333ea').replace(/#3b82f6/g, isPS ? '#06b6d4' : '#3b82f6').replace(/147, 51, 234/g, isPS ? '13, 148, 136' : '147, 51, 234');
 
 const ALLOWED_FREE_TOPICS = ['p1-4', 'p1-5', 'p1-32'];
 
 export default function QuizDashboard() {
+    const { course } = useCourse();
+    const isPS = course === 'PS_GR_B';
     // Navigation State
     const [view, setView] = useState<'topics' | 'config' | 'quiz'>('topics');
     const [selectedTopic, setSelectedTopic] = useState<QuizTopic | null>(null);
@@ -475,7 +482,7 @@ export default function QuizDashboard() {
 
         return (
             <>
-                <style dangerouslySetInnerHTML={{ __html: sliderStyles }} />
+                <style dangerouslySetInnerHTML={{ __html: getSliderStyles(isPS) }} />
                 <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 flex items-center justify-center transition-colors">
                     <div className="w-full max-w-lg bg-white dark:bg-zinc-900 rounded-3xl shadow-xl dark:shadow-purple-900/10 border border-zinc-100 dark:border-zinc-800 p-8">
                         <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2 mb-6">
@@ -483,7 +490,7 @@ export default function QuizDashboard() {
                         </button>
 
                         <div className="mb-8">
-                            <span className="text-purple-600 dark:text-purple-400 font-bold uppercase text-xs tracking-wider">{selectedTopic.category}</span>
+                            <span className={`font-bold uppercase text-xs tracking-wider ${isPS ? 'text-teal-600 dark:text-teal-400' : 'text-purple-600 dark:text-purple-400'}`}>{selectedTopic.category}</span>
                             <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100 mt-2">{selectedTopic.title}</h2>
                             <p className="text-zinc-500 dark:text-zinc-400 mt-2 flex items-center gap-2">
                                 <BrainCircuit className="w-4 h-4" />
@@ -604,9 +611,9 @@ export default function QuizDashboard() {
                                                         width: 24px;
                                                         height: 24px;
                                                         border-radius: 50%;
-                                                        background: linear-gradient(135deg, #9333ea, #3b82f6);
+                                                        background: linear-gradient(135deg, ${isPS ? '#0d9488, #06b6d4' : '#9333ea, #3b82f6'});
                                                         cursor: pointer;
-                                                        box-shadow: 0 2px 8px rgba(147, 51, 234, 0.4);
+                                                        box-shadow: 0 2px 8px ${isPS ? 'rgba(13, 148, 136, 0.4)' : 'rgba(147, 51, 234, 0.4)'};
                                                         border: 2px solid white;
                                                         margin-top: -10px; /* Center vertially relative to track if track is standard, but here we set h-full */
                                                     }
@@ -617,7 +624,7 @@ export default function QuizDashboard() {
                                                         width: 24px;
                                                         height: 24px;
                                                         border-radius: 50%;
-                                                        background: linear-gradient(135deg, #9333ea, #3b82f6);
+                                                        background: linear-gradient(135deg, ${isPS ? '#0d9488, #06b6d4' : '#9333ea, #3b82f6'});
                                                         cursor: pointer;
                                                         border: 2px solid white;
                                                     }
@@ -669,8 +676,8 @@ export default function QuizDashboard() {
                                                             onClick={() => setQuizRange({ start: chunk.start, end: chunk.end })}
                                                             className={`px-3 py-2 rounded-lg text-xs font-bold transition-all border
                                                                 ${isActive
-                                                                    ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-700 shadow-sm'
-                                                                    : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-purple-300 dark:hover:border-purple-600 hover:text-purple-600 dark:hover:text-purple-400'}
+                                                                    ? (isPS ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 border-teal-200 dark:border-teal-700 shadow-sm' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-700 shadow-sm')
+                                                                    : (isPS ? 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-teal-300 dark:hover:border-teal-600 hover:text-teal-600 dark:hover:text-teal-400' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-purple-300 dark:hover:border-purple-600 hover:text-purple-600 dark:hover:text-purple-400')}
                                                             `}
                                                         >
                                                             {chunk.start}-{chunk.end}
@@ -694,7 +701,7 @@ export default function QuizDashboard() {
 
                                 <button
                                     onClick={startQuiz}
-                                    className="w-full py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-purple-200 dark:shadow-purple-900/20 transition-all active:scale-95 flex items-center justify-center gap-2"
+                                    className={`w-full py-4 text-white rounded-xl font-bold text-lg shadow-lg ${isPS ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-purple-200 dark:shadow-purple-900/20'} transition-all active:scale-95 flex items-center justify-center gap-2`}
                                 >
                                     <PlayCircle className="w-5 h-5" /> Start Practice
                                 </button>
@@ -738,7 +745,7 @@ export default function QuizDashboard() {
                 </Link>
 
                 <div className="flex items-center gap-4 mb-12">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-purple-200 dark:shadow-purple-900/20">
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg ${isPS ? 'bg-gradient-to-br from-teal-500 to-cyan-600 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-br from-purple-500 to-indigo-600 shadow-purple-200 dark:shadow-purple-900/20'}`}>
                         <BrainCircuit className="w-8 h-8" />
                     </div>
                     <div>
@@ -795,20 +802,21 @@ export default function QuizDashboard() {
         </div>
     );
 }
-
 function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, onSelect: (t: QuizTopic) => void, isLocked?: boolean }) {
+    const { course } = useCourse();
+    const isPS = course === 'PS_GR_B';
     const qCount = topic.sets.reduce((acc, s) => acc + s.questions.length, 0);
 
     const Content = () => (
         <>
             <div className={`absolute top-0 right-0 p-3 md:p-4 transition-opacity ${isLocked ? 'opacity-10' : 'opacity-5 group-hover:opacity-10'}`}>
-                <BrainCircuit className="w-16 h-16 md:w-24 md:h-24 text-purple-600" />
+                <BrainCircuit className={`w-16 h-16 md:w-24 md:h-24 ${isPS ? 'text-teal-600' : 'text-purple-600'}`} />
             </div>
 
             <span className={`text-xs font-bold uppercase tracking-wider mb-2
                 ${topic.category === 'Paper I' ? 'text-blue-600 dark:text-blue-400' : 'text-pink-600 dark:text-pink-400'}
             `}>{topic.category}</span>
-            <h3 className="text-sm md:text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors z-10 pr-2 leading-tight">{topic.title}</h3>
+            <h3 className={`text-sm md:text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 transition-colors z-10 pr-2 leading-tight ${isPS ? 'group-hover:text-teal-700 dark:group-hover:text-teal-400' : 'group-hover:text-purple-700 dark:group-hover:text-purple-400'}`}>{topic.title}</h3>
 
             <div className="mt-auto pt-3 md:pt-4 flex items-center justify-between z-10 w-full">
                 <div className="text-zinc-400 dark:text-zinc-500 text-xs md:text-sm font-medium">
@@ -840,7 +848,7 @@ function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, on
     );
 
     const baseClasses = `group bg-white dark:bg-zinc-900 p-4 md:p-6 rounded-2xl border border-zinc-100 dark:border-zinc-800 transition-all text-left flex flex-col h-full relative overflow-hidden
-        ${isLocked ? 'opacity-70 grayscale-[0.5]' : 'hover:border-purple-200 dark:hover:border-purple-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-purple-900/10 cursor-pointer'}
+        ${isLocked ? 'opacity-70 grayscale-[0.5]' : (isPS ? 'hover:border-teal-200 dark:hover:border-teal-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-teal-900/10 cursor-pointer' : 'hover:border-purple-200 dark:hover:border-purple-700/50 hover:shadow-xl dark:shadow-lg dark:shadow-purple-900/10 cursor-pointer')}
     `;
 
     if (isLocked) {

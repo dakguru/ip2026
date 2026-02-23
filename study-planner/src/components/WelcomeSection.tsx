@@ -10,7 +10,7 @@ interface WelcomeSectionProps {
 }
 
 
-function CountdownTimer() {
+function CountdownTimer({ course }: { course: string | null }) {
     const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
 
     useEffect(() => {
@@ -38,8 +38,12 @@ function CountdownTimer() {
         return () => clearInterval(timer);
     }, []);
 
+    const testText = course === 'PS_GR_B'
+        ? "All India Mock Tests for PS Group B 2026"
+        : "All India Mock Tests for LDCE IP 2026";
+
     if (!timeLeft) {
-        return <span>Live : All India Mock Tests for LDCE IP 2026</span>;
+        return <span>Live : {testText}</span>;
     }
 
     return (
@@ -54,7 +58,7 @@ function CountdownTimer() {
                 <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.seconds}s</span>
             </span>
             <span className="mx-1 opacity-50">|</span>
-            <span>All India Mock Tests for LDCE IP 2026</span>
+            <span>{testText}</span>
         </span>
     );
 }
@@ -64,8 +68,8 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
     const { course } = useCourse();
 
     const tagline = course === 'PS_GR_B'
-        ? 'Mission PS Group B: Start Now. Finish Strong.'
-        : 'Mission Inspector Posts: Start Now. Finish Strong.';
+        ? <Link href="/settings" className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-indigo-600 dark:from-teal-400 dark:to-indigo-500 hover:opacity-80 transition-opacity cursor-pointer inline-flex items-center gap-1">Course Mode : LDCE PS Group B 2026</Link>
+        : <Link href="/settings" className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 dark:from-blue-400 dark:to-violet-400 hover:opacity-80 transition-opacity cursor-pointer inline-flex items-center gap-1">Course Mode : LDCE IP 2026</Link>;
 
     return (
         <section className={`text-center px-4 ${isMobileApp ? 'pt-6 pb-6' : 'pt-16 pb-12'}`}>
@@ -91,10 +95,10 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
 
             <div className="mt-6 md:mt-10 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 w-full max-w-full px-2">
                 <Link href="/mock-tests" className="relative group inline-block w-full sm:w-auto max-w-xl">
-                    {/* Vibrant animated outer glow */}
-                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-yellow-400 via-orange-500 via-pink-500 to-violet-600 opacity-80 group-hover:opacity-100 blur-md transition-opacity duration-300 animate-pulse"></div>
+                    {/* Vibrant animated outer glow based on course */}
+                    <div className={`absolute -inset-1 rounded-2xl opacity-80 group-hover:opacity-100 blur-md transition-opacity duration-300 animate-pulse ${course === 'PS_GR_B' ? 'bg-gradient-to-r from-teal-400 via-indigo-500 via-purple-500 to-blue-600' : 'bg-gradient-to-r from-yellow-400 via-orange-500 via-pink-500 to-violet-600'}`}></div>
 
-                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-orange-500 via-pink-600 to-violet-700 px-5 py-4 sm:px-8 sm:py-5 shadow-2xl shadow-pink-500/30 w-full border border-white/20">
+                    <div className={`relative overflow-hidden rounded-2xl px-5 py-4 sm:px-8 sm:py-5 shadow-2xl w-full border border-white/20 ${course === 'PS_GR_B' ? 'bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-700 shadow-teal-500/30' : 'bg-gradient-to-r from-orange-500 via-pink-600 to-violet-700 shadow-pink-500/30'}`}>
                         {/* Shimmer sweep */}
                         <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
 
@@ -110,7 +114,7 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
                             </span>
 
                             <span className="text-white font-extrabold tracking-wide uppercase text-xs sm:text-sm md:text-base drop-shadow-lg text-center">
-                                <CountdownTimer />
+                                <CountdownTimer course={course} />
                             </span>
 
                             {/* Arrow */}

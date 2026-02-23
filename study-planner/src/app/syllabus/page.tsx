@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useCourse } from '@/contexts/CourseContext';
 
 // --- Data Structure for Syllabus ---
 
@@ -180,7 +181,7 @@ const syllabusData = {
 };
 
 // Sleek Sticky Sub-Nav for Mobile & Desktop
-const StickyTabNav = React.memo(({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: (tab: string) => void }) => (
+const StickyTabNav = React.memo(({ activeTab, setActiveTab, isPS }: { activeTab: string, setActiveTab: (tab: string) => void, isPS: boolean }) => (
     <div className="sticky top-[57px] z-40 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="py-2 md:py-3">
@@ -196,14 +197,14 @@ const StickyTabNav = React.memo(({ activeTab, setActiveTab }: { activeTab: strin
                             className={`
                                 relative px-3 py-2.5 md:px-6 md:py-2 rounded-lg text-sm font-bold transition-all duration-300 flex items-center justify-center
                                 ${activeTab === tab
-                                    ? 'bg-white dark:bg-zinc-800 text-blue-600 dark:text-blue-400 shadow-sm ring-1 ring-zinc-200 dark:ring-zinc-700 md:ring-0 md:bg-blue-50 md:dark:bg-blue-900/20'
+                                    ? (isPS ? 'bg-white dark:bg-zinc-800 text-teal-600 dark:text-teal-400 shadow-sm ring-1 ring-zinc-200 dark:ring-zinc-700 md:ring-0 md:bg-teal-50 md:dark:bg-teal-900/20' : 'bg-white dark:bg-zinc-800 text-blue-600 dark:text-blue-400 shadow-sm ring-1 ring-zinc-200 dark:ring-zinc-700 md:ring-0 md:bg-blue-50 md:dark:bg-blue-900/20')
                                     : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50'
                                 }
                             `}
                         >
                             {/* Mobile Only Indicator Dot */}
                             {activeTab === tab && (
-                                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full md:hidden"></span>
+                                <span className={`absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full md:hidden ${isPS ? 'bg-teal-500' : 'bg-blue-500'}`}></span>
                             )}
                             {tab === 'paper1' ? 'Paper I' : tab === 'paper2' ? 'Paper II' : 'Paper III'}
                         </button>
@@ -217,10 +218,10 @@ const StickyTabNav = React.memo(({ activeTab, setActiveTab }: { activeTab: strin
 StickyTabNav.displayName = "StickyTabNav";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const SyllabusCard = React.memo(({ section }: { section: any }) => (
+const SyllabusCard = React.memo(({ section, isPS }: { section: any, isPS: boolean }) => (
     <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm hover:shadow-xl border border-zinc-200 dark:border-zinc-800 overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
         <div className="bg-gradient-to-r from-slate-50 to-zinc-50 dark:from-zinc-800 dark:to-zinc-900 px-5 py-4 border-b border-zinc-100 dark:border-zinc-700 flex items-center space-x-3">
-            <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-xl text-blue-600 dark:text-blue-400 shadow-sm">
+            <div className={`p-2 rounded-xl shadow-sm ${isPS ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400' : 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'}`}>
                 {section.icon}
             </div>
             <h3 className="font-bold text-zinc-800 dark:text-zinc-100 text-lg">{section.category}</h3>
@@ -233,8 +234,8 @@ const SyllabusCard = React.memo(({ section }: { section: any }) => (
                         <div className="flex items-start justify-between gap-3">
                             <div className="flex-1">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 shrink-0"></div>
-                                    <span className="text-zinc-700 dark:text-zinc-300 font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-snug">
+                                    <div className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 ${isPS ? 'bg-teal-400' : 'bg-blue-400'}`}></div>
+                                    <span className={`font-medium transition-colors leading-snug text-zinc-700 dark:text-zinc-300 ${isPS ? 'group-hover:text-teal-600 dark:group-hover:text-teal-400' : 'group-hover:text-blue-600 dark:group-hover:text-blue-400'}`}>
                                         {item.name}
                                     </span>
                                 </div>
@@ -247,7 +248,7 @@ const SyllabusCard = React.memo(({ section }: { section: any }) => (
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex-shrink-0 inline-flex items-center justify-center p-2 rounded-lg text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition-all duration-200 shadow-sm"
+                                    className={`flex-shrink-0 inline-flex items-center justify-center p-2 rounded-lg transition-all duration-200 shadow-sm ${isPS ? 'text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/20 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-500' : 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500'}`}
                                     title="Open Official Resource"
                                 >
                                     <ExternalLink className="w-4 h-4" />
@@ -267,18 +268,18 @@ const SyllabusCard = React.memo(({ section }: { section: any }) => (
 SyllabusCard.displayName = "SyllabusCard";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const HeroSection = ({ activeData }: { activeData: any }) => (
+const HeroSection = ({ activeData, isPS }: { activeData: any, isPS: boolean }) => (
     <div className="relative bg-[#0F172A] text-white py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Abstract Background */}
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
-        <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 rounded-full bg-indigo-600 blur-[100px] opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 -ml-40 -mb-40 w-96 h-96 rounded-full bg-blue-600 blur-[100px] opacity-30 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className={`absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 rounded-full blur-[100px] opacity-30 animate-pulse ${isPS ? 'bg-teal-600' : 'bg-indigo-600'}`}></div>
+        <div className={`absolute bottom-0 left-0 -ml-40 -mb-40 w-96 h-96 rounded-full blur-[100px] opacity-30 animate-pulse ${isPS ? 'bg-cyan-600' : 'bg-blue-600'}`} style={{ animationDelay: '2s' }}></div>
 
         <div className="relative max-w-7xl mx-auto z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                 <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-xs font-bold uppercase tracking-wider mb-4">
-                        <Book className="w-3 h-3" /> Inspector Posts LDCE Syllabus
+                    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 ${isPS ? 'bg-teal-500/10 border border-teal-400/20 text-teal-300' : 'bg-blue-500/10 border border-blue-400/20 text-blue-300'}`}>
+                        <Book className="w-3 h-3" /> {isPS ? 'PS Group B 2026 Syllabus' : 'Inspector Posts LDCE Syllabus'}
                     </div>
                     <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-3 text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-100">
                         {activeData.title}
@@ -302,6 +303,8 @@ const HeroSection = ({ activeData }: { activeData: any }) => (
 
 
 export default function SyllabusPage() {
+    const { course } = useCourse();
+    const isPS = course === 'PS_GR_B';
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [activeTab, setActiveTab] = useState<keyof typeof syllabusData>('paper1');
 
@@ -310,10 +313,10 @@ export default function SyllabusPage() {
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-100">
-            <StickyTabNav activeTab={activeTab} setActiveTab={(tab) => setActiveTab(tab as any)} />
+            <StickyTabNav activeTab={activeTab} setActiveTab={(tab) => setActiveTab(tab as any)} isPS={isPS} />
 
             <main>
-                <HeroSection activeData={currentData} />
+                <HeroSection activeData={currentData} isPS={isPS} />
 
                 {/* Important Disclaimer Banner */}
                 <div className="bg-amber-50 dark:bg-amber-900/10 border-b border-amber-100 dark:border-amber-900/30">
@@ -337,7 +340,7 @@ export default function SyllabusPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {currentData.sections.map((section, index) => (
-                            <SyllabusCard key={index} section={section} />
+                            <SyllabusCard key={index} section={section} isPS={isPS} />
                         ))}
                     </div>
 
