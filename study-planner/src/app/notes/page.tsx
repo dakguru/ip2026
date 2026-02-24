@@ -12,6 +12,7 @@ const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
     loading: () => <div className="flex items-center justify-center h-full text-slate-400">Loading viewer...</div>,
     ssr: false
 });
+import { PSGB_PDF_DATA } from '@/data/psgbPdfData';
 import { Capacitor } from '@capacitor/core';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Toast } from '@capacitor/toast';
@@ -710,7 +711,10 @@ const PDF_DATA: Record<string, Note[]> = {
 
 export default function NotesPage() {
     const { course } = useCourse();
-    const [activeTab, setActiveTab] = useState("Paper I");
+    const isPS = course === 'PS_GR_B';
+    const TABS = isPS ? ["Paper I", "Paper II", "SB Orders"] : ["Paper I", "Paper III", "SB Orders"];
+
+    const [activeTab, setActiveTab] = useState(TABS[0]);
     const [selectedPdf, setSelectedPdf] = useState<{ url: string, title: string } | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
     const [pdfDarkMode, setPdfDarkMode] = useState(false);
@@ -861,6 +865,8 @@ export default function NotesPage() {
         }
     };
 
+    const activeData = isPS ? { ...PSGB_PDF_DATA, "SB Orders": PDF_DATA["SB Orders"] } : PDF_DATA;
+
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200">
             <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel} />
@@ -935,7 +941,7 @@ export default function NotesPage() {
                 {/* Tabs */}
                 <div className="flex justify-center mb-6 md:mb-8 sticky top-[64px] z-30 px-4 md:px-0">
                     <div className="w-full md:w-auto bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md p-1.5 md:p-2 rounded-xl md:rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 grid grid-cols-3 md:inline-flex md:grid-cols-none gap-2">
-                        {["Paper I", "Paper III", "SB Orders"].map((tab) => (
+                        {TABS.map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
@@ -966,7 +972,7 @@ export default function NotesPage() {
 
                 {/* Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 pb-20">
-                    {PDF_DATA[activeTab as keyof typeof PDF_DATA]?.map((file, index) => (
+                    {activeData[activeTab as keyof typeof activeData]?.map((file, index) => (
                         <div
                             key={index}
                             className={`group bg-white dark:bg-zinc-900 rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
@@ -1075,7 +1081,7 @@ export default function NotesPage() {
                         </div>
                     ))}
 
-                    {(!PDF_DATA[activeTab as keyof typeof PDF_DATA] || PDF_DATA[activeTab as keyof typeof PDF_DATA].length === 0) && (
+                    {(!activeData[activeTab as keyof typeof activeData] || activeData[activeTab as keyof typeof activeData].length === 0) && (
                         <div className="col-span-full py-20 text-center">
                             <div className="bg-slate-100 dark:bg-zinc-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <BookOpen className="w-8 h-8 text-slate-300 dark:text-zinc-600" />
