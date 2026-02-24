@@ -210,9 +210,9 @@ export default function UpdatesDrawer({ isOpen, onClose }: UpdatesDrawerProps) {
                                                 <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
                                                 {item.title}
                                             </h3>
-                                            <p className="text-xs leading-relaxed text-zinc-500 dark:text-zinc-400 pl-5.5">
+                                            <div className="text-xs leading-relaxed text-zinc-500 dark:text-zinc-400 pl-5.5">
                                                 {item.desc}
-                                            </p>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
