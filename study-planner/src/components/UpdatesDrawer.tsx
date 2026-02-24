@@ -16,6 +16,25 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "24.02.2026",
+        items: [
+            {
+                title: "New PDF Notes Added to Paper III",
+                desc: (
+                    <div className="space-y-2">
+                        <p>We have updated the following PDF Notes under <strong>Paper III</strong>:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li>CCS (Implementation of NPS) Rules, 2021</li>
+                            <li>CCS (Payment of Gratuity under NPS) Rules, 2021</li>
+                            <li>General Financial Rules, 2017 (under the GFR section)</li>
+                        </ul>
+                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Check them out in the Notes section!</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "18.02.2026",
         items: [
             {
