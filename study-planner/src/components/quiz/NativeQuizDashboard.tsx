@@ -4,15 +4,17 @@ import { ArrowRight, Lock, Play, Star, Zap, BrainCircuit, ChevronRight, Layers }
 import { QuizTopic } from '@/lib/quizTypes';
 
 interface NativeQuizDashboardProps {
-    paper1Topics: QuizTopic[];
-    paper3Topics: QuizTopic[];
+    group1Topics: QuizTopic[];
+    group2Topics: QuizTopic[];
+    group2Title: string;
     onSelectTopic: (topic: QuizTopic) => void;
     isUnlocked: (topicId: string) => boolean;
 }
 
 export default function NativeQuizDashboard({
-    paper1Topics,
-    paper3Topics,
+    group1Topics,
+    group2Topics,
+    group2Title,
     onSelectTopic,
     isUnlocked
 }: NativeQuizDashboardProps) {
@@ -150,27 +152,26 @@ export default function NativeQuizDashboard({
                             <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Paper I</h2>
                         </div>
                         <span className="text-xs font-bold text-zinc-400 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-lg">
-                            {paper1Topics.length} Topics
+                            {group1Topics.length} Topics
                         </span>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
-                        {paper1Topics.map(renderTopicCard)}
+                        {group1Topics.map(renderTopicCard)}
                     </div>
                 </section>
 
-                {/* Paper III */}
                 <section>
                     <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-2">
                             <div className="w-1 h-5 bg-pink-500 rounded-full" />
-                            <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Paper III</h2>
+                            <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">{group2Title}</h2>
                         </div>
                         <span className="text-xs font-bold text-zinc-400 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-lg">
-                            {paper3Topics.length} Topics
+                            {group2Topics.length} Topics
                         </span>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
-                        {paper3Topics.map(renderTopicCard)}
+                        {group2Topics.map(renderTopicCard)}
                     </div>
                 </section>
             </div>

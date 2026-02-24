@@ -1,7 +1,7 @@
 import { QuizTopic, QuizSet } from "@/lib/quizTypes";
 
 // ----- EXISTING QUESTION DATA -----
-const ALL_SETS_DATA: Record<number, any[]> = {
+export const ALL_SETS_DATA: Record<number, any[]> = {
   1: [
     { q: "On which date did the Post Office Act, 2023 come into force?", o: ["1st Jan 2024", "24th Dec 2023", "18th June 2024", "1st April 2023"], a: 2, e: "The Post Office Act, 2023 came into force on **18th June 2024**." },
     { q: "According to Section 2(b), what is an 'item'?", o: ["Any letter", "An indivisible article accepted for service", "A parcel > 10kg", "Government document"], a: 1 },
@@ -4389,14 +4389,14 @@ const ALL_SETS_DATA: Record<number, any[]> = {
   ]
 };
 
-interface RawQuestion {
+export interface RawQuestion {
   q: string;
   o: string[];
   a: number;
   e?: string;
 }
 
-const convertToQuizSet = (setId: number, title: string, data: RawQuestion[]) => {
+export const convertToQuizSet = (setId: number, title: string, data: RawQuestion[]) => {
   return {
     id: "set-" + setId,
     title: title,
@@ -4411,7 +4411,7 @@ const convertToQuizSet = (setId: number, title: string, data: RawQuestion[]) => 
 };
 
 // -- HELPER to create topics easily --
-const createTopic = (id: string, title: string, category: 'Paper I' | 'Paper II' | 'Paper III' | 'PYQ' | 'Current Affairs', setIds: number[] = []) => {
+export const createTopic = (id: string, title: string, category: 'Paper I' | 'Paper II' | 'Paper III' | 'Paper IV' | 'PYQ' | 'Current Affairs', setIds: number[] = []) => {
   const sets = setIds.map(setId => {
     const data = ALL_SETS_DATA[setId];
     return data ? convertToQuizSet(setId, "Practice Set " + setId, data) : null;

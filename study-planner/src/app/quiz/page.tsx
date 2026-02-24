@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
+import { PSGB_QUIZ_DATA } from '@/data/psgbQuizzesData';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 import { useIsMobile } from '@/hooks/use-is-mobile';
@@ -719,8 +720,10 @@ export default function QuizDashboard() {
     }
 
     // --- VIEW: TOPIC SELECTION (DASHBOARD) ---
-    const paper1Topics = QUIZ_DATA.filter(t => t.category === 'Paper I');
-    const paper3Topics = QUIZ_DATA.filter(t => t.category === 'Paper III');
+    const activeData = isPS ? PSGB_QUIZ_DATA : QUIZ_DATA;
+    const group1Topics = activeData.filter(t => t.category === 'Paper I');
+    const group2Title = isPS ? 'Paper II' : 'Paper III';
+    const group2Topics = activeData.filter(t => t.category === group2Title);
 
     const isUnlocked = (topicId: string) => {
         return ['gold', 'silver'].includes(membershipLevel.toLowerCase()) || ALLOWED_FREE_TOPICS.includes(topicId);
@@ -729,8 +732,9 @@ export default function QuizDashboard() {
     if (isMobileApp) {
         return (
             <NativeQuizDashboard
-                paper1Topics={paper1Topics}
-                paper3Topics={paper3Topics}
+                group1Topics={group1Topics}
+                group2Topics={group2Topics}
+                group2Title={group2Title}
                 onSelectTopic={handleTopicSelect}
                 isUnlocked={isUnlocked}
             />
@@ -769,7 +773,7 @@ export default function QuizDashboard() {
                             <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-                            {paper1Topics.map(topic => (
+                            {group1Topics.map(topic => (
                                 <TopicCard
                                     key={topic.id}
                                     topic={topic}
@@ -780,14 +784,14 @@ export default function QuizDashboard() {
                         </div>
                     </section>
 
-                    {/* Paper III Section */}
+                    {/* Group 2 Section */}
                     <section>
                         <div className="flex items-center gap-3 mb-6">
-                            <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">Paper III</h2>
+                            <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">{group2Title}</h2>
                             <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-                            {paper3Topics.map(topic => (
+                            {group2Topics.map(topic => (
                                 <TopicCard
                                     key={topic.id}
                                     topic={topic}
