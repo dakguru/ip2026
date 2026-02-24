@@ -264,9 +264,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Chapter 6 of General Financial Rules, 2017",
-            "description": "Materials will be uploaded soon.",
-            "color": "gray",
-            "comingSoon": true
+            "description": "Chapter 6 of GFR 2017",
+            "filename": "General_Financial_Rules_2017.pdf",
+            "path": "/notes/paper-3/General_Financial_Rules_2017.pdf",
+            "size": "4.2 MB",
+            "color": "gray"
         },
         {
             "title": "CVC guidelines on Public procurement, guide-lines and instructions on e-procurement.",
@@ -387,10 +389,20 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "teal"
         },
         {
-            "title": "CCS NPS Rules (Implementation & Gratuity)",
-            "description": "Materials will be uploaded soon.",
-            "color": "slate",
-            "comingSoon": true
+            "title": "CCS (Implementation of NPS) Rules, 2021",
+            "description": "National Pension System implementation.",
+            "filename": "CCS_Implementation_of_NPS_Rules_2021.pdf",
+            "path": "/notes/paper-3/CCS_Implementation_of_NPS_Rules_2021.pdf",
+            "size": "4.3 MB",
+            "color": "emerald"
+        },
+        {
+            "title": "CCS (Payment of Gratuity under NPS) Rules, 2021",
+            "description": "Gratuity rules for NPS employees.",
+            "filename": "CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
+            "path": "/notes/paper-3/CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
+            "size": "4.1 MB",
+            "color": "emerald"
         },
         {
             "title": "CCS (Commutation of Pension) Rules, 1981",
@@ -488,9 +500,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "General Financial Rules 2017 other than public procurement",
-            "description": "Materials will be uploaded soon.",
-            "color": "gray",
-            "comingSoon": true
+            "description": "General Financial Rules 2017 other than public procurement",
+            "filename": "General_Financial_Rules_2017.pdf",
+            "path": "/notes/paper-3/General_Financial_Rules_2017.pdf",
+            "size": "4.2 MB",
+            "color": "gray"
         },
         {
             "title": "Interface with India Post Payment Bank",

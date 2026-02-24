@@ -500,11 +500,32 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 23-24. NPS
-        { title: "CCS (Implementation of NPS) Rules, 2021", description: "National Pension System implementation.", color: "emerald", comingSoon: true },
-        { title: "CCS (Payment of Gratuity under NPS) Rules, 2021", description: "Gratuity rules for NPS employees.", color: "emerald", comingSoon: true },
+        {
+            title: "CCS (Implementation of NPS) Rules, 2021",
+            description: "National Pension System implementation.",
+            filename: "CCS_Implementation_of_NPS_Rules_2021.pdf",
+            path: "/notes/paper-3/CCS_Implementation_of_NPS_Rules_2021.pdf",
+            size: "4.3 MB",
+            color: "emerald"
+        },
+        {
+            title: "CCS (Payment of Gratuity under NPS) Rules, 2021",
+            description: "Gratuity rules for NPS employees.",
+            filename: "CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
+            path: "/notes/paper-3/CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
+            size: "4.1 MB",
+            color: "emerald"
+        },
 
         // 25. GFR
-        { title: "General Financial Rules, 2017", description: "Chapter 2 and 6 (and amendments).", color: "gray", comingSoon: true },
+        {
+            title: "General Financial Rules, 2017",
+            description: "Chapter 2 and 6 (and amendments).",
+            filename: "General_Financial_Rules_2017.pdf",
+            path: "/notes/paper-3/General_Financial_Rules_2017.pdf",
+            size: "4.2 MB",
+            color: "gray"
+        },
 
         // 26. FR & SR
         { title: "Fundamental Rules (FR) and Supplementary Rules (SR)", description: "Core service rules.", color: "indigo", comingSoon: true },
