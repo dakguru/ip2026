@@ -349,7 +349,14 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 40. Reports
-        { title: "Annual Reports & Book of Information", description: "Department of Posts annual data.", color: "slate", comingSoon: true },
+        {
+            title: "Annual Reports & Book of Information",
+            description: "Department of Posts annual data.",
+            filename: "Annual_Report_and_Book_of_Information.pdf",
+            path: "/notes/paper-1/Annual_Report_and_Book_of_Information.pdf",
+            size: "4.5 MB",
+            color: "slate"
+        },
 
         // 41. IT
         { title: "APT Knowledge (IT 2.0)", description: "Advanced Postal Technology.", color: "sky", comingSoon: true },

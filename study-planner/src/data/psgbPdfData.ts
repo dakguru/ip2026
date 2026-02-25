@@ -252,9 +252,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Annual Reports and Book of Information of D/o Posts",
-            "description": "Materials will be uploaded soon.",
-            "color": "sky",
-            "comingSoon": true
+            "description": "Department of Posts annual data.",
+            "filename": "Annual_Report_and_Book_of_Information.pdf",
+            "path": "/notes/paper-1/Annual_Report_and_Book_of_Information.pdf",
+            "size": "4.5 MB",
+            "color": "sky"
         },
         {
             "title": "Postal Manual Volume II Chapter VI (Stock), VIII (Printing), IX(Contracts), XII (Budget Estimates and control)",
@@ -491,11 +493,19 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "comingSoon": true
         },
         {
-            "title": "P&T FHB Vol I / Postal FHB Vol II",
-            "description": "Postal Financial Handbook Volume I and II",
+            "title": "P&T FHB Vol I",
+            "description": "P&T Financial Hand Book Volume I.",
             "filename": "FHB_Vol_I.pdf",
             "path": "/notes/paper-3/FHB_Vol_I.pdf",
             "size": "0.9 MB",
+            "color": "violet"
+        },
+        {
+            "title": "Postal FHB Vol II",
+            "description": "Postal Financial Hand Book Volume II.",
+            "filename": "FHB_Vol_II.pdf",
+            "path": "/notes/paper-3/FHB_Vol_II.pdf",
+            "size": "0.8 MB",
             "color": "violet"
         },
         {
