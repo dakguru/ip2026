@@ -16,6 +16,15 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "25.02.2026",
+        items: [
+            {
+                title: "New PDF Notes Uploaded",
+                desc: "Uploaded PDF Notes on Annual Report and Book of Information 2024-2025 & 2025-2026 for both LDCE IP and PS Gr B Courses."
+            }
+        ]
+    },
+    {
         date: "24.02.2026",
         items: [
             {
