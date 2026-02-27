@@ -120,13 +120,30 @@ public class PdfDownloaderPlugin extends Plugin {
 
         // Convert relative URLs to absolute — DownloadManager needs full https:// URLs
         if (!url.startsWith("http://") && !url.startsWith("https://")) {
-            url = "https://dakguru.com" + (url.startsWith("/") ? url : "/" + url);
+            // URL-encode the path segments (handle spaces, commas, etc.)
+            String[] segments = url.split("/");
+            StringBuilder encodedPath = new StringBuilder();
+            for (String segment : segments) {
+                if (!segment.isEmpty()) {
+                    encodedPath.append("/");
+                    try {
+                        encodedPath.append(java.net.URLEncoder.encode(segment, "UTF-8").replace("+", "%20"));
+                    } catch (Exception e) {
+                        encodedPath.append(segment);
+                    }
+                }
+            }
+            url = "https://dakguru.com" + encodedPath.toString();
         }
 
         try {
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
             
-            String filename = URLUtil.guessFileName(url, null, "application/pdf");
+            // Use the explicit filename from JS if provided, otherwise guess from URL
+            String filename = call.getString("filename");
+            if (filename == null || filename.isEmpty()) {
+                filename = URLUtil.guessFileName(url, null, "application/pdf");
+            }
             if (!filename.toLowerCase().endsWith(".pdf")) {
                 filename += ".pdf";
             }

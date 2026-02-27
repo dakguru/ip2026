@@ -870,13 +870,27 @@ export default function NotesPage() {
             // Dynamic import
             const { default: PdfDownloader } = await import('@/plugins/PdfDownloader');
 
-            // DownloadManager needs absolute URLs — convert relative paths
-            const downloadUrl = url.startsWith('http') ? url : `https://dakguru.com${url}`;
+            // DownloadManager needs absolute, properly encoded URLs.
+            // Paths may contain spaces, commas, and other special characters
+            // that break Android's Uri.parse() if not encoded.
+            let downloadUrl: string;
+            if (url.startsWith('http')) {
+                downloadUrl = url;
+            } else {
+                // Encode each segment of the path individually to handle
+                // spaces, commas, etc. while preserving the '/' separators
+                const encodedPath = url.split('/').map(segment => encodeURIComponent(segment)).join('/');
+                downloadUrl = `https://dakguru.com${encodedPath}`;
+            }
+
+            // Ensure we have a clean filename for saving
+            const safeFilename = filename || url.split('/').pop() || 'document.pdf';
 
             console.log('[PdfDownload] Downloading URL:', downloadUrl);
+            console.log('[PdfDownload] Filename:', safeFilename);
 
             // The plugin handles permissions, download, notification, and auto-open
-            await PdfDownloader.downloadPdf({ url: downloadUrl });
+            await PdfDownloader.downloadPdf({ url: downloadUrl, filename: safeFilename });
 
             // Show toast confirming download was initiated
             setShowDownloadToast(true);
