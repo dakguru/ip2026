@@ -298,18 +298,19 @@ export default function SettingsPage() {
             contact: 'Contact Us',
         };
 
-        const MobileMenuItem = ({ icon: Icon, label, right, onClick, danger }: {
+        const MobileMenuItem = ({ icon: Icon, label, right, onClick, danger, iconBg, iconColor, last }: {
             icon: any; label: string; right?: string; onClick: () => void; danger?: boolean;
+            iconBg?: string; iconColor?: string; last?: boolean;
         }) => (
             <button
                 onClick={onClick}
-                className="w-full flex items-center gap-3.5 px-1 py-[14px] border-b border-zinc-100 dark:border-zinc-800 active:bg-zinc-50 dark:active:bg-zinc-800/50 transition-colors"
+                className={`w-full flex items-center gap-3.5 px-4 py-[13px] active:bg-zinc-50 dark:active:bg-zinc-800/50 transition-colors ${!last && !danger ? 'border-b border-zinc-50 dark:border-zinc-800/60' : ''}`}
             >
-                <div className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 ${danger ? 'bg-red-50 dark:bg-red-900/20' : 'bg-zinc-100 dark:bg-zinc-800'}`}>
-                    <Icon className={`w-[18px] h-[18px] ${danger ? 'text-red-500' : 'text-zinc-600 dark:text-zinc-400'}`} />
+                <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${danger ? 'bg-red-50 dark:bg-red-900/20' : iconBg || 'bg-zinc-100 dark:bg-zinc-800'}`}>
+                    <Icon className={`w-[18px] h-[18px] ${danger ? 'text-red-500' : iconColor || 'text-zinc-600 dark:text-zinc-400'}`} />
                 </div>
-                <span className={`flex-1 text-left font-medium text-[15px] ${danger ? 'text-red-500' : 'text-zinc-800 dark:text-zinc-200'}`}>{label}</span>
-                {right && <span className="text-[13px] text-zinc-400 dark:text-zinc-500 mr-1">{right}</span>}
+                <span className={`flex-1 text-left font-semibold text-[15px] ${danger ? 'text-red-500' : 'text-zinc-800 dark:text-zinc-200'}`}>{label}</span>
+                {right && <span className="text-[13px] text-zinc-400 dark:text-zinc-500 font-medium mr-0.5">{right}</span>}
                 {!danger && <ChevronRight className="w-4 h-4 text-zinc-300 dark:text-zinc-600" />}
             </button>
         );
@@ -627,79 +628,102 @@ export default function SettingsPage() {
 
         // ---- Main Menu View ----
         return (
-            <div className="min-h-screen bg-white dark:bg-zinc-950">
-                {/* Header */}
-                {/* Royale Blue Glassy User Card */}
-                <div className="mx-4 mt-2 mb-8 relative group">
-                    <div className="absolute inset-0 bg-blue-600 rounded-[32px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                    <div className="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-600 to-blue-500 rounded-[32px] p-[1px] shadow-2xl shadow-blue-500/20">
-                        <div className="relative h-full bg-gradient-to-br from-blue-800/95 to-blue-700/95 backdrop-blur-xl rounded-[31px] p-6 overflow-hidden">
-                            {/* Glass Shine Effect */}
-                            <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
+                {/* Premium Profile Hero */}
+                <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-violet-950 pt-6 pb-10 px-5">
+                    {/* Ambient Glow */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-indigo-500/15 rounded-full blur-[100px] pointer-events-none"></div>
+                    <div className="absolute bottom-0 right-0 w-[200px] h-[200px] bg-violet-500/10 rounded-full blur-[80px] pointer-events-none"></div>
 
-                            <div className="relative z-10 flex items-center gap-6">
-                                <div className="relative">
-                                    <div className="absolute inset-0 bg-white/20 blur-lg rounded-full transform scale-110"></div>
-                                    <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-white to-white/90 flex items-center justify-center shadow-2xl ring-4 ring-white/10 backdrop-blur-md">
-                                        <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-blue-800">
-                                            {formData.name?.charAt(0)?.toUpperCase() || 'U'}
-                                        </span>
-                                    </div>
-                                    <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-amber-300 to-yellow-500 text-yellow-950 text-[10px] font-black px-3 py-1 rounded-full border-2 border-white/20 shadow-lg flex items-center gap-1 z-20">
-                                        <Crown className="w-3 h-3 fill-current" />
-                                        <span className="tracking-wide uppercase">{membershipLabel}</span>
-                                    </div>
+                    <div className="relative z-10 flex flex-col items-center text-center">
+                        {/* Avatar */}
+                        <div className="relative mb-4">
+                            <div className="w-[88px] h-[88px] rounded-full bg-gradient-to-br from-indigo-400 via-violet-400 to-purple-500 p-[3px] shadow-xl shadow-indigo-500/30">
+                                <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
+                                    <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-indigo-300 to-violet-300">
+                                        {formData.name?.charAt(0)?.toUpperCase() || 'U'}
+                                    </span>
                                 </div>
+                            </div>
+                            {/* Membership Badge */}
+                            <div className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 text-[10px] font-black px-3.5 py-1 rounded-full shadow-lg flex items-center gap-1 z-20 whitespace-nowrap ${initialData?.membershipLevel === 'gold'
+                                ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-yellow-950'
+                                : initialData?.membershipLevel === 'silver'
+                                    ? 'bg-gradient-to-r from-zinc-300 to-zinc-400 text-zinc-800'
+                                    : 'bg-gradient-to-r from-zinc-600 to-zinc-500 text-zinc-100'
+                                }`}>
+                                <Crown className="w-3 h-3 fill-current" />
+                                <span className="tracking-wider uppercase">{membershipLabel}</span>
+                            </div>
+                        </div>
 
-                                <div className="flex-1 min-w-0 pt-2">
-                                    <h2 className="text-2xl font-bold truncate leading-tight tracking-tight text-white drop-shadow-sm">
-                                        {formData.name || 'User'}
-                                    </h2>
-                                    <div className="inline-flex items-center gap-2 mt-2 px-3 py-1.5 rounded-xl bg-white/10 border border-white/10 backdrop-blur-md shadow-sm">
-                                        <Mail className="w-3.5 h-3.5 text-blue-100" />
-                                        <p className="text-xs font-semibold truncate text-white/90 tracking-wide">{formData.email}</p>
-                                    </div>
-                                </div>
+                        {/* Name & Email */}
+                        <h2 className="text-[22px] font-extrabold text-white tracking-tight mt-1">{formData.name || 'User'}</h2>
+                        <p className="text-[13px] text-indigo-200/70 font-medium mt-1">{formData.email}</p>
+
+                        {/* Quick Stats Row */}
+                        <div className="flex items-center gap-3 mt-5">
+                            <div className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/[0.07] border border-white/[0.08] backdrop-blur-sm">
+                                <Shield className="w-3.5 h-3.5 text-emerald-400" />
+                                <span className="text-[11px] font-semibold text-zinc-300">
+                                    {initialData?.membershipValidity ? `Till ${format(new Date(initialData.membershipValidity), 'MMM yyyy')}` : 'Active'}
+                                </span>
+                            </div>
+                            <div className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/[0.07] border border-white/[0.08] backdrop-blur-sm">
+                                <FlaskConical className="w-3.5 h-3.5 text-violet-400" />
+                                <span className="text-[11px] font-semibold text-zinc-300">{course === 'PS_GR_B' ? 'PS Gr. B' : 'LDCE IP'}</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Menu Sections */}
-                <div className="px-5 space-y-6 pb-28">
-                    {/* Account */}
-                    <div>
-                        <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1 px-1">Account</p>
-                        <MobileMenuItem icon={User} label="Manage Profile" onClick={() => setActiveSection('profile')} />
-                        <MobileMenuItem icon={Shield} label="Password & Security" onClick={() => setActiveSection('security')} />
-                        <MobileMenuItem icon={Bell} label="What's New" onClick={() => setShowUpdates(true)} />
+                <div className="px-4 -mt-5 relative z-20 space-y-4 pb-28">
+
+                    {/* Account Card */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
+                        <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest px-4 pt-4 pb-1.5">Account</p>
+                        <MobileMenuItem icon={User} label="Manage Profile" onClick={() => setActiveSection('profile')}
+                            iconBg="bg-blue-50 dark:bg-blue-900/20" iconColor="text-blue-600 dark:text-blue-400" />
+                        <MobileMenuItem icon={Shield} label="Password & Security" onClick={() => setActiveSection('security')}
+                            iconBg="bg-indigo-50 dark:bg-indigo-900/20" iconColor="text-indigo-600 dark:text-indigo-400" />
+                        <MobileMenuItem icon={Bell} label="What's New" onClick={() => setShowUpdates(true)}
+                            iconBg="bg-rose-50 dark:bg-rose-900/20" iconColor="text-rose-500 dark:text-rose-400" />
                         <MobileMenuItem icon={FlaskConical} label="Course Mode"
                             right={course === 'PS_GR_B' ? 'PS Gr. B' : 'LDCE IP'}
-                            onClick={() => setActiveSection('course')} />
+                            onClick={() => setActiveSection('course')}
+                            iconBg="bg-violet-50 dark:bg-violet-900/20" iconColor="text-violet-600 dark:text-violet-400" last />
                     </div>
 
-                    {/* Membership */}
-                    <div>
-                        <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1 px-1">Membership</p>
-                        <MobileMenuItem icon={Crown} label="Current Plan" right={membershipLabel} onClick={() => setActiveSection('membership')} />
+                    {/* Membership Card */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
+                        <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest px-4 pt-4 pb-1.5">Membership</p>
+                        <MobileMenuItem icon={Crown} label="Current Plan" right={membershipLabel} onClick={() => setActiveSection('membership')}
+                            iconBg="bg-amber-50 dark:bg-amber-900/20" iconColor="text-amber-600 dark:text-amber-400" last />
                     </div>
 
-                    {/* Progress */}
-                    <div>
-                        <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1 px-1">Progress</p>
-                        <MobileMenuItem icon={BarChart2} label="My Progress" onClick={() => setActiveSection('progress')} />
+                    {/* Progress Card */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
+                        <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest px-4 pt-4 pb-1.5">Progress</p>
+                        <MobileMenuItem icon={BarChart2} label="My Progress" onClick={() => setActiveSection('progress')}
+                            iconBg="bg-emerald-50 dark:bg-emerald-900/20" iconColor="text-emerald-600 dark:text-emerald-400" last />
                     </div>
 
-                    {/* Support */}
-                    <div>
-                        <p className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1 px-1">Support</p>
-                        <MobileMenuItem icon={MessageSquare} label="Contact Us" onClick={() => setActiveSection('contact')} />
+                    {/* Support Card */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
+                        <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest px-4 pt-4 pb-1.5">Support</p>
+                        <MobileMenuItem icon={MessageSquare} label="Contact Us" onClick={() => setActiveSection('contact')}
+                            iconBg="bg-sky-50 dark:bg-sky-900/20" iconColor="text-sky-600 dark:text-sky-400" last />
                     </div>
 
-                    {/* Logout */}
-                    <div className="pt-2">
-                        <MobileMenuItem icon={LogOut} label="Log Out" onClick={handleLogout} danger />
+                    {/* Logout Card */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
+                        <MobileMenuItem icon={LogOut} label="Log Out" onClick={handleLogout} danger last />
+                    </div>
+
+                    {/* App Version Footer */}
+                    <div className="text-center pt-4 pb-2">
+                        <p className="text-[11px] text-zinc-300 dark:text-zinc-700 font-medium">Dak Guru · v2.6</p>
                     </div>
                 </div>
                 <UpdatesDrawer isOpen={showUpdates} onClose={() => setShowUpdates(false)} />
