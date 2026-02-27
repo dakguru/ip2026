@@ -185,7 +185,7 @@ export default function MockTestsPage() {
 
             if (now > sundayDate) {
                 status = 'completed';
-            } else if (now >= saturdayDate || (role === 'admin' && calculatedId === 'mock-2026-02-21')) {
+            } else if (now >= saturdayDate || (role === 'admin' && calculatedId === 'mock-2026-02-28')) {
                 status = 'live';
             } else {
                 status = 'upcoming';

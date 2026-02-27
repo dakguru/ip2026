@@ -28,6 +28,7 @@ const TEST_SCHEDULE_MAP: Record<string, { start: Date; end: Date }> = {
     "mock-2026-02-07": { start: new Date("2026-02-07T00:00:00+05:30"), end: new Date("2026-02-08T23:59:59+05:30") },
     "mock-2026-02-14": { start: new Date("2026-02-14T00:00:00+05:30"), end: new Date("2026-02-15T23:59:59+05:30") },
     "mock-2026-02-21": { start: new Date("2026-02-21T00:00:00+05:30"), end: new Date("2026-02-22T23:59:59+05:30") },
+    "mock-2026-02-28": { start: new Date("2026-02-28T00:00:00+05:30"), end: new Date("2026-03-01T23:59:59+05:30") },
     "live-sample": { start: new Date(0), end: new Date("2099-12-31T23:59:59+05:30") },
 };
 
