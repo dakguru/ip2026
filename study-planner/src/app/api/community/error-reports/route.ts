@@ -48,10 +48,23 @@ export async function PATCH(req: NextRequest) {
     try {
         await dbConnect();
         const body = await req.json();
-        const { reportId, status, adminReply } = body;
+        const { reportId, status, adminReply, comment } = body;
 
         if (!reportId) {
             return NextResponse.json({ error: 'Missing reportId' }, { status: 400 });
+        }
+
+        // Handle adding a comment
+        if (comment) {
+            const report = await ErrorReport.findByIdAndUpdate(
+                reportId,
+                { $push: { comments: { author: comment.author, authorEmail: comment.authorEmail || '', text: comment.text, createdAt: new Date() } } },
+                { new: true }
+            ).lean();
+            if (!report) {
+                return NextResponse.json({ error: 'Report not found' }, { status: 404 });
+            }
+            return NextResponse.json({ success: true, report });
         }
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -87,8 +87,8 @@ export default function PricingPage() {
             id: 'diamond_ps_gr_b',
             name: 'PS Group B Diamond Plan',
             validity: 'Valid for One Year',
-            price: 4999,
-            originalPrice: 9999,
+            price: 9850,
+            originalPrice: 15000,
             isPopular: true,
         }
     };
@@ -98,8 +98,8 @@ export default function PricingPage() {
             id: 'platinum_ps_gr_b',
             name: 'PS Group B Platinum Plan',
             validity: 'Valid for One Year',
-            price: 3000,
-            originalPrice: 6000,
+            price: 5500,
+            originalPrice: 8700,
             isPopular: false,
         }
     };
@@ -161,7 +161,18 @@ export default function PricingPage() {
         }
     };
 
-    const finalPrice = selectedPlan.price - discount;
+    // Calculate effective price considering PS Group B upgrades
+    const getEffectivePrice = () => {
+        if (isPsGroupB && currentMembership !== 'free') {
+            const currentPlanPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
+            const diff = Math.round((selectedPlan.price / 2) - (currentPlanPrice / 2));
+            return diff > 0 ? diff : 0;
+        }
+        return selectedPlan.price;
+    };
+    const effectivePrice = getEffectivePrice();
+    const isUpgradeMode = isPsGroupB && currentMembership !== 'free' && effectivePrice !== selectedPlan.price;
+    const finalPrice = effectivePrice - discount;
 
     // Determine validity days based on plan ID
     const getValidityDays = (planId: string) => {
@@ -176,7 +187,7 @@ export default function PricingPage() {
         tab: 'gold' | 'silver',
         coupon: string
     ) => {
-        const effectivePlans = tab === 'gold' ? goldPlans : silverPlans;
+        const effectivePlans = isPsGroupB ? (tab === 'gold' ? diamondPlans : platinumPlans) : (tab === 'gold' ? goldPlans : silverPlans);
         const effectivePlan = effectivePlans[planKey];
         if (!effectivePlan) return; // Should not happen
 
@@ -226,9 +237,17 @@ export default function PricingPage() {
         const discountToUse = overrideDiscount !== undefined ? overrideDiscount : discount;
         const couponCodeToUse = overrideCouponCode || couponCode;
 
-        const effectivePlans = tabToUse === 'gold' ? goldPlans : silverPlans;
+        const effectivePlans = isPsGroupB
+            ? (tabToUse === 'gold' ? diamondPlans : platinumPlans)
+            : (tabToUse === 'gold' ? goldPlans : silverPlans);
         const effectivePlan = effectivePlans[planKeyToUse];
-        const effectiveFinalPrice = effectivePlan.price - discountToUse;
+        let basePrice = effectivePlan.price;
+        if (isPsGroupB && currentMembership !== 'free') {
+            const curPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
+            const diff = Math.round((effectivePlan.price / 2) - (curPrice / 2));
+            basePrice = diff > 0 ? diff : 0;
+        }
+        const effectiveFinalPrice = basePrice - discountToUse;
 
         if (!userEmail) {
             router.push('/login?redirect=/pricing');
@@ -355,9 +374,9 @@ export default function PricingPage() {
     // LDCE IP benefits
     const ldceIpBenefits = [
         { name: "Live Mock Tests", gold: true, silver: true },
-        { name: "Updated Notes as per recent Amendments", gold: true, silver: false },
-        { name: "Web Guide", gold: true, silver: true },
-        { name: "Flash Cards", gold: true, silver: false },
+        { name: "Updated PDF Notes as per recent Amendments", gold: true, silver: false },
+        { name: "Web Guide (Selected Topics)", gold: true, silver: true },
+        { name: "Smart Flash Cards", gold: true, silver: false },
         { name: "Current Affairs", gold: true, silver: true },
         { name: "Unlimited Re-Attempt mode", gold: true, silver: false },
         { name: "Previous year question papers", gold: true, silver: false },
@@ -532,18 +551,29 @@ export default function PricingPage() {
                         </div>
 
                         {/* Launch Offer Banner */}
-                        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 p-1 shadow-lg shadow-orange-500/20 group cursor-pointer hover:scale-[1.01] transition-transform duration-300">
+                        <div className={`relative overflow-hidden rounded-2xl p-1 shadow-lg group cursor-pointer hover:scale-[1.01] transition-transform duration-300 ${isPsGroupB
+                            ? 'bg-gradient-to-r from-purple-500 via-violet-500 to-fuchsia-500 shadow-purple-500/20'
+                            : 'bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 shadow-orange-500/20'
+                            }`}>
                             <div className="absolute top-0 right-0 -mt-4 -mr-4 w-20 h-20 bg-white/20 rounded-full blur-xl animate-pulse"></div>
                             <div className="bg-white dark:bg-zinc-900 rounded-xl p-4 flex flex-col gap-3 relative z-10 h-full">
                                 <div className="flex items-center gap-2 mb-1">
-                                    <Sparkles className="w-5 h-5 text-yellow-500 fill-yellow-500 animate-spin-slow" />
-                                    <span className="text-xs font-black tracking-widest text-orange-600 uppercase">Limited Time Launch Offer</span>
+                                    <Sparkles className={`w-5 h-5 animate-spin-slow ${isPsGroupB ? 'text-purple-500 fill-purple-500' : 'text-yellow-500 fill-yellow-500'}`} />
+                                    <span className={`text-xs font-black tracking-widest uppercase ${isPsGroupB ? 'text-purple-600' : 'text-orange-600'}`}>
+                                        {isPsGroupB ? 'Course Mode Introduction Offer' : 'Limited Time Launch Offer'}
+                                    </span>
                                 </div>
-                                <h3 className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-red-600 leading-tight">
-                                    50% DISCOUNT FOR FIRST 50 SUBSCRIBERS ONLY!
+                                <h3 className={`text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r leading-tight ${isPsGroupB
+                                    ? 'from-purple-600 to-fuchsia-600'
+                                    : 'from-yellow-600 to-red-600'
+                                    }`}>
+                                    {isPsGroupB ? 'EARLY BIRD PRICING — LIMITED SLOTS!' : '50% DISCOUNT FOR FIRST 50 SUBSCRIBERS ONLY!'}
                                 </h3>
                                 <p className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
-                                    Gold @ Rs. 3,750/- and Silver @ Rs. 2,000/-. Submit your details check your eligibility and claim your discount now.
+                                    {isPsGroupB
+                                        ? 'Diamond @ Rs. 4,925/- and Platinum @ Rs. 2,750/-. Submit your details to check your eligibility and claim your discount now.'
+                                        : 'Gold @ Rs. 3,750/- and Silver @ Rs. 2,000/-. Submit your details check your eligibility and claim your discount now.'
+                                    }
                                 </p>
                                 <button
                                     onClick={() => setIsOfferModalOpen(true)}
@@ -603,8 +633,13 @@ export default function PricingPage() {
 
                         {/* Summary & Checkout */}
                         <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 shadow-xl border border-zinc-200 dark:border-zinc-800 sticky top-24">
+                            {isUpgradeMode && (
+                                <div className="flex justify-between items-center mb-2 text-xs text-blue-600 dark:text-blue-400 font-medium bg-blue-50 dark:bg-blue-900/20 px-3 py-2 rounded-lg">
+                                    <span>Upgrade from {currentMembership === 'gold' ? 'Gold' : 'Silver'} Plan</span>
+                                </div>
+                            )}
                             <div className="flex justify-between items-center mb-2 text-sm text-zinc-600 dark:text-zinc-400">
-                                <span>Total Amount to Pay</span>
+                                <span>{isUpgradeMode ? 'Upgrade Amount' : 'Total Amount to Pay'}</span>
                                 <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">₹{finalPrice}</span>
                             </div>
 
@@ -617,9 +652,9 @@ export default function PricingPage() {
 
                             <button
                                 onClick={() => handlePayment()}
-                                disabled={isProcessing || currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')}
+                                disabled={isProcessing || (!isPsGroupB && (currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver'))) || (isUpgradeMode && effectivePrice <= 0)}
                                 className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed
-                                    ${(currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver'))
+                                    ${(!isPsGroupB && (currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')))
                                         ? 'bg-zinc-200 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-500 shadow-none'
                                         : 'bg-green-600 hover:bg-green-700 text-white shadow-green-600/20 active:scale-[0.98]'
                                     }`}
@@ -629,12 +664,17 @@ export default function PricingPage() {
                                         <Loader2 className="w-5 h-5 animate-spin" />
                                         Processing...
                                     </>
-                                ) : currentMembership === 'gold' ? (
+                                ) : isUpgradeMode ? (
+                                    <>
+                                        <Zap className="w-5 h-5 fill-current" />
+                                        Upgrade to {activeTab === 'gold' ? primaryLabel : secondaryLabel} — Pay ₹{finalPrice}
+                                    </>
+                                ) : (!isPsGroupB && currentMembership === 'gold') ? (
                                     <>
                                         <ShieldCheck className="w-5 h-5" />
                                         Gold Plan Active
                                     </>
-                                ) : (currentMembership === 'silver' && activeTab === 'silver') ? (
+                                ) : (!isPsGroupB && currentMembership === 'silver' && activeTab === 'silver') ? (
                                     <>
                                         <ShieldCheck className="w-5 h-5" />
                                         Silver Plan Active

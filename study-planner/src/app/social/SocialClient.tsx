@@ -277,6 +277,9 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
     };
     const [replyingTo, setReplyingTo] = useState<string | null>(null);
     const [replyText, setReplyText] = useState("");
+    const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+    const [userCommentingOn, setUserCommentingOn] = useState<string | null>(null);
+    const [userCommentText, setUserCommentText] = useState("");
 
     const handleResolveReport = async (reportId: string) => {
         try {
@@ -307,6 +310,23 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
             });
             setReplyingTo(null);
             setReplyText("");
+            fetchErrorReports();
+        } catch (e) { console.error(e); }
+    };
+
+    const handleUserComment = async (reportId: string) => {
+        if (!userCommentText.trim() || !user) return;
+        try {
+            await fetch('/api/community/error-reports', {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    reportId,
+                    comment: { author: user.name, authorEmail: user.email || '', text: userCommentText.trim() }
+                })
+            });
+            setUserCommentingOn(null);
+            setUserCommentText("");
             fetchErrorReports();
         } catch (e) { console.error(e); }
     };
@@ -537,13 +557,13 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                         {/* Top Box Tabs */}
                         <div className="flex border-b border-zinc-200 dark:border-zinc-800">
                             <button
-                                onClick={() => setTopBoxTab("discuss")}
+                                onClick={() => { setTopBoxTab("discuss"); setActiveTab("Q&A Home"); }}
                                 className={`flex-1 py-3 text-sm font-bold text-center border-b-2 transition-all ${topBoxTab === "discuss" ? 'border-blue-500 text-blue-600 bg-blue-50/50 dark:bg-blue-900/10' : 'border-transparent text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
                             >
                                 💬 Discuss Topics
                             </button>
                             <button
-                                onClick={() => setTopBoxTab("report")}
+                                onClick={() => { setTopBoxTab("report"); setActiveTab("Error Reports"); }}
                                 className={`flex-1 py-3 text-sm font-bold text-center border-b-2 transition-all ${topBoxTab === "report" ? 'border-red-500 text-red-600 bg-red-50/50 dark:bg-red-900/10' : 'border-transparent text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
                             >
                                 ⚠️ Report Error
@@ -682,10 +702,14 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                                                     <p className="text-sm text-zinc-700 dark:text-zinc-300 whitespace-pre-wrap">{report.description}</p>
                                                     {report.screenshot && (
                                                         <div className="mt-2">
-                                                            <img src={report.screenshot} alt="Error screenshot" className="max-w-xs rounded-lg border border-zinc-200 dark:border-zinc-700 shadow-sm" />
+                                                            <img
+                                                                src={report.screenshot}
+                                                                alt="Error screenshot"
+                                                                className="max-w-xs rounded-lg border border-zinc-200 dark:border-zinc-700 shadow-sm cursor-pointer hover:opacity-80 hover:shadow-md transition-all"
+                                                                onClick={() => setLightboxImage(report.screenshot)}
+                                                            />
                                                         </div>
                                                     )}
-                                                    {/* Admin Reply Display */}
                                                     {report.adminReply && (
                                                         <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800/30">
                                                             <div className="flex items-center gap-1.5 mb-1">
@@ -693,6 +717,60 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                                                                 <span className="text-xs font-semibold text-blue-700 dark:text-blue-300">Reply</span>
                                                             </div>
                                                             <p className="text-sm text-blue-800 dark:text-blue-200">{report.adminReply}</p>
+                                                        </div>
+                                                    )}
+                                                    {/* User Comments */}
+                                                    {report.comments && report.comments.length > 0 && (
+                                                        <div className="mt-2 space-y-2">
+                                                            {report.comments.map((c: any, cIdx: number) => (
+                                                                <div key={cIdx} className="ml-4 p-2.5 bg-zinc-50 dark:bg-zinc-800/50 rounded-lg border border-zinc-200 dark:border-zinc-700">
+                                                                    <div className="flex items-center gap-1.5 mb-1">
+                                                                        <div className="w-5 h-5 rounded-full bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center text-[10px] font-bold text-zinc-600 dark:text-zinc-300">
+                                                                            {c.author?.[0] || '?'}
+                                                                        </div>
+                                                                        <span className="text-xs font-bold text-zinc-700 dark:text-zinc-300">{c.author}</span>
+                                                                        <span className="text-[10px] text-zinc-400">• {new Date(c.createdAt).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' })}</span>
+                                                                    </div>
+                                                                    <p className="text-sm text-zinc-700 dark:text-zinc-300 ml-6">{c.text}</p>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                    {/* User Reply Input */}
+                                                    {report.adminReply && user && (
+                                                        <div className="mt-2">
+                                                            {userCommentingOn === report._id ? (
+                                                                <div className="ml-4 flex gap-2">
+                                                                    <input
+                                                                        type="text"
+                                                                        value={userCommentText}
+                                                                        onChange={(e) => setUserCommentText(e.target.value)}
+                                                                        placeholder="Write your reply..."
+                                                                        className="flex-1 border border-zinc-300 dark:border-zinc-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                                        onKeyDown={(e) => { if (e.key === 'Enter') handleUserComment(report._id); }}
+                                                                        autoFocus
+                                                                    />
+                                                                    <button
+                                                                        onClick={() => handleUserComment(report._id)}
+                                                                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-bold transition-colors"
+                                                                    >
+                                                                        Send
+                                                                    </button>
+                                                                    <button
+                                                                        onClick={() => { setUserCommentingOn(null); setUserCommentText(""); }}
+                                                                        className="px-3 py-2 bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600 text-zinc-600 dark:text-zinc-300 rounded-lg text-sm font-medium transition-colors"
+                                                                    >
+                                                                        Cancel
+                                                                    </button>
+                                                                </div>
+                                                            ) : (
+                                                                <button
+                                                                    onClick={() => { setUserCommentingOn(report._id); setUserCommentText(""); }}
+                                                                    className="ml-4 text-xs font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                                                                >
+                                                                    💬 Reply to this
+                                                                </button>
+                                                            )}
                                                         </div>
                                                     )}
                                                     {/* Action Buttons */}
@@ -898,6 +976,30 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
 
             <WriteArticleModal isOpen={isWriteModalOpen} onClose={() => setIsWriteModalOpen(false)} onSuccess={() => { setIsWriteModalOpen(false); fetchPosts(); }} />
             <DMModal isOpen={isDMModalOpen} onClose={() => setIsDMModalOpen(false)} user={user} />
+
+            {/* Image Lightbox */}
+            {lightboxImage && (
+                <div
+                    className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 cursor-pointer"
+                    onClick={() => setLightboxImage(null)}
+                    onKeyDown={(e) => { if (e.key === 'Escape') setLightboxImage(null); }}
+                >
+                    <div className="relative max-w-4xl max-h-[90vh] w-full flex items-center justify-center">
+                        <button
+                            onClick={() => setLightboxImage(null)}
+                            className="absolute -top-2 -right-2 z-10 w-9 h-9 bg-white dark:bg-zinc-800 rounded-full shadow-lg flex items-center justify-center text-zinc-600 dark:text-zinc-300 hover:bg-red-50 hover:text-red-600 transition-colors"
+                        >
+                            ✕
+                        </button>
+                        <img
+                            src={lightboxImage}
+                            alt="Error screenshot full view"
+                            className="max-w-full max-h-[85vh] rounded-xl shadow-2xl object-contain"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

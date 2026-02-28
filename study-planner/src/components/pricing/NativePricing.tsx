@@ -66,8 +66,8 @@ export default function NativePricing({
             id: 'diamond_ps_gr_b',
             name: 'PS Group B Diamond Plan',
             validity: 'Valid for One Year',
-            price: 4999,
-            originalPrice: 9999,
+            price: 9850,
+            originalPrice: 15000,
             isPopular: true,
         }
     };
@@ -77,8 +77,8 @@ export default function NativePricing({
             id: 'platinum_ps_gr_b',
             name: 'PS Group B Platinum Plan',
             validity: 'Valid for One Year',
-            price: 3000,
-            originalPrice: 6000,
+            price: 5500,
+            originalPrice: 8700,
             isPopular: false,
         }
     };
@@ -94,9 +94,9 @@ export default function NativePricing({
 
     const ldceIpBenefits = [
         { name: "Live Mock Tests", gold: true, silver: true },
-        { name: "Updated Notes (Amendments)", gold: true, silver: false },
-        { name: "Web Guide", gold: true, silver: true },
-        { name: "Flash Cards", gold: true, silver: false },
+        { name: "Updated PDF Notes as per recent Amendments", gold: true, silver: false },
+        { name: "Web Guide (Selected Topics)", gold: true, silver: true },
+        { name: "Smart Flash Cards", gold: true, silver: false },
         { name: "Current Affairs", gold: true, silver: true },
         { name: "Unlimited Re-Attempt mode", gold: true, silver: false },
     ];
@@ -127,7 +127,18 @@ export default function NativePricing({
         }
     };
 
-    const finalPrice = selectedPlan.price - discount;
+    // Calculate effective price considering PS Group B upgrades
+    const getEffectivePrice = () => {
+        if (isPsGroupB && currentMembership !== 'free') {
+            const currentPlanPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
+            const diff = Math.round((selectedPlan.price / 2) - (currentPlanPrice / 2));
+            return diff > 0 ? diff : 0;
+        }
+        return selectedPlan.price;
+    };
+    const effectivePrice = getEffectivePrice();
+    const isUpgradeMode = isPsGroupB && currentMembership !== 'free' && effectivePrice !== selectedPlan.price;
+    const finalPrice = effectivePrice - discount;
 
     return (
         <div className="min-h-screen bg-black text-white font-sans pb-48">
@@ -253,7 +264,7 @@ export default function NativePricing({
             <div className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] left-0 right-0 p-4 bg-zinc-950/90 backdrop-blur-xl border-t border-white/5 z-40">
                 <div className="flex justify-between items-center mb-3 px-1">
                     <div>
-                        <p className="text-xs text-zinc-400">Total Payable</p>
+                        <p className="text-xs text-zinc-400">{isUpgradeMode ? 'Upgrade Amount' : 'Total Payable'}</p>
                         <p className="text-2xl font-bold">₹{finalPrice}</p>
                     </div>
                     {discount > 0 && (
@@ -268,22 +279,28 @@ export default function NativePricing({
                     onClick={() => onPayment(selectedPlanKey, activeTab, discount, discount > 0 ? couponCode : undefined)}
                     disabled={
                         isProcessing ||
-                        currentMembership === 'gold' ||
-                        (currentMembership === 'silver' && activeTab === 'silver')
+                        (!isPsGroupB && (currentMembership === 'gold' ||
+                            (currentMembership === 'silver' && activeTab === 'silver'))) ||
+                        (isUpgradeMode && effectivePrice <= 0)
                     }
-                    className={`w-full py-4 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${isProcessing || currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')
+                    className={`w-full py-4 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${isProcessing || (!isPsGroupB && (currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')))
                         ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed shadow-none'
                         : 'bg-green-600 hover:bg-green-500 text-white shadow-green-500/20 active:scale-[0.98] transition-all'
                         }`}
                 >
                     {isProcessing ? (
                         <Loader2 className="w-5 h-5 animate-spin" />
-                    ) : currentMembership === 'gold' ? (
+                    ) : isUpgradeMode ? (
+                        <>
+                            <Zap className="w-5 h-5 fill-current" />
+                            Upgrade to {activeTab === 'gold' ? (isPsGroupB ? 'Diamond' : 'Gold') : (isPsGroupB ? 'Platinum' : 'Silver')} — ₹{finalPrice}
+                        </>
+                    ) : (!isPsGroupB && currentMembership === 'gold') ? (
                         <>
                             <ShieldCheck className="w-5 h-5" />
                             Gold Plan Active
                         </>
-                    ) : (currentMembership === 'silver' && activeTab === 'silver') ? (
+                    ) : (!isPsGroupB && currentMembership === 'silver' && activeTab === 'silver') ? (
                         <>
                             <ShieldCheck className="w-5 h-5" />
                             Silver Plan Active

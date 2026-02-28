@@ -13,6 +13,12 @@ const ErrorReportSchema = new mongoose.Schema({
     reportedBy: { type: String, required: true },
     reportedByEmail: { type: String, default: '' },
     adminReply: { type: String, default: '' },
+    comments: [{
+        author: { type: String, required: true },
+        authorEmail: { type: String, default: '' },
+        text: { type: String, required: true },
+        createdAt: { type: Date, default: Date.now }
+    }],
     status: {
         type: String,
         enum: ['pending', 'resolved', 'dismissed'],
