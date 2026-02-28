@@ -525,10 +525,12 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "emerald"
         },
         {
-            "title": "Preservation and Disposal of Postal Records",
-            "description": "Materials will be uploaded soon.",
-            "color": "blue",
-            "comingSoon": true
+            "title": "Preservation of Records",
+            "description": "Disposal and preservation of postal records.",
+            "filename": "Preservation_Period_of_Records.pdf",
+            "path": "/notes/paper-1/Preservation_Period_of_Records.pdf",
+            "size": "0.5 MB",
+            "color": "gray"
         },
         {
             "title": "Swatchh Bharat",

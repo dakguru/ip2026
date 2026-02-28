@@ -373,7 +373,14 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 44. Records
-        { title: "Preservation of Records", description: "Disposal and preservation of postal records.", color: "gray", comingSoon: true },
+        {
+            title: "Preservation of Records",
+            description: "Disposal and preservation of postal records.",
+            filename: "Preservation_Period_of_Records.pdf",
+            path: "/notes/paper-1/Preservation_Period_of_Records.pdf",
+            size: "0.5 MB",
+            color: "gray"
+        },
 
         // 45. Conduct Rules
         {
