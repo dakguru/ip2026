@@ -16,6 +16,24 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "28.02.2026",
+        items: [
+            {
+                title: "New PDF Notes Uploaded",
+                desc: (
+                    <div className="space-y-2">
+                        <p>We have uploaded the following PDF Notes:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li>India Post Payments Bank</li>
+                            <li>Preservation of Records</li>
+                        </ul>
+                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Check them out in the Notes section!</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "25.02.2026",
         items: [
             {
