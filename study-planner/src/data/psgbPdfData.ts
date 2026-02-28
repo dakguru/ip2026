@@ -517,10 +517,12 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "gray"
         },
         {
-            "title": "Interface with India Post Payment Bank",
-            "description": "Materials will be uploaded soon.",
-            "color": "emerald",
-            "comingSoon": true
+            "title": "Interface with India Post Payments Bank",
+            "description": "Interface with India Post Payments Bank",
+            "filename": "India_Post_Payments_Bank.pdf",
+            "path": "/notes/paper-1/India_Post_Payments_Bank.pdf",
+            "size": "0.8 MB",
+            "color": "emerald"
         },
         {
             "title": "Preservation and Disposal of Postal Records",

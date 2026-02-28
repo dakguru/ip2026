@@ -363,7 +363,14 @@ const PDF_DATA: Record<string, Note[]> = {
         { title: "Core Banking Solutions, PLI-CIS", description: "Working knowledge of CBS and CIS.", color: "sky", comingSoon: true },
 
         // 43. IPPB
-        { title: "India Post Payments Bank", description: "Operations and guidelines.", color: "indigo", comingSoon: true },
+        {
+            title: "India Post Payments Bank",
+            description: "Operations and guidelines for India Post Payments Bank.",
+            filename: "India_Post_Payments_Bank.pdf",
+            path: "/notes/paper-1/India_Post_Payments_Bank.pdf",
+            size: "0.8 MB",
+            color: "indigo"
+        },
 
         // 44. Records
         { title: "Preservation of Records", description: "Disposal and preservation of postal records.", color: "gray", comingSoon: true },
