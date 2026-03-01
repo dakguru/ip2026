@@ -1,10 +1,19 @@
 "use client";
 
-import { useEffect, useState, useRef, useMemo } from 'react';
+import React, { useEffect, useState, useRef, useMemo, useCallback } from 'react';
 import { pdfjs } from 'react-pdf';
 import { Loader2, AlertCircle, BookOpen, Quote, List, Settings, Type, X, Palette, Check } from 'lucide-react';
 import { Capacitor } from '@capacitor/core';
 import { motion, AnimatePresence } from 'framer-motion';
+
+// Helper: yield to main thread to prevent UI hang on mobile
+const yieldToMain = () => new Promise<void>(resolve => {
+    if (typeof requestAnimationFrame !== 'undefined') {
+        requestAnimationFrame(() => resolve());
+    } else {
+        setTimeout(resolve, 0);
+    }
+});
 
 // --- Semantic Data Structures ---
 
@@ -201,6 +210,56 @@ class SemanticAnalyzer {
     }
 }
 
+// --- Lazy Rendering Component (IntersectionObserver) ---
+// Renders a lightweight placeholder for off-screen nodes to prevent DOM overload on mobile
+
+function LazyNode({ node, renderNode }: { node: DocNode; renderNode: (node: DocNode) => React.ReactNode }) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+    const [minHeight, setMinHeight] = useState<number | undefined>(undefined);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    // Once visible, no need to observe anymore
+                    observer.unobserve(el);
+                }
+            },
+            {
+                // Start rendering 500px before it enters viewport
+                rootMargin: '500px 0px',
+                threshold: 0,
+            }
+        );
+
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
+    // Once rendered, capture height so placeholder keeps layout stable if we ever re-hide
+    useEffect(() => {
+        if (isVisible && ref.current) {
+            setMinHeight(ref.current.offsetHeight);
+        }
+    }, [isVisible]);
+
+    if (!isVisible) {
+        // Lightweight spacer — estimate height based on node type
+        const estimatedHeight = node.type === 'TITLE' ? 80
+            : node.type === 'CHAPTER' ? 60
+                : node.type === 'SECTION' ? 48
+                    : 32;
+        return <div ref={ref} style={{ minHeight: `${estimatedHeight}px` }} />;
+    }
+
+    return <div ref={ref}>{renderNode(node)}</div>;
+}
+
 // --- React Component ---
 
 export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps) {
@@ -232,6 +291,10 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
     useEffect(() => { localStorage.setItem('liquid_fontSize', fontSize.toString()); }, [fontSize]);
     useEffect(() => { localStorage.setItem('liquid_watermark', String(watermarkEnabled)); }, [watermarkEnabled]);
 
+    // Stabilize onLoadComplete to prevent re-processing loops
+    const onLoadCompleteRef = useRef(onLoadComplete);
+    useEffect(() => { onLoadCompleteRef.current = onLoadComplete; }, [onLoadComplete]);
+
     useEffect(() => {
         let isMounted = true;
 
@@ -250,11 +313,11 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 const totalPages = pdf.numPages;
 
                 for (let i = 1; i <= totalPages; i++) {
+                    if (!isMounted) return;
+
                     const page = await pdf.getPage(i);
                     const textContent = await page.getTextContent();
                     const items = textContent.items as any[];
-                    // Use common scale for width calcs
-                    const viewport = page.getViewport({ scale: 1.0 });
 
                     if (items.length > 0) {
                         // 1. Pre-process items: Group by Line (Y-coord)
@@ -288,7 +351,6 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                         });
 
                         // 2. Construct Text from Items (Intelligent Spacing)
-                        // This fixes "ill egal" by ignoring spaces if gaps are tiny
                         const rawPageLines: RawLine[] = [];
 
                         // Sort lines top to bottom
@@ -311,15 +373,12 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
 
                                 if (lastEnd !== -1) {
                                     const gap = item.x - lastEnd;
-                                    // Threshold: if gap is significant (> 20% of font size approx), add space
-                                    // Assuming avg font size ~ 10-12. 2-3px is kerning, 5-6px is space.
-                                    // Let's allow tight kerning.
                                     if (gap > 4.0 && item.str.trim().length > 0) {
                                         lineText += " ";
                                     }
                                 }
                                 lineText += item.str;
-                                lastEnd = item.x + item.w; // approx end
+                                lastEnd = item.x + item.w;
                             }
 
                             if (lineText.trim()) {
@@ -338,6 +397,11 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                     }
 
                     if (isMounted) setProgress(30 + Math.round((i / totalPages) * 50));
+
+                    // Yield to main thread every 3 pages to prevent UI hang on mobile
+                    if (i % 3 === 0) {
+                        await yieldToMain();
+                    }
                 }
 
                 if (!isMounted) return;
@@ -346,7 +410,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 setNodes(docNodes);
                 setLoading(false);
                 setProgress(100);
-                if (onLoadComplete) onLoadComplete();
+                if (onLoadCompleteRef.current) onLoadCompleteRef.current();
 
             } catch (err: any) {
                 console.error("Reader Error:", err);
@@ -357,15 +421,13 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
 
         process();
         return () => { isMounted = false; };
-    }, [url, onLoadComplete]);
+    }, [url]); // only re-run when url changes
 
     // --- Semantic Styling ---
 
-    // Core Academic Coloring Component
-    const SemanticText = ({ text }: { text: string }) => {
+    // Core Academic Coloring Component — memoized to avoid re-renders
+    const SemanticText = React.memo(({ text, theme: t }: { text: string; theme: string }) => {
         // Regex to identify tokens:
-        // 1. Regulation/Section ref: "Section 10", "Rule 5", "(1)", "(a)", "1."
-        // 2. Keywords
         const parts = text.split(/(\(?[0-9]+[A-Za-z]?\)|Section\s+\d+|Rule\s+\d+|Regulation\s+\d+)/g);
 
         return (
@@ -373,7 +435,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 {parts.map((part, i) => {
                     // Regulation / Numbering
                     if (/^(\(?[0-9]+[A-Za-z]?\)|Section\s+\d+|Rule\s+\d+|Regulation\s+\d+)$/.test(part)) {
-                        const colorClass = theme === 'dark' ? 'text-indigo-400' : theme === 'sepia' ? 'text-[#7c2d12]' : 'text-indigo-700';
+                        const colorClass = t === 'dark' ? 'text-indigo-400' : t === 'sepia' ? 'text-[#7c2d12]' : 'text-indigo-700';
                         return <span key={i} className={`font-bold ${colorClass}`}>{part}</span>;
                     }
 
@@ -381,14 +443,12 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                     const lower = part.toLowerCase();
                     const keywords = ["prohibited", "penalty", "mandatory", "authorized", "illegal", "offence", "punishable", "contravention"];
 
-                    // Check if part contains any keyword
                     if (keywords.some(k => lower.includes(k))) {
-                        // Advanced split for keywords
                         return (
                             <span key={i}>
                                 {part.split(/\b/).map((word, j) => {
                                     if (keywords.includes(word.toLowerCase())) {
-                                        const kwColor = theme === 'dark' ? 'text-emerald-400' : theme === 'sepia' ? 'text-[#134e4a]' : 'text-emerald-700';
+                                        const kwColor = t === 'dark' ? 'text-emerald-400' : t === 'sepia' ? 'text-[#134e4a]' : 'text-emerald-700';
                                         return <span key={j} className={`${kwColor} font-semibold`}>{word}</span>;
                                     }
                                     return word;
@@ -400,22 +460,23 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 })}
             </span>
         );
-    };
+    });
+    SemanticText.displayName = 'SemanticText';
 
-    const renderNode = (node: DocNode) => {
+    // Dynamic Colors based on internal theme
+    const colors = useMemo(() => ({
+        title: theme === 'dark' ? 'text-blue-300' : theme === 'sepia' ? 'text-[#3e2723]' : 'text-blue-900',
+        chapter: theme === 'dark' ? 'text-slate-100' : theme === 'sepia' ? 'text-[#5b4636]' : 'text-slate-900',
+        section: theme === 'dark' ? 'text-blue-300' : theme === 'sepia' ? 'text-[#4e342e]' : 'text-blue-800',
+        body: theme === 'dark' ? 'text-slate-300' : theme === 'sepia' ? 'text-[#5b4636]' : 'text-slate-800',
+        border: theme === 'dark' ? 'border-slate-700' : theme === 'sepia' ? 'border-[#d7ccc8]' : 'border-slate-200'
+    }), [theme]);
+
+    // Base readability styles
+    const baseStyle = useMemo(() => ({ fontSize: `${fontSize}px`, lineHeight: '1.6' as const }), [fontSize]);
+
+    const renderNode = useCallback((node: DocNode) => {
         const key = node.id;
-
-        // Base readability styles
-        const baseStyle = { fontSize: `${fontSize}px`, lineHeight: '1.6' };
-
-        // Dynamic Colors based on internal theme (ignoring system/app dark mode for content)
-        const colors = {
-            title: theme === 'dark' ? 'text-blue-300' : theme === 'sepia' ? 'text-[#3e2723]' : 'text-blue-900',
-            chapter: theme === 'dark' ? 'text-slate-100' : theme === 'sepia' ? 'text-[#5b4636]' : 'text-slate-900',
-            section: theme === 'dark' ? 'text-blue-300' : theme === 'sepia' ? 'text-[#4e342e]' : 'text-blue-800',
-            body: theme === 'dark' ? 'text-slate-300' : theme === 'sepia' ? 'text-[#5b4636]' : 'text-slate-800',
-            border: theme === 'dark' ? 'border-slate-700' : theme === 'sepia' ? 'border-[#d7ccc8]' : 'border-slate-200'
-        };
 
         switch (node.type) {
             case 'TITLE':
@@ -438,7 +499,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
             case 'SECTION':
                 return (
                     <h3 key={key} className={`mt-8 mb-4 text-lg font-bold ${colors.section} leading-snug font-serif`}>
-                        <SemanticText text={node.content} />
+                        <SemanticText text={node.content} theme={theme} />
                     </h3>
                 );
             case 'CLAUSE':
@@ -446,14 +507,13 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 return (
                     <div key={key} className="mt-3 mb-2 pl-4 md:pl-6 flex items-start gap-3">
                         <div className={`flex-1 ${colors.body} text-left font-serif`} style={baseStyle}>
-                            <SemanticText text={node.content} />
+                            <SemanticText text={node.content} theme={theme} />
                         </div>
                     </div>
                 );
             case 'LIST_ITEM':
                 return (
                     <div key={key} className="mt-2 mb-2 pl-8 relative">
-                        {/* Bullet color */}
                         <div className={`absolute left-3 top-[0.6em] w-1.5 h-1.5 rounded-full opacity-80 ${theme === 'sepia' ? 'bg-[#7c2d12]' : 'bg-teal-600'}`} />
                         <div className={`text-left font-serif ${colors.body}`} style={baseStyle}>
                             {node.content}
@@ -463,11 +523,11 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
             default: // PARAGRAPH
                 return (
                     <p key={key} className={`mb-6 text-left font-serif ${colors.body}`} style={baseStyle}>
-                        <SemanticText text={node.content} />
+                        <SemanticText text={node.content} theme={theme} />
                     </p>
                 );
         }
-    };
+    }, [colors, baseStyle, theme]);
 
     if (loading) {
         return (
@@ -491,7 +551,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
     };
 
     return (
-        <div className={`relative h-full w-full ${themeClasses[theme]}`}>
+        <div className={`liquid-reader-root relative h-full w-full ${themeClasses[theme]}`}>
 
             {/* Controls Bar */}
             <AnimatePresence>
@@ -594,7 +654,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-[0.06] select-none" style={{
                             backgroundImage: `url('/dak-guru-round.png')`,
                             backgroundRepeat: 'repeat',
-                            backgroundSize: '180px', // Larger pattern
+                            backgroundSize: '180px',
                             backgroundPosition: '0 0',
                             filter: theme === 'dark' ? 'invert(1) opacity(0.5)' : 'grayscale(1)',
                             transform: 'rotate(-10deg) scale(1.2)'
@@ -609,7 +669,9 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                             <span className="text-[10px] font-bold uppercase tracking-[0.25em]">Dak Guru Smart Reader</span>
                         </div>
 
-                        {nodes.map(renderNode)}
+                        {nodes.map((node) => (
+                            <LazyNode key={node.id} node={node} renderNode={renderNode} />
+                        ))}
 
                         <div className="mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 text-center opacity-40 select-none">
                             <BookOpen className="w-6 h-6 mx-auto mb-3" />
@@ -619,16 +681,20 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 </div>
             </div>
 
-            {/* CSS Injection for Strict Text Rendering (Important!) */}
+            {/* CSS Injection for Strict Text Rendering — scoped to reader */}
             <style jsx global>{`
-                /* Override any global Tailwind Resets */
-                p, h1, h2, h3, div, span {
+                .liquid-reader-root p,
+                .liquid-reader-root h1,
+                .liquid-reader-root h2,
+                .liquid-reader-root h3,
+                .liquid-reader-root div,
+                .liquid-reader-root span {
                     word-break: normal !important;
                     overflow-wrap: break-word !important;
                     hyphens: none !important;
                     -webkit-hyphens: none !important;
                     text-rendering: optimizeLegibility;
-                    text-align: left !important; /* Force left align (no justify) */
+                    text-align: left !important;
                 }
             `}</style>
         </div>
