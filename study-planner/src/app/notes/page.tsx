@@ -84,9 +84,7 @@ const SCHEDULE_MAPPING: Record<string, string> = {
     "Revenue Recovery Act, 1890": "02-04-2026",
     "Prevention of Corruption Act, 1988": "03-04-2026",
     "RTI Act, 2005 and RTI Rules, 2012": "06-04-2026",
-    "Manual on Procurement of Goods": "08-04-2026",
-    "Manual on Procurement of Works": "10-04-2026",
-    "Manual on Procurement of Consultancy": "13-04-2026",
+    "Manual for Procurement of Goods & Services": "08-04-2026",
     "CCS (GPF) Rules, 1961": "15-04-2026",
     "CCS (Pension) Rules, 2021": "16-04-2026",
     "CCS (Commutation of Pension) Rules, 1981": "18-04-2026",
@@ -472,9 +470,14 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 16-18. Procurement Manual
-        { title: "Manual on Procurement of Goods", description: "Procurement Manual Part i", color: "slate", comingSoon: true },
-        { title: "Manual on Procurement of Works", description: "Procurement Manual Part ii", color: "slate", comingSoon: true },
-        { title: "Manual on Procurement of Consultancy", description: "Procurement Manual Part iii", color: "slate", comingSoon: true },
+        {
+            title: "Manual for Procurement of Goods & Services",
+            description: "Procurement Manual Part I, II & III",
+            filename: "Manual_for_Procurement_of_Goods_and_Services.pdf",
+            path: "/notes/paper-3/Manual_for_Procurement_of_Goods_and_Services.pdf",
+            size: "0.6 MB",
+            color: "slate"
+        },
 
         // 19-21. CCS Rules
         {
@@ -759,7 +762,6 @@ export default function NotesPage() {
     const [activeTab, setActiveTab] = useState(TABS[0]);
     const [selectedPdf, setSelectedPdf] = useState<{ url: string, title: string } | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
-    const [pdfDarkMode, setPdfDarkMode] = useState(false);
 
     // Advisory Modal State
     const [showAdvisory, setShowAdvisory] = useState(false);
@@ -1148,48 +1150,33 @@ export default function NotesPage() {
                 </div>
             </div>
 
-            {/* --- PDF VIEWER MODAL --- */}
+            {/* --- SMART PDF READER MODAL --- */}
             {selectedPdf && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="bg-white dark:bg-zinc-900 rounded-none sm:rounded-2xl w-full h-full max-w-6xl flex flex-col shadow-2xl overflow-hidden relative">
-                        {/* Header */}
-                        <div className="flex items-center justify-between px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top))] sm:py-4 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-[60] w-full shrink-0">
-                            <h3 className="font-bold text-slate-800 dark:text-zinc-100 flex items-center gap-2 text-sm sm:text-base truncate mr-2">
-                                <FileText className="w-5 h-5 text-purple-600 shrink-0" />
-                                <span className="truncate">{selectedPdf?.title || 'Document Viewer'}</span>
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-white dark:bg-zinc-900 rounded-none sm:rounded-2xl w-full h-full max-w-7xl flex flex-col shadow-2xl overflow-hidden relative">
+                        {/* Compact Header */}
+                        <div className="flex items-center justify-between px-3 sm:px-4 pb-2 pt-[calc(0.5rem+env(safe-area-inset-top))] sm:py-2.5 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-[60] w-full shrink-0">
+                            <h3 className="font-bold text-slate-800 dark:text-zinc-100 flex items-center gap-2 text-sm truncate mr-2">
+                                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center shrink-0">
+                                    <FileText className="w-3.5 h-3.5 text-white" />
+                                </div>
+                                <div className="flex flex-col min-w-0">
+                                    <span className="truncate text-sm font-bold">{selectedPdf?.title || 'Document Viewer'}</span>
+                                    <span className="text-[10px] text-slate-400 dark:text-zinc-500 font-medium">Dak Guru Smart Reader</span>
+                                </div>
                             </h3>
-                            <div className="flex items-center gap-2">
-                                <button
-                                    onClick={() => setPdfDarkMode(!pdfDarkMode)}
-                                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold text-xs transition-colors border ${pdfDarkMode
-                                        ? 'bg-zinc-800 text-zinc-100 border-zinc-700'
-                                        : 'bg-zinc-100 text-zinc-600 border-zinc-200'
-                                        }`}
-                                >
-                                    {pdfDarkMode ? <div className="w-4 h-4 rounded-full bg-yellow-400" /> : <div className="w-4 h-4 rounded-full bg-zinc-400" />}
-                                    <span className="hidden sm:inline">{pdfDarkMode ? 'Light' : 'Dark'}</span>
-                                </button>
-                                <button
-                                    onClick={() => handleActionRequest('download', selectedPdf?.url || '', selectedPdf?.title || '', selectedPdf?.url.split('/').pop() || 'download.pdf')}
-                                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 font-semibold text-xs transition-colors"
-                                >
-                                    <Download className="w-4 h-4" />
-                                    <span className="hidden sm:inline">Download</span>
-                                </button>
-                                <button
-                                    onClick={() => setSelectedPdf(null)}
-                                    className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-500 dark:text-zinc-400 transition-colors"
-                                >
-                                    <span className="sr-only">Close</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
-                                </button>
-                            </div>
+                            <button
+                                onClick={() => setSelectedPdf(null)}
+                                className="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-500 dark:text-zinc-400 transition-colors shrink-0"
+                            >
+                                <span className="sr-only">Close</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                            </button>
                         </div>
 
-                        {/* Content */}
-                        <div className={`flex-1 relative overflow-hidden ${pdfDarkMode ? 'bg-zinc-900' : 'bg-slate-100'}`}>
-                            {/* Use React-PDF for consistent viewing across all platforms */}
-                            <PdfViewer url={selectedPdf?.url || ''} darkMode={pdfDarkMode} />
+                        {/* Smart Reader Content */}
+                        <div className="flex-1 relative overflow-hidden">
+                            <PdfViewer url={selectedPdf?.url || ''} />
                         </div>
                     </div>
                 </div>
