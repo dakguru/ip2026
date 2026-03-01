@@ -105,6 +105,18 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
             if (savedViewMode) setViewMode(savedViewMode as ViewMode);
             if (savedFitMode) setFitMode(savedFitMode as FitMode);
         }
+
+        // Suppress harmless react-pdf TextLayer abort warnings
+        const originalConsoleError = console.error;
+        console.error = (...args: any[]) => {
+            const msg = args[0];
+            if (typeof msg === 'string' && msg.includes('TextLayer task cancelled')) return;
+            if (msg && msg.name === 'AbortException') return;
+            originalConsoleError(...args);
+        };
+        return () => {
+            console.error = originalConsoleError;
+        };
     }, []);
 
     // Sync darkMode prop

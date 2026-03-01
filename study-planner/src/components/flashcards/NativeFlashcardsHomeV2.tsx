@@ -18,6 +18,7 @@ interface NativeFlashcardsHomeProps {
     bookmarks: Set<any>;
     userStreak?: number; // Optional
     hasAccess?: boolean;
+    course?: string;
 }
 
 export default function NativeFlashcardsHomeV2({
@@ -30,7 +31,8 @@ export default function NativeFlashcardsHomeV2({
     setActiveFilter,
     bookmarks,
     userStreak = 0,
-    hasAccess = true
+    hasAccess = true,
+    course
 }: NativeFlashcardsHomeProps) {
     const { theme } = useTheme();
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -98,7 +100,7 @@ export default function NativeFlashcardsHomeV2({
 
                 {/* 4. Floating Filter Chips (Horizontal Scroll) */}
                 <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-6 px-6 mask-linear-fade">
-                    {["All", "Paper - I", "Paper - III", "PYQs", "Bookmarked FCs"].map(filter => (
+                    {["All", "Paper - I", course === 'PS_GR_B' ? "Paper - II" : "Paper - III", "PYQs", "Bookmarked FCs"].map(filter => (
                         <button
                             key={filter}
                             onClick={() => setActiveFilter(filter === activeFilter && filter !== 'All' ? 'All' : filter)}
@@ -163,12 +165,12 @@ export default function NativeFlashcardsHomeV2({
                             onClick={() => setActiveFilter('Paper - I')}
                         />
                         <MobileCategoryCard
-                            title="Paper III"
+                            title={course === 'PS_GR_B' ? "Paper II" : "Paper III"}
                             subtitle="Legal, Financial, and Administrative Knowledge."
                             icon={<BookOpen className="w-6 h-6" />}
                             theme="emerald"
                             actionText="Explore Topics"
-                            onClick={() => setActiveFilter('Paper - III')}
+                            onClick={() => setActiveFilter(course === 'PS_GR_B' ? 'Paper - II' : 'Paper - III')}
                         />
                         <MobileCategoryCard
                             title="PYQs"
@@ -198,7 +200,7 @@ export default function NativeFlashcardsHomeV2({
                                     progress={progress[deck.id] || 0}
                                     index={i}
                                     onSelect={() => onDeckSelect(deck.id)}
-                                    locked={!hasAccess && (deck.category === 'Paper I' || deck.category === 'Paper III' || deck.category === 'PYQ')}
+                                    locked={!hasAccess && (deck.category === 'Paper I' || deck.category === 'Paper II' || deck.category === 'Paper III' || deck.category === 'PYQ')}
                                 />
                             ))}
                         </AnimatePresence>

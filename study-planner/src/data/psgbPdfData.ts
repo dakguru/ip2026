@@ -115,58 +115,12 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "emerald"
         },
         {
-            "title": "Post Office Savings Account Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "indigo",
-            "comingSoon": true
-        },
-        {
-            "title": "National Savings Recurring Deposit Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "gray",
-            "comingSoon": true
-        },
-        {
-            "title": "National Savings Time Deposit Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "emerald",
-            "comingSoon": true
-        },
-        {
-            "title": "National Savings (Monthly Income Account) Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "blue",
-            "comingSoon": true
-        },
-        {
-            "title": "National Savings Certificates (VIII Issue) Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "violet",
-            "comingSoon": true
-        },
-        {
-            "title": "Senior Citizens Savings Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "slate",
-            "comingSoon": true
-        },
-        {
-            "title": "Kisan Vikas Patra Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "sky",
-            "comingSoon": true
-        },
-        {
-            "title": "Public Provident Fund Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "indigo",
-            "comingSoon": true
-        },
-        {
-            "title": "Sukanya Samriddhi Account Scheme, 2019",
-            "description": "Materials will be uploaded soon.",
-            "color": "gray",
-            "comingSoon": true
+            "title": "PO Small Savings Schemes",
+            "description": "Comprehensive notes on Small Savings Schemes including practice questions.",
+            "filename": "PO_Small_Savings_Schemes.pdf",
+            "path": "/notes/paper-1/PO_Small_Savings_Schemes.pdf",
+            "size": "4.3 MB",
+            "color": "emerald"
         },
         {
             "title": "Post Office Saving Bank Manual Volume I & II",

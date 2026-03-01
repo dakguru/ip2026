@@ -47,6 +47,7 @@ import {
     jan2026ScienceTech
 } from "../../data/flashcards";
 import { QUIZ_DATA } from "@/data/quizzes";
+import { PSGB_QUIZ_DATA } from "@/data/psgbQuizzesData";
 import * as GeneratedCards from "../../data/flashcards/generated_from_mcq";
 import Link from "next/link";
 import Image from "next/image";
@@ -305,12 +306,13 @@ export default function FlashcardsPage() {
 
     // --- DATA PREPARATION ---
     const getDeckFromId = (id: string): UnifiedFlashcard[] => {
+        const activeData = course === 'PS_GR_B' ? PSGB_QUIZ_DATA : QUIZ_DATA;
+
         if (id === 'bookmarks') {
-            // Collect ALL cards from ALL sources using the single source of truth: QUIZ_DATA
-            // This ensures that the IDs generated here match the IDs generated when viewing individual decks
+            // Collect ALL cards from ALL sources using the active data
             let allCards: UnifiedFlashcard[] = [];
 
-            QUIZ_DATA.forEach(topic => {
+            activeData.forEach(topic => {
                 if (topic.id !== 'bookmarks') {
                     allCards.push(...getDeckFromId(topic.id));
                 }
@@ -325,19 +327,31 @@ export default function FlashcardsPage() {
             return uniqueBookmarked;
         }
 
+        // Handle PSGB Aliasing to fetch already generated flashcards from QUIZ_DATA
+        let lookupId = id;
+        if (id.startsWith('psgb-')) {
+            const psTopic = PSGB_QUIZ_DATA.find(t => t.id === id);
+            if (psTopic) {
+                const origTopic = QUIZ_DATA.find(t => t.title === psTopic.title);
+                if (origTopic) {
+                    lookupId = origTopic.id;
+                }
+            }
+        }
+
         // Manual Mappings
         let manualContent: any[] = [];
 
         // Special merges
-        if (id === 'p1-3') {
+        if (lookupId === 'p1-3') {
             manualContent = [...pmlaFlashcards, ...pmla2002];
-        } else if (id === 'p1-18') {
+        } else if (lookupId === 'p1-18') {
             manualContent = [...poGuide1Flashcards, ...poGuidePartI];
-        } else if (id === 'p1-15') {
+        } else if (lookupId === 'p1-15') {
             manualContent = [...postalManualVolVIPartI, ...postalManualVolVIPartII, ...postalManualVolVIPartIII];
         } else {
             // Direct Manual Mappings based on Manual Imports
-            switch (id) {
+            switch (lookupId) {
                 case 'p1-1': manualContent = poAct2023; break;
                 case 'p1-4': manualContent = consumerProtectionAct2019; break;
                 case 'p1-5': manualContent = itAct2000; break;
@@ -365,8 +379,25 @@ export default function FlashcardsPage() {
             }
         }
 
-        const generatedKey = id.replace('-', '_');
-        const generatedContent = (generatedDecksMapping as any)[generatedKey] || [];
+        const generatedKey = lookupId.replace('-', '_');
+        let generatedContent = (generatedDecksMapping as any)[generatedKey] || [];
+
+        // Dynamic fallback from MCQ Data
+        if (generatedContent.length === 0) {
+            const matchingTopic = activeData.find(t => t.id === id || t.id === lookupId);
+            if (matchingTopic && matchingTopic.sets) {
+                generatedContent = matchingTopic.sets.flatMap((s, sIdx) =>
+                    s.questions.map((q, qIdx) => ({
+                        id: `dyn_${matchingTopic.id}_${sIdx}_${qIdx}`,
+                        question: q.text,
+                        answer: q.options[q.correctAnswer] || "Review explanation",
+                        explanation: q.explanation || "",
+                        tag: matchingTopic.title,
+                        category: matchingTopic.category
+                    }))
+                );
+            }
+        }
 
         // Convert Manual to Unified
         const unifiedManual = convertToUnified(manualContent, id, id); // id as placeholder tag if missing and as unique context
@@ -379,21 +410,30 @@ export default function FlashcardsPage() {
     // Filter and Organize Decks
     const organizeDecks = () => {
         const organized: { id: string; title: string; category: string; count: number; deck: UnifiedFlashcard[] }[] = [];
+        const activeData = course === 'PS_GR_B' ? PSGB_QUIZ_DATA : QUIZ_DATA;
 
-        QUIZ_DATA.forEach(topic => {
+        activeData.forEach(topic => {
             const fullDeck = getDeckFromId(topic.id);
             if (fullDeck.length > 0) {
                 // Check Filters
                 const title = topic.title;
                 const category = topic.category;
                 const matchesSearch = title.toLowerCase().includes(searchQuery.toLowerCase());
-                const matchesFilter = activeFilter === "All" ||
-                    (activeFilter === "Paper - I" && category === "Paper I") ||
-                    (activeFilter === "Paper - III" && category === "Paper III") ||
-                    (activeFilter === "PYQs" && category === "PYQ") ||
-                    (activeFilter === "Current Affairs" && category === "Current Affairs") ||
-                    (activeFilter === "Bookmarked FCs" && fullDeck.some(c => bookmarks.has(c.id))) ||
-                    (activeFilter === "Recently Studied" && deckProgress.hasOwnProperty(topic.id));
+
+                let matchesFilter = activeFilter === "All";
+
+                if (course === 'PS_GR_B') {
+                    if (activeFilter === "Paper - I" && category === "Paper I") matchesFilter = true;
+                    if (activeFilter === "Paper - II" && category === "Paper II") matchesFilter = true;
+                } else {
+                    if (activeFilter === "Paper - I" && category === "Paper I") matchesFilter = true;
+                    if (activeFilter === "Paper - III" && category === "Paper III") matchesFilter = true;
+                }
+
+                if (activeFilter === "PYQs" && category === "PYQ") matchesFilter = true;
+                if (activeFilter === "Current Affairs" && category === "Current Affairs") matchesFilter = true;
+                if (activeFilter === "Bookmarked FCs" && fullDeck.some(c => bookmarks.has(c.id))) matchesFilter = true;
+                if (activeFilter === "Recently Studied" && deckProgress.hasOwnProperty(topic.id)) matchesFilter = true;
 
                 if (matchesSearch && matchesFilter) {
                     organized.push({
@@ -411,10 +451,10 @@ export default function FlashcardsPage() {
 
     const finalDecks = organizeDecks();
     const paper1Decks = finalDecks.filter(d => d.category === 'Paper I');
-    const paper3Decks = finalDecks.filter(d => d.category === 'Paper III');
+    const paperGroup2Decks = finalDecks.filter(d => course === 'PS_GR_B' ? d.category === 'Paper II' : d.category === 'Paper III');
     const pyqDecks = finalDecks.filter(d => d.category === 'PYQ');
     const caDecks = finalDecks.filter(d => d.category === 'Current Affairs');
-    const otherDecks = finalDecks.filter(d => !['Paper I', 'Paper III', 'PYQ', 'Current Affairs'].includes(d.category));
+    const otherDecks = finalDecks.filter(d => !['Paper I', 'Paper II', 'Paper III', 'PYQ', 'Current Affairs'].includes(d.category));
 
 
     if (!mounted) return null;
@@ -440,6 +480,7 @@ export default function FlashcardsPage() {
                     setActiveFilter={setActiveFilter}
                     bookmarks={bookmarks}
                     hasAccess={hasAccess}
+                    course={course}
                 />
             );
         }
@@ -542,7 +583,7 @@ export default function FlashcardsPage() {
                         >
                             <ChevronLeft className="w-3 h-3" /> Back
                         </button>
-                        {["Paper - I", "Paper - III", "PYQs", "Current Affairs", "Bookmarked FCs"].map(filter => (
+                        {["Paper - I", course === 'PS_GR_B' ? "Paper - II" : "Paper - III", "PYQs", "Current Affairs", "Bookmarked FCs"].map(filter => (
                             <button
                                 key={filter}
                                 onClick={() => setActiveFilter(filter === activeFilter ? 'All' : filter)}
@@ -610,18 +651,18 @@ export default function FlashcardsPage() {
                                 </div>
                             </motion.div>
 
-                            {/* Paper III */}
+                            {/* Group 2 */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-                                onClick={() => handleCategorySelect('Paper - III')}
+                                onClick={() => handleCategorySelect(course === 'PS_GR_B' ? 'Paper - II' : 'Paper - III')}
                                 className="group relative bg-white dark:bg-zinc-900/50 rounded-3xl border border-slate-200 dark:border-zinc-800 p-8 cursor-pointer hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 overflow-hidden"
                             >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-110" />
                                 <div className="relative z-10">
-                                    <div className="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6">
+                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${course === 'PS_GR_B' ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400' : 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400'}`}>
                                         <BookOpen className="w-7 h-7" />
                                     </div>
-                                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2">Paper III</h3>
+                                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2">{course === 'PS_GR_B' ? 'Paper II' : 'Paper III'}</h3>
                                     <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">Legal, Financial, and Administrative Knowledge.</p>
                                     <div className="flex items-center text-sm font-bold text-emerald-600 dark:text-emerald-400">
                                         Explore Topics <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -714,25 +755,25 @@ export default function FlashcardsPage() {
                                 </section>
                             )}
 
-                            {/* Paper III */}
-                            {(paper3Decks.length > 0 && (activeFilter === "All" || activeFilter === "Paper - III")) && (
+                            {/* Group 2 */}
+                            {(paperGroup2Decks.length > 0 && (activeFilter === "All" || activeFilter === "Paper - II" || activeFilter === "Paper - III")) && (
                                 <section>
                                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
                                         <div>
-                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Paper III</h2>
-                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Legal, Financial & Administrative</p>
+                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">{course === 'PS_GR_B' ? 'Paper II' : 'Paper III'}</h2>
+                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Rules and Regulations</p>
                                         </div>
-                                        <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{paper3Decks.length} TOPICS</span>
+                                        <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{paperGroup2Decks.length} TOPICS</span>
                                     </motion.div>
 
                                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-                                        {paper3Decks.map((item, i) => (
+                                        {paperGroup2Decks.map((item, i) => (
                                             <div key={item.id} className="flashcard-wrapper group rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
                                                 <PremiumKnowledgeTile
                                                     id={item.id}
                                                     index={i}
                                                     title={item.title}
-                                                    category="Paper III"
+                                                    category={course === 'PS_GR_B' ? 'Paper II' : 'Paper III'}
                                                     cardCount={item.count}
                                                     onAction={handleSelectDeck}
                                                     lastIndex={deckProgress[item.id] || 0}
