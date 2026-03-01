@@ -303,7 +303,16 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 setLoading(true);
                 setProgress(5);
 
-                const loadingTask = pdfjs.getDocument(url);
+                const pdfOptions = {
+                    url: url,
+                    cMapUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
+                    cMapPacked: true,
+                    standardFontDataUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
+                    disableRange: true,
+                    disableStream: true,
+                };
+
+                const loadingTask = pdfjs.getDocument(pdfOptions);
                 loadingTask.onProgress = ({ loaded, total }: { loaded: number; total: number }) => {
                     if (total > 0) setProgress(Math.round((loaded / total) * 30));
                 };
@@ -325,6 +334,9 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                         const TOLERANCE = 4; // Vertical tolerance
 
                         items.forEach(item => {
+                            // Filter out TextMarkedContent or items without transform array
+                            if (!item.str || !item.transform || !Array.isArray(item.transform)) return;
+
                             const y = item.transform[5];
                             let foundY = -1;
                             for (const existingY of linesMap.keys()) {
@@ -337,7 +349,7 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                             if (!linesMap.has(key)) linesMap.set(key, []);
 
                             // Calculate width roughly if not present
-                            const w = item.width || (item.transform[0] * item.str.length * 0.5); // Fallback
+                            const w = item.width || (Math.abs(item.transform[0]) * item.str.length * 0.5); // Fallback
 
                             linesMap.get(key)!.push({
                                 str: item.str,
@@ -345,8 +357,8 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                                 y: key,
                                 w: w,
                                 h: item.height || Math.abs(item.transform[0]),
-                                fontName: item.fontName,
-                                hasEOL: item.hasEOL
+                                fontName: item.fontName || '',
+                                hasEOL: item.hasEOL || false
                             });
                         });
 
