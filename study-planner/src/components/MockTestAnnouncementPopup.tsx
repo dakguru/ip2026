@@ -5,12 +5,10 @@ import { X, Calendar, Clock, FileText, CheckCircle2, AlertCircle, ArrowRight } f
 import { motion, AnimatePresence } from "framer-motion";
 
 const TOPICS = [
-    "NSC (VIII Issue) Scheme & KVP Scheme, 2019",
-    "PPF Scheme, 2019 & SSA Scheme, 2019",
-    "PM Cares & MSSC",
-    "SB Orders 2023",
-    "SB Orders 2024",
-    "SB Orders 2025"
+    "Consolidation of Products & Centralized Delivery Policy",
+    "Dak Ghar Niryat Kendra (DNKs)",
+    "India Post Payments Bank",
+    "CCS (Temporary Service) Rules, 1965",
 ];
 
 const MockTestAnnouncementPopup = ({
@@ -30,8 +28,8 @@ const MockTestAnnouncementPopup = ({
     }, [triggerRef]);
 
     useEffect(() => {
-        // storage key updated to test 04
-        const hasSeen = sessionStorage.getItem("seen_mock_announcement_test_04");
+        // storage key updated to test 09
+        const hasSeen = sessionStorage.getItem("seen_mock_announcement_test_09");
         if (!hasSeen) {
             // Small delay to ensure animations play nicely after load
             const timer = setTimeout(() => setIsOpen(true), 1500);
@@ -40,8 +38,8 @@ const MockTestAnnouncementPopup = ({
     }, []);
 
     useEffect(() => {
-        // Target Date: Feb 07, 2026 00:00:00 AM IST
-        const targetDate = new Date("2026-02-07T00:00:00+05:30").getTime();
+        // Target Date: Mar 14, 2026 00:00:00 AM IST
+        const targetDate = new Date("2026-03-14T00:00:00+05:30").getTime();
 
         const interval = setInterval(() => {
             const now = new Date().getTime();
@@ -65,7 +63,7 @@ const MockTestAnnouncementPopup = ({
 
     const handleClose = () => {
         setIsOpen(false);
-        sessionStorage.setItem("seen_mock_announcement_test_04", "true");
+        sessionStorage.setItem("seen_mock_announcement_test_09", "true");
     };
 
     return (
@@ -111,11 +109,11 @@ const MockTestAnnouncementPopup = ({
                             {/* Title & Date */}
                             <div className="text-center mb-8">
                                 <h2 className="text-3xl font-black text-zinc-900 dark:text-white mb-3 tracking-tight">
-                                    Weekly Mock Test - 04
+                                    Weekly Mock Test - 09
                                 </h2>
                                 <div className="inline-flex items-center justify-center gap-2 text-zinc-500 dark:text-zinc-400 font-medium text-sm">
                                     <Calendar className="w-4 h-4" />
-                                    <span>Feb 07, 2026 - Feb 08, 2026</span>
+                                    <span>Mar 14, 2026 - Mar 15, 2026</span>
                                 </div>
                             </div>
 
