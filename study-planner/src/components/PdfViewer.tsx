@@ -867,7 +867,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                 >
                     {isLiquidMode ? (
                         <div className="w-full h-full bg-white dark:bg-zinc-900 overflow-y-auto">
-                            <LiquidReader url={url} />
+                            <LiquidReader url={url} onFallbackToPdf={() => { setIsLiquidMode(false); localStorage.setItem('liquidModePref', 'false'); }} />
                         </div>
                     ) : (
                         <div className={`p-4 ${viewMode === 'continuous' ? 'w-full flex flex-col items-center gap-4' : ''}`}>

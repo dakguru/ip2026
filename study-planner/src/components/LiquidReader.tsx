@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef, useMemo, useCallback } from 'react';
 import { pdfjs } from 'react-pdf';
-import { Loader2, AlertCircle, BookOpen, Quote, List, Settings, Type, X, Palette, Check } from 'lucide-react';
+import { Loader2, AlertCircle, BookOpen, Quote, List, Settings, Type, X, Palette, Check, FileText, RefreshCw } from 'lucide-react';
 import { Capacitor } from '@capacitor/core';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -49,6 +49,7 @@ interface RawLine {
 interface LiquidReaderProps {
     url: string;
     onLoadComplete?: () => void;
+    onFallbackToPdf?: () => void;
 }
 
 // --- Semantic Analysis Engine ---
@@ -262,7 +263,7 @@ function LazyNode({ node, renderNode }: { node: DocNode; renderNode: (node: DocN
 
 // --- React Component ---
 
-export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps) {
+export default function LiquidReader({ url, onLoadComplete, onFallbackToPdf }: LiquidReaderProps) {
     const [nodes, setNodes] = useState<DocNode[]>([]);
     const [loading, setLoading] = useState(true);
     const [progress, setProgress] = useState(0);
@@ -303,13 +304,20 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 setLoading(true);
                 setProgress(5);
 
+                // Resolve relative URLs to absolute for Capacitor/Android compatibility
+                let resolvedUrl = url;
+                if (!url.startsWith('http') && !url.startsWith('blob')) {
+                    resolvedUrl = window.location.origin + (url.startsWith('/') ? '' : '/') + url;
+                }
+
                 const pdfOptions = {
-                    url: url,
-                    cMapUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
+                    url: resolvedUrl,
+                    cMapUrl: 'https://unpkg.com/pdfjs-dist@4.4.168/cmaps/',
                     cMapPacked: true,
-                    standardFontDataUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts/`,
+                    standardFontDataUrl: 'https://unpkg.com/pdfjs-dist@4.4.168/standard_fonts/',
                     disableRange: true,
                     disableStream: true,
+                    isEvalSupported: false,
                 };
 
                 const loadingTask = pdfjs.getDocument(pdfOptions);
@@ -425,8 +433,8 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
                 if (onLoadCompleteRef.current) onLoadCompleteRef.current();
 
             } catch (err: any) {
-                console.error("Reader Error:", err);
-                setError("Failed to process document.");
+                console.error("Reader Error:", err?.message || err, err);
+                setError(err?.message || "Failed to process document.");
                 setLoading(false);
             }
         };
@@ -554,7 +562,37 @@ export default function LiquidReader({ url, onLoadComplete }: LiquidReaderProps)
         );
     }
 
-    if (error) return <div className="p-8 text-center text-red-500">{error}</div>;
+    if (error) return (
+        <div className="flex flex-col items-center justify-center p-8 space-y-6 min-h-[40vh]">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                <AlertCircle className="w-8 h-8 text-red-500" />
+            </div>
+            <div className="text-center space-y-2">
+                <h3 className="text-lg font-bold text-slate-800">Smart Reader Unavailable</h3>
+                <p className="text-sm text-slate-500 max-w-xs mx-auto">
+                    This document could not be processed in reader mode. Try switching to PDF view for the best experience.
+                </p>
+            </div>
+            <div className="flex gap-3">
+                {onFallbackToPdf && (
+                    <button
+                        onClick={onFallbackToPdf}
+                        className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-bold hover:bg-blue-700 transition-colors shadow-md"
+                    >
+                        <FileText className="w-4 h-4" />
+                        Switch to PDF View
+                    </button>
+                )}
+                <button
+                    onClick={() => { setError(null); setLoading(true); setProgress(0); }}
+                    className="flex items-center gap-2 px-5 py-2.5 bg-slate-200 text-slate-800 rounded-xl text-sm font-bold hover:bg-slate-300 transition-colors"
+                >
+                    <RefreshCw className="w-4 h-4" />
+                    Retry
+                </button>
+            </div>
+        </div>
+    );
 
     const themeClasses = {
         light: 'bg-white text-slate-900',
