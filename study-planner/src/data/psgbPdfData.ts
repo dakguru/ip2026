@@ -152,15 +152,19 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Citizen Charter of Department of Posts.",
-            "description": "Materials will be uploaded soon.",
-            "color": "sky",
-            "comingSoon": true
+            "description": "Citizen Charter of Department of Posts",
+            "filename": "Citizen_Charter_Department_of_Posts.pdf",
+            "path": "/notes/paper-1/Citizen_Charter_Department_of_Posts.pdf",
+            "size": "0.6 MB",
+            "color": "sky"
         },
         {
             "title": "Guidelines and instructions on complaint grievances handling in Department of Posts.",
-            "description": "Materials will be uploaded soon.",
-            "color": "indigo",
-            "comingSoon": true
+            "description": "Complaint & Grievance Handling in Department of Posts",
+            "filename": "Complaint_Grievance_Handling.pdf",
+            "path": "/notes/paper-1/Complaint_Grievance_Handling.pdf",
+            "size": "0.6 MB",
+            "color": "indigo"
         },
         {
             "title": "Guidelines issued by Directorate from time to time on IT modernization Project of Department of Posts",
@@ -182,9 +186,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Postal Manual Volume II - Chapter XI - Misc. Rules",
-            "description": "Materials will be uploaded soon.",
-            "color": "violet",
-            "comingSoon": true
+            "description": "Postal Manual Volume II - Chapter XI - Miscellaneous Rules",
+            "filename": "Postal_Manual_Vol_II_Chapter_XI.pdf",
+            "path": "/notes/paper-1/Postal_Manual_Vol_II_Chapter_XI.pdf",
+            "size": "4.6 MB",
+            "color": "violet"
         },
         {
             "title": "Manual of Office Procedure",
