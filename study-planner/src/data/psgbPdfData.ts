@@ -129,18 +129,6 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "comingSoon": true
         },
         {
-            "title": "SB orders issued by Directorate from 01.01.2007 onwards.",
-            "description": "Materials will be uploaded soon.",
-            "color": "blue",
-            "comingSoon": true
-        },
-        {
-            "title": "Guidelines issued by Directorate from time to time on Core Banking Services",
-            "description": "Materials will be uploaded soon.",
-            "color": "violet",
-            "comingSoon": true
-        },
-        {
             "title": "POSB (CBS) Manual",
             "description": "Post Office Saving Bank (CBS) Manual",
             "filename": "POSB_CBS_MANUAL.pdf",
@@ -290,18 +278,6 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "emerald",
             "comingSoon": true
         },
-        {
-            "title": "15 questions for 30 marks",
-            "description": "Materials will be uploaded soon.",
-            "color": "blue",
-            "comingSoon": true
-        },
-        {
-            "title": "Noting and Drafting for 25 marks each",
-            "description": "Materials will be uploaded soon.",
-            "color": "violet",
-            "comingSoon": true
-        }
     ],
     "Paper II": [
         {
@@ -496,12 +472,6 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "title": "Inspection questionnaires.",
             "description": "Materials will be uploaded soon.",
             "color": "slate",
-            "comingSoon": true
-        },
-        {
-            "title": "CSI Operating Manuals.",
-            "description": "Materials will be uploaded soon.",
-            "color": "sky",
             "comingSoon": true
         },
         {
