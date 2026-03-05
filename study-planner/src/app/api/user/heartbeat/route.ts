@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import UserModel from '@/models/User';
 import dbConnect from '@/lib/mongoose';
 
-export async function POST() {
+export async function POST(request: Request) {
     try {
         const cookieStore = await cookies();
         const token = cookieStore.get('auth_token');
@@ -34,10 +34,15 @@ export async function POST() {
             }, { status: 401 });
         }
 
-        // Update lastActiveAt
+        const { platform } = await request.json().catch(() => ({}));
+
+        // Update lastActiveAt and lastPlatform
+        const updateData: any = { lastActiveAt: new Date() };
+        if (platform) updateData.lastPlatform = platform;
+
         await UserModel.updateOne(
             { _id: user._id },
-            { $set: { lastActiveAt: new Date() } }
+            { $set: updateData }
         );
 
         return NextResponse.json({ success: true });

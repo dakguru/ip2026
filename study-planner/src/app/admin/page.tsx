@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import {
     Shield, Users, ArrowLeft, Loader2, Search, Download, FileText,
     Crown, Star, Zap, Filter, MoreHorizontal, ChevronDown, ChevronUp, Check,
-    CreditCard, Calendar, Bell, Clock, ArrowUpDown
+    CreditCard, Calendar, Bell, Clock, ArrowUpDown, Monitor, Smartphone
 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -39,6 +39,7 @@ interface UserData {
     purchaseDate?: string;
     membershipValidity?: string;
     lastActiveAt?: string;
+    lastPlatform?: 'desktop' | 'mobile_browser' | 'app';
     courseMode?: 'LDCE_IP' | 'PS_GR_B';
 }
 
@@ -763,18 +764,42 @@ export default function AdminDashboard() {
                                             </td>
                                             <td className="py-4 px-6 text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                                                 {user.lastActiveAt ? (
-                                                    <span className={`inline-flex items-center gap-1.5 ${new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000
-                                                        ? 'text-green-600 dark:text-green-400 font-bold'
-                                                        : ''
-                                                        }`}>
-                                                        {new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000 && (
-                                                            <span className="relative flex h-2 w-2">
-                                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                                                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                                                            </span>
-                                                        )}
-                                                        {format(new Date(user.lastActiveAt), 'MMM d, HH:mm')}
-                                                    </span>
+                                                    <div className="flex items-center gap-2">
+                                                        <span className={`inline-flex items-center gap-1.5 ${new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000
+                                                            ? 'text-green-600 dark:text-green-400 font-bold'
+                                                            : ''
+                                                            }`}>
+                                                            {new Date().getTime() - new Date(user.lastActiveAt).getTime() < 5 * 60 * 1000 && (
+                                                                <span className="relative flex h-2 w-2">
+                                                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                                                </span>
+                                                            )}
+                                                            {format(new Date(user.lastActiveAt), 'MMM d, HH:mm')}
+                                                        </span>
+                                                        <div className="shrink-0 flex items-center justify-center p-1 rounded-md text-zinc-400">
+                                                            {user.lastPlatform === 'app' ? (
+                                                                <div title="App User (Google Play)" className="flex items-center gap-0.5 bg-blue-50 dark:bg-blue-900/20 px-1.5 py-0.5 rounded border border-blue-100 dark:border-blue-800">
+                                                                    <Smartphone className="w-3 h-3 text-blue-500" />
+                                                                    <svg viewBox="0 0 24 24" className="w-2.5 h-2.5 text-blue-500 fill-current" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M3.609 1.814L13.792 12 3.61 22.186a2.23 2.23 0 0 1-.41-.448l.001-.001V2.262c.006-.158.05-.313.13-.448h-.001a1.9 1.9 0 0 1 .279-.448v.448l-.001-.448h.001zM15.549 13.784l2.88 1.666a2.6 2.6 0 0 1 1.08 1.254 2.1 2.1 0 0 1-.012 1.662L16.27 14.49zm-.063-3.66L18.66 4.75a2.12 2.12 0 0 1 1.006 1.34 2.5 2.5 0 0 1-.346 2.05L14.417 11zM13.792 12l.626.626-4.57 4.572L9.5 17.2h6.142l1.004-.848zm-.626-.626l-1.666-1.666L4.764 3.012l9.028 9.028v-.04z" />
+                                                                    </svg>
+                                                                </div>
+                                                            ) : user.lastPlatform === 'mobile_browser' ? (
+                                                                <div title="Mobile Browser" className="bg-emerald-50 dark:bg-emerald-900/20 p-1 rounded border border-emerald-100 dark:border-emerald-800">
+                                                                    <Smartphone className="w-3 h-3 text-emerald-500" />
+                                                                </div>
+                                                            ) : user.lastPlatform === 'desktop' ? (
+                                                                <div title="Desktop" className="bg-slate-50 dark:bg-slate-800 p-1 rounded border border-slate-200 dark:border-slate-700">
+                                                                    <Monitor className="w-3 h-3 text-slate-400" />
+                                                                </div>
+                                                            ) : (
+                                                                <div title="Unknown / Previous Login" className="opacity-40">
+                                                                    <Clock className="w-3 h-3 text-zinc-300" />
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </div>
                                                 ) : (
                                                     <span className="text-zinc-400 dark:text-zinc-600 text-xs italic">Never</span>
                                                 )}
@@ -892,9 +917,31 @@ export default function AdminDashboard() {
                                     <div className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-xs">
                                         {u.name.charAt(0).toUpperCase()}
                                     </div>
-                                    <div>
+                                    <div className="flex-1">
                                         <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{u.name}</p>
                                         <p className="text-xs text-zinc-500">{u.email}</p>
+                                    </div>
+                                    <div className="shrink-0 flex items-center justify-center p-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-500">
+                                        {u.lastPlatform === 'app' ? (
+                                            <div title="App User (Google Play)" className="flex items-center gap-1.5 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded-md border border-blue-100 dark:border-blue-800">
+                                                <Smartphone className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                                                <svg viewBox="0 0 24 24" className="w-3 h-3 text-blue-600 dark:text-blue-400 fill-current" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.609 1.814L13.792 12 3.61 22.186a2.23 2.23 0 0 1-.41-.448l.001-.001V2.262c.006-.158.05-.313.13-.448h-.001a1.9 1.9 0 0 1 .279-.448v.448l-.001-.448h.001zM15.549 13.784l2.88 1.666a2.6 2.6 0 0 1 1.08 1.254 2.1 2.1 0 0 1-.012 1.662L16.27 14.49zm-.063-3.66L18.66 4.75a2.12 2.12 0 0 1 1.006 1.34 2.5 2.5 0 0 1-.346 2.05L14.417 11zM13.792 12l.626.626-4.57 4.572L9.5 17.2h6.142l1.004-.848zm-.626-.626l-1.666-1.666L4.764 3.012l9.028 9.028v-.04z" />
+                                                </svg>
+                                            </div>
+                                        ) : u.lastPlatform === 'mobile_browser' ? (
+                                            <div title="Mobile Browser" className="bg-emerald-50 dark:bg-emerald-900/20 p-1.5 rounded-md border border-emerald-100 dark:border-emerald-800">
+                                                <Smartphone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                                            </div>
+                                        ) : u.lastPlatform === 'desktop' ? (
+                                            <div title="Desktop" className="bg-slate-50 dark:bg-slate-800 p-1.5 rounded-md border border-slate-200 dark:border-slate-700">
+                                                <Monitor className="w-4 h-4 text-slate-600 dark:text-slate-400" />
+                                            </div>
+                                        ) : (
+                                            <div title="Detecting platform..." className="bg-zinc-50 dark:bg-zinc-800 p-1.5 rounded-md border border-zinc-200 dark:border-zinc-700 opacity-50">
+                                                <Clock className="w-4 h-4 text-zinc-400" />
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             ))

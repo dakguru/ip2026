@@ -2,15 +2,43 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { Capacitor } from '@capacitor/core';
 
 export default function UserActivityTracker() {
     const pathname = usePathname();
 
     useEffect(() => {
+        // Function to detect platform
+        const detectPlatform = () => {
+            if (typeof window === 'undefined') return 'desktop';
+
+            // 1. Check if it's the native app
+            const ua = navigator.userAgent;
+            const isNative = Capacitor.isNativePlatform() ||
+                ua.includes('Capacitor') ||
+                ua.includes('wv') || // Android Webview marker
+                window.location.protocol === 'capacitor:' ||
+                window.location.protocol === 'app:';
+
+            if (isNative) return 'app';
+
+            // 2. Check if it's a mobile browser
+            // More comprehensive mobile regex
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobi/i.test(ua);
+            if (isMobile) return 'mobile_browser';
+
+            return 'desktop';
+        };
+
         // Function to send heartbeat
         const sendHeartbeat = async () => {
             try {
-                const res = await fetch('/api/user/heartbeat', { method: 'POST' });
+                const platform = detectPlatform();
+                const res = await fetch('/api/user/heartbeat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ platform })
+                });
                 if (res.status === 401) {
                     const data = await res.json();
                     if (data.code === 'SESSION_CONFLICT') {

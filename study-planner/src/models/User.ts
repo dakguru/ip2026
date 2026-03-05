@@ -21,6 +21,7 @@ const UserSchema = new mongoose.Schema({
     resetTokenExpiry: { type: Number },
     currentSessionId: { type: String },
     lastActiveAt: { type: Date },
+    lastPlatform: { type: String, enum: ['desktop', 'mobile_browser', 'app'] },
     createdAt: { type: Date, default: Date.now },
 }, { timestamps: true });
 

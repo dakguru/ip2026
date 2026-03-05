@@ -11,6 +11,7 @@ export interface User {
     dateOfJoining?: Date;
     gender?: string;
     courseMode?: string;
+    lastPlatform?: 'desktop' | 'mobile_browser' | 'app';
     hasSeenCoursePrompt?: boolean;
     passwordHash?: string; // Optional in interface, but mostly present
     role?: 'user' | 'admin';
@@ -38,6 +39,7 @@ function mapUser(doc: any): User {
         dateOfJoining: doc.dateOfJoining,
         gender: doc.gender,
         courseMode: doc.courseMode,
+        lastPlatform: doc.lastPlatform,
         hasSeenCoursePrompt: doc.hasSeenCoursePrompt,
         passwordHash: doc.password, // Mapped from password field in DB
         role: doc.role,
