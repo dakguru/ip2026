@@ -50,6 +50,7 @@ export async function GET(request: Request) {
             purchaseDate: user.purchaseDate,
             membershipValidity: user.membershipValidity,
             lastActiveAt: user.lastActiveAt,
+            courseMode: user.courseMode,
             createdAt: user.createdAt
         }));
 

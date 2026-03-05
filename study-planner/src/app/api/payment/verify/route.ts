@@ -103,6 +103,7 @@ export async function POST(request: Request) {
                 mobile: updatedUser.mobile,
                 role: updatedUser.role,
                 membershipLevel: updatedUser.membershipLevel, // Updated
+                planId: updatedUser.planId,
                 sessionId: updatedUser.currentSessionId || ''
             }), {
                 httpOnly: false, // Client readable

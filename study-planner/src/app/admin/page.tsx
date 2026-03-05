@@ -39,6 +39,7 @@ interface UserData {
     purchaseDate?: string;
     membershipValidity?: string;
     lastActiveAt?: string;
+    courseMode?: 'LDCE_IP' | 'PS_GR_B';
 }
 
 export default function AdminDashboard() {
@@ -52,7 +53,7 @@ export default function AdminDashboard() {
     const [couponStats, setCouponStats] = useState({ total: 0, claimed: 0, redeemed: 0, available: 0 });
 
     // Filters
-    const [filterStatus, setFilterStatus] = useState<'all' | 'gold' | 'silver' | 'free'>('all');
+    const [filterStatus, setFilterStatus] = useState<'all' | 'gold' | 'silver' | 'free' | 'diamond' | 'platinum' | 'ps_gr_b' | 'ldce_ip'>('all');
 
     // Sorting
     type SortColumn = 'name' | 'plan' | 'role' | 'joined' | 'lastActive';
@@ -149,7 +150,8 @@ export default function AdminDashboard() {
                         name: editingUser.name,
                         role: editingUser.role,
                         membershipLevel: editingUser.membershipLevel,
-                        membershipValidity: editingUser.membershipValidity
+                        membershipValidity: editingUser.membershipValidity,
+                        courseMode: editingUser.courseMode
                     }
                 })
             });
@@ -170,8 +172,12 @@ export default function AdminDashboard() {
         return {
             total: users.length,
             gold: users.filter(u => u.membershipLevel === 'gold').length,
+            diamond: users.filter(u => u.membershipLevel === 'diamond').length,
+            platinum: users.filter(u => u.membershipLevel === 'platinum').length,
             silver: users.filter(u => u.membershipLevel === 'silver').length,
             free: users.filter(u => !u.membershipLevel || u.membershipLevel === 'free').length,
+            psGroupB: users.filter(u => u.courseMode === 'PS_GR_B').length,
+            ldceIP: users.filter(u => u.courseMode === 'LDCE_IP').length,
         };
     }, [users]);
 
@@ -180,12 +186,20 @@ export default function AdminDashboard() {
             u.email.toLowerCase().includes(search.toLowerCase());
 
         const userLevel = u.membershipLevel || 'free';
-        const matchesStatus = filterStatus === 'all' ? true : userLevel === filterStatus;
+        let matchesStatus = filterStatus === 'all' ? true : userLevel === filterStatus;
+
+        // Custom filter logic for PS_GR_B and LDCE_IP which are on a different field
+        if (filterStatus === 'ps_gr_b') {
+            matchesStatus = u.courseMode === 'PS_GR_B';
+        } else if (filterStatus === 'ldce_ip') {
+            // Default to LDCE_IP if not set, as it's the primary/original course
+            matchesStatus = u.courseMode === 'LDCE_IP' || !u.courseMode;
+        }
 
         return matchesSearch && matchesStatus;
     });
 
-    const planOrder: Record<string, number> = { gold: 3, silver: 2, free: 1 };
+    const planOrder: Record<string, number> = { diamond: 5, gold: 4, platinum: 3, silver: 2, free: 1 };
 
     const sortedUsers = useMemo(() => {
         if (!sortColumn) return filteredUsers;
@@ -364,7 +378,7 @@ export default function AdminDashboard() {
                 </div>
 
                 {/* Statistics Cards */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+                <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-3">
 
                     <div
                         onClick={() => setShowOnlineUsersModal(true)}
@@ -398,6 +412,34 @@ export default function AdminDashboard() {
                         </div>
                     </div>
 
+                    {/* Diamond */}
+                    <div className="bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/10 dark:to-blue-900/10 p-4 rounded-2xl shadow-sm border border-indigo-100 dark:border-indigo-900/30 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="p-1.5 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-lg">
+                                <Crown className="w-4 h-4" />
+                            </div>
+                            <span className="text-[10px] font-bold text-indigo-600/60 dark:text-indigo-400/60 uppercase tracking-wider">Diamond</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-2xl font-extrabold text-indigo-700 dark:text-indigo-400">{stats.diamond}</span>
+                            <span className="text-[10px] text-indigo-600/70 dark:text-indigo-400/70 mt-0.5">Diamond</span>
+                        </div>
+                    </div>
+
+                    {/* Platinum */}
+                    <div className="bg-gradient-to-br from-zinc-50 to-slate-50 dark:from-zinc-900/10 dark:to-slate-900/10 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="p-1.5 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded-lg">
+                                <Crown className="w-4 h-4" />
+                            </div>
+                            <span className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Platinum</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-2xl font-extrabold text-zinc-700 dark:text-zinc-300">{stats.platinum}</span>
+                            <span className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">Platinum</span>
+                        </div>
+                    </div>
+
                     <div className="bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/10 dark:to-amber-900/10 p-4 rounded-2xl shadow-sm border border-yellow-100 dark:border-yellow-900/30 hover:shadow-md transition-shadow">
                         <div className="flex items-center justify-between mb-3">
                             <div className="p-1.5 bg-yellow-100 dark:bg-yellow-900/40 text-yellow-600 dark:text-yellow-400 rounded-lg">
@@ -424,16 +466,29 @@ export default function AdminDashboard() {
                         </div>
                     </div>
 
-                    <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
+                    <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/10 dark:to-pink-900/10 p-4 rounded-2xl shadow-sm border border-purple-100 dark:border-purple-800 hover:shadow-md transition-shadow">
                         <div className="flex items-center justify-between mb-3">
-                            <div className="p-1.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 rounded-lg">
-                                <Zap className="w-4 h-4" />
+                            <div className="p-1.5 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 rounded-lg">
+                                <Shield className="w-4 h-4" />
                             </div>
-                            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">Free</span>
+                            <span className="text-[10px] font-bold text-purple-500 dark:text-purple-400 uppercase tracking-wider">PS GR B</span>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-2xl font-extrabold text-zinc-700 dark:text-zinc-300">{stats.free}</span>
-                            <span className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">Basic</span>
+                            <span className="text-2xl font-extrabold text-purple-700 dark:text-purple-300">{stats.psGroupB}</span>
+                            <span className="text-[10px] text-purple-500 dark:text-purple-400 mt-0.5">PS Group B</span>
+                        </div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/10 dark:to-cyan-900/10 p-4 rounded-2xl shadow-sm border border-blue-100 dark:border-blue-800 hover:shadow-md transition-shadow">
+                        <div className="flex items-center justify-between mb-3">
+                            <div className="p-1.5 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 rounded-lg">
+                                <Shield className="w-4 h-4" />
+                            </div>
+                            <span className="text-[10px] font-bold text-blue-500 dark:text-blue-400 uppercase tracking-wider">LDCE IP</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-2xl font-extrabold text-blue-700 dark:text-blue-300">{stats.ldceIP}</span>
+                            <span className="text-[10px] text-blue-500 dark:text-blue-400 mt-0.5">LDCE IP</span>
                         </div>
                     </div>
                 </div>
@@ -490,17 +545,17 @@ export default function AdminDashboard() {
                     <div className="p-4 border-b border-zinc-100 dark:border-zinc-800 flex flex-col gap-3">
                         {/* Filter Tabs */}
                         <div className="flex items-center bg-zinc-100 dark:bg-zinc-800/50 p-1 rounded-xl w-full overflow-x-auto no-scrollbar">
-                            {(['all', 'gold', 'silver', 'free'] as const).map((tab) => (
+                            {(['all', 'diamond', 'platinum', 'gold', 'silver', 'free', 'ps_gr_b', 'ldce_ip'] as const).map((tab) => (
                                 <button
                                     key={tab}
                                     onClick={() => setFilterStatus(tab)}
-                                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all capitalize whitespace-nowrap flex-1
+                                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all capitalize whitespace-nowrap flex-1
                                         ${filterStatus === tab
-                                            ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm'
+                                            ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm ring-1 ring-zinc-200 dark:ring-zinc-700'
                                             : 'text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200'
                                         }`}
                                 >
-                                    {tab} Users
+                                    {tab === 'ps_gr_b' ? 'PS Group B' : tab === 'ldce_ip' ? 'LDCE IP' : tab} Users
                                 </button>
                             ))}
                         </div>
@@ -525,14 +580,24 @@ export default function AdminDashboard() {
                                 <div className="flex items-center justify-between gap-3">
                                     <div className="flex items-center gap-3">
                                         <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-sm shrink-0
-                                            ${user.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30' :
-                                                user.membershipLevel === 'silver' ? 'bg-slate-100 text-slate-600 dark:bg-slate-800' :
-                                                    'bg-zinc-100 text-zinc-500 dark:bg-zinc-800'
+                                            ${user.membershipLevel === 'diamond' ? 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30' :
+                                                user.membershipLevel === 'platinum' ? 'bg-zinc-100 text-zinc-600 dark:bg-zinc-900/30' :
+                                                    user.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30' :
+                                                        user.membershipLevel === 'silver' ? 'bg-slate-100 text-slate-600 dark:bg-slate-800' :
+                                                            'bg-zinc-100 text-zinc-500 dark:bg-zinc-800'
                                             }`}>
                                             {user.name.charAt(0).toUpperCase()}
                                         </div>
                                         <div className="min-w-0">
-                                            <p className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm truncate">{user.name}</p>
+                                            <div className="flex items-center gap-2">
+                                                <p className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm truncate">{user.name}</p>
+                                                {user.courseMode && (
+                                                    <span className={`text-[8px] px-1 py-0.5 rounded font-bold uppercase
+                                                        ${user.courseMode === 'PS_GR_B' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/40' : 'bg-blue-100 text-blue-700 dark:bg-blue-900/40'}`}>
+                                                        {user.courseMode === 'PS_GR_B' ? 'PS' : 'IP'}
+                                                    </span>
+                                                )}
+                                            </div>
                                             <p className="text-xs text-zinc-500 dark:text-zinc-400 truncate">{user.email}</p>
                                         </div>
                                     </div>
@@ -546,13 +611,17 @@ export default function AdminDashboard() {
                                 {/* Row 2: Badges */}
                                 <div className="flex flex-wrap items-center gap-2">
                                     <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase border
-                                        ${user.membershipLevel === 'gold'
-                                            ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50'
-                                            : user.membershipLevel === 'silver'
-                                                ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800/50'
-                                                : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-500 dark:border-zinc-800/50'
+                                        ${user.membershipLevel === 'diamond'
+                                            ? 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-900/20 dark:text-indigo-400'
+                                            : user.membershipLevel === 'platinum'
+                                                ? 'bg-zinc-50 text-zinc-700 border-zinc-200 dark:bg-zinc-900/20'
+                                                : user.membershipLevel === 'gold'
+                                                    ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400'
+                                                    : user.membershipLevel === 'silver'
+                                                        ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20'
+                                                        : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20'
                                         }`}>
-                                        {user.membershipLevel === 'gold' && <Crown className="w-2.5 h-2.5 fill-current" />}
+                                        {(user.membershipLevel === 'diamond' || user.membershipLevel === 'platinum' || user.membershipLevel === 'gold') && <Crown className="w-2.5 h-2.5 fill-current" />}
                                         {user.membershipLevel === 'silver' && <Star className="w-2.5 h-2.5 fill-current" />}
                                         {user.membershipLevel || 'Free'}
                                     </span>
@@ -628,15 +697,25 @@ export default function AdminDashboard() {
                                         >
                                             <td className="py-4 px-6">
                                                 <div className="flex items-center gap-3">
-                                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-sm
-                                                        ${user.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30' :
-                                                            user.membershipLevel === 'silver' ? 'bg-slate-100 text-slate-600 dark:bg-slate-800' :
-                                                                'bg-zinc-100 text-zinc-500 dark:bg-zinc-800'
+                                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-sm shrink-0
+                                                        ${user.membershipLevel === 'diamond' ? 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30' :
+                                                            user.membershipLevel === 'platinum' ? 'bg-slate-100 text-slate-600 dark:bg-slate-800' :
+                                                                user.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30' :
+                                                                    user.membershipLevel === 'silver' ? 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800' :
+                                                                        'bg-zinc-100 text-zinc-500 dark:bg-zinc-800'
                                                         }`}>
                                                         {user.name.charAt(0).toUpperCase()}
                                                     </div>
                                                     <div>
-                                                        <p className="font-semibold text-zinc-900 dark:text-zinc-100">{user.name}</p>
+                                                        <div className="flex items-center gap-2">
+                                                            <p className="font-semibold text-zinc-900 dark:text-zinc-100">{user.name}</p>
+                                                            {user.courseMode && (
+                                                                <span className={`text-[9px] px-1.5 py-0.5 rounded-md font-bold uppercase tracking-tight
+                                                                    ${user.courseMode === 'PS_GR_B' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300' : 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300'}`}>
+                                                                    {user.courseMode === 'PS_GR_B' ? 'PS Gr B' : 'LDCE IP'}
+                                                                </span>
+                                                            )}
+                                                        </div>
                                                         <p className="text-sm text-zinc-500 dark:text-zinc-400">{user.email}</p>
                                                     </div>
                                                 </div>
@@ -644,12 +723,18 @@ export default function AdminDashboard() {
                                             <td className="py-4 px-6">
                                                 <div className="flex flex-col items-start gap-1">
                                                     <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wide border shadow-sm
-                                                        ${user.membershipLevel === 'gold'
-                                                            ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50'
-                                                            : user.membershipLevel === 'silver'
-                                                                ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800/50'
-                                                                : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-500 dark:border-zinc-800/50'
+                                                        ${user.membershipLevel === 'diamond'
+                                                            ? 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-900/20 dark:text-indigo-400 dark:border-indigo-800/50'
+                                                            : user.membershipLevel === 'platinum'
+                                                                ? 'bg-zinc-50 text-zinc-700 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-400 dark:border-zinc-800/50'
+                                                                : user.membershipLevel === 'gold'
+                                                                    ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50'
+                                                                    : user.membershipLevel === 'silver'
+                                                                        ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800/50'
+                                                                        : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-500 dark:border-zinc-800/50'
                                                         }`}>
+                                                        {user.membershipLevel === 'diamond' && <Crown className="w-3 h-3 fill-current" />}
+                                                        {user.membershipLevel === 'platinum' && <Crown className="w-3 h-3 fill-current" />}
                                                         {user.membershipLevel === 'gold' && <Crown className="w-3 h-3 fill-current" />}
                                                         {user.membershipLevel === 'silver' && <Star className="w-3 h-3 fill-current" />}
                                                         {user.membershipLevel || 'Free'}
@@ -739,7 +824,10 @@ export default function AdminDashboard() {
                                         <p className="text-xs text-zinc-500 uppercase font-semibold">Current Plan</p>
                                         <p className="font-bold text-lg text-zinc-900 dark:text-zinc-100">{viewingPaymentUser.planName || 'N/A'}</p>
                                     </div>
-                                    <div className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${viewingPaymentUser.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-800'
+                                    <div className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${viewingPaymentUser.membershipLevel === 'diamond' ? 'bg-indigo-100 text-indigo-800' :
+                                        viewingPaymentUser.membershipLevel === 'platinum' ? 'bg-zinc-100 text-zinc-800' :
+                                            viewingPaymentUser.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-800' :
+                                                'bg-slate-100 text-slate-800'
                                         }`}>
                                         {viewingPaymentUser.membershipLevel}
                                     </div>
@@ -872,6 +960,17 @@ export default function AdminDashboard() {
                                 >
                                     <option value="user">User</option>
                                     <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Course Mode</label>
+                                <select
+                                    value={editingUser.courseMode || 'LDCE_IP'}
+                                    onChange={(e) => setEditingUser({ ...editingUser, courseMode: e.target.value as 'LDCE_IP' | 'PS_GR_B' })}
+                                    className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500/20"
+                                >
+                                    <option value="LDCE_IP">LDCE IP Exam</option>
+                                    <option value="PS_GR_B">PS Group &apos;B&apos; Exam</option>
                                 </select>
                             </div>
                             <div className="space-y-2">

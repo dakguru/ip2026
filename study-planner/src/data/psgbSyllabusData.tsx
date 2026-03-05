@@ -11,35 +11,35 @@ export const psgbSyllabusData = {
         category: "Acts",
         icon: <Book className="w-5 h-5" />,
         items: [
-          { name: "Consumer Protection Act, 2019", link: null, pdfs: [{ "title": "Consumer Protection Act, 2019", "path": "/notes/paper-1/Consumer_Protection_Act_2019.pdf" }] },
-          { name: "Prevention of Money Laundering Act, 2002", link: null, pdfs: [{ "title": "PMLA Act, 2002", "path": "/notes/paper-1/PMLA_2002.pdf" }] }
+          { name: "Consumer Protection Act, 2019", link: null },
+          { name: "Prevention of Money Laundering Act, 2002", link: null }
         ]
       },
       {
         category: "Inland/ Foreign Post",
         icon: <Book className="w-5 h-5" />,
         items: [
-          { name: "The Post Office Act, 2023 & The Post Office Rules, 2024", link: null, pdfs: [{ "title": "The Post Office Act, 2023", "path": "/notes/paper-1/PO_Act_2023_Rules_2024.pdf" }] },
-          { name: "The Post Office Regulations, 2024", link: null, pdfs: [{ "title": "The PO Regulations, 2024", "path": "/notes/paper-1/PO_Regulations_2024.pdf" }] },
-          { name: "Post Office Guide Part I", link: null, pdfs: [{ "title": "Post Office Guide Part-I", "path": "/notes/paper-1/PO_Guide_Part_I.pdf" }] },
-          { name: "Post Office Guide Part II", link: null, pdfs: [{ "title": "Post Office Guide Part-II", "path": "/notes/paper-1/PO Guide Part - II.pdf" }] },
+          { name: "The Post Office Act, 2023 & The Post Office Rules, 2024", link: null },
+          { name: "The Post Office Regulations, 2024", link: null },
+          { name: "Post Office Guide Part I", link: null },
+          { name: "Post Office Guide Part II", link: null },
           { name: "Domestic/Foreign Post guidelines issued by Directorate", link: null },
-          { name: "Book of BO Rules", link: null, pdfs: [{ "title": "Book of BO Rules", "path": "/notes/paper-1/Book_of_BO_Rules.pdf" }] }
+          { name: "Book of BO Rules", link: null }
         ]
       },
       {
         category: "Postal Manual",
         icon: <Book className="w-5 h-5" />,
         items: [
-          { name: "Postal Manual Volume V", link: null, pdfs: [{ "title": "Postal Manual Volume V", "path": "/notes/paper-1/Postal_Manual_Vol_V.pdf" }] },
-          { name: "Postal Manual Volume II (Chapter-I-organization)", link: null, pdfs: [{ "title": "Postal Manual Volume II", "path": "/notes/paper-1/Postal_Manual_Vol_II.pdf" }] }
+          { name: "Postal Manual Volume V", link: null },
+          { name: "Postal Manual Volume II (Chapter-I-organization)", link: null }
         ]
       },
       {
         category: "Mail Operations",
         icon: <Book className="w-5 h-5" />,
         items: [
-          { name: "Guidelines issued by Directorate from time to time on Mail Network optimization Project/PNOP / Business Development", link: null, pdfs: [{ "title": "MNOP & PNOP Guidelines", "path": "/notes/paper-1/MNOP_PNOP.pdf" }] }
+          { name: "Guidelines issued by Directorate from time to time on Mail Network optimization Project/PNOP / Business Development", link: null }
         ]
       },
       {
@@ -53,19 +53,19 @@ export const psgbSyllabusData = {
         category: "Saving Bank Scheme and Certificates",
         icon: <Book className="w-5 h-5" />,
         items: [
-          { name: "Government Savings Promotion General Rules, 2018", link: null, pdfs: [{ "title": "Government Savings Promotion Rules, 2018", "path": "/notes/paper-1/Government Savings Promotion Rules, 2018 FINAL.pdf" }] },
-          { name: "PO Small Savings Schemes", link: null, pdfs: [{ "title": "PO Small Savings Schemes", "path": "/notes/paper-1/PO_Small_Savings_Schemes.pdf" }] },
+          { name: "Government Savings Promotion General Rules, 2018", link: null },
+          { name: "PO Small Savings Schemes", link: null },
           { name: "Post Office Saving Bank Manual Volume I & II", link: null },
           { name: "SB orders issued by Directorate from 01.01.2007 onwards.", link: null },
           { name: "Guidelines issued by Directorate from time to time on Core Banking Services", link: null },
-          { name: "Post Office Saving Bank (CBS) Manual", link: null, pdfs: [{ "title": "POSB (CBS) Manual", "path": "/notes/paper-1/POSB_CBS_MANUAL.pdf" }] }
+          { name: "Post Office Saving Bank (CBS) Manual", link: null }
         ]
       },
       {
         category: "Postal Life Insurance and Rural PLI",
         icon: <Book className="w-5 h-5" />,
         items: [
-          { name: "Post Office Life Insurance Rules, 2011", link: null, pdfs: [{ "title": "Post Office Life Insurance Scheme, 2011", "path": "/notes/paper-1/poli-rules-2011.pdf" }] },
+          { name: "Post Office Life Insurance Rules, 2011", link: null },
           { name: "Guidelines issued by Directorate from time to time on PLI/RPLI and Core Insurance solution", link: null }
         ]
       },
@@ -74,7 +74,7 @@ export const psgbSyllabusData = {
         icon: <Book className="w-5 h-5" />,
         items: [
           { name: "Citizen Charter of Department of Posts.", link: null },
-          { name: "Guidelines and instructions on complaint grievances handling in Department of Posts.", link: null, pdfs: [{ "title": "Complaint & Grievance Handling", "path": "/notes/paper-1/Complaint_Grievance_Handling.pdf" }] }
+          { name: "Guidelines and instructions on complaint grievances handling in Department of Posts.", link: null }
         ]
       },
       {
@@ -97,7 +97,7 @@ export const psgbSyllabusData = {
         icon: <Book className="w-5 h-5" />,
         items: [
           { name: "Postal Manual Volume II - Chapter XI - Misc. Rules", link: null },
-          { name: "Manual of Office Procedure", link: null, pdfs: [{ "title": "Manual of Office Procedure", "path": "/notes/paper-1/Manual_of_Office_Procedure.pdf" }] },
+          { name: "Manual of Office Procedure", link: null },
           { name: "Annual Reports and Book of Information of D/o Posts", link: null }
         ]
       },
@@ -108,17 +108,17 @@ export const psgbSyllabusData = {
           { name: "Postal Manual Volume II Chapter VI (Stock), VIII (Printing), IX(Contracts), XII (Budget Estimates and control)", link: null },
           { name: "Chapter 6 of General Financial Rules, 2017", link: null },
           { name: "CVC guidelines on Public procurement, guide-lines and instructions on e-procurement.", link: null },
-          { name: "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.", link: null, pdfs: [{ "title": "Manual for Procurement of Goods & Services", "path": "/notes/paper-1/Manual_Procurement_Goods_Services.pdf" }] }
+          { name: "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.", link: null }
         ]
       },
       {
         category: "Establishment and Administrative matters",
         icon: <Book className="w-5 h-5" />,
         items: [
-          { name: "Postal Manual Volume IV.", link: null, pdfs: [{ "title": "Postal Manual Volume IV", "path": "/notes/paper-1/Postal_Manual_Vol_IV.pdf" }] },
-          { name: "Instructions issued by Directorate and DoP&T on maintenance of APAR.", link: null, pdfs: [{ "title": "Instructions on Maintenance of APAR", "path": "/notes/paper-1/Instructions_Maintenance_APAR.pdf" }] },
+          { name: "Postal Manual Volume IV.", link: null },
+          { name: "Instructions issued by Directorate and DoP&T on maintenance of APAR.", link: null },
           { name: "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.", link: null },
-          { name: "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", link: null, pdfs: [{ "title": "Welfare Measures", "path": "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf" }] },
+          { name: "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", link: null },
           { name: "DoP&T instructions issued from time to time on Establishment and administration.", link: null },
           { name: "Brochure on reservation, instructions regarding sports person reservation, compassionate appointment guidelines issued by DoP and DoP&T from time to time.", link: null },
           { name: "Recruitment Rules relating to various cadres in D/o Posts", link: null },
@@ -150,16 +150,16 @@ export const psgbSyllabusData = {
         category: "CCS Rules",
         icon: <Briefcase className="w-5 h-5" />,
         items: [
-          { name: "Central Civil Services (Conduct) Rules, 1964", link: null, pdfs: [{ "title": "CCS (Conduct) Rules, 1964", "path": "/notes/paper-1/CCS_Conduct_Rules_1965.pdf" }] },
-          { name: "Central Civil Services (Classification, Control and Appeal) Rules, 1965", link: null, pdfs: [{ "title": "CCS (CCA) Rules, 1965", "path": "/notes/paper-1/CCS_CCA_Rules_1965.pdf" }] },
-          { name: "Central Civil Services (Temporary Service Rules), 1965", link: null, pdfs: [{ "title": "CCS (Temporary Service) Rules, 1965", "path": "/notes/paper-1/CCS_Temporary_Services_Rules_1965.pdf" }] },
-          { name: "Brochure on Casual labourer", link: null, pdfs: [{ "title": "Brochure on Casual Labourers", "path": "/notes/paper-3/Brochure_Casual_Labourers.pdf" }] },
-          { name: "CCS (Pension) Rules, 2021", link: null, pdfs: [{ "title": "CCS (Pension) Rules, 2021", "path": "/notes/paper-3/CCS_Pension_Rules_2021.pdf" }] },
+          { name: "Central Civil Services (Conduct) Rules, 1964", link: null },
+          { name: "Central Civil Services (Classification, Control and Appeal) Rules, 1965", link: null },
+          { name: "Central Civil Services (Temporary Service Rules), 1965", link: null },
+          { name: "Brochure on Casual labourer", link: null },
+          { name: "CCS (Pension) Rules, 2021", link: null },
           { name: "CCS NPS Rules (Implementation & Gratuity)", link: null },
-          { name: "Central Civil Services (Commutation of Pension) Rules, 1981", link: null, pdfs: [{ "title": "CCS (Commutation of Pension) Rules, 1981", "path": "/notes/paper-3/CCS_Commutation_Pension_Rules_1981.pdf" }] },
-          { name: "Central Civil Services (Leave) Rules, 1972", link: null, pdfs: [{ "title": "CCS (Leave) Rules, 1972", "path": "/notes/paper-3/CCS_Leave_Rules_1972.pdf" }] },
+          { name: "Central Civil Services (Commutation of Pension) Rules, 1981", link: null },
+          { name: "Central Civil Services (Leave) Rules, 1972", link: null },
           { name: "Central Civil Services (Joining Time) Rules, 1979", link: null },
-          { name: "General Provident Fund (Central Service) Rules, 1960", link: null, pdfs: [{ "title": "CCS (GPF) Rules, 1961", "path": "/notes/paper-3/CCS_GPF_Rules_1961.pdf" }] },
+          { name: "General Provident Fund (Central Service) Rules, 1960", link: null },
           { name: "Central Services (Medical Attendance) Rules, 1944", link: null },
           { name: "Fundamental and Supplementary Rules", link: null },
           { name: "Central Civil Services (Leave Travel Concession) Rules, 1988", link: null },
@@ -173,7 +173,7 @@ export const psgbSyllabusData = {
         category: "Postal Manual",
         icon: <Briefcase className="w-5 h-5" />,
         items: [
-          { name: "Postal Manual Volume III", link: null, pdfs: [{ "title": "Postal Manual Volume III", "path": "/notes/paper-1/Postal_Manual_Vol_III.pdf" }] },
+          { name: "Postal Manual Volume III", link: null },
           { name: "Postal Manual Volume II: Chapter III - Appeals and Petitions, Chapter IV-Personal matters, Chapter V-Security Deposits, Chapter VII - Forged counterfeit stamps and defaced postage stamps, coins and currency notes.", link: null }
         ]
       },
@@ -181,7 +181,7 @@ export const psgbSyllabusData = {
         category: "Subjects",
         icon: <Briefcase className="w-5 h-5" />,
         items: [
-          { name: "Postal Financial Handbook Volume I and II", link: null, pdfs: [{ "title": "P&T FHB Vol I", "path": "/notes/paper-3/FHB_Vol_I.pdf" }, { "title": "Postal FHB Vol II", "path": "/notes/paper-3/FHB_Vol_II.pdf" }] },
+          { name: "Postal Financial Handbook Volume I and II", link: null },
           { name: "General Financial Rules 2017 other than public procurement", link: null },
           { name: "Interface with India Post Payment Bank", link: null },
           { name: "Preservation and Disposal of Postal Records", link: null },
@@ -194,19 +194,19 @@ export const psgbSyllabusData = {
         category: "GDS Rules",
         icon: <Briefcase className="w-5 h-5" />,
         items: [
-          { name: "Gramin Dak Sevak (Conduct and Engagement) Rules, 2011.", link: null, pdfs: [{ "title": "GDS (Conduct & Engagement) Rules, 2020", "path": "/notes/paper-1/GDS_CE_Rules_2020.pdf" }] }
+          { name: "Gramin Dak Sevak (Conduct and Engagement) Rules, 2011.", link: null }
         ]
       },
       {
         category: "Law Paper",
         icon: <Briefcase className="w-5 h-5" />,
         items: [
-          { name: "Central Administrative Tribunal Act, 1985 and its Rules", link: null, pdfs: [{ "title": "Central Administrative Tribunal Act, 1985", "path": "/notes/paper-3/CENTRAL_ADMINISTRATIVE_TRIBUNALS_ACT_1985.pdf" }] },
-          { name: "Right to Information Act 2005 and RTI Rules 2012", link: null, pdfs: [{ "title": "RTI Act, 2005 and RTI Rules, 2012", "path": "/notes/paper-3/RTI_Act_2005_and_RTI_Rules_2012.pdf" }] },
-          { name: "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013", link: null, pdfs: [{ "title": "Sexual Harassment of Women at Workplace Act, 2013", "path": "/notes/paper-3/POSH_Rules_2013.pdf" }] },
+          { name: "Central Administrative Tribunal Act, 1985 and its Rules", link: null },
+          { name: "Right to Information Act 2005 and RTI Rules 2012", link: null },
+          { name: "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013", link: null },
           { name: "Public Accountants Default Act, 1850", link: null },
-          { name: "Revenue Recovery Act, 1890", link: null, pdfs: [{ "title": "Revenue Recovery Act, 1890", "path": "/notes/paper-3/Revenue_Recovery_Act_1890.pdf" }] },
-          { name: "Prevention of Corruption Act, 1988 read with its (Amendment) Act, 2018", link: null, pdfs: [{ "title": "Prevention of Corruption Act, 1988", "path": "/notes/paper-3/Prevention_of_Corruption_Act_1988.pdf" }] },
+          { name: "Revenue Recovery Act, 1890", link: null },
+          { name: "Prevention of Corruption Act, 1988 read with its (Amendment) Act, 2018", link: null },
           { name: "Goods and Services Tax (GST) Act, 2017", link: null }
         ]
       }

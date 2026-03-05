@@ -3,6 +3,7 @@
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import MobileDashboard from "@/components/MobileDashboard";
 import WebLandingPage from "@/components/WebLandingPage";
+import CourseModePromptModal from "@/components/CourseModePromptModal";
 import { useEffect, useState } from "react";
 
 interface HomeManagerProps {
@@ -27,8 +28,18 @@ export default function HomeManager({ displayName, membershipLevel, role, isLogg
 
     // Show Mobile Dashboard ONLY if it's the Native App (as per user request to revert mobile browser view)
     if (isNativeApp) {
-        return <MobileDashboard displayName={displayName} />;
+        return (
+            <>
+                <MobileDashboard displayName={displayName} />
+                {isLoggedIn && <CourseModePromptModal />}
+            </>
+        );
     }
 
-    return <WebLandingPage displayName={displayName} membershipLevel={membershipLevel} role={role} isLoggedIn={isLoggedIn} />;
+    return (
+        <>
+            <WebLandingPage displayName={displayName} membershipLevel={membershipLevel} role={role} isLoggedIn={isLoggedIn} />
+            {isLoggedIn && <CourseModePromptModal />}
+        </>
+    );
 }

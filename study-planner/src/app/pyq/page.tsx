@@ -17,6 +17,7 @@ export default function PyqDashboard() {
 
     // Membership State
     const [membershipLevel, setMembershipLevel] = useState<string>('free');
+    const [planId, setPlanId] = useState<string>('');
 
     useEffect(() => {
         try {
@@ -27,6 +28,9 @@ export default function PyqDashboard() {
                 const session = JSON.parse(decoded);
                 if (session && session.membershipLevel) {
                     setMembershipLevel(session.membershipLevel);
+                }
+                if (session && session.planId) {
+                    setPlanId(session.planId);
                 }
             }
         } catch (e) {
@@ -56,7 +60,7 @@ export default function PyqDashboard() {
 
     const handleTopicSelect = (topic: QuizTopic) => {
         // Enforce access control
-        const isLocked = !['gold', 'silver'].includes(membershipLevel.toLowerCase());
+        const isLocked = !isUnlocked();
 
         if (isLocked) {
             return;
@@ -349,6 +353,11 @@ export default function PyqDashboard() {
     const pyqTopics = QUIZ_DATA.filter(t => t.category === 'PYQ');
 
     const isUnlocked = () => {
+        if (course === 'PS_GR_B') {
+            const hasDiamond = membershipLevel === 'gold' && (planId.includes('diamond') || planId.includes('ps_gr_b'));
+            const hasPlatinum = membershipLevel === 'silver' && (planId.includes('platinum') || planId.includes('ps_gr_b'));
+            return hasDiamond || hasPlatinum;
+        }
         return ['gold', 'silver'].includes(membershipLevel.toLowerCase());
     };
 

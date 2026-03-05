@@ -16,6 +16,8 @@ import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
 import { WEEKLY_MOCK_04_QUESTIONS } from "@/data/weekly_mock_data_04";
 import { WEEKLY_MOCK_05_QUESTIONS } from "@/data/weekly_mock_data_05";
 import { WEEKLY_MOCK_06_QUESTIONS } from "@/data/weekly_mock_data_06";
+import { WEEKLY_MOCK_07_QUESTIONS } from "@/data/weekly_mock_data_07";
+import { WEEKLY_MOCK_08_QUESTIONS } from "@/data/weekly_mock_data_08";
 import { FileDown } from "lucide-react";
 
 // Map IDs to Question Data for PDF Generation
@@ -25,7 +27,9 @@ const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS,
     "mock-2026-02-07": WEEKLY_MOCK_04_QUESTIONS,
     "mock-2026-02-14": WEEKLY_MOCK_05_QUESTIONS,
-    "mock-2026-02-21": WEEKLY_MOCK_06_QUESTIONS
+    "mock-2026-02-21": WEEKLY_MOCK_06_QUESTIONS,
+    "mock-2026-02-28": WEEKLY_MOCK_07_QUESTIONS,
+    "mock-2026-03-07": WEEKLY_MOCK_08_QUESTIONS
 };
 
 // Mock Test Interface
@@ -405,7 +409,9 @@ export default function MockTestsPage() {
         }
     };
 
-    if (course === 'PS_GR_B') {
+    const isPsGroupB = course === 'PS_GR_B';
+
+    if (isPsGroupB) {
         return (
             <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-6 transition-colors">
                 <div className="relative w-full max-w-2xl text-center">
@@ -422,7 +428,7 @@ export default function MockTestsPage() {
                         </h1>
 
                         <p className="text-base sm:text-xl text-zinc-700 dark:text-zinc-300 font-medium leading-relaxed max-w-xl mx-auto mb-10">
-                            PS Group B Live Mock Test Series will be commenced soon.. Stay tuned for updates.
+                            All India Mock Test Series for LDCE PS Gr B is coming soon.. Stay tuned for updates.
                         </p>
 
                         <Link href="/" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-bold hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
@@ -469,7 +475,7 @@ export default function MockTestsPage() {
                             <h1 className="text-3xl font-black text-white leading-tight mb-2">
                                 All India Mock Tests
                                 <span className="block text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                    LDCE IP 2026
+                                    {isPsGroupB ? "PS Group B 2026" : "LDCE IP 2026"}
                                 </span>
                             </h1>
 
@@ -540,7 +546,7 @@ export default function MockTestsPage() {
                         <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight">
                             All India Mock Tests <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                for LDCE IP 2026
+                                {isPsGroupB ? "for PS Group B 2026" : "for LDCE IP 2026"}
                             </span>
                         </h1>
 

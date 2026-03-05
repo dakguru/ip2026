@@ -3,12 +3,10 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { format } from "date-fns";
-import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight, FlaskConical, BarChart2, Bell, MessageSquare, Send, ExternalLink } from "lucide-react";
+import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight, FlaskConical, Bell, MessageSquare, Send, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import AnalyticsDashboard from "@/components/AnalyticsDashboard";
 import UpdatesDrawer from "@/components/UpdatesDrawer";
-import { FULL_SCHEDULE } from "@/data/schedule";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useBetaAccess } from "@/hooks/useBetaAccess";
 import { useCourse } from "@/contexts/CourseContext";
@@ -64,9 +62,6 @@ export default function SettingsPage() {
     const [passwordMessage, setPasswordMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
     const [isPasswordLoading, setIsPasswordLoading] = useState(false);
 
-    // Progress Data for Dashboard
-    const [progressData, setProgressData] = useState<Record<string, any>>({});
-    const [studyPlan, setStudyPlan] = useState<any[]>([]);
     const isMobileApp = useIsMobileApp();
     const hasBetaAccess = useBetaAccess();
     const { course, setCourse } = useCourse();
@@ -80,33 +75,6 @@ export default function SettingsPage() {
 
     useEffect(() => {
         fetchProfile();
-        // Load Progress
-        const savedProgress = localStorage.getItem('ldce2026_progress');
-        if (savedProgress) {
-            // The saved progress in planner/page.tsx is Record<string, boolean>
-            // But AnalyticsDashboard expects Record<string, { completed: boolean }>
-            // We need to check the format.
-            // planner/page.tsx stores: const updated = { ...completedDays, [date]: true }; -> So it's boolean.
-            // AnalyticsDashboard usage: progress[p.date]?.completed
-            // So we need to adapt the boolean record to object record if needed.
-
-            const raw = JSON.parse(savedProgress);
-            const adapted: Record<string, any> = {};
-            Object.keys(raw).forEach(k => {
-                adapted[k] = { completed: raw[k] };
-            });
-            setProgressData(adapted);
-        }
-
-        // Load Plan from FULL_SCHEDULE to match Planner Page
-        // Transform schedule items to PlanItem format
-        const adaptedPlan: any[] = FULL_SCHEDULE.map(item => ({
-            date: item.date, // Keeps "DD-MM-YYYY" format to match storage keys
-            title: `${item.paper}: ${item.subTopic}`,
-            type: (item.paper === 'Revision' || item.paper === 'End') ? 'revision' : 'light',
-            category: item.paper
-        }));
-        setStudyPlan(adaptedPlan);
     }, []);
 
     useEffect(() => {
@@ -294,7 +262,6 @@ export default function SettingsPage() {
             security: 'Password & Security',
             course: 'Course Mode',
             membership: 'Membership',
-            progress: 'My Progress',
             contact: 'Contact Us',
         };
 
@@ -426,53 +393,31 @@ export default function SettingsPage() {
                         {/* Course Mode */}
                         {activeSection === 'course' && (
                             <div className="space-y-4">
-                                {hasBetaAccess ? (
-                                    <>
-                                        <p className="text-sm text-zinc-500 dark:text-zinc-400">Switch between exam categories. This changes the content across the app.</p>
-                                        <div className="grid grid-cols-2 gap-3">
-                                            <button onClick={() => setCourse('LDCE_IP')}
-                                                className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'LDCE_IP'
-                                                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500/20'
-                                                    : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
-                                                {course === 'LDCE_IP' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>}
-                                                <p className="font-bold text-zinc-900 dark:text-zinc-100">LDCE IP</p>
-                                                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Inspector Posts 2026</p>
-                                            </button>
-                                            <button onClick={() => setCourse('PS_GR_B')}
-                                                className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'PS_GR_B'
-                                                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 ring-2 ring-purple-500/20'
-                                                    : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
-                                                {course === 'PS_GR_B' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>}
-                                                <div className="flex items-center gap-2">
-                                                    <p className="font-bold text-zinc-900 dark:text-zinc-100">PS Group B</p>
-                                                    <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-300">BETA</span>
-                                                </div>
-                                                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">PS Group B Exam</p>
-                                            </button>
-                                        </div>
-                                        <button
-                                            onClick={() => router.push('/')}
-                                            className="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 mt-6"
-                                        >
-                                            Change Course Mode & Go to Home
-                                        </button>
-                                    </>
-                                ) : (
-                                    <div className="flex flex-col items-center justify-center py-12 px-4 text-center space-y-4 bg-zinc-50 dark:bg-zinc-900 rounded-3xl border border-zinc-100 dark:border-zinc-800 border-dashed">
-                                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/20 dark:to-blue-900/20 flex items-center justify-center mb-2">
-                                            <FlaskConical className="w-8 h-8 text-purple-600 dark:text-purple-400" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Coming Soon</h3>
-                                            <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-[280px] mx-auto mt-1">
-                                                We are working on bringing more exam categories like <span className="font-semibold text-purple-600 dark:text-purple-400">PS Group B</span> soon!
-                                            </p>
-                                        </div>
-                                        <div className="px-4 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-[11px] font-bold text-zinc-500 uppercase tracking-wider">
-                                            Under Development
-                                        </div>
-                                    </div>
-                                )}
+                                <p className="text-sm text-zinc-500 dark:text-zinc-400">Switch between exam categories. This changes the content across the app.</p>
+                                <div className="grid grid-cols-2 gap-3">
+                                    <button onClick={() => setCourse('LDCE_IP')}
+                                        className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'LDCE_IP'
+                                            ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500/20'
+                                            : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
+                                        {course === 'LDCE_IP' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>}
+                                        <p className="font-bold text-zinc-900 dark:text-zinc-100">LDCE IP</p>
+                                        <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Inspector Posts 2026</p>
+                                    </button>
+                                    <button onClick={() => setCourse('PS_GR_B')}
+                                        className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'PS_GR_B'
+                                            ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 ring-2 ring-purple-500/20'
+                                            : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
+                                        {course === 'PS_GR_B' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>}
+                                        <p className="font-bold text-zinc-900 dark:text-zinc-100">PS Group B</p>
+                                        <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">PS Group B Exam</p>
+                                    </button>
+                                </div>
+                                <button
+                                    onClick={() => router.push('/')}
+                                    className="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 mt-6"
+                                >
+                                    Change Course Mode & Go to Home
+                                </button>
                             </div>
                         )}
 
@@ -505,11 +450,6 @@ export default function SettingsPage() {
                                     </div>
                                 </div>
                             </div>
-                        )}
-
-                        {/* My Progress */}
-                        {activeSection === 'progress' && (
-                            <AnalyticsDashboard plan={studyPlan} progress={progressData} />
                         )}
 
                         {/* Contact Us */}
@@ -702,13 +642,6 @@ export default function SettingsPage() {
                             iconBg="bg-amber-50 dark:bg-amber-900/20" iconColor="text-amber-600 dark:text-amber-400" last />
                     </div>
 
-                    {/* Progress Card */}
-                    <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
-                        <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest px-4 pt-4 pb-1.5">Progress</p>
-                        <MobileMenuItem icon={BarChart2} label="My Progress" onClick={() => setActiveSection('progress')}
-                            iconBg="bg-emerald-50 dark:bg-emerald-900/20" iconColor="text-emerald-600 dark:text-emerald-400" last />
-                    </div>
-
                     {/* Support Card */}
                     <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
                         <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest px-4 pt-4 pb-1.5">Support</p>
@@ -757,15 +690,6 @@ export default function SettingsPage() {
                     </div>
                 )}
 
-                {/* 1. Progress Dashboard (Embedded) */}
-                <div className="space-y-4">
-                    <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-                        <span className="w-1.5 h-6 bg-blue-600 rounded-full"></span>
-                        My Progress
-                    </h2>
-                    <AnalyticsDashboard plan={studyPlan} progress={progressData} />
-                </div>
-
                 {/* 2. Membership Card */}
                 <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 text-white rounded-3xl p-6 shadow-xl relative overflow-hidden group">
                     {/* Background Glow */}
@@ -799,8 +723,8 @@ export default function SettingsPage() {
                     </div>
                 </div>
 
-                {/* Beta Course Mode Switcher — only for whitelisted users */}
-                {hasBetaAccess && (
+                {/* Course Mode Switcher */}
+                {
                     <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">
                         <div className="flex items-center gap-4 mb-6 pb-6 border-b border-zinc-100 dark:border-zinc-800">
                             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400">
@@ -837,10 +761,7 @@ export default function SettingsPage() {
                                 {course === 'PS_GR_B' && (
                                     <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>
                                 )}
-                                <div className="flex items-center gap-2">
-                                    <p className="font-bold text-zinc-900 dark:text-zinc-100">PS Group B</p>
-                                    <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-300">BETA</span>
-                                </div>
+                                <p className="font-bold text-zinc-900 dark:text-zinc-100">PS Group B</p>
                                 <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">PS Group B Exam</p>
                             </button>
                         </div>
@@ -854,7 +775,7 @@ export default function SettingsPage() {
                             </button>
                         </div>
                     </div>
-                )}
+                }
 
                 {/* 3. Account Settings */}
                 <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">

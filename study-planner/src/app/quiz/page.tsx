@@ -78,6 +78,7 @@ export default function QuizDashboard() {
 
     // Membership State
     const [membershipLevel, setMembershipLevel] = useState<string>('free');
+    const [planId, setPlanId] = useState<string>('');
     const [userName, setUserName] = useState<string>("Aspirant");
 
     useEffect(() => {
@@ -89,6 +90,9 @@ export default function QuizDashboard() {
                 const session = JSON.parse(decoded);
                 if (session && session.membershipLevel) {
                     setMembershipLevel(session.membershipLevel);
+                }
+                if (session && session.planId) {
+                    setPlanId(session.planId);
                 }
                 if (session && session.name) {
                     setUserName(session.name);
@@ -123,7 +127,7 @@ export default function QuizDashboard() {
 
     const handleTopicSelect = (topic: QuizTopic) => {
         // Double check locked state (though UI should prevent it)
-        const isLocked = !['gold', 'silver'].includes(membershipLevel.toLowerCase()) && !ALLOWED_FREE_TOPICS.includes(topic.id);
+        const isLocked = !isUnlocked(topic.id);
 
         if (isLocked) {
             // Optional: Show upgrade modal or redirect
@@ -726,6 +730,11 @@ export default function QuizDashboard() {
     const group2Topics = activeData.filter(t => t.category === group2Title);
 
     const isUnlocked = (topicId: string) => {
+        if (course === 'PS_GR_B') {
+            const hasDiamond = membershipLevel === 'gold' && (planId.includes('diamond') || planId.includes('ps_gr_b'));
+            const hasPlatinum = membershipLevel === 'silver' && (planId.includes('platinum') || planId.includes('ps_gr_b'));
+            return hasDiamond || hasPlatinum || ALLOWED_FREE_TOPICS.includes(topicId);
+        }
         return ['gold', 'silver'].includes(membershipLevel.toLowerCase()) || ALLOWED_FREE_TOPICS.includes(topicId);
     };
 

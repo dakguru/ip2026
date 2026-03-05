@@ -754,6 +754,7 @@ export default function NotesPage() {
     const [activeTab, setActiveTab] = useState(TABS[0]);
     const [selectedPdf, setSelectedPdf] = useState<{ url: string, title: string } | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
+    const [planId, setPlanId] = useState<string>('');
 
     // Advisory Modal State
     const [showAdvisory, setShowAdvisory] = useState(false);
@@ -797,6 +798,7 @@ export default function NotesPage() {
                     const session = JSON.parse(decodeURIComponent(match[2]));
                     if (session.membershipLevel) {
                         setMembershipLevel(session.membershipLevel);
+                        if (session.planId) setPlanId(session.planId);
                     }
                 } catch (e) {
                     console.error("Failed to parse session", e);
@@ -916,6 +918,10 @@ export default function NotesPage() {
     };
 
     const activeData = isPS ? { ...PSGB_PDF_DATA, "SB Orders": PDF_DATA["SB Orders"] } : PDF_DATA;
+    // Diamond logic: if in PSGB mode, only allow access if the plan ID has 'diamond', else default to gold check.
+    const hasPremiumAccess = isPS
+        ? (membershipLevel === 'gold' && (planId?.includes('diamond') || planId?.includes('ps_gr_b')))
+        : membershipLevel === 'gold';
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200">
@@ -1032,7 +1038,7 @@ export default function NotesPage() {
                         >
                             <div className="flex items-start justify-between mb-4">
                                 <div className={`p-2 md:p-3 rounded-xl ${file.comingSoon
-                                    ? membershipLevel === 'gold' ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
+                                    ? hasPremiumAccess ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
                                     : file.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' :
                                         file.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400' :
                                             file.color === 'emerald' ? 'bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400' :
@@ -1046,7 +1052,7 @@ export default function NotesPage() {
                                                                             file.color === 'sky' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400' :
                                                                                 'bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
                                     }`}>
-                                    {file.comingSoon && membershipLevel !== 'gold' ? (
+                                    {file.comingSoon && !hasPremiumAccess ? (
                                         <Lock className="w-6 h-6 md:w-8 md:h-8" />
                                     ) : (
                                         <FileText className="w-6 h-6 md:w-8 md:h-8" />
@@ -1072,7 +1078,7 @@ export default function NotesPage() {
                             </p>
 
                             {file.comingSoon ? (
-                                membershipLevel === 'gold' ? (
+                                hasPremiumAccess ? (
                                     <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-950/40 dark:to-amber-900/40 border border-amber-200 dark:border-amber-800/50 p-3 flex flex-col items-center justify-center text-center group-hover:from-amber-100 group-hover:to-amber-200 dark:group-hover:from-amber-900/60 dark:group-hover:to-amber-900/60 transition-all">
                                         <div className="relative flex items-center gap-2 text-amber-900 dark:text-amber-100 font-bold text-sm mb-1">
                                             <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
@@ -1094,7 +1100,7 @@ export default function NotesPage() {
                                     </div>
                                 )
                             ) : (
-                                membershipLevel === 'gold' || file.isFree ? (
+                                hasPremiumAccess || file.isFree ? (
                                     <>
                                         <div className="grid grid-cols-2 gap-1.5 md:gap-3 mt-auto">
                                             <button

@@ -48,6 +48,7 @@ export async function POST(request: Request) {
             mobile: user.mobile,
             role: user.role,
             membershipLevel: user.membershipLevel,
+            planId: user.planId,
             sessionId: sessionId
         }), {
             httpOnly: false,

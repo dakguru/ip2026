@@ -117,6 +117,7 @@ export default function FlashcardsPage() {
     const [mounted, setMounted] = useState(false);
     const [userRole, setUserRole] = useState<string | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<string | null>(null);
+    const [planId, setPlanId] = useState<string>('');
     const [isLoadingAuth, setIsLoadingAuth] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -194,6 +195,7 @@ export default function FlashcardsPage() {
                 const session = JSON.parse(decodeURIComponent(match[2]));
                 setUserRole(session.role || 'user');
                 setMembershipLevel(session.membershipLevel || 'free');
+                if (session.planId) setPlanId(session.planId);
             } catch (e) {
                 console.error("Failed to parse session", e);
             }
@@ -229,7 +231,7 @@ export default function FlashcardsPage() {
 
     // --- ACCESS CONTROL ---
     // --- ACCESS CONTROL ---
-    const hasAccess = userRole === 'admin' || membershipLevel === 'gold';
+    const hasAccess = userRole === 'admin' || (course === 'PS_GR_B' ? (membershipLevel === 'gold' && (planId.includes('diamond') || planId.includes('ps_gr_b'))) : membershipLevel === 'gold');
 
     // Early return removed to allow free users to see the library (but locked)
 
@@ -237,9 +239,10 @@ export default function FlashcardsPage() {
     const handleSelectDeck = (id: string, startIdx: number = 0, shuffle: boolean = false) => {
         // Check for restricted categories
         if (id !== 'bookmarks') {
-            const topic = QUIZ_DATA.find(t => t.id === id);
+            const activeData = course === 'PS_GR_B' ? PSGB_QUIZ_DATA : QUIZ_DATA;
+            const topic = activeData.find(t => t.id === id);
             const category = topic?.category;
-            const isRestricted = category === 'Paper I' || category === 'Paper III' || category === 'PYQ';
+            const isRestricted = category === 'Paper I' || category === 'Paper II' || category === 'Paper III' || category === 'PYQ';
 
             if (isRestricted && !hasAccess) {
                 router.push('/pricing'); // Redirect free users to pricing only for restricted content

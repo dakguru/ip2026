@@ -73,11 +73,12 @@ export async function POST(request: Request) {
         });
 
         // Trigger Notification
+        const modeLabel = courseMode === 'PS_GR_B' ? "PS Group 'B'" : "LDCE IP";
         await createNotification(
             'new_user',
             'New User Registration',
-            `A new user ${name} (${email}) has joined the platform.`,
-            { userId: email, name, email }
+            `A new user ${name} (${email}) has joined the platform for ${modeLabel}.`,
+            { userId: email, name, email, courseMode: courseMode || 'LDCE_IP' }
         );
 
         // Send Welcome Email

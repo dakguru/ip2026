@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
+import { useCourse } from "@/contexts/CourseContext";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -33,11 +34,13 @@ interface UserSession {
     email?: string;
     role?: 'user' | 'admin';
     membershipLevel?: 'free' | 'silver' | 'gold';
+    planId?: string;
 }
 
 export function UserMenu() {
     const { theme, setTheme } = useTheme();
     const router = useRouter();
+    const { course } = useCourse();
     const [session, setSession] = useState<UserSession | null>(null);
     const [mounted, setMounted] = useState(false);
 
@@ -195,17 +198,37 @@ export function UserMenu() {
                         </button>
                     )}
 
-                    {session?.membershipLevel !== 'gold' && (
-                        <button
-                            onClick={() => router.push('/pricing')}
-                            className={`w-full flex items-center justify-center gap-2 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95 ${session?.membershipLevel === 'silver'
-                                ? 'bg-gradient-to-r from-amber-400 to-yellow-600 text-white'
-                                : 'bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900'
-                                }`}
-                        >
-                            <span>{session?.membershipLevel === 'silver' ? 'Upgrade to Gold' : 'Upgrade to Pro'}</span>
-                        </button>
-                    )}
+                    {(() => {
+                        if (course === 'PS_GR_B') {
+                            const hasDiamond = session?.membershipLevel === 'gold' && (session?.planId?.includes('diamond') || session?.planId?.includes('ps_gr_b'));
+                            if (!hasDiamond) {
+                                return (
+                                    <button
+                                        onClick={() => router.push('/pricing')}
+                                        className="w-full flex items-center justify-center gap-2 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white"
+                                    >
+                                        <span>Upgrade to Diamond</span>
+                                    </button>
+                                );
+                            }
+                            return null;
+                        }
+
+                        if (session?.membershipLevel !== 'gold') {
+                            return (
+                                <button
+                                    onClick={() => router.push('/pricing')}
+                                    className={`w-full flex items-center justify-center gap-2 text-sm font-semibold py-2 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95 ${session?.membershipLevel === 'silver'
+                                        ? 'bg-gradient-to-r from-amber-400 to-yellow-600 text-white'
+                                        : 'bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-zinc-100 dark:to-zinc-300 text-white dark:text-zinc-900'
+                                        }`}
+                                >
+                                    <span>{session?.membershipLevel === 'silver' ? 'Upgrade to Gold' : 'Upgrade to Pro'}</span>
+                                </button>
+                            );
+                        }
+                        return null;
+                    })()}
                 </div>
 
             </DropdownMenuContent>

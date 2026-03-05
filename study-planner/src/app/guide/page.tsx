@@ -4,8 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import { ArrowLeft, ShieldCheck, Scale, Briefcase, BookOpen, ChevronRight, Zap, Star, Gavel, Lock, ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
+import { useCourse } from '@/contexts/CourseContext';
 
 export default function GuidePage() {
+    const { course } = useCourse();
     const [isLocked, setIsLocked] = useState(true);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -16,7 +18,20 @@ export default function GuidePage() {
                 const value = cookie.split('=')[1];
                 const decoded = decodeURIComponent(value);
                 const session = JSON.parse(decoded);
-                if (session && (session.membershipLevel === 'gold' || session.membershipLevel === 'silver')) {
+
+                const level = session?.membershipLevel || 'free';
+                const planId = session?.planId || '';
+
+                let unlocked = false;
+                if (course === 'PS_GR_B') {
+                    const hasDiamond = level === 'gold' && (planId.includes('diamond') || planId.includes('ps_gr_b'));
+                    const hasPlatinum = level === 'silver' && (planId.includes('platinum') || planId.includes('ps_gr_b'));
+                    unlocked = hasDiamond || hasPlatinum;
+                } else {
+                    unlocked = level === 'gold' || level === 'silver';
+                }
+
+                if (unlocked) {
                     setIsLocked(false);
                 }
             }
@@ -25,7 +40,7 @@ export default function GuidePage() {
         } finally {
             setIsLoading(false);
         }
-    }, []);
+    }, [course]);
 
     if (isLoading) {
         return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-slate-400">Loading access...</div>;
