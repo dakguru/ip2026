@@ -819,7 +819,7 @@ export default function NotesPage() {
         }
     }, [showDownloadToast]);
 
-    const getReleaseDate = (title: string, fallback: string = "As per schedule") => {
+    const getReleaseDate = (title: string, fallback: string = "or before 31.03.2026") => {
         return SCHEDULE_MAPPING[title] || fallback;
     };
 

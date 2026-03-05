@@ -74,7 +74,7 @@ export const psgbSyllabusData = {
         icon: <Book className="w-5 h-5" />,
         items: [
           { name: "Citizen Charter of Department of Posts.", link: null },
-          { name: "Guidelines and instructions on complaint grievances handling in Department of Posts.", link: null }
+          { name: "Guidelines and instructions on complaint grievances handling in Department of Posts.", link: null, pdfs: [{ "title": "Complaint & Grievance Handling", "path": "/notes/paper-1/Complaint_Grievance_Handling.pdf" }] }
         ]
       },
       {
@@ -97,7 +97,7 @@ export const psgbSyllabusData = {
         icon: <Book className="w-5 h-5" />,
         items: [
           { name: "Postal Manual Volume II - Chapter XI - Misc. Rules", link: null },
-          { name: "Manual of Office Procedure", link: null },
+          { name: "Manual of Office Procedure", link: null, pdfs: [{ "title": "Manual of Office Procedure", "path": "/notes/paper-1/Manual_of_Office_Procedure.pdf" }] },
           { name: "Annual Reports and Book of Information of D/o Posts", link: null }
         ]
       },
@@ -108,7 +108,7 @@ export const psgbSyllabusData = {
           { name: "Postal Manual Volume II Chapter VI (Stock), VIII (Printing), IX(Contracts), XII (Budget Estimates and control)", link: null },
           { name: "Chapter 6 of General Financial Rules, 2017", link: null },
           { name: "CVC guidelines on Public procurement, guide-lines and instructions on e-procurement.", link: null },
-          { name: "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.", link: null }
+          { name: "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.", link: null, pdfs: [{ "title": "Manual for Procurement of Goods & Services", "path": "/notes/paper-1/Manual_Procurement_Goods_Services.pdf" }] }
         ]
       },
       {
@@ -116,7 +116,7 @@ export const psgbSyllabusData = {
         icon: <Book className="w-5 h-5" />,
         items: [
           { name: "Postal Manual Volume IV.", link: null, pdfs: [{ "title": "Postal Manual Volume IV", "path": "/notes/paper-1/Postal_Manual_Vol_IV.pdf" }] },
-          { name: "Instructions issued by Directorate and DoP&T on maintenance of APAR.", link: null },
+          { name: "Instructions issued by Directorate and DoP&T on maintenance of APAR.", link: null, pdfs: [{ "title": "Instructions on Maintenance of APAR", "path": "/notes/paper-1/Instructions_Maintenance_APAR.pdf" }] },
           { name: "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.", link: null },
           { name: "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", link: null, pdfs: [{ "title": "Welfare Measures", "path": "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf" }] },
           { name: "DoP&T instructions issued from time to time on Establishment and administration.", link: null },

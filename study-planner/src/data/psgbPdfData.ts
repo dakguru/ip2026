@@ -194,9 +194,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Manual of Office Procedure",
-            "description": "Materials will be uploaded soon.",
-            "color": "slate",
-            "comingSoon": true
+            "description": "Manual of Office Procedure",
+            "filename": "Manual_of_Office_Procedure.pdf",
+            "path": "/notes/paper-1/Manual_of_Office_Procedure.pdf",
+            "size": "4.7 MB",
+            "color": "slate"
         },
         {
             "title": "Annual Reports and Book of Information of D/o Posts",
@@ -228,9 +230,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.",
-            "description": "Materials will be uploaded soon.",
-            "color": "blue",
-            "comingSoon": true
+            "description": "Manual for Procurement of Goods & Services",
+            "filename": "Manual_Procurement_Goods_Services.pdf",
+            "path": "/notes/paper-1/Manual_Procurement_Goods_Services.pdf",
+            "size": "0.6 MB",
+            "color": "blue"
         },
         {
             "title": "Postal Manual Volume IV",
@@ -242,9 +246,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Instructions issued by Directorate and DoP&T on maintenance of APAR.",
-            "description": "Materials will be uploaded soon.",
-            "color": "violet",
-            "comingSoon": true
+            "description": "Instructions on Maintenance of Annual Performance Assessment Report (APAR)",
+            "filename": "Instructions_Maintenance_APAR.pdf",
+            "path": "/notes/paper-1/Instructions_Maintenance_APAR.pdf",
+            "size": "0.6 MB",
+            "color": "violet"
         },
         {
             "title": "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.",
