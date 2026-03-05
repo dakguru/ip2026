@@ -28,31 +28,90 @@ export default function CourseModePromptModal() {
     const { course, setCourse } = useCourse();
 
     useEffect(() => {
-        // Only show if user hasn't seen the prompt before
-        if (typeof window !== "undefined") {
-            const hasSeen = localStorage.getItem(PROMPT_SEEN_KEY);
-            if (!hasSeen) {
-                // Small delay so the home page renders first
-                const timer = setTimeout(() => {
-                    setShow(true);
-                    // Trigger animation after mount
-                    requestAnimationFrame(() => setAnimateIn(true));
-                }, 800);
-                return () => clearTimeout(timer);
+        const checkStatus = async () => {
+            if (typeof window === "undefined") return;
+
+            // 1. Check LocalStorage first (fast)
+            const localSeen = localStorage.getItem(PROMPT_SEEN_KEY);
+            if (localSeen) return;
+
+            // 2. Check Backend (source of truth)
+            try {
+                const res = await fetch("/api/auth/me");
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.user?.hasSeenCoursePrompt) {
+                        localStorage.setItem(PROMPT_SEEN_KEY, "true");
+                        return;
+                    }
+
+                    // Only show if neither says seen
+                    const timer = setTimeout(() => {
+                        setShow(true);
+                        requestAnimationFrame(() => setAnimateIn(true));
+                    }, 800);
+                    return () => clearTimeout(timer);
+                }
+            } catch (err) {
+                console.error("Failed to check prompt status:", err);
             }
-        }
+        };
+
+        checkStatus();
     }, []);
 
-    const handleConfirm = () => {
+    const handleConfirm = async () => {
         setCourse(selected);
         localStorage.setItem(PROMPT_SEEN_KEY, "true");
+
+        // Sync with DB
+        try {
+            const meRes = await fetch("/api/auth/me");
+            if (meRes.ok) {
+                const meData = await meRes.json();
+                if (meData.user?.email) {
+                    await fetch("/api/user/update", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            currentEmail: meData.user.email,
+                            courseMode: selected,
+                            hasSeenCoursePrompt: true
+                        }),
+                    });
+                }
+            }
+        } catch (err) {
+            console.error("Failed to sync course mode with DB:", err);
+        }
+
         setAnimateIn(false);
         setTimeout(() => setShow(false), 300);
     };
 
-    const handleDismiss = () => {
-        // Keep current course (LDCE_IP), just mark as seen
+    const handleDismiss = async () => {
         localStorage.setItem(PROMPT_SEEN_KEY, "true");
+
+        // Sync with DB even if dismissed (keeps current defaults)
+        try {
+            const meRes = await fetch("/api/auth/me");
+            if (meRes.ok) {
+                const meData = await meRes.json();
+                if (meData.user?.email) {
+                    await fetch("/api/user/update", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            currentEmail: meData.user.email,
+                            hasSeenCoursePrompt: true
+                        }),
+                    });
+                }
+            }
+        } catch (err) {
+            console.error("Failed to mark prompt as seen in DB:", err);
+        }
+
         setAnimateIn(false);
         setTimeout(() => setShow(false), 300);
     };

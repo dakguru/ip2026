@@ -4,7 +4,7 @@ import { createNotification } from '@/lib/notifications';
 
 export async function POST(request: Request) {
     try {
-        const { currentEmail, name, email, mobile, examPreparingFor, dateOfJoining, courseMode } = await request.json();
+        const { currentEmail, name, email, mobile, examPreparingFor, dateOfJoining, courseMode, hasSeenCoursePrompt } = await request.json();
 
         if (!currentEmail) {
             return NextResponse.json(
@@ -15,21 +15,26 @@ export async function POST(request: Request) {
 
         const oldUser = await getUserByEmail(currentEmail);
 
-        const updatedUser = await updateUser(currentEmail, {
-            name,
-            email,
-            mobile,
-            examPreparingFor,
-            dateOfJoining,
-            courseMode
-        });
+        // Filter undefined values to support partial updates
+        const updates: any = {};
+        if (name !== undefined) updates.name = name;
+        if (email !== undefined) updates.email = email;
+        if (mobile !== undefined) updates.mobile = mobile;
+        if (examPreparingFor !== undefined) updates.examPreparingFor = examPreparingFor;
+        if (dateOfJoining !== undefined) updates.dateOfJoining = dateOfJoining;
+        if (courseMode !== undefined) updates.courseMode = courseMode;
+        if (hasSeenCoursePrompt !== undefined) updates.hasSeenCoursePrompt = hasSeenCoursePrompt;
+
+        const updatedUser = await updateUser(currentEmail, updates);
 
         if (updatedUser && oldUser && oldUser.courseMode !== updatedUser.courseMode) {
-            const modeName = updatedUser.courseMode === 'PS_GR_B' ? "PS Group 'B'" : "LDCE IP";
+            const oldModeName = oldUser.courseMode === 'PS_GR_B' ? "PS Group 'B'" : "LDCE IP";
+            const newModeName = updatedUser.courseMode === 'PS_GR_B' ? "PS Group 'B'" : "LDCE IP";
+
             await createNotification(
                 'system',
                 'Course Mode Changed',
-                `User ${updatedUser.name} (${updatedUser.email}) switched their course mode to ${modeName}.`,
+                `User ${updatedUser.name} (${updatedUser.email}) switched their course mode from ${oldModeName} to ${newModeName}.`,
                 { userId: updatedUser.email, oldMode: oldUser.courseMode, newMode: updatedUser.courseMode }
             );
         }

@@ -69,7 +69,8 @@ export async function POST(request: Request) {
         await createUser(email, password, name, {
             gender,
             mobile,
-            courseMode: courseMode || 'LDCE_IP'
+            courseMode: courseMode || 'LDCE_IP',
+            hasSeenCoursePrompt: true
         });
 
         // Trigger Notification

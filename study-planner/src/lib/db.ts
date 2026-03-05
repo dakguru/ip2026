@@ -11,6 +11,7 @@ export interface User {
     dateOfJoining?: Date;
     gender?: string;
     courseMode?: string;
+    hasSeenCoursePrompt?: boolean;
     passwordHash?: string; // Optional in interface, but mostly present
     role?: 'user' | 'admin';
     membershipLevel?: 'free' | 'silver' | 'gold';
@@ -37,6 +38,7 @@ function mapUser(doc: any): User {
         dateOfJoining: doc.dateOfJoining,
         gender: doc.gender,
         courseMode: doc.courseMode,
+        hasSeenCoursePrompt: doc.hasSeenCoursePrompt,
         passwordHash: doc.password, // Mapped from password field in DB
         role: doc.role,
         membershipLevel: doc.membershipLevel,

@@ -126,6 +126,10 @@ function AuthForm() {
                 if (data.user?.courseMode && typeof window !== "undefined") {
                     localStorage.setItem("selectedCourseMode", data.user.courseMode);
                 }
+                // Also set the prompt as seen if it's true in DB
+                if (data.user?.hasSeenCoursePrompt && typeof window !== "undefined") {
+                    localStorage.setItem("dg_course_mode_prompt_seen", "true");
+                }
                 router.push("/");
                 router.refresh();
             } else {

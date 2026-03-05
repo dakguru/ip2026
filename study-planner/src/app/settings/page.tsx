@@ -44,7 +44,8 @@ export default function SettingsPage() {
         email: "",
         mobile: "",
         examPreparingFor: "",
-        dateOfJoining: ""
+        dateOfJoining: "",
+        courseMode: "LDCE_IP" as "LDCE_IP" | "PS_GR_B"
     });
 
     // OTP State
@@ -106,6 +107,7 @@ export default function SettingsPage() {
                     mobile: user.mobile || "",
                     examPreparingFor: user.examPreparingFor || "",
                     dateOfJoining: user.dateOfJoining ? new Date(user.dateOfJoining).toISOString().split('T')[0] : "",
+                    courseMode: user.courseMode || "LDCE_IP",
                     membershipLevel: user.membershipLevel,
                     membershipValidity: user.membershipValidity
                 };
@@ -395,7 +397,16 @@ export default function SettingsPage() {
                             <div className="space-y-4">
                                 <p className="text-sm text-zinc-500 dark:text-zinc-400">Switch between exam categories. This changes the content across the app.</p>
                                 <div className="grid grid-cols-2 gap-3">
-                                    <button onClick={() => setCourse('LDCE_IP')}
+                                    <button onClick={async () => {
+                                        setCourse('LDCE_IP');
+                                        setFormData(prev => ({ ...prev, courseMode: 'LDCE_IP' }));
+                                        // Immediately update DB to ensure admin sees the change
+                                        await fetch("/api/user/update", {
+                                            method: "POST",
+                                            headers: { "Content-Type": "application/json" },
+                                            body: JSON.stringify({ currentEmail: initialData.email, courseMode: 'LDCE_IP' }),
+                                        });
+                                    }}
                                         className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'LDCE_IP'
                                             ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500/20'
                                             : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
@@ -403,7 +414,16 @@ export default function SettingsPage() {
                                         <p className="font-bold text-zinc-900 dark:text-zinc-100">LDCE IP</p>
                                         <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Inspector Posts 2026</p>
                                     </button>
-                                    <button onClick={() => setCourse('PS_GR_B')}
+                                    <button onClick={async () => {
+                                        setCourse('PS_GR_B');
+                                        setFormData(prev => ({ ...prev, courseMode: 'PS_GR_B' }));
+                                        // Immediately update DB to ensure admin sees the change
+                                        await fetch("/api/user/update", {
+                                            method: "POST",
+                                            headers: { "Content-Type": "application/json" },
+                                            body: JSON.stringify({ currentEmail: initialData.email, courseMode: 'PS_GR_B' }),
+                                        });
+                                    }}
                                         className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'PS_GR_B'
                                             ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 ring-2 ring-purple-500/20'
                                             : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
@@ -738,7 +758,15 @@ export default function SettingsPage() {
 
                         <div className="grid grid-cols-2 gap-3">
                             <button
-                                onClick={() => setCourse('LDCE_IP')}
+                                onClick={async () => {
+                                    setCourse('LDCE_IP');
+                                    setFormData(prev => ({ ...prev, courseMode: 'LDCE_IP' }));
+                                    await fetch("/api/user/update", {
+                                        method: "POST",
+                                        headers: { "Content-Type": "application/json" },
+                                        body: JSON.stringify({ currentEmail: initialData.email, courseMode: 'LDCE_IP' }),
+                                    });
+                                }}
                                 className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'LDCE_IP'
                                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500/20'
                                     : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600'
@@ -752,7 +780,15 @@ export default function SettingsPage() {
                             </button>
 
                             <button
-                                onClick={() => setCourse('PS_GR_B')}
+                                onClick={async () => {
+                                    setCourse('PS_GR_B');
+                                    setFormData(prev => ({ ...prev, courseMode: 'PS_GR_B' }));
+                                    await fetch("/api/user/update", {
+                                        method: "POST",
+                                        headers: { "Content-Type": "application/json" },
+                                        body: JSON.stringify({ currentEmail: initialData.email, courseMode: 'PS_GR_B' }),
+                                    });
+                                }}
                                 className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'PS_GR_B'
                                     ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 ring-2 ring-purple-500/20'
                                     : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600'
