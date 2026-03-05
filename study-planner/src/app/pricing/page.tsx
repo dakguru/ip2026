@@ -9,7 +9,6 @@ import Script from "next/script";
 import { DiscountRequestModal } from "@/components/DiscountRequestModal";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import NativePricing from "@/components/pricing/NativePricing";
-import { useBetaAccess } from "@/hooks/useBetaAccess";
 import { useCourse } from "@/contexts/CourseContext";
 
 declare global {
@@ -32,9 +31,8 @@ export default function PricingPage() {
     const [isOfferModalOpen, setIsOfferModalOpen] = useState(false);
 
     const isMobileApp = useIsMobileApp();
-    const hasBetaAccess = useBetaAccess();
     const { course } = useCourse();
-    const isPsGroupB = hasBetaAccess && course === 'PS_GR_B';
+    const isPsGroupB = course === 'PS_GR_B';
 
     // Check login status
     useEffect(() => {

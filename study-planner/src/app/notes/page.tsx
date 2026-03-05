@@ -1089,7 +1089,7 @@ export default function NotesPage() {
                                             <span>LOCKED</span>
                                         </div>
                                         <Link href="/pricing" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">
-                                            Upgrade to Gold to view schedule
+                                            Upgrade to {isPS ? 'Diamond' : 'Gold'} to view schedule
                                         </Link>
                                     </div>
                                 )
@@ -1123,7 +1123,7 @@ export default function NotesPage() {
                                             <span>PREMIUM</span>
                                         </div>
                                         <Link href="/pricing" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">
-                                            Upgrade to Gold to unlock
+                                            Upgrade to {isPS ? 'Diamond' : 'Gold'} to unlock
                                         </Link>
                                     </div>
                                 )

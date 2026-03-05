@@ -10,6 +10,7 @@ export interface User {
     examPreparingFor?: string;
     dateOfJoining?: Date;
     gender?: string;
+    courseMode?: string;
     passwordHash?: string; // Optional in interface, but mostly present
     role?: 'user' | 'admin';
     membershipLevel?: 'free' | 'silver' | 'gold';
@@ -35,6 +36,7 @@ function mapUser(doc: any): User {
         examPreparingFor: doc.examPreparingFor,
         dateOfJoining: doc.dateOfJoining,
         gender: doc.gender,
+        courseMode: doc.courseMode,
         passwordHash: doc.password, // Mapped from password field in DB
         role: doc.role,
         membershipLevel: doc.membershipLevel,

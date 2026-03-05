@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from 'next/link';
 import Image from 'next/image';
-import { Lock, User, ArrowRight, Loader2, Mail, Phone, Eye, EyeOff } from "lucide-react";
+import { Lock, User, ArrowRight, Loader2, Mail, Phone, Eye, EyeOff, GraduationCap, ChevronDown } from "lucide-react";
 
 import Turnstile from 'react-turnstile';
 
@@ -22,6 +22,7 @@ function AuthForm() {
         password: "",
         mobile: "",
         gender: "",
+        courseMode: "",
         confirmPassword: "",
         website: "" // Honeypot field
     });
@@ -60,6 +61,11 @@ function AuthForm() {
         if (!isLogin) {
             if (!formData.gender) {
                 setError("Please select a gender.");
+                setIsLoading(false);
+                return;
+            }
+            if (!formData.courseMode) {
+                setError("Please select a course.");
                 setIsLoading(false);
                 return;
             }
@@ -116,9 +122,17 @@ function AuthForm() {
             }
 
             if (isLogin) {
+                // Set course mode from user's DB record on login
+                if (data.user?.courseMode && typeof window !== "undefined") {
+                    localStorage.setItem("selectedCourseMode", data.user.courseMode);
+                }
                 router.push("/");
                 router.refresh();
             } else {
+                // Save the selected course mode to localStorage
+                if (formData.courseMode && typeof window !== "undefined") {
+                    localStorage.setItem("selectedCourseMode", formData.courseMode);
+                }
                 // Switch to login mode after successful signup
                 setIsLogin(true);
                 setError("");
@@ -232,6 +246,32 @@ function AuthForm() {
                                             />
                                             <span className="text-sm text-gray-700">Female</span>
                                         </label>
+                                    </div>
+                                </div>
+
+                                {/* Course Mode Selection */}
+                                <div className="space-y-1.5">
+                                    <label className="text-xs font-semibold text-gray-600 ml-1">
+                                        Course
+                                    </label>
+                                    <div className="relative group">
+                                        <div className="absolute left-3 top-3 text-gray-400 group-focus-within:text-blue-600 transition-colors">
+                                            <GraduationCap className="w-4 h-4" />
+                                        </div>
+                                        <select
+                                            name="courseMode"
+                                            value={formData.courseMode}
+                                            onChange={handleInputChange}
+                                            className={`w-full bg-gray-50 border border-gray-200 rounded-xl py-2.5 pl-9 pr-9 text-sm outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-all appearance-none cursor-pointer ${formData.courseMode ? 'text-gray-900' : 'text-gray-400'}`}
+                                            required
+                                        >
+                                            <option value="" disabled>Select your course</option>
+                                            <option value="LDCE_IP">LDCE IP Exam</option>
+                                            <option value="PS_GR_B">PS Group &apos;B&apos; Exam</option>
+                                        </select>
+                                        <div className="absolute right-3 top-3 text-gray-400 pointer-events-none">
+                                            <ChevronDown className="w-4 h-4" />
+                                        </div>
                                     </div>
                                 </div>
 
@@ -425,7 +465,7 @@ function AuthForm() {
                                 onClick={() => {
                                     setIsLogin(!isLogin);
                                     setError("");
-                                    setFormData({ name: "", email: "", password: "", mobile: "", gender: "", confirmPassword: "", website: "" });
+                                    setFormData({ name: "", email: "", password: "", mobile: "", gender: "", courseMode: "", confirmPassword: "", website: "" });
 
                                 }}
                                 className="text-blue-600 hover:text-blue-500 font-bold hover:underline bg-transparent border-none cursor-pointer ml-1"

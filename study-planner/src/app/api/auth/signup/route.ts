@@ -5,7 +5,7 @@ import { createNotification } from '@/lib/notifications';
 
 export async function POST(request: Request) {
     try {
-        const { email, password, name, mobile, gender, website, turnstileToken } = await request.json();
+        const { email, password, name, mobile, gender, courseMode, website, turnstileToken } = await request.json();
 
         // Honeypot check: If website is filled, it's a bot.
         // Return success to fool the bot, but do nothing.
@@ -68,7 +68,8 @@ export async function POST(request: Request) {
 
         await createUser(email, password, name, {
             gender,
-            mobile
+            mobile,
+            courseMode: courseMode || 'LDCE_IP'
         });
 
         // Trigger Notification

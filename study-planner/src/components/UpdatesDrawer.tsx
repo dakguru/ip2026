@@ -16,6 +16,48 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "05.03.2026",
+        items: [
+            {
+                title: "New PDF Notes Uploaded",
+                desc: (
+                    <div className="space-y-2">
+                        <p>We have uploaded the following PDF Notes:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li>Manual of Office Procedure</li>
+                            <li>Manual for Procurement of Goods &amp; Services</li>
+                            <li>Instructions on Maintenance of APAR</li>
+                            <li>
+                                <span>Complaint &amp; Grievance Handling</span>
+                                <span className="block text-xs text-zinc-500 dark:text-zinc-500 mt-0.5">Updated with new version</span>
+                            </li>
+                        </ul>
+                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Check them out in the Notes section!</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
+        date: "04.03.2026",
+        items: [
+            {
+                title: "New PDF Notes Uploaded",
+                desc: (
+                    <div className="space-y-2">
+                        <p>We have uploaded the following PDF Notes:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li>Citizen Charter of Department of Posts</li>
+                            <li>Complaint &amp; Grievance Handling</li>
+                            <li>Postal Manual Volume II - Chapter XI (Misc. Rules)</li>
+                        </ul>
+                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Check them out in the Notes section!</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "01.03.2026",
         items: [
             {

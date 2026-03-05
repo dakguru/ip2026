@@ -9,6 +9,7 @@ const UserSchema = new mongoose.Schema({
     examPreparingFor: { type: String },
     dateOfJoining: { type: Date },
     gender: { type: String },
+    courseMode: { type: String, enum: ['LDCE_IP', 'PS_GR_B'], default: 'LDCE_IP' },
     role: { type: String, default: 'user', enum: ['user', 'admin'] },
     membershipLevel: { type: String, default: 'free', enum: ['free', 'silver', 'gold'] },
     membershipValidity: { type: Date }, // Date when membership expires

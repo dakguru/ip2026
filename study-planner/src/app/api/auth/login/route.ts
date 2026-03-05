@@ -29,7 +29,7 @@ export async function POST(request: Request) {
         const maxAge = 60 * 60 * 24 * 30;
 
         // Create response
-        const response = NextResponse.json({ success: true, user: { name: user.name, email: user.email } });
+        const response = NextResponse.json({ success: true, user: { name: user.name, email: user.email, courseMode: user.courseMode } });
 
         // Set cookie - auth_token now holds email and sessionId
         response.cookies.set('auth_token', `${user.email}:${sessionId}`, {
