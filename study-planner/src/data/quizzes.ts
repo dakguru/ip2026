@@ -1,5 +1,12 @@
 import { QuizTopic, QuizSet } from "@/lib/quizTypes";
 import { ccs_pension_2021_set1, ccs_pension_2021_set2, ccs_pension_2021_set3 } from './flashcards/ccsPension2021';
+import { ltc_set1, ltc_set2, ltc_set3 } from './flashcards/ccsLtc1988';
+import { cs_ma_set1, cs_ma_set2, cs_ma_set3 } from './flashcards/csMa1944';
+import { leave_set1, leave_set2, leave_set3, leave_set4 } from './flashcards/ccsLeave1972';
+import { cea_rules_set1 } from './flashcards/ceaRules';
+import { cgegis_set1 } from './flashcards/cgegis1980';
+import { joining_time_set1 } from './flashcards/ccsJoiningTime1979';
+import { recognition_set1 } from './flashcards/ccsRecognition1993';
 
 // ----- EXISTING QUESTION DATA -----
 export const ALL_SETS_DATA: Record<number, any[]> = {
@@ -4390,7 +4397,21 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   ],
   116: ccs_pension_2021_set1,
   117: ccs_pension_2021_set2,
-  118: ccs_pension_2021_set3
+  118: ccs_pension_2021_set3,
+  119: ltc_set1,
+  120: ltc_set2,
+  121: ltc_set3,
+  122: cs_ma_set1,
+  123: cs_ma_set2,
+  124: cs_ma_set3,
+  125: leave_set1,
+  126: leave_set2,
+  127: leave_set3,
+  128: leave_set4,
+  129: cea_rules_set1,
+  130: cgegis_set1,
+  131: joining_time_set1,
+  132: recognition_set1
 };
 
 export interface RawQuestion {
@@ -4481,13 +4502,14 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-10', 'Sexual Harassment at Work place (Prevention, prohibition & Redressal) Act, 2013', 'Paper III'),
   createTopic('p3-11', 'Central Civil Services (Implementation of NPS) Rules, 2021', 'Paper III', [73]),
   createTopic('p3-12', 'General Financial Rules 2017', 'Paper III'),
+  createTopic('p3-13', 'CCS (LTC) Rules 1988', 'Paper III', [119, 120, 121]),
 
 
   createTopic('p1-29', 'LDCE IP 2025 - Paper I PYQ', 'PYQ', [22, 23, 24, 25, 26]),
   createTopic('p3-20', 'LDCE IP 2025 - Paper III PYQ', 'PYQ', [27, 28, 29, 30, 31, 32]),
   createTopic('p3-22', 'Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023', 'Paper III', [66]),
   createTopic('p3-30', 'FR & SR - Foreign Service, Deputation & Dismissal', 'Paper III', [74]),
-  createTopic('p3-31', 'FR & SR - Leave, Joining Time & Allowances', 'Paper III', [75]),
+  createTopic('p3-31', 'FR & SR - Leave, Joining Time & Allowances', 'Paper III', [125, 126, 127, 128, 75]),
   createTopic('p3-32', 'FR & SR - Pay Fixation & General Conditions', 'Paper III', [76]),
   createTopic('p3-33', 'FR & SR - TA Rules & Miscellaneous', 'Paper III', [77]),
   createTopic('p3-24', 'Brochure on casual labourers', 'Paper III'),
