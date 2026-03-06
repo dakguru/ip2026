@@ -41,7 +41,38 @@ export async function GET(req: Request) {
             .sort({ createdAt: -1 })
             .limit(100);
 
-        return NextResponse.json({ notifications });
+        // Map notifications to POJO to allow adding properties
+        const notificationObjects = notifications.map(n => n.toObject());
+
+        // Enrich with user info if userId (email) exists in metadata
+        const userEmails = [...new Set(notificationObjects
+            .map(n => n.metadata?.userId || n.metadata?.email)
+            .filter(Boolean))];
+
+        if (userEmails.length > 0) {
+            const users = await (await import('@/models/User')).default.find({
+                email: { $in: userEmails }
+            }, 'email membershipLevel planName courseMode name');
+
+            const userMap = users.reduce((acc, user) => {
+                acc[user.email.toLowerCase()] = {
+                    membershipLevel: user.membershipLevel,
+                    planName: user.planName,
+                    courseMode: user.courseMode,
+                    name: user.name
+                };
+                return acc;
+            }, {} as Record<string, any>);
+
+            notificationObjects.forEach((n: any) => {
+                const email = n.metadata?.userId || n.metadata?.email;
+                if (email && userMap[email.toLowerCase()]) {
+                    n.userContext = userMap[email.toLowerCase()];
+                }
+            });
+        }
+
+        return NextResponse.json({ notifications: notificationObjects });
     } catch (error) {
         console.error("Error fetching notifications:", error);
         return NextResponse.json({ error: 'Failed to fetch notifications' }, { status: 500 });

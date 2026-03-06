@@ -20,6 +20,12 @@ interface Notification {
     createdAt: string;
     isRead: boolean;
     metadata?: Record<string, any>;
+    userContext?: {
+        membershipLevel?: string;
+        planName?: string;
+        courseMode?: string;
+        name?: string;
+    };
 }
 
 type FilterType = 'all' | 'users' | 'system' | 'membership' | 'mock_tests' | 'community';
@@ -165,6 +171,24 @@ const DEFAULT_TYPE_CONFIG = {
 
 function getTypeConfig(type: string) {
     return TYPE_CONFIG[type] || DEFAULT_TYPE_CONFIG;
+}
+
+function getMembershipBadge(userContext?: Notification['userContext']): { label: string; color: string; bg: string; icon: any } {
+    if (!userContext) return { label: 'Free', color: 'text-zinc-500', bg: 'bg-zinc-100 dark:bg-zinc-800', icon: Zap };
+
+    const level = userContext.membershipLevel?.toLowerCase();
+    const mode = userContext.courseMode;
+
+    if (level === 'gold' && mode === 'PS_GR_B')
+        return { label: 'Diamond', color: 'text-fuchsia-600 dark:text-fuchsia-400', bg: 'bg-fuchsia-50 dark:bg-fuchsia-400/10', icon: Crown };
+    if (level === 'gold')
+        return { label: 'Gold', color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-50 dark:bg-amber-400/10', icon: Crown };
+    if (level === 'silver' && mode === 'PS_GR_B')
+        return { label: 'Platinum', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-400/10', icon: Zap };
+    if (level === 'silver')
+        return { label: 'Silver', color: 'text-zinc-600 dark:text-zinc-300', bg: 'bg-zinc-100 dark:bg-zinc-500/10', icon: Shield };
+
+    return { label: 'Free', color: 'text-zinc-500', bg: 'bg-zinc-100 dark:bg-zinc-800', icon: Smartphone };
 }
 
 const FILTER_TABS: { id: FilterType; label: string; icon: any; count?: (n: Notification[]) => number }[] = [
@@ -560,6 +584,25 @@ export default function AdminNotificationsPage() {
                                                                         `}>
                                                                             {config.label}
                                                                         </span>
+
+                                                                        {/* Membership Badge */}
+                                                                        {(notif.userContext || (notif.metadata?.email || notif.metadata?.userId)) && (
+                                                                            <div className={`
+                                                                                flex items-center gap-1 text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-md border border-transparent
+                                                                                ${getMembershipBadge(notif.userContext).bg} ${getMembershipBadge(notif.userContext).color}
+                                                                            `}>
+                                                                                {(() => {
+                                                                                    const badge = getMembershipBadge(notif.userContext);
+                                                                                    const BadgeIcon = badge.icon;
+                                                                                    return (
+                                                                                        <>
+                                                                                            <BadgeIcon className="w-2.5 h-2.5" />
+                                                                                            {badge.label}
+                                                                                        </>
+                                                                                    );
+                                                                                })()}
+                                                                            </div>
+                                                                        )}
                                                                     </div>
                                                                     <p className={`text-[13px] mt-1 leading-relaxed ${notif.isRead ? 'text-zinc-500 dark:text-zinc-400' : 'text-zinc-700 dark:text-zinc-300'} ${isExpanded ? '' : 'line-clamp-1'}`}>
                                                                         {notif.message}
