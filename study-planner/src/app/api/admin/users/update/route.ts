@@ -47,7 +47,23 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // 2. Perform Update
+        // 2. Translate plans before updating
+        if (updates.courseMode === 'PS_GR_B') {
+            if (updates.membershipLevel === 'diamond') {
+                updates.membershipLevel = 'gold';
+                if (!updates.planId) updates.planId = 'plan_diamond_ps_gr_b_manual';
+                if (!updates.planName) updates.planName = 'PS Group B Diamond Plan (Admin)';
+            } else if (updates.membershipLevel === 'platinum') {
+                updates.membershipLevel = 'silver';
+                if (!updates.planId) updates.planId = 'plan_platinum_ps_gr_b_manual';
+                if (!updates.planName) updates.planName = 'PS Group B Platinum Plan (Admin)';
+            }
+        } else {
+            if (updates.membershipLevel === 'diamond') updates.membershipLevel = 'gold';
+            if (updates.membershipLevel === 'platinum') updates.membershipLevel = 'silver';
+        }
+
+        // 3. Perform Update
         const updatedUser = await updateUser(targetEmail, updates);
 
         if (!updatedUser) {

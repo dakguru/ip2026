@@ -380,9 +380,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Central Services (Medical Attendance) Rules, 1944",
-            "description": "Materials will be uploaded soon.",
-            "color": "indigo",
-            "comingSoon": true
+            "description": "Central Services (Medical Attendance) Rules, 1944",
+            "filename": "CS_Medical_Attendance_Rules_1944.pdf",
+            "path": "/notes/paper-3/CS_Medical_Attendance_Rules_1944.pdf",
+            "size": "4.2 MB",
+            "color": "indigo"
         },
         {
             "title": "Fundamental and Supplementary Rules",
@@ -392,9 +394,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Central Civil Services (Leave Travel Concession) Rules, 1988",
-            "description": "Materials will be uploaded soon.",
-            "color": "emerald",
-            "comingSoon": true
+            "description": "Central Civil Services (Leave Travel Concession) Rules, 1988",
+            "filename": "CCS_LTC_Rules_1988.pdf",
+            "path": "/notes/paper-3/CCS_LTC_Rules_1988.pdf",
+            "size": "4.2 MB",
+            "color": "emerald"
         },
         {
             "title": "Central Civil Services (Revised Pay) Rules, 2016",
@@ -404,15 +408,19 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Rules relating to Children Education allowance and reimbursement of Hostel Subsidy",
-            "description": "Materials will be uploaded soon.",
-            "color": "violet",
-            "comingSoon": true
+            "description": "Rules relating to Children Education allowance and reimbursement of Hostel Subsidy",
+            "filename": "CEA_and_Hostel_Subsidy.pdf",
+            "path": "/notes/paper-3/CEA_and_Hostel_Subsidy.pdf",
+            "size": "4.1 MB",
+            "color": "violet"
         },
         {
             "title": "Central Government Employees Group Insurance Scheme, 1980",
-            "description": "Materials will be uploaded soon.",
-            "color": "slate",
-            "comingSoon": true
+            "description": "Central Government Employees Group Insurance Scheme, 1980",
+            "filename": "CGEGIS_1980.pdf",
+            "path": "/notes/paper-3/CGEGIS_1980.pdf",
+            "size": "4.1 MB",
+            "color": "slate"
         },
         {
             "title": "Central Civil Services (Recognition of Service Association) Rules, 1993",

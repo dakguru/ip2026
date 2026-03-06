@@ -34,26 +34,35 @@ export async function GET(request: Request) {
 
         const users = await getAllUsers();
         // Return safe user data (exclude passwordHash)
-        const safeUsers = users.map(user => ({
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            mobile: user.mobile,
-            designation: (user as any).designation, // Kept for backward compat if needed, or remove
-            // But better to just remove them if they are gone from the types
-            examPreparingFor: user.examPreparingFor,
-            dateOfJoining: user.dateOfJoining,
-            role: user.role || 'user',
-            membershipLevel: user.membershipLevel,
-            planId: user.planId,
-            planName: user.planName,
-            purchaseDate: user.purchaseDate,
-            membershipValidity: user.membershipValidity,
-            lastActiveAt: user.lastActiveAt,
-            lastPlatform: user.lastPlatform,
-            courseMode: user.courseMode,
-            createdAt: user.createdAt
-        }));
+        const safeUsers = users.map(user => {
+            let mappedLevel: string | undefined = user.membershipLevel;
+            if (user.courseMode === 'PS_GR_B') {
+                if (user.membershipLevel === 'gold' && (user.planId?.includes('diamond') || user.planId?.includes('ps_gr_b') || user.planName?.includes('Diamond'))) {
+                    mappedLevel = 'diamond';
+                } else if ((user.membershipLevel === 'silver' || user.membershipLevel === 'gold') && (user.planId?.includes('platinum') || user.planName?.includes('Platinum'))) {
+                    mappedLevel = 'platinum';
+                }
+            }
+            return {
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                mobile: user.mobile,
+                designation: (user as any).designation, // Kept for backward compat if needed, or remove
+                examPreparingFor: user.examPreparingFor,
+                dateOfJoining: user.dateOfJoining,
+                role: user.role || 'user',
+                membershipLevel: mappedLevel,
+                planId: user.planId,
+                planName: user.planName,
+                purchaseDate: user.purchaseDate,
+                membershipValidity: user.membershipValidity,
+                lastActiveAt: user.lastActiveAt,
+                lastPlatform: user.lastPlatform,
+                courseMode: user.courseMode,
+                createdAt: user.createdAt
+            };
+        });
 
         return NextResponse.json({ users: safeUsers });
 

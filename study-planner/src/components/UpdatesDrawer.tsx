@@ -16,6 +16,26 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "06.03.2026",
+        items: [
+            {
+                title: "New PDF Notes Uploaded for PS Group B",
+                desc: (
+                    <div className="space-y-2">
+                        <p>We have uploaded the following PDF Notes under Paper III:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li>Central Civil Services (Leave Travel Concession) Rules, 1988</li>
+                            <li>Central Services (Medical Attendance) Rules, 1944</li>
+                            <li>Rules relating to Children Education allowance and reimbursement of Hostel Subsidy</li>
+                            <li>Central Government Employees Group Insurance Scheme, 1980</li>
+                        </ul>
+                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Check them out in the Notes section (PS Group B mode)!</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "05.03.2026",
         items: [
             {

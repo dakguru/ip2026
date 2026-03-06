@@ -5,9 +5,11 @@ import { useRouter } from "next/navigation";
 import { Loader2, ArrowLeft, Crown, Calendar, CalendarClock, CreditCard, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dayjs from "dayjs";
+import { useCourse } from "@/contexts/CourseContext";
 
 export default function MembershipPage() {
     const router = useRouter();
+    const { course } = useCourse();
     const [isLoading, setIsLoading] = useState(true);
     const [membershipData, setMembershipData] = useState<any>(null);
 
@@ -42,9 +44,18 @@ export default function MembershipPage() {
 
     if (!membershipData) return null;
 
+    let displayMemberLevel = membershipData.membershipLevel as string | undefined;
+    if (course === 'PS_GR_B' && membershipData.membershipLevel !== 'free') {
+        if (membershipData.membershipLevel === 'gold' && (membershipData.planId?.includes('diamond') || membershipData.planId?.includes('ps_gr_b'))) {
+            displayMemberLevel = 'diamond';
+        } else if ((membershipData.membershipLevel === 'silver' || membershipData.membershipLevel === 'gold') && membershipData.planId?.includes('platinum')) {
+            displayMemberLevel = 'platinum';
+        }
+    }
+
     const isFree = !membershipData.membershipLevel || membershipData.membershipLevel === 'free';
-    const isGold = membershipData.membershipLevel === 'gold';
-    const isSilver = membershipData.membershipLevel === 'silver';
+    const isGold = membershipData.membershipLevel === 'gold' || displayMemberLevel === 'diamond';
+    const isSilver = membershipData.membershipLevel === 'silver' || displayMemberLevel === 'platinum';
 
     const formatDate = (dateString?: string) => {
         if (!dateString) return "N/A";
@@ -88,7 +99,7 @@ export default function MembershipPage() {
                             </div>
                             <div>
                                 <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wide">
-                                    {isFree ? 'Basic Member' : `${membershipData.membershipLevel} Member`}
+                                    {isFree ? 'Basic Member' : `${displayMemberLevel} Member`}
                                 </h1>
                                 <p className={`text-sm font-medium ${isGold ? 'text-yellow-700 dark:text-yellow-400' : 'text-zinc-500 dark:text-zinc-400'}`}>
                                     {isFree ? 'Upgrade to unlock premium features' : 'Thank you for being a premium member!'}

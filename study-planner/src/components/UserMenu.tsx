@@ -83,6 +83,15 @@ export function UserMenu() {
         );
     }
 
+    let displayMembership = session.membershipLevel as string | undefined;
+    if (course === 'PS_GR_B' && session.membershipLevel !== 'free') {
+        if (session.membershipLevel === 'gold' && (session.planId?.includes('diamond') || session.planId?.includes('ps_gr_b'))) {
+            displayMembership = 'diamond';
+        } else if ((session.membershipLevel === 'silver' || session.membershipLevel === 'gold') && session.planId?.includes('platinum')) {
+            displayMembership = 'platinum';
+        }
+    }
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -99,11 +108,11 @@ export function UserMenu() {
                     <div className="flex items-center justify-between">
                         <p className="font-medium text-sm leading-none">{session?.name || 'Guest User'}</p>
                         {session?.membershipLevel && session.membershipLevel !== 'free' && (
-                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border uppercase ${session.membershipLevel === 'gold'
+                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border uppercase ${displayMembership === 'diamond' || session.membershipLevel === 'gold'
                                 ? 'bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900/30 dark:text-amber-200 dark:border-amber-800'
                                 : 'bg-slate-100 text-slate-800 border-slate-200 dark:bg-slate-800/50 dark:text-slate-200 dark:border-slate-700'
                                 }`}>
-                                {session.membershipLevel}
+                                {displayMembership}
                             </span>
                         )}
                     </div>

@@ -78,7 +78,7 @@ export default function LaunchPopup() {
                                     </p>
                                     <p className="inline-flex items-center gap-2 px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-lg text-red-200 text-sm font-bold animate-pulse">
                                         <Zap className="w-4 h-4 text-red-400 fill-red-400" />
-                                        50% DISCOUNT FOR FIRST 50 SUBSCRIBERS!
+                                        50% Discount Offer is only for Limited Period and Ending Soon.
                                     </p>
                                 </div>
                             </div>

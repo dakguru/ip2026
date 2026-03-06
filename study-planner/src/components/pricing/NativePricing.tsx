@@ -21,6 +21,7 @@ interface NativePricingProps {
     isProcessing: boolean;
     setIsOfferModalOpen: (isOpen: boolean) => void;
     isPsGroupB?: boolean;
+    planId?: string | null;
 }
 
 export default function NativePricing({
@@ -31,7 +32,8 @@ export default function NativePricing({
     onApplyCoupon,
     isProcessing,
     setIsOfferModalOpen,
-    isPsGroupB = false
+    isPsGroupB = false,
+    planId = null
 }: NativePricingProps) {
     const [activeTab, setActiveTab] = useState<'gold' | 'silver'>('gold');
     const [couponCode, setCouponCode] = useState("");
@@ -130,6 +132,13 @@ export default function NativePricing({
     // Calculate effective price considering PS Group B upgrades
     const getEffectivePrice = () => {
         if (isPsGroupB && currentMembership !== 'free') {
+            const hasDiamond = currentMembership === 'gold' && (planId?.includes('diamond') || planId?.includes('ps_gr_b'));
+            const hasPlatinum = currentMembership === 'silver' && (planId?.includes('platinum') || planId?.includes('ps_gr_b'));
+
+            if (activeTab === 'gold' && hasDiamond) return 0;
+            if (activeTab === 'silver' && hasPlatinum) return 0;
+            if (activeTab === 'silver' && hasDiamond) return 0;
+
             const currentPlanPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
             const diff = Math.round((selectedPlan.price / 2) - (currentPlanPrice / 2));
             return diff > 0 ? diff : 0;
@@ -137,7 +146,12 @@ export default function NativePricing({
         return selectedPlan.price;
     };
     const effectivePrice = getEffectivePrice();
-    const isUpgradeMode = isPsGroupB && currentMembership !== 'free' && effectivePrice !== selectedPlan.price;
+    const hasDiamond = planId?.includes('diamond') || planId?.includes('ps_gr_b');
+    const hasPlatinum = planId?.includes('platinum') || planId?.includes('ps_gr_b');
+    const hasPsGrBDiamond = isPsGroupB && currentMembership === 'gold' && hasDiamond;
+    const hasPsGrBPlatinum = isPsGroupB && currentMembership === 'silver' && hasPlatinum;
+
+    const isUpgradeMode = isPsGroupB && currentMembership !== 'free' && effectivePrice !== selectedPlan.price && !hasPsGrBDiamond && !(hasPsGrBPlatinum && activeTab === 'silver');
     const finalPrice = effectivePrice - discount;
 
     return (
@@ -183,22 +197,25 @@ export default function NativePricing({
                 <div>
                     <h3 className="text-lg font-bold mb-4">Select Plan</h3>
                     <div className="grid grid-cols-2 bg-zinc-900 p-1.5 rounded-2xl border border-white/10">
+                        {/* Tab Switcher */}
                         <button
                             onClick={() => { setActiveTab('gold'); setDiscount(0); }}
+                            disabled={hasPsGrBDiamond}
                             className={`py-3 rounded-xl font-bold text-sm transition-all flex flex-col items-center gap-1 ${activeTab === 'gold'
                                 ? `bg-zinc-800 shadow-lg ring-1 ring-white/10 ${isPsGroupB ? 'text-purple-400' : 'text-yellow-400'}`
                                 : 'text-zinc-500 hover:text-zinc-300'
-                                }`}
+                                } ${hasPsGrBDiamond ? 'opacity-50 cursor-not-allowed' : ''}`}
                         >
                             <span>{isPsGroupB ? 'Diamond' : 'Gold'} Plan</span>
                             {activeTab === 'gold' && <span className={`text-[10px] px-1.5 rounded uppercase tracking-wider ${isPsGroupB ? 'bg-purple-400/10 text-purple-400' : 'bg-yellow-400/10 text-yellow-400'}`}>Recommended</span>}
                         </button>
                         <button
                             onClick={() => { setActiveTab('silver'); setDiscount(0); }}
+                            disabled={hasPsGrBPlatinum || hasPsGrBDiamond}
                             className={`py-3 rounded-xl font-bold text-sm transition-all ${activeTab === 'silver'
                                 ? 'bg-zinc-800 text-white shadow-lg ring-1 ring-white/10'
                                 : 'text-zinc-500 hover:text-zinc-300'
-                                }`}
+                                } ${(hasPsGrBPlatinum || hasPsGrBDiamond) ? 'opacity-50 cursor-not-allowed' : ''}`}
                         >
                             {isPsGroupB ? 'Platinum' : 'Silver'} Plan
                         </button>
@@ -281,9 +298,9 @@ export default function NativePricing({
                         isProcessing ||
                         (!isPsGroupB && (currentMembership === 'gold' ||
                             (currentMembership === 'silver' && activeTab === 'silver'))) ||
-                        (isUpgradeMode && effectivePrice <= 0)
+                        (isUpgradeMode && effectivePrice <= 0) || hasPsGrBDiamond || (hasPsGrBPlatinum && activeTab === 'silver')
                     }
-                    className={`w-full py-4 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${isProcessing || (!isPsGroupB && (currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver')))
+                    className={`w-full py-4 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${isProcessing || (!isPsGroupB && (currentMembership === 'gold' || (currentMembership === 'silver' && activeTab === 'silver'))) || hasPsGrBDiamond || (hasPsGrBPlatinum && activeTab === 'silver')
                         ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed shadow-none'
                         : 'bg-green-600 hover:bg-green-500 text-white shadow-green-500/20 active:scale-[0.98] transition-all'
                         }`}
@@ -295,20 +312,20 @@ export default function NativePricing({
                             <Zap className="w-5 h-5 fill-current" />
                             Upgrade to {activeTab === 'gold' ? (isPsGroupB ? 'Diamond' : 'Gold') : (isPsGroupB ? 'Platinum' : 'Silver')} — ₹{finalPrice}
                         </>
-                    ) : (!isPsGroupB && currentMembership === 'gold') ? (
+                    ) : (!isPsGroupB && currentMembership === 'gold') || hasPsGrBDiamond ? (
                         <>
                             <ShieldCheck className="w-5 h-5" />
-                            Gold Plan Active
+                            {isPsGroupB ? 'Diamond' : 'Gold'} Plan Active
                         </>
-                    ) : (!isPsGroupB && currentMembership === 'silver' && activeTab === 'silver') ? (
+                    ) : (!isPsGroupB && currentMembership === 'silver' && activeTab === 'silver') || (hasPsGrBPlatinum && activeTab === 'silver') ? (
                         <>
                             <ShieldCheck className="w-5 h-5" />
-                            Silver Plan Active
+                            {isPsGroupB ? 'Platinum' : 'Silver'} Plan Active
                         </>
                     ) : (
                         <>
                             <Zap className="w-5 h-5 fill-current" />
-                            {activeTab === 'gold' && currentMembership === 'silver' ? "Upgrade to Gold" : "Proceed to Payment"}
+                            {activeTab === 'gold' && currentMembership === 'silver' && !isPsGroupB ? "Upgrade to Gold" : "Proceed to Payment"}
                         </>
                     )}
                 </button>
