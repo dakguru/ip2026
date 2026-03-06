@@ -5,12 +5,14 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from 'next/link';
 import Image from 'next/image';
 import { Lock, User, ArrowRight, Loader2, Mail, Phone, Eye, EyeOff, GraduationCap, ChevronDown } from "lucide-react";
+import { useCourse } from "@/contexts/CourseContext";
 
 import Turnstile from 'react-turnstile';
 
 function AuthForm() {
     const searchParams = useSearchParams();
     const router = useRouter();
+    const { setCourse } = useCourse();
     const [isLogin, setIsLogin] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [turnstileToken, setTurnstileToken] = useState("");
@@ -123,8 +125,11 @@ function AuthForm() {
 
             if (isLogin) {
                 // Set course mode from user's DB record on login
-                if (data.user?.courseMode && typeof window !== "undefined") {
-                    localStorage.setItem("selectedCourseMode", data.user.courseMode);
+                if (data.user?.courseMode) {
+                    setCourse(data.user.courseMode);
+                    if (typeof window !== "undefined") {
+                        localStorage.setItem("selectedCourseMode", data.user.courseMode);
+                    }
                 }
                 // Also set the prompt as seen if it's true in DB
                 if (data.user?.hasSeenCoursePrompt && typeof window !== "undefined") {
@@ -133,9 +138,13 @@ function AuthForm() {
                 router.push("/");
                 router.refresh();
             } else {
-                // Save the selected course mode to localStorage
-                if (formData.courseMode && typeof window !== "undefined") {
-                    localStorage.setItem("selectedCourseMode", formData.courseMode);
+                // Save the selected course mode to localStorage and context
+                if (formData.courseMode) {
+                    // Type assertion may be needed here, or we trust formData
+                    setCourse(formData.courseMode as 'LDCE_IP' | 'PS_GR_B');
+                    if (typeof window !== "undefined") {
+                        localStorage.setItem("selectedCourseMode", formData.courseMode);
+                    }
                 }
                 // Switch to login mode after successful signup
                 setIsLogin(true);

@@ -334,7 +334,7 @@ export default function PyqDashboard() {
                                                 ))}
                                             </div>
 
-                                            <div className="text-sm bg-white dark:bg-zinc-900 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300">
+                                            <div className="text-sm bg-white dark:bg-zinc-900 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap">
                                                 <span className="font-bold block mb-1">Explanation:</span>
                                                 {q.explanation}
                                             </div>

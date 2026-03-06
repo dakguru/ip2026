@@ -1,4 +1,5 @@
 import { QuizTopic, QuizSet } from "@/lib/quizTypes";
+import { ccs_pension_2021_set1, ccs_pension_2021_set2, ccs_pension_2021_set3 } from './flashcards/ccsPension2021';
 
 // ----- EXISTING QUESTION DATA -----
 export const ALL_SETS_DATA: Record<number, any[]> = {
@@ -4386,7 +4387,10 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
       "a": 1,
       "e": "In case of tie, preference is given in order: Older in Age, ST (Female), SC (Female), OBC (Female), EWS (Female), UR (Female), etc."
     }
-  ]
+  ],
+  116: ccs_pension_2021_set1,
+  117: ccs_pension_2021_set2,
+  118: ccs_pension_2021_set3
 };
 
 export interface RawQuestion {
@@ -4472,7 +4476,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-5', 'RTI Act 2005 & RTI Rules 2012', 'Paper III', [68]),
   createTopic('p3-6', 'MANUAL ON POLICIES AND PROCEDURES FOR PURCHASE OF GOODS AND SERVICES', 'Paper III'),
   createTopic('p3-7', 'GPF (CS) Rules 1960', 'Paper III', [72]),
-  createTopic('p3-8', 'CCS (Pension) Rules 2021', 'Paper III'),
+  createTopic('p3-8', 'CCS (Pension) Rules 2021', 'Paper III', [116, 117, 118]),
   createTopic('p3-9', 'CCS (Commutation of Pension) Rules 1981', 'Paper III'),
   createTopic('p3-10', 'Sexual Harassment at Work place (Prevention, prohibition & Redressal) Act, 2013', 'Paper III'),
   createTopic('p3-11', 'Central Civil Services (Implementation of NPS) Rules, 2021', 'Paper III', [73]),

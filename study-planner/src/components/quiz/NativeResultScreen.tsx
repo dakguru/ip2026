@@ -84,7 +84,7 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
                                         {idx + 1}
                                     </span>
                                     <div className="flex-1">
-                                        <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-2">{q.text}</p>
+                                        <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-2 whitespace-pre-wrap">{q.text}</p>
                                         <div className="space-y-1.5">
                                             {q.options.map((opt, oIdx) => {
                                                 const isOptCorrect = oIdx === q.correctAnswer;
@@ -104,7 +104,7 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
                                             })}
                                         </div>
                                         {q.explanation && (
-                                            <div className="mt-3 text-xs bg-zinc-50 dark:bg-zinc-800/50 p-2 rounded-lg text-zinc-600 dark:text-zinc-400">
+                                            <div className="mt-3 text-xs bg-zinc-50 dark:bg-zinc-800/50 p-2 rounded-lg text-zinc-600 dark:text-zinc-400 whitespace-pre-wrap">
                                                 <span className="font-bold text-zinc-500 block text-[10px] uppercase mb-1">Explanation</span>
                                                 {q.explanation}
                                             </div>

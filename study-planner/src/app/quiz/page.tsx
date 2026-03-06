@@ -382,7 +382,7 @@ export default function QuizDashboard() {
                                         <div className="mt-8 animate-in fade-in slide-in-from-top-4 duration-300">
                                             <div className={`p-4 rounded-xl border-l-4 ${answers[currentQ.id] === currentQ.correctAnswer ? 'bg-green-50 dark:bg-green-900/10 border-green-500' : 'bg-red-50 dark:bg-red-900/10 border-red-500'}`}>
                                                 <p className="font-bold text-sm mb-1 uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Explanation</p>
-                                                <p className="text-zinc-700 dark:text-zinc-300">{currentQ.explanation}</p>
+                                                <p className="text-zinc-700 dark:text-zinc-300 whitespace-pre-wrap">{currentQ.explanation}</p>
                                             </div>
                                         </div>
                                     )}
@@ -452,7 +452,7 @@ export default function QuizDashboard() {
                                                 ))}
                                             </div>
 
-                                            <div className="text-sm bg-white dark:bg-zinc-900 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300">
+                                            <div className="text-sm bg-white dark:bg-zinc-900 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap">
                                                 <span className="font-bold text-zinc-400 dark:text-zinc-500 uppercase text-xs tracking-wider block mb-1">Explanation</span>
                                                 {q.explanation}
                                             </div>

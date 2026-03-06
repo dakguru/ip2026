@@ -307,7 +307,7 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                         <div className="flex items-center gap-2 mb-2 text-blue-700 dark:text-blue-300 font-bold text-xs uppercase tracking-wider">
                                             <HelpCircle className="w-4 h-4" /> Explanation
                                         </div>
-                                        <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">
+                                        <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed whitespace-pre-wrap">
                                             {currentQ.explanation}
                                         </p>
                                     </div>

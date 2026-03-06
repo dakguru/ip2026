@@ -8,13 +8,16 @@ import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
 import { useEffect, useState } from "react";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import { useCourse } from "@/contexts/CourseContext";
 import UpdatesDrawer from "./UpdatesDrawer";
 
 export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn: boolean, membershipLevel?: 'free' | 'silver' | 'gold' }) {
     const router = useRouter();
+    const { course } = useCourse();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>(membershipLevel || 'free');
+    const [sessionData, setSessionData] = useState<any>(null);
     const [showUpdates, setShowUpdates] = useState(false);
 
     useEffect(() => {
@@ -24,6 +27,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
             try {
                 const decoded = decodeURIComponent(match[2]);
                 const session = JSON.parse(decoded);
+                setSessionData(session);
                 if (session.membershipLevel) {
                     setCurrentMembership(session.membershipLevel);
                 }
@@ -53,9 +57,10 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
             if (match) {
                 try {
                     const decoded = decodeURIComponent(match[2]);
-                    sessionData = JSON.parse(decoded);
-                    if (sessionData.membershipLevel) {
-                        setCurrentMembership(sessionData.membershipLevel);
+                    const sessionDataObj = JSON.parse(decoded);
+                    if (!sessionData) setSessionData(sessionDataObj);
+                    if (sessionDataObj.membershipLevel) {
+                        setCurrentMembership(sessionDataObj.membershipLevel);
                     }
                 } catch (e) {
                     console.error("Session parse error", e);
@@ -79,6 +84,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             if (distinct || data.user.membershipLevel !== sessionData.membershipLevel) {
                                 console.log("Updating membership from server:", data.user.membershipLevel);
                                 setCurrentMembership(data.user.membershipLevel);
+                                setSessionData((prev: any) => ({ ...prev, ...data.user }));
 
                                 // Update the cookie
                                 const newSession = { ...sessionData, ...data.user };
@@ -130,6 +136,15 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
     }, [mobileMenuOpen]);
 
     const isPremium = currentMembership === 'gold' || currentMembership === 'silver';
+
+    let displayMembership = currentMembership as string;
+    if (course === 'PS_GR_B' && sessionData && sessionData.membershipLevel && sessionData.membershipLevel !== 'free') {
+        if (sessionData.membershipLevel === 'gold' && (sessionData.planId?.includes('diamond') || sessionData.planId?.includes('ps_gr_b'))) {
+            displayMembership = 'diamond';
+        } else if ((sessionData.membershipLevel === 'silver' || sessionData.membershipLevel === 'gold') && sessionData.planId?.includes('platinum')) {
+            displayMembership = 'platinum';
+        }
+    }
 
     return (
         <>
@@ -198,15 +213,15 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                             {isLoggedIn && (
                                 <Link href="/pricing" className="mr-1">
-                                    {currentMembership === 'gold' ? (
+                                    {(displayMembership === 'gold' || displayMembership === 'diamond') ? (
                                         <div className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-amber-900 text-[10px] md:text-xs font-bold border border-amber-200 shadow-sm flex items-center gap-1">
                                             <span className="hidden md:inline">★</span>
-                                            <span>GOLD</span>
+                                            <span className="uppercase">{displayMembership}</span>
                                         </div>
-                                    ) : currentMembership === 'silver' ? (
+                                    ) : (displayMembership === 'silver' || displayMembership === 'platinum') ? (
                                         <div className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-slate-200 via-zinc-300 to-slate-400 text-slate-900 text-[10px] md:text-xs font-bold border border-slate-300 shadow-sm flex items-center gap-1">
                                             <span className="hidden md:inline">★</span>
-                                            <span>SILVER</span>
+                                            <span className="uppercase">{displayMembership}</span>
                                         </div>
                                     ) : (
                                         <div className="relative group flex items-center">
@@ -350,11 +365,11 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                 </button>
 
                                 {isPremium ? (
-                                    <div className={`p-3 rounded-lg font-bold text-center ${currentMembership === 'gold'
+                                    <div className={`p-3 rounded-lg font-bold text-center uppercase ${displayMembership === 'gold' || displayMembership === 'diamond'
                                         ? 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-900'
                                         : 'bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-800'
                                         }`}>
-                                        {currentMembership === 'gold' ? '★ Gold Member' : '★ Silver Member'}
+                                        ★ {displayMembership} Member
                                     </div>
                                 ) : (
                                     <Link

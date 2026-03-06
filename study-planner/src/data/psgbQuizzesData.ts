@@ -48,7 +48,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-44', "Central Civil Services (Classification, Control and Appeal) Rules, 1965", 'Paper II', [50, 51, 52, 53]),
   createTopic('psgb-45', "Central Civil Services (Temporary Service Rules), 1965", 'Paper II', [57]),
   createTopic('psgb-46', "Brochure on Casual labourer", 'Paper II', []),
-  createTopic('psgb-47', "CCS (Pension) Rules, 2021", 'Paper II', []),
+  createTopic('psgb-47', "CCS (Pension) Rules, 2021", 'Paper II', [116, 117, 118]),
   createTopic('psgb-48', "CCS NPS Rules (Implementation & Gratuity)", 'Paper II', []),
   createTopic('psgb-49', "Central Civil Services (Commutation of Pension) Rules, 1981", 'Paper II', []),
   createTopic('psgb-50', "Central Civil Services (Leave) Rules, 1972", 'Paper II', []),
