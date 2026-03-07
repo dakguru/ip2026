@@ -123,12 +123,6 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "emerald"
         },
         {
-            "title": "Post Office Saving Bank Manual Volume I & II",
-            "description": "Materials will be uploaded soon.",
-            "color": "emerald",
-            "comingSoon": true
-        },
-        {
             "title": "POSB (CBS) Manual",
             "description": "Post Office Saving Bank (CBS) Manual",
             "filename": "POSB_CBS_MANUAL.pdf",
@@ -165,12 +159,6 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "path": "/notes/paper-1/Complaint_Grievance_Handling.pdf",
             "size": "0.6 MB",
             "color": "indigo"
-        },
-        {
-            "title": "Guidelines issued by Directorate from time to time on IT modernization Project of Department of Posts",
-            "description": "Materials will be uploaded soon.",
-            "color": "gray",
-            "comingSoon": true
         },
         {
             "title": "Handbook on Philately",

@@ -116,7 +116,8 @@ export const SYLLABUS_DATA: Topic[] = [
     { id: 'p3-fin-1', title: 'Manuals on Procurement (Goods, Works, Services)', category: 'Paper III', type: 'heavy', duration: 3, tips: ["GeM", "Tendering types", "Consultancy contracts."] },
     { id: 'p3-fin-2', title: 'General Financial Rules 2017 (Ch 2 & 6)', category: 'Paper III', type: 'heavy', duration: 2, tips: ["Financial propriety", "Procurement rules."] },
     { id: 'p3-fin-3', title: 'Schedule of Financial Powers (Div/Circle)', category: 'Paper III', type: 'light', duration: 1, tips: ["SOP limits for recurring/non-recurring exp."] },
-    { id: 'p3-fin-4', title: 'P&T FHB Vol I & Postal FHB Vol II', category: 'Paper III', type: 'heavy', duration: 3, tips: ["Budgeting", "Accounting", "DDO responsibilities."] },
+    { id: 'p3-fin-4', title: 'P&T FHB Volume I', category: 'Paper III', type: 'heavy', duration: 2, tips: ["Budgeting", "Accounting", "DDO responsibilities."] },
+    { id: 'p3-fin-4-2', title: 'Postal FHB Volume II', category: 'Paper III', type: 'heavy', duration: 2, tips: ["Cash handling", "Accounting at HO/SO", "Treasury business."] },
 
     // Establishment & Pensions
     { id: 'p3-est-1', title: 'CCS (GPF) Rules 1961', category: 'Paper III', type: 'light', duration: 1, tips: ["Subscription", "Advances", "Withdrawals."] },
