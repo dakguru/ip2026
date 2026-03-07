@@ -217,6 +217,16 @@ const PMLAStudyGuide = () => {
                                         <p>
                                             <Highlight>Reporting Entity</Highlight> means a banking company, financial institution, intermediary, or a person carrying on a designated business, including the <Highlight>Department of Posts</Highlight>.
                                         </p>
+
+                                        <div className="mt-6 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+                                            <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-2">Scheduled Offences (Part A & B)</h4>
+                                            <p className="text-sm mb-2">Money laundering is linked to &quot;scheduled offences&quot; under the Act. Key categories include:</p>
+                                            <ul className="list-disc list-inside text-sm space-y-1 marker:text-indigo-500">
+                                                <li><strong>Part A:</strong> Offences under IPC (e.g. criminal conspiracy, cheating, forgery), NDPS Act, offences under Customs and FEMA, corruption (PCA), etc.</li>
+                                                <li><strong>Part B:</strong> Offences with cross-border implications, or those specified by Central Government by notification.</li>
+                                            </ul>
+                                            <p className="text-xs mt-2 text-slate-500">Proceeds of crime must relate to a scheduled offence for PMLA to apply.</p>
+                                        </div>
                                     </div>
                                 )}
                             </div>
@@ -266,6 +276,14 @@ const PMLAStudyGuide = () => {
                                                     The Adjudicating Authority is appointed by the Central Government. The Director shall file a complaint stating the facts of such attachment before the Adjudicating Authority within <Highlight>30 days</Highlight>.
                                                 </p>
                                             </div>
+                                            <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-800">
+                                                <h4 className="font-bold text-amber-800 dark:text-amber-300 mb-2">Confiscation Procedure</h4>
+                                                <ul className="text-sm space-y-1 list-disc list-inside marker:text-amber-500">
+                                                    <li>Provisional attachment: max <Highlight>180 days</Highlight>; extension possible in certain cases.</li>
+                                                    <li>After complaint, Adjudicating Authority gives notice; if satisfied that property is proceeds of crime, it may order <strong>confiscation</strong>.</li>
+                                                    <li>Burden of proving that property is not proceeds of crime lies on the person claiming it (Section 24).</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 )}
@@ -278,10 +296,25 @@ const PMLAStudyGuide = () => {
                                 {expandedSections.obligations && (
                                     <div className="p-6 font-serif text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                                         <ul className="list-disc list-inside space-y-3 marker:text-indigo-500">
-                                            <li><Highlight>Verification of Identity</Highlight>: Maintain records of the identity of all its clients.</li>
+                                            <li><Highlight>Verification of Identity</Highlight>: Maintain records of the identity of all its clients (KYC).</li>
                                             <li><Highlight>Maintenance of Records</Highlight>: Maintain record of all transactions for a period of <Highlight>5 years</Highlight> from the date of transaction between a client and the reporting entity.</li>
-                                            <li><Highlight>Furnishing Information</Highlight>: Furnish to the Director information relating to such transactions, whether attempted or executed.</li>
+                                            <li><Highlight>Furnishing Information</Highlight>: Furnish to the Director (FIU-IND) information relating to such transactions, whether attempted or executed—CTR, STR, CCR, NTR as applicable.</li>
                                         </ul>
+                                        <div className="mt-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+                                            <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-2">FIU-IND (Financial Intelligence Unit – India)</h4>
+                                            <p className="text-sm">Central agency that receives, analyses, and disseminates CTR/STR and other reports. Reporting entities send reports to FIU-IND. It may refer cases to enforcement agencies (e.g. ED) for investigation.</p>
+                                        </div>
+                                        <div className="mt-4 overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
+                                            <table className="w-full text-sm text-left">
+                                                <thead className="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+                                                    <tr><th className="p-3 font-bold">Default</th><th className="p-3 font-bold">Penalty (Reporting Entity)</th></tr>
+                                                </thead>
+                                                <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                                                    <tr><td className="p-3">Failure to comply with obligations</td><td className="p-3">Fine: <Highlight>Rs. 10,000</Highlight> to <Highlight>Rs. 1,00,000</Highlight> per default</td></tr>
+                                                    <tr><td className="p-3">Repeated or continuing failure</td><td className="p-3">Higher penalties as prescribed; designated authority may issue directions.</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 )}
                             </div>

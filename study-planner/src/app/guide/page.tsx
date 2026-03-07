@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, Scale, Briefcase, BookOpen, ChevronRight, Zap, Star, Gavel, Lock, ShoppingCart } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Scale, Briefcase, BookOpen, ChevronRight, Star, Gavel, Lock, ShoppingCart, Mail, Calculator, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import { useCourse } from '@/contexts/CourseContext';
 
@@ -43,23 +43,27 @@ export default function GuidePage() {
     }, [course]);
 
     if (isLoading) {
-        return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-slate-400">Loading access...</div>;
+        return (
+            <div className="min-h-screen bg-[#0c1222] flex items-center justify-center text-slate-400">
+                <span className="text-sm">Loading access...</span>
+            </div>
+        );
     }
 
     if (isLocked) {
         return (
-            <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center">
-                <div className="bg-slate-900/50 p-8 rounded-3xl border border-slate-800 max-w-md w-full">
-                    <div className="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Lock className="w-8 h-8 text-slate-400" />
+            <div className="min-h-screen bg-[#0c1222] flex flex-col items-center justify-center p-6 text-center">
+                <div className="bg-white/[0.04] p-8 rounded-2xl border border-white/10 max-w-md w-full">
+                    <div className="w-14 h-14 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <Lock className="w-7 h-7 text-amber-400" />
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-2">Premium Content</h1>
-                    <p className="text-slate-400 mb-8">Access to the Web Guide is restricted to Silver and Gold members. Upgrade your plan to unlock comprehensive resources.</p>
+                    <h1 className="text-xl font-bold text-white mb-2">Premium Content</h1>
+                    <p className="text-slate-400 text-sm mb-8">Access to the Web Guide is for Silver and Gold members. Upgrade to unlock all guides.</p>
                     <div className="flex flex-col gap-3">
-                        <Link href="/pricing" className="w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold rounded-xl transition-all">
+                        <Link href="/pricing" className="w-full py-3 bg-amber-500 hover:bg-amber-400 text-[#0c1222] font-semibold rounded-xl transition-colors">
                             Upgrade Now
                         </Link>
-                        <Link href="/" className="w-full py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-xl transition-all">
+                        <Link href="/" className="w-full py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 font-medium rounded-xl transition-colors">
                             Back to Home
                         </Link>
                     </div>
@@ -69,71 +73,75 @@ export default function GuidePage() {
     }
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white overflow-hidden relative">
+        <div className="min-h-screen bg-[#0c1222] text-slate-100 selection:bg-amber-500/30 selection:text-white overflow-hidden relative">
 
-            {/* Background Effects */}
-            <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-indigo-900/20 to-transparent pointer-events-none" />
-            <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+            {/* Background: subtle grid + gradient orbs */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b08_1px,transparent_1px),linear-gradient(to_bottom,#1e293b08_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
+            <div className="absolute top-0 left-0 w-full h-[28rem] bg-gradient-to-b from-teal-500/8 via-amber-500/5 to-transparent pointer-events-none" />
+            <div className="absolute top-[-15%] right-[-5%] w-[480px] h-[480px] bg-teal-500/12 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-[-15%] left-[-5%] w-[400px] h-[400px] bg-amber-500/10 rounded-full blur-[80px] pointer-events-none" />
 
-            {/* Adjusted padding for mobile */}
-            <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12 relative z-10">
-                {/* Header Navigation */}
+            <div className="max-w-6xl mx-auto px-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:px-6 py-6 sm:py-8 md:py-14 pb-[max(1.5rem,env(safe-area-inset-bottom))] relative z-10">
+                {/* Back link - min 44px touch target on mobile */}
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4 }}
                 >
-                    <Link href="/" className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors group mb-8 md:mb-12">
-                        <div className="p-2 rounded-full bg-slate-900 group-hover:bg-slate-800 transition-colors">
+                    <Link
+                        href="/"
+                        className="inline-flex items-center gap-2 text-slate-400 hover:text-amber-400 active:text-amber-400 transition-colors group mb-8 sm:mb-10 md:mb-14 min-h-[44px] min-w-[44px] -ml-2 pl-2 rounded-lg touch-manipulation"
+                        style={{ WebkitTapHighlightColor: 'transparent' }}
+                    >
+                        <span className="p-2.5 rounded-lg bg-white/5 group-hover:bg-white/10 border border-white/5 group-hover:border-amber-500/20 transition-colors">
                             <ArrowLeft className="w-4 h-4" />
-                        </div>
-                        <span className="font-medium text-sm md:text-base">Back to Home</span>
+                        </span>
+                        <span className="text-sm font-medium">Back to Home</span>
                     </Link>
                 </motion.div>
 
-                {/* Hero Section */}
-                <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
+                {/* Hero */}
+                <div className="text-center max-w-2xl mx-auto mb-14 md:mb-20">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6 }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-4 md:mb-6"
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/25 text-amber-400 text-[10px] md:text-xs font-semibold uppercase tracking-widest mb-6"
                     >
-                        <Zap size={14} className="fill-indigo-400" />
+                        <Star size={12} className="fill-amber-400/80" />
                         Premium Learning Resources
                     </motion.div>
 
                     <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-4xl md:text-7xl font-black tracking-tight mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-slate-400"
+                        transition={{ duration: 0.5, delay: 0.08 }}
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-5 text-white"
                     >
                         Master the Rules.
                     </motion.h1>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-base md:text-xl text-slate-400 leading-relaxed mb-6 md:mb-8 px-2"
+                        transition={{ duration: 0.5, delay: 0.15 }}
+                        className="text-slate-400 text-base md:text-lg leading-relaxed mb-6"
                     >
-                        Dive into our comprehensive, interactive web guides designed for Important Rules and Acts for the Aspirants. Simplified, updated, and built for mastery.
+                        Comprehensive, interactive web guides for Rules and Acts—simplified, updated, and built for mastery.
                     </motion.p>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="text-indigo-400 font-medium italic text-sm md:text-base"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.25 }}
+                        className="text-teal-400/90 font-medium text-sm md:text-base"
                     >
-                        "Designed for the eye, engineered for the mind."
+                        &ldquo;Designed for the eye, engineered for the mind.&rdquo;
                     </motion.p>
                 </div>
 
-                {/* Grid Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                {/* Cards grid - single column on mobile with comfortable gap for touch */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-4 md:gap-6">
                     {/* Card 1: FRSR */}
                     <GuideCard
                         href="/guide/frsr"
@@ -145,7 +153,18 @@ export default function GuidePage() {
                         delay={0.3}
                     />
 
-                    {/* Card 2: PMLA */}
+                    {/* Card 2: Post Office Act 2023 */}
+                    <GuideCard
+                        href="/guide/post-office-act-2023"
+                        title="Post Office Act, 2023"
+                        badge="New 2023"
+                        description="Complete guide to the new Post Office Act. Services, interception, liability, offences, and key provisions for exams."
+                        icon={<Mail className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="teal"
+                        delay={0.35}
+                    />
+
+                    {/* Card 3: PMLA */}
                     <GuideCard
                         href="/guide/pmla"
                         title="PMLA 2002"
@@ -243,20 +262,63 @@ export default function GuidePage() {
                         color="violet"
                         delay={0.7}
                     />
+
+                    {/* GSPR 2018 – SB & Small Savings */}
+                    <GuideCard
+                        href="/guide/gspr"
+                        title="Government Savings (GSPR 2018)"
+                        badge="SB & Small Savings"
+                        description="Post Office SB, TD, MIS, NSC, PPF, SSY, SCSS and small savings schemes. Limits, nomination, exam highlights."
+                        icon={<Calculator className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="emerald"
+                        delay={0.72}
+                    />
+
+                    {/* RTI Act 2005 */}
+                    <GuideCard
+                        href="/guide/rti"
+                        title="RTI Act, 2005"
+                        badge="Right to Information"
+                        description="PIO, time limits (30 days / 48 hours), exemptions, appeal to CIC/SIC, and penalties. Essential for GK and Paper I."
+                        icon={<FileText className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="blue"
+                        delay={0.74}
+                    />
+
+                    {/* Post Office Rules 2024 */}
+                    <GuideCard
+                        href="/guide/post-office-rules-2024"
+                        title="Post Office Rules, 2024"
+                        badge="Under PO Act 2023"
+                        description="Operational framework under the Post Office Act 2023. Services, standards, and licensing. Read with the Act."
+                        icon={<Mail className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="cyan"
+                        delay={0.76}
+                    />
+
+                    {/* CCS (CCA) Rules */}
+                    <GuideCard
+                        href="/guide/ccs-cca"
+                        title="CCS (CCA) Rules"
+                        badge="Discipline & Appeal"
+                        description="Classification, penalties (minor and major), suspension, inquiry procedure, appeal and UPSC consultation."
+                        icon={<Gavel className="w-6 h-6 md:w-8 md:h-8" />}
+                        color="rose"
+                        delay={0.78}
+                    />
                 </div>
 
-                {/* Footer Section */}
-                <motion.div
+                <motion.footer
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.8 }}
-                    className="mt-12 md:mt-20 text-center border-t border-slate-800 pt-8 md:pt-10"
+                    transition={{ delay: 0.6 }}
+                    className="mt-16 md:mt-24 text-center border-t border-white/5 pt-8"
                 >
                     <p className="text-slate-500 text-xs md:text-sm">
                         &copy; {new Date().getFullYear()} Dak Guru Learning Systems.
                     </p>
-                </motion.div>
+                </motion.footer>
             </div>
         </div>
     );
@@ -264,55 +326,52 @@ export default function GuidePage() {
 
 // --- Sub-Components ---
 
-function GuideCard({ href, title, badge, description, icon, color, delay }: any) {
-    const colorVariants: any = {
-        blue: "group-hover:shadow-blue-500/20 group-hover:border-blue-500/50 from-blue-500/20 to-transparent",
-        emerald: "group-hover:shadow-emerald-500/20 group-hover:border-emerald-500/50 from-emerald-500/20 to-transparent",
-        amber: "group-hover:shadow-amber-500/20 group-hover:border-amber-500/50 from-amber-500/20 to-transparent",
-        indigo: "group-hover:shadow-indigo-500/20 group-hover:border-indigo-500/50 from-indigo-500/20 to-transparent",
-        violet: "group-hover:shadow-violet-500/20 group-hover:border-violet-500/50 from-violet-500/20 to-transparent",
-        purple: "group-hover:shadow-purple-500/20 group-hover:border-purple-500/50 from-purple-500/20 to-transparent",
-    };
+const CARD_COLORS: Record<string, { border: string; icon: string; badge: string }> = {
+    blue:   { border: "border-l-blue-500", icon: "text-blue-400 bg-blue-500/10", badge: "bg-blue-500/15 text-blue-300 border-blue-500/25" },
+    teal:   { border: "border-l-teal-500", icon: "text-teal-400 bg-teal-500/10", badge: "bg-teal-500/15 text-teal-300 border-teal-500/25" },
+    emerald: { border: "border-l-emerald-500", icon: "text-emerald-400 bg-emerald-500/10", badge: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25" },
+    amber:  { border: "border-l-amber-500", icon: "text-amber-400 bg-amber-500/10", badge: "bg-amber-500/15 text-amber-300 border-amber-500/25" },
+    indigo: { border: "border-l-indigo-500", icon: "text-indigo-400 bg-indigo-500/10", badge: "bg-indigo-500/15 text-indigo-300 border-indigo-500/25" },
+    violet: { border: "border-l-violet-500", icon: "text-violet-400 bg-violet-500/10", badge: "bg-violet-500/15 text-violet-300 border-violet-500/25" },
+    purple: { border: "border-l-purple-500", icon: "text-purple-400 bg-purple-500/10", badge: "bg-purple-500/15 text-purple-300 border-purple-500/25" },
+    cyan:   { border: "border-l-cyan-500", icon: "text-cyan-400 bg-cyan-500/10", badge: "bg-cyan-500/15 text-cyan-300 border-cyan-500/25" },
+    rose:   { border: "border-l-rose-500", icon: "text-rose-400 bg-rose-500/10", badge: "bg-rose-500/15 text-rose-300 border-rose-500/25" },
+};
 
-    const iconColors: any = {
-        blue: "text-blue-400 group-hover:text-blue-300 bg-blue-500/10 group-hover:bg-blue-500/20",
-        emerald: "text-emerald-400 group-hover:text-emerald-300 bg-emerald-500/10 group-hover:bg-emerald-500/20",
-        amber: "text-amber-400 group-hover:text-amber-300 bg-amber-500/10 group-hover:bg-amber-500/20",
-        indigo: "text-indigo-400 group-hover:text-indigo-300 bg-indigo-500/10 group-hover:bg-indigo-500/20",
-        violet: "text-violet-400 group-hover:text-violet-300 bg-violet-500/10 group-hover:bg-violet-500/20",
-        purple: "text-purple-400 group-hover:text-purple-300 bg-purple-500/10 group-hover:bg-purple-500/20",
-    };
+function GuideCard({ href, title, badge, description, icon, color, delay }: any) {
+    const c = CARD_COLORS[color] || CARD_COLORS.blue;
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay }}
+            transition={{ duration: 0.4, delay }}
+            className="min-h-[120px]"
         >
-            <Link href={href} className={`group relative block h-full bg-slate-900/50 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 border border-slate-800 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl ${colorVariants[color]}`}>
-                {/* Gradient Overlay on Hover */}
-                <div className={`absolute inset-0 rounded-2xl md:rounded-3xl opacity-0 group-hover:opacity-100 bg-gradient-to-br ${colorVariants[color]} transition-opacity duration-500 pointer-events-none`} />
-
-                <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex justify-between items-start mb-4 md:mb-6">
-                        <div className={`p-3 md:p-4 rounded-xl md:rounded-2xl transition-colors duration-300 ${iconColors[color]}`}>
+            <Link
+                href={href}
+                className={`group relative block h-full rounded-xl md:rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] active:bg-white/[0.08] active:scale-[0.99] hover:border-white/15 transition-all duration-200 overflow-hidden border-l-4 ${c.border} touch-manipulation select-none`}
+                style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
+                <div className="p-4 sm:p-5 md:p-6 flex flex-col h-full">
+                    <div className="flex justify-between items-start gap-3 mb-3 sm:mb-4">
+                        <div className={`shrink-0 p-2.5 sm:p-3 rounded-lg ${c.icon} transition-colors group-hover:brightness-110`}>
                             {icon}
                         </div>
                         {badge && (
-                            <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full bg-white/5 border border-white/10 text-[10px] md:text-xs font-semibold uppercase tracking-wider text-slate-300 group-hover:bg-white/10 transition-colors">
+                            <span className={`shrink-0 px-2 py-1 rounded-md border text-[10px] font-semibold uppercase tracking-wider ${c.badge}`}>
                                 {badge}
                             </span>
                         )}
                     </div>
-
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3 group-hover:text-white transition-colors">{title}</h2>
-                    <p className="text-sm md:text-base text-slate-400 leading-relaxed mb-6 md:mb-8 flex-grow group-hover:text-slate-300 transition-colors">
+                    <h2 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 leading-snug">{title}</h2>
+                    <p className="text-[15px] sm:text-sm text-slate-400 leading-relaxed flex-grow mb-4 sm:mb-5">
                         {description}
                     </p>
-
-                    <div className="flex items-center text-xs md:text-sm font-bold uppercase tracking-widest text-slate-500 group-hover:text-white transition-colors">
-                        Explore Guide <ChevronRight className="w-3 h-3 md:w-4 md:h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    {/* Min 44px touch target for "Explore guide" - full-width tappable area */}
+                    <span className="inline-flex items-center min-h-[44px] -mb-1 text-[13px] sm:text-xs font-semibold uppercase tracking-wider text-slate-500 group-hover:text-amber-400 group-active:text-amber-400 transition-colors">
+                        Explore guide <ChevronRight className="w-4 h-4 sm:w-3.5 sm:h-3.5 ml-1 group-hover:translate-x-0.5 group-active:translate-x-0.5 transition-transform shrink-0" />
+                    </span>
                 </div>
             </Link>
         </motion.div>

@@ -97,6 +97,39 @@ const rulesData = [
         ]
     },
     {
+        id: "rule-9",
+        ruleNumber: "Rule 9",
+        title: "Subscription & Resignation",
+        icon: <Briefcase className="w-5 h-5" />,
+        content: [
+            "**Resignation:** A Govt servant may resign by submitting notice in writing. Resignation takes effect on acceptance. Withdrawal of resignation is permissible only before it takes effect.",
+            "**Subscription:** No Govt servant shall subscribe to or assist in any way any fund raised for a political purpose.",
+            "**Propaganda:** Cannot participate in or subscribe in aid of any political movement or activity."
+        ]
+    },
+    {
+        id: "rule-14",
+        ruleNumber: "Rule 14",
+        title: "Criticism of Government",
+        icon: <Globe className="w-5 h-5" />,
+        content: [
+            "No Govt servant shall make any statement of fact or opinion which has the effect of adverse criticism of any current or recent policy or action of the Central/State Government.",
+            "**Exception:** Bonafide expression of view in the course of official duty or in the performance of assigned duties is not prohibited.",
+            "Cannot participate in any radio broadcast, write to the press, or publish any document without prior sanction if it involves such criticism."
+        ]
+    },
+    {
+        id: "rule-16",
+        ruleNumber: "Rule 16",
+        title: "Subscriptions & Demonstrations",
+        icon: <Users className="w-5 h-5" />,
+        content: [
+            "Cannot give or take subscription to any fund (without sanction) if it has political objectives.",
+            "Cannot take part in or subscribe in aid of any demonstration that is political or antigovernment in nature.",
+            "**Strikes:** Participation in strikes, go-slow, or any form of agitation that undermines the functioning of Government is prohibited."
+        ]
+    },
+    {
         id: "rule-13",
         ruleNumber: "Rule 13",
         title: "Gifts",

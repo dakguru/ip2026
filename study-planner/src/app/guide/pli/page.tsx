@@ -360,6 +360,49 @@ const STUDY_DATA: Section[] = [
         ]
     },
     {
+        id: "claims-nomination",
+        title: "Claims, Nomination & Assignment",
+        icon: <FileText className="w-5 h-5" />,
+        content: [
+            {
+                subtitle: "A. Death Claim – Documents Required",
+                text: "For settlement of death claims, the claimant must submit:",
+                points: [
+                    "Claim form (Form 1 or as prescribed), Original policy bond.",
+                    "Death certificate from competent authority (Registrar/Municipality/Medical Certificate).",
+                    "Succession certificate or Probate or Letter of Administration (if required).",
+                    "Discharge form duly witnessed. Identity proof of claimant.",
+                    "Where nomination exists: Nominee can claim with ID proof and discharge. If no nomination: Legal heir certificate or succession certificate may be required."
+                ]
+            },
+            {
+                subtitle: "B. Maturity Claim",
+                text: "Policyholder submits original bond, ID proof, and discharge form. Payment is made at the office of payment or through NEFT. If policy is under assignment, assignee must submit discharge.",
+                points: [
+                    "Surrender claims: Require bond, application, and deduction of outstanding loan if any.",
+                    "Loan closure: Outstanding loan + interest is deducted from claim amount."
+                ]
+            },
+            {
+                subtitle: "C. Nomination (Rule 6 & 7)",
+                text: "Policyholder may nominate one or more persons. Nomination can be made or changed at any time before maturity. Minor can be nominee; appointee to receive until minor attains 18.",
+                points: [
+                    "If no nomination: Claim paid to legal heirs (succession certificate may be asked for large amounts).",
+                    "Assignment overrides nomination: If policy is assigned, assignee gets priority; after assignment is extinguished, nomination revives."
+                ]
+            },
+            {
+                subtitle: "D. Assignment",
+                text: "Policy can be assigned (transfer of rights) to another person or to a bank/financial institution as collateral. Assignment must be in writing and registered with the Department.",
+                points: [
+                    "Absolute assignment: All rights transferred to assignee (e.g. gift).",
+                    "Conditional assignment: Usually for loan; assignee has rights until loan is repaid.",
+                    "Notice of assignment: Must be sent to the Department for registration; valid only after recording."
+                ]
+            }
+        ]
+    },
+    {
         id: "incentives",
         title: "Part 5: Incentive Structure (2025)",
         icon: <Award className="w-5 h-5" />,

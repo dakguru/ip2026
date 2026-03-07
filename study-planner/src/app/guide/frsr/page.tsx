@@ -55,7 +55,11 @@ const CONTENT_DATA: Record<string, any> = {
             { id: "FR-9(22)", title: "Permanent Post", content: "A post carrying a definite rate of pay sanctioned without limit of time." },
             { id: "FR-9(24)", title: "Presumptive Pay", content: "Pay entitled if the post was held substantively. Important for calculating pay after exoneration from suspension." },
             { id: "FR-9(25)", title: "Special Pay", content: "Addition to pay for special nature of work or additional responsibilities." },
-            { id: "FR-9(30)", title: "Temporary Post", content: "A post carrying a definite rate of pay sanctioned for a limited time." }
+            { id: "FR-9(30)", title: "Temporary Post", content: "A post carrying a definite rate of pay sanctioned for a limited time." },
+            { id: "FR-9(14)", title: "Leave Salary", content: "Pay drawn during leave. Includes Basic Pay, DA, and other allowances admissible during leave as per leave rules." },
+            { id: "FR-9(19)", title: "Leave", content: "Leave of various kinds—Earned Leave (EL), Half Pay Leave (HPL), Commuted Leave, Leave Not Due (LND), Extraordinary Leave (EOL), Maternity Leave, Child Care Leave, Study Leave, etc.—as defined in CCS (Leave) Rules, 1972." },
+            { id: "FR-9(26-A)", title: "Tenure Post", content: "A post which the incumbent holds for a specified period (e.g. 3–5 years). No lien on a tenure post; lien is retained on the substantive post." },
+            { id: "FR-9(28)", title: "Substantive Pay", content: "Pay other than special pay, personal pay, or emoluments classed as pay by the President, to which a Government servant is entitled by reason of his position in a cadre." }
         ]
     },
     "Chapter III: General Conditions": {
@@ -170,11 +174,27 @@ const CONTENT_DATA: Record<string, any> = {
         icon: <Calendar className="w-5 h-5" />,
         color: "pink",
         rules: [
-            { id: "Rule 26", title: "Earned Leave (EL)", content: "Credit: 15 days on 1st Jan & 1st July. Accumulation: Max 300 days (plus 15 days separate). Unavailed joining time can be credited." },
+            { id: "Rule 26", title: "Earned Leave (EL)", content: "Credit: 15 days on 1st Jan & 1st July. Accumulation: Max 300 days (plus 15 days separate). Unavailed joining time can be credited. Encashment: 50% of EL at credit at the time of LTC (max 60 days in entire career)." },
             { id: "Rule 29", title: "Half Pay Leave (HPL)", content: "Credit: 10 days on 1st Jan & 1st July. No max accumulation limit. Can be commuted to Commuted Leave (medical/studies) on production of MC (1 Commuted = 2 HPL)." },
-            { id: "Rule 43", title: "Maternity Leave", content: "180 days for female employee (max 2 surviving children). 45 days for miscarriage/abortion in entire career." },
-            { id: "Rule 43-C", title: "Child Care Leave (CCL)", content: "Max 730 days in entire service for female employees (and single male parents). For 2 eldest children < 18 years. Paid 100% salary for first 365 days, 80% for next 365 days." },
-            { id: "Rule 48", title: "Special Disability Leave", content: "For injury intentionally inflicted or accidental during official duty. Max 24 months." }
+            { id: "Rule 43", title: "Maternity Leave", content: "180 days for female employee (max 2 surviving children). 45 days for miscarriage/abortion in entire career. Can be availed in one or more spells. No debiting of EL/HPL for the period." },
+            { id: "Rule 43-C", title: "Child Care Leave (CCL)", content: "Max 730 days in entire service for female employees (and single male parents). For 2 eldest children < 18 years. Paid 100% salary for first 365 days, 80% for next 365 days. Not admissible if child is 18+ or if employee has no child." },
+            { id: "Rule 48", title: "Special Disability Leave", content: "For injury intentionally inflicted or accidental during official duty. Max 24 months. Leave salary: same as for leave on medical certificate." },
+            { id: "Rule 51", title: "Paternity Leave", content: "15 days for male employee on birth of child (or adoption of child < 1 year). To be availed within 6 months. Admissible for first two surviving children." },
+            { id: "Rule 52", title: "Study Leave", content: "Granted for higher studies in the interest of Government. No pay; only leave salary (as prescribed). Bond may be required. Counts for increment if conditions met." },
+            { id: "Rule 53", title: "Leave Not Due (LND)", content: "Granted when no leave to credit. Debited against future EL. Max 360 days in entire service. Leave salary: equal to HPL." },
+            { id: "Rule 54", title: "Extraordinary Leave (EOL)", content: "No pay. Granted when no other leave is admissible or when Government servant applies for it. Does not count for increment (except for adoption, higher studies, or when regularized later)." }
+        ]
+    },
+    "Chapter X: Other Key FR/SR Provisions": {
+        icon: <FileText className="w-5 h-5" />,
+        color: "slate",
+        intro: "Miscellaneous rules frequently asked in exams.",
+        rules: [
+            { id: "FR-11", title: "Presumption of Fitness", content: "A Government servant is deemed fit for Government service unless declared otherwise by a Medical Board or Civil Surgeon. Exemption from medical examination may be granted for limited periods." },
+            { id: "FR-14", title: "Pay during Joining Time", content: "Pay and allowances of the post from which the servant is transferred. If transferred to a lower post (not as penalty), pay protected at the level of the higher post." },
+            { id: "FR-22-B", title: "Direct Recruit Fixation (7th CPC)", content: "Initial pay in Level 1: minimum of the Level. For higher Levels: minimum of the Level or pay fixed as per matrix. Increment on 1st July or 1st January." },
+            { id: "SR-3", title: "Interpretation (SR)", content: "Power to interpret Supplementary Rules is vested in the Ministry of Finance (Department of Expenditure)." },
+            { id: "SR-9", title: "Lien on Abolition of Post", content: "When a permanent post is abolished, the holder may be offered an alternative post. If no alternative, compensation as per rules (e.g. FR 14)." }
         ]
     }
 };
