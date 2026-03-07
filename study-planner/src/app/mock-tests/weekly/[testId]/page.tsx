@@ -312,7 +312,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     // Live Window Logic
     const testConfig = TEST_CONFIG_MAP[testId];
     const isLiveWindow = testConfig?.endDate ? new Date() < testConfig.endDate : false;
-    const canSeeLeaderboard = true; // Always visible as per request
+    const canSeeLeaderboard = isAdmin || !isLiveWindow;
 
     // Load Data & Check Access
     useEffect(() => {
