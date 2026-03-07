@@ -1,0 +1,805 @@
+1. Under which Article of the Constitution are all moneys received by or deposited with any Officer, other than Revenues or public money, required to be paid into the Public Account?
+A) Article 280
+B) Article 284
+C) Article 266
+D) Article 268
+Correct Answer: B
+Explanation: Under Article 284 of the Constitution, all moneys received by or deposited with any Officer, other than Revenues or public money raised or received by Government, shall be paid into the Public Account.
+
+2. Which of the following defines a "Bank" concerning the general rules of the Financial Handbook Volume-I?
+A) Only the State Bank of India
+B) Any schedule commercial bank authorized by the Ministry of Finance
+C) Any office or branch of the Banking Department of the Reserve Bank of India, and any branch of SBI acting as its agent
+D) The Post Office Savings Bank exclusively
+Correct Answer: C
+Explanation: The term 'Bank' means any office or branch of the Banking Department of the Reserve Bank of India (RBI), any branch of the State Bank of India (SBI) acting as the agent of the RBI, and any other agency appointed by the RBI.
+
+3. Who holds the authority to declare any Gazetted Officer as the Head of an Office in offices where there is more than one Gazetted Officer?
+A) The Director General
+B) The Head of the Circle
+C) The Head of Department
+D) The Senior Superintendent of Post Offices
+Correct Answer: C
+Explanation: Under Rule 3, Heads of Departments are authorized to declare any of the Gazetted Officers as the Head of an Office for the purpose of the rules in this Handbook.
+
+4. What is the prescribed timeline for preferring claims by a Government servant against the Government (other than TA claims) without requiring an authority from the Circle Accounts Officer?
+A) Within 30 days of becoming due
+B) Within 6 months of becoming due
+C) Within one year of becoming due
+D) Within two years of becoming due
+Correct Answer: D
+Explanation: Rule 24 states that no claims against the Government not preferred within two years of their becoming due can be presented without any authority from the Circle Accounts Officer.
+
+5. Under an exception to the two-year rule for arrear claims, claims not exceeding what amount may be paid without pre-check by the Circle Accounts Officer if presented within three years?
+A) Rs. 500/-
+B) Rs. 1,000/-
+C) Rs. 5,000/-
+D) Rs. 10,000/-
+Correct Answer: A
+Explanation: Claims not exceeding Rs. 500/- if presented within three years of their becoming due may be paid without pre-check by the Circle Accounts Officer.
+
+6. Within how many days from the date on which it becomes due must a claim for travelling allowance be preferred to avoid forfeiture?
+A) 30 days
+B) 60 days
+C) 90 days
+D) 120 days
+Correct Answer: B
+Explanation: The right of a Government servant to travelling allowance is forfeited or deemed to have been relinquished if the claim for it is not preferred within sixty days from the date on which it becomes due.
+
+7. Who has the delegated power to sanction the investigation of arrear claims which are more than 6 years old, provided connected records are available?
+A) Internal Financial Adviser
+B) The Director General (Posts) exclusively
+C) Heads of Circles and other Officers declared as Heads of Departments
+D) Circle Accounts Officer
+Correct Answer: C
+Explanation: The Director-General (Posts) has re-delegated powers to Heads of Circles and other Officers declared as Heads of Departments to issue sanction for investigation of arrear claims which are more than 6 years old.
+
+8. When an LTC advance is drawn, what is the due date within which the final claim must be submitted?
+A) Within one month of the due date (completion of journey)
+B) Within two months of the due date
+C) Within three months of the due date
+D) Within six months of the due date
+Correct Answer: A
+Explanation: According to the notes, in case an LTC advance is drawn, the due date for the claim is within one month of the due date. If the advance is not drawn, it is within three months.
+
+9. In all cases of payment to contractors and sub-contractors exceeding what amount must Income Tax be deducted at source?
+A) Rs. 10,000
+B) Rs. 20,000
+C) Rs. 30,000
+D) Rs. 50,000
+Correct Answer: C
+Explanation: Income tax @ 2% is deducted at source in all cases of payment to contractors and sub-contractors exceeding Rs. 30,000 under Section 194-C of the Income Tax Act.
+
+10. What is the maximum number of times a contingent bill can be endorsed in favor of a firm, its Banker, and subsequently an agent for collection?
+A) Once
+B) Twice
+C) Three times
+D) Unlimited endorsements are permitted
+Correct Answer: C
+Explanation: A firm can re-endorse to its Banker or to a messenger for collection only, and the Banker can in turn endorse it to a messenger or an agent for collection only. Thus, in all, three endorsements are permissible.
+
+11. According to the rules governing corrections in bills, what must the Drawing Officer do if an erasure or overwriting is necessary?
+A) Use correction fluid precisely and over-write the correct amount
+B) Paste a slip of paper over the incorrect entry and write the correct entry on the slip
+C) Erasures and overwriting are absolutely forbidden; the incorrect entry should be cancelled neatly in red ink and authenticated
+D) Prepare an entirely new bill from scratch; no corrections are permitted under any circumstances
+Correct Answer: C
+Explanation: Rule 35 states that erasures and overwriting in any bill are absolutely forbidden. The incorrect entry should be cancelled neatly in red ink and authenticated individually.
+
+12. What is the prescribed rounding-off rule for fractions of a rupee in cases of HRA, DA, TA, and PLI premium deductions?
+A) Fractions of 50 paise and above are rounded off to the next higher rupee, and less than 50 paise are ignored
+B) They are rounded to the nearest multiple of ten rupees
+C) Exact decimal fractions must be maintained without any rounding
+D) They are always rounded down to the nearest rupee
+Correct Answer: A
+Explanation: Fraction of 50 paise and above are rounded off to the next higher rupee and fractions of less than 50 paise are ignored for HRA, DA, TA, and other deductions.
+
+13. For sums exceeding what monetary limit is a receipt stamp mandatorily required under the Indian Stamp Act?
+A) Rs. 500
+B) Rs. 1,000
+C) Rs. 5,000
+D) Rs. 10,000
+Correct Answer: C
+Explanation: Receipts for all sums exceeding Rs. 5,000 must be stamped under Section 3 of the Indian Stamp Act.
+
+14. What word must be distinctly written in red ink on the face of a duplicate receipt or bill issued in lieu of a lost original?
+A) Cancelled
+B) Duplicate
+C) Provisional
+D) Re-issued
+Correct Answer: B
+Explanation: The duplicate copy issued must bear distinctly on its face the word "duplicate" written in red ink.
+
+15. By what date annually should a report of losses of Government property be submitted to the Accounts Office?
+A) 31st March
+B) 15th April
+C) 15th May
+D) 30th June
+Correct Answer: C
+Explanation: Report of losses of Government property should be submitted to the Accounts Office annually on the 15th May each year.
+
+16. What is the monetary threshold below which petty loss and defalcation cases need NOT be reported to the Audit Officer/Accounting Authority concerned?
+A) Rs. 1,000
+B) Rs. 5,000
+C) Rs. 10,000
+D) Rs. 20,000
+Correct Answer: C
+Explanation: Exception to Rule 52 states that petty cases, involving losses not exceeding Rs. 10,000 each, need not be reported to the Audit Officer/Accounting Authority concerned.
+
+17. Under the Government decisions on losses, a loss of Government property is regarded as "material" if its assessed value is:
+A) Rs. 10,000 and more
+B) Rs. 25,000 and more
+C) Rs. 50,000 and more
+D) Rs. 1,00,000 and more
+Correct Answer: C
+Explanation: All losses, excepting the losses due to suspected sabotage, of the assessed value of Rs. 50,000 and more shall be regarded as 'material'.
+
+18. What is the revised monetary limit (principal amount) for an Inspector Posts/ASP to act as the Investigating Officer in loss/fraud cases?
+A) Up to Rs. 50,000
+B) Up to Rs. 1 Lakh
+C) Up to Rs. 2 Lakhs
+D) > Rs. 2 Lakhs up to Rs. 5 Lakhs
+Correct Answer: C
+Explanation: The monetary limit for investigation by an Inspector Posts / ASP is Up to Rs. 2 Lakhs.
+
+19. Major Head 1201 in the Government Accounting rules corresponds to which of the following?
+A) Interest Receipts
+B) Postal Services Expenditure
+C) Postal Services Capital Outlay
+D) Postal Receipts
+Correct Answer: D
+Explanation: Major Head 1201 is designated for Postal Receipts (Non-Tax Revenue).
+
+20. In the classification of expenditure met from revenue, which Major Head represents Pension and other Retirement Benefits?
+A) 2016
+B) 2049
+C) 2071
+D) 2235
+Correct Answer: C
+Explanation: According to the classification of heads, Major Head 2071 is used for Pension and other Retirement Benefits.
+
+21. Postal Advances, including short-term loss adjustments and building repairs advances, are debited to which Major Head?
+A) 8014
+B) 8446
+C) 8553
+D) 8661
+Correct Answer: C
+Explanation: Postal Advances are debited to Major Head 8553 under Deposits and Advances.
+
+22. What is the designated Major Head for Capital Outlay on Postal Service for recording the cost of plant and equipment?
+A) 3201
+B) 5201
+C) 7610
+D) 8680
+Correct Answer: B
+Explanation: The Department is recognized as a commercial department, and capital outlay is recorded under the Major Head 5201 Capital Outlay outside the Revenue Account.
+
+23. Which office functions as the Statutory Audit Authority for the Department of Posts under the Comptroller and Auditor General of India?
+A) Circle Postal Accounts Office
+B) P&T Audit
+C) Internal Financial Advisor
+D) Controller General of Accounts
+Correct Answer: B
+Explanation: The work of external audit has been undertaken by the P&T Audit as a Statutory Audit Authority under the C&AG of India.
+
+24. What is the prescribed time frame within which a Disbursing Officer should return an audit objection statement or memorandum, or send a letter explaining the cause of delay?
+A) Within a week
+B) Within a fortnight
+C) Within 30 days
+D) Within 60 days
+Correct Answer: B
+Explanation: The Disbursing Officer should return the objection statement or audit memorandum within a fortnight.
+
+25. Recoveries ordered against a Government Servant are ordinarily NOT made at a rate exceeding what proportion of their pay?
+A) One-fourth of pay
+B) One-third of pay
+C) One-half of pay
+D) Two-thirds of pay
+Correct Answer: B
+Explanation: Rule 84 dictates that recoveries are not ordinarily made at a rate exceeding one-third of pay.
+
+26. Which Register must be maintained at a Disbursing Office for recording all retrenchments ordered either by the Accounts/Audit Officer or by Departmental authorities?
+A) Form ACG-19 Register
+B) Retrenchment Register (ACG-60)
+C) Disallowance Register (TR-24)
+D) Liability Register (ACG-54)
+Correct Answer: B
+Explanation: A register in form ACG-60 should be maintained at the Disbursing Office for recording all retrenchments. The Head of the Office shall check at least 10% of the entries every month.
+
+27. Audit Inspection Reports are issued in three parts. Which part deals with "Schedule of persistent irregularities" and outstanding objections from previous reports?
+A) Part-I
+B) Part-II, Section A
+C) Part-II, Section B
+D) Part-III
+Correct Answer: A
+Explanation: Part-I consists of Introductory, outstanding objections from previous reports in brief, and the Schedule of persistent irregularities.
+
+28. True or False: Every Sub-Postmaster and Branch Postmaster is mandatorily required to keep a separate Departmental Cash Book.
+A) True, a cash book is essential for all offices regardless of size.
+B) False, Sub Postmasters and Branch Postmasters are exempted from keeping a Cash Book.
+C) True, but only if they handle transactions exceeding Rs. 50,000 daily.
+D) False, they must keep a Treasury Pass Book instead.
+Correct Answer: B
+Explanation: Under Rule 110 exclusions, Sub Postmasters and Branch Postmasters are exempted from keeping a Cash Book.
+
+29. According to Rule 120, when must the actual balance of cash be counted and verified personally by the Officer in-charge?
+A) On the first day of every week
+B) At random intervals twice a month
+C) On the last working day of each period, or the first working day of the following period before any disbursement
+D) Only when the Inspecting Officer visits
+Correct Answer: C
+Explanation: The actual balance of cash should be counted and verified personally by the Officer in-charge on the last working day of each period, or on the first working day of the following period before disbursement.
+
+30. If a cash balance is found to be incorrect during verification and cannot be rectified immediately, how should an excess be recorded in the Cash Book?
+A) It should be deposited into the Postmaster's personal account
+B) It should be recorded as "By Rs. ... Cash found excess in chest"
+C) It should be recorded as "To Rs. ... Cash found excess in chest"
+D) It must be remitted as a money order to the Accounts Office
+Correct Answer: C
+Explanation: Rule 122 stipulates that if an excess is found, it must be recorded as "To Rs. ... Cash found excess in chest".
+
+31. Who fixes the minimum and maximum authorized cash balance for a First-class Head Post Office?
+A) Director General of Posts
+B) Head of Circle or SSPOs under his control
+C) Divisional Head exclusively
+D) Reserve Bank of India
+Correct Answer: B
+Explanation: The minimum and maximum cash balance of First-class HPO is fixed by the Head of Circle or SSPOs under his control.
+
+32. The authority issued by the CPAO for opening a drawing account by the Postmaster remains current for what duration from the date of issue?
+A) 1 month
+B) 3 months
+C) 6 months
+D) 12 months
+Correct Answer: B
+Explanation: Rule 126 states that the authority issued by the CPAO remains current for 3 months from the date of issue.
+
+33. What is the minimum amount for which a cheque may invariably be issued or accepted, according to general rules?
+A) Rs. 10
+B) Rs. 50
+C) Rs. 100
+D) Rs. 500
+Correct Answer: C
+Explanation: Cheques will not be drawn for amounts less than Rs. 100/-.
+
+34. Payments to suppliers and contractors above what monetary limit must mandatorily be made through electronic advices through GePG/PFMS?
+A) Rs. 1,000
+B) Rs. 5,000
+C) Rs. 10,000
+D) Rs. 50,000
+Correct Answer: B
+Explanation: All payments to suppliers, contractors, grantee/loanee institutions etc. above Rs. 5,000 should be made through electronic advices.
+
+35. The maximum amount payable on a cash imprest certificate (Form ACG-75) at one time is:
+A) Rs. 100/-
+B) Rs. 250/-
+C) Rs. 500/-
+D) Rs. 1000/-
+Correct Answer: B
+Explanation: The maximum amount payable on an imprest certificate (Form ACG-75) at one time is Rs. 250/-.
+
+36. Crossings on cheques drawn in favor of Gazetted Officers must be marked:
+A) "Endorsable to bearer"
+B) "Account payee only-not negotiable"
+C) "Payable in cash instantly"
+D) "For credit to Government account only"
+Correct Answer: B
+Explanation: Cheques in favor of Gazetted Officers must be crossed "Account payee only-not negotiable".
+
+37. Consider the following statements regarding the time validity of cheques:
+1. Cheques shall be payable at any time within three months after the month of issue.
+2. A cheque dated in January is payable up to 30th April.
+Which of the above statements is/are correct?
+A) 1 only
+B) 2 only
+C) Both 1 and 2
+D) Neither 1 nor 2
+Correct Answer: C
+Explanation: Cheques shall be payable at any time within three months after the month of issue. Therefore, a cheque issued in January remains payable until 30th April. Both statements are accurate.
+
+38. According to the rules governing pay and allowances, when is the March salary disbursed to officials?
+A) On the 31st of March
+B) On the 1st working day of April
+C) In the last week of March
+D) On the 10th of April
+Correct Answer: B
+Explanation: Pay and allowances for March shall be paid on the 1st working day of April.
+
+39. Under the Civil Court decrees for Maintenance, what portion of a Government Official's salary is strictly exempt from attachment?
+A) One-fourth of Basic Pay
+B) One-third of the salary (Basic Pay)
+C) Half of the total emoluments
+D) The entire basic pay, allowing only allowances to be attached
+Correct Answer: B
+Explanation: For maintenance decrees, one-third (1/3) of the salary (Basic Pay) is exempt from attachment.
+
+40. When considering attachment of pay for civil debts (other than maintenance), which of the following allowances are fully exempted from attachment?
+A) Subsistence allowance, HRA, DA, and TA
+B) Dearness Allowance only
+C) Overtime allowance only
+D) Non-Practicing Allowance only
+Correct Answer: A
+Explanation: Subsistence allowance, HRA, TPA, CEA, Uniform allowance, DA, TA, etc., are fully exempt from attachment.
+
+41. What is the prescribed maximum limit for anticipatory payment of a deceased official's pay and allowances to heirs without the production of a legal authority?
+A) Rs. 50,000
+B) Rs. 1,00,000
+C) Rs. 2,50,000
+D) Rs. 5,00,000
+Correct Answer: D
+Explanation: The Head of Office may sanction the anticipatory payment of an amount not exceeding Rs. 5,00,000 without the production of usual legal authority.
+
+42. If the gross amount of a deceased official's claim exceeds Rs. 5,00,000, what mandatory document must the claimant execute if payment is made without a legal representation certificate?
+A) A sworn affidavit certified by a First-Class Magistrate
+B) An Indemnity Bond in Form T.R. 14 duly stamped
+C) A registered Will
+D) A declaration witnessed by two Gazetted Officers
+Correct Answer: B
+Explanation: In cases where the gross amount exceeds Rs. 5,00,000, payment will be made only on the execution of an Indemnity Bond in Form T.R. 14 duly stamped.
+
+43. Which of the following is NOT an acceptable criterion for altering a Government servant's recorded Date of Birth?
+A) The request is made within 5 years of his entry into Government service.
+B) It is clearly established that a genuine bona fide mistake has occurred.
+C) The date of birth so altered would make him ineligible to appear in any UPSC examination in which he had previously appeared.
+D) The alteration receives the sanction of the Ministry/Department concerned.
+Correct Answer: C
+Explanation: A fundamental condition for altering the DOB is that the altered date would NOT make him ineligible to appear in any UPSC examination in which he had already appeared. Therefore, making him ineligible is not an acceptable criterion.
+
+44. Re-attestation of the descriptive particulars of a Government servant in their Service Book should be done at what frequency?
+A) Every year
+B) Every three years
+C) Every five years
+D) Every ten years
+Correct Answer: C
+Explanation: The descriptive particulars of the Government servant in the Service Book on the first page should be re-attested every five years.
+
+45. According to Service Book verification protocols, who is responsible for keeping the Service Book of a non-Gazetted Government servant who is himself the Head of an Office (e.g., HSG-I Postmaster)?
+A) The official maintains it himself
+B) The immediate superior (e.g., Divisional Head)
+C) The Circle Postal Accounts Officer
+D) The Director General of Posts
+Correct Answer: B
+Explanation: The Leave Account (and Service Book) of a non-Gazetted Government servant who himself is the Head of an Office should be kept in the custody of his immediate superior.
+
+46. What form is designated for the preparation of monthly bills for pay, fixed allowances, and leave salaries?
+A) Form A.C.G. 17
+B) Form A.C.G. 20
+C) Form A.C.G. 37
+D) Form GAR-14
+Correct Answer: B
+Explanation: Bills for pay, fixed allowances, and leave salaries shall be prepared in Form A.C.G. 20.
+
+47. Overtime Allowance (OTA) for more than 70 hours requires formal permission/sanction from which authority?
+A) The Divisional Head
+B) The Head of the Circle
+C) The Circle Accounts Officer
+D) The Director General
+Correct Answer: B
+Explanation: Up to 70 hours is sanctioned by the Divisional Head. Beyond 70 hours requires formal permission from the Head of Circle.
+
+48. Contingent charges designated as "Fully Vouched Contingencies" possess which defining characteristic?
+A) They require a previous sanction of a superior authority
+B) They are placed annually as a lump sum at the disposal of a Disbursing Officer
+C) They require approval (countersignature) of a controlling authority before admission as expenditure
+D) They are incurred by the Head of Office on his own authority without special sanction or countersignature
+Correct Answer: D
+Explanation: Fully Vouched Contingencies are charges incurred by the Head of Office on his own authority without special sanction or countersignature. The vouchers are fully self-sufficient.
+
+49. Sub-vouchers retained in the office must NOT be destroyed until after a lapse of how many years?
+A) One year
+B) Two years
+C) Three years
+D) Five years
+Correct Answer: C
+Explanation: Rule 259 states that no sub-voucher may be destroyed until after a lapse of three years.
+
+50. What is the maximum limit for a Personal Computer Advance?
+A) Rs. 30,000 or actual price
+B) Rs. 40,000 or actual price
+C) Rs. 50,000 or actual price, whichever is lower
+D) Rs. 1,00,000
+Correct Answer: C
+Explanation: The limit for a Personal Computer Advance is Rs. 50,000 or actual price, whichever is lower.
+
+51. What is the maximum number of monthly installments allowed for the repayment of a Personal Computer Advance?
+A) 60 installments
+B) 100 installments
+C) 120 installments
+D) 150 installments
+Correct Answer: D
+Explanation: The repayment for a PC advance is not more than 150 monthly installments.
+
+52. In supplier advances, what is the maximum permissible advance limit of the contract value when dealing with State/Central Government Departments or Public Sector Undertakings (PSUs)?
+A) 20%
+B) 30%
+C) 40%
+D) 50%
+Correct Answer: C
+Explanation: For State/Central/PSU, the maximum advance is 40% of the contract value. (Private firms have a cap of 30%).
+
+53. An advance granted to a Government servant on tour must be adjusted within what timeframe after the completion of the tour or resumption of duty?
+A) 7 days
+B) 15 days
+C) 30 days
+D) 60 days
+Correct Answer: B
+Explanation: Advance on tour must be adjusted within 15 days from the completion of the tour or resumption of duty.
+
+54. If a sanction is issued but is not acted upon, after what duration does it automatically lapse?
+A) Three months
+B) Six months
+C) One year
+D) Two years
+Correct Answer: C
+Explanation: Rule 324 states that a sanction not acted on for a year lapses.
+
+55. How long does the sanction for a General Provident Fund (GPF) Advance remain valid before it lapses, if not acted upon?
+A) One month
+B) Three months
+C) Six months
+D) One year
+Correct Answer: B
+Explanation: A GPF Advance sanction lapses after three months if not acted upon.
+
+56. When establishing a security deposit consisting of a percentage deduction from monthly payments, what is the standard range of the percentage of the estimated cost of work?
+A) 0.5% to 2%
+B) 1% to 10%
+C) 5% to 15%
+D) Fixed strictly at 5%
+Correct Answer: B
+Explanation: Security deposits (including earnest money) vary from 1% to 10% of the estimated cost of work.
+
+57. If a candidate or firm deposits "Earnest Money" but is ultimately unsuccessful in securing the contract, what is the procedural course of action?
+A) The money is forfeited entirely to the Public Account
+B) Fifty percent of the money is refunded
+C) The money is refunded to the unsuccessful contractors immediately
+D) It is adjusted against their future contracts
+Correct Answer: C
+Explanation: Earnest Money is refunded to unsuccessful contractors immediately. It is only forfeited if a selected contractor fails to take up work.
+
+58. Consider the following statements regarding the maintenance of Service Books:
+1. Inclusion of Aadhaar/Unique Identification number (UID) in the Service Book is mandatory.
+2. The cost of the Service Book is borne by the employee through a nominal fee deduction.
+Which of the statements given above is/are true?
+A) 1 only
+B) 2 only
+C) Both 1 and 2
+D) Neither 1 nor 2
+Correct Answer: A
+Explanation: Statement 1 is true, Aadhaar is mandatory. Statement 2 is false; the cost of the Service Book should be borne by the Government and is not deducted from the employee.
+
+59. A casual labourer engaged for work of a regular nature (where the nature of work is same as regular employees) is entitled to be paid at what rate?
+A) A strictly local daily wage rate fixed by the Gram Panchayat
+B) 1/30th of the pay at the minimum of the relevant pay scale plus dearness allowance for 8 hours of work
+C) Half the salary of an MTS
+D) The minimum wages established by the State Government, without any DA component
+Correct Answer: B
+Explanation: Casual workers may be paid at the rate of 1/30th of the pay at the minimum of the relevant pay scale plus dearness allowance for work of 8 hours a day.
+
+60. Which form is used by inspecting officers to submit verification reports of cash balances of Head Post Offices on the last day of each month?
+A) Form ACG-15
+B) Form ACG-67
+C) Form A.C.G.-84
+D) Form GAR-14
+Correct Answer: C
+Explanation: Inspecting Officers must submit a report in Form A.C.G.-84 to the Accounts Office after verifying cash balances.
+
+61. What defines a "Local Cheque" at a Sub-Office?
+A) Any cheque generated inside the Post Office
+B) A cheque drawn on any Bank located at the same station as that of the HPO and accepted at any of its sub-offices
+C) A cheque cleared explicitly without banking intervention
+D) Outstanding instruments that do not require processing
+Correct Answer: B
+Explanation: A cheque drawn on any Bank located at the same station as that of the HPO and accepted at any of its sub-offices is regarded as a local cheque at the sub-office.
+
+62. For how long should the unused/used-up Cash Book be preserved?
+A) Destroyed after one month
+B) Preserved permanently
+C) The Disbursing Officer must maintain a Register for used-up Cash Books showing the period of use; it is a critical account record.
+D) Sent to the external auditors immediately
+Correct Answer: C
+Explanation: The Disbursing Officer is responsible for the up-keep and safe custody of the used-up Cash Book and a register must be maintained for them.
+
+63. Which Major Head covers interest payments?
+A) 0049
+B) 2049
+C) 8014
+D) 8455
+Correct Answer: B
+Explanation: Under expenditure met from revenue, Major Head 2049 is designated for Interest Payment. (0049 is Interest Receipts).
+
+64. If a payee is unable to receive his final GPF payment because he has completely and permanently left India, how may payment be exceptionally facilitated?
+A) Through a direct cash handover at the airport
+B) Payment may be made to him through the High Commissioner of India
+C) Through an irrevocable bank draft mailed to his last known address
+D) The payment inevitably lapses into the General Revenue
+Correct Answer: B
+Explanation: Under the exception of Rule 193, when a person has finally quitted India, payment may be made to him through the High Commissioner of India.
+
+65. Which form is utilized for recording the Register of Lands and Buildings maintained by Heads of Circles?
+A) ACG-19
+B) ACG-60
+C) ACG-69
+D) ACG-75
+Correct Answer: C
+Explanation: A Register of Lands and Buildings is maintained by Heads of Circles in Form ACG-69 (RMS Vans are also similarly maintained in ACG-69).
+
+66. What is the standard formula for determining the "Net Attachable" amount for Civil Court decrees involving Maintenance?
+A) Net Attachable = X / 3
+B) Net Attachable = X - Y - (1/3 of Basic Pay)
+C) Net Attachable = (X - Y - 1000) / 3
+D) Net Attachable = X - 1000
+Correct Answer: B
+Explanation: For maintenance decrees, the formula is: Net Attachable = X - Y - (1/3 of Basic Pay). The formula (X - Y - 1000) / 3 is used for decrees OTHER than maintenance.
+
+67. In what format are Abstract Contingent Bills drawn?
+A) Form A.C.G. 17
+B) Form A.C.G. 19
+C) Form A.C.G. 38
+D) Form GAR-14
+Correct Answer: B
+Explanation: Abstract Contingent Bills are drawn in Form A.C.G. 19.
+
+68. At a Head Post Office, on what day must the Head Office Cash Book and Treasurer's Cash Book be signed by the Postmaster?
+A) On the last working day of the month only
+B) Once every week on a randomly selected day
+C) Every day
+D) Every hour
+Correct Answer: C
+Explanation: The Head Office Cash Book and Treasurer's Cash Book in a Head Post Office should be signed by the Postmaster every day.
+
+69. According to Rule 5, under which condition can public money NOT be deposited into the Public Account?
+A) If it is received by an officer in a private capacity
+B) If it exceeds Rs. 10,00,000
+C) If it is revenue or public money raised or received by the Government, which enters the Consolidated Fund instead
+D) None of the above; all money is deposited into the public account
+Correct Answer: C
+Explanation: Article 284 states that all moneys "other than Revenues or public money raised or received by Government" shall be paid into the Public Account.
+
+70. For a non-Gazetted Government servant who requires a Last Pay Certificate (LPC) upon transfer, whose primary responsibility is it to obtain this document?
+A) The relieving officer
+B) The drawing officer of the new station
+C) The Government servant himself
+D) The Circle Accounts Officer
+Correct Answer: C
+Explanation: Rule 181 dictates that the Government servant is responsible for obtaining their own LPC from the last disbursing officer.
+
+71. When should a Sub-Postmaster address the Circle Accounts Officer (CPAO) directly?
+A) Whenever seeking clarification on major issues
+B) Never; correspondence should be routed through the Divisional Head or the Postmaster of the HPO to which they are subordinate
+C) Only when filing a complaint against the Head Postmaster
+D) Weekly, to submit routine queries
+Correct Answer: B
+Explanation: Postmasters of Sub-Post Offices or Branch Offices should not address the Circle Accounts Officer directly, but through the Divisional Head or HPO.
+
+72. What happens to the payment of pay and allowances on the day a Government servant dies?
+A) Pay is stopped immediately; no pay for the day of death
+B) Pay and allowances can be drawn for the full day of the Government servant's death, regardless of the hour
+C) Pay is calculated fractionally up to the hour of death
+D) The entire month's salary is forcibly credited as ex-gratia
+Correct Answer: B
+Explanation: Pay and allowances can be drawn for the day of the Government servant's death; the hour at which death takes place has no effect on the claim.
+
+73. Under the classification of Contingent Charges, what is meant by "Special Contingencies"?
+A) Payments meant exclusively for emergency relief
+B) Charges (recurring or non-recurring) requiring the previous sanction of superior authority
+C) Funds granted directly by the Parliament bypassing standard budgets
+D) Bills completely devoid of accompanying vouchers
+Correct Answer: B
+Explanation: Special Contingencies are charges requiring previous sanction of a superior authority before they can be incurred.
+
+74. If the Bank fails to provide the Bank scrolls regularly, who is responsible for receiving and monitoring them?
+A) The Head Postmaster
+B) The Central Registry
+C) The GM (F) / Director of Accounts
+D) The Treasury Officer
+Correct Answer: C
+Explanation: Bank scrolls should be sent to the GM (F) / Director of Accounts by the Bank.
+
+75. What is the prevailing penal interest rate applied onto the normal rate of interest for Government advances if an employee defaults on timely repayments?
+A) 1%
+B) 2.5%
+C) 5%
+D) 10%
+Correct Answer: B
+Explanation: The penal interest rate is 2.5% plus the normal rate of interest.
+
+76. In an RMS division, what form is primarily used for claiming Outstation Allowance (OSA) by Sorters, Mail Guards, and Van-Peons?
+A) Form A.C.G. 17
+B) Form A.C.G. 20
+C) Form A.C.G. 38
+D) Form GAR-14
+Correct Answer: C
+Explanation: OSA earned by Sorters, Mail Guards, and Van-Peons will be drawn in Form A.C.G. 38.
+
+77. How often is a "Personal Computer Advance" permissible during an entire Government servant's service?
+A) Only once
+B) Maximum three times
+C) Allowed five times in the entire service
+D) Permitted yearly
+Correct Answer: C
+Explanation: A Personal Computer Advance is allowed five times in the entire service.
+
+78. What minimum time gap must transpire between two subsequent Personal Computer Advances?
+A) 1 year
+B) 2 years
+C) 3 years
+D) 5 years
+Correct Answer: C
+Explanation: There must be a minimum of 3 years between two PC advances.
+
+79. What distinguishes a Head Record Office (HRO) Cash Account from a standard HPO Cash Account?
+A) It strictly deals only with postal receipts and stamp sales
+B) The amounts drawn by it from the Post Office for disbursement are shown on the receipt side, and the amounts disbursed are shown on the expenditure side
+C) It is audited by private chartered accountants
+D) It is an annual summary instead of a monthly account
+Correct Answer: B
+Explanation: Each HRO submits a monthly Cash account in which the amounts drawn by it from the Post Office for disbursement are shown on the receipt side and the amounts disbursed are shown on the expenditure side.
+
+80. A bill containing doubtful items that can easily be eliminated is presented for payment. What is the Disbursing Officer's correct course of action under Rule 17?
+A) Reject the entire bill and demand a complete redraft
+B) Suspend the Drawing Officer immediately
+C) Disallow the doubtful items and pay the remainder of the bill
+D) Send the bill to the CPAO for final pre-audit determination
+Correct Answer: C
+Explanation: Under Rule 17, when bills contain doubtful items which can easily be eliminated, the Disbursing Officer should disallow the doubtful items and pay the remainder of the bill.
+
+81. Which authority is mandated to maintain the register of used-up Cash Books?
+A) The Circle Postal Accounts Office
+B) The Internal Financial Adviser
+C) The Disbursing Officer
+D) The Archival Department
+Correct Answer: C
+Explanation: The Disbursing Officer is responsible for the up-keep and safe custody of the used-up Cash Book and maintaining its register.
+
+82. Which Major Head strictly denotes the Settlement Account with India Post Payments Bank (IPPB)?
+A) 8446
+B) 8455
+C) 8553
+D) 8670
+Correct Answer: B
+Explanation: Major Head 8455 corresponds to the Settlement Account with India Post Payments Bank (IPPB).
+
+83. According to the delegation of roles under CSI HR Payroll, the creation of an Employee ID occurs at what specific administrative level?
+A) Controller of Accounts
+B) The Appointing Authority level
+C) Directorate New Delhi
+D) Drawing and Disbursing Officer (DDO) exclusively
+Correct Answer: B
+Explanation: Hiring and Employee ID creation occurs at the Appointing Authority level under CSI HR.
+
+84. What happens when a Government servant fails to return after drawing an advance on tour?
+A) A subsequent advance on tour can still be drawn simultaneously.
+B) He is barred from travelling.
+C) A second advance is not granted until the first is accounted for, except when the second journey is within a week of the first. In any case, not more than two advances outstanding at a time.
+D) The outstanding amount is strictly deducted as a tax penalty from GPF.
+Correct Answer: C
+Explanation: Rule 311 outlines that a second advance is not granted until the first is accounted for unless the second journey occurs within a week. Not more than two advances can be outstanding.
+
+85. Why are payments to non-Government persons subjected to a 2% deduction at source under specific circumstances involving sums exceeding Rs. 30,000?
+A) It operates as a security deposit for postal tools
+B) It serves as a penal fee for delays
+C) It is a required Income Tax deduction under Section 194-C of the Income Tax Act, 1961
+D) It is a mandatory contribution to the PM Cares Fund
+Correct Answer: C
+Explanation: Rule 30 mandates an Income tax deduction @ 2% at source for payments to contractors/sub-contractors exceeding Rs. 30,000 under Section 194-C of the Income Tax Act.
+
+86. When a Head Postmaster uses the Treasury Pass Book to draw funds, what documentation must a Sub Postmaster present along with the Pass Book?
+A) A digital voucher via SMS
+B) Duplicate receipts
+C) A signed affidavit from the inspector
+D) Simply a verbal request
+Correct Answer: B
+Explanation: A Sub Postmaster presenting the Pass Book must do so with duplicate receipts.
+
+87. Which authority receives the "Statement of Admission into the General Provident Fund" 3 months prior to subscription commencement?
+A) Treasury Officer
+B) C&AG
+C) Circle Accounts Officer
+D) Immediate Supervisor
+Correct Answer: C
+Explanation: The Head Office sends the admission statement to the Circle Accounts Officer on the 15th of the month, 3 months prior.
+
+88. If a "Contract Contingency" model is adopted by an office, it fundamentally operates by:
+A) Supplying bills immediately to the bank for an ad-hoc drawdown
+B) Requiring previous sanction of upper administration for each minor expense
+C) Placing a lump sum annually at the disposal of a Disbursing Officer
+D) Deducting cash directly from the employees' pay
+Correct Answer: C
+Explanation: Under Rule 243, Contract Contingencies mean a lump sum is placed annually at the disposal of a Disbursing Officer.
+
+89. A Government bill is drawn against major heads. How should one configure a bill dealing with charges falling against two entirely separate major heads?
+A) Include them mathematically proportional in a single bill using red ink
+B) Charges against two or more major heads should not be included in one bill; they must be drawn in separate forms
+C) Use an Abstract bill and blend them
+D) Allocate them under a newly created Suspense head
+Correct Answer: B
+Explanation: The correct head of classification should be recorded, and charges against two or more major heads should not be included in one bill.
+
+90. In cases of refunds of revenue to which claimants are legally entitled, what primary rule restricts their payment allocation?
+A) They are debited to the suspense account indefinitely
+B) They must be offset against a new tax parameter
+C) Refunds are not regarded as expenditure for purposes of grants
+D) They are directly financed by the PM Relief Fund
+Correct Answer: C
+Explanation: Under Rule 281, refunds are not regarded as expenditure for purposes of grants.
+
+91. Which form validates the Remittance Advice dispatched along with surplus cash sent to a balancing Head Post Office?
+A) ACG-15
+B) TR-14
+C) GAR-14
+D) ACG-67
+Correct Answer: A
+Explanation: Remittance Advice and acknowledgement are prepared in Form ACG-15.
+
+92. What are the rules explicitly restricting the generation of an "Off-Cycle" Payroll under the CSI system?
+A) Only recurring monthly fixed allowances can be cycled this way
+B) It is specifically purposed for items like Tour TA, LTC, medical reimbursement, etc., that do not fall in the main cyclic run
+C) It is banned by the Director General of Posts
+D) It is used only for withdrawing GPF
+Correct Answer: B
+Explanation: In the CSI HR Payroll process, the "Off Cycle" is designated for irregular claims like Tour TA, LTC, and medical reimbursement.
+
+93. How are "Undisbursed Pay and Allowances" securely managed if they cannot be distributed to the official within the month?
+A) They are forfeited directly to the national exchequer
+B) They are held indefinitely in a wooden lockbox
+C) They are refunded by short drawal in the next bill and maintained in the Register (ACG-54)
+D) They are converted into GPF deposits forcefully
+Correct Answer: C
+Explanation: If payment cannot be made, the amount drawn for the payee shall be refunded by short drawal in the next bill and maintained in the Undisbursed Pay and Allowance Register (ACG-54).
+
+94. Who undertakes the responsibility to re-attest the descriptive particulars of LSG officials in PO and RMS every five years in the Service Book?
+A) Superintendent of Post Offices directly in all cases
+B) IP/IRM or SPOS/SRM
+C) The Head of the Circle exclusively
+D) The Gramin Dak Sevak
+Correct Answer: B
+Explanation: The re-attestation should be made by the IP/IRM or SPOS/SRM in respect of LSG officials in PO and RMS.
+
+95. In an exceptional scenario where an original paid voucher is completely lost before presentation at the disbursing office, what must the Government Officer do before issuing a duplicate?
+A) Publish a declaration in two local newspapers
+B) Obtain confirmation from the disbursing office that payment has truly not been made on the original yet
+C) Demand an official decree from a Metropolitan Magistrate
+D) Issue the duplicate instantly to curb delays
+Correct Answer: B
+Explanation: The officer shall ascertain from the disbursing office that payment has not been made on it before he issues a duplicate.
+
+96. Identify the Major Head corresponding to "Cheques and Bills" under Suspense and Miscellaneous.
+A) 8553
+B) 8661
+C) 8670
+D) 8677
+Correct Answer: C
+Explanation: Major Head 8670 strictly correlates to "Cheques and Bills".
+
+97. As per the stipulations of Rule 63 covering forbidden practices, how is a mistake rectified in an Account Register once discovered?
+A) Utilizing specialized erasure pens
+B) Re-copying the entire ledger unconditionally
+C) Cancelling it neatly in red ink, inserting the correct entry, and authenticating it via the Head of Office's dated initials
+D) By merely scratching out the text violently to make it illegible
+Correct Answer: C
+Explanation: If any correction is necessary, the incorrect entry should be cancelled neatly in red ink and the correct entry inserted, signed with dated initials against each line.
+
+98. A Postmaster prepares a bill but includes a numerical fraction amounting to exactly 49 paise for a personal TA claim. How should this be adjusted during drawing?
+A) It should be rounded up strictly to Re. 1.00
+B) It is ignored and deleted from the claim payout
+C) It must be carried over incrementally to the next month's bill
+D) It must be paid exactly as 49 paise via bank transfer
+Correct Answer: B
+Explanation: Fractions of less than 50 paise are to be ignored during the rounding computation for TA and other personal claims.
+
+99. When a Government servant on duty faces an authorized suspension, what administrative barrier occurs regarding their advances?
+A) All advances are automatically written off
+B) No advance is granted to an employee under suspension
+C) Penal interest triggers immediately for all outstanding dues
+D) Allowances double to act as subsistence
+Correct Answer: B
+Explanation: Rule 314 makes it clear that no advance is granted to an employee under suspension.
+
+100. Disbursing Officers are required to give full clear replies to each item of an audit objection statement. Which principle defines the "Force of Objection"?
+A) It forcefully cuts off the operating budget of the unit instantly
+B) It automatically transfers the officer involved to a far-off locality
+C) Once a transaction is entered in the objection statement, it continues in force until removed by obtaining requisite sanction or CPAO withdrawal
+D) It dissolves after an arbitrary 30-day period if ignored by the Officer
+Correct Answer: C
+Explanation: Rule 91 specifies that once a transaction has been entered, it will continue to be in force until removed natively by requisite sanction or withdrawal by the Audit Office.
