@@ -120,7 +120,10 @@ export default function NativePricing({
         if (!couponCode) return;
         const res = await onApplyCoupon(couponCode);
         if (res.valid) {
-            const discountAmount = selectedPlan.price * 0.5;
+            // Determine base price for discount: if upgrading, use current effectivePrice, otherwise full price
+            const baseForDiscount = isUpgradeMode ? effectivePrice : selectedPlan.price;
+            const percentage = (res.discount || 50) / 100;
+            const discountAmount = Math.round(baseForDiscount * percentage);
             setDiscount(discountAmount);
             alert(`Coupon Applied! You saved ₹${discountAmount}`);
         } else {
@@ -152,7 +155,7 @@ export default function NativePricing({
     const hasPsGrBPlatinum = isPsGroupB && currentMembership === 'silver' && hasPlatinum;
 
     const isUpgradeMode = isPsGroupB && currentMembership !== 'free' && effectivePrice !== selectedPlan.price && !hasPsGrBDiamond && !(hasPsGrBPlatinum && activeTab === 'silver');
-    const finalPrice = effectivePrice - discount;
+    const finalPrice = Math.max(0, effectivePrice - discount);
 
     return (
         <div className="min-h-screen bg-black text-white font-sans pb-48">
@@ -279,17 +282,19 @@ export default function NativePricing({
 
             {/* Sticky Bottom Bar */}
             <div className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] left-0 right-0 p-4 bg-zinc-950/90 backdrop-blur-xl border-t border-white/5 z-40">
-                <div className="flex justify-between items-center mb-3 px-1">
-                    <div>
-                        <p className="text-xs text-zinc-400">{isUpgradeMode ? 'Upgrade Amount' : 'Total Payable'}</p>
-                        <p className="text-2xl font-bold">₹{finalPrice}</p>
+                <div className="flex justify-between items-center mb-1 px-1">
+                    <p className="text-xs text-zinc-400">{isUpgradeMode ? 'Upgrade Price' : 'Plan Price'}</p>
+                    <p className="text-sm font-bold">₹{effectivePrice}</p>
+                </div>
+                {discount > 0 && (
+                    <div className="flex justify-between items-center mb-1 px-1">
+                        <p className="text-xs text-green-400">Coupon Discount</p>
+                        <p className="text-sm font-bold text-green-400">- ₹{discount}</p>
                     </div>
-                    {discount > 0 && (
-                        <div className="text-right">
-                            <p className="text-xs text-green-400">Coupon Saving</p>
-                            <p className="text-sm font-bold text-green-400">- ₹{discount}</p>
-                        </div>
-                    )}
+                )}
+                <div className="flex justify-between items-center mb-3 px-1 pt-1 border-t border-white/5">
+                    <p className="text-xs font-bold text-white">Net Payable</p>
+                    <p className="text-2xl font-bold text-green-400">₹{finalPrice}</p>
                 </div>
 
                 <button

@@ -115,7 +115,7 @@ export default function PricingPage() {
     // Coupon Logic
     const handleApplyCoupon = async () => {
         if (!couponCode.trim()) return;
-        setIsProcessing(true); // Re-using isProcessing for loader
+        setIsProcessing(true);
 
         try {
             const res = await fetch('/api/offer/validate', {
@@ -127,8 +127,10 @@ export default function PricingPage() {
             const data = await res.json();
 
             if (res.ok && data.valid) {
-                // Calculate 50% discount
-                const discountAmount = selectedPlan.price * 0.5;
+                // Determine base price for discount: if upgrading, use effectivePrice, otherwise full price
+                const baseForDiscount = isUpgradeMode ? effectivePrice : selectedPlan.price;
+                const percentage = (data.discount || 50) / 100;
+                const discountAmount = Math.round(baseForDiscount * percentage);
                 setDiscount(discountAmount);
                 alert(`Coupon Applied! You saved ₹${discountAmount}`);
             } else {
@@ -152,7 +154,7 @@ export default function PricingPage() {
             });
             const data = await res.json();
             if (res.ok && data.valid) {
-                return { valid: true, discount: 0 }; // Discount amount calculated by component or fixed logic
+                return { valid: true, discount: data.discount || 50 };
             } else {
                 return { valid: false, discount: 0, error: data.error || "Invalid Coupon" };
             }
@@ -185,7 +187,7 @@ export default function PricingPage() {
     const hasPsGrBPlatinum = isPsGroupB && currentMembership === 'silver' && hasPlatinum;
 
     const isUpgradeMode = isPsGroupB && currentMembership !== 'free' && effectivePrice !== selectedPlan.price && !hasPsGrBDiamond && !(hasPsGrBPlatinum && activeTab === 'silver');
-    const finalPrice = effectivePrice - discount;
+    const finalPrice = Math.max(0, effectivePrice - discount);
 
     // Determine validity days based on plan ID
     const getValidityDays = (planId: string) => {
@@ -652,16 +654,21 @@ export default function PricingPage() {
                                 </div>
                             )}
                             <div className="flex justify-between items-center mb-2 text-sm text-zinc-600 dark:text-zinc-400">
-                                <span>{isUpgradeMode ? 'Upgrade Amount' : 'Total Amount to Pay'}</span>
-                                <span className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">₹{finalPrice}</span>
+                                <span>{isUpgradeMode ? 'Upgrade Price' : 'Plan Price'}</span>
+                                <span className="font-bold text-zinc-900 dark:text-zinc-100">₹{effectivePrice}</span>
                             </div>
 
                             {discount > 0 && (
-                                <div className="flex justify-between items-center mb-6 text-xs text-green-600 font-medium">
+                                <div className="flex justify-between items-center mb-2 text-xs text-green-600 font-medium">
                                     <span>Coupon Discount Applied</span>
                                     <span>- ₹{discount}</span>
                                 </div>
                             )}
+
+                            <div className="flex justify-between items-center mb-6 pt-2 border-t border-zinc-100 dark:border-zinc-800">
+                                <span className="font-bold text-zinc-900 dark:text-zinc-100">Net Payable</span>
+                                <span className="text-2xl font-bold text-green-600 dark:text-green-400">₹{finalPrice}</span>
+                            </div>
 
                             <button
                                 onClick={() => handlePayment()}
