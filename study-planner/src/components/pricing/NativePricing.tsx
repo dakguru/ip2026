@@ -143,7 +143,7 @@ export default function NativePricing({
             if (activeTab === 'silver' && hasDiamond) return 0;
 
             const currentPlanPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
-            const diff = Math.round((selectedPlan.price / 2) - (currentPlanPrice / 2));
+            const diff = selectedPlan.price - currentPlanPrice;
             return diff > 0 ? diff : 0;
         }
         return selectedPlan.price;

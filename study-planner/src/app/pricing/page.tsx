@@ -175,7 +175,7 @@ export default function PricingPage() {
             if (activeTab === 'silver' && hasDiamond) return 0; // Diamond already has Platinum benefits
 
             const currentPlanPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
-            const diff = Math.round((selectedPlan.price / 2) - (currentPlanPrice / 2));
+            const diff = selectedPlan.price - currentPlanPrice;
             return diff > 0 ? diff : 0;
         }
         return selectedPlan.price;
@@ -259,7 +259,7 @@ export default function PricingPage() {
         let basePrice = effectivePlan.price;
         if (isPsGroupB && currentMembership !== 'free') {
             const curPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
-            const diff = Math.round((effectivePlan.price / 2) - (curPrice / 2));
+            const diff = effectivePlan.price - curPrice;
             basePrice = diff > 0 ? diff : 0;
         }
         const effectiveFinalPrice = basePrice - discountToUse;
