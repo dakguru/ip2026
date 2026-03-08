@@ -88,8 +88,30 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
             </p>
 
             <div className="mt-6 flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-500 delay-75 fill-mode-both">
-                <Link href="https://play.google.com/store/apps/details?id=com.studyplanner.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-indigo-300 dark:border-indigo-600 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-200 text-xs sm:text-sm font-black tracking-wide shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:shadow-[0_0_25px_rgba(99,102,241,0.7)] uppercase hover:bg-indigo-200 dark:hover:bg-indigo-800 transition-all duration-300 animate-pulse">
-                    Download our Android App
+                <Link
+                    href="https://play.google.com/store/apps/details?id=com.studyplanner.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-md hover:shadow-lg hover:border-green-400 dark:hover:border-green-500 transition-all duration-200 hover:scale-[1.03] active:scale-95"
+                >
+                    {/* Play Store icon */}
+                    <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 20.5v-17c0-.83 1-.83 1.5-.5l15 8.5-15 8.5c-.5.33-1.5.33-1.5-.5z" fill="url(#pg)"/>
+                        <defs>
+                            <linearGradient id="pg" x1="3" y1="12" x2="19.5" y2="12" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stopColor="#34A853"/>
+                                <stop offset="40%" stopColor="#4285F4"/>
+                                <stop offset="70%" stopColor="#EA4335"/>
+                                <stop offset="100%" stopColor="#FBBC05"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-200 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
+                        Download Our <span className="text-green-600 dark:text-green-400 font-bold">Dak Guru</span> Android App
+                    </span>
+                    <svg className="w-4 h-4 text-zinc-400 group-hover:text-green-500 group-hover:translate-x-0.5 transition-all duration-200" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
+                    </svg>
                 </Link>
             </div>
 
