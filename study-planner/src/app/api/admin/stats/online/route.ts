@@ -11,7 +11,7 @@ export async function GET() {
 
         const onlineUsers = await UserModel.find({
             lastActiveAt: { $gte: fiveMinutesAgo }
-        }).select('name email role lastActiveAt lastPlatform membershipLevel');
+        }).select('name email role lastActiveAt lastPlatform membershipLevel courseMode');
 
         return NextResponse.json({
             count: onlineUsers.length,

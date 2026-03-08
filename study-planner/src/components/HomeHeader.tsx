@@ -11,12 +11,12 @@ import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useCourse } from "@/contexts/CourseContext";
 import UpdatesDrawer from "./UpdatesDrawer";
 
-export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn: boolean, membershipLevel?: 'free' | 'silver' | 'gold' }) {
+export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn: boolean, membershipLevel?: 'free' | 'silver' | 'gold' | 'diamond' | 'platinum' }) {
     const router = useRouter();
     const { course } = useCourse();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold'>(membershipLevel || 'free');
+    const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold' | 'diamond' | 'platinum'>(membershipLevel || 'free');
     const [sessionData, setSessionData] = useState<any>(null);
     const [showUpdates, setShowUpdates] = useState(false);
 
@@ -142,9 +142,10 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
     const planName = (sessionData?.planName || "").toLowerCase();
 
     if (currentMembership !== 'free') {
-        if (plan.includes('diamond') || planName.includes('diamond') || plan.includes('ps_gr_b')) {
+        const isPSGB = course === 'PS_GR_B' || plan.includes('ps_gr_b') || planName.includes('ps_gr_b');
+        if (displayMembership === 'diamond' || (currentMembership === 'gold' && isPSGB)) {
             displayMembership = 'diamond';
-        } else if (plan.includes('platinum') || planName.includes('platinum')) {
+        } else if (displayMembership === 'platinum' || (currentMembership === 'silver' && isPSGB)) {
             displayMembership = 'platinum';
         }
     }
@@ -216,15 +217,25 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                             {isLoggedIn && (
                                 <Link href="/pricing" className="mr-1">
-                                    {(displayMembership === 'gold' || displayMembership === 'diamond') ? (
+                                    {displayMembership === 'diamond' ? (
+                                        <div className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-fuchsia-400 via-pink-500 to-fuchsia-600 text-white text-[10px] md:text-xs font-black border border-fuchsia-300 shadow-sm flex items-center gap-1">
+                                            <span className="hidden md:inline">★</span>
+                                            <span className="uppercase">Diamond</span>
+                                        </div>
+                                    ) : displayMembership === 'platinum' ? (
+                                        <div className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-violet-400 via-purple-500 to-violet-600 text-white text-[10px] md:text-xs font-black border border-violet-300 shadow-sm flex items-center gap-1">
+                                            <span className="hidden md:inline">★</span>
+                                            <span className="uppercase">Platinum</span>
+                                        </div>
+                                    ) : displayMembership === 'gold' ? (
                                         <div className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-amber-900 text-[10px] md:text-xs font-bold border border-amber-200 shadow-sm flex items-center gap-1">
                                             <span className="hidden md:inline">★</span>
-                                            <span className="uppercase">{displayMembership}</span>
+                                            <span className="uppercase">Gold</span>
                                         </div>
-                                    ) : (displayMembership === 'silver' || displayMembership === 'platinum') ? (
+                                    ) : displayMembership === 'silver' ? (
                                         <div className="px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-slate-200 via-zinc-300 to-slate-400 text-slate-900 text-[10px] md:text-xs font-bold border border-slate-300 shadow-sm flex items-center gap-1">
                                             <span className="hidden md:inline">★</span>
-                                            <span className="uppercase">{displayMembership}</span>
+                                            <span className="uppercase">Silver</span>
                                         </div>
                                     ) : (
                                         <div className="relative group flex items-center">
@@ -367,10 +378,14 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                     </div>
                                 </button>
 
-                                {isPremium ? (
-                                    <div className={`p-3 rounded-lg font-bold text-center uppercase ${displayMembership === 'gold' || displayMembership === 'diamond'
-                                        ? 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-900'
-                                        : 'bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-800'
+                                {isPremium || displayMembership === 'diamond' || displayMembership === 'platinum' ? (
+                                    <div className={`p-3 rounded-lg font-bold text-center uppercase ${displayMembership === 'diamond'
+                                        ? 'bg-gradient-to-r from-fuchsia-500 to-pink-600 text-white shadow-lg shadow-fuchsia-500/20'
+                                        : displayMembership === 'platinum'
+                                            ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white shadow-lg shadow-violet-500/20'
+                                            : displayMembership === 'gold'
+                                                ? 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-900'
+                                                : 'bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-800'
                                         }`}>
                                         ★ {displayMembership} Member
                                     </div>

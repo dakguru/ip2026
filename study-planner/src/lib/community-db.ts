@@ -89,7 +89,13 @@ function getEnrichedRole(author: string, currentRole?: string, userMap?: Map<str
             return baseRole;
         }
 
-        // Assign badge based on DB membership level
+        // Assign badge based on DB membership level + Course Mode
+        const isPSGB = user.courseMode === 'PS_GR_B';
+
+        if (user.membershipLevel === 'diamond' || (user.membershipLevel === 'gold' && isPSGB))
+            return `${baseRole} (Diamond Member)`;
+        if (user.membershipLevel === 'platinum' || (user.membershipLevel === 'silver' && isPSGB))
+            return `${baseRole} (Platinum Member)`;
         if (user.membershipLevel === 'gold') return `${baseRole} (Gold Member)`;
         if (user.membershipLevel === 'silver') return `${baseRole} (Silver Member)`;
 
@@ -134,7 +140,7 @@ export async function getAllPosts(): Promise<Post[]> {
     });
 
     // Fetch user details for these authors
-    const users = await UserModel.find({ name: { $in: Array.from(authors) } }).select('name role membershipLevel').lean();
+    const users = await UserModel.find({ name: { $in: Array.from(authors) } }).select('name role membershipLevel courseMode').lean();
 
     // Create lookup map
     const userMap = new Map<string, any>();
@@ -161,7 +167,7 @@ export async function addPost(post: Post): Promise<Post> {
     });
 
     // Fetch user for this author to return correct badge immediately
-    const user = await UserModel.findOne({ name: post.author }).select('name role membershipLevel').lean();
+    const user = await UserModel.findOne({ name: post.author }).select('name role membershipLevel courseMode').lean();
     const userMap = new Map();
     if (user) userMap.set(user.name, user);
 

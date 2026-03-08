@@ -180,10 +180,10 @@ export default function AdminDashboard() {
     const stats = useMemo(() => {
         return {
             total: users.length,
-            gold: users.filter(u => u.membershipLevel === 'gold').length,
-            diamond: users.filter(u => u.membershipLevel === 'diamond').length,
-            platinum: users.filter(u => u.membershipLevel === 'platinum').length,
-            silver: users.filter(u => u.membershipLevel === 'silver').length,
+            gold: users.filter(u => (u.membershipLevel === 'gold') && u.courseMode !== 'PS_GR_B').length,
+            diamond: users.filter(u => u.membershipLevel === 'diamond' || (u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B')).length,
+            platinum: users.filter(u => u.membershipLevel === 'platinum' || (u.membershipLevel === 'silver' && u.courseMode === 'PS_GR_B')).length,
+            silver: users.filter(u => (u.membershipLevel === 'silver') && u.courseMode !== 'PS_GR_B').length,
             free: users.filter(u => !u.membershipLevel || u.membershipLevel === 'free').length,
             psGroupB: users.filter(u => u.courseMode === 'PS_GR_B').length,
             ldceIP: users.filter(u => u.courseMode === 'LDCE_IP').length,
@@ -199,7 +199,7 @@ export default function AdminDashboard() {
     }, [users]);
 
     const goldMembers = useMemo(() => {
-        return users.filter(u => u.membershipLevel === 'gold')
+        return users.filter(u => u.membershipLevel === 'gold' && u.courseMode !== 'PS_GR_B')
             .sort((a, b) => {
                 const aTime = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
                 const bTime = b.lastActiveAt ? new Date(b.lastActiveAt).getTime() : 0;
@@ -208,7 +208,7 @@ export default function AdminDashboard() {
     }, [users]);
 
     const diamondMembers = useMemo(() => {
-        return users.filter(u => u.membershipLevel === 'diamond')
+        return users.filter(u => u.membershipLevel === 'diamond' || (u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B'))
             .sort((a, b) => {
                 const aTime = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
                 const bTime = b.lastActiveAt ? new Date(b.lastActiveAt).getTime() : 0;
@@ -234,7 +234,7 @@ export default function AdminDashboard() {
         return matchesSearch && matchesStatus;
     });
 
-    const planOrder: Record<string, number> = { diamond: 5, gold: 4, platinum: 3, silver: 2, free: 1 };
+    const planOrder: Record<string, number> = { diamond: 5, platinum: 4, gold: 3, silver: 2, free: 1 };
 
     const sortedUsers = useMemo(() => {
         if (!sortColumn) return filteredUsers;
@@ -416,12 +416,14 @@ export default function AdminDashboard() {
                                                 <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate group-hover:text-blue-500 transition-colors">{u.name}</p>
                                                 <div className="flex items-center gap-2 mt-0.5">
                                                     <span className={`text-[9px] px-1.5 py-0.5 rounded-md font-extrabold uppercase tracking-tighter
-                                                        ${u.membershipLevel === 'diamond' ? 'bg-indigo-500/10 text-indigo-500 border border-indigo-500/20' :
+                                                        ${(u.membershipLevel === 'diamond' || (u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B')) ? 'bg-fuchsia-500/10 text-fuchsia-500 border border-fuchsia-500/20' :
                                                             u.membershipLevel === 'gold' ? 'bg-amber-500/10 text-amber-500 border border-amber-500/20' :
-                                                                u.membershipLevel === 'platinum' ? 'bg-slate-500/10 text-slate-500 border border-slate-500/20' :
+                                                                (u.membershipLevel === 'platinum' || (u.membershipLevel === 'silver' && u.courseMode === 'PS_GR_B')) ? 'bg-violet-500/10 text-violet-500 border border-violet-500/20' :
                                                                     u.membershipLevel === 'silver' ? 'bg-zinc-400/10 text-zinc-400 border border-zinc-400/20' :
                                                                         'bg-zinc-500/10 text-zinc-500/80 border border-zinc-500/10'}`}>
-                                                        {u.membershipLevel || 'Free'}
+                                                        {u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B' ? 'Diamond' :
+                                                            u.membershipLevel === 'silver' && u.courseMode === 'PS_GR_B' ? 'Platinum' :
+                                                                (u.membershipLevel || 'Free')}
                                                     </span>
                                                     <span className="text-[10px] text-zinc-400 tabular-nums">
                                                         {u.lastActiveAt ? format(new Date(u.lastActiveAt), 'HH:mm') : 'Active'}
@@ -533,30 +535,30 @@ export default function AdminDashboard() {
                             </div>
 
                             {/* Diamond */}
-                            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/10 dark:to-blue-900/10 p-4 rounded-2xl shadow-sm border border-indigo-100 dark:border-indigo-900/30 hover:shadow-md transition-shadow">
+                            <div className="bg-gradient-to-br from-fuchsia-50 to-pink-50 dark:from-fuchsia-900/10 dark:to-pink-900/10 p-4 rounded-2xl shadow-sm border border-fuchsia-100 dark:border-fuchsia-900/30 hover:shadow-md transition-shadow">
                                 <div className="flex items-center justify-between mb-3">
-                                    <div className="p-1.5 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-lg">
+                                    <div className="p-1.5 bg-fuchsia-100 dark:bg-fuchsia-900/40 text-fuchsia-600 dark:text-fuchsia-400 rounded-lg">
                                         <Crown className="w-4 h-4" />
                                     </div>
-                                    <span className="text-[10px] font-bold text-indigo-600/60 dark:text-indigo-400/60 uppercase tracking-wider">Diamond</span>
+                                    <span className="text-[10px] font-bold text-fuchsia-600/60 dark:text-fuchsia-400/60 uppercase tracking-wider">Diamond</span>
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-2xl font-extrabold text-indigo-700 dark:text-indigo-400">{stats.diamond}</span>
-                                    <span className="text-[10px] text-indigo-600/70 dark:text-indigo-400/70 mt-0.5">Diamond</span>
+                                    <span className="text-2xl font-extrabold text-fuchsia-700 dark:text-fuchsia-400">{stats.diamond}</span>
+                                    <span className="text-[10px] text-fuchsia-600/70 dark:text-fuchsia-400/70 mt-0.5">Diamond</span>
                                 </div>
                             </div>
 
                             {/* Platinum */}
-                            <div className="bg-gradient-to-br from-zinc-50 to-slate-50 dark:from-zinc-900/10 dark:to-slate-900/10 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
+                            <div className="bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-900/10 dark:to-purple-900/10 p-4 rounded-2xl shadow-sm border border-violet-100 dark:border-violet-800/30 hover:shadow-md transition-shadow">
                                 <div className="flex items-center justify-between mb-3">
-                                    <div className="p-1.5 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded-lg">
-                                        <Crown className="w-4 h-4" />
+                                    <div className="p-1.5 bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400 rounded-lg">
+                                        <Zap className="w-4 h-4" />
                                     </div>
-                                    <span className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Platinum</span>
+                                    <span className="text-[10px] font-bold text-violet-500 dark:text-violet-400 uppercase tracking-wider">Platinum</span>
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-2xl font-extrabold text-zinc-700 dark:text-zinc-300">{stats.platinum}</span>
-                                    <span className="text-[10px] text-zinc-500 dark:text-zinc-400 mt-0.5">Platinum</span>
+                                    <span className="text-2xl font-extrabold text-violet-700 dark:text-violet-300">{stats.platinum}</span>
+                                    <span className="text-[10px] text-violet-500 dark:text-violet-400 mt-0.5">Platinum</span>
                                 </div>
                             </div>
 
@@ -818,8 +820,8 @@ export default function AdminDashboard() {
                                                     <td className="py-4 px-6">
                                                         <div className="flex items-center gap-3">
                                                             <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shadow-sm shrink-0
-                                                        ${user.membershipLevel === 'diamond' ? 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30' :
-                                                                    user.membershipLevel === 'platinum' ? 'bg-slate-100 text-slate-600 dark:bg-slate-800' :
+                                                        ${(user.membershipLevel === 'diamond' || (user.membershipLevel === 'gold' && user.courseMode === 'PS_GR_B')) ? 'bg-fuchsia-100 text-fuchsia-600 dark:bg-fuchsia-900/30' :
+                                                                    (user.membershipLevel === 'platinum' || (user.membershipLevel === 'silver' && user.courseMode === 'PS_GR_B')) ? 'bg-violet-100 text-violet-600 dark:bg-violet-900/30' :
                                                                         user.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-600 dark:bg-amber-900/30' :
                                                                             user.membershipLevel === 'silver' ? 'bg-zinc-100 text-zinc-600 dark:bg-zinc-800' :
                                                                                 'bg-zinc-100 text-zinc-500 dark:bg-zinc-800'
@@ -843,21 +845,23 @@ export default function AdminDashboard() {
                                                     <td className="py-4 px-6">
                                                         <div className="flex flex-col items-start gap-1">
                                                             <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wide border shadow-sm
-                                                        ${user.membershipLevel === 'diamond'
-                                                                    ? 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-900/20 dark:text-indigo-400 dark:border-indigo-800/50'
-                                                                    : user.membershipLevel === 'platinum'
-                                                                        ? 'bg-zinc-50 text-zinc-700 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-400 dark:border-zinc-800/50'
+                                                        ${(user.membershipLevel === 'diamond' || (user.membershipLevel === 'gold' && user.courseMode === 'PS_GR_B'))
+                                                                    ? 'bg-fuchsia-100 text-fuchsia-700 border-fuchsia-200 dark:bg-fuchsia-900/20 dark:text-fuchsia-400 dark:border-fuchsia-800/50'
+                                                                    : (user.membershipLevel === 'platinum' || (user.membershipLevel === 'silver' && user.courseMode === 'PS_GR_B'))
+                                                                        ? 'bg-violet-100 text-violet-700 border-violet-200 dark:bg-violet-900/20 dark:text-violet-400 dark:border-violet-800/50'
                                                                         : user.membershipLevel === 'gold'
                                                                             ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50'
                                                                             : user.membershipLevel === 'silver'
                                                                                 ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800/50'
                                                                                 : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-500 dark:border-zinc-800/50'
                                                                 }`}>
-                                                                {user.membershipLevel === 'diamond' && <Crown className="w-3 h-3 fill-current" />}
-                                                                {user.membershipLevel === 'platinum' && <Crown className="w-3 h-3 fill-current" />}
-                                                                {user.membershipLevel === 'gold' && <Crown className="w-3 h-3 fill-current" />}
-                                                                {user.membershipLevel === 'silver' && <Star className="w-3 h-3 fill-current" />}
-                                                                {user.membershipLevel || 'Free'}
+                                                                {(user.membershipLevel === 'diamond' || (user.membershipLevel === 'gold' && user.courseMode === 'PS_GR_B')) && <Crown className="w-3 h-3 fill-current" />}
+                                                                {(user.membershipLevel === 'platinum' || (user.membershipLevel === 'silver' && user.courseMode === 'PS_GR_B')) && <Zap className="w-3 h-3 fill-current" />}
+                                                                {user.membershipLevel === 'gold' && user.courseMode !== 'PS_GR_B' && <Crown className="w-3 h-3 fill-current" />}
+                                                                {user.membershipLevel === 'silver' && user.courseMode !== 'PS_GR_B' && <Star className="w-3 h-3 fill-current" />}
+                                                                {user.membershipLevel === 'gold' && user.courseMode === 'PS_GR_B' ? 'Diamond' :
+                                                                    user.membershipLevel === 'silver' && user.courseMode === 'PS_GR_B' ? 'Platinum' :
+                                                                        (user.membershipLevel || 'Free')}
                                                             </span>
                                                             {user.membershipLevel && user.membershipLevel !== 'free' && (
                                                                 <button
@@ -1075,12 +1079,14 @@ export default function AdminDashboard() {
                                         <p className="text-xs text-zinc-500 uppercase font-semibold">Current Plan</p>
                                         <p className="font-bold text-lg text-zinc-900 dark:text-zinc-100">{viewingPaymentUser.planName || 'N/A'}</p>
                                     </div>
-                                    <div className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${viewingPaymentUser.membershipLevel === 'diamond' ? 'bg-indigo-100 text-indigo-800' :
-                                        viewingPaymentUser.membershipLevel === 'platinum' ? 'bg-zinc-100 text-zinc-800' :
+                                    <div className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${(viewingPaymentUser.membershipLevel === 'diamond' || (viewingPaymentUser.membershipLevel === 'gold' && viewingPaymentUser.courseMode === 'PS_GR_B')) ? 'bg-fuchsia-100 text-fuchsia-800' :
+                                        (viewingPaymentUser.membershipLevel === 'platinum' || (viewingPaymentUser.membershipLevel === 'silver' && viewingPaymentUser.courseMode === 'PS_GR_B')) ? 'bg-violet-100 text-violet-800' :
                                             viewingPaymentUser.membershipLevel === 'gold' ? 'bg-amber-100 text-amber-800' :
                                                 'bg-slate-100 text-slate-800'
                                         }`}>
-                                        {viewingPaymentUser.membershipLevel}
+                                        {viewingPaymentUser.membershipLevel === 'gold' && viewingPaymentUser.courseMode === 'PS_GR_B' ? 'Diamond' :
+                                            viewingPaymentUser.membershipLevel === 'silver' && viewingPaymentUser.courseMode === 'PS_GR_B' ? 'Platinum' :
+                                                viewingPaymentUser.membershipLevel}
                                     </div>
                                 </div>
 
@@ -1147,12 +1153,14 @@ export default function AdminDashboard() {
                                         <div className="flex items-center gap-2">
                                             <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{u.name}</p>
                                             <span className={`text-[8px] px-1 py-0.5 rounded-sm font-bold uppercase tracking-tight 
-                                                ${u.membershipLevel === 'diamond' ? 'bg-indigo-500/10 text-indigo-500' :
+                                                ${(u.membershipLevel === 'diamond' || (u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B')) ? 'bg-fuchsia-500/10 text-fuchsia-500' :
                                                     u.membershipLevel === 'gold' ? 'bg-amber-500/10 text-amber-500' :
-                                                        u.membershipLevel === 'platinum' ? 'bg-slate-500/10 text-slate-500' :
+                                                        (u.membershipLevel === 'platinum' || (u.membershipLevel === 'silver' && u.courseMode === 'PS_GR_B')) ? 'bg-violet-500/10 text-violet-500' :
                                                             u.membershipLevel === 'silver' ? 'bg-zinc-400/10 text-zinc-400' :
                                                                 'bg-zinc-500/10 text-zinc-500'}`}>
-                                                {u.membershipLevel || 'Free'}
+                                                {u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B' ? 'Diamond' :
+                                                    u.membershipLevel === 'silver' && u.courseMode === 'PS_GR_B' ? 'Platinum' :
+                                                        (u.membershipLevel || 'Free')}
                                             </span>
                                         </div>
                                         <p className="text-xs text-zinc-500">{u.email}</p>

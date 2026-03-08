@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from "next/link";
-import { Users, MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X, Clock, Send, Star } from 'lucide-react';
+import { Users, MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X, Clock, Send, Star, Crown, Zap } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
 
@@ -316,6 +316,8 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
 
     const isGoldUser = (role?: string) => role?.toLowerCase().includes('gold');
     const isSilverUser = (role?: string) => role?.toLowerCase().includes('silver');
+    const isDiamondUser = (role?: string) => role?.toLowerCase().includes('diamond');
+    const isPlatinumUser = (role?: string) => role?.toLowerCase().includes('platinum');
 
     const AdminBadge = () => (
         <span className="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-blue-200 dark:border-blue-800 ml-2 shadow-sm">
@@ -325,6 +327,20 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
 
     const UserBadge = ({ role }: { role?: string }) => {
         if (!role) return null;
+        if (isDiamondUser(role)) {
+            return (
+                <span className="inline-flex items-center gap-1 bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-700 dark:text-fuchsia-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-fuchsia-200 dark:border-fuchsia-800 ml-2 shadow-sm">
+                    Diamond <Crown className="w-3 h-3 text-fuchsia-600 dark:text-fuchsia-400 fill-fuchsia-600" />
+                </span>
+            );
+        }
+        if (isPlatinumUser(role)) {
+            return (
+                <span className="inline-flex items-center gap-1 bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-violet-200 dark:border-violet-800 ml-2 shadow-sm">
+                    Platinum <Zap className="w-3 h-3 text-violet-600 dark:text-violet-400 fill-violet-600" />
+                </span>
+            );
+        }
         if (isGoldUser(role)) {
             return (
                 <span className="inline-flex items-center gap-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-full text-[10px] font-bold border border-amber-200 dark:border-amber-800 ml-2 shadow-sm">

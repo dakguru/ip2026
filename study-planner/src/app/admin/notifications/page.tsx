@@ -179,12 +179,19 @@ function getMembershipBadge(userContext?: Notification['userContext']): { label:
     const level = userContext.membershipLevel?.toLowerCase();
     const mode = userContext.courseMode;
 
-    if (level === 'gold' && mode === 'PS_GR_B')
+    // Diamond Badge (Direct or PS Group B Gold)
+    if (level === 'diamond' || (level === 'gold' && mode === 'PS_GR_B'))
         return { label: 'Diamond', color: 'text-fuchsia-600 dark:text-fuchsia-400', bg: 'bg-fuchsia-50 dark:bg-fuchsia-400/10', icon: Crown };
+
+    // Platinum Badge (Direct or PS Group B Silver)
+    if (level === 'platinum' || (level === 'silver' && mode === 'PS_GR_B'))
+        return { label: 'Platinum', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-400/10', icon: Zap };
+
+    // Gold Badge
     if (level === 'gold')
         return { label: 'Gold', color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-50 dark:bg-amber-400/10', icon: Crown };
-    if (level === 'silver' && mode === 'PS_GR_B')
-        return { label: 'Platinum', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-400/10', icon: Zap };
+
+    // Silver Badge
     if (level === 'silver')
         return { label: 'Silver', color: 'text-zinc-600 dark:text-zinc-300', bg: 'bg-zinc-100 dark:bg-zinc-500/10', icon: Shield };
 

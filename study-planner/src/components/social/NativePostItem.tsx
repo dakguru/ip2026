@@ -171,11 +171,51 @@ export const NativePostItem = ({ post, onSave, isSaved, currentUser, onDelete, o
         return r.includes('admin') || n.includes('admin') || r.includes('mentor');
     };
 
+    const isGoldUser = (role?: string) => role?.toLowerCase().includes('gold');
+    const isSilverUser = (role?: string) => role?.toLowerCase().includes('silver');
+    const isDiamondUser = (role?: string) => role?.toLowerCase().includes('diamond');
+    const isPlatinumUser = (role?: string) => role?.toLowerCase().includes('platinum');
+
     const AdminBadge = () => (
         <span className="inline-flex items-center gap-0.5 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 px-1.5 py-0.5 rounded text-[9px] font-bold ml-1.5">
             Admin <Check className="w-2.5 h-2.5" />
         </span>
     );
+
+    const UserBadge = ({ role }: { role?: string }) => {
+        if (!role) return null;
+        const r = role.toLowerCase();
+
+        if (r.includes('diamond')) {
+            return (
+                <span className="inline-flex items-center gap-0.5 bg-fuchsia-100 dark:bg-fuchsia-900/40 text-fuchsia-700 dark:text-fuchsia-300 px-1.5 py-0.5 rounded text-[9px] font-bold ml-1.5">
+                    Diamond <Check className="w-2.5 h-2.5" />
+                </span>
+            );
+        }
+        if (r.includes('platinum')) {
+            return (
+                <span className="inline-flex items-center gap-0.5 bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 px-1.5 py-0.5 rounded text-[9px] font-bold ml-1.5 shadow-sm">
+                    Platinum <Check className="w-2.5 h-2.5" />
+                </span>
+            );
+        }
+        if (r.includes('gold')) {
+            return (
+                <span className="inline-flex items-center gap-0.5 bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 px-1.5 py-0.5 rounded text-[9px] font-bold ml-1.5 shadow-sm">
+                    Gold <Check className="w-2.5 h-2.5" />
+                </span>
+            );
+        }
+        if (r.includes('silver')) {
+            return (
+                <span className="inline-flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-1.5 py-0.5 rounded text-[9px] font-bold ml-1.5 shadow-sm">
+                    Silver <Check className="w-2.5 h-2.5" />
+                </span>
+            );
+        }
+        return null;
+    };
 
     return (
         <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800 overflow-hidden mb-4">
@@ -192,6 +232,7 @@ export const NativePostItem = ({ post, onSave, isSaved, currentUser, onDelete, o
                                     {post.author}
                                 </span>
                                 {isAdmin(post.role, post.author) && <AdminBadge />}
+                                <UserBadge role={post.role} />
                             </div>
                             <span className="text-[10px] text-zinc-400 mt-0.5 block">{formattedDate}</span>
                         </div>
@@ -284,6 +325,8 @@ export const NativePostItem = ({ post, onSave, isSaved, currentUser, onDelete, o
                                         <div className="bg-white dark:bg-zinc-800 rounded-2xl rounded-tl-none p-3 shadow-sm border border-zinc-100 dark:border-zinc-800/50">
                                             <div className="flex justify-between items-center mb-1">
                                                 <span className="font-bold text-xs text-zinc-900 dark:text-zinc-100">{comment.author}</span>
+                                                {isAdmin(comment.role, comment.author) && <AdminBadge />}
+                                                <UserBadge role={comment.role} />
                                                 <span className="text-[10px] text-zinc-400">{comment.timestamp}</span>
                                             </div>
                                             {editingCommentId === comment.id ? (

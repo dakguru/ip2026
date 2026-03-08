@@ -36,6 +36,7 @@ interface UserSession {
     membershipLevel?: 'free' | 'silver' | 'gold' | 'diamond' | 'platinum';
     planId?: string;
     planName?: string;
+    courseMode?: string;
 }
 
 export function UserMenu() {
@@ -89,9 +90,11 @@ export function UserMenu() {
     const planName = (session?.planName || "").toLowerCase();
 
     if (session.membershipLevel && session.membershipLevel !== 'free') {
-        if (plan.includes('diamond') || planName.includes('diamond') || plan.includes('ps_gr_b')) {
+        const isPSGB = session.courseMode === 'PS_GR_B' || plan.includes('ps_gr_b') || planName.includes('ps_gr_b');
+
+        if (displayMembership === 'diamond' || (session.membershipLevel === 'gold' && isPSGB)) {
             displayMembership = 'diamond';
-        } else if (plan.includes('platinum') || planName.includes('platinum')) {
+        } else if (displayMembership === 'platinum' || (session.membershipLevel === 'silver' && isPSGB)) {
             displayMembership = 'platinum';
         }
     }
@@ -112,9 +115,13 @@ export function UserMenu() {
                     <div className="flex items-center justify-between">
                         <p className="font-medium text-sm leading-none">{session?.name || 'Guest User'}</p>
                         {session?.membershipLevel && session.membershipLevel !== 'free' && (
-                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border uppercase ${displayMembership === 'diamond' || session.membershipLevel === 'gold'
-                                ? 'bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900/30 dark:text-amber-200 dark:border-amber-800'
-                                : 'bg-slate-100 text-slate-800 border-slate-200 dark:bg-slate-800/50 dark:text-slate-200 dark:border-slate-700'
+                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border uppercase ${displayMembership === 'diamond'
+                                ? 'bg-fuchsia-100 text-fuchsia-800 border-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-200 dark:border-fuchsia-800'
+                                : displayMembership === 'platinum'
+                                    ? 'bg-violet-100 text-violet-800 border-violet-200 dark:bg-violet-900/30 dark:text-violet-200 dark:border-violet-800'
+                                    : session.membershipLevel === 'gold'
+                                        ? 'bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900/30 dark:text-amber-200 dark:border-amber-800'
+                                        : 'bg-slate-100 text-slate-800 border-slate-200 dark:bg-slate-800/50 dark:text-slate-200 dark:border-slate-700'
                                 }`}>
                                 {displayMembership}
                             </span>
