@@ -76,5 +76,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-73', "Public Accountants Default Act, 1850", 'Paper II', []),
   createTopic('psgb-74', "Revenue Recovery Act, 1890", 'Paper II', [71]),
   createTopic('psgb-75', "Prevention of Corruption Act, 1988 read with its (Amendment) Act, 2018", 'Paper II', []),
-  createTopic('psgb-76', "Goods and Services Tax (GST) Act, 2017", 'Paper II', [])
+  createTopic('psgb-76', "Goods and Services Tax (GST) Act, 2017", 'Paper II', []),
+  createTopic('psgb-p1-pyq', 'LDCE PS Gr. B 2023 — Paper I PYQ', 'PYQ', [150, 151, 152, 153, 154]),
+  createTopic('psgb-p2-pyq', 'LDCE PS Gr. B 2023 — Paper II PYQ', 'PYQ', [155, 156, 157, 158, 159, 160]),
 ];

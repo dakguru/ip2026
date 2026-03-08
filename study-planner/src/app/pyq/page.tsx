@@ -332,8 +332,15 @@ export default function PyqDashboard() {
                             </div>
                         )}
                     </div>
-                    <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-center">
-                        <button onClick={resetToDashboard} className="text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors">
+                    <div className="bg-zinc-50 dark:bg-zinc-800/50 p-6 border-t border-zinc-100 dark:border-zinc-800 flex justify-center">
+                        <button
+                            type="button"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                resetToDashboard();
+                            }}
+                            className="w-full py-2 text-sm font-bold text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 transition-all cursor-pointer bg-transparent"
+                        >
                             Cancel
                         </button>
                     </div>

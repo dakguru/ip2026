@@ -16,6 +16,24 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "08.03.2026",
+        items: [
+            {
+                title: "Updated PYQs for PS Group B Course Mode",
+                desc: (
+                    <div className="space-y-2">
+                        <p>We have integrated the <strong>LDCE PS Gr. B 2023 Previous Year Questions</strong> for interactive practice:</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li><strong>Paper I PYQ:</strong> General Financial Rules, Service Rules & other Acts.</li>
+                            <li><strong>Paper II PYQ:</strong> Postal Operations, SB, PLI & Allied Topics.</li>
+                        </ul>
+                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Start practicing in the Previous Year Papers section!</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "06.03.2026",
         items: [
             {

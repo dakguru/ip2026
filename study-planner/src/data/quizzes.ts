@@ -4851,6 +4851,1663 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "BPM can be transferred on her/his request under the following circumstances (select the incorrect option):", o: ["BPM Level-1 in TRCA slab-2", "ABPM/Dak Sevak Level-2 (Postal/RMS) in same TRCA slab", "BPM level-2 in TRCA slab 3", "ABPM/Dak Sevak Level-1 in TRCA slab-2"], a: 2, e: "Correct Answer: BPM level-2 in TRCA slab 3." },
     { q: "'Precious metal' as defined by PMLA Act, 2002 does not include:", o: ["Diamond", "Palladium", "Gold", "Platinum"], a: 0, e: "Correct Answer: Diamond." },
   ],
+  155: [
+    {
+        "q": "Transfer of applications under RTI Act is under",
+        "o": [
+            "Section 4 of RTI Act",
+            "Sub Section (3) of Section 6 of RTI Act",
+            "Section 8 of RTI Act",
+            "Section 11 of RTI Act"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Sub Section (3) of Section 6 of RTI Act"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, Who can be a member of the Standing Committee constituted for purpose of consideration of application of a Central Government servant for taking treatment outside India?",
+        "o": [
+            "Director-General of health services in the Ministry of Health in Central Government",
+            "Joint-Secretary in the Ministry of Health and Family Welfare",
+            "Director-General of Armed Forces Medical Services",
+            "All the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: All the above"
+    },
+    {
+        "q": "Preservation period of Invoices of Articles received from the Stock Depot are",
+        "o": [
+            "5 years",
+            "3 years",
+            "1 year after Annual inspection has been carried out",
+            "2 years"
+        ],
+        "a": 1,
+        "e": "Correct Answer: 3 years"
+    },
+    {
+        "q": "The following Acts and conducts amount to misconduct",
+        "o": [
+            "Submitting joint representations in matters of common interest",
+            "Playing cards in the recreation room or places approved for such purpose.",
+            "Participate in sports activities as an amateur",
+            "Giving evidence in an judicial enquiry"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Submitting joint representations in matters of common interest"
+    },
+    {
+        "q": "What below would be included in the description of \"Goods\" under article 2(52) of the CGST Act, 2017? I) Money II) Actionable Claim III) Security IV) Growing crops A. (a) IV only B. (b) II & III C. (c) II & IV D. (d) I & II",
+        "o": [],
+        "a": 2,
+        "e": "Correct Answer: (c) II & IV"
+    },
+    {
+        "q": "Select the correct option: The amount of GPF subscription may be",
+        "o": [
+            "reduced twice during the course of the year.",
+            "enhanced twice during the course of the year.",
+            "enhanced only once during the course of the year.",
+            "None of the above."
+        ],
+        "a": 1,
+        "e": "Correct Answer: enhanced twice during the course of the year."
+    },
+    {
+        "q": "The following deductions from the subsistence allowance is not compulsory",
+        "o": [
+            "CGHS contribution",
+            "House Rent and allied charges",
+            "CGEIS contribution",
+            "Refund of advance taken from GPF"
+        ],
+        "a": 3,
+        "e": "Correct Answer: Refund of advance taken from GPF"
+    },
+    {
+        "q": "An amount of Rs.. has been prescribed as Security deposit in Philatelic Deposit Account, on failure of it, no supplies will be made to PDA holders.",
+        "o": [
+            "200",
+            "300",
+            "400",
+            "500"
+        ],
+        "a": 0,
+        "e": "Correct Answer: 200"
+    },
+    {
+        "q": "As per provisions of CCS (Conduct) Rules a Government Servant shall",
+        "o": [
+            "strictly abide by laws relating to intoxicating drinks or drugs in force in any area where he may be",
+            "refrain from consuming any intoxicating drink or drug in a public place",
+            "not use any intoxicating drink or drug to excess",
+            "all of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: all of the above"
+    },
+    {
+        "q": "Reasons should not be mentioned while terminating the services of a temporary employee under",
+        "o": [
+            "FR-56 (j)",
+            "Rule 5 of CCS(TS) Rules",
+            "Rule 6 of CCS(TS) Rules",
+            "Rule 14 of CCS(CCA) Rules"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Rule 5 of CCS(TS) Rules"
+    },
+    {
+        "q": "Under the Prevention of Corruption (Amendment) Act, 2018 whoever convicted of an offence under this Act subsequently commits an offence punishable under this Act, shall be punishable with",
+        "o": [
+            "Imprisonment for a term which shall be not less than five years but which may extend to ten years and shall also be liable to fine.",
+            "imprisonment for a term which shall be not less than two years but which may extend to seven years and shall also be liable to fine",
+            "Rigorous imprisonment for a term which shall be not less than two years but which may extend to ten years and shall also be liable to fine",
+            "All of the above"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Imprisonment for a term which shall be not less than five years but which may extend to ten years and shall also be liable to fine."
+    },
+    {
+        "q": "During Joining Time:",
+        "o": [
+            "Permanent Travelling Allowance is admissible.",
+            "Conveyance Allowance is not admissible.",
+            "Permanent Travelling Allowance and Conveyance Allowance both admissible.",
+            "None of the above is correct."
+        ],
+        "a": 1,
+        "e": "Correct Answer: Conveyance Allowance is not admissible."
+    },
+    {
+        "q": "After the evidence has been closed, the Inquiring Authority can take written briefs. In such a case,",
+        "o": [
+            "the Charged Officer and the Presenting Officer have to submit their briefs simultaneously",
+            "the Presenting Officer's written brief has to be served to the Charged Officer first",
+            "the Presenting Officer's written brief does not have to be served to the Charged Officer",
+            "the Charged Officer's written brief has to be served to the Presenting Officer first"
+        ],
+        "a": 1,
+        "e": "Correct Answer: the Presenting Officer's written brief has to be served to the Charged Officer first"
+    },
+    {
+        "q": "Every Proceeding for Contempt in Central Administrative Tribunal shall be dealt with by",
+        "o": [
+            "only the Administrative member",
+            "a bench of not less than two members",
+            "the Vice Chairman of the Principal Bench",
+            "only the Judicial member"
+        ],
+        "a": 1,
+        "e": "Correct Answer: a bench of not less than two members"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, What is the age prescribed for annual medical examination for the Group 'A' Officers of Central Civil Services?",
+        "o": [
+            "35 years and above",
+            "40 years and above",
+            "45 years and above",
+            "50 years and above"
+        ],
+        "a": 1,
+        "e": "Correct Answer: 40 years and above"
+    },
+    {
+        "q": "Verification of membership for the purpose of recognition of a Service Association shall be done",
+        "o": [
+            "by Check-off-system in payrolls",
+            "secret ballot",
+            "open head count",
+            "show of hands"
+        ],
+        "a": 0,
+        "e": "Correct Answer: by Check-off-system in payrolls"
+    },
+    {
+        "q": "The fitment on TRCA to be allowed to GDS working as on 31/12/2005 is",
+        "o": [
+            "25%",
+            "50%",
+            "33%",
+            "40%"
+        ],
+        "a": 3,
+        "e": "Correct Answer: 40%"
+    },
+    {
+        "q": "The following category are exempted from informing the Prescribed Authority about any transaction which attracts Rule 18 (2) of Conduct Rules",
+        "o": [
+            "two Gazetted Officers",
+            "two Government Servants, of which at least one is Gazetted",
+            "None of the above",
+            "both 'a' & 'b'"
+        ],
+        "a": 2,
+        "e": "Correct Answer: None of the above"
+    },
+    {
+        "q": "When a Government Servant elects to subscribe for GPF at the minimum rate of 6 per cent the fraction of a rupee",
+        "o": [
+            "shall be ignored.",
+            "will be rounded to the nearest rupee.",
+            "shall be rounded to the next higher rupee.",
+            "none of the above."
+        ],
+        "a": 1,
+        "e": "Correct Answer: will be rounded to the nearest rupee."
+    },
+    {
+        "q": "A car purchased on an advance from the Department requires sanction under",
+        "o": [
+            "GFR",
+            "CCS(Conduct) Rules",
+            "both 'a' & 'b'",
+            "None of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: None of the above"
+    },
+    {
+        "q": "In matters of common interest",
+        "o": [
+            "joint representation can be made",
+            "individual representation should be made",
+            "joint representation if made can be entertained at the discretion of Competent Authority",
+            "not more than three officials can submit a joint representation"
+        ],
+        "a": 1,
+        "e": "Correct Answer: individual representation should be made"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, A Government servant who is admitted in the hospital for treatment before retirement but is discharged from the hospital after a number of days on attaining the age of superannuation. Which of the following sentences is correct?",
+        "o": [
+            "He has to bear his expenses from the retirement benefits that he will get.",
+            "He will be reimbursed the expenses incurred by him by his own office, till alternative arrangement is made by the Government.",
+            "The Controlling Officer can decide, whether the bills can be reimbursed or not.",
+            "Special sanction from the Ministry of Health is required for reimbursement."
+        ],
+        "a": 1,
+        "e": "Correct Answer: He will be reimbursed the expenses incurred by him by his own office, till alternative arrangement is made by the Government."
+    },
+    {
+        "q": "Choose the option that is not correct: As on date the Leave Travel Concession will cover the Government Servant himself and his family where family includes:",
+        "o": [
+            "The Government Servant's wife or husband, as the case may be.",
+            "married daughters who have been divorced, abandoned or separated from their husbands.",
+            "Parents and / or stepmother residing with and wholly dependent on the Government Servant whereas stepfather is not included.",
+            "Unmarried minor brothers."
+        ],
+        "a": 2,
+        "e": "Correct Answer: Parents and / or stepmother residing with and wholly dependent on the Government Servant whereas stepfather is not included."
+    },
+    {
+        "q": "The number of disciplinary cases assigned to an Inquiry Officer from amongst retired officers including both Rule-10 of GDS (Conduct and Engagement) Rules and Rule 14 of CCS(CCA) can not exceed",
+        "o": [
+            "3 cases at a time",
+            "2 cases at a time",
+            "5 cases in a year",
+            "4 cases at a time"
+        ],
+        "a": 3,
+        "e": "Correct Answer: 4 cases at a time"
+    },
+    {
+        "q": "Preservation period of answer books in respect of departmental exams is",
+        "o": [
+            "six months from the date of announcement of result",
+            "twelve months from the date of announcement of result",
+            "six months from the date of assuming charge by all successful candidates",
+            "none of the above"
+        ],
+        "a": 1,
+        "e": "Correct Answer: twelve months from the date of announcement of result"
+    }
+],
+  156: [
+    {
+        "q": "In connection with Children Education Allowance, the upper age limit of Divyaang children has been set at",
+        "o": [
+            "18 Years",
+            "20 Years",
+            "22 Years",
+            "25 Years"
+        ],
+        "a": 2,
+        "e": "Correct Answer: 22 Years"
+    },
+    {
+        "q": "\"Sexual Harassment\" includes unwelcome",
+        "o": [
+            "physical contact",
+            "making sexually coloured remarks",
+            "showing pornography",
+            "all of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: all of the above"
+    },
+    {
+        "q": "Choose the most appropriate option: The competent Authority should not grant Casual Leave in combination with",
+        "o": [
+            "Both Special Casual Leave and Regular Leave.",
+            "Special Casual Leave only.",
+            "Regular Leave only.",
+            "None of the above option is correct."
+        ],
+        "a": 2,
+        "e": "Correct Answer: Regular Leave only."
+    },
+    {
+        "q": "The following classes of officials are required to give security deposit as prescribed by the Department",
+        "o": [
+            "Cashiers",
+            "Treasurers / Asstt. Treasurers",
+            "Cash Overseers",
+            "All of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: All of the above"
+    },
+    {
+        "q": "Which one of the following shall not be treated as emoluments for calculation of retirement benefits:",
+        "o": [
+            "Non Practicing Allowance granted to Medical Officer.",
+            "Special Pay.",
+            "Stagnation Increment.",
+            "Rank pay drawn while on deputation to APS."
+        ],
+        "a": 1,
+        "e": "Correct Answer: Special Pay."
+    },
+    {
+        "q": "The preservation period of records related to Grant of Scholarships from Welfare Fund is",
+        "o": [
+            "3 years from the end of the Financial year in which the files are closed",
+            "3 years after the payment of last installment",
+            "10 years",
+            "One year after the Internal Inspection of the office"
+        ],
+        "a": 0,
+        "e": "Correct Answer: 3 years from the end of the Financial year in which the files are closed"
+    },
+    {
+        "q": "Sanction of Study Leave exceeding 12 months up to the maximum of 24 months at a stretch",
+        "o": [
+            "requires approval of Department of Personnel and Training.",
+            "can be granted by Ministries/Departments under their power.",
+            "can not be granted by Ministries/Departments under their power.",
+            "None of the above."
+        ],
+        "a": 1,
+        "e": "Correct Answer: can be granted by Ministries/Departments under their power."
+    },
+    {
+        "q": "An official under suspension",
+        "o": [
+            "ceases to be a government servant",
+            "cannot function as a Defence Assistant in Disciplinary Proceedings",
+            "can function as a Defence Assistant in Disciplinary Proceedings",
+            "both 'a' and 'b'"
+        ],
+        "a": 2,
+        "e": "Correct Answer: can function as a Defence Assistant in Disciplinary Proceedings"
+    },
+    {
+        "q": "The period of validity of pay orders will be ______ from the date of the endorsement of pay order excepting the pay orders made on the bills relating to pay and allowances of the staff which are governed by different sets of rules",
+        "o": [
+            "Three Days",
+            "Seven Days",
+            "Five Days",
+            "Fourteen Days"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Seven Days"
+    },
+    {
+        "q": "General Questioning of the Charged Officer is done",
+        "o": [
+            "At the beginning of Rule 14 enquiry proceedings",
+            "After the Defence evidence is over and the Charged Officer declines to appear as his own witness",
+            "After the Charged Officer appears as his own witness",
+            "Before the listing of documents"
+        ],
+        "a": 1,
+        "e": "Correct Answer: After the Defence evidence is over and the Charged Officer declines to appear as his own witness"
+    },
+    {
+        "q": "Who was the Secretary of the Committee set up by the Government to go into the service conditions of the Gramin Dak Sevaks?",
+        "o": [
+            "Madan Kishore",
+            "R. R. Savoor",
+            "C.V. Rajan",
+            "A.K. Sharma"
+        ],
+        "a": 3,
+        "e": "Correct Answer: A.K. Sharma"
+    },
+    {
+        "q": "Where the president decides not to withdraw or withhold pension but orders recovery of pecuniary loss from pension the recovery shall not ordinarily be made at a rate exceeding _____ of the pension admissible on the date of retirement of a Govt. Servant.",
+        "o": [
+            "Half.",
+            "Two-Third.",
+            "One-Third.",
+            "None of the above."
+        ],
+        "a": 2,
+        "e": "Correct Answer: One-Third."
+    },
+    {
+        "q": "The preservation period of treasurer's cashbook is",
+        "o": [
+            "30 years",
+            "10 years",
+            "permanent record",
+            "15 years"
+        ],
+        "a": 1,
+        "e": "Correct Answer: 10 years"
+    },
+    {
+        "q": "All .......who are fully conversant with the case are authorized to file Vakalatnama on behalf of the Department under Rule ...of Postal Manual Vol II respectively.",
+        "o": [
+            "Officers & Rule 125 -A",
+            "Head of the Department only & Rule 129-B",
+            "Gazetted Officers & Rule 127-A",
+            "Concerned Divisional heads only & Rule 128-E"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Gazetted Officers & Rule 127-A"
+    },
+    {
+        "q": "How much accumulation from SDBS to be invested to purchase an annuity from an Authorised Life Insurance Company and how much shall be paid in case a GDS resigns from service before normal exit?",
+        "o": [
+            "85%, 15%",
+            "0%,0%",
+            "60%, 40%",
+            "50%, 50%"
+        ],
+        "a": 0,
+        "e": "Correct Answer: 85%, 15%"
+    },
+    {
+        "q": "According to CCS Revised Pay Rules 2016 and GOI Decisions there of: The option under the provisos to rule 5 shall be exercised in writing where a Government servant is under suspension on the 1st day of January, 2016, the option may be exercised within ______ of the date of his return to his duty if that date is later than the date prescribed in this sub-rule.",
+        "o": [
+            "two months",
+            "three months",
+            "six months",
+            "eight months"
+        ],
+        "a": 1,
+        "e": "Correct Answer: three months"
+    },
+    {
+        "q": "Central Civil Services (Temporary Service) Rules shall apply to",
+        "o": [
+            "Government Servant engaged on contract",
+            "All persons who are employed temporarily in work-charged establishments and who have opted for pensionary benefits.",
+            "Government Servants not in whole-time employment",
+            "Government Servants paid out of contingencies"
+        ],
+        "a": 1,
+        "e": "Correct Answer: All persons who are employed temporarily in work-charged establishments and who have opted for pensionary benefits."
+    },
+    {
+        "q": "The President may by order remove from office the Chief Information Commissioner, only if he",
+        "o": [
+            "is adjudged an insolvent",
+            "has been convicted of an offence which, in the opinion of the President, involves moral turpitude",
+            "engages during his term of office in any paid employment outside the duties of his office",
+            "Any of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: Any of the above"
+    },
+    {
+        "q": "Withdrawal from GPF may be sanctioned by the competent authorities, without linking to any purpose, within ______ before the date of subscriber's retirement on superannuation.",
+        "o": [
+            "Twenty Four months",
+            "Thirty Six months",
+            "Twelve months",
+            "Four Years"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Twelve months"
+    },
+    {
+        "q": "Claims of the Department against Railways for over charges and claims of Railways against the Department for under-charges calculated on the basis of haulage rates and fares only will be recognized and admitted if the claims are preferred within",
+        "o": [
+            "two months",
+            "three months",
+            "six months",
+            "twelve months"
+        ],
+        "a": 2,
+        "e": "Correct Answer: six months"
+    },
+    {
+        "q": "Subletting of government accommodation violating provisions of Rules 15-A of CCS(Conduct) Rules is punishable under",
+        "o": [
+            "Rule 16 of CCA(CCS) Rules",
+            "Rule 14 of CCS(CCA) Rules",
+            "Rule 10 of CCS(CCA) Rules",
+            "Rule 19 of CCS(CCA) Rules"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Rule 14 of CCS(CCA) Rules"
+    },
+    {
+        "q": "Regulation of recurring Grants-in-aid for Government Employee's Welfare as in GFR,2017 Rule-245, a maximum one time grant of ______ may be sanctioned for setting up of a Recreation Club.",
+        "o": [
+            "Rupees Twenty Thousands.",
+            "Rupees Fifty Thousands.",
+            "Rupees Thirty Thousands.",
+            "Rupees Twenty Five Thousands."
+        ],
+        "a": 1,
+        "e": "Correct Answer: Rupees Fifty Thousands."
+    },
+    {
+        "q": "As on Date, Which of the following is not correct:",
+        "o": [
+            "Fresh Recruits to the Central Government are allowed to travel to their hometown along with their families on three occasions in a block of four years.",
+            "The LTC Blocks of four years in respect of Fresh Recruits are same as the regular blocks like 2010-13, 2014-17 etc.",
+            "Carryover of LTC to the next year is not allowed in case of Fresh Recruit.",
+            "A Fresh Recruit whose Home Town and Headquarters are same can not avail LTC to Home Town."
+        ],
+        "a": 1,
+        "e": "Correct Answer: The LTC Blocks of four years in respect of Fresh Recruits are same as the regular blocks like 2010-13, 2014-17 etc."
+    },
+    {
+        "q": "When mails cannot be conveyed by railways for periods exceeding ______ due to interruptions caused by breaches of accidents or any other cause, a rebate on a pro-rata basis is allowed to the Department of Posts from the total amount payable by the department to the Railways.",
+        "o": [
+            "5 consecutive days",
+            "7 consecutive days",
+            "10 consecutive days",
+            "14 consecutive days"
+        ],
+        "a": 1,
+        "e": "Correct Answer: 7 consecutive days"
+    },
+    {
+        "q": "The Central Government would lay before each House of Parliament a report on the implementation of the provisions of Right to Information Act in consonance with",
+        "o": [
+            "Section 4 of RTI Act",
+            "Section 25 of RTI Act",
+            "Section 13 of RTI Act",
+            "Section 9 of RTI Rules, 2012"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Section 25 of RTI Act"
+    }
+],
+  157: [
+    {
+        "q": "Under CS (MA) Rules, 1944, Who appoints a private medical practitioner as an AMA",
+        "o": [
+            "Ministry of Health and Family Welfare",
+            "Head of the Department",
+            "Medical Council",
+            "Health Minister of the State"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Head of the Department"
+    },
+    {
+        "q": "Money paid into a Treasury by a Postmaster shall be forwarded with the memorandum of remittance under departmental regulations and the Post Office Treasury Pass Book and shall be acknowledged by the signature of the Treasury Officer or of the Accountant and the Treasurer in case of sums under ______ in the column provided in the latter.",
+        "o": [
+            "Rs.500/-",
+            "Rs.1000/-",
+            "Rs.1500/-",
+            "Rs.2000/-"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Rs.500/-"
+    },
+    {
+        "q": "The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 is governed by the following landmark judgement",
+        "o": [
+            "Chandrakaladevi & Ors v/s Union of India and another",
+            "Vishaka and ors v/s State of Rajasthan",
+            "Indira Sawhney and ors v/s Union of India and ors",
+            "Gandiba Vs Union Of India"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Vishaka and ors v/s State of Rajasthan"
+    },
+    {
+        "q": "In complaints of Sexual Harassment at Workplace, the Internal Committee may before initiating an inquiry",
+        "o": [
+            "start suo-moto conciliation proceedings",
+            "at the request of the aggrieved woman take steps to settle the matter through conciliation",
+            "Make monetary settlement the basis of conciliation",
+            "All of the above"
+        ],
+        "a": 1,
+        "e": "Correct Answer: at the request of the aggrieved woman take steps to settle the matter through conciliation"
+    },
+    {
+        "q": "SDBS Scheme for Gramin Dak Sevaks is based on",
+        "o": [
+            "New Pension Scheme",
+            "NPS-Lite",
+            "Depository Account",
+            "PRAN"
+        ],
+        "a": 1,
+        "e": "Correct Answer: NPS-Lite"
+    },
+    {
+        "q": "Under Administrative Tribunals Act, 1985 a Tribunal established for two or more States is known as",
+        "o": [
+            "Common Administrative Tribunal",
+            "Joint Administrative Tribunal",
+            "Unified Administrative Tribunal",
+            "Roving Administrative Tribunal"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Joint Administrative Tribunal"
+    },
+    {
+        "q": "The bills for claims more than ______ shall be subjected to pre-audit by the Circle Account Officer as required under rules, even if the net amount payable after adjustment of advance dues, etc. is nil (irrespective of whether they are payable in cash or by book adjustment).",
+        "o": [
+            "two-year-old",
+            "three-year-old",
+            "four-year-old",
+            "five-year-old"
+        ],
+        "a": 0,
+        "e": "Correct Answer: two-year-old"
+    },
+    {
+        "q": "If a child fails in a particular class",
+        "o": [
+            "The reimbursement of Children Education Allowance will be done but reimbursement of Hostel subsidy will not be done.",
+            "The reimbursement of Children Education Allowance will not be done but reimbursement of Hostel subsidy will be done.",
+            "The reimbursement of Children Education Allowance as well as reimbursement of Hostel subsidy will be done.",
+            "Neither the reimbursement of Children Education Allowance nor the reimbursement of Hostel subsidy will be done."
+        ],
+        "a": 2,
+        "e": "Correct Answer: The reimbursement of Children Education Allowance as well as reimbursement of Hostel subsidy will be done."
+    },
+    {
+        "q": "In connection with the loss of Government Property above the value of ______ due to fire theft fraud shall be invariably reported to the Police for investigation as early as possible.",
+        "o": [
+            "Rupees Twenty five Thousand.",
+            "Rupees Fifty Thousand.",
+            "Rupees Seventy five Thousand.",
+            "Rupees One Lakh."
+        ],
+        "a": 1,
+        "e": "Correct Answer: Rupees Fifty Thousand."
+    },
+    {
+        "q": "When two government servants accuse each other",
+        "o": [
+            "joint proceeding is held",
+            "joint proceeding should be avoided",
+            "the Inquiring Authority can decide at his level",
+            "none of the above"
+        ],
+        "a": 1,
+        "e": "Correct Answer: joint proceeding should be avoided"
+    },
+    {
+        "q": "The Disciplinary Authority can",
+        "o": [
+            "revise its own order in revision",
+            "revise the orders of Subordinate Authorities in revision",
+            "cancel its own order in revision",
+            "appoint adhoc Disciplinary Authority in revision"
+        ],
+        "a": 1,
+        "e": "Correct Answer: revise the orders of Subordinate Authorities in revision"
+    },
+    {
+        "q": "The Central Chief Information Commissioner is appointed by the President on the recommendation of a Committee Chaired by",
+        "o": [
+            "The Prime Minister",
+            "Chief Justice of India",
+            "Leader of opposition in the Rajya Sabha",
+            "Speaker of the Lok Sabha"
+        ],
+        "a": 0,
+        "e": "Correct Answer: The Prime Minister"
+    },
+    {
+        "q": "Retired Group 'A' officers are required to furnish Half-Yearly a declaration in the prescribed form about acceptance /non-acceptance of commercial employment and any employment under any Government outside India within ______ from the date of their retirement.",
+        "o": [
+            "One year",
+            "Two years",
+            "Three years",
+            "None of the above."
+        ],
+        "a": 0,
+        "e": "Correct Answer: One year"
+    },
+    {
+        "q": "______ is the Tcode for carrying out the cash drawing and remittance transactions",
+        "o": [
+            "zbl3n",
+            "fbl5n",
+            "zffv50",
+            "zfi_cash transfer"
+        ],
+        "a": 2,
+        "e": "Correct Answer: zffv50"
+    },
+    {
+        "q": "Submission of representation on service matters directly to other authorities by passing the prescribed channel of communication attracts provisions of",
+        "o": [
+            "Rule 3(1) (i) of CCS(Conduct) Rules",
+            "Rule 3(1) (ii) of CCS(Conduct) Rules",
+            "Rule 3(1) (iii) of CCS(Conduct) Rules",
+            "Rule 3(1) (viii) of CCS(Conduct) Rules"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Rule 3(1) (iii) of CCS(Conduct) Rules"
+    },
+    {
+        "q": "Choose the most appropriate option: An officer who has only half a day's casual leave to his credit should be permitted to combine half a day's casual leave with regular leave if his absence on the next working day was due to",
+        "o": [
+            "Sickness only.",
+            "Other compelling grounds only.",
+            "Sickness or other compelling grounds.",
+            "None of the above."
+        ],
+        "a": 2,
+        "e": "Correct Answer: Sickness or other compelling grounds."
+    },
+    {
+        "q": "Old claims, the connected records of which have been destroyed in the Circle Accounts Office and which cannot, therefore, be verified by Circle Accounts Office may be paid only if the payment is sanctioned by the Government: Provided that the Departments of the Central Government may sanction adhoc payments in respect of Arrears of pay if the pay fixation has been verified by the Audit Officer/ Accounts Officer concerned and the arrear claim does not exceed",
+        "o": [
+            "Rs.1000/-",
+            "Rs.2000/-",
+            "Rs.3000/-",
+            "Rs.5000/-"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Rs.1000/-"
+    },
+    {
+        "q": "President's power of review is defined under",
+        "o": [
+            "Rule 29 of CCS(CCA) Rules",
+            "Rule 11 of CCS(CCA) Rules",
+            "Rule 14 of CCS(CCA) Rules",
+            "Rule 29-A of CCS(CCA) Rules"
+        ],
+        "a": 3,
+        "e": "Correct Answer: Rule 29-A of CCS(CCA) Rules"
+    },
+    {
+        "q": "In important Disciplinary Cases, Department may request ______ to appoint Commissioner of Departmental Inquiry as IO",
+        "o": [
+            "Minister in Charge",
+            "UPSC",
+            "DOP&T",
+            "CVC"
+        ],
+        "a": 3,
+        "e": "Correct Answer: CVC"
+    },
+    {
+        "q": "The applicability of following Rule has been relaxed for Raising of funds by Government Servant on the occasion of Flagday-",
+        "o": [
+            "Rule 4 of CCS(Conduct) Rules",
+            "Rule 12 of CCS(Conduct) Rules",
+            "Rule 7 of CCS(Conduct) Rules",
+            "Rule 13 of CCS(Conduct) Rules"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Rule 12 of CCS(Conduct) Rules"
+    },
+    {
+        "q": "For avoiding loss by the default of Public Accountants",
+        "o": [
+            "every Public Accountant shall sign an indemnity bond",
+            "shall give security for due discharge of the trusts of his office",
+            "shall open an escrow account",
+            "none of the above"
+        ],
+        "a": 1,
+        "e": "Correct Answer: shall give security for due discharge of the trusts of his office"
+    },
+    {
+        "q": "What is the interest rate per annum (compounded quarterly) for Savings Fund in CGEGIS for the quarter October 2021 to December 2021?",
+        "o": [
+            "7.0%",
+            "7.3%",
+            "7.2%",
+            "7.1%"
+        ],
+        "a": 3,
+        "e": "Correct Answer: 7.1%"
+    },
+    {
+        "q": "In respect of person found absconding, interest to his GPF is to be allowed up to ______ from the date of report from the police that the employee has not been traced.",
+        "o": [
+            "One Month",
+            "Three Months",
+            "Six Months",
+            "Twelve Months"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Six Months"
+    },
+    {
+        "q": "Presently the upper limit of advance from GPF for the permitted purposes is",
+        "o": [
+            "12 months of pay or three-fourth of the amount at credit which ever is less.",
+            "18 months of pay or three-fourth of the amount at credit which ever is less.",
+            "6 months of pay or Half of the amount at credit which ever is less.",
+            "None of the above."
+        ],
+        "a": 0,
+        "e": "Correct Answer: 12 months of pay or three-fourth of the amount at credit which ever is less."
+    },
+    {
+        "q": "In respect of LTC the home town once declared and accepted by the controlling officer shall be treated as final and in exceptional circumstances a change in such declaration may be authorized provided that such change shall not be made more than ______ during the service of a Government Servant.",
+        "o": [
+            "twice",
+            "once",
+            "thrice",
+            "Four times"
+        ],
+        "a": 1,
+        "e": "Correct Answer: once"
+    }
+],
+  158: [
+    {
+        "q": "Use of Postage stamps perforated with initials or other identifying marks traced with minute holes",
+        "o": [
+            "will not be recognised in payment of postage",
+            "no prohibition against the use",
+            "Will be recognized only for payment of postage of unregistered articles",
+            "Will be recognized only for payment of postage of registered articles"
+        ],
+        "a": 1,
+        "e": "Correct Answer: no prohibition against the use"
+    },
+    {
+        "q": "An application for review before CAT shall not be entertained unless",
+        "o": [
+            "it is filed within thirty days from the date of receipt of copy of the order sought to be reviewed",
+            "It shall ordinarily be heard by the same Bench which has passed the order, unless the Chairman for reasons to be recorded in writing directs it to another Bench",
+            "unless otherwise ordered by the Bench concerned, it shall be disposed of by circulation",
+            "All of the above"
+        ],
+        "a": 0,
+        "e": "Correct Answer: it is filed within thirty days from the date of receipt of copy of the order sought to be reviewed"
+    },
+    {
+        "q": "A Ministry or Department at its discretion may directly execute repair works estimated to cost up to ______ after following due procedure.",
+        "o": [
+            "Rupees Twenty Lakhs.",
+            "Rupees Fifty Lakhs.",
+            "Rupees Thirty Lakhs.",
+            "Rupees Twenty Five Lakhs."
+        ],
+        "a": 2,
+        "e": "Correct Answer: Rupees Thirty Lakhs."
+    },
+    {
+        "q": "No alteration in the date of birth of a Government servant should be made except with the sanction of the Ministry/Department concerned of the Central Government, under which the Government servant is serving provided a request in this regard is made within ______ of his entry into Government service.",
+        "o": [
+            "two years",
+            "three years",
+            "four years",
+            "five years"
+        ],
+        "a": 3,
+        "e": "Correct Answer: five years"
+    },
+    {
+        "q": "Which of the following is equivalent to the SPM's monthly report to get monthly transaction totals under all heads in a month for a profit centre?",
+        "o": [
+            "ZFI_CASHBAL",
+            "ZFI_Cashtransfer",
+            "ZFDAILY",
+            "None of the above"
+        ],
+        "a": 0,
+        "e": "Correct Answer: ZFI_CASHBAL"
+    },
+    {
+        "q": "Unless the Government by general or special orders otherwise, a pension remaining undrawn for more than ______ shall cease to be payable by the Disbursing Officers.",
+        "o": [
+            "Two Months",
+            "Three Months",
+            "Six Months",
+            "One Year"
+        ],
+        "a": 3,
+        "e": "Correct Answer: One Year"
+    },
+    {
+        "q": "Under RTI ACT there shall be no obligation to give any citizen",
+        "o": [
+            "Information, the disclosure of which would cause a breach of privilege of Parliament or the State Legislature;",
+            "Information available to a person in his fiduciary relationship, unless the Competent Authority is satisfied that the larger public interest warrants the disclosure of such information;",
+            "Information received in confidence from foreign Government",
+            "All of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: All of the above"
+    },
+    {
+        "q": "Full pay and allowances are not admissible for the period of absence from duty in respect of an official who has been suspended in the following circumstances",
+        "o": [
+            "death of Government servant while under suspension",
+            "when minor penalty was awarded",
+            "in cases of arrest for debt, if it is ultimately proved that the liability arose from circumstances beyond the Government servant's control.",
+            "In Court cases, where the order is set aside solely on the ground of non-compliance with the requirement of Article 311 of Indian Constitution or when exoneration is not on merits."
+        ],
+        "a": 3,
+        "e": "Correct Answer: In Court cases, where the order is set aside solely on the ground of non-compliance with the requirement of Article 311 of Indian Constitution or when exoneration is not on merits."
+    },
+    {
+        "q": "Extraordinary Leave without Medical Certificate shall count as Qualifying Service if the Appointing Authority allows such Leave to count as Qualifying Service and such Leave is granted: (i) Due to his/her inability to join or rejoin duty on account of civil commotion. (ii) for persuing higher scientific and technical studies.",
+        "o": [
+            "Only (i) is correct.",
+            "Only (ii) is correct.",
+            "None is correct.",
+            "Both (i) and (ii) are correct."
+        ],
+        "a": 3,
+        "e": "Correct Answer: Both (i) and (ii) are correct."
+    },
+    {
+        "q": "A statement of cases of failure to draw pensions shall be prepared by the Head Postmasters in respect of the pension payment orders issued by the Postal Accounts Offices and shall be forwarded to the Director / Deputy Director of Accounts, (Postal) concerned.",
+        "o": [
+            "Bi-Monthly",
+            "quarterly",
+            "six monthly",
+            "Yearly"
+        ],
+        "a": 2,
+        "e": "Correct Answer: six monthly"
+    },
+    {
+        "q": "\"Public Authority\" as defined in RTI Act 2005 means any authority or body or institution of self- Government established or constituted",
+        "o": [
+            "by or under the Constitution",
+            "by any other law made by Parliament",
+            "by any other law made by State Legislature",
+            "All of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: All of the above"
+    },
+    {
+        "q": "Cash memoranda will not be regarded as sub vouchers in Audit unless they contain an acknowledgement of the receipt of money from the person named therein with stamps affixed when the amount exceeds ______ or, in cases where this is not practicable, they are stamped 'paid' and initialled by the Drawing and Disbursing Officer.",
+        "o": [
+            "Rs. 2000/-",
+            "Rs. 3000/-",
+            "Rs. 4000/-",
+            "Rs. 5000/-"
+        ],
+        "a": 3,
+        "e": "Correct Answer: Rs. 5000/-"
+    },
+    {
+        "q": "Which of the following options is incorrect",
+        "o": [
+            "oral instructions should not as far as possible be issued by Senior Officers to their Subordinates",
+            "if oral instructions are issued they should be confirmed in writing immediately thereafter",
+            "under no circumstance a member of the personal staff of a Minister communicate an oral order on behalf of Minister",
+            "receipt of communication from junior officers seeking confirmation of oral instructions should be acknowledged"
+        ],
+        "a": 2,
+        "e": "Correct Answer: under no circumstance a member of the personal staff of a Minister communicate an oral order on behalf of Minister"
+    },
+    {
+        "q": "The Children Education Allowance shall not be admissible to a Government Servant during the period",
+        "o": [
+            "under suspension",
+            "on Extraordinary Leave",
+            "treated as 'Dies non'",
+            "none of the above"
+        ],
+        "a": 2,
+        "e": "Correct Answer: treated as 'Dies non'"
+    },
+    {
+        "q": "Administrative Tribunal Act does not apply to",
+        "o": [
+            "any member of the Armed Forces of the Union",
+            "any secretarial staff of any State Legislature",
+            "any officer of the High Court",
+            "all of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: all of the above"
+    },
+    {
+        "q": "In connection with Government Guarantees as per GFR 2017, Rule-279(4) the Government may guarantee no more than ______ of the project loan, depending on the conditions imposed by the lender where the circumstances are not exceptional.",
+        "o": [
+            "50%",
+            "60%",
+            "75%",
+            "80%"
+        ],
+        "a": 3,
+        "e": "Correct Answer: 80%"
+    },
+    {
+        "q": "Hostel Subsidy is admissible in respect of children studying from ______ to 12th standard.",
+        "o": [
+            "Two Classes before Class One.",
+            "Class One.",
+            "Class Three.",
+            "Class Five."
+        ],
+        "a": 0,
+        "e": "Correct Answer: Two Classes before Class One."
+    },
+    {
+        "q": "Receipts for all sums (Net amount payable) exceeding ______ must be stamped under Section 3, read with item 53 of Schedule 1 of the Indian Stamp Act (Act II of 1899) unless they are exempt from stamp duty.",
+        "o": [
+            "Rs. 4000/-",
+            "Rs. 5000/-",
+            "Rs. 6000/-",
+            "Rs. 7000/-"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Rs. 5000/-"
+    },
+    {
+        "q": "Which of the following statement is not correct in connection with GFR, 2017; Rule-21 - Standards of Financial Propriety:",
+        "o": [
+            "Every officer is expected to exercise the same vigilance in respect of expenditure incurred from public moneys as a person of ordinary prudence would exercise in respect of expenditure of his own money.",
+            "The expenditure may be prima facie more than the occasion demands.",
+            "No authority should exercise its powers of sanctioning expenditure to pass an order which will be directly or indirectly to its own advantage.",
+            "Normally expenditure from public moneys should not be incurred for the benefit of a particular person or a section of the people."
+        ],
+        "a": 1,
+        "e": "Correct Answer: The expenditure may be prima facie more than the occasion demands."
+    },
+    {
+        "q": "Any sum recoverable as an arrear, of land revenue of any Public Officer other than a Collector or by Local Authority is to be proceeded under",
+        "o": [
+            "Revenue Recovery Act, 1890",
+            "PAD Act",
+            "Contracts Act",
+            "Negotiable Instruments Act"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Revenue Recovery Act, 1890"
+    },
+    {
+        "q": "When a Government servant is paid for any period of joining time, the period should be shown separately in the absentee statement and if the period exceeds ______ exclusive of Sundays, the additional information, i.e. particulars of journey, total number of days spent in transit, etc., required for audit purposes may also be given in the \"Remarks column\" in the absentee statement.",
+        "o": [
+            "5 days",
+            "7 days",
+            "10 days",
+            "12 days"
+        ],
+        "a": 1,
+        "e": "Correct Answer: 7 days"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, there should be ______ between the closing of the first spell of illness from one disease and recurrence of the same disease for a second time to justify a fresh claim in respect of Medical Attendance.",
+        "o": [
+            "A reasonable gap",
+            "15 days gap",
+            "20 days gap",
+            "30 days gap"
+        ],
+        "a": 0,
+        "e": "Correct Answer: A reasonable gap"
+    },
+    {
+        "q": "A government servant under suspension",
+        "o": [
+            "will be required to vacate licence fee free accommodation, only if it is especially attached to any particular post",
+            "licence fee free concession will cease from the date of suspension",
+            "None of the above",
+            "both a & b"
+        ],
+        "a": 3,
+        "e": "Correct Answer: both a & b"
+    },
+    {
+        "q": "No fees shall be charged either as an application fee or for providing information from",
+        "o": [
+            "any person who comes under Scheduled Tribe",
+            "any person who comes under Economically Weaker Section",
+            "any person who is below poverty line",
+            "a Padmashri Awardee"
+        ],
+        "a": 2,
+        "e": "Correct Answer: any person who is below poverty line"
+    },
+    {
+        "q": "Every Head of Department shall have a list prepared every three months, that is, on the 1st January, 1st April, 1st July and 1st October each year, of all the Govt. Servants who are due to retire within the next ______",
+        "o": [
+            "Eighteen to Twenty four months of that date.",
+            "Twelve to Fifteen months of that date.",
+            "Twenty Four to Thirty months of that date.",
+            "Twenty Four to Thirty six months of that date."
+        ],
+        "a": 1,
+        "e": "Correct Answer: Twelve to Fifteen months of that date."
+    }
+],
+  159: [
+    {
+        "q": "The maximum value of Revenue stamps to be kept in stock will be fixed by ______ for Group 'B' Postmasters.",
+        "o": [
+            "Divisional Head",
+            "DPS",
+            "CPMG",
+            "PMG"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Divisional Head"
+    },
+    {
+        "q": "Grant of leave to a Government Servant under suspension is",
+        "o": [
+            "permitted",
+            "prohibited",
+            "permitted upto 3 months",
+            "permitted, without leaving HQs"
+        ],
+        "a": 1,
+        "e": "Correct Answer: prohibited"
+    },
+    {
+        "q": "When application is made against the Inquiry Officer on ground of bias",
+        "o": [
+            "Inquiry should be stayed",
+            "inquiry to continue",
+            "inquiry to continue till decision on bias is taken",
+            "ex-parte hearing to be held"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Inquiry should be stayed"
+    },
+    {
+        "q": "Under provisions of CCS (CCA) Rules, no appeal shall lie against",
+        "o": [
+            "an order of suspension made or deemed to have been made under Rule 10;",
+            "any order passed by an Inquiring Authority in the course of an inquiry under Rule-14",
+            "an order imposing any of the penalties specified in Rule 11, made by the Disciplinary Authority",
+            "an order reducing or withholding the pension"
+        ],
+        "a": 1,
+        "e": "Correct Answer: any order passed by an Inquiring Authority in the course of an inquiry under Rule-14"
+    },
+    {
+        "q": "In case of delay in payment of gratuities beyond ______ of the due date on account of administrative lapse or for reasons beyond the control of the Pensioner concerned, interest shall be paid to the pensioner.",
+        "o": [
+            "One Month",
+            "Two Months",
+            "Three Months",
+            "None of the above"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Three Months"
+    },
+    {
+        "q": "In case of Posting of Registered Newspaper without prepayment of postage the office of posting will prepare bills in form MS-98 showing the total amount of postage payable for each date as shown in the invoices and present the bill to the newspaper.",
+        "o": [
+            "weekly",
+            "fortnightly",
+            "monthly",
+            "every two months"
+        ],
+        "a": 2,
+        "e": "Correct Answer: monthly"
+    },
+    {
+        "q": "Quarterly SMS Alert Charges for IPPB Account Holders is",
+        "o": [
+            "Rs. 25/- + GST",
+            "Rs. 20/- + GST",
+            "Rs. 10/- + GST",
+            "Rs. 5/- + GST"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Rs. 10/- + GST"
+    },
+    {
+        "q": "For Retired Government Servants to appear as Defence Assistants, the ceiling in a year, including Rule-10 of GDS(Conduct & Engagement) Rules and Rule 14 of CCS(CCA) is",
+        "o": [
+            "five cases",
+            "three cases",
+            "eight cases",
+            "ten case"
+        ],
+        "a": 0,
+        "e": "Correct Answer: five cases"
+    },
+    {
+        "q": "A Government Servant arrested for any reason",
+        "o": [
+            "should intimate the facts and circumstances to his official superior promptly, unless he is released on bail subsequently",
+            "should intimate the facts and circumstances to his official superior promptly, even if he is released on bail subsequently",
+            "failure to inform his superior will render him liable to disciplinary action on this ground alone",
+            "both 'b' and 'c'"
+        ],
+        "a": 3,
+        "e": "Correct Answer: both 'b' and 'c'"
+    },
+    {
+        "q": "An applicant has to pay a fixed fee at the time of filing an application in the Central Administrative Tribunal for an amount of",
+        "o": [
+            "Rs. 50",
+            "Rs. 500",
+            "Rs. 1000",
+            "Rs. 200"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Rs. 50"
+    },
+    {
+        "q": "Currently the monetary limits for conducting investigations in the loss / fraud cases by Asst. Director/APMG of Circle/ Regional Office is",
+        "o": [
+            "Up to 1 lakh",
+            "greater than 1 Lakh and Up to 2 Lakhs",
+            "greater than 2 Lakhs and Up to 5 Lakhs",
+            "greater than 5 Lakhs"
+        ],
+        "a": 2,
+        "e": "Correct Answer: greater than 2 Lakhs and Up to 5 Lakhs"
+    },
+    {
+        "q": "PRAN is allotted to its subscriber by :",
+        "o": [
+            "Pension Fund Regulatory and Development Authority",
+            "Central Recordkeeping Agency",
+            "Pay and Accounts Office",
+            "Head of Department"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Central Recordkeeping Agency"
+    },
+    {
+        "q": "The Revenue Recovery Act of 1890",
+        "o": [
+            "Extends to the whole of India except Jammu & Kashmir",
+            "Is only applicable to the Union Territory of Jammu & Kashmir",
+            "Is only applicable to Union Territory of Ladakh",
+            "The whole of India"
+        ],
+        "a": 3,
+        "e": "Correct Answer: The whole of India"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, What is the period of stay in a hospital termed as average stay for \"In patient\" treatment?",
+        "o": [
+            "Two weeks",
+            "Three weeks",
+            "Four weeks",
+            "Six weeks"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Three weeks"
+    },
+    {
+        "q": "An order of suspension under Rule 10 of CCS(CCA) Rules shall",
+        "o": [
+            "not be valid after 90 days unless it is extended after review before the expiry of 90 days.",
+            "extension of suspension shall not be for a period exceeding 180 days at a time",
+            "both 'a' & 'b'",
+            "None of the above"
+        ],
+        "a": 2,
+        "e": "Correct Answer: both 'a' & 'b'"
+    },
+    {
+        "q": "The Swachhta Pledge commits devotion of the following to cleanliness",
+        "o": [
+            "100 hours per year",
+            "50 hours per year",
+            "1 hour per week",
+            "None of the above"
+        ],
+        "a": 0,
+        "e": "Correct Answer: 100 hours per year"
+    },
+    {
+        "q": "The provisions of Prevention of Corruption Act, shall be",
+        "o": [
+            "in addition to any other Law for the time being in force",
+            "not in derogation of any other Law for the time being in force",
+            "both 'a' & 'b'",
+            "in derogation of any other Law for the time being in force"
+        ],
+        "a": 2,
+        "e": "Correct Answer: both 'a' & 'b'"
+    },
+    {
+        "q": "The services of a Temporary Government Servant shall be liable to termination at any time by a notice in writing given either by the Government Servant to the Appointing Authority or by the Appointing Authority to the Government Servant under the provisions of",
+        "o": [
+            "Rule 2(d) of CCS (Temporary Service) Rules",
+            "Rule 10 of CCS(Temporary Service) Rules",
+            "Rule 5(1) (a) of CCS (Temporary Service) Rules",
+            "Rule 5(1) (b) of CCS(Temporary Service) Rules"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Rule 5(1) (a) of CCS (Temporary Service) Rules"
+    },
+    {
+        "q": "As per the current existing provisions in Rule 32 of the CCS (Pension) rules the Verification of qualifying service and communicating the period of qualifying service to the respective employee in Form 24, to be done",
+        "o": [
+            "after completion of 25 years of service and again 3 years before the date of retirement of an employee.",
+            "after completion of 18 years of service and again 3 years before the date of retirement of an employee.",
+            "after completion of 25 years of service and again 6 years before the date of retirement of an employee.",
+            "after completion of 18 years of service and again 5 years before the date of retirement of an employee."
+        ],
+        "a": 3,
+        "e": "Correct Answer: after completion of 18 years of service and again 5 years before the date of retirement of an employee."
+    },
+    {
+        "q": "'Strike' means refusal to work for stoppage for slowing down of work by a group of employees acting in combination and includes",
+        "o": [
+            "mass absention from work without permission",
+            "refusal to work overtime where it is necessary in public interest",
+            "go slow",
+            "all of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: all of the above"
+    },
+    {
+        "q": "Where the information sought for concerns the life or liberty of a person, CPIO should supply the same within",
+        "o": [
+            "thirty days of the receipt of the request",
+            "forty eight hours of the receipt of the request",
+            "forty five days of the receipt of the request",
+            "five days of the receipt of the request"
+        ],
+        "a": 1,
+        "e": "Correct Answer: forty eight hours of the receipt of the request"
+    },
+    {
+        "q": "A Government Servant placed under suspension while officiating in a higher post",
+        "o": [
+            "can be reverted to the lower post otherwise than as punishment even during suspension",
+            "cannot be reverted to the lower post otherwise than as punishment during suspension",
+            "neither of the above",
+            "can be reverted to the lower post for a period not exceeding eleven months"
+        ],
+        "a": 0,
+        "e": "Correct Answer: can be reverted to the lower post otherwise than as punishment even during suspension"
+    },
+    {
+        "q": "A government servant under suspension",
+        "o": [
+            "is eligible to avail of LTC with his family",
+            "is not eligible but his family can avail independently of him",
+            "no one in the family is eligible",
+            "he is debarred for five years"
+        ],
+        "a": 1,
+        "e": "Correct Answer: is not eligible but his family can avail independently of him"
+    },
+    {
+        "q": "Hostel subsidy is applicable only in respect of the child studying in residential educational institution located at least ______ from the residence of the Government servant.",
+        "o": [
+            "20 Kms",
+            "25 Kms",
+            "30 Kms",
+            "50 Kms"
+        ],
+        "a": 3,
+        "e": "Correct Answer: 50 Kms"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, What is the limit for grant of medical advance in respect of outpatient treatment?",
+        "o": [
+            "Pay last drawn by the Government servant",
+            "Up to Rs. 10,000",
+            "75% of estimated cost of treatment",
+            "90% of estimated expenditure if the cost of treatment is more than Rs.10,000"
+        ],
+        "a": 3,
+        "e": "Correct Answer: 90% of estimated expenditure if the cost of treatment is more than Rs.10,000"
+    }
+],
+  160: [
+    {
+        "q": "\"Budget\" showing the estimated receipts and expenditure of the Central Govt. in respect of a financial year, is laid before both the Houses of the Parliament, before commencement of that year as per the provisions of",
+        "o": [
+            "Article 311 of the Constitution",
+            "Article 356 of the Constitution",
+            "Article 112 (1) of the Constitution",
+            "Article 11(2) of the Constitution"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Article 112 (1) of the Constitution"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, State which of the following sentences is correct for parents of a Government servant to claim medical expenses?",
+        "o": [
+            "They must reside with the Government servant in the headquarters",
+            "They can reside separately other than in the Government servant's headquarters",
+            "They can reside either with the Government servant or with the family members at another station",
+            "They can reside anywhere in India"
+        ],
+        "a": 2,
+        "e": "Correct Answer: They can reside either with the Government servant or with the family members at another station"
+    },
+    {
+        "q": "Minimum/Maximum limit respectively for IPPB RuPay Virtual Debit Card transactions is",
+        "o": [
+            "Rs. 5/- Rs. 10,000/-",
+            "Rs. 1/- Rs. 50,000/-",
+            "Rs. 10/- Rs. 20,000/-",
+            "Rs. 20/- Rs. 25,000/-"
+        ],
+        "a": 1,
+        "e": "Correct Answer: Rs. 1/- Rs. 50,000/-"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, When is the declaration regarding the income and the residence of parents to be furnished by the Government servant to the Controlling Officer?",
+        "o": [
+            "Beginning of every calendar year",
+            "Once in six months",
+            "Every financial year",
+            "At the submission of each claim"
+        ],
+        "a": 0,
+        "e": "Correct Answer: Beginning of every calendar year"
+    },
+    {
+        "q": "The validity of panel of retired officers for conducting Departmental enquiry will be valid for",
+        "o": [
+            "a period of one year",
+            "a period of three years",
+            "a period of two years",
+            "a period of 18 months"
+        ],
+        "a": 1,
+        "e": "Correct Answer: a period of three years"
+    },
+    {
+        "q": "On receipt of the Postal Stationery from the Postal Stores Depot, the Head Postmaster or any other person authorized in this behalf shall check and verify the articles received, with reference to the invoice/e-invoice, accompanying the package without any delay and return one copy of invoice, duly acknowledged to the officer-incharge of the Stores Depot, immediately after verifying the stamp and stationery and not later than ______ of the receipt of the supply.",
+        "o": [
+            "2 Days",
+            "3 Days",
+            "4 Days",
+            "5 Days"
+        ],
+        "a": 1,
+        "e": "Correct Answer: 3 Days"
+    },
+    {
+        "q": "All registered applications / petitions posted before the appropriate Bench of CAT will be notified in",
+        "o": [
+            "daily admission list",
+            "daily case list",
+            "daily cause list",
+            "daily order list"
+        ],
+        "a": 2,
+        "e": "Correct Answer: daily cause list"
+    },
+    {
+        "q": "Notices to be issued by the Central Administrative Tribunal may be served by any of the following modes",
+        "o": [
+            "service by the party itself",
+            "by hand delivery(dasti), through process server",
+            "by registered post 'with acknowledgement due'",
+            "All of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: All of the above"
+    },
+    {
+        "q": "The basic principles to be adopted in connection with employment of honorary workers in civil posts are",
+        "o": [
+            "it should be an exceptional procedure to be resorted to only in abnormal circumstances",
+            "it should be offered only to persons who have a reputation for integrity",
+            "they will be governed by the provisions of Government Servants' Conduct Rules",
+            "All of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: All of the above"
+    },
+    {
+        "q": "Bunching of stages in the revised pay structures under CCS Revised Pay Rules 2016 and GOI Decisions there of: Pay drawn by two Government servants in a given Pay Band and Grade Pay or scale where the higher pay is at least ______ more than the lower pay shall constitute two stages.",
+        "o": [
+            "2.57%",
+            "3.2%",
+            "3.5%",
+            "3%"
+        ],
+        "a": 3,
+        "e": "Correct Answer: 3%"
+    },
+    {
+        "q": "Maximum Time limit for sanction and payment of GPF advance in case of emergencies like illness etc. is",
+        "o": [
+            "Three Days",
+            "Five Days",
+            "Seven Days",
+            "Fourteen days"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Seven Days"
+    },
+    {
+        "q": "As per GFR 2017, Rule 139 under Procedure for execution of works, Open Tenders will be called for works costing",
+        "o": [
+            "Rupees One Lakh to Rupees Twenty Lakhs",
+            "Rupees Ten Lakhs to Rupees Fifty Lakhs",
+            "Rupees Five Lakhs to Rupees Thirty Lakhs",
+            "Rupees Ten Lakhs to Rupees Twenty Five Lakhs"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Rupees Five Lakhs to Rupees Thirty Lakhs"
+    },
+    {
+        "q": "A day cannot be marked as 'dies-non' under the following circumstances",
+        "o": [
+            "official remaining absent on duty without prior information",
+            "official coming late to the office",
+            "when on duty, official leaving office without proper permission",
+            "official remaining in office but refusing to perform assigned duty"
+        ],
+        "a": 1,
+        "e": "Correct Answer: official coming late to the office"
+    },
+    {
+        "q": "Women GDS will be provided Maternity Grant equivalent to",
+        "o": [
+            "three months TRCA",
+            "three months TRCA with DA",
+            "forty five days TRCA",
+            "six months TRCA with DA"
+        ],
+        "a": 1,
+        "e": "Correct Answer: three months TRCA with DA"
+    },
+    {
+        "q": "The maximum penalty which can be given under RTI Act is",
+        "o": [
+            "not exceeding Rs. 25,000/-",
+            "Rs. 250/- each day till application is received or information is furnished",
+            "both 'a' & 'b'",
+            "none of the above"
+        ],
+        "a": 2,
+        "e": "Correct Answer: both 'a' & 'b'"
+    },
+    {
+        "q": "Once a notice is issued to a temporary employee under Rule 5(1) of CCS(TS) Rules, he",
+        "o": [
+            "has to sign a charge report on the expiry of notice period",
+            "has to get himself formally relieved on the due date",
+            "the question of formally relieving him on the due date does not arise",
+            "he stands relieved with immediate effect"
+        ],
+        "a": 2,
+        "e": "Correct Answer: the question of formally relieving him on the due date does not arise"
+    },
+    {
+        "q": "An employee who joins Government service on or after ______ of any year shall be enrolled as a member of the CGEGIS scheme on the next anniversary of the scheme?",
+        "o": [
+            "15th April",
+            "1st January",
+            "2nd July",
+            "2nd January"
+        ],
+        "a": 3,
+        "e": "Correct Answer: 2nd January"
+    },
+    {
+        "q": "Select the incorrect option: The Leave Travel Concession shall be admissible during any period of",
+        "o": [
+            "Casual Leave",
+            "Child Care Leave",
+            "Maternity Leave",
+            "Weekend Holidays without any leave"
+        ],
+        "a": 3,
+        "e": "Correct Answer: Weekend Holidays without any leave"
+    },
+    {
+        "q": "DOP&T has launched a web Portal namely RTI Online with the following URL",
+        "o": [
+            "www.rtionline.gov.in",
+            "www.rtionline.nic.in",
+            "www.rti.gov.in",
+            "www.rti.indipost.gov.in"
+        ],
+        "a": 0,
+        "e": "Correct Answer: www.rtionline.gov.in"
+    },
+    {
+        "q": "Post Offices, when they receive supplies of Commemorative stamps from Nasik Security Press ______ of the invoice will be returned to Nasik Press immediately on opening and verifying the supplies.",
+        "o": [
+            "One acknowledged copy",
+            "Two acknowledged copies",
+            "Three acknowledged copies",
+            "Four acknowledged copies"
+        ],
+        "a": 0,
+        "e": "Correct Answer: One acknowledged copy"
+    },
+    {
+        "q": "As on Date, Which of the following is not correct:",
+        "o": [
+            "No Daily Allowance shall be admissible for Travel on LTC",
+            "Any Incidental charges during travel on LTC is not admissible",
+            "Reimbursement of premium tatkal charges shall not be admissible for the purpose of LTC",
+            "Flexi Fare (dynamic fare) applicable in Rajdhani/Shatabdi/Duronto trains shall be admissible for the journeys performed by these trains on LTC"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Reimbursement of premium tatkal charges shall not be admissible for the purpose of LTC"
+    },
+    {
+        "q": "The Local Committee to look into the cases of Sexual Harassment of Women at Workplace shall consist of",
+        "o": [
+            "a Chairperson to be nominated from amongst the eminent women in the field of social work and committed to the cause of women",
+            "one Member to be nominated from amongst the women working in block, taluka or tehsil or ward or municipality in the district",
+            "two Members, of whom at least one shall be a woman, to be nominated from amongst such non-governmental organisations or associations committed to the cause of women or a person familiar with the issues relating to sexual harassment",
+            "All of the above"
+        ],
+        "a": 3,
+        "e": "Correct Answer: All of the above"
+    },
+    {
+        "q": "Disciplinary Proceedings against an employee who has been dismissed or removed from service in another disciplinary case will",
+        "o": [
+            "automatically be over",
+            "stand suspended",
+            "can be revived, if and when the official is reinstated in service on appeal",
+            "both 'b' & 'c'"
+        ],
+        "a": 3,
+        "e": "Correct Answer: both 'b' & 'c'"
+    },
+    {
+        "q": "Under CS (MA) Rules, 1944, a claimant can appeal to the Central Government within 45 days from ______ if his claim for medical attendance is rejected by a Controlling Officer.",
+        "o": [
+            "Date of claim",
+            "Date of rejection",
+            "Date of receipt of the rejection order",
+            "Date of treatment"
+        ],
+        "a": 2,
+        "e": "Correct Answer: Date of receipt of the rejection order"
+    },
+    {
+        "q": "Records of Anonymous and pseudonymous complaint on which no action is taken should be destroyed",
+        "o": [
+            "At the end of the quarter",
+            "At the end of the year",
+            "Once a decision is taken on file not to take any action",
+            "At the end of six months"
+        ],
+        "a": 1,
+        "e": "Correct Answer: At the end of the year"
+    }
+],
 };
 
 export interface RawQuestion {
@@ -4948,6 +6605,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-29', 'LDCE IP 2025 - Paper I PYQ', 'PYQ', [22, 23, 24, 25, 26]),
   createTopic('p3-20', 'LDCE IP 2025 - Paper III PYQ', 'PYQ', [27, 28, 29, 30, 31, 32]),
   createTopic('psgb-p1-pyq', 'LDCE PS Gr. B 2023 — Paper I PYQ', 'PYQ', [150, 151, 152, 153, 154]),
+  createTopic('psgb-p2-pyq', 'LDCE PS Gr. B 2023 — Paper II PYQ', 'PYQ', [155, 156, 157, 158, 159, 160]),
   createTopic('p3-22', 'Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023', 'Paper III', [66]),
   createTopic('p3-30', 'FR & SR - Foreign Service, Deputation & Dismissal', 'Paper III', [74]),
   createTopic('p3-31', 'FR & SR - Leave, Joining Time & Allowances', 'Paper III', [125, 126, 127, 128, 75]),
