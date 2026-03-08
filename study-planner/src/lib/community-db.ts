@@ -1,7 +1,6 @@
 import dbConnect from './mongoose';
 import PostModel from '@/models/Post';
-import { getEnrichedUsers } from "./db";
-import { getMembershipTier, getTierDisplayName } from "./membership-utils";
+import { getMembershipTier } from "./membership-utils";
 import UserModel from '@/models/User';
 
 // Re-export interfaces for use in other files
