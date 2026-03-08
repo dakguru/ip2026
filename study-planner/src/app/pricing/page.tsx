@@ -271,9 +271,14 @@ export default function PricingPage() {
         const effectivePlan = effectivePlans[planKeyToUse];
         let basePrice = effectivePlan.price;
         if (isPsGroupB && currentMembership !== 'free') {
-            const curPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
-            const diff = effectivePlan.price - curPrice;
-            basePrice = diff > 0 ? diff : 0;
+            // Special Case: Gold to Diamond Upgrade is explicitly Rs. 1175/-
+            if (currentMembership === 'gold' && tabToUse === 'gold') {
+                basePrice = 1175;
+            } else {
+                const curPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
+                const diff = effectivePlan.price - curPrice;
+                basePrice = diff > 0 ? diff : 0;
+            }
         }
         const effectiveFinalPrice = basePrice - discountToUse;
 
