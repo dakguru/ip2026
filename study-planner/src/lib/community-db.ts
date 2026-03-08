@@ -1,5 +1,7 @@
 import dbConnect from './mongoose';
 import PostModel from '@/models/Post';
+import { getEnrichedUsers } from "./db";
+import { getMembershipTier, getTierDisplayName } from "./membership-utils";
 import UserModel from '@/models/User';
 
 // Re-export interfaces for use in other files
@@ -78,9 +80,11 @@ function getEnrichedRole(author: string, currentRole?: string, userMap?: Map<str
 
         // Clean up existing badge strings to avoid duplication if re-processing
         let baseRole = role;
-        baseRole = baseRole.replace(/\s*\((Gold|Silver)\s*Member\)/i, "").trim();
+        baseRole = baseRole.replace(/\s*\((Gold|Silver|Diamond|Platinum)\s*Member\)/i, "").trim();
         baseRole = baseRole.replace(/\s*\(Gold\)/i, "").trim();
         baseRole = baseRole.replace(/\s*\(Silver\)/i, "").trim();
+        baseRole = baseRole.replace(/\s*\(Diamond\)/i, "").trim();
+        baseRole = baseRole.replace(/\s*\(Platinum\)/i, "").trim();
 
         if (!baseRole) baseRole = "Aspirant";
 
@@ -90,14 +94,12 @@ function getEnrichedRole(author: string, currentRole?: string, userMap?: Map<str
         }
 
         // Assign badge based on DB membership level + Course Mode
-        const isPSGB = user.courseMode === 'PS_GR_B';
+        const tier = getMembershipTier(user.membershipLevel, user.courseMode);
 
-        if (user.membershipLevel === 'diamond' || (user.membershipLevel === 'gold' && isPSGB))
-            return `${baseRole} (Diamond Member)`;
-        if (user.membershipLevel === 'platinum' || (user.membershipLevel === 'silver' && isPSGB))
-            return `${baseRole} (Platinum Member)`;
-        if (user.membershipLevel === 'gold') return `${baseRole} (Gold Member)`;
-        if (user.membershipLevel === 'silver') return `${baseRole} (Silver Member)`;
+        if (tier === 'diamond') return `${baseRole} (Diamond Member)`;
+        if (tier === 'platinum') return `${baseRole} (Platinum Member)`;
+        if (tier === 'gold') return `${baseRole} (Gold Member)`;
+        if (tier === 'silver') return `${baseRole} (Silver Member)`;
 
         return baseRole; // Free user
     }

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Loader2, ArrowLeft, Crown, Calendar, CalendarClock, CreditCard, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dayjs from "dayjs";
+import { getMembershipTier } from "@/lib/membership-utils";
 import { useCourse } from "@/contexts/CourseContext";
 
 export default function MembershipPage() {
@@ -44,18 +45,12 @@ export default function MembershipPage() {
 
     if (!membershipData) return null;
 
-    let displayMemberLevel = membershipData.membershipLevel as string | undefined;
-    if (course === 'PS_GR_B' && membershipData.membershipLevel !== 'free') {
-        if (membershipData.membershipLevel === 'gold' && (membershipData.planId?.includes('diamond') || membershipData.planId?.includes('ps_gr_b'))) {
-            displayMemberLevel = 'diamond';
-        } else if ((membershipData.membershipLevel === 'silver' || membershipData.membershipLevel === 'gold') && membershipData.planId?.includes('platinum')) {
-            displayMemberLevel = 'platinum';
-        }
-    }
+    const displayMemberLevel = getMembershipTier(membershipData.membershipLevel, membershipData.courseMode);
 
-    const isFree = !membershipData.membershipLevel || membershipData.membershipLevel === 'free';
-    const isGold = membershipData.membershipLevel === 'gold' || displayMemberLevel === 'diamond';
-    const isSilver = membershipData.membershipLevel === 'silver' || displayMemberLevel === 'platinum';
+    const isFree = displayMemberLevel === 'free';
+    const isGold = displayMemberLevel === 'gold' || displayMemberLevel === 'diamond';
+    const isSilver = displayMemberLevel === 'silver' || displayMemberLevel === 'platinum';
+
 
     const formatDate = (dateString?: string) => {
         if (!dateString) return "N/A";

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
+import { getMembershipTier } from "@/lib/membership-utils";
 import { useCourse } from "@/contexts/CourseContext";
 import {
     DropdownMenu,
@@ -85,19 +86,8 @@ export function UserMenu() {
         );
     }
 
-    let displayMembership = session.membershipLevel as string | undefined;
-    const plan = (session?.planId || "").toLowerCase();
-    const planName = (session?.planName || "").toLowerCase();
+    const displayMembership = getMembershipTier(session?.membershipLevel, session?.courseMode);
 
-    if (session.membershipLevel && session.membershipLevel !== 'free') {
-        const isPSGB = session.courseMode === 'PS_GR_B' || plan.includes('ps_gr_b') || planName.includes('ps_gr_b');
-
-        if (displayMembership === 'diamond' || (session.membershipLevel === 'gold' && isPSGB)) {
-            displayMembership = 'diamond';
-        } else if (displayMembership === 'platinum' || (session.membershipLevel === 'silver' && isPSGB)) {
-            displayMembership = 'platinum';
-        }
-    }
 
     return (
         <DropdownMenu>

@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { format, formatDistanceToNow, isToday, isYesterday, startOfDay } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
+import { getMembershipTier } from "@/lib/membership-utils";
 
 interface Notification {
     _id: string;
@@ -174,29 +175,20 @@ function getTypeConfig(type: string) {
 }
 
 function getMembershipBadge(userContext?: Notification['userContext']): { label: string; color: string; bg: string; icon: any } {
-    if (!userContext) return { label: 'Free', color: 'text-zinc-500', bg: 'bg-zinc-100 dark:bg-zinc-800', icon: Zap };
+    const tier = getMembershipTier(userContext?.membershipLevel, userContext?.courseMode);
 
-    const level = userContext.membershipLevel?.toLowerCase();
-    const mode = userContext.courseMode;
-
-    // Diamond Badge (Direct or PS Group B Gold)
-    if (level === 'diamond' || (level === 'gold' && mode === 'PS_GR_B'))
+    if (tier === 'diamond')
         return { label: 'Diamond', color: 'text-fuchsia-600 dark:text-fuchsia-400', bg: 'bg-fuchsia-50 dark:bg-fuchsia-400/10', icon: Crown };
-
-    // Platinum Badge (Direct or PS Group B Silver)
-    if (level === 'platinum' || (level === 'silver' && mode === 'PS_GR_B'))
+    if (tier === 'platinum')
         return { label: 'Platinum', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-400/10', icon: Zap };
-
-    // Gold Badge
-    if (level === 'gold')
+    if (tier === 'gold')
         return { label: 'Gold', color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-50 dark:bg-amber-400/10', icon: Crown };
-
-    // Silver Badge
-    if (level === 'silver')
+    if (tier === 'silver')
         return { label: 'Silver', color: 'text-zinc-600 dark:text-zinc-300', bg: 'bg-zinc-100 dark:bg-zinc-500/10', icon: Shield };
 
     return { label: 'Free', color: 'text-zinc-500', bg: 'bg-zinc-100 dark:bg-zinc-800', icon: Smartphone };
 }
+
 
 const FILTER_TABS: { id: FilterType; label: string; icon: any; count?: (n: Notification[]) => number }[] = [
     { id: 'all', label: 'All', icon: Bell },

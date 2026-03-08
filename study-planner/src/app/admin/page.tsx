@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
+import { getMembershipTier } from "@/lib/membership-utils";
+import { useCourse } from "@/contexts/CourseContext";
 import { useRouter } from "next/navigation";
 import {
     Shield, Users, ArrowLeft, Loader2, Search, Download, FileText,
@@ -180,14 +182,15 @@ export default function AdminDashboard() {
     const stats = useMemo(() => {
         return {
             total: users.length,
-            gold: users.filter(u => (u.membershipLevel === 'gold') && u.courseMode !== 'PS_GR_B').length,
-            diamond: users.filter(u => u.membershipLevel === 'diamond' || (u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B')).length,
-            platinum: users.filter(u => u.membershipLevel === 'platinum' || (u.membershipLevel === 'silver' && u.courseMode === 'PS_GR_B')).length,
-            silver: users.filter(u => (u.membershipLevel === 'silver') && u.courseMode !== 'PS_GR_B').length,
-            free: users.filter(u => !u.membershipLevel || u.membershipLevel === 'free').length,
+            gold: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'gold').length,
+            diamond: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'diamond').length,
+            platinum: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'platinum').length,
+            silver: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'silver').length,
+            free: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'free').length,
             psGroupB: users.filter(u => u.courseMode === 'PS_GR_B').length,
             ldceIP: users.filter(u => u.courseMode === 'LDCE_IP').length,
         };
+
     }, [users]);
 
     // New Data Segments for Insights Panels
@@ -199,7 +202,8 @@ export default function AdminDashboard() {
     }, [users]);
 
     const goldMembers = useMemo(() => {
-        return users.filter(u => u.membershipLevel === 'gold' && u.courseMode !== 'PS_GR_B')
+        return users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'gold')
+
             .sort((a, b) => {
                 const aTime = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
                 const bTime = b.lastActiveAt ? new Date(b.lastActiveAt).getTime() : 0;
@@ -208,7 +212,8 @@ export default function AdminDashboard() {
     }, [users]);
 
     const diamondMembers = useMemo(() => {
-        return users.filter(u => u.membershipLevel === 'diamond' || (u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B'))
+        return users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'diamond')
+
             .sort((a, b) => {
                 const aTime = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
                 const bTime = b.lastActiveAt ? new Date(b.lastActiveAt).getTime() : 0;
@@ -416,15 +421,14 @@ export default function AdminDashboard() {
                                                 <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate group-hover:text-blue-500 transition-colors">{u.name}</p>
                                                 <div className="flex items-center gap-2 mt-0.5">
                                                     <span className={`text-[9px] px-1.5 py-0.5 rounded-md font-extrabold uppercase tracking-tighter
-                                                        ${(u.membershipLevel === 'diamond' || (u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B')) ? 'bg-fuchsia-500/10 text-fuchsia-500 border border-fuchsia-500/20' :
-                                                            u.membershipLevel === 'gold' ? 'bg-amber-500/10 text-amber-500 border border-amber-500/20' :
-                                                                (u.membershipLevel === 'platinum' || (u.membershipLevel === 'silver' && u.courseMode === 'PS_GR_B')) ? 'bg-violet-500/10 text-violet-500 border border-violet-500/20' :
-                                                                    u.membershipLevel === 'silver' ? 'bg-zinc-400/10 text-zinc-400 border border-zinc-400/20' :
+                                                        ${getMembershipTier(u.membershipLevel, u.courseMode) === 'diamond' ? 'bg-fuchsia-500/10 text-fuchsia-500 border border-fuchsia-500/20' :
+                                                            getMembershipTier(u.membershipLevel, u.courseMode) === 'gold' ? 'bg-amber-500/10 text-amber-500 border border-amber-500/20' :
+                                                                getMembershipTier(u.membershipLevel, u.courseMode) === 'platinum' ? 'bg-violet-500/10 text-violet-500 border border-violet-500/20' :
+                                                                    getMembershipTier(u.membershipLevel, u.courseMode) === 'silver' ? 'bg-zinc-400/10 text-zinc-400 border border-zinc-400/20' :
                                                                         'bg-zinc-500/10 text-zinc-500/80 border border-zinc-500/10'}`}>
-                                                        {u.membershipLevel === 'gold' && u.courseMode === 'PS_GR_B' ? 'Diamond' :
-                                                            u.membershipLevel === 'silver' && u.courseMode === 'PS_GR_B' ? 'Platinum' :
-                                                                (u.membershipLevel || 'Free')}
+                                                        {getMembershipTier(u.membershipLevel, u.courseMode).charAt(0).toUpperCase() + getMembershipTier(u.membershipLevel, u.courseMode).slice(1)}
                                                     </span>
+
                                                     <span className="text-[10px] text-zinc-400 tabular-nums">
                                                         {u.lastActiveAt ? format(new Date(u.lastActiveAt), 'HH:mm') : 'Active'}
                                                     </span>
@@ -845,23 +849,21 @@ export default function AdminDashboard() {
                                                     <td className="py-4 px-6">
                                                         <div className="flex flex-col items-start gap-1">
                                                             <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wide border shadow-sm
-                                                        ${(user.membershipLevel === 'diamond' || (user.membershipLevel === 'gold' && user.courseMode === 'PS_GR_B'))
+                                                        ${getMembershipTier(user.membershipLevel, user.courseMode) === 'diamond'
                                                                     ? 'bg-fuchsia-100 text-fuchsia-700 border-fuchsia-200 dark:bg-fuchsia-900/20 dark:text-fuchsia-400 dark:border-fuchsia-800/50'
-                                                                    : (user.membershipLevel === 'platinum' || (user.membershipLevel === 'silver' && user.courseMode === 'PS_GR_B'))
+                                                                    : getMembershipTier(user.membershipLevel, user.courseMode) === 'platinum'
                                                                         ? 'bg-violet-100 text-violet-700 border-violet-200 dark:bg-violet-900/20 dark:text-violet-400 dark:border-violet-800/50'
-                                                                        : user.membershipLevel === 'gold'
+                                                                        : getMembershipTier(user.membershipLevel, user.courseMode) === 'gold'
                                                                             ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50'
-                                                                            : user.membershipLevel === 'silver'
+                                                                            : getMembershipTier(user.membershipLevel, user.courseMode) === 'silver'
                                                                                 ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800/50'
                                                                                 : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-500 dark:border-zinc-800/50'
                                                                 }`}>
-                                                                {(user.membershipLevel === 'diamond' || (user.membershipLevel === 'gold' && user.courseMode === 'PS_GR_B')) && <Crown className="w-3 h-3 fill-current" />}
-                                                                {(user.membershipLevel === 'platinum' || (user.membershipLevel === 'silver' && user.courseMode === 'PS_GR_B')) && <Zap className="w-3 h-3 fill-current" />}
-                                                                {user.membershipLevel === 'gold' && user.courseMode !== 'PS_GR_B' && <Crown className="w-3 h-3 fill-current" />}
-                                                                {user.membershipLevel === 'silver' && user.courseMode !== 'PS_GR_B' && <Star className="w-3 h-3 fill-current" />}
-                                                                {user.membershipLevel === 'gold' && user.courseMode === 'PS_GR_B' ? 'Diamond' :
-                                                                    user.membershipLevel === 'silver' && user.courseMode === 'PS_GR_B' ? 'Platinum' :
-                                                                        (user.membershipLevel || 'Free')}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode) === 'diamond' && <Crown className="w-3 h-3 fill-current" />}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode) === 'platinum' && <Zap className="w-3 h-3 fill-current" />}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode) === 'gold' && <Crown className="w-3 h-3 fill-current" />}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode) === 'silver' && <Star className="w-3 h-3 fill-current" />}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode).charAt(0).toUpperCase() + getMembershipTier(user.membershipLevel, user.courseMode).slice(1)}
                                                             </span>
                                                             {user.membershipLevel && user.membershipLevel !== 'free' && (
                                                                 <button

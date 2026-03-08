@@ -8,6 +8,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
 import { useEffect, useState } from "react";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import { getMembershipTier } from "@/lib/membership-utils";
 import { useCourse } from "@/contexts/CourseContext";
 import UpdatesDrawer from "./UpdatesDrawer";
 
@@ -137,18 +138,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
     const isPremium = currentMembership === 'gold' || currentMembership === 'silver';
 
-    let displayMembership = currentMembership as string;
-    const plan = (sessionData?.planId || "").toLowerCase();
-    const planName = (sessionData?.planName || "").toLowerCase();
-
-    if (currentMembership !== 'free') {
-        const isPSGB = course === 'PS_GR_B' || plan.includes('ps_gr_b') || planName.includes('ps_gr_b');
-        if (displayMembership === 'diamond' || (currentMembership === 'gold' && isPSGB)) {
-            displayMembership = 'diamond';
-        } else if (displayMembership === 'platinum' || (currentMembership === 'silver' && isPSGB)) {
-            displayMembership = 'platinum';
-        }
-    }
+    const displayMembership = getMembershipTier(sessionData?.membershipLevel, sessionData?.courseMode);
 
     return (
         <>
