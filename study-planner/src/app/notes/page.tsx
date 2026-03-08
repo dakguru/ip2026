@@ -758,6 +758,7 @@ export default function NotesPage() {
 
     // Advisory Modal State
     const [showAdvisory, setShowAdvisory] = useState(false);
+    const [showAccuracyAdvisory, setShowAccuracyAdvisory] = useState(false);
     const [advisoryAgreed, setAdvisoryAgreed] = useState(false);
     const [pendingAction, setPendingAction] = useState<{ type: 'view' | 'download', url: string, title: string, filename?: string } | null>(null);
 
@@ -935,14 +936,22 @@ export default function NotesPage() {
                 <div className="max-w-7xl mx-auto text-center relative z-10">
                     <div className={`inline-flex items-center gap-2 px-4 py-2 ${course === 'PS_GR_B' ? 'bg-teal-800/50 border-teal-500/30' : 'bg-purple-800/50 border-purple-500/30'} rounded-full border mb-6 backdrop-blur-sm`}>
                         <BookOpen className={`w-4 h-4 ${course === 'PS_GR_B' ? 'text-teal-300' : 'text-purple-300'}`} />
-                        <span className={`text-sm font-medium ${course === 'PS_GR_B' ? 'text-teal-100' : 'text-purple-100'} tracking-wide`}>DIGITAL LIBRARY</span>
+                        <span className={`text-sm font-medium ${course === 'PS_GR_B' ? 'text-teal-100' : 'text-purple-100'} tracking-wide`}>
+                            {course === 'PS_GR_B' ? "LDCE PS GR 'B' DIGITAL LIBRARY" : "LDCE IP DIGITAL LIBRARY"}
+                        </span>
                     </div>
                     <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
                         Study <span className={`text-transparent bg-clip-text bg-gradient-to-r ${course === 'PS_GR_B' ? 'from-teal-400 to-cyan-300' : 'from-purple-400 to-pink-300'}`}>Material</span>
                     </h1>
-                    <p className={`text-lg ${course === 'PS_GR_B' ? 'text-teal-200' : 'text-purple-200'} max-w-2xl mx-auto mb-8 leading-relaxed`}>
+                    <p className={`text-lg ${course === 'PS_GR_B' ? 'text-teal-200' : 'text-purple-200'} max-w-2xl mx-auto mb-2 leading-relaxed`}>
                         Curated PDF notes and reference materials for your preparation.
                     </p>
+                    <button
+                        onClick={() => setShowAccuracyAdvisory(true)}
+                        className="text-white/60 hover:text-white text-xs underline decoration-white/30 underline-offset-4 transition-colors font-medium"
+                    >
+                        Accuracy & Reference Advisory
+                    </button>
                 </div>
             </div>
 
@@ -1255,6 +1264,45 @@ export default function NotesPage() {
                 </div>
             )}
 
+            {/* --- ACCURACY ADVISORY MODAL --- */}
+            {showAccuracyAdvisory && (
+                <div className="fixed inset-0 z-[80] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-white dark:bg-zinc-900 rounded-[2rem] w-full max-w-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200 border border-zinc-200 dark:border-zinc-800">
+                        <div className={`p-6 sm:p-8 text-center ${course === 'PS_GR_B' ? 'bg-teal-50 dark:bg-teal-900/10' : 'bg-blue-50 dark:bg-blue-900/10'}`}>
+                            <div className={`w-16 h-16 rounded-2xl ${course === 'PS_GR_B' ? 'bg-teal-100 dark:bg-teal-900/30' : 'bg-blue-100 dark:bg-blue-900/30'} flex items-center justify-center mx-auto mb-4`}>
+                                <ShieldAlert className={`w-8 h-8 ${course === 'PS_GR_B' ? 'text-teal-600 dark:text-teal-400' : 'text-blue-600 dark:text-blue-400'}`} />
+                            </div>
+                            <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Accuracy & Reference Advisory</h3>
+                        </div>
+
+                        <div className="p-6 sm:p-8 space-y-4 max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700">
+                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
+                                While every effort has been made to carefully research, verify, and draft the Dak Guru PDF Notes with high academic diligence, there remains a possibility that certain factual inaccuracies, typographical errors, or interpretation differences may inadvertently exist.
+                            </p>
+                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
+                                Users are therefore strongly advised to cross-verify important information with official sources, including departmental manuals, government notifications, circulars, and other authoritative resources, before relying on the material for examination or professional purposes.
+                            </p>
+                            <div className={`p-5 rounded-2xl ${course === 'PS_GR_B' ? 'bg-teal-50/50 dark:bg-teal-900/10 border border-teal-100 dark:border-teal-800/30' : 'bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800/30'}`}>
+                                <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-center">
+                                    If any error, discrepancy, or outdated information is identified in the notes, users are kindly requested to report it immediately through the dedicated <Link href="/social?tab=report" className="font-bold underline text-blue-600 dark:text-blue-400 hover:text-blue-700">“Report Error” section</Link> in DG Community Page, so that our academic team can promptly review, rectify, and update the material for the benefit of all aspirants.
+                                </p>
+                            </div>
+                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
+                                Your cooperation helps us maintain the accuracy, reliability, and continuous improvement of Dak Guru learning resources.
+                            </p>
+                        </div>
+
+                        <div className="p-6 border-t border-zinc-100 dark:border-zinc-800 flex justify-center bg-zinc-50 dark:bg-zinc-900/50">
+                            <button
+                                onClick={() => setShowAccuracyAdvisory(false)}
+                                className={`w-full py-4 rounded-xl font-bold text-sm text-white shadow-lg transition-all active:scale-95 ${course === 'PS_GR_B' ? 'bg-teal-600 hover:bg-teal-700 shadow-teal-500/20' : 'bg-blue-600 hover:bg-blue-700 shadow-blue-500/20'}`}
+                            >
+                                I Understand
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
             {/* --- DOWNLOAD TOAST --- */}
             {showDownloadToast && (
                 <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] bg-zinc-900 dark:bg-zinc-800 dark:border dark:border-zinc-700 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5 fade-in duration-300">

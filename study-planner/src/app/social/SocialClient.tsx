@@ -13,7 +13,7 @@ import {
     Home
 } from 'lucide-react';
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { WriteArticleModal } from '@/components/WriteArticleModal';
 import { DMModal } from '@/components/DMModal';
 import { PostItem } from '@/components/PostItem';
@@ -206,8 +206,11 @@ interface SocialClientProps {
 }
 
 export default function SocialClient({ initialPosts }: SocialClientProps) {
-    const [activeTab, setActiveTab] = useState("Q&A Home");
-    const [topBoxTab, setTopBoxTab] = useState<"discuss" | "report">("discuss");
+    const searchParams = useSearchParams();
+    const initialTab = searchParams.get('tab');
+
+    const [activeTab, setActiveTab] = useState(initialTab === 'report' ? "Error Reports" : "Q&A Home");
+    const [topBoxTab, setTopBoxTab] = useState<"discuss" | "report">(initialTab === 'report' ? "report" : "discuss");
     const [questionInput, setQuestionInput] = useState("");
     const [detailsInput, setDetailsInput] = useState("");
     const [showDetailsInput, setShowDetailsInput] = useState(false);
