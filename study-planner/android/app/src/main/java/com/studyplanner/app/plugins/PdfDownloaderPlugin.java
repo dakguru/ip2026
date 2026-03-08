@@ -69,23 +69,11 @@ public class PdfDownloaderPlugin extends Plugin {
             }
         }
 
-        // On Android 13+, try to request notification permission (for download progress notification)
-        // But don't block the download if denied — notifications are optional
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (getPermissionState("notifications") != PermissionState.GRANTED) {
-                // Save the call before going async — Capacitor frees it otherwise
-                saveCall(call);
-                try {
-                    requestPermissionForAlias("notifications", call, "notificationPermissionCallback");
-                } catch (Exception e) {
-                    // If permission request fails (e.g., already denied permanently), just download
-                    startDownload(call);
-                }
-                return;
-            }
-        }
-
-        // All good — start download directly
+        // On Android 10+, no storage permission is needed for DownloadManager.
+        // Notification permission is NOT required for the download itself — if the
+        // permission is missing, the system notification is silently skipped but the
+        // download still completes. We intentionally skip requesting it here to avoid
+        // blocking/hanging the download when the permission is permanently denied.
         startDownload(call);
     }
 
@@ -99,16 +87,6 @@ public class PdfDownloaderPlugin extends Plugin {
         } else {
             activeCall.reject("Storage permission is required to download PDFs.");
         }
-    }
-
-    @PermissionCallback
-    private void notificationPermissionCallback(PluginCall call) {
-        // Retrieve the saved call — the original call object may have been freed
-        PluginCall savedCall = getSavedCall();
-        PluginCall activeCall = (savedCall != null) ? savedCall : call;
-        // Start download regardless of notification permission result
-        // Notifications are optional — the download still works without them
-        startDownload(activeCall);
     }
 
     private void startDownload(PluginCall call) {
@@ -150,7 +128,9 @@ public class PdfDownloaderPlugin extends Plugin {
 
             request.setMimeType("application/pdf");
             String cookies = CookieManager.getInstance().getCookie(url);
-            request.addRequestHeader("cookie", cookies);
+            if (cookies != null && !cookies.isEmpty()) {
+                request.addRequestHeader("cookie", cookies);
+            }
             request.addRequestHeader("User-Agent", "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36");
             
             request.setDescription("Downloading file...");

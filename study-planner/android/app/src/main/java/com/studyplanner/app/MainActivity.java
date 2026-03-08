@@ -315,7 +315,9 @@ public class MainActivity extends BridgeActivity {
 
             request.setMimeType("application/pdf");
             String cookies = CookieManager.getInstance().getCookie(url);
-            request.addRequestHeader("cookie", cookies);
+            if (cookies != null && !cookies.isEmpty()) {
+                request.addRequestHeader("cookie", cookies);
+            }
             request.addRequestHeader("User-Agent", WebSettings.getDefaultUserAgent(this));
             
             request.setDescription("Downloading file...");

@@ -2,10 +2,125 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, FileQuestion, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, AlertCircle, Settings, Lock } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import { ArrowLeft, FileQuestion, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, AlertCircle, Settings, Lock, Download, Eye, ShieldAlert, Info, Check, X, Calendar, Scroll } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
 import { useCourse } from '@/contexts/CourseContext';
+import { Capacitor } from '@capacitor/core';
+import { Toast } from '@capacitor/toast';
+
+const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
+    loading: () => <div className="flex items-center justify-center h-full text-slate-400 bg-zinc-950">Loading viewer...</div>,
+    ssr: false
+});
+
+// PS Gr.B Previous Year Papers
+const PSGB_PYQ_PAPERS = [
+    {
+        id: 'psgb-paper-1-2023',
+        title: 'LDCE PS Gr. B — Paper I',
+        subtitle: '2023 (Series C)',
+        year: '2023',
+        paper: 'Paper I',
+        path: '/notes/psgb/Paper_I_GrB_2023.pdf',
+        filename: 'LDCE_PSGrB_Paper_I_2023.pdf',
+        color: 'teal',
+        description: 'General Financial Rules, Service Rules & other Acts',
+    },
+    {
+        id: 'psgb-paper-2-2023',
+        title: 'LDCE PS Gr. B — Paper II',
+        subtitle: '2023 (Series C)',
+        year: '2023',
+        paper: 'Paper II',
+        path: '/notes/psgb/Paper_II_GrB_2023.pdf',
+        filename: 'LDCE_PSGrB_Paper_II_2023.pdf',
+        color: 'indigo',
+        description: 'Postal Operations, SB, PLI & Allied Topics',
+    },
+];
+
+function PaperPdfCard({
+    paper,
+    isLocked,
+    onView,
+    onDownload,
+}: {
+    paper: typeof PSGB_PYQ_PAPERS[0];
+    isLocked: boolean;
+    onView: () => void;
+    onDownload: () => void;
+}) {
+    const isTeal = paper.color === 'teal';
+    const gradientBg = isTeal
+        ? 'from-teal-600 via-teal-700 to-indigo-700'
+        : 'from-indigo-600 via-indigo-700 to-purple-800';
+    const accentBg = isTeal ? 'bg-teal-500/20' : 'bg-indigo-500/20';
+    const accentText = isTeal ? 'text-teal-300' : 'text-indigo-300';
+    const badgeBg = isTeal ? 'bg-teal-500/30 text-teal-200' : 'bg-indigo-500/30 text-indigo-200';
+
+    return (
+        <div className={`relative rounded-2xl overflow-hidden shadow-xl border border-white/5 bg-gradient-to-br ${gradientBg}`}>
+            <div className={`absolute top-0 right-0 w-40 h-40 ${accentBg} rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none`} />
+            <div className="absolute bottom-0 left-0 w-28 h-28 bg-black/10 rounded-full blur-2xl -ml-6 -mb-6 pointer-events-none" />
+
+            <div className="relative p-6">
+                <div className="flex items-center justify-between mb-4">
+                    <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${badgeBg}`}>
+                        <Scroll className="w-3 h-3" />
+                        PYQ
+                    </span>
+                    <span className={`inline-flex items-center gap-1 text-xs font-semibold ${accentText}`}>
+                        <Calendar className="w-3.5 h-3.5" />
+                        {paper.year}
+                    </span>
+                </div>
+
+                <div className="mb-1">
+                    <span className="text-white/60 text-xs font-medium uppercase tracking-widest">{paper.paper}</span>
+                </div>
+                <h3 className="text-white font-extrabold text-xl leading-tight mb-1">{paper.title}</h3>
+                <p className="text-white/70 text-sm font-medium mb-1">{paper.subtitle}</p>
+                <p className="text-white/50 text-xs leading-snug mb-6">{paper.description}</p>
+
+                {isLocked ? (
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-white/50 text-sm font-medium">
+                            <Lock className="w-4 h-4" />
+                            <span>Locked</span>
+                        </div>
+                        <Link
+                            href="/pricing"
+                            className="px-4 py-1.5 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-bold rounded-full shadow hover:shadow-lg hover:scale-105 active:scale-95 transition-all"
+                        >
+                            Upgrade
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="flex gap-3">
+                        <button
+                            onClick={onView}
+                            className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/15 hover:bg-white/25 text-white rounded-xl text-sm font-semibold backdrop-blur-sm transition-all active:scale-95 border border-white/10"
+                        >
+                            <Eye className="w-4 h-4" />
+                            View PDF
+                        </button>
+                        <button
+                            onClick={onDownload}
+                            className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white text-zinc-900 rounded-xl text-sm font-bold hover:bg-white/90 transition-all active:scale-95 shadow-md"
+                        >
+                            <Download className="w-4 h-4" />
+                            Download
+                        </button>
+                    </div>
+                )}
+            </div>
+
+            <div className={`h-1 w-full ${isTeal ? 'bg-gradient-to-r from-teal-400 to-indigo-400' : 'bg-gradient-to-r from-indigo-400 to-purple-400'}`} />
+        </div>
+    );
+}
 
 export default function PyqDashboard() {
     const { course } = useCourse();
@@ -37,6 +152,51 @@ export default function PyqDashboard() {
             console.error("Failed to parse session", e);
         }
     }, []);
+
+    // PDF Papers State
+    const [showAdvisory, setShowAdvisory] = useState(false);
+    const [advisoryAgreed, setAdvisoryAgreed] = useState(false);
+    const [pendingPdfAction, setPendingPdfAction] = useState<{ type: 'view' | 'download', paper: typeof PSGB_PYQ_PAPERS[0] } | null>(null);
+    const [activePdf, setActivePdf] = useState<{ url: string; title: string } | null>(null);
+
+    const handlePdfActionRequest = (type: 'view' | 'download', paper: typeof PSGB_PYQ_PAPERS[0]) => {
+        setPendingPdfAction({ type, paper });
+        setAdvisoryAgreed(false);
+        setShowAdvisory(true);
+    };
+
+    const handleAdvisoryConfirm = async () => {
+        setShowAdvisory(false);
+        if (!pendingPdfAction) return;
+        const action = pendingPdfAction;
+        setPendingPdfAction(null);
+        if (action.type === 'view') {
+            setActivePdf({ url: action.paper.path, title: action.paper.title + ' ' + action.paper.subtitle });
+        } else {
+            await performPdfDownload(action.paper);
+        }
+    };
+
+    const performPdfDownload = async (paper: typeof PSGB_PYQ_PAPERS[0]) => {
+        try {
+            if (!Capacitor.isNativePlatform()) {
+                const link = document.createElement('a');
+                link.href = paper.path;
+                link.download = paper.filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                return;
+            }
+            await Toast.show({ text: 'Starting download...', duration: 'short' });
+            const { default: PdfDownloader } = await import('@/plugins/PdfDownloader');
+            const encodedPath = paper.path.split('/').map(s => encodeURIComponent(s)).join('/');
+            const downloadUrl = `https://dakguru.com${encodedPath}`;
+            await PdfDownloader.downloadPdf({ url: downloadUrl, filename: paper.filename });
+        } catch (err: any) {
+            await Toast.show({ text: `Download failed: ${err?.message || 'Unknown error'}`, duration: 'long' });
+        }
+    };
 
     // Config State
     const [desiredCount, setDesiredCount] = useState<number>(10);
@@ -361,6 +521,8 @@ export default function PyqDashboard() {
         return ['gold', 'silver'].includes(membershipLevel.toLowerCase());
     };
 
+    const unlocked = isUnlocked();
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 transition-colors">
             <div className="max-w-6xl mx-auto">
@@ -378,17 +540,126 @@ export default function PyqDashboard() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {pyqTopics.map(topic => (
-                        <TopicCard
-                            key={topic.id}
-                            topic={topic}
-                            onSelect={handleTopicSelect}
-                            isLocked={!isUnlocked()}
-                        />
-                    ))}
-                </div>
+                {/* PS Gr. B — Actual PDF Papers Section */}
+                {isPS && (
+                    <div className="mb-12">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-1 h-8 rounded-full bg-gradient-to-b from-teal-500 to-indigo-600" />
+                            <div>
+                                <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Actual Exam Papers</h2>
+                                <p className="text-sm text-zinc-500 dark:text-zinc-400">Original question papers — view or download as PDF</p>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {PSGB_PYQ_PAPERS.map(paper => (
+                                <PaperPdfCard
+                                    key={paper.id}
+                                    paper={paper}
+                                    isLocked={!unlocked}
+                                    onView={() => handlePdfActionRequest('view', paper)}
+                                    onDownload={() => handlePdfActionRequest('download', paper)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* MCQ Practice Section */}
+                {pyqTopics.length > 0 && (
+                    <>
+                        {isPS && (
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="w-1 h-8 rounded-full bg-gradient-to-b from-cyan-500 to-blue-600" />
+                                <div>
+                                    <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">MCQ Practice</h2>
+                                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Attempt previous year questions interactively</p>
+                                </div>
+                            </div>
+                        )}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {pyqTopics.map(topic => (
+                                <TopicCard
+                                    key={topic.id}
+                                    topic={topic}
+                                    onSelect={handleTopicSelect}
+                                    isLocked={!unlocked}
+                                />
+                            ))}
+                        </div>
+                    </>
+                )}
             </div>
+
+            {/* Full-Screen PDF Viewer */}
+            {activePdf && (
+                <div className="fixed inset-0 z-50 bg-zinc-950 flex flex-col">
+                    <div className="flex items-center justify-between px-4 py-3 bg-zinc-900 border-b border-zinc-800 shrink-0">
+                        <span className="text-white font-semibold text-sm truncate max-w-xs md:max-w-md">{activePdf.title}</span>
+                        <button
+                            onClick={() => setActivePdf(null)}
+                            className="flex items-center gap-2 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white rounded-lg text-sm font-medium transition-colors"
+                        >
+                            <X className="w-4 h-4" /> Close
+                        </button>
+                    </div>
+                    <div className="flex-1 overflow-hidden">
+                        <PdfViewer url={activePdf.url} />
+                    </div>
+                </div>
+            )}
+
+            {/* Ethical Use Advisory Modal */}
+            {showAdvisory && (
+                <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-white dark:bg-zinc-900 rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
+                        <div className="bg-gradient-to-r from-teal-600 to-indigo-600 p-5 sm:p-6 text-white relative overflow-hidden">
+                            <ShieldAlert className="w-10 h-10 sm:w-12 sm:h-12 absolute -bottom-2 -right-2 text-white/20" />
+                            <h3 className="text-lg sm:text-xl font-bold flex items-center gap-2">
+                                <Info className="w-5 h-5 sm:w-6 sm:h-6" />
+                                Ethical Use Advisory
+                            </h3>
+                            <p className="text-teal-100 text-xs sm:text-sm mt-1">Please read carefully before proceeding</p>
+                        </div>
+                        <div className="p-5 sm:p-6 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                            <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                                These original exam papers are provided exclusively for your personal preparation for LDCE PS Group B examination.
+                            </p>
+                        </div>
+                        <div className="p-5 sm:p-6 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+                            <label className="flex items-start gap-3 cursor-pointer group mb-5 select-none">
+                                <div className="relative flex items-center mt-0.5">
+                                    <input
+                                        type="checkbox"
+                                        className="peer sr-only"
+                                        checked={advisoryAgreed}
+                                        onChange={e => setAdvisoryAgreed(e.target.checked)}
+                                    />
+                                    <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-zinc-300 rounded transition-colors peer-checked:bg-teal-600 peer-checked:border-teal-600 dark:border-zinc-600" />
+                                    <Check className="absolute w-3.5 h-3.5 sm:w-4 sm:h-4 text-white left-1 top-0.5 sm:left-1 sm:top-1 opacity-0 peer-checked:opacity-100 transition-opacity" strokeWidth={3} />
+                                </div>
+                                <span className="text-xs sm:text-sm font-medium text-zinc-700 dark:text-zinc-300 leading-snug">
+                                    I agree to use this material ethically for personal preparation only.
+                                </span>
+                            </label>
+                            <div className="flex gap-3">
+                                <button
+                                    onClick={() => setShowAdvisory(false)}
+                                    className="flex-1 py-3 rounded-xl font-bold text-sm text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    onClick={handleAdvisoryConfirm}
+                                    disabled={!advisoryAgreed}
+                                    className="flex-[2] py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-teal-600 to-indigo-600 text-white shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95"
+                                >
+                                    Confirm & Proceed
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
