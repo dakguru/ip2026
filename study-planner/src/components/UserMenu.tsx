@@ -30,11 +30,12 @@ import {
 } from "lucide-react";
 
 interface UserSession {
-    name: string;
+    name?: string;
     email?: string;
-    role?: 'user' | 'admin';
-    membershipLevel?: 'free' | 'silver' | 'gold';
+    role?: string;
+    membershipLevel?: 'free' | 'silver' | 'gold' | 'diamond' | 'platinum';
     planId?: string;
+    planName?: string;
 }
 
 export function UserMenu() {
@@ -84,10 +85,13 @@ export function UserMenu() {
     }
 
     let displayMembership = session.membershipLevel as string | undefined;
-    if (course === 'PS_GR_B' && session.membershipLevel !== 'free') {
-        if (session.membershipLevel === 'gold' && (session.planId?.includes('diamond') || session.planId?.includes('ps_gr_b'))) {
+    const plan = (session?.planId || "").toLowerCase();
+    const planName = (session?.planName || "").toLowerCase();
+
+    if (session.membershipLevel && session.membershipLevel !== 'free') {
+        if (plan.includes('diamond') || planName.includes('diamond') || plan.includes('ps_gr_b')) {
             displayMembership = 'diamond';
-        } else if ((session.membershipLevel === 'silver' || session.membershipLevel === 'gold') && session.planId?.includes('platinum')) {
+        } else if (plan.includes('platinum') || planName.includes('platinum')) {
             displayMembership = 'platinum';
         }
     }

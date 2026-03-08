@@ -138,10 +138,13 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
     const isPremium = currentMembership === 'gold' || currentMembership === 'silver';
 
     let displayMembership = currentMembership as string;
-    if (course === 'PS_GR_B' && sessionData && sessionData.membershipLevel && sessionData.membershipLevel !== 'free') {
-        if (sessionData.membershipLevel === 'gold' && (sessionData.planId?.includes('diamond') || sessionData.planId?.includes('ps_gr_b'))) {
+    const plan = (sessionData?.planId || "").toLowerCase();
+    const planName = (sessionData?.planName || "").toLowerCase();
+
+    if (currentMembership !== 'free') {
+        if (plan.includes('diamond') || planName.includes('diamond') || plan.includes('ps_gr_b')) {
             displayMembership = 'diamond';
-        } else if ((sessionData.membershipLevel === 'silver' || sessionData.membershipLevel === 'gold') && sessionData.planId?.includes('platinum')) {
+        } else if (plan.includes('platinum') || planName.includes('platinum')) {
             displayMembership = 'platinum';
         }
     }

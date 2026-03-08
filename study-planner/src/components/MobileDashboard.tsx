@@ -19,7 +19,7 @@ interface MobileDashboardProps {
 export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     const router = useRouter();
     const [isAdmin, setIsAdmin] = useState(false);
-    const [membership, setMembership] = useState<'free' | 'silver' | 'gold'>('free');
+    const [membership, setMembership] = useState<'free' | 'silver' | 'gold' | 'diamond' | 'platinum'>('free');
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
     const [notifOpen, setNotifOpen] = useState(false);
@@ -34,7 +34,17 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         if (match) {
             try {
                 const session = JSON.parse(decodeURIComponent(match[2]));
-                if (session.membershipLevel) setMembership(session.membershipLevel);
+                let level = session.membershipLevel || 'free';
+                const pid = (session.planId || "").toLowerCase();
+
+                if (level !== 'free') {
+                    if (pid.includes('diamond') || pid.includes('ps_gr_b')) {
+                        level = 'diamond';
+                    } else if (pid.includes('platinum')) {
+                        level = 'platinum';
+                    }
+                }
+                setMembership(level);
                 if (session.role === 'admin' || session.membershipLevel === 'admin' || session.isAdmin === true) {
                     setIsAdmin(true);
                 }
@@ -86,7 +96,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         { label: "Admin Panel", icon: Shield, color: "text-red-700 dark:text-red-400", bg: "bg-red-50 dark:bg-red-900/20", href: "/admin", adminOnly: true },
     ];
 
-    const isGold = membership === 'gold';
+    const isGold = membership === 'gold' || membership === 'diamond' || membership === 'platinum';
 
     const [recentNotifications, setRecentNotifications] = useState<any[]>([]);
 

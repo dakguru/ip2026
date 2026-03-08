@@ -252,25 +252,26 @@ export default function SettingsPage() {
         );
     }
 
+    let membershipLevelActual = initialData?.membershipLevel || 'free';
+    const plan = (initialData?.planId || "").toLowerCase();
+    const planName = (initialData?.planName || "").toLowerCase();
+
+    if (membershipLevelActual !== 'free') {
+        if (plan.includes('diamond') || planName.includes('diamond') || plan.includes('ps_gr_b')) {
+            membershipLevelActual = 'diamond';
+        } else if (plan.includes('platinum') || planName.includes('platinum')) {
+            membershipLevelActual = 'platinum';
+        }
+    }
+
+    const membershipLabel = membershipLevelActual === 'gold' ? 'Gold'
+        : membershipLevelActual === 'silver' ? 'Silver'
+            : membershipLevelActual === 'diamond' ? 'Diamond'
+                : membershipLevelActual === 'platinum' ? 'Platinum'
+                    : 'Free';
+
     // ---- MOBILE PROFILE VIEW (Android App + Mobile Browser) ----
     if (isMobileView) {
-        let membershipLevelActual = initialData?.membershipLevel || 'free';
-        const plan = initialData?.planId || "";
-
-        if (course === 'PS_GR_B' && membershipLevelActual !== 'free') {
-            if (plan.includes('diamond') || plan.includes('ps_gr_b')) {
-                membershipLevelActual = 'diamond';
-            } else if (plan.includes('platinum')) {
-                membershipLevelActual = 'platinum';
-            }
-        }
-
-        const membershipLabel = membershipLevelActual === 'gold' ? 'Gold'
-            : membershipLevelActual === 'silver' ? 'Silver'
-                : membershipLevelActual === 'diamond' ? 'Diamond'
-                    : membershipLevelActual === 'platinum' ? 'Platinum'
-                        : 'Free';
-
         const sectionTitles: Record<string, string> = {
             profile: 'Manage Profile',
             security: 'Password & Security',
