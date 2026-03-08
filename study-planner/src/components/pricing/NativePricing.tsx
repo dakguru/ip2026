@@ -118,6 +118,14 @@ export default function NativePricing({
 
     const handleApply = async () => {
         if (!couponCode) return;
+
+        if (isUpgradeMode) {
+            alert("No 50% discount code is applicable for plan upgrades.");
+            setCouponCode("");
+            setDiscount(0);
+            return;
+        }
+
         const res = await onApplyCoupon(couponCode);
         if (res.valid) {
             // Determine base price for discount: if upgrading, use current effectivePrice, otherwise full price
@@ -141,6 +149,11 @@ export default function NativePricing({
             if (activeTab === 'gold' && hasDiamond) return 0;
             if (activeTab === 'silver' && hasPlatinum) return 0;
             if (activeTab === 'silver' && hasDiamond) return 0;
+
+            // Special Case: Gold to Diamond Upgrade is explicitly Rs. 1175/-
+            if (currentMembership === 'gold' && activeTab === 'gold') {
+                return 1175;
+            }
 
             const currentPlanPrice = currentMembership === 'gold' ? goldPlans.full_2026.price : silverPlans.full_2026.price;
             const diff = selectedPlan.price - currentPlanPrice;
@@ -202,7 +215,7 @@ export default function NativePricing({
                     <div className="grid grid-cols-2 bg-zinc-900 p-1.5 rounded-2xl border border-white/10">
                         {/* Tab Switcher */}
                         <button
-                            onClick={() => { setActiveTab('gold'); setDiscount(0); }}
+                            onClick={() => { setActiveTab('gold'); setDiscount(0); setCouponCode(""); }}
                             disabled={hasPsGrBDiamond}
                             className={`py-3 rounded-xl font-bold text-sm transition-all flex flex-col items-center gap-1 ${activeTab === 'gold'
                                 ? `bg-zinc-800 shadow-lg ring-1 ring-white/10 ${isPsGroupB ? 'text-purple-400' : 'text-yellow-400'}`
@@ -213,7 +226,7 @@ export default function NativePricing({
                             {activeTab === 'gold' && <span className={`text-[10px] px-1.5 rounded uppercase tracking-wider ${isPsGroupB ? 'bg-purple-400/10 text-purple-400' : 'bg-yellow-400/10 text-yellow-400'}`}>Recommended</span>}
                         </button>
                         <button
-                            onClick={() => { setActiveTab('silver'); setDiscount(0); }}
+                            onClick={() => { setActiveTab('silver'); setDiscount(0); setCouponCode(""); }}
                             disabled={hasPsGrBPlatinum || hasPsGrBDiamond}
                             className={`py-3 rounded-xl font-bold text-sm transition-all ${activeTab === 'silver'
                                 ? 'bg-zinc-800 text-white shadow-lg ring-1 ring-white/10'
