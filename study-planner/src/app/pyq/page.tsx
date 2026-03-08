@@ -510,7 +510,9 @@ export default function PyqDashboard() {
     }
 
     // --- VIEW: TOPIC SELECTION (DASHBOARD) ---
-    const pyqTopics = QUIZ_DATA.filter(t => t.category === 'PYQ');
+    const pyqTopics = QUIZ_DATA.filter(t =>
+        t.category === 'PYQ' && (isPS ? t.id.startsWith('psgb-') : !t.id.startsWith('psgb-'))
+    );
 
     const isUnlocked = () => {
         if (course === 'PS_GR_B') {
