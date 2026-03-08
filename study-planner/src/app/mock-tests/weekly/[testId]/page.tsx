@@ -312,7 +312,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     // Live Window Logic
     const testConfig = TEST_CONFIG_MAP[testId];
     const isLiveWindow = testConfig?.endDate ? new Date() < testConfig.endDate : false;
-    const canSeeLeaderboard = isAdmin || !isLiveWindow;
+    const canSeeLeaderboard = !isLiveWindow;
 
     // Load Data & Check Access
     useEffect(() => {
@@ -984,9 +984,6 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                             <div className="bg-zinc-100 dark:bg-zinc-800 px-3 py-1 rounded-full text-xs font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700">
                                                 Top 50
                                             </div>
-                                            {isLiveWindow && isAdmin && (
-                                                <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded uppercase">Admin View</span>
-                                            )}
                                         </div>
                                     </div>
 
