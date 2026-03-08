@@ -109,9 +109,10 @@ export default function SettingsPage() {
                     dateOfJoining: user.dateOfJoining ? new Date(user.dateOfJoining).toISOString().split('T')[0] : "",
                     courseMode: user.courseMode || "LDCE_IP",
                     membershipLevel: user.membershipLevel,
-                    membershipValidity: user.membershipValidity
+                    membershipValidity: user.membershipValidity,
+                    planId: user.planId
                 };
-                setFormData(userData);
+                setFormData(userData as any);
                 setInitialData(userData);
             } else {
                 // If fetching profile fails (likely auth error or manual cookie edit), redirect to login
@@ -253,10 +254,21 @@ export default function SettingsPage() {
 
     // ---- MOBILE PROFILE VIEW (Android App + Mobile Browser) ----
     if (isMobileView) {
-        const membershipLabel = initialData?.membershipLevel === 'gold' ? 'Gold'
-            : initialData?.membershipLevel === 'silver' ? 'Silver'
-                : initialData?.membershipLevel === 'diamond' ? 'Diamond'
-                    : initialData?.membershipLevel === 'platinum' ? 'Platinum'
+        let membershipLevelActual = initialData?.membershipLevel || 'free';
+        const plan = initialData?.planId || "";
+
+        if (course === 'PS_GR_B' && membershipLevelActual !== 'free') {
+            if (plan.includes('diamond') || plan.includes('ps_gr_b')) {
+                membershipLevelActual = 'diamond';
+            } else if (plan.includes('platinum')) {
+                membershipLevelActual = 'platinum';
+            }
+        }
+
+        const membershipLabel = membershipLevelActual === 'gold' ? 'Gold'
+            : membershipLevelActual === 'silver' ? 'Silver'
+                : membershipLevelActual === 'diamond' ? 'Diamond'
+                    : membershipLevelActual === 'platinum' ? 'Platinum'
                         : 'Free';
 
         const sectionTitles: Record<string, string> = {
@@ -454,7 +466,13 @@ export default function SettingsPage() {
                                                     {membershipLabel.toUpperCase()} {membershipLabel === 'Free' ? 'TIER' : 'PLAN'}
                                                 </h3>
                                             </div>
-                                            <div className={`p-2.5 rounded-xl ${initialData?.membershipLevel === 'gold' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-zinc-800 text-zinc-400'}`}>
+                                            <div className={`p-2.5 rounded-xl ${membershipLevelActual === 'diamond'
+                                                ? 'bg-blue-500/20 text-blue-400'
+                                                : membershipLevelActual === 'platinum'
+                                                    ? 'bg-indigo-500/20 text-indigo-400'
+                                                    : membershipLevelActual === 'gold'
+                                                        ? 'bg-yellow-500/20 text-yellow-400'
+                                                        : 'bg-zinc-800 text-zinc-400'}`}>
                                                 <Crown className="w-5 h-5 fill-current" />
                                             </div>
                                         </div>
@@ -606,11 +624,15 @@ export default function SettingsPage() {
                                 </div>
                             </div>
                             {/* Membership Badge */}
-                            <div className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 text-[10px] font-black px-3.5 py-1 rounded-full shadow-lg flex items-center gap-1 z-20 whitespace-nowrap ${initialData?.membershipLevel === 'gold'
+                            <div className={`absolute -bottom-1.5 left-1/2 -translate-x-1/2 text-[10px] font-black px-3.5 py-1 rounded-full shadow-lg flex items-center gap-1 z-20 whitespace-nowrap ${membershipLevelActual === 'gold'
                                 ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-yellow-950'
-                                : initialData?.membershipLevel === 'silver'
+                                : membershipLevelActual === 'silver'
                                     ? 'bg-gradient-to-r from-zinc-300 to-zinc-400 text-zinc-800'
-                                    : 'bg-gradient-to-r from-zinc-600 to-zinc-500 text-zinc-100'
+                                    : membershipLevelActual === 'diamond'
+                                        ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-blue-950 shadow-blue-500/20'
+                                        : membershipLevelActual === 'platinum'
+                                            ? 'bg-gradient-to-r from-indigo-300 via-purple-300 to-white text-purple-950 shadow-purple-500/20'
+                                            : 'bg-gradient-to-r from-zinc-600 to-zinc-500 text-zinc-100'
                                 }`}>
                                 <Crown className="w-3 h-3 fill-current" />
                                 <span className="tracking-wider uppercase">{membershipLabel}</span>
@@ -720,10 +742,16 @@ export default function SettingsPage() {
                             <div>
                                 <p className="text-zinc-400 text-xs font-bold uppercase tracking-wider mb-1">Current Membership</p>
                                 <h3 className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400">
-                                    {formData.email ? (initialData?.membershipLevel === 'gold' ? 'GOLD PLAN' : initialData?.membershipLevel === 'silver' ? 'SILVER PLAN' : 'FREE TIER') : 'LOADING...'}
+                                    {formData.email ? (`${membershipLabel.toUpperCase()} PLAN`) : 'LOADING...'}
                                 </h3>
                             </div>
-                            <div className={`p-3 rounded-2xl ${initialData?.membershipLevel === 'gold' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-zinc-800 text-zinc-400'}`}>
+                            <div className={`p-3 rounded-2xl ${membershipLevelActual === 'diamond'
+                                ? 'bg-cyan-500/20 text-cyan-400'
+                                : membershipLevelActual === 'platinum'
+                                    ? 'bg-indigo-500/20 text-indigo-400'
+                                    : membershipLevelActual === 'gold'
+                                        ? 'bg-yellow-500/20 text-yellow-400'
+                                        : 'bg-zinc-800 text-zinc-400'}`}>
                                 <Crown className="w-6 h-6 fill-current" />
                             </div>
                         </div>
