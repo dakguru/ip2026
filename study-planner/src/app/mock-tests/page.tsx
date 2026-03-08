@@ -188,7 +188,7 @@ export default function MockTestsPage() {
             const calculatedId = `mock-${format(saturdayDate, 'yyyy-MM-dd')}`;
             const now = new Date();
 
-            if (now > sundayDate || (calculatedId === 'mock-2026-03-07' && now > new Date(2026, 2, 8, 22, 0))) {
+            if (now > sundayDate) {
                 status = 'completed';
             } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28'))) {
                 status = 'live';
