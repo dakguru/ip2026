@@ -1,0 +1,399 @@
+Q1. Who supplies the notice of hours of business in form M-6(c) to each branch office?
+A. Head Postmaster
+B. Sub-Divisional Inspector (S.D.I.)
+C. Superintendent of Post Offices
+D. Divisional Engineer
+Answer: B
+Explanation: A notice of hours of business in form M-6(c) will be supplied to each branch office by the S.D.I., as per Rule 5.
+
+Q2. What is the maximum weight limit for postal articles carried by a village postman or extra departmental delivery agent?
+A. 5 kg
+B. 10 kg
+C. 15 kg
+D. 20 kg
+Answer: B
+Explanation: The weight of postal articles, including parcels, carried by a village postman or extra departmental delivery agent should not exceed 10 kg, according to Rule 9.
+
+Q3. For how many years should the BO Account (PA-6) and BO Journal (PA-5) be preserved after they are fully used?
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+Answer: C
+Explanation: Under Rule 21, the BO Account (PA-6) and the BO Journal (PA-5) must be preserved for 3 years after they are used up.
+
+Q4. Which colour check slip is used to label an ordinary station paid and unpaid bundle?
+A. White
+B. Blue
+C. Pink
+D. Green
+Answer: C
+Explanation: A check slip is a label tied to the top of a bundle. A pink check slip is used specifically for an Ordinary Station Paid and Unpaid Bundle under Rule 64.
+
+Q5. What does a red ink entry made by the Branch Postmaster in the Village Postman Visit Book (MS-86) signify?
+A. The village must be visited daily regardless of mail volume
+B. The village is entirely removed from the delivery jurisdiction
+C. The village has a changeable letter-box plate
+D. The village is not obliged to be visited on every trip but must be visited when marked
+Answer: D
+Explanation: Entries in red ink in MS-86 indicate that the ABPM is not obliged to visit the village on every trip but must visit the villages marked in red, according to Rule 9.
+
+Q6. Which form serves as a record of all irregularities, mis-sendings, and misdirections noticed in a branch office?
+A. MS-87
+B. MS-18
+C. MS-2
+D. Pa-5
+Answer: C
+Explanation: The error book (MS-2) is maintained in all branch offices to record every serious or petty irregularity committed or noticed, per Rule 36.
+
+Q7. During which period is the half-yearly enumeration return (MS-6) compiled each year?
+A. First week of January and July
+B. Second week of February and August
+C. Third week of March and September
+D. Last week of April and October
+Answer: B
+Explanation: Under Rule 45, the time fixed for making the half-yearly enumeration is the second week of the months of February and August each year (8th to the 21st).
+
+Q8. How must unpaid and insufficiently paid unregistered articles posted in the branch office for local delivery be processed?
+A. Delivered without any postage taxation
+B. Sent directly to the Account Office for taxation
+C. Returned to the sender immediately
+D. Taxed with postage and impressed with the postage-due stamp
+Answer: D
+Explanation: The BPM must ensure such articles intended for delivery from the office itself are properly taxed with postage and impressed with the postage-due stamp, according to Rule 67.
+
+Q9. Up to what maximum monetary value can registered letters and parcels be insured at an authorized branch office?
+A. Rs. 100
+B. Rs. 500
+C. Rs. 600
+D. Rs. 1000
+Answer: C
+Explanation: Registered letters and parcels may be insured at a branch office up to the value of Rs. 600, provided the office is authorized to deliver insured articles, as stated in Rule 93.
+
+Q10. When an office is supplied with both cloth and leather cash bags, under what condition should the cloth cash bag be utilized?
+A. When the remittance exceeds Rs. 500
+B. When the remittance includes heavy coins
+C. When the remittance consists of currency notes only and does not exceed Rs. 500
+D. When the remittance is sent to the Regional Postal Store Depot
+Answer: C
+Explanation: Rule 130 specifies that cloth bags are used for remittances of currency notes only that do not exceed Rs. 500. Leather bags are used for coins or amounts exceeding Rs. 500.
+
+Q11. What action is required if an inland letter marked "Registered" is found in a letter-box without full prepayment of postage and registration fees?
+A. It is returned to the sender without processing
+B. It is processed as an ordinary unregistered letter
+C. It is charged with a fee equal to double the usual registration fee plus the postage due
+D. It is confiscated and sent to the Returned Letter Office
+Answer: C
+Explanation: According to Rule 85, such an article should be registered and charged with a fee equal to double the usual registration fee and the amount of postage due.
+
+Q12. For which specific days must the branch postmaster maintain the Yearly Village Return (MS-88)?
+A. The first fourteen days of March
+B. The entire month of April
+C. The last week of December
+D. The first ten days of January
+Answer: A
+Explanation: Rule 46 dictates that the return showing the number of articles received daily for delivery in each village should be kept during the first fourteen days of March each year.
+
+Q13. When preparing labelled bundles, what defines a "Territorial Bundle"?
+A. An express bundle containing exactly 15 articles for immediate sorting
+B. A sorting bundle prepared for a state or foreign country when the number of articles is 25 or more
+C. A station bundle containing ordinary unregistered articles for a particular station
+D. A deferred bundle that can be sorted the following business day
+Answer: B
+Explanation: As defined in Rule 65, when a sorting bundle is prepared for a state, defined tract, or foreign country and contains 25 or more articles, it is termed a territorial bundle.
+
+Q14. If an article received by the foreign post is unpaid or insufficiently paid, how should the branch office tax it?
+A. Tax it with double the deficiency in Indian currency
+B. Tax it with a standard flat rate penalty
+C. Send it back to the foreign sender
+D. It should not be taxed with postage by the branch office under any circumstances
+Answer: D
+Explanation: Rule 66 explicitly states that an article received by the foreign post should not, under any circumstances, be taxed with postage by the branch office.
+
+Q15. In the Branch Office account (Pa-6), under which specific head must the cash collected on account of delivered V.P. articles be credited?
+A. Unclassified payments
+B. Cash collected
+C. Money orders issued
+D. Postage collections
+Answer: C
+Explanation: Rule 124 strictly mandates that the amount collected on account of V.P. articles delivered should be credited under the head "Money orders issued," and never under "Cash collected."
+
+Q16. In the organizational structure of the Department of Posts, how many total Postal Circles are headed by a Chief Postmaster General (CPMG)?
+A. 18
+B. 21
+C. 23
+D. 25
+Answer: C
+Explanation: The organizational chart notes that there are a total of 23 Circles headed by a CPMG in the Department of Posts.
+
+Q17. Where is the Headquarters of the Chhattisgarh Postal Circle situated?
+A. Bilaspur
+B. Raipur
+C. Bhilai
+D. Jagdalpur
+Answer: B
+Explanation: The Circle Headquarters list in Chapter I identifies Raipur as the headquarters for the Chhattisgarh Postal Circle.
+
+Q18. Where are the two Security Presses of the Department located?
+A. Nashik and Hyderabad
+B. Mumbai and Kolkata
+C. Aligarh and Bhubaneswar
+D. Chennai and Trissur
+Answer: A
+Explanation: Chapter I lists the locations of the Security Press as Nashik and Hyderabad.
+
+Q19. Which form number is prescribed for preparing an emergent indent for stock articles?
+A. SK-1
+B. SK-2
+C. SK-4
+D. SK-8
+Answer: B
+Explanation: Rule 277 specifies that an emergent indent should be maintained in form S.K.-2 or Genl.-18 and prepared in triplicate.
+
+Q20. Which specific register must be kept in every office to maintain the inventories of dead stock and stores?
+A. General Stock Book (Form S.K.-1)
+B. Stock Register of Bags (Form S.K.-1 (a))
+C. Stationery Register (Form SK-8)
+D. Master Schedule of Forms
+Answer: A
+Explanation: Rule 272 and 269-B mandate that a general stock book in Form S.K.-1 must be kept in every office for both dead stock and stores.
+
+Q21. Who heads the Base Office in the Department of Posts organization?
+A. Director General Postal Services
+B. Chief Postmaster General
+C. Major General called Additional Director General
+D. Deputy Director General (Mail Operations)
+Answer: C
+Explanation: The notes in Chapter I specify that the Base Office is headed by a Major General called Additional Director General (75% Civil + 25% Armed).
+
+Q22. What is the regulatory stance on the submission of joint petitions by postal employees regarding personal matters?
+A. Joint petitions are encouraged to save administrative time
+B. Joint petitions are strictly inadmissible, but identical individual petitions are permitted
+C. Joint petitions are allowed only for Group D staff
+D. Joint petitions must be addressed directly to the President
+Answer: B
+Explanation: Rule 116 states that joint petitions are inadmissible. However, an identical petition made by more than one employee individually is permitted if the circumstances apply personally to each.
+
+Q23. A petition to a higher authority is liable to be rejected without investigation if it is submitted after what duration from the date the order was communicated?
+A. One month
+B. Three months
+C. Six months
+D. One year
+Answer: C
+Explanation: According to Rule 118-D, petitions against the orders of a lower authority are liable to be rejected if submitted more than six months after the date of communication of the order.
+
+Q24. Before instituting a criminal prosecution in a non-cognizable case, whose previous sanction must generally be obtained?
+A. Inspector of Post Offices
+B. Superintendent of Post Offices
+C. Head of the Circle
+D. Director General
+Answer: C
+Explanation: Rule 133 mandates that a criminal prosecution in a non-cognizable case must not be instituted without the previous sanction of the Head of the Circle, barring exceptional emergencies.
+
+Q25. How long must an official's personal security bond be preserved after they die or leave the Department?
+A. 1 year
+B. 3 years
+C. 5 years
+D. 10 years
+Answer: C
+Explanation: Rule 247 specifies that when an official dies, leaves the Department, or is promoted to a post not requiring security, the bond will be preserved for a period of 5 years.
+
+Q26. If the key to a mail bag lock is lost by an office, what is the authorized procedure to replace it?
+A. A duplicate key must be manufactured locally immediately
+B. The lock should be broken open, sent to the Depot, and a new one supplied
+C. The Divisional Office will dispatch the master key
+D. The branch postmaster will purchase a commercial replacement lock
+Answer: B
+Explanation: Rule 270 states that if a key is lost, the lock should be broken open and sent to the Depot. A new one will be supplied, and under no circumstances should a duplicate key be made locally.
+
+Q27. When calculating the total number of forms required for the Master Schedule, what is the standard margin added for wastage on forms used by the public?
+A. 2%
+B. 5%
+C. 10%
+D. 15%
+Answer: C
+Explanation: Rule 287 establishes a wastage margin of 2% for departmental forms and 10% for forms used by the public. Heads of circles may increase it up to 15% only for selected big offices.
+
+Q28. What is the fixed stationary charge allocated per month for each clerical staff member of the Postal/SBCO?
+A. Rs. 8
+B. Rs. 12
+C. Rs. 14
+D. Rs. 17
+Answer: C
+Explanation: Rule 341-A details the fixed stationary charges, specifically allocating Rs. 14 per month for each clerical staff member of Postal/SBCO.
+
+Q29. Except for exempted entities, what is the required earnest money deposit that must accompany a tender for the execution of works?
+A. 1% to 2% of the estimated value
+B. 2% to 5% of the estimated value
+C. 5% to 10% of the estimated value
+D. A flat rate of Rs. 50,000
+Answer: B
+Explanation: Rule 427 requires an earnest money deposit of 2-5% of the estimated value of goods for tenders, barring exemptions for registered firms, SSIs, and PSUs.
+
+Q30. In the Office of a Superintendent of Post Offices, which File Head is dedicated to correspondence regarding Pension and Gratuities?
+A. File Head A
+B. File Head B
+C. File Head C
+D. File Head D
+Answer: C
+Explanation: Rule 637 specifies the classification of correspondence. File Head C is strictly assigned to "Pension and Gratuities."
+
+Q31. By what date must the annual report to the Director General be submitted each year?
+A. 1st April
+B. 1st May
+C. 16th June
+D. 30th September
+Answer: C
+Explanation: Rule 696 dictates that the annual report to the Head of Circle must be submitted by 1st May, and the report to the DG must be submitted before 16th June.
+
+Q32. When land and buildings are transferred from the Department of Posts to the Railway Department, how is the charge calculated?
+A. At no charge if the book value is zero
+B. Half the market value
+C. Book value or market value, whichever is less
+D. Full market value
+Answer: D
+Explanation: Rule 465 explicitly states that in the case of transfers to and from the Railway Department, the full market value will be charged in each case.
+
+Q33. For RMS buildings constructed under the Deposit Scheme at Railway stations, what is the prescribed depreciation and maintenance charge for civil work?
+A. 2% of the original cost including land
+B. 2.4% of the original cost excluding land
+C. 6% of the market value of the land
+D. 8% of the original cost but excluding the cost of land
+Answer: D
+Explanation: Rule 529 states that for RMS buildings constructed under the Deposit Scheme, the charge is 8% of the original cost but excluding the cost of land.
+
+Q34. Under what condition can a regular departmental official be exempted from giving a security deposit?
+A. Drawing pay equal to the fixed amount and above, or having 20 years of service, at the discretion of the Divisional Head
+B. Any official with 10 years of unblemished service
+C. Only officials working in circle or administrative offices
+D. Any temporary official appointed for less than six months
+Answer: A
+Explanation: Rule 192 allows the Divisional Head to use discretion to exempt an official drawing a pay equal to the fixed amount and above, or having 20 years' service, from furnishing security.
+
+Q35. When an original project estimate for a building work experiences an excess in cost, up to what threshold is a revised expenditure sanction NOT necessary?
+A. 5 per cent of the sanctioned amount
+B. 10 per cent of the sanctioned amount
+C. 15 per cent of the sanctioned amount
+D. 20 per cent of the sanctioned amount
+Answer: B
+Explanation: Rule 502 specifies that if the excess actual expenditure does not exceed more than 10 per cent of the sanctioned amount, no revised sanction will be necessary.
+
+Q36. During a disciplinary enquiry, who has the right to take the assistance of another Government servant to present their case?
+A. The Disciplinary Authority
+B. The Enquiry Officer
+C. The Accused Officer
+D. The Presenting Officer
+Answer: C
+Explanation: Rule 5 (and Rule 14(8) of CCS (CCA) Rules) grants the Accused Officer the right to take the assistance of another Government servant to present their defense without needing prior permission.
+
+Q37. What happens to ongoing disciplinary proceedings if the alleged offender passes away?
+A. They are transferred to the next of kin
+B. They are suspended for six months
+C. They come to an end immediately
+D. They continue ex-parte until a final decision is reached
+Answer: C
+Explanation: Rule 79 dictates that disciplinary proceedings abate immediately upon the death of the alleged offender, and no further proceedings can be continued.
+
+Q38. Under the guidelines for consulting the Central Vigilance Commission (CVC), which types of cases must be referred to them?
+A. Cases involving purely technical lapses like late attendance
+B. Cases where an official has applied for a transfer
+C. Cases involving an allegation of corruption or improper motive
+D. All minor penalty proceedings for Group D staff
+Answer: C
+Explanation: Note I to Rule 12 clarifies that only cases involving an allegation of corruption or improper motive, or where facts indicate such an element, need to be referred to the CVC.
+
+Q39. Ordinarily, what is the maximum recommended time limit for the total period of suspension (investigation and disciplinary proceedings) without obtaining specific orders from a superior authority?
+A. Three months
+B. Six months
+C. Nine months
+D. Twelve months
+Answer: B
+Explanation: The note under Rule 17 states that the total period of suspension (both investigation and proceedings) should not ordinarily exceed six months unless extended by specific order of the immediately superior authority.
+
+Q40. Which of the following recoveries is strictly prohibited from being deducted from the subsistence allowance of a suspended Government servant?
+A. Income tax and super tax
+B. Subscription to the General Provident Fund (GPF)
+C. House rent and allied charges
+D. Repayment of loans taken from the Government
+Answer: B
+Explanation: Rule 30 explicitly lists recoveries that must not be made from the subsistence allowance, which includes the subscription to GPF, court attachments, and recoveries of loss to the Government.
+
+Q41. How far in advance must every proposal for the creation, revision, or abolition of a fixed establishment be submitted to the Director General?
+A. At least one month in advance
+B. At least two months in advance
+C. At least three months in advance
+D. At least six months in advance
+Answer: C
+Explanation: Rule 3 under Establishment norms requires that every proposal for a fixed establishment must be submitted to the Director General at least three months in advance of the desired date of sanction.
+
+Q42. What is the mandated interval for conducting the statistical review of the work of Branch Offices?
+A. Every year
+B. Every 2 years
+C. Every 3 years
+D. Every 5 years
+Answer: C
+Explanation: Rule 9 states that the periodical review of work for Branch Offices should be conducted every 3 years.
+
+Q43. What is the maximum period for which an experimental post office can be sanctioned at any one time?
+A. Three months
+B. Six months
+C. Twelve months
+D. Twenty-four months
+Answer: B
+Explanation: Rule 14 specifies that no experimental post office, postman, or village postman may be sanctioned for a longer period than six months at a time.
+
+Q44. When proposing the opening of a Branch Post Office in normal rural areas, what is the minimum anticipated revenue required relative to the cost?
+A. 15% of the cost
+B. 25% of the cost
+C. 33.33% of the cost
+D. 50% of the cost
+Answer: C
+Explanation: According to the norms in Rule 13, for normal areas with 3000 population, the minimum anticipated revenue will be 33.33% of the cost.
+
+Q45. When calculating the income of a post office, what percentage of the money order commission on money orders paid by the office is taken into account?
+A. 24%
+B. 38%
+C. 50%
+D. 100%
+Answer: B
+Explanation: Rule 18 details the calculation of income, specifying that 38% of the money order commission on money orders paid by the office is considered.
+
+Q46. For how long must the tabulated result sheets or mark sheet registers of departmental examinations be preserved?
+A. 6 months
+B. 12 months
+C. 3 years
+D. 5 years
+Answer: C
+Explanation: Rule 10 under Departmental Examinations states that tabulated result sheets or mark sheet registers should be preserved for a period of 3 years from the date of announcement of the results.
+
+Q47. Under Rule 38, what is the maximum number of inter-circle and intra-circle transfers an male official is eligible for during their entire service?
+A. One inter-circle and one intra-circle transfer
+B. Two inter-circle and two intra-circle transfers
+C. Three inter-circle transfers only
+D. Unlimited transfers subject to administrative approval
+Answer: B
+Explanation: Rule 11 states that an male official will be eligible for two inter-circle and two intra-circle transfers during their entire service. (three for female/PwD employees)
+
+Q48. What is the mandatory gap required before an employee can avail a second transfer of the same category (inter-circle or intra-circle) under Rule 38?
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+Answer: C
+Explanation: Rule 11 mandates a gap of 3 years for the same category transfer for the second time under Rule 38.
+
+Q49. Which authority is competent to approve an Intra-Region transfer under Rule 38?
+A. Chief Postmaster General (CPMG)
+B. Postmaster General (PMG)
+C. Superintendent of Post Offices
+D. Director General
+Answer: B
+Explanation: Rule 11(d) specifies the competent authorities for Rule 38 transfers. For an Intra-Region transfer, the competent authority is the PMG.
+
+Q50. In cadres where recruitment is made partly from departmental candidates and partly from outsiders, how is the seniority between the two groups determined?
+A. Based strictly on the marks obtained in the competitive examination
+B. Based on the date of birth of the candidates
+C. Outsiders rank senior if they have higher educational qualifications
+D. Departmental candidates should always rank senior to outsiders
+Answer: D
+Explanation: Rule 10(a) under Recruitment, Appointment and Transfers dictates that where recruitment is mixed, departmental candidates should always rank senior to outsiders.

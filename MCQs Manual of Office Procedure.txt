@@ -1,0 +1,599 @@
+1. Which of the following defines a "Branch" in the organizational structure of a government department?
+A) A unit within a department with a specific task assigned to it
+B) The unit of a Division that may comprise a couple of Sections/Units/Cells
+C) The central registry and the central issue section combined
+D) Any of the Ministries or Secretariats mentioned in the Allocation of Business Rules
+Correct Answer: B
+Explanation: A 'Branch' is defined as the Unit of a Division and may comprise a couple of Sections/Units/Cells.
+
+2. What is the precise definition of a "Case"?
+A) A legal matter pending in a subordinate court
+B) A current file or a receipt together with other related papers, if any
+C) Voluminous enclosures to a communication
+D) A file on which action is complete and recorded
+Correct Answer: B
+Explanation: A 'Case' denotes a current file or a receipt together with other related papers, if any.
+
+3. The 'Correspondence portion' of a file includes which of the following?
+A) Detailed and lengthy appendices
+B) Remarks recorded on a case to facilitate its examination
+C) Receipts and office copies of communications issued, including self-contained inter-departmental notes
+D) Only the classified dak bearing a security grading
+Correct Answer: C
+Explanation: The 'Correspondence portion' contains 'receipts' and 'office copies' of the communications issued from the file, including self-contained inter-departmental notes.
+
+4. Under what legislation is a 'Departmental Record Officer (DRO)' nominated?
+A) The Official Secrets Act, 1923
+B) The Right to Information Act, 2005
+C) The Public Records Act, 1993
+D) The Government of India (Transaction of Business) Rules, 1961
+Correct Answer: C
+Explanation: The Departmental Record Officer (DRO) is an officer nominated under the Public Records Act, 1993.
+
+5. What does the term "Docketing" mean in the context of file management?
+A) Making entries in the notes portion of a file about the serial number assigned to each item of correspondence for identification
+B) Creating appendices to notes and correspondence
+C) Assigning a security grading to a fresh receipt
+D) The process of transferring recorded files to the National Archives of India
+Correct Answer: A
+Explanation: 'Docketing' is the making of entries in the notes portion of a file about the serial number assigned to each item of correspondence for its identification.
+
+6. Which type of dak is handled exclusively by the addressee or designated specialized sections?
+A) Routine correspondence
+B) Demi-official letters
+C) Classified dak bearing a security grading
+D) Inland letter cards
+Correct Answer: C
+Explanation: 'Classified dak' bears a security grading (confidential, secret, etc.) and is handled with special care, normally not opened by the general Central Registry.
+
+7. Which rules allocate the business of the Government amongst its various Ministries and Departments?
+A) Government of India (Transaction of Business) Rules, 1961
+B) Government of India (Allocation of Business) Rules, 1961
+C) Central Secretariat Manual of Office Procedure Rules
+D) General Financial Rules, 2017
+Correct Answer: B
+Explanation: The Government of India (Allocation of Business) Rules, 1961 allocates the business of government amongst its various Ministries/Departments.
+
+8. What is the primary role of an "Attached Office"?
+A) They function as field establishments for detailed execution of policies
+B) They act as Constitutional bodies to audit government expenditures
+C) They provide detailed executive directions required in the implementation of policies laid down by the Ministry
+D) They manage Public Sector Undertakings on behalf of the President
+Correct Answer: C
+Explanation: Attached Offices provide detailed executive directions required in the implementation of the policies and serve as a repository of technical information.
+
+9. Which of the following is an example of a Statutory Body?
+A) Election Commission of India
+B) Comptroller and Auditor General of India
+C) Central Vigilance Commission
+D) Union Public Service Commission
+Correct Answer: C
+Explanation: The Central Vigilance Commission is an example of a Statutory Body (established under an Act of Parliament), whereas the others listed are Constitutional Bodies.
+
+10. A Section Officer (SO) is responsible for all of the following EXCEPT:
+A) Distribution of work among the staff evenly
+B) Taking intermediate routine action
+C) Formulation of national policies
+D) Maintenance of order and discipline in the section
+Correct Answer: C
+Explanation: Formulation of national policies is the responsibility of the Ministry/Department heads (like the Secretary/Minister), not the Section Officer, whose duties are operational and supervisory within the section.
+
+11. What is the primary duty of the "Dealing Hand" regarding incoming receipts?
+A) Taking dictation in shorthand
+B) Opening, maintenance, and custody of files, and identifying/examining the issues involved
+C) Dispatching non-postal communications
+D) Maintaining the personal records of the Minister
+Correct Answer: B
+Explanation: Dealing hands (Assistants/UDCs) are responsible for opening and maintaining files, adding receipts, linking related files, and examining the issues involved to record a note.
+
+12. Outside of office hours, who receives dak marked 'Immediate' and addressed by name?
+A) The Central Registry (CR) unconditionally
+B) The night duty clerk of the Department
+C) The recipient at their residence
+D) The Information Facilitation Counter
+Correct Answer: C
+Explanation: Outside office hours, dak will be received by the addressee himself at his residence if marked 'Immediate' and addressed by name.
+
+13. Who is responsible for opening all covers EXCEPT those addressed to Ministers/Officers by name or bearing a security grading?
+A) Desk Functionary
+B) Central Registry (CR) / Information Facilitation Centre (IFC)
+C) Night Duty Clerk
+D) Section Officer
+Correct Answer: B
+Explanation: All covers, except those addressed to Ministers/Officers by name or bearing a security grading, are opened by the Central Registry (CR) or IFC.
+
+14. How should the receipt of dak in person be acknowledged?
+A) By stamping the office seal only
+B) By signing the name in full and in ink with date and designation
+C) By returning the envelope to the messenger
+D) By sending an email confirmation
+Correct Answer: B
+Explanation: The receipt of dak, in person, must be acknowledged by the recipient signing his name in full and in ink with date and designation.
+
+15. What is the purpose of using "Standard Process Sheets"?
+A) For drafting Cabinet notes
+B) For dealing with cases of repetitive nature e.g., leave sanction, GPF Advances
+C) For opening classified files
+D) For inter-departmental U.O. notes
+Correct Answer: B
+Explanation: Standard process sheets are devised to deal with cases of a repetitive nature efficiently without the need to record detailed notes.
+
+16. What is the maximum number of levels through which a file should pass for a decision?
+A) Two
+B) Three
+C) Four
+D) Five
+Correct Answer: C
+Explanation: The number of levels through which a file passes for a decision shall not exceed four.
+
+17. When level-jumping is utilized for an urgent decision, what must occur upon the file's return?
+A) It bypasses all junior levels entirely
+B) It must pass through all the levels jumped over, who could resubmit the case for reconsideration if necessary
+C) It is sent directly to the National Archives
+D) It must be countersigned by the Minister
+Correct Answer: B
+Explanation: Wherever level jumping is done, each such case on its return will pass through all the levels jumped over.
+
+18. What ink colors are strictly permitted for making hand-written notes on a file?
+A) Green or Red
+B) Black or Blue
+C) Only Blue
+D) Any legible color
+Correct Answer: B
+Explanation: Black or Blue ink shall be used by all categories of staff and officers. In case of hand-written noting, only black or blue ink shall be used.
+
+19. If a senior officer discovers an error in a note submitted by a junior officer, what is the correct line of action?
+A) The senior officer should instruct the junior to replace the note entirely
+B) The senior officer should paste over the incorrect portion of the note
+C) The senior officer should record their own note giving their views, correcting the facts kept in earlier notes
+D) The senior officer should use correction fluid to amend the junior's note
+Correct Answer: C
+Explanation: Senior officers should not modify or replace notes recorded by juniors. They should record their own notes, and pasting over is strictly prohibited.
+
+20. When withdrawing a final decision already communicated to a party due to incorrect facts, what prerequisite must be met?
+A) Verbal consent of the affected party
+B) Immediate issuance of a Corrigendum without delay
+C) Approval of an officer higher than the one who took the original decision
+D) Consultation with the constitutional bench of the Supreme Court
+Correct Answer: C
+Explanation: Withdrawal of an communicated final decision must be permitted only after the approval of an officer higher than the one who took the original decision.
+
+21. If a reference from another department seeks an opinion requiring detailed examination, how should the receiving department process it?
+A) By examining it separately through routine notes on a separate file created by the receiving department
+B) By writing extensively on the margins of the originating department's file
+C) By verbally communicating the decision to the originating department
+D) By returning it unexamined
+Correct Answer: A
+Explanation: Detailed examination is done separately through routine notes on a separate file (created by the receiving department). Only the final result is recorded on the originating file.
+
+22. What action should an officer take if they give urgent oral instructions to a subordinate?
+A) The officer is not required to confirm them
+B) The officer should follow it up by a written confirmation at the earliest
+C) The subordinate must draft a cabinet note
+D) The instructions must be ratified by an Under Secretary
+Correct Answer: B
+Explanation: If an officer gives a direction without time for written instructions, they should follow it up by a written confirmation at the earliest.
+
+23. If a subordinate receives oral instructions from a Minister that violate established rules, what is the prescribed course of action?
+A) Execute the instructions immediately due to the Minister's authority
+B) Refuse to act and inform the media
+C) Seek clear orders from the Secretary about the line of action to be taken, stating the instructions violate rules
+D) Transfer the file to another department
+Correct Answer: C
+Explanation: In cases of oral orders not in accordance with norms, clear orders from the Secretary should be sought outlining the line of action.
+
+24. How are papers required to be filed within a physical file cover?
+A) Punched on the right side and tagged from left to right
+B) Glued to the back cover of the file
+C) Punched neatly on the left hand top corner and tagged in chronological order, from right to left
+D) Kept loose in a folder for easy retrieval
+Correct Answer: C
+Explanation: Papers are punched neatly on the left-hand top corner and tagged onto the appropriate part of the file in chronological order, from right to left.
+
+25. When filing the 'notes portion' into a single file cover, how is the tag arranged?
+A) The right end of the tag is tied to the file cover
+B) The left end of the tag is tagged onto the left side of the file cover, leaving the right end untagged
+C) Both ends are tied into a knot
+D) The tag is removed after filing is complete
+Correct Answer: B
+Explanation: Left end of the tag in the note portion is tagged on to the left side of the file cover and the right end remains untagged.
+
+26. At what page threshold does a file ('notes' plus 'correspondence' portion) become 'bulky', necessitating a 'Volume II'?
+A) 50-100 pages
+B) 100-150 pages
+C) 150-200 pages
+D) 300-500 pages
+Correct Answer: C
+Explanation: When the 'notes' plus the 'correspondence' portion becomes bulky (exceeds 150-200 pages), it is marked 'Volume I', and a 'Volume II' is opened.
+
+27. In the arrangement of papers in a case, what is placed at the very top (first)?
+A) The current fresh receipt
+B) Reference books
+C) Notes portion of the current file
+D) Standing guard file
+Correct Answer: B
+Explanation: The papers in a case are arranged with 'reference books' at the top, followed by notes portion, running summary, draft for approval, correspondence portion, etc.
+
+28. What does "PUC" stand for in file management referencing?
+A) Paper Under Correction
+B) Priority Under Consideration
+C) Paper Under Consideration
+D) Primary Unit Case
+Correct Answer: C
+Explanation: The document under consideration on a file shall be flagged 'PUC' (Paper Under Consideration).
+
+29. What color is mandated for the file covers of Lok Sabha Questions and Motions?
+A) Green
+B) Red
+C) Yellow
+D) Blue
+Correct Answer: B
+Explanation: File covers of the Lok Sabha and Rajya Sabha Questions, Motions etc., are to be in red and green colors respectively.
+
+30. The urgency label 'Immediate' is applied strictly to:
+A) All incoming dak from VIPs
+B) Cases which merit disposal in precedence to others of ordinary nature
+C) Cases requiring prompt attention
+D) Cases pending for over 7 days
+Correct Answer: C
+Explanation: The label 'Immediate' is used only in cases requiring prompt attention. 'Priority' is used for precedence over ordinary nature, and 'Top Priority' for extremely urgent cases.
+
+31. A 'Demi-official letter' is best utilized for which of the following?
+A) Issuing statutory notifications
+B) Drawing personal attention of the addressee to a matter
+C) Sending routine acknowledgments
+D) Conveying final government decisions to subordinate offices
+Correct Answer: B
+Explanation: A Demi-official (D.O.) letter is an informal mode used to draw the personal attention of the addressee or for exchange of information.
+
+32. Communication of official information to the press and other news media shall normally be processed through:
+A) The Information Facilitation Counter
+B) The Press Information Bureau
+C) The Branch Officer
+D) The Central Registry
+Correct Answer: B
+Explanation: Official information to the press and other news media shall normally be communicated through the Press Information Bureau (PIB).
+
+33. When is the restrictive classification 'For official use only' assigned to a printed report?
+A) For all internal circulars unconditionally
+B) Only when the disclosure would not be in the public interest, equivalent to refusing to lay it before Parliament
+C) Whenever requested by a Section Officer
+D) To prevent other departments from viewing the rules
+Correct Answer: B
+Explanation: It is assigned only if disclosure is against public interest; a useful test is whether the Minister would be justified in refusing to lay it before Parliament.
+
+34. Under the 'Single File System' (SFS), what is the correct procedure for noting?
+A) Noting MUST be done exclusively in a new file created by the Department
+B) As a rule, all noting in the Department will be done directly on the Non Secretariat Office (NSO) file
+C) The NSO file is purely for correspondence and no notes can be added to it
+D) All noting is done verbally and no written record is kept
+Correct Answer: B
+Explanation: As a rule, all noting in the Department will be on the NSO file, unless sensitive issues require 'duplicate' e-files under special orders.
+
+35. Which authority must authenticate all orders and instruments made in the name of the President of India?
+A) Any Multitasking Staff (MTS)
+B) The appropriate Minister-in-charge
+C) An officer of and above the rank of Under Secretary, or other authorized officer under to the Authentication Rules, 2002
+D) The Comptroller and Auditor General
+Correct Answer: C
+Explanation: Authentication requires an officer having regular or ex-officio secretariat status of and above the rank of Under Secretary.
+
+36. References asking for the views or advice of the Comptroller and Auditor General of India should be made only by or through:
+A) The Ministry of Law and Justice
+B) The Ministry of Finance
+C) The Department of Personnel and Training
+D) The Prime Minister's Office
+Correct Answer: B
+Explanation: References to the CAG for views or advice shall be made only by or through the Ministry of Finance.
+
+37. A demi-official communication addressed to the Chief Secretary of a State Government must NOT be sent by an officer below the rank of:
+A) Under Secretary
+B) Deputy Secretary
+C) Joint Secretary
+D) Section Officer
+Correct Answer: C
+Explanation: In case of demi-official communication to the Chief Secretary of a State, the level shall not be below the level of Joint Secretary.
+
+38. Communications meant for the Lok Sabha Secretariat should be addressed to:
+A) The Speaker of the Lok Sabha directly
+B) The concerned Members of Parliament directly
+C) The Secretary concerned within the Secretariat
+D) The Prime Minister
+Correct Answer: C
+Explanation: Communications requiring urgent or high-level attention should be addressed to the Secretaries concerned and not to the Speaker or the Chairman directly.
+
+39. What is the prescribed timeline for acknowledging a communication received from a Member of Parliament or a VIP?
+A) Within 7 days
+B) Within 15 days
+C) Within 30 days
+D) Acknowledgments are not required for VIP communications
+Correct Answer: B
+Explanation: Each communication received from an MP/VIP shall be acknowledged within 15 days, followed by a reply within the next 15 days.
+
+40. What is the minimum officer level at which a reply to a Member of Parliament's communication can be signed?
+A) Section Officer
+B) Under Secretary
+C) Deputy Secretary
+D) Secretary only
+Correct Answer: B
+Explanation: The minimum level at which such replies are sent to Members of Parliament and VIPs is that of Under Secretary, and that too in letter form only.
+
+41. In the file numbering system, how are the standard heads and sub-heads treated?
+A) Standard heads bear consecutive serial numbers, but no such numbers are allocated to sub-heads
+B) Both standard heads and sub-heads are assigned alphabetic codes
+C) Sub-heads are numbered sequentially, while standard heads are not numbered
+D) There is no numbering; only titles are used
+Correct Answer: A
+Explanation: Standard heads bear consecutive serial numbers; no such numbers, however, will be allocated to standard sub-heads.
+
+42. What distinguishes a 'Part File' from a main file?
+A) It is permanently separated from the main file for archiving
+B) It is opened to process a fresh receipt locally when the main file is not available, and must be merged back once the main return
+C) It contains only the classified documents of a case
+D) It is an exact duplicate kept by the DRO
+Correct Answer: B
+Explanation: A part file is opened when the main file is unavailable. Once the main file returns, part files will be merged with it.
+
+43. Which numbering system is recommended for subjects common to all Ministries/Departments like establishment, finance, and RTI?
+A) Subject Classification based file numbering system
+B) Functional file index listed in the Record Retention Schedule of DARPG
+C) Alphabetic File Prefixing
+D) Consecutive Central Diarizing
+Correct Answer: B
+Explanation: For common subjects, the common standardized functional file index/file-numbering system issued by the DARPG is followed.
+
+44. When a section receives transferred closed records from another department, what must it NOT do?
+A) Read the closed files
+B) Divide, reclassify, or renumber the closed files transferred to it
+C) Store them in an electronic environment
+D) Place them in the department's Record Room
+Correct Answer: B
+Explanation: The department/section taking over the records will not divide, reclassify, or renumber the closed files transferred to it.
+
+45. How is a misplaced paper-based file reconstructed?
+A) It is waived and closed without action
+B) Reconstructed from memory by the dealing hand
+C) By obtaining copies of correspondences from the corresponding department, arranging them chronologically into a new duplicate file, and writing a self-contained note
+D) By issuing a gazette notification
+Correct Answer: C
+Explanation: Reconstructing a file involves obtaining correspondence copies, arranging them chronologically, and preparing a self-contained note based on them.
+
+46. What constitutes the 'Records Management' cycle as defined under the procedure?
+A) Generation, distribution, and consumption
+B) Opening, routing, linking, and filing
+C) Recording, retention, retrieval, and disposal by transferring records to the National Archives of India
+D) Diarizing, docketing, referencing, and classifying
+Correct Answer: C
+Explanation: Records management covers activities concerning recording, retention, retrieval, and disposal by transferring records to NAI.
+
+47. The 'Precedent Book' in a section is used for:
+A) Keeping track of attendance and leave
+B) Maintaining standard process sheets
+C) Keeping note of important rulings and decisions having a precedent value for ready reference
+D) Indexing VIP dak
+Correct Answer: C
+Explanation: Every section updates its precedent book for keeping note of important rulings and decisions having a precedent value.
+
+48. Before recorded files can be requisitioned from the Archival records, a requisition form must be filled out as prescribed under the:
+A) Official Records Act, 1923
+B) Information Technology Act, 2000
+C) Right to Information Act, 2005
+D) Public Records Act, 1993
+Correct Answer: D
+Explanation: Requisitioning requires a form prescribed under the Public Records Act, 1993.
+
+49. How frequently must a classified file be reviewed for potential declassification?
+A) Once every year
+B) Once in three years
+C) Once in five years
+D) Once in ten years
+Correct Answer: C
+Explanation: Every classified file shall be reviewed once in five years for declassification.
+
+50. For carrying 'Secret' papers/files outside the office for meetings, what is the minimum required officer level for authorization?
+A) Section Officer
+B) Under Secretary
+C) Director
+D) Joint Secretary
+Correct Answer: B
+Explanation: An officer not below the level of Under Secretary may carry Secret papers, with the written authorization of a Joint Secretary level officer.
+
+51. As a general rule for checking delays, what is the maximum duration an official can keep a case pending without recording a specific explanation?
+A) 3 working days
+B) 7 working days
+C) 15 working days
+D) 30 working days
+Correct Answer: B
+Explanation: No official shall keep a case pending for more than 7 working days. If it remains longer, an explanation must be recorded.
+
+52. Who is strictly authorized to take dictation in shorthand and assist in the drafting of correspondence?
+A) Multitasking Staff (MTS)
+B) Lower Division Clerk (LDC)
+C) Personal Staff Members of Officers (e.g., PS, PA)
+D) Departmental Record Officer (DRO)
+Correct Answer: C
+Explanation: Taking dictation and transcription is the responsibility of Personal Staff Members (Staff Officer/PS/PA/Stenographer).
+
+53. Which of the following elements is a mandatory component of a Citizen's/Client's Charter?
+A) Disciplinary actions against employees
+B) Annual budget of the organization
+C) Vision and Mission Statement, standards of service, and details of Grievance Redress Mechanism
+D) List of successful past projects
+Correct Answer: C
+Explanation: A Citizen's Charter includes Vision/Mission, details of business, service standards, grievance redress mechanisms, and expectations from clients.
+
+54. If a Minister or Secretary is addressed by an ex-Member of Parliament, at what level must the reply be approved before being sent by a Joint Secretary?
+A) Prime Minister's Office
+B) Secretary of the Ministry/Department
+C) Cabinet Secretariat
+D) Director
+Correct Answer: B
+Explanation: A reply sent by a Joint Secretary level officer to an ex-MP addressing a Minister/Secretary must have the approval of the Secretary of the Ministry.
+
+55. How should a communication seeking clarification on General Financial Rules from the Department of Expenditure be processed by an Attached/Subordinate office?
+A) Through the nodal parent Ministry exclusively
+B) Direct communication without the intervention of their parent Ministry/Department
+C) Via the Central Vigilance Commission
+D) Only through a Cabinet note
+Correct Answer: B
+Explanation: Attached/subordinate offices can communicate directly with departments like DoPT or Expenditure for rule clarifications without their parent Ministry's intervention.
+
+56. The destruction of stenographic records pertaining to confidential and secret letters is the explicit responsibility of:
+A) The Central Registry
+B) Personal Staff Members of Officers
+C) Record Keepers
+D) The Section Officer
+Correct Answer: B
+Explanation: PSMs are responsible for destroying by shredding/burning the stenographic record of confidential and secret letters.
+
+57. According to the MOP, correspondence with Foreign Governments and International Organizations is normally routed through:
+A) Ministry of Home Affairs
+B) Ministry of Foreign Trade
+C) Ministry of External Affairs
+D) Prime Minister's Office
+Correct Answer: C
+Explanation: Correspondence with foreign governments/missions normally goes through the Ministry of External Affairs (MEA).
+
+58. What is the status of records bearing a security classification regarding their transfer to the National Archives of India (NAI)?
+A) They are transferred instantly for high-security storage
+B) They are not transferred to the Archives as per section 10 of the Public Records Act, 1993
+C) They are transferred but kept in an unsealed format
+D) They are converted to standard files and transferred annually
+Correct Answer: B
+Explanation: Records bearing security classification are not transferred to the Archives, as per section 10 of the Public Records Act, 1993.
+
+59. When two or more communications are to be issued from the same file on the same date, how is confusion in file numbering avoided in the draft?
+A) By adding "Urgent" to one of them
+B) By using different colored inks
+C) By inserting a separate serial number before the numeral identifying the year
+D) By sending one the next day
+Correct Answer: C
+Explanation: A separate serial number (e.g. (I), (II)) is inserted before the numerical identifying the year to avoid confusion.
+
+60. Under which rules are the retention schedules for records connected with 'Accounts' determined?
+A) Public Records Act, 1993
+B) Record Retention Schedule of DARPG
+C) General Financial Rules, 2017
+D) Manual of Office Procedure Rules
+Correct Answer: C
+Explanation: Accounts records are governed by the instructions in Appendix 9 to the General Financial Rules, 2017.
+
+61. If an SFS (Single File System) file needs to refer policy cases to the main Department, how should it be marked?
+A) To the Central Registry as a general receipt
+B) To the appropriate officer in the Department, by name and at appropriate levels
+C) To the Minister unconditionally
+D) To an external judicial body
+Correct Answer: B
+Explanation: The officer in the NSO shall mark it to the appropriate officer in the Department, by name; policy files at appropriate levels.
+
+62. What must be included on the top of the first page of the note portion in each volume of a file?
+A) File number, name of Ministry/Department, branch/section, subject of the file, and classification
+B) Name of the Dealing Hand and Section Officer
+C) A complete index of the appendices
+D) The date of the first and last receipt only
+Correct Answer: A
+Explanation: Top of the first page of the note portion must contain file number, Ministry name, section name, subject, and classification.
+
+63. The abbreviation 'FR' used on a flagged document within a file stands for:
+A) Final Resolution
+B) Fresh Receipt
+C) Formal Request
+D) File Record
+Correct Answer: B
+Explanation: Fresh Receipt (FR) indicates a subsequent receipt on a case that brings in additional information.
+
+64. Which functionary holds the charge of a Secretariat Division and is responsible for the disposal of Government business dealt within that Division?
+A) Under Secretary
+B) Section Officer
+C) Director/Deputy Secretary
+D) Cabinet Secretary
+Correct Answer: C
+Explanation: A Director/Deputy Secretary holds the charge of a Secretariat Division.
+
+65. During office hours, who receives the dak addressed to a Minister "by name" and sent through a special messenger?
+A) The Central Registry purely
+B) The Information Facilitation Counter
+C) The Minister or their personal staff
+D) Any available Under Secretary
+Correct Answer: C
+Explanation: Immediate/important dak addressed to Ministers/Officers by name sent through special messenger directly will be received by them or their personal staff.
+
+66. What action must an NSO take after executing an order based on an SFS file?
+A) Delete the electronic tracking history
+B) Retain all original correspondence secretly
+C) Endorse copies of every sanction/order issued to all the officers concerned in the Department
+D) Destroy the original file
+Correct Answer: C
+Explanation: Copies of every sanction/order issued by the NSO to implement a decision must be endorsed without fail to all the officers concerned in the Department.
+
+67. What is an 'Office Memorandum' typically used for?
+A) Formal directives to external citizens
+B) Internal communication across Ministries regarding policy framing or routine notices
+C) Issuing legal statutes
+D) Conveying Presidential decrees
+Correct Answer: B
+Explanation: O.M.s are utilized for inter-departmental or intra-departmental communications regarding policies, routine instructions, or administrative matters.
+
+68. What format must notes follow when preparing submissions for the Cabinet or Cabinet Committees?
+A) Any format decided by the Dealing Hand
+B) The specific format prescribed on the Cabinet Secretariat website
+C) Standard memo formats in green ink
+D) Oral presentation only
+Correct Answer: B
+Explanation: Notes for the Cabinet must follow the format prescribed on the Cabinet Secretariat website.
+
+69. In an electronic file environment, what automatically replaces manual docketing and numbering?
+A) Auto-generation of page numbers and Serial numbers of Receipts/Issues by the system
+B) Manual typing of numbers using PDF software
+C) Physical stamping on printed pages
+D) Digital dictation software
+Correct Answer: A
+Explanation: In an electronic environment (e-Office), page numbers and Serial continuous numbers of Receipts/Issues are generated automatically.
+
+70. Which of the following correctly describes a 'Notification'?
+A) Used primarily for internal unclassified correspondence
+B) Issued to publish rules/orders, statutory appointments, or matters of public significance in the Gazette of India
+C) Used for requesting leave by an Under Secretary
+D) Used exclusively for confidential communication between two Joint Secretaries
+Correct Answer: B
+Explanation: Notifications are specific forms of communication used for publishing rules, statutory orders, or public matters in the Government Gazette.
+
+71. When an official seeks extension of a target date to await replies from a State Government, whose approval must be obtained?
+A) The original sender from the State Government
+B) The appropriate authority within the Ministry/Department
+C) The personal staff of the Minister
+D) The Supreme Court
+Correct Answer: B
+Explanation: On expiry of the specified date, orders of the appropriate authority may be obtained on whether to grant an extension or proceed without the reply.
+
+72. Where a communication is addressed to a Head of an attached/subordinate office by an MP or VIP, who should reply to it?
+A) A junior clerk
+B) The addressee himself
+C) It must be routed up to the Secretary
+D) The Press Information Bureau
+Correct Answer: B
+Explanation: A communication addressed to the head of an attached/subordinate office or PSU shall be replied to by the addressee himself.
+
+73. If two distinctly different aspects arise on a single current file, what is the best practice?
+A) Muddle them together to save paper
+B) Open a new file to deal with the new aspect by placing photocopies of relevant extracts
+C) Wait until the first aspect is completely resolved before noting on the second
+D) Reject the new aspect as irrelevant
+Correct Answer: B
+Explanation: If an issue goes beyond the original scope, a new file should be opened by placing photocopies of the relevant extracts.
+
+74. Should an officer use terms like "Please discuss" routinely on files without recording any views?
+A) Yes, it saves time
+B) No, all notes should ideally be concise and to the point, and the officer should record decisions/instructions rather than merely asking to discard the file for discussion
+C) Yes, provided the discussion happens the same day
+D) Yes, if they are above the rank of Director
+Correct Answer: B
+Explanation: The MOP advocates that notes be clear and concise. Oral directions or "please discuss" should manifest eventually into written instructions/confirmations recorded on the file.
+
+75. What action is required of a participant if they believe the recorded 'Minutes of a meeting' do not reflect their true understanding?
+A) They must accept the minutes silently
+B) They must immediately refer the discrepancy in writing to the authority which issued the minutes
+C) They should erase their name from the attendance log
+D) They should contact the Press Information Bureau
+Correct Answer: B
+Explanation: If the minutes are not as per the understanding/perception of a participant, the same may be immediately referred in writing to the authority which issued the minutes.

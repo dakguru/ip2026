@@ -1,0 +1,399 @@
+Q1. How many constituent bodies make up the Universal Postal Union (UPU) excluding the specific cooperatives?
+A. 2
+B. 4
+C. 6
+D. 8
+Correct Answer: B
+Explanation: The Universal Postal Union consists of 4 main bodies: The Congress, The Council of Administration (CA), The Postal Operations Council (POC), and The International Bureau (IB), operating alongside 2 cooperatives.
+
+Q2. What is the maximum permitted weight for an M-Bag (Bulk bag) intended for foreign countries?
+A. 10 kg
+B. 20 kg
+C. 30 kg
+D. 35 kg
+Correct Answer: C
+Explanation: The maximum permissible weight limit for an M-Bag containing printed documentation directed to the same addressee at the same address is 30 kg.
+
+Q3. Which customs declaration form must accompany an international postal article if the declared value of the contents exceeds 300 Special Drawing Rights (SDR)?
+A. CN 22
+B. CN 23
+C. CP 71
+D. CN 29
+Correct Answer: B
+Explanation:  Form CN 23 is mandatory when the declared value of the international item is greater than 300 Special Drawing Rights (SDR), whereas CN 22 is utilized for values up to 300 SDR.
+
+Q4. What is the prescribed treatment for a postcard addressed to a foreign destination that has postage stamps affixed on the back instead of the address side?
+A. Taxed as insufficiently paid
+B. Treated as unpaid
+C. Returned to the sender immediately
+D. Forwarded without penalty
+Correct Answer: B
+Explanation: Postcards having stamps affixed on the back (other than the address side) are liable to be treated strictly as unpaid correspondence and processed accordingly.
+
+Q5. How is the compensation calculated for the loss, total theft, or total damage of an International Air Parcel?
+A. 30 SDR plus 4.5 SDR per kg, subject to an upper ceiling of 100 SDR
+B. 40 SDR plus 4.5 SDR per kg, or the value of the contents, whichever is less, subject to an upper ceiling of 130 SDR, plus postage paid
+C. 130 SDR flat rate, plus postage paid
+D. The exact declared value of the contents only, with no SDR limits
+Correct Answer: B
+Explanation: Compensation for International Air Parcels is structured as 40 SDR plus 4.5 SDR per kg, or the value of the contents (whichever is less), capped at an upper limit of 130 SDR, in addition to the refund of the postage paid.
+
+Q6. Within what timeframe must an enquiry or request for information regarding an International Speed Post item be submitted?
+A. Two months from the day of posting
+B. Four months from the day after the article was posted
+C. Six months from the day of posting
+D. One year from the day after the article was posted
+Correct Answer: B
+Explanation: Enquiries regarding International Speed Post items must be entertained within a strict period of four months starting from the day after the article was posted.
+
+Q7. What is the maximum insured value permitted for a foreign postal article?
+A. Rs. 10,000/-
+B. Rs. 50,000/-
+C. Rs. 1,00,000/-
+D. Rs. 5,00,000/-
+Correct Answer: C
+Explanation: The maximum insured value limit for any foreign article, encompassing letter post, parcel post, or express mail, is capped at Rs. 1,00,000/-.
+
+Q8. Which of the following living creatures is permitted to be transmitted by foreign post?
+A. Silkworms
+B. Live poultry
+C. Reptiles
+D. Ornamental fish
+Correct Answer: A
+Explanation: All types of foreign articles containing living creatures are strictly prohibited, with the sole exceptions being bees, leeches, and silkworms.
+
+Q9. In the event of an outward international letter being insufficiently prepaid for air transmission, how is the article taxed if forwarded by air?
+A. 50% of the Air Surcharge
+B. 75% of the Air Surcharge
+C. 100% of the combined charge
+D. Returned to sender without taxing
+Correct Answer: B
+Explanation: If an outward international letter is forwarded by air after being identified as insufficiently prepaid, the tax levied is exactly 75% of the applicable Air Surcharge.
+
+Q10. What is the maximum dimensional limit for an International Tracked Packet?
+A. Sum of length, width, and depth not exceeding 90 cm, with the largest dimension not exceeding 60 cm
+B. Length not exceeding 1.05 meters
+C. Sum of length and greatest circumference not exceeding 3 meters
+D. Sum of length, width, and depth not exceeding 120 cm
+Correct Answer: A
+Explanation: International Tracked Packets must have a combined length, width, and depth of no more than 90 cm, and the single largest dimension cannot exceed 60 cm.
+
+Q11. Which authority is empowered to issue a license for a Remotely Managed Franking System (RMFS) machine?
+A. Postmaster General
+B. Head of the Postal Division or independent Gazetted Postmaster
+C. Sub-Postmaster of the designated office
+D. Director General of Posts
+Correct Answer: B
+Explanation: The operational license for a Franking Machine is issued exclusively by the Head of the Postal Division, an independent Gazetted Postmaster, or Directors of specific GPOs.
+
+Q12. What is the validity period of an RMFS license?
+A. 1 Year
+B. 3 Years
+C. 5 Years
+D. 10 Years
+Correct Answer: C
+Explanation: An RMFS license remains valid for a strict period of 5 years from the date of issue before requiring renewal.
+
+Q13. Under what condition is a rebate of 3% allowed on the franked value in an RMFS machine?
+A. Minimum consumption of Rs. 1000/-
+B. Minimum consumption of Rs. 5000/-
+C. Only if sorted by Pin-Code
+D. Minimum consumption of Rs. 10,000/-
+Correct Answer: B
+Explanation: A 3% rebate is allowed on the franked value whenever the meter is reset, provided there is a minimum consumption threshold of Rs. 5000/-.
+
+Q14. How long is a Poste Restante article (excluding Value Payable/COD) retained in the destination post office?
+A. 7 Days
+B. 15 Days
+C. 30 Days
+D. 3 Months
+Correct Answer: C
+Explanation: A standard Poste Restante article is kept in the post office to which it is addressed for a retention period not exceeding 30 days.
+
+Q15. What is the maximum permissible weight for a single letter card?
+A. 2 grams
+B. 3 grams
+C. 5 grams
+D. 10 grams
+Correct Answer: C
+Explanation: The weight of an inland letter card must not exceed 5 grams; if it infringes this condition, it is taxed as a standard letter.
+
+Q16. What late fee is applied to the renewal of a Registered Newspaper if the application is received after the date of expiry of the previous registration?
+A. Rs. 50/-
+B. Rs. 100/-
+C. Rs. 200/-
+D. Rs. 500/-
+Correct Answer: A
+Explanation: If the renewal application for a Registered Newspaper is received after the previous registration's expiry date (after 31st Dec), a late fee of Rs. 50/- is charged.
+
+Q17. Which of the following conditions mandates the taxing of official postal articles sent "On Government Service"?
+A. All official articles are taxed regardless of postage paid
+B. Unpaid articles are taxed at the prepaid rate, and insufficiently paid articles are taxed at the deficiency
+C. Unpaid articles are taxed at double the deficiency
+D. Official articles are entirely exempt from all postage taxes
+Correct Answer: B
+Explanation: For official postal articles, unpaid items are charged the normal prepaid rate, while insufficiently paid items are charged only the exact deficiency amount, distinguishing them from public mail.
+
+Q18. What is the maximum monetary limit for a single retail Money Order?
+A. Rs. 2,000/-
+B. Rs. 5,000/-
+C. Rs. 10,000/-
+D. Rs. 25,000/-
+Correct Answer: C
+Explanation: The maximum amount that can be remitted through a single retail Money Order transaction is Rs. 10,000/-.
+
+Q19. Under the Deen Dayal SPARSH Yojana, what is the annual scholarship amount awarded to selected students?
+A. Rs. 1500/-
+B. Rs. 3000/-
+C. Rs. 6000/-
+D. Rs. 12000/-
+Correct Answer: C
+Explanation: The total scholarship amount distributed to selected students under the SPARSH Yojana is Rs. 6000/- per annum, disbursed at a rate of Rs. 1500/- per quarter.
+
+Q20. What is the minimum quantity of 'My Stamp' sheetlets that a corporate customer must mandate for purchase?
+A. 10 sheets
+B. 50 sheets
+C. 100 sheets
+D. 5000 sheets
+Correct Answer: D
+Explanation: Applications for 'My Stamp' from corporate customers require a mandatory minimum order quantity of exactly 5000 sheets.
+
+Q21. Within the Mail Network Optimization Project (MNOP), what is the Key Performance Indicator (KPI) target for $D+X$ Time Definite (TD) articles?
+A. Average Time 1.28 days
+B. Average Time 2 days
+C. Average Time 3 days
+D. Average Time 4 days
+Correct Answer: A
+Explanation: The strict KPI target for $D+X$ for Time Definite (TD) articles is an average processing and delivery time of 1.28 days.
+
+Q22. What is the acceptable target for the share of bags without 'correct' bag labels under MNOP KPIs?
+A. 0%
+B. 1%
+C. 5%
+D. 10%
+Correct Answer: A
+Explanation: The operational performance target mandates exactly 0% for the share of bags without correct bag labels, representing a zero-tolerance operational metric.
+
+Q23. How many mandatory scans constitute Full Scan Compliance for a Time Definite (TD) article booked under the MNOP scheme?
+A. 5 scans
+B. 8 scans
+C. 9 scans
+D. 12 scans
+Correct Answer: B
+Explanation: A standard Time Definite (TD) article requires exactly 8 mandatory scans from booking to final delivery to achieve Full Scan Compliance.
+
+Q24. Which bag label format is correctly mapped to Registered Packets (RP) under MNOP guidelines?
+A. RL-EB_1234567890
+B. CB_1234567890
+C. LB_1234567890
+D. RB_1234567890
+Correct Answer: D
+Explanation:  The specific bag label identifier prefix for Registered Packets is "RB" followed by the 10-digit identification number.
+
+Q25. How is a "TD Mis-sort" defined operationally?
+A. When an article is booked with a missing pin code
+B. When the pin code of the delivery PO for which the article is bagged differs from the pin code of the Delivery PO where the article is actually delivered
+C. When an article is routed to a different NSH than intended
+D. When an article lacks a final delivery scan within 5 working days
+Correct Answer: B
+Explanation: A TD Mis-sort occurs precisely when the 6-digit pin code of the PO to which the article is bagged does not match the pin code of the PO where it is ultimately delivered.
+
+Q26. What is the delivery norm for a First Class (Registered) article destined for a neighboring state?
+A. 1-2 days
+B. 2-3 days
+C. 3-4 days
+D. 5-6 days
+Correct Answer: C
+Explanation: The mandated delivery norm for First Class articles (both registered and unregistered) traveling to a neighboring state is 3-4 days.
+
+Q27. How is the daily fuel reimbursement charge calculated for delivery staff using their own 2-wheeler vehicles?
+A. Flat rate of Rs. 100 per day
+B. Average expenditure on periodic maintenance per km plus average fuel charges per km, multiplied by the daily distance
+C. Total cost of fuel consumed during the month divided by 30
+D. Fixed at Rs. 3.68 per km regardless of actual fuel price
+Correct Answer: B
+Explanation: The rate is calculated by adding the average expenditure on periodic maintenance per km to the average fuel charge per km, which is then multiplied by the daily distance covered.
+
+Q28. What percentage of accountable articles must be processed through the Postman Mobile App (PMA) for delivery staff to be eligible for 100% of their calculated fuel reimbursement?
+A. 80%
+B. 90%
+C. 95%
+D. 100%
+Correct Answer: C
+Explanation: To receive 100% of the calculated fuel reimbursement charges, delivery performance (processing accountable articles through IMA) must be 95% or higher.
+
+Q29. Under the Bring Your Own Device (BYOD) Scheme, what is the fixed monthly incentive provided per smartphone for data/SMS charges specifically?
+A. Rs. 200/-
+B. Rs. 300/-
+C. Rs. 500/-
+D. Rs. 1000/-
+Correct Answer: A
+Explanation: The BYOD remuneration includes a specific component of Rs. 200/- per month allocated explicitly for SIM/Data/SMS charges, distinct from the device usage incentive.
+
+Q30. What color is mandated for the bag label of a parcel connected via the Surface network (India Post Parcel)?
+A. Red
+B. Yellow
+C. Blue
+D. Green
+Correct Answer: C
+Explanation: Parcel bag labels utilize a color-coded system where Blue is strictly designated for Surface connectivity (India Post Parcel) to distinguish it from air routing.
+
+Q31. What is the standard area footprint required for a Bag Opening Table in a parcel hub facility?
+A. 6 sq. ft.
+B. 8 sq. ft.
+C. 10 sq. ft.
+D. 15 sq. ft.
+Correct Answer: C
+Explanation:  The required dimensions for a Bag Opening Table are 4 ft. x 2.5 ft., resulting in a standard operational area footprint of 10 sq. ft.
+
+Q32. How many parcels can a standard Roller Container hold, assuming it carries closed bags containing parcels?
+A. 50 parcels
+B. 100 parcels
+C. 150 parcels
+D. 200 parcels
+Correct Answer: D
+Explanation: A standard Roller Container is designed to hold up to 20 closed parcel bags. With each bag containing an average of 10 parcels, the total capacity equals 200 parcels.
+
+Q33. What is the operational throughput target for a Medium Category Parcel Hub?
+A. Less than 120 parcels per hour
+B. 121 to 250 parcels per hour
+C. 251 to 500 parcels per hour
+D. 501 to 1400 parcels per hour
+Correct Answer: C
+Explanation: A Medium Category Parcel Hub is operationally defined by a designated throughput capacity ranging from 251 to 500 parcels per hour.
+
+Q34. Which floor marking color is designated to indicate aisles and common walking pathways within a facility?
+A. Blue
+B. Green
+C. Yellow
+D. Red
+Correct Answer: C
+Explanation: Yellow color markings are specifically mandated to identify aisles, common passages, and equipment movement pathways to ensure safe transit and organization.
+
+Q35. In an automated or manual facility, if a bag/parcel is not traced within 5 days of a discrepancy, what administrative action is initiated?
+A. Write-off of the parcel value
+B. Immediate suspension of the record officer
+C. Recovery of presumptive loss from the officials at fault
+D. Dispatch of an Outward Error Register form to the sender
+Correct Answer: C
+Explanation: If an item remains untraced after 5 days, the standard operating procedure mandates that the administration calculates a "presumptive loss" which must be recovered directly from the erring officials.
+
+Q36. According to the Ad-hoc Norms for a Manual Parcel Processing Centre, what is the letter processing rate for primary sorting?
+A. 150 letters/hour
+B. 250 letters/hour
+C. 350 letters/hour
+D. 700 letters/hour
+Correct Answer: D
+Explanation: The designated ad-hoc operational norm for the manual primary sorting of parcels by an individual staff member is 700 letters per hour.
+
+Q37. Under the Joint Parcel Product (JPP) Express Cargo Service, what is the per kilogram charge levied if a customer opts for "Only First Mile" service?
+A. Rs. 2/-
+B. Rs. 4/-
+C. Rs. 6/-
+D. Rs. 12.60/-
+Correct Answer: B
+Explanation: If a customer utilizes only the First Mile service (Pickup, Booking, and Handing over to Railways), the specific handling charge is Rs. 4/- per kg inclusive of GST.
+
+Q38. What is the maximum weight capacity of the Static Weight System (SWS) deployed under PNOP?
+A. 20 kg
+B. 30 kg
+C. 35 kg
+D. 50 kg
+Correct Answer: C
+Explanation: The operational specification for the maximum weight measurement capacity of the Static Weight System (SWS) equipment is exactly 35 kg.
+
+Q39. Under the Remotely Managed Franking System (RMFS), what is the grace period allowed for renewal after the expiry of the licence before it is liable to be cancelled?
+A. 15 days
+B. 1 month
+C. 3 months
+D. 6 months
+Correct Answer: C
+Explanation: An RMFS licence may be cancelled if an application for renewal has not been submitted after the expiry of 3 months from the date of the licence's expiry.
+
+Q40. What is the specific weight category targeted for the B2B and B2C segments under the Joint Parcel Product (JPP) Express Cargo Service?
+A. 10 Kg to 35 Kg
+B. 20 Kg to 50 Kg
+C. 35 Kg to 100 Kg
+D. 50 Kg to 150 Kg
+Correct Answer: C
+Explanation: The Joint Parcel Product (JPP) Express Cargo Service specifically targets the parcel weight category of 35 Kg to 100 Kg for both B2C and B2B segments.
+
+Q41. In the Last Mile delivery process, how should parcels be arranged inside the delivery bag or vehicle?
+A. First-In-First-Out (FIFO)
+B. Last-In-First-Out (LIFO)
+C. Arranged strictly by weight, heaviest at the bottom
+D. Arranged alphabetically by the addressee's name
+Correct Answer: B
+Explanation: Delivery bags and vehicles must be loaded using the LIFO (Last-In-First-Out) principle, ensuring the last parcel loaded is the first one taken out for delivery on the beat route.
+
+Q42. What defines a "Large Parcel" strictly for the purpose of Last Mile delivery operations?
+A. Any parcel weighing above 1 kg
+B. Any parcel weighing above 2 kg (physical or volumetric)
+C. Any parcel exceeding 500 grams
+D. Any parcel requiring a customs declaration
+Correct Answer: B
+Explanation: For delivery logistics, Large Parcels are defined as those exceeding 2 kg in weight (either physical or volumetric) and usually require delivery via a four-wheeler.
+
+Q43. Which operational area in a Nodal Delivery Centre (NDC) handles the reconciliation of COD amounts and undelivered parcels?
+A. Beat Sorting Area
+B. Secure Parcel Storage Area
+C. Data Admin Area
+D. Post Sort Staging Area
+Correct Answer: C
+Explanation: The Data Admin Area within an NDC is specifically designated for data entry, treasury functions, COD reconciliation, and the processing of undelivered and return parcels.
+
+Q44. What is the ad-hoc time norm per kilometer for a Postman conducting a mechanized (2-wheeler) delivery in a congested area?
+A. 3 Minutes/KM
+B. 5 Minutes/KM
+C. 10 Minutes/KM
+D. 12 Minutes/KM
+Correct Answer: B
+Explanation: The established ad-hoc time norm for a 2-wheeler vehicle operating in a designated congested area is set at 5 Minutes per kilometer.
+
+Q45. What is the handling capacity of a single Pigeon Hole within a standard Parcel Sorting Case?
+A. 5 parcels
+B. 10 parcels
+C. 16 parcels
+D. 20 parcels
+Correct Answer: C
+Explanation: Each individual pigeon hole in a standard parcel sorting case is designed with the volumetric capacity to hold up to 16 standard parcels.
+
+Q46. In the context of parcel packaging, what is the required thickness specification for a Plastic Flyer/bag?
+A. 10-20 microns
+B. 40 microns
+C. 55-60 microns
+D. 100-150 microns
+Correct Answer: C
+Explanation: Plastic flyers or bags used by customers or staff for securing parcels must maintain a minimum thickness specification of 55-60 microns.
+
+Q47. If a branch post office (BO) books a foreign parcel, what is the maximum limit for which it can be insured?
+A. Rs. 600/-
+B. Rs. 1000/-
+C. Rs. 10,000/-
+D. Rs. 1,00,000/-
+Correct Answer: A
+Explanation: Foreign Parcels posted specifically at a Branch Post Office (BO) cannot be insured for an amount exceeding Rs. 600/-, despite higher limits existing for other office tiers.
+
+Q48. How is the "Avis de reception" treated in the context of international registered mail?
+A. It is an expedited delivery service
+B. It is similar to the acknowledgement service in the inland post
+C. It is a mandatory customs clearance certificate
+D. It is a tax applied to insufficiently paid airmail
+Correct Answer: B
+Explanation: "Avis de reception" translates to an advice of delivery, which functions operationally exactly like the standard acknowledgement (AD) service used in inland mail processing.
+
+Q49. What is the prescribed formula to determine if an unregistered letter qualifies as a "Standard Envelope" suitable for automatic machine processing in foreign post?
+A. The ratio between length and breadth must be exactly 1
+B. The sum of length, breadth, and depth must be less than 900 mm
+C. The ratio between length and breadth must be more than 1.41
+D. The length must not exceed 600 mm
+Correct Answer: C
+Explanation: Letters are treated as "Standard Envelopes" for automated transmission if the ratio between their length and breadth is greater than the square root of 2 (a value of 1.41).
+
+Q50. Under what condition is a publisher allowed to post Registered Newspapers without prepaying postage?
+A. If the newspaper is published daily without fail
+B. If a valid "Licensed to post without prepayment" (WPP) license is held and more than 500 copies are posted at a time
+C. If the newspaper weighs less than 50 grams per copy
+D. If the publisher submits the copies to a Night Post Office exclusively
+Correct Answer: B
+Explanation: Publishers intending to post more than 500 copies of a registered newspaper at a time can do so without affixing postage, provided they possess a valid WPP (Without Prepayment) license authorized by the administrative head.

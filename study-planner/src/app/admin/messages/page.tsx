@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Mail, Trash2, Reply, ArrowLeft, Loader2, Calendar, User } from 'lucide-react';
+import { Mail, Trash2, Reply, ArrowLeft, Loader2, Calendar, Search, MessageSquare, Users, Clock } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 interface Message {
@@ -14,9 +14,39 @@ interface Message {
     isRead: boolean;
 }
 
+const AVATAR_COLORS = [
+    'from-violet-500 to-purple-600',
+    'from-blue-500 to-cyan-600',
+    'from-emerald-500 to-teal-600',
+    'from-orange-500 to-amber-600',
+    'from-rose-500 to-pink-600',
+    'from-indigo-500 to-blue-600',
+];
+
+function getAvatarColor(name: string) {
+    const index = (name?.charCodeAt(0) || 0) % AVATAR_COLORS.length;
+    return AVATAR_COLORS[index];
+}
+
+function formatRelativeTime(dateStr: string) {
+    const date = new Date(dateStr);
+    const now = new Date();
+    const diff = now.getTime() - date.getTime();
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor(diff / 3600000);
+    const mins = Math.floor(diff / 60000);
+    if (days > 6) return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+    if (days > 0) return `${days}d ago`;
+    if (hours > 0) return `${hours}h ago`;
+    if (mins > 0) return `${mins}m ago`;
+    return 'Just now';
+}
+
 export default function AdminMessagesPage() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [loading, setLoading] = useState(true);
+    const [search, setSearch] = useState('');
+    const [deletingId, setDeletingId] = useState<string | null>(null);
     const router = useRouter();
 
     useEffect(() => {
@@ -30,7 +60,6 @@ export default function AdminMessagesPage() {
                 const data = await res.json();
                 setMessages(data);
             } else {
-                // If unauthorized, redirect
                 if (res.status === 403) router.push('/login');
             }
         } catch (error) {
@@ -42,7 +71,7 @@ export default function AdminMessagesPage() {
 
     const handleDelete = async (id: string) => {
         if (!confirm("Are you sure you want to delete this message?")) return;
-
+        setDeletingId(id);
         try {
             const res = await fetch(`/api/admin/messages?id=${id}`, { method: 'DELETE' });
             if (res.ok) {
@@ -50,81 +79,163 @@ export default function AdminMessagesPage() {
             }
         } catch (e) {
             console.error("Delete failed", e);
+        } finally {
+            setDeletingId(null);
         }
     };
 
+    const filtered = messages.filter(m =>
+        m.senderName?.toLowerCase().includes(search.toLowerCase()) ||
+        m.senderEmail?.toLowerCase().includes(search.toLowerCase()) ||
+        m.message?.toLowerCase().includes(search.toLowerCase())
+    );
+
     if (loading) {
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center">
-                <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+                <div className="flex flex-col items-center gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <Loader2 className="w-8 h-8 animate-spin text-white" />
+                    </div>
+                    <p className="text-slate-400 text-sm font-medium">Loading messages...</p>
+                </div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-4 md:p-8">
-            <div className="max-w-5xl mx-auto">
-                <div className="flex items-center gap-4 mb-8">
-                    <Link href="/" className="p-2 bg-white dark:bg-zinc-900 rounded-full shadow-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
-                        <ArrowLeft className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
-                    </Link>
-                    <h1 className="text-2xl md:text-3xl font-bold text-zinc-800 dark:text-zinc-100 flex items-center gap-2">
-                        <Mail className="w-8 h-8 text-blue-600" />
-                        Admin Messages
-                    </h1>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            {/* Header */}
+            <div className="border-b border-white/5 bg-white/3 backdrop-blur-sm sticky top-0 z-10">
+                <div className="max-w-5xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                        <Link href="/" className="p-2 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
+                            <ArrowLeft className="w-4 h-4 text-slate-300" />
+                        </Link>
+                        <div className="flex items-center gap-3">
+                            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+                                <Mail className="w-4 h-4 text-white" />
+                            </div>
+                            <div>
+                                <h1 className="text-lg font-bold text-white leading-none">Admin Messages</h1>
+                                <p className="text-xs text-slate-400 mt-0.5">{messages.length} total message{messages.length !== 1 ? 's' : ''}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Search */}
+                    <div className="relative hidden sm:block">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                        <input
+                            type="text"
+                            placeholder="Search messages..."
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            className="pl-9 pr-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:bg-white/8 transition-all w-56"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div className="max-w-5xl mx-auto px-4 md:px-8 py-6">
+                {/* Mobile search */}
+                <div className="relative sm:hidden mb-4">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                    <input
+                        type="text"
+                        placeholder="Search messages..."
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                        className="w-full pl-9 pr-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blue-500/50 transition-all"
+                    />
                 </div>
 
-                {messages.length === 0 ? (
-                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-12 text-center border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                        <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Mail className="w-8 h-8 text-zinc-400" />
+                {/* Stats row */}
+                {messages.length > 0 && (
+                    <div className="grid grid-cols-3 gap-3 mb-6">
+                        {[
+                            { icon: MessageSquare, label: 'Total', value: messages.length, color: 'text-blue-400', bg: 'bg-blue-500/10' },
+                            { icon: Users, label: 'Senders', value: new Set(messages.map(m => m.senderEmail)).size, color: 'text-violet-400', bg: 'bg-violet-500/10' },
+                            { icon: Clock, label: 'Today', value: messages.filter(m => new Date(m.createdAt).toDateString() === new Date().toDateString()).length, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+                        ].map(({ icon: Icon, label, value, color, bg }) => (
+                            <div key={label} className="bg-white/3 border border-white/8 rounded-2xl p-4 flex items-center gap-3">
+                                <div className={`w-9 h-9 rounded-xl ${bg} flex items-center justify-center flex-shrink-0`}>
+                                    <Icon className={`w-4 h-4 ${color}`} />
+                                </div>
+                                <div>
+                                    <p className="text-xl font-bold text-white leading-none">{value}</p>
+                                    <p className="text-xs text-slate-500 mt-0.5">{label}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                {/* Messages */}
+                {filtered.length === 0 ? (
+                    <div className="text-center py-20">
+                        <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-3xl flex items-center justify-center mx-auto mb-5">
+                            <Mail className="w-9 h-9 text-slate-600" />
                         </div>
-                        <h3 className="text-xl font-bold text-zinc-700 dark:text-zinc-300 mb-2">No Messages Yet</h3>
-                        <p className="text-zinc-500 max-w-md mx-auto">Messages sent by users via "DM to Admin" will appear here.</p>
+                        <h3 className="text-xl font-bold text-slate-300 mb-2">
+                            {search ? 'No results found' : 'No Messages Yet'}
+                        </h3>
+                        <p className="text-slate-500 text-sm max-w-xs mx-auto">
+                            {search ? `No messages match "${search}"` : 'Messages sent by users via "DM to Admin" will appear here.'}
+                        </p>
                     </div>
                 ) : (
-                    <div className="grid gap-4">
-                        {messages.map((msg) => (
-                            <div key={msg._id} className="bg-white dark:bg-zinc-900 rounded-xl p-6 shadow-sm border border-zinc-200 dark:border-zinc-800 hover:shadow-md transition-shadow">
-                                <div className="flex flex-col md:flex-row gap-4 justify-between items-start mb-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 font-bold">
-                                            {msg.senderName?.[0]?.toUpperCase() || 'U'}
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-lg text-zinc-900 dark:text-zinc-100">{msg.senderName}</h3>
-                                            <div className="flex items-center gap-4 text-xs text-zinc-500">
-                                                <span className="flex items-center gap-1">
-                                                    <Mail className="w-3 h-3" /> {msg.senderEmail || 'No Email'}
-                                                </span>
-                                                <span className="flex items-center gap-1">
-                                                    <Calendar className="w-3 h-3" /> {new Date(msg.createdAt).toLocaleString()}
+                    <div className="flex flex-col gap-3">
+                        {filtered.map((msg) => (
+                            <div
+                                key={msg._id}
+                                className={`group bg-white/3 border border-white/8 rounded-2xl p-5 hover:bg-white/6 hover:border-white/15 transition-all duration-200 ${deletingId === msg._id ? 'opacity-50 pointer-events-none' : ''}`}
+                            >
+                                <div className="flex items-start gap-4">
+                                    {/* Avatar */}
+                                    <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${getAvatarColor(msg.senderName)} flex items-center justify-center text-white font-bold text-lg flex-shrink-0 shadow-lg`}>
+                                        {msg.senderName?.[0]?.toUpperCase() || 'U'}
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="flex-1 min-w-0">
+                                        <div className="flex items-start justify-between gap-3 mb-1">
+                                            <div className="min-w-0">
+                                                <h3 className="font-semibold text-white truncate">{msg.senderName}</h3>
+                                                <p className="text-xs text-slate-500 truncate">{msg.senderEmail || 'No email'}</p>
+                                            </div>
+                                            <div className="flex items-center gap-1.5 flex-shrink-0">
+                                                <span className="text-xs text-slate-500 whitespace-nowrap flex items-center gap-1">
+                                                    <Calendar className="w-3 h-3" />
+                                                    {formatRelativeTime(msg.createdAt)}
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div className="flex items-center gap-2 self-end md:self-start">
-                                        {msg.senderEmail && (
-                                            <a
-                                                href={`mailto:${msg.senderEmail}?subject=Re: Your message to Dak Guru Admin`}
-                                                className="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg text-sm font-semibold hover:bg-blue-100 transition-colors flex items-center gap-2"
+                                        {/* Message body */}
+                                        <p className="text-slate-300 text-sm leading-relaxed mt-3 whitespace-pre-wrap bg-white/3 border border-white/6 rounded-xl px-4 py-3">
+                                            {msg.message}
+                                        </p>
+
+                                        {/* Actions */}
+                                        <div className="flex items-center gap-2 mt-3">
+                                            {msg.senderEmail && (
+                                                <a
+                                                    href={`mailto:${msg.senderEmail}?subject=Re: Your message to Dak Guru Admin`}
+                                                    className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-500/15 border border-blue-500/25 text-blue-400 rounded-lg text-xs font-semibold hover:bg-blue-500/25 transition-colors"
+                                                >
+                                                    <Reply className="w-3.5 h-3.5" /> Reply via Email
+                                                </a>
+                                            )}
+                                            <button
+                                                onClick={() => handleDelete(msg._id)}
+                                                className="flex items-center gap-1.5 px-3 py-1.5 bg-red-500/0 border border-transparent text-slate-600 rounded-lg text-xs font-medium hover:bg-red-500/15 hover:border-red-500/25 hover:text-red-400 transition-all ml-auto"
+                                                title="Delete"
                                             >
-                                                <Reply className="w-4 h-4" /> Reply
-                                            </a>
-                                        )}
-                                        <button
-                                            onClick={() => handleDelete(msg._id)}
-                                            className="p-2 text-zinc-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-                                            title="Delete"
-                                        >
-                                            <Trash2 className="w-5 h-5" />
-                                        </button>
+                                                <Trash2 className="w-3.5 h-3.5" /> Delete
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div className="bg-zinc-50 dark:bg-zinc-950 p-4 rounded-lg text-zinc-700 dark:text-zinc-300 text-sm whitespace-pre-wrap leading-relaxed border border-zinc-100 dark:border-zinc-800">
-                                    {msg.message}
                                 </div>
                             </div>
                         ))}

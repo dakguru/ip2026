@@ -1,0 +1,549 @@
+Q1. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Easy]
+What is the minimum and maximum age limit at entry for a Whole Life Assurance (Suraksha) policy under Postal Life Insurance?
+A. 18 to 50 years
+B. 19 to 55 years
+C. 21 to 60 years
+D. 20 to 55 years
+Answer: B
+Explanation:
+The minimum and maximum age at entry for a Whole Life Assurance (Suraksha) policy is explicitly prescribed as 19-55 years. Other options do not reflect the statutory age limits specified in the rules.
+
+Q2. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Easy]
+What is the duration of the "Free Look Period" during which an insurant can cancel their PLI policy after its delivery?
+A. 7 days
+B. 15 days
+C. 30 days
+D. 45 days
+Answer: B
+Explanation:
+"Free Look Period" means a period of exactly 15 days from the date of delivery of the policy at the insurant's address for requesting cancellation. The other durations are invalid under the current PLI rules.
+
+Q3. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Easy]
+What is the minimum Sum Assured (S.A.) allowed under a standard Postal Life Insurance (PLI) policy?
+A. Rs. 10,000
+B. Rs. 20,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: B
+Explanation:
+The minimum Sum Assured for PLI policies such as Suraksha and Santosh is set at Rs. 20,000. Option A represents the minimum for RPLI, which makes it an incorrect choice for PLI.
+
+Q4. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Moderate]
+After how many years of continuous premium payment does an Endowment Assurance (Santosh) policy become eligible for a loan facility?
+A. After 2 years
+B. After 3 years
+C. After 4 years
+D. After 5 years
+Answer: B
+Explanation:
+Under the Endowment Assurance (Santosh) scheme, the loan facility is available strictly after 3 years. This distinguishes it from WLA policies, which only allow loans after 4 years of continuous payment.
+
+Q5. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Moderate]
+If a Whole Life Assurance (Suraksha) policy is surrendered before completing 5 years, what is the impact on its bonus eligibility?
+A. Proportionate bonus is paid
+B. 50% of accrued bonus is paid
+C. Not eligible for bonus
+D. Fully eligible for bonus based on paid premiums
+Answer: C
+Explanation:
+A Whole Life Assurance (Suraksha) policy is explicitly stated to be not eligible for a bonus if it is surrendered before the completion of 5 years. Any surrender prior to this forfeits the bonus.
+
+Q6. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Moderate]
+Under the Children Policy (Bal Jivan Bima), what is the maximum permissible age of the policyholder (parent) at the time of entry?
+A. 40 years
+B. 45 years
+C. 50 years
+D. 55 years
+Answer: B
+Explanation:
+For the Children Policy (Bal Jivan Bima), the policyholder (parent) should not be over 45 years of age. Older ages are not permissible, ensuring long-term premium paying capacity until the child matures.
+
+Q7. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Moderate]
+How many premiums must be paid, and what minimum duration must be completed for a policy to acquire a "Surrender Value"?
+A. 24 premiums paid and 24 months duration completed
+B. 36 premiums paid and 36 months duration completed
+C. 48 premiums paid and 48 months duration completed
+D. 60 premiums paid and 60 months duration completed
+Answer: B
+Explanation:
+The "Surrender Value" is payable provided at least 36 premiums have been paid and the policy has completed a minimum duration of 36 months. Lower durations result in the policy acquiring no surrender value.
+
+Q8. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Moderate]
+For automatic reinstatement of a discontinued PLI policy that has completed 3 years of duration, what is the maximum default period in premium payments allowed?
+A. 6 months
+B. 12 months
+C. 18 months
+D. 24 months
+Answer: B
+Explanation:
+Automatic reinstatement is permissible if a policy has completed 3 years and a maximum of 12 months of premium has not been paid. Beyond this period, regular reinstatement procedures apply.
+
+Q9. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Hard]
+What is the maximum limit of Sum Assured for a professional aged 41 years and above applying for a PLI policy?
+A. 5 times of gross annual income
+B. 7 times of gross annual income
+C. 10 times of gross annual income
+D. 12 times of gross annual income
+Answer: B
+Explanation:
+For professionals taking PLI with a Sum Assured greater than Rs. 20 lakhs, those aged 41 years and above have their maximum limit restricted to 7 times their gross annual income.
+
+Q10. (PO Life Insurance Rules, 2011 & RPLI Rules)
+[Difficulty: Hard]
+Which specific scenario mandates a thorough investigation for suppression of material information during the settlement of a death claim?
+A. Death after 5 years of policy acceptance
+B. Death after policy matures but before claim payment
+C. Early death before completion of 3 years from the date of acceptance
+D. Death involving an accident after 10 years of policy duration
+Answer: C
+Explanation:
+Cases of early death, defined as occurring before the completion of 3 years from the date of Acceptance, are mandatorily investigated thoroughly to check if material medical information was suppressed during proposal submission.
+
+Q11. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Easy]
+What is the specific fee amount charged for obtaining a Duplicate Policy Bond under PLI/RPLI guidelines?
+A. Rs. 50/-
+B. Rs. 100/-
+C. Rs. 150/-
+D. Rs. 200/-
+Answer: B
+Explanation:
+The prescribed fee amount for the issuance of a Duplicate Policy Bond is Rs. 100/-. Options proposing lower or higher amounts directly contradict the standard charges of various services.
+
+Q12. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Easy]
+What is the prescribed fee for the issuance of a Duplicate Premium Receipt book?
+A. Rs. 5/-
+B. Rs. 10/-
+C. Rs. 20/-
+D. Rs. 50/-
+Answer: C
+Explanation:
+The service charge for replacing a Duplicate Premium Receipt book is Rs. 20/-. For comparison, Rs. 5/- is exclusively designated for a Duplicate Loan Receipt book.
+
+Q13. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Easy]
+How much percentage of rebate is provided on an advance premium payment of 12 months in PLI and RPLI policies?
+A. 0.5%
+B. 1%
+C. 2%
+D. 5%
+Answer: C
+Explanation:
+A rebate of 2% is officially allowed on an advance premium payment of 12 months for PLI and RPLI policies to incentivize long-term premium collection.
+
+Q14. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Moderate]
+What is the maximum limit of Sum Assured under the RPLI Non-Medical scheme if a non-standard age proof is submitted by the proponent?
+A. Rs. 10,000/-
+B. Rs. 25,000/-
+C. Rs. 50,000/-
+D. Rs. 1,00,000/-
+Answer: B
+Explanation:
+For RPLI Non-Medical policies, the maximum Sum Assured is strictly restricted to Rs. 25,000/- when the application is supported by a non-standard age proof, limiting risk exposure.
+
+Q15. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Moderate]
+Under a Non-Medical Policy, if the insured's death occurs after one year but before two years from the date of acceptance, what percentage of the amount is payable?
+A. 35% of SA + Bonus
+B. 60% of SA + Bonus
+C. 90% of SA + Bonus
+D. 100% of SA + Bonus
+Answer: B
+Explanation:
+If death occurs after one year but before two years in a Non-Medical Policy, exactly 60% of the Sum Assured along with accrued bonus is payable to the nominee.
+
+Q16. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Moderate]
+What is the exact fee payable to a Medical Officer for examining a PLI/RPLI proponent proposing a Sum Assured above 20 lakhs?
+A. Rs. 50/-
+B. Rs. 70/-
+C. Rs. 100/-
+D. Rs. 120/-
+Answer: D
+Explanation:
+A medical officer is legally entitled to receive a fee of Rs. 120/- for conducting a medical examination of a proponent whose Sum Assured limit exceeds 20 lakhs.
+
+Q17. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Moderate]
+In a 10 Years Rural PLI (Gram Priya) policy, what percentage of survival benefits is paid to the insurant at the end of 7 years?
+A. 20%
+B. 30%
+C. 40%
+D. 60%
+Answer: A
+Explanation:
+For the 10 Years Rural PLI (Gram Priya) scheme, the survival benefits are disbursed as 20% at 4 years, 20% at 7 years, and the final 60% at 10 years.
+
+Q18. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Moderate]
+Which category of medical officer is eligible to examine a PLI proponent for a Sum Assured strictly up to 5 Lakhs?
+A. Civil Surgeon only
+B. Assistant Civil Surgeon or Medical Officer in PHC
+C. Specialist Class-II
+D. Deputy Civil Surgeon
+Answer: B
+Explanation:
+For a Sum Assured limit up to 5 Lakhs, the designated medical officer can be an Assistant Civil Surgeon or above, or a Medical Officer in a Primary Health Centre (PHC).
+
+Q19. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Hard]
+Under Section 194DA of the IT Act 1961, TDS at 2% is deducted on payment of maturity of PLI/RPLI policies if the maturity amount (after deducting the premium paid) exceeds what threshold during the financial year?
+A. Rs. 50,000
+B. Rs. 1 Lakh
+C. Rs. 2 Lakhs
+D. Rs. 5 Lakhs
+Answer: B
+Explanation:
+Deduction of TDS @ 2% is mandatory on the payment of maturity exceeding Rs. 1 Lakh during the Financial Year under the provisions of Section 194DA of the IT Act 1961.
+
+Q20. (PLI / RPLI Operational Guidelines & Miscellaneous, Incentive Structure, Policy Servicing and Maintenance)
+[Difficulty: Hard]
+What is the requisite status of the Medical Officer authorized to medically examine a proponent for a Sum Assured above 10 lakhs?
+A. Assistant Civil Surgeon
+B. Medical Officer with 5 years experience
+C. Civil Surgeon or equivalent with minimum 15 years' experience
+D. Medical Officer in PHC
+Answer: C
+Explanation:
+For a Sum Assured above 10 lakhs, the examination must strictly be conducted by a Civil Surgeon or an equivalent Medical Officer (Allopathic) with a minimum of 15 years' experience.
+
+Q21. (Jan Suraksha Schemes)
+[Difficulty: Easy]
+What is the prescribed minimum and maximum entry age for subscribing to the Atal Pension Yojana (APY)?
+A. Minimum 18 Years, Maximum 50 Years
+B. Minimum 18 Years, Maximum 40 Years
+C. Minimum 21 Years, Maximum 55 Years
+D. Minimum 21 Years, Maximum 60 Years
+Answer: B
+Explanation:
+The eligibility criteria for APY mandate a minimum age of 18 Years and a maximum age of 40 Years, guaranteeing a minimum contribution period of 20 years.
+
+Q22. (Jan Suraksha Schemes)
+[Difficulty: Easy]
+What is the maximum guaranteed monthly pension available to a subscriber under the Atal Pension Yojana (APY) scheme?
+A. Rs. 2000/- Per month
+B. Rs. 3000/- Per month
+C. Rs. 4000/- Per month
+D. Rs. 5000/- Per month
+Answer: D
+Explanation:
+Under APY, the subscriber can choose a guaranteed minimum pension ranging from Rs. 1000 to Rs. 5000 per month. The maximum guaranteed pension is Rs. 5000/-.
+
+Q23. (Jan Suraksha Schemes)
+[Difficulty: Easy]
+Which document is considered the mandatory primary KYC document for the identification of beneficiaries and spouses under APY?
+A. PAN Card
+B. Voter ID
+C. Aadhaar
+D. Driving License
+Answer: C
+Explanation:
+Aadhaar is designated as the primary KYC document for identifying beneficiaries, spouses, and nominees to avoid future pension rights and entitlement disputes in the long term.
+
+Q24. (Jan Suraksha Schemes)
+[Difficulty: Moderate]
+What is the penalty rate charged for delayed monthly contribution payments under the Atal Pension Yojana (APY)?
+A. Rs. 1 per month for every Rs. 50 delayed
+B. Rs. 1 per month for every Rs. 100 or part thereof delayed
+C. Rs. 5 per month for every Rs. 100 delayed
+D. Rs. 10 per month irrespective of the delayed amount
+Answer: B
+Explanation:
+The exact penalty for default is established at Rs. 1 per month for contribution for every Rs. 100/-, or part thereof, for each delayed monthly payment.
+
+Q25. (Jan Suraksha Schemes)
+[Difficulty: Moderate]
+What administrative fee is required from APY subscribers for upgrading or downgrading their opted pension amount?
+A. Rs. 25
+B. Rs. 50
+C. Rs. 100
+D. Rs. 200
+Answer: B
+Explanation:
+For upgradation or down gradation (other than error cases), subscribers are required to pay a fee of Rs. 50, which is then shared equally by PoP-APYSP and CRA.
+
+Q26. (Jan Suraksha Schemes)
+[Difficulty: Moderate]
+Under APY, what is the indicative return of corpus amount provided to the nominee for a selected monthly pension of Rs. 3000?
+A. 1.7 Lakh
+B. 3.4 Lakh
+C. 5.1 Lakh
+D. 8.5 Lakh
+Answer: C
+Explanation:
+The indicative return of corpus to the nominee of a subscriber who opts for a Rs. 3000 monthly pension is fixed at Rs. 5.1 Lakh.
+
+Q27. (Jan Suraksha Schemes)
+[Difficulty: Moderate]
+Which of the following statements regarding the eligibility of income-tax payers to join APY after 1st October 2022 is legally correct?
+A. They can join by paying a higher premium
+B. They are eligible only for the Rs. 1000 pension slab
+C. They are not eligible to join APY
+D. They are eligible without any government co-contribution
+Answer: C
+Explanation:
+From 1st October 2022, any citizen who is or has been an income-tax payer shall not be eligible to join APY, and their accounts will be closed if found.
+
+Q28. (Jan Suraksha Schemes)
+[Difficulty: Moderate]
+Which Post Office serves as the designated Nodal Office for the settlement and administration of the Atal Pension Yojana (APY) scheme?
+A. Mumbai GPO
+B. Sansad Marg Head Post Office
+C. Kolkata GPO
+D. Chennai GPO
+Answer: B
+Explanation:
+The Sansad Marg Head Post Office in New Delhi has been officially nominated as the Nodal Office for the Scheme Atal Pension Yojana.
+
+Q29. (Jan Suraksha Schemes)
+[Difficulty: Hard]
+What was the maximum eligible co-contribution by the Central Government for non-taxpayer subscribers who joined APY before 31st March 2016?
+A. 25% of the total contribution, up to Rs. 500 per annum
+B. 50% of the total contribution, up to Rs. 1000 per annum
+C. 100% of the total contribution, up to Rs. 2000 per annum
+D. Flat Rs. 1000 per annum regardless of the contribution amount
+Answer: B
+Explanation:
+The co-contribution by the Central Government was 50% of the total prescribed contribution, up to Rs. 1000 per annum, for eligible subscribers joining before 31st March 2016 for 5 years.
+
+Q30. (Jan Suraksha Schemes)
+[Difficulty: Hard]
+What is the precise window period available in a year for an APY subscriber to exercise the option to change their pension amount?
+A. During the entire financial year
+B. Only once throughout the year from 1st April
+C. Only once throughout the year from 1st July
+D. Only during the birth month of the subscriber
+Answer: C
+Explanation:
+As per PFRDA guidelines, the window period to change the pension amount is available to the Subscriber strictly only once throughout the year starting from 1st July.
+
+Q31. (DIGIPIN)
+[Difficulty: Easy]
+What is the full form of DIGIPIN introduced by the Department of Posts as a Digital Public Infrastructure?
+A. Digital Public Index Node
+B. Digital Postal Index Number
+C. Direct Postal Identification Number
+D. Digital Parcel Index Network
+Answer: B
+Explanation:
+DIGIPIN explicitly stands for Digital Postal Index Number. It is a standardized geo-coded interoperable addressing system established by the Department of Posts.
+
+Q32. (DIGIPIN)
+[Difficulty: Easy]
+How many characters form a unique DIGIPIN code assigned to a specific geographical location?
+A. 6-digit numeric code
+B. 8-digit alphanumeric code
+C. 10-digit alphanumeric code
+D. 12-digit numeric code
+Answer: C
+Explanation:
+Each 4m x 4m unit (approx.) is assigned a unique 10-digit alphanumeric code, derived precisely from the latitude and longitude coordinates of the unit.
+
+Q33. (DIGIPIN)
+[Difficulty: Easy]
+Which premier institutions collaborated with the Department of Posts to develop the DIGIPIN addressing grid?
+A. IIT Delhi and DRDO
+B. IIT Bombay and ISRO
+C. IIT Madras and UIDAI
+D. IIT Hyderabad and NRSC, ISRO
+Answer: D
+Explanation:
+DIGIPIN is an open-source national-level addressing grid developed by the Department of Posts in close collaboration with IIT Hyderabad and NRSC, ISRO.
+
+Q34. (DIGIPIN)
+[Difficulty: Moderate]
+What is the approximate linear dimension of the geographic unit assigned to each unique 10-digit DIGIPIN code at the equator?
+A. 1-meter by 1-meter
+B. 3.8-meter by 3.8-meter
+C. 10-meter by 10-meter
+D. 100-meter by 100-meter
+Answer: B
+Explanation:
+The DIGIPIN system maps the territory into cells sized smaller than 3.8-meter x 3.8-meter if measured at the equator, approximating a 4m x 4m unit.
+
+Q35. (DIGIPIN)
+[Difficulty: Moderate]
+Which of the following sets of symbols is NOT used in the 16-symbol DIGIPIN encoding system to prevent reading confusion?
+A. 2, 3, 4, 5
+B. C, F, J, K
+C. A, E, I, O
+D. L, M, P, T
+Answer: C
+Explanation:
+The 16 designated symbols used are 2, 3, 4, 5, 6, 7, 8, 9, C, J, K, L, M, P, F, T. Vowels like A, E, I, O are specifically excluded.
+
+Q36. (DIGIPIN)
+[Difficulty: Moderate]
+If a multi-storey building has several floors with different residents, how does it affect their specific DIGIPIN value?
+A. Each floor gets a unique DIGIPIN
+B. Floor information does not affect the DIGIPIN value
+C. Each resident gets a unique DIGIPIN based on Aadhar
+D. The DIGIPIN adds a suffix for each distinct floor
+Answer: B
+Explanation:
+DIGIPIN is a pure mathematical function of latitude and longitude. Floor information or any other address attribute does not affect the DIGIPIN value of a location.
+
+Q37. (DIGIPIN)
+[Difficulty: Moderate]
+What is the full form of DHRUVA in the context of the digital address ecosystem managed by the Department of Posts?
+A. Digital Hub for Reference & Unique Virtual Address
+B. Digital Home for Rural and Urban Valid Addresses
+C. Direct Hub for Regional and Universal Virtual Assets
+D. Digital Hierarchy for Routing & Universal Virtual Address
+Answer: A
+Explanation:
+DHRUVA stands for Digital Hub for Reference & Unique Virtual Address. It is the proposed Digital Public Infrastructure for address information management in India.
+
+Q38. (DIGIPIN)
+[Difficulty: Moderate]
+What approximate distance or grid width does a DIGIPIN code of length 6 represent at the equator?
+A. 15 meters
+B. 250 meters
+C. 1 kilometer
+D. 3.9 kilometers
+Answer: C
+Explanation:
+According to the grid size iteration tables, a DIGIPIN code of length 6 represents approximately a 1 km x 1 km region with a 0.53-minute grid width.
+
+Q39. (DIGIPIN)
+[Difficulty: Hard]
+What are the precise latitudinal and longitudinal boundaries of the bounding box used for the Level-1 DIGIPIN grid encompassing India?
+A. Longitude 50.0-100.0 East & Latitude 0.0-40.0 North
+B. Longitude 60.5-95.5 East & Latitude 5.5-35.5 North
+C. Longitude 63.5-99.5 East & Latitude 2.5-38.5 North
+D. Longitude 68.0-97.0 East & Latitude 8.0-37.0 North
+Answer: C
+Explanation:
+The Level-1 bounding box covers exactly Longitude 63.5-99.5 degrees east and Latitude 2.5-38.5 degrees north, which includes the maritime Exclusive Economic Zone.
+
+Q40. (DIGIPIN)
+[Difficulty: Hard]
+In the context of level-2 partitioning for DIGIPIN, how many subregions are uniquely identified by the first two characters of the code?
+A. 16
+B. 64
+C. 128
+D. 256
+Answer: D
+Explanation:
+Each of the 16 Level-1 regions is subdivided into 16 subregions. Therefore, the first two characters of the code uniquely identify one of the 16^2 = 256 subregions.
+
+Q41. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Easy]
+What is the standard cost of one "My Stamp" sheetlet (containing 12 stamps) from India Post?
+A. Rs. 100/-
+B. Rs. 150/-
+C. Rs. 300/-
+D. Rs. 500/-
+Answer: C
+Explanation:
+The official cost of one My Stamp sheet is Rs. 300/-. There are 12 stamps of Rs. 5/- denomination in one My Stamp Sheet.
+
+Q42. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Easy]
+What is the minimum amount required for an Indian citizen to open a Philatelic Deposit Account (PDA)?
+A. Rs. 100/-
+B. Rs. 200/-
+C. Rs. 500/-
+D. Rs. 1000/-
+Answer: B
+Explanation:
+For Indians, a Philatelic Deposit Account can be opened with a minimum of Rs. 200/-. For foreigner customers, the minimum deposit is Rs. 1000/-.
+
+Q43. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Easy]
+Who acts as the ex-officio Chairperson of the Philatelic Advisory Committee?
+A. Director General of Posts
+B. Secretary, Department of Posts
+C. Union Minister-in-Charge of the Ministry of Communications
+D. Prime Minister of India
+Answer: C
+Explanation:
+The Union Minister-in-Charge of the Ministry of Communications acts as the ex-officio Chairperson of the Philatelic Advisory Committee advising on commemorative stamps.
+
+Q44. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Moderate]
+Under the Deen Dayal SPARSH Yojana, what is the annual scholarship amount awarded to selected students?
+A. Rs. 3000/- per annum
+B. Rs. 5000/- per annum
+C. Rs. 6000/- per annum
+D. Rs. 12000/- per annum
+Answer: C
+Explanation:
+The amount of Scholarship under the SPARSH scheme is Rs. 6000/- per annum, distributed as Rs. 1500/- per quarter.
+
+Q45. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Moderate]
+What is the maximum word limit prescribed for the 'Envelope Category' in the Dhai Akhar Letter Writing Competition?
+A. 250 words
+B. 500 words
+C. 750 words
+D. 1000 words
+Answer: D
+Explanation:
+The word limits for the competition are strictly 1000 words for the Envelope category and 500 words for the Inland Letter Card (ILC) category.
+
+Q46. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Moderate]
+What is the mandatory minimum quantity of sheetlets a corporate customer must purchase when applying for 'My Stamp'?
+A. 10 sheets
+B. 50 sheets
+C. 100 sheets
+D. 200 sheets
+Answer: C
+Explanation:
+Applications for 'My Stamp' from corporate customers require a mandatory minimum purchase quantity of 100 sheets to process the customized order.
+
+Q47. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Moderate]
+According to PO Regulations 2024, what is the core restriction regarding the issuance of a commemorative postage stamp on a specific individual?
+A. Cannot be issued on foreign nationals
+B. No postage stamp shall be issued on a living personality
+C. Cannot be issued on political figures
+D. Only definitive stamps can be issued for individuals
+Answer: B
+Explanation:
+The Post Office Regulations explicitly prohibit the issuance of any postage stamp on a living personality. They are reserved for post-mortem commemorations.
+
+Q48. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Moderate]
+If a customer purchases 200 My Stamp sheetlets, what discount will they receive on their total purchase?
+A. 5%
+B. 10%
+C. 15%
+D. 20%
+Answer: D
+Explanation:
+A discount of 10% is given for the first 100 sheetlets, and a higher 20% discount is applied to the additional sheetlets purchased over 100.
+
+Q49. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Hard]
+What is the designated theme for the Dhai Akhar Letter Writing Competition for the year 2024-25?
+A. Digital India and Postal Heritage
+B. The Joy of Writing: Importance of Letters in a Digital Age
+C. India's Freedom Struggle
+D. Vision for India 2047
+Answer: B
+Explanation:
+The theme specified for the 2024-25 Dhai Akhar competition is explicitly defined as "The Joy of Writing: Importance of Letters in a Digital Age".
+
+Q50. (Philately Policy, PDA, My Stamp, SPARSH, Dhai Akhar)
+[Difficulty: Hard]
+What is the minimum period required after an individual's death (other than a Head of State) before a commemorative stamp can be issued in their honor?
+A. 1 year
+B. 5 years
+C. 10 years
+D. 25 years
+Answer: C
+Explanation:
+Stamps can be issued no sooner than ten years after an individual's death. This rule is relaxed only for a Head of State (issued on the first death anniversary).

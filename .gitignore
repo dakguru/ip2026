@@ -1,0 +1,13 @@
+*.apk
+*.log
+*.tmp
+tmp_*
+node_modules/
+.DS_Store
+.env*
+.idea/
+.vscode/
+study-planner/.next/
+study-planner/out/
+study-planner/build/
+*.tsbuildinfo

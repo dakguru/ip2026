@@ -1,0 +1,499 @@
+Q1. (Postal Manual Volume V) [Difficulty: Easy]
+What is the full form of the abbreviation ESMO as used in the postal network?
+A. Electronic System for Money Order
+B. Extended Satellite Money Order
+C. Expedited Service Money Order
+D. External Sorting Mail Office
+Answer: B
+Explanation:
+ESMO stands for Extended Satellite Money Order. These stations operate as extension counters for booking and transmitting money orders through V-SAT stations. Other options are fabricated distractors.
+
+Q2. (Postal Manual Volume V) [Difficulty: Easy]
+What is the primary purpose of a Transit Office in the mail communication network?
+A. To sort letters into appropriate bags
+B. To reduce the number of loose bags
+C. To handle customs examination of mail
+D. To deal with unclaimed and refused articles
+Answer: B
+Explanation:
+The use of a transit office is strictly to reduce the number of loose bags. It receives and sorts bags intended for advance offices without opening them.
+
+Q3. (Postal Manual Volume V) [Difficulty: Easy]
+Which color check slip is used to tie the top of an Ordinary Station Paid and Unpaid Bundle?
+A. White
+B. Blue
+C. Pink
+D. Green
+Answer: C
+Explanation:
+A pink check slip is tied to the top of Ordinary Station Paid and Unpaid Bundles. White is used for ordinary sorting bundles, and blue is used for foreign air mail bundles.
+
+Q4. (Postal Manual Volume V) [Difficulty: Moderate]
+What is the maximum weight limit for a Parcel Bag conveyed by the Railway Mail Service (RMS) when it is carried by a trolley?
+A. 14 Kg
+B. 28 Kg
+C. 30 Kg
+D. 37 Kg
+Answer: D
+Explanation:
+The maximum weight for a Parcel Bag conveyed by RMS is 37 Kg when it is carried by trolley. 14 Kg is the normal limit for a letter mail runner.
+
+Q5. (Postal Manual Volume V) [Difficulty: Moderate]
+Who is authorized to issue 'A' orders prescribing changes in sorting lists in the Railway Mail Service?
+A. Head Record Officer
+B. Superintendent, RMS
+C. Head of the Circle
+D. Inspector of Post Offices
+Answer: B
+Explanation:
+'A' orders are issued by a Superintendent, RMS, specifically for prescribing changes in sorting lists. 'B' orders are also issued by the Superintendent, RMS, but for guidance in performance of duties.
+
+Q6. (Postal Manual Volume V) [Difficulty: Moderate]
+A territorial bundle is prepared when the number of sorting articles for a clearly defined tract of country or a state reaches at least:
+A. 15
+B. 20
+C. 25
+D. 50
+Answer: C
+Explanation:
+Territorial bundles are prepared when the number of articles is 25 and more. Station bundles require 15 or more articles.
+
+Q7. (Postal Manual Volume V) [Difficulty: Moderate]
+According to the classification of bags, which of the following is categorized as an Unusual Bag?
+A. Transit Bag
+B. Branch Office Bag
+C. Registered Bag
+D. Camp Bag
+Answer: D
+Explanation:
+A Camp Bag is classified as an Unusual Bag. Transit Bags, Branch Office Bags, and Registered Bags fall under the Due Bag category.
+
+Q8. (Postal Manual Volume V) [Difficulty: Moderate]
+During which exact period of February and August are the half-yearly enumeration returns of unregistered postal articles conducted each year?
+A. 1st to 14th, both days inclusive
+B. 7th to 20th, both days inclusive
+C. 8th to 21st, both days inclusive
+D. 15th to 28th, both days inclusive
+Answer: C
+Explanation:
+Half yearly enumeration returns are compiled during the second week of the months of February and August, specifically from the 8th to 21st, both days inclusive.
+
+Q9. (Postal Manual Volume V) [Difficulty: Hard]
+Based on the revised monetary limits for handling loss and fraud cases (w.e.f. 23.09.21), what is the authorized limit for investigation by an AD/APMG of a Regional and Circle Office?
+A. Up to Rs. 2 Lakh
+B. Above Rs. 2 Lakh and up to Rs. 5 Lakh
+C. Above Rs. 5 Lakh and up to Rs. 10 Lakh
+D. Above Rs. 10 Lakh
+Answer: C
+Explanation:
+The revised monetary limit for an AD/APMG of Regional and Circle Office is above Rs. 5 Lakh and up to Rs. 10 Lakh. Above Rs. 10 Lakh falls under the jurisdiction of Director Postal Services and above.
+
+Q10. (Postal Manual Volume V) [Difficulty: Hard]
+Under the weighment system for conveying mails on railways, on which two specific dates each year must the half-yearly weighment of bags take place in the presence of the stationmaster?
+A. 1st January and 1st July
+B. 21st January and 21st July
+C. 15th February and 15th August
+D. 31st March and 30th September
+Answer: B
+Explanation:
+The mail handed over to the stationmaster must be delivered after weighment on the 21st January and the 21st July of each year.
+
+Q11. (Postal Manual Volume VI Part-I) [Difficulty: Easy]
+Which specific register form is designated for marking attendance in a post office?
+A. MS-11
+B. S-37
+C. M-52
+D. MS-12
+Answer: B
+Explanation:
+The Attendance Register is designated by the form number S-37. MS-11 is for the Memorandum of distribution of work, and MS-12 is the Nominal Roll.
+
+Q12. (Postal Manual Volume VI Part-I) [Difficulty: Easy]
+Who is responsible for preparing the Village Sorting List (M-52) that is supplied to each branch office?
+A. Postmaster
+B. Sub Divisional Inspector/ASP
+C. Head of Circle
+D. Treasurer
+Answer: B
+Explanation:
+The Village Sorting List (M-52) is prepared by the Sub Divisional Inspector/ASP and is supplied to each branch office.
+
+Q13. (Postal Manual Volume VI Part-I) [Difficulty: Easy]
+For how long must the Postmaster's Order Book be retained before it is scheduled for destruction?
+A. 1 Year
+B. 2 Years
+C. 3 Years
+D. 10 Years
+Answer: C
+Explanation:
+The Postmaster's Order Book is to be retained for 3 Years before disposal. Stock books and guard books for duplicate passbooks require 10 years of retention.
+
+Q14. (Postal Manual Volume VI Part-I) [Difficulty: Moderate]
+When an office is supplied with an iron chest that has exactly 2 hasps for the custody of government money, what combination of locks must be used?
+A. Two padlocks
+B. Two sparling locks
+C. One padlock and one sparling lock
+D. One padlock and one combination lock
+Answer: C
+Explanation:
+If the iron chest has 2 hasps, one of the two locks should be a padlock and the other must be a sparling lock. If it has only 1 hasp, a sparling lock is exclusively used.
+
+Q15. (Postal Manual Volume VI Part-I) [Difficulty: Moderate]
+After what period can the confidential records and character sheet of an official who has retired from service be destroyed?
+A. After 2 years from retirement
+B. After 3 years from retirement
+C. After 5 years from retirement
+D. After 10 years from retirement
+Answer: C
+Explanation:
+Confidential records and character sheets of an official can be destroyed after 5 Years from their retirement. If the official dies, it is after 2 years from their death.
+
+Q16. (Postal Manual Volume VI Part-I) [Difficulty: Moderate]
+What is the minimum threshold of inland unregistered packets required to allow prepayment of postage in cash in a Small town?
+A. 100 packets
+B. 250 packets
+C. 500 packets
+D. 1000 packets
+Answer: B
+Explanation:
+For the prepayment of postage in cash in inland unregistered packets, the minimum is 250 packets for a small town. In a big city, the minimum is 500 packets.
+
+Q17. (Postal Manual Volume VI Part-I) [Difficulty: Moderate]
+During which dates must the Yearly Village Return be kept by the sub account Postal Assistant?
+A. 1st to 14th February
+B. 1st to 14th March
+C. 15th to 28th March
+D. 1st to 15th April
+Answer: B
+Explanation:
+The Yearly Village Return should be kept by the sub account PA during the first 14 days of the month of March in each year, from the 1st to the 14th, both days inclusive.
+
+Q18. (Postal Manual Volume VI Part-I) [Difficulty: Moderate]
+According to the rules on the distribution of work, which of the following officials is strictly prohibited from holding the role of the treasurer?
+A. The Delivery Postal Assistant
+B. The Mail Postal Assistant
+C. The Postal Assistant discharging duties connected with money order, saving bank, or sub account
+D. The Postal Assistant responsible for registered post
+Answer: C
+Explanation:
+In no case may the PA who discharges the duties connected with money order, saving bank, or sub account department be the treasurer of the office.
+
+Q19. (Postal Manual Volume VI Part-I) [Difficulty: Hard]
+If an official has been dismissed, removed, or compulsorily retired from service as a disciplinary measure, after how many years can their confidential records be destroyed?
+A. 3 years
+B. 5 years
+C. 6 years
+D. 25 years
+Answer: C
+Explanation:
+The confidential records and character sheets of an official who has been dismissed, removed, or compulsorily retired as a disciplinary measure may be destroyed after 6 years.
+
+Q20. (Postal Manual Volume VI Part-I) [Difficulty: Hard]
+By what date must the Head Office submit the memorandum of distribution of Pay and Allowances to the Superintendent's office?
+A. 1st of the current month
+B. 5th of the month following
+C. 10th of the current month
+D. 15th of the month following
+Answer: B
+Explanation:
+The submission of the memorandum of distribution of Pay and Allowances must be made from the HO to the Superintendent's office on the 5th of the month following.
+
+Q21. (Postal Manual Volume VI Part-II) [Difficulty: Easy]
+How many Money Order Books (M.O.-8) is each Branch Office (BO) permitted to keep?
+A. 1 book
+B. 2 books
+C. 3 books
+D. 5 books
+Answer: B
+Explanation:
+Each Branch Office (BO) should keep only 2 books of the Money Order Book (M.O.-8).
+
+Q22. (Postal Manual Volume VI Part-II) [Difficulty: Easy]
+Which form is prescribed for maintaining the Monthly Statistics Register for money orders?
+A. M.O.-4
+B. M.S.-13
+C. M.O.-14
+D. M.O.-2 (s)
+Answer: B
+Explanation:
+The Monthly Statistics Register is maintained on form M.S.-13. M.O.-4 is for MO Paid, and M.O.-2(s) is for MO issue.
+
+Q23. (Postal Manual Volume VI Part-II) [Difficulty: Easy]
+Who must retain personal custody of the round and oblong MO stamps under lock and key?
+A. The Head Sorting Assistant
+B. The Sub Account PA
+C. The Postmaster
+D. The Treasurer
+Answer: C
+Explanation:
+The round and oblong MO Stamp must always remain under lock and key in the personal custody of the Postmaster.
+
+Q24. (Postal Manual Volume VI Part-II) [Difficulty: Moderate]
+A Money Order bears a month-stamp impression of October 2021. After which exact date will it be considered and treated as a Void MO?
+A. 30th November 2021
+B. 31st December 2021
+C. 31st January 2022
+D. 31st October 2022
+Answer: B
+Explanation:
+The currency of an MO expires with the close of the last day of the second month following the month of issue. An MO issued in October 2021 is current up to 31st December 2021 and becomes void afterward.
+
+Q25. (Postal Manual Volume VI Part-II) [Difficulty: Moderate]
+What is the normal monetary limit for the payment of money orders by a single Postman/MTS undertaking delivery work in urban areas?
+A. Rs. 15,000/-
+B. Rs. 30,000/-
+C. Rs. 40,000/-
+D. Rs. 80,000/-
+Answer: C
+Explanation:
+The normal limit for a Postman/MTS doing delivery work in an urban area is Rs. 40,000/-. Rs. 80,000/- is permitted only with the prior consultation of Police by the Division Head.
+
+Q26. (Postal Manual Volume VI Part-II) [Difficulty: Moderate]
+If a Money Order is paid to the wrong person and the amount is successfully recovered, to which accounting head must this recovered amount be credited?
+A. UCP
+B. Void MO Paid
+C. UCR
+D. MO Issue
+Answer: C
+Explanation:
+When a Money Order is paid to the wrong person, the amount recovered from the wrong person must be credited to UCR (Unclassified Receipt). The subsequent correct payment is debited to UCP.
+
+Q27. (Postal Manual Volume VI Part-II) [Difficulty: Moderate]
+On what specific date of the following month must the Head Office forward the MOs treated as void, along with the list of void orders, to the Postal Accounts Office (PAO)?
+A. 2nd
+B. 6th
+C. 16th
+D. 20th
+Answer: C
+Explanation:
+MOs treated as void by the HO and void orders from the SO must be sent to the PAO concerned with the list of void orders on the 16th of the next month.
+
+Q28. (Postal Manual Volume VI Part-II) [Difficulty: Moderate]
+After what period from the date of booking is an unpaid inland Money Order forfeited and treated as revenue to the Government of India?
+A. One year
+B. Two years
+C. Three years
+D. Five years
+Answer: C
+Explanation:
+The amount or value of a money order unpaid beyond three years from the date of booking shall be forfeited and treated as revenue to the Government of India.
+
+Q29. (Postal Manual Volume VI Part-II) [Difficulty: Hard]
+Under the rule for payment of Money Orders by Pay Order, what is the minimum number of MOs payable to a single payee that necessitates the adoption of the pay order system?
+A. 3 or more
+B. 4 or more
+C. 5 or more
+D. 10 or more
+Answer: B
+Explanation:
+The pay order system is adopted when the number of MOs payable to each payee is 4 or more. These must be entered in a triplicate list in form MO-20.
+
+Q30. (Postal Manual Volume VI Part-II) [Difficulty: Hard]
+What is the maximum limit of payment allowed for a BPM/ABPM/GDS in rural areas if the Division Head has exercised their power after prior consultation with the Police?
+A. Rs. 15,000/-
+B. Rs. 25,000/-
+C. Rs. 30,000/-
+D. Rs. 40,000/-
+Answer: B
+Explanation:
+The normal limit for a BPM/ABPM/GDS is Rs. 15,000/-. However, under the powers of the Division Head with prior consultation with Police, the limit for a BPM/ABPM/GDS in rural areas is increased to Rs. 25,000/-.
+
+Q31. (Postal Manual Volume VI Part-III) [Difficulty: Easy]
+What specific color of sealing wax must be used by the treasurer when sealing a cash bag?
+A. Red
+B. Green
+C. Black
+D. White
+Answer: C
+Explanation:
+Black sealing wax should be used strictly for the purpose of sealing a cash bag. Red sealing wax is used for impressing the cash seal on the account bag.
+
+Q32. (Postal Manual Volume VI Part-III) [Difficulty: Easy]
+What is the maximum limit for remittance of loose cash through a single Departmental Employee?
+A. Rs. 1 Lakh
+B. Rs. 2 Lakh
+C. Rs. 5 Lakh
+D. Rs. 10 Lakh
+Answer: C
+Explanation:
+The limit for loose cash remitted through a single Departmental Employee is Rs. 5 Lakh. If accompanied by another departmental employee, it extends to Rs. 10 Lakh.
+
+Q33. (Postal Manual Volume VI Part-III) [Difficulty: Easy]
+In the Visit Book (MS-86), what does an entry written in red ink by the Sub Account PA signify for the ABPM?
+A. The village must be visited on every trip regularly.
+B. The ABPM is not obliged to visit on every trip but must visit the village marked.
+C. The village requires armed escort for cash delivery.
+D. The village is outside the delivery jurisdiction.
+Answer: B
+Explanation:
+Red ink used by the Sub Account PA in MS-86 means the ABPM is not obliged to visit on every trip but has to visit the village marked in those red entries. Black ink denotes regular visits.
+
+Q34. (Postal Manual Volume VI Part-III) [Difficulty: Moderate]
+What is the financial limit for remittance when an account bag containing cash is handed over to a courier in the weighment system or via road transport?
+A. Rs. 40,000/-
+B. Rs. 1 Lakh
+C. Rs. 2 Lakh
+D. Rs. 5 Lakh
+Answer: A
+Explanation:
+The limit for an account bag handed over to a courier in the weighment system/road transport is Rs. 40,000/-.
+
+Q35. (Postal Manual Volume VI Part-III) [Difficulty: Moderate]
+For what duration should the receipts obtained along with the Sub Office (SO) daily accounts be preserved in the Head Office?
+A. 6 Months
+B. 12 Months
+C. 18 Months
+D. 3 Years
+Answer: C
+Explanation:
+The receipts obtained should invariably be preserved along with the SO daily accounts for the same period as prescribed for the SO daily account, which is 18 Months.
+
+Q36. (Postal Manual Volume VI Part-III) [Difficulty: Moderate]
+Who must carefully examine the account bag received from the Head Office before it is opened in a Sub Office?
+A. Sub Account PA
+B. Mail Attendant
+C. Treasurer
+D. SPM (Sub Postmaster)
+Answer: D
+Explanation:
+The account bag received from the HO should be carefully examined by the SPM before it is opened.
+
+Q37. (Postal Manual Volume VI Part-III) [Difficulty: Moderate]
+During the checking of the SO daily account in the Head Office, if an account item is found to be incorrect, how must it be rectified?
+A. Return the daily account to the SO for correction.
+B. Correct the SPM's figures on the original daily account.
+C. Enter the correct amount in the HO account without altering the SPM's figures.
+D. Delete the entry and report to the PAO.
+Answer: C
+Explanation:
+If an item is wrong, the correct amount should be entered in the account of the HO, but the SPM's figures in the daily accounts should not be corrected or altered in any way. The daily account is never returned to the SO for correction.
+
+Q38. (Postal Manual Volume VI Part-III) [Difficulty: Moderate]
+Under the rules for undelivered articles, what is the maximum duration a postman is permitted to keep an undelivered article in their possession?
+A. Until the end of the next business day
+B. Not more than 24 hours under any circumstances
+C. 48 hours for rural beats
+D. Until the sender requests a recall
+Answer: B
+Explanation:
+A postman may in no circumstances keep an article in his possession for more than 24 hours.
+
+Q39. (Postal Manual Volume VI Part-III) [Difficulty: Hard]
+If authorized by the Head of Circle, what are the specific hours defined as "night" for authorizing night remittance on foot lines during the winter season?
+A. 06:00 PM to 06:00 AM
+B. 06:30 PM to 06:00 AM
+C. 07:00 PM to 05:30 AM
+D. 08:00 PM to 05:00 AM
+Answer: B
+Explanation:
+Night remittance on foot lines is defined in winter as the period from 06:30 PM to 06:00 AM. In summer, it is defined as 07:00 PM to 05:30 AM.
+
+Q40. (Postal Manual Volume VI Part-III) [Difficulty: Hard]
+How should the daily accounts of Branch Offices (BOs) for the concluding days of March be handled if they do not reach the Sub Office (SO) before the 1st of April?
+A. Incorporated into a Supplementary SO Summary for March.
+B. Accounted for in the Head Office balance sheet for March.
+C. Incorporated in the SO account and BO Summary for April.
+D. Returned to the BO for re-issuing under April dates.
+Answer: C
+Explanation:
+While the concluding days of March for the SO itself are shown in the SO account for March, the entries in the daily account of BOs for the concluding days of March which do not reach the SO before the 1st of April should be incorporated in the SO account and BO Summary for April.
+
+Q41. (Postal Manual Volume VII) [Difficulty: Easy]
+In the context of the department of a set of a Sorting Mail Office, what does the abbreviation 'HSA' stand for?
+A. Higher Sorting Authority
+B. Hub Sorting Agent
+C. Head Sorting Assistant
+D. Handling and Sorting Assistant
+Answer: C
+Explanation:
+HSA stands for Head Sorting Assistant, who sits at the top of the hierarchy of a set of a Sorting Mail Office.
+
+Q42. (Postal Manual Volume VII) [Difficulty: Easy]
+If a sorting list supplied to a Sorting Assistant is lost, what is the nominal cost recovered from the official before a new copy is issued?
+A. Rs. 1/-
+B. Rs. 5/-
+C. Rs. 10/-
+D. Rs. 50/-
+Answer: A
+Explanation:
+If a sorting list is lost, a sum of Rs. 1/- is recovered from the official as a nominal cost of the sorting list before a new copy is supplied.
+
+Q43. (Postal Manual Volume VII) [Difficulty: Easy]
+Who is designated to physically verify the stock of bags in the Circle Bag Office (CBO) at the time of the annual inspection of the Postal Stores Depot (PSD)?
+A. APMG
+B. ADPS (Tech)
+C. DPS
+D. ASRM
+Answer: C
+Explanation:
+At the time of the annual inspection of the PSD, the DPS should physically verify the stock of bags in the CBO with the help of an inspector.
+
+Q44. (Postal Manual Volume VII) [Difficulty: Moderate]
+According to the revised norms for activities at NSH/ICH, what is the exact time factor assigned for the manual sorting of articles?
+A. 0.04 minutes
+B. 0.063 minutes
+C. 1 minute
+D. 1.6 minutes
+Answer: B
+Explanation:
+The revised time factor for sorting of articles at NSH/ICH is 0.063 minutes, which corresponds to 950 articles per hour.
+
+Q45. (Postal Manual Volume VII) [Difficulty: Moderate]
+If detention to mails due to railway breaches or accidents is likely to exceed a certain duration, it must be reported at once by fax/email to the Superintendent and Record Office. What is this duration?
+A. 2 hours
+B. 6 hours
+C. 12 hours
+D. 24 hours
+Answer: B
+Explanation:
+If the detention to mails due to breaches or accidents is likely to exceed 6 hours, it should be reported at once by fax/email to the Superintendent and the Record Office.
+
+Q46. (Postal Manual Volume VII) [Difficulty: Moderate]
+What is the statistical justification required for closing an Air Mail PC bag?
+A. More than 50 articles
+B. Between 50 to 150 articles
+C. More than 150 articles
+D. More than 50 articles and 6 registered letters
+Answer: B
+Explanation:
+An Air Mail PC bag should be closed strictly as per the statistical justification of containing between 50 to 150 articles.
+
+Q47. (Postal Manual Volume VII) [Difficulty: Moderate]
+During the All India Mail Survey, what minimum percentage of the Post Offices selected by the Heads of Circles must be located in rural areas?
+A. 10%
+B. 25%
+C. 50%
+D. 75%
+Answer: B
+Explanation:
+The Heads of Circles will chalk out the Survey Programme in such a way that at least 25% of the Post Offices selected for the All India Mail Survey are in rural areas.
+
+Q48. (Postal Manual Volume VII) [Difficulty: Moderate]
+On which two dates every year must the physical verification of bags be centrally carried out to generate the half-yearly statement?
+A. 1st January and 1st July
+B. 1st April and 15th October
+C. 31st March and 30th September
+D. 15th February and 15th August
+Answer: B
+Explanation:
+Physical verification of bags will be done twice in a year on 1st April and 15th October.
+
+Q49. (Postal Manual Volume VII) [Difficulty: Hard]
+To maintain the efficiency of mail operation, what is the maximum average rehandling rate per article allowed within one office, based on the accepted expected speed of sorting 1000 articles per hour?
+A. 1.0 handling
+B. 1.6 handling
+C. 1.8 handling
+D. 3.0 handling
+Answer: B
+Explanation:
+The rate of handling within one office as per accepted practice should not exceed 1.6 per article. This is achieved by dividing the sorting speed of 1000 by 600. Rehandling itself should not exceed 1.8 per article, but the overall rate of handling within one office should not exceed 1.6.
+
+Q50. (Postal Manual Volume VII) [Difficulty: Hard]
+What is the correct preservation period for the Day Bag book in the Circle Bag Office (CBO), the Stock Register, and the Repairable bag Register?
+A. 2 Years
+B. 3 Years
+C. 5 Years
+D. 10 Years
+Answer: D
+Explanation:
+The Day Bag book in CBO, Stock Register, Repairable bag Register, and Unserviceable bag register must all be preserved for 10 Years. Other records generally have a 2-year preservation period.

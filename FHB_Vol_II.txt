@@ -1,0 +1,2038 @@
+A Self Learning Portal
+
+www.dakguru.com
+
+Financial Handbook Volume-II
+
+DISCLAIMER: This booklet has been prepared strictly from an examination point of view. While every effort
+has been made to ensure accuracy and the inclusion of recent changes, amendments, and updates to the
+relevant Acts, Rules, and Regulations, this document is intended as a study aid only. Readers and students
+are strongly recommended to refer to official government sources or gazettes for the most reliable and
+authoritative information.
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+FINANCIAL HAND BOOK VOLUME II
+CHAPTER I: INTRODUCTORY
+Rule 1. Scope and Applicability
+The procedure relating to initial and compiled Accounts of Post Offices (PO) & Railway
+Mail Service (RMS). The classification of transactions into 15 digits Head of Account of
+Department of Posts (DOP). The rules relating to the Post Office & RMS initial off-line &
+on-line transactions Account and the compilation of the relevant Treasury Rules have
+been included in this Handbook.
+Rule 2. Definitions
+1. The Drawing and Disbursing Officer (DDO): The designated Authority in any
+unit of DOP who is responsible for drawing bills, all money received or disbursed
+and making payments in his office and the maintenance & submission of accounts
+to the Controller General of Accounts (CGA) through the Circle Postal Accounts
+Office.
+2. Non-Cheque Drawing DDOs (NCDDOs): The DDOs which have not been vested
+with cheque drawing powers. Viz. Regional Office (RO), Circle Office (CO), PLI
+Directorate, Head Record Office (HRO) in RMS.
+3. Head of Postal Accounts Office: The Head of an Office of Accounts subordinate
+to Head of Circle and responsible for scrutiny, review, monitoring, and
+reconciliation of e-accounts rendered by DDOs/NCDDOs & submission thereof to
+CGA.
+4. The "Bank": Means any office or branch of the Banking Department of the Reserve
+Bank of India (RBI), any branch of the State Bank of India (SBI) acting as the agent
+of the RBI.
+5. The Secretary: Means Secretary, Department of Posts.
+6. The Director General: Means the Director-General of Department of Posts.
+7. The Department: Means the Department of Posts.
+8. The Government: Means the Central Government.
+
+2
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+9. The Head of a Circle: Means a Chief Postmaster General (CPMG) of a Circle,
+Department of Posts and/or any other Officer specifically declared as such by the
+Competent Authority.
+10. The Head of a Department: Any authority declared under S. R. 2(10). The
+President has declared the Director-General of Department of Posts to be Head of
+the Department.
+11. Treasury: Includes a sub-Treasury.
+12. Head of Accounts (15 digits): The classification structure is as follows:
+Classification
+
+Digits
+
+Major Heads
+
+4 Digits
+
+Sub-Major Heads 2 Digits
+Minor Heads
+
+3 Digits
+
+Sub-Heads
+
+2 Digits
+
+Detailed Heads
+
+2 Digits
+
+Object Heads
+
+2 Digits
+
+13. Postmaster-General: Includes CPMG, PMG, Regional PMG, Director of Postal
+Services (DPS).
+14. Railway Mail Service: Carriage of mails by road, air, river and train and collection
+and distribution of mails.
+15. Superintendent: Includes Superintendent (SP) & Senior Superintendent (SSP) of
+Post Offices and Superintendent (SRM) & Senior Superintendent (SSRM) of RMS,
+direct subordinate of DPS/PMG/CPMG.
+16. Head Post Office (HPO): Account office of sub office and Branch office and the
+Officer in-charge of a Head Office is designated a Head Postmaster.
+17. General Post Office (GPO): The First-class Head Office situated at the
+Headquarters of the Head of a Circle or, where there is more than one such Head
+Office, the one attached to the HQ, is termed GPO.
+3
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+18. Sub-Office: A sub-office is a Post Office subordinate to and in account with a Head
+Office. The officer in-charge of a sub-office is designated a Sub Postmaster (SPM).
+19. Branch Office: A Branch Office is a Post Office of lower status than a sub-office. It
+is in direct account with a Head or sub-office. The Office in-charge is Branch
+Postmaster (BPM).
+20. Transit Office: Any Post Office which is situated on a line of through mail
+communication, and receives and sorts bags intended for offices in advance,
+without opening them, is a transit office.
+21. Transit Mail Office (TMO): A branch of RMS where closed bags are received and
+dispatched, sorting of letters is not done in this unit. Mail Agent or Mail Guard is
+in charge of this unit.
+22. Computerized Transit Mail Office: These Offices are called Computerized TMOs.
+23. Sorting Office: Where work of sorting of articles is done.
+24. Automatic Mail Processing Centers (AMPC): Sorting machines have been
+provided which have high speed of sorting.
+25. Computerized Registration Centers (CRC): The Registration Branch of the Mail
+Office, where the processing of registration work is done on computers, is called
+Computerized Registration Sorting Centre (CRC).
+26. Sorting sub-office: Where the work of sorting is done.
+27. Returned Letter Office (RLO): A Returned Letter Office is established at the
+Headquarters of a Postal Circle.
+28. Transcription Centre: A transcription center is a cell established in a Sorting
+Office, situated normally at the Headquarters of the Circle.
+29. Office of Exchange: Offices of exchange of transit bags, Foreign Post Offices and
+Sub-Foreign Post Offices.
+30. Foreign Post Office: An office of exchange in which the work of assessment of
+customs duty on foreign mails is also carried out.
+
+4
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+31. Sub-Foreign Post Office: Such sub-Foreign Post Offices are opened mainly for the
+convenience of senders and addressees who may be required to present
+documents, etc., for the release or dispatch of their foreign articles.
+32. Mail Office: Mail Offices are stationary offices of the RMS and are of two kinds,
+viz., Sorting Mail Offices (SMO, HSA is in charge) and Transit Mail Offices (TMO,
+Mail Agent is in charge).
+33. Corporate Mail Office or Bulk Mail Centre (CMO/BMC): Corporate Mail
+Offices/Bulk Mail Centers are opened in big cities. Each Bulk Mailer, i.e., a firm
+which is capable of posting of 5000 unregistered articles / 250 registered articles
+at a time.
+34. Mass Mailing Centre (MMC): This Centre is receiving the loose letters, circulars
+and blank envelopes separately from the customers and help them in writing the
+addresses, enclose the circulars/letters inside the envelopes, affixing the postage
+stamps/franking the mail. For this purpose, the MMC may engage the assistance
+of college students, house-wives, pensioners, etc., on payment of some amount on
+hourly basis.
+35. Record Office: A Record Office is a stationary office of the RMS where the work
+papers of the sections attached to it are prepared, checked and placed on record.
+36. Head Record Office: It is a stationary office situated at the HQ of RMS Division.
+The preparation work of salary and contingent bills for the entire Division is done
+on HRO Level.
+37. Sub-Record Office: A sub-record office is a stationary office of the Railway Mail
+Service, situated at the same station as a Mail Office.
+38. Account Bag: An account bag is used between a sub-office and its Head Office to
+enclose cash bags and articles, documents, etc. from the Head Office to one of its
+sub-offices and vice versa. (HO to SO: S.O. Slip & SO to HO: S.O. daily account).
+Account bags are due bags.
+39. Branch Office Bag: A branch office bag is used between a branch office and its
+account office to enclose cash bags and all articles, documents, etc. Branch office
+bags are due bags.
+
+5
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+40. Cash Bag: A cash bag is used to enclose remittances of cash between Post Offices.
+Cash bags are not due bags.
+41. Overtime Duty: Overtime duty means the duty performed under the orders of the
+SRM, ASP, IRM or Record Officer by a SA, Mail Guard, MTS, other staff of the
+RMS after the completion of prescribed term of duty.
+42. Digital Payments: Funds flow directly from one account to another and is
+Faceless, Paperless, and Cashless. Digital Payment transactions can be done
+through:
+Mode
+
+Description
+
+BHIM
+
+Bharat Interface for Money
+
+BHIM Aadhaar (AEPS) Aadhaar Enabled Payment System
+Bharat QR Code
+
+Bharat Quick Response Code
+
+UPI
+
+Unified Payments Interface
+
+USSD
+
+Unstructured Supplementary Service Data
+
+IMPS
+
+Immediate Payment Service
+
+Debit/Credit Cards
+
+Electronic Cards
+
+NEFT
+
+National Electronic Funds Transfer
+
+RTGS
+
+Real Time Gross Settlement
+
+CHAPTER II: SUPPLY OF STAMPS
+Rule 4. Fixation of Stock Limits
+Minimum and Maximum stock of Stamps are fixed by:
+
+
+Non-Gazetted Postmasters: Divisional Head
+
+
+
+Group 'B' Postmasters: Director of Postal Services (DPS)
+
+6
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+
+FHB Vol - II
+
+Group 'A' Postmasters: CPMG/PMG
+
+Note: The word "stamps" in this rule includes postage stamps, non-postal stamps,
+envelopes and Post cards.
+Rule 5. Procurement by Head Post Offices
+Head Post Offices will obtain their supply of stamps, not exceeding their respective
+authorized maximum stamp balances, from the Postal Stores Depot (PSD). Head Post
+Offices will obtain their requirement of Revenue stamps from Treasuries on payment of
+cash.
+Rule 6. Supply of Stamps from Stamp Depot
+(a) The Head Post Offices within the jurisdiction of PSD obtain their supplies of Postage
+Stamps, Postal Stationery, and other type of Stamps. The Head post office shall follow
+end-to-end electronic process of procurement, sales, inventory, transfer, verification, etc.
+(b) On receipt of stamps and Postal Stationery from the PSD, the Head Postmaster or any
+other person authorized shall check and verify the articles received with the invoice and
+return one copy of invoice to PSD not later than 3 days of the receipt of the supply.
+(c) The face value of the articles received from the Postal Stores Depot shall be entered in
+the Stock register as Receipt from the Stores depots.
+(d) The PSD shall furnish the data of stamps supplied to HPO in a month in e-format to
+the CPAO for verification to ensure that the supply is received at HPO and accounted in
+the stock register not later than 3 days of the receipt of each supply.
+(e) Unserviceable stocks of stamps and stationery shall be exchanged for serviceable ones
+of the same kind from the Postal Stores Depot. The surplus stocks of stamps and
+stationery shall be returned by the post offices to the Postal Stores Depot for exchange
+with other denomination of stamps actually required.
+Rule 7. Supply of Commemorative Stamps
+Commemorative stamps are supplied by Nasik Security Press to certain Philatelic
+Bureaus and Presidency Post offices.
+
+7
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+(a) The Nasik Press will dispatch the supplies to the designated Post Office accompanied
+by an invoice in triplicate. One copy of the invoice shall also be forwarded direct to the
+Postal Accounts Office of the Post Office by the press.
+(b) Two acknowledged copies of the invoice will be returned to Nasik Press immediately
+on opening and verifying the supplies. The two copies should be marked first copy and
+second copy.
+Rule 10. Loss or Damage of Stamps
+When postage stamps and stationery are lost or damaged, or become useless or obsolete,
+the value thereof should be written off under the orders of the competent authority. The
+stock account is updated accordingly. In every case of write off, a copy of the order is
+communicated to the PAO with a copy to PSD.
+Philately Rules
+Rule 11. Definition: Philately is an art of systematically collecting and studying stamps
+and postal stationeries including research activities on stamps & other philatelic
+products.
+Rule 12. Types of Stamps:
+
+
+Definitive stamps: Issued for day-to-day use as postage for availing postal
+services by customers and such stamps are reprinted when exhausted.
+
+
+
+Commemorative stamps: Issued to commemorate certain events, personalities,
+themes, flora, and fauna etc., and they are not reprinted when the stock is
+exhausted.
+
+Rule 13. Philatelic Bureau: It is a branch of a HO or SO specifically setup by the
+Department to deal with the receipt and sale of all philatelic items like
+special/commemorative stamps, first day covers, special covers, new issues in definitive
+stamps, and new stationery etc. It also provides special cancellations on first day covers
+and special covers. It maintains Philatelic Deposit Accounts.
+Rule 14. Philatelic Counters: It is a counter for sale of philatelic items. A philatelic
+counter is functioning in each Head Post Office. These counters offer registration facility
+for opening Philatelic Deposit account with supply of material by the Parent bureau.
+
+8
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 15. Philately Deposit Account Scheme: Philately Deposit Account can be opened
+at Philatelic Bureau or Philatelic counter of HO. An amount of Rs. 200/- has been
+prescribed as Security deposit in Philatelic Deposit Account.
+Rule 16. Special Cover: An event which is not nationally important enough to be
+commemorated by issue of a Commemorative/Special stamp. Department will issue
+Special Covers which can be cancelled with a special cancellation at the post office.
+Rule 17. My Stamps: It is the brand name for personalized sheets of commemorative
+postage stamps of India Post. The personalization is achieved by printing a thumb nail
+photograph of the customer images and logo of institutions, or images of artwork,
+heritage buildings, famous tourist places, historical cities, wildlife, other animals and
+birds etc.
+Rule 19. Railway Mail Service Offices (Supply)
+The supply of required stamps as per the authorized limit shall be made by the
+designated post office as advance supply to a mail office of the RMS, SRO or HRO having
+Mail Office under him should be required to grant a receipt countersigned by the
+Superintendent, RMS for the value of the stamps supplied to him and it is renewed on
+1st April every year.
+CHAPTER III: REVENUE RECEIPTS
+Postal Revenue
+Rule 20. Classification of Revenue
+The Department earns revenue under Major Head 1201 (The First Four digits of 15-digit
+CGA Head of Account). The areas include sale of the following products and services
+from segments like mail operation (Traditional and Business Development), Postal
+Savings Bank Operations, and other allied services.
+Postage Collection: The postage collection is done through any of the following modes
+for the services rendered by Department of Posts:
+
+
+Cash, Cheque, and DD.
+
+
+
+Digital modes: Debit/credit card, Net banking, UPI Payments, live QR/QR code,
+POSB debit, etc. (digital mode where applicable).
+9
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+
+
+Franking.
+
+
+
+Book Now Pay Later and advance payments.
+
+
+
+Posting of Registered Newspaper without prepayment of postage.
+
+Registered Newspaper License:
+
+
+License granted by Head of Circle/Head of the Regions. A copy of the license
+should be sent by the Head of Circle to the Postal Accounts Office concerned with
+particulars of the organization and the amount of Security Deposits accepted and
+form.
+
+
+
+If the license is cancelled, these facts may be intimated to the Circle Postal
+Accounts Office by Circle Office / Regional Office.
+
+
+
+The office of posting will prepare fortnightly (i.e., for 1st to 15th and 16th to the
+end of each month) bills in form MS-98 and present the bill to the newspaper on
+the 16th and 1st of each month.
+
+
+
+The license should be deemed to have been cancelled if the bill remains unpaid by
+the end of the fortnight following the fortnight to which it relates.
+
+Rule 21. Franking Services
+The Fee for applying for a new license is Rs. 375. Renewal Fee for the expired license is
+Rs. 475. This will be a postal receipt and credited to 1201-00-800-42-35-00.
+Rule 22. Book Now Pay Later Facility (BNPL)
+
+
+Bulk customers are eligible for credit facility to avail Speed Post and Business Post
+facility.
+
+
+
+Bulk customer is defined as anyone who provides Rs. 10,000 worth of speed post
+business or business post or combination of both in a calendar month at a Speed
+Post booking office.
+
+
+
+The contract will be applicable for a period of one year and the approving
+authority shall renew the contract on an annual basis.
+
+10
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+
+FHB Vol - II
+
+The BNPL bill will be prepared on a monthly basis (Calendar month) by the office
+of posting.
+
+
+
+The bill will be raised by the 7th day of the following month (bill date). The bulk
+customer shall pay the bill amount in full on or before the last day of the month in
+which the bill is raised.
+
+
+
+In case the customer fails to make the payment by the due date, penalty at the rate
+of 12% per annum on the amount of the bill amount shall be imposed from the bill
+date.
+
+Rule 23. Unpaid Postage
+Unpaid and insufficiently paid letters and newspapers are taxed by the Postmaster and
+the amounts so realized are credited in accounts of the offices of the delivery under the
+head - Postage realized in cash for ordinary services (1201-00-101-01-01-00).
+Rule 24. Postal Receipt
+The various sources of postal receipts from various segments like postal operations,
+Financial Services, Post Office Insurance services, and other allied services operating
+third-party transactions include:
+
+
+Postage realized in cash for ordinary services: Sale of PC, ILC, envelope, Register
+Newspapers, Book Packet, sample packet, Recall of article, late fee, Unpaid
+postage etc.
+
+
+
+Speed Post: SP document, SP Parcel, SP-COD, POD etc.
+
+
+
+Business Post
+
+
+
+Logistic Post: FTL and LTL
+
+
+
+Business Parcel
+
+
+
+Cash on Delivery
+
+
+
+Direct Post
+
+
+
+Media Post
+
+
+
+Bill Mail Service
+11
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+
+
+Free Post Service
+
+
+
+International Mail Service
+
+
+
+Commission on e-Money Orders
+
+
+
+Commission on IFS Money Order
+
+
+
+Rent of Post Boxes and Bags
+
+
+
+Commission on sale of Indian Postal Orders
+
+
+
+Greeting Post
+
+
+
+Sale of Postage Stamps
+
+
+
+Sale of Service Stamps
+
+
+
+PRC for print to post service
+
+
+
+Commission on Field Postal Orders
+
+
+
+Retail Post
+
+
+
+Philately
+
+
+
+e-Post Services
+
+
+
+National Bill Mail Service
+
+
+
+Revenue from Common Service Centre
+
+
+
+Forfeited Money Orders
+
+
+
+Forfeited Indian Postal Orders
+
+
+
+Customs Duty-Postal Fee
+
+
+
+Commission on Aadhaar Services
+
+
+
+Commission on sale of Railway Tickets (PRRS)
+
+
+
+Revenue from management of SB accounts and certificates
+
+
+
+Recovery on PLI & RPLI Business
+
+12
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+
+
+Revenue from DOP E-Payment's solutions
+
+
+
+Sale of Revenue Stamps
+
+
+
+Sale of Sovereign Gold Bonds
+
+
+
+Postage realized for mail business service for e-iod
+
+
+
+Interchange fee for interoperable ATM transactions
+
+
+
+Fees from contractors
+
+
+
+Other Receipts: Other items, E-commerce portal, Magazine post, Commission on
+account of IMT Transactions of WUMT (WUMT is discontinued).
+
+CHAPTER IV: POST OFFICE ACCOUNTS
+Rule 25. Duties and Responsibilities of the Treasurer
+The treasurer is solely responsible for the safe custody during working hours of all the
+money, articles, documents, and property contained in the office safe from which current
+transactions are carried on, and for the correctness of the Treasurer's Cash Book. In offices
+where there is a reserve safe, he is jointly responsible with the Postmaster for the safe
+custody of the cash, etc., kept in the reserve safe or outside the reserve safe.
+Duties of Treasurer include:
+1. To supply funds from the office cash to subordinate offices (BO, SO, NDTSO etc.),
+postmen, and village postmen of the Head office and to other branches of HPO.
+2. To take over under receipt, account bags from the delivery PA and Branch office
+bags from the mail.
+3. To receive from the postmen, village postmen, and window Delivery Postal
+Assistant, collections on account of letter and parcel postage, registration fee and
+customs duty, with the relative postal fee realized on foreign parcels and
+redirection fees on parcels, unpaid money orders money from postman.
+4. Consolidation of DOP cash wherever multiple treasurers exist.
+
+13
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+5. Processing and accounting for Drawings from bank and Remittance to bank in
+cash through system-designed workflow in Treasurers Cash Book.
+6. Ensure correctness of Drawings from Bank (cash) and Remittance to bank by crossreference to e-statement downloaded from the bank Portal and obtain signature of
+Postmaster on day-to-day basis.
+7. Remittance of cash and cheque to offices linked like CO, RO, MMS, PSD, and P&T
+audit on receipt of indent/e-indent through system process.
+8. Supply of cash on approval for ATM cash loading agency or any other agency
+designated.
+9. Maintain e-treasurers Cash Book and ensure that the closing DOP cash balance
+matches with Physical cash on hand.
+10. Jointly responsible for safe custody of cash; insured articles and such other articles
+to be kept in safety including out of account sums.
+11. Receipt, issue, stock, and requisition including maintenance of e-records for
+definitive stamps and stationery including commemorative stamps.
+12. Remittance of cash and cheque to SOs and BOs as applicable and watch for the
+system acknowledgments and cash in transit.
+13. Submission of all vouchers to Accounts section against which disbursement
+effected directly by treasurer.
+14. Maintenance of error book and documenting such errors, omissions, and
+commissions.
+15. Re-issue of cheque in lieu of cancelled and revalidations of cheques.
+16. COD biller online/offline payments.
+17. Cheque book supply to subordinate offices.
+18. Issue letter of credit/limit in case of subordinate SOs who are having
+drawing/Remittance Bank account.
+19. Opening of cash Bags and its accounting.
+
+14
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+20. Daily maintenance of e-stamp balance register for definitive and commemorative
+stamps.
+Rule 26. e-Treasurer's Cash Book (ZFBL3N)
+1. E-Treasurer's Cash Book (Form ACG-2) is intended for the entry of all sums
+(including stamps) actually received and paid by the Treasurer. All transactions
+under the heads, Receipts and Payments, should be serially numbered.
+2. Actual cash transactions only will be entered in the Treasurer's Cash Book.
+Receipts and payments by book transfer should not be entered.
+Rule 28. Balancing the Cash Book
+Both sides of the e-Treasurer's Cash Book should be totaled for the day and balanced, the
+closing balance being written in words, and the book being signed both by the Treasurer
+and the Head Postmaster below the closing balance. Daily Transaction Report (DTR) for
+the day should tally with the treasurer cash Book closing balance and the treasurer and
+the postmaster are jointly responsible for the accuracy and corresponding physical cash
+balance in the treasury.
+Rule 29. Authorization of Payments
+Before giving cash to any of the officials, the Treasurer must obtain the initials of the Head
+Postmaster, or in his absence, any other officer specifically authorized in that behalf,
+against the entry of the sum in his cash book in token that the payment is authorized by
+the latter. Cash to be made over to another official of the Head office should always be
+given to him directly, and not through a third person.
+Rule 30. Bank Account Reconciliation
+Where a post office is attached with a bank Account for drawl of funds and remittance of
+surplus cash, it shall be ensured by the Treasurer and Postmaster that the fund is
+accounted correctly in the books of the bank & in the treasurer cash book respectively on
+the day of remittance with reference to the e-bank statement which is generated from the
+respective bank website/portal for which postmaster should get authorization. It shall be
+the joint responsibility of Treasurer and Postmaster and this work is in addition to the
+work of Bank reconciliation.
+
+15
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 32. Daily Adjustment of Treasurers Accounts
+(a) The Treasurer is strictly prohibited from keeping running accounts with the PAs,
+Postmen, and GDS. All amounts advanced to the Counter PAs by the Treasurer, or
+received by them during the day on account of e-money orders, Indian Postal Orders,
+Saving Bank, Post office certificates, or other transactions, or as postage due on articles
+received for delivery, etc., must as an absolute rule be adjusted before the office is closed.
+(b) It is the Treasurer's duty to receive the collections on account of letter and parcel
+postage and customs duty, with relative postal fee, from Postmen and GDS directly and
+not through any of the PAs. The accounts with the Postmen must be adjusted daily at the
+hour fixed by the Head Postmaster, and with the village postmen immediately on their
+return to the post office.
+Rule 33. Payment of Money
+(a) The bill or other documents presented as a claim for money will be received and
+examined by the accountant, and then laid before the Postmaster; no payment is made
+except under the written order of Postmaster.
+(b) After payment order has been signed by the Postmaster on the bill or other document,
+he shall indicate on the bill mode of payment i.e., whether in cash, by cheque, or by bank
+Draft/Government Drafts, enter it in his cash Book, deface the stamp with the date stamp,
+and stamp it with the Cash Paid stamp.
+Note: Deputy Postmasters are authorized to sign payment orders on occasions when the
+Head Postmaster is away from office during office hours.
+Rule 36. Payments of Head Record Clerks of the RMS
+(a) When an establishment or contingent bill, or a receipt for advance, prepared by Head
+Record clerk of the Railway Mail Service is presented at the Head Post Office with a
+remittance memorandum in the prescribed form (ACG.34) duly signed, for payment in
+cash or by Service money orders, the Head Postmaster should, after examining the
+continuity of the bill numbers, stamp, and issue the cash and Service money orders
+required, and return the bill or receipt to the Head Record Officer.
+(b) To ensure disbursement, on the last working day of each month, except in case of
+March, the Head Record Officer will present at the Head Post office attached, two or three
+
+16
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+days before close of each month, the system processed salary details for effecting online
+transfer of disbursements through POSB (CBS) or bank as the case may duly tallying the
+entries.
+Rule 37. Responsibility for Accounts
+The Head Postmaster is personally responsible that the DTR for the office is correctly and
+punctually generated on the day following that to which the entries relate and generally
+that his accounts are correct and the closing balance of DOP cash tallies with the actual
+physical cash balance held in the office. He shall ensure that no transactions done off-line
+and on-line are missed to be incorporated in the day's account. If any transaction is not
+incorporated in account or concerned correct GL code brought into the accounts
+immediately, it must be done before the month accounts are closed.
+Rule 38. Verification of DTR
+The entries in the DTR must be verified by the Head Postmaster himself except when
+under the special orders of the Head of Circle or PMG has been allowed to delegate the
+duty of verifying the DTR to one of his subordinates. When the duty of verifying the DTR
+is delegated to the subordinates employed in the office, the Head Postmaster must
+himself check at least two totals under each of the heads-receipts and payments in the
+DTR before he submits the accounts to Circle Postal Accounts Office. The two entries so
+examined should be marked by him "Examined" before he signs the DTR.
+Rule 39. Entry in Accounts
+
+
+Every item received or paid must at once be brought in a register or e-schedule
+subsidiary to the daily transaction Report as a line item and numbered in a
+consecutive daily series for each e-schedule or register.
+
+
+
+The corresponding e-returns for the CPAO should be checked, in order to ensure
+their punctual dispatch on due dates.
+
+
+
+It shall be ensured by the Head Postmaster that total for the day of all receipts and
+payments (Head Post Office plus Sub Post Offices plus Branch Post offices and any
+other unit) are correctly depicted in the classified abstract as generated through
+system and accompanied bills/vouchers/lists/journals etc. are available.
+
+17
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 40. Consolidation of Accounts
+Post Offices are, for account purposes, divided into three classes, namely:
+(a) Branch Post Offices: Which perform transactions and reporting to what is technically
+known as their Account office, be either a sub office or a Head office. Branch office shall
+submit all related transaction documents to Account office. Account office ensures that
+proper accounting of cash transactions done by Branch post offices in digital mode like
+collection and disbursement of IPPB deposits & payments respectively. Verification and
+checking the correctness of closing balance as in the DTR of the Branch post office shall
+be the responsibility of its account's office.
+(b) Sub Post Offices including MDG: The sub post offices & MDG are in account with
+Head office for meeting its cash/fund requirement. Sub office including MDG shall
+submit all related transaction documents, vouchers, e-lists, and details to head office in
+support of its transactions for the day to HPO. Verification of closing balance for the day
+of its office and Branch offices under it lies with sub post master with reference e-records
+and documents available and received from Branch offices.
+(c) Head Offices: The head office is responsible for checking of transactions under
+various segments done by Sub offices or branch office Savings bank (CBS) Manual, PLI,
+postal operation & logistic segments as per. Verification of closing balance for the day of
+its office and sub offices & Branch offices under it lies with head office with reference erecords and documents available and received from sub and branch offices. HPO is
+responsible for consolidation of e-account and submitted to CPAO on due date.
+Rule 41. Daily Transaction Report (ZFR DAY_NEW)
+
+
+The DTR is the account of Head of Account wise cash receipts and disbursements
+of the offices, opening balance plus receipts under various heads of account
+equating with payments under various heads of accounts plus closing balance for
+each day.
+
+
+
+The total of schedule agrees with the figures as in DTR for the day.
+
+
+
+Each type of Postal unit performing transactions shall ensure verification of Daily
+Transaction report and its correctness.
+
+18
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 42. Unpaid Postal Abstract
+
+
+In Head Offices, the total postage due on all unregistered articles of the letter mail
+received for delivery must be carefully calculated by the Postmaster himself and
+entered in the Unpaid Postage Abstract Form ACG.45 (revised) in the column
+headed "Total postage due on articles of the letter mail received this day." The
+postage realized on unpaid or insufficient articles shall be accounted under major
+head 1201-postage realized in cash for ordinary services.
+
+
+
+Unpaid and insufficiently paid articles, if intercepted under the orders of a District
+Magistrate, are handed over to the authority concerned without realization of the
+postage due.
+
+Rule 46. Head Office Classified Cash Book (T-code S_PL0_86000030)
+(a) The transactions are classified at point of source i.e., point of transaction. The erstwhile
+Head office Cash Book is called Head Office Classified Cash Book as the transactions are
+classified system driven.
+(b) The Head Office Classified Cash Book (Form No. ACG.4) is a record of the
+transactions of the head office including the transactions of the subordinate offices within
+the jurisdiction of Head Office. The other items under heads "Receipts" and "Payments"
+will be drawn up directly from the Head Office, Sub-Office and Branch Office
+transactions for the day.
+(c) The daily totals of the Head office, Sub-office, and Branch office transactions Head of
+account wise will be added together in Head Office classified Cash Book.
+(d) Progressive totals should also be made from the 1st to the end of the month.
+(e) The daily balance of the Head Office classified Cash Book is composed will be shown
+in the Postmaster's Balance Sheet.
+(f) The Postmaster's Balance sheet show the actual balance of Head office with part of
+cash including BO, SO and cash or stamps under transit. The Postmaster balance sheet
+must be written up by the Head Postmaster personally and signed by him after he has
+verified the accuracy of his accounts.
+
+19
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 47. Schedules of Receipts and Payments
+(a) In a computerized operation, e-schedule of Receipts and payments is available under
+each head of account for all the products and services that department operates including
+attached statutory taxes.
+(b) Postmaster or any officer in charge of any other unit is responsible to ensure that the
+total of the schedule figure for the day & month tallies with DTR/Head office classified
+cash book and monthly classified abstract.
+Rule 48. e-schedules
+Two types of e-schedule receipt and payments.
+
+
+The schedules relating to payments on account of PLI and RPLI, off cycle
+payments/bills paid should be submitted to Circle PAO on the 16th of same month
+period of 1st to 15th of that month and on 1st of following month of 16th to last
+day of the previous month.
+
+
+
+In the case of the schedules which have to be submitted to the Postal Accounts
+Office twice a month, the monthly total should be shown in the schedule for the
+second period.
+
+
+
+Monthly Total: Total from 1st to 15th + Total from 16th to end of month.
+
+
+
+Returns should be signed by Head Postmaster and should ensure that the total of
+e-schedules tallies with the e-Head office classified cash book before dispatch to
+PAO.
+
+Rule 49. Submission of Head Office Classified Cash Account to PAO
+(a) The Head office classified Cash Account of the Head Office for the previous month
+will be submitted by 5th of each month to the Postal Accounts Office. The entries to be
+made against the several head in the monthly Head Office classified Cash Account will
+be progressive totals on the last working day of the month under each Head of account.
+(b) The Head Postmaster is required to personally check the final totals of the Head Office
+classified Cash Book before and will be held responsible for the correctness of these
+entries.
+
+20
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 52. Delegation of Duty
+The duty of checking the Cash Account and submitting it to the Postal Accounts Office,
+may under the orders of the Head of circle, is delegated to the APM (Accounts). The DOP
+Cash Balance Report including transit must be prepared by the Postmaster himself with
+the support of APM (Accounts)/Accountant attached to Head Post Office.
+Rule 54. Statement of Balances
+(a) The Head Postmaster is responsible that the balances in cash and stock of postage and
+other stamps at the close of the day are within the limits fixed by the competent authority.
+He can keep cash in excess of the authorized maximum when the local Treasury/Bank is
+closed for holidays or when the excess cash is required to meet actual liabilities or to
+disburse pay at the end of a month, but in every such case the reason for keeping cash in
+excess of the limit should be recorded in the Daily Transaction Report.
+(b) The actual balances held in cash and stock of postage and other (non-postal) stamps
+at the close of each day, together with authorized balances must be entered in a weekly
+statement of balances in the prescribed form and submitted punctually on the 1st, 8th,
+16th and 24th of every month to the SPO's or the SSPO's, but the Head Offices under the
+administrative control of the Head of Circle should submit the statement of balances to
+the circle office for scrutiny etc.
+Rule 55. Supplementary Accounts for March
+
+
+All transactions of the financial year under consideration have to be brought to
+accounts in the same financial year. The Postmaster/DDO have to include all
+transactions of all subordinate offices before the closure of March accounts at DDO
+Level.
+
+
+
+Before the closure of March Month, all reversals, transfer entries, modification etc.,
+transaction inclusion be done in the system against 31st March and ensure
+inclusion by that date.
+
+Rule 56. Postmaster Duties Relating to Accounts
+
+
+The Postmaster is personally responsible for the correctness of the returns
+rendered by him/her to the Postal Accounts Office and for the punctuality of their
+submission.
+
+21
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+
+FHB Vol - II
+
+The duty of examining the S.O. transactions and the Branch Office transactions
+must always be carried out by the Postmaster personally, unless this duty is duly
+delegated to the Deputy or the Assistant Postmaster, as the case may be.
+
+Rule 57. Verification of Balances and Examination of Accounts
+1. Cash Balance: Every evening before the office is closed, the Head Postmaster
+should count the cash in office and satisfy himself that the total of the amounts
+agreed with DOP closing balance at foot of the Daily Transaction Report and cross
+verify with the DOP closing balance as in Treasurers cash Book. The DOP cash
+balance as ascertained from the e-treasurers' cash Book and that of e-DTR be cross
+checked and validated with physical cash balance.
+2. Disposal of Unused Loose Stamps: The following procedure should be observed
+for the disposal of unused loose service postage stamps and stationery and
+revenue stamps found on counters of Post Office or in letter boxes:
+o
+
+Such stamps and stationery will be kept out of the accounts of the Post office
+but retained at the Post office till the end of the month following that in
+which they were found.
+
+o
+
+If the owner submits his claim within this period and is able to establish his
+claim the Post Office will return the stamps and stationery to him.
+
+o
+
+Where no claims are received by the post office within this period, or claims
+made could not be established, the stamps and stationery will be taken to
+the stock of such stamps and stationery.
+
+3. Sum kept out of account: Every evening before the office is closed, the postmaster
+shall cross verify the correctness of availability of physical cash with that of sum
+kept out of treasury on T+1 day basis.
+4. Indian Postal Orders: Every evening before the office is closed, the Head
+Postmaster should refer to the e-stock register of IPO held unsold and satisfy
+himself that the stock is correct.
+5. Unpaid Articles in Deposit: Every evening, before the office is closed, the Head
+Postmaster should calculate the postage due on the articles of the letter mail in
+deposit and satisfy himself that the entries are correct and also the days realized
+
+22
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+dues have been accounted correctly as 1201-postage realized in cash for ordinary
+services.
+6. Check of Savings Bank transaction: Each unit HO/SO/BO shall take a report of
+transactions done in their SOL and compare with DTR & classified cash account
+to ensure all transactions have been depicted in DTR and Classified cash account
+correctly.
+7. Check of Post office certificates.
+8. Check of e-MOs issued and paid.
+9. Check on Drawings from Bank and remittance to Bank.
+10. Check on treasury Transactions.
+11. Comparison of classified cash account with e-schedule of Postal Receipts.
+12. Comparison of Classified cash Account figures with McCamish PLI/RPLI.
+13. Comparison of value & service charges on sale & cancellation of railway ticket
+through post office with DTR and Classified cash Account.
+14. Comparison of CSC transactions.
+15. Comparison of Western union Money transfer transactions.
+16. Check of Treasurers cash book.
+17. Miscellaneous Examination of Stock book of saleable Publications.
+18. Account of postage with Postmen.
+19. Comparison of e-schedule of payments against working expenses under major
+Head 3201 and 2252 other than salaries, Capital outlay major Head 5201 and 4252.
+20. Check on IPPB transactions.
+21. Check on Remittance transactions other than cash & check remittances.
+22. Check of transaction with RMS units.
+23. Check of GST receipts and GST payments.
+24. Check of pension schedules.
+
+23
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 58. Correction of Errors
+
+
+Transfer Entries: Transfer entries from one head of account to correct head of
+account as an error of classification in the original accounts. Any transaction if not
+posted to a correct head of account need to be posted to correct head of account.
+
+
+
+Multiple Entries: Multiple entries as an accounting error as a result of application
+issues, such entries need to be reversed by following the SOP issued by Postal
+Directorate.
+
+
+
+DDO Authorization: DDO is authorized to make such corrections to the extent of
+his domain of accounts based on the request from sub ordinate units including his
+unit along with proper explanation & entry in the error book maintained in the
+office.
+
+
+
+Timing: DDO shall ensure that such reversals or posting of document based on
+the requirement be done on the current date and in no posting or reversal allowed
+of prior period/date accounts would have already been submitted and finalized.
+An e-report of reversals and correction of errors done by DDO be made available
+to Circle postal accounts office for checks and balances.
+
+Rule 59. Submission by Head Offices & Other Accounting Units
+
+
+The verified returns with reference to e-schedules of receipts and payments under
+various Head of accounts constituting the accounts bundle, for submission by
+Head Offices to Circle Postal Accounts offices.
+
+
+
+Wherever e-schedules available and accessible to PAOs, no separate hard copy of
+the list/journal/schedule etc. be sent to Postal Accounts office. However,
+supporting vouchers duly mentioned with Bill number/document number with
+date be affixed on it be attached date wise/document no. wise/GL wise.
+
+
+
+Third party applications like WUMT, CSC, etc. that e-schedule of receipts and
+payments should be tallied with DTR of each day and also with that of classified
+cash account by the dealing assistant.
+
+24
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+CHAPTER V: RAILWAY MAIL SERVICE ACCOUNTS
+Rule 60. Responsibility for Accounts
+(a) The Head Record Officer (HRO) is personally responsible for all the monetary
+transactions of the division and for the correctness of the accounts connected therewith.
+He shall obtain cash from the designated DDO/Head Post office to the extent of
+requirement and ensure that no money is kept in the office beyond the cash Imprest fixed
+for his office. He is responsible for safe custody of cash and ensures that cash is kept in
+safe custody along with joint custodian. The HRO shall obtain cheque through
+application workflow process for payment to vendors or outsiders based on the sanction
+issued by the competent authority.
+(b) In every division there is an Accountant selected by Superintendent from among the
+sorters, to assist the Head Record clerk in the purely clerical account work of the office
+such as preparing bills, e-money orders, cash accounts and writing up the Cash Book,
+cash abstract, classified cash account and reconciliation with e-schedules. But the HRO is
+solely responsible that they are correctly and punctually prepared or rendered.
+(c) All the contents of the HRO office safe are held in the joint custody of the Head record
+Officer and the Accountant, each of whom is provided with a key of the safe. The
+accountant is responsible for the safe custody during working hours of the contents of
+the office safe. He is responsible for writing up the Cash Abstract correctly and is jointly
+responsible with the HRO for the verification before the close of the office, of the cash
+balance of the cash abstract with the cash and of the other articles, documents, or property
+in the office safe, and for the safe custody of the cash etc., after the safe is locked up for
+the day.
+Rule 61. Cash Abstract
+A Cash abstract (ACG-33) is kept by each Head Record and sub record office in which
+the money transactions of the office itself.
+Rule 62. Receipts
+(a) The receipt and disposal of all miscellaneous sums received by the officials of the
+Railway Mail Service from various sources should, as soon as the transactions take place,
+be entered in a register Treasurer cash book (Form ACG.-40). At the close of each month
+
+25
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+an extract from this register should be forwarded to the Superintendent of the Railway
+Mail Service Division concerned for information.
+(b) All miscellaneous sums received from the various sources should be paid into the
+local Post Office through application workflow and a receipt obtained from the
+Postmaster and acknowledged in the system.
+Rule 63. Submission of Accounts to Postal Accounts Office
+At the close of business each day the e-classified cash Book should be closed and every
+month the figures in the classified Cash Book are tallied with corresponding e-schedule
+total along with vouchers and bills submitted to Postal account office same as Submitted
+by Head Offices & other accounting units monthly.
+
+CHAPTER VI: STATUTORY TAXES
+Rule 64. DDO Accountability
+DDO (Drawing & Disbursing Officer), In case of Govt. Office or any officer designated as
+such is accountable for TDS deduction on payment and credit to Govt. Account. The
+concept of TDS envisages the principle of "pay as you earn."
+Rule 65. Assessment and Recovery
+Drawing and Disbursing officer including NCDDO is responsible for assessment,
+recovery, filing returns etc. Salary is chargeable to Income tax on due or paid basis,
+whichever is earlier.
+
+
+Any arrears of salary paid in the previous year, if not taxed in any earlier previous
+year, shall be taxable in the year of payment.
+
+Rule 66. Deduction of Tax (Section 192)
+Under section 192, the Drawing and disbursing officer is responsible to deduct income
+tax at the rate applicable while making payment of salary during Financial Year under
+consideration.
+
+
+The DDO has to issue a certificate of the amount of tax so deducted to his
+employees, in Form No. 16.
+26
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+
+FHB Vol - II
+
+No TDS is to be deducted on disability Pension to ex-servicemen.
+
+Rule 67. Classification of Income Tax Recovered
+The various types under which Income tax is recovered out of postal business and
+transactions are depicted below:
+Tax Head
+
+Description
+
+TDS-Salary Income tax from salary-Collection including deductions
+TDS-194C
+
+Deduction of Income tax from contractors
+
+TDS-194A
+
+Deduction of Income Tax Interest payments other than securities
+
+TDS-194H
+
+Deduction of Income Tax from Commission, Brokerage
+
+TDS-193
+
+Deduction from Interest on Security
+
+TDS-192
+
+Deduction from Govt. Emp Other than Union Government employees
+
+TDS-194 I
+
+Deduction of Income Tax on rent
+
+TDS-194EE
+
+Deduction IT on withdrawal of NSS
+
+Income Tax Surcharge
+-
+
+Income tax Health and Education Cess.
+
+Rule 68. Employee Declaration
+Salaried employee may furnish a statement in Form 12BB duly verified, giving details of
+his other income or loss under the head house property or claims of deductions under
+Chapter VIA, to his employer.
+Rule 70. Collection and Classification
+DDO/Postmaster shall ensure that the TDS so collected from salary and properly
+classified to Major Head 0021 and tallies with the e-schedules under the relevant head of
+account. File due returns 24Q on quarterly basis.
+
+27
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 71 to 74. Filing of Income Tax Returns by DDO
+
+
+24G & 24Q: TDS salary
+
+
+
+26G & 26Q: Other than Salary
+
+Rule 76. Goods and Service Tax (GST)
+GST is an indirect tax used in India on the supply of Goods and Services.
+
+
+Three different types of levies in GST:
+
+Type of GST
+
+Description
+
+CGST
+
+Central Good & service Tax (for central Govt.)
+
+SGST/UTGST Supply made by a registered person within a State/U.T.
+IGST
+
+IGST is leviable on Inter-State supply of goods or services or both.
+IGST is equivalent to sum total of CGST and SGST/UTGST
+
+Rule 85. Place of Supply
+GST is destination-based taxation or consumption-based taxation. By destination-based
+tax it means that the revenue accrues to the place where the goods or services are
+consumed.
+Rule 86. Consumption Route
+The consumption pattern for any goods or services follows a route:
+
+
+B2B Supply
+
+
+
+B2C Supply
+
+
+
+Recipient of Service or Goods is the final consumer.
+
+
+
+No credit is allowed to final consumer.
+
+Rule 92. TDS on GST
+TDS @ 2% (1% TDS on CGST & 1% on SGST) where the value of service or Goods exceed
+Rs. 2.5 Lakhs. The provisions of TDS on GST are applicable from 1st Oct 2018.
+
+28
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 94. Input Tax Credit (ITC)
+Under Rule 42 of CGST Rules, it shall be the responsibility of the officer-in-charge of
+Postal unit to avail the Input Tax credit.
+Rule 100. Payment of Taxes
+
+
+Every registered regular taxpayer under GST is required to compute his tax
+liability on a monthly basis by setting off the Input Tax Credit (ITC) against the
+Outward Tax Liability.
+
+
+
+The deposit shall be made through any of the following modes:
+1. Credit Card or debit card through the authorized bank.
+2. NEFT and RTGS.
+3. Over the counter (OTC).
+
+
+
+Electronic Liability Ledger: The Electronic Ledger shows the total tax liability of
+a registered person at any point of time.
+
+
+
+Electronic Cash Ledger: It will display the total amount deposited by the taxpayer
+towards discharge of his tax liability or interest or late fee or penalty any other
+amounts.
+
+Rule 101. Filing Returns of GST
+GST returns has to be filed by all the DDOs and NCDDOs entities that are registered
+under the GST system. The registered dealer if he sales, purchase, Output Goods and
+services tax (on Sales) and input Tax Credit with GST paid on the purchase. The
+Postmaster shall ensure that the CGST/SGST/UTGST/IGST collected and accounted for in
+the books is only remitted duly tallying with Invoice value pertains to B2B and B2C.
+Rule 103. Penalty for Late Filing of GST Returns
+A penalty will be levied in case he/she fails to file the returns on time. This penalty is
+called the late fee. The late fee is Rs. 100 for each day for each CGST and SGST. Thus, the
+total fine amount will be Rs. 200 per day. The maximum amount of fine that can be levied
+is Rs. 5,000. The taxpayer will also be required to pay an interest on amount on tax at the
+rate of 18% p.a. in addition to the late fee.
+29
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 104. Account and Records
+As per the GST Act, every registered taxable person must maintain the accounts books
+and records for at least 72 months. The period will be counted from the last date of filing
+of annual return for that year.
+
+CHAPTER VII: MISCELLANEOUS CHARGES
+Rule 105. Refund of Postage, etc. to the Public
+Any refunds of postage etc. shall be charged to the Head of account wherein
+corresponding credits are charged. May sanction the refund of the face value of:
+
+
+Unused but spoilt postage stamps, both ordinary and service, subject to a
+reduction of 6.25%.
+
+
+
+No claim to refund is considered in respect of any complete sheets of stamps.
+
+
+
+Unused but spoilt Postal stationery subject to a reduction of 20%.
+
+
+
+Refunds shall not be granted for unused and serviceable postage stamps.
+
+
+
+Refund of the value of postage stamps found loose in letter boxes or at post office
+counters.
+
+
+
+Refund of postage on account of impressions of the franking machine made in
+error after deduction of 5% face value by SSP.
+
+30
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+CHAPTER VIII: PENSION PAYMENTS
+Rule 115. Scope and Applicability
+The rules in this Chapter shall regulate the procedure with regard to the payment at any
+post office in India, of Postal service pensions payable in India out of the revenues of the
+Department under CCS (Pension) Rules 2021.
+
+
+Pension, whether due or to become due, is free from attachment from any court
+until it has actually been paid as per the Pension Act.
+
+Rule 116. Place of Payment
+Service pensions shall be processed by Head Post Offices and paid at any Head or Sub
+Post Office in India. Consequent on roll out of centralized application and disbursement
+is through POSB, all processing and disbursement will happen at the DDO/Head Post
+Office Level. In all cases, however, the first payment of pension shall be made at the
+Head or Sub Post Office in the jurisdiction of which the pensioner has elected to receive
+payment.
+
+
+Provisional Pension, provisional Family pension and provisional Gratuity where
+payable shall be drawn, by the head of office where the Government servant
+served immediately prior to his retirement.
+
+
+
+In case, service pension is disbursed through POSB account of the service
+pensioner across any eligible post offices in India based on request of him/her, the
+place where the POSB accounts stands will be the place of payment.
+
+
+
+Pension cannot be paid in cash. Hence credit of service pension will be through
+individual POSB account stands in the name preferably joint account with spouse.
+
+Rule 119. Pension Payment Order (PPO)
+Except payment of provisional pensions by Heads of Offices, payment of service pensions
+can be made only upon valid e-PPO or hard copy of the PPO in the prescribed Form
+issued by the Accounts officer of the CPAO to the Head Post Office or in the jurisdiction
+of which payment is desired by the pensioner.
+
+31
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Rule 120. Custody of PPOs
+On receipt of PPO in a Head Post Office, Postmaster's half of the order shall be kept in
+separate files, one for each class of pension (service pension / Family pension etc.)
+prominently marking in red ink. These files may be kept in the personal custody of the
+Postmaster in such a manner that pensioners shall not have access thereto.
+Rule 121. Procedure on Receipt
+On receipt of the PPO, the disbursing officer shall paste the documents on his half (or the
+duly endorsed copy) of the Pension PPO. The pensioner's half of the order shall be made
+over, under receipt, to the pensioner after proper identification when he appears to
+receive his pension for the first time.
+Rule 122. Exemption from Personal Appearance (Notation)
+When a pensioner is specially exempted from personal appearance, the fact shall be noted
+by the disbursing officer on his Pension Payment Order.
+Rule 123. Renewal of PPO
+Head Postmasters are authorized to renew Pension Payment Orders without reference to
+the Postal Accounts Office in cases in which pensioner's half is lost, worn or torn, or
+completely filled up. Old PPO shall be retained by the Postmaster for three years and
+then destroyed.
+Rule 125. Loss of PPO
+If both halves of a PPO are reported lost in transit due to floods etc., before commencing
+payment, the Directors / Dy. Director of Accounts (Postal)/GM (PAF) will issue a
+duplicate PPO which would be prominently marked as "Duplicate - No payment to be
+made against original PPO."
+Rule 126. Commutation of Pension
+PPO have the amount of payment of the commuted value of the pension and the reduced
+amount of pension to be payable with effect from the date of commutation. The date of
+payment of commuted value will be noted on both the halves of the PPO by the
+disbursing officer.
+
+32
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+
+FHB Vol - II
+
+Restoration of commuted value of Pension will be authorized by Head
+Postmasters after 15 years from the date of payment.
+
+Rule 128. Register of Pension Payment Order
+The Postmaster will keep a register/e-register in Form No. Pension-2 of the PPO received
+by him. When both portions are returned due to death or transfer or otherwise, date of
+the renewed PPO or the date and cause of return should be entered in the black ink under
+the Postmaster's initials. An intimation about the death of a pensioner should be recorded
+by Postmaster.
+Manner of Payment
+Rule 132. Due Date
+Pension fixed at monthly rates are payable monthly on or after the last working day of
+the month except pension payment for the month of March which shall be paid on first
+working day of April.
+Rule 133. Payment of Claims
+The disbursement of provisional pension drawn by the DDO/Head Post Office shall be
+made by drawl of bills based on the sanction issued by the competent authority in the
+same manner in which Pay and allowances are disbursed by him.
+Rule 134. Exemption from Personal Appearance
+A pensioner specially exempted by the orders of competent authority from personal
+appearance, a female pensioner not accustomed to appear in public, or a pensioner who
+is unable to appear in consequence of bodily illness or infirmity, may be received his or
+her pension through a representative upon the production of a life certificate signed by
+a responsible Government Officer or by some other well-known and trustworthy person.
+Rule 135. Authorities for Life Certificate
+A pensioner who produces a life certificate signed by any person specified hereunder is
+exempted from personal appearance:
+
+
+A Magistrate under the CrPC.
+
+
+
+A Registrar or Sub-Registrar appointed under the Indian Registration Act.
+33
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+
+
+A Group A or B Government servant.
+
+
+
+Sub-Inspector-in-charge of a police station.
+
+
+
+A Postmaster, a Sub-Postmaster or an Inspector of Post Offices.
+
+
+
+A pensioned officer who, before retirement, exercised the powers of a Magistrate.
+
+
+
+A Block Development Officer, Munsif, Tahsildar or Naib Tahsildar.
+
+
+
+A head of a Village Panchayat, Gram Panchayat.
+
+Rule 136. Pensioners Non-Resident in India
+A pensioner not resident in India may draw his pension in India, through a duly
+authorized agent, possessing a legally valid power of attorney, who must produce a life
+certificate on each occasion, unless the duly authorized agent has executed an indemnity
+bond to refund overpayments in which case, he has to produce the life certificate at least
+once a year.
+Rule 137. Agents with Indemnity Bonds
+A pensioner of any description resident in India is exempted from personal appearance
+if he draws his pension through an agent who has executed a bond to refund
+overpayments and produce at least once a year a life certificate signed by a person
+authorized under Rule 135 to sign such certificates.
+Rule 138. Validity of Agent Payment
+The pension of a person drawing his pension through an authorized agent who has
+executed a bond to refund overpayment, shall not be paid on account of a period of more
+than a year after the date of the life certificate last received, and the disbursing officer
+shall be on the watch for authentic information of the death of any such pensioner, an on
+receipt thereof, shall promptly stop further payments.
+Rule 139. Payment to Minors/Guardians
+When a pensioner is a minor, or is for any other reason incapable of managing his own
+affairs, and has not regularly appointed manager or guardian or when the guardian so
+appointed dies or forfeits the position of a guardian payments may be made to the person,
+who comes with the pensioner as the guardian for the first time, provided the same
+34
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+person produces a certificate from the Collector of the District or the Deputy
+Commissioners declaring him to the manager or guardian for the purpose of receiving,
+on behalf of the pensioner, pension due to him.
+
+
+This certificate shall be kept on record with the disburser's half of the PPO.
+
+Forms of Pension Bills and Connected Certificates
+Rule 141. Declaration of Marriage/Remarriage
+A declaration shall be obtained half yearly from all recipients of family pension whose
+pension is terminable on their marriage or remarriage. Every pension disbursing officer
+shall submit to the Accounting Authority concerned a statement showing particular and
+date of last payment of pensions in respect of the cases of failure to furnish the above
+declaration in the month of January and July.
+Rule 142. Payment of Family Pension on Death
+A disbursing officer, will in case of death of pensioner governed by Rule 50 of CCS
+(Pension) Rules 2021, start paying family pension to the widow/widower on receipt of
+death certificate of the pensioner and the Application in Form-10. For the grant of family
+pension to her/him, and he will also send an intimation in this regard to the Postal
+Accounts Office.
+Rule 143. Checks by Disbursing Officer
+A pensioner drawing pension for the first time shall be required to produce his personal
+copy of PPO to the Head Postmaster and his signature or thumb / great toe impression
+on the bill shall be compared with the specimen signature or thumb / great toe impression
+received with the PPO and a note to this effect shall be recorded on the disburser's half
+of the order.
+
+
+Consequent on the disbursement of pension through POSB, this requirement is
+not in vogue as payment will be done through POSB based on the request and data
+furnished by the service pensioner.
+
+Rule 144. Precautions for Agent Payments
+When a pensioner draws his pension through another person, the disbursing officer must
+take special precautions against fraudulent presentation of claims and satisfy himself of
+35
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+the existence of the pensioner and of the identity of the payee before any payment is
+ordered and if he feels any suspicion, shall refer it to the pensioner before payment.
+Rule 146. Record of Payment
+Every payment of pension including Family pension through POSB or any other mode
+authorized by D-G. The Pension Disbursing Authority shall process pension through
+system and ensure the availability of Schedules/e-schedules tallied with the actual
+amount of disbursement charged in the DTR.
+Gratuities
+Rule 148. Payment of Gratuity
+A gratuity is paid in a single sum, and not by instalments on an authority received from
+the concerned Postal Accounts. Payment can be claimed on the letter of authority itself,
+and no separate bill is necessary.
+Rule 149. Tax Exemption
+Under the Section 10(10) of the Indian IT Act, 1961 has been exempted from income-tax
+of the death-cum-retirement gratuity paid under the CCS (Pension) Rules 2021 of the
+Central Government or same state Govt.
+Rule 150. Interest on Delayed Gratuity
+In case of delay in payment of gratuities beyond 3 months of the date they become due
+on account of administrative lapse or for reasons beyond the control of the Pensioner
+concerned, Interest shall be paid to Pensioner.
+Rule 151. Provisional Gratuity
+Provisional gratuity sanctioned by a competent authority in respect of a retired
+Government Servant shall be drawn separately by the Head Post Office in which he last
+served.
+
+36
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Periodical Identification of Pensioners
+Rule 152. Life Certificate
+The pensioners/family pensioners would be required to furnish a Life Certificate in
+November each year to pension disbursing authority.
+
+
+The Pensioners/Family pensioners aged 80 years and above may submit their Life
+certificate w.e.f. 1st October of each year which would be valid till 30th
+November.
+
+
+
+Digital Life Certificate (DLC) may be produced by Pensioners to pension
+disbursing authority. The Pension disbursing authorities are authorized to accept
+Life certificate through Jeevan Pramaan portal.
+
+Undrawn Pension and Arrears
+Rule 153. Lapse of Pension
+A pension remaining undrawn for more than one year shall cease to be payable by the
+Disbursing Officers. If the pensioner afterwards appears, or a claim is presented on his
+behalf, the Disbursing Officer may make the payment, but the arrears cannot be paid
+without the previous sanction of the authority by whom the pension was sanctioned to
+be obtained through the Head of Postal Accounts office:
+(a) If the arrears relate to a pension to be paid for the first time.
+(b) If the amount in arrears exceeds Rs. 50,000.
+If a service pension remains undrawn for three years, it cannot be paid without the
+authority of the PAO or CCA and concerned. A gratuity payment order shall remain in
+force for one year only, if payment has not been made on it within a year of its issue. The
+void order shall be returned to the PAO or CCA.
+Rule 154. Death of Pensioner (Arrears)
+The payment of arrears of pension due in respect of a deceased pensioner shall be
+regulated by the following rules:
+(a) Pension can be drawn for the day of pensioner's death, the hour at which death takes
+place has no effect on the claim.
+37
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+(b) In the death of a pensioner, payment of any arrears actually due may be made to his
+heirs, provided that they apply within one year of his death; they cannot be paid
+thereafter without the sanction of the competent authority to be obtained through the
+Accounting Authority concerned.
+Provided that:
+1. If the gross amount of arrears does not exceed Rs. 50,000 and the case represents
+no peculiar feature the accounting authority concerned may authorize the
+payment on his own authority.
+2. If the gross amount of arrears exceeds Rs. 50,000 but does not exceed Rs. 2,50,000
+under the orders of the Head of the Department, upon production of Indemnity
+Bond in form TR-14 duly stamped, for the gross amount due for payment, with
+such sureties as may be deemed necessary.
+3. Normally there should be two sureties, both of known financial stability, if the
+gross amount of claim is less than Rs. 75,000 in which case the authority accepting
+indemnity bond in form TR-14 for and on behalf of President of India should
+decide on the merit of such case whether to accept only one surety instead of two.
+4. Where the amount of arrears exceeds Rupees 2,50,000, payments shall be
+authorized to be made only to the persons producing the legal authority.
+(c) After payment of the arrears of pension, both portions of the PPO shall be returned to
+the Accounting Authority concerned, with a report of the date of the death of the
+pensioner.
+Rule 155. Nominations
+The payment of arrears of Pensions will be made to the nominees of the deceased
+pensioners in accordance to the Payment of Arrears of Pension (Nomination) Rules,
+1983.
+(a) Every employee has to submit to the Head of the office of the Department, from where
+he/she is retiring, a nomination in Form A in triplicate within three months before or
+after the date of retirement.
+(b) Within thirty days of the receipt of the nominations the Head of the office shall verify
+and return to the Pensioner the duplicate copy of the nomination duly attested by him.
+38
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+The triplicate copy duly accepted shall be sent to the Accounts Officer, who shall pass it
+on to the Pension Disbursing Authority along with the PPO.
+(c) A notice of modification of nomination including cases where a nominee predeceases
+the pensioner shall be submitted to the Pension Disbursing Authority.
+Rule 156. Reports to the Postal Accounts Office
+A six-monthly statement of cases of failure to draw pensions shall be prepared by the
+Head Postmasters separately in respect of (1) the pension payment orders issued by the
+Postal Accounts Offices and (2) the pension payment orders issued by the Circle Telecom
+Accountants. Accountant concerned so as to reach them by the 10th of June and the 10th
+of December.
+Rule 157. Cessation of Pension
+When pension ceases to be payable during the life-time of a pensioner, both portions of
+Pension Payment Order shall be returned by the Postmaster to the Postal Accounts Office
+or Circle Telecom Accounts office concerned after making the last payment and with a
+note recording the reasons for the cessation of the pension.
+Rule 158. Transfers of Pension
+The transfer of payment of pension from one Post Office to another within the jurisdiction
+of the same Postal Accounts Office may be authorized by the Head Postmaster. The Head
+Postmaster sanctioning the transfer of payment of pensions should record in the
+endorsement to Postal Account Office a certificate to the effect that a note has been made
+in the Register of e-Pension payment order/PPO maintained in his office.
+
+
+The Head Postmaster of the office to which the pension papers have been
+transferred while acknowledging receipt of the transferred pension papers to the
+Head Postmaster sanctioning the transfer will, in his endorsement of the same to
+the Postal Accounts Office specify the date from which he has to commence
+pension payment and the case mark of transferring office.
+
+
+
+In case of transfer of payment of pensions from one Post Office to another within
+the jurisdiction of another Postal Accounts Office the Postmaster of the Head
+Office from which the payment is transferred should return both the halves of
+
+39
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Pension payment Order to the Director of Accounts Postal who issued the original
+order, for necessary action.
+Rule 159. Accounts
+Payment on account of pensions and commuted value of pensions made by Head Post
+Offices will be entered in the e-schedules of pension payments are recorded in separate
+schedules. The schedules of pension payments should be preserved for ten years.
+Rule 160. Classification
+Payments made by the Pension disbursing authority/DDO should be charged and
+classified 15-digit Head (10-digit GL code) Heads of accounts.
+Rule 162. Death and Excess Credits
+In case it is found that the pensioner has expired, the date of death will be got ascertained
+and noted in the P.P.O. under the initials of the Postmaster / Sub Postmaster and further
+credit of the pension to the S.B. account will be stopped.
+
+
+In case of excess or wrong credit of pension because of the death of the pensioner,
+the excess amount credited will be withdrawn by the postmaster from the S.B.
+account of the pensioner under his own signature and credited to the unclassified
+Receipts with suitable remarks.
+
+
+
+A remark to the effect will also be made in the PPO.
+
+
+
+In case the balance left in the account is so small that full recovery is not possible,
+the amount of over-payment should be intimated to the Director of Accounts
+(Postal).
+
+Rule 165. Transfer - POSB Credits
+At Present scenario pension credit any POSB account which stands any post office in all
+over India.
+
+40
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Family Pension
+Rule 166. Documents Required
+The amount of family pension payable to the widow / widower of the deceased pensioner
+is also given in the pension payment order. When she/he becomes entitled to receive
+family pensions, the Head Postmaster will obtain the following documents from the
+widow/widower who will also be asked to open a S.B. pension Account in her/his name.
+
+
+Death certificate of pensioner.
+
+
+
+Application for the family pension in the form at Annexure D.
+
+
+
+A copy of the photograph.
+
+
+
+A letter of authority and undertaking (Annexure A).
+
+Rule 167. Authorization of Family Pension
+On receipt of the above documents the Head Postmaster will authorise the concerned
+post office to start paying family pension to the widow / widower as mentioned in the
+PPO after necessary scrutiny and verification of the documents. The Head Postmaster
+will also send intimation in this regard to the Director / Dy. Director of Accounts (Postal)
+in the form at Annexure E.
+
+
+The declaration in the form at Annexure F whose family pension is terminable on
+marriage / remarriage will be obtained from the pensioner once a year in
+December except who giving an undertaking that the pension would be drawn
+until remarriage which would be reported promptly to the Postmaster.
+
+CHAPTER IX: ACCOUNTS OF OTHER UNITS
+Rule 168. Non-Cheque Drawing DDOs (NCDDO)
+The units called Non-Cheque Drawing and Disbursing (NCDDO) units like MMS, COs,
+ROs, Postal Directorate, PA wing, PLI Directorate, BD Directorate, Centre for
+excellence Postal Technology, Postal Stores Depot, Postal training centers, Head
+Record Offices, etc. These units obtain funds (cash & cheque) through workflow in the
+application and show such remittances under the major Head 8782 RSAO.
+41
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+CHAPTER X: MISCELLANEOUS SUBJECTS
+Rule 169. Change in Status of a Post Office
+(a) HO to SO (b) SO to HO (c) BO to SO (d) Closing / Relocation of Offices.
+
+
+The competent authority issues suitable administrative orders and based on it a
+Service desk ticket will be raised under CSI for the changes required.
+
+
+
+This is a common template which shares data for creation of Facility ID, Profit/Cost
+Centre, Plant/Storage, office specific data for maintaining at F&A and others.
+
+
+
+The Balance from the old PC to new PC is transferred as per the procedure.
+
+
+
+SOL transfer Office Accounts pending operations report generated by the CPC.
+
+Rule 171. Railway Mail Service Vans
+Payment of haulage, weighment, interest charges and subsidies to Railway. The Capital
+cost of the Railway Mail Service Vans maintained in register of Railway Vans in Form
+A.C.G.-69.
+There are four types of Mail vans in which we carry mails:
+Type of Mail Utilized of Accommodation of Payment to be made for no. of
+vans
+
+mail van
+
+berths
+
+S.W- Full Van
+
+More than 3/4 of the coach
+
+72 berths
+
+S.T- Van
+
+More than 1/2 up to 3/4
+
+54 berths
+
+S.H- Half Van
+
+More than 1/4 up to 1/2
+
+36 berths
+
+S.Q- 1/4 of a 1/4 of the coach or less
+
+18 berths
+
+Van
+Method of payment of haulage charges: The billing will be done on monthly basis. The
+bills by the 10th of the following month to which the bills pertain.
+
+42
+
+www.dakguru.com
+
+Dak Guru Study Material
+
+FHB Vol - II
+
+Haulage Charges (2023-24 Rates):
+Distance Slab
+
+Charges for 2023-24
+
+0-500 kms
+
+Rs. 1.15 per berth per km
+
+501-1000 kms
+
+Rs. 0.73 per berth per KM (Subject to minimum of Rs.
+575/km/berth)
+
+1001
+
+kms
+
+more
+
+and Rs. 0.61 per berth per KM (Subject to minimum of Rs.
+730/km/berth)
+
+List of Forms
+Form No. Description of Form
+ACG-2
+
+E-Treasurer Cash book
+
+ACG-4
+
+Head office classified Cash Book
+
+ACG-5
+
+Post Office Cash Account
+
+ACG-28
+
+Register of cheques received and cleared
+
+ACG-40
+
+e-classified cash Book
+
+ACG-45
+
+Unpaid postal abstract Register
+
+ACG-67
+
+e-Money Receipt
+
+ACG-33
+
+Cash Abstract at RMS offices
+
+43
+
+www.dakguru.com
+
+
