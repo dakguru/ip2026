@@ -23,6 +23,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useCourse } from '@/contexts/CourseContext';
 import { psgbSyllabusData } from '@/data/psgbSyllabusData';
+import AppScreenWrapper from '@/components/AppScreenWrapper';
 
 // --- Data Structure for Syllabus ---
 
@@ -183,7 +184,7 @@ const syllabusData = {
 
 // Sleek Sticky Sub-Nav for Mobile & Desktop
 const StickyTabNav = React.memo(({ activeTab, setActiveTab, isPS }: { activeTab: string, setActiveTab: (tab: string) => void, isPS: boolean }) => (
-    <div className="sticky top-[57px] z-40 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-all duration-300">
+    <div className="bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="py-2 md:py-3">
                 {/* Mobile: Grid Layout for larger tap targets */}
@@ -331,9 +332,9 @@ export default function SyllabusPageClient({ forceCourse }: { forceCourse?: stri
     const currentData = (sourceData as any)[activeTab] || sourceData.paper1;
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-100">
-            <StickyTabNav activeTab={activeTab} setActiveTab={(tab) => setActiveTab(tab as any)} isPS={isPS} />
-
+        <AppScreenWrapper
+            header={<StickyTabNav activeTab={activeTab} setActiveTab={(tab) => setActiveTab(tab as any)} isPS={isPS} />}
+        >
             <main>
                 <HeroSection activeData={currentData} isPS={isPS} />
 
@@ -378,6 +379,6 @@ export default function SyllabusPageClient({ forceCourse }: { forceCourse?: stri
                     )}
                 </div>
             </main>
-        </div>
+        </AppScreenWrapper>
     );
 }

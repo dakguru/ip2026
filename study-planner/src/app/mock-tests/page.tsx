@@ -19,6 +19,7 @@ import { WEEKLY_MOCK_06_QUESTIONS } from "@/data/weekly_mock_data_06";
 import { WEEKLY_MOCK_07_QUESTIONS } from "@/data/weekly_mock_data_07";
 import { WEEKLY_MOCK_08_QUESTIONS } from "@/data/weekly_mock_data_08";
 import { FileDown } from "lucide-react";
+import AppScreenWrapper from "@/components/AppScreenWrapper";
 
 // Map IDs to Question Data for PDF Generation
 const TEST_QUESTIONS_MAP: Record<string, any[]> = {
@@ -414,53 +415,55 @@ export default function MockTestsPage() {
 
     if (isPsGroupB) {
         return (
-            <div className="min-h-screen bg-[#f8f9fa] dark:bg-zinc-950 flex flex-col items-center justify-center p-4 sm:p-6 transition-colors">
-                <div className="relative w-full max-w-xl text-center">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-75 pointer-events-none" />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-2xl animate-pulse pointer-events-none" />
+            <AppScreenWrapper>
+                <div className="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 transition-colors">
+                    <div className="relative w-full max-w-xl text-center">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-75 pointer-events-none" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-2xl animate-pulse pointer-events-none" />
 
-                    <div className="relative z-10 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 p-8 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] dark:shadow-none">
-                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#774df2] to-[#6039db] mb-5 sm:mb-6 shadow-xl shadow-indigo-500/20 ring-8 ring-indigo-50 dark:ring-indigo-500/10">
-                            <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                        </div>
+                        <div className="relative z-10 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 p-8 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] dark:shadow-none">
+                            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#774df2] to-[#6039db] mb-5 sm:mb-6 shadow-xl shadow-indigo-500/20 ring-8 ring-indigo-50 dark:ring-indigo-500/10">
+                                <FileDown className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                            </div>
 
-                        <h1 className="text-4xl sm:text-5xl font-black mb-4 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#774df2] to-[#6039db] dark:from-indigo-400 dark:to-purple-400 drop-shadow-sm">
-                            Coming Soon
-                        </h1>
+                            <h1 className="text-4xl sm:text-5xl font-black mb-4 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#774df2] to-[#6039db] dark:from-indigo-400 dark:to-purple-400 drop-shadow-sm">
+                                Coming Soon
+                            </h1>
 
-                        <div className="text-[14px] sm:text-[15px] text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed max-w-[280px] sm:max-w-md mx-auto mb-8 space-y-1">
-                            <p>All India Mock Test Series for LDCE PS Gr B is coming soon..</p>
-                            <p>Stay tuned for updates.</p>
-                        </div>
+                            <div className="text-[14px] sm:text-[15px] text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed max-w-[280px] sm:max-w-md mx-auto mb-8 space-y-1">
+                                <p>All India Mock Test Series for LDCE PS Gr B is coming soon..</p>
+                                <p>Stay tuned for updates.</p>
+                            </div>
 
-                        <div className="flex flex-col sm:flex-row items-stretch justify-center gap-3">
-                            <Link href="/" className="w-full sm:w-[140px] flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl sm:rounded-2xl bg-[#1c1c1f] hover:bg-black dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 font-semibold transition-all duration-300 active:scale-95 shadow-md">
-                                <ArrowLeft className="w-4 h-4 shrink-0" />
-                                <span className="text-sm leading-tight text-center">Back to<br className="hidden sm:block" />Home</span>
-                            </Link>
+                            <div className="flex flex-col sm:flex-row items-stretch justify-center gap-3">
+                                <Link href="/" className="w-full sm:w-[140px] flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl sm:rounded-2xl bg-[#1c1c1f] hover:bg-black dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 font-semibold transition-all duration-300 active:scale-95 shadow-md">
+                                    <ArrowLeft className="w-4 h-4 shrink-0" />
+                                    <span className="text-sm leading-tight text-center">Back to<br className="hidden sm:block" />Home</span>
+                                </Link>
 
-                            <button
-                                onClick={() => setForceLdceIp(true)}
-                                className="flex-1 w-full flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl sm:rounded-2xl bg-[#774df2] hover:bg-[#6039db] text-white font-semibold transition-all duration-300 active:scale-95 shadow-lg shadow-[#774df2]/30"
-                            >
-                                <Sparkles className="w-4 h-4 shrink-0" />
-                                <span className="text-[13px] sm:text-sm leading-tight text-center">Access All India Live Mock Test Series of<br className="hidden sm:block" />LDCE IP</span>
-                            </button>
+                                <button
+                                    onClick={() => setForceLdceIp(true)}
+                                    className="flex-1 w-full flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl sm:rounded-2xl bg-[#774df2] hover:bg-[#6039db] text-white font-semibold transition-all duration-300 active:scale-95 shadow-lg shadow-[#774df2]/30"
+                                >
+                                    <Sparkles className="w-4 h-4 shrink-0" />
+                                    <span className="text-[13px] sm:text-sm leading-tight text-center">Access All India Live Mock Test Series of<br className="hidden sm:block" />LDCE IP</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </AppScreenWrapper>
         );
     }
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pb-20 transition-colors">
+        <AppScreenWrapper>
             <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
 
             {/* Hero Section */}
             {isMobileApp ? (
                 // Mobile App Optimized Hero (Compact & Beautiful)
-                <div className="relative bg-zinc-950 border-b border-zinc-900 overflow-hidden pt-4 pb-8">
+                <div className="relative bg-zinc-950 border-b border-zinc-900 overflow-hidden pb-8">
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute top-10 right-0 w-40 h-40 bg-purple-600 rounded-full mix-blend-screen filter blur-3xl"></div>
                         <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl"></div>
@@ -885,7 +888,7 @@ export default function MockTestsPage() {
                 </div>
             )}
 
-        </div>
+        </AppScreenWrapper>
     );
 }
 

@@ -375,10 +375,28 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "indigo"
         },
         {
-            "title": "Fundamental and Supplementary Rules",
-            "description": "Materials will be uploaded soon.",
-            "color": "gray",
-            "comingSoon": true
+            "title": "FR & SR - General Rules",
+            "description": "Fundamental Rules (FR) and Supplementary Rules (SR) - General Rules.",
+            "filename": "FR_SR_General_Rules.pdf",
+            "path": "/notes/paper-3/FR_SR_General_Rules.pdf",
+            "size": "4.4 MB",
+            "color": "indigo"
+        },
+        {
+            "title": "FR & SR - TA Rules",
+            "description": "FR & SR - Traveling Allowance (TA) Rules.",
+            "filename": "FR_SR_TA_Rules.pdf",
+            "path": "/notes/paper-3/FR_SR_TA_Rules.pdf",
+            "size": "4.4 MB",
+            "color": "indigo"
+        },
+        {
+            "title": "FR & SR - DA, DR & HRA Rules",
+            "description": "FR & SR - Dearness Allowance (DA), Dearness Relief (DR) and House Rent Allowance (HRA) Rules.",
+            "filename": "FR_SR_DA_DR_HRA.pdf",
+            "path": "/notes/paper-3/FR_SR_DA_DR_HRA.pdf",
+            "size": "4.3 MB",
+            "color": "indigo"
         },
         {
             "title": "Central Civil Services (Leave Travel Concession) Rules, 1988",
@@ -390,9 +408,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Central Civil Services (Revised Pay) Rules, 2016",
-            "description": "Materials will be uploaded soon.",
-            "color": "blue",
-            "comingSoon": true
+            "description": "7th CPC Central Civil Services (Revised Pay) Rules, 2016.",
+            "filename": "CCS_RP_Rules_2016.pdf",
+            "path": "/notes/paper-3/CCS_RP_Rules_2016.pdf",
+            "size": "4.1 MB",
+            "color": "blue"
         },
         {
             "title": "Rules relating to Children Education allowance and reimbursement of Hostel Subsidy",

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { ArrowRight, Lock, Play, Star, Zap, BrainCircuit, ChevronRight, Layers } from 'lucide-react';
 import { QuizTopic } from '@/lib/quizTypes';
 
+import AppScreenWrapper from '@/components/AppScreenWrapper';
+
 interface NativeQuizDashboardProps {
     group1Topics: QuizTopic[];
     group2Topics: QuizTopic[];
@@ -70,18 +72,14 @@ export default function NativeQuizDashboard({
     };
 
     return (
-        <div className="min-h-screen bg-white dark:bg-zinc-950 pb-32">
-            {/* Header */}
-            <div className="sticky top-0 z-20 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-100 dark:border-zinc-800 pt-[env(safe-area-inset-top)] px-6 py-4">
-                <div className="flex items-center justify-between">
-                    <div>
-                        <h1 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">Quiz Zone</h1>
-                        <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Master your syllabus</p>
-                    </div>
-                    {/* Optional: Add user avatar or streak here if available */}
+        <AppScreenWrapper
+            header={
+                <div>
+                    <h1 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">Quiz Zone</h1>
+                    <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Master your syllabus</p>
                 </div>
-            </div>
-
+            }
+        >
             <div className="p-6 space-y-8">
                 {/* Banners Carousel */}
                 <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide -mx-6 px-6">
@@ -175,6 +173,6 @@ export default function NativeQuizDashboard({
                     </div>
                 </section>
             </div>
-        </div>
+        </AppScreenWrapper>
     );
 }

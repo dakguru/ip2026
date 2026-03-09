@@ -11,6 +11,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { useRouter } from "next/navigation";
 import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 import LiveMockTestBanner from "@/components/LiveMockTestBanner";
+import UpdatesDrawer from "./UpdatesDrawer";
 
 interface MobileDashboardProps {
     displayName: string;
@@ -22,7 +23,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
     const [membership, setMembership] = useState<'free' | 'silver' | 'gold' | 'diamond' | 'platinum'>('free');
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
-    const [notifOpen, setNotifOpen] = useState(false);
+    const [updatesOpen, setUpdatesOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -100,63 +101,10 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     const [recentNotifications, setRecentNotifications] = useState<any[]>([]);
 
+    // Notification fetch removed as bell icon now shows What's New drawer
     useEffect(() => {
-        const fetchNotifications = async () => {
-            try {
-                const res = await fetch('/api/admin/notifications?scope=public');
-                const data = await res.json();
-                if (data.notifications) {
-                    const mapped = data.notifications.map((n: any) => {
-                        let icon = Info;
-                        let color = "text-blue-500";
-
-                        // Map type to icon/color
-                        switch (n.type) {
-                            case 'system':
-                            case 'deployment':
-                                icon = Info; color = "text-blue-500"; break;
-                            case 'enrollment':
-                            case 'membership_upgrade':
-                                icon = Sparkles; color = "text-amber-500"; break;
-                            case 'purchase':
-                            case 'coupon_claim':
-                                icon = TrendingUp; color = "text-green-500"; break;
-                            case 'community_post':
-                            case 'community_comment':
-                                icon = MessageCircle; color = "text-indigo-500"; break;
-                            case 'admin_message':
-                                icon = Bell; color = "text-red-500"; break;
-                            default:
-                                icon = Info; color = "text-slate-500";
-                        }
-
-                        // Calculate time ago
-                        const diff = Math.floor((new Date().getTime() - new Date(n.createdAt).getTime()) / 1000);
-                        let timeStr = "";
-                        if (diff < 60) timeStr = "Now";
-                        else if (diff < 3600) timeStr = `${Math.floor(diff / 60)}m ago`;
-                        else if (diff < 86400) timeStr = `${Math.floor(diff / 3600)}h ago`;
-                        else timeStr = `${Math.floor(diff / 86400)}d ago`;
-
-                        return {
-                            title: n.title,
-                            desc: n.message,
-                            time: timeStr,
-                            icon,
-                            color
-                        };
-                    });
-                    setRecentNotifications(mapped);
-                }
-            } catch (e) {
-                console.error("Failed to fetch notifications", e);
-            }
-        };
-
-        if (notifOpen) {
-            fetchNotifications();
-        }
-    }, [notifOpen]);
+        // ... any other side effects ...
+    }, []);
 
     const onTouchStart = (e: React.TouchEvent) => {
         setTouchEnd(null);
@@ -363,40 +311,14 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                             </SheetContent>
                         </Sheet>
 
-                        {/* NOTIFICATIONS SHEET */}
-                        <Sheet open={notifOpen} onOpenChange={setNotifOpen}>
-                            <SheetTrigger asChild>
-                                <button className="text-slate-300 hover:text-white transition-colors relative">
-                                    <Bell className="w-5 h-5" />
-                                    <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full border-2 border-slate-900"></span>
-                                </button>
-                            </SheetTrigger>
-                            <SheetContent side="right" className="w-[85%] sm:w-[400px] p-0 bg-white dark:bg-zinc-950 border-l-zinc-800">
-                                <div className="h-full flex flex-col">
-                                    <div className="p-5 border-b border-slate-100 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900 pt-[max(20px,env(safe-area-inset-top))]">
-                                        <SheetHeader className="text-left">
-                                            <SheetTitle className="text-lg font-bold text-slate-900 dark:text-zinc-100">Notifications</SheetTitle>
-                                            <SheetDescription className="text-xs text-slate-500">Stay updated with latest changes</SheetDescription>
-                                        </SheetHeader>
-                                    </div>
-
-                                    <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                                        {recentNotifications.map((note, i) => (
-                                            <div key={i} className="flex gap-4 p-4 rounded-xl bg-white dark:bg-zinc-900/30 border border-slate-100 dark:border-zinc-800 shadow-sm">
-                                                <div className={`mt-1 p-2 rounded-lg h-fit ${note.color.replace('text-', 'bg-')}/10`}>
-                                                    <note.icon className={`w-5 h-5 ${note.color}`} />
-                                                </div>
-                                                <div>
-                                                    <h4 className="text-sm font-bold text-slate-900 dark:text-zinc-100 leading-tight mb-1">{note.title}</h4>
-                                                    <p className="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed mb-2">{note.desc}</p>
-                                                    <span className="text-[10px] font-semibold text-slate-400">{note.time}</span>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </SheetContent>
-                        </Sheet>
+                        {/* WHAT'S NEW DRAWER TRIGGER */}
+                        <button
+                            onClick={() => setUpdatesOpen(true)}
+                            className="text-slate-300 hover:text-white transition-colors relative p-1"
+                        >
+                            <Bell className="w-5 h-5" />
+                            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-slate-900 shadow-[0_0_8px_rgba(239,68,68,0.5)]"></span>
+                        </button>
 
 
                     </div>
@@ -514,6 +436,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </div>
                 </div>
             </div>
+
+            {/* What's New Drawer Component */}
+            <UpdatesDrawer isOpen={updatesOpen} onClose={() => setUpdatesOpen(false)} />
         </div >
     );
 }

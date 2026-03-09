@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock } from 'lucide-react';
+import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock, ChevronRight } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
 import { PSGB_QUIZ_DATA } from '@/data/psgbQuizzesData';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
@@ -12,6 +12,7 @@ import NativeQuizRunner from '@/components/quiz/NativeQuizRunner';
 import NativeResultScreen from '@/components/quiz/NativeResultScreen';
 import NativeQuizDashboard from '@/components/quiz/NativeQuizDashboard';
 import { useCourse } from '@/contexts/CourseContext';
+import AppScreenWrapper from '@/components/AppScreenWrapper';
 
 // Custom styles for range slider
 const sliderStyles = `
@@ -300,23 +301,18 @@ export default function QuizDashboard() {
         }
 
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col transition-colors">
-                {/* Header */}
-                <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-6 py-4 flex items-center justify-between sticky top-0 z-10">
-                    <button onClick={resetToDashboard} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2">
-                        <ArrowLeft className="w-5 h-5" /> Quit
-                    </button>
-                    <div className="font-bold text-lg text-zinc-800 dark:text-zinc-100 hidden md:block max-w-md truncate">{generatedSet.title}</div>
-                    <div className="flex items-center gap-4 text-sm font-medium">
-                        <span className="text-zinc-500 dark:text-zinc-400">Q {currentQIndex + 1} / {total}</span>
-                        {!isSubmitted && (
-                            <div className="bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full flex items-center gap-2">
-                                <Timer className="w-4 h-4" />
-                                <span>Practicing</span>
-                            </div>
-                        )}
+            <AppScreenWrapper
+                header={
+                    <div className="flex items-center justify-between">
+                        <button onClick={resetToDashboard} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2">
+                            <ArrowLeft className="w-5 h-5" /> Quiz Zone
+                        </button>
+                        <div className="flex items-center gap-4 text-sm font-medium">
+                            <span className="text-zinc-500 dark:text-zinc-400">Q {currentQIndex + 1} / {total}</span>
+                        </div>
                     </div>
-                </div>
+                }
+            >
 
                 {/* Content */}
                 <div className="flex-1 max-w-3xl mx-auto w-full p-4 md:p-6">
@@ -469,7 +465,7 @@ export default function QuizDashboard() {
                         </div>
                     )}
                 </div>
-            </div>
+            </AppScreenWrapper>
         );
     }
 
@@ -488,100 +484,110 @@ export default function QuizDashboard() {
         return (
             <>
                 <style dangerouslySetInnerHTML={{ __html: getSliderStyles(isPS) }} />
-                <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 flex items-center justify-center transition-colors">
-                    <div className="w-full max-w-lg bg-white dark:bg-zinc-900 rounded-3xl shadow-xl dark:shadow-purple-900/10 border border-zinc-100 dark:border-zinc-800 p-8">
-                        <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2 mb-6">
-                            <ArrowLeft className="w-4 h-4" /> Change Topic
-                        </button>
-
-                        <div className="mb-8">
-                            <span className={`font-bold uppercase text-xs tracking-wider ${isPS ? 'text-teal-600 dark:text-teal-400' : 'text-purple-600 dark:text-purple-400'}`}>{selectedTopic.category}</span>
-                            <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100 mt-2">{selectedTopic.title}</h2>
-                            <p className="text-zinc-500 dark:text-zinc-400 mt-2 flex items-center gap-2">
-                                <BrainCircuit className="w-4 h-4" />
-                                {availableQuestions} Questions available
-                            </p>
+                <AppScreenWrapper
+                    header={
+                        <div className="flex items-center gap-3">
+                            <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 p-1.5 -ml-1.5 rounded-xl transition-colors">
+                                <ArrowLeft className="w-5 h-5" />
+                            </button>
+                            <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 line-clamp-1">{selectedTopic.title}</h2>
                         </div>
+                    }
+                >
+                    <div className="flex-1 flex items-center justify-center p-6 md:p-8">
+                        <div className="w-full max-w-lg bg-white dark:bg-zinc-900 rounded-3xl shadow-xl dark:shadow-purple-900/10 border border-zinc-100 dark:border-zinc-800 p-8">
+                            <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2 mb-6">
+                                <ArrowLeft className="w-4 h-4" /> Change Topic
+                            </button>
 
-                        {availableQuestions > 0 ? (
-                            <>
-                                <div className="mb-8">
-                                    <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-6">How many questions do you want to attempt?</label>
+                            <div className="mb-8">
+                                <span className={`font-bold uppercase text-xs tracking-wider ${isPS ? 'text-teal-600 dark:text-teal-400' : 'text-purple-600 dark:text-purple-400'}`}>{selectedTopic.category}</span>
+                                <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100 mt-2">{selectedTopic.title}</h2>
+                                <p className="text-zinc-500 dark:text-zinc-400 mt-2 flex items-center gap-2">
+                                    <BrainCircuit className="w-4 h-4" />
+                                    {availableQuestions} Questions available
+                                </p>
+                            </div>
 
-                                    {/* Slider and Input Container */}
-                                    <div className="space-y-6">
+                            {availableQuestions > 0 ? (
+                                <>
+                                    <div className="mb-8">
+                                        <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-6">How many questions do you want to attempt?</label>
 
-                                        {/* Dual Input Box */}
-                                        <div className="flex items-center justify-center gap-4">
-                                            {/* Start Input */}
-                                            <div className="relative">
-                                                <input
-                                                    type="number"
-                                                    min="1"
-                                                    max={quizRange.end}
-                                                    value={quizRange.start}
-                                                    onChange={(e) => {
-                                                        const val = Math.max(1, Math.min(parseInt(e.target.value) || 1, quizRange.end));
-                                                        setQuizRange(prev => ({ ...prev, start: val }));
-                                                    }}
-                                                    className="w-24 px-3 py-3 text-center text-xl font-bold bg-zinc-50 dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-xl text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-purple-500 transition-all"
-                                                />
-                                                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
-                                                    Start
+                                        {/* Slider and Input Container */}
+                                        <div className="space-y-6">
+
+                                            {/* Dual Input Box */}
+                                            <div className="flex items-center justify-center gap-4">
+                                                {/* Start Input */}
+                                                <div className="relative">
+                                                    <input
+                                                        type="number"
+                                                        min="1"
+                                                        max={quizRange.end}
+                                                        value={quizRange.start}
+                                                        onChange={(e) => {
+                                                            const val = Math.max(1, Math.min(parseInt(e.target.value) || 1, quizRange.end));
+                                                            setQuizRange(prev => ({ ...prev, start: val }));
+                                                        }}
+                                                        className="w-24 px-3 py-3 text-center text-xl font-bold bg-zinc-50 dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-xl text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-purple-500 transition-all"
+                                                    />
+                                                    <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
+                                                        Start
+                                                    </div>
+                                                </div>
+
+                                                <div className="text-zinc-300 dark:text-zinc-600 font-bold">——</div>
+
+                                                {/* End Input */}
+                                                <div className="relative">
+                                                    <input
+                                                        type="number"
+                                                        min={quizRange.start}
+                                                        max={availableQuestions}
+                                                        value={quizRange.end}
+                                                        onChange={(e) => {
+                                                            const val = Math.max(quizRange.start, Math.min(parseInt(e.target.value) || availableQuestions, availableQuestions));
+                                                            setQuizRange(prev => ({ ...prev, end: val }));
+                                                        }}
+                                                        className="w-24 px-3 py-3 text-center text-xl font-bold bg-zinc-50 dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-xl text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-purple-500 transition-all"
+                                                    />
+                                                    <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
+                                                        End
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div className="text-zinc-300 dark:text-zinc-600 font-bold">——</div>
+                                            {/* Dual Handle Slider */}
+                                            <div className="px-2 py-4">
+                                                <div className="relative w-full h-8 flex items-center">
+                                                    {/* Track Background */}
+                                                    <div className="absolute left-0 right-0 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
 
-                                            {/* End Input */}
-                                            <div className="relative">
-                                                <input
-                                                    type="number"
-                                                    min={quizRange.start}
-                                                    max={availableQuestions}
-                                                    value={quizRange.end}
-                                                    onChange={(e) => {
-                                                        const val = Math.max(quizRange.start, Math.min(parseInt(e.target.value) || availableQuestions, availableQuestions));
-                                                        setQuizRange(prev => ({ ...prev, end: val }));
-                                                    }}
-                                                    className="w-24 px-3 py-3 text-center text-xl font-bold bg-zinc-50 dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-xl text-zinc-800 dark:text-zinc-100 focus:outline-none focus:border-purple-500 transition-all"
-                                                />
-                                                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
-                                                    End
-                                                </div>
-                                            </div>
-                                        </div>
+                                                    {/* Active Range Highlight */}
+                                                    <div
+                                                        className="absolute h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full z-10 pointer-events-none"
+                                                        style={{
+                                                            left: `${((quizRange.start - 1) / availableQuestions) * 100}%`,
+                                                            width: `${((quizRange.end - quizRange.start + 1) / availableQuestions) * 100}%`
+                                                        }}
+                                                    ></div>
 
-                                        {/* Dual Handle Slider */}
-                                        <div className="px-2 py-4">
-                                            <div className="relative w-full h-8 flex items-center">
-                                                {/* Track Background */}
-                                                <div className="absolute left-0 right-0 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
-
-                                                {/* Active Range Highlight */}
-                                                <div
-                                                    className="absolute h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full z-10 pointer-events-none"
-                                                    style={{
-                                                        left: `${((quizRange.start - 1) / availableQuestions) * 100}%`,
-                                                        width: `${((quizRange.end - quizRange.start + 1) / availableQuestions) * 100}%`
-                                                    }}
-                                                ></div>
-
-                                                {/* Hidden Dual Inputs for Thumb Interaction */}
-                                                {/* Start Thumb Input - Controls 'start' */}
-                                                <input
-                                                    type="range"
-                                                    min="1"
-                                                    max={availableQuestions}
-                                                    value={quizRange.start}
-                                                    onChange={(e) => {
-                                                        const val = Math.min(parseInt(e.target.value), quizRange.end);
-                                                        setQuizRange(prev => ({ ...prev, start: Math.max(1, val) }));
-                                                    }}
-                                                    className="absolute w-full h-2 opacity-0 cursor-pointer z-20"
-                                                    style={{ pointerEvents: 'none' }}
-                                                />
-                                                {/* Note: Standard Range inputs don't allow multi-handle easily.
+                                                    {/* Hidden Dual Inputs for Thumb Interaction */}
+                                                    {/* Start Thumb Input - Controls 'start' */}
+                                                    <input
+                                                        type="range"
+                                                        min="1"
+                                                        max={availableQuestions}
+                                                        value={quizRange.start}
+                                                        onChange={(e) => {
+                                                            const val = Math.min(parseInt(e.target.value), quizRange.end);
+                                                            setQuizRange(prev => ({ ...prev, start: Math.max(1, val) }));
+                                                        }}
+                                                        className="absolute w-full h-2 opacity-0 cursor-pointer z-20"
+                                                        style={{ pointerEvents: 'none' }}
+                                                    />
+                                                    {/* Note: Standard Range inputs don't allow multi-handle easily.
                                                     We need to use the trick where input has 'pointer-events: none' but the thumb has 'auto'.
                                                     However, standard CSS 'pointer-events' on pseudo-elements is not universally supported or easy to inline.
                                                     
@@ -596,7 +602,7 @@ export default function QuizDashboard() {
                                                     
                                                     Let's try to implement the pointer-events trick via the style tag we already inject.
                                                  */}
-                                                <style jsx>{`
+                                                    <style jsx>{`
                                                     input[type=range].dual-range {
                                                         pointer-events: none;
                                                         position: absolute;
@@ -635,90 +641,91 @@ export default function QuizDashboard() {
                                                     }
                                                  `}</style>
 
-                                                <input
-                                                    type="range"
-                                                    min="1"
-                                                    max={availableQuestions}
-                                                    value={quizRange.start}
-                                                    onChange={(e) => {
-                                                        const val = Math.min(parseInt(e.target.value), quizRange.end);
-                                                        setQuizRange(prev => ({ ...prev, start: Math.max(1, val) }));
-                                                    }}
-                                                    className="dual-range"
-                                                />
-                                                <input
-                                                    type="range"
-                                                    min="1"
-                                                    max={availableQuestions}
-                                                    value={quizRange.end}
-                                                    onChange={(e) => {
-                                                        const val = Math.max(parseInt(e.target.value), quizRange.start);
-                                                        setQuizRange(prev => ({ ...prev, end: val }));
-                                                    }}
-                                                    className="dual-range"
-                                                />
+                                                    <input
+                                                        type="range"
+                                                        min="1"
+                                                        max={availableQuestions}
+                                                        value={quizRange.start}
+                                                        onChange={(e) => {
+                                                            const val = Math.min(parseInt(e.target.value), quizRange.end);
+                                                            setQuizRange(prev => ({ ...prev, start: Math.max(1, val) }));
+                                                        }}
+                                                        className="dual-range"
+                                                    />
+                                                    <input
+                                                        type="range"
+                                                        min="1"
+                                                        max={availableQuestions}
+                                                        value={quizRange.end}
+                                                        onChange={(e) => {
+                                                            const val = Math.max(parseInt(e.target.value), quizRange.start);
+                                                            setQuizRange(prev => ({ ...prev, end: val }));
+                                                        }}
+                                                        className="dual-range"
+                                                    />
+                                                </div>
+
+                                                <div className="flex justify-between mt-4 text-xs font-semibold text-zinc-400">
+                                                    <span>1</span>
+                                                    <span>{availableQuestions}</span>
+                                                </div>
                                             </div>
 
-                                            <div className="flex justify-between mt-4 text-xs font-semibold text-zinc-400">
-                                                <span>1</span>
-                                                <span>{availableQuestions}</span>
-                                            </div>
-                                        </div>
+                                            {/* Smart Batches (20% Segments) */}
+                                            <div className="space-y-3">
+                                                <div className="flex items-center gap-2">
+                                                    <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Select Batch (20%)</span>
+                                                    <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
+                                                </div>
 
-                                        {/* Smart Batches (20% Segments) */}
-                                        <div className="space-y-3">
-                                            <div className="flex items-center gap-2">
-                                                <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Select Batch (20%)</span>
-                                                <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
-                                            </div>
-
-                                            <div className="flex flex-wrap gap-2">
-                                                {chunks.map((chunk, index) => {
-                                                    const isActive = quizRange.start === chunk.start && quizRange.end === chunk.end;
-                                                    return (
-                                                        <button
-                                                            key={index}
-                                                            onClick={() => setQuizRange({ start: chunk.start, end: chunk.end })}
-                                                            className={`px-3 py-2 rounded-lg text-xs font-bold transition-all border
+                                                <div className="flex flex-wrap gap-2">
+                                                    {chunks.map((chunk, index) => {
+                                                        const isActive = quizRange.start === chunk.start && quizRange.end === chunk.end;
+                                                        return (
+                                                            <button
+                                                                key={index}
+                                                                onClick={() => setQuizRange({ start: chunk.start, end: chunk.end })}
+                                                                className={`px-3 py-2 rounded-lg text-xs font-bold transition-all border
                                                                 ${isActive
-                                                                    ? (isPS ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 border-teal-200 dark:border-teal-700 shadow-sm' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-700 shadow-sm')
-                                                                    : (isPS ? 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-teal-300 dark:hover:border-teal-600 hover:text-teal-600 dark:hover:text-teal-400' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-purple-300 dark:hover:border-purple-600 hover:text-purple-600 dark:hover:text-purple-400')}
+                                                                        ? (isPS ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 border-teal-200 dark:border-teal-700 shadow-sm' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-700 shadow-sm')
+                                                                        : (isPS ? 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-teal-300 dark:hover:border-teal-600 hover:text-teal-600 dark:hover:text-teal-400' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-purple-300 dark:hover:border-purple-600 hover:text-purple-600 dark:hover:text-purple-400')}
                                                             `}
-                                                        >
-                                                            {chunk.start}-{chunk.end}
-                                                        </button>
-                                                    );
-                                                })}
-                                                <button
-                                                    onClick={() => setQuizRange({ start: 1, end: availableQuestions })}
-                                                    className={`px-3 py-2 rounded-lg text-xs font-bold transition-all border
+                                                            >
+                                                                {chunk.start}-{chunk.end}
+                                                            </button>
+                                                        );
+                                                    })}
+                                                    <button
+                                                        onClick={() => setQuizRange({ start: 1, end: availableQuestions })}
+                                                        className={`px-3 py-2 rounded-lg text-xs font-bold transition-all border
                                                         ${quizRange.start === 1 && quizRange.end === availableQuestions
-                                                            ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 shadow-sm'
-                                                            : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400'}
+                                                                ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 shadow-sm'
+                                                                : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400'}
                                                     `}
-                                                >
-                                                    All ({availableQuestions})
-                                                </button>
+                                                    >
+                                                        All ({availableQuestions})
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <button
-                                    onClick={startQuiz}
-                                    className={`w-full py-4 text-white rounded-xl font-bold text-lg shadow-lg ${isPS ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-purple-200 dark:shadow-purple-900/20'} transition-all active:scale-95 flex items-center justify-center gap-2`}
-                                >
-                                    <PlayCircle className="w-5 h-5" /> Start Practice
-                                </button>
-                            </>
-                        ) : (
-                            <div className="bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 p-4 rounded-xl text-sm flex items-start gap-3">
-                                <AlertCircle className="w-5 h-5 shrink-0" />
-                                <p>We are currently updating the question bank for this topic. Please check back later or try another topic.</p>
-                            </div>
-                        )}
+                                    <button
+                                        onClick={startQuiz}
+                                        className={`w-full py-4 text-white rounded-xl font-bold text-lg shadow-lg ${isPS ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-purple-200 dark:shadow-purple-900/20'} transition-all active:scale-95 flex items-center justify-center gap-2`}
+                                    >
+                                        <PlayCircle className="w-5 h-5" /> Start Practice
+                                    </button>
+                                </>
+                            ) : (
+                                <div className="bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 p-4 rounded-xl text-sm flex items-start gap-3">
+                                    <AlertCircle className="w-5 h-5 shrink-0" />
+                                    <p>We are currently updating the question bank for this topic. Please check back later or try another topic.</p>
+                                </div>
+                            )}
+                        </div>
                     </div>
-                </div>
+                </AppScreenWrapper>
             </>
         )
     }
@@ -751,27 +758,31 @@ export default function QuizDashboard() {
     }
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-8 transition-colors">
-            <div className="max-w-6xl mx-auto">
-                <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 mb-8 transition-colors">
-                    <ArrowLeft className="w-4 h-4" /> Back to Home
-                </Link>
-
-                <div className="flex items-center gap-4 mb-12">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg ${isPS ? 'bg-gradient-to-br from-teal-500 to-cyan-600 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-br from-purple-500 to-indigo-600 shadow-purple-200 dark:shadow-purple-900/20'}`}>
-                        <BrainCircuit className="w-8 h-8" />
-                    </div>
+        <AppScreenWrapper
+            header={
+                <div className="flex items-center gap-4 transition-all">
+                    <Link href="/" className="p-2 -ml-2 text-zinc-500 hover:text-zinc-900 transition-colors">
+                        <ArrowLeft className="w-5 h-5" />
+                    </Link>
                     <div>
-                        <h1 className="text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">Quiz Zone</h1>
-                        <p className="text-zinc-500 dark:text-zinc-400 text-lg">Select a topic to start practicing.</p>
-                        <Link href="/mock-tests" className="inline-flex items-center gap-2 px-4 py-2 mt-3 rounded-xl bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-200 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-colors border border-amber-200 dark:border-amber-800 group">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-                            </span>
-                            <span>Looking for Live All India Mock Tests? <span className="group-hover:underline decoration-amber-400 underline-offset-2 font-bold ml-1">Click here</span></span>
-                        </Link>
+                        <h1 className="text-xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">Quiz Zone</h1>
+                        <p className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider">Select a topic to start</p>
                     </div>
+                </div>
+            }
+        >
+            <div className="max-w-6xl mx-auto px-4 md:px-8 py-8">
+                <div className="mb-10">
+                    <Link href="/mock-tests" className="block p-5 rounded-3xl bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-200 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-all border border-amber-200 dark:border-amber-800 group active:scale-[0.98]">
+                        <div className="flex items-center gap-3">
+                            <span className="relative flex h-3 w-3">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                            </span>
+                            <span className="flex-1">Looking for Live All India Mock Tests? <span className="font-bold border-b-2 border-amber-400/30 ml-1">Click here</span></span>
+                            <ChevronRight className="w-5 h-5 opacity-40 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="space-y-12">
@@ -812,7 +823,7 @@ export default function QuizDashboard() {
                     </section>
                 </div>
             </div>
-        </div>
+        </AppScreenWrapper>
     );
 }
 function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, onSelect: (t: QuizTopic) => void, isLocked?: boolean }) {

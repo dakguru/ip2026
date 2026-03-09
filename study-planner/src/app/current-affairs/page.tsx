@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, Globe, Newspaper, History, Loader2, RefreshCw, AlertCircle, Trophy } from "lucide-react";
 import { format } from "date-fns";
+import AppScreenWrapper from "@/components/AppScreenWrapper";
 
 // --- Types ---
 interface NewsItem {
@@ -222,38 +223,39 @@ export default function CurrentAffairsPage() {
     ] as const;
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 transition-colors pb-20">
-            {/* Header */}
-            <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 sticky top-0 z-10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 mb-4 transition-colors font-medium text-sm">
-                        <ArrowLeft className="w-4 h-4" /> Back to Home
-                    </Link>
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">
-                            Current Affairs <span className="text-zinc-400 font-light">| {format(new Date(), "MMMM dd")}</span>
-                        </h1>
+        <AppScreenWrapper
+            header={
+                <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 transition-all">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                        <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 mb-4 transition-colors font-medium text-sm">
+                            <ArrowLeft className="w-4 h-4" /> Back to Home
+                        </Link>
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">
+                                Current Affairs <span className="text-zinc-400 font-light">| {format(new Date(), "MMMM dd")}</span>
+                            </h1>
 
-                        {/* Tabs */}
-                        <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 hide-scrollbar">
-                            {tabs.map((tab) => (
-                                <button
-                                    key={tab.id}
-                                    onClick={() => setActiveTab(tab.id as any)}
-                                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all ${activeTab === tab.id
-                                        ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md transform scale-105"
-                                        : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700"
-                                        }`}
-                                >
-                                    <tab.icon className={`w-4 h-4 ${activeTab === tab.id ? "" : tab.color}`} />
-                                    {tab.label}
-                                </button>
-                            ))}
+                            {/* Tabs */}
+                            <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 hide-scrollbar">
+                                {tabs.map((tab) => (
+                                    <button
+                                        key={tab.id}
+                                        onClick={() => setActiveTab(tab.id as any)}
+                                        className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all ${activeTab === tab.id
+                                            ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md transform scale-105"
+                                            : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700"
+                                            }`}
+                                    >
+                                        <tab.icon className={`w-4 h-4 ${activeTab === tab.id ? "" : tab.color}`} />
+                                        {tab.label}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            }
+        >
             {/* Content Container */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-[500px]">
                 <div className={`transition-opacity duration-300 ${activeTab === "recent" ? "block" : "hidden"}`}>
@@ -270,6 +272,6 @@ export default function CurrentAffairsPage() {
                     <HistorySection />
                 </div>
             </div>
-        </div>
+        </AppScreenWrapper>
     );
 }

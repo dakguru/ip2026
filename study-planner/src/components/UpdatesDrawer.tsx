@@ -16,6 +16,44 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "09.03.2026",
+        items: [
+            {
+                title: "New PDF Notes Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated 4 new PDF Notes across course modes:</p>
+
+                        <div className="space-y-2">
+                            <p className="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wide">1. LDCE IP Course Mode</p>
+                            <p className="text-[11px] text-zinc-500">New tiles in Paper III:</p>
+                            <ul className="list-disc pl-4 space-y-1">
+                                <li>FR & SR - General Rules</li>
+                                <li>FR & SR - TA Rules</li>
+                                <li>FR & SR - DA, DR & HRA Rules</li>
+                            </ul>
+                        </div>
+
+                        <div className="space-y-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <p className="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wide">2. PS Group B Course Mode</p>
+                            <p className="text-[11px] text-zinc-500">New tiles in Paper II:</p>
+                            <ul className="list-disc pl-4 space-y-1">
+                                <li>FR & SR - General Rules</li>
+                                <li>FR & SR - TA Rules</li>
+                                <li>FR & SR - DA, DR & HRA Rules</li>
+                                <li>CCS (Revised Pay) Rules, 2016</li>
+                            </ul>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Check them out in the Notes section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "08.03.2026",
         items: [
             {
@@ -297,7 +335,7 @@ export default function UpdatesDrawer({ isOpen, onClose }: UpdatesDrawerProps) {
             {/* Drawer Panel */}
             <div className="relative w-full sm:w-96 h-full bg-white dark:bg-zinc-900 shadow-2xl flex flex-col border-l border-zinc-200 dark:border-zinc-800 animate-in slide-in-from-right duration-300">
                 {/* Header */}
-                <div className="header sticky top-0 z-10 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 p-4 sm:p-5 flex items-center justify-between shrink-0">
+                <div className="header sticky top-0 z-10 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 p-4 pt-[max(20px,env(safe-area-inset-top,0px))] sm:p-5 flex items-center justify-between shrink-0">
                     <div className="flex items-center gap-3">
                         <div className="relative">
                             <div className="absolute -inset-1 bg-blue-500/20 rounded-full animate-pulse"></div>

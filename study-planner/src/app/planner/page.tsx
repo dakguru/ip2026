@@ -27,6 +27,7 @@ import { FULL_SCHEDULE } from '@/data/schedule';
 import { generatePlannerPDF } from '@/lib/pdf-generator';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 import { useCourse } from '@/contexts/CourseContext';
+import AppScreenWrapper from '@/components/AppScreenWrapper';
 import NativeStudyPlanner from '@/components/planner/NativeStudyPlanner';
 import PlannerDashboard from '@/components/planner/PlannerDashboard';
 import FlexibleStudyPlanner from '@/components/planner/FlexibleStudyPlanner';
@@ -228,19 +229,21 @@ export default function StudyPlanner() {
     if (isMobileApp) {
         if (course === 'PS_GR_B') {
             return (
-                <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-6 transition-colors">
-                    <div className="relative z-10 text-center space-y-4">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-blue-600 mb-4 shadow-lg shadow-indigo-500/30">
-                            <Sparkles className="w-8 h-8 text-white animate-pulse" />
+                <AppScreenWrapper>
+                    <div className="flex-1 flex flex-col items-center justify-center p-6 transition-colors">
+                        <div className="relative z-10 text-center space-y-4">
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-blue-600 mb-4 shadow-lg shadow-indigo-500/30">
+                                <Sparkles className="w-8 h-8 text-white animate-pulse" />
+                            </div>
+                            <h1 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-400">
+                                Study Planner Coming Soon
+                            </h1>
+                            <p className="text-sm text-zinc-600 dark:text-zinc-400 font-medium max-w-xs mx-auto px-4">
+                                Study Planner will be setup based on the New Syllabus.
+                            </p>
                         </div>
-                        <h1 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-indigo-400 dark:to-blue-400">
-                            Study Planner Coming Soon
-                        </h1>
-                        <p className="text-sm text-zinc-600 dark:text-zinc-400 font-medium max-w-xs mx-auto px-4">
-                            Study Planner will be setup based on the New Syllabus.
-                        </p>
                     </div>
-                </div>
+                </AppScreenWrapper>
             );
         }
 

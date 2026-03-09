@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Target, Lightbulb, CheckCircle2, Award, Zap, Layout, FileText, Smartphone } from "lucide-react";
+import AppScreenWrapper from "@/components/AppScreenWrapper";
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-white dark:bg-zinc-950 transition-colors">
+        <AppScreenWrapper>
             {/* Header / Hero Section */}
             <div className="relative bg-gradient-to-br from-indigo-900 to-blue-900 dark:from-black dark:to-zinc-900 py-20 px-4 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
@@ -135,6 +136,6 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </AppScreenWrapper>
     );
 }

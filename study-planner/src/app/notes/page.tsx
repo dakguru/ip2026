@@ -17,6 +17,7 @@ import { Capacitor } from '@capacitor/core';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Toast } from '@capacitor/toast';
 import { FileOpener } from '@capacitor-community/file-opener';
+import AppScreenWrapper from '@/components/AppScreenWrapper';
 import { ShieldAlert, Info } from 'lucide-react';
 
 // --- DATA ---
@@ -544,7 +545,30 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 26. FR & SR
-        { title: "Fundamental Rules (FR) and Supplementary Rules (SR)", description: "Core service rules.", color: "indigo", comingSoon: true },
+        {
+            title: "FR & SR - General Rules",
+            description: "Fundamental Rules (FR) and Supplementary Rules (SR) - General Rules.",
+            filename: "FR_SR_General_Rules.pdf",
+            path: "/notes/paper-3/FR_SR_General_Rules.pdf",
+            size: "4.4 MB",
+            color: "indigo"
+        },
+        {
+            title: "FR & SR - TA Rules",
+            description: "FR & SR - Traveling Allowance (TA) Rules.",
+            filename: "FR_SR_TA_Rules.pdf",
+            path: "/notes/paper-3/FR_SR_TA_Rules.pdf",
+            size: "4.4 MB",
+            color: "indigo"
+        },
+        {
+            title: "FR & SR - DA, DR & HRA Rules",
+            description: "FR & SR - Dearness Allowance (DA), Dearness Relief (DR) and House Rent Allowance (HRA) Rules.",
+            filename: "FR_SR_DA_DR_HRA.pdf",
+            path: "/notes/paper-3/FR_SR_DA_DR_HRA.pdf",
+            size: "4.3 MB",
+            color: "indigo"
+        },
 
         // 27. Casual Labourers
         {
@@ -925,69 +949,70 @@ export default function NotesPage() {
         : membershipLevel === 'gold';
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200">
-            <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel} />
+        <AppScreenWrapper>
+            <div className="bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200">
+                <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel} />
 
-            {/* --- HERO SECTION --- */}
-            <div className={`relative ${course === 'PS_GR_B' ? 'bg-gradient-to-br from-slate-900 via-teal-900 to-indigo-900' : 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'} text-white pb-20 pt-16 px-6 overflow-hidden`}>
-                <div className={`absolute top-0 right-0 w-96 h-96 ${course === 'PS_GR_B' ? 'bg-teal-500/10' : 'bg-purple-500/10'} rounded-full blur-3xl -mr-20 -mt-20`}></div>
-                <div className={`absolute bottom-0 left-0 w-64 h-64 ${course === 'PS_GR_B' ? 'bg-indigo-500/10' : 'bg-blue-500/10'} rounded-full blur-3xl -ml-10 -mb-10`}></div>
+                {/* --- HERO SECTION --- */}
+                <div className={`relative ${course === 'PS_GR_B' ? 'bg-gradient-to-br from-slate-900 via-teal-900 to-indigo-900' : 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'} text-white pb-20 pt-16 px-6 overflow-hidden`}>
+                    <div className={`absolute top-0 right-0 w-96 h-96 ${course === 'PS_GR_B' ? 'bg-teal-500/10' : 'bg-purple-500/10'} rounded-full blur-3xl -mr-20 -mt-20`}></div>
+                    <div className={`absolute bottom-0 left-0 w-64 h-64 ${course === 'PS_GR_B' ? 'bg-indigo-500/10' : 'bg-blue-500/10'} rounded-full blur-3xl -ml-10 -mb-10`}></div>
 
-                <div className="max-w-7xl mx-auto text-center relative z-10">
-                    <div className={`inline-flex items-center gap-2 px-4 py-2 ${course === 'PS_GR_B' ? 'bg-teal-800/50 border-teal-500/30' : 'bg-purple-800/50 border-purple-500/30'} rounded-full border mb-6 backdrop-blur-sm`}>
-                        <BookOpen className={`w-4 h-4 ${course === 'PS_GR_B' ? 'text-teal-300' : 'text-purple-300'}`} />
-                        <span className={`text-sm font-medium ${course === 'PS_GR_B' ? 'text-teal-100' : 'text-purple-100'} tracking-wide`}>
-                            {course === 'PS_GR_B' ? "LDCE PS GR 'B' DIGITAL LIBRARY" : "LDCE IP DIGITAL LIBRARY"}
-                        </span>
-                    </div>
-                    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-                        Study <span className={`text-transparent bg-clip-text bg-gradient-to-r ${course === 'PS_GR_B' ? 'from-teal-400 to-cyan-300' : 'from-purple-400 to-pink-300'}`}>Material</span>
-                    </h1>
-                    <p className={`text-lg ${course === 'PS_GR_B' ? 'text-teal-200' : 'text-purple-200'} max-w-2xl mx-auto mb-2 leading-relaxed`}>
-                        Curated PDF notes and reference materials for your preparation.
-                    </p>
-                    <button
-                        onClick={() => setShowAccuracyAdvisory(true)}
-                        className="text-white/60 hover:text-white text-xs underline decoration-white/30 underline-offset-4 transition-colors font-medium"
-                    >
-                        Accuracy & Reference Advisory
-                    </button>
-                </div>
-            </div>
-
-            {/* --- MAIN CONTENT --- */}
-
-            {/* Native Download Progress Overlay */}
-            {isDownloading && (
-                <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-zinc-900/90 text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-3 backdrop-blur-md">
-                    <Loader2 className="w-5 h-5 animate-spin text-blue-400" />
-                    <div className="flex flex-col">
-                        <span className="text-sm font-bold">Downloading PDF...</span>
-                        <div className="w-32 h-1 bg-zinc-700 rounded-full mt-1 overflow-hidden">
-                            <div
-                                className="h-full bg-blue-500 transition-all duration-300"
-                                style={{ width: `${downloadProgress}%` }}
-                            />
+                    <div className="max-w-7xl mx-auto text-center relative z-10">
+                        <div className={`inline-flex items-center gap-2 px-4 py-2 ${course === 'PS_GR_B' ? 'bg-teal-800/50 border-teal-500/30' : 'bg-purple-800/50 border-purple-500/30'} rounded-full border mb-6 backdrop-blur-sm`}>
+                            <BookOpen className={`w-4 h-4 ${course === 'PS_GR_B' ? 'text-teal-300' : 'text-purple-300'}`} />
+                            <span className={`text-sm font-medium ${course === 'PS_GR_B' ? 'text-teal-100' : 'text-purple-100'} tracking-wide`}>
+                                {course === 'PS_GR_B' ? "LDCE PS GR 'B' DIGITAL LIBRARY" : "LDCE IP DIGITAL LIBRARY"}
+                            </span>
                         </div>
+                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                            Study <span className={`text-transparent bg-clip-text bg-gradient-to-r ${course === 'PS_GR_B' ? 'from-teal-400 to-cyan-300' : 'from-purple-400 to-pink-300'}`}>Material</span>
+                        </h1>
+                        <p className={`text-lg ${course === 'PS_GR_B' ? 'text-teal-200' : 'text-purple-200'} max-w-2xl mx-auto mb-2 leading-relaxed`}>
+                            Curated PDF notes and reference materials for your preparation.
+                        </p>
+                        <button
+                            onClick={() => setShowAccuracyAdvisory(true)}
+                            className="text-white/60 hover:text-white text-xs underline decoration-white/30 underline-offset-4 transition-colors font-medium"
+                        >
+                            Accuracy & Reference Advisory
+                        </button>
                     </div>
-                    <span className="text-xs font-mono">{downloadProgress}%</span>
                 </div>
-            )}
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+                {/* --- MAIN CONTENT --- */}
 
-                {/* Marquee Banner */}
-                <div className="mb-8 bg-amber-50 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-800/50 rounded-2xl py-3 px-4 shadow-sm overflow-hidden relative flex items-center">
-                    <div className="shrink-0 bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mr-4 shadow-sm z-10 relative">
-                        Important Update
-                    </div>
-                    <div className="overflow-hidden relative flex-1 mask-linear-fade">
-                        <div className="animate-marquee whitespace-nowrap inline-block text-amber-900 dark:text-amber-100 font-medium text-sm md:text-base">
-                            <span className="mr-8"></span>
-                            To ensure 99.99% accuracy, our team is currently updating all notes to include the latest amendments up to 31.12.2025. We appreciate your patience while we craft the highest quality content for you.
+                {/* Native Download Progress Overlay */}
+                {isDownloading && (
+                    <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-zinc-900/90 text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-3 backdrop-blur-md">
+                        <Loader2 className="w-5 h-5 animate-spin text-blue-400" />
+                        <div className="flex flex-col">
+                            <span className="text-sm font-bold">Downloading PDF...</span>
+                            <div className="w-32 h-1 bg-zinc-700 rounded-full mt-1 overflow-hidden">
+                                <div
+                                    className="h-full bg-blue-500 transition-all duration-300"
+                                    style={{ width: `${downloadProgress}%` }}
+                                />
+                            </div>
                         </div>
+                        <span className="text-xs font-mono">{downloadProgress}%</span>
                     </div>
-                    <style jsx>{`
+                )}
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+
+                    {/* Marquee Banner */}
+                    <div className="mb-8 bg-amber-50 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-800/50 rounded-2xl py-3 px-4 shadow-sm overflow-hidden relative flex items-center">
+                        <div className="shrink-0 bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mr-4 shadow-sm z-10 relative">
+                            Important Update
+                        </div>
+                        <div className="overflow-hidden relative flex-1 mask-linear-fade">
+                            <div className="animate-marquee whitespace-nowrap inline-block text-amber-900 dark:text-amber-100 font-medium text-sm md:text-base">
+                                <span className="mr-8"></span>
+                                To ensure 99.99% accuracy, our team is currently updating all notes to include the latest amendments up to 31.12.2025. We appreciate your patience while we craft the highest quality content for you.
+                            </div>
+                        </div>
+                        <style jsx>{`
                         @keyframes marquee {
                             0% { transform: translateX(0); }
                             100% { transform: translateX(-100%); }
@@ -1001,320 +1026,321 @@ export default function NotesPage() {
                             animation-play-state: paused;
                         }
                     `}</style>
-                </div>
+                    </div>
 
-                {/* Tabs */}
-                <div className="flex justify-center mb-6 md:mb-8 sticky top-[64px] z-30 px-4 md:px-0">
-                    <div className="w-full md:w-auto bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md p-1.5 md:p-2 rounded-xl md:rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 grid grid-cols-3 md:inline-flex md:grid-cols-none gap-2">
-                        {TABS.map((tab) => (
-                            <button
-                                key={tab}
-                                onClick={() => setActiveTab(tab)}
-                                className={`
+                    {/* Tabs */}
+                    <div className="flex justify-center mb-6 md:mb-8 sticky top-[64px] z-30 px-4 md:px-0">
+                        <div className="w-full md:w-auto bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md p-1.5 md:p-2 rounded-xl md:rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 grid grid-cols-3 md:inline-flex md:grid-cols-none gap-2">
+                            {TABS.map((tab) => (
+                                <button
+                                    key={tab}
+                                    onClick={() => setActiveTab(tab)}
+                                    className={`
                                     relative p-2 md:px-6 md:py-2.5 rounded-lg md:rounded-xl font-bold text-[11px] xs:text-xs md:text-sm transition-colors duration-200 flex items-center justify-center gap-1.5 md:gap-2 whitespace-nowrap outline-none
                                     ${activeTab === tab
-                                        ? 'text-white'
-                                        : 'text-slate-500 dark:text-zinc-400 hover:text-slate-700 dark:hover:text-zinc-200'
-                                    } 
+                                            ? 'text-white'
+                                            : 'text-slate-500 dark:text-zinc-400 hover:text-slate-700 dark:hover:text-zinc-200'
+                                        } 
                                 `}
-                            >
-                                {activeTab === tab && (
-                                    <motion.div
-                                        layoutId="activeTab"
-                                        className={`absolute inset-0 ${course === 'PS_GR_B' ? 'bg-teal-600' : 'bg-purple-600'} rounded-lg md:rounded-xl shadow-md`}
-                                        initial={false}
-                                        transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                                    />
-                                )}
-                                <span className="relative z-10 flex items-center gap-1.5 md:gap-2">
-                                    <Layers className="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
-                                    <span>{tab}</span>
-                                </span>
-                            </button>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 pb-20">
-                    {activeData[activeTab as keyof typeof activeData]?.map((file, index) => (
-                        <div
-                            key={index}
-                            className={`group bg-white dark:bg-zinc-900 rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
-                                ? 'border-zinc-200 dark:border-zinc-800 opacity-90'
-                                : 'border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
-                                }`}
-                        >
-                            <div className="flex items-start justify-between mb-4">
-                                <div className={`p-2 md:p-3 rounded-xl ${file.comingSoon
-                                    ? hasPremiumAccess ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
-                                    : file.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' :
-                                        file.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400' :
-                                            file.color === 'emerald' ? 'bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400' :
-                                                file.color === 'rose' ? 'bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400' :
-                                                    file.color === 'amber' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400' :
-                                                        file.color === 'orange' ? 'bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400' :
-                                                            file.color === 'cyan' ? 'bg-cyan-50 dark:bg-cyan-900/40 text-cyan-600 dark:text-cyan-400' :
-                                                                file.color === 'violet' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400' :
-                                                                    file.color === 'fuchsia' ? 'bg-fuchsia-50 dark:bg-fuchsia-900/40 text-fuchsia-600 dark:text-fuchsia-400' :
-                                                                        file.color === 'teal' ? 'bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400' :
-                                                                            file.color === 'sky' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400' :
-                                                                                'bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
-                                    }`}>
-                                    {file.comingSoon && !hasPremiumAccess ? (
-                                        <Lock className="w-6 h-6 md:w-8 md:h-8" />
-                                    ) : (
-                                        <FileText className="w-6 h-6 md:w-8 md:h-8" />
+                                >
+                                    {activeTab === tab && (
+                                        <motion.div
+                                            layoutId="activeTab"
+                                            className={`absolute inset-0 ${course === 'PS_GR_B' ? 'bg-teal-600' : 'bg-purple-600'} rounded-lg md:rounded-xl shadow-md`}
+                                            initial={false}
+                                            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                                        />
                                     )}
-                                </div>
-                                <span className={`text-[10px] md:text-sm font-bold px-2 py-1 rounded-md ${file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
-                                    }`}>
-                                    {file.comingSoon ? 'SOON' : 'PDF'}
-                                </span>
-                            </div>
-
-                            <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-2 leading-tight transition-colors ${file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
-                                }`}>
-                                {file.title}
-                                {file.subtitle && (
-                                    <span className="block text-[10px] md:text-sm font-normal italic text-slate-500 dark:text-zinc-500 mt-1">
-                                        {file.subtitle}
+                                    <span className="relative z-10 flex items-center gap-1.5 md:gap-2">
+                                        <Layers className="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
+                                        <span>{tab}</span>
                                     </span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 pb-20">
+                        {activeData[activeTab as keyof typeof activeData]?.map((file, index) => (
+                            <div
+                                key={index}
+                                className={`group bg-white dark:bg-zinc-900 rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
+                                    ? 'border-zinc-200 dark:border-zinc-800 opacity-90'
+                                    : 'border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
+                                    }`}
+                            >
+                                <div className="flex items-start justify-between mb-4">
+                                    <div className={`p-2 md:p-3 rounded-xl ${file.comingSoon
+                                        ? hasPremiumAccess ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
+                                        : file.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' :
+                                            file.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400' :
+                                                file.color === 'emerald' ? 'bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400' :
+                                                    file.color === 'rose' ? 'bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400' :
+                                                        file.color === 'amber' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400' :
+                                                            file.color === 'orange' ? 'bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400' :
+                                                                file.color === 'cyan' ? 'bg-cyan-50 dark:bg-cyan-900/40 text-cyan-600 dark:text-cyan-400' :
+                                                                    file.color === 'violet' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400' :
+                                                                        file.color === 'fuchsia' ? 'bg-fuchsia-50 dark:bg-fuchsia-900/40 text-fuchsia-600 dark:text-fuchsia-400' :
+                                                                            file.color === 'teal' ? 'bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400' :
+                                                                                file.color === 'sky' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400' :
+                                                                                    'bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
+                                        }`}>
+                                        {file.comingSoon && !hasPremiumAccess ? (
+                                            <Lock className="w-6 h-6 md:w-8 md:h-8" />
+                                        ) : (
+                                            <FileText className="w-6 h-6 md:w-8 md:h-8" />
+                                        )}
+                                    </div>
+                                    <span className={`text-[10px] md:text-sm font-bold px-2 py-1 rounded-md ${file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
+                                        }`}>
+                                        {file.comingSoon ? 'SOON' : 'PDF'}
+                                    </span>
+                                </div>
+
+                                <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-2 leading-tight transition-colors ${file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
+                                    }`}>
+                                    {file.title}
+                                    {file.subtitle && (
+                                        <span className="block text-[10px] md:text-sm font-normal italic text-slate-500 dark:text-zinc-500 mt-1">
+                                            {file.subtitle}
+                                        </span>
+                                    )}
+                                </h3>
+                                <p className="text-[10px] md:text-sm text-slate-500 dark:text-zinc-400 mb-4 md:mb-6 flex-grow leading-relaxed line-clamp-2 md:line-clamp-none">
+                                    {file.description}
+                                </p>
+
+                                {file.comingSoon ? (
+                                    hasPremiumAccess ? (
+                                        <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-950/40 dark:to-amber-900/40 border border-amber-200 dark:border-amber-800/50 p-3 flex flex-col items-center justify-center text-center group-hover:from-amber-100 group-hover:to-amber-200 dark:group-hover:from-amber-900/60 dark:group-hover:to-amber-900/60 transition-all">
+                                            <div className="relative flex items-center gap-2 text-amber-900 dark:text-amber-100 font-bold text-sm mb-1">
+                                                <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                                                <span>Coming Soon</span>
+                                            </div>
+                                            <p className="text-xs text-amber-800 dark:text-amber-200 font-medium">
+                                                Materials will be uploaded on {getReleaseDate(file.title)}
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-3 flex flex-col items-center justify-center text-center">
+                                            <div className="relative flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm mb-1">
+                                                <Lock className="w-3 h-3 text-zinc-400 dark:text-zinc-500" />
+                                                <span>LOCKED</span>
+                                            </div>
+                                            <Link href="/pricing" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                                                Upgrade to {isPS ? 'Diamond' : 'Gold'} to view schedule
+                                            </Link>
+                                        </div>
+                                    )
+                                ) : (
+                                    hasPremiumAccess || file.isFree ? (
+                                        <>
+                                            <div className="grid grid-cols-2 gap-1.5 md:gap-3 mt-auto">
+                                                <button
+                                                    onClick={() => handleActionRequest('view', file.path || '', file.title)}
+                                                    className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-slate-50 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-semibold text-[10px] md:text-sm hover:bg-slate-100 dark:hover:bg-zinc-700 transition-colors border border-slate-200 dark:border-zinc-700"
+                                                >
+                                                    <Eye className="w-3 h-3 md:w-4 md:h-4" />
+                                                    View
+                                                </button>
+                                                <button
+                                                    onClick={() => handleActionRequest('download', file.path || '', file.title, file.filename || 'document.pdf')}
+                                                    className={`flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg text-white font-semibold text-[10px] md:text-sm hover:shadow-lg transition-all shadow-md ${course === 'PS_GR_B' ? 'bg-teal-600 hover:bg-teal-700 hover:shadow-teal-500/20' : 'bg-purple-600 hover:bg-purple-700 hover:shadow-purple-500/20'}`}
+                                                >
+                                                    <Download className="w-3 h-3 md:w-4 md:h-4" />
+                                                    Download
+                                                </button>
+                                            </div>
+                                            <div className="mt-3 text-center">
+                                                <span className="text-[10px] uppercase tracking-wider text-slate-300 dark:text-zinc-600 font-semibold">{file.size}</span>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-3 flex flex-col items-center justify-center text-center">
+                                            <div className="relative flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm mb-1">
+                                                <Lock className="w-3 h-3 text-zinc-400 dark:text-zinc-500" />
+                                                <span>PREMIUM</span>
+                                            </div>
+                                            <Link href="/pricing" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                                                Upgrade to {isPS ? 'Diamond' : 'Gold'} to unlock
+                                            </Link>
+                                        </div>
+                                    )
                                 )}
-                            </h3>
-                            <p className="text-[10px] md:text-sm text-slate-500 dark:text-zinc-400 mb-4 md:mb-6 flex-grow leading-relaxed line-clamp-2 md:line-clamp-none">
-                                {file.description}
-                            </p>
-
-                            {file.comingSoon ? (
-                                hasPremiumAccess ? (
-                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-950/40 dark:to-amber-900/40 border border-amber-200 dark:border-amber-800/50 p-3 flex flex-col items-center justify-center text-center group-hover:from-amber-100 group-hover:to-amber-200 dark:group-hover:from-amber-900/60 dark:group-hover:to-amber-900/60 transition-all">
-                                        <div className="relative flex items-center gap-2 text-amber-900 dark:text-amber-100 font-bold text-sm mb-1">
-                                            <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                                            <span>Coming Soon</span>
-                                        </div>
-                                        <p className="text-xs text-amber-800 dark:text-amber-200 font-medium">
-                                            Materials will be uploaded on {getReleaseDate(file.title)}
-                                        </p>
-                                    </div>
-                                ) : (
-                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-3 flex flex-col items-center justify-center text-center">
-                                        <div className="relative flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm mb-1">
-                                            <Lock className="w-3 h-3 text-zinc-400 dark:text-zinc-500" />
-                                            <span>LOCKED</span>
-                                        </div>
-                                        <Link href="/pricing" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">
-                                            Upgrade to {isPS ? 'Diamond' : 'Gold'} to view schedule
-                                        </Link>
-                                    </div>
-                                )
-                            ) : (
-                                hasPremiumAccess || file.isFree ? (
-                                    <>
-                                        <div className="grid grid-cols-2 gap-1.5 md:gap-3 mt-auto">
-                                            <button
-                                                onClick={() => handleActionRequest('view', file.path || '', file.title)}
-                                                className="flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg bg-slate-50 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-semibold text-[10px] md:text-sm hover:bg-slate-100 dark:hover:bg-zinc-700 transition-colors border border-slate-200 dark:border-zinc-700"
-                                            >
-                                                <Eye className="w-3 h-3 md:w-4 md:h-4" />
-                                                View
-                                            </button>
-                                            <button
-                                                onClick={() => handleActionRequest('download', file.path || '', file.title, file.filename || 'document.pdf')}
-                                                className={`flex items-center justify-center gap-1 md:gap-2 px-2 py-1.5 md:px-4 md:py-2.5 rounded-lg text-white font-semibold text-[10px] md:text-sm hover:shadow-lg transition-all shadow-md ${course === 'PS_GR_B' ? 'bg-teal-600 hover:bg-teal-700 hover:shadow-teal-500/20' : 'bg-purple-600 hover:bg-purple-700 hover:shadow-purple-500/20'}`}
-                                            >
-                                                <Download className="w-3 h-3 md:w-4 md:h-4" />
-                                                Download
-                                            </button>
-                                        </div>
-                                        <div className="mt-3 text-center">
-                                            <span className="text-[10px] uppercase tracking-wider text-slate-300 dark:text-zinc-600 font-semibold">{file.size}</span>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-3 flex flex-col items-center justify-center text-center">
-                                        <div className="relative flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm mb-1">
-                                            <Lock className="w-3 h-3 text-zinc-400 dark:text-zinc-500" />
-                                            <span>PREMIUM</span>
-                                        </div>
-                                        <Link href="/pricing" className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium">
-                                            Upgrade to {isPS ? 'Diamond' : 'Gold'} to unlock
-                                        </Link>
-                                    </div>
-                                )
-                            )}
-                        </div>
-                    ))}
-
-                    {(!activeData[activeTab as keyof typeof activeData] || activeData[activeTab as keyof typeof activeData].length === 0) && (
-                        <div className="col-span-full py-20 text-center">
-                            <div className="bg-slate-100 dark:bg-zinc-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <BookOpen className="w-8 h-8 text-slate-300 dark:text-zinc-600" />
                             </div>
-                            <p className="text-slate-400 dark:text-zinc-500">No notes available for {activeTab} yet.</p>
-                        </div>
-                    )}
+                        ))}
+
+                        {(!activeData[activeTab as keyof typeof activeData] || activeData[activeTab as keyof typeof activeData].length === 0) && (
+                            <div className="col-span-full py-20 text-center">
+                                <div className="bg-slate-100 dark:bg-zinc-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <BookOpen className="w-8 h-8 text-slate-300 dark:text-zinc-600" />
+                                </div>
+                                <p className="text-slate-400 dark:text-zinc-500">No notes available for {activeTab} yet.</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
+
+                {/* --- SMART PDF READER MODAL --- */}
+                {selectedPdf && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+                        <div className="bg-white dark:bg-zinc-900 rounded-none sm:rounded-2xl w-full h-full max-w-7xl flex flex-col shadow-2xl overflow-hidden relative">
+                            {/* Compact Header */}
+                            <div className="flex items-center justify-between px-3 sm:px-4 pb-2 pt-[calc(0.5rem+env(safe-area-inset-top))] sm:py-2.5 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-[60] w-full shrink-0">
+                                <h3 className="font-bold text-slate-800 dark:text-zinc-100 flex items-center gap-2 text-sm truncate mr-2">
+                                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center shrink-0">
+                                        <FileText className="w-3.5 h-3.5 text-white" />
+                                    </div>
+                                    <div className="flex flex-col min-w-0">
+                                        <span className="truncate text-sm font-bold">{selectedPdf?.title || 'Document Viewer'}</span>
+                                        <span className="text-[10px] text-slate-400 dark:text-zinc-500 font-medium">Dak Guru Smart Reader</span>
+                                    </div>
+                                </h3>
+                                <button
+                                    onClick={() => setSelectedPdf(null)}
+                                    className="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-500 dark:text-zinc-400 transition-colors shrink-0"
+                                >
+                                    <span className="sr-only">Close</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                                </button>
+                            </div>
+
+                            {/* Smart Reader Content */}
+                            <div className="flex-1 relative overflow-hidden">
+                                <PdfViewer url={selectedPdf?.url || ''} />
+                            </div>
+                        </div>
+                    </div>
+                )}
+                {/* --- ETHICS ADVISORY POPUP --- */}
+                {showAdvisory && (
+                    <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+                        <div className="bg-white dark:bg-zinc-900 rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
+                            <div className="bg-gradient-to-r from-red-600 to-rose-600 p-5 sm:p-6 text-white relative overflow-hidden shrink-0">
+                                <ShieldAlert className="w-10 h-10 sm:w-12 sm:h-12 absolute -bottom-2 -right-2 text-white/20" />
+                                <h3 className="text-lg sm:text-xl font-bold flex items-center gap-2">
+                                    <Info className="w-5 h-5 sm:w-6 sm:h-6" />
+                                    Ethical Use Advisory
+                                </h3>
+                                <p className="text-red-100 text-xs sm:text-sm mt-1">Please read carefully before proceeding</p>
+                            </div>
+
+                            <div className="p-5 sm:p-6 max-h-[50vh] sm:max-h-[60vh] overflow-y-auto space-y-3 sm:space-y-4 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700">
+                                <p className="font-semibold text-zinc-900 dark:text-zinc-100">
+                                    Paid members are respectfully advised not to share, circulate, forward, or distribute Dak Guru PDF Notes or other premium study materials to colleagues or non-paid users.
+                                </p>
+                                <p>
+                                    These materials are the result of extensive academic research, subject-matter expertise, and sustained effort by our dedicated content creators. Every note is carefully crafted to align with the latest syllabus, examination trends, and conceptual clarity required for departmental examinations.
+                                </p>
+                                <div className="p-3 sm:p-4 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-xl">
+                                    <p className="text-red-800 dark:text-red-200 font-medium text-xs sm:text-sm">
+                                        Sharing paid content without authorization is not only a violation of professional ethics, but also undermines the Guru–Shishya values of respect, fairness, and integrity.
+                                    </p>
+                                </div>
+                                <p>
+                                    It directly affects the morale and livelihood of the educators and contributors who work tirelessly to support aspirants through high-quality resources. We sincerely request all paid members to uphold moral responsibility and professional discipline by using the materials strictly for personal academic purposes.
+                                </p>
+                                <ul className="list-disc pl-5 space-y-1 marker:text-red-500 text-xs sm:text-sm">
+                                    <li>Encouraging quality content creation</li>
+                                    <li>Sustaining affordable learning resources</li>
+                                    <li>Maintaining academic credibility and trust</li>
+                                </ul>
+                                <p className="font-bold text-center pt-2 text-zinc-800 dark:text-zinc-200 text-sm">
+                                    "Let us grow together by respecting knowledge, effort, and integrity." <br />
+                                    <span className="text-xs font-normal text-zinc-500">~ Team Dak Guru</span>
+                                </p>
+                            </div>
+
+                            <div className="p-5 sm:p-6 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 shrink-0">
+                                <label className="flex items-start gap-3 cursor-pointer group mb-5 select-none">
+                                    <div className="relative flex items-center mt-0.5">
+                                        <input
+                                            type="checkbox"
+                                            className="peer sr-only"
+                                            checked={advisoryAgreed}
+                                            onChange={(e) => setAdvisoryAgreed(e.target.checked)}
+                                        />
+                                        <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-zinc-300 rounded transition-colors peer-checked:bg-red-600 peer-checked:border-red-600 dark:border-zinc-600"></div>
+                                        <Check className="absolute w-3.5 h-3.5 sm:w-4 sm:h-4 text-white left-1 top-0.5 sm:left-1 sm:top-1 opacity-0 peer-checked:opacity-100 transition-opacity" strokeWidth={3} />
+                                    </div>
+                                    <span className="text-xs sm:text-sm font-medium text-zinc-700 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors leading-snug">
+                                        I have read the advisory and agree to use these materials ethically for my personal use only.
+                                    </span>
+                                </label>
+
+                                <div className="flex gap-3">
+                                    <button
+                                        onClick={() => setShowAdvisory(false)}
+                                        className="flex-1 py-3 sm:py-3.5 rounded-xl font-bold text-sm text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-150"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        onClick={handleAdvisoryConfirm}
+                                        disabled={!advisoryAgreed}
+                                        className="flex-[2] py-3 sm:py-3.5 rounded-xl font-bold text-sm bg-red-600 text-white shadow-lg shadow-red-500/30 hover:bg-red-700 hover:shadow-red-500/40 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 duration-150"
+                                    >
+                                        Confirm & Proceed
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* --- ACCURACY ADVISORY MODAL --- */}
+                {showAccuracyAdvisory && (
+                    <div className="fixed inset-0 z-[80] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+                        <div className="bg-white dark:bg-zinc-900 rounded-[2rem] w-full max-w-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200 border border-zinc-200 dark:border-zinc-800">
+                            <div className={`p-6 sm:p-8 text-center ${course === 'PS_GR_B' ? 'bg-teal-50 dark:bg-teal-900/10' : 'bg-blue-50 dark:bg-blue-900/10'}`}>
+                                <div className={`w-16 h-16 rounded-2xl ${course === 'PS_GR_B' ? 'bg-teal-100 dark:bg-teal-900/30' : 'bg-blue-100 dark:bg-blue-900/30'} flex items-center justify-center mx-auto mb-4`}>
+                                    <ShieldAlert className={`w-8 h-8 ${course === 'PS_GR_B' ? 'text-teal-600 dark:text-teal-400' : 'text-blue-600 dark:text-blue-400'}`} />
+                                </div>
+                                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Accuracy & Reference Advisory</h3>
+                            </div>
+
+                            <div className="p-6 sm:p-8 space-y-4 max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700">
+                                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
+                                    While every effort has been made to carefully research, verify, and draft the Dak Guru PDF Notes with high academic diligence, there remains a possibility that certain factual inaccuracies, typographical errors, or interpretation differences may inadvertently exist.
+                                </p>
+                                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
+                                    Users are therefore strongly advised to cross-verify important information with official sources, including departmental manuals, government notifications, circulars, and other authoritative resources, before relying on the material for examination or professional purposes.
+                                </p>
+                                <div className={`p-5 rounded-2xl ${course === 'PS_GR_B' ? 'bg-teal-50/50 dark:bg-teal-900/10 border border-teal-100 dark:border-teal-800/30' : 'bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800/30'}`}>
+                                    <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-center">
+                                        If any error, discrepancy, or outdated information is identified in the notes, users are kindly requested to report it immediately through the dedicated <Link href="/social?tab=report" className="font-bold underline text-blue-600 dark:text-blue-400 hover:text-blue-700">“Report Error” section</Link> in DG Community Page, so that our academic team can promptly review, rectify, and update the material for the benefit of all aspirants.
+                                    </p>
+                                </div>
+                                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
+                                    Your cooperation helps us maintain the accuracy, reliability, and continuous improvement of Dak Guru learning resources.
+                                </p>
+                            </div>
+
+                            <div className="p-6 border-t border-zinc-100 dark:border-zinc-800 flex justify-center bg-zinc-50 dark:bg-zinc-900/50">
+                                <button
+                                    onClick={() => setShowAccuracyAdvisory(false)}
+                                    className={`w-full py-4 rounded-xl font-bold text-sm text-white shadow-lg transition-all active:scale-95 ${course === 'PS_GR_B' ? 'bg-teal-600 hover:bg-teal-700 shadow-teal-500/20' : 'bg-blue-600 hover:bg-blue-700 shadow-blue-500/20'}`}
+                                >
+                                    I Understand
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+                {/* --- DOWNLOAD TOAST --- */}
+                {showDownloadToast && (
+                    <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] bg-zinc-900 dark:bg-zinc-800 dark:border dark:border-zinc-700 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5 fade-in duration-300">
+                        <div className="bg-green-500 rounded-full p-1">
+                            <Check className="w-4 h-4 text-white" />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="font-bold text-sm">Download Started</span>
+                            <span className="text-xs text-zinc-400">Check your Downloads folder</span>
+                        </div>
+                    </div>
+                )}
             </div>
-
-            {/* --- SMART PDF READER MODAL --- */}
-            {selectedPdf && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="bg-white dark:bg-zinc-900 rounded-none sm:rounded-2xl w-full h-full max-w-7xl flex flex-col shadow-2xl overflow-hidden relative">
-                        {/* Compact Header */}
-                        <div className="flex items-center justify-between px-3 sm:px-4 pb-2 pt-[calc(0.5rem+env(safe-area-inset-top))] sm:py-2.5 border-b border-slate-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 z-[60] w-full shrink-0">
-                            <h3 className="font-bold text-slate-800 dark:text-zinc-100 flex items-center gap-2 text-sm truncate mr-2">
-                                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center shrink-0">
-                                    <FileText className="w-3.5 h-3.5 text-white" />
-                                </div>
-                                <div className="flex flex-col min-w-0">
-                                    <span className="truncate text-sm font-bold">{selectedPdf?.title || 'Document Viewer'}</span>
-                                    <span className="text-[10px] text-slate-400 dark:text-zinc-500 font-medium">Dak Guru Smart Reader</span>
-                                </div>
-                            </h3>
-                            <button
-                                onClick={() => setSelectedPdf(null)}
-                                className="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-500 dark:text-zinc-400 transition-colors shrink-0"
-                            >
-                                <span className="sr-only">Close</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
-                            </button>
-                        </div>
-
-                        {/* Smart Reader Content */}
-                        <div className="flex-1 relative overflow-hidden">
-                            <PdfViewer url={selectedPdf?.url || ''} />
-                        </div>
-                    </div>
-                </div>
-            )}
-            {/* --- ETHICS ADVISORY POPUP --- */}
-            {showAdvisory && (
-                <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="bg-white dark:bg-zinc-900 rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
-                        <div className="bg-gradient-to-r from-red-600 to-rose-600 p-5 sm:p-6 text-white relative overflow-hidden shrink-0">
-                            <ShieldAlert className="w-10 h-10 sm:w-12 sm:h-12 absolute -bottom-2 -right-2 text-white/20" />
-                            <h3 className="text-lg sm:text-xl font-bold flex items-center gap-2">
-                                <Info className="w-5 h-5 sm:w-6 sm:h-6" />
-                                Ethical Use Advisory
-                            </h3>
-                            <p className="text-red-100 text-xs sm:text-sm mt-1">Please read carefully before proceeding</p>
-                        </div>
-
-                        <div className="p-5 sm:p-6 max-h-[50vh] sm:max-h-[60vh] overflow-y-auto space-y-3 sm:space-y-4 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700">
-                            <p className="font-semibold text-zinc-900 dark:text-zinc-100">
-                                Paid members are respectfully advised not to share, circulate, forward, or distribute Dak Guru PDF Notes or other premium study materials to colleagues or non-paid users.
-                            </p>
-                            <p>
-                                These materials are the result of extensive academic research, subject-matter expertise, and sustained effort by our dedicated content creators. Every note is carefully crafted to align with the latest syllabus, examination trends, and conceptual clarity required for departmental examinations.
-                            </p>
-                            <div className="p-3 sm:p-4 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-xl">
-                                <p className="text-red-800 dark:text-red-200 font-medium text-xs sm:text-sm">
-                                    Sharing paid content without authorization is not only a violation of professional ethics, but also undermines the Guru–Shishya values of respect, fairness, and integrity.
-                                </p>
-                            </div>
-                            <p>
-                                It directly affects the morale and livelihood of the educators and contributors who work tirelessly to support aspirants through high-quality resources. We sincerely request all paid members to uphold moral responsibility and professional discipline by using the materials strictly for personal academic purposes.
-                            </p>
-                            <ul className="list-disc pl-5 space-y-1 marker:text-red-500 text-xs sm:text-sm">
-                                <li>Encouraging quality content creation</li>
-                                <li>Sustaining affordable learning resources</li>
-                                <li>Maintaining academic credibility and trust</li>
-                            </ul>
-                            <p className="font-bold text-center pt-2 text-zinc-800 dark:text-zinc-200 text-sm">
-                                "Let us grow together by respecting knowledge, effort, and integrity." <br />
-                                <span className="text-xs font-normal text-zinc-500">~ Team Dak Guru</span>
-                            </p>
-                        </div>
-
-                        <div className="p-5 sm:p-6 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 shrink-0">
-                            <label className="flex items-start gap-3 cursor-pointer group mb-5 select-none">
-                                <div className="relative flex items-center mt-0.5">
-                                    <input
-                                        type="checkbox"
-                                        className="peer sr-only"
-                                        checked={advisoryAgreed}
-                                        onChange={(e) => setAdvisoryAgreed(e.target.checked)}
-                                    />
-                                    <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-zinc-300 rounded transition-colors peer-checked:bg-red-600 peer-checked:border-red-600 dark:border-zinc-600"></div>
-                                    <Check className="absolute w-3.5 h-3.5 sm:w-4 sm:h-4 text-white left-1 top-0.5 sm:left-1 sm:top-1 opacity-0 peer-checked:opacity-100 transition-opacity" strokeWidth={3} />
-                                </div>
-                                <span className="text-xs sm:text-sm font-medium text-zinc-700 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors leading-snug">
-                                    I have read the advisory and agree to use these materials ethically for my personal use only.
-                                </span>
-                            </label>
-
-                            <div className="flex gap-3">
-                                <button
-                                    onClick={() => setShowAdvisory(false)}
-                                    className="flex-1 py-3 sm:py-3.5 rounded-xl font-bold text-sm text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-150"
-                                >
-                                    Cancel
-                                </button>
-                                <button
-                                    onClick={handleAdvisoryConfirm}
-                                    disabled={!advisoryAgreed}
-                                    className="flex-[2] py-3 sm:py-3.5 rounded-xl font-bold text-sm bg-red-600 text-white shadow-lg shadow-red-500/30 hover:bg-red-700 hover:shadow-red-500/40 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95 duration-150"
-                                >
-                                    Confirm & Proceed
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            {/* --- ACCURACY ADVISORY MODAL --- */}
-            {showAccuracyAdvisory && (
-                <div className="fixed inset-0 z-[80] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="bg-white dark:bg-zinc-900 rounded-[2rem] w-full max-w-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200 border border-zinc-200 dark:border-zinc-800">
-                        <div className={`p-6 sm:p-8 text-center ${course === 'PS_GR_B' ? 'bg-teal-50 dark:bg-teal-900/10' : 'bg-blue-50 dark:bg-blue-900/10'}`}>
-                            <div className={`w-16 h-16 rounded-2xl ${course === 'PS_GR_B' ? 'bg-teal-100 dark:bg-teal-900/30' : 'bg-blue-100 dark:bg-blue-900/30'} flex items-center justify-center mx-auto mb-4`}>
-                                <ShieldAlert className={`w-8 h-8 ${course === 'PS_GR_B' ? 'text-teal-600 dark:text-teal-400' : 'text-blue-600 dark:text-blue-400'}`} />
-                            </div>
-                            <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Accuracy & Reference Advisory</h3>
-                        </div>
-
-                        <div className="p-6 sm:p-8 space-y-4 max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700">
-                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
-                                While every effort has been made to carefully research, verify, and draft the Dak Guru PDF Notes with high academic diligence, there remains a possibility that certain factual inaccuracies, typographical errors, or interpretation differences may inadvertently exist.
-                            </p>
-                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
-                                Users are therefore strongly advised to cross-verify important information with official sources, including departmental manuals, government notifications, circulars, and other authoritative resources, before relying on the material for examination or professional purposes.
-                            </p>
-                            <div className={`p-5 rounded-2xl ${course === 'PS_GR_B' ? 'bg-teal-50/50 dark:bg-teal-900/10 border border-teal-100 dark:border-teal-800/30' : 'bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800/30'}`}>
-                                <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-center">
-                                    If any error, discrepancy, or outdated information is identified in the notes, users are kindly requested to report it immediately through the dedicated <Link href="/social?tab=report" className="font-bold underline text-blue-600 dark:text-blue-400 hover:text-blue-700">“Report Error” section</Link> in DG Community Page, so that our academic team can promptly review, rectify, and update the material for the benefit of all aspirants.
-                                </p>
-                            </div>
-                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-center">
-                                Your cooperation helps us maintain the accuracy, reliability, and continuous improvement of Dak Guru learning resources.
-                            </p>
-                        </div>
-
-                        <div className="p-6 border-t border-zinc-100 dark:border-zinc-800 flex justify-center bg-zinc-50 dark:bg-zinc-900/50">
-                            <button
-                                onClick={() => setShowAccuracyAdvisory(false)}
-                                className={`w-full py-4 rounded-xl font-bold text-sm text-white shadow-lg transition-all active:scale-95 ${course === 'PS_GR_B' ? 'bg-teal-600 hover:bg-teal-700 shadow-teal-500/20' : 'bg-blue-600 hover:bg-blue-700 shadow-blue-500/20'}`}
-                            >
-                                I Understand
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            )}
-            {/* --- DOWNLOAD TOAST --- */}
-            {showDownloadToast && (
-                <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] bg-zinc-900 dark:bg-zinc-800 dark:border dark:border-zinc-700 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5 fade-in duration-300">
-                    <div className="bg-green-500 rounded-full p-1">
-                        <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="font-bold text-sm">Download Started</span>
-                        <span className="text-xs text-zinc-400">Check your Downloads folder</span>
-                    </div>
-                </div>
-            )}
-        </div>
+        </AppScreenWrapper>
     );
 }

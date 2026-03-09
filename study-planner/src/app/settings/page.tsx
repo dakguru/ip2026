@@ -7,6 +7,7 @@ import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcas
 import Link from "next/link";
 import Image from "next/image";
 import UpdatesDrawer from "@/components/UpdatesDrawer";
+import AppScreenWrapper from "@/components/AppScreenWrapper";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useBetaAccess } from "@/hooks/useBetaAccess";
 import { useCourse } from "@/contexts/CourseContext";
@@ -297,12 +298,15 @@ export default function SettingsPage() {
             </button>
         );
 
+
+        // ... inside SettingsPage ...
+
         // ---- Sub-section view ----
         if (activeSection) {
             return (
-                <div className="min-h-screen bg-white dark:bg-zinc-950">
-                    <div className="sticky top-0 z-10 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-xl border-b border-zinc-100 dark:border-zinc-800">
-                        <div className="flex items-center gap-3 px-5 py-3.5">
+                <AppScreenWrapper
+                    header={
+                        <div className="flex items-center gap-3">
                             <button onClick={() => setActiveSection(null)}
                                 className="p-1.5 -ml-1.5 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                                 <ArrowLeft className="w-5 h-5 text-zinc-700 dark:text-zinc-300" />
@@ -311,8 +315,8 @@ export default function SettingsPage() {
                                 {sectionTitles[activeSection] || 'Profile'}
                             </h1>
                         </div>
-                    </div>
-
+                    }
+                >
                     <div className="px-5 py-6 pb-28">
                         {/* Manage Profile */}
                         {activeSection === 'profile' && (
@@ -601,15 +605,15 @@ export default function SettingsPage() {
                             </div>
                         )}
                     </div>
-                </div>
+                </AppScreenWrapper>
             );
         }
 
         // ---- Main Menu View ----
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
+            <AppScreenWrapper showBottomNav={true}>
                 {/* Premium Profile Hero */}
-                <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-violet-950 pt-6 pb-10 px-5">
+                <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-violet-950 pt-[max(24px,env(safe-area-inset-top))] pb-10 px-5">
                     {/* Ambient Glow */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-indigo-500/15 rounded-full blur-[100px] pointer-events-none"></div>
                     <div className="absolute bottom-0 right-0 w-[200px] h-[200px] bg-violet-500/10 rounded-full blur-[80px] pointer-events-none"></div>
@@ -703,7 +707,7 @@ export default function SettingsPage() {
                     </div>
                 </div>
                 <UpdatesDrawer isOpen={showUpdates} onClose={() => setShowUpdates(false)} />
-            </div>
+            </AppScreenWrapper>
         );
     }
 

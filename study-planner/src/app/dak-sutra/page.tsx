@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
+import AppScreenWrapper from "@/components/AppScreenWrapper";
 
 interface DakSutraEntry {
     _id: string;
@@ -49,19 +50,20 @@ export default function DakSutraPublicListPage() {
     };
 
     return (
-        <div className="min-h-screen bg-[#F8FAFC] dark:bg-zinc-950 pb-20">
-            {/* Header */}
-            <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 sticky top-0 z-10">
-                <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 text-zinc-500 hover:text-zinc-900 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        <span className="font-medium text-sm">Home</span>
-                    </Link>
-                    <h1 className="text-lg font-black text-blue-600 uppercase tracking-tight">Dak Sutra</h1>
-                    <div className="w-10"></div> {/* Spacer */}
+        <AppScreenWrapper
+            header={
+                <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 transition-all">
+                    <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+                        <Link href="/" className="flex items-center gap-2 text-zinc-500 hover:text-zinc-900 transition-colors">
+                            <ArrowLeft className="w-4 h-4" />
+                            <span className="font-medium text-sm">Home</span>
+                        </Link>
+                        <h1 className="text-lg font-black text-blue-600 uppercase tracking-tight">Dak Sutra</h1>
+                        <div className="w-10"></div> {/* Spacer */}
+                    </div>
                 </div>
-            </div>
-
+            }
+        >
             <div className="max-w-7xl mx-auto px-4 md:px-6 py-10">
                 <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div>
@@ -160,6 +162,6 @@ export default function DakSutraPublicListPage() {
                     </div>
                 )}
             </div>
-        </div>
+        </AppScreenWrapper>
     );
 }

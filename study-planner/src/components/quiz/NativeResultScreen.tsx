@@ -57,7 +57,7 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
     if (showSolutions) {
         return (
             <div className="min-h-screen bg-zinc-50 dark:bg-black pb-20">
-                <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 p-4 sticky top-0 z-30 flex items-center gap-3">
+                <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 p-4 sticky top-0 z-30 flex items-center gap-3 pt-[env(safe-area-inset-top)]">
                     <button onClick={() => setShowSolutions(false)} className="p-2 -ml-2 text-zinc-600 dark:text-zinc-400">
                         <ArrowLeft className="w-5 h-5" />
                     </button>
@@ -123,7 +123,7 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
         <div className="min-h-screen bg-zinc-50 dark:bg-black pb-20">
 
             {/* 1. Header */}
-            <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 p-4 sticky top-0 z-30 flex items-center justify-between">
+            <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 p-4 sticky top-0 z-30 flex items-center justify-between pt-[env(safe-area-inset-top)]">
                 <button onClick={onBack} className="p-2 -ml-2 text-zinc-600 dark:text-zinc-400">
                     <ArrowLeft className="w-5 h-5" />
                 </button>

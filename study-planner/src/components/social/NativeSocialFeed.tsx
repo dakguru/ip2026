@@ -9,6 +9,8 @@ import { DMModal } from '@/components/DMModal';
 import ErrorReportForm from '@/components/social/ErrorReportForm';
 import { useRouter } from 'next/navigation';
 
+import AppScreenWrapper from '@/components/AppScreenWrapper';
+
 // Simplified Mobile Feed
 export default function NativeSocialFeed({
     posts,
@@ -114,44 +116,47 @@ export default function NativeSocialFeed({
     };
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pb-20">
-            {/* Mobile Header: Compact & Modern */}
-            <div className="sticky top-0 z-20 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 pt-[env(safe-area-inset-top)] px-4 py-3">
-                <div className="flex items-center justify-between mb-3">
-                    <h1 className="text-xl font-black text-zinc-900 dark:text-white tracking-tight">DG Community</h1>
-                    <div className="flex gap-2">
-                        <button
-                            className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
-                            onClick={() => setActiveTab("Search")} // Or toggle search input
-                        >
-                            <Search className="w-5 h-5" />
-                        </button>
-                        {user && (
-                            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-blue-500/20">
-                                {user.name[0]}
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                {/* Horizontal Scrollable Tabs */}
-                <div className="overflow-x-auto no-scrollbar -mx-4 px-4 pb-1">
-                    <div className="flex gap-2">
-                        {["All", "Success Stories", "Error Reports", "My Posts", "Saved"].map(tab => (
+        <AppScreenWrapper
+            className="pb-20"
+            header={
+                <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                        <h1 className="text-xl font-black text-zinc-900 dark:text-white tracking-tight">DG Community</h1>
+                        <div className="flex gap-2">
                             <button
-                                key={tab}
-                                onClick={() => setActiveTab(tab)}
-                                className={`whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-bold transition-all ${activeTab === tab
-                                    ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md transform scale-105'
-                                    : 'bg-white dark:bg-zinc-900 text-zinc-500 border border-zinc-200 dark:border-zinc-800'
-                                    }`}
+                                className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300"
+                                onClick={() => setActiveTab("Search")} // Or toggle search input
                             >
-                                {tab}
+                                <Search className="w-5 h-5" />
                             </button>
-                        ))}
+                            {user && (
+                                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-blue-500/20">
+                                    {user.name[0]}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+
+                    {/* Horizontal Scrollable Tabs */}
+                    <div className="overflow-x-auto no-scrollbar -mx-1 px-1 pb-1">
+                        <div className="flex gap-2">
+                            {["All", "Success Stories", "Error Reports", "My Posts", "Saved"].map(tab => (
+                                <button
+                                    key={tab}
+                                    onClick={() => setActiveTab(tab)}
+                                    className={`whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-bold transition-all ${activeTab === tab
+                                        ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md transform scale-105'
+                                        : 'bg-white dark:bg-zinc-900 text-zinc-500 border border-zinc-200 dark:border-zinc-800'
+                                        }`}
+                                >
+                                    {tab}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
+        >
 
             {/* Ask / Report Widget (Collapsed State) */}
             {!isAskOpen && (
@@ -320,6 +325,6 @@ export default function NativeSocialFeed({
                     <MessageCircle className="w-5 h-5" />
                 </button>
             </div>
-        </div>
+        </AppScreenWrapper>
     );
 }
