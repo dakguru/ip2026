@@ -131,8 +131,8 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
                         </div>
 
                         {/* Right Content (Form) */}
-                        <div className="p-4 md:p-16 lg:border-l border-white/5 flex flex-col justify-center bg-white/5 backdrop-blur-sm lg:bg-transparent">
-                            <div className="bg-[#111827] border border-white/10 rounded-[2rem] md:rounded-3xl p-6 md:p-8 shadow-2xl relative mt-4 md:mt-0">
+                        <div className="p-3 md:p-16 lg:border-l border-white/5 flex flex-col justify-center bg-white/5 backdrop-blur-sm lg:bg-transparent">
+                            <div className="bg-[#111827] border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-2xl relative mt-4 md:mt-0">
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow-lg shadow-blue-600/20 whitespace-nowrap z-20">
                                     Send a Message
                                 </div>

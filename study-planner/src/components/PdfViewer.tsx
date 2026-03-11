@@ -96,13 +96,14 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
             }
         }
 
-        // Load saved preferences for browser users
+        // Load saved preferences for browser users, with sensible defaults
         if (!Capacitor.isNativePlatform()) {
             const savedColorMode = localStorage.getItem('pdfColorMode');
             const savedViewMode = localStorage.getItem('pdfViewMode');
             const savedFitMode = localStorage.getItem('pdfFitMode');
             if (savedColorMode) setColorMode(savedColorMode as ColorMode);
-            if (savedViewMode) setViewMode(savedViewMode as ViewMode);
+            // Default to continuous scroll for browser users
+            setViewMode(savedViewMode ? (savedViewMode as ViewMode) : 'continuous');
             if (savedFitMode) setFitMode(savedFitMode as FitMode);
         }
 
@@ -429,34 +430,139 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
 
     const colorStyles = getColorModeStyles();
 
-    const LoadingUI = () => (
-        <div className="flex flex-col items-center justify-center gap-4 mt-20 p-6">
-            <div className="relative w-16 h-16">
-                <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
-                    <path
-                        className="text-slate-200 dark:text-zinc-800"
-                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        fill="none" stroke="currentColor" strokeWidth="3"
+    const LoadingUI = () => {
+        const progress = loadProgress || 0;
+        const circumference = 2 * Math.PI * 54; // radius = 54
+        const strokeDashoffset = circumference - (progress / 100) * circumference;
+
+        return (
+            <div className="flex flex-col items-center justify-center gap-6 mt-16 md:mt-24 p-6">
+                {/* Outer glow container */}
+                <div className="relative">
+                    {/* Pulsing glow ring behind */}
+                    <div
+                        className="absolute inset-0 rounded-full blur-xl opacity-40"
+                        style={{
+                            background: 'conic-gradient(from 0deg, #7c3aed, #3b82f6, #06b6d4, #7c3aed)',
+                            animation: 'pulse 2s ease-in-out infinite',
+                        }}
                     />
-                    <path
-                        className="text-purple-600 drop-shadow-md transition-all duration-300 ease-out"
-                        strokeDasharray={`${loadProgress || 30}, 100`}
-                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"
-                    />
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <Loader2 className="w-5 h-5 text-purple-600 animate-spin" />
+
+                    {/* Main circular progress */}
+                    <div className="relative w-28 h-28 md:w-36 md:h-36">
+                        <svg className="w-full h-full -rotate-90 drop-shadow-lg" viewBox="0 0 120 120">
+                            {/* Background track */}
+                            <circle
+                                cx="60" cy="60" r="54"
+                                fill="none"
+                                stroke={colorMode === 'dark' ? '#27272a' : colorMode === 'sepia' ? '#d6c5a0' : '#e2e8f0'}
+                                strokeWidth="6"
+                            />
+                            {/* Animated progress arc */}
+                            <circle
+                                cx="60" cy="60" r="54"
+                                fill="none"
+                                stroke="url(#progressGradient)"
+                                strokeWidth="6"
+                                strokeLinecap="round"
+                                strokeDasharray={circumference}
+                                strokeDashoffset={progress > 0 ? strokeDashoffset : circumference * 0.7}
+                                style={{
+                                    transition: 'stroke-dashoffset 0.5s ease-out',
+                                    ...(progress === 0 ? { animation: 'spinProgress 1.5s linear infinite' } : {}),
+                                }}
+                            />
+                            <defs>
+                                <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stopColor="#7c3aed" />
+                                    <stop offset="50%" stopColor="#3b82f6" />
+                                    <stop offset="100%" stopColor="#06b6d4" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        {/* Center percentage / icon */}
+                        <div className="absolute inset-0 flex flex-col items-center justify-center">
+                            {progress > 0 ? (
+                                <>
+                                    <span className={`text-2xl md:text-3xl font-black tabular-nums tracking-tight ${colorMode === 'dark' ? 'text-white' : colorMode === 'sepia' ? 'text-amber-900' : 'text-slate-800'
+                                        }`}>
+                                        {progress}
+                                    </span>
+                                    <span className={`text-[10px] md:text-xs font-bold -mt-0.5 ${colorMode === 'dark' ? 'text-zinc-400' : colorMode === 'sepia' ? 'text-amber-700' : 'text-slate-400'
+                                        }`}>
+                                        percent
+                                    </span>
+                                </>
+                            ) : (
+                                <Loader2 className={`w-7 h-7 md:w-8 md:h-8 animate-spin ${colorMode === 'dark' ? 'text-blue-400' : 'text-purple-600'
+                                    }`} />
+                            )}
+                        </div>
+                    </div>
                 </div>
+
+                {/* Text below */}
+                <div className="text-center space-y-1.5">
+                    <p className={`font-bold text-base md:text-lg ${colorMode === 'dark' ? 'text-zinc-200' : colorMode === 'sepia' ? 'text-amber-900' : 'text-slate-700'
+                        }`}>
+                        {progress > 0 ? 'Loading Document' : 'Connecting'}
+                        <span className="inline-block w-6 text-left" style={{ animation: 'ellipsis 1.4s steps(4, end) infinite' }}>...</span>
+                    </p>
+                    <p className={`text-xs font-medium ${colorMode === 'dark' ? 'text-zinc-500' : colorMode === 'sepia' ? 'text-amber-600' : 'text-slate-400'
+                        }`}>
+                        {progress > 0 ? 'Preparing document for viewing' : 'Fetching document from server'}
+                    </p>
+                </div>
+
+                {/* Shimmer progress bar */}
+                <div className={`w-48 md:w-56 h-1.5 rounded-full overflow-hidden ${colorMode === 'dark' ? 'bg-zinc-800' : colorMode === 'sepia' ? 'bg-amber-200' : 'bg-slate-200'
+                    }`}>
+                    <div
+                        className="h-full rounded-full relative overflow-hidden"
+                        style={{
+                            width: progress > 0 ? `${progress}%` : '30%',
+                            background: 'linear-gradient(90deg, #7c3aed, #3b82f6, #06b6d4)',
+                            transition: 'width 0.5s ease-out',
+                            ...(progress === 0 ? { animation: 'shimmerBar 1.8s ease-in-out infinite' } : {}),
+                        }}
+                    >
+                        {/* Shimmer shine effect */}
+                        <div
+                            className="absolute inset-0"
+                            style={{
+                                background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+                                animation: 'shimmerShine 1.5s ease-in-out infinite',
+                            }}
+                        />
+                    </div>
+                </div>
+
+                {/* Inline styles for custom animations */}
+                <style>{`
+                    @keyframes spinProgress {
+                        0% { transform: rotate(0deg); transform-origin: center; }
+                        100% { transform: rotate(360deg); transform-origin: center; }
+                    }
+                    @keyframes ellipsis {
+                        0% { content: ''; width: 0; }
+                        25% { width: 6px; }
+                        50% { width: 12px; }
+                        75% { width: 18px; }
+                        100% { width: 0; }
+                    }
+                    @keyframes shimmerBar {
+                        0%, 100% { width: 20%; opacity: 0.6; }
+                        50% { width: 60%; opacity: 1; }
+                    }
+                    @keyframes shimmerShine {
+                        0% { transform: translateX(-100%); }
+                        100% { transform: translateX(200%); }
+                    }
+                `}</style>
             </div>
-            <div className="text-center space-y-1">
-                <p className="font-bold text-slate-700 dark:text-slate-200 text-lg">
-                    {loadProgress > 0 ? `${loadProgress}%` : 'Loading...'}
-                </p>
-                <p className="text-xs text-slate-400 font-medium">Preparing document for view</p>
-            </div>
-        </div>
-    );
+        );
+    };
 
     const ErrorUI = () => (
         <div className="flex flex-col items-center justify-center gap-4 mt-20 p-6 text-center">
