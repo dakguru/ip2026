@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight, History } from "lucide-react";
@@ -191,7 +191,7 @@ export default function MockTestsPage() {
 
             if (now > sundayDate) {
                 status = 'completed';
-            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28'))) {
+            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28'))) {
                 status = 'live';
             } else {
                 status = 'upcoming';
@@ -399,7 +399,9 @@ export default function MockTestsPage() {
                 questions: questions,
                 answers: result.answers || {},
                 testName: mock.title,
-                submittedAt: result.submittedAt
+                submittedAt: result.submittedAt,
+                testSchedule: `${format(mock.startDate, 'dd-MMM-yyyy')} to ${format(mock.endDate, 'dd-MMM-yyyy')}`,
+                testTopics: mock.topics
             });
             setShowDownloadNotification(true);
 
@@ -864,6 +866,7 @@ export default function MockTestsPage() {
                 mock={selectedMockForRank}
                 isOpen={!!selectedMockForRank}
                 onClose={() => setSelectedMockForRank(null)}
+                role={role}
             />
 
             <AnswerSheetModal
@@ -1361,12 +1364,12 @@ function MockTestCard({
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
                 {/* Top 7 Rank Holders Button */}
-                {isCompleted && onShowRankList && (
+                {(isCompleted || (role === 'admin' && isLive)) && onShowRankList && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         className="w-full py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl font-bold text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-95"
                     >
-                        <Trophy className="w-4 h-4 text-white fill-current" /> View Top 7 Rankers
+                        <Trophy className="w-4 h-4 text-white fill-current" /> {isCompleted ? "View Top 7 Rankers" : "Live Leaderboard (Admin)"}
                     </button>
                 )}
 
@@ -1510,22 +1513,34 @@ function MockTestCard({
     );
 }
 
-function RankListModal({ mock, isOpen, onClose }: { mock: MockTest | null, isOpen: boolean, onClose: () => void }) {
+function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null, isOpen: boolean, onClose: () => void, role?: string }) {
     const [leaderboard, setLeaderboard] = useState<any[]>([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        let intervalId: NodeJS.Timeout;
         if (isOpen && mock) {
             setLoading(true);
-            fetch(`/api/mock-test/live/leaderboard?testId=${mock.id}&limit=7`)
-                .then(res => res.json())
-                .then(data => {
-                    setLeaderboard(data.leaderboard || []);
-                })
-                .catch(err => console.error(err))
-                .finally(() => setLoading(false));
+            const fetchLeaderboard = () => {
+                fetch(`/api/mock-test/live/leaderboard?testId=${mock.id}&limit=7`)
+                    .then(res => res.json())
+                    .then(data => {
+                        setLeaderboard(data.leaderboard || []);
+                    })
+                    .catch(err => console.error(err))
+                    .finally(() => setLoading(false));
+            };
+
+            fetchLeaderboard();
+            
+            if (role === 'admin' && mock.status === 'live') {
+                intervalId = setInterval(fetchLeaderboard, 20000); // 20 seconds polling
+            }
         }
-    }, [isOpen, mock]);
+        return () => {
+            if (intervalId) clearInterval(intervalId);
+        };
+    }, [isOpen, mock, role]);
 
     // Helper to mask email: bhu***dra***17@gmail.com
     const maskEmail = (email: string) => {
@@ -1550,7 +1565,7 @@ function RankListModal({ mock, isOpen, onClose }: { mock: MockTest | null, isOpe
 
                     <Trophy className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 text-white drop-shadow-md" />
                     <DialogTitle className="text-xl md:text-2xl font-black uppercase tracking-tight text-white drop-shadow-sm relative z-10">
-                        Top 7 Rank Holders
+                        {mock && mock.status === 'live' && role === 'admin' ? 'Live Leaderboard' : 'Top 7 Rank Holders'}
                     </DialogTitle>
                     <p className="text-amber-100 font-medium text-[10px] md:text-sm relative z-10">
                         {mock ? `${mock.title} (${format(mock.startDate, 'dd.MM')} - ${format(mock.endDate, 'dd.MM')})` : 'All India Weekly Mock Test'}

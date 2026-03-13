@@ -182,11 +182,11 @@ export default function AdminDashboard() {
     const stats = useMemo(() => {
         return {
             total: users.length,
-            gold: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'gold').length,
-            diamond: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'diamond').length,
-            platinum: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'platinum').length,
-            silver: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'silver').length,
-            free: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'free').length,
+            gold: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode, u.planName) === 'gold').length,
+            diamond: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode, u.planName) === 'diamond').length,
+            platinum: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode, u.planName) === 'platinum').length,
+            silver: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode, u.planName) === 'silver').length,
+            free: users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode, u.planName) === 'free').length,
             psGroupB: users.filter(u => u.courseMode === 'PS_GR_B').length,
             ldceIP: users.filter(u => u.courseMode === 'LDCE_IP').length,
         };
@@ -202,7 +202,7 @@ export default function AdminDashboard() {
     }, [users]);
 
     const goldMembers = useMemo(() => {
-        return users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'gold')
+        return users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode, u.planName) === 'gold')
 
             .sort((a, b) => {
                 const aTime = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
@@ -212,7 +212,7 @@ export default function AdminDashboard() {
     }, [users]);
 
     const diamondMembers = useMemo(() => {
-        return users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode) === 'diamond')
+        return users.filter(u => getMembershipTier(u.membershipLevel, u.courseMode, u.planName) === 'diamond')
 
             .sort((a, b) => {
                 const aTime = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
@@ -849,21 +849,21 @@ export default function AdminDashboard() {
                                                     <td className="py-4 px-6">
                                                         <div className="flex flex-col items-start gap-1">
                                                             <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wide border shadow-sm
-                                                        ${getMembershipTier(user.membershipLevel, user.courseMode) === 'diamond'
+                                                        ${getMembershipTier(user.membershipLevel, user.courseMode, user.planName) === 'diamond'
                                                                     ? 'bg-fuchsia-100 text-fuchsia-700 border-fuchsia-200 dark:bg-fuchsia-900/20 dark:text-fuchsia-400 dark:border-fuchsia-800/50'
-                                                                    : getMembershipTier(user.membershipLevel, user.courseMode) === 'platinum'
+                                                                    : getMembershipTier(user.membershipLevel, user.courseMode, user.planName) === 'platinum'
                                                                         ? 'bg-violet-100 text-violet-700 border-violet-200 dark:bg-violet-900/20 dark:text-violet-400 dark:border-violet-800/50'
-                                                                        : getMembershipTier(user.membershipLevel, user.courseMode) === 'gold'
+                                                                        : getMembershipTier(user.membershipLevel, user.courseMode, user.planName) === 'gold'
                                                                             ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800/50'
-                                                                            : getMembershipTier(user.membershipLevel, user.courseMode) === 'silver'
+                                                                            : getMembershipTier(user.membershipLevel, user.courseMode, user.planName) === 'silver'
                                                                                 ? 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-800/50'
                                                                                 : 'bg-zinc-50 text-zinc-500 border-zinc-200 dark:bg-zinc-900/20 dark:text-zinc-500 dark:border-zinc-800/50'
                                                                 }`}>
-                                                                {getMembershipTier(user.membershipLevel, user.courseMode) === 'diamond' && <Crown className="w-3 h-3 fill-current" />}
-                                                                {getMembershipTier(user.membershipLevel, user.courseMode) === 'platinum' && <Zap className="w-3 h-3 fill-current" />}
-                                                                {getMembershipTier(user.membershipLevel, user.courseMode) === 'gold' && <Crown className="w-3 h-3 fill-current" />}
-                                                                {getMembershipTier(user.membershipLevel, user.courseMode) === 'silver' && <Star className="w-3 h-3 fill-current" />}
-                                                                {getMembershipTier(user.membershipLevel, user.courseMode).charAt(0).toUpperCase() + getMembershipTier(user.membershipLevel, user.courseMode).slice(1)}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode, user.planName) === 'diamond' && <Crown className="w-3 h-3 fill-current" />}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode, user.planName) === 'platinum' && <Zap className="w-3 h-3 fill-current" />}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode, user.planName) === 'gold' && <Crown className="w-3 h-3 fill-current" />}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode, user.planName) === 'silver' && <Star className="w-3 h-3 fill-current" />}
+                                                                {getMembershipTier(user.membershipLevel, user.courseMode, user.planName).charAt(0).toUpperCase() + getMembershipTier(user.membershipLevel, user.courseMode, user.planName).slice(1)}
                                                             </span>
                                                             {user.membershipLevel && user.membershipLevel !== 'free' && (
                                                                 <button

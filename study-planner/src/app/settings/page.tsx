@@ -11,6 +11,7 @@ import AppScreenWrapper from "@/components/AppScreenWrapper";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useBetaAccess } from "@/hooks/useBetaAccess";
 import { useCourse } from "@/contexts/CourseContext";
+import { getDisplayMembership } from "@/lib/membership-utils";
 
 const DESIGNATION_OPTIONS = [
     "Assistant Superintendent of Posts (ASP)",
@@ -253,23 +254,9 @@ export default function SettingsPage() {
         );
     }
 
-    let membershipLevelActual = initialData?.membershipLevel || 'free';
-    const plan = (initialData?.planId || "").toLowerCase();
-    const planName = (initialData?.planName || "").toLowerCase();
+    const membershipLevelActual = getDisplayMembership(initialData?.membershipLevel, initialData?.planName);
 
-    if (membershipLevelActual !== 'free') {
-        if (plan.includes('diamond') || planName.includes('diamond') || plan.includes('ps_gr_b')) {
-            membershipLevelActual = 'diamond';
-        } else if (plan.includes('platinum') || planName.includes('platinum')) {
-            membershipLevelActual = 'platinum';
-        }
-    }
-
-    const membershipLabel = membershipLevelActual === 'gold' ? 'Gold'
-        : membershipLevelActual === 'silver' ? 'Silver'
-            : membershipLevelActual === 'diamond' ? 'Diamond'
-                : membershipLevelActual === 'platinum' ? 'Platinum'
-                    : 'Free';
+    const membershipLabel = membershipLevelActual.charAt(0).toUpperCase() + membershipLevelActual.slice(1);
 
     // ---- MOBILE PROFILE VIEW (Android App + Mobile Browser) ----
     if (isMobileView) {

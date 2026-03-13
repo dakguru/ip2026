@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-import { getMembershipTier } from "@/lib/membership-utils";
+import { getDisplayMembership } from "@/lib/membership-utils";
 import { useCourse } from "@/contexts/CourseContext";
 import {
     DropdownMenu,
@@ -86,7 +86,7 @@ export function UserMenu() {
         );
     }
 
-    const displayMembership = getMembershipTier(session?.membershipLevel, session?.courseMode);
+    const displayMembership = getDisplayMembership(session?.membershipLevel, session?.planName);
 
 
     return (

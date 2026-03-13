@@ -1,6 +1,6 @@
 import dbConnect from './mongoose';
 import PostModel from '@/models/Post';
-import { getMembershipTier } from "./membership-utils";
+import { getDisplayMembership } from "./membership-utils";
 import UserModel from '@/models/User';
 
 // Re-export interfaces for use in other files
@@ -93,7 +93,7 @@ function getEnrichedRole(author: string, currentRole?: string, userMap?: Map<str
         }
 
         // Assign badge based on DB membership level + Course Mode
-        const tier = getMembershipTier(user.membershipLevel, user.courseMode);
+        const tier = getDisplayMembership(user.membershipLevel, user.planName);
 
         if (tier === 'diamond') return `${baseRole} (Diamond Member)`;
         if (tier === 'platinum') return `${baseRole} (Platinum Member)`;

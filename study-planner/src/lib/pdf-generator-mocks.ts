@@ -26,6 +26,8 @@ interface GeneratePDFParams {
     answers: Record<string, number>;
     testName: string;
     submittedAt: string;
+    testSchedule?: string;
+    testTopics?: string[];
 }
 
 export const createMockTestAnswerSheetPDFDoc = async ({
@@ -35,7 +37,9 @@ export const createMockTestAnswerSheetPDFDoc = async ({
     questions,
     answers,
     testName,
-    submittedAt
+    submittedAt,
+    testSchedule,
+    testTopics
 }: GeneratePDFParams) => {
     const doc = new jsPDF();
 
@@ -90,14 +94,25 @@ export const createMockTestAnswerSheetPDFDoc = async ({
     };
 
     // --- HEADER BLOCK ---
-    const boxHeight = 45;
     const boxWidth = pageWidth - (margin * 2);
+    const logoSize = 35;
+
+    let topicsText = testTopics && testTopics.length > 0 ? testTopics.join(", ") : "";
+    let splitTopics: string[] = [];
+    if (topicsText) {
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10);
+        splitTopics = doc.splitTextToSize(topicsText, contentWidth - logoSize - 35);
+    }
+    
+    let boxHeight = 45;
+    if (testSchedule) boxHeight += 8;
+    if (topicsText) boxHeight += Math.max(8, (splitTopics.length * 5) + 3);
 
     doc.setDrawColor(200, 200, 200);
     doc.setLineWidth(0.5);
     doc.rect(margin, 15, boxWidth, boxHeight);
 
-    const logoSize = 35;
     if (logoData) {
         doc.addImage(logoData, 'PNG', margin + 5, 20, logoSize, logoSize);
     }
@@ -140,6 +155,30 @@ export const createMockTestAnswerSheetPDFDoc = async ({
         : submittedAt;
     doc.text(dateStr, margin + logoSize + 122, 52);
 
+    let infoY = 60;
+    
+    if (testSchedule) {
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(100, 100, 100);
+        doc.text("Schedule:", margin + logoSize + 15, infoY);
+
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(0, 0, 0);
+        doc.text(testSchedule, margin + logoSize + 35, infoY);
+        infoY += 8;
+    }
+
+    if (topicsText) {
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(100, 100, 100);
+        doc.text("Topics:", margin + logoSize + 15, infoY);
+
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(0, 0, 0);
+        doc.text(splitTopics, margin + logoSize + 35, infoY);
+        infoY += (splitTopics.length * 5) + 2;
+    }
+
     // Score Box
     const percentage = ((score / (totalQuestions * 2)) * 100).toFixed(1);
     doc.setFillColor(245, 245, 245);
@@ -156,7 +195,7 @@ export const createMockTestAnswerSheetPDFDoc = async ({
 
     addWatermark();
 
-    let yPos = 75;
+    let yPos = 15 + boxHeight + 15;
 
     // Helper to clean text and fix encoding issues
     const cleanText = (text: string) => {

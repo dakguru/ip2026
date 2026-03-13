@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 import LiveMockTestBanner from "@/components/LiveMockTestBanner";
 import UpdatesDrawer from "./UpdatesDrawer";
+import { getMembershipLevel, getDisplayMembership } from "@/lib/membership-utils";
 
 interface MobileDashboardProps {
     displayName: string;
@@ -35,16 +36,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         if (match) {
             try {
                 const session = JSON.parse(decodeURIComponent(match[2]));
-                let level = session.membershipLevel || 'free';
-                const pid = (session.planId || "").toLowerCase();
-
-                if (level !== 'free') {
-                    if (pid.includes('diamond') || pid.includes('ps_gr_b')) {
-                        level = 'diamond';
-                    } else if (pid.includes('platinum')) {
-                        level = 'platinum';
-                    }
-                }
+                // Use getDisplayMembership to resolve correct display name from planName
+                const level = getDisplayMembership(session.membershipLevel, session.planName);
                 setMembership(level);
                 if (session.role === 'admin' || session.membershipLevel === 'admin' || session.isAdmin === true) {
                     setIsAdmin(true);
@@ -97,7 +90,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         { label: "Admin Panel", icon: Shield, color: "text-red-700 dark:text-red-400", bg: "bg-red-50 dark:bg-red-900/20", href: "/admin", adminOnly: true },
     ];
 
-    const isGold = membership === 'gold' || membership === 'diamond' || membership === 'platinum';
+    const isGold = getMembershipLevel(membership) >= 3;
 
     const [recentNotifications, setRecentNotifications] = useState<any[]>([]);
 

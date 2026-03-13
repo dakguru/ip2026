@@ -13,6 +13,7 @@ import NativeResultScreen from '@/components/quiz/NativeResultScreen';
 import NativeQuizDashboard from '@/components/quiz/NativeQuizDashboard';
 import { useCourse } from '@/contexts/CourseContext';
 import AppScreenWrapper from '@/components/AppScreenWrapper';
+import { getMembershipLevel } from '@/lib/membership-utils';
 
 // Custom styles for range slider
 const sliderStyles = `
@@ -737,12 +738,10 @@ export default function QuizDashboard() {
     const group2Topics = activeData.filter(t => t.category === group2Title);
 
     const isUnlocked = (topicId: string) => {
-        if (course === 'PS_GR_B') {
-            const hasDiamond = membershipLevel === 'gold' && (planId.includes('diamond') || planId.includes('ps_gr_b'));
-            const hasPlatinum = membershipLevel === 'silver' && (planId.includes('platinum') || planId.includes('ps_gr_b'));
-            return hasDiamond || hasPlatinum || ALLOWED_FREE_TOPICS.includes(topicId);
-        }
-        return ['gold', 'silver'].includes(membershipLevel.toLowerCase()) || ALLOWED_FREE_TOPICS.includes(topicId);
+        // Use numeric level equivalence: Free=1, Silver/Platinum=2, Gold/Diamond=3
+        const userLevel = getMembershipLevel(membershipLevel);
+        if (userLevel >= 2) return true; // Silver/Platinum/Gold/Diamond can access all quiz topics
+        return ALLOWED_FREE_TOPICS.includes(topicId); // Free users only get allowed topics
     };
 
     if (isMobileApp) {

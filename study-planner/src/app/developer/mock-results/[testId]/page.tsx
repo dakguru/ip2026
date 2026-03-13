@@ -4,10 +4,11 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import React from "react";
 import { ArrowLeft, Search, CheckCircle2, ChevronDown, ChevronUp, Clock, Calendar, Download, FileText, Loader2, RefreshCw, Radio } from "lucide-react";
 import Link from "next/link";
-import { format } from "date-fns";
+import { format, eachDayOfInterval, addDays } from "date-fns";
 import { useParams } from "next/navigation";
 import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { generateMockTestAnswerSheetPDF, getMockTestAnswerSheetPDFBlob } from "@/lib/pdf-generator-mocks";
+import { FULL_SCHEDULE } from "@/data/schedule";
 
 
 interface MockResult {
@@ -29,7 +30,34 @@ const TEST_SCHEDULE_MAP: Record<string, { start: Date; end: Date }> = {
     "mock-2026-02-14": { start: new Date("2026-02-14T00:00:00+05:30"), end: new Date("2026-02-15T23:59:59+05:30") },
     "mock-2026-02-21": { start: new Date("2026-02-21T00:00:00+05:30"), end: new Date("2026-02-22T23:59:59+05:30") },
     "mock-2026-02-28": { start: new Date("2026-02-28T00:00:00+05:30"), end: new Date("2026-03-01T23:59:59+05:30") },
+    "mock-2026-03-07": { start: new Date("2026-03-07T00:00:00+05:30"), end: new Date("2026-03-08T23:59:59+05:30") },
+    "mock-2026-03-14": { start: new Date("2026-03-14T00:00:00+05:30"), end: new Date("2026-03-15T23:59:59+05:30") },
     "live-sample": { start: new Date(0), end: new Date("2099-12-31T23:59:59+05:30") },
+};
+
+const getTopicsForMock = (saturdayDate: Date): string[] => {
+    if (!saturdayDate || saturdayDate.getTime() === 0) return ["Sample Mock Test Topics"];
+    const mondayDate = addDays(saturdayDate, -5);
+    const planMap = new Map();
+    FULL_SCHEDULE.forEach((item: any) => {
+        planMap.set(item.date, item);
+    });
+
+    const weekTopics: string[] = [];
+    const interval = eachDayOfInterval({ start: mondayDate, end: saturdayDate });
+
+    interval.forEach(d => {
+        const dateStr = format(d, 'dd-MM-yyyy');
+        const item = planMap.get(dateStr);
+
+        if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
+            const cleanTopic = item.subTopic.trim();
+            if (!weekTopics.includes(cleanTopic)) {
+                weekTopics.push(cleanTopic);
+            }
+        }
+    });
+    return weekTopics.length > 0 ? weekTopics : ["Introductory/General Topics"];
 };
 
 export default function MockTestDetailResultsPage() {
@@ -170,6 +198,10 @@ export default function MockTestDetailResultsPage() {
             for (let i = 0; i < filteredResults.length; i++) {
                 const result = filteredResults[i];
                 try {
+                    const testConfig = TEST_SCHEDULE_MAP[testId];
+                    const testSchedule = testConfig ? `${format(testConfig.start, 'dd-MMM-yyyy')} to ${format(testConfig.end, 'dd-MMM-yyyy')}` : "";
+                    const testTopics = testConfig ? getTopicsForMock(testConfig.start) : [];
+
                     const { blob, filename } = await getMockTestAnswerSheetPDFBlob({
                         userName: result.userName,
                         score: result.score,
@@ -177,7 +209,9 @@ export default function MockTestDetailResultsPage() {
                         questions: questions as any,
                         answers: result.answers || {},
                         testName: formatTestName(testId),
-                        submittedAt: result.submittedAt
+                        submittedAt: result.submittedAt,
+                        testSchedule,
+                        testTopics
                     });
 
                     folder.file(filename, blob);
@@ -383,6 +417,10 @@ export default function MockTestDetailResultsPage() {
                                                                         return;
                                                                     }
                                                                     try {
+                                                                        const testConfig = TEST_SCHEDULE_MAP[testId];
+                                                                        const testSchedule = testConfig ? `${format(testConfig.start, 'dd-MMM-yyyy')} to ${format(testConfig.end, 'dd-MMM-yyyy')}` : "";
+                                                                        const testTopics = testConfig ? getTopicsForMock(testConfig.start) : [];
+
                                                                         await generateMockTestAnswerSheetPDF({
                                                                             userName: result.userName,
                                                                             score: result.score,
@@ -390,7 +428,9 @@ export default function MockTestDetailResultsPage() {
                                                                             questions: questions as any,
                                                                             answers: result.answers || {},
                                                                             testName: formatTestName(testId),
-                                                                            submittedAt: result.submittedAt
+                                                                            submittedAt: result.submittedAt,
+                                                                            testSchedule,
+                                                                            testTopics
                                                                         });
                                                                         setShowNotification(true);
                                                                     } catch (e) {

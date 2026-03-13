@@ -13,9 +13,12 @@ import { WEEKLY_MOCK_05_QUESTIONS } from "@/data/weekly_mock_data_05";
 import { WEEKLY_MOCK_06_QUESTIONS } from "@/data/weekly_mock_data_06";
 import { WEEKLY_MOCK_07_QUESTIONS } from "@/data/weekly_mock_data_07";
 import { WEEKLY_MOCK_08_QUESTIONS } from "@/data/weekly_mock_data_08";
+import { WEEKLY_MOCK_09_QUESTIONS } from "@/data/weekly_mock_data_09";
 import { Question } from "@/data/live_mock_data";
 import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 import { motion, AnimatePresence } from "framer-motion";
+import { FULL_SCHEDULE } from "@/data/schedule";
+import { format, eachDayOfInterval, addDays } from "date-fns";
 
 // Map IDs to Data
 const TEST_DATA_MAP: Record<string, Question[]> = {
@@ -26,7 +29,32 @@ const TEST_DATA_MAP: Record<string, Question[]> = {
     "mock-2026-02-14": WEEKLY_MOCK_05_QUESTIONS,
     "mock-2026-02-21": WEEKLY_MOCK_06_QUESTIONS,
     "mock-2026-02-28": WEEKLY_MOCK_07_QUESTIONS,
-    "mock-2026-03-07": WEEKLY_MOCK_08_QUESTIONS
+    "mock-2026-03-07": WEEKLY_MOCK_08_QUESTIONS,
+    "mock-2026-03-14": WEEKLY_MOCK_09_QUESTIONS
+};
+
+const getTopicsForMock = (saturdayDate: Date): string[] => {
+    const mondayDate = addDays(saturdayDate, -5);
+    const planMap = new Map();
+    FULL_SCHEDULE.forEach(item => {
+        planMap.set(item.date, item);
+    });
+
+    const weekTopics: string[] = [];
+    const interval = eachDayOfInterval({ start: mondayDate, end: saturdayDate });
+
+    interval.forEach(d => {
+        const dateStr = format(d, 'dd-MM-yyyy');
+        const item = planMap.get(dateStr);
+
+        if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
+            const cleanTopic = item.subTopic.trim();
+            if (!weekTopics.includes(cleanTopic)) {
+                weekTopics.push(cleanTopic);
+            }
+        }
+    });
+    return weekTopics.length > 0 ? weekTopics : ["Introductory/General Topics"];
 };
 
 interface LeaderboardEntry {
@@ -78,6 +106,11 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-03-07T00:00:00+05:30"),
         endDate: new Date("2026-03-08T23:59:59+05:30"),
         title: "Weekly Mock Test - 08"
+    },
+    "mock-2026-03-14": {
+        startDate: new Date("2026-03-14T00:00:00+05:30"),
+        endDate: new Date("2026-03-15T23:59:59+05:30"),
+        title: "Weekly Mock Test - 09"
     }
 };
 
@@ -600,6 +633,11 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     const generatePDF = async () => {
         if (isGeneratingPDF) return;
         setIsGeneratingPDF(true);
+        const startDate = TEST_CONFIG_MAP[testId]?.startDate;
+        const endDate = TEST_CONFIG_MAP[testId]?.endDate;
+        const testSchedule = startDate && endDate ? `${format(startDate, 'dd-MMM-yyyy')} to ${format(endDate, 'dd-MMM-yyyy')}` : '';
+        const testTopics = startDate ? getTopicsForMock(startDate) : [];
+
         try {
             await generateMockTestAnswerSheetPDF({
                 userName,
@@ -608,7 +646,9 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                 questions: questions as any,
                 answers,
                 testName: TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test",
-                submittedAt: new Date().toISOString()
+                submittedAt: new Date().toISOString(),
+                testSchedule: testSchedule,
+                testTopics: testTopics
             });
         } catch (error) {
             console.error("PDF generation failed", error);

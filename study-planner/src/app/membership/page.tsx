@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Loader2, ArrowLeft, Crown, Calendar, CalendarClock, CreditCard, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dayjs from "dayjs";
-import { getMembershipTier } from "@/lib/membership-utils";
+import { getDisplayMembership } from "@/lib/membership-utils";
 import { useCourse } from "@/contexts/CourseContext";
 
 export default function MembershipPage() {
@@ -45,7 +45,7 @@ export default function MembershipPage() {
 
     if (!membershipData) return null;
 
-    const displayMemberLevel = getMembershipTier(membershipData.membershipLevel, membershipData.courseMode);
+    const displayMemberLevel = getDisplayMembership(membershipData.membershipLevel, membershipData.planName);
 
     const isFree = displayMemberLevel === 'free';
     const isGold = displayMemberLevel === 'gold' || displayMemberLevel === 'diamond';
