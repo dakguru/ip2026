@@ -292,6 +292,7 @@ export default function SettingsPage() {
         if (activeSection) {
             return (
                 <AppScreenWrapper
+                    hideStatusBarPadding={true}
                     header={
                         <div className="flex items-center gap-3">
                             <button onClick={() => setActiveSection(null)}
@@ -598,7 +599,7 @@ export default function SettingsPage() {
 
         // ---- Main Menu View ----
         return (
-            <AppScreenWrapper showBottomNav={true}>
+            <AppScreenWrapper showBottomNav={true} hideStatusBarPadding={true}>
                 {/* Premium Profile Hero */}
                 <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-violet-950 pt-[max(24px,env(safe-area-inset-top))] pb-10 px-5">
                     {/* Ambient Glow */}

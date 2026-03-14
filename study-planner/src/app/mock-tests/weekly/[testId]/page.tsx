@@ -19,6 +19,7 @@ import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 import { motion, AnimatePresence } from "framer-motion";
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { format, eachDayOfInterval, addDays } from "date-fns";
+import FormattedQuestionText from "@/components/quiz/FormattedQuestionText";
 
 // Map IDs to Data
 const TEST_DATA_MAP: Record<string, Question[]> = {
@@ -164,9 +165,10 @@ const MemoizedMobileContent = memo(({
                                 <h1 className="text-4xl font-black text-black dark:text-white transform -rotate-12">DAK GURU</h1>
                             </div>
                             <div className="relative z-10">
-                                <p className="text-[15px] md:text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
-                                    {currentQ.text}
-                                </p>
+                                <FormattedQuestionText 
+                                    text={currentQ.text} 
+                                    className="text-[15px] md:text-base font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans"
+                                />
                                 {currentQ.table && (
                                     <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
                                         <table className="w-full text-left text-xs">
@@ -866,9 +868,10 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                         </button>
                                     </div>
 
-                                    <h2 className="text-2xl font-bold leading-relaxed text-zinc-800 dark:text-zinc-100 mb-6 whitespace-pre-wrap">
-                                        {currentQ.text}
-                                    </h2>
+                                    <FormattedQuestionText 
+                                        text={currentQ.text} 
+                                        className="text-2xl font-bold leading-relaxed text-zinc-800 dark:text-zinc-100 mb-6"
+                                    />
 
                                     {currentQ.table && (
                                         <div className="my-6 overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/20">
@@ -1186,7 +1189,10 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                                 <div className="flex gap-3 mb-4">
                                                     <span className="font-bold text-zinc-400">Q{idx + 1}.</span>
                                                     <div className="flex-1">
-                                                        <p className="font-medium text-zinc-900 dark:text-zinc-100 mb-4 whitespace-pre-wrap">{q.text}</p>
+                                                        <FormattedQuestionText 
+                                                            text={q.text} 
+                                                            className="font-medium text-zinc-900 dark:text-zinc-100 mb-4"
+                                                        />
                                                         {q.table && (
                                                             <div className="my-4 overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800">
                                                                 <table className="w-full text-left text-sm border-collapse">
@@ -1225,7 +1231,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                                         </div>
                                                         <div className="bg-zinc-100 dark:bg-zinc-800/50 rounded-xl p-4 text-sm mt-4">
                                                             <span className="font-bold text-purple-600 dark:text-purple-400 block mb-1">Explanation:</span>
-                                                            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed whitespace-pre-wrap">{q.explanation}</p>
+                                                            <FormattedQuestionText text={q.explanation || ""} className="text-zinc-700 dark:text-zinc-300 leading-relaxed" />
                                                         </div>
                                                     </div>
                                                 </div>

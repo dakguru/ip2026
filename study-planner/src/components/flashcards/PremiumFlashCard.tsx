@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styles from './PremiumFlashCard.module.css';
 import { RotateCcw, Bookmark, Info } from 'lucide-react';
 import { clsx } from 'clsx';
+import FormattedQuestionText from '@/components/quiz/FormattedQuestionText';
 
 export type FlashCardTheme = 'Postal Law' | 'Accounts' | 'Conduct Rules' | 'Current Affairs' | 'General';
 
@@ -87,7 +88,7 @@ export default function PremiumFlashCard({
                         </div>
 
                         <div className={styles.questionText}>
-                            {question}
+                            <FormattedQuestionText text={question} className="text-xl md:text-2xl font-black text-slate-800 dark:text-white leading-tight" />
                         </div>
                     </div>
 
@@ -121,7 +122,7 @@ export default function PremiumFlashCard({
                         </div>
 
                         <div className={styles.answerText}>
-                            {answer}
+                            <FormattedQuestionText text={answer} className="text-xl md:text-2xl font-black text-indigo-900 dark:text-indigo-100 leading-tight" />
                         </div>
 
                         {explanation && (
@@ -134,9 +135,9 @@ export default function PremiumFlashCard({
                                     onPointerDown={(e) => e.stopPropagation()}
                                     onTouchStart={(e) => e.stopPropagation()}
                                 >
-                                    <p className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed pb-1">
-                                        {explanation}
-                                    </p>
+                                    <div className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed pb-1">
+                                        <FormattedQuestionText text={explanation} className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed" />
+                                    </div>
                                 </div>
                             </div>
                         )}

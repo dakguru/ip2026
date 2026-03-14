@@ -44,7 +44,15 @@ import {
     jan2026Sports,
     jan2026MoU,
     jan2026International,
-    jan2026ScienceTech
+    jan2026ScienceTech,
+    feb2026MostImportant,
+    feb2026Banking,
+    feb2026GovtSchemes,
+    feb2026NationalNews,
+    feb2026Sports,
+    feb2026MoU,
+    feb2026International,
+    feb2026ScienceTech
 } from "../../data/flashcards";
 import { QUIZ_DATA } from "@/data/quizzes";
 import { PSGB_QUIZ_DATA } from "@/data/psgbQuizzesData";
@@ -131,13 +139,20 @@ export default function FlashcardsPage() {
     const handleCategorySelect = (category: string) => {
         setActiveFilter(category);
         setShowCategories(false);
+        setSelectedSubCategory(null);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     // Handle back to categories
+    const [selectedSubCategory, setSelectedSubCategory] = useState<string | null>(null);
+
     const handleBackToCategories = () => {
-        setShowCategories(true);
+        if (selectedSubCategory) {
+            setSelectedSubCategory(null);
+            return;
+        }
         setActiveFilter("All");
+        setShowCategories(true);
         setSearchQuery("");
     };
 
@@ -237,6 +252,12 @@ export default function FlashcardsPage() {
 
 
     const handleSelectDeck = (id: string, startIdx: number = 0, shuffle: boolean = false) => {
+        if (id.startsWith('month_')) {
+            setSelectedSubCategory(id.replace('month_', ''));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+
         // Check for restricted categories
         if (id !== 'bookmarks') {
             const activeData = course === 'PS_GR_B' ? PSGB_QUIZ_DATA : QUIZ_DATA;
@@ -377,6 +398,16 @@ export default function FlashcardsPage() {
                 case 'ca-jan26-6': manualContent = jan2026MoU; break;
                 case 'ca-jan26-7': manualContent = jan2026International; break;
                 case 'ca-jan26-8': manualContent = jan2026ScienceTech; break;
+                
+                // Current Affairs - Feb 2026
+                case 'ca-feb26-1': manualContent = feb2026MostImportant; break;
+                case 'ca-feb26-2': manualContent = feb2026Banking; break;
+                case 'ca-feb26-3': manualContent = feb2026GovtSchemes; break;
+                case 'ca-feb26-4': manualContent = feb2026NationalNews; break;
+                case 'ca-feb26-5': manualContent = feb2026Sports; break;
+                case 'ca-feb26-6': manualContent = feb2026MoU; break;
+                case 'ca-feb26-7': manualContent = feb2026International; break;
+                case 'ca-feb26-8': manualContent = feb2026ScienceTech; break;
 
                 default: manualContent = [];
             }
@@ -412,7 +443,7 @@ export default function FlashcardsPage() {
 
     // Filter and Organize Decks
     const organizeDecks = () => {
-        const organized: { id: string; title: string; category: string; count: number; deck: UnifiedFlashcard[] }[] = [];
+        const organized: { id: string; title: string; category: string; subCategory?: string; count: number; deck: UnifiedFlashcard[] }[] = [];
         const activeData = course === 'PS_GR_B' ? PSGB_QUIZ_DATA : QUIZ_DATA;
 
         activeData.forEach(topic => {
@@ -443,12 +474,37 @@ export default function FlashcardsPage() {
                         id: topic.id,
                         title: topic.title,
                         category: topic.category,
+                        subCategory: topic.subCategory,
                         count: fullDeck.length,
                         deck: fullDeck
                     });
                 }
             }
         });
+
+        // GROUPING logic for Current Affairs
+        if (!searchQuery && (activeFilter === "Current Affairs" || activeFilter === "All")) {
+            const caDecks = organized.filter(d => d.category === "Current Affairs");
+            const nonCaDecks = organized.filter(d => d.category !== "Current Affairs");
+
+            if (selectedSubCategory && activeFilter === "Current Affairs") {
+                return caDecks.filter(d => d.subCategory === selectedSubCategory);
+            } else if (!selectedSubCategory) {
+                // Return Month Folders instead of topics
+                const months = Array.from(new Set(caDecks.map(d => d.subCategory).filter(Boolean)));
+                const folders: any[] = months.map(m => ({
+                    id: `month_${m}`,
+                    title: m as string,
+                    category: "Current Affairs",
+                    subCategory: m as string,
+                    count: caDecks.filter(d => d.subCategory === m).length,
+                    deck: [],
+                    isMonthFolder: true
+                }));
+                return [...nonCaDecks, ...folders];
+            }
+        }
+
         return organized;
     };
 
@@ -823,8 +879,12 @@ export default function FlashcardsPage() {
                                 <section>
                                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-8 border-b border-slate-200 dark:border-zinc-800 pb-4 flex justify-between items-end">
                                         <div>
-                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">Current Affairs</h2>
-                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Latest Updates & Happenings</p>
+                                            <h2 className="text-[26px] font-bold text-slate-900 dark:text-white mb-1 tracking-tight">
+                                                {selectedSubCategory ? `Current Affairs — ${selectedSubCategory}` : "Current Affairs"}
+                                            </h2>
+                                            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
+                                                {selectedSubCategory ? "Click a topic to start practicing" : "Latest Updates & Happenings"}
+                                            </p>
                                         </div>
                                         <span className="text-xs font-bold text-slate-400 border border-slate-200 dark:border-zinc-800 px-2 py-1 rounded-md">{caDecks.length} TOPICS</span>
                                     </motion.div>

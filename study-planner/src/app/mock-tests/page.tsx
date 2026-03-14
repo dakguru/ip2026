@@ -417,7 +417,7 @@ export default function MockTestsPage() {
 
     if (isPsGroupB) {
         return (
-            <AppScreenWrapper>
+            <AppScreenWrapper hideStatusBarPadding={true}>
                 <div className="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 transition-colors">
                     <div className="relative w-full max-w-xl text-center">
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-75 pointer-events-none" />
@@ -459,7 +459,7 @@ export default function MockTestsPage() {
     }
 
     return (
-        <AppScreenWrapper>
+        <AppScreenWrapper hideStatusBarPadding={true}>
             <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
 
             {/* Hero Section */}

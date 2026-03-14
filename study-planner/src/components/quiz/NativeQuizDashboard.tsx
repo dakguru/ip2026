@@ -73,6 +73,7 @@ export default function NativeQuizDashboard({
 
     return (
         <AppScreenWrapper
+            hideStatusBarPadding={true}
             header={
                 <div>
                     <h1 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">Quiz Zone</h1>

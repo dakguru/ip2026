@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ArrowLeft, Clock, Grid, ChevronLeft, ChevronRight, Bookmark, Send, CheckCircle2, XCircle, HelpCircle, AlertCircle } from "lucide-react";
 import { Question } from "@/lib/quizTypes";
 import { motion, AnimatePresence } from "framer-motion";
+import FormattedQuestionText from "./FormattedQuestionText";
 
 interface NativeQuizRunnerProps {
     quizTitle: string;
@@ -219,9 +220,10 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                 />
 
                                 <div className="relative z-10">
-                                    <p className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans whitespace-pre-wrap">
-                                        {currentQ.text}
-                                    </p>
+                                    <FormattedQuestionText 
+                                        text={currentQ.text} 
+                                        className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans"
+                                    />
 
                                     {currentQ.table && (
                                         <div className="mt-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
@@ -307,9 +309,10 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                         <div className="flex items-center gap-2 mb-2 text-blue-700 dark:text-blue-300 font-bold text-xs uppercase tracking-wider">
                                             <HelpCircle className="w-4 h-4" /> Explanation
                                         </div>
-                                        <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed whitespace-pre-wrap">
-                                            {currentQ.explanation}
-                                        </p>
+                                        <FormattedQuestionText 
+                                            text={currentQ.explanation || ""} 
+                                            className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed"
+                                        />
                                     </div>
                                 </motion.div>
                             )}

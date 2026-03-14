@@ -10,6 +10,7 @@ import { useCourse } from '@/contexts/CourseContext';
 import { Capacitor } from '@capacitor/core';
 import { Toast } from '@capacitor/toast';
 import AppScreenWrapper from '@/components/AppScreenWrapper';
+import FormattedQuestionText from '@/components/quiz/FormattedQuestionText';
 
 const PdfViewer = dynamic(() => import('@/components/PdfViewer'), {
     loading: () => <div className="flex items-center justify-center h-full text-slate-400 bg-zinc-950">Loading viewer...</div>,
@@ -377,9 +378,10 @@ export default function PyqDashboard() {
                         <div className="space-y-6 md:space-y-8">
                             {/* Question Card */}
                             <div className="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-800">
-                                <h3 className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed mb-6 md:mb-8 whitespace-pre-wrap">
-                                    {currentQ.text}
-                                </h3>
+                                <FormattedQuestionText 
+                                    text={currentQ.text} 
+                                    className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed md:mb-8"
+                                />
                                 <div className="space-y-3">
                                     {currentQ.options.map((opt, idx) => {
                                         const isSelected = answers[currentQ.id] === idx;
@@ -421,8 +423,10 @@ export default function PyqDashboard() {
                                 {isAnswered && (
                                     <div className="mt-8 animate-in fade-in slide-in-from-top-4 duration-300">
                                         <div className={`p-4 rounded-xl border-l-4 ${answers[currentQ.id] === currentQ.correctAnswer ? 'bg-green-50 dark:bg-green-900/10 border-green-500' : 'bg-red-50 dark:bg-red-900/10 border-red-500'}`}>
-                                            <p className="font-bold text-sm mb-1 uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Explanation</p>
-                                            <p className="text-zinc-700 dark:text-zinc-300 whitespace-pre-wrap">{currentQ.explanation}</p>
+                                        <FormattedQuestionText 
+                                            text={currentQ.explanation || ""} 
+                                            className="text-zinc-700 dark:text-zinc-300 text-sm"
+                                        />
                                         </div>
                                     </div>
                                 )}
@@ -480,7 +484,13 @@ export default function PyqDashboard() {
 
                                     return (
                                         <div key={q.id} className={`p-6 rounded-2xl border ${isCorrect ? 'border-green-100 dark:border-green-900 bg-green-50/30 dark:bg-green-900/10' : 'border-red-100 dark:border-red-900 bg-red-50/30 dark:bg-red-900/10'}`}>
-                                            <p className="font-semibold text-zinc-900 dark:text-zinc-100 mb-4 whitespace-pre-wrap">{idx + 1}. {q.text}</p>
+                                        <div className="flex gap-3 mb-4">
+                                            <span className="font-bold text-zinc-900 dark:text-zinc-100">{idx + 1}.</span>
+                                            <FormattedQuestionText 
+                                                text={q.text} 
+                                                className="font-semibold text-zinc-900 dark:text-zinc-100"
+                                            />
+                                        </div>
                                             <div className="space-y-2 mb-4">
                                                 {q.options.map((opt, oIdx) => (
                                                     <div key={oIdx} className={`flex items-center gap-3 p-2 rounded-lg text-sm
@@ -494,9 +504,9 @@ export default function PyqDashboard() {
                                                     </div>
                                                 ))}
                                             </div>
-                                            <div className="text-sm bg-white dark:bg-zinc-900 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap">
+                                            <div className="text-sm bg-white dark:bg-zinc-900 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300">
                                                 <span className="font-bold block mb-1">Explanation:</span>
-                                                {q.explanation}
+                                                <FormattedQuestionText text={q.explanation || ""} className="text-sm" />
                                             </div>
                                         </div>
                                     );

@@ -6532,7 +6532,7 @@ export const convertToQuizSet = (setId: number, title: string, data: RawQuestion
 };
 
 // -- HELPER to create topics easily --
-export const createTopic = (id: string, title: string, category: 'Paper I' | 'Paper II' | 'Paper III' | 'Paper IV' | 'PYQ' | 'Current Affairs', setIds: number[] = []) => {
+export const createTopic = (id: string, title: string, category: 'Paper I' | 'Paper II' | 'Paper III' | 'Paper IV' | 'PYQ' | 'Current Affairs', setIds: number[] = [], subCategory?: string) => {
   const sets = setIds.map(setId => {
     const data = ALL_SETS_DATA[setId];
     return data ? convertToQuizSet(setId, "Practice Set " + setId, data) : null;
@@ -6544,6 +6544,7 @@ export const createTopic = (id: string, title: string, category: 'Paper I' | 'Pa
     id,
     title,
     category,
+    subCategory,
     sets
   };
 };
@@ -6620,14 +6621,24 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-29', 'Postal FHB Volume II', 'Paper III', [146, 147]),
 
   // --- CURRENT AFFAIRS (JAN 2026) ---
-  createTopic('ca-jan26-1', 'Most Important Current Affairs (Jan 2026)', 'Current Affairs'),
-  createTopic('ca-jan26-2', 'Banking, Economy, Business & Finance (Jan 2026)', 'Current Affairs'),
-  createTopic('ca-jan26-3', 'Government Schemes (Jan 2026)', 'Current Affairs'),
-  createTopic('ca-jan26-4', 'National News (Jan 2026)', 'Current Affairs'),
-  createTopic('ca-jan26-5', 'Sports (Jan 2026)', 'Current Affairs'),
-  createTopic('ca-jan26-6', 'MoU’s & AGREEMENTS (Jan 2026)', 'Current Affairs'),
-  createTopic('ca-jan26-7', 'International Affairs (Jan 2026)', 'Current Affairs'),
-  createTopic('ca-jan26-8', 'Science and Tech (Jan 2026)', 'Current Affairs'),
+  createTopic('ca-jan26-1', 'Most Important Current Affairs (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-2', 'Banking, Economy, Business & Finance (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-3', 'Government Schemes (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-4', 'National News (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-5', 'Sports (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-6', 'MoU’s & AGREEMENTS (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-7', 'International Affairs (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-8', 'Science and Tech (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  
+  // --- CURRENT AFFAIRS (FEB 2026) ---
+  createTopic('ca-feb26-1', 'Most Important Current Affairs (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-2', 'Banking, Economy, Business & Finance (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-3', 'Government Schemes (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-4', 'National News (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-5', 'Sports (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-6', 'MoU’s & AGREEMENTS (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-7', 'International Affairs (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-8', 'Science and Tech (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
 
 ];
 

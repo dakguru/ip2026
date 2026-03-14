@@ -14,6 +14,7 @@ import NativeQuizDashboard from '@/components/quiz/NativeQuizDashboard';
 import { useCourse } from '@/contexts/CourseContext';
 import AppScreenWrapper from '@/components/AppScreenWrapper';
 import { getMembershipLevel } from '@/lib/membership-utils';
+import FormattedQuestionText from '@/components/quiz/FormattedQuestionText';
 
 // Custom styles for range slider
 const sliderStyles = `
@@ -329,9 +330,10 @@ export default function QuizDashboard() {
                                 />
 
                                 <div className="relative z-10">
-                                    <h3 className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed mb-6 md:mb-8 whitespace-pre-wrap">
-                                        {currentQ.text}
-                                    </h3>
+                                    <FormattedQuestionText
+                                        text={currentQ.text}
+                                        className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed md:mb-8"
+                                    />
                                     <div className="space-y-3">
                                         {currentQ.options.map((opt, idx) => {
                                             const isSelected = answers[currentQ.id] === idx;
@@ -379,7 +381,7 @@ export default function QuizDashboard() {
                                         <div className="mt-8 animate-in fade-in slide-in-from-top-4 duration-300">
                                             <div className={`p-4 rounded-xl border-l-4 ${answers[currentQ.id] === currentQ.correctAnswer ? 'bg-green-50 dark:bg-green-900/10 border-green-500' : 'bg-red-50 dark:bg-red-900/10 border-red-500'}`}>
                                                 <p className="font-bold text-sm mb-1 uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Explanation</p>
-                                                <p className="text-zinc-700 dark:text-zinc-300 whitespace-pre-wrap">{currentQ.explanation}</p>
+                                                <FormattedQuestionText text={currentQ.explanation || ""} className="text-zinc-700 dark:text-zinc-300 text-sm" />
                                             </div>
                                         </div>
                                     )}

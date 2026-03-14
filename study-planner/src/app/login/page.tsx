@@ -172,8 +172,10 @@ function AuthForm() {
                 <div className="bg-white/80 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-3xl p-6 sm:p-8">
 
                     <div className="text-center mb-8">
-                        <div className="w-20 h-20 rounded-full mx-auto flex items-center justify-center shadow-lg shadow-blue-600/20 mb-4 border-2 border-white overflow-hidden bg-white">
-                            <Image src="/dak-guru-new-logo.png" alt="Logo" width={80} height={80} className="object-cover" />
+                        <div className="w-20 h-20 rounded-full mx-auto flex items-center justify-center shadow-lg shadow-blue-600/20 mb-4 border-2 border-white overflow-hidden bg-white hover:scale-105 transition-transform">
+                            <Link href="/">
+                                <Image src="/dak-guru-new-logo.png" alt="Logo" width={80} height={80} className="object-cover" />
+                            </Link>
                         </div>
                         <h1 className="text-2xl font-bold text-gray-900 mb-1">
                             {isLogin ? "Welcome to Dak Guru" : "Create Account"}
@@ -471,21 +473,40 @@ function AuthForm() {
                         </button>
                     </form>
 
-                    <div className="mt-6 pt-4 border-t border-gray-100 text-center">
-                        <p className="text-xs text-gray-500">
-                            {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-                            <button
-                                onClick={() => {
-                                    setIsLogin(!isLogin);
-                                    setError("");
-                                    setFormData({ name: "", email: "", password: "", mobile: "", gender: "", courseMode: "", confirmPassword: "", website: "" });
-
-                                }}
-                                className="text-blue-600 hover:text-blue-500 font-bold hover:underline bg-transparent border-none cursor-pointer ml-1"
-                            >
-                                {isLogin ? "Sign up" : "Sign in"}
-                            </button>
-                        </p>
+                    <div className="mt-8 pt-4">
+                        <div className="relative mb-6">
+                            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                                <div className="w-full border-t border-gray-200"></div>
+                            </div>
+                            <div className="relative flex justify-center">
+                                <span className="px-4 text-sm font-medium text-gray-500 bg-white">
+                                    {isLogin ? "New to Dak Guru?" : "Already a member?"}
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setIsLogin(!isLogin);
+                                setError("");
+                                setFormData({ name: "", email: "", password: "", mobile: "", gender: "", courseMode: "", confirmPassword: "", website: "" });
+                            }}
+                            className={isLogin 
+                                ? "w-full relative group overflow-hidden bg-gradient-to-r from-slate-900 to-blue-950 border border-slate-800 hover:border-yellow-500/50 text-yellow-500/90 hover:text-yellow-400 font-bold tracking-wide py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-sm hover:shadow-lg hover:shadow-blue-900/20 flex items-center justify-center gap-2"
+                                : "w-full bg-slate-900 border border-slate-800 hover:border-blue-500 text-white font-bold tracking-wide py-3.5 rounded-xl transition-all hover:scale-[1.02] shadow-sm hover:shadow-md flex items-center justify-center"
+                            }
+                        >
+                            {isLogin ? (
+                                <>
+                                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-[100%] group-hover:animate-shimmer" />
+                                    <span className="tracking-wide">Create an account</span>
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                </>
+                            ) : (
+                                "Sign in instead"
+                            )}
+                        </button>
                     </div>
                 </div >
 

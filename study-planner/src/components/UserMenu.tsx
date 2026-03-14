@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { getDisplayMembership } from "@/lib/membership-utils";
 import { useCourse } from "@/contexts/CourseContext";
 import {
@@ -77,12 +78,12 @@ export function UserMenu() {
 
     if (!session) {
         return (
-            <button
-                onClick={() => router.push('/login')}
-                className="px-4 py-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+            <Link
+                href="/login"
+                className="px-4 py-2 text-sm font-semibold text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors inline-block"
             >
                 Log In
-            </button>
+            </Link>
         );
     }
 

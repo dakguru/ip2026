@@ -9,7 +9,7 @@ export default function GlobalNavigation() {
     const pathname = usePathname();
 
     // Hide on home page and specific routes
-    if (pathname === "/" || pathname === "/social" || pathname.startsWith("/planner") || pathname.startsWith("/progress") || pathname.startsWith("/notes") || pathname.startsWith("/guide/pmla") || pathname.startsWith("/guide/cpa") || pathname.startsWith("/guide/pli") || pathname.startsWith("/guide/ccs")) return null;
+    if (pathname === "/" || pathname === "/social" || pathname.startsWith("/login") || pathname.startsWith("/planner") || pathname.startsWith("/progress") || pathname.startsWith("/notes") || pathname.startsWith("/guide/pmla") || pathname.startsWith("/guide/cpa") || pathname.startsWith("/guide/pli") || pathname.startsWith("/guide/ccs")) return null;
 
     return (
         <header className="sticky top-0 z-50 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 py-3 shadow-sm pt-[max(12px,env(safe-area-inset-top))]">

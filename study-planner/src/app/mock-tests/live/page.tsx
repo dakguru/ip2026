@@ -13,6 +13,7 @@ import NativeQuizRunner from "@/components/quiz/NativeQuizRunner";
 import Script from "next/script";
 import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 import { Toast } from '@capacitor/toast';
+import FormattedQuestionText from "@/components/quiz/FormattedQuestionText";
 
 interface LeaderboardEntry {
     _id: string;
@@ -542,9 +543,10 @@ export default function LiveMockTestPage() {
                                         <span className="text-zinc-500 font-mono text-sm font-medium">Question {currentQIndex + 1} of {total}</span>
                                         <span className="bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded-md font-bold uppercase tracking-wide border border-indigo-100">+2 Marks</span>
                                     </div>
-                                    <h2 className="text-xl font-medium leading-relaxed mb-8 whitespace-pre-wrap text-zinc-800">
-                                        {currentQ.text}
-                                    </h2>
+                                    <FormattedQuestionText 
+                                        text={currentQ.text} 
+                                        className="text-xl font-medium leading-relaxed mb-8 text-zinc-800"
+                                    />
 
                                     {currentQ.table && (
                                         <div className="mb-8 overflow-hidden rounded-xl border border-zinc-200 shadow-sm">
