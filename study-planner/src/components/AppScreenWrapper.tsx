@@ -22,7 +22,7 @@ export default function AppScreenWrapper({
 
     return (
         <div className={cn(
-            "min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col transition-colors",
+            "min-h-screen w-full overflow-x-hidden bg-zinc-50 dark:bg-zinc-950 flex flex-col transition-colors",
             className
         )}>
             {/* Status Bar / Safe Area Top Padding - Only applied if there is no header or explicitly requested */}

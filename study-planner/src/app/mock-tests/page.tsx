@@ -465,7 +465,7 @@ export default function MockTestsPage() {
             {/* Hero Section */}
             {isMobileApp ? (
                 // Mobile App Optimized Hero (Compact & Beautiful)
-                <div className="relative bg-zinc-950 border-b border-zinc-900 overflow-hidden pb-8">
+                <div className="relative w-full overflow-x-hidden bg-zinc-950 border-b border-zinc-900 pb-8">
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute top-10 right-0 w-40 h-40 bg-purple-600 rounded-full mix-blend-screen filter blur-3xl"></div>
                         <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl"></div>
@@ -514,21 +514,21 @@ export default function MockTestsPage() {
                             </Link>
 
                             {/* Stats Grid - Compact */}
-                            <div className="grid grid-cols-3 gap-2 w-full max-w-sm">
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
-                                    <Users className="w-4 h-4 text-blue-400 mb-1" />
-                                    <span className="text-[10px] font-bold text-white">1000+</span>
-                                    <span className="text-[9px] text-zinc-500">Aspirants</span>
+                            <div className="grid grid-cols-3 gap-2 w-full max-w-[320px] px-2 mb-2">
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
+                                    <Users className="w-4 h-4 text-blue-400 mb-1 shrink-0" />
+                                    <span className="text-[10px] font-bold text-white truncate w-full">1000+</span>
+                                    <span className="text-[9px] text-zinc-500 truncate w-full">Aspirants</span>
                                 </div>
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
-                                    <Trophy className="w-4 h-4 text-yellow-400 mb-1" />
-                                    <span className="text-[10px] font-bold text-white">Rank</span>
-                                    <span className="text-[9px] text-zinc-500">All India</span>
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
+                                    <Trophy className="w-4 h-4 text-yellow-400 mb-1 shrink-0" />
+                                    <span className="text-[10px] font-bold text-white truncate w-full">Rank</span>
+                                    <span className="text-[9px] text-zinc-500 truncate w-full">All India</span>
                                 </div>
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800">
-                                    <Clock className="w-4 h-4 text-green-400 mb-1" />
-                                    <span className="text-[10px] font-bold text-white">Latest</span>
-                                    <span className="text-[9px] text-zinc-500">Pattern</span>
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
+                                    <Clock className="w-4 h-4 text-green-400 mb-1 shrink-0" />
+                                    <span className="text-[10px] font-bold text-white truncate w-full">Latest</span>
+                                    <span className="text-[9px] text-zinc-500 truncate w-full">Pattern</span>
                                 </div>
                             </div>
                         </div>
@@ -571,16 +571,16 @@ export default function MockTestsPage() {
                             Compete with aspirants across India. Real-time ranking, detailed analysis, and exam-like environment.
                         </p>
 
-                        <div className="flex justify-center mb-10 w-full animate-in zoom-in duration-500">
-                            <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-2xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                        <div className="flex justify-center mb-6 w-full animate-in zoom-in duration-500 px-2">
+                            <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-[2px] mb-2 overflow-hidden text-sm font-medium rounded-xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 w-full sm:w-auto">
                                 <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
-                                <span className="relative px-5 py-3 md:px-8 md:py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[14px] group-hover:bg-opacity-0 flex items-center gap-2 md:gap-3">
-                                    <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3">
+                                <span className="relative w-full sm:w-auto px-4 py-3 md:px-8 md:py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[10px] group-hover:bg-opacity-0 flex items-center justify-center gap-2 md:gap-3">
+                                    <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3 shrink-0">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-red-500"></span>
                                     </span>
-                                    <span className="text-base md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white whitespace-nowrap">Attempt Free Sample Test</span>
-                                    <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-white rotate-180 group-hover:translate-x-1 transition-transform" />
+                                    <span className="text-sm md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white truncate">Attempt Free Sample Test</span>
+                                    <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-white rotate-180 shrink-0 group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Link>
                         </div>
@@ -589,33 +589,33 @@ export default function MockTestsPage() {
             )}
 
             {/* Test Cards Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
-                <div className="space-y-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10 w-full overflow-x-hidden">
+                <div className="space-y-12 w-full">
 
                     {/* Attractive Marquee Notification */}
-                    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white shadow-lg border-y border-white/10">
+                    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white shadow-lg rounded-xl sm:rounded-2xl border border-white/10 mb-4 mx-0 sm:mx-0 w-full max-w-full">
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
-                        <div className="max-w-7xl mx-auto flex items-center h-12 relative z-10">
-                            <div className="flex-shrink-0 w-[40%] md:w-auto bg-white/20 backdrop-blur-md px-2 md:px-4 h-full flex items-center justify-center z-20 shadow-xl border-r border-white/10">
-                                <span className="font-black text-[10px] md:text-sm tracking-wider uppercase flex items-center gap-1 md:gap-2 whitespace-nowrap">
-                                    <span className="relative flex h-2.5 w-2.5">
+                        <div className="w-full flex items-center h-[2.75rem] sm:h-12 relative z-10 overflow-hidden">
+                            <div className="flex-shrink-0 w-auto bg-white/20 backdrop-blur-md px-3 sm:px-4 h-full flex items-center justify-center z-20 shadow-xl border-r border-white/10">
+                                <span className="font-black text-[10px] sm:text-sm tracking-wider uppercase flex items-center gap-1.5 whitespace-nowrap">
+                                    <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-yellow-400"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-yellow-400"></span>
                                     </span>
                                     Why Top 7?
                                 </span>
                             </div>
-                            <div className="w-[60%] md:flex-1 overflow-hidden relative h-full flex items-center group cursor-default">
-                                <div className="animate-scroll flex items-center">
+                            <div className="flex-1 min-w-0 overflow-hidden h-full flex items-center group cursor-default ml-2 sm:ml-4">
+                                <div className="animate-scroll-mobile sm:animate-scroll flex items-center whitespace-nowrap min-w-max">
                                     {/* Block 1 */}
-                                    <div className="flex items-center gap-4 px-4 font-medium text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
-                                        <span className="inline-block mx-4">★</span>
-                                        <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
+                                    <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 font-medium text-[11px] sm:text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors">
+                                        <span className="inline-block mx-2 sm:mx-4 shrink-0">★</span>
+                                        <span className="shrink-0">To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
                                     </div>
                                     {/* Block 2 (Duplicate for Seamless Loop) */}
-                                    <div className="flex items-center gap-4 px-4 font-medium text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors whitespace-nowrap">
-                                        <span className="inline-block mx-4">★</span>
-                                        <span>To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
+                                    <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 font-medium text-[11px] sm:text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors">
+                                        <span className="inline-block mx-2 sm:mx-4 shrink-0">★</span>
+                                        <span className="shrink-0">To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
                                     </div>
                                 </div>
 
@@ -627,17 +627,17 @@ export default function MockTestsPage() {
                     </div>
 
                     {/* Previous Tests Quick Link */}
-                    <div className="flex justify-center -mt-4 mb-2 relative z-20">
+                    <div className="flex justify-center -mt-2 mb-4 relative z-20 w-full px-1">
                         <a
                             href="#previous-tests"
-                            className="group inline-flex items-center gap-2 px-6 py-2.5 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-full shadow-lg border border-zinc-200 dark:border-zinc-700 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all transform hover:-translate-y-0.5 active:scale-95 text-xs md:text-sm font-bold"
+                            className="group inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-[14px] sm:rounded-full shadow border border-zinc-200 dark:border-zinc-700 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all active:scale-95 text-[11px] sm:text-sm font-bold w-full sm:w-auto overflow-hidden"
                         >
-                            <span className="flex h-2 w-2 relative">
+                            <span className="flex h-2 w-2 relative shrink-0">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                             </span>
-                            Looking for Previous Mock Tests? Click Here
-                            <ArrowLeft className="w-4 h-4 rotate-[270deg] group-hover:translate-y-1 transition-transform" />
+                            <span className="truncate">Looking for Previous Mock Tests? Click Here</span>
+                            <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 rotate-[270deg] shrink-0 group-hover:translate-y-1 transition-transform" />
                         </a>
                     </div>
 
@@ -1048,12 +1048,12 @@ function MockTestDetail({
                                         </span>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="grid grid-cols-2 gap-2 sm:gap-3">
                                     <button
                                         disabled
-                                        className="py-4 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-400 dark:text-zinc-500 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 cursor-not-allowed border border-zinc-200 dark:border-zinc-700"
+                                        className="py-3 sm:py-4 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-400 dark:text-zinc-500 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 cursor-not-allowed border border-zinc-200 dark:border-zinc-700 px-1"
                                     >
-                                        <CheckCircle2 className="w-4 h-4" /> Submitted
+                                        <CheckCircle2 className="w-4 h-4 shrink-0" /> <span className="truncate">Submitted</span>
                                     </button>
                                     <button
                                         onClick={(e) => {
@@ -1061,9 +1061,9 @@ function MockTestDetail({
                                             if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
                                             onViewSheets?.();
                                         }}
-                                        className="py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold text-sm shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.97]"
+                                        className="py-3 sm:py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-1.5 sm:gap-2 transition-all active:scale-[0.97] px-1"
                                     >
-                                        <FileDown className="w-4 h-4" /> Answer Sheet
+                                        <FileDown className="w-4 h-4 shrink-0" /> <span className="truncate">Answer Sheet</span>
                                     </button>
                                 </div>
                             </div>
@@ -1109,13 +1109,13 @@ function MockTestDetail({
                                     </div>
                                 </div>
                             )}
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="grid grid-cols-2 gap-2 sm:gap-3">
                                 <Link
                                     href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
                                     onClick={() => { if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15); }}
-                                    className="py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold text-sm shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center gap-2 active:scale-[0.97]"
+                                    className="py-3 sm:py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center gap-1.5 sm:gap-2 active:scale-[0.97] px-1"
                                 >
-                                    <History className="w-5 h-5" /> Reattempt
+                                    <History className="w-4 h-4 shrink-0" /> <span className="truncate">Reattempt</span>
                                 </Link>
                                 {userResult ? (
                                     <button
@@ -1124,17 +1124,17 @@ function MockTestDetail({
                                             if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
                                             onViewSheets?.();
                                         }}
-                                        className="py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-2xl font-bold text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-2 transition-all active:scale-[0.97]"
+                                        className="py-3 sm:py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all active:scale-[0.97] px-1"
                                     >
-                                        <FileDown className="w-5 h-5" /> Answer Sheet
+                                        <FileDown className="w-4 h-4 shrink-0" /> <span className="truncate">Answer Sheet</span>
                                     </button>
                                 ) : (
                                     <Link
                                         href={`/mock-tests/weekly/${mock.id}`}
                                         onClick={() => { if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20); }}
-                                        className="py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-2xl font-bold text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-2 transition-all active:scale-[0.97]"
+                                        className="py-3 sm:py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all active:scale-[0.97] px-1"
                                     >
-                                        <PlayCircle className="w-5 h-5" /> Practice Now
+                                        <PlayCircle className="w-4 h-4 shrink-0" /> <span className="truncate">Practice Now</span>
                                     </Link>
                                 )}
                             </div>
@@ -1261,45 +1261,45 @@ function MockTestCard({
     return (
         <div
             onClick={onClick}
-            className={`relative flex flex-col p-5 sm:p-6 rounded-3xl shadow-sm border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group cursor-pointer overflow-hidden ${cardBgClass}`}
+            className={`relative flex flex-col p-3.5 sm:p-5 mx-auto w-full max-w-full sm:max-w-none rounded-[1.25rem] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group cursor-pointer overflow-hidden ${cardBgClass}`}
         >
             {/* Decorative Background Elements */}
-            <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br rounded-full blur-3xl opacity-20 -mr-10 -mt-10 
+            <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br rounded-full blur-3xl opacity-20 
                 ${isLive ? 'from-red-400 to-orange-400' : isCompleted ? 'from-blue-400 to-indigo-400' : 'from-zinc-200 to-zinc-400'}
             `}></div>
 
             {/* Header: Access Badges & Status */}
-            <div className="flex justify-between items-start mb-4 relative z-10">
-                <div className="flex flex-col gap-1">
-                    <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest">Weekly Test</span>
-                    <span className="text-xs font-medium text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md w-fit">
+            <div className="flex justify-between items-start mb-4 relative z-10 gap-2">
+                <div className="flex flex-col gap-1 min-w-0 flex-1">
+                    <span className="text-[10px] sm:text-xs font-bold text-zinc-400 uppercase tracking-widest truncate">Weekly Test</span>
+                    <span className="text-[10px] sm:text-xs font-medium text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md w-fit truncate">
                         {format(mock.startDate, 'dd MMM')} - {format(mock.endDate, 'dd MMM')}
                     </span>
                 </div>
 
-                <div className="flex flex-col items-end gap-1.5">
+                <div className="flex flex-col items-end gap-1.5 shrink-0 max-w-[50%]">
                     {/* Live Pulse */}
                     {!isCompleted && isLive && !hasAttempted && (
                         <div className="flex items-center gap-1.5 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 px-2 py-0.5 rounded-full border border-red-200 dark:border-red-800 animate-pulse">
-                            <span className="relative flex h-2 w-2">
+                            <span className="relative flex h-2 w-2 shrink-0">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                             </span>
-                            <span className="text-[10px] font-black uppercase tracking-wider">Live Now</span>
+                            <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider truncate">Live Now</span>
                         </div>
                     )}
 
                     {/* Attempted Badge */}
                     {hasAttempted && (
                         <div className="flex flex-col items-end">
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300 border border-green-200 dark:border-green-800 mb-1">
-                                <CheckCircle2 className="w-3 h-3" /> Attempted
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300 border border-green-200 dark:border-green-800 mb-1 shrink-0">
+                                <CheckCircle2 className="w-3 h-3 shrink-0" /> Attempted
                             </span>
-                            <span className="text-xs font-bold text-zinc-600 dark:text-zinc-400">
+                            <span className="text-[10px] sm:text-xs font-bold text-zinc-600 dark:text-zinc-400">
                                 Score: {userResult.score}/{mock.marks}
                             </span>
                             {isCompleted && userResult.rank && (
-                                <span className="text-[10px] font-black text-amber-500 uppercase tracking-wider mt-0.5">
+                                <span className="text-[9px] sm:text-[10px] font-black text-amber-500 uppercase tracking-wider mt-0.5">
                                     Rank: #{userResult.rank}
                                 </span>
                             )}
@@ -1308,33 +1308,33 @@ function MockTestCard({
 
                     {/* Completed Badge */}
                     {isCompleted && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
-                            <CheckCircle2 className="w-3 h-3" /> Completed
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-wider bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800 shrink-0">
+                            <CheckCircle2 className="w-3 h-3 shrink-0" /> Completed
                         </span>
                     )}
 
                     {/* Membership Badges */}
                     {membershipLevel === 'gold' && (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 border border-amber-200 shadow-sm">
+                        <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 border border-amber-200 shadow-sm shrink-0">
                             🏆 Gold Access
                         </span>
                     )}
                     {membershipLevel === 'silver' && (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-700 border border-slate-200 shadow-sm">
+                        <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-700 border border-slate-200 shadow-sm shrink-0">
                             🥈 Silver Access
                         </span>
                     )}
                     {membershipLevel !== 'gold' && membershipLevel !== 'silver' && isPaid && (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 border border-green-200 shadow-sm">
-                            ✅ Paid & Enrolled
+                        <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold bg-green-100 text-green-700 border border-green-200 shadow-sm shrink-0">
+                            ✅ Paid
                         </span>
                     )}
                 </div>
             </div>
 
             {/* Title & Info */}
-            <div className="flex-1 relative z-10 mb-6">
-                <h3 className="text-lg sm:text-xl font-black text-zinc-900 dark:text-zinc-50 leading-tight mb-3 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            <div className="flex-1 relative z-10 mb-5">
+                <h3 className="text-base sm:text-lg font-black text-zinc-900 dark:text-zinc-50 leading-tight mb-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors line-clamp-2">
                     {mock.title}
                 </h3>
 
@@ -1349,14 +1349,14 @@ function MockTestCard({
                     )}
                 </div>
 
-                <div className="flex items-center gap-4 text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
+                <div className="flex items-center gap-2 sm:gap-4 flex-wrap text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
                     <div className="flex items-center gap-1.5 bg-zinc-50 dark:bg-zinc-800 px-2 py-1 rounded-md">
-                        <Clock className="w-3.5 h-3.5" />
-                        <span className="font-semibold">{mock.duration} Mins</span>
+                        <Clock className="w-3.5 h-3.5 shrink-0" />
+                        <span className="font-semibold whitespace-nowrap">{mock.duration} Mins</span>
                     </div>
                     <div className="flex items-center gap-1.5 bg-zinc-50 dark:bg-zinc-800 px-2 py-1 rounded-md">
-                        <AlertCircle className="w-3.5 h-3.5" />
-                        <span className="font-semibold">{mock.questionCount} Questions</span>
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                        <span className="font-semibold whitespace-nowrap">{mock.questionCount} Questions</span>
                     </div>
                 </div>
             </div>
@@ -1367,38 +1367,38 @@ function MockTestCard({
                 {(isCompleted || (role === 'admin' && isLive)) && onShowRankList && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
-                        className="w-full py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl font-bold text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-95"
+                        className="w-full py-2.5 sm:py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all transform hover:scale-[1.02] active:scale-95 px-2 mb-2"
                     >
-                        <Trophy className="w-4 h-4 text-white fill-current" /> {isCompleted ? "View Top 7 Rankers" : "Live Leaderboard (Admin)"}
+                        <Trophy className="w-4 h-4 text-white fill-current shrink-0" /> <span>{isCompleted ? "View Top 7 Rankers" : "Live Leaderboard (Admin)"}</span>
                     </button>
                 )}
 
                 {/* Main CTA */}
-                <div className="flex gap-3">
+                <div className="flex gap-2 sm:gap-3">
                     {/* Admin: Enrollments */}
                     {role === 'admin' && onViewEnrollments && (
                         <button
                             onClick={(e) => { e.stopPropagation(); onViewEnrollments(); }}
-                            className="px-4 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors"
+                            className="px-3 sm:px-4 py-2.5 sm:py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors shrink-0"
                             title="View Enrollments"
                         >
-                            <Users className="w-4 h-4" /> <span className="hidden sm:inline">{enrollmentCount}</span>
+                            <Users className="w-4 h-4 shrink-0" /> <span className="hidden sm:inline">{enrollmentCount}</span>
                         </button>
                     )}
 
                     {isCompleted ? (
                         canAccess ? (
                             <div className="flex flex-col gap-2.5 flex-1">
-                                <div className="grid grid-cols-2 gap-2.5">
+                                <div className="grid grid-cols-2 gap-1.5 sm:gap-2.5 w-full">
                                     <Link
                                         href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
                                         }}
-                                        className="w-full py-3 bg-white dark:bg-zinc-800 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-700 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all active:scale-[0.97] shadow-sm"
+                                        className="flex-1 py-2 sm:py-3 bg-white dark:bg-zinc-800 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-700 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 rounded-xl sm:rounded-2xl font-bold text-[10px] sm:text-xs flex items-center justify-center gap-1 sm:gap-2 transition-all active:scale-[0.97] shadow-sm px-1 sm:px-2 min-w-0"
                                     >
-                                        <History className="w-3.5 h-3.5" /> Reattempt
+                                        <History className="w-3.5 h-3.5 shrink-0" /> <span>Reattempt</span>
                                     </Link>
                                     {hasAttempted ? (
                                         <button
@@ -1407,9 +1407,9 @@ function MockTestCard({
                                                 if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
                                                 onViewSheets?.();
                                             }}
-                                            className="w-full py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97]"
+                                            className="flex-1 py-2 sm:py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[10px] sm:text-xs flex items-center justify-center gap-1 sm:gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97] px-1 sm:px-2 min-w-0"
                                         >
-                                            <FileDown className="w-3.5 h-3.5" /> Answer Sheet
+                                            <FileDown className="w-3.5 h-3.5 shrink-0" /> <span>Answer Sheet</span>
                                         </button>
                                     ) : (
                                         <Link
@@ -1418,75 +1418,14 @@ function MockTestCard({
                                                 e.stopPropagation();
                                                 if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
                                             }}
-                                            className="w-full py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97]"
+                                            className="flex-1 py-2 sm:py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[10px] sm:text-xs flex items-center justify-center gap-1 sm:gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97] px-1 sm:px-2 min-w-0"
                                         >
-                                            <PlayCircle className="w-3.5 h-3.5" /> Practice
+                                            <PlayCircle className="w-3.5 h-3.5 shrink-0" /> <span>Practice</span>
                                         </Link>
                                     )}
-                                </div>
-                            </div>
-                        ) : (
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
-                                    onEnroll();
-                                }}
-                                disabled={isProcessing}
-                                className="flex-1 py-3.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform active:scale-[0.97]"
-                            >
-                                {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-200 fill-current" />}
-                                Unlock All Content - ₹49
-                            </button>
-                        )
-                    ) : isLive ? (
-                        hasAttempted ? (
-                            <div className="flex gap-2.5 w-full">
-                                <button
-                                    disabled
-                                    className="flex-1 py-3 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-400 dark:text-zinc-500 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 cursor-not-allowed border border-zinc-200 dark:border-zinc-700"
-                                >
-                                    <CheckCircle2 className="w-3.5 h-3.5" /> Submitted
-                                </button>
-                                <button
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
-                                        onViewSheets?.();
-                                    }}
-                                    className="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25 transition-all active:scale-[0.97]"
-                                >
-                                    <FileDown className="w-3.5 h-3.5" /> Answer Sheet
-                                </button>
-                            </div>
-                        ) : (
-                            canAccess ? (
-                                <Link
-                                    href={`/mock-tests/weekly/${mock.id}`}
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20);
-                                    }}
-                                    className="flex-1 py-3.5 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-2xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-[0.97] animate-pulse-slow"
-                                >
-                                    <PlayCircle className="w-4 h-4 fill-current" /> Attempt Live Test
-                                </Link>
-                            ) : (
-                                <button
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
-                                        onEnroll();
-                                    }}
-                                    disabled={isProcessing}
-                                    className="flex-1 py-3.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 transition-all transform active:scale-[0.97]"
-                                >
-                                    {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-200 fill-current" />}
-                                    Enroll & Attempt
-                                </button>
-                            )
-                        )
-                    ) : !canAccess ? (
+                        </div>
+                    </div>
+                ) : (
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
@@ -1494,19 +1433,80 @@ function MockTestCard({
                                 onEnroll();
                             }}
                             disabled={isProcessing}
-                            className="flex-1 py-3.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-2xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-[1.01] active:scale-[0.97]"
+                            className="flex-1 py-2 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0 w-full"
                         >
-                            {isProcessing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4 text-yellow-300 fill-current" />}
-                            Enroll Now - ₹49
+                            {isProcessing ? <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-yellow-200 fill-current shrink-0" />}
+                            <span className="text-center">Unlock All Content - ₹49</span>
                         </button>
+                )
+                    ) : isLive ? (
+                        hasAttempted ? (
+                            <div className="flex gap-2 w-full">
+                                <button
+                                    disabled
+                                    className="flex-1 py-2.5 sm:py-3 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-400 dark:text-zinc-500 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-xs flex items-center justify-center gap-1.5 cursor-not-allowed border border-zinc-200 dark:border-zinc-700 px-1 sm:px-2 min-w-0"
+                                >
+                                    <CheckCircle2 className="w-3.5 h-3.5 shrink-0" /> <span>Submitted</span>
+                                </button>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                        onViewSheets?.();
+                                    }}
+                                    className="flex-1 py-2.5 sm:py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-xs flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/25 transition-all active:scale-[0.97] px-1 sm:px-2 min-w-0"
+                                >
+                                    <FileDown className="w-3.5 h-3.5 shrink-0" /> <span>Answer Sheet</span>
+                                </button>
+                            </div>
+                ) : (
+                    canAccess ? (
+                        <Link
+                            href={`/mock-tests/weekly/${mock.id}`}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20);
+                            }}
+                            className="flex-1 py-2.5 sm:py-3 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform hover:scale-[1.02] active:scale-[0.97] animate-pulse-slow px-2 min-w-0"
+                        >
+                            <PlayCircle className="w-3.5 h-3.5 sm:w-4 h-4 fill-current shrink-0" /> <span>Attempt Live Test</span>
+                        </Link>
                     ) : (
                         <button
-                            onClick={onClick}
-                            className="flex-1 py-3 bg-zinc-50 dark:bg-zinc-800/50 text-zinc-400 dark:text-zinc-500 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors border border-dashed border-zinc-200 dark:border-zinc-700"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
+                                onEnroll();
+                            }}
+                            disabled={isProcessing}
+                            className="flex-1 py-2.5 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0"
                         >
-                            <Lock className="w-3.5 h-3.5" /> View Schedule
+                            {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-current shrink-0" />}
+                            <span className="text-center">Enroll & Attempt</span>
                         </button>
-                    )}
+                    )
+                )
+            ) : !canAccess ? (
+                <button
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(15);
+                        onEnroll();
+                    }}
+                    disabled={isProcessing}
+                    className="flex-1 py-2 sm:py-3 w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/30 transition-all transform hover:scale-[1.01] active:scale-[0.97] px-2 min-w-0"
+                >
+                    {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-300 fill-current shrink-0" />}
+                    <span className="text-center">Enroll Now - ₹49</span>
+                </button>
+            ) : (
+                <button
+                    onClick={onClick}
+                    className="flex-1 py-2 sm:py-3 w-full bg-zinc-50 dark:bg-zinc-800/50 text-zinc-400 dark:text-zinc-500 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm flex items-center justify-center gap-1.5 cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors border border-dashed border-zinc-200 dark:border-zinc-700 px-2 min-w-0"
+                >
+                    <Lock className="w-3.5 h-3.5 shrink-0" /> <span>View Schedule</span>
+                </button>
+            )}
                 </div>
             </div>
         </div>
