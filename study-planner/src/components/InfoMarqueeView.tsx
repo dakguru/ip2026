@@ -29,6 +29,10 @@ export default function InfoMarqueeView() {
 
     const messages: MessageItem[] = [
         {
+            text: "Integrated 544 February 2026 Flashcards. Start practicing now!",
+            action: null
+        },
+        {
             text: "Visit PDF Notes page for Smart Reading Experience.",
             action: null
         },

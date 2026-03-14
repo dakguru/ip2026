@@ -16,6 +16,46 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "14.03.2026",
+        items: [
+            {
+                title: "February 2026 Current Affairs Flashcards Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated <strong>544 new flashcards</strong> for <strong>February 2026</strong> across all major categories:</p>
+                        
+                        <div className="grid grid-cols-2 gap-2 text-[11px]">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-2 rounded border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300">National & Sports</p>
+                                <p className="text-zinc-500">225 Cards</p>
+                            </div>
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-2 rounded border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300">Banking & Economy</p>
+                                <p className="text-zinc-500">63 Cards</p>
+                            </div>
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-2 rounded border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300">Sci-Tech & MoUs</p>
+                                <p className="text-zinc-500">133 Cards</p>
+                            </div>
+                            <div className="bg-purple-50/50 dark:bg-purple-900/10 p-2 rounded border border-purple-100 dark:border-purple-800/50">
+                                <p className="font-bold text-purple-700 dark:text-purple-300">International & Govt</p>
+                                <p className="text-zinc-500">123 Cards</p>
+                            </div>
+                        </div>
+
+                        <p className="text-[11px] text-zinc-600 dark:text-zinc-400">
+                            Highlights: <strong>Union Budget 2026-27</strong>, <strong>U-19 World Cup 2026</strong>, <strong>Chandrayaan-4 landing site</strong>, and <strong>Pax Silica Coalition</strong>.
+                        </p>
+                        
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Check them out in the Flashcards section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "09.03.2026",
         items: [
             {

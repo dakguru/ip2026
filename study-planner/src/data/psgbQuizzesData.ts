@@ -79,4 +79,24 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-76', "Goods and Services Tax (GST) Act, 2017", 'Paper II', []),
   createTopic('psgb-p1-pyq', 'LDCE PS Gr. B 2023 — Paper I PYQ', 'PYQ', [150, 151, 152, 153, 154]),
   createTopic('psgb-p2-pyq', 'LDCE PS Gr. B 2023 — Paper II PYQ', 'PYQ', [155, 156, 157, 158, 159, 160]),
+
+  // --- CURRENT AFFAIRS (JAN 2026) ---
+  createTopic('ca-jan26-1', 'Most Important Current Affairs (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-2', 'Banking, Economy, Business & Finance (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-3', 'Government Schemes (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-4', 'National News (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-5', 'Sports (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-6', 'MoU’s & AGREEMENTS (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-7', 'International Affairs (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+  createTopic('ca-jan26-8', 'Science and Tech (Jan 2026)', 'Current Affairs', [], 'January - 2026'),
+
+  // --- CURRENT AFFAIRS (FEB 2026) ---
+  createTopic('ca-feb26-1', 'Most Important Current Affairs (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-2', 'Banking, Economy, Business & Finance (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-3', 'Government Schemes (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-4', 'National News (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-5', 'Sports (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-6', 'MoU’s & AGREEMENTS (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-7', 'International Affairs (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+  createTopic('ca-feb26-8', 'Science and Tech (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
 ];
