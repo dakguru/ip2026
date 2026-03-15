@@ -8,7 +8,7 @@ import { format, eachDayOfInterval, addDays } from "date-fns";
 import { useParams } from "next/navigation";
 import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { generateMockTestAnswerSheetPDF, getMockTestAnswerSheetPDFBlob } from "@/lib/pdf-generator-mocks";
-import { FULL_SCHEDULE } from "@/data/schedule";
+import { FULL_SCHEDULE, ScheduleItem } from "@/data/schedule";
 
 
 interface MockResult {
@@ -45,8 +45,8 @@ const TEST_SCHEDULE_MAP: Record<string, { start: Date; end: Date }> = {
 const getTopicsForMock = (saturdayDate: Date): string[] => {
     if (!saturdayDate || saturdayDate.getTime() === 0) return ["Sample Mock Test Topics"];
     const mondayDate = addDays(saturdayDate, -5);
-    const planMap = new Map();
-    FULL_SCHEDULE.forEach((item: any) => {
+    const planMap = new Map<string, ScheduleItem>();
+    FULL_SCHEDULE.forEach((item) => {
         planMap.set(item.date, item);
     });
 
@@ -59,7 +59,7 @@ const getTopicsForMock = (saturdayDate: Date): string[] => {
 
         if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
             // Remove " – Day X", " - Day X", " (Day X)", etc.
-            let cleanTopic = item.subTopic
+            const cleanTopic = item.subTopic
                 .replace(/\s*[–\-\(]*\s*Day\s*\d+\s*(of\s*\d+)?\s*\)*\s*$/gi, '')
                 .trim();
             
@@ -470,7 +470,7 @@ export default function MockTestDetailResultsPage() {
                                                                             userName: result.userName,
                                                                             score: result.score,
                                                                             totalQuestions: result.totalQuestions || questions.length,
-                                                                            questions: questions as any,
+                                                                            questions: questions as any[],
                                                                             answers: result.answers || {},
                                                                             testName: formatTestName(testId),
                                                                             submittedAt: result.submittedAt,

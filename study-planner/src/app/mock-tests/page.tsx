@@ -159,7 +159,7 @@ export default function MockTestsPage() {
 
                 if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
                     // Remove " – Day X", " - Day X", " (Day X)", etc.
-                    let cleanTopic = item.subTopic
+                    const cleanTopic = item.subTopic
                         .replace(/\s*[–\-\(]*\s*Day\s*\d+\s*(of\s*\d+)?\s*\)*\s*$/gi, '')
                         .trim();
                     
@@ -1499,8 +1499,14 @@ function MockTestCard({
     );
 }
 
+interface LeaderboardEntry {
+    userName: string;
+    userEmail: string;
+    score: number;
+}
+
 function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null, isOpen: boolean, onClose: () => void, role?: string }) {
-    const [leaderboard, setLeaderboard] = useState<any[]>([]);
+    const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {

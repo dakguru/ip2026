@@ -30,7 +30,7 @@ const getTopicsForMock = (saturdayDate: Date): string[] => {
 
         if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
             // Remove " – Day X", " - Day X", " (Day X)", etc.
-            let cleanTopic = item.subTopic
+            const cleanTopic = item.subTopic
                 .replace(/\s*[–\-\(]*\s*Day\s*\d+\s*(of\s*\d+)?\s*\)*\s*$/gi, '')
                 .trim();
             
@@ -409,7 +409,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             const cookie = document.cookie.split('; ').find(row => row.startsWith('user_session='));
             let userRole = 'user';
             let userPlan = 'free';
-            let userEmail = '';
+            const userEmail = '';
 
             if (cookie) {
                 try {
