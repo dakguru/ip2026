@@ -32,6 +32,13 @@ const TEST_SCHEDULE_MAP: Record<string, { start: Date; end: Date }> = {
     "mock-2026-02-28": { start: new Date("2026-02-28T00:00:00+05:30"), end: new Date("2026-03-01T23:59:59+05:30") },
     "mock-2026-03-07": { start: new Date("2026-03-07T00:00:00+05:30"), end: new Date("2026-03-08T23:59:59+05:30") },
     "mock-2026-03-14": { start: new Date("2026-03-14T00:00:00+05:30"), end: new Date("2026-03-15T23:59:59+05:30") },
+    "mock-2026-03-21": { start: new Date("2026-03-21T00:00:00+05:30"), end: new Date("2026-03-22T23:59:59+05:30") },
+    "mock-2026-03-28": { start: new Date("2026-03-28T00:00:00+05:30"), end: new Date("2026-03-29T23:59:59+05:30") },
+    "mock-2026-04-04": { start: new Date("2026-04-04T00:00:00+05:30"), end: new Date("2026-04-05T23:59:59+05:30") },
+    "mock-2026-04-11": { start: new Date("2026-04-11T00:00:00+05:30"), end: new Date("2026-04-12T23:59:59+05:30") },
+    "mock-2026-04-18": { start: new Date("2026-04-18T00:00:00+05:30"), end: new Date("2026-04-19T23:59:59+05:30") },
+    "mock-2026-04-25": { start: new Date("2026-04-25T00:00:00+05:30"), end: new Date("2026-04-26T23:59:59+05:30") },
+    "mock-2026-05-02": { start: new Date("2026-05-02T00:00:00+05:30"), end: new Date("2026-05-03T23:59:59+05:30") },
     "live-sample": { start: new Date(0), end: new Date("2099-12-31T23:59:59+05:30") },
 };
 
@@ -51,7 +58,11 @@ const getTopicsForMock = (saturdayDate: Date): string[] => {
         const item = planMap.get(dateStr);
 
         if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
-            const cleanTopic = item.subTopic.trim();
+            // Remove " – Day X", " - Day X", " (Day X)", etc.
+            let cleanTopic = item.subTopic
+                .replace(/\s*[–\-\(]*\s*Day\s*\d+\s*(of\s*\d+)?\s*\)*\s*$/gi, '')
+                .trim();
+            
             if (!weekTopics.includes(cleanTopic)) {
                 weekTopics.push(cleanTopic);
             }
@@ -238,6 +249,36 @@ export default function MockTestDetailResultsPage() {
         }
     };
 
+    const handleExportCSV = () => {
+        if (results.length === 0) return;
+
+        const headers = ["Rank", "Name", "Email", "Score", "Total Questions", "Percentage", "Attempted At"];
+        const rows = results.map((r, index) => [
+            index + 1,
+            r.userName,
+            r.userEmail,
+            r.score,
+            r.totalQuestions || 50,
+            `${((r.score / (r.totalQuestions || 50)) * 100).toFixed(1)}%`,
+            new Date(r.submittedAt).toLocaleString()
+        ]);
+
+        const csvContent = [
+            headers.join(","),
+            ...rows.map(row => row.map(cell => `"${cell}"`).join(","))
+        ].join("\n");
+
+        const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", `DakGuru_Results_${testId}.csv`);
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 transition-colors">
             <div className="max-w-7xl mx-auto">
@@ -320,7 +361,11 @@ export default function MockTestDetailResultsPage() {
                                     </>
                                 )}
                             </button>
-                            <button className="flex items-center gap-2 px-4 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
+                            <button
+                                onClick={handleExportCSV}
+                                disabled={results.length === 0}
+                                className="flex items-center gap-2 px-4 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
                                 <Download className="w-4 h-4" /> Export CSV
                             </button>
                         </div>

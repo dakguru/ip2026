@@ -15,6 +15,9 @@ import { useCourse } from '@/contexts/CourseContext';
 import AppScreenWrapper from '@/components/AppScreenWrapper';
 import { getMembershipLevel } from '@/lib/membership-utils';
 import FormattedQuestionText from '@/components/quiz/FormattedQuestionText';
+import ConfirmExitModal from '@/components/ConfirmExitModal';
+import { App } from '@capacitor/app';
+import { Capacitor } from '@capacitor/core';
 
 // Custom styles for range slider
 const sliderStyles = `
@@ -106,6 +109,7 @@ export default function QuizDashboard() {
         }
     }, []);
 
+
     // Config State
     const [quizRange, setQuizRange] = useState<{ start: number; end: number }>({ start: 1, end: 10 });
 
@@ -114,6 +118,38 @@ export default function QuizDashboard() {
     const [answers, setAnswers] = useState<Record<string, number>>({}); // qId -> optionIndex
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [timeTaken, setTimeTaken] = useState(0);
+
+    // --- ANDROID BACK BUTTON HANDLING ---
+    useEffect(() => {
+        if (!Capacitor.isNativePlatform()) return;
+
+        let backListener: any;
+        const setupListener = async () => {
+            backListener = await App.addListener('backButton', (data) => {
+                if (view === 'quiz' && !isSubmitted) {
+                    setShowExitConfirm(true);
+                } else if (view === 'config') {
+                    setView('topics');
+                } else if (view === 'quiz' && isSubmitted) {
+                    resetToDashboard();
+                } else {
+                    if (data.canGoBack) {
+                        window.history.back();
+                    } else {
+                        App.exitApp();
+                    }
+                }
+            });
+        };
+
+        setupListener();
+
+        return () => {
+            if (backListener) backListener.remove();
+        };
+    }, [view, isSubmitted]);
+
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
 
     // Helpers
     // const activeTopic = QUIZ_DATA.find(t => t.id === selectedTopic);
@@ -824,6 +860,14 @@ export default function QuizDashboard() {
                     </section>
                 </div>
             </div>
+            <ConfirmExitModal 
+                isOpen={showExitConfirm}
+                onConfirm={() => {
+                    setShowExitConfirm(false);
+                    resetToDashboard();
+                }}
+                onCancel={() => setShowExitConfirm(false)}
+            />
         </AppScreenWrapper>
     );
 }

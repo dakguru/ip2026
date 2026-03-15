@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import HomeHeader from '@/components/HomeHeader';
 import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check, Loader2 } from 'lucide-react';
 import Link from 'next/link';
@@ -19,6 +19,8 @@ import { Toast } from '@capacitor/toast';
 import { FileOpener } from '@capacitor-community/file-opener';
 import AppScreenWrapper from '@/components/AppScreenWrapper';
 import { ShieldAlert, Info } from 'lucide-react';
+import { App } from '@capacitor/app';
+import ConfirmExitModal from '@/components/ConfirmExitModal';
 
 // --- DATA ---
 interface Note {
@@ -779,6 +781,54 @@ export default function NotesPage() {
     const [selectedPdf, setSelectedPdf] = useState<{ url: string, title: string } | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
     const [planId, setPlanId] = useState<string>('');
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
+
+    // --- ANDROID BACK BUTTON HANDLING ---
+    const selectedPdfRef = useRef(selectedPdf);
+    useEffect(() => {
+        selectedPdfRef.current = selectedPdf;
+    }, [selectedPdf]);
+
+    useEffect(() => {
+        if (!Capacitor.isNativePlatform()) return;
+
+        let backListener: any;
+        const setupListener = async () => {
+            backListener = await App.addListener('backButton', (data) => {
+                if (selectedPdfRef.current) {
+                    setShowExitConfirm(true);
+                } else if (showAdvisory || showAccuracyAdvisory) {
+                    setShowAdvisory(false);
+                    setShowAccuracyAdvisory(false);
+                } else {
+                    if (data.canGoBack) {
+                        window.history.back();
+                    } else {
+                        App.exitApp();
+                    }
+                }
+            });
+        };
+
+        setupListener();
+
+        return () => {
+            if (backListener) backListener.remove();
+        };
+    }, []);
+
+    const handleExitRequest = () => {
+        if (selectedPdf) {
+            setShowExitConfirm(true);
+        } else {
+            setSelectedPdf(null);
+        }
+    };
+
+    const confirmExit = () => {
+        setSelectedPdf(null);
+        setShowExitConfirm(false);
+    };
 
     // Advisory Modal State
     const [showAdvisory, setShowAdvisory] = useState(false);
@@ -1198,7 +1248,7 @@ export default function NotesPage() {
                                     </div>
                                 </h3>
                                 <button
-                                    onClick={() => setSelectedPdf(null)}
+                                    onClick={handleExitRequest}
                                     className="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-500 dark:text-zinc-400 transition-colors shrink-0"
                                 >
                                     <span className="sr-only">Close</span>
@@ -1340,6 +1390,12 @@ export default function NotesPage() {
                         </div>
                     </div>
                 )}
+
+                <ConfirmExitModal 
+                    isOpen={showExitConfirm}
+                    onConfirm={confirmExit}
+                    onCancel={() => setShowExitConfirm(false)}
+                />
             </div>
         </AppScreenWrapper>
     );

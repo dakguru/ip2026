@@ -62,6 +62,7 @@ import Image from "next/image";
 import FlashcardsIntroBanner from "@/components/FlashcardsIntroBanner";
 import PremiumFlashCardDeck from "@/components/flashcards/PremiumFlashCardDeck";
 import { Capacitor } from '@capacitor/core';
+import ConfirmExitModal from '@/components/ConfirmExitModal';
 import { App } from '@capacitor/app';
 import NativeFlashcardsHomeV2 from "@/components/flashcards/NativeFlashcardsHomeV2";
 
@@ -131,6 +132,20 @@ export default function FlashcardsPage() {
 
     // State
     const [selectedDeckId, setSelectedDeckId] = useState<string | null>(null);
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
+
+    const handleExitRequest = () => {
+        if (selectedDeckId) {
+            setShowExitConfirm(true);
+        } else {
+            handleBackToCategories();
+        }
+    };
+
+    const confirmExit = () => {
+        setSelectedDeckId(null);
+        setShowExitConfirm(false);
+    };
     const [searchQuery, setSearchQuery] = useState("");
     const [activeFilter, setActiveFilter] = useState("All");
     const [showCategories, setShowCategories] = useState(true); // New state for view mode
@@ -182,10 +197,8 @@ export default function FlashcardsPage() {
         const setupListener = async () => {
             backListener = await App.addListener('backButton', (data) => {
                 if (selectedDeckIdRef.current) {
-                    // If in study mode, just close the deck
-                    setSelectedDeckId(null);
+                    setShowExitConfirm(true);
                 } else {
-                    // If on the main list, go back (or exit if no history)
                     if (data.canGoBack) {
                         router.back();
                     } else {
@@ -529,6 +542,7 @@ export default function FlashcardsPage() {
         // ANDROID V2 IMMERSIVE HOME
         if (Capacitor.isNativePlatform() || isMobile) {
             return (
+                <>
                 <NativeFlashcardsHomeV2
                     decks={finalDecks}
                     progress={deckProgress}
@@ -541,6 +555,7 @@ export default function FlashcardsPage() {
                     hasAccess={hasAccess}
                     course={course}
                 />
+                </>
             );
         }
 
@@ -1003,11 +1018,17 @@ export default function FlashcardsPage() {
                     title={selectedDeckId === 'bookmarks' ? 'Bookmarked Cards' : (activeDeck[0]?.tag || "Study Session")}
                     externalIndex={currentCardIndex}
                     onIndexChange={setCurrentCardIndex}
+                    onBack={handleExitRequest}
                     initialShuffled={isInitiallyShuffled}
                     bookmarks={bookmarks}
                     onBookmarkToggle={handleBookmarkToggle}
                 />
             </main>
+            <ConfirmExitModal 
+                isOpen={showExitConfirm}
+                onConfirm={confirmExit}
+                onCancel={() => setShowExitConfirm(false)}
+            />
         </div>
     );
 }

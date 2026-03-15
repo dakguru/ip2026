@@ -5,6 +5,7 @@ import { ArrowLeft, Clock, Grid, ChevronLeft, ChevronRight, Bookmark, Send, Chec
 import { Question } from "@/lib/quizTypes";
 import { motion, AnimatePresence } from "framer-motion";
 import FormattedQuestionText from "./FormattedQuestionText";
+import ConfirmExitModal from "@/components/ConfirmExitModal";
 
 interface NativeQuizRunnerProps {
     quizTitle: string;
@@ -407,47 +408,11 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
             </AnimatePresence>
 
             {/* 5. Exit Alert */}
-            <AnimatePresence>
-                {showExitConfirm && (
-                    <div className="fixed inset-0 z-[60] flex items-center justify-center p-6">
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-                            onClick={() => setShowExitConfirm(false)}
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="bg-white dark:bg-zinc-900 rounded-[2rem] p-8 w-full max-w-sm relative shadow-2xl z-10 text-center"
-                        >
-                            <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500">
-                                <AlertCircle className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Leave Quiz?</h3>
-                            <p className="text-zinc-500 dark:text-zinc-400 mb-8 font-medium">
-                                Your progress will be lost. Are you sure you want to exit?
-                            </p>
-                            <div className="flex gap-4">
-                                <button
-                                    onClick={() => setShowExitConfirm(false)}
-                                    className="flex-1 px-6 py-3.5 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-bold"
-                                >
-                                    Stay
-                                </button>
-                                <button
-                                    onClick={confirmExit}
-                                    className="flex-1 px-6 py-3.5 rounded-2xl bg-red-600 text-white font-bold shadow-lg shadow-red-500/30"
-                                >
-                                    Leave
-                                </button>
-                            </div>
-                        </motion.div>
-                    </div>
-                )}
-            </AnimatePresence>
+            <ConfirmExitModal 
+                isOpen={showExitConfirm}
+                onConfirm={confirmExit}
+                onCancel={() => setShowExitConfirm(false)}
+            />
         </div>
     );
 }

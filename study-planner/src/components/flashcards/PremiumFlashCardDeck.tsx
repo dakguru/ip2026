@@ -19,6 +19,7 @@ interface PremiumFlashCardDeckProps {
     title: string;
     externalIndex?: number;
     onIndexChange?: (index: number) => void;
+    onBack?: () => void;
     bookmarks?: Set<string | number>;
     onBookmarkToggle?: (id: string | number) => void;
     initialShuffled?: boolean;
@@ -29,6 +30,7 @@ export default function PremiumFlashCardDeck({
     title,
     externalIndex,
     onIndexChange,
+    onBack,
     initialShuffled = false,
     bookmarks,
     onBookmarkToggle
@@ -136,14 +138,24 @@ export default function PremiumFlashCardDeck({
             {/* ANDROID STYLE COMPACT HEADER (Matches Screenshot 1) */}
             <div className="w-full pt-4 pb-2 px-6">
                 <div className="flex justify-between items-start mb-1">
-                    <div className="flex-1 min-w-0">
-                        <h2 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white truncate tracking-tight uppercase leading-tight">
-                            {/* If displaying Bookmarks, maybe show original tag? No, title is fine */}
-                            {title}
-                        </h2>
-                        <p className="text-[10px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-widest mt-0.5">
-                            Card {currentIndex + 1} of {displayCards.length}
-                        </p>
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
+                        {onBack && (
+                            <button 
+                                onClick={onBack}
+                                className="p-2 -ml-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/5 text-slate-600 dark:text-slate-400 transition-colors"
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </button>
+                        )}
+                        <div className="min-w-0">
+                            <h2 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white truncate tracking-tight uppercase leading-tight">
+                                {/* If displaying Bookmarks, maybe show original tag? No, title is fine */}
+                                {title}
+                            </h2>
+                            <p className="text-[10px] font-black text-slate-400 dark:text-slate-600 uppercase tracking-widest mt-0.5">
+                                Card {currentIndex + 1} of {displayCards.length}
+                            </p>
+                        </div>
                     </div>
                     <div className="flex gap-2 ml-4">
                         <button

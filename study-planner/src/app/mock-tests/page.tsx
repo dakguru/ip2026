@@ -10,28 +10,10 @@ import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useCourse } from "@/contexts/CourseContext";
 import Script from "next/script";
 import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
-import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
-import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
-import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
-import { WEEKLY_MOCK_04_QUESTIONS } from "@/data/weekly_mock_data_04";
-import { WEEKLY_MOCK_05_QUESTIONS } from "@/data/weekly_mock_data_05";
-import { WEEKLY_MOCK_06_QUESTIONS } from "@/data/weekly_mock_data_06";
-import { WEEKLY_MOCK_07_QUESTIONS } from "@/data/weekly_mock_data_07";
-import { WEEKLY_MOCK_08_QUESTIONS } from "@/data/weekly_mock_data_08";
+import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { FileDown } from "lucide-react";
 import AppScreenWrapper from "@/components/AppScreenWrapper";
 
-// Map IDs to Question Data for PDF Generation
-const TEST_QUESTIONS_MAP: Record<string, any[]> = {
-    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
-    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
-    "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS,
-    "mock-2026-02-07": WEEKLY_MOCK_04_QUESTIONS,
-    "mock-2026-02-14": WEEKLY_MOCK_05_QUESTIONS,
-    "mock-2026-02-21": WEEKLY_MOCK_06_QUESTIONS,
-    "mock-2026-02-28": WEEKLY_MOCK_07_QUESTIONS,
-    "mock-2026-03-07": WEEKLY_MOCK_08_QUESTIONS
-};
 
 // Mock Test Interface
 interface MockTest {
@@ -176,7 +158,11 @@ export default function MockTestsPage() {
                 const item = planMap.get(dateStr);
 
                 if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
-                    const cleanTopic = item.subTopic.trim();
+                    // Remove " – Day X", " - Day X", " (Day X)", etc.
+                    let cleanTopic = item.subTopic
+                        .replace(/\s*[–\-\(]*\s*Day\s*\d+\s*(of\s*\d+)?\s*\)*\s*$/gi, '')
+                        .trim();
+                    
                     if (!weekTopics.includes(cleanTopic)) {
                         weekTopics.push(cleanTopic);
                     }
@@ -1364,12 +1350,12 @@ function MockTestCard({
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
                 {/* Top 7 Rank Holders Button */}
-                {(isCompleted || (role === 'admin' && isLive)) && onShowRankList && (
+                {(isEnded || (role === 'admin' && isLive)) && onShowRankList && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         className="w-full py-2.5 sm:py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all transform hover:scale-[1.02] active:scale-95 px-2 mb-2"
                     >
-                        <Trophy className="w-4 h-4 text-white fill-current shrink-0" /> <span>{isCompleted ? "View Top 7 Rankers" : "Live Leaderboard (Admin)"}</span>
+                        <Trophy className="w-4 h-4 text-white fill-current shrink-0" /> <span>{isEnded ? "View Top 7 Rankers" : "Live Leaderboard (Admin)"}</span>
                     </button>
                 )}
 

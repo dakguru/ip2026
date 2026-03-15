@@ -5,15 +5,7 @@ import { useRouter } from "next/navigation";
 import { Trophy, Loader2, Clock, HelpCircle, CheckCircle2, AlertCircle, History, FileDown, Home, ChevronLeft, ChevronRight, Send, Bookmark, XCircle, Flag, X, Lock as LockIcon, Sparkles, ArrowLeft, LayoutGrid, Timer, Save } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import { WEEKLY_MOCK_01_QUESTIONS } from "@/data/weekly_mock_data_01";
-import { WEEKLY_MOCK_02_QUESTIONS } from "@/data/weekly_mock_data_02";
-import { WEEKLY_MOCK_03_QUESTIONS } from "@/data/weekly_mock_data_03";
-import { WEEKLY_MOCK_04_QUESTIONS } from "@/data/weekly_mock_data_04";
-import { WEEKLY_MOCK_05_QUESTIONS } from "@/data/weekly_mock_data_05";
-import { WEEKLY_MOCK_06_QUESTIONS } from "@/data/weekly_mock_data_06";
-import { WEEKLY_MOCK_07_QUESTIONS } from "@/data/weekly_mock_data_07";
-import { WEEKLY_MOCK_08_QUESTIONS } from "@/data/weekly_mock_data_08";
-import { WEEKLY_MOCK_09_QUESTIONS } from "@/data/weekly_mock_data_09";
+import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { Question } from "@/data/live_mock_data";
 import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,18 +13,6 @@ import { FULL_SCHEDULE } from "@/data/schedule";
 import { format, eachDayOfInterval, addDays } from "date-fns";
 import FormattedQuestionText from "@/components/quiz/FormattedQuestionText";
 
-// Map IDs to Data
-const TEST_DATA_MAP: Record<string, Question[]> = {
-    "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
-    "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
-    "mock-2026-01-31": WEEKLY_MOCK_03_QUESTIONS,
-    "mock-2026-02-07": WEEKLY_MOCK_04_QUESTIONS,
-    "mock-2026-02-14": WEEKLY_MOCK_05_QUESTIONS,
-    "mock-2026-02-21": WEEKLY_MOCK_06_QUESTIONS,
-    "mock-2026-02-28": WEEKLY_MOCK_07_QUESTIONS,
-    "mock-2026-03-07": WEEKLY_MOCK_08_QUESTIONS,
-    "mock-2026-03-14": WEEKLY_MOCK_09_QUESTIONS
-};
 
 const getTopicsForMock = (saturdayDate: Date): string[] => {
     const mondayDate = addDays(saturdayDate, -5);
@@ -49,7 +29,11 @@ const getTopicsForMock = (saturdayDate: Date): string[] => {
         const item = planMap.get(dateStr);
 
         if (item && item.subTopic && !item.subTopic.toLowerCase().includes("revision") && !item.day.toLowerCase().includes("sunday")) {
-            const cleanTopic = item.subTopic.trim();
+            // Remove " – Day X", " - Day X", " (Day X)", etc.
+            let cleanTopic = item.subTopic
+                .replace(/\s*[–\-\(]*\s*Day\s*\d+\s*(of\s*\d+)?\s*\)*\s*$/gi, '')
+                .trim();
+            
             if (!weekTopics.includes(cleanTopic)) {
                 weekTopics.push(cleanTopic);
             }
@@ -88,6 +72,11 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         endDate: new Date("2026-02-01T23:59:59+05:30"),
         title: "Weekly Mock Test - 03"
     },
+    "mock-2026-02-07": {
+        startDate: new Date("2026-02-07T00:00:00+05:30"),
+        endDate: new Date("2026-02-08T23:59:59+05:30"),
+        title: "Weekly Mock Test - 04"
+    },
     "mock-2026-02-14": {
         startDate: new Date("2026-02-14T00:00:00+05:30"),
         endDate: new Date("2026-02-15T23:59:59+05:30"),
@@ -112,6 +101,41 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-03-14T00:00:00+05:30"),
         endDate: new Date("2026-03-15T23:59:59+05:30"),
         title: "Weekly Mock Test - 09"
+    },
+    "mock-2026-03-21": {
+        startDate: new Date("2026-03-21T00:00:00+05:30"),
+        endDate: new Date("2026-03-22T23:59:59+05:30"),
+        title: "Weekly Mock Test - 10"
+    },
+    "mock-2026-03-28": {
+        startDate: new Date("2026-03-28T00:00:00+05:30"),
+        endDate: new Date("2026-03-29T23:59:59+05:30"),
+        title: "Weekly Mock Test - 11"
+    },
+    "mock-2026-04-04": {
+        startDate: new Date("2026-04-04T00:00:00+05:30"),
+        endDate: new Date("2026-04-05T23:59:59+05:30"),
+        title: "Weekly Mock Test - 12"
+    },
+    "mock-2026-04-11": {
+        startDate: new Date("2026-04-11T00:00:00+05:30"),
+        endDate: new Date("2026-04-12T23:59:59+05:30"),
+        title: "Weekly Mock Test - 13"
+    },
+    "mock-2026-04-18": {
+        startDate: new Date("2026-04-18T00:00:00+05:30"),
+        endDate: new Date("2026-04-19T23:59:59+05:30"),
+        title: "Weekly Mock Test - 14"
+    },
+    "mock-2026-04-25": {
+        startDate: new Date("2026-04-25T00:00:00+05:30"),
+        endDate: new Date("2026-04-26T23:59:59+05:30"),
+        title: "Weekly Mock Test - 15"
+    },
+    "mock-2026-05-02": {
+        startDate: new Date("2026-05-02T00:00:00+05:30"),
+        endDate: new Date("2026-05-03T23:59:59+05:30"),
+        title: "Weekly Mock Test - 16"
     }
 };
 
@@ -354,20 +378,22 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         const loadTest = async () => {
             // 1. Get Questions
             // 1. Get Questions
-            let data = TEST_DATA_MAP[testId];
+            let data = TEST_QUESTIONS_MAP[testId];
 
             // Debugging / Fallback for Mock 4
             if (!data && testId === 'mock-2026-02-07') {
                 console.warn("Test ID matched but data lookup failed. Attempting direct assignment.");
+                // This fallback is now redundant with TEST_QUESTIONS_MAP but kept for safety if map is out of sync
+                const { WEEKLY_MOCK_04_QUESTIONS } = await import("@/data/weekly_mock_data_04");
                 data = WEEKLY_MOCK_04_QUESTIONS;
             }
 
             if (!data) {
                 console.error(`Test data not found for ID: ${testId}`);
-                console.log("Available Test IDs:", Object.keys(TEST_DATA_MAP));
+                console.log("Available Test IDs:", Object.keys(TEST_QUESTIONS_MAP));
 
                 // Check if Questions are loaded
-                if (testId === 'mock-2026-02-07' && !WEEKLY_MOCK_04_QUESTIONS) {
+                if (testId === 'mock-2026-02-07') {
                     alert("System Error: Mock Test 04 data is not loaded correctly. Please contact support.");
                 } else {
                     alert(`Test data not found for ID: "${testId}". Please go back and try again.`);
