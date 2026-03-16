@@ -783,37 +783,47 @@ export default function NotesPage() {
     const [planId, setPlanId] = useState<string>('');
     const [showExitConfirm, setShowExitConfirm] = useState(false);
 
+    // Advisory Modal State
+    const [showAdvisory, setShowAdvisory] = useState(false);
+    const [showAccuracyAdvisory, setShowAccuracyAdvisory] = useState(false);
+    const [advisoryAgreed, setAdvisoryAgreed] = useState(false);
+    const [pendingAction, setPendingAction] = useState<{ type: 'view' | 'download', url: string, title: string, filename?: string } | null>(null);
+
     // --- ANDROID BACK BUTTON HANDLING ---
     const selectedPdfRef = useRef(selectedPdf);
+    const showAdvisoryRef = useRef(showAdvisory);
+    const showAccuracyAdvisoryRef = useRef(showAccuracyAdvisory);
+    const showExitConfirmRef = useRef(showExitConfirm);
+
     useEffect(() => {
         selectedPdfRef.current = selectedPdf;
-    }, [selectedPdf]);
+        showAdvisoryRef.current = showAdvisory;
+        showAccuracyAdvisoryRef.current = showAccuracyAdvisory;
+        showExitConfirmRef.current = showExitConfirm;
+    }, [selectedPdf, showAdvisory, showAccuracyAdvisory, showExitConfirm]);
 
     useEffect(() => {
         if (!Capacitor.isNativePlatform()) return;
 
-        let backListener: any;
-        const setupListener = async () => {
-            backListener = await App.addListener('backButton', (data) => {
-                if (selectedPdfRef.current) {
-                    setShowExitConfirm(true);
-                } else if (showAdvisory || showAccuracyAdvisory) {
-                    setShowAdvisory(false);
-                    setShowAccuracyAdvisory(false);
+        const listenerPromise = App.addListener('backButton', (data) => {
+            if (showExitConfirmRef.current) {
+                setShowExitConfirm(false);
+            } else if (selectedPdfRef.current) {
+                setShowExitConfirm(true);
+            } else if (showAdvisoryRef.current || showAccuracyAdvisoryRef.current) {
+                setShowAdvisory(false);
+                setShowAccuracyAdvisory(false);
+            } else {
+                if (data.canGoBack) {
+                    window.history.back();
                 } else {
-                    if (data.canGoBack) {
-                        window.history.back();
-                    } else {
-                        App.exitApp();
-                    }
+                    App.exitApp();
                 }
-            });
-        };
-
-        setupListener();
+            }
+        });
 
         return () => {
-            if (backListener) backListener.remove();
+            listenerPromise.then(handle => handle.remove());
         };
     }, []);
 
@@ -829,12 +839,6 @@ export default function NotesPage() {
         setSelectedPdf(null);
         setShowExitConfirm(false);
     };
-
-    // Advisory Modal State
-    const [showAdvisory, setShowAdvisory] = useState(false);
-    const [showAccuracyAdvisory, setShowAccuracyAdvisory] = useState(false);
-    const [advisoryAgreed, setAdvisoryAgreed] = useState(false);
-    const [pendingAction, setPendingAction] = useState<{ type: 'view' | 'download', url: string, title: string, filename?: string } | null>(null);
 
     const handleActionRequest = (type: 'view' | 'download', url: string, title: string, filename?: string) => {
         // Skip advisory for SB Orders

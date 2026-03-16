@@ -16,6 +16,38 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "16.03.2026",
+        items: [
+            {
+                title: "New PDF Notes Uploaded",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have uploaded 3 new PDF Notes for <strong>PS Group B Course Mode</strong>:</p>
+
+                        <div className="space-y-2">
+                            <p className="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wide">Paper I</p>
+                            <ul className="list-disc pl-4 space-y-1">
+                                <li>Establishment Norms</li>
+                            </ul>
+                        </div>
+
+                        <div className="space-y-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <p className="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wide">Paper II</p>
+                            <ul className="list-disc pl-4 space-y-1">
+                                <li>Swatchh Bharat</li>
+                                <li>Public Accountants Default Act, 1850</li>
+                            </ul>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Check them out in the Notes section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "14.03.2026",
         items: [
             {
@@ -100,12 +132,12 @@ const UPDATES_DATA: UpdateGroup[] = [
                 title: "Updated PYQs for PS Group B Course Mode",
                 desc: (
                     <div className="space-y-2">
-                        <p>We have integrated the <strong>LDCE PS Gr. B 2023 Previous Year Questions</strong> for interactive practice:</p>
+                        <p>We have integrated the <strong>LDCE PS Gr. B 2023 Previous Year Questions</strong> for interactive study:</p>
                         <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
                             <li><strong>Paper I PYQ:</strong> General Financial Rules, Service Rules & other Acts.</li>
                             <li><strong>Paper II PYQ:</strong> Postal Operations, SB, PLI & Allied Topics.</li>
                         </ul>
-                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Start practicing in the Previous Year Papers section!</p>
+                        <p className="pt-1 text-xs text-blue-600 dark:text-blue-400 font-medium">👉 Start studying in the Previous Year Papers section!</p>
                     </div>
                 )
             }

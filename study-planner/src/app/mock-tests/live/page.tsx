@@ -762,7 +762,7 @@ export default function LiveMockTestPage() {
                         <h1 className="text-3xl md:text-6xl font-black text-slate-900 dark:text-white mb-2 md:mb-4 tracking-tight">
                             {percentage >= 80 ? "Outstanding!" :
                                 percentage >= 60 ? "Great Job!" :
-                                    percentage >= 40 ? "Good Effort!" : "Keep Practicing!"}
+                                    percentage >= 40 ? "Good Effort!" : "Study!"}
                         </h1>
                         <p className="text-slate-500 dark:text-slate-400 text-base md:text-xl max-w-2xl mx-auto leading-relaxed">
                             Search for the perfect balance between speed and accuracy to master the exam.

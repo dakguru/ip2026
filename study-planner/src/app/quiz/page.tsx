@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock, ChevronRight } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
@@ -118,38 +118,52 @@ export default function QuizDashboard() {
     const [answers, setAnswers] = useState<Record<string, number>>({}); // qId -> optionIndex
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [timeTaken, setTimeTaken] = useState(0);
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
+
+    const viewRef = useRef(view);
+    const isSubmittedRef = useRef(isSubmitted);
+    const showExitConfirmRef = useRef(showExitConfirm);
+    
+    useEffect(() => {
+        viewRef.current = view;
+        isSubmittedRef.current = isSubmitted;
+        showExitConfirmRef.current = showExitConfirm;
+    }, [view, isSubmitted, showExitConfirm]);
 
     // --- ANDROID BACK BUTTON HANDLING ---
     useEffect(() => {
         if (!Capacitor.isNativePlatform()) return;
 
-        let backListener: any;
-        const setupListener = async () => {
-            backListener = await App.addListener('backButton', (data) => {
-                if (view === 'quiz' && !isSubmitted) {
-                    setShowExitConfirm(true);
-                } else if (view === 'config') {
-                    setView('topics');
-                } else if (view === 'quiz' && isSubmitted) {
-                    resetToDashboard();
-                } else {
-                    if (data.canGoBack) {
-                        window.history.back();
-                    } else {
-                        App.exitApp();
-                    }
-                }
-            });
-        };
+        const listenerPromise = App.addListener('backButton', (data) => {
+            const currentView = viewRef.current;
+            const submitted = isSubmittedRef.current;
+            
+            if (showExitConfirmRef.current) {
+                setShowExitConfirm(false);
+                return;
+            }
 
-        setupListener();
+            if (currentView === 'quiz' && !submitted) {
+                // Let NativeQuizRunner handle its own back intercept.
+                // We do nothing, which stops Capacitor from natively going back.
+                return;
+            } else if (currentView === 'quiz' && submitted) {
+                resetToDashboard();
+            } else if (currentView === 'config') {
+                setView('topics');
+            } else {
+                if (data.canGoBack) {
+                    window.history.back();
+                } else {
+                    App.exitApp();
+                }
+            }
+        });
 
         return () => {
-            if (backListener) backListener.remove();
+            listenerPromise.then(handle => handle.remove());
         };
-    }, [view, isSubmitted]);
-
-    const [showExitConfirm, setShowExitConfirm] = useState(false);
+    }, []);
 
     // Helpers
     // const activeTopic = QUIZ_DATA.find(t => t.id === selectedTopic);
@@ -200,7 +214,7 @@ export default function QuizDashboard() {
         // 4. Create a temporary set
         const tempSet: QuizSet = {
             id: `practice-${Date.now()}`,
-            title: `Practice: ${selectedTopic.title}`,
+            title: `Study: ${selectedTopic.title}`,
             questions: finalQuestions
         };
 
@@ -229,7 +243,7 @@ export default function QuizDashboard() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     topicId: selectedTopic?.id || 'unknown',
-                    topicTitle: generatedSet?.title.replace('Practice: ', '') || 'Practice',
+                    topicTitle: generatedSet?.title.replace('Study: ', '') || 'Study',
                     score: finalScore,
                     totalQuestions: generatedSet?.questions.length || 0,
                     correctAnswers: correct,
@@ -458,7 +472,7 @@ export default function QuizDashboard() {
                                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-tr from-yellow-400 to-orange-500 text-white rounded-full shadow-lg mb-6">
                                     <Trophy className="w-12 h-12" />
                                 </div>
-                                <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-2">Practice Completed!</h2>
+                                <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-2">Study Completed!</h2>
                                 <p className="text-zinc-500 dark:text-zinc-400 text-lg">
                                     You scored <span className="text-zinc-900 dark:text-zinc-100 font-bold">{score} / {total} {total > 0 && `(${Math.round(score / total * 100)}%)`}</span>
                                 </p>
@@ -753,7 +767,7 @@ export default function QuizDashboard() {
                                         onClick={startQuiz}
                                         className={`w-full py-4 text-white rounded-xl font-bold text-lg shadow-lg ${isPS ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-purple-200 dark:shadow-purple-900/20'} transition-all active:scale-95 flex items-center justify-center gap-2`}
                                     >
-                                        <PlayCircle className="w-5 h-5" /> Start Practice
+                                        <PlayCircle className="w-5 h-5" /> Start Study
                                     </button>
                                 </>
                             ) : (

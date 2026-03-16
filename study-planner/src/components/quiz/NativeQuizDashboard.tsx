@@ -111,7 +111,7 @@ export default function NativeQuizDashboard({
                         </div>
                         <div className="relative p-5 flex-1 flex flex-col">
                             <div className="inline-flex max-w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-2 border border-white/10">
-                                Practice Mode
+                                Study Mode
                             </div>
                             <h2 className="text-xl font-bold mb-2 pr-12">Topic-wise Quiz</h2>
                             <p className="text-emerald-50 text-[11px] font-medium max-w-[200px] mb-3 leading-relaxed">

@@ -66,7 +66,7 @@ export default function ConfirmExitModal({
                                 onClick={onCancel}
                                 className="w-full py-4 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all active:scale-95"
                             >
-                                No, Keep Practicing
+                                No, Keep Studying
                             </button>
                         </div>
                     </motion.div>

@@ -186,32 +186,32 @@ export default function FlashcardsPage() {
 
     // --- ANDROID BACK BUTTON HANDLING ---
     const selectedDeckIdRef = useRef(selectedDeckId);
+    const showExitConfirmRef = useRef(showExitConfirm);
+    
     useEffect(() => {
         selectedDeckIdRef.current = selectedDeckId;
-    }, [selectedDeckId]);
+        showExitConfirmRef.current = showExitConfirm;
+    }, [selectedDeckId, showExitConfirm]);
 
     useEffect(() => {
         if (!Capacitor.isNativePlatform()) return;
 
-        let backListener: any;
-        const setupListener = async () => {
-            backListener = await App.addListener('backButton', (data) => {
-                if (selectedDeckIdRef.current) {
-                    setShowExitConfirm(true);
+        const listenerPromise = App.addListener('backButton', (data) => {
+            if (showExitConfirmRef.current) {
+                setShowExitConfirm(false);
+            } else if (selectedDeckIdRef.current) {
+                setShowExitConfirm(true);
+            } else {
+                if (data.canGoBack) {
+                    router.back();
                 } else {
-                    if (data.canGoBack) {
-                        router.back();
-                    } else {
-                        App.exitApp();
-                    }
+                    App.exitApp();
                 }
-            });
-        };
-
-        setupListener();
+            }
+        });
 
         return () => {
-            if (backListener) backListener.remove();
+            listenerPromise.then(handle => handle.remove());
         };
     }, []);
 
@@ -758,7 +758,7 @@ export default function FlashcardsPage() {
                                     <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-2">PYQs</h3>
                                     <p className="text-slate-500 dark:text-slate-400 font-medium mb-6">Previous Year Questions. Analyze patterns and practice.</p>
                                     <div className="flex items-center text-sm font-bold text-amber-600 dark:text-amber-400">
-                                        Start Practicing <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                        Start Studying <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </div>
                             </motion.div>

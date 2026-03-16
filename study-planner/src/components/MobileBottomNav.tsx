@@ -43,7 +43,7 @@ export default function MobileBottomNav() {
     const navItems = [
         { label: "Home", href: "/", icon: Home },
         { label: "Learn", href: "/planner", icon: BookOpen },
-        { label: "Practice", href: "/quiz", icon: Trophy },
+        { label: "Study", href: "/quiz", icon: Trophy },
         {
             label: isPaidUser ? "Community" : "Upgrade",
             href: isPaidUser ? "/social" : "/pricing",

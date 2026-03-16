@@ -244,7 +244,7 @@ export default function PyqDashboard() {
         const finalQuestions = allQuestions.slice(0, count);
         const tempSet: QuizSet = {
             id: `pyq-${Date.now()}`,
-            title: `PYQ Practice: ${selectedTopic.title}`,
+            title: `PYQ Study: ${selectedTopic.title}`,
             questions: finalQuestions
         };
         setGeneratedSet(tempSet);
@@ -282,7 +282,7 @@ export default function PyqDashboard() {
                     <div className="bg-white dark:bg-zinc-900 w-full max-w-lg rounded-2xl shadow-xl border border-zinc-100 dark:border-zinc-800 overflow-hidden">
                         <div className="p-6 md:p-8">
                             <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">{selectedTopic.title}</h2>
-                            <p className="text-zinc-500 mb-8">Customize your practice session.</p>
+                            <p className="text-zinc-500 mb-8">Customize your study session.</p>
 
                             {totalAvailable > 0 ? (
                                 <>
@@ -319,7 +319,7 @@ export default function PyqDashboard() {
                                         onClick={startQuiz}
                                         className={`w-full py-4 text-white rounded-xl font-bold text-lg shadow-lg ${isPS ? 'bg-gradient-to-r from-teal-600 to-indigo-600 hover:from-teal-700 hover:to-indigo-700 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 shadow-cyan-200 dark:shadow-cyan-900/20'} transition-all active:scale-95 flex items-center justify-center gap-2`}
                                     >
-                                        <PlayCircle className="w-5 h-5" /> Start Practice
+                                        <PlayCircle className="w-5 h-5" /> Start Study
                                     </button>
                                 </>
                             ) : (
@@ -540,7 +540,7 @@ export default function PyqDashboard() {
                         </div>
                         <div>
                             <h1 className="text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">Previous Year Papers</h1>
-                            <p className="text-zinc-500 dark:text-zinc-400 text-lg">Practice with real exam questions.</p>
+                            <p className="text-zinc-500 dark:text-zinc-400 text-lg">Study with real exam questions.</p>
                         </div>
                     </div>
 
@@ -575,7 +575,7 @@ export default function PyqDashboard() {
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="w-1 h-8 rounded-full bg-gradient-to-b from-cyan-500 to-blue-600" />
                                     <div>
-                                        <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">MCQ Practice</h2>
+                                        <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">MCQ Study</h2>
                                         <p className="text-sm text-zinc-500 dark:text-zinc-400">Attempt previous year questions interactively</p>
                                     </div>
                                 </div>

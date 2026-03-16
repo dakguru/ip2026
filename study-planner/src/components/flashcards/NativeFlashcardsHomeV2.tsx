@@ -174,10 +174,10 @@ export default function NativeFlashcardsHomeV2({
                         />
                         <MobileCategoryCard
                             title="PYQs"
-                            subtitle="Previous Year Questions. Analyze patterns and practice."
+                            subtitle="Previous Year Questions. Analyze patterns and study."
                             icon={<Timer className="w-6 h-6" />}
                             theme="amber"
-                            actionText="Start Practicing"
+                            actionText="Start Studying"
                             onClick={() => setActiveFilter('PYQs')}
                         />
                         <MobileCategoryCard

@@ -63,12 +63,6 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "cyan"
         },
         {
-            "title": "Domestic/Foreign Post guidelines issued by Directorate",
-            "description": "Materials will be uploaded soon.",
-            "color": "slate",
-            "comingSoon": true
-        },
-        {
             "title": "Book of BO Rules",
             "description": "Book of BO Rules",
             "filename": "Book_of_BO_Rules.pdf",
@@ -137,12 +131,6 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "path": "/notes/paper-1/poli-rules-2011.pdf",
             "size": "0.4 MB",
             "color": "rose"
-        },
-        {
-            "title": "Guidelines issued by Directorate from time to time on PLI/RPLI and Core Insurance solution",
-            "description": "Materials will be uploaded soon.",
-            "color": "slate",
-            "comingSoon": true
         },
         {
             "title": "Citizen Charter of Department of Posts.",
@@ -274,9 +262,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Establishment Norms",
-            "description": "Materials will be uploaded soon.",
-            "color": "emerald",
-            "comingSoon": true
+            "description": "Establishment Norms",
+            "filename": "Establishment_Norms.pdf",
+            "path": "/notes/paper-1/Establishment_Norms.pdf",
+            "size": "4.4 MB",
+            "color": "emerald"
         },
     ],
     "Paper II": [
@@ -492,9 +482,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Swatchh Bharat",
-            "description": "Materials will be uploaded soon.",
-            "color": "violet",
-            "comingSoon": true
+            "description": "Swatchh Bharat",
+            "filename": "Swatchh_Bharat.pdf",
+            "path": "/notes/paper-3/Swatchh_Bharat.pdf",
+            "size": "0.5 MB",
+            "color": "violet"
         },
         {
             "title": "Inspection questionnaires.",
@@ -536,9 +528,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Public Accountants Default Act, 1850",
-            "description": "Materials will be uploaded soon.",
-            "color": "indigo",
-            "comingSoon": true
+            "description": "Public Accountants Default Act, 1850",
+            "filename": "Public_Accountants_Default_Act_1850.pdf",
+            "path": "/notes/paper-3/Public_Accountants_Default_Act_1850.pdf",
+            "size": "0.3 MB",
+            "color": "indigo"
         },
         {
             "title": "Revenue Recovery Act, 1890",

@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowLeft, Clock, Grid, ChevronLeft, ChevronRight, Bookmark, Send, CheckCircle2, XCircle, HelpCircle, AlertCircle } from "lucide-react";
 import { Question } from "@/lib/quizTypes";
 import { motion, AnimatePresence } from "framer-motion";
 import FormattedQuestionText from "./FormattedQuestionText";
 import ConfirmExitModal from "@/components/ConfirmExitModal";
+import { App } from "@capacitor/app";
+import { Capacitor } from "@capacitor/core";
 
 interface NativeQuizRunnerProps {
     quizTitle: string;
@@ -81,6 +83,33 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
         vibrate(20);
         onExit();
     };
+
+    // --- ANDROID BACK BUTTON HANDLING ---
+    const isPaletteOpenRef = useRef(isPaletteOpen);
+    const showExitConfirmRef = useRef(showExitConfirm);
+    
+    useEffect(() => {
+        isPaletteOpenRef.current = isPaletteOpen;
+        showExitConfirmRef.current = showExitConfirm;
+    }, [isPaletteOpen, showExitConfirm]);
+
+    useEffect(() => {
+        if (!Capacitor.isNativePlatform()) return;
+
+        const listenerPromise = App.addListener('backButton', () => {
+            if (isPaletteOpenRef.current) {
+                setIsPaletteOpen(false);
+            } else if (showExitConfirmRef.current) {
+                setShowExitConfirm(false);
+            } else {
+                setShowExitConfirm(true);
+            }
+        });
+
+        return () => {
+            listenerPromise.then(handle => handle.remove());
+        };
+    }, []);
 
     // Timer
     useEffect(() => {

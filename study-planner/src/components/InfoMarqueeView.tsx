@@ -29,7 +29,7 @@ export default function InfoMarqueeView() {
 
     const messages: MessageItem[] = [
         {
-            text: "Integrated 544 February 2026 Flashcards. Start practicing now!",
+            text: "📑 Subject specific PDFs uploaded in Paper I & II section. Start studying now!",
             action: null
         },
         {
