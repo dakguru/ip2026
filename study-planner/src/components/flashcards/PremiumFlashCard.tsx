@@ -127,16 +127,16 @@ export default function PremiumFlashCard({
 
                         {explanation && (
                             <div className={styles.explanationBox} onClick={(e) => e.stopPropagation()}>
-                                <div className="flex items-center gap-2 mb-2 font-black text-[9px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-                                    <Info className="w-3.5 h-3.5" /> Explanation
+                                <div className="flex items-center gap-2 mb-1.5 font-black text-[9px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                                    <Info className="w-3 h-3" /> Explanation
                                 </div>
                                 <div
-                                    className="overflow-y-auto pr-2 max-h-[220px] overscroll-contain touch-pan-y cursor-auto"
+                                    className="overflow-y-auto pr-1.5 max-h-[140px] md:max-h-[200px] overscroll-contain touch-pan-y cursor-auto custom-scrollbar"
                                     onPointerDown={(e) => e.stopPropagation()}
                                     onTouchStart={(e) => e.stopPropagation()}
                                 >
-                                    <div className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed pb-1">
-                                        <FormattedQuestionText text={explanation} className="text-sm font-bold text-slate-600 dark:text-slate-300 leading-relaxed" />
+                                    <div className="text-[12px] md:text-[13px] font-medium text-slate-600 dark:text-slate-300 leading-snug">
+                                        <FormattedQuestionText text={explanation} className="space-y-2" />
                                     </div>
                                 </div>
                             </div>
