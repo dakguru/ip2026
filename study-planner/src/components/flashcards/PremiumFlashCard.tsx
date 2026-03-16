@@ -131,7 +131,7 @@ export default function PremiumFlashCard({
                                     <Info className="w-3 h-3" /> Explanation
                                 </div>
                                 <div
-                                    className="overflow-y-auto pr-1.5 max-h-[140px] md:max-h-[200px] overscroll-contain touch-pan-y cursor-auto custom-scrollbar"
+                                    className={styles.explanationContent}
                                     onPointerDown={(e) => e.stopPropagation()}
                                     onTouchStart={(e) => e.stopPropagation()}
                                 >

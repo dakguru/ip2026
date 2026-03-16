@@ -138,49 +138,42 @@
   font-size: 12px;
   color: #475569;
   line-height: 1.5;
-  max-height: 220px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 transparent;
-  display: flex;
-  flex-direction: column;
   transition: all 0.3s ease;
   margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.explanationBox::-webkit-scrollbar {
-  width: 5px;
+.explanationContent {
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  max-height: 140px;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
 }
 
-.explanationBox::-webkit-scrollbar-track {
-  background: transparent;
+@media (min-width: 768px) {
+  .explanationContent {
+    max-height: 200px;
+  }
 }
 
-.explanationBox::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1;
-  border-radius: 20px;
-}
-
-:global(.custom-scrollbar)::-webkit-scrollbar {
+.explanationContent::-webkit-scrollbar {
   width: 4px;
 }
 
-:global(.custom-scrollbar)::-webkit-scrollbar-track {
+.explanationContent::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.02);
   border-radius: 10px;
 }
 
-:global(.custom-scrollbar)::-webkit-scrollbar-thumb {
+.explanationContent::-webkit-scrollbar-thumb {
   background-color: #cbd5e1;
   border-radius: 10px;
 }
 
-:global(.dark) :global(.custom-scrollbar)::-webkit-scrollbar-thumb {
+:global(.dark) .explanationContent::-webkit-scrollbar-thumb {
   background-color: #475569;
-}
-
-:global(.dark) .explanationBox::-webkit-scrollbar-thumb {
-  background-color: #334155;
 }
 
 .footer {
