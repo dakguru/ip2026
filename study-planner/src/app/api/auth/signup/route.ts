@@ -52,7 +52,7 @@ export async function POST(request: Request) {
             }
         }
 
-        if (!email || !password || !name) {
+        if (!email || !password || !name || !gender || !mobile || !courseMode) {
             return NextResponse.json(
                 { error: 'Missing required fields' },
                 { status: 400 }

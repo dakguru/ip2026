@@ -67,7 +67,7 @@ function AuthForm() {
                 return;
             }
             if (!formData.courseMode) {
-                setError("Please select a course.");
+                setError("Please select a preparation mode.");
                 setIsLoading(false);
                 return;
             }
@@ -205,7 +205,7 @@ function AuthForm() {
                                 </div>
                                 <div className="space-y-1.5">
                                     <label className="text-xs font-semibold text-gray-600 ml-1">
-                                        Full Name
+                                        Full Name <span className="text-red-500">*</span>
                                     </label>
                                     <div className="relative group">
                                         <div className="absolute left-3 top-3 text-gray-400 group-focus-within:text-blue-600 transition-colors">
@@ -227,7 +227,7 @@ function AuthForm() {
                                 {/* Gender Selection */}
                                 <div className="space-y-1.5">
                                     <label className="text-xs font-semibold text-gray-600 ml-1">
-                                        Gender
+                                        Gender <span className="text-red-500">*</span>
                                     </label>
                                     <div className="flex items-center gap-4 px-1">
                                         <label className="flex items-center gap-2 cursor-pointer group">
@@ -267,7 +267,7 @@ function AuthForm() {
                                 {/* Course Mode Selection */}
                                 <div className="space-y-1.5">
                                     <label className="text-xs font-semibold text-gray-600 ml-1">
-                                        Course
+                                        Preparation Mode <span className="text-red-500">*</span>
                                     </label>
                                     <div className="relative group">
                                         <div className="absolute left-3 top-3 text-gray-400 group-focus-within:text-blue-600 transition-colors">
@@ -280,7 +280,7 @@ function AuthForm() {
                                             className={`w-full bg-gray-50 border border-gray-200 rounded-xl py-2.5 pl-9 pr-9 text-sm outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-all appearance-none cursor-pointer ${formData.courseMode ? 'text-gray-900' : 'text-gray-400'}`}
                                             required
                                         >
-                                            <option value="" disabled>Select your course</option>
+                                            <option value="" disabled>Select preparation mode</option>
                                             <option value="LDCE_IP">LDCE IP Exam</option>
                                             <option value="PS_GR_B">PS Group &apos;B&apos; Exam</option>
                                         </select>
@@ -293,7 +293,7 @@ function AuthForm() {
                                 {/* Mobile No */}
                                 <div className="space-y-1.5">
                                     <label className="text-xs font-semibold text-gray-600 ml-1">
-                                        Mobile No.
+                                        Mobile No. <span className="text-red-500">*</span>
                                     </label>
                                     <div className="relative group">
                                         <div className="absolute left-3 top-3 text-gray-400 group-focus-within:text-blue-600 transition-colors">
@@ -315,7 +315,7 @@ function AuthForm() {
 
                                 <div className="space-y-1.5">
                                     <label className="text-xs font-semibold text-gray-600 ml-1">
-                                        Email ID
+                                        Email ID <span className="text-red-500">*</span>
                                     </label>
                                     <input
                                         name="email"
@@ -353,7 +353,7 @@ function AuthForm() {
                             ) : (
                                 <>
                                     <label className="text-xs font-semibold text-gray-600 ml-1 mt-2 block">
-                                        Create Password
+                                        Create Password <span className="text-red-500">*</span>
                                     </label>
                                     <div className="relative group">
                                         <div className="absolute left-3 top-3 text-gray-400 group-focus-within:text-blue-600 transition-colors">
@@ -378,7 +378,7 @@ function AuthForm() {
                                         </button>
                                     </div>
                                     <label className="text-xs font-semibold text-gray-600 ml-1 mt-2 block">
-                                        Confirm Password
+                                        Confirm Password <span className="text-red-500">*</span>
                                     </label>
                                     <div className="relative group">
                                         <div className="absolute left-3 top-3 text-gray-400 group-focus-within:text-blue-600 transition-colors">
