@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, Globe, Newspaper, History, Loader2, RefreshCw, AlertCircle, Trophy } from "lucide-react";
+import { ArrowLeft, Globe, Newspaper, History, Loader2, RefreshCw, AlertCircle, Trophy, Sparkles, ArrowRight } from "lucide-react";
 import { format } from "date-fns";
 import AppScreenWrapper from "@/components/AppScreenWrapper";
 
@@ -230,10 +230,29 @@ export default function CurrentAffairsPage() {
                         <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 mb-4 transition-colors font-medium text-sm">
                             <ArrowLeft className="w-4 h-4" /> Back to Home
                         </Link>
-                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">
-                                Current Affairs <span className="text-zinc-400 font-light">| {format(new Date(), "MMMM dd")}</span>
-                            </h1>
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                            <div className="space-y-3">
+                                <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">
+                                    Current Affairs <span className="text-zinc-400 font-light">| {format(new Date(), "MMMM dd")}</span>
+                                </h1>
+                                
+                                <Link 
+                                    href="/flashcards?filter=ca" 
+                                    className="group relative inline-flex items-center gap-3 px-5 py-2.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white rounded-2xl font-bold shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 transform hover:-translate-y-0.5 active:scale-95 transition-all duration-300 overflow-hidden"
+                                >
+                                    <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <div className="flex items-center gap-3 relative z-10">
+                                        <div className="w-8 h-8 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:rotate-12 transition-transform">
+                                            <Sparkles className="w-4 h-4 text-white" />
+                                        </div>
+                                        <div className="flex flex-col items-start leading-none">
+                                            <span className="text-[9px] uppercase tracking-[0.2em] text-blue-100/70 mb-0.5">Quiz Mastery</span>
+                                            <span className="text-sm">Practice Monthly Current Affairs</span>
+                                        </div>
+                                    </div>
+                                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform relative z-10" />
+                                </Link>
+                            </div>
 
                             {/* Tabs */}
                             <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 hide-scrollbar">

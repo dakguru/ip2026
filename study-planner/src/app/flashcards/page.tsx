@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence, PanInfo, Variants } from "framer-motion";
 import {
     ArrowLeft, AlertTriangle, ChevronRight, ChevronLeft, ArrowRight,
@@ -13,7 +13,8 @@ import {
     Timer,
     CheckCircle2,
     Lock,
-    Crown
+    Crown,
+    Loader2
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useCourse } from "@/contexts/CourseContext";
@@ -121,6 +122,14 @@ const deckData: Record<string, UnifiedFlashcard[]> = {
 };
 
 export default function FlashcardsPage() {
+    return (
+        <React.Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-zinc-950"><Loader2 className="w-8 h-8 animate-spin text-blue-600" /></div>}>
+            <FlashcardsContent />
+        </React.Suspense>
+    );
+}
+
+function FlashcardsContent() {
     const { course } = useCourse();
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
@@ -149,6 +158,16 @@ export default function FlashcardsPage() {
     const [searchQuery, setSearchQuery] = useState("");
     const [activeFilter, setActiveFilter] = useState("All");
     const [showCategories, setShowCategories] = useState(true); // New state for view mode
+    const searchParams = useSearchParams();
+
+    // Handle direct link filters
+    useEffect(() => {
+        const filter = searchParams.get('filter');
+        if (filter === 'ca') {
+            setActiveFilter('Current Affairs');
+            setShowCategories(false);
+        }
+    }, [searchParams]);
 
     // Handle category selection
     const handleCategorySelect = (category: string) => {

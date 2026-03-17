@@ -4,6 +4,7 @@ import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useCourse } from "@/contexts/CourseContext";
+import { ArrowRight } from "lucide-react";
 
 interface WelcomeSectionProps {
     displayName: string;
@@ -43,7 +44,7 @@ function CountdownTimer({ course }: { course: string | null }) {
         : "All India Mock Tests for LDCE IP 2026";
 
     if (!timeLeft) {
-        return <span>Live : {testText}</span>;
+        return <span>{testText}</span>;
     }
 
     return (
@@ -115,34 +116,47 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
                 </Link>
             </div>
 
-            <div className="mt-6 md:mt-10 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 w-full max-w-full px-2">
-                <Link href="/mock-tests" className="relative group inline-block w-full sm:w-auto max-w-xl">
-                    {/* Vibrant animated outer glow based on course */}
-                    <div className={`absolute -inset-1 rounded-2xl opacity-80 group-hover:opacity-100 blur-md transition-opacity duration-300 animate-pulse ${course === 'PS_GR_B' ? 'bg-gradient-to-r from-teal-400 via-indigo-500 via-purple-500 to-blue-600' : 'bg-gradient-to-r from-yellow-400 via-orange-500 via-pink-500 to-violet-600'}`}></div>
+            <div className="mt-8 md:mt-12 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+                <Link href="/mock-tests" className="relative group transition-transform hover:scale-[1.02] active:scale-95">
+                    {/* The Background Decorative Strips (Left) */}
+                    <div className="absolute -left-3 md:-left-6 top-1/2 -translate-y-1/2 flex flex-col gap-1">
+                        <div className="w-6 md:w-12 h-0.5 md:h-1 bg-red-600 -skew-x-[30deg] opacity-60"></div>
+                        <div className="w-10 md:w-16 h-1.5 md:h-2 bg-red-600 -skew-x-[30deg]"></div>
+                        <div className="w-4 md:w-8 h-0.5 md:h-1 bg-red-600 -skew-x-[30deg] opacity-60"></div>
+                    </div>
 
-                    <div className={`relative overflow-hidden rounded-2xl px-5 py-4 sm:px-8 sm:py-5 shadow-2xl w-full border border-white/20 ${course === 'PS_GR_B' ? 'bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-700 shadow-teal-500/30' : 'bg-gradient-to-r from-orange-500 via-pink-600 to-violet-700 shadow-pink-500/30'}`}>
-                        {/* Shimmer sweep */}
-                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
+                    {/* Main Container */}
+                    <div className="relative">
+                        {/* LIVE Tag */}
+                        <div className="absolute -top-2.5 left-5 md:left-10 z-20">
+                            <div className="bg-red-600 text-white px-3 md:px-5 py-0.5 text-[9px] md:text-xs font-black italic tracking-widest transform -skew-x-[20deg] shadow-lg flex items-center gap-1.5">
+                                <span className="relative flex h-1.5 w-1.5">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+                                </span>
+                                LIVE
+                            </div>
+                        </div>
 
-                        {/* Decorative sparkles */}
-                        <div className="absolute top-1 right-4 text-yellow-200/70 text-lg animate-bounce" style={{ animationDelay: '0.2s' }}>✦</div>
-                        <div className="absolute bottom-1 left-6 text-white/40 text-sm animate-bounce" style={{ animationDelay: '0.8s' }}>✦</div>
+                        {/* Main Banner Body */}
+                        <div className="relative flex items-stretch">
+                            {/* Blue Main Bar */}
+                            <div className="bg-[#001030] py-2 md:py-3 pl-8 md:pl-12 pr-6 md:pr-10 transform -skew-x-[20deg] border-l-[4px] md:border-l-[6px] border-red-600 shadow-2xl relative overflow-hidden">
+                                {/* Shimmer Effect */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                                
+                                <div className="transform skew-x-[20deg] flex items-center gap-2.5">
+                                    <span className="text-white text-sm md:text-lg font-black italic tracking-tighter uppercase whitespace-nowrap drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
+                                        <CountdownTimer course={course} />
+                                    </span>
+                                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-red-500 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+                                </div>
+                            </div>
 
-                        <div className="relative flex items-center justify-center gap-3 sm:gap-4">
-                            {/* Pulsing LIVE dot */}
-                            <span className="relative flex h-3 w-3 shrink-0">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-yellow-300 shadow-[0_0_10px_rgba(253,224,71,0.9)]"></span>
-                            </span>
-
-                            <span className="text-white font-extrabold tracking-wide uppercase text-xs sm:text-sm md:text-base drop-shadow-lg text-center">
-                                <CountdownTimer course={course} />
-                            </span>
-
-                            {/* Arrow */}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-200 shrink-0 group-hover:translate-x-1 transition-transform">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
+                            {/* Right Red Accent Shape */}
+                            <div className="w-6 md:w-10 bg-red-600 transform -skew-x-[20deg] -ml-3 md:-ml-5 shadow-xl relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+                            </div>
                         </div>
                     </div>
                 </Link>
