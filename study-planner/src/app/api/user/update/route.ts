@@ -60,7 +60,8 @@ export async function POST(request: Request) {
             role: updatedUser.role,
             courseMode: updatedUser.courseMode,
             membershipLevel: updatedUser.membershipLevel,
-            planId: updatedUser.planId
+            planId: updatedUser.planId,
+            planName: updatedUser.planName
         }), {
             httpOnly: false,
             secure: process.env.NODE_ENV === 'production',

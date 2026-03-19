@@ -104,6 +104,7 @@ export async function POST(request: Request) {
                 role: updatedUser.role,
                 membershipLevel: updatedUser.membershipLevel, // Updated
                 planId: updatedUser.planId,
+                planName: updatedUser.planName,
                 sessionId: updatedUser.currentSessionId || ''
             }), {
                 httpOnly: false, // Client readable

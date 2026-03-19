@@ -41,7 +41,6 @@ export async function POST(request: Request) {
             ...(process.env.NODE_ENV === 'production' ? { domain: '.dakguru.com' } : {})
         });
 
-        // Set a client-readable cookie for UI state (non-httpOnly)
         response.cookies.set('user_session', JSON.stringify({
             name: user.name,
             email: user.email,
@@ -50,6 +49,7 @@ export async function POST(request: Request) {
             membershipLevel: user.membershipLevel,
             courseMode: user.courseMode,
             planId: user.planId,
+            planName: user.planName,
             sessionId: sessionId
         }), {
             httpOnly: false,
