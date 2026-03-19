@@ -112,7 +112,8 @@ export default function SettingsPage() {
                     courseMode: user.courseMode || "LDCE_IP",
                     membershipLevel: user.membershipLevel,
                     membershipValidity: user.membershipValidity,
-                    planId: user.planId
+                    planId: user.planId,
+                    planName: user.planName
                 };
                 setFormData(userData as any);
                 setInitialData(userData);
@@ -674,7 +675,8 @@ export default function SettingsPage() {
                     <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
                         <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest px-4 pt-4 pb-1.5">Membership</p>
                         <MobileMenuItem icon={Crown} label="Current Plan" right={membershipLabel} onClick={() => setActiveSection('membership')}
-                            iconBg="bg-amber-50 dark:bg-amber-900/20" iconColor="text-amber-600 dark:text-amber-400" last />
+                            iconBg={membershipLevelActual === 'diamond' ? 'bg-cyan-50 dark:bg-cyan-900/20' : membershipLevelActual === 'platinum' ? 'bg-indigo-50 dark:bg-indigo-900/20' : membershipLevelActual === 'gold' ? 'bg-amber-50 dark:bg-amber-900/20' : 'bg-zinc-100 dark:bg-zinc-800'}
+                            iconColor={membershipLevelActual === 'diamond' ? 'text-cyan-600 dark:text-cyan-400' : membershipLevelActual === 'platinum' ? 'text-indigo-600 dark:text-indigo-400' : membershipLevelActual === 'gold' ? 'text-amber-600 dark:text-amber-400' : 'text-zinc-500 dark:text-zinc-400'} last />
                     </div>
 
                     {/* Support Card */}

@@ -80,15 +80,21 @@ export default function MembershipPage() {
                 <div className="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm relative">
 
                     {/* Header Banner */}
-                    <div className={`p-8 ${isGold
-                        ? 'bg-gradient-to-r from-yellow-100 to-amber-100 dark:from-yellow-900/40 dark:to-amber-900/40'
-                        : isSilver
-                            ? 'bg-gradient-to-r from-slate-100 to-zinc-200 dark:from-slate-800/40 dark:to-zinc-800/40'
-                            : 'bg-zinc-100 dark:bg-zinc-800'
+                    <div className={`p-8 ${displayMemberLevel === 'diamond'
+                        ? 'bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-cyan-900/40 dark:to-blue-900/40'
+                        : displayMemberLevel === 'platinum'
+                            ? 'bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/40 dark:to-purple-900/40'
+                            : displayMemberLevel === 'gold'
+                                ? 'bg-gradient-to-r from-yellow-100 to-amber-100 dark:from-yellow-900/40 dark:to-amber-900/40'
+                                : isSilver
+                                    ? 'bg-gradient-to-r from-slate-100 to-zinc-200 dark:from-slate-800/40 dark:to-zinc-800/40'
+                                    : 'bg-zinc-100 dark:bg-zinc-800'
                         }`}>
                         <div className="flex items-center gap-4">
-                            <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-md ${isGold ? 'bg-yellow-400 text-yellow-900' :
-                                isSilver ? 'bg-slate-300 text-slate-800' : 'bg-zinc-300 text-zinc-600'
+                            <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-md ${displayMemberLevel === 'diamond' ? 'bg-cyan-400 text-cyan-950' :
+                                displayMemberLevel === 'platinum' ? 'bg-indigo-400 text-indigo-950' :
+                                    displayMemberLevel === 'gold' ? 'bg-yellow-400 text-yellow-900' :
+                                        isSilver ? 'bg-slate-300 text-slate-800' : 'bg-zinc-300 text-zinc-600'
                                 }`}>
                                 <Crown className="w-8 h-8" fill="currentColor" />
                             </div>
@@ -96,7 +102,7 @@ export default function MembershipPage() {
                                 <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wide">
                                     {isFree ? 'Basic Member' : `${displayMemberLevel} Member`}
                                 </h1>
-                                <p className={`text-sm font-medium ${isGold ? 'text-yellow-700 dark:text-yellow-400' : 'text-zinc-500 dark:text-zinc-400'}`}>
+                                <p className={`text-sm font-medium ${displayMemberLevel === 'diamond' ? 'text-cyan-700 dark:text-cyan-400' : displayMemberLevel === 'platinum' ? 'text-indigo-700 dark:text-indigo-400' : isGold ? 'text-yellow-700 dark:text-yellow-400' : 'text-zinc-500 dark:text-zinc-400'}`}>
                                     {isFree ? 'Upgrade to unlock premium features' : 'Thank you for being a premium member!'}
                                 </p>
                             </div>
@@ -127,9 +133,13 @@ export default function MembershipPage() {
                                         </div>
                                         <div>
                                             <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold mb-1">Plan Name</p>
-                                            <div className={`inline-flex items-center px-4 py-2 rounded-lg font-bold shadow-sm uppercase tracking-wider text-sm ${isGold
-                                                ? 'bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-amber-200 dark:shadow-none'
-                                                : 'bg-gradient-to-r from-slate-300 to-zinc-400 text-slate-900 shadow-zinc-200 dark:shadow-none'
+                                            <div className={`inline-flex items-center px-4 py-2 rounded-lg font-bold shadow-sm uppercase tracking-wider text-sm ${displayMemberLevel === 'diamond'
+                                                ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-blue-200 dark:shadow-none'
+                                                : displayMemberLevel === 'platinum'
+                                                    ? 'bg-gradient-to-r from-indigo-400 to-purple-500 text-white shadow-indigo-200 dark:shadow-none'
+                                                    : displayMemberLevel === 'gold'
+                                                        ? 'bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-amber-200 dark:shadow-none'
+                                                        : 'bg-gradient-to-r from-slate-300 to-zinc-400 text-slate-900 shadow-zinc-200 dark:shadow-none'
                                                 }`}>
                                                 {membershipData.planName || (isGold ? 'Gold Plan' : 'Silver Plan')}
                                             </div>
