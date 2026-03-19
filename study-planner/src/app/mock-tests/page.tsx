@@ -404,39 +404,142 @@ export default function MockTestsPage() {
     if (isPsGroupB) {
         return (
             <AppScreenWrapper hideStatusBarPadding={true}>
-                <div className="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 transition-colors">
-                    <div className="relative w-full max-w-xl text-center">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-75 pointer-events-none" />
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-2xl animate-pulse pointer-events-none" />
+                {/* ===== PS GROUP B MOCK TEST ANNOUNCEMENT ===== */}
+                <div className="min-h-screen bg-zinc-950 text-white relative overflow-hidden">
 
-                        <div className="relative z-10 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 p-8 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] dark:shadow-none">
-                            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#774df2] to-[#6039db] mb-5 sm:mb-6 shadow-xl shadow-indigo-500/20 ring-8 ring-indigo-50 dark:ring-indigo-500/10">
-                                <FileDown className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    {/* Animated Background */}
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" />
+                        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-blue-600/15 rounded-full blur-[120px] animate-pulse delay-1000" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[150px] animate-pulse delay-500" />
+                        {/* Grid pattern overlay */}
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+                    </div>
+
+                    <div className="relative z-10">
+
+                        {/* Back Button */}
+                        <div className="px-5 pt-[max(16px,env(safe-area-inset-top))] pb-2">
+                            <Link href="/" className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-zinc-300 transition-colors text-sm font-medium">
+                                <ArrowLeft className="w-4 h-4" />
+                                <span>Back</span>
+                            </Link>
+                        </div>
+
+                        {/* Hero Section */}
+                        <div className="px-5 pt-6 pb-8 text-center">
+                            {/* Animated Alert Badge */}
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/25 mb-6 animate-bounce" style={{ animationDuration: '2s' }}>
+                                <span className="text-lg">🚨</span>
+                                <span className="text-red-400 font-black text-xs tracking-widest uppercase">Most Awaited is Here!</span>
+                                <span className="text-lg">🚨</span>
                             </div>
 
-                            <h1 className="text-4xl sm:text-5xl font-black mb-4 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#774df2] to-[#6039db] dark:from-indigo-400 dark:to-purple-400 drop-shadow-sm">
-                                Coming Soon
+                            <h1 className="text-[2.2rem] sm:text-5xl md:text-6xl font-black leading-[1.1] mb-4 tracking-tight">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-pink-500">
+                                    Mock Test Series
+                                </span>
+                                <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400">
+                                    PS Group B
+                                </span>
                             </h1>
 
-                            <div className="text-[14px] sm:text-[15px] text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed max-w-[280px] sm:max-w-md mx-auto mb-8 space-y-1">
-                                <p>All India Mock Test Series for LDCE PS Gr B is coming soon..</p>
-                                <p>Stay tuned for updates.</p>
-                            </div>
+                            <p className="text-zinc-400 text-sm sm:text-base max-w-md mx-auto leading-relaxed mb-2">
+                                The wait is finally over! Dak Guru proudly presents the Mock Test Series for PS Group B.
+                            </p>
+                            <p className="text-zinc-500 text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
+                                Gear up to elevate your preparation with a structured, exam-focused, and result-oriented test series designed exclusively for serious aspirants.
+                            </p>
+                        </div>
 
-                            <div className="flex flex-col sm:flex-row items-stretch justify-center gap-3">
-                                <Link href="/" className="w-full sm:w-[140px] flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl sm:rounded-2xl bg-[#1c1c1f] hover:bg-black dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 font-semibold transition-all duration-300 active:scale-95 shadow-md">
+                        {/* Key Info Cards */}
+                        <div className="px-5 pb-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto">
+                                {/* Starting Date Card */}
+                                <div className="relative group">
+                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl opacity-40 blur-sm group-hover:opacity-70 transition duration-500" />
+                                    <div className="relative bg-zinc-900 border border-zinc-800/50 rounded-2xl p-5 text-center">
+                                        <div className="w-12 h-12 rounded-full bg-orange-500/15 flex items-center justify-center mx-auto mb-3">
+                                            <Calendar className="w-6 h-6 text-orange-400" />
+                                        </div>
+                                        <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Starting From</p>
+                                        <p className="text-lg font-black text-white">1st Week of April</p>
+                                        <p className="text-xs text-zinc-400 font-medium mt-0.5">Every Saturday & Sunday</p>
+                                    </div>
+                                </div>
+
+                                {/* Schedule Release Card */}
+                                <div className="relative group">
+                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-40 blur-sm group-hover:opacity-70 transition duration-500" />
+                                    <div className="relative bg-zinc-900 border border-zinc-800/50 rounded-2xl p-5 text-center">
+                                        <div className="w-12 h-12 rounded-full bg-blue-500/15 flex items-center justify-center mx-auto mb-3">
+                                            <Clock className="w-6 h-6 text-blue-400" />
+                                        </div>
+                                        <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Schedule Release</p>
+                                        <p className="text-lg font-black text-white">22 March 2026</p>
+                                        <p className="text-xs text-zinc-400 font-medium mt-0.5">Full schedule will be live</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Why This Series - Feature Cards */}
+                        <div className="px-5 pb-8">
+                            <div className="max-w-lg mx-auto">
+                                <h2 className="text-center text-sm font-black text-zinc-500 uppercase tracking-widest mb-5">This is your moment to</h2>
+                                <div className="space-y-2.5">
+                                    {[
+                                        { emoji: "🎯", text: "Test your real exam readiness", color: "from-emerald-500/20 to-emerald-500/5" },
+                                        { emoji: "🔍", text: "Identify weak areas", color: "from-amber-500/20 to-amber-500/5" },
+                                        { emoji: "⏱️", text: "Master time management", color: "from-blue-500/20 to-blue-500/5" },
+                                        { emoji: "🚀", text: "Boost confidence before the final exam", color: "from-purple-500/20 to-purple-500/5" }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className={`flex items-center gap-4 px-5 py-3.5 rounded-xl bg-gradient-to-r ${item.color} border border-white/[0.04] backdrop-blur-sm`}>
+                                            <span className="text-xl shrink-0">{item.emoji}</span>
+                                            <span className="text-sm font-semibold text-zinc-200">{item.text}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Motivational Banner */}
+                        <div className="px-5 pb-8">
+                            <div className="max-w-lg mx-auto relative">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl opacity-30 blur-md animate-pulse" style={{ animationDuration: '3s' }} />
+                                <div className="relative bg-zinc-900/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 text-center">
+                                    <p className="text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 mb-1">
+                                        💡 Don&apos;t just prepare…
+                                    </p>
+                                    <p className="text-2xl sm:text-3xl font-black text-white">
+                                        Prepare Smart with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Dak Guru!</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* CTA Buttons */}
+                        <div className="px-5 pb-10">
+                            <div className="max-w-lg mx-auto flex flex-col sm:flex-row gap-3">
+                                <Link href="/" className="flex-1 flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white font-bold transition-all duration-300 active:scale-95 text-sm">
                                     <ArrowLeft className="w-4 h-4 shrink-0" />
-                                    <span className="text-sm leading-tight text-center">Back to<br className="hidden sm:block" />Home</span>
+                                    Back to Home
                                 </Link>
 
                                 <button
                                     onClick={() => setForceLdceIp(true)}
-                                    className="flex-1 w-full flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl sm:rounded-2xl bg-[#774df2] hover:bg-[#6039db] text-white font-semibold transition-all duration-300 active:scale-95 shadow-lg shadow-[#774df2]/30"
+                                    className="flex-1 flex items-center justify-center gap-2.5 px-5 py-4 rounded-xl bg-gradient-to-r from-[#774df2] to-[#6039db] hover:from-[#6039db] hover:to-[#5030c5] text-white font-bold transition-all duration-300 active:scale-95 shadow-lg shadow-[#774df2]/30 text-sm"
                                 >
                                     <Sparkles className="w-4 h-4 shrink-0" />
-                                    <span className="text-[13px] sm:text-sm leading-tight text-center">Access All India Live Mock Test Series of<br className="hidden sm:block" />LDCE IP</span>
+                                    Access LDCE IP Mock Tests
                                 </button>
                             </div>
+                        </div>
+
+                        {/* Footer Note */}
+                        <div className="px-5 pb-[max(2rem,env(safe-area-inset-bottom))] text-center">
+                            <p className="text-[11px] text-zinc-600 font-medium">🔥 Powered by Dak Guru · India&apos;s #1 Postal Exam Platform</p>
                         </div>
                     </div>
                 </div>
