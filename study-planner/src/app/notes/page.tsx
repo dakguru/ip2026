@@ -1145,9 +1145,16 @@ export default function NotesPage() {
                                     ? 'border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
                                     : ''
                                     }`}
-                                style={file.isCommemorative ? { background: 'linear-gradient(145deg, #FFFBEB 0%, #FEF3C7 25%, #FDE68A 50%, #FEF3C7 75%, #FFFBEB 100%)' } : undefined}
+                                style={file.isCommemorative ? { background: 'linear-gradient(145deg, #F5D67B 0%, #E8C252 20%, #F7E8A0 45%, #FEFCE8 50%, #F7E8A0 55%, #D4A843 80%, #E8C252 100%)' } : undefined}
                             >
                                 <div className="flex items-start justify-between mb-4">
+                                    {/* Damask ornamental pattern overlay for commemorative cards */}
+                                    {file.isCommemorative && (
+                                        <div className="absolute inset-0 pointer-events-none opacity-[0.12]" style={{
+                                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23b8860b' fill-opacity='1'%3E%3Cpath d='M30 0c1.5 3 3 6 3 10 0 5-3 8-3 12s3 7 3 12c0 4-1.5 7-3 10-1.5-3-3-6-3-10 0-5 3-8 3-12s-3-7-3-12c0-4 1.5-7 3-10z'/%3E%3Cpath d='M0 30c3-1.5 6-3 10-3 5 0 8 3 12 3s7-3 12-3c4 0 7 1.5 10 3-3 1.5-6 3-10 3-5 0-8-3-12-3s-7 3-12 3c-4 0-7-1.5-10-3z'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='60' cy='0' r='3'/%3E%3Ccircle cx='0' cy='60' r='3'/%3E%3Ccircle cx='60' cy='60' r='3'/%3E%3Cpath d='M15 15c2-2 4-3 6-3s4 1 6 3c-2 2-4 3-6 3s-4-1-6-3z'/%3E%3Cpath d='M39 15c2-2 4-3 6-3s4 1 6 3c-2 2-4 3-6 3s-4-1-6-3z'/%3E%3Cpath d='M15 39c2-2 4-3 6-3s4 1 6 3c-2 2-4 3-6 3s-4-1-6-3z'/%3E%3Cpath d='M39 39c2-2 4-3 6-3s4 1 6 3c-2 2-4 3-6 3s-4-1-6-3z'/%3E%3Cpath d='M30 8c1 1 1.5 2 1.5 3.5S31 14 30 15c-1-1-1.5-2-1.5-3.5S29 9 30 8z'/%3E%3Cpath d='M30 45c1 1 1.5 2 1.5 3.5S31 51 30 52c-1-1-1.5-2-1.5-3.5S29 46 30 45z'/%3E%3Cpath d='M8 30c1-1 2-1.5 3.5-1.5S14 29 15 30c-1 1-2 1.5-3.5 1.5S9 31 8 30z'/%3E%3Cpath d='M45 30c1-1 2-1.5 3.5-1.5S51 29 52 30c-1 1-2 1.5-3.5 1.5S46 31 45 30z'/%3E%3C/g%3E%3C/svg%3E")`,
+                                            backgroundSize: '60px 60px'
+                                        }} />
+                                    )}
                                     {/* Shimmer overlay for commemorative cards */}
                                     {file.isCommemorative && (
                                         <div className="absolute inset-0 pointer-events-none gold-shimmer-overlay" />
