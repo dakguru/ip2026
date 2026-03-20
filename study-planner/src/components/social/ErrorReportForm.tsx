@@ -36,7 +36,7 @@ const TOPICS_DATA: Record<string, string[]> = {
         "SB Manual Vol I, II & III",
         "Annual Reports & Book of Information",
         "APT Knowledge (IT 2.0)",
-        "Core Banking Solutions, PLI-CIS",
+        "Core Banking Solutions (Working knowledge of CBS)",
         "India Post Payments Bank",
         "Preservation of Records",
         "CCS (Conduct) Rules, 1964",

@@ -84,7 +84,7 @@ export const SYLLABUS_DATA: Topic[] = [
     { id: 'p1-sb-3', title: 'Annual Reports & Book of Info', category: 'Paper I', type: 'light', duration: 1, tips: ["Key stats of Dept", "Vision/Mission."] },
 
     // Tech & Records
-    { id: 'p1-tech-1', title: 'IT Knowledge (CSI, PLI-CIS, IPPB)', category: 'Paper I', type: 'heavy', duration: 3, tips: ["Core Banking Solutions", "PLI software workflow", "IPPB products."] },
+    { id: 'p1-tech-1', title: 'Core Banking Solutions (Working knowledge of CBS)', category: 'Paper I', type: 'heavy', duration: 3, tips: ["Core Banking Solutions", "PLI software workflow", "IPPB products."] },
     { id: 'p1-tech-2', title: 'Preservation & Disposal of Records', category: 'Paper I', type: 'light', duration: 1, tips: ["Retention periods for different files."] },
 
     // Service & Conduct Rules

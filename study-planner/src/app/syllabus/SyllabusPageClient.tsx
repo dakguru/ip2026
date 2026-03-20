@@ -95,7 +95,7 @@ const syllabusData = {
                     { name: "Operational: MNOP, PNOP, Niryat Kendra", link: "https://www.indiapost.gov.in/MBE/Pages/Content/Parcel-Network.aspx" },
                     { name: "Preservation & Disposal of Records", link: "https://swachhportal.gov.in/" },
                     { name: "APT Knowledge (IT 2.0)", link: "https://www.indiapost.gov.in/" },
-                    { name: "Working knowledge on Core Banking Solutions, PLI-CIS", link: "https://www.indiapost.gov.in/" }
+                    { name: "Core Banking Solutions (Working knowledge of CBS)", link: "https://www.indiapost.gov.in/" }
                 ]
             },
             {

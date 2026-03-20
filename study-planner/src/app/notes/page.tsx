@@ -66,7 +66,7 @@ const SCHEDULE_MAPPING: Record<string, string> = {
     "POSB (CBS) Manual": "09-03-2026",
     "Annual Reports & Book of Information": "11-03-2026",
     "APT Knowledge (IT 2.0)": "12-03-2026",
-    "Core Banking Solutions, PLI-CIS": "13-03-2026",
+    "Core Banking Solutions (Working knowledge of CBS)": "13-03-2026",
     "India Post Payments Bank": "14-03-2026",
     "Preservation of Records": "16-03-2026",
     "CCS (Conduct) Rules, 1964": "17-03-2026",
@@ -352,8 +352,22 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 41. IT
-        { title: "APT Knowledge (IT 2.0)", description: "Advanced Postal Technology.", color: "sky", comingSoon: true },
-        { title: "Core Banking Solutions, PLI-CIS", description: "Working knowledge of CBS and CIS.", color: "sky", comingSoon: true },
+        {
+            title: "APT Knowledge (IT 2.0)",
+            description: "Advanced Postal Technology.",
+            filename: "APT_Knowledge_IT_2.0.pdf",
+            path: "/notes/paper-1/APT_Knowledge_IT_2.0.pdf",
+            size: "0.8 MB",
+            color: "sky"
+        },
+        {
+            title: "Core Banking Solutions (Working knowledge of CBS)",
+            description: "Working knowledge of CBS.",
+            filename: "Working_knowledge_of_CBS.pdf",
+            path: "/notes/paper-1/Working_knowledge_of_CBS.pdf",
+            size: "0.4 MB",
+            color: "sky"
+        },
 
         // 43. IPPB
         {
