@@ -177,7 +177,7 @@ export default function MockTestsPage() {
 
             if (now > sundayDate) {
                 status = 'completed';
-            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28'))) {
+            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21'))) {
                 status = 'live';
             } else {
                 status = 'upcoming';
@@ -1453,12 +1453,12 @@ function MockTestCard({
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
                 {/* Top 7 Rank Holders Button */}
-                {(isEnded || (role === 'admin' && isLive)) && onShowRankList && (
+                {isEnded && onShowRankList && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         className="w-full py-2.5 sm:py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all transform hover:scale-[1.02] active:scale-95 px-2 mb-2"
                     >
-                        <Trophy className="w-4 h-4 text-white fill-current shrink-0" /> <span>{isEnded ? "View Top 7 Rankers" : "Live Leaderboard (Admin)"}</span>
+                        <Trophy className="w-4 h-4 text-white fill-current shrink-0" /> <span>View Top 7 Rankers</span>
                     </button>
                 )}
 

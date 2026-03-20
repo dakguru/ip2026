@@ -1145,90 +1145,92 @@ export default function NotesPage() {
                                     ? 'border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
                                     : ''
                                     }`}
-                                style={file.isCommemorative ? { background: 'linear-gradient(145deg, #F5D67B 0%, #E8C252 20%, #F7E8A0 45%, #FEFCE8 50%, #F7E8A0 55%, #D4A843 80%, #E8C252 100%)' } : undefined}
+                                style={file.isCommemorative ? { 
+                                    backgroundImage: 'url("/images/constitution-card.jpg")',
+                                    backgroundSize: '100% 100%',
+                                    backgroundPosition: 'center',
+                                    backgroundRepeat: 'no-repeat'
+                                } : undefined}
                             >
-                                <div className="flex items-start justify-between mb-4">
-                                    {/* Damask ornamental pattern overlay for commemorative cards */}
-                                    {file.isCommemorative && (
-                                        <div className="absolute inset-0 pointer-events-none opacity-[0.12]" style={{
-                                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23b8860b' fill-opacity='1'%3E%3Cpath d='M30 0c1.5 3 3 6 3 10 0 5-3 8-3 12s3 7 3 12c0 4-1.5 7-3 10-1.5-3-3-6-3-10 0-5 3-8 3-12s-3-7-3-12c0-4 1.5-7 3-10z'/%3E%3Cpath d='M0 30c3-1.5 6-3 10-3 5 0 8 3 12 3s7-3 12-3c4 0 7 1.5 10 3-3 1.5-6 3-10 3-5 0-8-3-12-3s-7 3-12 3c-4 0-7-1.5-10-3z'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='60' cy='0' r='3'/%3E%3Ccircle cx='0' cy='60' r='3'/%3E%3Ccircle cx='60' cy='60' r='3'/%3E%3Cpath d='M15 15c2-2 4-3 6-3s4 1 6 3c-2 2-4 3-6 3s-4-1-6-3z'/%3E%3Cpath d='M39 15c2-2 4-3 6-3s4 1 6 3c-2 2-4 3-6 3s-4-1-6-3z'/%3E%3Cpath d='M15 39c2-2 4-3 6-3s4 1 6 3c-2 2-4 3-6 3s-4-1-6-3z'/%3E%3Cpath d='M39 39c2-2 4-3 6-3s4 1 6 3c-2 2-4 3-6 3s-4-1-6-3z'/%3E%3Cpath d='M30 8c1 1 1.5 2 1.5 3.5S31 14 30 15c-1-1-1.5-2-1.5-3.5S29 9 30 8z'/%3E%3Cpath d='M30 45c1 1 1.5 2 1.5 3.5S31 51 30 52c-1-1-1.5-2-1.5-3.5S29 46 30 45z'/%3E%3Cpath d='M8 30c1-1 2-1.5 3.5-1.5S14 29 15 30c-1 1-2 1.5-3.5 1.5S9 31 8 30z'/%3E%3Cpath d='M45 30c1-1 2-1.5 3.5-1.5S51 29 52 30c-1 1-2 1.5-3.5 1.5S46 31 45 30z'/%3E%3C/g%3E%3C/svg%3E")`,
-                                            backgroundSize: '60px 60px'
-                                        }} />
-                                    )}
-                                    {/* Shimmer overlay for commemorative cards */}
-                                    {file.isCommemorative && (
-                                        <div className="absolute inset-0 pointer-events-none gold-shimmer-overlay" />
-                                    )}
-                                    <div className={`p-2 md:p-3 rounded-xl ${
-                                        file.isCommemorative
-                                        ? 'bg-gradient-to-br from-amber-200/80 to-yellow-300/60 text-amber-800 dark:text-amber-300 shadow-sm shadow-amber-300/30'
-                                        : file.comingSoon
-                                        ? hasPremiumAccess ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
-                                        : file.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' :
-                                            file.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400' :
-                                                file.color === 'emerald' ? 'bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400' :
-                                                    file.color === 'rose' ? 'bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400' :
-                                                        file.color === 'amber' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400' :
-                                                            file.color === 'orange' ? 'bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400' :
-                                                                file.color === 'cyan' ? 'bg-cyan-50 dark:bg-cyan-900/40 text-cyan-600 dark:text-cyan-400' :
-                                                                    file.color === 'violet' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400' :
-                                                                        file.color === 'fuchsia' ? 'bg-fuchsia-50 dark:bg-fuchsia-900/40 text-fuchsia-600 dark:text-fuchsia-400' :
-                                                                            file.color === 'teal' ? 'bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400' :
-                                                                                file.color === 'sky' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400' :
-                                                                                    'bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
-                                        }`}>
-                                        {file.comingSoon && !hasPremiumAccess && !file.isCommemorative ? (
-                                            <Lock className="w-6 h-6 md:w-8 md:h-8" />
-                                        ) : (
-                                            <FileText className="w-6 h-6 md:w-8 md:h-8" />
-                                        )}
-                                    </div>
-                                    <span className={`text-[8px] md:text-xs font-bold px-2 py-1 rounded-md italic tracking-wide ${
-                                        file.isCommemorative
-                                        ? 'bg-gradient-to-r from-amber-600 to-yellow-500 text-white shadow-sm shadow-amber-400/30'
-                                        : file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
-                                        }`} style={file.isCommemorative ? { fontFamily: "'Georgia', 'Times New Roman', serif" } : undefined}>
-                                        {file.isCommemorative ? '✦ Exclusive for GOLD Members' : file.comingSoon ? 'SOON' : 'PDF'}
-                                    </span>
-                                </div>
+                                {file.isCommemorative && (
+                                     <div className="absolute inset-0 pointer-events-none gold-shimmer-overlay z-10" />
+                                )}
 
-                                <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-2 leading-tight transition-colors ${
-                                    file.isCommemorative ? 'text-slate-800 dark:text-zinc-100' : file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
-                                    }`}>
-                                    {file.title}
-                                    {file.subtitle && (
-                                        <span className="block text-[10px] md:text-sm font-normal italic text-slate-500 dark:text-zinc-500 mt-1">
-                                            {file.subtitle}
+                                <div className={`flex flex-col h-full relative z-20 ${file.isCommemorative ? 'p-1 md:p-3' : ''}`}>
+                                    <div className="flex items-start justify-between mb-4">
+                                        <div className={`p-2 md:p-3 rounded-xl transition-all duration-300 ${
+                                            file.isCommemorative
+                                            ? 'bg-amber-100/40 backdrop-blur-sm shadow-sm ring-1 ring-amber-200/50'
+                                            : file.comingSoon
+                                            ? hasPremiumAccess ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
+                                            : file.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' :
+                                                file.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400' :
+                                                    file.color === 'emerald' ? 'bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400' :
+                                                        file.color === 'rose' ? 'bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400' :
+                                                            file.color === 'amber' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400' :
+                                                                file.color === 'orange' ? 'bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400' :
+                                                                    file.color === 'cyan' ? 'bg-cyan-50 dark:bg-cyan-900/40 text-cyan-600 dark:text-cyan-400' :
+                                                                        file.color === 'violet' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-600 dark:text-violet-400' :
+                                                                            file.color === 'fuchsia' ? 'bg-fuchsia-50 dark:bg-fuchsia-900/40 text-fuchsia-600 dark:text-fuchsia-400' :
+                                                                                file.color === 'teal' ? 'bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400' :
+                                                                                    file.color === 'sky' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400' :
+                                                                                        'bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
+                                            }`}>
+                                            {file.comingSoon && !hasPremiumAccess && !file.isCommemorative ? (
+                                                <Lock className="w-6 h-6 md:w-8 md:h-8" />
+                                            ) : (
+                                                <FileText className={`w-6 h-6 md:w-8 md:h-8 ${file.isCommemorative ? 'text-amber-900' : ''}`} />
+                                            )}
+                                        </div>
+                                        <span className={`text-[8px] md:text-xs font-bold px-2 py-1 rounded-md italic tracking-wide transition-all duration-300 ${
+                                            file.isCommemorative
+                                            ? 'bg-amber-600 text-white shadow-md'
+                                            : file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
+                                            }`} style={file.isCommemorative ? { fontFamily: "'Georgia', 'Times New Roman', serif" } : undefined}>
+                                            {file.isCommemorative ? '✦ Exclusive for GOLD Members' : file.comingSoon ? 'SOON' : 'PDF'}
                                         </span>
-                                    )}
-                                </h3>
-                                <p className="text-[10px] md:text-sm text-slate-500 dark:text-zinc-400 mb-4 md:mb-6 flex-grow leading-relaxed line-clamp-2 md:line-clamp-none">
-                                    {file.description}
-                                </p>
+                                    </div>
+
+                                    <h3 className={`text-sm md:text-xl font-black mb-1 md:mb-2 leading-tight transition-all duration-300 ${
+                                        file.isCommemorative ? 'text-[#1e293b]' : file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
+                                        }`}>
+                                        {file.title}
+                                        {file.subtitle && (
+                                            <span className="block text-[10px] md:text-sm font-normal italic text-slate-500 dark:text-zinc-500 mt-1">
+                                                {file.subtitle}
+                                            </span>
+                                        )}
+                                    </h3>
+                                    <p className={`text-[10px] md:text-[15px] font-semibold leading-relaxed line-clamp-2 md:line-clamp-none mb-4 md:mb-6 ${
+                                        file.isCommemorative ? 'text-[#334155]' : 'text-slate-500 dark:text-zinc-400'
+                                    }`}>
+                                        {file.description}
+                                    </p>
+                                </div>
 
                                 {file.comingSoon ? (
                                     hasPremiumAccess ? (
                                         file.isCommemorative ? (
                                             /* ── Special Commemorative Banner for Constitution of India ── */
-                                            <div className="mt-auto relative overflow-hidden rounded-xl border border-amber-400/70 dark:border-amber-600/50 p-3 md:p-4 flex flex-col items-center justify-center text-center" style={{ background: 'linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 30%, #EFF6FF 65%, #FEF3C7 100%)' }}>
+                                            <div className="mt-auto relative overflow-hidden rounded-xl border border-amber-400/50 p-2 md:p-4 flex flex-col items-center justify-center text-center z-20" style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(8px)' }}>
                                                 {/* Ashoka Chakra watermark */}
-                                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] dark:opacity-[0.06]">
+                                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.06]">
                                                     <svg viewBox="0 0 200 200" className="w-32 h-32 md:w-40 md:h-40" fill="currentColor" style={{ color: '#1e3a5f' }}>
-                                                        <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" strokeWidth="3" />
+                                                        <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" strokeWidth="2.5" />
                                                         <circle cx="100" cy="100" r="15" />
                                                         {[...Array(24)].map((_, i) => (
-                                                            <line key={i} x1="100" y1="25" x2="100" y2="85" stroke="currentColor" strokeWidth="2.5" transform={`rotate(${i * 15} 100 100)`} />
+                                                            <line key={i} x1="100" y1="25" x2="100" y2="85" stroke="currentColor" strokeWidth="2" transform={`rotate(${i * 15} 100 100)`} />
                                                         ))}
                                                     </svg>
                                                 </div>
                                                 <div className="relative z-10">
-                                                    <div className="flex items-center gap-1.5 justify-center mb-1.5">
-                                                        <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-600" />
-                                                        <span className="text-[11px] md:text-sm font-extrabold tracking-wide" style={{ color: '#b45309' }}>Uploading on 14th April 2026</span>
+                                                    <div className="flex items-center gap-1.5 justify-center mb-1">
+                                                        <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+                                                        <span className="text-[10px] md:text-[14px] font-black tracking-tight uppercase" style={{ color: '#854d0e' }}>Uploading on 14th April 2026</span>
                                                     </div>
-                                                    <p className="text-[9px] md:text-xs italic text-slate-500 dark:text-zinc-400 mb-0.5">On the Birth Anniversary of</p>
-                                                    <p className="text-[11px] md:text-sm font-extrabold" style={{ color: '#1e40af' }}>Bharat Ratna Dr. B. R. Ambedkar</p>
-                                                    <p className="text-[9px] md:text-xs italic mt-0.5" style={{ color: '#6b7280' }}>Architect of the Indian Constitution</p>
+                                                    <p className="text-[8px] md:text-[11px] font-bold italic text-slate-600 mb-0.5">On the Birth Anniversary of</p>
+                                                    <p className="text-[10px] md:text-[16px] font-black tracking-wide whitespace-nowrap" style={{ color: '#172554' }}>Bharat Ratna Dr. B. R. Ambedkar</p>
+                                                    <p className="text-[8px] md:text-[11px] font-bold italic mt-0.5 text-slate-600 leading-tight">Architect of the Indian Constitution</p>
                                                 </div>
                                             </div>
                                         ) : (

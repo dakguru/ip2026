@@ -370,8 +370,10 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
     // Live Window Logic
     const testConfig = TEST_CONFIG_MAP[testId];
-    const isLiveWindow = testConfig?.endDate ? new Date() < testConfig.endDate : false;
-    const canSeeLeaderboard = isAdmin || !isLiveWindow;
+    const isLiveWindow = testConfig?.startDate && testConfig?.endDate 
+        ? (new Date() >= testConfig.startDate && new Date() < testConfig.endDate) 
+        : false;
+    const canSeeLeaderboard = isAdmin; // Only visible to admin as requested
 
     // Load Data & Check Access
     useEffect(() => {
@@ -548,6 +550,19 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             fetchLeaderboard();
         }
     }, [isSubmitted, fetchLeaderboard]);
+
+    // Auto-update leaderboard for admin every 20 seconds during live schedule
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+        if (isAdmin && isLiveWindow && isSubmitted) {
+            interval = setInterval(() => {
+                fetchLeaderboard();
+            }, 20000);
+        }
+        return () => {
+            if (interval) clearInterval(interval);
+        };
+    }, [isAdmin, isLiveWindow, isSubmitted, fetchLeaderboard]);
 
     const vibrate = useCallback((ms: number = 10) => {
         if (typeof navigator !== 'undefined' && navigator.vibrate) {
