@@ -16,6 +16,38 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "20.03.2026",
+        items: [
+            {
+                title: "New PDF Notes & Premium Interface Update",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have released new study materials and interface updates for <strong>LDCE IP Course Mode</strong>:</p>
+
+                        <div className="space-y-2">
+                            <p className="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wide">Paper I (New PDFs Uploaded)</p>
+                            <ul className="list-disc pl-4 space-y-1">
+                                <li>APT Knowledge (IT 2.0)</li>
+                                <li>Core Banking Solutions (Working knowledge of CBS)</li>
+                            </ul>
+                        </div>
+
+                        <div className="space-y-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <p className="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wide">Paper III (Premium Interface)</p>
+                            <ul className="list-disc pl-4 space-y-1">
+                                <li>Golden Commemorative Card for <strong>Constitution of India</strong> honoring Dr. B. R. Ambedkar</li>
+                            </ul>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Check them out in the Notes section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "16.03.2026",
         items: [
             {
