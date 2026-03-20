@@ -150,3 +150,38 @@ textarea {
 .animate-pulse-slow {
   animation: pulse-slow 3s ease-in-out infinite;
 }
+
+/* ── Premium Golden Card Shimmer ── */
+@keyframes gold-shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+@keyframes gold-border-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.15), 0 4px 12px rgba(245, 158, 11, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.25), 0 4px 20px rgba(245, 158, 11, 0.15);
+  }
+}
+
+.gold-shine-card {
+  animation: gold-border-glow 3s ease-in-out infinite;
+}
+
+.gold-shimmer-overlay {
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 215, 0, 0.12) 45%,
+    rgba(255, 235, 100, 0.18) 50%,
+    rgba(255, 215, 0, 0.12) 55%,
+    transparent 70%
+  );
+  animation: gold-shimmer 4s ease-in-out infinite;
+}

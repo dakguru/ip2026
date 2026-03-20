@@ -33,6 +33,7 @@ interface Note {
     comingSoon?: boolean;
     subtitle?: string;
     isFree?: boolean;
+    isCommemorative?: boolean;
 }
 
 // Map for scheduled dates
@@ -73,7 +74,7 @@ const SCHEDULE_MAPPING: Record<string, string> = {
     "CCS (CCA) Rules, 1965": "18-03-2026",
     "CCS (Temporary Service) Rules, 1965": "20-03-2026",
     "GDS (Conduct & Engagement) Rules, 2020": "20-03-2026",
-    "Constitution of India": "21-03-2026",
+    "Constitution of India": "14-04-2026",
     "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023": "31-03-2026",
     "Central Administrative Tribunal Act, 1985": "01-04-2026",
     "Revenue Recovery Act, 1890": "02-04-2026",
@@ -426,7 +427,7 @@ const PDF_DATA: Record<string, Note[]> = {
     "Paper III": [
         // 1-8. Constitution
         // 1. Constitution
-        { title: "Constitution of India", description: "Comprehensive notes on Preamble, Fundamental Rights, Duties, and key Articles.", color: "amber", comingSoon: true },
+        { title: "Constitution of India", description: "Comprehensive notes on the Preamble, Fundamental Rights, Fundamental Duties, and key Constitutional Articles.", color: "amber", comingSoon: true, isCommemorative: true },
 
         // 9. BNSS 2023
         {
@@ -1133,13 +1134,28 @@ export default function NotesPage() {
                         {activeData[activeTab as keyof typeof activeData]?.map((file, index) => (
                             <div
                                 key={index}
-                                className={`group bg-white dark:bg-zinc-900 rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col ${file.comingSoon
+                                className={`group rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col relative overflow-hidden ${
+                                    file.isCommemorative
+                                    ? 'border-amber-400/80 dark:border-amber-600/60 ring-1 ring-amber-300/60 dark:ring-amber-700/40 shadow-lg shadow-amber-200/40 dark:shadow-amber-800/20 gold-shine-card'
+                                    : 'bg-white dark:bg-zinc-900'
+                                } ${
+                                    !file.isCommemorative && file.comingSoon
                                     ? 'border-zinc-200 dark:border-zinc-800 opacity-90'
-                                    : 'border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
+                                    : !file.isCommemorative
+                                    ? 'border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
+                                    : ''
                                     }`}
+                                style={file.isCommemorative ? { background: 'linear-gradient(145deg, #FFFBEB 0%, #FEF3C7 25%, #FDE68A 50%, #FEF3C7 75%, #FFFBEB 100%)' } : undefined}
                             >
                                 <div className="flex items-start justify-between mb-4">
-                                    <div className={`p-2 md:p-3 rounded-xl ${file.comingSoon
+                                    {/* Shimmer overlay for commemorative cards */}
+                                    {file.isCommemorative && (
+                                        <div className="absolute inset-0 pointer-events-none gold-shimmer-overlay" />
+                                    )}
+                                    <div className={`p-2 md:p-3 rounded-xl ${
+                                        file.isCommemorative
+                                        ? 'bg-gradient-to-br from-amber-200/80 to-yellow-300/60 text-amber-800 dark:text-amber-300 shadow-sm shadow-amber-300/30'
+                                        : file.comingSoon
                                         ? hasPremiumAccess ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
                                         : file.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' :
                                             file.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400' :
@@ -1154,19 +1170,23 @@ export default function NotesPage() {
                                                                                 file.color === 'sky' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400' :
                                                                                     'bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
                                         }`}>
-                                        {file.comingSoon && !hasPremiumAccess ? (
+                                        {file.comingSoon && !hasPremiumAccess && !file.isCommemorative ? (
                                             <Lock className="w-6 h-6 md:w-8 md:h-8" />
                                         ) : (
                                             <FileText className="w-6 h-6 md:w-8 md:h-8" />
                                         )}
                                     </div>
-                                    <span className={`text-[10px] md:text-sm font-bold px-2 py-1 rounded-md ${file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
-                                        }`}>
-                                        {file.comingSoon ? 'SOON' : 'PDF'}
+                                    <span className={`text-[8px] md:text-xs font-bold px-2 py-1 rounded-md italic tracking-wide ${
+                                        file.isCommemorative
+                                        ? 'bg-gradient-to-r from-amber-600 to-yellow-500 text-white shadow-sm shadow-amber-400/30'
+                                        : file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
+                                        }`} style={file.isCommemorative ? { fontFamily: "'Georgia', 'Times New Roman', serif" } : undefined}>
+                                        {file.isCommemorative ? '✦ Exclusive for GOLD Members' : file.comingSoon ? 'SOON' : 'PDF'}
                                     </span>
                                 </div>
 
-                                <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-2 leading-tight transition-colors ${file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
+                                <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-2 leading-tight transition-colors ${
+                                    file.isCommemorative ? 'text-slate-800 dark:text-zinc-100' : file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
                                     }`}>
                                     {file.title}
                                     {file.subtitle && (
@@ -1181,6 +1201,30 @@ export default function NotesPage() {
 
                                 {file.comingSoon ? (
                                     hasPremiumAccess ? (
+                                        file.isCommemorative ? (
+                                            /* ── Special Commemorative Banner for Constitution of India ── */
+                                            <div className="mt-auto relative overflow-hidden rounded-xl border border-amber-400/70 dark:border-amber-600/50 p-3 md:p-4 flex flex-col items-center justify-center text-center" style={{ background: 'linear-gradient(135deg, #FEF3C7 0%, #FFFBEB 30%, #EFF6FF 65%, #FEF3C7 100%)' }}>
+                                                {/* Ashoka Chakra watermark */}
+                                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] dark:opacity-[0.06]">
+                                                    <svg viewBox="0 0 200 200" className="w-32 h-32 md:w-40 md:h-40" fill="currentColor" style={{ color: '#1e3a5f' }}>
+                                                        <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" strokeWidth="3" />
+                                                        <circle cx="100" cy="100" r="15" />
+                                                        {[...Array(24)].map((_, i) => (
+                                                            <line key={i} x1="100" y1="25" x2="100" y2="85" stroke="currentColor" strokeWidth="2.5" transform={`rotate(${i * 15} 100 100)`} />
+                                                        ))}
+                                                    </svg>
+                                                </div>
+                                                <div className="relative z-10">
+                                                    <div className="flex items-center gap-1.5 justify-center mb-1.5">
+                                                        <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-600" />
+                                                        <span className="text-[11px] md:text-sm font-extrabold tracking-wide" style={{ color: '#b45309' }}>Uploading on 14th April 2026</span>
+                                                    </div>
+                                                    <p className="text-[9px] md:text-xs italic text-slate-500 dark:text-zinc-400 mb-0.5">On the Birth Anniversary of</p>
+                                                    <p className="text-[11px] md:text-sm font-extrabold" style={{ color: '#1e40af' }}>Bharat Ratna Dr. B. R. Ambedkar</p>
+                                                    <p className="text-[9px] md:text-xs italic mt-0.5" style={{ color: '#6b7280' }}>Architect of the Indian Constitution</p>
+                                                </div>
+                                            </div>
+                                        ) : (
                                         <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-950/40 dark:to-amber-900/40 border border-amber-200 dark:border-amber-800/50 p-3 flex flex-col items-center justify-center text-center group-hover:from-amber-100 group-hover:to-amber-200 dark:group-hover:from-amber-900/60 dark:group-hover:to-amber-900/60 transition-all">
                                             <div className="relative flex items-center gap-2 text-amber-900 dark:text-amber-100 font-bold text-sm mb-1">
                                                 <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
@@ -1190,6 +1234,7 @@ export default function NotesPage() {
                                                 Materials will be uploaded on {getReleaseDate(file.title)}
                                             </p>
                                         </div>
+                                        )
                                     ) : (
                                         <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-3 flex flex-col items-center justify-center text-center">
                                             <div className="relative flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm mb-1">
