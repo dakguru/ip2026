@@ -7,6 +7,9 @@ import { cea_rules_set1 } from './flashcards/ceaRules';
 import { cgegis_set1 } from './flashcards/cgegis1980';
 import { joining_time_set1 } from './flashcards/ccsJoiningTime1979';
 import { recognition_set1 } from './flashcards/ccsRecognition1993';
+import { consolidation_set1 } from './flashcards/consolidationProducts';
+import { consolidation_set2 } from './flashcards/consolidationProducts2';
+import { consolidation_set3 } from './flashcards/consolidationProducts3';
 
 // ----- EXISTING QUESTION DATA -----
 export const ALL_SETS_DATA: Record<number, any[]> = {
@@ -6508,6 +6511,9 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "e": "Correct Answer: At the end of the year"
     }
 ],
+  161: consolidation_set1,
+  162: consolidation_set2,
+  163: consolidation_set3,
 };
 
 export interface RawQuestion {
@@ -6586,6 +6592,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-36', 'Postal Manual Volume III', 'Paper I', [60]),
   createTopic('p1-37', 'SDBS, 2011', 'Paper I', [65]),
   createTopic('p1-38', 'Manual of Office Procedure', 'Paper I', [136, 137, 138]),
+  createTopic('p1-40', 'Consolidation of Products & Centralized Delivery Policy', 'Paper I', [161, 162, 163]),
 
   // --- PAPER III ---
   createTopic('p3-1', 'The Constitution of India', 'Paper III', [69]),

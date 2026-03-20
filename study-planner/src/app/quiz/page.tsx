@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock, ChevronRight } from 'lucide-react';
+import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock, ChevronRight, ArrowRight } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
 import { PSGB_QUIZ_DATA } from '@/data/psgbQuizzesData';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
@@ -18,6 +18,7 @@ import FormattedQuestionText from '@/components/quiz/FormattedQuestionText';
 import ConfirmExitModal from '@/components/ConfirmExitModal';
 import { App } from '@capacitor/app';
 import { Capacitor } from '@capacitor/core';
+import HomeHeader from '@/components/HomeHeader';
 
 // Custom styles for range slider
 const sliderStyles = `
@@ -353,21 +354,61 @@ export default function QuizDashboard() {
         }
 
         return (
-            <AppScreenWrapper
-                header={
-                    <div className="flex items-center justify-between">
-                        <button onClick={resetToDashboard} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2">
-                            <ArrowLeft className="w-5 h-5" /> Quiz Zone
-                        </button>
-                        <div className="flex items-center gap-4 text-sm font-medium">
-                            <span className="text-zinc-500 dark:text-zinc-400">Q {currentQIndex + 1} / {total}</span>
+            <AppScreenWrapper hideStatusBarPadding={true}>
+                <div className="bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200 min-h-screen">
+                    <div className={`relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-16 shadow-lg
+                        ${isPS 
+                            ? 'bg-gradient-to-br from-slate-900 via-teal-900 to-indigo-900 border-b border-teal-700/50' 
+                            : 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-b border-purple-700/50'
+                        }
+                    `}>
+                        {/* Immersive Background Elements */}
+                        <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none overflow-hidden mix-blend-screen">
+                            <div className={`absolute -top-12 -right-12 w-64 h-64 blur-[80px] rounded-full ${isPS ? 'bg-cyan-500/50' : 'bg-pink-500/50'}`}></div>
+                            <div className={`absolute bottom-0 -left-12 w-48 h-48 blur-[60px] rounded-full ${isPS ? 'bg-emerald-500/50' : 'bg-blue-500/50'}`}></div>
+                            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdi0xSDB2MXptMCAyMGg0MHYtMUgwdjF6TTEwIDB2NDBoLTFWMGgxeptMTAgMHY0MGgtMVYwaDF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+                        </div>
+
+                        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col gap-5 mt-4">
+                            {/* Top Bar: Back & Counter */}
+                            <div className="flex items-center justify-between text-white">
+                                <button onClick={resetToDashboard} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 transition-colors text-xs font-semibold select-none group shadow-sm">
+                                    <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Quizzes
+                                </button>
+                                <div className="flex items-center gap-2 select-none bg-white/10 px-4 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
+                                    <Timer className="w-4 h-4 opacity-80" />
+                                    <span className="font-bold text-xs tracking-wider">Q {currentQIndex + 1} <span className="opacity-60">OF</span> {total}</span>
+                                </div>
+                            </div>
+
+                            {/* Main Title Area */}
+                            <div className="flex flex-col items-start gap-2.5 mt-2">
+                                <div className="flex items-center gap-2">
+                                    <div className="relative w-6 h-6 rounded-full overflow-hidden border border-white/50 shadow-sm shrink-0 bg-white">
+                                        <img src="/dak-guru-new-logo.png" alt="Dak Guru" className="w-full h-full object-cover scale-110" />
+                                    </div>
+                                    <span className={`text-[10px] md:text-xs font-black uppercase tracking-widest px-2.5 py-0.5 rounded shadow-sm border border-white/20
+                                        ${isPS ? 'bg-teal-500/30 text-teal-100' : 'bg-purple-500/30 text-purple-100'}
+                                    `}>Practice Session</span>
+                                </div>
+                                
+                                <h1 className="text-xl md:text-3xl font-extrabold text-white leading-tight drop-shadow-md line-clamp-3">
+                                    {generatedSet.title.replace('Study: ', '')}
+                                </h1>
+                            </div>
+                            
+                            {/* Progress Bar */}
+                            <div className="w-full bg-black/30 h-1.5 rounded-full mt-2 overflow-hidden border border-white/10 shadow-inner">
+                                <div 
+                                    className={`h-full rounded-full transition-all duration-500 ${isPS ? 'bg-gradient-to-r from-teal-400 to-cyan-400' : 'bg-gradient-to-r from-purple-400 to-pink-400'}`}
+                                    style={{ width: `${((currentQIndex + 1) / total) * 100}%` }}
+                                />
+                            </div>
                         </div>
                     </div>
-                }
-            >
 
                 {/* Content */}
-                <div className="flex-1 max-w-3xl mx-auto w-full p-4 md:p-6">
+                <div className="flex-1 max-w-4xl mx-auto w-full px-4 sm:px-6 relative z-20 pb-12" style={{ marginTop: '-2rem' }}>
                     {!isSubmitted ? (
                         <div className="space-y-6 md:space-y-8">
                             {/* Question Card */}
@@ -517,6 +558,7 @@ export default function QuizDashboard() {
                             </div>
                         </div>
                     )}
+                </div>
                 </div>
             </AppScreenWrapper>
         );
@@ -809,36 +851,99 @@ export default function QuizDashboard() {
     }
 
     return (
-        <AppScreenWrapper
-            header={
-                <div className="flex items-center gap-4 transition-all">
-                    <Link href="/" className="p-2 -ml-2 text-zinc-500 hover:text-zinc-900 transition-colors">
-                        <ArrowLeft className="w-5 h-5" />
-                    </Link>
-                    <div>
-                        <h1 className="text-xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">Quiz Zone</h1>
-                        <p className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider">Select a topic to start</p>
+        <AppScreenWrapper hideStatusBarPadding={true}>
+            <div className="bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200 min-h-screen pb-20">
+                <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel as any} />
+                
+                {/* Full-Length Quiz Zone Hero Banner */}
+                <div className={`relative w-full overflow-hidden transition-all duration-500 pb-20 pt-16 md:pb-28 md:pt-20
+                    ${isPS 
+                        ? 'bg-gradient-to-br from-slate-900 via-teal-900 to-indigo-900' 
+                        : 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'
+                    }
+                `}>
+                    {/* Immersive Background Elements */}
+                    <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none overflow-hidden mix-blend-screen">
+                        {/* Glow 1 */}
+                        <div className={`absolute -top-24 -right-24 w-96 h-96 blur-[100px] rounded-full
+                            ${isPS ? 'bg-cyan-500/50' : 'bg-pink-500/50'}
+                        `}></div>
+                        {/* Glow 2 */}
+                        <div className={`absolute -bottom-24 -left-24 w-80 h-80 blur-[80px] rounded-full
+                            ${isPS ? 'bg-emerald-500/50' : 'bg-blue-500/50'}
+                        `}></div>
+                        {/* Grid Pattern */}
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdi0xSDB2MXptMCAyMGg0MHYtMUgwdjF6TTEwIDB2NDBoLTFWMGgxeptMTAgMHY0MGgtMVYwaDF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
                     </div>
-                </div>
-            }
-        >
-            <div className="max-w-6xl mx-auto px-4 md:px-8 py-8">
-                <div className="mb-10">
-                    <Link href="/mock-tests" className="block p-5 rounded-3xl bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-200 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-all border border-amber-200 dark:border-amber-800 group active:scale-[0.98]">
-                        <div className="flex items-center gap-3">
-                            <span className="relative flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
-                            </span>
-                            <span className="flex-1">Looking for Live All India Mock Tests? <span className="font-bold border-b-2 border-amber-400/30 ml-1">Click here</span></span>
-                            <ChevronRight className="w-5 h-5 opacity-40 group-hover:translate-x-1 transition-transform" />
+
+                    {/* Banner Content */}
+                    <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                            <div className="flex-1 text-center md:text-left">
+                                <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6
+                                    ${isPS ? 'text-teal-100' : 'text-purple-100'} text-xs font-bold uppercase tracking-wider shadow-inner
+                                `}>
+                                    <BrainCircuit className="w-3.5 h-3.5" />
+                                    Active Recall
+                                </div>
+                                
+                                <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 leading-tight drop-shadow-lg">
+                                    {isPS ? 'PS Gr B Quiz Zone' : 'LDCE IP Quiz Zone'} <br className="hidden md:block" />
+                                    <span className={`text-transparent bg-clip-text bg-gradient-to-r drop-shadow-none ${isPS ? 'from-teal-300 to-cyan-300' : 'from-purple-300 to-pink-300'}`}>
+                                        Master Your Syllabus
+                                    </span>
+                                </h2>
+                                
+                                <p className="text-zinc-200 text-sm md:text-base max-w-xl mx-auto md:mx-0 font-medium leading-relaxed opacity-90 drop-shadow-sm">
+                                    Engage with premium topic-wise quizzes, get instant corrective feedback, and repeatedly test your knowledge for the final examination.
+                                </p>
+                            </div>
+
+                            {/* Decorative Visual Element */}
+                            <div className="hidden lg:flex w-48 h-48 lg:w-64 lg:h-64 relative shrink-0 z-20 items-center justify-center">
+                                <div className={`absolute inset-0 rounded-[2.5rem] rotate-6 opacity-30 ${isPS ? 'bg-teal-400' : 'bg-purple-400'}`}></div>
+                                <div className={`absolute inset-0 rounded-[2.5rem] -rotate-6 opacity-40 ${isPS ? 'bg-cyan-400' : 'bg-pink-400'} backdrop-blur-md border border-white/20`}></div>
+                                <div className={`absolute inset-0 bg-gradient-to-br ${isPS ? 'from-white/20 to-white/5' : 'from-white/20 to-white/5'} rounded-[2.5rem] shadow-2xl flex items-center justify-center backdrop-blur-xl border border-white/30 p-8`}>
+                                   <BrainCircuit className="w-full h-full text-white drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] opacity-90" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-10 mb-12">
+                    {/* Secondary Box: Live Mock Tests */}
+                    <Link href="/mock-tests" className="group block relative overflow-hidden w-full rounded-[1.5rem] p-6 shadow-xl bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 border border-amber-300/30 hover:shadow-orange-500/40 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+                        <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-white">
+                            <div className="flex items-center gap-4 sm:gap-6">
+                                <div className="hidden sm:flex items-center justify-center w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shrink-0">
+                                    <Trophy className="w-6 h-6 text-white drop-shadow-md" />
+                                </div>
+                                <div className="text-center sm:text-left">
+                                    <div className="inline-flex items-center gap-1.5 bg-white/20 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-1.5 border border-white/20 shadow-sm">
+                                        <span className="relative flex h-1.5 w-1.5">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-200 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-300"></span>
+                                        </span>
+                                        Live Now
+                                    </div>
+                                    <h3 className="text-lg md:text-xl font-black tracking-tight leading-tight">
+                                        Accelerate Your Preparation With Live Mock Tests
+                                    </h3>
+                                    <p className="text-white/90 text-xs md:text-sm font-medium mt-1">
+                                        Compete with thousands of aspirants across India and get real-time rankings.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="shrink-0 flex items-center gap-2 bg-white text-orange-600 px-5 py-2.5 rounded-xl font-bold text-sm shadow-md group-hover:shadow-xl transition-all">
+                                Join Series
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                            </div>
                         </div>
                     </Link>
-                </div>
 
-                <div className="space-y-12">
-                    {/* Paper I Section */}
-                    <section>
+                    <div className="space-y-12 mt-12 pb-12">
+                        {/* Paper I Section */}
+                        <section>
                         <div className="flex items-center gap-3 mb-6">
                             <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">Paper I</h2>
                             <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
@@ -873,6 +978,7 @@ export default function QuizDashboard() {
                         </div>
                     </section>
                 </div>
+            </div>
             </div>
             <ConfirmExitModal 
                 isOpen={showExitConfirm}
