@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { format } from "date-fns";
-import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight, FlaskConical, Bell, MessageSquare, Send, ExternalLink } from "lucide-react";
+import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight, Target, Bell, MessageSquare, Send, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import UpdatesDrawer from "@/components/UpdatesDrawer";
@@ -600,9 +600,10 @@ export default function SettingsPage() {
 
         // ---- Main Menu View ----
         return (
-            <AppScreenWrapper showBottomNav={true} hideStatusBarPadding={true}>
-                {/* Premium Profile Hero */}
-                <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-violet-950 pt-[max(24px,env(safe-area-inset-top))] pb-10 px-5">
+            <AppScreenWrapper showBottomNav={true} hideStatusBarPadding={true} className="h-screen overflow-hidden">
+                <div className="flex flex-col h-full w-full">
+                    {/* Premium Profile Hero */}
+                    <div className="relative shrink-0 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-violet-950 pt-[max(24px,env(safe-area-inset-top))] pb-10 px-5">
                     {/* Ambient Glow */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-indigo-500/15 rounded-full blur-[100px] pointer-events-none"></div>
                     <div className="absolute bottom-0 right-0 w-[200px] h-[200px] bg-violet-500/10 rounded-full blur-[80px] pointer-events-none"></div>
@@ -646,7 +647,7 @@ export default function SettingsPage() {
                                 </span>
                             </div>
                             <div className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/[0.07] border border-white/[0.08] backdrop-blur-sm">
-                                <FlaskConical className="w-3.5 h-3.5 text-violet-400" />
+                                <Target className="w-3.5 h-3.5 text-orange-400" />
                                 <span className="text-[11px] font-semibold text-zinc-300">{course === 'PS_GR_B' ? 'PS Gr. B' : 'LDCE IP'}</span>
                             </div>
                         </div>
@@ -654,7 +655,7 @@ export default function SettingsPage() {
                 </div>
 
                 {/* Menu Sections */}
-                <div className="px-4 -mt-5 relative z-20 space-y-4 pb-28">
+                <div className="px-4 -mt-5 relative z-20 space-y-4 pb-[120px] flex-1 overflow-y-auto w-full pt-1">
 
                     {/* Account Card */}
                     <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">
@@ -665,10 +666,10 @@ export default function SettingsPage() {
                             iconBg="bg-indigo-50 dark:bg-indigo-900/20" iconColor="text-indigo-600 dark:text-indigo-400" />
                         <MobileMenuItem icon={Bell} label="What's New" onClick={() => setShowUpdates(true)}
                             iconBg="bg-rose-50 dark:bg-rose-900/20" iconColor="text-rose-500 dark:text-rose-400" />
-                        <MobileMenuItem icon={FlaskConical} label="Course Mode"
+                        <MobileMenuItem icon={Target} label="Course Mode"
                             right={course === 'PS_GR_B' ? 'PS Gr. B' : 'LDCE IP'}
                             onClick={() => setActiveSection('course')}
-                            iconBg="bg-violet-50 dark:bg-violet-900/20" iconColor="text-violet-600 dark:text-violet-400" last />
+                            iconBg="bg-orange-50 dark:bg-orange-900/20" iconColor="text-orange-600 dark:text-orange-400" last />
                     </div>
 
                     {/* Membership Card */}
@@ -692,9 +693,12 @@ export default function SettingsPage() {
                     </div>
 
                     {/* App Version Footer */}
-                    <div className="text-center pt-4 pb-2">
-                        <p className="text-[11px] text-zinc-300 dark:text-zinc-700 font-medium">Dak Guru · v2.6</p>
+                    <div className="text-center pt-8 pb-4 mt-auto">
+                        <p className="text-[10px] text-zinc-400 dark:text-zinc-600 font-bold uppercase tracking-widest mb-1.5 opacity-60">Dak Guru App</p>
+                        <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium px-6 leading-relaxed mb-1.5">Carefully Crafted in India for Aspirants Who Aim Higher 🎯📚</p>
+                        <p className="text-[10px] text-zinc-400 dark:text-zinc-600 font-bold">www.dakguru.com</p>
                     </div>
+                </div>
                 </div>
                 <UpdatesDrawer isOpen={showUpdates} onClose={() => setShowUpdates(false)} />
             </AppScreenWrapper>
@@ -770,8 +774,8 @@ export default function SettingsPage() {
                 {
                     <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm">
                         <div className="flex items-center gap-4 mb-6 pb-6 border-b border-zinc-100 dark:border-zinc-800">
-                            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400">
-                                <FlaskConical className="w-6 h-6" />
+                            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center text-orange-600 dark:text-orange-400">
+                                <Target className="w-6 h-6" />
                             </div>
                             <div>
                                 <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Course Mode</h2>

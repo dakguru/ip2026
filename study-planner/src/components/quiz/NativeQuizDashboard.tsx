@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Lock, Play, Star, Zap, BrainCircuit, ChevronRight, Layers } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Lock, Play, Star, Zap, BrainCircuit, ChevronRight, Layers, Trophy } from 'lucide-react';
 import { QuizTopic } from '@/lib/quizTypes';
+import { useCourse } from '@/contexts/CourseContext';
 
 import AppScreenWrapper from '@/components/AppScreenWrapper';
 
@@ -20,6 +21,10 @@ export default function NativeQuizDashboard({
     onSelectTopic,
     isUnlocked
 }: NativeQuizDashboardProps) {
+
+    const [showTopics, setShowTopics] = useState(false);
+    const { course } = useCourse();
+    const isPS = course === 'PS_GR_B';
 
     const renderTopicCard = (topic: QuizTopic) => {
         const locked = !isUnlocked(topic.id);
@@ -71,109 +76,175 @@ export default function NativeQuizDashboard({
         );
     };
 
+        if (showTopics) {
+            return (
+                <AppScreenWrapper hideStatusBarPadding={true}>
+                    <div className="bg-slate-50 dark:bg-zinc-950 min-h-screen font-sans text-slate-800 dark:text-zinc-200">
+                        {/* Immersive Hero Bar */}
+                        <div className={`relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-8 shadow-md
+                            ${isPS ? 'bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 border-b border-teal-700/50' : 'bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 border-b border-purple-700/50'}
+                        `}>
+                            {/* Glow Effects */}
+                            <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none mix-blend-screen">
+                                <div className={`absolute -top-12 -right-12 w-64 h-64 blur-[80px] rounded-full ${isPS ? 'bg-cyan-500/40' : 'bg-pink-500/40'}`}></div>
+                                <div className={`absolute bottom-0 -left-12 w-48 h-48 blur-[60px] rounded-full ${isPS ? 'bg-emerald-500/40' : 'bg-blue-500/40'}`}></div>
+                                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdi0xSDB2MXptMCAyMGg0MHYtMUgwdjF6TTEwIDB2NDBoLTFWMGgxeptMTAgMHY0MGgtMVYwaDF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+                            </div>
+                            
+                            <div className="max-w-4xl mx-auto px-6 relative z-10 flex flex-col gap-2 mt-2">
+                                <button onClick={() => setShowTopics(false)} className="flex items-center gap-2 max-w-fit px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md transition-colors text-white text-xs font-semibold mb-2 shadow-sm border border-white/10">
+                                    <ArrowLeft className="w-4 h-4 text-white" /> Back to Practice
+                                </button>
+                                
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white shadow-lg shadow-black/10">
+                                        <BrainCircuit className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div>
+                                        <h1 className="text-xl md:text-3xl font-extrabold text-white leading-tight drop-shadow-sm">Topic-wise Quiz</h1>
+                                        <p className="text-white/80 text-[10px] font-medium uppercase tracking-widest mt-0.5 drop-shadow">Select a topic to start</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="p-4 sm:p-6 space-y-8 pb-32 max-w-4xl mx-auto w-full relative z-20">
+                            {/* Paper I */}
+                        <section>
+                            <div className="flex items-center justify-between mb-4">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-1 h-5 bg-blue-500 rounded-full" />
+                                    <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Paper I</h2>
+                                </div>
+                                <span className="text-xs font-bold text-zinc-400 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-lg">
+                                    {group1Topics.length} Topics
+                                </span>
+                            </div>
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                                {group1Topics.map(renderTopicCard)}
+                            </div>
+                        </section>
+
+                        {/* Paper II/III */}
+                        <section>
+                            <div className="flex items-center justify-between mb-4">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-1 h-5 bg-pink-500 rounded-full" />
+                                    <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">{group2Title}</h2>
+                                </div>
+                                <span className="text-xs font-bold text-zinc-400 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-lg">
+                                    {group2Topics.length} Topics
+                                </span>
+                            </div>
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                                {group2Topics.map(renderTopicCard)}
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </AppScreenWrapper>
+        );
+    }
+
     return (
-        <AppScreenWrapper
-            hideStatusBarPadding={true}
-            header={
-                <div>
-                    <h1 className="text-2xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight">Quiz Zone</h1>
-                    <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Master your syllabus</p>
-                </div>
-            }
-        >
-            <div className="p-6 space-y-8">
-                {/* Banners Carousel */}
-                <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide -mx-6 px-6">
-                    {/* 1. All India Mock Test Banner */}
-                    <Link href="/mock-tests" className="flex-shrink-0 w-[85%] sm:w-[320px] flex flex-col group relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white shadow-xl shadow-indigo-500/20">
-                        <div className="absolute top-0 right-0 p-8 opacity-10">
-                            <Star className="w-24 h-24 rotate-12" />
-                        </div>
-                        <div className="relative p-5 flex-1 flex flex-col">
-                            <div className="inline-flex max-w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-2 border border-white/10">
-                                <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
-                                Live Now
-                            </div>
-                            <h2 className="text-xl font-bold mb-2 pr-12">All India Mock Tests</h2>
-                            <p className="text-indigo-100 text-[11px] font-medium max-w-[200px] mb-3 leading-relaxed">
-                                Compete with aspirants across India in real-time.
-                            </p>
-                            <div className="mt-auto inline-flex max-w-fit items-center gap-2 bg-white text-indigo-600 px-4 py-2 rounded-xl text-xs font-bold group-active:scale-95 transition-transform">
-                                Join Series <ArrowRight className="w-3 h-3" />
-                            </div>
-                        </div>
-                    </Link>
-
-                    {/* 2. Quiz Zone Banner */}
-                    <button onClick={() => window.scrollTo({ top: 400, behavior: 'smooth' })} className="flex-shrink-0 w-[85%] sm:w-[320px] flex flex-col group relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-xl shadow-emerald-500/20 text-left">
-                        <div className="absolute top-0 right-0 p-8 opacity-10">
-                            <BrainCircuit className="w-24 h-24 -rotate-12" />
-                        </div>
-                        <div className="relative p-5 flex-1 flex flex-col">
-                            <div className="inline-flex max-w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-2 border border-white/10">
-                                Study Mode
-                            </div>
-                            <h2 className="text-xl font-bold mb-2 pr-12">Topic-wise Quiz</h2>
-                            <p className="text-emerald-50 text-[11px] font-medium max-w-[200px] mb-3 leading-relaxed">
-                                Master specific topics with instant corrective feedback.
-                            </p>
-                            <div className="mt-auto inline-flex max-w-fit items-center gap-2 bg-white text-emerald-600 px-4 py-2 rounded-xl text-xs font-bold group-active:scale-95 transition-transform">
-                                Start Quiz <Play className="w-3 h-3 fill-current" />
+        <AppScreenWrapper hideStatusBarPadding={true}>
+            <div className="bg-slate-50 dark:bg-zinc-950 min-h-screen font-sans text-slate-800 dark:text-zinc-200">
+                {/* Immersive Hero Bar */}
+                <div className={`relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-8 shadow-md
+                    ${isPS ? 'bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 border-b border-teal-700/50' : 'bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 border-b border-purple-700/50'}
+                `}>
+                    {/* Glow Effects */}
+                    <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none mix-blend-screen">
+                        <div className={`absolute -top-12 -right-12 w-64 h-64 blur-[80px] rounded-full ${isPS ? 'bg-cyan-500/50' : 'bg-pink-500/50'}`}></div>
+                        <div className={`absolute bottom-0 -left-12 w-48 h-48 blur-[60px] rounded-full ${isPS ? 'bg-emerald-500/50' : 'bg-blue-500/50'}`}></div>
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdi0xSDB2MXptMCAyMGg0MHYtMUgwdjF6TTEwIDB2NDBoLTFWMGgxeptMTAgMHY0MGgtMVYwaDF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+                    </div>
+                    
+                    <div className="max-w-4xl mx-auto px-6 relative z-10">
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3 mt-4">
+                                <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white shadow-xl shadow-black/10">
+                                    <Trophy className="w-6 h-6 text-white" />
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                    <span className={`text-[10px] md:text-xs font-black uppercase tracking-widest px-2 py-0.5 rounded shadow-[0_2px_10px_rgba(0,0,0,0.1)] inline-block border border-white/20 w-max
+                                        ${isPS ? 'bg-teal-500/30 text-teal-100' : 'bg-purple-500/30 text-purple-100'}
+                                    `}>
+                                        {isPS ? 'PS Gr B Course' : 'LDCE IP Course'}
+                                    </span>
+                                    <h1 className="text-2xl md:text-3xl font-extrabold text-white leading-tight drop-shadow-sm">
+                                        Practice Zone
+                                    </h1>
+                                </div>
                             </div>
                         </div>
-                    </button>
-
-                    {/* 3. Flash Cards Banner */}
-                    <Link href="/flashcards" className="flex-shrink-0 w-[85%] sm:w-[320px] flex flex-col group relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-500 to-rose-600 text-white shadow-xl shadow-orange-500/20">
-                        <div className="absolute top-0 right-0 p-8 opacity-10">
-                            <Layers className="w-24 h-24 rotate-45" />
-                        </div>
-                        <div className="relative p-5 flex-1 flex flex-col">
-                            <div className="inline-flex max-w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-2 border border-white/10">
-                                Active Recall
-                            </div>
-                            <h2 className="text-xl font-bold mb-2 pr-12">Flash Cards</h2>
-                            <p className="text-orange-50 text-[11px] font-medium max-w-[200px] mb-3 leading-relaxed">
-                                Quickly memorize key points and manual rules.
-                            </p>
-                            <div className="mt-auto inline-flex max-w-fit items-center gap-2 bg-white text-orange-600 px-4 py-2 rounded-xl text-xs font-bold group-active:scale-95 transition-transform">
-                                Open Cards <Layers className="w-3 h-3" />
-                            </div>
-                        </div>
-                    </Link>
+                    </div>
                 </div>
 
-                {/* Paper I */}
-                <section>
-                    <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-2">
-                            <div className="w-1 h-5 bg-blue-500 rounded-full" />
-                            <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Paper I</h2>
-                        </div>
-                        <span className="text-xs font-bold text-zinc-400 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-lg">
-                            {group1Topics.length} Topics
-                        </span>
-                    </div>
-                    <div className="grid grid-cols-2 gap-3">
-                        {group1Topics.map(renderTopicCard)}
-                    </div>
-                </section>
+                <div className="p-4 sm:p-6 pb-32 space-y-6 max-w-4xl mx-auto w-full relative z-20">
+                    <div className="flex flex-col gap-4 w-full">
+                        {/* 1. All India Mock Test Banner */}
+                        <Link href="/mock-tests" className="w-full flex flex-col group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white shadow-xl shadow-indigo-500/20 active:scale-[0.98] transition-transform">
+                            <div className="absolute top-0 right-0 p-8 opacity-10">
+                                <Star className="w-24 h-24 rotate-12" />
+                            </div>
+                            <div className="relative p-6 flex-1 flex flex-col">
+                                <div className="inline-flex max-w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-2 border border-white/10">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+                                    Live Now
+                                </div>
+                                <h2 className="text-xl font-bold mb-2 pr-12">All India Mock Tests</h2>
+                                <p className="text-indigo-100 text-xs font-medium max-w-[200px] mb-4 leading-relaxed">
+                                    Compete with aspirants across India in real-time.
+                                </p>
+                                <div className="mt-auto inline-flex max-w-fit items-center gap-2 bg-white text-indigo-600 px-4 py-2.5 rounded-xl text-xs font-bold group-active:scale-95 transition-transform shadow-md">
+                                    Join Series <ArrowRight className="w-4 h-4" />
+                                </div>
+                            </div>
+                        </Link>
 
-                <section>
-                    <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-2">
-                            <div className="w-1 h-5 bg-pink-500 rounded-full" />
-                            <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">{group2Title}</h2>
-                        </div>
-                        <span className="text-xs font-bold text-zinc-400 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-lg">
-                            {group2Topics.length} Topics
-                        </span>
+                        {/* 2. Quiz Zone Banner */}
+                        <button onClick={() => setShowTopics(true)} className="w-full flex flex-col group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-xl shadow-emerald-500/20 text-left active:scale-[0.98] transition-transform">
+                            <div className="absolute top-0 right-0 p-8 opacity-10">
+                                <BrainCircuit className="w-24 h-24 -rotate-12" />
+                            </div>
+                            <div className="relative p-6 flex-1 flex flex-col">
+                                <div className="inline-flex max-w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-2 border border-white/10">
+                                    Study Mode
+                                </div>
+                                <h2 className="text-xl font-bold mb-2 pr-12">Topic-wise Quiz</h2>
+                                <p className="text-emerald-50 text-xs font-medium max-w-[200px] mb-4 leading-relaxed">
+                                    Master specific topics with instant corrective feedback.
+                                </p>
+                                <div className="mt-auto inline-flex max-w-fit items-center gap-2 bg-white text-emerald-600 px-4 py-2.5 rounded-xl text-xs font-bold group-active:scale-95 transition-transform shadow-md">
+                                    Start Quiz <Play className="w-4 h-4 fill-current" />
+                                </div>
+                            </div>
+                        </button>
+
+                        {/* 3. Flash Cards Banner */}
+                        <Link href="/flashcards" className="w-full flex flex-col group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-orange-500 to-rose-600 text-white shadow-xl shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                            <div className="absolute top-0 right-0 p-8 opacity-10">
+                                <Layers className="w-24 h-24 rotate-45" />
+                            </div>
+                            <div className="relative p-6 flex-1 flex flex-col">
+                                <div className="inline-flex max-w-fit items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider mb-2 border border-white/10">
+                                    Active Recall
+                                </div>
+                                <h2 className="text-xl font-bold mb-2 pr-12">Flash Cards</h2>
+                                <p className="text-orange-50 text-xs font-medium max-w-[200px] mb-4 leading-relaxed">
+                                    Quickly memorize key points and manual rules.
+                                </p>
+                                <div className="mt-auto inline-flex max-w-fit items-center gap-2 bg-white text-orange-600 px-4 py-2.5 rounded-xl text-xs font-bold group-active:scale-95 transition-transform shadow-md">
+                                    Open Cards <Layers className="w-4 h-4" />
+                                </div>
+                            </div>
+                        </Link>
                     </div>
-                    <div className="grid grid-cols-2 gap-3">
-                        {group2Topics.map(renderTopicCard)}
-                    </div>
-                </section>
-            </div>
-        </AppScreenWrapper>
-    );
+                </div>
+                </div>
+            </AppScreenWrapper>
+        );
+
 }
