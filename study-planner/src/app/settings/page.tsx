@@ -600,7 +600,7 @@ export default function SettingsPage() {
 
         // ---- Main Menu View ----
         return (
-            <AppScreenWrapper showBottomNav={true} hideStatusBarPadding={true} className="h-screen overflow-hidden">
+            <AppScreenWrapper showBottomNav={true} hideStatusBarPadding={true} className="min-h-0 h-[calc(100dvh-64px)] overflow-hidden">
                 <div className="flex flex-col h-full w-full">
                     {/* Premium Profile Hero */}
                     <div className="relative shrink-0 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-violet-950 pt-[max(24px,env(safe-area-inset-top))] pb-10 px-5">
@@ -654,8 +654,8 @@ export default function SettingsPage() {
                     </div>
                 </div>
 
-                {/* Menu Sections */}
-                <div className="px-4 -mt-5 relative z-20 space-y-4 pb-[120px] flex-1 overflow-y-auto w-full pt-1">
+                {/* Menu Sections - Scrollable Area */}
+                <div className="px-4 -mt-5 relative z-20 space-y-4 pb-[80px] flex-1 overflow-y-auto w-full pt-1">
 
                     {/* Account Card */}
                     <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm overflow-hidden">

@@ -1182,17 +1182,17 @@ export default function NotesPage() {
                                                 <FileText className={`w-6 h-6 md:w-8 md:h-8 ${file.isCommemorative ? 'text-amber-900' : ''}`} />
                                             )}
                                         </div>
-                                        <span className={`text-[8px] md:text-xs font-bold px-2 py-1 rounded-md italic tracking-wide transition-all duration-300 ${
+                                        <span className={`text-[9px] md:text-xs font-bold px-1.5 py-1 rounded-md italic tracking-wide transition-all duration-300 ${
                                             file.isCommemorative
                                             ? 'bg-amber-600 text-white shadow-md'
                                             : file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
                                             }`} style={file.isCommemorative ? { fontFamily: "'Georgia', 'Times New Roman', serif" } : undefined}>
-                                            {file.isCommemorative ? '✦ Exclusive for GOLD Members' : file.comingSoon ? 'SOON' : 'PDF'}
+                                            {file.isCommemorative ? '✦ GOLD Exclusive' : file.comingSoon ? 'SOON' : 'PDF'}
                                         </span>
                                     </div>
 
-                                    <h3 className={`text-sm md:text-xl font-black mb-1 md:mb-2 leading-tight transition-all duration-300 ${
-                                        file.isCommemorative ? 'text-[#1e293b]' : file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
+                                    <h3 className={`text-base md:text-xl font-black mb-1 md:mb-2 leading-tight transition-all duration-300 ${
+                                        file.isCommemorative ? 'text-slate-900' : file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
                                         }`}>
                                         {file.title}
                                         {file.subtitle && (
@@ -1215,7 +1215,7 @@ export default function NotesPage() {
                                             <div className="mt-auto relative overflow-hidden rounded-xl border border-amber-400/50 p-2 md:p-4 flex flex-col items-center justify-center text-center z-20" style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(8px)' }}>
                                                 {/* Ashoka Chakra watermark */}
                                                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.06]">
-                                                    <svg viewBox="0 0 200 200" className="w-32 h-32 md:w-40 md:h-40" fill="currentColor" style={{ color: '#1e3a5f' }}>
+                                                    <svg viewBox="0 0 200 200" className="w-24 h-24 md:w-40 md:h-40" fill="currentColor" style={{ color: '#1e3a5f' }}>
                                                         <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" strokeWidth="2.5" />
                                                         <circle cx="100" cy="100" r="15" />
                                                         {[...Array(24)].map((_, i) => (
@@ -1223,14 +1223,14 @@ export default function NotesPage() {
                                                         ))}
                                                     </svg>
                                                 </div>
-                                                <div className="relative z-10">
-                                                    <div className="flex items-center gap-1.5 justify-center mb-1">
-                                                        <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-                                                        <span className="text-[10px] md:text-[14px] font-black tracking-tight uppercase" style={{ color: '#854d0e' }}>Uploading on 14th April 2026</span>
+                                                <div className="relative z-10 w-full">
+                                                    <div className="flex items-center gap-1 justify-center mb-1">
+                                                        <Sparkles className="w-3 h-3 md:w-3.5 md:h-3.5 text-amber-700" />
+                                                        <span className="text-[9px] md:text-[14px] font-black tracking-tight uppercase" style={{ color: '#854d0e' }}>Uploading on 14th April 2026</span>
                                                     </div>
-                                                    <p className="text-[8px] md:text-[11px] font-bold italic text-slate-600 mb-0.5">On the Birth Anniversary of</p>
-                                                    <p className="text-[10px] md:text-[16px] font-black tracking-wide whitespace-nowrap" style={{ color: '#172554' }}>Bharat Ratna Dr. B. R. Ambedkar</p>
-                                                    <p className="text-[8px] md:text-[11px] font-bold italic mt-0.5 text-slate-600 leading-tight">Architect of the Indian Constitution</p>
+                                                    <p className="text-[7px] md:text-[11px] font-bold italic text-slate-600 mb-0.5">On the Birth Anniversary of</p>
+                                                    <p className="text-[11px] md:text-[16px] font-black tracking-tight leading-none px-0.5" style={{ color: '#172554' }}>Dr. B. R. Ambedkar</p>
+                                                    <p className="text-[7.5px] md:text-[11px] font-bold italic mt-0.5 text-slate-600 leading-tight">Architect of the Indian Constitution</p>
                                                 </div>
                                             </div>
                                         ) : (
