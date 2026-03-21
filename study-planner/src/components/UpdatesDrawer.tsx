@@ -16,6 +16,44 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "21.03.2026",
+        items: [
+            {
+                title: "📅 PS Group B Study Planner",
+                desc: (
+                    <div className="space-y-2">
+                        <p>A brand new <strong>14-week Study Planner</strong> for <strong>PS Group B</strong> is now live!</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li>Aligned with the official PS Gr B exam syllabus</li>
+                            <li>Flexible study tracking — mark topics as complete at your own pace</li>
+                            <li>Course mode switcher: PS Gr B ↔ LDCE IP</li>
+                        </ul>
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Check it out in the Planner section!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📝 PS Group B Mock Test Series (14 Weeks)",
+                desc: (
+                    <div className="space-y-2">
+                        <p>Introducing <strong>14 weekly Mock Tests</strong> for <strong>PS Group B</strong> — covering all topics week by week!</p>
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
+                            <li>50 MCQs per test • 60 minutes duration</li>
+                            <li>Every Sunday with topics from that week&apos;s study plan</li>
+                            <li>All India ranking, answer sheet downloads & leaderboard</li>
+                            <li>Enroll per test for just ₹49 (free for Diamond/Platinum members)</li>
+                        </ul>
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head to Mock Tests → PS Group B!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "20.03.2026",
         items: [
             {
