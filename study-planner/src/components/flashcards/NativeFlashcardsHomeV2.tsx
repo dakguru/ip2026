@@ -201,6 +201,7 @@ export default function NativeFlashcardsHomeV2({
                                     index={i}
                                     onSelect={() => onDeckSelect(deck.id)}
                                     locked={!hasAccess && (deck.category === 'Paper I' || deck.category === 'Paper II' || deck.category === 'Paper III' || deck.category === 'PYQ')}
+                                    course={course}
                                 />
                             ))}
                         </AnimatePresence>

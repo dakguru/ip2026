@@ -841,6 +841,7 @@ function FlashcardsContent() {
                                                     onAction={handleSelectDeck}
                                                     lastIndex={deckProgress[item.id] || 0}
                                                     locked={!hasAccess}
+                                                    course={course}
                                                 />
                                             </div>
                                         ))}
@@ -871,6 +872,7 @@ function FlashcardsContent() {
                                                     onAction={handleSelectDeck}
                                                     lastIndex={deckProgress[item.id] || 0}
                                                     locked={!hasAccess}
+                                                    course={course}
                                                 />
                                             </div>
                                         ))}
@@ -901,6 +903,7 @@ function FlashcardsContent() {
                                                     onAction={handleSelectDeck}
                                                     lastIndex={deckProgress[item.id] || 0}
                                                     locked={!hasAccess}
+                                                    course={course}
                                                 />
                                             </div>
                                         ))}
@@ -936,6 +939,7 @@ function FlashcardsContent() {
                                                         onAction={handleSelectDeck}
                                                         lastIndex={deckProgress[item.id] || 0}
                                                         locked={false}
+                                                        course={course}
                                                     />
                                                 </div>
                                             ))}
@@ -971,6 +975,7 @@ function FlashcardsContent() {
                                                     onAction={handleSelectDeck}
                                                     lastIndex={deckProgress[item.id] || 0}
                                                     locked={!hasAccess}
+                                                    course={course}
                                                 />
                                             </div>
                                         ))}
