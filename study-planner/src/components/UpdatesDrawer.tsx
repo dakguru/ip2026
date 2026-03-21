@@ -50,6 +50,24 @@ const UPDATES_DATA: UpdateGroup[] = [
                         </p>
                     </div>
                 )
+            },
+            {
+                title: "📚 Post Office Regulations 2024 (MCQs Upgraded)",
+                desc: (
+                    <div className="space-y-4">
+                        <div className="space-y-2">
+                            <p className="font-bold text-zinc-900 dark:text-zinc-100 text-[10px] uppercase tracking-wide opacity-70">1. Advanced Level (Updated)</p>
+                            <p className="text-zinc-600 dark:text-zinc-400">Integrated <strong>175 New MCQs</strong> with accurate regulation numbers and formatted <strong>Matching Tables</strong> for in-depth study.</p>
+                        </div>
+                        <div className="space-y-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <p className="font-bold text-zinc-900 dark:text-zinc-100 text-[10px] uppercase tracking-wide opacity-70">2. LDCE Level (New)</p>
+                            <p className="text-zinc-600 dark:text-zinc-400">Launched a new <strong>Revision Booster</strong> card with <strong>150 High-Quality MCQs</strong> ensuring 100% topic coverage including footnotes.</p>
+                        </div>
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Quiz section!
+                        </p>
+                    </div>
+                )
             }
         ]
     },
