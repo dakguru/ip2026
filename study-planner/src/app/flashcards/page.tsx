@@ -1052,7 +1052,7 @@ function FlashcardsContent() {
     );
 }
 
-function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index, lastIndex, locked }: any) {
+function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index, lastIndex, locked, course }: any) {
     const themes = [
         { g: 'bg-blue-500', t: 'text-sky-600', b: 'bg-sky-50' },
         { g: 'bg-emerald-500', t: 'text-emerald-600', b: 'bg-emerald-50' },
@@ -1083,7 +1083,7 @@ function PremiumKnowledgeTile({ id, title, category, cardCount, onAction, index,
                 <p className="text-[9px] md:text-[11px] text-slate-500 font-bold uppercase tracking-wider">{cardCount} Smart Cards</p>
                 {locked && (
                     <p className="text-[10px] font-bold text-amber-600 dark:text-amber-500 mt-3 flex items-center gap-1.5 animate-pulse">
-                        <Crown className="w-3.5 h-3.5" /> Only for Gold Members
+                        <Crown className="w-3.5 h-3.5" /> {course === 'PS_GR_B' ? 'Only for Diamond Members' : 'Only for Gold Members'}
                     </p>
                 )}
             </div>

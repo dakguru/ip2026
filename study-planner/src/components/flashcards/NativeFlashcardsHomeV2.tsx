@@ -221,7 +221,7 @@ export default function NativeFlashcardsHomeV2({
 
 // --- SUB COMPONENTS ---
 
-function VerticalPaperCard({ deck, progress, index, onSelect, locked }: any) {
+function VerticalPaperCard({ deck, progress, index, onSelect, locked, course }: any) {
     // Generate a consistent gradient based on index/id for visual variety but calmness
     // Generate a consistent gradient based on index/id
     const gradients = [
@@ -272,7 +272,7 @@ function VerticalPaperCard({ deck, progress, index, onSelect, locked }: any) {
                     <div className="flex items-center gap-1.5 mb-2">
                         <Crown className="w-3.5 h-3.5 text-amber-500" />
                         <span className="text-[10px] font-bold text-amber-600 dark:text-amber-500 uppercase tracking-wide">
-                            Only for Gold Members
+                            {course === 'PS_GR_B' ? 'Only for Diamond Members' : 'Only for Gold Members'}
                         </span>
                     </div>
                 )}
