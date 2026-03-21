@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight, History } from "lucide-react";
 import { FULL_SCHEDULE } from "@/data/schedule";
+import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
+import { getDisplayMembership } from "@/lib/membership-utils";
 import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval, endOfDay } from "date-fns";
 import { useMemo, useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -39,6 +41,7 @@ export default function MockTestsPage() {
     const { course } = useCourse();
     const [forceLdceIp, setForceLdceIp] = useState(false);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
+    const [planName, setPlanName] = useState<string | null>(null);
     const [paidTests, setPaidTests] = useState<string[]>([]);
     const [userEmail, setUserEmail] = useState<string | null>(null);
     const [userName, setUserName] = useState<string>("Aspirant");
@@ -111,6 +114,7 @@ export default function MockTestsPage() {
                 }
                 if (session.name) setUserName(session.name);
                 if (session.membershipLevel) setMembershipLevel(session.membershipLevel);
+                if (session.planName) setPlanName(session.planName);
                 if (session.role) setRole(session.role);
             } catch (e) {
                 console.error('Session parse error');
@@ -401,149 +405,19 @@ export default function MockTestsPage() {
 
     const isPsGroupB = course === 'PS_GR_B' && !forceLdceIp;
 
+    // ===== PS GROUP B MOCK TESTS (Full Schedule) =====
     if (isPsGroupB) {
         return (
-            <AppScreenWrapper hideStatusBarPadding={true}>
-                {/* ===== PS GROUP B MOCK TEST ANNOUNCEMENT ===== */}
-                <div className="min-h-screen bg-zinc-950 text-white relative overflow-hidden">
-
-                    {/* Animated Background */}
-                    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" />
-                        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-blue-600/15 rounded-full blur-[120px] animate-pulse delay-1000" />
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[150px] animate-pulse delay-500" />
-                        {/* Grid pattern overlay */}
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
-                    </div>
-
-                    <div className="relative z-10">
-
-                        {/* Back Button */}
-                        <div className="px-5 pt-[max(16px,env(safe-area-inset-top))] pb-2">
-                            <Link href="/" className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-zinc-300 transition-colors text-sm font-medium">
-                                <ArrowLeft className="w-4 h-4" />
-                                <span>Back</span>
-                            </Link>
-                        </div>
-
-                        {/* Hero Section */}
-                        <div className="px-5 pt-6 pb-8 text-center">
-                            {/* Animated Alert Badge */}
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/25 mb-6 animate-bounce" style={{ animationDuration: '2s' }}>
-                                <span className="text-lg">🚨</span>
-                                <span className="text-red-400 font-black text-xs tracking-widest uppercase">Most Awaited is Here!</span>
-                                <span className="text-lg">🚨</span>
-                            </div>
-
-                            <h1 className="text-[2.2rem] sm:text-5xl md:text-6xl font-black leading-[1.1] mb-4 tracking-tight">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-pink-500">
-                                    Mock Test Series
-                                </span>
-                                <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400">
-                                    PS Group B
-                                </span>
-                            </h1>
-
-                            <p className="text-zinc-400 text-sm sm:text-base max-w-md mx-auto leading-relaxed mb-2">
-                                The wait is finally over! Dak Guru proudly presents the Mock Test Series for PS Group B.
-                            </p>
-                            <p className="text-zinc-500 text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
-                                Gear up to elevate your preparation with a structured, exam-focused, and result-oriented test series designed exclusively for serious aspirants.
-                            </p>
-                        </div>
-
-                        {/* Key Info Cards */}
-                        <div className="px-5 pb-8">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto">
-                                {/* Starting Date Card */}
-                                <div className="relative group">
-                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl opacity-40 blur-sm group-hover:opacity-70 transition duration-500" />
-                                    <div className="relative bg-zinc-900 border border-zinc-800/50 rounded-2xl p-5 text-center">
-                                        <div className="w-12 h-12 rounded-full bg-orange-500/15 flex items-center justify-center mx-auto mb-3">
-                                            <Calendar className="w-6 h-6 text-orange-400" />
-                                        </div>
-                                        <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Starting From</p>
-                                        <p className="text-lg font-black text-white">1st Week of April</p>
-                                        <p className="text-xs text-zinc-400 font-medium mt-0.5">Every Saturday & Sunday</p>
-                                    </div>
-                                </div>
-
-                                {/* Schedule Release Card */}
-                                <div className="relative group">
-                                    <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-40 blur-sm group-hover:opacity-70 transition duration-500" />
-                                    <div className="relative bg-zinc-900 border border-zinc-800/50 rounded-2xl p-5 text-center">
-                                        <div className="w-12 h-12 rounded-full bg-blue-500/15 flex items-center justify-center mx-auto mb-3">
-                                            <Clock className="w-6 h-6 text-blue-400" />
-                                        </div>
-                                        <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Schedule Release</p>
-                                        <p className="text-lg font-black text-white">22 March 2026</p>
-                                        <p className="text-xs text-zinc-400 font-medium mt-0.5">Full schedule will be live</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Why This Series - Feature Cards */}
-                        <div className="px-5 pb-8">
-                            <div className="max-w-lg mx-auto">
-                                <h2 className="text-center text-sm font-black text-zinc-500 uppercase tracking-widest mb-5">This is your moment to</h2>
-                                <div className="space-y-2.5">
-                                    {[
-                                        { emoji: "🎯", text: "Test your real exam readiness", color: "from-emerald-500/20 to-emerald-500/5" },
-                                        { emoji: "🔍", text: "Identify weak areas", color: "from-amber-500/20 to-amber-500/5" },
-                                        { emoji: "⏱️", text: "Master time management", color: "from-blue-500/20 to-blue-500/5" },
-                                        { emoji: "🚀", text: "Boost confidence before the final exam", color: "from-purple-500/20 to-purple-500/5" }
-                                    ].map((item, idx) => (
-                                        <div key={idx} className={`flex items-center gap-4 px-5 py-3.5 rounded-xl bg-gradient-to-r ${item.color} border border-white/[0.04] backdrop-blur-sm`}>
-                                            <span className="text-xl shrink-0">{item.emoji}</span>
-                                            <span className="text-sm font-semibold text-zinc-200">{item.text}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Motivational Banner */}
-                        <div className="px-5 pb-8">
-                            <div className="max-w-lg mx-auto relative">
-                                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl opacity-30 blur-md animate-pulse" style={{ animationDuration: '3s' }} />
-                                <div className="relative bg-zinc-900/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 text-center">
-                                    <p className="text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 mb-1">
-                                        💡 Don&apos;t just prepare…
-                                    </p>
-                                    <p className="text-2xl sm:text-3xl font-black text-white">
-                                        Prepare Smart with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Dak Guru!</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* CTA Buttons */}
-                        <div className="px-5 pb-10">
-                            <div className="max-w-lg mx-auto flex flex-col sm:flex-row gap-3">
-                                <Link href="/" className="flex-1 flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white font-bold transition-all duration-300 active:scale-95 text-sm">
-                                    <ArrowLeft className="w-4 h-4 shrink-0" />
-                                    Back to Home
-                                </Link>
-
-                                <button
-                                    onClick={() => setForceLdceIp(true)}
-                                    className="flex-1 flex items-center justify-center gap-2.5 px-5 py-4 rounded-xl bg-gradient-to-r from-[#774df2] to-[#6039db] hover:from-[#6039db] hover:to-[#5030c5] text-white font-bold transition-all duration-300 active:scale-95 shadow-lg shadow-[#774df2]/30 text-sm"
-                                >
-                                    <Sparkles className="w-4 h-4 shrink-0" />
-                                    Access LDCE IP Mock Tests
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* Footer Note */}
-                        <div className="px-5 pb-[max(2rem,env(safe-area-inset-bottom))] text-center">
-                            <p className="text-[11px] text-zinc-600 font-medium">🔥 Powered by Dak Guru · India&apos;s #1 Postal Exam Platform</p>
-                        </div>
-                    </div>
-                </div>
-            </AppScreenWrapper>
+            <PsgbMockTestPage
+                isMobileApp={isMobileApp}
+                membershipLevel={membershipLevel}
+                planName={planName}
+                paidTests={paidTests}
+                userEmail={userEmail}
+                userName={userName}
+                role={role}
+                onSwitchToLdceIp={() => setForceLdceIp(true)}
+            />
         );
     }
 
@@ -739,6 +613,7 @@ export default function MockTestsPage() {
                                     onClick={() => handleMockClick(mock)}
                                     isPaid={paidTests.includes(mock.id)}
                                     membershipLevel={membershipLevel}
+                                    displayMembership={getDisplayMembership(membershipLevel, planName)}
                                     onEnroll={() => handleEnroll(mock)}
                                     isProcessing={processingId === mock.id}
                                     role={role}
@@ -793,6 +668,7 @@ export default function MockTestsPage() {
                                             onClick={() => handleMockClick(mock)}
                                             isPaid={paidTests.includes(mock.id)}
                                             membershipLevel={membershipLevel}
+                                            displayMembership={getDisplayMembership(membershipLevel, planName)}
                                             onEnroll={() => handleEnroll(mock)}
                                             isProcessing={processingId === mock.id}
                                             role={role}
@@ -819,6 +695,7 @@ export default function MockTestsPage() {
                                         onClick={() => handleMockClick(mock)}
                                         isPaid={paidTests.includes(mock.id)}
                                         membershipLevel={membershipLevel}
+                                        displayMembership={getDisplayMembership(membershipLevel, planName)}
                                         onEnroll={() => handleEnroll(mock)}
                                         enrollmentCount={enrollmentCounts[mock.id] || universalCount}
                                         onShowRankList={() => setSelectedMockForRank(mock)}
@@ -1304,6 +1181,7 @@ function MockTestCard({
     mock,
     onClick,
     membershipLevel,
+    displayMembership,
     isPaid,
     onEnroll,
     isProcessing,
@@ -1319,6 +1197,7 @@ function MockTestCard({
     mock: MockTest;
     onClick: () => void;
     membershipLevel: string;
+    displayMembership?: string;
     isPaid: boolean;
     onEnroll: () => void;
     isProcessing?: boolean;
@@ -1403,14 +1282,20 @@ function MockTestCard({
                     )}
 
                     {/* Membership Badges */}
-                    {membershipLevel === 'gold' && (
-                        <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 border border-amber-200 shadow-sm shrink-0">
-                            🏆 Gold Access
-                        </span>
-                    )}
-                    {membershipLevel === 'silver' && (
-                        <span className="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-700 border border-slate-200 shadow-sm shrink-0">
-                            🥈 Silver Access
+                    {(membershipLevel === 'gold' || membershipLevel === 'silver') && (
+                        <span className={`px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold shadow-sm shrink-0 ${
+                            displayMembership === 'diamond'
+                                ? 'bg-gradient-to-r from-fuchsia-100 to-purple-100 text-fuchsia-800 border border-fuchsia-200'
+                                : displayMembership === 'platinum'
+                                    ? 'bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-800 border border-teal-200'
+                                    : displayMembership === 'gold' || membershipLevel === 'gold'
+                                        ? 'bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 border border-amber-200'
+                                        : 'bg-gradient-to-r from-slate-100 to-zinc-200 text-slate-700 border border-slate-200'
+                        }`}>
+                            {displayMembership === 'diamond' ? '💎 Diamond Access'
+                                : displayMembership === 'platinum' ? '🏅 Platinum Access'
+                                    : membershipLevel === 'gold' ? '🏆 Gold Access'
+                                        : '🥈 Silver Access'}
                         </span>
                     )}
                     {membershipLevel !== 'gold' && membershipLevel !== 'silver' && isPaid && (
@@ -1814,3 +1699,624 @@ function FileTextIcon({ className }: { className?: string }) {
     );
 }
 
+// ===== PS GROUP B MOCK TEST PAGE COMPONENT =====
+function PsgbMockTestPage({
+    isMobileApp,
+    membershipLevel,
+    planName,
+    paidTests: initialPaidTests,
+    userEmail,
+    userName,
+    role,
+    onSwitchToLdceIp
+}: {
+    isMobileApp: boolean;
+    membershipLevel: 'free' | 'silver' | 'gold';
+    planName: string | null;
+    paidTests: string[];
+    userEmail: string | null;
+    userName: string;
+    role: string;
+    onSwitchToLdceIp: () => void;
+}) {
+    const [paidTests, setPaidTests] = useState<string[]>(initialPaidTests);
+    const [processingId, setProcessingId] = useState<string | null>(null);
+    const [selectedMock, setSelectedMock] = useState<MockTest | null>(null);
+    const [selectedMockForRank, setSelectedMockForRank] = useState<MockTest | null>(null);
+    const [selectedMockForSheets, setSelectedMockForSheets] = useState<MockTest | null>(null);
+    const [userResults, setUserResults] = useState<Record<string, any>>({});
+    const [userAttempts, setUserAttempts] = useState<Record<string, any[]>>({});
+    const [downloadingId, setDownloadingId] = useState<string | null>(null);
+    const [showDownloadNotification, setShowDownloadNotification] = useState(false);
+    const [enrollmentCounts, setEnrollmentCounts] = useState<Record<string, number>>({});
+    const [universalCount, setUniversalCount] = useState(0);
+    const [enrollmentModalOpen, setEnrollmentModalOpen] = useState(false);
+    const [enrollmentList, setEnrollmentList] = useState<any[]>([]);
+    const [loadingEnrollments, setLoadingEnrollments] = useState(false);
+    const [selectedTestForEnrollment, setSelectedTestForEnrollment] = useState<string>("");
+
+    useEffect(() => {
+        if (showDownloadNotification) {
+            const timer = setTimeout(() => setShowDownloadNotification(false), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [showDownloadNotification]);
+
+    useEffect(() => {
+        if (userEmail) {
+            fetch('/api/mock-test/user-results', {
+                method: 'POST',
+                body: JSON.stringify({ email: userEmail })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.results) setUserResults(data.results);
+                    if (data.attempts) setUserAttempts(data.attempts);
+                    const serverPaid = data.enrolledTests || [];
+                    const allPaid = Array.from(new Set([...initialPaidTests, ...serverPaid]));
+                    setPaidTests(allPaid);
+                })
+                .catch(err => console.error('Error fetching results', err));
+        }
+        fetch('/api/admin/mock-test/counts')
+            .then(res => res.json())
+            .then(data => {
+                setEnrollmentCounts(data.counts || {});
+                setUniversalCount(data.universalCount || 0);
+            })
+            .catch(() => {});
+    }, [userEmail, initialPaidTests]);
+
+    // Generate mock tests from PS Gr B schedule
+    const psgbMockTests = useMemo(() => {
+        const now = new Date();
+        return PSGB_MOCK_SCHEDULE.map(week => {
+            const satDate = new Date(week.saturdayDate + 'T00:00:00');
+            const sunDate = endOfDay(new Date(week.sundayDate + 'T00:00:00'));
+            const testId = `psgb-mock-${week.week.toString().padStart(2, '0')}`;
+
+            let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
+            if (now > sunDate) {
+                status = 'completed';
+            } else if (now >= satDate) {
+                status = 'live';
+            }
+
+            return {
+                id: testId,
+                title: `PS Gr B - Weekly Mock Test ${week.week.toString().padStart(2, '0')}`,
+                topics: week.topics,
+                startDate: satDate,
+                endDate: sunDate,
+                status,
+                questionCount: 50,
+                marks: 100,
+                duration: 60
+            } as MockTest;
+        });
+    }, []);
+
+    const activeMocks = psgbMockTests.filter(m => m.status === 'live');
+    const upcomingMocks = psgbMockTests.filter(m => m.status === 'upcoming');
+    const completedMocks = psgbMockTests.filter(m => m.status === 'completed').reverse();
+
+    const handleMockClick = (mock: MockTest) => {
+        if (!userEmail) {
+            window.location.href = '/login';
+            return;
+        }
+        setSelectedMock(mock);
+    };
+
+    const handleEnroll = async (mock: MockTest) => {
+        if (!userEmail) {
+            alert("Please log in to enroll.");
+            window.location.href = '/login';
+            return;
+        }
+        setProcessingId(mock.id);
+        try {
+            const orderRes = await fetch('/api/payment/create-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    amount: 49,
+                    email: userEmail,
+                    plan: { id: mock.id, name: mock.title, type: 'mock_test' }
+                })
+            });
+            if (!orderRes.ok) throw new Error("Order creation failed");
+            const order = await orderRes.json();
+            const options = {
+                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+                amount: order.amount,
+                currency: order.currency,
+                name: "Dak Guru",
+                description: `Enrollment: ${mock.title}`,
+                image: "/dak-guru-round.png",
+                order_id: order.id,
+                callback_url: `${window.location.origin}/api/payment/callback?to=/mock-tests&testId=${mock.id}`,
+                redirect: false,
+                handler: async function (response: any) {
+                    const verifyRes = await fetch('/api/mock-test/enroll/verify', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_signature: response.razorpay_signature,
+                            email: userEmail,
+                            testId: mock.id,
+                            testTitle: mock.title,
+                            userName: userName
+                        })
+                    });
+                    if (verifyRes.ok) {
+                        const newPaid = [...paidTests, mock.id];
+                        setPaidTests(Array.from(new Set(newPaid)));
+                        localStorage.setItem('paid_mock_tests', Array.from(new Set(newPaid)).join(','));
+                        alert("Enrollment Successful!");
+                    } else {
+                        alert("Payment verification failed.");
+                    }
+                },
+                prefill: { name: userName, email: userEmail },
+                theme: { color: "#7c3aed" },
+                modal: { ondismiss: () => setProcessingId(null) }
+            };
+            const rzp = new (window as any).Razorpay(options);
+            rzp.open();
+        } catch (error) {
+            console.error("Enrollment Error:", error);
+            alert("Enrollment failed.");
+            setProcessingId(null);
+        }
+    };
+
+    const handleDownloadAnalytics = async (mock: MockTest, result: any) => {
+        if (!result) return;
+        setDownloadingId(mock.id);
+        try {
+            const questions = TEST_QUESTIONS_MAP[mock.id];
+            if (!questions) { alert("Question data not found."); return; }
+            await generateMockTestAnswerSheetPDF({
+                userName, score: result.score, totalQuestions: result.totalQuestions,
+                questions, answers: result.answers || {}, testName: mock.title,
+                submittedAt: result.submittedAt,
+                testSchedule: `${format(mock.startDate, 'dd-MMM-yyyy')} to ${format(mock.endDate, 'dd-MMM-yyyy')}`,
+                testTopics: mock.topics
+            });
+            setShowDownloadNotification(true);
+        } catch (error) {
+            console.error("PDF Gen Error", error);
+            alert("Failed to generate PDF");
+        } finally {
+            setDownloadingId(null);
+        }
+    };
+
+    const handleViewEnrollments = async (mock: MockTest) => {
+        setSelectedTestForEnrollment(mock.title);
+        setEnrollmentModalOpen(true);
+        setLoadingEnrollments(true);
+        try {
+            const res = await fetch(`/api/admin/mock-test/enrollments?testId=${mock.id}`);
+            if (res.ok) {
+                const data = await res.json();
+                setEnrollmentList(data.enrollments);
+            }
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoadingEnrollments(false);
+        }
+    };
+
+    return (
+        <AppScreenWrapper hideStatusBarPadding={true}>
+            <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+
+            {/* ===== HERO ===== */}
+            {isMobileApp ? (
+                <div className="relative w-full overflow-x-hidden bg-zinc-950 border-b border-zinc-900 pb-8">
+                    <div className="absolute inset-0 opacity-15">
+                        <div className="absolute top-10 right-0 w-40 h-40 bg-violet-600 rounded-full mix-blend-screen filter blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 w-40 h-40 bg-fuchsia-600 rounded-full mix-blend-screen filter blur-3xl"></div>
+                    </div>
+                    <div className="relative z-10 px-5">
+                        <Link href="/" className="inline-flex items-center text-zinc-500 hover:text-zinc-300 mb-4 transition-colors">
+                            <ArrowLeft className="w-5 h-5" />
+                            <span className="ml-1 text-sm font-medium">Back</span>
+                        </Link>
+                        <div className="flex flex-col items-center text-center">
+                            {activeMocks.length > 0 && (
+                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[10px] mb-4">
+                                    <span className="relative flex h-1.5 w-1.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
+                                    </span>
+                                    LIVE NOW
+                                </div>
+                            )}
+                            <h1 className="text-3xl font-black text-white leading-tight mb-2">
+                                Mock Test Series
+                                <span className="block text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">
+                                    PS Group B 2026
+                                </span>
+                            </h1>
+                            <p className="text-sm text-zinc-400 max-w-xs mx-auto mb-5 leading-relaxed">
+                                14-week structured test series. Compete & track your progress.
+                            </p>
+                            <button
+                                onClick={onSwitchToLdceIp}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-xs font-bold mb-4"
+                            >
+                                <Sparkles className="w-3.5 h-3.5" />
+                                Switch to LDCE IP Mock Tests
+                            </button>
+                            <div className="grid grid-cols-3 gap-2 w-full max-w-[320px] px-2 mb-2">
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
+                                    <Calendar className="w-4 h-4 text-violet-400 mb-1 shrink-0" />
+                                    <span className="text-[10px] font-bold text-white truncate w-full">14 Weeks</span>
+                                    <span className="text-[9px] text-zinc-500 truncate w-full">Schedule</span>
+                                </div>
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
+                                    <Trophy className="w-4 h-4 text-yellow-400 mb-1 shrink-0" />
+                                    <span className="text-[10px] font-bold text-white truncate w-full">Rank</span>
+                                    <span className="text-[9px] text-zinc-500 truncate w-full">All India</span>
+                                </div>
+                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
+                                    <Clock className="w-4 h-4 text-green-400 mb-1 shrink-0" />
+                                    <span className="text-[10px] font-bold text-white truncate w-full">60 Min</span>
+                                    <span className="text-[9px] text-zinc-500 truncate w-full">Per Test</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ) : (
+                <div className="relative min-h-[420px] md:min-h-[520px] bg-[#0a0a0f] overflow-hidden isolate">
+                    {/* Animated gradient mesh background */}
+                    <div className="absolute inset-0">
+                        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-violet-600/30 via-fuchsia-500/20 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }}></div>
+                        <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-tl from-orange-500/25 via-rose-500/15 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
+                        <div className="absolute top-[30%] right-[20%] w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-transparent rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '4s' }}></div>
+                        <div className="absolute bottom-[10%] left-[15%] w-[300px] h-[300px] bg-gradient-to-tr from-emerald-500/10 to-transparent rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '1s' }}></div>
+                    </div>
+
+                    {/* Grid overlay */}
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.015)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+
+                    {/* Floating accent orbs */}
+                    <div className="absolute top-20 left-[10%] w-2 h-2 bg-violet-400 rounded-full shadow-[0_0_15px_5px_rgba(139,92,246,0.4)] animate-bounce" style={{ animationDuration: '3s' }}></div>
+                    <div className="absolute top-32 right-[15%] w-1.5 h-1.5 bg-fuchsia-400 rounded-full shadow-[0_0_12px_4px_rgba(232,121,249,0.4)] animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
+                    <div className="absolute bottom-24 left-[25%] w-1 h-1 bg-orange-400 rounded-full shadow-[0_0_10px_3px_rgba(251,146,60,0.4)] animate-bounce" style={{ animationDuration: '5s', animationDelay: '2s' }}></div>
+                    <div className="absolute bottom-16 right-[30%] w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_15px_5px_rgba(34,211,238,0.3)] animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
+
+                    {/* Content */}
+                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 md:pt-12 md:pb-20 text-center">
+                        {/* Back button - glass style */}
+                        <div className="flex justify-center w-full mb-8 md:mb-10">
+                            <Link href="/" className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300 text-sm backdrop-blur-sm">
+                                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
+                                <span className="font-medium">Back to Home</span>
+                            </Link>
+                        </div>
+
+                        {/* Live badge */}
+                        {activeMocks.length > 0 && (
+                            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-sm mb-8 backdrop-blur-sm shadow-[0_0_30px_rgba(239,68,68,0.15)]">
+                                <span className="relative flex h-2.5 w-2.5">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                                </span>
+                                LIVE NOW
+                            </div>
+                        )}
+
+                        {/* Subtitle badge */}
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-500 text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
+                            <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-violet-400 to-fuchsia-400"></span>
+                            All India Weekly Mock Test Series
+                        </div>
+
+                        {/* Title */}
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight mb-3 md:mb-4 leading-[1.05]">
+                            <span className="block">Mock Test Series</span>
+                            <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-fuchsia-400 to-violet-400" style={{ WebkitBackgroundClip: 'text' }}>
+                                PS Group B 2026
+                            </span>
+                        </h1>
+
+                        {/* Description */}
+                        <p className="text-base md:text-lg text-zinc-400/90 max-w-xl mx-auto mb-10 leading-relaxed font-medium">
+                            14-week structured test series aligned with the official study plan.
+                            <span className="text-zinc-500 block mt-1">Compete with aspirants across India & track your progress.</span>
+                        </p>
+
+                        {/* Stats row */}
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
+                            {[
+                                { icon: <Calendar className="w-5 h-5" />, label: '14 Weeks', sub: 'Schedule', color: 'from-violet-500/20 to-violet-500/5', iconColor: 'text-violet-400', borderColor: 'border-violet-500/20' },
+                                { icon: <AlertCircle className="w-5 h-5" />, label: '50 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
+                                { icon: <Clock className="w-5 h-5" />, label: '60 Min', sub: 'Duration', color: 'from-emerald-500/20 to-emerald-500/5', iconColor: 'text-emerald-400', borderColor: 'border-emerald-500/20' },
+                                { icon: <Trophy className="w-5 h-5" />, label: 'Top 7', sub: 'All India Rank', color: 'from-amber-500/20 to-amber-500/5', iconColor: 'text-amber-400', borderColor: 'border-amber-500/20' },
+                            ].map((stat, idx) => (
+                                <div key={idx} className={`flex items-center gap-3 px-4 py-3 rounded-2xl bg-gradient-to-br ${stat.color} border ${stat.borderColor} backdrop-blur-md hover:scale-105 transition-transform duration-300 min-w-[140px]`}>
+                                    <div className={`${stat.iconColor} shrink-0`}>{stat.icon}</div>
+                                    <div className="text-left">
+                                        <div className="text-sm font-black text-white leading-tight">{stat.label}</div>
+                                        <div className="text-[10px] text-zinc-500 font-semibold uppercase tracking-wider">{stat.sub}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Switch button */}
+                        <button
+                            onClick={onSwitchToLdceIp}
+                            className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-violet-500/30 transition-all duration-300 text-sm font-bold backdrop-blur-sm hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
+                        >
+                            <Sparkles className="w-4 h-4 text-violet-400 group-hover:text-violet-300 transition-colors" />
+                            Switch to LDCE IP Mock Tests
+                        </button>
+                    </div>
+
+                    {/* Bottom gradient border */}
+                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/50 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/[0.02] to-transparent pointer-events-none"></div>
+                </div>
+            )}
+
+            {/* ===== CONTENT ===== */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full overflow-x-hidden">
+                <div className="space-y-12 w-full">
+
+                    {/* LIVE TESTS */}
+                    {activeMocks.length > 0 && (
+                        <div>
+                            <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 flex items-center gap-3">
+                                <span className="relative flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                </span>
+                                Live Now
+                            </h2>
+                            <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                                {activeMocks.map(mock => (
+                                    <MockTestCard
+                                        key={mock.id}
+                                        mock={mock}
+                                        onClick={() => handleMockClick(mock)}
+                                        isPaid={paidTests.includes(mock.id)}
+                                        membershipLevel={membershipLevel}
+                                        displayMembership={getDisplayMembership(membershipLevel, planName)}
+                                        onEnroll={() => handleEnroll(mock)}
+                                        isProcessing={processingId === mock.id}
+                                        role={role}
+                                        onViewEnrollments={() => handleViewEnrollments(mock)}
+                                        enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                        onShowRankList={() => setSelectedMockForRank(mock)}
+                                        userResult={userResults[mock.id]}
+                                        onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
+                                        onViewSheets={() => setSelectedMockForSheets(mock)}
+                                        isDownloading={downloadingId === mock.id}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* UPCOMING SCHEDULE */}
+                    {upcomingMocks.length > 0 && (
+                        <div className="relative group">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 rounded-[2rem] opacity-20 blur-md group-hover:opacity-40 transition duration-1000"></div>
+                            <div className="relative bg-white dark:bg-zinc-950 rounded-[1.9rem] p-6 md:p-10 shadow-2xl overflow-hidden ring-1 ring-zinc-900/5 dark:ring-white/10">
+                                <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-violet-500/10 rounded-full blur-3xl"></div>
+                                <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-fuchsia-500/10 rounded-full blur-3xl"></div>
+                                <div className="relative z-10">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                                        <div>
+                                            <h2 className="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-zinc-800 to-zinc-600 dark:from-white dark:to-zinc-400 flex items-center gap-3">
+                                                <Calendar className="w-8 h-8 text-violet-600 dark:text-violet-400" />
+                                                Complete Schedule
+                                            </h2>
+                                            <p className="mt-2 text-zinc-500 dark:text-zinc-400 font-medium">
+                                                14-week weekly test schedule aligned with the PS Gr B study plan.
+                                            </p>
+                                        </div>
+                                        <div className="flex items-center gap-2 px-4 py-2 bg-zinc-100 dark:bg-zinc-800/80 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">
+                                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                            <span className="font-bold text-zinc-700 dark:text-zinc-300 text-sm">
+                                                {upcomingMocks.length} Upcoming Tests
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="grid gap-5 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                                        {upcomingMocks.map(mock => (
+                                            <MockTestCard
+                                                key={mock.id}
+                                                mock={mock}
+                                                onClick={() => handleMockClick(mock)}
+                                                isPaid={paidTests.includes(mock.id)}
+                                                membershipLevel={membershipLevel}
+                                                displayMembership={getDisplayMembership(membershipLevel, planName)}
+                                                onEnroll={() => handleEnroll(mock)}
+                                                isProcessing={processingId === mock.id}
+                                                role={role}
+                                                onViewEnrollments={() => handleViewEnrollments(mock)}
+                                                enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* COMPLETED TESTS */}
+                    {completedMocks.length > 0 && (
+                        <div className="opacity-100 mb-12 scroll-mt-24">
+                            <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
+                                <History className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
+                                Previous Tests
+                            </h2>
+                            <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
+                                {completedMocks.map(mock => (
+                                    <MockTestCard
+                                        key={mock.id}
+                                        mock={mock}
+                                        onClick={() => handleMockClick(mock)}
+                                        isPaid={paidTests.includes(mock.id)}
+                                        membershipLevel={membershipLevel}
+                                        displayMembership={getDisplayMembership(membershipLevel, planName)}
+                                        onEnroll={() => handleEnroll(mock)}
+                                        enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                        onShowRankList={() => setSelectedMockForRank(mock)}
+                                        onViewSheets={() => setSelectedMockForSheets(mock)}
+                                        userResult={userResults[mock.id]}
+                                        onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
+                                        isDownloading={downloadingId === mock.id}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+
+                {/* Why Attempt Section */}
+                <div className="mt-12 md:mt-16 text-center">
+                    <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Why Attempt Mock Tests?</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-6 md:mt-8">
+                        <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+                            <div className="w-12 h-12 bg-violet-100 dark:bg-violet-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-violet-600 dark:text-violet-400">
+                                <Timer className="w-6 h-6" />
+                            </div>
+                            <h3 className="font-bold mb-2">Time Management</h3>
+                            <p className="text-sm text-zinc-500">Practice completing the exam within the stipulated time limit.</p>
+                        </div>
+                        <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+                            <div className="w-12 h-12 bg-fuchsia-100 dark:bg-fuchsia-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-fuchsia-600 dark:text-fuchsia-400">
+                                <CheckCircle2 className="w-6 h-6" />
+                            </div>
+                            <h3 className="font-bold mb-2">Performance Analysis</h3>
+                            <p className="text-sm text-zinc-500">Get detailed insights into your strong and weak areas.</p>
+                        </div>
+                        <div className="p-5 md:p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+                            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-orange-400">
+                                <Trophy className="w-6 h-6" />
+                            </div>
+                            <h3 className="font-bold mb-2">All India Ranking</h3>
+                            <p className="text-sm text-zinc-500">Know where you stand among thousands of other aspirants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* ===== MODALS ===== */}
+            <Dialog open={!!selectedMock} onOpenChange={(open) => !open && setSelectedMock(null)}>
+                <DialogContent className="max-w-2xl w-[95%] max-h-[85vh] overflow-y-auto rounded-2xl">
+                    {selectedMock && (
+                        <MockTestDetail
+                            mock={selectedMock}
+                            membershipLevel={membershipLevel}
+                            isPaid={paidTests.includes(selectedMock.id)}
+                            onEnroll={() => handleEnroll(selectedMock)}
+                            isProcessing={processingId === selectedMock.id}
+                            role={role}
+                            userResult={userResults[selectedMock.id]}
+                            onDownloadResult={() => handleDownloadAnalytics(selectedMock, userResults[selectedMock.id])}
+                            onViewSheets={() => {
+                                setSelectedMock(null);
+                                setSelectedMockForSheets(selectedMock);
+                            }}
+                            isDownloading={downloadingId === selectedMock.id}
+                        />
+                    )}
+                </DialogContent>
+            </Dialog>
+
+            <Dialog open={enrollmentModalOpen} onOpenChange={setEnrollmentModalOpen}>
+                <DialogContent className="max-w-4xl w-[95%] max-h-[85vh] overflow-hidden flex flex-col rounded-2xl p-0 bg-white dark:bg-zinc-900">
+                    <div className="p-6 border-b border-zinc-200 dark:border-zinc-800 flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/50">
+                        <div>
+                            <DialogTitle className="text-xl font-bold flex items-center gap-2 text-zinc-900 dark:text-zinc-100">
+                                <Users className="w-5 h-5 text-violet-600" /> Enrollments
+                            </DialogTitle>
+                            <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                                Users enrolled for <span className="font-semibold text-zinc-800 dark:text-zinc-200">{selectedTestForEnrollment}</span>
+                            </p>
+                        </div>
+                        <div className="px-3 py-1 bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 rounded-full text-xs font-bold">
+                            Total: {enrollmentList.length}
+                        </div>
+                    </div>
+                    <div className="flex-1 overflow-auto p-0">
+                        {loadingEnrollments ? (
+                            <div className="flex flex-col items-center justify-center py-20">
+                                <Loader2 className="w-8 h-8 animate-spin text-violet-600 mb-2" />
+                                <span className="text-sm text-zinc-500">Loading enrollment data...</span>
+                            </div>
+                        ) : enrollmentList.length > 0 ? (
+                            <div className="w-full">
+                                <table className="w-full text-left text-sm">
+                                    <thead className="bg-zinc-50 dark:bg-zinc-900/50 sticky top-0 z-10 border-b border-zinc-200 dark:border-zinc-800">
+                                        <tr>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400 w-16">S.No</th>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">User Name</th>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">Phone</th>
+                                            <th className="px-6 py-3 font-semibold text-zinc-500 dark:text-zinc-400">Payment Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800/50">
+                                        {enrollmentList.map((user, idx) => (
+                                            <tr key={idx} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/20 transition-colors">
+                                                <td className="px-6 py-3 text-zinc-500">{user.serialNo}</td>
+                                                <td className="px-6 py-3 font-medium text-zinc-900 dark:text-zinc-100">{user.name}</td>
+                                                <td className="px-6 py-3 text-zinc-600 dark:text-zinc-300">{user.mobile}</td>
+                                                <td className="px-6 py-3 text-zinc-600 dark:text-zinc-300">
+                                                    {user.dateOfPayment ? format(new Date(user.dateOfPayment), 'dd MMM yyyy') : '-'}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        ) : (
+                            <div className="py-20 text-center text-zinc-500">No enrollments found for this test.</div>
+                        )}
+                    </div>
+                </DialogContent>
+            </Dialog>
+
+            <RankListModal
+                mock={selectedMockForRank}
+                isOpen={!!selectedMockForRank}
+                onClose={() => setSelectedMockForRank(null)}
+                role={role}
+            />
+
+            <AnswerSheetModal
+                mock={selectedMockForSheets}
+                attempts={selectedMockForSheets ? userAttempts[selectedMockForSheets.id] || [] : []}
+                isOpen={!!selectedMockForSheets}
+                onClose={() => setSelectedMockForSheets(null)}
+                onDownload={handleDownloadAnalytics}
+                isDownloading={downloadingId}
+            />
+
+            {/* Download Notification */}
+            {showDownloadNotification && (
+                <div className="fixed top-20 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-2xl shadow-emerald-600/20 z-[100] flex items-center gap-4 animate-in fade-in slide-in-from-top-4 duration-500">
+                    <div className="bg-white/20 p-2 rounded-full">
+                        <CheckCircle2 className="w-5 h-5" />
+                    </div>
+                    <div>
+                        <p className="font-bold">Answer Sheet Downloaded</p>
+                        <p className="text-xs text-emerald-100">Check your Downloads Folder</p>
+                    </div>
+                </div>
+            )}
+        </AppScreenWrapper>
+    );
+}

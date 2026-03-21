@@ -17,6 +17,8 @@ export default function TopicCompletionDialog({ open, onOpenChange, onMarkComple
             <Dialog.Portal>
                 <Dialog.Overlay className="fixed inset-0 bg-black/60 z-50 animate-in fade-in duration-200 backdrop-blur-sm" />
                 <Dialog.Content className="fixed top-[50%] left-[50%] w-[90vw] max-w-md translate-x-[-50%] translate-y-[-50%] rounded-2xl bg-white p-0 shadow-2xl focus:outline-none z-50 animate-in zoom-in-95 duration-200 overflow-hidden">
+                    <Dialog.Title className="sr-only">Topic Completion</Dialog.Title>
+                    <Dialog.Description className="sr-only">Mark this topic as completed or attempt an MCQ test.</Dialog.Description>
 
                     {/* Header with Pattern */}
                     <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 relative overflow-hidden">
