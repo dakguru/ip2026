@@ -150,9 +150,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Handbook on Philately",
-            "description": "Materials will be uploaded soon.",
-            "color": "emerald",
-            "comingSoon": true
+            "description": "Comprehensive guide on Philately services and products.",
+            "filename": "Handbook_on_Philately.pdf",
+            "path": "/notes/paper-1/Handbook_on_Philately.pdf",
+            "size": "0.6 MB",
+            "color": "emerald"
         },
         {
             "title": "Directorate instructions on Philately",
@@ -200,9 +202,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "CVC guidelines on Public procurement, guide-lines and instructions on e-procurement.",
-            "description": "Materials will be uploaded soon.",
-            "color": "emerald",
-            "comingSoon": true
+            "description": "Central Vigilance Commission (CVC) guidelines on public procurement and e-procurement.",
+            "filename": "CVC_Guidelines_Public_Procurement.pdf",
+            "path": "/notes/paper-1/CVC_Guidelines_Public_Procurement.pdf",
+            "size": "4.6 MB",
+            "color": "emerald"
         },
         {
             "title": "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.",

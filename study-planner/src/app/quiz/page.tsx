@@ -120,6 +120,7 @@ export default function QuizDashboard() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [timeTaken, setTimeTaken] = useState(0);
     const [showExitConfirm, setShowExitConfirm] = useState(false);
+    const [quizSearch, setQuizSearch] = useState('');
 
     const viewRef = useRef(view);
     const isSubmittedRef = useRef(isSubmitted);
@@ -942,6 +943,49 @@ export default function QuizDashboard() {
                     </Link>
 
                     <div className="space-y-12 mt-12 pb-12">
+                        {/* Search Bar */}
+                        <div className="relative max-w-2xl mx-auto -mt-4 mb-2">
+                            <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 opacity-60 blur-sm" />
+                            <div className="relative flex items-center bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden border border-white/20">
+                                <div className="flex items-center justify-center pl-3.5 md:pl-4 pr-1 shrink-0">
+                                    <svg className="w-4 h-4 md:w-5 md:h-5 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+                                    </svg>
+                                </div>
+                                <input
+                                    type="search"
+                                    value={quizSearch}
+                                    onChange={e => setQuizSearch(e.target.value)}
+                                    placeholder="Search quiz topics..."
+                                    className="flex-1 bg-transparent py-2.5 md:py-3 px-2 md:px-3 text-xs md:text-sm text-slate-700 dark:text-zinc-200 placeholder-slate-400 dark:placeholder-zinc-500 outline-none min-w-0"
+                                />
+                                {quizSearch && (
+                                    <button onClick={() => setQuizSearch('')} className="flex items-center justify-center w-7 h-7 mr-1 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-400 dark:text-zinc-500 transition-colors shrink-0">
+                                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                )}
+                                <div className="hidden sm:flex items-center gap-1 mr-3 px-2 py-1 rounded-lg bg-gradient-to-r from-violet-100 to-fuchsia-100 dark:from-violet-900/40 dark:to-fuchsia-900/40 shrink-0">
+                                    <span className="text-[10px] font-semibold text-violet-600 dark:text-violet-300 whitespace-nowrap">Quick Find</span>
+                                </div>
+                            </div>
+                            <div className="absolute right-3 -top-1 flex gap-0.5 pointer-events-none">
+                                <span className="w-1.5 h-1.5 rounded-full bg-violet-400 opacity-70" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-70" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-pink-400 opacity-70" />
+                            </div>
+                            {quizSearch && (
+                                <p className="text-center text-[11px] md:text-xs text-slate-400 dark:text-zinc-500 mt-1.5">
+                                    {(() => {
+                                        const q = quizSearch.toLowerCase();
+                                        const c = [...group1Topics, ...group2Topics].filter(t => t.title.toLowerCase().includes(q)).length;
+                                        return c === 0 ? 'No topics found' : `${c} topic${c !== 1 ? 's' : ''} found`;
+                                    })()}
+                                </p>
+                            )}
+                        </div>
+
                         {/* Paper I Section */}
                         <section>
                         <div className="flex items-center gap-3 mb-6">
@@ -949,7 +993,7 @@ export default function QuizDashboard() {
                             <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-                            {group1Topics.map(topic => (
+                            {(quizSearch ? group1Topics.filter(t => t.title.toLowerCase().includes(quizSearch.toLowerCase())) : group1Topics).map(topic => (
                                 <TopicCard
                                     key={topic.id}
                                     topic={topic}
@@ -967,7 +1011,7 @@ export default function QuizDashboard() {
                             <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-                            {group2Topics.map(topic => (
+                            {(quizSearch ? group2Topics.filter(t => t.title.toLowerCase().includes(quizSearch.toLowerCase())) : group2Topics).map(topic => (
                                 <TopicCard
                                     key={topic.id}
                                     topic={topic}

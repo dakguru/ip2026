@@ -800,6 +800,7 @@ export default function NotesPage() {
     const TABS = isPS ? ["Paper I", "Paper II", "SB Orders"] : ["Paper I", "Paper III", "SB Orders"];
 
     const [activeTab, setActiveTab] = useState(TABS[0]);
+    const [searchQuery, setSearchQuery] = useState('');
     const [selectedPdf, setSelectedPdf] = useState<{ url: string, title: string } | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
     const [planId, setPlanId] = useState<string>('');
@@ -1110,7 +1111,7 @@ export default function NotesPage() {
                             {TABS.map((tab) => (
                                 <button
                                     key={tab}
-                                    onClick={() => setActiveTab(tab)}
+                                    onClick={() => { setActiveTab(tab); setSearchQuery(''); }}
                                     className={`
                                     relative p-2 md:px-6 md:py-2.5 rounded-lg md:rounded-xl font-bold text-[11px] xs:text-xs md:text-sm transition-colors duration-200 flex items-center justify-center gap-1.5 md:gap-2 whitespace-nowrap outline-none
                                     ${activeTab === tab
@@ -1136,9 +1137,72 @@ export default function NotesPage() {
                         </div>
                     </div>
 
+                    {/* Search Bar */}
+                    <div className="px-4 md:px-0 mb-4 md:mb-6">
+                        <div className="relative max-w-2xl mx-auto">
+                            {/* Gradient glow background */}
+                            <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 opacity-60 blur-sm" />
+                            <div className="relative flex items-center bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden border border-white/20">
+                                {/* Search Icon */}
+                                <div className="flex items-center justify-center pl-3.5 md:pl-4 pr-1 shrink-0">
+                                    <svg className="w-4 h-4 md:w-5 md:h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+                                    </svg>
+                                </div>
+                                {/* Input */}
+                                <input
+                                    type="search"
+                                    value={searchQuery}
+                                    onChange={e => setSearchQuery(e.target.value)}
+                                    placeholder="Search topics, acts, rules..."
+                                    className="flex-1 bg-transparent py-2.5 md:py-3 px-2 md:px-3 text-xs md:text-sm text-slate-700 dark:text-zinc-200 placeholder-slate-400 dark:placeholder-zinc-500 outline-none min-w-0"
+                                />
+                                {/* Clear button */}
+                                {searchQuery && (
+                                    <button
+                                        onClick={() => setSearchQuery('')}
+                                        className="flex items-center justify-center w-7 h-7 mr-1 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-400 dark:text-zinc-500 transition-colors shrink-0"
+                                    >
+                                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                )}
+                                {/* Decorative pill badge */}
+                                <div className="hidden sm:flex items-center gap-1 mr-3 px-2 py-1 rounded-lg bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40 shrink-0">
+                                    <span className="text-[10px] font-semibold text-purple-600 dark:text-purple-300 whitespace-nowrap">Quick Find</span>
+                                </div>
+                            </div>
+                            {/* Colourful dots decoration */}
+                            <div className="absolute right-3 -top-1 flex gap-0.5 pointer-events-none">
+                                <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-70" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-pink-400 opacity-70" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-orange-400 opacity-70" />
+                            </div>
+                        </div>
+                        {/* Result count hint */}
+                        {searchQuery && (
+                            <p className="text-center text-[11px] md:text-xs text-slate-400 dark:text-zinc-500 mt-1.5">
+                                {(() => {
+                                    const count = activeData[activeTab as keyof typeof activeData]?.filter(f =>
+                                        f.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                        (f.description && f.description.toLowerCase().includes(searchQuery.toLowerCase()))
+                                    ).length ?? 0;
+                                    return count === 0 ? 'No results found' : `${count} result${count !== 1 ? 's' : ''} found`;
+                                })()}
+                            </p>
+                        )}
+                    </div>
+
                     {/* Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 pb-20">
-                        {activeData[activeTab as keyof typeof activeData]?.map((file, index) => (
+                        {(searchQuery
+                            ? activeData[activeTab as keyof typeof activeData]?.filter(f =>
+                                f.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                (f.description && f.description.toLowerCase().includes(searchQuery.toLowerCase()))
+                              )
+                            : activeData[activeTab as keyof typeof activeData]
+                        )?.map((file, index) => (
                             <div
                                 key={index}
                                 className={`group rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col relative overflow-hidden ${

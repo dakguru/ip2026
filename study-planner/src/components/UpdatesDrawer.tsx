@@ -19,6 +19,25 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "22.03.2026",
         items: [
             {
+                title: "🧹 Swatchh Bharat MCQs Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated <strong>45 New MCQs</strong> covering <strong>Swatchh Bharat</strong> for PS Group B Paper II!</p>
+
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-2 rounded border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">Paper II (PS Group B)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">3 practice sets covering Key Milestones, Special Campaigns 1.0–5.0, Swachhta Pakhwada, Action Plan, and Fund Utilization.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                            <span>✅</span> Access now in the Quiz section under Paper II!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "📚 New PDF Notes Uploaded",
                 desc: (
                     <div className="space-y-4">
@@ -60,6 +79,62 @@ const UPDATES_DATA: UpdateGroup[] = [
 
                         <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
                             <span>🚀</span> Practice now in the Quiz & Flashcard section!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📬 Handbook on Philately PDF Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>Handbook on Philately</strong> PDF notes for PS Group B Paper I!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-2 rounded border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">Paper I (PS Group B)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Full study material covering Philately services, products, and guidelines.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Notes section!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "🏛️ CVC Public Procurement Guidelines PDF Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>CVC guidelines on Public procurement</strong> and e-procurement instructions for PS Group B Paper I!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-2 rounded border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">Paper I (PS Group B)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Detailed guidelines on Public Procurement, e-procurement, and anti-corruption measures.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Notes section!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📝 More MCQs Integrated for PS Group B",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated new practice sets for the following topics in PS Group B:</p>
+                        
+                        <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400 text-[11px]">
+                            <li><strong>Maintenance of APAR</strong> (Paper I)</li>
+                            <li><strong>Brochure on Casual Labourer</strong> (Paper II)</li>
+                            <li><strong>Preservation and Disposal of Records</strong> (Paper II)</li>
+                        </ul>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>✅</span> Practice now in the Quiz section!
                         </p>
                     </div>
                 )

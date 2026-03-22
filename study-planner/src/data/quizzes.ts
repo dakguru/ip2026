@@ -12,6 +12,7 @@ import { consolidation_set2 } from './flashcards/consolidationProducts2';
 import { consolidation_set3 } from './flashcards/consolidationProducts3';
 import { po_reg_ldce_set1, po_reg_ldce_set2, po_reg_ldce_set3, po_reg_ldce_set4, po_reg_ldce_set5, po_reg_ldce_set6 } from './flashcards/po_reg_ldce';
 import { schedule_financial_powers_set1, schedule_financial_powers_set2, schedule_financial_powers_set3, schedule_financial_powers_set4, schedule_financial_powers_set5 } from './flashcards/scheduleOfFinancialPowers';
+import { swatchh_bharat_set1, swatchh_bharat_set2, swatchh_bharat_set3 } from './flashcards/swatchhBharat';
 
 
 // ----- EXISTING QUESTION DATA -----
@@ -6695,6 +6696,11 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "As per the DoP MTS Recruitment Rules, 2018, if no eligible Casual Labourers are available for the 25% quota reserved for them, the unfilled quota is:", o: ["Lapsed and not filled in that recruitment cycle", "Filled by direct recruitment from the open market", "Transferred to the GDS competitive examination stream", "Kept reserved until eligible casual labourers become available in the next cycle"], a: 2, e: "Under the DoP MTS Recruitment Rules, 2018, if no eligible Casual Labourers (i.e., those with temporary status engaged on or before 01.09.1993) are available, the unfilled 25% quota is transferred to the GDS competitive examination stream." },
     { q: "Which of the following represents the CORRECT sequence for a casual labourer to achieve regularization as an MTS employee?", o: ["Engagement → Conferment of Temporary Status → Selection through a regular selection process → Regularization as MTS", "Engagement → Regularization → Conferment of Temporary Status → MTS posting", "Engagement → Conferment of Temporary Status → Automatic regularization after 5 years", "Engagement → Three years of service → Direct regularization without any selection process"], a: 0, e: "The correct sequence is: Engagement as casual labourer → Conferment of Temporary Status (after at least 1 year/240 days of continuous service) → Selection through a regular selection process for MTS posts → Regularization. There is no automatic regularization — a regular selection process is mandatory." },
   ],
+
+  // --- SWATCHH BHARAT (Paper II) ---
+  181: swatchh_bharat_set1,
+  182: swatchh_bharat_set2,
+  183: swatchh_bharat_set3,
 };
 
 export interface RawQuestion {

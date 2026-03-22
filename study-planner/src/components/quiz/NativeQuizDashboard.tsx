@@ -23,6 +23,7 @@ export default function NativeQuizDashboard({
 }: NativeQuizDashboardProps) {
 
     const [showTopics, setShowTopics] = useState(false);
+    const [nativeSearch, setNativeSearch] = useState('');
     const { course } = useCourse();
     const isPS = course === 'PS_GR_B';
 
@@ -110,6 +111,49 @@ export default function NativeQuizDashboard({
 
                         {/* Content */}
                         <div className="p-4 sm:p-6 space-y-8 pb-32 max-w-4xl mx-auto w-full relative z-20">
+                            {/* Search Bar */}
+                            <div className="relative">
+                                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 opacity-60 blur-sm" />
+                                <div className="relative flex items-center bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden border border-white/20">
+                                    <div className="flex items-center justify-center pl-3.5 pr-1 shrink-0">
+                                        <svg className="w-4 h-4 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+                                        </svg>
+                                    </div>
+                                    <input
+                                        type="search"
+                                        value={nativeSearch}
+                                        onChange={e => setNativeSearch(e.target.value)}
+                                        placeholder="Search quiz topics..."
+                                        className="flex-1 bg-transparent py-2.5 px-2 text-xs text-slate-700 dark:text-zinc-200 placeholder-slate-400 dark:placeholder-zinc-500 outline-none min-w-0"
+                                    />
+                                    {nativeSearch && (
+                                        <button onClick={() => setNativeSearch('')} className="flex items-center justify-center w-7 h-7 mr-1 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-400 dark:text-zinc-500 transition-colors shrink-0">
+                                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                    )}
+                                    <div className="flex items-center gap-1 mr-3 px-2 py-1 rounded-lg bg-gradient-to-r from-violet-100 to-fuchsia-100 dark:from-violet-900/40 dark:to-fuchsia-900/40 shrink-0">
+                                        <span className="text-[10px] font-semibold text-violet-600 dark:text-violet-300 whitespace-nowrap">Quick Find</span>
+                                    </div>
+                                </div>
+                                <div className="absolute right-3 -top-1 flex gap-0.5 pointer-events-none">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-violet-400 opacity-70" />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-70" />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-pink-400 opacity-70" />
+                                </div>
+                                {nativeSearch && (
+                                    <p className="text-center text-[11px] text-slate-400 dark:text-zinc-500 mt-1.5">
+                                        {(() => {
+                                            const q = nativeSearch.toLowerCase();
+                                            const c = [...group1Topics, ...group2Topics].filter(t => t.title.toLowerCase().includes(q)).length;
+                                            return c === 0 ? 'No topics found' : `${c} topic${c !== 1 ? 's' : ''} found`;
+                                        })()}
+                                    </p>
+                                )}
+                            </div>
+
                             {/* Paper I */}
                         <section>
                             <div className="flex items-center justify-between mb-4">
@@ -118,11 +162,11 @@ export default function NativeQuizDashboard({
                                     <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Paper I</h2>
                                 </div>
                                 <span className="text-xs font-bold text-zinc-400 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-lg">
-                                    {group1Topics.length} Topics
+                                    {(nativeSearch ? group1Topics.filter(t => t.title.toLowerCase().includes(nativeSearch.toLowerCase())) : group1Topics).length} Topics
                                 </span>
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-                                {group1Topics.map(renderTopicCard)}
+                                {(nativeSearch ? group1Topics.filter(t => t.title.toLowerCase().includes(nativeSearch.toLowerCase())) : group1Topics).map(renderTopicCard)}
                             </div>
                         </section>
 
@@ -134,11 +178,11 @@ export default function NativeQuizDashboard({
                                     <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">{group2Title}</h2>
                                 </div>
                                 <span className="text-xs font-bold text-zinc-400 bg-zinc-100 dark:bg-zinc-900 px-2 py-1 rounded-lg">
-                                    {group2Topics.length} Topics
+                                    {(nativeSearch ? group2Topics.filter(t => t.title.toLowerCase().includes(nativeSearch.toLowerCase())) : group2Topics).length} Topics
                                 </span>
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-                                {group2Topics.map(renderTopicCard)}
+                                {(nativeSearch ? group2Topics.filter(t => t.title.toLowerCase().includes(nativeSearch.toLowerCase())) : group2Topics).map(renderTopicCard)}
                             </div>
                         </section>
                     </div>
