@@ -11,6 +11,8 @@ import { consolidation_set1 } from './flashcards/consolidationProducts';
 import { consolidation_set2 } from './flashcards/consolidationProducts2';
 import { consolidation_set3 } from './flashcards/consolidationProducts3';
 import { po_reg_ldce_set1, po_reg_ldce_set2, po_reg_ldce_set3, po_reg_ldce_set4, po_reg_ldce_set5, po_reg_ldce_set6 } from './flashcards/po_reg_ldce';
+import { schedule_financial_powers_set1, schedule_financial_powers_set2, schedule_financial_powers_set3, schedule_financial_powers_set4, schedule_financial_powers_set5 } from './flashcards/scheduleOfFinancialPowers';
+
 
 // ----- EXISTING QUESTION DATA -----
 export const ALL_SETS_DATA: Record<number, any[]> = {
@@ -6514,6 +6516,11 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   167: po_reg_ldce_set4,
   168: po_reg_ldce_set5,
   169: po_reg_ldce_set6,
+  170: schedule_financial_powers_set1,
+  171: schedule_financial_powers_set2,
+  172: schedule_financial_powers_set3,
+  173: schedule_financial_powers_set4,
+  174: schedule_financial_powers_set5,
 };
 
 export interface RawQuestion {
@@ -6594,6 +6601,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-37', 'SDBS, 2011', 'Paper I', [65]),
   createTopic('p1-38', 'Manual of Office Procedure', 'Paper I', [136, 137, 138]),
   createTopic('p1-40', 'Consolidation of Products & Centralized Delivery Policy', 'Paper I', [161, 162, 163]),
+  createTopic('p1-41', 'Schedule of Financial Powers', 'Paper I', [170, 171, 172, 173, 174]),
 
   // --- PAPER III ---
   createTopic('p3-1', 'The Constitution of India', 'Paper III', [69]),
@@ -6623,7 +6631,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-24', 'Brochure on casual labourers', 'Paper III'),
   createTopic('p3-25', 'Maintenance of APAR', 'Paper III'),
   createTopic('p3-21', 'Service Discharge Benefit Scheme', 'Paper III', [65]),
-  createTopic('p3-26', 'Schedule of Financial Powers', 'Paper III'),
+  createTopic('p3-26', 'Schedule of Financial Powers', 'Paper III', [170, 171, 172, 173, 174]),
   createTopic('p3-27', 'Welfare measures for Employees/GDS', 'Paper III'),
   createTopic('p3-28', 'P&T FHB Volume I', 'Paper III', [141, 142, 143, 144, 145]),
   createTopic('p3-29', 'Postal FHB Volume II', 'Paper III', [146, 147]),

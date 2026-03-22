@@ -40,6 +40,29 @@ const UPDATES_DATA: UpdateGroup[] = [
                         </p>
                     </div>
                 )
+            },
+            {
+                title: "📝 Schedule of Financial Powers MCQs Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated <strong>135 New MCQs</strong> covering the <strong>Schedule of Financial Powers</strong> (DFPR 2024)!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-2 rounded border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide">1. Paper I (PS Group B)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Available under <strong>Establishment</strong> section in Paper I.</p>
+                            </div>
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-2 rounded border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">2. Paper III (LDCE IP)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Available under <strong>Financial & Procurement</strong> section in Paper III.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Practice now in the Quiz & Flashcard section!
+                        </p>
+                    </div>
+                )
             }
         ]
     },
