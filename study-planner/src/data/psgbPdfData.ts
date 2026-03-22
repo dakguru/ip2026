@@ -228,7 +228,14 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "size": "0.6 MB",
             "color": "violet"
         },
-
+        {
+            "title": "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.",
+            "description": "Financial Powers of Divisional Heads and Head of Circle.",
+            "filename": "Schedule_of_Financial_Powers.pdf",
+            "path": "/notes/paper-3/Schedule_of_Financial_Powers.pdf",
+            "size": "1.2 MB",
+            "color": "slate"
+        },
         {
             "title": "Welfare Measures",
             "description": "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.",
@@ -545,14 +552,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "size": "0.6 MB",
             "color": "red"
         },
-        {
-            "title": "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.",
-            "description": "Financial Powers of Divisional Heads and Head of Circle.",
-            "filename": "Schedule_of_Financial_Powers.pdf",
-            "path": "/notes/paper-3/Schedule_of_Financial_Powers.pdf",
-            "size": "1.2 MB",
-            "color": "slate"
-        },
+
         {
             "title": "Goods and Services Tax (GST) Act, 2017",
             "description": "Materials will be uploaded soon.",

@@ -31,7 +31,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                             </div>
                             <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-2 rounded border border-emerald-100 dark:border-emerald-800/50">
                                 <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">2. PS Group B Course Mode</p>
-                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Moved and integrated under <strong>Paper II</strong> for correct syllabus alignment.</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Integrated under <strong>Paper I</strong> Establishment section.</p>
                             </div>
                         </div>
 
