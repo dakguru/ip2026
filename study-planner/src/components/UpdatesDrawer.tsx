@@ -16,6 +16,34 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "22.03.2026",
+        items: [
+            {
+                title: "📚 New PDF Notes Uploaded",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>Schedule of Financial Powers</strong> of Divisional Heads, Heads of Circle, etc., in the study materials!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-2 rounded border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide">1. LDCE IP Course Mode</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Integrated under <strong>Paper III</strong> Financial & Procurement section.</p>
+                            </div>
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-2 rounded border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">2. PS Group B Course Mode</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Moved and integrated under <strong>Paper II</strong> for correct syllabus alignment.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Notes section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "21.03.2026",
         items: [
             {

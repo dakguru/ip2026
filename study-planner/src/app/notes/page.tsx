@@ -618,7 +618,14 @@ const PDF_DATA: Record<string, Note[]> = {
         },
 
         // 30. Financial Powers
-        { title: "Schedule of Financial Powers", description: "Divisional Heads, Heads of Circle.", color: "blue", comingSoon: true },
+        {
+            title: "Schedule of Financial Powers",
+            description: "Divisional Heads, Heads of Circle.",
+            filename: "Schedule_of_Financial_Powers.pdf",
+            path: "/notes/paper-3/Schedule_of_Financial_Powers.pdf",
+            size: "1.2 MB",
+            color: "blue"
+        },
 
         // 31. Welfare Measures
         {
