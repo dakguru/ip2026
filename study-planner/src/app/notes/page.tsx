@@ -616,6 +616,14 @@ const PDF_DATA: Record<string, Note[]> = {
             size: "0.7 MB",
             color: "rose"
         },
+        {
+            title: "Central Civil Services (Leave Travel Concession) Rules, 1988",
+            description: "Central Civil Services (Leave Travel Concession) Rules, 1988",
+            filename: "CCS_LTC_Rules_1988.pdf",
+            path: "/notes/paper-3/CCS_LTC_Rules_1988.pdf",
+            size: "4.2 MB",
+            color: "emerald"
+        },
 
         // 30. Financial Powers
         {

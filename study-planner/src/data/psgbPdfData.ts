@@ -188,9 +188,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Postal Manual Volume II Chapter VI (Stock), VIII (Printing), IX(Contracts), XII (Budget Estimates and control)",
-            "description": "Materials will be uploaded soon.",
-            "color": "indigo",
-            "comingSoon": true
+            "description": "Comprehensive notes covering Stock, Printing, Contracts, and Budget Estimates (control).",
+            "filename": "Postal_Manual_Vol_II_Chapters.pdf",
+            "path": "/notes/paper-1/Postal_Manual_Vol_II_Chapters.pdf",
+            "size": "0.7 MB",
+            "color": "indigo"
         },
         {
             "title": "Chapter 6 of General Financial Rules, 2017",
