@@ -16,6 +16,30 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "26.03.2026",
+        items: [
+            {
+                title: "📚 Postal Manual Volume II (Chapters III-VII) Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>Postal Manual Volume II (Chapters III, IV, V, and VII)</strong> PDF notes for PS Group B Paper II!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-indigo-50/50 dark:bg-indigo-900/10 p-2 rounded border border-indigo-100 dark:border-indigo-800/50">
+                                <p className="font-bold text-indigo-700 dark:text-indigo-300 text-[10px] uppercase tracking-wide">Paper II (PS Group B)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1">Study material covering Appeals, Personal Matters, Security Deposits, and Counterfeit currency.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Notes section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "23.03.2026",
         items: [
             {

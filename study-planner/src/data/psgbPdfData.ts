@@ -444,9 +444,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Postal Manual Volume II: Chapter III - Appeals and Petitions, Chapter IV-Personal matters, Chapter V-Security Deposits, Chapter VII - Forged counterfeit stamps and defaced postage stamps, coins and currency notes.",
-            "description": "Materials will be uploaded soon.",
-            "color": "indigo",
-            "comingSoon": true
+            "description": "Comprehensive notes covering Chapters III to VII of Postal Manual Vol II.",
+            "filename": "Postal_Manual_Vol_II_Personal_Matters.pdf",
+            "path": "/notes/paper-3/Postal_Manual_Vol_II_Personal_Matters.pdf",
+            "size": "4.6 MB",
+            "color": "indigo"
         },
         {
             "title": "P&T FHB Vol I",
