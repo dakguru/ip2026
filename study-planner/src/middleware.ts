@@ -20,15 +20,17 @@ export async function middleware(request: NextRequest) {
         pathname === '/mock-tests';
 
     const isLogout = request.nextUrl.searchParams.get('logout') === 'true';
-    const isSessionExpired = request.nextUrl.searchParams.get('reason') === 'session_expired';
+    const reason = request.nextUrl.searchParams.get('reason');
+    const isSessionExpired = reason === 'session_expired';
+    const isMultipleLogin = reason === 'multiple_login';
 
     // If user is on login page and has a token, redirect to planner
-    // UNLESS they are explicitly logging out OR their session just expired
-    if (isLoginPage && token && !isLogout && !isSessionExpired) {
+    // UNLESS they are explicitly logging out, their session expired, or they were kicked out for concurrent login
+    if (isLoginPage && token && !isLogout && !isSessionExpired && !isMultipleLogin) {
         return NextResponse.redirect(new URL('/planner', request.url));
     }
 
-    if (isLoginPage && (isLogout || isSessionExpired)) {
+    if (isLoginPage && (isLogout || isSessionExpired || isMultipleLogin)) {
         // If explicitly logging out or session expired, ensure we clear cookies and show login page
         const response = NextResponse.next();
         const cookieOptions = {

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { verifyUser, updateSession } from '@/lib/db';
+import { verifyUser, updateSessionById } from '@/lib/db';
 
 export async function POST(request: Request) {
     try {
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
 
         // Generate a unique session ID
         const sessionId = crypto.randomUUID();
-        await updateSession(user.email, sessionId);
+        await updateSessionById(user.id, sessionId);
 
         // maxAge in seconds (30 days — keep user logged in until they login on another device)
         const maxAge = 60 * 60 * 24 * 30;

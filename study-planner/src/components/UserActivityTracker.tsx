@@ -8,6 +8,15 @@ export default function UserActivityTracker() {
     const pathname = usePathname();
 
     useEffect(() => {
+        // Don't send heartbeats on public/auth pages — user may have a stale cookie
+        // that would trigger a false SESSION_CONFLICT while they're actively logging in
+        const publicPaths = ['/', '/login', '/forgot-password', '/reset-password', '/about',
+            '/privacypolicy', '/terms', '/disclaimer', '/refund-policy', '/mock-tests'];
+        const isPublicPath = publicPaths.includes(pathname) ||
+            pathname.startsWith('/guide') || pathname.startsWith('/social') ||
+            pathname.startsWith('/api/auth');
+        if (isPublicPath) return;
+
         // Function to detect platform
         const detectPlatform = () => {
             if (typeof window === 'undefined') return 'desktop';

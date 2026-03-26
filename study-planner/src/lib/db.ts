@@ -65,7 +65,7 @@ export async function getAllUsers(): Promise<User[]> {
 
 export async function getUserByEmail(email: string): Promise<User | null> {
     await dbConnect();
-    const user = await UserModel.findOne({ email });
+    const user = await UserModel.findOne({ email: { $regex: new RegExp(`^${email.trim()}$`, 'i') } });
     return user ? mapUser(user) : null;
 }
 
@@ -107,13 +107,23 @@ export async function createUser(
 
 export async function verifyUser(email: string, password: string): Promise<User | null> {
     await dbConnect();
-    const user = await UserModel.findOne({ email });
+    // Case-insensitive lookup so users with uppercase emails (legacy) can still log in
+    const user = await UserModel.findOne({ email: { $regex: new RegExp(`^${email.trim()}$`, 'i') } });
     if (!user) return null;
 
     const isValid = await bcrypt.compare(password, user.password);
     if (!isValid) return null;
 
     return mapUser(user);
+}
+
+export async function updateSessionById(userId: string, sessionId: string): Promise<boolean> {
+    await dbConnect();
+    const result = await UserModel.updateOne(
+        { _id: userId },
+        { $set: { currentSessionId: sessionId, lastActiveAt: new Date() } }
+    );
+    return result.modifiedCount > 0;
 }
 
 export async function updateUser(currentEmail: string, updates: Partial<User>): Promise<User | null> {
@@ -143,7 +153,7 @@ export async function updateUser(currentEmail: string, updates: Partial<User>): 
     }
 
     const user = await UserModel.findOneAndUpdate(
-        { email: currentEmail },
+        { email: { $regex: new RegExp(`^${currentEmail.trim()}$`, 'i') } },
         { $set: mongoUpdates },
         { new: true } // Return updated document
     );
@@ -164,6 +174,10 @@ export async function validateSession(email: string, sessionId: string): Promise
     await dbConnect();
     const user = await UserModel.findOne({ email: { $regex: new RegExp(`^${email}$`, 'i') } });
     if (!user) return 'invalid';
+
+    if (!user.currentSessionId) {
+        return 'invalid'; // No session established yet — treat as expired, not conflict
+    }
 
     if (user.currentSessionId !== sessionId) {
         return 'conflict';
