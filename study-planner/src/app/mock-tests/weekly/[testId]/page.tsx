@@ -393,16 +393,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             if (!data) {
                 console.error(`Test data not found for ID: ${testId}`);
                 console.log("Available Test IDs:", Object.keys(TEST_QUESTIONS_MAP));
-
-                // Check if Questions are loaded
-                if (testId === 'mock-2026-02-07') {
-                    alert("System Error: Mock Test 04 data is not loaded correctly. Please contact support.");
-                } else {
-                    alert(`Test data not found for ID: "${testId}". Please go back and try again.`);
-                }
-
-                router.push("/mock-tests");
-                return;
+                setIsLoading(false);
+                return; // Will show "not active" screen via !questions.length check
             }
             setQuestions(data);
 
@@ -469,11 +461,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                 setIsAuthorized(true); // Admins bypass everything
             } else {
                 if (!isStarted) {
-                    // Format start date for alert
-                    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-                    alert(`This test becomes active on ${startDate.toLocaleDateString('en-IN', options)}.`);
-                    router.push("/mock-tests");
-                    return;
+                    setIsLoading(false);
+                    return; // Will show "not active" screen
                 }
 
                 // BLOCK RE-ATTEMPTS DURING LIVE WINDOW
@@ -706,6 +695,57 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         return (
             <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center">
                 <div className="animate-pulse text-zinc-500">Loading Test Environment...</div>
+            </div>
+        );
+    }
+
+    if (!isAuthorized && questions.length === 0) {
+        // Beautiful "Test Not Active" screen
+        const config = TEST_CONFIG_MAP[testId];
+        const scheduledDate = config?.startDate;
+        const formattedDate = scheduledDate
+            ? scheduledDate.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+            : null;
+
+        return (
+            <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-4">
+                <div className="max-w-md w-full text-center">
+                    {/* Icon */}
+                    <div className="mx-auto w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/20 flex items-center justify-center mb-6 shadow-lg shadow-amber-200/30 dark:shadow-none border border-amber-200/50 dark:border-amber-800/30">
+                        <LockIcon className="w-9 h-9 text-amber-500 dark:text-amber-400" />
+                    </div>
+
+                    {/* Title */}
+                    <h1 className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-zinc-100 tracking-tight mb-3">
+                        Test is not yet Active
+                    </h1>
+
+                    {/* Message */}
+                    <p className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6 max-w-sm mx-auto">
+                        Kindly check back during the live schedule. The test will be available once it goes live.
+                    </p>
+
+                    {/* Scheduled Date Card */}
+                    {formattedDate && (
+                        <div className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm mb-8">
+                            <Clock className="w-4 h-4 text-indigo-500 shrink-0" />
+                            <span className="text-sm font-bold text-zinc-700 dark:text-zinc-300">
+                                Scheduled: <span className="text-indigo-600 dark:text-indigo-400">{formattedDate}</span>
+                            </span>
+                        </div>
+                    )}
+
+                    {/* Back Button */}
+                    <div>
+                        <Link
+                            href="/mock-tests"
+                            className="inline-flex items-center gap-2 px-8 py-3.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-bold text-sm shadow-lg shadow-zinc-900/10 dark:shadow-none hover:opacity-90 active:scale-[0.97] transition-all"
+                        >
+                            <ArrowLeft className="w-4 h-4" />
+                            Back to Mock Tests
+                        </Link>
+                    </div>
+                </div>
             </div>
         );
     }
