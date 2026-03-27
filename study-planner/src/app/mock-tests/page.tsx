@@ -181,7 +181,7 @@ export default function MockTestsPage() {
 
             if (now > sundayDate) {
                 status = 'completed';
-            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21'))) {
+            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28'))) {
                 status = 'live';
             } else {
                 status = 'upcoming';
@@ -1337,8 +1337,8 @@ function MockTestCard({
 
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
-                {/* Top 7 Rank Holders Button */}
-                {isEnded && onShowRankList && (
+                {/* Top 7 Rank Holders Button — enabled only after March 30, 2026 00:00 for Mock 11 */}
+                {isEnded && onShowRankList && !(mock.id === 'mock-2026-03-28' && new Date() < new Date('2026-03-30T00:00:00+05:30')) && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         className="w-full py-2.5 sm:py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all transform hover:scale-[1.02] active:scale-95 px-2 mb-2"
@@ -1497,9 +1497,17 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [loading, setLoading] = useState(false);
 
+    // Determine if Mock 11 is currently in its live window (Mar 28 00:00 IST – Mar 29 23:59 IST)
+    const isMock11LiveWindow = mock?.id === 'mock-2026-03-28' &&
+        new Date() >= new Date('2026-03-28T00:00:00+05:30') &&
+        new Date() < new Date('2026-03-30T00:00:00+05:30');
+
+    // Non-admin users cannot see leaderboard during Mock 11 live window
+    const isLeaderboardBlocked = isMock11LiveWindow && role !== 'admin';
+
     useEffect(() => {
         let intervalId: NodeJS.Timeout;
-        if (isOpen && mock) {
+        if (isOpen && mock && !isLeaderboardBlocked) {
             setLoading(true);
             const fetchLeaderboard = () => {
                 fetch(`/api/mock-test/live/leaderboard?testId=${mock.id}&limit=7`)
@@ -1513,6 +1521,7 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
 
             fetchLeaderboard();
             
+            // 20-second polling for admin during live period
             if (role === 'admin' && mock.status === 'live') {
                 intervalId = setInterval(fetchLeaderboard, 20000); // 20 seconds polling
             }
@@ -1520,7 +1529,7 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
         return () => {
             if (intervalId) clearInterval(intervalId);
         };
-    }, [isOpen, mock, role]);
+    }, [isOpen, mock, role, isLeaderboardBlocked]);
 
     // Helper to mask email: bhu***dra***17@gmail.com
     const maskEmail = (email: string) => {
@@ -1553,7 +1562,20 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
                 </div>
 
                 <div className="p-0 max-h-[60vh] overflow-y-auto">
-                    {loading ? (
+                    {isLeaderboardBlocked ? (
+                        <div className="py-14 flex flex-col items-center justify-center text-center px-6">
+                            <div className="w-14 h-14 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center mb-4">
+                                <Lock className="w-7 h-7 text-amber-500" />
+                            </div>
+                            <h3 className="font-black text-zinc-800 dark:text-zinc-100 text-base mb-2">Leaderboard is Live!</h3>
+                            <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                                The leaderboard is being monitored exclusively by the Admin during the live test window.
+                            </p>
+                            <p className="text-xs font-bold text-amber-600 dark:text-amber-400 mt-3 bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-xl border border-amber-100 dark:border-amber-800">
+                                🏆 Top 7 Rankers will be revealed on 30 Mar 2026
+                            </p>
+                        </div>
+                    ) : loading ? (
                         <div className="py-12 flex flex-col items-center justify-center text-zinc-400">
                             <Loader2 className="w-8 h-8 animate-spin mb-2 text-amber-500" />
                             Loading Champions...

@@ -8,6 +8,7 @@ import { WEEKLY_MOCK_07_QUESTIONS } from "@/data/weekly_mock_data_07";
 import { WEEKLY_MOCK_08_QUESTIONS } from "@/data/weekly_mock_data_08";
 import { WEEKLY_MOCK_09_QUESTIONS } from "@/data/weekly_mock_data_09";
 import { WEEKLY_MOCK_10_QUESTIONS } from "@/data/weekly_mock_data_10";
+import { WEEKLY_MOCK_11_QUESTIONS } from "@/data/weekly_mock_data_11";
 
 import { LIVE_MOCK_QUESTIONS } from "@/data/live_mock_data";
 
@@ -22,6 +23,7 @@ export const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "mock-2026-03-07": WEEKLY_MOCK_08_QUESTIONS,
     "mock-2026-03-14": WEEKLY_MOCK_09_QUESTIONS,
     "mock-2026-03-21": WEEKLY_MOCK_10_QUESTIONS,
+    "mock-2026-03-28": WEEKLY_MOCK_11_QUESTIONS,
     "live-sample": LIVE_MOCK_QUESTIONS
 
 };
