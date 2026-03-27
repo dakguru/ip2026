@@ -116,48 +116,61 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
                 </Link>
             </div>
 
-            <div className="mt-8 md:mt-12 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-                <Link href="/mock-tests" className="relative group transition-transform hover:scale-[1.02] active:scale-95">
-                    {/* The Background Decorative Strips (Left) */}
-                    <div className="absolute -left-3 md:-left-6 top-1/2 -translate-y-1/2 flex flex-col gap-1">
-                        <div className="w-6 md:w-12 h-0.5 md:h-1 bg-red-600 -skew-x-[30deg] opacity-60"></div>
-                        <div className="w-10 md:w-16 h-1.5 md:h-2 bg-red-600 -skew-x-[30deg]"></div>
-                        <div className="w-4 md:w-8 h-0.5 md:h-1 bg-red-600 -skew-x-[30deg] opacity-60"></div>
-                    </div>
+            {/* ✨ All India Mock Test — Premium Live Banner */}
+            <div className="mt-8 md:mt-12 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 px-4">
+                <Link href="/mock-tests" className="relative group w-full max-w-xl block">
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border border-white/[0.08] shadow-[0_8px_40px_-12px_rgba(99,102,241,0.35)] hover:shadow-[0_12px_50px_-10px_rgba(99,102,241,0.45)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98]">
 
-                    {/* Main Container */}
-                    <div className="relative">
-                        {/* LIVE Tag */}
-                        <div className="absolute -top-2.5 left-5 md:left-10 z-20">
-                            <div className="bg-red-600 text-white px-3 md:px-5 py-0.5 text-[9px] md:text-xs font-black italic tracking-widest transform -skew-x-[20deg] shadow-lg flex items-center gap-1.5">
-                                <span className="relative flex h-1.5 w-1.5">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+                        {/* Animated aurora blobs */}
+                        <div className="absolute -top-20 -right-20 w-56 h-56 bg-indigo-500/20 rounded-full blur-[80px] animate-pulse"></div>
+                        <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-violet-500/15 rounded-full blur-[70px] animate-pulse [animation-delay:1s]"></div>
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-amber-400/10 rounded-full blur-[60px] animate-pulse [animation-delay:2s]"></div>
+
+                        {/* Subtle grid texture */}
+                        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
+
+                        {/* Shimmer sweep on hover */}
+                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms] ease-in-out bg-gradient-to-r from-transparent via-white/[0.06] to-transparent pointer-events-none"></div>
+
+                        {/* Content */}
+                        <div className="relative z-10 flex items-center gap-4 px-5 py-4 sm:px-6 sm:py-5">
+
+                            {/* Trophy Icon */}
+                            <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-500/10 backdrop-blur-md border border-amber-400/20 flex items-center justify-center shadow-inner">
+                                <svg className="w-6 h-6 sm:w-7 sm:h-7 text-amber-400 drop-shadow-[0_0_6px_rgba(251,191,36,0.4)]" fill="currentColor" viewBox="0 0 24 24"><path d="M5 3h14c.55 0 1 .45 1 1v2c0 2.76-2.24 5-5 5h-.42c-.77 1.15-1.84 1.92-3.08 2.27V16h1.5c1.38 0 2.5 1.12 2.5 2.5V20H8.5v-1.5C8.5 17.12 9.62 16 11 16h1.5v-2.73c-1.24-.35-2.31-1.12-3.08-2.27H9c-2.76 0-5-2.24-5-5V4c0-.55.45-1 1-1zm0 3v1c0 1.66 1.34 3 3 3h.42c.34-.9.89-1.69 1.58-2.28V6H5zm14 0h-5v1.72c.69.59 1.24 1.38 1.58 2.28H16c1.66 0 3-1.34 3-3V6zM7 21h10v1H7v-1z"/></svg>
+                                {/* Live ping dot */}
+                                <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500 border-2 border-slate-900"></span>
                                 </span>
-                                LIVE
                             </div>
-                        </div>
 
-                        {/* Main Banner Body */}
-                        <div className="relative flex items-stretch">
-                            {/* Blue Main Bar */}
-                            <div className="bg-[#001030] py-2 md:py-3 pl-8 md:pl-12 pr-6 md:pr-10 transform -skew-x-[20deg] border-l-[4px] md:border-l-[6px] border-red-600 shadow-2xl relative overflow-hidden">
-                                {/* Shimmer Effect */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                                
-                                <div className="transform skew-x-[20deg] flex items-center gap-2.5">
-                                    <span className="text-white text-sm md:text-lg font-black italic tracking-tighter uppercase whitespace-nowrap drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
-                                        <CountdownTimer course={course} />
+                            {/* Text block */}
+                            <div className="flex-1 min-w-0">
+                                {/* LIVE badge */}
+                                <div className="inline-flex items-center gap-1.5 px-2.5 py-[3px] rounded-full bg-red-500/15 border border-red-500/25 mb-1.5">
+                                    <span className="relative flex h-1.5 w-1.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
                                     </span>
-                                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-red-500 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+                                    <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.15em] text-red-400">Live Now</span>
                                 </div>
+
+                                {/* Title */}
+                                <h3 className="text-[15px] sm:text-lg font-black text-white leading-tight tracking-tight">
+                                    <CountdownTimer course={course} />
+                                </h3>
+                                <p className="text-[10px] sm:text-xs text-indigo-300/70 font-medium mt-0.5 truncate">Compete with top rankers across India</p>
                             </div>
 
-                            {/* Right Red Accent Shape */}
-                            <div className="w-6 md:w-10 bg-red-600 transform -skew-x-[20deg] -ml-3 md:-ml-5 shadow-xl relative overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+                            {/* Arrow */}
+                            <div className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/[0.07] backdrop-blur-md border border-white/10 flex items-center justify-center group-hover:bg-white/[0.12] group-hover:border-white/20 transition-all duration-300">
+                                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 group-hover:text-white group-hover:translate-x-0.5 transition-all duration-300" strokeWidth={2.5} />
                             </div>
                         </div>
+
+                        {/* Bottom accent line */}
+                        <div className="h-[2px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
                     </div>
                 </Link>
             </div>
