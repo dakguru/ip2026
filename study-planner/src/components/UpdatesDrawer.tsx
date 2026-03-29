@@ -19,6 +19,41 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "29.03.2026",
         items: [
             {
+                title: "🎯 Introducing \"Dak Sutra\" — Postal Rules, Simplified",
+                desc: (
+                    <div className="space-y-3">
+                        <p className="text-zinc-700 dark:text-zinc-300 font-medium">
+                            Say goodbye to complex legal jargon! We are thrilled to launch <strong>Dak Sutra</strong>, your ultimate guide to decoding postal rules.
+                        </p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-gradient-to-br from-blue-50 to-violet-50 dark:from-blue-900/10 dark:to-violet-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-16 h-16 bg-blue-500/10 dark:bg-blue-500/20 blur-xl rounded-full" />
+                                
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300 relative z-10">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✨</span>
+                                        <span><strong>Plain-Language Explanations:</strong> Official provisions broken down simply.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-violet-500 mt-0.5">💡</span>
+                                        <span><strong>Real-Life Examples:</strong> Practical case studies bridging theory with reality.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">📝</span>
+                                        <span><strong>Exam-Focused Insights:</strong> Everything you need, nothing you don't.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-2 text-[12px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                            <span>🚀</span> <Link href="/dak-sutra">Explore Dak Sutra today!</Link>
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "📚 GST Act, 2017 PDF Notes Uploaded",
                 desc: (
                     <div className="space-y-4">
