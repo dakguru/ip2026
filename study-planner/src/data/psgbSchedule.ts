@@ -219,3 +219,31 @@ export const PSGB_FLEXIBLE_TOPICS: PsgbFlexibleTopic[] = [
     { id: "psgb-p2-36", paper: "Paper II", category: "Law Paper", title: "Prevention of Corruption Act, 1988", daysAllotted: 1 },
     { id: "psgb-p2-37", paper: "Paper II", category: "Law Paper", title: "Goods and Services Tax (GST) Act, 2017", daysAllotted: 1 },
 ];
+
+// Mapping: flexible topic ID → all corresponding dates in the recommended schedule
+// A recommended entry matches a flexible topic if same paper and subTopic equals or starts with the flexible title
+export const FLEX_TO_RECOMMENDED_MAP: Record<string, string[]> = (() => {
+    const map: Record<string, string[]> = {};
+    PSGB_FLEXIBLE_TOPICS.forEach(flexTopic => {
+        map[flexTopic.id] = PSGB_FULL_SCHEDULE
+            .filter(item => {
+                if (item.paper === 'Revision' || item.paper === 'End') return false;
+                if (item.paper !== flexTopic.paper) return false;
+                return (
+                    item.subTopic === flexTopic.title ||
+                    item.subTopic.startsWith(flexTopic.title + ' (')
+                );
+            })
+            .map(item => item.date);
+    });
+    return map;
+})();
+
+// Reverse mapping: recommended schedule date → flexible topic ID
+export const RECOMMENDED_TO_FLEX_MAP: Record<string, string> = (() => {
+    const map: Record<string, string> = {};
+    Object.entries(FLEX_TO_RECOMMENDED_MAP).forEach(([topicId, dates]) => {
+        dates.forEach(date => { map[date] = topicId; });
+    });
+    return map;
+})();

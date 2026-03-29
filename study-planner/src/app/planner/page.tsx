@@ -24,7 +24,7 @@ import {
     Sparkles
 } from 'lucide-react';
 import { FULL_SCHEDULE } from '@/data/schedule';
-import { PSGB_FULL_SCHEDULE, PsgbScheduleItem } from '@/data/psgbSchedule';
+import { PSGB_FULL_SCHEDULE, PsgbScheduleItem, FLEX_TO_RECOMMENDED_MAP, RECOMMENDED_TO_FLEX_MAP } from '@/data/psgbSchedule';
 import { generatePlannerPDF } from '@/lib/pdf-generator';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 import { useCourse } from '@/contexts/CourseContext';
@@ -54,10 +54,26 @@ function PsgbNativePlanner() {
     const [searchQuery, setSearchQuery] = useState('');
     const [expandedMonth, setExpandedMonth] = useState<string | null>(null);
 
-    // Progress state
+    // Recommended schedule progress
     const [completedDays, setCompletedDays] = useState<Record<string, boolean>>(() => {
         if (typeof window !== 'undefined') {
             const saved = localStorage.getItem('psgb_recommended_progress');
+            return saved ? JSON.parse(saved) : {};
+        }
+        return {};
+    });
+
+    // Flexible schedule progress (lifted up for bidirectional sync)
+    const [flexCompleted, setFlexCompleted] = useState<Record<string, boolean>>(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('psgb_flexible_progress');
+            return saved ? JSON.parse(saved) : {};
+        }
+        return {};
+    });
+    const [flexMastery, setFlexMastery] = useState<Record<string, { mastery?: 'confident' | 'partially-confident' | 'not-confident'; completionDate?: string }>>(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('psgb_flexible_mastery');
             return saved ? JSON.parse(saved) : {};
         }
         return {};
@@ -67,6 +83,24 @@ function PsgbNativePlanner() {
         open: false, date: null, topic: ''
     });
 
+    // Sync: when recommended date toggled, update flex topic state
+    const syncFlexFromRecommended = (updatedRec: Record<string, boolean>, date: string, isCompleting: boolean) => {
+        const topicId = RECOMMENDED_TO_FLEX_MAP[date];
+        if (!topicId) return;
+        const dates = FLEX_TO_RECOMMENDED_MAP[topicId] || [];
+        let updatedFlex = { ...flexCompleted };
+        if (isCompleting) {
+            // Mark flex topic complete only if ALL its dates are now done
+            const allDone = dates.every(d => updatedRec[d]);
+            if (allDone) updatedFlex = { ...updatedFlex, [topicId]: true };
+        } else {
+            // Any date uncompleted → flex topic is no longer fully done
+            updatedFlex = { ...updatedFlex, [topicId]: false };
+        }
+        setFlexCompleted(updatedFlex);
+        localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedFlex));
+    };
+
     const toggleDay = (date: string, topic: string) => {
         if (!completedDays[date]) {
             setCompletionDialog({ open: true, date, topic });
@@ -74,6 +108,7 @@ function PsgbNativePlanner() {
             const updated = { ...completedDays, [date]: false };
             setCompletedDays(updated);
             localStorage.setItem('psgb_recommended_progress', JSON.stringify(updated));
+            syncFlexFromRecommended(updated, date, false);
         }
     };
 
@@ -82,8 +117,44 @@ function PsgbNativePlanner() {
             const updated = { ...completedDays, [completionDialog.date]: true };
             setCompletedDays(updated);
             localStorage.setItem('psgb_recommended_progress', JSON.stringify(updated));
+            syncFlexFromRecommended(updated, completionDialog.date, true);
         }
         setCompletionDialog(prev => ({ ...prev, open: false }));
+    };
+
+    // Sync: when flexible topic completed, mark all its recommended dates
+    const handleFlexTopicComplete = (topicId: string, mastery: 'confident' | 'partially-confident' | 'not-confident') => {
+        const dates = FLEX_TO_RECOMMENDED_MAP[topicId] || [];
+        const updatedRec = { ...completedDays };
+        dates.forEach(d => { updatedRec[d] = true; });
+        setCompletedDays(updatedRec);
+        localStorage.setItem('psgb_recommended_progress', JSON.stringify(updatedRec));
+
+        const updatedFlex = { ...flexCompleted, [topicId]: true };
+        setFlexCompleted(updatedFlex);
+        localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedFlex));
+
+        const updatedMastery = { ...flexMastery, [topicId]: { mastery, completionDate: new Date().toISOString() } };
+        setFlexMastery(updatedMastery);
+        localStorage.setItem('psgb_flexible_mastery', JSON.stringify(updatedMastery));
+    };
+
+    // Sync: when flexible topic marked incomplete, unmark all its recommended dates
+    const handleFlexTopicIncomplete = (topicId: string) => {
+        const dates = FLEX_TO_RECOMMENDED_MAP[topicId] || [];
+        const updatedRec = { ...completedDays };
+        dates.forEach(d => { updatedRec[d] = false; });
+        setCompletedDays(updatedRec);
+        localStorage.setItem('psgb_recommended_progress', JSON.stringify(updatedRec));
+
+        const updatedFlex = { ...flexCompleted, [topicId]: false };
+        setFlexCompleted(updatedFlex);
+        localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedFlex));
+
+        const updatedMastery = { ...flexMastery };
+        delete updatedMastery[topicId];
+        setFlexMastery(updatedMastery);
+        localStorage.setItem('psgb_flexible_mastery', JSON.stringify(updatedMastery));
     };
 
     const schedule = PSGB_FULL_SCHEDULE;
@@ -158,7 +229,13 @@ function PsgbNativePlanner() {
 
             {viewMode === 'flexible' ? (
                 <div className="px-4 py-4 min-h-[80vh] bg-slate-50 dark:bg-black transition-colors">
-                    <PsgbFlexiblePlanner darkMode={isDark} />
+                    <PsgbFlexiblePlanner
+                        darkMode={isDark}
+                        completedTopics={flexCompleted}
+                        topicMastery={flexMastery}
+                        onTopicComplete={handleFlexTopicComplete}
+                        onTopicIncomplete={handleFlexTopicIncomplete}
+                    />
                 </div>
             ) : (
                 <>
@@ -292,21 +369,45 @@ function PsgbWebPlanner() {
     const [searchQuery, setSearchQuery] = useState('');
     const [openMonths, setOpenMonths] = useState<Record<string, boolean>>({});
 
-    // Progress state
+    // Recommended schedule progress
     const [completedDays, setCompletedDays] = useState<Record<string, boolean>>({});
     const [completionDialog, setCompletionDialog] = useState<{ open: boolean; date: string | null; topic: string }>({
         open: false, date: null, topic: ''
     });
 
+    // Flexible schedule progress (lifted up for bidirectional sync)
+    const [flexCompleted, setFlexCompleted] = useState<Record<string, boolean>>({});
+    const [flexMastery, setFlexMastery] = useState<Record<string, { mastery?: 'confident' | 'partially-confident' | 'not-confident'; completionDate?: string }>>({});
+
     useEffect(() => {
         const saved = localStorage.getItem('psgb_recommended_progress');
         if (saved) setCompletedDays(JSON.parse(saved));
+        const savedFlex = localStorage.getItem('psgb_flexible_progress');
+        if (savedFlex) setFlexCompleted(JSON.parse(savedFlex));
+        const savedMastery = localStorage.getItem('psgb_flexible_mastery');
+        if (savedMastery) setFlexMastery(JSON.parse(savedMastery));
     }, []);
 
     const schedule = PSGB_FULL_SCHEDULE;
     const totalTasks = schedule.filter(i => i.paper !== 'Revision').length;
     const completedTasks = schedule.filter(i => i.paper !== 'Revision' && completedDays[i.date]).length;
     const progress = Math.round((completedTasks / totalTasks) * 100) || 0;
+
+    // Sync: when recommended date toggled, update flex topic state
+    const syncFlexFromRecommended = (updatedRec: Record<string, boolean>, date: string, isCompleting: boolean) => {
+        const topicId = RECOMMENDED_TO_FLEX_MAP[date];
+        if (!topicId) return;
+        const dates = FLEX_TO_RECOMMENDED_MAP[topicId] || [];
+        const updatedFlex = { ...flexCompleted };
+        if (isCompleting) {
+            const allDone = dates.every(d => updatedRec[d]);
+            if (allDone) updatedFlex[topicId] = true;
+        } else {
+            updatedFlex[topicId] = false;
+        }
+        setFlexCompleted(updatedFlex);
+        localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedFlex));
+    };
 
     const toggleDay = (date: string, topic: string) => {
         if (!completedDays[date]) {
@@ -315,6 +416,7 @@ function PsgbWebPlanner() {
             const updated = { ...completedDays, [date]: false };
             setCompletedDays(updated);
             localStorage.setItem('psgb_recommended_progress', JSON.stringify(updated));
+            syncFlexFromRecommended(updated, date, false);
         }
     };
 
@@ -323,8 +425,44 @@ function PsgbWebPlanner() {
             const updated = { ...completedDays, [completionDialog.date]: true };
             setCompletedDays(updated);
             localStorage.setItem('psgb_recommended_progress', JSON.stringify(updated));
+            syncFlexFromRecommended(updated, completionDialog.date, true);
         }
         setCompletionDialog(prev => ({ ...prev, open: false }));
+    };
+
+    // Sync: when flexible topic completed, mark all its recommended dates
+    const handleFlexTopicComplete = (topicId: string, mastery: 'confident' | 'partially-confident' | 'not-confident') => {
+        const dates = FLEX_TO_RECOMMENDED_MAP[topicId] || [];
+        const updatedRec = { ...completedDays };
+        dates.forEach(d => { updatedRec[d] = true; });
+        setCompletedDays(updatedRec);
+        localStorage.setItem('psgb_recommended_progress', JSON.stringify(updatedRec));
+
+        const updatedFlex = { ...flexCompleted, [topicId]: true };
+        setFlexCompleted(updatedFlex);
+        localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedFlex));
+
+        const updatedMastery = { ...flexMastery, [topicId]: { mastery, completionDate: new Date().toISOString() } };
+        setFlexMastery(updatedMastery);
+        localStorage.setItem('psgb_flexible_mastery', JSON.stringify(updatedMastery));
+    };
+
+    // Sync: when flexible topic marked incomplete, unmark all its recommended dates
+    const handleFlexTopicIncomplete = (topicId: string) => {
+        const dates = FLEX_TO_RECOMMENDED_MAP[topicId] || [];
+        const updatedRec = { ...completedDays };
+        dates.forEach(d => { updatedRec[d] = false; });
+        setCompletedDays(updatedRec);
+        localStorage.setItem('psgb_recommended_progress', JSON.stringify(updatedRec));
+
+        const updatedFlex = { ...flexCompleted, [topicId]: false };
+        setFlexCompleted(updatedFlex);
+        localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedFlex));
+
+        const updatedMastery = { ...flexMastery };
+        delete updatedMastery[topicId];
+        setFlexMastery(updatedMastery);
+        localStorage.setItem('psgb_flexible_mastery', JSON.stringify(updatedMastery));
     };
 
     const filteredSchedule = useMemo(() => {
@@ -614,7 +752,12 @@ function PsgbWebPlanner() {
                         </div>
 
                         {viewMode === 'flexible' ? (
-                            <PsgbFlexiblePlanner />
+                            <PsgbFlexiblePlanner
+                                completedTopics={flexCompleted}
+                                topicMastery={flexMastery}
+                                onTopicComplete={handleFlexTopicComplete}
+                                onTopicIncomplete={handleFlexTopicIncomplete}
+                            />
                         ) : (
                             <>
                                 {/* Controls */}

@@ -2,24 +2,21 @@
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import DakSutra from '@/models/DakSutra';
-import { isAdmin } from '@/lib/auth-utils';
 
 export async function GET(request: Request) {
-    if (!(await isAdmin())) {
-        return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
-    }
     try {
         await dbConnect();
         const { searchParams } = new URL(request.url);
         const search = searchParams.get('search');
         const category = searchParams.get('category');
 
-        let query: any = { status: 'published' }; // Only show published entries to public
+        let query: any = { status: 'published' };
 
         if (search) {
             query.$or = [
                 { title: { $regex: search, $options: 'i' } },
-                { rule_number: { $regex: search, $options: 'i' } }
+                { rule_number: { $regex: search, $options: 'i' } },
+                { act_name: { $regex: search, $options: 'i' } },
             ];
         }
         if (category && category !== 'all') {

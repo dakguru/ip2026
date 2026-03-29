@@ -47,6 +47,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
 
     // All blog post links are treated as viewable documents (PDFs / official docs)
     const hasLink = update?.link && update.link !== "#";
+    const isImageLink = hasLink && /\.(jpeg|jpg|gif|png|webp|bmp)(?:[?#]|$)/i.test(update.link);
     const isPdfLink = hasLink;
 
     // Build the proxied URL for the PDF viewer (for external PDFs)
@@ -76,7 +77,18 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
                 .trim()
                 .replace(/\s+/g, '_')
                 .substring(0, 60);
-            a.download = `${safeName}.pdf`;
+
+            const contentType = res.headers.get('content-type') || '';
+            let extension = 'pdf';
+            if (contentType.startsWith('image/')) {
+                extension = contentType.split('/')[1];
+                if (extension === 'jpeg') extension = 'jpg';
+            } else {
+                const match = update.link.match(/\.(jpeg|jpg|gif|png|webp|bmp)(?:[?#]|$)/i);
+                if (match) extension = match[1].toLowerCase();
+            }
+            a.download = `${safeName}.${extension}`;
+
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -196,8 +208,8 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
                                             <FileText className="w-6 h-6 md:w-7 md:h-7" />
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <h3 className="font-bold text-base md:text-lg text-zinc-900 dark:text-zinc-100">Official Document</h3>
-                                            <p className="text-xs md:text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">View or download the original PDF</p>
+                                            <h3 className="font-bold text-base md:text-lg text-zinc-900 dark:text-zinc-100">{isImageLink ? 'Official Image' : 'Official Document'}</h3>
+                                            <p className="text-xs md:text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">View or download the original {isImageLink ? 'image' : 'PDF'}</p>
                                         </div>
                                     </div>
 
@@ -239,7 +251,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
                                                 ) : (
                                                     <>
                                                         <Download className="w-4 h-4 md:w-5 md:h-5" />
-                                                        <span>Download PDF</span>
+                                                        <span>{isImageLink ? 'Download Image' : 'Download PDF'}</span>
                                                     </>
                                                 )}
                                             </button>
@@ -311,8 +323,8 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
                         </div>
                     </div>
 
-                    {/* PDF Viewer */}
-                    <div className="flex-1 min-h-0 overflow-hidden">
+                    {/* Document Viewer */}
+                    <div className="flex-1 min-h-0 overflow-hidden bg-zinc-900/90 relative">
                         <PdfViewer url={getPdfUrl()} />
                     </div>
                 </div>

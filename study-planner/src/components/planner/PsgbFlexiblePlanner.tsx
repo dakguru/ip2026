@@ -16,18 +16,34 @@ import {
 } from 'lucide-react';
 import { PsgbFlexibleTopic, PSGB_FLEXIBLE_TOPICS } from '@/data/psgbSchedule';
 
+type MasteryLevel = 'confident' | 'partially-confident' | 'not-confident';
+type MasteryMeta = { mastery?: MasteryLevel; completionDate?: string };
+
 interface PsgbFlexiblePlannerProps {
     darkMode?: boolean;
+    // When provided, component runs in controlled mode (synced with recommended schedule)
+    completedTopics?: Record<string, boolean>;
+    topicMastery?: Record<string, MasteryMeta>;
+    onTopicComplete?: (topicId: string, mastery: MasteryLevel) => void;
+    onTopicIncomplete?: (topicId: string) => void;
 }
 
-export default function PsgbFlexiblePlanner({ darkMode = false }: PsgbFlexiblePlannerProps) {
+export default function PsgbFlexiblePlanner({
+    darkMode = false,
+    completedTopics: externalCompleted,
+    topicMastery: externalMastery,
+    onTopicComplete,
+    onTopicIncomplete,
+}: PsgbFlexiblePlannerProps) {
+    const isControlled = externalCompleted !== undefined;
+
     const [searchQuery, setSearchQuery] = useState('');
     const [filterPaper, setFilterPaper] = useState('All');
     const [filterStatus, setFilterStatus] = useState('All');
     const [filterMastery, setFilterMastery] = useState('All');
 
-    // Completion state keyed by topic id
-    const [completedTopics, setCompletedTopics] = useState<Record<string, boolean>>(() => {
+    // Internal state — only used when not in controlled mode
+    const [internalCompleted, setInternalCompleted] = useState<Record<string, boolean>>(() => {
         if (typeof window !== 'undefined') {
             const saved = localStorage.getItem('psgb_flexible_progress');
             return saved ? JSON.parse(saved) : {};
@@ -35,14 +51,17 @@ export default function PsgbFlexiblePlanner({ darkMode = false }: PsgbFlexiblePl
         return {};
     });
 
-    // Mastery state keyed by topic id
-    const [topicMastery, setTopicMastery] = useState<Record<string, { mastery?: 'confident' | 'partially-confident' | 'not-confident'; completionDate?: string }>>(() => {
+    const [internalMastery, setInternalMastery] = useState<Record<string, MasteryMeta>>(() => {
         if (typeof window !== 'undefined') {
             const saved = localStorage.getItem('psgb_flexible_mastery');
             return saved ? JSON.parse(saved) : {};
         }
         return {};
     });
+
+    // Effective state: use external props in controlled mode, internal state otherwise
+    const completedTopics = isControlled ? externalCompleted! : internalCompleted;
+    const topicMastery = isControlled ? (externalMastery ?? {}) : internalMastery;
 
     const [masteryDialog, setMasteryDialog] = useState<{ open: boolean; topic: PsgbFlexibleTopic | null }>({
         open: false,
@@ -72,17 +91,21 @@ export default function PsgbFlexiblePlanner({ darkMode = false }: PsgbFlexiblePl
         });
     }, [filterPaper, filterStatus, filterMastery, searchQuery, completedTopics, topicMastery]);
 
-    const handleMasterySelect = (mastery: 'confident' | 'partially-confident' | 'not-confident') => {
+    const handleMasterySelect = (mastery: MasteryLevel) => {
         if (!masteryDialog.topic) return;
         const id = masteryDialog.topic.id;
 
-        const updatedCompletion = { ...completedTopics, [id]: true };
-        setCompletedTopics(updatedCompletion);
-        localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedCompletion));
+        if (isControlled) {
+            onTopicComplete?.(id, mastery);
+        } else {
+            const updatedCompletion = { ...internalCompleted, [id]: true };
+            setInternalCompleted(updatedCompletion);
+            localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedCompletion));
 
-        const updatedMastery = { ...topicMastery, [id]: { mastery, completionDate: new Date().toISOString() } };
-        setTopicMastery(updatedMastery);
-        localStorage.setItem('psgb_flexible_mastery', JSON.stringify(updatedMastery));
+            const updatedMastery = { ...internalMastery, [id]: { mastery, completionDate: new Date().toISOString() } };
+            setInternalMastery(updatedMastery);
+            localStorage.setItem('psgb_flexible_mastery', JSON.stringify(updatedMastery));
+        }
 
         setMasteryDialog({ open: false, topic: null });
     };
@@ -91,14 +114,18 @@ export default function PsgbFlexiblePlanner({ darkMode = false }: PsgbFlexiblePl
         if (!masteryDialog.topic) return;
         const id = masteryDialog.topic.id;
 
-        const updatedCompletion = { ...completedTopics, [id]: false };
-        setCompletedTopics(updatedCompletion);
-        localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedCompletion));
+        if (isControlled) {
+            onTopicIncomplete?.(id);
+        } else {
+            const updatedCompletion = { ...internalCompleted, [id]: false };
+            setInternalCompleted(updatedCompletion);
+            localStorage.setItem('psgb_flexible_progress', JSON.stringify(updatedCompletion));
 
-        const updatedMastery = { ...topicMastery };
-        delete updatedMastery[id];
-        setTopicMastery(updatedMastery);
-        localStorage.setItem('psgb_flexible_mastery', JSON.stringify(updatedMastery));
+            const updatedMastery = { ...internalMastery };
+            delete updatedMastery[id];
+            setInternalMastery(updatedMastery);
+            localStorage.setItem('psgb_flexible_mastery', JSON.stringify(updatedMastery));
+        }
 
         setMasteryDialog({ open: false, topic: null });
     };

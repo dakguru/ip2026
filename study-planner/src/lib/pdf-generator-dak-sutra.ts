@@ -1,5 +1,4 @@
 
-import jsPDF from "jspdf";
 import { format } from "date-fns";
 
 interface DakSutraPDFParams {
@@ -14,7 +13,13 @@ interface DakSutraPDFParams {
     exam_insight?: string;
 }
 
-import autoTable from "jspdf-autotable";
+const CATEGORY_COLORS: Record<string, { primary: string; light: string; dark: string; border: string }> = {
+    Rule:        { primary: "#2563eb", light: "#eff6ff", dark: "#1d4ed8", border: "#bfdbfe" },
+    Section:     { primary: "#7c3aed", light: "#f5f3ff", dark: "#6d28d9", border: "#ddd6fe" },
+    Regulation:  { primary: "#059669", light: "#ecfdf5", dark: "#047857", border: "#a7f3d0" },
+    Circular:    { primary: "#d97706", light: "#fffbeb", dark: "#b45309", border: "#fde68a" },
+    Explanation: { primary: "#4338ca", light: "#eef2ff", dark: "#3730a3", border: "#c7d2fe" },
+};
 
 export const generateDakSutraPDF = async ({
     title,
@@ -25,225 +30,464 @@ export const generateDakSutraPDF = async ({
     official_text,
     guru_explanation,
     practical_example,
-    exam_insight
+    exam_insight,
 }: DakSutraPDFParams) => {
-    const doc = new jsPDF();
-    const pageWidth = doc.internal.pageSize.width;
-    const pageHeight = doc.internal.pageSize.height;
-    const margin = 15;
-    const contentWidth = pageWidth - (margin * 2);
 
-    // Color Palette
-    const primaryBlue = [37, 99, 235]; // #2563eb
-    const lightBlueBg = [240, 249, 255]; // #f0f9ff
-    const textMain = [30, 41, 59]; // #1e293b
-    const textGray = [100, 116, 139]; // #64748b
+    const c = CATEGORY_COLORS[category] || CATEGORY_COLORS.Rule;
+    const dateStr = effective_date
+        ? format(new Date(effective_date), "dd MMMM yyyy")
+        : null;
 
-    // Logo state
-    const logoUrl = '/official-logo.png';
-    let logoData = "";
-    try {
-        logoData = await new Promise((resolve) => {
-            const img = new Image();
-            img.src = logoUrl;
-            img.crossOrigin = "Anonymous";
-            img.onload = () => {
-                const canvas = document.createElement('canvas');
-                canvas.width = img.width; canvas.height = img.height;
-                const ctx = canvas.getContext('2d');
-                if (ctx) { ctx.drawImage(img, 0, 0); resolve(canvas.toDataURL('image/png')); } else resolve("");
-            };
-            img.onerror = () => resolve("");
-        });
-    } catch (e) { }
+    const html = /* html */ `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dak Sutra – ${title}</title>
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    // --- PDF HELPERS ---
-    const addWatermark = (p: jsPDF) => {
-        if (!logoData) return;
-        try {
-            const size = 120;
-            const x = (pageWidth - size) / 2;
-            const y = (pageHeight - size) / 2;
-            (p as any).setGState(new (p as any).GState({ opacity: 0.03 }));
-            p.addImage(logoData, 'PNG', x, y, size, size);
-            (p as any).setGState(new (p as any).GState({ opacity: 1.0 }));
-        } catch (e) { }
-    };
-
-    const addFooter = (p: jsPDF) => {
-        const count = (p.internal as any).getNumberOfPages();
-        p.setDrawColor(226, 232, 240);
-        p.line(margin, pageHeight - 15, pageWidth - margin, pageHeight - 15);
-        p.setFont("helvetica", "normal");
-        p.setFontSize(8);
-        p.setTextColor(150, 150, 150);
-        p.text("Downloaded from www.dakguru.com | A Premium Self-Learning Portal for Postal Aspirants", pageWidth / 2, pageHeight - 10, { align: "center" });
-        p.text(`Page ${count}`, pageWidth - margin, pageHeight - 10, { align: "right" });
-    };
-
-    const checkPageBreak = (y: number, h: number) => {
-        if (y + h > pageHeight - 20) {
-            doc.addPage(); addWatermark(doc); addFooter(doc); return 25;
-        }
-        return y;
-    };
-
-    // --- HTML RENDERER ---
-    const renderNode = (node: Node, y: number, depth: number = 0, options: any = {}): number => {
-        let curY = y;
-
-        if (node.nodeType === Node.TEXT_NODE) {
-            const rawText = node.textContent?.replace(/\s+/g, ' ').trim();
-            if (!rawText || rawText === "●") return curY; // Skip empty or stand-alone bullet character
-
-            doc.setFontSize(options.fontSize || 10);
-            doc.setTextColor(options.color?.[0] || 30, options.color?.[1] || 41, options.color?.[2] || 59);
-
-            if (options.isBold && options.isItalic) doc.setFont("helvetica", "bolditalic");
-            else if (options.isBold) doc.setFont("helvetica", "bold");
-            else if (options.isItalic) doc.setFont("helvetica", "italic");
-            else doc.setFont("helvetica", "normal");
-
-            const xPos = margin + depth;
-            const lines = doc.splitTextToSize(rawText, contentWidth - depth);
-            lines.forEach((line: string) => {
-                curY = checkPageBreak(curY, 6);
-                doc.text(line, xPos, curY);
-                curY += 5.5;
-            });
-            return curY;
-        }
-
-        if (node.nodeType === Node.ELEMENT_NODE) {
-            const el = node as HTMLElement;
-            const tag = el.tagName.toLowerCase();
-            const classes = el.className;
-
-            // 1. Detect Cards (bg-blue-50, etc.)
-            const isCard = classes.includes('bg-') && classes.includes('p-');
-            let cardStartY = curY;
-
-            if (isCard) {
-                curY += 5;
-                cardStartY = curY - 3;
-                // Draw Card Accent Border (similar to Web UI)
-                doc.setFillColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
-                doc.rect(margin + depth, cardStartY, 2, 2, 'F'); // Just a marker for start
-            }
-
-            const nextOptions = { ...options };
-            if (classes.includes('font-bold') || classes.includes('font-black') || ['h1', 'h2', 'h3', 'h4', 'strong', 'th'].includes(tag)) nextOptions.isBold = true;
-            if (classes.includes('italic') || tag === 'em') nextOptions.isItalic = true;
-            if (classes.includes('text-blue-')) nextOptions.color = primaryBlue;
-
-            if (tag === 'h3' || tag === 'h4') {
-                curY += 4;
-                nextOptions.fontSize = 12;
-                nextOptions.color = primaryBlue;
-            }
-
-            // 2. Handle List items with actual dots
-            if (tag === 'li') {
-                curY = checkPageBreak(curY, 5);
-                doc.setFillColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
-                doc.circle(margin + depth + 2, curY - 1.2, 0.7, 'F');
-            }
-
-            // 3. Handle Tables via AutoTable
-            if (tag === 'table') {
-                curY += 4;
-                const rows: any[] = [];
-                const head: any[] = [];
-                el.querySelectorAll('tr').forEach((tr, i) => {
-                    const data: any[] = [];
-                    tr.querySelectorAll('td, th').forEach(c => data.push(c.textContent?.trim() || ""));
-                    if (i === 0 && tr.querySelector('th')) head.push(data); else rows.push(data);
-                });
-                autoTable(doc, {
-                    startY: curY,
-                    head: head.length ? head : undefined,
-                    body: rows,
-                    margin: { left: margin + depth },
-                    styles: { fontSize: 8, font: "helvetica", cellPadding: 2 },
-                    headStyles: { fillColor: [241, 245, 249], textColor: [71, 85, 105], fontStyle: 'bold' },
-                    theme: 'grid'
-                });
-                curY = (doc as any).lastAutoTable.finalY + 5;
-                return curY;
-            }
-
-            // Recurse children
-            el.childNodes.forEach(child => {
-                curY = renderNode(child, curY, tag === 'li' ? depth + 8 : (isCard ? depth + 5 : depth), nextOptions);
-            });
-
-            // 4. Draw the actual card side border after height is known
-            if (isCard) {
-                doc.setDrawColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
-                doc.setLineWidth(1.5);
-                doc.line(margin + depth, cardStartY, margin + depth, curY - 2);
-                curY += 5;
-            }
-
-            if (['p', 'div', 'h3', 'h4', 'li'].includes(tag)) curY += 1.5;
-        }
-
-        return curY;
-    };
-
-    // --- MAIN EXECUTION ---
-    addWatermark(doc);
-    addFooter(doc);
-
-    // Branding Header
-    if (logoData) {
-        doc.addImage(logoData, 'PNG', margin, 12, 12, 12);
+    /* ── Base ── */
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 11pt;
+      line-height: 1.7;
+      color: #1e293b;
+      background: #fff;
     }
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(20);
-    doc.setTextColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
-    doc.text("DAK GURU", margin + 15, 21.5);
 
-    let curY = 40;
+    /* ── Page setup ── */
+    @page {
+      size: A4;
+      margin: 18mm 16mm 20mm 16mm;
+    }
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .no-print { display: none !important; }
+      .page-break { page-break-before: always; }
+      section { page-break-inside: avoid; }
+    }
 
-    // Header Metadata (Mimic Web Layout)
-    doc.setFillColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
-    doc.roundedRect(margin, curY - 5, 25, 6, 1, 1, 'F');
-    doc.setFontSize(8); doc.setTextColor(255, 255, 255);
-    doc.text(category.toUpperCase(), margin + 12.5, curY - 0.8, { align: "center" });
+    /* ── HEADER BANNER ── */
+    .header-banner {
+      background: linear-gradient(135deg, ${c.primary} 0%, ${c.dark} 100%);
+      color: white;
+      padding: 22px 24px 18px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header-banner::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 120px; height: 120px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50%;
+    }
+    .header-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; left: 40px;
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .category-pill {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .act-name {
+      font-family: Arial, sans-serif;
+      font-size: 8.5pt;
+      color: rgba(255,255,255,0.75);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .rule-num {
+      font-family: Arial, sans-serif;
+      font-size: 8.5pt;
+      color: rgba(255,255,255,0.60);
+    }
+    .header-title {
+      font-size: 18pt;
+      font-weight: 700;
+      line-height: 1.25;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .header-footer {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .header-tag {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.9);
+      font-family: Arial, sans-serif;
+      font-size: 7.5pt;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 4px;
+    }
 
-    curY += 10;
-    doc.setFontSize(18); doc.setTextColor(0, 0, 0);
-    const splitTitle = doc.splitTextToSize(title, contentWidth);
-    doc.text(splitTitle, margin, curY);
-    curY += (splitTitle.length * 8) + 4;
+    /* ── BRANDING BAR ── */
+    .brand-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid ${c.border};
+    }
+    .brand-name {
+      font-family: Arial, sans-serif;
+      font-size: 13pt;
+      font-weight: 900;
+      color: ${c.primary};
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand-tagline {
+      font-family: Arial, sans-serif;
+      font-size: 7pt;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .brand-date {
+      font-family: Arial, sans-serif;
+      font-size: 7.5pt;
+      color: #94a3b8;
+    }
 
-    doc.setFontSize(9); doc.setTextColor(textGray[0], textGray[1], textGray[2]);
-    const infoStr = [act_name, rule_number, effective_date ? `Eff: ${format(new Date(effective_date), 'PPP')}` : ''].filter(Boolean).join(" | ");
-    doc.text(infoStr, margin, curY);
+    /* ── SECTION CARD ── */
+    .section-card {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      border: 1.5px solid #e2e8f0;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+    .section-icon {
+      width: 28px; height: 28px;
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12pt;
+      flex-shrink: 0;
+    }
+    .section-label {
+      font-family: Arial, sans-serif;
+      font-size: 7pt;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+    .section-sublabel {
+      font-family: Arial, sans-serif;
+      font-size: 7pt;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+    .section-badge {
+      margin-left: auto;
+      font-family: Arial, sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .section-body {
+      padding: 16px 18px;
+    }
 
-    curY += 15;
+    /* Official Provision */
+    .card-official .section-header { background: #f8fafc; }
+    .card-official .section-icon { background: #f1f5f9; }
+    .card-official .section-label { color: #475569; }
+    .card-official .section-badge { background: #f1f5f9; color: #64748b; }
 
-    const renderBlock = (label: string, html: string, startY: number, color: number[]) => {
-        let y = checkPageBreak(startY, 25);
-        // Header line
-        doc.setFont("helvetica", "bold"); doc.setFontSize(10); doc.setTextColor(color[0], color[1], color[2]);
-        doc.text(label.toUpperCase(), margin, y);
-        doc.setDrawColor(color[0], color[1], color[2], 0.2);
-        doc.setLineWidth(0.5);
-        doc.line(margin, y + 2, margin + contentWidth, y + 2);
-        y += 12;
+    /* Guru Explanation */
+    .card-guru { border-color: ${c.border}; }
+    .card-guru .section-header { background: ${c.light}; border-color: ${c.border}; }
+    .card-guru .section-icon { background: ${c.light}; border: 1px solid ${c.border}; }
+    .card-guru .section-label { color: ${c.primary}; }
+    .card-guru .section-badge { background: ${c.light}; color: ${c.primary}; border: 1px solid ${c.border}; }
 
-        const parser = new DOMParser();
-        const htmlDoc = parser.parseFromString(html, 'text/html');
-        return renderNode(htmlDoc.body, y);
+    /* Practical Example */
+    .card-example { border-color: #bfdbfe; }
+    .card-example .section-header { background: #eff6ff; border-color: #bfdbfe; }
+    .card-example .section-icon { background: #dbeafe; }
+    .card-example .section-label { color: #1d4ed8; }
+    .card-example .section-body { background: #f0f7ff; }
+    .card-example .section-badge { background: #dbeafe; color: #1d4ed8; }
+
+    /* Exam Insight */
+    .card-exam { border-color: #fde68a; }
+    .card-exam .section-header { background: #fffbeb; border-color: #fde68a; }
+    .card-exam .section-icon { background: #fef3c7; }
+    .card-exam .section-label { color: #b45309; }
+    .card-exam .section-body { background: #fffdf0; }
+    .card-exam .section-badge { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+
+    /* ── CONTENT TYPOGRAPHY ── */
+    .section-body p {
+      margin-bottom: 8px;
+      color: #334155;
+      font-size: 10.5pt;
+      line-height: 1.75;
+    }
+    .section-body h4 {
+      font-family: Arial, sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 12px 0 6px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .section-body ul, .section-body ol {
+      padding-left: 18px;
+      margin-bottom: 8px;
+    }
+    .section-body li {
+      margin-bottom: 5px;
+      color: #334155;
+      font-size: 10.5pt;
+      line-height: 1.65;
+    }
+    .section-body strong {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .section-body em {
+      font-style: italic;
+      color: #475569;
+    }
+    .section-body blockquote {
+      border-left: 3px solid #cbd5e1;
+      padding: 6px 12px;
+      margin: 8px 0;
+      background: #f8fafc;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      color: #475569;
+    }
+
+    /* ── TABLE ── */
+    .section-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-family: Arial, sans-serif;
+      font-size: 9pt;
+    }
+    .section-body th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      text-align: left;
+      padding: 7px 10px;
+      border: 1px solid #cbd5e1;
+    }
+    .section-body td {
+      padding: 6px 10px;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      vertical-align: top;
+    }
+    .section-body tr:nth-child(even) td { background: #f8fafc; }
+
+    /* ── FOOTER ── */
+    .pdf-footer {
+      margin-top: 22px;
+      padding-top: 10px;
+      border-top: 1.5px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .pdf-footer-left {
+      font-family: Arial, sans-serif;
+      font-size: 7pt;
+      color: #94a3b8;
+    }
+    .pdf-footer-right {
+      font-family: Arial, sans-serif;
+      font-size: 7pt;
+      color: ${c.primary};
+      font-weight: 600;
+    }
+
+    /* ── PRINT BUTTON (screen only) ── */
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: ${c.primary};
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-family: Arial, sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .print-btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+  <!-- Print button (hidden in PDF) -->
+  <div class="no-print" style="padding:16px 0 0 0; text-align:center;">
+    <button class="print-btn" onclick="window.print()">
+      ⬇ Save as PDF / Print
+    </button>
+    <p style="font-family:Arial,sans-serif;font-size:8pt;color:#94a3b8;margin-top:6px;">
+      In the print dialog — select <strong>Save as PDF</strong> as destination for best results.
+    </p>
+  </div>
+
+  <!-- Branding bar -->
+  <div class="brand-bar">
+    <div>
+      <div class="brand-name">⬡ Dak Guru</div>
+      <div class="brand-tagline">Self-Learning Portal for Postal Aspirants</div>
+    </div>
+    <div class="brand-date">Generated: ${format(new Date(), "dd MMM yyyy")}</div>
+  </div>
+
+  <!-- Hero / Header -->
+  <div class="header-banner">
+    <div class="header-meta">
+      <span class="category-pill">${category}</span>
+      <span class="act-name">${act_name}</span>
+      ${rule_number ? `<span class="rule-num">· ${rule_number}</span>` : ""}
+    </div>
+    <div class="header-title">${title}</div>
+    <div class="header-footer">
+      ${dateStr ? `<span class="header-tag">📅 Effective: ${dateStr}</span>` : ""}
+      <span class="header-tag">📚 Dak Sutra Series</span>
+      <span class="header-tag">🎯 LDCE / PS Group B</span>
+    </div>
+  </div>
+
+  <!-- 1. Official Provision -->
+  <div class="section-card card-official">
+    <div class="section-header">
+      <div class="section-icon">📄</div>
+      <div>
+        <div class="section-label">Official Provision</div>
+        <div class="section-sublabel">Verbatim legal text</div>
+      </div>
+      <span class="section-badge">Primary Source</span>
+    </div>
+    <div class="section-body">
+      ${official_text}
+    </div>
+  </div>
+
+  <!-- 2. Dak Guru Explanation -->
+  <div class="section-card card-guru">
+    <div class="section-header">
+      <div class="section-icon">📖</div>
+      <div>
+        <div class="section-label">Dak Guru Explains</div>
+        <div class="section-sublabel">Plain-language breakdown</div>
+      </div>
+      <span class="section-badge">✦ Simplified</span>
+    </div>
+    <div class="section-body">
+      ${guru_explanation}
+    </div>
+  </div>
+
+  <!-- 3. Practical Example -->
+  ${practical_example ? `
+  <div class="section-card card-example">
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <div>
+        <div class="section-label">Practical Example</div>
+        <div class="section-sublabel">Real-world scenario</div>
+      </div>
+      <span class="section-badge">Case Study</span>
+    </div>
+    <div class="section-body">
+      ${practical_example}
+    </div>
+  </div>
+  ` : ""}
+
+  <!-- 4. Exam Insight -->
+  ${exam_insight ? `
+  <div class="section-card card-exam">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div>
+        <div class="section-label">Exam Insight</div>
+        <div class="section-sublabel">What the examiner expects</div>
+      </div>
+      <span class="section-badge">🎓 Must Read</span>
+    </div>
+    <div class="section-body">
+      ${exam_insight}
+    </div>
+  </div>
+  ` : ""}
+
+  <!-- Footer -->
+  <div class="pdf-footer">
+    <div class="pdf-footer-left">
+      Dak Sutra · ${act_name}${rule_number ? " · " + rule_number : ""}<br/>
+      Downloaded from <strong>dakguru.com</strong> — For educational use only
+    </div>
+    <div class="pdf-footer-right">www.dakguru.com</div>
+  </div>
+
+  <script>
+    // Auto-print after fonts and images load
+    window.onload = function () {
+      setTimeout(function () { window.print(); }, 600);
     };
+  </script>
+</body>
+</html>`;
 
-    curY = renderBlock("Official Provision", official_text, curY, textGray);
-    curY = renderBlock("Dak Guru Explanation", guru_explanation, curY + 12, primaryBlue);
-
-    if (practical_example) curY = renderBlock("Practical Example", practical_example, curY + 12, [180, 83, 9]);
-    if (exam_insight) curY = renderBlock("LDCE Exam Insight", exam_insight, curY + 12, [194, 65, 12]);
-
-    doc.save(`DakSutra_${title.replace(/[^a-z0-9]/gi, '_')}.pdf`);
+    const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const win = window.open(url, "_blank");
+    if (win) {
+        win.addEventListener("afterprint", () => {
+            URL.revokeObjectURL(url);
+        });
+    }
 };

@@ -1319,7 +1319,7 @@ export default function NotesPage() {
                                                 <span>Coming Soon</span>
                                             </div>
                                             <p className="text-xs text-amber-800 dark:text-amber-200 font-medium">
-                                                Materials will be uploaded on {getReleaseDate(file.title)}
+                                                Materials will be uploaded shortly
                                             </p>
                                         </div>
                                         )

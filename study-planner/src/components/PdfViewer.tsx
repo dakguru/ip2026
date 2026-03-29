@@ -5,7 +5,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import {
     ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Loader2, Download, AlertCircle, RefreshCw,
     BookOpen, FileText, Maximize2, Minimize2, Columns, ArrowDown, Sun, Moon, Coffee,
-    ChevronUp, ChevronDown, Keyboard, LayoutGrid, ArrowUp
+    ChevronUp, ChevronDown, Keyboard, LayoutGrid, ArrowUp, Search, X
 } from 'lucide-react';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -56,6 +56,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     const [scale, setScale] = useState(1.0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<Error | null>(null);
+    const [fallbackToImage, setFallbackToImage] = useState(false);
     const [loadProgress, setLoadProgress] = useState(0);
     const [containerWidth, setContainerWidth] = useState<number>(0);
     const [containerHeight, setContainerHeight] = useState<number>(0);
@@ -70,6 +71,16 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     const [showShortcuts, setShowShortcuts] = useState(false);
     const [showThumbnails, setShowThumbnails] = useState(false);
     const [showScrollTop, setShowScrollTop] = useState(false);
+
+    // Search Features
+    const [pdfDoc, setPdfDoc] = useState<any>(null);
+    const [showSearch, setShowSearch] = useState(false);
+    const [searchText, setSearchText] = useState('');
+    const [searchInput, setSearchInput] = useState('');
+    const [searchResults, setSearchResults] = useState<{page: number}[]>([]);
+    const [currentSearchIndex, setCurrentSearchIndex] = useState(0);
+    const [isSearching, setIsSearching] = useState(false);
+    const searchInputRef = useRef<HTMLInputElement>(null);
 
     // Liquid Mode State (Android only)
     const [isLiquidMode, setIsLiquidMode] = useState(false);
@@ -141,15 +152,20 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         localStorage.setItem('liquidModePref', String(newMode));
     };
 
-    function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
-        setNumPages(numPages);
+    function onDocumentLoadSuccess(pdf: any) {
+        setNumPages(pdf.numPages);
+        setPdfDoc(pdf);
         setLoading(false);
         setError(null);
     }
 
     function onDocumentLoadError(err: Error) {
         console.error("PDF Load Error:", err);
-        setError(err);
+        if (err.message && (err.message.includes('Invalid PDF structure') || err.message.includes('Unexpected server response'))) {
+            setFallbackToImage(true);
+        } else {
+            setError(err);
+        }
         setLoading(false);
     }
 
@@ -317,6 +333,90 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
             }
         }
     };
+
+    // Advanced Text Search Logic
+    const executeSearch = async (e?: React.FormEvent) => {
+        if (e) e.preventDefault();
+        if (!pdfDoc) return;
+        
+        const text = searchInput.trim();
+        if (!text) {
+            setSearchText('');
+            setSearchResults([]);
+            setCurrentSearchIndex(0);
+            return;
+        }
+
+        setSearchText(text);
+        setIsSearching(true);
+        const results: {page: number}[] = [];
+        const searchPattern = text.toLowerCase();
+
+        try {
+            // Scan all pages for the text
+            for (let i = 1; i <= pdfDoc.numPages; i++) {
+                const page = await pdfDoc.getPage(i);
+                const textContent = await page.getTextContent();
+                const pageTextParts = textContent.items.map((item: any) => item.str);
+                const pageText = pageTextParts.join(' ').toLowerCase();
+                const pageTextNoSpace = pageTextParts.join('').toLowerCase();
+                
+                if (pageText.includes(searchPattern) || pageTextNoSpace.includes(searchPattern.replace(/\s+/g, ''))) {
+                    results.push({ page: i }); 
+                }
+            }
+            
+            setSearchResults(results);
+            if (results.length > 0) {
+                setCurrentSearchIndex(0);
+                setTimeout(() => jumpToSearchPage(results[0].page), 100);
+            }
+        } catch (error) {
+            console.error("Search failed:", error);
+        } finally {
+            setIsSearching(false);
+        }
+    };
+
+    const jumpToSearchPage = (pg: number) => {
+        setPageNumber(pg);
+        if (viewMode === 'continuous') {
+            const pageEl = scrollContainerRef.current?.querySelector(`[data-page-number="${pg}"]`);
+            if (pageEl) {
+                pageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    };
+
+    const nextSearchResult = () => {
+        if (searchResults.length === 0) return;
+        const nextIdx = (currentSearchIndex + 1) % searchResults.length;
+        setCurrentSearchIndex(nextIdx);
+        jumpToSearchPage(searchResults[nextIdx].page);
+    };
+
+    const prevSearchResult = () => {
+        if (searchResults.length === 0) return;
+        const prevIdx = currentSearchIndex === 0 ? searchResults.length - 1 : currentSearchIndex - 1;
+        setCurrentSearchIndex(prevIdx);
+        jumpToSearchPage(searchResults[prevIdx].page);
+    };
+
+    const customTextRenderer = useCallback(
+        ({ str }: { str: string }) => {
+            if (!searchText || !searchText.trim()) return str;
+            const escaped = searchText.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const splitText = str.split(new RegExp(`(${escaped})`, 'gi'));
+            
+            // Notice: using a span string rendering for highlight if react-pdf doesn't support ReactNode by default
+            return splitText.map((part, index) =>
+                new RegExp(`^${escaped}$`, 'i').test(part) ? (
+                    <mark key={index} style={{ backgroundColor: 'rgba(253, 224, 71, 0.4)', color: 'transparent', borderRadius: '2px' }}>{part}</mark>
+                ) : part
+            );
+        },
+        [searchText]
+    );
 
     // Scroll to top
     const scrollToTop = () => {
@@ -877,6 +977,21 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                                     <Download className="w-4 h-4" />
                                 </button>
 
+                                {/* Divider */}
+                                <div className={`w-px h-4 mx-0.5 ${colorMode === 'dark' ? 'bg-zinc-700' : colorMode === 'sepia' ? 'bg-amber-300' : 'bg-slate-300'}`} />
+
+                                {/* Search Toggle */}
+                                <button
+                                    onClick={() => {
+                                        setShowSearch(!showSearch);
+                                        if (!showSearch) setTimeout(() => searchInputRef.current?.focus(), 100);
+                                    }}
+                                    className={`p-1.5 rounded-lg transition-colors ${showSearch ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-600' : colorMode === 'dark' ? 'hover:bg-zinc-800 text-zinc-400' : colorMode === 'sepia' ? 'hover:bg-amber-200 text-amber-700' : 'hover:bg-slate-100 text-slate-500'}`}
+                                    title="Search Document"
+                                >
+                                    <Search className="w-4 h-4" />
+                                </button>
+
                                 {/* Thumbnails Toggle - Desktop only */}
                                 {isBrowser && (
                                     <button
@@ -916,6 +1031,51 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                         )}
                     </div>
                 </div>
+                
+                {/* Search Bar Overlay */}
+                {showSearch && (
+                    <div className={`shrink-0 border-t flex items-center gap-2 px-3 py-2 text-sm transition-colors ${colorMode === 'dark' ? 'bg-zinc-900/90 border-zinc-800 text-zinc-200' : colorMode === 'sepia' ? 'bg-amber-100/90 border-amber-200 text-amber-900' : 'bg-slate-50/90 border-slate-200 text-slate-800'} backdrop-blur-md`}>
+                        <form onSubmit={executeSearch} className="flex flex-1 items-center relative">
+                            <Search className={`w-4 h-4 absolute left-2.5 ${colorMode === 'dark' ? 'text-zinc-500' : 'text-slate-400'}`} />
+                            <input
+                                ref={searchInputRef}
+                                type="text"
+                                placeholder="Find in document..."
+                                value={searchInput}
+                                onChange={(e) => setSearchInput(e.target.value)}
+                                className={`w-full pl-8 pr-3 py-1.5 rounded-md border outline-none font-medium text-xs focus:ring-2 focus:ring-purple-500/50 transition-all ${colorMode === 'dark' ? 'bg-zinc-950 border-zinc-700 text-white placeholder:text-zinc-600' : colorMode === 'sepia' ? 'bg-amber-50 border-amber-300 text-amber-900 placeholder:text-amber-600/60' : 'bg-white border-slate-300 text-slate-900 placeholder:text-slate-400'}`}
+                            />
+                        </form>
+                        
+                        {isSearching ? (
+                            <div className="flex items-center gap-2 text-xs font-semibold px-2 animate-pulse text-purple-500">
+                                <Loader2 className="w-3.5 h-3.5 animate-spin" /> Searching...
+                            </div>
+                        ) : searchResults.length > 0 ? (
+                            <div className="flex items-center gap-2 shrink-0">
+                                <span className={`text-xs font-bold whitespace-nowrap px-1 ${colorMode === 'dark' ? 'text-zinc-400' : 'text-slate-500'}`}>
+                                    {currentSearchIndex + 1} / {searchResults.length}
+                                </span>
+                                <div className="flex border rounded-md overflow-hidden shadow-sm dark:border-zinc-700">
+                                    <button onClick={prevSearchResult} className={`x-2 py-1.5 px-2 transition-colors ${colorMode === 'dark' ? 'bg-zinc-800 hover:bg-zinc-700 text-zinc-300' : 'bg-white hover:bg-slate-100 text-slate-600'}`} title="Previous match">
+                                        <ChevronUp className="w-4 h-4" />
+                                    </button>
+                                    <div className="w-px bg-slate-200 dark:bg-zinc-700" />
+                                    <button onClick={nextSearchResult} className={`x-2 py-1.5 px-2 transition-colors ${colorMode === 'dark' ? 'bg-zinc-800 hover:bg-zinc-700 text-zinc-300' : 'bg-white hover:bg-slate-100 text-slate-600'}`} title="Next match">
+                                        <ChevronDown className="w-4 h-4" />
+                                    </button>
+                                </div>
+                            </div>
+                        ) : searchText && searchResults.length === 0 ? (
+                            <span className="text-xs font-semibold text-red-500 whitespace-nowrap px-2">No matches</span>
+                        ) : null}
+                        
+                        <div className={`w-px h-5 mx-1 ${colorMode === 'dark' ? 'bg-zinc-700' : colorMode === 'sepia' ? 'bg-amber-300' : 'bg-slate-300'}`} />
+                        <button onClick={() => { setShowSearch(false); setSearchText(''); setSearchResults([]); setSearchInput(''); }} className={`p-1.5 rounded-lg transition-colors shrink-0 ${colorMode === 'dark' ? 'hover:bg-zinc-800 text-zinc-400' : 'hover:bg-slate-200 text-slate-500'}`} title="Close search">
+                            <X className="w-4 h-4" />
+                        </button>
+                    </div>
+                )}
             </div>
 
             {/* ===== DOCUMENT AREA ===== */}
@@ -976,8 +1136,18 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                             <LiquidReader url={url} onFallbackToPdf={() => { setIsLiquidMode(false); localStorage.setItem('liquidModePref', 'false'); }} />
                         </div>
                     ) : (
-                        <div className={`p-4 ${viewMode === 'continuous' ? 'w-full flex flex-col items-center gap-4' : ''}`}>
-                            {error ? (
+                        <div className={`p-4 w-full h-full flex justify-center ${viewMode === 'continuous' ? 'flex-col items-center gap-4' : ''}`}>
+                            {fallbackToImage ? (
+                                <div className="flex-1 w-full flex items-center justify-center p-4">
+                                    <img 
+                                        src={url} 
+                                        alt="Document View" 
+                                        className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-xl" 
+                                        style={{ transform: `scale(${effectiveScale})`, transformOrigin: 'center', transition: 'transform 0.2s ease-out' }}
+                                        onError={() => setError(new Error("Unable to load document."))}
+                                    />
+                                </div>
+                            ) : error ? (
                                 <ErrorUI />
                             ) : (
                                 <Document
@@ -996,6 +1166,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                                                 pageNumber={pageNumber}
                                                 scale={effectiveScale}
                                                 width={effectiveWidth}
+                                                customTextRenderer={customTextRenderer}
                                                 renderTextLayer={true}
                                                 renderAnnotationLayer={false}
                                                 className="bg-white"
@@ -1018,6 +1189,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                                                     pageNumber={pg}
                                                     scale={effectiveScale}
                                                     width={effectiveWidth}
+                                                    customTextRenderer={customTextRenderer}
                                                     renderTextLayer={true}
                                                     renderAnnotationLayer={false}
                                                     className="bg-white"
