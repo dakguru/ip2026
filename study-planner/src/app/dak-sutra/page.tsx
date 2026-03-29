@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import { format } from "date-fns";
 import AppScreenWrapper from "@/components/AppScreenWrapper";
+import { useIsMobileApp } from "@/hooks/use-mobile-app";
 
 interface DakSutraEntry {
     _id: string;
@@ -27,46 +28,52 @@ const CATEGORY_CONFIG: Record<string, {
     badgeText: string;
     icon: React.ReactNode;
     glow: string;
+    stripe: string;
 }> = {
     Rule: {
         gradient: "from-blue-600/10 via-blue-500/5 to-transparent",
         border: "border-blue-200 dark:border-blue-500/20",
         badge: "bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400",
         badgeText: "text-blue-600 dark:text-blue-400",
-        icon: <Gavel className="w-4 h-4" />,
+        icon: <Gavel className="w-3.5 h-3.5" />,
         glow: "shadow-blue-500/10",
+        stripe: "from-blue-500 to-blue-400",
     },
     Section: {
         gradient: "from-violet-600/10 via-violet-500/5 to-transparent",
         border: "border-violet-200 dark:border-violet-500/20",
         badge: "bg-violet-50 dark:bg-violet-500/10 text-violet-700 dark:text-violet-400",
         badgeText: "text-violet-600 dark:text-violet-400",
-        icon: <BookOpen className="w-4 h-4" />,
+        icon: <BookOpen className="w-3.5 h-3.5" />,
         glow: "shadow-violet-500/10",
+        stripe: "from-violet-500 to-violet-400",
     },
     Regulation: {
         gradient: "from-emerald-600/10 via-emerald-500/5 to-transparent",
         border: "border-emerald-200 dark:border-emerald-500/20",
         badge: "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400",
         badgeText: "text-emerald-600 dark:text-emerald-400",
-        icon: <Scale className="w-4 h-4" />,
+        icon: <Scale className="w-3.5 h-3.5" />,
         glow: "shadow-emerald-500/10",
+        stripe: "from-emerald-500 to-emerald-400",
     },
     Circular: {
         gradient: "from-amber-600/10 via-amber-500/5 to-transparent",
         border: "border-amber-200 dark:border-amber-500/20",
         badge: "bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400",
         badgeText: "text-amber-600 dark:text-amber-400",
-        icon: <Mail className="w-4 h-4" />,
+        icon: <Mail className="w-3.5 h-3.5" />,
         glow: "shadow-amber-500/10",
+        stripe: "from-amber-500 to-amber-400",
     },
     Explanation: {
         gradient: "from-indigo-600/10 via-indigo-500/5 to-transparent",
         border: "border-indigo-200 dark:border-indigo-500/20",
         badge: "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400",
         badgeText: "text-indigo-600 dark:text-indigo-400",
-        icon: <Lightbulb className="w-4 h-4" />,
+        icon: <Lightbulb className="w-3.5 h-3.5" />,
         glow: "shadow-indigo-500/10",
+        stripe: "from-indigo-500 to-indigo-400",
     },
 };
 
@@ -79,6 +86,7 @@ const TAG_COLORS: Record<string, string> = {
 };
 
 export default function DakSutraPublicListPage() {
+    const isMobileApp = useIsMobileApp();
     const [entries, setEntries] = useState<DakSutraEntry[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [search, setSearch] = useState("");
@@ -123,21 +131,21 @@ export default function DakSutraPublicListPage() {
     return (
         <AppScreenWrapper
             header={
-                <div className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800">
-                    <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-                        <Link href="/" className="flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+                <div className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800">
+                    <div className="max-w-7xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
+                        <Link href="/" className="flex items-center gap-1.5 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
                             <ArrowLeft className="w-4 h-4" />
                             <span className="font-semibold text-sm">Home</span>
                         </Link>
                         <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center">
-                                <BookOpen className="w-3.5 h-3.5 text-white" />
+                            <div className="w-6 h-6 md:w-7 md:h-7 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center">
+                                <BookOpen className="w-3 h-3 md:w-3.5 md:h-3.5 text-white" />
                             </div>
-                            <h1 className="text-base font-black tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent uppercase">
+                            <h1 className="text-sm md:text-base font-black tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent uppercase">
                                 Dak Sutra
                             </h1>
                         </div>
-                        <div className="w-16" />
+                        <div className="w-14 md:w-16" />
                     </div>
                 </div>
             }
@@ -145,55 +153,61 @@ export default function DakSutraPublicListPage() {
             {/* Hero */}
             <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl" />
-                <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-14 md:py-20">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 border border-white/20 rounded-full text-xs font-bold uppercase tracking-widest text-blue-200 mb-6 backdrop-blur-sm">
-                        <Sparkles className="w-3 h-3" />
+                <div className="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-blue-500/20 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-violet-500/20 rounded-full blur-3xl" />
+
+                <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-200 mb-4 md:mb-6 backdrop-blur-sm">
+                        <Sparkles className="w-2.5 h-2.5 md:w-3 md:h-3" />
                         Postal Laws Decoded for LDCE &amp; PS Group B
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-black leading-tight mb-4">
+
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-black leading-tight mb-3 md:mb-4">
                         Postal Rules,{" "}
                         <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                             Simplified.
                         </span>
                     </h2>
-                    <p className="text-blue-200/80 max-w-xl text-base md:text-lg leading-relaxed mb-8">
-                        Official provisions broken down with plain-language explanations, real-life examples, and exam-focused insights — everything you need, nothing you don't.
+
+                    <p className="text-blue-200/80 max-w-xl text-sm md:text-base leading-relaxed mb-5 md:mb-8">
+                        Official provisions broken down with plain-language explanations, real-life examples, and exam-focused insights.
                     </p>
-                    <div className="flex flex-wrap gap-4">
-                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-2.5">
-                            <GraduationCap className="w-4 h-4 text-blue-300" />
-                            <span className="text-sm font-bold text-white">{entries.length}+ Rules</span>
+
+                    <div className="flex flex-wrap gap-2 md:gap-4">
+                        <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-2 md:px-4 md:py-2.5">
+                            <GraduationCap className="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-300" />
+                            <span className="text-xs md:text-sm font-bold text-white">{entries.length}+ Rules</span>
                         </div>
-                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-2.5">
-                            <TrendingUp className="w-4 h-4 text-violet-300" />
-                            <span className="text-sm font-bold text-white">Exam-Focused</span>
+                        <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-2 md:px-4 md:py-2.5">
+                            <TrendingUp className="w-3.5 h-3.5 md:w-4 md:h-4 text-violet-300" />
+                            <span className="text-xs md:text-sm font-bold text-white">Exam-Focused</span>
                         </div>
-                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-2.5">
-                            <Sparkles className="w-4 h-4 text-amber-300" />
-                            <span className="text-sm font-bold text-white">Dak Guru Explained</span>
+                        <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-2 md:px-4 md:py-2.5">
+                            <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-300" />
+                            <span className="text-xs md:text-sm font-bold text-white">Dak Guru Explained</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 md:px-6 py-10">
-                {/* Search + Filter */}
-                <div className="mb-8 flex flex-col gap-4">
-                    <div className="relative">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-400" />
-                        <input
-                            type="text"
-                            placeholder="Search rules, sections, acts..."
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                            className="w-full pl-12 pr-5 py-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 dark:focus:border-blue-500 transition-all font-medium shadow-sm"
-                        />
-                    </div>
+            {/* Search + Filter + Cards */}
+            <div className="max-w-7xl mx-auto px-4 md:px-6 py-5 md:py-10 pb-8">
 
-                    {/* Category Filter Pills */}
-                    <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+                {/* Search */}
+                <div className="mb-4 relative">
+                    <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-zinc-400" />
+                    <input
+                        type="text"
+                        placeholder="Search rules, sections, acts..."
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl md:rounded-2xl text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 dark:focus:border-blue-500 transition-all font-medium shadow-sm"
+                    />
+                </div>
+
+                {/* Category Filter Pills — full-bleed scroll on mobile */}
+                <div className="-mx-4 px-4 md:mx-0 md:px-0 mb-5 md:mb-8">
+                    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
                         {categories.map((cat) => {
                             const cfg = cat === "all" ? null : CATEGORY_CONFIG[cat];
                             const isActive = categoryFilter === cat;
@@ -201,7 +215,7 @@ export default function DakSutraPublicListPage() {
                                 <button
                                     key={cat}
                                     onClick={() => setCategoryFilter(cat)}
-                                    className={`flex items-center gap-1.5 whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold border transition-all shrink-0 ${
+                                    className={`flex items-center gap-1.5 whitespace-nowrap px-3 py-2 md:px-4 rounded-xl text-xs font-bold border transition-all shrink-0 snap-start touch-manipulation ${
                                         isActive
                                             ? cat === "all"
                                                 ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 border-transparent shadow-lg"
@@ -210,10 +224,10 @@ export default function DakSutraPublicListPage() {
                                     }`}
                                 >
                                     {cfg?.icon}
-                                    {cat === "all" ? "All Types" : cat + "s"}
-                                    {cat !== "all" && categoryCounts[cat] && (
-                                        <span className={`ml-1 text-[10px] opacity-70`}>{categoryCounts[cat]}</span>
-                                    )}
+                                    {cat === "all" ? "All" : cat + "s"}
+                                    {cat !== "all" && categoryCounts[cat] ? (
+                                        <span className="ml-0.5 text-[10px] opacity-70">{categoryCounts[cat]}</span>
+                                    ) : null}
                                 </button>
                             );
                         })}
@@ -222,16 +236,17 @@ export default function DakSutraPublicListPage() {
 
                 {/* Results count */}
                 {!isLoading && (
-                    <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-6">
+                    <p className="text-[11px] font-bold text-zinc-400 uppercase tracking-widest mb-4 md:mb-6">
                         {entries.length} {entries.length === 1 ? "entry" : "entries"} found
                     </p>
                 )}
 
+                {/* Content */}
                 {isLoading ? (
-                    <div className="flex flex-col items-center justify-center py-32">
+                    <div className="flex flex-col items-center justify-center py-20 md:py-32">
                         <div className="relative">
-                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center mb-4 shadow-xl shadow-blue-500/30">
-                                <BookOpen className="w-8 h-8 text-white" />
+                            <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center mb-4 shadow-xl shadow-blue-500/30">
+                                <BookOpen className="w-7 h-7 md:w-8 md:h-8 text-white" />
                             </div>
                             <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full border-2 border-white dark:border-zinc-900">
                                 <Loader2 className="w-full h-full animate-spin text-blue-600" />
@@ -240,28 +255,22 @@ export default function DakSutraPublicListPage() {
                         <p className="text-zinc-500 font-bold uppercase text-xs tracking-widest mt-3">Loading Dak Sutra...</p>
                     </div>
                 ) : entries.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5">
                         {entries.map((entry) => {
                             const cfg = CATEGORY_CONFIG[entry.category] || DEFAULT_CONFIG;
                             return (
                                 <Link
                                     key={entry._id}
                                     href={`/dak-sutra/${entry._id}`}
-                                    className={`group relative bg-white dark:bg-zinc-900 border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${cfg.border} ${cfg.glow}`}
+                                    className={`group relative bg-white dark:bg-zinc-900 border rounded-2xl overflow-hidden transition-all duration-200 active:scale-[0.98] hover:-translate-y-0.5 hover:shadow-xl touch-manipulation ${cfg.border} ${cfg.glow}`}
                                 >
-                                    {/* Top gradient stripe */}
-                                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${
-                                        entry.category === "Rule" ? "from-blue-500 to-blue-400" :
-                                        entry.category === "Section" ? "from-violet-500 to-violet-400" :
-                                        entry.category === "Regulation" ? "from-emerald-500 to-emerald-400" :
-                                        entry.category === "Circular" ? "from-amber-500 to-amber-400" :
-                                        "from-indigo-500 to-indigo-400"
-                                    }`} />
+                                    {/* Top stripe */}
+                                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cfg.stripe}`} />
 
-                                    <div className="p-5 pt-6">
+                                    <div className="p-4 pt-5 md:p-5 md:pt-6">
                                         {/* Header row */}
-                                        <div className="flex items-start justify-between mb-3">
-                                            <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider ${cfg.badge}`}>
+                                        <div className="flex items-start justify-between mb-2.5">
+                                            <div className={`flex items-center gap-1.5 px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-wide ${cfg.badge}`}>
                                                 {cfg.icon}
                                                 {entry.category}
                                             </div>
@@ -280,12 +289,12 @@ export default function DakSutraPublicListPage() {
                                         </div>
 
                                         {/* Title */}
-                                        <h3 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                                        <h3 className="text-sm md:text-base font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
                                             {entry.title}
                                         </h3>
 
                                         {/* Tags */}
-                                        <div className="flex flex-wrap gap-1.5 mb-4">
+                                        <div className="flex flex-wrap gap-1.5 mb-3">
                                             {entry.exam_tags?.map(tag => (
                                                 <span
                                                     key={tag}
@@ -297,12 +306,12 @@ export default function DakSutraPublicListPage() {
                                         </div>
 
                                         {/* Footer */}
-                                        <div className="flex items-center justify-between pt-3 border-t border-zinc-100 dark:border-zinc-800">
+                                        <div className="flex items-center justify-between pt-2.5 border-t border-zinc-100 dark:border-zinc-800">
                                             <span className={`text-xs font-bold ${cfg.badgeText} opacity-0 group-hover:opacity-100 transition-opacity`}>
                                                 Read more →
                                             </span>
-                                            <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${cfg.badge} group-hover:scale-110`}>
-                                                <ChevronRight className="w-4 h-4" />
+                                            <div className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${cfg.badge} group-hover:scale-110 ml-auto`}>
+                                                <ChevronRight className="w-3.5 h-3.5" />
                                             </div>
                                         </div>
                                     </div>
@@ -311,11 +320,11 @@ export default function DakSutraPublicListPage() {
                         })}
                     </div>
                 ) : (
-                    <div className="text-center py-24 rounded-3xl border-2 border-dashed border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
-                        <div className="w-16 h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mx-auto mb-4">
-                            <Search className="w-8 h-8 text-zinc-300 dark:text-zinc-600" />
+                    <div className="text-center py-16 md:py-24 rounded-3xl border-2 border-dashed border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+                        <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mx-auto mb-4">
+                            <Search className="w-7 h-7 md:w-8 md:h-8 text-zinc-300 dark:text-zinc-600" />
                         </div>
-                        <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-1">No matches found</h3>
+                        <h3 className="text-base md:text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-1">No matches found</h3>
                         <p className="text-zinc-500 text-sm">Try adjusting your filters or search terms.</p>
                     </div>
                 )}
