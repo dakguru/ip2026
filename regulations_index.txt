@@ -1,0 +1,436 @@
+1|Short title and commencement.
+2|Definitions.
+3|Business hours.
+4|(1) The Circle Head, Regional Head and Divisional Head are empowered to specify the period
+5|Payment of postage and other sums chargeable on items.
+6|Postage on unaccountable items and unpaid items.
+7|Postage and chargeable sums not deemed to be prepaid.
+8|Supply of postage stamps.
+9|Fraudulent usage of stamp.
+10|Illegal manufacture or usage of postage stamps.
+11|Philately.
+12|Philatelic materials.
+13|Issuance of postage stamps.
+14|(1) Issuance of Commemorative Postage Stamp. Any citizen of India may tender a proposal
+15|Philatelic Advisory Committee.
+16|Manner of affixing postage stamps.
+17|Price of postage stamps and stationery.
+18|Standards for addressing on domestic items.
+19|Mails for defence services personnel.
+20|Exemption in method of addressing of an item in certain cases.
+21|Standards for addressing on international items.
+22|Posting of items.
+23|Receipt for transmission by post.
+24|Ownership of items.
+25|Prohibition of domestic items.
+26|Prohibition of international items.
+27|Application of regulation 25 on international items.
+28|Transmission of precious metals and precious stones.
+29|Items for blind prohibited in certain cases.
+30|Items transmitted in contravention of regulation 27.
+31|Customs Control.
+32|Post Office authorised to collect customs duty, etc.
+33|Items sent in contravention of any law.
+34|Disposal of intercepted items.
+35|Items suspected to contain dangerous substances.
+36|Restriction on disclosure.
+37|Disposal of items opened.
+38|Notice of opening of an item.
+39|No relief from liability.
+40|No right to compensation.
+41|Accountable items.
+42|Accountable items to be issued for delivery.
+43|Addressee to sign in receipt.
+44|Letter delivery box of items other than accountable items.
+45|Window delivery.
+46|Post box.
+47|Post bags.
+48|Smart delivery box.
+49|Delivery to public officers.
+50|Special procedure for delivering items to firms, etc.
+51|Items addressed to deceased persons.
+52|Delivery of damaged item.
+53|Intimation to addressee.
+54|Seeking identification of addressee, if needed.
+55|Redirection of items.
+56|Request to avail certain facilities.
+57|Manner of making request.
+58|Post Office not liable for non-fulfilment of request.
+59|Postage payable on delivery.
+60|Postage-due stamp.
+61|Delivery of items on which customs duty is due.
+62|Refusal of items.
+63|Obligation to pay sum charged.
+64|Detention and disposal of undelivered items at post office of addressee.
+65|Undelivered items to be returned in certain cases.
+66|Standard remarks on undelivered items.
+67|Detention and disposal of undelivered items at Returned Letter Office (RLO).
+68|Procedure in case of dealing undelivered items.
+69|Period for which intimation regarding change in address remain valid.
+70|Officers or officials authorised to make an official mark.
+71|Recovery of dues in respect of unpaid and insufficiently paid domestic items.
+72|Recovery of dues in respect of unpaid and insufficiently paid international items.
+73|Compensation for loss, damage etc. of items.
+74|Compensation for registered item.
+75|Compensation for speed post item.
+76|Compensation for insured item.
+77|Compensation for India Post Parcel.
+78|Compensation for International Air Parcel.
+79|Compensation for International Tracked Packet.
+80|Compensation for money remittance services.
+81|Value Payable Post (VPP) / Cash on Delivery (COD).
+82|Conditions for payment of compensation.
+83|Time limit for claiming compensation.
+84|Procedure for claiming compensation.
+85|Liability of the Post Office.
+86|Ex gratia payment.
+87|Letters.
+88|Letters in other than roll form.
+89|Letter cards.
+90|Conditions where infringed.
+91|Postcards.
+92|Book post.
+93|Literature for blind.
+94|Periodical Post.
+95|Registered newspapers.
+96|India post parcel.
+97|Logistic post.
+99|Speed Post Document :
+100|Speed post parcel.
+101|Direct post.
+102|Media post.
+103|e-Post.
+104|e-Payment.
+105|Retail post.
+106|Magazine post.
+107|International post.
+108|Letters (International).
+109|Aerogramme.
+110|Post card (International).
+111|Airmail Postcard.
+112|Small packet.
+113|Printed papers.
+114|M-Bag (Bulk bag).
+115|Literature for blind (International).
+116|International tracked packet service (ITPS).
+117|International air parcel.
+118|International speed post.
+119|Booking.
+120|Electronic advance data (EAD).
+121|Packaging.
+122|Delivery in country or territory of destination.
+123|Other features.
+124|Track and trace service.
+125|Inward international mails.
+126|Failure to take delivery.
+127|Failure to take delivery of Post Restante parcel.
+128|Mail services under Universal Postal Service.
+129|On postal service.
+130|(1) The following items may be insured "On Postal Service", namely: -
+131|Postal ballot or election material.
+132|Registration of domestic items. (Omitted)
+133|Insurance of domestic items.
+134|Airmail service.
+135|Cash on delivery (COD) items.
+136|Proof of delivery.
+137|Services relating to pre-mailing activities.
+138|Registration of international items.
+139|Insurance of International items.
+140|International items with precious metals.
+141|Redirected or returned international item.
+142|Compensation payable.
+143|Surface airlift and air surcharge.
+144|Advice of delivery.
+145|Domestic money order.
+146|Period of currency of money order.
+147|Categories of money order.
+148|Booking of money order.
+149|The remitter of a money order shall be entitled to obtain, free of charge,-
+150|Payment of money order.
+151|Redirection of money order.
+152|Exemption from liability of Post Office in respect of money order.
+153|Undelivered Money Order.
+154|Void money order.
+155|Forfeiture of money order amount.
+156|Suspension of service.
+157|Postal order.
+158|Currency period.
+159|Forfeiture.
+160|Repayment of postal order.
+161|Payee's name essential.
+162|Payment through bank.
+163|Payment of crossed postal order.
+164|Mutilated postal orders.
+165|Electronic postal order.
+166|Foreign money orders.
+167|Advice to remitter of foreign money order.
+168|Remitter to change name or address for payment.
+169|Inward foreign money orders.
+170|Book now pay later facility.
+171|Authority authorised to approve.
+172|National account facility.
+173|Advance payment facility.
+174|Post Office network for citizen centric services.
+175|Postal Index Number.
+176|Franking machines.
+177|Issuance of updated version of regulations annually.
+178|Postal operations order.
+179|Regulation 179: Insurance Services
+1|Product Overview & Scope
+2|Tariff Structure (Exclusive of GST)
+3|Operational Procedures (SOP Highlights)
+4|Compensation Policy (Money Back Guarantee)
+1|Delay: Full refund of Speed Post charges.
+2|Loss/Damage/Pilferage: Double the Speed Post charges OR ₹1000 (whichever is
+5|Staff Incentives (Exam Important)
+6|Key Differences for "Match the Following" Questions
+1|The control and administration of the Department of Posts is vested in the:
+2|Post Offices in India are divided into how many classes for the purpose of admin-
+3|Which authority is competent to extend the working hours of a Night Post Office
+4|Night Post Offices generally remain closed on:
+5|Mobile Post Offices are intended to provide which of the following facilities?
+6|Mobile Post Offices remain closed on:
+7|According to Clause 5, the business hours for the issue of Money Orders and sale
+8|Booking of Registered and Insured articles stops generally at what time on week-
+9|Which of the following is NOT a Postal Holiday?
+10|Revenue stamps can be used for payment of postage:
+11|A license for the use of a Franking Machine is issued by:
+12|Under the Remotely Managed Franking System (RMFS), the impression should be
+13|The commission (rebate) allowed on the usage of Franking Machines for a booking
+14|A Franking Machine licensee must reset the machine when the credit falls below:
+15|Postage stamps should be affixed on which side of the address side of the article?
+16|The  use  of  fictitious  stamps  is  an  offence  punishable  under  which  section  of  the
+17|Articles posted with ’Fictitious Stamps’ generally be:
+18|Every letter, packet, or parcel must have the date-stamp of at least how many Post
+19|When using wax cloth for packing, which of the following is mandatory?
+20|Sealing of an uninsured registered letter is:
+21|Coins, bullion, precious stones, and jewellery must be sent by:
+22|What is the minimum size of a postal article (roll form)?
+23|Articles found in letterboxes with ”To Pay” stamps or denoted as ”Registered” but
+24|Late fee letters are accepted:
+25|The ”Certificate of Posting” service was:
+26|A sender can recall an article posted by him/her under which condition?
+27|The fee for the recall of a domestic postal article is:
+28|An article addressed to a deceased person can be delivered to:
+29|Registered articles addressed to a minor (not having a guardian) can be delivered
+30|Delivery of a registered article to a Pardanashin woman requires:
+31|If  an  addressee  refuses  to  sign  the  acknowledgement  of  a  Registered  Article  but
+32|A damaged Registered article must be delivered:
+33|”Poste Restante” articles are kept in the Post Office for a period of:
+34|An instruction for a change of address is valid for:
+35|Which of the following is strictly prohibited for transmission by post?
+36|Turpentine and varnish can be transmitted by post if:
+37|The weight limit for an Unregistered Parcel is:
+38|What is the fee for redirection of a parcel within India?
+39|Who is considered the ”Payee” of a Money Order?
+40|Identity Cards are issued by the Post Office to:
+41|The validity of an Identity Card issued by the Post Office is:
+42|”Window Delivery” is made for:
+43|Post Boxes are rented out for a period of:
+44|If a renter of a Post Box does not clear it for a week, what action is taken?
+45|The official postal article must bear the superscription:
+46|Camp Bags are used for:
+47|Which clause deals with the treatment of articles wrongly addressed to another post
+48|Stamps should be obliterated with:
+49|A ”Blind Literature” packet is exempt from:
+50|The rent for a Post Box and Post Bag combined for one financial year is currently:
+51|Which of the following articles can be sent as Value Payable (VP) articles?
+52|The amount to be recovered from the addressee on a Value Payable article should
+53|The sender of a Value Payable article must sign a declaration stating that:
+54|If the addressee of a Value Payable article is not found, the article is retained in
+55|Insurance is mandatory for which of the following?
+56|The maximum limit for insurance of a postal article at a Branch Post Office (BO)
+57|Articles on which customs duty is payable are generally delivered:
+58|When  taking  delivery  of  an  insured  article,  if  the  addressee  is  not  known  to  the
+59|Who can rent a Post Box?
+60|If a Post Box renter loses the key, they must:
+61|The system of Post Bags is available at:
+62|For a Post Bag, the lock and key must be supplied by:
+63|A ”Delivery Ticket” is necessary for taking delivery of:
+64|Articles superscribed ”To be kept till called for” are treated as:
+65|The fee for issuing a Postal Identity Card is:
+66|If a Postal Identity Card is lost, a duplicate card:
+67|Redirection of a postal article is free of charge if:
+68|Instructions regarding change of residence are registered at the Post Office:
+69|If an article is redirected by an agent of the addressee to a new address, it is treated
+70|An instruction given to the Post Office for the redirection of articles is valid for:
+71|Compensation for the loss of a Registered Article is currently:
+72|Currency notes can be sent by Insured Post up to a value of:
+73|The renter of a Post Bag can clear the bag:
+74|Registered articles are delivered to the addressee:
+75|Which clause deals with articles addressed to deceased persons?
+76|Is it possible to rent a Post Box and Post Bag together?
+77|Interception of postal articles can be ordered by:
+78|Once an article is posted, it becomes the property of:
+79|Complaints regarding Value Payable Articles must be made within:
+80|”Express Delivery” (special delivery) of unregistered letters/postcards is:
+81|According to Clause 73, instructions regarding a change of residence or redirection
+82|If a change of address instruction is not renewed after the prescribed period, the
+83|Ordinarily, an undelivered inland postal article (other than VP) is kept in the Post
+84|If an article is definitively refused by the addressee, it should be:
+85|While inland articles are detained for 7 days, the detention period for foreign articles
+86|What does the abbreviation ”RLO” stand for in the context of Clause 75?
+87|Articles sent to the Returned Letter Office are opened by:
+88|If the sender of an undelivered article cannot be found even after opening the article
+89|Who is primarily responsible for the payment of postage and other postal charges
+90|If the addressee refuses to pay the postal charges due on an article, the charges:
+91|Postal charges due from a person who refuses to pay can be recovered as if they
+92|Can the Post Office withhold other articles addressed to a person who refuses to
+93|The ”Exclusive Privilege” of the Post Office in conveying letters is defined under
+94|Which of the following is an EXCEPTION to the exclusive privilege of the Post
+95|Letters  solely  concerning  the  affairs  of  the  sender  or  receiver,  sent  by  a  special
+96|The  Government  or  the  Post  Office  is  generally  exempted  from  liability  for  loss,
+97|A postal officer can be held personally liable for the loss of an article ONLY if:
+98|Postal officials are prohibited from giving information regarding postal articles to:
+99|Licenses for the sale of postage stamps are issued by the:
+100|Licensed  Stamp  Vendors  are  allowed  a  commission  on  the  sale  of  stamps.   This
+101|A Licensed Stamp Vendor must sell stamps:
+102|Are ”Common Carriers” (like bus conductors or couriers) allowed to carry letters
+103|Which articles are NOT kept for the standard 7-day detention period but returned
+104|Breach of secrecy by a postal official is punishable under:
+105|Instructions for change of address must be given:
+106|If a sender refuses to pay the recovered charges for an article refused by the ad-
+107|Does the Post Office guarantee the time of delivery of an article?
+108|Can a Licensed Stamp Vendor exchange postage stamps for cash?
+109|Which clause of the PO Guide Part I deals with ”Legal Responsibility of the Post
+110|Which clause deals with the ”Period of detention of undeliverable articles”?
+111|According  to  Clause  87,  postage  stamps  should  be  affixed  to  which  part  of  the
+112|If  stamps  are  affixed  to  the  back  or  any  other  part  of  the  article  instead  of  the
+113|The public is advised to use the minimum number of stamps for the payment of
+114|Stamps perforated with initials can be used for postage provided:
+115|Can Government service stamps be perforated with initials?
+116|Precanceled stamps are generally valid for use:
+117|The address on a postal article should be written:
+118|A  margin  of  at  least  how  much  should  be  left  at  the  top  of  the  address  side  for
+119|In the address, the PIN Code should be written:
+120|Articles for high officers of Government (like the President or Prime Minister) while
+121|Articles for personnel of the Navy should be addressed to:
+122|The sender’s address should preferably be written:
+123|Articles addressed to ”The Christian community” or ”The Muslims” of a town are
+124|An article bearing an indefinite address (e.g., ”Mr.  Smith, India”) is generally:
+125|Sharp instruments can be transmitted by post only if:
+126|Transmission of any article having any indecent,  obscene,  seditious,  or scurrilous
+127|Which of the following is prohibited for transmission by post?
+128|Which of the following living creatures can be transmitted by post?
+129|Transmission of tickets, proposals, or advertisements relating to a lottery is:
+130|Turpentine, Varnish, and similar substances can be sent by post if:
+131|Soft solids like ointments, wax, or soap must be packed in:
+132|Coin, bullion, precious stones, jewellery, and articles of gold or silver must be sent
+133|If an article containing gold coin or bullion is found to be uninsured (when insurance
+134|What is the maximum value of gold coin or bullion that can be sent by Insured
+135|Can  a  Registered  Article  be  addressed  to  a  Post  Box  number  only  (without  the
+136|The name of the District is NOT required in the address if:
+137|Articles addressed ”Care of” (C/o) a person are delivered to:
+138|For articles addressed to foreign countries, the name of the country should be writ-
+139|Liquids having a flash point below 200 degrees Fahrenheit are:
+140|When sending liquids by post, the bottle must be surrounded by:
+141|According to Clause 107, which of the following is PROHIBITED to be enclosed in
+142|The maximum weight of a letter permitted for transmission by post is:
+143|The maximum dimensions of a letter in roll form are:
+144|An unpaid letter is charged on delivery with:
+145|An insufficiently paid letter is charged on delivery with:
+146|Postcards are primarily intended for:
+147|The standard dimensions of a Postcard are:
+148|Private postcards can be transmitted by post provided:
+149|Which of the following can be attached to a postcard?
+150|If a postcard does not comply with the conditions regarding size or thickness, it is:
+151|In a Reply Postcard, the ”Reply” portion is intended for:
+152|Can the sender write on the address side of the postcard?
+153|A postcard should not be folded, cut, or altered.  If it is folded, it will be treated
+154|Under the Business Reply Service, the postage is paid by:
+155|A permit for the Business Reply Service is issued by:
+156|The  annual  fee  for  a  Business  Reply  Service  permit  is  (based  on  standard  exam
+157|The handling charge per article for Business Reply Cards/Envelopes delivered to
+158|Which of the following CANNOT be sent as a Book Packet?
+159|A Book Packet must bear on the outside the endorsement:
+160|The dimensions of a Book Packet should not exceed:
+161|The maximum weight of a Book Packet is:
+162|A Book Packet containing periodicals must be registered with the Post Office to
+163|An unpaid Book Packet is charged on delivery with:
+164|Can a Book Packet contain a paper money or postage stamp?
+165|Pattern and Sample Packets are intended for:
+166|The maximum weight of a Pattern or Sample Packet is:
+167|The size limit for a Pattern and Sample Packet is the same as that for:
+168|Can a Pattern Packet contain goods for sale?
+169|”Competition Postcards” are distinct from ordinary postcards because:
+170|If a person uses the BRS format without a valid permit, the article is:
+171|A ”Blind Literature” packet may contain:
+172|Blind Literature Packets are exempt from which of the following charges?
+173|Are air mail charges also exempt for Blind Literature Packets?
+174|The maximum weight permitted for a Blind Literature Packet is:
+175|If a Blind Literature Packet contains any unauthorized enclosure (e.g., a letter), it
+176|For a publication to be registered as a ”Newspaper” for postal transmission, it must
+177|To qualify as a Registered Newspaper, the publication must contain:
+178|The registration number for a newspaper is allotted by:
+179|The registration of a newspaper for postal purposes remains valid for:
+180|An application for renewal of newspaper registration must be made:
+181|If the application for renewal of newspaper registration is made after the expiry of
+182|Registered Newspapers must be posted:
+183|When posting Registered Newspapers, they must be handed over in a packet con-
+184|A ”Packet of Registered Newspapers” can contain:
+185|The maximum weight of a packet of Registered Newspapers is:
+186|The weight of an Unregistered Parcel should not exceed:
+187|The maximum weight of a Registered Parcel posted at or addressed to a Head or
+188|The maximum weight of a Registered Parcel posted at or addressed to a Branch
+189|The length of a parcel should not exceed:
+190|The combined length and girth of a parcel must not exceed:
+191|A parcel weighing more than 4 kg must be:
+192|If a parcel required to be registered (e.g., above 4 kg) is found in a letterbox, it will
+193|The responsibility for ensuring that a parcel is packed securely lies with:
+194|Human ashes can be transmitted by post provided:
+195|Is the Blind Literature packet exempt from Fee for Attested Copy of Receipt?
+196|If a Registered Newspaper is published on a Sunday, can it be posted on Sunday?
+197|A supplement to a Registered Newspaper must:
+198|The minimum size of a parcel is:
+199|A parcel must bear the date stamp of:
+200|If a parcel contains liquids, the outer covering must be:
+201|According to Clause 145, the Postman is prohibited from delivering any article on
+202|Is a Postman bound to give change when receiving payment for a Value Payable
+203|A Registered Article is delivered to the addressee only after:
+204|If the addressee of a Registered Article is illiterate,  his thumb impression or seal
+205|When delivering a Registered Article to a Pardanashin woman, her signature must
+206|If a Registered Article meant for delivery is found to be damaged, the Postman:
+207|Generally, a Value Payable (VP) article exceeding what amount is NOT entrusted
+208|If  a  VP  article  is  delivered  at  the  Post  Office  window,  the  addressee  must  take
+209|An Insured article is NOT sent out for delivery by Postman if the value insured
+210|For an insured article exceeding the prescribed limit for home delivery, the addressee
+211|Parcels weighing above
+212|If a single addressee receives multiple parcels weighing more than
+213|Articles on which Customs Duty assessed exceeds
+214|A Money Order is paid to:
+215|The payee must sign the Money Order in:
+216|If the payee of a Money Order is illiterate, payment is made on his:
+217|Money Orders addressed to a minor are generally paid to:
+218|If a minor is of sufficient age and intelligence to understand the transaction,  can
+219|A  Money  Order  that  has  not  been  paid  to  the  payee  or  remitted  to  the  sender
+220|If the Postman does not know the payee of a Money Order, he should:
+221|A Village Postman is authorized to deliver:
+222|If an addressee refuses to accept a Registered Article, the Postman should:
+223|An addressee of a VP article delivered at the window can request detention of the
+224|If a VP article is detained at the request of the addressee beyond 7 days, what fee
+225|Is any fee charged for the window delivery of parcels exceeding 10 kg?
+226|Can a Money Order be paid to one of two joint payees?
+227|If the payee of a Money Order dies before payment, the amount is:
+228|A Money Order addressed to a lunatic is paid to:
+229|When delivering an Insured Article, the addressee must verify:
+230|If a payee refuses to take payment of a Money Order, the money is:
+231|If a person refuses to pay the postage due on an article delivered to him, the Post
+232|The document signed by the addressee upon receipt of a Registered Article is called:
+233|Signing the acknowledgment for an Insured Article is:
+234|Can an addressee open a Value Payable article before paying the amount due?
+235|If an addressee suspects a VP article contains nothing of value (fraud), can the Post
+236|If an addressee refuses to accept a damaged Insured Article delivered at the window,
+237|Can a Postman accept a cheque for payment of a VP article or Customs duty?
+238|Can a Money Order be paid to the servant of the payee?
+239|Special arrangements for payment of Money Orders exist for:
+240|If a foreign parcel contains prohibited items, it is:
+241|If a VP article is returned as refused, can the sender ask for it to be delivered again?
+242|Poste Restante parcels are kept for:
+243|The witness for the delivery of a registered article to an illiterate person must be:
+244|For payment of MO to a Pardanashin woman, the witness must be:
+245|Delivery of an article is considered complete when:
+246|Does the witness for a Pardanashin woman’s delivery need to see the woman?
+247|Is there a limit on the amount of Money Order paid to a minor?
+248|Insured articles up to what value can be delivered by the Village Postman?
+249|Before paying a Money Order, the Postman must check:
+250|If the identity of the payee is doubtful, payment of the Money Order should be:

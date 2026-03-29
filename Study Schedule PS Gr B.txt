@@ -1,0 +1,99 @@
+Week	Date	Day		Topic to Study
+Week 1	Mar 30	Monday		Consumer Protection Act, 2019 (Part 1)
+Week 1	Mar 31	Tuesday		Consumer Protection Act, 2019 (Part 2)
+Week 1	Apr 1	Wednesday	PMLA Act, 2002 (Part 1)
+Week 1	Apr 2	Thursday	PMLA Act, 2002 (Part 2)
+Week 1	Apr 3	Friday		The Post Office Act, 2023 & Rules 2024
+Week 1	Apr 4	Saturday	Book of BO Rules
+Week 1	Apr 5	Sunday		Weekly Revision & Mock Test 1
+Week 2	Apr 6	Monday		The PO Regulations, 2024 (Part 1)
+Week 2	Apr 7	Tuesday		The PO Regulations, 2024 (Part 2)
+Week 2	Apr 8	Wednesday	The PO Regulations, 2024 (Part 3)
+Week 2	Apr 9	Thursday	PO Guide Part-I (Part 1)
+Week 2	Apr 10	Friday		PO Guide Part-I (Part 2)
+Week 2	Apr 11	Saturday	PO Guide Part-II (Complete)
+Week 2	Apr 12	Sunday		Weekly Revision & Mock Test 2
+Week 3	Apr 13	Monday		Postal Manual Volume V (Part 1)
+Week 3	Apr 14	Tuesday		Postal Manual Volume V (Part 2)
+Week 3	Apr 15	Wednesday	Postal Manual Volume II (Org)
+Week 3	Apr 16	Thursday	MNOP & PNOP Guidelines (Part 1)
+Week 3	Apr 17	Friday		MNOP & PNOP Guidelines (Part 2)
+Week 3	Apr 18	Saturday	GSPR, 2018
+Week 3	Apr 19	Sunday		Weekly Revision & Mock Test 3
+Week 4	Apr 20	Monday		PO Small Savings Schemes (Part 1)
+Week 4	Apr 21	Tuesday		PO Small Savings Schemes (Part 2)
+Week 4	Apr 22	Wednesday	POSB (CBS) Manual (Part 1)
+Week 4	Apr 23	Thursday	POSB (CBS) Manual (Part 2)
+Week 4	Apr 24	Friday		PO Life Insurance Scheme, 2011 (Part 1)
+Week 4	Apr 25	Saturday	PO Life Insurance Scheme, 2011 (Part 2)
+Week 4	Apr 26	Sunday		Weekly Revision & Mock Test 4
+Week 5	Apr 27	Monday		Citizen Charter of DoP
+Week 5	Apr 28	Tuesday		Complaint & Grievance Handling
+Week 5	Apr 29	Wednesday	Postal Manual Vol II - Ch XI (Misc)
+Week 5	Apr 30	Thursday	Manual of Office Procedure (Part 1)
+Week 5	May 1	Friday		Manual of Office Procedure (Part 2)
+Week 5	May 2	Saturday	Annual Reports & Book of Info
+Week 5	May 3	Sunday		Weekly Revision & Mock Test 5
+Week 6	May 4	Monday		Manual on Public Procurement
+Week 6	May 5	Tuesday		CVC guidelines on Public procurement
+Week 6	May 6	Wednesday	GFR 2017 (Other than Procurement) (Part 1)
+Week 6	May 7	Thursday	GFR 2017 (Other than Procurement) (Part 2)
+Week 6	May 8	Friday		Postal Manual Volume IV (Part 1)
+Week 6	May 9	Saturday	Postal Manual Volume IV (Part 2)
+Week 6	May 10	Sunday		Weekly Revision & Mock Test 6
+Week 7	May 11	Monday		Instructions on APAR Maintenance
+Week 7	May 12	Tuesday		Welfare Measures (Employees & GDS)
+Week 7	May 13	Wednesday	Postal Manual Vol II Ch VI, VIII, IX, XII
+Week 7	May 14	Thursday	Schedule of Financial Powers
+Week 7	May 15	Friday		Instructions on Estt. & Admin
+Week 7	May 16	Saturday	Brochure on Reservation & Compassionate Appt.
+Week 7	May 17	Sunday		Weekly Revision & Mock Test 7
+Week 8	May 18	Monday		Recruitment Rules for various cadres
+Week 8	May 19	Tuesday		CCS (Conduct) Rules, 1964
+Week 8	May 20	Wednesday	CCS (CCA) Rules, 1965 (Part 1)
+Week 8	May 21	Thursday	CCS (CCA) Rules, 1965 (Part 2)
+Week 8	May 22	Friday		CCS (Temporary Service) Rules, 1965
+Week 8	May 23	Saturday	Brochure on Casual Labourers
+Week 8	May 24	Sunday		Weekly Revision & Mock Test 8
+Week 9	May 25	Monday		CCS (Pension) Rules, 2021 (Part 1)
+Week 9	May 26	Tuesday		CCS (Pension) Rules, 2021 (Part 2)
+Week 9	May 27	Wednesday	CCS (Implementation of NPS) Rules, 2021
+Week 9	May 28	Thursday	CCS (Gratuity under NPS) Rules, 2021
+Week 9	May 29	Friday		CCS (Commutation of Pension) Rules, 1981
+Week 9	May 30	Saturday	CCS (Leave) Rules, 1972
+Week 9	May 31	Sunday		Weekly Revision & Mock Test 9
+Week 10	Jun 1	Monday		CCS (GPF) Rules, 1961
+Week 10	Jun 2	Tuesday		CS (Medical Attendance) Rules, 1944
+Week 10	Jun 3	Wednesday	FR & SR - General Rules (Part 1)
+Week 10	Jun 4	Thursday	FR & SR - General Rules (Part 2)
+Week 10	Jun 5	Friday		FR & SR - TA Rules
+Week 10	Jun 6	Saturday	FR & SR - DA, DR & HRA Rules
+Week 10	Jun 7	Sunday		Weekly Revision & Mock Test 10
+Week 11	Jun 8	Monday		CCS (LTC) Rules, 1988
+Week 11	Jun 9	Tuesday		CCS (Revised Pay) Rules, 2016
+Week 11	Jun 10	Wednesday	CEA & Hostel Subsidy Rules
+Week 11	Jun 11	Thursday	CGEGIS, 1980
+Week 11	Jun 12	Friday		Postal Manual Volume III
+Week 11	Jun 13	Saturday	P&T FHB Vol I (Part 1)
+Week 11	Jun 14	Sunday		Weekly Revision & Mock Test 11
+Week 12	Jun 15	Monday		P&T FHB Vol I (Part 2)
+Week 12	Jun 16	Tuesday		Postal FHB Vol II (Part 1)
+Week 12	Jun 17	Wednesday	Postal FHB Vol II (Part 2)
+Week 12	Jun 18	Thursday	Interface with IPPB
+Week 12	Jun 19	Friday		Preservation of Records
+Week 12	Jun 20	Saturday	Swatchh Bharat
+Week 12	Jun 21	Sunday		Weekly Revision & Mock Test 12
+Week 13	Jun 22	Monday		GDS (Conduct & Engagement) Rules, 2020
+Week 13	Jun 23	Tuesday		CAT Act, 1985 & Rules
+Week 13	Jun 24	Wednesday	RTI Act, 2005 & Rules 2012
+Week 13	Jun 25	Thursday	Sexual Harassment (POSH) Act, 2013
+Week 13	Jun 26	Friday		Public Accountants Default Act, 1850
+Week 13	Jun 27	Saturday	Revenue Recovery Act, 1890
+Week 13	Jun 28	Sunday		Weekly Revision & Mock Test 13
+Week 14	Jun 29	Monday		Prevention of Corruption Act, 1988
+Week 14	Jun 30	Tuesday		CCS (Joining Time) Rules, 1979
+Week 14	Jul 1	Wednesday	CCS (Recognition of Service Assn) Rules, 1993
+Week 14	Jul 2	Thursday	Postal Manual Vol II: Ch III, IV, V, VII
+Week 14	Jul 3	Friday		Inspection questionnaires
+Week 14	Jul 4	Saturday	Goods and Services Tax (GST) Act, 2017
+Week 14	Jul 5	Sunday		Weekly Revision & Mock Test 14

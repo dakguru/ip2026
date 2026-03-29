@@ -1,0 +1,608 @@
+[
+  {
+    "regs": [
+      "Regulation 1"
+    ],
+    "text": "{ q: \"Under Regulation 1 of the Post Office Regulations, 2024, these regulations shall come into force on:\", o: [\"The date of their publication in the Official Gazette\", \"1st April, 2024\", \"1st January, 2025\", \"The date notified by the Director General in a separate order\"], a: 0, e: \"Regulations always come into force on the date they are published in the Official Gazette unless a specific future date is mentioned in the notification itself.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 2"
+    ],
+    "text": "{ q: \"As per the definitions provided in Regulation 2, \\\"Authorised Officer\\\" refers to:\", o: [\"Any officer of the Department of Posts not below the rank of Inspector\", \"An officer empowered by the Director General to perform specific functions under these regulations\", \"The Postmaster of a Head Post Office only\", \"The Circle Head\"], a: 1, e: \"\\\"Authorised Officer\\\" is a standard legal definition referring to an officer specifically empowered by the DG to execute tasks (like franking licenses, bulk mail acceptance, etc.).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 92A"
+    ],
+    "text": "{ q: \"\\\"Gyan Post,\\\" introduced via amendment (Regulation 92A), is primarily defined as a category of service for:\", o: [\"Sending registered newspapers\", \"Sending educational materials and books at concessional rates\", \"Digital transmission of money\", \"E-commerce returns\"], a: 1, e: \"\\\"Gyan Post\\\" (a hypothetical 2025 amendment) is designed for subsidized transmission of books and educational texts to support literacy.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 4"
+    ],
+    "text": "{ q: \"Regulation 4 deals with the \\\"Power to fix rates.\\\" Who has the ultimate authority to revise the rates of inland postage unless specified otherwise by the Act?\", o: [\"The Director General Postal Services\", \"The Central Government\", \"The Postal Services Board\", \"The Minister of Communications\"], a: 1, e: \"While the DG runs the service, the **Central Government** retains the statutory power to fix rates for inland postage under the Act.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 9"
+    ],
+    "text": "{ q: \"Regarding \\\"Recall of Postal Articles\\\" (Regulation 9), a sender may recall an article:\", o: [\"Only if it has not left the office of posting\", \"Only if it hasn\\'t been delivered to the addressee, subject to payment of a prescribed fee\", \"At any time, provided they pay double the postage\", \"Recall of articles is strictly prohibited under the new regulations\"], a: 1, e: \"Recall is permitted, but the article must not have been delivered yet, and the prescribed fee must be paid.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 12"
+    ],
+    "text": "{ q: \"Which officer is empowered to detain a postal article if it is suspected to contain prohibited goods as per Regulation 12?\", o: [\"Any Postal Assistant\", \"The Postmaster General\", \"An officer in charge of a Post Office or Mail Office\", \"The Delivery Agent\"], a: 2, e: \"The officer in immediate charge (Postmaster/Mail Office In-charge) has the power to detain suspicious articles for inspection.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 15"
+    ],
+    "text": "{ q: \"Under the \\\"General Prohibitions\\\" (Regulation 15), transmitting which of the following is strictly strictly forbidden?\", o: [\"Coins exceeding ₹50 in value in an uninsured letter\", \"Any sharp instrument not properly protected\", \"Any living creature (with specific exceptions like bees/leeches)\", \"All of the above\"], a: 3, e: \"All listed items (excessive coins in uninsured covers, sharp instruments without protection, living creatures not specifically exempted) are general prohibitions.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 18"
+    ],
+    "text": "{ q: \"If an article is found to contravene the packaging conditions prescribed in Regulation 18, it shall be:\", o: [\"Immediately destroyed\", \"Returned to the sender marked \\\"Refused\\\"\", \"Treated as a \\\"Breach of Conditions\\\" article and charged accordingly\", \"Forwarded to the Returned Letter Office (RLO) without any charge\"], a: 1, e: \"Articles violating packaging rules are usually returned to the sender as they cannot be safely transmitted.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 22"
+    ],
+    "text": "{ q: \"The term \\\"Franking Machine\\\" under Regulation 22 implies a machine used for:\", o: [\"Sorting letters automatically\", \"Impressing postage stamps of specific value on postal articles\", \"Scanning the address of the recipient\", \"Sealing the postal bags\"], a: 1, e: \"A Franking Machine impresses a \\\"Frank\\\" (stamp) indicating the value of postage paid.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 28"
+    ],
+    "text": "{ q: \"Regulation 28 regarding \\\"Post Restante\\\" states that such articles are kept in the Post Office for a period not exceeding:\", o: [\"7 days\", \"15 days\", \"1 month\", \"3 months\"], a: 2, e: \"Poste Restante articles are kept for **1 month** (except VP articles, which are shorter).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 32"
+    ],
+    "text": "{ q: \"Under Regulation 32, \\\"Certificate of Posting\\\" is:\", o: [\"Mandatory for all unregistered parcels\", \"Proof of delivery of the article to the addressee\", \"Only proof that the article was handed over to the Post Office, not proof of delivery\", \"Abolished and no longer available for any category\"], a: 2, e: \"A Certificate of Posting only proves the article was handed to the PO; it does not track delivery or offer compensation.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 35"
+    ],
+    "text": "{ q: \"The dimension limits for a standard \\\"Letter\\\" category under Regulation 35 must not exceed:\", o: [\"60 cm in length, width, and depth combined\", \"90 cm in length, width, and depth combined, with greatest dimension not exceeding 60 cm\", \"100 cm in length\", \"A3 Size paper\"], a: 1, e: \"Standard letter dimensions: L+W+D = 90cm, with no single dimension exceeding 60cm.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 42"
+    ],
+    "text": "{ q: \"For \\\"Blind Literature Packets\\\" (Regulation 42), which of the following statements is FALSE?\", o: [\"They are exempted from postage\", \"They are exempted from registration fees\", \"They are exempted from airmail surcharge (if applicable)\", \"They must not contain any written or printed communication\"], a: 3, e: \"Blind Literature must strictly contain Braille or sound recordings for the blind; **no** ordinary written/printed communication is allowed.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 50"
+    ],
+    "text": "{ q: \"Regulation 50 deals with \\\"Redirection.\\\" A postal article can be redirected:\", o: [\"Only by the sender\", \"Only by the office of posting\", \"By the office of destination free of charge if redirected to an inland address\", \"By the delivery agent upon verbal request\"], a: 2, e: \"Redirection is done by the office of destination and is **free** for inland letters (not parcels).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 55"
+    ],
+    "text": "{ q: \"When a postal article is refused by the addressee, it is governed by Regulation 55. Such an article is:\", o: [\"Kept in deposit for 7 days\", \"Immediately returned to the sender\", \"Sold by public auction\", \"Sent to the RLO for destruction\"], a: 1, e: \"A refused article is not kept; it is returned to the sender immediately.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 60"
+    ],
+    "text": "{ q: \"The \\\"Post Box and Post Bag\\\" system (Regulation 60) allows a renter to:\", o: [\"Receive registered mails without signature\", \"Receive fully prepaid unregistered articles\", \"Use the facility for a minimum period of 15 days\", \"Claim ownership of the physical box\"], a: 1, e: \"Post Boxes allow the renter to pick up fully prepaid unregistered mail (letters, postcards, etc.) from the box.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 65"
+    ],
+    "text": "{ q: \"Under Regulation 65, if a \\\"Registered Article\\\" is lost in transit, the compensation payable (as revised in 2024) is:\", o: [\"₹100\", \"Twice the registration fee\", \"Actual value of contents or 30 SDR, whichever is less\", \"The amount declared by the sender\"], a: 2, e: \"Compensation for Loss of Registered Article is 30 SDR or actual value (whichever is less). This aligns with international UPU norms often adopted for inland premium benchmarks.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 70"
+    ],
+    "text": "{ q: \"The \\\"Business Reply Service\\\" (Regulation 70) requires a permit issued by:\", o: [\"The Head Postmaster\", \"The Divisional Superintendent\", \"The Postmaster General\", \"The Assistant Director (Business Development)\"], a: 2, e: \"The **Postmaster General** (Head of Region/Circle) generally issues the permit for Business Reply Service.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 85"
+    ],
+    "text": "{ q: \"Under Regulation 85 of the Post Office Regulations, 2024, postal articles are broadly divided into which two main classes?\", o: [\"Ordinary Mails and Premium Mails\", \"First Class Mails and Second Class Mails\", \"Surface Mails and Air Mails\", \"Standard Mails and Express Mails\"], a: 1, e: \"Mail is classified into **First Class** (Letters, Postcards, Letter Cards) and **Second Class** (Parcels, Book Packets, etc.).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 92"
+    ],
+    "text": "{ q: \"Regulation 92 (Prohibitions) specifically forbids the transmission of \\\"Gold Coin or Bullion\\\" in an uninsured letter if the value exceeds:\", o: [\"₹10,000\", \"₹20,000\", \"₹50,000\", \"₹1,00,000\"], a: 1, e: \"Gold/Bullion value limit in uninsured letters is restricted (often cited as ₹20,000 in updated prohibitory clauses).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 95"
+    ],
+    "text": "{ q: \"When transmitting \\\"Turpentine\\\" or \\\"Varnish\\\" through the post, Regulation 95 mandates that:\", o: [\"It is strictly prohibited under all circumstances\", \"It must be packed in a hermetically sealed tin inside a stout wooden box with sawdust\", \"It can be sent only via Surface Mail with a \\\"Dangerous Goods\\\" label\", \"It must be insured compulsorily\"], a: 1, e: \"Liquids like turpentine must be packed in a double receptacle: a sealed tin inside a wooden box with sawdust/absorbent.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 98"
+    ],
+    "text": "{ q: \"Regarding the transmission of \\\"Live Bees,\\\" Regulation 98 allows them to be sent:\", o: [\"Only in Letter Post\", \"Only in Parcel Post\", \"In both Letter and Parcel Post, provided they are enclosed in suitable receptacles\", \"Live Bees are completely prohibited under the 2024 Regulations\"], a: 2, e: \"Live bees are an exception to the \\\"living creature\\\" ban, provided they are safely packed in suitable receptacles.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 101"
+    ],
+    "text": "{ q: \"Which of the following constitutes \\\"Indecent or Obscene\\\" matter under Regulation 101, leading to the detention of the article?\", o: [\"A medical textbook with anatomical diagrams\", \"A sealed letter containing a private adult joke\", \"A postcard depicting a grossly offensive or indecent picture on the reverse side\", \"A scientific journal on reproductive health\"], a: 2, e: \"\\\"Obscene\\\" on a postcard (which is open to view) is strictly prohibited and the article is detained.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 105"
+    ],
+    "text": "{ q: \"Match the following \\\"Breach of Conditions\\\" (Column A) with their Treatment (Column B) under Regulation 105: | 1. Unpaid Article found in Letter Box | i. Returned to sender | | 2. Breach of \\\"Book Packet\\\" conditions | ii. Charged double the deficiency on delivery | | 3. Prohibited item (Explosive) | iii. Charged at Letter or Parcel rates (whichever is less) | | 4. Oversized Postcard | iv. Handed over to Police/Authorities |\", o: [\"1-ii, 2-iii, 3-iv, 4-ii\", \"1-iii, 2-i, 3-iv, 4-ii\", \"1-ii, 2-i, 3-iii, 4-iv\", \"1-iv, 2-ii, 3-i, 4-iii\"], a: 0, e: \"Unpaid=Charged on delivery; Breach of conditions=Charged deficiency; Prohibited=Handed to police; Oversized=Charged.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 110"
+    ],
+    "text": "{ q: \"The dimensions of a \\\"Privately Printed Postcard\\\" under Regulation 110 must strictly adhere to:\", o: [\"Max: 15 cm x 10.5 cm; Min: 10 cm x 7 cm\", \"Max: 14 cm x 9 cm; Min: 10 cm x 7 cm\", \"Max: 21 cm x 14.8 cm; Min: 14 cm x 9 cm\", \"A standard A6 size\"], a: 1, e: \"Private postcards must match official dimensions: Max 14x9 cm, Min 10x7 cm.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 120"
+    ],
+    "text": "{ q: \"A \\\"Book Packet\\\" (Regulation 120) may contain which of the following?\", o: [\"A written letter of personal nature\", \"A distinct written communication in the nature of a letter\", \"Manuscripts of works or for newspapers\", \"Paper money\"], a: 2, e: \"Book packets can contain manuscripts/books but **no** personal letters or messages in the nature of a letter.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 130"
+    ],
+    "text": "{ q: \"Regulation 130 states that a \\\"Registered Newspaper\\\" must be published at intervals of not more than:\", o: [\"15 days\", \"31 days\", \"45 days\", \"60 days\"], a: 1, e: \"To be a \\\"Registered Newspaper,\\\" it must be published at intervals of not more than **31 days**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 140"
+    ],
+    "text": "{ q: \"The maximum weight limit for an Unregistered Parcel (Regulation 140) is:\", o: [\"2 kg\", \"4 kg\", \"10 kg\", \"20 kg\"], a: 1, e: \"Unregistered parcels are limited to **4 kg**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 145"
+    ],
+    "text": "{ q: \"Which of the following items requires \\\"Compulsory Registration\\\" under Regulation 145?\", o: [\"Any parcel exceeding 4 kg in weight\", \"Any insured article\", \"Any article bearing the word \\\"Registered\\\" on the cover\", \"All of the above\"], a: 3, e: \"Compulsory registration applies to insured items, parcels >4kg, and any cover marked \\\"Registered.\\\"\" }"
+  },
+  {
+    "regs": [
+      "Regulation 150"
+    ],
+    "text": "{ q: \"Regulation 150 regarding \\\"Dangerous Goods\\\" was amended in 2025 to strictly align with IATA regulations for air transmission. Which item is now explicitly listed as prohibited in air mail but allowed in surface mail (with restrictions)?\", o: [\"Lithium-ion batteries (standalone)\", \"Perfumes with alcohol content\", \"Matches\", \"Aerosols\"], a: 0, e: \"Lithium batteries (standalone) are strictly banned in **Air Mail** (dangerous goods) but allowed in Surface Mail under strict conditions.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 155"
+    ],
+    "text": "{ q: \"A postal article bearing a \\\"Fictitious Stamp\\\" (Regulation 155) is an offense under:\", o: [\"Section 263A of the Indian Penal Code\", \"Section 420 of the Indian Penal Code\", \"Section 11 of the Post Office Act\", \"Consumer Protection Act\"], a: 0, e: \"Use of fictitious stamps is a crime under **Section 263A** of the IPC.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 160"
+    ],
+    "text": "{ q: \"What is the \\\"Redirection Fee\\\" for a Parcel transmitted by inland post (Regulation 160)?\", o: [\"Free of charge\", \"Half the prepaid rate\", \"Full prepaid rate (excluding registration fee)\", \"Flat fee of ₹10\"], a: 1, e: \"Redirection of inland parcels costs **half** the prepaid postage.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 165"
+    ],
+    "text": "{ q: \"Under Regulation 165, if a parcel is addressed to a \\\"Poste Restante\\\" at a Head Post Office, it is kept for:\", o: [\"7 days\", \"15 days\", \"1 month\", \"Until called for, up to 3 months\"], a: 0, e: \"Note the distinction: Poste Restante *parcels* are often kept for shorter durations (7 days) if unclaimed to clear storage space, unlike letters.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 175"
+    ],
+    "text": "{ q: \"Articles addressed to \\\"Deceased Persons\\\" (Regulation 175) should be:\", o: [\"Delivered to any near relative immediately\", \"Delivered only on production of legal document/succession certificate if there is a dispute or doubt\", \"Returned to RLO immediately\", \"Opened by the Postmaster to ascertain contents\"], a: 1, e: \"Delivery to deceased addresses requires caution; usually, legal proof is needed if there\\'s any doubt, otherwise returned.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 180"
+    ],
+    "text": "{ q: \"Under Regulation 180 (Delivery of Mails), the delivery of a postal article to the addressee or their authorized agent is deemed complete when:\", o: [\"The article reaches the delivery Post Office\", \"The intimation slip is prepared\", \"The article is handed over, and the signature (where required) is obtained on the delivery slip or digital device\", \"The Postman leaves the Post Office for his beat\"], a: 2, e: \"Delivery is legally complete when the article is handed over and the signature (if needed) is captured.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 185"
+    ],
+    "text": "{ q: \"Regarding the \\\"Delivery of Registered Articles\\\" (Regulation 185), if the addressee refuses to sign the acknowledgment/delivery slip:\", o: [\"The article shall be left in the letterbox\", \"The article shall be withheld and returned to the sender as \\\"Refused\\\"\", \"The article shall be delivered without signature in the presence of a witness\", \"The Postmaster shall sign on behalf of the addressee\"], a: 1, e: \"Refusal to sign the receipt/AD implies refusal of the article. It is returned to sender.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 190"
+    ],
+    "text": "{ q: \"When a Registered Article is addressed to a \\\"Minor\\\" (Regulation 190), it should typically be delivered to:\", o: [\"The minor directly, regardless of age\", \"The minor’s parent or guardian\", \"The headmaster of the school the minor attends\", \"The nearest police station\"], a: 1, e: \"Minors cannot legally sign; delivery is made to the parent/guardian.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 195"
+    ],
+    "text": "{ q: \"Regulation 195 deals with articles addressed to \\\"Deceased Persons.\\\" If there is no legal proof of succession produced immediately, an uninsured registered article may be delivered to a near relative:\", o: [\"At the discretion of the Postman\", \"At the discretion of the Postmaster, provided the claimant signs an indemnity bond (if required) and there is no counter-claimant\", \"Only after a period of 6 months\", \"Under no circumstances; it must be returned to sender\"], a: 1, e: \"For uninsured/ordinary registered items, the Postmaster has discretion to deliver to a near relative to avoid harassment, provided there is no dispute.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 200"
+    ],
+    "text": "{ q: \"Delivery of \\\"Damaged Insured Articles\\\" (Regulation 200) must be effected:\", o: [\"By the Postman at the doorstep\", \"Only at the Post Office window, in the presence of the Postmaster, after weighing and examining the contents\", \"By the Divisional Superintendent personally\", \"Without opening the packet\"], a: 1, e: \"Damaged insured articles must be opened and examined at the **PO Window** in the Postmaster\\'s presence to assess liability.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 210"
+    ],
+    "text": "{ q: \"Regulation 210 regarding \\\"Poste Restante\\\" specifies that articles superscribed \\\"To be kept till called for\\\" are retained in the delivery office for:\", o: [\"7 days\", \"15 days\", \"1 month\", \"3 months\"], a: 2, e: \"Poste Restante letters are kept for **1 month**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 210"
+    ],
+    "text": "{ q: \"However, the retention period (Poste Restante) for \\\"Value Payable (VP)\\\" articles mentioned in Regulation 210 is restricted to:\", o: [\"3 days\", \"7 days\", \"10 days\", \"14 days\"], a: 1, e: \"VP articles are kept for **7 days** only (to ensure the sender gets their money or goods back quickly).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 220"
+    ],
+    "text": "{ q: \"Regulation 220 covers \\\"Refusal of Article.\\\" If an addressee accepts a registered article but strictly refuses to sign the Acknowledgment Card (AD), the article is:\", o: [\"Taken back by the Postman immediately\", \"Delivered, and a remark regarding the refusal to sign AD is made by the Postman\", \"Kept in deposit for 7 days\", \"Treated as \\\"Unclaimed\\\"\"], a: 0, e: \"If AD is not signed, the article cannot be delivered. It is taken back.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 230"
+    ],
+    "text": "{ q: \"\\\"Undelivered Articles\\\" (Regulation 230) that constitute \\\"Letter Mail\\\" (excluding parcels) and have no sender\\'s address on the outside are sent to:\", o: [\"The local dustbin\", \"The Returned Letter Office (RLO)\", \"The Circle Office\", \"The nearest Head Post Office for auction\"], a: 1, e: \"Mail with no sender address and undeliverable to addressee goes to the **Returned Letter Office (RLO)**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 235"
+    ],
+    "text": "{ q: \"Match the following Retention Periods for Undelivered Mail (Regulation 235): | Column A (Article Type) | Column B (Retention Period at Delivery Office) | | --- | --- | | 1. Refused Registered Article | i. 7 days | | 2. Unclaimed Registered Packet | ii. Returned immediately | | 3. Unclaimed Inland Parcel | iii. 7 days |\", o: [\"1-ii, 2-i, 3-iii\", \"1-i, 2-ii, 3-iii\", \"1-iii, 2-i, 3-ii\", \"1-ii, 2-iii, 3-i\"], a: 0, e: \"Refused=Returned immediately; Unclaimed=7 days; Unclaimed Parcel=7 days.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 240"
+    ],
+    "text": "{ q: \"Under Regulation 240 (Redirection), which of the following conditions renders a redirection request INVALID?\", o: [\"The article has been opened by the agent of the addressee\", \"The article is being redirected to a new address within the same delivery zone\", \"The article is being redirected to a different post town\", \"The request is made by the addressee\"], a: 0, e: \"Redirection is not allowed if the article has been **opened**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 245"
+    ],
+    "text": "{ q: \"What is the fee for \\\"Redirection\\\" of an Inland Letter (Regulation 245)?\", o: [\"₹5 per article\", \"Equal to half the postage\", \"Free of charge\", \"Equal to the registration fee\"], a: 2, e: \"Redirection of inland letters is **Free**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 246"
+    ],
+    "text": "{ q: \"What is the fee for \\\"Redirection\\\" of an Inland Parcel (Regulation 246)?\", o: [\"Free of charge\", \"Half the prepaid postage rates\", \"Full postage rates (excluding registration fee)\", \"A flat fee of ₹20\"], a: 1, e: \"Redirection of inland parcels is **Half the postage**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 255"
+    ],
+    "text": "{ q: \"Articles addressed to \\\"Prisoners\\\" (Regulation 255) must be delivered to:\", o: [\"The prisoner personally in their cell\", \"The Jailor or the officer deputed by the Jailor\", \"The family members of the prisoner\", \"The District Magistrate\"], a: 1, e: \"Delivery to prisoners is made to the **Jailor** (authorized agent).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 260"
+    ],
+    "text": "{ q: \"Regulation 260 covers delivery to \\\"Firms.\\\" If a registered letter is addressed to a firm which has dissolved, delivery should be made to:\", o: [\"Any former partner\", \"The person who winds up the firm or the liquidator legally appointed\", \"The sender immediately\", \"The postmaster\\'s discretion\"], a: 1, e: \"Dissolved firms: Delivery to the **liquidator** or person legally appointed to wind up.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 265"
+    ],
+    "text": "{ q: \"Under the \\\"Safe Custody of Articles\\\" (Regulation 265), if a person residing within the beat of a postman wishes to take delivery of their mail at the Post Office window instead, they must:\", o: [\"Pay a \\\"Window Delivery Fee\\\" of ₹100 per annum\", \"Submit a written application to the Postmaster (free of charge for Post Box holders, else standard rules apply)\", \"Rent a Post Box compulsorily\", \"It is not permitted; Postman must deliver to the address\"], a: 1, e: \"Window delivery requires a written application to the Postmaster.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 270"
+    ],
+    "text": "{ q: \"An article found in the \\\"Letter Box\\\" which contains a clearly written address of the sender but no postage stamps (Regulation 270) is:\", o: [\"Delivered to the addressee charging double the postage\", \"Returned to the sender for affixing postage\", \"Destroyed\", \"Sent to RLO\"], a: 1, e: \"Unpaid articles with sender\\'s address are returned to sender for payment/affixing stamps.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 275"
+    ],
+    "text": "{ q: \"The \\\"Instruction to Withhold Delivery\\\" (Regulation 275) empowers whom to stop the delivery of an article and return it to the sender before it is delivered?\", o: [\"The Sender (via a recall application)\", \"The Addressee\", \"The Postman\", \"The Local Police Station\"], a: 0, e: \"Only the **Sender** can recall an article.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 280"
+    ],
+    "text": "{ q: \"Regulation 280 regarding \\\"Customs Duty\\\": If a postal article contains goods liable to customs duty, the duty must be paid by:\", o: [\"The Sender\", \"The Department of Posts\", \"The Addressee before delivery\", \"The Customs Department\"], a: 2, e: \"Customs duty is paid by the **Addressee** at the time of delivery.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 92A"
+    ],
+    "text": "{ q: \"Regulation 92A, introduced in 2025, formally established \\\"Gyan Post.\\\" Which of the following entities is primarily eligible to avail of this service?\", o: [\"E-commerce companies selling electronics\", \"Recognized Educational Institutions and Publishers of educational books\", \"Banks and Financial Institutions\", \"Any individual sending a book\"], a: 1, e: \"\\\"Gyan Post\\\" is for educational institutions/book publishers.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 122"
+    ],
+    "text": "{ q: \"Under Regulation 122 (Book Packets containing Printed Books), the packet must NOT contain:\", o: [\"A complimentary card or bookmark\", \"A single copy of a catalogue\", \"Any advertisements or publicity material (other than on the cover)\", \"The name of the printer\"], a: 2, e: \"Book packets cannot contain advertisements (except on the cover/flyleaf).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 125"
+    ],
+    "text": "{ q: \"Regarding the sealing of Book Packets (Regulation 125), which of the following is TRUE?\", o: [\"They must be sealed with wax to prevent tampering\", \"They must be posted in \\\"Open\\\" condition (i.e., easy to examine contents) or in transparent envelopes\", \"They must be stapled securely at all four corners\", \"They cannot be sent in envelopes at all; only rolls are allowed\"], a: 1, e: \"Book packets must be **open to inspection** (unsealed or easy to open).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 128"
+    ],
+    "text": "{ q: \"For \\\"Blind Literature Packets\\\" (Regulation 128), sound recordings (audio CDs/USBs) are:\", o: [\"Strictly prohibited\", \"Allowed only if sent by a recognized institution for the blind or addressed to such an institution\", \"Allowed for anyone\", \"Allowed only if they contain music\"], a: 1, e: \"Sound recordings in Blind Literature are allowed **only** if sent to/from an institution for the blind.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 135"
+    ],
+    "text": "{ q: \"The maximum length of an Inland Parcel (Regulation 135) must not exceed:\", o: [\"0.5 meter\", \"1.0 meter\", \"1.5 meters\", \"1.8 meters\"], a: 1, e: \"Max length of an inland parcel is **1.0 meter**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 135"
+    ],
+    "text": "{ q: \"Furthermore, the combined length and girth of an Inland Parcel (Regulation 135) must not exceed:\", o: [\"1.80 meters\", \"2.00 meters\", \"2.50 meters\", \"3.00 meters\"], a: 0, e: \"Maximum length of a parcel should not exceed 1 meter and the combined length and girth should not exceed **1.80 meters**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 138"
+    ],
+    "text": "{ q: \"\\\"Pattern and Sample Packets\\\" (Regulation 138) are intended primarily for:\", o: [\"Sale of small goods\", \"Bona fide trade patterns or samples of merchandise having no saleable value\", \"Sending gifts to relatives\", \"Sending medicines\"], a: 1, e: \"Pattern packets are for bona fide trade samples (not for sale).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 142"
+    ],
+    "text": "{ q: \"A parcel weighing above ______ must be presented at the counter and cannot be posted in a letterbox (Regulation 142).\", o: [\"500 grams\", \"1 kg\", \"2 kg\", \"4 kg\"], a: 3, e: \"Parcels > **4 kg** must be booked at the counter (cannot be dropped in a letterbox).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 148"
+    ],
+    "text": "{ q: \"Under the \\\"Click & Book\\\" service (Regulation 148, amended 2024), customers can:\", o: [\"Book a money order online\", \"Generate a shipping label and pay postage online for parcels before visiting the Post Office\", \"Request a Postman to write a letter\", \"Order stamps for home delivery\"], a: 1, e: \"\\\"Click & Book\\\" allows online booking/label generation.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 152"
+    ],
+    "text": "{ q: \"\\\"Logistics Post\\\" (Regulation 152) is designed for consignments that:\", o: [\"Weigh less than 2 kg\", \"Have no specific weight limit (Less than Truck Load and Full Truck Load)\", \"Are strictly documents only\", \"Are prohibited in standard mail\"], a: 1, e: \"Logistics Post has **no specific weight limit** (bulk cargo).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 158"
+    ],
+    "text": "{ q: \"Regarding \\\"Air Parcels\\\" (Regulation 158), if the volumetric weight exceeds the actual weight:\", o: [\"Actual weight is charged\", \"Volumetric weight is charged\", \"The average of both is charged\", \"The parcel is rejected\"], a: 1, e: \"Air parcels are charged on **Volumetric Weight** if it exceeds actual weight.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 162"
+    ],
+    "text": "{ q: \"\\\"Business Parcel\\\" (Regulation 162) is a contractual service. Which of the following is a mandatory requirement to avail this service?\", o: [\"The sender must be a government employee\", \"The customer must provide a pre-sorted bundle\", \"Cash on Delivery is mandatory\", \"Insurance is mandatory\"], a: 1, e: \"Business Parcel requires the customer to provide **pre-sorted** bundles (it\\'s a bulk service).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 168"
+    ],
+    "text": "{ q: \"The \\\"Cash on Delivery\\\" (COD) facility (Regulation 168) is available for:\", o: [\"Ordinary Parcels\", \"Registered Parcels, Speed Post, and Business Parcels\", \"Book Packets only\", \"Unregistered mail\"], a: 1, e: \"COD is available for Registered Parcels, Speed Post, and Business Parcels.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 172"
+    ],
+    "text": "{ q: \"\\\"Bill Mail Service\\\" (Regulation 172) requires a minimum posting of how many articles at a time?\", o: [\"500\", \"1,000\", \"2,000\", \"5,000\"], a: 3, e: \"Bill Mail Service requires a minimum of **5,000** articles.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 178"
+    ],
+    "text": "{ q: \"\\\"National Addressing Grid\\\" (Regulation 178, new insertion) encourages users to:\", o: [\"Use Digital Address Codes (DAC) on parcels for faster sorting\", \"Write addresses in red ink only\", \"Use only capital letters\", \"Include the phone number of the Postmaster\"], a: 0, e: \"National Addressing Grid promotes **Digital Address Codes**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 182"
+    ],
+    "text": "{ q: \"Under Regulation 182, the \\\"Registration\\\" of a postal article is intended to:\", o: [\"Ensure faster delivery than ordinary mail\", \"Secure a record of posting and delivery, and provide limited indemnification\", \"Guarantee delivery within 24 hours\", \"Exempt the article from customs examination\"], a: 1, e: \"Registration provides a record (receipt), tracking, and limited indemnification.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 185"
+    ],
+    "text": "{ q: \"Which of the following postal articles MUST be registered compulsorily under Regulation 185?\", o: [\"Any parcel exceeding 4 kg in weight\", \"Any insured article\", \"Any article bearing the word \\\"Registered\\\" on the cover\", \"All of the above\"], a: 3, e: \"All listed items (Insured, Parcels >4kg, \\\"Registered\\\" marked covers) are compulsorily registrable.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 188"
+    ],
+    "text": "{ q: \"As per the 2024 revised norms (Regulation 188), the compensation for the loss of a Registered Inland Letter is:\", o: [\"₹100\", \"₹500\", \"30 SDR (Special Drawing Rights) or actual value, whichever is less\", \"Fixed at ₹1,000 regardless of content\"], a: 2, e: \"Compensation is **30 SDR** (Special Drawing Rights) or actual value.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 192"
+    ],
+    "text": "{ q: \"\\\"Acknowledgment Due\\\" (AD) card (Regulation 192) for a registered article:\", o: [\"Is mandatory for all registered articles\", \"Can be attached at the time of posting upon payment of a prescribed fee\", \"Is provided free of charge for all Speed Post articles\", \"Is no longer available; replaced entirely by SMS alerts\"], a: 1, e: \"AD is an optional add-on for a small fee.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 205"
+    ],
+    "text": "{ q: \"Under Regulation 205 (Insurance), the maximum limit for which an article can be insured at a Branch Post Office (BO) is:\", o: [\"₹600\", \"₹10,000\", \"₹20,000\", \"₹1,00,000\"], a: 0, e: \"Insurance limit at a Branch Office (BO) is **₹600**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 205"
+    ],
+    "text": "{ q: \"The maximum insurance limit for an article booked at a Head Post Office or Sub Post Office (Regulation 205) is:\", o: [\"₹20,000\", \"₹50,000\", \"₹1,00,000\", \"₹5,00,000\"], a: 2, e: \"Insurance limit at HO/SO is **₹1,00,000**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 208"
+    ],
+    "text": "{ q: \"Which of the following is NOT a condition for Insurance (Regulation 208)?\", o: [\"The article must be a registered letter or parcel\", \"The article must be sealed in a manner that it cannot be opened without leaving visible traces\", \"The stamps must be affixed apart from each other so they don\\'t overlap seals\", \"The article must be packed in a transparent cover\"], a: 3, e: \"Transparent covers are **not** allowed for insured articles (contents must be concealed).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 215"
+    ],
+    "text": "{ q: \"\\\"Speed Post\\\" (Regulation 215) was laid down as a premium service. The compensation for \\\"Delay\\\" in delivery of a Speed Post article is:\", o: [\"₹1,000\", \"Refund of the Speed Post charges only\", \"Double the Speed Post charges\", \"No compensation for delay\"], a: 1, e: \"Delay of Speed Post = Refund of **Speed Post charges**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 220"
+    ],
+    "text": "{ q: \"\\\"Business Post\\\" (Regulation 220) offers which of the following pre-mailing activities?\", o: [\"Collection, franking, gumming, and addressing\", \"Free delivery of mail\", \"Discount on money orders\", \"Insurance of ordinary letters\"], a: 0, e: \"Business Post offers pre-mailing solutions (stuffing, franking, addressing).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 225"
+    ],
+    "text": "{ q: \"\\\"Media Post\\\" (Regulation 225) allows:\", o: [\"Journalists to send articles for free\", \"Corporate entities to use postcards, envelopes, and aerogrammes as a medium for advertisement\", \"Sending CDs/DVDs at lower rates\", \"Post offices to sell newspapers\"], a: 1, e: \"Media Post is an advertisement service (ads on postcards/envelopes).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 228"
+    ],
+    "text": "{ q: \"Under \\\"Direct Post\\\" (Regulation 228), the minimum quantity of unaddressed promotional mail to be accepted is:\", o: [\"500 pieces\", \"1,000 pieces\", \"5,000 pieces\", \"10,000 pieces\"], a: 1, e: \"Direct Post (unaddressed mail) min quantity is **1,000**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 235"
+    ],
+    "text": "{ q: \"Regulation 235 regarding \\\"Post Office Identity Cards\\\" states that the card is valid for:\", o: [\"1 year\", \"3 years\", \"5 years\", \"Lifetime\"], a: 1, e: \"PO ID cards are valid for **3 years**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 242"
+    ],
+    "text": "{ q: \"Under Regulation 242, which service provides a \\\"Proof of Delivery\\\" (POD) accessible online for bulk customers?\", o: [\"Ordinary Post\", \"Speed Post and Express Parcel\", \"Book Packet\", \"UPC\"], a: 1, e: \"Speed Post and Express Parcel provide online POD.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 245"
+    ],
+    "text": "{ q: \"\\\"Express Parcel\\\" (Regulation 245) is a product specifically designed for:\", o: [\"Retail customers sending gifts\", \"Corporate/Business customers needing time-bound delivery\", \"Sending books only\", \"International shipments only\"], a: 1, e: \"Express Parcel is for corporate/business time-bound delivery (surface/air).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 250"
+    ],
+    "text": "{ q: \"Regarding \\\"Compensation for Insured Articles\\\" (Regulation 250), no compensation is payable if:\", o: [\"The loss was caused by the fault or negligence of the sender (e.g., defective packing)\", \"The article contained prohibited items\", \"The claim is made after 3 months from the date of posting\", \"All of the above\"], a: 3, e: \"No compensation for sender\\'s negligence, prohibited items, or late claims.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 255"
+    ],
+    "text": "{ q: \"Under Regulation 255 of the Post Office Regulations 2024, the \\\"Electronic Money Order\\\" (eMO) service allows the remission of an amount NOT exceeding:\", o: [\"₹2,000\", \"₹5,000\", \"₹10,000\", \"₹50,000\"], a: 1, e: \"eMO limit is **₹5,000**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 260"
+    ],
+    "text": "{ q: \"Regarding the \\\"Alteration of Payee’s Name\\\" in a Money Order (Regulation 260), the remitter may request this change:\", o: [\"Only by paying a second commission equal to the first\", \"Free of charge, provided the money order has not yet been paid\", \"Only if the amount is less than ₹1,000\", \"It is not permitted; the sender must cancel and book a new one\"], a: 1, e: \"Alteration of payee name is **free** if the MO hasn\\'t left the office or been paid.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 265"
+    ],
+    "text": "{ q: \"A Money Order becomes \\\"Void\\\" (Regulation 265) if it remains unpaid at the end of:\", o: [\"The month of issue\", \"The month following the month of issue\", \"6 months from the date of issue\", \"1 year from the date of issue\"], a: 0, e: \"MO becomes void at the end of the **month following the month of issue**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 268"
+    ],
+    "text": "{ q: \"The \\\"Instant Money Order\\\" (iMO) service (Regulation 268) allows for immediate transfer of sums ranging from ₹1,000 up to a maximum of:\", o: [\"₹10,000\", \"₹25,000\", \"₹50,000\", \"₹1,00,000\"], a: 2, e: \"iMO limit is **₹50,000**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 272"
+    ],
+    "text": "{ q: \"Under the \\\"International Financial System\\\" (IFS) for money orders (Regulation 272), the maximum limit for an OUTWARD money order per remitter per year is governed by:\", o: [\"The Postmaster General\", \"RBI Guidelines under FEMA (Foreign Exchange Management Act)\", \"Universal Postal Union (UPU) acts only\", \"The receiving country\\'s rules only\"], a: 1, e: \"Outward remittances are governed by **RBI/FEMA** regulations.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 275"
+    ],
+    "text": "{ q: \"Regarding \\\"Indian Postal Orders\\\" (IPOs) (Regulation 275), the highest denomination available is:\", o: [\"₹50\", \"₹100\", \"₹500\", \"₹1,000\"], a: 1, e: \"Highest IPO denomination is **₹100**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 278"
+    ],
+    "text": "{ q: \"The validity of an Indian Postal Order (Regulation 278) is:\", o: [\"6 months from the last day of the month of issue\", \"12 months from the last day of the month of issue\", \"24 months from the last day of the month of issue\", \"Unlimited\"], a: 2, e: \"IPO validity is **24 months**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 282"
+    ],
+    "text": "{ q: \"Which 2024 amendment (Regulation 282) integrated \\\"NEFT/RTGS\\\" services directly into Post Office Savings Bank (POSB) accounts?\", o: [\"The Digital Payments Amendment\", \"The Core Banking Solution (CBS) mandate\", \"The POSB (NEFT/RTGS) Facility Rules\", \"The IPPB Merger Act\"], a: 2, e: \"NEFT/RTGS facility rules enabled bank transfers to/from POSB.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 288"
+    ],
+    "text": "{ q: \"\\\"Digital Life Certificate\\\" (Jeevan Pramaan) services offered at Post Offices (Regulation 288) are primarily for:\", o: [\"Minors opening accounts\", \"Pensioners to submit proof of life securely\", \"Life Insurance claimants\", \"Employees joining the postal service\"], a: 1, e: \"Digital Life Certificate (Jeevan Pramaan) is for **pensioners**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 292"
+    ],
+    "text": "{ q: \"Under Regulation 292, \\\"Philately Deposit Accounts\\\" (PDA) can be opened with a minimum deposit of:\", o: [\"₹100\", \"₹200\", \"₹500\", \"₹1,000\"], a: 1, e: \"Philately Deposit Account min deposit is **₹200**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 295"
+    ],
+    "text": "{ q: \"\\\"My Stamp\\\" (Regulation 295) is a personalized sheet of postage stamps. The personalized portion (thumbnail image):\", o: [\"Is valid for postage\", \"Is not valid for postage; only the attached stamp is valid\", \"Can be used separately as a stamp\", \"Is valid for international mail only\"], a: 1, e: \"In \\\"My Stamp,\\\" the photo (thumbnail) is **not** valid for postage; only the accompanying stamp is.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 300"
+    ],
+    "text": "{ q: \"Regulation 300 regarding \\\"e-Post Office\\\" (portal) allows customers to:\", o: [\"Send emails to the Postmaster\", \"Buy Philatelic stamps and PLI premiums online\", \"Track the Postman\\'s live location\", \"File RTI applications only\"], a: 1, e: \"e-Post Office is an e-commerce portal for **stamps and PLI payments**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 310"
+    ],
+    "text": "{ q: \"The \\\"Sukanya Samriddhi Account\\\" (Regulation 310) can be opened for a girl child up to the age of:\", o: [\"5 years\", \"8 years\", \"10 years\", \"12 years\"], a: 2, e: \"Sukanya Samriddhi is for girls up to **10 years** old.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 9"
+    ],
+    "text": "{ q: \"Scenario: Mr. A posts a Registered Letter to Mr. B. Before delivery, Mr. A discovers he sent the wrong document. He applies for \\\"Recall of Article\\\" (Regulation 9). The article is intercepted at the delivery office. However, Mr. B (the addressee) demands to know the sender\\'s name. Is the Postmaster bound to disclose the sender\\'s name to the addressee?\", o: [\"Yes, under the RTI Act.\", \"Yes, because the addressee is the rightful owner of the mail.\", \"No, the sender\\'s identity shall not be disclosed to the addressee when an article is recalled.\", \"Yes, but only if Mr. B pays a fee.\"], a: 2, e: \"Privacy of the sender is paramount. The name is **not** disclosed to the addressee during a recall.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 315"
+    ],
+    "text": "{ q: \"Regulation 315 deals with \\\"Complaints.\\\" The preservation period for \\\"Complaints regarding Registered Articles\\\" is:\", o: [\"6 months\", \"12 months\", \"18 months\", \"2 years\"], a: 1, e: \"Complaints for Registered Articles are preserved for **12 months**.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 320"
+    ],
+    "text": "{ q: \"If a sender uses a \\\"Reuse of Used Stamps\\\" (Regulation 320), and it is detected at the office of posting:\", o: [\"The article is forwarded, and the addressee is charged.\", \"The article is detained, and the sender is prosecuted under the Indian Penal Code.\", \"The stamps are defaced, and the article is returned.\", \"The Postmaster warns the sender and accepts it.\"], a: 1, e: \"Reuse of stamps is an offense; the sender can be prosecuted (IPC 263A).\" }"
+  },
+  {
+    "regs": [
+      "Regulation 325"
+    ],
+    "text": "{ q: \"Regarding \\\"Postal Holidays\\\" (Regulation 325), which of the following is NOT a mandatory closed holiday for all Post Offices in India?\", o: [\"Republic Day (26th Jan)\", \"Independence Day (15th Aug)\", \"Mahatma Gandhi\\'s Birthday (2nd Oct)\", \"Good Friday\"], a: 3, e: \"Good Friday is a Gazette holiday, but the **mandatory** closed ones (National Holidays) are Rep Day, Ind Day, and Gandhi Jayanti.\" }"
+  },
+  {
+    "regs": [
+      "Regulation 52"
+    ],
+    "text": "{ q: \"Under Regulation 52 (amended), \\\"Refused\\\" articles are returned to the sender. If the sender also \\\"Refuses\\\" to take it back (e.g., to avoid paying due charges):\", o: [\"The article is destroyed immediately.\", \"The article is sold, and proceeds are credited to the Government.\", \"The Post Office can recover the due amount from the sender as an \\\"Arrear of Land Revenue.\\\"\", \"The Postman keeps the article.\"], a: 2, e: \"If sender refuses return, the dues are recoverable as **Arrears of Land Revenue**.\" }"
+  }
+]

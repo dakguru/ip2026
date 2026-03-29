@@ -1,0 +1,2052 @@
+SCHEDULE OF FINANCIAL POWERS — MCQ BANK
+PART 1: Foundations, General Conditions & Object Heads 01–49 (Schedule II-A)
+(LDCE / PS Group B Standard)
+Q1. With effect from which date was a separate Schedule of Financial Powers drawn up exclusively for the Department of Posts?
+
+A. 1st April, 1988
+B. 1st January, 1985
+C. 30th July, 2021
+D. 1st April, 2024
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+After the bifurcation of the Posts & Telegraphs Department into Department of Posts and Department of Telecommunications, a separate Schedule of Financial Powers for officers of the Department of Posts was drawn up and followed with effect from January 1985.
+
+Elimination:
+A (1st April, 1988) — this is when the DoP was brought under the purview of the erstwhile DFPR 1978, not when the separate schedule was created. C (30th July, 2021) — this is the date of the last revision of financial powers prior to the current revision. D (1st April, 2024) — this is when the new DFPR 2024 came into effect.
+
+Q2. The Delegation of Financial Powers Rules, 1978 (DFPR 1978) has been replaced by DFPR 2024. From which date did DFPR 2024 come into effect?
+
+A. 30th July, 2021
+B. 1st January, 2025
+C. 1st April, 2024
+D. 1st April, 2025
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+The Ministry of Finance replaced DFPR 1978 with DFPR 2024, which came into effect on 1st April, 2024. This necessitated review and revision of the existing Schedules of Financial Powers of the Department of Posts.
+
+Elimination:
+A — date of the last revision under the old framework. B — incorrect; not associated with any such event. D — this is the date when the revised Schedules (II-A, II-B, II-C and III) of DoP came into force, not when DFPR 2024 itself came into effect.
+
+Q3. The revised Schedules of Financial Powers delegated by the Secretary (Posts) under Rule 12(2) of DFPR 2024 came into force on which date?
+
+A. 1st April, 2024
+B. 30th July, 2021
+C. 1st April, 2025
+D. 1st January, 2025
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+The revised delegated powers enclosed in Schedules II-A, II-B, II-C, and III came into force from April 01, 2025, replacing the financial powers contained in the previously existing schedules.
+
+Elimination:
+A — DFPR 2024 effective date, not the DoP schedule revision date. B — date of the last revision (OM No. 6-1/2021-Fin.Coord). D — incorrect; no such milestone on 1st January, 2025.
+
+Q4. Under which Rule of DFPR 2024 has the Secretary (Posts), in consultation with AS&FA, delegated financial powers to HOC, HOD, Independent Directors, and Divisional Heads?
+
+A. Rule 10(2)
+B. Rule 12(3)
+C. Rule 12(2)
+D. Rule 15(1)
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+The Secretary (Posts), in consultation with the AS&FA, delegated financial powers under Rule 12(2) of the Delegation of Financial Powers Rules, 2024 to the extent indicated in the respective schedules.
+
+Elimination:
+B (Rule 12(3)) — this rule deals with the responsibility of the Head of Department for correctness, regularity and propriety of decisions taken by authorized Gazetted Officers, not the basis for delegation. A and D — do not correspond to relevant DFPR provisions in this context.
+
+Q5. Which of the following statements about general conditions for exercise of financial powers is CORRECT?
+
+A. A work requiring sanction of a higher authority may be split into parts to fit within delegated limits.
+B. For a contract extending over a period of time, the value of the first instalment is considered for the purpose of limits.
+C. The total value of the entire currency of a contract shall be taken as the value for applying the sanction limit.
+D. A competent authority to sanction a project is determined on the basis of the largest constituent estimate.
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+If a contract extends over a period of time, the total value over the entire period of its currency shall be taken as the value for the purpose of applying the sanction limit — preventing evasion through time-splitting.
+
+Elimination:
+A — expressly prohibited; no work requiring sanction of higher authority may be sanctioned by splitting into two or more parts. B — only the first instalment value is not the measure; total contract value applies. D — competent authority is determined on the basis of total cost of all constituent estimates, not just the largest one.
+
+Q6. As per the general conditions for exercise of delegated financial powers, which of the following is true regarding the Head of Department's responsibility?
+
+A. Once delegation is made under Rule 12(2), the HOD has no further responsibility.
+B. The HOD shall continue to be responsible for correctness, regularity and propriety of decisions taken by authorized Gazetted Officers.
+C. The IFA bears full responsibility for all financial decisions taken by authorized Gazetted Officers.
+D. The AS&FA assumes responsibility for all decisions taken under DFPR 2024 delegation.
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+As per Rule 12(3) of DFPR 2024, while authorizing financial powers, the Head of the Department shall continue to be responsible for the correctness, regularity, and propriety of the decisions taken by the Gazetted Officers so authorized. Delegation does not dilute the HOD's accountability.
+
+Elimination:
+A — incorrect; delegation does not absolve HOD of responsibility. C — IFA consults and concurs but does not bear primary responsibility for line decisions. D — AS&FA plays a consultative role, not direct responsibility for individual decisions.
+
+Q7. For cases approved by Secretary (Posts) or the Hon'ble Minister-in-charge, which authority must first clear the matter administratively?
+
+A. Divisional Head in consultation with Divisional IFA
+B. Head of Circle in consultation with Circle IFA
+C. Sr. DDG (PAF) in consultation with AS&FA
+D. Head of Department directly to AS&FA
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+All cases to be approved by Secretary (Posts) or the Hon'ble Minister-in-charge must first be cleared administratively by the concerned Head of Circle in consultation with the Circle IFA, and then forwarded to the concerned Member/DGPS for onward submission to AS&FA for financial concurrence/advice.
+
+Elimination:
+A — Divisional Heads clear cases within their own delegated powers; they do not handle cases destined for Secretary/Minister. C — Sr. DDG (PAF) has a separate schedule (II-C); this is not the prescribed channel. D — direct forwarding without Circle clearance is not the procedure.
+
+Q8. For the purpose of Schedule II, who among the following is included in the definition of "Head of Department"?
+
+A. Postmaster of a Head Post Office
+B. Superintendent of Post Offices
+C. Chief Post Master General (CPMG)
+D. Director of Postal Services (DPS)
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+For the purpose of Schedule II, "Head of Department" includes: Secretary PSB, Chief Post Masters General (CPMGs), Chief General Managers, Director RAKNPA, Post Masters General (PMGs), Sr. DDG (PAF), General Managers (PAF), GM (CEPT), Chief Engineers, and Director (Foreign Post).
+
+Elimination:
+A — Postmaster of a Head Post Office is not a Head of Department. B — Superintendents of Post Offices are Divisional Heads. D — DPS is subordinate to CPMG/PMG and not classified as an HOD for Schedule II purposes.
+
+Q9. Consider the following statements about Sr. DDG (PAF):
+
+Statement 1: Sr. DDG (PAF) shall exercise financial powers as contained in Schedule II-A applicable to HOC/HOD.
+Statement 2: Sr. DDG (PAF) shall exercise only such financial powers as contained in Schedule II-C relevant to their operational requirements.
+
+Which is correct?
+
+A. Only Statement 1
+B. Only Statement 2
+C. Both Statement 1 and Statement 2
+D. Neither Statement 1 nor Statement 2
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Sr. DDG (PAF), i.e., Head of Postal Accounts Wing in the Postal Directorate, and General Managers (Finance) shall exercise only such financial powers as contained in Schedule II-C which are relevant to their operational requirements — not the full powers of Schedule II-A.
+
+Elimination:
+A — Sr. DDG (PAF) does not operate under Schedule II-A. C — both cannot be correct simultaneously. D — Statement 2 is indeed correct.
+
+Q10. Which of the following financial powers under Schedule II-A are exercised by the In-charge of Foreign Post?
+
+A. Only Schedule II-A (HOD) powers in all cases
+B. Only Schedule III (Divisional Head) powers
+C. Schedule II-A (HOD) / Schedule II-B (Independent Director) / Schedule III (Divisional Head) as the case may be
+D. Full powers of Schedule II-A applicable to HOC
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+The In-charge of Foreign Post exercises delegated financial powers equivalent to HoD (Schedule II-A) / Independent Director (Schedule II-B) / Divisional Head (Schedule III), as the case may be — reflecting the varied nature of Foreign Post operations.
+
+Elimination:
+A — the In-charge exercises equivalent powers contextually, not always HOD-level. B — not restricted to Schedule III only. D — HOC powers (e.g., exclusively delegated items) are not all extended to Foreign Post In-charge.
+
+Q11. What is the financial power delegated to HOC for ad-hoc payment of arrears of pay and allowances where Circle Accounts Office cannot verify due to destruction of records?
+
+A. Rs. 50,000/-
+B. Rs. 1,00,000/-
+C. Rs. 2,00,000/-
+D. Full Powers
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+HOC may sanction ad-hoc payment not exceeding Rs. 1 Lakh of arrears of pay and allowances where pay fixation was duly verified by the Account Officer but the arrear claims cannot be verified by the Circle Accounts Office due to destruction of records. The corresponding limit for HOD is Rs. 50,000/-.
+
+Elimination:
+A — this is the HOD limit, not HOC. C — not the prescribed limit for this item. D — Full Powers apply only to regular Salaries (Sl. No. 1(i)), not ad-hoc arrears.
+
+Q12. HOC is competent to authorize investigation of claims for arrears of pay and allowances where connected records are not available. What is the minimum age of such claims?
+
+A. Three years
+B. Five years
+C. Six years
+D. Ten years
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Heads of Circles are competent to authorize investigation of claims for arrears of pay and allowances which are more than six years old and in respect of which the connected records are not available in Circle Accounts Office.
+
+Elimination:
+A (Three years) and B (Five years) — below the prescribed threshold. D (Ten years) — no such requirement; the prescribed period is six years.
+
+Q13. What is the limit for grant of honorarium and reward to a Government servant, beyond which IFA consultation is required?
+
+A. Rs. 1,000/- per case
+B. Rs. 2,000/- per case
+C. Rs. 2,500/- per case
+D. Rs. 5,000/- per case
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Honorarium and rewards to Government servants are sanctioned up to the limit prescribed by GoI/DoP, subject to the condition that the amount shall not exceed Rs. 2,500/- in each case without IFA consultation. IFA consultation is required beyond Rs. 2,500/- in each case.
+
+Elimination:
+A (Rs. 1,000/-) — this is the limit for rewards to persons not in Government service in certain categories. B (Rs. 2,000/-) — this is the cash award limit for GDS. D (Rs. 5,000/-) — exceeds the correct threshold.
+
+Q14. A cash award is to be given to a postal employee for exceptional courage displayed in detecting a fraud. What is the maximum financial power delegated for this purpose, and is IFA consultation required?
+
+A. Rs. 5,000/-; IFA not required
+B. Rs. 10,000/-; IFA required
+C. Rs. 10,000/-; IFA not required
+D. Rs. 25,000/-; IFA required
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Cash award to postal employees in any one case for display of exceptional courage and devotion to duty — in saving or protecting Government property in civil disturbances, enemy action, or detection of fraud — is Rs. 10,000/- and IFA consultation is required.
+
+Elimination:
+A (Rs. 5,000/-) — incorrect amount. C — IFA is required, not waived. D (Rs. 25,000/-) — this is the limit for funeral expenses, not cash awards.
+
+Q15. Which of the following reward-related powers under Object Head 05 (Rewards) are delegated to HOC ONLY and NOT to HOD?
+
+i. Cash Award to GDS for outstanding courage
+ii. Rewards to persons not in Government Service for detection/conviction in criminal cases
+iii. Cash Award to postal employees for exceptional courage
+iv. Cash Award for Hindi Pratiyogita
+
+A. i and ii only
+B. i, ii and iv
+C. i and ii only
+D. i, ii, iii and iv
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Cash award to GDS (Rs. 2,000/-) and Rewards to persons not in Government service for furnishing information leading to detection and conviction in criminal cases (Rs. 1,000/-) are delegated to HOC only. Cash award to postal employees (Rs. 10,000/-) and Cash Award for Hindi Pratiyogita are available to both HOC and HOD.
+
+Elimination:
+B — Cash Award for Hindi Pratiyogita is not restricted to HOC only. D — the postal employee cash award (Rs. 10,000/-) is not HOC-exclusive. Options need careful differentiation between HOC-only and general HOC/HOD powers.
+
+Q16. The death or injury of a GDS due to enemy action — is it covered under the cash award for GDS under Object Head 05?
+
+A. Yes, with full financial powers
+B. Yes, but only up to Rs. 5,000/-
+C. No, cases of death or injury due to enemy action will not be considered
+D. Yes, but requires DGPS approval
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Cash award to GDS is for display of outstanding courage and devotion to duty in protecting Government property in civil disturbances or in the face of enemy action. However, cases of death or injury due to enemy action will NOT be considered under these orders.
+
+Elimination:
+A, B, D — all assume enemy action death/injury cases are covered, which they are not. The explicit exclusion is a critical rule.
+
+Q17. Under Object Head 09 (Training Expenses), what is the financial power delegated for domestic training in each case?
+
+A. Rs. 1 Lakh per case
+B. Rs. 2 Lakh per case
+C. Rs. 5 Lakh per case
+D. Full Powers
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For domestic training expenses (fees paid, contingencies, materials, etc., excluding domestic/foreign travel expenses), the financial power delegated is Rs. 2 Lakh in each case. For foreign training, Full Powers are delegated but subject to prior approval of the competent authority (Secretary Posts/MOC/SCoS).
+
+Elimination:
+A (Rs. 1 Lakh) — incorrect amount. C (Rs. 5 Lakh) — exceeds the prescribed limit. D (Full Powers) — applies to foreign training only, not domestic.
+
+Q18. Director RAKNPA has been granted a special power for hiring outsourced services from training institutions. What is the limit?
+
+A. Rs. 50 Lakh per annum
+B. Rs. 1 Crore per annum
+C. Rs. 2 Crore per annum
+D. Rs. 5 Crore per annum
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+The power to hire outsourced services from Training Institutions for conducting specialized training programmes is delegated only to Director RAKNPA up to Rs. 2 Crore per annum. IFA consultation is required for this power.
+
+Elimination:
+A (Rs. 50 Lakh) — limit for market survey/studies by CGM (BD/PD/PLI). B (Rs. 1 Crore per annum) — this is the HOC limit for hiring professionals (CA, GST consultants, etc.). D (Rs. 5 Crore) — no such prescribed limit.
+
+Q19. Under Object Head 13 (Office Expenses), what are the financial powers of HOC and HOD respectively for Contingent (Recurring) expenditure?
+
+A. HOC – Rs. 1 Lakh; HOD – Rs. 50,000/-
+B. HOC – Rs. 3 Lakh; HOD – Rs. 1 Lakh
+C. HOC – Rs. 2 Lakh; HOD – Rs. 1 Lakh
+D. HOC – Rs. 5 Lakh; HOD – Rs. 2 Lakh
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+For Contingent Recurring expenditure (Object Head 13), the delegated powers are: HOC – Rs. 2 Lakhs in each case; HOD – Rs. 1 Lakh in each case. IFA consultation is required beyond Rs. 75,000/- in each case.
+
+Elimination:
+B — those are the figures for Non-Recurring contingent expenditure (HOC – Rs. 3 Lakh; HOD – Rs. 1 Lakh). A and D — incorrect figures not matching the prescribed limits.
+
+Q20. For non-recurring contingent expenditure under Object Head 13, what is the IFA consultation threshold?
+
+A. Rs. 50,000/- per case
+B. Rs. 75,000/- per case
+C. Rs. 1,00,000/- per case
+D. Rs. 2,00,000/- per case
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+For Non-Recurring contingent expenditure, IFA consultation beyond Rs. 1,00,000/- in each case is required. (Note: for Recurring contingent expenditure, the IFA threshold is Rs. 75,000/-.)
+
+Elimination:
+B (Rs. 75,000/-) — this is the IFA threshold for recurring contingent expenditure, not non-recurring. A and D — not the prescribed IFA thresholds for this item.
+
+Q21. The power for petty local purchases of articles of stationery under Object Head 13 is:
+
+A. HOC – Rs. 2 Lakh per annum; HOD – Rs. 1 Lakh per annum
+B. HOC – Rs. 5 Lakh per annum; HOD – Rs. 2 Lakh per annum
+C. HOC – Rs. 3 Lakh per annum; HOD – Rs. 1 Lakh per annum
+D. HOC – Full Powers; HOD – Rs. 5 Lakh per annum
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For petty local purchases of articles of stationery, the delegated financial power is HOC – Rs. 5 Lakh per annum and HOD – Rs. 2 Lakh per annum. IFA consultation is required beyond Rs. 2,00,000/- per case.
+
+Elimination:
+A — incorrect figures. C — non-recurring contingent figures transposed here. D — Full Powers for stationery purchases is not the prescribed limit.
+
+Q22. Which of the following is NOT correct regarding purchase of office equipment under Object Head 13?
+
+A. Office equipment does not include any kind of computer.
+B. Office equipment not exceeding threshold limit of Rs. 1 lakh or three years of useful life may be procured under Object Head 13.
+C. IFA consultation is required for such purchases.
+D. Office equipment exceeding the threshold limit should be classified under Object Head 13 only.
+
+Correct Answer: D
+
+Explanation:
+
+Concept:
+Office equipment exceeding the threshold limit (Rs. 1 lakh or 3 years useful life, whichever is applicable) should be classified as 'Capital' expenditure under Object Head 52 (Machinery and Equipment) — NOT under Object Head 13.
+
+Elimination:
+A — correct; computers are specifically excluded from "office equipment" under OH 13. B — correct threshold for OH 13 classification. C — IFA consultation is indeed required for such purchases.
+
+Q23. What is the financial power delegated for commission charges for Auction of Stores to HOC and HOD respectively?
+
+A. HOC – Rs. 50,000/-; HOD – Rs. 25,000/-
+B. HOC – Rs. 25,000/-; HOD – Rs. 10,000/-
+C. HOC – Rs. 10,000/-; HOD – Rs. 5,000/-
+D. HOC – Full Powers; HOD – Rs. 25,000/-
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Commission charges for Auction of Stores: HOC – up to Rs. 25,000/- on any occasion; HOD – up to Rs. 10,000/- on any occasion — at rates not exceeding those paid by PWD/MSTC or the State Government concerned.
+
+Elimination:
+A — figures transposed. C — underestimates both limits. D — Full Powers is not prescribed for this item.
+
+Q24. For outsourcing of services for Postal/RMS/MMS Operations and Security/Housekeeping, which 7 major Postal Circles have been granted a higher financial limit of Rs. 20 Crore per annum?
+
+A. Delhi, Karnataka, Maharashtra, Tamil Nadu, Rajasthan, UP, West Bengal
+B. Delhi, Karnataka, Maharashtra, Tamil Nadu, Telangana, UP, West Bengal
+C. Delhi, Karnataka, Andhra Pradesh, Tamil Nadu, Telangana, UP, West Bengal
+D. Delhi, Karnataka, Maharashtra, Tamil Nadu, Telangana, UP, Kerala
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+The 7 Heads of Circles granted the higher limit of Rs. 20 Crore per annum for outsourcing are: Delhi, Karnataka, Maharashtra, Tamil Nadu, Telangana, Uttar Pradesh, and West Bengal Postal Circles. All remaining HOCs have Rs. 10 Crore per annum. This power is delegated to HOC only.
+
+Elimination:
+A — Rajasthan is NOT among the 7; Telangana is. C — Andhra Pradesh is not in the list; Maharashtra is. D — Kerala is not in the list; Telangana is.
+
+Q25. Funeral expenses for a departmental employee who dies in departmental premises or on duty at outstations (where relatives cannot dispose of the body) — what is the financial limit and IFA requirement?
+
+A. Rs. 10,000/- per case; IFA required
+B. Rs. 25,000/- per case; IFA not required
+C. Rs. 25,000/- per case; IFA required
+D. Rs. 50,000/- per case; IFA not required
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+HOC/HOD may sanction funeral expenses incidental to the death of departmental employees in departmental premises or on duty at outstations where their bodies cannot be disposed of by relatives or friends up to Rs. 25,000/- in each case. IFA consultation is NOT required for this item.
+
+Elimination:
+A (Rs. 10,000/-) — this is the cash award limit for postal employees for exceptional courage. C — IFA is not required for funeral expenses. D (Rs. 50,000/-) — this is the limit for dismantling of buildings, not funeral expenses.
+
+Q26. The financial power for Foundation Stone laying ceremony, inauguration of new service, celebration of Postal Week, etc. is:
+
+A. Up to Rs. 2 Lakhs; IFA not required
+B. Up to Rs. 5 Lakhs per occasion; IFA required beyond Rs. 2 Lakhs
+C. Up to Rs. 5 Lakhs per occasion; IFA not required
+D. Up to Rs. 10 Lakhs; IFA required beyond Rs. 5 Lakhs
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For Foundation Stone laying ceremony, opening of public buildings, inauguration of new services, celebration of Postal Week, illumination of buildings, etc., the financial power is up to Rs. 5 Lakhs on each occasion, and IFA consultation is required beyond Rs. 2 Lakhs in each case.
+
+Elimination:
+A (Rs. 2 Lakhs) — this is only the IFA threshold, not the full delegated limit. C — IFA consultation is indeed required (beyond Rs. 2 Lakhs). D (Rs. 10 Lakhs) — higher than the prescribed limit.
+
+Q27. Under Object Head 14 (Rent, Rates & Taxes), what is the financial power of HOC for renting of accommodation (including Inspection Rooms/Rest Houses) for all classes of cities?
+
+A. Rs. 2 Lakh per month
+B. Rs. 5 Lakh per month
+C. Rs. 10 Lakh per month
+D. Full Powers
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+HOC may sanction renting of accommodation (including Inspection Rooms/Rest Houses) up to Rs. 10 Lakh per month for all classes of cities in each case. For HOD, limits vary by city class: X Class – Rs. 2 Lakh/month; Y Class – Rs. 1 Lakh/month; Z Class – Rs. 50,000/month.
+
+Elimination:
+A (Rs. 2 Lakh) — this is the HOD limit for X class city only. B — not a prescribed limit. D (Full Powers) — not applicable; specific monetary limits are prescribed.
+
+Q28. For renting of accommodation for residential and other purposes (not office/office-cum-residence), what is the power for Y Class city?
+
+A. Rs. 30,000/- per month
+B. Rs. 20,000/- per month
+C. Rs. 15,000/- per month
+D. Rs. 10,000/- per month
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For renting of accommodation required for residential and other purposes (Sl. No. 11(i)(c)), the delegated powers are: X Class city – Rs. 30,000/- per month; Y Class city – Rs. 20,000/- per month; Z Class city – Rs. 15,000/- per month.
+
+Elimination:
+A (Rs. 30,000/-) — this is the X class city limit. C (Rs. 15,000/-) — this is the Z class city limit. D (Rs. 10,000/-) — not a prescribed limit for residential accommodation renting.
+
+Q29. While renting office-cum-residence accommodation, what is the maximum period for which accommodation can be hired at a time?
+
+A. Two years
+B. Three years
+C. Five years
+D. Seven years
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Accommodation shall not be hired for a period exceeding five years at a time. This is one of the restrictive conditions under Sl. No. 11(i)(b) for renting of office-cum-residence accommodation.
+
+Elimination:
+A and B — below the prescribed maximum period. D (Seven years) — exceeds the prescribed limit. The five-year cap is intended to ensure regular review of accommodation needs.
+
+Q30. For renting of accommodation in project areas/new townships for Postal Staff, what is the maximum rent as a percentage of the capital cost of the building?
+
+A. 5%
+B. 8%
+C. 10%
+D. 12%
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For renting of residential accommodation for Postal staff in project areas/new townships (Sl. No. 11(i)(d)), the rent of the building shall not exceed 8% of the capital cost of the building. The type of accommodation should correspond to the terms laid down for officials in various pay groups, subject to a variation up to 5%.
+
+Elimination:
+A (5%) — this is the permissible variation in accommodation type, not the rent cap. C (10%) and D (12%) — both exceed the prescribed ceiling.
+
+Q31. Under Object Head 16 (Printing and Publication), what is the IFA consultation threshold for Printing and Binding through Directorate of Printing?
+
+A. Rs. 50,000/-
+B. Rs. 1,00,000/-
+C. Rs. 2,00,000/-
+D. Rs. 5,00,000/-
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+For printing and binding through the Directorate of Printing (including stationery for printing), Full Powers are delegated. However, IFA consultation is required beyond Rs. 2,00,000/- in each case. The same threshold (Rs. 2,00,000/-) applies to printing through private presses and for official/non-official publications.
+
+Elimination:
+A (Rs. 50,000/-) — this is the IFA threshold for "Others" category under printing. B (Rs. 1,00,000/-) — incorrect. D (Rs. 5,00,000/-) — exceeds the prescribed IFA threshold for this item.
+
+Q32. For "Others" category under Object Head 16 (Printing and Publication — Sl. No. 12(i)(c)), what is the annual limit and IFA threshold?
+
+A. Rs. 1 Lakh per annum; IFA beyond Rs. 25,000/-
+B. Rs. 1.5 Lakh per annum; IFA beyond Rs. 50,000/-
+C. Rs. 2 Lakh per annum; IFA beyond Rs. 1,00,000/-
+D. Rs. 2 Lakh per annum; IFA beyond Rs. 50,000/-
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under "Others" category of Printing and Publication (Sl. No. 12(i)(c)), the delegated power is Rs. 1.5 Lakh per annum, with IFA consultation required beyond Rs. 50,000/- in each case.
+
+Elimination:
+A (Rs. 1 Lakh) — incorrect annual limit. C and D (Rs. 2 Lakh) — incorrect annual limit for this specific sub-item.
+
+Q33. For renting of equipment under Object Head 18 (Rent for Others), what is the financial power delegated, and when is IFA required?
+
+A. Rs. 10 Lakh per case; IFA beyond Rs. 1,00,000/-
+B. Rs. 25 Lakh per case; IFA beyond Rs. 2,00,000/-
+C. Rs. 25 Lakh per case; IFA beyond Rs. 5,00,000/-
+D. Full Powers; IFA beyond Rs. 2,00,000/-
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For renting of equipment and other various items (office equipment, computers, communication equipment, A/C, security equipment, furniture, etc.) under Object Head 18, the power is Rs. 25 Lakh in each case with IFA consultation required beyond Rs. 2,00,000/- in each case.
+
+Elimination:
+A — underestimates the delegated limit. C — incorrect IFA threshold. D — Full Powers is not prescribed; Rs. 25 Lakh is the specific ceiling.
+
+Q34. For hiring of vehicles in emergent cases under Object Head 18, what is the limit and maximum duration?
+
+A. Rs. 1 Lakh per month per vehicle; up to 6 months
+B. Rs. 2 Lakh per month per vehicle; up to 3 months
+C. Rs. 2 Lakh per month per vehicle; up to 6 months
+D. Rs. 5 Lakh per month per vehicle; up to 3 months
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For hiring of vehicles in emergent cases, the delegated power is Rs. 2 Lakh in each case per month per vehicle up to 3 months. IFA consultation is required beyond Rs. 50,000/- in each case.
+
+Elimination:
+A (Rs. 1 Lakh; 6 months) — both figures wrong. C (6 months) — duration exceeds the prescribed limit of 3 months. D (Rs. 5 Lakh) — exceeds the prescribed limit.
+
+Q35. Object Head 19 (Digital Equipment) covers procurement of hardware and software where the cost of individual items does NOT exceed:
+
+A. Rs. 50,000/- or two years useful life
+B. Rs. 1 Lakh or three years useful life
+C. Rs. 2 Lakh or five years useful life
+D. Rs. 5 Lakh or ten years useful life
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Digital Equipment under Object Head 19 covers expenses classified as revenue expenditure where the cost of individual items does not exceed Rs. 1 lakh or three years of useful life, either of the two as decided by the Government. Consumables like toner and cartridges for printers are classified under revenue expenditure irrespective of cost.
+
+Elimination:
+A, C, D — incorrect thresholds. The Rs. 1 lakh / 3-year threshold is a standard Government rule applied consistently across Object Heads 13, 19, and related heads.
+
+Q36. Which of the following items is CORRECTLY matched with its delegated financial power under Object Head 21 (Material and Supplies)?
+
+A. Purchases for Postal Stores Depot — Rs. 50 Lakh; HOC only
+B. Purchases for Postal Stores Depot — Full Powers; HOC only; IFA beyond Rs. 2,00,000/-
+C. Purchase of Stores required for works — Rs. 25 Lakh; HOC and HOD
+D. Purchase through Government Press — Rs. 5 Lakh; both HOC and HOD
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Purchases for Postal Stores Depot have Full Powers and are delegated to HOC only. IFA consultation is required beyond Rs. 2,00,000/- in each case. The purchase must be for items to be stocked/issued through Postal Stores Depot and procured centrally as per Directorate orders.
+
+Elimination:
+A — the limit is Full Powers, not Rs. 50 Lakh. C — Purchase of Stores required for works is also HOC-only with Full Powers. D — Purchase through Government Press/Stationery Offices is also HOC-only with Full Powers.
+
+Q37. Under Object Head 26 (Advertising and Publicity), advertisements are to be released through which agencies?
+
+A. Any private agency approved by the Department
+B. BoC / DAVP only
+C. Directly by the concerned Circle
+D. Ministry of Information and Broadcasting
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Advertising charges under OH 26 are subject to the condition that advertisements are to be released through BoC / DAVP only. The financial limit for advertising charges is Rs. 5 Lakh per case, with IFA consultation required beyond Rs. 2,00,000/-.
+
+Elimination:
+A — private agency releases are not permitted without routing through BoC/DAVP. C — Circles cannot release advertisements directly. D — Ministry of I&B is not the prescribed channel; DAVP functions under it but the specific direction is BoC/DAVP.
+
+Q38. Minor Civil and Electrical Works for Government Buildings vs. Rented Buildings — which correctly states the limits?
+
+A. Government Buildings – Rs. 5 Lakh; Rented Buildings – Rs. 10 Lakh
+B. Government Buildings – Rs. 10 Lakh; Rented Buildings – Rs. 5 Lakh
+C. Government Buildings – Rs. 10 Lakh; Rented Buildings – Rs. 10 Lakh
+D. Government Buildings – Rs. 5 Lakh; Rented Buildings – Rs. 5 Lakh
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under Object Head 27 (Minor Civil and Electrical Works): Government Buildings — Rs. 10 Lakh in each case; Rented Buildings — Rs. 5 Lakh in each case. The rented building expenditure is subject to additional conditions including recovery from rent payable and certainty of Government's continued possession for 5 years.
+
+Elimination:
+A — figures transposed. C — both at Rs. 10 Lakh is incorrect. D — both at Rs. 5 Lakh is incorrect.
+
+Q39. The power of dismantling of a building is delegated to whom and what is the limit?
+
+A. HOD; up to Rs. 25 Lakh
+B. HOC only; up to Rs. 50 Lakh
+C. HOC and HOD both; Rs. 25 Lakh each
+D. Independent Directors only; Rs. 10 Lakh
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+The power of dismantling of buildings is delegated exclusively to HOC only and the financial limit is up to Rs. 50 Lakh. IFA consultation is required. This is one of the several powers under Object Head 27 that are HOC-exclusive.
+
+Elimination:
+A — power belongs to HOC only, not HOD; also the limit is Rs. 50 Lakh not Rs. 25 Lakh. C — not delegated to HOD. D — this power is not part of Independent Directors' schedule.
+
+Q40. Under Object Head 28 (Professional Services), what is the financial power for engaging/hiring professionals such as Chartered Accountants, Artists, GST Consultants, etc.?
+
+A. HOC – Rs. 50 Lakh per annum; HOD – Rs. 10 Lakh per annum
+B. HOC – Rs. 1 Crore per annum; HOD – Rs. 20 Lakh per annum
+C. HOC – Rs. 2 Crore per annum; HOD – Rs. 50 Lakh per annum
+D. HOC – Full Powers; HOD – Rs. 25 Lakh per annum
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For engagement/hiring of professionals (Chartered Accountants, Artists, GST Consultants, etc.) under Object Head 28, the delegated powers are: HOC – Rs. 1 Crore per annum and HOD – Rs. 20 Lakh per annum. IFA consultation is required.
+
+Elimination:
+A — limits are too low. C — Rs. 2 Crore is the limit for RAKNPA training outsourcing, not professional services. D — Full Powers not prescribed for this item.
+
+Q41. Non-recurring contingent expenditure for market surveys/studies and hiring of consultants for functional requirements is sanctioned by which officers and up to what limit?
+
+A. All HODs; Rs. 25 Lakh per case
+B. CGM (BD), CGM (PD) and CGM (PLI) only; Rs. 50 Lakh per case
+C. HOC only; Rs. 1 Crore per case
+D. Secretary PSB only; Rs. 2 Crore per case
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+The power to sanction non-recurring contingent expenditure for market survey/studies and hiring of consultants for functional requirements is restricted to CGM (BD), CGM (PD), and CGM (PLI) only, up to Rs. 50 Lakh for each case. IFA consultation is required beyond Rs. 2 Lakh.
+
+Elimination:
+A — not all HODs have this power; it is restricted to specific CGMs. C — this specific item is not an HOC-level exercise. D — the Rs. 50 Lakh limit is for the specified CGMs, not an unlimited Secretary power.
+
+Q42. Which of the following correctly describes the condition for HOC to initiate prosecution in criminal cases?
+
+A. HOC may initiate prosecution in all types of criminal cases.
+B. HOC is competent to initiate prosecution in non-cognizable criminal cases.
+C. HOC requires DGPS consent for prosecution in non-cognizable cases.
+D. HOC may initiate prosecution only in civil cases without consent.
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under Object Head 28 (Professional Services — Legal charges), Heads of Circles are competent to initiate prosecution in non-cognizable criminal cases. However, consent of DGPS is necessary for defence or for the institution of Civil Cases.
+
+Elimination:
+A — HOC cannot initiate prosecution in all types; the specific authorization is for non-cognizable criminal cases. C — DGPS consent is required for civil cases, not non-cognizable criminal cases. D — inverts the rule; civil cases require DGPS consent.
+
+Q43. Under Object Head 35 (Repair and Maintenance), what is the IFA consultation threshold?
+
+A. Rs. 50,000/-
+B. Rs. 75,000/-
+C. Rs. 1,00,000/-
+D. Rs. 2,00,000/-
+
+Correct Answer: D
+
+Explanation:
+
+Concept:
+For Repair and Maintenance for official or functional use (Sl. No. 20), Full Powers are delegated. IFA consultation is required beyond Rs. 2,00,000/- in each case. Object Head 35 excludes expenditure on upgradation, mid-life rehabilitation, retrofitting and/or reconditioning.
+
+Elimination:
+A (Rs. 50,000/-) — IFA threshold for hiring vehicles in emergent cases. B (Rs. 75,000/-) — IFA threshold for recurring contingent expenditure. C (Rs. 1,00,000/-) — IFA threshold for non-recurring contingent expenditure.
+
+Q44. Match the following Object Heads with their correct descriptions:
+
+Object Head	Description
+i. OH 35	P. Bank service charges, MDR charges, DBT charges
+ii. OH 39	Q. Repair and maintenance of equipment, vehicles, furniture
+iii. OH 40	R. Awards and prizes to eminent persons and organizations
+iv. OH 31	S. Grants-in-Aid including welfare activities
+A. i-Q, ii-P, iii-R, iv-S
+B. i-P, ii-Q, iii-R, iv-S
+C. i-Q, ii-R, iii-P, iv-S
+D. i-R, ii-P, iii-S, iv-Q
+
+Correct Answer: A
+
+Explanation:
+
+Concept:
+OH 35 = Repair and Maintenance (Q); OH 39 = Bank and Agency Charges (P); OH 40 = Awards and Prizes (R); OH 31 = Grants-in-Aid General — for welfare activities (S).
+
+Elimination:
+B — transposes OH 35 and OH 39 descriptions. C and D — multiple incorrect pairings.
+
+Q45. The power to sanction Awards and Prizes (Object Head 40) is:
+
+A. Delegated to both HOC and HOD with Full Powers
+B. Delegated to HOC only with Full Powers
+C. Delegated to Independent Directors only
+D. Requires Secretary (Posts) approval in all cases
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Awards and Prizes (Object Head 40 — Sl. No. 22) is delegated with Full Powers and is restricted to HOC only. IFA consultation is required for such awards and prizes given by the Government to eminent persons and organizations.
+
+Elimination:
+A — not delegated to HOD. C — not restricted to Independent Directors. D — Secretary's approval is not required since Full Powers are delegated to HOC.
+
+Q46. Grant-in-Aid to co-operative societies for initial purchase of furniture (Object Head 31) — what is the power per society?
+
+A. Rs. 2,000/-
+B. Rs. 5,000/-
+C. Rs. 10,000/-
+D. Rs. 25,000/-
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+The delegated power for Grant-in-Aid to co-operative societies for initial purchase of furniture etc. is Rs. 5,000/- for each society. A separate provision allows grant of interest-free recoverable loan of Rs. 10,000/- per co-operative society.
+
+Elimination:
+A (Rs. 2,000/-) — cash award limit for GDS. C (Rs. 10,000/-) — this is the interest-free loan limit, not the grant-in-aid for furniture. D (Rs. 25,000/-) — this is the funeral expenses limit.
+
+Q47. Under Object Head 49 (Other Revenue Expenditure), the waiver of second commission on IPOs presented after six months of issue is permitted if the value of IPOs does not exceed:
+
+A. Rs. 500/-
+B. Rs. 1,000/-
+C. Rs. 2,000/-
+D. Rs. 5,000/-
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Waiver of recovery of second commission on IPOs presented for payment after six months of issue is permitted where the delay is entirely due to action of a public authority (Court, Post Office, etc.) or circumstances beyond control of the payee/purchaser. The value of IPOs shall not exceed Rs. 1,000/- in each case. IFA consultation is required.
+
+Elimination:
+A (Rs. 500/-) — too low. C (Rs. 2,000/-) and D (Rs. 5,000/-) — exceed the prescribed limit of Rs. 1,000/-.
+
+Q48. Which of the following statements about compensation of losses under Object Head 49 is CORRECT?
+
+A. IFA consultation is mandatory for all compensation of losses.
+B. HOC may sanction compensation for loss of inland insured articles, and IFA consultation is not required.
+C. Compensation of losses requires Secretary (Posts) approval in each case.
+D. HOD may sanction compensation for loss up to Rs. 10,000/- per case.
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+A Head of Circle may sanction compensation for: (1) loss of or damage to inland insured articles; (2) loss of an inland uninsured registered letter/packet/parcel or damage caused in the course of transmission through the post. The powers are as per Directorate instructions, and IFA consultation is NOT required (Without IFA consultation).
+
+Elimination:
+A — IFA is specifically not required for compensation of losses. C — Full Powers are delegated to HOC; Secretary's approval not needed. D — this item is not separately delegated to HOD with a specific monetary limit.
+
+Q49. Demurrage/Wharfage charges under Object Head 49 — what reporting obligation exists?
+
+A. Each case exceeding Rs. 10,000/- to be reported to the Directorate.
+B. Each case exceeding Rs. 25,000/- to be reported to the Circle.
+C. Each case exceeding Rs. 50,000/- to be reported to the Directorate.
+D. No reporting obligation; IFA consultation suffices.
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Full Powers are delegated for Demurrage/Wharfage charges, subject to the condition that each case exceeding Rs. 50,000/- is to be reported to the Directorate. Additionally, airlifting of stores should be resorted to only in rare cases of extreme urgency, with such cases reported to the Directorate annually.
+
+Elimination:
+A (Rs. 10,000/-) and B (Rs. 25,000/-) — incorrect thresholds. D — reporting to Directorate is a separate obligation beyond IFA consultation.
+
+Q50. Which of the following expenses are classified as revenue expenditure under Object Head 19 (Digital Equipment), IRRESPECTIVE of their cost?
+
+A. Computers and laptops
+B. External hard drives and SSDs
+C. Toner and cartridge for printers
+D. Switches and network routers
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+The threshold limit (Rs. 1 lakh or 3 years useful life) for Object Head 19 (Digital Equipment) does not apply to consumables like toner and cartridge for printers — these shall always be classified under revenue expenditure irrespective of cost, since they are consumable in nature.
+
+Elimination:
+A (Computers) — classified based on the threshold limit. B (External hard drives/SSDs) — subject to threshold limit. D (Switches/routers) — treated as digital equipment subject to threshold limit classification.
+
+
+PART 2: Object Heads 51–77, Write-Offs, Other Financial Powers & Schedule II-B (Independent Directors)
+(LDCE / PS Group B Standard)
+Q51. Procurement of new operational vehicle against a condemned operational vehicle under Object Head 51 (Motor Vehicles) is delegated to:
+
+A. Both HOC and HOD with Full Powers
+B. HOC only, with Full Powers for replacement against condemnation only
+C. HOD only, with Full Powers
+D. Independent Directors with powers up to Rs. 10 Lakh
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under Object Head 51 (Motor Vehicles), the power to procure a new operational vehicle against a condemned one is delegated to HOC only, with Full Powers for replacement against condemnation only. IFA consultation is required. This is also the same for procurement of new Inspection Vehicle against condemned inspection vehicle.
+
+Elimination:
+A — HOD does not have this power; it is HOC-exclusive. C — incorrect authority. D — not delegated to Independent Directors under this Schedule.
+
+Q52. For purchase of Desktop Computers for official use under non-scheme, what is the financial limit?
+
+A. Rs. 2 Lakh per case
+B. Rs. 5 Lakh per case
+C. Rs. 10 Lakh per case
+D. Rs. 20 Lakh per case
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under Object Head 71 (ICT Equipment), the financial power for purchase of Desktop Computers for official use under non-scheme is Rs. 5 Lakh in each case. IFA consultation is required.
+
+Elimination:
+A (Rs. 2 Lakh) — this is the limit for digital equipment under Schedule II-B. C (Rs. 10 Lakh) — this is the limit for construction of postal buildings. D (Rs. 20 Lakh) — this is the limit for replacement purchase of desktop computers under non-scheme.
+
+Q53. What is the financial limit for purchase of Desktop Computers for replacement under non-scheme?
+
+A. Rs. 5 Lakh per case
+B. Rs. 10 Lakh per case
+C. Rs. 20 Lakh per case
+D. Full Powers
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+The power for purchase of Desktop Computers for replacement to be incurred under non-scheme is up to Rs. 20 Lakh in each case. IFA consultation is required. This is distinguished from the Rs. 5 Lakh limit for fresh (non-replacement) purchases.
+
+Elimination:
+A (Rs. 5 Lakh) — this is the limit for fresh procurement, not replacement. B (Rs. 10 Lakh) — not the prescribed limit. D (Full Powers) — not applicable; a specific monetary ceiling is prescribed.
+
+Q54. Procurement of laptop/notebook for eligible officers is delegated to HOC only. What is the price ceiling for devices with Make-in-India (MII) component of more than 40%?
+
+A. Rs. 1,00,000/- + taxes
+B. Rs. 1,20,000/- + taxes
+C. Rs. 1,30,000/- + taxes
+D. Rs. 1,50,000/- + taxes
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+For procurement of laptops/notebooks for eligible officers (HOC only), the price ceiling is Rs. 1,00,000/- + taxes generally. However, for devices with a Make-in-India (MII) component of more than 40%, the price ceiling is Rs. 1,30,000/- + taxes. The ceiling is inclusive of standard software costs.
+
+Elimination:
+A — this is the standard ceiling without MII benefit. B (Rs. 1,20,000/-) — not a prescribed ceiling. D (Rs. 1,50,000/-) — exceeds the prescribed ceiling even for MII devices.
+
+Q55. For procurement of laptops for office use only (not for issue to individual officers), the power is HOC-only. What is the financial limit?
+
+A. Rs. 2 Lakh per annum
+B. Rs. 5 Lakh per annum
+C. Rs. 10 Lakh per annum
+D. Full Powers
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+HOC is delegated power to procure laptops for office use only (not for issue to individuals) up to Rs. 5 Lakh per annum. IFA consultation is required. Urgency/necessity must be recorded by HOC and procurement must follow GFR provisions.
+
+Elimination:
+A (Rs. 2 Lakh) — incorrect limit. C (Rs. 10 Lakh) — exceeds the prescribed limit. D — Full Powers not applicable; Rs. 5 Lakh per annum is the prescribed ceiling.
+
+Q56. Sanction of project estimates for construction/reconstruction of postal buildings or staff quarters is:
+
+A. Delegated to both HOC and HOD up to Rs. 5 Crores each
+B. Delegated to HOC only up to Rs. 10 Crores; IFA required
+C. Delegated to HOD only up to Rs. 2 Crores; IFA required
+D. Requires Secretary (Posts) approval in all cases
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under Object Head 72 (Buildings and Structures), sanction of project estimates for construction or reconstruction of all types of postal buildings or staff quarters is delegated to HOC only up to Rs. 10 Crores. IFA consultation is required. The limit includes ETP charges for CPWD/State PWD works.
+
+Elimination:
+A — not delegated to HOD and limit is Rs. 10 Crores, not Rs. 5 Crores. C — not delegated to HOD for this item. D — Full Powers up to Rs. 10 Crores are delegated to HOC; Secretary approval not needed within this limit.
+
+Q57. Addition and alteration including replacement of installations to non-residential and residential buildings — what is the financial limit in each case?
+
+A. Rs. 1 Crore for non-residential; Rs. 50 Lakh for residential
+B. Rs. 2 Crores each (excluding overhead charges)
+C. Rs. 5 Crores each (including overhead charges)
+D. Rs. 10 Crores for non-residential; Rs. 2 Crores for residential
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For both addition/alteration including replacement of installations to non-residential buildings and residential buildings, the financial limit is Rs. 2 Crores each case, excluding overhead charges. IFA consultation is required in both cases.
+
+Elimination:
+A — incorrect; both non-residential and residential have the same Rs. 2 Crore limit. C — the limit is Rs. 2 Crores, not Rs. 5 Crores, and overhead charges are excluded. D — construction of buildings (OH 72(i)) is Rs. 10 Crores (HOC only); addition/alteration is Rs. 2 Crores.
+
+Q58. Under Object Head 74 (Furniture and Fixtures), what governs which items are procured under this head vs. Object Head 13?
+
+A. Furniture costing less than Rs. 50,000/- goes under OH 74; above under OH 13
+B. Furniture exceeding threshold limit of Rs. 1 lakh or 3 years useful life is classified under OH 74
+C. All furniture irrespective of cost is classified under OH 74
+D. Furniture for office use goes under OH 13; residential furniture under OH 74
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Furniture and fixtures exceeding the threshold limit of Rs. 1 lakh or 3 years of useful life (either of the two) are classified under Object Head 74 (Furniture and Fixtures) as capital expenditure. Items within the threshold are treated as revenue expenditure under Object Head 13. Full Powers are delegated under OH 74 with IFA consultation required.
+
+Elimination:
+A — incorrect; the threshold is Rs. 1 lakh/3 years, not Rs. 50,000/-. C — not all furniture goes under OH 74; the threshold determines the classification. D — purpose of use does not determine the classification; cost/life threshold does.
+
+Q59. Object Head 76 covers Upgradation and Procurement of Heritage Assets. Heritage Assets are recognised in the asset register at:
+
+A. Their market value
+B. Their original purchase price
+C. The nominal value of Rs. 1/-
+D. Their written down value
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Object Head 76 covers rehabilitation, overhaul, retrofitting of heritage assets recognised and recorded in the asset register at the nominal value of Rs. 1/-. It also includes upgradation 'not elsewhere classified' and expenditure on procurement of items of fine art and of cultural and archaeological importance. This power is delegated to HOC only.
+
+Elimination:
+A (market value) — heritage assets are not recorded at market value. B (original purchase price) — incorrect; the nominal value principle applies. D (written down value) — not applicable; the nominal value of Rs. 1/- is prescribed.
+
+Q60. Vehicles which have reached 15 years of age are to be scrapped through which facility? Who has the power for this decision?
+
+A. Any registered scrap dealer; HOD
+B. Registered Vehicle Scrapping Facility (RVSF) established under MoRTH guidelines; HOC only
+C. CPWD; Both HOC and HOD
+D. Any Government agency; Secretary (Posts)
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+The decision for condemnation of vehicles which have reached 15 years of age is delegated to HOC only with Full Powers. Such vehicles must be scrapped through Registered Vehicle Scrapping Facility (RVSF) only, established in accordance with guidelines issued by the Ministry of Road Transport and Highways (MoRTH). IFA consultation is required.
+
+Elimination:
+A — scrapping through any registered dealer is not permitted; only RVSF. C — CPWD is not the agency for vehicle scrapping. D — this power is specifically delegated to HOC, not Secretary Posts.
+
+Q61. Under Object Head 64 (Write-Offs), what is the power for writing off loss of revenue, and to whom is it delegated?
+
+A. Rs. 10,000/- per case; HOC and HOD both
+B. Rs. 5,000/- per case; HOC only; IFA required
+C. Rs. 50,000/- per case; HOC only; IFA required
+D. Full Powers; HOC only; without IFA
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Write off of loss of revenue is delegated to HOC only, up to Rs. 5,000/- per case. IFA consultation is required. The power must be exercised per GFR conditions, subject to thorough investigation and there should be no serious negligence or procedural defect.
+
+Elimination:
+A — limit is Rs. 5,000/-, not Rs. 10,000/-; and it is HOC only. C — Rs. 50,000/- is the limit for write-off of irrecoverable stores losses/public money, not revenue. D — Full Powers are not prescribed; IFA is required.
+
+Q62. Write-off of irrecoverable losses of stores or public money (Object Head 64) is delegated to HOC only at what limit?
+
+A. Rs. 5,000/- per case
+B. Rs. 25,000/- per case
+C. Rs. 50,000/- per case
+D. Rs. 1,00,000/- per case
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Write-off of irrecoverable losses of stores or public money is delegated to HOC only at Rs. 50,000/- per case. The same limit applies to write-off due to deficiencies and depreciation in the value of stores (other than motor vehicles/motorcycles) including losses on food grains, sugar, etc. IFA consultation is required in both cases.
+
+Elimination:
+A (Rs. 5,000/-) — this is the limit for write-off of loss of revenue. B (Rs. 25,000/-) — not a prescribed limit for write-offs. D (Rs. 1,00,000/-) — exceeds the prescribed limit.
+
+Q63. Regarding write-off of losses, which of the following is CORRECT?
+
+Statement 1: Losses due to one specific cause like fire, theft, or flood should be written off at one time only.
+Statement 2: A quarterly statement of write-off losses should be submitted to the Integrated Finance Division.
+Statement 3: Losses arising out of one incident may be split up and written off on different dates if each amount is within the prescribed limit.
+
+A. Only Statement 1 and 2 are correct
+B. Only Statement 2 and 3 are correct
+C. Only Statement 1 and 3 are correct
+D. All three statements are correct
+
+Correct Answer: A
+
+Explanation:
+
+Concept:
+Losses due to one specific cause (fire, theft, flood) must be written off at one time only — they cannot be split on different dates to avoid sanction of higher authority. A quarterly statement of write-off losses must be submitted to the Integrated Finance Division. Statement 3 is expressly prohibited.
+
+Elimination:
+B — Statement 3 is incorrect; splitting is specifically prohibited. C — Statement 3 is incorrect. D — Statement 3 is wrong.
+
+Q64. Under "Other Financial Powers" (Sl. No. 35), what is the financial limit for conveyance of mails by road including RTN contract?
+
+A. Full Powers; available to both HOC and HOD
+B. Up to Rs. 10 Crores per contract; HOC only; IFA beyond Rs. 2,00,000/-
+C. Up to Rs. 5 Crores per contract; HOC only; IFA required
+D. Up to Rs. 2 Crores per contract; HOC and HOD; IFA required
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Conveyance of mails by road including RTN contract is delegated to HOC only up to Rs. 10 Crores per contract. IFA consultation is required beyond Rs. 2,00,000/- in each case. This is one of the largest single financial delegations to HOC.
+
+Elimination:
+A — not delegated to HOD; Full Powers not prescribed for road conveyance. C — limit is Rs. 10 Crores, not Rs. 5 Crores. D — not delegated to HOD; limit is Rs. 10 Crores.
+
+Q65. Mail conveyance by "Other means" (emergency, without tender) — what is the limit and maximum period allowed?
+
+A. Rs. 1,00,000/- per month; up to 6 months
+B. Rs. 2,50,000/- per month per route; up to 3 months
+C. Rs. 5,00,000/- per month; up to 2 months
+D. Rs. 2,50,000/- per month per route; up to 6 months
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For conveyance of mails by other means in emergency without inviting tenders, the limit is Rs. 2,50,000/- per month on each route/per case, for a period not exceeding three months. This applies where the normal tender procedure would cause delay or administrative inconvenience. IFA consultation is required.
+
+Elimination:
+A (Rs. 1,00,000/-) — incorrect amount. C (Rs. 5,00,000/-) — exceeds the prescribed limit. D (6 months) — the prescribed period is 3 months, not 6 months.
+
+Q66. For conveyance of mails to foreign countries by non-contract steamer (in case of dispatch by one ship), what is the financial power?
+
+A. Rs. 2 Lakhs
+B. Rs. 5 Lakhs
+C. Rs. 10 Lakhs
+D. Full Powers
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+The financial power for conveyance of mails to foreign countries by non-contract steamer in case of dispatch by one ship is Rs. 5 Lakhs. IFA consultation is required. This limit also covers seasonal mail conveyance requirements like exam material, distribution, and textbooks.
+
+Elimination:
+A (Rs. 2 Lakhs) — this is the IFA threshold for many items, not the mail conveyance limit. C and D — exceed the prescribed limit for non-contract steamer dispatch.
+
+Q67. For refund of postage on unused but spoilt postal stationery, what deduction is applicable and what is the minimum quantity condition?
+
+A. Deduction of 6¼%; refund on complete sheets only
+B. Deduction of 20%; claim must relate to not less than a complete ream
+C. Deduction of 5%; refund claimed within 3 months
+D. Deduction of 10%; no minimum quantity condition
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For unused but spoilt postal stationery, refund of face value is granted subject to a reduction of 20%, provided that the claim relates to not less than a complete ream of such stationery. For unused but spoilt postage stamps, the reduction is 6¼% and claim must be for complete sheets.
+
+Elimination:
+A — these are the conditions for postage stamps, not postal stationery. C — 5% deduction applies to franking machine impressions made in error. D — 10% deduction is not prescribed for any postal refund category.
+
+Q68. For refund on account of franking machine impressions made in error, what deduction applies and within what period must the claim be preferred?
+
+A. 5% deduction; within 6 months of date of first impression
+B. 5% deduction; within 3 months of date of first impression
+C. 6¼% deduction; within 3 months
+D. 20% deduction; within 1 month
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Refund on account of franking machine impressions made in error is sanctioned after a deduction of 5% of the face value, on surrender of envelopes/wrappers, provided the impression is legible, envelope/wrapper is produced, and the claim is preferred within three months of the date of first impressions.
+
+Elimination:
+A (6 months) — incorrect period; it is 3 months. C (6¼%) — this deduction applies to unused spoilt stamps, not franking machine impressions. D (20%) — this is the deduction for spoilt postal stationery.
+
+Q69. Sanction of expenditure for purchases/contracts on negotiated or single tender basis (Sl. No. 37) — what is the limit and who holds this power?
+
+A. Rs. 25 Lakh per case; HOC and HOD
+B. Rs. 50 Lakh per case; HOC only; IFA required
+C. Rs. 1 Crore per case; HOC only; IFA required
+D. Full Powers; HOC only; without IFA
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+The power to sanction expenditure for purchases and execution of contracts on negotiated or single tender basis is delegated to HOC only at Rs. 50 Lakh in each case. IFA consultation is required. Note: A limited tender or open tender resulting in only one effective offer shall be treated as single tender for this purpose.
+
+Elimination:
+A — incorrect limit and authority. C — Rs. 1 Crore exceeds the prescribed limit. D — IFA is required and the limit is Rs. 50 Lakh, not Full Powers.
+
+Q70. Refund of Advertisement Charges is delegated at different limits for HOC and HOD. Which is CORRECT?
+
+A. HOC – Rs. 25,000/-; HOD – Rs. 5,000/-
+B. HOC – Rs. 50,000/-; HOD – Rs. 10,000/-; IFA required
+C. HOC – Full Powers; HOD – Rs. 25,000/-
+D. HOC – Rs. 1,00,000/-; HOD – Rs. 50,000/-; IFA not required
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Refund of Advertisement Charges: HOC – Rs. 50,000/- in each case; HOD – Rs. 10,000/- in each case. IFA consultation is required.
+
+Elimination:
+A — incorrect figures. C — Full Powers not prescribed; specific monetary limits apply. D — incorrect figures; IFA is required.
+
+Q71. Schedule II-B deals with financial powers delegated to which category of officers?
+
+A. Heads of Circles (HOC) and Heads of Department (HOD)
+B. Directors of Postal Services having Independent Charge
+C. Sr. DDG (PAF), GM (Finance) and DAP
+D. Heads of Postal Divisions
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Schedule II-B specifically covers the Schedule of Financial Powers Delegated to Directors of Postal Services having Independent Charge in the Department of Posts — commonly called "Independent Directors" in the financial powers framework.
+
+Elimination:
+A — that is Schedule II-A. C — that is Schedule II-C. D — that is Schedule III.
+
+Q72. Under Schedule II-B, what is the financial limit for ad-hoc payment of arrears of pay and allowances for Independent Directors?
+
+A. Rs. 5,000/-
+B. Rs. 10,000/-
+C. Rs. 25,000/-
+D. Rs. 50,000/-
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Independent Directors (Schedule II-B) may sanction ad-hoc payment not exceeding Rs. 10,000/- of arrears of pay and allowances where pay fixation was verified but arrear claims cannot be verified by Circle Accounts Offices due to destruction of records. This compares to HOC's limit of Rs. 1,00,000/- and HOD's Rs. 50,000/-.
+
+Elimination:
+A (Rs. 5,000/-) — this is the write-off of revenue loss limit. C (Rs. 25,000/-) and D (Rs. 50,000/-) — HOD's limit is Rs. 50,000/-; HOC's is Rs. 1,00,000/-. Independent Directors have the lowest limit of Rs. 10,000/-.
+
+Q73. How does the limit for Foundation Stone/inauguration/Postal Week celebrations differ between HOC and Independent Directors?
+
+A. HOC – Rs. 2 Lakhs; Independent Directors – Rs. 50,000/-
+B. HOC – Rs. 5 Lakhs; Independent Directors – Rs. 50,000/-
+C. HOC – Rs. 5 Lakhs; Independent Directors – Rs. 1 Lakh
+D. Both have the same limit of Rs. 2 Lakhs
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For Foundation Stone laying, inauguration, celebration of Postal Week, etc.: HOC (Schedule II-A) – Rs. 5 Lakhs per occasion (IFA beyond Rs. 2 Lakhs); Independent Directors (Schedule II-B) – Rs. 50,000/- per occasion (IFA not required). The stark difference reflects the higher operational scale of HOC.
+
+Elimination:
+A (Rs. 2 Lakhs for HOC) — incorrect; HOC's limit is Rs. 5 Lakhs. C (Rs. 1 Lakh for Independent Directors) — the correct limit is Rs. 50,000/-. D — the limits are significantly different.
+
+Q74. What is the financial limit for funeral expenses for Independent Directors vs. HOC/HOD?
+
+A. Independent Directors – Rs. 5,000/-; HOC/HOD – Rs. 25,000/-
+B. Independent Directors – Rs. 7,500/-; HOC/HOD – Rs. 25,000/-
+C. Independent Directors – Rs. 10,000/-; HOC/HOD – Rs. 50,000/-
+D. All three have the same limit of Rs. 25,000/-
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Funeral expenses: Independent Directors – Rs. 7,500/- per case (IFA not required); HOC/HOD – Rs. 25,000/- per case (IFA not required). The limit varies by the administrative level of the sanctioning authority.
+
+Elimination:
+A (Rs. 5,000/-) — write-off of revenue loss limit, not funeral expenses for Independent Directors. C — incorrect figures for both categories. D — the limits are different across the three schedules.
+
+Q75. Under Schedule II-B, what is the financial power for Contingent Expenditure (Recurring) for Independent Directors?
+
+A. Rs. 25,000/- per month
+B. Rs. 50,000/- per month; IFA not required
+C. Rs. 1 Lakh per month; IFA required
+D. Full Powers; IFA not required
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For Contingent Expenditure (Recurring) under Schedule II-B, Independent Directors may sanction up to Rs. 50,000/- per month in each case. IFA consultation is not required. Compare with HOC (Rs. 2 Lakhs per case; IFA beyond Rs. 75,000/-) and HOD (Rs. 1 Lakh per case; IFA beyond Rs. 75,000/-).
+
+Elimination:
+A (Rs. 25,000/-) — incorrect amount. C (Rs. 1 Lakh) — this is the HOD limit, not Independent Directors'. D — Full Powers not applicable; specific monetary limit is prescribed.
+
+Q76. For petty local purchases of articles of stationery, what is the comparison between HOC, HOD, and Independent Directors?
+
+A. HOC – Rs. 5 Lakh/annum; HOD – Rs. 2 Lakh/annum; Independent Directors – Rs. 1 Lakh/annum
+B. HOC – Rs. 5 Lakh/annum; HOD – Rs. 2 Lakh/annum; Independent Directors – Rs. 1.5 Lakh/annum
+C. All three have the same limit of Rs. 2 Lakh/annum
+D. HOC – Full Powers; HOD – Rs. 5 Lakh/annum; Independent Directors – Rs. 2 Lakh/annum
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Petty local purchases of stationery — HOC: Rs. 5 Lakh per annum; HOD: Rs. 2 Lakh per annum; Independent Directors: Rs. 1.5 Lakh per annum (IFA not required). IFA consultation for HOC/HOD is required beyond Rs. 2,00,000/-.
+
+Elimination:
+A (Rs. 1 Lakh for Independent Directors) — the correct limit is Rs. 1.5 Lakh. C — the limits differ across the schedules. D — Full Powers not applicable for any of the three for stationery purchases.
+
+Q77. For renting of accommodation for administrative/operative offices (including Inspection Rooms), what are the limits for Independent Directors for X, Y and Z Class cities?
+
+A. X – Rs. 2 Lakh/month; Y – Rs. 1 Lakh/month; Z – Rs. 50,000/-/month
+B. X – Rs. 1 Lakh/month; Y – Rs. 75,000/-/month; Z – Rs. 50,000/-/month
+C. X – Rs. 75,000/-/month; Y – Rs. 50,000/-/month; Z – Rs. 25,000/-/month
+D. Rs. 10 Lakh/month for all cities (same as HOC)
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Under Schedule II-B, for renting of accommodation for administrative/operative offices: X Class – Rs. 75,000/month; Y Class – Rs. 50,000/month; Z Class – Rs. 25,000/month. IFA consultation is required. Compare with HOD limits: X – Rs. 2 Lakh; Y – Rs. 1 Lakh; Z – Rs. 50,000/-.
+
+Elimination:
+A — these are the HOD limits, not Independent Directors' limits. B — incorrect figures. D — Rs. 10 Lakh per month for all cities is HOC's limit only.
+
+Q78. Renting of residential accommodation in project areas/new townships — compare the limits for HOD vs. Independent Directors:
+
+A. HOD – Rs. 75,000/- per case; Independent Directors – Rs. 50,000/- per case
+B. HOD – Rs. 50,000/- per month; Independent Directors – Rs. 75,000/- per case
+C. Both have the same limit of Rs. 75,000/-
+D. HOD – Rs. 50,000/- per case; Independent Directors – Rs. 75,000/- per case
+
+Correct Answer: D
+
+Explanation:
+
+Concept:
+For renting of residential accommodation for Postal Staff in project areas/new townships: HOD (Schedule II-A): Rs. 50,000/- per case (exact figure from the main schedule for HOD in Z class comparison context); Independent Directors (Schedule II-B): Rs. 75,000/- per case. Note that HOD limits vary by city class while project area accommodation has a flat rate for Independent Directors.
+
+Elimination:
+A — figures transposed. B — incorrect; Independent Directors' limit is Rs. 75,000/- per case (flat), not per month. C — the limits are different.
+
+Q79. Which of the following is a UNIQUE power specifically available to Independent Directors (Schedule II-B) but NOT found as a separate item in Schedule II-A?
+
+A. Honorarium in connection with SB control work
+B. Cash award to GDS for outstanding courage
+C. Procurement of operational vehicles
+D. Write-off of loss of revenue
+
+Correct Answer: A
+
+Explanation:
+
+Concept:
+Honorarium in connection with SB (Savings Bank) control work (up to Rs. 2,500/-; IFA not required) is a specific item in Schedule II-B reflecting the operational role of Independent Directors in overseeing Savings Bank activities. This item does not appear as a separate item in Schedule II-A for HOC/HOD.
+
+Elimination:
+B — Cash award to GDS is a HOC-only power under Schedule II-A. C — Motor vehicle procurement is a HOC-only power under OH 51. D — Write-off of loss of revenue is a HOC-only power under OH 64.
+
+Q80. Under Schedule II-B, for printing and binding through Directorate of Printing and for expenditure on printing for forms through private presses, what is the financial limit?
+
+A. Full Powers; IFA beyond Rs. 2,00,000/-
+B. Rs. 1 Lakh per case; IFA not required
+C. Rs. 2 Lakh per case; IFA required
+D. Rs. 50,000/- per case; IFA required
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under Schedule II-B, for printing and binding through Directorate of Printing as well as expenditure on printing for forms through private presses, the limit is Rs. 1 Lakh in each case. IFA consultation is not required. Compare this with Schedule II-A where Full Powers are delegated (with IFA beyond Rs. 2,00,000/-).
+
+Elimination:
+A — Full Powers with IFA beyond Rs. 2,00,000/- applies under Schedule II-A (HOC/HOD), not II-B. C — incorrect limit for Schedule II-B. D — not the prescribed limit for this item.
+
+Q81. For procurement of Digital Equipment (Object Head 19) under Schedule II-B, what is the limit and IFA requirement?
+
+A. Full Powers; IFA required
+B. Rs. 5 Lakh per case; IFA required
+C. Rs. 2 Lakh per case; IFA not required
+D. Rs. 1 Lakh per case; IFA required
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Under Schedule II-B, procurement of Digital Equipment (as defined under Object Head 19 of DFPR 2024) is limited to Rs. 2 Lakh in each case. IFA consultation is not required. Compare with Schedule II-A where Full Powers are delegated (IFA required).
+
+Elimination:
+A — Full Powers apply under Schedule II-A, not II-B. B — Rs. 5 Lakh is the limit for desktop computer purchase under non-scheme (Schedule II-A). D — Rs. 1 Lakh is the limit for printing/publications under Schedule II-B, not digital equipment.
+
+Q82. Commission charges for Auction of Stores under Schedule II-B for Independent Directors is:
+
+A. Rs. 25,000/- (same as HOC)
+B. Rs. 10,000/- (same as HOD); IFA not required
+C. Rs. 5,000/-; IFA required
+D. Full Powers; IFA required
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under Schedule II-B, Independent Directors have the power to sanction commission charges for Auction of Stores up to Rs. 10,000/- (same as HOD in Schedule II-A). However, IFA consultation is not required for Independent Directors, whereas no specific IFA note is mentioned for HOD either at this limit.
+
+Elimination:
+A (Rs. 25,000/-) — this is the HOC limit. C (Rs. 5,000/-) — not the prescribed limit. D — Full Powers not prescribed; specific monetary limit applies.
+
+Q83. For "Other Miscellaneous Expenditure" under Schedule II-B, what are the financial powers?
+
+A. Rs. 10,000/- non-recurring; Rs. 1,000/- per year recurring
+B. Rs. 20,000/- non-recurring; Rs. 3,000/- per year recurring; IFA not required
+C. Rs. 50,000/- non-recurring; Rs. 5,000/- per year recurring; IFA required
+D. Full Powers for both; IFA required
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Under Schedule II-B, for "Other Miscellaneous Expenditure": Rs. 20,000/- for non-recurring expenditure and Rs. 3,000/- a year on each item of recurring expenditure. IFA consultation is not required. This is a minor contingency provision for Independent Directors.
+
+Elimination:
+A — incorrect figures. C — figures are significantly higher than prescribed. D — Full Powers not applicable; specific limits are prescribed.
+
+Q84. Consider the following comparisons between HOC (Schedule II-A) and Independent Directors (Schedule II-B). Which is INCORRECTLY matched?
+
+A. Recurring contingent expenditure — HOC: Rs. 2 Lakhs; Independent Director: Rs. 50,000/month
+B. Purchase of office equipment — HOC: Full Powers (IFA required); Independent Director: Rs. 2 Lakh (IFA not required)
+C. Funeral expenses — HOC: Rs. 25,000/-; Independent Director: Rs. 25,000/- (same)
+D. Renting accommodation for office — HOC: Rs. 10 Lakh/month (all cities); Independent Director: Rs. 75,000/month (X class)
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Funeral expenses: HOC/HOD — Rs. 25,000/- per case; Independent Directors — Rs. 7,500/- per case. They are NOT the same. This is a classic trap question where the amounts appear similar but differ significantly.
+
+Elimination:
+A — correctly matched; HOC: Rs. 2 Lakhs per case; Independent Director: Rs. 50,000/month. B — correctly matched; HOC: Full Powers with IFA required; Independent Director: Rs. 2 Lakh, IFA not required. D — correctly matched; HOC: Rs. 10 Lakh for all cities; Independent Director: Rs. 75,000/month for X class city.
+
+Q85. Under Object Head 55 (Advances), the amount of Permanent Advance is based on:
+
+A. Fixed amount prescribed by the Directorate for each office
+B. Average monthly contingent expenditure of the office for the preceding 12 months
+C. Annual budget allotment of the office
+D. The discretion of the Head of Department in each case
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Permanent Advance under Object Head 55 is regulated in accordance with GFR Rule 322 read with Rules 342 and 343 of FHB Vol. I. The amount of advance is based on the average monthly contingent expenditure of the office for the preceding 12 months. IFA consultation is required beyond Rs. 2 Lakh.
+
+Elimination:
+A — not fixed by the Directorate; it is calculated from actual expenditure. C — budget allotment is not the basis for Permanent Advance calculation. D — it is not discretionary; the formula-based calculation applies.
+
+Q86. Refund of Earnest Money under Sl. No. 36 — which of the following is CORRECT?
+
+A. Refund is given only after the contract is fully executed.
+B. Full Powers are delegated; IFA consultation is not required.
+C. Full Powers with IFA consultation required beyond Rs. 2,00,000/-.
+D. Limited to Rs. 1 Lakh per case; IFA not required.
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+For refund of Earnest Money (Sl. No. 36(a)), Full Powers are delegated. The refund covers: (i) Earnest money of rejected tenderers immediately after their tenders are rejected; (ii) Earnest money of successful tenderer after the agreement has been executed and security deposited. IFA consultation is NOT required.
+
+Elimination:
+A — earnest money of rejected tenderers is refunded upon rejection, not after contract completion. C — IFA is not required for earnest money refunds. D — Full Powers (not Rs. 1 Lakh) is delegated.
+
+Q87. Regarding illumination of buildings on important occasions under Schedule II-B, what is the financial limit for Independent Directors?
+
+A. Rs. 5,000/-
+B. Rs. 10,000/-
+C. Rs. 15,000/-
+D. Rs. 50,000/-
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Under Schedule II-B, the financial power for illumination of buildings on important occasions is Rs. 15,000/- in each case. This is subject to orders/instructions issued by Ministry of Housing & Urban Affairs, MOF, DOP etc.
+
+Elimination:
+A and B — below the prescribed limit. D (Rs. 50,000/-) — this is the limit for Foundation Stone/inauguration/Postal Week celebrations under Schedule II-B (not illumination).
+
+Q88. Which of the following statements about conveyance of mails by Air is CORRECT?
+
+A. IFA consultation is required in all cases, irrespective of amount.
+B. Full Powers are delegated but IFA consultation is required beyond Rs. 2,00,000/- in each case.
+C. The power is limited to Rs. 5 Crores per contract.
+D. This power is delegated to HOC only.
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Conveyance of mails by Air carries Full Powers for both HOC and HOD (including seasonal requirements like exam material, textbooks). However, IFA consultation is required beyond Rs. 2,00,000/- in each case. Full Powers are subject to payment at rates fixed under the terms of an agreement entered with the carrier.
+
+Elimination:
+A — IFA is required only beyond Rs. 2,00,000/-; not in all cases. C — no per-contract monetary ceiling is prescribed for air conveyance. D — this power is available to both HOC and HOD, unlike road (RTN) contract which is HOC-only.
+
+Q89. Refund of the fee for a duplicate SB passbook is sanctioned when:
+
+A. The customer applies within one year of loss of original passbook.
+B. The original passbook is found before the duplicate is actually issued and the loss was reported under bonafide misapprehension.
+C. The account holder has maintained a minimum balance for six months.
+D. The IFA gives concurrence for such refund in each case.
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Refund of the fee for a duplicate SB passbook may be sanctioned when the original passbook is found before the duplicate is actually issued and the loss was reported under bonafide misapprehension. The power is regulated under Rule 22 of Post Office Saving Bank. IFA consultation is NOT required.
+
+Elimination:
+A — no one-year condition is prescribed; the key condition is that the original is found before the duplicate is issued. C — minimum balance condition is irrelevant to the fee refund. D — IFA consultation is not required for this refund.
+
+Q90. Permanent advance for Object Head 55 (Advances) — for IFA consultation, what is the threshold?
+
+A. Rs. 50,000/-
+B. Rs. 1,00,000/-
+C. Rs. 2,00,000/-
+D. No IFA required
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+For Permanent Advance under Object Head 55, Full Powers are delegated (based on average monthly contingent expenditure for preceding 12 months). IFA consultation is required beyond Rs. 2,00,000/- (Rs. 2 Lakh). Personal Computer Advance and House Building Advances have no such IFA requirement.
+
+Elimination:
+A (Rs. 50,000/-) — IFA threshold for many Schedule II-B items, not Permanent Advance. B (Rs. 1,00,000/-) — not the prescribed IFA threshold for Permanent Advance. D — IFA is required beyond Rs. 2 Lakh; "no IFA" is incorrect.
+
+Q91. Refund to the sender of a mis-delivered uninsured postal article — what is the IFA requirement?
+
+A. IFA required in all cases.
+B. IFA required beyond Rs. 2,00,000/-.
+C. Without IFA consultation.
+D. IFA required when amount exceeds Rs. 50,000/-.
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Refund to the sender of a mis-delivered uninsured postal article (including loss of contents after recovery from wrong recipient, and compensation for loss due to theft by tampering where flat rate is decided by Directorate) is sanctioned with Full Powers and without IFA consultation.
+
+Elimination:
+A, B, D — all incorrectly suggest IFA is required. The explicit entry states "Without IFA consultation."
+
+Q92. Match the following Write-Off powers (Object Head 64) with their correct financial limits (all are HOC only):
+
+Item	Limit
+i. Write off loss of revenue	P. Full Powers
+ii. Write off irrecoverable losses of stores/public money	Q. Rs. 5,000/-
+iii. Mature condemnation of motor vehicle	R. Rs. 50,000/-
+iv. Condemnation of vehicles reaching 15 years	S. Full Powers (RVSF only)
+A. i-Q, ii-R, iii-P, iv-S
+B. i-P, ii-Q, iii-R, iv-S
+C. i-Q, ii-P, iii-S, iv-R
+D. i-R, ii-Q, iii-P, iv-S
+
+Correct Answer: A
+
+Explanation:
+
+Concept:
+Write off of: (i) loss of revenue — Rs. 5,000/- (Q); (ii) irrecoverable stores/public money — Rs. 50,000/- (R); (iii) Mature condemnation of motor vehicle — Full Powers subject to distance/years of use (P); (iv) Condemnation of 15-year-old vehicles — Full Powers through RVSF only (S). All are HOC-only powers.
+
+Elimination:
+B — transposes loss of revenue (should be Rs. 5,000/-) with Full Powers. C and D — multiple incorrect pairings.
+
+Q93. The procurement of Infrastructural Assets (under OH 72) — what is the financial limit and IFA threshold?
+
+A. Rs. 1 Crore; IFA beyond Rs. 5 Lakh
+B. Rs. 2 Crores; IFA beyond Rs. 2 Lakh
+C. Rs. 5 Crores; IFA beyond Rs. 2 Lakh
+D. Full Powers; IFA required in all cases
+
+Correct Answer: B
+
+Explanation:
+
+Concept:
+Procurement of Infrastructural Assets (Sl. No. 29) is delegated at Rs. 2 Crores in each case. IFA consultation is required beyond Rs. 2 Lakh in each case. This is separate from the construction of buildings (Rs. 10 Crores, HOC only) and addition/alteration (Rs. 2 Crores).
+
+Elimination:
+A (Rs. 1 Crore) — incorrect limit. C (Rs. 5 Crores) — exceeds the prescribed limit. D — Full Powers not prescribed; the specific Rs. 2 Crore ceiling applies.
+
+Q94. Purchase of battery-operated carts/trolleys for conveyance of mail (Object Head 77 — Other Fixed Assets) — IFA consultation is required beyond:
+
+A. Rs. 50,000/-
+B. Rs. 1 Lakh
+C. Rs. 2 Lakh
+D. No IFA required
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+Under Object Head 77 (Other Fixed Assets), purchase of battery or electric cart (battery-operated carts/trolleys for mail conveyance, but not motor vehicles) carries Full Powers. IFA consultation is required beyond Rs. 2 Lakh. Similarly, procurement of library books/publications/trees/crops/plants also requires IFA beyond Rs. 2 Lakh.
+
+Elimination:
+A and B — below the prescribed IFA threshold. D — IFA is required beyond Rs. 2 Lakh; "No IFA" is incorrect.
+
+Q95. Which of the following items under "Other Financial Powers" require IFA consultation beyond Rs. 2,00,000/- in each case?
+
+i. Conveyance of mails by Rail
+ii. Conveyance of mails by Air
+iii. All other charges for carriage of mails
+iv. All contingent charges for diversion due to breaches/floods
+
+A. i and ii only
+B. i, ii and iii only
+C. i, ii, iii and iv — all four
+D. iii and iv only
+
+Correct Answer: C
+
+Explanation:
+
+Concept:
+All four items — conveyance by Rail, by Air, all other carriage charges, and contingent charges for diversion due to breaches/floods — uniformly require IFA consultation beyond Rs. 2,00,000/- in each case. This is a consistent threshold across these mail conveyance-related items.
+
+Elimination:
+A — iii and iv are also subject to the same IFA threshold. B — iv is also subject to IFA beyond Rs. 2,00,000/-. D — i and ii are equally covered.
+
+
+Q96. Under Schedule II-C, the power of DAP for Honorarium and Rewards to Government servants is:
+
+(A) Up to the limit prescribed by GoI/DoP
+(B) Rs. 2,500/-
+(C) Rs. 4,000/-
+(D) Full Powers
+
+Answer: (C)
+DAP – Rs. 4,000/-; Sr. DDG (PAF) and GM (Finance) have powers up to the limit prescribed by GoI/DoP.
+
+Q97. Under Schedule II-C, IFA consultation for Honorarium to a Government servant is required beyond:
+
+(A) Rs. 1,000/- per case
+(B) Rs. 2,500/- per case
+(C) Rs. 4,000/- per case
+(D) Rs. 5,000/- per case
+
+Answer: (B)
+IFA consultation is required beyond Rs. 2,500/- in each case.
+
+Q98. Under Schedule II-C, for Training Expenses (Object Head-09), the limit for GM (Finance) on each occasion is:
+
+(A) Rs. 50,000/-
+(B) Rs. 75,000/-
+(C) Rs. 1,00,000/-
+(D) Full Powers
+
+Answer: (B)
+Sr. DDG (PAF) – Rs. 1,00,000/-; GM (Finance) – Rs. 75,000/-; DAP – Rs. 50,000/- per occasion. IFA consultation is required.
+
+Q99. Under Schedule II-C (Object Head-13), what is the power of Sr. DDG (PAF) for Contingent Recurring Expenditure?
+
+(A) Rs. 60,000/- per case
+(B) Rs. 1,00,000/- per case
+(C) Rs. 1,25,000/- per case
+(D) Rs. 2,00,000/- per case
+
+Answer: (C)
+Sr. DDG (PAF) – Rs. 1,25,000/-; GM (Finance) – Rs. 1 Lakh; DAP – Rs. 60,000/- in each case.
+
+Q100. For Contingent Non-Recurring Expenditure under Schedule II-C (Object Head-13), IFA consultation is required beyond:
+
+(A) Rs. 75,000/-
+(B) Rs. 1,00,000/-
+(C) Rs. 1,25,000/-
+(D) Rs. 2,00,000/-
+
+Answer: (B)
+Sr. DDG (PAF) and GM (Finance) can sanction up to Rs. 2 Lakh and DAP up to Rs. 1.5 Lakh. IFA consultation is required beyond Rs. 1,00,000/- in each case.
+
+Q101. Under Schedule II-C, the annual limit for petty local purchases of stationery articles for GM (Finance) is:
+
+(A) Rs. 2 Lakh per annum
+(B) Rs. 3 Lakh per annum
+(C) Rs. 4 Lakh per annum
+(D) Rs. 5 Lakh per annum
+
+Answer: (B)
+Sr. DDG (PAF) – Rs. 4 Lakh p.a.; GM (Finance) – Rs. 3 Lakh p.a.; DAP – Rs. 2 Lakh p.a. IFA consultation is required beyond Rs. 2,00,000/- per case for Sr. DDG/GM and Rs. 1,00,000/- for DAP.
+
+Q102. Under Schedule II-C (Object Head-13), the limit for DAP for purchase of fixtures and furniture is:
+
+(A) Full Powers
+(B) Rs. 2 Lakh per annum
+(C) Rs. 2.5 Lakh per annum (prior approval of CPMG beyond this)
+(D) Rs. 5 Lakh per annum
+
+Answer: (C)
+Sr. DDG (PAF) and GM (Finance) have full powers (subject to prescribed scale); DAP – up to Rs. 2.5 Lakh per annum (prior approval of CPMG required beyond this).
+
+Q103. Under Schedule II-C, for outsourcing of Housekeeping and Security of office, what is the annual limit for Sr. DDG (PAF)?
+
+(A) Rs. 30 Lakh
+(B) Rs. 50 Lakh (with CPMG approval)
+(C) Rs. 75 Lakh
+(D) Rs. 1 Crore
+
+Answer: (C)
+Sr. DDG – Rs. 75 Lakh p.a.; GM (Finance) – Rs. 50 Lakh p.a. (with CPMG approval); DAP – Rs. 30 Lakh p.a. (with CPMG approval). IFA consultation is required.
+
+Q104. Under Schedule II-C, the annual limit for outsourcing of MTS (Skilled/Semi-skilled/Unskilled) for Sr. DDG (PAF) is:
+
+(A) Rs. 50 Lakh
+(B) Rs. 75 Lakh
+(C) Rs. 1 Crore
+(D) Rs. 1.5 Crore
+
+Answer: (D)
+Sr. DDG (PAF) – Rs. 1.5 Crore p.a.; GM (Finance) – Rs. 75 Lakh p.a. (with CPMG approval); DAP – Rs. 50 Lakh p.a. (with CPMG approval).
+
+Q105. Under Schedule II-C, what is the limit for outsourcing of data entry operators for Circle PAO for Sr. DDG (PAF)?
+
+(A) Rs. 25 Lakh per annum (with CPMG approval)
+(B) Rs. 50 Lakh per annum (with CPMG approval)
+(C) Rs. 75 Lakh per annum
+(D) Full Powers
+
+Answer: (B)
+Sr. DDG – Rs. 50 Lakh p.a. (with due approval of CPMG); DAP – Rs. 25 Lakh p.a. (with due approval of CPMG). IFA consultation is required.
+
+Q106. Under Schedule II-C, funeral expenses on death of departmental employees at outstations can be sanctioned by Sr. DDG (PAF)/GM (Finance)/DAP up to:
+
+(A) Rs. 10,000/-
+(B) Rs. 15,000/-
+(C) Rs. 25,000/-
+(D) Full Powers
+
+Answer: (C)
+Rs. 25,000/- in each case. IFA consultation is not required.
+
+Q107. Under Schedule II-C, for Illumination of Buildings on important occasions, the limit for GM (Finance) is:
+
+(A) Rs. 1 Lakh per case
+(B) Rs. 2 Lakh per case
+(C) Rs. 3 Lakh per case
+(D) Full Powers
+
+Answer: (B)
+Sr. DDG (PAF) – Rs. 3 Lakh; GM (Finance) – Rs. 2 Lakh per case. IFA consultation is required.
+
+Q108. Under Schedule II-C (Object Head-18), what is the limit for DAP for hiring vehicles in lieu of staff cars/inspection vehicles?
+
+(A) Rs. 50,000/- per month per vehicle
+(B) Rs. 1 Lakh per month per vehicle
+(C) Rs. 1.5 Lakh per month per vehicle
+(D) Rs. 2 Lakh per month per vehicle
+
+Answer: (B)
+Sr. DDG (PAF) and GM (Finance) – Rs. 2 Lakh per month per vehicle; DAP – Rs. 1 Lakh per month per vehicle. IFA consultation is required.
+
+Q109. Under Schedule II-C, for hiring of vehicles in emergent cases (up to 3 months), IFA consultation is required beyond:
+
+(A) Rs. 50,000/- per case
+(B) Rs. 75,000/- per case
+(C) Rs. 1,00,000/- per case
+(D) Rs. 2,00,000/- per case
+
+Answer: (B)
+Sr. DDG (PAF) and GM (Finance) each have Rs. 2 Lakh per month for emergency vehicle hiring. IFA is required beyond Rs. 75,000/- per case.
+
+Q110. Under Schedule II-C (Object Head-71), the limit for Sr. DDG (PAF) and GM (Finance) for procurement of new Desktop Computers for office use under non-scheme is:
+
+(A) Rs. 2.5 Lakh per case
+(B) Rs. 5 Lakh per case
+(C) Rs. 10 Lakh per case
+(D) Rs. 20 Lakh per case
+
+Answer: (B)
+Sr. DDG (PAF) and GM (Finance) – Rs. 5 Lakh each; DAP – Rs. 2.5 Lakh. IFA consultation is required.
+
+Q111. Under Schedule II-C, the limit for purchase of Desktop Computers for replacement under non-scheme for DAP is:
+
+(A) Rs. 2.5 Lakh
+(B) Rs. 5 Lakh
+(C) Rs. 10 Lakh
+(D) Rs. 20 Lakh
+
+Answer: (C)
+Sr. DDG (PAF) and GM (Finance) – Rs. 20 Lakh each; DAP – Rs. 10 Lakh. IFA consultation is required.
+
+Q112. Under Schedule II-C, for procurement of a laptop/notebook for eligible officers with Make-in-India (MII) component of more than 40%, the ceiling for Sr. DDG (PAF) is:
+
+(A) Rs. 1,00,000/- + taxes
+(B) Rs. 1,20,000/- + taxes
+(C) Rs. 1,30,000/- + taxes
+(D) Rs. 1,50,000/- + taxes
+
+Answer: (C)
+Normal ceiling is Rs. 1,00,000/- + taxes; for MII component > 40%, the ceiling is Rs. 1,30,000/- + taxes (inclusive of cost of standard software).
+
+Q113. Under Schedule II-C, what is the annual limit for Sr. DDG (PAF) for procurement of Laptops for office use (not for issue to individual officers)?
+
+(A) Rs. 2 Lakh per annum
+(B) Rs. 5 Lakh per annum
+(C) Rs. 10 Lakh per annum
+(D) Full Powers
+
+Answer: (B)
+Sr. DDG (PAF) – up to Rs. 5 Lakh per annum. IFA consultation is required.
+
+Q114. Under Schedule II-C (Object Head-72), the IFA consultation threshold for Sr. DDG (PAF) and GM (Finance) for addition/alteration to buildings is:
+
+(A) Rs. 50,000/-
+(B) Rs. 75,000/-
+(C) Rs. 1 Lakh
+(D) Rs. 2 Lakh
+
+Answer: (B)
+Sr. DDG (PAF) and GM (Finance) – both have Rs. 2 Lakh sanction power; IFA required beyond Rs. 75,000/- per case. DAP – Rs. 1 Lakh sanction power; IFA required beyond Rs. 50,000/-.
+
+Q115. Under Schedule II-C (Object Head-77), the annual limit for procurement of Other Fixed Assets (library books, publications, trees, crops, plants) for DAP is:
+
+(A) Rs. 1,00,000/-
+(B) Rs. 2,00,000/-
+(C) Rs. 5,00,000/-
+(D) Full Powers
+
+Answer: (B)
+Sr. DDG (PAF) and GM (Finance) – Rs. 5,00,000/- p.a. each; DAP – Rs. 2,00,000/- p.a. IFA consultation required beyond Rs. 2 Lakh (Sr. DDG/GM) and Rs. 1 Lakh (DAP).
+
+Q116. Under Schedule II-C, for write-off of loss of stores NOT due to theft, fraud or negligence, the power of Sr. DDG (PAF) is:
+
+(A) Rs. 20,000/- per case
+(B) Rs. 50,000/- per case
+(C) Rs. 1,00,000/- per case
+(D) Full Powers
+
+Answer: (B)
+Rs. 50,000/- for losses not due to theft/fraud/negligence; Rs. 20,000/- in all other cases (theft/fraud/negligence). IFA consultation is required.
+
+Q117. Under Schedule II-C, for Engagement/Hiring of Professionals such as Chartered Accountants, Artists, GST Consultants, the annual limit for Sr. DDG (PAF) is:
+
+(A) Rs. 20 Lakh
+(B) Rs. 30 Lakh
+(C) Rs. 50 Lakh
+(D) Full Powers
+
+Answer: (C)
+Sr. DDG (PAF) – Rs. 50 Lakh p.a.; GM (Finance) – Rs. 20 Lakh p.a.; DAP – Rs. 20 Lakh p.a. IFA consultation is required.
+
+Q118. Under Schedule II-C, for procurement of Other Fixed Assets (Object Head-77), IFA consultation is required beyond which limit for Sr. DDG (PAF) and GM (Finance)?
+
+(A) Rs. 1 Lakh
+(B) Rs. 2 Lakh
+(C) Rs. 5 Lakh
+(D) Rs. 10 Lakh
+
+Answer: (B)
+IFA consultation required beyond Rs. 2 Lakh per case for Sr. DDG (PAF) and GM (Finance), and beyond Rs. 1 Lakh for DAP.
+
+Q119. Under Schedule II-C (Other Financial Powers), for Refund of Earnest Money Deposit (EMD) and Security Deposit (e-PBG), is IFA consultation required?
+
+(A) Yes, always
+(B) Yes, beyond Rs. 1 Lakh
+(C) Yes, beyond Rs. 2 Lakh
+(D) No, IFA consultation is not required
+
+Answer: (D)
+Sr. DDG (PAF), GM (Finance), and DAP all have Full Powers for refund of EMD and Security Deposit (e-PBG). IFA consultation is not required.
+
+Q120. Under Schedule II-C, the Permanent Advance is regulated under Rule 322 of GFR read with which Rules of FHB Vol. I?
+
+(A) Rules 300 and 301
+(B) Rules 320 and 321
+(C) Rules 342 and 343
+(D) Rules 350 and 360
+
+Answer: (C)
+Permanent Advance is regulated per Rule-322 of GFR read with Rules 342 and 343 of FHB Vol. I. The amount is based on the average monthly contingent expenditure for the preceding 12 months.
+
+[Schedule III — Powers of Heads of Postal Divisions (Divisional Heads)]
+
+Q121. Under Schedule III, the power of Divisional Heads for Contingent (Non-Recurring) expenditure under Object Head-13 (Office Expenses) is:
+
+(A) Rs. 5,000/- per case
+(B) Rs. 10,000/- per case
+(C) Rs. 25,000/- per case
+(D) Full Powers
+
+Answer: (B)
+Divisional Heads may sanction non-recurring contingent expenditure up to Rs. 10,000/- per case, provided there is nothing novel, doubtful or irregular in the character of the expenditure.
+
+Q122. Under Schedule III, the power of Divisional Heads for hot and cold weather charges is:
+
+(A) Rs. 5,000/- per case
+(B) Rs. 10,000/- per case
+(C) Rs. 25,000/- per case
+(D) Full Powers
+
+Answer: (B)
+Divisional Heads can sanction up to Rs. 10,000/- per case for hot and cold weather charges.
+
+Q123. Under Schedule III, for renting of buildings for office use in 'Y' Class city (without FRAC9), the monthly limit for Divisional Heads is:
+
+(A) Rs. 8,000/-
+(B) Rs. 10,000/-
+(C) Rs. 12,000/-
+(D) Rs. 15,000/-
+
+Answer: (C)
+X Class cities – Rs. 15,000/-; Y Class cities – Rs. 12,000/-; Z Class cities – Rs. 8,000/- per month.
+
+Q124. Under Schedule III, the ceiling for purchase of fixtures and furniture for a division (Object Head-13 Office Expenses) is:
+
+(A) Rs. 1 Lakh per annum
+(B) Rs. 2 Lakh per annum
+(C) Rs. 5 Lakh per annum
+(D) Full Powers
+
+Answer: (B)
+Ceiling limit up to Rs. 2 Lakh per annum for a division. Furniture/fixtures not exceeding threshold of Rs. 1 lakh or 3 years useful life can only be procured under Object Head-13.
+
+Q125. Under Schedule III, what are the financial limits for holding a customer meet?
+
+(A) Rs. 5,000/- per meet; Rs. 100/- per head on tea
+(B) Rs. 10,000/- per meet; Rs. 200/- per head on tea/snacks; Rs. 100/- per head on stationery
+(C) Rs. 15,000/- per meet; Rs. 300/- per head on tea/snacks
+(D) Full Powers
+
+Answer: (B)
+Rs. 10,000/- per meet; Rs. 2,000/- ceiling on hiring/transport; Rs. 200/- per head on tea, snacks etc.; Rs. 100/- per head on stationery and ancillaries.
+
+Q126. Under Schedule III, the limit for purchase of office equipment (not exceeding threshold of Rs. 1 lakh or 3 years useful life) per case is:
+
+(A) Rs. 2,000/-
+(B) Rs. 3,000/-
+(C) Rs. 5,000/-
+(D) Rs. 10,000/-
+
+Answer: (C)
+Rs. 5,000/- per case. Note: Office Equipment does not include any kind of Computer. Equipment exceeding the threshold should be classified as capital expenditure under Object Head-52.
+
+Q127. Under Schedule III, the limit for emergent purchase of stock and stationery articles not ordinarily available in stock (after obtaining non-availability certificate from PSD) is:
+
+(A) Rs. 10,000/- per annum
+(B) Rs. 25,000/- per annum
+(C) Rs. 50,000/- per annum
+(D) Rs. 1 Lakh per annum
+
+Answer: (C)
+Up to Rs. 50,000/- per annum after obtaining non-availability certificate from PSD (Postal Stores Depot).
+
+Q128. Under Schedule III, what is the limit for expenditure on carriage of mails by modes other than rail and air transport?
+
+(A) Rs. 1,000/- per month per case
+(B) Rs. 2,000/- per month per case
+(C) Rs. 3,000/- per month per case
+(D) Rs. 5,000/- per month per case
+
+Answer: (C)
+Divisional Heads may sanction up to Rs. 3,000/- per month per case.
+
+Q129. Under Schedule III, for embedding of cash/mail chests, purchase of technical books/maps, painting of letter boxes/sign boards/notice boards etc., the limit per case is:
+
+(A) Rs. 3,000/-
+(B) Rs. 5,000/-
+(C) Rs. 10,000/-
+(D) Rs. 25,000/-
+
+Answer: (C)
+Rs. 10,000/- in each case.
+
+Q130. Under Schedule III, for Minor Civil and Electrical Works in Government Buildings, the limit per case is:
+
+(A) Rs. 10,000/-
+(B) Rs. 25,000/-
+(C) Rs. 50,000/-
+(D) Rs. 1 Lakh
+
+Answer: (C)
+Rs. 50,000/- per case for Government Buildings; Rs. 5,000/- per case for Rented Buildings.
+
+Q131. Under Schedule III, for Minor Civil and Electrical Works in Rented Buildings, the limit per case is:
+
+(A) Rs. 1,000/-
+(B) Rs. 3,000/-
+(C) Rs. 5,000/-
+(D) Rs. 10,000/-
+
+Answer: (C)
+Rs. 5,000/- per case — applicable to both minor civil works in rented buildings and purchase/installation of removable electrical fittings in rented buildings.
+
+Q132. Under Schedule III (Object Head-16), the annual limit for Printing of rate charts, mailers and brochures for publicizing Departmental products and services is:
+
+(A) Rs. 5,000/-
+(B) Rs. 10,000/-
+(C) Rs. 20,000/-
+(D) Rs. 50,000/-
+
+Answer: (C)
+Rs. 20,000/- per annum for all such activities taken together (distribution to post offices, marketing executives and customers).
+
+Q133. Under Schedule III (Object Head-16), the annual limit for Printing and Binding (general) for Divisional Heads is:
+
+(A) Rs. 50,000/-
+(B) Rs. 1 Lakh
+(C) Rs. 2 Lakh
+(D) Full Powers
+
+Answer: (C)
+Rs. 2 Lakh per annum for general printing and binding.
+
+Q134. Under Schedule III, the limit for hiring of accommodation for holding examination or customer meet is:
+
+(A) Rs. 2,000/- per case
+(B) Rs. 5,000/- per case
+(C) Rs. 10,000/- per case
+(D) Full Powers
+
+Answer: (B)
+Up to Rs. 5,000/- per case for hiring accommodation for examinations or other purposes like holding customer meets.
+
+Q135. Under Schedule III (Other Financial Powers — Sl. No. 14), which of the following is NOT within the full powers of Divisional Heads?
+
+(A) Refund of air surcharge on articles delayed due to fault of service
+(B) Refund of postage on articles maliciously sent unpaid
+(C) Write-off of irrecoverable losses of stores
+(D) Refund of amounts overpaid by a member of the public found excess in office accounts
+
+Answer: (C)
+Write-off of irrecoverable losses of stores is NOT a power of Divisional Heads under Schedule III — it is listed under Schedule II-C for Sr. DDG (PAF). Refunds listed in items (a) to (e) of Sl. No. 14 (including earnest money, air surcharge, postage, stamps/coins found in letterboxes, and overpaid amounts) are all Full Powers for Divisional Heads.

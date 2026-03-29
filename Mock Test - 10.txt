@@ -1,0 +1,532 @@
+Q1. (CCS (CCA) Rules, 1965) [Difficulty: Easy]
+When did the Central Civil Services (Classification, Control & Appeal) Rules, 1965 come into force?
+A. 01 January 1965
+B. 12 December 1964
+C. 01 December 1965
+D. 01 April 1966
+Answer: C
+Explanation:
+[cite_start]The CCS (CCA) Rules, 1965 came into force from the 01 December 1965[cite: 11].
+
+Q2. (CCS (CCA) Rules, 1965) [Difficulty: Moderate]
+Which of the following categories of employees are the CCS (CCA) Rules, 1965 applicable to?
+A. A member of the All India Services
+B. Any person in casual employment
+C. Civilian Government servants in the Defence Services
+D. Extra-Departmental Agents
+Answer: C
+Explanation:
+[cite_start]The rules apply to every civilian Government servant in the Defence Services [cite: 57, 58][cite_start], but explicitly do not apply to All India Services, casual employment, or Extra-Departmental Agents[cite: 62, 64, 68].
+
+Q3. (CCS (CCA) Rules, 1965) [Difficulty: Hard]
+Consider the following statements regarding 'Deemed Suspension' under Rule 10:
+1. A Government servant is deemed to be suspended from the date of detention if detained in custody for a period exceeding 48 hours.
+2. The 48-hour period is strictly continuous and intermittent periods of imprisonment cannot be taken into account.
+3. An order of suspension made or deemed to have been made must be reviewed before the expiry of 90 days.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 3 only
+D. 1, 2, and 3
+Answer: B
+Explanation:
+[cite_start]Statements 1 and 3 are correct[cite: 150, 159]. [cite_start]Statement 2 is incorrect because intermittent periods of imprisonment, if any, shall be taken into account when computing the 48 hours[cite: 152].
+
+Q4. (CCS (CCA) Rules, 1965) [Difficulty: Moderate]
+What is the maximum period for which an extension of suspension can be ordered at a time, upon review by the competent authority?
+A. 90 days
+B. 120 days
+C. 180 days
+D. 270 days
+Answer: C
+Explanation:
+[cite_start]Extension of suspension shall not be for a period exceeding 180 days at a time[cite: 160].
+
+Q5. (CCS (CCA) Rules, 1965) [Difficulty: Easy]
+Under the CCS (CCA) Rules, which of the following is strictly classified as a minor penalty?
+A. Warning
+B. Censure
+C. Compulsory retirement
+D. Reversion on the ground of unsuitability
+Answer: B
+Explanation:
+[cite_start]"Censure" is classified as a minor penalty[cite: 181]. [cite_start]"Warning" is not a penalty [cite: 250][cite_start], and reversion for unsuitability does not amount to a penalty[cite: 226].
+
+Q6. (CCS (CCA) Rules, 1965) [Difficulty: Moderate]
+In a case where a Government servant is charged with the acceptance of gratification as a motive or reward for doing an official act, which penalty is mandated if the charge is established?
+A. Withholding of increments
+B. Reduction to a lower time-scale
+C. Compulsory retirement
+D. Removal or Dismissal from service
+Answer: D
+Explanation:
+[cite_start]In cases where the charge of acceptance of gratification (other than legal remuneration) is established, the penalty of Removal or Dismissal from service shall be imposed[cite: 216].
+
+Q7. (CCS (CCA) Rules, 1965) [Difficulty: Hard]
+Assertion (A): The time limit for conducting a major penalty proceeding is 18 months from the date of issue of the charge sheet.
+Reason (R): The departmental inquiry must invariably be completed within six months by the inquiry officer.
+Select the correct answer:
+A. Both A and R are true, and R is the correct explanation of A
+B. Both A and R are true, but R is not the correct explanation of A
+C. A is true, but R is false
+D. A is false, but R is true
+Answer: B
+Explanation:
+[cite_start]Both statements are correct facts[cite: 267, 298], but the six-month limit for the inquiry officer (Reason) is only one phase of the overall 18-month timeline for the entire proceeding (Assertion). Hence, R is not the complete or direct explanation for A.
+
+Q8. (CCS (CCA) Rules, 1965) [Difficulty: Easy]
+What is the ceiling on the number of disciplinary cases a retired official can handle as an Inquiry Officer in a year?
+A. 4 cases
+B. 8 cases
+C. 10 cases
+D. 12 cases
+Answer: B
+Explanation:
+[cite_start]A retired official acting as an Inquiry Officer has a ceiling of 8 cases in a year, and not more than 4 cases at a time[cite: 275].
+
+Q9. (CCS (CCA) Rules, 1965) [Difficulty: Easy]
+What is the time limit for a charged official to furnish a written representation on the advice of the UPSC?
+A. 10 days
+B. 15 days
+C. 30 days
+D. 45 days
+Answer: B
+Explanation:
+[cite_start]The time limit for furnishing a written representation by a Charged Official on the advice of the UPSC is 15 days[cite: 297].
+
+Q10. (CCS (CCA) Rules, 1965) [Difficulty: Moderate]
+Which of the following actions does NOT amount to a penalty under the CCS (CCA) Rules?
+A. Recovery from pay of pecuniary loss caused by negligence
+B. Stoppage at the efficiency bar on the ground of unfitness
+C. Withholding of increments of pay
+D. Reduction to a lower stage in the time-scale of pay
+Answer: B
+Explanation:
+[cite_start]Stoppage of a government servant at the efficiency bar on the ground of unfitness to cross the bar does not amount to a penalty within the meaning of Rule 11[cite: 217, 222].
+
+Q11. (CCS (CCA) Rules, 1965) [Difficulty: Moderate]
+Against which of the following orders does an appeal lie under the CCS (CCA) Rules?
+A. An order of an interlocutory nature
+B. An order passed by an inquiring authority in the course of an inquiry
+C. An order made by the President
+D. An order enhancing any penalty imposed under rule 11
+Answer: D
+Explanation:
+[cite_start]An appeal lies against an order enhancing any penalty imposed under rule 11[cite: 425]. [cite_start]No appeal lies against interlocutory orders, orders by the President, or orders by an inquiring authority[cite: 411, 412, 414, 418].
+
+Q12. (CCS (CCA) Rules, 1965) [Difficulty: Hard]
+Consider the following regarding the power of 'Revision' under Rule 29:
+1. Revision can only be exercised on an application from the Government servant.
+2. The authority who decided the appeal cannot revise his own order.
+3. The appellate authority can revise the order within six months of the date of the order proposed to be revised.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 3 only
+D. 1, 2, and 3
+Answer: B
+Explanation:
+[cite_start]Statements 2 and 3 are correct[cite: 496, 506]. [cite_start]Statement 1 is incorrect because the power of revision may be exercised suo motu or on application[cite: 495].
+
+Q13. (CCS (CCA) Rules, 1965) [Difficulty: Easy]
+What is the standard period of limitation for preferring an appeal under the CCS (CCA) Rules?
+A. 15 days
+B. 30 days
+C. 45 days
+D. 90 days
+Answer: C
+Explanation:
+[cite_start]No appeal shall be entertained unless it is preferred within a period of 45 days from the date the copy of the order is delivered to the appellant[cite: 460].
+
+Q14. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Easy]
+Under the GDS (Conduct and Engagement) Rules, 2020, what is the maximum duration a Sevak can be required to perform duty in a day?
+A. 4 hours
+B. 5 hours
+C. 6 hours
+D. 8 hours
+Answer: B
+Explanation:
+[cite_start]A Sevak shall not be required to perform duty beyond a maximum period of 5 hours in a day[cite: 556].
+
+Q15. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Moderate]
+If a candidate belongs to the PwD/PH + SC/ST category, what is the permissible age relaxation for engagement to GDS posts?
+A. 5 years
+B. 10 years
+C. 13 years
+D. 15 years
+Answer: D
+Explanation:
+[cite_start]The permissible age relaxation for PwD/PH + SC/ST candidates is 15 years[cite: 581].
+
+Q16. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Hard]
+Regarding the terms and conditions of engagement for a Gramin Dak Sevak, which of the following statements is/are TRUE?
+1. A Sevak can claim to be at par with Central Government employees after 3 years of continuous service.
+2. Residence in the post village for GDS BPM must be taken up within one month after selection but before engagement.
+3. The post office accommodation must invariably be provided by the Central or State Government.
+A. 2 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Answer: A
+Explanation:
+[cite_start]Statement 2 is correct[cite: 571]. [cite_start]Statement 1 is false; a Sevak shall not claim to be at par with Central Government employees[cite: 570]. [cite_start]Statement 3 is false; accommodation is generally provided by the GDS BPM, though Govt/Panchayat buildings can be used if available[cite: 573, 574].
+
+Q17. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Moderate]
+In cases where a GDS has rendered less than three years of continuous engagement, what notice period is required for the termination of their engagement?
+A. 14 days
+B. One month
+C. Three months
+D. Six months
+Answer: B
+Explanation:
+[cite_start]The period of such notice for termination shall be one month, or the payment of one month's TRCA plus Dearness Allowance in lieu of notice[cite: 632].
+
+Q18. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Moderate]
+Which of the following is considered a 'Major Penalty' under Rule 9 of the GDS Conduct & Engagement Rules, 2020?
+A. Censure
+B. Recovery from TRCA of any pecuniary loss caused by negligence
+C. Withholding of annual increase in TRCA without cumulative effect
+D. Compulsory Discharge from engagement with monetary benefits
+Answer: D
+Explanation:
+[cite_start]Compulsory Discharge from engagement is listed as a Major Penalty under Rule 9[cite: 651, 653]. [cite_start]Options A, B, and C are minor penalties[cite: 646, 649, 650].
+
+Q19. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Hard]
+If departmental proceedings are not instituted while a GDS is in engagement, but are proposed after their discharge at the age of 65, which condition must be met?
+A. They can be instituted by the Divisional Head without external approval.
+B. They shall not be instituted save with the sanction of the President.
+C. They can be in respect of any event that occurred during their entire tenure.
+D. The disciplinary authority issues the final penalty order directly.
+Answer: B
+Explanation:
+[cite_start]Proceedings after discharge, if not instituted while in engagement, shall not be instituted save with the sanction of the President, and cannot involve events more than 4 years old[cite: 728, 729, 730].
+
+Q20. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Moderate]
+Under Rule 12, who is empowered to immediately put off duty a GDS holding a specified post in cases involving fraud or embezzlement?
+A. Only the Divisional Head
+B. Only the Chief Postmaster General
+C. Inspector of Post Offices or Assistant Superintendent of Post Offices
+D. Sub-Postmaster
+Answer: C
+Explanation:
+[cite_start]In cases involving fraud or embezzlement, the Inspector of Post Offices or the Assistant Superintendent of Post Offices of the Sub-Division may put the Sevak off duty, under immediate intimation to the Engaging Authority[cite: 757].
+
+Q21. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Hard]
+Assertion (A): A Sevak placed on 'put off duty' is entitled to an initial ex-gratia compensation equal to 50% of their TRCA.
+Reason (R): If the period of put off duty exceeds 90 days, the authority may increase the compensation by up to 50% of the initially admissible amount, if the delay is not attributable to the Sevak.
+Select the correct answer:
+A. Both A and R are true, and R is the correct explanation of A
+B. Both A and R are true, but R is not the correct explanation of A
+C. A is true, but R is false
+D. A is false, but R is true
+Answer: D
+Explanation:
+[cite_start]Assertion (A) is false; the initial ex-gratia payment is equal to 25% of the TRCA[cite: 767]. [cite_start]Reason (R) is true; after 90 days, it can be increased by up to 50% of that initial 25% amount[cite: 768, 769].
+
+Q22. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Easy]
+What is the period of limitation for a GDS to submit an appeal against an order?
+A. 30 days
+B. 45 days
+C. Two months
+D. Three months
+Answer: D
+Explanation:
+[cite_start]No appeal shall be entertained unless it is submitted within a period of three months from the date the appellant receives a copy of the order[cite: 783, 784].
+
+Q23. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Moderate]
+Within what time frame is an authority permitted to reopen a case for 'Revision' on its own motion, assuming no appeal has been preferred?
+A. 3 months from the date of the order
+B. 6 months from the date of the order
+C. 1 year from the date of the order
+D. There is no time limit for suo motu revision
+Answer: B
+Explanation:
+[cite_start]No such case shall be reopened for revision after the expiry of six months from the date of the order to be revised, except by the Government or Head of Circle/PMG[cite: 800, 808].
+
+Q24. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Moderate]
+For a Gramin Dak Sevak Branch Postmaster (BPM), who is the competent Disciplinary Authority for imposing major penalties?
+A. Sub Divisional Head
+B. Divisional Head (Gr. "A" JTS/STS/Gr. "B")
+C. DPS
+D. CPMG
+Answer: B
+Explanation:
+[cite_start]For a BPM, the Disciplinary Authority for Major penalties (1 to 9 of Rule 9) is the Divisional Head[cite: 848, 856]. [cite_start]The Sub Divisional Head can only impose minor penalties[cite: 852].
+
+Q25. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Easy]
+Which category of applicants is required to pay a fee of Rs. 100/- when applying for GDS posts?
+A. All female candidates
+B. All SC/ST candidates
+C. Transwomen candidates
+D. Male applicants belonging to UR/OBC/EWS
+Answer: D
+Explanation:
+[cite_start]Male applicants belonging to UR/OBC/EWS must pay the fee[cite: 624]. [cite_start]Females, SC/ST, PwD, and Transwomen are exempted[cite: 625].
+
+Q26. (GDS Conduct & Engagement Rules, 2020) [Difficulty: Easy]
+How is the work performed for IPPB treated in relation to a Sevak's Time Related Continuity Allowance (TRCA)?
+A. It is added to the basic TRCA automatically.
+B. It is calculated as 10% of the TRCA.
+C. It will not be included in the calculation of TRCA as it is done on an incentive basis.
+D. It replaces the Dearness Allowance.
+Answer: C
+Explanation:
+[cite_start]The work performed for IPPB will not be included in the calculation of TRCA, as it is being done on an incentive basis[cite: 626, 627].
+
+Q27. (Preservation of Records) [Difficulty: Easy]
+What is the preservation period for Day Bag Books maintained in Central Bag Offices (CBOs)?
+A. 2 years
+B. 3 years
+C. 5 years
+D. 10 years
+Answer: D
+Explanation:
+[cite_start]Day bag books in CBOs have a preservation period of 10 years[cite: 887].
+
+Q28. (Preservation of Records) [Difficulty: Moderate]
+How long should the Franking Machine Register regarding postings (maintained by the licensee) be preserved?
+A. 1 year from the date of last entry
+B. 3 years from the date of last entry
+C. 5 years from the date of issue
+D. Permanent
+Answer: B
+Explanation:
+[cite_start]The Franking Machine Register regarding postings (FM.10) must be preserved for 3 years from the date of last entry in the register[cite: 887].
+
+Q29. (Preservation of Records) [Difficulty: Hard]
+Match the accounting records with their correct preservation periods:
+List I:
+P. Sub Office daily accounts
+Q. Branch Office daily accounts
+R. Head Office Summary
+S. Treasurer's Cash Book
+
+List II:
+1. 10 years
+2. 3 years
+3. 2 years
+4. 18 months
+
+A. P-4, Q-3, R-2, S-1
+B. P-3, Q-4, R-1, S-2
+C. P-4, Q-2, R-3, S-1
+D. P-2, Q-3, R-4, S-1
+Answer: A
+Explanation:
+[cite_start]Sub Office daily accounts: 18 months[cite: 897]. [cite_start]Branch Office daily accounts: 2 years[cite: 897]. [cite_start]Head Office Summary: 3 years[cite: 897]. [cite_start]Treasurer's Cash Book: 10 years[cite: 897].
+
+Q30. (Preservation of Records) [Difficulty: Moderate]
+What is the preservation rule for Inspection reports from the Audit Office / Accounts Office?
+A. 3 years after the date of inspection
+B. 1 year after the next inspection provided all items have been settled
+C. 5 years from the date of receipt
+D. Permanent retention
+Answer: B
+Explanation:
+[cite_start]Inspection reports from the Audit Office/Accounts Office must be preserved for 1 year after the next inspection, provided all the items have been settled[cite: 897].
+
+Q31. (Preservation of Records) [Difficulty: Easy]
+What is the preservation period for the Service Rolls of a government employee?
+A. 3 years after death/retirement
+B. 5 years after death, resignation, discharge or retirement
+C. 10 years after retirement
+D. Permanent
+Answer: B
+Explanation:
+[cite_start]Service Rolls must be preserved for 5 years after death, resignation, discharge or retirement, whichever is earlier[cite: 902].
+
+Q32. (Preservation of Records) [Difficulty: Moderate]
+How long must the Register of Security Deposits or Bonds be preserved?
+A. 3 years
+B. 5 years
+C. 10 years
+D. 35 years
+Answer: C
+Explanation:
+[cite_start]The Register of Security Deposits or Bonds has a preservation period of 10 years[cite: 902].
+
+Q33. (Preservation of Records) [Difficulty: Hard]
+Assertion (A): Specimen signature books in a Sub Office (SO) are destroyed forthwith once all accounts in them are transferred.
+Reason (R): Specimen signature books in a Head Office (HO) are destroyed forthwith by the Postmaster after ensuring pending application forms are prepared.
+Select the correct answer:
+A. Both A and R are true, and R is the correct explanation of A
+B. Both A and R are true, but R is not the correct explanation of A
+C. A is true, but R is false
+D. A is false, but R is true
+Answer: D
+Explanation:
+Assertion (A) is false; [cite_start]SO specimen signature books are preserved for 5 years after accounts are closed/transferred[cite: 917]. Reason (R) is true; [cite_start]HO books are destroyed forthwith after ensuring application forms are prepared[cite: 917].
+
+Q34. (Preservation of Records) [Difficulty: Moderate]
+For how many years must the Guard books containing depositor's applications for duplicate passbooks be preserved?
+A. 2 years
+B. 3 years
+C. 5 years
+D. 6 years
+Answer: D
+Explanation:
+[cite_start]Guard books containing depositor's applications for duplicate passbooks are to be preserved for 6 years[cite: 917].
+
+Q35. (Preservation of Records) [Difficulty: Moderate]
+How long is the Register of deceased depositor's claim cases preserved when withdrawals are allowed on an indemnity bond?
+A. 2 years after the accounts are closed
+B. 3 years after the accounts are closed
+C. 6 years after the accounts are closed
+D. Permanent
+Answer: C
+Explanation:
+[cite_start]Normally 3 years, but where withdrawals are allowed on an indemnity bond, the papers are preserved for 6 years after the accounts are closed[cite: 924].
+
+Q36. (Preservation of Records) [Difficulty: Hard]
+Consider the preservation of Bonds of Indemnity obtained for issuing duplicate Post Office Savings Certificates. What is the correct retention period for a 5-year NSC?
+A. 6 years from the date of issue
+B. 10 years from the date of maturity
+C. 23 years from the date of issue
+D. Permanent
+Answer: C
+Explanation:
+[cite_start]Bonds of Indemnity obtained in connection with the issue of duplicate certificates for 5 year NSCs must be preserved for 23 years from the date of issue[cite: 940].
+
+Q37. (Preservation of Records) [Difficulty: Easy]
+What is the preservation period for the Register of Destruction of records?
+A. 10 years
+B. 25 years
+C. 35 years
+D. Permanent
+Answer: D
+Explanation:
+[cite_start]The Register of Destruction of records must be preserved permanently[cite: 952].
+
+Q38. (Preservation of Records) [Difficulty: Moderate]
+How long should the confidential records/character sheets of an official who has been dismissed, removed, or compulsorily retired as a disciplinary measure be preserved?
+A. 2 years
+B. 3 years
+C. 5 years
+D. 6 years
+Answer: D
+Explanation:
+[cite_start]Confidential records/character sheets of officials dismissed, removed or compulsorily retired as a disciplinary measure are preserved for 6 years along with disciplinary proceedings[cite: 945].
+
+Q39. (CCS Conduct Rules, 1964) [Difficulty: Easy]
+Which of the following is NOT listed as a fundamental requirement under Rule 3 (General) for every Government servant?
+A. Maintain absolute integrity
+B. Maintain devotion to duty
+C. Declare personal assets publicly every year
+D. Do nothing which is unbecoming of a government servant
+Answer: C
+Explanation:
+[cite_start]Rule 3 requires maintaining absolute integrity, devotion to duty, and doing nothing unbecoming of a government servant[cite: 1004, 1005, 1006, 1007]. Public declaration of assets is not listed as a basic tenet under this specific rule.
+
+Q40. (CCS Conduct Rules, 1964) [Difficulty: Moderate]
+Under the CCS (Conduct) Rules, 1964, the definition of "Members of family" includes a sister:
+A. Only if she is financially dependent on the Government servant.
+B. Only if she resides with the Government servant.
+C. Irrespective of whether she is dependent on the Government servant or not.
+D. A sister is explicitly excluded from the definition.
+Answer: C
+Explanation:
+[cite_start]The definition includes the wife or husband, son or daughter, parents, brothers, sisters, etc., "whether they are dependent on the Govt. servant or not"[cite: 999].
+
+Q41. (CCS Conduct Rules, 1964) [Difficulty: Hard]
+Statement 1: A Group A officer must obtain previous sanction from the Government before permitting their son to accept employment in any company having official dealings with the Government.
+Statement 2: If any member of a Government servant's family accepts employment in a firm, the servant must simply intimate the acceptance and disclose any official dealings.
+Choose the correct option:
+A. Both Statement 1 and Statement 2 are true
+B. Statement 1 is true, but Statement 2 is false
+C. Statement 1 is false, but Statement 2 is true
+D. Both statements are false
+Answer: A
+Explanation:
+[cite_start]Statement 1 is true for Group A officers[cite: 1068]. [cite_start]Statement 2 is also true as a general mandate for Government servants upon becoming aware of such employment[cite: 1069].
+
+Q42. (CCS Conduct Rules, 1964) [Difficulty: Moderate]
+A Government servant is prohibited from joining any association if its objects or activities are prejudicial to the interests of:
+A. The ruling political party
+B. The sovereignty and integrity of India, public order or morality
+C. The financial supremacy of the Central Government
+D. The diplomatic relations of neighboring states exclusively
+Answer: B
+Explanation:
+[cite_start]Rule 6 prohibits joining associations prejudicial to the interests of the sovereignty and integrity of India, or public order or morality[cite: 1084, 1085, 1093].
+
+Q43. (CCS Conduct Rules, 1964) [Difficulty: Hard]
+According to the interpretations under the CCS Conduct Rules, which of the following activities does NOT fall under the definition of a "strike"?
+A. Refusal to work overtime when such work is necessary in the public interest
+B. Abstention from work for participation in a bandh
+C. Submitting a joint representation to the Head of Department
+D. Mass abstention from work without permission
+Answer: C
+Explanation:
+[cite_start]Strike includes mass abstention, refusal to work overtime, and absence for bandh[cite: 1099, 1101, 1103, 1107]. Submitting a joint representation is not classified as a strike under these provisions.
+
+Q44. (CCS Conduct Rules, 1964) [Difficulty: Moderate]
+What is the time limit beyond which permission may be assumed to have been granted for accepting gifts, if no communication is received from the competent authority?
+A. 15 days
+B. 30 days
+C. 45 days
+D. 60 days
+Answer: B
+Explanation:
+[cite_start]For gifts (Rule 13), the time period for the grant of assumed permission is 30 days[cite: 1124].
+
+Q45. (CCS Conduct Rules, 1964) [Difficulty: Easy]
+For a Group 'B' post, what is the monetary limit beyond which a Government servant must report a gift received on occasions like weddings from near relatives?
+A. Rs. 5000
+B. Rs. 7500
+C. Rs. 15000
+D. Rs. 25000
+Answer: C
+Explanation:
+For Group 'B' posts, a report must be made if the value of a gift from near relatives on such occasions exceeds Rs. [cite_start]15,000[cite: 1175, 1178, 1179].
+
+Q46. (CCS Conduct Rules, 1964) [Difficulty: Moderate]
+Which of the following falls under Rule 3(C) regarding the Prohibition of sexual harassment?
+A. Only male officers must prevent sexual harassment.
+B. Every Government servant in charge of a work place must take appropriate steps to prevent sexual harassment.
+C. A complaint must be filed directly to the Ministry within 24 hours.
+D. The rule applies only to interactions with the general public, not colleagues.
+Answer: B
+Explanation:
+[cite_start]Rule 3(C) mandates that every Government servant who is in charge of a work place shall take appropriate steps to prevent sexual harassment to any woman at the work place[cite: 1041, 1049].
+
+Q47. (CCS Conduct Rules, 1964) [Difficulty: Hard]
+Assertion (A): Subletting of Government accommodation by a Government servant is considered a grave misconduct.
+Reason (R): It automatically attracts a major penalty without the need to initiate disciplinary proceedings under Rule 14 of the CCS (CCA) Rules, 1965.
+Select the correct answer:
+A. Both A and R are true, and R is the correct explanation of A
+B. Both A and R are true, but R is not the correct explanation of A
+C. A is true, but R is false
+D. A is false, but R is true
+Answer: C
+Explanation:
+Assertion (A) is true; subletting is grave misconduct. [cite_start]Reason (R) is false because disciplinary proceedings under Rule 14 of CCS (CCA) Rules MUST be initiated; it is not an automatic penalty without proceedings[cite: 1270, 1271].
+
+Q48. (CCS Conduct Rules, 1964) [Difficulty: Moderate]
+A Government servant enters into a transaction for movable property in his own name. Under what financial threshold must this transaction be reported to the prescribed authority within one month?
+A. If it exceeds Rs. 20,000
+B. If it exceeds Rs. 50,000
+C. If it exceeds two months' basic pay of the Government servant
+D. If it exceeds six months' basic pay of the Government servant
+Answer: C
+Explanation:
+[cite_start]The transaction must be reported if the value of such property exceeds two months' basic pay of the Government servant[cite: 1312].
+
+Q49. (CCS Conduct Rules, 1964) [Difficulty: Moderate]
+If a Government servant requests permission to have recourse to a Court for the vindication of an official act, after what period can they assume permission has been granted if the Government does not respond?
+A. 30 days
+B. 60 days
+C. Three months
+D. Six months
+Answer: C
+Explanation:
+[cite_start]If no sanction is received within a period of three months from the date of receipt of his request, the Government servant shall be free to assume that permission has been granted[cite: 1369].
+
+Q50. (CCS Conduct Rules, 1964) [Difficulty: Easy]
+Which of the following is an explicit violation of Rule 22 regarding intoxicating drinks and drugs?
+A. Consuming any intoxicating drink within the privacy of one's own home while off duty.
+B. Appearing in a public place in a state of intoxication.
+C. Purchasing an intoxicating drink from a licensed vendor.
+D. Serving intoxicating drinks to guests at a private function.
+Answer: B
+Explanation:
+[cite_start]Rule 22 explicitly states a Government servant shall not appear in a public place in a state of intoxication[cite: 1392]. Options A, C, and D are not restricted as long as local laws are followed and duty is not affected.

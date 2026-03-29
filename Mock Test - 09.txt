@@ -1,0 +1,574 @@
+Q1. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Easy]
+With the implementation of the revised framework for consolidation of postal products, which of the following services shall henceforth act as the basic mail service for address-specific delivery of accountable postal items within the country?
+A. Registered Post
+B. Speed Post
+C. Business Parcel
+D. Express Parcel
+Answer: B
+Explanation:
+Under the revised framework merging Registered Post into Speed Post, Speed Post (Document and Parcel) will henceforth be the basic mail service for address-specific delivery of accountable items.
+
+Q2. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Easy]
+Under the revised network for processing postal articles, bags containing Speed Post and Registered articles sent across all miles will be closed with which color label?
+A. Blue
+B. Green
+C. Yellow
+D. Orange
+Answer: D
+Explanation:
+Only one Speed Post bag with an Orange Color label containing Speed Post and Registered articles will be sent across all miles from post offices to hubs and vice versa.
+
+Q3. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Moderate]
+Consider the following statements regarding the handling of un-accountable mail such as Domestic Book Packets, Periodicals, and Blind Literature under the new Hub processing guidelines:
+
+1. They are sent in the same bag as Speed Post to ensure faster delivery.
+2. They are processed at hubs in a separately identified area.
+3. They are sent through surface routes only using a Green Color Bag Label.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation:
+These items are processed in a separate area at hubs and dispatched through surface routes only, using a Green Color Bag Label. They are not merged with Speed Post bags.
+
+Q4. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Hard]
+Consider the following statements regarding the setting up of Delivery Centres (DCs):
+
+1. The delivery area of adjoining delivery Post offices may be merged under one Delivery Centre.
+2. The one-way distance to be travelled by delivery staff in redesigned delivery areas should ideally not be more than 15 km.
+3. If separate delivery staff for parcels is not justified, a Mix Delivery Staff will be assigned both document and parcel delivery.
+4. Delivery Centres are mandated to have counter operations to facilitate customer walk-ins.
+Which of the statements given above are correct?
+A. 1, 2 and 3 only
+B. 2, 3 and 4 only
+C. 1, 3 and 4 only
+D. 1, 2, 3 and 4
+Answer: A
+Explanation:
+Delivery Centres are designed to have no counter operations and dedicated supervisory staff to ensure enhanced monitoring of delivery operations.
+
+Q5. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Easy]
+In mechanized delivery areas under the new Integrated Delivery Centres, how are big and heavy parcels mandated to be delivered?
+A. Through heavy-duty electric bicycles
+B. Through 4-wheeler vehicles
+C. Through outsourced local couriers
+D. Through 2-wheelers with attached sidecars
+Answer: B
+Explanation:
+Documents and small parcels will be delivered through 2-wheelers, whereas big and heavy parcels will be delivered through 4-wheelers.
+
+Q6. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Moderate]
+What is the time limit for treating a Speed Post article as "lost" in the absence of final delivery status for the purpose of payment of compensation?
+A. 30 days from the date of booking or 15 days from the date of receipt of complaint.
+B. 60 days from the date of booking or 30 days from the date of receipt of complaint.
+C. 90 days from the date of booking or 45 days from the date of receipt of complaint.
+D. 120 days from the date of booking or 60 days from the date of receipt of complaint.
+Answer: B
+Explanation:
+A Speed Post article is treated as lost if there is no final delivery status after 60 days from booking or 30 days from the receipt of the complaint.
+
+Q7. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Hard]
+Assertion (A): In a Delivery Centre with processing areas for documents and parcels located separately in the same compound, the parcel delivery center is called a "Nodal Delivery Centre".
+Reason (R): A separate area for Parcel processing is always mandatory regardless of the justification for separate parcel delivery staff.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. A is false but R is true
+Answer: C
+Explanation:
+The assertion is true, but the reason is false because a separate area for Parcel processing will only be considered if there is a justification for separate parcel delivery staff.
+
+Q8. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Moderate]
+When implementing the "Second Delivery" service from a Delivery Centre, what are the recommended timings for the evening delivery shift?
+A. 10.00 hrs to 18.00 hrs
+B. 12.00 hrs to 20.00 hrs
+C. 14.00 hrs to 22.00 hrs
+D. 16.00 hrs to 20.00 hrs
+Answer: B
+Explanation:
+The timing for the morning delivery is kept from 9.00 hrs to 17.00 hrs, and for the evening (Second Delivery), it is kept from 12.00 hrs to 20.00 hrs.
+
+Q9. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Moderate]
+Under the centralized delivery guidelines, what is the maximum number of days an undelivered document or parcel can be kept in deposit after two delivery attempts?
+A. 5 days
+B. 7 days
+C. 10 days
+D. 14 days
+Answer: B
+Explanation:
+Two delivery attempts may be made for documents or parcels, and undelivered articles may be kept in deposit for a maximum of 7 days.
+
+Q10. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Moderate]
+In a Metro City, what is the generally recommended maximum number of accountable articles (except bulk articles) that can be delivered per day by a single Delivery Centre (DC)?
+A. 5,000 articles
+B. 8,000 articles
+C. 10,000 articles
+D. 15,000 articles
+Answer: B
+Explanation:
+In Metro/Big cities, the maximum number of accountable articles that can be delivered by a DC per day is kept at 8,000 articles (excluding bulk articles).
+
+Q11. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Moderate]
+Regarding International Track Packets (ITPS), what is the minimum daily average mail volume required for a Post Office/IBC to close direct bags to mapped FPO/OE?
+A. 10 articles / 5 Kg
+B. 15 articles / 10 Kg
+C. 20 articles / 15 Kg
+D. 25 articles / 20 Kg
+Answer: B
+Explanation:
+Post Office/IBCs will close direct bags for outward ITPS to mapped FPO/OE in case the daily average is 15 articles or 10 Kg mail per category.
+
+Q12. (Consolidation of Products & Centralized Delivery Policy) [Difficulty: Easy]
+To further upgrade the Postman Mobile App (PMA), advanced tech functionalities are being introduced under which project?
+A. Fincluvation 2.0
+B. IT 2.0
+C. CSI Modernization
+D. Digital India Post
+Answer: B
+Explanation:
+Advance tech functionalities such as route optimization, paperless delivery, and OTP-based delivery are introduced in PMA under the IT 2.0 project.
+
+Q13. (Dak Ghar Niryat Kendra) [Difficulty: Easy]
+The Dak Ghar Niryat Kendra (DNK) portal is integrated with which of the following systems to automate IGST refunds?
+A. Aadhaar and PAN databases
+B. Indian Customs Electronic Gateway (ICEGATE) and PFMS
+C. NITI Aayog's Export Index System
+D. Ministry of MSME Udyam Portal
+Answer: B
+Explanation:
+The DNK portal is integrated with ICEGATE, ICES, PFMS, and EDPMS to streamline data flow and automate IGST refunds.
+
+Q14. (Dak Ghar Niryat Kendra) [Difficulty: Moderate]
+Consider the following statements regarding the discount structure for customers at DNK:
+
+1. Customers must provide booking data in soft copy to avail full discounts.
+2. If data is provided in manual/hard copy, the discount is reduced to half of the prescribed rate.
+3. Any claim of a customer can be adjusted against their advance payment/dues of BNPL.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct. Statement 3 is incorrect because the guidelines explicitly state that any claim of the customer shall not be adjusted against advance payment/dues of BNPL.
+
+Q15. (Dak Ghar Niryat Kendra) [Difficulty: Hard]
+Match the Postal Bill of Export (PBE) Form Types with their correct filing method and export type as per DNK guidelines:
+Column I (Form Type)
+
+1. PBE-I
+2. PBE-II
+3. PBE-III
+4. PBE-IV
+Column II (Method & Type)
+A. Electronic - Other than eCommerce
+B. Manual - Other than eCommerce
+C. Electronic - eCommerce
+D. Manual - eCommerce
+Options:
+A. 1-D, 2-B, 3-C, 4-A
+B. 1-C, 2-A, 3-D, 4-B
+C. 1-B, 2-D, 3-A, 4-C
+D. 1-D, 2-C, 3-B, 4-A
+Answer: A
+Explanation:
+PBE-I is Manual eCommerce; PBE-II is Manual Other than eCommerce; PBE-III is Electronic eCommerce; PBE-IV is Electronic Other than eCommerce.
+
+Q16. (Dak Ghar Niryat Kendra) [Difficulty: Moderate]
+While booking an article on the DNK portal, what is the maximum allowable proportion for the packaging weight relative to the primary content?
+A. Not more than 5% of primary content
+B. Not more than 10% of primary content
+C. Not more than 15% of primary content
+D. Not more than 20% of primary content
+Answer: B
+Explanation:
+Gross weight is defined as the weight of the parcel with packaging, which should not be more than 10% of the primary content.
+
+Q17. (Dak Ghar Niryat Kendra) [Difficulty: Easy]
+For all non-contractual customers using the Dak Ghar Niryat Kendra portal, which default DOP Customer ID is displayed?
+A. 1000000001
+B. 2000055050
+C. 3000048090
+D. 4000033030
+Answer: C
+Explanation:
+The default customer ID (3000048090) is displayed by the DNK portal for all non-contractual customers.
+
+Q18. (Dak Ghar Niryat Kendra) [Difficulty: Hard]
+Consider the following statements regarding the billing cycles for contractual customers at DNK:
+
+1. For a 15-day/fortnightly billing cycle, the first bill is generated on the 15th of the month and is payable by the 22nd.
+2. For a 30-day/monthly billing cycle, the bill is generated on the 7th of the following month and is payable by the 30th/31st of the month of bill generation.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation:
+Statement 2 is correct. Statement 1 is incorrect because for the fortnightly cycle, bills are generated on the 22nd (for the first half) and the 7th of the following month (for the second half).
+
+Q19. (Dak Ghar Niryat Kendra) [Difficulty: Moderate]
+If a contractual customer fails to make the payment by the due date under the DNK billing system, what is the applicable penalty rate?
+A. 10% per annum calculated monthly
+B. 12% per annum calculated daily
+C. 15% per annum calculated quarterly
+D. 18% per annum calculated daily
+Answer: B
+Explanation:
+Penalty at the rate of 12% per annum (to be calculated daily) on the amount of the bill shall be imposed from the bill date upon the defaulting customer.
+
+Q20. (Dak Ghar Niryat Kendra) [Difficulty: Moderate]
+Assertion (A): To avail the credit facility, a contractual customer must furnish a Bank Guarantee equal to three billing cycles' anticipated postage.
+Reason (R): The Bank Guarantee amount is fixed permanently and cannot be reviewed once the agreement is signed.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. A is false but R is true
+Answer: C
+Explanation:
+The assertion is true, but the reason is false. The Bank Guarantee is equal to three billing cycles, but it must be reviewed on a quarterly basis, and an additional amount is required if the business exceeds the guarantee.
+
+Q21. (Dak Ghar Niryat Kendra) [Difficulty: Easy]
+Contractual customers opting for the advance deposit facility for booking at a single location must open a deposit account with a minimum product-wise amount of:
+A. Rs. 1,000/-
+B. Rs. 5,000/-
+C. Rs. 10,000/-
+D. Rs. 50,000/-
+Answer: B
+Explanation:
+For a single location, the minimum advance deposit amount is Rs. 5,000/- product wise. For multiple locations, it is Rs. 50,000/-.
+
+Q22. (Dak Ghar Niryat Kendra) [Difficulty: Moderate]
+Under the Dak Ghar Niryat Kendra guidelines, free pick-up service is limited to the municipal area of the booking centre or within a specific radius from the centre. What is this radius limit?
+A. 10 Km
+B. 15 Km
+C. 20 Km
+D. 25 Km
+Answer: C
+Explanation:
+Free pick up is limited to the municipal area to which the booking centre belongs or within a radius of 20 Km from the centre.
+
+Q23. (Dak Ghar Niryat Kendra) [Difficulty: Moderate]
+Who is the approving authority for providing the National Account Facility to a contractual customer booking articles from multiple locations across different regions?
+A. Divisional Head
+B. PMG
+C. CPMG
+D. Director General of Postal Services
+Answer: C
+Explanation:
+PMG is the approving authority for all cases falling under his region. CPMG is the approving authority for all other cases involving multiple locations.
+
+Q24. (Dak Ghar Niryat Kendra) [Difficulty: Easy]
+When exporting items to countries within the European Union via the DNK portal, which specific code must be entered against the 'Sender's Customs reference' number?
+A. LUT (Letter of Undertaking)
+B. CTH (Custom Tariff Heading)
+C. IOSS (Import One Stop Shop)
+D. AD Code (Authorized Dealer Code)
+Answer: C
+Explanation:
+IOSS (Import One Stop Shop) shall be entered against the 'Sender's Customs reference' number if the export is to the European Union.
+
+Q25. (CCS Temporary Service Rules) [Difficulty: Easy]
+Which of the following categories of employees are NOT governed by the provisions of the Central Civil Services (Temporary Service) Rules, 1965?
+A. Civilians paid from the defense services estimates
+B. Temporary employees in work-charged establishments who opted for pensionary benefits
+C. Railway servants
+D. Government servants holding a temporary post without a lien
+Answer: C
+Explanation:
+Rule 1(4) explicitly states that the rules shall not apply to Railway servants, government servants engaged on contracts, part-time employees, etc.
+
+Q26. (CCS Temporary Service Rules) [Difficulty: Moderate]
+Under Rule 5 of the CCS (Temporary Service) Rules, 1965, what is the required notice period for the termination of a temporary Government servant's service by the appointing authority?
+A. 14 days
+B. One month
+C. Three months
+D. Six months
+Answer: B
+Explanation:
+Under Rule 5(1)(b), the services of a temporary Government servant can be terminated at any time by a notice in writing, and the period of such notice shall be one month.
+
+Q27. (CCS Temporary Service Rules) [Difficulty: Moderate]
+After a termination notice is given to a temporary Government servant, what is the maximum time limit within which a superior authority can re-open the case suo moto, barring special circumstances?
+A. One month from the date of notice
+B. Three months from the date of notice
+C. Six months from the date of termination
+D. One year from the date of the appointing authority's order
+Answer: B
+Explanation:
+Under Rule 5(2), no case shall be re-opened under this sub-rule after the expiry of three months from the date of notice (or date of termination if no notice is given).
+
+Q28. (CCS Temporary Service Rules) [Difficulty: Hard]
+Consider the following statements regarding the terminal benefits of a temporary Government servant under Rule 10:
+
+1. A temporary employee retiring on superannuation with less than 10 years of service is eligible for retirement gratuity on the same scale as a permanent servant.
+2. A temporary employee who resigns his post is also eligible for a proportionate terminal gratuity.
+3. If an employee is compulsorily retired as a disciplinary measure, the gratuity payable shall not be less than two-thirds of the superannuation gratuity.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 3 only
+Answer: B
+Explanation:
+Statements 1 and 3 are correct. Statement 2 is incorrect because Rule 10(3)(a) clearly states that no gratuity shall be admissible to a Government servant who resigns his post or is removed/dismissed.
+
+Q29. (CCS Temporary Service Rules) [Difficulty: Easy]
+Under Rule 6, the services of a temporary Government servant can be terminated without notice if:
+A. The employee is found guilty of gross insubordination.
+B. The employee is declared physically unfit for continuance in service.
+C. The employee goes on an unauthorized leave for more than 15 days.
+D. The temporary post is abolished by the Ministry of Finance.
+Answer: B
+Explanation:
+Rule 6 states that notwithstanding Rule 5, services may be terminated at any time without notice on the employee being declared physically unfit by a competent medical authority.
+
+Q30. (CCS Temporary Service Rules) [Difficulty: Hard]
+Assertion (A): Half of the service paid from contingencies, followed by regular appointment, counts for terminal gratuity calculation.
+Reason (R): Government servants paid out of contingencies are fully covered under the general provisions of the CCS (Temporary Service) Rules, 1965 from their date of joining.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. A is false but R is true
+Answer: C
+Explanation:
+The assertion is true based on Government decisions. However, the reason is false because Rule 1(4)(d) specifically states that nothing in these rules shall apply to Government servants paid out of contingencies.
+
+Q31. (CCS Temporary Service Rules) [Difficulty: Moderate]
+For the purpose of absorption in a Central autonomous body under Rule 10, a body is considered "financed substantially" if the expenditure met by cess or Central Government grants is more than:
+A. 25%
+B. 49%
+C. 50%
+D. 75%
+Answer: C
+Explanation:
+"Financed substantially" means that more than 50% of the expenditure is met by cess or Central Government grants.
+
+Q32. (CCS Temporary Service Rules) [Difficulty: Moderate]
+While calculating terminal/death gratuity, an increment earned during the currency of earned leave expiring on the date of retirement forms part of the pay. This applies up to a maximum of how many days of earned leave?
+A. 60 days
+B. 90 days
+C. 120 days
+D. 300 days
+Answer: C
+Explanation:
+An increment earned during the currency of earned leave not exceeding 120 days or during the first 120 days of earned leave exceeding 120 days shall form part of the pay for calculating terminal/death gratuity.
+
+Q33. (CCS Temporary Service Rules) [Difficulty: Easy]
+The terminal gratuity provisions of Rule 10 apply only to temporary Government servants appointed on or before which date?
+A. 1st January 2004
+B. 31st December 2003
+C. 30th April 1965
+D. 1st May 1965
+Answer: B
+Explanation:
+Rule 10(5) states that the provisions of rule 10 shall apply to Government servants appointed on or before the 31st day of December 2003 (prior to the introduction of the National Pension System).
+
+Q34. (CCS Temporary Service Rules) [Difficulty: Hard]
+Match the following provisions of the CCS (Temporary Service) Rules, 1965 with their respective Rule numbers:
+Column I (Provision)
+
+1. Short Title, commencement and application
+2. Definition of Temporary Service
+3. Termination of temporary service by notice
+4. Termination on account of physical unfitness
+Column II (Rule Number)
+A. Rule 5
+B. Rule 6
+C. Rule 1
+D. Rule 2
+Options:
+A. 1-C, 2-D, 3-A, 4-B
+B. 1-C, 2-A, 3-D, 4-B
+C. 1-D, 2-C, 3-B, 4-A
+D. 1-A, 2-B, 3-C, 4-D
+Answer: A
+Explanation:
+Rule 1 deals with application; Rule 2 with definitions; Rule 5 with termination by notice; Rule 6 with termination due to physical unfitness.
+
+Q35. (CCS Temporary Service Rules) [Difficulty: Moderate]
+What procedure is mandated if a termination notice sent by registered post to a temporary Government servant is returned unserved?
+A. A second notice must be sent via speed post.
+B. It must be pasted on the door of the employee's last known residence.
+C. It shall be published in the Official Gazette and deemed personally served.
+D. The termination order is put on hold until physical delivery is ensured.
+Answer: C
+Explanation:
+If the notice sent by registered post is returned unserved, it shall be published in the Official Gazette and upon such publication, it shall be deemed personally served.
+
+Q36. (CCS Temporary Service Rules) [Difficulty: Easy]
+According to Government Decisions regarding the termination of temporary service under Rule 5, which of the following is correct regarding the termination order?
+A. The specific reason for termination must be explicitly mentioned.
+B. Reason should not be mentioned in the termination order.
+C. A disciplinary inquiry must always precede the order.
+D. A formal relieving letter must be issued on the exact expiry date of the notice period.
+Answer: B
+Explanation:
+Government decisions clarify that the reason should not be mentioned in the termination order, and no formal relieving is necessary on expiry of the notice period.
+
+Q37. (CCS Temporary Service Rules) [Difficulty: Easy]
+On the termination of service or death of a temporary Government servant, what is the maximum number of days for which the cash equivalent of Earned Leave (EL) and Half Pay Leave (HPL) is payable?
+A. 150 days
+B. 240 days
+C. 300 days
+D. 365 days
+Answer: C
+Explanation:
+On termination of service/death, the payment of the cash equivalent of leave salary is up to a maximum of 300 days of EL and HPL.
+
+Q38. (India Post Payments Bank) [Difficulty: Easy]
+What is the annual renewal subscription fee for the IPPB Premium Aarogya Savings Account?
+A. Rs. 49 + GST
+B. Rs. 99 + GST
+C. Rs. 149 + GST
+D. Rs. 200 + GST
+Answer: B
+Explanation:
+The Premium Aarogya Savings Account has an account opening charge of Rs. 149 + GST and an annual renewal subscription fee of Rs. 99 + GST.
+
+Q39. (India Post Payments Bank) [Difficulty: Moderate]
+For an IPPB Premium Savings Account linked to a Post Office Savings Account (POSA), what is the cumulative transaction limit for sweep-in during the first 3 days post successful linkage?
+A. Rs. 10,000
+B. Rs. 25,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: C
+Explanation:
+In case the customer has a linked POSA account, the cumulative transaction limit for sweep-in is Rs. 50,000/- for the first 3 days post successful linkage.
+
+Q40. (India Post Payments Bank) [Difficulty: Hard]
+Consider the following statements regarding the IPPB DigiSmart Savings Account:
+
+1. It is opened via the IPPB Mobile Banking App utilizing Aadhaar and PAN for individuals aged 18 and above.
+2. The account is subject to a mandatory monthly average balance requirement of Rs. 500.
+3. If biometric verification is not completed within 12 months, the account will be closed with closure charges of Rs. 150 + GST.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation:
+Statements 1 and 3 are correct. Statement 2 is incorrect because the DigiSmart Savings Account has no monthly average balance (MAB) requirement.
+
+Q41. (India Post Payments Bank) [Difficulty: Moderate]
+As per IPPB interest rate rules (applicable from 1st June 2022), what is the quarterly annual interest rate for savings account balances above INR 1 Lakh and up to INR 2 Lakh?
+A. 2.00%
+B. 2.25%
+C. 2.50%
+D. 2.75%
+Answer: B
+Explanation:
+Balances up to INR 1 Lakh earn 2.00%, while balances above INR 1 Lakh and up to INR 2 Lakh earn 2.25% (quarterly payout).
+
+Q42. (India Post Payments Bank) [Difficulty: Easy]
+In the IPPB Basic Savings Account, how many cash withdrawals are permitted free of charge in a month before charges apply?
+A. 2 withdrawals
+B. 3 withdrawals
+C. 4 withdrawals
+D. Unlimited free withdrawals
+Answer: C
+Explanation:
+The Basic Savings Account allows limited free cash withdrawals (4 withdrawals in a month). Post free limit, charges are 0.50% of the transaction value (minimum Rs. 25).
+
+Q43. (India Post Payments Bank) [Difficulty: Hard]
+Match the following IPPB Finacle Business Functions with their correct Menu Commands:
+Column I (Function)
+
+1. Account Ledger Inquiry
+2. eKYC Individual accounts - New customer
+3. Customer Accounts inquiry
+4. Account Lien Marking
+Column II (Menu Command)
+A. HAFI
+B. CKYCACOP
+C. HALM
+D. HACI
+Options:
+A. 1-D, 2-B, 3-A, 4-C
+B. 1-D, 2-A, 3-B, 4-C
+C. 1-B, 2-D, 3-C, 4-A
+D. 1-A, 2-C, 3-D, 4-B
+Answer: A
+Explanation:
+HACI = Account Ledger Inquiry; CKYCACOP = eKYC Individual accounts (New); HAFI = Customer Accounts inquiry; HALM = Account Lien Marking.
+
+Q44. (India Post Payments Bank) [Difficulty: Moderate]
+What are the IPPB Doorstep Banking (DSB) charges applicable for non-IPPB customers for generating a Digital Life Certificate (DLC)?
+A. Rs. 20 + GST
+B. Rs. 50 + GST
+C. Rs. 70 + GST
+D. NO / NA (NIL charges for doorstep visit)
+Answer: D
+Explanation:
+For non-IPPB customers, the DSB charges applicable for AEPS, DMT, CELC, and DLC are "NO" (NA). A nominal fee of Rs. 70 is charged for DLC generation, but no separate doorstep charges are levied.
+
+Q45. (India Post Payments Bank) [Difficulty: Moderate]
+Consider the following statements regarding the Antyodaya Shramik Suraksha Yojana offered through IPPB:
+
+1. It is an affordable insurance scheme for unorganized sector workers.
+2. Plan A offers a 10 Lakh Sum Insured at an annual premium of INR 499 (including GST).
+3. The Education Benefit for eligible children is provided under both Plan A and Plan B.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct. Statement 3 is incorrect because the Education Benefit is available in Plan A (10 Lakh) but is "Not Available" in Plan B (5 Lakh).
+
+Q46. (India Post Payments Bank) [Difficulty: Easy]
+The Post Office Savings Account (POSA), which can be linked with an IPPB account for sweep-in/sweep-out facilities, can be opened by cash only with a minimum initial deposit of:
+A. Rs. 100
+B. Rs. 250
+C. Rs. 500
+D. Rs. 1,000
+Answer: C
+Explanation:
+A POSA can be opened by cash only with a minimum initial deposit of Rs. 500.
+
+Q47. (India Post Payments Bank) [Difficulty: Moderate]
+Under the Group Accident Guard Policy (TATA AIG Option 1 - Sum Assured 10,00,000) offered to IPPB customers, what is the maximum Education Benefit payable for eligible children?
+A. 5% of SI or Rs. 50,000 whichever is less
+B. 10% of SI or Rs. 1,00,000 or actuals whichever is less
+C. Fixed Rs. 25,000 per child
+D. Fixed Rs. 50,000 irrespective of actuals
+Answer: B
+Explanation:
+The Education Benefit is 10% of SI or Rs. 1,00,000 or actuals whichever is less, payable for a maximum of 2 children only.
+
+Q48. (India Post Payments Bank) [Difficulty: Moderate]
+For a Savings Account on the IPPB Mobile Banking App, what is the maximum amount limit per day (Cumulative) for IMPS outward transactions?
+A. INR 50,000
+B. INR 1,00,000
+C. INR 2,00,000
+D. INR 5,00,000
+Answer: C
+Explanation:
+Under the Limits on Money Transfer for the IPPB Mobile Banking App, the Per Day Max Limit for IMPS (Outward) is INR 2,00,000 with a maximum count of 10.
+
+Q49. (India Post Payments Bank) [Difficulty: Easy]
+What are the SMS Alert charges for IPPB customers per quarter (effective from 1st October 2024)?
+A. Free for all accounts
+B. INR 0.25 + GST per SMS (Maximum capping Rs. 50 + GST)
+C. INR 0.25 + GST per SMS (Maximum capping Rs. 100 + GST)
+D. Flat INR 15 + GST per quarter
+Answer: C
+Explanation:
+SMS alerts are Rs. 0.25 + GST per SMS. The maximum capping of SMS charges per quarter for customers is Rs. 100 + GST (for Merchants it is Rs. 50 + GST).
+
+Q50. (India Post Payments Bank) [Difficulty: Hard]
+Assertion (A): An IPPB Current Account holder can link their account with a Post Office Savings Account (POSA) to utilize the automatic Sweep-in and Sweep-out facility for managing funds above Rs. 2 Lakh.
+Reason (R): The POSA linkage facility is universally available for all variants of IPPB accounts, including Current and Basic Savings Accounts, to promote financial inclusion.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. Both A and R are false
+Answer: D
+Explanation:
+Both the assertion and the reason are false. The IPPB Service Charges / Fees chart for the Current Account explicitly states "NO" for Linkage of POSA Account. POSA linkage is available for Savings Accounts, but not for Current Accounts.
