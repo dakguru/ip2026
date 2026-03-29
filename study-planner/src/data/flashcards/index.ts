@@ -18,3 +18,4 @@ export * from "./poAct2023";
 export * from "./currentAffairs/jan2026";
 export * from "./currentAffairs/feb2026";
 export * from "./handbookOnPhilately";
+export * from "./citizenCharter";

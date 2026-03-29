@@ -17,6 +17,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
     const router = useRouter();
     const isMobileApp = useIsMobileApp();
     const { course } = useCourse();
+    const isPsGroupB = course === 'PS_GR_B';
     const [unreadCount, setUnreadCount] = useState(0);
     const [unreadDetails, setUnreadDetails] = useState({
         users: 0,
@@ -223,16 +224,18 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                                     <>
                                         {/* Primary Badge */}
                                         <span className={`px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
-                                            item.badge === 'Silver' ? 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300' :
-                                                item.badge === 'Gold' ? 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300' :
+                                            item.badge === 'Silver' ? (isPsGroupB ? 'bg-gradient-to-r from-sky-200 to-blue-300 text-blue-900 border border-blue-300 dark:from-sky-700 dark:to-blue-600 dark:text-blue-100' : 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300') :
+                                                item.badge === 'Gold' ? (isPsGroupB ? 'bg-gradient-to-r from-cyan-200 to-teal-300 text-teal-900 dark:from-cyan-700 dark:to-teal-600 dark:text-cyan-100 border border-cyan-300' : 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300') :
                                                     'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900'
                                             }`}>
-                                            {item.badge}
+                                            {item.badge === 'Silver' ? (isPsGroupB ? 'Platinum' : 'Silver') :
+                                             item.badge === 'Gold' ? (isPsGroupB ? 'Diamond' : 'Gold') :
+                                             item.badge}
                                         </span>
-                                        {/* Secondary badge for Silver-level features showing Gold access */}
+                                        {/* Secondary badge for Silver-level features showing top-tier access */}
                                         {item.badge === 'Silver' && (
-                                            <span className={`px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300`}>
-                                                Gold
+                                            <span className={`px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${isPsGroupB ? 'bg-gradient-to-r from-cyan-200 to-teal-300 text-teal-900 dark:from-cyan-700 dark:to-teal-600 dark:text-cyan-100 border border-cyan-300' : 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300'}`}>
+                                                {isPsGroupB ? 'Diamond' : 'Gold'}
                                             </span>
                                         )}
                                     </>

@@ -9,6 +9,12 @@ import { WEEKLY_MOCK_08_QUESTIONS } from "@/data/weekly_mock_data_08";
 import { WEEKLY_MOCK_09_QUESTIONS } from "@/data/weekly_mock_data_09";
 import { WEEKLY_MOCK_10_QUESTIONS } from "@/data/weekly_mock_data_10";
 import { WEEKLY_MOCK_11_QUESTIONS } from "@/data/weekly_mock_data_11";
+import { WEEKLY_MOCK_12_QUESTIONS } from "@/data/weekly_mock_data_12";
+import { WEEKLY_MOCK_13_QUESTIONS } from "@/data/weekly_mock_data_13";
+import { WEEKLY_MOCK_14_QUESTIONS } from "@/data/weekly_mock_data_14";
+import { WEEKLY_MOCK_15_QUESTIONS } from "@/data/weekly_mock_data_15";
+import { WEEKLY_MOCK_16_QUESTIONS } from "@/data/weekly_mock_data_16";
+import { WEEKLY_MOCK_17_QUESTIONS } from "@/data/weekly_mock_data_17";
 
 import { LIVE_MOCK_QUESTIONS } from "@/data/live_mock_data";
 
@@ -24,6 +30,12 @@ export const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "mock-2026-03-14": WEEKLY_MOCK_09_QUESTIONS,
     "mock-2026-03-21": WEEKLY_MOCK_10_QUESTIONS,
     "mock-2026-03-28": WEEKLY_MOCK_11_QUESTIONS,
+    "mock-2026-04-04": WEEKLY_MOCK_12_QUESTIONS,
+    "mock-2026-04-11": WEEKLY_MOCK_13_QUESTIONS,
+    "mock-2026-04-18": WEEKLY_MOCK_14_QUESTIONS,
+    "mock-2026-04-25": WEEKLY_MOCK_15_QUESTIONS,
+    "mock-2026-05-02": WEEKLY_MOCK_16_QUESTIONS,
+    "mock-2026-05-09": WEEKLY_MOCK_17_QUESTIONS,
     "live-sample": LIVE_MOCK_QUESTIONS
 
 };

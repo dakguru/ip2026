@@ -67,12 +67,12 @@ export default function PremiumFlashCard({
         >
             <div className={styles.flashcardInner}>
                 {/* FRONT SIDE */}
-                <div className={clsx(styles.flashcardFront, getThemeClass())}>
-                    <div className={styles.watermark} />
+                <div className={clsx(styles.flashcardFront, getThemeClass(), "dark:!bg-[#0a0a0a] dark:border-white/5 dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]")}>
+                    <div className={clsx(styles.watermark, "dark:opacity-10 dark:invert")} />
 
                     <div className={styles.contentContainer}>
                         <div className={styles.header}>
-                            <div className={styles.tag}>{category || theme}</div>
+                            <div className={clsx(styles.tag, "dark:bg-white/5")}>{category || theme}</div>
                             <button
                                 className={clsx(styles.iconButton, isBookmarked && styles.active, "active:scale-90 transition-transform")}
                                 onClick={(e) => {
@@ -87,12 +87,12 @@ export default function PremiumFlashCard({
                             </button>
                         </div>
 
-                        <div className={styles.questionText}>
+                        <div className={clsx(styles.questionText, "dark:text-slate-50")}>
                             <FormattedQuestionText text={question} className="text-xl md:text-2xl font-black text-slate-800 dark:text-white leading-tight" />
                         </div>
                     </div>
 
-                    <div className={styles.footer}>
+                    <div className={clsx(styles.footer, "dark:border-white/5")}>
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Question</span>
                         <div className={styles.iconButton}>
                             <RotateCcw className="w-4 h-4" />
@@ -101,12 +101,12 @@ export default function PremiumFlashCard({
                 </div>
 
                 {/* BACK SIDE */}
-                <div className={clsx(styles.flashcardBack, getThemeClass())}>
-                    <div className={styles.watermark} />
+                <div className={clsx(styles.flashcardBack, getThemeClass(), "dark:!bg-[#0a0a0a] dark:border-white/5 dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]")}>
+                    <div className={clsx(styles.watermark, "dark:opacity-10 dark:invert")} />
 
                     <div className={styles.contentContainer}>
                         <div className={styles.header}>
-                            <div className={styles.tag}>{category || theme}</div>
+                            <div className={clsx(styles.tag, "dark:bg-white/5")}>{category || theme}</div>
                             <button
                                 className={clsx(styles.iconButton, isBookmarked && styles.active, "active:scale-90 transition-transform")}
                                 onClick={(e) => {
@@ -121,17 +121,17 @@ export default function PremiumFlashCard({
                             </button>
                         </div>
 
-                        <div className={styles.answerText}>
-                            <FormattedQuestionText text={answer} className="text-xl md:text-2xl font-black text-indigo-900 dark:text-indigo-100 leading-tight" />
+                        <div className={clsx(styles.answerText, "dark:text-blue-400")}>
+                            <FormattedQuestionText text={answer} className="text-xl md:text-2xl font-black text-indigo-900 dark:text-blue-400 leading-tight" />
                         </div>
 
                         {explanation && (
-                            <div className={styles.explanationBox} onClick={(e) => e.stopPropagation()}>
+                            <div className={clsx(styles.explanationBox, "dark:bg-white/5 dark:text-slate-400")} onClick={(e) => e.stopPropagation()}>
                                 <div className="flex items-center gap-2 mb-1.5 font-black text-[9px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
                                     <Info className="w-3 h-3" /> Explanation
                                 </div>
                                 <div
-                                    className={styles.explanationContent}
+                                    className={clsx(styles.explanationContent, "dark:[&::-webkit-scrollbar-thumb]:bg-slate-600")}
                                     onPointerDown={(e) => e.stopPropagation()}
                                     onTouchStart={(e) => e.stopPropagation()}
                                 >
@@ -143,7 +143,7 @@ export default function PremiumFlashCard({
                         )}
                     </div>
 
-                    <div className={styles.footer}>
+                    <div className={clsx(styles.footer, "dark:border-white/5")}>
                         <span className="text-[10px] font-bold text-blue-500/70 uppercase tracking-widest">Correct Answer</span>
                         <div className={styles.iconButton}>
                             <RotateCcw className="w-4 h-4" />

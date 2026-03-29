@@ -14,6 +14,7 @@ import { po_reg_ldce_set1, po_reg_ldce_set2, po_reg_ldce_set3, po_reg_ldce_set4,
 import { schedule_financial_powers_set1, schedule_financial_powers_set2, schedule_financial_powers_set3, schedule_financial_powers_set4, schedule_financial_powers_set5 } from './flashcards/scheduleOfFinancialPowers';
 import { swatchh_bharat_set1, swatchh_bharat_set2, swatchh_bharat_set3 } from './flashcards/swatchhBharat';
 import { philately_set1, philately_set2, philately_set3 } from './flashcards/handbookOnPhilately';
+import { citizen_charter_set1, citizen_charter_set2, citizen_charter_set3 } from './flashcards/citizenCharter';
 
 
 // ----- EXISTING QUESTION DATA -----
@@ -6709,6 +6710,9 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   186: philately_set3,
 
   // --- WORKING KNOWLEDGE OF CBS (Paper I) ---
+  190: citizen_charter_set1,
+  191: citizen_charter_set2,
+  192: citizen_charter_set3,
   187: [
     { q: "Which Finacle command is used for CIF Creation in CBS?", o: ["CMRC", "CCRC", "CICD", "CCIFINQ"], a: 1, e: "CIF Creation is done by invoking CCRC (Customer Creation). The supervisor verifies by also invoking CCRC. After successful creation, the CIF No. is noted." },
     { q: "Which Finacle command is used for CIF Modification in CBS?", o: ["CCRC", "CMRC", "HCCA", "CICD"], a: 1, e: "CIF Modification uses CMRC. After making necessary modifications and submitting, it is verified by Supervisor invoking CMRC." },
@@ -6872,6 +6876,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-40', 'Consolidation of Products & Centralized Delivery Policy', 'Paper I', [161, 162, 163]),
   createTopic('p1-41', 'Schedule of Financial Powers', 'Paper I', [170, 171, 172, 173, 174]),
   createTopic('p1-42', 'Working Knowledge of CBS (Finacle)', 'Paper I', [187, 188, 189]),
+  createTopic('p1-43', "Citizen Charter of Department of Posts", 'Paper I', [190, 191, 192]),
 
   // --- PAPER III ---
   createTopic('p3-1', 'The Constitution of India', 'Paper III', [69]),

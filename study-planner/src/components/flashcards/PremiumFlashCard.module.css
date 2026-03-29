@@ -172,10 +172,6 @@
   border-radius: 10px;
 }
 
-:global(.dark) .explanationContent::-webkit-scrollbar-thumb {
-  background-color: #475569;
-}
-
 .footer {
   display: flex;
   justify-content: space-between;
@@ -204,37 +200,4 @@
 .iconButton.active {
   color: #f59e0b;
 }
-
-/* Dark Mode Adjustments */
-:global(.dark) .flashcardFront,
-:global(.dark) .flashcardBack {
-  background: #0a0a0a;
-  border-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
-}
-
-:global(.dark) .watermark {
-  opacity: 0.08;
-  filter: invert(1);
-}
-
-:global(.dark) .questionText {
-  color: #f8fafc;
-}
-
-:global(.dark) .answerText {
-  color: #60a5fa;
-}
-
-:global(.dark) .explanationBox {
-  background: rgba(255, 255, 255, 0.03);
-  color: #94a3b8;
-}
-
-:global(.dark) .footer {
-  border-color: rgba(255, 255, 255, 0.05);
-}
-
-:global(.dark) .tag {
-  background: rgba(255, 255, 255, 0.03);
-}
+

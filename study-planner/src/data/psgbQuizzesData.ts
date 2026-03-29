@@ -22,7 +22,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-18', "Post Office Saving Bank (CBS) Manual", 'Paper I', [101, 102, 103]),
   createTopic('psgb-18a', "Working Knowledge of CBS (Finacle Menus & Commands)", 'Paper I', [187, 188, 189]),
   createTopic('psgb-19', "Post Office Life Insurance Rules, 2011", 'Paper I', [42, 46, 47, 48]),
-  createTopic('psgb-21', "Citizen Charter of Department of Posts.", 'Paper I', []),
+  createTopic('psgb-21', "Citizen Charter of Department of Posts.", 'Paper I', [190, 191, 192]),
   createTopic('psgb-22', "Guidelines and instructions on complaint grievances handling in Department of Posts.", 'Paper I', []),
   createTopic('psgb-23', "Guidelines issued by Directorate from time to time on IT modernization Project of Department of Posts", 'Paper I', []),
   createTopic('psgb-24', "Handbook on Philately", 'Paper I', [184, 185, 186]),

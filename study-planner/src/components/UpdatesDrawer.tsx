@@ -16,6 +16,48 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "29.03.2026",
+        items: [
+            {
+                title: "📚 GST Act, 2017 PDF Notes Uploaded",
+                desc: (
+                    <div className="space-y-4">
+                        <p>The following study materials have been successfully uploaded under <strong>PS Gr B Paper II</strong> PDF Notes:</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-indigo-50/50 dark:bg-indigo-900/10 p-2 rounded border border-indigo-100 dark:border-indigo-800/50">
+                                <p className="font-bold text-indigo-700 dark:text-indigo-300 text-[10px] uppercase tracking-wide">Paper II (PS Group B)</p>
+                                <ul className="list-disc pl-4 space-y-1 mt-1 text-zinc-600 dark:text-zinc-400">
+                                    <li>📘 Goods and Services Tax (GST) Act, 2017 – <strong>Detailed Notes</strong></li>
+                                    <li>📗 Goods and Services Tax (GST) Act, 2017 – <strong>Brief Notes</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="text-zinc-600 dark:text-zinc-400">These notes are prepared in a structured and exam-oriented manner to strengthen your preparation.</p>
+
+                        <ul className="space-y-1 text-[11px] text-zinc-600 dark:text-zinc-400 border-l-[3px] border-amber-400 pl-3">
+                            <li className="flex items-start gap-1">
+                                <span className="pt-0.5 text-amber-500">🔹</span> 
+                                <span>Use <strong>Detailed Notes</strong> for in-depth conceptual clarity</span>
+                            </li>
+                            <li className="flex items-start gap-1">
+                                <span className="pt-0.5 text-amber-500">🔹</span> 
+                                <span>Use <strong>Brief Notes</strong> for quick revision of important and distinguished concepts</span>
+                            </li>
+                        </ul>
+
+                        <p className="text-[11px] text-zinc-500 italic">Stay consistent and make the most of these resources.</p>
+
+                        <p className="pt-1 text-[11px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Notes section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "26.03.2026",
         items: [
             {
