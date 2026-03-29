@@ -45,7 +45,9 @@ export default function PricingPage() {
                 setUserEmail(session.email);
                 setUserName(session.name);
                 setUserMobile(session.mobile);
-                setCurrentMembership(session.membershipLevel || 'free');
+                // mock_test users paid for a single test only — treat as free for subscription pricing
+                const level = session.membershipLevel || 'free';
+                setCurrentMembership(level === 'mock_test' ? 'free' : level);
                 setPlanId(session.planId || null);
 
                 // Auto-select upgrade plan if applicable
