@@ -453,12 +453,12 @@ export const generateDakSutraPDF = async ({
       <img class="brand-logo" src="${typeof window !== 'undefined' ? window.location.origin : ''}/official-logo.png" alt="Dak Guru Logo" />
       <div class="brand-text-wrap">
         <div class="brand-name">Dak Guru</div>
-        <div class="brand-tagline">Self-Learning Portal for Postal Aspirants</div>
+        <div class="brand-tagline">The Complete Self-Learning Platform for Postal Aspirants</div>
       </div>
     </div>
     <div class="brand-date">
       Generated: ${format(new Date(), "dd MMM yyyy")}<br/>
-      <span style="color:${c.primary};font-weight:600;">dakguru.com</span>
+      <span style="color:${c.primary};font-weight:600;">www.dakguru.com</span>
     </div>
   </div>
 
