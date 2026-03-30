@@ -240,8 +240,7 @@ async function fix() {
 
         // ─────────────────────────────────────────────────────────────────
         // FIX 4: Money Order — update act_name to Post Office Regulations, 2024
-        // Money Order rules now governed by PO Regulations 2024 (Reg. 172–200)
-        // replacing the old Post Office Guide Part I
+        // Money Order rules now governed by PO Regulations 2024 (Reg. 145–156)
         // ─────────────────────────────────────────────────────────────────
         {
             const r = await col.updateOne(
@@ -249,7 +248,7 @@ async function fix() {
                 {
                     $set: {
                         act_name: "Post Office Regulations, 2024",
-                        rule_number: "Regulation 172–200",
+                        rule_number: "Regulation 145–156",
                         updatedAt: new Date()
                     }
                 }

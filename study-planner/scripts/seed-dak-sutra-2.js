@@ -178,69 +178,64 @@ const entries = [
     // ─────────────────────────────────────────────────────────────────────────
     {
         title: "Money Order — Types, Limits & Procedure",
-        rule_number: "Rule 200–240",
-        act_name: "Post Office Guide Part I",
+        rule_number: "Regulation 145–156",
+        act_name: "Post Office Regulations, 2024",
         category: "Rule",
-        effective_date: new Date("2023-04-01"),
+        effective_date: new Date("2024-12-16"),
         exam_tags: ["LDCE IP", "PS Group B", "GDS"],
         official_text: `<p><strong>Money Order: Definition</strong></p>
-<p>A Money Order is an instrument by which a person can remit money to another person through the Post Office. The sender pays the money plus commission at the booking office; the addressee receives payment at his doorstep or at the post office.</p>
-<h4>Types of Money Orders</h4>
+<p>Money order (MO) shall be an order issued by the Post Office for the payment of a sum of money to the person in whose name the money order is sent, by the remitter.</p>
+<h4>Categories of Money Orders</h4>
+<p>As per Regulation 147, Money Orders are booked under the following categories:</p>
 <ol>
-  <li><strong>Ordinary Money Order (OMO):</strong> Basic service. Money is paid to the payee at their address. Processed manually.</li>
-  <li><strong>Instant Money Order (iMO):</strong> Electronic money order. Money is available for collection at designated post offices within minutes of booking. No physical delivery — payee collects at post office using a code.</li>
-  <li><strong>Mobile Money Order (MoMO):</strong> Allows remittance to mobile-linked accounts. Payment is made via SMS notification to the payee.</li>
-  <li><strong>Videsh Money Order (VMO):</strong> For international remittances from foreign countries to India, operated through bilateral agreements.</li>
+  <li><strong>Retail Money Order:</strong> Money is remitted from a person to another person within the country.</li>
+  <li><strong>Bulk Money Order:</strong> Where money is remitted by one person to many persons, or from many persons to one person.</li>
+  <li><strong>Service Money Order:</strong> For departmental or official purposes.</li>
 </ol>
-<h4>Limits</h4>
-<table style="width:100%;border-collapse:collapse">
-  <tr><th style="border:1px solid #ccc;padding:6px">Type</th><th style="border:1px solid #ccc;padding:6px">Minimum</th><th style="border:1px solid #ccc;padding:6px">Maximum (single MO)</th></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Ordinary MO</td><td style="border:1px solid #ccc;padding:6px">₹1</td><td style="border:1px solid #ccc;padding:6px">₹5,000</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">iMO</td><td style="border:1px solid #ccc;padding:6px">₹1,000</td><td style="border:1px solid #ccc;padding:6px">₹50,000</td></tr>
-</table>
-<h4>Commission (Ordinary MO)</h4>
+<h4>Limits (Regulation 145)</h4>
+<ul>
+  <li>Maximum amount for a <strong>single MO</strong>: <strong>₹10,000</strong> (excluding fraction of a rupee).</li>
+  <li>Maximum amount remitted through retail MO to a person in a month: <strong>₹25,000</strong>.</li>
+</ul>
+<h4>Commission</h4>
 <table style="width:100%;border-collapse:collapse">
   <tr><th style="border:1px solid #ccc;padding:6px">Amount</th><th style="border:1px solid #ccc;padding:6px">Commission</th></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Up to ₹100</td><td style="border:1px solid #ccc;padding:6px">₹5</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">₹101 to ₹200</td><td style="border:1px solid #ccc;padding:6px">₹6</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Above ₹200</td><td style="border:1px solid #ccc;padding:6px">₹3 per ₹100 or part thereof</td></tr>
+  <tr><td style="border:1px solid #ccc;padding:6px">For every ₹20 or part thereof</td><td style="border:1px solid #ccc;padding:6px">₹1</td></tr>
 </table>
-<h4>Validity</h4>
-<p>A Money Order is valid for <strong>3 years</strong> from the date of issue. If not paid within 3 years, it lapses and the amount is credited to Government revenue (subject to refund on application).</p>`,
-        guru_explanation: `<p>Money Orders have been a lifeline for rural families receiving remittances for over 150 years. Here's the exam-focused breakdown:</p>
-<h4>OMO vs iMO — The Key Difference</h4>
-<table style="width:100%;border-collapse:collapse">
-  <tr><th style="border:1px solid #ccc;padding:6px">Feature</th><th style="border:1px solid #ccc;padding:6px">OMO</th><th style="border:1px solid #ccc;padding:6px">iMO</th></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Delivery</td><td style="border:1px solid #ccc;padding:6px">At door (by postman)</td><td style="border:1px solid #ccc;padding:6px">Collected at post office</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Speed</td><td style="border:1px solid #ccc;padding:6px">3–7 days</td><td style="border:1px solid #ccc;padding:6px">Minutes</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Max amount</td><td style="border:1px solid #ccc;padding:6px">₹5,000</td><td style="border:1px solid #ccc;padding:6px">₹50,000</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Mode</td><td style="border:1px solid #ccc;padding:6px">Physical form</td><td style="border:1px solid #ccc;padding:6px">Electronic/digital</td></tr>
-</table>
-<h4>GDS BPM's Role</h4>
-<p>At a Branch Post Office, the GDS BPM pays money orders to payees in the village. The GDS is responsible for correct payment and obtaining the payee's signature/thumb impression on the MO receipt. This is a critical duty — wrong payment is a serious misconduct.</p>
-<h4>When a Money Order Lapses</h4>
-<p>If a money order is not delivered/collected within <strong>3 years</strong>, it lapses. The sender can apply for a <strong>refund</strong>, but the refund process involves departmental approval and is not automatic.</p>`,
-        practical_example: `<p><strong>Scenario 1 — Commission Calculation:</strong> Arun sends an Ordinary Money Order of ₹850 to his mother in a village. What commission does he pay?</p>
+<p><em>Exemption:</em> Remittances to PM's Relief Fund, PM CARES Fund, or Chief Minister's Relief Fund are transmitted free of charge.</p>
+<h4>Period of Currency & Void MO</h4>
+<p>The currency period of the money order expires at the <strong>end of the last day of the second month</strong> following the month of issue. If it remains unpaid at the end of this period, it is treated as a <strong>void money order</strong>. The amount of a money order unpaid beyond <strong>three years</strong> from the date of booking is forfeited to the Government.</p>`,
+        guru_explanation: `<p>The Post Office Regulations, 2024 brought a massive overhaul to the Money Order service. Forget the old rules — here is what you need to know now:</p>
+<h4>1. The Limits Have Changed</h4>
+<p>Earlier, the limit for a single MO was ₹5,000. Now, under Regulation 145, the maximum amount for a single MO is <strong>₹10,000</strong>. Additionally, there is a new cap: you cannot remit more than <strong>₹25,000</strong> to a single person in a month via retail money orders.</p>
+<h4>2. Only 3 Categories Now</h4>
+<p>The old classifications (Ordinary MO, Instant MO/iMO, Mobile MO) are gone from the core regulations. They are now officially categorized simply as <strong>Retail, Bulk, and Service</strong> money orders.</p>
+<h4>3. Shorter Currency Period</h4>
+<p>An MO now becomes "void" at the end of the <strong>second month</strong> following the month of its issue. However, the hard deadline for total forfeiture remains <strong>3 years</strong> from the date of booking — after which the money goes to the Government.</p>
+<h4>4. Flat Commission Rate</h4>
+<p>The complicated old slabs are gone. The commission is simply <strong>₹1 for every ₹20</strong> (or fraction thereof). That equates to a flat 5% commission rate across the board.</p>`,
+        practical_example: `<p><strong>Scenario 1 — Commission Calculation (2024 Rules):</strong> Arun sends a Retail Money Order of ₹850 to his mother. What commission does he pay?</p>
 <p><strong>Calculation:</strong></p>
 <ul>
-  <li>Commission = ₹3 per ₹100 or part thereof on ₹850</li>
-  <li>₹850 ÷ ₹100 = 8.5 → rounds up to 9 parts</li>
-  <li>Commission = 9 × ₹3 = <strong>₹27</strong></li>
-  <li>Total paid by Arun = ₹850 + ₹27 = <strong>₹877</strong></li>
+  <li>Commission = ₹1 for every ₹20 or part thereof</li>
+  <li>₹850 ÷ ₹20 = 42.5 → rounds up to 43 parts</li>
+  <li>Commission = 43 × ₹1 = <strong>₹43</strong></li>
+  <li>Total paid by Arun = ₹850 + ₹43 = <strong>₹893</strong></li>
 </ul>
-<p><strong>Scenario 2 — Wrongful Payment:</strong> A GDS BPM pays a money order of ₹3,000 to the wrong person (he confused two similarly named people). Who bears the loss?</p>
-<p><strong>Answer:</strong> The <strong>GDS BPM is personally liable</strong> for the wrongful payment. The Department can recover the amount from the GDS's TRCA/salary and take disciplinary action for negligence under GDS Conduct Rules.</p>`,
-        exam_insight: `<p><strong>Critical Numbers for the Exam:</strong></p>
+<p><strong>Scenario 2 — Monthly Limit:</strong> An employer tries to send three retail money orders of ₹10,000 each to the same employee within the same month.</p>
+<p><strong>Answer:</strong> The first two MOs (₹20,000 total) will be booked. The third MO will be rejected or limited to ₹5,000, because the maximum retail MO limit to a single person in a month is strictly <strong>₹25,000</strong>.</p>`,
+        exam_insight: `<p><strong>Critical New Numbers for the Exam (Post Office Regulations 2024):</strong></p>
 <ul>
-  <li>OMO maximum per MO: <strong>₹5,000</strong></li>
-  <li>iMO maximum per MO: <strong>₹50,000</strong></li>
-  <li>OMO minimum: <strong>₹1</strong></li>
-  <li>iMO minimum: <strong>₹1,000</strong></li>
-  <li>Money order validity: <strong>3 years</strong></li>
-  <li>Commission on OMO above ₹200: <strong>₹3 per ₹100</strong> or part</li>
-  <li>iMO payee collects at: <strong>post office</strong> (not home delivery)</li>
+  <li>Single MO maximum limit: <strong>₹10,000</strong></li>
+  <li>Monthly limit to one person (retail MO): <strong>₹25,000</strong></li>
+  <li>Commission rate: <strong>₹1 for every ₹20</strong> or fraction thereof</li>
+  <li>MO becomes void: End of <strong>second month</strong> following the month of issue</li>
+  <li>MO amount forfeited to Govt: After <strong>3 years</strong> from booking</li>
+  <li>Official Categories: <strong>Retail, Bulk, Service</strong> MO</li>
 </ul>
-<p><strong>Frequently Asked:</strong> "What is the maximum amount that can be sent through a single Ordinary Money Order?" — Answer: <strong>₹5,000</strong>. Students often confuse this with iMO (₹50,000).</p>`,
+<div style="background:#fef2f2;border-left:4px solid #ef4444;padding:10px;border-radius:4px;margin-bottom:10px">
+  <strong>COMMON MISTAKE:</strong> "The maximum amount for a single Money Order is ₹5,000." — <strong>FALSE!</strong> It is now <strong>₹10,000</strong> under Regulation 145(2) of the 2024 Regulations. Ensure you use the updated limits in your exam!
+</div>`,
         status: "published",
         created_by: "system_admin",
         createdAt: now,
