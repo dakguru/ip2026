@@ -137,14 +137,6 @@ export default function DakSutraPublicListPage() {
                             <ArrowLeft className="w-4 h-4" />
                             <span className="font-semibold text-sm">Home</span>
                         </Link>
-                        <div className="flex items-center gap-2">
-                            <div className="w-6 h-6 md:w-7 md:h-7 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center">
-                                <BookOpen className="w-3 h-3 md:w-3.5 md:h-3.5 text-white" />
-                            </div>
-                            <h1 className="text-sm md:text-base font-black tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent uppercase">
-                                Dak Sutra
-                            </h1>
-                        </div>
                         <div className="w-14 md:w-16" />
                     </div>
                 </div>
@@ -157,9 +149,21 @@ export default function DakSutraPublicListPage() {
                 <div className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-violet-500/20 rounded-full blur-3xl" />
 
                 <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16">
+                    {/* Stylish Dak Sutra wordmark */}
+                    <div className="flex items-center gap-3 mb-3 md:mb-4">
+                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                            <BookOpen className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                        </div>
+                        <h1 className="text-3xl md:text-4xl font-black tracking-tight leading-none">
+                            <span className="bg-gradient-to-r from-white via-blue-100 to-violet-200 bg-clip-text text-transparent">
+                                Dak Sutra
+                            </span>
+                        </h1>
+                    </div>
+
                     <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-200 mb-4 md:mb-6 backdrop-blur-sm">
                         <Sparkles className="w-2.5 h-2.5 md:w-3 md:h-3" />
-                        Postal Laws Decoded for LDCE &amp; PS Group B
+                        Postal Laws Decoded for LDCE IP &amp; PS Group B
                     </div>
 
                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-black leading-tight mb-3 md:mb-4">
