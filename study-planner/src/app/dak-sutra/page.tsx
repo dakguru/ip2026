@@ -129,19 +129,7 @@ export default function DakSutraPublicListPage() {
     const categories = ["all", "Rule", "Section", "Regulation", "Circular", "Explanation"];
 
     return (
-        <AppScreenWrapper
-            header={
-                <div className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800">
-                    <div className="max-w-7xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
-                        <Link href="/" className="flex items-center gap-1.5 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-                            <ArrowLeft className="w-4 h-4" />
-                            <span className="font-semibold text-sm">Home</span>
-                        </Link>
-                        <div className="w-14 md:w-16" />
-                    </div>
-                </div>
-            }
-        >
+        <AppScreenWrapper>
             {/* Hero */}
             <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
@@ -149,6 +137,12 @@ export default function DakSutraPublicListPage() {
                 <div className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-violet-500/20 rounded-full blur-3xl" />
 
                 <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16">
+                    {/* Back link */}
+                    <Link href="/" className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs font-semibold mb-5 transition-colors">
+                        <ArrowLeft className="w-3.5 h-3.5" />
+                        Home
+                    </Link>
+
                     {/* Stylish Dak Sutra wordmark */}
                     <div className="flex items-center gap-3 mb-3 md:mb-4">
                         <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
