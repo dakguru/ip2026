@@ -350,7 +350,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                         {mainFeatures
                             .filter(item => {
                                 if ((item as any).adminOnly) return isAdmin;
-                                if (item.label === "Dak Sutra") return isAdmin;
+                                if (item.label === "Dak Sutra") return false; // shown as dedicated bar below
                                 return true;
                             })
 
@@ -372,6 +372,44 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                 </Link>
                             ))}
                     </div>
+                </div>
+
+                {/* --- DAK SUTRA BAR BUTTON --- */}
+                <div className="px-5">
+                    <Link href="/dak-sutra" className="group block active:scale-[0.98] transition-all duration-200">
+                        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#1a2f6e] via-[#1e3a8a] to-[#1d4ed8] shadow-lg shadow-blue-900/30">
+                            {/* Background decorative elements */}
+                            <div className="absolute top-0 right-0 w-36 h-36 bg-white/5 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none" />
+                            <div className="absolute bottom-0 left-1/3 w-24 h-24 bg-blue-400/10 rounded-full blur-2xl pointer-events-none" />
+                            {/* Shine sweep on hover */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
+
+                            <div className="relative z-10 flex items-center gap-4 px-5 py-4">
+                                {/* Icon container */}
+                                <div className="shrink-0 w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-inner">
+                                    <Newspaper className="w-6 h-6 text-white drop-shadow" strokeWidth={1.8} />
+                                </div>
+
+                                {/* Text content */}
+                                <div className="flex-1 min-w-0">
+                                    <div className="flex items-center gap-2 mb-0.5">
+                                        <span className="text-sm font-black text-white tracking-wide">Dak Sutra</span>
+                                        <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-[8px] font-black text-amber-300 uppercase tracking-wider">
+                                            Official
+                                        </span>
+                                    </div>
+                                    <p className="text-[10px] text-blue-200/80 font-semibold uppercase tracking-wider truncate">
+                                        Rules, Circulars &amp; Guidelines
+                                    </p>
+                                </div>
+
+                                {/* Arrow */}
+                                <div className="shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20 group-hover:bg-white/20 transition-colors">
+                                    <ChevronRight className="w-4 h-4 text-white" strokeWidth={2.5} />
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
                 </div>
 
                 {/* --- CAROUSEL (NOW THIRD - THE "SECOND BANNER") --- */}
