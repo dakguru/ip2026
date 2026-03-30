@@ -264,36 +264,46 @@ export default function DakSutraPublicListPage() {
                                     href={`/dak-sutra/${entry._id}`}
                                     className={`group relative bg-white dark:bg-zinc-900 border rounded-2xl overflow-hidden transition-all duration-200 active:scale-[0.98] hover:-translate-y-0.5 hover:shadow-xl touch-manipulation ${cfg.border} ${cfg.glow}`}
                                 >
-                                    {/* Top stripe */}
-                                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cfg.stripe}`} />
+                                    {/* Top colour stripe */}
+                                    <div className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${cfg.stripe}`} />
 
-                                    <div className="p-4 pt-5 md:p-5 md:pt-6">
-                                        {/* Header row */}
-                                        <div className="flex items-start justify-between mb-2.5">
-                                            <div className={`flex items-center gap-1.5 px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-wide ${cfg.badge}`}>
+                                    <div className="p-4 pt-5">
+                                        {/* Row 1 — Category badge + Date */}
+                                        <div className="flex items-center justify-between gap-2 mb-3">
+                                            <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wide shrink-0 ${cfg.badge}`}>
                                                 {cfg.icon}
                                                 {entry.category}
                                             </div>
-                                            <div className="flex items-center gap-1 text-[10px] font-bold text-zinc-400">
+                                            <div className="flex items-center gap-1 text-[10px] font-semibold text-zinc-400 shrink-0">
                                                 <Calendar className="w-3 h-3" />
-                                                {entry.effective_date ? format(new Date(entry.effective_date), 'MMM yyyy') : 'N/A'}
+                                                {entry.effective_date ? format(new Date(entry.effective_date), 'MMM yyyy') : '—'}
                                             </div>
                                         </div>
 
-                                        {/* Act name */}
-                                        <div className={`flex items-center gap-1.5 mb-2 ${cfg.badgeText}`}>
-                                            <Bookmark className="w-3 h-3 shrink-0" />
-                                            <span className="text-[11px] font-black truncate">
-                                                {entry.act_name}{entry.rule_number ? ` · ${entry.rule_number}` : ""}
+                                        {/* Row 2 — Act name */}
+                                        <div className={`flex items-start gap-1.5 mb-1 ${cfg.badgeText}`}>
+                                            <Bookmark className="w-3 h-3 shrink-0 mt-[2px]" />
+                                            <span className="text-[11px] font-black leading-snug break-words min-w-0">
+                                                {entry.act_name}
                                             </span>
                                         </div>
 
-                                        {/* Title */}
-                                        <h3 className="text-sm md:text-base font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                                        {/* Row 3 — Rule number (if present, separate line) */}
+                                        {entry.rule_number && (
+                                            <p className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 mb-2.5 pl-[18px] leading-snug break-words">
+                                                {entry.rule_number}
+                                            </p>
+                                        )}
+
+                                        {/* Divider */}
+                                        <div className="border-t border-zinc-100 dark:border-zinc-800 mb-2.5" />
+
+                                        {/* Row 4 — Title */}
+                                        <h3 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors break-words">
                                             {entry.title}
                                         </h3>
 
-                                        {/* Tags */}
+                                        {/* Row 5 — Exam tags */}
                                         <div className="flex flex-wrap gap-1.5 mb-3">
                                             {entry.exam_tags?.map(tag => (
                                                 <span
@@ -305,12 +315,12 @@ export default function DakSutraPublicListPage() {
                                             ))}
                                         </div>
 
-                                        {/* Footer */}
-                                        <div className="flex items-center justify-between pt-2.5 border-t border-zinc-100 dark:border-zinc-800">
-                                            <span className={`text-xs font-bold ${cfg.badgeText} opacity-0 group-hover:opacity-100 transition-opacity`}>
-                                                Read more →
+                                        {/* Row 6 — Footer CTA */}
+                                        <div className={`flex items-center justify-between pt-2.5 border-t border-zinc-100 dark:border-zinc-800`}>
+                                            <span className={`text-[11px] font-black tracking-wide ${cfg.badgeText}`}>
+                                                Read full rule
                                             </span>
-                                            <div className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${cfg.badge} group-hover:scale-110 ml-auto`}>
+                                            <div className={`w-6 h-6 rounded-full flex items-center justify-center ${cfg.badge} group-hover:scale-110 transition-transform`}>
                                                 <ChevronRight className="w-3.5 h-3.5" />
                                             </div>
                                         </div>

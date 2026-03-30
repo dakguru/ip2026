@@ -60,7 +60,35 @@ export const generateDakSutraPDF = async ({
     /* ── Page setup ── */
     @page {
       size: A4;
-      margin: 18mm 16mm 20mm 16mm;
+      margin: 18mm 16mm 28mm 16mm;
+
+      @bottom-left {
+        content: "Dak Sutra · dakguru.com · For educational use only";
+        font-family: Arial, sans-serif;
+        font-size: 6.5pt;
+        color: #94a3b8;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 4pt;
+        width: 100%;
+      }
+      @bottom-center {
+        content: "Visit Dak Sutra @ www.dakguru.com for more knowledge content";
+        font-family: Arial, sans-serif;
+        font-size: 6.5pt;
+        color: ${c.primary};
+        font-weight: 600;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 4pt;
+        white-space: nowrap;
+      }
+      @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: Arial, sans-serif;
+        font-size: 6.5pt;
+        color: #94a3b8;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 4pt;
+      }
     }
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -155,28 +183,48 @@ export const generateDakSutraPDF = async ({
       align-items: center;
       justify-content: space-between;
       margin-bottom: 16px;
-      padding-bottom: 10px;
+      padding-bottom: 12px;
       border-bottom: 2px solid ${c.border};
+    }
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .brand-name {
       font-family: Arial, sans-serif;
       font-size: 13pt;
       font-weight: 900;
       color: ${c.primary};
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
+      line-height: 1.2;
     }
     .brand-tagline {
       font-family: Arial, sans-serif;
-      font-size: 7pt;
+      font-size: 6.5pt;
       color: #94a3b8;
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      margin-top: 2px;
     }
     .brand-date {
       font-family: Arial, sans-serif;
       font-size: 7.5pt;
       color: #94a3b8;
+      text-align: right;
+      line-height: 1.5;
     }
 
     /* ── SECTION CARD ── */
@@ -324,25 +372,48 @@ export const generateDakSutraPDF = async ({
     }
     .section-body tr:nth-child(even) td { background: #f8fafc; }
 
-    /* ── FOOTER ── */
+    /* ── FOOTER (end-of-document) ── */
     .pdf-footer {
-      margin-top: 22px;
-      padding-top: 10px;
-      border-top: 1.5px solid #e2e8f0;
+      margin-top: 28px;
+      padding: 12px 16px;
+      background: linear-gradient(135deg, ${c.light} 0%, #f8fafc 100%);
+      border: 1.5px solid ${c.border};
+      border-radius: 10px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 12px;
     }
-    .pdf-footer-left {
-      font-family: Arial, sans-serif;
-      font-size: 7pt;
-      color: #94a3b8;
+    .pdf-footer-logo {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      border-radius: 6px;
+      flex-shrink: 0;
     }
-    .pdf-footer-right {
+    .pdf-footer-text {
+      flex: 1;
+    }
+    .pdf-footer-title {
       font-family: Arial, sans-serif;
-      font-size: 7pt;
+      font-size: 8.5pt;
+      font-weight: 900;
       color: ${c.primary};
-      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .pdf-footer-sub {
+      font-family: Arial, sans-serif;
+      font-size: 7pt;
+      color: #64748b;
+      margin-top: 2px;
+    }
+    .pdf-footer-url {
+      font-family: Arial, sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      color: ${c.primary};
+      text-align: right;
+      white-space: nowrap;
     }
 
     /* ── PRINT BUTTON (screen only) ── */
@@ -378,11 +449,17 @@ export const generateDakSutraPDF = async ({
 
   <!-- Branding bar -->
   <div class="brand-bar">
-    <div>
-      <div class="brand-name">⬡ Dak Guru</div>
-      <div class="brand-tagline">Self-Learning Portal for Postal Aspirants</div>
+    <div class="brand-logo-wrap">
+      <img class="brand-logo" src="${typeof window !== 'undefined' ? window.location.origin : ''}/official-logo.png" alt="Dak Guru Logo" />
+      <div class="brand-text-wrap">
+        <div class="brand-name">Dak Guru</div>
+        <div class="brand-tagline">Self-Learning Portal for Postal Aspirants</div>
+      </div>
     </div>
-    <div class="brand-date">Generated: ${format(new Date(), "dd MMM yyyy")}</div>
+    <div class="brand-date">
+      Generated: ${format(new Date(), "dd MMM yyyy")}<br/>
+      <span style="color:${c.primary};font-weight:600;">dakguru.com</span>
+    </div>
   </div>
 
   <!-- Hero / Header -->
@@ -464,13 +541,18 @@ export const generateDakSutraPDF = async ({
   </div>
   ` : ""}
 
-  <!-- Footer -->
+  <!-- End-of-document footer card -->
   <div class="pdf-footer">
-    <div class="pdf-footer-left">
-      Dak Sutra · ${act_name}${rule_number ? " · " + rule_number : ""}<br/>
-      Downloaded from <strong>dakguru.com</strong> — For educational use only
+    <img class="pdf-footer-logo" src="${typeof window !== 'undefined' ? window.location.origin : ''}/official-logo.png" alt="Dak Guru" />
+    <div class="pdf-footer-text">
+      <div class="pdf-footer-title">Dak Guru — Dak Sutra Series</div>
+      <div class="pdf-footer-sub">
+        ${act_name}${rule_number ? " · " + rule_number : ""} &nbsp;·&nbsp; For educational use only
+      </div>
     </div>
-    <div class="pdf-footer-right">www.dakguru.com</div>
+    <div class="pdf-footer-url">
+      Visit Dak Sutra @<br/>www.dakguru.com
+    </div>
   </div>
 
   <script>
