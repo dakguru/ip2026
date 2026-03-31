@@ -59,6 +59,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     const [loadProgress, setLoadProgress] = useState(0);
     const [containerWidth, setContainerWidth] = useState<number>(0);
     const [containerHeight, setContainerHeight] = useState<number>(0);
+    const [pdfBlob, setPdfBlob] = useState<Blob | null>(null);
 
     // Hard Defaults
     const [colorMode, setColorMode] = useState<ColorMode>('sepia');
@@ -125,6 +126,22 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         setSearchResults([]);
         setSearchInput('');
         setShowSearch(false);
+        setPdfBlob(null);
+
+        async function fetchPdf() {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const blob = await response.blob();
+                setPdfBlob(blob);
+            } catch (err) {
+                console.error("Fetch error:", err);
+                setError(err instanceof Error ? err : new Error(String(err)));
+                setLoading(false);
+            }
+        }
+        fetchPdf();
+        
         if (scrollContainerRef.current) scrollContainerRef.current.scrollTop = 0;
     }, [url]);
 
@@ -452,7 +469,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                                 </div>
                             )}
                             <Document
-                                file={url}
+                                file={pdfBlob}
                                 onLoadSuccess={onDocumentLoadSuccess}
                                 onLoadError={onDocumentLoadError}
                                 onLoadProgress={onDocumentLoadProgress}
