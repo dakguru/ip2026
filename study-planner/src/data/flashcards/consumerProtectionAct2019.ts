@@ -135,8 +135,7 @@ export const consumerProtectionAct2019: FlashCard[] = [
         answer: "State and National Commissions only (District cannot).",
         exam_weight: "High",
         keywords: ["Unfair Contract", "Jurisdiction"]
-    }
-];
+    },
     {
         pdf_title: "Consumer Protection Act, 2019",
         topic: "Time Limits",
