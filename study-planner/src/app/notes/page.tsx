@@ -1409,7 +1409,7 @@ export default function NotesPage() {
 
                             {/* Smart Reader Content */}
                             <div className="flex-1 relative overflow-hidden">
-                                <PdfViewer url={selectedPdf?.url || ''} />
+                                <PdfViewer key={selectedPdf.url} url={selectedPdf?.url || ''} />
                             </div>
                         </div>
                     </div>

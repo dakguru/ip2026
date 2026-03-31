@@ -15,6 +15,12 @@ import { schedule_financial_powers_set1, schedule_financial_powers_set2, schedul
 import { swatchh_bharat_set1, swatchh_bharat_set2, swatchh_bharat_set3 } from './flashcards/swatchhBharat';
 import { philately_set1, philately_set2, philately_set3 } from './flashcards/handbookOnPhilately';
 import { citizen_charter_set1, citizen_charter_set2, citizen_charter_set3 } from './flashcards/citizenCharter';
+import { public_accountants_default_act_set1 } from './flashcards/publicAccountantsDefaultAct';
+import { ccs_commutation_set1, ccs_commutation_set2 } from './flashcards/ccsCommutationOfPension';
+import { gst_act_set1, gst_act_set2, gst_act_set3 } from './flashcards/gstAct2017';
+import { ccs_revised_pay_rules_set1, ccs_revised_pay_rules_set2 } from './flashcards/ccsRevisedPayRules2016';
+import { fr_sr_set1, fr_sr_set2, fr_sr_set3 } from './flashcards/fundamentalSupplementaryRules';
+import { complaint_grievance_set1 } from './flashcards/complaintGrievanceHandling';
 
 
 // ----- EXISTING QUESTION DATA -----
@@ -6713,6 +6719,31 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   190: citizen_charter_set1,
   191: citizen_charter_set2,
   192: citizen_charter_set3,
+
+  // --- PUBLIC ACCOUNTANTS DEFAULT ACT, 1850 (Paper II) ---
+  193: public_accountants_default_act_set1,
+
+  // --- CCS (COMMUTATION OF PENSION) RULES, 1981 (Paper II) ---
+  194: ccs_commutation_set1,
+  195: ccs_commutation_set2,
+
+  // --- GST ACT, 2017 (Paper II) ---
+  196: gst_act_set1,
+  197: gst_act_set2,
+  198: gst_act_set3,
+
+  // --- CCS (REVISED PAY) RULES, 2016 (Paper II) ---
+  199: ccs_revised_pay_rules_set1,
+  200: ccs_revised_pay_rules_set2,
+
+  // --- FUNDAMENTAL & SUPPLEMENTARY RULES (Paper II) ---
+  201: fr_sr_set1,
+  202: fr_sr_set2,
+  203: fr_sr_set3,
+
+  // --- COMPLAINT & GRIEVANCE HANDLING IN DEPARTMENT OF POSTS (Paper I) ---
+  204: complaint_grievance_set1,
+
   187: [
     { q: "Which Finacle command is used for CIF Creation in CBS?", o: ["CMRC", "CCRC", "CICD", "CCIFINQ"], a: 1, e: "CIF Creation is done by invoking CCRC (Customer Creation). The supervisor verifies by also invoking CCRC. After successful creation, the CIF No. is noted." },
     { q: "Which Finacle command is used for CIF Modification in CBS?", o: ["CCRC", "CMRC", "HCCA", "CICD"], a: 1, e: "CIF Modification uses CMRC. After making necessary modifications and submitting, it is verified by Supervisor invoking CMRC." },
