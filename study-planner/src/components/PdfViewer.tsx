@@ -296,8 +296,10 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
     // --- UI Helpers ---
     const colorStyles = {
         bg: colorMode === 'dark' ? 'bg-zinc-950' : colorMode === 'sepia' ? 'bg-[#f4ecd8]' : 'bg-slate-50',
-        text: colorMode === 'dark' ? 'text-zinc-200' : colorMode === 'sepia' ? 'text-[#5b4636]' : 'text-slate-800',
-        header: colorMode === 'dark' ? 'bg-zinc-900 border-zinc-800' : colorMode === 'sepia' ? 'bg-[#fdf6e3] border-[#e1d5b5]' : 'bg-white border-slate-200',
+        text: colorMode === 'dark' ? 'text-zinc-200' : colorMode === 'sepia' ? 'text-[#3d2e24]' : 'text-slate-800',
+        header: colorMode === 'dark' ? 'bg-zinc-900 border-zinc-800' : colorMode === 'sepia' ? 'bg-[#fdf6e3] border-[#d4c39c]' : 'bg-white border-slate-200',
+        icon: colorMode === 'dark' ? 'text-zinc-300' : colorMode === 'sepia' ? 'text-[#5b4636]' : 'text-slate-600',
+        hover: colorMode === 'dark' ? 'hover:bg-zinc-800' : colorMode === 'sepia' ? 'hover:bg-amber-100' : 'hover:bg-slate-100',
     };
 
     const effectiveWidth = containerWidth ? (fitMode === 'width' ? containerWidth - 40 : undefined) : undefined;
@@ -314,27 +316,27 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                 <div className="flex items-center gap-3">
                     {!isLiquidMode && (
                         <div className="flex items-center">
-                            <span className={`text-[10px] font-bold uppercase tracking-wider mr-2 ${colorMode === 'dark' ? 'text-zinc-500' : 'text-slate-400'}`}>
+                            <span className={`text-[10px] font-bold uppercase tracking-wider mr-2 ${colorStyles.icon}`}>
                                 Page
                             </span>
-                            <div className={`flex items-center border rounded-xl overflow-hidden ${colorMode === 'dark' ? 'border-zinc-700 bg-zinc-800/50' : 'border-slate-200 bg-slate-50'}`}>
+                            <div className={`flex items-center border rounded-xl overflow-hidden ${colorMode === 'dark' ? 'border-zinc-700 bg-zinc-800/50' : colorMode === 'sepia' ? 'border-amber-300/50 bg-amber-50/50' : 'border-slate-200 bg-slate-50'}`}>
                                 <button 
                                     onClick={() => setPageNumber(p => Math.max(p - 1, 1))}
                                     disabled={pageNumber <= 1 || loading}
-                                    className={`p-1.5 disabled:opacity-30 transition-colors ${colorMode === 'dark' ? 'hover:bg-zinc-700 text-zinc-300' : 'hover:bg-slate-200 text-slate-600'}`}
+                                    className={`p-1.5 disabled:opacity-30 transition-colors ${colorStyles.hover} ${colorStyles.icon}`}
                                 >
                                     <ChevronLeft className="w-4 h-4" />
                                 </button>
                                 <button 
                                     onClick={() => { setShowGoToPage(true); setTimeout(() => goToPageRef.current?.focus(), 100); }}
-                                    className={`px-3 py-1.5 text-xs font-bold transition-all border-x ${colorMode === 'dark' ? 'border-zinc-700 hover:bg-zinc-700 text-white' : 'border-slate-200 hover:bg-slate-200 text-slate-800'}`}
+                                    className={`px-3 py-1.5 text-xs font-black transition-all border-x ${colorMode === 'dark' ? 'border-zinc-700 text-white' : colorMode === 'sepia' ? 'border-amber-200 text-amber-900' : 'border-slate-200 text-slate-800'} ${colorStyles.hover}`}
                                 >
                                     {loading ? '-- / --' : `${pageNumber} / ${numPages || '--'}`}
                                 </button>
                                 <button 
                                     onClick={() => setPageNumber(p => Math.min(p + 1, numPages || p))}
                                     disabled={pageNumber >= (numPages || 1) || loading}
-                                    className={`p-1.5 disabled:opacity-30 transition-colors ${colorMode === 'dark' ? 'hover:bg-zinc-700 text-zinc-300' : 'hover:bg-slate-200 text-slate-600'}`}
+                                    className={`p-1.5 disabled:opacity-30 transition-colors ${colorStyles.hover} ${colorStyles.icon}`}
                                 >
                                     <ChevronRight className="w-4 h-4" />
                                 </button>
@@ -400,23 +402,23 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
 
                     {!isLiquidMode && (
                         <>
-                            <button onClick={() => window.location.reload()} className="p-1.5 hover:bg-black/5 rounded-lg"><RefreshCw className="w-4 h-4" /></button>
-                            <div className="w-px h-4 bg-current/10 mx-1" />
+                            <button onClick={() => window.location.reload()} className={`p-1.5 rounded-lg transition-colors ${colorStyles.hover} ${colorStyles.icon}`} title="Refresh"><RefreshCw className="w-4 h-4" /></button>
+                            <div className={`w-px h-4 mx-1 ${colorMode === 'dark' ? 'bg-zinc-700' : colorMode === 'sepia' ? 'bg-amber-300' : 'bg-slate-300'}`} />
                             
                             {/* Fit Controls */}
-                            <div className="flex bg-black/5 rounded-lg p-0.5">
-                                <button onClick={() => { setFitMode('width'); setScale(1.0); }} className={`px-2 py-1 rounded text-[10px] font-bold ${fitMode === 'width' ? 'bg-white shadow' : ''}`}>FW</button>
-                                <button onClick={() => { setFitMode('page'); setScale(1.0); }} className={`px-2 py-1 rounded text-[10px] font-bold ${fitMode === 'page' ? 'bg-white shadow' : ''}`}>FP</button>
+                            <div className={`flex rounded-lg p-0.5 ${colorMode === 'dark' ? 'bg-zinc-800' : colorMode === 'sepia' ? 'bg-amber-200/50' : 'bg-slate-100'}`}>
+                                <button onClick={() => { setFitMode('width'); setScale(1.0); }} className={`px-2 py-1 rounded text-[10px] font-extrabold ${fitMode === 'width' ? (colorMode === 'dark' ? 'bg-zinc-700 text-blue-400 shadow-sm' : 'bg-white shadow text-blue-600') : 'opacity-40'}`}>FW</button>
+                                <button onClick={() => { setFitMode('page'); setScale(1.0); }} className={`px-2 py-1 rounded text-[10px] font-extrabold ${fitMode === 'page' ? (colorMode === 'dark' ? 'bg-zinc-700 text-blue-400 shadow-sm' : 'bg-white shadow text-blue-600') : 'opacity-40'}`}>FP</button>
                             </div>
 
-                            <button onClick={() => setColorMode('light')} className={`p-1.5 rounded ${colorMode === 'light' ? 'bg-white shadow' : ''}`}><Sun className="w-4 h-4" /></button>
-                            <button onClick={() => setColorMode('sepia')} className={`p-1.5 rounded ${colorMode === 'sepia' ? 'bg-amber-100 shadow' : ''}`}><Coffee className="w-4 h-4" /></button>
-                            <button onClick={() => setColorMode('dark')} className={`p-1.5 rounded ${colorMode === 'dark' ? 'bg-zinc-700 shadow' : ''}`}><Moon className="w-4 h-4 text-blue-400" /></button>
+                            <button onClick={() => setColorMode('light')} className={`p-1.5 rounded-lg transition-colors ${colorMode === 'light' ? 'bg-white shadow text-amber-500' : colorStyles.hover + ' ' + colorStyles.icon}`} title="Light Mode"><Sun className="w-4 h-4" /></button>
+                            <button onClick={() => setColorMode('sepia')} className={`p-1.5 rounded-lg transition-colors ${colorMode === 'sepia' ? 'bg-amber-100 shadow border border-amber-300/50 text-amber-900' : colorStyles.hover + ' ' + colorStyles.icon}`} title="Sepia Mode"><Coffee className="w-4 h-4" /></button>
+                            <button onClick={() => setColorMode('dark')} className={`p-1.5 rounded-lg transition-colors ${colorMode === 'dark' ? 'bg-zinc-700 shadow text-blue-400 border border-zinc-600' : colorStyles.hover + ' ' + colorStyles.icon}`} title="Dark Mode"><Moon className="w-4 h-4" /></button>
                             
-                            <div className="w-px h-4 bg-current/10 mx-1" />
-                            <button onClick={handleDownload} className="p-1.5 hover:bg-black/5 rounded-lg text-blue-500"><Download className="w-4 h-4" /></button>
-                            <button onClick={() => setShowSearch(!showSearch)} className="p-1.5 hover:bg-black/5 rounded-lg"><Search className="w-4 h-4" /></button>
-                            <button onClick={toggleFullscreen} className="p-1.5 hover:bg-black/5 rounded-lg"><Maximize2 className="w-4 h-4" /></button>
+                            <div className={`w-px h-4 mx-1 ${colorMode === 'dark' ? 'bg-zinc-700' : colorMode === 'sepia' ? 'bg-amber-300' : 'bg-slate-300'}`} />
+                            <button onClick={handleDownload} className={`p-1.5 rounded-lg transition-colors text-blue-500 ${colorStyles.hover}`} title="Download"><Download className="w-4 h-4" /></button>
+                            <button onClick={() => setShowSearch(!showSearch)} className={`p-1.5 rounded-lg transition-colors ${showSearch ? 'bg-blue-100 text-blue-600' : colorStyles.hover + ' ' + colorStyles.icon}`} title="Search"><Search className="w-4 h-4" /></button>
+                            <button onClick={toggleFullscreen} className={`p-1.5 rounded-lg transition-colors ${colorStyles.hover} ${colorStyles.icon}`} title="Fullscreen"><Maximize2 className="w-4 h-4" /></button>
                         </>
                     )}
                 </div>
