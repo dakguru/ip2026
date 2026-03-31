@@ -136,19 +136,19 @@ export default function DakSutraPublicListPage() {
                 <div className="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-blue-500/20 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-violet-500/20 rounded-full blur-3xl" />
 
-                <div className="relative max-w-7xl mx-auto px-4 md:px-6 pb-8 md:pb-16 pt-[max(32px,calc(env(safe-area-inset-top,0px)+16px))] md:pt-16">
+                <div className="relative max-w-7xl mx-auto px-4 md:px-6 pb-6 md:pb-16 pt-[max(20px,calc(env(safe-area-inset-top,0px)+8px))] md:pt-16">
                     {/* Back link */}
-                    <Link href="/" className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs font-semibold mb-5 transition-colors">
-                        <ArrowLeft className="w-3.5 h-3.5" />
+                    <Link href="/" className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-[10px] md:text-xs font-semibold mb-3 md:mb-5 transition-colors">
+                        <ArrowLeft className="w-3 h-3 md:w-3.5 md:h-3.5" />
                         Home
                     </Link>
 
                     {/* Stylish Dak Sutra wordmark */}
-                    <div className="flex items-center gap-3 mb-3 md:mb-4">
-                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
-                            <BookOpen className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                    <div className="flex items-center gap-2.5 mb-2 md:mb-4">
+                        <div className="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                            <BookOpen className="w-3.5 h-3.5 md:w-5 md:h-5 text-white" />
                         </div>
-                        <h1 className="text-3xl md:text-4xl font-black tracking-tight leading-none">
+                        <h1 className="text-2xl md:text-4xl font-black tracking-tight leading-none">
                             <span className="bg-gradient-to-r from-white via-blue-100 to-violet-200 bg-clip-text text-transparent">
                                 Dak Sutra
                             </span>
@@ -160,29 +160,29 @@ export default function DakSutraPublicListPage() {
                         Postal Laws Decoded for LDCE IP &amp; PS Group B
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-black leading-tight mb-3 md:mb-4">
+                    <h2 className="text-xl sm:text-3xl md:text-5xl font-black leading-tight mb-1.5 md:mb-4">
                         Postal Rules,{" "}
                         <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                             Simplified.
                         </span>
                     </h2>
 
-                    <p className="text-blue-200/80 max-w-xl text-sm md:text-base leading-relaxed mb-5 md:mb-8">
+                    <p className="text-blue-200/80 max-w-xl text-[13px] md:text-base leading-relaxed mb-4 md:mb-8">
                         Official provisions broken down with plain-language explanations, real-life examples, and exam-focused insights.
                     </p>
 
                     <div className="flex flex-wrap gap-2 md:gap-4">
-                        <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-2 md:px-4 md:py-2.5">
-                            <GraduationCap className="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-300" />
-                            <span className="text-xs md:text-sm font-bold text-white">{entries.length}+ Rules</span>
+                        <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1.5 md:px-4 md:py-2.5">
+                            <GraduationCap className="w-3 h-3 md:w-4 md:h-4 text-blue-300" />
+                            <span className="text-[10px] md:text-sm font-bold text-white">{entries.length}+ Rules</span>
                         </div>
-                        <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-2 md:px-4 md:py-2.5">
-                            <TrendingUp className="w-3.5 h-3.5 md:w-4 md:h-4 text-violet-300" />
-                            <span className="text-xs md:text-sm font-bold text-white">Exam-Focused</span>
+                        <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1.5 md:px-4 md:py-2.5">
+                            <TrendingUp className="w-3 h-3 md:w-4 md:h-4 text-violet-300" />
+                            <span className="text-[10px] md:text-sm font-bold text-white">Exam-Focused</span>
                         </div>
-                        <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-2 md:px-4 md:py-2.5">
-                            <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-300" />
-                            <span className="text-xs md:text-sm font-bold text-white">Dak Guru Explained</span>
+                        <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1.5 md:px-4 md:py-2.5">
+                            <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-amber-300" />
+                            <span className="text-[10px] md:text-sm font-bold text-white">Dak Guru Explained</span>
                         </div>
                     </div>
                 </div>
@@ -192,19 +192,19 @@ export default function DakSutraPublicListPage() {
             <div className="max-w-7xl mx-auto px-4 md:px-6 py-5 md:py-10 pb-[max(32px,calc(env(safe-area-inset-bottom,0px)+24px))]">
 
                 {/* Search */}
-                <div className="mb-4 relative">
+                <div className="mb-3 relative">
                     <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-zinc-400" />
                     <input
                         type="text"
                         placeholder="Search rules, sections, acts..."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl md:rounded-2xl text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 dark:focus:border-blue-500 transition-all font-medium shadow-sm"
+                        className="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl md:rounded-2xl text-[13px] md:text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 dark:focus:border-blue-500 transition-all font-medium shadow-sm"
                     />
                 </div>
 
                 {/* Category Filter Pills — full-bleed scroll on mobile */}
-                <div className="-mx-4 px-4 md:mx-0 md:px-0 mb-5 md:mb-8">
+                <div className="-mx-4 px-4 md:mx-0 md:px-0 mb-4 md:mb-8">
                     <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
                         {categories.map((cat) => {
                             const cfg = cat === "all" ? null : CATEGORY_CONFIG[cat];
@@ -234,7 +234,7 @@ export default function DakSutraPublicListPage() {
 
                 {/* Results count */}
                 {!isLoading && (
-                    <p className="text-[11px] font-bold text-zinc-400 uppercase tracking-widest mb-4 md:mb-6">
+                    <p className="text-[10px] md:text-[11px] font-bold text-zinc-400 uppercase tracking-widest mb-3 md:mb-6">
                         {entries.length} {entries.length === 1 ? "entry" : "entries"} found
                     </p>
                 )}
@@ -265,30 +265,30 @@ export default function DakSutraPublicListPage() {
                                     {/* Top colour stripe */}
                                     <div className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${cfg.stripe}`} />
 
-                                    <div className="p-4 pt-5 min-w-0">
+                                    <div className="p-3 md:p-4 pt-4 md:pt-5 min-w-0">
                                         {/* Row 1 — Category badge + Date */}
-                                        <div className="flex items-center justify-between gap-2 mb-3">
-                                            <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wide shrink-0 ${cfg.badge}`}>
+                                        <div className="flex items-center justify-between gap-2 mb-2 md:mb-3">
+                                            <div className={`flex items-center gap-1.5 px-2 py-0.5 md:px-2.5 md:py-1 rounded-md md:rounded-lg text-[9px] md:text-[10px] font-black uppercase tracking-wide shrink-0 ${cfg.badge}`}>
                                                 {cfg.icon}
                                                 {entry.category}
                                             </div>
-                                            <div className="flex items-center gap-1 text-[10px] font-semibold text-zinc-400 shrink-0">
-                                                <Calendar className="w-3 h-3" />
+                                            <div className="flex items-center gap-1 text-[9px] md:text-[10px] font-semibold text-zinc-400 shrink-0">
+                                                <Calendar className="w-2.5 h-2.5 md:w-3 md:h-3" />
                                                 {entry.effective_date ? format(new Date(entry.effective_date), 'MMM yyyy') : '—'}
                                             </div>
                                         </div>
 
                                         {/* Row 2 — Act name */}
                                         <div className={`flex items-start gap-1.5 mb-1 ${cfg.badgeText}`}>
-                                            <Bookmark className="w-3 h-3 shrink-0 mt-[2px]" />
-                                            <span className="text-[11px] font-black leading-snug break-words min-w-0">
+                                            <Bookmark className="w-2.5 h-2.5 md:w-3 md:h-3 shrink-0 mt-[3px] md:mt-[2px]" />
+                                            <span className="text-[10px] md:text-[11px] font-black leading-snug break-words min-w-0">
                                                 {entry.act_name}
                                             </span>
                                         </div>
 
                                         {/* Row 3 — Rule number (if present, separate line) */}
                                         {entry.rule_number && (
-                                            <p className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 mb-2.5 pl-[18px] leading-snug break-words">
+                                            <p className="text-[9px] md:text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 mb-2 md:mb-2.5 pl-4 md:pl-[18px] leading-snug break-words">
                                                 {entry.rule_number}
                                             </p>
                                         )}
@@ -297,7 +297,7 @@ export default function DakSutraPublicListPage() {
                                         <div className="border-t border-zinc-100 dark:border-zinc-800 mb-2.5" />
 
                                         {/* Row 4 — Title */}
-                                        <h3 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors break-words line-clamp-2 min-w-0">
+                                        <h3 className="text-[13px] md:text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors break-words line-clamp-3 min-w-0">
                                             {entry.title}
                                         </h3>
 
@@ -314,12 +314,12 @@ export default function DakSutraPublicListPage() {
                                         </div>
 
                                         {/* Row 6 — Footer CTA */}
-                                        <div className={`flex items-center justify-between pt-2.5 border-t border-zinc-100 dark:border-zinc-800`}>
-                                            <span className={`text-[11px] font-black tracking-wide ${cfg.badgeText}`}>
+                                        <div className={`flex items-center justify-between pt-2 md:pt-2.5 border-t border-zinc-100 dark:border-zinc-800`}>
+                                            <span className={`text-[10px] md:text-[11px] font-black tracking-wide ${cfg.badgeText}`}>
                                                 Read full rule
                                             </span>
-                                            <div className={`w-6 h-6 rounded-full flex items-center justify-center ${cfg.badge} group-hover:scale-110 transition-transform`}>
-                                                <ChevronRight className="w-3.5 h-3.5" />
+                                            <div className={`w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center ${cfg.badge} group-hover:scale-110 transition-transform`}>
+                                                <ChevronRight className="w-3 h-3 md:w-3.5 md:h-3.5" />
                                             </div>
                                         </div>
                                     </div>

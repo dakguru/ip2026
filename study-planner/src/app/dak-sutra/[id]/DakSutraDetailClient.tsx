@@ -152,7 +152,7 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                 <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
                 {/* Nav bar */}
-                <div className="relative max-w-4xl mx-auto px-4 pt-4 pb-0 flex items-center justify-between">
+                <div className="relative max-w-4xl mx-auto px-4 pt-2 md:pt-4 pb-0 flex items-center justify-between">
                     <Link
                         href="/dak-sutra"
                         className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-sm font-semibold min-h-[44px] touch-manipulation"
@@ -167,7 +167,7 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                 </div>
 
                 {/* Hero content */}
-                <div className="relative max-w-4xl mx-auto px-4 py-6 md:py-12">
+                <div className="relative max-w-4xl mx-auto px-4 py-4 md:py-12">
                     {/* Exam tags */}
                     {entry.exam_tags?.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 mb-3">
@@ -179,22 +179,22 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                         </div>
                     )}
 
-                    <h1 className="text-xl sm:text-2xl md:text-4xl font-black text-white leading-tight mb-4 md:mb-6">
+                    <h1 className="text-lg sm:text-2xl md:text-4xl font-black text-white leading-tight mb-3 md:mb-6">
                         {entry.title}
                     </h1>
 
                     {/* Metadata pills */}
                     <div className="flex flex-wrap gap-2">
-                        <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border bg-white/10 border-white/20 min-w-0">
-                            <Bookmark className="w-3.5 h-3.5 text-white/70 shrink-0" />
-                            <span className="text-xs font-bold text-white/90 truncate">
+                        <div className="flex items-center gap-1.5 px-2 py-1 md:px-2.5 md:py-1.5 rounded-lg md:rounded-xl border bg-white/10 border-white/20 min-w-0">
+                            <Bookmark className="w-3 md:w-3.5 h-3 md:h-3.5 text-white/70 shrink-0" />
+                            <span className="text-[10px] md:text-xs font-bold text-white/90 truncate">
                                 {entry.act_name}{entry.rule_number ? ` — ${entry.rule_number}` : ""}
                             </span>
                         </div>
                         {entry.effective_date && (
-                            <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border bg-white/5 border-white/10">
-                                <Calendar className="w-3.5 h-3.5 text-white/50 shrink-0" />
-                                <span className="text-xs font-medium text-white/70 whitespace-nowrap">
+                            <div className="flex items-center gap-1.2 px-2 py-1 md:px-2.5 md:py-1.5 rounded-lg md:rounded-xl border bg-white/5 border-white/10">
+                                <Calendar className="w-3 md:w-3.5 h-3 md:h-3.5 text-white/50 shrink-0" />
+                                <span className="text-[10px] md:text-xs font-medium text-white/70 whitespace-nowrap">
                                     {format(new Date(entry.effective_date), 'dd MMM yyyy')}
                                 </span>
                             </div>
@@ -211,9 +211,9 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
 
                 {/* 1. OFFICIAL PROVISION */}
                 <div className="rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm dark:shadow-none">
-                    <div className="flex items-center gap-2.5 px-4 py-3 md:px-5 md:py-4 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/40">
-                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center shrink-0">
-                            <FileText className="w-3.5 h-3.5 md:w-4 md:h-4 text-zinc-600 dark:text-zinc-300" />
+                    <div className="flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/40">
+                        <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center shrink-0">
+                            <FileText className="w-3 h-3 md:w-4 md:h-4 text-zinc-600 dark:text-zinc-300" />
                         </div>
                         <div className="min-w-0">
                             <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] text-zinc-500">Official Provision</p>
@@ -236,9 +236,9 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
 
                 {/* 2. DAK GURU EXPLANATION */}
                 <div className={`rounded-2xl overflow-hidden border ${cfg.accentBorder} bg-white dark:bg-zinc-900/60 shadow-sm dark:shadow-none`}>
-                    <div className={`flex items-center gap-2.5 px-4 py-3 md:px-5 md:py-4 border-b ${cfg.accentBorder} ${cfg.accentBg}`}>
-                        <div className={`w-7 h-7 md:w-8 md:h-8 rounded-lg flex items-center justify-center shrink-0 ${cfg.accentBg} border ${cfg.accentBorder}`}>
-                            <BookOpen className={`w-3.5 h-3.5 md:w-4 md:h-4 ${cfg.accentColor}`} />
+                    <div className={`flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b ${cfg.accentBorder} ${cfg.accentBg}`}>
+                        <div className={`w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg flex items-center justify-center shrink-0 ${cfg.accentBg} border ${cfg.accentBorder}`}>
+                            <BookOpen className={`w-3 h-3 md:w-4 md:h-4 ${cfg.accentColor}`} />
                         </div>
                         <div className="min-w-0">
                             <p className={`text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] ${cfg.accentColor}`}>Dak Guru Explains</p>
@@ -263,9 +263,9 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                 {/* 3. PRACTICAL EXAMPLE */}
                 {entry.practical_example && (
                     <div className="rounded-2xl overflow-hidden border border-blue-200 dark:border-blue-500/20 bg-blue-50 dark:bg-blue-950/50 shadow-sm dark:shadow-none">
-                        <div className="flex items-center gap-2.5 px-4 py-3 md:px-5 md:py-4 border-b border-blue-200 dark:border-blue-500/20 bg-blue-100/60 dark:bg-blue-500/5">
-                            <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-blue-200 dark:bg-blue-500/20 border border-blue-300 dark:border-blue-500/30 flex items-center justify-center shrink-0">
-                                <Target className="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-600 dark:text-blue-400" />
+                        <div className="flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-blue-200 dark:border-blue-500/20 bg-blue-100/60 dark:bg-blue-500/5">
+                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-blue-200 dark:bg-blue-500/20 border border-blue-300 dark:border-blue-500/30 flex items-center justify-center shrink-0">
+                                <Target className="w-3 h-3 md:w-4 md:h-4 text-blue-600 dark:text-blue-400" />
                             </div>
                             <div className="min-w-0">
                                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">Practical Example</p>
@@ -293,9 +293,9 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                         <div className="absolute top-0 right-0 w-24 h-24 bg-amber-200/40 dark:bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
                         <div className="absolute bottom-0 left-0 w-20 h-20 bg-orange-200/40 dark:bg-orange-500/10 rounded-full blur-2xl pointer-events-none" />
 
-                        <div className="relative flex items-center gap-2.5 px-4 py-3 md:px-5 md:py-4 border-b border-amber-200 dark:border-amber-500/20 bg-amber-100/60 dark:bg-amber-500/5">
-                            <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-amber-200 dark:bg-amber-500/20 border border-amber-300 dark:border-amber-500/30 flex items-center justify-center shrink-0">
-                                <Zap className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-600 dark:text-amber-400" />
+                        <div className="relative flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-amber-200 dark:border-amber-500/20 bg-amber-100/60 dark:bg-amber-500/5">
+                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-amber-200 dark:bg-amber-500/20 border border-amber-300 dark:border-amber-500/30 flex items-center justify-center shrink-0">
+                                <Zap className="w-3 h-3 md:w-4 md:h-4 text-amber-600 dark:text-amber-400" />
                             </div>
                             <div className="min-w-0">
                                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] text-amber-600 dark:text-amber-400">Exam Insight</p>
