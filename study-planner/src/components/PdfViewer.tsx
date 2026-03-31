@@ -23,6 +23,7 @@ const pdfOptions = {
     standardFontDataUrl: 'https://unpkg.com/pdfjs-dist@4.4.168/standard_fonts/',
     disableRange: true,
     disableStream: true,
+    withCredentials: true,
 };
 
 type ViewMode = 'single' | 'continuous';
@@ -113,8 +114,8 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
             const savedViewMode = localStorage.getItem('pdfViewMode');
             const savedFitMode = localStorage.getItem('pdfFitMode');
             if (savedColorMode) setColorMode(savedColorMode as ColorMode);
-            // Default to continuous scroll for browser users
-            setViewMode(savedViewMode ? (savedViewMode as ViewMode) : 'continuous');
+            // Default to single page for maximum stability, user can toggle to continuous
+            setViewMode(savedViewMode ? (savedViewMode as ViewMode) : 'single');
             if (savedFitMode) setFitMode(savedFitMode as FitMode);
         }
 
@@ -146,6 +147,22 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         }
     }, [colorMode, viewMode, fitMode, isBrowser]);
 
+    // Reset state on URL change to prevent state carryover
+    useEffect(() => {
+        setPageNumber(1);
+        setLoading(true);
+        setError(null);
+        setLoadProgress(0);
+        setPdfDoc(null);
+        setSearchText('');
+        setSearchResults([]);
+        setSearchInput('');
+        setShowSearch(false);
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTop = 0;
+        }
+    }, [url]);
+
     const toggleLiquidMode = () => {
         const newMode = !isLiquidMode;
         setIsLiquidMode(newMode);
@@ -157,15 +174,15 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         setPdfDoc(pdf);
         setLoading(false);
         setError(null);
+        setPageNumber(1);
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTop = 0;
+        }
     }
 
     function onDocumentLoadError(err: Error) {
         console.error("PDF Load Error:", err);
-        if (err.message && (err.message.includes('Invalid PDF structure') || err.message.includes('Unexpected server response'))) {
-            setFallbackToImage(true);
-        } else {
-            setError(err);
-        }
+        setError(err);
         setLoading(false);
     }
 
@@ -190,32 +207,79 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
         return () => window.removeEventListener('resize', updateDimensions);
     }, [isFullscreen]);
 
+    const [isFullyLoaded, setIsFullyLoaded] = useState(false);
+    useEffect(() => {
+        if (!loading && numPages) {
+            const timer = setTimeout(() => setIsFullyLoaded(true), 1000);
+            return () => clearTimeout(timer);
+        } else {
+            setIsFullyLoaded(false);
+        }
+    }, [loading, numPages]);
+
+    // Aggressive scroll reset when loading finishes or mode changes.
+    // Timers extend past isFullyLoaded (1000ms) to beat scroll anchoring / late page renders.
+    useEffect(() => {
+        if (!loading && scrollContainerRef.current) {
+            const reset = () => { if (scrollContainerRef.current) scrollContainerRef.current.scrollTop = 0; };
+            reset();
+            const t1 = setTimeout(reset, 50);
+            const t2 = setTimeout(reset, 300);
+            const t3 = setTimeout(reset, 700);
+            const t4 = setTimeout(reset, 1100); // just after isFullyLoaded fires at 1000ms
+            return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(t4); };
+        }
+    }, [loading, viewMode]);
+
+    // Final authoritative reset once all pages have rendered (isFullyLoaded → true).
+    // This is the definitive fix for Chrome scroll-anchoring pushing content mid-document.
+    useEffect(() => {
+        if (isFullyLoaded && scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTop = 0;
+            setPageNumber(1);
+        }
+    }, [isFullyLoaded]);
+
     // Scroll tracking for continuous mode and scroll-to-top button
     useEffect(() => {
         const scrollEl = scrollContainerRef.current;
         if (!scrollEl) return;
 
         const handleScroll = () => {
+            if (!scrollEl) return;
             setShowScrollTop(scrollEl.scrollTop > 400);
 
             // Track current page in continuous mode
-            if (viewMode === 'continuous' && numPages) {
+            // ONLY track if we aren't loading AND a small grace period has passed
+            if (viewMode === 'continuous' && numPages && isFullyLoaded) {
                 const pages = scrollEl.querySelectorAll('[data-page-number]');
                 let currentPage = 1;
-                pages.forEach((page) => {
+                
+                // Find the page that is currently at the top of the viewport
+                const containerRect = scrollEl.getBoundingClientRect();
+                const threshold = containerRect.top + 100; // Use a small offset 
+
+                for (let i = 0; i < pages.length; i++) {
+                    const page = pages[i];
                     const rect = page.getBoundingClientRect();
-                    const containerRect = scrollEl.getBoundingClientRect();
-                    if (rect.top < containerRect.top + containerRect.height / 2) {
+                    
+                    if (rect.height < 50) continue; 
+
+                    if (rect.top <= threshold && rect.bottom > threshold) {
                         currentPage = parseInt(page.getAttribute('data-page-number') || '1');
+                        break;
                     }
-                });
-                setPageNumber(currentPage);
+                }
+                
+                if (currentPage !== pageNumber) {
+                    setPageNumber(currentPage);
+                }
             }
         };
 
-        scrollEl.addEventListener('scroll', handleScroll);
+        scrollEl.addEventListener('scroll', handleScroll, { passive: true });
         return () => scrollEl.removeEventListener('scroll', handleScroll);
-    }, [viewMode, numPages]);
+    }, [viewMode, numPages, loading, pageNumber, isFullyLoaded]);
 
     // Keyboard shortcuts
     useEffect(() => {
@@ -404,7 +468,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
 
     const customTextRenderer = useCallback(
         ({ str }: { str: string }) => {
-            if (!searchText || !searchText.trim()) return str;
+            if (!searchText || !searchText.trim()) return str as any;
             const escaped = searchText.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             const splitText = str.split(new RegExp(`(${escaped})`, 'gi'));
             
@@ -413,7 +477,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                 new RegExp(`^${escaped}$`, 'i').test(part) ? (
                     <mark key={index} style={{ backgroundColor: 'rgba(253, 224, 71, 0.4)', color: 'transparent', borderRadius: '2px' }}>{part}</mark>
                 ) : part
-            );
+            ) as any;
         },
         [searchText]
     );
@@ -807,9 +871,13 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                             )}
 
                             {viewMode === 'continuous' && (
-                                <span className={`px-2 py-1 rounded-lg text-sm font-semibold whitespace-nowrap ${colorMode === 'dark' ? 'text-zinc-200' : colorMode === 'sepia' ? 'text-amber-900' : 'text-slate-700'}`}>
+                                <button
+                                    onClick={() => { setShowGoToPage(true); setTimeout(() => goToPageRef.current?.focus(), 100); }}
+                                    className={`px-2 py-1 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors hover:bg-black/5 dark:hover:bg-white/5 ${colorMode === 'dark' ? 'text-zinc-200' : colorMode === 'sepia' ? 'text-amber-900' : 'text-slate-700'}`}
+                                    title="Go to page (G)"
+                                >
                                     {loading ? '--' : `${pageNumber} / ${numPages || '--'}`}
-                                </span>
+                                </button>
                             )}
                         </div>
                     )}
@@ -1127,6 +1195,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                 <div
                     ref={scrollContainerRef}
                     className={`flex-1 overflow-auto flex ${viewMode === 'continuous' ? 'flex-col items-center' : 'justify-center'} min-h-0 ${colorStyles.bg}`}
+                    style={{ overflowAnchor: 'none' }}
                     onTouchStart={!isLiquidMode ? onTouchStart : undefined}
                     onTouchMove={!isLiquidMode ? onTouchMove : undefined}
                     onTouchEnd={!isLiquidMode ? onTouchEnd : undefined}
@@ -1136,7 +1205,7 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                             <LiquidReader url={url} onFallbackToPdf={() => { setIsLiquidMode(false); localStorage.setItem('liquidModePref', 'false'); }} />
                         </div>
                     ) : (
-                        <div className={`p-4 w-full h-full flex justify-center ${viewMode === 'continuous' ? 'flex-col items-center gap-4' : ''}`}>
+                        <div className={`p-4 w-full h-full flex justify-center ${viewMode === 'continuous' ? 'flex-col items-center gap-4' : ''}`} style={{ overflowAnchor: 'none' }}>
                             {fallbackToImage ? (
                                 <div className="flex-1 w-full flex items-center justify-center p-4">
                                     <img 
