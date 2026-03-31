@@ -405,11 +405,33 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                             <button onClick={() => window.location.reload()} className={`p-1.5 rounded-lg transition-colors ${colorStyles.hover} ${colorStyles.icon}`} title="Refresh"><RefreshCw className="w-4 h-4" /></button>
                             <div className={`w-px h-4 mx-1 ${colorMode === 'dark' ? 'bg-zinc-700' : colorMode === 'sepia' ? 'bg-amber-300' : 'bg-slate-300'}`} />
                             
-                            {/* Fit Controls */}
-                            <div className={`flex rounded-lg p-0.5 ${colorMode === 'dark' ? 'bg-zinc-800' : colorMode === 'sepia' ? 'bg-amber-200/50' : 'bg-slate-100'}`}>
-                                <button onClick={() => { setFitMode('width'); setScale(1.0); }} className={`px-2 py-1 rounded text-[10px] font-extrabold ${fitMode === 'width' ? (colorMode === 'dark' ? 'bg-zinc-700 text-blue-400 shadow-sm' : 'bg-white shadow text-blue-600') : 'opacity-40'}`}>FW</button>
-                                <button onClick={() => { setFitMode('page'); setScale(1.0); }} className={`px-2 py-1 rounded text-[10px] font-extrabold ${fitMode === 'page' ? (colorMode === 'dark' ? 'bg-zinc-700 text-blue-400 shadow-sm' : 'bg-white shadow text-blue-600') : 'opacity-40'}`}>FP</button>
+                            {/* Zoom & Fit Controls */}
+                            <div className={`flex items-center gap-1.5 rounded-lg p-0.5 ${colorMode === 'dark' ? 'bg-zinc-800' : colorMode === 'sepia' ? 'bg-amber-200/50' : 'bg-slate-100'}`}>
+                                <div className="flex bg-black/5 rounded-md p-0.5">
+                                    <button onClick={() => { setFitMode('width'); setScale(1.0); }} className={`px-2 py-1 rounded text-[10px] font-extrabold ${fitMode === 'width' ? (colorMode === 'dark' ? 'bg-zinc-700 text-blue-400 shadow-sm' : 'bg-white shadow text-blue-600') : 'opacity-40'}`}>FW</button>
+                                    <button onClick={() => { setFitMode('page'); setScale(1.0); }} className={`px-2 py-1 rounded text-[10px] font-extrabold ${fitMode === 'page' ? (colorMode === 'dark' ? 'bg-zinc-700 text-blue-400 shadow-sm' : 'bg-white shadow text-blue-600') : 'opacity-40'}`}>FP</button>
+                                </div>
+                                <div className={`w-px h-3 mx-0.5 ${colorMode === 'dark' ? 'bg-zinc-700' : colorMode === 'sepia' ? 'bg-amber-300' : 'bg-slate-300'}`} />
+                                <button 
+                                    onClick={() => { setScale(prev => Math.max(prev - 0.1, 0.3)); setFitMode('custom'); }} 
+                                    className={`p-1 hover:opacity-100 transition-opacity ${colorStyles.icon} ${scale <= 0.3 ? 'opacity-20' : 'opacity-100'}`}
+                                    title="Zoom Out"
+                                >
+                                    <ZoomOut className="w-3.5 h-3.5" />
+                                </button>
+                                <span className={`text-[10px] font-black min-w-[32px] text-center ${colorStyles.icon} tabular-nums`}>
+                                    {Math.round(scale * 100)}%
+                                </span>
+                                <button 
+                                    onClick={() => { setScale(prev => Math.min(prev + 0.1, 3.0)); setFitMode('custom'); }} 
+                                    className={`p-1 hover:opacity-100 transition-opacity ${colorStyles.icon} ${scale >= 3.0 ? 'opacity-20' : 'opacity-100'}`}
+                                    title="Zoom In"
+                                >
+                                    <ZoomIn className="w-3.5 h-3.5" />
+                                </button>
                             </div>
+
+                            <div className={`w-px h-5 mx-0.5 ${colorMode === 'dark' ? 'bg-zinc-700' : colorMode === 'sepia' ? 'bg-amber-300' : 'bg-slate-300'}`} />
 
                             <button onClick={() => setColorMode('light')} className={`p-1.5 rounded-lg transition-colors ${colorMode === 'light' ? 'bg-white shadow text-amber-500' : colorStyles.hover + ' ' + colorStyles.icon}`} title="Light Mode"><Sun className="w-4 h-4" /></button>
                             <button onClick={() => setColorMode('sepia')} className={`p-1.5 rounded-lg transition-colors ${colorMode === 'sepia' ? 'bg-amber-100 shadow border border-amber-300/50 text-amber-900' : colorStyles.hover + ' ' + colorStyles.icon}`} title="Sepia Mode"><Coffee className="w-4 h-4" /></button>
