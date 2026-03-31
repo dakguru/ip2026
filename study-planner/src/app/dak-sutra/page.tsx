@@ -129,14 +129,14 @@ export default function DakSutraPublicListPage() {
     const categories = ["all", "Rule", "Section", "Regulation", "Circular", "Explanation"];
 
     return (
-        <AppScreenWrapper>
+        <AppScreenWrapper hideStatusBarPadding={true}>
             {/* Hero */}
             <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
                 <div className="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-blue-500/20 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-violet-500/20 rounded-full blur-3xl" />
 
-                <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-16">
+                <div className="relative max-w-7xl mx-auto px-4 md:px-6 pb-8 md:pb-16 pt-[max(32px,calc(env(safe-area-inset-top,0px)+16px))] md:pt-16">
                     {/* Back link */}
                     <Link href="/" className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs font-semibold mb-5 transition-colors">
                         <ArrowLeft className="w-3.5 h-3.5" />
@@ -189,7 +189,7 @@ export default function DakSutraPublicListPage() {
             </div>
 
             {/* Search + Filter + Cards */}
-            <div className="max-w-7xl mx-auto px-4 md:px-6 py-5 md:py-10 pb-8">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 py-5 md:py-10 pb-[max(32px,calc(env(safe-area-inset-bottom,0px)+24px))]">
 
                 {/* Search */}
                 <div className="mb-4 relative">
@@ -253,7 +253,7 @@ export default function DakSutraPublicListPage() {
                         <p className="text-zinc-500 font-bold uppercase text-xs tracking-widest mt-3">Loading Dak Sutra...</p>
                     </div>
                 ) : entries.length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5">
                         {entries.map((entry) => {
                             const cfg = CATEGORY_CONFIG[entry.category] || DEFAULT_CONFIG;
                             return (
@@ -265,7 +265,7 @@ export default function DakSutraPublicListPage() {
                                     {/* Top colour stripe */}
                                     <div className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${cfg.stripe}`} />
 
-                                    <div className="p-4 pt-5">
+                                    <div className="p-4 pt-5 min-w-0">
                                         {/* Row 1 — Category badge + Date */}
                                         <div className="flex items-center justify-between gap-2 mb-3">
                                             <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wide shrink-0 ${cfg.badge}`}>
@@ -297,7 +297,7 @@ export default function DakSutraPublicListPage() {
                                         <div className="border-t border-zinc-100 dark:border-zinc-800 mb-2.5" />
 
                                         {/* Row 4 — Title */}
-                                        <h3 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors break-words">
+                                        <h3 className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors break-words line-clamp-2 min-w-0">
                                             {entry.title}
                                         </h3>
 
