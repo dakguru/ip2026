@@ -1,0 +1,202 @@
+COMPLETE PS GROUP B COURSE MODE - FILE PATHS & CONTENT LOCATIONS
+==================================================================
+
+PRIMARY ASSESSMENT FILES (MODIFIED - Per git status)
+====================================================
+
+1. PSGB Quiz Topics Configuration
+   Path: d:\IP 2026\study-planner\src\data\psgbQuizzesData.ts
+   Size: 10,203 bytes
+   Status: MODIFIED
+   Content: 76 PSGB topics mapped to 157 question set IDs
+   Key Info:
+     - Paper I: 40 topics (psgb-1 to psgb-40)
+     - Paper II: 36 topics (psgb-43 to psgb-76)
+     - PYQ: 2 sets (psgb-p1-pyq, psgb-p2-pyq)
+     - Current Affairs: 16 sets (ca-jan26-*, ca-feb26-*)
+
+2. Main MCQ Question Database
+   Path: d:\IP 2026\study-planner\src\data\quizzes.ts
+   Size: 1,503,024 bytes (1.5MB)
+   Lines: ~6,970
+   Status: MODIFIED
+   Content: 
+     - ALL_SETS_DATA object with 190 question sets
+     - Question IDs: 1-205 (with gaps at 33-36, 40-41, 56, 62-66, 69, 74-77, 85, 110-115)
+     - Estimated 1,500+ PSGB-related questions
+     - Imports flashcard data for integration
+
+3. PDF Reference Materials Configuration
+   Path: d:\IP 2026\study-planner\src\data\psgbPdfData.ts
+   Size: 24,183 bytes
+   Status: MODIFIED
+   Content:
+     - PSGB_PDF_DATA record with two main sections:
+       * "Paper I": 30+ study materials
+       * "Paper II": 30+ study materials
+     - Each entry maps to actual PDF files in /notes/ directories
+     - Includes metadata (title, description, path, size, color, isFree status)
+
+SECONDARY MCQ QUESTION SETS (Referenced by psgbQuizzesData)
+===========================================================
+
+Question Set Ranges:
+  Sets 1-5:   Post Office Act 2023 & Rules 2024
+  Sets 6-16:  Government Savings Promotion Act (GSPA)
+  Sets 17-36: Consumer Protection, PMLA, Post Office services
+  Sets 37-61: Postal operations, manuals, rules
+  Sets 67-76: Administrative & Legal Acts
+  Sets 78-100: POSB, Life Insurance, Financial Services
+  Sets 101-147: Advanced topics & special modules
+  Sets 150-160: LDCE Previous Year Questions (2023)
+  Sets 164-169: Post Office Regulations LDCE Level
+  Sets 170-205: Advanced & specialized topics
+
+FLASHCARD FILES (Postal Service Topics)
+========================================
+
+Core Postal Manual Files:
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolII.ts
+  Cards: 23 flashcards
+  Topics: Organization (23 circles), Petitions, Legal, Security Deposits
+
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolIII.ts
+  Cards: 23 flashcards
+  Topics: Discipline, Charges, Defense, Suspension, Subsistence, Recoveries
+
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolIV.ts
+  Cards: 18 flashcards
+  Topics: Establishment, Branch Offices, Revenue, Exams, Recruitment, Transfers, Tenure
+
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolV.ts
+  Cards: 50 flashcards
+  Topics: Definitions (Transit, TMO, Nodal), Bagging, Weights, Investigation, Operations
+
+Additional Postal Manual Files:
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolVII.ts
+  Cards: Multiple
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolVIII.ts
+  Cards: Multiple
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolVIPartI.ts
+  Cards: Multiple
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolVIPartII.ts
+  Cards: Minimal
+  Path: d:\IP 2026\study-planner\src\data\flashcards\postalManualVolVIPartIII.ts
+  Cards: Minimal
+
+LDCE Level Content:
+  Path: d:\IP 2026\study-planner\src\data\flashcards\po_reg_ldce.ts
+  Size: 92,472 bytes
+  Content: Extensive LDCE-level questions on Post Office Regulations
+
+Other Important Flashcard Files:
+  Path: d:\IP 2026\study-planner\src\data\flashcards\index.ts
+  Type: Export index for all flashcards
+
+RELATED PSGB DATA FILES
+=======================
+
+  Path: d:\IP 2026\study-planner\src\data\psgbSyllabusData.tsx
+  Size: 10,356 bytes
+  Content: Syllabus structure and organization
+
+  Path: d:\IP 2026\study-planner\src\data\psgbSchedule.ts
+  Size: 27,007 bytes (Last modified: Mar 29 21:10)
+  Content: Exam schedule and timeline data
+
+  Path: d:\IP 2026\study-planner\src\data\psgbMockSchedule.ts
+  Size: 5,137 bytes
+  Content: Mock test scheduling
+
+COMPLETE FILE LISTING - ALL PSGB CONTENT
+=========================================
+
+Files in d:\IP 2026\study-planner\src\data\:
+  - admin_mock_questions.ts
+  - blog-posts.json
+  - live_mock_data.ts
+  - posts.json
+  - psgbMockSchedule.ts
+  - psgbPdfData.ts ✓ MODIFIED
+  - psgbQuizzesData.ts ✓ MODIFIED
+  - psgbSchedule.ts
+  - psgbSyllabusData.tsx
+  - quizzes.ts ✓ MODIFIED
+  - schedule.ts
+  - syllabus.ts
+  - users.json
+  - weekly_mock_data_01.ts through 17.ts
+  - Pincode Directory.csv (20MB)
+
+Files in d:\IP 2026\study-planner\src\data\flashcards\:
+  - bookOfBORules.ts
+  - ccsCommutationOfPension.ts
+  - ccsJoiningTime1979.ts
+  - ccsLeave1972.ts
+  - ccsLtc1988.ts
+  - ccsPension2021.ts
+  - ccsRecognition1993.ts
+  - ccsRevisedPayRules2016.ts
+  - ceaRules.ts
+  - cgegis1980.ts
+  - citizenCharter.ts
+  - complaintGrievanceHandling.ts
+  - consolidationProducts.ts
+  - consolidationProducts2.ts
+  - consolidationProducts3.ts
+  - consumerProtectionAct2019.ts
+  - consumer-protection-act-2019.json
+  - csMa1944.ts
+  - establishmentNorms.ts
+  - fundamentalSupplementaryRules.ts
+  - generated_from_mcq.ts (1.2MB - auto-generated)
+  - gspr2018.ts
+  - gstAct2017.ts
+  - handbookOnPhilately.ts
+  - index.ts
+  - it-act-2000.json
+  - itAct2000.ts
+  - pmla2002.ts
+  - po-guide-part-i.json
+  - poAct2023.ts
+  - poGuidePartI.ts
+  - poGuidePartII.ts
+  - po_reg_ldce.ts ✓ EXTENSIVE LDCE CONTENT
+  - postalManualVolII.ts
+  - postalManualVolIII.ts
+  - postalManualVolIV.ts
+  - postalManualVolV.ts
+  - postalManualVolVII.ts
+  - postalManualVolVIII.ts
+  - postalManualVolVIPartI.ts
+  - postalManualVolVIPartII.ts
+  - postalManualVolVIPartIII.ts
+  - publicAccountantsDefaultAct.ts
+  - scheduleOfFinancialPowers.ts
+  - swatchhBharat.ts
+  - currentAffairs/ (subdirectory)
+
+CRITICAL CONTENT SUMMARY
+=========================
+
+Total PSGB MCQ Questions: 1,500+ across 157 sets
+Total Flashcards: 2,500+ across 40+ files
+Total Reference Materials: 60+ PDF documents mapped
+Question Coverage Areas:
+  - Postal Acts & Regulations
+  - Civil Services Administration
+  - Financial Rules & Procedures
+  - Employee Benefits & Welfare
+  - Postal Operations
+  - Compliance & Legal
+
+Modified Files (Git Status):
+  ✓ psgbQuizzesData.ts
+  ✓ psgbPdfData.ts
+  ✓ quizzes.ts
+
+These three files contain all the MCQ and flashcard content for PS Group B Course Mode.
+
+=================================================================
+END OF FILE PATH LISTING
+=================================================================

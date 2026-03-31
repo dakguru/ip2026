@@ -41,7 +41,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-37', "DoP&T instructions issued from time to time on Establishment and administration.", 'Paper I', []),
   createTopic('psgb-38', "Brochure on reservation, instructions regarding sports person reservation, compassionate appointment guidelines issued by DoP and DoP&T from time to time.", 'Paper I', []),
   createTopic('psgb-39', "Recruitment Rules relating to various cadres in D/o Posts", 'Paper I', []),
-  createTopic('psgb-40', "Establishment Norms", 'Paper I', []),
+  createTopic('psgb-40', "Establishment Norms", 'Paper I', [205]),
   createTopic('psgb-43', "Central Civil Services (Conduct) Rules, 1964", 'Paper II', [54, 55]),
   createTopic('psgb-44', "Central Civil Services (Classification, Control and Appeal) Rules, 1965", 'Paper II', [50, 51, 52, 53]),
   createTopic('psgb-45', "Central Civil Services (Temporary Service Rules), 1965", 'Paper II', [57]),
