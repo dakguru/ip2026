@@ -55,15 +55,15 @@
         "e": "\nOption C is correct: \"No endorser shall be liable to a penalty... if he has exercised due diligence to verify the veracity of the claims\".\nOption A is correct regarding the amount (10 lakh) , but Option B is incorrect because the prohibition for the *first* contravention is up to one year, not three (three years is for subsequent contravention).\nOption D is incorrect because the penalty for subsequent contravention for a manufacturer may extend to \"fifty lakh rupees\".\n\n---\n\n### Part 3: Dispute Redressal Jurisdiction & Procedures"
     },
     {
-        "q": "According to the Gazette Notification (Source 1), what is the pecuniary jurisdiction of the District Consumer Disputes Redressal Commission (District Commission)?**",
+        "q": "As per the Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021, what is the pecuniary jurisdiction of the District Consumer Disputes Redressal Commission?",
         "o": [
             "Complaints where the value of goods or services does not exceed Rupees Fifty Lakhs.",
             "Complaints where the value of goods or services does not exceed Rupees One Crore.",
             "Complaints where the value of goods or services exceeds Rupees One Crore but does not exceed Rupees Ten Crore.",
             "Complaints where the value of goods or services exceeds Rupees Ten Crore."
         ],
-        "a": 1,
-        "e": "\nAccording to the Act text in the Gazette, the District Commission has jurisdiction to entertain complaints where the value of the goods or services paid as consideration \"does not exceed one crore rupees\".\n*(Note: While Source 2 mentions 50 Lakhs in its summary table, the primary Act text in Source 1 explicitly states One Crore).*\n\n---"
+        "a": 0,
+        "e": "\nAs per the Consumer Protection (Jurisdiction) Rules, 2021: District Commission — up to ₹50 Lakhs; State Commission — ₹50 Lakhs to ₹2 Crores; National Commission — above ₹2 Crores. These Rules supersede the original Act limits of 1 Crore / 10 Crores."
     },
     {
         "q": "Where can a complaint be instituted in a District Commission?**",
@@ -176,7 +176,7 @@
         "e": "\nThe penalty for non-compliance with orders is \"imprisonment for a term which shall not be less than one month, but which may extend to three years, or with fine, which shall not be less than twenty-five thousand rupees, but which may extend to one lakh rupees, or with both\".\n\n---\n\n### Part 8: Advanced/Analytical (UPSC Style)"
     },
     {
-        "q": "Consider the following statements regarding the \"Product Manufacturer\" definition under the Act:**\n\n1. A person who only assembles parts made by others is NOT considered a manufacturer.\n2. A person who puts his own mark on goods made by another person is considered a manufacturer.\n3. A product seller who is also a manufacturer of such product falls under the definition of manufacturer.\n\n**Which of the statements given above is/are correct?**",
+        "q": "Consider the following statements regarding the \"Product Manufacturer\" under the Act:\n\n1. A person who only assembles parts made by others is NOT considered a manufacturer.\n2. A person who puts his own mark on goods made by another person is considered a manufacturer.\n3. Under product liability provisions (Section 84), a product seller who is also a manufacturer is subject to the same liability provisions as a product manufacturer.\n\nWhich of the statements given above is/are correct?",
         "o": [
             "1 and 2 only",
             "2 and 3 only",
@@ -184,7 +184,7 @@
             "1, 2 and 3"
         ],
         "a": 1,
-        "e": "\nStatement 1 is incorrect: A manufacturer includes a person who \"assembles parts thereof made by others\".\nStatement 2 is correct: It includes one who \"puts or causes to be put his own mark on any products made by any other person\".\nStatement 3 is correct: It includes \"being a product seller of a product, is also a manufacturer of such product\".\n\n---"
+        "e": "\nStatement 1 is INCORRECT: Section 2(45)(ii) includes a person who 'assembles parts made by others and claims the end-product to be goods manufactured by himself' — assemblers ARE manufacturers.\nStatement 2 is CORRECT: Section 2(45)(iii) includes one who 'puts or causes to be put his own mark on any products made by any other person'.\nStatement 3 is CORRECT: Under Section 84, a product seller who is also a manufacturer is subject to all manufacturer liability provisions."
     },
     {
         "q": "With reference to the Consumer Protection Act, 2019, which of the following statements is INCORRECT regarding the State Consumer Protection Council (State Council)?**",
@@ -338,7 +338,7 @@
             "A Product Liability issue."
         ],
         "a": 2,
-        "e": "Section 2(47)(iii)(a) defines \"Unfair Trade Practice\" to include \"the offering of gifts, prizes or other items with the intention of not providing them as offered\"."
+        "e": "Section 2(57)(3)(i) defines \"Unfair Trade Practice\" to include the offering of gifts, prizes or other items along with goods when the real intention is different from what is offered."
     },
     {
         "q": "\"Spurious Goods\" under the Act are defined as:",
@@ -349,7 +349,7 @@
             "Goods that do not have a warranty."
         ],
         "a": 1,
-        "e": "Section 2(43) states: \"'spurious goods' means such goods which are falsely claimed to be genuine\".\n\nPart 16: Miscellaneous"
+        "e": "Section 2(53) states: \"'spurious goods' means such goods which are falsely claimed to be genuine\"."
     },
     {
         "q": "Which Section of the Consumer Protection Act, 2019 protects actions taken in \"Good Faith\" by the Presidents, Members, and Officers of the Commissions?",
@@ -382,7 +382,7 @@
             "Neither 1 nor 2"
         ],
         "a": 2,
-        "e": "The definition of \"deficiency\" in Section 2(11) includes \"(i) any act of negligence or omission or commission... which causes loss or injury\" and \"(ii) deliberate withholding of relevant information by such person to the consumer\".\n\nHere is the regenerated set of high-quality MCQs (Part 17 to Part 25), refined to be direct and exam-oriented, strictly removing references to \"study notes\" or \"source material.\"\n\nPart 17: Mediation Fees and Rules"
+        "e": "The definition of \"deficiency\" in Section 2(19) includes \"(i) any act of negligence or omission or commission... which causes loss or injury\" and \"(ii) deliberate withholding of relevant information by such person to the consumer\"."
     },
     {
         "q": "In the event of an \"unsuccessful mediation\" under the Consumer Protection Act, how is the mediator's fee handled?",

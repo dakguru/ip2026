@@ -2052,9 +2052,9 @@ export const p1_4: FlashCard[] = [
         "pdf_title": "Consumer Protection Act, 2019",
         "topic": "Paper I",
         "card_no": 1,
-        "question": "According to the Consumer Protection Act, 2019, what is the pecuniary jurisdiction of the District Consumer Disputes Redressal Commission (District Commission)?",
-        "answer": "Complaints where the value of goods or services does not exceed Rupees One Crore.",
-        "explanation": "According to the Consumer Protection Act, 2019, the District Commission has jurisdiction to entertain complaints where the value of the goods or services paid as consideration \"does not exceed one crore rupees\".\n\n\n---",
+        "question": "According to the Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021, what is the pecuniary jurisdiction of the District Consumer Disputes Redressal Commission (District Commission)?",
+        "answer": "Complaints where the value of goods or services paid as consideration does not exceed Rupees Fifty Lakhs.",
+        "explanation": "As per the Consumer Protection (Jurisdiction) Rules, 2021, the District Commission has jurisdiction where the value does not exceed ₹50 Lakhs. The State Commission covers ₹50 Lakhs to ₹2 Crores, and the National Commission handles above ₹2 Crores.",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -2224,7 +2224,7 @@ export const p1_4: FlashCard[] = [
         "card_no": 11,
         "question": "What is defined as \"Spurious Goods\" under the Act are defined as?",
         "answer": "Goods that are falsely claimed to be genuine.",
-        "explanation": "Section 2(43) states: \"'spurious goods' means such goods which are falsely claimed to be genuine\".\n\nPart 16: Miscellaneous",
+        "explanation": "Section 2(53) states: \"'spurious goods' means such goods which are falsely claimed to be genuine\".",
         "exam_weight": "Medium",
         "keywords": [
             "defined",

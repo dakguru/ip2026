@@ -86,10 +86,10 @@ export const consumerProtectionAct2019: FlashCard[] = [
         pdf_title: "Consumer Protection Act, 2019",
         topic: "Mediation",
         card_no: 10,
-        question: "Within how many days must a mediator submit a report upon failure/success of settlement?",
-        answer: "50 days from the date of receipt of the complaint.",
+        question: "Under Section 37, within how many days must the District Commission refer a dispute to mediation after receiving the parties' written consent?",
+        answer: "Within 5 days of receipt of such consent (Section 37(2)). Also, parties must give their written consent within 5 days of being directed by the Commission (Section 37(1)).",
         exam_weight: "Medium",
-        keywords: ["Mediation", "50 days"]
+        keywords: ["Mediation", "5 days", "Section 37", "Reference to Mediation"]
     },
     {
         pdf_title: "Consumer Protection Act, 2019",

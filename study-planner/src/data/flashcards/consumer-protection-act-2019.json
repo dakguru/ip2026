@@ -156,26 +156,29 @@
         "pdf_title": "Consumer Protection Act, 2019",
         "topic": "Disputes Redressal Commission",
         "card_no": 13,
-        "question": "What is the pecuniary jurisdiction of the District Commission under the 2019 Act?",
-        "answer": "Complaints where the value of goods or services paid as consideration does not exceed One Crore Rupees.",
+        "question": "What is the pecuniary jurisdiction of the District Commission as per Consumer Protection (Jurisdiction) Rules, 2021?",
+        "answer": "Complaints where the value of goods or services paid as consideration does not exceed Rupees Fifty Lakhs (₹50 Lakhs).",
         "exam_weight": "High",
         "keywords": [
             "District Commission",
             "jurisdiction",
-            "1 crore"
+            "50 lakhs",
+            "Rules 2021"
         ]
     },
     {
         "pdf_title": "Consumer Protection Act, 2019",
         "topic": "Disputes Redressal Commission",
         "card_no": 14,
-        "question": "What is the pecuniary jurisdiction of the State Commission?",
-        "answer": "Complaints where the value of goods or services paid as consideration exceeds 1 Crore but does not exceed 10 Crore Rupees.",
+        "question": "What is the pecuniary jurisdiction of the State Commission as per Consumer Protection (Jurisdiction) Rules, 2021?",
+        "answer": "Complaints where the value of goods or services paid as consideration exceeds ₹50 Lakhs but does not exceed ₹2 Crores.",
         "exam_weight": "High",
         "keywords": [
             "State Commission",
             "jurisdiction",
-            "10 crore"
+            "50 lakhs",
+            "2 crore",
+            "Rules 2021"
         ]
     },
     {
@@ -309,13 +312,14 @@
         "pdf_title": "Consumer Protection Act, 2019",
         "topic": "Key Differences",
         "card_no": 25,
-        "question": "How does the Pecuniary Jurisdiction of the National Commission differ in 2019 Act vs 1986 Act?",
-        "answer": "2019 Act: Above 10 Crore. (1986 Act was Above 1 Crore).",
+        "question": "What is the pecuniary jurisdiction of the National Commission as per Consumer Protection (Jurisdiction) Rules, 2021?",
+        "answer": "Complaints where the value of goods or services paid as consideration exceeds ₹2 Crores. (Original 2019 Act: above ₹10 Crore; 1986 Act: above ₹1 Crore. Rules 2021 revised this to above ₹2 Crore.)",
         "exam_weight": "High",
         "keywords": [
+            "National Commission",
             "jurisdiction",
-            "national commission",
-            "difference"
+            "2 crore",
+            "Rules 2021"
         ]
     },
     {
