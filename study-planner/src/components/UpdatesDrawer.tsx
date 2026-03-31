@@ -16,6 +16,63 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "31.03.2026",
+        items: [
+            {
+                title: "⚖️ Dak Sutra: Consumer Protection Act 2019 Audit & Updates",
+                desc: (
+                    <div className="space-y-4">
+                        <p className="text-zinc-700 dark:text-zinc-300">
+                            We have completed a comprehensive legal audit of the <strong>Consumer Protection Act, 2019</strong> content in Dak Sutra.
+                        </p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide mb-2">Key Statutory Updates</p>
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-amber-500 mt-0.5">📍</span>
+                                        <span><strong>Pecuniary Jurisdiction:</strong> Updated to 2021 Rules (District: ₹50L, State: ₹2Cr).</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">🇮🇳</span>
+                                        <span><strong>Territorial Extent:</strong> Corrected to include the whole of India (including J&K).</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">⏳</span>
+                                        <span><strong>Time Limits:</strong> Verified 3-month mediation report & 30-day product seller disclosure.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-zinc-500 italic leading-relaxed">
+                            These updates ensure 100% factual accuracy for the upcoming exams.
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "🎁 Rule 13: Gift Limits & Foreign Gifts Update",
+                desc: (
+                    <div className="space-y-3">
+                        <p className="text-zinc-700 dark:text-zinc-300">
+                            Updated <strong>Rule 13 of CCS (Conduct) Rules</strong> regarding acceptance of gifts:
+                        </p>
+                        <ul className="list-disc pl-4 space-y-1 text-[11px] text-zinc-600 dark:text-zinc-400">
+                            <li><strong>Relatives/Friends:</strong> Group C limit corrected to <strong>₹7,500</strong>.</li>
+                            <li><strong>Non-Relatives:</strong> Corrected sanction requirement for gifts over ₹5,000.</li>
+                            <li><strong>Foreign Gifts:</strong> Aligned with current retention and reporting rules.</li>
+                        </ul>
+                        <p className="pt-1 text-[11px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1">
+                            🚀 Check the updated cards in Dak Sutra!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "29.03.2026",
         items: [
             {
