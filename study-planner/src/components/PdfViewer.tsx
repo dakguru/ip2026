@@ -834,49 +834,42 @@ export default function PdfViewer({ url, darkMode = false }: PdfViewerProps) {
                     {/* Left: Navigation */}
                     {!isLiquidMode && (
                         <div className="flex items-center gap-1 shrink-0">
+                            {/* Prev arrow — single mode only */}
                             {viewMode === 'single' && (
-                                <>
-                                    <button
-                                        onClick={() => setPageNumber(prev => Math.max(prev - 1, 1))}
-                                        disabled={pageNumber <= 1 || loading}
-                                        className={`p-1.5 rounded-lg disabled:opacity-30 transition-colors ${colorMode === 'dark' ? 'hover:bg-zinc-800 text-zinc-300' : colorMode === 'sepia' ? 'hover:bg-amber-200 text-amber-800' : 'hover:bg-slate-100 text-slate-600'}`}
-                                        title="Previous page (←)"
-                                    >
-                                        <ChevronLeft className="w-5 h-5" />
-                                    </button>
-
-                                    {/* Page indicator - clickable */}
-                                    <button
-                                        onClick={() => { setShowGoToPage(true); setTimeout(() => goToPageRef.current?.focus(), 100); }}
-                                        className={`px-2 py-1 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors cursor-pointer ${colorMode === 'dark'
-                                            ? 'text-zinc-200 hover:bg-zinc-800'
-                                            : colorMode === 'sepia'
-                                                ? 'text-amber-900 hover:bg-amber-200'
-                                                : 'text-slate-700 hover:bg-slate-100'
-                                            }`}
-                                        title="Go to page (G)"
-                                    >
-                                        {loading ? '--' : `${pageNumber} / ${numPages || '--'}`}
-                                    </button>
-
-                                    <button
-                                        onClick={() => setPageNumber(prev => Math.min(prev + 1, numPages || prev))}
-                                        disabled={pageNumber >= (numPages || 1) || loading}
-                                        className={`p-1.5 rounded-lg disabled:opacity-30 transition-colors ${colorMode === 'dark' ? 'hover:bg-zinc-800 text-zinc-300' : colorMode === 'sepia' ? 'hover:bg-amber-200 text-amber-800' : 'hover:bg-slate-100 text-slate-600'}`}
-                                        title="Next page (→)"
-                                    >
-                                        <ChevronRight className="w-5 h-5" />
-                                    </button>
-                                </>
+                                <button
+                                    onClick={() => setPageNumber(prev => Math.max(prev - 1, 1))}
+                                    disabled={pageNumber <= 1 || loading}
+                                    className={`p-1.5 rounded-lg disabled:opacity-30 transition-colors ${colorMode === 'dark' ? 'hover:bg-zinc-800 text-zinc-300' : colorMode === 'sepia' ? 'hover:bg-amber-200 text-amber-800' : 'hover:bg-slate-100 text-slate-600'}`}
+                                    title="Previous page (←)"
+                                >
+                                    <ChevronLeft className="w-5 h-5" />
+                                </button>
                             )}
 
-                            {viewMode === 'continuous' && (
+                            {/* Page indicator — clickable in BOTH modes, clearly styled as a button */}
+                            <button
+                                onClick={() => { setShowGoToPage(true); setTimeout(() => goToPageRef.current?.focus(), 100); }}
+                                disabled={loading || !numPages}
+                                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-sm font-semibold whitespace-nowrap transition-colors disabled:opacity-40 cursor-pointer ${colorMode === 'dark'
+                                    ? 'text-zinc-200 border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800'
+                                    : colorMode === 'sepia'
+                                        ? 'text-amber-900 border-amber-300 hover:bg-amber-100'
+                                        : 'text-slate-700 border-slate-200 hover:bg-slate-100 hover:border-slate-400'
+                                    }`}
+                                title="Go to page — click or press G"
+                            >
+                                {loading ? '-- / --' : `${pageNumber} / ${numPages || '--'}`}
+                            </button>
+
+                            {/* Next arrow — single mode only */}
+                            {viewMode === 'single' && (
                                 <button
-                                    onClick={() => { setShowGoToPage(true); setTimeout(() => goToPageRef.current?.focus(), 100); }}
-                                    className={`px-2 py-1 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors hover:bg-black/5 dark:hover:bg-white/5 ${colorMode === 'dark' ? 'text-zinc-200' : colorMode === 'sepia' ? 'text-amber-900' : 'text-slate-700'}`}
-                                    title="Go to page (G)"
+                                    onClick={() => setPageNumber(prev => Math.min(prev + 1, numPages || prev))}
+                                    disabled={pageNumber >= (numPages || 1) || loading}
+                                    className={`p-1.5 rounded-lg disabled:opacity-30 transition-colors ${colorMode === 'dark' ? 'hover:bg-zinc-800 text-zinc-300' : colorMode === 'sepia' ? 'hover:bg-amber-200 text-amber-800' : 'hover:bg-slate-100 text-slate-600'}`}
+                                    title="Next page (→)"
                                 >
-                                    {loading ? '--' : `${pageNumber} / ${numPages || '--'}`}
+                                    <ChevronRight className="w-5 h-5" />
                                 </button>
                             )}
                         </div>
