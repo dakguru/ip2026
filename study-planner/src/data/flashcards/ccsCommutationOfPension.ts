@@ -259,7 +259,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "Shared equally between the applicant and the Government",
     ],
     a: 2,
-    e: "Rule 23 states: "The applicant shall be required to pay for medical examination **such fee as may be specified by the Central Government**." The fee is thus borne by **the applicant**.",
+    e: "Rule 23 states: 'The applicant shall be required to pay for medical examination **such fee as may be specified by the Central Government**.' The fee is thus borne by **the applicant**.",
   },
   // q6 → B
   {
@@ -271,7 +271,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "Three months from the date of submission of Form 2",
     ],
     a: 1,
-    e: "Rule 21(3) states: "In fixing the date of medical examination, it shall be ensured that the medical examination is held, as far as possible, **before the date of the applicant's next birthday**." This is crucial as the commutation factor depends on age next birthday.",
+    e: "Rule 21(3) states: 'In fixing the date of medical examination, it shall be ensured that the medical examination is held, as far as possible, **before the date of the applicant's next birthday**.' This is crucial as the commutation factor depends on age next birthday.",
   },
   // q7 → D
   {
@@ -295,7 +295,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "60 days of the medical examination",
     ],
     a: 1,
-    e: "Rule 27 states: "An applicant may, within **one month** of the receipt of the certified copy from the medical authority, prefer an appeal by addressing a letter to the Head of Office that the opinion of the medical authority may be reviewed by another medical authority."",
+    e: "Rule 27 states: 'An applicant may, within **one month** of the receipt of the certified copy from the medical authority, prefer an appeal by addressing a letter to the Head of Office that the opinion of the medical authority may be reviewed by another medical authority.'",
   },
   // q9 → A
   {
@@ -343,7 +343,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "A Medical Board at the applicant's own expense",
     ],
     a: 3,
-    e: "Rule 26(2) states: "If the applicant desires to be re-examined on expiry of the period of one year, the examination shall be by a **Medical Board at his own expense**."",
+    e: "Rule 26(2) states: 'If the applicant desires to be re-examined on expiry of the period of one year, the examination shall be by a **Medical Board at his own expense**.'",
   },
   // q13 → A
   {

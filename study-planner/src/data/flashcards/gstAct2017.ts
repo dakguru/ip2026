@@ -500,7 +500,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Issue a show cause notice and give an opportunity of being heard",
     ],
     a: 3,
-    e: "Section 29(1) proviso states: **"Proper officer shall not cancel the registration without giving the person a show cause notice and opportunity of being heard."** Cancellation of registration is a quasi-judicial action requiring natural justice.",
+    e: "Section 29(1) proviso states: **'Proper officer shall not cancel the registration without giving the person a show cause notice and opportunity of being heard.'** Cancellation of registration is a quasi-judicial action requiring natural justice.",
   },
   // q10 → B
   {

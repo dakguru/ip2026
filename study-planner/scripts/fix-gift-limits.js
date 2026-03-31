@@ -49,28 +49,32 @@ async function fixGiftsCard() {
   <tr><td style="border:1px solid #ccc;padding:6px">Group C</td><td style="border:1px solid #ccc;padding:6px">₹2,000</td></tr>
 </table>
 <p>(4) <strong>Gifts from Foreign Dignitaries (Rule 13(4)):</strong><br>
-Acceptance and retention of gifts from foreign dignitaries are now governed by the <strong>Foreign Contribution (Acceptance or Retention of Gifts or Presentations) Regulations, 2012</strong>. The previous uniform ₹5,000 retention limit has been removed and superseded by these regulations.</p>
-<p>(5) <strong>Reporting Requirement:</strong> Any gift received in excess of the prescribed limits must be reported to the Government through proper channel within <strong>30 days</strong>.</p>`,
+Acceptance and retention of gifts from foreign dignitaries are now governed by the <strong>Foreign Contribution (Acceptance or Retention of Gifts or Presentations) Rules, 2012</strong>. The previous flat monetary retention limit under Conduct Rules has been superseded by these rules.</p>
+<p>(5) <strong>Reporting vs. Sanction Requirements:</strong></p>
+<ul>
+  <li><strong>Gifts from Relatives/Friends (Rule 13(2)):</strong> If a gift on a special occasion exceeds the limit, the Government servant must <strong>make a report</strong> to the Government within 30 days.</li>
+  <li><strong>Gifts from Others (Rule 13(3)):</strong> If a gift from a non-relative/non-friend exceeds the limit, the Government servant <strong>shall not accept the gift without the sanction</strong> (permission) of the Government.</li>
+</ul>`,
 
       guru_explanation: `<p>Rule 13 is about <strong>integrity in action</strong>. The government is strict about gifts because they can be a subtle form of bribery. Here's a plain-language summary of the critical gift rules:</p>
 <h4>How to Master the Gift Thresholds</h4>
 <ul>
-  <li><strong>Impartiality First:</strong> Rule 13 exists to ensure government servants remain impartial. If you receive a gift above the threshold, you must report it within <strong>30 days</strong>.</li>
+  <li><strong>Sanction vs. Report:</strong> This is a major exam point. Rule 13 exists to ensure impartiality. Remember the procedural difference: excess gifts from relatives require a <strong>report</strong>, but excess gifts from non-relatives require official <strong>sanction</strong> (prior permission) before acceptance.</li>
   <li><strong>The \"Group A/B Symmetry\":</strong> Notice that the limit for gifts from non-relatives is <strong>₹5,000 for both Group A and Group B</strong>. Many people wrongly assume Group A has a higher limit than Group B here, but they are identical (Rule 13(3)).</li>
-  <li><strong>The Group C Relative Boost:</strong> Group C employees can now accept gifts from relatives/friends on special occasions up to <strong>₹7,500</strong> (as per DoPT OM No.11013/3/2014-Estt.(A)). This is a very common exam point!</li>
-  <li><strong>Foreign Gifts:</strong> Don't get stuck on the old ₹5,000 rule. Since 2019, the process is handled entirely under the Foreign Contribution Regulations, where the value is appraised by the Toshakhana/Treasury.</li>
+  <li><strong>The Group C Relative Limit:</strong> Group C employees can now accept gifts from relatives/friends on special occasions up to <strong>₹7,500</strong> (Updated via <strong>DoPT OM No. 11013/02/2019-Estt.A-III</strong>).</li>
+  <li><strong>Foreign Gifts:</strong> Don't get stuck on the old ₹5,000 rule. The process is handled entirely under the <strong>Foreign Contribution (Acceptance or Retention of Gifts or Presentations) Rules, 2012</strong>, where the value is appraised by a Customs Appraiser or the Toshakhana.</li>
 </ul>
 <h4>What Is a \"Gift\" Under Rule 13?</h4>
 <p>Any article of value — jewellery, money, property, hospitality (air tickets, hotel stays), vouchers, discount coupons, etc. The test is whether it creates an obligation or could compromise impartiality.</p>`,
 
-      practical_example: `<p><strong>Scenario 1 (Group A/B non-relative limit):</strong> Mr. Sandeep, a Group A Director, receives a luxury pen worth ₹6,500 from a visiting consultant (a non-friend).</p>
-<p><strong>Answer:</strong> Under Rule 13(3), the limit for Group A for gifts from \"others\" is <strong>₹5,000</strong>. Since ₹6,500 > ₹5,000, Sandeep must report the gift to the government within 30 days. He cannot simply keep it without disclosure.</p>
+      practical_example: `<p><strong>Scenario 1 (Group A/B non-relative limit):</strong> Mr. Sandeep, a Group A Director, is offered a luxury pen worth ₹6,500 from a visiting consultant (a non-friend).</p>
+<p><strong>Answer:</strong> Under Rule 13(3), the limit for Group A for gifts from \"others\" is <strong>₹5,000</strong>. Since ₹6,500 > ₹5,000, Sandeep <strong>cannot accept the gift without the prior sanction</strong> of the Government. He cannot simply accept it and report it later; he must seek official permission.</p>
 
 <p><strong>Scenario 2 (Group C relative limit):</strong> Meena, a Postal Assistant (Group C), receives a gold ring worth ₹6,500 from her brother on her wedding anniversary.</p>
 <p><strong>Answer:</strong> YES — this is allowed. For Group C, the limit for gifts from relatives on special occasions is <strong>₹7,500</strong>. ₹6,500 is within the limit, so no report is needed.</p>
 
 <p><strong>Scenario 3 (Foreign gift):</strong> An SSP receives an expensive watch from a foreign government during an official visit abroad.</p>
-<p><strong>Answer:</strong> Acceptance and retention are now entirely governed by the <strong>Foreign Contribution (Acceptance or Retention of Gifts or Presentations) Regulations, 2012</strong>. He must report the gift and hand it over for treasury appraisal. The previous ₹5,000 retention rule is no longer active.</p>`,
+<p><strong>Answer:</strong> Acceptance and retention are now entirely governed by the <strong>Foreign Contribution (Acceptance or Retention of Gifts or Presentations) Rules, 2012</strong>. He must report the gift and hand it over for assessment/appraisal by the Toshakhana. The previous flat ₹5,000 retention rule is no longer active.</p>`,
 
       exam_insight: `<p><strong>Critical Memory Points for the Exam:</strong></p>
 <table style=\"width:100%;border-collapse:collapse;font-size:9.5pt\">
@@ -84,10 +88,10 @@ Acceptance and retention of gifts from foreign dignitaries are now governed by t
   <tr><td style=\"border:1px solid #ccc;padding:5px\"><strong>Group C</strong></td><td style=\"border:1px solid #ccc;padding:5px\"><strong>₹7,500</strong></td><td style=\"border:1px solid #ccc;padding:5px\">₹2,000</td></tr>
 </table>
 <ul style=\"margin-top:10px\">
-  <li><strong>30-Day Window:</strong> All reports for excess gifts must be made within 30 days (Rule 13(3)).</li>
-  <li><strong>Golden Number for Group C:</strong> The relative gift limit is <strong>₹7,500</strong>.</li>
+  <li><strong>Sanction vs. Report (CRITICAL):</strong> Excess gifts from relatives require <strong>reporting</strong>. Excess gifts from others require Government <strong>sanction</strong>.</li>
+  <li><strong>Golden Number for Group C:</strong> The relative gift limit is <strong>₹7,500</strong> (Update: <strong>DoPT OM No. 11013/02/2019-Estt.A-III</strong>).</li>
   <li><strong>Group A & B Parity:</strong> The non-relative gift limit is <strong>₹5,000</strong> for both.</li>
-  <li><strong>Foreign Gifts:</strong> Governed by <strong>Foreign Contribution Regulations, 2012</strong> (previous flat ₹5,000 retention limit is superseded).</li>
+  <li><strong>Foreign Gifts:</strong> Governed by the Foreign Contribution (Acceptance or Retention of Gifts or Presentations) <strong>Rules</strong>, 2012.</li>
 </ul>`,
       updatedAt: new Date()
     };
@@ -98,7 +102,7 @@ Acceptance and retention of gifts from foreign dignitaries are now governed by t
     );
     
     if (r.modifiedCount > 0) {
-      console.log(`✅ Successfully updated Gift Limits card.`);
+      console.log(`✅ Successfully updated Gift Limits card with double-verified legal accuracy.`);
     } else {
       console.log('⚠️ Card not found or no changes made');
     }

@@ -94,12 +94,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "size": "0.7 MB",
             "color": "fuchsia"
         },
-        {
-            "title": "Guidelines issued by Directorate on eMO, iMO, IMTS and IFS MO",
-            "description": "Materials will be uploaded soon.",
-            "color": "sky",
-            "comingSoon": true
-        },
+
         {
             "title": "Government Savings Promotion Rules, 2018",
             "description": "Government Savings Promotion General Rules, 2018",
@@ -156,12 +151,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "size": "0.6 MB",
             "color": "emerald"
         },
-        {
-            "title": "Directorate instructions on Philately",
-            "description": "Materials will be uploaded soon.",
-            "color": "blue",
-            "comingSoon": true
-        },
+
         {
             "title": "Postal Manual Volume II - Chapter XI - Misc. Rules",
             "description": "Postal Manual Volume II - Chapter XI - Miscellaneous Rules",

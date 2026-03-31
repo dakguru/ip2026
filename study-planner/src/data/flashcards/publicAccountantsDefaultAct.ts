@@ -39,7 +39,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "Prevention of corruption in public service",
     ],
     a: 0,
-    e: "The preamble states: "For better avoidance of **loss through the default of public accountants**; It is enacted as follows."",
+    e: "The preamble states: 'For better avoidance of **loss through the default of public accountants**; It is enacted as follows.'",
   },
   // q3 → C
   {
