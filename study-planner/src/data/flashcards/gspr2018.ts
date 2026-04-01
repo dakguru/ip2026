@@ -281,12 +281,57 @@ export const gspr2018: FlashCard[] = [
         keywords: ["Interpretation", "Ministry of Finance"]
     },
     {
-        pdf_title: "Government Savings Promotion Rules, 2018",
-        topic: "Power to Relax",
-        card_no: 32,
-        question: "Who has the power to relax the provisions of these rules in case of undue hardship?",
-        answer: "Central Government.",
-        exam_weight: "Medium",
-        keywords: ["Power to Relax", "Central Government"]
+        pdf_title: "Government Savings Schemes",
+        topic: "Latest Interest Rates 2025-26",
+        card_no: 33,
+        question: "What is the current annual interest rate for Post Office Savings Account (SB)?",
+        answer: "4.0%.",
+        exam_weight: "High",
+        keywords: ["SB", "4%"]
+    },
+    {
+        pdf_title: "Government Savings Schemes",
+        topic: "Latest Interest Rates 2025-26",
+        card_no: 34,
+        question: "What are the current interest rates for 1, 2, 3, and 5-Year Time Deposits (TD)?",
+        answer: "1-Yr: 6.9%; 2-Yr: 7.0%; 3-Yr: 7.1%; 5-Yr: 7.5%.",
+        exam_weight: "High",
+        keywords: ["TD", "Time Deposit"]
+    },
+    {
+        pdf_title: "Government Savings Schemes",
+        topic: "Latest Interest Rates 2025-26",
+        card_no: 35,
+        question: "What is the current interest rate for the Senior Citizen Savings Scheme (SCSS)?",
+        answer: "8.2%.",
+        exam_weight: "High",
+        keywords: ["SCSS", "8.2%"]
+    },
+    {
+        pdf_title: "Government Savings Schemes",
+        topic: "Latest Interest Rates 2025-26",
+        card_no: 36,
+        question: "What is the current interest rate for the Monthly Income Scheme (MIS)?",
+        answer: "7.4%.",
+        exam_weight: "High",
+        keywords: ["MIS", "7.4%"]
+    },
+    {
+        pdf_title: "Government Savings Schemes",
+        topic: "Latest Interest Rates 2025-26",
+        card_no: 37,
+        question: "What is the current interest rate for Sukanya Samriddhi Account (SSA)?",
+        answer: "8.2%.",
+        exam_weight: "High",
+        keywords: ["SSA", "8.2%"]
+    },
+    {
+        pdf_title: "Government Savings Schemes",
+        topic: "Latest Interest Rates 2025-26",
+        card_no: 38,
+        keywords: ["NSC", "7.7%"],
+        question: "What is the current interest rate for National Savings Certificate (NSC)?",
+        answer: "7.7%.",
+        exam_weight: "High"
     }
 ];

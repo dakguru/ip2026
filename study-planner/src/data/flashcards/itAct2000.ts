@@ -180,5 +180,23 @@ export const itAct2000: FlashCard[] = [
         answer: "Imprisonment up to 2 years or fine up to Rs. 1 Lakh, or both.",
         exam_weight: "Medium",
         keywords: ["Section 72", "Confidentiality"]
+    },
+    {
+        pdf_title: "Information Technology Act, 2000",
+        topic: "Latest Amendments (DPDP Act 2023)",
+        card_no: 21,
+        question: "Which section of the IT Act 2000 was OMITTED by the Digital Personal Data Protection (DPDP) Act, 2023?",
+        answer: "Section 43A (Compensation for failure to protect data).",
+        exam_weight: "High",
+        keywords: ["DPDP Act 2023", "Section 43A", "Omission"]
+    },
+    {
+        pdf_title: "Information Technology Act, 2000",
+        topic: "Latest Amendments (DPDP Act 2023)",
+        card_no: 22,
+        question: "Under the DPDP Act 2023, what is the Department of Posts classified as when handling customer data (e.g., Savings Bank, PLI)?",
+        answer: "Data Fiduciary.",
+        exam_weight: "High",
+        keywords: ["DPDP Act 2023", "Data Fiduciary", "Post Office"]
     }
 ];
