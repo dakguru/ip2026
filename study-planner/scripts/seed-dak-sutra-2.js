@@ -660,36 +660,36 @@ A = P × (1 + r)^n = 10,000 × (1.077)^5<br>
 <h4>Timeline for APAR Completion</h4>
 <table style="width:100%;border-collapse:collapse">
   <tr><th style="border:1px solid #ccc;padding:6px">Stage</th><th style="border:1px solid #ccc;padding:6px">Deadline</th></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Self-appraisal by officer reported upon</td><td style="border:1px solid #ccc;padding:6px">30 April</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Report by Reporting Officer</td><td style="border:1px solid #ccc;padding:6px">31 May</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Review by Reviewing Officer</td><td style="border:1px solid #ccc;padding:6px">30 June</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Acceptance (if applicable)</td><td style="border:1px solid #ccc;padding:6px">31 July</td></tr>
-  <tr><td style="border:1px solid #ccc;padding:6px">Communication of adverse remarks to officer</td><td style="border:1px solid #ccc;padding:6px">Within 1 month of acceptance</td></tr>
+  <tr><td style="border:1px solid #ccc;padding:6px">Submission of self-appraisal by officer reported upon</td><td style="border:1px solid #ccc;padding:6px">15 April</td></tr>
+  <tr><td style="border:1px solid #ccc;padding:6px">Submission of report by Reporting Officer</td><td style="border:1px solid #ccc;padding:6px">30 June</td></tr>
+  <tr><td style="border:1px solid #ccc;padding:6px">Report to be completed by Reviewing Officer</td><td style="border:1px solid #ccc;padding:6px">31 July</td></tr>
+  <tr><td style="border:1px solid #ccc;padding:6px">Appraisal by Accepting Authority (if applicable)</td><td style="border:1px solid #ccc;padding:6px">31 August</td></tr>
+  <tr><td style="border:1px solid #ccc;padding:6px">Disclosure of full APAR to the officer reported upon</td><td style="border:1px solid #ccc;padding:6px">1st or 15th Sept</td></tr>
 </table>
 <h4>Disclosure of APAR</h4>
 <p>The complete APAR (numerical grades AND descriptive remarks) shall be disclosed to the officer reported upon as a matter of right. This was a landmark change from the old "Confidential Report" system — earlier, only adverse remarks were communicated.</p>
-<h4>Grading System (10-Point Scale)</h4>
-<p>Performance is graded on a 10-point scale:</p>
+<h4>Grading System (Numeric Scale)</h4>
+<p>Performance is graded on a 10-point scale with specific DoPT brackets:</p>
 <ul>
-  <li><strong>1–4:</strong> Poor/Below Average</li>
-  <li><strong>5–6:</strong> Average/Good</li>
-  <li><strong>7–8:</strong> Very Good</li>
-  <li><strong>9–10:</strong> Outstanding</li>
+  <li><strong>Below 4:</strong> Given a score of Zero</li>
+  <li><strong>Between 4 and short of 6:</strong> Good (Score 5)</li>
+  <li><strong>Between 6 and short of 8:</strong> Very Good (Score 7)</li>
+  <li><strong>Between 8 and 10:</strong> Outstanding (Score 9)</li>
 </ul>
-<p>Benchmark for promotion purposes: generally <strong>7 and above (Very Good)</strong> is required.</p>
-<h4>Representation Against Adverse Entries</h4>
-<p>If an officer is not satisfied with adverse remarks, he may represent within <strong>15 days</strong> of receipt of the adverse remarks to the Reviewing Officer. If still aggrieved, he may represent to the Accepting Authority. Final representation is to the Central Government.</p>`,
+<p>Benchmark for promotion purposes: typically <strong>7 and above (Very Good)</strong> is required.</p>
+<h4>Representation Procedure</h4>
+<p>If an officer is dissatisfied with the grading or remarks, they may represent within <strong>15 days</strong> of receipt of the APAR to the APAR Cell/Custodian. The representation is forwarded to the designated <strong>Competent Authority</strong> (authority one level above the Accepting Authority) for a final decision. There is no multi-tier appeal from Reviewing to Accepting to Central Government.</p>`,
         guru_explanation: `<p>APAR is one of the most important administrative tools in government service. Here's everything you need for the exam:</p>
 <h4>ACR vs APAR — The Shift</h4>
 <p>The old Annual Confidential Report (ACR) was <strong>secret</strong> — the employee couldn't see it. The APAR system (DoPT OM dated <strong>14 May 2009</strong>) made reports <strong>transparent</strong>. The complete APAR is now disclosed to the government servant.</p>
 <h4>The 5-Date Timeline — Most Tested</h4>
-<p>Remember: <strong>30 April → 31 May → 30 June → 31 July → 1 month</strong></p>
+<p>Remember the schedule as per Annexure-III of DoPT OM dated 23.07.2009:</p>
 <ol>
-  <li><strong>30 April:</strong> Officer submits self-appraisal</li>
-  <li><strong>31 May:</strong> Reporting Officer completes APAR</li>
-  <li><strong>30 June:</strong> Reviewing Officer reviews</li>
-  <li><strong>31 July:</strong> Accepting Authority accepts</li>
-  <li>Within <strong>1 month of acceptance:</strong> Adverse remarks communicated</li>
+  <li><strong>15 April:</strong> Officer submits self-appraisal</li>
+  <li><strong>30 June:</strong> Reporting Officer completes APAR</li>
+  <li><strong>31 July:</strong> Reviewing Officer reviews</li>
+  <li><strong>31 August:</strong> Accepting Authority completes appraisal</li>
+  <li><strong>1st/15th Sept:</strong> Full APAR disclosed to the officer</li>
 </ol>
 <h4>The Bench Mark for Promotion</h4>
 <p>A score of <strong>7/10 (Very Good)</strong> is typically the benchmark for empanelment/promotion. An officer with even one year of "Below Benchmark" APAR may be denied promotion. This is why APAR is so critical in a government servant's career.</p>
@@ -698,28 +698,28 @@ A = P × (1 + r)^n = 10,000 × (1.077)^5<br>
         practical_example: `<p><strong>Scenario 1 — Adverse Entry Representation:</strong> Suresh (Inspector of Posts) receives his APAR showing a grade of 5/10 with a remark that he was "inattentive to public grievances." He disagrees.</p>
 <p><strong>Correct Procedure:</strong></p>
 <ol>
-  <li>Suresh can make a <strong>representation within 15 days</strong> of receiving the adverse remarks.</li>
-  <li>Representation goes first to the <strong>Reviewing Officer</strong>.</li>
-  <li>If not satisfied, he can represent to the <strong>Accepting Authority</strong>.</li>
-  <li>Final appeal: to the <strong>Central Government</strong> (Secretary level).</li>
+  <li>Suresh can make a <strong>representation within 15 days</strong> of receiving the full APAR disclosure.</li>
+  <li>The representation is submitted to the <strong>APAR Cell/Custodian</strong>.</li>
+  <li>The Custodian forwards it to the <strong>Competent Authority</strong> (typically the authority one level above the Accepting Authority).</li>
+  <li>The Competent Authority decides on the representation, often in consultation with the Reporting/Reviewing officers.</li>
 </ol>
-<p><strong>Scenario 2 — Late APAR:</strong> A Reporting Officer fails to complete Meena's APAR by 31 May. What happens?</p>
-<p><strong>Answer:</strong> The delay in APAR completion itself can be noted adversely against the Reporting Officer. The APAR must still be completed — there is no "deemed satisfactory" provision for delays. However, if the APAR is never written and the officer suffers (e.g., denied promotion), she can challenge it.</p>`,
+<p><strong>Scenario 2 — Late APAR:</strong> A Reporting Officer fails to complete Meena's APAR by 30 June. What happens?</p>
+<p><strong>Answer:</strong> If the Reporting Officer does not report the APAR within the DoPT timeline (30th June), they <strong>forfeit the right</strong> to enter any remarks in the APAR. The APAR is then force-forwarded to the Reviewing Officer. The delay is also noted in the Reporting Officer's own APAR as per DoPT OM dated 16.02.2009.</p>`,
         exam_insight: `<p><strong>Critical APAR Facts for the Exam:</strong></p>
 <ul>
   <li>APAR introduced (replacing ACR): <strong>DoPT OM dated 14.05.2009</strong></li>
   <li>Assessment year: <strong>1 April to 31 March</strong></li>
-  <li>Self-appraisal deadline: <strong>30 April</strong></li>
-  <li>Reporting Officer's deadline: <strong>31 May</strong></li>
-  <li>Reviewing Officer's deadline: <strong>30 June</strong></li>
-  <li>Accepting Authority's deadline: <strong>31 July</strong></li>
-  <li>Adverse remarks communicated within: <strong>1 month</strong> of acceptance</li>
-  <li>Representation period: <strong>15 days</strong> from receipt of adverse remarks</li>
-  <li>Grading scale: <strong>1–10</strong></li>
+  <li>Self-appraisal deadline: <strong>15 April</strong></li>
+  <li>Reporting Officer's deadline: <strong>30 June</strong></li>
+  <li>Reviewing Officer's deadline: <strong>31 July</strong></li>
+  <li>Accepting Authority's deadline: <strong>31 August</strong></li>
+  <li>Full APAR disclosure: <strong>1st/15th September</strong></li>
+  <li>Representation period: <strong>15 days</strong> from disclosure</li>
+  <li>Grading scale: <strong>Below 4 = 0; 4-6 = Good; 6-8 = Very Good; 8-10 = Outstanding</strong></li>
   <li>Benchmark for promotion: typically <strong>7/10 (Very Good)</strong></li>
   <li>Minimum period for Reporting Officer to write APAR: <strong>3 months</strong> of observation</li>
 </ul>
-<p><strong>Most Tested MCQ:</strong> "What is the deadline for the Reporting Officer to complete the APAR?" — Answer: <strong>31 May</strong>. Students often confuse 30 June (Reviewing Officer) with 31 May.</p>`,
+<p><strong>Most Tested MCQ:</strong> "What is the deadline for the Reporting Officer to complete the APAR?" — Answer: <strong>30 June</strong>. Always distinguish this from the 31 July deadline for the Reviewing Officer.</p>`,
         status: "published",
         created_by: "system_admin",
         createdAt: now,
@@ -814,23 +814,27 @@ async function seed() {
         const collection = db.collection('daksutras');
 
         let inserted = 0;
-        let skipped = 0;
+        let updated = 0;
 
         for (const entry of entries) {
-            const exists = await collection.findOne({ title: entry.title });
-            if (exists) {
-                console.log(`  ⏭  Skipping (already exists): ${entry.title}`);
-                skipped++;
-            } else {
-                await collection.insertOne(entry);
+            const result = await collection.updateOne(
+                { title: entry.title },
+                { $set: entry },
+                { upsert: true }
+            );
+            
+            if (result.upsertedCount > 0) {
                 console.log(`  ✅ Inserted: [${entry.category}] ${entry.title}`);
                 inserted++;
+            } else {
+                console.log(`  🆙 Updated: [${entry.category}] ${entry.title}`);
+                updated++;
             }
         }
 
         console.log(`\n📚 Done!`);
         console.log(`  Inserted: ${inserted}`);
-        console.log(`  Skipped:  ${skipped}`);
+        console.log(`  Updated:  ${updated}`);
         console.log(`  Total entries in this batch: ${entries.length}`);
 
     } catch (error) {

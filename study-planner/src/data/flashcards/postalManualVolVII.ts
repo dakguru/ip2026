@@ -366,9 +366,9 @@ export const postalManualVolVII: FlashCard[] = [
         topic: "Forms",
         card_no: 41,
         question: "What is Form M-53?",
-        answer: "Error Book.",
+        answer: "Route List (accompanied by Beat Map).",
         exam_weight: "High",
-        keywords: ["M-53", "Error Book"]
+        keywords: ["M-53", "Route List", "Beat Map"]
     },
     {
         pdf_title: "Postal Manual Vol VII",

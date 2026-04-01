@@ -194,10 +194,10 @@ export const postalManualVolVIPartI: FlashCard[] = [
         pdf_title: "Postal Manual Vol VI - Part I",
         topic: "Registration",
         card_no: 22,
-        question: "What is the new status of 'Registered Post' from 01.09.2025?",
-        answer: "It is discontinued as a standalone service and merged as a feature of 'Speed Post'.",
+        question: "What is the new status of 'Registered Post' with effect from 01.10.2025?",
+        answer: "It is discontinued as a standalone service and merged as a value-added feature of 'Speed Post', effective 01.10.2025.",
         exam_weight: "High",
-        keywords: ["Registered Post", "Speed Post", "Merger"]
+        keywords: ["Registered Post", "Speed Post", "Merger", "01.10.2025"]
     },
     {
         pdf_title: "Postal Manual Vol VI - Part I",
@@ -294,9 +294,9 @@ export const postalManualVolVIPartI: FlashCard[] = [
         topic: "Money Orders",
         card_no: 33,
         question: "What is the maximum limit for a single eMO (Electronic Money Order)?",
-        answer: "Rs. 5,000.",
+        answer: "Rs. 10,000/- (revised upward in 2025; previously Rs. 5,000).",
         exam_weight: "High",
-        keywords: ["eMO", "Limit", "Rs 5000"]
+        keywords: ["eMO", "Limit", "Rs 10000"]
     },
     {
         pdf_title: "Postal Manual Vol VI - Part I",
@@ -392,10 +392,10 @@ export const postalManualVolVIPartI: FlashCard[] = [
         pdf_title: "Postal Manual Vol VI - Part I",
         topic: "Identification",
         card_no: 44,
-        question: "What is the current fee for an Identification Card?",
-        answer: "Rs. 100.",
+        question: "What is the total fee for a Post Office Identity Card?",
+        answer: "Rs. 270/- (Rs. 20 Application Fee + Rs. 250 Processing Fee).",
         exam_weight: "Medium",
-        keywords: ["Identity Card", "Fee", "Rs 100"]
+        keywords: ["Identity Card", "Fee", "Rs 270"]
     },
     {
         pdf_title: "Postal Manual Vol VI - Part I",
