@@ -16,42 +16,79 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
-        date: "31.03.2026",
+        date: "01.04.2026",
         items: [
             {
-                title: "⚖️ Dak Sutra: Consumer Protection Act 2019 Audit & Updates",
+                title: "📚 New PDF Notes Integrated for PS Group B",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated 3 new critical PDF Notes for <strong>PS Group B Paper II</strong>!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide mb-2">Paper II (Rules & Regulations)</p>
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">✅</span>
+                                        <span><strong>Joining Time Rules:</strong> Central Civil Services (Joining Time) Rules, 1979.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✅</span>
+                                        <span><strong>RSA Rules:</strong> CCS (Recognition of Service Association) Rules, 1993.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-indigo-500 mt-0.5">✅</span>
+                                        <span><strong>Inspection Questionnaires:</strong> Full Questionnaires for Inspection of Various offices.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library & Syllabus section!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "⚖️ Dak Sutra: Consumer Protection Act 2019 Overhaul",
                 desc: (
                     <div className="space-y-4">
                         <p className="text-zinc-700 dark:text-zinc-300">
-                            We have completed a comprehensive legal audit of the <strong>Consumer Protection Act, 2019</strong> content in Dak Sutra.
+                            Completed a full legal and factual overhaul of the <strong>Consumer Protection Act, 2019</strong> study materials.
                         </p>
                         
                         <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
                             <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
-                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide mb-2">Key Statutory Updates</p>
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide mb-2">Statutory Corrections</p>
                                 <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
                                     <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">⚖️</span>
+                                        <span><strong>Product Liability:</strong> Full update based on statutory text (Sections 82–87).</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
                                         <span className="text-amber-500 mt-0.5">📍</span>
-                                        <span><strong>Pecuniary Jurisdiction:</strong> Updated to 2021 Rules (District: ₹50L, State: ₹2Cr).</span>
+                                        <span><strong>Section 87(1):</strong> Corrected "Misuse/Alteration" exception reference.</span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-blue-500 mt-0.5">🇮🇳</span>
-                                        <span><strong>Territorial Extent:</strong> Corrected to include the whole of India (including J&K).</span>
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <span className="text-emerald-500 mt-0.5">⏳</span>
-                                        <span><strong>Time Limits:</strong> Verified 3-month mediation report & 30-day product seller disclosure.</span>
+                                        <span className="text-blue-500 mt-0.5">🛡️</span>
+                                        <span><strong>Liability Rules:</strong> Removed fabricated "30-day disclosure rule" for sellers.</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
                         <p className="pt-1 text-[11px] text-zinc-500 italic leading-relaxed">
-                            These updates ensure 100% factual accuracy for the upcoming exams.
+                            Ensuring 100% legal precision for your PS Group B preparation.
                         </p>
                     </div>
                 )
-            },
+            }
+        ]
+    },
+    {
+        date: "31.03.2026",
+        items: [
             {
                 title: "🎁 Rule 13: Gift Limits & Foreign Gifts Update",
                 desc: (
@@ -65,7 +102,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                             <li><strong>Foreign Gifts:</strong> Aligned with current retention and reporting rules.</li>
                         </ul>
                         <p className="pt-1 text-[11px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1">
-                            🚀 Check the updated cards in Dak Sutra!
+                            <span>🚀</span> Updated in CCS Conduct Rules Guide!
                         </p>
                     </div>
                 )

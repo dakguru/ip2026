@@ -317,28 +317,65 @@ const actData: Section[] = [
                 id: 'sec-82-83',
                 title: '82-83. Application and Action',
                 content: [
-                    { type: 'text', content: 'Applies to claims for compensation for harm caused by defective products. Action can be brought against Manufacturer, Service Provider, or Seller.' }
+                    { type: 'text', content: 'This Chapter applies to every claim for compensation in a product liability action. A <strong>complainant</strong> may bring an action against a product manufacturer, service provider, or seller for harm caused by a defective product.' }
                 ]
             },
             {
                 id: 'sec-84',
                 title: '84. Liability of Product Manufacturer',
                 content: [
-                    { type: 'text', content: 'Liable if product contains manufacturing defect, defective design, deviation from specs, no express warranty, or fails to contain adequate instructions.' }
+                    {
+                        type: 'list', content: [
+                            'Contains a manufacturing defect.',
+                            'Is defective in design.',
+                            'Deviates from manufacturing specifications.',
+                            'Does not conform to express warranty.',
+                            'Fails to contain adequate instructions of correct usage or warnings to prevent harm.'
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'sec-85',
+                title: '85. Liability of Product Service Provider',
+                content: [
+                    {
+                        type: 'list', content: [
+                            'Service was faulty, imperfect, deficient or inadequate in quality, nature or manner of performance.',
+                            'Omission, commission, negligence or conscious withholding of information which caused harm.',
+                            'Failure to issue adequate instructions or warnings to prevent harm.',
+                            'Does not conform to express warranty or terms of contract.'
+                        ]
+                    }
                 ]
             },
             {
                 id: 'sec-86',
                 title: '86. Liability of Product Seller',
                 content: [
-                    { type: 'text', content: 'Liable if they exercised substantial control over designing/packaging, altered the product, or made an independent express warranty.' }
+                    {
+                        type: 'list', content: [
+                            'Exercised substantial control over design, testing, manufacture, packaging or labelling.',
+                            'Altered or modified the product and such alteration was a substantial cause of harm.',
+                            'Made an independent express warranty different from manufacturer\'s warranty.',
+                            'Identity of manufacturer is not known, or process cannot be served on them.',
+                            'Failed to exercise reasonable care in assembly/maintenance or failed to pass on warnings.'
+                        ]
+                    }
                 ]
             },
             {
                 id: 'sec-87',
-                title: '87. Exceptions',
+                title: '87. Exceptions to Product Liability',
                 content: [
-                    { type: 'text', content: 'Not liable if product was misused, altered, or modified by the user.' }
+                    {
+                        type: 'list', content: [
+                            '<strong>Misuse/Alteration:</strong> Product was misused, altered, or modified at the time of harm.',
+                            '<strong>Workplace/Expert Use:</strong> Warnings were given to the employer/expert, or product was a component of another product with its own warnings.',
+                            '<strong>Obvious Danger:</strong> No liability for failing to warn about dangers that are obvious or commonly known to the user.',
+                            '<strong>Under Influence:</strong> Consumer was under the influence of alcohol or non-prescribed drugs.'
+                        ]
+                    }
                 ]
             }
         ]

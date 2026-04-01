@@ -158,7 +158,7 @@ export const psgbSyllabusData = {
           { name: "CCS NPS Rules (Implementation & Gratuity)", link: null },
           { name: "Central Civil Services (Commutation of Pension) Rules, 1981", link: null },
           { name: "Central Civil Services (Leave) Rules, 1972", link: null },
-          { name: "Central Civil Services (Joining Time) Rules, 1979", link: null },
+          { name: "Central Civil Services (Joining Time) Rules, 1979", link: null, pdfs: [{ title: "CCS Joining Time Rules", path: "/notes/paper-2/CCS Joining Time Rules.pdf" }] },
           { name: "General Provident Fund (Central Service) Rules, 1960", link: null },
           { name: "Central Services (Medical Attendance) Rules, 1944", link: null },
           { name: "FR & SR - General Rules", link: null },
@@ -168,7 +168,7 @@ export const psgbSyllabusData = {
           { name: "Central Civil Services (Revised Pay) Rules, 2016", link: null },
           { name: "Rules relating to Children Education allowance and reimbursement of Hostel Subsidy", link: null },
           { name: "Central Government Employees Group Insurance Scheme, 1980", link: null },
-          { name: "Central Civil Services (Recognition of Service Association) Rules, 1993", link: null }
+          { name: "Central Civil Services (Recognition of Service Association) Rules, 1993", link: null, pdfs: [{ title: "CCS RSA Rules", path: "/notes/paper-2/CCS RSA Rules.pdf" }] }
         ]
       },
       {
@@ -188,7 +188,7 @@ export const psgbSyllabusData = {
           { name: "Interface with India Post Payment Bank", link: null },
           { name: "Preservation and Disposal of Postal Records", link: null },
           { name: "Swatchh Bharat", link: null },
-          { name: "Inspection questionnaires.", link: null },
+          { name: "Inspection Questionnaires", link: null, pdfs: [{ title: "Inspection Questionnaires", path: "/notes/paper-2/Inspection Questionnaires.pdf" }] },
           { name: "CSI Operating Manuals.", link: null }
         ]
       },

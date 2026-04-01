@@ -123,7 +123,7 @@ export const consumerProtectionAct2019: FlashCard[] = [
         topic: "Product Liability",
         card_no: 14,
         question: "Can a product seller be liable even if they did not manufacture the product?",
-        answer: "Yes, if they exercised substantial control over design/modification or fail to identify the manufacturer.",
+        answer: "Yes, if they exercised substantial control over design/modification, or if the identity of the manufacturer is not known.",
         exam_weight: "Medium",
         keywords: ["Product Seller", "Liability"]
     },
@@ -372,20 +372,12 @@ export const consumerProtectionAct2019: FlashCard[] = [
         pdf_title: "Consumer Protection Act, 2019",
         topic: "Product Liability",
         card_no: 40,
-        question: "Under Section 86(1)(e), within what time must a product seller identify the manufacturer, and what happens if they fail?",
-        answer: "A product seller must identify the product manufacturer within 1 MONTH from the date on which such information was sought from it. If the seller FAILS to disclose the manufacturer's identity within this period, and harm was caused by such product, the seller becomes liable in a product liability action (Section 86(1)(e)).",
+        question: "Under what circumstances is a product seller liable if they are not the manufacturer (Section 86)?",
+        answer: "A product seller is liable if: (a) they exercised substantial control over design/testing/manufacture; (b) they modified the product causing harm; (c) they made an independent express warranty; (d) the identity of the manufacturer is NOT known or process cannot be served; OR (e) they failed to exercise reasonable care in assembly/maintenance or didn't pass on warnings (Section 86).",
         exam_weight: "High",
-        keywords: ["Product Seller", "1 month", "Manufacturer Identity", "Disclosure", "Section 86(1)(e)"]
+        keywords: ["Product Seller", "Liability", "Section 86", "Manufacturer Unknown"]
     },
-    {
-        pdf_title: "Consumer Protection Act, 2019",
-        topic: "Product Liability",
-        card_no: 41,
-        question: "What are the THREE situations where a product seller is NOT liable (exceptions in Section 86(2))?",
-        answer: "(a) Product was sold under a registered trade mark / brand name registered to another person AND seller is not otherwise liable under Section 86(1)(a)–(d); OR (b) Product seller is able to IDENTIFY in his records the product manufacturer; OR (c) Product seller identifies the person from whom he received the product, who was reasonably believed to be authorised to supply/sell (Section 86(2)).",
-        exam_weight: "Medium",
-        keywords: ["Product Seller", "Not Liable", "Registered Trade Mark", "Identify Records", "Section 86(2)"]
-    },
+
 
     // ─── DEFINITIONS — EXAM CRITICAL ─────────────────────────────────────────
     {
@@ -516,7 +508,7 @@ export const consumerProtectionAct2019: FlashCard[] = [
         topic: "Important Notes",
         card_no: 55,
         question: "What is the complete Master Time Limits Cheat Sheet for the Consumer Protection Act, 2019?",
-        answer: "21 days — Admissibility decision (deemed admitted if not decided). 21 days — Commission to send notice to opposite party. 30 days (+15) — Opposite party to respond. 45 days — Lab to submit report. 30 days — Review application (all Commissions). 30 days — Adjournment >30 days needs written reasons. 3 months — Complaint disposal (no testing). 5 months — Complaint disposal (with testing). 45 days — Appeal: District → State. 30 days — Appeal: State → National / National → SC / CCPA → National. 90 days — National Commission to dispose appeal. 2 years — Limitation period. 5 days — Mediation consent + referral (each). 7 days — Mediator disclosure objection. 50 days — Mediator submits report. 7 days — Commission order on settlement. 20 days — Return of seized documents. 1 month — Product seller to identify manufacturer. 30 days — Default return period (unfair trade practice). 3 years — Re-offending bar for compounding.",
+        answer: "21 days — Admissibility decision (deemed admitted if not decided). 21 days — Commission to send notice to opposite party. 30 days (+15) — Opposite party to respond. 45 days — Lab to submit report. 30 days — Review application (all Commissions). 30 days — Adjournment >30 days needs written reasons. 3 months — Complaint disposal (no testing). 5 months — Complaint disposal (with testing). 45 days — Appeal: District → State. 30 days — Appeal: State → National / National → SC / CCPA → National. 90 days — National Commission to dispose appeal. 2 years — Limitation period. 5 days — Mediation consent + referral (each). 7 days — Mediator disclosure objection. 50 days — Mediator submits report. 7 days — Commission order on settlement. 20 days — Return of seized documents. 30 days — Default return period (unfair trade practice). 3 years — Re-offending bar for compounding.",
         exam_weight: "High",
         keywords: ["Master Time Limits", "Cheat Sheet", "All Timelines", "Quick Reference", "Days", "Months"]
     }

@@ -235,7 +235,7 @@
         "topic": "Product Liability",
         "card_no": 19,
         "question": "Can a product seller be held liable in a product liability action?",
-        "answer": "Yes, if they exercised substantial control over design/testing/packaging, altered the product, made an express warranty, or failed to identify the manufacturer.",
+        "answer": "Yes, if they exercised substantial control over design/testing/packaging, altered the product, made an express warranty, the identity of the manufacturer is not known, or they failed to exercise reasonable care.",
         "exam_weight": "Medium",
         "keywords": [
             "product seller",
@@ -247,7 +247,7 @@
         "topic": "Product Liability",
         "card_no": 20,
         "question": "What are the exceptions to product liability action?",
-        "answer": "Misuse/alteration of product, failure to follow instructions, or compliance with mandatory statutory instructions.",
+        "answer": "Misuse/alteration of product, warnings given to employers/experts, consumer under influence of drugs, or if the danger was obvious/commonly known.",
         "exam_weight": "Medium",
         "keywords": [
             "liability",

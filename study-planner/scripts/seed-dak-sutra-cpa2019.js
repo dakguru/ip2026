@@ -187,7 +187,7 @@ const entries = [
     <th style="border:1px solid #ccc;padding:8px">Time Limit</th>
     <th style="border:1px solid #ccc;padding:8px">Section</th>
   </tr>
-  <tr>
+    <tr>
     <td style="border:1px solid #ccc;padding:8px">Limitation period for filing a complaint</td>
     <td style="border:1px solid #ccc;padding:8px"><strong>2 years</strong> from cause of action (condonable)</td>
     <td style="border:1px solid #ccc;padding:8px">Section 69</td>
@@ -196,11 +196,6 @@ const entries = [
     <td style="border:1px solid #ccc;padding:8px">Seized documents to be returned</td>
     <td style="border:1px solid #ccc;padding:8px"><strong>20 days</strong> from date of seizure</td>
     <td style="border:1px solid #ccc;padding:8px">Section 22(3)</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:8px">Product seller to identify manufacturer</td>
-    <td style="border:1px solid #ccc;padding:8px"><strong>30 days</strong> from date of being asked</td>
-    <td style="border:1px solid #ccc;padding:8px">Section 86(1)(e)</td>
   </tr>
   <tr>
     <td style="border:1px solid #ccc;padding:8px">Default return/refund period (unfair trade practice)</td>
@@ -280,8 +275,8 @@ At the first hearing, the Commission directs parties to consider mediation. The 
   <li><strong>2 years</strong> — Limitation period</li>
   <li><strong>3 months</strong> — Mediator's report deadline</li>
   <li><strong>7 days</strong> — Commission's order after mediation settlement</li>
+  <li><strong>30 days</strong> — Default return period (unfair trade practice)</li>
   <li><strong>20 days</strong> — Return of seized documents</li>
-  <li><strong>30 days</strong> — Product seller to identify manufacturer</li>
 </ul>
 <p><strong>🔴 Common Trap MCQs:</strong></p>
 <ul>
@@ -784,12 +779,7 @@ A complaint is pending before the District Commission in Mumbai. The complainant
 <p>The provisions of this Chapter shall be <strong>in addition to and not in derogation of</strong> the provisions of any other law in force (e.g., Sale of Goods Act, Drugs Act, etc.).</p>
 
 <h4>Section 83 — Who Can Bring a Product Liability Action?</h4>
-<p>Any person who has suffered <strong>harm</strong> may bring an action against:</p>
-<ul>
-  <li><strong>Product Manufacturer</strong></li>
-  <li><strong>Product Service Provider</strong></li>
-  <li><strong>Product Seller</strong></li>
-</ul>
+<p>A <strong>complainant</strong> may bring a product liability action against a product manufacturer, product service provider, or product seller for any harm caused to him on account of a defective product.</p>
 
 <h4>Section 84 — Liability of Product Manufacturer</h4>
 <p>A product manufacturer shall be liable if:</p>
@@ -804,9 +794,10 @@ A complaint is pending before the District Commission in Mumbai. The complainant
 <h4>Section 85 — Liability of Product Service Provider</h4>
 <p>A product service provider shall be liable if:</p>
 <ol type="a">
-  <li>Services <strong>deviated from manufacturing specifications</strong></li>
-  <li>Provider failed to exercise <strong>reasonable care and skill</strong></li>
-  <li>Provider failed to comply with <strong>express warranties</strong> as to the service</li>
+  <li>The service provided was <strong>faulty, imperfect, deficient, or inadequate</strong> in quality, nature, or manner of performance</li>
+  <li>There was an <strong>act of omission, commission, negligence, or conscious withholding</strong> of any information which caused harm</li>
+  <li>The service provider did not issue <strong>adequate instructions or warnings</strong> to prevent any harm</li>
+  <li>The service did not conform to <strong>express warranty</strong> or the terms and conditions of the contract</li>
 </ol>
 
 <h4>Section 86 — Liability of Product Sellers</h4>
@@ -815,22 +806,16 @@ A complaint is pending before the District Commission in Mumbai. The complainant
   <li>Exercised <strong>substantial control over design/testing/manufacture/packaging/labelling</strong></li>
   <li><strong>Altered or modified</strong> the product and alteration was a substantial cause of harm</li>
   <li>Made an <strong>independent express warranty</strong> different from manufacturer's warranty</li>
-  <li>Failed to exercise <strong>reasonable care</strong> in assembling/inspecting/maintaining</li>
-  <li>Sold product but <strong>failed to identify the manufacturer</strong> within <strong>30 DAYS</strong> of being asked</li>
+  <li>The product has been sold by him and the <strong>identity of the product manufacturer is not known</strong>, or notice/process cannot be served on them</li>
+  <li>Failed to exercise <strong>reasonable care</strong> in assembling, inspecting, or maintaining the product, or did not pass on the warnings/instructions of the manufacturer</li>
 </ol>
-<p><strong>Product Seller NOT Liable (Section 86(2)) if:</strong></p>
-<ul>
-  <li>Product sold under a registered trade mark / brand registered to another person AND not liable under (a)–(d); OR</li>
-  <li>Seller can identify the product manufacturer from his records; OR</li>
-  <li>Seller identifies the person from whom he received the product, who was reasonably believed to be authorised to supply</li>
-</ul>
 
 <h4>Section 87 — Exceptions to Product Liability Action</h4>
 <p>Product liability action shall NOT be maintainable where harm is caused due to:</p>
 <ol type="a">
-  <li><strong>Misuse, modification or alteration</strong> of the product by the consumer</li>
-  <li><strong>Failure to follow instructions</strong> supplied with the product</li>
-  <li><strong>Compliance by the manufacturer/seller</strong> with mandatory instructions issued under any law in force</li>
+  <li>At the time of harm, the product was <strong>misused, altered, or modified</strong></li>
+  <li>Manufacturer is not liable for failing to provide warnings if the product was <strong>bought by an employer</strong> (and warnings were given to the employer), sold as a component, legally meant for experts, or if the consumer was under the influence of alcohol/unprescribed drugs</li>
+  <li>Manufacturer is not liable for failing to warn about a danger which is <strong>obvious or commonly known</strong> to the user</li>
 </ol>`,
 
         guru_explanation: `
@@ -845,12 +830,12 @@ A complaint is pending before the District Commission in Mumbai. The complainant
   <li><strong>Seller</strong> (Section 86) — liable if they modified it, gave their own warranty, didn't exercise care in assembling/selling, or can't tell you who made it</li>
 </ul>
 
-<h4>The "1 Month Disclosure" Rule — Critical for Product Sellers</h4>
-<p>A shop that sells products of unknown/undisclosed manufacture is taking a HUGE risk under this Act. If a customer is harmed and asks "Who made this?", the seller has exactly <strong>30 DAYS</strong> to name the manufacturer. If they can't — <strong>they become liable as if they were the manufacturer</strong>.</p>
-<p>This creates a strong incentive for sellers to maintain proper records of their supply chain.</p>
+<h4>The "Unknown Manufacturer" Trap — Critical for Product Sellers</h4>
+<p>A shop that sells products of unknown/undisclosed manufacture is taking a HUGE risk under this Act. If a customer is harmed and the identity of the product manufacturer is not known, or notice cannot be served on them, <strong>the seller becomes liable as if they were the manufacturer</strong> (Section 86(d)).</p>
+<p>This creates a strong incentive for sellers to maintain proper records of their supply chain and ensure manufacturers are identifiable.</p>
 
 <h4>The Consumer's Own Fault = No Claim</h4>
-<p>Section 87 creates the <strong>contributory fault bar</strong>: if you misused the product, ignored the instructions, or modified it yourself — you cannot claim product liability. The harm must be attributable to the product/service, not your own conduct.</p>`,
+<p>Section 87 creates the <strong>exceptions to liability</strong>: if the product was misused, altered, or modified at the time of harm — or if the danger was obvious or commonly known — you cannot claim product liability. The Act also protects manufacturers where warnings were appropriately given to employers or experts rather than the end-user.</p>`,
 
         practical_example: `
 <p><strong>Scenario 1 — Manufacturing Defect:</strong><br>
@@ -861,13 +846,13 @@ A pressure cooker bursts and injures a housewife. The investigation reveals the 
 A medication bottle has no warnings about dangerous drug interactions. A patient takes it with another drug and suffers serious harm. Who is liable?<br>
 <strong>Answer:</strong> The <strong>Product Manufacturer</strong> under Section 84(e) — failure to provide adequate instructions/warnings.</p>
 
-<p><strong>Scenario 3 — Product Seller Cannot Name Manufacturer:</strong><br>
-A consumer is injured by a defective power tool bought from a hardware store. The store sells it under a generic label and when asked who manufactured it, they cannot provide the name within 30 days.<br>
-<strong>Answer:</strong> The <strong>Product Seller</strong> becomes liable under Section 86(1)(e) — failure to identify the manufacturer within 30 days. </p>
+<p><strong>Scenario 3 — Product Seller Cannot Identify Manufacturer:</strong><br>
+A consumer is injured by a defective power tool bought from a hardware store. The store sells it under a generic label and the identity of the product manufacturer is not known.<br>
+<strong>Answer:</strong> The <strong>Product Seller</strong> becomes liable under Section 86(d) because the identity of the product manufacturer is not known.</p>
 
 <p><strong>Scenario 4 — Consumer Misuse:</strong><br>
-A consumer uses an electric drill as a kitchen mixer and gets injured. Can they file a product liability action?<br>
-<strong>Answer:</strong> <strong>NO</strong>. Section 87(a) — harm caused due to misuse of the product by the consumer. Product liability action is not maintainable.</p>`,
+A consumer intentionally modifies a safety guard on an electric drill and gets injured due to that modification. Can they file a product liability action?<br>
+<strong>Answer:</strong> <strong>NO</strong>. Section 87(1) — harm caused due to misuse, alteration or modification of the product by the consumer. Product liability action is not maintainable.</p>`,
 
         exam_insight: `
 <p><strong>⭐ Product Liability Key Points:</strong></p>
@@ -875,17 +860,17 @@ A consumer uses an electric drill as a kitchen mixer and gets injured. Can they 
   <li>Chapter VI is entirely <strong>new in 2019 Act</strong> — not present in 1986</li>
   <li>Three parties liable: <strong>Manufacturer, Service Provider, Seller</strong></li>
   <li>Manufacturer liable for: <strong>manufacturing defect, design defect, deviation from specs, breach of express warranty, inadequate instructions</strong></li>
-  <li>Seller's time limit to identify manufacturer: <strong>30 DAYS</strong> (Section 86(1)(e))</li>
-  <li>Three exceptions to product liability: <strong>misuse, failure to follow instructions, compliance with mandatory law</strong></li>
+  <li>Seller is liable if the <strong>identity of the product manufacturer is not known</strong> (Section 86(d))</li>
+  <li>Exceptions to product liability include: <strong>misuse/alteration, warnings given to employer/experts, consumer under influence of drugs, obvious dangers</strong></li>
   <li>"Product" does NOT include: <strong>human tissues, blood, blood products and organs</strong> (Section 2(42))</li>
   <li>Section 82: Chapter VI is <strong>in addition to</strong> (not in derogation of) other laws</li>
 </ul>
 <p><strong>🔴 Trap MCQs:</strong></p>
 <ul>
   <li>"Product liability action can be brought only against the manufacturer" — <strong>FALSE</strong>. Seller and service provider also liable.</li>
-  <li>"A seller who modifies a product is not liable" — <strong>FALSE</strong>. Modification is a basis of liability under Section 86(1)(b).</li>
+  <li>"A seller who modifies a product is not liable" — <strong>FALSE</strong>. Modification is a basis of liability under Section 86(b).</li>
   <li>"Defective design is the manufacturer's liability" — <strong>TRUE</strong>. Section 84(b).</li>
-  <li>"A consumer who ignored product instructions can claim product liability" — <strong>FALSE</strong>. Section 87(b) bars such a claim.</li>
+  <li>"A consumer who misused a product cannot claim product liability" — <strong>TRUE</strong>. Section 87(1) bars such a claim.</li>
 </ul>`,
 
         status: "published",

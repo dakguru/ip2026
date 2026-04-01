@@ -342,9 +342,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Central Civil Services (Joining Time) Rules, 1979",
-            "description": "Materials will be uploaded soon.",
-            "color": "sky",
-            "comingSoon": true
+            "description": "Rules governing joining time on transfer, etc.",
+            "filename": "CCS Joining Time Rules.pdf",
+            "path": "/notes/paper-2/CCS Joining Time Rules.pdf",
+            "size": "4.1 MB",
+            "color": "sky"
         },
         {
             "title": "CCS (GPF) Rules, 1961",
@@ -420,9 +422,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Central Civil Services (Recognition of Service Association) Rules, 1993",
-            "description": "Materials will be uploaded soon.",
-            "color": "sky",
-            "comingSoon": true
+            "description": "Rules for recognition of service associations of central government employees.",
+            "filename": "CCS RSA Rules.pdf",
+            "path": "/notes/paper-2/CCS RSA Rules.pdf",
+            "size": "0.5 MB",
+            "color": "sky"
         },
         {
             "title": "Postal Manual Volume III",
@@ -489,10 +493,12 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "violet"
         },
         {
-            "title": "Inspection questionnaires.",
-            "description": "Materials will be uploaded soon.",
-            "color": "slate",
-            "comingSoon": true
+            "title": "Inspection Questionnaires",
+            "description": "Inspection Questionnaires for various offices of India Post.",
+            "filename": "Inspection Questionnaires.pdf",
+            "path": "/notes/paper-2/Inspection Questionnaires.pdf",
+            "size": "4.2 MB",
+            "color": "slate"
         },
         {
             "title": "GDS (Conduct & Engagement) Rules, 2020",
