@@ -101,3 +101,28 @@ export async function PATCH(req: Request) {
         return NextResponse.json({ error: 'Failed to update notifications' }, { status: 500 });
     }
 }
+
+export async function DELETE(req: Request) {
+    try {
+        await connectDB();
+        const { searchParams } = new URL(req.url);
+        const id = searchParams.get('id');
+        const clearRead = searchParams.get('clearRead');
+
+        if (clearRead === 'true') {
+            const result = await Notification.deleteMany({ isRead: true });
+            return NextResponse.json({ success: true, message: `Cleared ${result.deletedCount} read notifications` });
+        }
+
+        if (id) {
+            await Notification.findByIdAndDelete(id);
+            return NextResponse.json({ success: true, message: 'Notification deleted' });
+        }
+
+        return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+
+    } catch (error) {
+        console.error("Error deleting notifications:", error);
+        return NextResponse.json({ error: 'Failed to delete notifications' }, { status: 500 });
+    }
+}

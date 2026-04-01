@@ -194,7 +194,7 @@ const FILTER_TABS: { id: FilterType; label: string; icon: any; count?: (n: Notif
     { id: 'all', label: 'All', icon: Bell },
     { id: 'users', label: 'Users', icon: UserPlus },
     { id: 'community', label: 'Community', icon: MessageSquare },
-    { id: 'membership', label: 'Revenue', icon: IndianRupee },
+    { id: 'membership', label: 'Membership', icon: IndianRupee },
     { id: 'mock_tests', label: 'Mock Tests', icon: FileText },
     { id: 'system', label: 'System', icon: Server },
 ];
@@ -207,10 +207,28 @@ export default function AdminNotificationsPage() {
     const [showUnreadOnly, setShowUnreadOnly] = useState(false);
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [expandedId, setExpandedId] = useState<string | null>(null);
+    const [onlineCount, setOnlineCount] = useState<number>(0);
 
     useEffect(() => {
         fetchNotifications();
+        fetchOnlineCount();
+
+        // 60s refresh for online count
+        const onlineInterval = setInterval(fetchOnlineCount, 60000);
+        return () => clearInterval(onlineInterval);
     }, []);
+
+    const fetchOnlineCount = async () => {
+        try {
+            const res = await fetch('/api/admin/stats/online');
+            if (res.ok) {
+                const data = await res.json();
+                setOnlineCount(data.count || 0);
+            }
+        } catch (e) {
+            console.error("Failed to fetch online count", e);
+        }
+    };
 
     const fetchNotifications = async () => {
         setIsLoading(true);
@@ -269,6 +287,30 @@ export default function AdminNotificationsPage() {
             }
         } catch (e) {
             console.error("Failed to mark read", e);
+        }
+    };
+
+    const handleDelete = async (id: string) => {
+        try {
+            const res = await fetch(`/api/admin/notifications?id=${id}`, { method: 'DELETE' });
+            if (res.ok) {
+                setNotifications(prev => prev.filter(n => n._id !== id));
+                if (expandedId === id) setExpandedId(null);
+            }
+        } catch (e) {
+            console.error("Failed to delete notification", e);
+        }
+    };
+
+    const handleClearRead = async () => {
+        if (!confirm("Are you sure you want to permanently delete all read notifications?")) return;
+        try {
+            const res = await fetch('/api/admin/notifications?clearRead=true', { method: 'DELETE' });
+            if (res.ok) {
+                setNotifications(prev => prev.filter(n => !n.isRead));
+            }
+        } catch (e) {
+            console.error("Failed to clear read", e);
         }
     };
 
@@ -354,10 +396,22 @@ export default function AdminNotificationsPage() {
                                 <Bell className="w-4.5 h-4.5 text-white" />
                             </div>
                             <div>
-                                <h1 className="text-base font-bold text-zinc-900 dark:text-zinc-100 leading-tight">
-                                    Notifications
-                                </h1>
-                                <p className="text-xs text-zinc-500 dark:text-zinc-400 hidden sm:block">
+                                <div className="flex items-center gap-2">
+                                    <h1 className="text-base font-bold text-zinc-900 dark:text-zinc-100 leading-tight">
+                                        Notifications
+                                    </h1>
+                                    <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-[9px] font-black uppercase tracking-wider border border-zinc-700/50 dark:border-zinc-300 shadow-sm">
+                                        Admin
+                                    </div>
+                                    <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[9px] font-black uppercase tracking-wider border border-emerald-500/20 shadow-sm">
+                                        <span className="relative flex h-1.5 w-1.5">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                                        </span>
+                                        {onlineCount} Presently Online
+                                    </div>
+                                </div>
+                                <p className="text-xs text-zinc-500 dark:text-zinc-400 hidden sm:block mt-0.5">
                                     {stats.unread > 0 ? `${stats.unread} unread` : 'All caught up'}
                                 </p>
                             </div>
@@ -399,7 +453,7 @@ export default function AdminNotificationsPage() {
                     {[
                         { label: 'New Users', value: stats.todayUsers, icon: UserPlus, gradient: 'from-emerald-500 to-teal-600', shadow: 'shadow-emerald-500/15' },
                         { label: 'Community', value: stats.todayPosts, icon: MessageSquare, gradient: 'from-blue-500 to-indigo-600', shadow: 'shadow-blue-500/15' },
-                        { label: 'Revenue', value: stats.todayRevenue, icon: IndianRupee, gradient: 'from-amber-500 to-orange-600', shadow: 'shadow-amber-500/15' },
+                        { label: 'Membership', value: stats.todayRevenue, icon: IndianRupee, gradient: 'from-amber-500 to-orange-600', shadow: 'shadow-amber-500/15' },
                         { label: 'System', value: stats.todaySystem, icon: Server, gradient: 'from-violet-500 to-purple-600', shadow: 'shadow-violet-500/15' },
                     ].map((stat, i) => (
                         <motion.div
@@ -499,6 +553,15 @@ export default function AdminNotificationsPage() {
                                 >
                                     <CheckCheck className="w-3.5 h-3.5" />
                                     Read All
+                                </button>
+                            )}
+                            {notifications.length > unreadCount && (
+                                <button
+                                    onClick={handleClearRead}
+                                    className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs font-bold text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-500/10 border border-transparent hover:border-rose-100 dark:hover:border-rose-500/20 transition-all font-sans"
+                                >
+                                    <Trash2 className="w-3.5 h-3.5" />
+                                    Clear Read
                                 </button>
                             )}
                         </div>
@@ -644,16 +707,25 @@ export default function AdminNotificationsPage() {
                                                             </AnimatePresence>
                                                         </div>
 
-                                                        {/* Quick Mark Read Button */}
-                                                        {!notif.isRead && (
+                                                        {/* Action Buttons */}
+                                                        <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all shrink-0">
+                                                            {!notif.isRead && (
+                                                                <button
+                                                                    onClick={(e) => { e.stopPropagation(); handleMarkRead(notif._id); }}
+                                                                    className="p-1.5 rounded-lg text-zinc-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-500/10 transition-all"
+                                                                    title="Mark as read"
+                                                                >
+                                                                    <Check className="w-4 h-4" />
+                                                                </button>
+                                                            )}
                                                             <button
-                                                                onClick={(e) => { e.stopPropagation(); handleMarkRead(notif._id); }}
-                                                                className="opacity-0 group-hover:opacity-100 p-1.5 rounded-lg text-zinc-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-500/10 transition-all shrink-0"
-                                                                title="Mark as read"
+                                                                onClick={(e) => { e.stopPropagation(); handleDelete(notif._id); }}
+                                                                className="p-1.5 rounded-lg text-zinc-400 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-500/10 transition-all"
+                                                                title="Delete"
                                                             >
-                                                                <Check className="w-4 h-4" />
+                                                                <Trash2 className="w-4 h-4" />
                                                             </button>
-                                                        )}
+                                                        </div>
                                                     </div>
                                                 </motion.div>
                                             );
