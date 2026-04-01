@@ -52,7 +52,7 @@ export const postalManualVolVII: FlashCard[] = [
         card_no: 6,
         question: "What is a 'Trip'?",
         answer: "A journey performed by a set of a section from one station to another.",
-        exam_weight: "Low",
+        exam_weight: "Medium",
         keywords: ["Trip", "Journey"]
     },
     {
@@ -61,7 +61,7 @@ export const postalManualVolVII: FlashCard[] = [
         card_no: 7,
         question: "What is a 'Set'?",
         answer: "A group of officials (SAs, Mail Guards, MTS) working together in a section or office.",
-        exam_weight: "Low",
+        exam_weight: "Medium",
         keywords: ["Set", "Group"]
     },
     {
@@ -70,7 +70,7 @@ export const postalManualVolVII: FlashCard[] = [
         card_no: 8,
         question: "What is a 'Beat'?",
         answer: "The portion of a railway or steamer line over which a section works.",
-        exam_weight: "Low",
+        exam_weight: "Medium",
         keywords: ["Beat", "Line"]
     },
     {
@@ -385,7 +385,7 @@ export const postalManualVolVII: FlashCard[] = [
         card_no: 43,
         question: "Are family members allowed in Rest Houses?",
         answer: "No, strictly prohibited.",
-        exam_weight: "Low",
+        exam_weight: "Medium",
         keywords: ["Rest House", "Family"]
     },
     {

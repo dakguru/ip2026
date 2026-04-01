@@ -187,7 +187,7 @@ export const bookOfBORules: FlashCard[] = [
         card_no: 21,
         question: "Where are unregistered articles received for delivery stamped?",
         answer: "On the back (except postcards).",
-        exam_weight: "Low",
+        exam_weight: "Medium",
         keywords: ["Delivery", "Stamping"]
     },
     {

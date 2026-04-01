@@ -32,10 +32,10 @@ export const postalManualVolIV: FlashCard[] = [
         pdf_title: "Postal Manual Vol IV",
         topic: "Branch Post Offices",
         card_no: 4,
-        question: "What is the minimum anticipated income required for opening a new BO in Normal Areas?",
-        answer: "15% of the cost.",
+        question: "What is the minimum anticipated income required for opening a new BO in Normal Rural Areas?",
+        answer: "33⅓% of the cost (i.e., one-third). Lower norms apply for hilly/tribal areas.",
         exam_weight: "High",
-        keywords: ["BO Opening", "Income Norm", "15%"]
+        keywords: ["BO Opening", "Income Norm", "33%", "One-third"]
     },
     {
         pdf_title: "Postal Manual Vol IV",

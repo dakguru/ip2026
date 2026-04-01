@@ -41,10 +41,10 @@ export const postalManualVolVIPartIII: FlashCard[] = [
         pdf_title: "Postal Manual Vol VI Part III",
         topic: "Money Orders",
         card_no: 5,
-        question: "To whom should a Money Order payable to a lunatic be paid?",
+        question: "To whom should a Money Order payable to a person of unsound mind be paid?",
         answer: "Only to the Manager of the estate or the legally appointed guardian.",
         exam_weight: "High",
-        keywords: ["Money Order", "Lunatic", "Guardian"]
+        keywords: ["Money Order", "Unsound Mind", "Guardian"]
     },
     {
         pdf_title: "Postal Manual Vol VI Part III",

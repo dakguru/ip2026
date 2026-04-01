@@ -410,10 +410,10 @@ export const postalManualVolVIPartI: FlashCard[] = [
         pdf_title: "Postal Manual Vol VI - Part I",
         topic: "Franking Machine",
         card_no: 46,
-        question: "What is the impression color for Franking Machines?",
-        answer: "Bright Red.",
-        exam_weight: "Low",
-        keywords: ["Franking", "Red"]
+        question: "What impression color is used by Remotely Managed Franking Machines (RMFM)?",
+        answer: "Blue. (Note: Older mechanical franking machines used Bright Red; all new licenses are RMFM only, which use Blue.)",
+        exam_weight: "Medium",
+        keywords: ["Franking", "RMFM", "Blue", "Impression Color"]
     },
     {
         pdf_title: "Postal Manual Vol VI - Part I",

@@ -141,9 +141,9 @@ export const postalManualVolVIII: FlashCard[] = [
         topic: "Inspection",
         card_no: 16,
         question: "How often must an Inspector of RMS submit their diary?",
-        answer: "Weekly (on 1st, 8th, 16th, and 24th).",
+        answer: "Four times a month (on 1st, 8th, 16th, and 24th).",
         exam_weight: "Medium",
-        keywords: ["RMS Diary", "Weekly"]
+        keywords: ["RMS Diary", "Four times a month"]
     },
     {
         pdf_title: "Postal Manual Vol VIII",
@@ -232,7 +232,7 @@ export const postalManualVolVIII: FlashCard[] = [
         card_no: 26,
         question: "What is the authorized color for painting the INSIDE of Iron Safes?",
         answer: "Red.",
-        exam_weight: "Low",
+        exam_weight: "Medium",
         keywords: ["Safe", "Painting", "Red"]
     },
     {

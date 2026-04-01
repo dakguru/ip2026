@@ -77,18 +77,18 @@ export const postalManualVolVIPartII: FlashCard[] = [
         pdf_title: "Postal Manual Vol VI Part II",
         topic: "Money Orders",
         card_no: 9,
-        question: "When does a Money Order become Void if unpaid?",
-        answer: "Generally after one year from the date of issue (currency period is 1 month, but claimable/re-issueable for 1 year).",
+        question: "What happens to an unpaid Money Order after the void period?",
+        answer: "It becomes void at the end of the month following the month of issue. After 3 years from the date of issue, the amount is forfeited to Government.",
         exam_weight: "Medium",
-        keywords: ["Void", "1 Year"]
+        keywords: ["MO Void", "Forfeiture", "3 years"]
     },
     {
         pdf_title: "Postal Manual Vol VI Part II",
         topic: "Alteration",
         card_no: 10,
         question: "Is there a fee for alteration of payee name/address on a Money Order after dispatch?",
-        answer: "Yes, formerly free, now may be subject to a service charge/postage fee.",
+        answer: "No, alteration of payee name or address on a Money Order is free of charge.",
         exam_weight: "Medium",
-        keywords: ["Alteration", "Fee"]
+        keywords: ["Alteration", "Free", "Money Order"]
     }
 ];

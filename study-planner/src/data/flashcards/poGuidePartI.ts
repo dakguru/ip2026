@@ -59,10 +59,10 @@ export const poGuidePartI: FlashCard[] = [
         pdf_title: "Post Office Guide Part - I",
         topic: "Franking Machine",
         card_no: 7,
-        question: "What color must the franking impression be?",
-        answer: "Blue.",
-        exam_weight: "Low",
-        keywords: ["Franking", "Blue"]
+        question: "What color must the franking impression be for RMFS machines?",
+        answer: "Blue. (Older mechanical franking machines used Red; all new licenses are RMFS/RMFM only, which use Blue.)",
+        exam_weight: "Medium",
+        keywords: ["Franking", "RMFS", "Blue", "Impression Color"]
     },
     {
         pdf_title: "Post Office Guide Part - I",
@@ -95,9 +95,8 @@ export const poGuidePartI: FlashCard[] = [
         pdf_title: "Post Office Guide Part - I",
         topic: "Delivery",
         card_no: 11,
-        question: "What is the maximum period a 'Poste Restante' article (excluding COD) is kept in the Post Office?",
-        answer: "1 month (General), 7 days (VP/COD).",
-
+        question: "What is the maximum period a 'Poste Restante' article is kept in the Post Office?",
+        answer: "15 days (General); 7 days (VP/COD articles).",
         exam_weight: "High",
         keywords: ["Poste Restante", "15 days", "7 days"]
     },
@@ -196,9 +195,9 @@ export const poGuidePartI: FlashCard[] = [
         topic: "Money Order",
         card_no: 22,
         question: "When does a Money Order become 'Void'?",
-        answer: "At the end of the second month following the month of issue.",
+        answer: "At the end of the month following the month of issue (i.e., unpaid after ~1 month it becomes void).",
         exam_weight: "Medium",
-        keywords: ["MO Void", "2nd month"]
+        keywords: ["MO Void", "Month of issue"]
     },
     {
         pdf_title: "Post Office Guide Part - I",
