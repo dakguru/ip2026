@@ -185,10 +185,10 @@ export const poGuidePartI: FlashCard[] = [
         pdf_title: "Post Office Guide Part - I",
         topic: "Money Order",
         card_no: 21,
-        question: "What is the maximum limit for a single Money Order (eMO)?",
-        answer: "Rs. 10,000/-.",
+        question: "What is the maximum limit for a single retail electronic Money Order (eMO)?",
+        answer: "Rs. 5,000/-.",
         exam_weight: "High",
-        keywords: ["MO Limit", "Rs 10000"]
+        keywords: ["MO Limit", "Rs 5000"]
     },
     {
         pdf_title: "Post Office Guide Part - I",
@@ -279,6 +279,24 @@ export const poGuidePartI: FlashCard[] = [
         answer: "From the first day of the month in which it is allotted.",
         exam_weight: "Medium",
         keywords: ["Post Box", "Rental Period"]
+    },
+    {
+        pdf_title: "Post Office Guide Part - I",
+        topic: "Post Boxes",
+        card_no: 31,
+        question: "What is the annual rental fee for only a Post Box or only a Post Bag?",
+        answer: "Rs. 150/- (Yearly) and Rs. 50/- (Quarterly).",
+        exam_weight: "High",
+        keywords: ["Post Box Fee", "Rs 150"]
+    },
+    {
+        pdf_title: "Post Office Guide Part - I",
+        topic: "Post Boxes",
+        card_no: 31,
+        question: "What is the annual rental fee for both Post Box and Post Bag combined?",
+        answer: "Rs. 250/- (Yearly) and Rs. 80/- (Quarterly).",
+        exam_weight: "High",
+        keywords: ["Combined Fee", "Rs 250"]
     },
     {
         pdf_title: "Post Office Guide Part - I",
