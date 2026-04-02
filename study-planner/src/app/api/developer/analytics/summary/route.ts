@@ -5,10 +5,10 @@ import LoginLog from '@/models/LoginLog';
 import UserModel from '@/models/User';
 import { startOfDay, endOfDay, subDays } from 'date-fns';
 
-export async function GET() {
+export async function GET(request: Request) {
     try {
         await dbConnect();
-        const { searchParams } = new URL(request.url || '');
+        const { searchParams } = new URL(request.url);
         const daysParam = parseInt(searchParams.get('days') || '30', 10);
 
         const today = new Date();

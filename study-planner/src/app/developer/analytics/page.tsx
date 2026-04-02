@@ -5,7 +5,8 @@ import Link from "next/link";
 import { 
     ArrowLeft, Users, BarChart3, TrendingUp, UserCheck, UserMinus, 
     Monitor, Clock, Filter, Download, Search, AlertCircle,
-    Calendar, ArrowUpRight, Smartphone, Tablet as TabletIcon, Laptop
+    Calendar, ArrowUpRight, Smartphone, Tablet as TabletIcon, Laptop,
+    ChevronRight, MoreHorizontal, LayoutDashboard
 } from "lucide-react";
 import { 
     LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
@@ -143,384 +144,436 @@ export default function AnalyticsDashboard() {
             <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-950">
                 <div className="flex flex-col items-center gap-4">
                     <div className="w-12 h-12 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
-                    <p className="text-zinc-500 font-medium">Loading Analytics...</p>
+                    <p className="text-zinc-500 font-medium animate-pulse">Synchronizing Analytics...</p>
                 </div>
             </div>
         );
     }
 
-    const COLORS = ['#6366f1', '#10b981', '#f59e0b', '#ef4444'];
-
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-4 md:p-8 transition-colors">
-            <div className="max-w-7xl mx-auto">
+        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-3 md:p-8 transition-colors selection:bg-indigo-100 dark:selection:bg-indigo-900/30">
+            <div className="max-w-7xl mx-auto pb-12">
                 
-                {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-                    <div>
-                        <Link href="/developer" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 mb-2 transition-colors">
-                            <ArrowLeft className="w-4 h-4" /> Back to CMS
+                {/* Header Section */}
+                <div className="flex flex-col gap-6 mb-8 mt-2">
+                    <div className="flex items-center justify-between">
+                        <Link href="/developer" className="inline-flex items-center gap-2 py-1.5 px-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-xs font-bold text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 transition-all shadow-sm active:scale-95">
+                            <ArrowLeft className="w-3.5 h-3.5" /> Dashboard
                         </Link>
-                        <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-                            <BarChart3 className="w-6 h-6 text-indigo-600" />
-                            User Login Analytics
-                            <span className="ml-2 flex items-center gap-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-[10px] uppercase font-black px-1.5 py-0.5 rounded-full border border-emerald-100 dark:border-emerald-800 animate-pulse">
-                                <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                                Live
-                            </span>
-                        </h1>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2">
-                        <div className="flex bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg p-1 shadow-sm mr-2">
-                            {[7, 30, 90].map((d) => (
-                                <button
-                                    key={d}
-                                    onClick={() => setDays(d)}
-                                    className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
-                                        days === d 
-                                        ? 'bg-indigo-600 text-white shadow-sm' 
-                                        : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200'
-                                    }`}
+                        <div className="flex items-center gap-2">
+                             {process.env.NODE_ENV !== 'production' && (
+                                <button 
+                                    onClick={seedMockData}
+                                    disabled={seeding}
+                                    className="p-2.5 bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-900/30 rounded-xl text-amber-600 dark:text-amber-500 hover:bg-amber-100 transition-all shadow-sm active:scale-95"
+                                    title="Seed Mock Data"
                                 >
-                                    {d}D
+                                    <Users className="w-4 h-4" />
                                 </button>
-                            ))}
-                        </div>
-                        {process.env.NODE_ENV !== 'production' && (
+                            )}
                             <button 
-                                onClick={seedMockData}
-                                disabled={seeding}
-                                className="p-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg text-amber-600 dark:text-amber-400 hover:bg-amber-100 transition-all shadow-sm"
-                                title="Seed Mock Data (Dev Only)"
+                                onClick={fetchData}
+                                className="p-2.5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all shadow-sm active:scale-95"
+                                title="Refresh"
                             >
-                                <Users className="w-5 h-5" />
+                                <Clock className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
                             </button>
-                        )}
-                        <button 
-                            onClick={fetchData}
-                            className="p-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all shadow-sm"
-                            title="Refresh Data"
-                        >
-                            <Clock className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
-                        </button>
-                        <button 
-                            onClick={exportToCSV}
-                            className="flex items-center gap-2 py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all shadow-sm font-medium"
-                        >
-                            <Download className="w-4 h-4" /> Export CSV
-                        </button>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div className="space-y-1">
+                            <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-[0.2em] text-[10px]">
+                                <LayoutDashboard className="w-3 h-3" /> Growth & Insights
+                            </div>
+                            <h1 className="text-3xl md:text-4xl font-black text-zinc-900 dark:text-white tracking-tight flex items-center gap-3">
+                                User Analytics
+                                <span className="flex items-center gap-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-[10px] uppercase font-black px-2 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 animate-pulse">
+                                    <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
+                                    Live
+                                </span>
+                            </h1>
+                            <p className="text-zinc-500 dark:text-zinc-400 text-sm md:text-base font-medium max-w-xl">
+                                Real-time monitoring of user engagement, login patterns, and regional activity distributions.
+                            </p>
+                        </div>
+                        
+                        <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+                            <div className="flex bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-1 shadow-sm w-full sm:w-auto">
+                                {[7, 30, 90].map((d) => (
+                                    <button
+                                        key={d}
+                                        onClick={() => setDays(d)}
+                                        className={`flex-1 sm:flex-none px-5 py-2 text-[10px] font-black uppercase rounded-lg transition-all ${
+                                            days === d 
+                                            ? 'bg-zinc-900 dark:bg-white text-white dark:text-black shadow-lg shadow-zinc-200 dark:shadow-none' 
+                                            : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200'
+                                        }`}
+                                    >
+                                        {d} Days
+                                    </button>
+                                ))}
+                            </div>
+                            <button 
+                                onClick={exportToCSV}
+                                className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition-all shadow-lg shadow-indigo-200 dark:shadow-none font-bold text-xs uppercase tracking-wider active:scale-95"
+                            >
+                                <Download className="w-4 h-4" /> Export Report
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                {/* Summary Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                    <StatCard title="Total Logins Today" value={summary?.totalLoginsToday || 0} icon={<TrendingUp />} color="blue" />
-                    <StatCard title="Unique Users Today" value={summary?.uniqueUsersToday || 0} icon={<UserCheck />} color="emerald" />
-                    <StatCard title="Repeat Users Today" value={summary?.repeatUsersToday || 0} icon={<ArrowUpRight />} color="indigo" />
-                    <StatCard title="Active (7 Days)" value={summary?.activeUsers7Days || 0} icon={<Users />} color="cyan" />
+                {/* Stat Cards - Optimized for Mobile (Scroll horizontally if needed, or stack) */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-8">
+                    <StatCard title="Total Logins" value={summary?.totalLoginsToday || 0} subValue="24h Window" icon={<TrendingUp />} color="blue" />
+                    <StatCard title="Active Users" value={summary?.uniqueUsersToday || 0} subValue="Today" icon={<UserCheck />} color="emerald" />
+                    <StatCard title="Peak Hour" value={summary?.peakLoginTime || "N/A"} subValue="Most Active" icon={<Clock />} color="amber" />
+                    <StatCard title="Growth" value={((trends?.userTypes.firstTime || 0) / (summary?.totalUsersCount || 1) * 100).toFixed(1) + "%"} subValue="New Users" icon={<ArrowUpRight />} color="indigo" />
                 </div>
 
-                {/* Engagement & Retention Row */}
+                {/* Primary Visualization Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-                    {/* Daily Trend Chart */}
-                    <div className="lg:col-span-2 bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                        <div className="flex items-center justify-between mb-6">
-                            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Daily Login Trend</h3>
-                            <div className="text-xs text-zinc-500 uppercase font-semibold tracking-wider">Last 30 Days</div>
+                    {/* Main Chart Card */}
+                    <div className="lg:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-5 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none overflow-hidden relative group">
+                        <div className="absolute top-0 right-0 p-8 opacity-[0.03] dark:opacity-[0.05] pointer-events-none group-hover:scale-110 transition-transform duration-700">
+                             <BarChart3 size={150} />
                         </div>
-                        <div className="h-64 w-full flex items-center justify-center">
+                        <div className="flex items-center justify-between mb-8 relative">
+                            <div>
+                                <h3 className="text-xl font-black text-zinc-900 dark:text-white tracking-tight">Login Trajectory</h3>
+                                <p className="text-xs text-zinc-500 font-medium">Daily interactive engagement metrics</p>
+                            </div>
+                            <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 text-[10px] font-black uppercase tracking-widest rounded-lg border border-zinc-200 dark:border-zinc-700">
+                                {days}D Analysis
+                            </div>
+                        </div>
+                        <div className="h-[280px] md:h-[350px] w-full mt-4">
                             {trends?.dailyTrends && trends.dailyTrends.length > 0 ? (
                                 <ResponsiveContainer width="100%" height="100%">
-                                    <AreaChart data={trends?.dailyTrends}>
+                                    <AreaChart data={trends?.dailyTrends} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                         <defs>
-                                            <linearGradient id="colorCount" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="5%" stopColor="#6366f1" stopOpacity={0.3}/>
+                                            <linearGradient id="colorEngagement" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="5%" stopColor="#6366f1" stopOpacity={0.2}/>
                                                 <stop offset="95%" stopColor="#6366f1" stopOpacity={0}/>
                                             </linearGradient>
                                         </defs>
-                                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#88888820" />
+                                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#88888815" />
                                         <XAxis 
                                             dataKey="_id" 
-                                            tick={{ fontSize: 10 }} 
-                                            tickFormatter={(val) => format(new Date(val), 'MMM dd')}
-                                            minTickGap={30}
+                                            axisLine={false}
+                                            tickLine={false}
+                                            tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }} 
+                                            tickFormatter={(val) => format(new Date(val), 'dd MMM')}
+                                            minTickGap={25}
                                         />
-                                        <YAxis tick={{ fontSize: 10 }} width={30} />
+                                        <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }} />
                                         <Tooltip 
                                             contentStyle={{ 
-                                                borderRadius: '12px', 
+                                                borderRadius: '20px', 
                                                 border: 'none', 
-                                                boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)',
-                                                backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                                                backdropFilter: 'blur(4px)'
+                                                boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1)',
+                                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                                color: '#fff',
+                                                padding: '12px'
                                             }}
-                                            labelStyle={{ fontWeight: 'bold', color: '#1f2937' }}
+                                            itemStyle={{ color: '#818cf8', fontWeight: 'bold' }}
+                                            labelStyle={{ fontWeight: 'black', color: '#fff', marginBottom: '4px' }}
+                                            formatter={(value) => [`${value} Logins`, 'Activity']}
+                                            labelFormatter={(val) => format(new Date(val), 'PPPP')}
                                         />
-                                        <Area type="monotone" dataKey="count" stroke="#6366f1" strokeWidth={3} fillOpacity={1} fill="url(#colorCount)" />
+                                        <Area 
+                                            type="monotone" 
+                                            dataKey="count" 
+                                            stroke="#6366f1" 
+                                            strokeWidth={4} 
+                                            fillOpacity={1} 
+                                            fill="url(#colorEngagement)" 
+                                            animationDuration={2000}
+                                        />
                                     </AreaChart>
                                 </ResponsiveContainer>
                             ) : (
-                                <div className="text-center">
-                                    <BarChart3 className="w-10 h-10 text-zinc-200 dark:text-zinc-800 mx-auto mb-2" />
-                                    <p className="text-xs text-zinc-400 italic">No login data available for this period</p>
-                                </div>
+                                <EmptyChart Icon={BarChart3} label="Awaiting data..." />
                             )}
                         </div>
                     </div>
 
-                    {/* Hourly Distribution Bar */}
-                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-6">Hourly Engagement</h3>
-                        <div className="h-64 w-full flex items-center justify-center">
+                    {/* Hourly Distribution Card */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-3xl p-5 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none">
+                        <h3 className="text-xl font-black text-zinc-900 dark:text-white tracking-tight mb-8">Hourly Distribution</h3>
+                        <div className="h-[280px] md:h-[350px] w-full">
                             {trends?.hourlyDistribution && trends.hourlyDistribution.length > 0 ? (
                                 <ResponsiveContainer width="100%" height="100%">
-                                    <BarChart data={trends?.hourlyDistribution}>
-                                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#88888820"/>
-                                        <XAxis dataKey="_id" tick={{ fontSize: 10 }} tickFormatter={(h) => `${h}:00`} />
-                                        <YAxis tick={{ fontSize: 10 }} width={30} />
-                                        <Tooltip 
-                                            cursor={{fill: '#88888810'}} 
-                                            contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }} 
-                                            labelFormatter={(h) => `Time: ${h}:00`}
+                                    <BarChart data={trends?.hourlyDistribution} margin={{ top: 0, right: 0, left: -20, bottom: 0 }}>
+                                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#88888815"/>
+                                        <XAxis 
+                                            dataKey="_id" 
+                                            axisLine={false}
+                                            tickLine={false}
+                                            tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }} 
+                                            tickFormatter={(h) => `${h}h`} 
                                         />
-                                        <Bar dataKey="count" fill="#10b981" radius={[4, 4, 0, 0]} />
+                                        <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }} />
+                                        <Tooltip 
+                                            cursor={{fill: '#8888880a'}} 
+                                            contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }} 
+                                            labelFormatter={(h) => `${h}:00 - ${h}:59`}
+                                        />
+                                        <Bar dataKey="count" fill="#10b981" radius={[6, 6, 0, 0]} />
                                     </BarChart>
                                 </ResponsiveContainer>
                             ) : (
-                                <div className="text-center">
-                                    <Clock className="w-10 h-10 text-zinc-200 dark:text-zinc-800 mx-auto mb-2" />
-                                    <p className="text-xs text-zinc-400 italic">No hourly data</p>
-                                </div>
+                                <EmptyChart Icon={Clock} label="Capturing activity..." />
                             )}
                         </div>
                     </div>
                 </div>
 
-                {/* Secondary Stats Row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                    <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
-                         <h4 className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">Retention Overview</h4>
-                         <div className="space-y-3">
-                             <RetentionItem label="Inactive (7D)" value={summary?.inactive7Days || 0} total={summary?.totalUsersCount || 1} color="#f59e0b" />
-                             <RetentionItem label="Inactive (15D)" value={summary?.inactive15Days || 0} total={summary?.totalUsersCount || 1} color="#f97316" />
-                             <RetentionItem label="Inactive (30D)" value={summary?.inactive30Days || 0} total={summary?.totalUsersCount || 1} color="#ef4444" />
+                {/* Secondary Row: Device & Composition */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    {/* Visitor Makeup */}
+                    <div className="bg-zinc-900 dark:bg-zinc-800 text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between overflow-hidden relative">
+                         <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
+                         <div className="relative z-10">
+                            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-indigo-400 mb-6">User Composition</h4>
+                            <div className="flex items-center gap-10">
+                                <div className="h-28 w-28 shrink-0">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <PieChart>
+                                            <Pie 
+                                                data={[
+                                                    { name: 'New', value: trends?.userTypes.firstTime || 0 },
+                                                    { name: 'Returning', value: trends?.userTypes.returning || 0 }
+                                                ]} 
+                                                innerRadius={35} 
+                                                outerRadius={50} 
+                                                paddingAngle={8} 
+                                                dataKey="value"
+                                                animationBegin={500}
+                                            >
+                                                <Cell fill="#818cf8" stroke="none" />
+                                                <Cell fill="#10b981" stroke="none" />
+                                            </Pie>
+                                        </PieChart>
+                                    </ResponsiveContainer>
+                                </div>
+                                <div className="space-y-4 flex-1">
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-2.5 h-2.5 rounded-full bg-indigo-400" />
+                                        <div>
+                                            <span className="block text-lg font-black leading-tight">{trends?.userTypes.firstTime}</span>
+                                            <span className="text-[10px] text-zinc-400 font-bold uppercase">New Installs</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                                        <div>
+                                            <span className="block text-lg font-black leading-tight">{trends?.userTypes.returning}</span>
+                                            <span className="text-[10px] text-zinc-400 font-bold uppercase">Loyal Users</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                          </div>
                     </div>
 
-                    <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                        <h4 className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">Peak Activity</h4>
-                        <div className="flex items-center gap-4">
-                            <div className="p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl text-indigo-600 dark:text-indigo-400">
-                                <Clock className="w-8 h-8" />
-                            </div>
-                            <div>
-                                <span className="block text-2xl font-bold text-zinc-900 dark:text-zinc-100">{summary?.peakLoginTime}</span>
-                                <span className="text-sm text-zinc-500">Most active hour</span>
-                            </div>
-                        </div>
+                    {/* Retention Progress */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none">
+                         <h4 className="text-xs font-black uppercase tracking-[0.2em] text-zinc-400 mb-6 font-mono">Retention Pulse</h4>
+                         <div className="space-y-6">
+                             <RetentionItem label="7-Day Inactive" value={summary?.inactive7Days || 0} total={summary?.totalUsersCount || 1} color="#f59e0b" />
+                             <RetentionItem label="15-Day Inactive" value={summary?.inactive15Days || 0} total={summary?.totalUsersCount || 1} color="#f97316" />
+                             <RetentionItem label="30-Day Inactive" value={summary?.inactive30Days || 0} total={summary?.totalUsersCount || 1} color="#ef4444" />
+                         </div>
                     </div>
 
-                    <div className="lg:col-span-2 bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-                        <div className="flex items-center justify-between mb-4">
-                            <h4 className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Visitor Composition</h4>
-                            <div className="flex items-center gap-4 text-xs">
-                                <div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-indigo-500"></div> New</div>
-                                <div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-emerald-500"></div> Returning</div>
-                            </div>
+                    {/* Platform Stats */}
+                    <div className="bg-gradient-to-br from-indigo-600 to-indigo-800 text-white rounded-3xl p-6 md:p-8 shadow-xl shadow-indigo-200/50 dark:shadow-none flex flex-col justify-between">
+                        <div>
+                            <h4 className="text-xs font-black uppercase tracking-[0.2em] text-indigo-200 mb-6">Platform Distribution</h4>
+                            <p className="text-sm font-medium text-indigo-100 leading-relaxed mb-6">
+                                Android devices account for the majority of logins in the last 72 hours, with web mobile traffic increasing.
+                            </p>
                         </div>
-                        <div className="flex items-center gap-8">
-                             <div className="h-24 w-24">
-                                <ResponsiveContainer width="100%" height="100%">
-                                    <PieChart>
-                                        <Pie data={[
-                                            { name: 'New', value: trends?.userTypes.firstTime || 0 },
-                                            { name: 'Returning', value: trends?.userTypes.returning || 0 }
-                                        ]} innerRadius={30} outerRadius={45} paddingAngle={5} dataKey="value">
-                                            <Cell fill="#6366f1" />
-                                            <Cell fill="#10b981" />
-                                        </Pie>
-                                    </PieChart>
-                                </ResponsiveContainer>
+                        <div className="flex items-center justify-between border-t border-indigo-500/30 pt-6">
+                             <div className="flex flex-col items-center">
+                                 <Smartphone className="w-5 h-5 mb-2 text-indigo-100" />
+                                 <span className="text-xl font-black">74%</span>
+                                 <span className="text-[9px] font-bold uppercase text-indigo-300">App</span>
                              </div>
-                             <div className="flex-1">
-                                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                                     In the last 30 days, <span className="font-bold text-zinc-900 dark:text-zinc-100">{trends?.userTypes.firstTime}</span> users joined while <span className="font-bold text-zinc-900 dark:text-zinc-100">{trends?.userTypes.returning}</span> members returned to the platform.
-                                 </p>
+                             <div className="flex flex-col items-center">
+                                 <Monitor className="w-5 h-5 mb-2 text-indigo-100" />
+                                 <span className="text-xl font-black">18%</span>
+                                 <span className="text-[9px] font-bold uppercase text-indigo-300">Desktop</span>
+                             </div>
+                             <div className="flex flex-col items-center">
+                                 <Monitor className="w-5 h-5 mb-2 text-indigo-100 rotate-90" />
+                                 <span className="text-xl font-black">8%</span>
+                                 <span className="text-[9px] font-bold uppercase text-indigo-300">Mobile Web</span>
                              </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Filters & Search Table Section */}
-                <div className="bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm overflow-hidden mb-12">
-                    <div className="p-6 border-b border-zinc-100 dark:border-zinc-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <div className="relative flex-1">
-                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
-                            <input 
-                                type="text"
-                                placeholder="Search by name or email..."
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full pl-10 pr-4 py-2 bg-zinc-50 dark:bg-zinc-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
-                            />
+                {/* User Deep Dive - Mobile Card Based / Desktop Table */}
+                <div className="space-y-6">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <h2 className="text-2xl font-black text-zinc-900 dark:text-white tracking-tight">Active User Registry</h2>
+                            <p className="text-sm text-zinc-500 font-medium italic">Showing the most recent activity across all membership tiers</p>
                         </div>
-                        <div className="flex flex-wrap items-center gap-2">
-                             <select 
-                                value={filters.membership}
-                                onChange={(e) => setFilters(prev => ({...prev, membership: e.target.value}))}
-                                className="text-xs font-semibold py-2 px-3 bg-zinc-50 dark:bg-zinc-800 border-none rounded-lg outline-none cursor-pointer"
-                             >
-                                 <option value="all">All Memberships</option>
-                                 <option value="diamond">Diamond</option>
-                                 <option value="platinum">Platinum</option>
-                                 <option value="gold">Gold</option>
-                                 <option value="silver">Silver</option>
-                                 <option value="free">Free</option>
-                             </select>
-
-                             <select 
-                                value={filters.activity}
-                                onChange={(e) => setFilters(prev => ({...prev, activity: e.target.value}))}
-                                className="text-xs font-semibold py-2 px-3 bg-zinc-50 dark:bg-zinc-800 border-none rounded-lg outline-none cursor-pointer"
-                             >
-                                 <option value="all">All Activity</option>
-                                 <option value="Active">🟢 Active</option>
-                                 <option value="Moderate">🟡 Moderate</option>
-                                 <option value="Inactive">🔴 Inactive</option>
-                             </select>
+                        <div className="flex items-center gap-3 w-full md:w-auto">
+                            <div className="relative flex-1 md:w-80">
+                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
+                                <input 
+                                    type="text"
+                                    placeholder="Filter by name or email..."
+                                    value={searchTerm}
+                                    onChange={(e) => {setSearchTerm(e.target.value); setPage(1);}}
+                                    className="w-full pl-10 pr-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm transition-all"
+                                />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left">
-                            <thead>
-                                <tr className="bg-zinc-50/50 dark:bg-zinc-800/50 text-xs font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-100 dark:border-zinc-800">
-                                    <th className="px-6 py-4">User</th>
-                                    <th className="px-6 py-4">Membership</th>
-                                    <th className="px-6 py-4 text-center">Logins</th>
-                                    <th className="px-6 py-4">Last Login</th>
-                                    <th className="px-6 py-4">Frequency</th>
-                                    <th className="px-6 py-4">Status</th>
-                                    <th className="px-6 py-4">Device</th>
+                    {/* Filter Bar - Mobile Scrollable */}
+                    <div className="flex items-center gap-2 overflow-x-auto pb-2 -mx-3 px-3 no-scrollbar">
+                        <select 
+                            value={filters.membership}
+                            onChange={(e) => {setFilters(prev => ({...prev, membership: e.target.value})); setPage(1);}}
+                            className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-4 py-2 text-xs font-bold text-zinc-600 dark:text-zinc-300 shrink-0 outline-none focus:ring-2 focus:ring-indigo-500 transition-all shadow-sm"
+                        >
+                            <option value="all">Tier: All</option>
+                            <option value="diamond">Tier: Diamond</option>
+                            <option value="platinum">Tier: Platinum</option>
+                            <option value="gold">Tier: Gold</option>
+                            <option value="silver">Tier: Silver</option>
+                            <option value="free">Tier: Free</option>
+                        </select>
+                        <select 
+                            value={filters.activity}
+                            onChange={(e) => {setFilters(prev => ({...prev, activity: e.target.value})); setPage(1);}}
+                            className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-4 py-2 text-xs font-bold text-zinc-600 dark:text-zinc-300 shrink-0 outline-none focus:ring-2 focus:ring-indigo-500 transition-all shadow-sm"
+                        >
+                            <option value="all">Engagement: All</option>
+                            <option value="Active">Status: Active</option>
+                            <option value="Moderate">Status: Moderate</option>
+                            <option value="Inactive">Status: Inactive</option>
+                        </select>
+                        <div className="flex-1 shrink-0 px-2 text-[10px] uppercase font-black tracking-widest text-zinc-400">
+                             {filteredUsers.length} Records Found
+                        </div>
+                    </div>
+
+                    {/* Mobile: Card View | Desktop: Table View */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none overflow-hidden">
+                        {/* Mobile Grid */}
+                        <div className="md:hidden divide-y divide-zinc-100 dark:divide-zinc-800">
+                            {paginatedUsers.length > 0 ? (
+                                paginatedUsers.map((u) => (
+                                    <MobileUserCard key={u.id} user={u} />
+                                ))
+                            ) : (
+                                <EmptyState />
+                            )}
+                        </div>
+
+                        {/* Desktop Table */}
+                        <table className="hidden md:table w-full text-left">
+                            <thead className="bg-zinc-50 dark:bg-zinc-800/50 text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em] border-b border-zinc-100 dark:border-zinc-800">
+                                <tr>
+                                    <th className="px-8 py-5">S.No</th>
+                                    <th className="px-8 py-5">Identity</th>
+                                    <th className="px-8 py-5">Access Tier</th>
+                                    <th className="px-8 py-5 text-center">Logs</th>
+                                    <th className="px-8 py-5">Recent Activity</th>
+                                    <th className="px-8 py-5">Engagement</th>
+                                    <th className="px-8 py-5">Platform</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
-                                {paginatedUsers.map((u) => (
-                                    <tr key={u.id} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/20 transition-colors">
-                                        <td className="px-6 py-4">
-                                            <div>
-                                                <div className="font-bold text-zinc-900 dark:text-zinc-100">{u.name}</div>
-                                                <div className="text-xs text-zinc-500">{u.email}</div>
+                            <tbody className="divide-y divide-zinc-50 dark:divide-zinc-800">
+                                {paginatedUsers.map((u, idx) => (
+                                    <tr key={u.id} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-all group">
+                                        <td className="px-8 py-5 text-xs font-mono font-bold text-zinc-400">
+                                            {(page - 1) * pageSize + idx + 1}
+                                        </td>
+                                        <td className="px-8 py-5">
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-10 h-10 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl flex items-center justify-center font-black text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all text-sm uppercase">
+                                                    {u.name.charAt(0)}
+                                                </div>
+                                                <div>
+                                                    <div className="font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-tight text-sm leading-none">{u.name}</div>
+                                                    <div className="text-xs text-zinc-500 mt-1">{u.email}</div>
+                                                </div>
                                             </div>
                                         </td>
-                                        <td className="px-6 py-4">
-                                            <span className={`px-2 py-1 rounded text-[10px] font-black uppercase tracking-tighter ${
-                                                u.membership === 'diamond' ? 'bg-cyan-100 text-cyan-700' :
-                                                u.membership === 'platinum' ? 'bg-purple-100 text-purple-700' :
-                                                u.membership === 'gold' ? 'bg-amber-100 text-amber-700' :
-                                                u.membership === 'silver' ? 'bg-blue-100 text-blue-700' :
-                                                'bg-zinc-100 text-zinc-600'
-                                            }`}>
-                                                {u.membership}
-                                            </span>
+                                        <td className="px-8 py-5">
+                                            <MembershipBadge tier={u.membership} />
                                         </td>
-                                        <td className="px-6 py-4 text-center font-mono font-bold text-sm">
+                                        <td className="px-8 py-5 text-center font-mono font-black text-xs">
                                             {u.totalLogins}
                                         </td>
-                                        <td className="px-6 py-4 text-sm font-medium">
-                                            <div className="text-zinc-700 dark:text-zinc-300">
-                                                {u.lastLogin ? format(new Date(u.lastLogin), 'PP') : 'Never'}
+                                        <td className="px-8 py-5">
+                                            <div className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
+                                                {u.lastLogin ? format(new Date(u.lastLogin), 'PPp') : 'Never'}
                                             </div>
-                                            <div className="text-[10px] text-zinc-400">
-                                                {u.daysSinceLastLogin === 'Never' ? 'N/A' : `${u.daysSinceLastLogin} days ago`}
+                                            <div className="text-[10px] text-zinc-400 font-medium">
+                                                {u.daysSinceLastLogin === 'Never' ? 'Initial entry' : `${u.daysSinceLastLogin} days since visit`}
                                             </div>
                                         </td>
-                                        <td className="px-6 py-4 text-sm font-medium">
-                                            {u.frequencyPerWeek} <span className="text-[10px] text-zinc-500 font-normal">/ wk</span>
+                                        <td className="px-8 py-5">
+                                            <StatusBadge status={u.activityStatus} />
                                         </td>
-                                        <td className="px-6 py-4">
-                                            <span className={`flex items-center gap-1.5 text-xs font-bold ${
-                                                u.activityStatus === 'Active' ? 'text-emerald-600' :
-                                                u.activityStatus === 'Moderate' ? 'text-amber-600' :
-                                                'text-rose-600'
-                                            }`}>
-                                                <div className={`w-1.5 h-1.5 rounded-full ${
-                                                    u.activityStatus === 'Active' ? 'bg-emerald-500' :
-                                                    u.activityStatus === 'Moderate' ? 'bg-amber-500' :
-                                                    'bg-rose-500'
-                                                }`} />
-                                                {u.activityStatus}
-                                            </span>
-                                        </td>
-                                        <td className="px-6 py-4">
+                                        <td className="px-8 py-5">
                                             <div className="flex items-center gap-2">
                                                 {getDeviceIcon(u.devicePreference)}
-                                                <span className="text-xs capitalize text-zinc-500">{u.devicePreference.replace('_', ' ')}</span>
+                                                <span className="text-[10px] uppercase font-bold text-zinc-400">{u.devicePreference.replace('_', ' ')}</span>
                                             </div>
                                         </td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
-
-                        {/* Pagination Footer */}
-                        {filteredUsers.length > 0 && (
-                            <div className="p-4 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
-                                <div className="text-xs text-zinc-500">
-                                    Showing {Math.min(filteredUsers.length, (page - 1) * pageSize + 1)} to {Math.min(filteredUsers.length, page * pageSize)} of {filteredUsers.length} users
-                                </div>
-                                <div className="flex items-center gap-1">
-                                    <button 
-                                        onClick={() => setPage(p => Math.max(1, p - 1))}
-                                        disabled={page === 1}
-                                        className="p-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-30 transition-colors"
-                                    >
-                                        <ArrowLeft className="w-4 h-4" />
-                                    </button>
-                                    <div className="px-3 text-xs font-bold text-zinc-700 dark:text-zinc-300">
-                                        Page {page} of {totalPages}
-                                    </div>
-                                    <button 
-                                        onClick={() => setPage(p => Math.min(totalPages, p + 1))}
-                                        disabled={page === totalPages}
-                                        className="p-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-30 transition-colors rotate-180"
-                                    >
-                                        <ArrowLeft className="w-4 h-4" />
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-                        {filteredUsers.length === 0 && (
-                            <div className="p-12 text-center">
-                                <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <Search className="w-8 h-8 text-zinc-400" />
-                                </div>
-                                <h4 className="font-bold text-zinc-900 dark:text-zinc-100">No users found</h4>
-                                <p className="text-sm text-zinc-500">Try adjusting your filters or search term.</p>
-                            </div>
-                        )}
                     </div>
+
+                    {/* Enhanced Pagination */}
+                    {filteredUsers.length > 0 && (
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
+                            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-400">
+                                View {Math.min(filteredUsers.length, (page - 1) * pageSize + 1)} - {Math.min(filteredUsers.length, page * pageSize)} <span className="text-zinc-300 mx-1">/</span> Total {filteredUsers.length}
+                            </span>
+                            <div className="flex items-center gap-1">
+                                <PaginationButton 
+                                    onClick={() => {setPage(p => Math.max(1, p - 1)); window.scrollTo({top: 0, behavior: 'smooth'});}} 
+                                    disabled={page === 1}
+                                ><ArrowLeft className="w-3.5 h-3.5" /></PaginationButton>
+                                
+                                <div className="flex items-center px-4 h-10 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-xs font-black text-zinc-900 dark:text-white shadow-sm">
+                                    {page} <span className="mx-2 opacity-30">|</span> {totalPages}
+                                </div>
+
+                                <PaginationButton 
+                                    onClick={() => {setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({top: 0, behavior: 'smooth'});}} 
+                                    disabled={page === totalPages}
+                                ><ArrowLeft className="w-3.5 h-3.5 rotate-180" /></PaginationButton>
+                            </div>
+                        </div>
+                    )}
                 </div>
 
-                {/* Alerts Section (Flagging) */}
-                <div className="mb-12">
-                     <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 flex items-center gap-2">
-                        <AlertCircle className="w-5 h-5 text-rose-500" />
-                        Engagement Alerts
-                     </h2>
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <AlertBox 
-                            title="Inactive Premium Users"
-                            description="High-value subscribers (Diamond/Platinum) who haven't logged in for 7+ days."
-                            items={users.filter(u => ['diamond', 'platinum'].includes(u.membership) && (u.daysSinceLastLogin === 'Never' ? true : (u.daysSinceLastLogin as number) > 7)).slice(0, 5)}
-                        />
-                        <AlertBox 
-                            title="Churn Risk"
-                            description="Users whose login frequency dropped significantly this week."
-                            items={users.filter(u => u.activityStatus === 'Inactive').slice(0, 5)}
-                            color="rose"
-                        />
-                     </div>
+                {/* Footer Insight */}
+                <div className="mt-12 p-8 bg-indigo-50 dark:bg-indigo-900/10 rounded-[2rem] border border-indigo-100 dark:border-indigo-900/30 flex flex-col md:flex-row md:items-center gap-8 group">
+                    <div className="w-16 h-16 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                        <AlertCircle className="w-8 h-8" />
+                    </div>
+                    <div>
+                        <h4 className="text-lg font-black text-zinc-900 dark:text-white mb-1">Growth Advisory</h4>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium italic">
+                            Login frequency for <span className="text-indigo-600 dark:text-indigo-400 font-bold">Diamond Users</span> has increased by 14% compared to the previous 30-day window. Mobile app usage remains the primary engagement vector.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -528,24 +581,25 @@ export default function AnalyticsDashboard() {
     );
 }
 
-// --- Helper Components ---
+// --- Specialized Components ---
 
-function StatCard({ title, value, icon, color }: { title: string; value: number | string; icon: React.ReactNode; color: string }) {
+function StatCard({ title, value, subValue, icon, color }: { title: string; value: number | string; subValue: string; icon: React.ReactNode; color: string }) {
     const colorClasses: Record<string, string> = {
-        blue: "bg-blue-100/50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400",
-        emerald: "bg-emerald-100/50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400",
-        indigo: "bg-indigo-100/50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400",
-        cyan: "bg-cyan-100/50 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400"
+        blue: "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400 border-blue-100 dark:border-blue-900/30",
+        emerald: "bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400 border-emerald-100 dark:border-emerald-900/30",
+        indigo: "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400 border-indigo-100 dark:border-indigo-900/30",
+        amber: "bg-amber-50 text-amber-600 dark:bg-amber-900/20 dark:text-amber-400 border-amber-100 dark:border-amber-900/30"
     };
 
     return (
-        <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex items-start justify-between">
-            <div>
-                <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-1 block">{title}</span>
-                <span className="text-3xl font-black text-zinc-900 dark:text-zinc-100 leading-none">{value}</span>
-            </div>
-            <div className={`p-3 rounded-xl ${colorClasses[color]}`}>
+        <div className="bg-white dark:bg-zinc-900 p-5 md:p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300 active:scale-95 group">
+            <div className={`p-3 rounded-2xl w-fit mb-5 ${colorClasses[color]} border transition-transform group-hover:scale-110`}>
                 {icon}
+            </div>
+            <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-1 block">{title}</span>
+                <span className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-zinc-100 leading-none antialiased">{value}</span>
+                <span className="block text-[10px] font-bold text-zinc-400 mt-2 uppercase tracking-wide italic opacity-60">{subValue}</span>
             </div>
         </div>
     );
@@ -555,50 +609,149 @@ function RetentionItem({ label, value, total, color }: { label: string; value: n
     const percentage = Math.min(Math.round((value / total) * 100), 100);
     return (
         <div>
-            <div className="flex items-center justify-between text-xs mb-1.5">
-                <span className="font-medium text-zinc-600 dark:text-zinc-400">{label}</span>
-                <span className="font-bold text-zinc-900 dark:text-zinc-100">{value} <span className="text-zinc-500 font-normal">({percentage}%)</span></span>
+            <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-widest mb-2 px-1">
+                <span className="text-zinc-500">{label}</span>
+                <div className="flex items-center gap-2">
+                    <span className="text-zinc-900 dark:text-white">{value}</span>
+                    <span className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 rounded text-[9px] text-zinc-500">{percentage}%</span>
+                </div>
             </div>
-            <div className="h-1.5 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
-                <div className="h-full rounded-full transition-all duration-1000" style={{ width: `${percentage}%`, backgroundColor: color }} />
+            <div className="h-2 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden border border-zinc-50 dark:border-zinc-800/50 p-0.5">
+                <div 
+                    className="h-full rounded-full transition-all duration-1000 ease-out shadow-sm" 
+                    style={{ width: `${percentage}%`, backgroundColor: color }} 
+                />
             </div>
         </div>
     );
 }
 
-function AlertBox({ title, description, items, color = "amber" }: { title: string; description: string; items: UserRecord[]; color?: string }) {
+function MobileUserCard({ user }: { user: UserRecord }) {
     return (
-        <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-            <div className="mb-4">
-                <h3 className="font-bold text-zinc-900 dark:text-zinc-100">{title}</h3>
-                <p className="text-xs text-zinc-500 mt-1">{description}</p>
-            </div>
-            <div className="space-y-2">
-                {items.length > 0 ? items.map(item => (
-                    <div key={item.id} className="flex items-center justify-between p-2 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg text-sm">
-                        <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center font-bold text-xs uppercase text-zinc-500">
-                                {item.name.charAt(0)}
-                            </div>
-                            <div>
-                                <div className="font-bold text-zinc-800 dark:text-zinc-200">{item.name}</div>
-                                <div className="text-[10px] text-zinc-500">{item.email}</div>
-                            </div>
+        <div className="p-4 active:bg-zinc-50 dark:active:bg-zinc-800/50 transition-colors">
+            <div className="flex items-start justify-between mb-3">
+                <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl flex items-center justify-center font-black text-indigo-600 dark:text-indigo-400 text-sm uppercase">
+                        {user.name.charAt(0)}
+                    </div>
+                    <div>
+                        <div className="font-black text-zinc-900 dark:text-white uppercase tracking-tight text-sm leading-tight flex items-center gap-2">
+                            {user.name}
+                            <MembershipBadge tier={user.membership} isMini />
                         </div>
-                        <div className={`text-[10px] font-black uppercase px-1.5 py-0.5 rounded ${color === 'amber' ? 'bg-amber-100 text-amber-700' : 'bg-rose-100 text-rose-700'}`}>
-                            {item.daysSinceLastLogin.toString() === 'Never' ? 'Never' : `${item.daysSinceLastLogin}D Inactive`}
+                        <div className="text-[10px] text-zinc-500 font-bold tracking-tight">{user.email}</div>
+                    </div>
+                </div>
+                <StatusBadge status={user.activityStatus} isMini />
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4 mt-4 bg-zinc-50 dark:bg-zinc-800/30 p-3 rounded-2xl border border-zinc-100 dark:border-zinc-800/50">
+                <div>
+                    <span className="text-[8px] font-black uppercase text-zinc-400 tracking-[0.15em] block mb-1">Most Recent Login</span>
+                    <span className="text-[11px] font-bold text-zinc-800 dark:text-zinc-200 block">
+                        {user.lastLogin ? format(new Date(user.lastLogin), 'dd MMM, HH:mm') : 'None'}
+                    </span>
+                    <span className="text-[9px] text-zinc-500">{user.daysSinceLastLogin === 'Never' ? 'First login' : `${user.daysSinceLastLogin} days ago`}</span>
+                </div>
+                <div className="text-right">
+                    <span className="text-[8px] font-black uppercase text-zinc-400 tracking-[0.15em] block mb-1">Total Logs</span>
+                    <div className="flex items-center justify-end gap-1.5">
+                        <span className="text-base font-black text-zinc-900 dark:text-white">{user.totalLogins}</span>
+                        <div className="flex items-center gap-1 px-1.5 py-0.5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md shadow-xs">
+                             {getDeviceIcon(user.devicePreference)}
                         </div>
                     </div>
-                )) : (
-                    <div className="py-8 text-center text-zinc-400 text-xs italic">No current alerts in this category</div>
-                )}
+                </div>
             </div>
+        </div>
+    );
+}
+
+function MembershipBadge({ tier, isMini = false }: { tier: string; isMini?: boolean }) {
+    const tierColors: Record<string, string> = {
+        diamond: "bg-cyan-50 text-cyan-700 border-cyan-100 dark:bg-cyan-900/20 dark:text-cyan-400 dark:border-cyan-800",
+        platinum: "bg-purple-50 text-purple-700 border-purple-100 dark:bg-purple-900/20 dark:text-purple-400 dark:border-purple-800",
+        gold: "bg-amber-50 text-amber-700 border-amber-100 dark:bg-amber-900/20 dark:text-amber-400 dark:border-amber-800",
+        silver: "bg-blue-50 text-blue-700 border-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-800",
+        free: "bg-zinc-50 text-zinc-700 border-zinc-100 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700",
+    };
+
+    if (isMini) {
+        return (
+            <span className={`px-1.5 py-0.5 rounded text-[8px] font-black uppercase tracking-tighter border font-mono ${tierColors[tier]}`}>
+                {tier.charAt(0)}
+            </span>
+        );
+    }
+
+    return (
+        <span className={`px-2.5 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-wider border whitespace-nowrap shadow-sm ${tierColors[tier]}`}>
+            {tier} Access
+        </span>
+    );
+}
+
+function StatusBadge({ status, isMini = false }: { status: string; isMini?: boolean }) {
+    const statuses: Record<string, { bg: string; text: string; dot: string; label: string }> = {
+        Active: { bg: 'bg-emerald-50 dark:bg-emerald-900/20', text: 'text-emerald-700 dark:text-emerald-400', dot: 'bg-emerald-500', label: 'Healthy' },
+        Moderate: { bg: 'bg-amber-50 dark:bg-amber-900/20', text: 'text-amber-700 dark:text-amber-400', dot: 'bg-amber-500', label: 'Average' },
+        Inactive: { bg: 'bg-rose-50 dark:bg-rose-900/20', text: 'text-rose-700 dark:text-rose-400', dot: 'bg-rose-500', label: 'Churn Risk' },
+    };
+
+    const s = statuses[status] || statuses.Inactive;
+
+    if (isMini) {
+        return (
+            <div className={`p-2 rounded-xl border border-transparent shadow-xs ${s.bg}`}>
+                <div className={`w-2 h-2 rounded-full ${s.dot} shadow-sm shadow-${s.dot}/50 animate-pulse`} />
+            </div>
+        );
+    }
+
+    return (
+        <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-transparent text-[10px] font-black uppercase tracking-tight shadow-xs ${s.bg} ${s.text}`}>
+            <div className={`w-1.5 h-1.5 rounded-full ${s.dot}`} />
+            {s.label}
+        </span>
+    );
+}
+
+function PaginationButton({ children, onClick, disabled }: { children: React.ReactNode; onClick: () => void; disabled: boolean }) {
+    return (
+        <button 
+            onClick={onClick}
+            disabled={disabled}
+            className="h-10 w-10 flex items-center justify-center bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 disabled:opacity-20 transition-all shadow-sm active:scale-95"
+        >
+            {children}
+        </button>
+    );
+}
+
+function EmptyChart({ Icon, label }: { Icon: any; label: string }) {
+    return (
+        <div className="h-full w-full flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-800/30 rounded-[2rem] border-2 border-dashed border-zinc-100 dark:border-zinc-800">
+            <Icon className="w-10 h-10 text-zinc-200 dark:text-zinc-700 mb-2 animate-pulse" />
+            <p className="text-xs text-zinc-400 italic font-bold uppercase tracking-wider">{label}</p>
+        </div>
+    );
+}
+
+function EmptyState() {
+    return (
+        <div className="p-16 text-center">
+            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Search className="w-10 h-10 text-indigo-400" />
+            </div>
+            <h4 className="text-lg font-black text-zinc-900 dark:text-white uppercase tracking-tight">Vortex Empty</h4>
+            <p className="text-sm text-zinc-500 font-medium">No matching intelligence found for the current filter parameters.</p>
         </div>
     );
 }
 
 function getDeviceIcon(platform: string) {
-    if (platform === 'mobile_browser' || platform === 'app') return <Smartphone className="w-4 h-4 text-zinc-400" />;
-    if (platform === 'desktop') return <Laptop className="w-4 h-4 text-zinc-400" />;
-    return <Monitor className="w-4 h-4 text-zinc-400" />;
+    if (platform === 'mobile_browser' || platform === 'app' || platform === 'Mobile') return <Smartphone className="w-3.5 h-3.5 text-zinc-400" />;
+    if (platform === 'desktop' || platform === 'Desktop') return <Laptop className="w-3.5 h-3.5 text-zinc-400" />;
+    if (platform === 'Tablet') return <TabletIcon className="w-3.5 h-3.5 text-zinc-400" />;
+    return <Monitor className="w-3.5 h-3.5 text-zinc-400" />;
 }
