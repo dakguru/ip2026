@@ -363,7 +363,7 @@ export default function AnalyticsDashboard() {
                                         <div className="w-2.5 h-2.5 rounded-full bg-indigo-400" />
                                         <div>
                                             <span className="block text-lg font-black leading-tight">{trends?.userTypes.firstTime}</span>
-                                            <span className="text-[10px] text-zinc-400 font-bold uppercase">New Installs</span>
+                                            <span className="text-[10px] text-zinc-400 font-bold uppercase">New Users</span>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-2">
