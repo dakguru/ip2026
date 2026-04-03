@@ -181,7 +181,7 @@ export default function MockTestsPage() {
 
             if (now > sundayDate) {
                 status = 'completed';
-            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28'))) {
+            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-04-04' || calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28'))) {
                 status = 'live';
             } else {
                 status = 'upcoming';
@@ -1337,8 +1337,10 @@ function MockTestCard({
 
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
-                {/* Top 7 Rank Holders Button — enabled only after March 30, 2026 00:00 for Mock 11 */}
-                {isEnded && onShowRankList && !(mock.id === 'mock-2026-03-28' && new Date() < new Date('2026-03-30T00:00:00+05:30')) && (
+                {/* Top 7 Rank Holders Button — enabled only after March 30, 2026 00:00 for Mock 11 OR after Sunday for PSGB tests */}
+                {isEnded && onShowRankList && !(mock.id === 'mock-2026-03-28' && new Date() < new Date('2026-03-30T00:00:00+05:30')) && 
+                 !(mock.id === 'mock-2026-04-04' && new Date() < new Date('2026-04-06T00:00:00+05:30')) && 
+                 !(mock.id.startsWith('psgb-mock-') && new Date() <= mock.endDate) && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         className="w-full py-2.5 sm:py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all transform hover:scale-[1.02] active:scale-95 px-2 mb-2"
@@ -1502,8 +1504,17 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
         new Date() >= new Date('2026-03-28T00:00:00+05:30') &&
         new Date() < new Date('2026-03-30T00:00:00+05:30');
 
-    // Non-admin users cannot see leaderboard during Mock 11 live window
-    const isLeaderboardBlocked = isMock11LiveWindow && role !== 'admin';
+    // Determine if Mock 12 is currently in its live window (Apr 04 00:00 IST – Apr 05 23:59 IST)
+    const isMock12LiveWindow = mock?.id === 'mock-2026-04-04' &&
+        new Date() >= new Date('2026-04-04T00:00:00+05:30') &&
+        new Date() < new Date('2026-04-06T00:00:00+05:30');
+
+    const isPsgbLiveWindow = mock?.id.startsWith('psgb-mock-') &&
+        new Date() >= mock.startDate &&
+        new Date() <= mock.endDate;
+
+    // Non-admin users cannot see leaderboard during Mock 11, Mock 12 or PSGB live window
+    const isLeaderboardBlocked = (isMock11LiveWindow || isMock12LiveWindow || isPsgbLiveWindow) && role !== 'admin';
 
     useEffect(() => {
         let intervalId: NodeJS.Timeout;
@@ -1572,7 +1583,7 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
                                 The leaderboard is being monitored exclusively by the Admin during the live test window.
                             </p>
                             <p className="text-xs font-bold text-amber-600 dark:text-amber-400 mt-3 bg-amber-50 dark:bg-amber-900/20 px-4 py-2 rounded-xl border border-amber-100 dark:border-amber-800">
-                                🏆 Top 7 Rankers will be revealed on 30 Mar 2026
+                                🏆 Top 7 Rankers will be revealed after the live test concludes
                             </p>
                         </div>
                     ) : loading ? (
@@ -1795,12 +1806,17 @@ function PsgbMockTestPage({
         return PSGB_MOCK_SCHEDULE.map(week => {
             const satDate = new Date(week.saturdayDate + 'T00:00:00');
             const sunDate = endOfDay(new Date(week.sundayDate + 'T00:00:00'));
-            const testId = `psgb-mock-${week.week.toString().padStart(2, '0')}`;
+            const testId = `psgb-mock-${week.sundayDate}`;
+            const isAdmin = role === 'admin';
+            const isWeek01 = week.week === 1;
 
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
-            if (now > sunDate) {
+            const isPublicLive = now >= satDate && now <= sunDate;
+            const isPast = now > sunDate;
+
+            if (isPast) {
                 status = 'completed';
-            } else if (now >= satDate) {
+            } else if (isPublicLive || (isAdmin && isWeek01)) {
                 status = 'live';
             }
 
@@ -1816,10 +1832,18 @@ function PsgbMockTestPage({
                 duration: 60
             } as MockTest;
         });
-    }, []);
+    }, [role]);
 
     const activeMocks = psgbMockTests.filter(m => m.status === 'live');
-    const upcomingMocks = psgbMockTests.filter(m => m.status === 'upcoming');
+    const upcomingMocks = psgbMockTests.filter(m => {
+        if (m.status !== 'upcoming') return false;
+        if (role === 'admin') return true;
+        
+        // Hide future PSGB mock cards from non-eligible (free) users until they turn live.
+        // Eligible = Silver/Gold or already paid for the test.
+        const isEligible = membershipLevel === 'silver' || membershipLevel === 'gold' || paidTests.includes(m.id);
+        return isEligible;
+    });
     const completedMocks = psgbMockTests.filter(m => m.status === 'completed').reverse();
 
     const handleMockClick = (mock: MockTest) => {
@@ -2117,7 +2141,7 @@ function PsgbMockTestPage({
                                         isProcessing={processingId === mock.id}
                                         role={role}
                                         onViewEnrollments={() => handleViewEnrollments(mock)}
-                                        enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                        enrollmentCount={enrollmentCounts[mock.id] || (mock.id.startsWith('psgb-mock') ? 102 : universalCount)}
                                         onShowRankList={() => setSelectedMockForRank(mock)}
                                         userResult={userResults[mock.id]}
                                         onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
@@ -2167,7 +2191,7 @@ function PsgbMockTestPage({
                                                 isProcessing={processingId === mock.id}
                                                 role={role}
                                                 onViewEnrollments={() => handleViewEnrollments(mock)}
-                                                enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                                enrollmentCount={enrollmentCounts[mock.id] || (mock.id.startsWith('psgb-mock') ? 102 : universalCount)}
                                             />
                                         ))}
                                     </div>

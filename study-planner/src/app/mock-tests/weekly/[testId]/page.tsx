@@ -136,6 +136,11 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-05-02T00:00:00+05:30"),
         endDate: new Date("2026-05-03T23:59:59+05:30"),
         title: "Weekly Mock Test - 16"
+    },
+    "psgb-mock-2026-04-05": {
+        startDate: new Date("2026-04-04T00:00:00+05:30"),
+        endDate: new Date("2026-04-05T23:59:59+05:30"),
+        title: "PS Gr B - Weekly Mock Test 01"
     }
 };
 
@@ -699,7 +704,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         );
     }
 
-    if (!isAuthorized && questions.length === 0) {
+    if (!isAuthorized) {
         // Beautiful "Test Not Active" screen
         const config = TEST_CONFIG_MAP[testId];
         const scheduledDate = config?.startDate;
