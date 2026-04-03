@@ -28,9 +28,11 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
 
     useEffect(() => {
         if (role === 'admin') {
-            const fetchUnread = async () => {
+            const controller = new AbortController();
+            
+            const fetchUnread = async (signal?: AbortSignal) => {
                 try {
-                    const res = await fetch('/api/admin/notifications');
+                    const res = await fetch('/api/admin/notifications', { signal });
                     if (res.ok) {
                         const data = await res.json();
                         const ns = data.notifications || [];
@@ -45,13 +47,22 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                             system: unread.filter((n: any) => ['deployment', 'system', 'alert'].includes(n.type)).length
                         });
                     }
-                } catch (e) {
-                    console.error("Failed to fetch unread count", e);
+                } catch (e: any) {
+                    // Ignore abort errors which are expected on unmount/cleanup
+                    if (e.name === 'AbortError') return;
+                    
+                    // Log to console but don't re-throw or show critical error UI for a background stat fetch
+                    console.warn("Background notification fetch failed (expected if server is restarting or network is flaky)", e.message || "Failed to fetch");
                 }
             };
-            fetchUnread();
-            const interval = setInterval(fetchUnread, 30000);
-            return () => clearInterval(interval);
+            
+            fetchUnread(controller.signal);
+            const interval = setInterval(() => fetchUnread(controller.signal), 30000);
+            
+            return () => {
+                controller.abort();
+                clearInterval(interval);
+            };
         }
     }, [role]);
 

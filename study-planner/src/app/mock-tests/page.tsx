@@ -2050,12 +2050,14 @@ function PsgbMockTestPage({
 
                         {/* Live badge */}
                         {activeMocks.length > 0 && (
-                            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-sm mb-8 backdrop-blur-sm shadow-[0_0_30px_rgba(239,68,68,0.15)]">
-                                <span className="relative flex h-2.5 w-2.5">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
-                                </span>
-                                LIVE NOW
+                            <div className="mb-4">
+                                <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-sm backdrop-blur-sm shadow-[0_0_30px_rgba(239,68,68,0.15)]">
+                                    <span className="relative flex h-2.5 w-2.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                                    </span>
+                                    LIVE NOW
+                                </div>
                             </div>
                         )}
 
