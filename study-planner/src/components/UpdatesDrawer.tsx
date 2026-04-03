@@ -16,6 +16,44 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "04.04.2026",
+        items: [
+            {
+                title: "🎯 Mock Test is Live",
+                desc: (
+                    <div className="space-y-3">
+                        <div className="bg-red-50/50 dark:bg-red-900/10 p-3 rounded-2xl border border-red-100 dark:border-red-900/20">
+                            <ul className="space-y-2 text-[11px] font-bold text-zinc-700 dark:text-zinc-300">
+                                <li className="flex items-center gap-2 text-red-600 dark:text-red-400">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                    </span>
+                                    LDCE IP Weekly Mock Test - 12
+                                </li>
+                                <li className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400">
+                                    <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
+                                    PS Gr B - Weekly Mock Test 01
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                            Live Test window will be open during this weekend (From <strong>04.04.2026 : 0000 hours</strong> upto <strong>2359 hours of 05.04.2026</strong>).
+                        </p>
+                        
+                        <div className="p-3 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-100 dark:border-amber-800/50 flex items-start gap-3">
+                            <span className="text-xl">🏆</span>
+                            <p className="text-[11px] text-amber-800 dark:text-amber-300 font-medium leading-snug">
+                                <strong>Top 7 Rankers</strong> list for each mock test will be released on Monday.
+                            </p>
+                        </div>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "01.04.2026",
         items: [
             {
