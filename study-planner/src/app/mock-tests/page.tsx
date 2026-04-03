@@ -1053,7 +1053,7 @@ function MockTestDetail({
                             className="w-full py-4.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-red-500/40 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98] animate-pulse-slow"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Unlock Test Access - ₹49
+                            Enroll Now for Rs.49/-
                         </button>
                     )
                 ) : mock.status === 'completed' ? (
@@ -1116,7 +1116,7 @@ function MockTestDetail({
                             className="w-full py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-indigo-500/30 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98]"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Unlock All Papers - ₹49
+                            Enroll Now for Rs.49/-
                         </button>
                     )
                 ) : (
@@ -1412,7 +1412,7 @@ function MockTestCard({
                             className="flex-1 py-2 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0 w-full"
                         >
                             {isProcessing ? <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Unlock All Content - ₹49</span>
+                            <span className="text-center">Enroll Now for Rs.49/-</span>
                         </button>
                 )
                     ) : isLive ? (
@@ -1458,7 +1458,7 @@ function MockTestCard({
                             className="flex-1 py-2.5 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0"
                         >
                             {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll & Attempt</span>
+                            <span className="text-center">Enroll & Attempt Now</span>
                         </button>
                     )
                 )
@@ -1473,7 +1473,7 @@ function MockTestCard({
                     className="flex-1 py-2 sm:py-3 w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/30 transition-all transform hover:scale-[1.01] active:scale-[0.97] px-2 min-w-0"
                 >
                     {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-300 fill-current shrink-0" />}
-                    <span className="text-center">Enroll Now - ₹49</span>
+                    <span className="text-center">Enroll Now for Rs.49/-</span>
                 </button>
             ) : (
                 <button
@@ -1839,10 +1839,9 @@ function PsgbMockTestPage({
         if (m.status !== 'upcoming') return false;
         if (role === 'admin') return true;
         
-        // Hide future PSGB mock cards from non-eligible (free) users until they turn live.
-        // Eligible = Silver/Gold or already paid for the test.
-        const isEligible = membershipLevel === 'silver' || membershipLevel === 'gold' || paidTests.includes(m.id);
-        return isEligible;
+        // Show all upcoming PSGB mock cards to all users (Free, Silver, Gold).
+        // Free users will see an 'Enroll' button; Silver/Gold and those who paid will see 'View Details' or 'Locked'.
+        return true;
     });
     const completedMocks = psgbMockTests.filter(m => m.status === 'completed').reverse();
 
