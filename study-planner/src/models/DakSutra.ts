@@ -26,8 +26,10 @@ const DakSutraSchema = new mongoose.Schema({
     created_by: { type: String, required: true }, // Admin email or ID
 }, { timestamps: true });
 
-// Add index for search
-DakSutraSchema.index({ title: 'text', rule_number: 'text' });
+// Optimized indexes for faster filtering and sorting
+DakSutraSchema.index({ status: 1, createdAt: -1 });
+DakSutraSchema.index({ status: 1, category: 1, createdAt: -1 });
+DakSutraSchema.index({ title: 'text', rule_number: 'text', act_name: 'text' });
 
 // Next.js hot-reloading fix: delete model if it exists to refresh schema
 if (mongoose.models.DakSutra) {
