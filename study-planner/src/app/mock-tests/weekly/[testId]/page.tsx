@@ -12,9 +12,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { format, eachDayOfInterval, addDays } from "date-fns";
 import FormattedQuestionText from "@/components/quiz/FormattedQuestionText";
+import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
 
 
-const getTopicsForMock = (saturdayDate: Date): string[] => {
+const getTopicsForMock = (saturdayDate: Date, testId?: string): string[] => {
+    // Handling PSGB Mock Schedule
+    if (testId && testId.startsWith('psgb-mock-')) {
+        // Compare testId against sundayDate in schedule (consistent with ID generation)
+        const psgbWeek = PSGB_MOCK_SCHEDULE.find(w => "psgb-mock-" + w.sundayDate === testId);
+        if (psgbWeek) return psgbWeek.topics;
+    }
+
     const mondayDate = addDays(saturdayDate, -5);
     const planMap = new Map();
     FULL_SCHEDULE.forEach(item => {
@@ -673,7 +681,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         const startDate = TEST_CONFIG_MAP[testId]?.startDate;
         const endDate = TEST_CONFIG_MAP[testId]?.endDate;
         const testSchedule = startDate && endDate ? `${format(startDate, 'dd-MMM-yyyy')} to ${format(endDate, 'dd-MMM-yyyy')}` : '';
-        const testTopics = startDate ? getTopicsForMock(startDate) : [];
+        const testTopics = startDate ? getTopicsForMock(startDate, testId) : [];
 
         try {
             await generateMockTestAnswerSheetPDF({

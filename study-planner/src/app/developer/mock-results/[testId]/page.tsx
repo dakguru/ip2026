@@ -9,6 +9,7 @@ import { useParams } from "next/navigation";
 import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { generateMockTestAnswerSheetPDF, getMockTestAnswerSheetPDFBlob } from "@/lib/pdf-generator-mocks";
 import { FULL_SCHEDULE, ScheduleItem } from "@/data/schedule";
+import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
 
 
 interface MockResult {
@@ -43,7 +44,13 @@ const TEST_SCHEDULE_MAP: Record<string, { start: Date; end: Date }> = {
     "live-sample": { start: new Date(0), end: new Date("2099-12-31T23:59:59+05:30") },
 };
 
-const getTopicsForMock = (saturdayDate: Date): string[] => {
+const getTopicsForMock = (saturdayDate: Date, testId?: string): string[] => {
+    // Handling PSGB Mock Schedule
+    if (testId && testId.startsWith('psgb-mock-')) {
+        const psgbWeek = PSGB_MOCK_SCHEDULE.find(w => "psgb-mock-" + w.sundayDate === testId);
+        if (psgbWeek) return psgbWeek.topics;
+    }
+
     if (!saturdayDate || saturdayDate.getTime() === 0) return ["Sample Mock Test Topics"];
     const mondayDate = addDays(saturdayDate, -5);
     const planMap = new Map<string, ScheduleItem>();
@@ -212,7 +219,7 @@ export default function MockTestDetailResultsPage() {
                 try {
                     const testConfig = TEST_SCHEDULE_MAP[testId];
                     const testSchedule = testConfig ? `${format(testConfig.start, 'dd-MMM-yyyy')} to ${format(testConfig.end, 'dd-MMM-yyyy')}` : "";
-                    const testTopics = testConfig ? getTopicsForMock(testConfig.start) : [];
+                    const testTopics = testConfig ? getTopicsForMock(testConfig.start, testId) : [];
 
                     const { blob, filename } = await getMockTestAnswerSheetPDFBlob({
                         userName: result.userName,
@@ -465,7 +472,7 @@ export default function MockTestDetailResultsPage() {
                                                                     try {
                                                                         const testConfig = TEST_SCHEDULE_MAP[testId];
                                                                         const testSchedule = testConfig ? `${format(testConfig.start, 'dd-MMM-yyyy')} to ${format(testConfig.end, 'dd-MMM-yyyy')}` : "";
-                                                                        const testTopics = testConfig ? getTopicsForMock(testConfig.start) : [];
+                                                                        const testTopics = testConfig ? getTopicsForMock(testConfig.start, testId) : [];
 
                                                                         await generateMockTestAnswerSheetPDF({
                                                                             userName: result.userName,
