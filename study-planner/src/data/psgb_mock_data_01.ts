@@ -554,8 +554,8 @@ export const PSGB_MOCK_01_QUESTIONS: Question[] = [
             "1 and 3 only",
             "All of the above"
         ],
-        "correctAnswer": 0,
-        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect because leather bags are supplied to offices which exchange remittances exceeding Rs. 500 on an average of at least 10 times a month, not 5 times (Rule 130)."
+        "correctAnswer": 3,
+        "explanation": "All three statements are correct according to Rule 130. Statement 3 accurately reflects that offices which exchange remittances exceeding Rs. 500 on an average of at least 10 times a month are supplied with leather cash bags."
     },
     {
         "id": "psgb-01-q46",
