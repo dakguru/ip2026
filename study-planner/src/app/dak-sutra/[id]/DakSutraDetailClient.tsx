@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { format } from "date-fns";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import HomeHeader from "@/components/HomeHeader";
 
 const CATEGORY_CONFIG: Record<string, {
     heroGradient: string;
@@ -63,7 +64,13 @@ const CATEGORY_CONFIG: Record<string, {
 
 const DEFAULT_CFG = CATEGORY_CONFIG.Rule;
 
-export default function DakSutraDetailClient({ id }: { id: string }) {
+interface DakSutraDetailClientProps {
+    id: string;
+    isLoggedIn: boolean;
+    membershipLevel: string;
+}
+
+export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }: DakSutraDetailClientProps) {
     const isMobileApp = useIsMobileApp();
     const [entry, setEntry] = useState<any>(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -142,6 +149,10 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
 
     return (
         <div className={`min-h-screen bg-white dark:bg-[#0F1117] text-zinc-900 dark:text-white ${bottomPad}`}>
+            {/* Rich Header */}
+            {!isMobileApp && (
+                <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
+            )}
 
             {/* ── DARK MODE OVERRIDE for inline-styled HTML content ── */}
             <style>{`

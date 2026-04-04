@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { cookies } from "next/headers";
 import dbConnect from "@/lib/mongoose";
 import DakSutra from "@/models/DakSutra";
 import DakSutraDetailClient from "./DakSutraDetailClient";
@@ -69,5 +70,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function DakSutraDetailPage({ params }: Props) {
     const { id } = await params;
-    return <DakSutraDetailClient id={id} />;
+    const cookieStore = await cookies();
+    const authToken = cookieStore.get("auth_token");
+    const userSession = cookieStore.get("user_session");
+
+    let membershipLevel = "free";
+    const isLoggedIn = !!authToken;
+
+    if (isLoggedIn && userSession?.value) {
+        try {
+            const sessionData = JSON.parse(userSession.value);
+            if (sessionData && sessionData.membershipLevel) {
+                membershipLevel = sessionData.membershipLevel;
+            }
+        } catch (e) {
+            console.error("Failed to parse user session", e);
+        }
+    }
+
+    return (
+        <DakSutraDetailClient 
+            id={id} 
+            isLoggedIn={isLoggedIn} 
+            membershipLevel={membershipLevel} 
+        />
+    );
 }
