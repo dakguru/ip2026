@@ -143,6 +143,81 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
     return (
         <div className={`min-h-screen bg-white dark:bg-[#0F1117] text-zinc-900 dark:text-white ${bottomPad}`}>
 
+            {/* ── DARK MODE OVERRIDE for inline-styled HTML content ── */}
+            <style>{`
+                /* Light backgrounds → dark-appropriate in dark mode */
+                .dark .dak-html-content [style*="background:#fff"],
+                .dark .dak-html-content [style*="background: #fff"]
+                    { background-color: rgba(255,255,255,0.04) !important; }
+                .dark .dak-html-content [style*="background:#f0f7ff"]
+                    { background-color: rgba(59,130,246,0.08) !important; }
+                .dark .dak-html-content [style*="background:#eaf4fc"]
+                    { background-color: rgba(59,130,246,0.09) !important; }
+                .dark .dak-html-content [style*="background:#d6eaf8"]
+                    { background-color: rgba(59,130,246,0.14) !important; }
+                .dark .dak-html-content [style*="background:#f0fff4"]
+                    { background-color: rgba(16,185,129,0.07) !important; }
+                .dark .dak-html-content [style*="background:#d5f5e3"]
+                    { background-color: rgba(16,185,129,0.14) !important; }
+                .dark .dak-html-content [style*="background:#f5eef8"]
+                    { background-color: rgba(139,92,246,0.08) !important; }
+                .dark .dak-html-content [style*="background:#fadbd8"]
+                    { background-color: rgba(239,68,68,0.1) !important; }
+                .dark .dak-html-content [style*="background:#fdf2f2"]
+                    { background-color: rgba(239,68,68,0.06) !important; }
+                .dark .dak-html-content [style*="background:#fdebd0"]
+                    { background-color: rgba(249,115,22,0.12) !important; }
+                .dark .dak-html-content [style*="background:#f9f0ff"]
+                    { background-color: rgba(139,92,246,0.08) !important; }
+                .dark .dak-html-content [style*="background:#fef9e7"]
+                    { background-color: rgba(234,179,8,0.08) !important; }
+
+                /* Borders → translucent in dark mode */
+                .dark .dak-html-content [style*="border:1px solid #c8dff5"],
+                .dark .dak-html-content [style*="border:1px solid #aed6f1"]
+                    { border-color: rgba(59,130,246,0.25) !important; }
+                .dark .dak-html-content [style*="border:1px solid #a8d5b5"]
+                    { border-color: rgba(16,185,129,0.25) !important; }
+                .dark .dak-html-content [style*="border:1px solid #d2b4de"]
+                    { border-color: rgba(139,92,246,0.25) !important; }
+                .dark .dak-html-content [style*="border:1px solid #f0b27a"]
+                    { border-color: rgba(249,115,22,0.25) !important; }
+                .dark .dak-html-content [style*="border:1px solid #f1948a"],
+                .dark .dak-html-content [style*="border:1px solid #aab7c4"]
+                    { border-color: rgba(255,255,255,0.12) !important; }
+                .dark .dak-html-content [style*="border:1px solid #ccc"],
+                .dark .dak-html-content [style*="border:1px solid #eee"]
+                    { border-color: rgba(255,255,255,0.1) !important; }
+
+                /* Dark body text → light in dark mode */
+                .dark .dak-html-content [style*="color:#1a3a5c"],
+                .dark .dak-html-content [style*="color:#4a235a"],
+                .dark .dak-html-content [style*="color:#222"],
+                .dark .dak-html-content [style*="color:#333"],
+                .dark .dak-html-content [style*="color:#555"],
+                .dark .dak-html-content [style*="color:#666"]
+                    { color: rgb(212,212,216) !important; }
+
+                /* Table header text with dark colors */
+                .dark .dak-html-content [style*="color:#1a5c3a"]
+                    { color: rgb(110,231,183) !important; }
+                .dark .dak-html-content [style*="color:#784212"]
+                    { color: rgb(253,186,116) !important; }
+                .dark .dak-html-content [style*="color:#1b2631"],
+                .dark .dak-html-content [style*="color:#1a4a6e"]
+                    { color: rgb(147,197,253) !important; }
+                .dark .dak-html-content [style*="color:#7d0000"]
+                    { color: rgb(252,165,165) !important; }
+                .dark .dak-html-content [style*="color:#b7950b"]
+                    { color: rgb(253,224,71) !important; }
+
+                /* Scenario grid cells */
+                .dark .dak-html-content [style*="color:#1a6fa8"]
+                    { color: rgb(147,197,253) !important; }
+                .dark .dak-html-content [style*="color:#1a5c3a"]
+                    { color: rgb(110,231,183) !important; }
+            `}</style>
+
             {/* ── HERO BANNER ── */}
             <div className={`relative bg-gradient-to-br ${cfg.heroGradient} overflow-hidden`}>
                 <div
@@ -225,7 +300,7 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                     </div>
                     <div className="p-4 md:p-8 overflow-x-auto">
                         <div
-                            className="prose prose-zinc dark:prose-invert max-w-none text-zinc-700 dark:text-zinc-300 text-[13px] md:text-base leading-relaxed
+                            className="dak-html-content prose prose-zinc dark:prose-invert max-w-none text-zinc-700 dark:text-zinc-300 text-[13px] md:text-base leading-relaxed
                                 prose-headings:font-bold prose-headings:text-sm md:prose-headings:text-base prose-headings:mt-4 prose-headings:mb-2
                                 prose-strong:font-bold prose-ul:space-y-1 prose-table:text-xs md:prose-table:text-sm
                                 prose-td:p-1.5 md:prose-td:p-2 prose-th:p-1.5 md:prose-th:p-2"
@@ -251,7 +326,7 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                     </div>
                     <div className="p-4 md:p-8 overflow-x-auto">
                         <div
-                            className="prose prose-zinc dark:prose-invert max-w-none text-zinc-800 dark:text-zinc-200 text-[13px] md:text-base leading-relaxed
+                            className="dak-html-content prose prose-zinc dark:prose-invert max-w-none text-zinc-800 dark:text-zinc-200 text-[13px] md:text-base leading-relaxed
                                 prose-headings:font-extrabold prose-headings:text-sm md:prose-headings:text-base prose-headings:mt-4 prose-headings:mb-2
                                 prose-strong:font-extrabold prose-ul:space-y-1.5 prose-ol:space-y-1.5 prose-table:text-xs md:prose-table:text-sm
                                 prose-td:p-1.5 md:prose-td:p-2 prose-th:p-1.5 md:prose-th:p-2"
@@ -277,7 +352,7 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                         </div>
                         <div className="p-4 md:p-8 overflow-x-auto">
                             <div
-                                className="prose prose-zinc dark:prose-invert max-w-none text-blue-900 dark:text-blue-100/90 text-[13px] md:text-base leading-relaxed
+                                className="dak-html-content prose prose-zinc dark:prose-invert max-w-none text-blue-900 dark:text-blue-100/90 text-[13px] md:text-base leading-relaxed
                                     prose-headings:font-bold prose-headings:text-sm md:prose-headings:text-base prose-headings:mt-4 prose-headings:mb-2
                                     prose-strong:font-extrabold prose-ul:space-y-1.5 prose-ol:space-y-1.5 prose-ol:list-decimal
                                     prose-table:text-xs md:prose-table:text-sm prose-td:p-1.5 md:prose-td:p-2 prose-th:p-1.5 md:prose-th:p-2"
@@ -308,7 +383,7 @@ export default function DakSutraDetailClient({ id }: { id: string }) {
                         </div>
                         <div className="relative p-4 md:p-8 overflow-x-auto">
                             <div
-                                className="prose prose-zinc dark:prose-invert max-w-none text-amber-900 dark:text-amber-100/90 text-[13px] md:text-base leading-relaxed
+                                className="dak-html-content prose prose-zinc dark:prose-invert max-w-none text-amber-900 dark:text-amber-100/90 text-[13px] md:text-base leading-relaxed
                                     prose-headings:font-extrabold prose-headings:text-sm md:prose-headings:text-base prose-headings:mt-4 prose-headings:mb-2
                                     prose-strong:font-extrabold prose-ul:space-y-1.5 prose-ol:space-y-1.5
                                     prose-table:text-xs md:prose-table:text-sm prose-td:p-1.5 md:prose-td:p-2 prose-th:p-1.5 md:prose-th:p-2"
