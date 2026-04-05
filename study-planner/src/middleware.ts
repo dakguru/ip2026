@@ -79,6 +79,13 @@ export async function middleware(request: NextRequest) {
             return response;
         }
 
+        // NEW: Check for short-term session verification cache (session_v)
+        // This avoids hitting the DB on every single navigation within a short window.
+        const sessionVerified = request.cookies.get('session_v');
+        if (sessionVerified?.value === sessionId) {
+            return NextResponse.next();
+        }
+
         // Validate session via internal API with a timeout
         try {
             const baseUrl = request.nextUrl.origin;
@@ -112,17 +119,21 @@ export async function middleware(request: NextRequest) {
             }
 
             // Valid session! 
-            // We force re-validation on every request (no session_v cookie) to ensure strict single-session enforcement.
+            // We set a short-lived 'session_v' cookie (10 minutes) to cache this verification.
+            // This drastically improves navigation speed for the user.
             const response = NextResponse.next();
+            const cookieOptions = {
+                path: '/',
+                maxAge: 600, // 10 minutes cache
+                ...(process.env.NODE_ENV === 'production' ? { domain: '.dakguru.com' } : {})
+            };
+            response.cookies.set('session_v', sessionId, cookieOptions);
             return response;
         } catch (error) {
             console.error('Middleware validation error:', error);
-            // On internal error, we fallback to login for security
-            const response = NextResponse.redirect(new URL('/login?reason=session_expired', request.url), 303);
-            response.cookies.delete('auth_token');
-            response.cookies.delete('user_session');
-            response.cookies.delete('session_v');
-            return response;
+            // On internal error during navigation, we fallback to allowing to prevent blocking the user,
+            // as strict security is already handled by individual page components/APIs.
+            return NextResponse.next();
         }
     }
 

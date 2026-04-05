@@ -21,6 +21,11 @@ const nextConfig: any = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    unoptimized: true, // Speeds up build and prevents image optimization bottlenecks on navigation
+  },
+  // Ensure the app doesn't try to source-map in production for slightly smaller bundles
+  productionBrowserSourceMaps: false,
 };
 
 export default withPWA(nextConfig);
