@@ -58,6 +58,28 @@ export async function POST(request: Request) {
                 }, { status: 404 });
             }
 
+            // 2b. If this is a mock test, also create a MockEnrollment record
+            if (plan.type === 'mock_test') {
+                const MockEnrollment = (await import("@/models/MockEnrollment")).default;
+                await MockEnrollment.findOneAndUpdate(
+                    { userEmail: email, testId: plan.id },
+                    {
+                        userId: email,
+                        userEmail: email,
+                        userName: updatedUser.name || 'Aspirant',
+                        userMobile: updatedUser.mobile || 'N/A',
+                        testId: plan.id,
+                        testTitle: plan.name,
+                        paymentId: razorpay_payment_id || 'GENERAL_VERIFY',
+                        orderId: razorpay_order_id || 'GENERAL_VERIFY',
+                        amount: 49, // Standard price for individual mocks
+                        status: 'completed',
+                        enrolledAt: new Date()
+                    },
+                    { upsert: true }
+                );
+            }
+
             // Trigger Notification for Upgrade
             await createNotification(
                 'membership_upgrade',

@@ -54,9 +54,16 @@ export async function POST(req: Request) {
             }
         }
 
-        // Fetch Enrollments
+        // Fetch Enrollments from MockEnrollment collection
         const enrollments = await MockEnrollment.find({ userEmail: email }).lean();
         const enrolledTests = enrollments.map((e: any) => e.testId);
+
+        // FALLBACK: Also check User document for planId (relevant for PSGB Mock single payments)
+        const User = (await (import("@/models/User"))).default;
+        const userDoc = await User.findOne({ email }).select('planId').lean();
+        if (userDoc?.planId && !enrolledTests.includes(userDoc.planId)) {
+            enrolledTests.push(userDoc.planId);
+        }
 
         return NextResponse.json({
             results: resultMap,
