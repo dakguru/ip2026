@@ -1412,7 +1412,7 @@ function MockTestCard({
                             className="flex-1 py-2 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0 w-full"
                         >
                             {isProcessing ? <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll Now for Rs.49/-</span>
+                            <span className="text-center">Enroll for Rs.49/-</span>
                         </button>
                 )
                     ) : isLive ? (
@@ -1458,7 +1458,7 @@ function MockTestCard({
                             className="flex-1 py-2.5 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0"
                         >
                             {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll & Attempt Now</span>
+                            <span className="text-center">Enroll for Rs.49/-</span>
                         </button>
                     )
                 )
@@ -1473,7 +1473,7 @@ function MockTestCard({
                     className="flex-1 py-2 sm:py-3 w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/30 transition-all transform hover:scale-[1.01] active:scale-[0.97] px-2 min-w-0"
                 >
                     {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-300 fill-current shrink-0" />}
-                    <span className="text-center">Enroll Now for Rs.49/-</span>
+                    <span className="text-center">Enroll for Rs.49/-</span>
                 </button>
             ) : (
                 <button
@@ -1788,6 +1788,9 @@ function PsgbMockTestPage({
                     const serverPaid = data.enrolledTests || [];
                     const allPaid = Array.from(new Set([...initialPaidTests, ...serverPaid]));
                     setPaidTests(allPaid);
+                    if (typeof window !== 'undefined') {
+                        localStorage.setItem('paid_mock_tests', allPaid.join(','));
+                    }
                 })
                 .catch(err => console.error('Error fetching results', err));
         }

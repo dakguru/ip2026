@@ -487,9 +487,37 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
                 if (isPlanEligible || hasPaid) {
                     setIsAuthorized(true);
-                } else {
+                } else if (userEmail) {
+                    // Final check: fetch enrollments from server to be sure (handles new devices/cleared cache)
+                    try {
+                        const enrollmentRes = await fetch('/api/mock-test/user-results', {
+                            method: 'POST',
+                            body: JSON.stringify({ email: userEmail })
+                        });
+                        if (enrollmentRes.ok) {
+                            const data = await enrollmentRes.json();
+                            const serverPaid = data.enrolledTests || [];
+                            if (serverPaid.includes(testId)) {
+                                setIsAuthorized(true);
+                                // Sync back to localStorage for future hits
+                                if (typeof window !== 'undefined') {
+                                    const allPaid = Array.from(new Set([...paidTests, ...serverPaid]));
+                                    localStorage.setItem('paid_mock_tests', allPaid.join(','));
+                                }
+                                setIsLoading(false);
+                                return;
+                            }
+                        }
+                    } catch (e) {
+                        console.error("Failed to fetch server-side enrollments", e);
+                    }
+
                     alert("You need to Upgrade to Gold/Silver or Buy this test to attempt.");
                     router.push("/mock-tests"); // Or show paywall
+                    return;
+                } else {
+                    alert("You need to Upgrade to Gold/Silver or Buy this test to attempt.");
+                    router.push("/mock-tests");
                     return;
                 }
             }
