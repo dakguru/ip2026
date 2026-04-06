@@ -12,37 +12,83 @@ import { useCourse } from "@/contexts/CourseContext";
 import Turnstile from "react-turnstile";
 
 /* ─────────────────────────────────────────
-   Shared font import
+   Global styles
+   - 16px minimum font on inputs (prevents iOS auto-zoom)
+   - 100dvh for correct mobile viewport height
+   - Safe-area padding for Android notch / nav bar
 ───────────────────────────────────────── */
-const stampStyles = `
+const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-  * { font-family: 'Inter', sans-serif; }
+
+  *, *::before, *::after {
+    font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+
+  .login-page {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    padding-top: max(16px, env(safe-area-inset-top));
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    background: linear-gradient(150deg, #fff8ec 0%, #fef3c7 55%, #fdf4e3 100%);
+  }
+
+  /* Prevent iOS auto-zoom on focus — keep inputs at 16px */
+  .login-input {
+    font-size: 16px !important;
+  }
+
+  /* Android ripple-free buttons */
+  .login-btn {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  /* Compact header on small screens */
+  @media (max-height: 700px) {
+    .stamp-header { padding-top: 12px !important; padding-bottom: 12px !important; }
+    .stamp-logo   { width: 48px !important; height: 48px !important; }
+    .stamp-title  { font-size: 15px !important; }
+    .stamp-sub    { display: none; }
+    .stamp-badge  { display: none; }
+    .form-gap     { gap: 10px !important; }
+  }
 `;
 
 /* ─────────────────────────────────────────
-   Shared input / label styles
+   Shared styles
 ───────────────────────────────────────── */
+// 16px font prevents iOS auto-zoom; py-3 gives 44px min touch height
 const inputCls =
-    "w-full bg-white border border-slate-200 rounded-lg py-2.5 pl-9 pr-4 " +
-    "text-slate-800 text-sm outline-none focus:ring-2 focus:ring-orange-400/50 " +
-    "focus:border-orange-400 transition-all placeholder:text-slate-400";
+    "login-input w-full bg-white border border-slate-200 rounded-xl " +
+    "py-3 pl-10 pr-4 text-slate-800 outline-none " +
+    "focus:ring-2 focus:ring-orange-400/50 focus:border-orange-400 " +
+    "transition-colors placeholder:text-slate-400";
 
-const labelCls = "block text-xs font-semibold text-slate-500 mb-1 ml-0.5";
+const labelCls = "block text-xs font-semibold text-slate-500 mb-1.5 ml-0.5";
 
 /* ─────────────────────────────────────────
-   Main Auth Form
+   Auth Form
 ───────────────────────────────────────── */
 function AuthForm() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const { setCourse } = useCourse();
 
-    const [isLogin, setIsLogin] = useState(true);
-    const [showPassword, setShowPassword] = useState(false);
-    const [turnstileToken, setTurnstileToken] = useState("");
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState("");
-    const [formData, setFormData] = useState({
+    const [isLogin,       setIsLogin]       = useState(true);
+    const [showPassword,  setShowPassword]  = useState(false);
+    const [turnstileToken,setTurnstileToken]= useState("");
+    const [isLoading,     setIsLoading]     = useState(false);
+    const [error,         setError]         = useState("");
+    const [formData,      setFormData]      = useState({
         name: "", email: "", password: "", mobile: "",
         gender: "", courseMode: "", confirmPassword: "", website: "",
     });
@@ -52,7 +98,7 @@ function AuthForm() {
         if (searchParams.get("reason") === "session_expired")
             setError("Your session has expired. Please sign in again.");
         if (searchParams.get("reason") === "multiple_login")
-            setError("Signed out — your account was used on another device.");
+            setError("Signed out — account used on another device.");
     }, [searchParams]);
 
     const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -66,16 +112,16 @@ function AuthForm() {
         setError("");
 
         if (!isLogin) {
-            if (!formData.gender)       { setError("Please select your gender.");         setIsLoading(false); return; }
-            if (!formData.courseMode)   { setError("Please select a preparation mode.");  setIsLoading(false); return; }
+            if (!formData.gender)     { setError("Please select your gender.");        setIsLoading(false); return; }
+            if (!formData.courseMode) { setError("Please select a preparation mode."); setIsLoading(false); return; }
             if (formData.password !== formData.confirmPassword) { setError("Passwords do not match."); setIsLoading(false); return; }
-            if (!turnstileToken)        { setError("Please complete the security check."); setIsLoading(false); return; }
+            if (!turnstileToken)      { setError("Please complete the security check."); setIsLoading(false); return; }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) { setError("Enter a valid email."); setIsLoading(false); return; }
-            if (!/^[0-9]{10}$/.test(formData.mobile))               { setError("Enter a valid 10-digit mobile number."); setIsLoading(false); return; }
+            if (!/^[0-9]{10}$/.test(formData.mobile)) { setError("Enter a valid 10-digit mobile number."); setIsLoading(false); return; }
         }
 
         try {
-            const res = await fetch(isLogin ? "/api/auth/login" : "/api/auth/signup", {
+            const res  = await fetch(isLogin ? "/api/auth/login" : "/api/auth/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ ...formData, turnstileToken }),
@@ -116,81 +162,72 @@ function AuthForm() {
 
     return (
         <>
-            <style>{stampStyles}</style>
+            <style>{globalStyles}</style>
 
-            {/* ── Page background ── */}
-            <div
-                className="min-h-screen flex items-center justify-center px-5 py-10"
-                style={{ background: 'linear-gradient(150deg, #fff8ec 0%, #fef3c7 50%, #fdf4e3 100%)' }}
-            >
-                {/* ── Stamp Card ──
-                     Clean layered border:
-                     amber fill → 1px white inset line → warm drop shadow
-                */}
+            <div className="login-page">
+
+                {/* ── Stamp Card ── */}
                 <div
                     className="w-full"
                     style={{
-                        maxWidth: isLogin ? 400 : 460,
-                        /* Amber border (6px) + 1px white inner rule + deep shadow */
-                        border: '6px solid #e8930a',
-                        borderRadius: '14px',
-                        outline: '2px solid rgba(255,255,255,0.85)',
-                        outlineOffset: '-9px',
-                        boxShadow:
-                            '0 24px 60px rgba(0,0,0,0.2), ' +
-                            '0 6px 18px rgba(232,147,10,0.35)',
+                        maxWidth: isLogin ? 390 : 440,
+                        border: '5px solid #e8930a',
+                        borderRadius: '16px',
+                        outline: '2px solid rgba(255,255,255,0.9)',
+                        outlineOffset: '-8px',
+                        boxShadow: '0 16px 48px rgba(0,0,0,0.18), 0 4px 16px rgba(232,147,10,0.3)',
                         overflow: 'hidden',
                         background: 'white',
                     }}
                 >
 
-
-                    {/* Inner white surface */}
-                    <div className="rounded-xl overflow-hidden bg-white">
-
-                        {/* ── Stamp Header ── */}
-                        <div
-                            className="relative px-6 pt-6 pb-5 text-center"
-                            style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f4c75 100%)" }}
-                        >
-                            {/* Stamp badge row */}
-                            <div className="flex items-center justify-between mb-4">
-                                <span className="text-[9px] font-black tracking-[0.35em] text-amber-300 uppercase opacity-80">
-                                    Dak Guru
-                                </span>
-                                <span className="text-[9px] font-black tracking-[0.3em] text-amber-300 opacity-80">
-                                    2026
-                                </span>
-                            </div>
-
-                            {/* Logo */}
-                            <Link href="/">
-                                <div className="w-16 h-16 rounded-full mx-auto mb-3 overflow-hidden ring-2 ring-amber-400/70 ring-offset-2 ring-offset-[#1e3a5f] hover:scale-105 transition-transform">
-                                    <Image src="/dak-guru-new-logo.png" alt="Dak Guru" width={64} height={64} className="object-cover" />
-                                </div>
-                            </Link>
-
-                            <h1 className="text-white font-bold text-lg leading-tight">
-                                {isLogin ? "Welcome to Dak Guru" : "Create Your Account"}
-                            </h1>
-                            <p className="text-amber-200/70 text-xs mt-0.5 tracking-wide">
-                                {isLogin ? "Sign in to continue" : "Start your preparation journey"}
-                            </p>
-
-                            {/* Decorative bottom wave */}
-                            <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
-                                <svg viewBox="0 0 400 12" className="w-full" preserveAspectRatio="none">
-                                    <path d="M0,6 C100,12 300,0 400,6 L400,12 L0,12 Z" fill="white" />
-                                </svg>
-                            </div>
+                    {/* ── HEADER ── */}
+                    <div
+                        className="stamp-header relative text-center px-5 pt-5 pb-5"
+                        style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e3a5f 55%, #0f4c75 100%)" }}
+                    >
+                        {/* Badge row */}
+                        <div className="stamp-badge flex items-center justify-between mb-3">
+                            <span className="text-[9px] font-black tracking-[0.3em] text-amber-300 uppercase opacity-70">
+                                Dak Guru
+                            </span>
+                            <span className="text-[9px] font-black tracking-[0.3em] text-amber-300 opacity-70">
+                                2026
+                            </span>
                         </div>
 
-                        {/* ── Form Body ── */}
-                        <div className="px-6 pt-4 pb-6">
+                        {/* Logo */}
+                        <Link href="/">
+                            <div
+                                className="stamp-logo w-14 h-14 rounded-full mx-auto mb-2.5 overflow-hidden ring-2 ring-amber-400/70 ring-offset-2 ring-offset-[#1e3a5f] active:scale-95 transition-transform"
+                                style={{ width: 56, height: 56 }}
+                            >
+                                <Image src="/dak-guru-new-logo.png" alt="Dak Guru" width={56} height={56} className="object-cover" priority />
+                            </div>
+                        </Link>
 
-                            <form onSubmit={handleSubmit} className="space-y-3.5">
+                        <h1 className="stamp-title text-white font-bold text-base leading-snug">
+                            {isLogin ? "Welcome to Dak Guru" : "Create Your Account"}
+                        </h1>
+                        <p className="stamp-sub text-amber-200/65 text-[11px] mt-0.5">
+                            {isLogin ? "Sign in to continue" : "Start your preparation journey"}
+                        </p>
 
-                                {/* Signup-only fields */}
+                        {/* Wave */}
+                        <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+                            <svg viewBox="0 0 400 10" className="w-full" preserveAspectRatio="none">
+                                <path d="M0,5 C100,10 300,0 400,5 L400,10 L0,10 Z" fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    {/* ── FORM BODY ── */}
+                    <div className="px-4 pt-4 pb-4">
+
+                        <form onSubmit={handleSubmit}>
+                            <div className="form-gap flex flex-col gap-3">
+
+                                {/* ── SIGNUP FIELDS ── */}
                                 {!isLogin && (
                                     <>
                                         {/* Honeypot */}
@@ -202,25 +239,28 @@ function AuthForm() {
                                         <div>
                                             <label className={labelCls}>Full Name <span className="text-red-500">*</span></label>
                                             <div className="relative">
-                                                <User className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
+                                                <User className="absolute left-3 top-3.5 w-4 h-4 text-slate-400" />
                                                 <input name="name" type="text" value={formData.name} onChange={handle}
-                                                    className={inputCls} placeholder="Your full name" required />
+                                                    className={inputCls} placeholder="Your full name"
+                                                    autoComplete="name" required />
                                             </div>
                                         </div>
 
-                                        {/* Gender */}
+                                        {/* Gender — large touch targets */}
                                         <div>
                                             <label className={labelCls}>Gender <span className="text-red-500">*</span></label>
-                                            <div className="flex gap-6 mt-1">
+                                            <div className="flex gap-3">
                                                 {["Male", "Female"].map(g => (
-                                                    <label key={g} className="flex items-center gap-2 cursor-pointer">
-                                                        <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-colors
-                                                            ${formData.gender === g ? "border-orange-500" : "border-slate-300"}`}>
-                                                            {formData.gender === g && <div className="w-2 h-2 rounded-full bg-orange-500" />}
-                                                        </div>
+                                                    <label
+                                                        key={g}
+                                                        className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 cursor-pointer transition-all active:scale-95
+                                                            ${formData.gender === g
+                                                                ? "border-orange-500 bg-orange-50 text-orange-700"
+                                                                : "border-slate-200 bg-white text-slate-600"}`}
+                                                    >
                                                         <input type="radio" name="gender" value={g} checked={formData.gender === g}
                                                             onChange={handle} className="hidden" />
-                                                        <span className="text-sm text-slate-700">{g}</span>
+                                                        <span className="text-sm font-semibold">{g}</span>
                                                     </label>
                                                 ))}
                                             </div>
@@ -230,14 +270,15 @@ function AuthForm() {
                                         <div>
                                             <label className={labelCls}>Preparation Mode <span className="text-red-500">*</span></label>
                                             <div className="relative">
-                                                <GraduationCap className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
+                                                <GraduationCap className="absolute left-3 top-3.5 w-4 h-4 text-slate-400" />
                                                 <select name="courseMode" value={formData.courseMode} onChange={handle}
-                                                    className={`${inputCls} pr-9 appearance-none cursor-pointer ${!formData.courseMode ? "text-slate-400" : "text-slate-800"}`} required>
+                                                    className={`${inputCls} pr-9 appearance-none cursor-pointer ${!formData.courseMode ? "text-slate-400" : "text-slate-800"}`}
+                                                    required>
                                                     <option value="" disabled>Select your exam</option>
                                                     <option value="LDCE_IP">LDCE IP Exam</option>
                                                     <option value="PS_GR_B">PS Group &apos;B&apos; Exam</option>
                                                 </select>
-                                                <ChevronDown className="absolute right-3 top-2.5 w-4 h-4 text-slate-400 pointer-events-none" />
+                                                <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-slate-400 pointer-events-none" />
                                             </div>
                                         </div>
 
@@ -245,144 +286,165 @@ function AuthForm() {
                                         <div>
                                             <label className={labelCls}>Mobile No. <span className="text-red-500">*</span></label>
                                             <div className="relative">
-                                                <Phone className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
-                                                <input name="mobile" type="tel" value={formData.mobile} onChange={handle}
-                                                    className={inputCls} placeholder="10-digit mobile number" required minLength={10} maxLength={10} />
+                                                <Phone className="absolute left-3 top-3.5 w-4 h-4 text-slate-400" />
+                                                <input name="mobile" type="tel" inputMode="numeric" value={formData.mobile} onChange={handle}
+                                                    className={inputCls} placeholder="10-digit number"
+                                                    autoComplete="tel" required minLength={10} maxLength={10} />
                                             </div>
                                         </div>
 
-                                        {/* Email (signup) */}
+                                        {/* Email */}
                                         <div>
                                             <label className={labelCls}>Email ID <span className="text-red-500">*</span></label>
                                             <div className="relative">
-                                                <Mail className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
-                                                <input name="email" type="email" value={formData.email} onChange={handle}
-                                                    className={inputCls} placeholder="name@example.com" required />
+                                                <Mail className="absolute left-3 top-3.5 w-4 h-4 text-slate-400" />
+                                                <input name="email" type="email" inputMode="email" value={formData.email} onChange={handle}
+                                                    className={inputCls} placeholder="name@example.com"
+                                                    autoComplete="email" required />
                                             </div>
                                         </div>
                                     </>
                                 )}
 
-                                {/* Email (login) */}
+                                {/* ── LOGIN EMAIL ── */}
                                 {isLogin && (
                                     <div>
                                         <label className={labelCls}>Email</label>
                                         <div className="relative">
-                                            <Mail className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
-                                            <input name="email" type="email" value={formData.email} onChange={handle}
-                                                className={inputCls} placeholder="name@example.com" required />
+                                            <Mail className="absolute left-3 top-3.5 w-4 h-4 text-slate-400" />
+                                            <input name="email" type="email" inputMode="email" value={formData.email} onChange={handle}
+                                                className={inputCls} placeholder="name@example.com"
+                                                autoComplete="email" required />
                                         </div>
                                     </div>
                                 )}
 
-                                {/* Password */}
+                                {/* ── PASSWORD ── */}
                                 <div>
                                     <label className={labelCls}>
                                         {isLogin ? "Password" : "Create Password"} <span className="text-red-500">*</span>
                                     </label>
                                     <div className="relative">
-                                        <Lock className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
+                                        <Lock className="absolute left-3 top-3.5 w-4 h-4 text-slate-400" />
                                         <input name="password" type={showPassword ? "text" : "password"}
                                             value={formData.password} onChange={handle}
-                                            className={`${inputCls} pr-10`} placeholder="••••••••" required minLength={6} />
-                                        <button type="button" onClick={() => setShowPassword(p => !p)}
-                                            className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 transition-colors">
+                                            className={`${inputCls} pr-11`} placeholder="••••••••"
+                                            autoComplete={isLogin ? "current-password" : "new-password"}
+                                            required minLength={6} />
+                                        {/* 44×44px touch target for show/hide */}
+                                        <button type="button"
+                                            onClick={() => setShowPassword(p => !p)}
+                                            className="login-btn absolute right-0 top-0 h-full w-11 flex items-center justify-center text-slate-400 active:text-slate-700">
                                             {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                                         </button>
                                     </div>
                                     {isLogin && (
-                                        <div className="text-right mt-1">
-                                            <Link href="/forgot-password" className="text-xs font-semibold text-orange-600 hover:underline">
+                                        <div className="text-right mt-1.5">
+                                            <Link href="/forgot-password"
+                                                className="text-xs font-semibold text-orange-600 active:opacity-70 py-1 inline-block">
                                                 Forgot Password?
                                             </Link>
                                         </div>
                                     )}
                                 </div>
 
-                                {/* Confirm Password (signup) */}
+                                {/* Confirm Password */}
                                 {!isLogin && (
                                     <div>
                                         <label className={labelCls}>Confirm Password <span className="text-red-500">*</span></label>
                                         <div className="relative">
-                                            <Lock className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
-                                            <input name="confirmPassword" type="password" value={formData.confirmPassword}
-                                                onChange={handle} className={inputCls} placeholder="••••••••" required minLength={6} />
+                                            <Lock className="absolute left-3 top-3.5 w-4 h-4 text-slate-400" />
+                                            <input name="confirmPassword" type="password"
+                                                value={formData.confirmPassword} onChange={handle}
+                                                className={inputCls} placeholder="••••••••"
+                                                autoComplete="new-password" required minLength={6} />
                                         </div>
                                     </div>
                                 )}
 
-                                {/* Turnstile (signup) */}
+                                {/* Turnstile */}
                                 {!isLogin && (
-                                    <div className="flex flex-col items-center pt-1">
-                                        <Turnstile
-                                            sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
-                                            onVerify={token => setTurnstileToken(token)}
-                                            theme="light"
-                                        />
+                                    <div className="flex flex-col items-center">
+                                        <div className="scale-[0.88] origin-left -ml-2">
+                                            <Turnstile
+                                                sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                                                onVerify={token => setTurnstileToken(token)}
+                                                theme="light"
+                                            />
+                                        </div>
                                         <p className="text-[10px] text-slate-400 mt-1 text-center">
-                                            If the security widget doesn&apos;t appear, try disabling your ad blocker.
+                                            Disable ad blocker if security widget doesn&apos;t appear.
                                         </p>
                                     </div>
                                 )}
 
                                 {/* Error */}
                                 {error && (
-                                    <div className="text-red-600 text-xs font-semibold text-center bg-red-50 border border-red-100 py-2 px-3 rounded-lg">
+                                    <div className="text-red-600 text-xs font-semibold text-center bg-red-50 border border-red-100 py-2.5 px-3 rounded-xl">
                                         {error}
                                     </div>
                                 )}
 
-                                {/* Primary CTA */}
+                                {/* ── Primary CTA ── min-height 48px for Android */}
                                 <button
                                     type="submit"
                                     disabled={isLoading}
-                                    className="w-full flex items-center justify-center gap-2 group py-3 rounded-xl font-bold text-sm text-white transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:hover:scale-100 shadow-md mt-1"
-                                    style={{ background: "linear-gradient(135deg, #ea580c 0%, #f97316 100%)", boxShadow: "0 6px 20px rgba(234,88,12,0.4)" }}
+                                    className="login-btn w-full flex items-center justify-center gap-2 group rounded-xl font-bold text-sm text-white transition-all active:scale-[0.97] disabled:opacity-60 shadow-md"
+                                    style={{
+                                        minHeight: 48,
+                                        background: "linear-gradient(135deg, #ea580c 0%, #f97316 100%)",
+                                        boxShadow: "0 4px 16px rgba(234,88,12,0.4)",
+                                    }}
                                 >
                                     {isLoading
                                         ? <Loader2 className="w-5 h-5 animate-spin" />
                                         : <>
                                             {isLogin ? "Sign In" : "Create Account"}
-                                            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                                            <ArrowRight className="w-4 h-4 group-active:translate-x-0.5 transition-transform" />
                                           </>
                                     }
                                 </button>
-                            </form>
-
-                            {/* Divider */}
-                            <div className="relative my-4">
-                                <div className="absolute inset-0 flex items-center">
-                                    <div className="w-full border-t border-slate-100" />
-                                </div>
-                                <div className="relative flex justify-center">
-                                    <span className="px-3 text-[11px] text-slate-400 bg-white">
-                                        {isLogin ? "New to Dak Guru?" : "Already a member?"}
-                                    </span>
-                                </div>
                             </div>
+                        </form>
 
-                            {/* Secondary CTA */}
-                            <button
-                                type="button"
-                                onClick={resetForm}
-                                className="w-full flex items-center justify-center gap-2 group py-3 rounded-xl font-bold text-sm text-white transition-all hover:scale-[1.02] active:scale-[0.98] shadow-md"
-                                style={{ background: "linear-gradient(135deg, #0f766e 0%, #0d9488 100%)", boxShadow: "0 6px 20px rgba(13,148,136,0.35)" }}
-                            >
-                                {isLogin ? "Create an account" : "Sign in instead"}
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                            </button>
+                        {/* Divider */}
+                        <div className="relative my-3.5">
+                            <div className="absolute inset-0 flex items-center">
+                                <div className="w-full border-t border-slate-100" />
+                            </div>
+                            <div className="relative flex justify-center">
+                                <span className="px-3 text-[11px] text-slate-400 bg-white">
+                                    {isLogin ? "New to Dak Guru?" : "Already a member?"}
+                                </span>
+                            </div>
                         </div>
 
-                        {/* ── Stamp Footer ── */}
-                        <div
-                            className="flex items-center justify-center px-6 py-2 gap-2"
-                            style={{ background: "#f8fafc", borderTop: "1px solid #f1f5f9" }}
+                        {/* ── Secondary CTA ── */}
+                        <button
+                            type="button"
+                            onClick={resetForm}
+                            className="login-btn w-full flex items-center justify-center gap-2 rounded-xl font-bold text-sm text-white transition-all active:scale-[0.97] shadow-md"
+                            style={{
+                                minHeight: 48,
+                                background: "linear-gradient(135deg, #0f766e 0%, #0d9488 100%)",
+                                boxShadow: "0 4px 16px rgba(13,148,136,0.35)",
+                            }}
                         >
-                            <span className="text-[10px] text-slate-400 tracking-widest uppercase font-medium">
-                                Learn · Practice · Succeed
-                            </span>
-                        </div>
+                            {isLogin ? "Create an account" : "Sign in instead"}
+                            <ArrowRight className="w-4 h-4" />
+                        </button>
                     </div>
+
+                    {/* ── Footer ── */}
+                    <div
+                        className="flex items-center justify-center px-4 py-2"
+                        style={{ background: "#f8fafc", borderTop: "1px solid #f1f5f9" }}
+                    >
+                        <span className="text-[10px] text-slate-400 tracking-widest uppercase font-medium">
+                            Learn · Practice · Succeed
+                        </span>
+                    </div>
+
                 </div>
             </div>
         </>
