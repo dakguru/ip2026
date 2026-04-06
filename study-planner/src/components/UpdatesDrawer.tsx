@@ -16,6 +16,46 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "06.04.2026",
+        items: [
+            {
+                title: "🏆 Top 7 Rankers Published",
+                desc: (
+                    <div className="space-y-4">
+                        <p className="text-zinc-700 dark:text-zinc-300 font-medium">
+                            The highly anticipated <strong>Top 7 Rankers</strong> list has been officially published!
+                        </p>
+                        
+                        <div className="bg-blue-50/50 dark:bg-blue-900/10 p-4 rounded-2xl border border-blue-100 dark:border-blue-900/20">
+                            <p className="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-3">Mock Tests with Results:</p>
+                            <ul className="space-y-3">
+                                <li className="flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xs">12</div>
+                                    <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100">LDCE IP Weekly Mock Test - 12</span>
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center text-violet-600 dark:text-violet-400 font-bold text-xs">01</div>
+                                    <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100">PS Group &apos;B&apos; Weekly Mock Test - 01</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border border-emerald-100 dark:border-emerald-800/50 flex items-start gap-3">
+                            <span className="text-lg">📊</span>
+                            <p className="text-[11px] text-emerald-800 dark:text-emerald-300 font-medium leading-snug">
+                                Check out the concerned mock test cards listed under <strong>Previous Mock Tests</strong> section to view rankings and your detailed analysis.
+                            </p>
+                        </div>
+
+                        <p className="pt-2 text-[12px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1.5">
+                            <span>🚀</span> Head to the Mock Tests section now!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "04.04.2026",
         items: [
             {

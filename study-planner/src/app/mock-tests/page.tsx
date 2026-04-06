@@ -506,8 +506,8 @@ export default function MockTestsPage() {
                         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
                     </div>
 
-                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 text-center">
-                        <div className="flex justify-center w-full mb-6 md:mb-8">
+                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-14 text-center">
+                        <div className="flex justify-center w-full mb-4 md:mb-6">
                             <Link href="/" className="inline-flex items-center text-zinc-400 hover:text-white transition-colors text-sm md:text-base">
                                 <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
                             </Link>
@@ -530,7 +530,7 @@ export default function MockTestsPage() {
                             </span>
                         </h1>
 
-                        <p className="text-base md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8 md:mb-10 px-2 leading-relaxed">
+                        <p className="text-base md:text-xl text-zinc-400 max-w-2xl mx-auto mb-6 md:mb-8 px-2 leading-relaxed">
                             Compete with aspirants across India. Real-time ranking, detailed analysis, and exam-like environment.
                         </p>
 
@@ -589,20 +589,21 @@ export default function MockTestsPage() {
                         </div>
                     </div>
 
-                    {/* Previous Tests Quick Link */}
-                    <div className="flex justify-center -mt-2 mb-4 relative z-20 w-full px-1">
-                        <a
-                            href="#previous-tests"
-                            className="group inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-[14px] sm:rounded-full shadow border border-zinc-200 dark:border-zinc-700 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all active:scale-95 text-[11px] sm:text-sm font-bold w-full sm:w-auto overflow-hidden"
-                        >
-                            <span className="flex h-2 w-2 relative shrink-0">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                            </span>
-                            <span className="truncate">Looking for Previous Mock Tests? Click Here</span>
-                            <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 rotate-[270deg] shrink-0 group-hover:translate-y-1 transition-transform" />
-                        </a>
-                    </div>
+                    {completedMocks.length > 0 && (
+                        <div className="flex justify-center -mt-2 mb-4 relative z-20 w-full px-1">
+                            <a
+                                href="#previous-tests"
+                                className="group inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-[14px] sm:rounded-full shadow border border-zinc-200 dark:border-zinc-700 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all active:scale-95 text-[11px] sm:text-sm font-bold w-full sm:w-auto overflow-hidden"
+                            >
+                                <span className="flex h-2 w-2 relative shrink-0">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                </span>
+                                <span className="truncate">Looking for Previous Mock Tests? Click Here</span>
+                                <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 rotate-[270deg] shrink-0 group-hover:translate-y-1 transition-transform" />
+                            </a>
+                        </div>
+                    )}
 
                     {activeMocks.length > 0 && (
                         <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -2023,7 +2024,7 @@ function PsgbMockTestPage({
                     </div>
                 </div>
             ) : (
-                <div className="relative min-h-[420px] md:min-h-[520px] bg-[#0a0a0f] overflow-hidden isolate">
+                <div className="relative min-h-[320px] md:min-h-[400px] bg-[#0a0a0f] overflow-hidden isolate">
                     {/* Animated gradient mesh background */}
                     <div className="absolute inset-0">
                         <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-violet-600/30 via-fuchsia-500/20 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }}></div>
@@ -2042,9 +2043,9 @@ function PsgbMockTestPage({
                     <div className="absolute bottom-16 right-[30%] w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_15px_5px_rgba(34,211,238,0.3)] animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
 
                     {/* Content */}
-                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 md:pt-12 md:pb-20 text-center">
+                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 md:pt-10 md:pb-14 text-center">
                         {/* Back button - glass style */}
-                        <div className="flex justify-center w-full mb-8 md:mb-10">
+                        <div className="flex justify-center w-full mb-6 md:mb-8">
                             <Link href="/" className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300 text-sm backdrop-blur-sm">
                                 <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
                                 <span className="font-medium">Back to Home</span>
@@ -2065,7 +2066,7 @@ function PsgbMockTestPage({
                         )}
 
                         {/* Subtitle badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-500 text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-500 text-xs font-semibold tracking-widest uppercase mb-4 backdrop-blur-sm">
                             <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-violet-400 to-fuchsia-400"></span>
                             All India Weekly Mock Test Series
                         </div>
@@ -2079,13 +2080,13 @@ function PsgbMockTestPage({
                         </h1>
 
                         {/* Description */}
-                        <p className="text-base md:text-lg text-zinc-400/90 max-w-xl mx-auto mb-10 leading-relaxed font-medium">
+                        <p className="text-base md:text-lg text-zinc-400/90 max-w-xl mx-auto mb-8 leading-relaxed font-medium">
                             14-week structured test series aligned with the official study plan.
                             <span className="text-zinc-500 block mt-1">Compete with aspirants across India & track your progress.</span>
                         </p>
 
                         {/* Stats row */}
-                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
                             {[
                                 { icon: <Calendar className="w-5 h-5" />, label: '14 Weeks', sub: 'Schedule', color: 'from-violet-500/20 to-violet-500/5', iconColor: 'text-violet-400', borderColor: 'border-violet-500/20' },
                                 { icon: <AlertCircle className="w-5 h-5" />, label: '50 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
@@ -2121,6 +2122,56 @@ function PsgbMockTestPage({
             {/* ===== CONTENT ===== */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full overflow-x-hidden">
                 <div className="space-y-12 w-full">
+
+                    {/* Attractive Marquee Notification */}
+                    <div className="relative overflow-hidden bg-gradient-to-r from-violet-600 via-fuchsia-600 to-violet-600 text-white shadow-lg rounded-xl sm:rounded-2xl border border-white/10 mb-4 mx-0 sm:mx-0 w-full max-w-full">
+                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+                        <div className="w-full flex items-center h-[2.75rem] sm:h-12 relative z-10 overflow-hidden">
+                            <div className="flex-shrink-0 w-auto bg-white/20 backdrop-blur-md px-3 sm:px-4 h-full flex items-center justify-center z-20 shadow-xl border-r border-white/10">
+                                <span className="font-black text-[10px] sm:text-sm tracking-wider uppercase flex items-center gap-1.5 whitespace-nowrap">
+                                    <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-yellow-400"></span>
+                                    </span>
+                                    Why Top 7?
+                                </span>
+                            </div>
+                            <div className="flex-1 min-w-0 overflow-hidden h-full flex items-center group cursor-default ml-2 sm:ml-4">
+                                <div className="animate-scroll-mobile sm:animate-scroll flex items-center whitespace-nowrap min-w-max">
+                                    {/* Block 1 */}
+                                    <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 font-medium text-[11px] sm:text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors">
+                                        <span className="inline-block mx-2 sm:mx-4 shrink-0">★</span>
+                                        <span className="shrink-0">To simulate a real PS Group B vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
+                                    </div>
+                                    {/* Block 2 (Duplicate for Seamless Loop) */}
+                                    <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 font-medium text-[11px] sm:text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors">
+                                        <span className="inline-block mx-2 sm:mx-4 shrink-0">★</span>
+                                        <span className="shrink-0">To simulate a real PS Group B vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
+                                    </div>
+                                </div>
+
+                                {/* Gradient Overlays for Smooth Fade Effect */}
+                                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-violet-600 to-transparent z-10 pointer-events-none"></div>
+                                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-violet-600 to-transparent z-10 pointer-events-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {completedMocks.length > 0 && (
+                        <div className="flex justify-center -mt-2 mb-4 relative z-20 w-full px-1">
+                            <a
+                                href="#previous-tests"
+                                className="group inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 bg-white dark:bg-zinc-800/50 backdrop-blur-sm text-zinc-600 dark:text-zinc-300 rounded-[14px] sm:rounded-full shadow-lg border border-zinc-200 dark:border-white/10 hover:border-violet-400 dark:hover:border-violet-500 hover:text-violet-600 dark:hover:text-violet-400 transition-all active:scale-95 text-[11px] sm:text-sm font-bold w-full sm:w-auto overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300"
+                            >
+                                <span className="flex h-2 w-2 relative shrink-0">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
+                                </span>
+                                <span className="truncate">Looking for Previous PSGB Mock Tests? Click Here</span>
+                                <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 rotate-[270deg] shrink-0 group-hover:translate-y-1 transition-transform" />
+                            </a>
+                        </div>
+                    )}
 
                     {/* LIVE TESTS */}
                     {activeMocks.length > 0 && (
@@ -2206,7 +2257,7 @@ function PsgbMockTestPage({
 
                     {/* COMPLETED TESTS */}
                     {completedMocks.length > 0 && (
-                        <div className="opacity-100 mb-12 scroll-mt-24">
+                        <div id="previous-tests" className="opacity-100 mb-12 scroll-mt-24">
                             <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
                                 <History className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
                                 Previous Tests
