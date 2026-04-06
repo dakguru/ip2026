@@ -2,7 +2,7 @@ import { QuizTopic, QuizSet } from "@/lib/quizTypes";
 import { ccs_pension_2021_set1, ccs_pension_2021_set2, ccs_pension_2021_set3 } from './flashcards/ccsPension2021';
 import { ltc_set1, ltc_set2, ltc_set3 } from './flashcards/ccsLtc1988';
 import { cs_ma_set1, cs_ma_set2, cs_ma_set3 } from './flashcards/csMa1944';
-import { leave_set1, leave_set2, leave_set3, leave_set4 } from './flashcards/ccsLeave1972';
+import { leave_set1, leave_set2, leave_set3, leave_set4, leave_set5, leave_set6 } from './flashcards/ccsLeave1972';
 import { cea_rules_set1 } from './flashcards/ceaRules';
 import { cgegis_set1 } from './flashcards/cgegis1980';
 import { joining_time_set1 } from './flashcards/ccsJoiningTime1979';
@@ -27,7 +27,7 @@ import { establishment_norms_set1 } from './flashcards/establishmentNorms';
 // ----- EXISTING QUESTION DATA -----
 export const ALL_SETS_DATA: Record<number, any[]> = {
   1: [
-    { q: "On which date did the Post Office Act, 2023 come into force?", o: ["1st Jan 2024", "24th Dec 2023", "18th June 2024", "1st April 2023"], a: 2, e: "The Post Office Act, 2023 came into force on **18th June 2024**." },
+    { q: "On which date did the Post Office Act, 2023 come into force?", o: ["1st Jan 2024", "24th Dec 2023", "18th June 2024", "1st April 2023"], a: 2, e: "The Post Office Act, 2023 came into force on 18th June 2024." },
     { q: "According to Section 2(b), what is an 'item'?", o: ["Any letter", "An indivisible article accepted for service", "A parcel > 10kg", "Government document"], a: 1 },
     { q: "Who provides the services prescribed under the Act?", o: ["State Govt", "Post Office", "Private Couriers", "Foreign Post"], a: 1 },
     { q: "Who has the power to make 'regulations' under the Act?", o: ["Parliament", "Central Govt", "Director General", "Circle Head"], a: 2 },
@@ -2088,7 +2088,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "Under the new regulations, \"Newspaper\" is defined under which Act?", o: ["Press and Registration of Books Act, 1867", "Indian Post Office Act, 1898", "Press and Registration of Periodicals Act, 2023", "Newspaper (Price and Page) Act, 1956"], a: 2, e: "As per the document, a newspaper is defined as per the Press and Registration of Periodicals Act, 2023." },
     { q: "A Registered Newspaper must be published and posted not less than _____ of its issues in a calendar year.", o: ["25%", "Half (50%)", "Three-fourths (75%)", "90%"], a: 1, e: "Provided further that a newspaper shall, in no case, be published and posted less than half of its issues in a calendar year." },
     { q: "A publisher wishes to renew the registration of a newspaper. If the application is received *after* the date of expiry of the previous registration, what is the late fee charged?", o: ["Rs. 20/-", "Rs. 50/-", "Rs. 100/-", "Rs. 500/-"], a: 2, e: "Where the application for renewal is received after the date of expiry of the previous registration, a late fee of Rs. 100/- shall be charged. (Note: It is Rs. 50/- if received within the last month of validity )." },
-    { q: "Identify the correct postage rate for a **single copy** of a registered newspaper weighing 80 grams.", o: ["25 paise", "50 paise", "75 paise", "1 Rupee"], a: 1, e: "For a single copy: Weight not exceeding 50g = 25 paise. Weight exceeding 50g but not exceeding 100g = 50 paise. Since 80g falls in the second slab, the rate is 50 paise." },
+    { q: "Identify the correct postage rate for a single copy of a registered newspaper weighing 80 grams.", o: ["25 paise", "50 paise", "75 paise", "1 Rupee"], a: 1, e: "For a single copy: Weight not exceeding 50g = 25 paise. Weight exceeding 50g but not exceeding 100g = 50 paise. Since 80g falls in the second slab, the rate is 50 paise." },
     { q: "An Identification Card issued by the Head Office (HO) is valid for how many years, and what is the processing fee?", o: ["2 Years; Rs. 100/-", "3 Years; Rs. 250/-", "3 Years; Rs. 20/-", "5 Years; Rs. 250/-"], a: 1, e: "The validity is 3 Years from the date of issue. The Processing Fee is Rs. 250/-. (Note: Application fee is Rs. 20/-)." },
     { q: "The \"Camp Bag\" facility is available exclusively to high-ranking officials. Who among the following is NOT included in this list?", o: ["President of India", "Governor of State", "Secretary, Department of Posts", "Director General (DG) Posts"], a: 2, e: "The facility is only for the President, Vice-President, Minister of Central Government, Governor of State, and DG Posts. The Secretary, DoP is not explicitly listed in this specific clause." },
     { q: "What is the \"Incidental Charge\" levied on a Camp Bag booked as an Air Parcel?", o: ["Rs. 16/-", "Rs. 10/-", "Rs. 6/-", "Nil"], a: 2, e: "For a Camp Bag booked as an Air Parcel, the incidental charge is Rs. 6/-. (For a regular Parcel, it is Rs. 16/- )." },
@@ -2156,65 +2156,65 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "A \"Brochure\" is brought out by the Department of Posts when:", o: ["A Definitive stamp is issued.", "A Commemorative/Special stamp is issued.", "A new Post Office is opened.", "A new Postal Service is launched."], a: 1, e: "Whenever any commemorative/special stamp is issued, a publicity brochure is also brought out." },
   ],
   82: [
-    { q: "Consider the following statements regarding the **Universal Postal Union (UPU)**:\n1. It was established on 09 Oct 1874.\n2. The headquarters is located in Bangkok, Thailand.\n3. It consists of 4 Bodies and 2 Cooperatives.\n4. The Telematics Cooperative is a part of the UPU structure.\nWhich of the statements given above are correct?", o: ["1, 2 and 3 only", "1, 3 and 4 only", "2 and 4 only", "1 and 3 only"], a: 1, e: "Statement 2 is incorrect because the HQ of UPU is in **Berne (Switzerland)**. The HQ of APPU is in Bangkok. All other statements are correct as per." },
+    { q: "Consider the following statements regarding the Universal Postal Union (UPU):\n1. It was established on 09 Oct 1874.\n2. The headquarters is located in Bangkok, Thailand.\n3. It consists of 4 Bodies and 2 Cooperatives.\n4. The Telematics Cooperative is a part of the UPU structure.\nWhich of the statements given above are correct?", o: ["1, 2 and 3 only", "1, 3 and 4 only", "2 and 4 only", "1 and 3 only"], a: 1, e: "Statement 2 is incorrect because the HQ of UPU is in Berne (Switzerland). The HQ of APPU is in Bangkok. All other statements are correct as per." },
     { q: "Who is the Secretary General of the Asian Pacific Postal Union (APPU) as mentioned in the document?", o: ["Masahiko Metoki", "Dr. Vinay Prakash Singh", "Bishar A. Hussein", "Vineet Pandey"], a: 1, e: "The document explicitly states the Secretary General of APPU is Dr. Vinay Prakash Singh. Masahiko Metoki is the DG of UPU." },
     { q: "The exchange of items other than Letter Post items with APPU countries is governed by which agreement?", o: ["The APPU Convention", "Relevant agreement of UPU", "Bilateral Trade Agreement", "The Bangkok Protocol"], a: 1, e: "The document states that the \"Exchange of items other than Letter Post item with the APPU countries is governed by relevant agreement of UPU\"." },
-    { q: "Under the classification of Foreign Postal Articles, what does the abbreviation **\"AO\"** stand for?", o: ["All Objects", "Autres Object", "Air Object", "Articles of Origin"], a: 1, e: "Letter class of foreign post is classed as Letter et Cartes (LC) and **Autres Object (AO)**." },
-    { q: "Which of the following items falls under the **\"Autres Object\" (AO)** category?", o: ["Letters", "Aerogrammes", "Postcards", "Small Packets"], a: 3, e: "The \"AO\" category includes Printed Papers (including books and Registered News Papers), **Small Packets**, and Literature for the blind. Letters and Postcards fall under \"LC\"." },
-    { q: "When prepaying postage in cash for foreign articles, which specific indication must be used?", o: ["POSTAGE PAID IN CASH", "PORT PAYE", "TAXE PERCUE", "INDIA POSTAGE PAID"], a: 1, e: "The document specifies the indication for prepayment of postage in cash is **\"PORT PAYE\"**." },
-    { q: "For a foreign letter in **roll form**, the sum of the length and twice the diameter must not exceed:", o: ["900 mm", "1040 mm", "600 mm", "1200 mm"], a: 1, e: "For letters in roll form, the sum of the length and twice the diameter should not exceed **1040 mm**." },
-    { q: "According to the regulations for standard envelopes and postcards, the ratio between the length and the breadth must be more than:", o: ["1.5", "√2", "√2 (approx 1.41)", "1.3"], a: 2, e: "The ratio between the length and the breadth is more than **√2** (The value of √2)." },
-    { q: "What is the maximum permissible weight for a **Letter** in the foreign post?", o: ["1 Kg", "2 Kg", "5 Kg", "30 Kg"], a: 1, e: "The maximum weight for a Letter is **2 Kg**." },
-    { q: "Regarding **Aerogrammes**, which of the following statements is **INCORRECT**?", o: ["It is intended for transmission exclusively by air.", "Maximum size is 165 × 90 mm.", "Minimum size is 140 × 90 mm.", "The weight should not be more than 5 gms."], a: 3, e: "The weight of an aerogramme should not be more than **3 gms**, not 5 gms. All other dimensions are correct." },
-    { q: "What is the maximum permissible weight of an **M-Bag (Bulk Bag)**?", o: ["20 Kg", "25 Kg", "30 Kg", "50 Kg"], a: 2, e: "The maximum permissible weight of an M-bag is **30 kg**." },
-    { q: "M-Bags must be accompanied by which address label size?", o: ["Not more than 90 × 140 mm", "Not less than 74 × 105 mm", "Exactly 100 × 150 mm", "Not more than 200 × 300 mm"], a: 0, e: "The address label shall be made of sufficiently rigid material and shall not measure more than **90 × 140 mm**." },
-    { q: "Which of the following charges are **exempted** for \"Literature for the Blind\"?\n1. Postage fees\n2. Registration charges\n3. Air surcharges\n4. Acknowledgement fees\nSelect the correct answer using the code below:", o: ["1 and 2 only", "1, 2, and 4 only", "1, 3, and 4 only", "All of the above"], a: 1, e: "Blind literatures are exempted from Postage fees, registration charges, acknowledgement and enquiry fees for **surface route**. However, **Air surcharges will be applicable** for transmission by air." },
-    { q: "Which customs declaration form is required if the value of the contents of an article exceeds **300 SDR**?", o: ["CN 22", "CN 23", "CP 71", "CP 72"], a: 1, e: "**CN 23** is used if the value of contents is more than 300 SDR. CN 22 is for values up to 300 SDR." },
-    { q: "As per the document, what is the value of **300 SDR** in Indian Rupees as on 17.09.2025?", o: ["Rs. 35,294.71", "Rs. 38,294.71", "Rs. 40,000.00", "Rs. 32,500.00"], a: 1, e: "The document explicitly states: \"(As on 17.09.2025, the 300 SDR = **Rs. 38294.71**)\"." },
-    { q: "For Electronic Advance Data (EAD) adoption, the **\"7+1 dataset\"** includes all of the following EXCEPT:", o: ["Consignor address", "Total gross weight", "HS Code", "Identifier"], a: 2, e: "The 7+1 dataset includes Consignor name, Consignor address, Consignee name, Consignee address, Number of packages, Total gross weight, Brief merchandise description, and Identifier. HS Code is not listed in the 7+1 dataset in this document." },
-    { q: "How are **unpaid** postcards having stamps affixed on the back (other than the address side) treated?", o: ["They are treated as fully paid.", "They are treated as insufficiently paid.", "They are liable to be treated as unpaid.", "They are returned to sender immediately."], a: 2, e: "Postcards having stamps affixed on the back (other than address side) are liable to be **treated as unpaid**." },
-    { q: "In the case of **undeliverable** correspondence, which item is **not returned** to the sender if it does not bear the sender's address?", o: ["Registered Letter", "Registered Postcard", "Unregistered Postcard", "Insured Letter"], a: 2, e: "Postcard (other than registered) which do not bear the address of the sender are **not returned**." },
-    { q: "If an insufficiently paid Letter is forwarded **By Air** after being taxed, what is the charge collected from the addressee?", o: ["50% of Combined Charge", "75% of Air Surcharge", "Double the deficiency", "Handling charge only"], a: 1, e: "For Letters sent By Air after being taxed, the charge is **75% of Air Surcharge**." },
-    { q: "The exchange of Parcels with which of the following countries is regulated by a **special bilateral agreement**, despite it being a member of the UPU?", o: ["Bangladesh", "Pakistan", "Nepal", "USA"], a: 1, e: "\"However, exchange of Parcels with **Pakistan** which is also member of UPU, Parcel Post Agreement is regulated by means of a special bilateral agreement\"." },
-    { q: "What are the maximum dimension limits for a Foreign Parcel?", o: ["Length 1.50m; Sum of length and girth 2m", "Length 1.00m; Sum of length and girth 2.5m", "Length 1.05m; Sum of length and girth 3m", "Length 2.00m; Sum of length and girth 3m"], a: 2, e: "The length should not exceed **1.05 meter**. The sum of the length and the greatest circumference... should not exceed **3 meters**." },
+    { q: "Under the classification of Foreign Postal Articles, what does the abbreviation \"AO\" stand for?", o: ["All Objects", "Autres Object", "Air Object", "Articles of Origin"], a: 1, e: "Letter class of foreign post is classed as Letter et Cartes (LC) and Autres Object (AO)." },
+    { q: "Which of the following items falls under the \"Autres Object\" (AO) category?", o: ["Letters", "Aerogrammes", "Postcards", "Small Packets"], a: 3, e: "The \"AO\" category includes Printed Papers (including books and Registered News Papers), Small Packets, and Literature for the blind. Letters and Postcards fall under \"LC\"." },
+    { q: "When prepaying postage in cash for foreign articles, which specific indication must be used?", o: ["POSTAGE PAID IN CASH", "PORT PAYE", "TAXE PERCUE", "INDIA POSTAGE PAID"], a: 1, e: "The document specifies the indication for prepayment of postage in cash is \"PORT PAYE\"." },
+    { q: "For a foreign letter in roll form, the sum of the length and twice the diameter must not exceed:", o: ["900 mm", "1040 mm", "600 mm", "1200 mm"], a: 1, e: "For letters in roll form, the sum of the length and twice the diameter should not exceed 1040 mm." },
+    { q: "According to the regulations for standard envelopes and postcards, the ratio between the length and the breadth must be more than:", o: ["1.5", "√2", "√2 (approx 1.41)", "1.3"], a: 2, e: "The ratio between the length and the breadth is more than √2 (The value of √2)." },
+    { q: "What is the maximum permissible weight for a Letter in the foreign post?", o: ["1 Kg", "2 Kg", "5 Kg", "30 Kg"], a: 1, e: "The maximum weight for a Letter is 2 Kg." },
+    { q: "Regarding Aerogrammes, which of the following statements is INCORRECT?", o: ["It is intended for transmission exclusively by air.", "Maximum size is 165 × 90 mm.", "Minimum size is 140 × 90 mm.", "The weight should not be more than 5 gms."], a: 3, e: "The weight of an aerogramme should not be more than 3 gms, not 5 gms. All other dimensions are correct." },
+    { q: "What is the maximum permissible weight of an M-Bag (Bulk Bag)?", o: ["20 Kg", "25 Kg", "30 Kg", "50 Kg"], a: 2, e: "The maximum permissible weight of an M-bag is 30 kg." },
+    { q: "M-Bags must be accompanied by which address label size?", o: ["Not more than 90 × 140 mm", "Not less than 74 × 105 mm", "Exactly 100 × 150 mm", "Not more than 200 × 300 mm"], a: 0, e: "The address label shall be made of sufficiently rigid material and shall not measure more than 90 × 140 mm." },
+    { q: "Which of the following charges are exempted for \"Literature for the Blind\"?\n1. Postage fees\n2. Registration charges\n3. Air surcharges\n4. Acknowledgement fees\nSelect the correct answer using the code below:", o: ["1 and 2 only", "1, 2, and 4 only", "1, 3, and 4 only", "All of the above"], a: 1, e: "Blind literatures are exempted from Postage fees, registration charges, acknowledgement and enquiry fees for surface route. However, Air surcharges will be applicable for transmission by air." },
+    { q: "Which customs declaration form is required if the value of the contents of an article exceeds 300 SDR?", o: ["CN 22", "CN 23", "CP 71", "CP 72"], a: 1, e: "CN 23 is used if the value of contents is more than 300 SDR. CN 22 is for values up to 300 SDR." },
+    { q: "As per the document, what is the value of 300 SDR in Indian Rupees as on 17.09.2025?", o: ["Rs. 35,294.71", "Rs. 38,294.71", "Rs. 40,000.00", "Rs. 32,500.00"], a: 1, e: "The document explicitly states: \"(As on 17.09.2025, the 300 SDR = Rs. 38294.71)\"." },
+    { q: "For Electronic Advance Data (EAD) adoption, the \"7+1 dataset\" includes all of the following EXCEPT:", o: ["Consignor address", "Total gross weight", "HS Code", "Identifier"], a: 2, e: "The 7+1 dataset includes Consignor name, Consignor address, Consignee name, Consignee address, Number of packages, Total gross weight, Brief merchandise description, and Identifier. HS Code is not listed in the 7+1 dataset in this document." },
+    { q: "How are unpaid postcards having stamps affixed on the back (other than the address side) treated?", o: ["They are treated as fully paid.", "They are treated as insufficiently paid.", "They are liable to be treated as unpaid.", "They are returned to sender immediately."], a: 2, e: "Postcards having stamps affixed on the back (other than address side) are liable to be treated as unpaid." },
+    { q: "In the case of undeliverable correspondence, which item is not returned to the sender if it does not bear the sender's address?", o: ["Registered Letter", "Registered Postcard", "Unregistered Postcard", "Insured Letter"], a: 2, e: "Postcard (other than registered) which do not bear the address of the sender are not returned." },
+    { q: "If an insufficiently paid Letter is forwarded By Air after being taxed, what is the charge collected from the addressee?", o: ["50% of Combined Charge", "75% of Air Surcharge", "Double the deficiency", "Handling charge only"], a: 1, e: "For Letters sent By Air after being taxed, the charge is 75% of Air Surcharge." },
+    { q: "The exchange of Parcels with which of the following countries is regulated by a special bilateral agreement, despite it being a member of the UPU?", o: ["Bangladesh", "Pakistan", "Nepal", "USA"], a: 1, e: "\"However, exchange of Parcels with Pakistan which is also member of UPU, Parcel Post Agreement is regulated by means of a special bilateral agreement\"." },
+    { q: "What are the maximum dimension limits for a Foreign Parcel?", o: ["Length 1.50m; Sum of length and girth 2m", "Length 1.00m; Sum of length and girth 2.5m", "Length 1.05m; Sum of length and girth 3m", "Length 2.00m; Sum of length and girth 3m"], a: 2, e: "The length should not exceed 1.05 meter. The sum of the length and the greatest circumference... should not exceed 3 meters." },
     { q: "What is the redirection fee for inward foreign parcels within the Inland Service?", o: ["Free of charge", "Rs. 6/- per article", "Rs. 10/- per article", "50% of original postage"], a: 1, e: "Each redirection is charged with a redirection fee amounting to Rs. 6/- per article." },
-    { q: "Regarding compensation for **International Air Parcels** in case of loss or total theft, what is the calculation formula?", o: ["30 SDR flat rate", "40 SDR plus 4.5 SDR per kg", "130 SDR flat rate", "Value of contents only"], a: 1, e: "Compensation is **40 SDR plus 4.5 SDR per kg** or the value of contents, whichever is less." },
-    { q: "What is the liability of the Post Office for the loss of a **Registered Letter**?", o: ["30 SDR or value of content (whichever is less) + postage paid", "40 SDR flat", "Rs. 1000", "Market value of the content only"], a: 0, e: "Liability for Registered Letter = value of content or **30 SDR** whichever is less plus postage paid." },
+    { q: "Regarding compensation for International Air Parcels in case of loss or total theft, what is the calculation formula?", o: ["30 SDR flat rate", "40 SDR plus 4.5 SDR per kg", "130 SDR flat rate", "Value of contents only"], a: 1, e: "Compensation is 40 SDR plus 4.5 SDR per kg or the value of contents, whichever is less." },
+    { q: "What is the liability of the Post Office for the loss of a Registered Letter?", o: ["30 SDR or value of content (whichever is less) + postage paid", "40 SDR flat", "Rs. 1000", "Market value of the content only"], a: 0, e: "Liability for Registered Letter = value of content or 30 SDR whichever is less plus postage paid." },
     { q: "What is the maximum insured value limit for a foreign article?", o: ["Rs. 50,000", "Rs. 1,00,000", "500 SDR", "4000 SDR"], a: 1, e: "Maximum Insured value for foreign article can be Rs. 1,00,000/-." },
   ],
   83: [
-    { q: "If a sender fails to make an enquiry regarding a registered article within a certain period, no liability is payable. What is this period?", o: ["3 months", "6 months", "1 year", "2 years"], a: 1, e: "No liability is payable if sender has not made an enquiry within a period of **6 months**." },
-    { q: "The International Tracked Packet Service (ITPS) is available for how many destinations initially?", o: ["32", "43", "55", "192"], a: 1, e: "The service will be available for the following **43 countries/destinations**." },
-    { q: "What is the maximum compensation for loss/damage of an International Tracked Packet (ITPS)?", o: ["Rs. 500", "Rs. 1000", "30 SDR", "130 SDR"], a: 1, e: "Compensation shall be restricted to **Rupees One thousand (Rs. 1000/-)** or actual value, whichever is less." },
-    { q: "Which of the following countries is **NOT** in the list of ITPS destinations?", o: ["Australia", "Mongolia", "Brazil", "Cambodia"], a: 2, e: "Australia, Mongolia (spelled Mangolia in text), and Cambodia are listed. Brazil is not listed in the table on page 14." },
-    { q: "Which of the following living creatures is **permitted** to be imported by letter post?", o: ["Bees and Silkworms", "Small birds", "Reptiles", "Hamsters"], a: 0, e: "Special permission is not required for importing **bees, silkworms**, parasites, and destroyers of injurious insects. Generally, living creatures are prohibited except bees, leeches, and silkworms." },
-    { q: "Flies of the family **Drosophilidae** can be imported for which specific purpose?", o: ["Agricultural feed", "Biomedical research", "Silk production", "Pest control"], a: 1, e: "Flies of the family Drosophilidae for **biomedical research** exchanged between officially recognized institutions." },
-    { q: "What is the **Customs Clearance fee** for a foreign letter packet or insured box if released after levying customs duty?", o: ["Rs. 10", "Rs. 20", "Rs. 30", "Rs. 50"], a: 2, e: "For clearance through Customs, a fee of **Rupees thirty** is recoverable from the addressee." },
+    { q: "If a sender fails to make an enquiry regarding a registered article within a certain period, no liability is payable. What is this period?", o: ["3 months", "6 months", "1 year", "2 years"], a: 1, e: "No liability is payable if sender has not made an enquiry within a period of 6 months." },
+    { q: "The International Tracked Packet Service (ITPS) is available for how many destinations initially?", o: ["32", "43", "55", "192"], a: 1, e: "The service will be available for the following 43 countries/destinations." },
+    { q: "What is the maximum compensation for loss/damage of an International Tracked Packet (ITPS)?", o: ["Rs. 500", "Rs. 1000", "30 SDR", "130 SDR"], a: 1, e: "Compensation shall be restricted to Rupees One thousand (Rs. 1000/-) or actual value, whichever is less." },
+    { q: "Which of the following countries is NOT in the list of ITPS destinations?", o: ["Australia", "Mongolia", "Brazil", "Cambodia"], a: 2, e: "Australia, Mongolia (spelled Mangolia in text), and Cambodia are listed. Brazil is not listed in the table on page 14." },
+    { q: "Which of the following living creatures is permitted to be imported by letter post?", o: ["Bees and Silkworms", "Small birds", "Reptiles", "Hamsters"], a: 0, e: "Special permission is not required for importing bees, silkworms, parasites, and destroyers of injurious insects. Generally, living creatures are prohibited except bees, leeches, and silkworms." },
+    { q: "Flies of the family Drosophilidae can be imported for which specific purpose?", o: ["Agricultural feed", "Biomedical research", "Silk production", "Pest control"], a: 1, e: "Flies of the family Drosophilidae for biomedical research exchanged between officially recognized institutions." },
+    { q: "What is the Customs Clearance fee for a foreign letter packet or insured box if released after levying customs duty?", o: ["Rs. 10", "Rs. 20", "Rs. 30", "Rs. 50"], a: 2, e: "For clearance through Customs, a fee of Rupees thirty is recoverable from the addressee." },
     { q: "What is the insurance fee for an International Parcel for a value up to Rs. 500?", o: ["Rs. 6", "Rs. 10", "Rs. 20", "Rs. 50"], a: 1, e: "For International Parcel, the fee for value insured up to Rs. 500 is Rs. 10." },
-    { q: "Calculate the **Demurrage charge** for an inward international packet weighing more than 500 grams, if the addressee fails to take delivery within 7 days.", o: ["Rupee one per day", "Rupees five per day", "Rupees ten per day", "Rupees twenty per day"], a: 2, e: "For inward international packet/bag weighing more than 500 grams, the demurrage charge is **Rupees ten per day**." },
-    { q: "What is the Air Surcharge for **Countries in North America** for every 20gms?", o: ["Rs. 5.00", "Rs. 8.00", "Rs. 10.00", "Rs. 4.00"], a: 1, e: "For Countries in North America, the Air Surcharge is Rs. 8.00." },
-    { q: "What is the compensation for loss of **EMS (International Speed Post) Merchandise**?", o: ["30 SDR", "40 SDR", "130 SDR or value of content (whichever is less)", "Postage refunded only"], a: 2, e: "EMS (International Speed Post) Merchandise = Value of content or **130 SDR** whichever is less plus postage paid." },
-    { q: "Parcels intended to be delivered free of charges must be marked with:", o: ["\"Franc de droits\"", "\"Port Paye\"", "\"Avis de reception\"", "\"Petit Paquet\""], a: 0, e: "These parcels should be marked clearly with the word \"To be delivered free of charges\" (**\"Franc de droits\"**)." },
-    { q: "A \"Blind Literature\" packet transmitted by **Air** will be charged:", o: ["No charges", "Full postage", "Air surcharges only", "Registration fee only"], a: 2, e: "**Air surcharges will be applicable** for transmission of literature for the blind by air. They are exempted from postage/registration only for surface route." },
-    { q: "Which term describes circumstances beyond control in the context of insurance?", o: ["Force Majeure", "Petit Paquet", "Carte de visite", "Avis de reception"], a: 0, e: "Circumstance beyond the control = **\"Force Majeure\"**." },
-    { q: "The **Advice of Delivery** fee for foreign countries (other than Bhutan and Nepal) is:", o: ["Rs. 5", "Rs. 10", "Rs. 20", "Rs. 25"], a: 2, e: "Advice of Delivery Fee for other foreign countries is Rs. 20. For Bhutan and Nepal, it is Rs. 10." },
-    { q: "According to the Electronic Advance Data (EAD) regulations, which form must accompany an item if the declared value is **less than or equal to 300 SDR**?", o: ["CN 23", "CN 22", "CP 72", "PP 1"], a: 1, e: "The document states: \"(a) CN 22 - if the declared value of the international items less than or equal to 300 Special Drawing Rights (SDR)\"." },
-    { q: "In the context of EAD, which of the following is **NOT** a mandatory element of the \"7+1 dataset\"?", o: ["Consignor name", "Total gross weight", "Sender's mobile number", "Brief merchandise description"], a: 2, e: "The mandatory \"7+1 dataset\" includes Consignor name, Consignor address, Consignee name, Consignee address, Number of packages, Total gross weight, Brief merchandise description, and Identifier. \"Sender's mobile number\" is not listed." },
-    { q: "What is the **Air Surcharge** tariff (for every 20gms) for countries situated in **Europe**?", o: ["Rs. 4.00", "Rs. 5.00", "Rs. 8.00", "Rs. 10.00"], a: 1, e: "As per the \"Tariff of Air Surcharge & Surface Air Lifted (SAL)\" table, the Air Surcharge for \"Countries in Europe\" is Rs. 5.00." },
-    { q: "What is the registration tariff for a **Mail Bag**?", o: ["Rs. 150/-", "Rs. 500/-", "Rs. 750/-", "Rs. 1000/-"], a: 2, e: "The Registration Tariff table explicitly lists the rate for a \"Mail Bag\" as Rs. 750/-." },
-    { q: "For **Small Packets** sent to countries **except USA**, what is the basic tariff for every additional 100gms (upto 2000gms)?", o: ["Rs. 80.00", "Rs. 70.00", "Rs. 105.00", "Rs. 115.00"], a: 1, e: "The table \"Basic Tariff for Air Letter-Post Items\" states that for Small Packets to all countries except USA, the rate for every additional 100gms is Rs. 70.00." },
-    { q: "The French term **\"Avis de reception\"** used in foreign post corresponds to which Inland Post service?", o: ["Certificate of Posting", "Speed Post", "Acknowledgement (Advice of delivery)", "Late Fee"], a: 2, e: "The document states: \"Avis de reception (Advice of delivery) – Similar to acknowledgement in inland post\"." },
-    { q: "Airmail articles must bear a label or stamp impression with the words **\"Par Avion\"**. What does this phrase translate to?", o: ["Priority Mail", "By Air Mail", "Express Delivery", "Registered Mail"], a: 1, e: "The document clarifies: \"Par Avion = By Air Mail\"." },
-    { q: "What is the maximum weight limit for a **Small Packet**?", o: ["1 Kg", "2 Kg", "5 Kg", "10 Kg"], a: 1, e: "\"Small packets shall have maximum weight upto **2 kg**\"." },
-    { q: "Calculate the maximum demurrage charge collectible for an international air parcel addressed **\"Poste Restante\"** if the addressee fails to take delivery.", o: ["Rupees twenty four and fifty paise", "Rupees thirty", "Rupees forty", "Rupees fifty"], a: 2, e: "For \"Poste Restante\" air parcels, the demurrage is Rupees one per day subject to a **maximum of forty rupees**." },
-    { q: "When redirecting a foreign parcel to a country **outside of India**, how is the additional postage calculated?", o: ["It is free of charge.", "Flat rate of Rs. 50.", "Equal to the postage on a parcel of the same weight to the new destination.", "Half the postage paid on the original parcel."], a: 2, e: "\"The additional Postage which will be equal to the postage on a parcel of the same weight to the new destination\"." },
+    { q: "Calculate the Demurrage charge for an inward international packet weighing more than 500 grams, if the addressee fails to take delivery within 7 days.", o: ["Rupee one per day", "Rupees five per day", "Rupees ten per day", "Rupees twenty per day"], a: 2, e: "For inward international packet/bag weighing more than 500 grams, the demurrage charge is Rupees ten per day." },
+    { q: "What is the Air Surcharge for Countries in North America for every 20gms?", o: ["Rs. 5.00", "Rs. 8.00", "Rs. 10.00", "Rs. 4.00"], a: 1, e: "For Countries in North America, the Air Surcharge is Rs. 8.00." },
+    { q: "What is the compensation for loss of EMS (International Speed Post) Merchandise?", o: ["30 SDR", "40 SDR", "130 SDR or value of content (whichever is less)", "Postage refunded only"], a: 2, e: "EMS (International Speed Post) Merchandise = Value of content or 130 SDR whichever is less plus postage paid." },
+    { q: "Parcels intended to be delivered free of charges must be marked with:", o: ["\"Franc de droits\"", "\"Port Paye\"", "\"Avis de reception\"", "\"Petit Paquet\""], a: 0, e: "These parcels should be marked clearly with the word \"To be delivered free of charges\" (\"Franc de droits\")." },
+    { q: "A \"Blind Literature\" packet transmitted by Air will be charged:", o: ["No charges", "Full postage", "Air surcharges only", "Registration fee only"], a: 2, e: "Air surcharges will be applicable for transmission of literature for the blind by air. They are exempted from postage/registration only for surface route." },
+    { q: "Which term describes circumstances beyond control in the context of insurance?", o: ["Force Majeure", "Petit Paquet", "Carte de visite", "Avis de reception"], a: 0, e: "Circumstance beyond the control = \"Force Majeure\"." },
+    { q: "The Advice of Delivery fee for foreign countries (other than Bhutan and Nepal) is:", o: ["Rs. 5", "Rs. 10", "Rs. 20", "Rs. 25"], a: 2, e: "Advice of Delivery Fee for other foreign countries is Rs. 20. For Bhutan and Nepal, it is Rs. 10." },
+    { q: "According to the Electronic Advance Data (EAD) regulations, which form must accompany an item if the declared value is less than or equal to 300 SDR?", o: ["CN 23", "CN 22", "CP 72", "PP 1"], a: 1, e: "The document states: \"(a) CN 22 - if the declared value of the international items less than or equal to 300 Special Drawing Rights (SDR)\"." },
+    { q: "In the context of EAD, which of the following is NOT a mandatory element of the \"7+1 dataset\"?", o: ["Consignor name", "Total gross weight", "Sender's mobile number", "Brief merchandise description"], a: 2, e: "The mandatory \"7+1 dataset\" includes Consignor name, Consignor address, Consignee name, Consignee address, Number of packages, Total gross weight, Brief merchandise description, and Identifier. \"Sender's mobile number\" is not listed." },
+    { q: "What is the Air Surcharge tariff (for every 20gms) for countries situated in Europe?", o: ["Rs. 4.00", "Rs. 5.00", "Rs. 8.00", "Rs. 10.00"], a: 1, e: "As per the \"Tariff of Air Surcharge & Surface Air Lifted (SAL)\" table, the Air Surcharge for \"Countries in Europe\" is Rs. 5.00." },
+    { q: "What is the registration tariff for a Mail Bag?", o: ["Rs. 150/-", "Rs. 500/-", "Rs. 750/-", "Rs. 1000/-"], a: 2, e: "The Registration Tariff table explicitly lists the rate for a \"Mail Bag\" as Rs. 750/-." },
+    { q: "For Small Packets sent to countries except USA, what is the basic tariff for every additional 100gms (upto 2000gms)?", o: ["Rs. 80.00", "Rs. 70.00", "Rs. 105.00", "Rs. 115.00"], a: 1, e: "The table \"Basic Tariff for Air Letter-Post Items\" states that for Small Packets to all countries except USA, the rate for every additional 100gms is Rs. 70.00." },
+    { q: "The French term \"Avis de reception\" used in foreign post corresponds to which Inland Post service?", o: ["Certificate of Posting", "Speed Post", "Acknowledgement (Advice of delivery)", "Late Fee"], a: 2, e: "The document states: \"Avis de reception (Advice of delivery) – Similar to acknowledgement in inland post\"." },
+    { q: "Airmail articles must bear a label or stamp impression with the words \"Par Avion\". What does this phrase translate to?", o: ["Priority Mail", "By Air Mail", "Express Delivery", "Registered Mail"], a: 1, e: "The document clarifies: \"Par Avion = By Air Mail\"." },
+    { q: "What is the maximum weight limit for a Small Packet?", o: ["1 Kg", "2 Kg", "5 Kg", "10 Kg"], a: 1, e: "\"Small packets shall have maximum weight upto 2 kg\"." },
+    { q: "Calculate the maximum demurrage charge collectible for an international air parcel addressed \"Poste Restante\" if the addressee fails to take delivery.", o: ["Rupees twenty four and fifty paise", "Rupees thirty", "Rupees forty", "Rupees fifty"], a: 2, e: "For \"Poste Restante\" air parcels, the demurrage is Rupees one per day subject to a maximum of forty rupees." },
+    { q: "When redirecting a foreign parcel to a country outside of India, how is the additional postage calculated?", o: ["It is free of charge.", "Flat rate of Rs. 50.", "Equal to the postage on a parcel of the same weight to the new destination.", "Half the postage paid on the original parcel."], a: 2, e: "\"The additional Postage which will be equal to the postage on a parcel of the same weight to the new destination\"." },
   ],
   84: [
-    { q: "What is the time limit for making inquiries regarding **International Speed Post** items?", o: ["3 months from the date of posting", "4 months from the day after posting", "6 months from the day after posting", "1 year from the date of posting"], a: 1, e: "Inquiries for International Speed Post items must be entertained \"Within a period of **four months**... from the day after that on which the article was posted\". Note: Other items have a 6-month limit." },
-    { q: "Which of the following plants is **EXEMPTED** from the import prohibition by letter post?", o: ["Cotton", "Sugarcane", "Tea", "Rose"], a: 1, e: "\"No plant shall be imported in India by letter post **except sugarcane**\"." },
-    { q: "For an International Air Parcel, what is the **upper ceiling** for compensation in case of loss or total theft (excluding postage)?", o: ["40 SDR", "100 SDR", "130 SDR", "300 SDR"], a: 2, e: "The compensation is calculated based on weight but is \"subject to an upper ceiling of **130 SDR**, plus the postage paid\"." },
-    { q: "Regarding **M-Bags (Bulk Bags)**, which of the following statements about contents is **CORRECT**?", o: ["They can never contain commercial samples.", "They may contain commercial samples if they are not subject to resale.", "The weight of each commercial item can be up to 5 kg.", "They must only contain books, nothing else."], a: 1, e: "M-Bags may contain commercial samples or informational materials \"that are **not subject to resale**\"." },
-    { q: "What is the minimum dimension (surface measurement) for a **Small Packet**?", o: ["90 × 140 mm", "74 × 105 mm", "100 × 150 mm", "140 × 90 mm"], a: 0, e: "Small packets must have a surface measuring not less than **90 × 140 mm**." },
+    { q: "What is the time limit for making inquiries regarding International Speed Post items?", o: ["3 months from the date of posting", "4 months from the day after posting", "6 months from the day after posting", "1 year from the date of posting"], a: 1, e: "Inquiries for International Speed Post items must be entertained \"Within a period of four months... from the day after that on which the article was posted\". Note: Other items have a 6-month limit." },
+    { q: "Which of the following plants is EXEMPTED from the import prohibition by letter post?", o: ["Cotton", "Sugarcane", "Tea", "Rose"], a: 1, e: "\"No plant shall be imported in India by letter post except sugarcane\"." },
+    { q: "For an International Air Parcel, what is the upper ceiling for compensation in case of loss or total theft (excluding postage)?", o: ["40 SDR", "100 SDR", "130 SDR", "300 SDR"], a: 2, e: "The compensation is calculated based on weight but is \"subject to an upper ceiling of 130 SDR, plus the postage paid\"." },
+    { q: "Regarding M-Bags (Bulk Bags), which of the following statements about contents is CORRECT?", o: ["They can never contain commercial samples.", "They may contain commercial samples if they are not subject to resale.", "The weight of each commercial item can be up to 5 kg.", "They must only contain books, nothing else."], a: 1, e: "M-Bags may contain commercial samples or informational materials \"that are not subject to resale\"." },
+    { q: "What is the minimum dimension (surface measurement) for a Small Packet?", o: ["90 × 140 mm", "74 × 105 mm", "100 × 150 mm", "140 × 90 mm"], a: 0, e: "Small packets must have a surface measuring not less than 90 × 140 mm." },
   ],
   85: [
     { q: "DIGIPIN divides the geographical territory of India into uniform units of approximately what size?", o: ["1 meter x 1 meter", "2 meters x 2 meters", "4 meters x 4 meters", "10 meters x 10 meters"], a: 2, e: "DIGIPIN is visualized as an alphanumeric offline grid system that divides the geographical territory of India into uniform 4-meter by 4-meter (approx.) units." },
@@ -2241,7 +2241,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "In the context of DIGIPIN's grid system, what is the significance of the adjacency of cells labeled by consecutive symbols (e.g., 6 and 7)?", o: ["They belong to different states.", "They represent geographical neighbors.", "They indicate a change in time zone.", "There is no geographical significance to consecutive numbers."], a: 1, e: "The grid provides some sense of directionality and adjacency; cells labeled by consecutive symbols (such as 6 and 7) are geographical neighbors." },
     { q: "What is the approximate grid width in degrees for a Level-1 region?", o: ["36° × 36°", "9° × 9°", "2.25° × 2.25°", "4° × 4°"], a: 1, e: "The total latitudinal and longitudinal width of the bounding box is 36°, resulting in 9° × 9° regions at Level-1 (since it is a 4x4 split)." },
     { q: "With reference to the operational status of DIGIPIN, consider the following timeline:\n* Beta Release: 19.07.2024\n* Official Launch: 27.05.2025\nWhich statement is true regarding the official launch?", o: ["The launch date is tentative and has not been decided.", "The system was officially launched on May 27, 2025.", "The official launch will only happen after the 2026 census.", "The launch was cancelled due to technical glitches."], a: 1, e: "The document explicitly states: \"An official Digital Postal Index Number system, was launched on May 27, 2025\"." },
-    { q: "Which of the following full forms is NOT correctly defined in the context of DIGIPIN?", o: ["AIA - Address Information Agent", "CM - Central Mapper", "UPRN - Unique Personal Reference Number", "ONDC - Open Network for Digital Commerce"], a: 2, e: "According to the \"Important Full Form\" list, UPRN stands for **Unique Property Reference Number**, not \"Personal\"." }
+    { q: "Which of the following full forms is NOT correctly defined in the context of DIGIPIN?", o: ["AIA - Address Information Agent", "CM - Central Mapper", "UPRN - Unique Personal Reference Number", "ONDC - Open Network for Digital Commerce"], a: 2, e: "According to the \"Important Full Form\" list, UPRN stands for Unique Property Reference Number, not \"Personal\"." }
   ],
   // Set 86
       86: [
@@ -2434,121 +2434,121 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "If a corporate customer utilizing the bulk \"e-Post\" service fails to pay their generated bill within the specified time, what is the exact penalty levied?", o: ["A flat fee of Rs. 1,000 per week.", "12% per annum on the outstanding amount, subject to a minimum of Rs. 100/-.", "Immediate suspension of services on the 1st day of default.", "Invocation of the Bank Guarantee immediately after the due date."], a: 1, e: "•\tConcept: Unpaid digital-to-physical printing pipelines generate direct financial losses for the post office. Punitive interest is applied to offset the cost of capital and deter late payments.\n•\tElimination: The rules explicitly dictate a penalty at the rate of 12% per annum on the outstanding amount, subject to a minimum of Rs. 100/-. (Suspension and Bank Guarantee invocation only happen after two consecutive months of non-payment) ." },
   ],
 93: [
-    { q: "The Mail Network Optimization Project (MNOP) was originally initiated as part of which plan scheme before being adopted by the Department of Posts in November 2010?", o: ["10th Plan Scheme", "11th Plan Scheme", "12th Plan Scheme", "National Postal Policy 2012"], a: 1, e: "The project was initiated as part of an **11th plan scheme** in March 2010." },
-    { q: "Under the MNOP simplification of the network, the Speed Post network was optimized by creating how many National Sorting Hubs (NSHs)?", o: ["89", "95", "163", "315"], a: 1, e: "Speed Post Network was optimized by creating **95 National Sorting Hubs (NSHs)**." },
-    { q: "In the context of MNOP process streamlining, which of the following statements regarding sorting logic is correct?", o: ["TD sorting is scheduled before NTD sorting.", "Speed-Net NTD sorting is scheduled before TD sorting to optimize D+X.", "Sorting logic is based purely on pincode proximity, not volume.", "Labour specialization is removed to allow multi-tasking."], a: 1, e: "Speed-Net NTD sorting is scheduled **before TD sorting** to optimize D+X." },
-    { q: "What is the prescribed target for the Key Performance Indicator (KPI) \"D+X (NTD)\"?", o: ["Average Time 1.28 days", "Average Time 2 days", "Average Time 3 days", "Average Time 48 hours"], a: 1, e: "The target for D+X (NTD) is **Average Time 2 days**." },
-    { q: "Which of the following is the target for the \"Share of bags without 'correct' bag labels\" KPI?", o: ["0%", "0.5%", "1%", "5%"], a: 0, e: "The target for Share of bags without 'correct' bag labels is **0%**." },
-    { q: "How many unique Key Performance Indicators (KPIs) were established under MNOP to ensure the monitoring of every mail activity?", o: ["9", "11", "15", "21"], a: 1, e: "**Eleven (11) Unique KPIs** are set up to ensure every mail activity." },
-    { q: "For the calculation of KPI \"D+X (TD)\", what constitutes a \"TD Article\"?", o: ["An article booked and delivered within the same municipal limit.", "An article booked and delivered within the same State.", "An article booked at offices in the local TD/catchment area of a given NSH and delivered at Post Offices in the local TD/catchment area of the *same* NSH.", "An article booked at an Intra Circle Hub and delivered to a National Sorting Hub."], a: 2, e: "TD articles are booked at offices in the local TD/catchment area of a given NSH and delivered at POs in the **same** local TD/catchment area." },
-    { q: "Regarding \"Inbound Operational Performance\" for metros, which time window is considered for articles received at the Sorting Hub?", o: ["6:00 AM on day D-1 to 6:00 AM on day D", "7:00 AM on day D-1 to 7:00 AM on day D", "3:00 AM on day D-1 to 3:00 AM on day D", "12:00 AM on day D to 12:00 PM on day D"], a: 1, e: "For metros, articles received from **7:00 AM on day D-1 to 7:00 AM on day D** are considered." },
-    { q: "If the Pin code of the Delivery PO differs from the Pin code of Delivery POs mapped to the particular destination Sorting Hub to which the article is bagged, it is recorded under which KPI?", o: ["Share of mis-sorted articles (TD)", "Share of mis-sorted articles (NTD)", "Share of articles with missing Pin Codes", "Share of bags without correct bag labels"], a: 1, e: "This is classified as **Share of mis-sorted articles (NTD)**." },
-    { q: "What is the \"Full Scan Compliance\" target percentage for TD articles?", o: ["80%", "90%", "95%", "100%"], a: 1, e: "The Full Scan Compliance (TD) target is **90%**." },
-    { q: "Under the MNOP scheme, how many mandatory scans are prescribed for NTD (National Transport Delivery) articles booked at a PO/NSH/ICH?", o: ["8 Scans", "9 Scans", "11 Scans", "12 Scans"], a: 3, e: "**12 NTD Scans** are mandatory for articles booked at PO/NSH/ICH." },
-    { q: "For BNPL-NTD category articles, how many scans are mandatory?", o: ["8", "9", "10", "12"], a: 1, e: "For BNPL-NTD category articles, **9 Scans** are mandatory." },
-    { q: "Which of the following is NOT a component of the MNOP Project?", o: ["Optimization and consolidation of mail operation network.", "Process redesign in mail operations.", "Decentralization of all Speed Post Centres to the Taluk level.", "Development of an effective online performance monitoring system based on KPIs."], a: 2, e: "Decentralization to Taluk level is **not** a component; MNOP focuses on consolidation (NSHs/ICHs)." },
-    { q: "As per the MNOP concept (w.e.f. 01.04.2025), how many Level-1 (L1) hubs are designated for First Class Unregistered mail?", o: ["79", "95", "96", "110"], a: 2, e: "There are **96 L1** hubs for First Class Unregistered mail." },
-    { q: "What is the Delivery Norm for Speed Post articles \"Between Metro Cities\" (Delhi, Mumbai, Chennai, Bangalore, Kolkata, and Hyderabad)?", o: ["1-2 days", "1-3 days", "2-3 days", "3-4 days"], a: 1, e: "The Delivery Norm for Speed Post between Metro Cities is **1-3 days**." },
-    { q: "According to the Postman Ad-hoc Establishment Norms for 2-wheeler beats, what is the time allocated per km in a \"Congested area\"?", o: ["3 Minutes/KM", "5 Minutes/KM", "6 Minutes/KM", "10 Minutes/KM"], a: 1, e: "The norm for 2-wheeler beats in a congested area is **5 Minutes/KM**." },
-    { q: "To be eligible for fuel reimbursement charges under the 2-wheeler scheme, what percentage of accountable articles must be processed through the Postman Mobile App (IMA)?", o: ["At least 80%", "At least 90%", "At least 95%", "100%"], a: 2, e: "At least **95%** of accountable articles must be processed through IMA." },
-    { q: "Under the Parcel Network Optimization Project (PNOP), the network structure includes which of the following?", o: ["95 NSHs and 163 ICHs", "79 NPH/Level-1 hubs and 110 PH/Level-2 hubs", "56 L1 hubs and 200 L2 hubs", "189 NPHs and 79 PHs"], a: 1, e: "The network consists of **79 NPH/Level-1 (L1) and 110 PH/Level-2 (L2)** hubs." },
-    { q: "Which color label is used for Parcel bags intended for \"Air connectivity\" (Speed Post Parcel)?", o: ["Blue", "Yellow", "Red", "Green"], a: 1, e: "The parcel bag label is **Yellow** for Air connectivity (Speed Post Parcel)." },
-    { q: "A Nodal Delivery Centre (NDC) is established in cities/towns where the parcel density exceeds:", o: ["0.5 Parcel per Sq K.M.", "1 Parcel per Sq K.M.", "2 Parcels per Sq K.M.", "5 Parcels per Sq K.M."], a: 1, e: "NDCs are set up where parcel density exceeds **1 Parcel per Sq K.M.**" },
-    { q: "What are the dimensions fixed for Postman delivery bags under the NDC setup?", o: ["38cm x 27cm x 20cm", "45cm x 35cm x 56cm", "50cm x 40cm x 60cm", "60cm x 60cm x 60cm"], a: 1, e: "The fixed dimensions are **45cm x 35cm x 56cm**." },
+    { q: "The Mail Network Optimization Project (MNOP) was originally initiated as part of which plan scheme before being adopted by the Department of Posts in November 2010?", o: ["10th Plan Scheme", "11th Plan Scheme", "12th Plan Scheme", "National Postal Policy 2012"], a: 1, e: "The project was initiated as part of an 11th plan scheme in March 2010." },
+    { q: "Under the MNOP simplification of the network, the Speed Post network was optimized by creating how many National Sorting Hubs (NSHs)?", o: ["89", "95", "163", "315"], a: 1, e: "Speed Post Network was optimized by creating 95 National Sorting Hubs (NSHs)." },
+    { q: "In the context of MNOP process streamlining, which of the following statements regarding sorting logic is correct?", o: ["TD sorting is scheduled before NTD sorting.", "Speed-Net NTD sorting is scheduled before TD sorting to optimize D+X.", "Sorting logic is based purely on pincode proximity, not volume.", "Labour specialization is removed to allow multi-tasking."], a: 1, e: "Speed-Net NTD sorting is scheduled before TD sorting to optimize D+X." },
+    { q: "What is the prescribed target for the Key Performance Indicator (KPI) \"D+X (NTD)\"?", o: ["Average Time 1.28 days", "Average Time 2 days", "Average Time 3 days", "Average Time 48 hours"], a: 1, e: "The target for D+X (NTD) is Average Time 2 days." },
+    { q: "Which of the following is the target for the \"Share of bags without 'correct' bag labels\" KPI?", o: ["0%", "0.5%", "1%", "5%"], a: 0, e: "The target for Share of bags without 'correct' bag labels is 0%." },
+    { q: "How many unique Key Performance Indicators (KPIs) were established under MNOP to ensure the monitoring of every mail activity?", o: ["9", "11", "15", "21"], a: 1, e: "Eleven (11) Unique KPIs are set up to ensure every mail activity." },
+    { q: "For the calculation of KPI \"D+X (TD)\", what constitutes a \"TD Article\"?", o: ["An article booked and delivered within the same municipal limit.", "An article booked and delivered within the same State.", "An article booked at offices in the local TD/catchment area of a given NSH and delivered at Post Offices in the local TD/catchment area of the *same* NSH.", "An article booked at an Intra Circle Hub and delivered to a National Sorting Hub."], a: 2, e: "TD articles are booked at offices in the local TD/catchment area of a given NSH and delivered at POs in the same local TD/catchment area." },
+    { q: "Regarding \"Inbound Operational Performance\" for metros, which time window is considered for articles received at the Sorting Hub?", o: ["6:00 AM on day D-1 to 6:00 AM on day D", "7:00 AM on day D-1 to 7:00 AM on day D", "3:00 AM on day D-1 to 3:00 AM on day D", "12:00 AM on day D to 12:00 PM on day D"], a: 1, e: "For metros, articles received from 7:00 AM on day D-1 to 7:00 AM on day D are considered." },
+    { q: "If the Pin code of the Delivery PO differs from the Pin code of Delivery POs mapped to the particular destination Sorting Hub to which the article is bagged, it is recorded under which KPI?", o: ["Share of mis-sorted articles (TD)", "Share of mis-sorted articles (NTD)", "Share of articles with missing Pin Codes", "Share of bags without correct bag labels"], a: 1, e: "This is classified as Share of mis-sorted articles (NTD)." },
+    { q: "What is the \"Full Scan Compliance\" target percentage for TD articles?", o: ["80%", "90%", "95%", "100%"], a: 1, e: "The Full Scan Compliance (TD) target is 90%." },
+    { q: "Under the MNOP scheme, how many mandatory scans are prescribed for NTD (National Transport Delivery) articles booked at a PO/NSH/ICH?", o: ["8 Scans", "9 Scans", "11 Scans", "12 Scans"], a: 3, e: "12 NTD Scans are mandatory for articles booked at PO/NSH/ICH." },
+    { q: "For BNPL-NTD category articles, how many scans are mandatory?", o: ["8", "9", "10", "12"], a: 1, e: "For BNPL-NTD category articles, 9 Scans are mandatory." },
+    { q: "Which of the following is NOT a component of the MNOP Project?", o: ["Optimization and consolidation of mail operation network.", "Process redesign in mail operations.", "Decentralization of all Speed Post Centres to the Taluk level.", "Development of an effective online performance monitoring system based on KPIs."], a: 2, e: "Decentralization to Taluk level is not a component; MNOP focuses on consolidation (NSHs/ICHs)." },
+    { q: "As per the MNOP concept (w.e.f. 01.04.2025), how many Level-1 (L1) hubs are designated for First Class Unregistered mail?", o: ["79", "95", "96", "110"], a: 2, e: "There are 96 L1 hubs for First Class Unregistered mail." },
+    { q: "What is the Delivery Norm for Speed Post articles \"Between Metro Cities\" (Delhi, Mumbai, Chennai, Bangalore, Kolkata, and Hyderabad)?", o: ["1-2 days", "1-3 days", "2-3 days", "3-4 days"], a: 1, e: "The Delivery Norm for Speed Post between Metro Cities is 1-3 days." },
+    { q: "According to the Postman Ad-hoc Establishment Norms for 2-wheeler beats, what is the time allocated per km in a \"Congested area\"?", o: ["3 Minutes/KM", "5 Minutes/KM", "6 Minutes/KM", "10 Minutes/KM"], a: 1, e: "The norm for 2-wheeler beats in a congested area is 5 Minutes/KM." },
+    { q: "To be eligible for fuel reimbursement charges under the 2-wheeler scheme, what percentage of accountable articles must be processed through the Postman Mobile App (IMA)?", o: ["At least 80%", "At least 90%", "At least 95%", "100%"], a: 2, e: "At least 95% of accountable articles must be processed through IMA." },
+    { q: "Under the Parcel Network Optimization Project (PNOP), the network structure includes which of the following?", o: ["95 NSHs and 163 ICHs", "79 NPH/Level-1 hubs and 110 PH/Level-2 hubs", "56 L1 hubs and 200 L2 hubs", "189 NPHs and 79 PHs"], a: 1, e: "The network consists of 79 NPH/Level-1 (L1) and 110 PH/Level-2 (L2) hubs." },
+    { q: "Which color label is used for Parcel bags intended for \"Air connectivity\" (Speed Post Parcel)?", o: ["Blue", "Yellow", "Red", "Green"], a: 1, e: "The parcel bag label is Yellow for Air connectivity (Speed Post Parcel)." },
+    { q: "A Nodal Delivery Centre (NDC) is established in cities/towns where the parcel density exceeds:", o: ["0.5 Parcel per Sq K.M.", "1 Parcel per Sq K.M.", "2 Parcels per Sq K.M.", "5 Parcels per Sq K.M."], a: 1, e: "NDCs are set up where parcel density exceeds 1 Parcel per Sq K.M." },
+    { q: "What are the dimensions fixed for Postman delivery bags under the NDC setup?", o: ["38cm x 27cm x 20cm", "45cm x 35cm x 56cm", "50cm x 40cm x 60cm", "60cm x 60cm x 60cm"], a: 1, e: "The fixed dimensions are 45cm x 35cm x 56cm." },
     { q: "Under the \"Bring Your Own Device\" (BYOD) scheme (w.e.f. 25.06.2025), what is the fixed incentive per smartphone per month?", o: ["Rs. 200/-", "Rs. 250/-", "Rs. 300/-", "Rs. 500/-"], a: 2, e: "The fixed incentive is Rs. 300/- per smartphone per month." },
-    { q: "In the context of Parcel Hub design, \"Blue Color\" floor marking is used to indicate:", o: ["Aisles and common passages.", "Equipment and workstations position.", "Different processing areas (e.g., Bag Opening Area, Staging Area).", "Hazardous materials storage."], a: 2, e: "**Blue Color** is used to mark different **processing areas**." },
-    { q: "A \"Small Category Parcel Hub\" is defined as having an operational area of 1200 Sq ft and a throughput of:", o: ["Less than 120 parcels per hour.", "121 to 250 parcels per hour.", "251 to 500 parcels per hour.", "501 to 1400 parcels per hour."], a: 1, e: "Small Category Parcel Hubs have a throughput of **121 to 250 parcels per hour**." },
-    { q: "What is the \"Carrying Capacity\" (in terms of parcels) of a Standard Roller Container used in Parcel Hubs?", o: ["100 parcels", "150 parcels", "200 parcels", "300 parcels"], a: 2, e: "A Roller Container can hold up to **200 parcels** (20 bags x 10 parcels)." },
+    { q: "In the context of Parcel Hub design, \"Blue Color\" floor marking is used to indicate:", o: ["Aisles and common passages.", "Equipment and workstations position.", "Different processing areas (e.g., Bag Opening Area, Staging Area).", "Hazardous materials storage."], a: 2, e: "Blue Color is used to mark different processing areas." },
+    { q: "A \"Small Category Parcel Hub\" is defined as having an operational area of 1200 Sq ft and a throughput of:", o: ["Less than 120 parcels per hour.", "121 to 250 parcels per hour.", "251 to 500 parcels per hour.", "501 to 1400 parcels per hour."], a: 1, e: "Small Category Parcel Hubs have a throughput of 121 to 250 parcels per hour." },
+    { q: "What is the \"Carrying Capacity\" (in terms of parcels) of a Standard Roller Container used in Parcel Hubs?", o: ["100 parcels", "150 parcels", "200 parcels", "300 parcels"], a: 2, e: "A Roller Container can hold up to 200 parcels (20 bags x 10 parcels)." },
   ],
   // Set 94
   94: [
-    { q: "In a Parcel Hub facility, what is the specific function of a \"SWS\" (Static Weighing System)?", o: ["To sort parcels automatically based on pin code.", "To measure the weight and dimensions of parcels received for booking.", "To weigh closed bags before dispatch.", "To print barcode labels for unlabelled articles."], a: 1, e: "SWS is used for measuring **weight and dimensions** of parcels received for booking." },
-    { q: "According to the equipment specifications for Parcel Hubs, what is the maximum weight capacity of the Static Weighing System (SWS)?", o: ["20 Kg", "30 Kg", "35 Kg", "50 Kg"], a: 2, e: "The maximum weight capacity is **35 Kg**." },
-    { q: "Which color is used for floor marking to indicate \"Equipment and workstations position/placement\" (e.g., roller containers, bag stands, sorting cases)?", o: ["Blue", "Yellow", "Red", "Green"], a: 3, e: "**Green Color** is used to mark equipment and workstations position." },
-    { q: "In the context of Parcel Hub operations, if a bag or parcel is not traced within 5 days, what action is prescribed regarding \"Presumptive Loss\"?", o: ["It is written off as a bad debt.", "The loss is recovered from the customer insurance.", "Presumptive loss is recovered from the officials at fault.", "A police complaint is mandatorily filed."], a: 2, e: "Presumptive loss is recovered from the **officials at fault**." },
-    { q: "What is the \"Floor Footprint\" (Area) required for a standard \"Package Trolley\" used in the facility?", o: ["4 sq. ft.", "6 sq. ft.", "9 sq. ft.", "15 sq. ft."], a: 1, e: "The Floor Footprint for a Package Trolley is **6 sq. ft.**" },
-    { q: "Regarding the \"Bag Stand\" equipment in a Parcel Hub, which of the following is NOT a standard configuration for bag holding positions?", o: ["6 bags", "8 bags", "10 bags", "12 bags"], a: 3, e: "Bag Stands come in configurations of **6, 8, or 10 bags**; 12 is not listed." },
-    { q: "Under PNOP, what is the \"Minimum object size\" (LxBxH) that can be measured by the Static Weighing System?", o: ["10mm x 10mm x 10mm", "50mm x 50mm x 20mm", "100mm x 50mm x 20mm", "150mm x 100mm x 50mm"], a: 2, e: "The minimum object size is **100mm x 50mm x 20mm**." },
-    { q: "For a \"Large Category Parcel Hub\" (throughput 501\u20131400 parcels/hour), which of the following operational areas must have a \"Dedicated separate space\"?", o: ["Post-sort staging area", "Data Admin & Booking Area", "Returns Processing Area", "All of the above"], a: 3, e: "Large Category Hubs require **dedicated separate space** for all listed areas." },
-    { q: "In a Nodal Delivery Centre (NDC), the \"Beat Sorting Area\" is used for which specific activity?", o: ["Opening received bags and segregating parcels into sectors.", "Sorting sector-sorted parcels into delivery beats and sequencing them.", "Storing undelivered parcels for 7 days.", "Data entry and COD reconciliation."], a: 1, e: "Detailed sorting into **delivery beats** and **sequencing** occurs here." },
-    { q: "What is the standard \"Ad hoc Norm\" for **bagging** parcels (putting parcels into bags) at the booking stage?", o: ["30 Seconds per bag", "45 Seconds per bag", "60 Seconds per bag", "90 Seconds per bag"], a: 2, e: "The norm for bagging is **60 Seconds per bag**." },
-    { q: "For a \"Manual Parcel Processing Centre\" (Middle Mile), what is the norm for **primary sorting** of parcels?", o: ["350 parcels/hour", "500 parcels/hour", "700 parcels/hour", "1200 parcels/hour"], a: 2, e: "The norm for primary sorting is **700 parcels/hour**." },
-    { q: "In the \"Last Mile - Delivery Office\" process, the delivery bag or vehicle must be loaded using which concept?", o: ["FIFO (First-In-First-Out)", "LIFO (Last-In-First-Out)", "Weight-based loading (Heaviest first)", "Random sequence"], a: 1, e: "Loading is done using the **LIFO (Last-In-First-Out)** concept." },
-    { q: "Speed Post articles qualify as a \"Parcel\" under PNOP if they meet which of the following conditions?", o: ["Weight exceeding 200 grams.", "Dimensions beyond 38cms X 27cms X 2cms.", "The article contains documents only.", "The article is addressed to a foreign country."], a: 1, e: "Dimensions beyond **38cms X 27cms X 2cms** qualify it as a parcel." },
-    { q: "The \"Joint Parcel Product\" (JPP) is a collaborative service between India Post and which entity?", o: ["Indian Airlines", "Indian Railways", "Road Transport Corporation", "National Highways Authority"], a: 1, e: "JPP is a collaborative product of India Post and **Indian Railways**." },
-    { q: "Under the JPP (Joint Parcel Product), who is responsible for the \"Middle Mile\"?", o: ["India Post", "Third-party Logistics Provider", "Indian Railways", "The Customer (Self-transport)"], a: 2, e: "**Indian Railways** provides the Middle Mile (Transportation)." },
-    { q: "What is the delivery norm for \"Speed Post\" articles within the \"Same State\"?", o: ["1-2 days", "1-3 days", "1-4 days", "2-3 days"], a: 2, e: "The norm for Speed Post within the Same State is **1-4 days**." },
-    { q: "Which Parcel Hub category requires an operational area of **2840 Sq ft**?", o: ["Very-Small Category Parcel Hub", "Small Category Parcel Hub", "Medium Category Parcel Hub", "Large Category Parcel Hub"], a: 2, e: "A **Medium Category Parcel Hub** has an operational area of 2840 Sq ft." },
-    { q: "The \"Primary Sorting Area\" in a Parcel Hub is responsible for:", o: ["Detailed sorting to specific delivery beats.", "Preliminary sorting (First level sorting) of parcels.", "Final delivery scanning.", "Storage of closed bags before dispatch."], a: 1, e: "It is responsible for **Preliminary sorting (First level sorting)**." },
-    { q: "The \"PNOP Dashboard\" created by CEPT Mysore is primarily used for:", o: ["Tracking individual customer complaints.", "Monitoring project activities like civil works, equipment procurement, and layout implementation.", "Calculating the salary of Postmen.", "Generating bar codes for parcels."], a: 1, e: "It monitors **civil works, procurement, and operationalization** of hubs/NDCs." },
+    { q: "In a Parcel Hub facility, what is the specific function of a \"SWS\" (Static Weighing System)?", o: ["To sort parcels automatically based on pin code.", "To measure the weight and dimensions of parcels received for booking.", "To weigh closed bags before dispatch.", "To print barcode labels for unlabelled articles."], a: 1, e: "SWS is used for measuring weight and dimensions of parcels received for booking." },
+    { q: "According to the equipment specifications for Parcel Hubs, what is the maximum weight capacity of the Static Weighing System (SWS)?", o: ["20 Kg", "30 Kg", "35 Kg", "50 Kg"], a: 2, e: "The maximum weight capacity is 35 Kg." },
+    { q: "Which color is used for floor marking to indicate \"Equipment and workstations position/placement\" (e.g., roller containers, bag stands, sorting cases)?", o: ["Blue", "Yellow", "Red", "Green"], a: 3, e: "Green Color is used to mark equipment and workstations position." },
+    { q: "In the context of Parcel Hub operations, if a bag or parcel is not traced within 5 days, what action is prescribed regarding \"Presumptive Loss\"?", o: ["It is written off as a bad debt.", "The loss is recovered from the customer insurance.", "Presumptive loss is recovered from the officials at fault.", "A police complaint is mandatorily filed."], a: 2, e: "Presumptive loss is recovered from the officials at fault." },
+    { q: "What is the \"Floor Footprint\" (Area) required for a standard \"Package Trolley\" used in the facility?", o: ["4 sq. ft.", "6 sq. ft.", "9 sq. ft.", "15 sq. ft."], a: 1, e: "The Floor Footprint for a Package Trolley is 6 sq. ft." },
+    { q: "Regarding the \"Bag Stand\" equipment in a Parcel Hub, which of the following is NOT a standard configuration for bag holding positions?", o: ["6 bags", "8 bags", "10 bags", "12 bags"], a: 3, e: "Bag Stands come in configurations of 6, 8, or 10 bags; 12 is not listed." },
+    { q: "Under PNOP, what is the \"Minimum object size\" (LxBxH) that can be measured by the Static Weighing System?", o: ["10mm x 10mm x 10mm", "50mm x 50mm x 20mm", "100mm x 50mm x 20mm", "150mm x 100mm x 50mm"], a: 2, e: "The minimum object size is 100mm x 50mm x 20mm." },
+    { q: "For a \"Large Category Parcel Hub\" (throughput 501\u20131400 parcels/hour), which of the following operational areas must have a \"Dedicated separate space\"?", o: ["Post-sort staging area", "Data Admin & Booking Area", "Returns Processing Area", "All of the above"], a: 3, e: "Large Category Hubs require dedicated separate space for all listed areas." },
+    { q: "In a Nodal Delivery Centre (NDC), the \"Beat Sorting Area\" is used for which specific activity?", o: ["Opening received bags and segregating parcels into sectors.", "Sorting sector-sorted parcels into delivery beats and sequencing them.", "Storing undelivered parcels for 7 days.", "Data entry and COD reconciliation."], a: 1, e: "Detailed sorting into delivery beats and sequencing occurs here." },
+    { q: "What is the standard \"Ad hoc Norm\" for bagging parcels (putting parcels into bags) at the booking stage?", o: ["30 Seconds per bag", "45 Seconds per bag", "60 Seconds per bag", "90 Seconds per bag"], a: 2, e: "The norm for bagging is 60 Seconds per bag." },
+    { q: "For a \"Manual Parcel Processing Centre\" (Middle Mile), what is the norm for primary sorting of parcels?", o: ["350 parcels/hour", "500 parcels/hour", "700 parcels/hour", "1200 parcels/hour"], a: 2, e: "The norm for primary sorting is 700 parcels/hour." },
+    { q: "In the \"Last Mile - Delivery Office\" process, the delivery bag or vehicle must be loaded using which concept?", o: ["FIFO (First-In-First-Out)", "LIFO (Last-In-First-Out)", "Weight-based loading (Heaviest first)", "Random sequence"], a: 1, e: "Loading is done using the LIFO (Last-In-First-Out) concept." },
+    { q: "Speed Post articles qualify as a \"Parcel\" under PNOP if they meet which of the following conditions?", o: ["Weight exceeding 200 grams.", "Dimensions beyond 38cms X 27cms X 2cms.", "The article contains documents only.", "The article is addressed to a foreign country."], a: 1, e: "Dimensions beyond 38cms X 27cms X 2cms qualify it as a parcel." },
+    { q: "The \"Joint Parcel Product\" (JPP) is a collaborative service between India Post and which entity?", o: ["Indian Airlines", "Indian Railways", "Road Transport Corporation", "National Highways Authority"], a: 1, e: "JPP is a collaborative product of India Post and Indian Railways." },
+    { q: "Under the JPP (Joint Parcel Product), who is responsible for the \"Middle Mile\"?", o: ["India Post", "Third-party Logistics Provider", "Indian Railways", "The Customer (Self-transport)"], a: 2, e: "Indian Railways provides the Middle Mile (Transportation)." },
+    { q: "What is the delivery norm for \"Speed Post\" articles within the \"Same State\"?", o: ["1-2 days", "1-3 days", "1-4 days", "2-3 days"], a: 2, e: "The norm for Speed Post within the Same State is 1-4 days." },
+    { q: "Which Parcel Hub category requires an operational area of 2840 Sq ft?", o: ["Very-Small Category Parcel Hub", "Small Category Parcel Hub", "Medium Category Parcel Hub", "Large Category Parcel Hub"], a: 2, e: "A Medium Category Parcel Hub has an operational area of 2840 Sq ft." },
+    { q: "The \"Primary Sorting Area\" in a Parcel Hub is responsible for:", o: ["Detailed sorting to specific delivery beats.", "Preliminary sorting (First level sorting) of parcels.", "Final delivery scanning.", "Storage of closed bags before dispatch."], a: 1, e: "It is responsible for Preliminary sorting (First level sorting)." },
+    { q: "The \"PNOP Dashboard\" created by CEPT Mysore is primarily used for:", o: ["Tracking individual customer complaints.", "Monitoring project activities like civil works, equipment procurement, and layout implementation.", "Calculating the salary of Postmen.", "Generating bar codes for parcels."], a: 1, e: "It monitors civil works, procurement, and operationalization of hubs/NDCs." },
     { q: "In the \"Bring Your Own Device\" (BYOD) scheme, if a delivery staff member uses their own device for the full month, what is the total remuneration (Incentive + Data/SIM charges)?", o: ["Rs. 300/-", "Rs. 400/-", "Rs. 500/-", "Rs. 600/-"], a: 2, e: "Total remuneration is Rs. 500/- (Rs. 300 incentive + Rs. 200 SIM/Data)." },
-    { q: "Under the BYOD scheme, full remuneration is granted in exceptional cases if the employee processes what percentage of articles through the App (IMA) before proceeding on sanctioned leave?", o: ["Minimum 80%", "Minimum 85%", "Minimum 90%", "Minimum 95%"], a: 2, e: "The employee must process minimum **90% articles**." },
-    { q: "What is the norm for \"Parcel bag facility in-scan\" at a Manual Parcel Processing Centre?", o: ["2 bags/minute", "4 bags/minute", "6 bags/minute", "8 bags/minute"], a: 1, e: "The norm is **4 bags/minute** (15 seconds/bag)." },
-    { q: "Which document is NOT required to be checked by the APM/Postmaster before allowing fuel reimbursement for a delivery staff's own 2-wheeler?", o: ["Valid 2-wheeler driving license.", "Registration certificate of the vehicle.", "Insurance certificate of the vehicle.", "Pollution Under Control (PUC) certificate."], a: 3, e: "**PUC certificate** is not listed in the documents to be checked." },
-    { q: "In the context of \"Inward Errors,\" if the in-charge of a defaulting Set fails to give a satisfactory reply within **3 days**, who initiates the recovery of presumptive loss?", o: ["The Divisional Head", "The HRO/SRO", "The Circle Office", "The Inspector of Posts"], a: 1, e: "The **HRO/SRO** will initiate the process of recovery." },
-    { q: "The \"Secure Parcel Storage Area\" in an NDC is designed to store undelivered parcels for a period of:", o: ["24 hours", "3 days", "5 days", "7 days"], a: 3, e: "Undelivered parcels are stored for over a period of **7 days**." },
+    { q: "Under the BYOD scheme, full remuneration is granted in exceptional cases if the employee processes what percentage of articles through the App (IMA) before proceeding on sanctioned leave?", o: ["Minimum 80%", "Minimum 85%", "Minimum 90%", "Minimum 95%"], a: 2, e: "The employee must process minimum 90% articles." },
+    { q: "What is the norm for \"Parcel bag facility in-scan\" at a Manual Parcel Processing Centre?", o: ["2 bags/minute", "4 bags/minute", "6 bags/minute", "8 bags/minute"], a: 1, e: "The norm is 4 bags/minute (15 seconds/bag)." },
+    { q: "Which document is NOT required to be checked by the APM/Postmaster before allowing fuel reimbursement for a delivery staff's own 2-wheeler?", o: ["Valid 2-wheeler driving license.", "Registration certificate of the vehicle.", "Insurance certificate of the vehicle.", "Pollution Under Control (PUC) certificate."], a: 3, e: "PUC certificate is not listed in the documents to be checked." },
+    { q: "In the context of \"Inward Errors,\" if the in-charge of a defaulting Set fails to give a satisfactory reply within 3 days, who initiates the recovery of presumptive loss?", o: ["The Divisional Head", "The HRO/SRO", "The Circle Office", "The Inspector of Posts"], a: 1, e: "The HRO/SRO will initiate the process of recovery." },
+    { q: "The \"Secure Parcel Storage Area\" in an NDC is designed to store undelivered parcels for a period of:", o: ["24 hours", "3 days", "5 days", "7 days"], a: 3, e: "Undelivered parcels are stored for over a period of 7 days." },
   ],
   // Set 95
   95: [
-    { q: "According to the timeline for the allocation of Annual Sales Targets, by which date must the **Region** allocate the monthly sales target to the **Divisions**?", o: ["Before 5th April", "Before 10th April", "Before 15th April", "Before 25th April"], a: 2, e: "Monthly sales targets are allocated to Divisions by **Before 15th April**." },
-    { q: "In the Department's parlance, a \"Bulk Customer\" is defined as a customer who provides business of what value per month?", o: ["INR 5,000 and above", "INR 10,000 and above", "INR 25,000 and above", "INR 50,000 and above"], a: 1, e: "Bulk customers give business of **INR 10,000 and above per month**." },
-    { q: "Which of the following officials may be designated as a \"Marketing Executive\" (ME) by the Division?", o: ["Only Inspector of Posts (IPO)", "Postal Assistant, Sorting Assistant, or PRIs", "Only ASPs and above", "Only outsourced marketing professionals"], a: 1, e: "**Postal Assistant, Sorting Assistant, PRIs** may be designated as MEs." },
-    { q: "The \"Sales Process\" is divided into six specific stages. Which of the following represents the correct chronological order of the first three stages?", o: ["Preparation \u2192 Prospecting \u2192 Presentation", "Prospecting \u2192 Preparation \u2192 Presentation", "Prospecting \u2192 Presentation \u2192 Closing", "Lead Generation \u2192 Closing \u2192 Follow-up"], a: 1, e: "The order is **Prospecting \u2192 Preparation \u2192 Presentation**." },
-    { q: "What is the prescribed target for \"Lead Generation\" for each Marketing Executive (ME) on a daily basis?", o: ["Identify basic information on 1 lead daily.", "Identify basic information on 2 leads daily.", "Identify basic information on 5 leads daily.", "Identify basic information on 10 leads daily."], a: 1, e: "MEs should identify basic information on **two leads daily**." },
+    { q: "According to the timeline for the allocation of Annual Sales Targets, by which date must the Region allocate the monthly sales target to the Divisions?", o: ["Before 5th April", "Before 10th April", "Before 15th April", "Before 25th April"], a: 2, e: "Monthly sales targets are allocated to Divisions by Before 15th April." },
+    { q: "In the Department's parlance, a \"Bulk Customer\" is defined as a customer who provides business of what value per month?", o: ["INR 5,000 and above", "INR 10,000 and above", "INR 25,000 and above", "INR 50,000 and above"], a: 1, e: "Bulk customers give business of INR 10,000 and above per month." },
+    { q: "Which of the following officials may be designated as a \"Marketing Executive\" (ME) by the Division?", o: ["Only Inspector of Posts (IPO)", "Postal Assistant, Sorting Assistant, or PRIs", "Only ASPs and above", "Only outsourced marketing professionals"], a: 1, e: "Postal Assistant, Sorting Assistant, PRIs may be designated as MEs." },
+    { q: "The \"Sales Process\" is divided into six specific stages. Which of the following represents the correct chronological order of the first three stages?", o: ["Preparation \u2192 Prospecting \u2192 Presentation", "Prospecting \u2192 Preparation \u2192 Presentation", "Prospecting \u2192 Presentation \u2192 Closing", "Lead Generation \u2192 Closing \u2192 Follow-up"], a: 1, e: "The order is Prospecting \u2192 Preparation \u2192 Presentation." },
+    { q: "What is the prescribed target for \"Lead Generation\" for each Marketing Executive (ME) on a daily basis?", o: ["Identify basic information on 1 lead daily.", "Identify basic information on 2 leads daily.", "Identify basic information on 5 leads daily.", "Identify basic information on 10 leads daily."], a: 1, e: "MEs should identify basic information on two leads daily." },
     { q: "A lead is categorized as a \"Qualified Lead\" if the projected monthly business from the lead is:", o: ["Rs. 5,000 and above", "Rs. 10,000 and above", "Rs. 20,000 and above", "Rs. 50,000 and above"], a: 1, e: "A lead is qualified if projected monthly business is Rs. 10,000 and above." },
-    { q: "What is considered a \"Good Target\" for a Marketing Executive (ME) regarding customer acquisition?", o: ["Close 1 sale in one month.", "Close 2 sales in one week.", "Close 5 sales in one quarter.", "Close 10 sales in one year."], a: 1, e: "A good target is to close **2 sales in one week**." },
-    { q: "For a sales presentation, the \"10-20-30 Rule\" implies which of the following?", o: ["10 minutes, 20 slides, 30 font size.", "10 slides, 20 minutes, 30 point font size.", "10 people, 20 minutes, 30 slides.", "10 products, 20 benefits, 30 minutes."], a: 1, e: "**10 slides, 20 minutes, 30 point font size**." },
-    { q: "If a sales opportunity has an approximate monthly demand value of **greater than INR 8 lacs**, which level of official is required to be directly involved in the sales process?", o: ["Marketing Executive only", "Divisional Head", "Regional Head", "Chief Postmaster General"], a: 2, e: "The **Regional Head** is involved for value > INR 8 lacs per month." },
-    { q: "Which of the following locations is identified as a \"Trans-Shipment Centre\" under PNOP for the Road Transport Network?", o: ["Mumbai", "Sagar (Madhya Pradesh)", "Jaipur", "Patna"], a: 1, e: "**Sagar (Madhya Pradesh)** is listed as a Trans-Shipment Centre." },
-    { q: "In the Joint Parcel Product (JPP) with Indian Railways, how are the \"Middle Mile Charges\" calculated for trains running at \"R\" Scale?", o: ["R Scale rates exactly.", "R + 5%", "R + 10%", "R + 20%"], a: 2, e: "Charges for \"R\" Scale trains are **R + 10%**." },
+    { q: "What is considered a \"Good Target\" for a Marketing Executive (ME) regarding customer acquisition?", o: ["Close 1 sale in one month.", "Close 2 sales in one week.", "Close 5 sales in one quarter.", "Close 10 sales in one year."], a: 1, e: "A good target is to close 2 sales in one week." },
+    { q: "For a sales presentation, the \"10-20-30 Rule\" implies which of the following?", o: ["10 minutes, 20 slides, 30 font size.", "10 slides, 20 minutes, 30 point font size.", "10 people, 20 minutes, 30 slides.", "10 products, 20 benefits, 30 minutes."], a: 1, e: "10 slides, 20 minutes, 30 point font size." },
+    { q: "If a sales opportunity has an approximate monthly demand value of greater than INR 8 lacs, which level of official is required to be directly involved in the sales process?", o: ["Marketing Executive only", "Divisional Head", "Regional Head", "Chief Postmaster General"], a: 2, e: "The Regional Head is involved for value > INR 8 lacs per month." },
+    { q: "Which of the following locations is identified as a \"Trans-Shipment Centre\" under PNOP for the Road Transport Network?", o: ["Mumbai", "Sagar (Madhya Pradesh)", "Jaipur", "Patna"], a: 1, e: "Sagar (Madhya Pradesh) is listed as a Trans-Shipment Centre." },
+    { q: "In the Joint Parcel Product (JPP) with Indian Railways, how are the \"Middle Mile Charges\" calculated for trains running at \"R\" Scale?", o: ["R Scale rates exactly.", "R + 5%", "R + 10%", "R + 20%"], a: 2, e: "Charges for \"R\" Scale trains are R + 10%." },
     { q: "For the Joint Parcel Product (JPP), what is the \"First Mile\" (Pick up & Booking) charge levied per Kg (inclusive of GST)?", o: ["Rs. 2 per Kg", "Rs. 4 per Kg", "Rs. 6 per Kg", "Rs. 10 per Kg"], a: 1, e: "The First Mile charge is Rs. 4 per Kg." },
-    { q: "The insurance charges for the Joint Parcel Product are levied at what rate?", o: ["0.01% of Content Value", "0.03% of Content Value", "0.05% of Content Value", "0.10% of Content Value"], a: 1, e: "Insurance charges are **0.03%** of Content Value." },
-    { q: "According to the Parcel Packaging Policy, what is the specified thickness for a \"Plastic Flyer/bag\"?", o: ["40 microns", "50-55 microns", "55-60 microns", "100-150 microns"], a: 2, e: "Plastic Flyer thickness is **55-60 microns**." },
-    { q: "Which packaging material has a thickness of **40 microns** and is used for \"Securing & fastening\"?", o: ["Plastic Flyer", "Paper Flyer", "BOPP Tape", "Stretch wrap"], a: 2, e: "**BOPP Tape** has a thickness of 40 microns." },
-    { q: "The \"Large Parcel Processing Area\" in a Parcel Hub is specifically defined as an area for processing parcels that:", o: ["Weigh more than 10 Kg.", "Are large enough to fill a single bag.", "Require a two-person lift.", "Cannot be scanned by the SWS."], a: 1, e: "Defined as parcels large enough to **fill a single bag**." },
-    { q: "What is the operational area required for a \"Very-Small Category Parcel Hub\"?", o: ["575 Sq ft", "800 Sq ft", "1200 Sq ft", "1595 Sq ft"], a: 0, e: "The area is **575 Sq ft**." },
-    { q: "For \"India Post Parcels\" (Surface connectivity), the parcel bag label used is:", o: ["Yellow", "Blue", "White", "Pink"], a: 1, e: "The label is **Blue** for Surface connectivity (India Post Parcel)." },
-    { q: "Which form number is designated for \"Receipt of Bag\" at a Mail Agency/TMO?", o: ["Form 1A", "Form 1B", "Form 2A", "Form 3A"], a: 0, e: "Form **1A** is for Receipt of Bag." },
-    { q: "\"Form 2D\" corresponds to which document in the Parcel Hub operations?", o: ["Parcel Abstract", "Receipt & Despatch Summary", "TB Summary", "Inward Error Register"], a: 0, e: "Form 2D is the **Parcel Abstract**." },
-    { q: "In the case of inward errors, if the discrepancy is not resolved, the Divisional Office must ensure recovery of presumptive loss within what period from the day of discrepancy?", o: ["30 days", "45 days", "60 days", "90 days"], a: 1, e: "Recovery must be made within **45 days** from the day of discrepancy." },
-    { q: "The review of sales target achievement should preferably be done in which month to consider inputs for the next financial year?", o: ["March", "April", "September", "December"], a: 3, e: "This exercise should preferably be done in **December**." },
-    { q: "\"Cold Canvassing\" is defined as:", o: ["Contacting leads through email only.", "A traditional method of contacting leads (generally through phone) to market products and collect info.", "Getting referrals from existing customers.", "Web-based research on potential clients."], a: 1, e: "Cold Canvassing is contacting leads (generally through **phone**) to market products." },
-    { q: "Performance monitoring of the MNOP scheme is conducted through video conference chaired by the Secretary at what frequency?", o: ["Weekly", "Every Fortnight", "Monthly", "Quarterly"], a: 1, e: "Performance monitoring is done **every fortnight**." },
-    { q: "Which of the following is NOT listed as a source for \"Web Based Research\" for lead generation?", o: ["Justdial", "India Mart", "Tik Tok", "Yellowbot \n\n\nHere is **Part 4** of the Question Bank, covering **Questions 76\u2013100**, followed by the **Comprehensive Answer Key** for all 100 questions.\n\n---\n\n"], a: 2, e: "**Tik Tok** is not listed; sources include Justdial, India Mart, Yellowbot, etc." },
+    { q: "The insurance charges for the Joint Parcel Product are levied at what rate?", o: ["0.01% of Content Value", "0.03% of Content Value", "0.05% of Content Value", "0.10% of Content Value"], a: 1, e: "Insurance charges are 0.03% of Content Value." },
+    { q: "According to the Parcel Packaging Policy, what is the specified thickness for a \"Plastic Flyer/bag\"?", o: ["40 microns", "50-55 microns", "55-60 microns", "100-150 microns"], a: 2, e: "Plastic Flyer thickness is 55-60 microns." },
+    { q: "Which packaging material has a thickness of 40 microns and is used for \"Securing & fastening\"?", o: ["Plastic Flyer", "Paper Flyer", "BOPP Tape", "Stretch wrap"], a: 2, e: "BOPP Tape has a thickness of 40 microns." },
+    { q: "The \"Large Parcel Processing Area\" in a Parcel Hub is specifically defined as an area for processing parcels that:", o: ["Weigh more than 10 Kg.", "Are large enough to fill a single bag.", "Require a two-person lift.", "Cannot be scanned by the SWS."], a: 1, e: "Defined as parcels large enough to fill a single bag." },
+    { q: "What is the operational area required for a \"Very-Small Category Parcel Hub\"?", o: ["575 Sq ft", "800 Sq ft", "1200 Sq ft", "1595 Sq ft"], a: 0, e: "The area is 575 Sq ft." },
+    { q: "For \"India Post Parcels\" (Surface connectivity), the parcel bag label used is:", o: ["Yellow", "Blue", "White", "Pink"], a: 1, e: "The label is Blue for Surface connectivity (India Post Parcel)." },
+    { q: "Which form number is designated for \"Receipt of Bag\" at a Mail Agency/TMO?", o: ["Form 1A", "Form 1B", "Form 2A", "Form 3A"], a: 0, e: "Form 1A is for Receipt of Bag." },
+    { q: "\"Form 2D\" corresponds to which document in the Parcel Hub operations?", o: ["Parcel Abstract", "Receipt & Despatch Summary", "TB Summary", "Inward Error Register"], a: 0, e: "Form 2D is the Parcel Abstract." },
+    { q: "In the case of inward errors, if the discrepancy is not resolved, the Divisional Office must ensure recovery of presumptive loss within what period from the day of discrepancy?", o: ["30 days", "45 days", "60 days", "90 days"], a: 1, e: "Recovery must be made within 45 days from the day of discrepancy." },
+    { q: "The review of sales target achievement should preferably be done in which month to consider inputs for the next financial year?", o: ["March", "April", "September", "December"], a: 3, e: "This exercise should preferably be done in December." },
+    { q: "\"Cold Canvassing\" is defined as:", o: ["Contacting leads through email only.", "A traditional method of contacting leads (generally through phone) to market products and collect info.", "Getting referrals from existing customers.", "Web-based research on potential clients."], a: 1, e: "Cold Canvassing is contacting leads (generally through phone) to market products." },
+    { q: "Performance monitoring of the MNOP scheme is conducted through video conference chaired by the Secretary at what frequency?", o: ["Weekly", "Every Fortnight", "Monthly", "Quarterly"], a: 1, e: "Performance monitoring is done every fortnight." },
+    { q: "Which of the following is NOT listed as a source for \"Web Based Research\" for lead generation?", o: ["Justdial", "India Mart", "Tik Tok", "Yellowbot \n\n\nHere is Part 4 of the Question Bank, covering Questions 76\u2013100, followed by the Comprehensive Answer Key for all 100 questions.\n\n---\n\n"], a: 2, e: "Tik Tok is not listed; sources include Justdial, India Mart, Yellowbot, etc." },
   ],
   // Set 96
   96: [
-    { q: "For a \"Medium Category Parcel Hub,\" what is the defined operational area and throughput capacity?", o: ["1200 Sq ft; 121-250 parcels/hour", "2840 Sq ft; 251-500 parcels/hour", "5000 Sq ft; 500-1000 parcels/hour", "8456 Sq ft; 501-1400 parcels/hour"], a: 1, e: "Medium Category Hub: **2840 Sq ft** and **251-500 parcels/hour**." },
-    { q: "Which form is prescribed for the \"Dispatch of Article\" from a Parcel Hub?", o: ["Form 2A", "Form 2B", "Form 2C", "Form 2D"], a: 1, e: "Form **2B** is for Despatch of Article." },
-    { q: "In the context of Nodal Delivery Centre (NDC) operations, the \"Data Admin Area\" is responsible for which of the following activities?", o: ["Physical sorting of beats.", "COD amount reconciliation and treasury functions.", "Storage of stationery.", "Opening of closed bags."], a: 1, e: "**COD amount reconciliation** and treasury functions are done here." },
-    { q: "Under the MNOP Key Performance Indicators, \"KPI # (8)\" measures:", o: ["Share of mis-sorted articles.", "Share of Duplicate barcodes.", "Share of bags without correct labels.", "D+X (TD)."], a: 1, e: "KPI # (8) measures **Share of Duplicate barcodes**." },
-    { q: "For the Joint Parcel Product (JPP), if a customer opts for **both** First Mile and Last Mile services, the handling charge (inclusive of GST) is:", o: ["Rs. 4 per Kg", "Rs. 6 per Kg", "Rs. 10 per Kg", "Rs. 12 per Kg"], a: 1, e: "For both First & Last Mile, the charge is Rs. 6 per Kg." },
-    { q: "Which specific \"Floor Marking Color\" is used to mark **aisles** and **common passages** in a Parcel Hub?", o: ["Green", "Blue", "Yellow", "White"], a: 2, e: "**Yellow Color** is used to mark aisles." },
-    { q: "A \"Roller Container\" used in Parcel Hubs has a carrying capacity of how many closed parcel bags?", o: ["10 bags", "15 bags", "20 bags", "25 bags"], a: 2, e: "A Roller Container can hold up to **20 closed parcel bags**." },
-    { q: "In a Semi-Automated Parcel Processing Centre, what is the Ad Hoc Norm for \"parcel feeding on automated sorter\"?", o: ["500 parcels/hour", "700 parcels/hour", "1000 parcels/hour", "1200 parcels/hour"], a: 3, e: "The norm is **1200 parcels/hour**." },
-    { q: "The \"Presumptive Loss\" recovery process must be initiated by the HRO/SRO if the Record Officer's error report is not satisfactorily replied to by the Set In-charge within:", o: ["2 days", "3 days", "5 days", "7 days"], a: 1, e: "If the Set In-charge fails to reply within **3 days**." },
-    { q: "Which form is known as the \"Inward Error Register\" for the **Record Office**?", o: ["Form 3A", "Form 3B", "Form 3C", "Form 3D"], a: 0, e: "Form **3A** is the Inward Error Register for Record Office." },
-    { q: "In the Parcel Sales process, \"Prospecting\" is immediately followed by which stage?", o: ["Presentation", "Preparation", "Managing Objections", "Closing"], a: 1, e: "Prospecting is followed by **Preparation**." },
-    { q: "What is the minimum object size (LxBxH) required for measurement by the Static Weighing System (SWS)?", o: ["B)", "", "D)", ""], a: 1, e: "Minimum object size is **100mm x 50mm x 20mm**." },
-    { q: "Which of the following is **NOT** a mandatory scan for NTD articles (out of the 12 scans)?", o: ["Origin Sorting Hub Bag Opening Scan", "Destination Sorting Hub Bag Closing Scan", "Intermediate Transit Hub Receipt Scan", "Destination PO Receipt Scan"], a: 2, e: "Intermediate Transit Hub Receipt Scan is **not** one of the 12 mandatory scans." },
-    { q: "The \"Delivery Norm\" for First Class (Registered) mail between Metro cities is:", o: ["1-2 days", "2-3 days", "3-4 days", "4-5 days"], a: 1, e: "The norm is **2-3 days**." },
-    { q: "For fuel reimbursement, the \"Observation Period\" to calculate average distance travelled consists of:", o: ["3 consecutive working days.", "6 working days.", "15 working days.", "One full calendar month."], a: 1, e: "The observation period is **6 working days**." },
-    { q: "In a Parcel Hub, if the throughput is \"Category 3\" (251-500 parcels/hour), which areas may be **combined** to save space?", o: ["Bag receipt area and bag dispatch area.", "Bag opening area and Primary sorting area.", "Data Admin & Booking area and Returns Processing area.", "All of the above."], a: 3, e: "**All of the above** combinations are permitted for Category 3 hubs." },
-    { q: "The \"MN OP Dashboard\" allows field units to update data regarding:", o: ["Only RTN movements.", "Only Layout Design.", "Layout Design, Standard Equipment, IT Equipment, and Civil Works.", "Staff Attendance only."], a: 2, e: "Dashboard tracks **Layout Design, Standard Equipment, IT Equipment, and Civil Work**." },
-    { q: "What is the dimension of the \"Bag Opening Table\" specified in the equipment list?", o: ["3 x 2 feet", "4 x 2.5 feet", "5 x 3 feet", "6 x 4 feet"], a: 1, e: "Dimensions are **4 ft. x 2.5 ft.**" },
-    { q: "Which official sanctions the bills for Fuel Reimbursement charges by the 10th of each month?", o: ["Postmaster", "Divisional Head", "Regional Director", "Circle Head"], a: 1, e: "The **Divisional Head** sanctions the bills by the 10th." },
-    { q: "Under PNOP, the \"Sector Sorting\" activity in an NDC involves:", o: ["Detailed sorting into beats.", "Preliminary sorting of parcels into sectors based on delivery address.", "Scanning parcels for \"Out for Delivery\".", "Returning parcels to the shipper."], a: 1, e: "**Preliminary sorting** of parcels into sectors based on delivery address." },
-    { q: "The \"Paper Flyer/bag\" used for parcel packaging has a specified thickness of:", o: ["50-60 microns", "60-80 microns", "80-100 microns", "100-150 microns"], a: 3, e: "Paper Flyer thickness is **100-150 microns**." },
-    { q: "According to the sales manual, \"Referrals\" are considered a high-potential source of leads because of:", o: ["Low cost.", "Accurate targeting and trust factor.", "Speed of acquisition.", "Ease of data entry."], a: 1, e: "Referrals are high potential due to **accurate targeting and trust factor**." },
-    { q: "For \"Ordinary Letters,\" the correct bag label prefix prescribed under MNOP is:", o: ["EB", "RB", "CB", "LB"], a: 3, e: "The prefix for Ordinary Letter is **LB**." },
-    { q: "A \"Large Category Parcel Hub\" has a sorting capacity for how many destinations?", o: ["140", "144", "180", "192"], a: 3, e: "Large Category Hubs sort for **192 destinations**." },
-    { q: "The deadline for the \"Allocation of monthly sales target to MEs by Divisions\" is:", o: ["Before 10th April", "Before 15th April", "Before 20th April", "Before 25th April\n\n---\n\n---"], a: 3, e: "Target allocation to MEs must be done **Before 25th April**." },
+    { q: "For a \"Medium Category Parcel Hub,\" what is the defined operational area and throughput capacity?", o: ["1200 Sq ft; 121-250 parcels/hour", "2840 Sq ft; 251-500 parcels/hour", "5000 Sq ft; 500-1000 parcels/hour", "8456 Sq ft; 501-1400 parcels/hour"], a: 1, e: "Medium Category Hub: 2840 Sq ft and 251-500 parcels/hour." },
+    { q: "Which form is prescribed for the \"Dispatch of Article\" from a Parcel Hub?", o: ["Form 2A", "Form 2B", "Form 2C", "Form 2D"], a: 1, e: "Form 2B is for Despatch of Article." },
+    { q: "In the context of Nodal Delivery Centre (NDC) operations, the \"Data Admin Area\" is responsible for which of the following activities?", o: ["Physical sorting of beats.", "COD amount reconciliation and treasury functions.", "Storage of stationery.", "Opening of closed bags."], a: 1, e: "COD amount reconciliation and treasury functions are done here." },
+    { q: "Under the MNOP Key Performance Indicators, \"KPI # (8)\" measures:", o: ["Share of mis-sorted articles.", "Share of Duplicate barcodes.", "Share of bags without correct labels.", "D+X (TD)."], a: 1, e: "KPI # (8) measures Share of Duplicate barcodes." },
+    { q: "For the Joint Parcel Product (JPP), if a customer opts for both First Mile and Last Mile services, the handling charge (inclusive of GST) is:", o: ["Rs. 4 per Kg", "Rs. 6 per Kg", "Rs. 10 per Kg", "Rs. 12 per Kg"], a: 1, e: "For both First & Last Mile, the charge is Rs. 6 per Kg." },
+    { q: "Which specific \"Floor Marking Color\" is used to mark aisles and common passages in a Parcel Hub?", o: ["Green", "Blue", "Yellow", "White"], a: 2, e: "Yellow Color is used to mark aisles." },
+    { q: "A \"Roller Container\" used in Parcel Hubs has a carrying capacity of how many closed parcel bags?", o: ["10 bags", "15 bags", "20 bags", "25 bags"], a: 2, e: "A Roller Container can hold up to 20 closed parcel bags." },
+    { q: "In a Semi-Automated Parcel Processing Centre, what is the Ad Hoc Norm for \"parcel feeding on automated sorter\"?", o: ["500 parcels/hour", "700 parcels/hour", "1000 parcels/hour", "1200 parcels/hour"], a: 3, e: "The norm is 1200 parcels/hour." },
+    { q: "The \"Presumptive Loss\" recovery process must be initiated by the HRO/SRO if the Record Officer's error report is not satisfactorily replied to by the Set In-charge within:", o: ["2 days", "3 days", "5 days", "7 days"], a: 1, e: "If the Set In-charge fails to reply within 3 days." },
+    { q: "Which form is known as the \"Inward Error Register\" for the Record Office?", o: ["Form 3A", "Form 3B", "Form 3C", "Form 3D"], a: 0, e: "Form 3A is the Inward Error Register for Record Office." },
+    { q: "In the Parcel Sales process, \"Prospecting\" is immediately followed by which stage?", o: ["Presentation", "Preparation", "Managing Objections", "Closing"], a: 1, e: "Prospecting is followed by Preparation." },
+    { q: "What is the minimum object size (LxBxH) required for measurement by the Static Weighing System (SWS)?", o: ["B)", "", "D)", ""], a: 1, e: "Minimum object size is 100mm x 50mm x 20mm." },
+    { q: "Which of the following is NOT a mandatory scan for NTD articles (out of the 12 scans)?", o: ["Origin Sorting Hub Bag Opening Scan", "Destination Sorting Hub Bag Closing Scan", "Intermediate Transit Hub Receipt Scan", "Destination PO Receipt Scan"], a: 2, e: "Intermediate Transit Hub Receipt Scan is not one of the 12 mandatory scans." },
+    { q: "The \"Delivery Norm\" for First Class (Registered) mail between Metro cities is:", o: ["1-2 days", "2-3 days", "3-4 days", "4-5 days"], a: 1, e: "The norm is 2-3 days." },
+    { q: "For fuel reimbursement, the \"Observation Period\" to calculate average distance travelled consists of:", o: ["3 consecutive working days.", "6 working days.", "15 working days.", "One full calendar month."], a: 1, e: "The observation period is 6 working days." },
+    { q: "In a Parcel Hub, if the throughput is \"Category 3\" (251-500 parcels/hour), which areas may be combined to save space?", o: ["Bag receipt area and bag dispatch area.", "Bag opening area and Primary sorting area.", "Data Admin & Booking area and Returns Processing area.", "All of the above."], a: 3, e: "All of the above combinations are permitted for Category 3 hubs." },
+    { q: "The \"MN OP Dashboard\" allows field units to update data regarding:", o: ["Only RTN movements.", "Only Layout Design.", "Layout Design, Standard Equipment, IT Equipment, and Civil Works.", "Staff Attendance only."], a: 2, e: "Dashboard tracks Layout Design, Standard Equipment, IT Equipment, and Civil Work." },
+    { q: "What is the dimension of the \"Bag Opening Table\" specified in the equipment list?", o: ["3 x 2 feet", "4 x 2.5 feet", "5 x 3 feet", "6 x 4 feet"], a: 1, e: "Dimensions are 4 ft. x 2.5 ft." },
+    { q: "Which official sanctions the bills for Fuel Reimbursement charges by the 10th of each month?", o: ["Postmaster", "Divisional Head", "Regional Director", "Circle Head"], a: 1, e: "The Divisional Head sanctions the bills by the 10th." },
+    { q: "Under PNOP, the \"Sector Sorting\" activity in an NDC involves:", o: ["Detailed sorting into beats.", "Preliminary sorting of parcels into sectors based on delivery address.", "Scanning parcels for \"Out for Delivery\".", "Returning parcels to the shipper."], a: 1, e: "Preliminary sorting of parcels into sectors based on delivery address." },
+    { q: "The \"Paper Flyer/bag\" used for parcel packaging has a specified thickness of:", o: ["50-60 microns", "60-80 microns", "80-100 microns", "100-150 microns"], a: 3, e: "Paper Flyer thickness is 100-150 microns." },
+    { q: "According to the sales manual, \"Referrals\" are considered a high-potential source of leads because of:", o: ["Low cost.", "Accurate targeting and trust factor.", "Speed of acquisition.", "Ease of data entry."], a: 1, e: "Referrals are high potential due to accurate targeting and trust factor." },
+    { q: "For \"Ordinary Letters,\" the correct bag label prefix prescribed under MNOP is:", o: ["EB", "RB", "CB", "LB"], a: 3, e: "The prefix for Ordinary Letter is LB." },
+    { q: "A \"Large Category Parcel Hub\" has a sorting capacity for how many destinations?", o: ["140", "144", "180", "192"], a: 3, e: "Large Category Hubs sort for 192 destinations." },
+    { q: "The deadline for the \"Allocation of monthly sales target to MEs by Divisions\" is:", o: ["Before 10th April", "Before 15th April", "Before 20th April", "Before 25th April\n\n---\n\n---"], a: 3, e: "Target allocation to MEs must be done Before 25th April." },
   ],
   // Set 97
   97: [
     { q: "As per the Standard Operating Procedure (SOP) for rollout of Aadhaar Based Authentication Process (e-KYC) in Post Offices, which of the following statements regarding \"Phase-I\" implementation is correct?", o: ["It is applicable for opening all types of Small Savings Schemes including TD and NSC.", "It is applicable for opening Joint Accounts and Single Accounts in POSA.", "It allows opening of New Accounts (Single Only) for POSA and requires no pay-in-slip for transactions up to \u20b950,000.", "It allows opening of New Accounts (Single Only) for POSA and requires no pay-in-slip for deposits/withdrawals up to \u20b95,000."], a: 3, e: "Phase-I is for POSA only, New Account (Single), and no pay-in-slip/withdrawal form is needed for transactions up to \u20b95000." },
     { q: "Under the provisions of Section 194-H of the Income Tax Act, what is the revised TDS rate applicable on commission paid to POSB agents w.e.f. 01.10.2024?", o: ["5%", "3.75%", "2%", "1%"], a: 2, e: "The TDS rate on commission is revised to 2% (previously 5%) w.e.f. 01.10.2024." },
-    { q: "Which Finacle menu is to be used for \"e-KYC CIF Creation\" and changing an existing CIF to an e-KYC CIF through the Re-KYC process?", o: ["CASBAO", "ECCRC", "ECMRC", "CICD"], a: 1, e: "Menu **ECCRC** is used for \"e-KYC CIF Creation and Changing the existing CIF to e-KYC CIF\"." },
+    { q: "Which Finacle menu is to be used for \"e-KYC CIF Creation\" and changing an existing CIF to an e-KYC CIF through the Re-KYC process?", o: ["CASBAO", "ECCRC", "ECMRC", "CICD"], a: 1, e: "Menu ECCRC is used for \"e-KYC CIF Creation and Changing the existing CIF to e-KYC CIF\"." },
     { q: "Regarding the regularization of irregular National Small Savings (NSS-87) accounts where two accounts were opened prior to 02.04.1990, how is the interest calculated for the second account?", o: ["Prevailing scheme rate.", "Prevailing POSA rate plus 200 bps (2%) on the outstanding balance.", "Zero percent interest.", "Prevailing POSA rate only."], a: 1, e: "For two accounts opened *prior* to 02.04.1990, the second account gets \"prevailing POSA rate plus 200 bps (2%)\"." },
     { q: "With effect from 1st October 2024, what interest rate applies to the balances remaining at the credit of subscribers of the National Savings Scheme (NSS-87 & NSS-92)?", o: ["7.5% per annum", "Prevailing POSA rate", "Zero percent", "4.0% per annum"], a: 2, e: "From 01 Oct 2024, all types of NSS accounts shall get zero percentage of interest." },
     { q: "If a PPF account was irregularly opened in the name of a minor, how is the interest calculated until the minor attains 18 years of age?", o: ["No interest is payable until the account is regularized.", "POSA interest rate shall be paid until the individual attains 18 years.", "PPF Scheme rate is paid but the account maturity is extended.", "Simple interest at 4% is calculated on the principal only."], a: 1, e: "Irregular PPF accounts opened in the name of a minor are paid POSA interest until the minor turns 18." },
@@ -2556,10 +2556,10 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "What is the maximum investment limit for a Single Account under the National Savings (Monthly Income Account) Scheme, 2019, as revised in 2023?", o: ["\u20b9 4.5 Lakh", "\u20b9 9 Lakh", "\u20b9 15 Lakh", "\u20b9 30 Lakh"], a: 1, e: "The limit for a Single MIS account was enhanced from \u20b94.5 Lakh to \u20b99 Lakh." },
     { q: "Under the \"Mahila Samman Savings Certificate, 2023\", what is the penalty interest rate applied if an account is prematurely closed after six months for a reason other than death or extreme compassionate grounds?", o: ["No interest is payable.", "POSA rate is applied.", "Interest rate less by 1% than the scheme rate.", "Interest rate less by 2% than the scheme rate."], a: 3, e: "For premature closure (other than death/compassionate grounds) after 6 months, the interest rate is \"less by two per cent points\" (5.5%)." },
     { q: "As per the guidelines for regularizing irregular Sukanya Samriddhi Accounts (SSA) opened by grandparents (who are not legal guardians), what is the prescribed course of action?", o: ["The account must be closed immediately with 0% interest.", "The account is treated as a PPC account.", "The guardianship shall be transferred to the natural guardian (alive parents) or Legal Guardian.", "The account is allowed to continue as is, provided a penalty is paid."], a: 2, e: "Guardianship shall be transferred to the natural guardian (alive parents) or Legal Guardian." },
-    { q: "Which Finacle menu allows the system to show the masked Aadhaar number (XXXX-XXXX-1234) for an e-KYC CIF?", o: ["CTM", "CXFER", "CICD", "HCCA"], a: 2, e: "Menu **CICD** shows the masked Aadhaar number (XXXX-XXXX-1234)." },
-    { q: "According to the SOP regarding \"Prevention of Frauds in Post Offices,\" which menu has been disabled for the selection of 'Yes' under 'Modify A/c Name' at the counter level?", o: ["HAALM", "HCCA", "CCRC", "CIFM"], a: 1, e: "Selection of 'Yes' under 'Modify, A/c Name' has been disabled in the **HCCA** Menu." },
+    { q: "Which Finacle menu allows the system to show the masked Aadhaar number (XXXX-XXXX-1234) for an e-KYC CIF?", o: ["CTM", "CXFER", "CICD", "HCCA"], a: 2, e: "Menu CICD shows the masked Aadhaar number (XXXX-XXXX-1234)." },
+    { q: "According to the SOP regarding \"Prevention of Frauds in Post Offices,\" which menu has been disabled for the selection of 'Yes' under 'Modify A/c Name' at the counter level?", o: ["HAALM", "HCCA", "CCRC", "CIFM"], a: 1, e: "Selection of 'Yes' under 'Modify, A/c Name' has been disabled in the HCCA Menu." },
     { q: "When a claim for interest adjustment is processed using the HIARM menu, which authority is competent to sanction claims involving an amount above \u20b925,000 in each case?", o: ["The Postmaster of the Head Post Office.", "The Divisional Head / Group A Postmaster.", "Regional Director / DPS (HQ) / PMG.", "CEPT Team only."], a: 2, e: "Claims above \u20b925,000 are sanctioned by Regional Director / DPS(HQ) / PMG." },
-    { q: "What is the \"Freeze Reason Code\" used for Small Savings Schemes accounts (MIS/SCSS/TD/KVP/NSC/RD) that have matured but remain closed for more than 3 years after maturity?", o: ["SCWFR", "INOP", "CLAIM", "DECEASED"], a: 1, e: "The freeze reason code for accounts inoperative for more than 3 years is **INOP**." },
+    { q: "What is the \"Freeze Reason Code\" used for Small Savings Schemes accounts (MIS/SCSS/TD/KVP/NSC/RD) that have matured but remain closed for more than 3 years after maturity?", o: ["SCWFR", "INOP", "CLAIM", "DECEASED"], a: 1, e: "The freeze reason code for accounts inoperative for more than 3 years is INOP." },
     { q: "Regarding the settlement of deceased claim cases where a nomination exists, what is the prescribed timeline for settlement by the Post Office?", o: ["One working day.", "Three working days.", "Seven working days.", "Fifteen working days."], a: 0, e: "Claims where nomination exists must be settled within one working day." },
     { q: "Under the \"Mahila Samman Savings Certificate, 2023\", an individual may open any number of accounts subject to the maximum limit and a time gap. What is the mandatory time gap between the opening of an existing account and a new account?", o: ["One month", "Three months", "Six months", "One year"], a: 1, e: "There must be a time gap of three months between the existing account and the opening of another account." },
     { q: "In the event of an irregular PPF account where more than one account exists, how is the balance in the second account treated upon merger with the primary account?", o: ["It earns the scheme rate irrespective of the limit.", "It is refunded with POSA interest.", "Excess balance beyond the applicable annual ceiling in the primary account is refunded with zero percent interest.", "The second account is treated as a separate valid account with full interest."], a: 2, e: "Excess balance in the second account (beyond the primary account's ceiling) is refunded with Zero percent interest." },
@@ -2568,17 +2568,17 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "For a deceased claim settlement where no nomination exists and no legal evidence is available, what is the financial sanction limit for a Chief Postmaster in a GPO/Head Office (Gazetted Group-A)?", o: ["\u20b9 1,00,000", "\u20b9 2,50,000", "\u20b9 5,00,000", "No Limit"], a: 2, e: "For Chief Postmasters in GPO (Gazetted Group-A), the limit is \u20b95,00,000." },
     { q: "Regarding the printing and supply of AAR Books (Authorized Agents Receipt), to which office do the Divisional Offices send their indents?", o: ["Circle Office", "Postal Stores Depot (PSD) concerned", "India Security Press, Nashik", "CEPT, Mysuru"], a: 1, e: "Indents go from DO (Divisional Office) to PSD (Postal Stores Depot) identified." },
     { q: "In the context of Digital Transactions, what is the maximum number of CIFs that can be linked to a single mobile number as per POSB regulations?", o: ["1", "3", "5", "10"], a: 2, e: "One mobile number can be linked with a maximum of 5 CIFs." },
-    { q: "Which menu should be invoked by the Counter PA to check whether Mobile Number/PAN are updated in an account before initiating a transaction of \u20b920,000 and above?", o: ["CCRC", "CICD", "HACINT", "HFINRPT"], a: 1, e: "Before initiating a transaction of \u20b920,000+, the counter PA shall invoke menu **CICD** to check details." },
+    { q: "Which menu should be invoked by the Counter PA to check whether Mobile Number/PAN are updated in an account before initiating a transaction of \u20b920,000 and above?", o: ["CCRC", "CICD", "HACINT", "HFINRPT"], a: 1, e: "Before initiating a transaction of \u20b920,000+, the counter PA shall invoke menu CICD to check details." },
     { q: "As per the guidelines for \"Re-investment of maturity value through SAS agents,\" which of the following modes is strictly prohibited for new investments?", o: ["Cash up to \u20b920,000.", "Cheque.", "Withdrawal Form (SB-7) of the matured account.", "Electronic Transfer."], a: 2, e: "Re-investment through withdrawal form (SB-7) is NOT allowed; new investment is only via Cash (<20k) or Cheque." },
-    { q: "Effective from 01.04.2022, how must the monthly/quarterly/yearly interest for MIS/SCSS/TD accounts be paid to the depositor?", o: ["In Cash via the Sundry Office Account.", "Through Money Order.", "Mandatory credit to PO Savings Account or Bank Account.", "By Cheque only.\n\nHere is **Part 2 (Questions 26\u201350)** of the High-Quality MCQs.\n\n"], a: 2, e: "Interest payment in cash is not allowed; it must be credited to a PO Savings Account or Bank Account." },
+    { q: "Effective from 01.04.2022, how must the monthly/quarterly/yearly interest for MIS/SCSS/TD accounts be paid to the depositor?", o: ["In Cash via the Sundry Office Account.", "Through Money Order.", "Mandatory credit to PO Savings Account or Bank Account.", "By Cheque only.\n\nHere is Part 2 (Questions 26\u201350) of the High-Quality MCQs.\n\n"], a: 2, e: "Interest payment in cash is not allowed; it must be credited to a PO Savings Account or Bank Account." },
   ],
   // Set 98
   98: [
-    { q: "Which freeze code is strictly assigned to accounts identified as \"Unclaimed\" under the Senior Citizen Welfare Fund (SCWF) Rules 2016, which can only be closed at Head Post Offices?", o: ["INOP", "SCWFR", "PROHIB", "DORMT"], a: 1, e: "Unclaimed accounts under SCWF Rules 2016 are frozen with code **SCWFR**." },
+    { q: "Which freeze code is strictly assigned to accounts identified as \"Unclaimed\" under the Senior Citizen Welfare Fund (SCWF) Rules 2016, which can only be closed at Head Post Offices?", o: ["INOP", "SCWFR", "PROHIB", "DORMT"], a: 1, e: "Unclaimed accounts under SCWF Rules 2016 are frozen with code SCWFR." },
     { q: "As per SB Order 05/2021 regarding TDS under Section 194N, what is the TDS rate applicable on aggregate cash withdrawals exceeding \u20b920 Lakhs (but up to \u20b91 Crore) for an account holder who has NOT filed Income Tax Returns for the last three years?", o: ["Nil", "1%", "2%", "5%"], a: 2, e: "For a person who has not filed ITR for 3 years, cash withdrawal between \u20b920 Lakhs and \u20b91 Crore attracts 2% TDS." },
     { q: "Regarding the settlement of deceased claim cases where NO nomination exists and NO legal evidence is available, what is the revised financial sanction limit for a Sub-Postmaster of a Time Scale Departmental SO?", o: ["\u20b9 10,000", "\u20b9 25,000", "\u20b9 50,000", "\u20b9 1,00,000"], a: 2, e: "The limit for Sub-Postmasters of Time Scale Departmental SOs (and LSG) is revised to \u20b950,000." },
     { q: "What is the prescribed fee (excluding GST) for the issue of a \"Passbook in lieu of lost or mutilated certificates\" (KVP/NSC) as per GSPR-2018 Schedule II?", o: ["\u20b9 10", "\u20b9 20", "\u20b9 50", "\u20b9 100"], a: 2, e: "The fee for issue of duplicate passbook in lieu of lost certificates is \u20b950/- + GST." },
-    { q: "According to SB Order 37/2020 regarding the transfer of accounts of National Small Savings Schemes, which office is authorized to perform the actual account transfer process in the system?", o: ["The Sub Post Office (SO) where the application is submitted.", "The Head Post Office (HO) only.", "Both SO and HO.", "The Circle Processing Centre (CPC)."], a: 1, e: "Transfer of account shall be done by the **HPO only**." },
+    { q: "According to SB Order 37/2020 regarding the transfer of accounts of National Small Savings Schemes, which office is authorized to perform the actual account transfer process in the system?", o: ["The Sub Post Office (SO) where the application is submitted.", "The Head Post Office (HO) only.", "Both SO and HO.", "The Circle Processing Centre (CPC)."], a: 1, e: "Transfer of account shall be done by the HPO only." },
     { q: "As per the amendment to Rule 43(2)(vi) of POSB Manual Vol II (SB Order 22/2021), if an indemnity bond accepting authority is not satisfied with the solvency of a surety, which of the following documents can be accepted as proof of solvency?", o: ["A self-declaration on plain paper.", "An Annual Income Certificate certified by the employer of the surety.", "A Ration Card copy.", "A recommendation letter from a local Gazetted Officer."], a: 1, e: "Solvency can be ascertained by an Annual Income Certificate certified by the employer." },
     { q: "The Account Maintenance Fee for a Post Office Savings Account (POSA) was revised from \u20b9100 to which amount (inclusive of GST) as per SB Order 08/2021?", o: ["\u20b9 20", "\u20b9 50", "\u20b9 75", "\u20b9 90"], a: 1, e: "Account Maintenance Fee was revised to \u20b950 (inclusive of GST)." },
     { q: "For a \"Basic Savings Account\" opened under the Post Office Savings Account Scheme 2019, what is the minimum balance that must be maintained by the account holder?", o: ["\u20b9 0 (Zero)", "\u20b9 50", "\u20b9 100", "\u20b9 500"], a: 3, e: "A minimum balance of \u20b9500 is to be maintained." },
@@ -2588,14 +2588,14 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "According to SB Order 06/2019, how long must \"Scanned images\" of KYC forms be preserved at the Circle CPC (CBS)?", o: ["One year after scanning.", "Three years after scanning.", "Five years after scanning.", "Permanently."], a: 1, e: "Scanned images of KYC forms at CPC(CBS) are preserved for Three years after scanning." },
     { q: "When linking mobile numbers to CIFs, the system will throw an error message if one mobile number is linked with more than how many CIF IDs?", o: ["3", "4", "5", "7"], a: 2, e: "System throws an error if Mobile No is linked with more than 5 CIF IDs." },
     { q: "Which toll-free number was introduced for the \"Interactive Voice Response (IVR)\" facility for POSB customers as per SB Order 28/2021?", o: ["1800-11-2019", "1800-266-6868", "1800-425-2440", "155299"], a: 1, e: "The IVR number introduced is 1800-266-6868." },
-    { q: "SB Order 26/2020 announced the discontinuation of taking which receipt form from SAS/MPKBY agents for commission payments at the time of business acceptance in CBS Post Offices?", o: ["ACG-17", "SB-3", "SB-26", "SB-46"], a: 0, e: "Discontinuation of taking **ACG-17** from agents for commission payment." },
+    { q: "SB Order 26/2020 announced the discontinuation of taking which receipt form from SAS/MPKBY agents for commission payments at the time of business acceptance in CBS Post Offices?", o: ["ACG-17", "SB-3", "SB-26", "SB-46"], a: 0, e: "Discontinuation of taking ACG-17 from agents for commission payment." },
     { q: "If a depositor is found to have three NSS-87 accounts, what is the rule regarding the interest payable on the third (irregular) account?", o: ["Prevailing scheme rate.", "POSA rate.", "POSA rate + 2%.", "Zero percent interest and principal refunded."], a: 3, e: "For the third/more irregular accounts, no interest shall be paid and principal shall be refunded." },
     { q: "Regarding the extension of PPF accounts by NRIs (where Form H did not ask for residency status), what interest rate is applicable to such accounts from 1st October 2024 onwards?", o: ["PPF Scheme Rate.", "POSA Rate.", "Zero percent.", "5% per annum."], a: 2, e: "After 30th Sept 2024, such accounts earn zero percent interest." },
     { q: "Accounts identified for freezing under the code \"INOP\" (Inoperative more than 3 years) are frozen on which dates every year?", o: ["1st April and 1st October.", "1st January and 1st July.", "31st March and 30th September.", "15th January and 15th July."], a: 1, e: "Such accounts will be frozen on 1st July and 1st January of each year." },
-    { q: "Which Finacle menu is used for updating the status of TDS forms (like 15G/15H) in the CIF of an account holder?", o: ["CSCAM", "CMRC", "HCCA", "MACC"], a: 1, e: "Configuration of TDS forms (15G/15H) is made in the CIF via menu **CMRC**." },
+    { q: "Which Finacle menu is used for updating the status of TDS forms (like 15G/15H) in the CIF of an account holder?", o: ["CSCAM", "CMRC", "HCCA", "MACC"], a: 1, e: "Configuration of TDS forms (15G/15H) is made in the CIF via menu CMRC." },
     { q: "How should an irregular Small Savings Scheme account (other than PPF and SSA) opened in the name of a minor be regularized?", o: ["By paying the scheme interest rate.", "By paying simple interest at the prevailing POSA rate.", "By closing the account without interest.", "By converting it into a Minor Account."], a: 1, e: "Irregular minor accounts (except PPF/SSA) are regularized with simple interest at the prevailing POSA rate." },
-    { q: "As per SB Order 14/2021, the process of transferring accounts belonging to discontinued schemes (NSS-87 and NSS-92) can now be issued by:", o: ["The Head of the Circle.", "The nearby Head Post Office.", "The Sub Post Office.", "The CEPT only."], a: 1, e: "Transfer process can now be issued by the **nearby Head Post Office**." },
-    { q: "For a GDS Branch Post Office which is a \"Non-delivery office in account with a non-delivery post office,\" incentive is payable if the depositor's address falls within:", o: ["The delivery jurisdiction of the Account Office.", "The area covered by the PIN code of the branch post office concerned.", "Any area within the Division.", "The delivery jurisdiction of the nearest Delivery PO."], a: 1, e: "For non-delivery BO in account with non-delivery PO, address must fall within the area covered by the **pincode** of the BO." },
+    { q: "As per SB Order 14/2021, the process of transferring accounts belonging to discontinued schemes (NSS-87 and NSS-92) can now be issued by:", o: ["The Head of the Circle.", "The nearby Head Post Office.", "The Sub Post Office.", "The CEPT only."], a: 1, e: "Transfer process can now be issued by the nearby Head Post Office." },
+    { q: "For a GDS Branch Post Office which is a \"Non-delivery office in account with a non-delivery post office,\" incentive is payable if the depositor's address falls within:", o: ["The delivery jurisdiction of the Account Office.", "The area covered by the PIN code of the branch post office concerned.", "Any area within the Division.", "The delivery jurisdiction of the nearest Delivery PO."], a: 1, e: "For non-delivery BO in account with non-delivery PO, address must fall within the area covered by the pincode of the BO." },
     { q: "When closing an unclaimed account frozen under \"SCWFR\", which officer is responsible for verifying the KYC documents and allowing the closure?", o: ["The Sub Postmaster.", "The Head Postmaster.", "The Divisional Superintendent.", "The System Administrator."], a: 1, e: "The Head Postmaster will check/confirm freeze code and allow closure." },
     { q: "In the context of TDS on Senior Citizens (age 60+), what is the threshold limit of interest income per financial year (from 2025-26 onwards) beyond which TDS is deductible?", o: ["\u20b9 40,000", "\u20b9 50,000", "\u20b9 1,00,000", "\u20b9 75,000"], a: 1, e: "From 2025-26, the threshold limit for Senior Citizens is \u20b950,000 per financial year." },
     { q: "Which document is mandatory for opening a \"Basic Savings Account\" to prove beneficiary status under a Government Welfare Scheme?", o: ["Copy of Ration Card only.", "Copy of letter/card issued by a competent authority of State/Central Govt mentioning the name of the beneficiary.", "A self-declaration by the beneficiary.", "Recommendation from the Sarpanch."], a: 1, e: "Copy of letter/card issued by competent authority mentioning beneficiary name is required." },
@@ -2605,38 +2605,38 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "Regarding the settlement of deceased claim cases where NO nomination exists and NO legal evidence is available, what is the financial sanction limit for a Senior Postmaster (Gazetted Group-B) in a Head Post Office?", o: ["\u20b9 1,00,000", "\u20b9 2,50,000", "\u20b9 5,00,000", "No Limit"], a: 2, e: "Senior Postmasters/Deputy Chief PMs (Group B HPOs) have a limit of \u20b95,00,000." },
     { q: "As per SB Order 02/2021, the competent authority enhanced the limit of cash withdrawal per individual at GDS Branch Post Offices without obtaining sanction from the Account Office. What is the enhanced limit?", o: ["\u20b9 10,000", "\u20b9 15,000", "\u20b9 20,000", "\u20b9 25,000"], a: 2, e: "Limit enhanced from \u20b95,000 to \u20b920,000." },
     { q: "Which of the following statements regarding the acceptance of POSB Cheques is correct as per SB Order 12/2019 and subsequent clarifications?", o: ["POSB cheques presented at another CBS Post Office must be sent for clearing.", "All POSB cheques issued by any CBS Post Office are treated as \"At Par\" cheques if presented at any CBS Post Office.", "POSB cheques can be accepted for cash withdrawal at other SOLs up to a limit of \u20b91,00,000 per day.", "Inter-SOL clearing is mandatory for amounts above \u20b925,000."], a: 1, e: "All POSB cheques issued by any CBS PO are treated as AT PAR at any CBS PO." },
-    { q: "For which of the following specific purposes is the Finacle menu \"HINTTM\" used in CBS Post Offices?", o: ["For account transfer between SOLs.", "For interest adjustment in case of premature closure of PPF accounts or deceased claim closure of SCSS/SSA accounts.", "For creating a new CIF ID.", "For freezing an account under the SCWF rules."], a: 1, e: "**HINTTM** is used for adjustment of interest for premature closure of PPF, deceased claim SCSS/SSA, etc.." },
+    { q: "For which of the following specific purposes is the Finacle menu \"HINTTM\" used in CBS Post Offices?", o: ["For account transfer between SOLs.", "For interest adjustment in case of premature closure of PPF accounts or deceased claim closure of SCSS/SSA accounts.", "For creating a new CIF ID.", "For freezing an account under the SCWF rules."], a: 1, e: "HINTTM is used for adjustment of interest for premature closure of PPF, deceased claim SCSS/SSA, etc.." },
     { q: "In the case of a \"Joint B\" account opened by a literate depositor and an illiterate depositor, which of the following rules applies regarding the Cheque facility?", o: ["Cheque facility is not allowed for any Joint account involving an illiterate depositor.", "Cheque facility can be used by the illiterate depositor with a thumb impression attested by the Postmaster.", "Cheque facility can be used only by the literate depositor who can sign in running hand.", "Both depositors can use the cheque facility if witnessed by two people."], a: 2, e: "Cheque facility is used *only* by the literate depositor who can sign in running hand." },
-    { q: "As per SB Order 28/2020, the \"SB-5A\" passbook is prescribed for which set of schemes?", o: ["SB, RD, and MIS.", "PPF and SSA.", "1/2/3/5 yr. TD, KVP, and NSC.", "Senior Citizen Savings Scheme (SCSS)."], a: 2, e: "**SB-5A** is for 1/2/3/5 yr TD, KVP, and NSC." },
-    { q: "What is the \"Freeze Reason Code\" that must be used by the System Administrator (through batch job) to freeze accounts identified under the Senior Citizen Welfare Fund (SCWF) Rules?", o: ["SCWFR", "INOP", "UNCLM", "SCWF"], a: 0, e: "Freeze code **SCWFR**." },
+    { q: "As per SB Order 28/2020, the \"SB-5A\" passbook is prescribed for which set of schemes?", o: ["SB, RD, and MIS.", "PPF and SSA.", "1/2/3/5 yr. TD, KVP, and NSC.", "Senior Citizen Savings Scheme (SCSS)."], a: 2, e: "SB-5A is for 1/2/3/5 yr TD, KVP, and NSC." },
+    { q: "What is the \"Freeze Reason Code\" that must be used by the System Administrator (through batch job) to freeze accounts identified under the Senior Citizen Welfare Fund (SCWF) Rules?", o: ["SCWFR", "INOP", "UNCLM", "SCWF"], a: 0, e: "Freeze code SCWFR." },
     { q: "If an account is frozen with the code \"SCWFR\" (Unclaimed), at which level of Post Office can it be closed?", o: ["Any Departmental Sub Post Office.", "Only at Head Post Offices.", "Any CBS Post Office including Branch Offices.", "Only at the GPO of the Circle."], a: 1, e: "These accounts should be closed *only at Head Post Offices*." },
-    { q: "As per the SOP for \"GL Integration between CBS and CSI,\" pilot roll-out was first started in which Circle?", o: ["Tamil Nadu", "Maharashtra", "Karnataka", "Delhi"], a: 2, e: "Pilot roll-out started in **Karnataka Circle**." },
+    { q: "As per the SOP for \"GL Integration between CBS and CSI,\" pilot roll-out was first started in which Circle?", o: ["Tamil Nadu", "Maharashtra", "Karnataka", "Delhi"], a: 2, e: "Pilot roll-out started in Karnataka Circle." },
     { q: "According to the revised \"National Small Savings Scheme (POSB) Rules 2019,\" subsequent deposits in a Sukanya Samriddhi Account (SSA) must be made in multiples of:", o: ["\u20b9 10", "\u20b9 50", "\u20b9 100", "\u20b9 500"], a: 1, e: "Subsequent deposits in multiples of \u20b950." },
     { q: "What is the fee prescribed (excluding GST) for the issue of a duplicate passbook for KVP/NSC certificates issued on or after 01.07.2016 (in the shape of a passbook)?", o: ["\u20b9 10", "\u20b9 20", "\u20b9 50", "\u20b9 100"], a: 2, e: "Fee is \u20b950/- + GST for certificates issued as passbook." },
     { q: "Regarding the acceptance of POSB cheques for *cash withdrawal* at other SOLs (Service Outlets), what is the maximum limit per day?", o: ["\u20b9 25,000", "\u20b9 50,000", "\u20b9 1,00,000", "No limit, subject to balance availability."], a: 1, e: "No POSB Cheque for more than \u20b950,000 accepted for cash withdrawal at other SOLs." },
-    { q: "Which Finacle menu is used for \"Account Transfer\" (inward/outward) as prescribed in the POSB (CBS) Manual?", o: ["HINTTM", "HAALM", "HACINT", "HFINRPT"], a: 0, e: "While HACT is standard, the text explicitly links **HINTTM** to interest adjustments during closure/transfer scenarios. *(Note: In strict exam context, HINTTM relates to Interest Adjustment).*" },
+    { q: "Which Finacle menu is used for \"Account Transfer\" (inward/outward) as prescribed in the POSB (CBS) Manual?", o: ["HINTTM", "HAALM", "HACINT", "HFINRPT"], a: 0, e: "While HACT is standard, the text explicitly links HINTTM to interest adjustments during closure/transfer scenarios. *(Note: In strict exam context, HINTTM relates to Interest Adjustment).*" },
     { q: "In the context of fraud prevention steps (SB Order 01/2022), for any transaction of \u20b950,000 and above, which document MUST be checked and updated in the system?", o: ["Aadhaar", "Mobile Number", "PAN", "Voter ID"], a: 2, e: "PAN must be checked/updated for transactions of \u20b950,000 and above." },
     { q: "If a depositor holds a \"Basic Savings Account,\" which of the following service charges is WAIVED?", o: ["Issue of Cheque Book.", "Issue of ATM Card.", "Account Maintenance Fee.", "Duplicate Passbook Fee."], a: 2, e: "Account Maintenance Fee is not applicable." },
     { q: "When an irregular PPF account (more than one account) is regularized, what happens to the excess balance in the second account?", o: ["It is transferred to the primary account with full interest.", "It is refunded to the investor with POSA interest.", "It is refunded to the investor with 0% (Zero) interest.", "It is confiscated by the Government."], a: 2, e: "Excess balance in 2nd account is refunded with Zero percent interest." },
     { q: "As per SB Order 18/2020, the operation of which specific scheme was extended to Single Handed Sub Post Offices?", o: ["Senior Citizen Savings Scheme (SCSS)", "Public Provident Fund (PPF)", "Kisan Vikas Patra (KVP)", "National Savings Certificate (NSC)"], a: 1, e: "PPF Scheme extended to Single Handed Sub Post Offices." },
     { q: "Under the \"Mahila Samman Savings Certificate, 2023\", what is the minimum deposit amount required to open an account?", o: ["\u20b9 100", "\u20b9 500", "\u20b9 1,000", "\u20b9 5,000"], a: 2, e: "Minimum deposit is \u20b91000." },
-    { q: "Which menu is used by the Supervisor SBCO to adjust interest entries (after receiving an order from the Divisional Head) to correct the balance in an account?", o: ["HIARM", "HINTTM", "HACINT", "CSB"], a: 0, e: "Supervisor SBCO invokes **HIARM** menu." },
-    { q: "As per SB Order 36/2020, if a deceased claim case falls above the financial powers of the Post Office, how must the claim be forwarded to the sanctioning authority?", o: ["By Ordinary Post.", "By Registered Post.", "By Service Insured Post.", "By Speed Post only."], a: 2, e: "If above financial powers, forwarded by **Service Insured Post**." },
+    { q: "Which menu is used by the Supervisor SBCO to adjust interest entries (after receiving an order from the Divisional Head) to correct the balance in an account?", o: ["HIARM", "HINTTM", "HACINT", "CSB"], a: 0, e: "Supervisor SBCO invokes HIARM menu." },
+    { q: "As per SB Order 36/2020, if a deceased claim case falls above the financial powers of the Post Office, how must the claim be forwarded to the sanctioning authority?", o: ["By Ordinary Post.", "By Registered Post.", "By Service Insured Post.", "By Speed Post only."], a: 2, e: "If above financial powers, forwarded by Service Insured Post." },
     { q: "For a \"Mahila Samman Savings Certificate\" account, if a premature closure is requested on extreme compassionate grounds (e.g., life-threatening disease), what interest rate is payable?", o: ["The principal is returned without interest.", "POSA rate.", "Scheme rate minus 2%.", "The prevailing scheme interest rate (7.5%)."], a: 3, e: "For extreme compassionate grounds, \"allow premature closure\" implies the standard scheme operation (without the 2% penalty mentioned for \"other reasons\")." },
-    { q: "When reinvesting the maturity value of a Small Savings Scheme through an SAS agent, which mode of transaction is permitted for the new investment?", o: ["Cash deposit of any amount.", "Withdrawal form (SB-7) of the matured account.", "Only by Cheque (or Cash up to \u20b920,000).", "Deduction from the agent's commission."], a: 2, e: "New investment allowed only through Cash (<20k) or **By Cheque**." },
+    { q: "When reinvesting the maturity value of a Small Savings Scheme through an SAS agent, which mode of transaction is permitted for the new investment?", o: ["Cash deposit of any amount.", "Withdrawal form (SB-7) of the matured account.", "Only by Cheque (or Cash up to \u20b920,000).", "Deduction from the agent's commission."], a: 2, e: "New investment allowed only through Cash (<20k) or By Cheque." },
     { q: "Regarding the \"Phased Manner Rollout\" of e-KYC (Phase-II), which schemes were included in the second phase?", o: ["POSA only.", "MIS, TD, NSC, KVP, RD, and PPF.", "SCSS and MSSC only.", "SSA only."], a: 1, e: "Phase-II covers MIS, TD, NSC, KVP, RD & PPF." },
     { q: "For the purpose of solvency in an indemnity bond (SB Order 22/2021), a \"Solvency Certificate\" issued by which authority is acceptable?", o: ["The Branch Postmaster.", "The Village Sarpanch.", "The Revenue Authority having jurisdiction over the estate of the surety.", "A Public Notary."], a: 2, e: "Solvency certificate from revenue authority having jurisdiction." },
-    { q: "Which SB Order abolished the \"Savings Bank Aptitude Test\"?", o: ["SB Order 14/2021", "SB Order 20/2021", "SB Order 05/2022", "SB Order 34/2020\n\nHere is **Part 4 (Questions 76\u2013100)** of the High-Quality MCQs.\n\n"], a: 1, e: "SB Order 20/2021 abolished the Savings Bank Aptitude Test." },
+    { q: "Which SB Order abolished the \"Savings Bank Aptitude Test\"?", o: ["SB Order 14/2021", "SB Order 20/2021", "SB Order 05/2022", "SB Order 34/2020\n\nHere is Part 4 (Questions 76\u2013100) of the High-Quality MCQs.\n\n"], a: 1, e: "SB Order 20/2021 abolished the Savings Bank Aptitude Test." },
   ],
   // Set 100
   100: [
     { q: "Under the revised financial powers for settling deceased claim cases (where no nomination/legal evidence exists), what is the limit for a Sub-Postmaster of a Higher Selection Grade (Non-Gazetted) Post Office?", o: ["\u20b9 25,000", "\u20b9 50,000", "\u20b9 1,00,000", "\u20b9 2,50,000"], a: 2, e: "Sub-Postmasters of Higher Selection Grade (Non-Gazetted) have a limit of \u20b91,00,000." },
     { q: "Regarding the \"Senior Citizen Welfare Fund (SCWF)\", which of the following accounts must be identified and frozen after 10 years from the date of maturity?", o: ["Savings Account (SB)", "Public Provident Fund (PPF)", "5 Year Time Deposit (TD)", "Senior Citizen Savings Scheme (SCSS) (if extended)"], a: 2, e: "TD (1,2,3,5 yr) accounts are identified 10 years from date of maturity." },
-    { q: "As per SB Order 24/2022, regarding the \"Prevention of Frauds,\" which menu is used by the Head Office (HO) to change the name of an account holder after receiving the case from a Sub Post Office?", o: ["HCCA", "HAALM", "CIFM", "CNAC"], a: 1, e: "HO shall change the name of account holder through **HAALM** menu." },
-    { q: "Which organization is responsible for printing and supplying POSB CTS Cheque books as per the orders placed by NSI, New Delhi?", o: ["Security Printing Press, Hyderabad", "India Security Press (ISP), Nashik", "Reserve Bank of India Press", "CEPT, Mysuru"], a: 1, e: "POSB CTS Cheque books are printed by **India Security Press (ISP), Nashik**." },
+    { q: "As per SB Order 24/2022, regarding the \"Prevention of Frauds,\" which menu is used by the Head Office (HO) to change the name of an account holder after receiving the case from a Sub Post Office?", o: ["HCCA", "HAALM", "CIFM", "CNAC"], a: 1, e: "HO shall change the name of account holder through HAALM menu." },
+    { q: "Which organization is responsible for printing and supplying POSB CTS Cheque books as per the orders placed by NSI, New Delhi?", o: ["Security Printing Press, Hyderabad", "India Security Press (ISP), Nashik", "Reserve Bank of India Press", "CEPT, Mysuru"], a: 1, e: "POSB CTS Cheque books are printed by India Security Press (ISP), Nashik." },
     { q: "In the \"Proposed Flow of Printing and Supply,\" who supplies the ASLAAS-5 cards to the Agents?", o: ["Postal Stores Depot (PSD)", "Head Post Offices (HPOs)", "District Small Savings Offices (DSSOs)", "Divisional Offices"], a: 2, e: "DSSOs (District Small Savings Offices) supply ASLAAS-5 cards to Agents." },
-    { q: "As per SB Order 21/2020, GDS BPMs are eligible for incentive irrespective of the location (Rural/Urban) of the Branch Post Office. This amendment applies to:", o: ["Account Opening Incentive only.", "PLI Incentive only.", "TD/Time Deposit Commission only.", "The condition regarding the address of the depositor falling within the delivery jurisdiction."], a: 3, e: "Incentive payable irrespective of rural/urban location subject to the condition regarding the **address of depositors**." },
-    { q: "If an account is frozen with the freeze code \"SCWFR\" (Unclaimed), can it be revived or operated again?", o: ["Yes, by submitting a revival application.", "Yes, by paying a revival fee of \u20b950.", "No, these accounts should only be allowed to be closed.", "No, unless the Circle Head permits."], a: 2, e: "Accounts frozen as \"SCWFR\" should **not** be allowed to be operated (revived); they should only be closed." },
+    { q: "As per SB Order 21/2020, GDS BPMs are eligible for incentive irrespective of the location (Rural/Urban) of the Branch Post Office. This amendment applies to:", o: ["Account Opening Incentive only.", "PLI Incentive only.", "TD/Time Deposit Commission only.", "The condition regarding the address of the depositor falling within the delivery jurisdiction."], a: 3, e: "Incentive payable irrespective of rural/urban location subject to the condition regarding the address of depositors." },
+    { q: "If an account is frozen with the freeze code \"SCWFR\" (Unclaimed), can it be revived or operated again?", o: ["Yes, by submitting a revival application.", "Yes, by paying a revival fee of \u20b950.", "No, these accounts should only be allowed to be closed.", "No, unless the Circle Head permits."], a: 2, e: "Accounts frozen as \"SCWFR\" should not be allowed to be operated (revived); they should only be closed." },
     { q: "According to SB Order 13/2019, subsequent deposits in a Public Provident Fund (PPF) account must be in multiples of:", o: ["\u20b9 10", "\u20b9 50", "\u20b9 100", "\u20b9 500"], a: 1, e: "Subsequent deposits in multiples of \u20b950." },
     { q: "What is the maximum deposit limit for a Mahila Samman Savings Certificate (MSSC) account?", o: ["\u20b9 1.5 Lakh", "\u20b9 2.0 Lakh", "\u20b9 4.5 Lakh", "\u20b9 9.0 Lakh"], a: 1, e: "Maximum deposit is \u20b92,00,000." },
     { q: "Regarding the \"Joint Account\" limit in the Monthly Income Scheme (MIS), the limit was enhanced in 2023 from \u20b99 Lakh to:", o: ["\u20b9 10 Lakh", "\u20b9 12 Lakh", "\u20b9 15 Lakh", "\u20b9 30 Lakh"], a: 2, e: "Limit for Joint Account enhanced to \u20b915 Lakh." },
@@ -2644,17 +2644,17 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "For the purpose of TDS deduction under Section 194-H (Commission to Agents), what is the threshold limit of commission for the financial year 2024-25 up to which NO TDS is deducted for POSB Agents?", o: ["\u20b9 5,000", "\u20b9 10,000", "\u20b9 15,000", "\u20b9 20,000"], a: 2, e: "Threshold limit up to 2024-25 is \u20b915,000." },
     { q: "Which SB Order issued in 2022 introduced the \"e-Passbook facility\" for National Small Savings Schemes account holders?", o: ["SB Order 06/2022", "SB Order 12/2022", "SB Order 17/2022", "SB Order 19/2022"], a: 2, e: "SB Order 17/2022 introduced e-Passbook facility." },
     { q: "In the case of \"Change of Interest Rates\" (SB Order 09/2025), what is the compounding frequency for a 5-Year Time Deposit (TD)?", o: ["Monthly", "Quarterly", "Half-yearly", "Annually"], a: 1, e: "5 Years TD interest is compounded Quarterly." },
-    { q: "For a \"Kisan Vikas Patra\" (KVP) issued between 01.01.2024 and 01.07.2025, the amount doubles in how many months?", o: ["110 months", "115 months", "120 months", "124 months"], a: 1, e: "KVP doubles in **115 months**." },
-    { q: "When closing an unclaimed account (SCWFR), who is required to attest the KYC documents of the account holder and witnesses?", o: ["The Counter PA.", "The Sub Postmaster.", "The Head Postmaster.", "The PRI (P)."], a: 2, e: "**Head Postmaster** will attest KYC documents of Account Holder and Witnesses." },
-    { q: "As per SB Order 36/2020, if a deceased claim case falls *above* the financial powers of the post office, it shall be forwarded to the sanctioning authority by which mode?", o: ["Registered Post", "Speed Post", "Service Insured Post", "Courier"], a: 2, e: "Forwarded to sanctioning authority by **Service Insured Post**." },
-    { q: "Which form is used for \"Application for Settlement of Claim of Deceased Depositor\" where the claim is sanctioned by the SPM/PM?", o: ["Form-7", "Form-11", "Form-14", "Form-9"], a: 1, e: "SPM/PM sanctions the claim on the second part of **Form-11**." },
+    { q: "For a \"Kisan Vikas Patra\" (KVP) issued between 01.01.2024 and 01.07.2025, the amount doubles in how many months?", o: ["110 months", "115 months", "120 months", "124 months"], a: 1, e: "KVP doubles in 115 months." },
+    { q: "When closing an unclaimed account (SCWFR), who is required to attest the KYC documents of the account holder and witnesses?", o: ["The Counter PA.", "The Sub Postmaster.", "The Head Postmaster.", "The PRI (P)."], a: 2, e: "Head Postmaster will attest KYC documents of Account Holder and Witnesses." },
+    { q: "As per SB Order 36/2020, if a deceased claim case falls *above* the financial powers of the post office, it shall be forwarded to the sanctioning authority by which mode?", o: ["Registered Post", "Speed Post", "Service Insured Post", "Courier"], a: 2, e: "Forwarded to sanctioning authority by Service Insured Post." },
+    { q: "Which form is used for \"Application for Settlement of Claim of Deceased Depositor\" where the claim is sanctioned by the SPM/PM?", o: ["Form-7", "Form-11", "Form-14", "Form-9"], a: 1, e: "SPM/PM sanctions the claim on the second part of Form-11." },
     { q: "According to SB Order 01/2019, \"Intra Operable Net Banking\" service was inaugurated on which date?", o: ["14.12.2018", "01.01.2019", "01.04.2019", "15.08.2019"], a: 0, e: "Inaugurated on 14.12.2018." },
     { q: "The \"GL Integration\" between CBS and CSI transactions was rolled out Pan India from which date?", o: ["15.09.2019", "23.09.2019", "01.10.2019", "01.01.2020"], a: 1, e: "Pan India roll out from 23.09.2019." },
-    { q: "Regarding the regularization of an irregular NSS-87 account (2nd account opened after 02.04.1990), the interest payable on the outstanding balance is:", o: ["Scheme Rate.", "POSA Rate.", "POSA Rate + 2%.", "Zero."], a: 1, e: "2nd account opened *after* 02.04.1990 gets prevailing **POSA rate** on outstanding balance." },
+    { q: "Regarding the regularization of an irregular NSS-87 account (2nd account opened after 02.04.1990), the interest payable on the outstanding balance is:", o: ["Scheme Rate.", "POSA Rate.", "POSA Rate + 2%.", "Zero."], a: 1, e: "2nd account opened *after* 02.04.1990 gets prevailing POSA rate on outstanding balance." },
     { q: "The Authorized Agents Receipt (AAR) Books are printed in four categories. Which of the following is NOT a valid denomination for AAR Books?", o: ["\u20b9 1,000", "\u20b9 2,000", "\u20b9 5,000", "\u20b9 10,000"], a: 1, e: "Valid denominations are \u20b91,000, \u20b95,000, \u20b910,000, and Crossed Cheques. \u20b92,000 is NOT mentioned ." },
-    { q: "Under the \"Mahila Samman Savings Certificate, 2023\", does the investment qualify for a tax rebate under Section 80C of the Income Tax Act?", o: ["Yes, fully exempt.", "Yes, up to \u20b9 1.5 Lakh.", "No, the investment does not qualify for rebate.", "Yes, but only for Senior Citizens."], a: 2, e: "The investment **does not qualify for rebate under 80C**." },
+    { q: "Under the \"Mahila Samman Savings Certificate, 2023\", does the investment qualify for a tax rebate under Section 80C of the Income Tax Act?", o: ["Yes, fully exempt.", "Yes, up to \u20b9 1.5 Lakh.", "No, the investment does not qualify for rebate.", "Yes, but only for Senior Citizens."], a: 2, e: "The investment does not qualify for rebate under 80C." },
     { q: "Regarding the \"Basic Savings Account\" (SB Order 08/2021), can a depositor convert this account into a standard PO Savings Account?", o: ["No, it is a permanent category.", "Yes, by maintaining a minimum balance of \u20b9 500.", "Yes, by paying a conversion fee of \u20b9 100.", "Yes, only after 5 years."], a: 1, e: "Accounts may be converted into PO Savings Account if minimum balance of \u20b9500 is maintained." },
-    { q: "Which Finacle menu is used to print the \"Detailed Transaction\" report for MPKBY Agents?", o: ["HFINRPT", "HACLIDA", "HAGTXN", "HAAGEN\n\n---"], a: 0, e: "Detailed transaction can be viewed through agent reports using **HFINRPT** menu." },
+    { q: "Which Finacle menu is used to print the \"Detailed Transaction\" report for MPKBY Agents?", o: ["HFINRPT", "HACLIDA", "HAGTXN", "HAAGEN\n\n---"], a: 0, e: "Detailed transaction can be viewed through agent reports using HFINRPT menu." },
   ],
   // Set 101
   101: [
@@ -2936,7 +2936,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "15th August, 2024"
       ],
       "a": 2,
-      "e": "The Post Office Act, 2023 received assent in Dec 2023 but came into force on **18th June, 2024**."
+      "e": "The Post Office Act, 2023 received assent in Dec 2023 but came into force on 18th June, 2024."
     },
     {
       "q": "As per recent data, what is the average area served by a single Post Office in India?",
@@ -2947,7 +2947,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "25.00 sq. km."
       ],
       "a": 2,
-      "e": "The average area served by a Post Office is approximately **21.34 sq. km** (calculated based on 32.87 lakh sq km / ~1.65 lakh POs, a standard metric in the report)."
+      "e": "The average area served by a Post Office is approximately 21.34 sq. km (calculated based on 32.87 lakh sq km / ~1.65 lakh POs, a standard metric in the report)."
     },
     {
       "q": "Which of the following statements regarding the Postal Services Board (PSB) is incorrect?",
@@ -2958,7 +2958,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "The Director General Postal Services acts as the Chairman of the Board."
       ],
       "a": 3,
-      "e": "The **Secretary, Department of Posts** acts as the Chairman of the Postal Services Board, not the DG Postal Services."
+      "e": "The Secretary, Department of Posts acts as the Chairman of the Postal Services Board, not the DG Postal Services."
     },
     {
       "q": "Automated Mail Processing Centres (AMPC) equipped with Letter Sorting Machines (LSM) and Mixed Mail Sorters (MMS) have been established in which two cities?",
@@ -2969,7 +2969,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Ahmedabad and Pune"
       ],
       "a": 1,
-      "e": "Major AMPCs are located in **Delhi and Kolkata** (often Chennai/Mumbai too, but Delhi/Kolkata are the primary examples in modernization contexts)."
+      "e": "Major AMPCs are located in Delhi and Kolkata (often Chennai/Mumbai too, but Delhi/Kolkata are the primary examples in modernization contexts)."
     },
     {
       "q": "Match the following Postal Circles with their Headquarters:\r\n\r\n| Circle | Headquarters |\r\n| --- | --- |\r\n| 1. Haryana | a. Shimla |\r\n| 2. North Eastern | b. Ambala |\r\n| 3. Himachal Pradesh | c. Shillong |\r\n| 4. Gujarat | d. Ahmedabad |\r\n\r\nSelect the correct option:",
@@ -2991,7 +2991,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Coastal Shipping Container"
       ],
       "a": 0,
-      "e": "\"Tarang Post\" uses the **Ro-Ro Ferry Service** in Gujarat."
+      "e": "\"Tarang Post\" uses the Ro-Ro Ferry Service in Gujarat."
     },
     {
       "q": "Which of the following is NOT a feature of the \"Magazine Post\" service launched in 2022?",
@@ -3013,7 +3013,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Member Operations (Major General)"
       ],
       "a": 1,
-      "e": "The Head of APS is the **Additional Director General** (APS), who holds the rank of **Major General**."
+      "e": "The Head of APS is the Additional Director General (APS), who holds the rank of Major General."
     },
     {
       "q": "The Department of Posts has introduced the \"Click N Book\" service. What is the maximum weight limit for articles or parcels booked under this service?",
@@ -3024,7 +3024,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "20 Kg"
       ],
       "a": 0,
-      "e": "Click N Book allows booking of registered letters/speed post, typically capped at **2 Kg** for packet ease in this specific digital booking interface (though Speed Post goes higher, the kiosk/portal limit is often lower)."
+      "e": "Click N Book allows booking of registered letters/speed post, typically capped at 2 Kg for packet ease in this specific digital booking interface (though Speed Post goes higher, the kiosk/portal limit is often lower)."
     },
     {
       "q": "The \"Dak Ghar Niryat Kendra\" (DNK) initiative serves which primary purpose?",
@@ -3035,7 +3035,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "To provide Aadhaar enrollment services."
       ],
       "a": 1,
-      "e": "DNK (Dak Ghar Niryat Kendra) aims to facilitate **commercial exports** for MSMEs by simplifying documentation (Postal Bill of Export)."
+      "e": "DNK (Dak Ghar Niryat Kendra) aims to facilitate commercial exports for MSMEs by simplifying documentation (Postal Bill of Export)."
     },
     {
       "q": "In the context of India Post Payments Bank (IPPB), which of the following statements is true regarding its customer base?",
@@ -3046,7 +3046,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "IPPB is a private entity not associated with the Department of Posts."
       ],
       "a": 0,
-      "e": "IPPB has a strong focus on financial inclusion for women, with **98%** of such accounts opened at the doorstep."
+      "e": "IPPB has a strong focus on financial inclusion for women, with 98% of such accounts opened at the doorstep."
     },
     {
       "q": "The \"Meghdoot Award\" includes a cash award of:",
@@ -3057,7 +3057,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "₹1,00,000"
       ],
       "a": 1,
-      "e": "The **Meghdoot Award** carries a cash prize of **₹21,000**, a Gold Medallion, and a Citation."
+      "e": "The Meghdoot Award carries a cash prize of ₹21,000, a Gold Medallion, and a Citation."
     },
     {
       "q": "Which training portal was developed under \"Mission Karmayogi\" for the Department of Posts employees?",
@@ -3068,7 +3068,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Dak Prasikshan"
       ],
       "a": 1,
-      "e": "*Dak Karmyogi** is the e-learning portal developed for postal employees under Mission Karmayogi."
+      "e": "*Dak Karmyogi is the e-learning portal developed for postal employees under Mission Karmayogi."
     },
     {
       "q": "Regarding the \"Parcel Packaging Policy,\" what are the two types of components specified?",
@@ -3079,7 +3079,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Waterproof Packaging and Tamper-proof Packaging"
       ],
       "a": 0,
-      "e": "Packaging norms often distinguish between **Primary** (product wrapping) and **Secondary** (shipping box) packaging."
+      "e": "Packaging norms often distinguish between Primary (product wrapping) and Secondary (shipping box) packaging."
     },
     {
       "q": "The first Post Office Savings Bank (POSB) facility was made available in India in which year?",
@@ -3090,7 +3090,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "1947"
       ],
       "a": 1,
-      "e": "POSB was launched on **1st April, 1882**."
+      "e": "POSB was launched on 1st April, 1882."
     },
     {
       "q": "As of December 2024, an Aadhaar center has been operationalized at which high-altitude location, marking the highest Aadhaar center in the country?",
@@ -3101,7 +3101,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Tawang"
       ],
       "a": 2,
-      "e": "The Annual Report highlights the operationalization of an Aadhaar center in **Siachin** (Base Camp/region) as a milestone."
+      "e": "The Annual Report highlights the operationalization of an Aadhaar center in Siachin (Base Camp/region) as a milestone."
     },
     {
       "q": "The \"Post Office Passport Seva Kendra\" (POPSK) is a joint venture between the Department of Posts and:",
@@ -3112,7 +3112,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "UIDAI"
       ],
       "a": 1,
-      "e": "POPSK is a collaboration with the **Ministry of External Affairs (MEA)**."
+      "e": "POPSK is a collaboration with the Ministry of External Affairs (MEA)."
     },
     {
       "q": "Which of the following correctly describes the \"Jan Suraksha Schemes\" launched in CBS Post Offices?",
@@ -3123,7 +3123,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "They are high-interest fixed deposit schemes for senior citizens."
       ],
       "a": 0,
-      "e": "Jan Suraksha schemes (PMJJBY, PMSBY, APY) were launched on **09.05.2015** (effective dates cited often) for social security."
+      "e": "Jan Suraksha schemes (PMJJBY, PMSBY, APY) were launched on 09.05.2015 (effective dates cited often) for social security."
     },
     {
       "q": "To facilitate physical verification of units under the Prime Minister's Employment Generation Programme (PMEGP), the Department of Posts signed an MoU with:",
@@ -3134,7 +3134,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Small Industries Development Bank of India (SIDBI)"
       ],
       "a": 1,
-      "e": "DoP partners with **KVIC** for the physical verification of PMEGP units."
+      "e": "DoP partners with KVIC for the physical verification of PMEGP units."
     },
     {
       "q": "Consider the following regarding the Philatelic Advisory Committee (PAC):\r\n\r\n1. It is chaired by the Minister for Communications.\r\n2. It includes members from both Lok Sabha and Rajya Sabha.\r\n3. It advises on the issuance of currency notes.\r\n\r\nWhich of the statements is/are correct?",
@@ -3156,7 +3156,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "A rural life insurance awareness drive."
       ],
       "a": 1,
-      "e": "\"Dhai Akhar\" is a **National Level Letter Writing Competition**."
+      "e": "\"Dhai Akhar\" is a National Level Letter Writing Competition."
     },
     {
       "q": "As per the Postal Road Transport Network data, the National Routes cover approximately how many kilometers per day?",
@@ -3167,7 +3167,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Over 1,00,000 KMs"
       ],
       "a": 2,
-      "e": "The National Road Transport Network covers over **75,000 KMs** daily."
+      "e": "The National Road Transport Network covers over 75,000 KMs daily."
     },
     {
       "q": "Which of the following days is celebrated as \"Vittiya Sashaktikaran Diwas\" during National Postal Week?",
@@ -3178,7 +3178,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "October 7th"
       ],
       "a": 2,
-      "e": "*October 11th** is celebrated as Vittiya Sashaktikaran Diwas."
+      "e": "*October 11th is celebrated as Vittiya Sashaktikaran Diwas."
     }
   ],
   "111": [
@@ -3202,7 +3202,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "8.2% per annum compounded quarterly"
       ],
       "a": 1,
-      "e": "MSSC offers **7.5%** interest compounded quarterly."
+      "e": "MSSC offers 7.5% interest compounded quarterly."
     },
     {
       "q": "What was the specific theme for \"World Post Day\" observed on 09.10.2024?",
@@ -3213,7 +3213,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "\"Together for Trust: Collaborating for a safe and connected future\""
       ],
       "a": 2,
-      "e": "The 2024 theme was **\"150 years of Enabling Communication and Empowering Peoples Across Nations\"** (marking UPU's 150th year)."
+      "e": "The 2024 theme was \"150 years of Enabling Communication and Empowering Peoples Across Nations\" (marking UPU's 150th year)."
     },
     {
       "q": "Under the \"LiFE\" (Lifestyle for Environment) initiative, the Department of Posts implemented \"Ek Ped Maa Ke Naam\". This campaign primarily focuses on:",
@@ -3224,7 +3224,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Promoting the use of electric vehicles for mail delivery."
       ],
       "a": 1,
-      "e": "\"Ek Ped Maa Ke Naam\" involves **planting trees** as a tribute to mothers."
+      "e": "\"Ek Ped Maa Ke Naam\" involves planting trees as a tribute to mothers."
     },
     {
       "q": "Which of the following is the maximum limit for \"Instant Money Order\" (iMO)?",
@@ -3235,7 +3235,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "₹1,00,000"
       ],
       "a": 2,
-      "e": "The limit for iMO (Instant Money Order) is **₹50,000**."
+      "e": "The limit for iMO (Instant Money Order) is ₹50,000."
     },
     {
       "q": "Consider the following statements regarding Rural Postal Life Insurance (RPLI):\r\n\r\n1. It was introduced in 1995 based on the recommendations of the Malhotra Committee.\r\n2. The \"Gram Priya\" policy is a 10-year Anticipated Endowment Assurance.\r\n3. The maximum limit of Sum Assured in RPLI is equal to that of PLI.\r\n\r\nWhich of the statements given above is/are correct?",
@@ -3257,7 +3257,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Research in logistics and supply chain management."
       ],
       "a": 1,
-      "e": "SPARSH is for **Philately** among children of classes **VI to IX**."
+      "e": "SPARSH is for Philately among children of classes VI to IX."
     },
     {
       "q": "What is the maximum weight limit for a \"Book Packet\" sent via India Post?",
@@ -3268,7 +3268,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "10 Kg"
       ],
       "a": 2,
-      "e": "Book Packet max weight is **5 Kg**."
+      "e": "Book Packet max weight is 5 Kg."
     },
     {
       "q": "In the context of Postal IT Modernization, \"DARPAN\" stands for:",
@@ -3279,7 +3279,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Digital Architecture for Rural Public Access Network"
       ],
       "a": 0,
-      "e": "DARPAN = **Digital Advancement of Rural Post Office for A New India**."
+      "e": "DARPAN = Digital Advancement of Rural Post Office for A New India."
     },
     {
       "q": "Which of the following Postal Life Insurance (PLI) policies is correctly matched with its brand name?",
@@ -3290,7 +3290,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Anticipated Endowment Assurance — Sumangal"
       ],
       "a": 0,
-      "e": "Whole Life = Santosh; Endowment = Santosh is wrong (Endowment is Santosh? No. Whole Life = Suraksha? No. Let's correct: Whole Life = Suraksha. Endowment = Santosh. Convertible Whole Life = Suvidha. Anticipated = Sumangal. *Correction in Key*: **Option D is Correct**. Anticipated Endowment is Sumangal. Option A (Whole Life) is Suraksha. Option C (Endowment) is Santosh."
+      "e": "Whole Life = Santosh; Endowment = Santosh is wrong (Endowment is Santosh? No. Whole Life = Suraksha? No. Let's correct: Whole Life = Suraksha. Endowment = Santosh. Convertible Whole Life = Suvidha. Anticipated = Sumangal. *Correction in Key*: Option D is Correct. Anticipated Endowment is Sumangal. Option A (Whole Life) is Suraksha. Option C (Endowment) is Santosh."
     },
     {
       "q": "The \"International Tracked Packet System\" (ITPS) is designed for transmitting small packets to foreign countries up to a weight of:",
@@ -3301,7 +3301,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "5 Kg"
       ],
       "a": 3,
-      "e": "ITPS is for packets up to **5 Kg**."
+      "e": "ITPS is for packets up to 5 Kg."
     },
     {
       "q": "Regarding the \"Senior Citizen Savings Scheme\" (SCSS), the maximum deposit limit has been enhanced to:",
@@ -3312,7 +3312,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "₹50 Lakh"
       ],
       "a": 2,
-      "e": "SCSS limit was enhanced to **₹30 Lakh** in the recent budget/Finance Act."
+      "e": "SCSS limit was enhanced to ₹30 Lakh in the recent budget/Finance Act."
     },
     {
       "q": "\"Ganga Jal\" services provided by India Post allow devotees to:",
@@ -3323,7 +3323,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Send ashes for immersion in the Ganga via Speed Post."
       ],
       "a": 1,
-      "e": "Sale of **Gangajal** bottles at POs."
+      "e": "Sale of Gangajal bottles at POs."
     },
     {
       "q": "Which of the following acts empowers the Central Government to fix rates of inland postage?",
@@ -3334,7 +3334,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "The Reserve Bank of India Act."
       ],
       "a": 0,
-      "e": "The **Indian Post Office Act** gives the power to fix rates (previously, now under the new Act's rules)."
+      "e": "The Indian Post Office Act gives the power to fix rates (previously, now under the new Act's rules)."
     },
     {
       "q": "The \"Electronic Clearance Service\" (ECS) scheme in Post Offices is primarily used for:",
@@ -3345,7 +3345,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Clearance of dead letters from the RLO."
       ],
       "a": 1,
-      "e": "ECS is for **electronic credits/debits** (bulk payments)."
+      "e": "ECS is for electronic credits/debits (bulk payments)."
     },
     {
       "q": "In the organizational structure of a Postal Circle, the \"Region\" is headed by a:",
@@ -3356,7 +3356,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Senior Superintendent of Post Offices (SSPOs)"
       ],
       "a": 1,
-      "e": "A Postal Region is headed by a **Postmaster General (PMG)**."
+      "e": "A Postal Region is headed by a Postmaster General (PMG)."
     },
     {
       "q": "The \"Dutta Committee\" is historically associated with which aspect of the Department of Posts?",
@@ -3367,7 +3367,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Establishment of India Post Payments Bank."
       ],
       "a": 1,
-      "e": "Justice Talwar Committee and others exist, but **G.D. Dutta Committee** is often associated with GDS wage/service condition reviews (historically) or specific departmental inquiries. *Correction*: The most famous GDS committee is Kamlesh Chandra. The Justice Talwar was 1997. Dutta was an older one. *Better Answer context*: If the report mentions GDS committee, it's likely Kamlesh Chandra. If \"Dutta\" is a specific distractor, skip deep history."
+      "e": "Justice Talwar Committee and others exist, but G.D. Dutta Committee is often associated with GDS wage/service condition reviews (historically) or specific departmental inquiries. *Correction*: The most famous GDS committee is Kamlesh Chandra. The Justice Talwar was 1997. Dutta was an older one. *Better Answer context*: If the report mentions GDS committee, it's likely Kamlesh Chandra. If \"Dutta\" is a specific distractor, skip deep history."
     },
     {
       "q": "As part of Swachhta Campaign 4.0, the \"CHARKHA\" installed at certain postal premises was created using:",
@@ -3378,7 +3378,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Electronic waste (e-waste)."
       ],
       "a": 1,
-      "e": "Report snippet explicitly mentions \"Charkha\" made from **Damaged Furniture, Old bicycle, Left over rope**."
+      "e": "Report snippet explicitly mentions \"Charkha\" made from Damaged Furniture, Old bicycle, Left over rope."
     },
     {
       "q": "Which category of foreign mail does NOT require a Customs Declaration Form (CN 22 or CN 23)?",
@@ -3389,7 +3389,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "EMS Merchandise"
       ],
       "a": 1,
-      "e": "Letters containing **only documents** do not require CN 22/23."
+      "e": "Letters containing only documents do not require CN 22/23."
     },
     {
       "q": "The \"Pradhan Mantri Jeevan Jyoti Bima Yojana\" (PMJJBY) available through India Post Payments Bank provides life cover of:",
@@ -3400,7 +3400,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "₹5 Lakh"
       ],
       "a": 1,
-      "e": "PMJJBY provides **₹2 Lakh** life cover."
+      "e": "PMJJBY provides ₹2 Lakh life cover."
     },
     {
       "q": "What is the validity period of the \"Postal Identity Card\" issued by Post Offices?",
@@ -3411,7 +3411,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "10 Years"
       ],
       "a": 1,
-      "e": "Postal ID cards are valid for **3 Years**."
+      "e": "Postal ID cards are valid for 3 Years."
     },
     {
       "q": "Under the \"Sukanya Samriddhi Account,\" a partial withdrawal is allowed for the account holder's education after she attains the age of:",
@@ -3422,7 +3422,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "21 years"
       ],
       "a": 2,
-      "e": "Withdrawal allowed after age **18** or passing **10th standard**."
+      "e": "Withdrawal allowed after age 18 or passing 10th standard."
     },
     {
       "q": "The \"Postal Staff College India\" (PSCI), the apex training institution for Indian Postal Service officers, is located in:",
@@ -3433,7 +3433,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Hyderabad"
       ],
       "a": 2,
-      "e": "PSCI (now Rafi Ahmed Kidwai National Postal Academy) is in **Ghaziabad**."
+      "e": "PSCI (now Rafi Ahmed Kidwai National Postal Academy) is in Ghaziabad."
     },
     {
       "q": "Which of the following services is NOT offered by India Post Payments Bank (IPPB)?",
@@ -3444,7 +3444,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Domestic Money Transfer"
       ],
       "a": 2,
-      "e": "IPPB does NOT issue **Credit Cards** directly (it may have co-branded referral, but it is a Payments Bank, cannot lend/issue credit cards primarily)."
+      "e": "IPPB does NOT issue Credit Cards directly (it may have co-branded referral, but it is a Payments Bank, cannot lend/issue credit cards primarily)."
     },
     {
       "q": "A \"Blind Literature Packet\" is exempted from which of the following charges?",
@@ -3455,7 +3455,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "It is not exempted from any fees"
       ],
       "a": 0,
-      "e": "Blind Literature is exempt from **Postage and Registration** (but airmail surcharge applies)."
+      "e": "Blind Literature is exempt from Postage and Registration (but airmail surcharge applies)."
     }
   ],
   "112": [
@@ -3468,7 +3468,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "95.00%"
       ],
       "a": 1,
-      "e": "Snippet data: Rural POs = 1,49,164 out of 1,64,987 ≈ **90.41%**."
+      "e": "Snippet data: Rural POs = 1,49,164 out of 1,64,987 ≈ 90.41%."
     },
     {
       "q": "Which of the following General Post Offices (GPO) was the first to be set up in India?",
@@ -3479,7 +3479,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Delhi GPO"
       ],
       "a": 2,
-      "e": "*Kolkata GPO (1774)** was the first, followed by Chennai (1786) and Mumbai (1793)."
+      "e": "*Kolkata GPO (1774) was the first, followed by Chennai (1786) and Mumbai (1793)."
     },
     {
       "q": "The famous \"Scinde Dawk,\" Asia's first adhesive postage stamp, was issued in which year?",
@@ -3490,7 +3490,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "1860"
       ],
       "a": 0,
-      "e": "Scinde Dawk was issued in **1852**."
+      "e": "Scinde Dawk was issued in 1852."
     },
     {
       "q": "During the \"Special Campaign 4.0,\" the Department launched training modules to transform all staff into:",
@@ -3501,7 +3501,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "\"Mission Karmayogi Masters\""
       ],
       "a": 1,
-      "e": "Snippet explicitly says: \"transform all staff... into **Pro-Planet People**\"."
+      "e": "Snippet explicitly says: \"transform all staff... into Pro-Planet People\"."
     },
     {
       "q": "The \"Dak Community Development Programme\" (DCDP) is primarily aimed at:",
@@ -3512,7 +3512,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Providing free internet access to rural communities."
       ],
       "a": 1,
-      "e": "DCDP utilizes the network for **government schemes/social welfare** outreach."
+      "e": "DCDP utilizes the network for government schemes/social welfare outreach."
     },
     {
       "q": "What is the approximate number of \"Branch Post Offices\" (BPOs) in the Indian Postal network as per the 2024-25 report data?",
@@ -3523,7 +3523,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "~1,65,000"
       ],
       "a": 2,
-      "e": "Snippet lists Branch Post Offices as **1,39,891** (approx 1.40 Lakh)."
+      "e": "Snippet lists Branch Post Offices as 1,39,891 (approx 1.40 Lakh)."
     },
     {
       "q": "\"Project Arrow\" was an initiative focused on improving:",
@@ -3534,7 +3534,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "The export of philatelic material."
       ],
       "a": 1,
-      "e": "Project Arrow focused on **Look and Feel** and **Core Operations**."
+      "e": "Project Arrow focused on Look and Feel and Core Operations."
     },
     {
       "q": "Which mobile application is used by the Department of Posts for the delivery of accountable mail (Speed Post, Registered Post, etc.)?",
@@ -3545,7 +3545,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Dak Pay"
       ],
       "a": 1,
-      "e": "Delivery is done via the **Postman Mobile App (PMA)**."
+      "e": "Delivery is done via the Postman Mobile App (PMA)."
     },
     {
       "q": "The \"Universal Postal Union\" (UPU), of which India is a member, has its headquarters in:",
@@ -3556,7 +3556,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "New York, USA"
       ],
       "a": 1,
-      "e": "UPU HQ is in **Bern, Switzerland**."
+      "e": "UPU HQ is in Bern, Switzerland."
     },
     {
       "q": "Under the \"Philately Scholarship Scheme,\" students are required to maintain a Philately Deposit Account with a minimum balance of:",
@@ -3567,7 +3567,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "₹500"
       ],
       "a": 1,
-      "e": "Philately Deposit Account minimum balance is **₹200**."
+      "e": "Philately Deposit Account minimum balance is ₹200."
     },
     {
       "q": "Which document serves as the \"Citizen’s Charter\" for the Department of Posts, outlining the service standards and timelines?",
@@ -3578,7 +3578,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "The Postal Manual Vol V"
       ],
       "a": 2,
-      "e": "The **Citizen’s Charter** outlines standards."
+      "e": "The Citizen’s Charter outlines standards."
     },
     {
       "q": "The \"Dak Sewa Award\" is conferred at which administrative level?",
@@ -3589,7 +3589,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Regional Level"
       ],
       "a": 1,
-      "e": "Dak Sewa Award is typically a **Circle Level** award (Meghdoot is National)."
+      "e": "Dak Sewa Award is typically a Circle Level award (Meghdoot is National)."
     },
     {
       "q": "To promote export through postal channels, the Department has integrated its system with the Customs authorities using:",
@@ -3600,7 +3600,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "WhatsApp Business API"
       ],
       "a": 0,
-      "e": "DNK uses the **Postal Bill of Export (PBE)** system."
+      "e": "DNK uses the Postal Bill of Export (PBE) system."
     },
     {
       "q": "\"My Stamp\" is a brand name for:",
@@ -3611,7 +3611,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Stamps used exclusively for government mail."
       ],
       "a": 1,
-      "e": "\"My Stamp\" allows **personalized** photos alongside postage stamps."
+      "e": "\"My Stamp\" allows personalized photos alongside postage stamps."
     },
     {
       "q": "The \"Complaint Management System\" (CMS) of India Post is integrated with which centralized government portal?",
@@ -3622,7 +3622,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "DigiLocker"
       ],
       "a": 1,
-      "e": "Integration with **CPGRAMS** is the standard for grievance redressal."
+      "e": "Integration with CPGRAMS is the standard for grievance redressal."
     },
     {
       "q": "The concept of \"Antyodaya Diwas\" observed during National Postal Week focuses on:",
@@ -3633,7 +3633,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Mail delivery speed."
       ],
       "a": 1,
-      "e": "Snippet confirms Oct 10 is Antyodaya Diwas focusing on **financial inclusion/banking**."
+      "e": "Snippet confirms Oct 10 is Antyodaya Diwas focusing on financial inclusion/banking."
     },
     {
       "q": "The \"Centre for Excellence in Postal Technology\" (CEPT) is responsible for:",
@@ -3644,7 +3644,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Manufacturing of letterboxes."
       ],
       "a": 1,
-      "e": "CEPT (Mysuru) handles **software/IT** for India Post."
+      "e": "CEPT (Mysuru) handles software/IT for India Post."
     },
     {
       "q": "Which of the following is considered a \"Premium Product\" of India Post?",
@@ -3655,7 +3655,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Blind Literature Packet"
       ],
       "a": 2,
-      "e": "*Speed Post** is the flagship premium product."
+      "e": "*Speed Post is the flagship premium product."
     },
     {
       "q": "The \"Postal Life Insurance\" (PLI) was originally introduced in 1884 for:",
@@ -3666,7 +3666,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Postal employees and later extended to other government employees."
       ],
       "a": 3,
-      "e": "Started for **Postal employees**, later extended to Telegraph and other Govt employees."
+      "e": "Started for Postal employees, later extended to Telegraph and other Govt employees."
     },
     {
       "q": "In the context of \"LiFE\" (Lifestyle for Environment), what material was primarily used to create the \"CHARKHA\" art installation in Post Offices?",
@@ -3677,7 +3677,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Biodegradable bamboo"
       ],
       "a": 1,
-      "e": "Snippet confirms **Waste materials** (furniture, bicycle, ropes)."
+      "e": "Snippet confirms Waste materials (furniture, bicycle, ropes)."
     },
     {
       "q": "The \"Aadhaar Enabled Payment System\" (AePS) offered by IPPB allows customers to:",
@@ -3688,7 +3688,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Transfer money to foreign bank accounts."
       ],
       "a": 1,
-      "e": "AePS allows cash withdrawal from **any bank account** (interoperable) at the PO."
+      "e": "AePS allows cash withdrawal from any bank account (interoperable) at the PO."
     },
     {
       "q": "What is the status of the Department of Posts regarding the \"Right to Information (RTI) Act\"?",
@@ -3699,7 +3699,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Only financial queries are answered under RTI."
       ],
       "a": 1,
-      "e": "DoP is a public authority under **RTI Act**; POs serve as APIO/CPIOs."
+      "e": "DoP is a public authority under RTI Act; POs serve as APIO/CPIOs."
     },
     {
       "q": "The \"Direct Benefit Transfer\" (DBT) into PO Savings Accounts is facilitated through:",
@@ -3710,7 +3710,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Cheque clearance"
       ],
       "a": 0,
-      "e": "DBT uses **NACH/APBS**."
+      "e": "DBT uses NACH/APBS."
     },
     {
       "q": "Which authority is responsible for the \"Cadre Restructuring\" of Group C employees in the Department of Posts?",
@@ -3721,7 +3721,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "The International Monetary Fund"
       ],
       "a": 1,
-      "e": "Cadre restructuring is done by **DoPT** (Personnel Ministry) in consultation with the Department."
+      "e": "Cadre restructuring is done by DoPT (Personnel Ministry) in consultation with the Department."
     },
     {
       "q": "The \"Post Office Savings Account\" requires a minimum balance of:",
@@ -3732,7 +3732,7 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "₹1,000"
       ],
       "a": 2,
-      "e": "Minimum balance for a standard POSB cheque account is **₹500**."
+      "e": "Minimum balance for a standard POSB cheque account is ₹500."
     }
   ]
 
@@ -4417,6 +4417,8 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   126: leave_set2,
   127: leave_set3,
   128: leave_set4,
+  206: leave_set5,
+  207: leave_set6,
   129: cea_rules_set1,
   130: cgegis_set1,
   131: joining_time_set1,
@@ -6927,6 +6929,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-11', 'Central Civil Services (Implementation of NPS) Rules, 2021', 'Paper III', [73]),
   createTopic('p3-12', 'General Financial Rules 2017', 'Paper III'),
   createTopic('p3-13', 'CCS (LTC) Rules 1988', 'Paper III', [119, 120, 121]),
+  createTopic('p3-14', 'CCS (Leave) Rules, 1972', 'Paper III', [125, 126, 127, 128, 206, 207]),
 
 
   createTopic('p1-29', 'LDCE IP 2025 - Paper I PYQ', 'PYQ', [22, 23, 24, 25, 26]),
@@ -6935,7 +6938,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-p2-pyq', 'LDCE PS Gr. B 2023 — Paper II PYQ', 'PYQ', [155, 156, 157, 158, 159, 160]),
   createTopic('p3-22', 'Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023', 'Paper III', [66]),
   createTopic('p3-30', 'FR & SR - Foreign Service, Deputation & Dismissal', 'Paper III', [74]),
-  createTopic('p3-31', 'FR & SR - Leave, Joining Time & Allowances', 'Paper III', [125, 126, 127, 128, 75]),
+  createTopic('p3-31', 'FR & SR - Leave, Joining Time & Allowances', 'Paper III', [75]),
   createTopic('p3-32', 'FR & SR - Pay Fixation & General Conditions', 'Paper III', [76]),
   createTopic('p3-33', 'FR & SR - TA Rules & Miscellaneous', 'Paper III', [77]),
   createTopic('p3-24', 'Brochure on casual labourers', 'Paper III', [175, 176]),

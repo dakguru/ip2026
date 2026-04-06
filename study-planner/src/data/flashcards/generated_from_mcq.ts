@@ -7,7 +7,7 @@ export const p1_1: FlashCard[] = [
         "card_no": 1,
         "question": "On which date did the Post Office Act, 2023 come into force?",
         "answer": "18th June 2024",
-        "explanation": "The Post Office Act, 2023 came into force on **18th June 2024**.",
+        "explanation": "The Post Office Act, 2023 came into force on 18th June 2024.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -2910,7 +2910,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 5,
         "question": "Regulation 4 deals with the \"Power to fix rates.\" Who has the ultimate authority to revise the rates of inland postage unless specified otherwise by the Act?",
         "answer": "The Central Government",
-        "explanation": "While the DG runs the service, the **Central Government** retains the statutory power to fix rates for inland postage under the Act.",
+        "explanation": "While the DG runs the service, the Central Government retains the statutory power to fix rates for inland postage under the Act.",
         "exam_weight": "Medium",
         "keywords": [
             "regulation",
@@ -3063,7 +3063,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 14,
         "question": "What is defined as Under the amended provisions for 2025, the maximum weight limit for a \"Book Packet\" containing printed books is?",
         "answer": "5 kg",
-        "explanation": "The weight limit for Book Packets containing printed books is **5 kg**.",
+        "explanation": "The weight limit for Book Packets containing printed books is 5 kg.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3080,7 +3080,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 15,
         "question": "What is defined as Regulation 50 deals with \"Redirection.\" A postal article can be redirected?",
         "answer": "By the office of destination free of charge if redirected to an inland address",
-        "explanation": "Redirection is done by the office of destination and is **free** for inland letters (not parcels).",
+        "explanation": "Redirection is done by the office of destination and is free for inland letters (not parcels).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3148,7 +3148,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 19,
         "question": "What is defined as The \"Business Reply Service\" (Regulation 70) requires a permit issued by?",
         "answer": "The Postmaster General",
-        "explanation": "The **Postmaster General** (Head of Region/Circle) generally issues the permit for Business Reply Service.",
+        "explanation": "The Postmaster General (Head of Region/Circle) generally issues the permit for Business Reply Service.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3165,7 +3165,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 20,
         "question": "Under Regulation 85 of the Post Office Regulations, 2024, postal articles are broadly divided into which two main classes?",
         "answer": "First Class Mails and Second Class Mails",
-        "explanation": "Mail is classified into **First Class** (Letters, Postcards, Letter Cards) and **Second Class** (Parcels, Book Packets, etc.).",
+        "explanation": "Mail is classified into First Class (Letters, Postcards, Letter Cards) and Second Class (Parcels, Book Packets, etc.).",
         "exam_weight": "Medium",
         "keywords": [
             "regulation",
@@ -3250,7 +3250,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 25,
         "question": "What is defined as For an \"Inland Letter Card\", the maximum weight allowed is?",
         "answer": "5 grams",
-        "explanation": "Inland Letter Cards (ILC) must not exceed **5 grams**.",
+        "explanation": "Inland Letter Cards (ILC) must not exceed 5 grams.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3267,7 +3267,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 26,
         "question": "What is defined as Under the 2025 Amendment, \"Pattern and Sample Packets\" are restricted to a maximum weight of?",
         "answer": "2 kg",
-        "explanation": "Pattern/Sample packets are limited to **2 kg**.",
+        "explanation": "Pattern/Sample packets are limited to 2 kg.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3284,7 +3284,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 27,
         "question": "What is defined as If a Registered Newspaper is posted without complying with the condition of \"posting on specified days/dates,\" it shall be?",
         "answer": "Treated as a Regular Newspaper but charged double postage",
-        "explanation": "If posted on non-specified days, the concessional rate is lost; it's treated as a newspaper but charged **double** the deficiency/postage.",
+        "explanation": "If posted on non-specified days, the concessional rate is lost; it's treated as a newspaper but charged double the deficiency/postage.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3301,7 +3301,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 28,
         "question": "What is defined as The maximum weight limit for an Unregistered Parcel (Regulation 140) is?",
         "answer": "4 kg",
-        "explanation": "Unregistered parcels are limited to **4 kg**.",
+        "explanation": "Unregistered parcels are limited to 4 kg.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3318,7 +3318,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 29,
         "question": "Regulation 150 regarding \"Dangerous Goods\" was amended in 2025 to strictly align with IATA regulations for air transmission. Which item is now explicitly listed as prohibited in air mail but allowed in surface mail (with restrictions)?",
         "answer": "Lithium-ion batteries (standalone)",
-        "explanation": "Lithium batteries (standalone) are strictly banned in **Air Mail** (dangerous goods) but allowed in Surface Mail under strict conditions.",
+        "explanation": "Lithium batteries (standalone) are strictly banned in Air Mail (dangerous goods) but allowed in Surface Mail under strict conditions.",
         "exam_weight": "Medium",
         "keywords": [
             "regulation",
@@ -3335,7 +3335,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 30,
         "question": "What is defined as A postal article bearing a \"Fictitious Stamp\" (Regulation 155) is an offense under?",
         "answer": "Section 263A of the Indian Penal Code",
-        "explanation": "Use of fictitious stamps is a crime under **Section 263A** of the IPC.",
+        "explanation": "Use of fictitious stamps is a crime under Section 263A of the IPC.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3352,7 +3352,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 31,
         "question": "What is the \"Redirection Fee\" for a Parcel transmitted by inland post (Regulation 160)?",
         "answer": "Half the prepaid rate",
-        "explanation": "Redirection of inland parcels costs **half** the prepaid postage.",
+        "explanation": "Redirection of inland parcels costs half the prepaid postage.",
         "exam_weight": "Medium",
         "keywords": [
             "redirection",
@@ -3386,7 +3386,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 33,
         "question": "What is defined as In the event of a breach of conditions regarding the \"Maximum Weight\" of a letter, the article is?",
         "answer": "Treated as a Parcel and charged accordingly",
-        "explanation": "If a letter exceeds letter weight limits (2kg), it is treated and charged as a **Parcel**.",
+        "explanation": "If a letter exceeds letter weight limits (2kg), it is treated and charged as a Parcel.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3471,7 +3471,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 38,
         "question": "What is defined as According to the 2024 Regulations, the limit for the value of an Insured Article that can be delivered at the doorstep of the addressee has been enhanced to?",
         "answer": "₹5,000",
-        "explanation": "Insured articles up to **₹5,000** are delivered at the door. Above that, they must be collected at the PO window (Intimation is sent).",
+        "explanation": "Insured articles up to ₹5,000 are delivered at the door. Above that, they must be collected at the PO window (Intimation is sent).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3522,7 +3522,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 41,
         "question": "What is defined as Delivery of \"Damaged Insured Articles\" (Regulation 200) must be effected?",
         "answer": "Only at the Post Office window, in the presence of the Postmaster, after weighing and examining the contents",
-        "explanation": "Damaged insured articles must be opened and examined at the **PO Window** in the Postmaster's presence to assess liability.",
+        "explanation": "Damaged insured articles must be opened and examined at the PO Window in the Postmaster's presence to assess liability.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3539,7 +3539,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 42,
         "question": "What is defined as Regulation 210 regarding \"Poste Restante\" specifies that articles superscribed \"To be kept till called for\" are retained in the delivery office for?",
         "answer": "1 month",
-        "explanation": "Poste Restante letters are kept for **1 month**.",
+        "explanation": "Poste Restante letters are kept for 1 month.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3556,7 +3556,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 43,
         "question": "However, the retention period (Poste Restante) for \"Value Payable (VP)\" articles mentioned in Regulation 210 is restricted to?",
         "answer": "7 days",
-        "explanation": "VP articles are kept for **7 days** only (to ensure the sender gets their money or goods back quickly).",
+        "explanation": "VP articles are kept for 7 days only (to ensure the sender gets their money or goods back quickly).",
         "exam_weight": "Medium",
         "keywords": [
             "however",
@@ -3573,7 +3573,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 44,
         "question": "What is defined as If an addressee authorizes an agent to receive registered mail on their behalf, the \"Letter of Authority\" is valid for?",
         "answer": "3 years (unless revoked earlier)",
-        "explanation": "Authority letters are valid for **3 years**.",
+        "explanation": "Authority letters are valid for 3 years.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3607,7 +3607,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 46,
         "question": "What is defined as \"Undelivered Articles\" (Regulation 230) that constitute \"Letter Mail\" (excluding parcels) and have no sender's address on the outside are sent to?",
         "answer": "The Returned Letter Office (RLO)",
-        "explanation": "Mail with no sender address and undeliverable to addressee goes to the **Returned Letter Office (RLO)**.",
+        "explanation": "Mail with no sender address and undeliverable to addressee goes to the Returned Letter Office (RLO).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3624,7 +3624,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 47,
         "question": "What is the fee for \"Redirection\" of an Inland Letter (Regulation 245)?",
         "answer": "Free of charge",
-        "explanation": "Redirection of inland letters is **Free**.",
+        "explanation": "Redirection of inland letters is Free.",
         "exam_weight": "Medium",
         "keywords": [
             "redirection",
@@ -3641,7 +3641,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 48,
         "question": "What is the fee for \"Redirection\" of an Inland Parcel (Regulation 246)?",
         "answer": "Half the prepaid postage rates",
-        "explanation": "Redirection of inland parcels is **Half the postage**.",
+        "explanation": "Redirection of inland parcels is Half the postage.",
         "exam_weight": "Medium",
         "keywords": [
             "redirection",
@@ -3658,7 +3658,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 49,
         "question": "What is defined as A \"Change of Address\" instruction given by an addressee to the Post Office is valid for a period of?",
         "answer": "3 months",
-        "explanation": "Instructions for change of address are valid for **3 months**.",
+        "explanation": "Instructions for change of address are valid for 3 months.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3675,7 +3675,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 50,
         "question": "What is defined as Articles addressed to \"Prisoners\" (Regulation 255) must be delivered to?",
         "answer": "The Jailor or the officer deputed by the Jailor",
-        "explanation": "Delivery to prisoners is made to the **Jailor** (authorized agent).",
+        "explanation": "Delivery to prisoners is made to the Jailor (authorized agent).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3692,7 +3692,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 51,
         "question": "What is defined as Regulation 260 covers delivery to \"Firms.\" If a registered letter is addressed to a firm which has dissolved, delivery should be made to?",
         "answer": "The person who winds up the firm or the liquidator legally appointed",
-        "explanation": "Dissolved firms: Delivery to the **liquidator** or person legally appointed to wind up.",
+        "explanation": "Dissolved firms: Delivery to the liquidator or person legally appointed to wind up.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3743,7 +3743,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 54,
         "question": "The \"Instruction to Withhold Delivery\" (Regulation 275) empowers whom to stop the delivery of an article and return it to the sender before it is delivered?",
         "answer": "The Sender (via a recall application)",
-        "explanation": "Only the **Sender** can recall an article.",
+        "explanation": "Only the Sender can recall an article.",
         "exam_weight": "Medium",
         "keywords": [
             "instruction",
@@ -3760,7 +3760,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 55,
         "question": "What is defined as Regulation 280 regarding \"Customs Duty\": If a postal article contains goods liable to customs duty, the duty must be paid by?",
         "answer": "The Addressee before delivery",
-        "explanation": "Customs duty is paid by the **Addressee** at the time of delivery.",
+        "explanation": "Customs duty is paid by the Addressee at the time of delivery.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3794,7 +3794,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 57,
         "question": "What is the key concession offered under the \"Gyan Post\" service compared to standard Book Packets?",
         "answer": "A subsidized tariff rate for bulk transmission of textbooks and educational material",
-        "explanation": "The benefit is a **subsidized tariff** for education.",
+        "explanation": "The benefit is a subsidized tariff for education.",
         "exam_weight": "Medium",
         "keywords": [
             "concession",
@@ -3811,7 +3811,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 58,
         "question": "What is defined as For \"Blind Literature Packets\" (Regulation 128), sound recordings (audio CDs/USBs) are?",
         "answer": "Allowed only if sent by a recognized institution for the blind or addressed to such an institution",
-        "explanation": "Sound recordings in Blind Literature are allowed **only** if sent to/from an institution for the blind.",
+        "explanation": "Sound recordings in Blind Literature are allowed only if sent to/from an institution for the blind.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3845,7 +3845,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 60,
         "question": "What is defined as If a \"Book Packet\" is found to contain a personal letter closed against inspection, it will be?",
         "answer": "Charged at \"Letter\" rates, and the deficiency (or double deficiency) collected",
-        "explanation": "A letter inside a book packet makes the whole packet liable to be charged at **Letter rates**.",
+        "explanation": "A letter inside a book packet makes the whole packet liable to be charged at Letter rates.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3896,7 +3896,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 63,
         "question": "What is defined as \"Logistics Post\" (Regulation 152) is designed for consignments that?",
         "answer": "Have no specific weight limit (Less than Truck Load and Full Truck Load)",
-        "explanation": "Logistics Post has **no specific weight limit** (bulk cargo).",
+        "explanation": "Logistics Post has no specific weight limit (bulk cargo).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3913,7 +3913,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 64,
         "question": "What is defined as Regarding \"Air Parcels\" (Regulation 158), if the volumetric weight exceeds the actual weight?",
         "answer": "Volumetric weight is charged",
-        "explanation": "Air parcels are charged on **Volumetric Weight** if it exceeds actual weight.",
+        "explanation": "Air parcels are charged on Volumetric Weight if it exceeds actual weight.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3930,7 +3930,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 65,
         "question": "What is defined as Under the 2025 amendment, the \"Dak Niryat Kendra\" (DNK) integration facilitates?",
         "answer": "Simplified commercial exports for MSMEs via the postal network",
-        "explanation": "DNK (Dak Niryat Kendra) is for **commercial exports** (MSMEs).",
+        "explanation": "DNK (Dak Niryat Kendra) is for commercial exports (MSMEs).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3981,7 +3981,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 68,
         "question": "What is defined as The maximum value of a COD consignment (as updated in 2024) is?",
         "answer": "₹50,000",
-        "explanation": "COD limit is **₹50,000**.",
+        "explanation": "COD limit is ₹50,000.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -3998,7 +3998,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 69,
         "question": "\"Bill Mail Service\" (Regulation 172) requires a minimum posting of how many articles at a time?",
         "answer": "5,000",
-        "explanation": "Bill Mail Service requires a minimum of **5,000** articles.",
+        "explanation": "Bill Mail Service requires a minimum of 5,000 articles.",
         "exam_weight": "Medium",
         "keywords": [
             "bill",
@@ -4015,7 +4015,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 70,
         "question": "What is defined as \"National Addressing Grid\" (Regulation 178, new insertion) encourages users to?",
         "answer": "Use Digital Address Codes (DAC) on parcels for faster sorting",
-        "explanation": "National Addressing Grid promotes **Digital Address Codes**.",
+        "explanation": "National Addressing Grid promotes Digital Address Codes.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4049,7 +4049,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 72,
         "question": "What is defined as A \"Periodical\" registered with the Registrar of Newspapers for India (RNI) can be sent at concessional rates only if the registration number is?",
         "answer": "Printed on the first or last page of the issue",
-        "explanation": "The RNI number must be printed on the **first or last page**.",
+        "explanation": "The RNI number must be printed on the first or last page.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4083,7 +4083,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 74,
         "question": "What is defined as As per the 2024 revised norms (Regulation 188), the compensation for the loss of a Registered Inland Letter is?",
         "answer": "30 SDR (Special Drawing Rights) or actual value, whichever is less",
-        "explanation": "Compensation is **30 SDR** (Special Drawing Rights) or actual value.",
+        "explanation": "Compensation is 30 SDR (Special Drawing Rights) or actual value.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4117,7 +4117,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 76,
         "question": "What is defined as Under Regulation 205 (Insurance), the maximum limit for which an article can be insured at a Branch Post Office (BO) is?",
         "answer": "₹600",
-        "explanation": "Insurance limit at a Branch Office (BO) is **₹600**.",
+        "explanation": "Insurance limit at a Branch Office (BO) is ₹600.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4134,7 +4134,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 77,
         "question": "What is defined as The maximum insurance limit for an article booked at a Head Post Office or Sub Post Office (Regulation 205) is?",
         "answer": "₹1,00,000",
-        "explanation": "Insurance limit at HO/SO is **₹1,00,000**.",
+        "explanation": "Insurance limit at HO/SO is ₹1,00,000.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4151,7 +4151,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 78,
         "question": "What is defined as If an article is insured for a value greater than the actual value of its contents (Over-insurance), and it is lost?",
         "answer": "The Post Office pays the actual value of the contents only",
-        "explanation": "Indemnity is limited to the **actual value** (Post Office does not pay profit/over-insured value).",
+        "explanation": "Indemnity is limited to the actual value (Post Office does not pay profit/over-insured value).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4168,7 +4168,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 79,
         "question": "What is defined as \"Speed Post\" (Regulation 215) was laid down as a premium service. The compensation for \"Delay\" in delivery of a Speed Post article is?",
         "answer": "Refund of the Speed Post charges only",
-        "explanation": "Delay of Speed Post = Refund of **Speed Post charges**.",
+        "explanation": "Delay of Speed Post = Refund of Speed Post charges.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4185,7 +4185,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 80,
         "question": "What is defined as For \"Loss or Total Theft\" of a Speed Post article, the compensation payable (amended 2024) is?",
         "answer": "Double the Speed Post charges or ₹1,000 whichever is less",
-        "explanation": "Loss of Speed Post = **Double the charges** or ₹1,000 (whichever is less).",
+        "explanation": "Loss of Speed Post = Double the charges or ₹1,000 (whichever is less).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4219,7 +4219,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 82,
         "question": "What is defined as Under \"Direct Post\" (Regulation 228), the minimum quantity of unaddressed promotional mail to be accepted is?",
         "answer": "1,000 pieces",
-        "explanation": "Direct Post (unaddressed mail) min quantity is **1,000**.",
+        "explanation": "Direct Post (unaddressed mail) min quantity is 1,000.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4236,7 +4236,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 83,
         "question": "What is defined as Regulation 235 regarding \"Post Office Identity Cards\" states that the card is valid for?",
         "answer": "3 years",
-        "explanation": "PO ID cards are valid for **3 years**.",
+        "explanation": "PO ID cards are valid for 3 years.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4270,7 +4270,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 85,
         "question": "What is defined as If a sender wants to \"Insure\" a parcel, the sender must write on the cover?",
         "answer": "The value for which it is insured in words and figures",
-        "explanation": "Insured value must be written in **words and figures**.",
+        "explanation": "Insured value must be written in words and figures.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4321,7 +4321,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 88,
         "question": "What is defined as The \"International Tracked Packet\" service is available for packets up to?",
         "answer": "2 kg",
-        "explanation": "International Tracked Packet is for small packets up to **2 kg**.",
+        "explanation": "International Tracked Packet is for small packets up to 2 kg.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4355,7 +4355,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 90,
         "question": "What is defined as The commission chargeable on an electronic Money Order (eMO) is?",
         "answer": "5% of the value",
-        "explanation": "Commission is **5%** of the value.",
+        "explanation": "Commission is 5% of the value.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4372,7 +4372,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 91,
         "question": "What is defined as Regarding the \"Alteration of Payee’s Name\" in a Money Order (Regulation 260), the remitter may request this change?",
         "answer": "Free of charge, provided the money order has not yet been paid",
-        "explanation": "Alteration of payee name is **free** if the MO hasn't left the office or been paid.",
+        "explanation": "Alteration of payee name is free if the MO hasn't left the office or been paid.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4389,7 +4389,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 92,
         "question": "What is defined as A Money Order becomes \"Void\" (Regulation 265) if it remains unpaid at the end of?",
         "answer": "The month of issue",
-        "explanation": "MO becomes void at the end of the **month following the month of issue**.",
+        "explanation": "MO becomes void at the end of the month following the month of issue.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4406,7 +4406,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 93,
         "question": "What is defined as The \"Instant Money Order\" (iMO) service (Regulation 268) allows for immediate transfer of sums ranging from ₹1,000 up to a maximum of?",
         "answer": "₹50,000",
-        "explanation": "iMO limit is **₹50,000**.",
+        "explanation": "iMO limit is ₹50,000.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4423,7 +4423,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 94,
         "question": "What is defined as Under the \"International Financial System\" (IFS) for money orders (Regulation 272), the maximum limit for an OUTWARD money order per remitter per year is governed by?",
         "answer": "RBI Guidelines under FEMA (Foreign Exchange Management Act)",
-        "explanation": "Outward remittances are governed by **RBI/FEMA** regulations.",
+        "explanation": "Outward remittances are governed by RBI/FEMA regulations.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4440,7 +4440,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 95,
         "question": "What is defined as Regarding \"Indian Postal Orders\" (IPOs) (Regulation 275), the highest denomination available is?",
         "answer": "₹100",
-        "explanation": "Highest IPO denomination is **₹100**.",
+        "explanation": "Highest IPO denomination is ₹100.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4457,7 +4457,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 96,
         "question": "What is defined as If a user needs to make up a broken amount on an Indian Postal Order (e.g., ₹107), they may affix unused postage stamps on the face of the IPO up to a maximum number of?",
         "answer": "4 stamps",
-        "explanation": "Up to **4 stamps** can be affixed to make up broken amounts on IPOs.",
+        "explanation": "Up to 4 stamps can be affixed to make up broken amounts on IPOs.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4474,7 +4474,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 97,
         "question": "What is defined as The validity of an Indian Postal Order (Regulation 278) is?",
         "answer": "24 months from the last day of the month of issue",
-        "explanation": "IPO validity is **24 months**.",
+        "explanation": "IPO validity is 24 months.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4491,7 +4491,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 98,
         "question": "What is defined as If an Indian Postal Order is presented for payment after the validity period but within 36 months, it can be paid?",
         "answer": "Only after deduction of a second commission",
-        "explanation": "After 24 months (up to 36), it is paid after deducting a **second commission**.",
+        "explanation": "After 24 months (up to 36), it is paid after deducting a second commission.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4525,7 +4525,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 100,
         "question": "What is defined as The \"Aadhaar Enabled Payment System\" (AePS) provided by the Post Office (via IPPB) allows a customer of ANY bank to?",
         "answer": "Withdraw cash, check balance, and get a mini statement",
-        "explanation": "AePS allows cash withdrawal/balance check for **any bank** customer via the Post Office.",
+        "explanation": "AePS allows cash withdrawal/balance check for any bank customer via the Post Office.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4542,7 +4542,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 101,
         "question": "What is defined as \"Digital Life Certificate\" (Jeevan Pramaan) services offered at Post Offices (Regulation 288) are primarily for?",
         "answer": "Pensioners to submit proof of life securely",
-        "explanation": "Digital Life Certificate (Jeevan Pramaan) is for **pensioners**.",
+        "explanation": "Digital Life Certificate (Jeevan Pramaan) is for pensioners.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4559,7 +4559,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 102,
         "question": "What is defined as Under Regulation 292, \"Philately Deposit Accounts\" (PDA) can be opened with a minimum deposit of?",
         "answer": "₹200",
-        "explanation": "Philately Deposit Account min deposit is **₹200**.",
+        "explanation": "Philately Deposit Account min deposit is ₹200.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4576,7 +4576,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 103,
         "question": "What is defined as \"My Stamp\" (Regulation 295) is a personalized sheet of postage stamps. The personalized portion (thumbnail image)?",
         "answer": "Is not valid for postage; only the attached stamp is valid",
-        "explanation": "In \"My Stamp,\" the photo (thumbnail) is **not** valid for postage; only the accompanying stamp is.",
+        "explanation": "In \"My Stamp,\" the photo (thumbnail) is not valid for postage; only the accompanying stamp is.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4593,7 +4593,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 104,
         "question": "What is defined as Regulation 300 regarding \"e-Post Office\" (portal) allows customers to?",
         "answer": "Buy Philatelic stamps and PLI premiums online",
-        "explanation": "e-Post Office is an e-commerce portal for **stamps and PLI payments**.",
+        "explanation": "e-Post Office is an e-commerce portal for stamps and PLI payments.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4610,7 +4610,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 105,
         "question": "What is defined as In the context of \"International Money Transfer Service\" (IMTS) (e.g., Western Union/MoneyGram via Post Office), the payment to the beneficiary in India is made?",
         "answer": "In Indian Rupees (Cash up to ₹50,000, rest by Cheque/Account transfer)",
-        "explanation": "IMTS payments: Cash up to **₹50,000**, rest by cheque.",
+        "explanation": "IMTS payments: Cash up to ₹50,000, rest by cheque.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4627,7 +4627,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 106,
         "question": "What is defined as If a Money Order is lost in transit, a \"Duplicate Money Order\" is issued?",
         "answer": "Free of charge",
-        "explanation": "Duplicate MO is issued **free of charge**.",
+        "explanation": "Duplicate MO is issued free of charge.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4644,7 +4644,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 107,
         "question": "What is defined as The \"Jan Suraksha Schemes\" (PMJJBY, PMSBY, APY) are available through Post Offices. The age limit for entering Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) is?",
         "answer": "18 to 50 years",
-        "explanation": "PMJJBY entry age is **18-50 years**.",
+        "explanation": "PMJJBY entry age is 18-50 years.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4661,7 +4661,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 108,
         "question": "What is defined as The \"Sukanya Samriddhi Account\" (Regulation 310) can be opened for a girl child up to the age of?",
         "answer": "10 years",
-        "explanation": "Sukanya Samriddhi is for girls up to **10 years** old.",
+        "explanation": "Sukanya Samriddhi is for girls up to 10 years old.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4678,7 +4678,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 109,
         "question": "What is defined as Under the \"Mahila Samman Savings Certificate\" (introduced 2023-24), the maximum deposit limit is?",
         "answer": "₹2 Lakhs",
-        "explanation": "Mahila Samman limit is **₹2 Lakhs**.",
+        "explanation": "Mahila Samman limit is ₹2 Lakhs.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4695,7 +4695,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 110,
         "question": "Scenario: Mr. A posts a Registered Letter to Mr. B. Before delivery, Mr. A discovers he sent the wrong document. He applies for \"Recall of Article\" (Regulation 9). The article is intercepted at the delivery office. However, Mr. B (the addressee) demands to know the sender's name. Is the Postmaster bound to disclose the sender's name to the addressee?",
         "answer": "No, the sender's identity shall not be disclosed to the addressee when an article is recalled.",
-        "explanation": "Privacy of the sender is paramount. The name is **not** disclosed to the addressee during a recall.",
+        "explanation": "Privacy of the sender is paramount. The name is not disclosed to the addressee during a recall.",
         "exam_weight": "Medium",
         "keywords": [
             "scenario",
@@ -4746,7 +4746,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 113,
         "question": "What is defined as Regulation 315 deals with \"Complaints.\" The preservation period for \"Complaints regarding Registered Articles\" is?",
         "answer": "12 months",
-        "explanation": "Complaints for Registered Articles are preserved for **12 months**.",
+        "explanation": "Complaints for Registered Articles are preserved for 12 months.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4780,7 +4780,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 115,
         "question": "What is defined as Under the \"Right to Information (RTI) Act\" provisions within Postal Rules, the fee for an initial application (IPO/Cash) is?",
         "answer": "₹10",
-        "explanation": "RTI application fee is **₹10**.",
+        "explanation": "RTI application fee is ₹10.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4848,7 +4848,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 119,
         "question": "What is defined as If a \"Post Card\" is posted with a stamp of insufficient value, it is charged on delivery?",
         "answer": "Double the amount of deficiency",
-        "explanation": "Unpaid/Insufficiently paid mail is charged **double** the deficiency.",
+        "explanation": "Unpaid/Insufficiently paid mail is charged double the deficiency.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4865,7 +4865,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 120,
         "question": "What is defined as Under Regulation 52 (amended), \"Refused\" articles are returned to the sender. If the sender also \"Refuses\" to take it back (e.g., to avoid paying due charges)?",
         "answer": "The Post Office can recover the due amount from the sender as an \"Arrear of Land Revenue.\"",
-        "explanation": "If sender refuses return, the dues are recoverable as **Arrears of Land Revenue**.",
+        "explanation": "If sender refuses return, the dues are recoverable as Arrears of Land Revenue.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4882,7 +4882,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 121,
         "question": "Scenario: A Postman is delivering a Money Order. The payee is illiterate. How should the payment be effected?",
         "answer": "By obtaining a thumb impression attested by a witness who is known to the Postman.",
-        "explanation": "Illiterate payees: Thumb impression attested by a **witness** known to the Postman.",
+        "explanation": "Illiterate payees: Thumb impression attested by a witness known to the Postman.",
         "exam_weight": "Medium",
         "keywords": [
             "scenario",
@@ -4899,7 +4899,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 122,
         "question": "What is defined as The \"preservation period\" for \"Order Book\" of a Post Office is?",
         "answer": "Permanent",
-        "explanation": "The Order Book is a **Permanent** record.",
+        "explanation": "The Order Book is a Permanent record.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4916,7 +4916,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 123,
         "question": "Which \"Section\" of the Post Office Act gives the Government the power to intercept articles for public safety?",
         "answer": "Section 26",
-        "explanation": "Section **26** of the PO Act empowers interception for public safety.",
+        "explanation": "Section 26 of the PO Act empowers interception for public safety.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -4933,7 +4933,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 124,
         "question": "What is defined as Scenario: An article is addressed to \"The care of the Postmaster.\" This is technically treated as?",
         "answer": "Poste Restante",
-        "explanation": "\"Care of Postmaster\" = **Poste Restante**.",
+        "explanation": "\"Care of Postmaster\" = Poste Restante.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -4950,7 +4950,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 125,
         "question": "Who is the \"Head of the Circle\"?",
         "answer": "Chief Postmaster General (CPMG)",
-        "explanation": "**Chief Postmaster General (CPMG)** is the Head of the Circle.",
+        "explanation": "Chief Postmaster General (CPMG) is the Head of the Circle.",
         "exam_weight": "Medium",
         "keywords": [
             "head",
@@ -4984,7 +4984,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 127,
         "question": "Under the \"Postal Manual Vol V\" (often cited in Regulations regarding security), can a Postman deviate from his beat to deliver an urgent letter?",
         "answer": "No, he must strictly follow the beat map approved by the Overseer/Inspector.",
-        "explanation": "Postmen must **not** deviate from their beat.",
+        "explanation": "Postmen must not deviate from their beat.",
         "exam_weight": "Medium",
         "keywords": [
             "postal",
@@ -5001,7 +5001,7 @@ export const p1_6: FlashCard[] = [
         "card_no": 128,
         "question": "What is defined as If a \"Franking Machine\" user fails to reset the meter or renew the license in time, the license can be cancelled by?",
         "answer": "The Head of the Division (SP/SSP)",
-        "explanation": "The **Divisional Head (SP/SSP)** cancels Franking licenses.",
+        "explanation": "The Divisional Head (SP/SSP) cancels Franking licenses.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -10940,7 +10940,7 @@ export const p1_18: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - I",
         "topic": "Paper I",
         "card_no": 7,
-        "question": "Identify the correct postage rate for a **single copy** of a registered newspaper weighing 80 grams.",
+        "question": "Identify the correct postage rate for a single copy of a registered newspaper weighing 80 grams.",
         "answer": "50 paise",
         "explanation": "For a single copy: Weight not exceeding 50g = 25 paise. Weight exceeding 50g but not exceeding 100g = 50 paise. Since 80g falls in the second slab, the rate is 50 paise.",
         "exam_weight": "Medium",
@@ -11741,9 +11741,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 3,
-        "question": "Under the classification of Foreign Postal Articles, what does the abbreviation **\"AO\"** stand for?",
+        "question": "Under the classification of Foreign Postal Articles, what does the abbreviation \"AO\" stand for?",
         "answer": "Autres Object",
-        "explanation": "Letter class of foreign post is classed as Letter et Cartes (LC) and **Autres Object (AO)**.",
+        "explanation": "Letter class of foreign post is classed as Letter et Cartes (LC) and Autres Object (AO).",
         "exam_weight": "Medium",
         "keywords": [
             "classification",
@@ -11760,7 +11760,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 4,
         "question": "When prepaying postage in cash for foreign articles, which specific indication must be used?",
         "answer": "PORT PAYE",
-        "explanation": "The document specifies the indication for prepayment of postage in cash is **\"PORT PAYE\"**.",
+        "explanation": "The document specifies the indication for prepayment of postage in cash is \"PORT PAYE\".",
         "exam_weight": "Medium",
         "keywords": [
             "when",
@@ -11777,7 +11777,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 5,
         "question": "What is defined as According to the regulations for standard envelopes and postcards, the ratio between the length and the breadth must be more than?",
         "answer": "√2 (approx 1.41)",
-        "explanation": "The ratio between the length and the breadth is more than **√2** (The value of √2).",
+        "explanation": "The ratio between the length and the breadth is more than √2 (The value of √2).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -11792,9 +11792,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 6,
-        "question": "What is the maximum permissible weight for a **Letter** in the foreign post?",
+        "question": "What is the maximum permissible weight for a Letter in the foreign post?",
         "answer": "2 Kg",
-        "explanation": "The maximum weight for a Letter is **2 Kg**.",
+        "explanation": "The maximum weight for a Letter is 2 Kg.",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -11809,9 +11809,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 7,
-        "question": "What is the maximum permissible weight of an **M-Bag (Bulk Bag)**?",
+        "question": "What is the maximum permissible weight of an M-Bag (Bulk Bag)?",
         "answer": "30 Kg",
-        "explanation": "The maximum permissible weight of an M-bag is **30 kg**.",
+        "explanation": "The maximum permissible weight of an M-bag is 30 kg.",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -11828,7 +11828,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 8,
         "question": "M-Bags must be accompanied by which address label size?",
         "answer": "Not more than 90 × 140 mm",
-        "explanation": "The address label shall be made of sufficiently rigid material and shall not measure more than **90 × 140 mm**.",
+        "explanation": "The address label shall be made of sufficiently rigid material and shall not measure more than 90 × 140 mm.",
         "exam_weight": "Medium",
         "keywords": [
             "mbags",
@@ -11843,9 +11843,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 9,
-        "question": "Which customs declaration form is required if the value of the contents of an article exceeds **300 SDR**?",
+        "question": "Which customs declaration form is required if the value of the contents of an article exceeds 300 SDR?",
         "answer": "CN 23",
-        "explanation": "**CN 23** is used if the value of contents is more than 300 SDR. CN 22 is for values up to 300 SDR.",
+        "explanation": "CN 23 is used if the value of contents is more than 300 SDR. CN 22 is for values up to 300 SDR.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -11860,9 +11860,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 10,
-        "question": "As per the document, what is the value of **300 SDR** in Indian Rupees as on 17.09.2025?",
+        "question": "As per the document, what is the value of 300 SDR in Indian Rupees as on 17.09.2025?",
         "answer": "Rs. 38,294.71",
-        "explanation": "The document explicitly states: \"(As on 17.09.2025, the 300 SDR = **Rs. 38294.71**)\".",
+        "explanation": "The document explicitly states: \"(As on 17.09.2025, the 300 SDR = Rs. 38294.71)\".",
         "exam_weight": "Medium",
         "keywords": [
             "document",
@@ -11877,9 +11877,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 11,
-        "question": "How are **unpaid** postcards having stamps affixed on the back (other than the address side) treated?",
+        "question": "How are unpaid postcards having stamps affixed on the back (other than the address side) treated?",
         "answer": "They are liable to be treated as unpaid.",
-        "explanation": "Postcards having stamps affixed on the back (other than address side) are liable to be **treated as unpaid**.",
+        "explanation": "Postcards having stamps affixed on the back (other than address side) are liable to be treated as unpaid.",
         "exam_weight": "Medium",
         "keywords": [
             "unpaid",
@@ -11894,9 +11894,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 12,
-        "question": "If an insufficiently paid Letter is forwarded **By Air** after being taxed, what is the charge collected from the addressee?",
+        "question": "If an insufficiently paid Letter is forwarded By Air after being taxed, what is the charge collected from the addressee?",
         "answer": "75% of Air Surcharge",
-        "explanation": "For Letters sent By Air after being taxed, the charge is **75% of Air Surcharge**.",
+        "explanation": "For Letters sent By Air after being taxed, the charge is 75% of Air Surcharge.",
         "exam_weight": "Medium",
         "keywords": [
             "insufficiently",
@@ -11913,7 +11913,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 13,
         "question": "What are the maximum dimension limits for a Foreign Parcel?",
         "answer": "Length 1.05m; Sum of length and girth 3m",
-        "explanation": "The length should not exceed **1.05 meter**. The sum of the length and the greatest circumference... should not exceed **3 meters**.",
+        "explanation": "The length should not exceed 1.05 meter. The sum of the length and the greatest circumference... should not exceed 3 meters.",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -11945,9 +11945,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 15,
-        "question": "Regarding compensation for **International Air Parcels** in case of loss or total theft, what is the calculation formula?",
+        "question": "Regarding compensation for International Air Parcels in case of loss or total theft, what is the calculation formula?",
         "answer": "40 SDR plus 4.5 SDR per kg",
-        "explanation": "Compensation is **40 SDR plus 4.5 SDR per kg** or the value of contents, whichever is less.",
+        "explanation": "Compensation is 40 SDR plus 4.5 SDR per kg or the value of contents, whichever is less.",
         "exam_weight": "Medium",
         "keywords": [
             "regarding",
@@ -11962,9 +11962,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 16,
-        "question": "What is the liability of the Post Office for the loss of a **Registered Letter**?",
+        "question": "What is the liability of the Post Office for the loss of a Registered Letter?",
         "answer": "30 SDR or value of content (whichever is less) + postage paid",
-        "explanation": "Liability for Registered Letter = value of content or **30 SDR** whichever is less plus postage paid.",
+        "explanation": "Liability for Registered Letter = value of content or 30 SDR whichever is less plus postage paid.",
         "exam_weight": "Medium",
         "keywords": [
             "liability",
@@ -11998,7 +11998,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 18,
         "question": "If a sender fails to make an enquiry regarding a registered article within a certain period, no liability is payable. What is this period?",
         "answer": "6 months",
-        "explanation": "No liability is payable if sender has not made an enquiry within a period of **6 months**.",
+        "explanation": "No liability is payable if sender has not made an enquiry within a period of 6 months.",
         "exam_weight": "Medium",
         "keywords": [
             "sender",
@@ -12015,7 +12015,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 19,
         "question": "The International Tracked Packet Service (ITPS) is available for how many destinations initially?",
         "answer": "43",
-        "explanation": "The service will be available for the following **43 countries/destinations**.",
+        "explanation": "The service will be available for the following 43 countries/destinations.",
         "exam_weight": "Medium",
         "keywords": [
             "international",
@@ -12032,7 +12032,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 20,
         "question": "What is the maximum compensation for loss/damage of an International Tracked Packet (ITPS)?",
         "answer": "Rs. 1000",
-        "explanation": "Compensation shall be restricted to **Rupees One thousand (Rs. 1000/-)** or actual value, whichever is less.",
+        "explanation": "Compensation shall be restricted to Rupees One thousand (Rs. 1000/-) or actual value, whichever is less.",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -12047,9 +12047,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 21,
-        "question": "Flies of the family **Drosophilidae** can be imported for which specific purpose?",
+        "question": "Flies of the family Drosophilidae can be imported for which specific purpose?",
         "answer": "Biomedical research",
-        "explanation": "Flies of the family Drosophilidae for **biomedical research** exchanged between officially recognized institutions.",
+        "explanation": "Flies of the family Drosophilidae for biomedical research exchanged between officially recognized institutions.",
         "exam_weight": "Medium",
         "keywords": [
             "flies",
@@ -12064,9 +12064,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 22,
-        "question": "What is the **Customs Clearance fee** for a foreign letter packet or insured box if released after levying customs duty?",
+        "question": "What is the Customs Clearance fee for a foreign letter packet or insured box if released after levying customs duty?",
         "answer": "Rs. 30",
-        "explanation": "For clearance through Customs, a fee of **Rupees thirty** is recoverable from the addressee.",
+        "explanation": "For clearance through Customs, a fee of Rupees thirty is recoverable from the addressee.",
         "exam_weight": "Medium",
         "keywords": [
             "customs",
@@ -12097,9 +12097,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 24,
-        "question": "Calculate the **Demurrage charge** for an inward international packet weighing more than 500 grams, if the addressee fails to take delivery within 7 days.",
+        "question": "Calculate the Demurrage charge for an inward international packet weighing more than 500 grams, if the addressee fails to take delivery within 7 days.",
         "answer": "Rupees ten per day",
-        "explanation": "For inward international packet/bag weighing more than 500 grams, the demurrage charge is **Rupees ten per day**.",
+        "explanation": "For inward international packet/bag weighing more than 500 grams, the demurrage charge is Rupees ten per day.",
         "exam_weight": "Medium",
         "keywords": [
             "calculate",
@@ -12114,7 +12114,7 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 25,
-        "question": "What is the Air Surcharge for **Countries in North America** for every 20gms?",
+        "question": "What is the Air Surcharge for Countries in North America for every 20gms?",
         "answer": "Rs. 8.00",
         "explanation": "For Countries in North America, the Air Surcharge is Rs. 8.00.",
         "exam_weight": "Medium",
@@ -12131,9 +12131,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 26,
-        "question": "What is the compensation for loss of **EMS (International Speed Post) Merchandise**?",
+        "question": "What is the compensation for loss of EMS (International Speed Post) Merchandise?",
         "answer": "130 SDR or value of content (whichever is less)",
-        "explanation": "EMS (International Speed Post) Merchandise = Value of content or **130 SDR** whichever is less plus postage paid.",
+        "explanation": "EMS (International Speed Post) Merchandise = Value of content or 130 SDR whichever is less plus postage paid.",
         "exam_weight": "Medium",
         "keywords": [
             "compensation",
@@ -12150,7 +12150,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 27,
         "question": "What is defined as Parcels intended to be delivered free of charges must be marked with?",
         "answer": "\"Franc de droits\"",
-        "explanation": "These parcels should be marked clearly with the word \"To be delivered free of charges\" (**\"Franc de droits\"**).",
+        "explanation": "These parcels should be marked clearly with the word \"To be delivered free of charges\" (\"Franc de droits\").",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -12165,9 +12165,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 28,
-        "question": "What is defined as A \"Blind Literature\" packet transmitted by **Air** will be charged?",
+        "question": "What is defined as A \"Blind Literature\" packet transmitted by Air will be charged?",
         "answer": "Air surcharges only",
-        "explanation": "**Air surcharges will be applicable** for transmission of literature for the blind by air. They are exempted from postage/registration only for surface route.",
+        "explanation": "Air surcharges will be applicable for transmission of literature for the blind by air. They are exempted from postage/registration only for surface route.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -12184,7 +12184,7 @@ export const p1_19: FlashCard[] = [
         "card_no": 29,
         "question": "Which term describes circumstances beyond control in the context of insurance?",
         "answer": "Force Majeure",
-        "explanation": "Circumstance beyond the control = **\"Force Majeure\"**.",
+        "explanation": "Circumstance beyond the control = \"Force Majeure\".",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -12199,7 +12199,7 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 30,
-        "question": "What is defined as The **Advice of Delivery** fee for foreign countries (other than Bhutan and Nepal) is?",
+        "question": "What is defined as The Advice of Delivery fee for foreign countries (other than Bhutan and Nepal) is?",
         "answer": "Rs. 20",
         "explanation": "Advice of Delivery Fee for other foreign countries is Rs. 20. For Bhutan and Nepal, it is Rs. 10.",
         "exam_weight": "Medium",
@@ -12216,7 +12216,7 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 31,
-        "question": "According to the Electronic Advance Data (EAD) regulations, which form must accompany an item if the declared value is **less than or equal to 300 SDR**?",
+        "question": "According to the Electronic Advance Data (EAD) regulations, which form must accompany an item if the declared value is less than or equal to 300 SDR?",
         "answer": "CN 22",
         "explanation": "The document states: \"(a) CN 22 - if the declared value of the international items less than or equal to 300 Special Drawing Rights (SDR)\".",
         "exam_weight": "Medium",
@@ -12233,7 +12233,7 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 32,
-        "question": "What is the **Air Surcharge** tariff (for every 20gms) for countries situated in **Europe**?",
+        "question": "What is the Air Surcharge tariff (for every 20gms) for countries situated in Europe?",
         "answer": "Rs. 5.00",
         "explanation": "As per the \"Tariff of Air Surcharge & Surface Air Lifted (SAL)\" table, the Air Surcharge for \"Countries in Europe\" is Rs. 5.00.",
         "exam_weight": "Medium",
@@ -12250,7 +12250,7 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 33,
-        "question": "What is the registration tariff for a **Mail Bag**?",
+        "question": "What is the registration tariff for a Mail Bag?",
         "answer": "Rs. 750/-",
         "explanation": "The Registration Tariff table explicitly lists the rate for a \"Mail Bag\" as Rs. 750/-.",
         "exam_weight": "Medium",
@@ -12265,7 +12265,7 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 34,
-        "question": "The French term **\"Avis de reception\"** used in foreign post corresponds to which Inland Post service?",
+        "question": "The French term \"Avis de reception\" used in foreign post corresponds to which Inland Post service?",
         "answer": "Acknowledgement (Advice of delivery)",
         "explanation": "The document states: \"Avis de reception (Advice of delivery) – Similar to acknowledgement in inland post\".",
         "exam_weight": "Medium",
@@ -12282,7 +12282,7 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 35,
-        "question": "Airmail articles must bear a label or stamp impression with the words **\"Par Avion\"**. What does this phrase translate to?",
+        "question": "Airmail articles must bear a label or stamp impression with the words \"Par Avion\". What does this phrase translate to?",
         "answer": "By Air Mail",
         "explanation": "The document clarifies: \"Par Avion = By Air Mail\".",
         "exam_weight": "Medium",
@@ -12299,9 +12299,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 36,
-        "question": "What is the maximum weight limit for a **Small Packet**?",
+        "question": "What is the maximum weight limit for a Small Packet?",
         "answer": "2 Kg",
-        "explanation": "\"Small packets shall have maximum weight upto **2 kg**\".",
+        "explanation": "\"Small packets shall have maximum weight upto 2 kg\".",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -12316,9 +12316,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 37,
-        "question": "Calculate the maximum demurrage charge collectible for an international air parcel addressed **\"Poste Restante\"** if the addressee fails to take delivery.",
+        "question": "Calculate the maximum demurrage charge collectible for an international air parcel addressed \"Poste Restante\" if the addressee fails to take delivery.",
         "answer": "Rupees forty",
-        "explanation": "For \"Poste Restante\" air parcels, the demurrage is Rupees one per day subject to a **maximum of forty rupees**.",
+        "explanation": "For \"Poste Restante\" air parcels, the demurrage is Rupees one per day subject to a maximum of forty rupees.",
         "exam_weight": "Medium",
         "keywords": [
             "calculate",
@@ -12333,7 +12333,7 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 38,
-        "question": "When redirecting a foreign parcel to a country **outside of India**, how is the additional postage calculated?",
+        "question": "When redirecting a foreign parcel to a country outside of India, how is the additional postage calculated?",
         "answer": "Equal to the postage on a parcel of the same weight to the new destination.",
         "explanation": "\"The additional Postage which will be equal to the postage on a parcel of the same weight to the new destination\".",
         "exam_weight": "Medium",
@@ -12350,9 +12350,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 39,
-        "question": "What is the time limit for making inquiries regarding **International Speed Post** items?",
+        "question": "What is the time limit for making inquiries regarding International Speed Post items?",
         "answer": "4 months from the day after posting",
-        "explanation": "Inquiries for International Speed Post items must be entertained \"Within a period of **four months**... from the day after that on which the article was posted\". Note: Other items have a 6-month limit.",
+        "explanation": "Inquiries for International Speed Post items must be entertained \"Within a period of four months... from the day after that on which the article was posted\". Note: Other items have a 6-month limit.",
         "exam_weight": "Medium",
         "keywords": [
             "time",
@@ -12367,9 +12367,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 40,
-        "question": "For an International Air Parcel, what is the **upper ceiling** for compensation in case of loss or total theft (excluding postage)?",
+        "question": "For an International Air Parcel, what is the upper ceiling for compensation in case of loss or total theft (excluding postage)?",
         "answer": "130 SDR",
-        "explanation": "The compensation is calculated based on weight but is \"subject to an upper ceiling of **130 SDR**, plus the postage paid\".",
+        "explanation": "The compensation is calculated based on weight but is \"subject to an upper ceiling of 130 SDR, plus the postage paid\".",
         "exam_weight": "Medium",
         "keywords": [
             "international",
@@ -12384,9 +12384,9 @@ export const p1_19: FlashCard[] = [
         "pdf_title": "Post Office Guide Part - II",
         "topic": "Paper I",
         "card_no": 41,
-        "question": "What is the minimum dimension (surface measurement) for a **Small Packet**?",
+        "question": "What is the minimum dimension (surface measurement) for a Small Packet?",
         "answer": "90 × 140 mm",
-        "explanation": "Small packets must have a surface measuring not less than **90 × 140 mm**.",
+        "explanation": "Small packets must have a surface measuring not less than 90 × 140 mm.",
         "exam_weight": "Medium",
         "keywords": [
             "minimum",
@@ -13330,7 +13330,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 1,
         "question": "The Mail Network Optimization Project (MNOP) was originally initiated as part of which plan scheme before being adopted by the Department of Posts in November 2010?",
         "answer": "11th Plan Scheme",
-        "explanation": "The project was initiated as part of an **11th plan scheme** in March 2010.",
+        "explanation": "The project was initiated as part of an 11th plan scheme in March 2010.",
         "exam_weight": "Medium",
         "keywords": [
             "mail",
@@ -13347,7 +13347,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 2,
         "question": "Under the MNOP simplification of the network, the Speed Post network was optimized by creating how many National Sorting Hubs (NSHs)?",
         "answer": "95",
-        "explanation": "Speed Post Network was optimized by creating **95 National Sorting Hubs (NSHs)**.",
+        "explanation": "Speed Post Network was optimized by creating 95 National Sorting Hubs (NSHs).",
         "exam_weight": "Medium",
         "keywords": [
             "mnop",
@@ -13364,7 +13364,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 3,
         "question": "What is the prescribed target for the Key Performance Indicator (KPI) \"D+X (NTD)\"?",
         "answer": "Average Time 2 days",
-        "explanation": "The target for D+X (NTD) is **Average Time 2 days**.",
+        "explanation": "The target for D+X (NTD) is Average Time 2 days.",
         "exam_weight": "Medium",
         "keywords": [
             "prescribed",
@@ -13381,7 +13381,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 4,
         "question": "How many unique Key Performance Indicators (KPIs) were established under MNOP to ensure the monitoring of every mail activity?",
         "answer": "11",
-        "explanation": "**Eleven (11) Unique KPIs** are set up to ensure every mail activity.",
+        "explanation": "Eleven (11) Unique KPIs are set up to ensure every mail activity.",
         "exam_weight": "Medium",
         "keywords": [
             "many",
@@ -13398,7 +13398,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 5,
         "question": "For the calculation of KPI \"D+X (TD)\", what constitutes a \"TD Article\"?",
         "answer": "An article booked at offices in the local TD/catchment area of a given NSH and delivered at Post Offices in the local TD/catchment area of the *same* NSH.",
-        "explanation": "TD articles are booked at offices in the local TD/catchment area of a given NSH and delivered at POs in the **same** local TD/catchment area.",
+        "explanation": "TD articles are booked at offices in the local TD/catchment area of a given NSH and delivered at POs in the same local TD/catchment area.",
         "exam_weight": "Medium",
         "keywords": [
             "calculation",
@@ -13415,7 +13415,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 6,
         "question": "Regarding \"Inbound Operational Performance\" for metros, which time window is considered for articles received at the Sorting Hub?",
         "answer": "7:00 AM on day D-1 to 7:00 AM on day D",
-        "explanation": "For metros, articles received from **7:00 AM on day D-1 to 7:00 AM on day D** are considered.",
+        "explanation": "For metros, articles received from 7:00 AM on day D-1 to 7:00 AM on day D are considered.",
         "exam_weight": "Medium",
         "keywords": [
             "regarding",
@@ -13432,7 +13432,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 7,
         "question": "If the Pin code of the Delivery PO differs from the Pin code of Delivery POs mapped to the particular destination Sorting Hub to which the article is bagged, it is recorded under which KPI?",
         "answer": "Share of mis-sorted articles (NTD)",
-        "explanation": "This is classified as **Share of mis-sorted articles (NTD)**.",
+        "explanation": "This is classified as Share of mis-sorted articles (NTD).",
         "exam_weight": "Medium",
         "keywords": [
             "code",
@@ -13449,7 +13449,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 8,
         "question": "What is the \"Full Scan Compliance\" target percentage for TD articles?",
         "answer": "90%",
-        "explanation": "The Full Scan Compliance (TD) target is **90%**.",
+        "explanation": "The Full Scan Compliance (TD) target is 90%.",
         "exam_weight": "Medium",
         "keywords": [
             "full",
@@ -13466,7 +13466,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 9,
         "question": "Under the MNOP scheme, how many mandatory scans are prescribed for NTD (National Transport Delivery) articles booked at a PO/NSH/ICH?",
         "answer": "12 Scans",
-        "explanation": "**12 NTD Scans** are mandatory for articles booked at PO/NSH/ICH.",
+        "explanation": "12 NTD Scans are mandatory for articles booked at PO/NSH/ICH.",
         "exam_weight": "Medium",
         "keywords": [
             "mnop",
@@ -13483,7 +13483,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 10,
         "question": "For BNPL-NTD category articles, how many scans are mandatory?",
         "answer": "9",
-        "explanation": "For BNPL-NTD category articles, **9 Scans** are mandatory.",
+        "explanation": "For BNPL-NTD category articles, 9 Scans are mandatory.",
         "exam_weight": "Medium",
         "keywords": [
             "bnplntd",
@@ -13500,7 +13500,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 11,
         "question": "As per the MNOP concept (w.e.f. 01.04.2025), how many Level-1 (L1) hubs are designated for First Class Unregistered mail?",
         "answer": "96",
-        "explanation": "There are **96 L1** hubs for First Class Unregistered mail.",
+        "explanation": "There are 96 L1 hubs for First Class Unregistered mail.",
         "exam_weight": "Medium",
         "keywords": [
             "mnop",
@@ -13517,7 +13517,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 12,
         "question": "What is the Delivery Norm for Speed Post articles \"Between Metro Cities\" (Delhi, Mumbai, Chennai, Bangalore, Kolkata, and Hyderabad)?",
         "answer": "1-3 days",
-        "explanation": "The Delivery Norm for Speed Post between Metro Cities is **1-3 days**.",
+        "explanation": "The Delivery Norm for Speed Post between Metro Cities is 1-3 days.",
         "exam_weight": "Medium",
         "keywords": [
             "delivery",
@@ -13534,7 +13534,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 13,
         "question": "According to the Postman Ad-hoc Establishment Norms for 2-wheeler beats, what is the time allocated per km in a \"Congested area\"?",
         "answer": "5 Minutes/KM",
-        "explanation": "The norm for 2-wheeler beats in a congested area is **5 Minutes/KM**.",
+        "explanation": "The norm for 2-wheeler beats in a congested area is 5 Minutes/KM.",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -13551,7 +13551,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 14,
         "question": "To be eligible for fuel reimbursement charges under the 2-wheeler scheme, what percentage of accountable articles must be processed through the Postman Mobile App (IMA)?",
         "answer": "At least 95%",
-        "explanation": "At least **95%** of accountable articles must be processed through IMA.",
+        "explanation": "At least 95% of accountable articles must be processed through IMA.",
         "exam_weight": "Medium",
         "keywords": [
             "eligible",
@@ -13568,7 +13568,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 15,
         "question": "Which color label is used for Parcel bags intended for \"Air connectivity\" (Speed Post Parcel)?",
         "answer": "Yellow",
-        "explanation": "The parcel bag label is **Yellow** for Air connectivity (Speed Post Parcel).",
+        "explanation": "The parcel bag label is Yellow for Air connectivity (Speed Post Parcel).",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -13585,7 +13585,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 16,
         "question": "What is defined as A Nodal Delivery Centre (NDC) is established in cities/towns where the parcel density exceeds?",
         "answer": "1 Parcel per Sq K.M.",
-        "explanation": "NDCs are set up where parcel density exceeds **1 Parcel per Sq K.M.**",
+        "explanation": "NDCs are set up where parcel density exceeds 1 Parcel per Sq K.M.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -13602,7 +13602,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 17,
         "question": "What are the dimensions fixed for Postman delivery bags under the NDC setup?",
         "answer": "45cm x 35cm x 56cm",
-        "explanation": "The fixed dimensions are **45cm x 35cm x 56cm**.",
+        "explanation": "The fixed dimensions are 45cm x 35cm x 56cm.",
         "exam_weight": "Medium",
         "keywords": [
             "dimensions",
@@ -13636,7 +13636,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 19,
         "question": "What is defined as In the context of Parcel Hub design, \"Blue Color\" floor marking is used to indicate?",
         "answer": "Different processing areas (e.g., Bag Opening Area, Staging Area).",
-        "explanation": "**Blue Color** is used to mark different **processing areas**.",
+        "explanation": "Blue Color is used to mark different processing areas.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -13653,7 +13653,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 20,
         "question": "What is defined as A \"Small Category Parcel Hub\" is defined as having an operational area of 1200 Sq ft and a throughput of?",
         "answer": "121 to 250 parcels per hour.",
-        "explanation": "Small Category Parcel Hubs have a throughput of **121 to 250 parcels per hour**.",
+        "explanation": "Small Category Parcel Hubs have a throughput of 121 to 250 parcels per hour.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -13670,7 +13670,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 21,
         "question": "What is the \"Carrying Capacity\" (in terms of parcels) of a Standard Roller Container used in Parcel Hubs?",
         "answer": "200 parcels",
-        "explanation": "A Roller Container can hold up to **200 parcels** (20 bags x 10 parcels).",
+        "explanation": "A Roller Container can hold up to 200 parcels (20 bags x 10 parcels).",
         "exam_weight": "Medium",
         "keywords": [
             "carrying",
@@ -13687,7 +13687,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 22,
         "question": "In a Parcel Hub facility, what is the specific function of a \"SWS\" (Static Weighing System)?",
         "answer": "To measure the weight and dimensions of parcels received for booking.",
-        "explanation": "SWS is used for measuring **weight and dimensions** of parcels received for booking.",
+        "explanation": "SWS is used for measuring weight and dimensions of parcels received for booking.",
         "exam_weight": "Medium",
         "keywords": [
             "parcel",
@@ -13704,7 +13704,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 23,
         "question": "According to the equipment specifications for Parcel Hubs, what is the maximum weight capacity of the Static Weighing System (SWS)?",
         "answer": "35 Kg",
-        "explanation": "The maximum weight capacity is **35 Kg**.",
+        "explanation": "The maximum weight capacity is 35 Kg.",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -13721,7 +13721,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 24,
         "question": "Which color is used for floor marking to indicate \"Equipment and workstations position/placement\" (e.g., roller containers, bag stands, sorting cases)?",
         "answer": "Green",
-        "explanation": "**Green Color** is used to mark equipment and workstations position.",
+        "explanation": "Green Color is used to mark equipment and workstations position.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -13738,7 +13738,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 25,
         "question": "What is the \"Floor Footprint\" (Area) required for a standard \"Package Trolley\" used in the facility?",
         "answer": "6 sq. ft.",
-        "explanation": "The Floor Footprint for a Package Trolley is **6 sq. ft.**",
+        "explanation": "The Floor Footprint for a Package Trolley is 6 sq. ft.",
         "exam_weight": "Medium",
         "keywords": [
             "floor",
@@ -13755,7 +13755,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 26,
         "question": "Under PNOP, what is the \"Minimum object size\" (LxBxH) that can be measured by the Static Weighing System?",
         "answer": "100mm x 50mm x 20mm",
-        "explanation": "The minimum object size is **100mm x 50mm x 20mm**.",
+        "explanation": "The minimum object size is 100mm x 50mm x 20mm.",
         "exam_weight": "Medium",
         "keywords": [
             "pnop",
@@ -13772,7 +13772,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 27,
         "question": "In a Nodal Delivery Centre (NDC), the \"Beat Sorting Area\" is used for which specific activity?",
         "answer": "Sorting sector-sorted parcels into delivery beats and sequencing them.",
-        "explanation": "Detailed sorting into **delivery beats** and **sequencing** occurs here.",
+        "explanation": "Detailed sorting into delivery beats and sequencing occurs here.",
         "exam_weight": "Medium",
         "keywords": [
             "nodal",
@@ -13787,9 +13787,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 28,
-        "question": "What is the standard \"Ad hoc Norm\" for **bagging** parcels (putting parcels into bags) at the booking stage?",
+        "question": "What is the standard \"Ad hoc Norm\" for bagging parcels (putting parcels into bags) at the booking stage?",
         "answer": "60 Seconds per bag",
-        "explanation": "The norm for bagging is **60 Seconds per bag**.",
+        "explanation": "The norm for bagging is 60 Seconds per bag.",
         "exam_weight": "Medium",
         "keywords": [
             "standard",
@@ -13804,9 +13804,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 29,
-        "question": "For a \"Manual Parcel Processing Centre\" (Middle Mile), what is the norm for **primary sorting** of parcels?",
+        "question": "For a \"Manual Parcel Processing Centre\" (Middle Mile), what is the norm for primary sorting of parcels?",
         "answer": "700 parcels/hour",
-        "explanation": "The norm for primary sorting is **700 parcels/hour**.",
+        "explanation": "The norm for primary sorting is 700 parcels/hour.",
         "exam_weight": "Medium",
         "keywords": [
             "manual",
@@ -13823,7 +13823,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 30,
         "question": "In the \"Last Mile - Delivery Office\" process, the delivery bag or vehicle must be loaded using which concept?",
         "answer": "LIFO (Last-In-First-Out)",
-        "explanation": "Loading is done using the **LIFO (Last-In-First-Out)** concept.",
+        "explanation": "Loading is done using the LIFO (Last-In-First-Out) concept.",
         "exam_weight": "Medium",
         "keywords": [
             "last",
@@ -13840,7 +13840,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 31,
         "question": "The \"Joint Parcel Product\" (JPP) is a collaborative service between India Post and which entity?",
         "answer": "Indian Railways",
-        "explanation": "JPP is a collaborative product of India Post and **Indian Railways**.",
+        "explanation": "JPP is a collaborative product of India Post and Indian Railways.",
         "exam_weight": "Medium",
         "keywords": [
             "joint",
@@ -13857,7 +13857,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 32,
         "question": "Under the JPP (Joint Parcel Product), who is responsible for the \"Middle Mile\"?",
         "answer": "Indian Railways",
-        "explanation": "**Indian Railways** provides the Middle Mile (Transportation).",
+        "explanation": "Indian Railways provides the Middle Mile (Transportation).",
         "exam_weight": "Medium",
         "keywords": [
             "joint",
@@ -13874,7 +13874,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 33,
         "question": "What is the delivery norm for \"Speed Post\" articles within the \"Same State\"?",
         "answer": "1-4 days",
-        "explanation": "The norm for Speed Post within the Same State is **1-4 days**.",
+        "explanation": "The norm for Speed Post within the Same State is 1-4 days.",
         "exam_weight": "Medium",
         "keywords": [
             "delivery",
@@ -13889,9 +13889,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 34,
-        "question": "Which Parcel Hub category requires an operational area of **2840 Sq ft**?",
+        "question": "Which Parcel Hub category requires an operational area of 2840 Sq ft?",
         "answer": "Medium Category Parcel Hub",
-        "explanation": "A **Medium Category Parcel Hub** has an operational area of 2840 Sq ft.",
+        "explanation": "A Medium Category Parcel Hub has an operational area of 2840 Sq ft.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -13908,7 +13908,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 35,
         "question": "What is defined as The \"Primary Sorting Area\" in a Parcel Hub is responsible for?",
         "answer": "Preliminary sorting (First level sorting) of parcels.",
-        "explanation": "It is responsible for **Preliminary sorting (First level sorting)**.",
+        "explanation": "It is responsible for Preliminary sorting (First level sorting).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -13925,7 +13925,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 36,
         "question": "What is defined as The \"PNOP Dashboard\" created by CEPT Mysore is primarily used for?",
         "answer": "Monitoring project activities like civil works, equipment procurement, and layout implementation.",
-        "explanation": "It monitors **civil works, procurement, and operationalization** of hubs/NDCs.",
+        "explanation": "It monitors civil works, procurement, and operationalization of hubs/NDCs.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -13959,7 +13959,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 38,
         "question": "What is the norm for \"Parcel bag facility in-scan\" at a Manual Parcel Processing Centre?",
         "answer": "4 bags/minute",
-        "explanation": "The norm is **4 bags/minute** (15 seconds/bag).",
+        "explanation": "The norm is 4 bags/minute (15 seconds/bag).",
         "exam_weight": "Medium",
         "keywords": [
             "norm",
@@ -13974,9 +13974,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 39,
-        "question": "In the context of \"Inward Errors,\" if the in-charge of a defaulting Set fails to give a satisfactory reply within **3 days**, who initiates the recovery of presumptive loss?",
+        "question": "In the context of \"Inward Errors,\" if the in-charge of a defaulting Set fails to give a satisfactory reply within 3 days, who initiates the recovery of presumptive loss?",
         "answer": "The HRO/SRO",
-        "explanation": "The **HRO/SRO** will initiate the process of recovery.",
+        "explanation": "The HRO/SRO will initiate the process of recovery.",
         "exam_weight": "Medium",
         "keywords": [
             "context",
@@ -13993,7 +13993,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 40,
         "question": "What is defined as The \"Secure Parcel Storage Area\" in an NDC is designed to store undelivered parcels for a period of?",
         "answer": "7 days",
-        "explanation": "Undelivered parcels are stored for over a period of **7 days**.",
+        "explanation": "Undelivered parcels are stored for over a period of 7 days.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14008,9 +14008,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 41,
-        "question": "According to the timeline for the allocation of Annual Sales Targets, by which date must the **Region** allocate the monthly sales target to the **Divisions**?",
+        "question": "According to the timeline for the allocation of Annual Sales Targets, by which date must the Region allocate the monthly sales target to the Divisions?",
         "answer": "Before 15th April",
-        "explanation": "Monthly sales targets are allocated to Divisions by **Before 15th April**.",
+        "explanation": "Monthly sales targets are allocated to Divisions by Before 15th April.",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -14027,7 +14027,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 42,
         "question": "In the Department's parlance, a \"Bulk Customer\" is defined as a customer who provides business of what value per month?",
         "answer": "INR 10,000 and above",
-        "explanation": "Bulk customers give business of **INR 10,000 and above per month**.",
+        "explanation": "Bulk customers give business of INR 10,000 and above per month.",
         "exam_weight": "Medium",
         "keywords": [
             "departments",
@@ -14044,7 +14044,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 43,
         "question": "What is the prescribed target for \"Lead Generation\" for each Marketing Executive (ME) on a daily basis?",
         "answer": "Identify basic information on 2 leads daily.",
-        "explanation": "MEs should identify basic information on **two leads daily**.",
+        "explanation": "MEs should identify basic information on two leads daily.",
         "exam_weight": "Medium",
         "keywords": [
             "prescribed",
@@ -14078,7 +14078,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 45,
         "question": "What is considered a \"Good Target\" for a Marketing Executive (ME) regarding customer acquisition?",
         "answer": "Close 2 sales in one week.",
-        "explanation": "A good target is to close **2 sales in one week**.",
+        "explanation": "A good target is to close 2 sales in one week.",
         "exam_weight": "Medium",
         "keywords": [
             "considered",
@@ -14093,9 +14093,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 46,
-        "question": "If a sales opportunity has an approximate monthly demand value of **greater than INR 8 lacs**, which level of official is required to be directly involved in the sales process?",
+        "question": "If a sales opportunity has an approximate monthly demand value of greater than INR 8 lacs, which level of official is required to be directly involved in the sales process?",
         "answer": "Regional Head",
-        "explanation": "The **Regional Head** is involved for value > INR 8 lacs per month.",
+        "explanation": "The Regional Head is involved for value > INR 8 lacs per month.",
         "exam_weight": "Medium",
         "keywords": [
             "sales",
@@ -14112,7 +14112,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 47,
         "question": "In the Joint Parcel Product (JPP) with Indian Railways, how are the \"Middle Mile Charges\" calculated for trains running at \"R\" Scale?",
         "answer": "R + 10%",
-        "explanation": "Charges for \"R\" Scale trains are **R + 10%**.",
+        "explanation": "Charges for \"R\" Scale trains are R + 10%.",
         "exam_weight": "Medium",
         "keywords": [
             "joint",
@@ -14146,7 +14146,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 49,
         "question": "The insurance charges for the Joint Parcel Product are levied at what rate?",
         "answer": "0.03% of Content Value",
-        "explanation": "Insurance charges are **0.03%** of Content Value.",
+        "explanation": "Insurance charges are 0.03% of Content Value.",
         "exam_weight": "Medium",
         "keywords": [
             "insurance",
@@ -14163,7 +14163,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 50,
         "question": "According to the Parcel Packaging Policy, what is the specified thickness for a \"Plastic Flyer/bag\"?",
         "answer": "55-60 microns",
-        "explanation": "Plastic Flyer thickness is **55-60 microns**.",
+        "explanation": "Plastic Flyer thickness is 55-60 microns.",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -14178,9 +14178,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 51,
-        "question": "Which packaging material has a thickness of **40 microns** and is used for \"Securing & fastening\"?",
+        "question": "Which packaging material has a thickness of 40 microns and is used for \"Securing & fastening\"?",
         "answer": "BOPP Tape",
-        "explanation": "**BOPP Tape** has a thickness of 40 microns.",
+        "explanation": "BOPP Tape has a thickness of 40 microns.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -14197,7 +14197,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 52,
         "question": "What is defined as The \"Large Parcel Processing Area\" in a Parcel Hub is specifically defined as an area for processing parcels that?",
         "answer": "Are large enough to fill a single bag.",
-        "explanation": "Defined as parcels large enough to **fill a single bag**.",
+        "explanation": "Defined as parcels large enough to fill a single bag.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14214,7 +14214,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 53,
         "question": "What is the operational area required for a \"Very-Small Category Parcel Hub\"?",
         "answer": "575 Sq ft",
-        "explanation": "The area is **575 Sq ft**.",
+        "explanation": "The area is 575 Sq ft.",
         "exam_weight": "Medium",
         "keywords": [
             "operational",
@@ -14231,7 +14231,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 54,
         "question": "What is defined as For \"India Post Parcels\" (Surface connectivity), the parcel bag label used is?",
         "answer": "Blue",
-        "explanation": "The label is **Blue** for Surface connectivity (India Post Parcel).",
+        "explanation": "The label is Blue for Surface connectivity (India Post Parcel).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14248,7 +14248,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 55,
         "question": "Which form number is designated for \"Receipt of Bag\" at a Mail Agency/TMO?",
         "answer": "Form 1A",
-        "explanation": "Form **1A** is for Receipt of Bag.",
+        "explanation": "Form 1A is for Receipt of Bag.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -14265,7 +14265,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 56,
         "question": "\"Form 2D\" corresponds to which document in the Parcel Hub operations?",
         "answer": "Parcel Abstract",
-        "explanation": "Form 2D is the **Parcel Abstract**.",
+        "explanation": "Form 2D is the Parcel Abstract.",
         "exam_weight": "Medium",
         "keywords": [
             "form",
@@ -14282,7 +14282,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 57,
         "question": "The review of sales target achievement should preferably be done in which month to consider inputs for the next financial year?",
         "answer": "December",
-        "explanation": "This exercise should preferably be done in **December**.",
+        "explanation": "This exercise should preferably be done in December.",
         "exam_weight": "Medium",
         "keywords": [
             "review",
@@ -14299,7 +14299,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 58,
         "question": "What is defined as \"Cold Canvassing\" is defined as?",
         "answer": "A traditional method of contacting leads (generally through phone) to market products and collect info.",
-        "explanation": "Cold Canvassing is contacting leads (generally through **phone**) to market products.",
+        "explanation": "Cold Canvassing is contacting leads (generally through phone) to market products.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14316,7 +14316,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 59,
         "question": "Performance monitoring of the MNOP scheme is conducted through video conference chaired by the Secretary at what frequency?",
         "answer": "Every Fortnight",
-        "explanation": "Performance monitoring is done **every fortnight**.",
+        "explanation": "Performance monitoring is done every fortnight.",
         "exam_weight": "Medium",
         "keywords": [
             "performance",
@@ -14333,7 +14333,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 60,
         "question": "For a \"Medium Category Parcel Hub,\" what is the defined operational area and throughput capacity?",
         "answer": "2840 Sq ft; 251-500 parcels/hour",
-        "explanation": "Medium Category Hub: **2840 Sq ft** and **251-500 parcels/hour**.",
+        "explanation": "Medium Category Hub: 2840 Sq ft and 251-500 parcels/hour.",
         "exam_weight": "Medium",
         "keywords": [
             "medium",
@@ -14350,7 +14350,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 61,
         "question": "Which form is prescribed for the \"Dispatch of Article\" from a Parcel Hub?",
         "answer": "Form 2B",
-        "explanation": "Form **2B** is for Despatch of Article.",
+        "explanation": "Form 2B is for Despatch of Article.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -14367,7 +14367,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 62,
         "question": "What is defined as Under the MNOP Key Performance Indicators, \"KPI # (8)\" measures?",
         "answer": "Share of Duplicate barcodes.",
-        "explanation": "KPI # (8) measures **Share of Duplicate barcodes**.",
+        "explanation": "KPI # (8) measures Share of Duplicate barcodes.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14382,7 +14382,7 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 63,
-        "question": "What is defined as For the Joint Parcel Product (JPP), if a customer opts for **both** First Mile and Last Mile services, the handling charge (inclusive of GST) is?",
+        "question": "What is defined as For the Joint Parcel Product (JPP), if a customer opts for both First Mile and Last Mile services, the handling charge (inclusive of GST) is?",
         "answer": "Rs. 6 per Kg",
         "explanation": "For both First & Last Mile, the charge is Rs. 6 per Kg.",
         "exam_weight": "Medium",
@@ -14399,9 +14399,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 64,
-        "question": "Which specific \"Floor Marking Color\" is used to mark **aisles** and **common passages** in a Parcel Hub?",
+        "question": "Which specific \"Floor Marking Color\" is used to mark aisles and common passages in a Parcel Hub?",
         "answer": "Yellow",
-        "explanation": "**Yellow Color** is used to mark aisles.",
+        "explanation": "Yellow Color is used to mark aisles.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -14418,7 +14418,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 65,
         "question": "A \"Roller Container\" used in Parcel Hubs has a carrying capacity of how many closed parcel bags?",
         "answer": "20 bags",
-        "explanation": "A Roller Container can hold up to **20 closed parcel bags**.",
+        "explanation": "A Roller Container can hold up to 20 closed parcel bags.",
         "exam_weight": "Medium",
         "keywords": [
             "roller",
@@ -14435,7 +14435,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 66,
         "question": "In a Semi-Automated Parcel Processing Centre, what is the Ad Hoc Norm for \"parcel feeding on automated sorter\"?",
         "answer": "1200 parcels/hour",
-        "explanation": "The norm is **1200 parcels/hour**.",
+        "explanation": "The norm is 1200 parcels/hour.",
         "exam_weight": "Medium",
         "keywords": [
             "semiautomated",
@@ -14450,9 +14450,9 @@ export const p1_22: FlashCard[] = [
         "pdf_title": "MNOP PNOP",
         "topic": "Paper I",
         "card_no": 67,
-        "question": "Which form is known as the \"Inward Error Register\" for the **Record Office**?",
+        "question": "Which form is known as the \"Inward Error Register\" for the Record Office?",
         "answer": "Form 3A",
-        "explanation": "Form **3A** is the Inward Error Register for Record Office.",
+        "explanation": "Form 3A is the Inward Error Register for Record Office.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -14469,7 +14469,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 68,
         "question": "In the Parcel Sales process, \"Prospecting\" is immediately followed by which stage?",
         "answer": "Preparation",
-        "explanation": "Prospecting is followed by **Preparation**.",
+        "explanation": "Prospecting is followed by Preparation.",
         "exam_weight": "Medium",
         "keywords": [
             "parcel",
@@ -14486,7 +14486,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 69,
         "question": "What is the minimum object size (LxBxH) required for measurement by the Static Weighing System (SWS)?",
         "answer": "",
-        "explanation": "Minimum object size is **100mm x 50mm x 20mm**.",
+        "explanation": "Minimum object size is 100mm x 50mm x 20mm.",
         "exam_weight": "Medium",
         "keywords": [
             "minimum",
@@ -14503,7 +14503,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 70,
         "question": "What is defined as The \"Delivery Norm\" for First Class (Registered) mail between Metro cities is?",
         "answer": "2-3 days",
-        "explanation": "The norm is **2-3 days**.",
+        "explanation": "The norm is 2-3 days.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14520,7 +14520,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 71,
         "question": "What is defined as For fuel reimbursement, the \"Observation Period\" to calculate average distance travelled consists of?",
         "answer": "6 working days.",
-        "explanation": "The observation period is **6 working days**.",
+        "explanation": "The observation period is 6 working days.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14537,7 +14537,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 72,
         "question": "What is defined as The \"MN OP Dashboard\" allows field units to update data regarding?",
         "answer": "Layout Design, Standard Equipment, IT Equipment, and Civil Works.",
-        "explanation": "Dashboard tracks **Layout Design, Standard Equipment, IT Equipment, and Civil Work**.",
+        "explanation": "Dashboard tracks Layout Design, Standard Equipment, IT Equipment, and Civil Work.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14554,7 +14554,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 73,
         "question": "What is the dimension of the \"Bag Opening Table\" specified in the equipment list?",
         "answer": "4 x 2.5 feet",
-        "explanation": "Dimensions are **4 ft. x 2.5 ft.**",
+        "explanation": "Dimensions are 4 ft. x 2.5 ft.",
         "exam_weight": "Medium",
         "keywords": [
             "dimension",
@@ -14571,7 +14571,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 74,
         "question": "Which official sanctions the bills for Fuel Reimbursement charges by the 10th of each month?",
         "answer": "Divisional Head",
-        "explanation": "The **Divisional Head** sanctions the bills by the 10th.",
+        "explanation": "The Divisional Head sanctions the bills by the 10th.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -14588,7 +14588,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 75,
         "question": "What is defined as Under PNOP, the \"Sector Sorting\" activity in an NDC involves?",
         "answer": "Preliminary sorting of parcels into sectors based on delivery address.",
-        "explanation": "**Preliminary sorting** of parcels into sectors based on delivery address.",
+        "explanation": "Preliminary sorting of parcels into sectors based on delivery address.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14605,7 +14605,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 76,
         "question": "What is defined as The \"Paper Flyer/bag\" used for parcel packaging has a specified thickness of?",
         "answer": "100-150 microns",
-        "explanation": "Paper Flyer thickness is **100-150 microns**.",
+        "explanation": "Paper Flyer thickness is 100-150 microns.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14622,7 +14622,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 77,
         "question": "What is defined as According to the sales manual, \"Referrals\" are considered a high-potential source of leads because of?",
         "answer": "Accurate targeting and trust factor.",
-        "explanation": "Referrals are high potential due to **accurate targeting and trust factor**.",
+        "explanation": "Referrals are high potential due to accurate targeting and trust factor.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14639,7 +14639,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 78,
         "question": "What is defined as For \"Ordinary Letters,\" the correct bag label prefix prescribed under MNOP is?",
         "answer": "LB",
-        "explanation": "The prefix for Ordinary Letter is **LB**.",
+        "explanation": "The prefix for Ordinary Letter is LB.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -14656,7 +14656,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 79,
         "question": "A \"Large Category Parcel Hub\" has a sorting capacity for how many destinations?",
         "answer": "192",
-        "explanation": "Large Category Hubs sort for **192 destinations**.",
+        "explanation": "Large Category Hubs sort for 192 destinations.",
         "exam_weight": "Medium",
         "keywords": [
             "large",
@@ -14673,7 +14673,7 @@ export const p1_22: FlashCard[] = [
         "card_no": 80,
         "question": "What is defined as The deadline for the \"Allocation of monthly sales target to MEs by Divisions\" is?",
         "answer": "Before 25th April\n\n---\n\n---",
-        "explanation": "Target allocation to MEs must be done **Before 25th April**.",
+        "explanation": "Target allocation to MEs must be done Before 25th April.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -15801,7 +15801,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 2,
         "question": "Which Finacle menu is to be used for \"e-KYC CIF Creation\" and changing an existing CIF to an e-KYC CIF through the Re-KYC process?",
         "answer": "ECCRC",
-        "explanation": "Menu **ECCRC** is used for \"e-KYC CIF Creation and Changing the existing CIF to e-KYC CIF\".",
+        "explanation": "Menu ECCRC is used for \"e-KYC CIF Creation and Changing the existing CIF to e-KYC CIF\".",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -15903,7 +15903,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 8,
         "question": "Which Finacle menu allows the system to show the masked Aadhaar number (XXXX-XXXX-1234) for an e-KYC CIF?",
         "answer": "CICD",
-        "explanation": "Menu **CICD** shows the masked Aadhaar number (XXXX-XXXX-1234).",
+        "explanation": "Menu CICD shows the masked Aadhaar number (XXXX-XXXX-1234).",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -15920,7 +15920,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 9,
         "question": "According to the SOP regarding \"Prevention of Frauds in Post Offices,\" which menu has been disabled for the selection of 'Yes' under 'Modify A/c Name' at the counter level?",
         "answer": "HCCA",
-        "explanation": "Selection of 'Yes' under 'Modify, A/c Name' has been disabled in the **HCCA** Menu.",
+        "explanation": "Selection of 'Yes' under 'Modify, A/c Name' has been disabled in the HCCA Menu.",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -15954,7 +15954,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 11,
         "question": "What is the \"Freeze Reason Code\" used for Small Savings Schemes accounts (MIS/SCSS/TD/KVP/NSC/RD) that have matured but remain closed for more than 3 years after maturity?",
         "answer": "INOP",
-        "explanation": "The freeze reason code for accounts inoperative for more than 3 years is **INOP**.",
+        "explanation": "The freeze reason code for accounts inoperative for more than 3 years is INOP.",
         "exam_weight": "Medium",
         "keywords": [
             "freeze",
@@ -16073,7 +16073,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 18,
         "question": "Which menu should be invoked by the Counter PA to check whether Mobile Number/PAN are updated in an account before initiating a transaction of ₹20,000 and above?",
         "answer": "CICD",
-        "explanation": "Before initiating a transaction of ₹20,000+, the counter PA shall invoke menu **CICD** to check details.",
+        "explanation": "Before initiating a transaction of ₹20,000+, the counter PA shall invoke menu CICD to check details.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -16107,7 +16107,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 20,
         "question": "Which freeze code is strictly assigned to accounts identified as \"Unclaimed\" under the Senior Citizen Welfare Fund (SCWF) Rules 2016, which can only be closed at Head Post Offices?",
         "answer": "SCWFR",
-        "explanation": "Unclaimed accounts under SCWF Rules 2016 are frozen with code **SCWFR**.",
+        "explanation": "Unclaimed accounts under SCWF Rules 2016 are frozen with code SCWFR.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -16158,7 +16158,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 23,
         "question": "According to SB Order 37/2020 regarding the transfer of accounts of National Small Savings Schemes, which office is authorized to perform the actual account transfer process in the system?",
         "answer": "The Head Post Office (HO) only.",
-        "explanation": "Transfer of account shall be done by the **HPO only**.",
+        "explanation": "Transfer of account shall be done by the HPO only.",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -16294,7 +16294,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 31,
         "question": "SB Order 26/2020 announced the discontinuation of taking which receipt form from SAS/MPKBY agents for commission payments at the time of business acceptance in CBS Post Offices?",
         "answer": "ACG-17",
-        "explanation": "Discontinuation of taking **ACG-17** from agents for commission payment.",
+        "explanation": "Discontinuation of taking ACG-17 from agents for commission payment.",
         "exam_weight": "Medium",
         "keywords": [
             "order",
@@ -16345,7 +16345,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 34,
         "question": "Which Finacle menu is used for updating the status of TDS forms (like 15G/15H) in the CIF of an account holder?",
         "answer": "CMRC",
-        "explanation": "Configuration of TDS forms (15G/15H) is made in the CIF via menu **CMRC**.",
+        "explanation": "Configuration of TDS forms (15G/15H) is made in the CIF via menu CMRC.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -16379,7 +16379,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 36,
         "question": "What is defined as As per SB Order 14/2021, the process of transferring accounts belonging to discontinued schemes (NSS-87 and NSS-92) can now be issued by?",
         "answer": "The nearby Head Post Office.",
-        "explanation": "Transfer process can now be issued by the **nearby Head Post Office**.",
+        "explanation": "Transfer process can now be issued by the nearby Head Post Office.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -16396,7 +16396,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 37,
         "question": "What is defined as For a GDS Branch Post Office which is a \"Non-delivery office in account with a non-delivery post office,\" incentive is payable if the depositor's address falls within?",
         "answer": "The area covered by the PIN code of the branch post office concerned.",
-        "explanation": "For non-delivery BO in account with non-delivery PO, address must fall within the area covered by the **pincode** of the BO.",
+        "explanation": "For non-delivery BO in account with non-delivery PO, address must fall within the area covered by the pincode of the BO.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -16430,7 +16430,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 39,
         "question": "In the context of TDS on Senior Citizens (age 60+), what is the threshold limit of interest income per financial year (from 2025-26 onwards) beyond which TDS is deductible?",
         "answer": "₹ 50,000",
-        "explanation": "From 2025-26, the threshold limit for Senior Citizens is ₹50,000 (Revised from 1 Lakh in previous year table, check source 104 vs 102 carefully. Wait. Source 78 says \"Threshold limit up to 2024-25: Rs 50,000\" and \"From 2025-26: Rs 1 Lakh\" for Senior Citizen. **Correction**: Source 86 says \"Rs. 1 Lakh\" for 2025-26. Let's re-read source 86 and 104.",
+        "explanation": "From 2025-26, the threshold limit for Senior Citizens is ₹50,000 (Revised from 1 Lakh in previous year table, check source 104 vs 102 carefully. Wait. Source 78 says \"Threshold limit up to 2024-25: Rs 50,000\" and \"From 2025-26: Rs 1 Lakh\" for Senior Citizen. Correction: Source 86 says \"Rs. 1 Lakh\" for 2025-26. Let's re-read source 86 and 104.",
         "exam_weight": "Medium",
         "keywords": [
             "context",
@@ -16498,7 +16498,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 43,
         "question": "As per SB Order 28/2020, the \"SB-5A\" passbook is prescribed for which set of schemes?",
         "answer": "1/2/3/5 yr. TD, KVP, and NSC.",
-        "explanation": "**SB-5A** is for 1/2/3/5 yr TD, KVP, and NSC.",
+        "explanation": "SB-5A is for 1/2/3/5 yr TD, KVP, and NSC.",
         "exam_weight": "Medium",
         "keywords": [
             "order",
@@ -16515,7 +16515,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 44,
         "question": "What is the \"Freeze Reason Code\" that must be used by the System Administrator (through batch job) to freeze accounts identified under the Senior Citizen Welfare Fund (SCWF) Rules?",
         "answer": "SCWFR",
-        "explanation": "Freeze code **SCWFR**.",
+        "explanation": "Freeze code SCWFR.",
         "exam_weight": "Medium",
         "keywords": [
             "freeze",
@@ -16549,7 +16549,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 46,
         "question": "As per the SOP for \"GL Integration between CBS and CSI,\" pilot roll-out was first started in which Circle?",
         "answer": "Karnataka",
-        "explanation": "Pilot roll-out started in **Karnataka Circle**.",
+        "explanation": "Pilot roll-out started in Karnataka Circle.",
         "exam_weight": "Medium",
         "keywords": [
             "integration",
@@ -16617,7 +16617,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 50,
         "question": "Which Finacle menu is used for \"Account Transfer\" (inward/outward) as prescribed in the POSB (CBS) Manual?",
         "answer": "HINTTM",
-        "explanation": "While HACT is standard, the text explicitly links **HINTTM** to interest adjustments during closure/transfer scenarios. *(Note: In strict exam context, HINTTM relates to Interest Adjustment).*",
+        "explanation": "While HACT is standard, the text explicitly links HINTTM to interest adjustments during closure/transfer scenarios. *(Note: In strict exam context, HINTTM relates to Interest Adjustment).*",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -16702,7 +16702,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 55,
         "question": "Which menu is used by the Supervisor SBCO to adjust interest entries (after receiving an order from the Divisional Head) to correct the balance in an account?",
         "answer": "HIARM",
-        "explanation": "Supervisor SBCO invokes **HIARM** menu.",
+        "explanation": "Supervisor SBCO invokes HIARM menu.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -16719,7 +16719,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 56,
         "question": "As per SB Order 36/2020, if a deceased claim case falls above the financial powers of the Post Office, how must the claim be forwarded to the sanctioning authority?",
         "answer": "By Service Insured Post.",
-        "explanation": "If above financial powers, forwarded by **Service Insured Post**.",
+        "explanation": "If above financial powers, forwarded by Service Insured Post.",
         "exam_weight": "Medium",
         "keywords": [
             "order",
@@ -16753,7 +16753,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 58,
         "question": "When reinvesting the maturity value of a Small Savings Scheme through an SAS agent, which mode of transaction is permitted for the new investment?",
         "answer": "Only by Cheque (or Cash up to ₹20,000).",
-        "explanation": "New investment allowed only through Cash (<20k) or **By Cheque**.",
+        "explanation": "New investment allowed only through Cash (<20k) or By Cheque.",
         "exam_weight": "Medium",
         "keywords": [
             "when",
@@ -16838,7 +16838,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 63,
         "question": "As per SB Order 24/2022, regarding the \"Prevention of Frauds,\" which menu is used by the Head Office (HO) to change the name of an account holder after receiving the case from a Sub Post Office?",
         "answer": "HAALM",
-        "explanation": "HO shall change the name of account holder through **HAALM** menu.",
+        "explanation": "HO shall change the name of account holder through HAALM menu.",
         "exam_weight": "Medium",
         "keywords": [
             "order",
@@ -16855,7 +16855,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 64,
         "question": "Which organization is responsible for printing and supplying POSB CTS Cheque books as per the orders placed by NSI, New Delhi?",
         "answer": "India Security Press (ISP), Nashik",
-        "explanation": "POSB CTS Cheque books are printed by **India Security Press (ISP), Nashik**.",
+        "explanation": "POSB CTS Cheque books are printed by India Security Press (ISP), Nashik.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -16889,7 +16889,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 66,
         "question": "What is defined as As per SB Order 21/2020, GDS BPMs are eligible for incentive irrespective of the location (Rural/Urban) of the Branch Post Office. This amendment applies to?",
         "answer": "The condition regarding the address of the depositor falling within the delivery jurisdiction.",
-        "explanation": "Incentive payable irrespective of rural/urban location subject to the condition regarding the **address of depositors**.",
+        "explanation": "Incentive payable irrespective of rural/urban location subject to the condition regarding the address of depositors.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -16906,7 +16906,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 67,
         "question": "If an account is frozen with the freeze code \"SCWFR\" (Unclaimed), can it be revived or operated again?",
         "answer": "No, these accounts should only be allowed to be closed.",
-        "explanation": "Accounts frozen as \"SCWFR\" should **not** be allowed to be operated (revived); they should only be closed.",
+        "explanation": "Accounts frozen as \"SCWFR\" should not be allowed to be operated (revived); they should only be closed.",
         "exam_weight": "Medium",
         "keywords": [
             "account",
@@ -17042,7 +17042,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 75,
         "question": "For a \"Kisan Vikas Patra\" (KVP) issued between 01.01.2024 and 01.07.2025, the amount doubles in how many months?",
         "answer": "115 months",
-        "explanation": "KVP doubles in **115 months**.",
+        "explanation": "KVP doubles in 115 months.",
         "exam_weight": "Medium",
         "keywords": [
             "kisan",
@@ -17059,7 +17059,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 76,
         "question": "When closing an unclaimed account (SCWFR), who is required to attest the KYC documents of the account holder and witnesses?",
         "answer": "The Head Postmaster.",
-        "explanation": "**Head Postmaster** will attest KYC documents of Account Holder and Witnesses.",
+        "explanation": "Head Postmaster will attest KYC documents of Account Holder and Witnesses.",
         "exam_weight": "Medium",
         "keywords": [
             "when",
@@ -17076,7 +17076,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 77,
         "question": "As per SB Order 36/2020, if a deceased claim case falls *above* the financial powers of the post office, it shall be forwarded to the sanctioning authority by which mode?",
         "answer": "Service Insured Post",
-        "explanation": "Forwarded to sanctioning authority by **Service Insured Post**.",
+        "explanation": "Forwarded to sanctioning authority by Service Insured Post.",
         "exam_weight": "Medium",
         "keywords": [
             "order",
@@ -17093,7 +17093,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 78,
         "question": "Which form is used for \"Application for Settlement of Claim of Deceased Depositor\" where the claim is sanctioned by the SPM/PM?",
         "answer": "Form-11",
-        "explanation": "SPM/PM sanctions the claim on the second part of **Form-11**.",
+        "explanation": "SPM/PM sanctions the claim on the second part of Form-11.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -17144,7 +17144,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 81,
         "question": "What is defined as Regarding the regularization of an irregular NSS-87 account (2nd account opened after 02.04.1990), the interest payable on the outstanding balance is?",
         "answer": "POSA Rate.",
-        "explanation": "2nd account opened *after* 02.04.1990 gets prevailing **POSA rate** on outstanding balance.",
+        "explanation": "2nd account opened *after* 02.04.1990 gets prevailing POSA rate on outstanding balance.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17161,7 +17161,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 82,
         "question": "Under the \"Mahila Samman Savings Certificate, 2023\", does the investment qualify for a tax rebate under Section 80C of the Income Tax Act?",
         "answer": "No, the investment does not qualify for rebate.",
-        "explanation": "The investment **does not qualify for rebate under 80C**.",
+        "explanation": "The investment does not qualify for rebate under 80C.",
         "exam_weight": "Medium",
         "keywords": [
             "mahila",
@@ -17195,7 +17195,7 @@ export const p1_24: FlashCard[] = [
         "card_no": 84,
         "question": "Which Finacle menu is used to print the \"Detailed Transaction\" report for MPKBY Agents?",
         "answer": "HFINRPT",
-        "explanation": "Detailed transaction can be viewed through agent reports using **HFINRPT** menu.",
+        "explanation": "Detailed transaction can be viewed through agent reports using HFINRPT menu.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -17232,7 +17232,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 2,
         "question": "The \"Post Office Act, 2023\" came into force on which date, repealing the Indian Post Office Act, 1898?",
         "answer": "18th June, 2024",
-        "explanation": "The Post Office Act, 2023 received assent in Dec 2023 but came into force on **18th June, 2024**.",
+        "explanation": "The Post Office Act, 2023 received assent in Dec 2023 but came into force on 18th June, 2024.",
         "exam_weight": "Medium",
         "keywords": [
             "post",
@@ -17249,7 +17249,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 3,
         "question": "As per recent data, what is the average area served by a single Post Office in India?",
         "answer": "21.34 sq. km.",
-        "explanation": "The average area served by a Post Office is approximately **21.34 sq. km** (calculated based on 32.87 lakh sq km / ~1.65 lakh POs, a standard metric in the report).",
+        "explanation": "The average area served by a Post Office is approximately 21.34 sq. km (calculated based on 32.87 lakh sq km / ~1.65 lakh POs, a standard metric in the report).",
         "exam_weight": "Medium",
         "keywords": [
             "recent",
@@ -17266,7 +17266,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 4,
         "question": "Automated Mail Processing Centres (AMPC) equipped with Letter Sorting Machines (LSM) and Mixed Mail Sorters (MMS) have been established in which two cities?",
         "answer": "Delhi and Kolkata",
-        "explanation": "Major AMPCs are located in **Delhi and Kolkata** (often Chennai/Mumbai too, but Delhi/Kolkata are the primary examples in modernization contexts).",
+        "explanation": "Major AMPCs are located in Delhi and Kolkata (often Chennai/Mumbai too, but Delhi/Kolkata are the primary examples in modernization contexts).",
         "exam_weight": "Medium",
         "keywords": [
             "automated",
@@ -17283,7 +17283,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 5,
         "question": "The \"Tarang Post\" service utilizes which mode of transport for transmitting mail between Hazira and Ghogha?",
         "answer": "Ro-Ro Ferry Service",
-        "explanation": "\"Tarang Post\" uses the **Ro-Ro Ferry Service** in Gujarat.",
+        "explanation": "\"Tarang Post\" uses the Ro-Ro Ferry Service in Gujarat.",
         "exam_weight": "Medium",
         "keywords": [
             "tarang",
@@ -17300,7 +17300,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 6,
         "question": "Who heads the Army Postal Service (APS) and what is their rank?",
         "answer": "Additional Director General (Major General)",
-        "explanation": "The Head of APS is the **Additional Director General** (APS), who holds the rank of **Major General**.",
+        "explanation": "The Head of APS is the Additional Director General (APS), who holds the rank of Major General.",
         "exam_weight": "Medium",
         "keywords": [
             "heads",
@@ -17317,7 +17317,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 7,
         "question": "The Department of Posts has introduced the \"Click N Book\" service. What is the maximum weight limit for articles or parcels booked under this service?",
         "answer": "2 Kg",
-        "explanation": "Click N Book allows booking of registered letters/speed post, typically capped at **2 Kg** for packet ease in this specific digital booking interface (though Speed Post goes higher, the kiosk/portal limit is often lower).",
+        "explanation": "Click N Book allows booking of registered letters/speed post, typically capped at 2 Kg for packet ease in this specific digital booking interface (though Speed Post goes higher, the kiosk/portal limit is often lower).",
         "exam_weight": "Medium",
         "keywords": [
             "department",
@@ -17334,7 +17334,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 8,
         "question": "The \"Dak Ghar Niryat Kendra\" (DNK) initiative serves which primary purpose?",
         "answer": "To facilitate small exporters in filing Postal Bill of Export electronically.",
-        "explanation": "DNK (Dak Ghar Niryat Kendra) aims to facilitate **commercial exports** for MSMEs by simplifying documentation (Postal Bill of Export).",
+        "explanation": "DNK (Dak Ghar Niryat Kendra) aims to facilitate commercial exports for MSMEs by simplifying documentation (Postal Bill of Export).",
         "exam_weight": "Medium",
         "keywords": [
             "ghar",
@@ -17351,7 +17351,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 9,
         "question": "What is defined as The \"Meghdoot Award\" includes a cash award of?",
         "answer": "₹21,000",
-        "explanation": "The **Meghdoot Award** carries a cash prize of **₹21,000**, a Gold Medallion, and a Citation.",
+        "explanation": "The Meghdoot Award carries a cash prize of ₹21,000, a Gold Medallion, and a Citation.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17368,7 +17368,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 10,
         "question": "Which training portal was developed under \"Mission Karmayogi\" for the Department of Posts employees?",
         "answer": "Dak Karmyogi",
-        "explanation": "*Dak Karmyogi** is the e-learning portal developed for postal employees under Mission Karmayogi.",
+        "explanation": "*Dak Karmyogi is the e-learning portal developed for postal employees under Mission Karmayogi.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -17385,7 +17385,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 11,
         "question": "Regarding the \"Parcel Packaging Policy,\" what are the two types of components specified?",
         "answer": "Primary Packaging and Secondary Packaging",
-        "explanation": "Packaging norms often distinguish between **Primary** (product wrapping) and **Secondary** (shipping box) packaging.",
+        "explanation": "Packaging norms often distinguish between Primary (product wrapping) and Secondary (shipping box) packaging.",
         "exam_weight": "Medium",
         "keywords": [
             "regarding",
@@ -17402,7 +17402,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 12,
         "question": "The first Post Office Savings Bank (POSB) facility was made available in India in which year?",
         "answer": "1882",
-        "explanation": "POSB was launched on **1st April, 1882**.",
+        "explanation": "POSB was launched on 1st April, 1882.",
         "exam_weight": "Medium",
         "keywords": [
             "first",
@@ -17419,7 +17419,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 13,
         "question": "As of December 2024, an Aadhaar center has been operationalized at which high-altitude location, marking the highest Aadhaar center in the country?",
         "answer": "Siachin",
-        "explanation": "The Annual Report highlights the operationalization of an Aadhaar center in **Siachin** (Base Camp/region) as a milestone.",
+        "explanation": "The Annual Report highlights the operationalization of an Aadhaar center in Siachin (Base Camp/region) as a milestone.",
         "exam_weight": "Medium",
         "keywords": [
             "december",
@@ -17436,7 +17436,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 14,
         "question": "What is defined as The \"Post Office Passport Seva Kendra\" (POPSK) is a joint venture between the Department of Posts and?",
         "answer": "Ministry of External Affairs",
-        "explanation": "POPSK is a collaboration with the **Ministry of External Affairs (MEA)**.",
+        "explanation": "POPSK is a collaboration with the Ministry of External Affairs (MEA).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17453,7 +17453,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 15,
         "question": "What is defined as To facilitate physical verification of units under the Prime Minister's Employment Generation Programme (PMEGP), the Department of Posts signed an MoU with?",
         "answer": "Khadi & Village Industries Commission (KVIC)",
-        "explanation": "DoP partners with **KVIC** for the physical verification of PMEGP units.",
+        "explanation": "DoP partners with KVIC for the physical verification of PMEGP units.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17470,7 +17470,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 16,
         "question": "What is the specific objective of the \"Dhai Akhar\" campaign?",
         "answer": "A letter writing competition to promote the importance of letters.",
-        "explanation": "\"Dhai Akhar\" is a **National Level Letter Writing Competition**.",
+        "explanation": "\"Dhai Akhar\" is a National Level Letter Writing Competition.",
         "exam_weight": "Medium",
         "keywords": [
             "specific",
@@ -17487,7 +17487,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 17,
         "question": "As per the Postal Road Transport Network data, the National Routes cover approximately how many kilometers per day?",
         "answer": "Over 75,000 KMs",
-        "explanation": "The National Road Transport Network covers over **75,000 KMs** daily.",
+        "explanation": "The National Road Transport Network covers over 75,000 KMs daily.",
         "exam_weight": "Medium",
         "keywords": [
             "postal",
@@ -17504,7 +17504,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 18,
         "question": "What is defined as The \"Mahila Samman Savings Certificate\" (MSSC), available at Post Offices, offers an interest rate of?",
         "answer": "7.5% per annum compounded quarterly",
-        "explanation": "MSSC offers **7.5%** interest compounded quarterly.",
+        "explanation": "MSSC offers 7.5% interest compounded quarterly.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17521,7 +17521,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 19,
         "question": "What was the specific theme for \"World Post Day\" observed on 09.10.2024?",
         "answer": "\"150 years of Enabling Communication and Empowering Peoples Across Nations\"",
-        "explanation": "The 2024 theme was **\"150 years of Enabling Communication and Empowering Peoples Across Nations\"** (marking UPU's 150th year).",
+        "explanation": "The 2024 theme was \"150 years of Enabling Communication and Empowering Peoples Across Nations\" (marking UPU's 150th year).",
         "exam_weight": "Medium",
         "keywords": [
             "specific",
@@ -17538,7 +17538,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 20,
         "question": "What is defined as Under the \"LiFE\" (Lifestyle for Environment) initiative, the Department of Posts implemented \"Ek Ped Maa Ke Naam\". This campaign primarily focuses on?",
         "answer": "Planting trees as a tribute to mothers to promote environmental sustainability.",
-        "explanation": "\"Ek Ped Maa Ke Naam\" involves **planting trees** as a tribute to mothers.",
+        "explanation": "\"Ek Ped Maa Ke Naam\" involves planting trees as a tribute to mothers.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17555,7 +17555,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 21,
         "question": "What is defined as The \"Deen Dayal SPARSH Yojana\" is a scholarship scheme to promote?",
         "answer": "Philately as a hobby among school children (Class VI to IX).",
-        "explanation": "SPARSH is for **Philately** among children of classes **VI to IX**.",
+        "explanation": "SPARSH is for Philately among children of classes VI to IX.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17572,7 +17572,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 22,
         "question": "What is the maximum weight limit for a \"Book Packet\" sent via India Post?",
         "answer": "5 Kg",
-        "explanation": "Book Packet max weight is **5 Kg**.",
+        "explanation": "Book Packet max weight is 5 Kg.",
         "exam_weight": "Medium",
         "keywords": [
             "maximum",
@@ -17589,7 +17589,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 23,
         "question": "What is defined as In the context of Postal IT Modernization, \"DARPAN\" stands for?",
         "answer": "Digital Advancement of Rural Post Office for A New India",
-        "explanation": "DARPAN = **Digital Advancement of Rural Post Office for A New India**.",
+        "explanation": "DARPAN = Digital Advancement of Rural Post Office for A New India.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17606,7 +17606,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 24,
         "question": "What is defined as The \"International Tracked Packet System\" (ITPS) is designed for transmitting small packets to foreign countries up to a weight of?",
         "answer": "5 Kg",
-        "explanation": "ITPS is for packets up to **5 Kg**.",
+        "explanation": "ITPS is for packets up to 5 Kg.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17623,7 +17623,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 25,
         "question": "What is defined as Regarding the \"Senior Citizen Savings Scheme\" (SCSS), the maximum deposit limit has been enhanced to?",
         "answer": "₹30 Lakh",
-        "explanation": "SCSS limit was enhanced to **₹30 Lakh** in the recent budget/Finance Act.",
+        "explanation": "SCSS limit was enhanced to ₹30 Lakh in the recent budget/Finance Act.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17640,7 +17640,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 26,
         "question": "What is defined as \"Ganga Jal\" services provided by India Post allow devotees to?",
         "answer": "Purchase bottled Gangajal sourced from Gangotri/Rishikesh at Post Offices.",
-        "explanation": "Sale of **Gangajal** bottles at POs.",
+        "explanation": "Sale of Gangajal bottles at POs.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17657,7 +17657,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 27,
         "question": "What is defined as The \"Electronic Clearance Service\" (ECS) scheme in Post Offices is primarily used for?",
         "answer": "Automatic credit of interest/dividends and debit of utility bills.",
-        "explanation": "ECS is for **electronic credits/debits** (bulk payments).",
+        "explanation": "ECS is for electronic credits/debits (bulk payments).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17674,7 +17674,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 28,
         "question": "What is defined as In the organizational structure of a Postal Circle, the \"Region\" is headed by a?",
         "answer": "Postmaster General (PMG)",
-        "explanation": "A Postal Region is headed by a **Postmaster General (PMG)**.",
+        "explanation": "A Postal Region is headed by a Postmaster General (PMG).",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17691,7 +17691,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 29,
         "question": "The \"Dutta Committee\" is historically associated with which aspect of the Department of Posts?",
         "answer": "Revision of wages for Gramin Dak Sevaks.",
-        "explanation": "Justice Talwar Committee and others exist, but **G.D. Dutta Committee** is often associated with GDS wage/service condition reviews (historically) or specific departmental inquiries. *Correction*: The most famous GDS committee is Kamlesh Chandra. The Justice Talwar was 1997. Dutta was an older one. *Better Answer context*: If the report mentions GDS committee, it's likely Kamlesh Chandra. If \"Dutta\" is a specific distractor, skip deep history.",
+        "explanation": "Justice Talwar Committee and others exist, but G.D. Dutta Committee is often associated with GDS wage/service condition reviews (historically) or specific departmental inquiries. *Correction*: The most famous GDS committee is Kamlesh Chandra. The Justice Talwar was 1997. Dutta was an older one. *Better Answer context*: If the report mentions GDS committee, it's likely Kamlesh Chandra. If \"Dutta\" is a specific distractor, skip deep history.",
         "exam_weight": "Medium",
         "keywords": [
             "dutta",
@@ -17708,7 +17708,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 30,
         "question": "What is defined as As part of Swachhta Campaign 4.0, the \"CHARKHA\" installed at certain postal premises was created using?",
         "answer": "Waste materials like damaged furniture, old bicycles, and ropes.",
-        "explanation": "Report snippet explicitly mentions \"Charkha\" made from **Damaged Furniture, Old bicycle, Left over rope**.",
+        "explanation": "Report snippet explicitly mentions \"Charkha\" made from Damaged Furniture, Old bicycle, Left over rope.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17725,7 +17725,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 31,
         "question": "What is defined as The \"Pradhan Mantri Jeevan Jyoti Bima Yojana\" (PMJJBY) available through India Post Payments Bank provides life cover of?",
         "answer": "₹2 Lakh",
-        "explanation": "PMJJBY provides **₹2 Lakh** life cover.",
+        "explanation": "PMJJBY provides ₹2 Lakh life cover.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17742,7 +17742,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 32,
         "question": "What is the validity period of the \"Postal Identity Card\" issued by Post Offices?",
         "answer": "3 Years",
-        "explanation": "Postal ID cards are valid for **3 Years**.",
+        "explanation": "Postal ID cards are valid for 3 Years.",
         "exam_weight": "Medium",
         "keywords": [
             "validity",
@@ -17759,7 +17759,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 33,
         "question": "What is defined as Under the \"Sukanya Samriddhi Account,\" a partial withdrawal is allowed for the account holder's education after she attains the age of?",
         "answer": "18 years or passes 10th standard",
-        "explanation": "Withdrawal allowed after age **18** or passing **10th standard**.",
+        "explanation": "Withdrawal allowed after age 18 or passing 10th standard.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17776,7 +17776,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 34,
         "question": "What is defined as The \"Postal Staff College India\" (PSCI), the apex training institution for Indian Postal Service officers, is located in?",
         "answer": "Ghaziabad",
-        "explanation": "PSCI (now Rafi Ahmed Kidwai National Postal Academy) is in **Ghaziabad**.",
+        "explanation": "PSCI (now Rafi Ahmed Kidwai National Postal Academy) is in Ghaziabad.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17793,7 +17793,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 35,
         "question": "According to the Annual Report data (as of 31.03.2024), what percentage of Post Offices in India are located in rural areas?",
         "answer": "90.41%",
-        "explanation": "Snippet data: Rural POs = 1,49,164 out of 1,64,987 ≈ **90.41%**.",
+        "explanation": "Snippet data: Rural POs = 1,49,164 out of 1,64,987 ≈ 90.41%.",
         "exam_weight": "Medium",
         "keywords": [
             "according",
@@ -17810,7 +17810,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 36,
         "question": "The famous \"Scinde Dawk,\" Asia's first adhesive postage stamp, was issued in which year?",
         "answer": "1852",
-        "explanation": "Scinde Dawk was issued in **1852**.",
+        "explanation": "Scinde Dawk was issued in 1852.",
         "exam_weight": "Medium",
         "keywords": [
             "famous",
@@ -17827,7 +17827,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 37,
         "question": "What is defined as During the \"Special Campaign 4.0,\" the Department launched training modules to transform all staff into?",
         "answer": "\"Pro-Planet People\"",
-        "explanation": "Snippet explicitly says: \"transform all staff... into **Pro-Planet People**\".",
+        "explanation": "Snippet explicitly says: \"transform all staff... into Pro-Planet People\".",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17844,7 +17844,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 38,
         "question": "What is defined as The \"Dak Community Development Programme\" (DCDP) is primarily aimed at?",
         "answer": "Utilizing the postal network to assist the government in implementing social welfare schemes in remote areas.",
-        "explanation": "DCDP utilizes the network for **government schemes/social welfare** outreach.",
+        "explanation": "DCDP utilizes the network for government schemes/social welfare outreach.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17861,7 +17861,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 39,
         "question": "What is the approximate number of \"Branch Post Offices\" (BPOs) in the Indian Postal network as per the 2024-25 report data?",
         "answer": "~1,40,000",
-        "explanation": "Snippet lists Branch Post Offices as **1,39,891** (approx 1.40 Lakh).",
+        "explanation": "Snippet lists Branch Post Offices as 1,39,891 (approx 1.40 Lakh).",
         "exam_weight": "Medium",
         "keywords": [
             "approximate",
@@ -17878,7 +17878,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 40,
         "question": "What is defined as \"Project Arrow\" was an initiative focused on improving?",
         "answer": "The \"Look and Feel\" and \"Core Operations\" of Post Offices.",
-        "explanation": "Project Arrow focused on **Look and Feel** and **Core Operations**.",
+        "explanation": "Project Arrow focused on Look and Feel and Core Operations.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17895,7 +17895,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 41,
         "question": "Which mobile application is used by the Department of Posts for the delivery of accountable mail (Speed Post, Registered Post, etc.)?",
         "answer": "Postman Mobile App (PMA)",
-        "explanation": "Delivery is done via the **Postman Mobile App (PMA)**.",
+        "explanation": "Delivery is done via the Postman Mobile App (PMA).",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -17912,7 +17912,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 42,
         "question": "What is defined as The \"Universal Postal Union\" (UPU), of which India is a member, has its headquarters in?",
         "answer": "Bern, Switzerland",
-        "explanation": "UPU HQ is in **Bern, Switzerland**.",
+        "explanation": "UPU HQ is in Bern, Switzerland.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17929,7 +17929,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 43,
         "question": "What is defined as Under the \"Philately Scholarship Scheme,\" students are required to maintain a Philately Deposit Account with a minimum balance of?",
         "answer": "₹200",
-        "explanation": "Philately Deposit Account minimum balance is **₹200**.",
+        "explanation": "Philately Deposit Account minimum balance is ₹200.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17946,7 +17946,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 44,
         "question": "Which document serves as the \"Citizen’s Charter\" for the Department of Posts, outlining the service standards and timelines?",
         "answer": "The Citizen’s Charter (Sevottam)",
-        "explanation": "The **Citizen’s Charter** outlines standards.",
+        "explanation": "The Citizen’s Charter outlines standards.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -17963,7 +17963,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 45,
         "question": "The \"Dak Sewa Award\" is conferred at which administrative level?",
         "answer": "Circle Level",
-        "explanation": "Dak Sewa Award is typically a **Circle Level** award (Meghdoot is National).",
+        "explanation": "Dak Sewa Award is typically a Circle Level award (Meghdoot is National).",
         "exam_weight": "Medium",
         "keywords": [
             "sewa",
@@ -17980,7 +17980,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 46,
         "question": "What is defined as To promote export through postal channels, the Department has integrated its system with the Customs authorities using?",
         "answer": "Postal Bill of Export (PBE) automated system",
-        "explanation": "DNK uses the **Postal Bill of Export (PBE)** system.",
+        "explanation": "DNK uses the Postal Bill of Export (PBE) system.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -17997,7 +17997,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 47,
         "question": "What is defined as \"My Stamp\" is a brand name for?",
         "answer": "Personalized sheets of Postage Stamps of India.",
-        "explanation": "\"My Stamp\" allows **personalized** photos alongside postage stamps.",
+        "explanation": "\"My Stamp\" allows personalized photos alongside postage stamps.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -18014,7 +18014,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 48,
         "question": "The \"Complaint Management System\" (CMS) of India Post is integrated with which centralized government portal?",
         "answer": "CPGRAMS (Centralized Public Grievance Redress and Monitoring System)",
-        "explanation": "Integration with **CPGRAMS** is the standard for grievance redressal.",
+        "explanation": "Integration with CPGRAMS is the standard for grievance redressal.",
         "exam_weight": "Medium",
         "keywords": [
             "complaint",
@@ -18031,7 +18031,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 49,
         "question": "What is defined as The concept of \"Antyodaya Diwas\" observed during National Postal Week focuses on?",
         "answer": "Postal Banking and Financial Inclusion for the last mile.",
-        "explanation": "Snippet confirms Oct 10 is Antyodaya Diwas focusing on **financial inclusion/banking**.",
+        "explanation": "Snippet confirms Oct 10 is Antyodaya Diwas focusing on financial inclusion/banking.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -18048,7 +18048,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 50,
         "question": "What is defined as The \"Centre for Excellence in Postal Technology\" (CEPT) is responsible for?",
         "answer": "Development and maintenance of software solutions for the Department.",
-        "explanation": "CEPT (Mysuru) handles **software/IT** for India Post.",
+        "explanation": "CEPT (Mysuru) handles software/IT for India Post.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -18065,7 +18065,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 51,
         "question": "What is defined as The \"Postal Life Insurance\" (PLI) was originally introduced in 1884 for?",
         "answer": "Postal employees and later extended to other government employees.",
-        "explanation": "Started for **Postal employees**, later extended to Telegraph and other Govt employees.",
+        "explanation": "Started for Postal employees, later extended to Telegraph and other Govt employees.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -18082,7 +18082,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 52,
         "question": "In the context of \"LiFE\" (Lifestyle for Environment), what material was primarily used to create the \"CHARKHA\" art installation in Post Offices?",
         "answer": "Waste materials (damaged furniture, old ropes, etc.)",
-        "explanation": "Snippet confirms **Waste materials** (furniture, bicycle, ropes).",
+        "explanation": "Snippet confirms Waste materials (furniture, bicycle, ropes).",
         "exam_weight": "Medium",
         "keywords": [
             "context",
@@ -18099,7 +18099,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 53,
         "question": "What is defined as The \"Aadhaar Enabled Payment System\" (AePS) offered by IPPB allows customers to?",
         "answer": "Withdraw cash from any bank account linked with Aadhaar using biometric authentication.",
-        "explanation": "AePS allows cash withdrawal from **any bank account** (interoperable) at the PO.",
+        "explanation": "AePS allows cash withdrawal from any bank account (interoperable) at the PO.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -18116,7 +18116,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 54,
         "question": "What is the status of the Department of Posts regarding the \"Right to Information (RTI) Act\"?",
         "answer": "It is covered under the RTI Act, and every Post Office acts as a CAPIO/CPIO point.",
-        "explanation": "DoP is a public authority under **RTI Act**; POs serve as APIO/CPIOs.",
+        "explanation": "DoP is a public authority under RTI Act; POs serve as APIO/CPIOs.",
         "exam_weight": "Medium",
         "keywords": [
             "status",
@@ -18133,7 +18133,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 55,
         "question": "What is defined as The \"Direct Benefit Transfer\" (DBT) into PO Savings Accounts is facilitated through?",
         "answer": "NACH (National Automated Clearing House) and APBS (Aadhaar Payment Bridge System)",
-        "explanation": "DBT uses **NACH/APBS**.",
+        "explanation": "DBT uses NACH/APBS.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -18150,7 +18150,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 56,
         "question": "Which authority is responsible for the \"Cadre Restructuring\" of Group C employees in the Department of Posts?",
         "answer": "Department of Personnel and Training (DoPT) in consultation with the Department of Posts",
-        "explanation": "Cadre restructuring is done by **DoPT** (Personnel Ministry) in consultation with the Department.",
+        "explanation": "Cadre restructuring is done by DoPT (Personnel Ministry) in consultation with the Department.",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -18167,7 +18167,7 @@ export const p1_25: FlashCard[] = [
         "card_no": 57,
         "question": "What is defined as The \"Post Office Savings Account\" requires a minimum balance of?",
         "answer": "₹500",
-        "explanation": "Minimum balance for a standard POSB cheque account is **₹500**.",
+        "explanation": "Minimum balance for a standard POSB cheque account is ₹500.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -20866,7 +20866,7 @@ export const p1_33: FlashCard[] = [
         "card_no": 11,
         "question": "Which document has to be submitted by a candidate declaring knowledge of computer operations?",
         "answer": "An undertaking",
-        "explanation": "The requirement is specifically \"An undertaking has to be submitted by the candidate declaring that he/she has adequate knowledge...\"  ---  ### **Section 2: Recruitment & Reservation (Rule 3-B)**",
+        "explanation": "The requirement is specifically \"An undertaking has to be submitted by the candidate declaring that he/she has adequate knowledge...\"  ---  ### Section 2: Recruitment & Reservation (Rule 3-B)",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -20900,7 +20900,7 @@ export const p1_33: FlashCard[] = [
         "card_no": 13,
         "question": "For which category is the application fee exempted?",
         "answer": "Transwomen",
-        "explanation": "Fee exemption is granted to female candidates, SC/ST, PwD, and Transwomen candidates.  ---  ### **Section 3: Termination & Discharge (Rule 8)**",
+        "explanation": "Fee exemption is granted to female candidates, SC/ST, PwD, and Transwomen candidates.  ---  ### Section 3: Termination & Discharge (Rule 8)",
         "exam_weight": "Medium",
         "keywords": [
             "which",
@@ -21070,7 +21070,7 @@ export const p1_33: FlashCard[] = [
         "card_no": 23,
         "question": "If a GDS is absconding and subsequently put off duty, are they entitled to ex-gratia payment?",
         "answer": "No",
-        "explanation": "The proviso explicitly states that a Sevak who has been absconding or remains absent unauthorizedly shall not be entitled to any compensation.  ---  ### **Section 7: Appeals, Revision & Review (Rule 13-20)**",
+        "explanation": "The proviso explicitly states that a Sevak who has been absconding or remains absent unauthorizedly shall not be entitled to any compensation.  ---  ### Section 7: Appeals, Revision & Review (Rule 13-20)",
         "exam_weight": "Medium",
         "keywords": [
             "absconding",

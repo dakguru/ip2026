@@ -16,7 +16,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "1st January, 1982",
     ],
     a: 1,
-    e: "Rule 1 states that these rules came into force from **1st July, 1981**.",
+    e: "Rule 1 states that these rules came into force from 1st July, 1981.",
   },
   // q1 → C
   {
@@ -28,7 +28,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "01.01.2004",
     ],
     a: 2,
-    e: "Rule 2 states that these rules apply to Government servants appointed **on or before 31.12.2003** who may be entitled to or have been authorized any class of pension referred to in Chapter V of the CCS (Pension) Rules, 2021.",
+    e: "Rule 2 states that these rules apply to Government servants appointed on or before 31.12.2003 who may be entitled to or have been authorized any class of pension referred to in Chapter V of the CCS (Pension) Rules, 2021.",
   },
   // q2 → A
   {
@@ -40,7 +40,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "The Head of Office who processes and forwards commutation applications",
     ],
     a: 0,
-    e: "Rule 3(d) defines 'Applicant' as a **government servant, including a retired Government servant, who applies for commutation of a percentage of pension in the prescribed form**.",
+    e: "Rule 3(d) defines 'Applicant' as a government servant, including a retired Government servant, who applies for commutation of a percentage of pension in the prescribed form.",
   },
   // q3 → D
   {
@@ -52,7 +52,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "40%",
     ],
     a: 3,
-    e: "Rule 5(1) states that a Government servant shall be entitled to commute for a lump sum payment of an amount **not exceeding 40%** of his pension.",
+    e: "Rule 5(1) states that a Government servant shall be entitled to commute for a lump sum payment of an amount not exceeding 40% of his pension.",
   },
   // q4 → B
   {
@@ -64,7 +64,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "The next lower rupee",
     ],
     a: 1,
-    e: "Rule 5(3) specifically states that the commuted value of pension as finally calculated **should be rounded off to the next higher rupee**.",
+    e: "Rule 5(3) specifically states that the commuted value of pension as finally calculated should be rounded off to the next higher rupee.",
   },
   // q5 → A
   {
@@ -76,7 +76,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "The date following the date of retirement",
     ],
     a: 0,
-    e: "Rule 6(1)(a) provides that commutation becomes absolute — in the case of an applicant who applies in Form 1 — **on the date on which the application in Form 1 is received by the Head of Office**.",
+    e: "Rule 6(1)(a) provides that commutation becomes absolute — in the case of an applicant who applies in Form 1 — on the date on which the application in Form 1 is received by the Head of Office.",
   },
   // q6 → C
   {
@@ -88,7 +88,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "2 months",
     ],
     a: 2,
-    e: "Rule 6 proviso (a) states: the reduction in pension shall be operative from the date of receipt of commuted value **or at the end of three months** after issue of authority by the Accounts Officer, **whichever is earlier**.",
+    e: "Rule 6 proviso (a) states: the reduction in pension shall be operative from the date of receipt of commuted value or at the end of three months after issue of authority by the Accounts Officer, whichever is earlier.",
   },
   // q7 → D
   {
@@ -100,7 +100,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "Against whom departmental or judicial proceedings are pending as referred to in Rule 8 of the Pension Rules, 2021",
     ],
     a: 3,
-    e: "Rule 4 disallows commutation to a Government servant: (1) against whom **departmental or judicial proceedings are pending** (Rule 8 of Pension Rules, 2021), or (2) to whom provisional pension is authorized during pendency of such proceedings.",
+    e: "Rule 4 disallows commutation to a Government servant: (1) against whom departmental or judicial proceedings are pending (Rule 8 of Pension Rules, 2021), or (2) to whom provisional pension is authorized during pendency of such proceedings.",
   },
   // q8 → C
   {
@@ -112,7 +112,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "Form 4",
     ],
     a: 2,
-    e: "Rule 7(1) states that an applicant shall make a nomination **in Form 5** along with the application, conferring on one or more persons the right to receive the commuted value of pension in case the applicant dies without receiving it.",
+    e: "Rule 7(1) states that an applicant shall make a nomination in Form 5 along with the application, conferring on one or more persons the right to receive the commuted value of pension in case the applicant dies without receiving it.",
   },
   // q9 → B
   {
@@ -124,7 +124,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "20 years",
     ],
     a: 1,
-    e: "Rule 10-A states: the commuted amount of pension shall be restored on completion of **fifteen years** from the date the reduction of pension on account of commutation becomes operative in accordance with Rule 6.",
+    e: "Rule 10-A states: the commuted amount of pension shall be restored on completion of fifteen years from the date the reduction of pension on account of commutation becomes operative in accordance with Rule 6.",
   },
   // q10 → A
   {
@@ -136,7 +136,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "Compulsory retirement pension (Rule 40 of Pension Rules)",
     ],
     a: 0,
-    e: "Rule 12 lists five categories eligible for commutation **without medical examination**, which include: superannuation pension (Rule 33), retiring pension (Rule 34), absorption pension, compensation pension, and pension finalized after departmental/judicial proceedings. **Invalid pension, compassionate allowance, and compulsory retirement pension** require medical examination.",
+    e: "Rule 12 lists five categories eligible for commutation without medical examination, which include: superannuation pension (Rule 33), retiring pension (Rule 34), absorption pension, compensation pension, and pension finalized after departmental/judicial proceedings. Invalid pension, compassionate allowance, and compulsory retirement pension require medical examination.",
   },
   // q11 → B
   {
@@ -148,7 +148,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "Form 4",
     ],
     a: 1,
-    e: "Rule 13 prescribes that an applicant seeking commutation **without medical examination** shall apply to the Head of Office in **Form 1**.",
+    e: "Rule 13 prescribes that an applicant seeking commutation without medical examination shall apply to the Head of Office in Form 1.",
   },
   // q12 → C
   {
@@ -160,7 +160,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "2 months before the date of superannuation",
     ],
     a: 2,
-    e: "Rule 13(3)(a) states that such an applicant shall apply to the Head of Office in **Form 1-A** so as to reach the Head of Office **not later than 3 months** before the date of superannuation.",
+    e: "Rule 13(3)(a) states that such an applicant shall apply to the Head of Office in Form 1-A so as to reach the Head of Office not later than 3 months before the date of superannuation.",
   },
   // q13 → D
   {
@@ -172,7 +172,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "Apply afresh in Form 2 so that arrangements for medical examination can be made",
     ],
     a: 3,
-    e: "Rule 14 states that if Form 1 is received by the Head of Office **after one year** from the date of retirement, the applicant shall not be eligible to commute without medical examination and must **apply afresh in Form 2** so that arrangements for medical examination can be made.",
+    e: "Rule 14 states that if Form 1 is received by the Head of Office after one year from the date of retirement, the applicant shall not be eligible to commute without medical examination and must apply afresh in Form 2 so that arrangements for medical examination can be made.",
   },
   // q14 → A
   {
@@ -184,7 +184,7 @@ export const ccs_commutation_set1: RawQuestion[] = [
       "Rs. 9,000 per month",
     ],
     a: 0,
-    e: "Rule 9(2)(a) provides that an applicant who desires to commute a percentage of his provisional pension which works out to be **not exceeding Rs. 6,000 per month** does not require medical examination.",
+    e: "Rule 9(2)(a) provides that an applicant who desires to commute a percentage of his provisional pension which works out to be not exceeding Rs. 6,000 per month does not require medical examination.",
   },
 ];
 
@@ -199,7 +199,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "A Government servant who applied in Form 1 within one year of retirement",
     ],
     a: 0,
-    e: "Rule 18 lists applicants eligible for commutation **after medical examination**, which includes those who: (a) retire on **invalid pension (Rule 39)**, (b) are compulsorily retired as penalty (Rule 40), (c) receive compassionate allowance (Rule 41), or (d) have not applied within one year of retirement.",
+    e: "Rule 18 lists applicants eligible for commutation after medical examination, which includes those who: (a) retire on invalid pension (Rule 39), (b) are compulsorily retired as penalty (Rule 40), (c) receive compassionate allowance (Rule 41), or (d) have not applied within one year of retirement.",
   },
   // q1 → C
   {
@@ -211,7 +211,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "Form 5",
     ],
     a: 2,
-    e: "Rule 19 prescribes that an applicant referred to in Rule 18 (commutation **after medical examination**) shall apply to the Head of Office in **Form 2**.",
+    e: "Rule 19 prescribes that an applicant referred to in Rule 18 (commutation after medical examination) shall apply to the Head of Office in Form 2.",
   },
   // q2 → B
   {
@@ -223,7 +223,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "The Medical Board constituted by the Central Government",
     ],
     a: 1,
-    e: "Rule 3(e) defines 'Chief Administrative Medical Authority' as **the medical authority of the State or the Union Territory as specified**.",
+    e: "Rule 3(e) defines 'Chief Administrative Medical Authority' as the medical authority of the State or the Union Territory as specified.",
   },
   // q3 → D
   {
@@ -235,7 +235,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "A Medical Board",
     ],
     a: 3,
-    e: "Rule 22(1) states that the medical authority shall be a **Medical Board** where an applicant applies for commutation of **Invalid Pension**.",
+    e: "Rule 22(1) states that the medical authority shall be a Medical Board where an applicant applies for commutation of Invalid Pension.",
   },
   // q4 → A
   {
@@ -247,7 +247,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "A Specialist Medical Officer in a Government hospital",
     ],
     a: 0,
-    e: "Rule 22(2) provides that in cases other than invalid pension, the medical authority shall be a **Medical Officer not lower in status than that of a Civil Surgeon or a District Medical Officer**.",
+    e: "Rule 22(2) provides that in cases other than invalid pension, the medical authority shall be a Medical Officer not lower in status than that of a Civil Surgeon or a District Medical Officer.",
   },
   // q5 → C
   {
@@ -259,7 +259,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "Shared equally between the applicant and the Government",
     ],
     a: 2,
-    e: "Rule 23 states: 'The applicant shall be required to pay for medical examination **such fee as may be specified by the Central Government**.' The fee is thus borne by **the applicant**.",
+    e: "Rule 23 states: 'The applicant shall be required to pay for medical examination such fee as may be specified by the Central Government.' The fee is thus borne by the applicant.",
   },
   // q6 → B
   {
@@ -271,7 +271,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "Three months from the date of submission of Form 2",
     ],
     a: 1,
-    e: "Rule 21(3) states: 'In fixing the date of medical examination, it shall be ensured that the medical examination is held, as far as possible, **before the date of the applicant's next birthday**.' This is crucial as the commutation factor depends on age next birthday.",
+    e: "Rule 21(3) states: 'In fixing the date of medical examination, it shall be ensured that the medical examination is held, as far as possible, before the date of the applicant's next birthday.' This is crucial as the commutation factor depends on age next birthday.",
   },
   // q7 → D
   {
@@ -283,7 +283,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "After being declared fit by the appropriate medical authority (after medical examination)",
     ],
     a: 3,
-    e: "Rule 18(b) places such applicants — compulsorily retired under Rule 40 — under Chapter III (commutation **after medical examination**). They are eligible to commute subject to Rule 5 limits, **after being declared fit by the appropriate medical authority**.",
+    e: "Rule 18(b) places such applicants — compulsorily retired under Rule 40 — under Chapter III (commutation after medical examination). They are eligible to commute subject to Rule 5 limits, after being declared fit by the appropriate medical authority.",
   },
   // q8 → B
   {
@@ -295,7 +295,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "60 days of the medical examination",
     ],
     a: 1,
-    e: "Rule 27 states: 'An applicant may, within **one month** of the receipt of the certified copy from the medical authority, prefer an appeal by addressing a letter to the Head of Office that the opinion of the medical authority may be reviewed by another medical authority.'",
+    e: "Rule 27 states: 'An applicant may, within one month of the receipt of the certified copy from the medical authority, prefer an appeal by addressing a letter to the Head of Office that the opinion of the medical authority may be reviewed by another medical authority.'",
   },
   // q9 → A
   {
@@ -307,7 +307,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "Not at all, once Form 2 has been submitted to the Head of Office",
     ],
     a: 0,
-    e: "Rule 28(1) provides that the applicant may withdraw his application **at any time before subjecting himself to medical examination** before the medical authority; but in no case after he has appeared before such authority.",
+    e: "Rule 28(1) provides that the applicant may withdraw his application at any time before subjecting himself to medical examination before the medical authority; but in no case after he has appeared before such authority.",
   },
   // q10 → C
   {
@@ -319,7 +319,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "21 days",
     ],
     a: 2,
-    e: "Rule 28(2) provides that in such a case, the applicant may, by giving notice in writing to the Head of Office, withdraw his application within **14 days** from the date on which he receives the information from the Accounts Officer.",
+    e: "Rule 28(2) provides that in such a case, the applicant may, by giving notice in writing to the Head of Office, withdraw his application within 14 days from the date on which he receives the information from the Accounts Officer.",
   },
   // q11 → B
   {
@@ -331,7 +331,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "3 months from the date of the first medical examination",
     ],
     a: 1,
-    e: "Rule 26(1) provides that the second medical examination shall take place after the expiry of a period of **not less than one year** from the date of the first medical examination.",
+    e: "Rule 26(1) provides that the second medical examination shall take place after the expiry of a period of not less than one year from the date of the first medical examination.",
   },
   // q12 → D
   {
@@ -343,7 +343,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "A Medical Board at the applicant's own expense",
     ],
     a: 3,
-    e: "Rule 26(2) states: 'If the applicant desires to be re-examined on expiry of the period of one year, the examination shall be by a **Medical Board at his own expense**.'",
+    e: "Rule 26(2) states: 'If the applicant desires to be re-examined on expiry of the period of one year, the examination shall be by a Medical Board at his own expense.'",
   },
   // q13 → A
   {
@@ -355,7 +355,7 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "No, but a written intimation to the Accounts Officer is required",
     ],
     a: 0,
-    e: "Rule 10 states that when pension is retrospectively revised and enhanced, the applicant shall be paid the **difference** between the commuted value determined with reference to the enhanced pension and the commuted value already authorized. **For payment of this difference, the applicant shall not be required to apply afresh**.",
+    e: "Rule 10 states that when pension is retrospectively revised and enhanced, the applicant shall be paid the difference between the commuted value determined with reference to the enhanced pension and the commuted value already authorized. For payment of this difference, the applicant shall not be required to apply afresh.",
   },
   // q14 → C
   {
@@ -367,6 +367,6 @@ export const ccs_commutation_set2: RawQuestion[] = [
       "8.371",
     ],
     a: 2,
-    e: "The Commutation Factor Table appended to the Rules specifies: Age next birthday **61** → Commutation Value = **8.194**. (For reference: Age 60 = 8.287; Age 62 = 8.093; Age 59 = 8.371.)",
+    e: "The Commutation Factor Table appended to the Rules specifies: Age next birthday 61 → Commutation Value = 8.194. (For reference: Age 60 = 8.287; Age 62 = 8.093; Age 59 = 8.371.)",
   },
 ];

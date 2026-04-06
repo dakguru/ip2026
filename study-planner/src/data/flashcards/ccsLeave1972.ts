@@ -110,15 +110,15 @@ export const leave_set1: RawQuestion[] = [
         e: "Unlike EL, there is no maximum limit for the accumulation of Half Pay Leave."
     },
     {
-        q: "How is 'Half Pay Leave' (HPL) calculated for a period of 'Extraordinary Leave' (EOL) or 'Dies-non'?",
+        q: "Under Rule 29, how is 'Half Pay Leave' (HPL) credit reduced for a period treated as 'Dies-non' or suspension?",
         o: [
             "No deduction",
-            "Reduced by 1/18th of the EOL period",
-            "Reduced by 1/10th of the EOL period",
+            "Reduced by 1/18th of such period (max 10 days)",
+            "Reduced by 1/10th of such period (max 15 days)",
             "Fully forfeited"
         ],
-        a: 2,
-        e: "The HPL credit is reduced by 1/10th of the period of EOL or dies-non during that half-year, up to a maximum of 10 days."
+        a: 1,
+        e: "Rule 29: HPL credit is reduced by 1/18th of the period treated as dies-non/suspension, subject to a maximum of 10 days. (Note: EL under Rule 27 is reduced by 1/10th, max 15 days — a common exam trap.)"
     },
     {
         q: "'Earned Leave' is NOT admissible in a 'Vacation Department.' Instead, what are they entitled to?",
@@ -352,15 +352,15 @@ export const leave_set2: RawQuestion[] = [
     },
     {
         q: "How much 'Special Casual Leave' is admissible for 'Vasectomy' (male sterilization)?",
-        o: ["2 days", "6 working days", "10 days", "15 days"],
+        o: ["2 days", "5 working days", "10 days", "15 days"],
         a: 1,
-        e: "Male Govt servants are entitled to 6 working days of Special Casual Leave for undergoing vasectomy."
+        e: "Male Govt servants are entitled to 5 working days of Special Casual Leave for vasectomy (also 5 days for second-time failure/recanalization attempt)."
     },
     {
-        q: "How much Special Casual Leave is for a male employee whose wife undergoes 'Tubectomy'?",
-        o: ["Nil", "3 days", "7 working days", "14 days"],
-        a: 2,
-        e: "Male employees get 7 working days of Special Casual Leave to attend to their wife post-tubectomy."
+        q: "How much Special Casual Leave is admissible for a male employee whose wife undergoes 'Tubectomy'?",
+        o: ["Nil", "3 working days", "7 working days", "14 days"],
+        a: 1,
+        e: "A male Govt servant gets 3 working days of Special Casual Leave when his wife undergoes tubectomy. (Female employees undergoing tubectomy themselves are entitled to 10 working days.)"
     },
     {
         q: "Can 'Special Casual Leave' be combined with EL or HPL?",
@@ -529,6 +529,234 @@ export const leave_set3: RawQuestion[] = [
     }
 ];
 
+export const leave_set5: RawQuestion[] = [
+    {
+        q: "On which date did the Central Civil Services (Leave) Rules, 1972 come into force?",
+        o: ["1st April 1972", "1st June 1972", "15th August 1972", "1st January 1973"],
+        a: 1,
+        e: "Rule 1: The CCS (Leave) Rules, 1972 came into force on 1st June, 1972."
+    },
+    {
+        q: "To which category of Government servants do the CCS (Leave) Rules, 1972 apply?",
+        o: [
+            "All persons employed in India",
+            "Government servants appointed to civil services and posts in connection with the affairs of the Union",
+            "State Government employees only",
+            "Only Gazetted officers"
+        ],
+        a: 1,
+        e: "Rule 2: These rules apply to Government servants appointed to civil services and posts in connection with the affairs of the Union."
+    },
+    {
+        q: "Which of the following is EXCLUDED from the application of CCS (Leave) Rules, 1972?",
+        o: [
+            "Permanent Central Govt employees",
+            "Members of All India Services (IAS, IPS & IFS)",
+            "Group C employees of the Central Secretariat",
+            "Re-employed Central Govt pensioners"
+        ],
+        a: 1,
+        e: "Rule 2 Exceptions: Members of All India Services (IAS, IPS, IFS) are excluded, as they have their own separate leave rules."
+    },
+    {
+        q: "Which of the following is also NOT governed by CCS (Leave) Rules, 1972?",
+        o: [
+            "Group B Central Govt employees",
+            "Persons paid from contingencies",
+            "Permanent Section Officers",
+            "Postal employees"
+        ],
+        a: 1,
+        e: "Rule 2 Exceptions: Persons paid from contingencies (along with Railway servants, daily-rated employees, industrial workmen, etc.) are excluded from these rules."
+    },
+    {
+        q: "Under Rule 3, what does 'Completed Years of Service' include for leave purposes?",
+        o: [
+            "Only the period spent on duty",
+            "Duty and Earned Leave only",
+            "Continuous service including duty and all leave, including Extraordinary Leave",
+            "Only duty and HPL"
+        ],
+        a: 2,
+        e: "Rule 3(d): 'Completed years of service' means continuous service of specified duration including period spent on duty as well as on leave, including extraordinary leave."
+    },
+    {
+        q: "Under Rule 3, what does 'Date of Retirement' mean for a Government servant?",
+        o: [
+            "The last working day of service",
+            "The morning of the last day of the month of attaining retirement age",
+            "The afternoon of the last day of the month in which the servant attains the retirement age",
+            "The first day of the month following retirement"
+        ],
+        a: 2,
+        e: "Rule 3(e): Date of retirement means the afternoon of the last day of the month in which the Government servant attains the age prescribed for retirement."
+    },
+    {
+        q: "A Government servant in 'quasi-permanent employ' is one who has not been confirmed after a continuous service of:",
+        o: ["1 year", "2 years", "3 years", "5 years"],
+        a: 2,
+        e: "Rule 3(i)(1): A quasi-permanent employee is one declared eligible by UPSC and appointed with a written understanding that the vacancy is expected to become permanent, but not confirmed after 3 years continuous service."
+    },
+    {
+        q: "Under Rule 3, 'Foreign Service' means service in which a Government servant receives pay from a source other than the Consolidated Fund of India. What is the key financial criterion?",
+        o: [
+            "Pay from a private company",
+            "Pay from any source other than the Consolidated Fund of India/State/UT",
+            "Pay from foreign governments only",
+            "Pay from international organisations only"
+        ],
+        a: 1,
+        e: "Rule 3(g): Foreign service means service where pay is received with the sanction of Government from any source other than the Consolidated Fund of India, a State, or a Union Territory."
+    },
+    {
+        q: "Under Rule 4, a Central Government servant on temporary transfer to a State Government continues to be governed by:",
+        o: [
+            "The State Government's Leave Rules",
+            "CCS (Leave) Rules, 1972",
+            "Both, equally",
+            "Whichever rules are more beneficial"
+        ],
+        a: 1,
+        e: "Rule 4(1): Government servants governed by CCS Leave Rules shall continue to be governed by these rules while on temporary transfer to a State Government or Indian Railways."
+    },
+    {
+        q: "Under Rule 6, when a Central Government servant is transferred to an industrial establishment, what is done with accumulated Earned Leave?",
+        o: [
+            "Leave lapses automatically",
+            "Leave is converted to HPL",
+            "A suo motu order for cash equivalent of EL salary (max 300 days) is issued",
+            "Leave is carried forward as it is"
+        ],
+        a: 2,
+        e: "Rule 6: The authority competent to grant leave shall suo motu issue an order granting cash equivalent of leave salary for EL at credit, subject to a maximum of 300 days."
+    },
+    {
+        q: "Under Rule 8, a Government servant's claim to leave is regulated by the rules in force at the time:",
+        o: [
+            "Of his appointment",
+            "The leave is applied for and granted",
+            "Of his last promotion",
+            "His service commenced"
+        ],
+        a: 1,
+        e: "Rule 8: A Government servant's claim to leave is regulated by the rules in force at the time the leave is applied for and granted."
+    },
+    {
+        q: "Under Rule 9, what happens to leave at credit when a Government servant resigns through proper channel to take up another Government appointment?",
+        o: [
+            "Leave at credit shall cease (forfeited)",
+            "Leave at credit shall NOT lapse",
+            "Only 50% of leave is preserved",
+            "Leave is automatically encashed"
+        ],
+        a: 1,
+        e: "Rule 9(2): Resignation through the proper channel to take up another appointment shall not result in the lapse of the leave at credit."
+    },
+    {
+        q: "A Government servant dismissed from service who is later reinstated on appeal is entitled to:",
+        o: [
+            "No leave credit from prior service",
+            "Count service prior to dismissal for leave purposes",
+            "50% of prior service leave credit",
+            "Fresh start only from reinstatement"
+        ],
+        a: 1,
+        e: "Rule 9(3): A Government servant dismissed/removed and reinstated on appeal or revision is entitled to count service prior to dismissal for leave purposes."
+    },
+    {
+        q: "Under Rule 10, within how many days of resuming duty must a request for commutation of one kind of leave into another be submitted?",
+        o: ["7 days", "15 days", "30 days", "60 days"],
+        a: 2,
+        e: "Rule 10(2): The request for commutation must be submitted within 30 days from the date the Government servant joins duty on the expiry of the leave."
+    },
+    {
+        q: "Under Rule 10, which leave can be commuted retrospectively into 'Leave Not Due' (subject to Rule 31)?",
+        o: ["Earned Leave", "Half Pay Leave", "Extraordinary Leave (EXOL)", "Study Leave"],
+        a: 2,
+        e: "Rule 10(3): Extraordinary Leave (EXOL) granted on a medical certificate or otherwise may be commuted retrospectively into Leave Not Due, subject to Rule 31 provisions."
+    },
+    {
+        q: "Under Rule 12, the maximum continuous leave of any kind that can be granted without the President's sanction is:",
+        o: ["2 years", "3 years", "5 years", "7 years"],
+        a: 2,
+        e: "Rule 12(1): No Government servant shall be granted leave of any kind for a continuous period exceeding 5 years, without the sanction of the President."
+    },
+    {
+        q: "A Government servant absent from duty for a continuous period exceeding 5 years (other than on foreign service), without Presidential sanction, is deemed to have:",
+        o: [
+            "Taken unauthorised Extraordinary Leave",
+            "Resigned from Government service",
+            "Been suspended",
+            "Lost all service benefits only"
+        ],
+        a: 1,
+        e: "Rule 12(3): Such absence results in deemed resignation from Government service. The resignation takes effect from the date the leave commenced."
+    },
+    {
+        q: "The 'deemed resignation' rule under Rule 12 does NOT apply when leave is:",
+        o: [
+            "For more than 3 years",
+            "Applied for on a medical certificate in connection with a disability",
+            "Availed on the eve of retirement",
+            "For private reasons"
+        ],
+        a: 1,
+        e: "Rule 12(4) Disability Exemption: The deemed resignation rule shall not apply where leave is applied for on a medical certificate in connection with a disability."
+    },
+    {
+        q: "Under Rule 13, a Government servant wishing to take up employment in India while on leave requires sanction from:",
+        o: ["The President", "The Appointing Authority", "Head of Department", "The Ministry"],
+        a: 1,
+        e: "Rule 13(1)(b): For employment in India, prior sanction of the Appointing Authority is required. (For outside India, sanction of the President is required.)"
+    },
+    {
+        q: "Under Rule 14, applications for leave or extension must be made in which Form?",
+        o: ["Form 1", "Form 2", "Form 3", "Form 5"],
+        a: 0,
+        e: "Rule 14(1): Any application for leave or extension thereof shall be made in Form 1 to the competent authority."
+    },
+    {
+        q: "Under Rule 15, who maintains the leave account for a Gazetted Government servant, and in which Form?",
+        o: [
+            "Head of Office in Form 1",
+            "Audit Officer in Form 2",
+            "Civil Surgeon in Form 3",
+            "The servant himself in Form 5"
+        ],
+        a: 1,
+        e: "Rule 15(1): For Gazetted Officers, a leave account shall be maintained in Form 2 by the Audit Officer. For Non-Gazetted, it is maintained by the Head of Office."
+    },
+    {
+        q: "Under Rule 16, when the admissibility report is unduly delayed, provisional leave sanction can be issued for a period not exceeding:",
+        o: ["15 days", "30 days", "60 days", "90 days"],
+        a: 2,
+        e: "Rule 16(2): The competent authority may issue a provisional sanction for a period not exceeding 60 days based on available information when the report is unduly delayed."
+    },
+    {
+        q: "Rule 18 of CCS (Leave) Rules, 1972 was:",
+        o: [
+            "Inserted by a 2017 amendment",
+            "Omitted — its provisions merged into Rule 19",
+            "Substituted to cover disability cases",
+            "Retained as a special rule for Gazetted Officers"
+        ],
+        a: 1,
+        e: "Rule 18 was Omitted. Its provisions (relating to medical certificates for Gazetted servants) were merged into Rule 19, which now governs both Gazetted and Non-Gazetted Government servants."
+    },
+    {
+        q: "Under Rule 19, the Medical Certificate form for a Non-Gazetted Government servant is:",
+        o: ["Form 3", "Form 3-A", "Form 4", "Form 5"],
+        a: 2,
+        e: "Rule 19: Form 3 is used for Gazetted officers and Form 4 for Non-Gazetted Government servants. Form 3-A is for disability certification, and Form 5 is the Fitness Certificate."
+    },
+    {
+        q: "Under Rule 19, the competent authority can waive the medical certificate for leave not exceeding how many days?",
+        o: ["1 day", "3 days", "5 days", "7 days"],
+        a: 1,
+        e: "Rule 19(4): The authority may waive the production of a medical certificate for leave for a period not exceeding 3 days at a time. Such leave is debited against leave other than leave on medical grounds."
+    },
+];
+
 export const leave_set4: RawQuestion[] = [
     {
         q: "Under what condition is 'Study Leave' granted?",
@@ -680,4 +908,283 @@ export const leave_set4: RawQuestion[] = [
         a: 1,
         e: "Unsanctioned absence after leave expiry is 'dies-non', missing out on salary and service count."
     }
+];
+
+export const leave_set6: RawQuestion[] = [
+    {
+        q: "Under Rule 21, when does a period of leave ordinarily end?",
+        o: [
+            "On the day the servant resumes charge",
+            "On the day preceding the day on which the servant resumes charge",
+            "On the last day sanctioned in the leave order",
+            "On the day the fitness certificate is produced"
+        ],
+        a: 1,
+        e: "Rule 21: Leave ordinarily begins on the day on which the transfer of charge is effected and ends on the day preceding that on which the charge is resumed."
+    },
+    {
+        q: "Under Rule 22, in cases where leave is on medical certificate, what happens to holidays immediately before the certified sick day?",
+        o: [
+            "They are counted as leave days",
+            "They are automatically allowed to be prefixed to leave (without counting as leave)",
+            "They are forfeited",
+            "They are treated as unauthorized absence"
+        ],
+        a: 1,
+        e: "Rule 22(2)(a): When certified medically unwell, holiday(s) immediately preceding the certified day are automatically allowed to be prefixed to leave — they become part of the leave period."
+    },
+    {
+        q: "Under Rule 23, when a Government servant is recalled from leave spent outside India, he is entitled to a refund of passage money from India if he has not completed:",
+        o: [
+            "One month of leave or 1/4th of the leave period",
+            "Half the period of leave or 3 months, whichever is shorter",
+            "3/4th of the leave period or 6 months",
+            "One full year of leave"
+        ],
+        a: 1,
+        e: "Rule 23(b)(iv): Refund of passage from India is admissible if the servant has not completed half the period of leave or 3 months, whichever is shorter."
+    },
+    {
+        q: "Under Rule 24, a Government servant on leave for Tuberculosis may resume duty on the basis of:",
+        o: [
+            "A declaration of full recovery",
+            "A fitness certificate recommending light work",
+            "Head of Department's discretion alone",
+            "Completion of 6 months treatment"
+        ],
+        a: 1,
+        e: "Rule 24(3): A Government servant suffering from Tuberculosis may be allowed to resume duty on the basis of a fitness certificate recommending light work."
+    },
+    {
+        q: "Under Rule 25, when a Government servant is absent after the expiry of leave without extension, the period of overstayal is debited as:",
+        o: [
+            "Earned Leave first, then EO Leave",
+            "Half Pay Leave first (to the extent due), then excess as Extraordinary Leave",
+            "Extraordinary Leave directly",
+            "Casual Leave"
+        ],
+        a: 1,
+        e: "Rule 25(1): The period of overstayal is debited against Half Pay Leave (HPL) to the extent due, and the excess is treated as Extraordinary Leave (EXOL). No leave salary is paid."
+    },
+    {
+        q: "Under Rule 27, the maximum reduction in EL credit due to EXOL/dies-non in a half-year is:",
+        o: ["5 days", "10 days", "15 days", "20 days"],
+        a: 2,
+        e: "Rule 27(3): EL credit is reduced by 1/10th of EXOL/dies-non in the previous half-year, subject to a maximum reduction of 15 days. (HPL reduction under Rule 29 is capped at 10 days.)"
+    },
+    {
+        q: "Under Rule 28, Earned Leave for persons in a 'Vacation Department' is credited in two installments of ___ days each on 1st January and 1st July.",
+        o: ["2 days", "5 days", "10 days", "15 days"],
+        a: 1,
+        e: "Rule 28(1): Vacation Department employees get EL credit of 5 days per installment (10 days per year), compared to 15 days per installment (30 days per year) for non-vacation staff."
+    },
+    {
+        q: "Under Rule 29, Half Pay Leave (HPL) is credited at the rate of ___ for each completed calendar month of service.",
+        o: ["2.5 days", "5/3 days (approximately 1.67 days)", "10 days", "20 days"],
+        a: 1,
+        e: "Rule 29(2): HPL is credited at the rate of 5/3 days for each completed calendar month, totalling 20 days per year (credited as 10 days on 1st Jan and 10 days on 1st July)."
+    },
+    {
+        q: "Under Rule 29, HPL credit is reduced by ___ of any period treated as dies-non, subject to a maximum of 10 days.",
+        o: ["1/10th", "1/15th", "1/18th", "1/20th"],
+        a: 2,
+        e: "Rule 29(4): HPL credit is reduced by 1/18th of the period treated as dies-non or suspension, subject to a maximum of 10 days. (EL is reduced by 1/10th under Rule 27.)"
+    },
+    {
+        q: "Under Rule 33, an Apprentice is entitled to leave on medical certificate at what rate, and for how long?",
+        o: [
+            "Full pay for up to 3 months per year",
+            "Half pay for up to 1 month per year of apprenticeship",
+            "No pay for up to 6 months",
+            "Full pay for the entire apprenticeship period"
+        ],
+        a: 1,
+        e: "Rule 33(2)(a): An apprentice is entitled to leave on medical certificate at a leave salary equivalent to half pay for a period not exceeding one month in any year of apprenticeship."
+    },
+    {
+        q: "Under Rule 34, a person re-employed after retirement is treated under CCS (Leave) Rules as:",
+        o: [
+            "A continuing employee with full past service credit",
+            "As if entering Government service for the first time on the date of re-employment",
+            "An employee eligible for HPL only",
+            "A probationer for 2 years"
+        ],
+        a: 1,
+        e: "Rule 34: The provisions of these rules shall apply as if the person had entered Government service for the first time on the date of re-employment."
+    },
+    {
+        q: "Under Rule 38, Leave Preparatory to Retirement (LPR) is limited to a maximum of ___ days, comprising which types of leave?",
+        o: [
+            "180 days — EL only",
+            "240 days — EL and HPL equally",
+            "300 days — EL due together with HPL due",
+            "365 days — any leave at credit"
+        ],
+        a: 2,
+        e: "Rule 38(1): LPR is limited to 300 days, to the extent of Earned Leave due together with Half Pay Leave due, including the date of retirement."
+    },
+    {
+        q: "Under Rule 38-A, if a Government servant fails to avail LTC within the prescribed period after encashing EL, the refund must be made with interest at:",
+        o: [
+            "SBI base lending rate",
+            "2% above the GPF rate",
+            "12% per annum flat",
+            "No interest, only principal"
+        ],
+        a: 1,
+        e: "Rule 38-A(5): If LTC is not availed within prescribed time, the entire amount encashed must be refunded with interest at 2% above the GPF rate, and the leave is credited back."
+    },
+    {
+        q: "Under Rule 39, cash equivalent of leave may be withheld by the competent authority when a Government servant retires while:",
+        o: [
+            "On Earned Leave",
+            "On Study Leave",
+            "Under suspension or during disciplinary/criminal proceedings",
+            "On Leave Preparatory to Retirement"
+        ],
+        a: 2,
+        e: "Rule 39(3) Withholding: The competent authority may withhold cash equivalent if the servant retires while under suspension or during disciplinary or criminal proceedings, if there is a possibility of money becoming recoverable."
+    },
+    {
+        q: "The formula for encashment of Half Pay Leave (HPL) at retirement under Rule 39 uses:",
+        o: [
+            "(Basic Pay + DA) × HPL days / 30",
+            "(Half of Basic Pay + DA) × HPL days / 30",
+            "Basic Pay only × HPL days / 26",
+            "Full Pay × HPL days / 30"
+        ],
+        a: 1,
+        e: "Rule 39: For HPL encashment, the formula is (Half of Last Basic Pay + DA) × Unutilized HPL / 30. EL is adjusted first; HPL fills the balance up to 300 days."
+    },
+    {
+        q: "Under Rule 39, on resignation from service, cash equivalent of leave is payable for ___ of EL at credit, subject to a maximum of ___ days.",
+        o: [
+            "100% of EL; 300 days",
+            "50% of EL; 150 days",
+            "25% of EL; 75 days",
+            "No encashment on resignation"
+        ],
+        a: 1,
+        e: "Rule 39(5): On resignation, cash equivalent is granted for 50% of Earned Leave at credit, subject to a maximum of 150 days."
+    },
+    {
+        q: "Under Rule 39-A, the family of a Government servant who dies in service receives cash equivalent for leave (EL + HPL combined) up to a maximum of:",
+        o: ["150 days", "180 days", "240 days", "300 days"],
+        a: 3,
+        e: "Rule 39-A: Maximum 300 days cash equivalent (EL + HPL combined) shall be paid to the family of a Government servant who dies in service."
+    },
+    {
+        q: "Under Rule 39-C, who is FIRST in order of precedence for receiving leave encashment payment upon the death of a Government servant?",
+        o: ["Eldest surviving son", "Father", "Widow / Husband", "Eldest unmarried daughter"],
+        a: 2,
+        e: "Rule 39-C: The order of precedence is: (i) Widow/Husband → (ii) Eldest surviving son → (iii) Eldest unmarried daughter → (iv) Eldest widowed daughter → (v) Father → (vi) Mother, etc."
+    },
+    {
+        q: "Under Rule 43, Maternity Leave is NOT admissible for which of the following?",
+        o: ["Normal delivery", "Miscarriage/Abortion (up to 45 days)", "Caesarean section", "Threatened abortion"],
+        a: 3,
+        e: "Rule 43 Note: Maternity leave is not admissible for 'threatened abortion'. Only actual miscarriage or abortion qualifies for the 45-day limit during entire service."
+    },
+    {
+        q: "Under the OM dated 02.09.2022, 'Special Maternity Leave' of ___ days is granted in case of stillbirth (at or after 28 weeks gestation) or child's death within 28 days of birth.",
+        o: ["30 days", "45 days", "60 days", "90 days"],
+        a: 2,
+        e: "Legislative Update (OM 02.09.2022): A female Government servant is entitled to 60 days of Special Maternity Leave for stillbirth (no signs of life at or after 28 weeks gestation) or death of the child within 28 days of birth."
+    },
+    {
+        q: "Under Rule 43, the maximum leave that can be granted in continuation of Maternity Leave (all types combined) is:",
+        o: ["6 months", "1 year", "2 years", "3 years"],
+        a: 2,
+        e: "Rule 43(6): Leave of the kind due — including Commuted Leave up to 60 days and Leave Not Due — may be granted in continuation of Maternity Leave up to a maximum of 2 years."
+    },
+    {
+        q: "Under Rule 43-B (Child Adoption Leave), continuation leave after the initial 180 days is limited to:",
+        o: [
+            "6 months fixed",
+            "1 year, reduced by the age of the adopted child",
+            "2 years",
+            "90 days only"
+        ],
+        a: 1,
+        e: "Rule 43-B(4): Continuation leave (including Commuted Leave up to 60 days and LND) may be granted for a period up to one year, reduced by the age of the adopted child."
+    },
+    {
+        q: "Under Rule 43-C, how many spells of Child Care Leave (CCL) per calendar year are permissible for single mothers?",
+        o: ["2 spells", "3 spells", "5 spells", "6 spells"],
+        a: 3,
+        e: "Rule 43-C: While CCL is generally restricted to 3 spells per calendar year, single mothers (widows, divorcees, unmarried) are permitted up to 6 spells per calendar year."
+    },
+    {
+        q: "Under Rule 44 (WRIIL), what is the post-hospitalization pay arrangement for CAPF personnel?",
+        o: [
+            "Full pay for 6 months, then Half Pay Leave for 12 months",
+            "Full pay for 6 months, then Full Pay for next 24 months",
+            "Half pay throughout the recovery period",
+            "Full pay for 12 months only"
+        ],
+        a: 1,
+        e: "Rule 44(3): For CAPF personnel: Full pay and allowances for the entire hospitalization period, then Full Pay for 6 months immediately following, then Full Pay for the next 24 months. (General employees get HPL after 6 months.)"
+    },
+    {
+        q: "Under Rule 48, Special Leave for Sexual Harassment Inquiry is granted for a maximum of ___ days and its treatment regarding the leave account is:",
+        o: [
+            "30 days; debited to Earned Leave",
+            "60 days; debited as EOL",
+            "90 days; NOT debited to the leave account",
+            "180 days; debited as Half Pay Leave"
+        ],
+        a: 2,
+        e: "Rule 48: Maximum 90 days during the pendency of the inquiry, granted on the recommendation of the Internal Complaints Committee (ICC), and not debited against the leave account."
+    },
+    {
+        q: "Departmental Leave under Rule 49 applies to employees of which department, and what leave salary is paid?",
+        o: [
+            "All Central Govt departments; full pay",
+            "Survey of India staff; 25% of Earned Leave salary",
+            "CAPF personnel; 50% pay",
+            "Railway employees; half pay"
+        ],
+        a: 1,
+        e: "Rule 49: Departmental Leave is applicable specifically to Survey of India staff. The leave salary is 25% of the Earned Leave salary. It is not debited to the leave account and does not count as duty."
+    },
+    {
+        q: "What is the annual Casual Leave (CL) entitlement for employees who are entitled to 17 Gazetted Holidays, and for employees with disabilities (PWD)?",
+        o: [
+            "8 days for general; 10 days for PWD",
+            "8 days for general; 12 days for PWD (includes 4 additional days)",
+            "10 days for general; 14 days for PWD",
+            "6 days for general; 8 days for PWD"
+        ],
+        a: 1,
+        e: "CL Orders: 8 days for employees entitled to 17 gazetted holidays; 10 days for those not so entitled (e.g., industrial); 12 days for employees with disabilities (includes 4 additional days)."
+    },
+    {
+        q: "Casual Leave (CL) cannot be combined with which of the following?",
+        o: [
+            "Special Casual Leave (SCL)",
+            "Earned Leave (EL) or Half Pay Leave (HPL)",
+            "Restricted Holidays",
+            "Gazetted Holidays"
+        ],
+        a: 1,
+        e: "CL Orders: Casual Leave can be combined with Special Casual Leave (SCL) but cannot be combined with regular leave (EL/HPL) or joining time."
+    },
+    {
+        q: "What is the Special Casual Leave (SCL) entitlement for a female Government servant undergoing Tubectomy?",
+        o: ["3 working days", "5 working days", "7 working days", "10 working days"],
+        a: 3,
+        e: "SCL Orders: A female Government servant undergoing tubectomy is entitled to 10 working days of SCL (also 10 days for second-time failure). Compare: male for vasectomy gets 5 working days; male for wife's tubectomy gets 3 working days."
+    },
+    {
+        q: "What is the Special Casual Leave admissible for donating a major organ?",
+        o: ["14 days", "21 days", "30 days", "42 days"],
+        a: 3,
+        e: "SCL Orders: Organ Donation of a major organ entitles the employee to a maximum of 42 days of SCL. This is separate from and unlinked to the general 30-day SCL limit for sports/other purposes."
+    },
+    {
+        q: "Under SCL for Union Activities, what is the entitlement for office bearers of a recognized service association?",
+        o: ["5 days", "10 days", "20 days", "30 days"],
+        a: 2,
+        e: "SCL Orders — Union Activities: Office bearers of recognized associations: 20 days; Outstation delegates: 10 days; Local delegates: 5 days per calendar year."
+    },
 ];

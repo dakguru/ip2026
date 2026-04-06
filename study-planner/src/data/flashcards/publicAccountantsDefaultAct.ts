@@ -15,7 +15,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "Act No. XII of 1850",
     ],
     a: 3,
-    e: "The Act is numbered **Act No. XII of 1850**, enacted on 22nd March, 1850, for the better avoidance of loss through the default of public accountants.",
+    e: "The Act is numbered Act No. XII of 1850, enacted on 22nd March, 1850, for the better avoidance of loss through the default of public accountants.",
   },
   // q1 → B
   {
@@ -27,7 +27,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "26th January, 1850",
     ],
     a: 1,
-    e: "The Act was enacted on **22nd March, 1850**.",
+    e: "The Act was enacted on 22nd March, 1850.",
   },
   // q2 → A
   {
@@ -39,7 +39,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "Prevention of corruption in public service",
     ],
     a: 0,
-    e: "The preamble states: 'For better avoidance of **loss through the default of public accountants**; It is enacted as follows.'",
+    e: "The preamble states: 'For better avoidance of loss through the default of public accountants; It is enacted as follows.'",
   },
   // q3 → C
   {
@@ -51,7 +51,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "The safe conduct of his subordinate staff",
     ],
     a: 2,
-    e: "Section 1 mandates security for **the due discharge of the trusts of the office** and for the **due account of all moneys** coming into the accountant's possession or control by reason of his office.",
+    e: "Section 1 mandates security for the due discharge of the trusts of the office and for the due account of all moneys coming into the accountant's possession or control by reason of his office.",
   },
   // q4 → B
   {
@@ -63,7 +63,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "Bank guarantee only",
     ],
     a: 1,
-    e: "Section 2 states that security shall be of such amount and kind — **real or personal, or both** — with such sureties (regard being had to the nature of the office), as required by the applicable rules.",
+    e: "Section 2 states that security shall be of such amount and kind — real or personal, or both — with such sureties (regard being had to the nature of the office), as required by the applicable rules.",
   },
   // q5 → D
   {
@@ -75,7 +75,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "The authority by which each public accountant is appointed to his office",
     ],
     a: 3,
-    e: "Section 2 provides that in the absence of any special Act, security shall be as required by rules made **by the authority by which each public accountant is appointed to his office**.",
+    e: "Section 2 provides that in the absence of any special Act, security shall be as required by rules made by the authority by which each public accountant is appointed to his office.",
   },
   // q6 → A
   {
@@ -87,7 +87,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "Any chartered accountant or auditor appointed by the Government",
     ],
     a: 0,
-    e: "For Sections 1 & 2, 'public accountant' means any person who as **Official Assignee, Trustee, or sarbarahkar** is entrusted with receipt, custody or control of moneys/securities, or management of lands belonging to **any other person**.",
+    e: "For Sections 1 & 2, 'public accountant' means any person who as Official Assignee, Trustee, or sarbarahkar is entrusted with receipt, custody or control of moneys/securities, or management of lands belonging to any other person.",
   },
   // q7 → C
   {
@@ -99,7 +99,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "Any officer of a statutory corporation or public sector undertaking",
     ],
     a: 2,
-    e: "For Sections 4 & 5, the definition further includes any person **holding office in the service of the State** who is entrusted with receipt, custody or control of **Government** moneys, securities, or lands.",
+    e: "For Sections 4 & 5, the definition further includes any person holding office in the service of the State who is entrusted with receipt, custody or control of Government moneys, securities, or lands.",
   },
   // q8 → B
   {
@@ -111,7 +111,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "The District Collector of the area",
     ],
     a: 1,
-    e: "Section 4 empowers **the person or persons at the head of the office** to which the public accountant belongs to proceed against such accountant and his sureties for any loss or defalcation.",
+    e: "Section 4 empowers the person or persons at the head of the office to which the public accountant belongs to proceed against such accountant and his sureties for any loss or defalcation.",
   },
   // q9 → D
   {
@@ -123,7 +123,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "The amount thereof were an arrear of land-revenue due to Government",
     ],
     a: 3,
-    e: "Section 4 states that proceedings may be taken **as if the amount of loss or defalcation were an arrear of land-revenue due to Government**, enabling swift recovery proceedings.",
+    e: "Section 4 states that proceedings may be taken as if the amount of loss or defalcation were an arrear of land-revenue due to Government, enabling swift recovery proceedings.",
   },
   // q10 → A
   {
@@ -135,7 +135,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "The Revenue Recovery Act, 1890 exclusively",
     ],
     a: 0,
-    e: "Section 5 applies **all Regulations and Acts for the recovery of arrears of land-revenue due to Government** (with necessary changes in forms of procedure) to proceedings against and by public accountants.",
+    e: "Section 5 applies all Regulations and Acts for the recovery of arrears of land-revenue due to Government (with necessary changes in forms of procedure) to proceedings against and by public accountants.",
   },
   // q11 → C
   {
@@ -147,7 +147,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "The General Clauses Act, 1897",
     ],
     a: 2,
-    e: "Section 6 was **repealed by the Repealing Act, 1870 (XIV of 1870)**.",
+    e: "Section 6 was repealed by the Repealing Act, 1870 (XIV of 1870).",
   },
   // q12 → A
   {
@@ -159,7 +159,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "Only Section 4 of the Act",
     ],
     a: 0,
-    e: "Section 3 defines 'public accountant' (including a sarbarahkar managing lands of another person) **for purposes of Sections 1 and 2**. For Sections 4 and 5, the definition is separately and more broadly stated to include State servants.",
+    e: "Section 3 defines 'public accountant' (including a sarbarahkar managing lands of another person) for purposes of Sections 1 and 2. For Sections 4 and 5, the definition is separately and more broadly stated to include State servants.",
   },
   // q13 → B
   {
@@ -171,7 +171,7 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "The sureties of a public accountant who have been unfairly charged",
     ],
     a: 1,
-    e: "Section 5 also provides for **recovery of damages by any person wrongfully proceeded against for any such arrear** — this protection applies equally to proceedings against public accountants.",
+    e: "Section 5 also provides for recovery of damages by any person wrongfully proceeded against for any such arrear — this protection applies equally to proceedings against public accountants.",
   },
   // q14 → D
   {
@@ -183,6 +183,6 @@ export const public_accountants_default_act_set1: RawQuestion[] = [
       "The nature of the office",
     ],
     a: 3,
-    e: "Section 2 provides that the security shall be of such amount and kind, with such sureties, **regard being had to the nature of the office**, as shall be required by the applicable rules.",
+    e: "Section 2 provides that the security shall be of such amount and kind, with such sureties, regard being had to the nature of the office, as shall be required by the applicable rules.",
   },
 ];

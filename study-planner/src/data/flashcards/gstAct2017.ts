@@ -20,7 +20,7 @@ export const gst_act_set1: RawQuestion[] = [
       "Act No. 12 of 2017",
     ],
     a: 3,
-    e: "The CGST Act is **Act No. 12 of 2017**. It was enacted to provide for the levy and collection of tax on intra-State supply of goods or services or both.",
+    e: "The CGST Act is Act No. 12 of 2017. It was enacted to provide for the levy and collection of tax on intra-State supply of goods or services or both.",
   },
   // q1 → A
   {
@@ -32,7 +32,7 @@ export const gst_act_set1: RawQuestion[] = [
       "Import and export of goods or services or both",
     ],
     a: 0,
-    e: "The CGST Act provides for levy and collection of tax on **intra-State supply of goods or services or both by the Central Government**. Inter-State supplies are covered by the IGST Act, 2017.",
+    e: "The CGST Act provides for levy and collection of tax on intra-State supply of goods or services or both by the Central Government. Inter-State supplies are covered by the IGST Act, 2017.",
   },
   // q2 → C
   {
@@ -44,7 +44,7 @@ export const gst_act_set1: RawQuestion[] = [
       "The National Anti-Profiteering Authority constituted under the CGST Act",
     ],
     a: 2,
-    e: "Section 2(16) defines 'Board' as the **Central Board of Indirect Taxes and Customs constituted under the Central Boards of Revenue Act, 1963 (54 of 1963)**.",
+    e: "Section 2(16) defines 'Board' as the Central Board of Indirect Taxes and Customs constituted under the Central Boards of Revenue Act, 1963 (54 of 1963).",
   },
   // q3 → B
   {
@@ -56,7 +56,7 @@ export const gst_act_set1: RawQuestion[] = [
       "Supply of packing materials",
     ],
     a: 1,
-    e: "As per the Illustration in Section 2(30): where goods are packed and transported with insurance, the supply of goods, packing materials, transport and insurance is a composite supply, and **supply of goods is a principal supply**.",
+    e: "As per the Illustration in Section 2(30): where goods are packed and transported with insurance, the supply of goods, packing materials, transport and insurance is a composite supply, and supply of goods is a principal supply.",
   },
   // q4 → D
   {
@@ -68,7 +68,7 @@ export const gst_act_set1: RawQuestion[] = [
       "The rate applicable on the particular supply which attracts the highest rate of tax",
     ],
     a: 3,
-    e: "Section 8(b) states: a **mixed supply** comprising two or more supplies shall be treated as a supply of that particular supply which **attracts the highest rate of tax**. This distinguishes it from a composite supply (taxed at the rate of the principal supply).",
+    e: "Section 8(b) states: a mixed supply comprising two or more supplies shall be treated as a supply of that particular supply which attracts the highest rate of tax. This distinguishes it from a composite supply (taxed at the rate of the principal supply).",
   },
   // q5 → A
   {
@@ -80,7 +80,7 @@ export const gst_act_set1: RawQuestion[] = [
       "State tax charged on any supply of goods or services made to a registered person",
     ],
     a: 0,
-    e: "Section 2(62) defines 'input tax' and specifically provides that it **does not include the tax paid under the composition levy** (Section 10). IGST on imports, reverse charge tax, and State tax are all included in the definition of input tax.",
+    e: "Section 2(62) defines 'input tax' and specifically provides that it does not include the tax paid under the composition levy (Section 10). IGST on imports, reverse charge tax, and State tax are all included in the definition of input tax.",
   },
   // q6 → C
   {
@@ -92,7 +92,7 @@ export const gst_act_set1: RawQuestion[] = [
       "Any consecutive period of 90 days as notified by the Government",
     ],
     a: 2,
-    e: "Section 2(92) defines 'quarter' as **a period comprising three consecutive calendar months, ending on the last day of March, June, September and December** of a calendar year.",
+    e: "Section 2(92) defines 'quarter' as a period comprising three consecutive calendar months, ending on the last day of March, June, September and December of a calendar year.",
   },
   // q7 → B
   {
@@ -104,7 +104,7 @@ export const gst_act_set1: RawQuestion[] = [
       "All movable property including money and securities",
     ],
     a: 1,
-    e: "Section 2(52) defines 'goods' as every kind of movable property **other than money and securities** but **includes actionable claims, growing crops, grass** and things attached to or forming part of the land which are agreed to be severed before supply or under a contract of supply.",
+    e: "Section 2(52) defines 'goods' as every kind of movable property other than money and securities but includes actionable claims, growing crops, grass and things attached to or forming part of the land which are agreed to be severed before supply or under a contract of supply.",
   },
   // q8 → A
   {
@@ -116,7 +116,7 @@ export const gst_act_set1: RawQuestion[] = [
       "Thirty days, with periodic payment obligations",
     ],
     a: 0,
-    e: "Section 2(33) defines 'continuous supply of services' as supply provided continuously or on recurrent basis, under a contract, for a **period exceeding three months** with periodic payment obligations.",
+    e: "Section 2(33) defines 'continuous supply of services' as supply provided continuously or on recurrent basis, under a contract, for a period exceeding three months with periodic payment obligations.",
   },
   // q9 → D
   {
@@ -128,7 +128,7 @@ export const gst_act_set1: RawQuestion[] = [
       "One crore fifty lakh rupees",
     ],
     a: 3,
-    e: "Section 10(1) provides that a registered person whose aggregate turnover in the preceding FY did not exceed **one crore fifty lakh rupees** may opt for the composition levy. The threshold for special category States is **seventy-five lakh rupees**.",
+    e: "Section 10(1) provides that a registered person whose aggregate turnover in the preceding FY did not exceed one crore fifty lakh rupees may opt for the composition levy. The threshold for special category States is seventy-five lakh rupees.",
   },
   // q10 → B
   {
@@ -140,7 +140,7 @@ export const gst_act_set1: RawQuestion[] = [
       "A restaurant service provider (excluding alcohol for human consumption)",
     ],
     a: 1,
-    e: "Section 10(2)(d) specifically excludes **a non-resident taxable person or a casual taxable person** from the composition levy. Other exclusions include: inter-State outward supplies, e-commerce operator with TCS, and manufacturers of notified goods (ice cream, pan masala, aerated drinks, tobacco).",
+    e: "Section 10(2)(d) specifically excludes a non-resident taxable person or a casual taxable person from the composition levy. Other exclusions include: inter-State outward supplies, e-commerce operator with TCS, and manufacturers of notified goods (ice cream, pan masala, aerated drinks, tobacco).",
   },
   // q11 → C
   {
@@ -152,7 +152,7 @@ export const gst_act_set1: RawQuestion[] = [
       "Twenty-eight per cent",
     ],
     a: 2,
-    e: "Section 9(1) provides that CGST shall be levied at such rates, **not exceeding twenty per cent**, as may be notified by the Government on the recommendations of the Council.",
+    e: "Section 9(1) provides that CGST shall be levied at such rates, not exceeding twenty per cent, as may be notified by the Government on the recommendations of the Council.",
   },
   // q12 → A
   {
@@ -164,7 +164,7 @@ export const gst_act_set1: RawQuestion[] = [
       "The rate applicable on the supply forming the largest portion by value",
     ],
     a: 0,
-    e: "Section 8(a) states: a **composite supply** comprising two or more supplies, one of which is a principal supply, shall be treated as a supply of such **principal supply** — i.e., taxed at the rate applicable to the principal supply.",
+    e: "Section 8(a) states: a composite supply comprising two or more supplies, one of which is a principal supply, shall be treated as a supply of such principal supply — i.e., taxed at the rate applicable to the principal supply.",
   },
   // q13 → D
   {
@@ -176,7 +176,7 @@ export const gst_act_set1: RawQuestion[] = [
       "The liability to pay tax by the recipient of supply of goods or services instead of the supplier",
     ],
     a: 3,
-    e: "Section 2(98) defines 'reverse charge' as the **liability to pay tax by the recipient of supply of goods or services or both instead of the supplier**, under Section 9(3) or 9(4) of the CGST Act or Section 5(3) or 5(4) of the IGST Act.",
+    e: "Section 2(98) defines 'reverse charge' as the liability to pay tax by the recipient of supply of goods or services or both instead of the supplier, under Section 9(3) or 9(4) of the CGST Act or Section 5(3) or 5(4) of the IGST Act.",
   },
   // q14 → C
   {
@@ -188,7 +188,7 @@ export const gst_act_set1: RawQuestion[] = [
       "Article 301 of the Constitution",
     ],
     a: 2,
-    e: "Section 2(36) defines 'Council' as the **Goods and Services Tax Council established under Article 279A of the Constitution**.",
+    e: "Section 2(36) defines 'Council' as the Goods and Services Tax Council established under Article 279A of the Constitution.",
   },
 ];
 
@@ -206,7 +206,7 @@ export const gst_act_set2: RawQuestion[] = [
       "The date of raising of purchase order or the date of acceptance of goods by the recipient",
     ],
     a: 1,
-    e: "Section 12(2) provides that the time of supply of goods shall be the **earlier of: (a) the date of issue of invoice or the last date on which the supplier is required under Section 31 to issue the invoice; or (b) the date on which the supplier receives the payment**.",
+    e: "Section 12(2) provides that the time of supply of goods shall be the earlier of: (a) the date of issue of invoice or the last date on which the supplier is required under Section 31 to issue the invoice; or (b) the date on which the supplier receives the payment.",
   },
   // q1 → C
   {
@@ -218,7 +218,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Date immediately following 90 days from the date of issue of invoice",
     ],
     a: 2,
-    e: "Section 12(3)(c) provides that for goods under reverse charge, the time of supply is the **date immediately following thirty days** from the date of issue of invoice or any other document in lieu thereof by the supplier.",
+    e: "Section 12(3)(c) provides that for goods under reverse charge, the time of supply is the date immediately following thirty days from the date of issue of invoice or any other document in lieu thereof by the supplier.",
   },
   // q2 → A
   {
@@ -230,7 +230,7 @@ export const gst_act_set2: RawQuestion[] = [
       "The date immediately following forty-five days from the date of issue of invoice by the supplier",
     ],
     a: 0,
-    e: "Section 13(3)(b) provides that for services under reverse charge, the time of supply is the **date immediately following sixty days** from the date of issue of invoice or any other document by the supplier. (Note: For goods it is 30 days; for services it is 60 days.)",
+    e: "Section 13(3)(b) provides that for services under reverse charge, the time of supply is the date immediately following sixty days from the date of issue of invoice or any other document by the supplier. (Note: For goods it is 30 days; for services it is 60 days.)",
   },
   // q3 → D
   {
@@ -242,7 +242,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Incidental expenses including commission and packing charges levied by the supplier",
     ],
     a: 3,
-    e: "Section 15(2)(c) includes **incidental expenses, including commission and packing, charged by the supplier** in the transaction value. Government subsidies are EXCLUDED [Section 15(2)(e) only includes non-Government subsidies]. GST itself is not included. Discounts recorded in invoice are excluded from value per Section 15(3).",
+    e: "Section 15(2)(c) includes incidental expenses, including commission and packing, charged by the supplier in the transaction value. Government subsidies are EXCLUDED [Section 15(2)(e) only includes non-Government subsidies]. GST itself is not included. Discounts recorded in invoice are excluded from value per Section 15(3).",
   },
   // q4 → B
   {
@@ -254,7 +254,7 @@ export const gst_act_set2: RawQuestion[] = [
       "The discount exceeds ten per cent of the invoice value",
     ],
     a: 1,
-    e: "Section 15(3)(b) provides that a post-supply discount is excluded from value if: (i) such discount is **established in terms of an agreement** entered before or at the time of supply; (ii) it is **linked to specific invoices**; and (iii) the **recipient has reversed the ITC** attributable to the discount.",
+    e: "Section 15(3)(b) provides that a post-supply discount is excluded from value if: (i) such discount is established in terms of an agreement entered before or at the time of supply; (ii) it is linked to specific invoices; and (iii) the recipient has reversed the ITC attributable to the discount.",
   },
   // q5 → C
   {
@@ -266,7 +266,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Two hundred and ten days",
     ],
     a: 2,
-    e: "Section 16(2) proviso states: if the recipient fails to pay the supplier within **one hundred and eighty days** from the date of issue of invoice by the supplier, an amount equal to the ITC availed shall be paid by him along with interest payable under Section 50.",
+    e: "Section 16(2) proviso states: if the recipient fails to pay the supplier within one hundred and eighty days from the date of issue of invoice by the supplier, an amount equal to the ITC availed shall be paid by him along with interest payable under Section 50.",
   },
   // q6 → A
   {
@@ -278,7 +278,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Sixtieth day following the end of the financial year to which the invoice pertains",
     ],
     a: 0,
-    e: "Section 16(4) provides that ITC shall not be taken after the **thirtieth day of November following the end of the financial year** to which the invoice or debit note pertains, **or furnishing of the relevant annual return, whichever is earlier**.",
+    e: "Section 16(4) provides that ITC shall not be taken after the thirtieth day of November following the end of the financial year to which the invoice or debit note pertains, or furnishing of the relevant annual return, whichever is earlier.",
   },
   // q7 → D
   {
@@ -290,7 +290,7 @@ export const gst_act_set2: RawQuestion[] = [
       "They may avail fifty per cent of the eligible ITC on inputs, capital goods and input services each month, with the remaining lapsing",
     ],
     a: 3,
-    e: "Section 17(4) gives a banking company or financial institution the option to either: (a) follow the proportionality method of sub-section (2); or (b) **avail fifty per cent of the eligible ITC on inputs, capital goods and input services each month**, with the remaining lapsing.",
+    e: "Section 17(4) gives a banking company or financial institution the option to either: (a) follow the proportionality method of sub-section (2); or (b) avail fifty per cent of the eligible ITC on inputs, capital goods and input services each month, with the remaining lapsing.",
   },
   // q8 → B
   {
@@ -302,7 +302,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Hiring out to other businesses under a lease arrangement",
     ],
     a: 1,
-    e: "Section 17(5)(a) blocks ITC on motor vehicles and conveyances EXCEPT when used for: (i) **further supply** of such vehicles; (ii) **transportation of passengers**; (iii) **imparting training on driving, flying, or navigating** such vehicles; (iv) **transportation of goods**.",
+    e: "Section 17(5)(a) blocks ITC on motor vehicles and conveyances EXCEPT when used for: (i) further supply of such vehicles; (ii) transportation of passengers; (iii) imparting training on driving, flying, or navigating such vehicles; (iv) transportation of goods.",
   },
   // q9 → C
   {
@@ -314,7 +314,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Inputs directly used in the manufacture of goods for outward taxable supply",
     ],
     a: 2,
-    e: "Section 17(5)(j) specifically blocks ITC on **goods lost, stolen, destroyed, written off, or disposed of by way of gift or free samples**. ITC is available on capital goods and inputs used for taxable business supplies.",
+    e: "Section 17(5)(j) specifically blocks ITC on goods lost, stolen, destroyed, written off, or disposed of by way of gift or free samples. ITC is available on capital goods and inputs used for taxable business supplies.",
   },
   // q10 → A
   {
@@ -326,7 +326,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Five years",
     ],
     a: 0,
-    e: "Section 19(3) provides: if **inputs** are not received back from the job worker within **one year** from the date they were sent, the principal shall pay tax (along with interest) as if such inputs were supplied on the day they were sent.",
+    e: "Section 19(3) provides: if inputs are not received back from the job worker within one year from the date they were sent, the principal shall pay tax (along with interest) as if such inputs were supplied on the day they were sent.",
   },
   // q11 → D
   {
@@ -338,7 +338,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Three years",
     ],
     a: 3,
-    e: "Section 19(4) provides: if **capital goods** (other than moulds/dies/jigs/fixtures/tools) are not received back from the job worker within **three years** from the date they were sent, the principal shall pay tax along with interest.",
+    e: "Section 19(4) provides: if capital goods (other than moulds/dies/jigs/fixtures/tools) are not received back from the job worker within three years from the date they were sent, the principal shall pay tax along with interest.",
   },
   // q12 → B
   {
@@ -350,7 +350,7 @@ export const gst_act_set2: RawQuestion[] = [
       "Three years",
     ],
     a: 1,
-    e: "Section 18(1) proviso states that ITC is not available on inputs or capital goods purchased **more than one year** before the date of issue of the tax invoice by the supplier.",
+    e: "Section 18(1) proviso states that ITC is not available on inputs or capital goods purchased more than one year before the date of issue of the tax invoice by the supplier.",
   },
   // q13 → A
   {
@@ -362,7 +362,7 @@ export const gst_act_set2: RawQuestion[] = [
       "ITC on that tax component shall be allowed but credited only in the following financial year",
     ],
     a: 0,
-    e: "Section 16(3) provides: where the registered person has **claimed depreciation on the tax component** of the cost of capital goods and plant and machinery under the Income-tax Act, 1961, **the input tax credit on the said tax component shall not be allowed**.",
+    e: "Section 16(3) provides: where the registered person has claimed depreciation on the tax component of the cost of capital goods and plant and machinery under the Income-tax Act, 1961, the input tax credit on the said tax component shall not be allowed.",
   },
   // q14 → C
   {
@@ -374,7 +374,7 @@ export const gst_act_set2: RawQuestion[] = [
       "The date on which the recipient records the liability in his books of account",
     ],
     a: 2,
-    e: "Section 12(6) states that the time of supply relating to an addition by way of interest, late fee or penalty for delayed payment of consideration shall be **the date on which the supplier receives such addition in value**.",
+    e: "Section 12(6) states that the time of supply relating to an addition by way of interest, late fee or penalty for delayed payment of consideration shall be the date on which the supplier receives such addition in value.",
   },
 ];
 
@@ -392,7 +392,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Fifty lakh rupees",
     ],
     a: 0,
-    e: "Section 22(1) provides that every supplier shall be liable to be registered if his aggregate turnover exceeds **twenty lakh rupees** in a financial year. For special category States, the threshold is **ten lakh rupees**.",
+    e: "Section 22(1) provides that every supplier shall be liable to be registered if his aggregate turnover exceeds twenty lakh rupees in a financial year. For special category States, the threshold is ten lakh rupees.",
   },
   // q1 → D
   {
@@ -404,7 +404,7 @@ export const gst_act_set3: RawQuestion[] = [
       "A casual taxable person making taxable supply",
     ],
     a: 3,
-    e: "Section 24(ii) mandates compulsory registration for **casual taxable persons making taxable supply**, irrespective of their turnover. Other compulsorily registered persons include: persons making inter-State taxable supply, reverse charge payers, non-resident taxable persons, ISD, TDS deductors, and agents.",
+    e: "Section 24(ii) mandates compulsory registration for casual taxable persons making taxable supply, irrespective of their turnover. Other compulsorily registered persons include: persons making inter-State taxable supply, reverse charge payers, non-resident taxable persons, ISD, TDS deductors, and agents.",
   },
   // q2 → B
   {
@@ -416,7 +416,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Ninety days",
     ],
     a: 1,
-    e: "Section 25(1) requires every person liable for registration to apply **within thirty days** from the date of becoming liable. Exception: a casual taxable person or a non-resident taxable person shall apply **at least five days prior** to the commencement of business.",
+    e: "Section 25(1) requires every person liable for registration to apply within thirty days from the date of becoming liable. Exception: a casual taxable person or a non-resident taxable person shall apply at least five days prior to the commencement of business.",
   },
   // q3 → C
   {
@@ -428,7 +428,7 @@ export const gst_act_set3: RawQuestion[] = [
       "The period specified in the application only, with no further extension",
     ],
     a: 2,
-    e: "Section 27(1) provides that registration for a casual or non-resident taxable person is valid for the **period specified in the application or ninety days from the effective date of registration, whichever is earlier**. The proper officer may extend this by a **further period not exceeding ninety days**.",
+    e: "Section 27(1) provides that registration for a casual or non-resident taxable person is valid for the period specified in the application or ninety days from the effective date of registration, whichever is earlier. The proper officer may extend this by a further period not exceeding ninety days.",
   },
   // q4 → A
   {
@@ -440,7 +440,7 @@ export const gst_act_set3: RawQuestion[] = [
       "An Input Service Distributor",
     ],
     a: 0,
-    e: "Section 23(1)(b) provides that **an agriculturist, to the extent of supply of produce out of cultivation of land** shall not be liable to registration. Section 24 mandates compulsory registration (irrespective of turnover) for inter-State suppliers, reverse charge payers, and ISDs.",
+    e: "Section 23(1)(b) provides that an agriculturist, to the extent of supply of produce out of cultivation of land shall not be liable to registration. Section 24 mandates compulsory registration (irrespective of turnover) for inter-State suppliers, reverse charge payers, and ISDs.",
   },
   // q5 → D
   {
@@ -452,7 +452,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Six months",
     ],
     a: 3,
-    e: "Section 29(1)(f) provides that registration may be cancelled if any registered person, other than a composition taxpayer, **has not furnished returns for a continuous period of six months**. (For composition taxpayers, non-filing for three consecutive tax periods is the ground.)",
+    e: "Section 29(1)(f) provides that registration may be cancelled if any registered person, other than a composition taxpayer, has not furnished returns for a continuous period of six months. (For composition taxpayers, non-filing for three consecutive tax periods is the ground.)",
   },
   // q6 → B
   {
@@ -464,7 +464,7 @@ export const gst_act_set3: RawQuestion[] = [
       "A continuous period of ninety days",
     ],
     a: 1,
-    e: "Section 29(1)(e) provides: registration may be cancelled if a **composition taxpayer has not furnished returns for three consecutive tax periods**. For regular taxpayers, non-filing for a continuous period of six months is the ground.",
+    e: "Section 29(1)(e) provides: registration may be cancelled if a composition taxpayer has not furnished returns for three consecutive tax periods. For regular taxpayers, non-filing for a continuous period of six months is the ground.",
   },
   // q7 → C
   {
@@ -476,7 +476,7 @@ export const gst_act_set3: RawQuestion[] = [
       "The date of commencement of business in that State or Union territory",
     ],
     a: 2,
-    e: "Section 25(5) provides that if a liability arises and the person applies within **thirty days**, the effective date of registration shall be **the date on which the person became liable to registration**.",
+    e: "Section 25(5) provides that if a liability arises and the person applies within thirty days, the effective date of registration shall be the date on which the person became liable to registration.",
   },
   // q8 → A
   {
@@ -488,7 +488,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Seventy-five lakh rupees",
     ],
     a: 0,
-    e: "Section 22(1) Provided also states that the Government may, on Council recommendations, enhance the aggregate turnover threshold from twenty lakh rupees to **such amount not exceeding forty lakh rupees** in the case of a supplier engaged exclusively in the supply of goods.",
+    e: "Section 22(1) Provided also states that the Government may, on Council recommendations, enhance the aggregate turnover threshold from twenty lakh rupees to such amount not exceeding forty lakh rupees in the case of a supplier engaged exclusively in the supply of goods.",
   },
   // q9 → D
   {
@@ -500,7 +500,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Issue a show cause notice and give an opportunity of being heard",
     ],
     a: 3,
-    e: "Section 29(1) proviso states: **'Proper officer shall not cancel the registration without giving the person a show cause notice and opportunity of being heard.'** Cancellation of registration is a quasi-judicial action requiring natural justice.",
+    e: "Section 29(1) proviso states: 'Proper officer shall not cancel the registration without giving the person a show cause notice and opportunity of being heard.' Cancellation of registration is a quasi-judicial action requiring natural justice.",
   },
   // q10 → B
   {
@@ -512,7 +512,7 @@ export const gst_act_set3: RawQuestion[] = [
       "One thousand rupees",
     ],
     a: 1,
-    e: "Section 31(3A) provides that a registered person shall not issue a tax invoice if the value of supply is **less than two hundred rupees**, subject to conditions. A **Bill of Supply** may be issued instead. However, the registered person may issue a tax invoice voluntarily, and the recipient is entitled to demand one.",
+    e: "Section 31(3A) provides that a registered person shall not issue a tax invoice if the value of supply is less than two hundred rupees, subject to conditions. A Bill of Supply may be issued instead. However, the registered person may issue a tax invoice voluntarily, and the recipient is entitled to demand one.",
   },
   // q11 → C
   {
@@ -524,7 +524,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Within sixty days of the date of issue of the credit note",
     ],
     a: 2,
-    e: "Section 34(2) provides that the details of a credit note shall be declared in the return **not later than the thirtieth day of November following the end of the financial year** in which the supply was made, **or the date of furnishing of the relevant annual return, whichever is earlier**.",
+    e: "Section 34(2) provides that the details of a credit note shall be declared in the return not later than the thirtieth day of November following the end of the financial year in which the supply was made, or the date of furnishing of the relevant annual return, whichever is earlier.",
   },
   // q12 → A
   {
@@ -536,7 +536,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Before the date of payment by the recipient",
     ],
     a: 0,
-    e: "Section 31(1) provides that a registered person supplying **taxable goods** shall issue a tax invoice **before or at the time of** removal of goods for supply (where supply involves movement) or delivery/making available to the recipient in other cases.",
+    e: "Section 31(1) provides that a registered person supplying taxable goods shall issue a tax invoice before or at the time of removal of goods for supply (where supply involves movement) or delivery/making available to the recipient in other cases.",
   },
   // q13 → D
   {
@@ -548,7 +548,7 @@ export const gst_act_set3: RawQuestion[] = [
       "Before or at the time of supply, or six months from the date of removal, whichever is earlier",
     ],
     a: 3,
-    e: "Section 31(7) provides that for goods sent on approval/sale or return, invoice shall be issued **before or at the time of supply, or six months from the date of removal, whichever is earlier**.",
+    e: "Section 31(7) provides that for goods sent on approval/sale or return, invoice shall be issued before or at the time of supply, or six months from the date of removal, whichever is earlier.",
   },
   // q14 → B
   {
@@ -560,6 +560,6 @@ export const gst_act_set3: RawQuestion[] = [
       "A person must register in every State/UT where he has customers, regardless of having a fixed place of business",
     ],
     a: 1,
-    e: "Section 25(6) provides that a person is entitled to **a single registration per State/UT**. Exception: a person having **multiple business verticals in a State/UT may obtain separate registration for each business vertical** [Section 25(2)].",
+    e: "Section 25(6) provides that a person is entitled to a single registration per State/UT. Exception: a person having multiple business verticals in a State/UT may obtain separate registration for each business vertical [Section 25(2)].",
   },
 ];

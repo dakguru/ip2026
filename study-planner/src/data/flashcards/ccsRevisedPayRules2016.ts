@@ -16,7 +16,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "1st January, 2017",
     ],
     a: 0,
-    e: "Rule 1(2) states: 'They shall be deemed to have come into force on the **1st day of January, 2016**.'",
+    e: "Rule 1(2) states: 'They shall be deemed to have come into force on the 1st day of January, 2016.'",
   },
   // q1 → C
   {
@@ -28,7 +28,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "All Central Government Estimates including Railways and Defence",
     ],
     a: 2,
-    e: "Rule 2(1) states the Rules apply to persons serving in connection with the affairs of the Union whose pay is debitable to **Civil Estimates** and to persons serving in the **Indian Audit and Accounts Department**.",
+    e: "Rule 2(1) states the Rules apply to persons serving in connection with the affairs of the Union whose pay is debitable to Civil Estimates and to persons serving in the Indian Audit and Accounts Department.",
   },
   // q2 → B
   {
@@ -40,7 +40,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "Assistants in the Ministry of External Affairs",
     ],
     a: 1,
-    e: "Rule 2(2) excludes employees serving under the **Government of National Capital Territory of Delhi** (and UT of Chandigarh — Group A, B and C), locally recruited staff at diplomatic missions, piece-rate/contingency-paid workers, and persons re-employed after retirement, among others.",
+    e: "Rule 2(2) excludes employees serving under the Government of National Capital Territory of Delhi (and UT of Chandigarh — Group A, B and C), locally recruited staff at diplomatic missions, piece-rate/contingency-paid workers, and persons re-employed after retirement, among others.",
   },
   // q3 → D
   {
@@ -52,7 +52,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "Pay drawn in the prescribed existing Pay Band plus the applicable Grade Pay on 31st December 2015",
     ],
     a: 3,
-    e: "'Existing basic pay' is defined in Rule 3(vi) as **pay drawn in the prescribed existing Pay Band plus the applicable Grade Pay** on 31st December 2015, or the emoluments which count as pay.",
+    e: "'Existing basic pay' is defined in Rule 3(vi) as pay drawn in the prescribed existing Pay Band plus the applicable Grade Pay on 31st December 2015, or the emoluments which count as pay.",
   },
   // q4 → A
   {
@@ -64,7 +64,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "Appendix to Rule 4",
     ],
     a: 0,
-    e: "Rule 3(xi) defines 'Pay Matrix' as the Matrix specified in **Part A of the Schedule** to these Rules, with Levels of pay arranged in vertical columns and pay in each Level arranged in horizontal rows.",
+    e: "Rule 3(xi) defines 'Pay Matrix' as the Matrix specified in Part A of the Schedule to these Rules, with Levels of pay arranged in vertical columns and pay in each Level arranged in horizontal rows.",
   },
   // q5 → B
   {
@@ -76,7 +76,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "An employee on extra-ordinary leave as on 1st January 2016",
     ],
     a: 1,
-    e: "The proviso to Rule 5 states that the option is **not admissible to persons appointed for the first time in Government service**, or by direct recruitment, or by transfer on or after 1st January 2016. Such persons must draw pay in the revised pay structure.",
+    e: "The proviso to Rule 5 states that the option is not admissible to persons appointed for the first time in Government service, or by direct recruitment, or by transfer on or after 1st January 2016. Such persons must draw pay in the revised pay structure.",
   },
   // q6 → C
   {
@@ -88,7 +88,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "One year of the date of notification of the Rules",
     ],
     a: 2,
-    e: "Rule 6(1) provides that the option shall be exercised in writing and communicated to the Head of Office within **three months** of the date of notification of these Rules (or within three months of return from leave/deputation, etc., if applicable).",
+    e: "Rule 6(1) provides that the option shall be exercised in writing and communicated to the Head of Office within three months of the date of notification of these Rules (or within three months of return from leave/deputation, etc., if applicable).",
   },
   // q7 → D
   {
@@ -100,7 +100,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "The revised pay structure from 1st January, 2016",
     ],
     a: 3,
-    e: "Rule 6(3) provides: 'Where an intimation is not received within the time specified ... the employee concerned shall be deemed to have elected the **revised pay structure from 1st January, 2016**.'",
+    e: "Rule 6(3) provides: 'Where an intimation is not received within the time specified ... the employee concerned shall be deemed to have elected the revised pay structure from 1st January, 2016.'",
   },
   // q8 → A
   {
@@ -112,7 +112,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "3.00",
     ],
     a: 0,
-    e: "Rule 7(1)(A)(i) provides: 'The pay in the applicable Level in the Pay Matrix shall be the pay obtained by multiplying the existing basic pay by a factor of **2.57**.' The resultant figure is rounded off to the nearest rupee and then located in the Level.",
+    e: "Rule 7(1)(A)(i) provides: 'The pay in the applicable Level in the Pay Matrix shall be the pay obtained by multiplying the existing basic pay by a factor of 2.57.' The resultant figure is rounded off to the nearest rupee and then located in the Level.",
   },
   // q9 → C
   {
@@ -124,7 +124,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "The minimum pay of the next higher Level",
     ],
     a: 2,
-    e: "Rule 7(1)(A)(ii) states: 'If the figure ... does not correspond to any Cell in the applicable Level in the Pay Matrix, he shall be placed at the **next higher Cell** in that Level.'",
+    e: "Rule 7(1)(A)(ii) states: 'If the figure ... does not correspond to any Cell in the applicable Level in the Pay Matrix, he shall be placed at the next higher Cell in that Level.'",
   },
   // q10 → B
   {
@@ -136,7 +136,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "The same Cell as the retiring predecessor in the same post",
     ],
     a: 1,
-    e: "Rule 8 states: 'A Government servant who is appointed to a post on or after 1st January, 2016 shall be fixed at the **minimum pay**, that is, the first Cell in the Level applicable to the post to which he is appointed.'",
+    e: "Rule 8 states: 'A Government servant who is appointed to a post on or after 1st January, 2016 shall be fixed at the minimum pay, that is, the first Cell in the Level applicable to the post to which he is appointed.'",
   },
   // q11 → D
   {
@@ -148,7 +148,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "By moving from the current Cell to the next vertical Cell in the applicable Level of the Pay Matrix",
     ],
     a: 3,
-    e: "Rule 9 provides: 'In the revised pay structure, a Government servant shall draw pay in the Level ... and his pay shall, on grant of increment, be raised to the **next Cell** in that Level in the Pay Matrix.'",
+    e: "Rule 9 provides: 'In the revised pay structure, a Government servant shall draw pay in the Level ... and his pay shall, on grant of increment, be raised to the next Cell in that Level in the Pay Matrix.'",
   },
   // q12 → A
   {
@@ -160,7 +160,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "One — on the anniversary of the date of appointment",
     ],
     a: 0,
-    e: "Rule 10(1) states: 'There shall be **two dates for grant of increment namely, 1st January and 1st July** of every year, instead of the existing system of annual increment being granted on 1st July every year.'",
+    e: "Rule 10(1) states: 'There shall be two dates for grant of increment namely, 1st January and 1st July of every year, instead of the existing system of annual increment being granted on 1st July every year.'",
   },
   // q13 → B
   {
@@ -172,7 +172,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "1st July of the following year",
     ],
     a: 1,
-    e: "Rule 10(1)(ii) provides: 'An employee appointed or promoted or granted financial upgradation between 2nd day of January and 1st day of July ... shall receive his next increment on the **1st day of January** of the following year.'",
+    e: "Rule 10(1)(ii) provides: 'An employee appointed or promoted or granted financial upgradation between 2nd day of January and 1st day of July ... shall receive his next increment on the 1st day of January of the following year.'",
   },
   // q14 → C
   {
@@ -184,7 +184,7 @@ export const ccs_revised_pay_rules_set1: RawQuestion[] = [
       "1st January of the following year",
     ],
     a: 2,
-    e: "Rule 10(1)(i) provides: 'An employee appointed or promoted or granted financial upgradation between 2nd day of July and 1st day of January ... shall receive his next increment on the **1st day of July** of the following year.'",
+    e: "Rule 10(1)(i) provides: 'An employee appointed or promoted or granted financial upgradation between 2nd day of July and 1st day of January ... shall receive his next increment on the 1st day of July of the following year.'",
   },
 ];
 
@@ -199,7 +199,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Rule 5 — by exercising option for revised pay structure",
     ],
     a: 1,
-    e: "Rule 11 states that where revision is from a date subsequent to 1st January 2016, pay shall be fixed as specified in **Rule 7(1)(A)** — i.e., by applying the fitment factor method with necessary adjustments.",
+    e: "Rule 11 states that where revision is from a date subsequent to 1st January 2016, pay shall be fixed as specified in Rule 7(1)(A) — i.e., by applying the fitment factor method with necessary adjustments.",
   },
   // q1 → A
   {
@@ -211,7 +211,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Option to retain the existing pay structure",
     ],
     a: 0,
-    e: "Rule 12 specifically provides for **pay protection on appointment/deputation to ex-cadre posts under the Central Staffing Scheme**, ensuring the employee does not suffer a pay disadvantage.",
+    e: "Rule 12 specifically provides for pay protection on appointment/deputation to ex-cadre posts under the Central Staffing Scheme, ensuring the employee does not suffer a pay disadvantage.",
   },
   // q2 → C
   {
@@ -223,7 +223,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "His existing pay is multiplied by 2.57 and placed at the next Cell in the promoted Level",
     ],
     a: 2,
-    e: "Rule 13(1)(i) provides: '**One increment shall be given in the Level from which the employee is promoted** and he shall be placed at a Cell equal to the figure so arrived at in the Level of the post to which promoted and if no such Cell is available in the Level of the promoted post, he shall be placed at the next higher Cell in that Level.'",
+    e: "Rule 13(1)(i) provides: 'One increment shall be given in the Level from which the employee is promoted and he shall be placed at a Cell equal to the figure so arrived at in the Level of the post to which promoted and if no such Cell is available in the Level of the promoted post, he shall be placed at the next higher Cell in that Level.'",
   },
   // q3 → D
   {
@@ -235,7 +235,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Financial year 2016–17",
     ],
     a: 3,
-    e: "Rule 14(1) provides that arrears of pay and allowances shall be paid during the **financial year 2016-17**. The arrears represent the difference between amounts payable in the revised pay structure (with DA) from 1st January 2016 and the amounts actually paid.",
+    e: "Rule 14(1) provides that arrears of pay and allowances shall be paid during the financial year 2016-17. The arrears represent the difference between amounts payable in the revised pay structure (with DA) from 1st January 2016 and the amounts actually paid.",
   },
   // q4 → A
   {
@@ -247,7 +247,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Revised pay drawn and the pay that would have been due had the revision been from 1st April 2016",
     ],
     a: 0,
-    e: "Rule 14(2) defines arrears as the difference between **(a)** the aggregate of revised pay and DA applicable from 1st January 2016, and **(b)** the aggregate of existing pay and DA actually drawn — the balance is the arrear payable.",
+    e: "Rule 14(2) defines arrears as the difference between (a) the aggregate of revised pay and DA applicable from 1st January 2016, and (b) the aggregate of existing pay and DA actually drawn — the balance is the arrear payable.",
   },
   // q5 → B
   {
@@ -259,7 +259,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Effect subject to concurrence of the Finance Ministry in each case",
     ],
     a: 1,
-    e: "Rule 15 states: 'The provisions of these rules shall have effect notwithstanding anything to the contrary contained in **any rule, order or instruction regarding the revision of pay** issued before the commencement of these rules.' This gives the 2016 Rules overriding effect.",
+    e: "Rule 15 states: 'The provisions of these rules shall have effect notwithstanding anything to the contrary contained in any rule, order or instruction regarding the revision of pay issued before the commencement of these rules.' This gives the 2016 Rules overriding effect.",
   },
   // q6 → C
   {
@@ -271,7 +271,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "The Chairman of the Sixth or Seventh Pay Commission",
     ],
     a: 2,
-    e: "Rule 16 vests the power to relax in **the President**, who may, by order, dispense with or relax the requirements of any of the provisions of these Rules in respect of any class or category of persons.",
+    e: "Rule 16 vests the power to relax in the President, who may, by order, dispense with or relax the requirements of any of the provisions of these Rules in respect of any class or category of persons.",
   },
   // q7 → D
   {
@@ -283,7 +283,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "The Central Government, whose decision shall be final",
     ],
     a: 3,
-    e: "Rule 17 states: 'If any question arises as to the interpretation of these rules, it shall be referred to **the Central Government** whose decision thereon shall be final.'",
+    e: "Rule 17 states: 'If any question arises as to the interpretation of these rules, it shall be referred to the Central Government whose decision thereon shall be final.'",
   },
   // q8 → A
   {
@@ -295,7 +295,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "₹33,500 in Level 4",
     ],
     a: 0,
-    e: "As per the illustration: ₹12,560 × 2.57 = ₹32,279.20 → rounded to ₹32,279. Since no exact Cell exists, pay is fixed at the **next higher Cell, i.e., ₹32,300 in Level 4**.",
+    e: "As per the illustration: ₹12,560 × 2.57 = ₹32,279.20 → rounded to ₹32,279. Since no exact Cell exists, pay is fixed at the next higher Cell, i.e., ₹32,300 in Level 4.",
   },
   // q9 → C
   {
@@ -307,7 +307,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Subject to review by the Head of Office annually",
     ],
     a: 2,
-    e: "Rule 6(2) explicitly states: 'The option once exercised shall be **final**.'",
+    e: "Rule 6(2) explicitly states: 'The option once exercised shall be final.'",
   },
   // q10 → B
   {
@@ -319,7 +319,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Reaches the maximum of his existing Pay Band",
     ],
     a: 1,
-    e: "Rule 5 (proviso) states that an employee who opts for the existing structure shall come over to the revised structure from the date he **earns his next increment** in the existing structure, or from the date of his **next promotion or financial upgradation**, or from the date he **vacates the post** or **ceases to draw pay** in the existing structure.",
+    e: "Rule 5 (proviso) states that an employee who opts for the existing structure shall come over to the revised structure from the date he earns his next increment in the existing structure, or from the date of his next promotion or financial upgradation, or from the date he vacates the post or ceases to draw pay in the existing structure.",
   },
   // q11 → D
   {
@@ -331,7 +331,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Seventh Central Pay Commission",
     ],
     a: 3,
-    e: "The CCS (Revised Pay) Rules, 2016 implement the recommendations of the **Seventh Central Pay Commission**, which submitted its report in November 2015. The Rules introduced the Pay Matrix concept replacing Pay Bands and Grade Pay.",
+    e: "The CCS (Revised Pay) Rules, 2016 implement the recommendations of the Seventh Central Pay Commission, which submitted its report in November 2015. The Rules introduced the Pay Matrix concept replacing Pay Bands and Grade Pay.",
   },
   // q12 → A
   {
@@ -343,7 +343,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "A special Cell created by order of the Ministry of Finance",
     ],
     a: 0,
-    e: "Rule 13(1)(i) states: 'If no such Cell is available in the Level of the promoted post, he shall be placed at the **next higher Cell in that Level**.'",
+    e: "Rule 13(1)(i) states: 'If no such Cell is available in the Level of the promoted post, he shall be placed at the next higher Cell in that Level.'",
   },
   // q13 → C
   {
@@ -355,7 +355,7 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Increment is admissible even if the employee is under suspension throughout the year",
     ],
     a: 2,
-    e: "Rule 10(1) clearly states: 'A Government servant shall be entitled to **only one annual increment** either on 1st January or on 1st July depending on the date of his appointment, promotion, or grant of financial upgradation.'",
+    e: "Rule 10(1) clearly states: 'A Government servant shall be entitled to only one annual increment either on 1st January or on 1st July depending on the date of his appointment, promotion, or grant of financial upgradation.'",
   },
   // q14 → B
   {
@@ -367,6 +367,6 @@ export const ccs_revised_pay_rules_set2: RawQuestion[] = [
       "Pay Band amount + Grade Pay + transport allowance as on 31st December 2015",
     ],
     a: 1,
-    e: "Rule 3(ix) defines 'existing emoluments' as **existing basic pay + dearness allowance admissible at the index average relevant as on 1st January 2006** (i.e., DA at 125% — the rate applicable to the pre-revised pay structure for fitment purposes).",
+    e: "Rule 3(ix) defines 'existing emoluments' as existing basic pay + dearness allowance admissible at the index average relevant as on 1st January 2006 (i.e., DA at 125% — the rate applicable to the pre-revised pay structure for fitment purposes).",
   },
 ];

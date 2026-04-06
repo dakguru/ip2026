@@ -15,7 +15,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "Restricted to service matters raised by departmental employees alone",
     ],
     a: 0,
-    e: "A **Complaint** is an expression of dissatisfaction where a response is expected. A **Grievance** is broader — a formal or informal claim regarding injustice, unfair treatment, or denial of a rightful service/benefit, and often relates to **systemic issues or service delivery failures**.",
+    e: "A Complaint is an expression of dissatisfaction where a response is expected. A Grievance is broader — a formal or informal claim regarding injustice, unfair treatment, or denial of a rightful service/benefit, and often relates to systemic issues or service delivery failures.",
   },
   // q1 → C
   {
@@ -27,7 +27,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "Central Vigilance Commission and Department of Personnel and Training",
     ],
     a: 2,
-    e: "CPGRAMS (Centralized Public Grievance Redress and Monitoring System) is an online web-enabled system developed by **NIC in association with the Directorate of Public Grievances (DPG) and Department of Administrative Reforms and Public Grievances (DARPG)**. Grievances pertaining to DoP are routed through designated Nodal Officers.",
+    e: "CPGRAMS (Centralized Public Grievance Redress and Monitoring System) is an online web-enabled system developed by NIC in association with the Directorate of Public Grievances (DPG) and Department of Administrative Reforms and Public Grievances (DARPG). Grievances pertaining to DoP are routed through designated Nodal Officers.",
   },
   // q2 → B
   {
@@ -39,7 +39,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "PIDPI Portal",
     ],
     a: 1,
-    e: "The **India Post CRM (Customer Relationship Management) Portal** is the primary internal IT-enabled platform. CPGRAMS is the Government of India portal (DARPG), while CRM is the internal DoP system governed by a comprehensive SOP issued vide OM 009/5/2023-PG dated 04-09-2023.",
+    e: "The India Post CRM (Customer Relationship Management) Portal is the primary internal IT-enabled platform. CPGRAMS is the Government of India portal (DARPG), while CRM is the internal DoP system governed by a comprehensive SOP issued vide OM 009/5/2023-PG dated 04-09-2023.",
   },
   // q3 → D
   {
@@ -51,7 +51,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "No action whatsoever; they must be filed and kept on record",
     ],
     a: 3,
-    e: "CVC Circular 39-1/2010-Vig dated 29-03-2016 imposes an **absolute prohibition**: no action whatsoever is to be taken on anonymous (no name/address) or pseudonymous (fictitious name/address) complaints. They **must be simply filed** and kept on record without initiating any preliminary enquiry.",
+    e: "CVC Circular 39-1/2010-Vig dated 29-03-2016 imposes an absolute prohibition: no action whatsoever is to be taken on anonymous (no name/address) or pseudonymous (fictitious name/address) complaints. They must be simply filed and kept on record without initiating any preliminary enquiry.",
   },
   // q4 → A
   {
@@ -63,7 +63,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "A frivolous complaint subject to action against the complainant",
     ],
     a: 0,
-    e: "As per the verification procedure for anonymous/pseudonymous complaints: if the registered acknowledgment **returns undelivered** or **the complainant denies sending it**, the complaint is deemed **pseudonymous and filed** without any action being taken, in accordance with CVC guidelines.",
+    e: "As per the verification procedure for anonymous/pseudonymous complaints: if the registered acknowledgment returns undelivered or the complainant denies sending it, the complaint is deemed pseudonymous and filed without any action being taken, in accordance with CVC guidelines.",
   },
   // q5 → B
   {
@@ -75,7 +75,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "Postal Internal Disclosure and Protection of Interests",
     ],
     a: 1,
-    e: "**PIDPI** stands for **Public Interest Disclosure and Protection of Informers**. Under this framework, the envelope is opened only by a designated nodal officer, and the identity of the whistleblower is concealed using a pseudonym or reference number to protect the employee/citizen from harassment or retaliation.",
+    e: "PIDPI stands for Public Interest Disclosure and Protection of Informers. Under this framework, the envelope is opened only by a designated nodal officer, and the identity of the whistleblower is concealed using a pseudonym or reference number to protect the employee/citizen from harassment or retaliation.",
   },
   // q6 → C
   {
@@ -87,7 +87,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "The Head of the Office where the ICC is constituted",
     ],
     a: 2,
-    e: "As per OM 11013/2/2014-Estt.A-III dated 07-11-2016: the Chairperson of the Complaint Committee **must be a senior female employee**. If a female officer of sufficient seniority is not available in the same office, she can be nominated from another office to ensure the Chairperson is not junior to the accused.",
+    e: "As per OM 11013/2/2014-Estt.A-III dated 07-11-2016: the Chairperson of the Complaint Committee must be a senior female employee. If a female officer of sufficient seniority is not available in the same office, she can be nominated from another office to ensure the Chairperson is not junior to the accused.",
   },
   // q7 → D
   {
@@ -99,7 +99,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "A preliminary enquiry report, allowing the Disciplinary Authority to frame charges",
     ],
     a: 3,
-    e: "As per OM 11013/3/2009-Estt.(A) dated 08-10-2009: the ICC's report **is treated directly as a preliminary enquiry report**, allowing the Disciplinary Authority to frame charges without needing a separate parallel investigation.",
+    e: "As per OM 11013/3/2009-Estt.(A) dated 08-10-2009: the ICC's report is treated directly as a preliminary enquiry report, allowing the Disciplinary Authority to frame charges without needing a separate parallel investigation.",
   },
   // q8 → A
   {
@@ -111,7 +111,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "OM 36034/2/83-Estt(SCT) dated 23-02-1983; routes complaints to the SC/ST Commissioner",
     ],
     a: 0,
-    e: "The **SHe-Box (Sexual Harassment electronic-Box)** was launched via **OM 11013/7/2016-Estt.A-III dated 11-01-2017**. Complaints filed on SHe-Box are routed directly to the **concerned Ministry/Department's ICC** through the Ministry of Women and Child Development.",
+    e: "The SHe-Box (Sexual Harassment electronic-Box) was launched via OM 11013/7/2016-Estt.A-III dated 11-01-2017. Complaints filed on SHe-Box are routed directly to the concerned Ministry/Department's ICC through the Ministry of Women and Child Development.",
   },
   // q9 → B
   {
@@ -123,7 +123,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "File complaints only through the Staff Council or recognized service associations",
     ],
     a: 1,
-    e: "OM 8/2/69-(SCT)(1) dated 01-10-1974 clarifies that **SC/ST Government servants have the right to write directly to the Commissioner for SC/ST**, bypassing the normal proper channel, if they feel their complaints are being suppressed locally.",
+    e: "OM 8/2/69-(SCT)(1) dated 01-10-1974 clarifies that SC/ST Government servants have the right to write directly to the Commissioner for SC/ST, bypassing the normal proper channel, if they feel their complaints are being suppressed locally.",
   },
   // q10 → C
   {
@@ -135,7 +135,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "Public Grievance Officer at Directorate level",
     ],
     a: 2,
-    e: "The **Divisional Superintendent (SP/SSP)** acts as the primary **Nodal Officer** for all CRM and CPGRAMS tickets pertaining to their division. They also conduct weekly reviews of pending grievances to ensure zero pendency beyond the stipulated timeline.",
+    e: "The Divisional Superintendent (SP/SSP) acts as the primary Nodal Officer for all CRM and CPGRAMS tickets pertaining to their division. They also conduct weekly reviews of pending grievances to ensure zero pendency beyond the stipulated timeline.",
   },
   // q11 → D
   {
@@ -147,7 +147,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "The COD amount is physically credited to the sender's account",
     ],
     a: 3,
-    e: "OM 10-32/2013-BD&MD (Vol-II) dated 11-12-2015 mandates: 'No CRM grievance regarding COD can be closed until the specific financial transaction — **crediting the biller's/sender's account** — is successfully completed and verified.' This directly addresses a major e-commerce grievance.",
+    e: "OM 10-32/2013-BD&MD (Vol-II) dated 11-12-2015 mandates: 'No CRM grievance regarding COD can be closed until the specific financial transaction — crediting the biller's/sender's account — is successfully completed and verified.' This directly addresses a major e-commerce grievance.",
   },
   // q12 → A
   {
@@ -159,7 +159,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "OM 104/76/2011-AVD.I dated 18-10-2013",
     ],
     a: 0,
-    e: "**OM PG-01/3/2021-PG-DoP dated 18-08-2022** reduced the stipulated timelines for disposal of grievances on the CRM Platform (shifting from the traditional 30-day window to 7–15 days depending on complaint category) and implemented an auto-escalation matrix when first-level resolution breaches the new shortened timelines.",
+    e: "OM PG-01/3/2021-PG-DoP dated 18-08-2022 reduced the stipulated timelines for disposal of grievances on the CRM Platform (shifting from the traditional 30-day window to 7–15 days depending on complaint category) and implemented an auto-escalation matrix when first-level resolution breaches the new shortened timelines.",
   },
   // q13 → B
   {
@@ -171,7 +171,7 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "The Cabinet Secretary through a normal departmental inquiry",
     ],
     a: 1,
-    e: "As per OM 104/100/2009-AVD.I dated 14-01-2010: complaints against Secretaries to the Government of India undergo a **specialized scrutiny by a Group of Ministers or a high-level apex committee** before any formal enquiry or agency investigation (like CBI) can be initiated. This protects top-level decision-making from frivolous or vindictive complaints.",
+    e: "As per OM 104/100/2009-AVD.I dated 14-01-2010: complaints against Secretaries to the Government of India undergo a specialized scrutiny by a Group of Ministers or a high-level apex committee before any formal enquiry or agency investigation (like CBI) can be initiated. This protects top-level decision-making from frivolous or vindictive complaints.",
   },
   // q14 → C
   {
@@ -183,6 +183,6 @@ export const complaint_grievance_set1: RawQuestion[] = [
       "OM 104/76/2011-AVD.I dated 18-10-2013; bans anonymous complaints from being registered",
     ],
     a: 2,
-    e: "**OM 009/5/2023-PG dated 04-09-2023** issued the comprehensive SOP for complaint handling on CRM. It dictates the exact workflow (Acknowledgment → Root Cause Analysis → Rectification → Polite Drafting of Final Reply → Closure) and **explicitly bans 'one-line replies'** such as 'Closed,' 'Delivered,' or 'Sorted,' requiring descriptive resolutions.",
+    e: "OM 009/5/2023-PG dated 04-09-2023 issued the comprehensive SOP for complaint handling on CRM. It dictates the exact workflow (Acknowledgment → Root Cause Analysis → Rectification → Polite Drafting of Final Reply → Closure) and explicitly bans 'one-line replies' such as 'Closed,' 'Delivered,' or 'Sorted,' requiring descriptive resolutions.",
   },
 ];

@@ -17,7 +17,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "26th January, 1950",
     ],
     a: 0,
-    e: "FR-1 states: 'These rules may be called the Fundamental Rules. They shall come into force with effect from the **1st January 1922**.'",
+    e: "FR-1 states: 'These rules may be called the Fundamental Rules. They shall come into force with effect from the 1st January 1922.'",
   },
   // q1 → C
   {
@@ -29,7 +29,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "State Police Service Regulations",
     ],
     a: 2,
-    e: "FR-3 states that the Fundamental Rules do not apply to Government servants whose conditions of service are governed by **Army or Marine Regulations**.",
+    e: "FR-3 states that the Fundamental Rules do not apply to Government servants whose conditions of service are governed by Army or Marine Regulations.",
   },
   // q2 → B
   {
@@ -41,7 +41,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "The Comptroller and Auditor General",
     ],
     a: 1,
-    e: "FR-7 states: 'No powers may be exercised or delegated under these rules except after consultation with the **Ministry of Finance**.'",
+    e: "FR-7 states: 'No powers may be exercised or delegated under these rules except after consultation with the Ministry of Finance.'",
   },
   // q3 → D
   {
@@ -53,7 +53,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "The President",
     ],
     a: 3,
-    e: "FR-8 states: 'The powers of interpreting these rules are reserved to **the President**.'",
+    e: "FR-8 states: 'The powers of interpreting these rules are reserved to the President.'",
   },
   // q4 → A
   {
@@ -65,7 +65,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "Dearness Allowance",
     ],
     a: 0,
-    e: "FR-9(5) defines Compensatory Allowance as including **Travelling Allowance**, but specifically excluding sumptuary allowance and the grant of free passage by sea to or from any place outside India.",
+    e: "FR-9(5) defines Compensatory Allowance as including Travelling Allowance, but specifically excluding sumptuary allowance and the grant of free passage by sea to or from any place outside India.",
   },
   // q5 → C
   {
@@ -77,7 +77,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "Attendance at departmental examination",
     ],
     a: 2,
-    e: "As per Government Decisions on Duty under FR-9(6): 'Training before appointment is to be treated as duty for increments and qualifying service for pension, **but not for MACP**.'",
+    e: "As per Government Decisions on Duty under FR-9(6): 'Training before appointment is to be treated as duty for increments and qualifying service for pension, but not for MACP.'",
   },
   // q6 → B
   {
@@ -89,7 +89,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "Income from publishing a book",
     ],
     a: 1,
-    e: "FR-9(6-A) excludes from the definition of 'Fee': **(a) unearned income** such as income from property, dividends, and interests on securities; and (b) income from literary, cultural, artistic, scientific, or technological efforts.",
+    e: "FR-9(6-A) excludes from the definition of 'Fee': (a) unearned income such as income from property, dividends, and interests on securities; and (b) income from literary, cultural, artistic, scientific, or technological efforts.",
   },
   // q7 → A
   {
@@ -101,7 +101,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "Non-Practicing Allowance",
     ],
     a: 0,
-    e: "FR-9(9) states that **OTA (Overtime Allowance), Overtime pay, and Extra Duty Allowance are treated as recurring honoraria** — they are recurrent payments from the Consolidated Fund for special work.",
+    e: "FR-9(9) states that OTA (Overtime Allowance), Overtime pay, and Extra Duty Allowance are treated as recurring honoraria — they are recurrent payments from the Consolidated Fund for special work.",
   },
   // q8 → D
   {
@@ -113,7 +113,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "Probation is not applicable",
     ],
     a: 3,
-    e: "FR-9(13) defines Lien as the title to hold on a regular basis a post to which appointment has been made on a regular basis and on which **probation is not applicable**.",
+    e: "FR-9(13) defines Lien as the title to hold on a regular basis a post to which appointment has been made on a regular basis and on which probation is not applicable.",
   },
   // q9 → C
   {
@@ -125,7 +125,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "The post has been kept in abeyance",
     ],
     a: 2,
-    e: "FR-9(19) defines 'Officiate': 'A Government servant officiates in a post when performing the duties of a post on which **another person holds a lien**.'",
+    e: "FR-9(19) defines 'Officiate': 'A Government servant officiates in a post when performing the duties of a post on which another person holds a lien.'",
   },
   // q10 → B
   {
@@ -137,7 +137,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "15% of Basic Pay",
     ],
     a: 1,
-    e: "FR-9(21) states: 'Non-practicing allowance (NPA) to medical posts is **20%** of Basic pay.' Additionally, basic pay plus NPA should not exceed the pay of Cabinet Secretary level (Rs. 2,37,500).",
+    e: "FR-9(21) states: 'Non-practicing allowance (NPA) to medical posts is 20% of Basic pay.' Additionally, basic pay plus NPA should not exceed the pay of Cabinet Secretary level (Rs. 2,37,500).",
   },
   // q11 → A
   {
@@ -149,7 +149,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "Pay drawn in an officiating capacity",
     ],
     a: 0,
-    e: "FR-9(28) defines 'Substantive Pay' as the pay other than special pay, personal pay, or emoluments classed as pay by the President, to which a Government servant is entitled on account of a post to which an appointment has been made substantively — i.e., **only basic pay of the post**.",
+    e: "FR-9(28) defines 'Substantive Pay' as the pay other than special pay, personal pay, or emoluments classed as pay by the President, to which a Government servant is entitled on account of a post to which an appointment has been made substantively — i.e., only basic pay of the post.",
   },
   // q12 → C
   {
@@ -161,7 +161,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "When appointed to officiate in a higher post",
     ],
     a: 2,
-    e: "FR-9(23) defines Personal Pay as additional pay granted: (a) **to save from a loss of substantive pay** in respect of a permanent post (other than a tenure post) due to revision of pay or any non-disciplinary reduction; or (b) in exceptional circumstances on other personal considerations.",
+    e: "FR-9(23) defines Personal Pay as additional pay granted: (a) to save from a loss of substantive pay in respect of a permanent post (other than a tenure post) due to revision of pay or any non-disciplinary reduction; or (b) in exceptional circumstances on other personal considerations.",
   },
   // q13 → D
   {
@@ -173,7 +173,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "Any source other than the Consolidated Fund of India, the Consolidated Fund of a State or Union Territory",
     ],
     a: 3,
-    e: "FR-9(7) defines 'Foreign Service' as service in which pay is received with the sanction of Government from **any source other than the Consolidated Fund of India, the Consolidated Fund of a State, or the Consolidated Fund of a Union Territory**.",
+    e: "FR-9(7) defines 'Foreign Service' as service in which pay is received with the sanction of Government from any source other than the Consolidated Fund of India, the Consolidated Fund of a State, or the Consolidated Fund of a Union Territory.",
   },
   // q14 → B
   {
@@ -185,7 +185,7 @@ export const fr_sr_set1: RawQuestion[] = [
       "A post subject to annual renewal by the sanctioning authority",
     ],
     a: 1,
-    e: "FR-9(30-A) defines 'Tenure Post' as **a permanent post which an individual Government servant may not hold for more than a limited period**. Compare this with a 'Temporary Post' which is a post carrying a definite rate of pay sanctioned for a limited time.",
+    e: "FR-9(30-A) defines 'Tenure Post' as a permanent post which an individual Government servant may not hold for more than a limited period. Compare this with a 'Temporary Post' which is a post carrying a definite rate of pay sanctioned for a limited time.",
   },
 ];
 
@@ -200,7 +200,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Up to 5 years in all cases",
     ],
     a: 2,
-    e: "FR-13 provides: Retention of lien for appointment in another Central Government Office or State Government — up to **2 years** and in exceptional cases up to **3 years**. For deputation to developing countries of Asia, Africa and Latin America, lien may be retained initially 2 years, extendable to 5 years.",
+    e: "FR-13 provides: Retention of lien for appointment in another Central Government Office or State Government — up to 2 years and in exceptional cases up to 3 years. For deputation to developing countries of Asia, Africa and Latin America, lien may be retained initially 2 years, extendable to 5 years.",
   },
   // q1 → A
   {
@@ -212,7 +212,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Being placed under suspension",
     ],
     a: 0,
-    e: "FR-13 provides that lien is terminated on **Resignation or Technical Resignation**, and also when a Government employee acquires a lien on a permanent post outside the cadre on which they are borne.",
+    e: "FR-13 provides that lien is terminated on Resignation or Technical Resignation, and also when a Government employee acquires a lien on a permanent post outside the cadre on which they are borne.",
   },
   // q2 → B
   {
@@ -224,7 +224,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Two years",
     ],
     a: 1,
-    e: "FR-18 states: 'Unless the President, in view of the exceptional circumstances of the case otherwise determines, no Government servant shall be granted leave of any kind for a continuous period exceeding **five years**.'",
+    e: "FR-18 states: 'Unless the President, in view of the exceptional circumstances of the case otherwise determines, no Government servant shall be granted leave of any kind for a continuous period exceeding five years.'",
   },
   // q3 → D
   {
@@ -236,7 +236,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "One month of assumption of charge",
     ],
     a: 3,
-    e: "FR-22(I)(a)(1) provides: 'The option of pay fixation within **one month** from the assumption of charge.' The Government servant can opt for pay fixation from the date of promotion or from the date of next increment.",
+    e: "FR-22(I)(a)(1) provides: 'The option of pay fixation within one month from the assumption of charge.' The Government servant can opt for pay fixation from the date of promotion or from the date of next increment.",
   },
   // q4 → A
   {
@@ -248,7 +248,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Suspension period when the charge is proved",
     ],
     a: 0,
-    e: "FR-26 specifies that for increment purposes, **all duty, officiating/deputation service, and all kinds of leave except Extraordinary Leave (EXOL)** count. EXOL counts only if granted on medical certificate, on account of civil commotion, or for prosecuting higher technical/scientific studies.",
+    e: "FR-26 specifies that for increment purposes, all duty, officiating/deputation service, and all kinds of leave except Extraordinary Leave (EXOL) count. EXOL counts only if granted on medical certificate, on account of civil commotion, or for prosecuting higher technical/scientific studies.",
   },
   // q5 → C
   {
@@ -260,7 +260,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "10 increments",
     ],
     a: 2,
-    e: "FR-27 provides: 'National level — One Increment; International level — Two increments; Total **5 (five) increments** entire service.' These are awarded to sports men/women, referees, umpires, and coaches achieving excellence in National and International events.",
+    e: "FR-27 provides: 'National level — One Increment; International level — Two increments; Total 5 (five) increments entire service.' These are awarded to sports men/women, referees, umpires, and coaches achieving excellence in National and International events.",
   },
   // q6 → B
   {
@@ -272,7 +272,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "20% of Basic pay or Rs. 10,000 maximum",
     ],
     a: 1,
-    e: "FR-35 provides: 'The Central Government fix the pay of an officiating Government servant at an amount less than that admissible under these rules. **12.5%** of Basic pay or Rs. **6,700** maximum.'",
+    e: "FR-35 provides: 'The Central Government fix the pay of an officiating Government servant at an amount less than that admissible under these rules. 12.5% of Basic pay or Rs. 6,700 maximum.'",
   },
   // q7 → D
   {
@@ -284,7 +284,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Pay of higher post + 10% of presumptive pay of additional post",
     ],
     a: 3,
-    e: "FR-49(iii) provides: Where a Government servant holds charge of a post not in the same office or not in the same cadre, he shall be allowed the pay of the higher post plus **10% of the presumptive pay of the additional post or posts**, if the additional charge is held for a period exceeding **45 days** but not exceeding **3 months**.",
+    e: "FR-49(iii) provides: Where a Government servant holds charge of a post not in the same office or not in the same cadre, he shall be allowed the pay of the higher post plus 10% of the presumptive pay of the additional post or posts, if the additional charge is held for a period exceeding 45 days but not exceeding 3 months.",
   },
   // q8 → A
   {
@@ -296,7 +296,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Rs. 3,00,000",
     ],
     a: 0,
-    e: "FR-49(iv) states: 'The aggregate of pay and additional pay shall in no case exceed **Rs. 2,37,500**.' This corresponds to the Cabinet Secretary-level pay ceiling.",
+    e: "FR-49(iv) states: 'The aggregate of pay and additional pay shall in no case exceed Rs. 2,37,500.' This corresponds to the Cabinet Secretary-level pay ceiling.",
   },
   // q9 → C
   {
@@ -308,7 +308,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "75% of earned leave salary",
     ],
     a: 2,
-    e: "FR-53(1)(i) provides: 'Subsistence allowance — **50% of earned leave salary or equal to half pay leave salary plus Dearness Allowance**.' The suspension must first be reviewed within 3 months from the date of suspension.",
+    e: "FR-53(1)(i) provides: 'Subsistence allowance — 50% of earned leave salary or equal to half pay leave salary plus Dearness Allowance.' The suspension must first be reviewed within 3 months from the date of suspension.",
   },
   // q10 → B
   {
@@ -320,7 +320,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "When the charge sheet is found to be not sustainable",
     ],
     a: 1,
-    e: "FR-53(1)(ii) provides: 'Subsistence allowance may be increased not exceeding 50% of the subsistence allowance admissible during the first three months when the suspension period is extended after review — **not directly attributable to the Government servant**.'",
+    e: "FR-53(1)(ii) provides: 'Subsistence allowance may be increased not exceeding 50% of the subsistence allowance admissible during the first three months when the suspension period is extended after review — not directly attributable to the Government servant.'",
   },
   // q11 → D
   {
@@ -332,7 +332,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Leave may NOT be granted to a Government servant under suspension",
     ],
     a: 3,
-    e: "FR-55 unambiguously states: '**Leave may not be granted to a government servant under suspension.**'",
+    e: "FR-55 unambiguously states: 'Leave may not be granted to a government servant under suspension.'",
   },
   // q12 → A
   {
@@ -344,7 +344,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "5% per annum of capital cost or 8% of monthly emoluments, whichever is less",
     ],
     a: 0,
-    e: "FR-45-A(b) provides: License fee is **6% per annum of capital cost or not exceeding 10% of the officer's monthly emoluments, whichever is less**. For calculating the monthly fee: annual license fee divided by 12.",
+    e: "FR-45-A(b) provides: License fee is 6% per annum of capital cost or not exceeding 10% of the officer's monthly emoluments, whichever is less. For calculating the monthly fee: annual license fee divided by 12.",
   },
   // q13 → C
   {
@@ -356,7 +356,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Normal license fee plus 50% surcharge",
     ],
     a: 2,
-    e: "The Government Decision under FR-45-A states: 'On occupation of Higher-class accommodation — **three times** of license fee of the higher accommodation.'",
+    e: "The Government Decision under FR-45-A states: 'On occupation of Higher-class accommodation — three times of license fee of the higher accommodation.'",
   },
   // q14 → B
   {
@@ -368,7 +368,7 @@ export const fr_sr_set2: RawQuestion[] = [
       "Up to 2 months",
     ],
     a: 1,
-    e: "FR-45-A Government Decisions (Retention table) provide: Retirement — **6 months on normal license fee**. Compare: Transfer involves 2 months on normal + up to 6 months on double fee; Death/missing — 12 months normal + further 12 months normal (if family has no house at place of posting).",
+    e: "FR-45-A Government Decisions (Retention table) provide: Retirement — 6 months on normal license fee. Compare: Transfer involves 2 months on normal + up to 6 months on double fee; Death/missing — 12 months normal + further 12 months normal (if family has no house at place of posting).",
   },
 ];
 
@@ -383,7 +383,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "65 years",
     ],
     a: 0,
-    e: "FR-56(a) provides: 'Every Government servant shall retire from service on the afternoon of the last day of the month in which he attains the age of **60 years**.' However, specialists in the Teaching, Non-Teaching and Public Health sub-cadres of Central Health Service retire at 65 years.",
+    e: "FR-56(a) provides: 'Every Government servant shall retire from service on the afternoon of the last day of the month in which he attains the age of 60 years.' However, specialists in the Teaching, Non-Teaching and Public Health sub-cadres of Central Health Service retire at 65 years.",
   },
   // q1 → D
   {
@@ -395,7 +395,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "50 years",
     ],
     a: 3,
-    e: "FR-56(j) provides: 'Group A & B (entered in service before age of **35 years**) — after he has attained the age of **50 years**.' For all other cases (not entering before age 35), premature retirement is after attaining the age of 55 years. Notice is 3 months or 3 months' pay in lieu.",
+    e: "FR-56(j) provides: 'Group A & B (entered in service before age of 35 years) — after he has attained the age of 50 years.' For all other cases (not entering before age 35), premature retirement is after attaining the age of 55 years. Notice is 3 months or 3 months' pay in lieu.",
   },
   // q2 → B
   {
@@ -407,7 +407,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "15 years of service",
     ],
     a: 1,
-    e: "FR-56(m) provides: 'A Government servant in Group 'C' post who is not governed by any pension rules may, by giving notice of not less than three months in writing to the Appropriate Authority, retire from service after he has completed **30 years' service**.'",
+    e: "FR-56(m) provides: 'A Government servant in Group 'C' post who is not governed by any pension rules may, by giving notice of not less than three months in writing to the Appropriate Authority, retire from service after he has completed 30 years' service.'",
   },
   // q3 → C
   {
@@ -419,7 +419,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "12 years",
     ],
     a: 2,
-    e: "FR-51 Government Decision provides: 'A Central Govt. Officer shall be eligible for foreign service only after he has completed **9 years** of service with clear from vigilance angle.' The maximum deputation in one stretch is 5 years, and maximum over the entire service is 7 years.",
+    e: "FR-51 Government Decision provides: 'A Central Govt. Officer shall be eligible for foreign service only after he has completed 9 years of service with clear from vigilance angle.' The maximum deputation in one stretch is 5 years, and maximum over the entire service is 7 years.",
   },
   // q4 → A
   {
@@ -431,7 +431,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "Nil",
     ],
     a: 0,
-    e: "FR-51 provides cooling-off periods: **Joint Secretary level and below — 3 years**; Additional Secretary level — 1 year; Secretary level — **Nil**.",
+    e: "FR-51 provides cooling-off periods: Joint Secretary level and below — 3 years; Additional Secretary level — 1 year; Secretary level — Nil.",
   },
   // q5 → D
   {
@@ -443,7 +443,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "18% of (Basic Pay + DA)",
     ],
     a: 3,
-    e: "FR-116 (from 1st April 2019): OPS employee — **18% of Basic pay + DA** [Monthly contribution by employee @ 14% + For Gratuity @ 4%]. NPS employee contributes 28% [Employer 14% + Employee 10% + Gratuity 4%]. Leave salary contribution for all Government servants = 11% of (Basic Pay + DA).",
+    e: "FR-116 (from 1st April 2019): OPS employee — 18% of Basic pay + DA [Monthly contribution by employee @ 14% + For Gratuity @ 4%]. NPS employee contributes 28% [Employer 14% + Employee 10% + Gratuity 4%]. Leave salary contribution for all Government servants = 11% of (Basic Pay + DA).",
   },
   // q6 → B
   {
@@ -455,7 +455,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "Rs. 4,750",
     ],
     a: 1,
-    e: "SR-12 provides: **one-third (1/3) of any fees in excess of Rs. 5,000** paid in a financial year shall be credited to the Consolidated Fund. Calculation: (Rs. 9,500 − Rs. 5,000) ÷ 3 = Rs. 4,500 ÷ 3 = **Rs. 1,500**.",
+    e: "SR-12 provides: one-third (1/3) of any fees in excess of Rs. 5,000 paid in a financial year shall be credited to the Consolidated Fund. Calculation: (Rs. 9,500 − Rs. 5,000) ÷ 3 = Rs. 4,500 ÷ 3 = Rs. 1,500.",
   },
   // q7 → C
   {
@@ -467,7 +467,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "July",
     ],
     a: 2,
-    e: "SR-198 Government Decisions provide: 'In **January** each year, the Govt. servant shall hand over the service book to his office for updating.' The office shall update and return it to the Govt. employee within **30 days** of its receipt. A lost copy is replaced on payment of **Rs. 500**.",
+    e: "SR-198 Government Decisions provide: 'In January each year, the Govt. servant shall hand over the service book to his office for updating.' The office shall update and return it to the Govt. employee within 30 days of its receipt. A lost copy is replaced on payment of Rs. 500.",
   },
   // q8 → A
   {
@@ -479,7 +479,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "Ten years",
     ],
     a: 0,
-    e: "SR-199 (Attestation of Entries) provides: 'The head of office must attest all entries. Re-attest the descriptive particulars every **five years**.' Every step of the official's official life must be recorded and each entry attested by the Head of Office.",
+    e: "SR-199 (Attestation of Entries) provides: 'The head of office must attest all entries. Re-attest the descriptive particulars every five years.' Every step of the official's official life must be recorded and each entry attested by the Head of Office.",
   },
   // q9 → D
   {
@@ -491,7 +491,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "19th May, 1979",
     ],
     a: 3,
-    e: "Rule 2 of CCS (Joining Time) Rules, 1979 states: 'They shall come into force from **19th May 1979**.'",
+    e: "Rule 2 of CCS (Joining Time) Rules, 1979 states: 'They shall come into force from 19th May 1979.'",
   },
   // q10 → B
   {
@@ -503,7 +503,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "120 days",
     ],
     a: 1,
-    e: "Rule 4 provides: 'No joining time is admissible in case of temporary transfer for a period not exceeding **180 days**. Only the actual transit time, as admissible in case of journeys on tour, may be allowed.'",
+    e: "Rule 4 provides: 'No joining time is admissible in case of temporary transfer for a period not exceeding 180 days. Only the actual transit time, as admissible in case of journeys on tour, may be allowed.'",
   },
   // q11 → C
   {
@@ -515,7 +515,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "5 days",
     ],
     a: 2,
-    e: "Rule 8 provides: 'New post within same station — only **one day** joining time where it does not involve change of residence.' The same station is defined as an area within the municipality.",
+    e: "Rule 8 provides: 'New post within same station — only one day joining time where it does not involve change of residence.' The same station is defined as an area within the municipality.",
   },
   // q12 → A
   {
@@ -527,7 +527,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "8 days (10 days if road journey is more than 200 km)",
     ],
     a: 0,
-    e: "Rule 9 joining time table: Distance **more than 1000 km up to 2000 km** — **12 days**; where journey by road is more than 200 km — **15 days**. (≤1000 km = 10/12 days; >2000 km = 15 days or 12 days by air.) For transfer to NE, Sikkim, A&N, Lakshadweep, Ladakh: +2 additional days.",
+    e: "Rule 9 joining time table: Distance more than 1000 km up to 2000 km — 12 days; where journey by road is more than 200 km — 15 days. (≤1000 km = 10/12 days; >2000 km = 15 days or 12 days by air.) For transfer to NE, Sikkim, A&N, Lakshadweep, Ladakh: +2 additional days.",
   },
   // q13 → B
   {
@@ -539,7 +539,7 @@ export const fr_sr_set3: RawQuestion[] = [
       "Casual Leave",
     ],
     a: 1,
-    e: "Rule 11 provides: 'Unutilized joining time will be credited in the account of **Earned Leave**, subjected to maximum accumulation of **300 days**.' This applies when a Govt. servant joins without availing full joining time.",
+    e: "Rule 11 provides: 'Unutilized joining time will be credited in the account of Earned Leave, subjected to maximum accumulation of 300 days.' This applies when a Govt. servant joins without availing full joining time.",
   },
   // q14 → D
   {
@@ -551,6 +551,6 @@ export const fr_sr_set3: RawQuestion[] = [
       "3 years of continuous service",
     ],
     a: 3,
-    e: "Rule 6 provides: 'The period of break may be converted into joining time without pay by the Head of Department, provided that the break does not exceed **30 days** and the Govt. servant has rendered not less than **3 years** continuous service on the date of his discharge.'",
+    e: "Rule 6 provides: 'The period of break may be converted into joining time without pay by the Head of Department, provided that the break does not exceed 30 days and the Govt. servant has rendered not less than 3 years continuous service on the date of his discharge.'",
   },
 ];
