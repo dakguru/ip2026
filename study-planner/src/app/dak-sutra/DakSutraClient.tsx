@@ -99,6 +99,16 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
     const [categoryFilter, setCategoryFilter] = useState("all");
     const [debouncedSearch, setDebouncedSearch] = useState("");
 
+    // Force light mode on this page regardless of user's dark mode preference
+    useEffect(() => {
+        const html = document.documentElement;
+        const wasDark = html.classList.contains('dark');
+        html.classList.remove('dark');
+        return () => {
+            if (wasDark) html.classList.add('dark');
+        };
+    }, []);
+
     useEffect(() => {
         const t = setTimeout(() => setDebouncedSearch(search), 300);
         return () => clearTimeout(t);

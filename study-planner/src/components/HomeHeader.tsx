@@ -6,7 +6,7 @@ import { Search, ChevronDown, MessageCircle, Menu, X, LogOut, User, Bell } from 
 import { useRouter } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { UserMenu } from "./UserMenu";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { getDisplayMembership, isPremiumMember } from "@/lib/membership-utils";
 import { useCourse } from "@/contexts/CourseContext";
@@ -20,6 +20,8 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
     const [currentMembership, setCurrentMembership] = useState<'free' | 'silver' | 'gold' | 'diamond' | 'platinum'>(membershipLevel || 'free');
     const [sessionData, setSessionData] = useState<any>(null);
     const [showUpdates, setShowUpdates] = useState(false);
+    const headerRef = useRef<HTMLElement>(null);
+    const [headerHeight, setHeaderHeight] = useState(64);
 
     useEffect(() => {
         // Sync membership from cookie to ensure immediate update after payment
@@ -116,6 +118,18 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Measure actual header height so the spacer below always matches
+    useEffect(() => {
+        const el = headerRef.current;
+        if (!el) return;
+        const observer = new ResizeObserver(() => {
+            setHeaderHeight(el.offsetHeight);
+        });
+        observer.observe(el);
+        setHeaderHeight(el.offsetHeight);
+        return () => observer.disconnect();
+    }, []);
+
     // Close mobile menu when resizing to larger screen
     useEffect(() => {
         const handleResize = () => {
@@ -141,7 +155,10 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
     return (
         <>
-            <header className={`sticky top-0 z-50 bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#0f172a] dark:from-[#020617] dark:via-[#0f172a] dark:to-[#020617] transition-all pt-[max(12px,env(safe-area-inset-top))] ${scrolled ? 'shadow-lg shadow-blue-900/20 py-2' : 'py-3'}`}>
+            {/* Spacer that matches the fixed header height — keeps page content from sliding under the header */}
+            <div style={{ height: headerHeight }} aria-hidden="true" />
+
+            <header ref={headerRef} className={`fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#0f172a] dark:from-[#020617] dark:via-[#0f172a] dark:to-[#020617] transition-all pt-[max(12px,env(safe-area-inset-top))] ${scrolled ? 'shadow-lg shadow-blue-900/20 py-2' : 'py-3'}`}>
                 {/* Animated gradient bottom border */}
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-orange-500 opacity-80"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,7 +287,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
 
                 {/* Mobile Navigation Menu */}
                 {mobileMenuOpen && (
-                    <div className="lg:hidden fixed inset-0 top-[60px] z-40 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 overflow-y-auto pb-20 p-4 pt-[max(20px,env(safe-area-inset-top))]">
+                    <div className="lg:hidden fixed inset-0 z-40 bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 overflow-y-auto pb-20 p-4" style={{ top: headerHeight }}>
                         <div className="flex flex-col space-y-4">
                             {/* Mobile Search */}
                             <form
