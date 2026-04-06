@@ -1,0 +1,183 @@
+Q1. (Manual for Procurement) [Difficulty: Easy] As per Rule 149 of GFR, 2017, the procurement of common use goods and services is mandatory through which of the following platforms? A. Central Public Procurement Portal (CPPP) B. Government e-Marketplace (GeM) C. National Informatics Centre (NIC) Portal D. Direct Procurement from OEMs Answer: B Explanation: Procurement of common use goods and services is mandatorily required to be done through GeM as per Rule 149 of GFR, 2017.
+Q2. (Manual for Procurement) [Difficulty: Moderate] Which of the following is NOT listed as a "Basic Aim of Procurement" (the Five R's of Procurement)? A. Right Quality B. Right Source C. Right Process D. Right Time and Place Answer: C Explanation: The Five R's of Procurement are Right Quality, Right Quantity, Right Price, Right Time and Place, and Right Source. "Right Process" is NOT one of them.
+
+
+Q3. (Manual for Procurement) [Difficulty: Hard]
+Consider the following statements regarding the Purchase Preference for Micro and Small Enterprises (MSEs):
+1.	The minimum annual procurement from MSEs shall be 25 per cent.
+2.	If the L1 price is from a non-MSE, participating MSEs quoting within a price band of L1+15% shall be allowed to supply up to 25% of the total tendered value by bringing down their price to L1. Which of the above statements is/are correct? A. 1 only B. 2 only C. Both 1 and 2 D. Neither 1 nor 2 Answer: C Explanation: Both statements are correct. Under the amended Public Procurement Policy for MSEs, there is a mandatory minimum 25% procurement, and MSEs within the L1+15% price band can supply up to 25% of the tendered value.
+
+
+Q4. (Manual for Procurement) [Difficulty: Moderate] All of the following are valid situations for invoking a Global Tender Enquiry (GTE) EXCEPT: A. When goods of required specifications are not available within the country. B. When there is a suspected cartel formation among indigenous bidders. C. For any procurement up to Rs. 200 crores to encourage foreign competition. D. Absence of a sufficient number of competent domestic bidders. Answer: C Explanation: No Global Tender Enquiry (GTE) up to Rs. 200 crores shall be invited (or such limit prescribed by the Department of Expenditure). Options A, B, and D are valid justifications for GTE.
+
+
+Q5. (Manual for Procurement) [Difficulty: Moderate] Which of the following statements about the "Option Clause" in tenders is correct? A. It allows the purchaser to increase or decrease the ordered quantity by up to 50%. B. It is mandatory for all tenders regardless of value. C. It reserves the purchaser's right to increase or decrease the quantity by up to 25% without changing terms and conditions. D. It allows the bidder to change the quoted price during the contract period. Answer: C Explanation: The plus/minus option clause normally allows a 25% increase or decrease in quantity at the same rate and terms during the currency of the contract, typically for tenders above Rs. 50 lakhs.
+
+
+Q6. (Manual for Procurement) [Difficulty: Easy] What is the standard percentage range of the Performance Security for Goods/Services contracts effective from 01.01.2024? A. 2% to 5% B. 3% to 5% C. 5% to 10% D. 10% to 15% Answer: B Explanation: From 01.01.2024, the performance security for Goods/services will be 03%-05% of the value of the contract. For works, it remains 3%-10%.
+
+
+Q7. (Manual for Procurement) [Difficulty: Hard]
+Match the mode of procurement in Column I with its corresponding monetary limit/condition in Column II:
+Column I:
+1.	Direct Procurement without Quotation
+2.	Direct Procurement by Purchase Committee
+3.	Limited Tender Enquiry (LTE) default limit Column II: X. Up to Rs. 50,000 on each occasion Y. Above Rs. 50,000 and up to Rs. 5,00,000 Z. Rs. 5 lakh to Rs. 50 lakh A. 1-X, 2-Y, 3-Z B. 1-Y, 2-X, 3-Z C. 1-Z, 2-Y, 3-X D. 1-X, 2-Z, 3-Y Answer: A Explanation: Direct Procurement without Quotation is up to Rs. 50,000. Purchase Committee is between Rs. 50,000 and Rs. 5,00,000. LTE default mode is Rs. 5 lakh to Rs. 50 lakh.
+
+
+Q8. (Manual for Procurement) [Difficulty: Moderate] Regarding the Liquidated Damages (LD) clause for late delivery, which of the following statements is INCORRECT? A. Law allows recovery of pre-estimated loss without the need to establish actual loss. B. The CA may recover an LD sum equivalent to 0.5% of the price of late stores for each week of delay. C. The maximum deduction for LD under normal circumstances is capped at 50% of the contract value. D. Inordinate delays are inexcusable delays of more than 25% of the total completion period. Answer: C Explanation: The maximum deduction for Liquidated Damages is normally 5% of the total contract value, and in cases of inordinate delay, it is capped at 10%, NOT 50%.
+
+
+Q9. (Manual for Procurement) [Difficulty: Moderate] Under the Procurement Preference to Make in India (MII policy), what is the minimum 'local content' requirement to categorize a supplier as a 'Class-II local supplier'? A. 50 percent B. 25 percent C. 20 percent D. 15 percent Answer: C Explanation: Under the MII policy, 'Class-I local suppliers' require a minimum 50% local content, while 'Class-II local suppliers' require a minimum of 20% local content.
+
+
+Q10. (Manual for Procurement) [Difficulty: Easy] In the context of categorisation of procurements, what is the primary difference between 'Goods' and 'Works'? A. Goods involve intellectual input, Works do not. B. Goods are manufactured on the supplier's premises, Works are executed on the procuring entity's premises. C. Works involve routine standard outputs, Goods do not. D. Goods cannot include software, Works do. Answer: B Explanation: The main difference is that the manufacture of goods is done on the supplier's own premises, whereas 'Works' are executed on the premises of the procuring entity.
+
+
+Q11. (Manual for Procurement) [Difficulty: Moderate] According to the guidelines on advanced payments, what is the maximum permissible advance payment percentage to a private firm against fabrication or turn-key contracts? A. 10 per cent B. 20 per cent C. 30 per cent D. 40 per cent Answer: C Explanation: Advance payments should not exceed thirty per cent (30%) of the contract value to private firms, while it is forty per cent (40%) for a state/central Government agency or PSU.
+
+
+Q12. (Manual for Procurement) [Difficulty: Scenario] A Ministry wishes to dispose of old, unusable office furniture valued at Rs. 50,000. Which mode of disposal is most appropriate according to the guidelines? A. E-auction portal only B. Limited Tender basis to locally known Scrap Dealers C. Sale directly to local scrap dealers on a summary quotation basis D. Global Tender Enquiry Answer: B Explanation: Scrap up to Rupees four Lakh (revised from 2 Lakh) may be sold on a Limited Tender basis. Direct sale on summary quotation is only for small value scrap up to Rs. 15,000.
+
+
+Q13. (Manual for Procurement) [Difficulty: Hard]
+Consider the following regarding the Single Stage Two Envelops System (Two Bid System):
+1.	The first envelop contains the financial bid, and the second contains the techno-commercial bid.
+2.	The financial bids of technically non-compliant bidders should be returned unopened.
+3.	Fresh financial bids are routinely invited after opening the techno-commercial bids. How many of the above statements are correct? A. Only one B. Only two C. All three D. None Answer: A Explanation: Only statement 2 is correct. Statement 1 is false (first is techno-commercial, second is financial). Statement 3 is false (it is desirable NOT to invite fresh financial bids).
+
+
+Q14. (Manual for Procurement) [Difficulty: Moderate] All of the following entities may be exempted from the submission of Performance Security EXCEPT: A. Government Ministries B. Attached and Subordinate Offices C. Private contractors participating in Open Tender Enquiry D. Original Equipment Manufacturers (OEM) in tenders against PAC Answer: C Explanation: Procuring Entities may exempt Govt. Ministries, Departments, Attached/Subordinate Offices, Autonomous bodies, and OEMs 
+against PAC from Performance Security. Private contractors are NOT exempt.
+
+
+Q15. (Manual for Procurement) [Difficulty: All/None] Which of the following is true regarding Bid Security (Earnest Money)? A. It ranges between 2-5% of the estimated value of goods. B. EMD is not required if the tender value is up to Rs 5,00,000. C. It remains valid for a period of 45 days beyond the final bid validity period. D. All of the above Answer: D Explanation: All listed statements are correct. Bid Security is 2-5%, exempted up to Rs 5 Lakh, and must remain valid for 45 days beyond the final bid validity period.
+
+
+Q16. (Manual for Procurement) [Difficulty: Moderate] Under the Single Tender Enquiry (STE) without a Proprietary Article Certificate (PAC), procurement can be justified in which of the following scenarios? A. To test the open market for a new product. B. In an existing or prospective emergency relating to operational or technical requirements. C. When standard commercial off-the-shelf goods are required. D. None of the above. Answer: B Explanation: STE without a PAC is permitted during an existing or prospective emergency relating to operational or technical requirements, to be certified by the indenter.
+
+
+Q17. (Manual for Procurement) [Difficulty: Easy] In order to promote wider participation and ease of bidding, what is the cost of a tender document downloaded by bidders from a website? A. Rs. 500 B. Rs. 1000 C. 1% of tender value D. No cost Answer: D Explanation: In order to promote wider participation and ease of bidding, no cost of tender document may be charged for the tender documents downloaded by the bidders.
+
+
+Q18. (RTI Act & Rules) [Difficulty: Easy] If an RTI application seeks information concerning the life or liberty of a person, within what time frame must the information be provided? A. 24 hours B. 48 hours C. 5 days D. 30 days Answer: B Explanation: Where the information sought for concerns the life or liberty of a person, the same shall be provided within 48 hours of the receipt of the request.
+
+
+Q19. (RTI Act & Rules) [Difficulty: Moderate] According to Section 8(1) of the RTI Act, 2005, which of the following categories of information is strictly exempted from disclosure? A. The monthly remuneration received by officers and employees. B. Information available to a person in his fiduciary relationship. C. A directory of its officers and employees. D. Details of beneficiaries of subsidy programs. Answer: B Explanation: Information available to a person in his fiduciary relationship is exempted under Section 8(1)(e), unless the competent authority is satisfied that the larger public interest warrants disclosure. Options A, C, and D are mandatory proactive disclosures under Section 4(1)(b).
+
+
+Q20. (RTI Act & Rules) [Difficulty: Moderate] Which of the following is NOT explicitly included in the definition of "Information" under Section 2(f) of the RTI Act, 2005? A. E-mails B. Logbooks C. Unrecorded mental opinions of an officer D. Press releases Answer: C Explanation: Information means any material in any form, including records, documents, memos, e-mails, opinions, advices, press releases, circulars, orders, logbooks, etc. "Unrecorded mental opinions" are NOT covered.
+
+
+Q21. (RTI Act & Rules) [Difficulty: Scenario] A CPIO receives an RTI request involving third-party confidential information. After issuing a written notice to the third party within 5 days, the CPIO must make a final decision regarding disclosure within a maximum of how many days from the receipt of the initial request? A. 10 days B. 30 days C. 40 days D. 45 days Answer: C Explanation: When notice is served to a third party, the CPIO/SPIO shall make a decision within 40 days after receipt of the request, after giving the third party an opportunity to make a representation.
+
+
+Q22. (RTI Act & Rules) [Difficulty: All/None] Under the Right to Information Rules 2012, an appeal filed before the Central Information Commission must be accompanied by which of the following documents? A. A copy of the application submitted to the CPIO. B. A copy of the Order received, if any, from the First Appellate Authority. C. An index of the documents referred to in the appeal. D. All of the above. Answer: D Explanation: Rule 8 of the RTI Rules 2012 specifies that an appeal must include the original application, FAA order (if any), an index of documents, among other items.
+
+
+Q23. (RTI Act & Rules) [Difficulty: Easy] What is the prescribed application fee for submitting an RTI request under the RTI Rules 2012? A. Rs. 2 B. Rs. 10 C. Rs. 50 D. Free for all citizens Answer: B Explanation: Under Rule 3 of the RTI Rules 2012, an application shall be accompanied by a fee of rupees ten (Rs. 10/-).
+
+
+Q24. (RTI Act & Rules) [Difficulty: Hard]
+Match the Section of the RTI Act, 2005 in Column I with its subject in Column II:
+Column I:
+1.	Section 8
+2.	Section 10
+3.	Section 11
+4.	Section 20 Column II: W. Severability X. Third party information Y. Penalties Z. Exemption from disclosure A. 1-Z, 2-W, 3-X, 4-Y B. 1-W, 2-Z, 3-Y, 4-X C. 1-Z, 2-X, 3-W, 4-Y D. 1-Y, 2-W, 3-X, 4-Z Answer: A Explanation: Section 8 is Exemption , Section 10 is Severability , Section 11 is Third party info , and Section 20 deals with Penalties.
+
+
+Q25. (RTI Act & Rules) [Difficulty: Moderate] All of the following rules apply to preferring a second appeal to the 
+Information Commission EXCEPT: A. It must be filed within 90 days from the date on which the decision should have been made or was actually received. B. The Commission must give a reasonable opportunity of being heard to a third party if the appeal relates to them. C. The Commission must dispose of the appeal within a strict maximum limit of 15 days. D. The Commission shall give notice of its decision to both the complainant and the public authority. Answer: C Explanation: The RTI Act does not prescribe a strict time limit for the Information Commission to dispose of a second appeal. The 30-45 day limit applies only to the First Appellate Authority. Therefore, Option C is false.
+
+
+Q26. (RTI Act & Rules) [Difficulty: Conceptual] If a CPIO mala-fidely denies a request for information, the Information Commission can impose a penalty of Rs. 250 per day. What is the maximum limit of this total penalty? A. Rs. 10,000 B. Rs. 25,000 C. Rs. 50,000 D. There is no maximum limit Answer: B Explanation: Under Section 20, the penalty is Rs. 250/- per day till the application is received or information furnished, subject to a maximum total amount of Rs. 25,000/-.
+
+
+Q27. (RTI Act & Rules) [Difficulty: Easy] Which section of the RTI Act deals with "Severability," allowing access to the non-exempt part of a record? A. Section 7 B. Section 8 C. Section 10 D. Section 19 Answer: C Explanation: Section 10 of the RTI Act deals with Severability, providing access to the part of the record not exempt from disclosure.
+
+
+Q28. (RTI Act & Rules) [Difficulty: Moderate] The Chief Information Commissioner (CIC) is appointed by the President on the recommendation of a committee. Who among the following is NOT a member of this committee? A. The Prime Minister B. The Leader of Opposition in the Lok Sabha C. A Union Cabinet Minister nominated by the Prime Minister D. The Chief Justice of India Answer: D Explanation: The committee consists of the Prime Minister (Chairperson), Leader of Opposition in the Lok Sabha, and a Union Cabinet Minister nominated by the Prime Minister. The Chief Justice of India is NOT a member.
+
+
+Q29. (RTI Act & Rules) [Difficulty: Statement]
+Consider the following statements regarding the powers of the Information Commissions during an inquiry:
+1.	They have the same powers as a civil court trying a suit under the CPC, 1908.
+2.	They cannot summon or enforce the attendance of persons to give oral evidence on oath. Which of the above statements is/are correct? A. 1 only B. 2 only C. Both 1 and 2 D. Neither 1 nor 2 Answer: A Explanation: Statement 1 is correct; the CIC/SCIC have the same powers as a civil court. Rule 11 also explicitly states they can receive oral or written evidence on oath, making statement 2 false.
+
+
+Q30. (RTI Act & Rules) [Difficulty: All/None] What is the term of office for the Chief Information Commissioner (CIC) according to the 2019 Amendments? A. 5 years or 65 years of age, whichever is earlier. B. 3 years or 65 years of age, whichever is earlier. C. 5 years or 70 years of age, whichever is earlier. D. None of the above. Answer: B Explanation: The RTI Rules Amendment 2019 sets the term of office for the CIC, IC, SCIC, and SIC at 3 years, subject to the maximum age of 65 years.
+
+
+Q31. (RTI Act & Rules) [Difficulty: Scenario] A citizen submits an RTI application to the CPIO of the Ministry of Finance, but the subject matter is more closely connected with the functions of the Ministry of Home Affairs. What is the proper procedure for the CPIO? A. Reject the application and ask the citizen to reapply. B. Transfer the application to the relevant public authority within 5 days. C. Transfer the application to the relevant public authority within 30 days. D. Provide whatever partial information is available and ignore the rest. Answer: B Explanation: Section 6(3) mandates that the application shall be transferred as soon as practicable, but in no case later than 5 days from the date of receipt, to the relevant public authority.
+
+
+Q32. (RTI Act & Rules) [Difficulty: Moderate] Under Section 24 of the RTI Act, intelligence and security organizations are largely exempt from the Act. However, if information sought relates to allegations of human rights violations in these organizations, which of the following rules apply? A. The information is absolutely exempt and cannot be provided. B. It shall only be provided after the approval of the Central Information Commission within 45 days. C. It shall be provided immediately within 48 hours by the CPIO. D. It must be approved by the Supreme Court of India. Answer: B Explanation: Under Section 24, information regarding allegations of human rights violations in exempt organizations shall only be provided after approval of the Central Information Commission within 45 days of the request.
+
+
+Q33. (RTI Act & Rules) [Difficulty: Statement] Under the RTI Rules 2012, if an applicant wants information provided on a diskette or floppy, what is the prescribed fee? A. Rs. 10 B. Rs. 20 C. Rs. 50 D. Actual cost of the diskette Answer: C Explanation: Rule 4 states the fee for providing information on a diskette or floppy is Rs. 50/- per diskette/floppy.
+
+
+Q34. (RTI Act & Rules) [Difficulty: Conceptual] When a CPIO rejects an RTI request, Section 7(8) requires them to communicate certain details to the applicant. Which of the following is NOT a required detail to be communicated in the rejection? A. The reasons for such rejection. B. The specific designation of the officer who originally drafted the document. C. The period within which an appeal against the rejection may be preferred. D. The particulars of the appellate authority. Answer: B Explanation: Under Section 7(8), the CPIO must communicate: reasons for rejection, the period for appeal, and particulars of the appellate authority. Supplying the designation of the drafting officer is NOT required.
+
+
+Q35. (CCS Leave Rules) [Difficulty: Easy] Under the CCS (Leave) Rules, 1972, what is the maximum continuous period for which leave of any kind can be granted to a Government servant without exceptional Presidential approval? A. 1 year B. 3 years C. 5 years D. 10 years Answer: C Explanation: No Government servant shall be granted leave of any kind for a continuous period exceeding five years, except under exceptional circumstances approved by the President.
+
+
+Q36. (CCS Leave Rules) [Difficulty: Moderate] The Central Civil Services (Leave) Rules, 1972 apply to Government servants appointed to civil services. Which of the following categories is NOT governed by these rules? A. Gazetted officers in Central Ministries B. Railway Servants C. Temporary Government servants in civil departments D. Probationers in civil services Answer: B Explanation: Rule 2 explicitly states that the rules do NOT apply to Railway Servants, persons in casual employment, members of All India Services, etc..
+
+
+Q37. (CCS Leave Rules) [Difficulty: Hard] A Government servant had an unauthorized absence of 60 days treated as dies-non during the half-year (July-December). What will be the reduction in the Earned Leave (EL) credited to his account on the 1st of January of the next year? A. 2 days B. 6 days C. 10 days D. 15 days Answer: B Explanation: The credit for the next half-year is reduced by 1/10th of the period of dies-non. 60 days x 1/10 = 6 days. Therefore, the EL credit will be reduced by 6 days.
+
+
+Q38. (CCS Leave Rules) [Difficulty: All/None] Which of the following conditions correctly applies to "Special Maternity Leave" as per the official OM? A. It is granted for a period of 60 days in case of the death of a child soon after birth or stillbirth. B. The condition for the death of a child "soon after birth" is defined as up to 28 days after birth. C. It applies only to female Government servants with less than two surviving children. D. All of the above. Answer: D Explanation: All statements are correct. Special Maternity Leave of 60 days is granted for stillbirth or death of a child within 28 days of birth, subject to the less than two surviving children condition.
+
+
+Q39. (CCS Leave Rules) [Difficulty: Match]
+Match the type of leave in Column I with its maximum permissible limit in Column II:
+Column I:
+1.	Paternity Leave
+2.	Maternity Leave
+3.	Child Care Leave (CCL)
+4.	Leave Not Due (LND) Column II: W. 180 days X. 360 days during entire service Y. 15 days Z. 730 days during entire service A. 1-Y, 2-W, 3-Z, 4-X B. 1-W, 2-Y, 3-X, 4-Z C. 1-Y, 2-Z, 3-W, 4-X D. 1-X, 2-W, 3-Z, 4-Y Answer: A Explanation: Paternity Leave is 15 days; Maternity Leave is 180 days; CCL is 730 days; Leave Not Due is max 360 days during entire service.
+
+
+Q40. (CCS Leave Rules) [Difficulty: Statement]
+Consider the following statements regarding Commuted Leave:
+1.	It is normally granted on medical certificate up to half the amount of half pay leave due.
+2.	It can be granted up to a maximum of 180 days during the entire service without a medical certificate if utilized for an approved course of study in public interest. Which of the above statements is/are correct? A. 1 only B. 2 only C. Both 1 and 2 D. Neither 1 nor 2 Answer: C Explanation: Both statements are correct. Commuted leave is usually on medical certificate , but up to 180 days can be granted without a medical certificate for an approved study course.
+
+
+Q41. (CCS Leave Rules) [Difficulty: Easy] When a Government servant is certified medically unwell to attend office, the holiday(s) immediately preceding the day he is certified unwell are: A. Treated as Leave Not Due B. Automatically allowed to be prefixed to the leave C. Counted as Extraordinary Leave D. Ignored and not counted Answer: B Explanation: When certified medically unwell, holiday(s) immediately preceding the day he is so certified shall be allowed automatically to be prefixed to leave.
+
+
+Q42. (CCS Leave Rules) [Difficulty: Moderate] Extraordinary Leave (EXOL) may be granted to a temporary Government servant in excess of the normal 3-month limit in specific cases. Which of the following is NOT a valid exception? A. Up to 6 months with one year of continuous service and a medical certificate. B. Up to 18 months for undergoing treatment for pulmonary tuberculosis or cancer. C. Up to 24 months for prosecuting studies certified to be in the public interest. D. Up to 36 months for setting up a private professional practice. Answer: D Explanation: Limits for EXOL are 6 months (medical), 18 months (TB/cancer/leprosy/mental illness), and 24 months (studies). Setting up a private practice is strictly prohibited while on leave.
+
+
+Q43. (CCS Leave Rules) [Difficulty: Hard]
+A Government servant wishes to encash Earned Leave (EL) along with LTC. Which of the following conditions must be met?
+1.	Maximum of 10 days EL can be encashed at the time of availing LTC.
+2.	A balance of at least 30 days of EL must remain to his credit after encashment.
+3.	The total leave encashed during the entire career cannot exceed 60 days. How many of the above conditions are correct? A. Only one B. Only two C. All three D. None Answer: C Explanation: All three statements are correct per Rule 38-A. Max 10 days per LTC, 30 days balance must remain, and the career cap is 60 days.
+
+
+Q44. (CCS Leave Rules) [Difficulty: Moderate] Regarding Leave Not Due (LND), which of the following statements is INCORRECT? A. LND is limited to a maximum of 360 days during the entire service. B. It is debited against the half pay leave the Government servant may earn subsequently. C. It can be granted even if there is no reasonable prospect of the Government servant returning to duty. D. It can be granted without the production of a medical certificate in continuation of maternity leave. Answer: C Explanation: One of the core conditions for granting LND is that the competent authority must be satisfied that there is a "reasonable prospect of the Government servant returning to duty".
+
+
+Q45. (CCS Leave Rules) [Difficulty: None of the above] What is the upper age limit of a child for a woman Government servant to avail Child Care Leave (CCL), if the child is suffering from a benchmark disability of minimum 40%? A. 18 years B. 22 years C. 25 years D. No age limit Answer: D Explanation: CCL is granted for children below the age of 18 years, but for a child with a minimum 40% disability, it is applicable for a child of "any age" (No age limit).
+
+
+Q46. (CCS Leave Rules) [Difficulty: Moderate] Under the Work Related Illness and Injury Leave (WRIIL) rules for a regular civilian Government servant (other than CAPF), how is pay regulated beyond the hospitalization period? A. Full pay for 24 months. B. Full pay for 6 months immediately following hospitalization, and Half pay leave only for 12 months beyond that. C. Half pay for the entire period following hospitalization. D. Extraordinary leave without pay. Answer: B Explanation: For a Govt. servant (other than CAPF/Military), WRIIL grants full pay and allowance for the 6 months following hospitalization, and Half pay leave for 12 months beyond that.
+
+
+Q47. (CCS Leave Rules) [Difficulty: Conceptual] For Government servants serving in a Vacation Department, how is Earned Leave credited if they do NOT avail themselves of any vacation in a calendar year? A. 5 days in advance per half-year. B. It is credited under the normal Rule 26 (max 30 days in a year) just like non-vacation departments. C. They are not entitled to Earned Leave, only half pay leave. D. 20 days are credited at the end of the year. Answer: B Explanation: If in any year the Govt. servant does not avail any vacation, earned leave shall be admissible in respect of that year under Rule 26, effectively granting up to 30 days.
+
+
+Q48. (CCS Leave Rules) [Difficulty: Easy] A male Government servant adopts a valid child below the age of one year. What is the maximum duration of Paternity Leave he can be granted for this child adoption? A. 15 days B. 30 days C. 135 days D. 180 days Answer: A Explanation: A male Government servant, on valid adoption of a child below age one year, may be granted paternity leave for a period of 15 days.
+
+
+Q49. (CCS Leave Rules) [Difficulty: Hard] In the event of a Government servant's death while in service, the cash equivalent of leave salary for Earned Leave (EL) and Half Pay Leave (HPL) is paid to the family. What is the maximum combined limit for this encashment? A. 150 days B. 300 days C. 300 days of EL plus an unlimited amount of HPL D. No limit; all accumulated leave is encashed Answer: B Explanation: Rule 39-A stipulates a maximum of 300 days cash equivalent of leave salary for both EL and HPL combined, paid to the family of the deceased employee.
+
+
+Q50. (CCS Leave Rules) [Difficulty: Moderate] All of the following statements regarding Paternity Leave are correct EXCEPT: A. It is granted for a period of 15 days. B. It may be combined with any other kind of leave. C. It is heavily debited against the half pay leave account. D. If not availed within 6 months from the date of delivery, it lapses. Answer: C Explanation: Paternity leave shall NOT be debited against the leave account. Options A, B, and D are factually correct.
+

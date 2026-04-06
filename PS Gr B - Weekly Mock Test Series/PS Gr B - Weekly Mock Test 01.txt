@@ -1,0 +1,630 @@
+Q1. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Easy]
+When did the Post Office Rules, 2024 officially come into force?
+A. 18th June 2024
+B. 9th August 2019
+C. 16th December 2024
+D. 1st July 2005
+
+Answer: C
+
+Explanation:
+According to the Post Office Rules 2024, they shall come into force on the 16th day of December, 2024. (The Act itself came into force on 18.06.2024).
+
+Q2. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Moderate]
+Under the Post Office Rules 2024, which of the following is NOT a service explicitly mentioned to be provided by every Post Office?
+A. Money remittances services within or beyond the limits of the country
+B. Services associated with addressing identifiers and postcodes
+C. Issuance of passports and international travel permits
+D. Any service offered on behalf of a State Government or Local Government.
+
+Answer: C
+
+Explanation:
+Rule 3 lists services including mail services, financial services, money remittances, insurance, citizen-centric services, addressing identifiers, and State/Local Govt services. Issuance of passports is NOT mentioned.
+
+Q3. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Hard]
+Consider the following statements regarding the interception, detention, and opening of items:
+1. An order for interception can be issued by a Member of the Board looking after operations or the Circle Head.
+2. In emergent cases, a Divisional Head can direct interception but must inform the competent authority within seven working days.
+3. If confirmation from the competent authority is not received within the stipulated time, the interception shall cease to operate.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+Answer: B
+
+Explanation:
+Statement 2 is incorrect because the Divisional Head must inform the competent authority within three working days (not seven), though the order must be confirmed within seven working days.
+
+Q4. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Moderate]
+Who among the following is NOT authorized to intercept and detain items on the orders of the competent authority?
+A. Officer in-charge of Post Office
+B. Any officer higher than the Officer in-charge of a Post Office
+C. Officer in-charge of the Mail Office
+D. Postman on beat duty
+
+Answer: D
+
+Explanation:
+Under Rule 16(7), the notified authorized officers to intercept items are the Officer in-charge of a Post Office (or higher) or Officer in-charge of a Mail Office (or higher). Postmen are NOT authorized.
+
+Q5. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Easy]
+The Post Office shall have the exclusive privilege of issuing which of the following?
+A. National Identity Cards
+B. Postage stamps
+C. Promissory notes
+D. E-way bills
+
+Answer: B
+
+Explanation:
+Section 4(1) of the Post Office Act, 2023 states that the Post Office shall have the exclusive privilege of issuing postage stamps.
+
+Q6. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Moderate]
+Regarding exemption from liability, the Central Government shall NOT provide compensation for the loss or damage of an item in which of the following scenarios?
+A. Loss caused by force majeure
+B. Damage caused by the fault or negligence of the sender
+C. Loss of a prohibited item
+D. All of the above
+
+Answer: D
+
+Explanation:
+Rule 19(2) explicitly states that compensation shall not be paid on prohibited items, or for loss/damage caused by the fault or negligence of the sender, or arising from force majeure.
+
+Q7. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Hard]
+Which of the following bodies is responsible for advising the Central Government on issues of commemorative and special postage stamps?
+A. Postal Services Board
+B. Review Committee on Interception
+C. Philatelic Advisory Committee
+D. Director General's Advisory Council
+
+Answer: C
+
+Explanation:
+Rule 8 specifies that the Central Government may constitute a Philatelic Advisory Committee to advise it on issues of commemorative and special postage stamps and allied matters.
+
+Q8. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Moderate]
+All of the following are valid modes of payment for postage or other sums chargeable for mail services EXCEPT:
+A. Payment in cash
+B. Payment through digital mode
+C. Post-dated cheques
+D. Impressions of franking machines
+
+Answer: C
+
+Explanation:
+Rule 9 specifies cash, digital mode, postage stamp, franking machine impressions, or other modes specified in regulations. Post-dated cheques are EXCEPTED.
+
+Q9. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Easy]
+Who is responsible for managing, allocating, and publishing Postcodes or Postal Index Number (PIN) codes under the 2024 Rules?
+A. The Central Government
+B. The Director General
+C. The Postal Services Board
+D. The Philatelic Advisory Committee
+
+Answer: B
+
+Explanation:
+Rule 11(2) states that the Director General shall manage, allocate, and publish Postcodes or Postal Index Number (PIN) codes.
+
+Q10. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Hard]
+Match the following authorities with their powers/roles under the Post Office Act and Rules:
+Column I
+1. Central Government
+2. Director General
+3. Review Committee
+Column II
+X. Introduce new products or modify/discontinue them.
+Y. Oversee all interceptions of items.
+Z. Make rules to give effect to arrangements made with foreign countries.
+A. 1-Z, 2-X, 3-Y
+B. 1-X, 2-Z, 3-Y
+C. 1-Y, 2-X, 3-Z
+D. 1-Z, 2-Y, 3-X
+
+Answer: A
+
+Explanation:
+The Central Government makes rules for foreign arrangements (Sec 6). The Director General is authorized to introduce/modify products (Rule 4). The Review Committee oversees interceptions (Rule 16).
+
+Q11. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Moderate]
+If any person refuses or neglects to pay the charges for a service provided by the Post Office, how shall such amount be recoverable?
+A. As a civil penalty through the District Court
+B. As if it were an arrear of land revenue due from him
+C. By attaching the person's bank account directly
+D. By initiating criminal proceedings under the BNS
+
+Answer: B
+
+Explanation:
+Section 7(2) of the Act states that if any person refuses or neglects to pay charges, the amount shall be recoverable as if it were an arrear of land revenue due from him.
+
+Q12. (The Post Office Act, 2023 & Rules 2024) [Difficulty: Easy]
+What is the legal standing of the official mark of the Post Office on an item denoting that it has been refused, rejected, or unclaimed?
+A. It is considered an internal administrative note only.
+B. It shall be sufficient proof of the fact indicated.
+C. It requires corroboration by the delivery postman's written testimony.
+D. It has no legal validity without a magistrate's counter-signature.
+
+Answer: B
+
+Explanation:
+Rule 13(a) states that the official mark of the Post Office denoting that an item has been refused, rejected, or unclaimed shall be sufficient proof of the fact indicated.
+
+Q13. (PMLA Act, 2002) [Difficulty: Easy]
+What is the standard punishment for the offence of money-laundering under the PMLA?
+A. Imprisonment for 1 to 3 years and a fine
+B. Imprisonment for 3 to 7 years and a fine
+C. Imprisonment for 5 to 10 years and a fine
+D. Life imprisonment
+
+Answer: B
+
+Explanation:
+Section 4 states that the punishment for money-laundering is rigorous imprisonment for a term which shall not be less than 3 years but may extend to 7 years, and a fine.
+
+Q14. (PMLA Act, 2002) [Difficulty: Moderate]
+Under which specific condition can the rigorous imprisonment for money-laundering extend up to 10 years?
+A. If the proceeds of crime exceed Rs. 100 Crores
+B. If the offence involves funding terrorist activities
+C. If the proceeds of crime relate to any offence related to poppy, opium, narcotics, or drugs
+D. If the offender is a Politically Exposed Person (PEP)
+
+Answer: C
+
+Explanation:
+The proviso to Section 4 states that if the proceeds of crime involved relate to any offence related to poppy, opium, narcotics, or drugs, the imprisonment may extend to ten years.
+
+Q15. (PMLA Act, 2002) [Difficulty: Moderate]
+Which of the following entities is NOT explicitly included in the definition of a "person" under the PMLA?
+A. An individual
+B. A Hindu undivided family
+C. A company
+D. None of the above (all are included)
+
+Answer: D
+
+Explanation:
+Under Section 2, the definition of "person" includes an individual, a Hindu undivided family, a company, a firm, an AOP/BOI, an artificial juridical person, and any agency/branch owned by them.
+
+Q16. (PMLA Act, 2002) [Difficulty: Hard]
+Consider the following statements regarding the provisional attachment of property under PMLA:
+1. The Director or authorized Deputy Director can provisionally attach property for a period not exceeding 180 days.
+2. Immediately after attachment, a copy of the order must be forwarded to the Adjudicating Authority.
+3. The officer must file a complaint before the Adjudicating Authority within 45 days from the attachment.
+How many of the above statements are correct?
+A. Only one
+B. Only two
+C. All three
+D. None
+
+Answer: B
+
+Explanation:
+Statements 1 and 2 are correct. Statement 3 is incorrect because the complaint stating the facts of the attachment must be filed within thirty (30) days, not 45 days.
+
+Q17. (PMLA Act, 2002) [Difficulty: Moderate]
+According to the PMLA Guidelines for POSB, which of the following accounts falls under the "Medium Risk" category?
+A. An account with a balance of Rs. 40,000
+B. An account with a balance of Rs. 5 Lakh
+C. An account with a balance of Rs. 15 Lakh
+D. An account belonging to a Politically Exposed Person (PEP)
+
+Answer: B
+
+Explanation:
+Medium Risk categorization applies when the balance/maturity value of all accounts exceeds Rs. 50,000 but is up to Rs. 10 lakh. A balance of Rs. 5 Lakh falls here. (PEPs and >10L are High Risk).
+
+Q18. (PMLA Act, 2002) [Difficulty: Hard]
+What is the mandatory period for reviewing Customer Due Diligence (CDD) / Re-KYC for High, Medium, and Low Risk category customers respectively?
+A. Every 1 year, 3 years, and 5 years
+B. Every 2 years, 5 years, and 7 years
+C. Every 2 years, 7 years, and 10 years
+D. Every 3 years, 5 years, and 10 years
+
+Answer: B
+
+Explanation:
+The guidelines state that Re-KYC should be reviewed every 7 years for Low Risk, every 5 years for Medium Risk, and every 2 years for High Risk.
+
+Q19. (PMLA Act, 2002) [Difficulty: Scenario-Based]
+A Post Office customer requests to change their address on file four times within the same Financial Year (excluding minor spelling corrections). How should the Post Office handle this under AML/CFT guidelines for PLI/RPLI?
+A. Process the changes as routine customer service updates.
+B. Report it as a suspicious transaction to the PCO/PMLA Section of Dak Bhawan.
+C. Temporarily freeze the account for 180 days.
+D. Demand proof of source of funds before updating the address.
+
+Answer: B
+
+Explanation:
+Receipt of a request for change of addresses 3 or more times from the same policyholder in a Financial Year is a specific trigger that must be reported to the PCO/PMLA Section.
+
+Q20. (PMLA Act, 2002) [Difficulty: Easy]
+By what date must the CEPT CBS-Reports Team send the monthly Cash Transaction Report (CTR) to the DDG (PCO/PMLA) in the Directorate?
+A. By the 1st working day of the subsequent month
+B. By the 6th working day of the subsequent month
+C. By the 15th working day of the subsequent month
+D. By the last working day of the subsequent month
+
+Answer: B
+
+Explanation:
+The guidelines specify that the CEPT Reports Team must send the CTR list/report to DDG (PCO/PMLA) on a monthly basis by the 6th working day of the subsequent month.
+
+Q21. (PMLA Act, 2002) [Difficulty: Moderate]
+Under PMLA, if an authority willfully and maliciously gives false information causing a search to be made, what is the maximum penalty upon conviction?
+A. Imprisonment up to 1 year or a fine up to Rs. 10,000
+B. Imprisonment up to 2 years or a fine up to Rs. 50,000 or both
+C. Imprisonment up to 3 years and a mandatory fine of Rs. 1 Lakh
+D. Dismissal from service without imprisonment
+
+Answer: B
+
+Explanation:
+Section 63 states that willfully giving false information causing an arrest or search makes the person liable for imprisonment up to two years or a fine up to Rs. 50,000 or both.
+
+Q22. (PMLA Act, 2002) [Difficulty: Hard]
+Which of the following actions is NOT listed as a trigger for reporting transactions to the PCO/PMLA Section in the context of PLI/RPLI?
+A. Premium payments of more than Rs. 5 Lacs a month in one or more transactions.
+B. Payments of premiums in cash with a subsequent request to refund the overpaid amount.
+C. Cancellation of a policy during the free look period once in a calendar year, refunding Rs. 50,000.
+D. Any transaction involving documents found to be forged.
+
+Answer: C
+
+Explanation:
+The trigger for free look cancellations requires 3 or more cancellation requests in a calendar month where the refunded amount exceeds Rs. 1 lakh. A single cancellation of Rs. 50,000 is NOT a reporting trigger.
+
+Q23. (PMLA Act, 2002) [Difficulty: Moderate]
+Regarding the record retention policy for PLI/RPLI, how long must records be preserved for policies that are subject to a case filed in a court of law?
+A. 2 years after final clearance from litigation
+B. 3 years after final clearance from litigation or till the prescribed retention period, whichever is later
+C. 5 years after final clearance from litigation
+D. Records must be preserved permanently
+
+Answer: B
+
+Explanation:
+For policies subject to any case in a court of law, records must be retained 3 years after final clearance from arbitration/litigation, or till the prescribed retention period, whichever is later.
+
+Q24. (PMLA Act, 2002) [Difficulty: Hard]
+Consider the consequences if a depositor fails to submit required KYC documents for an existing SB account. What happens at the time of subsequent transactions?
+A. The account is immediately frozen after the 1st transaction.
+B. Notice is issued at the next transaction; if they fail to submit KYC up to the 3rd transaction, the 4th transaction will not be allowed.
+C. A penalty of Rs. 500 is deducted at each transaction until KYC is submitted.
+D. The balance is transferred to the Senior Citizens Welfare Fund after the 3rd transaction.
+
+Answer: B
+
+Explanation:
+The POSB guidelines state: Notice is issued at the time of the next transaction. If the depositor fails to submit KYC up to the 3rd next transaction, the 4th transaction will not be allowed.
+
+Q25. (PMLA Act, 2002) [Difficulty: Moderate]
+Who among the following has the power to serve a notice of not less than 30 days calling upon a person to indicate their source of income if money-laundering is suspected?
+A. The Director of FIU-IND
+B. The Adjudicating Authority
+C. The Special Court Judge
+D. The Chief Postmaster General
+
+Answer: B
+
+Explanation:
+Section 8 states that if the Adjudicating Authority has reason to believe a person has committed an offence under section 3, it may serve a notice of not less than 30 days calling upon them to indicate their source of income.
+
+Q26. (Consumer Protection Act, 2019) [Difficulty: Easy]
+When did the provisions regarding the Central Consumer Protection Authority (Chapter III) of the Consumer Protection Act, 2019 come into force?
+A. 9th August 2019
+B. 20th July 2020
+C. 24th July 2020
+D. 18th June 2024
+
+Answer: C
+
+Explanation:
+According to the commencement details, Sections 10 to 27 pertaining to the Central Consumer Protection Authority came into force on 24th July 2020.
+
+Q27. (Consumer Protection Act, 2019) [Difficulty: Moderate]
+Under the CPA 2019, which of the following individuals does NOT qualify as a "Consumer"?
+A. A person who buys a laptop online for personal use.
+B. A person who hires a taxi service and pays immediately.
+C. A person who buys a commercial sewing machine exclusively to earn a livelihood by self-employment.
+D. A retailer who buys mobile phones in bulk to sell them at a local shop.
+
+Answer: D
+
+Explanation:
+A person who obtains goods for resale or for any commercial purpose is NOT a consumer. However, buying goods exclusively for earning a livelihood through self-employment is protected.
+
+Q28. (Consumer Protection Act, 2019) [Difficulty: Hard]
+Consider the composition of the Central Consumer Protection Council. Which of the following statements is/are correct?
+1. The Chairperson is the Minister-in-Charge of the Department of Consumer Affairs in the Central Government.
+2. It includes exactly two Members of Parliament: one from Lok Sabha and one from Rajya Sabha.
+3. It must hold at least two meetings during the year.
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+Answer: B
+
+Explanation:
+Statements 1 and 2 are correct. Statement 3 is incorrect because the Central Consumer Protection Council must hold at least ONE meeting during the year (unlike the District and State councils which must hold two).
+
+Q29. (Consumer Protection Act, 2019) [Difficulty: Moderate]
+Which of the following is defined as a deceptive practice forcing a user to provide payment details or authorization for auto-debits to avail of a "free" subscription?
+A. Forced action
+B. Subscription trap
+C. Confirm shaming
+D. Saas billing
+
+Answer: B
+
+Explanation:
+The definition of "Subscription trap" is forcing a user to provide payment details or authorization for auto debits for availing a free subscription.
+
+Q30. (Consumer Protection Act, 2019) [Difficulty: Easy]
+What is the timeframe within which a District Commission must ordinarily decide on the admissibility of a complaint?
+A. 7 days from filing
+B. 15 days from filing
+C. 21 days from filing
+D. 30 days from filing
+
+Answer: C
+
+Explanation:
+The District Commission shall ordinarily decide on the admissibility of a complaint within 21 days from the date on which it was filed.
+
+Q31. (Consumer Protection Act, 2019) [Difficulty: Moderate]
+If a complaint requires the analysis or testing of commodities, what is the maximum time frame within which the District Commission must dispose of the complaint?
+A. 3 months
+B. 5 months
+C. 6 months
+D. 1 year
+
+Answer: B
+
+Explanation:
+The complaint disposal time is within 3 months if it does not require analysis/testing, and within 5 months if it requires analysis or testing of commodities.
+
+Q32. (Consumer Protection Act, 2019) [Difficulty: Moderate]
+What condition must an appellant fulfill before the State Commission will entertain an appeal against an order of a District Commission requiring them to pay a sum?
+A. They must obtain a clearance certificate from the Central Authority.
+B. They must deposit 25% of the amount ordered.
+C. They must deposit 50% of the amount ordered.
+D. They must surrender their trading license temporarily.
+
+Answer: C
+
+Explanation:
+Section 41 stipulates that no appeal by a person required to pay any amount shall be entertained by the State Commission unless the appellant has deposited fifty per cent (50%) of that amount.
+
+Q33. (Consumer Protection Act, 2019) [Difficulty: Hard]
+Which of the following scenarios is EXCEPTED from product liability against a product seller who is NOT the manufacturer?
+A. The seller altered the product, causing the harm.
+B. The seller made an express warranty independent of the manufacturer's warranty.
+C. The identity of the manufacturer is known and the manufacturer is subject to the law in force in India.
+D. The seller failed to pass on the manufacturer's warnings to the buyer.
+
+Answer: C
+
+Explanation:
+Under Section 86, a seller (not manufacturer) is liable if the manufacturer's identity is NOT known, or they cannot be served notice, or are not subject to Indian law. If the manufacturer is known and reachable, the seller is EXCEPTED from this specific liability criterion.
+
+Q34. (Consumer Protection Act, 2019) [Difficulty: Hard]
+Match the Court Fee required for filing fresh complaints before the District Commission with the respective claim values:
+Column I
+1. Value up to 5 Lakh
+2. Above 5 Lakh to 10 Lakh
+3. Above 10 Lakh to 20 Lakh
+Column II
+X. Rs. 200
+Y. Rs. 400
+Z. Nil
+A. 1-Z, 2-X, 3-Y
+B. 1-X, 2-Z, 3-Y
+C. 1-Z, 2-Y, 3-X
+D. 1-Y, 2-X, 3-Z
+
+Answer: A
+
+Explanation:
+According to the Court Fee table (w.e.f. 17.08.2023): Up to 5 Lakh = Nil; Above 5L up to 10L = Rs. 200; Above 10L up to 20L = Rs. 400.
+
+Q35. (Consumer Protection Act, 2019) [Difficulty: Moderate]
+What is the general limitation period for filing a complaint before any Consumer Commission?
+A. 1 year from the date the cause of action arises.
+B. 2 years from the date the cause of action arises.
+C. 3 years from the date the cause of action arises.
+D. There is no limitation period.
+
+Answer: B
+
+Explanation:
+Section 69 states that the Commission shall not admit a complaint unless it is filed within 2 years from the date on which the cause of action has arisen.
+
+Q36. (Consumer Protection Act, 2019) [Difficulty: Scenario-Based]
+A consumer signs up for a free trial of a software. During the trial, the company constantly displays pop-ups asking the user to download their mobile app, to the point of severe annoyance. What specific dark pattern does this represent?
+A. Interface interference
+B. Bait and switch
+C. Nagging
+D. Forced action
+
+Answer: C
+
+Explanation:
+"Nagging" is defined as practices like websites asking a user to download their app again and again.
+
+Q37. (Consumer Protection Act, 2019) [Difficulty: Easy]
+Who heads the Investigative Wing of the Central Consumer Protection Authority (CCPA)?
+A. The Chief Commissioner
+B. The Director General
+C. The District Collector
+D. The Chief Justice of the High Court
+
+Answer: B
+
+Explanation:
+The Central Authority consists of an Administrative Wing headed by the Chief Commissioner and an Investigative Wing headed by the Director General.
+
+Q38. (Consumer Protection Act, 2019) [Difficulty: Moderate]
+Under the mediation provisions, how is the fee of the mediator shared in a successful mediation?
+A. Entirely paid by the losing party.
+B. Paid from the Consumer Welfare Fund.
+C. Shared equally by the two sets of parties.
+D. Borne entirely by the State Government.
+
+Answer: C
+
+Explanation:
+The rules for the fee of mediators state that "The fee of the mediator shall be shared equally by the two sets of parties."
+
+Q39. (Book of BO Rules) [Difficulty: Easy]
+What is the maximum prescribed weight limit for postal articles (including parcels) to be carried by an Extra Departmental Delivery Agent (Gramin Dak Sevak)?
+A. 5 kg
+B. 10 kg
+C. 15 kg
+D. 20 kg
+
+Answer: B
+
+Explanation:
+Rule 9 explicitly states that the weight of postal articles to be carried by a village postman or extra departmental delivery agent should not exceed 10 kg.
+
+Q40. (Book of BO Rules) [Difficulty: Moderate]
+Which form represents the Book of Receipts issued to the sender of an insured or V.P. article, or for PLI premia paid at a Branch Office?
+A. MS-87(a)
+B. MS-27
+C. MS-85
+D. PA-5
+
+Answer: A
+
+Explanation:
+Rule 22 defines MS-87(a) as the book of receipts given to the sender of an insured or V.P. article, remitter of a money order, or for PLI premia.
+
+Q41. (Book of BO Rules) [Difficulty: Moderate]
+All of the following are stamps/seals supplied to a standard Branch Office EXCEPT:
+A. A combined name and date stamp of rectangular shape
+B. A postage-due stamp
+C. A number slip name-stamp
+D. A specialized wax-seal embossing stamp for international mail
+
+Answer: D
+
+Explanation:
+Rule 19 states a BO is supplied with a seal, a combined name and date stamp, a postage-due stamp, and a number slip name-stamp. A specialized wax-seal embossing stamp is NOT mentioned.
+
+Q42. (Book of BO Rules) [Difficulty: Hard]
+Regarding the Village Postman Visit Book (MS-86), what does a village name entered in RED ink by the Branch Postmaster indicate?
+A. The village must be visited on every trip without fail.
+B. The ABPM is not obliged to visit on every trip, but must visit when marked.
+C. The village has been permanently removed from the beat.
+D. The village contains only V.P. and insured deliveries.
+
+Answer: B
+
+Explanation:
+In MS-86, Red ink used by the BPM indicates that the ABPM is not obliged to visit on every trip but has to visit the village marked in Red entries. Black ink means the village must be visited regularly.
+
+Q43. (Book of BO Rules) [Difficulty: Moderate]
+What document is used to record all irregularities, such as mis-sending and misdirection of articles, noticed at the Branch Office?
+A. Complaint Book (MS-94)
+B. Order Book (MS-8)
+C. Error Book (MS-2)
+D. BO Journal (PA-5)
+
+Answer: C
+
+Explanation:
+Rule 36 states the Error Book (MS-2) is a record of all irregularities noticed and should be maintained in all branch offices.
+
+Q44. (Book of BO Rules) [Difficulty: Scenario-Based]
+A customer drops an inland letter marked "Registered" into the BO letter box. The letter is found to be not fully prepaid with the required postage and registration fee. How should the BPM treat this?
+A. Return it to the sender immediately.
+B. Forward it as an ordinary unregistered letter.
+C. Register it and charge a fee equal to double the usual registration fee plus the amount of postage due.
+D. Confiscate the letter and record it in the Error Book.
+
+Answer: C
+
+Explanation:
+Rule 85 states that if an article marked "Registered" is found in a letter-box and is not fully prepaid, it should be charged with a fee equal to double the usual registration fee and the amount of postage due.
+
+Q45. (Book of BO Rules) [Difficulty: Hard]
+Consider the following statements regarding remittances sent through the post by a BO:
+1. Cloth cash bags should be used when the remittance consists of currency notes only and does not exceed Rs. 500.
+2. Leather cash bags must be used when the remittance includes coins or exceeds Rs. 500.
+3. Offices that exchange remittances exceeding Rs. 500 on an average of at least 5 times a month are supplied with leather bags.
+Which of the statements is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. All of the above
+
+Answer: A
+
+Explanation:
+Statements 1 and 2 are correct. Statement 3 is incorrect because leather bags are supplied to offices which exchange remittances exceeding Rs. 500 on an average of at least 10 times a month, not 5 times (Rule 130).
+
+Q46. (Book of BO Rules) [Difficulty: Easy]
+What is the form number for the BO Daily Account submitted to the account office when there are NO monetary transactions on a given day?
+A. ACG-22(a)
+B. ACG-22(b)
+C. ACG-22(c)
+D. PA-6
+
+Answer: C
+
+Explanation:
+Rule 134 states that on any day when there is no monetary transaction, the B.O. Daily Account should be submitted in the form A.C.G.-22(c).
+
+Q47. (Book of BO Rules) [Difficulty: Moderate]
+During which exact period must the Branch Postmaster conduct the yearly village returns (MS-88) showing the number of articles received daily for delivery in each village?
+A. 1st to 14th of February
+B. 1st to 14th of March
+C. 8th to 21st of February
+D. 8th to 21st of August
+
+Answer: B
+
+Explanation:
+Rule 46 specifies that the yearly village returns must be kept during the first fourteen days of the month of March (1st to 14th inclusive).
+
+Q48. (Book of BO Rules) [Difficulty: Hard]
+Which of the following actions regarding accounting at a Branch Office is strictly PROHIBITED under Rule 124?
+A. Crediting the amount collected for V.P. articles under the head "Money orders issued".
+B. Stamps given in exchange for reply-coupons under "Unclassified payments".
+C. Including cash realized by postage collections in the item "Cash collected" of the branch office account.
+D. Recording monetary transactions in form PA-6.
+
+Answer: C
+
+Explanation:
+Rule 124 explicitly warns: "Cash realised by postage collections must never be included in the item 'Cash collected' of the branch office account."
+
+Q49. (Book of BO Rules) [Difficulty: Moderate]
+What defines a "Territorial Bundle" in sorting?
+A. A bundle containing unregistered articles of a particular station only.
+B. An express bundle that requires immediate sorting.
+C. A bundle containing articles for disposal at a later time.
+D. A sorting bundle prepared for a state or clearly defined tract, or foreign country when the number of articles is 25 or more.
+
+Answer: D
+
+Explanation:
+Rule 65 defines a Territorial Bundle as a sorting bundle prepared for a state, clearly defined tract, or foreign country when the number of articles is 25 and more.
+
+Q50. (Book of BO Rules) [Difficulty: Moderate]
+All of the following documents are prepared by the Account Office for the Branch Office EXCEPT:
+A. BO Slip (PA-4)
+B. BO Summary (ACG-3(a))
+C. BO Daily Account (ACG-22(a))
+D. None of the above
+
+Answer: C
+
+Explanation:
+The BO Slip (PA-4) and BO Summary (ACG-3(a)) are prepared at the Account Office. The BO Daily Account (ACG-22(a)) is prepared by the Branch Office and submitted to the Account Office. Therefore, ACG-22(a) is EXCEPTED.
