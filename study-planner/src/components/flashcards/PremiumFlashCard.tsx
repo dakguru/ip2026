@@ -67,7 +67,7 @@ export default function PremiumFlashCard({
         >
             <div className={styles.flashcardInner}>
                 {/* FRONT SIDE */}
-                <div className={clsx(styles.flashcardFront, getThemeClass(), "dark:!bg-[#0a0a0a] dark:border-white/5 dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]")}>
+                <div className={clsx(styles.flashcardFront, getThemeClass(), "dark:!bg-[#0a0a0a] dark:!bg-none dark:border-white/5 dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]")}>
                     <div className={clsx(styles.watermark, "dark:opacity-10 dark:invert")} />
 
                     <div className={styles.contentContainer}>
@@ -101,7 +101,7 @@ export default function PremiumFlashCard({
                 </div>
 
                 {/* BACK SIDE */}
-                <div className={clsx(styles.flashcardBack, getThemeClass(), "dark:!bg-[#0a0a0a] dark:border-white/5 dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]")}>
+                <div className={clsx(styles.flashcardBack, getThemeClass(), "dark:!bg-[#0a0a0a] dark:!bg-none dark:border-white/5 dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]")}>
                     <div className={clsx(styles.watermark, "dark:opacity-10 dark:invert")} />
 
                     <div className={styles.contentContainer}>
@@ -126,8 +126,8 @@ export default function PremiumFlashCard({
                         </div>
 
                         {explanation && (
-                            <div className={clsx(styles.explanationBox, "dark:bg-white/5 dark:text-slate-400")} onClick={(e) => e.stopPropagation()}>
-                                <div className="flex items-center gap-2 mb-1.5 font-black text-[9px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                            <div className={clsx(styles.explanationBox, "dark:!bg-white/10 dark:!border-white/10")} onClick={(e) => e.stopPropagation()}>
+                                <div className="flex items-center gap-2 mb-1.5 font-black text-[9px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300">
                                     <Info className="w-3 h-3" /> Explanation
                                 </div>
                                 <div
@@ -135,8 +135,8 @@ export default function PremiumFlashCard({
                                     onPointerDown={(e) => e.stopPropagation()}
                                     onTouchStart={(e) => e.stopPropagation()}
                                 >
-                                    <div className="text-[12px] md:text-[13px] font-medium text-slate-600 dark:text-slate-300 leading-snug">
-                                        <FormattedQuestionText text={explanation} className="space-y-2" />
+                                    <div className="text-[12px] md:text-[13px] font-medium text-slate-600 dark:text-slate-100 leading-snug">
+                                        <FormattedQuestionText text={explanation} className="space-y-2 dark:text-slate-100 text-slate-600" />
                                     </div>
                                 </div>
                             </div>
