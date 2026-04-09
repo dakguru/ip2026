@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { cookies } from "next/headers";
+import mongoose from "mongoose";
 import dbConnect from "@/lib/mongoose";
 import DakSutra from "@/models/DakSutra";
 import DakSutraDetailClient from "./DakSutraDetailClient";
@@ -14,9 +15,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     try {
         await dbConnect();
-        const entry = await DakSutra.findOne({ slug: id })
+        let entry = await DakSutra.findOne({ slug: id })
             .select("title act_name rule_number category exam_tags status")
             .lean() as any;
+        if (!entry && mongoose.Types.ObjectId.isValid(id)) {
+            entry = await DakSutra.findById(id)
+                .select("title act_name rule_number category exam_tags status")
+                .lean() as any;
+        }
 
         if (!entry || entry.status !== "published") {
             return {

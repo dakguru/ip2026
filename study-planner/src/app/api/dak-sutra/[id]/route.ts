@@ -1,5 +1,6 @@
 
 import { NextResponse } from 'next/server';
+import mongoose from 'mongoose';
 import dbConnect from '@/lib/mongoose';
 import DakSutra from '@/models/DakSutra';
 
@@ -10,7 +11,12 @@ export async function GET(
     const { id } = await params;
     try {
         await dbConnect();
-        const entry = await DakSutra.findOne({ slug: id });
+
+        // Try slug first, then fall back to ObjectId for old links
+        let entry = await DakSutra.findOne({ slug: id });
+        if (!entry && mongoose.Types.ObjectId.isValid(id)) {
+            entry = await DakSutra.findById(id);
+        }
 
         if (!entry || entry.status !== 'published') {
             return NextResponse.json({ error: 'Not Found' }, { status: 404 });
