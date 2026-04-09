@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     try {
         await dbConnect();
-        const entry = await DakSutra.findById(id)
+        const entry = await DakSutra.findOne({ slug: id })
             .select("title act_name rule_number category exam_tags status")
             .lean() as any;
 

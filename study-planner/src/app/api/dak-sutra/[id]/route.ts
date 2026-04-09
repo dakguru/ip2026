@@ -10,7 +10,7 @@ export async function GET(
     const { id } = await params;
     try {
         await dbConnect();
-        const entry = await DakSutra.findById(id);
+        const entry = await DakSutra.findOne({ slug: id });
 
         if (!entry || entry.status !== 'published') {
             return NextResponse.json({ error: 'Not Found' }, { status: 404 });

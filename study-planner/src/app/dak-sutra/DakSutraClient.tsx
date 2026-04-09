@@ -14,6 +14,7 @@ import HomeHeader from "@/components/HomeHeader";
 
 interface DakSutraEntry {
     _id: string;
+    slug: string;
     title: string;
     rule_number: string;
     act_name: string;
@@ -280,7 +281,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                                 return (
                                     <Link
                                         key={entry._id}
-                                        href={`/dak-sutra/${entry._id}`}
+                                        href={`/dak-sutra/${entry.slug || entry._id}`}
                                         className={`group relative bg-white dark:bg-zinc-900 border rounded-2xl overflow-hidden transition-all duration-200 active:scale-[0.98] hover:-translate-y-0.5 hover:shadow-xl touch-manipulation ${cfg.border} ${cfg.glow}`}
                                     >
                                         {/* Top colour stripe */}
