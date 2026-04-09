@@ -186,7 +186,7 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                             <nav className="hidden lg:flex items-center gap-5 text-sm font-semibold whitespace-nowrap">
                                 <Link href="/" className="text-white/80 hover:text-cyan-300 transition-colors duration-200">Home</Link>
                                 <Link href="/about" className="text-white/80 hover:text-pink-300 transition-colors duration-200">About Us</Link>
-                                <Link href="/blog" className="text-white/80 hover:text-amber-300 transition-colors duration-200">DG Blog</Link>
+                                <Link href="/dak-sutra" className="text-white/80 hover:text-amber-300 transition-colors duration-200">Dak Sutra</Link>
                                 <Link href="/social" className="text-white/80 hover:text-green-300 transition-colors duration-200">DG Community</Link>
                                 <Link href="/current-affairs" className="text-white/80 hover:text-purple-300 transition-colors duration-200">Current Affairs</Link>
                             </nav>
@@ -340,11 +340,11 @@ export default function HomeHeader({ isLoggedIn, membershipLevel }: { isLoggedIn
                                     About Us
                                 </Link>
                                 <Link
-                                    href="/blog"
+                                    href="/dak-sutra"
                                     className="p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 font-medium"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    DG Blog
+                                    Dak Sutra
                                 </Link>
                                 <Link
                                     href="/social"

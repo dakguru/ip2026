@@ -11,6 +11,7 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import HomeHeader from "@/components/HomeHeader";
+import DakSutraLoader from "../components/DakSutraLoader";
 
 const CATEGORY_CONFIG: Record<string, {
     heroGradient: string;
@@ -129,11 +130,8 @@ export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-slate-950 flex flex-col items-center justify-center gap-4">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center shadow-xl shadow-blue-500/30 animate-pulse">
-                    <BookOpen className="w-7 h-7 md:w-8 md:h-8 text-white" />
-                </div>
-                <p className="text-zinc-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest">Loading...</p>
+            <div className="min-h-screen bg-zinc-50 dark:bg-slate-950 pt-20">
+                <DakSutraLoader />
             </div>
         );
     }

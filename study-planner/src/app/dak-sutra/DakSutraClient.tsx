@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useMemo } from "react";
 import {
-    Search, BookOpen, ChevronRight, ArrowLeft,
+    Search, BookOpen, ChevronRight,
     Calendar, Scale, Mail, Lightbulb,
     Gavel, Sparkles, TrendingUp, GraduationCap
 } from "lucide-react";
@@ -11,6 +11,7 @@ import { format } from "date-fns";
 import AppScreenWrapper from "@/components/AppScreenWrapper";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import HomeHeader from "@/components/HomeHeader";
+import DakSutraLoader from "./components/DakSutraLoader";
 
 interface DakSutraEntry {
     _id: string;
@@ -161,10 +162,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
 
                     <div className="relative max-w-7xl mx-auto px-4 md:px-6 pb-6 md:pb-16 pt-[max(20px,calc(env(safe-area-inset-top,0px)+8px))] md:pt-16">
                         {/* Back link */}
-                        <Link href="/" className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-[10px] md:text-xs font-semibold mb-3 md:mb-5 transition-colors">
-                            <ArrowLeft className="w-3 h-3 md:w-3.5 md:h-3.5" />
-                            Home
-                        </Link>
+
 
                         {/* Stylish Dak Sutra wordmark */}
                         <div className="flex items-center gap-2.5 mb-2 md:mb-4">
@@ -267,27 +265,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
 
                     {/* ── CARDS ── */}
                     {isLoading ? (
-                        /* Skeleton loader — feels much more native than a spinner */
-                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
-                            {Array.from({ length: 6 }).map((_, i) => (
-                                <div key={i} className="flex bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 h-[138px]">
-                                    <div className="w-1 shrink-0 bg-zinc-100 dark:bg-zinc-800 animate-pulse" />
-                                    <div className="flex-1 p-3.5 space-y-2.5 animate-pulse">
-                                        <div className="flex gap-2">
-                                            <div className="h-4 w-16 rounded-full bg-zinc-100 dark:bg-zinc-800" />
-                                            <div className="h-4 w-12 rounded-full bg-zinc-100 dark:bg-zinc-800 ml-auto" />
-                                        </div>
-                                        <div className="h-3 w-32 rounded bg-zinc-100 dark:bg-zinc-800" />
-                                        <div className="h-4 w-full rounded bg-zinc-100 dark:bg-zinc-800" />
-                                        <div className="h-4 w-3/4 rounded bg-zinc-100 dark:bg-zinc-800" />
-                                        <div className="flex gap-1.5 pt-1">
-                                            <div className="h-4 w-14 rounded-md bg-zinc-100 dark:bg-zinc-800" />
-                                            <div className="h-4 w-16 rounded-md bg-zinc-100 dark:bg-zinc-800" />
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <DakSutraLoader />
                     ) : entries.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
                             {entries.map((entry) => {
