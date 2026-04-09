@@ -2,9 +2,9 @@
 
 import { useEffect, useState, useMemo } from "react";
 import {
-    Search, BookOpen, ChevronRight, Loader2, ArrowLeft,
-    Bookmark, Calendar, Scale, FileText, Mail, Lightbulb,
-    Gavel, Sparkles, TrendingUp, GraduationCap, Filter
+    Search, BookOpen, ChevronRight, ArrowLeft,
+    Calendar, Scale, Mail, Lightbulb,
+    Gavel, Sparkles, TrendingUp, GraduationCap
 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -255,93 +255,102 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                     </div>
 
                     {/* Results count */}
-                    {!isLoading && (
-                        <p className="text-[10px] md:text-[11px] font-bold text-zinc-400 uppercase tracking-widest mb-3 md:mb-6">
-                            {entries.length} {entries.length === 1 ? "entry" : "entries"} found
-                        </p>
+                    {!isLoading && entries.length > 0 && (
+                        <div className="flex items-center gap-2 mb-3 md:mb-4">
+                            <div className="h-px flex-1 bg-zinc-100 dark:bg-zinc-800" />
+                            <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest px-2">
+                                {entries.length} {entries.length === 1 ? "entry" : "entries"}
+                            </span>
+                            <div className="h-px flex-1 bg-zinc-100 dark:bg-zinc-800" />
+                        </div>
                     )}
 
-                    {/* Content */}
+                    {/* ── CARDS ── */}
                     {isLoading ? (
-                        <div className="flex flex-col items-center justify-center py-20 md:py-32">
-                            <div className="relative">
-                                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center mb-4 shadow-xl shadow-blue-500/30">
-                                    <BookOpen className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                        /* Skeleton loader — feels much more native than a spinner */
+                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
+                            {Array.from({ length: 6 }).map((_, i) => (
+                                <div key={i} className="flex bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 h-[138px]">
+                                    <div className="w-1 shrink-0 bg-zinc-100 dark:bg-zinc-800 animate-pulse" />
+                                    <div className="flex-1 p-3.5 space-y-2.5 animate-pulse">
+                                        <div className="flex gap-2">
+                                            <div className="h-4 w-16 rounded-full bg-zinc-100 dark:bg-zinc-800" />
+                                            <div className="h-4 w-12 rounded-full bg-zinc-100 dark:bg-zinc-800 ml-auto" />
+                                        </div>
+                                        <div className="h-3 w-32 rounded bg-zinc-100 dark:bg-zinc-800" />
+                                        <div className="h-4 w-full rounded bg-zinc-100 dark:bg-zinc-800" />
+                                        <div className="h-4 w-3/4 rounded bg-zinc-100 dark:bg-zinc-800" />
+                                        <div className="flex gap-1.5 pt-1">
+                                            <div className="h-4 w-14 rounded-md bg-zinc-100 dark:bg-zinc-800" />
+                                            <div className="h-4 w-16 rounded-md bg-zinc-100 dark:bg-zinc-800" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full border-2 border-white dark:border-zinc-900">
-                                    <Loader2 className="w-full h-full animate-spin text-blue-600" />
-                                </div>
-                            </div>
-                            <p className="text-zinc-500 font-bold uppercase text-xs tracking-widest mt-3">Loading Dak Sutra...</p>
+                            ))}
                         </div>
                     ) : entries.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
                             {entries.map((entry) => {
                                 const cfg = CATEGORY_CONFIG[entry.category] || DEFAULT_CONFIG;
                                 return (
                                     <Link
                                         key={entry._id}
                                         href={`/dak-sutra/${entry.slug || entry._id}`}
-                                        className={`group relative bg-white dark:bg-zinc-900 border rounded-2xl overflow-hidden transition-all duration-200 active:scale-[0.98] hover:-translate-y-0.5 hover:shadow-xl touch-manipulation ${cfg.border} ${cfg.glow}`}
+                                        className="group flex bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] active:scale-[0.975] active:shadow-none transition-all duration-150 touch-manipulation"
                                     >
-                                        {/* Top colour stripe */}
-                                        <div className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${cfg.stripe}`} />
+                                        {/* Left accent bar */}
+                                        <div className={`w-[3.5px] shrink-0 bg-gradient-to-b ${cfg.stripe}`} />
 
-                                        <div className="p-3 md:p-4 pt-4 md:pt-5 min-w-0">
-                                            {/* Row 1 — Category badge + Date */}
-                                            <div className="flex items-center justify-between gap-2 mb-2 md:mb-3">
-                                                <div className={`flex items-center gap-1.5 px-2 py-0.5 md:px-2.5 md:py-1 rounded-md md:rounded-lg text-[9px] md:text-[10px] font-black uppercase tracking-wide shrink-0 ${cfg.badge}`}>
+                                        {/* Card body */}
+                                        <div className="flex-1 flex flex-col p-3.5 min-w-0">
+
+                                            {/* Row 1 — category pill + date */}
+                                            <div className="flex items-center justify-between gap-2 mb-2">
+                                                <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-widest shrink-0 ${cfg.badge}`}>
                                                     {cfg.icon}
                                                     {entry.category}
-                                                </div>
-                                                <div className="flex items-center gap-1 text-[9px] md:text-[10px] font-semibold text-zinc-400 shrink-0">
-                                                    <Calendar className="w-2.5 h-2.5 md:w-3 md:h-3" />
-                                                    {entry.effective_date ? format(new Date(entry.effective_date), 'MMM yyyy') : '—'}
-                                                </div>
-                                            </div>
-
-                                            {/* Row 2 — Act name */}
-                                            <div className={`flex items-start gap-1.5 mb-1 ${cfg.badgeText}`}>
-                                                <Bookmark className="w-2.5 h-2.5 md:w-3 md:h-3 shrink-0 mt-[3px] md:mt-[2px]" />
-                                                <span className="text-[10px] md:text-[11px] font-black leading-snug break-words min-w-0">
-                                                    {entry.act_name}
                                                 </span>
+                                                {entry.effective_date && (
+                                                    <span className="text-[9px] font-semibold text-zinc-400 dark:text-zinc-500 shrink-0 tabular-nums">
+                                                        {format(new Date(entry.effective_date), 'MMM yyyy')}
+                                                    </span>
+                                                )}
                                             </div>
 
-                                            {/* Row 3 — Rule number (if present, separate line) */}
+                                            {/* Row 2 — act name + rule ref */}
+                                            <p className={`text-[10px] font-black uppercase tracking-wide leading-tight truncate ${cfg.badgeText}`}>
+                                                {entry.act_name}
+                                            </p>
                                             {entry.rule_number && (
-                                                <p className="text-[9px] md:text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 mb-2 md:mb-2.5 pl-4 md:pl-[18px] leading-snug break-words">
+                                                <p className="text-[9px] font-medium text-zinc-400 dark:text-zinc-500 truncate mt-0.5 mb-1">
                                                     {entry.rule_number}
                                                 </p>
                                             )}
 
-                                            {/* Divider */}
-                                            <div className="border-t border-zinc-100 dark:border-zinc-800 mb-2.5" />
-
-                                            {/* Row 4 — Title */}
-                                            <h3 className="text-[13px] md:text-sm font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors break-words line-clamp-3 min-w-0">
+                                            {/* Row 3 — title (hero text) */}
+                                            <h3 className="text-[13.5px] md:text-sm font-extrabold text-zinc-900 dark:text-zinc-50 leading-snug line-clamp-2 mt-1.5 mb-2.5 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex-1">
                                                 {entry.title}
                                             </h3>
 
-                                            {/* Row 5 — Exam tags */}
-                                            <div className="flex flex-wrap gap-1.5 mb-3">
-                                                {entry.exam_tags?.map(tag => (
-                                                    <span
-                                                        key={tag}
-                                                        className={`px-2 py-0.5 rounded-md text-[10px] font-bold border ${TAG_COLORS[tag] || "bg-zinc-50 dark:bg-zinc-800 text-zinc-400 border-zinc-200 dark:border-zinc-700"}`}
-                                                    >
-                                                        {tag}
-                                                    </span>
-                                                ))}
-                                            </div>
-
-                                            {/* Row 6 — Footer CTA */}
-                                            <div className={`flex items-center justify-between pt-2 md:pt-2.5 border-t border-zinc-100 dark:border-zinc-800`}>
-                                                <span className={`text-[10px] md:text-[11px] font-black tracking-wide ${cfg.badgeText}`}>
-                                                    Read full rule
-                                                </span>
-                                                <div className={`w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center ${cfg.badge} group-hover:scale-110 transition-transform`}>
-                                                    <ChevronRight className="w-3 h-3 md:w-3.5 md:h-3.5" />
+                                            {/* Row 4 — footer: tags + arrow */}
+                                            <div className="flex items-center justify-between gap-2 pt-2 border-t border-zinc-100 dark:border-zinc-800 mt-auto">
+                                                <div className="flex gap-1 min-w-0 overflow-hidden">
+                                                    {entry.exam_tags?.slice(0, 2).map(tag => (
+                                                        <span
+                                                            key={tag}
+                                                            className={`shrink-0 text-[8.5px] font-bold px-1.5 py-0.5 rounded-md border ${TAG_COLORS[tag] || "bg-zinc-50 dark:bg-zinc-800 text-zinc-400 border-zinc-200 dark:border-zinc-700"}`}
+                                                        >
+                                                            {tag}
+                                                        </span>
+                                                    ))}
+                                                    {(entry.exam_tags?.length ?? 0) > 2 && (
+                                                        <span className="shrink-0 text-[8.5px] font-bold px-1.5 py-0.5 rounded-md border bg-zinc-50 dark:bg-zinc-800 text-zinc-400 border-zinc-200 dark:border-zinc-700">
+                                                            +{entry.exam_tags.length - 2}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 ${cfg.badge} group-hover:scale-110 transition-transform`}>
+                                                    <ChevronRight className="w-3.5 h-3.5" />
                                                 </div>
                                             </div>
                                         </div>
@@ -350,12 +359,12 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                             })}
                         </div>
                     ) : (
-                        <div className="text-center py-16 md:py-24 rounded-3xl border-2 border-dashed border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
-                            <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mx-auto mb-4">
-                                <Search className="w-7 h-7 md:w-8 md:h-8 text-zinc-300 dark:text-zinc-600" />
+                        <div className="text-center py-16 md:py-24 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/40">
+                            <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mx-auto mb-3">
+                                <Search className="w-5 h-5 text-zinc-300 dark:text-zinc-600" />
                             </div>
-                            <h3 className="text-base md:text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-1">No matches found</h3>
-                            <p className="text-zinc-500 text-sm">Try adjusting your filters or search terms.</p>
+                            <p className="text-sm font-bold text-zinc-700 dark:text-zinc-300 mb-1">No matches found</p>
+                            <p className="text-zinc-400 text-xs">Try different filters or search terms.</p>
                         </div>
                     )}
                 </div>
