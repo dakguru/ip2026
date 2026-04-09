@@ -34,7 +34,7 @@ export default function Loading() {
                             src="/dak-guru-new-logo.png"
                             alt="Dak Guru Loading"
                             fill
-                            className="object-contain animate-pulse"
+                            className="object-contain animate-pulse dark:invert drop-shadow-sm"
                             priority
                             sizes="(max-width: 768px) 24px, 32px"
                         />
