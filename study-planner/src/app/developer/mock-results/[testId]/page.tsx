@@ -36,6 +36,7 @@ const TEST_SCHEDULE_MAP: Record<string, { start: Date; end: Date }> = {
     "mock-2026-03-21": { start: new Date("2026-03-21T00:00:00+05:30"), end: new Date("2026-03-22T23:59:59+05:30") },
     "mock-2026-03-28": { start: new Date("2026-03-28T00:00:00+05:30"), end: new Date("2026-03-29T23:59:59+05:30") },
     "psgb-mock-2026-04-05": { start: new Date("2026-04-04T00:00:00+05:30"), end: new Date("2026-04-05T23:59:59+05:30") },
+    "psgb-mock-2026-04-12": { start: new Date("2026-04-11T00:00:00+05:30"), end: new Date("2026-04-12T23:59:59+05:30") },
     "mock-2026-04-04": { start: new Date("2026-04-04T00:00:00+05:30"), end: new Date("2026-04-05T23:59:59+05:30") },
     "mock-2026-04-11": { start: new Date("2026-04-11T00:00:00+05:30"), end: new Date("2026-04-12T23:59:59+05:30") },
     "mock-2026-04-18": { start: new Date("2026-04-18T00:00:00+05:30"), end: new Date("2026-04-19T23:59:59+05:30") },
@@ -89,6 +90,10 @@ export default function MockTestDetailResultsPage() {
         if (id.startsWith('mock-')) {
             // mock-2026-01-17 -> Weekly Mock Test (Jan 17)
             return `Weekly Mock Test (${id.replace('mock-', '')})`;
+        }
+        if (id.startsWith('psgb-mock-')) {
+            const psgbWeek = PSGB_MOCK_SCHEDULE.find(w => "psgb-mock-" + w.sundayDate === id);
+            return psgbWeek ? `PS Gr B - Weekly Mock Test ${String(psgbWeek.week).padStart(2, '0')}` : id;
         }
         return id;
     };

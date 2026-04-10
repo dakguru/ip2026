@@ -200,7 +200,19 @@ export const createMockTestAnswerSheetPDFDoc = async ({
     // Helper to clean text and fix encoding issues
     const cleanText = (text: string) => {
         if (!text) return "";
-        return text.replace(/₹/g, "Rs. ").replace(/\t/g, " ");
+        return text
+            .replace(/₹/g, "Rs. ")
+            .replace(/\t/g, " ")
+            .replace(/⅓/g, "1/3")
+            .replace(/⅔/g, "2/3")
+            .replace(/¼/g, "1/4")
+            .replace(/½/g, "1/2")
+            .replace(/¾/g, "3/4")
+            .replace(/[“”]/g, '"')
+            .replace(/[‘’]/g, "'")
+            .replace(/—/g, "-")
+            .replace(/–/g, "-")
+            .replace(/…/g, "...");
     };
 
     // --- QUESTIONS LOOP ---

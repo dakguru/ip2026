@@ -181,7 +181,7 @@ export default function MockTestsPage() {
 
             if (now > sundayDate) {
                 status = 'completed';
-            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-04-04' || calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28'))) {
+            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-04-04' || calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28' || calculatedId === 'mock-2026-04-11'))) {
                 status = 'live';
             } else {
                 status = 'upcoming';
@@ -1341,6 +1341,7 @@ function MockTestCard({
                 {/* Top 7 Rank Holders Button — enabled only after March 30, 2026 00:00 for Mock 11 OR after Sunday for PSGB tests */}
                 {isEnded && onShowRankList && !(mock.id === 'mock-2026-03-28' && new Date() < new Date('2026-03-30T00:00:00+05:30')) && 
                  !(mock.id === 'mock-2026-04-04' && new Date() < new Date('2026-04-06T00:00:00+05:30')) && 
+                 !(mock.id === 'mock-2026-04-11' && new Date() < new Date('2026-04-13T00:00:00+05:30')) && 
                  !(mock.id.startsWith('psgb-mock-') && new Date() <= mock.endDate) && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
@@ -1813,6 +1814,7 @@ function PsgbMockTestPage({
             const testId = `psgb-mock-${week.sundayDate}`;
             const isAdmin = role === 'admin';
             const isWeek01 = week.week === 1;
+            const isWeek02 = week.week === 2;
 
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
             const isPublicLive = now >= satDate && now <= sunDate;
@@ -1820,7 +1822,7 @@ function PsgbMockTestPage({
 
             if (isPast) {
                 status = 'completed';
-            } else if (isPublicLive || (isAdmin && isWeek01)) {
+            } else if (isPublicLive || (isAdmin && (isWeek01 || isWeek02))) {
                 status = 'live';
             }
 
