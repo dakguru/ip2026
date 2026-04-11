@@ -431,7 +431,7 @@ export const WEEKLY_MOCK_13_QUESTIONS: Question[] = [
             "P-3, Q-1, R-4, S-2"
         ],
         "correctAnswer": 2,
-        "explanation": "Sanction of advance in normal conditions = 15 days (P-2); Recovery in maximum 60 installments (Q-1); Wrongful use — explanation within 30 days of receipt of communication (R-4); Emergency sanction = 7 days (S-3).",
+        "explanation": "Sanction of advance in normal conditions = 15 days (P-2); Recovery in maximum 60 installments (Q-1); Wrongful use - explanation within 15 days of receipt of communication (R-2); Emergency sanction = 7 days (S-3).",
         "table": {
             "headers": [
                 "Column I",
