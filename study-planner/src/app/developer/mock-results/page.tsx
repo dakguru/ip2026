@@ -75,12 +75,35 @@ export default function MockResultsDashboard() {
     const [downloadProgress, setDownloadProgress] = useState(0);
     const [currentDownloadAction, setCurrentDownloadAction] = useState("");
 
-    const filteredLdceIp = ldceIpTests.filter(t =>
-        t.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    const filteredPsgb = psgbTests.filter(t =>
-        t.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const testSorter = (a: MockTestEntry, b: MockTestEntry) => {
+        if (a.type === 'sample') return -1;
+        if (b.type === 'sample') return 1;
+
+        if (a.hasData !== b.hasData) {
+            return a.hasData ? -1 : 1;
+        }
+
+        const dateA = new Date(a.date).getTime();
+        const dateB = new Date(b.date).getTime();
+
+        if (a.hasData) {
+            return dateB - dateA;
+        } else {
+            return dateA - dateB;
+        }
+    };
+
+    const filteredLive = allTests
+        .filter(t => t.hasData && t.title.toLowerCase().includes(searchTerm.toLowerCase()))
+        .sort(testSorter);
+
+    const filteredLdceIp = ldceIpTests
+        .filter(t => !t.hasData && t.title.toLowerCase().includes(searchTerm.toLowerCase()))
+        .sort(testSorter);
+        
+    const filteredPsgb = psgbTests
+        .filter(t => !t.hasData && t.title.toLowerCase().includes(searchTerm.toLowerCase()))
+        .sort(testSorter);
 
     const handleGlobalBulkDownload = async () => {
         const testIds = Object.keys(TEST_QUESTIONS_MAP);
@@ -313,37 +336,59 @@ export default function MockResultsDashboard() {
                 </div>
 
                 <div className="space-y-14">
-                    {/* ── LDCE IP MOCK TESTS ── */}
-                    <section>
-                        <SectionHeader
-                            icon={<BookOpen className="w-6 h-6 text-indigo-500" />}
-                            title="LDCE IP Mock Tests"
-                            subtitle="Inspector Posts · Weekly Series · Jan–May 2026"
-                            count={filteredLdceIp.length}
-                            accentColor="border-indigo-200 dark:border-indigo-800"
-                        />
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filteredLdceIp.map(test => (
-                                <TestCard key={test.id} test={test} />
-                            ))}
-                        </div>
-                    </section>
+                    {/* ── LIVE MOCK TESTS ── */}
+                    {filteredLive.length > 0 && (
+                        <section>
+                            <SectionHeader
+                                icon={<Clock className="w-6 h-6 text-green-500 animate-pulse" />}
+                                title="Live Mock Tests"
+                                subtitle="Tests with configured questions & results data"
+                                count={filteredLive.length}
+                                accentColor="border-green-200 dark:border-green-800"
+                            />
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {filteredLive.map(test => (
+                                    <TestCard key={test.id} test={test} />
+                                ))}
+                            </div>
+                        </section>
+                    )}
 
-                    {/* ── LDCE PS GR B MOCK TESTS ── */}
-                    <section>
-                        <SectionHeader
-                            icon={<GraduationCap className="w-6 h-6 text-amber-500" />}
-                            title="LDCE PS Gr B Mock Tests"
-                            subtitle="Postal Service Group B · Weekly Series · Apr–Jul 2026"
-                            count={filteredPsgb.length}
-                            accentColor="border-amber-200 dark:border-amber-800"
-                        />
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filteredPsgb.map(test => (
-                                <TestCard key={test.id} test={test} />
-                            ))}
-                        </div>
-                    </section>
+                    {/* ── LDCE IP MOCK TESTS (UPCOMING) ── */}
+                    {filteredLdceIp.length > 0 && (
+                        <section>
+                            <SectionHeader
+                                icon={<BookOpen className="w-6 h-6 text-indigo-500" />}
+                                title="LDCE IP Mock Tests (Upcoming)"
+                                subtitle="Inspector Posts · Weekly Series · Jan–May 2026"
+                                count={filteredLdceIp.length}
+                                accentColor="border-indigo-200 dark:border-indigo-800"
+                            />
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {filteredLdceIp.map(test => (
+                                    <TestCard key={test.id} test={test} />
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* ── LDCE PS GR B MOCK TESTS (UPCOMING) ── */}
+                    {filteredPsgb.length > 0 && (
+                        <section>
+                            <SectionHeader
+                                icon={<GraduationCap className="w-6 h-6 text-amber-500" />}
+                                title="LDCE PS Gr B Mock Tests (Upcoming)"
+                                subtitle="Postal Service Group B · Weekly Series · Apr–Jul 2026"
+                                count={filteredPsgb.length}
+                                accentColor="border-amber-200 dark:border-amber-800"
+                            />
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {filteredPsgb.map(test => (
+                                    <TestCard key={test.id} test={test} />
+                                ))}
+                            </div>
+                        </section>
+                    )}
                 </div>
             </div>
         </div>

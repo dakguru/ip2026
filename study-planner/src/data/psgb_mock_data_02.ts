@@ -314,9 +314,9 @@ export const PSGB_MOCK_02_QUESTIONS: Question[] = [
         "text": "Consider the following statements regarding \"Poste Restante\":\n1. It is intended solely for the convenience of strangers and travellers.\n2. A Poste Restante article (except COD) can be kept in the post office for up to 30 days.\n3. The facility cannot be used by a person for more than 3 months.\nHow many of the above statements are correct?",
         "options": [
             "Only one",
-            "Only two",
+            "One and Three",
             "All three",
-            "None"
+            "Only three"
         ],
         "correctAnswer": 1,
         "explanation": "Statements 1 and 3 are correct. Statement 2 is incorrect because a standard Poste Restante article is kept for a period not exceeding one month, as per Clause 64."

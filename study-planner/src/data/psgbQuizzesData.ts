@@ -32,7 +32,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-28', "Annual Reports and Book of Information of D/o Posts", 'Paper I', [110, 111, 112]),
   createTopic('psgb-29', "Postal Manual Volume II Chapter VI (Stock), VIII (Printing), IX(Contracts), XII (Budget Estimates and control)", 'Paper I', [58]),
   createTopic('psgb-30', "Chapter 6 of General Financial Rules, 2017", 'Paper I', []),
-  createTopic('psgb-31', "CVC guidelines on Public procurement, guide-lines and instructions on e-procurement.", 'Paper I', []),
+  createTopic('psgb-31', "CVC guidelines on Public procurement, guide-lines and instructions on e-procurement.", 'Paper I', [208, 209, 210, 211, 212]),
   createTopic('psgb-32', "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.", 'Paper I', []),
   createTopic('psgb-33', "Postal Manual Volume IV.", 'Paper I', [59]),
   createTopic('psgb-34', "Instructions issued by Directorate and DoP&T on maintenance of APAR.", 'Paper I', [177, 178]),

@@ -22,6 +22,7 @@ import { ccs_revised_pay_rules_set1, ccs_revised_pay_rules_set2 } from './flashc
 import { fr_sr_set1, fr_sr_set2, fr_sr_set3 } from './flashcards/fundamentalSupplementaryRules';
 import { complaint_grievance_set1 } from './flashcards/complaintGrievanceHandling';
 import { establishment_norms_set1 } from './flashcards/establishmentNorms';
+import { cvc_procurement_set1, cvc_procurement_set2, cvc_procurement_set3, cvc_procurement_set4, cvc_procurement_set5 } from './flashcards/cvcProcurement';
 
 
 // ----- EXISTING QUESTION DATA -----
@@ -6749,6 +6750,13 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
 
   // --- ESTABLISHMENT NORMS (Paper I) ---
   205: establishment_norms_set1,
+
+  // --- CVC GUIDELINES ON PUBLIC PROCUREMENT & E-PROCUREMENT (Paper I) ---
+  208: cvc_procurement_set1,
+  209: cvc_procurement_set2,
+  210: cvc_procurement_set3,
+  211: cvc_procurement_set4,
+  212: cvc_procurement_set5,
 
   187: [
     { q: "Which Finacle command is used for CIF Creation in CBS?", o: ["CMRC", "CCRC", "CICD", "CCIFINQ"], a: 1, e: "CIF Creation is done by invoking CCRC (Customer Creation). The supervisor verifies by also invoking CCRC. After successful creation, the CIF No. is noted." },
