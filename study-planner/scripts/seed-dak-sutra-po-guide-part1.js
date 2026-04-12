@@ -149,7 +149,7 @@ const entries = [
       </thead>
       <tbody>
         <tr><td style="border:1px solid #b2dfdb;padding:9px 14px;font-weight:bold">Erroneous Impressions</td><td style="border:1px solid #b2dfdb;padding:9px 14px;font-weight:bold;color:#004d40">Face value less <strong>5% deduction</strong></td><td style="border:1px solid #b2dfdb;padding:9px 14px">Envelopes/wrappers must be surrendered; claim within <strong>1 month</strong></td></tr>
-        <tr style="background:#e0fafa"><td style="border:1px solid #b2dfdb;padding:9px 14px;font-weight:bold">Unused Postage Units</td><td style="border:1px solid #b2dfdb;padding:9px 14px;font-weight:bold;color:#004d40">As remaining</td><td style="border:1px solid #b2dfdb;padding:9px 14px">Only upon <strong>condemnation or discontinuation</strong> of the machine. Claim within <strong>3 months</strong>. Authority: <strong>Head of Circle (HoC)</strong> or <strong>Head of Region (HoR)</strong></td></tr>
+        <tr style="background:#e0fafa"><td style="border:1px solid #b2dfdb;padding:9px 14px;font-weight:bold">Unused Postage Units</td><td style="border:1px solid #b2dfdb;padding:9px 14px;font-weight:bold;color:#004d40">As remaining</td><td style="border:1px solid #b2dfdb;padding:9px 14px"><s>Only upon <strong>condemnation or discontinuation</strong> of the machine. Claim within <strong>3 months</strong>. Authority: <strong>Head of Circle (HoC)</strong> or <strong>Head of Region (HoR)</strong></s></td></tr>
       </tbody>
     </table>
     <p style="margin:12px 0 0;font-size:0.9rem"><strong>Register of Repairs:</strong> Licensee must preserve the 'Register of Repairs' for <strong>2 years</strong> from the date of the last entry.</p>
@@ -500,7 +500,8 @@ async function main() {
         for (const entry of entries) {
             const existing = await collection.findOne({ title: entry.title });
             if (existing) {
-                console.log(`⏭️  Skipping (already exists): ${entry.title}`);
+                await collection.updateOne({ title: entry.title }, { $set: { ...entry, updatedAt: now } });
+                console.log(`✅ Updated: ${entry.title}`);
                 continue;
             }
             const result = await collection.insertOne({

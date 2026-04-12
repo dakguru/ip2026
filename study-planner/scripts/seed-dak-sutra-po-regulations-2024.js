@@ -588,7 +588,7 @@ const entries = [
       <tr>
         <td style="border:1px solid #ffccbc;padding:9px 14px;text-align:center;font-weight:bold">79</td>
         <td style="border:1px solid #ffccbc;padding:9px 14px;font-weight:bold;vertical-align:top">International Tracked Packet</td>
-        <td style="border:1px solid #ffccbc;padding:9px 14px">Subject to a maximum of <strong>30 SDR</strong>.</td>
+        <td style="border:1px solid #ffccbc;padding:9px 14px">The compensation is restricted to <strong>₹1,000/-</strong> or the actual declared value of the contents, whichever is less.</td>
       </tr>
       <tr style="background:#fbe9e7">
         <td style="border:1px solid #ffccbc;padding:9px 14px;text-align:center;font-weight:bold">80</td>
@@ -718,7 +718,7 @@ const entries = [
         <tr style="background:#e3f2fd"><td style="border:1px solid #bbdefb;padding:7px">International EMS (loss)</td><td style="border:1px solid #bbdefb;padding:7px;font-weight:bold">30 SDR</td></tr>
         <tr><td style="border:1px solid #bbdefb;padding:7px">International EMS (delay)</td><td style="border:1px solid #bbdefb;padding:7px;font-weight:bold">EMS charges − Registered post charges</td></tr>
         <tr style="background:#e3f2fd"><td style="border:1px solid #bbdefb;padding:7px">International Air Parcel</td><td style="border:1px solid #bbdefb;padding:7px;font-weight:bold">40 SDR + 4.50 SDR/kg</td></tr>
-        <tr><td style="border:1px solid #bbdefb;padding:7px">International Tracked Packet</td><td style="border:1px solid #bbdefb;padding:7px;font-weight:bold">30 SDR</td></tr>
+        <tr><td style="border:1px solid #bbdefb;padding:7px">International Tracked Packet</td><td style="border:1px solid #bbdefb;padding:7px;font-weight:bold">₹1,000 or actual (less)</td></tr>
         <tr style="background:#e3f2fd"><td style="border:1px solid #bbdefb;padding:7px">Domestic MO (loss)</td><td style="border:1px solid #bbdefb;padding:7px;font-weight:bold">MO amount + commission</td></tr>
         <tr><td style="border:1px solid #bbdefb;padding:7px">Domestic MO (delay)</td><td style="border:1px solid #bbdefb;padding:7px;font-weight:bold">SB interest rate for delay period</td></tr>
         <tr style="background:#e3f2fd"><td style="border:1px solid #bbdefb;padding:7px">International Money Remittance</td><td style="border:1px solid #bbdefb;padding:7px;font-weight:bold">Amount + commission</td></tr>
@@ -744,7 +744,8 @@ async function main() {
         for (const entry of entries) {
             const existing = await collection.findOne({ title: entry.title });
             if (existing) {
-                console.log(`⏭️  Skipping (already exists): ${entry.title}`);
+                await collection.updateOne({ title: entry.title }, { $set: { ...entry, updatedAt: now } });
+                console.log(`✅ Updated: ${entry.title}`);
                 continue;
             }
             const result = await collection.insertOne({
