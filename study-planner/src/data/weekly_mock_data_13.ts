@@ -39,7 +39,7 @@ export const WEEKLY_MOCK_13_QUESTIONS: Question[] = [
     },
     {
         "id": "weekly-13-4",
-        "text": "Consider the following statements regarding eligibility for GPF subscription under Rule 4:\n1. All permanent Government servants shall subscribe to the Fund.\n2. Temporary Government servants must complete two years of continuous service before subscription.\n3. Apprentices and Probationers shall be treated as temporary Government servants.\n4. These rules shall not apply to Government servants appointed on or after 1st January, 2004.\nHow many of the above statements are correct?",
+        "text": "Consider the following statements regarding eligibility for GPF subscription under Rule 4:\n1. All permanent govt servants ( who joined service on or before 31.12.2003) shall subscribe the fund.\n2. Temporary Government servants must complete two years of continuous service before subscription.\n3. Apprentices and Probationers shall be treated as temporary Government servants.\n4. These rules shall not apply to Government servants appointed on or after 1st January, 2004.\nHow many of the above statements are correct?",
         "options": [
             "One",
             "Two",
