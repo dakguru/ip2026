@@ -147,7 +147,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
     const categories = ["all", "Rule", "Section", "Regulation", "Circular", "Explanation"];
 
     return (
-        <div className="min-h-screen bg-white dark:bg-zinc-950">
+        <div className="min-h-screen bg-[#f5f6fa] overflow-x-hidden">
             {/* Rich Header */}
             {!isMobileApp && (
                 <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
@@ -157,17 +157,14 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                 {/* Hero */}
                 <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white">
                     <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
-                    <div className="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-blue-500/20 rounded-full blur-3xl" />
-                    <div className="absolute bottom-0 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-violet-500/20 rounded-full blur-3xl" />
+                    <div className="absolute top-0 left-0 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl" />
+                    <div className="absolute bottom-0 right-0 w-60 h-60 bg-violet-500/20 rounded-full blur-3xl" />
 
-                    <div className="relative max-w-7xl mx-auto px-4 md:px-6 pb-6 md:pb-16 pt-[max(20px,calc(env(safe-area-inset-top,0px)+8px))] md:pt-16">
-                        {/* Back link */}
-
-
-                        {/* Stylish Dak Sutra wordmark */}
+                    <div className="relative w-full px-4 md:max-w-7xl md:mx-auto md:px-6 pb-6 md:pb-16 pt-[max(20px,calc(env(safe-area-inset-top,0px)+8px))] md:pt-16">
+                        {/* Wordmark */}
                         <div className="flex items-center gap-2.5 mb-2 md:mb-4">
-                            <div className="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
-                                <BookOpen className="w-3.5 h-3.5 md:w-5 md:h-5 text-white" />
+                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                                <BookOpen className="w-4 h-4 md:w-5 md:h-5 text-white" />
                             </div>
                             <h1 className="text-2xl md:text-4xl font-black tracking-tight leading-none">
                                 <span className="bg-gradient-to-r from-white via-blue-100 to-violet-200 bg-clip-text text-transparent">
@@ -176,57 +173,57 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                             </h1>
                         </div>
 
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-200 mb-4 md:mb-6 backdrop-blur-sm">
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-200 mb-3 md:mb-6 backdrop-blur-sm">
                             <Sparkles className="w-2.5 h-2.5 md:w-3 md:h-3" />
                             Postal Laws Decoded for LDCE IP &amp; PS Group B
                         </div>
 
-                        <h2 className="text-xl sm:text-3xl md:text-5xl font-black leading-tight mb-1.5 md:mb-4">
+                        <h2 className="text-[22px] sm:text-3xl md:text-5xl font-black leading-tight mb-1.5 md:mb-4">
                             Postal Rules,{" "}
                             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                                 Simplified.
                             </span>
                         </h2>
 
-                        <p className="text-blue-200/80 max-w-xl text-[13px] md:text-base leading-relaxed mb-4 md:mb-8">
+                        <p className="text-blue-200/80 text-[12px] md:text-base leading-relaxed mb-4 md:mb-8 max-w-xs md:max-w-xl">
                             Official provisions broken down with plain-language explanations, real-life examples, and exam-focused insights.
                         </p>
 
                         <div className="flex flex-wrap gap-2 md:gap-4">
-                            <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1.5 md:px-4 md:py-2.5">
-                                <GraduationCap className="w-3 h-3 md:w-4 md:h-4 text-blue-300" />
-                                <span className="text-[10px] md:text-sm font-bold text-white">{entries.length}+ Rules</span>
+                            <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
+                                <GraduationCap className="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-300" />
+                                <span className="text-[11px] md:text-sm font-bold text-white">{entries.length}+ Rules</span>
                             </div>
-                            <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1.5 md:px-4 md:py-2.5">
-                                <TrendingUp className="w-3 h-3 md:w-4 md:h-4 text-violet-300" />
-                                <span className="text-[10px] md:text-sm font-bold text-white">Exam-Focused</span>
+                            <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
+                                <TrendingUp className="w-3.5 h-3.5 md:w-4 md:h-4 text-violet-300" />
+                                <span className="text-[11px] md:text-sm font-bold text-white">Exam-Focused</span>
                             </div>
-                            <div className="flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-2.5 py-1.5 md:px-4 md:py-2.5">
-                                <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-amber-300" />
-                                <span className="text-[10px] md:text-sm font-bold text-white">Dak Guru Explained</span>
+                            <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
+                                <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-300" />
+                                <span className="text-[11px] md:text-sm font-bold text-white">Guru Explained</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Search + Filter + Cards */}
-                <div className="max-w-7xl mx-auto px-4 md:px-6 py-5 md:py-10 pb-[max(32px,calc(env(safe-area-inset-bottom,0px)+24px))]">
+                <div className="w-full md:max-w-7xl md:mx-auto px-3 md:px-6 pt-4 md:pt-8 pb-[max(32px,calc(env(safe-area-inset-bottom,0px)+24px))]">
 
                     {/* Search */}
                     <div className="mb-3 relative">
-                        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-zinc-400" />
+                        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none" />
                         <input
                             type="text"
                             placeholder="Search rules, sections, acts..."
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
-                            className="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl md:rounded-2xl text-[13px] md:text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 dark:focus:border-blue-500 transition-all font-medium shadow-sm"
+                            className="w-full pl-10 pr-4 py-3 md:py-4 bg-white border border-zinc-200 rounded-2xl text-[13px] md:text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all font-medium shadow-sm"
                         />
                     </div>
 
-                    {/* Category Filter Pills — full-bleed scroll on mobile */}
-                    <div className="-mx-4 px-4 md:mx-0 md:px-0 mb-4 md:mb-8">
-                        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
+                    {/* Category Filter Pills */}
+                    <div className="mb-4 md:mb-6">
+                        <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
                             {categories.map((cat) => {
                                 const cfg = cat === "all" ? null : CATEGORY_CONFIG[cat];
                                 const isActive = categoryFilter === cat;
@@ -234,17 +231,18 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                                     <button
                                         key={cat}
                                         onClick={() => setCategoryFilter(cat)}
-                                        className={`flex items-center gap-1.5 whitespace-nowrap px-3 py-2 md:px-4 rounded-xl text-xs font-bold border transition-all shrink-0 snap-start touch-manipulation ${isActive
+                                        className={`flex items-center gap-1.5 whitespace-nowrap px-3.5 py-2 rounded-xl text-[11px] font-bold border transition-all shrink-0 touch-manipulation ${
+                                            isActive
                                                 ? cat === "all"
-                                                    ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 border-transparent shadow-lg"
+                                                    ? "bg-zinc-900 text-white border-transparent shadow-md"
                                                     : `${cfg?.badge} border-transparent shadow-md`
-                                                : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200"
-                                            }`}
+                                                : "bg-white border-zinc-200 text-zinc-500"
+                                        }`}
                                     >
                                         {cfg?.icon}
                                         {cat === "all" ? "All" : cat + "s"}
                                         {cat !== "all" && categoryCounts[cat] ? (
-                                            <span className="ml-0.5 text-[10px] opacity-70">{categoryCounts[cat]}</span>
+                                            <span className="ml-0.5 text-[9px] opacity-60 font-black">{categoryCounts[cat]}</span>
                                         ) : null}
                                     </button>
                                 );
@@ -254,12 +252,12 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
 
                     {/* Results count */}
                     {!isLoading && entries.length > 0 && (
-                        <div className="flex items-center gap-2 mb-3 md:mb-4">
-                            <div className="h-px flex-1 bg-zinc-100 dark:bg-zinc-800" />
-                            <span className="text-[10px] font-black text-zinc-400 uppercase tracking-widest px-2">
+                        <div className="flex items-center gap-2 mb-3">
+                            <div className="h-px flex-1 bg-zinc-200" />
+                            <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest px-1">
                                 {entries.length} {entries.length === 1 ? "entry" : "entries"}
                             </span>
-                            <div className="h-px flex-1 bg-zinc-100 dark:bg-zinc-800" />
+                            <div className="h-px flex-1 bg-zinc-200" />
                         </div>
                     )}
 
@@ -267,69 +265,70 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                     {isLoading ? (
                         <DakSutraLoader />
                     ) : entries.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
                             {entries.map((entry) => {
                                 const cfg = CATEGORY_CONFIG[entry.category] || DEFAULT_CONFIG;
                                 return (
                                     <Link
                                         key={entry._id}
                                         href={`/dak-sutra/${entry.slug || entry._id}`}
-                                        className="group flex bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] active:scale-[0.975] active:shadow-none transition-all duration-150 touch-manipulation"
+                                        className="group block w-full bg-white rounded-2xl overflow-hidden border border-zinc-100 shadow-[0_1px_6px_rgba(0,0,0,0.06)] active:scale-[0.98] active:shadow-none hover:shadow-[0_4px_20px_rgba(0,0,0,0.10)] transition-all duration-150 touch-manipulation"
                                     >
-                                        {/* Left accent bar */}
-                                        <div className={`w-[3.5px] shrink-0 bg-gradient-to-b ${cfg.stripe}`} />
+                                        {/* Top gradient stripe */}
+                                        <div className={`h-[3px] w-full bg-gradient-to-r ${cfg.stripe}`} />
 
-                                        {/* Card body */}
-                                        <div className="flex-1 flex flex-col p-3.5 min-w-0">
-
-                                            {/* Row 1 — category pill + date */}
-                                            <div className="flex items-center justify-between gap-2 mb-2">
-                                                <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-widest shrink-0 ${cfg.badge}`}>
+                                        <div className="p-4">
+                                            {/* Row 1 — category + date */}
+                                            <div className="flex items-center justify-between gap-2 mb-3">
+                                                <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-widest shrink-0 ${cfg.badge}`}>
                                                     {cfg.icon}
                                                     {entry.category}
                                                 </span>
                                                 {entry.effective_date && (
-                                                    <span className="text-[9px] font-semibold text-zinc-400 dark:text-zinc-500 shrink-0 tabular-nums">
+                                                    <span className="text-[10px] font-semibold text-zinc-400 tabular-nums shrink-0">
                                                         {format(new Date(entry.effective_date), 'MMM yyyy')}
                                                     </span>
                                                 )}
                                             </div>
 
-                                            {/* Row 2 — act name + rule ref */}
-                                            <p className={`text-[10px] font-black uppercase tracking-wide leading-tight truncate ${cfg.badgeText}`}>
+                                            {/* Act name */}
+                                            <p className={`text-[10px] font-black uppercase tracking-wider mb-0.5 truncate ${cfg.badgeText}`}>
                                                 {entry.act_name}
                                             </p>
+
+                                            {/* Rule reference */}
                                             {entry.rule_number && (
-                                                <p className="text-[9px] font-medium text-zinc-400 dark:text-zinc-500 truncate mt-0.5 mb-1">
+                                                <p className="text-[9.5px] text-zinc-400 font-medium mb-3 line-clamp-1">
                                                     {entry.rule_number}
                                                 </p>
                                             )}
 
-                                            {/* Row 3 — title (hero text) */}
-                                            <h3 className="text-[13.5px] md:text-sm font-extrabold text-zinc-900 dark:text-zinc-50 leading-snug line-clamp-2 mt-1.5 mb-2.5 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex-1">
+                                            {/* Title — hero text */}
+                                            <h3 className={`text-[15px] font-extrabold text-zinc-900 leading-snug line-clamp-2 mb-4 group-hover:${cfg.badgeText} transition-colors`}>
                                                 {entry.title}
                                             </h3>
 
-                                            {/* Row 4 — footer: tags + arrow */}
-                                            <div className="flex items-center justify-between gap-2 pt-2 border-t border-zinc-100 dark:border-zinc-800 mt-auto">
-                                                <div className="flex gap-1 min-w-0 overflow-hidden">
+                                            {/* Footer — tags + read arrow */}
+                                            <div className="flex items-center justify-between gap-2 pt-3 border-t border-zinc-100">
+                                                <div className="flex items-center gap-1.5 flex-wrap min-w-0">
                                                     {entry.exam_tags?.slice(0, 2).map(tag => (
                                                         <span
                                                             key={tag}
-                                                            className={`shrink-0 text-[8.5px] font-bold px-1.5 py-0.5 rounded-md border ${TAG_COLORS[tag] || "bg-zinc-50 dark:bg-zinc-800 text-zinc-400 border-zinc-200 dark:border-zinc-700"}`}
+                                                            className={`text-[9px] font-bold px-2 py-0.5 rounded-lg border ${TAG_COLORS[tag] || "bg-zinc-50 text-zinc-400 border-zinc-200"}`}
                                                         >
                                                             {tag}
                                                         </span>
                                                     ))}
                                                     {(entry.exam_tags?.length ?? 0) > 2 && (
-                                                        <span className="shrink-0 text-[8.5px] font-bold px-1.5 py-0.5 rounded-md border bg-zinc-50 dark:bg-zinc-800 text-zinc-400 border-zinc-200 dark:border-zinc-700">
+                                                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-lg border bg-zinc-50 text-zinc-400 border-zinc-200">
                                                             +{entry.exam_tags.length - 2}
                                                         </span>
                                                     )}
                                                 </div>
-                                                <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 ${cfg.badge} group-hover:scale-110 transition-transform`}>
+                                                <span className={`inline-flex items-center gap-0.5 text-[10px] font-black shrink-0 ${cfg.badgeText} group-hover:gap-1.5 transition-all`}>
+                                                    Read
                                                     <ChevronRight className="w-3.5 h-3.5" />
-                                                </div>
+                                                </span>
                                             </div>
                                         </div>
                                     </Link>
@@ -337,11 +336,11 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                             })}
                         </div>
                     ) : (
-                        <div className="text-center py-16 md:py-24 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/40">
-                            <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mx-auto mb-3">
-                                <Search className="w-5 h-5 text-zinc-300 dark:text-zinc-600" />
+                        <div className="text-center py-16 md:py-24 rounded-2xl border border-zinc-100 bg-white">
+                            <div className="w-12 h-12 rounded-xl bg-zinc-100 flex items-center justify-center mx-auto mb-3">
+                                <Search className="w-5 h-5 text-zinc-300" />
                             </div>
-                            <p className="text-sm font-bold text-zinc-700 dark:text-zinc-300 mb-1">No matches found</p>
+                            <p className="text-sm font-bold text-zinc-700 mb-1">No matches found</p>
                             <p className="text-zinc-400 text-xs">Try different filters or search terms.</p>
                         </div>
                     )}
