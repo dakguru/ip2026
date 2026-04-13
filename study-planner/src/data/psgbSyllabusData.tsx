@@ -121,7 +121,7 @@ export const psgbSyllabusData = {
           { name: "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", link: null },
           { name: "DoP&T instructions issued from time to time on Establishment and administration.", link: null },
           { name: "Brochure on reservation, instructions regarding sports person reservation, compassionate appointment guidelines issued by DoP and DoP&T from time to time.", link: null },
-          { name: "Recruitment Rules relating to various cadres in D/o Posts", link: null },
+          { name: "Recruitment Rules relating to various cadres in D/o Posts", link: null, pdfs: [{ title: "Recruitment Rules relating to various cadres in D/o Posts", path: "/notes/paper-1/Rectt Rules of DOP.pdf" }] },
           { name: "Establishment Norms", link: null }
         ]
       },

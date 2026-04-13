@@ -254,9 +254,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Recruitment Rules relating to various cadres in D/o Posts",
-            "description": "Materials will be uploaded soon.",
-            "color": "gray",
-            "comingSoon": true
+            "description": "Comprehensive notes covering the Recruitment Rules relating to various cadres in D/o Posts.",
+            "filename": "Rectt Rules of DOP.pdf",
+            "path": "/notes/paper-1/Rectt Rules of DOP.pdf",
+            "size": "0.5 MB",
+            "color": "gray"
         },
         {
             "title": "Establishment Norms",
