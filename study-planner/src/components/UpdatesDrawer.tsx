@@ -16,6 +16,30 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "13.04.2026",
+        items: [
+            {
+                title: "📚 New PDF Notes Uploaded",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>Recruitment Rules relating to various cadres in D/o Posts</strong> PDF notes for PS Group B Course Mode!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">Paper I (PS Group B)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Comprehensive notes covering the latest Recruitment Rules for various cadres in Department of Posts.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Notes section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "06.04.2026",
         items: [
             {
