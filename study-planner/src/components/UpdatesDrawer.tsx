@@ -31,6 +31,12 @@ const UPDATES_DATA: UpdateGroup[] = [
                             </div>
                         </div>
 
+                        <div className="p-3 bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800/50 rounded-xl">
+                            <p className="text-[10px] md:text-[11px] text-blue-800 dark:text-blue-300 font-medium leading-relaxed">
+                                <strong>💡 Recommendation:</strong> Since the file size is large (59.7 MB), we advise <strong>Downloading</strong> the PDF for the best reading experience. The &quot;View&quot; option may take longer to load.
+                            </p>
+                        </div>
+
                         <p className="pt-1 text-[11px] text-amber-600 dark:text-amber-400 font-bold flex items-center gap-1">
                             <span>🚀</span> Access now in the Notes section!
                         </p>
