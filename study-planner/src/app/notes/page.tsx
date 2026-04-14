@@ -1096,12 +1096,12 @@ export default function NotesPage() {
                     {/* Marquee Banner */}
                     <div className="mb-8 bg-amber-50 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-800/50 rounded-2xl py-3 px-4 shadow-sm overflow-hidden relative flex items-center">
                         <div className="shrink-0 bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mr-4 shadow-sm z-10 relative">
-                            Important Update
+                            Announcement
                         </div>
                         <div className="overflow-hidden relative flex-1 mask-linear-fade">
                             <div className="animate-marquee whitespace-nowrap inline-block text-amber-900 dark:text-amber-100 font-medium text-sm md:text-base">
                                 <span className="mr-8"></span>
-                                To ensure 99.99% accuracy, our team is currently updating all notes to include the latest amendments up to 31.12.2025. We appreciate your patience while we craft the highest quality content for you.
+                                📢 Important Announcement to All Users: Aspirants are requested to kindly report any error found in the PDF Notes immediately to WhatsApp No. 9363030396 for prompt correction. Your support helps us maintain the quality and accuracy of our study materials. – Admin, Dak Guru
                             </div>
                         </div>
                         <style jsx>{`
@@ -1110,7 +1110,7 @@ export default function NotesPage() {
                             100% { transform: translateX(-100%); }
                         }
                         .animate-marquee {
-                            animation: marquee 25s linear infinite;
+                            animation: marquee 35s linear infinite;
                             padding-left: 100%;
                             display: inline-block;
                         }
