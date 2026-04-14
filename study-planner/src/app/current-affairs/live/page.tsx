@@ -5,7 +5,7 @@ import Link from "next/link";
 import { 
     ArrowLeft, Globe, Newspaper, History, Loader2, 
     RefreshCw, Trophy, Sparkles, ArrowRight, ChevronRight,
-    MapPin, Clock
+    MapPin, Clock, Calendar
 } from "lucide-react";
 import { format } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
