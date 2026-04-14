@@ -77,15 +77,7 @@ export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }
     const [isLoading, setIsLoading] = useState(true);
     const [copied, setCopied] = useState(false);
 
-    // Force light mode on this page regardless of user's dark mode preference
-    useEffect(() => {
-        const html = document.documentElement;
-        const wasDark = html.classList.contains('dark');
-        html.classList.remove('dark');
-        return () => {
-            if (wasDark) html.classList.add('dark');
-        };
-    }, []);
+    // Content remains light-themed as per user request to keep fonts colorful and legible
 
     useEffect(() => {
         fetch(`/api/dak-sutra/${id}`)
@@ -229,7 +221,7 @@ export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }
             <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 mt-1 space-y-4 md:space-y-6">
 
                 {/* 1. OFFICIAL PROVISION */}
-                <div className="rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm dark:shadow-none">
+                <div className="rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white shadow-sm dark:shadow-none">
                     <div className="flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/40">
                         <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center shrink-0">
                             <FileText className="w-3 h-3 md:w-4 md:h-4 text-zinc-600 dark:text-zinc-300" />
@@ -244,7 +236,7 @@ export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }
                     </div>
                     <div className="p-4 md:p-8 overflow-x-auto">
                         <div
-                            className="dak-html-content prose prose-zinc dark:prose-invert max-w-none text-zinc-700 dark:text-zinc-300 text-[13px] md:text-base leading-relaxed
+                            className="dak-html-content prose prose-zinc max-w-none text-zinc-700 text-[13px] md:text-base leading-relaxed
                                 prose-headings:font-bold prose-headings:text-sm md:prose-headings:text-base prose-headings:mt-4 prose-headings:mb-2
                                 prose-strong:font-bold prose-ul:space-y-1 prose-table:text-xs md:prose-table:text-sm
                                 prose-td:p-1.5 md:prose-td:p-2 prose-th:p-1.5 md:prose-th:p-2"
@@ -254,7 +246,7 @@ export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }
                 </div>
 
                 {/* 2. DAK GURU EXPLANATION */}
-                <div className={`rounded-2xl overflow-hidden border ${cfg.accentBorder} bg-white dark:bg-zinc-900/60 shadow-sm dark:shadow-none`}>
+                <div className={`rounded-2xl overflow-hidden border ${cfg.accentBorder} bg-white shadow-sm dark:shadow-none`}>
                     <div className={`flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b ${cfg.accentBorder} ${cfg.accentBg}`}>
                         <div className={`w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg flex items-center justify-center shrink-0 ${cfg.accentBg} border ${cfg.accentBorder}`}>
                             <BookOpen className={`w-3 h-3 md:w-4 md:h-4 ${cfg.accentColor}`} />
@@ -270,7 +262,7 @@ export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }
                     </div>
                     <div className="p-4 md:p-8 overflow-x-auto">
                         <div
-                            className="dak-html-content prose prose-zinc dark:prose-invert max-w-none text-zinc-800 dark:text-zinc-200 text-[13px] md:text-base leading-relaxed
+                            className="dak-html-content prose prose-zinc max-w-none text-zinc-800 text-[13px] md:text-base leading-relaxed
                                 prose-headings:font-extrabold prose-headings:text-sm md:prose-headings:text-base prose-headings:mt-4 prose-headings:mb-2
                                 prose-strong:font-extrabold prose-ul:space-y-1.5 prose-ol:space-y-1.5 prose-table:text-xs md:prose-table:text-sm
                                 prose-td:p-1.5 md:prose-td:p-2 prose-th:p-1.5 md:prose-th:p-2"
@@ -296,7 +288,7 @@ export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }
                         </div>
                         <div className="p-4 md:p-8 overflow-x-auto">
                             <div
-                                className="dak-html-content prose prose-zinc dark:prose-invert max-w-none text-blue-900 dark:text-blue-100/90 text-[13px] md:text-base leading-relaxed
+                                className="dak-html-content prose prose-zinc max-w-none text-blue-900 text-[13px] md:text-base leading-relaxed
                                     prose-headings:font-bold prose-headings:text-sm md:prose-headings:text-base prose-headings:mt-4 prose-headings:mb-2
                                     prose-strong:font-extrabold prose-ul:space-y-1.5 prose-ol:space-y-1.5 prose-ol:list-decimal
                                     prose-table:text-xs md:prose-table:text-sm prose-td:p-1.5 md:prose-td:p-2 prose-th:p-1.5 md:prose-th:p-2"
@@ -327,7 +319,7 @@ export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }
                         </div>
                         <div className="relative p-4 md:p-8 overflow-x-auto">
                             <div
-                                className="dak-html-content prose prose-zinc dark:prose-invert max-w-none text-amber-900 dark:text-amber-100/90 text-[13px] md:text-base leading-relaxed
+                                className="dak-html-content prose prose-zinc max-w-none text-amber-900 text-[13px] md:text-base leading-relaxed
                                     prose-headings:font-extrabold prose-headings:text-sm md:prose-headings:text-base prose-headings:mt-4 prose-headings:mb-2
                                     prose-strong:font-extrabold prose-ul:space-y-1.5 prose-ol:space-y-1.5
                                     prose-table:text-xs md:prose-table:text-sm prose-td:p-1.5 md:prose-td:p-2 prose-th:p-1.5 md:prose-th:p-2"
