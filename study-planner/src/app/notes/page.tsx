@@ -1296,30 +1296,6 @@ export default function NotesPage() {
 
                                 {file.comingSoon ? (
                                     hasPremiumAccess ? (
-                                        file.isCommemorative ? (
-                                            /* ── Special Commemorative Banner for Constitution of India ── */
-                                            <div className="mt-auto relative overflow-hidden rounded-xl border border-amber-400/50 p-2 md:p-4 flex flex-col items-center justify-center text-center z-20" style={{ background: 'rgba(255, 255, 255, 0.75)', backdropFilter: 'blur(8px)' }}>
-                                                {/* Ashoka Chakra watermark */}
-                                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.06]">
-                                                    <svg viewBox="0 0 200 200" className="w-24 h-24 md:w-40 md:h-40" fill="currentColor" style={{ color: '#1e3a5f' }}>
-                                                        <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" strokeWidth="2.5" />
-                                                        <circle cx="100" cy="100" r="15" />
-                                                        {[...Array(24)].map((_, i) => (
-                                                            <line key={i} x1="100" y1="25" x2="100" y2="85" stroke="currentColor" strokeWidth="2" transform={`rotate(${i * 15} 100 100)`} />
-                                                        ))}
-                                                    </svg>
-                                                </div>
-                                                <div className="relative z-10 w-full">
-                                                    <div className="flex items-center gap-1 justify-center mb-1">
-                                                        <Sparkles className="w-3 h-3 md:w-3.5 md:h-3.5 text-amber-700" />
-                                                        <span className="text-[9px] md:text-[14px] font-black tracking-tight uppercase" style={{ color: '#854d0e' }}>Uploading on 14th April 2026</span>
-                                                    </div>
-                                                    <p className="text-[7px] md:text-[11px] font-bold italic text-slate-600 mb-0.5">On the Birth Anniversary of</p>
-                                                    <p className="text-[11px] md:text-[16px] font-black tracking-tight leading-none px-0.5" style={{ color: '#172554' }}>Dr. B. R. Ambedkar</p>
-                                                    <p className="text-[7.5px] md:text-[11px] font-bold italic mt-0.5 text-slate-600 leading-tight">Architect of the Indian Constitution</p>
-                                                </div>
-                                            </div>
-                                        ) : (
                                         <div className="mt-auto relative overflow-hidden rounded-xl bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-950/40 dark:to-amber-900/40 border border-amber-200 dark:border-amber-800/50 p-3 flex flex-col items-center justify-center text-center group-hover:from-amber-100 group-hover:to-amber-200 dark:group-hover:from-amber-900/60 dark:group-hover:to-amber-900/60 transition-all">
                                             <div className="relative flex items-center gap-2 text-amber-900 dark:text-amber-100 font-bold text-sm mb-1">
                                                 <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
@@ -1329,8 +1305,8 @@ export default function NotesPage() {
                                                 Materials will be uploaded shortly
                                             </p>
                                         </div>
-                                        )
                                     ) : (
+
                                         <div className="mt-auto relative overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-3 flex flex-col items-center justify-center text-center">
                                             <div className="relative flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-bold text-sm mb-1">
                                                 <Lock className="w-3 h-3 text-zinc-400 dark:text-zinc-500" />
