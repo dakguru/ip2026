@@ -19,6 +19,37 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "14.04.2026",
         items: [
             {
+                title: "🌟 Revamped Current Affairs Section",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have completely redesigned the <strong>Current Affairs</strong> section to provide a more streamlined and premium learning experience.</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">🚀</span>
+                                        <span><strong>New Hub Interface:</strong> A centralized dashboard for Live Updates, Flashcards, and PDFs.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-rose-500 mt-0.5">📚</span>
+                                        <span><strong>Monthly PDF Archive:</strong> Curated digests from Aug 2025 to Mar 2026 with an interactive reader.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-amber-500 mt-0.5">⚡</span>
+                                        <span><strong>Quick Flashcards:</strong> Direct access to Current Affairs flashcards for better retention.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>✨</span> Experience the new Hub in the Current Affairs section!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "⚖️ Constitution of India Uploaded",
                 desc: (
                     <div className="space-y-4">
