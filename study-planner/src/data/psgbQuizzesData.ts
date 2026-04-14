@@ -99,4 +99,14 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('ca-feb26-6', 'MoU’s & AGREEMENTS (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
   createTopic('ca-feb26-7', 'International Affairs (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
   createTopic('ca-feb26-8', 'Science and Tech (Feb 2026)', 'Current Affairs', [], 'February - 2026'),
+
+  // --- CURRENT AFFAIRS (MAR 2026) ---
+  createTopic('ca-mar26-1', 'Most Important Current Affairs (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
+  createTopic('ca-mar26-2', 'Banking, Economy, Business & Finance (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
+  createTopic('ca-mar26-3', 'Government Schemes (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
+  createTopic('ca-mar26-4', 'National News (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
+  createTopic('ca-mar26-5', 'Sports (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
+  createTopic('ca-mar26-6', 'MoU\'s & AGREEMENTS (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
+  createTopic('ca-mar26-7', 'International Affairs (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
+  createTopic('ca-mar26-8', 'Science and Tech (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
 ];
