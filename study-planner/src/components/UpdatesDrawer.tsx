@@ -16,6 +16,57 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "14.04.2026",
+        items: [
+            {
+                title: "⚖️ Constitution of India Activated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We are excited to announce that the <strong>Constitution of India</strong> PDF notes are now fully integrated and live for all premium users!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Paper III (Digital Library)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Comprehensive notes covering the Preamble, Fundamental Rights, Duties, and key Articles of the Indian Constitution.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-amber-600 dark:text-amber-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Notes section!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📬 Dak Sutra: Preservation of Records Series Completed",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have successfully completed the 3-part <strong>Dak Sutra</strong> series on the <strong>Disposal and Preservation of Postal Records</strong>.</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">🗓️</span>
+                                        <span><strong>Full Lifecycle:</strong> From record creation to retention and final disposal.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-violet-500 mt-0.5">🌸</span>
+                                        <span><strong>Improved Legibility:</strong> New high-contrast styling for Case Study sections.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>✅</span> Check it out in the Dak Sutra section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "13.04.2026",
         items: [
             {
