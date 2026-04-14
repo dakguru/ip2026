@@ -305,20 +305,25 @@ export const generateDakSutraPDF = async ({
     .card-exam .section-badge { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
 
     /* ── CONTENT TYPOGRAPHY ── */
+    /* Colors use low specificity so inline styles from DB content take priority */
     .section-body p {
       margin-bottom: 8px;
-      color: #334155;
       font-size: 10.5pt;
       line-height: 1.75;
+    }
+    .section-body h3 {
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      font-weight: 900;
+      margin: 16px 0 8px;
+      padding-bottom: 4px;
     }
     .section-body h4 {
       font-family: Arial, sans-serif;
       font-size: 10pt;
       font-weight: 700;
-      color: #1e293b;
       margin: 12px 0 6px;
       padding-bottom: 3px;
-      border-bottom: 1px solid #e2e8f0;
     }
     .section-body ul, .section-body ol {
       padding-left: 18px;
@@ -326,17 +331,14 @@ export const generateDakSutraPDF = async ({
     }
     .section-body li {
       margin-bottom: 5px;
-      color: #334155;
       font-size: 10.5pt;
       line-height: 1.65;
     }
     .section-body strong {
       font-weight: 700;
-      color: #0f172a;
     }
     .section-body em {
       font-style: italic;
-      color: #475569;
     }
     .section-body blockquote {
       border-left: 3px solid #cbd5e1;
@@ -345,7 +347,14 @@ export const generateDakSutraPDF = async ({
       background: #f8fafc;
       border-radius: 0 6px 6px 0;
       font-style: italic;
-      color: #475569;
+    }
+    /* Ensure inline styles are respected for colored content */
+    .section-body [style] { /* inline styles always win */ }
+    .section-body div[style] p,
+    .section-body div[style] strong,
+    .section-body div[style] span,
+    .section-body div[style] li {
+      color: inherit;
     }
 
     /* ── TABLE ── */
@@ -357,8 +366,6 @@ export const generateDakSutraPDF = async ({
       font-size: 9pt;
     }
     .section-body th {
-      background: #f1f5f9;
-      color: #334155;
       font-weight: 700;
       text-align: left;
       padding: 7px 10px;
@@ -367,11 +374,53 @@ export const generateDakSutraPDF = async ({
     .section-body td {
       padding: 6px 10px;
       border: 1px solid #e2e8f0;
-      color: #475569;
       vertical-align: top;
     }
-    .section-body tr:nth-child(even) td { background: #f8fafc; }
 
+    /* ── DAK SUTRA CUSTOM COMPATIBILTY ── */
+    .grid { display: block; margin: 12px 0; }
+    .grid-cols-1, .grid-cols-2, .grid-cols-3 { gap: 12px; }
+    
+    /* Simulate grid for print/PDF (vertical stack for safety, but try flex where possible) */
+    @media (min-width: 100mm) {
+      .md\:grid-cols-2 { display: flex; gap: 12px; }
+      .md\:grid-cols-2 > * { flex: 1; }
+      .md\:grid-cols-3 { display: flex; gap: 12px; }
+      .md\:grid-cols-3 > * { flex: 1; }
+    }
+
+    .border { border: 1px solid #e2e8f0 !important; }
+    .p-3 { padding: 12px !important; }
+    .rounded { border-radius: 8px !important; }
+    .rounded-xl { border-radius: 12px !important; }
+    .bg-white { background-color: #ffffff !important; }
+    .bg-blue-50 { background-color: #eff6ff !important; }
+    .bg-green-50 { background-color: #f0fdf4 !important; }
+    .bg-amber-50 { background-color: #fffbeb !important; }
+    .bg-slate-50 { background-color: #f8fafc !important; }
+    .bg-indigo-50 { background-color: #eef2ff !important; }
+    .bg-slate-100 { background-color: #f1f5f9 !important; }
+    .bg-slate-200 { background-color: #e2e8f0 !important; }
+    
+    .text-amber-700 { color: #b45309 !important; }
+    .text-blue-700 { color: #1d4ed8 !important; }
+    .text-green-700 { color: #15803d !important; }
+    .text-indigo-900 { color: #312e81 !important; }
+    .text-rose-700 { color: #be123c !important; }
+    .text-red-700 { color: #b91c1c !important; }
+    
+    .font-black { font-weight: 900 !important; }
+    .font-extrabold { font-weight: 800 !important; }
+    .uppercase { text-transform: uppercase !important; }
+
+    /* Fix for 3-column strategy boxes */
+    .bg-indigo-50 .grid > div { margin-bottom: 8px; }
+
+    /* Better PDF visibility for specific highlights */
+    .underline { text-decoration: underline !important; }
+    .bg-rose-700 { background-color: #be123c !important; }
+    .text-white { color: #ffffff !important; }
+    
     /* ── FOOTER (end-of-document) ── */
     .pdf-footer {
       margin-top: 28px;

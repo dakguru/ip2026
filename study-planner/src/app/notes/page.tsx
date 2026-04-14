@@ -427,7 +427,14 @@ const PDF_DATA: Record<string, Note[]> = {
     "Paper III": [
         // 1-8. Constitution
         // 1. Constitution
-        { title: "Constitution of India", description: "Comprehensive notes on the Preamble, Fundamental Rights, Fundamental Duties, and key Constitutional Articles.", color: "amber", comingSoon: true, isCommemorative: true },
+        {
+            title: "Constitution of India",
+            description: "Comprehensive notes on the Preamble, Fundamental Rights, Fundamental Duties, and key Constitutional Articles.",
+            filename: "Constitution_of_India.pdf",
+            path: "/notes/paper-3/Constitution_of_India.pdf",
+            size: "59.7 MB",
+            color: "amber"
+        },
 
         // 9. BNSS 2023
         {
