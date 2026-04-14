@@ -12,6 +12,8 @@ import AppScreenWrapper from "@/components/AppScreenWrapper";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import HomeHeader from "@/components/HomeHeader";
 import DakSutraLoader from "./components/DakSutraLoader";
+import PremiumAccessBanner from "./components/PremiumAccessBanner";
+
 
 interface DakSutraEntry {
     _id: string;
@@ -148,6 +150,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
 
     return (
         <div className="min-h-screen bg-[#f5f6fa] overflow-x-hidden">
+            <PremiumAccessBanner />
             {/* Rich Header */}
             {!isMobileApp && (
                 <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
