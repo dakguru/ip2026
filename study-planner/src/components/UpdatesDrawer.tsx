@@ -19,6 +19,25 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "14.04.2026",
         items: [
             {
+                title: "⚖️ GDS (Conduct & Engagement) Rules Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the updated <strong>GDS (Conduct & Engagement) Rules, 2020</strong> notes for both LDCE IP and PS Group B courses.</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-rose-50/50 dark:bg-rose-900/10 p-3 rounded-xl border border-rose-100 dark:border-rose-800/50">
+                                <p className="font-bold text-rose-700 dark:text-rose-300 text-[10px] uppercase tracking-wide">Paper I & II</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Comprehensive notes covering the latest GDS Conduct rules with high-quality formatting.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-rose-600 dark:text-rose-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "🌟 Revamped Current Affairs Section",
                 desc: (
                     <div className="space-y-4">
