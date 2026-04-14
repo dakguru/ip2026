@@ -19,7 +19,7 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "14.04.2026",
         items: [
             {
-                title: "⚖️ Constitution of India Activated",
+                title: "⚖️ Constitution of India Uploaded",
                 desc: (
                     <div className="space-y-4">
                         <p>We are excited to announce that the <strong>Constitution of India</strong> PDF notes are now fully integrated and live for all premium users!</p>
