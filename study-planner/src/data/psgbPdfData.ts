@@ -504,7 +504,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "GDS (Conduct & Engagement) Rules, 2020",
-            "description": "Gramin Dak Sevak (Conduct and Engagement) Rules, 2020.",
+            "description": "Rules related to Gramin Dak Sevaks.",
             "filename": "GDS_CE_Rules_2020.pdf",
             "path": "/notes/paper-1/GDS_CE_Rules_2020.pdf",
             "size": "4.2 MB",
