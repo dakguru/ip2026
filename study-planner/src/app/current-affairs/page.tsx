@@ -1,296 +1,202 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { ArrowLeft, Globe, Newspaper, History, Loader2, RefreshCw, AlertCircle, Trophy, Sparkles, ArrowRight } from "lucide-react";
-import { format } from "date-fns";
-import AppScreenWrapper from "@/components/AppScreenWrapper";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { ArrowLeft, Newspaper, Layers, FileText, Sparkles, ChevronRight, Zap, Globe, Clock, Star } from 'lucide-react';
+import AppScreenWrapper from '@/components/AppScreenWrapper';
 
-// --- Types ---
-interface NewsItem {
-    id?: string;
-    title: string;
-    description?: string;
-    url?: string;
-    imageUrl?: string;
-    source?: string;
-    publishedAt?: string;
-    // content might vary based on the specific API response structure, adapting as generic as possible
-    [key: string]: any;
-}
-
-
-
-// --- Components ---
-
-function NewsList({ endpoint, type }: { endpoint: string, type: "recent" | "international" | "sports" }) {
-    const [data, setData] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    const fetchData = async () => {
-        setLoading(true);
-        setError(null);
-        try {
-            // Call internal proxy
-            const res = await fetch(`/api/proxy/current-affairs?type=${type}`, { cache: 'no-store' });
-
-            if (!res.ok) {
-                const errorData = await res.json().catch(() => ({}));
-                throw new Error(errorData.error || `Failed to fetch ${type} news`);
-            }
-
-            const json = await res.json();
-            setData(json.data || []);
-        } catch (err: any) {
-            console.error("News Fetch Error:", err);
-            setError(err.message || "An error occurred");
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => { fetchData(); }, [endpoint, type]);
-
-    if (loading) return <div className="flex justify-center p-10"><Loader2 className="animate-spin text-blue-500 w-8 h-8" /></div>;
-    if (error) return <ErrorDisplay message={error} retry={fetchData} />;
-
-    // Fallback if empty
-    if (data.length === 0) return <div className="text-center p-10 text-zinc-500">No updates found for today.</div>;
-
-    return (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((item, idx) => (
-                <div key={idx} className="group bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800 hover:shadow-md transition-all overflow-hidden flex flex-col h-full">
-                    {/* Image handling for this API */}
-                    {item.photo_url && (
-                        <div className="relative h-48 w-full overflow-hidden bg-zinc-200 dark:bg-zinc-800">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={item.photo_url} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                            {item.source_logo_url && (
-                                <div className="absolute top-2 right-2 bg-white/90 p-1 rounded-full shadow-sm">
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img src={item.source_logo_url} alt="Source" className="w-6 h-6 object-contain" />
-                                </div>
-                            )}
-                        </div>
-                    )}
-
-                    <div className="p-5 flex flex-col flex-grow">
-                        <div className="flex items-center gap-2 text-xs text-zinc-500 mb-3">
-                            <Newspaper className="w-3 h-3" />
-                            <span>{item.source_name || "News Source"}</span>
-                            {item.published_datetime_utc && (
-                                <span>• {format(new Date(item.published_datetime_utc), "MMM dd")}</span>
-                            )}
-                        </div>
-
-                        <h3 className="font-bold text-lg text-zinc-800 dark:text-zinc-100 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                            {item.title}
-                        </h3>
-
-                        <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4 line-clamp-3 leading-relaxed flex-grow">
-                            {item.snippet || "Click to read more..."}
-                        </p>
-
-                        <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-auto inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-                        >
-                            Read Full Story <ArrowLeft className="w-4 h-4 rotate-180 ml-1" />
-                        </a>
-                    </div>
-                </div>
-            ))}
-        </div>
-    );
-}
-
-function HistorySection() {
-    const [data, setData] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    const fetchData = async () => {
-        setLoading(true);
-        setError(null);
-        try {
-            const res = await fetch(`/api/proxy/current-affairs?type=history`, { cache: 'no-store' });
-            if (!res.ok) throw new Error("Failed to fetch history");
-            const json = await res.json();
-            // Proxy returns { data: ... }
-            const historyData = json.data;
-            // Handles if API returns array directly or wrap
-            setData(Array.isArray(historyData) ? historyData : (historyData?.data || []));
-        } catch (err: any) {
-            console.log("History API Error", err);
-            setError("History data currently unavailable.");
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => { fetchData(); }, []);
-
-    if (loading) return <div className="flex justify-center p-10"><Loader2 className="animate-spin text-purple-500 w-8 h-8" /></div>;
-    if (error) return <ErrorDisplay message={error} retry={fetchData} />;
-    if (data.length === 0) return <div className="text-center p-10 text-zinc-500">No historical events found for today.</div>;
-
-    return (
-        <div className="space-y-6">
-            <div className="flex items-center gap-3 mb-8">
-                <div className="bg-purple-100 dark:bg-purple-900/30 p-3 rounded-lg text-purple-600 dark:text-purple-400">
-                    <History className="w-6 h-6" />
-                </div>
-                <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">Today in History of India</h2>
-            </div>
-
-            <div className="relative border-l-2 border-purple-200 dark:border-purple-900/50 space-y-8 ml-4">
-                {data.map((item, idx) => {
-                    // Parse the chaotic API response
-                    const rawDate = item.date || "";
-                    const rawDesc = item.description || item.details || item.snippet || "";
-
-                    const cleanDate = rawDate.trim();
-                    const cleanDesc = rawDesc.trim().replace(/\s+/g, " ");
-
-                    // Extract year if possible (Format: 25-December-1763)
-                    let year = "Year Unknown";
-                    const dateParts = cleanDate.split("-");
-                    if (dateParts.length >= 3) {
-                        year = dateParts[dateParts.length - 1];
-                    }
-
-                    return (
-                        <div key={idx} className="relative pl-8">
-                            {/* Timeline dot */}
-                            <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-purple-500 border-4 border-white dark:border-zinc-950"></div>
-
-                            <span className="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-bold rounded-full mb-2">
-                                {year}
-                            </span>
-                            <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-100 mb-2">
-                                {item.title || item.event || "Historical Event"}
-                            </h3>
-                            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                                {cleanDesc}
-                            </p>
-                        </div>
-                    );
-                })}
-            </div>
-        </div>
-    );
-}
-
-function ErrorDisplay({ message, retry }: { message: string, retry: () => void }) {
-    return (
-        <div className="flex flex-col items-center justify-center p-10 text-center bg-zinc-50 dark:bg-zinc-900/50 rounded-xl border border-dashed border-zinc-200 dark:border-zinc-800">
-            <RefreshCw className="w-10 h-10 text-blue-500 mb-4 animate-pulse" />
-            <h3 className="text-lg font-bold text-zinc-800 dark:text-zinc-200 mb-2">
-                Click to fetch/refresh to retrieve latest updates
-            </h3>
-            <p className="text-red-500 mb-4 font-medium text-sm">
-                Error: {message}
-            </p>
-            <p className="text-zinc-500 dark:text-zinc-400 mb-6 font-medium">
-                for {format(new Date(), "MMMM dd, yyyy")}
-            </p>
-            <button
-                onClick={retry}
-                className="px-6 py-2 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 shadow-lg shadow-blue-500/30 transition-all active:scale-95 flex items-center gap-2"
-            >
-                <RefreshCw className="w-4 h-4" /> Fetch Updates
-            </button>
-
-        </div>
-    );
-}
-
-// --- Main Page ---
-
-export default function CurrentAffairsPage() {
-    const [activeTab, setActiveTab] = useState<"recent" | "international" | "history" | "sports">("recent");
-
-    const tabs = [
-        { id: "recent", label: "India Updates", icon: Newspaper, color: "text-blue-500" },
-        { id: "international", label: "International", icon: Globe, color: "text-green-500" },
-        { id: "sports", label: "Global Sports", icon: Trophy, color: "text-yellow-500" },
-
-        { id: "history", label: "History of Today", icon: History, color: "text-purple-500" },
-    ] as const;
-
+export default function CurrentAffairsHub() {
     return (
         <AppScreenWrapper
             header={
-                <div className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 transition-all">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                        <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 mb-4 transition-colors font-medium text-sm">
-                            <ArrowLeft className="w-4 h-4" /> Back to Home
-                        </Link>
-                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                            <div className="space-y-3">
-                                <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">
-                                    Current Affairs <span className="text-zinc-400 font-light">| {format(new Date(), "MMMM dd")}</span>
-                                </h1>
-                                
-                                <Link 
-                                    href="/flashcards?filter=ca" 
-                                    className="group relative inline-flex items-center gap-3 px-5 py-2.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white rounded-2xl font-bold shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 transform hover:-translate-y-0.5 active:scale-95 transition-all duration-300 overflow-hidden"
-                                >
-                                    <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    <div className="flex items-center gap-3 relative z-10">
-                                        <div className="w-8 h-8 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:rotate-12 transition-transform">
-                                            <Sparkles className="w-4 h-4 text-white" />
-                                        </div>
-                                        <div className="flex flex-col items-start leading-none">
-                                            <span className="text-[9px] uppercase tracking-[0.2em] text-blue-100/70 mb-0.5">Quiz Mastery</span>
-                                            <span className="text-sm">Practice Monthly Current Affairs</span>
-                                        </div>
-                                    </div>
-                                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform relative z-10" />
-                                </Link>
-                            </div>
-
-                            {/* Tabs */}
-                            <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 hide-scrollbar">
-                                {tabs.map((tab) => (
-                                    <button
-                                        key={tab.id}
-                                        onClick={() => setActiveTab(tab.id as any)}
-                                        className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all ${activeTab === tab.id
-                                            ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md transform scale-105"
-                                            : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700"
-                                            }`}
-                                    >
-                                        <tab.icon className={`w-4 h-4 ${activeTab === tab.id ? "" : tab.color}`} />
-                                        {tab.label}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                <div className="flex items-center justify-between w-full">
+                    <Link href="/" className="p-2 -ml-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                        <ArrowLeft className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                    </Link>
+                    <h1 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Updates Hub</h1>
+                    <div className="w-9" /> {/* Spacer for centering */}
                 </div>
             }
         >
-            {/* Content Container */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-[500px]">
-                <div className={`transition-opacity duration-300 ${activeTab === "recent" ? "block" : "hidden"}`}>
-                    <NewsList endpoint="/recent" type="recent" />
-                </div>
-                <div className={`transition-opacity duration-300 ${activeTab === "international" ? "block" : "hidden"}`}>
-                    <NewsList endpoint="/international-today" type="international" />
-                </div>
-                <div className={`transition-opacity duration-300 ${activeTab === "sports" ? "block" : "hidden"}`}>
-                    <NewsList endpoint="/sports" type="sports" />
-                </div>
+            <div className="relative min-h-full pb-20 overflow-hidden">
+                {/* Visual Background Elements */}
+                <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-blue-500/10 via-purple-500/5 to-transparent pointer-events-none" />
+                <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[40%] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute bottom-[20%] left-[-10%] w-[50%] h-[40%] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
 
-                <div className={`transition-opacity duration-300 ${activeTab === "history" ? "block" : "hidden"}`}>
-                    <HistorySection />
+                <div className="max-w-4xl mx-auto px-5 pt-8 md:pt-12 relative z-10">
+                    
+                    {/* Hero Section */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="text-center mb-12"
+                    >
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-4 border border-blue-200 dark:border-blue-800/50">
+                            <Sparkles className="w-3 h-3" />
+                            <span>Premium Learning Experience</span>
+                        </div>
+                        <h1 className="text-4xl md:text-6xl font-black text-zinc-900 dark:text-white mb-4 tracking-tight leading-tight">
+                            Current Affairs <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-purple-400">Mastery Hub</span>
+                        </h1>
+                        <p className="text-zinc-500 dark:text-zinc-400 text-sm md:text-lg font-medium max-w-xl mx-auto leading-relaxed">
+                            Stay ahead of the curve. Access real-time news, interactive flashcards, and curated study materials in one place.
+                        </p>
+                    </motion.div>
+
+                    {/* Sub-Category Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        {/* 1. Live Feed Card */}
+                        <HubCard 
+                            href="/current-affairs/live"
+                            title="Current Affairs Live"
+                            desc="Real-time daily updates and news from across the globe."
+                            icon={Globe}
+                            color="blue"
+                            delay={0.1}
+                            badge="Live"
+                            badgeColor="red"
+                        />
+
+                        {/* 2. Flashcards Card */}
+                        <HubCard 
+                            href="/flashcards?filter=ca"
+                            title="FlashCards"
+                            desc="Memorize key events faster with curated CA flashcards."
+                            icon={Zap}
+                            color="amber"
+                            delay={0.2}
+                            badge="Premium"
+                            badgeColor="amber"
+                        />
+
+                        {/* 3. PDF Card */}
+                        <HubCard 
+                            href="/current-affairs/pdfs"
+                            title="Curated PDFs"
+                            desc="Structured monthly summaries for deeper revision."
+                            customIcon={
+                                <div className="relative w-8 h-8 opacity-90">
+                                    <Image src="/ca-logo.png" alt="Adda247" fill className="object-contain grayscale group-hover:grayscale-0 transition-all duration-300" />
+                                </div>
+                            }
+                            color="rose"
+                            delay={0.3}
+                            footer="Thanks & Credits to www.Adda247.com"
+                        />
+
+                    </div>
+
+                    {/* Bottom Feature Bar */}
+                    <motion.div 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1, duration: 1 }}
+                        className="mt-16 p-6 rounded-3xl bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6"
+                    >
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 rounded-2xl bg-white dark:bg-zinc-800 flex items-center justify-center shadow-sm border border-zinc-100 dark:border-zinc-700">
+                                <Clock className="w-6 h-6 text-blue-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">Study Streak</h3>
+                                <p className="text-xs text-zinc-500 dark:text-zinc-400 font-medium tracking-tight">Stay consistent to unlock rewards.</p>
+                            </div>
+                        </div>
+                        <Link href="/planner" className="px-6 py-2.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-bold text-xs uppercase tracking-wider hover:opacity-90 active:scale-95 transition-all shadow-lg">
+                            Go to Planner
+                        </Link>
+                    </motion.div>
                 </div>
             </div>
         </AppScreenWrapper>
+    );
+}
+
+function HubCard({ 
+    href, 
+    title, 
+    desc, 
+    icon: Icon, 
+    customIcon, 
+    color, 
+    delay, 
+    badge, 
+    badgeColor,
+    footer 
+}: { 
+    href: string; 
+    title: string; 
+    desc: string; 
+    icon?: any; 
+    customIcon?: React.ReactNode; 
+    color: 'blue' | 'amber' | 'rose'; 
+    delay: number;
+    badge?: string;
+    badgeColor?: 'red' | 'amber';
+    footer?: string;
+}) {
+    const colors = {
+        blue: "group-hover:text-blue-600 dark:group-hover:text-blue-400 border-blue-500/10 group-hover:border-blue-500/30",
+        amber: "group-hover:text-amber-600 dark:group-hover:text-amber-400 border-amber-500/10 group-hover:border-amber-500/30",
+        rose: "group-hover:text-rose-600 dark:group-hover:text-rose-400 border-rose-500/10 group-hover:border-rose-500/30"
+    };
+
+    const bgs = {
+        blue: "bg-blue-50 dark:bg-blue-900/10 text-blue-600 dark:text-blue-400",
+        amber: "bg-amber-50 dark:bg-amber-900/10 text-amber-600 dark:text-amber-400",
+        rose: "bg-rose-50 dark:bg-rose-900/10 text-rose-600 dark:text-rose-400"
+    };
+
+    const badgeClasses = {
+        red: "bg-red-500 text-white animate-pulse",
+        amber: "bg-amber-500 text-black"
+    };
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay, duration: 0.5 }}
+            className="group relative"
+        >
+            <Link href={href} className={`block h-full relative overflow-hidden bg-white dark:bg-zinc-900/80 backdrop-blur-md rounded-[2.5rem] border-2 border-zinc-100 dark:border-zinc-800 ${colors[color]} p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1`}>
+                
+                {badge && (
+                    <div className={`absolute top-6 right-6 px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-widest z-10 ${badgeColor ? badgeClasses[badgeColor] : ''}`}>
+                        {badge}
+                    </div>
+                )}
+
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 ${bgs[color]} shadow-inner transition-transform group-hover:scale-110 group-hover:rotate-3`}>
+                    {customIcon ? customIcon : Icon && <Icon className="w-7 h-7" strokeWidth={2.5} />}
+                </div>
+
+                <h3 className="text-xl font-black text-zinc-900 dark:text-white mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
+                    {title}
+                </h3>
+                
+                <p className="text-zinc-500 dark:text-zinc-400 text-sm font-medium leading-relaxed mb-6 group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors">
+                    {desc}
+                </p>
+
+                <div className="flex items-center justify-between">
+                    <span className="text-xs font-black uppercase tracking-widest text-zinc-400 dark:text-zinc-500 flex items-center gap-1 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
+                        Explore <ChevronRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                </div>
+
+                {footer && (
+                    <div className="mt-6 pt-6 border-t border-zinc-100 dark:border-zinc-800 text-[10px] font-bold text-zinc-400 leading-tight">
+                        {footer}
+                    </div>
+                )}
+            </Link>
+        </motion.div>
     );
 }
