@@ -2,17 +2,23 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { Loader2, ArrowLeft, Crown, Calendar, CalendarClock, CreditCard, ShieldCheck } from "lucide-react";
+import { 
+    Loader2, ArrowLeft, Crown, Calendar, 
+    CalendarClock, CreditCard, ShieldCheck, 
+    Clock, Smartphone, ChevronRight, Zap
+} from "lucide-react";
 import Link from "next/link";
 import dayjs from "dayjs";
 import { getDisplayMembership } from "@/lib/membership-utils";
 import { useCourse } from "@/contexts/CourseContext";
+import AppScreenWrapper from "@/components/AppScreenWrapper";
+import { motion } from "framer-motion";
 
 export default function MembershipPage() {
     const router = useRouter();
     const { course } = useCourse();
     const [isLoading, setIsLoading] = useState(true);
-    const [membershipData, setMembershipData] = useState<any>(null);
+    const [userData, setUserData] = useState<any>(null);
 
     useEffect(() => {
         fetchMembershipDetails();
@@ -23,9 +29,8 @@ export default function MembershipPage() {
             const res = await fetch("/api/auth/me");
             if (res.ok) {
                 const data = await res.json();
-                setMembershipData(data.user);
+                setUserData(data.user);
             } else {
-                // Handle auth error
                 router.push("/login?redirect=/membership");
             }
         } catch (error) {
@@ -43,172 +48,208 @@ export default function MembershipPage() {
         );
     }
 
-    if (!membershipData) return null;
+    if (!userData) return null;
 
-    const displayMemberLevel = getDisplayMembership(membershipData.membershipLevel, membershipData.planName);
-
+    const displayMemberLevel = getDisplayMembership(userData.membershipLevel, userData.planName);
     const isFree = displayMemberLevel === 'free';
-    const isGold = displayMemberLevel === 'gold' || displayMemberLevel === 'diamond';
-    const isSilver = displayMemberLevel === 'silver' || displayMemberLevel === 'platinum';
-
+    
+    // Determine the theme color based on plan
+    const themeColor = displayMemberLevel === 'diamond' ? 'blue' : 
+                      displayMemberLevel === 'platinum' ? 'purple' :
+                      displayMemberLevel === 'gold' ? 'amber' : 'zinc';
 
     const formatDate = (dateString?: string) => {
-        if (!dateString) return "N/A";
-        return dayjs(dateString).format("DD MMM YYYY");
+        if (!dateString) return "Not Available";
+        return dayjs(dateString).format("DD MMMM YYYY");
     };
 
     const getDaysRemaining = (validityDate?: string) => {
         if (!validityDate) return 0;
         const now = dayjs();
         const expiry = dayjs(validityDate);
-        return expiry.diff(now, 'day');
+        const diff = expiry.diff(now, 'day');
+        return diff > 0 ? diff : 0;
     };
 
-    const daysRemaining = getDaysRemaining(membershipData.membershipValidity);
+    const daysRemaining = getDaysRemaining(userData.membershipValidity);
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 relative">
-            <div className="max-w-3xl mx-auto">
-                <Link
-                    href="/"
-                    className="inline-flex items-center text-sm text-zinc-500 hover:text-blue-600 transition-colors mb-8"
+        <AppScreenWrapper
+            className="bg-zinc-50 dark:bg-zinc-950"
+            header={
+                <div className="flex items-center gap-4 w-full">
+                    <Link href="/" className="p-1 -ml-1 rounded-full text-zinc-900 dark:text-zinc-100 active:bg-zinc-200 dark:active:bg-zinc-800 transition-colors">
+                        <ArrowLeft className="w-6 h-6" />
+                    </Link>
+                    <h1 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Membership</h1>
+                </div>
+            }
+        >
+            <div className="flex-1 flex flex-col p-5 pb-24 gap-6">
+                
+                {/* Membership Card - Premium Look */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`relative overflow-hidden rounded-[2.5rem] p-8 text-white shadow-2xl ${
+                        themeColor === 'blue' ? 'bg-zinc-900' :
+                        themeColor === 'purple' ? 'bg-zinc-900' :
+                        themeColor === 'amber' ? 'bg-zinc-900' : 'bg-zinc-900'
+                    }`}
                 >
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Home
-                </Link>
+                    {/* Background Accents (Subtle) */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-3xl pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 blur-3xl pointer-events-none" />
 
-                <div className="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm relative">
-
-                    {/* Header Banner */}
-                    <div className={`p-8 ${displayMemberLevel === 'diamond'
-                        ? 'bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-cyan-900/40 dark:to-blue-900/40'
-                        : displayMemberLevel === 'platinum'
-                            ? 'bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/40 dark:to-purple-900/40'
-                            : displayMemberLevel === 'gold'
-                                ? 'bg-gradient-to-r from-yellow-100 to-amber-100 dark:from-yellow-900/40 dark:to-amber-900/40'
-                                : isSilver
-                                    ? 'bg-gradient-to-r from-slate-100 to-zinc-200 dark:from-slate-800/40 dark:to-zinc-800/40'
-                                    : 'bg-zinc-100 dark:bg-zinc-800'
-                        }`}>
-                        <div className="flex items-center gap-4">
-                            <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-md ${displayMemberLevel === 'diamond' ? 'bg-cyan-400 text-cyan-950' :
-                                displayMemberLevel === 'platinum' ? 'bg-indigo-400 text-indigo-950' :
-                                    displayMemberLevel === 'gold' ? 'bg-yellow-400 text-yellow-900' :
-                                        isSilver ? 'bg-slate-300 text-slate-800' : 'bg-zinc-300 text-zinc-600'
-                                }`}>
-                                <Crown className="w-8 h-8" fill="currentColor" />
-                            </div>
-                            <div>
-                                <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wide">
-                                    {isFree ? 'Basic Member' : `${displayMemberLevel} Member`}
-                                </h1>
-                                <p className={`text-sm font-medium ${displayMemberLevel === 'diamond' ? 'text-cyan-700 dark:text-cyan-400' : displayMemberLevel === 'platinum' ? 'text-indigo-700 dark:text-indigo-400' : isGold ? 'text-yellow-700 dark:text-yellow-400' : 'text-zinc-500 dark:text-zinc-400'}`}>
-                                    {isFree ? 'Upgrade to unlock premium features' : 'Thank you for being a premium member!'}
-                                </p>
-                            </div>
+                    <div className="relative z-10 flex justify-between items-start mb-10">
+                        <div>
+                            <p className="text-[10px] font-black uppercase tracking-[0.2em] opacity-60 mb-1">Current Membership</p>
+                            <h2 className="text-2xl font-black uppercase tracking-[0.05em]">
+                                {userData.planName || `${displayMemberLevel} Plan`}
+                            </h2>
+                        </div>
+                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20`}>
+                            <Crown className={`w-6 h-6 ${
+                                themeColor === 'blue' ? 'text-blue-400' :
+                                themeColor === 'purple' ? 'text-purple-400' :
+                                themeColor === 'amber' ? 'text-amber-400' : 'text-zinc-400'
+                            }`} fill="currentColor" />
                         </div>
                     </div>
 
-                    <div className="p-8">
-                        {isFree ? (
-                            <div className="text-center py-8">
-                                <p className="text-zinc-500 mb-6">You are currently on a free plan. Upgrade to access premium content.</p>
-                                <Link
-                                    href="/pricing"
-                                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-transform hover:scale-105"
-                                >
-                                    <Crown className="w-5 h-5 fill-current" />
-                                    Explore Plans
-                                </Link>
-                            </div>
-                        ) : (
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                {/* Plan Details */}
-                                <div className="space-y-6">
-                                    <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 border-b pb-2 dark:border-zinc-800">Plan Details</h3>
-
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-blue-50 dark:bg-blue-900/20 p-2.5 rounded-lg text-blue-600 dark:text-blue-400 mt-1">
-                                            <ShieldCheck className="w-5 h-5" />
-                                        </div>
-                                        <div>
-                                            <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold mb-1">Plan Name</p>
-                                            <div className={`inline-flex items-center px-4 py-2 rounded-lg font-bold shadow-sm uppercase tracking-wider text-sm ${displayMemberLevel === 'diamond'
-                                                ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-blue-200 dark:shadow-none'
-                                                : displayMemberLevel === 'platinum'
-                                                    ? 'bg-gradient-to-r from-indigo-400 to-purple-500 text-white shadow-indigo-200 dark:shadow-none'
-                                                    : displayMemberLevel === 'gold'
-                                                        ? 'bg-gradient-to-r from-yellow-400 to-amber-500 text-white shadow-amber-200 dark:shadow-none'
-                                                        : 'bg-gradient-to-r from-slate-300 to-zinc-400 text-slate-900 shadow-zinc-200 dark:shadow-none'
-                                                }`}>
-                                                {membershipData.planName || (isGold ? 'Gold Plan' : 'Silver Plan')}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-purple-50 dark:bg-purple-900/20 p-2.5 rounded-lg text-purple-600 dark:text-purple-400 mt-1">
-                                            <CreditCard className="w-5 h-5" />
-                                        </div>
-                                        <div>
-                                            <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold">Ordered via</p>
-                                            <p className="text-zinc-900 dark:text-zinc-100 font-medium">App/Website</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Validity Details */}
-                                <div className="space-y-6">
-                                    <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 border-b pb-2 dark:border-zinc-800">Validity Period</h3>
-
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-green-50 dark:bg-green-900/20 p-2.5 rounded-lg text-green-600 dark:text-green-400 mt-1">
-                                            <Calendar className="w-5 h-5" />
-                                        </div>
-                                        <div>
-                                            <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold">Purchase Date</p>
-                                            <p className="text-zinc-900 dark:text-zinc-100 font-medium">{formatDate(membershipData.purchaseDate)}</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-start gap-4">
-                                        <div className={`p-2.5 rounded-lg mt-1 ${daysRemaining < 7 ? 'bg-red-50 text-red-600' : 'bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400'}`}>
-                                            <CalendarClock className="w-5 h-5" />
-                                        </div>
-                                        <div>
-                                            <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase font-semibold">Expires On</p>
-                                            <p className="text-zinc-900 dark:text-zinc-100 font-medium">{formatDate(membershipData.membershipValidity)}</p>
-                                            <span className={`text-xs px-2 py-0.5 rounded-full font-bold mt-1 inline-block ${daysRemaining < 0 ? 'bg-red-100 text-red-700' :
-                                                daysRemaining < 7 ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-700'
-                                                }`}>
-                                                {daysRemaining < 0 ? 'Expired' : `${daysRemaining} days remaining`}
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
+                    <div className="relative z-10 flex items-center gap-3 mb-8">
+                        <div className="p-1.5 rounded-lg bg-green-500/20 text-green-400">
+                            <ShieldCheck className="w-4 h-4" />
+                        </div>
+                        <p className="text-sm font-bold opacity-90">
+                            {isFree ? 'Limited Access' : `Valid until: ${dayjs(userData.membershipValidity).format("MMM YYYY")}`}
+                        </p>
                     </div>
 
-                    {/* User ID/Email Footer */}
-                    <div className="bg-zinc-50 dark:bg-zinc-800/50 p-6 border-t border-zinc-100 dark:border-zinc-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs text-zinc-400">
-                        <p>Registered Email: {membershipData.email}</p>
-                        <p>User ID: {membershipData.id}</p>
-                    </div>
+                    <Link 
+                        href="/pricing"
+                        className="relative z-10 block w-full py-4 bg-white text-zinc-900 rounded-2xl font-black text-xs uppercase tracking-widest text-center shadow-lg active:scale-[0.98] transition-all"
+                    >
+                        {isFree ? 'Explore Plans' : 'Upgrade Plan'}
+                    </Link>
+                </motion.div>
+
+                {/* Status Section - Requested Details */}
+                {!isFree && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="space-y-4"
+                    >
+                        <h3 className="text-[11px] font-black uppercase tracking-[0.15em] text-zinc-400 px-1">Validity Details</h3>
+                        
+                        <div className="bg-white dark:bg-zinc-900 rounded-[2rem] border border-zinc-100 dark:border-zinc-800 overflow-hidden divide-y divide-zinc-50 dark:divide-zinc-800">
+                            
+                            {/* Date of Purchase */}
+                            <DetailRow 
+                                icon={Calendar}
+                                label="Date of Purchase"
+                                value={formatDate(userData.purchaseDate)}
+                                color="text-green-600 dark:text-green-400"
+                                bg="bg-green-50 dark:bg-green-900/20"
+                            />
+
+                            {/* Date of Expiry */}
+                            <DetailRow 
+                                icon={CalendarClock}
+                                label="Date of Expiry"
+                                value={formatDate(userData.membershipValidity)}
+                                color="text-rose-600 dark:text-rose-400"
+                                bg="bg-rose-50 dark:bg-rose-900/20"
+                            />
+
+                            {/* Days Left */}
+                            <DetailRow 
+                                icon={Clock}
+                                label="Days Left"
+                                value={`${daysRemaining} Days`}
+                                color="text-blue-600 dark:text-blue-400"
+                                bg="bg-blue-50 dark:bg-blue-900/20"
+                                highlight={daysRemaining < 30 ? "Urgent" : undefined}
+                            />
+
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* Additional Info Cards */}
+                <div className="grid grid-cols-2 gap-4">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-white dark:bg-zinc-900 p-5 rounded-[1.5rem] border border-zinc-100 dark:border-zinc-800"
+                    >
+                        <Smartphone className="w-5 h-5 text-zinc-400 mb-3" />
+                        <p className="text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-1">Access On</p>
+                        <p className="text-xs font-bold text-zinc-900 dark:text-zinc-100">All Platforms</p>
+                    </motion.div>
+                    
+                    <motion.div 
+                        initial={{ opacity: 0, x: 10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-white dark:bg-zinc-900 p-5 rounded-[1.5rem] border border-zinc-100 dark:border-zinc-800"
+                    >
+                        <Zap className="w-5 h-5 text-amber-500 mb-3" />
+                        <p className="text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-1">Status</p>
+                        <p className="text-xs font-bold text-zinc-900 dark:text-zinc-100 text-green-500">Active</p>
+                    </motion.div>
                 </div>
 
-                {!isFinalTier(membershipData.membershipLevel) && (
-                    <div className="mt-8 text-center">
-                        <p className="text-zinc-500 mb-2">Want to upgrade your experience?</p>
-                        <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">View Upgrade Options</Link>
-                    </div>
-                )}
+                {/* Support/Footer Section */}
+                <div className="mt-auto py-8 text-center px-4">
+                    <p className="text-xs text-zinc-400 font-medium leading-relaxed">
+                        Need assistance with your membership?<br />
+                        <Link href="/help" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Contact Support</Link>
+                    </p>
+                </div>
+
             </div>
-        </div>
+        </AppScreenWrapper>
     );
 }
 
-function isFinalTier(level?: string) {
-    // For now, let's say Gold is final, but we can change logic if lifetime exists
-    return false; // Always show upgrade option unless we decide otherwise
+function DetailRow({ 
+    icon: Icon, 
+    label, 
+    value, 
+    color, 
+    bg,
+    highlight 
+}: { 
+    icon: any, 
+    label: string, 
+    value: string, 
+    color: string, 
+    bg: string,
+    highlight?: string
+}) {
+    return (
+        <div className="flex items-center gap-4 p-5">
+            <div className={`shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center ${bg} ${color}`}>
+                <Icon className="w-6 h-6" />
+            </div>
+            <div className="flex-1 min-w-0">
+                <p className="text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-1">{label}</p>
+                <div className="flex items-center gap-2">
+                    <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100 truncate">
+                        {value}
+                    </p>
+                    {highlight && (
+                        <span className="px-1.5 py-0.5 rounded-md bg-rose-500 text-white text-[8px] font-black uppercase tracking-tighter">
+                            {highlight}
+                        </span>
+                    )}
+                </div>
+            </div>
+            <ChevronRight className="w-4 h-4 text-zinc-200 dark:text-zinc-800" />
+        </div>
+    );
 }
