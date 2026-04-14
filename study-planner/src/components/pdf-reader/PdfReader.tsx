@@ -170,6 +170,12 @@ export default function PdfReader({ url, title = "Document Viewer", onBack, isAn
         }
     };
 
+    // Suppress harmless AbortException from react-pdf TextLayer
+    const handleTextLayerError = useCallback((error: Error) => {
+        if (error.message?.includes('TextLayer task cancelled')) return;
+        console.error('TextLayer error:', error);
+    }, []);
+
     // --- Search logic highlighting ---
     const customTextRenderer = useCallback((textItem: any) => {
         if (!searchTerm) return textItem.str;
@@ -350,6 +356,7 @@ export default function PdfReader({ url, title = "Document Viewer", onBack, isAn
                                         renderAnnotationLayer={false}
                                         renderTextLayer={true}
                                         customTextRenderer={customTextRenderer}
+                                        onRenderTextLayerError={handleTextLayerError}
                                         loading={<div className="bg-white" style={{ width: effectiveWidth, height: effectiveWidth ? effectiveWidth * 1.4 : 800 }} />}
                                     />
                                 </div>
@@ -363,6 +370,7 @@ export default function PdfReader({ url, title = "Document Viewer", onBack, isAn
                                     renderAnnotationLayer={false}
                                     renderTextLayer={true}
                                     customTextRenderer={customTextRenderer}
+                                    onRenderTextLayerError={handleTextLayerError}
                                 />
                             </div>
                         )}
