@@ -86,7 +86,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
         { label: "Flash Cards", icon: Layers, color: "text-amber-700 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-900/20", href: "/flashcards" },
         { label: "Dak Sutra", icon: Newspaper, color: "text-blue-700 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20", href: "/dak-sutra" },
         { label: "Community", icon: GraduationCap, color: "text-indigo-700 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20", href: "/social" },
-        { label: "DG Blog", icon: PenTool, color: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/blog" },
+        { label: "Current Affairs", icon: Globe, color: "text-emerald-700 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-900/20", href: "/current-affairs" },
         { label: "Admin Panel", icon: Shield, color: "text-red-700 dark:text-red-400", bg: "bg-red-50 dark:bg-red-900/20", href: "/admin", adminOnly: true },
     ];
 
