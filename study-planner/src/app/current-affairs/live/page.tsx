@@ -298,11 +298,11 @@ export default function CurrentAffairsLivePage() {
             <HomeHeader isLoggedIn={true} />
             
             <div className="flex-1 bg-white dark:bg-zinc-950 pb-20">
-                <div className="max-w-7xl mx-auto px-6 pt-12">
+                <div className="max-w-7xl mx-auto px-6">
                     
                     {/* Page Header */}
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
-                        <div className="space-y-4">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+                        <div className="space-y-2">
                             <Link href="/current-affairs" className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-zinc-400 hover:text-blue-600 transition-colors">
                                 <ArrowLeft className="w-4 h-4" /> Back to Hub
                             </Link>

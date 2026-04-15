@@ -125,14 +125,14 @@ export default function CurrentAffairsHub() {
             <HomeHeader isLoggedIn={true} />
             
             <div className="flex-1 bg-white dark:bg-zinc-950 pb-20">
-                <div className="max-w-7xl mx-auto px-6 pt-12">
+                <div className="max-w-7xl mx-auto px-6">
                     {/* Hero Section */}
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-center mb-16"
+                        className="text-center mb-8"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-6 border border-blue-100 dark:border-blue-800 shadow-sm">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-widest mb-3 border border-blue-100 dark:border-blue-800 shadow-sm">
                             <Sparkles className="w-3 h-3" />
                             <span>Premium Learning Experience</span>
                         </div>

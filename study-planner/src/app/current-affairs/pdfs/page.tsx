@@ -181,10 +181,10 @@ export default function CurrentAffairsPDFs() {
             <HomeHeader isLoggedIn={true} />
             
             <div className="flex-1 bg-white dark:bg-zinc-950 pb-20">
-                <div className="max-w-7xl mx-auto px-6 pt-12">
+                <div className="max-w-7xl mx-auto px-6">
                     
                     {/* Targeted Banner - Curated Resource */}
-                    <div className="relative mb-16 rounded-[3rem] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 overflow-hidden shadow-2xl shadow-zinc-200/50 dark:shadow-none">
+                    <div className="relative mb-8 rounded-[3rem] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 overflow-hidden shadow-2xl shadow-zinc-200/50 dark:shadow-none">
                         
                         {/* Decorative background flare */}
                         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-rose-50/50 dark:bg-rose-950/10 rounded-full blur-[120px] -mr-48 -mt-48 transition-all duration-1000"></div>
