@@ -237,7 +237,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.",
             "filename": "Welfare_Measures_Employees_GDS.pdf",
             "path": "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf",
-            "size": "0.7 MB",
+            "size": "0.5 MB",
             "color": "green"
         },
         {
