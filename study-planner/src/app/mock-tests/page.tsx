@@ -1338,10 +1338,11 @@ function MockTestCard({
 
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
-                {/* Top 7 Rank Holders Button — enabled only after March 30, 2026 00:00 for Mock 11 OR after Sunday for PSGB tests */}
-                {isEnded && onShowRankList && !(mock.id === 'mock-2026-03-28' && new Date() < new Date('2026-03-30T00:00:00+05:30')) && 
+                {isEnded && onShowRankList && 
+                 !(mock.id === 'mock-2026-03-28' && new Date() < new Date('2026-03-30T00:00:00+05:30')) && 
                  !(mock.id === 'mock-2026-04-04' && new Date() < new Date('2026-04-06T00:00:00+05:30')) && 
                  !(mock.id === 'mock-2026-04-11' && new Date() < new Date('2026-04-13T00:00:00+05:30')) && 
+                 !(mock.id === 'mock-2026-04-18' && new Date() < new Date('2026-04-20T00:00:00+05:30')) && 
                  !(mock.id.startsWith('psgb-mock-') && new Date() <= mock.endDate) && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
@@ -1511,12 +1512,17 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
         new Date() >= new Date('2026-04-04T00:00:00+05:30') &&
         new Date() < new Date('2026-04-06T00:00:00+05:30');
 
+    // Determine if Mock 14 is currently in its live window (Apr 18 00:00 IST – Apr 19 23:59 IST)
+    const isMock14LiveWindow = mock?.id === 'mock-2026-04-18' &&
+        new Date() >= new Date('2026-04-18T00:00:00+05:30') &&
+        new Date() < new Date('2026-04-20T00:00:00+05:30');
+
     const isPsgbLiveWindow = mock?.id.startsWith('psgb-mock-') &&
         new Date() >= mock.startDate &&
         new Date() <= mock.endDate;
 
-    // Non-admin users cannot see leaderboard during Mock 11, Mock 12 or PSGB live window
-    const isLeaderboardBlocked = (isMock11LiveWindow || isMock12LiveWindow || isPsgbLiveWindow) && role !== 'admin';
+    // Non-admin users cannot see leaderboard during Mock 11, Mock 12, Mock 14 or PSGB live window
+    const isLeaderboardBlocked = (isMock11LiveWindow || isMock12LiveWindow || isMock14LiveWindow || isPsgbLiveWindow) && role !== 'admin';
 
     useEffect(() => {
         let intervalId: NodeJS.Timeout;
