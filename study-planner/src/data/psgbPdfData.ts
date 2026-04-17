@@ -8,6 +8,7 @@ export interface Note {
     comingSoon?: boolean;
     subtitle?: string;
     isFree?: boolean;
+    topic?: string;
 }
 
 export const PSGB_PDF_DATA: Record<string, Note[]> = {
@@ -19,7 +20,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "path": "/notes/paper-1/Consumer_Protection_Act_2019.pdf",
             "size": "0.7 MB",
             "color": "blue",
-            "isFree": true
+            "isFree": true,
+            "topic": "Acts"
         },
         {
             "title": "PMLA Act, 2002",
@@ -27,7 +29,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "PMLA_2002.pdf",
             "path": "/notes/paper-1/PMLA_2002.pdf",
             "size": "0.3 MB",
-            "color": "purple"
+            "color": "purple",
+            "topic": "Acts"
         },
         {
             "title": "The Post Office Act, 2023",
@@ -35,7 +38,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "PO_Act_2023_Rules_2024.pdf",
             "path": "/notes/paper-1/PO_Act_2023_Rules_2024.pdf",
             "size": "8.7 MB",
-            "color": "blue"
+            "color": "blue",
+            "topic": "Acts"
         },
         {
             "title": "The PO Regulations, 2024",
@@ -44,7 +48,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "path": "/notes/paper-1/PO_Regulations_2024.pdf",
             "size": "0.9 MB",
             "color": "emerald",
-            "isFree": true
+            "isFree": true,
+            "topic": "Rules"
         },
         {
             "title": "Post Office Guide Part-I",
@@ -52,7 +57,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "PO_Guide_Part_I.pdf",
             "path": "/notes/paper-1/PO_Guide_Part_I.pdf",
             "size": "0.4 MB",
-            "color": "cyan"
+            "color": "cyan",
+            "topic": "Postal Manuals"
         },
         {
             "title": "Post Office Guide Part-II",
@@ -60,7 +66,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "PO Guide Part - II.pdf",
             "path": "/notes/paper-1/PO Guide Part - II.pdf",
             "size": "0.5 MB",
-            "color": "cyan"
+            "color": "cyan",
+            "topic": "Postal Manuals"
         },
         {
             "title": "Book of BO Rules",
@@ -68,7 +75,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Book_of_BO_Rules.pdf",
             "path": "/notes/paper-1/Book_of_BO_Rules.pdf",
             "size": "0.6 MB",
-            "color": "amber"
+            "color": "amber",
+            "topic": "Postal Manuals"
         },
         {
             "title": "Postal Manual Volume V",
@@ -76,7 +84,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Postal_Manual_Vol_V.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_V.pdf",
             "size": "0.7 MB",
-            "color": "amber"
+            "color": "amber",
+            "topic": "Postal Manuals"
         },
         {
             "title": "Postal Manual Volume II",
@@ -84,7 +93,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Postal_Manual_Vol_II.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_II.pdf",
             "size": "0.8 MB",
-            "color": "amber"
+            "color": "amber",
+            "topic": "Postal Manuals"
         },
         {
             "title": "MNOP & PNOP Guidelines",
@@ -92,7 +102,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "MNOP_PNOP.pdf",
             "path": "/notes/paper-1/MNOP_PNOP.pdf",
             "size": "0.7 MB",
-            "color": "fuchsia"
+            "color": "fuchsia",
+            "topic": "Operations"
         },
 
         {
@@ -101,7 +112,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Government Savings Promotion Rules, 2018 FINAL.pdf",
             "path": "/notes/paper-1/Government Savings Promotion Rules, 2018 FINAL.pdf",
             "size": "0.7 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "Rules"
         },
         {
             "title": "PO Small Savings Schemes",
@@ -109,7 +121,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "PO_Small_Savings_Schemes.pdf",
             "path": "/notes/paper-1/PO_Small_Savings_Schemes.pdf",
             "size": "4.3 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "Savings & Insurance"
         },
         {
             "title": "POSB (CBS) Manual",
@@ -117,7 +130,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "POSB_CBS_MANUAL.pdf",
             "path": "/notes/paper-1/POSB_CBS_MANUAL.pdf",
             "size": "0.5 MB",
-            "color": "teal"
+            "color": "teal",
+            "topic": "Savings & Insurance"
         },
         {
             "title": "Post Office Life Insurance Scheme, 2011",
@@ -125,7 +139,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "poli-rules-2011.pdf",
             "path": "/notes/paper-1/poli-rules-2011.pdf",
             "size": "0.4 MB",
-            "color": "rose"
+            "color": "rose",
+            "topic": "Savings & Insurance"
         },
         {
             "title": "Citizen Charter of Department of Posts.",
@@ -133,7 +148,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Citizen_Charter_Department_of_Posts.pdf",
             "path": "/notes/paper-1/Citizen_Charter_Department_of_Posts.pdf",
             "size": "0.6 MB",
-            "color": "sky"
+            "color": "sky",
+            "topic": "Reports & Misc"
         },
         {
             "title": "Guidelines and instructions on complaint grievances handling in Department of Posts.",
@@ -141,7 +157,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Complaint_Grievance_Handling.pdf",
             "path": "/notes/paper-1/Complaint_Grievance_Handling.pdf",
             "size": "0.6 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "Reports & Misc"
         },
         {
             "title": "Handbook on Philately",
@@ -149,7 +166,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Handbook_on_Philately.pdf",
             "path": "/notes/paper-1/Handbook_on_Philately.pdf",
             "size": "0.6 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "Reports & Misc"
         },
 
         {
@@ -158,7 +176,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Postal_Manual_Vol_II_Chapter_XI.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_II_Chapter_XI.pdf",
             "size": "4.6 MB",
-            "color": "violet"
+            "color": "violet",
+            "topic": "Postal Manuals"
         },
         {
             "title": "Manual of Office Procedure",
@@ -166,7 +185,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Manual_of_Office_Procedure.pdf",
             "path": "/notes/paper-1/Manual_of_Office_Procedure.pdf",
             "size": "4.7 MB",
-            "color": "slate"
+            "color": "slate",
+            "topic": "Reports & Misc"
         },
         {
             "title": "Annual Reports and Book of Information of D/o Posts",
@@ -174,7 +194,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Annual_Report_and_Book_of_Information.pdf",
             "path": "/notes/paper-1/Annual_Report_and_Book_of_Information.pdf",
             "size": "4.5 MB",
-            "color": "sky"
+            "color": "sky",
+            "topic": "Reports & Misc"
         },
         {
             "title": "Postal Manual Volume II Chapter VI (Stock), VIII (Printing), IX(Contracts), XII (Budget Estimates and control)",
@@ -182,7 +203,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Postal_Manual_Vol_II_Chapters.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_II_Chapters.pdf",
             "size": "0.7 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "Postal Manuals"
         },
         {
             "title": "Chapter 6 of General Financial Rules, 2017",
@@ -190,7 +212,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "General_Financial_Rules_2017.pdf",
             "path": "/notes/paper-3/General_Financial_Rules_2017.pdf",
             "size": "4.2 MB",
-            "color": "gray"
+            "color": "gray",
+            "topic": "Financial & Procurement"
         },
         {
             "title": "CVC guidelines on Public procurement, guide-lines and instructions on e-procurement.",
@@ -198,7 +221,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CVC_Guidelines_Public_Procurement.pdf",
             "path": "/notes/paper-1/CVC_Guidelines_Public_Procurement.pdf",
             "size": "4.6 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "Financial & Procurement"
         },
         {
             "title": "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.",
@@ -206,7 +230,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Manual_Procurement_Goods_Services.pdf",
             "path": "/notes/paper-1/Manual_Procurement_Goods_Services.pdf",
             "size": "0.6 MB",
-            "color": "blue"
+            "color": "blue",
+            "topic": "Financial & Procurement"
         },
         {
             "title": "Postal Manual Volume IV",
@@ -214,7 +239,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Postal_Manual_Vol_IV.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_IV.pdf",
             "size": "4.1 MB",
-            "color": "amber"
+            "color": "amber",
+            "topic": "Postal Manuals"
         },
         {
             "title": "Instructions issued by Directorate and DoP&T on maintenance of APAR.",
@@ -222,7 +248,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Instructions_Maintenance_APAR.pdf",
             "path": "/notes/paper-1/Instructions_Maintenance_APAR.pdf",
             "size": "0.6 MB",
-            "color": "violet"
+            "color": "violet",
+            "topic": "Reports & Misc"
         },
         {
             "title": "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.",
@@ -230,7 +257,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Schedule_of_Financial_Powers.pdf",
             "path": "/notes/paper-3/Schedule_of_Financial_Powers.pdf",
             "size": "1.2 MB",
-            "color": "slate"
+            "color": "slate",
+            "topic": "Financial & Procurement"
         },
         {
             "title": "Welfare Measures",
@@ -238,19 +266,22 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Welfare_Measures_Employees_GDS.pdf",
             "path": "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf",
             "size": "0.5 MB",
-            "color": "green"
+            "color": "green",
+            "topic": "Reports & Misc"
         },
         {
             "title": "DoP&T instructions issued from time to time on Establishment and administration.",
             "description": "Materials will be uploaded soon.",
             "color": "sky",
-            "comingSoon": true
+            "comingSoon": true,
+            "topic": "Reports & Misc"
         },
         {
             "title": "Brochure on reservation, instructions regarding sports person reservation, compassionate appointment guidelines issued by DoP and DoP&T from time to time.",
             "description": "Materials will be uploaded soon.",
             "color": "indigo",
-            "comingSoon": true
+            "comingSoon": true,
+            "topic": "Reports & Misc"
         },
         {
             "title": "Recruitment Rules relating to various cadres in D/o Posts",
@@ -258,7 +289,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Rectt Rules of DOP.pdf",
             "path": "/notes/paper-1/Rectt Rules of DOP.pdf",
             "size": "0.5 MB",
-            "color": "gray"
+            "color": "gray",
+            "topic": "Reports & Misc"
         },
         {
             "title": "Establishment Norms",
@@ -266,7 +298,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Establishment_Norms.pdf",
             "path": "/notes/paper-1/Establishment_Norms.pdf",
             "size": "4.4 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "Reports & Misc"
         },
     ],
     "Paper II": [
@@ -276,7 +309,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_Conduct_Rules_1965.pdf",
             "path": "/notes/paper-1/CCS_Conduct_Rules_1965.pdf",
             "size": "0.6 MB",
-            "color": "red"
+            "color": "red",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "CCS (CCA) Rules, 1965",
@@ -284,7 +318,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_CCA_Rules_1965.pdf",
             "path": "/notes/paper-1/CCS_CCA_Rules_1965.pdf",
             "size": "0.8 MB",
-            "color": "red"
+            "color": "red",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "CCS (Temporary Service) Rules, 1965",
@@ -292,7 +327,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_Temporary_Services_Rules_1965.pdf",
             "path": "/notes/paper-1/CCS_Temporary_Services_Rules_1965.pdf",
             "size": "0.2 MB",
-            "color": "red"
+            "color": "red",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Brochure on Casual Labourers",
@@ -300,7 +336,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Brochure_Casual_Labourers.pdf",
             "path": "/notes/paper-3/Brochure_Casual_Labourers.pdf",
             "size": "0.6 MB",
-            "color": "amber"
+            "color": "amber",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "CCS (Pension) Rules, 2021",
@@ -308,7 +345,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_Pension_Rules_2021.pdf",
             "path": "/notes/paper-3/CCS_Pension_Rules_2021.pdf",
             "size": "0.8 MB",
-            "color": "teal"
+            "color": "teal",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "CCS (Implementation of NPS) Rules, 2021",
@@ -316,7 +354,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_Implementation_of_NPS_Rules_2021.pdf",
             "path": "/notes/paper-3/CCS_Implementation_of_NPS_Rules_2021.pdf",
             "size": "4.3 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "CCS (Payment of Gratuity under NPS) Rules, 2021",
@@ -324,7 +363,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
             "path": "/notes/paper-3/CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
             "size": "4.1 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "CCS (Commutation of Pension) Rules, 1981",
@@ -332,7 +372,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_Commutation_Pension_Rules_1981.pdf",
             "path": "/notes/paper-3/CCS_Commutation_Pension_Rules_1981.pdf",
             "size": "0.5 MB",
-            "color": "teal"
+            "color": "teal",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "CCS (Leave) Rules, 1972",
@@ -340,7 +381,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_Leave_Rules_1972.pdf",
             "path": "/notes/paper-3/CCS_Leave_Rules_1972.pdf",
             "size": "0.3 MB",
-            "color": "teal"
+            "color": "teal",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Central Civil Services (Joining Time) Rules, 1979",
@@ -348,7 +390,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS Joining Time Rules.pdf",
             "path": "/notes/paper-2/CCS Joining Time Rules.pdf",
             "size": "4.1 MB",
-            "color": "sky"
+            "color": "sky",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "CCS (GPF) Rules, 1961",
@@ -356,7 +399,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_GPF_Rules_1961.pdf",
             "path": "/notes/paper-3/CCS_GPF_Rules_1961.pdf",
             "size": "0.8 MB",
-            "color": "teal"
+            "color": "teal",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Central Services (Medical Attendance) Rules, 1944",
@@ -364,7 +408,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CS_Medical_Attendance_Rules_1944.pdf",
             "path": "/notes/paper-3/CS_Medical_Attendance_Rules_1944.pdf",
             "size": "4.2 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "FR & SR - General Rules",
@@ -372,7 +417,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "FR_SR_General_Rules.pdf",
             "path": "/notes/paper-3/FR_SR_General_Rules.pdf",
             "size": "4.4 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "FR & SR - TA Rules",
@@ -380,7 +426,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "FR_SR_TA_Rules.pdf",
             "path": "/notes/paper-3/FR_SR_TA_Rules.pdf",
             "size": "4.4 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "FR & SR - DA, DR & HRA Rules",
@@ -388,7 +435,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "FR_SR_DA_DR_HRA.pdf",
             "path": "/notes/paper-3/FR_SR_DA_DR_HRA.pdf",
             "size": "4.3 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Central Civil Services (Leave Travel Concession) Rules, 1988",
@@ -396,7 +444,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_LTC_Rules_1988.pdf",
             "path": "/notes/paper-3/CCS_LTC_Rules_1988.pdf",
             "size": "4.2 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Central Civil Services (Revised Pay) Rules, 2016",
@@ -404,7 +453,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS_RP_Rules_2016.pdf",
             "path": "/notes/paper-3/CCS_RP_Rules_2016.pdf",
             "size": "4.1 MB",
-            "color": "blue"
+            "color": "blue",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Rules relating to Children Education allowance and reimbursement of Hostel Subsidy",
@@ -412,7 +462,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CEA_and_Hostel_Subsidy.pdf",
             "path": "/notes/paper-3/CEA_and_Hostel_Subsidy.pdf",
             "size": "4.1 MB",
-            "color": "violet"
+            "color": "violet",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Central Government Employees Group Insurance Scheme, 1980",
@@ -420,7 +471,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CGEGIS_1980.pdf",
             "path": "/notes/paper-3/CGEGIS_1980.pdf",
             "size": "4.1 MB",
-            "color": "slate"
+            "color": "slate",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Central Civil Services (Recognition of Service Association) Rules, 1993",
@@ -428,7 +480,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CCS RSA Rules.pdf",
             "path": "/notes/paper-2/CCS RSA Rules.pdf",
             "size": "0.5 MB",
-            "color": "sky"
+            "color": "sky",
+            "topic": "CCS Rules & Establishment"
         },
         {
             "title": "Postal Manual Volume III",
@@ -436,7 +489,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Postal_Manual_Vol_III.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_III.pdf",
             "size": "0.7 MB",
-            "color": "amber"
+            "color": "amber",
+            "topic": "Postal Manuals"
         },
         {
             "title": "Postal Manual Volume II: Chapter III - Appeals and Petitions, Chapter IV-Personal matters, Chapter V-Security Deposits, Chapter VII - Forged counterfeit stamps and defaced postage stamps, coins and currency notes.",
@@ -444,7 +498,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Postal_Manual_Vol_II_Personal_Matters.pdf",
             "path": "/notes/paper-3/Postal_Manual_Vol_II_Personal_Matters.pdf",
             "size": "4.6 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "Postal Manuals"
         },
         {
             "title": "P&T FHB Vol I",
@@ -452,7 +507,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "FHB_Vol_I.pdf",
             "path": "/notes/paper-3/FHB_Vol_I.pdf",
             "size": "0.9 MB",
-            "color": "violet"
+            "color": "violet",
+            "topic": "Financial & Procurement"
         },
         {
             "title": "Postal FHB Vol II",
@@ -460,7 +516,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "FHB_Vol_II.pdf",
             "path": "/notes/paper-3/FHB_Vol_II.pdf",
             "size": "0.8 MB",
-            "color": "violet"
+            "color": "violet",
+            "topic": "Financial & Procurement"
         },
         {
             "title": "General Financial Rules 2017 other than public procurement",
@@ -468,7 +525,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "General_Financial_Rules_2017.pdf",
             "path": "/notes/paper-3/General_Financial_Rules_2017.pdf",
             "size": "4.2 MB",
-            "color": "gray"
+            "color": "gray",
+            "topic": "Financial & Procurement"
         },
         {
             "title": "Interface with India Post Payments Bank",
@@ -476,7 +534,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "India_Post_Payments_Bank.pdf",
             "path": "/notes/paper-1/India_Post_Payments_Bank.pdf",
             "size": "0.8 MB",
-            "color": "emerald"
+            "color": "emerald",
+            "topic": "Savings & Insurance"
         },
         {
             "title": "Preservation of Records",
@@ -484,7 +543,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Preservation_Period_of_Records.pdf",
             "path": "/notes/paper-1/Preservation_Period_of_Records.pdf",
             "size": "0.5 MB",
-            "color": "gray"
+            "color": "gray",
+            "topic": "Reports & Misc"
         },
         {
             "title": "Swatchh Bharat",
@@ -492,7 +552,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Swatchh_Bharat.pdf",
             "path": "/notes/paper-3/Swatchh_Bharat.pdf",
             "size": "0.5 MB",
-            "color": "violet"
+            "color": "violet",
+            "topic": "Reports & Misc"
         },
         {
             "title": "Inspection Questionnaires",
@@ -500,7 +561,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Inspection Questionnaires.pdf",
             "path": "/notes/paper-2/Inspection Questionnaires.pdf",
             "size": "4.2 MB",
-            "color": "slate"
+            "color": "slate",
+            "topic": "Operations"
         },
         {
             "title": "GDS (Conduct & Engagement) Rules, 2020",
@@ -508,7 +570,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "GDS_CE_Rules_2020.pdf",
             "path": "/notes/paper-1/GDS_CE_Rules_2020.pdf",
             "size": "4.4 MB",
-            "color": "red"
+            "color": "red",
+            "topic": "Rules"
         },
         {
             "title": "Central Administrative Tribunal Act, 1985",
@@ -516,7 +579,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "CENTRAL_ADMINISTRATIVE_TRIBUNALS_ACT_1985.pdf",
             "path": "/notes/paper-3/CENTRAL_ADMINISTRATIVE_TRIBUNALS_ACT_1985.pdf",
             "size": "0.6 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "Constitution & Laws"
         },
         {
             "title": "RTI Act, 2005 and RTI Rules, 2012",
@@ -524,7 +588,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "RTI_Act_2005_and_RTI_Rules_2012.pdf",
             "path": "/notes/paper-3/RTI_Act_2005_and_RTI_Rules_2012.pdf",
             "size": "0.7 MB",
-            "color": "cyan"
+            "color": "cyan",
+            "topic": "Constitution & Laws"
         },
         {
             "title": "Sexual Harassment of Women at Workplace Act, 2013",
@@ -532,7 +597,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "POSH_Rules_2013.pdf",
             "path": "/notes/paper-3/POSH_Rules_2013.pdf",
             "size": "0.2 MB",
-            "color": "pink"
+            "color": "pink",
+            "topic": "Constitution & Laws"
         },
         {
             "title": "Public Accountants Default Act, 1850",
@@ -540,7 +606,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Public_Accountants_Default_Act_1850.pdf",
             "path": "/notes/paper-3/Public_Accountants_Default_Act_1850.pdf",
             "size": "0.3 MB",
-            "color": "indigo"
+            "color": "indigo",
+            "topic": "Constitution & Laws"
         },
         {
             "title": "Revenue Recovery Act, 1890",
@@ -548,7 +615,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Revenue_Recovery_Act_1890.pdf",
             "path": "/notes/paper-3/Revenue_Recovery_Act_1890.pdf",
             "size": "0.4 MB",
-            "color": "blue"
+            "color": "blue",
+            "topic": "Constitution & Laws"
         },
         {
             "title": "Prevention of Corruption Act, 1988",
@@ -556,16 +624,17 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "Prevention_of_Corruption_Act_1988.pdf",
             "path": "/notes/paper-3/Prevention_of_Corruption_Act_1988.pdf",
             "size": "0.6 MB",
-            "color": "red"
+            "color": "red",
+            "topic": "Constitution & Laws"
         },
-
         {
             "title": "Goods and Services Tax (GST) Act, 2017 (Detailed Notes)",
             "description": "Comprehensive notes for covering Goods and Services Tax (GST) Act, 2017.",
             "filename": "GST_Act_2017_Detailed_Notes.pdf",
             "path": "/notes/paper-2/GST_Act_2017_Detailed_Notes.pdf",
             "size": "5.7 MB",
-            "color": "gray"
+            "color": "gray",
+            "topic": "Acts"
         },
         {
             "title": "Goods and Services Tax (GST) Act, 2017 (Brief Notes)",
@@ -573,7 +642,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "filename": "GST_Act_2017_Brief_Notes.pdf",
             "path": "/notes/paper-2/GST_Act_2017_Brief_Notes.pdf",
             "size": "1.2 MB",
-            "color": "amber"
+            "color": "amber",
+            "topic": "Acts"
         }
     ]
 };

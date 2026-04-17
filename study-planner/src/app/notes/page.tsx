@@ -34,6 +34,7 @@ interface Note {
     subtitle?: string;
     isFree?: boolean;
     isCommemorative?: boolean;
+    topic?: string;
 }
 
 // Map for scheduled dates
@@ -109,7 +110,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "/notes/paper-1/PO_Regulations_2024.pdf",
             size: "0.9 MB",
             color: "emerald",
-            isFree: true
+            isFree: true,
+            topic: "Rules"
         },
         // 1. Acts
         {
@@ -118,7 +120,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "PO_Act_2023_Rules_2024.pdf",
             path: "/notes/paper-1/PO_Act_2023_Rules_2024.pdf",
             size: "8.7 MB",
-            color: "blue"
+            color: "blue",
+            topic: "Acts"
         },
         {
             title: "Government Savings Promotion Act, 1873",
@@ -126,7 +129,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "GSPA_1873.pdf",
             path: "/notes/paper-1/GSPA_1873.pdf",
             size: "8.7 MB",
-            color: "indigo"
+            color: "indigo",
+            topic: "Acts"
         },
         {
             title: "PMLA Act, 2002",
@@ -134,7 +138,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "PMLA_2002.pdf",
             path: "/notes/paper-1/PMLA_2002.pdf",
             size: "0.3 MB",
-            color: "purple"
+            color: "purple",
+            topic: "Acts"
         },
         {
             title: "Consumer Protection Act, 2019",
@@ -143,7 +148,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "/notes/paper-1/Consumer_Protection_Act_2019.pdf",
             size: "0.7 MB",
             color: "blue",
-            isFree: true
+            isFree: true,
+            topic: "Acts"
         },
         {
             title: "Information Technology Act, 2000",
@@ -151,7 +157,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "IT_Act_2000.pdf",
             path: "/notes/paper-1/IT_Act_2000.pdf",
             size: "0.3 MB",
-            color: "blue"
+            color: "blue",
+            topic: "Acts"
         },
 
         // 6. Rules
@@ -161,7 +168,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "PO_Small_Savings_Schemes.pdf",
             path: "/notes/paper-1/PO_Small_Savings_Schemes.pdf",
             size: "4.3 MB",
-            color: "emerald"
+            color: "emerald",
+            topic: "Savings & Insurance"
         },
 
         {
@@ -170,7 +178,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Government Savings Promotion Rules, 2018 FINAL.pdf",
             path: "/notes/paper-1/Government Savings Promotion Rules, 2018 FINAL.pdf",
             size: "0.7 MB",
-            color: "emerald"
+            color: "emerald",
+            topic: "Rules"
         },
 
 
@@ -181,7 +190,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "poli-rules-2011.pdf",
             path: "/notes/paper-1/poli-rules-2011.pdf",
             size: "0.4 MB",
-            color: "rose"
+            color: "rose",
+            topic: "Savings & Insurance"
         },
 
         // 18. Postal Manuals
@@ -191,7 +201,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Book_of_BO_Rules.pdf",
             path: "/notes/paper-1/Book_of_BO_Rules.pdf",
             size: "0.6 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
         {
             title: "Postal Manual Volume II",
@@ -199,7 +210,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Postal_Manual_Vol_II.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_II.pdf",
             size: "0.8 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
         {
             title: "Postal Manual Volume III",
@@ -207,7 +219,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Postal_Manual_Vol_III.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_III.pdf",
             size: "0.7 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
         {
             title: "Postal Manual Volume IV",
@@ -215,7 +228,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Postal_Manual_Vol_IV.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_IV.pdf",
             size: "4.1 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
         {
             title: "Postal Manual Volume VIII",
@@ -223,7 +237,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Postal_Manual_Vol_VIII.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_VIII.pdf",
             size: "0.2 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
 
         {
@@ -232,7 +247,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Postal_Manual_Vol_V.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_V.pdf",
             size: "0.7 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
         {
             title: "Postal Manual Volume VI, Part-I",
@@ -240,7 +256,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "postal-manual-vol-vi-part-1.pdf",
             path: "/notes/paper-1/postal-manual-vol-vi-part-1.pdf",
             size: "0.8 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
         {
             title: "Postal Manual Volume VI, Part-II",
@@ -248,7 +265,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "postal-manual-vol-vi-part-2.pdf",
             path: "/notes/paper-1/postal-manual-vol-vi-part-2.pdf",
             size: "0.3 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
         {
             title: "Postal Manual Volume VI, Part-III",
@@ -256,7 +274,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "postal-manual-vol-vi-part-3.pdf",
             path: "/notes/paper-1/postal-manual-vol-vi-part-3.pdf",
             size: "0.7 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
         {
             title: "Postal Manual Volume VII",
@@ -264,7 +283,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "postal-manual-vol-vii.pdf",
             path: "/notes/paper-1/postal-manual-vol-vii.pdf",
             size: "0.8 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Postal Manuals"
         },
 
         // 29. Jansuraksha
@@ -274,7 +294,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "jan-suraksha-schemes.pdf",
             path: "/notes/paper-1/jan-suraksha-schemes.pdf",
             size: "0.6 MB",
-            color: "orange"
+            color: "orange",
+            topic: "Savings & Insurance"
         },
 
         // 30. Inland/Foreign
@@ -284,7 +305,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "PO_Guide_Part_I.pdf",
             path: "/notes/paper-1/PO_Guide_Part_I.pdf",
             size: "0.4 MB",
-            color: "cyan"
+            color: "cyan",
+            topic: "Postal Manuals"
         },
         {
             title: "Post Office Guide Part-II",
@@ -292,7 +314,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "PO Guide Part - II.pdf",
             path: "/notes/paper-1/PO Guide Part - II.pdf",
             size: "0.5 MB",
-            color: "cyan"
+            color: "cyan",
+            topic: "Postal Manuals"
         },
 
 
@@ -303,7 +326,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "DIGIPIN.pdf",
             path: "/notes/paper-1/DIGIPIN.pdf",
             size: "0.5 MB",
-            color: "violet"
+            color: "violet",
+            topic: "Operations"
         },
 
         // 34. Network Optimization
@@ -313,7 +337,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "MNOP_PNOP.pdf",
             path: "/notes/paper-1/MNOP_PNOP.pdf",
             size: "0.7 MB",
-            color: "fuchsia"
+            color: "fuchsia",
+            topic: "Operations"
         },
         {
             title: "Consolidation of Products & Centralized Delivery Policy",
@@ -321,7 +346,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Consolidation_Products_Centralized_Delivery_Policy.pdf",
             path: "/notes/paper-1/Consolidation_Products_Centralized_Delivery_Policy.pdf",
             size: "4.2 MB",
-            color: "fuchsia"
+            color: "fuchsia",
+            topic: "Operations"
         },
         {
             title: "Dak Ghar Niryat Kendra (DNKs)",
@@ -329,7 +355,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Dak_Ghar_Niryat_Kendra.pdf",
             path: "/notes/paper-1/Dak_Ghar_Niryat_Kendra.pdf",
             size: "4.2 MB",
-            color: "fuchsia"
+            color: "fuchsia",
+            topic: "Operations"
         },
 
 
@@ -339,7 +366,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "POSB_CBS_MANUAL.pdf",
             path: "/notes/paper-1/POSB_CBS_MANUAL.pdf",
             size: "0.5 MB",
-            color: "teal"
+            color: "teal",
+            topic: "Savings & Insurance"
         },
 
         // 40. Reports
@@ -349,7 +377,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Annual_Report_and_Book_of_Information.pdf",
             path: "/notes/paper-1/Annual_Report_and_Book_of_Information.pdf",
             size: "4.5 MB",
-            color: "slate"
+            color: "slate",
+            topic: "Reports & Misc"
         },
 
         // 41. IT
@@ -359,7 +388,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "APT_Knowledge_IT_2.0.pdf",
             path: "/notes/paper-1/APT_Knowledge_IT_2.0.pdf",
             size: "0.8 MB",
-            color: "sky"
+            color: "sky",
+            topic: "Operations"
         },
         {
             title: "Core Banking Solutions (Working knowledge of CBS)",
@@ -367,7 +397,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Working_knowledge_of_CBS.pdf",
             path: "/notes/paper-1/Working_knowledge_of_CBS.pdf",
             size: "0.4 MB",
-            color: "sky"
+            color: "sky",
+            topic: "Operations"
         },
 
         // 43. IPPB
@@ -377,7 +408,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "India_Post_Payments_Bank.pdf",
             path: "/notes/paper-1/India_Post_Payments_Bank.pdf",
             size: "0.8 MB",
-            color: "indigo"
+            color: "indigo",
+            topic: "Savings & Insurance"
         },
 
         // 44. Records
@@ -387,7 +419,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Preservation_Period_of_Records.pdf",
             path: "/notes/paper-1/Preservation_Period_of_Records.pdf",
             size: "0.5 MB",
-            color: "gray"
+            color: "gray",
+            topic: "Reports & Misc"
         },
 
         // 45. Conduct Rules
@@ -397,7 +430,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_Conduct_Rules_1965.pdf",
             path: "/notes/paper-1/CCS_Conduct_Rules_1965.pdf",
             size: "0.6 MB",
-            color: "red"
+            color: "red",
+            topic: "Rules"
         },
         {
             title: "CCS (CCA) Rules, 1965",
@@ -405,7 +439,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_CCA_Rules_1965.pdf",
             path: "/notes/paper-1/CCS_CCA_Rules_1965.pdf",
             size: "0.8 MB",
-            color: "red"
+            color: "red",
+            topic: "Rules"
         },
         {
             title: "CCS (Temporary Service) Rules, 1965",
@@ -413,7 +448,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_Temporary_Services_Rules_1965.pdf",
             path: "/notes/paper-1/CCS_Temporary_Services_Rules_1965.pdf",
             size: "0.2 MB",
-            color: "red"
+            color: "red",
+            topic: "Rules"
         },
         {
             title: "GDS (Conduct & Engagement) Rules, 2020",
@@ -421,10 +457,11 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "GDS_CE_Rules_2020.pdf",
             path: "/notes/paper-1/GDS_CE_Rules_2020.pdf",
             size: "4.4 MB",
-            color: "red"
+            color: "red",
+            topic: "Rules"
         },
     ],
-    "Paper III": [
+    "Paper II": [
         // 1-8. Constitution
         // 1. Constitution
         {
@@ -433,7 +470,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Constitution_of_India.pdf",
             path: "/notes/paper-3/Constitution_of_India.pdf",
             size: "59.7 MB",
-            color: "amber"
+            color: "amber",
+            topic: "Constitution & Laws"
         },
 
         // 9. BNSS 2023
@@ -443,7 +481,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "BNSS_2023.pdf",
             path: "/notes/paper-3/BNSS_2023.pdf",
             size: "8.7 MB",
-            color: "purple"
+            color: "purple",
+            topic: "Constitution & Laws"
         },
 
         // 12. CAT Act
@@ -453,7 +492,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CENTRAL_ADMINISTRATIVE_TRIBUNALS_ACT_1985.pdf",
             path: "/notes/paper-3/CENTRAL_ADMINISTRATIVE_TRIBUNALS_ACT_1985.pdf",
             size: "0.6 MB",
-            color: "indigo"
+            color: "indigo",
+            topic: "Constitution & Laws"
         },
 
         // 13. Revenue Recovery
@@ -463,7 +503,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Revenue_Recovery_Act_1890.pdf",
             path: "/notes/paper-3/Revenue_Recovery_Act_1890.pdf",
             size: "0.4 MB",
-            color: "blue"
+            color: "blue",
+            topic: "Constitution & Laws"
         },
 
         // 14. POCA
@@ -473,7 +514,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Prevention_of_Corruption_Act_1988.pdf",
             path: "/notes/paper-3/Prevention_of_Corruption_Act_1988.pdf",
             size: "0.6 MB",
-            color: "red"
+            color: "red",
+            topic: "Constitution & Laws"
         },
 
         // 15. RTI
@@ -483,7 +525,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "RTI_Act_2005_and_RTI_Rules_2012.pdf",
             path: "/notes/paper-3/RTI_Act_2005_and_RTI_Rules_2012.pdf",
             size: "0.7 MB",
-            color: "cyan"
+            color: "cyan",
+            topic: "Constitution & Laws"
         },
 
         // 16-18. Procurement Manual
@@ -493,7 +536,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Manual_for_Procurement_of_Goods_and_Services.pdf",
             path: "/notes/paper-3/Manual_for_Procurement_of_Goods_and_Services.pdf",
             size: "0.6 MB",
-            color: "slate"
+            color: "slate",
+            topic: "Financial & Procurement"
         },
 
         // 19-21. CCS Rules
@@ -503,7 +547,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_Leave_Rules_1972.pdf",
             path: "/notes/paper-3/CCS_Leave_Rules_1972.pdf",
             size: "0.3 MB",
-            color: "teal"
+            color: "teal",
+            topic: "CCS Rules & Establishment"
         },
         {
             title: "CCS (GPF) Rules, 1961",
@@ -511,7 +556,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_GPF_Rules_1961.pdf",
             path: "/notes/paper-3/CCS_GPF_Rules_1961.pdf",
             size: "0.8 MB",
-            color: "teal"
+            color: "teal",
+            topic: "CCS Rules & Establishment"
         },
         {
             title: "CCS (Pension) Rules, 2021",
@@ -519,7 +565,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_Pension_Rules_2021.pdf",
             path: "/notes/paper-3/CCS_Pension_Rules_2021.pdf",
             size: "0.8 MB",
-            color: "teal"
+            color: "teal",
+            topic: "CCS Rules & Establishment"
         },
         {
             title: "CCS (Commutation of Pension) Rules, 1981",
@@ -527,7 +574,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_Commutation_Pension_Rules_1981.pdf",
             path: "/notes/paper-3/CCS_Commutation_Pension_Rules_1981.pdf",
             size: "0.5 MB",
-            color: "teal"
+            color: "teal",
+            topic: "CCS Rules & Establishment"
         },
 
         // 22. Sexual Harassment
@@ -537,7 +585,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "POSH_Rules_2013.pdf",
             path: "/notes/paper-3/POSH_Rules_2013.pdf",
             size: "0.2 MB",
-            color: "pink"
+            color: "pink",
+            topic: "Constitution & Laws"
         },
 
         // 23-24. NPS
@@ -547,7 +596,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_Implementation_of_NPS_Rules_2021.pdf",
             path: "/notes/paper-3/CCS_Implementation_of_NPS_Rules_2021.pdf",
             size: "4.3 MB",
-            color: "emerald"
+            color: "emerald",
+            topic: "CCS Rules & Establishment"
         },
         {
             title: "CCS (Payment of Gratuity under NPS) Rules, 2021",
@@ -555,7 +605,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
             path: "/notes/paper-3/CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
             size: "4.1 MB",
-            color: "emerald"
+            color: "emerald",
+            topic: "CCS Rules & Establishment"
         },
 
         // 25. GFR
@@ -565,7 +616,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "General_Financial_Rules_2017.pdf",
             path: "/notes/paper-3/General_Financial_Rules_2017.pdf",
             size: "4.2 MB",
-            color: "gray"
+            color: "gray",
+            topic: "Financial & Procurement"
         },
 
         // 26. FR & SR
@@ -575,7 +627,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "FR_SR_General_Rules.pdf",
             path: "/notes/paper-3/FR_SR_General_Rules.pdf",
             size: "4.4 MB",
-            color: "indigo"
+            color: "indigo",
+            topic: "CCS Rules & Establishment"
         },
         {
             title: "FR & SR - TA Rules",
@@ -583,7 +636,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "FR_SR_TA_Rules.pdf",
             path: "/notes/paper-3/FR_SR_TA_Rules.pdf",
             size: "4.4 MB",
-            color: "indigo"
+            color: "indigo",
+            topic: "CCS Rules & Establishment"
         },
         {
             title: "FR & SR - DA, DR & HRA Rules",
@@ -591,7 +645,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "FR_SR_DA_DR_HRA.pdf",
             path: "/notes/paper-3/FR_SR_DA_DR_HRA.pdf",
             size: "4.3 MB",
-            color: "indigo"
+            color: "indigo",
+            topic: "CCS Rules & Establishment"
         },
 
         // 27. Casual Labourers
@@ -601,7 +656,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Brochure_Casual_Labourers.pdf",
             path: "/notes/paper-3/Brochure_Casual_Labourers.pdf",
             size: "0.6 MB",
-            color: "amber"
+            color: "amber",
+            topic: "CCS Rules & Establishment"
         },
 
         // 28. APAR
@@ -611,7 +667,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Maintenance_APAR.pdf",
             path: "/notes/paper-3/Maintenance_APAR.pdf",
             size: "0.6 MB",
-            color: "orange"
+            color: "orange",
+            topic: "CCS Rules & Establishment"
         },
 
         // 29. Service Discharge
@@ -621,7 +678,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Service_Discharge_Benefit_Scheme.pdf",
             path: "/notes/paper-3/Service_Discharge_Benefit_Scheme.pdf",
             size: "0.7 MB",
-            color: "rose"
+            color: "rose",
+            topic: "CCS Rules & Establishment"
         },
         {
             title: "Central Civil Services (Leave Travel Concession) Rules, 1988",
@@ -629,7 +687,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "CCS_LTC_Rules_1988.pdf",
             path: "/notes/paper-3/CCS_LTC_Rules_1988.pdf",
             size: "4.2 MB",
-            color: "emerald"
+            color: "emerald",
+            topic: "CCS Rules & Establishment"
         },
 
         // 30. Financial Powers
@@ -639,7 +698,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Schedule_of_Financial_Powers.pdf",
             path: "/notes/paper-3/Schedule_of_Financial_Powers.pdf",
             size: "1.2 MB",
-            color: "blue"
+            color: "blue",
+            topic: "Financial & Procurement"
         },
 
         // 31. Welfare Measures
@@ -649,7 +709,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Welfare_Measures_Employees_GDS.pdf",
             path: "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf",
             size: "0.5 MB",
-            color: "green"
+            color: "green",
+            topic: "Welfare & Pension"
         },
 
         // 32. FHB
@@ -659,7 +720,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "FHB_Vol_I.pdf",
             path: "/notes/paper-3/FHB_Vol_I.pdf",
             size: "0.9 MB",
-            color: "violet"
+            color: "violet",
+            topic: "Financial & Procurement"
         },
         {
             title: "Postal FHB Vol II",
@@ -667,7 +729,8 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "FHB_Vol_II.pdf",
             path: "/notes/paper-3/FHB_Vol_II.pdf",
             size: "0.8 MB",
-            color: "violet"
+            color: "violet",
+            topic: "Financial & Procurement"
         },
     ],
     "SB Orders": [
@@ -678,7 +741,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1No5fp0eZ5qQvk0bxmQhBIMCnxJ245l7K/preview",
             size: "PDF",
             color: "violet",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2024",
@@ -687,7 +751,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1iGLeBO--IOUncz7ZLSxEbeUHmYy25wxn/preview",
             size: "PDF",
             color: "indigo",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2023",
@@ -696,7 +761,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1ckB55EjsE3dvDikd49USwzeTZ8slUrLH/preview",
             size: "PDF",
             color: "blue",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2022",
@@ -705,7 +771,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1-TelumAU96DmQLFw18BSbwjuOsrPljON/preview",
             size: "PDF",
             color: "cyan",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2021",
@@ -714,7 +781,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1JIKGCFvwr6Usf_lvtIlfTvwPQFTJk13d/preview",
             size: "PDF",
             color: "teal",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2020",
@@ -723,7 +791,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1uUWA8dIhcwBok5ElsKj7TlOtKrjBekFO/preview",
             size: "PDF",
             color: "emerald",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2019",
@@ -732,7 +801,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1lQgAaFvDV4Rm1SW8NsNHx9zPAHyyaZU8/preview",
             size: "PDF",
             color: "green",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2018",
@@ -741,7 +811,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1Cs8wlEp-HKVA4MvNv95EmsDkCN3A6r8B/preview",
             size: "PDF",
             color: "lime",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2017",
@@ -750,7 +821,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1drQqjgLOre3N3IwPJZgLhYWJhRu0kImj/preview",
             size: "PDF",
             color: "yellow",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2016",
@@ -759,7 +831,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/14vQfA5J6CKt6cBc0ld2rgDNjoKIRylnA/preview",
             size: "PDF",
             color: "amber",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2015",
@@ -768,7 +841,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1O-kdD32Ubw2UvpFmqUVJ0wI5VtD2oU_u/preview",
             size: "PDF",
             color: "orange",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2014",
@@ -777,7 +851,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1w6f0OKLeBSEAKXm142IQwtKNLcde0zJs/preview",
             size: "PDF",
             color: "red",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2013",
@@ -786,7 +861,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1NPXrk9FcEXwbcqhIk_jmxIOZqDaDvayF/preview",
             size: "PDF",
             color: "rose",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2012",
@@ -795,7 +871,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1lf7gD-g1GU2K9APiNHkeLWKKdB8JjWI2/preview",
             size: "PDF",
             color: "pink",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         },
         {
             title: "SB Orders 2011",
@@ -804,7 +881,8 @@ const PDF_DATA: Record<string, Note[]> = {
             path: "https://drive.google.com/file/d/1CqyTfKpDurFWwfOJQxLgd00a7IFYEOHJ/preview",
             size: "PDF",
             color: "fuchsia",
-            isFree: true
+            isFree: true,
+            topic: "SB Orders"
         }
     ]
 };
@@ -812,7 +890,7 @@ const PDF_DATA: Record<string, Note[]> = {
 export default function NotesPage() {
     const { course } = useCourse();
     const isPS = course === 'PS_GR_B';
-    const TABS = isPS ? ["Paper I", "Paper II", "SB Orders"] : ["Paper I", "Paper III", "SB Orders"];
+    const TABS = ["Paper I", "Paper II", "SB Orders"];
 
     const [activeTab, setActiveTab] = useState(TABS[0]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -1209,7 +1287,6 @@ export default function NotesPage() {
                         )}
                     </div>
 
-                    {/* Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 pb-20">
                         {(searchQuery
                             ? activeData[activeTab as keyof typeof activeData]?.filter(f =>
@@ -1221,33 +1298,15 @@ export default function NotesPage() {
                             <div
                                 key={index}
                                 className={`group rounded-2xl p-3 md:p-6 border shadow-sm transition-all duration-300 flex flex-col relative overflow-hidden ${
-                                    file.isCommemorative
-                                    ? 'border-amber-400/80 dark:border-amber-600/60 ring-1 ring-amber-300/60 dark:ring-amber-700/40 shadow-lg shadow-amber-200/40 dark:shadow-amber-800/20 gold-shine-card'
-                                    : 'bg-white dark:bg-zinc-900'
-                                } ${
-                                    !file.isCommemorative && file.comingSoon
-                                    ? 'border-zinc-200 dark:border-zinc-800 opacity-90'
-                                    : !file.isCommemorative
-                                    ? 'border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
-                                    : ''
+                                    file.comingSoon
+                                    ? 'bg-zinc-50 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 opacity-90'
+                                    : 'bg-white dark:bg-zinc-900 border-slate-100 dark:border-zinc-800 hover:border-purple-200 dark:hover:border-purple-500/30 hover:shadow-xl hover:-translate-y-1'
                                     }`}
-                                style={file.isCommemorative ? { 
-                                    backgroundImage: 'url("/images/constitution-card.jpg")',
-                                    backgroundSize: '100% 100%',
-                                    backgroundPosition: 'center',
-                                    backgroundRepeat: 'no-repeat'
-                                } : undefined}
                             >
-                                {file.isCommemorative && (
-                                     <div className="absolute inset-0 pointer-events-none gold-shimmer-overlay z-10" />
-                                )}
-
-                                <div className={`flex flex-col h-full relative z-20 ${file.isCommemorative ? 'p-1 md:p-3' : ''}`}>
+                                <div className="flex flex-col h-full">
                                     <div className="flex items-start justify-between mb-4">
                                         <div className={`p-2 md:p-3 rounded-xl transition-all duration-300 ${
-                                            file.isCommemorative
-                                            ? 'bg-amber-100/40 backdrop-blur-sm shadow-sm ring-1 ring-amber-200/50'
-                                            : file.comingSoon
+                                            file.comingSoon
                                             ? hasPremiumAccess ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-red-50 dark:bg-red-900/20 text-red-400'
                                             : file.color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400' :
                                                 file.color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400' :
@@ -1262,23 +1321,21 @@ export default function NotesPage() {
                                                                                     file.color === 'sky' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400' :
                                                                                         'bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
                                             }`}>
-                                            {file.comingSoon && !hasPremiumAccess && !file.isCommemorative ? (
+                                            {file.comingSoon && !hasPremiumAccess ? (
                                                 <Lock className="w-6 h-6 md:w-8 md:h-8" />
                                             ) : (
-                                                <FileText className={`w-6 h-6 md:w-8 md:h-8 ${file.isCommemorative ? 'text-amber-900' : ''}`} />
+                                                <FileText className="w-6 h-6 md:w-8 md:h-8" />
                                             )}
                                         </div>
                                         <span className={`text-[9px] md:text-xs font-bold px-1.5 py-1 rounded-md italic tracking-wide transition-all duration-300 ${
-                                            file.isCommemorative
-                                            ? 'bg-amber-600 text-white shadow-md'
-                                            : file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
-                                            }`} style={file.isCommemorative ? { fontFamily: "'Georgia', 'Times New Roman', serif" } : undefined}>
-                                            {file.isCommemorative ? '✦ GOLD Exclusive' : file.comingSoon ? 'SOON' : 'PDF'}
+                                            file.comingSoon ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500' : 'bg-slate-100 dark:bg-zinc-800 text-slate-500 dark:text-zinc-400'
+                                            }`}>
+                                            {file.comingSoon ? 'SOON' : 'PDF'}
                                         </span>
                                     </div>
 
                                     <h3 className={`text-base md:text-xl font-black mb-1 md:mb-2 leading-tight transition-all duration-300 ${
-                                        file.isCommemorative ? 'text-slate-900' : file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
+                                        file.comingSoon ? 'text-zinc-600 dark:text-zinc-500' : 'text-slate-800 dark:text-zinc-100 group-hover:text-purple-700 dark:group-hover:text-purple-400'
                                         }`}>
                                         {file.title}
                                         {file.subtitle && (
@@ -1287,9 +1344,7 @@ export default function NotesPage() {
                                             </span>
                                         )}
                                     </h3>
-                                    <p className={`text-[10px] md:text-[15px] font-semibold leading-relaxed line-clamp-2 md:line-clamp-none mb-4 md:mb-6 ${
-                                        file.isCommemorative ? 'text-[#334155]' : 'text-slate-500 dark:text-zinc-400'
-                                    }`}>
+                                    <p className="text-[10px] md:text-[15px] font-semibold text-slate-500 dark:text-zinc-400 leading-relaxed line-clamp-2 md:line-clamp-none mb-4 md:mb-6">
                                         {file.description}
                                     </p>
                                 </div>

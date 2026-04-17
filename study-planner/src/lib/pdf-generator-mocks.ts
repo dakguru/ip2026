@@ -301,7 +301,10 @@ export const createMockTestAnswerSheetPDFDoc = async ({
             yPos += 5;
 
             doc.setFont("helvetica", "normal");
-            const cleanExplanation = cleanText(q.explanation.replace(/\*/g, ''));
+            const rawExplanation = q.explanation.replace(/\*/g, '');
+            // Strip out "Source: ..." part for the PDF
+            const explanationWithoutSource = rawExplanation.split(/Source:\s/i)[0].trim();
+            const cleanExplanation = cleanText(explanationWithoutSource);
             const splitExpl = doc.splitTextToSize(cleanExplanation, contentWidth);
 
             if (yPos + splitExpl.length * 5 > pageHeight - 20) {

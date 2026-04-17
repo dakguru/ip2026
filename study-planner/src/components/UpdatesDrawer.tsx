@@ -16,6 +16,75 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "17.04.2026",
+        items: [
+            {
+                title: "🎯 Mock Test 14 Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>Weekly Mock Test - 14</strong> for LDCE IP 2026 aspirants and <strong>Mock Test - 03</strong> for PS Group B 2026 aspirants!</p>
+                        
+                        <div className="bg-red-50/50 dark:bg-red-900/10 p-3 rounded-2xl border border-red-100 dark:border-red-900/20">
+                            <ul className="space-y-4 text-[11px] font-bold text-zinc-700 dark:text-zinc-300">
+                                <li className="flex items-center gap-2 text-red-600 dark:text-red-400">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                    </span>
+                                    LDCE IP Weekly Mock Test - 14
+                                </li>
+                                <li className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                    </span>
+                                    PS Group B Weekly Mock Test - 03
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide mb-2">LDCE IP Topics:</p>
+                                <ul className="space-y-1.5 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✅</span>
+                                        <span>CCS (NPS & Gratuity) Rules</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✅</span>
+                                        <span>GFR, 2017</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="bg-purple-50/50 dark:bg-purple-900/10 p-3 rounded-xl border border-purple-100 dark:border-purple-800/50">
+                                <p className="font-bold text-purple-700 dark:text-purple-300 text-[10px] uppercase tracking-wide mb-2">PS Group B Topics:</p>
+                                <ul className="space-y-1.5 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-purple-500 mt-0.5">✅</span>
+                                        <span>Postal Manual Vol II, V & GSPR</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-purple-500 mt-0.5">✅</span>
+                                        <span>MNOP & PNOP Guidelines</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                            These tests feature <strong>50 High-Quality MCQs</strong> each and will be open for attempts from <strong>18.04.2026</strong> and <strong>19.04.2026</strong>.
+                        </p>
+
+                        <p className="pt-1 text-[11px] text-zinc-600 dark:text-zinc-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Prepare well and secure your rank!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "16.04.2026",
         items: [
             {
