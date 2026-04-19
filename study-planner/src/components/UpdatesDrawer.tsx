@@ -45,6 +45,28 @@ const UPDATES_DATA: UpdateGroup[] = [
                         </p>
                     </div>
                 )
+            },
+            {
+                title: "💎 Dak Sutra: Premium Access Only",
+                desc: (
+                    <div className="space-y-4">
+                        <p>Important update regarding <strong>Dak Sutra</strong> contents. To maintain the quality and exclusivity of our technical content, these series will now be accessible exclusively for our <strong>Premium Members</strong>.</p>
+                        
+                        <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                            <p className="flex items-center gap-2 font-bold text-amber-700 dark:text-amber-300 text-[11px]">
+                                <Sparkles className="w-3.5 h-3.5" />
+                                Premium Exclusive Feature
+                            </p>
+                            <p className="mt-1.5 text-[11px] text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                                This change helps us provide better-curated technical rules and procedures specifically for our serious aspirants.
+                            </p>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-zinc-500 dark:text-zinc-400 italic">
+                            Thank you for being part of Dak Guru! Upgrade to Premium today to unlock all technical series.
+                        </p>
+                    </div>
+                )
             }
         ]
     },
