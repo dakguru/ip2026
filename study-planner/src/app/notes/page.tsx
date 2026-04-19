@@ -595,7 +595,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "National Pension System implementation.",
             filename: "CCS_Implementation_of_NPS_Rules_2021.pdf",
             path: "/notes/paper-3/CCS_Implementation_of_NPS_Rules_2021.pdf",
-            size: "4.3 MB",
+            size: "0.6 MB",
             color: "emerald",
             topic: "CCS Rules & Establishment"
         },

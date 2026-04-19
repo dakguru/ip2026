@@ -244,22 +244,6 @@ const SyllabusCard = React.memo(({ section, isPS }: { section: any, isPS: boolea
                                 {item.details && (
                                     <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 ml-3.5 pl-1 border-l-2 border-zinc-200 dark:border-zinc-700">{item.details}</p>
                                 )}
-                                {item.pdfs && item.pdfs.length > 0 && (
-                                    <div className="mt-2 ml-3.5 pl-1 flex flex-col gap-1.5 border-l-2 border-emerald-500/30">
-                                        {item.pdfs.map((pdf: any, pIdx: number) => (
-                                            <a
-                                                key={pIdx}
-                                                href={pdf.path}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 bg-emerald-50 dark:bg-emerald-900/10 px-2 py-0.5 rounded border border-emerald-100 dark:border-emerald-800/50 w-fit transition-colors"
-                                            >
-                                                <FileText className="w-3 h-3" />
-                                                {pdf.title} • PDF Note
-                                            </a>
-                                        ))}
-                                    </div>
-                                )}
                             </div>
                             {item.link ? (
                                 <a

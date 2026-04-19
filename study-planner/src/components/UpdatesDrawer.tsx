@@ -16,6 +16,39 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "19.04.2026",
+        items: [
+            {
+                title: "📚 NPS Rules Notes Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>CCS (Implementation of NPS) Rules, 2021</strong> and <strong>CCS (Payment of Gratuity under NPS) Rules, 2021</strong> PDF notes for both LDCE IP and PS Group B courses.</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">LDCE IP & PS Group B</p>
+                                <ul className="space-y-1.5 mt-1 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">✅</span>
+                                        <span>CCS (Implementation of NPS) Rules, 2021</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">✅</span>
+                                        <span>CCS (Payment of Gratuity under NPS) Rules, 2021</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "17.04.2026",
         items: [
             {
