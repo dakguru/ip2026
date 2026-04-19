@@ -1,16 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { 
-    ArrowLeft, Users, BarChart3, TrendingUp, UserCheck, UserMinus, 
+import {
+    ArrowLeft, Users, BarChart3, TrendingUp, UserCheck, UserMinus,
     Monitor, Clock, Filter, Download, Search, AlertCircle,
     Calendar, ArrowUpRight, Smartphone, Tablet as TabletIcon, Laptop,
-    ChevronRight, MoreHorizontal, LayoutDashboard
+    ChevronRight, MoreHorizontal, LayoutDashboard, Shield, ShieldAlert,
+    X, ExternalLink
 } from "lucide-react";
-import { 
-    LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
-    Tooltip, ResponsiveContainer, PieChart, Pie, Cell, AreaChart, Area 
+import {
+    LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid,
+    Tooltip, ResponsiveContainer, PieChart, Pie, Cell, AreaChart, Area
 } from "recharts";
 import { format, subDays, differenceInDays } from "date-fns";
 import { saveAs } from "file-saver";
@@ -48,6 +49,27 @@ interface UserRecord {
     frequencyPerWeek: string;
     activityStatus: string;
     devicePreference: string;
+    lastIp: string | null;
+    distinctIpCount: number;
+    suspiciousFlag: boolean;
+}
+
+interface LoginLogRecord {
+    _id: string;
+    loginAt: string;
+    ip: string;
+    location?: { city?: string; region?: string; country?: string };
+    device?: { type?: string; os?: string; browser?: string };
+    sessionId?: string;
+}
+
+function maskIp(ip: string | null): string {
+    if (!ip || ip === '0.0.0.0') return 'Unknown';
+    const parts = ip.split('.');
+    if (parts.length === 4) return `${parts[0]}.${parts[1]}.xxx.xxx`;
+    // IPv6 — show first 2 segments only
+    const segs = ip.split(':');
+    return segs.slice(0, 2).join(':') + ':xxxx:…';
 }
 
 export default function AnalyticsDashboard() {
@@ -59,17 +81,27 @@ export default function AnalyticsDashboard() {
     const [filters, setFilters] = useState({
         membership: "all",
         activity: "all",
-        role: "all"
+        role: "all",
+        suspicious: "all"
     });
     const [page, setPage] = useState(1);
     const [pageSize] = useState(25);
     const [days, setDays] = useState(30);
     const [seeding, setSeeding] = useState(false);
 
+    // Login history modal state
+    const [selectedUser, setSelectedUser] = useState<UserRecord | null>(null);
+    const [loginLogs, setLoginLogs] = useState<LoginLogRecord[]>([]);
+    const [logsLoading, setLogsLoading] = useState(false);
+    const [logPage, setLogPage] = useState(1);
+    const [logPages, setLogPages] = useState(1);
+    const [logTotal, setLogTotal] = useState(0);
+    const [logDateFrom, setLogDateFrom] = useState('');
+    const [logDateTo, setLogDateTo] = useState('');
+    const [logIpFilter, setLogIpFilter] = useState('');
+
     useEffect(() => {
         fetchData();
-        
-        // Auto-refresh every 60 seconds
         const interval = setInterval(fetchData, 60000);
         return () => clearInterval(interval);
     }, [days]);
@@ -97,6 +129,75 @@ export default function AnalyticsDashboard() {
         }
     };
 
+    const fetchLoginLogs = useCallback(async (userId: string, page: number) => {
+        setLogsLoading(true);
+        try {
+            const params = new URLSearchParams({ page: String(page), limit: '50' });
+            if (logDateFrom) params.set('from_date', logDateFrom);
+            if (logDateTo) params.set('to_date', logDateTo);
+            if (logIpFilter) params.set('ip', logIpFilter);
+
+            const res = await fetch(`/api/developer/analytics/users/${userId}/login-logs?${params}`);
+            const data = await res.json();
+            setLoginLogs(data.logs || []);
+            setLogPages(data.pages || 1);
+            setLogTotal(data.total || 0);
+        } catch (error) {
+            console.error("Failed to fetch login logs:", error);
+        } finally {
+            setLogsLoading(false);
+        }
+    }, [logDateFrom, logDateTo, logIpFilter]);
+
+    const openLoginHistory = (user: UserRecord) => {
+        setSelectedUser(user);
+        setLogPage(1);
+        setLogDateFrom('');
+        setLogDateTo('');
+        setLogIpFilter('');
+        setLoginLogs([]);
+    };
+
+    useEffect(() => {
+        if (selectedUser) {
+            fetchLoginLogs(selectedUser.id, logPage);
+        }
+    }, [selectedUser, logPage, fetchLoginLogs]);
+
+    const applyLogFilters = () => {
+        if (selectedUser) {
+            setLogPage(1);
+            fetchLoginLogs(selectedUser.id, 1);
+        }
+    };
+
+    const exportLoginLogsCSV = async () => {
+        if (!selectedUser) return;
+        const params = new URLSearchParams({ limit: '5000', page: '1', export: '1' });
+        if (logDateFrom) params.set('from_date', logDateFrom);
+        if (logDateTo) params.set('to_date', logDateTo);
+        if (logIpFilter) params.set('ip', logIpFilter);
+
+        const res = await fetch(`/api/developer/analytics/users/${selectedUser.id}/login-logs?${params}`);
+        const data = await res.json();
+        const logs: LoginLogRecord[] = data.logs || [];
+
+        const headers = ["Date & Time", "IP Address", "Location", "Device", "OS", "Browser", "Session ID"];
+        const rows = logs.map(l => [
+            format(new Date(l.loginAt), 'yyyy-MM-dd HH:mm:ss'),
+            l.ip || 'Unknown',
+            [l.location?.city, l.location?.region, l.location?.country].filter(Boolean).join(', ') || 'N/A',
+            l.device?.type || 'Unknown',
+            l.device?.os || 'Unknown',
+            l.device?.browser || 'Unknown',
+            l.sessionId || 'N/A'
+        ]);
+
+        const csvContent = [headers, ...rows].map(e => e.map(v => `"${v}"`).join(",")).join("\n");
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        saveAs(blob, `login-history-${selectedUser.email}-${format(new Date(), 'yyyy-MM-dd')}.csv`);
+    };
+
     const seedMockData = async () => {
         if (!confirm("This will generate fake login records for testing. Continue?")) return;
         setSeeding(true);
@@ -114,30 +215,37 @@ export default function AnalyticsDashboard() {
     };
 
     const exportToCSV = () => {
-        const headers = ["Name", "Email", "Role", "Membership", "Total Logins", "Last Login", "Activity Status"];
+        const headers = ["Name", "Email", "Role", "Membership", "Total Logins", "Last Login", "Activity Status", "Last IP", "Distinct IPs (Recent)", "Suspicious"];
         const rows = users.map(u => [
-            u.name, u.email, u.role, u.membership, u.totalLogins, 
-            u.lastLogin ? format(new Date(u.lastLogin), 'PP') : 'Never', 
-            u.activityStatus
+            u.name, u.email, u.role, u.membership, u.totalLogins,
+            u.lastLogin ? format(new Date(u.lastLogin), 'PP') : 'Never',
+            u.activityStatus,
+            u.lastIp || 'Unknown',
+            u.distinctIpCount,
+            u.suspiciousFlag ? 'Yes' : 'No'
         ]);
-        
+
         const csvContent = [headers, ...rows].map(e => e.join(",")).join("\n");
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
         saveAs(blob, `user-analytics-${format(new Date(), 'yyyy-MM-dd')}.csv`);
     };
 
     const filteredUsers = users.filter(u => {
-        const matchesSearch = u.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                             u.email.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesSearch = u.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            u.email.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesMembership = filters.membership === "all" || u.membership === filters.membership;
         const matchesActivity = filters.activity === "all" || u.activityStatus === filters.activity;
         const matchesRole = filters.role === "all" || u.role === filters.role;
+        const matchesSuspicious = filters.suspicious === "all" ||
+            (filters.suspicious === "suspicious" && u.suspiciousFlag) ||
+            (filters.suspicious === "healthy" && !u.suspiciousFlag);
 
-        return matchesSearch && matchesMembership && matchesActivity && matchesRole;
+        return matchesSearch && matchesMembership && matchesActivity && matchesRole && matchesSuspicious;
     });
 
     const paginatedUsers = filteredUsers.slice((page - 1) * pageSize, page * pageSize);
     const totalPages = Math.ceil(filteredUsers.length / pageSize);
+    const suspiciousCount = users.filter(u => u.suspiciousFlag).length;
 
     if (loading) {
         return (
@@ -153,7 +261,7 @@ export default function AnalyticsDashboard() {
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-3 md:p-8 transition-colors selection:bg-indigo-100 dark:selection:bg-indigo-900/30">
             <div className="max-w-7xl mx-auto pb-12">
-                
+
                 {/* Header Section */}
                 <div className="flex flex-col gap-6 mb-8 mt-2">
                     <div className="flex items-center justify-between">
@@ -161,8 +269,8 @@ export default function AnalyticsDashboard() {
                             <ArrowLeft className="w-3.5 h-3.5" /> Dashboard
                         </Link>
                         <div className="flex items-center gap-2">
-                             {process.env.NODE_ENV !== 'production' && (
-                                <button 
+                            {process.env.NODE_ENV !== 'production' && (
+                                <button
                                     onClick={seedMockData}
                                     disabled={seeding}
                                     className="p-2.5 bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-900/30 rounded-xl text-amber-600 dark:text-amber-500 hover:bg-amber-100 transition-all shadow-sm active:scale-95"
@@ -171,7 +279,7 @@ export default function AnalyticsDashboard() {
                                     <Users className="w-4 h-4" />
                                 </button>
                             )}
-                            <button 
+                            <button
                                 onClick={fetchData}
                                 className="p-2.5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all shadow-sm active:scale-95"
                                 title="Refresh"
@@ -197,24 +305,23 @@ export default function AnalyticsDashboard() {
                                 Real-time monitoring of user engagement, login patterns, and regional activity distributions.
                             </p>
                         </div>
-                        
+
                         <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
                             <div className="flex bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-1 shadow-sm w-full sm:w-auto">
                                 {[7, 30, 90].map((d) => (
                                     <button
                                         key={d}
                                         onClick={() => setDays(d)}
-                                        className={`flex-1 sm:flex-none px-5 py-2 text-[10px] font-black uppercase rounded-lg transition-all ${
-                                            days === d 
-                                            ? 'bg-zinc-900 dark:bg-white text-white dark:text-black shadow-lg shadow-zinc-200 dark:shadow-none' 
+                                        className={`flex-1 sm:flex-none px-5 py-2 text-[10px] font-black uppercase rounded-lg transition-all ${days === d
+                                            ? 'bg-zinc-900 dark:bg-white text-white dark:text-black shadow-lg shadow-zinc-200 dark:shadow-none'
                                             : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200'
-                                        }`}
+                                            }`}
                                     >
                                         {d} Days
                                     </button>
                                 ))}
                             </div>
-                            <button 
+                            <button
                                 onClick={exportToCSV}
                                 className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition-all shadow-lg shadow-indigo-200 dark:shadow-none font-bold text-xs uppercase tracking-wider active:scale-95"
                             >
@@ -224,20 +331,19 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                {/* Stat Cards - Optimized for Mobile (Scroll horizontally if needed, or stack) */}
+                {/* Stat Cards */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-8">
                     <StatCard title="Total Logins" value={summary?.totalLoginsToday || 0} subValue="24h Window" icon={<TrendingUp />} color="blue" />
                     <StatCard title="Active Users" value={summary?.uniqueUsersToday || 0} subValue="Today" icon={<UserCheck />} color="emerald" />
                     <StatCard title="Peak Hour" value={summary?.peakLoginTime || "N/A"} subValue="Most Active" icon={<Clock />} color="amber" />
-                    <StatCard title="Growth" value={((trends?.userTypes.firstTime || 0) / (summary?.totalUsersCount || 1) * 100).toFixed(1) + "%"} subValue="New Users" icon={<ArrowUpRight />} color="indigo" />
+                    <StatCard title="Suspicious" value={suspiciousCount} subValue="Multi-IP Detected" icon={<ShieldAlert />} color="rose" />
                 </div>
 
                 {/* Primary Visualization Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-                    {/* Main Chart Card */}
                     <div className="lg:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-5 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none overflow-hidden relative group">
                         <div className="absolute top-0 right-0 p-8 opacity-[0.03] dark:opacity-[0.05] pointer-events-none group-hover:scale-110 transition-transform duration-700">
-                             <BarChart3 size={150} />
+                            <BarChart3 size={150} />
                         </div>
                         <div className="flex items-center justify-between mb-8 relative">
                             <div>
@@ -254,24 +360,24 @@ export default function AnalyticsDashboard() {
                                     <AreaChart data={trends?.dailyTrends} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                         <defs>
                                             <linearGradient id="colorEngagement" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="5%" stopColor="#6366f1" stopOpacity={0.2}/>
-                                                <stop offset="95%" stopColor="#6366f1" stopOpacity={0}/>
+                                                <stop offset="5%" stopColor="#6366f1" stopOpacity={0.2} />
+                                                <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
                                             </linearGradient>
                                         </defs>
                                         <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#88888815" />
-                                        <XAxis 
-                                            dataKey="_id" 
+                                        <XAxis
+                                            dataKey="_id"
                                             axisLine={false}
                                             tickLine={false}
-                                            tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }} 
+                                            tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }}
                                             tickFormatter={(val) => format(new Date(val), 'dd MMM')}
                                             minTickGap={25}
                                         />
                                         <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }} />
-                                        <Tooltip 
-                                            contentStyle={{ 
-                                                borderRadius: '20px', 
-                                                border: 'none', 
+                                        <Tooltip
+                                            contentStyle={{
+                                                borderRadius: '20px',
+                                                border: 'none',
                                                 boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1)',
                                                 backgroundColor: 'rgba(0, 0, 0, 0.8)',
                                                 color: '#fff',
@@ -282,13 +388,13 @@ export default function AnalyticsDashboard() {
                                             formatter={(value) => [`${value} Logins`, 'Activity']}
                                             labelFormatter={(val) => format(new Date(val), 'PPPP')}
                                         />
-                                        <Area 
-                                            type="monotone" 
-                                            dataKey="count" 
-                                            stroke="#6366f1" 
-                                            strokeWidth={4} 
-                                            fillOpacity={1} 
-                                            fill="url(#colorEngagement)" 
+                                        <Area
+                                            type="monotone"
+                                            dataKey="count"
+                                            stroke="#6366f1"
+                                            strokeWidth={4}
+                                            fillOpacity={1}
+                                            fill="url(#colorEngagement)"
                                             animationDuration={2000}
                                         />
                                     </AreaChart>
@@ -299,25 +405,24 @@ export default function AnalyticsDashboard() {
                         </div>
                     </div>
 
-                    {/* Hourly Distribution Card */}
                     <div className="bg-white dark:bg-zinc-900 rounded-3xl p-5 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none">
                         <h3 className="text-xl font-black text-zinc-900 dark:text-white tracking-tight mb-8">Hourly Distribution</h3>
                         <div className="h-[280px] md:h-[350px] w-full">
                             {trends?.hourlyDistribution && trends.hourlyDistribution.length > 0 ? (
                                 <ResponsiveContainer width="100%" height="100%">
                                     <BarChart data={trends?.hourlyDistribution} margin={{ top: 0, right: 0, left: -20, bottom: 0 }}>
-                                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#88888815"/>
-                                        <XAxis 
-                                            dataKey="_id" 
+                                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#88888815" />
+                                        <XAxis
+                                            dataKey="_id"
                                             axisLine={false}
                                             tickLine={false}
-                                            tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }} 
-                                            tickFormatter={(h) => `${h}h`} 
+                                            tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }}
+                                            tickFormatter={(h) => `${h}h`}
                                         />
                                         <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fontWeight: 700, fill: '#888' }} />
-                                        <Tooltip 
-                                            cursor={{fill: '#8888880a'}} 
-                                            contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }} 
+                                        <Tooltip
+                                            cursor={{ fill: '#8888880a' }}
+                                            contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}
                                             labelFormatter={(h) => `${h}:00 - ${h}:59`}
                                         />
                                         <Bar dataKey="count" fill="#10b981" radius={[6, 6, 0, 0]} />
@@ -330,25 +435,24 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                {/* Secondary Row: Device & Composition */}
+                {/* Secondary Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    {/* Visitor Makeup */}
                     <div className="bg-zinc-900 dark:bg-zinc-800 text-white rounded-3xl p-6 md:p-8 flex flex-col justify-between overflow-hidden relative">
-                         <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
-                         <div className="relative z-10">
+                        <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl" />
+                        <div className="relative z-10">
                             <h4 className="text-xs font-black uppercase tracking-[0.2em] text-indigo-400 mb-6">User Composition</h4>
                             <div className="flex items-center gap-10">
                                 <div className="h-28 w-28 shrink-0">
                                     <ResponsiveContainer width="100%" height="100%">
                                         <PieChart>
-                                            <Pie 
+                                            <Pie
                                                 data={[
                                                     { name: 'New', value: trends?.userTypes.firstTime || 0 },
                                                     { name: 'Returning', value: trends?.userTypes.returning || 0 }
-                                                ]} 
-                                                innerRadius={35} 
-                                                outerRadius={50} 
-                                                paddingAngle={8} 
+                                                ]}
+                                                innerRadius={35}
+                                                outerRadius={50}
+                                                paddingAngle={8}
                                                 dataKey="value"
                                                 animationBegin={500}
                                             >
@@ -375,20 +479,18 @@ export default function AnalyticsDashboard() {
                                     </div>
                                 </div>
                             </div>
-                         </div>
+                        </div>
                     </div>
 
-                    {/* Retention Progress */}
                     <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none">
-                         <h4 className="text-xs font-black uppercase tracking-[0.2em] text-zinc-400 mb-6 font-mono">Retention Pulse</h4>
-                         <div className="space-y-6">
-                             <RetentionItem label="7-Day Inactive" value={summary?.inactive7Days || 0} total={summary?.totalUsersCount || 1} color="#f59e0b" />
-                             <RetentionItem label="15-Day Inactive" value={summary?.inactive15Days || 0} total={summary?.totalUsersCount || 1} color="#f97316" />
-                             <RetentionItem label="30-Day Inactive" value={summary?.inactive30Days || 0} total={summary?.totalUsersCount || 1} color="#ef4444" />
-                         </div>
+                        <h4 className="text-xs font-black uppercase tracking-[0.2em] text-zinc-400 mb-6 font-mono">Retention Pulse</h4>
+                        <div className="space-y-6">
+                            <RetentionItem label="7-Day Inactive" value={summary?.inactive7Days || 0} total={summary?.totalUsersCount || 1} color="#f59e0b" />
+                            <RetentionItem label="15-Day Inactive" value={summary?.inactive15Days || 0} total={summary?.totalUsersCount || 1} color="#f97316" />
+                            <RetentionItem label="30-Day Inactive" value={summary?.inactive30Days || 0} total={summary?.totalUsersCount || 1} color="#ef4444" />
+                        </div>
                     </div>
 
-                    {/* Platform Stats */}
                     <div className="bg-gradient-to-br from-indigo-600 to-indigo-800 text-white rounded-3xl p-6 md:p-8 shadow-xl shadow-indigo-200/50 dark:shadow-none flex flex-col justify-between">
                         <div>
                             <h4 className="text-xs font-black uppercase tracking-[0.2em] text-indigo-200 mb-6">Platform Distribution</h4>
@@ -397,51 +499,57 @@ export default function AnalyticsDashboard() {
                             </p>
                         </div>
                         <div className="flex items-center justify-between border-t border-indigo-500/30 pt-6">
-                             <div className="flex flex-col items-center">
-                                 <Smartphone className="w-5 h-5 mb-2 text-indigo-100" />
-                                 <span className="text-xl font-black">74%</span>
-                                 <span className="text-[9px] font-bold uppercase text-indigo-300">App</span>
-                             </div>
-                             <div className="flex flex-col items-center">
-                                 <Monitor className="w-5 h-5 mb-2 text-indigo-100" />
-                                 <span className="text-xl font-black">18%</span>
-                                 <span className="text-[9px] font-bold uppercase text-indigo-300">Desktop</span>
-                             </div>
-                             <div className="flex flex-col items-center">
-                                 <Monitor className="w-5 h-5 mb-2 text-indigo-100 rotate-90" />
-                                 <span className="text-xl font-black">8%</span>
-                                 <span className="text-[9px] font-bold uppercase text-indigo-300">Mobile Web</span>
-                             </div>
+                            <div className="flex flex-col items-center">
+                                <Smartphone className="w-5 h-5 mb-2 text-indigo-100" />
+                                <span className="text-xl font-black">74%</span>
+                                <span className="text-[9px] font-bold uppercase text-indigo-300">App</span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <Monitor className="w-5 h-5 mb-2 text-indigo-100" />
+                                <span className="text-xl font-black">18%</span>
+                                <span className="text-[9px] font-bold uppercase text-indigo-300">Desktop</span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <Monitor className="w-5 h-5 mb-2 text-indigo-100 rotate-90" />
+                                <span className="text-xl font-black">8%</span>
+                                <span className="text-[9px] font-bold uppercase text-indigo-300">Mobile Web</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* User Deep Dive - Mobile Card Based / Desktop Table */}
+                {/* User Deep Dive */}
                 <div className="space-y-6">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <h2 className="text-2xl font-black text-zinc-900 dark:text-white tracking-tight">Active User Registry</h2>
-                            <p className="text-sm text-zinc-500 font-medium italic">Showing the most recent activity across all membership tiers</p>
+                            <p className="text-sm text-zinc-500 font-medium italic">
+                                Showing the most recent activity across all membership tiers
+                                {suspiciousCount > 0 && (
+                                    <span className="ml-2 text-rose-500 font-bold not-italic">
+                                        — {suspiciousCount} flagged for multi-IP usage
+                                    </span>
+                                )}
+                            </p>
                         </div>
                         <div className="flex items-center gap-3 w-full md:w-auto">
                             <div className="relative flex-1 md:w-80">
                                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
-                                <input 
+                                <input
                                     type="text"
                                     placeholder="Filter by name or email..."
                                     value={searchTerm}
-                                    onChange={(e) => {setSearchTerm(e.target.value); setPage(1);}}
+                                    onChange={(e) => { setSearchTerm(e.target.value); setPage(1); }}
                                     className="w-full pl-10 pr-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm transition-all"
                                 />
                             </div>
                         </div>
                     </div>
 
-                    {/* Filter Bar - Mobile Scrollable */}
                     <div className="flex items-center gap-2 overflow-x-auto pb-2 -mx-3 px-3 no-scrollbar">
-                        <select 
+                        <select
                             value={filters.membership}
-                            onChange={(e) => {setFilters(prev => ({...prev, membership: e.target.value})); setPage(1);}}
+                            onChange={(e) => { setFilters(prev => ({ ...prev, membership: e.target.value })); setPage(1); }}
                             className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-4 py-2 text-xs font-bold text-zinc-600 dark:text-zinc-300 shrink-0 outline-none focus:ring-2 focus:ring-indigo-500 transition-all shadow-sm"
                         >
                             <option value="all">Tier: All</option>
@@ -451,9 +559,9 @@ export default function AnalyticsDashboard() {
                             <option value="silver">Tier: Silver</option>
                             <option value="free">Tier: Free</option>
                         </select>
-                        <select 
+                        <select
                             value={filters.activity}
-                            onChange={(e) => {setFilters(prev => ({...prev, activity: e.target.value})); setPage(1);}}
+                            onChange={(e) => { setFilters(prev => ({ ...prev, activity: e.target.value })); setPage(1); }}
                             className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg px-4 py-2 text-xs font-bold text-zinc-600 dark:text-zinc-300 shrink-0 outline-none focus:ring-2 focus:ring-indigo-500 transition-all shadow-sm"
                         >
                             <option value="all">Engagement: All</option>
@@ -461,18 +569,26 @@ export default function AnalyticsDashboard() {
                             <option value="Moderate">Status: Moderate</option>
                             <option value="Inactive">Status: Inactive</option>
                         </select>
+                        <select
+                            value={filters.suspicious}
+                            onChange={(e) => { setFilters(prev => ({ ...prev, suspicious: e.target.value })); setPage(1); }}
+                            className="bg-white dark:bg-zinc-900 border border-rose-200 dark:border-rose-900/40 rounded-lg px-4 py-2 text-xs font-bold text-zinc-600 dark:text-zinc-300 shrink-0 outline-none focus:ring-2 focus:ring-rose-500 transition-all shadow-sm"
+                        >
+                            <option value="all">IP Status: All</option>
+                            <option value="suspicious">⚠ Suspicious Only</option>
+                            <option value="healthy">✓ Healthy Only</option>
+                        </select>
                         <div className="flex-1 shrink-0 px-2 text-[10px] uppercase font-black tracking-widest text-zinc-400">
-                             {filteredUsers.length} Records Found
+                            {filteredUsers.length} Records Found
                         </div>
                     </div>
 
-                    {/* Mobile: Card View | Desktop: Table View */}
                     <div className="bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none overflow-hidden">
-                        {/* Mobile Grid */}
+                        {/* Mobile Card View */}
                         <div className="md:hidden divide-y divide-zinc-100 dark:divide-zinc-800">
                             {paginatedUsers.length > 0 ? (
                                 paginatedUsers.map((u) => (
-                                    <MobileUserCard key={u.id} user={u} />
+                                    <MobileUserCard key={u.id} user={u} onViewLogs={() => openLoginHistory(u)} />
                                 ))
                             ) : (
                                 <EmptyState />
@@ -480,82 +596,113 @@ export default function AnalyticsDashboard() {
                         </div>
 
                         {/* Desktop Table */}
-                        <table className="hidden md:table w-full text-left">
-                            <thead className="bg-zinc-50 dark:bg-zinc-800/50 text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em] border-b border-zinc-100 dark:border-zinc-800">
-                                <tr>
-                                    <th className="px-8 py-5">S.No</th>
-                                    <th className="px-8 py-5">Identity</th>
-                                    <th className="px-8 py-5">Access Tier</th>
-                                    <th className="px-8 py-5 text-center">Logs</th>
-                                    <th className="px-8 py-5">Recent Activity</th>
-                                    <th className="px-8 py-5">Engagement</th>
-                                    <th className="px-8 py-5">Platform</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-zinc-50 dark:divide-zinc-800">
-                                {paginatedUsers.map((u, idx) => (
-                                    <tr key={u.id} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-all group">
-                                        <td className="px-8 py-5 text-xs font-mono font-bold text-zinc-400">
-                                            {(page - 1) * pageSize + idx + 1}
-                                        </td>
-                                        <td className="px-8 py-5">
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl flex items-center justify-center font-black text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all text-sm uppercase">
-                                                    {u.name.charAt(0)}
-                                                </div>
-                                                <div>
-                                                    <div className="font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-tight text-sm leading-none">{u.name}</div>
-                                                    <div className="text-xs text-zinc-500 mt-1">{u.email}</div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td className="px-8 py-5">
-                                            <MembershipBadge tier={u.membership} />
-                                        </td>
-                                        <td className="px-8 py-5 text-center font-mono font-black text-xs">
-                                            {u.totalLogins}
-                                        </td>
-                                        <td className="px-8 py-5">
-                                            <div className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
-                                                {u.lastLogin ? format(new Date(u.lastLogin), 'PPp') : 'Never'}
-                                            </div>
-                                            <div className="text-[10px] text-zinc-400 font-medium">
-                                                {u.daysSinceLastLogin === 'Never' ? 'Initial entry' : `${u.daysSinceLastLogin} days since visit`}
-                                            </div>
-                                        </td>
-                                        <td className="px-8 py-5">
-                                            <StatusBadge status={u.activityStatus} />
-                                        </td>
-                                        <td className="px-8 py-5">
-                                            <div className="flex items-center gap-2">
-                                                {getDeviceIcon(u.devicePreference)}
-                                                <span className="text-[10px] uppercase font-bold text-zinc-400">{u.devicePreference.replace('_', ' ')}</span>
-                                            </div>
-                                        </td>
+                        <div className="hidden md:block overflow-x-auto">
+                            <table className="w-full text-left min-w-[900px]">
+                                <thead className="bg-zinc-50 dark:bg-zinc-800/50 text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em] border-b border-zinc-100 dark:border-zinc-800">
+                                    <tr>
+                                        <th className="px-6 py-5">S.No</th>
+                                        <th className="px-6 py-5">Identity</th>
+                                        <th className="px-6 py-5">Access Tier</th>
+                                        <th className="px-6 py-5 text-center">Logs</th>
+                                        <th className="px-6 py-5">Recent Activity</th>
+                                        <th className="px-6 py-5">Engagement</th>
+                                        <th className="px-6 py-5">Last IP</th>
+                                        <th className="px-6 py-5">IP Status</th>
+                                        <th className="px-6 py-5 text-center">Actions</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody className="divide-y divide-zinc-50 dark:divide-zinc-800">
+                                    {paginatedUsers.map((u, idx) => (
+                                        <tr
+                                            key={u.id}
+                                            className={`transition-all group ${u.suspiciousFlag
+                                                ? 'bg-rose-50/60 dark:bg-rose-950/20 hover:bg-rose-50 dark:hover:bg-rose-950/30'
+                                                : 'hover:bg-zinc-50 dark:hover:bg-zinc-800/30'
+                                                }`}
+                                        >
+                                            <td className="px-6 py-5 text-xs font-mono font-bold text-zinc-400">
+                                                {(page - 1) * pageSize + idx + 1}
+                                            </td>
+                                            <td className="px-6 py-5">
+                                                <div className="flex items-center gap-3">
+                                                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-sm uppercase transition-all ${u.suspiciousFlag
+                                                        ? 'bg-rose-100 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400 group-hover:bg-rose-600 group-hover:text-white'
+                                                        : 'bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white'
+                                                        }`}>
+                                                        {u.name.charAt(0)}
+                                                    </div>
+                                                    <div>
+                                                        <div className="font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-tight text-sm leading-none flex items-center gap-1.5">
+                                                            {u.name}
+                                                            {u.suspiciousFlag && <ShieldAlert className="w-3 h-3 text-rose-500 shrink-0" />}
+                                                        </div>
+                                                        <div className="text-xs text-zinc-500 mt-1">{u.email}</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="px-6 py-5">
+                                                <MembershipBadge tier={u.membership} />
+                                            </td>
+                                            <td className="px-6 py-5 text-center font-mono font-black text-xs">
+                                                {u.totalLogins}
+                                            </td>
+                                            <td className="px-6 py-5">
+                                                <div className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
+                                                    {u.lastLogin ? format(new Date(u.lastLogin), 'PPp') : 'Never'}
+                                                </div>
+                                                <div className="text-[10px] text-zinc-400 font-medium">
+                                                    {u.daysSinceLastLogin === 'Never' ? 'Initial entry' : `${u.daysSinceLastLogin} days since visit`}
+                                                </div>
+                                            </td>
+                                            <td className="px-6 py-5">
+                                                <StatusBadge status={u.activityStatus} />
+                                            </td>
+                                            <td className="px-6 py-5">
+                                                <div className="font-mono text-xs text-zinc-600 dark:text-zinc-400 leading-none">
+                                                    {maskIp(u.lastIp)}
+                                                </div>
+                                                {u.distinctIpCount > 0 && (
+                                                    <div className="text-[10px] text-zinc-400 mt-1">
+                                                        {u.distinctIpCount} distinct {u.distinctIpCount === 1 ? 'IP' : 'IPs'} (last 10)
+                                                    </div>
+                                                )}
+                                            </td>
+                                            <td className="px-6 py-5">
+                                                <IpStatusBadge suspicious={u.suspiciousFlag} count={u.distinctIpCount} />
+                                            </td>
+                                            <td className="px-6 py-5 text-center">
+                                                <button
+                                                    onClick={() => openLoginHistory(u)}
+                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 border border-zinc-200 dark:border-zinc-700 hover:border-indigo-200 dark:hover:border-indigo-800 rounded-lg text-[10px] font-black uppercase tracking-wide text-zinc-600 dark:text-zinc-300 hover:text-indigo-700 dark:hover:text-indigo-400 transition-all active:scale-95"
+                                                >
+                                                    <ExternalLink className="w-3 h-3" /> View
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
-                    {/* Enhanced Pagination */}
+                    {/* Pagination */}
                     {filteredUsers.length > 0 && (
                         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
                             <span className="text-[10px] uppercase font-black tracking-widest text-zinc-400">
                                 View {Math.min(filteredUsers.length, (page - 1) * pageSize + 1)} - {Math.min(filteredUsers.length, page * pageSize)} <span className="text-zinc-300 mx-1">/</span> Total {filteredUsers.length}
                             </span>
                             <div className="flex items-center gap-1">
-                                <PaginationButton 
-                                    onClick={() => {setPage(p => Math.max(1, p - 1)); window.scrollTo({top: 0, behavior: 'smooth'});}} 
+                                <PaginationButton
+                                    onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                                     disabled={page === 1}
                                 ><ArrowLeft className="w-3.5 h-3.5" /></PaginationButton>
-                                
+
                                 <div className="flex items-center px-4 h-10 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl text-xs font-black text-zinc-900 dark:text-white shadow-sm">
                                     {page} <span className="mx-2 opacity-30">|</span> {totalPages}
                                 </div>
 
-                                <PaginationButton 
-                                    onClick={() => {setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({top: 0, behavior: 'smooth'});}} 
+                                <PaginationButton
+                                    onClick={() => { setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                                     disabled={page === totalPages}
                                 ><ArrowLeft className="w-3.5 h-3.5 rotate-180" /></PaginationButton>
                             </div>
@@ -575,7 +722,244 @@ export default function AnalyticsDashboard() {
                         </p>
                     </div>
                 </div>
+            </div>
 
+            {/* Login History Modal */}
+            {selectedUser && (
+                <LoginHistoryModal
+                    user={selectedUser}
+                    logs={loginLogs}
+                    loading={logsLoading}
+                    page={logPage}
+                    pages={logPages}
+                    total={logTotal}
+                    dateFrom={logDateFrom}
+                    dateTo={logDateTo}
+                    ipFilter={logIpFilter}
+                    onDateFromChange={setLogDateFrom}
+                    onDateToChange={setLogDateTo}
+                    onIpFilterChange={setLogIpFilter}
+                    onApplyFilters={applyLogFilters}
+                    onPageChange={setLogPage}
+                    onExport={exportLoginLogsCSV}
+                    onClose={() => setSelectedUser(null)}
+                />
+            )}
+        </div>
+    );
+}
+
+// --- Login History Modal ---
+
+interface LoginHistoryModalProps {
+    user: UserRecord;
+    logs: LoginLogRecord[];
+    loading: boolean;
+    page: number;
+    pages: number;
+    total: number;
+    dateFrom: string;
+    dateTo: string;
+    ipFilter: string;
+    onDateFromChange: (v: string) => void;
+    onDateToChange: (v: string) => void;
+    onIpFilterChange: (v: string) => void;
+    onApplyFilters: () => void;
+    onPageChange: (p: number) => void;
+    onExport: () => void;
+    onClose: () => void;
+}
+
+function LoginHistoryModal({
+    user, logs, loading, page, pages, total,
+    dateFrom, dateTo, ipFilter,
+    onDateFromChange, onDateToChange, onIpFilterChange,
+    onApplyFilters, onPageChange, onExport, onClose
+}: LoginHistoryModalProps) {
+    return (
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
+            {/* Backdrop */}
+            <div
+                className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                onClick={onClose}
+            />
+
+            {/* Modal */}
+            <div className="relative w-full sm:max-w-5xl max-h-[95vh] sm:max-h-[90vh] bg-white dark:bg-zinc-900 sm:rounded-3xl rounded-t-3xl border border-zinc-200 dark:border-zinc-800 shadow-2xl flex flex-col overflow-hidden">
+                {/* Modal Header */}
+                <div className="flex items-start justify-between p-6 border-b border-zinc-100 dark:border-zinc-800 shrink-0">
+                    <div className="flex items-center gap-4">
+                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-black text-lg uppercase ${user.suspiciousFlag
+                            ? 'bg-rose-100 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400'
+                            : 'bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400'
+                            }`}>
+                            {user.name.charAt(0)}
+                        </div>
+                        <div>
+                            <div className="flex items-center gap-2">
+                                <h3 className="text-lg font-black text-zinc-900 dark:text-white uppercase tracking-tight leading-none">
+                                    {user.name}
+                                </h3>
+                                <IpStatusBadge suspicious={user.suspiciousFlag} count={user.distinctIpCount} />
+                            </div>
+                            <p className="text-xs text-zinc-500 mt-1">{user.email}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                        <button
+                            onClick={onExport}
+                            className="flex items-center gap-1.5 px-4 py-2 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 rounded-xl text-[10px] font-black uppercase tracking-wider text-indigo-700 dark:text-indigo-400 hover:bg-indigo-100 transition-all active:scale-95"
+                        >
+                            <Download className="w-3 h-3" /> Export CSV
+                        </button>
+                        <button
+                            onClick={onClose}
+                            className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-xl text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all active:scale-95"
+                        >
+                            <X className="w-4 h-4" />
+                        </button>
+                    </div>
+                </div>
+
+                {/* Summary bar */}
+                <div className="flex items-center gap-6 px-6 py-3 bg-zinc-50 dark:bg-zinc-800/30 border-b border-zinc-100 dark:border-zinc-800 shrink-0">
+                    <div className="text-[10px] font-black uppercase tracking-widest text-zinc-500">
+                        Total Logins: <span className="text-zinc-900 dark:text-white">{user.totalLogins}</span>
+                    </div>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-zinc-500">
+                        Distinct IPs (last 10): <span className={user.suspiciousFlag ? 'text-rose-600' : 'text-emerald-600'}>{user.distinctIpCount}</span>
+                    </div>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-zinc-500">
+                        Last IP: <span className="text-zinc-900 dark:text-white font-mono">{user.lastIp || 'Unknown'}</span>
+                    </div>
+                </div>
+
+                {/* Filters */}
+                <div className="flex flex-wrap items-end gap-3 p-4 border-b border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 shrink-0">
+                    <div className="flex flex-col gap-1">
+                        <label className="text-[9px] font-black uppercase tracking-widest text-zinc-400">From Date</label>
+                        <input
+                            type="date"
+                            value={dateFrom}
+                            onChange={e => onDateFromChange(e.target.value)}
+                            className="px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg text-xs font-medium outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                        />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <label className="text-[9px] font-black uppercase tracking-widest text-zinc-400">To Date</label>
+                        <input
+                            type="date"
+                            value={dateTo}
+                            onChange={e => onDateToChange(e.target.value)}
+                            className="px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg text-xs font-medium outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                        />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <label className="text-[9px] font-black uppercase tracking-widest text-zinc-400">IP Address</label>
+                        <input
+                            type="text"
+                            placeholder="e.g. 192.168"
+                            value={ipFilter}
+                            onChange={e => onIpFilterChange(e.target.value)}
+                            className="px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg text-xs font-mono outline-none focus:ring-2 focus:ring-indigo-500 transition-all w-36"
+                        />
+                    </div>
+                    <button
+                        onClick={onApplyFilters}
+                        className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-[10px] font-black uppercase tracking-wider transition-all active:scale-95 self-end"
+                    >
+                        Apply
+                    </button>
+                    {(dateFrom || dateTo || ipFilter) && (
+                        <button
+                            onClick={() => { onDateFromChange(''); onDateToChange(''); onIpFilterChange(''); setTimeout(onApplyFilters, 0); }}
+                            className="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 text-zinc-600 rounded-lg text-[10px] font-black uppercase tracking-wider transition-all active:scale-95 self-end"
+                        >
+                            Reset
+                        </button>
+                    )}
+                    <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400 self-end ml-auto">
+                        {total} records
+                    </span>
+                </div>
+
+                {/* Table */}
+                <div className="flex-1 overflow-y-auto">
+                    {loading ? (
+                        <div className="flex items-center justify-center h-48">
+                            <div className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+                        </div>
+                    ) : logs.length === 0 ? (
+                        <div className="flex flex-col items-center justify-center h-48 gap-3">
+                            <Shield className="w-10 h-10 text-zinc-200 dark:text-zinc-700" />
+                            <p className="text-xs text-zinc-400 font-bold uppercase tracking-wider">No login records found</p>
+                        </div>
+                    ) : (
+                        <table className="w-full text-left">
+                            <thead className="bg-zinc-50 dark:bg-zinc-800/50 text-[9px] font-black text-zinc-500 uppercase tracking-[0.15em] border-b border-zinc-100 dark:border-zinc-800 sticky top-0">
+                                <tr>
+                                    <th className="px-5 py-3">Date & Time</th>
+                                    <th className="px-5 py-3">IP Address</th>
+                                    <th className="px-5 py-3">Location</th>
+                                    <th className="px-5 py-3">Device</th>
+                                    <th className="px-5 py-3">Platform</th>
+                                    <th className="px-5 py-3">Session ID</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-zinc-50 dark:divide-zinc-800">
+                                {logs.map((log, i) => (
+                                    <tr key={log._id || i} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
+                                        <td className="px-5 py-3">
+                                            <div className="text-xs font-bold text-zinc-800 dark:text-zinc-200 whitespace-nowrap">
+                                                {format(new Date(log.loginAt), 'dd MMM yyyy')}
+                                            </div>
+                                            <div className="text-[10px] text-zinc-400 font-mono">
+                                                {format(new Date(log.loginAt), 'HH:mm:ss')}
+                                            </div>
+                                        </td>
+                                        <td className="px-5 py-3 font-mono text-xs text-zinc-700 dark:text-zinc-300 whitespace-nowrap">
+                                            {log.ip || 'Unknown'}
+                                        </td>
+                                        <td className="px-5 py-3 text-xs text-zinc-600 dark:text-zinc-400">
+                                            {[log.location?.city, log.location?.region, log.location?.country]
+                                                .filter(Boolean).join(', ') || '—'}
+                                        </td>
+                                        <td className="px-5 py-3">
+                                            <div className="flex items-center gap-1.5">
+                                                {getDeviceIcon(log.device?.type || '')}
+                                                <span className="text-[10px] uppercase font-bold text-zinc-500">{log.device?.type || 'Unknown'}</span>
+                                            </div>
+                                            <div className="text-[9px] text-zinc-400 mt-0.5">{log.device?.os || ''}</div>
+                                        </td>
+                                        <td className="px-5 py-3 text-[10px] text-zinc-500 font-medium">
+                                            {log.device?.browser || '—'}
+                                        </td>
+                                        <td className="px-5 py-3 font-mono text-[9px] text-zinc-400 max-w-[120px] truncate">
+                                            {log.sessionId ? log.sessionId.slice(0, 12) + '…' : '—'}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
+                </div>
+
+                {/* Modal Pagination */}
+                {pages > 1 && (
+                    <div className="flex items-center justify-between px-6 py-4 border-t border-zinc-100 dark:border-zinc-800 shrink-0">
+                        <span className="text-[10px] uppercase font-black tracking-widest text-zinc-400">
+                            Page {page} of {pages}
+                        </span>
+                        <div className="flex items-center gap-1">
+                            <PaginationButton onClick={() => onPageChange(Math.max(1, page - 1))} disabled={page === 1}>
+                                <ArrowLeft className="w-3.5 h-3.5" />
+                            </PaginationButton>
+                            <PaginationButton onClick={() => onPageChange(Math.min(pages, page + 1))} disabled={page === pages}>
+                                <ArrowLeft className="w-3.5 h-3.5 rotate-180" />
+                            </PaginationButton>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
@@ -588,7 +972,8 @@ function StatCard({ title, value, subValue, icon, color }: { title: string; valu
         blue: "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400 border-blue-100 dark:border-blue-900/30",
         emerald: "bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400 border-emerald-100 dark:border-emerald-900/30",
         indigo: "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400 border-indigo-100 dark:border-indigo-900/30",
-        amber: "bg-amber-50 text-amber-600 dark:bg-amber-900/20 dark:text-amber-400 border-amber-100 dark:border-amber-900/30"
+        amber: "bg-amber-50 text-amber-600 dark:bg-amber-900/20 dark:text-amber-400 border-amber-100 dark:border-amber-900/30",
+        rose: "bg-rose-50 text-rose-600 dark:bg-rose-900/20 dark:text-rose-400 border-rose-100 dark:border-rose-900/30"
     };
 
     return (
@@ -617,21 +1002,21 @@ function RetentionItem({ label, value, total, color }: { label: string; value: n
                 </div>
             </div>
             <div className="h-2 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden border border-zinc-50 dark:border-zinc-800/50 p-0.5">
-                <div 
-                    className="h-full rounded-full transition-all duration-1000 ease-out shadow-sm" 
-                    style={{ width: `${percentage}%`, backgroundColor: color }} 
+                <div
+                    className="h-full rounded-full transition-all duration-1000 ease-out shadow-sm"
+                    style={{ width: `${percentage}%`, backgroundColor: color }}
                 />
             </div>
         </div>
     );
 }
 
-function MobileUserCard({ user }: { user: UserRecord }) {
+function MobileUserCard({ user, onViewLogs }: { user: UserRecord; onViewLogs: () => void }) {
     return (
-        <div className="p-4 active:bg-zinc-50 dark:active:bg-zinc-800/50 transition-colors">
+        <div className={`p-4 transition-colors ${user.suspiciousFlag ? 'bg-rose-50/50 dark:bg-rose-950/10' : 'active:bg-zinc-50 dark:active:bg-zinc-800/50'}`}>
             <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl flex items-center justify-center font-black text-indigo-600 dark:text-indigo-400 text-sm uppercase">
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-sm uppercase ${user.suspiciousFlag ? 'bg-rose-100 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400' : 'bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400'}`}>
                         {user.name.charAt(0)}
                     </div>
                     <div>
@@ -642,28 +1027,60 @@ function MobileUserCard({ user }: { user: UserRecord }) {
                         <div className="text-[10px] text-zinc-500 font-bold tracking-tight">{user.email}</div>
                     </div>
                 </div>
-                <StatusBadge status={user.activityStatus} isMini />
+                <div className="flex flex-col items-end gap-1">
+                    <StatusBadge status={user.activityStatus} isMini />
+                    <IpStatusBadge suspicious={user.suspiciousFlag} count={user.distinctIpCount} isMini />
+                </div>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-4 mt-4 bg-zinc-50 dark:bg-zinc-800/30 p-3 rounded-2xl border border-zinc-100 dark:border-zinc-800/50">
                 <div>
-                    <span className="text-[8px] font-black uppercase text-zinc-400 tracking-[0.15em] block mb-1">Most Recent Login</span>
-                    <span className="text-[11px] font-bold text-zinc-800 dark:text-zinc-200 block">
-                        {user.lastLogin ? format(new Date(user.lastLogin), 'dd MMM, HH:mm') : 'None'}
-                    </span>
-                    <span className="text-[9px] text-zinc-500">{user.daysSinceLastLogin === 'Never' ? 'First login' : `${user.daysSinceLastLogin} days ago`}</span>
+                    <span className="text-[8px] font-black uppercase text-zinc-400 tracking-[0.15em] block mb-1">Last Login IP</span>
+                    <span className="text-[11px] font-bold font-mono text-zinc-800 dark:text-zinc-200 block">{maskIp(user.lastIp)}</span>
                 </div>
                 <div className="text-right">
                     <span className="text-[8px] font-black uppercase text-zinc-400 tracking-[0.15em] block mb-1">Total Logs</span>
-                    <div className="flex items-center justify-end gap-1.5">
-                        <span className="text-base font-black text-zinc-900 dark:text-white">{user.totalLogins}</span>
-                        <div className="flex items-center gap-1 px-1.5 py-0.5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md shadow-xs">
-                             {getDeviceIcon(user.devicePreference)}
-                        </div>
-                    </div>
+                    <span className="text-base font-black text-zinc-900 dark:text-white">{user.totalLogins}</span>
                 </div>
             </div>
+
+            <button
+                onClick={onViewLogs}
+                className="mt-3 w-full flex items-center justify-center gap-2 py-2 px-4 bg-zinc-100 dark:bg-zinc-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 rounded-xl text-[10px] font-black uppercase tracking-wider text-zinc-600 dark:text-zinc-300 hover:text-indigo-700 transition-all border border-zinc-200 dark:border-zinc-700"
+            >
+                <ExternalLink className="w-3 h-3" /> View Login Report
+            </button>
         </div>
+    );
+}
+
+function IpStatusBadge({ suspicious, count, isMini = false }: { suspicious: boolean; count: number; isMini?: boolean }) {
+    if (isMini) {
+        return suspicious ? (
+            <div className="p-1.5 rounded-lg bg-rose-50 dark:bg-rose-900/20 border border-rose-100 dark:border-rose-800">
+                <ShieldAlert className="w-3 h-3 text-rose-500" />
+            </div>
+        ) : (
+            <div className="p-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800">
+                <Shield className="w-3 h-3 text-emerald-500" />
+            </div>
+        );
+    }
+
+    if (suspicious) {
+        return (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-rose-50 dark:bg-rose-900/20 border border-rose-100 dark:border-rose-800 text-[9px] font-black uppercase tracking-tight text-rose-700 dark:text-rose-400 whitespace-nowrap">
+                <ShieldAlert className="w-3 h-3" />
+                Multiple IP ({count})
+            </span>
+        );
+    }
+
+    return (
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 text-[9px] font-black uppercase tracking-tight text-emerald-700 dark:text-emerald-400 whitespace-nowrap">
+            <Shield className="w-3 h-3" />
+            Healthy
+        </span>
     );
 }
 
@@ -678,14 +1095,14 @@ function MembershipBadge({ tier, isMini = false }: { tier: string; isMini?: bool
 
     if (isMini) {
         return (
-            <span className={`px-1.5 py-0.5 rounded text-[8px] font-black uppercase tracking-tighter border font-mono ${tierColors[tier]}`}>
-                {tier.charAt(0)}
+            <span className={`px-1.5 py-0.5 rounded text-[8px] font-black uppercase tracking-tighter border font-mono ${tierColors[tier] || tierColors.free}`}>
+                {tier?.charAt(0) || '?'}
             </span>
         );
     }
 
     return (
-        <span className={`px-2.5 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-wider border whitespace-nowrap shadow-sm ${tierColors[tier]}`}>
+        <span className={`px-2.5 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-wider border whitespace-nowrap shadow-sm ${tierColors[tier] || tierColors.free}`}>
             {tier} Access
         </span>
     );
@@ -703,7 +1120,7 @@ function StatusBadge({ status, isMini = false }: { status: string; isMini?: bool
     if (isMini) {
         return (
             <div className={`p-2 rounded-xl border border-transparent shadow-xs ${s.bg}`}>
-                <div className={`w-2 h-2 rounded-full ${s.dot} shadow-sm shadow-${s.dot}/50 animate-pulse`} />
+                <div className={`w-2 h-2 rounded-full ${s.dot} shadow-sm animate-pulse`} />
             </div>
         );
     }
@@ -718,7 +1135,7 @@ function StatusBadge({ status, isMini = false }: { status: string; isMini?: bool
 
 function PaginationButton({ children, onClick, disabled }: { children: React.ReactNode; onClick: () => void; disabled: boolean }) {
     return (
-        <button 
+        <button
             onClick={onClick}
             disabled={disabled}
             className="h-10 w-10 flex items-center justify-center bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 disabled:opacity-20 transition-all shadow-sm active:scale-95"

@@ -2,8 +2,7 @@
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import UserModel from '@/models/User';
-import LoginLog from '@/models/LoginLog';
-import { differenceInDays, subDays } from 'date-fns';
+import { differenceInDays } from 'date-fns';
 
 export async function GET(request: Request) {
     try {
@@ -19,7 +18,6 @@ export async function GET(request: Request) {
         const baseMatch: any = { role: role || { $ne: 'admin' } };
         if (membership) baseMatch.membershipLevel = membership;
 
-        // Perform main user aggregation
         const userStatsAgg = await UserModel.aggregate([
             { $match: baseMatch },
             {
@@ -27,7 +25,28 @@ export async function GET(request: Request) {
                     from: 'loginlogs',
                     localField: '_id',
                     foreignField: 'userId',
-                    as: 'logins'
+                    as: 'allLogins'
+                }
+            },
+            {
+                $lookup: {
+                    from: 'loginlogs',
+                    let: { uid: '$_id' },
+                    pipeline: [
+                        {
+                            $match: {
+                                $expr: {
+                                    $and: [
+                                        { $eq: ['$userId', '$$uid'] },
+                                        { $eq: ['$status', 'success'] }
+                                    ]
+                                }
+                            }
+                        },
+                        { $sort: { loginAt: -1 } },
+                        { $limit: 10 }
+                    ],
+                    as: 'recentLogins'
                 }
             },
             {
@@ -39,20 +58,33 @@ export async function GET(request: Request) {
                     membershipLevel: 1,
                     lastActiveAt: 1,
                     createdAt: 1,
-                    totalLogins: { $size: '$logins' },
                     lastPlatform: 1,
-                    // Most used device
+                    totalLogins: { $size: '$allLogins' },
                     deviceType: {
                         $arrayElemAt: [
                             {
                                 $map: {
-                                    input: { $slice: ['$logins.device.type', -1] }, // This is a placeholder, real freq needs more agg
+                                    input: { $slice: ['$allLogins', -1] },
                                     as: 'd',
-                                    in: '$$d'
+                                    in: '$$d.device.type'
                                 }
                             },
                             0
                         ]
+                    },
+                    lastIp: {
+                        $arrayElemAt: [
+                            { $map: { input: '$recentLogins', as: 'l', in: '$$l.ip' } },
+                            0
+                        ]
+                    },
+                    distinctIpCount: {
+                        $size: {
+                            $setDifference: [
+                                { $map: { input: '$recentLogins', as: 'l', in: '$$l.ip' } },
+                                [null, '', '0.0.0.0']
+                            ]
+                        }
                     }
                 }
             },
@@ -69,11 +101,13 @@ export async function GET(request: Request) {
             let activityStatus = 'Inactive';
             if (daysSinceLogin >= 0 && daysSinceLogin <= 2) activityStatus = 'Active';
             else if (daysSinceLogin > 2 && daysSinceLogin <= 7) activityStatus = 'Moderate';
-            
-            // Calculate frequency (average logins per week since joining)
+
             const daysSinceJoining = differenceInDays(today, user.createdAt) || 1;
             const weeksSinceJoining = daysSinceJoining / 7;
             const frequencyPerWeek = (user.totalLogins / weeksSinceJoining).toFixed(1);
+
+            const distinctIpCount = user.distinctIpCount || 0;
+            const suspiciousFlag = distinctIpCount > 1;
 
             return {
                 id: user._id,
@@ -87,11 +121,13 @@ export async function GET(request: Request) {
                 daysSinceLastLogin: daysSinceLogin === -1 ? 'Never' : daysSinceLogin,
                 frequencyPerWeek,
                 activityStatus,
-                devicePreference: user.lastPlatform || 'Unknown'
+                devicePreference: user.lastPlatform || 'Unknown',
+                lastIp: user.lastIp || null,
+                distinctIpCount,
+                suspiciousFlag
             };
         });
 
-        // Filter by activity if requested
         let finalUsers = transformedUsers;
         if (activity) {
             finalUsers = transformedUsers.filter(u => u.activityStatus === activity);
