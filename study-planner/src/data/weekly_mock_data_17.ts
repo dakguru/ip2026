@@ -149,26 +149,26 @@ export const WEEKLY_MOCK_17_QUESTIONS: Question[] = [
     },
     {
         id: "weekly-17-14",
-        text: "Under the Sexual Harassment of Women at Workplace Act, 2013, the Local Complaints Committee (LCC) for workplaces with less than 10 employees is constituted by:",
+        text: "Under the Postal Financial Handbook Volume I, the security deposit to be furnished by a Postmaster is governed by which rules?",
         options: [
-            "The employer of the establishment",
-            "The District Officer (Collector/DM)",
-            "The State Women's Commission",
-            "The Labour Commissioner"
+            "CCS (Conduct) Rules, 1964",
+            "Postal Manual Volume II",
+            "General Financial Rules, 2017",
+            "FHB Volume I - Security for Cash and Other Assets"
         ],
-        correctAnswer: 1,
-        explanation: "Section 6 of the Sexual Harassment of Women at Workplace Act, 2013 requires the District Officer (District Magistrate/Collector) to constitute a Local Complaints Committee (LCC) at the district level to handle complaints from workplaces where an ICC is not required (less than 10 employees) or where the complaint is against the employer."
+        correctAnswer: 3,
+        explanation: "The Postal Financial Handbook Vol I contains detailed provisions regarding the security to be furnished by various classes of postal employees who handle cash or valuables, ensuring protection against loss."
     },
     {
         id: "weekly-17-15",
-        text: "Under the General Financial Rules, 2017, when a tender is opened and L1 firm is identified, but the quantity required is more than L1 can supply, the procurement officer may:",
+        text: "Under the Postal Financial Handbook Volume I, a 'Minus Entry' in the accounts of a Post Office is typically used for:",
         options: [
-            "Reject the tender and re-invite fresh tenders",
-            "Place order on L1 for the quantity it can supply and procure the balance from L2 at L1 rates",
-            "Place order on L2 for the entire quantity",
-            "Place order on L1 for its quoted quantity and reject the remaining requirement"
+            "Recording a loss of cash",
+            "Correcting an erroneous entry of a previous day",
+            "Recording a refund of revenue",
+            "Recording a deposit into the bank"
         ],
         correctAnswer: 1,
-        explanation: "GFR Rule 163 and related procurement guidelines allow the procurement officer, when L1 cannot supply the full quantity, to place a purchase order on L1 for the quantity it offers, and then negotiate with L2 (and L3 etc.) at the L1 rates for the remaining quantity. This ensures best value while meeting procurement requirements."
+        explanation: "As per accounting principles in FHB Vol I, corrections of errors discovered in previous days' accounts are often handled via minus entries or specific adjustment entries to ensure the final totals reflect the correct state of affairs."
     }
 ];

@@ -121,11 +121,13 @@ export const FULL_SCHEDULE: ScheduleItem[] = [
     { date: "27-04-2026", day: "Monday", paper: "Paper III", topic: "Service Disch", subTopic: "Service Discharge Benefit Scheme", duration: "1 Day" },
     { date: "28-04-2026", day: "Tuesday", paper: "Paper III", topic: "Welfare", subTopic: "Welfare Measures for Employees & GDS", duration: "1 Day" },
     { date: "29-04-2026", day: "Wednesday", paper: "Paper III", topic: "Financial Pwr", subTopic: "Schedule of Financial Powers", duration: "1 Day" },
-    { date: "30-04-2026", day: "Thursday", paper: "Paper III", topic: "FHB", subTopic: "Postal Financial Handbook Vol I – Day 1", duration: "Day 1 of 2" },
-    { date: "01-05-2026", day: "Friday", paper: "Paper III", topic: "FHB", subTopic: "Postal Financial Handbook Vol I – Day 2", duration: "Day 2 of 2" },
-    { date: "02-05-2026", day: "Saturday", paper: "Paper III", topic: "FHB", subTopic: "Postal Financial Handbook Vol II – Day 1", duration: "Day 1 of 2" },
+    { date: "30-04-2026", day: "Thursday", paper: "Paper III", topic: "Revision", subTopic: "Buffer Day / Revision", duration: "1 Day" },
+    { date: "01-05-2026", day: "Friday", paper: "Paper III", topic: "Revision", subTopic: "Buffer Day / Revision", duration: "1 Day" },
+    { date: "02-05-2026", day: "Saturday", paper: "Paper III", topic: "Revision", subTopic: "Buffer Day / Revision", duration: "1 Day" },
     { date: "03-05-2026", day: "Sunday", paper: "Revision", topic: "REVISION", subTopic: "Weekly Revision", duration: "-" },
     
     { date: "04-05-2026", day: "Monday", paper: "Paper III", topic: "FHB", subTopic: "Postal Financial Handbook Vol II – Day 2", duration: "Day 2 of 2" },
-    { date: "05-05-2026", day: "Tuesday", paper: "End", topic: "Completion", subTopic: "Buffer Day / Final Revision", duration: "1 Day" },
+    { date: "05-05-2026", day: "Tuesday", paper: "Paper III", topic: "FHB", subTopic: "Postal Financial Handbook Vol I – Day 1", duration: "Day 1 of 2" },
+    { date: "06-05-2026", day: "Wednesday", paper: "Paper III", topic: "FHB", subTopic: "Postal Financial Handbook Vol I – Day 2", duration: "Day 2 of 2" },
+    { date: "07-05-2026", day: "Thursday", paper: "End", topic: "Completion", subTopic: "Buffer Day / Final Revision", duration: "1 Day" },
 ];

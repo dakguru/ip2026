@@ -43,27 +43,22 @@ export const WEEKLY_MOCK_16_QUESTIONS: Question[] = [
     },
     {
         id: "weekly-16-6",
-        text: "Under the Postal Financial Handbook Volume I, the accounts of the Department of Posts are maintained on which accounting system?",
+        text: "Under the Service Discharge Benefit Scheme (SDBS) for GDS, who is the 'Competent Authority' for appointing the Central Recordkeeping Agency (CRA) for management of the corpus?",
         options: [
-            "Cash basis only",
-            "Accrual basis only",
-            "Modified Cash Basis (Cash plus commitments)",
-            "Double Entry Book-keeping System"
+            "The Department of Posts",
+            "The Pension Fund Regulatory and Development Authority (PFRDA)",
+            "The Ministry of Finance",
+            "Life Insurance Corporation of India (LIC)"
         ],
-        correctAnswer: 0,
-        explanation: "The accounts of the Department of Posts (like most Government of India accounts) are maintained on cash basis — receipts and payments are recorded when actually received/paid, not on accrual basis. The Postal Financial Handbook Vol I details these accounting principles."
+        correctAnswer: 1,
+        explanation: "PFRDA is the regulatory body that appoints and oversees the Central Recordkeeping Agency (CRA) and Pension Fund Managers for NPS and similar schemes like SDBS for GDS."
     },
     {
         id: "weekly-16-7",
-        text: "Under the Postal Financial Handbook Volume I, a 'Schedule of Demands for Grants' is presented to Parliament. The Postal Department's budget falls under which Demand for Grants?",
-        options: [
-            "Demand No. 26 – Ministry of Communications",
-            "Demand No. 14 – Department of Posts",
-            "Demand No. 68 – Department of Posts",
-            "Demand No. 72 – Ministry of Posts"
-        ],
+        text: "Under the welfare measures for postal employees, what is the maximum amount of financial assistance provided from the Circle Welfare Fund in case of death of an employee while on duty due to accidents?",
+        options: ["Rs. 50,000", "Rs. 1,00,000", "Rs. 2,00,000", "Rs. 5,00,000"],
         correctAnswer: 2,
-        explanation: "The Department of Posts has its own Demand for Grants (Demand No. 68 in recent years — though the exact number may change annually). The budget of the Department is presented separately as part of the Union Budget under the relevant demand number."
+        explanation: "Financial assistance from the Circle Welfare Fund for death due to accidents while on duty has been enhanced to Rs. 2,00,000 in recent years to support the bereaved families."
     },
     {
         id: "weekly-16-8",
@@ -81,15 +76,15 @@ export const WEEKLY_MOCK_16_QUESTIONS: Question[] = [
     },
     {
         id: "weekly-16-10",
-        text: "Under the Postal Financial Handbook Volume I, which of the following is classified as 'Capital Expenditure'?",
+        text: "Under the Schedule of Financial Powers, what is the power of the Head of Circle (CPMG) to sanction the engagement of a Legal Counsel for defending government cases in a High Court?",
         options: [
-            "Salaries of regular employees",
-            "Postage stamps and stationery",
-            "Construction of new post office buildings",
-            "Printing of postal guidebooks"
+            "Full Powers as per prescribed rates",
+            "Up to Rs. 50,000 per case",
+            "Up to Rs. 1,00,000 per case",
+            "No power; requires Directorate approval"
         ],
-        correctAnswer: 2,
-        explanation: "Capital Expenditure refers to expenditure that creates durable assets for the Government. Construction of new post office buildings is capital expenditure. Salaries, stationery, and printing are revenue/operational expenditure."
+        correctAnswer: 0,
+        explanation: "The Head of Circle has full powers to engage and sanction fees for Legal Counsel in High Courts and lower courts, provided the fees are within the scales prescribed by the Ministry of Law and Justice."
     },
     {
         id: "weekly-16-11",
@@ -117,15 +112,15 @@ export const WEEKLY_MOCK_16_QUESTIONS: Question[] = [
     },
     {
         id: "weekly-16-13",
-        text: "Under Postal Financial Handbook Volume I, the Appropriation Accounts are prepared and submitted to the Comptroller and Auditor General (CAG) by whom?",
+        text: "Under the welfare measures of the Department of Posts, who is eligible to stay in the Departmental Holiday Homes?",
         options: [
-            "Director General of Posts",
-            "Chief Controller of Accounts, Department of Posts",
-            "Secretary, Ministry of Communications",
-            "Principal Accounts Officer, MoC"
+            "Only Group A officers",
+            "Only regular departmental employees (serving and retired)",
+            "Regular departmental employees, GDS, and their families",
+            "Only employees posted in the same circle"
         ],
-        correctAnswer: 1,
-        explanation: "The Appropriation Accounts of the Department of Posts are prepared by the Chief Controller of Accounts (CCA), Department of Posts, and submitted to the CAG for audit. The CCA is the principal accounting authority of the Department."
+        correctAnswer: 2,
+        explanation: "Departmental Holiday Homes are a welfare measure available to all regular departmental employees, GDS, and their family members on payment of prescribed nominal charges."
     },
     {
         id: "weekly-16-14",
