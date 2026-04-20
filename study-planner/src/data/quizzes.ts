@@ -23,6 +23,7 @@ import { fr_sr_set1, fr_sr_set2, fr_sr_set3 } from './flashcards/fundamentalSupp
 import { complaint_grievance_set1 } from './flashcards/complaintGrievanceHandling';
 import { establishment_norms_set1 } from './flashcards/establishmentNorms';
 import { cvc_procurement_set1, cvc_procurement_set2, cvc_procurement_set3, cvc_procurement_set4, cvc_procurement_set5 } from './flashcards/cvcProcurement';
+import { manual_procurement_set1, manual_procurement_set2, manual_procurement_set3, manual_procurement_set4 } from './flashcards/manualProcurementGoods';
 
 
 // ----- EXISTING QUESTION DATA -----
@@ -6757,6 +6758,12 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   210: cvc_procurement_set3,
   211: cvc_procurement_set4,
   212: cvc_procurement_set5,
+
+  // --- MANUAL ON POLICIES AND PROCEDURES FOR PURCHASE OF GOODS & SERVICES (PS Gr. B) ---
+  213: manual_procurement_set1,
+  214: manual_procurement_set2,
+  215: manual_procurement_set3,
+  216: manual_procurement_set4,
 
   187: [
     { q: "Which Finacle command is used for CIF Creation in CBS?", o: ["CMRC", "CCRC", "CICD", "CCIFINQ"], a: 1, e: "CIF Creation is done by invoking CCRC (Customer Creation). The supervisor verifies by also invoking CCRC. After successful creation, the CIF No. is noted." },
