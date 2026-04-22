@@ -369,13 +369,15 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
                             {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Share2 className="w-4 h-4 text-emerald-500" />}
                             {copied ? "Link Copied!" : "Share"}
                         </button>
-                        <button
-                            onClick={handleDownload}
-                            className="flex items-center justify-center gap-2 px-4 py-3.5 sm:py-3 rounded-xl bg-blue-600 hover:bg-blue-500 border border-blue-500 transition-all font-bold text-sm text-white active:scale-95 shadow-lg shadow-blue-500/20 touch-manipulation min-h-[48px] sm:min-h-0"
-                        >
-                            <Download className="w-4 h-4" />
-                            Download PDF
-                        </button>
+                        {isPremium && (
+                            <button
+                                onClick={handleDownload}
+                                className="flex items-center justify-center gap-2 px-4 py-3.5 sm:py-3 rounded-xl bg-blue-600 hover:bg-blue-500 border border-blue-500 transition-all font-bold text-sm text-white active:scale-95 shadow-lg shadow-blue-500/20 touch-manipulation min-h-[48px] sm:min-h-0"
+                            >
+                                <Download className="w-4 h-4" />
+                                Download PDF
+                            </button>
+                        )}
                         <Link
                             href="/dak-sutra"
                             className="flex items-center justify-center sm:justify-end gap-1.5 sm:ml-auto text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 text-sm font-semibold transition-colors py-2 touch-manipulation"
