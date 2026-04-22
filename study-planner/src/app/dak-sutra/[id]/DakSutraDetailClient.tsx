@@ -399,7 +399,7 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
 }
 
 export default function DakSutraDetailClient({ id, isLoggedIn, membershipLevel }: DakSutraDetailClientProps) {
-    const isPremium = membershipLevel !== "free" && membershipLevel !== "";
+    const isPremium = membershipLevel !== "free" && membershipLevel !== "" && membershipLevel !== "mock_test";
     return (
         <PremiumGateProvider isPremium={isPremium}>
             <DakSutraDetailClientInner id={id} isLoggedIn={isLoggedIn} membershipLevel={membershipLevel} />
