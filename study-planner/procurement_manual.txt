@@ -1,0 +1,1009 @@
+ 
+ 
+ 
+ 
+Dak Guru 
+A Self Learning Portal 
+www.dakguru.com 
+ 
+ 
+Manual of Procurement of  
+Goods & Services 
+ 
+ 
+ 
+ 
+ 
+DISCLAIMER: This booklet has been prepared strictly from an examination point of view. While every effort 
+has been made to ensure accuracy and the inclusion of recent changes, amendments, and updates to the 
+relevant Acts, Rules, and Regulations, this document is intended as a study aid only. Readers and students 
+are strongly recommended to refer to official government sources or gazettes for the most reliable and 
+authoritative information. 
+
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 2   www.dakguru.com 
+ 
+Manual for Procurement of Goods & Services  
+✤ The Ministries / Departments have been delegated full powers to make their own 
+arrangements for procurement of goods and services, that are not available on 
+Government e-Marketplace (GeM).  
+✤ These powers have to be exercised which have to be exercised as per the Delegation of 
+Financial Power Rules and in conformity with the 'Procurement Guidelines' described 
+below.  
+Common use Goods and Services available on GeM are required to be procured 
+mandatorily through GeM as per Rule 149 of GFR, 2017.  
+✤ The term 'goods' used in this manual includes all articles, material, commodity, 
+livestock, medicines, furniture, fixtures, raw material, consumables, spare parts, 
+instruments, machinery, equipment, industrial plants, vehicles, aircraft, ships, railway 
+rolling stock, assemblies, sub-assemblies, accessories, a group of machines comprising an 
+integrated production process or such other goods (but excludes books, publications, 
+periodicals, and so on, for a library), or intangible products like software, techn ology 
+transfer, licenses, patents or other intellectual properties procured or otherwise acquired 
+by a procuring entity.  
+Procurement of goods may include certain small work or some services, which are 
+incidental or consequential to the supply of such goods, such as transportation, 
+insurance, installation, commissioning, training and maintenance (Rule 143 of GFR 2017).  
+✤ A Competent authority (CA) which is competent to incur expenditure may sanction 
+the purchase of goods required for use in public service in accordance with the Delegation 
+of Financial Rules by following the 'Procurement Guidelines' described in this Manua l 
+(Rule 145 of GFR 2017).  
+ 
+ 
+ 
+ 
+ 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 3   www.dakguru.com 
+ 
+Categorisation of procurements  
+Following are the categories of procurements:  
+a) Goods.  
+b) Services (i. Consultancy Services and ii. Non-consultancy services)  
+c) Works 
+ 
+➤ The main difference between goods and works is that the manufacture of goods is 
+done on the supplier's own premises (other than installation/ commissioning).  
+In contrast, 'Works' is executed on the premises of the procuring entity (other than 
+prefabricated components).  
+Works may include incidental 'Goods' and vice-versa.  
+➤ The main difference between Consultancy and Non -consultancy services is the level 
+of intellectual input, which is predominant in Consultancy and not central to non -
+consultancy.  
+Another difference is that non -consultancy services are repetitive routines with 
+measurable and standardised outputs, while consultancy services are one -off and non -
+routine, with outputs that are neither precisely measurable nor standardised.  
+➤ The Procurement of IT projects should usually be carried out as a procurement of 
+consultancy services, as the outcomes/deliverables vary from one service provider to 
+another.  
+The IT Projects may include:  
+• tailor-made software development;  
+• cloud-based services  
+• Composite IT system integration services involve the design, development, 
+deployment, and commissioning of IT systems, including hardware supply, 
+software development, bandwidth, and operation/maintenance of the system for 
+a defined period after going live, etc.  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 4   www.dakguru.com 
+ 
+Basic Aims of Procurement - the Five R's of Procurement  
+1. Right Quality  
+2. Right Quantity  
+3. Right Price  
+4. Right Time and Place  
+5. Right Source  
+Fundamental Principles of Public Procurement  
+➤ General Financial Rules, 2017 (Rule 144) lay down the Fundamental Principles of 
+Public Procurement.  
+Transparency Principle  
+➤ All procuring authorities are responsible and accountable to ensure transparency, 
+fairness, equality, competition and appeal rights.  
+➤ This involves simultaneous, symmetric and unrestricted dissemination of information 
+to all likely bidders, sufficient for them to know and understand the availability of 
+bidding opportunities and actual means, processes and time limits prescribed for 
+completion of registration of bidders, bidding, evaluation, grievance redressal, award 
+and management of contracts.  
+➤ As part of this principle, all procuring entities should ensure that offers should be 
+invited following a fair and transparent procedure and also ensure publication of all 
+relevant information on the Central Public Procurement Portal (CPPP).  
+Professionalism Principle  
+➤ As per these synergic attributes, the procuring authorities have a responsibility and 
+accountability to ensure professionalism, economy, efficiency, effectiveness and integrity 
+in the procurement process.  
+➤ They must avoid wasteful, dilatory and improper practices violating the Code of 
+integrity for Public Procurement (CIPP).  
+ 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 5   www.dakguru.com 
+ 
+Purchase Preference for MSE  
+➤ Under the amended Public Procurement Policy for MSES, Order 2012, the Central 
+Government Ministries/ Departments/ Public Sector Undertakings shall procure a 
+minimum of 25 per cent of their annual value of goods or services from MSEs.  
+➤ In tender, if the L1 price is from someone other than an MSE, participating Micro and 
+Small Enterprises (MSE) quoting prices within a price band of L15 (fifteen) per cent shall 
+be allowed to supply up to 25 (twenty -five) per cent  of the total tendered value by 
+bringing down their price to L1 price.  
+If there is more than one eligible MSE within such price band who agree to match the L1 
+price, the 25 (twenty-five) per cent quantity is to be distributed proportionately to them.  
+➤ In case the tender item cannot be split or divided, etc., the MSE quoting a price within 
+the band L15% may be awarded for full/ complete supply of total tendered value to MSE, 
+considering the spirit of the Policy for enhancing Govt. Procurement from MSES.  
+Timely Payments to MSEs: Chapter V of the MSMED Act, 2006, also has provisions for 
+ensuring timely payments to the MSE suppliers.  
+The period agreed upon for payment must not exceed forty-five days from the deemed 
+acceptance of the materials supplied by the MSMEs; in case of any discrepancies in the 
+supplies, then the Procuring Entity shall raise an objection to the MSME supplier within 
+15 days from the date of receipt of materials if such objection is not raised, then it will be 
+taken as deemed acceptance.  
+For delays in payment, the buyer shall be liable to pay compound interest to the supplier 
+on the delayed amount at three times the bank rate notified by the Reserve Bank.  
+Procurement Preference to Make in India (MII policy)  
+Minimum local content: The 'local content' requirement to categorize a supplier as a 
+'Class-I local supplier' is a minimum of 50 (fifty) per cent.  
+For 'Class-II local suppliers,' the 'local content' requirement is a minimum of 20 (twenty) 
+per cent.  
+For 'Non-Local Class", the local content is less than 20 (twenty) percent.  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 6   www.dakguru.com 
+ 
+➤ If the procuring entity negotiates with the L1 bidder, who is not a ClassI Local 
+Supplier, the margin of purchase preference (L10%) should be calculated based on the 
+original L1 price, not the lower negotiated price, and such eligible Class-I Local Suppliers 
+shall be called to match the new negotiated L1 price as per procedure mentioned above 
+for placement of 50% quantity.  
+➤ Among all qualified bids, the lowest bid will be termed L1. If L1 is a 'Class -I local 
+supplier', the contract for full quantity will be awarded to L1.  
+➤ In case the lowest eligible 'Class-I local supplier' fails to match the LI price, the 'Class-
+I local supplier' with the next higher bid within the margin of purchase preference (L10%) 
+shall be invited to match the L1 price, and so on, and the contract shall be awarded 
+accordingly.  
+In case none of the 'Class -I local suppliers' within the margin of purchase preference 
+matches the L1 price, the contract may be awarded to the L1 bidder.  
+➤ "Class-II local supplier" will not get a preference for any procurement undertaken by 
+procuring entities.  
+➤ The bidder shall give self -certification for local content in the quoted item 
+(goods/works/services) at the time of tendering. However, at the time of execution of the 
+project, for all contracts above INR 10 Crore, the contractor/supplier shall be required to 
+give local content certification duly certified by cost/chartered accountant in practice.  
+➤ In case the contractor/supplier does not meet the stipulated local content requirement 
+and the category of the supplier changes from Class-I to Class-II/Non-local or from Class-
+II to Non-local, a penalty upto 10% of the contract value may be imposed.  
+The energy efficiency labelling programs under BEE are intended to reduce the energy 
+consumption of appliances without diminishing the services they provide to consumers. 
+The higher the stars, the more efficient the appliance is. The threshold ratings prescribed 
+by the Ministry of Finance are:  
+• Split Air conditioners - 5 Star (under normal conditions where annual usages are 
+expected to be more than 1000 Hrs)  
+• 3 Star (where usage of AC is limited, e.g., in conference rooms)  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 7   www.dakguru.com 
+ 
+• Frost Free Refrigerators - 4 Star  
+• Ceiling Fans - 5 Star  
+• Water Heaters - 5 Star  
+Option clause in Tender 
+➤ Normally, for raw materials/consumables of regular and year -on-year recurrent 
+requirements, all tenders of value above Rs. 50 (Rupees fifty) lakhs, to take care of any 
+change in the requirement during the currency of the contract, a plus/minus option clause 
+[normally 25 (twenty -five) per cent ] may be incorporated in the tender document, 
+reserving the purchaser's right to increase or decrease the quantity of the required goods 
+up to that limit without any change in the terms and conditions and prices quoted by the 
+bidders. However, the Competent Authority may approve the inclusion of such a clause 
+in lower denomination tenders if such items have a history of frequent disruptions in the 
+continuity of supplies.  
+The clause may be framed along the following lines:  
+"The purchaser reserves the right to increase/decrease the ordered quantity by up to [25] 
+per cent at any time, till the final delivery date (or the extended delivery date of the 
+contract), by giving reasonable notice even though the quantity ordered initially has been 
+supplied in full before the last date of the delivery period (or the exten ded delivery 
+period)."  
+Modes of Procurement 
+➤ Offers from prospective bidders in public procurement must be invited according to a 
+procedure that achieves a balance between the need for the widest competition, on one 
+hand, and complexity of the procedure, on the other hand. Different modes of 
+procurement and bidding systems are used to suit various procurement circumstances to 
+achieve this balance.  
+The various modes of procurement that can be used in public procurement are:  
+1. Open Tenders a) Open Tender Enquiry (OTE); and b) Global Tender Enquiry 
+(GTE)  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 8   www.dakguru.com 
+ 
+2. Procurement through Selected Suppliers a) Limited Tender Enquiry - LTE (up to 
+Rs. 50 (Rupees fifty) lakh ); and b) Special Limited Tender Enquiry (SLTE above 
+Rs. 50 (Rupees fifty) lakh under special circumstances)  
+3. Nomination Basis Tenders a) Proprietary Article Certificate (PAC); and b) Single 
+Tender Enquiry (STE) without PAC  
+4. Procurements without Calling Tenders a) Direct Procurement without Quotation; 
+b) Direct Procurement by Purchase Committee;  
+5. Mandatory Procurement of Goods and Services for Goods or Services available on 
+GeM. (Rule 158 of GFR 2017)  
+Open Tender Enquiry (OTE) 
+➤ In OTE, an attempt is made to attract the widest possible competition by publishing 
+the NIT simultaneously on the designated websites.  
+➤ This is the default mode of procurement and gives the best value for money but the 
+procedure is relatively complex and prolonged.  
+➤ OTE procedures through e -procurement or through traditional tendering should be 
+adopted in the following situations:  
+i. Procurements exceeding the threshold of Rs. 50 lakhs (Rupees fifty Lakh); ii. All 
+common use requirements with clear technical specifications; iii. For requirements that 
+are ordinarily available in the open market but it is necessary to evaluate competitive 
+offers to decide the most suitable and economical option available; and iv. When 
+requirements are not available from known sources or sources are presently limited and 
+need to be broad based.  
+In such situations, even for procurements below Rs. 50 lakhs (Rupees fifty Lakh) , OTE 
+mode may be used, if warranted. (Rule 161 of GFR 2017)  
+Terms and Conditions of OTE 
+i. Bidders already registered are also free to participate; ii. Advertisement in such cases 
+should be given on Central Public Procurement Portal (CPPP) at www.eprocure.gov.in 
+and on GeM. An organisation having its own web site should also publish all its 
+advertised tender enquiries on the web site. The procuring entity should also post the 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 9   www.dakguru.com 
+ 
+complete bidding document in its web site and on CPPP to enable prospective bidders to 
+make use of the document by downloading from the web site. The advertisements for 
+invitation of tenders should give the complete web address from where the bidding 
+documents can be downloaded. In order to promote wider participation and ease of 
+bidding, no cost of tender document may be charged for the tender documents 
+downloaded by the bidders. iii. The sale/availability for downloading of tender 
+documents against NIT sh ould not be restricted and should be available freely. Tender 
+documents should preferably be sold/available for download up to the date of opening 
+of tenders. The procuring entity shall maintain proper records about the number of 
+tender documents sold, list of parties to whom sold, details of the amount received 
+through sale and, also, the number of unsold tender documents, which are to be cancelled 
+after the opening of the tenders. iv. The due date fixed for opening of the tender shall be 
+minimum 21 (twenty-one) days from the date of advertisement which may vary, taking 
+into account the nature of material called for and delivery requirements. The due date 
+may be subsequently extended with the approval of the Competent Authority, only if it 
+is felt necessary to have better competition.  
+Global Tender Enquiry (GTE) 
+GTE is similar to OTE but, through appropriate advertising and provision for payment 
+in Foreign Currencies through Letter of Credit, it is aimed at inviting the participation of 
+inter alia foreign firms. Development of local industry also needs to be kept in mind. 
+Hence, it may be viable only in following situations:  
+i. Where Goods of required specifications/quality are not available within the country 
+and alternatives available in the country are not suitable for the purpose; ii. Non-existence 
+of a local branch of the global principal of the manufacturer/vendors/contractors; iii. 
+Requirement for compliance to specific international standards in technical 
+specifications; and iv. Absence of a sufficient number of competent domestic bidders 
+likely to comply with the required technical specifications, and in case of suspected cartel 
+formation among indigenous bidders. (Rule 161 of GFR 2017)  
+Terms and Conditions of GTE 
+i. Advertisement in such cases should be given on Central Public Procurement Portal 
+(CPPP) at www.eprocure.gov.in and on GeM. An organisation having its own web site 
+should also publish all its advertised tender enquiries on the web site. The procuring 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 10   www.dakguru.com 
+ 
+entity should also post the complete bidding document in its web site and on CPPP to 
+enable prospective bidders to make use of the document by downloading from the web 
+site. The advertisements for invitation of tenders should give the complete web address 
+from where the bidding documents can be downloaded. In order to promote wider 
+participation and ease of bidding, no cost of tender document may be charged for the 
+tender documents downloaded by the bidders. ii. The sale/availability for downloading 
+of tender documents against NIT should not be restricted and should be available freely. 
+Tender documents should preferably be sold/available for download upto the date of 
+opening of tenders; and the tender documents, shall be priced minimally keeping in view 
+the value of the tender as also the cost of preparation and publicity of the tender 
+documents. iii. GTE tender documents must be in English and the price should be asked 
+in Indian Rupees or US Dollars or Euros or Pound Sterling or Yen or in currencies under 
+the Reserve Bank of India's notified basket of currencies. iv. GTE tender documents must 
+contain technical specifications which are in accordance with national requirements or 
+else based on an international trade standard. v. In such cases e-procurement may not be 
+mandatorily insisted upon. vi. The due date fixed for opening of the tender shall be 
+minimum four weeks  from the date of advertisement which may vary taking into 
+account the nature of material called for as well as the time required to prepare the bids. 
+The due date may be subsequently extended with the approval of the CA only to promote 
+better competition and also considering account delivery requirement. vii. No Global 
+Tender Enquiry (GTE) up to Rs. 200 crores shall be invited or such limit as may be 
+prescribed by the Department of Expenditure from time to time. viii. In case no Indian 
+manufacturer/suppliers are found, procurement may be done, through GTE, subject to 
+compliance of provisions of GFR and requirement of procurement through GeM.  
+Limited Tender Enquiry (LTE) 
+➤ LTE is a restricted competition procurement, where a preselected panel of vendors (on 
+the list of registered suppliers for the subject matter of procurement) are directly 
+approached for bidding for goods and services not available on the GeM portal. 
+➤ LTE is a restricted competition procurement, where a preselected list of vendors is 
+directly approached for bidding; bids from uninvited bidders are treated as unsolicited 
+and are normally not entertained, except in special circumstances. 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 11   www.dakguru.com 
+ 
+➤ This mode provides a short and simple procedure, but may not provide as good a VfM 
+(value for money) as in case of open tendering - still a good balance for procurements 
+below a threshold. 
+➤ LTE procedures should be default mode of procurement when the estimated value of 
+procurement is between Rs. 5 lakh to Rs. 50 lakh (Rupees five Lakh to fifty Lakh). (Limit 
+has been changed w.e.f. 10th July 2024). 
+Terms and Conditions 
+(i) Copies of the bidding documents should be sent free of cost (except in case of priced 
+specifications/ drawings) directly by speed post/courier/e -mail to firms which are 
+registered vendors/contractors. Further, Procuring Entity should also mandatorily 
+publish its limited tender enquiries on Central Public Procurement Portal (CPPP). 
+(ii) Apart from CPPP, the organisations should publish the tender enquiries on the 
+Department's or Ministry's web site. 
+(iii) A simplified single Page Bid Document should be used, instead of a detailed Bid 
+Document. The minimum number of bidders to whom LTE should be sent is more than 
+three. In case less than three approved vendors/contractors are available, LTE may be 
+sent to the available approved vendors/contractors with approval of the Competent 
+Authority, duly recording the reasons. The requirement should then be marked for 
+development of more sources by the Supplier Registration section. 
+(iv) Adequate time should be given for submission of quotes, which should not be less 
+than three weeks. A longer period ( six weeks) could be given in case of import of the 
+materials and, in complex cases, if justifications are given and allowed. 
+(v) Since selected bidders are normally registered with the Procuring Entity, Bid Security 
+and Performance Security are normally not taken in LTE. 
+Special Limited Tender Enquiry (SLTE) for Procurements More than Rs. 50 Lakh 
+➤ LTE mode, even for values higher than Rs. 50 lakh (Rupees fifty Lakh) (limit has been 
+changed w.e.f. 10th July 2024) (Rule 162 of GFR 2017), where normally OTE should have 
+been done, is permissible in certain special circumstances as follows. Powers to sanction 
+procurement on LTE basis in such special cases may be laid down in SoPP based on a 
+certificate of urgency signed by the indenter. Th is mode has the merit of being quicker 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 12   www.dakguru.com 
+ 
+but VfM obtained may be less than in case of OTE; hence it should be restricted to rare 
+situations: 
+(i) The competent authority in the Ministry / Department certifies that there is an existing 
+or prospective urgency for operational or technical requirements and any additional 
+expenditure involved by not procuring through advertised tender enquiry is just ified in 
+view of urgency. The Ministry/Department should also put on record the nature of the 
+urgency and reasons why the procurement could not be anticipated earlier. 
+(ii) There are sufficient reasons, to be recorded in writing by the competent authority, 
+indicating that it will not be in public interest to procure the goods through advertised 
+tender enquiry. 
+(iii) The sources of supply are definitely known and possibility of fresh source(s) beyond 
+those being tapped is remote. 
+(iv) Nature of items to be procured is such that pre -verification of competence of firm is 
+essential, hence requires registration of firms; and Government policy designates 
+procurement from specific agencies. 
+Terms and Conditions 
+(i) The tendering process would be same as in the case of a normal LTE described above. 
+However, the bidding documents are more detailed as in the case of OTE; and 
+(ii) The indenter should certify that there is an existing or prospective urgency for 
+operational or technical requirements and any additional expenditure involved by not 
+procuring through an advertised tender enquiry is justified in view of urgency. The 
+indenter should also put on record the nature of the urgency and reasons why the 
+procurement could not be anticipated. 
+Proprietary Article Certificate (PAC) 
+➤ In procurement of goods, certain items are procured only from Original Equipment 
+Manufacturers (OEMs) or manufacturers having proprietary rights (or their authorised 
+dealers/stockists) against a PAC certificate signed by the appropriate authority. 
+➤ Once a PAC is signed at the designated level as per SoPP (Schedule of Procurement 
+Power), the powers of procurement are the same as in normal conditions as per the 
+delegation of powers. This mode may be shortest but since it may provide lesser VfM 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 13   www.dakguru.com 
+ 
+(Value for Money) as compared to LTE/OTE and also strains the transparency principle, 
+it should be used only in justifiable situations. 
+➤ No item should be procured on PAC basis for more than three years, after which a 
+mandatory OTE mode may be used, to test the market. 
+Single Tender Enquiry (STE) without a PAC 
+A tender invitation to one firm only without a PAC certificate is called a single tender. 
+➤ This mode may be shortest but since it may provide lesser VfM as compared to 
+LTE/OTE and may also strain the transparency principle, it should be resorted to only 
+under following conditions: 
+• In a case of existing or prospective emergency relating to operational or technical 
+requirements to be certified by the indenter, the required goods are necessarily to 
+be purchased from a particular source subject to the reason for such decision being 
+recorded and approval of the competent authority obtained. 
+• For standardization of machinery or components or spare parts to be compatible 
+to the existing sets of machinery/equipment (on the advice of a competent 
+technical expert and approved by the competent authority), the required goods 
+are to be purchased only from a selected firm. (Rule 166 of GFR 2017). 
+Drawals against Rate Contract (RC) / Framework Contract (FC) 
+➤ RC is essentially a price agreement with the vendors/contractors at a specified price 
+and terms and conditions during the period covered by the RC. 
+➤ No quantity is mentioned nor is any minimum commitment guaranteed in the RC. 
+➤ RC is most frequently used in procurement of goods, but can as well be used mutatis 
+mutandis in works, services and consultancy - where it is commonly known as a 
+Framework Contract (FC). 
+➤ Rate Contract is not required to be executed for common use items like computers, 
+printers, photocopiers, paper and stationary, other office items like furniture, bottled 
+water etc., which are being placed on GeM and will now be applicable only for 
+specialized and engineering items which are not available on GeM, and are identified as 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 14   www.dakguru.com 
+ 
+common use items and are needed on recurring basis by various Central Government 
+Ministries or Departments. 
+Direct Procurement without Quotation 
+➤ Direct procurement of goods without formal quotations is normally done for the 
+smallest value procurements. This is also called petty purchase. It should be used for off-
+the-shelf goods of simple and standard specifications and when the required goods (of  
+required specification or within required delivery period etc.) are not available on GeM. 
+➤ However, it is mandatory for a buyer to generate a "GeM Availability Report and Past 
+Transaction Summary" (GeMAR&PTS) with a unique ID on GeM portal using his login 
+credentials on GeM for procurement outside GeM. The procedure is the simplest and 
+quickest but VfM may be poor; hence it is suitable only in very low value, urgent and 
+simple requirements in the following situations: 
+• Procurements do not exceed the threshold (for each requirement) of Rs. 50,000 
+(Rupees fifty Thousand) for each case; 
+• The requirement is urgent but was not covered in the procurement plan; and 
+• The requirement is for off -the-shelf goods of simple and standard specifications. 
+Examples of procurement are day -to-day needs of the office and field units, and 
+so on. (Rule 154 of GFR 2017). 
+Terms and Conditions 
+(i) The competent officer of the procuring entity can initiate and complete this purchase 
+after diligent enquiries from the market and filling the certificate prescribed. 
+(ii) Such powers to a limited extent can also be given to various user sections for 
+operational needs. 
+(iii) Normally an imprest amount (with facilities for cheque payments) sufficient for two 
+months' estimated procurements can be sanctioned for such officers to handle such 
+procurements. 
+(iv) The imprest amount can be recouped on monthly basis by submission of expense 
+vouchers. 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 15   www.dakguru.com 
+ 
+(v) In a summary form, records should be kept of the vendors/contractors approached 
+and prices indicated by them. 
+(vi) Selection of seller by diligent market enquiry is of essence of this mode of 
+procurement. 
+(vii) In larger cities, the presence of reputed shopping malls may also be included in the 
+market survey. Reputed internet shopping portals may also be explored. 
+(viii) Supervisors should carry out periodic review of such procurements to ensure that 
+the demand is not split into small quantities for the sole purpose of avoiding the necessity 
+of getting an approval from the higher authority required for sanctioning the purchase of 
+the original demand or for avoiding LTE or OTE mode of procurement. 
+(ix) To keep a better control, an annual ceiling may be fixed for each office for such a 
+mode of procurement say Rupees five Lakh for each office per year. Each office should 
+maintain records to monitor such limits. 
+(x) Supervisors should cross check a percentage of cases in the market for prices, fake 
+vouchers, and so on. Supervisors should also check that the same vendor(s) is not being 
+patronised repeatedly. For the sake of transparency, payments should be made by cheque 
+or through Electronic Clearance Service except that cash payment may be allowed up to 
+Rs. 5,000 (Rupees Five thousand ). Staff involved with such procurements should not 
+continue in the same role for long and should be rotated frequently. 
+Bidding Systems 
+➤ Bidding systems are designed to achieve an appropriate balance between the 
+countervailing needs for Right Quality, Right Source and the Right Price under different 
+complexities/criticality of Technical requirements and value of procurements.  
+➤ In certain critical and complex requirements, the technical and financial capability of 
+Source of supply becomes an important determinant for value for money.  
+➤ Depending on the complexity and criticality Technical of requirement, Criticality of 
+capability of Source and value of procurement, following types of bidding systems may 
+be used.  
+ 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 16   www.dakguru.com 
+ 
+Single Stage Bidding System 
+➤ In single stage bidding, all bids are invited together in a single envelope or in multiple 
+envelops system.  
+➤ This bidding system is suitable where technical requirement are simple or moderate; 
+capability of source of supply is not too crucial and the value of procurement is not too 
+high;  
+Single Stage Two Envelops System (Two Bid System) 
+(Rule 163 of GFR 2017):  
+➤ In technically complex requirements but where capability of source of supply is still 
+not crucial and value of procurement is not low, a two envelop system may to be 
+followed.  
+➤ The tenderers should be asked to bifurcate their quotations in two envelops.  
+➤ The first envelop, called the techno -commercial bid, contains the eligibility, technical 
+quality and performance aspects, commercial terms and conditions and documents 
+sought in the tender, except the price and relevant financial details.  
+➤ In the second envelop, called the financial bid, the price quotation along with other 
+financial details are submitted.  
+➤ Both the envelops are to be submitted together in a sealed outer envelope;  
+➤ If required, Technical specification and techno -commercial conditions should be 
+modified, in a pre-bid conference in the two envelop tender and it would be desirable not 
+to invite fresh financial bids after opening of the techno-commercial bids;  
+➤ The techno-commercial bids are to be opened in the first instance on the bid opening 
+date and time, and scrutinised and evaluated by the TC with reference to parameters 
+prescribed in the tender documents and responsive, eligible and technically compliant 
+bidders are decided;  
+➤ Thereafter, in the second instance, the financial bids of only the techno -commercially 
+compliant offers (as decided in the first instance above) are to be opened on a 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 17   www.dakguru.com 
+ 
+preannounced date and time for further scrutiny, evaluation, ranking and placement of 
+contract.  
+➤ The financial bids of technically non-compliant bidders should be returned unopened 
+to the respective bidders by registered acknowledgement due/reliable courier or any 
+other mode with proof of delivery.  
+➤ In e -Procurement, financial bids of technically non -compliant offers would not get 
+opened;  
+Two Stage Bidding - Expression of Interest Tenders - Market Exploration 
+➤ There are instances where the equipment/ plant to be procured is of complex nature 
+and the procuring organization may not possess the full knowledge of either the various 
+technical solutions available or the likely sources for such products in the market.  
+➤ To meet the desired objectives of a transparent procurement that ensures value for 
+money simultaneously ensuring upgradation of technology &capacity building- it would 
+be prudent to invite a two-stage Expression of Interest (EoI) Bids and proceed to explore 
+the market and to finalise specifications based on technical discussions/presentations 
+with the experienced manufacturers/suppliers in a transparent manner.  
+➤ Expression of Interest (EoI) bids may be invited in following situations:  
+• It is not feasible for the procuring entity to formulate detailed specifications or 
+identify specific characteristics for the subject matter of procurement, without 
+receiving inputs regarding its technical aspects from bidders;  
+• The character of the subject matter of procurement is subject to rapid technological 
+advances or market fluctuations or both;  
+• The procuring entity seeks to enter into a contract for the purpose of research, 
+experiment, study or development, except where the contract includes the 
+production of requirements in quantities sufficient to establish their commercial 
+viability or to recover research and development costs; or 
+• The bidder is expected to carry out a detailed survey or investigation and 
+undertake a comprehensive assessment of risks, costs and obligations associated 
+with the particular procurement (Rule 164 of GFR 2017).  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 18   www.dakguru.com 
+ 
+Electronic Procurement (e-Procurement) 
+➤ It is mandatory for Ministries/ Departments to receive all bids through e-procurement 
+portals in respect of all procurements. Ministries/ Departments which do not have a large 
+volume of procurement or carry out procurements required only for day-to-day running 
+of offices and also have not initiated e-procurement through any other solution provided 
+so far may use e-procurement solution developed by NIC.  
+➤ Other Ministries/ Departments may either use e -procurement solution developed by 
+NIC or engage any other service provider following due process.  
+➤ In individual cases where national security and strategic considerations demands 
+confidentiality, Ministries/ Departments may exempt such cases from e -procurement 
+after seeking approval of concerned Secretary and with concurrence of Financial 
+Advisers.  
+Electronic Reverse Auction (RA) 
+➤ Electronic Reverse Auction is a type of auction (classified as dynamic procurement 
+method) where the starting price, bid decrement, duration of auction, maximum number 
+of automatic extensions are announced before start of online reverse auction.  
+➤ If required, RA may be preceded by an e -Procurement stage of eligibility/ PQB(Pre 
+Qualified Bidder) to shortlist competent bidders who would be allowed to participate in 
+the RA.  
+➤ The shortlisted bidders can after the start of RA start bidding online in an iterative 
+process wherein the lowest bidder at any given moment can be displaced by an even 
+lower bid of a competing bidder, within the duration of the RA.  
+➤ If a new lower bid is received within last few minutes (say two minutes) of closing 
+time, the closing time may get automatically extended by few minutes (say five minutes) 
+for others to respond.  
+➤ Maximum number of such extensions may be stipulated (say five).  
+➤ The most favourable bid at the end of stipulated / extended time is declared as 
+successful.  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 19   www.dakguru.com 
+ 
+➤ While permitting use of RA, CVC has asked the Departments/organisations to 
+themselves decide on reverse auction for purchases or sales and work out the detailed 
+procedure in this regard.  
+➤ It has, however, to be ensured that the entire process is conducted in a transparent and 
+fair manner.  
+➤ A procuring entity may choose to procure a subject matter of procurement by the 
+electronic reverse auction method, if:  
+• Items for Reverse Auction may be selected carefully.  
+• Items of strategic, critical and vital nature, items in short supply in market and 
+where there are only a few suppliers are not good candidates for reverse auction.  
+• Items in the nature of commodities, Commercially -off-the-shelf items, items 
+having large number of suppliers and high value procurements may be more 
+amenable to reverse auction;  
+• It is feasible for the procuring entity to formulate a detailed description of the 
+subject matter of the procurement;  
+• There is a competitive market of bidders anticipated to be qualified to participate 
+in the electronic reverse auction, so that effective competition is ensured;  
+• The criteria to be used by the procuring entity in determining the successful bid 
+are quantifiable and can be expressed in monetary terms;  
+• In cases where pre -qualification of bidders is considered necessary, reverse 
+auction may be carried out after a separate PQB (electronic or otherwise) among 
+the successful bidders only.  
+➤ Subject to more detailed guidelines in the category-specific manual or other guidelines, 
+the procedure for electronic reverse auction shall include the following, namely:  
+• The procuring entity shall solicit bids through an invitation to the electronic 
+reverse auction to be published or communicated in accordance with the 
+provisions similar to e-procurement; and  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 20   www.dakguru.com 
+ 
+• The invitation shall, in addition to the information as specified in e -procurement, 
+include details relating to:  
+o Access to and registration for the auction;  
+o Opening and closing of the auction;  
+o Norms for conduct of the auction; and  
+o Any other information as may be relevant to the method of procurement.  
+One Stop Government e-Marketplace (GeM)  
+(Rule 167 of GFR 2017)  
+➤ An online marketplace (or e -commerce marketplace) is a type of e -commerce site 
+where product or services are offered by a number of sellers and all the buyers can select 
+the product/services offered by any one of the seller, based on his own criteria.  
+➤ In an online marketplace, Purchaser's transactions are processed by the marketplace 
+operator and then product/services are delivered and fulfilled directly by the 
+participating retailers.  
+➤ Other capabilities might include auctioning (forward or reverse), catalogues, ordering, 
+posting of requirements by Purchasers, Payment gateways etc.  
+➤ In general, because online marketplaces aggregate products from a wide array of 
+providers, selection is usually wider, availability is higher, and prices are more 
+competitive than in vendor-specific online retail.  
+➤ Ministry of Commerce has developed an online Government e -Market Place for 
+common use goods and services.  
+➤ The procurement process on GeM is end to end from placement of supply order to 
+payment to suppliers.  
+➤ This is to ensure better transparency and higher efficiency. All the process will be 
+electronic and online. The Procurement of Goods and Services by Ministries or 
+Departments is mandatory for Goods or Services available on GeM as per Rule 149 of 
+GFR, 2017.  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 21   www.dakguru.com 
+ 
+➤ The procuring authorities will certify the reasonability of rates. The GeM portal shall 
+be utilized by the Government buyers for direct on-line purchases as under:-  
+• Up to Rs. 50,000 through any of the available suppliers on the GeM, meeting the 
+requisite quality, specification, and delivery period (in case of procurement of 
+Automobiles only the ceiling of direct purchase will be no limit);  
+• Above Rs. 50,000 and up to Rs. 10,00,000 through the GeM Seller having lowest 
+price amongst the available sellers, of at least three different manufacturers, on 
+GeM, meeting the requisite quality, specification, and delivery period. The tools 
+for online bidding and online reverse auction available on GeM can be used by the 
+Buyer even for procurements less than Rs. 10,00,000. The above limit has been 
+amended w.e.f. 10th July 2024.  
+• Above Rs. 10,00,000 through the supplier having lowest price meeting the 
+requisite quality, specification, and delivery period after mandatorily obtaining 
+bids, using online bidding or reverse auction tool provided on GeM.  
+➤ The invitation for the online e -bidding/reverse auction will be available to all the 
+existing Sellers or other Sellers registered on the portal and who have offered their 
+goods/services under the particular product/service category, as per terms and conditions 
+of GeM.  
+➤ The above mentioned monetary ceiling is applicable only for purchases made through 
+GeM. For purchases, if any, outside GeM, relevant GFR Rules shall apply.  
+➤ The Ministries/Departments shall work out their procurement requirements of Goods 
+and Services on either "OPEX" model or "CAPEX" model as per their 
+requirement/suitability at the time of preparation of Budget Estimates (BE) and shall 
+project their Annual Procurement Plan of goods and services on GeM portal within 30 
+(thirty) days of Budget approval.  
+➤ The Government Buyers may ascertain the reasonableness of prices before placement 
+of order using the Business Analytics (BA) tools available on GeM including the Last 
+Purchase Price on GeM, Department's own Last Purchase Price etc.  
+➤ A demand for goods shall not be divided into small quantities to make piecemeal 
+purchases to avoid procurement through L-1 Buying / bidding / reverse auction on GeM 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 22   www.dakguru.com 
+ 
+or the necessity of obtaining the sanction of higher authorities required with reference to 
+the estimated value of the total demand.  
+Preparing bid documents, publication, receipt and opening of bids  
+The following essential aspects should be contains in bid document:  
+➤ Description of the subject matter of procurement, its specifications including the 
+nature, quantity, time and place or places of delivery;  
+➤ Limitation or preference for participation by bidders in terms of the Government 
+policies;  
+➤ The criteria for eligibility and qualification to be met by the bidder (the eligibility 
+criteria should take care of the supplier's eligibility to receive such a Government 
+contract. The qualification criteria should take care of the supplier's past performance, 
+experience, technical competence and production capacity of the subject goods, financial 
+strength to handle the contract successfully, compliance with environmental protection 
+regulations/ Environment Management System and so on);  
+➤ There are no such qualifications for the bidders that would be advantageous to the 
+foreign manufactured goods at the cost of domestically manufactured goods.  
+➤ The procedure as well as date, time and place for obtaining, submitting and opening 
+of the bids;  
+➤ Terms of delivery/completion;  
+➤ Suitable provisions for enabling a bidder to question the bidding conditions, bidding 
+process and/or rejection of its bid. These provisions should include a time frame in which 
+procuring entity will address the bidder's questions; (Rule 173 (iv) of GFR 2017).  
+➤ Criteria for determining the responsiveness of bids, criteria as well as factors to be 
+taken into account for evaluating the bids on a common platform and the criteria for 
+awarding the contract to the responsive, most advantageous (lowest/highest as the c ase 
+may be) bidder should be clearly indicated in the bidding documents.  
+➤ SBDs (Standard Bidding Document) should include a clause that "if a firm quotes NIL 
+charges/consideration, the bid shall be treated as unresponsive and will not be 
+considered";  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 23   www.dakguru.com 
+ 
+➤ Suitable provision for settlement of disputes, if any, emanating from the resultant 
+contract, should be kept in the bidding document; (Rule 173 (v) of GFR 2017) and  
+➤ Essential terms of the procurement contract including a suitable clause mentioning 
+that the resultant contract will be interpreted under Indian laws (Rule 173 (vi) of GFR 
+2017).  
+Tender Documents  
+➤ The tender document is the fundamental document in the public procurement process 
+as after award of the contract it becomes part of the contract agreement. All necessary 
+provisions governing the contract should be clearly provided in the tender document.  
+➤ Examples are technical specifications, drawings, commercial terms and conditions 
+including time period, inspection, payment terms, obligations of the procuring entity and 
+the suppliers timeframe/ milestones, tax implications, compliance framework for 
+statutory and other norms, dispute resolution. Provisions/clauses in the tender document 
+should be clear to avoid differences in interpretation and possible time overrun, cost 
+overrun and quality compromises. Model Tender Documents issued by the DoE may be 
+used, with due customisation.  
+➤ In tenders containing General Conditions of Contract (GCC), additional/ special 
+conditions to be incorporated in the tender document, shall be need based and specific.  
+➤ The GCCs should not be altered and changes, if any, in conditions of contract should 
+only be made through the Special Conditions of Contract.  
+➤ Procuring entities may issue instructions regarding appropriate delegation of 
+authority for variations and changes in the scope of the contract.  
+➤ Provision of price variation, wherever considered appropriate, as well as methodology 
+for calculation of the same shall be clearly stipulated in the tender document.  
+➤ Technical and Financial eligibility Criteria for the bidders are important in the public 
+procurement process. They shall be clear and fair, having regard to the specific 
+circumstances of the procurement. Appropriate parameters should be prescribed in the 
+eligibility criteria for bidders, to enable selection of the right type of bidders in public 
+interest, balancing considerations of quality, time and cost.  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 24   www.dakguru.com 
+ 
+➤ Open online tendering should be the default method to ensure efficiency of 
+procurement. Public authorities should also keep the experience criteria broad based so 
+that bidders with experience in similar nature of items/ goods can participate.  
+➤ Pre-bid conference may be conducted for large value tenders by Procuring Entities. 
+The Place and time of pre-bid conferences should be mentioned in the tender document 
+and/or publicized through the website of the procuring entity and/or through newspaper 
+publication.  
+Contents of Tender Documents (Rule 168 of GFR 2017)  
+The main sections of the SBD are:  
+• Notice Inviting Tender (NIT);  
+• Instructions to Bidders (ITB);  
+• Appendix to Instructions to Bidders (AITB) (instead of modifying ITB, it is better 
+to have information specific to a procurement as a separate section);  
+• Eligibility and qualification criteria;  
+• Schedule of requirements;  
+• Technical specifications (including Drawings) and Quality Assurance (Inspections 
+and Tests);  
+• General Conditions of Contract (GCC);  
+• Special Conditions of Contract (SCC) (instead of modifying GCC every time, it is 
+better to have it as a separate section); and  
+• Standard formats, including Bid Cover letter, price schedules, bank guarantees 
+and contract format.  
+➤ Special Conditions of Contract (SCC) (instead of modifying GCC every time, it is better 
+to have it as a separate section); and  
+➤ Standard formats, including Bid Cover letter, price schedules, bank guarantees and 
+contract format.  
+ 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 25   www.dakguru.com 
+ 
+Bid Validity 
+A bid shall remain valid for the period mentioned in the Tender Document ( 90 days if 
+not so specified).  
+Special Conditions in GTE Procurements 
+a) Currency of Bidding: In GTE tenders, the Foreign Bidders are allowed to quote price 
+(and get paid) in RBI's notified basket of foreign currencies - US Dollar or Euro or Pound 
+Sterling or Yen etc., in addition to the Indian Rupees - except for expenditure incurred in 
+India (including agency commission if any) which should be stated in Indian Rupees. 
+Indian Bidders are to quote in INR only.  
+b) Agency Commission: The amount of Agency Commission, (normally not exceeding 
+five percent) payable to the Indian Agent should not be more than what is specified in 
+the Agency agreement (a certified copy should be submitted along with the bid) between 
+the bidder and the Indian Agent.  
+Cost and Availability of Tender Documents 
+Estimated Value of Tender  Tender Document Cost  
+Below Rs 25 Lakh  Rs. 500  
+Rs 25 Lakh to Rs 2 Crore  Rs. 1,500  
+Rs 2 Crore to Rs. 25 Crore  Rs. 2,500  
+Rs 25 Crore to Rs. 50 Crore  Rs. 5,000  
+Above Rs 50 Crore  To be decided on case-to-case basis  
+Bid Security (Earnest Money) 
+➤ range between 2-5% of the estimated value of the goods to be procured.  
+➤ EMD not required if tender value is upto Rs 5,00,000/- (five lakh).  
+➤ In case the bid security is more than a threshold ( Rupees five lakh ) and in case of 
+foreign bidders in GTE tenders, it may be in the form of a bank guarantee (in equivalent 
+Foreign Exchange amount, in case of GTE) issued/ confirmed from any of the commercial 
+banks in India in an acceptable form.  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 26   www.dakguru.com 
+ 
+➤ The bid security is normally to remain valid for a period of 45(forty-five) days beyond 
+the final bid validity period.  
+➤ Bid securities of the unsuccessful bidders should be returned to them at the earliest 
+after expiry of the final bid validity period and latest by the 30th day after the award of 
+the contract.  
+➤ Bid security should be refunded to the successful bidder upon receipt of performance 
+security.  
+➤ However, in the case of two -packet or two -stage tendering, Bid securities of 
+unsuccessful bidders during the first stage, i.e., technical evaluation, etc., should be 
+returned within 30 days  of declaration of the result of the first stage, i.e., technical 
+evaluation, etc.  
+Performance Security (Rule 171 of GFR 2017) 
+➤ To ensure due performance of the contract, performance security [or Performance 
+Bank Guarantee (PBG) or Security Deposit (SD)] is to be obtained from the successful 
+bidder awarded the contract.  
+➤ From 01.01.2024 the performance security for Goods/services will be 03%-05% of value 
+of contract. (3%-10% for Work).  
+➤ In scrap tender, the Security Deposit will be 25% of bid value.  
+➤ Submission of Performance Security is not necessary for a contract value up to Rupees 
+50 (fifty) Lakh.  
+➤ Performance Security is to be furnished by a specified date (generally 14(fourteen) – 
+28 (twenty Eight) days  after notification of the award) and it should remain valid for a 
+period of 60 (sixty) days beyond the date of completion of all contractual obligations of 
+the supplier, including warranty obligations.  
+➤ Procuring Entity may exempt the following entities (on their specific requests or 
+otherwise) from submission of Performance Security: a) Govt. Ministries, Departments, 
+Attached and Subordinate Offices, Autonomous bodies, b) OEM in whose favour PAC, 
+in tenders issued against PAC.  
+ 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 27   www.dakguru.com 
+ 
+Advance Payment 
+➤ Ordinarily, payments for services rendered or supplies made should be released only 
+after the services have been rendered or supplies made. However, it may become 
+necessary to make advance payments in the following types of cases:  
+• Advance payment demanded by firms holding maintenance contracts for 
+servicing of air-conditioners, computers, other costly equipment, etc.;  
+• Advance payment demanded by firms against fabrication contracts, turn -key 
+contracts; and so on;  
+➤ Such advance payments should not exceed the following limits except in case of 
+procurement of arms and ammunitions from ordinance factories:  
+• Thirty per cent of the contract value to private firms;  
+• Forty per cent  of the contract value to a state or central Government agency or 
+PSU; or  
+• In case of the maintenance contract, the amount should not exceed the amount 
+payable for six months under the contract.  
+➤ In exceptional cases, the Administrative Department may relax the ceilings mentioned 
+above with prior concurrence of the Associated/ integrated Finance. While making any 
+advance payment as above, adequate safeguards in the form of a bank guarantee, and so 
+on, should be obtained from the firm. However, the bank guarantee need not be insisted 
+upon in case of procurement of arms and ammunitions from ordinance factories. Further, 
+such advance payments should be generally interest bearing, suitable percentages for 
+which are to be decided on a case-to-case basis.  
+Contract Management 
+➤ The purpose of contract management is to ensure that the contract delivers the desired 
+outcomes as per the terms and conditions of the contract.  
+➤ It also ensures that the payments made to the contractor match the performance. 
+Implementation of the contract should be strictly monitored and notices issued promptly 
+whenever a breach of provisions occurs.  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 28   www.dakguru.com 
+ 
+➤ Monitoring should ensure that contractor adhere to contract terms, performance 
+expectations are achieved (such as timely deliveries, quality of goods supplied, adherence 
+to proper procedure for submitting invoices, and so on) and any problems are identified 
+and resolved in a timely manner.  
+➤ Without a sound monitoring process, there can be no assurance that "we get what we 
+pay and contract for and pay for only for what we get".  
+ 
+Normally, the following issues are handled during this phase:  
+(i) Amendments to the contract;  
+(ii) Operation of the option clause;  
+(iii) Safeguards for handing over Procuring Entity materials/equipment to 
+contractors;  
+(iv) Payments to the contractor and handling of securities;  
+(v) Monitoring of supplier performance;  
+(vi) Delays in performance of the contract;  
+(vii) Breach of contract, remedies and termination of contract;  
+(viii) Dispute resolution;  
+(ix) Contract closure upon completion;  
+(x) Goods receiving;  
+(xi) Quality assurance;  
+(xii) Accountal and payment of bills; and  
+(xiii) Storage and issue of inspected goods.  
+ 
+Amendment to the Contract 
+Once a contract has been concluded, the terms and conditions thereof should not be 
+varied.  
+➤ No amendment to the contract should be made that can lead to a vitiation of the 
+original tender decision or bestow an undue advantage on the contractor. However, due 
+to various reasons, changes and modifications are needed in the contract.  
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 29   www.dakguru.com 
+ 
+➤ Where it becomes necessary/ inescapable, any modification will be carried out with 
+the prior approval of the CA with the Associated/ integrated Finance's concurrence.  
+Option Clause 
+➤ Under this clause, the purchaser retains the right to place orders for an additional 
+quantity up to a specified percentage of the originally contracted quantity at the same 
+rate and terms of the contract, during the currency of the contract.  
+➤ This clause and percentage should be part of the Bid Document and the contract and 
+ideally should not exceed 25-30%.  
+➤ Normally, for raw materials/consumables of regular and year -on-year recurrent 
+requirements, all tenders of value above Rs. 50 (Rupees fifty) lakh should invariably 
+include this clause.  
+➤ The clause may be framed along following lines:  
+"The purchaser reserves the right to increase/decrease the ordered quantity by up to [25] 
+per cent at any time, till final delivery date (or the extended delivery date of the contract), 
+by giving reasonable notice even though the quantity ordered initially has been supplied 
+in full before the last date of the delivery period (or the extended delivery period)"  
+Safeguards for Handing Over Procuring Entity Materials/Equipment to Contractors 
+➤ Before the final payment or release of PBG/SD, a certificate may be taken from the 
+concerned Department that the contractor has returned all documents, drawings, 
+protective gear, material, equipment, facilities and assets loaned, including all ID cards 
+and gate passes, and so on, in good condition.  
+➤ Further, it should be certified that payment from the contractor has been received for 
+usage of electricity, water, crane, accommodation, weighing facility, and so on. For low 
+value items of less than Rs. 1,00,000 (Rupees One Lakh), or for sending spares for repairs 
+to the OEMs, this stipulation of the bank guarantee may be waived and, if feasible, an 
+indemnity bond may be taken.  
+ 
+ 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 30   www.dakguru.com 
+ 
+Payments to the Contractor and Handling of Securities 
+➤ It should be ensured that all payments due to the firm, including release of the 
+performance security, are made on a priority basis without avoidable delay as per the 
+tender/contract conditions. Before the payment is made, the invoice should be 
+crosschecked with the actual receipt of material to ensure that the payment matches the 
+actual performance.  
+➤ Proper procedures for safe custody, monitoring and return of bank guarantees and 
+other instruments may be followed. Chapter 6 has more details in this regard.  
+➤ Before making a final payment or before releasing the performance bank guarantee, a 
+'No Claim Certificate' may be insisted upon from the supplier to prevent future claims.  
+➤ Whenever a bank guarantee is released following due procedure and safeguards, 
+acknowledgement thereof should also be taken from the contractor.  
+ 
+Delay in Payment to the Contractors 
+➤ Public authorities may put in place a provision for payment of interest in case of 
+delayed payment of bills by more than 30 working days after submission of bill by the 
+contractor. Where interest is to be paid, the rate of interest should be the rate of interest 
+of General Provident Fund.  
+ 
+Monitoring of Supplier Performance 
+➤ As soon as the order is issued, entry shall be made in the progress of supply order 
+register recording therein the name of the supplier, items, rate, quantity, amount, 
+delivery schedule, and so on. Monitoring should ensure that suppliers adhere to contract 
+terms, performance expectations are achieved (such as timely deliveries, quality of goods 
+supplied, and adherence to proper procedure for submitting invoices, and so on) and any 
+problems are identified and resolved in a timely manner.  
+ 
+ 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 31   www.dakguru.com 
+ 
+Delivery Period 
+➤ In case of items such as raw material which is delivered throughout the year, a delivery 
+schedule of the monthly rate of supply should be specified. It is usual in such cases that 
+there is a slight deviation from such monthly rate of supply. It should be clarified in such 
+cases that the variation in the periodic rate of supply beyond +/- 10 (ten) per cent in any 
+calendar month; or +/- 7 (seven) per cent  cumulative in any calendar quarter; or +/- 5 
+(five) per cent cumulative in any calendar year would be considered as delay in delivery 
+attracting imposition of LD (Liquidated Damages).  
+ 
+Force Majeure Clause 
+➤ A Force Majeure (FM) means extraordinary events or circumstance beyond human 
+control such as an event described as an act of God (like a natural calamity) or events 
+such as a war, strike, riots, crimes (but not including negligence or wrong -doing, 
+predictable/seasonal rain and any other events specifically excluded in the clause).  
+➤ If the performance in whole or in part or any obligation under this contract is 
+prevented or delayed by any reason of FM for a period exceeding 90 (ninety) days, either 
+party may at its option terminate the contract without any financial repercussion on 
+either side.  
+ 
+Liquidated Damages (LD) 
+➤ Compensation of loss on account of late delivery (actually incurred as well as notional) 
+where loss is pre-estimated and mutually agreed to is termed as LD. Law allows recovery 
+of pre-estimated loss provided such a term is included in the contract and there is no need 
+to establish actual loss due to late supply.  
+ 
+Quantum of LD 
+➤ While granting extension of the delivery period, where the delivery of stores or any 
+instalment thereof is accepted after expiry of the original delivery period, the CA may 
+recover from the contractor, as agreed, the LD a sum equivalent to 0.5 (half) per cent of 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 32   www.dakguru.com 
+ 
+the prices of any portion of stores delivered late, for each week or part thereof of delay 
+subject to a maximum deduction of the 5% (or any other percentage if prescribed in the 
+contract) of the total contract value.  
+➤ In case of inordinate delay this maximum deduction shall be 10% of the total contract 
+value.  
+➤ Inordinate Delays: Inexcusable delays of more than one -fourth ( 25%) of the total 
+completion period shall be treated as inordinate delays.  
+ 
+Disposal of Scrap Goods 
+➤ Competent Authority to declare and dispose off Scrap Material may be laid down in 
+the SoPP, based on the 'Book Value' or 5% (five percent) of the Original/ Market Value of 
+new goods.  
+➤ The CA (competent Authority) may relax this need for survey by SC (Survey 
+Committee), as a standing order, in the case of a list of known items of scrap like 
+Newspapers, containers etc. of small value (Rs. 15,000-Rupees fifteen Thousand).  
+ 
+Modes of Disposal 
+➤ The mode of disposal may be determined by the CA, keeping in view the necessity to 
+avoid accumulation of such goods, consequent blockage of space and also deterioration 
+in value of goods to be disposed of. The usual modes of disposal of scrap are:  
+• Small value scrap such as waste paper or industrial sweepings, and so on, up to a 
+value of Rs. 15,000 (Rupees Fifteen thousand) in each case may be sold directly to 
+the local scrap dealers on a summary quotation basis; and  
+• Scrap upto Rs. 4 Lakh may be sold on a Limited Tender basis to locally known 
+Scrap Dealers of relevant category.  
+• Sale through the e -auction portal, or a tender for disposal or traditional public 
+auction may be resorted to for scrap value above Rupees Four lakh . E-Auction 
+ Dak Guru Study Material                                   Manual for Procurement of Goods & Services 
+ 33   www.dakguru.com 
+ 
+should be the preferred mode for such disposals, using the e-Auction platforms of 
+NIC, MSTC, Indian Railways or any other appropriate portal;  
+• Certain useable machinery/ spare may still be useable by other Ministries/ 
+Departments/ PSUs; these should be disposed at book value plus 20 (twenty) per 
+cent, 7.5 (seven and a half) per cent  freight + 12.5 (twelve and a half) per cent  
+handling charges directly to the concerned organization.  
+ 
+ 
