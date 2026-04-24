@@ -16,6 +16,102 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "24.04.2026",
+        items: [
+            {
+                title: "🎯 Mock Test 15 & PSGB Mock 04 Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>Weekly Mock Test - 15</strong> for LDCE IP 2026 and <strong>Mock Test - 04</strong> for PS Group B 2026 aspirants!</p>
+                        
+                        <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-2xl border border-emerald-100 dark:border-emerald-900/20">
+                            <ul className="space-y-4 text-[11px] font-bold text-zinc-700 dark:text-zinc-300">
+                                <li className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                    </span>
+                                    LDCE IP Weekly Mock Test - 15
+                                </li>
+                                <li className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400">
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                                    </span>
+                                    PS Group B Weekly Mock Test - 04
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide mb-2">LDCE IP Topics:</p>
+                                <ul className="space-y-1.5 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✅</span>
+                                        <span>Manual on Public Procurement</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✅</span>
+                                        <span>CVC Guidelines</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="bg-purple-50/50 dark:bg-purple-900/10 p-3 rounded-xl border border-purple-100 dark:border-purple-800/50">
+                                <p className="font-bold text-purple-700 dark:text-purple-300 text-[10px] uppercase tracking-wide mb-2">PS Group B Topics:</p>
+                                <ul className="space-y-1.5 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-purple-500 mt-0.5">✅</span>
+                                        <span>PO Small Savings Schemes</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-purple-500 mt-0.5">✅</span>
+                                        <span>POSB (CBS) Manual</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="p-3 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                            <p className="text-[11px] text-amber-800 dark:text-amber-300 font-medium leading-relaxed">
+                                <strong>🧼 Content Cleanup:</strong> All MCQs have been standardized. Removed bracketed topics and technical citation tags for a cleaner and more focused study experience.
+                            </p>
+                        </div>
+
+                        <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                            These tests will be open for attempts from <strong>25.04.2026</strong>. <strong>Top 7 Rankers</strong> will be published on Monday (27.04.2026).
+                        </p>
+
+                        <p className="pt-1 text-[11px] text-zinc-600 dark:text-zinc-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Prepare well and secure your rank!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📊 Admin: Live Leaderboard Monitoring",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have introduced a <strong>Live Leaderboard</strong> feature exclusively for Administrators!</p>
+                        
+                        <div className="bg-indigo-50/50 dark:bg-indigo-900/10 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/50">
+                            <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                <li className="flex items-start gap-2">
+                                    <span className="text-indigo-500 mt-0.5">⏱️</span>
+                                    <span><strong>Real-time Polling:</strong> Leaderboard updates every 20 seconds during live tests.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-blue-500 mt-0.5">🛡️</span>
+                                    <span><strong>Secured Access:</strong> Results remain private until the live schedule concludes for regular users.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "19.04.2026",
         items: [
             {
