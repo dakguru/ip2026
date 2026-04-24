@@ -72,12 +72,6 @@ const UPDATES_DATA: UpdateGroup[] = [
                             </div>
                         </div>
 
-                        <div className="p-3 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-100 dark:border-amber-800/50">
-                            <p className="text-[11px] text-amber-800 dark:text-amber-300 font-medium leading-relaxed">
-                                <strong>🧼 Content Cleanup:</strong> All MCQs have been standardized. Removed bracketed topics and technical citation tags for a cleaner and more focused study experience.
-                            </p>
-                        </div>
-
                         <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
                             These tests will be open for attempts from <strong>25.04.2026</strong>. <strong>Top 7 Rankers</strong> will be published on Monday (27.04.2026).
                         </p>
