@@ -70,7 +70,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-purple-500 mt-0.5">✅</span>
-                                        <span>POSB (CBS) Manual</span>
+                                        <span>POSB (CBS) Manual & PLI Scheme, 2011</span>
                                     </li>
                                 </ul>
                             </div>
