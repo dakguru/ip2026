@@ -49,11 +49,15 @@ const UPDATES_DATA: UpdateGroup[] = [
                                 <ul className="space-y-1.5 text-[11px] text-zinc-700 dark:text-zinc-300">
                                     <li className="flex items-start gap-2">
                                         <span className="text-blue-500 mt-0.5">✅</span>
-                                        <span>Manual on Public Procurement</span>
+                                        <span>FR & SR – General, TA, DA, DR & HRA Rules</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-blue-500 mt-0.5">✅</span>
-                                        <span>CVC Guidelines</span>
+                                        <span>Brochure on Casual Labourers</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✅</span>
+                                        <span>Maintenance of APAR</span>
                                     </li>
                                 </ul>
                             </div>
