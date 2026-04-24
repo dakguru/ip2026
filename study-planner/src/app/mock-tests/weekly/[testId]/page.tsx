@@ -159,6 +159,11 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-04-18T00:00:00+05:30"),
         endDate: new Date("2026-04-19T23:59:59+05:30"),
         title: "PS Gr B - Weekly Mock Test 03"
+    },
+    "psgb-mock-2026-04-26": {
+        startDate: new Date("2026-04-25T00:00:00+05:30"),
+        endDate: new Date("2026-04-26T23:59:59+05:30"),
+        title: "PS Gr B - Weekly Mock Test 04"
     }
 };
 

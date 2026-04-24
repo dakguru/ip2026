@@ -181,7 +181,7 @@ export default function MockTestsPage() {
 
             if (now > sundayDate) {
                 status = 'completed';
-            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-04-04' || calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28' || calculatedId === 'mock-2026-04-11'))) {
+            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-04-25' || calculatedId === 'mock-2026-04-18' || calculatedId === 'mock-2026-04-04' || calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28' || calculatedId === 'mock-2026-04-11'))) {
                 status = 'live';
             } else {
                 status = 'upcoming';
@@ -1338,17 +1338,20 @@ function MockTestCard({
 
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
-                {isEnded && onShowRankList && 
-                 !(mock.id === 'mock-2026-03-28' && new Date() < new Date('2026-03-30T00:00:00+05:30')) && 
-                 !(mock.id === 'mock-2026-04-04' && new Date() < new Date('2026-04-06T00:00:00+05:30')) && 
-                 !(mock.id === 'mock-2026-04-11' && new Date() < new Date('2026-04-13T00:00:00+05:30')) && 
-                 !(mock.id === 'mock-2026-04-18' && new Date() < new Date('2026-04-20T00:00:00+05:30')) && 
-                 !(mock.id.startsWith('psgb-mock-') && new Date() <= mock.endDate) && (
+                {onShowRankList && (role === 'admin' || isEnded) && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
-                        className="w-full py-2.5 sm:py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all transform hover:scale-[1.02] active:scale-95 px-2 mb-2"
+                        disabled={role !== 'admin' && (new Date() >= mock.startDate && new Date() <= mock.endDate)}
+                        className={`w-full py-2.5 sm:py-3 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-amber-600 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all transform hover:scale-[1.02] active:scale-95 px-2 mb-2 ${
+                            role !== 'admin' && (new Date() >= mock.startDate && new Date() <= mock.endDate) ? 'opacity-50 cursor-not-allowed grayscale' : ''
+                        }`}
                     >
-                        <Trophy className="w-4 h-4 text-white fill-current shrink-0" /> <span>View Top 7 Rankers</span>
+                        <Trophy className="w-4 h-4 text-white fill-current shrink-0" /> 
+                        <span>
+                            {role === 'admin' && (new Date() >= mock.startDate && new Date() <= mock.endDate) 
+                                ? 'Live Leaderboard' 
+                                : 'View Top 7 Rankers'}
+                        </span>
                     </button>
                 )}
 
@@ -1502,27 +1505,10 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [loading, setLoading] = useState(false);
 
-    // Determine if Mock 11 is currently in its live window (Mar 28 00:00 IST – Mar 29 23:59 IST)
-    const isMock11LiveWindow = mock?.id === 'mock-2026-03-28' &&
-        new Date() >= new Date('2026-03-28T00:00:00+05:30') &&
-        new Date() < new Date('2026-03-30T00:00:00+05:30');
-
-    // Determine if Mock 12 is currently in its live window (Apr 04 00:00 IST – Apr 05 23:59 IST)
-    const isMock12LiveWindow = mock?.id === 'mock-2026-04-04' &&
-        new Date() >= new Date('2026-04-04T00:00:00+05:30') &&
-        new Date() < new Date('2026-04-06T00:00:00+05:30');
-
-    // Determine if Mock 14 is currently in its live window (Apr 18 00:00 IST – Apr 19 23:59 IST)
-    const isMock14LiveWindow = mock?.id === 'mock-2026-04-18' &&
-        new Date() >= new Date('2026-04-18T00:00:00+05:30') &&
-        new Date() < new Date('2026-04-20T00:00:00+05:30');
-
-    const isPsgbLiveWindow = mock?.id.startsWith('psgb-mock-') &&
-        new Date() >= mock.startDate &&
-        new Date() <= mock.endDate;
-
-    // Non-admin users cannot see leaderboard during Mock 11, Mock 12, Mock 14 or PSGB live window
-    const isLeaderboardBlocked = (isMock11LiveWindow || isMock12LiveWindow || isMock14LiveWindow || isPsgbLiveWindow) && role !== 'admin';
+    const now = new Date();
+    // Non-admin users cannot see leaderboard during the live test window (Sat 00:00 - Sun 23:59)
+    const isWithinLiveWindow = mock && now >= mock.startDate && now <= mock.endDate;
+    const isLeaderboardBlocked = isWithinLiveWindow && role !== 'admin';
 
     useEffect(() => {
         let intervalId: NodeJS.Timeout;
@@ -1821,6 +1807,8 @@ function PsgbMockTestPage({
             const isAdmin = role === 'admin';
             const isWeek01 = week.week === 1;
             const isWeek02 = week.week === 2;
+            const isWeek03 = week.week === 3;
+            const isWeek04 = week.week === 4;
 
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
             const isPublicLive = now >= satDate && now <= sunDate;
@@ -1828,7 +1816,7 @@ function PsgbMockTestPage({
 
             if (isPast) {
                 status = 'completed';
-            } else if (isPublicLive || (isAdmin && (isWeek01 || isWeek02))) {
+            } else if (isPublicLive || (isAdmin && (isWeek01 || isWeek02 || isWeek03 || isWeek04))) {
                 status = 'live';
             }
 

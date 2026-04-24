@@ -3,9 +3,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { ArrowLeft, FileQuestion, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, AlertCircle, Settings, Lock, Download, Eye, ShieldAlert, Info, Check, X, Calendar, Scroll, Loader2 } from 'lucide-react';
+import { ArrowLeft, FileQuestion, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, AlertCircle, Settings, Lock, Download, Eye, ShieldAlert, Info, Check, X, Calendar, Scroll, Loader2, ChevronDown, BookOpen, Sparkles, Clock } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
 import { QuizSet, QuizTopic } from '@/lib/quizTypes';
+import { IP_PYQ_YEARS, PAPER_COLORS, type YearInfo } from '@/data/ipPyqData';
 import { useCourse } from '@/contexts/CourseContext';
 import { Capacitor } from '@capacitor/core';
 import { Toast } from '@capacitor/toast';
@@ -154,6 +155,9 @@ export default function PyqDashboard() {
             console.error("Failed to parse session", e);
         }
     }, []);
+
+    // IP PYQ Year Navigation State
+    const [selectedPyqYear, setSelectedPyqYear] = useState<string | null>(null);
 
     // PDF Papers State
     const [showAdvisory, setShowAdvisory] = useState(false);
@@ -568,18 +572,31 @@ export default function PyqDashboard() {
                         </div>
                     )}
 
-                    {/* MCQ Practice Section */}
-                    {pyqTopics.length > 0 && (
+                    {/* IP Course — Year-Wise PYQ MCQ Bank */}
+                    {!isPS && (
+                        <IpPyqYearSection
+                            pyqYears={IP_PYQ_YEARS}
+                            quizData={QUIZ_DATA}
+                            selectedYear={selectedPyqYear}
+                            onYearSelect={(y) => setSelectedPyqYear(prev => prev === y ? null : y)}
+                            onPaperSelect={(topicId) => {
+                                const topic = QUIZ_DATA.find(t => t.id === topicId);
+                                if (topic) handleTopicSelect(topic);
+                            }}
+                            isLocked={!unlocked}
+                        />
+                    )}
+
+                    {/* PS Gr. B MCQ Practice Section */}
+                    {isPS && pyqTopics.length > 0 && (
                         <>
-                            {isPS && (
-                                <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-1 h-8 rounded-full bg-gradient-to-b from-cyan-500 to-blue-600" />
-                                    <div>
-                                        <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">MCQ Study</h2>
-                                        <p className="text-sm text-zinc-500 dark:text-zinc-400">Attempt previous year questions interactively</p>
-                                    </div>
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="w-1 h-8 rounded-full bg-gradient-to-b from-cyan-500 to-blue-600" />
+                                <div>
+                                    <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">MCQ Study</h2>
+                                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Attempt previous year questions interactively</p>
                                 </div>
-                            )}
+                            </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {pyqTopics.map(topic => (
                                     <TopicCard
@@ -669,6 +686,220 @@ export default function PyqDashboard() {
     );
 }
 
+// ─── IP PYQ Year-Wise Section ────────────────────────────────────────────────
+
+function IpPyqYearSection({
+    pyqYears,
+    quizData,
+    selectedYear,
+    onYearSelect,
+    onPaperSelect,
+    isLocked,
+}: {
+    pyqYears: YearInfo[];
+    quizData: QuizTopic[];
+    selectedYear: string | null;
+    onYearSelect: (year: string) => void;
+    onPaperSelect: (topicId: string) => void;
+    isLocked: boolean;
+}) {
+    const getQCount = (topicId: string | null) => {
+        if (!topicId) return 0;
+        const topic = quizData.find(t => t.id === topicId);
+        return topic ? topic.sets.reduce((a, s) => a + s.questions.length, 0) : 0;
+    };
+
+    const getYearStats = (year: YearInfo) => {
+        const mcqPapers = year.papers.filter(p => p.type !== 'descriptive');
+        const available = mcqPapers.filter(p => p.topicId && getQCount(p.topicId) > 0).length;
+        const totalQs = mcqPapers.reduce((a, p) => a + getQCount(p.topicId), 0);
+        return { available, total: mcqPapers.length, totalQs };
+    };
+
+    return (
+        <div className="mb-8">
+            {/* Section Header */}
+            <div className="flex items-center gap-3 mb-8">
+                <div className="w-1 h-8 rounded-full bg-gradient-to-b from-cyan-500 to-blue-600" />
+                <div>
+                    <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">MCQ Question Bank — Year Wise</h2>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Curated & verified against the revised 2025 LDCE IP syllabus</p>
+                </div>
+            </div>
+
+            {/* Stats Banner */}
+            <div className="mb-8 p-5 rounded-2xl bg-gradient-to-r from-cyan-950/60 to-blue-950/60 border border-cyan-800/30 flex flex-wrap gap-6 items-center">
+                <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center shrink-0">
+                        <Calendar className="w-5 h-5 text-cyan-400" />
+                    </div>
+                    <div>
+                        <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wider font-semibold">Years Covered</p>
+                        <p className="text-lg font-extrabold text-white">2011 – 2025</p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center shrink-0">
+                        <BookOpen className="w-5 h-5 text-blue-400" />
+                    </div>
+                    <div>
+                        <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wider font-semibold">Total Questions</p>
+                        <p className="text-lg font-extrabold text-white">
+                            {pyqYears.reduce((a, y) => a + getYearStats(y).totalQs, 0).toLocaleString()}+
+                        </p>
+                    </div>
+                </div>
+                <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0">
+                        <Sparkles className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <div>
+                        <p className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wider font-semibold">Status</p>
+                        <p className="text-lg font-extrabold text-white">Syllabs-Mapped & Updated</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Year Cards */}
+            <div className="space-y-4">
+                {pyqYears.map((yearInfo) => {
+                    const stats = getYearStats(yearInfo);
+                    const isOpen = selectedYear === yearInfo.year;
+                    const hasAny = stats.available > 0;
+
+                    return (
+                        <div key={yearInfo.year} className="rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden bg-white dark:bg-zinc-900 shadow-sm">
+                            {/* Year Row — clickable header */}
+                            <button
+                                onClick={() => onYearSelect(yearInfo.year)}
+                                className="w-full flex items-center gap-4 px-6 py-5 text-left hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors group"
+                            >
+                                {/* Year badge */}
+                                <div className={`shrink-0 w-16 h-16 rounded-2xl flex flex-col items-center justify-center font-extrabold shadow-sm
+                                    ${hasAny
+                                        ? 'bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-cyan-200 dark:shadow-cyan-900/20'
+                                        : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400'
+                                    }`}
+                                >
+                                    <span className="text-xl leading-none">{yearInfo.year.slice(2)}</span>
+                                    <span className="text-[10px] leading-none mt-0.5 opacity-80">{yearInfo.year.slice(0, 2)}</span>
+                                </div>
+
+                                <div className="flex-1 min-w-0">
+                                    <div className="flex items-center gap-2 flex-wrap mb-1">
+                                        <span className="text-lg font-extrabold text-zinc-900 dark:text-zinc-100">LDCE IP {yearInfo.year}</span>
+                                        {yearInfo.pattern === 'new' && (
+                                            <span className="px-2 py-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-[10px] font-bold rounded-full uppercase tracking-wider">
+                                                New Pattern
+                                            </span>
+                                        )}
+                                    </div>
+                                    <div className="flex items-center gap-3 text-sm flex-wrap">
+                                        <span className="text-zinc-500 dark:text-zinc-400">
+                                            {yearInfo.pattern === 'new' ? '3 Papers' : '4 Papers'}
+                                        </span>
+                                        <span className="text-zinc-300 dark:text-zinc-600">·</span>
+                                        {hasAny ? (
+                                            <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                                                <CheckCircle2 className="w-3.5 h-3.5" />
+                                                {stats.totalQs} MCQs available
+                                            </span>
+                                        ) : (
+                                            <span className="text-zinc-400 dark:text-zinc-500 flex items-center gap-1">
+                                                <Clock className="w-3.5 h-3.5" />
+                                                Extraction in progress
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* Progress pills */}
+                                <div className="hidden sm:flex items-center gap-1.5 shrink-0">
+                                    {yearInfo.papers.filter(p => p.type !== 'descriptive').map(p => {
+                                        const qc = getQCount(p.topicId);
+                                        return (
+                                            <div key={p.num} title={`${p.label}: ${qc > 0 ? qc + ' Qs' : 'Pending'}`}
+                                                className={`w-2.5 h-2.5 rounded-full ${qc > 0 ? 'bg-emerald-500' : 'bg-zinc-200 dark:bg-zinc-700'}`}
+                                            />
+                                        );
+                                    })}
+                                </div>
+
+                                <ChevronDown className={`w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            {/* Expanded Paper Cards */}
+                            {isOpen && (
+                                <div className="px-6 pb-6 pt-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 border-t border-zinc-100 dark:border-zinc-800">
+                                    {yearInfo.papers.map((paper) => {
+                                        const colors = PAPER_COLORS[paper.num] ?? PAPER_COLORS[1];
+                                        const qCount = getQCount(paper.topicId);
+                                        const isDescriptive = paper.type === 'descriptive';
+                                        const isAvailable = !isDescriptive && qCount > 0;
+                                        const isPending = !isDescriptive && !isAvailable;
+
+                                        return (
+                                            <div
+                                                key={paper.num}
+                                                className={`relative rounded-2xl overflow-hidden border border-white/5 bg-gradient-to-br ${colors.gradient} shadow-lg`}
+                                            >
+                                                <div className={`absolute top-0 right-0 w-24 h-24 ${colors.accent} rounded-full blur-2xl -mr-6 -mt-6 pointer-events-none`} />
+
+                                                <div className="relative p-5">
+                                                    <div className="flex items-center justify-between mb-3">
+                                                        <span className={`text-[10px] font-bold uppercase tracking-widest ${colors.badge} px-2 py-0.5 rounded-full`}>
+                                                            {isDescriptive ? 'Descriptive' : 'MCQ'}
+                                                        </span>
+                                                        <span className={`text-xs font-semibold ${colors.text}`}>{paper.label}</span>
+                                                    </div>
+
+                                                    <p className="text-white/60 text-xs leading-relaxed mb-4 min-h-[2.5rem]">{paper.subjects}</p>
+
+                                                    {isDescriptive ? (
+                                                        <div className="flex items-center gap-2 text-white/50 text-xs font-medium">
+                                                            <BookOpen className="w-3.5 h-3.5" />
+                                                            Not applicable for MCQ bank
+                                                        </div>
+                                                    ) : isLocked ? (
+                                                        <div className="flex items-center justify-between">
+                                                            <span className="flex items-center gap-1.5 text-white/50 text-xs">
+                                                                <Lock className="w-3.5 h-3.5" /> Locked
+                                                            </span>
+                                                            <Link href="/pricing" className="px-3 py-1 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold rounded-full hover:scale-105 transition-transform active:scale-95">
+                                                                Upgrade
+                                                            </Link>
+                                                        </div>
+                                                    ) : isAvailable ? (
+                                                        <button
+                                                            onClick={() => paper.topicId && onPaperSelect(paper.topicId)}
+                                                            className="w-full py-2.5 flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white text-sm font-bold rounded-xl backdrop-blur-sm transition-all active:scale-95 border border-white/10"
+                                                        >
+                                                            <PlayCircle className="w-4 h-4" />
+                                                            Practice · {qCount} Qs
+                                                        </button>
+                                                    ) : (
+                                                        <div className="flex items-center gap-2 text-white/40 text-xs font-medium">
+                                                            <Clock className="w-3.5 h-3.5" />
+                                                            Coming Soon
+                                                        </div>
+                                                    )}
+                                                </div>
+
+                                                <div className={`h-0.5 w-full ${isAvailable ? 'bg-white/30' : 'bg-white/10'}`} />
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+}
+
+// ─── PS / Legacy Topic Card ───────────────────────────────────────────────────
 function TopicCard({ topic, onSelect, isLocked = false }: { topic: QuizTopic, onSelect: (t: QuizTopic) => void, isLocked?: boolean }) {
     const { course } = useCourse();
     const isPS = course === 'PS_GR_B';
