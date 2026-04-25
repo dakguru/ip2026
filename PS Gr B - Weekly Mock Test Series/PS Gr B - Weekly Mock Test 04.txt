@@ -1,0 +1,485 @@
+Q1. (PO Small Savings Schemes) [Difficulty: Easy]
+What is the minimum deposit required to open a Post Office Saving Account under the 2019 Scheme?
+A. Rs. 100/-
+B. Rs. 250/-
+C. Rs. 500/-
+D. Rs. 1000/-
+Answer: C
+Explanation: The minimum deposit at the account opening for a Post Office Saving Account is Rs. [cite_start]500/-[cite: 2535].
+
+Q2. (PO Small Savings Schemes) [Difficulty: Moderate]
+Which of the following account holders is **NOT** eligible to avail the ATM Card facility for a Post Office Savings Account?
+A. An individual adult operating a single account
+B. Account holder of a Joint-B Type account
+C. An illiterate depositor requesting the facility
+D. Account holders of a Joint-A Type account
+Answer: D
+[cite_start]Explanation: Account holders of Joint-A Type accounts cannot avail the ATM card facility[cite: 2608]. [cite_start]Each holder of a Joint-B account can avail the facility [cite: 2619][cite_start], and illiterate depositors can be issued ATM cards upon request[cite: 2627].
+
+
+Q3. (PO Small Savings Schemes) [Difficulty: Hard]
+Consider the following statements regarding advance deposits and defaults in a National Saving Recurring Deposit Scheme:
+1. If the number of defaults exceeds four, the account is treated as discontinued.
+2. A discontinued account can be revived within two months from the month of the fourth default.
+3. The revival fee is Rs. 1/- per month for every Rs. 100/- defaulted instalment.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. All of the above
+Answer: D
+Explanation: All statements are correct. [cite_start]Defaults > 4 result in a Discontinued status[cite: 2703]. [cite_start]Revival is permitted within two months of the fourth default[cite: 2704], and the fee is Rs. 1/- per month for a Rs. [cite_start]100/- instalment[cite: 2705].
+
+Q4. (PO Small Savings Schemes) [Difficulty: Moderate]
+A guardian opens a Sukanya Samriddhi Account (SSA) but fails to deposit the minimum required amount for three consecutive financial years. In the fourth year, the guardian wishes to regularize the account and makes the required regularization deposit on the 10th day of the month. What is the total amount required to regularize the defaulted years, and will this deposit earn interest for that specific calendar month?
+A. Total Rs. 900/- required; Yes, it will earn interest for that month.
+B. Total Rs. 750/- required; No, it will not earn interest for that month.
+C. Total Rs. 900/- required; No, it will not earn interest for that month.
+D. Total Rs. 750/- required; Yes, it will earn interest for that month.
+Answer: C
+Explanation: Regularization requires the minimum deposit (Rs. 250) plus a penalty (Rs. 50) for each defaulted year (3 x Rs. 300 = Rs. 900). Deposits made after the 5th day do not earn interest for that month, as interest is calculated on the lowest balance between the 6th day and month-end.
+
+Q5. (PO Small Savings Schemes) [Difficulty: Easy]
+Which of the following combinations of schemes qualifies for a tax deduction under Section 80-C of the Income Tax Act?
+A. 1 Year TD and Kisan Vikas Patra
+B. 5 Year TD and National Savings Certificate (VIII Issue)
+C. Monthly Income Scheme and 3 Year TD
+D. Post Office Savings Account and Recurring Deposit
+Answer: B
+[cite_start]Explanation: Deposits in the 5 Year Time Deposit [cite: 2879] [cite_start]and National Savings Certificate (VIII Issue) [cite: 3096] qualify for deduction under Section 80-C.
+
+Q6. (PO Small Savings Schemes) [Difficulty: Moderate]
+Under the National Savings (Monthly Income Account) Scheme, 2019, if an account is prematurely closed after 1 year but on or before the expiry of 3 years from the date of opening, what is the deduction applied?"
+A. 1% of the deposit
+B. 2% of the deposit
+C. Interest paid will be recovered
+D. No deduction is applied
+Answer: B
+[cite_start]Explanation: If an MIS account is closed on or before the expiry of 3 years, a deduction of 2% of the deposit is applied[cite: 2981, 2984]. [cite_start]After 3 years, it is 1%[cite: 2982, 2985].
+
+Q7. (PO Small Savings Schemes) [Difficulty: Easy]
+What is the minimum age required for retired personnel of the Defence Services to open an account under the Senior Citizen Savings Scheme, 2019?
+A. 50 years
+B. 55 years
+C. 58 years
+D. 60 years
+Answer: A
+[cite_start]Explanation: Retired personnel of the Defence Services can open a Senior Citizen Savings Scheme account at a minimum age of 50 years[cite: 3007, 3012].
+
+Q8. (PO Small Savings Schemes) [Difficulty: Hard]
+A depositor opened a PPF account in the financial year 2021-22. In which financial year will the depositor first be eligible to apply for a loan, and what is the maximum loan amount permissible?
+A. 2022-23; 25% of the balance on 31.03.2022
+B. 2023-24; 25% of the balance on 31.03.2022
+C. 2024-25; 50% of the balance on 31.03.2023
+D. 2023-24; 50% of the balance on 31.03.2022
+Answer: B
+Explanation: The loan facility is available from the 3rd financial year (2023-24). [cite_start]The maximum loan is 25% of the balance that stood to the credit at the end of the second year (31.03.2022) immediately preceding the year of the loan application[cite: 3199, 3208, 3233].
+
+Q9. (PO Small Savings Schemes) [Difficulty: Moderate]
+Which of the following is **NOT** a correct provision regarding the Sukanya Samridhhi Account Scheme, 2019?
+A. The account may be opened for a maximum of two girl children in one family.
+B. The minimum initial deposit is Rs. 250/-.
+C. The total amount deposited in an account shall not exceed Rs. 1,50,000/- in a financial year.
+D. Deposits may be made in the account till the completion of 21 years from the date of opening.
+Answer: D
+[cite_start]Explanation: Deposits may be made in the account till the completion of a period of 15 years from the date of opening, not 21 years[cite: 3302]. [cite_start]The account matures on completion of 21 years[cite: 3348].
+
+Q10. (PO Small Savings Schemes) [Difficulty: Easy]
+At what age does the upfront lump sum contribution in a PM CARES for Children Scheme account become a single account of the account holder bearing Rs. 10 lakhs?
+A. 15 years
+B. 18 years
+C. 21 years
+D. 23 years
+Answer: B
+Explanation: The lump sum contribution becomes Rs. [cite_start]10 lakhs when the account holder attains the age of 18 years[cite: 3450, 3451].
+
+Q11. (PO Small Savings Schemes) [Difficulty: Moderate]
+Under which of the following circumstances is the transfer of a Kisan Vikas Patra (KVP) account from one individual to another **EXCEPTED** (not permitted)?
+A. On the death of the account holder to the legal heirs.
+B. On the order of a court.
+C. On pledging to a Gazetted Officer.
+D. On voluntary sale of the certificate to a third party by the account holder.
+Answer: D
+[cite_start]Explanation: Transfer is only allowed on the death of the holder [cite: 3157][cite_start], by court order [cite: 3158][cite_start], on pledging [cite: 3161][cite_start], or to a surviving joint holder on death[cite: 3164]. Voluntary sale is not an eligible condition.
+
+Q12. (PO Small Savings Schemes) [Difficulty: Hard]
+Consider the following statements about the Mahila Samman Savings Certificate, 2023:
+1. The maximum deposit limit is Rs. 2,00,000.
+2. The account holder is eligible to withdraw up to 40% of the eligible balance after one year from opening.
+3. The investment qualifies for rebate under Section 80C of the Income Tax Act.
+Which of the statements is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. All of the above
+Answer: A
+[cite_start]Explanation: Statements 1 and 2 are correct[cite: 3515, 3532]. [cite_start]Statement 3 is incorrect because the investment under MSSC does not qualify for a rebate under Section 80C[cite: 3540].
+
+Q13. (PO Small Savings Schemes) [Difficulty: Moderate]
+If a PPF account is extended with deposits for a block of five years after maturity, what is the maximum permitted withdrawal during this extended block period?
+A. 50% of the balance at the end of the fourth year
+B. 60% of the balance at the commencement of the block period
+C. 100% of the balance minus any outstanding loan
+D. No withdrawals are permitted during the extended period
+Answer: B
+[cite_start]Explanation: Facility of partial withdrawal in an extended account is subject to the condition that total withdrawal during the 5-year block shall not exceed 60% of the balance at credit at the commencement of the block period[cite: 3256, 3257].
+
+Q14. (PO Small Savings Schemes) [Difficulty: Easy]
+Consider the following scenario: Depositor A completes the 5-year tenure of a Time Deposit (TD) but fails to exercise the option for extension within the allowed 18-month period. Depositor B wishes to prematurely close their 5-Year TD account after exactly 4 years and 2 months. According to the 2019 Scheme rules, what interest provisions will apply to these accounts?
+A. Depositor A earns no interest post-maturity; Depositor B earns the POSA rate.
+B. Depositor A earns Post Maturity Interest (PMI) at the POSA rate; Depositor B earns the ROI of a 3-Year TD.
+C. Depositor A earns the 5-Year TD rate by default; Depositor B earns the ROI of a 2-Year TD.
+D. Depositor A earns Post Maturity Interest (PMI) at the POSA rate; Depositor B earns the POSA rate.
+Answer: D
+Explanation: If the extension option is not exercised for a matured TD account, Post Maturity Interest (PMI) is paid at the POSA rate. According to Rule 7(2) of the National Savings Time Deposit Scheme, 2019, if a 5-Year TD account is closed after 4 years, interest at the rate applicable to the Post Office Savings Account (POSA) shall be payable.
+
+Q15. (PO Life Insurance Scheme, 2011) [Difficulty: Hard]
+Match the correct surrender rule for the respective scheme:
+Column I
+1. Whole Life Assurance (Suraksha)
+2. Anticipated Endowment Assurance (Sumangal)
+Column II
+P. Surrender facility not available
+Q. Surrender after 3 years
+A. 1-P, 2-Q
+B. 1-Q, 2-P
+C. 1-Q, 2-Q
+D. 1-P, 2-P
+Answer: B
+[cite_start]Explanation: For WLA (Suraksha), surrender is available after 3 years[cite: 3691, 3981]. [cite_start]For Anticipated Endowment Assurance (Sumangal), the surrender facility is not available[cite: 3981].
+
+Q16. (PO Life Insurance Scheme, 2011) [Difficulty: Moderate]
+Which of the following is **NOT** a valid eligibility condition for purchasing a Postal Life Insurance (PLI) policy?
+A. Employees of Central & State Governments
+B. Employees of companies listed with National Stock Exchange (NSE)
+C. Any person holding a graduate degree/Diploma from India and foreign countries
+D. Any adult individual residing in a rural area regardless of educational qualification
+Answer: D
+[cite_start]Explanation: Options A, B, and C are valid PLI eligibility conditions[cite: 3670, 3681, 3683]. [cite_start]General rural individuals without specific qualifications fall under Rural Postal Life Insurance (RPLI), not PLI[cite: 3803].
+
+Q17. (PO Life Insurance Scheme, 2011) [Difficulty: Hard]
+Regarding the settlement of early death claims in PLI/RPLI, if the death of the insurant occurs within 12 months but not before 6 months from the date of acceptance, what is the remission period for premiums?
+A. Nil
+B. 30 days
+C. 60 days
+D. 90 days
+Answer: B
+[cite_start]Explanation: According to the remission period table for void policies, if death occurs within 12 months but not before 6 months, the remission period is 30 days[cite: 3989].
+
+Q18. (PO Life Insurance Scheme, 2011) [Difficulty: Easy]
+On which date was Postal Life Insurance (PLI) originally introduced?
+A. 1st February 1884
+B. 24th March 1995
+C. 12th October 2011
+D. 1st April 1972
+Answer: A
+[cite_start]Explanation: PLI was introduced on 1st February 1884[cite: 3559, 3669].
+
+Q19. (PO Life Insurance Scheme, 2011) [Difficulty: Moderate]
+All of the following schemes allow the policyholder to avail of a loan facility after a specified period, **EXCEPT**:
+A. Endowment Assurance (Santosh)
+B. Convertible Whole Life Assurance (Suvidha)
+C. Joint Life Assurance (Yugal Suraksha)
+D. Children Policy (Bal Jivan Bima)
+Answer: D
+[cite_start]Explanation: No loan facility is available under the Children Policy (Bal Jivan Bima)[cite: 3774, 3886]. [cite_start]EA, CWLA, and YS allow loans[cite: 4010].
+
+Q20. (PO Life Insurance Scheme, 2011) [Difficulty: Moderate]
+Consider the following statements regarding the Yugal Suraksha (Joint Life Assurance) policy:
+1. The maximum age of the elder policy holder should not be more than 45 years.
+2. The minimum term of the policy is 5 years and maximum is 20 years.
+3. Loan facility is available after 4 years.
+Which of the above statements are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. All of the above
+Answer: A
+[cite_start]Explanation: Statements 1 and 2 are correct[cite: 3736, 3737]. [cite_start]Statement 3 is incorrect because the loan facility for Yugal Suraksha is available after 3 years, not 4 years[cite: 3738].
+
+Q21. (PO Life Insurance Scheme, 2011) [Difficulty: Hard]
+Which of the following scenarios best defines "Conversion" in Postal Life Insurance rules?
+A. Any alteration in the amount of premium or sum assured.
+B. Changing the nomination of the policy holder.
+C. Any alteration affecting the date of maturity of a contract, including antedating or postdating.
+D. Reinstating a discontinued policy after paying arrears.
+Answer: C
+[cite_start]Explanation: "Conversion" means any alteration affecting the date of maturity of a contract of insurance, including antedating or postdating[cite: 3594]. [cite_start]Altering the amount of premium or sum assured is termed "Commutation"[cite: 3592].
+
+Q22. (PO Life Insurance Scheme, 2011) [Difficulty: Easy]
+Under the Anticipated Endowment Assurance (Sumangal) for a 15-year term, what percentage of survival benefits is paid at the end of 9 years?
+A. 10%
+B. 20%
+C. 40%
+D. 60%
+Answer: B
+[cite_start]Explanation: For the AEA 15 Years policy, 20% is paid at the end of 9 years[cite: 3751].
+
+Q23. (PO Life Insurance Scheme, 2011) [Difficulty: Moderate]
+Which of the following statements about PLI/RPLI Medical Examination fees is correct?
+A. Rs. 50/- fee is paid for Sum Assured up to 10 lakhs.
+B. Rs. 70/- fee is paid for Sum Assured above 20 lakhs.
+C. Rs. 100/- fee is paid for Sum Assured above 10 lakhs up to 20 lakhs.
+D. No fee is paid by the department; it is entirely borne by the proposer.
+Answer: A
+Explanation: The medical officer receives a fee of Rs. [cite_start]50/- for Sum Assured up to 10 lakhs[cite: 3948]. For above 10 lakhs up to 20 lakhs, it is Rs. 70/-, and above 20 lakhs it is Rs. [cite_start]120/-[cite: 3948].
+
+Q24. (PO Life Insurance Scheme, 2011) [Difficulty: Hard]
+A 30-year-old PLI policyholder commits suicide 8 months after the date of acceptance of the policy. Which of the following correctly describes the death claim settlement?
+A. The nominee will receive the full Sum Assured and accrued bonus.
+B. The nominee will receive only the surrender value.
+C. The nominee will receive 80% of the premia paid or the surrender value, whichever is higher.
+D. The claim will be entirely rejected and no amount will be payable.
+Answer: C
+[cite_start]Explanation: In case of suicide committed before the expiry of one year from the date of acceptance, 80% of premia paid or surrender value whichever is higher is payable[cite: 4047].
+
+Q25. (PO Life Insurance Scheme, 2011) [Difficulty: Easy]
+What is the "Free Look Period" for a PLI/RPLI policyholder?
+A. 7 days from the date of delivery of the policy
+B. 15 days from the date of delivery of the policy
+C. 30 days from the date of acceptance
+D. 60 days from the date of commencement of risk
+Answer: B
+[cite_start]Explanation: The "Free Look Period" means a period of 15 days from the date of delivery of the policy during which the insurant may request cancellation[cite: 3618, 3950].
+
+Q26. (PO Life Insurance Scheme, 2011) [Difficulty: Moderate]
+Under the Non-Medical Scheme of Rural Postal Life Insurance (RPLI), what is the maximum Sum Assured allowed if the proposer submits a non-standard age proof?
+A. Rs. 10,000/-
+B. Rs. 25,000/-
+C. Rs. 50,000/-
+D. Rs. 1,00,000/-
+Answer: B
+Explanation: The maximum limit of sum assured with non-standard proof of age under the Non-Medical RPLI scheme is Rs. [cite_start]25,000/-[cite: 3927].
+
+Q27. (PO Life Insurance Scheme, 2011) [Difficulty: Hard]
+According to the Record Retention Schedule, how long must policies that are cancelled during the 'Free Look' period be retained?
+A. 3 years after cancellation
+B. 5 years after cancellation
+C. 5 years after the date of forced surrender
+D. 10 years after cancellation
+Answer: B
+[cite_start]Explanation: Policies cancelled at the option of the insurant during the 'Free Look' period must be retained for 5 years after the cancellation of the policy[cite: 4090].
+
+Q28. (PO Life Insurance Scheme, 2011) [Difficulty: Moderate]
+All of the following are true regarding the incentive structure for PLI/RPLI Sales Force, **EXCEPT**:
+A. Direct Agents and GDS have no minimum business requirement in a financial year to earn an incentive.
+B. Renewal incentive of 1% is payable to all sales force of PLI.
+C. No renewal incentive is payable in the case of "pay policies".
+D. Procurement incentive for RPLI policies is 20% of the procurement premium.
+Answer: D
+[cite_start]Explanation: Procurement incentive for all types of RPLI policies is 10% of the procurement premium, not 20%[cite: 4164]. [cite_start]Options A, B, and C are correct[cite: 4115, 4160, 4171].
+
+Q29. (PO Life Insurance Scheme, 2011) [Difficulty: Easy]
+For an early death claim involving investigation (death within 3 years of acceptance), what is the service standard time limit for settlement?
+A. 15 Days
+B. 30 Days
+C. 60 Days
+D. 90 Days
+Answer: D
+[cite_start]Explanation: The service standard for settlement of PLI/RPLI death claims involving investigation is 90 Days[cite: 4059].
+
+Q30. (PO Life Insurance Scheme, 2011) [Difficulty: Moderate]
+Who is the Appellate Authority for an appeal against the rejection of a Death Claim if the Approving Authority was a Chief Postmaster (Group A)?
+A. Divisional Head
+B. Director (GPO)
+C. Director Postal Services (Region/HQ)
+D. Chief Postmaster General
+Answer: C
+[cite_start]Explanation: If the Approving Authority is a Chief Postmaster (Gr A) or Head of Division (Gr A/Gr B), the Appellate Authority is the Director Postal Services (Region/HQ)[cite: 4081].
+
+Q31. (PO Life Insurance Scheme, 2011) [Difficulty: Hard]
+Consider the following regarding the 10 Years Rural PLI (Gram Priya):
+1. It is a short-term money back scheme exclusively for the rural populace.
+2. Survival benefits are paid at 20% at the end of 4 years, 20% at 7 years, and 60% at 10 years.
+3. No interest is charged up to one year on arrears of premia in case of natural calamities.
+How many of the above statements are correct?
+A. Only one
+B. Only two
+C. All three
+D. None
+Answer: C
+[cite_start]Explanation: All three statements are correct features of the 10 Years Rural PLI (Gram Priya) scheme[cite: 3846, 3849, 3850, 3851, 3854].
+
+Q32. (PO Life Insurance Scheme, 2011) [Difficulty: Moderate]
+What is the fee charged for the issuance of a duplicate PLI Policy Bond?
+A. Rs. 20/-
+B. Rs. 50/-
+C. Rs. 100/-
+D. Rs. 120/-
+Answer: C
+Explanation: The fee amount for a Duplicate policy Bond is Rs. [cite_start]100/-[cite: 3916].
+
+Q33. (PO Life Insurance Scheme, 2011) [Difficulty: Easy]
+In RPLI, what is the maximum age limit at entry for a Gram Santosh (Endowment Assurance) policy?
+A. 45 years
+B. 50 years
+C. 55 years
+D. 60 years
+Answer: C
+[cite_start]Explanation: The minimum and maximum age at entry for Gram Santosh (Endowment Assurance) is 19-55 years[cite: 3838].
+
+Q34. (PO Life Insurance Scheme, 2011) [Difficulty: Hard]
+A PLI policyholder opts for a loan. If he defaults on repayment and the accumulated Loan + Interest reaches 100% of the Surrender value, what action is taken by the CPC?
+A. A 1st reminder is sent.
+B. The policy is automatically converted to Paid-up.
+C. A 3rd reminder is sent, and if unpaid within 30 days, the policy is forcibly surrendered.
+D. The outstanding loan is waived, but the policy is terminated.
+Answer: C
+Explanation: The 3rd reminder is sent when Loan + Interest = 100% of Surrender value. [cite_start]If unpaid within 30 days from the 3rd reminder, the policy is forcibly surrendered[cite: 4026, 4027].
+
+Q35. (POSB CBS Manual) [Difficulty: Moderate]
+Which of the following is **NOT** an eligible ground to refuse the transfer of a Post Office Savings Account?
+A. The depositor is deceased.
+B. The account has been ordered to be closed.
+C. The account is a silent Savings Account.
+D. The account holder is a minor operated by a guardian.
+Answer: D
+[cite_start]Explanation: Transfer of an account is not allowed after the death of the depositor, if ordered to be closed, or if it is a silent account[cite: 4350, 4351, 4352]. A minor account operated by a guardian is not prohibited from transfer.
+
+Q36. (POSB CBS Manual) [Difficulty: Hard]
+If an illiterate depositor whose POSA account stands at a GDS Branch Post Office attends a CBS Post Office to make a deposit, which of the following is procedurally correct?
+A. Presentation of the passbook is optional since it is a deposit transaction.
+B. Presentation of the passbook is mandatory for all illiterate depositors or if the account stands at a GDS Branch.
+C. The transaction cannot be done at a CBS Post Office; it must be done at the GDS Branch.
+D. A withdrawal form (SB-7) must be filled by the counter assistant on behalf of the depositor.
+Answer: B
+[cite_start]Explanation: If an illiterate depositor attends any PO for deposit/withdrawal, or if an account from a GDS BO attends a CBS PO, presentation of the Passbook is mandatory[cite: 4304, 4305].
+
+Q37. (POSB CBS Manual) [Difficulty: Easy]
+What is the fee charged for the cancellation or change of nomination in a POSB account?
+A. Rs. 20 + GST
+B. Rs. 50 + GST
+C. Rs. 100 + GST
+D. Free of Cost
+Answer: B
+Explanation: The fee for cancellation or change of nomination is Rs. [cite_start]50 + 18% GST[cite: 4401].
+
+Q38. (POSB CBS Manual) [Difficulty: Moderate]
+Regarding the closure of a savings account when the passbook is not available, which of the following statements is correct?
+A. A copy of an FIR is mandatory for closure.
+B. The depositor must wait 30 days before applying for closure.
+C. The Head Postmaster may authorize the closure if satisfied with the identity and application.
+D. The account cannot be closed under any circumstances without issuing a duplicate passbook first.
+Answer: C
+Explanation: If the Passbook is not available, the depositor submits an application with KYC. [cite_start]The Head Postmaster may authorize the closure provided he is satisfied as to the identity of the depositor, and a remark is made on the warrant of payment[cite: 4544, 4546, 4547].
+
+Q39. (POSB CBS Manual) [Difficulty: Hard]
+A claim for a deceased depositor's account is submitted where no nomination exists and no legal evidence is produced. The balance is Rs. 4,50,000. Which of the following forms is **NOT** required for settlement?
+A. Form-11 (Claim form)
+B. Form-13 (Affidavit)
+C. Form-14 (Letter of disclaimer)
+D. Succession Certificate issued by the Court
+Answer: D
+Explanation: Since the balance is below Rs. [cite_start]5,00,000, a Succession Certificate is not mandatory if the claim is made after 6 months using Form-13, Form-14, and Form-15[cite: 4861, 4865, 4866, 4867].
+
+Q40. (POSB CBS Manual) [Difficulty: Moderate]
+Consider the following statements regarding the transfer and modification of POSB accounts:
+
+1. An account can be transferred from a CBS Post Office to a Non-CBS Post Office upon payment of the prescribed fee of Rs. 100 + GST.
+
+2. A discontinued Recurring Deposit (RD) account can be transferred from one post office to another even after its date of maturity.
+
+3. The order of depositors in a Joint Account can be changed provided the first depositor submits a fresh KYC document.
+
+4. The conversion of a Joint account into a Single account is not allowed under any circumstances.
+How many of the above statements are correct?
+A. Only one
+B. Only two
+C. Only three
+D. All four
+Answer: B
+Explanation: Statements 2 and 4 are correct. Statement 1 is incorrect because the transfer from a CBS to a Non-CBS post office is strictly not allowed. Statement 3 is incorrect because changing the order of depositors in a joint account is strictly prohibited.
+
+Q41. (POSB CBS Manual) [Difficulty: Easy]
+A claim for a deceased depositor's account with a balance of Rs. 2,50,000 is presented at a Higher Selection Grade (HSG) Sub Post Office. The claimant does not possess any legal evidence and no nomination exists on the account. Which of the following is the correct procedure for the settlement of this claim?
+A. The HSG Sub-Postmaster can sanction the claim directly as their limit is up to Rs. 5,00,000.
+B. The claim must be forwarded to the Divisional Office, as the HSG Sub-Postmaster's sanction limit in this scenario is Rs. 1,00,000.
+C. The HSG Sub-Postmaster can sanction the claim only if a Succession Certificate is produced, as the amount exceeds Rs. 1,00,000.
+D. The claimant must apply at the Head Post Office since Sub Post Offices cannot process claims without legal evidence.
+Answer: B
+Explanation: For claims where no nomination exists or no legal evidence is available, an HSG Sub-Postmaster has a sanction limit of Rs. 1,00,000. Since the claim is Rs. 2,50,000, it exceeds this limit and must be sent to the Divisional Office.
+
+Q42. (POSB CBS Manual) [Difficulty: Hard]
+Consider the following statements regarding the recovery of defrauded amounts from officials at fault:
+1. Penal interest will be recovered at the rate of 22% per annum (compound).
+2. The penal interest is calculated over and above the rate of interest applicable to the accounts in which the fraud occurred.
+3. The penal interest is calculated by the Control Organisation and intimated to the punishing authority.
+Which of the statements is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. All of the above
+Answer: A
+[cite_start]Explanation: Statements 1 and 2 are correct[cite: 4667]. [cite_start]Statement 3 is incorrect because the amount of penal interest is calculated by the Head office and intimated to the punishing authority *after* check by the Control Organisation[cite: 4668].
+
+Q43. (POSB CBS Manual) [Difficulty: Moderate]
+All of the following are permitted actions for a Standardized Agency System (SAS) or MPKBY agent, **EXCEPT**:
+A. Opening an account on behalf of an investor.
+B. Reinvesting a matured certificate using a withdrawal form (SB-7) signed by the depositor.
+C. Acting as an authorized messenger for a cash withdrawal on behalf of a depositor.
+D. Accepting cash deposits from a single investor up to Rs. 20,000/- at a time.
+Answer: C
+[cite_start]Explanation: Agents are not allowed to act as messengers or authorized persons for any operation on behalf of the depositors except opening of an account[cite: 4755]. [cite_start]Actions A, B, and D are allowed[cite: 4694, 4747, 4724].
+
+Q44. (POSB CBS Manual) [Difficulty: Easy]
+For the settlement of a deceased claim without nomination and without legal evidence in an HPO, what is the sanction limit of a Chief Postmaster in a GPO?
+A. Rs. 50,000/-
+B. Rs. 1,00,000/-
+C. Rs. 5,00,000/-
+D. No Limit
+Answer: C
+Explanation: The sanction limit for a Chief Postmaster in a GPO where no nomination exists and no legal evidence is available is Rs. [cite_start]5,00,000/-[cite: 4907].
+
+Q45. (POSB CBS Manual) [Difficulty: Moderate]
+Under the National Savings Scheme (NSS) 1987, after what period is the closure of the account permitted?
+A. Expiry of 1 year from the date of opening.
+B. Expiry of 3 years from the end of the financial year in which the last deposit was made.
+C. Expiry of 4 years from the end of the financial year in which the last deposit was made.
+D. Expiry of 5 years from the date of opening.
+Answer: B
+[cite_start]Explanation: The closure of the NSS-87 account is permitted on expiry of 3 years from the end of the financial year in which the last deposit was made[cite: 4646].
+
+Q46. (POSB CBS Manual) [Difficulty: Hard]
+A GDS Branch Postmaster claims an incentive commission at the end of the year. The total deposits in POSA at the BO were Rs. 50,000 (including Rs. 5,000 in March) and total withdrawals were Rs. 48,000 (including Rs. 2,000 in March). Based on POSB rules, how much net accretion is considered for the commission calculation?
+A. Rs. 2,000
+B. - Rs. 3,000 (No commission)
+C. Rs. 5,000
+D. - Rs. 1,000 (No commission)
+Answer: B
+[cite_start]Explanation: To calculate net accretions, deposits made in March are ignored, but withdrawals made in March are taken into account[cite: 4995]. Eligible deposits = 50,000 - 5,000 = 45,000. Total withdrawals = 48,000. Net accretion = 45,000 - 48,000 = -3,000. Since it is less than Rs. [cite_start]500, no commission is admissible[cite: 4990].
+
+Q47. (POSB CBS Manual) [Difficulty: Moderate]
+If a depositor issues a withdrawal cheque in favour of "Self", what is the procedure for payment at the CBS Post Office counter?
+A. It will only be paid to the depositor personally.
+B. It will be paid to any person presenting it, provided the depositor has signed on the back of the cheque.
+C. It will be rejected and sent to the clearing house.
+D. It requires a mandatory signature verification from the Gazetted Postmaster.
+Answer: B
+[cite_start]Explanation: A cheque issued in the name of "Self" will be paid to any person presenting it at the counter even if he is not the payee, subject to the condition that the depositor has also signed on the back of the cheque[cite: 4537, 4538].
+
+Q48. (POSB CBS Manual) [Difficulty: Easy]
+In which CBS Finacle menu must the Counter PA enter the CIF ID to generate an Interest Certificate for a depositor?
+A. HCACC
+B. CINTC
+C. HDSAMM
+D. HGCHRG
+Answer: B
+[cite_start]Explanation: To issue an Interest Certificate, the Counter PA runs the menu CINTC and enters the CIF ID on the screen[cite: 4470].
+
+Q49. (POSB CBS Manual) [Difficulty: Moderate]
+An SAS agent accepts a fresh deposit of Rs. 25,000 in cash from a single investor, issues a receipt from the Authorised Agent Receipt Book, and submits it to the Post Office. According to the POSB CBS Manual, what is the consequence of this transaction?
+A. The deposit will be accepted, but the agent will receive commission only on the permissible limit of Rs. 20,000.
+B. The deposit will be treated as irregular, no commission is payable to the agent, and the agency commission will be recovered if found at a later stage.
+C. The deposit is fully valid, and the agent will receive their standard 0.5% commission, provided the total cash receipt book limit of Rs. 50,000 is not breached.
+D. The Post Office must reject the transaction entirely and return the cash to the investor immediately.
+Answer: B
+Explanation: No cash exceeding the prescribed limit of Rs. 20,000 at a time should be accepted from SAS agents. If such irregular deposits are accepted, no commission is payable, and any agency commission paid will be recovered from the agent.
+
+Q50. (POSB CBS Manual) [Difficulty: Hard]
+A joint account holder (Spouse) wishes to continue an SCSS account after the death of the primary depositor. Which of the following conditions must be met?
+A. The spouse can continue the account regardless of their age or whether they have an existing SCSS account.
+B. The spouse can continue the account only if they meet the 60-year age criteria and do not have another SCSS account.
+C. The spouse cannot continue the account under any circumstances; it must be closed immediately.
+D. The spouse can continue the account, but the interest rate will be reduced to the POSA rate.
+Answer: A
+[cite_start]Explanation: The Joint Holder (Spouse) may continue the SCSS account on the same terms irrespective of their age on the death of the primary account holder, provided he/she doesn't hold another SCSS account.[cite: 4925].

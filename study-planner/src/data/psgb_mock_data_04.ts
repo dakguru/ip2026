@@ -96,8 +96,8 @@ export const PSGB_MOCK_04_QUESTIONS: Question[] = [
  "id": "psgb-04-q14",
  "text": "Consider the following scenario: Depositor A completes the 5-year tenure of a Time Deposit (TD) but fails to exercise the option for extension within the allowed 18-month period. Depositor B wishes to prematurely close their 5-Year TD account after exactly 4 years and 2 months. According to the 2019 Scheme rules, what interest provisions will apply to these accounts?",
  "options": ["Depositor A earns no interest post-maturity; Depositor B earns the POSA rate.", "Depositor A earns Post Maturity Interest (PMI) at the POSA rate; Depositor B earns the ROI of a 3-Year TD.", "Depositor A earns the 5-Year TD rate by default; Depositor B earns the ROI of a 2-Year TD.", "Depositor A earns Post Maturity Interest (PMI) at the POSA rate; Depositor B earns the POSA rate."],
- "correctAnswer": 1,
- "explanation": "If the extension option is not exercised, PMI is paid at the POSA rate. For a 5-Year TD, premature closure after 4 years attracts the interest rate applicable to a 3-Year TD."
+ "correctAnswer": 3,
+ "explanation": "If the extension option is not exercised for a matured TD account, Post Maturity Interest (PMI) is paid at the POSA rate. According to Rule 7(2) of the National Savings Time Deposit Scheme, 2019, if a 5-Year TD account is closed after 4 years, interest at the rate applicable to the Post Office Savings Account (POSA) shall be payable."
  },
  {
  "id": "psgb-04-q15",
@@ -272,9 +272,9 @@ export const PSGB_MOCK_04_QUESTIONS: Question[] = [
  {
  "id": "psgb-04-q37",
  "text": "What is the fee charged for the cancellation or change of nomination in a POSB account?",
- "options": ["Rs. 20 + GST", "Rs. 50 + GST", "Rs. 100 + GST", "Free for the first time"],
+ "options": ["Rs. 20 + GST", "Rs. 50 + GST", "Rs. 100 + GST", "Free of Cost"],
  "correctAnswer": 1,
- "explanation": "The fee for cancellation or change of nomination is Rs. 50 + 18% GST."
+ "explanation": "The fee for cancellation or change of nomination is Rs. 50 + 18% GST. Note that nomination at the time of opening the account is free, but any subsequent change or cancellation attracts this fee."
  },
  {
  "id": "psgb-04-q38",
