@@ -36,33 +36,6 @@ const UPDATES_DATA: UpdateGroup[] = [
                         </p>
                     </div>
                 )
-            },
-            {
-                title: "🎯 PSGB Mock Test 04: Corrections Applied",
-                desc: (
-                    <div className="space-y-4">
-                        <p>We have updated <strong>PS Group B Weekly Mock Test - 04</strong> with critical corrections and re-calculated existing scores!</p>
-                        
-                        <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
-                            <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-amber-500 mt-0.5">✅</span>
-                                    <span><strong>Q14 Corrected:</strong> Correct option mapped to D (Rule 7(2) of TD Rules 2019).</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-emerald-500 mt-0.5">📊</span>
-                                    <span><strong>Score Re-calculation:</strong> 2 marks have been automatically awarded to all candidates who opted for D in Q14.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-500 mt-0.5">📝</span>
-                                    <span><strong>Q37 Update:</strong> Explanation and options refined for clarity.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <p className="text-[11px] text-zinc-500 italic">Thank you for your feedback! We strive for 100% accuracy in our assessments.</p>
-                    </div>
-                )
             }
         ]
     },
