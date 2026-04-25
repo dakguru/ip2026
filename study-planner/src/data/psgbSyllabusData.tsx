@@ -119,7 +119,7 @@ export const psgbSyllabusData = {
           { name: "Instructions issued by Directorate and DoP&T on maintenance of APAR.", link: null },
           { name: "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.", link: null },
           { name: "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", link: null, pdfs: [{ title: "Welfare Measures", path: "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf" }] },
-          { name: "DoP&T instructions issued from time to time on Establishment and administration.", link: null },
+          { name: "DoP&T instructions issued from time to time on Establishment and administration.", link: null, pdfs: [{ title: "DoP&T instructions on Establishment and administration", path: "/notes/paper-1/DoPT_Instructions.pdf" }] },
           { name: "Brochure on reservation, instructions regarding sports person reservation, compassionate appointment guidelines issued by DoP and DoP&T from time to time.", link: null },
           { name: "Recruitment Rules relating to various cadres in D/o Posts", link: null, pdfs: [{ title: "Recruitment Rules relating to various cadres in D/o Posts", path: "/notes/paper-1/Rectt Rules of DOP.pdf" }] },
           { name: "Establishment Norms", link: null }

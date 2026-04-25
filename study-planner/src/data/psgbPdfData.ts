@@ -271,9 +271,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "DoP&T instructions issued from time to time on Establishment and administration.",
-            "description": "Materials will be uploaded soon.",
+            "description": "Instructions on Establishment and administration issued by DoP&T from time to time.",
+            "filename": "DoPT_Instructions.pdf",
+            "path": "/notes/paper-1/DoPT_Instructions.pdf",
+            "size": "4.2 MB",
             "color": "sky",
-            "comingSoon": true,
             "topic": "Reports & Misc"
         },
         {
