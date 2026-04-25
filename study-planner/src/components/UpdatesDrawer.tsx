@@ -16,6 +16,57 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "25.04.2026",
+        items: [
+            {
+                title: "📚 New PDF Notes: DoP&T Instructions",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>DoP&T instructions on Establishment and administration</strong> PDF notes for PS Group B Course Mode!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-sky-50/50 dark:bg-sky-900/10 p-3 rounded-xl border border-sky-100 dark:border-sky-800/50">
+                                <p className="font-bold text-sky-700 dark:text-sky-300 text-[10px] uppercase tracking-wide">Paper I (PS Group B)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Comprehensive instructions issued by DoP&T from time to time on establishment and administrative matters.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-sky-600 dark:text-sky-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "🎯 PSGB Mock Test 04: Corrections Applied",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated <strong>PS Group B Weekly Mock Test - 04</strong> with critical corrections and re-calculated existing scores!</p>
+                        
+                        <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                            <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                <li className="flex items-start gap-2">
+                                    <span className="text-amber-500 mt-0.5">✅</span>
+                                    <span><strong>Q14 Corrected:</strong> Correct option mapped to D (Rule 7(2) of TD Rules 2019).</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-emerald-500 mt-0.5">📊</span>
+                                    <span><strong>Score Re-calculation:</strong> 2 marks have been automatically awarded to all candidates who opted for D in Q14.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-blue-500 mt-0.5">📝</span>
+                                    <span><strong>Q37 Update:</strong> Explanation and options refined for clarity.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p className="text-[11px] text-zinc-500 italic">Thank you for your feedback! We strive for 100% accuracy in our assessments.</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "24.04.2026",
         items: [
             {
