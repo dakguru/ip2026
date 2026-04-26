@@ -159,6 +159,14 @@ const TYPE_CONFIG: Record<string, { icon: any; color: string; bg: string; darkBg
         border: 'border-indigo-100 dark:border-indigo-500/20',
         label: 'Admin',
     },
+    error_report: {
+        icon: AlertTriangle,
+        color: 'text-red-600 dark:text-red-400',
+        bg: 'bg-red-50',
+        darkBg: 'dark:bg-red-500/10',
+        border: 'border-red-100 dark:border-red-500/20',
+        label: 'Error Report',
+    },
 };
 
 const DEFAULT_TYPE_CONFIG = {
@@ -322,7 +330,7 @@ export default function AdminNotificationsPage() {
 
         if (filterType === 'all') return true;
         if (filterType === 'users') return ['enrollment', 'new_user', 'user_register'].includes(n.type);
-        if (filterType === 'community') return ['community_post', 'community_comment'].includes(n.type);
+        if (filterType === 'community') return ['community_post', 'community_comment', 'error_report'].includes(n.type);
         if (filterType === 'system') return ['deployment', 'system', 'alert', 'admin_message'].includes(n.type);
         if (filterType === 'mock_tests') return n.type === 'purchase' && n.title.toLowerCase().includes('mock test');
         if (filterType === 'membership') return n.type === 'purchase' || ['coupon_claim', 'coupon_redeem', 'membership_upgrade'].includes(n.type);
@@ -341,7 +349,7 @@ export default function AdminNotificationsPage() {
             counts[tab.id] = notifications.filter(n => {
                 if (tab.id === 'all') return !n.isRead;
                 if (tab.id === 'users') return !n.isRead && ['enrollment', 'new_user', 'user_register'].includes(n.type);
-                if (tab.id === 'community') return !n.isRead && ['community_post', 'community_comment'].includes(n.type);
+                if (tab.id === 'community') return !n.isRead && ['community_post', 'community_comment', 'error_report'].includes(n.type);
                 if (tab.id === 'system') return !n.isRead && ['deployment', 'system', 'alert', 'admin_message'].includes(n.type);
                 if (tab.id === 'mock_tests') return !n.isRead && n.type === 'purchase' && n.title.toLowerCase().includes('mock test');
                 if (tab.id === 'membership') return !n.isRead && (n.type === 'purchase' || ['coupon_claim', 'coupon_redeem', 'membership_upgrade'].includes(n.type));

@@ -89,10 +89,10 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         },
         {
             "title": "Postal Manual Volume II",
-            "description": "Postal Manual Volume II (Chapter-I-organization)",
+            "description": "Revised comprehensive notes covering Organization and General Regulations.",
             "filename": "Postal_Manual_Vol_II.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_II.pdf",
-            "size": "0.8 MB",
+            "size": "4.2 MB",
             "color": "amber",
             "topic": "Postal Manuals"
         },

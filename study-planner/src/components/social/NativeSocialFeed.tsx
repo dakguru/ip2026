@@ -250,6 +250,9 @@ export default function NativeSocialFeed({
                                             </span>
                                         </div>
                                         <div className="flex gap-1.5 mb-2 flex-wrap">
+                                            {report.course && (
+                                                <span className="px-1.5 py-0.5 bg-purple-50 text-purple-600 rounded text-[10px] font-bold">{report.course}</span>
+                                            )}
                                             <span className="px-1.5 py-0.5 bg-red-50 text-red-600 rounded text-[10px] font-bold">{report.category}</span>
                                             <span className="px-1.5 py-0.5 bg-blue-50 text-blue-600 rounded text-[10px] font-medium">{report.topic}</span>
                                         </div>

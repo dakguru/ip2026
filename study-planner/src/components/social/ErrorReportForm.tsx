@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Search, Upload, X, AlertTriangle, CheckCircle2, Loader2, Camera, ImageIcon } from 'lucide-react';
 
 // --- All topics from Paper I & Paper III (Notes section) ---
-const TOPICS_DATA: Record<string, string[]> = {
+const IP_TOPICS_DATA: Record<string, string[]> = {
     "Paper I": [
         "The PO Regulations, 2024",
         "The Post Office Act, 2023",
@@ -71,11 +71,77 @@ const TOPICS_DATA: Record<string, string[]> = {
     ]
 };
 
-const ALL_TOPICS = [
-    ...TOPICS_DATA["Paper I"].map(t => ({ label: t, group: "Paper I" })),
-    ...TOPICS_DATA["Paper III"].map(t => ({ label: t, group: "Paper III" })),
-];
+const PSGB_TOPICS_DATA: Record<string, string[]> = {
+    "Paper I": [
+        "Consumer Protection Act, 2019",
+        "PMLA Act, 2002",
+        "The Post Office Act, 2023",
+        "The PO Regulations, 2024",
+        "Post Office Guide Part-I",
+        "Post Office Guide Part-II",
+        "Book of BO Rules",
+        "Postal Manual Volume V",
+        "Postal Manual Volume II",
+        "MNOP & PNOP Guidelines",
+        "Government Savings Promotion Rules, 2018",
+        "PO Small Savings Schemes",
+        "POSB (CBS) Manual",
+        "Post Office Life Insurance Scheme, 2011",
+        "Citizen Charter of D/o Posts",
+        "Complaint & Grievance Handling",
+        "Handbook on Philately",
+        "Manual of Office Procedure",
+        "Annual Reports & Book of Information",
+        "Manual for Procurement of Goods & Services",
+        "Postal Manual Volume IV",
+        "Maintenance of APAR",
+        "Schedule of Financial Powers",
+        "Welfare Measures",
+        "Establishment and Administration (DoPT)",
+        "Recruitment Rules of DOP",
+        "Establishment Norms"
+    ],
+    "Paper II": [
+        "CCS (Conduct) Rules, 1964",
+        "CCS (CCA) Rules, 1965",
+        "CCS (Temporary Service) Rules, 1965",
+        "Brochure on Casual Labourers",
+        "CCS (Pension) Rules, 2021",
+        "CCS (Implementation of NPS) Rules, 2021",
+        "CCS (Payment of Gratuity under NPS) Rules, 2021",
+        "CCS (Commutation of Pension) Rules, 1981",
+        "CCS (Leave) Rules, 1972",
+        "CCS (Joining Time) Rules, 1979",
+        "CCS (GPF) Rules, 1961",
+        "CS (Medical Attendance) Rules, 1944",
+        "FR & SR - General Rules",
+        "FR & SR - TA Rules",
+        "FR & SR - DA, DR & HRA Rules",
+        "CCS (LTC) Rules, 1988",
+        "CCS (Revised Pay) Rules, 2016",
+        "Children Education Allowance",
+        "CGEGIS, 1980",
+        "CCS (Recognition of Service Association) Rules, 1993",
+        "Postal Manual Volume III",
+        "P&T FHB Vol I",
+        "Postal FHB Vol II",
+        "General Financial Rules 2017",
+        "Interface with IPPB",
+        "Preservation of Records",
+        "Swatchh Bharat",
+        "Inspection Questionnaires",
+        "GDS (Conduct & Engagement) Rules, 2020",
+        "CAT Act, 1985",
+        "RTI Act, 2005",
+        "Sexual Harassment of Women at Workplace Act, 2013",
+        "Public Accountants Default Act, 1850",
+        "Revenue Recovery Act, 1890",
+        "Prevention of Corruption Act, 1988",
+        "Goods and Services Tax (GST) Act, 2017"
+    ]
+};
 
+const COURSES = ["LDCE IP", "PS Gr B"];
 const CATEGORIES = ["PDF Notes", "MCQs", "Mock Tests", "FlashCards", "Other"];
 
 interface ErrorReportFormProps {
@@ -85,6 +151,7 @@ interface ErrorReportFormProps {
 }
 
 export default function ErrorReportForm({ user, onLoginRedirect, onSuccess }: ErrorReportFormProps) {
+    const [course, setCourse] = useState("LDCE IP");
     const [category, setCategory] = useState("");
     const [topic, setTopic] = useState("");
     const [topicSearch, setTopicSearch] = useState("");
@@ -92,12 +159,14 @@ export default function ErrorReportForm({ user, onLoginRedirect, onSuccess }: Er
     const [screenshot, setScreenshot] = useState<string>("");
     const [screenshotName, setScreenshotName] = useState("");
 
+    const [isCourseOpen, setIsCourseOpen] = useState(false);
     const [isCategoryOpen, setIsCategoryOpen] = useState(false);
     const [isTopicOpen, setIsTopicOpen] = useState(false);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
+    const courseRef = useRef<HTMLDivElement>(null);
     const categoryRef = useRef<HTMLDivElement>(null);
     const topicRef = useRef<HTMLDivElement>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
@@ -105,6 +174,9 @@ export default function ErrorReportForm({ user, onLoginRedirect, onSuccess }: Er
     // Close dropdowns on outside click
     useEffect(() => {
         const handleClick = (e: MouseEvent) => {
+            if (courseRef.current && !courseRef.current.contains(e.target as Node)) {
+                setIsCourseOpen(false);
+            }
             if (categoryRef.current && !categoryRef.current.contains(e.target as Node)) {
                 setIsCategoryOpen(false);
             }
@@ -116,7 +188,13 @@ export default function ErrorReportForm({ user, onLoginRedirect, onSuccess }: Er
         return () => document.removeEventListener("mousedown", handleClick);
     }, []);
 
-    const filteredTopics = ALL_TOPICS.filter(t =>
+    // Get topics based on selected course
+    const currentTopicsData = course === "LDCE IP" ? IP_TOPICS_DATA : PSGB_TOPICS_DATA;
+    const allTopicsForCourse = Object.entries(currentTopicsData).flatMap(([group, topics]) =>
+        topics.map(t => ({ label: t, group }))
+    );
+
+    const filteredTopics = allTopicsForCourse.filter(t =>
         t.label.toLowerCase().includes(topicSearch.toLowerCase())
     );
 
@@ -154,6 +232,7 @@ export default function ErrorReportForm({ user, onLoginRedirect, onSuccess }: Er
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
+                    course,
                     category,
                     topic,
                     screenshot,
@@ -199,6 +278,39 @@ export default function ErrorReportForm({ user, onLoginRedirect, onSuccess }: Er
             </div>
 
             <div className="space-y-4">
+                {/* 0. Course Field */}
+                <div ref={courseRef} className="relative">
+                    <label className="block text-sm font-bold text-zinc-700 dark:text-zinc-300 mb-1.5">
+                        Course <span className="text-red-500">*</span>
+                    </label>
+                    <button
+                        onClick={() => setIsCourseOpen(!isCourseOpen)}
+                        className="w-full flex items-center justify-between px-4 py-3 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-700 rounded-xl text-sm transition-all hover:border-blue-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    >
+                        <span className={course ? "text-zinc-900 dark:text-zinc-100" : "text-zinc-400"}>
+                            {course || "Select course..."}
+                        </span>
+                        <ChevronDown className={`w-4 h-4 text-zinc-400 transition-transform ${isCourseOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isCourseOpen && (
+                        <div className="absolute z-30 mt-1 w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl shadow-xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-150">
+                            {COURSES.map(c => (
+                                <button
+                                    key={c}
+                                    onClick={() => {
+                                        setCourse(c);
+                                        setTopic("");
+                                        setIsCourseOpen(false);
+                                    }}
+                                    className={`w-full text-left px-4 py-3 text-sm hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors ${course === c ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 font-bold" : "text-zinc-700 dark:text-zinc-300"}`}
+                                >
+                                    {c}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
                 {/* 1. Error Found In (Category) */}
                 <div ref={categoryRef} className="relative">
                     <label className="block text-sm font-bold text-zinc-700 dark:text-zinc-300 mb-1.5">
@@ -261,38 +373,30 @@ export default function ErrorReportForm({ user, onLoginRedirect, onSuccess }: Er
                             {/* Topic List */}
                             <div className="max-h-60 overflow-y-auto">
                                 {(() => {
-                                    const paperITopics = filteredTopics.filter(t => t.group === "Paper I");
-                                    const paperIIITopics = filteredTopics.filter(t => t.group === "Paper III");
+                                    const groups = Object.keys(currentTopicsData);
                                     return (
                                         <>
-                                            {paperITopics.length > 0 && (
-                                                <>
-                                                    <div className="px-4 py-2 text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/10 uppercase tracking-wider sticky top-0">Paper I</div>
-                                                    {paperITopics.map(t => (
-                                                        <button
-                                                            key={t.label}
-                                                            onClick={() => { setTopic(t.label); setIsTopicOpen(false); setTopicSearch(""); }}
-                                                            className={`w-full text-left px-4 py-2.5 text-sm hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors ${topic === t.label ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 font-bold" : "text-zinc-700 dark:text-zinc-300"}`}
-                                                        >
-                                                            {t.label}
-                                                        </button>
-                                                    ))}
-                                                </>
-                                            )}
-                                            {paperIIITopics.length > 0 && (
-                                                <>
-                                                    <div className="px-4 py-2 text-xs font-bold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/10 uppercase tracking-wider sticky top-0">Paper III</div>
-                                                    {paperIIITopics.map(t => (
-                                                        <button
-                                                            key={t.label}
-                                                            onClick={() => { setTopic(t.label); setIsTopicOpen(false); setTopicSearch(""); }}
-                                                            className={`w-full text-left px-4 py-2.5 text-sm hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors ${topic === t.label ? "bg-purple-50 dark:bg-purple-900/20 text-purple-600 font-bold" : "text-zinc-700 dark:text-zinc-300"}`}
-                                                        >
-                                                            {t.label}
-                                                        </button>
-                                                    ))}
-                                                </>
-                                            )}
+                                            {groups.map(group => {
+                                                const groupTopics = filteredTopics.filter(t => t.group === group);
+                                                if (groupTopics.length === 0) return null;
+                                                
+                                                return (
+                                                    <React.Fragment key={group}>
+                                                        <div className={`px-4 py-2 text-xs font-bold uppercase tracking-wider sticky top-0 ${group === "Paper I" ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/10" : "text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/10"}`}>
+                                                            {group}
+                                                        </div>
+                                                        {groupTopics.map(t => (
+                                                            <button
+                                                                key={t.label}
+                                                                onClick={() => { setTopic(t.label); setIsTopicOpen(false); setTopicSearch(""); }}
+                                                                className={`w-full text-left px-4 py-2.5 text-sm hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors ${topic === t.label ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 font-bold" : "text-zinc-700 dark:text-zinc-300"}`}
+                                                            >
+                                                                {t.label}
+                                                            </button>
+                                                        ))}
+                                                    </React.Fragment>
+                                                );
+                                            })}
                                             {filteredTopics.length === 0 && (
                                                 <div className="px-4 py-6 text-center text-sm text-zinc-400">No topics found</div>
                                             )}

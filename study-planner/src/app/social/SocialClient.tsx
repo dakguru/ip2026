@@ -699,6 +699,9 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                                                         </span>
                                                     </div>
                                                     <div className="flex items-center gap-2 mb-2 flex-wrap">
+                                                        {report.course && (
+                                                            <span className="px-2 py-0.5 bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded text-xs font-bold">{report.course}</span>
+                                                        )}
                                                         <span className="px-2 py-0.5 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded text-xs font-bold">{report.category}</span>
                                                         <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded text-xs font-medium">{report.topic}</span>
                                                     </div>

@@ -7,6 +7,7 @@ const ErrorReportSchema = new mongoose.Schema({
         required: true,
         enum: ['PDF Notes', 'MCQs', 'Mock Tests', 'FlashCards', 'Other']
     },
+    course: { type: String, required: true },
     topic: { type: String, required: true },
     screenshot: { type: String, default: '' }, // base64 string
     description: { type: String, required: true },

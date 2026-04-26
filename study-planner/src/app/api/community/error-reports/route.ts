@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import ErrorReport from '@/models/ErrorReport';
+import Notification from '@/models/Notification';
 
 export async function POST(req: NextRequest) {
     try {
         await dbConnect();
         const body = await req.json();
 
-        const { category, topic, screenshot, description, reportedBy, reportedByEmail } = body;
+        const { course, category, topic, screenshot, description, reportedBy, reportedByEmail } = body;
 
         if (!category || !topic || !description || !reportedBy) {
             return NextResponse.json(
@@ -17,6 +18,7 @@ export async function POST(req: NextRequest) {
         }
 
         const report = await ErrorReport.create({
+            course: course || 'LDCE IP',
             category,
             topic,
             screenshot: screenshot || '',
@@ -24,6 +26,20 @@ export async function POST(req: NextRequest) {
             reportedBy,
             reportedByEmail: reportedByEmail || '',
             status: 'pending'
+        });
+
+        // Notify Admin
+        await Notification.create({
+            type: 'error_report',
+            title: 'New Error Reported',
+            message: `${reportedBy} reported an error in ${course || 'LDCE IP'} > ${category} > ${topic}.`,
+            metadata: {
+                reportId: report._id,
+                reportedBy,
+                course: course || 'LDCE IP',
+                category,
+                topic
+            }
         });
 
         return NextResponse.json({ success: true, report }, { status: 201 });

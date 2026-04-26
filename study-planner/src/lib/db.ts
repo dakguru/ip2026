@@ -15,7 +15,7 @@ export interface User {
     hasSeenCoursePrompt?: boolean;
     passwordHash?: string; // Optional in interface, but mostly present
     role?: 'user' | 'admin';
-    membershipLevel?: 'free' | 'silver' | 'gold';
+    membershipLevel?: 'free' | 'silver' | 'gold' | 'diamond' | 'platinum';
     membershipValidity?: string;
     planId?: string;
     planName?: string;
@@ -114,6 +114,14 @@ export async function verifyUser(email: string, password: string): Promise<User 
     const isValid = await bcrypt.compare(password, user.password);
     if (!isValid) return null;
 
+    // Check for membership expiry and downgrade if needed
+    if (user.membershipLevel !== 'free' && user.membershipValidity && new Date(user.membershipValidity) < new Date()) {
+        user.membershipLevel = 'free';
+        user.planId = '';
+        user.planName = '';
+        await user.save();
+    }
+
     return mapUser(user);
 }
 
@@ -170,21 +178,36 @@ export async function updateSession(email: string, sessionId: string): Promise<b
     return result.modifiedCount > 0;
 }
 
-export async function validateSession(email: string, sessionId: string): Promise<'valid' | 'conflict' | 'invalid'> {
+export async function validateSession(email: string, sessionId: string): Promise<{ status: 'valid' | 'conflict' | 'invalid', downgraded?: boolean, membershipLevel?: string }> {
     await dbConnect();
     const user = await UserModel.findOne({ email: { $regex: new RegExp(`^${email}$`, 'i') } });
-    if (!user) return 'invalid';
+    if (!user) return { status: 'invalid' };
+
+    let downgraded = false;
+    // Check for membership expiry and downgrade if needed
+    if (user.membershipLevel !== 'free' && user.membershipValidity && new Date(user.membershipValidity) < new Date()) {
+        await UserModel.updateOne(
+            { _id: user._id },
+            { $set: { membershipLevel: 'free', planId: '', planName: '' } }
+        );
+        downgraded = true;
+        user.membershipLevel = 'free'; // Update local object for return
+    }
 
     if (!user.currentSessionId) {
-        return 'invalid'; // No session established yet — treat as expired, not conflict
+        return { status: 'invalid' }; // No session established yet — treat as expired, not conflict
     }
 
     if (user.currentSessionId !== sessionId) {
-        return 'conflict';
+        return { status: 'conflict' };
     }
 
     // Fire and forget update to keep validation fast
     UserModel.updateOne({ _id: user._id }, { $set: { lastActiveAt: new Date() } }).catch(err => console.error("Failed to update activity", err));
 
-    return 'valid';
+    return {
+        status: 'valid',
+        downgraded,
+        membershipLevel: user.membershipLevel
+    };
 }
