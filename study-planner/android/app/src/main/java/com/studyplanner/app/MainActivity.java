@@ -90,6 +90,10 @@ public class MainActivity extends BridgeActivity {
         public void downloadPdf(String url) {
              // Run on UI thread to handle UI and permissions
              runOnUiThread(() -> {
+                 // Set pending fields so the permission-grant callback can start the download
+                 pendingDownloadUrl = url;
+                 pendingMimeType = "application/pdf";
+                 pendingContentDisposition = null;
                  checkPermissionsAndDownload(url, "application/pdf", null);
              });
         }
@@ -263,15 +267,10 @@ public class MainActivity extends BridgeActivity {
 
     private void checkPermissionsAndDownload(String url, String mimetype, String contentDisposition) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) { // Android 13+
-             if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
-                 startDownload(url, mimetype, contentDisposition);
-             } else {
-                showPermissionRationaleDialog(() -> {
-                    requestPermissionLauncher.launch(new String[]{
-                        Manifest.permission.POST_NOTIFICATIONS
-                    });
-                });
-             }
+            // Notification permission is NOT required for the download itself.
+            // DownloadManager works without it — the system just won't show a download
+            // notification. Never block a download waiting for notification permission.
+            startDownload(url, mimetype, contentDisposition);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) { // Android 10-12
              // No storage permission needed for DownloadManager public/scoped directories
              startDownload(url, mimetype, contentDisposition);

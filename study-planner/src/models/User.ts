@@ -22,7 +22,18 @@ const UserSchema = new mongoose.Schema({
     currentSessionId: { type: String },
     lastActiveAt: { type: Date },
     lastPlatform: { type: String, enum: ['desktop', 'mobile_browser', 'app'] },
+    knownDevices: [{
+        deviceId: { type: String, required: true },
+        deviceType: { type: String, enum: ['Mobile', 'Web'], required: true },
+        os: { type: String },
+        clientName: { type: String },
+        firstSeen: { type: Date, default: Date.now },
+        lastSeen: { type: Date, default: Date.now }
+    }],
     createdAt: { type: Date, default: Date.now },
 }, { timestamps: true });
+
+UserSchema.index({ 'knownDevices.lastSeen': -1 });
+UserSchema.index({ 'knownDevices.deviceId': 1 });
 
 export default mongoose.models.User || mongoose.model('User', UserSchema);

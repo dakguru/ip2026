@@ -63,6 +63,30 @@ interface LoginLogRecord {
     sessionId?: string;
 }
 
+interface SuspiciousUser {
+    _id: string;
+    name: string;
+    email: string;
+    mobile: string;
+    activeDevicesCount: number;
+    knownDevices: {
+        deviceId: string;
+        deviceType: string;
+        os: string;
+        clientName: string;
+        firstSeen: string;
+        lastSeen: string;
+    }[];
+}
+
+interface LocationData {
+    city: string;
+    region: string;
+    country: string;
+    count: number;
+    percentage: string;
+}
+
 function maskIp(ip: string | null): string {
     if (!ip || ip === '0.0.0.0') return 'Unknown';
     const parts = ip.split('.');
@@ -76,6 +100,9 @@ export default function AnalyticsDashboard() {
     const [summary, setSummary] = useState<SummaryData | null>(null);
     const [trends, setTrends] = useState<TrendData | null>(null);
     const [users, setUsers] = useState<UserRecord[]>([]);
+    const [suspiciousUsers, setSuspiciousUsers] = useState<SuspiciousUser[]>([]);
+    const [locations, setLocations] = useState<LocationData[]>([]);
+    const [selectedSuspiciousUser, setSelectedSuspiciousUser] = useState<SuspiciousUser | null>(null);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [filters, setFilters] = useState({
@@ -109,19 +136,25 @@ export default function AnalyticsDashboard() {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const [summaryRes, trendsRes, usersRes] = await Promise.all([
+            const [summaryRes, trendsRes, usersRes, suspiciousRes, locationsRes] = await Promise.all([
                 fetch(`/api/developer/analytics/summary?days=${days}`),
                 fetch(`/api/developer/analytics/trends?days=${days}`),
-                fetch('/api/developer/analytics/users')
+                fetch('/api/developer/analytics/users'),
+                fetch('/api/developer/analytics/suspicious-accounts'),
+                fetch(`/api/developer/analytics/locations?days=${days}`)
             ]);
 
             const summaryData = await summaryRes.json();
             const trendsData = await trendsRes.json();
             const usersData = await usersRes.json();
+            const suspiciousData = await suspiciousRes.json();
+            const locationsData = await locationsRes.json();
 
             setSummary(summaryData);
             setTrends(trendsData);
             setUsers(usersData.users);
+            setSuspiciousUsers(suspiciousData.users || []);
+            setLocations(locationsData.locations || []);
         } catch (error) {
             console.error("Failed to fetch analytics:", error);
         } finally {
@@ -518,6 +551,109 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
+                {/* Geographic Login Distribution */}
+                <div className="mb-12">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="p-2 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl">
+                            <TrendingUp className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-black text-zinc-900 dark:text-white tracking-tight">Geographic Login Distribution</h2>
+                            <p className="text-sm text-zinc-500 font-medium italic">Clustered report of user activity by regional hubs.</p>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {locations.length > 0 ? (
+                            locations.map((loc, i) => (
+                                <div key={i} className="bg-white dark:bg-zinc-900 p-5 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300 group active:scale-95">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="w-8 h-8 bg-zinc-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center font-black text-zinc-400 text-[10px]">
+                                            {i + 1}
+                                        </div>
+                                        <div className="text-right">
+                                            <span className="block text-lg font-black text-zinc-900 dark:text-white leading-none">{loc.count}</span>
+                                            <span className="text-[9px] font-bold text-emerald-500 uppercase tracking-tighter">{loc.percentage}% share</span>
+                                        </div>
+                                    </div>
+                                    <div className="mb-4">
+                                        <h4 className="text-xs font-black text-zinc-900 dark:text-white uppercase tracking-tight mb-0.5 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{loc.city}</h4>
+                                        <p className="text-[9px] text-zinc-400 font-bold uppercase tracking-widest leading-none truncate">{loc.region}, {loc.country}</p>
+                                    </div>
+                                    <div className="h-1.5 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+                                        <div 
+                                            className="h-full bg-indigo-500 dark:bg-indigo-400 rounded-full transition-all duration-1000 group-hover:bg-emerald-500" 
+                                            style={{ width: `${loc.percentage}%` }}
+                                        />
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="col-span-full py-12 text-center bg-zinc-50 dark:bg-zinc-900/50 rounded-3xl border border-dashed border-zinc-200 dark:border-zinc-800">
+                                <p className="text-xs text-zinc-400 font-bold uppercase tracking-widest">No regional data captured in this window</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+                {/* Flagged For Credential Sharing */}
+                {suspiciousUsers.length > 0 && (
+                    <div className="mb-12">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="p-2 bg-rose-100 dark:bg-rose-900/30 rounded-xl">
+                                <ShieldAlert className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+                            </div>
+                            <div>
+                                <h2 className="text-2xl font-black text-zinc-900 dark:text-white tracking-tight">Flagged For Credential Sharing</h2>
+                                <p className="text-sm text-zinc-500 font-medium italic">Users seen on more than 3 unique devices in the last 7 days.</p>
+                            </div>
+                        </div>
+
+                        <div className="bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-rose-100/50 dark:shadow-none overflow-hidden">
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left">
+                                    <thead className="bg-rose-50/50 dark:bg-rose-900/10 text-[10px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-[0.2em] border-b border-rose-100/50 dark:border-rose-900/20">
+                                        <tr>
+                                            <th className="px-6 py-5">Name</th>
+                                            <th className="px-6 py-5">Email/Phone</th>
+                                            <th className="px-6 py-5 text-center">Total Devices (Last 7 Days)</th>
+                                            <th className="px-6 py-5 text-center">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-zinc-50 dark:divide-zinc-800">
+                                        {suspiciousUsers.map((u) => (
+                                            <tr key={u._id} className="hover:bg-rose-50/30 dark:hover:bg-rose-950/10 transition-colors">
+                                                <td className="px-6 py-5">
+                                                    <div className="font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-tight text-sm">
+                                                        {u.name}
+                                                    </div>
+                                                </td>
+                                                <td className="px-6 py-5">
+                                                    <div className="text-xs text-zinc-500">{u.email}</div>
+                                                    <div className="text-[10px] text-zinc-400 font-mono mt-0.5">{u.mobile}</div>
+                                                </td>
+                                                <td className="px-6 py-5 text-center">
+                                                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-rose-100 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 rounded-full font-black text-xs">
+                                                        {u.activeDevicesCount} Devices
+                                                    </span>
+                                                </td>
+                                                <td className="px-6 py-5 text-center">
+                                                    <button
+                                                        onClick={() => setSelectedSuspiciousUser(u)}
+                                                        className="px-4 py-2 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-xl text-[10px] font-black uppercase tracking-wider hover:opacity-90 transition-all active:scale-95"
+                                                    >
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
                 {/* User Deep Dive */}
                 <div className="space-y-6">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -745,6 +881,85 @@ export default function AnalyticsDashboard() {
                     onClose={() => setSelectedUser(null)}
                 />
             )}
+
+            {/* Device Detail Modal */}
+            {selectedSuspiciousUser && (
+                <DeviceDetailModal
+                    user={selectedSuspiciousUser}
+                    onClose={() => setSelectedSuspiciousUser(null)}
+                />
+            )}
+        </div>
+    );
+}
+
+// --- Device Detail Modal ---
+
+interface DeviceDetailModalProps {
+    user: SuspiciousUser;
+    onClose: () => void;
+}
+
+function DeviceDetailModal({ user, onClose }: DeviceDetailModalProps) {
+    // Sort devices by last seen date (newest first)
+    const sortedDevices = [...user.knownDevices].sort((a, b) => 
+        new Date(b.lastSeen).getTime() - new Date(a.lastSeen).getTime()
+    );
+
+    return (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+            <div className="relative w-full max-w-3xl bg-white dark:bg-zinc-900 rounded-[2.5rem] border border-zinc-200 dark:border-zinc-800 shadow-2xl flex flex-col max-h-[85vh] overflow-hidden">
+                <div className="p-8 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                    <div>
+                        <div className="flex items-center gap-2 mb-1">
+                            <h3 className="text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tight">Device Fingerprints</h3>
+                            <span className="px-2 py-0.5 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 text-[10px] font-black uppercase rounded-lg">Suspicious Activity</span>
+                        </div>
+                        <p className="text-sm text-zinc-500 font-medium">{user.name} • {user.email}</p>
+                    </div>
+                    <button onClick={onClose} className="p-3 bg-zinc-100 dark:bg-zinc-800 rounded-2xl text-zinc-500 hover:bg-zinc-200 transition-all active:scale-95">
+                        <X className="w-5 h-5" />
+                    </button>
+                </div>
+                
+                <div className="p-8 overflow-y-auto">
+                    <div className="grid grid-cols-1 gap-4">
+                        {sortedDevices.map((device) => (
+                            <div key={device.deviceId} className="p-6 bg-zinc-50 dark:bg-zinc-800/50 rounded-3xl border border-zinc-100 dark:border-zinc-800 flex items-center justify-between group hover:border-indigo-200 dark:hover:border-indigo-900/50 transition-all">
+                                <div className="flex items-center gap-5">
+                                    <div className="w-14 h-14 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center shadow-sm border border-zinc-100 dark:border-zinc-700">
+                                        {getDeviceIcon(device.deviceType)}
+                                    </div>
+                                    <div>
+                                        <div className="font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-tight text-sm mb-0.5">
+                                            {device.clientName || 'Unknown Device'}
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">{device.os}</span>
+                                            <div className="w-1 h-1 bg-zinc-300 rounded-full" />
+                                            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">{device.deviceType}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-1">Last Seen</div>
+                                    <div className="text-sm font-black text-zinc-900 dark:text-white">
+                                        {format(new Date(device.lastSeen), 'PPp')}
+                                    </div>
+                                    <div className="text-[9px] font-bold text-indigo-500 uppercase tracking-tight mt-1 opacity-60">
+                                        First seen: {format(new Date(device.firstSeen), 'PP')}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                
+                <div className="p-6 bg-zinc-50 dark:bg-zinc-800/30 border-t border-zinc-100 dark:border-zinc-800 text-center">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400">Unique Device IDs: {user.knownDevices.length}</p>
+                </div>
+            </div>
         </div>
     );
 }

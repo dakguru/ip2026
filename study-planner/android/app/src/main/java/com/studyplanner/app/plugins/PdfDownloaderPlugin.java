@@ -115,8 +115,14 @@ public class PdfDownloaderPlugin extends Plugin {
         }
 
         try {
+            DownloadManager dm = (DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+            if (dm == null) {
+                call.reject("DownloadManager is not available on this device. Please enable it in Settings > Apps.");
+                return;
+            }
+
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-            
+
             // Use the explicit filename from JS if provided, otherwise guess from URL
             String filename = call.getString("filename");
             if (filename == null || filename.isEmpty()) {
@@ -127,21 +133,31 @@ public class PdfDownloaderPlugin extends Plugin {
             }
 
             request.setMimeType("application/pdf");
+            // Flush to make sure WebView cookies are synced before reading
+            CookieManager.getInstance().flush();
             String cookies = CookieManager.getInstance().getCookie(url);
             if (cookies != null && !cookies.isEmpty()) {
                 request.addRequestHeader("cookie", cookies);
             }
             request.addRequestHeader("User-Agent", "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36");
-            
+
             request.setDescription("Downloading file...");
             request.setTitle(filename);
             request.allowScanningByMediaScanner();
-            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-            
+
+            // On Android 13+, only show the download notification if permission is granted.
+            // Without this check, VISIBILITY_VISIBLE_NOTIFY_COMPLETED can silently fail the
+            // download on some Android 13+ ROMs when POST_NOTIFICATIONS is denied.
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                    getPermissionState("notifications") != PermissionState.GRANTED) {
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
+            } else {
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            }
+
             // Scope storage handling
             request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, filename);
-            
-            DownloadManager dm = (DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+
             downloadId = dm.enqueue(request);
 
             // Register Receiver for Auto-Open

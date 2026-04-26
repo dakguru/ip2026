@@ -1,8 +1,11 @@
 import { NextResponse } from 'next/server';
 import { verifyUser, updateSessionById } from '@/lib/db';
 import LoginLog from '@/models/LoginLog';
+import UserModel from '@/models/User';
 import dbConnect from '@/lib/mongoose';
 import { headers } from 'next/headers';
+import crypto from 'crypto';
+import { UAParser } from 'ua-parser-js';
 
 export async function POST(request: Request) {
     try {
@@ -12,24 +15,42 @@ export async function POST(request: Request) {
         
         const ip = headerList.get('x-forwarded-for')?.split(',')[0] || headerList.get('x-real-ip') || '0.0.0.0';
         const userAgent = headerList.get('user-agent') || '';
-        
-        // Simple manual UA parsing
-        const isMobile = /mobile|iphone|android|phone/i.test(userAgent);
-        const isTablet = /tablet|ipad/i.test(userAgent);
-        const deviceType = isTablet ? 'Tablet' : (isMobile ? 'Mobile' : 'Desktop');
-        
-        let os = 'Unknown OS';
-        if (userAgent.indexOf('Win') !== -1) os = 'Windows';
-        else if (userAgent.indexOf('Mac') !== -1) os = 'MacOS';
-        else if (userAgent.indexOf('Android') !== -1) os = 'Android';
-        else if (userAgent.indexOf('Linux') !== -1) os = 'Linux';
-        else if (/iphone|ipad|ipod/i.test(userAgent)) os = 'iOS';
 
-        let browser = 'Unknown Browser';
-        if (userAgent.indexOf('Chrome') !== -1) browser = 'Chrome';
-        else if (userAgent.indexOf('Firefox') !== -1) browser = 'Firefox';
-        else if (userAgent.indexOf('Safari') !== -1) browser = 'Safari';
-        else if (userAgent.indexOf('Edge') !== -1) browser = 'Edge';
+        // Extract location from Vercel headers
+        const location = {
+            city: headerList.get('x-vercel-ip-city') || 'Unknown',
+            region: headerList.get('x-vercel-ip-country-region') || 'Unknown',
+            country: headerList.get('x-vercel-ip-country') || 'Unknown'
+        };
+        
+        // Advanced Device Fingerprinting
+        const appId = headerList.get('x-device-id');
+        const appModel = headerList.get('x-device-model');
+        
+        const parser = new UAParser(userAgent);
+        const uaResult = parser.getResult();
+        
+        const osName = uaResult.os.name || 'Unknown OS';
+        const browserName = uaResult.browser.name || 'Unknown Browser';
+        const browserMajor = uaResult.browser.major || '';
+
+        let deviceId = appId;
+        let clientName = appModel || `${browserName} ${browserMajor}`;
+        let deviceType: 'Mobile' | 'Web' = appId ? 'Mobile' : 'Web';
+        let os = appId ? (uaResult.os.name || 'Android') : osName;
+
+        if (!deviceId) {
+            // Web Fingerprint: Hash of OS + Browser Name + Major Version
+            deviceId = crypto.createHash('md5')
+                .update(`${osName}-${browserName}-${browserMajor}`)
+                .digest('hex');
+        }
+
+        const deviceLogInfo = { 
+            type: deviceType, 
+            os: os, 
+            browser: appId ? 'App' : browserName 
+        };
 
         if (!email || !password) {
             await LoginLog.create({
@@ -37,7 +58,8 @@ export async function POST(request: Request) {
                 status: 'failed',
                 failureReason: 'Missing credentials',
                 ip,
-                device: { type: deviceType, os, browser }
+                location,
+                device: deviceLogInfo
             });
             return NextResponse.json(
                 { error: 'Missing credentials' },
@@ -53,7 +75,8 @@ export async function POST(request: Request) {
                 status: 'failed',
                 failureReason: 'Invalid email or password',
                 ip,
-                device: { type: deviceType, os, browser }
+                location,
+                device: deviceLogInfo
             });
             return NextResponse.json(
                 { error: 'Invalid email or password' },
@@ -74,9 +97,36 @@ export async function POST(request: Request) {
             membershipLevel: user.membershipLevel,
             status: 'success',
             ip,
-            device: { type: deviceType, os, browser },
+            location,
+            device: deviceLogInfo,
             sessionId
         });
+
+        // Update User's knownDevices for credential sharing detection
+        const deviceData = {
+            deviceId,
+            deviceType,
+            os,
+            clientName,
+            lastSeen: new Date()
+        };
+
+        const existingDevice = await UserModel.findOne({ 
+            _id: user.id, 
+            'knownDevices.deviceId': deviceId 
+        });
+
+        if (existingDevice) {
+            await UserModel.updateOne(
+                { _id: user.id, 'knownDevices.deviceId': deviceId },
+                { $set: { 'knownDevices.$.lastSeen': new Date() } }
+            );
+        } else {
+            await UserModel.updateOne(
+                { _id: user.id },
+                { $push: { knownDevices: { ...deviceData, firstSeen: new Date() } } }
+            );
+        }
 
         // maxAge in seconds (30 days — keep user logged in until they login on another device)
         const maxAge = 60 * 60 * 24 * 30;
