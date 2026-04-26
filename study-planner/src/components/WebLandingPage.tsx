@@ -24,7 +24,7 @@ interface WebLandingPageProps {
 export default function WebLandingPage({ displayName, membershipLevel, role, isLoggedIn }: WebLandingPageProps) {
     const { course } = useCourse();
     const isPsGroupB = course === 'PS_GR_B';
-    const examName = isPsGroupB ? "PS Group 'B'" : "Inspector Posts";
+    const examName = isLoggedIn ? (isPsGroupB ? "PS Group 'B'" : "Inspector Posts") : "LDCE";
 
     return (
         <div className="min-h-screen font-sans bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
@@ -43,7 +43,7 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
             {/* <MockTestAnnouncementPopup /> */}
 
             {/* 2. Hero Section */}
-            <WelcomeSection displayName={displayName} />
+            <WelcomeSection displayName={displayName} isLoggedIn={isLoggedIn} />
 
             {/* 3. Feature Tiles */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
@@ -60,11 +60,11 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
                     </div>
 
                     <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-800 dark:text-zinc-100 mb-6 leading-tight">
-                        Prepare for {examName} Exam 2026 with Confidence
+                        Prepare for {isLoggedIn ? `${examName} Exam 2026` : "LDCE 2026"} with Confidence
                     </h2>
 
                     <p className="text-zinc-700 dark:text-zinc-200 text-xl font-medium mb-4 max-w-3xl mx-auto leading-relaxed">
-                        Master the {examName} Syllabus in half the time. No long videos. Just high-yield notes, instant quizzes, and rapid revision.
+                        Master the {isLoggedIn ? `${examName} Syllabus` : "LDCE 2026 Syllabus"} in half the time. No long videos. Just high-yield notes, instant quizzes, and rapid revision.
                     </p>
 
                     <p className="text-zinc-500 dark:text-zinc-400 text-base mb-10 max-w-3xl mx-auto">

@@ -8,10 +8,11 @@ import { ArrowRight } from "lucide-react";
 
 interface WelcomeSectionProps {
     displayName: string;
+    isLoggedIn: boolean;
 }
 
 
-function CountdownTimer({ course }: { course: string | null }) {
+function CountdownTimer({ course, isLoggedIn }: { course: string | null, isLoggedIn: boolean }) {
     const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
 
     useEffect(() => {
@@ -39,9 +40,11 @@ function CountdownTimer({ course }: { course: string | null }) {
         return () => clearInterval(timer);
     }, []);
 
-    const testText = course === 'PS_GR_B'
-        ? "All India Mock Tests for PS Group B 2026"
-        : "All India Mock Tests for LDCE IP 2026";
+    const testText = isLoggedIn
+        ? (course === 'PS_GR_B'
+            ? "All India Mock Tests for PS Group B 2026"
+            : "All India Mock Tests for LDCE IP 2026")
+        : "Live All India Mock Test : Login to Participate";
 
     if (!timeLeft) {
         return <span>{testText}</span>;
@@ -64,7 +67,7 @@ function CountdownTimer({ course }: { course: string | null }) {
     );
 }
 
-export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
+export default function WelcomeSection({ displayName, isLoggedIn }: WelcomeSectionProps) {
     const isMobileApp = useIsMobileApp();
     const { course } = useCourse();
 
@@ -84,9 +87,11 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
                 )}
             </h1>
 
-            <p className={`text-zinc-600 dark:text-zinc-300 mx-auto ${isMobileApp ? 'text-xs max-w-sm' : 'text-xs sm:text-xl max-w-3xl'}`}>
-                {tagline}
-            </p>
+            {isLoggedIn && (
+                <p className={`text-zinc-600 dark:text-zinc-300 mx-auto ${isMobileApp ? 'text-xs max-w-sm' : 'text-xs sm:text-xl max-w-3xl'}`}>
+                    {tagline}
+                </p>
+            )}
 
             <div className="mt-6 flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-500 delay-75 fill-mode-both">
                 <Link
@@ -118,7 +123,7 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
 
             {/* ✨ All India Mock Test — Premium Live Banner */}
             <div className="mt-8 md:mt-12 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 px-4">
-                <Link href="/mock-tests" className="relative group w-full max-w-xl block">
+                <Link href={isLoggedIn ? "/mock-tests" : "/login?redirect=/mock-tests"} className="relative group w-full max-w-xl block">
                     <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border border-white/[0.08] shadow-[0_8px_40px_-12px_rgba(99,102,241,0.35)] hover:shadow-[0_12px_50px_-10px_rgba(99,102,241,0.45)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98]">
 
                         {/* Animated aurora blobs */}
@@ -158,7 +163,7 @@ export default function WelcomeSection({ displayName }: WelcomeSectionProps) {
 
                                 {/* Title */}
                                 <h3 className="text-[15px] sm:text-lg font-black text-white leading-tight tracking-tight">
-                                    <CountdownTimer course={course} />
+                                    <CountdownTimer course={course} isLoggedIn={isLoggedIn} />
                                 </h3>
                                 <p className="text-[10px] sm:text-xs text-indigo-300/70 font-medium mt-0.5 truncate">Compete with top rankers across India</p>
                             </div>
