@@ -24,7 +24,7 @@ const entries = [
 {
     title: "India Post: Network at a Glance — Annual Report 2024-25 & 2025-26",
     rule_number: "Chapter 1 — Key Facts & Figures",
-    act_name: "Post Office Guide Part I",
+    act_name: "Annual Report and Book of Information",
     category: "Explanation",
     effective_date: new Date("2024-04-01"),
     exam_tags: ["LDCE IP", "PS Group B"],
@@ -209,7 +209,7 @@ const entries = [
 {
     title: "Post Office Savings Bank (POSB): Banking Services, Schemes & Milestones",
     rule_number: "Chapter 2 — Financial Services",
-    act_name: "Post Office Guide Part I",
+    act_name: "Annual Report and Book of Information",
     category: "Explanation",
     effective_date: new Date("2024-04-01"),
     exam_tags: ["LDCE IP", "PS Group B"],
@@ -360,7 +360,7 @@ const entries = [
 {
     title: "India Post Payments Bank (IPPB): Digital Banking Revolution",
     rule_number: "Chapter 2.3 — IPPB",
-    act_name: "Post Office Guide Part I",
+    act_name: "Annual Report and Book of Information",
     category: "Explanation",
     effective_date: new Date("2024-04-01"),
     exam_tags: ["LDCE IP", "PS Group B"],
@@ -506,7 +506,7 @@ const entries = [
 {
     title: "Logistics & Supply Chain: Speed Post, Parcels, MMS & Transport Network",
     rule_number: "Chapter 3 — Logistics and Supply Chain",
-    act_name: "Post Office Guide Part I",
+    act_name: "Annual Report and Book of Information",
     category: "Explanation",
     effective_date: new Date("2024-04-01"),
     exam_tags: ["LDCE IP", "PS Group B"],
@@ -707,7 +707,7 @@ const entries = [
 {
     title: "Citizen Centric Services: POPSK, Aadhaar, PO-CSC, DNK, PMEGP & More",
     rule_number: "Chapter 4 — Citizen Centric Services",
-    act_name: "Post Office Guide Part I",
+    act_name: "Annual Report and Book of Information",
     category: "Explanation",
     effective_date: new Date("2024-04-01"),
     exam_tags: ["LDCE IP", "PS Group B"],
