@@ -17248,8 +17248,8 @@ export const p1_25: FlashCard[] = [
         "topic": "Paper I",
         "card_no": 3,
         "question": "As per recent data, what is the average area served by a single Post Office in India?",
-        "answer": "21.34 sq. km.",
-        "explanation": "The average area served by a Post Office is approximately 21.34 sq. km (calculated based on 32.87 lakh sq km / ~1.65 lakh POs, a standard metric in the report).",
+        "answer": "19.92 sq. km.",
+        "explanation": "The average area served by a Post Office is approximately 19.92 sq. km (calculated based on 32.87 lakh sq km / ~1.65 lakh POs, a standard metric in the report).",
         "exam_weight": "Medium",
         "keywords": [
             "recent",
