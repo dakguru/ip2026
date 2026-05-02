@@ -39,6 +39,7 @@ const TEST_SCHEDULE_MAP: Record<string, { start: Date; end: Date }> = {
     "psgb-mock-2026-04-12": { start: new Date("2026-04-11T00:00:00+05:30"), end: new Date("2026-04-12T23:59:59+05:30") },
     "psgb-mock-2026-04-19": { start: new Date("2026-04-18T00:00:00+05:30"), end: new Date("2026-04-19T23:59:59+05:30") },
     "psgb-mock-2026-04-26": { start: new Date("2026-04-25T00:00:00+05:30"), end: new Date("2026-04-26T23:59:59+05:30") },
+    "psgb-mock-2026-05-03": { start: new Date("2026-05-02T00:00:00+05:30"), end: new Date("2026-05-04T20:00:00+05:30") },
     "mock-2026-04-04": { start: new Date("2026-04-04T00:00:00+05:30"), end: new Date("2026-04-05T23:59:59+05:30") },
     "mock-2026-04-11": { start: new Date("2026-04-11T00:00:00+05:30"), end: new Date("2026-04-12T23:59:59+05:30") },
     "mock-2026-04-18": { start: new Date("2026-04-18T00:00:00+05:30"), end: new Date("2026-04-19T23:59:59+05:30") },

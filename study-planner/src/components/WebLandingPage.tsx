@@ -12,7 +12,6 @@ import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 import StoreButton from "@/components/StoreButton";
 import HomepageMarquee from "@/components/HomepageMarquee";
 import { useCourse } from "@/contexts/CourseContext";
-import SpecialAnnouncementPopup from "@/components/SpecialAnnouncementPopup";
 // import LaunchPopup from "@/components/LaunchPopup";
 
 interface WebLandingPageProps {
@@ -37,8 +36,6 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
 
             {/* LIVE MOCK TEST BANNER REMOVED AS PER USER REQUEST */}
             
-            <SpecialAnnouncementPopup />
-
             {/* 1.5. Launch Popup - Disabled as per request */}
             {/* {!["gold", "silver"].includes(membershipLevel.toLowerCase()) && <LaunchPopup />} */}
 

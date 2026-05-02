@@ -147,7 +147,14 @@ export default function MockTestsPage() {
 
         while (currentDate <= endDate) {
             const saturdayDate = currentDate;
-            const sundayDate = endOfDay(addDays(saturdayDate, 1));
+            let sundayDate = endOfDay(addDays(saturdayDate, 1));
+
+            const calculatedId = `mock-${format(saturdayDate, 'yyyy-MM-dd')}`;
+
+            if (calculatedId === 'mock-2026-05-02') {
+                sundayDate = new Date(2026, 4, 4, 20, 0, 0); // 04.05.2026 @ 20:00 hours
+            }
+
 
             const mondayDate = addDays(saturdayDate, -5);
             const fridayDate = addDays(saturdayDate, -1);
@@ -176,12 +183,11 @@ export default function MockTestsPage() {
             // Determine Status
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
 
-            const calculatedId = `mock-${format(saturdayDate, 'yyyy-MM-dd')}`;
             const now = new Date();
 
             if (now > sundayDate) {
                 status = 'completed';
-            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-04-25' || calculatedId === 'mock-2026-04-18' || calculatedId === 'mock-2026-04-04' || calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28' || calculatedId === 'mock-2026-04-11'))) {
+            } else if (now >= saturdayDate || (role === 'admin' && (calculatedId === 'mock-2026-05-02' || calculatedId === 'mock-2026-04-25' || calculatedId === 'mock-2026-04-18' || calculatedId === 'mock-2026-04-04' || calculatedId === 'mock-2026-03-14' || calculatedId === 'mock-2026-03-07' || calculatedId === 'mock-2026-02-28' || calculatedId === 'mock-2026-03-21' || calculatedId === 'mock-2026-03-28' || calculatedId === 'mock-2026-04-11'))) {
                 status = 'live';
             } else {
                 status = 'upcoming';
@@ -1802,13 +1808,19 @@ function PsgbMockTestPage({
         const now = new Date();
         return PSGB_MOCK_SCHEDULE.map(week => {
             const satDate = new Date(week.saturdayDate + 'T00:00:00');
-            const sunDate = endOfDay(new Date(week.sundayDate + 'T00:00:00'));
+            let sunDate = endOfDay(new Date(week.sundayDate + 'T00:00:00'));
+            
+            if (week.week === 5) {
+                sunDate = new Date(2026, 4, 4, 20, 0, 0); // 04.05.2026 @ 20:00
+            }
+
             const testId = `psgb-mock-${week.sundayDate}`;
             const isAdmin = role === 'admin';
             const isWeek01 = week.week === 1;
             const isWeek02 = week.week === 2;
             const isWeek03 = week.week === 3;
             const isWeek04 = week.week === 4;
+            const isWeek05 = week.week === 5;
 
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
             const isPublicLive = now >= satDate && now <= sunDate;
@@ -1816,7 +1828,7 @@ function PsgbMockTestPage({
 
             if (isPast) {
                 status = 'completed';
-            } else if (isPublicLive || (isAdmin && (isWeek01 || isWeek02 || isWeek03 || isWeek04))) {
+            } else if (isPublicLive || (isAdmin && (isWeek01 || isWeek02 || isWeek03 || isWeek04 || isWeek05))) {
                 status = 'live';
             }
 

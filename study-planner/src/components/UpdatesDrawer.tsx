@@ -16,6 +16,30 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "02.05.2026",
+        items: [
+            {
+                title: "🎯 Mock Test 16 & PSGB Mock 05 Schedule Update",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>Weekly Mock Test - 16</strong> for LDCE IP and <strong>Mock Test - 05</strong> for PS Group B!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Important Schedule Notice</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Due to technical difficulties, these weekly tests will be live and accessible until <strong>04.05.2026 @ 2000 hours</strong> for this week only.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-amber-600 dark:text-amber-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head to the Mock Tests section to attempt now!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "25.04.2026",
         items: [
             {

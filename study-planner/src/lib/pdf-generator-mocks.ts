@@ -30,6 +30,75 @@ interface GeneratePDFParams {
     testTopics?: string[];
 }
 
+function tryParseMatchTheFollowing(text: string) {
+    const col1Pattern = "Service|List-I(?: \\([^)]+\\))?|List I|Column I|Column A|Category I|Category|List 1|File Head|Form|Initiative";
+    const col2Pattern = "Time|List-II(?: \\([^)]+\\))?|List II|Column II|Column B|Category II|List 2|Correspondence|Context|Detail";
+    const regex = new RegExp(`^([\\s\\S]*?)\\s*(${col1Pattern}):\\s*(P\\.\\s+[\\s\\S]+?)\\s*(${col2Pattern}):\\s*(1\\.\\s+[\\s\\S]+?)\\s*(Codes:[\\s\\S]*|Which\\s+of[\\s\\S]*|Choose[\\s\\S]*|Select[\\s\\S]*|$)`, "i");
+    const match = text.match(regex);
+    if (!match) return null;
+
+    const [, intro, col1Title, col1Raw, col2Title, col2Raw, closingRaw] = match;
+    const col1Items = col1Raw.trim().split(/\s+(?=[A-Z]\.\s|[A-Z]\)\s|[A-Z]\.)/).map(s => s.trim());
+    
+    // Extract closing if present in col2Raw or matched separately
+    const closingRe = /\s+(Which\s+of|Codes:|Select\s+|Choose\s+|Match\s+|Correct\s+|Correct\s+code)/i;
+    const closingMatch = col2Raw.match(closingRe);
+    let col2Clean = col2Raw;
+    let closing = closingRaw || '';
+    
+    if (closingMatch && closingMatch.index !== undefined) {
+        col2Clean = col2Raw.slice(0, closingMatch.index).trim();
+        if (!closing) {
+            closing = col2Raw.slice(closingMatch.index).trim();
+        }
+    }
+    
+    const col2Items = col2Clean.trim().split(/\s+(?=\d+\.\s|\d+\)\s|\d+\.)/).map(s => s.trim());
+
+    if (col1Items.length < 2 || col2Items.length < 2) return null;
+    return { intro: intro.trim(), col1Title: col1Title.trim(), col1Items, col2Title: col2Title.trim(), col2Items, closing: closing.trim() };
+}
+
+function tryParseNumberedList(text: string) {
+    const pattern = /(?<=[\s:])(\d+)\.\s/g;
+    const allMatches = [...text.matchAll(pattern)];
+    if (allMatches.length < 2) return null;
+
+    // Build sequential run starting at 1
+    const runMatches: RegExpMatchArray[] = [];
+    for (const m of allMatches) {
+        const num = parseInt(m[1]);
+        if (num === runMatches.length + 1) {
+            runMatches.push(m);
+        }
+    }
+    if (runMatches.length < 2 || parseInt(runMatches[0][1]) !== 1) return null;
+
+    const intro = text.slice(0, runMatches[0].index).trim();
+
+    // Extract item content
+    const items: string[] = [];
+    for (let i = 0; i < runMatches.length; i++) {
+        const contentStart = runMatches[i].index! + runMatches[i][0].length;
+        const contentEnd = i + 1 < runMatches.length ? runMatches[i + 1].index! : text.length;
+        const content = text.slice(contentStart, contentEnd).trim();
+        items.push(content);
+    }
+
+    // Check closing question
+    const closingRe = /\s+(Which\s+of|How\s+many|Select\s+|Choose\s+the|Match\s+)/i;
+    const lastItem = items[items.length - 1];
+    const closingMatch = lastItem.match(closingRe);
+    let closing = '';
+
+    if (closingMatch && closingMatch.index !== undefined) {
+        closing = lastItem.slice(closingMatch.index).trim();
+        items[items.length - 1] = lastItem.slice(0, closingMatch.index).trim();
+    }
+
+    return { intro, items, closing };
+}
+
 export const createMockTestAnswerSheetPDFDoc = async ({
     userName,
     score,
@@ -212,6 +281,13 @@ export const createMockTestAnswerSheetPDFDoc = async ({
             .replace(/[‘’]/g, "'")
             .replace(/—/g, "-")
             .replace(/–/g, "-")
+            .replace(/→/g, "->")
+            .replace(/←/g, "<-")
+            .replace(/↔/g, "<->")
+            .replace(/⇒/g, "=>")
+            .replace(/⇐/g, "<=")
+            .replace(/•/g, "-")
+            .replace(/✓/g, "[v]")
             .replace(/…/g, "...");
     };
 
@@ -227,13 +303,107 @@ export const createMockTestAnswerSheetPDFDoc = async ({
             yPos = 20;
         }
 
-        doc.setFontSize(11);
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(0, 0, 0);
-        const qTitle = cleanText(`Q${index + 1}. ${q.text}`);
-        const splitTitle = doc.splitTextToSize(qTitle, contentWidth);
-        doc.text(splitTitle, margin, yPos, { align: "left" });
-        yPos += splitTitle.length * 5 + 4;
+        const matchTheFollowing = tryParseMatchTheFollowing(q.text);
+        const numberedList = tryParseNumberedList(q.text);
+
+        if (matchTheFollowing) {
+            const { intro, col1Title, col1Items, col2Title, col2Items, closing } = matchTheFollowing;
+            doc.setFontSize(11);
+            doc.setFont("helvetica", "bold");
+            doc.setTextColor(0, 0, 0);
+
+            const qIntro = cleanText(`Q${index + 1}. ${intro}`);
+            const splitIntro = doc.splitTextToSize(qIntro, contentWidth);
+            doc.text(splitIntro, margin, yPos, { align: "left" });
+            yPos += splitIntro.length * 5 + 4;
+
+            if (yPos > pageHeight - 60) {
+                doc.addPage();
+                addWatermark();
+                yPos = 20;
+            }
+
+            const maxRows = Math.max(col1Items.length, col2Items.length);
+            const tableRows = Array.from({ length: maxRows }).map((_, i) => [
+                cleanText(col1Items[i] || ""),
+                cleanText(col2Items[i] || "")
+            ]);
+
+            autoTable(doc, {
+                startY: yPos,
+                head: [[cleanText(col1Title), cleanText(col2Title)]],
+                body: tableRows,
+                theme: 'grid',
+                headStyles: { fillColor: [79, 70, 229] },
+                styles: { fontSize: 9, cellPadding: 3 },
+                margin: { left: margin },
+                tableWidth: contentWidth
+            });
+            yPos = (doc as any).lastAutoTable.finalY + 6;
+
+            if (closing) {
+                if (yPos > pageHeight - 20) {
+                    doc.addPage();
+                    addWatermark();
+                    yPos = 20;
+                }
+                doc.setFontSize(10);
+                doc.setFont("helvetica", "bold");
+                doc.setTextColor(0, 0, 0);
+                const splitClosing = doc.splitTextToSize(cleanText(closing), contentWidth);
+                doc.text(splitClosing, margin, yPos, { align: "left" });
+                yPos += splitClosing.length * 5 + 4;
+            }
+        } else if (numberedList) {
+            const { intro, items, closing } = numberedList;
+            doc.setFontSize(11);
+            doc.setFont("helvetica", "bold");
+            doc.setTextColor(0, 0, 0);
+
+            const qIntro = cleanText(`Q${index + 1}. ${intro}`);
+            const splitIntro = doc.splitTextToSize(qIntro, contentWidth);
+            doc.text(splitIntro, margin, yPos, { align: "left" });
+            yPos += splitIntro.length * 5 + 4;
+
+            items.forEach((item, itemIdx) => {
+                doc.setFont("helvetica", "normal");
+                doc.setFontSize(10);
+                const itemText = cleanText(`${itemIdx + 1}. ${item}`);
+                const splitItem = doc.splitTextToSize(itemText, contentWidth - 8);
+
+                if (yPos + splitItem.length * 5 > pageHeight - 15) {
+                    doc.addPage();
+                    addWatermark();
+                    yPos = 20;
+                }
+                doc.text(splitItem, margin + 5, yPos, { align: "left" });
+                yPos += splitItem.length * 5 + 1;
+            });
+
+            yPos += 2;
+
+            if (closing) {
+                if (yPos > pageHeight - 20) {
+                    doc.addPage();
+                    addWatermark();
+                    yPos = 20;
+                }
+                doc.setFontSize(10);
+                doc.setFont("helvetica", "bold");
+                doc.setTextColor(0, 0, 0);
+                const splitClosing = doc.splitTextToSize(cleanText(closing), contentWidth);
+                doc.text(splitClosing, margin, yPos, { align: "left" });
+                yPos += splitClosing.length * 5 + 4;
+            }
+        } else {
+            doc.setFontSize(11);
+            doc.setFont("helvetica", "bold");
+            doc.setTextColor(0, 0, 0);
+            const qTitle = cleanText(`Q${index + 1}. ${q.text}`);
+            const splitTitle = doc.splitTextToSize(qTitle, contentWidth);
+            doc.text(splitTitle, margin, yPos, { align: "left" });
+            yPos += splitTitle.length * 5 + 4;
+        }
 
         // Render Table if available
         if (q.table) {

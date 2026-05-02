@@ -20,6 +20,51 @@ function tryParseColumnMatch(text: string) {
     return { intro: intro.trim(), col1Items, col2Items };
 }
 
+// Parse "Service: P. item Q. item Time: 1. item 2. item" style questions
+function tryParseServiceTimeMatch(text: string) {
+    const col1Pattern = "Service|List-I(?: \\([^)]+\\))?|List I|Column I|Column A|Category I|Category|List 1|File Head|Form|Initiative";
+    const col2Pattern = "Time|List-II(?: \\([^)]+\\))?|List II|Column II|Column B|Category II|List 2|Correspondence|Context|Detail";
+    const regex = new RegExp(`^([\\s\\S]*?)\\s*(${col1Pattern}):\\s*(P\\.\\s+[\\s\\S]+?)\\s*(${col2Pattern}):\\s*(1\\.\\s+[\\s\\S]+?)\\s*(Codes:[\\s\\S]*|Which\\s+of[\\s\\S]*|Choose[\\s\\S]*|Select[\\s\\S]*|$)`, "i");
+    const match = text.match(regex);
+    if (!match) return null;
+
+    const [, intro, col1Title, col1Raw, col2Title, col2Raw, closingRaw] = match;
+    const col1Items = col1Raw.trim().split(/\s+(?=[A-Z]\.\s|[A-Z]\)\s|[A-Z]\.)/).map(s => s.trim());
+    
+    // Check if col2Raw has any trailing closing text like "Which of the above..."
+    const closingRe = /\s+(Which\s+of|Codes:|Select\s+|Choose\s+|Match\s+|Correct\s+|Correct\s+code)/i;
+    const closingMatch = col2Raw.match(closingRe);
+    let col2Clean = col2Raw;
+    let closing = closingRaw || '';
+    
+    if (closingMatch && closingMatch.index !== undefined) {
+        col2Clean = col2Raw.slice(0, closingMatch.index).trim();
+        if (!closing) {
+            closing = col2Raw.slice(closingMatch.index).trim();
+        }
+    }
+    
+    const col2Items = col2Clean.trim().split(/\s+(?=\d+\.\s|\d+\)\s|\d+\.)/).map(s => s.trim());
+
+    if (col1Items.length < 2 || col2Items.length < 2) return null;
+    return { intro: intro.trim(), col1Title: col1Title.trim(), col1Items, col2Title: col2Title.trim(), col2Items, closing };
+}
+
+
+// Parse "List-I: P. item List-II: 1. item" style questions
+function tryParseListMatch(text: string) {
+    const match = text.match(/^([\s\S]*?)(List-I(?:[\s\S]*?):)\s+((?:[A-Z]\.\s[\s\S]+?)+?)\s+(List-II(?:[\s\S]*?):)\s+((?:\d+\.\s[\s\S]+?)+?)(?:\s+Codes:)?\s*$/i);
+    if (!match) return null;
+
+    const [, intro, l1Title, col1Raw, l2Title, col2Raw] = match;
+    const col1Items = col1Raw.trim().split(/\s+(?=[A-Z]\.\s)/).map(s => s.trim());
+    const col2Items = col2Raw.trim().split(/\s+(?=\d+\.\s)/).map(s => s.trim());
+
+    if (col1Items.length < 2 || col2Items.length < 2) return null;
+    return { intro: intro.trim(), l1Title: l1Title.trim(), col1Items, l2Title: l2Title.trim(), col2Items };
+}
+
+
 // Parse inline numbered statements: "intro: 1. item 2. item 3. item closing question?"
 function tryParseNumberedList(text: string) {
     // Require at least " 1. " and " 2. " (space before number prevents matching "Rule 1." mid-word)
@@ -137,6 +182,75 @@ export default function FormattedQuestionText({ text, className = "" }: Formatte
                             <tr>
                                 <th className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100 border-r border-zinc-200 dark:border-zinc-800 w-1/2 text-left">Column I</th>
                                 <th className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100 w-1/2 text-left">Column II</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                            {Array.from({ length: maxRows }).map((_, i) => (
+                                <tr key={i}>
+                                    <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300 border-r border-zinc-100 dark:border-zinc-800 align-top">
+                                        {col1Items[i] ?? ''}
+                                    </td>
+                                    <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300 align-top">
+                                        {col2Items[i] ?? ''}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        );
+    }
+
+    // 2.3 Handle Service / Time matching questions (check before list match)
+    const serviceMatch = tryParseServiceTimeMatch(text);
+    if (serviceMatch) {
+        const { intro, col1Title, col1Items, col2Title, col2Items, closing } = serviceMatch;
+        const maxRows = Math.max(col1Items.length, col2Items.length);
+        return (
+            <div className={`space-y-3 ${className}`}>
+                {intro && <p className="whitespace-pre-wrap">{intro}</p>}
+                <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm bg-white dark:bg-zinc-900/50">
+                    <table className="w-full text-xs md:text-sm border-collapse">
+                        <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
+                            <tr>
+                                <th className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100 border-r border-zinc-200 dark:border-zinc-800 w-1/2 text-left">{col1Title}</th>
+                                <th className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100 w-1/2 text-left">{col2Title}</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                            {Array.from({ length: maxRows }).map((_, i) => (
+                                <tr key={i}>
+                                    <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300 border-r border-zinc-100 dark:border-zinc-800 align-top">
+                                        {col1Items[i] ?? ''}
+                                    </td>
+                                    <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300 align-top">
+                                        {col2Items[i] ?? ''}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                {closing && <p className="whitespace-pre-wrap font-medium text-zinc-800 dark:text-zinc-200 mt-2">{closing}</p>}
+            </div>
+        );
+    }
+
+    // 2.5 Handle List-I / List-II matching questions
+    const listMatch = tryParseListMatch(text);
+    if (listMatch) {
+        const { intro, l1Title, col1Items, l2Title, col2Items } = listMatch;
+        const maxRows = Math.max(col1Items.length, col2Items.length);
+        return (
+            <div className={`space-y-3 ${className}`}>
+                {intro && <p className="whitespace-pre-wrap">{intro}</p>}
+                <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm bg-white dark:bg-zinc-900/50">
+                    <table className="w-full text-xs md:text-sm border-collapse">
+                        <thead className="bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-200 dark:border-zinc-800">
+                            <tr>
+                                <th className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100 border-r border-zinc-200 dark:border-zinc-800 w-1/2 text-left">{l1Title}</th>
+                                <th className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100 w-1/2 text-left">{l2Title}</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
