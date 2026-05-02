@@ -13,6 +13,7 @@ import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
 import LiveMockTestBanner from "@/components/LiveMockTestBanner";
 import UpdatesDrawer from "./UpdatesDrawer";
 import { getMembershipLevel, getDisplayMembership } from "@/lib/membership-utils";
+import SpecialAnnouncementMarquee from "@/components/SpecialAnnouncementMarquee";
 
 interface MobileDashboardProps {
     displayName: string;
@@ -331,6 +332,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
             <div className="space-y-6 pt-5">
                 {/* Android App Payment Announcement */}
+
+                {/* --- SPECIAL ANNOUNCEMENT MARQUEE --- */}
+                <SpecialAnnouncementMarquee />
 
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
                 <LiveMockTestBanner />
