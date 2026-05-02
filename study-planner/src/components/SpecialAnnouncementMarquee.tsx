@@ -4,7 +4,7 @@ import React from 'react';
 export default function SpecialAnnouncementMarquee() {
     const content = (
         <>
-            <span className="text-yellow-300">⚠️ IMPORTANT UPDATE:</span> Weekly Tests for LDCE IP 2026 - 16 and PS Group B - 05 will be available for this week only from <span className="text-white font-bold">02.05.2026 at 2000 hours</span> (tonight) until <span className="text-white font-bold">04.05.2026 at 2000 hours</span>. This schedule is applicable due to certain technical difficulties. Aspirants may complete the tests within the given window. <span className="mx-4 text-blue-300">•</span>
+            <span className="text-yellow-300">⚠️ IMPORTANT UPDATE:</span> Weekly Tests for LDCE IP 2026 - 16 and PS Group B - 05 will be available for this week only from <span className="text-white font-bold">02.05.2026 at 2000 hours</span> (tonight) until <span className="text-white font-bold">04.05.2026 at 2359 hours</span>. This schedule is applicable due to certain technical difficulties. Aspirants may complete the tests within the given window. <span className="mx-4 text-blue-300">•</span>
         </>
     );
 

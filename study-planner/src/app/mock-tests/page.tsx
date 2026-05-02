@@ -152,7 +152,7 @@ export default function MockTestsPage() {
             const calculatedId = `mock-${format(saturdayDate, 'yyyy-MM-dd')}`;
 
             if (calculatedId === 'mock-2026-05-02') {
-                sundayDate = new Date(2026, 4, 4, 20, 0, 0); // 04.05.2026 @ 20:00 hours
+                sundayDate = new Date(2026, 4, 4, 23, 59, 59); // 04.05.2026 @ 23:59 hours
             }
 
 
@@ -1811,7 +1811,7 @@ function PsgbMockTestPage({
             let sunDate = endOfDay(new Date(week.sundayDate + 'T00:00:00'));
             
             if (week.week === 5) {
-                sunDate = new Date(2026, 4, 4, 20, 0, 0); // 04.05.2026 @ 20:00
+                sunDate = new Date(2026, 4, 4, 23, 59, 59); // 04.05.2026 @ 23:59
             }
 
             const testId = `psgb-mock-${week.sundayDate}`;

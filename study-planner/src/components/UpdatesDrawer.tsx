@@ -27,7 +27,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                         <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
                             <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
                                 <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Important Schedule Notice</p>
-                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Due to technical difficulties, these weekly tests will be live and accessible until <strong>04.05.2026 @ 2000 hours</strong> for this week only.</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Due to technical difficulties, these weekly tests will be live and accessible until <strong>04.05.2026 @ 2359 hours</strong> for this week only.</p>
                             </div>
                         </div>
 
