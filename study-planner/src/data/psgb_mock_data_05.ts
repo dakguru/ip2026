@@ -11,9 +11,9 @@ export const PSGB_MOCK_05_QUESTIONS: Question[] = [
     {
         id: "psgb-05-q2",
         text: "According to the Mails/Money Order service standards, what is the maximum delivery time for a First Class Mail (Letter) within the same state?",
-        options: ["1-2 Days", "2-4 Days", "3-5 Days", "5-6 Days"],
-        correctAnswer: 2,
-        explanation: "The delivery of First Class Mail (Letters, Postcards & Letter cards) within the same state takes 3-5 Days, excluding the day of posting, holidays, and Sundays."
+        options: ["1-2 Days", "2-6 Days", "3-5 Days", "5-6 Days"],
+        correctAnswer: 1,
+        explanation: "The delivery of First Class Mail (Letters, Postcards & Letter cards) within the same state takes 2-6 Days, excluding the day of posting, holidays, and Sundays."
     },
     {
         id: "psgb-05-q3",
