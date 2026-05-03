@@ -26,43 +26,43 @@ const CATEGORY_CONFIG: Record<string, {
 }> = {
     Rule: {
         heroGradient: "from-blue-900 via-blue-800 to-slate-900",
-        accentColor: "text-blue-600 dark:text-blue-400",
-        accentBg: "bg-blue-50 dark:bg-blue-500/10",
-        accentBorder: "border-blue-200 dark:border-blue-500/30",
+        accentColor: "text-blue-600 ",
+        accentBg: "bg-blue-50 ",
+        accentBorder: "border-blue-200 ",
         icon: <Gavel className="w-4 h-4 md:w-5 md:h-5" />,
-        pillClass: "bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-500/30",
+        pillClass: "bg-blue-100  text-blue-700  border-blue-200 ",
     },
     Section: {
         heroGradient: "from-violet-900 via-violet-800 to-slate-900",
-        accentColor: "text-violet-600 dark:text-violet-400",
-        accentBg: "bg-violet-50 dark:bg-violet-500/10",
-        accentBorder: "border-violet-200 dark:border-violet-500/30",
+        accentColor: "text-violet-600 ",
+        accentBg: "bg-violet-50 ",
+        accentBorder: "border-violet-200 ",
         icon: <BookOpen className="w-4 h-4 md:w-5 md:h-5" />,
-        pillClass: "bg-violet-100 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300 border-violet-200 dark:border-violet-500/30",
+        pillClass: "bg-violet-100  text-violet-700  border-violet-200 ",
     },
     Regulation: {
         heroGradient: "from-emerald-900 via-emerald-800 to-slate-900",
-        accentColor: "text-emerald-600 dark:text-emerald-400",
-        accentBg: "bg-emerald-50 dark:bg-emerald-500/10",
-        accentBorder: "border-emerald-200 dark:border-emerald-500/30",
+        accentColor: "text-emerald-600 ",
+        accentBg: "bg-emerald-50 ",
+        accentBorder: "border-emerald-200 ",
         icon: <Scale className="w-4 h-4 md:w-5 md:h-5" />,
-        pillClass: "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-500/30",
+        pillClass: "bg-emerald-100  text-emerald-700  border-emerald-200 ",
     },
     Circular: {
         heroGradient: "from-amber-900 via-amber-800 to-slate-900",
-        accentColor: "text-amber-600 dark:text-amber-400",
-        accentBg: "bg-amber-50 dark:bg-amber-500/10",
-        accentBorder: "border-amber-200 dark:border-amber-500/30",
+        accentColor: "text-amber-600 ",
+        accentBg: "bg-amber-50 ",
+        accentBorder: "border-amber-200 ",
         icon: <Mail className="w-4 h-4 md:w-5 md:h-5" />,
-        pillClass: "bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-500/30",
+        pillClass: "bg-amber-100  text-amber-700  border-amber-200 ",
     },
     Explanation: {
         heroGradient: "from-indigo-900 via-indigo-800 to-slate-900",
-        accentColor: "text-indigo-600 dark:text-indigo-400",
-        accentBg: "bg-indigo-50 dark:bg-indigo-500/10",
-        accentBorder: "border-indigo-200 dark:border-indigo-500/30",
+        accentColor: "text-indigo-600 ",
+        accentBg: "bg-indigo-50 ",
+        accentBorder: "border-indigo-200 ",
         icon: <Lightbulb className="w-4 h-4 md:w-5 md:h-5" />,
-        pillClass: "bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 border-indigo-200 dark:border-indigo-500/30",
+        pillClass: "bg-indigo-100  text-indigo-700  border-indigo-200 ",
     },
 };
 
@@ -132,7 +132,7 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-slate-950 pt-20">
+            <div className="min-h-screen bg-zinc-50  pt-20">
                 <DakSutraLoader />
             </div>
         );
@@ -140,12 +140,12 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
 
     if (!entry) {
         return (
-            <div className="min-h-screen bg-zinc-50 dark:bg-slate-950 flex flex-col items-center justify-center gap-4 px-6 text-center">
-                <div className="w-14 h-14 rounded-2xl bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-                    <FileText className="w-7 h-7 text-zinc-400 dark:text-zinc-500" />
+            <div className="min-h-screen bg-zinc-50  flex flex-col items-center justify-center gap-4 px-6 text-center">
+                <div className="w-14 h-14 rounded-2xl bg-zinc-200  flex items-center justify-center">
+                    <FileText className="w-7 h-7 text-zinc-400 " />
                 </div>
-                <p className="text-zinc-600 dark:text-slate-400 text-base font-bold">Rule not found or not yet published</p>
-                <Link href="/dak-sutra" className="text-blue-600 dark:text-blue-400 text-sm font-semibold hover:underline flex items-center gap-1">
+                <p className="text-zinc-600  text-base font-bold">Rule not found or not yet published</p>
+                <Link href="/dak-sutra" className="text-blue-600  text-sm font-semibold hover:underline flex items-center gap-1">
                     <ArrowLeft className="w-4 h-4" /> Back to Dak Sutra
                 </Link>
             </div>
@@ -156,7 +156,7 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
     const bottomPad = isMobileApp ? "pb-32" : "pb-20 md:pb-24";
 
     return (
-        <div className={`min-h-screen bg-white dark:bg-[#0F1117] text-zinc-900 dark:text-white ${bottomPad}`}>
+        <div className={`min-h-screen bg-white  text-zinc-900  ${bottomPad}`}>
             {/* Floating timer badge */}
             <AnimatePresence>
                 {!isPremium && !isLocked && (
@@ -239,7 +239,7 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
                 </div>
 
                 {/* Bottom fade */}
-                <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white dark:from-[#0F1117] to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white  to-transparent" />
             </div>
 
             {/* ── CONTENT (gated) ── */}
@@ -252,16 +252,16 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
                     className="space-y-4 md:space-y-6"
                 >
                     {/* 1. OFFICIAL PROVISION */}
-                    <div className="rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-white shadow-sm dark:shadow-none">
-                        <div className="flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/40">
-                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center shrink-0">
-                                <FileText className="w-3 h-3 md:w-4 md:h-4 text-zinc-600 dark:text-zinc-300" />
+                    <div className="rounded-2xl overflow-hidden border border-zinc-200  bg-white shadow-sm ">
+                        <div className="flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-zinc-200  bg-zinc-50 ">
+                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-zinc-200  flex items-center justify-center shrink-0">
+                                <FileText className="w-3 h-3 md:w-4 md:h-4 text-zinc-600 " />
                             </div>
                             <div className="min-w-0">
                                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] text-zinc-500">Official Provision</p>
-                                <p className="text-[10px] md:text-xs text-zinc-500 dark:text-zinc-400 font-medium">Verbatim legal text</p>
+                                <p className="text-[10px] md:text-xs text-zinc-500  font-medium">Verbatim legal text</p>
                             </div>
-                            <div className="ml-auto shrink-0 px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-700/50 text-[8px] md:text-[9px] font-bold text-zinc-500 uppercase tracking-widest hidden sm:block">
+                            <div className="ml-auto shrink-0 px-2 py-1 rounded bg-zinc-100  text-[8px] md:text-[9px] font-bold text-zinc-500 uppercase tracking-widest hidden sm:block">
                                 Primary Source
                             </div>
                         </div>
@@ -277,14 +277,14 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
                     </div>
 
                     {/* 2. DAK GURU EXPLANATION */}
-                    <div className={`rounded-2xl overflow-hidden border ${cfg.accentBorder} bg-white shadow-sm dark:shadow-none`}>
+                    <div className={`rounded-2xl overflow-hidden border ${cfg.accentBorder} bg-white shadow-sm `}>
                         <div className={`flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b ${cfg.accentBorder} ${cfg.accentBg}`}>
                             <div className={`w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg flex items-center justify-center shrink-0 ${cfg.accentBg} border ${cfg.accentBorder}`}>
                                 <BookOpen className={`w-3 h-3 md:w-4 md:h-4 ${cfg.accentColor}`} />
                             </div>
                             <div className="min-w-0">
                                 <p className={`text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] ${cfg.accentColor}`}>Dak Guru Explains</p>
-                                <p className="text-[10px] md:text-xs text-zinc-500 dark:text-zinc-400 font-medium">Plain language breakdown</p>
+                                <p className="text-[10px] md:text-xs text-zinc-500  font-medium">Plain language breakdown</p>
                             </div>
                             <div className={`ml-auto shrink-0 flex items-center gap-1 px-2 py-1 rounded border text-[8px] md:text-[9px] font-bold uppercase tracking-widest ${cfg.pillClass} hidden sm:flex`}>
                                 <Sparkles className="w-2.5 h-2.5" />
@@ -304,16 +304,16 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
 
                     {/* 3. PRACTICAL EXAMPLE */}
                     {entry.practical_example && (
-                        <div className="rounded-2xl overflow-hidden border border-blue-200 dark:border-blue-500/20 bg-blue-50 dark:bg-blue-950/50 shadow-sm dark:shadow-none">
-                            <div className="flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-blue-200 dark:border-blue-500/20 bg-blue-100/60 dark:bg-blue-500/5">
-                                <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-blue-200 dark:bg-blue-500/20 border border-blue-300 dark:border-blue-500/30 flex items-center justify-center shrink-0">
-                                    <Target className="w-3 h-3 md:w-4 md:h-4 text-blue-600 dark:text-blue-400" />
+                        <div className="rounded-2xl overflow-hidden border border-blue-200  bg-blue-50  shadow-sm ">
+                            <div className="flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-blue-200  bg-blue-100/60 ">
+                                <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-blue-200  border border-blue-300  flex items-center justify-center shrink-0">
+                                    <Target className="w-3 h-3 md:w-4 md:h-4 text-blue-600 " />
                                 </div>
                                 <div className="min-w-0">
-                                    <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">Practical Example</p>
-                                    <p className="text-[10px] md:text-xs text-blue-500/70 dark:text-blue-300/60 font-medium">Real-world scenario</p>
+                                    <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] text-blue-600 ">Practical Example</p>
+                                    <p className="text-[10px] md:text-xs text-blue-500/70  font-medium">Real-world scenario</p>
                                 </div>
-                                <div className="ml-auto shrink-0 px-2 py-1 rounded bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-[8px] md:text-[9px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest hidden sm:block">
+                                <div className="ml-auto shrink-0 px-2 py-1 rounded bg-blue-100  border border-blue-200  text-[8px] md:text-[9px] font-bold text-blue-600  uppercase tracking-widest hidden sm:block">
                                     Case Study
                                 </div>
                             </div>
@@ -331,19 +331,19 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
 
                     {/* 4. EXAM INSIGHT */}
                     {entry.exam_insight && (
-                        <div className="rounded-2xl overflow-hidden border border-amber-200 dark:border-amber-500/30 bg-amber-50 dark:bg-amber-950/40 shadow-sm dark:shadow-none relative">
-                            <div className="absolute top-0 right-0 w-24 h-24 bg-amber-200/40 dark:bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
-                            <div className="absolute bottom-0 left-0 w-20 h-20 bg-orange-200/40 dark:bg-orange-500/10 rounded-full blur-2xl pointer-events-none" />
+                        <div className="rounded-2xl overflow-hidden border border-amber-200  bg-amber-50  shadow-sm  relative">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-amber-200/40  rounded-full blur-2xl pointer-events-none" />
+                            <div className="absolute bottom-0 left-0 w-20 h-20 bg-orange-200/40  rounded-full blur-2xl pointer-events-none" />
 
-                            <div className="relative flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-amber-200 dark:border-amber-500/20 bg-amber-100/60 dark:bg-amber-500/5">
-                                <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-amber-200 dark:bg-amber-500/20 border border-amber-300 dark:border-amber-500/30 flex items-center justify-center shrink-0">
-                                    <Zap className="w-3 h-3 md:w-4 md:h-4 text-amber-600 dark:text-amber-400" />
+                            <div className="relative flex items-center gap-2 px-3 py-2 md:px-5 md:py-4 border-b border-amber-200  bg-amber-100/60 ">
+                                <div className="w-6 h-6 md:w-8 md:h-8 rounded-md md:rounded-lg bg-amber-200  border border-amber-300  flex items-center justify-center shrink-0">
+                                    <Zap className="w-3 h-3 md:w-4 md:h-4 text-amber-600 " />
                                 </div>
                                 <div className="min-w-0">
-                                    <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] text-amber-600 dark:text-amber-400">Exam Insight</p>
-                                    <p className="text-[10px] md:text-xs text-amber-500/70 dark:text-amber-300/60 font-medium">What the examiner wants you to know</p>
+                                    <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] text-amber-600 ">Exam Insight</p>
+                                    <p className="text-[10px] md:text-xs text-amber-500/70  font-medium">What the examiner wants you to know</p>
                                 </div>
-                                <div className="ml-auto shrink-0 flex items-center gap-1 px-2 py-1 rounded bg-amber-100 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/30 text-[8px] md:text-[9px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest hidden sm:flex">
+                                <div className="ml-auto shrink-0 flex items-center gap-1 px-2 py-1 rounded bg-amber-100  border border-amber-200  text-[8px] md:text-[9px] font-bold text-amber-600  uppercase tracking-widest hidden sm:flex">
                                     <GraduationCap className="w-2.5 h-2.5" />
                                     Must Read
                                 </div>
@@ -364,7 +364,7 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-2 md:pt-4">
                         <button
                             onClick={handleShare}
-                            className="flex items-center justify-center gap-2 px-4 py-3.5 sm:py-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200 dark:border-zinc-700 transition-all font-bold text-sm text-zinc-700 dark:text-zinc-200 active:scale-95 touch-manipulation min-h-[48px] sm:min-h-0"
+                            className="flex items-center justify-center gap-2 px-4 py-3.5 sm:py-3 rounded-xl bg-zinc-100  hover:bg-zinc-200  border border-zinc-200  transition-all font-bold text-sm text-zinc-700  active:scale-95 touch-manipulation min-h-[48px] sm:min-h-0"
                         >
                             {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Share2 className="w-4 h-4 text-emerald-500" />}
                             {copied ? "Link Copied!" : "Share"}
@@ -380,7 +380,7 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
                         )}
                         <Link
                             href="/dak-sutra"
-                            className="flex items-center justify-center sm:justify-end gap-1.5 sm:ml-auto text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 text-sm font-semibold transition-colors py-2 touch-manipulation"
+                            className="flex items-center justify-center sm:justify-end gap-1.5 sm:ml-auto text-zinc-500  hover:text-zinc-800  text-sm font-semibold transition-colors py-2 touch-manipulation"
                         >
                             More Rules <ChevronRight className="w-4 h-4" />
                         </Link>

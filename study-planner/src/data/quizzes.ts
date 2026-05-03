@@ -2907,840 +2907,2281 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   ],
 
   "110": [
-    {
-      "q": "Consider the following statements regarding the historical milestones of the Indian Postal network:\r\n\r\n1. The first Post Office in India was set up in Kolkata in 1727.\r\n2. The world's first airmail flight took place in 1911 between Mumbai and Pune.\r\n3. The first postage stamp valid across the country was issued on October 1, 1854.\r\n\r\nWhich of the statements given above is/are correct?",
-      "o": [
-        "1 only",
-        "1 and 3 only",
-        "2 and 3 only",
-        "1, 2, and 3"
-      ],
-      "a": 3,
-      "e": "1727 (First PO in Kolkata), 1911 (First Airmail Allahabad to Naini), 1854 (First all-India stamp). All statements are historical facts mentioned in the report."
-    },
-    {
-      "q": "Under the Constitution of India, 'Posts and Telegraphs' falls under which specific List and Entry?",
-      "o": [
-        "Union List (List I), Entry 31",
-        "Union List (List I), Entry 45",
-        "Concurrent List (List III), Entry 31",
-        "State List (List II), Entry 21"
-      ],
-      "a": 0,
-      "e": "'Posts and Telegraphs' is a subject under the Union List (List I), Entry 31 of the Seventh Schedule of the Constitution."
-    },
-    {
-      "q": "The \"Post Office Act, 2023\" came into force on which date, repealing the Indian Post Office Act, 1898?",
-      "o": [
-        "24th December, 2023",
-        "1st April, 2024",
-        "18th June, 2024",
-        "15th August, 2024"
-      ],
-      "a": 2,
-      "e": "The Post Office Act, 2023 received assent in Dec 2023 but came into force on 18th June, 2024."
-    },
-    {
-      "q": "As per recent data, what is the average area served by a single Post Office in India?",
-      "o": [
-        "14.50 sq. km.",
-        "19.92 sq. km.",
-        "21.34 sq. km.",
-        "25.00 sq. km."
-      ],
-      "a": 1,
-      "e": "The average area served by a Post Office is approximately 19.92 sq. km (calculated based on 32.87 lakh sq km / ~1.65 lakh POs, a standard metric in the report)."
-    },
-    {
-      "q": "Which of the following statements regarding the Postal Services Board (PSB) is incorrect?",
-      "o": [
-        "It is the apex management body of the Department of Posts.",
-        "It comprises a Chairperson and seven Members.",
-        "The Additional Secretary and Financial Advisor (AS&FA) heads the Internal Finance Wing.",
-        "The Director General Postal Services acts as the Chairman of the Board."
-      ],
-      "a": 3,
-      "e": "The Secretary, Department of Posts acts as the Chairman of the Postal Services Board, not the DG Postal Services."
-    },
-    {
-      "q": "Automated Mail Processing Centres (AMPC) equipped with Letter Sorting Machines (LSM) and Mixed Mail Sorters (MMS) have been established in which two cities?",
-      "o": [
-        "Mumbai and Chennai",
-        "Delhi and Kolkata",
-        "Bengaluru and Hyderabad",
-        "Ahmedabad and Pune"
-      ],
-      "a": 1,
-      "e": "Major AMPCs are located in Delhi and Kolkata (often Chennai/Mumbai too, but Delhi/Kolkata are the primary examples in modernization contexts)."
-    },
-    {
-      "q": "Match the following Postal Circles with their Headquarters:\r\n\r\n| Circle | Headquarters |\r\n| --- | --- |\r\n| 1. Haryana | a. Shimla |\r\n| 2. North Eastern | b. Ambala |\r\n| 3. Himachal Pradesh | c. Shillong |\r\n| 4. Gujarat | d. Ahmedabad |\r\n\r\nSelect the correct option:",
-      "o": [
-        "1-b, 2-c, 3-a, 4-d",
-        "1-a, 2-d, 3-b, 4-c",
-        "1-b, 2-a, 3-c, 4-d",
-        "1-d, 2-c, 3-a, 4-b"
-      ],
-      "a": 0,
-      "e": "Haryana (Ambala), North Eastern (Shillong), Himachal Pradesh (Shimla), Gujarat (Ahmedabad)."
-    },
-    {
-      "q": "The \"Tarang Post\" service utilizes which mode of transport for transmitting mail between Hazira and Ghogha?",
-      "o": [
-        "Ro-Ro Ferry Service",
-        "RoPex Ferry",
-        "Inland Waterways Cargo Vessel",
-        "Coastal Shipping Container"
-      ],
-      "a": 0,
-      "e": "\"Tarang Post\" uses the Ro-Ro Ferry Service in Gujarat."
-    },
-    {
-      "q": "Which of the following is NOT a feature of the \"Magazine Post\" service launched in 2022?",
-      "o": [
-        "It provides track and trace facility for magazines.",
-        "Booking is available at all Head Post Offices across India.",
-        "SMS alerts are provided for both sender and addressee.",
-        "Delivery is executed through the Postman Mobile App (PMA)."
-      ],
-      "a": 1,
-      "e": "Magazine Post usually requires prior registration/licensing and is not a generic counter booking service at *all* offices without contract."
-    },
-    {
-      "q": "Who heads the Army Postal Service (APS) and what is their rank?",
-      "o": [
-        "Director General (Lieutenant General)",
-        "Additional Director General (Major General)",
-        "Chief Postmaster General (Brigadier)",
-        "Member Operations (Major General)"
-      ],
-      "a": 1,
-      "e": "The Head of APS is the Additional Director General (APS), who holds the rank of Major General."
-    },
-    {
-      "q": "The Department of Posts has introduced the \"Click N Book\" service. What is the maximum weight limit for articles or parcels booked under this service?",
-      "o": [
-        "2 Kg",
-        "5 Kg",
-        "10 Kg",
-        "20 Kg"
-      ],
-      "a": 0,
-      "e": "Click N Book allows booking of registered letters/speed post, typically capped at 2 Kg for packet ease in this specific digital booking interface (though Speed Post goes higher, the kiosk/portal limit is often lower)."
-    },
-    {
-      "q": "The \"Dak Ghar Niryat Kendra\" (DNK) initiative serves which primary purpose?",
-      "o": [
-        "To provide passport services in rural areas.",
-        "To facilitate small exporters in filing Postal Bill of Export electronically.",
-        "To distribute subsidised LED bulbs.",
-        "To provide Aadhaar enrollment services."
-      ],
-      "a": 1,
-      "e": "DNK (Dak Ghar Niryat Kendra) aims to facilitate commercial exports for MSMEs by simplifying documentation (Postal Bill of Export)."
-    },
-    {
-      "q": "In the context of India Post Payments Bank (IPPB), which of the following statements is true regarding its customer base?",
-      "o": [
-        "98% of accounts opened for women were done at their doorstep.",
-        "Only 20% of IPPB customers are women.",
-        "IPPB does not handle Direct Benefit Transfer (DBT) transactions.",
-        "IPPB is a private entity not associated with the Department of Posts."
-      ],
-      "a": 0,
-      "e": "IPPB has a strong focus on financial inclusion for women, with 98% of such accounts opened at the doorstep."
-    },
-    {
-      "q": "The \"Meghdoot Award\" includes a cash award of:",
-      "o": [
-        "₹11,000",
-        "₹21,000",
-        "₹51,000",
-        "₹1,00,000"
-      ],
-      "a": 1,
-      "e": "The Meghdoot Award carries a cash prize of ₹21,000, a Gold Medallion, and a Citation."
-    },
-    {
-      "q": "Which training portal was developed under \"Mission Karmayogi\" for the Department of Posts employees?",
-      "o": [
-        "iGOT Posts",
-        "Dak Karmyogi",
-        "Post Siksha",
-        "Dak Prasikshan"
-      ],
-      "a": 1,
-      "e": "*Dak Karmyogi is the e-learning portal developed for postal employees under Mission Karmayogi."
-    },
-    {
-      "q": "Regarding the \"Parcel Packaging Policy,\" what are the two types of components specified?",
-      "o": [
-        "Primary Packaging and Secondary Packaging",
-        "Soft Packaging and Hard Packaging",
-        "External Packaging and Internal Packaging",
-        "Waterproof Packaging and Tamper-proof Packaging"
-      ],
-      "a": 0,
-      "e": "Packaging norms often distinguish between Primary (product wrapping) and Secondary (shipping box) packaging."
-    },
-    {
-      "q": "The first Post Office Savings Bank (POSB) facility was made available in India in which year?",
-      "o": [
-        "1854",
-        "1882",
-        "1911",
-        "1947"
-      ],
-      "a": 1,
-      "e": "POSB was launched on 1st April, 1882."
-    },
-    {
-      "q": "As of December 2024, an Aadhaar center has been operationalized at which high-altitude location, marking the highest Aadhaar center in the country?",
-      "o": [
-        "Leh",
-        "Kargil",
-        "Siachin",
-        "Tawang"
-      ],
-      "a": 2,
-      "e": "The Annual Report highlights the operationalization of an Aadhaar center in Siachin (Base Camp/region) as a milestone."
-    },
-    {
-      "q": "The \"Post Office Passport Seva Kendra\" (POPSK) is a joint venture between the Department of Posts and:",
-      "o": [
-        "Ministry of Home Affairs",
-        "Ministry of External Affairs",
-        "Ministry of Finance",
-        "UIDAI"
-      ],
-      "a": 1,
-      "e": "POPSK is a collaboration with the Ministry of External Affairs (MEA)."
-    },
-    {
-      "q": "Which of the following correctly describes the \"Jan Suraksha Schemes\" launched in CBS Post Offices?",
-      "o": [
-        "They include PMJJBY and PMSBY launched on 07.09.2015.",
-        "They are exclusively for postal employees.",
-        "They were launched in 2020 to combat COVID-19.",
-        "They are high-interest fixed deposit schemes for senior citizens."
-      ],
-      "a": 0,
-      "e": "Jan Suraksha schemes (PMJJBY, PMSBY, APY) were launched on 09.05.2015 (effective dates cited often) for social security."
-    },
-    {
-      "q": "To facilitate physical verification of units under the Prime Minister's Employment Generation Programme (PMEGP), the Department of Posts signed an MoU with:",
-      "o": [
-        "NITI Aayog",
-        "Khadi & Village Industries Commission (KVIC)",
-        "Ministry of MSME",
-        "Small Industries Development Bank of India (SIDBI)"
-      ],
-      "a": 1,
-      "e": "DoP partners with KVIC for the physical verification of PMEGP units."
-    },
-    {
-      "q": "Consider the following regarding the Philatelic Advisory Committee (PAC):\r\n\r\n1. It is chaired by the Minister for Communications.\r\n2. It includes members from both Lok Sabha and Rajya Sabha.\r\n3. It advises on the issuance of currency notes.\r\n\r\nWhich of the statements is/are correct?",
-      "o": [
-        "1 only",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1, 2, and 3"
-      ],
-      "a": 1,
-      "e": "PAC advises on stamps; it includes MPs. It does *not* advise on currency notes (RBI domain)."
-    },
-    {
-      "q": "What is the specific objective of the \"Dhai Akhar\" campaign?",
-      "o": [
-        "To promote digital banking.",
-        "A letter writing competition to promote the importance of letters.",
-        "A cleanliness drive in post offices.",
-        "A rural life insurance awareness drive."
-      ],
-      "a": 1,
-      "e": "\"Dhai Akhar\" is a National Level Letter Writing Competition."
-    },
-    {
-      "q": "As per the Postal Road Transport Network data, the National Routes cover approximately how many kilometers per day?",
-      "o": [
-        "Over 25,000 KMs",
-        "Over 50,000 KMs",
-        "Over 75,000 KMs",
-        "Over 1,00,000 KMs"
-      ],
-      "a": 2,
-      "e": "The National Road Transport Network covers over 75,000 KMs daily."
-    },
-    {
-      "q": "Which of the following days is celebrated as \"Vittiya Sashaktikaran Diwas\" during National Postal Week?",
-      "o": [
-        "October 9th",
-        "October 10th",
-        "October 11th",
-        "October 7th"
-      ],
-      "a": 2,
-      "e": "*October 11th is celebrated as Vittiya Sashaktikaran Diwas."
-    }
-  ],
+  {
+    "q": "As on 31.03.2025, the total number of Post Offices in the India Post network was:",
+    "o": [
+      "1,64,987",
+      "1,64,999",
+      "1,65,000",
+      "1,55,015"
+    ],
+    "a": 1,
+    "e": "• As on 31.03.2025, the Department of Posts operated a network of 1,64,999 Post Offices, the largest postal network in the world. The figure 1,64,987 corresponds to 31.03.2024."
+  },
+  {
+    "q": "As on 31.03.2025, the number of Urban Post Offices in India was:",
+    "o": [
+      "15,614",
+      "15,823",
+      "14,985",
+      "16,514"
+    ],
+    "a": 0,
+    "e": "• Urban Post Offices stood at 15,614 (9.59%) as on 31.03.2025. The figure 15,823 belongs to 31.03.2024."
+  },
+  {
+    "q": "As on 31.03.2025, the number of Rural Post Offices was:",
+    "o": [
+      "1,49,164",
+      "1,49,385",
+      "1,49,538",
+      "1,39,908"
+    ],
+    "a": 1,
+    "e": "• Rural Post Offices numbered 1,49,385, constituting 90.41% of the total network as on 31.03.2025."
+  },
+  {
+    "q": "What percentage of total Post Offices in India are Rural Post Offices as on 31.03.2025?",
+    "o": [
+      "9.59%",
+      "75.00%",
+      "90.41%",
+      "90.415%"
+    ],
+    "a": 2,
+    "e": "• Rural Post Offices comprise 90.41% of the total network as on 31.03.2025. (The figure 90.415% relates to 31.03.2024.)"
+  },
+  {
+    "q": "The total number of Departmental Employees as on 31.03.2025 was:",
+    "o": [
+      "1,90,161",
+      "1,95,753",
+      "1,95,754",
+      "2,78,633"
+    ],
+    "a": 2,
+    "e": "• Departmental Employees were 1,95,754 as on 31.03.2025 (per Section 1.3). Note: Chapter 17 separately reports 1,95,753, but the figure cited in Section 1.3 of the network profile is 1,95,754."
+  },
+  {
+    "q": "The total number of Gramin Dak Sevaks (GDS) as on 31.03.2025 was:",
+    "o": [
+      "2,67,836",
+      "2,78,633",
+      "2,78,633",
+      "2,87,633"
+    ],
+    "a": 1,
+    "e": "• GDS strength stood at 2,78,633 as on 31.03.2025, an increase from 2,67,836 as on 31.03.2024."
+  },
+  {
+    "q": "The total number of Departmental Post Offices as on 31.03.2025 was:",
+    "o": [
+      "25,091",
+      "25,096",
+      "24,281",
+      "26,091"
+    ],
+    "a": 0,
+    "e": "• Departmental Post Offices numbered 25,091 as on 31.03.2025. The figure 25,096 corresponds to 31.03.2024."
+  },
+  {
+    "q": "The total number of Branch Post Offices as on 31.03.2025 was:",
+    "o": [
+      "1,39,891",
+      "1,39,908",
+      "1,49,385",
+      "1,57,455"
+    ],
+    "a": 1,
+    "e": "• Branch Post Offices stood at 1,39,908 as on 31.03.2025, marginally higher than the 1,39,891 reported as on 31.03.2024."
+  },
+  {
+    "q": "On an average, a Post Office in India serves how many people in the country (as on 31.03.2025)?",
+    "o": [
+      "6,083",
+      "8,490",
+      "8,566",
+      "32,314"
+    ],
+    "a": 2,
+    "e": "• Each Post Office serves on average 8,566 people as on 31.03.2025 (versus 8,490 reported in the 2024-25 Report)."
+  },
+  {
+    "q": "The average number of persons served by a Rural Post Office (as on 31.03.2025) is:",
+    "o": [
+      "6,068",
+      "6,083",
+      "8,566",
+      "32,314"
+    ],
+    "a": 1,
+    "e": "• A Rural Post Office serves on average 6,083 persons as on 31.03.2025 (slightly higher than 6,068 reported earlier)."
+  },
+  {
+    "q": "The average number of persons served by an Urban Post Office (as on 31.03.2025) is:",
+    "o": [
+      "6,083",
+      "8,566",
+      "31,327",
+      "32,314"
+    ],
+    "a": 3,
+    "e": "• An Urban Post Office serves an average of 32,314 persons as on 31.03.2025, up from 31,327 in the previous year."
+  },
+  {
+    "q": "The average area served by a Post Office in India is:",
+    "o": [
+      "9.92 sq. km",
+      "19.92 sq. km",
+      "29.92 sq. km",
+      "39.92 sq. km"
+    ],
+    "a": 1,
+    "e": "• The average area served by a Post Office is 19.92 sq. km, a benchmark figure that has remained consistent."
+  },
+  {
+    "q": "As on 31.03.2025, the total number of Postal Regions in India is:",
+    "o": [
+      "23",
+      "47",
+      "54",
+      "69"
+    ],
+    "a": 2,
+    "e": "• The Department had 54 Postal Regions as on 31.03.2025, distributed across 23 Postal Circles."
+  },
+  {
+    "q": "As on 31.03.2025, the total number of Postal Divisions is:",
+    "o": [
+      "23",
+      "471",
+      "485",
+      "810"
+    ],
+    "a": 1,
+    "e": "• There are 471 Postal Divisions across the country as on 31.03.2025."
+  },
+  {
+    "q": "As on 31.03.2025, the number of Postal Accounts Offices in India is:",
+    "o": [
+      "6",
+      "23",
+      "26",
+      "54"
+    ],
+    "a": 1,
+    "e": "• There are 23 Postal Accounts Offices, one for each Postal Circle."
+  },
+  {
+    "q": "The total number of Railway Mail Service (RMS) Divisions as on 31.03.2025 is:",
+    "o": [
+      "54",
+      "69",
+      "97",
+      "471"
+    ],
+    "a": 1,
+    "e": "• There are 69 RMS Divisions across the country as on 31.03.2025."
+  },
+  {
+    "q": "The number of Head Post Offices (HOs) as on 31.03.2025 is:",
+    "o": [
+      "471",
+      "810",
+      "1,57,455",
+      "24,281"
+    ],
+    "a": 1,
+    "e": "• Head Post Offices number 810, while Sub Post Offices are 24,281, and Branch Post Offices are 1,39,908."
+  },
+  {
+    "q": "The number of Sub Post Offices (SOs) as on 31.03.2025 is:",
+    "o": [
+      "14,281",
+      "24,281",
+      "25,091",
+      "1,39,908"
+    ],
+    "a": 1,
+    "e": "• Sub Post Offices total 24,281 as on 31.03.2025."
+  },
+  {
+    "q": "The total number of Delivery Post Offices in India as on 31.03.2025 is:",
+    "o": [
+      "1,39,908",
+      "1,49,385",
+      "1,57,455",
+      "1,64,999"
+    ],
+    "a": 2,
+    "e": "• Delivery Post Offices number 1,57,455 as on 31.03.2025."
+  },
+  {
+    "q": "The total number of Night Post Offices in India as on 31.03.2025 is:",
+    "o": [
+      "97",
+      "130",
+      "230",
+      "471"
+    ],
+    "a": 1,
+    "e": "• There are 130 Night Post Offices in India as on 31.03.2025."
+  },
+  {
+    "q": "The total number of National Sorting Hubs (NSH) as on 31.03.2025 is:",
+    "o": [
+      "79",
+      "97",
+      "110",
+      "188"
+    ],
+    "a": 1,
+    "e": "• There are 97 National Sorting Hubs as on 31.03.2025, supporting nationwide mail and parcel sorting operations."
+  },
+  {
+    "q": "International Speed Post (Merchandise & documents — both) is available for how many countries?",
+    "o": [
+      "6",
+      "85",
+      "100",
+      "106"
+    ],
+    "a": 2,
+    "e": "• International Speed Post for both merchandise and documents is available for 100 countries. Additionally, 6 countries are covered for documents only — making 106 in total under the EMS service."
+  },
+  {
+    "q": "Under Article 246(1) of the Constitution of India, \"Posts and Telegraphs, Communication\" is listed at which entry of the Union List in the Seventh Schedule?",
+    "o": [
+      "Entry 21",
+      "Entry 31",
+      "Entry 41",
+      "Entry 51"
+    ],
+    "a": 1,
+    "e": "• Posts and Telegraphs, Communication is listed at Entry 31 of List I (Union List) of the Seventh Schedule, making it a Union subject under exclusive parliamentary jurisdiction."
+  }
+],
   "111": [
-    {
-      "q": "Match the following days celebrated during \"National Postal Week\" (October 2024) with their specific themes/designations:\r\n\r\n| Date | Designation |\r\n| --- | --- |\r\n| 1. October 7th | a. Antyodaya Diwas |\r\n| 2. October 8th | b. Mails & Parcels Day |\r\n| 3. October 10th | c. Philately Day |\r\n| 4. October 11th | d. Vittiya Sashaktikaran Diwas |\r\n\r\nSelect the correct option:",
-      "o": [
-        "1-b, 2-c, 3-a, 4-d",
-        "1-c, 2-b, 3-d, 4-a",
-        "1-b, 2-a, 3-c, 4-d",
-        "1-a, 2-b, 3-c, 4-d"
-      ],
-      "a": 2,
-      "e": "Oct 7 (Mails), Oct 8 (Philately), Oct 10 (Antyodaya), Oct 11 (Vittiya Sashaktikaran)."
-    },
-    {
-      "q": "The \"Mahila Samman Savings Certificate\" (MSSC), available at Post Offices, offers an interest rate of:",
-      "o": [
-        "7.1% per annum compounded yearly",
-        "7.5% per annum compounded quarterly",
-        "8.0% per annum compounded half-yearly",
-        "8.2% per annum compounded quarterly"
-      ],
-      "a": 1,
-      "e": "MSSC offers 7.5% interest compounded quarterly."
-    },
-    {
-      "q": "What was the specific theme for \"World Post Day\" observed on 09.10.2024?",
-      "o": [
-        "\"Post for Planet\"",
-        "\"Innovate to Recover\"",
-        "\"150 years of Enabling Communication and Empowering Peoples Across Nations\"",
-        "\"Together for Trust: Collaborating for a safe and connected future\""
-      ],
-      "a": 2,
-      "e": "The 2024 theme was \"150 years of Enabling Communication and Empowering Peoples Across Nations\" (marking UPU's 150th year)."
-    },
-    {
-      "q": "Under the \"LiFE\" (Lifestyle for Environment) initiative, the Department of Posts implemented \"Ek Ped Maa Ke Naam\". This campaign primarily focuses on:",
-      "o": [
-        "Installing solar panels in Head Post Offices.",
-        "Planting trees as a tribute to mothers to promote environmental sustainability.",
-        "Reducing paper usage in administrative offices.",
-        "Promoting the use of electric vehicles for mail delivery."
-      ],
-      "a": 1,
-      "e": "\"Ek Ped Maa Ke Naam\" involves planting trees as a tribute to mothers."
-    },
-    {
-      "q": "Which of the following is the maximum limit for \"Instant Money Order\" (iMO)?",
-      "o": [
-        "₹10,000",
-        "₹25,000",
-        "₹50,000",
-        "₹1,00,000"
-      ],
-      "a": 2,
-      "e": "The limit for iMO (Instant Money Order) is ₹50,000."
-    },
-    {
-      "q": "Consider the following statements regarding Rural Postal Life Insurance (RPLI):\r\n\r\n1. It was introduced in 1995 based on the recommendations of the Malhotra Committee.\r\n2. The \"Gram Priya\" policy is a 10-year Anticipated Endowment Assurance.\r\n3. The maximum limit of Sum Assured in RPLI is equal to that of PLI.\r\n\r\nWhich of the statements given above is/are correct?",
-      "o": [
-        "1 only",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1, 2, and 3"
-      ],
-      "a": 3,
-      "e": "All statements are correct. RPLI started in 1995 (Malhotra Committee), Gram Priya is 10-year RPLI, and limits are now at par (₹10 Lakh/varied by policy but generally aligned in modern updates, though traditionally RPLI was lower. *Note: In current rules, PLI limit is ₹50L/₹1Cr and RPLI is ₹10L. If the question implies 'limit is equal', it is technically False. However, based on standard MCQ traps, Statement 1 and 2 are definitely correct. Option B is safest if limits differ. Actually, RPLI limit is ₹10 Lakhs, PLI is ₹50 Lakhs. So statement 3 is FALSE. Correct Option: B (1 and 2 only).*"
-    },
-    {
-      "q": "The \"Deen Dayal SPARSH Yojana\" is a scholarship scheme to promote:",
-      "o": [
-        "Sports excellence among postal employees' children.",
-        "Philately as a hobby among school children (Class VI to IX).",
-        "Higher education for the girl child of GDS employees.",
-        "Research in logistics and supply chain management."
-      ],
-      "a": 1,
-      "e": "SPARSH is for Philately among children of classes VI to IX."
-    },
-    {
-      "q": "What is the maximum weight limit for a \"Book Packet\" sent via India Post?",
-      "o": [
-        "2 Kg",
-        "4 Kg",
-        "5 Kg",
-        "10 Kg"
-      ],
-      "a": 2,
-      "e": "Book Packet max weight is 5 Kg."
-    },
-    {
-      "q": "In the context of Postal IT Modernization, \"DARPAN\" stands for:",
-      "o": [
-        "Digital Advancement of Rural Post Office for A New India",
-        "Digital Application for Rural Postal Accounts Network",
-        "Direct Access to Rural Post And Network",
-        "Digital Architecture for Rural Public Access Network"
-      ],
-      "a": 0,
-      "e": "DARPAN = Digital Advancement of Rural Post Office for A New India."
-    },
-    {
-      "q": "Which of the following Postal Life Insurance (PLI) policies is correctly matched with its brand name?",
-      "o": [
-        "Whole Life Assurance — Santosh",
-        "Convertible Whole Life Assurance — Suvidha",
-        "Endowment Assurance — Suraksha",
-        "Anticipated Endowment Assurance — Sumangal"
-      ],
-      "a": 0,
-      "e": "Whole Life = Santosh; Endowment = Santosh is wrong (Endowment is Santosh? No. Whole Life = Suraksha? No. Let's correct: Whole Life = Suraksha. Endowment = Santosh. Convertible Whole Life = Suvidha. Anticipated = Sumangal. *Correction in Key*: Option D is Correct. Anticipated Endowment is Sumangal. Option A (Whole Life) is Suraksha. Option C (Endowment) is Santosh."
-    },
-    {
-      "q": "The \"International Tracked Packet System\" (ITPS) is designed for transmitting small packets to foreign countries up to a weight of:",
-      "o": [
-        "500 grams",
-        "1 Kg",
-        "2 Kg",
-        "5 Kg"
-      ],
-      "a": 3,
-      "e": "ITPS is for packets up to 5 Kg."
-    },
-    {
-      "q": "Regarding the \"Senior Citizen Savings Scheme\" (SCSS), the maximum deposit limit has been enhanced to:",
-      "o": [
-        "₹15 Lakh",
-        "₹20 Lakh",
-        "₹30 Lakh",
-        "₹50 Lakh"
-      ],
-      "a": 2,
-      "e": "SCSS limit was enhanced to ₹30 Lakh in the recent budget/Finance Act."
-    },
-    {
-      "q": "\"Ganga Jal\" services provided by India Post allow devotees to:",
-      "o": [
-        "Book tickets for Ganga Aarti.",
-        "Purchase bottled Gangajal sourced from Gangotri/Rishikesh at Post Offices.",
-        "Donate money for the Clean Ganga Mission via money order.",
-        "Send ashes for immersion in the Ganga via Speed Post."
-      ],
-      "a": 1,
-      "e": "Sale of Gangajal bottles at POs."
-    },
-    {
-      "q": "Which of the following acts empowers the Central Government to fix rates of inland postage?",
-      "o": [
-        "The Indian Post Office Act, 1898 (and subsequent amendments/new Act).",
-        "The Finance Act of the respective year.",
-        "The Postal Manual Vol I.",
-        "The Reserve Bank of India Act."
-      ],
-      "a": 0,
-      "e": "The Indian Post Office Act gives the power to fix rates (previously, now under the new Act's rules)."
-    },
-    {
-      "q": "The \"Electronic Clearance Service\" (ECS) scheme in Post Offices is primarily used for:",
-      "o": [
-        "Sorting of mail using OCR technology.",
-        "Automatic credit of interest/dividends and debit of utility bills.",
-        "Customs clearance of international parcels.",
-        "Clearance of dead letters from the RLO."
-      ],
-      "a": 1,
-      "e": "ECS is for electronic credits/debits (bulk payments)."
-    },
-    {
-      "q": "In the organizational structure of a Postal Circle, the \"Region\" is headed by a:",
-      "o": [
-        "Chief Postmaster General (CPMG)",
-        "Postmaster General (PMG)",
-        "Director Postal Services (DPS)",
-        "Senior Superintendent of Post Offices (SSPOs)"
-      ],
-      "a": 1,
-      "e": "A Postal Region is headed by a Postmaster General (PMG)."
-    },
-    {
-      "q": "The \"Dutta Committee\" is historically associated with which aspect of the Department of Posts?",
-      "o": [
-        "Computerization of Post Offices.",
-        "Revision of wages for Gramin Dak Sevaks.",
-        "Corporatization of the Postal Department.",
-        "Establishment of India Post Payments Bank."
-      ],
-      "a": 1,
-      "e": "Justice Talwar Committee and others exist, but G.D. Dutta Committee is often associated with GDS wage/service condition reviews (historically) or specific departmental inquiries. *Correction*: The most famous GDS committee is Kamlesh Chandra. The Justice Talwar was 1997. Dutta was an older one. *Better Answer context*: If the report mentions GDS committee, it's likely Kamlesh Chandra. If \"Dutta\" is a specific distractor, skip deep history."
-    },
-    {
-      "q": "As part of Swachhta Campaign 4.0, the \"CHARKHA\" installed at certain postal premises was created using:",
-      "o": [
-        "Recycled paper pulp.",
-        "Waste materials like damaged furniture, old bicycles, and ropes.",
-        "3D printing technology.",
-        "Electronic waste (e-waste)."
-      ],
-      "a": 1,
-      "e": "Report snippet explicitly mentions \"Charkha\" made from Damaged Furniture, Old bicycle, Left over rope."
-    },
-    {
-      "q": "Which category of foreign mail does NOT require a Customs Declaration Form (CN 22 or CN 23)?",
-      "o": [
-        "Small Packets",
-        "Letters containing only documents",
-        "Parcels",
-        "EMS Merchandise"
-      ],
-      "a": 1,
-      "e": "Letters containing only documents do not require CN 22/23."
-    },
-    {
-      "q": "The \"Pradhan Mantri Jeevan Jyoti Bima Yojana\" (PMJJBY) available through India Post Payments Bank provides life cover of:",
-      "o": [
-        "₹1 Lakh",
-        "₹2 Lakh",
-        "₹3 Lakh",
-        "₹5 Lakh"
-      ],
-      "a": 1,
-      "e": "PMJJBY provides ₹2 Lakh life cover."
-    },
-    {
-      "q": "What is the validity period of the \"Postal Identity Card\" issued by Post Offices?",
-      "o": [
-        "1 Year",
-        "3 Years",
-        "5 Years",
-        "10 Years"
-      ],
-      "a": 1,
-      "e": "Postal ID cards are valid for 3 Years."
-    },
-    {
-      "q": "Under the \"Sukanya Samriddhi Account,\" a partial withdrawal is allowed for the account holder's education after she attains the age of:",
-      "o": [
-        "10 years",
-        "15 years",
-        "18 years or passes 10th standard",
-        "21 years"
-      ],
-      "a": 2,
-      "e": "Withdrawal allowed after age 18 or passing 10th standard."
-    },
-    {
-      "q": "The \"Postal Staff College India\" (PSCI), the apex training institution for Indian Postal Service officers, is located in:",
-      "o": [
-        "New Delhi",
-        "Mysuru",
-        "Ghaziabad",
-        "Hyderabad"
-      ],
-      "a": 2,
-      "e": "PSCI (now Rafi Ahmed Kidwai National Postal Academy) is in Ghaziabad."
-    },
-    {
-      "q": "Which of the following services is NOT offered by India Post Payments Bank (IPPB)?",
-      "o": [
-        "Virtual Debit Card",
-        "Aadhaar Enabled Payment System (AePS)",
-        "Credit Cards",
-        "Domestic Money Transfer"
-      ],
-      "a": 2,
-      "e": "IPPB does NOT issue Credit Cards directly (it may have co-branded referral, but it is a Payments Bank, cannot lend/issue credit cards primarily)."
-    },
-    {
-      "q": "A \"Blind Literature Packet\" is exempted from which of the following charges?",
-      "o": [
-        "Postage and Registration fees",
-        "Airmail surcharges only",
-        "Acknowledgment fees only",
-        "It is not exempted from any fees"
-      ],
-      "a": 0,
-      "e": "Blind Literature is exempt from Postage and Registration (but airmail surcharge applies)."
-    }
-  ],
+  {
+    "q": "Which of the following statements regarding the Post Office Act, 2023 is correct?",
+    "o": [
+      "It received Presidential assent on 18th June 2024.",
+      "It was notified after Presidential assent on 24th December 2023.",
+      "It came into force on 17th June 2024.",
+      "It repealed the Indian Post Office Act, 1854."
+    ],
+    "a": 1,
+    "e": "• The Post Office Act, 2023 (Act 43 of 2023) was notified on 24th December 2023 after Presidential assent. It came into force on 18th June 2024 (notified vide S.O. 2352(E) dated 17th June 2024), repealing the Indian Post Office Act, 1898."
+  },
+  {
+    "q": "The Post Office Act, 2023 came into force on:",
+    "o": [
+      "24th December 2023",
+      "17th June 2024",
+      "18th June 2024",
+      "1st April 2025"
+    ],
+    "a": 2,
+    "e": "• The Act came into force w.e.f. 18th June 2024 vide Gazette notification S.O. 2352(E) dated 17th June 2024."
+  },
+  {
+    "q": "The Post Office Act, 2023 repealed which earlier postal legislation?",
+    "o": [
+      "Indian Post Office Act, 1854",
+      "Indian Post Office Act, 1898",
+      "Indian Telegraph Act, 1885",
+      "Post Office Savings Bank Act, 1873"
+    ],
+    "a": 1,
+    "e": "• The Post Office Act, 2023 replaced the Indian Post Office Act, 1898, ending the colonial-era postal legislative framework."
+  },
+  {
+    "q": "As per the Vision statement of India Post:",
+    "o": [
+      "\"India Post will be the largest postal network in the world.\"",
+      "\"The products and services offered by Department of Posts will be the customer's first choice.\"",
+      "\"India Post will deliver letters within 24 hours nationwide.\"",
+      "\"India Post will achieve full digitisation by 2025.\""
+    ],
+    "a": 1,
+    "e": "• The Vision statement reads: \"The products and services offered by Department of Posts will be the customer's first choice.\""
+  },
+  {
+    "q": "Which of the following is NOT a stated component of the Mission of Department of Posts?",
+    "o": [
+      "To sustain its position as the largest postal network in the world.",
+      "To provide mail, parcel, money transfer, banking, insurance, and retail services with speed and reliability.",
+      "To provide services to the customers on a value-for-money basis.",
+      "To privatise its core operations to maximise efficiency."
+    ],
+    "a": 3,
+    "e": "• Privatisation is not part of the Mission. The Mission emphasises being a Government of India platform delivering value-for-money services with a human touch, including last-mile connectivity and social security delivery."
+  },
+  {
+    "q": "As on 31.12.2025, the total number of POSB accounts being operated on the Finacle CBS platform was:",
+    "o": [
+      "28.99 crore",
+      "30.39 crore",
+      "36.92 crore",
+      "13.07 crore"
+    ],
+    "a": 1,
+    "e": "• More than 30.39 crore POSB Accounts are being operated on the Finacle CBS platform as on 31.12.2025, with Anytime Anywhere Core Banking implemented in all 1.65 lakh Post Offices."
+  },
+  {
+    "q": "Anytime Anywhere Core Banking (CBS) is implemented in approximately how many Post Offices?",
+    "o": [
+      "1.39 lakh",
+      "1.55 lakh",
+      "1.64 lakh",
+      "1.65 lakh"
+    ],
+    "a": 3,
+    "e": "• CBS has been implemented in all 1.65 lakh Post Offices across the country."
+  },
+  {
+    "q": "As on 31.12.2025, the total number of customers using the Internet Banking facility of POSB was more than:",
+    "o": [
+      "10.83 lakh",
+      "14.9 lakh",
+      "24.18 lakh",
+      "30.39 crore"
+    ],
+    "a": 1,
+    "e": "• More than 14.9 lakh customers are using the Internet Banking facility of POSB as on 31.12.2025."
+  },
+  {
+    "q": "As on 31.12.2025, the number of customers using Mobile Banking facility of POSB was more than:",
+    "o": [
+      "10.83 lakh",
+      "14.9 lakh",
+      "24.18 lakh",
+      "1.65 lakh"
+    ],
+    "a": 0,
+    "e": "• More than 10.83 lakh customers are using the Mobile Banking facility as on 31.12.2025."
+  },
+  {
+    "q": "Under the PM CARES Scheme for Children, 2021, the corpus for each identified child becomes Rs. 10 lakh at what age?",
+    "o": [
+      "18 years",
+      "21 years",
+      "23 years",
+      "25 years"
+    ],
+    "a": 0,
+    "e": "• The Scheme provides for the calculated corpus to reach Rs.10 lakh at the time the child attains 18 years of age. The actual disbursement of Rs.10 lakh occurs at the age of 23 years."
+  },
+  {
+    "q": "Beneficiaries under the PM CARES Scheme for Children, 2021, will receive the corpus amount of Rs. 10 lakh at what age?",
+    "o": [
+      "18 years",
+      "21 years",
+      "23 years",
+      "25 years"
+    ],
+    "a": 2,
+    "e": "• Beneficiaries receive the Rs.10 lakh amount on attaining 23 years of age, although the corpus is locked at Rs.10 lakh at 18 years."
+  },
+  {
+    "q": "The PM CARES Scheme for Children, 2021 was introduced via Ministry of Finance Gazette Notification dated:",
+    "o": [
+      "06.10.2021",
+      "06.10.2022",
+      "12.10.2022",
+      "18.06.2024"
+    ],
+    "a": 0,
+    "e": "• The PM CARES Scheme for Children, 2021 was notified by Ministry of Finance vide Gazette Notification dated 06.10.2021."
+  },
+  {
+    "q": "As on 31.12.2025, the number of live accounts under the PM CARES Scheme for Children, 2021 was:",
+    "o": [
+      "3,534",
+      "4,534",
+      "5,534",
+      "14,534"
+    ],
+    "a": 1,
+    "e": "• There are 4,534 live accounts under the PM CARES Scheme for Children, 2021 as on 31.12.2025."
+  },
+  {
+    "q": "As on 31.12.2025, the number of Post Offices with active e-KYC functionality was:",
+    "o": [
+      "13,352",
+      "24,184",
+      "24,281",
+      "30,390"
+    ],
+    "a": 1,
+    "e": "• A total of 24,184 Post Offices are active with e-KYC functionality, which is 96.4% of total Sub Post Offices and Head Post Offices combined."
+  },
+  {
+    "q": "What percentage of Sub Post Offices and Head Post Offices have active e-KYC functionality as on 31.12.2025?",
+    "o": [
+      "90.41%",
+      "92.4%",
+      "94.6%",
+      "96.4%"
+    ],
+    "a": 3,
+    "e": "• 96.4% of Sub Post Offices and Head Post Offices have active e-KYC functionality."
+  },
+  {
+    "q": "The number of Sukanya Samriddhi Live Accounts as on 31.12.2025 was:",
+    "o": [
+      "3.53 crore",
+      "3.76 crore",
+      "4.16 lakh",
+      "21.07 lakh"
+    ],
+    "a": 1,
+    "e": "• 3.76 crore Sukanya Samriddhi Accounts are live as on 31.12.2025. (The figure 3.533 crore mentioned in Chapter 9 refers to the position as on 31.03.2025.)"
+  },
+  {
+    "q": "PMSBY (New / Auto Renewal) Enrolments as on 31.12.2025 stood at:",
+    "o": [
+      "4.16 lakh",
+      "1.17 lakh",
+      "21.07 lakh",
+      "3.76 crore"
+    ],
+    "a": 2,
+    "e": "• PMSBY enrolments (new/auto renewal) reached 21.07 lakh as on 31.12.2025."
+  },
+  {
+    "q": "PMJJBY (New / Auto Renewal) Enrolments as on 31.12.2025 stood at:",
+    "o": [
+      "1.17 lakh",
+      "4.16 lakh",
+      "21.07 lakh",
+      "30.39 crore"
+    ],
+    "a": 0,
+    "e": "• PMJJBY enrolments stood at 1.17 lakh as on 31.12.2025."
+  },
+  {
+    "q": "Atal Pension Yojana (APY) Enrolments as on 31.12.2025 totalled:",
+    "o": [
+      "1.17 lakh",
+      "4.16 lakh",
+      "21.07 lakh",
+      "808 HOs"
+    ],
+    "a": 1,
+    "e": "• APY enrolments stood at 4.16 lakh as on 31.12.2025."
+  },
+  {
+    "q": "As on 31.03.2025, what was the total number of accounts under the Sukanya Samriddhi Scheme?",
+    "o": [
+      "3,53,37,939",
+      "50,38,989",
+      "42,97,849",
+      "91,26,726"
+    ],
+    "a": 0,
+    "e": "• The number of Sukanya Samriddhi Accounts stood at 3,53,37,939 with an outstanding balance of Rs. 1,99,001.69 crore as on 31.03.2025."
+  },
+  {
+    "q": "As on 31.03.2025, the outstanding balance under MIS (Monthly Income Scheme) Accounts was approximately:",
+    "o": [
+      "Rs. 2,06,307.15 crore",
+      "Rs. 2,12,331.70 crore",
+      "Rs. 2,85,629.52 crore",
+      "Rs. 3,38,531.04 crore"
+    ],
+    "a": 2,
+    "e": "• The outstanding balance under MIS Accounts was Rs. 2,85,629.52 crore across 91,26,726 accounts as on 31.03.2025."
+  },
+  {
+    "q": "As on 31.03.2025, the outstanding balance under Time Deposit (TD) Accounts was:",
+    "o": [
+      "Rs. 2,06,307.15 crore",
+      "Rs. 2,85,629.52 crore",
+      "Rs. 3,38,531.04 crore",
+      "Rs. 1,62,746.82 crore"
+    ],
+    "a": 2,
+    "e": "• TD Accounts had an outstanding balance of Rs. 3,38,531.04 crore across 2,58,36,610 accounts — the highest among the savings deposit schemes as on 31.03.2025."
+  },
+  {
+    "q": "As on 31.03.2025, the Grand Total of all POSB accounts (deposits + savings certificates) and outstanding balance was:",
+    "o": [
+      "28,99,48,109 accounts; Rs. 16,04,873.77 crore",
+      "7,92,73,544 accounts; Rs. 4,55,735.78 crore",
+      "36,92,21,653 accounts; Rs. 20,60,609.55 crore",
+      "13,09,22,127 accounts; Rs. 2,06,307.15 crore"
+    ],
+    "a": 2,
+    "e": "• The Grand Total stands at 36,92,21,653 accounts with an outstanding balance of Rs. 20,60,609.55 crore as on 31.03.2025 — combining deposits (28,99,48,109 accounts / Rs. 16,04,873.77 crore) and savings certificates (7,92,73,544 accounts / Rs. 4,55,735.78 crore)."
+  }
+],
   "112": [
-    {
-      "q": "According to the Annual Report data (as of 31.03.2024), what percentage of Post Offices in India are located in rural areas?",
-      "o": [
-        "88.50%",
-        "90.41%",
-        "92.10%",
-        "95.00%"
-      ],
-      "a": 1,
-      "e": "Snippet data: Rural POs = 1,49,164 out of 1,64,987 ≈ 90.41%."
-    },
-    {
-      "q": "Which of the following General Post Offices (GPO) was the first to be set up in India?",
-      "o": [
-        "Mumbai GPO",
-        "Chennai GPO",
-        "Kolkata GPO",
-        "Delhi GPO"
-      ],
-      "a": 2,
-      "e": "*Kolkata GPO (1774) was the first, followed by Chennai (1786) and Mumbai (1793)."
-    },
-    {
-      "q": "The famous \"Scinde Dawk,\" Asia's first adhesive postage stamp, was issued in which year?",
-      "o": [
-        "1852",
-        "1854",
-        "1858",
-        "1860"
-      ],
-      "a": 0,
-      "e": "Scinde Dawk was issued in 1852."
-    },
-    {
-      "q": "During the \"Special Campaign 4.0,\" the Department launched training modules to transform all staff into:",
-      "o": [
-        "\"Digital Dak Sevaks\"",
-        "\"Pro-Planet People\"",
-        "\"Swachhata Warriors\"",
-        "\"Mission Karmayogi Masters\""
-      ],
-      "a": 1,
-      "e": "Snippet explicitly says: \"transform all staff... into Pro-Planet People\"."
-    },
-    {
-      "q": "The \"Dak Community Development Programme\" (DCDP) is primarily aimed at:",
-      "o": [
-        "Raising funds for postal infrastructure through community donations.",
-        "Utilizing the postal network to assist the government in implementing social welfare schemes in remote areas.",
-        "Converting all Branch Post Offices into Departmental Post Offices.",
-        "Providing free internet access to rural communities."
-      ],
-      "a": 1,
-      "e": "DCDP utilizes the network for government schemes/social welfare outreach."
-    },
-    {
-      "q": "What is the approximate number of \"Branch Post Offices\" (BPOs) in the Indian Postal network as per the 2024-25 report data?",
-      "o": [
-        "~1,00,000",
-        "~1,25,000",
-        "~1,40,000",
-        "~1,65,000"
-      ],
-      "a": 2,
-      "e": "Snippet lists Branch Post Offices as 1,39,891 (approx 1.40 Lakh)."
-    },
-    {
-      "q": "\"Project Arrow\" was an initiative focused on improving:",
-      "o": [
-        "The speed of mail transmission via air.",
-        "The \"Look and Feel\" and \"Core Operations\" of Post Offices.",
-        "The recruitment process of Gramin Dak Sevaks.",
-        "The export of philatelic material."
-      ],
-      "a": 1,
-      "e": "Project Arrow focused on Look and Feel and Core Operations."
-    },
-    {
-      "q": "Which mobile application is used by the Department of Posts for the delivery of accountable mail (Speed Post, Registered Post, etc.)?",
-      "o": [
-        "DARPAN App",
-        "Postman Mobile App (PMA)",
-        "IPPB Mobile App",
-        "Dak Pay"
-      ],
-      "a": 1,
-      "e": "Delivery is done via the Postman Mobile App (PMA)."
-    },
-    {
-      "q": "The \"Universal Postal Union\" (UPU), of which India is a member, has its headquarters in:",
-      "o": [
-        "Geneva, Switzerland",
-        "Bern, Switzerland",
-        "Paris, France",
-        "New York, USA"
-      ],
-      "a": 1,
-      "e": "UPU HQ is in Bern, Switzerland."
-    },
-    {
-      "q": "Under the \"Philately Scholarship Scheme,\" students are required to maintain a Philately Deposit Account with a minimum balance of:",
-      "o": [
-        "₹100",
-        "₹200",
-        "₹250",
-        "₹500"
-      ],
-      "a": 1,
-      "e": "Philately Deposit Account minimum balance is ₹200."
-    },
-    {
-      "q": "Which document serves as the \"Citizen’s Charter\" for the Department of Posts, outlining the service standards and timelines?",
-      "o": [
-        "The Post Office Guide Part I",
-        "The India Post Annual Report",
-        "The Citizen’s Charter (Sevottam)",
-        "The Postal Manual Vol V"
-      ],
-      "a": 2,
-      "e": "The Citizen’s Charter outlines standards."
-    },
-    {
-      "q": "The \"Dak Sewa Award\" is conferred at which administrative level?",
-      "o": [
-        "National Level",
-        "Circle Level",
-        "Divisional Level",
-        "Regional Level"
-      ],
-      "a": 1,
-      "e": "Dak Sewa Award is typically a Circle Level award (Meghdoot is National)."
-    },
-    {
-      "q": "To promote export through postal channels, the Department has integrated its system with the Customs authorities using:",
-      "o": [
-        "Postal Bill of Export (PBE) automated system",
-        "Manual filing of CN 23 forms",
-        "Direct email communication",
-        "WhatsApp Business API"
-      ],
-      "a": 0,
-      "e": "DNK uses the Postal Bill of Export (PBE) system."
-    },
-    {
-      "q": "\"My Stamp\" is a brand name for:",
-      "o": [
-        "Commemorative stamps released on Independence Day.",
-        "Personalized sheets of Postage Stamps of India.",
-        "Digital stamps used for franking machines.",
-        "Stamps used exclusively for government mail."
-      ],
-      "a": 1,
-      "e": "\"My Stamp\" allows personalized photos alongside postage stamps."
-    },
-    {
-      "q": "The \"Complaint Management System\" (CMS) of India Post is integrated with which centralized government portal?",
-      "o": [
-        "GeM (Government e-Marketplace)",
-        "CPGRAMS (Centralized Public Grievance Redress and Monitoring System)",
-        "UMANG",
-        "DigiLocker"
-      ],
-      "a": 1,
-      "e": "Integration with CPGRAMS is the standard for grievance redressal."
-    },
-    {
-      "q": "The concept of \"Antyodaya Diwas\" observed during National Postal Week focuses on:",
-      "o": [
-        "Cleaning of Post Offices.",
-        "Postal Banking and Financial Inclusion for the last mile.",
-        "Promotion of Philately.",
-        "Mail delivery speed."
-      ],
-      "a": 1,
-      "e": "Snippet confirms Oct 10 is Antyodaya Diwas focusing on financial inclusion/banking."
-    },
-    {
-      "q": "The \"Centre for Excellence in Postal Technology\" (CEPT) is responsible for:",
-      "o": [
-        "Printing of postage stamps.",
-        "Development and maintenance of software solutions for the Department.",
-        "Training of Indian Postal Service officers.",
-        "Manufacturing of letterboxes."
-      ],
-      "a": 1,
-      "e": "CEPT (Mysuru) handles software/IT for India Post."
-    },
-    {
-      "q": "Which of the following is considered a \"Premium Product\" of India Post?",
-      "o": [
-        "Book Packet",
-        "Registered Letter",
-        "Speed Post",
-        "Blind Literature Packet"
-      ],
-      "a": 2,
-      "e": "*Speed Post is the flagship premium product."
-    },
-    {
-      "q": "The \"Postal Life Insurance\" (PLI) was originally introduced in 1884 for:",
-      "o": [
-        "The general public of India.",
-        "Postal employees only.",
-        "Employees of the Telegraph Department only.",
-        "Postal employees and later extended to other government employees."
-      ],
-      "a": 3,
-      "e": "Started for Postal employees, later extended to Telegraph and other Govt employees."
-    },
-    {
-      "q": "In the context of \"LiFE\" (Lifestyle for Environment), what material was primarily used to create the \"CHARKHA\" art installation in Post Offices?",
-      "o": [
-        "New plastic sheets",
-        "Waste materials (damaged furniture, old ropes, etc.)",
-        "Imported metal scrap",
-        "Biodegradable bamboo"
-      ],
-      "a": 1,
-      "e": "Snippet confirms Waste materials (furniture, bicycle, ropes)."
-    },
-    {
-      "q": "The \"Aadhaar Enabled Payment System\" (AePS) offered by IPPB allows customers to:",
-      "o": [
-        "Update their Aadhaar biometrics.",
-        "Withdraw cash from any bank account linked with Aadhaar using biometric authentication.",
-        "Apply for a new Pan Card.",
-        "Transfer money to foreign bank accounts."
-      ],
-      "a": 1,
-      "e": "AePS allows cash withdrawal from any bank account (interoperable) at the PO."
-    },
-    {
-      "q": "What is the status of the Department of Posts regarding the \"Right to Information (RTI) Act\"?",
-      "o": [
-        "It is fully exempt from the RTI Act.",
-        "It is covered under the RTI Act, and every Post Office acts as a CAPIO/CPIO point.",
-        "Only the Delhi Headquarters answers RTI queries.",
-        "Only financial queries are answered under RTI."
-      ],
-      "a": 1,
-      "e": "DoP is a public authority under RTI Act; POs serve as APIO/CPIOs."
-    },
-    {
-      "q": "The \"Direct Benefit Transfer\" (DBT) into PO Savings Accounts is facilitated through:",
-      "o": [
-        "NACH (National Automated Clearing House) and APBS (Aadhaar Payment Bridge System)",
-        "Money Order system",
-        "Manual ledger entry",
-        "Cheque clearance"
-      ],
-      "a": 0,
-      "e": "DBT uses NACH/APBS."
-    },
-    {
-      "q": "Which authority is responsible for the \"Cadre Restructuring\" of Group C employees in the Department of Posts?",
-      "o": [
-        "Ministry of Finance",
-        "Department of Personnel and Training (DoPT) in consultation with the Department of Posts",
-        "The Circle Office",
-        "The International Monetary Fund"
-      ],
-      "a": 1,
-      "e": "Cadre restructuring is done by DoPT (Personnel Ministry) in consultation with the Department."
-    },
-    {
-      "q": "The \"Post Office Savings Account\" requires a minimum balance of:",
-      "o": [
-        "₹50",
-        "₹100",
-        "₹500",
-        "₹1,000"
-      ],
-      "a": 2,
-      "e": "Minimum balance for a standard POSB cheque account is ₹500."
-    }
-  ]
+  {
+    "q": "The number of PLI claims settled during 1st January 2025 to 31st December 2025 was:",
+    "o": [
+      "61,455",
+      "86,069",
+      "2,45,822",
+      "3,44,276"
+    ],
+    "a": 2,
+    "e": "• A total of 2,45,822 PLI claims were settled during the period 01.01.2025 to 31.12.2025."
+  },
+  {
+    "q": "The amount paid against PLI claims during 1st January 2025 to 31st December 2025 was:",
+    "o": [
+      "Rs. 2,095.17 crore",
+      "Rs. 3,139.33 crore",
+      "Rs. 8,380.69 crore",
+      "Rs. 11,425.24 crore"
+    ],
+    "a": 2,
+    "e": "• The amount paid against PLI claims during 01.01.2025 to 31.12.2025 was Rs. 8,380.69 crore."
+  },
+  {
+    "q": "The number of RPLI claims settled during 1st January 2025 to 31st December 2025 was:",
+    "o": [
+      "61,455",
+      "86,069",
+      "2,45,822",
+      "3,44,276"
+    ],
+    "a": 3,
+    "e": "• A total of 3,44,276 RPLI claims were settled during the period 01.01.2025 to 31.12.2025."
+  },
+  {
+    "q": "The amount paid against RPLI claims during 1st January 2025 to 31st December 2025 was:",
+    "o": [
+      "Rs. 784.83 crore",
+      "Rs. 2,095.17 crore",
+      "Rs. 3,139.33 crore",
+      "Rs. 8,380.69 crore"
+    ],
+    "a": 2,
+    "e": "• The amount paid against RPLI claims during 01.01.2025 to 31.12.2025 was Rs. 3,139.33 crore."
+  },
+  {
+    "q": "The anticipated number of PLI claims to be settled during 1st January 2026 to 31st March 2026 is:",
+    "o": [
+      "61,455",
+      "86,069",
+      "2,45,822",
+      "3,44,276"
+    ],
+    "a": 0,
+    "e": "• The anticipated PLI claims to be settled during 01.01.2026 to 31.03.2026 are 61,455."
+  },
+  {
+    "q": "The anticipated amount to be paid against RPLI claims during 1st January 2026 to 31st March 2026 is:",
+    "o": [
+      "Rs. 784.83 crore",
+      "Rs. 2,095.17 crore",
+      "Rs. 3,139.33 crore",
+      "Rs. 8,380.69 crore"
+    ],
+    "a": 0,
+    "e": "• The anticipated amount to be paid against RPLI claims during the said period is Rs. 784.83 crore."
+  },
+  {
+    "q": "The number of IPPB Access Points enabled in Post Offices is approximately:",
+    "o": [
+      "1.39 lakh",
+      "1.64 lakh",
+      "1.65 lakh",
+      "13.07 crore"
+    ],
+    "a": 1,
+    "e": "• 1.64 lakh IPPB Access Points have been enabled in Post Offices, with 1.39+ lakh of these in rural areas."
+  },
+  {
+    "q": "The number of IPPB Access Points operating in rural areas is approximately:",
+    "o": [
+      "1.39+ lakh",
+      "1.49+ lakh",
+      "1.55+ lakh",
+      "1.64+ lakh"
+    ],
+    "a": 0,
+    "e": "• Out of 1.64 lakh IPPB Access Points, 1.39+ lakh are situated in rural areas — reflecting IPPB's rural reach."
+  },
+  {
+    "q": "The total number of IPPB bank accounts opened in Digital and Paperless mode is:",
+    "o": [
+      "11.17 crore",
+      "11.89 crore",
+      "13.07 crore",
+      "79.73 crore"
+    ],
+    "a": 2,
+    "e": "• 13.07 crore IPPB bank accounts have been opened in Digital and Paperless mode."
+  },
+  {
+    "q": "What percentage of IPPB customers are from rural India?",
+    "o": [
+      "48%",
+      "58%",
+      "77%",
+      "98%"
+    ],
+    "a": 2,
+    "e": "• 77% of IPPB customers are from rural India, reinforcing IPPB's mission of financial inclusion."
+  },
+  {
+    "q": "What percentage of IPPB customers are female?",
+    "o": [
+      "28%",
+      "48%",
+      "58%",
+      "77%"
+    ],
+    "a": 1,
+    "e": "• 48% of IPPB customers comprise female customers."
+  },
+  {
+    "q": "What percentage of women's IPPB accounts have been opened at their doorstep?",
+    "o": [
+      "48%",
+      "58%",
+      "77%",
+      "98%"
+    ],
+    "a": 3,
+    "e": "• 98% of women's accounts have been opened at their doorstep, demonstrating the doorstep banking outreach of IPPB."
+  },
+  {
+    "q": "What percentage of women's IPPB accounts have received DBT benefits?",
+    "o": [
+      "28%",
+      "48%",
+      "58%",
+      "77%"
+    ],
+    "a": 2,
+    "e": "• More than 58% of women's accounts have received DBT benefits."
+  },
+  {
+    "q": "The customer deposit balance of IPPB exceeds:",
+    "o": [
+      "Rs. 15,319 crore",
+      "Rs. 24,715 crore",
+      "Rs. 33,199 crore",
+      "Rs. 66,375 crore"
+    ],
+    "a": 1,
+    "e": "• IPPB has a customer deposit balance of more than Rs. 24,715 crore."
+  },
+  {
+    "q": "The total number of IPPB financial transactions executed exceeds:",
+    "o": [
+      "1,101 crore",
+      "1,469 crore",
+      "2,146 crore",
+      "11.89 crore"
+    ],
+    "a": 2,
+    "e": "• More than 2,146 crore financial transactions have been executed by IPPB, involving Rs. 19,91,259 crore."
+  },
+  {
+    "q": "The total value of financial transactions executed by IPPB exceeds:",
+    "o": [
+      "Rs. 11,01,646 crore",
+      "Rs. 19,91,259 crore",
+      "Rs. 33,199 crore",
+      "Rs. 1,37,135 crore"
+    ],
+    "a": 1,
+    "e": "• IPPB has facilitated transactions worth Rs. 19,91,259 crore through over 2,146 crore financial transactions."
+  },
+  {
+    "q": "The number of DBT Disbursement transactions executed by IPPB exceeds:",
+    "o": [
+      "35.57 crore",
+      "42.60 crore",
+      "79.73 crore",
+      "11.89 crore"
+    ],
+    "a": 2,
+    "e": "• More than 79.73 crore DBT Disbursement transactions have been executed worth Rs. 1,37,135 crore."
+  },
+  {
+    "q": "The value of DBT Disbursement transactions through IPPB is:",
+    "o": [
+      "Rs. 33,199 crore",
+      "Rs. 35,572 crore",
+      "Rs. 66,375 crore",
+      "Rs. 1,37,135 crore"
+    ],
+    "a": 3,
+    "e": "• The value of DBT Disbursement transactions through IPPB is Rs. 1,37,135 crore over 79.73+ crore transactions."
+  },
+  {
+    "q": "The cash disbursed to \"customers of other banks\" through Aadhaar Enabled Payment Service (AEPS) transactions exceeds:",
+    "o": [
+      "Rs. 11,01,646 crore",
+      "Rs. 33,199 crore",
+      "Rs. 35,572 crore",
+      "Rs. 66,375 crore"
+    ],
+    "a": 2,
+    "e": "• More than Rs. 35,572 crore has been disbursed in cash to customers of other banks through AEPS."
+  },
+  {
+    "q": "The number of AEPS transactions through which cash was disbursed to other banks' customers is more than:",
+    "o": [
+      "8.50 crore",
+      "11.17 crore",
+      "11.89 crore",
+      "42.60 crore"
+    ],
+    "a": 2,
+    "e": "• More than 11.89 crore AEPS transactions facilitated disbursal of Rs. 35,572 crore to customers of other banks."
+  },
+  {
+    "q": "The total number of Digital Life Certificates (DLCs) registered from 1st April 2025 to 31st December 2025 was:",
+    "o": [
+      "2,92,520",
+      "3,25,520",
+      "4,25,520",
+      "5,25,520"
+    ],
+    "a": 2,
+    "e": "• A total of 4,25,520 Digital Life Certificates (DLCs) were registered through Jeevan Pramaan Centres from 01.04.2025 to 31.12.2025."
+  },
+  {
+    "q": "Through Jeevan Pramaan Centres, approximately how many customers were served at their doorstep?",
+    "o": [
+      "25.02 lakh",
+      "27.02 lakh",
+      "29.02 lakh",
+      "35.02 lakh"
+    ],
+    "a": 2,
+    "e": "• Approximately 29.02 lakh customers have been served at their doorstep under the Jeevan Pramaan Centre initiative."
+  },
+  {
+    "q": "Which of the following statements about IPPB and JPC is/are correct?\r\n1. IPPB customer deposit balance exceeds Rs. 24,715 crore.\r\n2. 4,25,520 DLCs were registered from 01.04.2025 to 31.12.2025.\r\n3. 77% of IPPB customers are from rural India.\r\n4. 98% of women's accounts were opened at their doorstep.",
+    "o": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1, 2 and 4 only",
+      "1, 2, 3 and 4"
+    ],
+    "a": 3,
+    "e": "• All four statements are factually correct as per the AR 2025-26."
+  }
+],
+  "217": [
+  {
+    "q": "The Speed Post traffic (excluding Speed Post Parcel) during the financial year 2024-25 was:",
+    "o": [
+      "50.85 crore",
+      "62.14 crore",
+      "67.46 crore",
+      "51.10 crore"
+    ],
+    "a": 1,
+    "e": "• Speed Post traffic during FY 2024-25 stood at 62.14 crore (excluding Speed Post Parcel). The figure 67.46 crore corresponds to FY 2023-24."
+  },
+  {
+    "q": "The Speed Post revenue during FY 2024-25 was:",
+    "o": [
+      "Rs. 1,533.51 crore",
+      "Rs. 1,752.54 crore",
+      "Rs. 1,837.76 crore",
+      "Rs. 1,312.74 crore"
+    ],
+    "a": 1,
+    "e": "• Speed Post revenue during FY 2024-25 was Rs. 1,752.54 crore."
+  },
+  {
+    "q": "The Speed Post traffic from 1st April 2025 to 31st December 2025 was:",
+    "o": [
+      "35.24 crore",
+      "42.92 crore",
+      "51.10 crore",
+      "62.14 crore"
+    ],
+    "a": 2,
+    "e": "• Speed Post traffic from 01.04.2025 to 31.12.2025 was 51.10 crore (excluding Speed Post Parcel)."
+  },
+  {
+    "q": "The Speed Post revenue from 1st April 2025 to 31st December 2025 was:",
+    "o": [
+      "Rs. 1,209.03 crore",
+      "Rs. 1,312.74 crore",
+      "Rs. 1,396.63 crore",
+      "Rs. 1,752.54 crore"
+    ],
+    "a": 1,
+    "e": "• Speed Post revenue from 01.04.2025 to 31.12.2025 was Rs. 1,312.74 crore."
+  },
+  {
+    "q": "Which financial year recorded the highest Speed Post revenue among the years listed in the AR 2025-26?",
+    "o": [
+      "2021-22",
+      "2022-23",
+      "2023-24",
+      "2024-25"
+    ],
+    "a": 2,
+    "e": "• Speed Post revenue peaked at Rs. 1,837.76 crore during FY 2023-24, the highest in the comparative table."
+  },
+  {
+    "q": "Speed Post traffic recorded its highest figure during which financial year as per the AR 2025-26?",
+    "o": [
+      "2022-23 — 50.85 crore",
+      "2023-24 — 67.46 crore",
+      "2024-25 — 62.14 crore",
+      "2020-21 — 35.24 crore"
+    ],
+    "a": 1,
+    "e": "• Speed Post traffic peaked at 67.46 crore during FY 2023-24."
+  },
+  {
+    "q": "Speed Post revenue figures in the AR are sourced from which system?",
+    "o": [
+      "Finacle",
+      "e-Lekha",
+      "PA Module",
+      "Sanchay Post"
+    ],
+    "a": 1,
+    "e": "• Revenue figures for Speed Post are collected from e-Lekha as per the footnote of the comparative table."
+  },
+  {
+    "q": "The Door Step Service (DSS) Application has been downloaded on more than how many smartphones supplied to Postmen/GDS delivery staff?",
+    "o": [
+      "1.4 lakh",
+      "1.6 lakh",
+      "1.8 lakh",
+      "2.0 lakh"
+    ],
+    "a": 2,
+    "e": "• The DSS Application has been downloaded on more than 1.8 lakh smartphones supplied to Postmen and GDS delivery staff for real-time delivery updation."
+  },
+  {
+    "q": "Approximately how many smartphones have been registered under the Bring Your Own Device (BYOD) scheme so far?",
+    "o": [
+      "11,000",
+      "21,000",
+      "31,000",
+      "51,000"
+    ],
+    "a": 1,
+    "e": "• About 21,000 personal smartphones of delivery staff have been registered under the BYOD scheme for real-time delivery status update."
+  },
+  {
+    "q": "As on December 2025, e-clearance of letter boxes has been implemented for how many letter boxes?",
+    "o": [
+      "51,792",
+      "53,567",
+      "53,792",
+      "55,567"
+    ],
+    "a": 1,
+    "e": "• E-clearance of letter boxes has been implemented for 53,567 letter boxes as on December 2025."
+  },
+  {
+    "q": "The Automated Mail Processing Centres (AMPCs) at Delhi and Kolkata were established in:",
+    "o": [
+      "2008-09",
+      "2009-10",
+      "2010-11",
+      "2014-15"
+    ],
+    "a": 2,
+    "e": "• AMPCs at Delhi and Kolkata were established in 2010-11."
+  },
+  {
+    "q": "The sorting capacity of the Letter Sorting Machine (LSM) at AMPCs is:",
+    "o": [
+      "18,000 items per hour",
+      "25,000 items per hour",
+      "35,000 items per hour",
+      "50,000 items per hour"
+    ],
+    "a": 2,
+    "e": "• The LSM at AMPCs has a sorting capacity of 35,000 items per hour, while the Mixed Mail Sorter (MMS) handles 18,000 per hour."
+  },
+  {
+    "q": "From January 2025 to December 2025, the total number of Aadhaar PVC Cards delivered was:",
+    "o": [
+      "1.40 crore",
+      "2.61 crore",
+      "17.45 crore",
+      "11.62 lakh"
+    ],
+    "a": 0,
+    "e": "• A total of 1.40 crore Aadhaar PVC Cards were delivered between January 2025 and December 2025."
+  },
+  {
+    "q": "From January 2025 to December 2025, the total number of EPICs (Electoral Photo Identity Cards) delivered was:",
+    "o": [
+      "1.40 crore",
+      "2.61 crore",
+      "17.45 crore",
+      "11.62 lakh"
+    ],
+    "a": 1,
+    "e": "• A total of 2.61 crore EPICs were delivered between January 2025 and December 2025."
+  },
+  {
+    "q": "From January 2025 to December 2025, the total number of Aadhaar letters delivered was:",
+    "o": [
+      "1.40 crore",
+      "2.61 crore",
+      "17.45 crore",
+      "28.13 lakh"
+    ],
+    "a": 2,
+    "e": "• A total of 17.45 crore Aadhaar letters were delivered between January 2025 and December 2025."
+  },
+  {
+    "q": "As per AR 2025-26, the number of Speed Post Processing Hubs operating online in APT solutions is:",
+    "o": [
+      "198",
+      "258",
+      "260",
+      "261"
+    ],
+    "a": 3,
+    "e": "• 261 Speed Post processing hubs are operating online in APT solutions."
+  },
+  {
+    "q": "The number of Business Processing Centres (BPCs) operating online in APT solutions is:",
+    "o": [
+      "142",
+      "198",
+      "260",
+      "321"
+    ],
+    "a": 1,
+    "e": "• 198 BPCs are performing operations online in APT solutions."
+  },
+  {
+    "q": "Consider the following figures from AR 2025-26 regarding online Mail Processing Hubs:\r\n1. Speed Post processing hubs — 261\r\n2. Unregistered Mail offices — 260\r\n3. BNPL Centres — 142\r\n4. Transit Mail Offices (TMOs) — 321\r\n\r\nWhich of the above are correctly matched?",
+    "o": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1, 2, 3 and 4",
+      "1, 3 and 4 only"
+    ],
+    "a": 2,
+    "e": "• All four figures are correct as per the AR 2025-26."
+  },
+  {
+    "q": "The Department of Posts is the logistics partner for the PM Vishwakarma Scheme, facilitating delivery of toolkits for how many trades?",
+    "o": [
+      "12 trades",
+      "16 trades",
+      "18 trades",
+      "22 trades"
+    ],
+    "a": 2,
+    "e": "• DoP is the logistics partner facilitating nationwide delivery of toolkits for 18 trades through Business Parcel service under the PM Vishwakarma Scheme."
+  },
+  {
+    "q": "Toolkits under the PM Vishwakarma Scheme are delivered through which service of India Post?",
+    "o": [
+      "Speed Post",
+      "Registered Parcel",
+      "Business Parcel",
+      "Magazine Post"
+    ],
+    "a": 2,
+    "e": "• Toolkits are delivered through the Business Parcel service of India Post."
+  },
+  {
+    "q": "From September 2024 to December 2025, the total number of toolkits delivered under the PM Vishwakarma Scheme (including RTS) was:",
+    "o": [
+      "8,62,789",
+      "10,62,789",
+      "11,62,789",
+      "13,62,789"
+    ],
+    "a": 2,
+    "e": "• A total of 11,62,789 toolkits (including RTS) were delivered between September 2024 and December 2025."
+  },
+  {
+    "q": "Which Postal Circle delivered the highest number of PM Vishwakarma toolkits as on 31.12.2025?",
+    "o": [
+      "Maharashtra",
+      "Karnataka",
+      "Rajasthan",
+      "Madhya Pradesh"
+    ],
+    "a": 1,
+    "e": "• Karnataka Circle delivered the highest count of 2,78,335 toolkits as on 31.12.2025."
+  },
+  {
+    "q": "Which Postal Circle recorded the lowest number of PM Vishwakarma toolkit deliveries as on 31.12.2025?",
+    "o": [
+      "Tamilnadu",
+      "Delhi",
+      "Punjab",
+      "Kerala"
+    ],
+    "a": 1,
+    "e": "• Delhi Circle delivered the lowest count of 60 toolkits as on 31.12.2025."
+  }
+],
+  "218": [
+  {
+    "q": "Consider the following Circle-wise PM Vishwakarma toolkit delivery figures (as on 31.12.2025):\r\n1. Andhra Pradesh — 70,433\r\n2. Maharashtra — 1,05,786\r\n3. Gujarat — 1,13,720\r\n4. Rajasthan — 1,13,231\r\n\r\nWhich of the above are correctly matched?",
+    "o": [
+      "1 and 2 only",
+      "1, 2 and 3 only",
+      "1, 2, 3 and 4",
+      "2 and 4 only"
+    ],
+    "a": 2,
+    "e": "• All four figures are correctly matched as per the AR 2025-26 toolkit delivery table."
+  },
+  {
+    "q": "Which of the following is NOT correctly matched (Circle — toolkits delivered as on 31.12.2025)?",
+    "o": [
+      "Karnataka — 2,78,335",
+      "Madhya Pradesh — 93,230",
+      "Tamilnadu — 5,400",
+      "Jammu & Kashmir — 87,633"
+    ],
+    "a": 2,
+    "e": "• Tamilnadu delivered only 54 toolkits, not 5,400. The other three figures are correctly matched."
+  },
+  {
+    "q": "Among the North-Eastern circles, the lowest number of PM Vishwakarma toolkits delivered was by which circle?",
+    "o": [
+      "Assam — 41,490",
+      "North Eastern — 5,599",
+      "West Bengal — 603",
+      "Sikkim — 0"
+    ],
+    "a": 1,
+    "e": "• Among the listed NE circles, North Eastern Circle delivered 5,599 toolkits — lower than Assam (41,490). West Bengal at 603 is technically lower but is not strictly an NE circle (it includes Sikkim)."
+  },
+  {
+    "q": "The Mail Motor Service (MMS) of the Department of Posts came into existence in which year?",
+    "o": [
+      "1934",
+      "1944",
+      "1954",
+      "1964"
+    ],
+    "a": 1,
+    "e": "• Mail Motor Service (MMS) came into existence in the year 1944."
+  },
+  {
+    "q": "As per AR 2025-26, the total number of MMS Units owned by the Department across 23 Postal Circles is:",
+    "o": [
+      "103",
+      "116",
+      "126",
+      "156"
+    ],
+    "a": 2,
+    "e": "• The Department owns 126 MMS Units across 23 Postal Circles, comprising 04 Major, 13 Medium, and 109 Small workshops (tentatively)."
+  },
+  {
+    "q": "As per AR 2025-26, the breakup of MMS Units by size includes:",
+    "o": [
+      "04 Major, 13 Medium, 109 Small",
+      "06 Major, 17 Medium, 103 Small",
+      "04 Major, 17 Medium, 105 Small",
+      "09 Major, 13 Medium, 104 Small"
+    ],
+    "a": 0,
+    "e": "• The MMS Units comprise 04 Major workshops, 13 Medium workshops, and 109 (tentatively) Small workshops."
+  },
+  {
+    "q": "The total fleet size of MMS as per AR 2025-26 is approximately:",
+    "o": [
+      "1,414 vehicles",
+      "1,800 vehicles",
+      "2,100 vehicles",
+      "2,500 vehicles"
+    ],
+    "a": 2,
+    "e": "• MMS has a fleet of nearly 2,100 vehicles as per AR 2025-26 (compared to 1,414 motor vehicles + 428 inspection/staff cars in the AR 2024-25)."
+  },
+  {
+    "q": "Approximately how many vehicles in the MMS fleet are CNG-propelled Mail Vans?",
+    "o": [
+      "200",
+      "230",
+      "250",
+      "300"
+    ],
+    "a": 2,
+    "e": "• Approximately 250 vehicles in the MMS fleet are CNG-propelled Mail Vans (the AR 2024-25 figure was 230)."
+  },
+  {
+    "q": "As per AR 2025-26, the number of Electric Vehicles (EVs) currently in the MMS fleet is:",
+    "o": [
+      "02",
+      "09",
+      "12",
+      "20"
+    ],
+    "a": 0,
+    "e": "• As per AR 2025-26, only 02 Electric Vehicles (EVs) are currently in the MMS fleet."
+  },
+  {
+    "q": "The capital amount allocated for FY 2025-26 for the procurement of new MMS vehicles is:",
+    "o": [
+      "Rs. 09 crore",
+      "Rs. 12 crore",
+      "Rs. 15 crore",
+      "Rs. 25 crore"
+    ],
+    "a": 2,
+    "e": "• An amount of Rs. 15 crore has been allocated for FY 2025-26 for the procurement of new MMS vehicles."
+  },
+  {
+    "q": "As per AR 2025-26, how many Electric Vehicles (EVs) are to be procured by the end of FY 2025-26?",
+    "o": [
+      "09",
+      "16",
+      "20",
+      "30"
+    ],
+    "a": 2,
+    "e": "• 20 EVs are to be procured by the end of FY 2025-26 under the MMS modernisation programme."
+  },
+  {
+    "q": "The total number of Parcel Hubs established by the Department of Posts as per AR 2025-26 is:",
+    "o": [
+      "79",
+      "109",
+      "188",
+      "234"
+    ],
+    "a": 2,
+    "e": "• A network of 188 Parcel Hubs has been established, comprising 79 Level-1 hubs and 109 Level-2 hubs."
+  },
+  {
+    "q": "The number of Level-1 Parcel Hubs (NPH) is:",
+    "o": [
+      "79",
+      "109",
+      "110",
+      "188"
+    ],
+    "a": 0,
+    "e": "• There are 79 Level-1 (National Parcel Hubs) Parcel Hubs."
+  },
+  {
+    "q": "The number of Level-2 Parcel Hubs (PH) is:",
+    "o": [
+      "79",
+      "109",
+      "110",
+      "188"
+    ],
+    "a": 1,
+    "e": "• There are 109 Level-2 Parcel Hubs as per the AR 2025-26 (compared to 110 in the AR 2024-25)."
+  },
+  {
+    "q": "The semi-automated sorting systems at Parcel Hubs have a parcel processing capacity of up to:",
+    "o": [
+      "1,500 parcels per hour",
+      "2,000 parcels per hour",
+      "2,500 parcels per hour",
+      "3,500 parcels per hour"
+    ],
+    "a": 2,
+    "e": "• The semi-automated sorting systems have a parcel processing capacity of up to 2,500 parcels per hour."
+  },
+  {
+    "q": "As per AR 2025-26, the total number of Nodal Delivery Centres (NDCs) is:",
+    "o": [
+      "73",
+      "104",
+      "188",
+      "234"
+    ],
+    "a": 3,
+    "e": "• There are 234 Nodal Delivery Centres covering over 1,600 PIN codes, delivering ~30% of total parcels in pan-India daily."
+  },
+  {
+    "q": "Out of the 234 NDCs, the breakup by city tier is:",
+    "o": [
+      "Tier-I: 73; Tier-II: 104; Tier-III: 57",
+      "Tier-I: 79; Tier-II: 109; Tier-III: 46",
+      "Tier-I: 73; Tier-II: 103; Tier-III: 57",
+      "Tier-I: 80; Tier-II: 100; Tier-III: 54"
+    ],
+    "a": 0,
+    "e": "• The 234 NDCs comprise 73 Tier-I, 104 Tier-II, and 57 Tier-III centres."
+  },
+  {
+    "q": "NDCs deliver approximately what percentage of total parcels in Pan-India in a day?",
+    "o": [
+      "~10%",
+      "~20%",
+      "~30%",
+      "~50%"
+    ],
+    "a": 2,
+    "e": "• NDCs deliver approximately 30% of the total parcels delivered in Pan-India in a day."
+  },
+  {
+    "q": "The number of operational Transhipment Centres on national Road Transport Network routes (along highways) is:",
+    "o": [
+      "06",
+      "09",
+      "12",
+      "23"
+    ],
+    "a": 1,
+    "e": "• 09 Transhipment Centres have been operationalised on the national Road Transport Network routes along highways."
+  },
+  {
+    "q": "The total number of national routes of the Postal Road Transport Network operational as per AR 2025-26 is:",
+    "o": [
+      "38",
+      "76",
+      "88",
+      "100"
+    ],
+    "a": 2,
+    "e": "• 88 national routes of the Postal Road Transport Network are operational, covering over 62,000 km per day (up from 76 routes / 50,000 km in the AR 2024-25)."
+  },
+  {
+    "q": "The total daily distance covered by the national Postal Road Transport Network as per AR 2025-26 is:",
+    "o": [
+      "50,000 km",
+      "55,000 km",
+      "62,000 km",
+      "75,000 km"
+    ],
+    "a": 2,
+    "e": "• The national Postal Road Transport Network operates over 62,000 km per day across 88 routes."
+  },
+  {
+    "q": "The total number of Parcel Packaging Units (PPUs) set up across India under the Parcel Packaging Policy is:",
+    "o": [
+      "1,408",
+      "1,800",
+      "2,000",
+      "2,398"
+    ],
+    "a": 3,
+    "e": "• Parcel Packaging Units (PPUs) have been set up at 2,398 Post Offices across the country (compared to 1,408 in the AR 2024-25).\r\n\r\n\r\n\r\nUnderstood. I'll focus only on the most exam-critical, high-yield facts from the remaining 2025-26 sections — skipping minor/peripheral points."
+  },
+  {
+    "q": "The total parcel traffic handled during 2024-25 was:",
+    "o": [
+      "6,16,04,037",
+      "7,12,01,000",
+      "8,12,01,000",
+      "9,12,01,000"
+    ],
+    "a": 1,
+    "e": "• Total parcel traffic grew from 6,16,04,037 in 2023-24 to 7,12,01,000 in 2024-25."
+  }
+],
+  "219": [
+  {
+    "q": "The Speed Post Parcel traffic during 2024-25 was:",
+    "o": [
+      "2,51,74,468",
+      "3,02,42,034",
+      "3,13,85,000",
+      "3,22,37,000"
+    ],
+    "a": 2,
+    "e": "• Speed Post Parcel traffic during 2024-25 was 3,13,85,000 (up from 2,51,74,468 in 2023-24)."
+  },
+  {
+    "q": "Approximately how many tons of high-quality yarns were transported to weavers under the Empowering India's Handloom Heritage initiative?",
+    "o": [
+      "5,000 tons",
+      "7,000 tons",
+      "10,000 tons",
+      "15,000 tons"
+    ],
+    "a": 1,
+    "e": "• Around 7,000 tons of high-quality yarns were efficiently transported to weavers under this initiative."
+  },
+  {
+    "q": "International EMS Service of India Post is available for how many countries?",
+    "o": [
+      "85",
+      "100",
+      "106",
+      "191"
+    ],
+    "a": 2,
+    "e": "• International EMS Service is available for 106 countries."
+  },
+  {
+    "q": "The International Tracked Packet Service (ITPS) is available for how many countries, with a maximum item weight of:",
+    "o": [
+      "85 countries; up to 5.0 kg",
+      "100 countries; up to 5.0 kg",
+      "85 countries; up to 2.0 kg",
+      "191 countries; up to 7.0 kg"
+    ],
+    "a": 0,
+    "e": "• ITPS is available for 85 countries for items weighing up to 5.0 kg."
+  },
+  {
+    "q": "International Letter Post services are available for how many countries and destinations?",
+    "o": [
+      "100",
+      "106",
+      "191",
+      "215"
+    ],
+    "a": 3,
+    "e": "• Letter Post services are available for 215 countries and destinations."
+  },
+  {
+    "q": "Under International Letter Post, the maximum permissible weight for \"Literature for the Blind\" is:",
+    "o": [
+      "2.0 kg",
+      "5.0 kg",
+      "7.0 kg",
+      "30.0 kg"
+    ],
+    "a": 2,
+    "e": "• Literature for the Blind is permitted up to 7.0 kg under Letter Post (Documents up to 2.0 kg; M Bag up to 30.0 kg)."
+  },
+  {
+    "q": "Under International Letter Post, the maximum permissible weight for an M Bag is:",
+    "o": [
+      "5.0 kg",
+      "7.0 kg",
+      "20.0 kg",
+      "30.0 kg"
+    ],
+    "a": 3,
+    "e": "• M Bag is permitted up to 30.0 kg under Letter Post."
+  },
+  {
+    "q": "International Parcel Service is available for more than how many destination countries and territories?",
+    "o": [
+      "85",
+      "106",
+      "191",
+      "215"
+    ],
+    "a": 2,
+    "e": "• International Parcel Service is available for more than 191 destination countries and territories."
+  },
+  {
+    "q": "As on 31st December 2025, the number of Dak Ghar Niryat Kendras (DNKs) authorised across the country is:",
+    "o": [
+      "1,001",
+      "1,013",
+      "1,408",
+      "2,398"
+    ],
+    "a": 1,
+    "e": "• 1,013 DNKs have been authorised up to the district level across the country by 31.12.2025."
+  },
+  {
+    "q": "During FY 2025-26 (as on 31.12.2025), DNK shipments and their value were:",
+    "o": [
+      "4.49 lakh shipments worth Rs. 102.57 crore",
+      "5.49 lakh shipments worth Rs. 165.03 crore",
+      "4.49 lakh shipments worth Rs. 156.48 crore",
+      "11.62 lakh shipments worth Rs. 102.57 crore"
+    ],
+    "a": 0,
+    "e": "• Around 4.49 lakh shipments with a value of approximately Rs. 102.57 crore were exported during FY 2025-26 as on 31.12.2025."
+  },
+  {
+    "q": "From January 2025 to December 2025, the revenue generated under Magazine Post was:",
+    "o": [
+      "Rs. 5.63 crore",
+      "Rs. 7.63 crore",
+      "Rs. 9.63 crore",
+      "Rs. 12.63 crore"
+    ],
+    "a": 1,
+    "e": "• Magazine Post (launched on 01.04.2022) generated revenue of Rs. 7.63 crore from January 2025 to December 2025, with 203 publishers registered since inception."
+  },
+  {
+    "q": "The DOP and MEA have committed to establishing a POPSK in:",
+    "o": [
+      "Every State capital",
+      "Every District headquarters",
+      "Every Lok Sabha constituency",
+      "Every Postal Division"
+    ],
+    "a": 2,
+    "e": "• DOP and MEA have committed to establishing a POPSK in every Lok Sabha constituency."
+  },
+  {
+    "q": "As on 31.12.2025, the number of operational POPSKs was:",
+    "o": [
+      "442",
+      "452",
+      "462",
+      "491"
+    ],
+    "a": 1,
+    "e": "• 452 POPSKs have been operationalised as on 31.12.2025 (up from 442 as on 31.12.2024)."
+  },
+  {
+    "q": "From January 2025 to December 2025, the number of passport applications processed by POPSKs was more than:",
+    "o": [
+      "29.15 lakh",
+      "35.15 lakh",
+      "39.15 lakh",
+      "49.15 lakh"
+    ],
+    "a": 2,
+    "e": "• POPSKs processed more than 39.15 lakh passport applications, including 2.03 lakh PCCs."
+  },
+  {
+    "q": "The revenue earned by POPSKs from January 2025 to December 2025 was:",
+    "o": [
+      "Rs. 102.57 crore",
+      "Rs. 156.48 crore",
+      "Rs. 165.03 crore",
+      "Rs. 280.25 crore"
+    ],
+    "a": 1,
+    "e": "• POPSKs earned a revenue of Rs. 156.48 crore for the Department from January 2025 to December 2025."
+  },
+  {
+    "q": "The total number of Aadhaar Enrolment cum Updation Centres functioning in Post Offices is:",
+    "o": [
+      "11,352",
+      "13,352",
+      "14,352",
+      "15,352"
+    ],
+    "a": 1,
+    "e": "• 13,352 Aadhaar Centres have been set up in Post Offices across India."
+  },
+  {
+    "q": "The number of Aadhaar Centres functional under the Army Postal Service (APS) is:",
+    "o": [
+      "100",
+      "105",
+      "110",
+      "115"
+    ],
+    "a": 2,
+    "e": "• At present, 110 Aadhaar Centres are functional under the APS."
+  },
+  {
+    "q": "From January 2025 to December 2025, the total Aadhaar enrolments and updations carried out exceeded:",
+    "o": [
+      "1.92 crore",
+      "2.92 crore",
+      "3.92 crore",
+      "4.92 crore"
+    ],
+    "a": 1,
+    "e": "• More than 2.92 crore Aadhaar enrolments and updations were carried out from January 2025 to December 2025, generating revenue of Rs. 165.03 crore."
+  },
+  {
+    "q": "Under the Har Ghar Tiranga Campaign 4.0 during 2025, the number of National Flags distributed by the Department of Posts was:",
+    "o": [
+      "18,13,627",
+      "28,13,627",
+      "38,13,627",
+      "48,13,627"
+    ],
+    "a": 1,
+    "e": "• The Department successfully distributed 28,13,627 National Flags under Har Ghar Tiranga Campaign 4.0 during 2025."
+  },
+  {
+    "q": "The MoU between Department of Posts and KVIC for physical verification of PMEGP units was signed on:",
+    "o": [
+      "20.07.2024",
+      "20.08.2024",
+      "20.09.2024",
+      "20.08.2025"
+    ],
+    "a": 1,
+    "e": "• The MoU between DoP and KVIC was signed on 20.08.2024 for physical verification of PMEGP units."
+  },
+  {
+    "q": "From January 2025 to December 2025, the number of PMEGP units physically verified was:",
+    "o": [
+      "1,04,166",
+      "2,04,166",
+      "3,04,166",
+      "20,162"
+    ],
+    "a": 1,
+    "e": "• 2,04,166 PMEGP units have been verified from January 2025 to December 2025. (The figure 20,162 corresponds to the position as on 31.12.2024.)"
+  },
+  {
+    "q": "The MoU between DoP and the Association of Mutual Funds in India (AMFI) for KYC verification of mutual fund investors of all 50 Asset Management Companies was signed on:",
+    "o": [
+      "03.04.2025",
+      "29.04.2025",
+      "17.07.2025",
+      "22.08.2025"
+    ],
+    "a": 2,
+    "e": "• The DoP signed a landmark MoU with AMFI on 17.07.2025 to streamline KYC verification for mutual fund investors of all 50 AMCs registered with AMFI."
+  },
+  {
+    "q": "The pioneering MoU between DoP and AMFI for Mutual Fund Distribution through India Post was signed on:",
+    "o": [
+      "03.04.2025",
+      "17.07.2025",
+      "22.08.2025",
+      "12.12.2025"
+    ],
+    "a": 2,
+    "e": "• The DoP and AMFI signed a pioneering MoU on 22.08.2025 during the 30th Foundation Day Celebration of AMFI in Mumbai for mutual fund distribution."
+  }
+],
+  "220": [
+  {
+    "q": "The MoU between DoP and BSNL for Sale & Recharge of BSNL SIM Cards was signed on:",
+    "o": [
+      "17.07.2025",
+      "22.08.2025",
+      "17.09.2025",
+      "12.12.2025"
+    ],
+    "a": 2,
+    "e": "• The MoU with BSNL was signed on 17.09.2025 in New Delhi to expand BSNL's mobile connectivity reach across India."
+  },
+  {
+    "q": "Match the following MoUs with their correct dates:\r\n1. DoP — BSE Ltd. (Mutual Fund Distribution)\r\n2. DoP — SIDBI (CPV of Informal Micro Enterprises)\r\n3. DoP — Nippon India Mutual Fund (KYC)\r\n4. DoP — SBI Mutual Funds (KYC)",
+    "o": [
+      "12.12.2025; 31.12.2025; 03.04.2025; 29.04.2025",
+      "31.12.2025; 12.12.2025; 03.04.2025; 29.04.2025",
+      "12.12.2025; 31.12.2025; 29.04.2025; 03.04.2025",
+      "03.04.2025; 29.04.2025; 12.12.2025; 31.12.2025"
+    ],
+    "a": 0,
+    "e": "• BSE Ltd. MoU — 12.12.2025; SIDBI MoU — 31.12.2025; Nippon India MF — 03.04.2025; SBI MF — 29.04.2025."
+  },
+  {
+    "q": "The total revenue earned by the Department of Posts during FY 2024-25 was:",
+    "o": [
+      "Rs. 6,879.63 crore",
+      "Rs. 11,425.24 crore",
+      "Rs. 24,915.20 crore",
+      "Rs. 37,528.49 crore"
+    ],
+    "a": 1,
+    "e": "• The total revenue earned during FY 2024-25 was Rs. 11,425.24 crore."
+  },
+  {
+    "q": "Out of total revenue during FY 2024-25, the revenue earned from Commercial Activities was:",
+    "o": [
+      "Rs. 4,545.61 crore",
+      "Rs. 6,879.63 crore",
+      "Rs. 1,188.04 crore",
+      "Rs. 11,425.24 crore"
+    ],
+    "a": 0,
+    "e": "• Revenue from Commercial Activities during FY 2024-25 was Rs. 4,545.61 crore."
+  },
+  {
+    "q": "During FY 2024-25, the agency charges received from the Ministry of Finance for Savings Bank and Savings Certificate work was:",
+    "o": [
+      "Rs. 4,545.61 crore",
+      "Rs. 6,879.63 crore",
+      "Rs. 11,425.24 crore",
+      "Rs. 24,915.20 crore"
+    ],
+    "a": 1,
+    "e": "• Rs. 6,879.63 crore was received as agency charges from the Ministry of Finance during FY 2024-25."
+  },
+  {
+    "q": "The gross working expenditure of the Department during FY 2024-25 was:",
+    "o": [
+      "Rs. 11,425.24 crore",
+      "Rs. 24,915.20 crore",
+      "Rs. 37,528.49 crore",
+      "Rs. 48,953.73 crore"
+    ],
+    "a": 2,
+    "e": "• The gross working expenditure during FY 2024-25 was Rs. 37,528.49 crore."
+  },
+  {
+    "q": "The Revenue Deficit of the Department for FY 2024-25 was:",
+    "o": [
+      "Rs. 11,425.24 crore",
+      "Rs. 24,915.20 crore",
+      "Rs. 37,528.49 crore",
+      "Rs. 48,953.73 crore"
+    ],
+    "a": 1,
+    "e": "• After adjusting revenue receipts and recoveries, the Revenue Deficit for FY 2024-25 was Rs. 24,915.20 crore."
+  },
+  {
+    "q": "As on 31.12.2025, the number of employees registered on the Dak Karmayogi Portal is:",
+    "o": [
+      "4.54 lakh",
+      "5.02 lakh",
+      "5.27 lakh",
+      "5.62 lakh"
+    ],
+    "a": 1,
+    "e": "• 5.02 lakh employees have been registered on the Dak Karmayogi Portal as on 31.12.2025."
+  },
+  {
+    "q": "As on 31.12.2025, the number of employees registered on the iGOT Karmayogi Portal is:",
+    "o": [
+      "4.54 lakh",
+      "5.02 lakh",
+      "5.27 lakh",
+      "5.62 lakh"
+    ],
+    "a": 0,
+    "e": "• 4.54 lakh employees are registered on the iGOT Karmayogi Portal as on 31.12.2025."
+  },
+  {
+    "q": "The total course enrolments and completions on Dak Karmayogi and iGOT platforms (combined) as on 31.12.2025 were:",
+    "o": [
+      "87.32 lakh enrolments; 1.07 crore completions",
+      "1.07 crore enrolments; 87.32 lakh completions",
+      "56.27 lakh enrolments; 87.32 lakh completions",
+      "1.07 crore enrolments; 56.27 lakh completions"
+    ],
+    "a": 1,
+    "e": "• The platforms have recorded over 1.07 crore course enrolments and 87.32 lakh course completions collectively."
+  },
+  {
+    "q": "Phase I of the \"Serving the Karmayogi Way / Seva Bhav\" training program was conducted during:",
+    "o": [
+      "December 2024 – January 2025",
+      "February – March 2025",
+      "April – May 2025",
+      "July – August 2025"
+    ],
+    "a": 1,
+    "e": "• Phase I was conducted during February-March 2025 for central government employees of MDOs in NCR, Delhi, with six Lead Trainers trained and 484 officers/officials trained."
+  },
+  {
+    "q": "Under Phase II of the Seva Bhav Training, as on 31.12.2025, the number of employees trained across all Circles was:",
+    "o": [
+      "1,04,577",
+      "1,18,577",
+      "1,28,577",
+      "1,48,577"
+    ],
+    "a": 1,
+    "e": "• Under Phase II of the program, 1,18,577 employees (from PA to Director level) across all Circles have been trained as on 31.12.2025."
+  },
+  {
+    "q": "A specialized 3-day Marketing training module was developed by which Postal Training Centre?",
+    "o": [
+      "PTC Mysuru",
+      "PTC Vadodara",
+      "PTC Saharanpur",
+      "PTC Madurai"
+    ],
+    "a": 2,
+    "e": "• The 3-day Marketing training module was developed by PTC Saharanpur, in accordance with the directive of the Hon'ble Minister of Communications."
+  },
+  {
+    "q": "Under the Marketing training module, the total number of officials trained was:",
+    "o": [
+      "3,244",
+      "4,244",
+      "5,244",
+      "6,244"
+    ],
+    "a": 2,
+    "e": "• A total of 5,244 officials were trained in the 3-day Marketing training programme through PTCs, RTCs, and RAKNPA."
+  },
+  {
+    "q": "RAKNPA became the first Central Training Institute to receive what kind of accreditation under NSCSTI by the Capacity Building Commission?",
+    "o": [
+      "Three-Star \"Good\"",
+      "Four-Star \"Excellent\"",
+      "Five-Star \"Outstanding\"",
+      "Six-Star \"Exemplary\""
+    ],
+    "a": 2,
+    "e": "• RAKNPA became the first Central Training Institute to receive a Five-Star \"Outstanding\" Accreditation under the National Standards for Civil Services Training Institutions (NSCSTI) by the CBC."
+  },
+  {
+    "q": "Under the FRACing initiative, FRACing documents have been approved for how many cadres of DoP, with how many cadre-wise courses published?",
+    "o": [
+      "15 Cadres; 200 courses",
+      "17 Cadres; 226 courses",
+      "19 Cadres; 250 courses",
+      "23 Cadres; 273 courses"
+    ],
+    "a": 1,
+    "e": "• FRACing documents for 17 Cadres of DoP have been approved by the Internal FRACing Unit (IFU), and 226 Cadre-wise FRACed courses have been published."
+  },
+  {
+    "q": "Under the India Post IT 2.0 initiative, the total number of personnel trained was:",
+    "o": [
+      "4,52,699",
+      "4,59,366",
+      "4,74,386",
+      "5,02,000"
+    ],
+    "a": 1,
+    "e": "• A total of 4,59,366 personnel were trained under India Post IT 2.0, including 258 Master Trainers, 6,409 User Champions, and 4,52,699 End Users (of which 2,61,812 GDS were trained on IMA app)."
+  },
+  {
+    "q": "The India Post IT 2.0 training programme was successfully completed on:",
+    "o": [
+      "21.06.2025",
+      "21.07.2025",
+      "21.08.2025",
+      "21.09.2025"
+    ],
+    "a": 1,
+    "e": "• The IT 2.0 training programme was successfully completed on 21.07.2025, representing one of the largest capacity-building exercises by the Department."
+  },
+  {
+    "q": "The 17th tranche of Rozgar Mela was organised by the Department of Posts on:",
+    "o": [
+      "24.09.2025 at 30 locations",
+      "24.10.2025 at 40 locations",
+      "24.11.2025 at 50 locations",
+      "24.12.2025 at 60 locations"
+    ],
+    "a": 1,
+    "e": "• The 17th tranche of Rozgar Mela was organised on 24.10.2025 at 40 locations across the country."
+  },
+  {
+    "q": "A Sukanya Samriddhi Account can be opened by the guardian of a girl child until she attains:",
+    "o": [
+      "5 years",
+      "8 years",
+      "10 years",
+      "14 years"
+    ],
+    "a": 2,
+    "e": "• A SSA can be opened from the birth of the girl child till she attains the age of ten years."
+  },
+  {
+    "q": "The maximum deposit permissible in a Sukanya Samriddhi Account during a financial year is:",
+    "o": [
+      "Rs. 1,00,000",
+      "Rs. 1,25,000",
+      "Rs. 1,50,000",
+      "Rs. 2,00,000"
+    ],
+    "a": 2,
+    "e": "• A maximum deposit of Rs. 1,50,000 (with a minimum of Rs. 250) can be made in a financial year."
+  },
+  {
+    "q": "The maximum period for which deposits can be made in a Sukanya Samriddhi Account from the date of account opening is:",
+    "o": [
+      "14 years",
+      "15 years",
+      "18 years",
+      "21 years"
+    ],
+    "a": 1,
+    "e": "• Deposits can be made for a maximum period of 15 years from the date of account opening."
+  },
+  {
+    "q": "The number of Sukanya Samriddhi Accounts opened as on 31.03.2025 was:",
+    "o": [
+      "3.376 crore",
+      "3.533 crore",
+      "3.76 crore",
+      "4.16 crore"
+    ],
+    "a": 1,
+    "e": "• 3.533 crore Sukanya Samriddhi Accounts have been opened as on 31.03.2025 (Chapter 9). The figure 3.76 crore corresponds to live accounts as on 31.12.2025."
+  }
+],
+  "221": [
+  {
+    "q": "Vigilance Awareness Week, 2025, was observed during:",
+    "o": [
+      "27.10.2025 to 02.11.2025",
+      "28.10.2025 to 03.11.2025",
+      "29.10.2025 to 04.11.2025",
+      "30.10.2025 to 05.11.2025"
+    ],
+    "a": 0,
+    "e": "• VAW 2025 was observed from 27.10.2025 to 02.11.2025 as per CVC guidelines."
+  },
+  {
+    "q": "The theme of Vigilance Awareness Week 2025 was:",
+    "o": [
+      "\"Culture of Integrity for Nation's Prosperity\"",
+      "\"Vigilance: Our Shared Responsibility\"",
+      "\"Honesty is the Best Policy\"",
+      "\"Integrity in Action\""
+    ],
+    "a": 1,
+    "e": "• The theme of VAW 2025 was \"सतर्कता: हमारी साझा जिम्मेदारी\" / \"Vigilance: Our Shared Responsibility\"."
+  },
+  {
+    "q": "The number of Post Offices inspected with reference to AML Compliance from January 2025 to November 2025 was:",
+    "o": [
+      "1,18,742",
+      "1,28,742",
+      "1,30,833",
+      "1,40,833"
+    ],
+    "a": 2,
+    "e": "• 1,30,833 Post Offices have been inspected with reference to AML Compliance during January 2025 – November 2025."
+  },
+  {
+    "q": "Special Campaign 5.0 was conducted during:",
+    "o": [
+      "17 September to 2 October 2025",
+      "2 October to 31 October 2025",
+      "28 October to 3 November 2025",
+      "1 November to 30 November 2025"
+    ],
+    "a": 1,
+    "e": "• Special Campaign 5.0 was conducted from 2 October to 31 October 2025."
+  },
+  {
+    "q": "During Special Campaign 5.0, revenue generated from the sale of scrap was:",
+    "o": [
+      "Rs. 0.85 crore",
+      "Rs. 1.02 crore",
+      "Rs. 1.15 crore",
+      "Rs. 2.05 crore"
+    ],
+    "a": 1,
+    "e": "• Revenue of Rs. 1.02 crore was generated from the sale of scrap during Special Campaign 5.0. (The figure Rs. 1.15 crore was during Special Campaign 4.0 in 2024.)"
+  },
+  {
+    "q": "During Special Campaign 5.0, the number of old physical files and e-files weeded out was more than:",
+    "o": [
+      "7,352",
+      "17,352",
+      "27,352",
+      "70,000"
+    ],
+    "a": 1,
+    "e": "• More than 17,352 old physical files and e-files were weeded out during Special Campaign 5.0."
+  },
+  {
+    "q": "The average resolution time of CPGRAMS grievances during 2025 was reduced to:",
+    "o": [
+      "5 days",
+      "7 days",
+      "10 days",
+      "15 days"
+    ],
+    "a": 1,
+    "e": "• The average resolution time of CPGRAMS grievances dropped to 7 days during 2025 (CMS resolution time was 8 days)."
+  },
+  {
+    "q": "The 28th Universal Postal Union (UPU) Congress was held in Dubai from:",
+    "o": [
+      "1st to 12th September 2025",
+      "8th to 19th September 2025",
+      "15th to 26th September 2025",
+      "22nd September to 3rd October 2025"
+    ],
+    "a": 1,
+    "e": "• The 28th UPU Congress was held in Dubai from 8th to 19th September 2025, where India was re-elected to both the Council of Administration (CA) and the Postal Operations Council (POC)."
+  },
+  {
+    "q": "A major milestone achieved at the 28th UPU Congress was the launch of:",
+    "o": [
+      "UPI-RuPay interlinkage",
+      "UPI-UPU interlinkage with the Financial Interconnection Platform (IP)",
+      "UPI-SWIFT integration",
+      "India Post Crypto Wallet"
+    ],
+    "a": 1,
+    "e": "• A major milestone was the successful launch of the UPI-UPU interlinkage, integrating India's UPI with the UPU's Financial Interconnection Platform (IP)."
+  },
+  {
+    "q": "India Post organised the first Asia-Pacific Postal Leaders Forum at Jaipur during:",
+    "o": [
+      "19th to 21st January 2025",
+      "19th to 21st March 2025",
+      "19th to 21st June 2025",
+      "19th to 21st September 2025"
+    ],
+    "a": 1,
+    "e": "• The first Asia-Pacific Postal Leaders Forum was organised at Jaipur from 19th to 21st March 2025, bringing together delegates from around 28 countries."
+  },
+  {
+    "q": "Consider the following statements regarding India's role at international postal forums during 2025:\r\n1. India was re-elected to the UPU Council of Administration (CA).\r\n2. India was re-elected to the Postal Operations Council (POC).\r\n3. The first Asia-Pacific Postal Leaders Forum was hosted at Mumbai.\r\n4. UPI-UPU interlinkage was launched at the 28th UPU Congress.\r\n\r\nWhich of the above are correct?",
+    "o": [
+      "1, 2 and 4 only",
+      "1 and 4 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4"
+    ],
+    "a": 0,
+    "e": "• Statements 1, 2, and 4 are correct. Statement 3 is incorrect — the Asia-Pacific Postal Leaders Forum was held in Jaipur, not Mumbai."
+  },
+  {
+    "q": "The Department earmarks what percentage of allocations for Central Sector Schemes for the exclusive development of the North Eastern Region?",
+    "o": [
+      "5%",
+      "10%",
+      "15%",
+      "20%"
+    ],
+    "a": 1,
+    "e": "• The Department earmarks 10% of allocations for Central Sector Schemes for exclusive development of the North East Region."
+  },
+  {
+    "q": "The number of Post Offices in the North Eastern Region grew from 7,140 in 2018 to how many in 2025?",
+    "o": [
+      "7,758",
+      "8,148",
+      "8,758",
+      "9,158"
+    ],
+    "a": 2,
+    "e": "• Post Offices in NER increased from 7,140 in 2018 to 8,758 in 2025."
+  },
+  {
+    "q": "The number of Dak Ghar Niryat Kendras (DNKs) notified in the North Eastern Region is:",
+    "o": [
+      "92",
+      "102",
+      "112",
+      "122"
+    ],
+    "a": 3,
+    "e": "• 122 DNKs have been notified in the North Eastern Region to boost exports."
+  },
+  {
+    "q": "The total number of buildings owned/used by the Department of Posts is:",
+    "o": [
+      "24,915",
+      "25,915",
+      "26,915",
+      "27,915"
+    ],
+    "a": 1,
+    "e": "• The Department has 25,915 buildings — 4,844 Departmental and 21,071 Rented/Rent Free buildings."
+  },
+  {
+    "q": "During FY 2024-25, the Department completed construction of how many new postal buildings?",
+    "o": [
+      "47",
+      "57",
+      "67",
+      "77"
+    ],
+    "a": 1,
+    "e": "• 57 new postal buildings were constructed during FY 2024-25 along with 30 feeding rooms, 52 ladies toilets, and renovation of 115 buildings."
+  },
+  {
+    "q": "During 01.04.2025 to 31.12.2025, the construction and renovation of postal buildings was:",
+    "o": [
+      "21 constructed; 32 renovated",
+      "31 constructed; 52 renovated",
+      "41 constructed; 62 renovated",
+      "51 constructed; 72 renovated"
+    ],
+    "a": 1,
+    "e": "• 31 Postal buildings were constructed and 52 Postal buildings renovated during 01.04.2025 to 31.12.2025."
+  },
+  {
+    "q": "Which agency provided technical support for the seamless incorporation of advanced geospatial capabilities into DIGIPIN?",
+    "o": [
+      "Survey of India",
+      "ESRI India",
+      "NRSC ISRO",
+      "NIC"
+    ],
+    "a": 1,
+    "e": "• ESRI India provided technical support for the seamless incorporation of advanced geospatial capabilities into DIGIPIN."
+  },
+  {
+    "q": "As on 31st March 2025, the total employee strength of the Department of Posts is:",
+    "o": [
+      "4,64,386",
+      "4,74,386",
+      "4,84,386",
+      "4,94,386"
+    ],
+    "a": 1,
+    "e": "• Total employee strength stands at 4,74,386 — 1,95,753 Departmental Employees and 2,78,633 Gramin Dak Sevaks (GDSs)."
+  },
+  {
+    "q": "The departmental SC representation as per Chapter 17 includes how many employees and what percentage?",
+    "o": [
+      "32,603 (16.65%)",
+      "28,603 (14.65%)",
+      "35,603 (18.18%)",
+      "41,967 (21.45%)"
+    ],
+    "a": 0,
+    "e": "• SC employees number 32,603 (16.65%). ST employees: 15,700 (8.02%); OBC: 48,218; Women: 41,967; Differently-abled: 3,712."
+  },
+  {
+    "q": "The total number of women departmental employees in DoP (as per Chapter 17) is:",
+    "o": [
+      "31,967",
+      "41,967",
+      "48,218",
+      "51,967"
+    ],
+    "a": 1,
+    "e": "• Women departmental employees number 41,967 in DoP."
+  },
+  {
+    "q": "The number of differently-abled employees in DoP (as per Chapter 17) is:",
+    "o": [
+      "2,712",
+      "3,712",
+      "4,712",
+      "5,712"
+    ],
+    "a": 1,
+    "e": "• 3,712 differently-abled employees are part of the departmental workforce."
+  },
+  {
+    "q": "Financial assistance for wards (girl child) of Postal Employees pursuing non-technical degree courses is granted with a minimum aggregate of how many marks in Class XII?",
+    "o": [
+      "50%",
+      "55%",
+      "60%",
+      "65%"
+    ],
+    "a": 2,
+    "e": "• Wards (girl child) pursuing non-technical degree courses with a minimum of 60% aggregate in Class XII receive Rs. 250/- per month from 2018-19."
+  }
+],
+  "222": [
+  {
+    "q": "Under the Staff Welfare Scheme, the cash incentive for the 1st position holder in Classes X and XII in the Circle is:",
+    "o": [
+      "Rs. 4,800/-",
+      "Rs. 5,400/-",
+      "Rs. 6,000/-",
+      "Rs. 6,500/-"
+    ],
+    "a": 2,
+    "e": "• 1st Position — Rs. 6,000/-; 2nd — Rs. 4,800/-; 3rd — Rs. 4,200/-; 4th — Rs. 3,600/-; 5th — Rs. 3,000/-."
+  },
+  {
+    "q": "The Circle Welfare Fund Scheme for Gramin Dak Sevaks was originally introduced w.e.f., and revised w.e.f., respectively:",
+    "o": [
+      "01.04.2013 and 01.04.2025",
+      "01.10.2013 and 01.07.2025",
+      "01.10.2013 and 01.10.2025",
+      "01.07.2013 and 01.07.2025"
+    ],
+    "a": 1,
+    "e": "• The CWF Scheme for GDS was introduced w.e.f. 01.10.2013 and revised w.e.f. 01.07.2025."
+  },
+  {
+    "q": "Under the GDS Welfare Fund, the cash incentive for excellence in academic achievement (Class X & XII), 1st position is:",
+    "o": [
+      "Rs. 800/-",
+      "Rs. 900/-",
+      "Rs. 1,000/-",
+      "Rs. 1,100/-"
+    ],
+    "a": 3,
+    "e": "• 1st Position — Rs. 1,100/-; 2nd — Rs. 880/-; 3rd — Rs. 770/-; 4th — Rs. 660/-; 5th — Rs. 550/-."
+  },
+  {
+    "q": "Under the GDS Welfare Fund, the maximum period for scholarship to physically handicapped children is:",
+    "o": [
+      "5 years",
+      "6 years",
+      "8 years",
+      "10 years"
+    ],
+    "a": 2,
+    "e": "• Scholarship for physically handicapped children of GDS is granted for a maximum of 8 years."
+  },
+  {
+    "q": "Under welfare for orthopedically disabled employees, the maximum claim amount from the Circle Welfare Fund for a Motorized Tricycle is:",
+    "o": [
+      "Rs. 2,000 or 50% of cost, whichever is less",
+      "Rs. 5,000 or 50% of cost, whichever is less",
+      "Rs. 10,000 or 50% of cost, whichever is less",
+      "Rs. 15,000 or 50% of cost, whichever is less"
+    ],
+    "a": 3,
+    "e": "• An amount of Rs. 15,000/- or 50% of the cost of a Motorized Tricycle (whichever is less) can be claimed from the Circle Welfare Fund."
+  },
+  {
+    "q": "Shri Gaurav Chauhan of the Internal Audit Division successfully scaled which two mountains in 2025 representing India Post?",
+    "o": [
+      "Mt. Everest and Mt. K2",
+      "Mt. Kilimanjaro and Mt. Elbrus",
+      "Mt. Aconcagua and Mt. McKinley",
+      "Mt. Kanchenjunga and Mt. Annapurna"
+    ],
+    "a": 1,
+    "e": "• Shri Gaurav Chauhan scaled Mt. Kilimanjaro (5,895 m, Africa) in February 2025 and Mt. Elbrus (5,642 m, Europe) in August 2025."
+  },
+  {
+    "q": "As on 31st December 2025, the total number of youth interns engaged by the Department through the MY Bharat Portal was:",
+    "o": [
+      "8,178",
+      "9,178",
+      "10,178",
+      "11,178"
+    ],
+    "a": 2,
+    "e": "• A total of 10,178 interns were engaged by the Department under the MY Bharat Portal as on 31.12.2025."
+  },
+  {
+    "q": "As per LIMBS Portal, the total number of pending court cases as on 31.03.2025 was:",
+    "o": [
+      "19,972",
+      "20,599",
+      "21,299",
+      "22,599"
+    ],
+    "a": 2,
+    "e": "• Total pending court cases as on 31.03.2025 stood at 21,299; this reduced to 19,972 as on 05.01.2026."
+  },
+  {
+    "q": "The number of Supreme Court cases pending against DoP as on 05.01.2026 was:",
+    "o": [
+      "73",
+      "79",
+      "83",
+      "93"
+    ],
+    "a": 2,
+    "e": "• 83 Supreme Court cases were pending as on 05.01.2026 (up from 79 as on 31.03.2025)."
+  },
+  {
+    "q": "During January 2025 – December 2025, the Internal Audit Division of the Postal Directorate raised and settled paras as follows:",
+    "o": [
+      "1,500 raised; 1,000 settled",
+      "1,781 raised; 1,142 settled",
+      "1,781 raised; 1,500 settled",
+      "1,500 raised; 1,142 settled"
+    ],
+    "a": 1,
+    "e": "• The Internal Audit Division raised 1,781 paras and settled 1,142 paras from January 2025 to December 2025."
+  },
+  {
+    "q": "During January 2025 – September 2025, the Circle PAOs raised and settled field unit paras as follows:",
+    "o": [
+      "19,522 raised; 20,538 settled",
+      "18,522 raised; 19,538 settled",
+      "20,522 raised; 19,538 settled",
+      "17,522 raised; 18,538 settled"
+    ],
+    "a": 0,
+    "e": "• Circle PAOs raised 19,522 and settled 20,538 field unit paras from January 2025 to September 2025."
+  },
+  {
+    "q": "As on 15.01.2026, the number of C&AG paras pending with the Department of Posts is:",
+    "o": [
+      "04",
+      "06",
+      "09",
+      "16"
+    ],
+    "a": 1,
+    "e": "• Six (06) Paras of C&AG Reports are pending (06 Paras in C&AG Report No. 16 of 2025) with the Department of Posts as on 15.01.2026."
+  },
+  {
+    "q": "The total capital outlay for the Civil and Electrical Wing for FY 2025-26 was allocated at:",
+    "o": [
+      "Rs. 245.50 crore",
+      "Rs. 280.25 crore",
+      "Rs. 345.50 crore",
+      "Rs. 445.50 crore"
+    ],
+    "a": 2,
+    "e": "• The total capital outlay for the Civil and Electrical Wing for FY 2025-26 was allocated at Rs. 345.50 crore."
+  },
+  {
+    "q": "The expenditure incurred under the Civil and Electrical Wing capital outlay up to 31st December 2025 was:",
+    "o": [
+      "Rs. 180.25 crore",
+      "Rs. 245.50 crore",
+      "Rs. 280.25 crore",
+      "Rs. 345.50 crore"
+    ],
+    "a": 2,
+    "e": "• An expenditure of Rs. 280.25 crore was incurred up to 31st December 2025 under the Civil and Electrical Wing capital outlay."
+  },
+  {
+    "q": "During 2025, special conservation and restoration works were initiated for how many heritage post office buildings, with what budget?",
+    "o": [
+      "10 buildings; Rs. 10.00 crore",
+      "12 buildings; Rs. 15.00 crore",
+      "15 buildings; Rs. 20.00 crore",
+      "20 buildings; Rs. 25.00 crore"
+    ],
+    "a": 1,
+    "e": "• Special conservation works were initiated for 12 heritage post office buildings with an allocated budget of Rs. 15.00 crore."
+  },
+  {
+    "q": "During April 2025 to December 2025, the DBT amount disbursed by the Department of Posts to beneficiaries was:",
+    "o": [
+      "Rs. 5,000 crore",
+      "Rs. 10,000 crore",
+      "Rs. 12,500 crore",
+      "Rs. 15,000 crore"
+    ],
+    "a": 2,
+    "e": "• The Department disbursed Rs. 12,500 crore to 2.50 crore beneficiaries through DBT during April 2025 – December 2025."
+  },
+  {
+    "q": "Under the Special Campaign for Disposal of Pending Matters (SCDPM) conducted from 2nd October 2025 to 31st October 2025, the disposal rate achieved for VIP references and Parliamentary Assurances was:",
+    "o": [
+      "90%",
+      "95%",
+      "99%",
+      "100%"
+    ],
+    "a": 3,
+    "e": "• 100% disposal rate was achieved for VIP references and Parliamentary Assurances during SCDPM."
+  },
+  {
+    "q": "During SCDPM, the office space freed up nationwide by clearing obsolete equipment and records was approximately:",
+    "o": [
+      "25,000 sq. ft.",
+      "35,000 sq. ft.",
+      "45,000 sq. ft.",
+      "55,000 sq. ft."
+    ],
+    "a": 2,
+    "e": "• 45,000 square feet of office space was freed up nationwide by clearing obsolete equipment and records during SCDPM."
+  },
+  {
+    "q": "As on 31.12.2025, what percentage of the Postal Directorate, all 23 Circle Offices, and 54 Regional Offices migrated to the e-Office platform?",
+    "o": [
+      "75%",
+      "85%",
+      "95%",
+      "100%"
+    ],
+    "a": 3,
+    "e": "• 100% of the Postal Directorate, all 23 Circle Offices, and 54 Regional Offices have successfully migrated to the e-Office platform."
+  },
+  {
+    "q": "Through e-Office migration, the total number of e-files generated as on 31.12.2025 was over:",
+    "o": [
+      "3.5 lakh",
+      "4.5 lakh",
+      "5.5 lakh",
+      "6.5 lakh"
+    ],
+    "a": 2,
+    "e": "• Over 5.5 lakh e-files have been generated through e-Office migration as on 31.12.2025."
+  },
+  {
+    "q": "The Grid Connected Rooftop Solar Power Plants initiative has been implemented at how many post office buildings, generating what capacity?",
+    "o": [
+      "100 buildings; 1.5 MW",
+      "150 buildings; 2.5 MW",
+      "200 buildings; 3.5 MW",
+      "250 buildings; 5.0 MW"
+    ],
+    "a": 1,
+    "e": "• 150 post office buildings have been equipped with solar plants generating 2.5 MW of power."
+  }
+],
 
-  ,
 
-  "113": [
+    "113": [
     {
       "q": "Under the GDS (Conduct and Engagement) Rules, 2020, what is the maximum number of duty hours a Sevak shall be required to perform in a day?",
       "o": [
@@ -6914,7 +8355,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-22', 'MNOP PNOP', 'Paper I', [93, 94, 95, 96]),
   createTopic('p1-23', 'POSB CBS Manual', 'Paper I', [101, 102, 103]),
   createTopic('p1-24', 'SB Orders', 'Paper I', [97, 98, 99, 100]),
-  createTopic('p1-25', 'Annual Report 2024-25', 'Paper I', [110, 111, 112]),
+  createTopic('p1-25', "Annual Reports and Book of Information of D/o Posts", 'Paper I', [110, 111, 112, 217, 218, 219, 220, 221, 222]),
   createTopic('p1-28', 'IPPB', 'Paper I', [107, 108, 109]),
   createTopic('p1-30', 'CCS (Conduct) Rules, 1964', 'Paper I', [54, 55]),
   createTopic('p1-31', 'CCS (CCA) Rules, 1965', 'Paper I', [50, 51, 52, 53]),
@@ -6939,7 +8380,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-6', 'MANUAL ON POLICIES AND PROCEDURES FOR PURCHASE OF GOODS AND SERVICES', 'Paper III'),
   createTopic('p3-7', 'GPF (CS) Rules 1960', 'Paper III', [72]),
   createTopic('p3-8', 'CCS (Pension) Rules 2021', 'Paper III', [116, 117, 118]),
-  createTopic('p3-9', 'CCS (Commutation of Pension) Rules 1981', 'Paper III'),
+  createTopic('p3-9', 'CCS (Commutation of Pension) Rules 1981', 'Paper III', [194, 195]),
   createTopic('p3-10', 'Sexual Harassment at Work place (Prevention, prohibition & Redressal) Act, 2013', 'Paper III', [139, 140]),
   createTopic('p3-11', 'Central Civil Services (Implementation of NPS) Rules, 2021', 'Paper III', [73]),
   createTopic('p3-12', 'General Financial Rules 2017', 'Paper III'),

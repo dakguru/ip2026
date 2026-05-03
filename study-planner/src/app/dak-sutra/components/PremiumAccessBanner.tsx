@@ -29,7 +29,7 @@ export default function PremiumAccessBanner() {
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="relative w-full max-w-sm bg-white dark:bg-zinc-900 rounded-[2rem] shadow-2xl overflow-hidden border border-white/20"
+                        className="relative w-full max-w-sm bg-white  rounded-[2rem] shadow-2xl overflow-hidden border border-white/20"
                     >
                         {/* Colorful Animated Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 opacity-10" />
@@ -41,9 +41,9 @@ export default function PremiumAccessBanner() {
                             {/* Close Button */}
                             <button 
                                 onClick={dismissBanner}
-                                className="absolute top-4 right-4 p-2 rounded-full bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 transition-colors"
+                                className="absolute top-4 right-4 p-2 rounded-full bg-black/5 hover:bg-black/10   transition-colors"
                             >
-                                <X className="w-4 h-4 text-zinc-500 dark:text-zinc-400" />
+                                <X className="w-4 h-4 text-zinc-500 " />
                             </button>
 
                             {/* Header Icon */}
@@ -54,7 +54,7 @@ export default function PremiumAccessBanner() {
                                         <Crown className="w-8 h-8 text-white" />
                                     </div>
                                     <div className="absolute -top-1 -right-1">
-                                        <div className="bg-white dark:bg-zinc-800 rounded-full p-1 shadow-md border border-zinc-100 dark:border-zinc-700">
+                                        <div className="bg-white  rounded-full p-1 shadow-md border border-zinc-100 ">
                                             <Sparkles className="w-3 h-3 text-amber-500" />
                                         </div>
                                     </div>
@@ -63,24 +63,24 @@ export default function PremiumAccessBanner() {
 
                             {/* Text Content */}
                             <div className="text-center space-y-3">
-                                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-600 dark:text-indigo-400">
+                                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-600 ">
                                     Important Announcement
                                 </p>
-                                <h3 className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-100 leading-tight">
+                                <h3 className="text-xl sm:text-2xl font-black text-zinc-900  leading-tight">
                                     Dak Sutra Access
                                 </h3>
                                 <div className="h-1 w-12 bg-gradient-to-r from-indigo-500 to-fuchsia-500 mx-auto rounded-full" />
                                 
-                                <p className="text-[13px] text-zinc-600 dark:text-zinc-400 leading-relaxed pt-2">
+                                <p className="text-[13px] text-zinc-600  leading-relaxed pt-2">
                                     Dear Aspirants,<br />
                                     Dak Sutra content has been made available free of cost for a limited period.
                                 </p>
 
-                                <div className="bg-indigo-50/50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-800/50 rounded-2xl p-4 mt-4">
+                                <div className="bg-indigo-50/50  border border-indigo-100  rounded-2xl p-4 mt-4">
                                     <div className="flex items-start gap-3">
-                                        <ShieldAlert className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
-                                        <p className="text-[12px] text-left font-bold text-indigo-900 dark:text-indigo-200 leading-tight">
-                                            Access will be available only to <span className="text-fuchsia-600 dark:text-fuchsia-400">Premium Members</span> with effect from 18.04.2026.
+                                        <ShieldAlert className="w-5 h-5 text-indigo-600  shrink-0 mt-0.5" />
+                                        <p className="text-[12px] text-left font-bold text-indigo-900  leading-tight">
+                                            Access will be available only to <span className="text-fuchsia-600 ">Premium Members</span> with effect from 18.04.2026.
                                         </p>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@ export default function PremiumAccessBanner() {
                             {/* Action Button */}
                             <button
                                 onClick={dismissBanner}
-                                className="w-full mt-8 py-3.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-xl font-bold text-sm shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                                className="w-full mt-8 py-3.5 bg-zinc-900  text-white  rounded-xl font-bold text-sm shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
                             >
                                 Understood
                                 <ArrowRight className="w-4 h-4" />

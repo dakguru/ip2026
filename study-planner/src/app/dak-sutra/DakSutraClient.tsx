@@ -36,45 +36,45 @@ const CATEGORY_CONFIG: Record<string, {
 }> = {
     Rule: {
         gradient: "from-blue-600/10 via-blue-500/5 to-transparent",
-        border: "border-blue-200 dark:border-blue-500/20",
-        badge: "bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400",
-        badgeText: "text-blue-600 dark:text-blue-400",
+        border: "border-blue-200 ",
+        badge: "bg-blue-50  text-blue-700 ",
+        badgeText: "text-blue-600 ",
         icon: <Gavel className="w-3.5 h-3.5" />,
         glow: "shadow-blue-500/10",
         stripe: "from-blue-500 to-blue-400",
     },
     Section: {
         gradient: "from-violet-600/10 via-violet-500/5 to-transparent",
-        border: "border-violet-200 dark:border-violet-500/20",
-        badge: "bg-violet-50 dark:bg-violet-500/10 text-violet-700 dark:text-violet-400",
-        badgeText: "text-violet-600 dark:text-violet-400",
+        border: "border-violet-200 ",
+        badge: "bg-violet-50  text-violet-700 ",
+        badgeText: "text-violet-600 ",
         icon: <BookOpen className="w-3.5 h-3.5" />,
         glow: "shadow-violet-500/10",
         stripe: "from-violet-500 to-violet-400",
     },
     Regulation: {
         gradient: "from-emerald-600/10 via-emerald-500/5 to-transparent",
-        border: "border-emerald-200 dark:border-emerald-500/20",
-        badge: "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400",
-        badgeText: "text-emerald-600 dark:text-emerald-400",
+        border: "border-emerald-200 ",
+        badge: "bg-emerald-50  text-emerald-700 ",
+        badgeText: "text-emerald-600 ",
         icon: <Scale className="w-3.5 h-3.5" />,
         glow: "shadow-emerald-500/10",
         stripe: "from-emerald-500 to-emerald-400",
     },
     Circular: {
         gradient: "from-amber-600/10 via-amber-500/5 to-transparent",
-        border: "border-amber-200 dark:border-amber-500/20",
-        badge: "bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400",
-        badgeText: "text-amber-600 dark:text-amber-400",
+        border: "border-amber-200 ",
+        badge: "bg-amber-50  text-amber-700 ",
+        badgeText: "text-amber-600 ",
         icon: <Mail className="w-3.5 h-3.5" />,
         glow: "shadow-amber-500/10",
         stripe: "from-amber-500 to-amber-400",
     },
     Explanation: {
         gradient: "from-indigo-600/10 via-indigo-500/5 to-transparent",
-        border: "border-indigo-200 dark:border-indigo-500/20",
-        badge: "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400",
-        badgeText: "text-indigo-600 dark:text-indigo-400",
+        border: "border-indigo-200 ",
+        badge: "bg-indigo-50  text-indigo-700 ",
+        badgeText: "text-indigo-600 ",
         icon: <Lightbulb className="w-3.5 h-3.5" />,
         glow: "shadow-indigo-500/10",
         stripe: "from-indigo-500 to-indigo-400",
@@ -84,9 +84,9 @@ const CATEGORY_CONFIG: Record<string, {
 const DEFAULT_CONFIG = CATEGORY_CONFIG.Rule;
 
 const TAG_COLORS: Record<string, string> = {
-    "LDCE IP": "bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-500/20",
-    "PS Group B": "bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-200 dark:border-purple-500/20",
-    "GDS": "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-500/20",
+    "LDCE IP": "bg-blue-50  text-blue-600  border-blue-200 ",
+    "PS Group B": "bg-purple-50  text-purple-600  border-purple-200 ",
+    "GDS": "bg-emerald-50  text-emerald-600  border-emerald-200 ",
 };
 
 interface DakSutraClientProps {
@@ -100,17 +100,22 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
     const [isLoading, setIsLoading] = useState(true);
     const [search, setSearch] = useState("");
     const [categoryFilter, setCategoryFilter] = useState("all");
+    const [topicFilter, setTopicFilter] = useState("all");
     const [debouncedSearch, setDebouncedSearch] = useState("");
 
-    // Force light mode on this page regardless of user's dark mode preference
-    useEffect(() => {
-        const html = document.documentElement;
-        const wasDark = html.classList.contains('dark');
-        html.classList.remove('dark');
-        return () => {
-            if (wasDark) html.classList.add('dark');
-        };
-    }, []);
+    const allTopics = useMemo(() => {
+        const set = new Set<string>();
+        entries.forEach(e => {
+            if (e.act_name) set.add(e.act_name);
+        });
+        return Array.from(set).sort();
+    }, [entries]);
+
+    const filteredEntries = useMemo(() => {
+        if (topicFilter === "all") return entries;
+        return entries.filter(e => e.act_name === topicFilter);
+    }, [entries, topicFilter]);
+
 
     useEffect(() => {
         const t = setTimeout(() => setDebouncedSearch(search), 300);
@@ -210,16 +215,36 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                 {/* Search + Filter + Cards */}
                 <div className="w-full md:max-w-7xl md:mx-auto px-3 md:px-6 pt-4 md:pt-8 pb-[max(32px,calc(env(safe-area-inset-bottom,0px)+24px))]">
 
-                    {/* Search */}
-                    <div className="mb-3 relative">
-                        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none" />
-                        <input
-                            type="text"
-                            placeholder="Search rules, sections, acts..."
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 md:py-4 bg-white border border-zinc-200 rounded-2xl text-[13px] md:text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all font-medium shadow-sm"
-                        />
+                    {/* Search and Topic Filter */}
+                    <div className="mb-3 flex flex-col sm:flex-row gap-3">
+                        <div className="flex-1 relative">
+                            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none" />
+                            <input
+                                type="text"
+                                placeholder="Search rules, sections, acts..."
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                className="w-full pl-10 pr-4 py-3 bg-white border border-zinc-200 rounded-2xl text-[13px] md:text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all font-medium shadow-sm h-12 md:h-14"
+                            />
+                        </div>
+                        <div className="w-full sm:w-64 shrink-0">
+                            <select
+                                value={topicFilter}
+                                onChange={(e) => setTopicFilter(e.target.value)}
+                                className="w-full h-12 md:h-14 px-3.5 bg-white border border-zinc-200 rounded-2xl text-[13px] md:text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all font-medium shadow-sm appearance-none cursor-pointer"
+                                style={{
+                                    backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'right 1rem center',
+                                    backgroundSize: '1.25rem'
+                                }}
+                            >
+                                <option value="all">All Topics</option>
+                                {allTopics.map(topic => (
+                                    <option key={topic} value={topic}>{topic}</option>
+                                ))}
+                            </select>
+                        </div>
                     </div>
 
                     {/* Category Filter Pills */}
@@ -252,11 +277,11 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                     </div>
 
                     {/* Results count */}
-                    {!isLoading && entries.length > 0 && (
+                    {!isLoading && filteredEntries.length > 0 && (
                         <div className="flex items-center gap-2 mb-3">
                             <div className="h-px flex-1 bg-zinc-200" />
                             <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest px-1">
-                                {entries.length} {entries.length === 1 ? "entry" : "entries"}
+                                {filteredEntries.length} {filteredEntries.length === 1 ? "entry" : "entries"}
                             </span>
                             <div className="h-px flex-1 bg-zinc-200" />
                         </div>
@@ -265,9 +290,9 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                     {/* ── CARDS ── */}
                     {isLoading ? (
                         <DakSutraLoader />
-                    ) : entries.length > 0 ? (
+                    ) : filteredEntries.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
-                            {entries.map((entry) => {
+                            {filteredEntries.map((entry) => {
                                 const cfg = CATEGORY_CONFIG[entry.category] || DEFAULT_CONFIG;
                                 return (
                                     <Link
