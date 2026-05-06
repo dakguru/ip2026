@@ -136,8 +136,8 @@ export const cgegis_set1: RawQuestion[] = [
     {
         q: "Which form is used for CGEGIS 'Nomination' when the employee has a family?",
         o: ["Form 3", "Form 7", "Form 8", "Form 10"],
-        a: 1,
-        e: "Form 7 is for nomination when the employee has a family. Form 8 is for when they have no family."
+        a: 2,
+        e: "Form 8 is used for nomination when the employee has a family. Form 7 is used for nomination when the employee has no family."
     },
     {
         q: "Can an employee 'Loan' against their CGEGIS savings fund accumulation?",

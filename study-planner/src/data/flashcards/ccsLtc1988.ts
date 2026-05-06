@@ -218,8 +218,8 @@ export const ltc_set1: RawQuestion[] = [
             "Only if they travel on different dates",
             "Only if the Head of Office permits"
         ],
-        a: 0,
-        e: "Unlike Hometown LTC where different members can travel at different times, for \"Anywhere in India\" LTC, all members of the family (including the employee) who avail of the concession in a block must visit the same declared destination."
+        a: 1,
+        e: "Under CCS (LTC) Rules, for \"Anywhere in India\" LTC, different members of the family may visit different places within the same block, and they need not travel together with the employee. Each member's claim is settled based on their actual journey, subject to entitlement. This is in contrast to the older restrictive interpretation where a single declared destination was required."
     },
     {
         q: "A fresh recruit completes 8 years of service on 31st August 2024. Can he avail of his 8th LTC occasion in the grace year (i.e., in 2025)?",

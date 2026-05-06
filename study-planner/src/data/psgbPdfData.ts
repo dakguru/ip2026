@@ -409,7 +409,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Central Services (Medical Attendance) Rules, 1944",
             "filename": "CS_Medical_Attendance_Rules_1944.pdf",
             "path": "/notes/paper-3/CS_Medical_Attendance_Rules_1944.pdf",
-            "size": "4.2 MB",
+            "size": "4.3 MB",
             "color": "indigo",
             "topic": "CCS Rules & Establishment"
         },
