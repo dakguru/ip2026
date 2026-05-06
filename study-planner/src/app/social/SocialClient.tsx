@@ -233,8 +233,38 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
         setBannerLikes(prev => bannerLiked ? prev - 1 : prev + 1);
     };
 
+    // Helper to enrich posts with special admin answers if they match certain titles
+    const enrichPosts = (posts: PostType[]) => {
+        return posts.map(post => {
+            if (post.title?.trim() === "What is the Difference between void and lapse as POLI Rules,2011" && !post.answer) {
+                return {
+                    ...post,
+                    answer: {
+                        author: "Dak Guru Team",
+                        role: "Official Admin",
+                        level: "Admin",
+                        avatar: "DG",
+                        content: "Hello S Suresh Kumar! 👋 \n\nExcellent question. Understanding the distinction between a Lapsed and a Void policy is crucial for both exams and field operations under the POLI Rules, 2011.\n\nHere is a detailed breakdown for you:\n\n──────────────────────────────\n\n⏳ 1. Lapsed Policy (Temporarily Inactive)\nThink of this as a \"Sleep Mode\". The policy is still alive but currently suspended because the premiums weren't paid on time.\n\n⚡ The Cause: Simply the non-payment of premiums. \n   • New Policies (< 3 years): Lapses after 6 consecutive months of unpaid premiums.\n   • Old Policies (> 3 years): Lapses after 12 consecutive months of unpaid premiums.\n\n🚫 The Consequence: The life cover stops, and no claim is payable during this period (unless it qualifies for paid-up value).\n\n🛠️ The Remedy: It CAN be revived! Just pay the pending premium arrears along with the applicable default interest, subject to certain health declarations.\n\n───────────────────────────────\n\n🛑 2. Void Policy (Permanently Cancelled)\nThink of this as a \"Contract Terminated\". A policy becomes \"void\" when there is a fundamental breach of trust or a violation of the core rules of the insurance contract.\n\n⚡ The Cause: Serious violations, such as:\n   • Suppression of material facts or providing false information regarding age, health, or occupation at the time of proposal.\n   • The policyholder committing suicide within one year from the date of acceptance of the policy.\n   • Holding multiple policies that exceed the aggregate maximum Sum Assured limit prescribed by the Department.\n\n💀 The Consequence: The policy is permanently cancelled. The Department assumes no liability, and the premiums already paid are generally forfeited to the Government. \n\n❌ The Remedy: It CANNOT be revived under any circumstances. \n\n───────────────────────────────\n\nHope this helps your preparation! Keep up the great work! 🚀\n— Admin, Dak Guru",
+                        comparisonTable: {
+                            headers: ["Feature", "🟡 Lapsed Policy", "🔴 Void Policy"],
+                            rows: [
+                                { feature: "Reason", lapsed: "Missed Premiums (6/12 Rule)", void: "Fraud / Rule Violations" },
+                                { feature: "Status", lapsed: "Temporarily Inactive", void: "Permanently Invalid" },
+                                { feature: "Revival", lapsed: "✅ YES (Arrears + Int)", void: "❌ NO (Final)" },
+                                { feature: "Money", lapsed: "Safe / Revivable", void: "Usually Forfeited" }
+                            ]
+                        },
+                        upvotes: 98,
+                        comments: 12
+                    }
+                };
+            }
+            return post;
+        });
+    };
+
     // Initial Data merged from Server Prop + Mock
-    const [feedData, setFeedData] = useState<PostType[]>([...initialPosts, ...FEED_DATA]);
+    const [feedData, setFeedData] = useState<PostType[]>(enrichPosts([...initialPosts, ...FEED_DATA]));
 
     const [savedPostIds, setSavedPostIds] = useState<number[]>([]);
     const [myQuestionIds, setMyQuestionIds] = useState<number[]>([]);
@@ -247,9 +277,8 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
             const res = await fetch('/api/community/posts');
             if (res.ok) {
                 const data = await res.json();
-                // Merge new data with FEED_DATA, avoiding duplicates if necessary?
-                // For simplicity, just replacing the "dynamic" part of the state
-                setFeedData([...data, ...FEED_DATA]);
+                // Merge new data with FEED_DATA, enriching it first
+                setFeedData(enrichPosts([...data, ...FEED_DATA]));
             }
         } catch (e) {
             console.error("Failed to fetch posts", e);

@@ -618,6 +618,39 @@ export const PostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefre
                         {post.answer.content}
                     </div>
 
+                    {post.answer.comparisonTable && isExpanded && (
+                        <div className="my-4 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm animate-in fade-in slide-in-from-top-2 duration-500">
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-xs text-left border-collapse">
+                                    <thead>
+                                        <tr className="bg-zinc-100 dark:bg-zinc-800/50">
+                                            {post.answer.comparisonTable.headers.map((h: string, i: number) => (
+                                                <th key={i} className="px-4 py-3 font-bold text-zinc-900 dark:text-zinc-100 border-b border-zinc-200 dark:border-zinc-800">
+                                                    {h}
+                                                </th>
+                                            ))}
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+                                        {post.answer.comparisonTable.rows.map((row: any, i: number) => (
+                                            <tr key={i} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
+                                                <td className="px-4 py-3 font-bold text-zinc-500 dark:text-zinc-400 bg-zinc-50/30 dark:bg-zinc-900/30 border-r border-zinc-100 dark:border-zinc-800">
+                                                    {row.feature}
+                                                </td>
+                                                <td className="px-4 py-3 text-zinc-800 dark:text-zinc-200 bg-amber-50/20 dark:bg-amber-900/10">
+                                                    {row.lapsed}
+                                                </td>
+                                                <td className="px-4 py-3 text-zinc-800 dark:text-zinc-200 bg-red-50/20 dark:bg-red-900/10">
+                                                    {row.void}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    )}
+
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
                         className="text-blue-600 text-xs font-bold hover:underline mb-4 block"
