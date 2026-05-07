@@ -16,6 +16,77 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "07.05.2026",
+        items: [
+            {
+                title: "📑 Current Affairs April 2026 PDF Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>April 2026 Current Affairs Monthly Digest</strong> PDF sourced from Adda247!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-rose-50/50 dark:bg-rose-900/10 p-3 rounded-xl border border-rose-100 dark:border-rose-800/50">
+                                <p className="font-bold text-rose-700 dark:text-rose-300 text-[10px] uppercase tracking-wide">Current Affairs Section</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Structured monthly summary of national and international events to streamline your preparation.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-rose-600 dark:text-rose-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Monthly Digests archive!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "🎯 MCQ Overhaul: CCS (LTC) Rules, 1988",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have completely revamped the MCQ bank for <strong>CCS (LTC) Rules, 1988</strong> with <strong>161 High-Quality, Exam-Oriented Questions</strong>!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide">PS Group B (Paper II)</p>
+                                <ul className="space-y-2 mt-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✅</span>
+                                        <span><strong>6 Detailed Sets:</strong> Covering Title, Eligibility, Entitlements, and Fraudulent Claims.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">✅</span>
+                                        <span><strong>2024-2026 Standards:</strong> Integrated latest road mileage rates and air-travel policies.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-amber-500 mt-0.5">✅</span>
+                                        <span><strong>BNS References:</strong> Updated criminal prosecution clauses as per post-July 2024 standards.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold">
+                            <span>🚀</span> Master LTC rules with active recall practice!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📊 CEA & Hostel Subsidy Questions Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>Updated the question bank for <strong>Children Education Allowance (CEA) and Hostel Subsidy</strong>!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">PS Group B (Paper II)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">31 refined MCQs reflecting the latest 2024 regulatory changes and claim procedures.</p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "06.05.2026",
         items: [
             {

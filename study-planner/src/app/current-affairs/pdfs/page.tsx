@@ -14,7 +14,8 @@ import HomeHeader from '@/components/HomeHeader';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 
 const MONTHLY_PDFS = [
-    { title: "March 2026", file: "March-2026.pdf", isNew: true },
+    { title: "April 2026", file: "April-2026.pdf", isNew: true },
+    { title: "March 2026", file: "March-2026.pdf" },
     { title: "February 2026", file: "February-2026.pdf" },
     { title: "January 2026", file: "January-2026.pdf" },
     { title: "December 2025", file: "December-2025.pdf" },
@@ -61,7 +62,7 @@ export default function CurrentAffairsPDFs() {
                                 </div>
                                 <div>
                                     <h2 className="text-lg font-black text-zinc-900 dark:text-white">PDF Archive</h2>
-                                    <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Aug 2025 - Mar 2026</p>
+                                    <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Aug 2025 - Apr 2026</p>
                                 </div>
                             </div>
                             <div className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-[10px] font-bold text-zinc-500">

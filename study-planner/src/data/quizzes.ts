@@ -1,6 +1,6 @@
 import { QuizTopic, QuizSet } from "@/lib/quizTypes";
 import { ccs_pension_2021_set1, ccs_pension_2021_set2, ccs_pension_2021_set3 } from './flashcards/ccsPension2021';
-import { ltc_set1, ltc_set2, ltc_set3 } from './flashcards/ccsLtc1988';
+import { ltc_set1, ltc_set2, ltc_set3, ltc_set4, ltc_set5, ltc_set6 } from './flashcards/ccsLtc1988';
 import { cs_ma_set1, cs_ma_set2, cs_ma_set3 } from './flashcards/csMa1944';
 import { leave_set1, leave_set2, leave_set3, leave_set4, leave_set5, leave_set6 } from './flashcards/ccsLeave1972';
 import { cea_rules_set1 } from './flashcards/ceaRules';
@@ -5853,6 +5853,9 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   119: ltc_set1,
   120: ltc_set2,
   121: ltc_set3,
+  301: ltc_set4,
+  302: ltc_set5,
+  303: ltc_set6,
   122: cs_ma_set1,
   123: cs_ma_set2,
   124: cs_ma_set3,

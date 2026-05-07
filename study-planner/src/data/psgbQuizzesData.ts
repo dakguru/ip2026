@@ -54,7 +54,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-52', "General Provident Fund (Central Service) Rules, 1960", 'Paper II', [72]),
   createTopic('psgb-53', "Central Services (Medical Attendance) Rules, 1944", 'Paper II', [122, 123, 124]),
   createTopic('psgb-54', "Fundamental and Supplementary Rules", 'Paper II', [201, 202, 203]),
-  createTopic('psgb-55', "Central Civil Services (Leave Travel Concession) Rules, 1988", 'Paper II', [119, 120, 121]),
+  createTopic('psgb-55', "Central Civil Services (Leave Travel Concession) Rules, 1988", 'Paper II', [119, 120, 121, 301, 302, 303]),
   createTopic('psgb-56', "Central Civil Services (Revised Pay) Rules, 2016", 'Paper II', [199, 200]),
   createTopic('psgb-57', "Rules relating to Children Education allowance and reimbursement of Hostel Subsidy", 'Paper II', [129]),
   createTopic('psgb-58', "Central Government Employees Group Insurance Scheme, 1980", 'Paper II', [130]),
