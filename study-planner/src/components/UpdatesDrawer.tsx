@@ -16,6 +16,38 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "08.05.2026",
+        items: [
+            {
+                title: "⚖️ Dak Sutra: Financial Powers Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have added comprehensive <strong>Dak Sutra</strong> modules covering the revised <strong>DFPR 2024 Financial Powers</strong>!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-indigo-50/50 dark:bg-indigo-900/10 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/50">
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-indigo-500 mt-0.5">✅</span>
+                                        <span><strong>Divisional Head Powers (Part 1 & 2):</strong> Complete coverage of Establishment, Rent, Civil Works, and Refunds.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-blue-500 mt-0.5">✅</span>
+                                        <span><strong>HOC Financial Powers (Part 1):</strong> Detailed rules on Procurement, Capital Works, and Write-Offs.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Dak Sutra section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "07.05.2026",
         items: [
             {
