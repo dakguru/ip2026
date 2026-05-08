@@ -26,7 +26,8 @@ const ACT_NAMES = [
     "SB Orders",
     "Post Office Act 2023",
     "PMLA Act",
-    "GDS Conduct & Engagement Rules"
+    "GDS Conduct & Engagement Rules",
+    "DFPR 2024"
 ];
 
 const EXAM_TAGS = ["LDCE IP", "PS Group B", "GDS"];
