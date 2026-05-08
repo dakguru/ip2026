@@ -1,0 +1,552 @@
+Q1. (The PO Regulations, 2024) [Difficulty: Easy]
+Which of the following is considered an "accountable item" under the Post Office Regulations, 2024?
+A. Ordinary Letter
+B. Registered Letter
+C. Unregistered Printed Paper
+D. Periodical Post
+Answer: B
+Explanation:
+Regulation 2(1)(a) defines accountable items as those providing a receipt at booking and requiring a signature upon delivery, explicitly including International Registered Letter items.
+
+Q2. (The PO Regulations, 2024) [Difficulty: Moderate]
+Consider the following statements regarding the business hours of post offices:
+1. Branch post offices shall be kept open for a maximum period of five hours in a day.
+2. Savings Bank counter services are generally available for eight hours on normal weekdays.
+Which of the above statements is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation:
+Under Regulation 3, Branch post offices are kept open for a maximum of five hours. Savings Bank counter services are generally available for six hours, not eight.
+
+Q3. (The PO Regulations, 2024) [Difficulty: Moderate]
+Which of the following is NOT prohibited from being transmitted as printed papers and literature for the blind?
+A. Items containing any postage stamp or form of prepayment
+B. Items containing a paper representing a monetary value
+C. Items bearing any inscription or item of correspondence
+D. An enclosed uncancelled card bearing the printed address of the sender prepaid for return
+Answer: D
+Explanation:
+Regulation 29 prohibits postage stamps and monetary values, EXCEPT an enclosed card, envelope, or wrapper bearing the printed address of the sender prepaid for return.
+
+Q4. (The PO Regulations, 2024) [Difficulty: Hard]
+A sender books an inward international item. Upon delivery, it is found that the postage is insufficiently prepaid. Which of the following is the correct charge recovered from the addressee?
+A. Double the prepaid rate
+B. Double the deficiency, subject to a minimum of one rupee
+C. The exact deficiency amount
+D. The item is returned to the sender without delivery
+Answer: B
+Explanation:
+Regulation 72(1) states that for an insufficiently paid inward international item, double the deficiency is charged, provided the amount charged shall in no case be less than rupee one.
+
+Q5. (The PO Regulations, 2024) [Difficulty: Easy]
+If an accountable item cannot be delivered on its first presentation, how many more times can it be issued for delivery?
+A. Issued twice more
+B. Issued once again
+C. It is never issued again
+D. Kept at the post office until collected
+Answer: B
+Explanation:
+Regulation 42(1) explicitly states that if an accountable item is not delivered due to any reason on its first presentation, it shall be issued once again for delivery.
+
+Q6. (The PO Regulations, 2024) [Difficulty: Moderate]
+Which of the following items are completely prohibited from being sent by post under domestic regulations?
+A. Any ticket or proposal relating to a private lottery
+B. Any indecent, immoral or obscene printing
+C. Any item having a pictorial representation of a proclaimed offender
+D. All of the above
+Answer: D
+Explanation:
+Regulation 25(1) clearly lists private lottery tickets, indecent or obscene printings, and pictorial representations of proclaimed offenders as prohibited domestic items.
+
+Q7. (The PO Regulations, 2024) [Difficulty: Hard]
+Match the Standard Remarks used for undelivered items with their final disposal scenarios:
+Column I
+1. Addressee not found
+2. Addressee left without instructions
+3. Unclaimed
+Column II
+X. Returned to sender immediately
+Y. Item not collected within prescribed time after intimation
+Z. Keep in deposit for 7 days and if nobody claims, return to sender
+A. 1-Z, 2-X, 3-Y
+B. 1-X, 2-Z, 3-Y
+C. 1-Y, 2-X, 3-Z
+D. 1-Z, 2-Y, 3-X
+Answer: A
+Explanation:
+As per the Standard Remarks table in Regulation 66, "Addressee not found" requires keeping in deposit for 7 days. "Left without instructions" is returned to sender. "Unclaimed" applies when an item is not collected in time.
+
+Q8. (The PO Regulations, 2024) [Difficulty: Moderate]
+All of the following items are legally acceptable as "Gyan Post" EXCEPT:
+A. Text books used by aspirants of competitive examinations
+B. Books containing incidental announcements or list of books
+C. Magazines and journals published at a regular interval of time
+D. Literature related to social, cultural, and religious nature
+Answer: C
+Explanation:
+Under Regulation 92A(2)(a), "Gyan Post" items shall not contain any publication published at regular intervals, such as magazines or journals.
+
+Q9. (The PO Regulations, 2024) [Difficulty: Easy]
+Under the compensation policy for domestic items, what is the compensation payable for the loss or damage of a Speed Post (Domestic) article?
+A. Rs. 500 flat rate
+B. Rs. 100 or actual value, whichever is less
+C. Double the Speed Post postage paid or Rs. 1000, whichever is less
+D. Rs. 1000 flat rate
+Answer: C
+Explanation:
+Regulation 73(3) prescribes compensation for Speed Post (Domestic) loss or damage as double the amount of Speed Post postage paid or Rs. 1000, whichever is less depending upon actual value.
+
+Q10. (The PO Regulations, 2024) [Difficulty: Moderate]
+Consider the following statements regarding the redirection of items:
+1. An addressee may alter the address free of charge if the new address is within the delivery area of the same post office.
+2. A sender can recall an item from the post without the consent of the addressee by paying a postal fee of Rs. 6.
+Which of the above statements is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation:
+Regulation 55 allows the sender to recall an item for a fee of Rs. 6 without the addressee's consent, and allows the addressee free alteration if the new address is within the same delivery area.
+
+Q11. (The PO Regulations, 2024) [Difficulty: Hard]
+According to the Post Office Regulations, 2024, what is the minimum allowed dimension for a letter in roll form?
+A. Single dimension 140 mm, sum of length and twice diameter 200 mm
+B. Single dimension 100 mm, sum of length and twice diameter 170 mm
+C. Single dimension 100 mm, sum of length and twice diameter 200 mm
+D. Single dimension 150 mm, sum of length and twice diameter 300 mm
+Answer: B
+Explanation:
+Regulation 87(4)(ii) specifies the minimum dimensions for a letter in roll form: Single dimension 100 mm, and the sum of length and twice diameter 170 mm.
+
+Q12. (The PO Regulations, 2024) [Difficulty: Moderate]
+Which of the following is NOT a condition for posting a Registered Newspaper?
+A. It must be brought out, printed, or published in India only.
+B. It must be registered with the Press Registrar General of India.
+C. A late fee of Rs. 500 is charged for renewal received after the expiry date.
+D. The date of the publication must be printed on the first or last page.
+Answer: C
+Explanation:
+Regulation 95 specifies a late fee of Rs. 100 (not Rs. 500) for renewal applications received after the date of expiry of the previous registration.
+
+Q13. (The PO Regulations, 2024) [Difficulty: Moderate]
+In the context of the "Book Now Pay Later" (BNPL) facility, which of the following statements is/are correct?
+1. It is available only to retail customers sending international parcels.
+2. A corporate customer is one who provides a minimum specified business worth of postage in a calendar month.
+3. The monthly bill will be raised by the booking office by the 7th day of the following month.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. All of the above
+Answer: B
+Explanation:
+Regulation 170 defines BNPL for corporate (not retail) customers meeting minimum monthly business thresholds. The bill is raised monthly by the 7th day.
+
+Q14. (The PO Regulations, 2024) [Difficulty: Easy]
+What is the time limit for a sender or addressee to file a complaint regarding the non-receipt of a domestic registered item?
+A. After 15 days and within 30 days of booking
+B. After 15 days and within 60 days of booking
+C. After 30 days and within 90 days of booking
+D. Within 15 days of booking
+Answer: B
+Explanation:
+Regulation 75(1)(a) specifies that a complaint for non-receipt of a domestic item may be made after fifteen days and within sixty days of booking.
+
+Q15. (The PO Regulations, 2024) [Difficulty: Moderate]
+All of the following items can be legally disposed of immediately at the Returned Letter Office (RLO) EXCEPT:
+A. Items containing printed or handwritten papers with no intrinsic value
+B. Postcards on which postage has not been prepaid
+C. Letter cards on which postage has not been prepaid
+D. Unclaimed items with intrinsic value
+Answer: D
+Explanation:
+Under Regulation 68, items without intrinsic value and unpaid postcards/letter cards are destroyed/disposed of forthwith. Items with intrinsic value are disposed of through auction.
+
+Q16. (The PO Regulations, 2024) [Difficulty: Hard]
+What is the consequence if a letter card infringes the prescribed dimension conditions?
+A. It is returned to the sender.
+B. It is confiscated by the Returned Letter Office.
+C. It is treated as a letter and charged double the deficiency between postage already paid and postage payable for a letter.
+D. It is treated as an India Post Parcel.
+Answer: C
+Explanation:
+Regulation 90(1) states that if conditions are infringed, the letter card is treated as a letter and charged with double the deficiency between the postage paid and the postage for a letter.
+
+Q17. (The PO Regulations, 2024) [Difficulty: Moderate]
+A customer wishes to book a Logistics Post consignment. Which of the following statements does NOT apply to Logistics Post?
+A. The consignors are free to insure their goods with a third-party insurer.
+B. The Department of Posts is liable to compensate the consignor if the third-party insurer fails.
+C. Demurrage charges are equivalent to double the charges for storage, worked out on an hourly basis.
+D. Logistics Post Centre will prepare a delivery challan in five copies.
+Answer: B
+Explanation:
+Under Logistics Post rules (Regulation 98), the Department of Posts explicitly states it would not be liable to compensate either the consignor/consignee or any insurer.
+
+Q18. (PO Guide Part-I) [Difficulty: Easy]
+In Night Post Offices, what specific items are accepted on Sundays and PO holidays?
+A. Savings Bank deposits
+B. Registered newspapers and packets of registered newspapers
+C. Insured articles
+D. Value Payable Parcels
+Answer: B
+Explanation:
+According to PO Guide Part-I, Clause 7, registered newspapers and packets of registered newspapers are accepted on Sundays and PO holidays in Press Sorting Offices, RMS offices, and Night Post Offices.
+
+Q19. (PO Guide Part-I) [Difficulty: Moderate]
+Consider the following statements regarding the Remotely Managed Franking System (RMFS):
+1. The frank impression shall be blue in colour.
+2. A rebate of 5% is allowed on the franked value whenever the meter is reset.
+3. Machine Franked articles posted in letter boxes shall be treated as unpaid articles.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. All of the above
+Answer: B
+Explanation:
+Under Clause 11 of PO Guide Part-I, the rebate allowed is 3% (not 5%), making statement 2 incorrect. The frank impression is blue, and franked articles in letter boxes are treated as unpaid.
+
+Q20. (PO Guide Part-I) [Difficulty: Hard]
+Which of the following conditions is NOT required for claiming a refund on unused postage units in a Franking Machine?
+A. The franking machine must either be condemned or its use discontinued.
+B. The claim for refund must be submitted within three months from the date the machine was condemned or discontinued.
+C. A deduction of 5% on face value is strictly applied to all unused postage units.
+D. Refunds can only be granted for unused postage units remaining in the machine at the time of condemnation.
+Answer: C
+Explanation:
+Clause 11 specifies a 5% deduction applies to the "Refund of erroneous impression", not automatically for unused postage units remaining in a condemned machine.
+
+Q21. (PO Guide Part-I) [Difficulty: Easy]
+The first stamp of independent India, issued on 21 November 1947, depicted which of the following?
+A. The Ashoka Chakra
+B. The Indian Flag with the slogan "Jai Hind"
+C. Mahatma Gandhi
+D. The Red Fort
+Answer: B
+Explanation:
+According to the Philately section, the first stamp of Independent India depicted the Indian Flag with the slogan "Jai Hind", valued at three and one-half annas.
+
+Q22. (PO Guide Part-I) [Difficulty: Moderate]
+Under the Dhai Akhar Letter Writing Competition (2024-25), what is the First Prize amount at the National Level?
+A. Rs. 25,000
+B. Rs. 10,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: C
+Explanation:
+The PO Guide Part-I specifies the Dhai Akhar National Level First Prize is Rs. 50,000. (The Circle level first prize is Rs. 25,000).
+
+Q23. (PO Guide Part-I) [Difficulty: Moderate]
+All of the following are valid rules for "My Stamp" Corporate Customers EXCEPT:
+A. The cost of one My Stamp sheet is Rs. 300.
+B. A minimum quantity of 100 sheets is mandatory for corporate customers.
+C. A discount of 10% is allowed on the purchase of 2 to 100 My Stamp sheetlets.
+D. A flat discount of 20% applies to the total purchase if a customer buys exactly 200 sheetlets.
+Answer: D
+Explanation:
+The 20% discount applies ONLY to the additional sheetlets over 100. For 200 sheetlets, 10% applies to the first 100, and 20% to the next 100.
+
+Q24. (PO Guide Part-I) [Difficulty: Moderate]
+What is the validity period of an Identification Card issued by a Head Post Office (HO)?
+A. 1 year from the date of issue
+B. 3 years from the date of issue
+C. 5 years from the date of issue
+D. Valid for a lifetime
+Answer: B
+Explanation:
+Clause 63 of PO Guide Part-I states that an Identification Card is issued only in HO and is valid for 3 years from the date of issue.
+
+Q25. (PO Guide Part-I) [Difficulty: Hard]
+Consider the following statements regarding "Poste Restante":
+1. It is intended solely for the convenience of strangers and travellers.
+2. A Poste Restante article (except COD) can be kept in the post office for up to 30 days.
+3. The facility cannot be used by a person for more than 3 months.
+How many of the above statements are correct?
+A. Only one
+B. Only two
+C. All three
+D. None
+Answer: B
+Explanation:
+Statements 1 and 3 are correct. Statement 2 is incorrect because a standard Poste Restante article is kept for a period not exceeding one month, as per Clause 64.
+
+Q26. (PO Guide Part-I) [Difficulty: Easy]
+Under the Philately rules, what is the handling charge levied on each occasion for a Philatelic Deposit Account (PDA) held by a foreign customer?
+A. 1% (minimum Rs. 5)
+B. 2% (minimum Rs. 5)
+C. 5% (minimum Rs. 10)
+D. No handling charge is levied
+Answer: B
+Explanation:
+PO Guide Part-I states that for foreigners, the handling charge for a PDA is 2% (minimum Rs. 5) on each occasion.
+
+Q27. (PO Guide Part-I) [Difficulty: Moderate]
+Which of the following combinations regarding Indian Postal Orders (IPOs) is INCORRECT?
+A. Denomination Rs. 10 : Commission Rs. 1
+B. Denomination Rs. 20 : Commission Rs. 2
+C. Denomination Rs. 50 : Commission Rs. 5
+D. Denomination Rs. 100 : Commission Rs. 15
+Answer: D
+Explanation:
+According to the IPO table, the commission for a Rs. 100 denomination is Rs. 10, not Rs. 15.
+
+Q28. (PO Guide Part-I) [Difficulty: Hard]
+A Camp Bag is intended for high dignitaries. Match the items with their correct postage/charge requirements for a Camp Bag:
+Column I
+1. Parcel
+2. Letter Mail
+3. Registration Charge
+Column II
+X. Not charged as Postage
+Y. Prepaid in Service Stamp
+Z. Postage payable on 10 Kg Parcel
+A. 1-Y, 2-X, 3-Z
+B. 1-Z, 2-X, 3-Y
+C. 1-X, 2-Z, 3-Y
+D. 1-Z, 2-Y, 3-X
+Answer: B
+Explanation:
+Under Clause 205-207 for Camp Bags: Parcel postage is payable as on a 10 Kg Parcel; Letter mail is not charged as Postage; Registration Charge is Prepaid in Service Stamps.
+
+Q29. (PO Guide Part-I) [Difficulty: Easy]
+Which of the following articles is totally exempted from postage, registration fees, and acknowledgement fees when transmitted by surface route?
+A. Registered Newspapers
+B. Blind Literature Packets
+C. Camp Bags
+D. Value Payable Parcels
+Answer: B
+Explanation:
+Clause 136 specifies that Blind Literature Packets are exempted from payment of postage, registration fee, and fee for acknowledgement by surface route.
+
+Q30. (PO Guide Part-I) [Difficulty: Moderate]
+For the delivery of registered articles to messengers, the instructions received from the addressee authorising the post office remain valid for what time limit unless renewed?
+A. 1 Year
+B. 2 Years
+C. 3 Years
+D. 5 Years
+Answer: C
+Explanation:
+Clause 60 states that instructions received from an addressee authorizing the post office to deliver articles to persons other than themselves are treated as lapsed after 3 Years unless renewed.
+
+Q31. (PO Guide Part-I) [Difficulty: Hard]
+Consider the following statements regarding Commemorative Stamps:
+1. Stamps can be issued in honour of a Head of State on their first death anniversary.
+2. Commemorative stamps can be issued on a living personality.
+3. Unsold commemorative stamps are released to the definitive stamp vending counters after 6 months.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. All of the above
+Answer: B
+Explanation:
+Under Philately rules, no postage stamp shall be issued on a living personality. Statements 1 and 3 are correct.
+
+Q32. (PO Guide Part-I) [Difficulty: Moderate]
+What is the consequence if an Indian Postal Order (IPO) is presented for payment after 24 months but before 36 months from the last day of the month of issue?
+A. It is forfeited and no payment is made.
+B. It is paid normally without any additional charges.
+C. A second commission is collected in the form of postage stamps.
+D. It must be re-issued by the Head Post Office.
+Answer: C
+Explanation:
+Clause 243-254 states that if presented after 2 years but before 3 years, a second commission is to be collected in the form of Postage. After 36 months, it is forfeited.
+
+Q33. (PO Guide Part-I) [Difficulty: Easy]
+A money order remains unpaid to the payee or remitter. At the end of which month following the month of its issue is it treated as "void"?
+A. First month
+B. Second month
+C. Sixth month
+D. Twelfth month
+Answer: B
+Explanation:
+Under the rules for Money Orders, an unpaid money order is treated as void at the end of the second month following the month of its issue.
+
+Q34. (PO Guide Part-I) [Difficulty: Moderate]
+All of the following are correctly matched with their maximum weight limits EXCEPT:
+A. Letter - 2 kg
+B. Letter Card - 5 grams
+C. Registered Newspaper - 5 kg
+D. Camp Bag Parcel - 20 kg
+Answer: D
+Explanation:
+According to the Camp Bag table in PO Guide Part-I, the maximum weight for a parcel in a Camp Bag is 10 Kg, not 20 Kg.
+
+Q35. (PO Guide Part-II) [Difficulty: Easy]
+Where is the Headquarters of the Universal Postal Union (UPU) located?
+A. Bangkok, Thailand
+B. Geneva, Switzerland
+C. Berne, Switzerland
+D. Paris, France
+Answer: C
+Explanation:
+Section 3 of PO Guide Part II states that the UPU Headquarters is established in Berne (Switzerland).
+
+Q36. (PO Guide Part-II) [Difficulty: Moderate]
+Which of the following bodies is NOT a constituent part of the Universal Postal Union (UPU)?
+A. The Congress
+B. The Postal Operations Council (POC)
+C. The Asian-Pacific Postal College (APPC)
+D. The Council of Administration (CA)
+Answer: C
+Explanation:
+The APPC is run by the Asian Pacific Postal Union (APPU), not the UPU. UPU consists of The Congress, CA, POC, and IB.
+
+Q37. (PO Guide Part-II) [Difficulty: Moderate]
+Under the Letter Post (LCAO) definition in foreign post, which of the following falls under the "Autres Object" (AO) category?
+A. Letters
+B. Aerogrammes
+C. Postcards
+D. Printed Papers
+Answer: D
+Explanation:
+According to Clause 6, "Letter et Cartes" (LC) includes Letters, Postcards, and Aerogrammes. "Autres Object" (AO) includes Printed Papers, Small Packets, and Literature for the blind.
+
+Q38. (PO Guide Part-II) [Difficulty: Hard]
+Consider the following statements regarding the treatment of an unpaid or insufficiently paid outward international airmail article where the sender's address is unknown:
+1. A letter taxed by air is charged 75% of the Air Surcharge.
+2. A postcard taxed by air is charged 50% of the Combined Charge.
+3. An aerogramme taxed by surface is charged less than 75% of the Air Surcharge.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. All of the above
+Answer: A
+Explanation:
+According to Clause 60 flowcharts, an aerogramme taxed by surface is charged "Less 50% of Combined Charge", not less than 75% of the Air Surcharge. Hence statement 3 is incorrect.
+
+Q39. (PO Guide Part-II) [Difficulty: Easy]
+For the purpose of outward international articles, Customs Declaration Form CN 23 is used when the value of the contents exceeds:
+A. 100 SDR
+B. 300 SDR
+C. 500 SDR
+D. 1000 SDR
+Answer: B
+Explanation:
+Clause 23 states that CN 23 is used if the value of contents of articles is more than 300 Special Drawing Rights (SDR).
+
+Q40. (PO Guide Part-II) [Difficulty: Moderate]
+All of the following conditions apply to the M-Bag (Bulk bag) system EXCEPT:
+A. The maximum permissible weight of an M-bag is 30 kg.
+B. It is intended for transmission of printed papers to the same addressee at the same address.
+C. A rectangular address label not measuring more than 90mm X 140mm must be provided.
+D. Compensation claims are fully admissible for registered bulk bags (M Bags) in case of loss.
+Answer: D
+Explanation:
+Clause 43(e) clearly states "No compensation claim is admissible for registered bulk bag (M Bag)."
+
+Q41. (PO Guide Part-II) [Difficulty: Moderate]
+According to the dimensions specified for foreign letters in roll form, the sum of the length and twice the diameter should NOT exceed:
+A. 900 mm
+B. 1040 mm
+C. 600 mm
+D. 170 mm
+Answer: B
+Explanation:
+Section III A (Letter) states that for roll form, the sum of the length and twice the diameter should not exceed 1040 mm.
+
+Q42. (PO Guide Part-II) [Difficulty: Hard]
+Match the Postal items with their maximum weight limits in the international post:
+Column I
+1. Small Packets
+2. Aerogramme
+3. Literature for the Blind
+Column II
+X. 3 grams
+Y. 2 Kg
+Z. 7 Kg
+A. 1-Y, 2-X, 3-Z
+B. 1-Z, 2-X, 3-Y
+C. 1-Y, 2-Z, 3-X
+D. 1-X, 2-Y, 3-Z
+Answer: A
+Explanation:
+Small Packets have a maximum weight of 2 Kg; Aerogramme maximum weight is 3 gms; Literature for the blind maximum weight is 7 kg.
+
+Q43. (PO Guide Part-II) [Difficulty: Easy]
+In international post, what is the mandatory phrase that must be indicated on "Small Packets"?
+A. Imprimes
+B. Par Avion
+C. Petits Paquets
+D. Cecogrammes
+Answer: C
+Explanation:
+Clause D (Small Packets) states they should bear the indication "Petits Paquets" or Small Packets.
+
+Q44. (PO Guide Part-II) [Difficulty: Moderate]
+Under the compensation policy for an International Air Parcel, what is the maximum limit of compensation payable for loss, total theft, or total damage?
+A. 30 SDR plus postage paid
+B. 40 SDR plus 4.5 SDR per kg, subject to a ceiling of 130 SDR, plus postage paid
+C. 130 SDR flat, inclusive of postage
+D. The exact declared value without any upper ceiling
+Answer: B
+Explanation:
+The compensation policy for International Air Parcels specifies 40 SDR plus 4.5 SDR per kg or the value of contents, whichever is less, subject to an upper ceiling of 130 SDR, plus the postage paid.
+
+Q45. (PO Guide Part-II) [Difficulty: Hard]
+Consider the following regarding Electronic Advance Data (EAD) for international mail:
+1. EAD adoption requires the mandatory submission of a 7+1 dataset.
+2. Letters and postcards not subject to customs duties are exempted from EAD requirements.
+3. Consignor and Consignee addresses are part of the mandatory data elements.
+How many of the above statements are correct?
+A. Only one
+B. Only two
+C. All three
+D. None
+Answer: C
+Explanation:
+The clause on EAD states the 7+1 dataset is mandatory, exempts letters/postcards not subject to customs duties, and includes consignor/consignee addresses. All three are correct.
+
+Q46. (PO Guide Part-II) [Difficulty: Moderate]
+For which of the following sets of countries is the Tariff for an Airmail Post Card fixed at Rs. 8.00?
+A. USA, Canada, and Mexico
+B. Great Britain, France, and Germany
+C. Pakistan, Nepal, Bangladesh, and Bhutan
+D. Japan, China, and South Korea
+Answer: C
+Explanation:
+According to the International Mail Tariff table, the Airmail Post Card rate for Pakistan, Nepal, Bangladesh, and Bhutan is Rs. 8.00.
+
+Q47. (PO Guide Part-II) [Difficulty: Easy]
+What is the time limit for submitting inquiries and requests for information regarding an International Speed Post (EMS) item?
+A. Within six months from the day of posting
+B. Within four months from the day after posting
+C. Within one year from the day of posting
+D. Within 30 days of posting
+Answer: B
+Explanation:
+Clause 200 states that inquiries shall be entertained within a period of four months for International Speed Post items from the day after that on which the article was posted.
+
+Q48. (PO Guide Part-II) [Difficulty: Moderate]
+All of the following items are prohibited from being imported into India by letter post EXCEPT:
+A. Live plants
+B. Sugarcane
+C. Living insects without special permission
+D. Counterfeit items
+Answer: B
+Explanation:
+Clause 88 states "No plant shall be imported in India by letter post except sugarcane."
+
+Q49. (PO Guide Part-II) [Difficulty: Hard]
+Which of the following correctly describes the "Frane de Droits" (free of charges) service in foreign parcels?
+A. Parcels delivered without levying any postage at the time of booking.
+B. Parcels where the sender prepays customs duty, clearance fee, and delivery charges so it is delivered free of charge to the addressee.
+C. Parcels addressed to military personnel exclusively.
+D. Parcels that contain blind literature and are completely exempt from air surcharges.
+Answer: B
+Explanation:
+"Frane de Droits" allows the sender to prepay custom duty, clearance fees, etc., marked "To be delivered free of charges", so the addressee pays nothing on delivery.
+
+Q50. (PO Guide Part-II) [Difficulty: Moderate]
+What is the maximum dimension limit for a Foreign Postcard?
+A. 100 x 150 mm
+B. 120 x 235 mm
+C. 140 x 90 mm
+D. 210 x 300 mm
+Answer: B
+Explanation:
+Clause B (Postcards) under foreign post dimensions states the maximum dimension is 120 X 235 mm. Minimum Dimensions: 90 x 140 mm (with a standard tolerance of 2 mm)

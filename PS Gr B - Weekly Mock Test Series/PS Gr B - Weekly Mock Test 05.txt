@@ -1,0 +1,704 @@
+Q1. (Citizen Charter of Department of Posts) [Difficulty: Easy]
+Under the Post Office Savings Bank (CBS) service standards, what is the timeline for the opening of an account or purchase of saving certificates after the clearance of a cheque?
+A. 1 Working Day
+B. 3 Working Days
+C. 7 Working Days
+D. Same Day
+
+Answer: A
+
+Explanation:
+As per the Citizen Charter, the opening of an account or purchase of saving certificates after the clearance of a cheque in a CBS Post Office takes 1 Working Day.
+
+Q2. (Citizen Charter of Department of Posts) [Difficulty: Easy]
+According to the Mails/Money Order service standards, what is the maximum delivery time for a First Class Mail (Letter) within the same state?
+A. 1-2 Days
+B. 2-4 Days
+C. 3-5 Days
+D. 5-6 Days
+
+Answer: C
+
+Explanation:
+The delivery of First Class Mail (Letters, Postcards & Letter cards) within the same state takes 3-5 Days, excluding the day of posting, holidays, and Sundays.
+
+Q3. (Citizen Charter of Department of Posts) [Difficulty: Moderate]
+What is the prescribed service standard for the settlement of Postal Life Insurance (PLI) death claims involving investigation?
+A. 15 Days
+B. 30 Days
+C. 60 Days
+D. 90 Days
+
+Answer: D
+
+Explanation:
+The Citizen Charter stipulates that the settlement of PLI/RPLI death claims involving investigation takes 90 Days from the receipt of completed documents.
+
+Q4. (Citizen Charter of Department of Posts) [Difficulty: Moderate]
+Under the Public Grievance Redress service standards, within how many days should a standard public grievance be settled, barring cases requiring detailed investigation?
+A. 15 Days
+B. 30 Days
+C. 45 Days
+D. 60 Days
+
+Answer: D
+
+Explanation:
+The service standard for the settlement of standard complaints from the time of lodging is 60 Days, whereas cases requiring investigation may take up to 90 days.
+
+Q5. (Citizen Charter of Department of Posts) [Difficulty: Moderate]
+Which of the following timelines for International EMS articles is INCORRECT based on the "End to End" delivery standards for outbound articles?
+A. Japan: 3-6 Days
+B. United Kingdom: 2-6 Days
+C. Australia: 3-7 Days
+D. Singapore: 3-6 Days
+
+Answer: C
+
+Explanation:
+The timeline for Australia is 4-8 Days, NOT 3-7 Days. Japan (3-6 Days), United Kingdom (2-6 Days), and Singapore (3-6 Days) are correct as per the service standards.
+
+Q6. (Citizen Charter of Department of Posts) [Difficulty: Hard]
+Evaluate the following statements regarding the Post Office Savings Bank (CBS) service standards:
+1. Transfer of a Savings Certificate requested at a Sub Post Office (SO) takes 3 Working Days.
+2. The issue of a personalized ATM Card takes 30 Days.
+3. Enabling ebanking/mbanking takes 3 Working Days after receipt of complete documents.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+Answer: A
+
+Explanation:
+Enabling ebanking/mbanking takes 1 Working Day after receipt of complete application/documents, not 3 Working Days. Statements 1 and 2 are factually correct.
+
+Q7. (Citizen Charter of Department of Posts) [Difficulty: Hard]
+Assertion (A): Customers should lodge complaints relating to any deficiency in service within 60 days of the transaction.
+Reason (R): If a complaint is not redressed within the stipulated time, the customer must first escalate the issue to the Directorate of Public Grievances (DPG) before approaching the Postmaster General.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. A is false but R is true
+
+Answer: C
+
+Explanation:
+Complaints must be lodged within 60 days. However, the escalation matrix states that unredressed complaints should be taken up with the Postmaster General or Chief Postmaster General, not directly to the DPG.
+
+Q8. (Citizen Charter of Department of Posts) [Difficulty: Hard]
+Match the following services with their corresponding transaction times at a Branch Office (BO):
+Service:
+P. Counter Services (excluding waiting time in queue)
+Q. Sale of Stamps and stationery (BO authorized)
+R. Post Office Savings Bank Deposit & withdrawal (BO authorized)
+Time:
+1. 2-5 Minutes
+2. 3 Minutes
+3. 10 Minutes
+A. P-1, Q-2, R-3
+B. P-2, Q-3, R-1
+C. P-1, Q-3, R-2
+D. P-3, Q-1, R-2
+
+Answer: A
+
+Explanation:
+Standard Counter Services take 2-5 Minutes. At a BO, the transaction time for the sale of stamps is 3 Minutes. POSB deposits and withdrawals at an authorized BO take 10 Minutes.
+
+Q9. (Citizen Charter of Department of Posts) [Difficulty: Hard]
+Which of the following is NOT listed as a reasonable expectation from a service recipient regarding Money Order/Mails Services?
+A. To notify the delivery post office of the change of address and provide the forwarding address.
+B. To cooperate by producing ID on demand by Postmen or at the counter.
+C. To provide a Mail Box on the ground floor for each address in a multi-storied building.
+D. To independently verify the background of the delivery staff before accepting insured articles.
+
+Answer: D
+
+Explanation:
+Verifying the background of delivery staff is NOT a stated expectation. Providing a Mail Box, producing ID, and notifying change of address are explicitly mandated under reasonable expectations.
+
+Q10. (Citizen Charter of Department of Posts) [Difficulty: Hard]
+Consider the following statements regarding the discharge of Savings Certificates at a post office other than the office of purchase:
+1. For non-CBS Post Offices, the time taken from the receipt of the application is 30 Working Days.
+2. For CBS Post Offices, if the payment request is made at an SO by cheque after the transfer of the certificate, it takes 1 Working Day.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+
+Answer: A
+
+Explanation:
+For non-CBS POs, the process takes 30 Working Days. For CBS POs, a payment request at an SO via cheque takes 3 Working Days, whereas cash/transfer takes 1 Working Day. Thus, statement 2 is incorrect.
+
+Q11. (Complaint & Grievance Handling) [Difficulty: Easy]
+What is the strict procedural action mandated for anonymous complaints received by the Department of Posts?
+A. They must be investigated within 30 days.
+B. They must be forwarded to the Central Vigilance Commission.
+C. They must be filed and kept on record without initiating any preliminary enquiry.
+D. They must be returned to the sender.
+
+Answer: C
+
+Explanation:
+As per CVC Guidelines (OM 39-1/2010-Vig), no action is to be taken on anonymous complaints. They must be filed and kept on record without initiating any preliminary enquiry.
+
+Q12. (Complaint & Grievance Handling) [Difficulty: Easy]
+What does the acronym PIDPI stand for in the context of whistleblower protection in grievance handling?
+A. Postal Investigation and Disciplinary Protection Initiative
+B. Public Interest Disclosure and Protection of Informers
+C. Preventive Integrity Directorate and Public Information
+D. Public Inquiry Disclosure and Protection of Individuals
+
+Answer: B
+
+Explanation:
+PIDPI stands for "Public Interest Disclosure and Protection of Informers," a resolution used for genuine informers who wish to hide their identity.
+
+Q13. (Complaint & Grievance Handling) [Difficulty: Moderate]
+According to DoPT OM No. 11013/2/2014-Estt.A-III, what is the mandatory requirement for the Chairperson of the Internal Complaints Committee (ICC)?
+A. Must be a Group 'A' officer from the Vigilance Department.
+B. Must be an officer nominated directly by the CVC.
+C. Must be a senior female employee to ensure fair and uninfluenced proceedings.
+D. Must be an independent NGO representative.
+
+Answer: C
+
+Explanation:
+The Chairperson of the Complaint Committee (ICC) must be a senior female employee. If unavailable in the same office, she can be nominated from another office.
+
+Q14. (Complaint & Grievance Handling) [Difficulty: Moderate]
+Under the revised guidelines for the Customer Relationship Management (CRM) Platform (OM PG-01/3/2021-PG-DoP), what is the targeted timeline for the disposal of grievances?
+A. Strictly 60 days
+B. Progressively reduced to 7 to 15 days depending on the nature of the complaint
+C. Uniformly 45 days for all types of complaints
+D. Maximum 30 days, extended to 90 days for rural areas
+
+Answer: B
+
+Explanation:
+To enhance citizen satisfaction, the timeline for the disposal of grievances on the CRM Platform has been progressively reduced from 30 days to targets of 7 to 15 days, depending on the complaint's nature.
+
+Q15. (Complaint & Grievance Handling) [Difficulty: Moderate]
+Which of the following is NOT an acceptable ground for marking a grievance as 'Closed' in the CRM/CPGRAMS system?
+A. An interim reply stating "The matter is under investigation" has been provided to the complainant.
+B. Corrective action has been executed, such as the delivery of the delayed article.
+C. Compensation has been sanctioned and paid for a lost article.
+D. The pending COD amount has been physically credited to the sender's account.
+
+Answer: A
+
+Explanation:
+Interim replies do not constitute grounds for closing a ticket in CRM or CPGRAMS. A complaint can only be closed when a final, substantive resolution has been provided.
+
+Q16. (Complaint & Grievance Handling) [Difficulty: Hard]
+Consider the following statements regarding the handling of vigilance complaints:
+1. If a delay in mail delivery is proven to be intentional to extract a bribe, it converts from a service grievance into a vigilance complaint.
+2. First Stage Advice from the CVC is sought after the formal inquiry is completed but before the final penalty is imposed.
+3. Complaints against Secretaries to the Government of India are scrutinized by a specialized Group of Ministers or a high-level apex committee.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+Answer: B
+
+Explanation:
+Statement 2 is incorrect because First Stage Advice is sought after a preliminary enquiry report is ready. Second Stage Advice is sought after the formal inquiry is completed. Statements 1 and 3 are correct.
+
+Q17. (Complaint & Grievance Handling) [Difficulty: Hard]
+Assertion (A): Departments must provide an Action Taken Report (ATR) to the Commissioner for SC/ST detailing remedial measures implemented for genuine grievances of SC/ST employees.
+Reason (R): The Commissioner for SC/ST is strictly prohibited from calling for original files and records, and must rely entirely on the ATR provided by the Department.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. A is false but R is true
+
+Answer: C
+
+Explanation:
+Assertion (A) is correct as Departments must provide an ATR detailing remedial measures. Reason (R) is false because the Commissioner has the statutory power to call for original files and records.
+
+Q18. (Complaint & Grievance Handling) [Difficulty: Hard]
+Match the following Office Memorandums with their corresponding subjects:
+OM Number:
+P. OM 104/100/2009-AVD.I
+Q. OM 10-32/2013-BD&MD
+R. OM 11013/7/2016-Estt.A-III
+Subject:
+1. Online complaint management system titled SHe-Box
+2. Resolution of pending complaints and payments of COD amount
+3. Procedure for handling complaints against Secretaries to Govt of India
+A. P-3, Q-2, R-1
+B. P-2, Q-3, R-1
+C. P-3, Q-1, R-2
+D. P-1, Q-2, R-3
+
+Answer: A
+
+Explanation:
+OM 104/100/2009-AVD.I relates to handling complaints against Secretaries. OM 10-32/2013-BD&MD deals with COD payments. OM 11013/7/2016-Estt.A-III introduced the SHe-Box.
+
+Q19. (Complaint & Grievance Handling) [Difficulty: Hard]
+Which of the following statements regarding the verification of complaint identity is INCORRECT?
+A. If a complaint contains a specific name and address, a registered acknowledgment must be sent to verify identity.
+B. If an acknowledgment letter returns undelivered, the complaint is treated as pseudonymous and filed.
+C. Under the PIDPI resolution, the envelope is opened by any postal counter clerk to expedite the investigation.
+D. The identity of a whistleblower under PIDPI is concealed to protect them from retaliation.
+
+Answer: C
+
+Explanation:
+Under PIDPI, the envelope is opened only by a designated nodal officer, not by any postal counter clerk, to ensure absolute confidentiality. The other statements are correct procedural guidelines.
+
+Q20. (Complaint & Grievance Handling) [Difficulty: Hard]
+Evaluate the following statements regarding the Standard Operating Procedure (SOP) for complaint handling on CRM (OM 009/5/2023-PG):
+1. The SOP dictates an exact workflow: Acknowledgment → Root Cause Analysis → Rectification → Polite Drafting of Final Reply → Closure.
+2. "One-line replies" such as "Matter resolved" or "Closed" are explicitly banned.
+3. The SOP mandates an auto-escalation matrix if the first-level resolution breaches the new shortened timelines.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+Answer: D
+
+Explanation:
+All three statements are correct. The SOP mandates a detailed workflow, bans one-line replies, and implements an auto-escalation matrix if timelines are breached.
+
+Q21. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Easy]
+According to Rule 616 of Postal Manual Vol II, what color of ink is exclusively prescribed for official correspondence or records unless otherwise specified?
+A. Black
+B. Blue
+C. Green
+D. Red
+
+Answer: B
+
+Explanation:
+Except where specifically prescribed, ink other than blue should not be used on official correspondence or records as per Rule 616.
+
+Q22. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Easy]
+What is the normal life of a Departmental Identity Card (Form Ms-95) as per Rule 721?
+A. 2 years
+B. 3 years
+C. 4 years
+D. 5 years
+
+Answer: C
+
+Explanation:
+According to Rule 721 of the Postal Manual Volume II, the normal life of the Departmental Identity Card (Form Ms-95) is 4 years.
+
+Q23. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Moderate]
+In the filing system for the Office of a Superintendent of Post Offices, under which standard File Head are correspondence regarding Robberies, Losses, and Frauds classified?
+A. File Head B
+B. File Head E
+C. File Head F
+D. File Head K
+
+Answer: C
+
+Explanation:
+According to Rule 637, correspondence files in the Divisional Office are classified under File Head F for Robberies, Losses, and Frauds.
+
+Q24. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Moderate]
+By what date must the Annual Reports be submitted to the Director General?
+A. 1st April
+B. 1st May
+C. 16th June
+D. 30th September
+
+Answer: C
+
+Explanation:
+As per Rule 696, Annual Reports must be submitted to the Head of Circle by 1st May and to the Director General before 16th June.
+
+Q25. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Moderate]
+What is the penalty for sending a personal communication from a departmental official free "On Service"?
+A. Withholding of one increment
+B. A warning placed in the character sheet
+C. Double the charges that should have been paid
+D. Dismissal from service
+
+Answer: C
+
+Explanation:
+Under Rule 666, breach of this rule attracts a penalty of double the charges that should have been paid, recovered via postage stamps.
+
+Q26. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Hard]
+Consider the following statements regarding National Observances & Protocol:
+1. The National Week is celebrated from 6th to 13th April.
+2. When displayed in a straight line with flags of other countries, the National Flag must be on the extreme right (observer's left) and it is hoisted first and lowered last.
+3. At official functions, "Vande Mataram" is played at the beginning, and "Jana Gana Mana" is played at the end.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+
+Answer: D
+
+Explanation:
+All the three Statements are correct.
+
+Q27. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Hard]
+Match the following File Heads for the Superintendent of Railway Mail Service (RMS) with their respective classes of correspondence:
+File Head:
+P. Head A
+Q. Head D
+R. Head G
+Correspondence:
+1. Sorting lists, due bag statements, and town delivery bags
+2. General orders, rules regarding mails, and station bundles
+3. Opening of new lines, time-tables, and train detentions
+A. P-2, Q-1, R-3
+B. P-1, Q-2, R-3
+C. P-3, Q-1, R-2
+D. P-2, Q-3, R-1
+
+Answer: A
+
+Explanation:
+Under Rule 637 for RMS, Head A deals with Procedure (General orders, station bundles). Head D covers Sorting (Sorting lists, due bag statements). Head G covers Conveyance of Mails (new lines, time-tables).
+
+Q28. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Hard]
+Which of the following statements concerning the handling of Personal Files and Leave Papers is INCORRECT?
+A. When an official is transferred to another Circle for 2 months, their personal file must immediately be forwarded in a Service Registered Cover.
+B. Papers relating to casual leave should not be made part of the permanent personal file.
+C. At the end of each year, all casual leave papers should be destroyed and a fresh series started.
+D. The personal bundle is transferred only when deputed for a period exceeding 3 months to another Circle or Division.
+
+Answer: A
+
+Explanation:
+Rule 666 dictates that the personal file/bundle must be forwarded only when an official is transferred or deputed for a period exceeding 3 months. Therefore, a 2-month transfer does NOT mandate immediate forwarding.
+
+Q29. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Hard]
+Assertion (A): The Skeleton Postal Map of the Circle must be submitted to the Director General in the month of June each year.
+Reason (R): The map requires annual adjustments to incorporate all corrections necessitated by infrastructural changes during the past year, keeping the records up to date.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. A is false but R is true
+
+Answer: A
+
+Explanation:
+Rule 694-C mandates the submission of the Skeleton Postal Map in June every year precisely to incorporate all corrections necessitated by changes during the past year, ensuring updated records.
+
+Q30. (Postal Manual Volume II – Chapter XI (Miscellaneous)) [Difficulty: Hard]
+Evaluate the following statements regarding the Budget Estimate and Control structure in the Department of Posts:
+1. The Budget Cell in each Circle comprises a Budget Control Unit (BCU) located at the Circle Office and a Budget Operation Unit (BOU) located at the Postal Accounts Office.
+2. Revenue Expenditure (formerly "Non-Plan") covers non-productive areas like salaries and subsidies.
+3. The Secretary (Department of Posts) acts as the Chief Accounts Authority.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+Answer: B
+
+Explanation:
+Statement 1 is incorrect because the BCU is located at the Postal Accounts Office (PAO) and the BOU is located at the Circle Office (CO). Statements 2 and 3 accurately reflect the expenditure classification and administrative roles.
+
+Q31. (Manual of Office Procedure (CSMOP)) [Difficulty: Easy]
+According to the Manual of Office Procedure, what is the maximum number of levels through which a file should pass for a decision?
+A. Two
+B. Three
+C. Four
+D. Five
+
+Answer: C
+
+Explanation:
+CSMOP guidelines dictate that the number of levels through which a file passes for a decision shall not exceed four.
+
+Q32. (Manual of Office Procedure (CSMOP)) [Difficulty: Easy]
+What color file cover is prescribed to facilitate the identification of Rajya Sabha Questions, Motions, etc., for urgent dealing?
+A. Red
+B. Green
+C. Blue
+D. Yellow
+
+Answer: B
+
+Explanation:
+The file covers of the Lok Sabha and Rajya Sabha Questions, Motions etc. are to be in red colour and green colour respectively. Thus, Rajya Sabha files use green.
+
+Q33. (Manual of Office Procedure (CSMOP)) [Difficulty: Moderate]
+Which form of communication is normally used for issuing instructions meant for internal administration, such as the grant of regular leave or distribution of work among sections?
+A. Notification
+B. Order
+C. Office Order
+D. Demi-official letter
+
+Answer: C
+
+Explanation:
+An 'Office Order' is normally used for issuing instructions meant for internal administration, e.g., grant of regular leave, distribution of work, appointments, and transfers.
+
+Q34. (Manual of Office Procedure (CSMOP)) [Difficulty: Moderate]
+
+In the Single File System (SFS), which of the following practices is mandated for the movement and processing of files between a Non-Secretariat Office (NSO) and the Department?
+
+A. The SFS file must bear a formal I.D. No. for identification and tracking.
+B. Noting by the Secretariat must be recorded continuously on the same page as the NSO noting.
+C. SFS files are exempt from being recorded in the section diary.
+D. The NSO is prohibited from using its own file cover for SFS cases.
+
+Correct Answer: A
+
+Explanation:
+Under the Single File System (SFS) as outlined in the CSMOP:
+
+I.D. Number: Every SFS file must bear a formal I.D. Number (Identification Number) to ensure it can be tracked as it moves between the NSO and the Secretariat.
+
+Noting: To maintain clarity between the NSO’s proposal and the Department’s decision-making, the Secretariat noting must always start on a new blank note sheet.
+
+Efficiency: The primary goal of SFS is to eliminate the need for the Department to open a separate "shadow" file, thus reducing redundant work and speeding up the decision-making process.
+
+Q35. (Manual of Office Procedure (CSMOP)) [Difficulty: Moderate]
+What is the specified timeline for handling a communication received from a Member of Parliament (MP) or VIP?
+A. Reply directly within 7 days.
+B. Acknowledge within 15 days, followed by a reply within the next 15 days.
+C. Acknowledge within 7 days, followed by a reply within the next 30 days.
+D. Acknowledge within 3 days, followed by a reply within the next 7 days.
+
+Answer: B
+
+Explanation:
+Each communication received from an MP/VIP shall be acknowledged within 15 days, followed by a reply within the next 15 days of the acknowledgment sent.
+
+Q36. (Manual of Office Procedure (CSMOP)) [Difficulty: Hard]
+Consider the following statements regarding the modification of notes or orders:
+1. Senior officers must require their juniors to modify or replace incorrect notes recorded by them.
+2. Pasting over a note or a portion of it to conceal facts is strictly prohibited.
+3. The withdrawal of a final decision communicated to a party requires the approval of an officer higher than the one who took the original decision.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+Answer: B
+
+Explanation:
+Statement 1 is incorrect because senior officers should not require modification or replacement of notes by juniors; instead, they should record their own notes. Statements 2 and 3 are correct.
+
+Q37. (Manual of Office Procedure (CSMOP)) [Difficulty: Hard]
+Assertion (A): When an officer gives an oral instruction, they should follow it up by a written confirmation at the earliest if there is no time to give the instructions in writing initially.
+Reason (R): Oral orders on behalf of a Minister communicated by their personal staff do not require written confirmation as they carry the delegated authority of the Minister.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. A is false but R is true
+
+Answer: C
+
+Explanation:
+Assertion (A) is correct. Reason (R) is false because whenever a member of the personal staff of a Minister communicates an oral order, it must be confirmed by them in writing immediately thereafter.
+
+Q38. (Manual of Office Procedure (CSMOP)) [Difficulty: Hard]
+Match the Form of Communication with its appropriate context:
+Form:
+P. Resolution
+Q. Demi-official letter
+R. Notification
+Context:
+1. Written in first person, personal tone, addressed to an officer one or two levels below.
+2. Promulgation of statutory rules and appointments published in the Gazette of India.
+3. Public announcement of policy decisions or appointment of committees of enquiry.
+A. P-3, Q-1, R-2
+B. P-2, Q-1, R-3
+C. P-3, Q-2, R-1
+D. P-1, Q-3, R-2
+
+Answer: A
+
+Explanation:
+A Resolution is used for public announcements of policy. A Demi-official letter is personal and friendly, written in the first person. A Notification is used for statutory rules in the Gazette.
+
+Q39. (Manual of Office Procedure (CSMOP)) [Difficulty: Hard]
+Which of the following procedures concerning the handling of classified documents is NOT correct?
+A. A separate set of registers, such as section diary and file register, must be maintained by the Section Officer personally in non-designated sections.
+B. Every classified file shall be reviewed once in five years for declassification.
+C. For discussions outside the office, any official, including an MTS, may carry Secret papers if authorized verbally by a Joint Secretary.
+D. The classification 'For official use only' requires the prior approval of the branch officer.
+
+Answer: C
+
+Explanation:
+For Secret papers, only an officer not below the level of Under Secretary may carry them outside, and it requires the written authorization of a Joint Secretary level officer. Verbal authorization or carriage by MTS is NOT permitted.
+
+Q40. (Manual of Office Procedure (CSMOP)) [Difficulty: Hard]
+
+Evaluate the following statements regarding the Subject classification based file numbering system:
+
+1. The standard heads will bear consecutive serial numbers, whereas standard sub-heads will not be allocated such numbers.
+
+2. When the notes and correspondence portion of a file becomes bulky (exceeds 150 pages), it will be stitched and marked 'Volume I'.
+
+3. The first three elements in the file number are separated by a dash, and the last two by a slant stroke.
+
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+Answer: A
+
+Explanation:
+
+Statement 1 is Correct: Under the subject classification system, standard heads bear consecutive serial numbers, but standard sub-heads do not receive such numbers.  
+
+Statement 2 is Correct: According to the CSMOP, when the 'notes' plus the 'correspondence' portion of a file becomes bulky (specifically exceeding 150 pages), it must be stitched and marked as 'Volume I'. Subsequent papers are added to a new volume marked 'Volume II', and so on.
+
+Statement 3 is Incorrect: The CSMOP prescribes that the first three elements of the file number are separated by a slant stroke (/) and the last two by a dash (-). An example format would be: 3/17/2023-Estt.
+
+Q41. (Annual Reports & Book of Information (DoP)) [Difficulty: Easy]
+According to the Annual Report, what is the average area served by a Post Office in India?
+A. 10.50 sq.km.
+B. 15.25 sq.km.
+C. 19.92 sq.km.
+D. 25.00 sq.km.
+
+Answer: C
+
+Explanation:
+The average area served by a Post Office is 19.92 sq.km, with one Post Office serving 8,566 people on average as of 2025.
+
+Q42. (Annual Reports & Book of Information (DoP)) [Difficulty: Easy]
+In which year did the new postal legislation "The Post Office Act" receive the assent of the President of India?
+A. 2022
+B. 2023
+C. 2024
+D. 2025
+
+Answer: B
+
+Explanation:
+The Post Office Act, 2023 (43 of 2023) received the assent of the President of India on 24th December 2023 and came into force on 18th June 2024.
+
+Q43. (Annual Reports & Book of Information (DoP)) [Difficulty: Moderate]
+What proportion of India Post Payments Bank (IPPB) customers comprise female customers?
+A. 25%
+B. 33%
+C. 48%
+D. 60%
+
+Answer: C
+
+Explanation:
+According to the IPPB milestones in the Annual Report, 48% of IPPB customers comprise female customers.
+
+Q44. (Annual Reports & Book of Information (DoP)) [Difficulty: Moderate]
+Under the Logistics and Supply Chain initiatives, how many Dak Ghar Niryat Kendras (DNKs) have been authorized up to the district level across the nation by 31st Dec 2025?
+A. 500
+B. 823
+C. 1013
+D. 1408
+
+Answer: C
+
+Explanation:
+The Department of Posts has authorized 1013 DNKs up to the district level across the nation.
+
+Q45. (Annual Reports & Book of Information (DoP)) [Difficulty: Moderate]
+Which of the following Memorandums of Understanding (MoUs) executed by the Department of Posts is INCORRECTLY matched with its purpose?
+A. MoU with KVIC: Physical verification of PMEGP units
+B. MoU with AMFI: Distribution of mutual fund products
+C. MoU with SIDBI: Contact Point Verification for Informal Micro Enterprises
+D. MoU with UIDAI: Disbursement of Direct Benefit Transfers to rural banks
+
+Answer: D
+
+Explanation:
+The MoU with UIDAI relates to Post Office Aadhaar Updation and Enrollment Centers, NOT DBT disbursements to rural banks. The other MoUs with KVIC, AMFI, and SIDBI are correctly matched.
+
+Q46. (Annual Reports & Book of Information (DoP)) [Difficulty: Hard]
+Consider the following statements regarding the new "The Post Office Act, 2023":
+1. It repealed the colonial-era Indian Post Office Act, 1898.
+2. It came into force with effect from 18th June, 2024.
+3. It delegates exclusive power to make laws on postal matters to State Governments under the concurrent list.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+Answer: A
+
+Explanation:
+Statement 3 is incorrect as the Constitution enumerates Posts and Telegraphs in List I (Union List), meaning Parliament has exclusive power. Statements 1 and 2 are accurate.
+
+Q47. (Annual Reports & Book of Information (DoP)) [Difficulty: Hard]
+Assertion (A): The Mail Motor Service (MMS) fleet predominantly comprises electric vehicles (EVs) to align with green initiatives.
+Reason (R): Out of a fleet of nearly 2100 vehicles, 250 are CNG propelled and only 02 are Electric Vehicles as of the latest report.
+A. Both A and R are true and R is the correct explanation of A
+B. Both A and R are true but R is not the correct explanation of A
+C. A is true but R is false
+D. A is false but R is true
+
+Answer: D
+
+Explanation:
+Assertion (A) is false because the fleet is not predominantly EVs; out of 2100 vehicles, there are only 2 EVs and 250 CNG vehicles. Reason (R) states the accurate factual figures.
+
+Q48. (Annual Reports & Book of Information (DoP)) [Difficulty: Hard]
+Match the following Training Initiatives/Institutions with their respective details:
+Initiative:
+P. RAKNPA
+Q. Dak Karmayogi Portal
+R. Seva Bhav Training
+Detail:
+1. E-Learning Portal where mandatory passing mark in test is 60%.
+2. First Central Training Institute to receive a Five-Star "Outstanding" Accreditation.
+3. Training program launched by the Capacity Building Commission covering 1,18,577 employees.
+A. P-2, Q-1, R-3
+B. P-3, Q-1, R-2
+C. P-2, Q-3, R-1
+D. P-1, Q-2, R-3
+
+Answer: A
+
+Explanation:
+RAKNPA received the Five-Star "Outstanding" Accreditation. Dak Karmayogi is the e-learning portal with a 60% passing mark. Seva Bhav Training was launched by CBC and trained 1,18,577 employees.
+
+Q49. (Annual Reports & Book of Information (DoP)) [Difficulty: Hard]
+
+Which of the following figures regarding the Financial Management of the Department for FY 2024-25 is NOT correct?
+
+A. Total revenue earned was ₹11,425.24 crore.
+B. Revenue earned from Commercial Activities was ₹4,545.61 crore.
+C. Gross working expenditure was ₹24,915.20 crore.
+D. The Revenue Deficit stood at ₹24,915.20 crore.  
+
+Answer: C
+
+Explanation:
+The gross working expenditure during FY 2024-25 was ₹37,528.49 crore, not ₹24,915.20 crore. The figure of ₹24,915.20 crore represents the Revenue Deficit. Thus, option C contains the incorrect figure.
+
+
+Q50. (Annual Reports & Book of Information (DoP)) [Difficulty: Hard]
+Evaluate the following statements regarding the development of the North Eastern Region:
+1. The Department earmarks 10% of allocations for Central Sector Schemes for exclusive development of the North East Region.
+2. The number of post offices in the North East Region decreased between 2018 and 2025 due to operational consolidation.
+3. 122 Dak Ghar Niryat Kendras (DNK) have been notified in the North Eastern Region to boost exports.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+
+Answer: C
+
+Explanation:
+Statement 2 is incorrect because the number of post offices actually increased from 7,140 in 2018 to 8,758 in 2025. Statements 1 and 3 accurately reflect the policy guidelines and operational achievements.

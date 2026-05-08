@@ -1,0 +1,432 @@
+Q1. As per the definitions in the Financial Hand Book Volume I, which of the following best describes the term "Bank"?
+A. Any scheduled commercial bank approved by the Ministry of Finance
+B. Any office or branch of the Banking Department of the RBI or SBI acting as the agent of the RBI
+C. Only the State Bank of India and its wholly-owned subsidiaries
+D. Any nationalized bank where a post office maintains its drawing account
+Answer: B
+Explanation: According to Rule 2(b) of FHB Volume I, the term "Bank" means any office or branch of the Banking Department of the Reserve Bank of India, any branch of the State Bank of India acting as the agent of the RBI, and any other agency appointed by the RBI.
+
+Q2. Under the provisions of FHB Volume I, what is the monetary limit up to which petty cases of loss of public money need not be reported to the Audit Officer or Accounting Authority?
+A. Rs. 2,000
+B. Rs. 5,000
+C. Rs. 10,000
+D. Rs. 50,000
+Answer: C
+Explanation: As per the exception to Rule 52 of FHB Volume I, petty cases, defined as those involving losses not exceeding Rs. 10,000 each, need not be reported to the Audit Officer or Accounting Authority concerned.
+
+Q3. What is the standard limitation period for presenting claims against the Government (other than those by one department against another) without requiring authority from the Circle Accounts Officer?
+A. One year from the date they became due
+B. Two years from the date they became due
+C. Three years from the date they became due
+D. Six years from the date they became due
+Answer: B
+Explanation: Under Rule 24 of FHB Volume I, no claims against the Government not preferred within two years of their becoming due can be presented without authority from the Circle Accounts Officer, with an exception for claims not exceeding Rs. 500 if presented within three years.
+
+Q4. Consider the following statements regarding the verification of Service Books:
+
+1. The Service Books should be verified annually by the Head of the Office.
+2. The Head of the Office must inspect the documents every year and initial them at least 10% of the total service book.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Under Rule 210 of FHB Volume I, at a fixed time early in the year, Service Books should be taken up for verification by the Head of the Office, who must inspect the documents every year and initial at least 10% of the total service book.
+
+Q5. If a Government servant's pay is attached by a court order in execution of a decree (other than for maintenance), how is the net attachable amount calculated?
+A. 50% of Basic Pay
+B. Gross emoluments minus Allowances minus One-third of Basic Pay
+C. One-third of the remainder after deducting Allowances and Rs. 1,000 from Gross emoluments.
+D. One-third of the gross salary and Rs. 1,500 from Gross emoluments.
+Answer: C
+Explanation: According to Rule 175 of FHB Volume I, the calculation of the maximum amount attachable by a Civil Court for decrees other than maintenance is: Net amount attachable = (Gross emoluments (X) - Allowances (Y) - 1000) / 3.
+
+Q6. A Government servant completed a tour and immediately undertook a second journey within a week. Under what condition can a second advance for travelling allowance be granted?
+A. Only after the final adjustment of the first advance
+B. If the second journey is undertaken within a week, and the bills for both advances are submitted within a week after the second journey
+C. Up to a maximum of three simultaneous advances can be granted
+D. A second advance is strictly prohibited under all circumstances
+Answer: B
+Explanation: As per Rule 311(iii) of FHB Volume I, a second advance may be granted if the journey is undertaken within a week after the first tour, provided the bills for the advances drawn are submitted latest within a week after the completion of the second journey. Maximum two advances can remain outstanding.
+
+Q7. Which of the following statements is/are not correct regarding the General Provident Fund (GPF) subscriptions?
+
+1. The recovery of subscription can be compulsorily discontinued during the last 6 months of service on superannuation.
+2. The subscriber is not allowed to pay the recovery amount in cash under any circumstances.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Both statements are incorrect. According to Rule 415 of FHB Volume I, recovery of subscription is discontinued during the last 3 months (not 6) of service. Additionally, the subscriber, if they desire, may be allowed to pay such recovery in cash.
+
+Q8. What is the validity period of a cheque issued by a Departmental Officer for payment?
+A. One month after the month of issue
+B. Three months after the month of issue
+C. Six months from the exact date of issue
+D. Till the end of the financial year
+Answer: B
+Explanation: Under Rule 156 of FHB Volume I, cheques shall be payable at any time within three months after the month of issue. For example, a cheque bearing a date any time in January is payable up to 30th April.
+
+Q9. Which of the following best defines "Contract contingencies"?
+A. Contingent charges that require the approval of a controlling authority before admission as expenditure
+B. Charges for which a lump sum is placed annually at the disposal of a Disbursing Officer for expenditure without further sanction
+C. Contingent charges requiring previous sanction of a superior authority
+D. Charges passed on fully vouched bills without countersignature
+Answer: B
+Explanation: Rule 243(i) of FHB Volume I defines Contract contingencies as those for which a lump sum is placed annually at the disposal of a Disbursing Officer for expenditure without further sanction, generally consisting of charges whose annual incidence can be averaged accurately.
+
+Q10. How should fractions of a rupee be rounded off in the payment of personal claims such as Death Gratuity or Commuted value of Pension?
+A. Rounded off to the nearest multiple of ten
+B. Fractions of 50 paise and above rounded to the next higher rupee, others ignored
+C. Always rounded off to the next higher rupee regardless of the fraction
+D. Exact fractions must be paid via electronic transfer
+Answer: C
+Explanation: According to Rule 47(c) of FHB Volume I, payments on account of Pension, Relief on Pension, Death Gratuity, Retirement Gratuity, and Commuted value of Pension shall be rounded off to the next higher rupee.
+
+Q11. Who is the competent authority to fix the authorized maximum cash balance for a First-class Head Post Office?
+A. The Divisional Head
+B. The Director General of Posts
+C. The Head of Circle or the SSPOs under his control
+D. The General Manager (PAF)
+Answer: C
+Explanation: As per the table under Rule 124 of FHB Volume I, the competent authority to fix the authorized cash balance for a First-class HPO is the Head of Circle or the Senior Superintendent of Post Offices (SSPOs) under his control.
+
+Q12. What is the maximum number of times a Government servant can be allowed an advance for the purchase of a personal computer during their entire service?
+A. Two times
+B. Three times
+C. Five times
+D. Unlimited, provided the previous advance is fully repaid
+Answer: C
+Explanation: According to the provisions for Advance for purchase of personal computer (GAR-27) under Rule 300 of FHB Volume I, the personal computer advance will be allowed five times in the entire service.
+
+Q13. Consider a Government servant drawing a gross emolument of Rs. 60,000, out of which allowances amount to Rs. 20,000. Under a court decree for a regular civil debt, what is the maximum net amount attachable per month?
+A. Rs. 13,000
+B. Rs. 13,333
+C. Rs. 19,666
+D. Rs. 20,000
+Answer: A
+Explanation: Under Rule 175 of FHB Volume I, Net amount attachable = (Gross (X) - Allowances (Y) - 1000) / 3. Here, (60000 - 20000 - 1000) = 39000. Dividing by 3 gives Rs. 13,000.
+
+Q14. What is the permanent advance amount sanctioned for contingent expenditure for an Inspector of Posts (IP) or an ASP?
+A. Rs. 250
+B. Rs. 500
+C. Rs. 1,000
+D. Rs. 5,000
+Answer: B
+Explanation: According to Rule 252 of FHB Volume I, a permanent advance of Rs. 500 is provided for contingent expenditure for the holder, which explicitly includes Inspector of Posts (IP), ASP, and HSG-I Postmasters.
+
+Q15. In an Audit Inspection Report, which section contains minor irregularities to which a schedule of items settled on the spot is attached?
+A. Part-I (b)
+B. Part-II Section-A
+C. Part-II Section-B
+D. Part-III (a)
+Answer: D
+Explanation: As detailed in the table under Rule 95 of FHB Volume I, Part-III (a) consists of a test audit note containing minor irregularities to which will be attached a schedule of items settled on the spot.
+
+Q16. Consider the following statements regarding the handling of cheques at a Post Office:
+
+1. Cheques drawn for departmental payments must not be for amounts less than Rs. 100.
+2. Cheques received from the public for any postal transaction must not be for an amount less than Rs. 20.
+3. Cheques drawn in favor of Gazetted Officers in settlement of Government dues must always be crossed "Account payee only - not negotiable".
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Answer: D
+Explanation: All statements are correct. Rule 130 states cheques will not be drawn for less than Rs. 100. Rule 107(a) states cheques accepted from the public cannot be less than Rs. 20. Rule 153 mandates the "Account payee only" crossing for Gazetted Officers.
+
+Q17. A Government servant loses the right to claim Travelling Allowance (TA) if the claim is not preferred within what time frame from the date it becomes due?
+A. 30 days
+B. 60 days
+C. 90 days
+D. 6 months
+Answer: B
+Explanation: As per Rule 25 of FHB Volume I, the right of a Government servant to travelling allowance is forfeited or deemed relinquished if the claim is not preferred within sixty days from the date on which it becomes due.
+
+Q18. Following the revision of monetary limits for investigating loss/fraud cases, what is the current monetary limit up to which an Inspector of Posts (IP/ASP) can investigate?
+A. Up to Rs. 1 lakh
+B. Up to Rs. 2 lakhs
+C. Up to Rs. 5 lakhs
+D. Greater than Rs. 10 lakhs
+Answer: B
+Explanation: According to Govt. Decision No. 2 regarding Rule 52 (effective 23.09.2021) in FHB Volume I, the revised monetary limit for investigation by an Inspector Posts/ASP is up to Rs. 2 lakhs (previously up to 1 lakh).
+
+Q19. At what threshold is it mandatory for a receipt to bear a revenue stamp under the Indian Stamp Act, unless specifically exempted?
+A. Sums exceeding Rs. 500
+B. Sums exceeding Rs. 1,000
+C. Sums exceeding Rs. 5,000
+D. Sums exceeding Rs. 10,000
+Answer: C
+Explanation: According to Rule 48 of FHB Volume I, receipts for all sums exceeding Rs. 5,000 must be stamped under Section 3 of the Indian Stamp Act, and the stamp duty is charged on the net amount.
+
+Q20. When an advance of travelling allowance is granted to a Government servant proceeding on tour, within what timeframe must the amount be adjusted?
+A. Within 7 days from the completion of the tour
+B. Within 15 days from the completion of the tour or resumption of duty
+C. Within 30 days of drawing the advance
+D. Before the end of the financial year
+Answer: B
+Explanation: As per Rule 311(i) of FHB Volume I, the amount of advance granted shall be adjusted within 15 days from the completion of the tour or the date on which the Government servant resumes duty after the completion of the tour.
+
+Q21. A Drawing Officer passes a bill for presentation at a disbursing office, but the bill is lost before payment. Under Rule 50, what action must the officer take before issuing a duplicate?
+A. Immediately issue a duplicate marking it "Duplicate" in red ink
+B. Ascertain from the disbursing office that payment has not been made on the original
+C. Require the payee to execute an indemnity bond
+D. Obtain sanction from the Circle Accounts Officer
+Answer: B
+Explanation: Rule 50 of FHB Volume I stipulates that if a passed bill is lost before payment, the Government Officer who drew the original bill must ascertain from the disbursing office that payment has not been made on it before issuing a duplicate.
+
+Q22. If a Government servant takes a period of leave followed immediately by a transfer to a new station, where can the undrawn portion of the leave salary be drawn?
+A. Only at the old station where the leave was sanctioned
+B. Only at the Circle Postal Accounts Office
+C. At the office of disbursement from which the pay in respect of the new posting station is drawn
+D. Directly from the Treasury serving the old station
+Answer: C
+Explanation: According to Rule 192 of FHB Volume I, in cases where a period of leave is followed by a transfer, any portion of leave salary not drawn at the old station may be drawn at the office of disbursement from which the pay for the new posting is drawn.
+
+Q23. In the event of the death of a Government servant, what is the maximum gross amount of pay and allowances claimable that the Head of Office can pay anticipatorily to the heirs without the production of usual legal authority and without an Indemnity Bond?
+A. Rs. 5,000
+B. Rs. 10,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: B
+Explanation: Under Rule 189(a) of FHB Volume I, the Head of Office may make an anticipatory payment of an amount not exceeding Rs. 10,000 without a legal authority. For amounts between Rs. 10,000 and the specified upper limit, an Indemnity Bond (Form T.R. 14) is required.
+
+Q24. In the classification of departmental receipts and expenditure, which Major Head corresponds to "Postal Receipts"?
+A. Major Head 0049
+B. Major Head 1201
+C. Major Head 3201
+D. Major Head 5201
+Answer: B
+Explanation: As per Rule 72 (and Rule 70) of FHB Volume I, revenue receipts for Postal Receipts are recorded under Major Head 1201. Major Head 3201 represents Postal Services (Expenditure), and 5201 is Capital Outlay.
+
+Q25. Up to what maximum limit of hours can the Divisional Superintendent sanction Overtime Allowance for staff in a Railway Mail Service Division during a four-weekly cycle without needing formal permission from the Head of Circle?
+A. 30 hours
+B. 50 hours
+C. 70 hours
+D. 90 hours
+Answer: C
+Explanation: According to Rule 234 of FHB Volume I, overtime allowance up to 70 hours can be sanctioned by the Divisional Head. For hours beyond 70 hours, formal permission from the Head of Circle is required.
+
+Q26. As defined in FHB Volume II, what does the abbreviation "DDO" stand for?
+A. Deputy Disbursing Officer
+B. Divisional Drawing Officer
+C. Drawing and Disbursing Officer
+D. Departmental Distribution Officer
+Answer: C
+Explanation: According to Rule 2(1) of FHB Volume II, DDO stands for "Drawing and Disbursing Officer", the designated authority responsible for drawing bills, receiving/disbursing money, and maintaining accounts.
+
+Q27. What is the fee prescribed for applying for a new franking machine license?
+A. Rs. 200
+B. Rs. 375
+C. Rs. 475
+D. Rs. 500
+Answer: B
+Explanation: As per Rule 21 of FHB Volume II, the fee for applying for a new franking machine license is Rs. 375. The renewal fee for an expired license is Rs. 475.
+
+Q28. An individual wishes to open a Philately Deposit Account at a Philatelic Bureau. What is the prescribed security deposit amount for this scheme?
+A. Rs. 100
+B. Rs. 200
+C. Rs. 500
+D. Rs. 1,000
+Answer: B
+Explanation: Under Rule 15 of FHB Volume II, an amount of Rs. 200 has been prescribed as the Security deposit for opening a Philately Deposit Account.
+
+Q29. A bulk customer utilizing the Book Now Pay Later (BNPL) facility fails to make payment by the last day of the month. What is the penalty imposed?
+A. 10% per annum from the due date
+B. 12% per annum from the bill date
+C. 15% per annum from the bill date
+D. Immediate cancellation of the license
+Answer: B
+Explanation: According to Rule 22 of FHB Volume II, if a customer fails to make payment by the due date, a penalty at the rate of 12% per annum on the bill amount shall be imposed calculated from the bill date.
+
+Q30. To qualify as a bulk customer eligible for the Book Now Pay Later (BNPL) facility, a customer must provide business worth at least what amount in a calendar month?
+A. Rs. 5,000
+B. Rs. 10,000
+C. Rs. 25,000
+D. Rs. 50,000
+Answer: B
+Explanation: Rule 22 of FHB Volume II defines a bulk customer as anyone who provides Rs. 10,000 worth of speed post business or business post or a combination of both in a calendar month at a Speed Post booking office.
+
+Q31. Consider the following statements regarding the duties of the Treasurer as per Rule 25 of FHB Vol II:
+
+1. The Treasurer is solely responsible for the safe custody of cash kept in the reserve safe.
+2. The Treasurer is strictly prohibited from keeping running accounts with the Postal Assistants and Postmen.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Statement 1 is incorrect because Rule 25(a) states that in offices with a reserve safe, the Treasurer is jointly responsible with the Postmaster for its safe custody. Statement 2 is correct as per Rule 32(a), which strictly prohibits the Treasurer from keeping running accounts with PAs, Postmen, and GDS.
+
+Q32. A post office counter clerk finds an unused, loose service postage stamp on the counter. No claimant appears by the end of the following month. What action should the Postmaster take?
+A. Destroy the stamp immediately
+B. Credit its value to Unclassified Receipts
+C. Take it into the stock of such stamps and stationery
+D. Return it to the Postal Stores Depot (PSD)
+Answer: C
+Explanation: According to Rule 57(3) of FHB Volume II, unused loose stamps found on counters are kept out of accounts until the end of the following month. If no claim is established within this period, the stamps and stationery will be taken into the stock of such stamps and stationery.
+
+Q33. Which standard form number is utilized for the Head Office Classified Cash Book?
+A. ACG-2
+B. ACG-4
+C. ACG-5
+D. ACG-40
+Answer: B
+Explanation: As indicated in Rule 46(b) and the forms table at the end of FHB Volume II, the Head Office Classified Cash Book is maintained in Form No. ACG-4. (ACG-2 is the e-Treasurer Cash Book).
+
+Q34. How frequently must the Head Postmaster submit the statement of balances showing the actual balances held in cash and stock of postage to the SPOs or SSPOs?
+A. Daily
+B. Weekly (on the 1st, 8th, 16th, and 24th of every month)
+C. Fortnightly
+D. Monthly by the 5th of the following month
+Answer: B
+Explanation: According to Rule 54(b) of FHB Volume II, the statement of balances must be entered in a weekly statement and submitted punctually on the 1st, 8th, 16th, and 24th of every month.
+
+Q35. Consider the following statements regarding TDS on GST:
+
+1. TDS is deducted at the rate of 2% (1% CGST and 1% SGST).
+2. It is applicable where the value of service or goods exceeds Rs. 2.5 Lakhs.
+3. The provisions for TDS on GST have been applicable since 1st October 2017.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because Rule 92 of FHB Volume II explicitly states that the provisions of TDS on GST are applicable from 1st October 2018, not 2017.
+
+Q36. Under current active CBIC notifications (amending the statutory limits), what is the standard total late fee levied per day for the late filing of regular GST Returns (combining CGST and SGST, excluding Nil returns)?
+A. Rs. 50
+B. Rs. 100
+C. Rs. 200
+D. Rs. 500
+
+Answer: A
+Explanation: While Section 47 of the CGST Act originally prescribed a maximum of Rs. 200 per day (Rs. 100 CGST + Rs. 100 SGST), the Government rationalized these late fees. Under current CBIC notifications (e.g., Notification No. 19/2021), the active late fee for a regular (non-nil) return is capped at Rs. 50 per day (Rs. 25 CGST + Rs. 25 SGST).
+
+Q37. For how many months must every registered taxable person maintain the accounts books and records under the GST Act, counted from the last date of filing the annual return?
+A. 36 months
+B. 48 months
+C. 60 months
+D. 72 months
+Answer: D
+Explanation: According to Rule 104 of FHB Volume II, every registered taxable person must maintain the accounts books and records for at least 72 months from the last date of filing the annual return for that year.
+
+Q38. A pensioner passes away leaving arrears of pension amounting to Rs. 45,000. Under Rule 154, what is the required procedure for the heirs to claim this amount?
+A. The Accounting Authority may authorize payment on his own authority without an indemnity bond.
+B. An Indemnity Bond in Form TR-14 with two sureties must be produced.
+C. Payment can only be authorized upon the production of legal authority.
+D. The arrears are forfeited if they exceed Rs. 25,000.
+Answer: A
+Explanation: Under Rule 154(b)(i) of FHB Volume II, if the gross amount of arrears does not exceed Rs. 50,000, the accounting authority concerned may authorize the payment on his own authority without requiring an Indemnity Bond.
+
+Q39. After how many years from the date of payment of the commuted value of pension is the restoration of the commuted value authorized by Head Postmasters?
+A. 10 years
+B. 12 years
+C. 15 years
+D. 20 years
+Answer: C
+Explanation: As specified in Rule 126 of FHB Volume II, the restoration of the commuted value of Pension will be authorized by Head Postmasters after 15 years from the date of payment.
+
+Q40. Which of the following individuals is NOT explicitly authorized under Rule 135 to sign a life certificate exempting a pensioner from personal appearance?
+A. A Magistrate under the CrPC
+B. A Sub-Inspector-in-charge of a police station
+C. A Group C Government servant
+D. A Postmaster or an Inspector of Post Offices
+Answer: C
+Explanation: Rule 135 of FHB Volume II lists authorized persons, which include a Magistrate, a Group A or B Government servant, a Sub-Inspector, and a Postmaster. Group C Government servants are not included in the list.
+
+Q41. Consider the following statements regarding Pension Payment Orders (PPOs):
+
+1. Head Postmasters are authorized to renew PPOs without reference to the Postal Accounts Office if the pensioner's half is completely filled up.
+2. The old PPO must be retained by the Postmaster for five years and then destroyed.
+3. The disburser's half of the PPO shall be kept in the personal custody of the Postmaster.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct (Rules 123 and 120). Statement 2 is incorrect because Rule 123 specifies that the old PPO shall be retained by the Postmaster for three years (not five) and then destroyed.
+
+Q42. What is the standard percentage reduction applied when sanctioning a refund for the face value of unused but spoilt postage stamps (both ordinary and service)?
+A. 5%
+B. 10%
+C. 15%
+D. 20%
+
+Answer: B
+Explanation: Under current updated postal regulations, the competent authority may sanction the refund of the face value of unused but spoilt postage stamps subject to a deduction of 10%.
+
+
+Q43. What is the prescribed haulage charge for a Railway Mail Service Van covering a distance slab of 0-500 kms for the year 2023-24?
+A. Rs. 0.61 per berth per km
+B. Rs. 0.73 per berth per km
+C. Rs. 1.00 per berth per km
+D. Rs. 1.15 per berth per km
+Answer: D
+Explanation: As per the table under Rule 171 of FHB Volume II detailing Haulage charges for 2023-24, the rate for the 0-500 kms distance slab is Rs. 1.15 per berth per km.
+
+Q44. By what date must the Head Office Classified Cash Account for the previous month be submitted by the Head Office to the Postal Accounts Office?
+A. 1st of each month
+B. 5th of each month
+C. 10th of each month
+D. 15th of each month
+Answer: B
+Explanation: According to Rule 49(a) of FHB Volume II, the Head Office classified Cash Account of the Head Office for the previous month will be submitted by the 5th of each month to the Postal Accounts Office.
+
+Q45. When correcting an accounting error through a transfer entry or reversal, what critical timing restriction must the DDO observe?
+A. The correction can be backdated to the original date of the transaction if it occurred in a previous financial year.
+B. Reversals must be posted on the current date, and no posting or reversal is allowed for prior period accounts that have already been finalized.
+C. Corrections must be held in suspense until the end of the quarter.
+D. The DDO must wait for the CPAO to execute all modifications centrally.
+Answer: B
+Explanation: Rule 58 of FHB Volume II strictly mandates that the DDO shall ensure reversals or document postings are done on the current date, and no posting or reversal is allowed for prior period/date accounts that have already been submitted and finalized.
+
+Q46. In which standard form does the Postmaster keep a register of the Pension Payment Orders (PPOs) received by him?
+A. ACG-45
+B. Form TR-14
+C. Form No. Pension-2
+D. Form ACG-2
+Answer: C
+Explanation: According to Rule 128 of FHB Volume II, the Postmaster will keep a register or e-register in Form No. Pension-2 of the PPOs received by him.
+
+Q47. While the standard month for submitting a Life Certificate is November, from which date can pensioners aged 80 years and above submit their Life Certificate?
+A. 1st September
+B. 1st October
+C. 15th October
+D. 1st November (same as others)
+Answer: B
+Explanation: Under Rule 152 of FHB Volume II, Pensioners/Family pensioners aged 80 years and above may submit their Life Certificate with effect from 1st October of each year, which would be valid till 30th November.
+
+Q48. Which of the following statements is/are correct regarding a pensioner residing in India who draws his pension through an authorized agent?
+
+1. The agent must possess a legally valid power of attorney.
+2. If the agent executes an indemnity bond to refund overpayments, the life certificate only needs to be produced at least once a year.
+3. The disbursing officer must promptly stop payments upon receiving authentic information of the pensioner's death.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Answer: D
+Explanation: All three statements accurately reflect the provisions of Rules 136, 137, and 138 of FHB Volume II governing the payment of pension to agents, the execution of indemnity bonds, and the vigilance required upon the pensioner's death.
+
+Q49. In a Head Office, where must the Postmaster enter the carefully calculated total postage due on all unregistered articles of the letter mail received for delivery each day?
+A. Head Office Classified Cash Book (ACG.4)
+B. Treasurer's Cash Book (ACG.2)
+C. Unpaid Postage Abstract (ACG.45)
+D. Daily Transaction Report (DTR)
+Answer: C
+Explanation: According to Rule 42 of FHB Volume II, the total postage due on unregistered articles must be calculated by the Postmaster and entered in the Unpaid Postage Abstract Form ACG.45 under the appropriate column.
+
+Q50. Within the 15-digit Head of Account classification structure used by the Department of Posts, how many digits are allocated specifically for the "Sub-Heads"?
+A. 2 digits
+B. 3 digits
+C. 4 digits
+D. 6 digits
+Answer: A
+Explanation: As per the table in Rule 12 of FHB Volume II detailing the 15-digit Head of Account, Sub-Heads consist of 2 digits. (Major Heads = 4 digits, Sub-Major = 2, Minor = 3, Sub-Heads = 2, Detailed = 2, Object = 2).

@@ -1,0 +1,504 @@
+Q1. (Manual on Public Procurement) [Difficulty: Easy]
+What is the prescribed limit for direct purchase of goods without quotation on each occasion, as per the updated provisions?
+A. Rs. 25,000
+B. Rs. 50,000
+C. Rs. 1,00,000
+D. Rs. 2,50,000
+Answer: B
+Explanation: As per Rule 154 of GFR 2017, updated effective 10.07.2024, the purchase of goods without quotation can be made up to the value of Rs. 50,000 on each occasion. This is applicable for off-the-shelf goods of simple and standard specifications.
+
+Q2. (Manual on Public Procurement) [Difficulty: Moderate]
+Under the Option Clause in a tender for raw materials, what percentage of the originally contracted quantity can the purchaser additionally order during the currency of the contract?
+A. Up to 15 percent
+B. Up to 20 percent
+C. Up to 25 percent
+D. Up to 30 percent
+Answer: C
+Explanation: The Option Clause allows the purchaser to increase or decrease the ordered quantity by up to 25 percent at any time till the final delivery date at the same rate and terms. This is normally included in tenders of value above Rs. 50 lakhs.
+
+Q3. (Manual on Public Procurement) [Difficulty: Hard]
+Consider the following statements regarding the Public Procurement (Preference to Make in India) Order:
+
+1. A Class-I local supplier must have a minimum local content of 50 percent.
+2. If the L1 bidder is a Non-Local supplier, the Class-II local supplier gets purchase preference to match the L1 price.
+3. The margin of purchase preference is L1 + 20%.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Under the PPP-MII Order, the margin of purchase preference is strictly 20%. Statement 2 is incorrect as Class-II local suppliers do not get purchase preference.
+
+Q4. (Manual on Public Procurement) [Difficulty: Easy]
+What is the rate of Performance Security to be obtained from the successful bidder for Goods/Services contracts effective from 01.01.2024?
+A. 2% to 5%
+B. 3% to 5%
+C. 5% to 10%
+D. 10% to 15%
+Answer: B
+Explanation: As per Rule 171 of GFR 2017, revised effective 01.01.2024, the Performance Security for Goods and Services contracts is 3% to 5% of the value of the contract. For works, it remains 3% to 10%.
+
+Q5. (Manual on Public Procurement) [Difficulty: Moderate]
+In a Two-Stage Bidding process, when is the financial bid submitted by the bidders?
+A. Along with the technical bid in the first stage but in a separate sealed envelope.
+B. In the first stage, but it is kept unsealed until the technical evaluation is complete.
+C. In the second stage, after the technical aspects and contractual terms have been evaluated and finalized.
+D. Both technical and financial bids are submitted and opened simultaneously in the first stage.
+Answer: C
+Explanation: According to Rule 164 of GFR 2017, in Two-Stage Bidding, the first stage involves submitting only technical bids without a bid price. In the second stage, bidders whose first-stage bids were not rejected are invited to submit final bids with prices.
+
+Q6. (Manual on Public Procurement) [Difficulty: Hard]
+Which of the following statements is/are not correct regarding Global Tender Enquiry (GTE)?
+
+1. GTE can be invited for procurements up to Rs. 200 crores without any special exemption.
+2. Tender documents must be priced minimally to cover the cost of preparation and publicity.
+3. Indian Bidders participating in GTE are allowed to quote their prices in US Dollars or Euros.
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 is incorrect because GTE up to Rs. 200 crores cannot be invited generally. Statement 3 is incorrect because while foreign bidders can quote in foreign currencies, Indian Bidders are required to quote in INR only. Statement 2 is correct.
+
+Q7. (Manual on Public Procurement) [Difficulty: Easy]
+What is the mandatory method for the Central Government to procure common use goods and services available on the GeM portal?
+A. Advertised Tender Enquiry
+B. Limited Tender Enquiry
+C. Direct purchase through GeM
+D. Single Tender Enquiry
+Answer: C
+Explanation: Under Rule 149 of GFR 2017, the procurement of common use Goods and Services available on the Government e-Marketplace (GeM) is mandatory for Ministries and Departments.
+
+Q8. (Manual on Public Procurement) [Difficulty: Moderate]
+Under the MSE purchase preference policy, what happens if the tender item cannot be split and an MSE quotes a price within the L1 + 15% band?
+A. The MSE is awarded 25% of the tendered value.
+B. The MSE is awarded the full/complete supply of the total tendered value after matching the L1 price.
+C. The tender is cancelled and re-issued exclusively for MSEs.
+D. The MSE is disqualified for bidding on indivisible items.
+Answer: B
+Explanation: If the tender item cannot be split or divided, an eligible MSE quoting a price within the L1 + 15% band may be awarded the full/complete supply of the total tendered value, considering the spirit of the Policy to enhance procurement from MSEs.
+
+Q9. (Manual on Public Procurement) [Difficulty: Hard]
+Consider the following scenario: A contractor delays the delivery of stores by 3 weeks beyond the original delivery period. The delay is not treated as an inordinate delay. What is the maximum Liquidated Damages (LD) deduction permissible on the total contract value?
+A. 0.5 percent
+B. 1.5 percent
+C. 5 percent
+D. 10 percent
+Answer: C
+Explanation: LD is recovered at 0.5% of the price of the delayed stores per week of delay. However, the maximum deduction is normally capped at 5% of the total contract value. It is raised to 10% only in cases of inordinate delay (exceeding 25% of the completion period).
+
+Q10. (Manual on Public Procurement) [Difficulty: Moderate]
+When procuring non-consulting services through Quality and Cost Based Selection (QCBS), what is the maximum weightage that can be assigned to technical (non-financial) parameters?
+A. 50 percent
+B. 70 percent
+C. 80 percent
+D. 90 percent
+Answer: C
+Explanation: Rule 192 of GFR 2017 specifies that in the QCBS evaluation method for consultancy and non-consultancy services, the weightage of the technical (non-financial) parameters in no case should exceed 80 percent.
+
+Q11. (Manual on Public Procurement) [Difficulty: Hard]
+Which of the following conditions mandates the generation of a GeMAR&PTS ID?
+A. When procuring common use items directly through the GeM portal up to Rs. 50,000.
+B. When a buyer procures goods outside the GeM portal because the required goods are not available on GeM.
+C. When the procurement is made strictly through an Advertised Tender Enquiry on CPPP.
+D. When an organization registers a new supplier for items currently available on GeM.
+Answer: B
+Explanation: It is mandatory for a buyer to generate a "GeM Availability Report and Past Transaction Summary" (GeMAR&PTS) with a unique ID on the GeM portal before proceeding with procurement outside GeM, proving the non-availability of the item.
+
+Q12. (Manual on Public Procurement) [Difficulty: Moderate]
+Which committee evaluates the technical bids during the procurement of Consulting Services?
+A. Local Purchase Committee (LPC)
+B. Consultancy Evaluation Committee (CEC)
+C. Technical Scrutiny Committee (TSC)
+D. Project Management Committee (PMC)
+Answer: B
+Explanation: Rule 189 of GFR 2017 mandates that technical bids for consulting services should be analyzed and evaluated by a Consultancy Evaluation Committee (CEC) constituted by the Ministry or Department.
+
+Q13. (CVC Guidelines on Public Procurement) [Difficulty: Easy]
+According to CVC guidelines, post-tender negotiations are strictly banned except with which of the following?
+A. The bidder with the highest technical score
+B. The L-1 (lowest) tenderer
+C. All bidders within the L1 + 10% price band
+D. Public Sector Undertakings only
+Answer: B
+Explanation: CVC instruction No. 8(1)(h)/98(1) dated 18.11.1998 strictly bans post-tender negotiations except with the L-1 (lowest) tenderer, to prevent corruption and ensure transparency in public procurement.
+
+Q14. (CVC Guidelines on Public Procurement) [Difficulty: Moderate]
+Under CVC guidelines regarding Mobilisation Advance, how should Bank Guarantees (BGs) be structured?
+A. A single BG should be taken for the entire advance and released only upon project completion.
+B. BGs should be taken in as many numbers as the proposed recovery installments, equivalent to each installment.
+C. BGs are only required if the mobilization advance exceeds 20% of the contract value.
+D. BGs must be issued strictly by a Co-operative Bank.
+Answer: B
+Explanation: CVC Circular No. 10/4/07 stipulates that part Bank Guarantees against mobilization advance should be taken in as many numbers as the proposed recovery installments, ensuring recovery can be enforced for uncompleted work at any time.
+
+Q15. (CVC Guidelines on Public Procurement) [Difficulty: Hard]
+Which of the following statements is/are correct regarding the banning of business dealings as per CVC guidelines?
+
+1. An organization can ban a firm for non-performance leading to contract termination.
+2. A firm banned by one organization cannot be considered for banning by other organizations under the same Ministry.
+3. The banning process does not require a hearing of the affected firm if the fraud is evident.
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statement 1 is correct. Statement 2 is incorrect; other organizations under the same Ministry may also consider banning the firm. Statement 3 is incorrect as the policy must ensure the principles of natural justice, including hearing the affected firm.
+
+Q16. (CVC Guidelines on Public Procurement) [Difficulty: Easy]
+How frequently must officials working in sensitive posts, such as procurement and contracts, be rotated according to CVC guidelines?
+A. Every 1 to 2 years
+B. Every 2 to 3 years
+C. Every 4 to 5 years
+D. Only upon promotion
+Answer: B
+Explanation: CVC Circular No. 03/09/13 mandates that officials in sensitive posts (including purchase, contracts, and finance) must be strictly rotated after every two to three years to avoid the development of vested interests.
+
+Q17. (CVC Guidelines on Public Procurement) [Difficulty: Moderate]
+If a Public Sector Undertaking (PSU) needs to sub-contract a part of a work given by a principal government organization, what is the mandatory requirement?
+A. It can sub-contract on a back-to-back basis immediately to save time.
+B. It must obtain prior approval of the principal organization and follow transparent tendering.
+C. It can only sub-contract to another PSU without requiring permission.
+D. It must notify the CVC directly before awarding the sub-contract.
+Answer: B
+Explanation: CVC Circular No. 06-03-02-CTE-34 dictates that a PSU cannot sub-contract work on a back-to-back basis without the knowledge and prior approval of the principal organization, and it must select the sub-contractor transparently.
+
+Q18. (CVC Guidelines on Public Procurement) [Difficulty: Hard]
+Consider the following statements regarding the consideration of Indian Agents in international competitive bidding:
+
+1. An Indian agent can represent multiple foreign principals in the same tender.
+2. If a foreign firm participates directly, its Indian agent cannot submit a separate bid for the same tender.
+3. Agency commission payable to the Indian agent must be paid in foreign currency.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are incorrect. CVC guidelines mandate that only one agent is permitted per foreign firm in a tender, and the agency commission to the Indian agent must be paid in Indian Rupees. Statement 2 is correct.
+
+Q19. (CVC Guidelines on Public Procurement) [Difficulty: Moderate]
+As per CVC guidelines on Conflict of Interest, what restriction applies to a consultant engaged to prepare bid documents for a project?
+A. The consultant can participate in the tender if they quote the lowest price.
+B. The consultant and its subsidiaries are prohibited from participating in the tender for that project.
+C. The consultant may participate in the tender provided they disclose their role to the CVC.
+D. The consultant can participate only if the project is externally funded by the World Bank.
+Answer: B
+Explanation: CVC Office Order No. 75/12/04 explicitly prohibits a consultant who has been engaged for the preparation of bid documents from participating in the tender for that specific project, to prevent reciprocal conflict of interest.
+
+Q20. (CVC Guidelines on Public Procurement) [Difficulty: Hard]
+Which of the following statements is/are correct regarding the pre-qualification (PQ) criteria for Civil/Electrical Works as per CVC guidelines?
+
+1. The average financial turnover during the last 3 years should be at least 30% of the estimated cost.
+2. The experience criterion allows qualification if the firm has one similar completed work costing not less than 80% of the estimated cost.
+3. The cut-off for "last 7 years" ends on the 31st March of the previous financial year.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per OM No. 12-02-1-CTE-6. Statement 3 is incorrect because the 7-year period for experience ends on the last day of the month previous to the one in which applications are invited, not 31st March.
+
+Q21. (CVC Guidelines on Public Procurement) [Difficulty: Easy]
+Which platform was mandated by the Ministry of Finance for the publication of all Central Government tender enquiries to implement end-to-end e-procurement?
+A. PFMS Portal
+B. Central Public Procurement Portal (CPPP)
+C. National Informatics Centre (NIC) Server
+D. Direct Benefit Transfer (DBT) Portal
+Answer: B
+Explanation: The Central Public Procurement Portal (CPPP) at eprocure.gov.in is the mandated platform for publishing all tender enquiries and conducting end-to-end e-procurement for Central Government entities.
+
+Q22. (CVC Guidelines on Public Procurement) [Difficulty: Moderate]
+What action must be taken by a tender opening committee if there are cuttings, overwriting, or scoring in the original quoted prices of a bid?
+A. The bid must be immediately rejected and returned to the bidder.
+B. The committee must initial and date the corrections during the opening of tenders.
+C. The committee must ask the bidder to submit a fresh price bid within 24 hours.
+D. The tender process must be canceled and a re-tender issued.
+Answer: B
+Explanation: According to CVC OM No. 05-04-1-CTE-8, any corrections, overwriting, and scoring in the original quoted prices must be initialed and dated by the Tender Opening Committee at the time of opening the tenders.
+
+Q23. (CVC Guidelines on Public Procurement) [Difficulty: Hard]
+With reference to the Intensive Examination conducted by the Chief Technical Examiner’s (CTE) Organisation, consider the following statements:
+
+1. Intensive Examination covers only the post-award contract management phase.
+2. Splitting of work to avoid higher authority approval is considered a common irregularity.
+3. The selection of cases for examination is based on contract value, complaints, and intelligence inputs.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 is incorrect because the Intensive Examination covers the entire procurement cycle, from Need Assessment and DPR preparation to contract closure. Statements 2 and 3 accurately reflect CTE focus areas and common irregularities.
+
+Q24. (CVC Guidelines on Public Procurement) [Difficulty: Moderate]
+What is the specific purpose of obtaining an undertaking from the members of the Tender Evaluation Committee?
+A. To guarantee that the project will be completed within the stipulated budget.
+B. To declare that they have no personal interest or financial dealings with participating firms.
+C. To certify that the L-1 bidder is technically superior to all other bidders.
+D. To take legal responsibility for any defects found during the execution of the contract.
+Answer: B
+Explanation: CVC Office Order No. 71/12/05 requires Tender Committee members to give an undertaking declaring no personal, financial, or business conflict of interest with participating tenderers and promising objective evaluation.
+
+Q25. (CVC Guidelines on Public Procurement) [Difficulty: Hard]
+Which of the following best describes the "Swiss Challenge Method" in public procurement as defined in the CVC framework?
+A. A reverse auction where all bidders must belong to a pre-qualified consortium.
+B. A process where the government calls for competing proposals against an unsolicited proposal, giving the original proponent the right of first refusal.
+C. A quality-based selection method used exclusively for international architectural consultancy.
+D. A mandatory dispute resolution mechanism applied to contracts involving foreign agents.
+Answer: B
+Explanation: The Swiss Challenge Method is used for unsolicited proposals. The original proponent is given the "right of first refusal" to match the best competing bid. CVC cautions its use should be restricted to specific authorized cases.
+
+Q26. (GFR 2017 - Other than Procurement) [Difficulty: Easy]
+As per Rule 21 of GFR 2017, an officer incurring expenditure from public moneys should exercise the same vigilance as:
+A. A certified financial auditor
+B. A person of ordinary prudence would exercise in respect of their own money
+C. A gazetted officer of the Indian Audit and Accounts Service
+D. The Chief Accounting Authority of the Ministry
+Answer: B
+Explanation: Rule 21 (Standards of financial propriety) states that every officer must exercise the same vigilance in respect of public expenditure as a person of ordinary prudence would exercise over their own money.
+
+Q27. (GFR 2017 - Other than Procurement) [Difficulty: Moderate]
+Under GFR 2017, all losses of Government property due to suspected fire, theft, or fraud must invariably be reported to the Police if the value exceeds:
+A. Rs. 10,000
+B. Rs. 25,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: C
+Explanation: Rule 34 of GFR 2017 mandates that all losses above the value of Rs. 50,000 due to suspected fire, theft, fraud, etc., shall be invariably reported to the Police for investigation as early as possible.
+
+Q28. (GFR 2017 - Other than Procurement) [Difficulty: Hard]
+Consider the following statements regarding the Remission of Revenue and Abandonment of Claims (Rule 19):
+
+1. Departments must submit an annual statement to the Audit Officer on the 1st of June.
+2. Individual remissions below Rupees one thousand must be explicitly detailed in the annual statement.
+3. A claim to revenue can be abandoned by any Head of Office without sanction.
+Which of the statements given above is/are not correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 2 is incorrect because individual remissions below Rs. 100 (not Rs. 1,000) need not be included in the statement, as per Rule 19 of GFR 2017.
+
+Q29. (GFR 2017 - Other than Procurement) [Difficulty: Easy]
+A financial sanction issued by a competent authority lapses if no payment has been made during a period of:
+A. 6 months from the date of issue
+B. 12 months from the date of issue
+C. 24 months from the date of issue
+D. 36 months from the date of issue
+Answer: B
+Explanation: According to Rule 30 of GFR 2017 (Lapse of sanctions), a sanction lapses if no payment in whole or in part has been made during a period of twelve months from the date of issue of such sanction.
+
+Q30. (GFR 2017 - Other than Procurement) [Difficulty: Moderate]
+Which of the following losses of public moneys or property does NOT need to be formally reported to the next higher authority?
+A. Petty losses of value not exceeding Rs. 10,000.
+B. Losses due to natural calamities like earthquakes.
+C. Losses caused by the gross negligence of a Government servant.
+D. Any loss of stamps or opium regardless of value.
+Answer: A
+Explanation: Rule 33(1) of GFR 2017 specifies that petty losses of value not exceeding Rupees ten thousand, as well as mistakes in assessments and time-barred claims, need not be reported to the next higher authority.
+
+Q31. (GFR 2017 - Other than Procurement) [Difficulty: Hard]
+As per Rule 29 of GFR 2017, copies of all financial sanctions must generally be endorsed to the Audit Officer. Which of the following is an EXCEPTION and does not need to be endorsed to the Audit Officer?
+A. Sanctions relating to the creation or abolition of posts.
+B. Sanctions for handing over and taking over charge.
+C. Sanctions for major infrastructure projects exceeding Rs. 50 crores.
+D. Sanctions regarding the assignment of revenue.
+Answer: B
+Explanation: Rule 29 specifies certain routine sanctions that do not need to be endorsed to Audit Officers. These exceptions include sanctions for handing over/taking over charge, GPF advances, and routine contingent expenditure by Heads of Offices.
+
+Q32. (GFR 2017 - Other than Procurement) [Difficulty: Moderate]
+When does a sanction or order issued by a competent authority come into force, assuming no specific date is mentioned in the order?
+A. On the first day of the following financial year.
+B. From the date of receipt by the controlling officer.
+C. From the date of issue of the order.
+D. After 30 days of its publication in the Gazette.
+Answer: C
+Explanation: Rule 27 of GFR 2017 (Date of effect of sanction) dictates that all rules, sanctions, or orders come into force from the date of issue unless another date is specifically mentioned within them.
+
+Q33. (GFR 2017 - Other than Procurement) [Difficulty: Hard]
+Which of the following accurately reflects the responsibilities of a Controlling Officer in respect of Budget Allocation as per Rule 26 of GFR 2017?
+
+1. Ensure the expenditure does not exceed the budget allocation.
+2. Ensure the expenditure is incurred for the purpose for which funds have been provided.
+3. Automatically re-appropriate funds from Capital to Revenue heads to prevent waste.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Rule 26 assigns the Controlling Officer the responsibility to ensure expenditure stays within the budget allocation, is used for its intended purpose, and that adequate control guards against waste. Re-appropriation between Capital and Revenue heads is generally not permitted without parliamentary/Finance Ministry approval.
+
+Q34. (GFR 2017 - Other than Procurement) [Difficulty: Easy]
+In Departments where officers receive moneys on behalf of the Government, they are required to issue receipts in which of the following forms?
+A. GAR-6
+B. GAR-14
+C. GFR-19
+D. GFR-22
+Answer: A
+Explanation: As per Rule 11 of GFR 2017 (Issue of Receipts), officers required to receive moneys on behalf of the Government must issue receipts in Form GAR-6.
+
+Q35. (GFR 2017 - Other than Procurement) [Difficulty: Moderate]
+According to Rule 28 of GFR 2017, the previous consent of the Finance Ministry is absolutely required for a sanction that involves:
+A. Re-appropriation of funds within the same minor head.
+B. Grant of land, assignment of revenue, or concession of mineral rights.
+C. Sanctioning routine travel allowances for Class-I officers.
+D. Disciplinary write-off of an overpayment to a Group C employee.
+Answer: B
+Explanation: Rule 28 dictates that previous consent of the Finance Ministry is required for sanctions involving grants of land, assignment of revenue, concessions of mineral/forest rights, or relinquishment of revenue.
+
+Q36. (GFR 2017 - Other than Procurement) [Difficulty: Hard]
+Consider the following statements regarding the Public Account as per Rule 8 of GFR 2017:
+
+1. All moneys received by an officer employed, other than revenues or public moneys raised by the Government, shall be paid into the Public Account.
+2. Moneys deposited with a High Court within a Union Territory must be paid into the Public Account.
+3. The withdrawal of moneys from the Public Account is governed by the Central Government Account (Receipts and Payments) Rules, 1983.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 and 3 are correct per Rule 8(1)(i) and 8(2). Statement 2 is incorrect because Rule 8(1)(ii) explicitly states that moneys deposited with the Supreme Court or any Court "other than a High Court" within a Union Territory shall be paid into the Public Account.
+
+Q37. (GFR 2017 - Other than Procurement) [Difficulty: Moderate]
+If an Audit Officer demands information from a file categorized as 'Top Secret', what is the prescribed procedure under Rule 41 of GFR 2017?
+A. The file cannot be shown to the Audit Officer under any circumstances.
+B. A heavily redacted copy of the file should be sent by registered post.
+C. The file may be sent personally to the Head of the Audit Office specifying its classified nature.
+D. The Audit Officer must visit the Ministry to read the file in the presence of the Secretary.
+Answer: C
+Explanation: Rule 41 states that if the contents of a file are categorized as 'Secret' or 'Top Secret', the file may be sent personally to the Head of the Audit Office, who will then handle it according to standing instructions for classified documents.
+
+Q38. (Postal Manual Volume IV) [Difficulty: Easy]
+What is the prescribed interval for conducting the statistical review of the work of all GPOs, HOs, and MDGs according to Bewoor's Time tests?
+A. Every 6 months
+B. Every year
+C. Every 3 years
+D. Every 5 years
+Answer: B
+Explanation: As per the guidelines in Postal Manual Volume-IV, the interval for the periodical review of the work of all GPOs/HOs/MDGs is "Every year". Other offices like LSG/HSG SOs are reviewed every 3 years.
+
+Q39. (Postal Manual Volume IV) [Difficulty: Moderate]
+What is the minimum anticipated revenue required for opening a new Branch Post Office in normal rural areas?
+A. 15% of the cost
+B. 25% of the cost
+C. 33.33% of the cost
+D. 50% of the cost
+Answer: C
+Explanation: According to the norms for opening a Branch Post Office in rural areas (effective 01.04.1991), the minimum anticipated revenue required in normal areas is 33.33% of the cost. In hilly/tribal areas, it is 15%.
+
+Q40. (Postal Manual Volume IV) [Difficulty: Hard]
+Which of the following correctly reflects the method of calculation of income for a Post Office?
+
+1. 24% of the commission on money orders issued by the office.
+2. 38% of the commission on money orders paid by the office.
+3. 2/5th of the commission realized on Indian Postal Orders (IPO) sold by the office.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The method of calculation of income (Rule 18) explicitly includes: 24% of commission on MOs issued, 38% of commission on MOs paid, and 2/5th of the commission on IPOs sold by the office. All three statements are correct.
+
+Q41. (Postal Manual Volume IV) [Difficulty: Easy]
+What is the upper age limit for an Unreserved (UR) candidate applying for direct recruitment to the post of Postal Assistant/Sorting Assistant through SSC?
+A. 25 years
+B. 27 years
+C. 30 years
+D. 32 years
+Answer: B
+Explanation: According to the Department of Posts (PA & SA) Recruitment Rules, 2022, the age limit for Direct Recruitment through SSC for UR & EWS candidates is 27 years.
+
+Q42. (Postal Manual Volume IV) [Difficulty: Moderate]
+What is the mandatory minimum service requirement for an official to be eligible for an intra-circle transfer under Rule 38?
+A. Completion of probation period strictly
+B. 1 year of service
+C. 3 years of service
+D. 5 years of service
+Answer: B
+Explanation: An official must have completed one year of service to be eligible for transfer under Rule 38. This one-year requirement is waived for cases involving terminal illness, compassionate appointees, and specific IP/ASP inter-circle transfers.
+
+Q43. (Postal Manual Volume IV) [Difficulty: Hard]
+Based on the Hon'ble Supreme Court order in the K. Meghachandra Singh case regarding the determination of seniority, which statement is correct?
+A. Seniority between direct recruits and promotees is strictly linked to the year of the vacancy.
+B. A direct recruit who joins later than a promotee against a vacancy of the same year will be given retrospective seniority based on the panel year.
+C. Inter se seniority is determined solely with reference to the year of actual appointment or joining the post.
+D. Direct recruits always maintain absolute seniority over promotees in any given recruitment cycle.
+Answer: C
+Explanation: The Supreme Court ruling delinked seniority from the year of vacancy. Seniority is now determined with reference to the year of actual joining/appointment. No retrospective seniority is granted for earlier vacancy years.
+
+Q44. (Postal Manual Volume IV) [Difficulty: Moderate]
+What percentage of the operative clerical staff is sanctioned to form a Leave Reserve (LR)?
+A. Not exceeding 5%
+B. Not exceeding 10%
+C. Not exceeding 15%
+D. Not exceeding 20%
+Answer: B
+Explanation: According to the rules for establishment norms in Postal Manual Volume-IV, a staff of assistants not exceeding 10% of the operative clerical staff is sanctioned to form a leave reserve (LR).
+
+Q45. (Postal Manual Volume IV) [Difficulty: Hard]
+Consider the following statements regarding Experimental Post Offices:
+
+1. No experimental post office may be sanctioned for a longer period than six months at a time.
+2. It can be made permanent if its total income covers exactly its total cost without any deficit.
+3. If it proves unremunerative even after 24 months, it may be closed.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 and 3 are correct. Statement 2 is incorrect because the rule states an experimental office may be made permanent only if its total income covers its total cost plus 25% of the cost.
+
+Q46. (Postal Manual Volume IV) [Difficulty: Easy]
+For how long must OMR sheets and Answer Books of departmental examinations be preserved from the date of declaration of the result?
+A. 6 months
+B. 12 months
+C. 3 years
+D. 5 years
+Answer: B
+Explanation: According to the Rules Relating to Departmental Examinations, OMR sheets and Answer Books must be preserved for a period of 12 months from the date of the declaration of the result.
+
+Q47. (Postal Manual Volume IV) [Difficulty: Moderate]
+Under the Recruitment Rules 2018 for Postman/Mail Guard, what is the eligibility criterion for an MTS to be promoted through the Limited Departmental Competitive Examination (LDCE)?
+A. 3 years of regular service, with an age limit of 50 years.
+B. 3 years of regular service, with no upper age limit.
+C. 5 years of regular service, with no upper age limit.
+D. 6 years of regular service on a seniority-cum-fitness basis.
+Answer: B
+Explanation: For the 50% promotion quota through LDCE from MTS to Postman/Mail Guard, the eligibility requirement is 3 years of regular service as MTS, and there is no upper age limit for appearing in this examination.
+
+Q48. (Postal Manual Volume IV) [Difficulty: Hard]
+Consider the following statements regarding transfer limits under Rule 38:
+
+1. An official is eligible for two inter-circle and two intra-circle transfers during their entire service.
+2. A gap of 5 years is mandatory for a same-category transfer for the second time.
+3. Persons with Disabilities (PWD) are granted one additional chance in both categories.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 and 3 are correct. Statement 2 is incorrect because a gap of 3 years (not 5 years) is mandatory for applying for the same category transfer for the second time.
+
+Q49. (Postal Manual Volume IV) [Difficulty: Moderate]
+What is the prescribed maximum station tenure for an Inspector of Posts (IP) under normal conditions?
+A. 3 years at a post, 4 years at a station
+B. 3 years at a post, 6 years at a station
+C. 4 years at a post, 6 years at a station
+D. 5 years at a post, 5 years at a station
+Answer: B
+Explanation: The post tenure for a Superintendent of Post Office/RMS or Inspector of Posts is generally not more than 3 years at a time. However, the station tenure remains a maximum of 6 years at one station.
+
+Q50. (Postal Manual Volume IV) [Difficulty: Hard]
+According to the rules regarding the level of Question Paper Setters, which level of officer is authorized to set the paper for the LDCE for Inspector Posts?
+A. JTS / STS & above
+B. STS / JAG & above
+C. JAG / SAG
+D. HAG
+Answer: C
+Explanation: The table detailing the Level of Question Paper setters specifies that for the LDCE Inspector Posts examination, the paper setter must be an officer of the JAG (Junior Administrative Grade) or SAG (Senior Administrative Grade) level.

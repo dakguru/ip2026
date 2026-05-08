@@ -1,0 +1,551 @@
+Q1. (FR & SR – General Rules) [Difficulty: Easy]
+According to FR-9, which of the following best describes a "Fee"?
+A. A recurring payment from the Consolidated Fund of India for special work
+B. A recurring or non-recurring payment from a source other than the Consolidated Fund of India
+C. Additional pay granted to save a substantive pay loss
+D. Unearned income from property or dividends
+Answer: B
+Explanation:
+[cite_start]Under FR 9 (6-A), a fee is defined as a recurring or non-recurring payment to a government servant from a source other than the Consolidated Fund of India[cite: 58]. [cite_start]Unearned income and dividends are expressly excluded from this definition[cite: 59].
+
+Q2. (FR & SR – General Rules) [Difficulty: Moderate]
+Consider the following statements regarding the transfer of a Government servant under FR-15(a):
+1. The President may transfer a Government servant from one post to another.
+2. A Government servant can be transferred to a post carrying less pay on account of inefficiency.
+3. A Government servant can be transferred to a post carrying less pay upon his written request.
+Which of the above statements is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Answer: D
+Explanation:
+[cite_start]FR-15(a) allows the President to transfer a Government servant to another post[cite: 180]. [cite_start]Exceptionally, an official can be transferred to a post carrying less pay on account of inefficiency/misbehavior [cite: 181] [cite_start]or upon a written request[cite: 182].
+
+Q3. (FR & SR – General Rules) [Difficulty: Hard]
+An official is promoted to a higher post. He chooses to have his pay fixed from the Date of Next Increment (DNI) rather than the date of promotion. How will his pay be fixed on the DNI under FR-22(I)?
+A. One increment on the old level pay, then placed at the equal or next cell of the concerned higher level
+B. Placed directly at the next cell of the higher level without any increment
+C. Two increments on the old level pay, then placed at the equal or next cell of the concerned higher level
+D. 12.5% of Basic Pay is added to the previous pay
+Answer: C
+Explanation:
+[cite_start]Under FR-22(I), if pay fixation is opted from the DNI, the official receives two increments on the old level pay and is placed at the equal and next cell of the concerned higher level[cite: 236]. 
+
+Q4. (FR & SR – General Rules) [Difficulty: Easy]
+Which of the following rules applies to the grant of leave for a Government servant under suspension?
+A. He can be granted Earned Leave up to 180 days
+B. He can only be granted Casual Leave
+C. He may be granted Half Pay Leave subject to a medical certificate
+D. Leave may **NOT** be granted to a Government servant under suspension
+Answer: D
+Explanation:
+[cite_start]FR-55 explicitly states that leave may not be granted to a government servant under suspension[cite: 512].
+
+
+Q5. (FR & SR – General Rules) [Difficulty: Moderate]
+An authority orders the withholding of an increment for a Government servant. According to FR-24, what must the withholding authority explicitly state in the order?
+A. The period for which it is withheld
+B. Whether the postponement shall have the effect of postponing future increments
+C. The specific financial loss caused to the exchequer
+D. Both A and B
+Answer: D
+Explanation:
+[cite_start]Under FR-24, the withholding authority must state the period for which the increment is withheld, and whether the postponement shall have the effect of postponing future increments[cite: 241].
+
+Q6. (FR & SR – General Rules) [Difficulty: Moderate]
+What is the maximum number of premature increments that can be granted in an entire service for sportsmen/women achieving excellence in National and International events?
+A. Two increments
+B. Three increments
+C. Five increments
+D. Seven increments
+Answer: C
+Explanation:
+[cite_start]Under FR-27, special increments for sporting excellence are capped at a total of 5 (five) increments throughout the entire service[cite: 278].
+
+Q7. (FR & SR – General Rules) [Difficulty: Hard]
+Match the following categories of Government servants with their age of superannuation/extension under FR-56:
+Column I
+1. Regular Government Servant
+2. Specialist in Teaching sub-cadre of Central Health Service
+3. Eminent scientist of international stature
+Column II
+a. 65 years
+b. 60 years
+c. 64 years
+A. 1-b, 2-a, 3-c
+B. 1-a, 2-b, 3-c
+C. 1-b, 2-c, 3-a
+D. 1-c, 2-a, 3-b
+Answer: A
+Explanation:
+[cite_start]Under FR-56, regular Government servants retire at 60 years[cite: 514]. [cite_start]Specialists in Teaching sub-cadres of CHS retire at 65 years[cite: 516]. [cite_start]Eminent scientists of international stature may be granted an extension up to 64 years[cite: 527].
+
+Q8. (FR & SR – General Rules) [Difficulty: Easy]
+Under the CCS (Joining Time) Rules, 1979, what is the joining time admissible if the distance between the old and new station is more than 1000 km but up to 2000 km?
+A. 10 days
+B. 12 days
+C. 15 days
+D. 20 days
+Answer: B
+Explanation:
+[cite_start]For transfers where the distance is more than 1000 km and up to 2000 km, the joining time admissible is 12 days (or 15 days if the journey by road is more than 200 km)[cite: 728].
+
+Q9. (FR & SR – General Rules) [Difficulty: Moderate]
+Which of the following is **NOT** counted as "Duty" for the purpose of increment, leave, and pension?
+A. Joining time
+B. Period of participation in National/International sports events
+C. Refresher training of sections officer
+D. Period of willful absence from duty not regularized by grant of leave
+Answer: D
+Explanation:
+[cite_start]Wilful absence from duty not covered by the grant of leave is treated as "dies-non" for all purposes, viz. increment, leave, and pension[cite: 209, 210]. [cite_start]Joining time and specific training/sports periods are considered duty[cite: 31, 50, 52].
+
+Q10. (FR & SR – General Rules) [Difficulty: Moderate]
+Consider the following statement regarding Foreign Service contributions:
+For an employee under the National Pension System (NPS) deputed on Foreign Service from 01.04.2019, the pension contribution rate is fixed at what percentage of Basic Pay + DA?
+A. 10%
+B. 14%
+C. 18%
+D. 28%
+Answer: D
+Explanation:
+[cite_start]For NPS employees in foreign service, the pension contribution from 01.04.2019 is 28% of Basic Pay + DA (Employer 14% + Employee 10% + Gratuity 4%)[cite: 599, 600].
+
+Q11. (FR & SR – TA Rules) [Difficulty: Easy]
+For the purpose of Travelling Allowance (TA) on transfer, what is the maximum number of children included in the definition of "Family" effective from 01.01.1999?
+A. One child
+B. Two children
+C. Three children
+D. No limit for legitimate children
+Answer: B
+Explanation:
+[cite_start]The term 'family' for the purpose of TA on transfer is restricted to two children with effect from 01.01.1999[cite: 774].
+
+Q12. (FR & SR – TA Rules) [Difficulty: Moderate]
+According to SR-147, which of the following individuals is **NOT** entitled to Travelling Allowance on retirement?
+A. A Government servant retiring on superannuation
+B. A Government servant who quits service by resignation
+C. A temporary employee with 15 years of service retiring on invalidation
+D. A Government servant retiring voluntarily
+Answer: B
+Explanation:
+[cite_start]SR 147 explicitly states that TA on retirement is not admissible to a Government servant who quits service by resignation[cite: 1155]. [cite_start]It is also denied to those dismissed, removed, or compulsorily retired as a punishment[cite: 1157, 1159].
+
+Q13. (FR & SR – TA Rules) [Difficulty: Hard]
+Consider the following statements regarding the grant of Transport Allowance (TPA):
+1. A physically disabled employee (e.g., visually impaired or orthopedically handicapped) is paid TPA at double the normal rate.
+2. A person with deformity in only one eye or one hand is entitled to the double rate TPA.
+3. TPA is not admissible during an entire calendar month covered by leave.
+How many of the above statements are correct?
+A. Only one
+B. Only two
+C. All three
+D. None
+Answer: B
+Explanation:
+[cite_start]Statements 1 and 3 are correct[cite: 891, 898]. [cite_start]Statement 2 is incorrect because a one-eye/one-hand person is not to be compared with the orthopedically handicapped and is NOT entitled to the double rate TPA[cite: 893].
+
+Q14. (FR & SR – TA Rules) [Difficulty: Moderate]
+A Government servant goes on an official tour and is absent from his headquarters for a continuous period of 5 hours. What percentage of Daily Allowance (DA) is admissible for this absence?
+A. 15%
+B. 30%
+C. 50%
+D. 70%
+Answer: B
+Explanation:
+[cite_start]For an absence from Headquarters of less than 6 hours, the DA admissible is 30% of the lump sum amount[cite: 1007].
+
+Q15. (FR & SR – TA Rules) [Difficulty: Moderate]
+Which of the following is an accurate component of the Composite Transfer Grant (CTG) for an employee transferring from Delhi to Mumbai?
+A. CTG is paid at 80% of the last month's basic pay
+B. Non-Practicing Allowance (NPA) and Military Service Pay (MSP) are not included in the calculation
+C. It applies to transfers involving a change of station located at a distance of or more than 20 kms
+D. All of the above
+Answer: D
+Explanation:
+All statements are correct. [cite_start]CTG is paid at 80% of the last basic pay for transfers over 20 kms[cite: 1085]. [cite_start]NPA and MSP are explicitly excluded from the CTG calculation[cite: 1087].
+
+Q16. (FR & SR – TA Rules) [Difficulty: Easy]
+Under SR-25, which of the following conditions is **NOT** a valid criterion for the grant of Conveyance Allowance?
+A. The average monthly running on duty must be more than 200 kilometers
+B. The journey performed by a bicycle qualifies for the grant
+C. Residence to office distance is not reckoned for this purpose
+D. It is not admissible during an absence of more than 15 days in a calendar month
+Answer: B
+Explanation:
+[cite_start]Journey performed by bicycle shall not qualify for the grant of Conveyance Allowance; it is paid only if the Government servant uses a motorcycle or car[cite: 846, 847]. 
+
+Q17. (FR & SR – TA Rules) [Difficulty: Hard]
+A Government servant dies while in service. His family wishes to claim travelling allowance for their journey to their home town. Under SR-148, within what time limit must the journey be completed after the death of the Government servant?
+A. 3 months
+B. 6 months
+C. 1 year
+D. 2 years
+Answer: C
+Explanation:
+[cite_start]Conveyance at the Government's expense for families and personal effects of a deceased Government servant is admissible provided the journey is completed within one year after the death of the official[cite: 1201, 1202].
+
+Q18. (FR & SR – TA Rules) [Difficulty: Moderate]
+What is the stipulated time limit for the submission of a Travelling Allowance claim for a tour when an advance has been drawn?
+A. 15 days
+B. 30 days
+C. 60 days
+D. 180 days
+Answer: A
+Explanation:
+[cite_start]The time-limit for the submission of claims for Travelling Allowance on Tour, Transfer, and Training with an advance is 15 days from the date of completion of the journey[cite: 1341]. [cite_start]If no advance is drawn, the limit is 60 days[cite: 1343].
+
+Q19. (FR & SR – TA Rules) [Difficulty: Moderate]
+Match the Pay Level in the Pay Matrix with their corresponding rail travel entitlement for tours/training:
+Column I
+1. Level 14 and above
+2. Level 12 to 13
+3. Level 5 and below
+Column II
+a. First Class/AC-3rd Class/AC Chair Car
+b. Executive/AC-1st Class
+c. AC-I by train
+A. 1-c, 2-b, 3-a
+B. 1-b, 2-c, 3-a
+C. 1-c, 2-a, 3-b
+D. 1-a, 2-b, 3-c
+Answer: A
+Explanation:
+[cite_start]Level 14 and above are entitled to AC-I[cite: 940]. [cite_start]Level 12 to 13 are entitled to Executive/AC-1st Class[cite: 940]. [cite_start]Level 5 and below are entitled to First Class/AC-3rd Class/AC Chair Car[cite: 940].
+
+Q20. (FR & SR – TA Rules) [Difficulty: Easy]
+What is the monthly rate of Cycle Allowance sanctioned by Divisional heads for an employee (excluding ABPM/BPM/DS) covering a daily minimum distance of 16 km?
+A. Rs. 90
+B. Rs. 150
+C. Rs. 180
+D. Rs. 300
+Answer: C
+Explanation:
+The Cycle Allowance sanctioned by Divisional heads is Rs. [cite_start]180/- per month for a minimum daily distance of 16 km[cite: 858, 859].
+
+Q21. (FR & SR – DA, DR & HRA Rules) [Difficulty: Easy]
+Under the 7th CPC recommendations, a city with a population of 50 Lakhs and above is classified as which type of city for House Rent Allowance (HRA) purposes?
+A. Z class
+B. Y class
+C. X class
+D. A-1 class
+Answer: C
+Explanation:
+[cite_start]Cities/towns with a population of 50 Lakhs and above are classified as 'X' class cities for the purpose of HRA, drawing 24% on basic pay[cite: 1641].
+
+Q22. (FR & SR – DA, DR & HRA Rules) [Difficulty: Moderate]
+A Government servant transfers to a new station but leaves his family behind at the old station because he hasn't rented a house yet. For the next four months following his first two months of joining, how is his HRA regulated?
+A. He draws HRA at the rate of the new station only
+B. He draws HRA at the same rate drawn at the old station, regardless of the new station's rate
+C. He draws HRA at the rate drawn at the old station or maximum admissible at the new station, whichever is less
+D. He is not entitled to any HRA until his family relocates
+Answer: C
+Explanation:
+[cite_start]For the next four months (or end of the academic year), the official is entitled to HRA at the rate drawn at the old station or the maximum admissible at the new station, whichever is less[cite: 1707].
+
+Q23. (FR & SR – DA, DR & HRA Rules) [Difficulty: Hard]
+In which of the following situations is House Rent Allowance (HRA) NOT admissible?
+A. During the first 180 days of Child Care Leave (CCL)
+B. When an employee is residing in a house owned by their spouse
+C. During a period of debarment because the employee refused an offered Government accommodation
+D. When both husband and wife are government servants living in hired accommodation
+Answer: C
+Explanation:
+[cite_start]HRA is not admissible to an employee who refuses offered Government accommodation and is subsequently debarred; the allowance ceases from the date of allotment and during the debarment period[cite: 1669, 1670]. [cite_start]HRA is admissible when residing in an owned house or for spouses living together[cite: 1699, 1700].
+
+Q24. (FR & SR – DA, DR & HRA Rules) [Difficulty: Moderate]
+Dearness Allowance (DA) is legally admissible during which of the following periods?
+A. Joining time
+B. Suspension
+C. Deputation abroad
+D. All of the above
+Answer: D
+Explanation:
+[cite_start]Dearness Allowance is admissible during leave, suspension, joining time (except extraordinary leave) [cite: 1616][cite_start], and during deputation abroad[cite: 1617]. 
+
+Q25. (FR & SR – DA, DR & HRA Rules) [Difficulty: Moderate]
+A Government servant proceeds on leave on medical grounds. For what maximum initial period does he continue to draw HRA at the same rate as before proceeding on leave?
+A. 90 days
+B. 180 days
+C. 240 days
+D. 300 days
+Answer: B
+Explanation:
+[cite_start]A Government servant is entitled to draw HRA during leave at the same rates prior to the leave up to a total of 180 days[cite: 1724, 1725].
+
+Q26. (FR & SR – DA, DR & HRA Rules) [Difficulty: Easy]
+Which of the following elements is **NOT** included when calculating "Basic Pay" for the purpose of HRA?
+A. Pay in the pay matrix
+B. Non-Practicing Allowance (NPA)
+C. Both A and B
+D. None of the above
+Answer: B
+Explanation:
+[cite_start]Calculation of HRA is based on "Basic Pay" under FR 9(21) a (i) only, and it explicitly does not include NPA, Military Service Pay (MSP), and other special pay[cite: 1654].
+
+Q27. (FR & SR – DA, DR & HRA Rules) [Difficulty: Hard]
+Consider the following statements regarding HRA entitlement:
+1. If a Government servant shares Government accommodation allotted rent-free to another Government servant, he is entitled to 50% HRA.
+2. If husband and wife are both Government servants and living together in a hired or owned accommodation, both are entitled to HRA separately.
+Which of the above statements is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation:
+[cite_start]Statement 1 is incorrect because a Government servant sharing rent-free Government accommodation allotted to another is not entitled to HRA at all[cite: 1697]. [cite_start]Statement 2 is correct, as both husband and wife are entitled to HRA separately if living in hired/owned accommodation[cite: 1699].
+
+Q28. (FR & SR – DA, DR & HRA Rules) [Difficulty: Moderate]
+How is a fraction of a rupee treated when paying Dearness Relief (DR) to pensioners?
+A. Ignored entirely
+B. Rounded off to the next higher rupee
+C. Rounded off to the nearest 10 rupees
+D. Fractions of 50 paise and above rounded to the next rupee, others ignored
+Answer: B
+Explanation:
+[cite_start]Payment of DR involving a fraction of a rupee shall be rounded off to the next higher rupee[cite: 1634]. [cite_start](Note: This rule differs slightly from DA fraction rounding where 50 paise rule applies [cite: 1625]).
+
+Q29. (FR & SR – DA, DR & HRA Rules) [Difficulty: Moderate]
+Match the revised HRA rates for different class cities when the Dearness Allowance (DA) crosses 50%:
+Column I
+1. X Class City
+2. Y Class City
+3. Z Class City
+Column II
+a. 10%
+b. 20%
+c. 30%
+A. 1-c, 2-b, 3-a
+B. 1-b, 2-c, 3-a
+C. 1-a, 2-b, 3-c
+D. 1-c, 2-a, 3-b
+Answer: A
+Explanation:
+[cite_start]When DA crosses 50%, the HRA rates are revised to 30% for X class, 20% for Y class, and 10% for Z class cities[cite: 1652].
+
+Q30. (FR & SR – DA, DR & HRA Rules) [Difficulty: Easy]
+What is the minimum guaranteed rate of House Rent Allowance (HRA) for an employee posted in a 'Y' class city?
+A. Rs. 1800/-
+B. Rs. 3600/-
+C. Rs. 5400/-
+D. Rs. 7200/-
+Answer: B
+Explanation:
+The rates of HRA will not be less than Rs. 5400/-, Rs. 3600/-, and Rs. 1800/- at 'X', 'Y', and 'Z' class cities respectively. For 'Y' class, it is Rs. [cite_start]3600/-[cite: 1649].
+
+Q31. (Brochure on Casual Labourers) [Difficulty: Easy]
+From which date did the "Casual Labourers (Grant of Temporary Status and Regularization) Scheme of Government of India, 1993" come into force?
+A. 01.01.1993
+B. 01.09.1993
+C. 10.09.1993
+D. 01.04.1994
+Answer: B
+Explanation:
+[cite_start]The scheme came into force with effect from 01.09.1993 [cite: 1510][cite_start], even though the notification was issued on 10.09.1993[cite: 1511].
+
+Q32. (Brochure on Casual Labourers) [Difficulty: Moderate]
+Consider the following statements regarding the conferment of temporary status on casual labourers:
+1. It is conferred on casual labourers who have rendered a continuous service of at least one year (240 days, or 206 days in 5-day week offices).
+2. Temporary status can only be granted if there is a regular MTS post available.
+Which of the above statements is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation:
+[cite_start]Statement 1 is correct[cite: 1522]. [cite_start]Statement 2 is incorrect because the conferment of temporary status is made without reference to the creation or availability of regular MTS posts[cite: 1523].
+
+Q33. (Brochure on Casual Labourers) [Difficulty: Hard]
+Which of the following benefits is **NOT** extended to a casual labourer upon acquiring temporary status?
+A. Maternity leave for lady casual labourers
+B. Productivity Linked Bonus / Ad-hoc bonus at rates applicable to regular MTS employees
+C. Leave entitlement on a pro-rata basis of one day for every 10 days of work
+D. 50% of service counting for retirement benefits after regularisation
+Answer: B
+Explanation:
+[cite_start]Until they are regularized, casual labourers with temporary status are entitled to Productivity Linked Bonus / Ad-hoc bonus ONLY at the rates applicable to casual labourers, NOT at the rates for regular MTS[cite: 1547].
+
+Q34. (Brochure on Casual Labourers) [Difficulty: Moderate]
+Which of the following rules applies to the leave entitlements of Casual Labourers with Temporary Status (CL-TS)?
+A. Leave is credited twice a year on 1st January and 1st July
+B. The limit on accumulation of total leave is 300 days
+C. They are not entitled to encashment of leave upon termination or quitting service
+D. All of the above
+Answer: D
+Explanation:
+[cite_start]Leave is credited twice a year (Jan 1, July 1)[cite: 1582]. [cite_start]The accumulation limit is 300 days[cite: 1589, 1590]. [cite_start]They are not entitled to encashment of leave on termination[cite: 1543].
+
+Q35. (Brochure on Casual Labourers) [Difficulty: Moderate]
+A male casual labourer with temporary status and one surviving child is expecting another child. For how many days is he eligible for Paternity leave?
+A. 10 days
+B. 15 days
+C. 30 days
+D. Paternity leave is not admissible to casual labourers
+Answer: B
+Explanation:
+[cite_start]Paternity leave of 15 days is extended to casual labourers with temporary status who have less than two surviving children[cite: 1591].
+
+Q36. (Brochure on Casual Labourers) [Difficulty: Easy]
+The "Casual Labourers (Grant of Temporary Status and Regularization) Scheme, 1993" does **NOT** apply to casual workers of which of the following departments?
+A. Ministry of Finance
+B. Attached and Subordinate offices of the Central Secretariat
+C. Department of Posts
+D. Ministry of Home Affairs
+Answer: C
+Explanation:
+[cite_start]The scheme is not applicable to casual workers in Railways, Department of Telecommunication, and Department of Posts, as they already have their own schemes[cite: 1515]. 
+
+Q37. (Brochure on Casual Labourers) [Difficulty: Hard]
+Consider the payment regulations for daily wagers performing the exact same nature of work as regular employees. How are their wages calculated?
+A. 1/30th of the pay at the minimum of the relevant pay scale plus DA for 8 hours of work
+B. Minimum wage defined by the State Government for unskilled labour
+C. 50% of the gross salary of a regular MTS employee
+D. 1/30th of the pay at the maximum of the relevant pay scale
+Answer: A
+Explanation:
+[cite_start]Where the nature of work entrusted to casual workers and regular employees is the same, casual workers are paid 1/30th of the pay at the minimum of the relevant pay scale plus DA for work of 8 hours a day[cite: 1565].
+
+Q38. (Brochure on Casual Labourers) [Difficulty: Moderate]
+What percentage of the service rendered under temporary status by a casual labourer is counted for the purpose of retirement benefits after their regularisation?
+A. 25%
+B. 50%
+C. 75%
+D. 100%
+Answer: B
+Explanation:
+[cite_start]50% of the service rendered under temporary status is counted for the purpose of retirement benefits after the regularisation of the casual labourer[cite: 1545].
+
+Q39. (Brochure on Casual Labourers) [Difficulty: Moderate]
+Match the benefit with the minimum period of continuous service required after the conferment of temporary status for a casual labourer:
+Column I
+1. Treatment on par with temporary MTS for GPF contribution
+2. Grant of Festival Advance / Flood Advance
+Column II
+a. One year
+b. Three years
+A. 1-a, 2-b
+B. 1-b, 2-a
+C. 1-b, 2-b
+D. 1-a, 2-a
+Answer: C
+Explanation:
+[cite_start]After rendering three years of continuous service after conferment of temporary status, the casual labourer is treated on par with temporary MTS for GPF contributions and eligibility for Festival/Flood Advances[cite: 1546].
+
+Q40. (Brochure on Casual Labourers) [Difficulty: Easy]
+If the services of a casual labourer with temporary status are to be dispensed with, what is the required notice period to be given in writing?
+A. 7 days
+B. 14 days
+C. One month
+D. Three months
+Answer: C
+Explanation:
+[cite_start]The services of a casual labourer with temporary status may be dispensed with by giving a written notice of one month[cite: 1548].
+
+Q41. (Maintenance of APAR) [Difficulty: Easy]
+What is the minimum period of experience a Reporting or Reviewing Officer must have in supervising a Government servant to record an assessment in their APAR?
+A. 1 month
+B. 3 months
+C. 6 months
+D. 1 year
+Answer: B
+Explanation:
+[cite_start]The officers at both Reporting and Reviewing levels are required to have at least three months (3 Months) experience of supervising the work before they can record their assessment in the APAR[cite: 1377].
+
+Q42. (Maintenance of APAR) [Difficulty: Moderate]
+In the numerical grading system for APAR (on a scale of 1-10), what is the correct weightage distribution for computing the overall grade?
+A. 30% work output, 40% personal attributes, 30% functional competency
+B. 40% work output, 30% personal attributes, 30% functional competency
+C. 50% work output, 25% personal attributes, 25% functional competency
+D. 33.3% across all three categories
+Answer: B
+Explanation:
+[cite_start]The overall grade is based on 40% weightage on work output, 30% on personal attributes, and 30% on functional competency[cite: 1401, 1402, 1403].
+
+Q43. (Maintenance of APAR) [Difficulty: Hard]
+Which of the following is **NOT** a prescribed option for a reporting officer to make remarks against the integrity column in the APAR?
+A. Beyond doubt
+B. Since the integrity of the officer is doubtful, a secret note is attached
+C. Integrity is pending verification by the Vigilance Division
+D. Not watched the officer's work for sufficient time to form a definite judgment but nothing adverse has been reported
+Answer: C
+Explanation:
+[cite_start]The three valid options for integrity remarks are: "Beyond doubt" [cite: 1408][cite_start], "Since the integrity of the officer is doubtful, a secret note is attached" [cite: 1408][cite_start], and "Not watched the officer's work for sufficient time... but nothing adverse has been reported"[cite: 1408]. "Pending verification by Vigilance" is not a standard option.
+
+Q44. (Maintenance of APAR) [Difficulty: Moderate]
+Which of the following matches the correct APAR timeline requirement?
+A. Blank APAR forms distributed by 31st March
+B. Submission of self-appraisal by the officer reported upon by 15th April
+C. Submission of report by reporting officer to reviewing officer by 30th June
+D. All of the above
+Answer: D
+Explanation:
+[cite_start]All the given dates are strictly accurate based on the standard schedule for preparation/completion of APAR: Blank forms by March 31, self-appraisal by April 15, and reporting officer submission by June 30[cite: 1493].
+
+Q45. (Maintenance of APAR) [Difficulty: Moderate]
+A Reporting Officer retires from service on 31st May. Within what time frame is he allowed to write the APAR of his subordinates post-retirement?
+A. Within 15 days of retirement
+B. Within one month of retirement
+C. Within three months of retirement
+D. A retired officer is strictly prohibited from writing APARs
+Answer: B
+Explanation:
+[cite_start]Where a Reporting Officer/Reviewing Officer retires, he may be allowed to give the report on his subordinates within one month of retirement[cite: 1382, 1464].
+
+Q46. (Maintenance of APAR) [Difficulty: Easy]
+In which of the following cases is an Annual Performance Assessment Report (APAR) **NOT** required to be written?
+A. For an officer appointed on a purely part-time basis
+B. For a Group 'C' employee
+C. For a Government servant on deputation to a State Government
+D. For an MTS employee
+Answer: A
+Explanation:
+[cite_start]An APAR need not be written for an officer appointed on an honorary or purely part-time basis[cite: 1435]. [cite_start]APARs are written for Group C/MTS employees [cite: 1443, 1479] [cite_start]and those on deputation[cite: 1436].
+
+Q47. (Maintenance of APAR) [Difficulty: Hard]
+If an officer reported upon takes Earned Leave, how does it affect the 3-month period required for the Reporting Officer to write the APAR?
+A. The total period spent on leave is fully counted towards the 3 months
+B. Only if Earned Leave exceeds 15 days is the total period spent on leave deducted from the total computing period
+C. Any leave, even 1 day, is strictly deducted from the computing period
+D. The APAR process is suspended until the officer returns
+Answer: B
+Explanation:
+Where an officer has taken Earned Leave for a period of more than 15 days, the total period spent on leave can be deducted from the total period spent on any post for computing the 3 months. [cite_start]Leave for a short duration need not be treated as relevant[cite: 1383, 1384].
+
+Q48. (Maintenance of APAR) [Difficulty: Moderate]
+In the context of Group A officers in the Department of Posts, what does SPARROW stand for?
+A. Secure Personnel Appraisal Report and Review Online Window
+B. Smart Performance Appraisal Report Recording Online Window
+C. System for Personnel Assessment and Regular Record Organization Window
+D. Specialized Performance Assessment and Rating Registry Online Window
+Answer: B
+Explanation:
+[cite_start]SPARROW stands for Smart Performance Appraisal Report Recording Online Window[cite: 1470].
+
+Q49. (Maintenance of APAR) [Difficulty: Moderate]
+Match the preservation period of the APAR with the respective triggering event:
+Column I
+1. In case of death of the official
+2. Retirement / Dismissal / Resignation
+Column II
+a. 5 years from the date of the event
+b. 2 years from the date of the event
+A. 1-a, 2-b
+B. 1-b, 2-a
+C. Both require 5 years
+D. Both require 2 years
+Answer: B
+Explanation:
+[cite_start]The APAR preservation period in case of death is 2 years from the date of death[cite: 1447]. [cite_start]In the case of retirement, dismissal, removal, or resignation, it is 5 years from the date of the event[cite: 1456, 1457].
+
+Q50. (Maintenance of APAR) [Difficulty: Easy]
+What is the minimum APAR benchmark required for financial upgradation under MACP?
+A. "Good" in 3 years out of the last 5 years
+B. "Very Good" in 3 years out of the last 5 years
+C. "Very Good" in 5 years out of the last 5 years
+D. "Outstanding" in 2 years out of the last 5 years
+Answer: C
+Explanation:
+[cite_start]For MACP, the minimum benchmark required is "Very Good" in all 5 years out of the last 5 years [cite: 1469] [cite_start](whereas for DPC, it is "Very Good" in 3 out of 5 years [cite: 1468]).

@@ -1,0 +1,520 @@
+Q1. (General Financial Rules) [Difficulty: Easy]
+Under Article 284 of the Constitution, all moneys received by or deposited with any officer employed, other than revenues or public moneys raised or received by the Government, shall be paid into which of the following?
+A. Consolidated Fund of India
+B. Contingency Fund of India
+C. Public Account
+D. Designated Escrow Account
+Answer: C
+[cite_start]Explanation: Under Article 284 of the Constitution, all moneys received by or deposited with any officer employed other than revenues shall be paid into the Public Account[cite: 1840].
+Source: 13. GFR_2017.pdf – Page 1 – Rule 8 (1)
+
+Q2. (General Financial Rules) [Difficulty: Moderate]
+Consider the following statements regarding the standards of financial propriety under GFR 2017:
+1. The expenditure should not be prima-facie more than the occasion demands.
+2. An authority can exercise its powers of sanctioning expenditure to pass an order directly to its own advantage under exceptional circumstances.
+3. Expenditure from public moneys should not be incurred for the benefit of a particular person or a section of the people.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Answer: B
+[cite_start]Explanation: Every officer must ensure expenditure is not more than the occasion demands and is not incurred for a particular person's benefit[cite: 1881, 1885]. [cite_start]No authority should sanction expenditure to its own advantage[cite: 1883].
+Source: 13. GFR_2017.pdf – Page 3 – Rule 21
+
+Q3. (General Financial Rules) [Difficulty: Hard]
+Any loss or shortage of public moneys, departmental revenue, or receipts must be immediately reported by the subordinate authority to the next higher authority. However, certain losses need not be reported. Which of the following is correct regarding such exemptions?
+A. Petty losses of value not exceeding Rupees five thousand.
+B. Petty losses of value not exceeding Rupees ten thousand.
+C. Mistake in assessment, provided the loss does not exceed Rupees twenty thousand.
+D. Petty losses of value not exceeding Rupees fifty thousand.
+Answer: B
+[cite_start]Explanation: Losses that need not be reported include mistakes in assessment, overruled and time-barred claims, and petty losses of value not exceeding Rupees ten thousand[cite: 1923, 1924, 1925].
+Source: 13. GFR_2017.pdf – Page 4 – Rule 33 (1)
+
+Q4. (General Financial Rules) [Difficulty: Moderate]
+Which of the following procurement limits on the Government e-Marketplace (GeM) is incorrectly matched as per the revised rules effective 10.07.2024?
+A. Up to Rs. 50,000: Through any available supplier meeting requirements.
+B. Above Rs. 50,000 and up to Rs. 10,00,000: Through the GeM seller having the lowest price amongst available sellers of at least three different manufacturers.
+C. Above Rs. 10,00,000: Mandatorily obtaining bids using online bidding or reverse auction.
+D. Automobiles: Procurement up to Rs. 10,00,000 without any ceiling limit.
+Answer: D
+[cite_start]Explanation: In the case of automobiles, procurement under the sub-rule allowing purchase through any available supplier is permitted without any ceiling limit[cite: 2000], not restricted to Rs. 10,00,000.
+Source: 13. GFR_2017.pdf – Page 7 – Rule 149
+
+Q5. (General Financial Rules) [Difficulty: Moderate]
+When the Head of a Ministry or Department registers suppliers of goods and services not available on GeM, what is the specified fixed period for such registration before a fresh application for renewal is required?
+A. 1 to 2 years
+B. 1 to 3 years
+C. 2 to 5 years
+D. Up to 5 years
+Answer: B
+[cite_start]Explanation: The supplier(s) will be registered for a fixed period between 1 to 3 years, after which they must apply afresh for renewal[cite: 2021, 2022].
+Source: 13. GFR_2017.pdf – Page 8 – Rule 150 (3)
+
+Q6. (General Financial Rules) [Difficulty: Hard]
+Consider the following statements regarding the Purchase Preference Policy under GFR:
+1. All items of hand-spun and hand-woven textiles (khadi goods) are reserved for exclusive purchase from the Khadi Village Industries Commission (KVIC).
+2. It is mandatory to make a procurement of at least 20% from amongst items of handloom origin for exclusive purchase from KVIC or handloom clusters.
+Which of the above is/are true?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+[cite_start]Explanation: The Central Government reserves all hand-spun textiles for KVIC [cite: 2036] [cite_start]and mandates at least 20% procurement of handloom origin items from KVIC or handloom clusters[cite: 2037].
+Source: 13. GFR_2017.pdf – Page 9 – Rule 153
+
+Q7. (General Financial Rules) [Difficulty: Easy]
+Up to what estimated value can the purchase of goods be made on each occasion without inviting quotations or bids, as per the revision w.e.f. 10.07.2024?
+A. Rs. 25,000
+B. Rs. 50,000
+C. Rs. 1,00,000
+D. Rs. 2,50,000
+Answer: B
+Explanation: Purchase of goods up to the value of Rs. [cite_start]50,000 only on each occasion may be made without inviting quotations or bids[cite: 2038].
+Source: 13. GFR_2017.pdf – Page 9 – Rule 154
+
+Q8. (General Financial Rules) [Difficulty: Moderate]
+For procuring goods via a Local Purchase Committee when items are not available on GeM, what is the specified financial bracket (revised w.e.f 10.07.2024) for adopting this method?
+A. Above Rs. 25,000 and up to Rs. 2,50,000
+B. Above Rs. 50,000 and up to Rs. 2,50,000
+C. Above Rs. 50,000 and up to Rs. 5,00,000
+D. Above Rs. 1,00,000 and up to Rs. 10,00,000
+Answer: C
+Explanation: Purchase of goods costing above Rs. 50,000 and up to Rs. [cite_start]5,00,000 on each occasion may be made on the recommendations of a Local Purchase Committee[cite: 2039].
+Source: 13. GFR_2017.pdf – Page 9 – Rule 155
+
+Q9. (General Financial Rules) [Difficulty: Moderate]
+According to GFR 161, Advertised Tender Enquiry should ordinarily be used for the procurement of goods if the estimated value is:
+A. Rs. 25 lakhs and above
+B. Rs. 50 lakhs and above
+C. Rs. 10 lakhs and above
+D. Rs. 1 crore and above
+Answer: B
+Explanation: Tenders by advertisement should be used for procurement of goods of an estimated value of Rs. 50 lakhs and above, revised from Rs. [cite_start]25 lakhs w.e.f 10.07.2024[cite: 2065].
+Source: 13. GFR_2017.pdf – Page 10 – Rule 161 (i)
+
+Q10. (General Financial Rules) [Difficulty: Easy]
+What is the ordinary range for the amount of bid security (Earnest Money) to be obtained from bidders, excluding exempted categories?
+A. 1% to 3% of the estimated value
+B. 2% to 5% of the estimated value
+C. 5% to 10% of the estimated value
+D. 3% to 5% of the estimated value
+Answer: B
+[cite_start]Explanation: The amount of bid security should ordinarily range between 2% to 5% of the estimated value of the goods to be procured[cite: 2120].
+Source: 13. GFR_2017.pdf – Page 12 – Rule 170
+
+Q11. (General Financial Rules) [Difficulty: Hard]
+Assertion (A): Performance Security should be refunded to the successful bidder immediately upon completion of the delivery of goods.
+Reason (R): Performance Security remains valid for a period of sixty days beyond the date of completion of all contractual obligations, including warranty obligations.
+A. Both A and R are true, and R is the correct explanation of A.
+B. Both A and R are true, but R is not the correct explanation of A.
+C. A is true, but R is false.
+D. A is false, but R is true.
+Answer: D
+[cite_start]Explanation: Performance Security must remain valid for sixty days beyond the completion of all contractual obligations, including warranties[cite: 2126], meaning it cannot be refunded immediately upon delivery.
+Source: 13. GFR_2017.pdf – Page 12 – Rule 171 (ii)
+
+Q12. (General Financial Rules) [Difficulty: Moderate]
+Match the following maximum limits for advance payment to suppliers with their respective categories:
+List I:
+1. Private firms
+2. State/Central Government Agency or PSU
+3. Maintenance contract
+List II:
+X. 40% of the contract value
+Y. Amount payable for 6 months
+Z. 30% of the contract value
+A. 1-Z, 2-X, 3-Y
+B. 1-X, 2-Z, 3-Y
+C. 1-Y, 2-X, 3-Z
+D. 1-Z, 2-Y, 3-X
+Answer: A
+[cite_start]Explanation: Advance payments should not exceed 30% to private firms [cite: 2129][cite_start], 40% to Govt agencies/PSUs [cite: 2130][cite_start], and 6 months' payable amount for maintenance contracts[cite: 2132].
+Source: 13. GFR_2017.pdf – Page 12 – Rule 172 (1)
+
+Q13. (General Financial Rules) [Difficulty: Hard]
+For hiring consulting services, when is it mandatory to publish an enquiry for seeking 'Expression of Interest' (EOI) on the Central Public Procurement Portal (CPPP)?
+A. When the estimated cost of the consulting service is above Rs. 10 lakhs.
+B. When the estimated cost of the consulting service is above Rs. 25 lakhs.
+C. When the estimated cost of the consulting service is above Rs. 50 lakhs.
+D. An EOI is mandatory for all consulting services regardless of the value.
+Answer: C
+Explanation: Where the estimated cost is above Rs. [cite_start]50 lakhs, an enquiry for seeking 'Expression of Interest' from consultants should be published on CPPP[cite: 2178].
+Source: 13. GFR_2017.pdf – Page 14 – Rule 183 (ii)
+
+Q14. (General Financial Rules) [Difficulty: Moderate]
+In the Quality and Cost Based Selection (QCBS) method for selecting consultants, what is the maximum permissible weightage for technical parameters (non-financial parameters)?
+A. 50 percent
+B. 70 percent
+C. 80 percent
+D. 90 percent
+Answer: C
+[cite_start]Explanation: Under QCBS, the weightage of the technical parameters (i.e., non-financial parameters) in no case should exceed 80 percent[cite: 2210].
+Source: 13. GFR_2017.pdf – Page 15 – Rule 192 (ii)
+
+Q15. (General Financial Rules) [Difficulty: Moderate]
+For the procurement of non-consulting services, an advertisement must be published on the Central Public Procurement Portal (CPPP) and GeM if the estimated value exceeds:
+A. Rs. 10 lakhs
+B. Rs. 25 lakhs
+C. Rs. 50 lakhs
+D. Rs. 1 crore
+Answer: C
+Explanation: For an estimated value above Rs. [cite_start]50 lakhs (revised from Rs. 10 lakhs w.e.f 10.07.2024), an advertisement must be given on CPPP and GeM[cite: 2361].
+Source: 13. GFR_2017.pdf – Page 19 – Rule 201 (ii)
+
+Q16. (General Financial Rules) [Difficulty: Hard]
+According to the fundamental principles of public buying (Rule 144), the description of the subject matter of procurement should ideally:
+A. Be highly customized to ensure only premium suppliers can bid.
+B. Specify technical characteristics and indicate a requirement for a specific trademark to maintain quality.
+C. Be objective, functional, generic, measurable, and not indicate a requirement for a particular trademark or brand.
+D. Depend primarily on the availability of surplus funds at the end of the financial year.
+Answer: C
+[cite_start]Explanation: The description should be objective, functional, generic, and measurable [cite: 1986] [cite_start]and must not indicate a requirement for a particular trademark, trade name, or brand[cite: 1987].
+Source: 13. GFR_2017.pdf – Page 7 – Rule 144
+
+Q17. (General Financial Rules) [Difficulty: Moderate]
+If a procuring entity determines that a bidder has breached the Code of Integrity (Rule 175), what is the maximum period for which the procuring entity may debar the bidder or its successors?
+A. One year
+B. Two years
+C. Three years
+D. Five years
+Answer: B
+[cite_start]Explanation: A procuring entity may debar a bidder for a period not exceeding two years if it determines that the bidder has breached the code of integrity[cite: 2025].
+Source: 13. GFR_2017.pdf – Page 8 – Rule 151 (2)
+
+Q18. (CCS Implementation of NPS) [Difficulty: Easy]
+The Central Civil Services (Implementation of National Pension System) Rules, 2021 apply to Government servants appointed substantively to civil services on or after which date?
+A. 1st January 2004
+B. 31st December 2003
+C. 1st April 2004
+D. 30th March 2021
+Answer: A
+[cite_start]Explanation: These rules apply to Government servants appointed substantively to civil services and posts on or after the 1st day of January, 2004[cite: 2386].
+Source: National_Pension_System_2021.pdf – Page 1 – Rule 2
+
+Q19. (CCS Implementation of NPS) [Difficulty: Moderate]
+Within what timeframe must the first NPS contribution of a newly joined Government servant be credited to their Individual Pension Account?
+A. Within 10 days of joining service.
+B. By the 20th day of the month in which the employee joined.
+C. Within 20 days of the date of submission of the application or by the last date of the month in which the servant joined, whichever is later.
+D. Within 30 days of the allocation of the PRAN.
+Answer: C
+[cite_start]Explanation: The first contribution must be credited within twenty days of the date of submission of the application or by the last date of the month in which the Government servant joined, whichever is later[cite: 2451].
+Source: National_Pension_System_2021.pdf – Page 4 – Rule 4
+
+Q20. (CCS Implementation of NPS) [Difficulty: Moderate]
+Under the CCS (Implementation of NPS) Rules, 2021, the monthly contribution by the Subscriber is calculated as:
+A. 10% of Basic Pay only
+B. 10% of Basic Pay + Dearness Allowance
+C. 10% of Basic Pay + Non-Practice Allowance + Dearness Allowance
+D. 14% of Basic Pay + Dearness Allowance
+Answer: C
+[cite_start]Explanation: Emoluments for NPS include Basic Pay + Non-Practice Allowance + DA[cite: 2478]. [cite_start]The subscriber contributes 10% of these emoluments[cite: 2483].
+Source: National_Pension_System_2021.pdf – Page 5 – Rule 5 & 6
+
+Q21. (CCS Implementation of NPS) [Difficulty: Easy]
+What is the standard percentage of the Government's monthly contribution to the Individual Pension Account of the Subscriber under NPS?
+A. 10% of emoluments
+B. 12% of emoluments
+C. 14% of emoluments
+D. 15% of emoluments
+Answer: C
+[cite_start]Explanation: The Government shall make a contribution of 14% (fourteen per cent) or such other percentage as may be notified, of the emoluments of a Government servant[cite: 2520].
+Source: National_Pension_System_2021.pdf – Page 7 – Rule 7
+
+Q22. (CCS Implementation of NPS) [Difficulty: Hard]
+If an NPS subscriber is granted leave on medical grounds where leave salary is payable at a rate less than full pay, how is the Government's contribution calculated during this period?
+A. 14% of the actual leave salary drawn by the subscriber.
+B. 14% of the notional emoluments comprising the amount representing pay and dearness allowance in the leave salary.
+C. No Government contribution is made if the salary is less than full pay.
+D. 14% of the full pay the subscriber would have drawn had they been on duty.
+Answer: B
+[cite_start]Explanation: The Government shall make a contribution equal to 14% of the notional emoluments comprising the amount representing pay and dearness allowance in the leave salary, nonpracticing allowance[cite: 2523].
+Source: National_Pension_System_2021.pdf – Page 7 – Rule 7
+
+Q23. (CCS Implementation of NPS) [Difficulty: Moderate]
+If an NPS subscriber dies before completing 15 years of service without having exercised an option in Form-1, what is the default benefit granted to their family?
+A. Lump sum payment of accumulated pension corpus under NPS.
+B. Annuity purchased from the entire accumulated pension wealth.
+C. Family pension in accordance with the provisions of CCS (Pension) Rules, 1972/2021 or CCS (Extraordinary Pension) Rules, 1939/2023.
+D. Gratuity equal to 20 times the last drawn emoluments only.
+Answer: C
+[cite_start]Explanation: Where a subscriber did not exercise an option and dies before 15 years of service, the family will be granted family pension under the CCS (Pension) Rules or CCS (EOP) Rules as a default option[cite: 2616].
+Source: National_Pension_System_2021.pdf – Page 11 – Rule 10
+
+Q24. (CCS Implementation of NPS) [Difficulty: Moderate]
+At any time after completing how many years of regular service may an NPS subscriber voluntarily retire by giving written notice of not less than three months?
+A. 10 years
+B. 15 years
+C. 20 years
+D. 25 years
+Answer: C
+[cite_start]Explanation: At any time after a Subscriber has completed twenty years' regular service, he may, by giving notice of not less than three months, retire from service[cite: 2633].
+Source: National_Pension_System_2021.pdf – Page 12 – Rule 12
+
+Q25. (CCS Implementation of NPS) [Difficulty: Hard]
+Assertion (A): On resignation from Government service, the lump sum and annuity payments out of the accumulated pension corpus must be made immediately on the day the resignation becomes effective.
+Reason (R): Payment of lump sum withdrawal and annuity shall not be made before the expiry of a period of ninety days from the date on which the resignation becomes effective and the subscriber is relieved of duty.
+A. Both A and R are true, and R is the correct explanation of A.
+B. Both A and R are true, but R is not the correct explanation of A.
+C. A is true, but R is false.
+D. A is false, but R is true.
+Answer: D
+[cite_start]Explanation: Such payment of lump sum withdrawal and annuity shall not be made before the expiry of a period of ninety days from the date the resignation becomes effective[cite: 2676]. Therefore, Assertion A is false.
+Source: National_Pension_System_2021.pdf – Page 14 – Rule 14
+
+Q26. (CCS Implementation of NPS) [Difficulty: Moderate]
+If a subscriber who opted for benefits under CCS (Pension) Rules, 1972 retires on invalidation and avails those benefits, what happens to their Individual Pension Account under NPS?
+A. It remains active for the spouse to receive an annuity.
+B. The entire accumulated pension corpus is paid to the subscriber in a lump sum.
+C. The account is closed, Government contribution and returns are transferred to the Government account, and the remaining corpus is paid to the subscriber in lump sum.
+D. The account is converted into a Tier-II account automatically.
+Answer: C
+[cite_start]Explanation: The individual pension account is closed, Government contribution and returns are transferred to Government account, and the remaining corpus is paid to the subscriber in lump sum[cite: 2707, 2708].
+Source: National_Pension_System_2021.pdf – Page 16 – Rule 16
+
+Q27. (CCS Implementation of NPS) [Difficulty: Easy]
+How often must the Head of Department prepare a list of all subscribers who are due to retire within the next twelve to fifteen months?
+A. Every month
+B. Every three months
+C. Every six months
+D. Annually
+Answer: B
+[cite_start]Explanation: Every Head of Department shall have a list prepared every three months (Jan 1, Apr 1, Jul 1, Oct 1) of all Subscribers due to retire within the next twelve to fifteen months[cite: 2760].
+Source: National_Pension_System_2021.pdf – Page 19 – Rule 21
+
+Q28. (CCS Implementation of NPS) [Difficulty: Moderate]
+When should a subscriber retiring on superannuation ordinarily submit the duly filled withdrawal form to the Head of Office?
+A. One month before the date of retirement.
+B. Three months before the date of retirement.
+C. Six months before the date of retirement.
+D. On the date of retirement.
+Answer: C
+[cite_start]Explanation: Every Subscriber shall, six months before the date on which he is due to retire on superannuation, submit the duly filled withdrawal Form to the Head of Office[cite: 2779].
+Source: National_Pension_System_2021.pdf – Page 20 – Rule 23
+
+Q29. (CCS Implementation of NPS) [Difficulty: Hard]
+Upon superannuation/normal exit from NPS, if the accumulated pension wealth is greater than Rs. 12 lakhs, what is the mandated utilization of the corpus?
+A. Up to 100% can be withdrawn as a lump sum.
+B. Up to 60% as lump sum withdrawal and at least 40% for the purchase of an annuity.
+C. Up to 40% as lump sum withdrawal and at least 60% for the purchase of an annuity.
+D. 100% must be utilized for purchasing an annuity.
+Answer: B
+[cite_start]Explanation: As per the PFRDA 2025 Amendment, upon retirement/superannuation, if the accumulated pension wealth exceeds Rs. 12 lakhs, up to 60% can be withdrawn as a lump sum, and at least 40% must be utilized to purchase an annuity.[cite: 2880, 2881].
+Source: National_Pension_System_2021.pdf – Page 24 – Exit from NPS
+
+Q30. (CCS Implementation of NPS) [Difficulty: Hard]
+In the case of premature exit (resignation) from Government service, if the Accumulated Pension Wealth exceeds Rs. 5 lakhs, what is the mandatory distribution for withdrawal?
+A. Up to 60% lump sum, at least 40% annuity.
+B. Up to 20% lump sum, at least 80% annuity.
+C. 100% lump sum withdrawal.
+D. Up to 80% lump sum, at least 20% annuity.
+Answer: B
+[cite_start]Explanation: For retirement before superannuation/premature exit, the limit is 20% of pension wealth as a lump sum withdrawal and 80% for the purchase of an annuity[cite: 3028, 3029].
+Source: National_Pension_System_2021.pdf – Page 28 – Premature Exit
+
+Q31. (CCS Implementation of NPS) [Difficulty: Easy]
+Upon the death of a Government sector NPS subscriber, if the family opts for withdrawal under NPS regulations and the corpus is less than or equal to Rs. 8 lakh, what percentage of the Accumulated Pension Wealth can be withdrawn as a lump sum?
+A. 20%
+B. 60%
+C. 80%
+D. 100%
+Answer: D
+[cite_start]Explanation: As per the PFRDA 2025 Amendment, upon the death of a Government subscriber, if the accumulated pension wealth is less than or equal to Rs. 8 lakh, 100% lump sum withdrawal is allowed without mandatory annuity purchase.
+Source: National_Pension_System_2021.pdf – Page 27 – Utilization of APW
+
+Q32. (CCS Implementation of NPS) [Difficulty: Moderate]
+What is the maximum limit for a partial withdrawal from the accumulated pension wealth for specified purposes under NPS?
+A. 25% of the total accumulated pension corpus (including employer contribution).
+B. 25% of the own contributions made by the subscriber.
+C. 50% of the own contributions made by the subscriber.
+D. 100% of the own contributions made by the subscriber.
+Answer: B
+[cite_start]Explanation: A partial withdrawal of accumulated pension wealth of the subscriber, not exceeding 25% of the contributions made by the subscriber (excluding employer contribution), is permitted[cite: 3205].
+Source: National_Pension_System_2021.pdf – Page 32 – Withdrawals Limits
+
+Q33. (CCS Implementation of NPS) [Difficulty: Moderate]
+What is the maximum number of times a subscriber is allowed to make partial withdrawals during their entire tenure under the National Pension System?
+A. Two times
+B. Three times
+C. Four times
+D. Five times
+Answer: C
+[cite_start]Explanation: The subscriber shall be allowed to withdraw only a maximum of four times during the entire tenure of subscription under the National Pension System[cite: 3242].
+Source: National_Pension_System_2021.pdf – Page 33 – Frequency
+
+Q34. (CCS Implementation of NPS) [Difficulty: Hard]
+Under the Old Tax Regime for NPS, after a subscriber attains the age of 60 or superannuation, what percentage of the total corpus withdrawn in a lump sum is exempt from tax under section 10(12A) of the Income Tax Act?
+A. 25%
+B. 40%
+C. 60%
+D. 100%
+Answer: C
+[cite_start]Explanation: After a subscriber attains the age of 60 or superannuation, up to 60% of the total corpus withdrawn in lump sum is exempt from tax under section 10(12A)[cite: 3314].
+Source: National_Pension_System_2021.pdf – Page 35 – Tax Benefits
+
+Q35. (CCS Payment of Gratuity under NPS) [Difficulty: Easy]
+The CCS (Payment of Gratuity under NPS) Rules, 2021 apply to Government servants appointed substantively on or after which date?
+A. 1st January 2004
+B. 1st April 2004
+C. 23rd September 2021
+D. 1st January 2016
+Answer: A
+[cite_start]Explanation: These rules apply to Government servants appointed substantively to civil services and posts on or after the 1st day of January 2004[cite: 3404].
+Source: National_Pension_System_2021.pdf – Page 39 – Rule 2
+
+Q36. (CCS Payment of Gratuity under NPS) [Difficulty: Moderate]
+Under what condition does the President reserve the right to withhold gratuity under the CCS Gratuity Rules 2021?
+A. If the Government servant resigns before completing 10 years of service.
+B. If the retired Government servant is found guilty of grave misconduct or negligence in a departmental or judicial proceeding.
+C. If the Government servant takes up private employment immediately after retirement.
+D. If the Government servant fails to submit the withdrawal form 6 months prior to retirement.
+Answer: B
+[cite_start]Explanation: The President reserves the right to withhold gratuity if, in any departmental or judicial proceedings, the retired Government servant is found guilty of grave misconduct or negligence[cite: 3412, 3420].
+Source: National_Pension_System_2021.pdf – Page 39 – Rule 5
+
+Q37. (CCS Payment of Gratuity under NPS) [Difficulty: Moderate]
+For calculating gratuity under these rules, which of the following is specifically included in the definition of "emoluments" for medical officers?
+A. Overtime Allowance
+B. House Rent Allowance
+C. Non-practicing Allowance
+D. Transport Allowance
+Answer: C
+[cite_start]Explanation: The expression 'emoluments' shall include the basic pay and shall also include non-practicing allowance granted to a medical officer in lieu of private practice[cite: 3432].
+Source: National_Pension_System_2021.pdf – Page 40 – Rule 6
+
+Q38. (CCS Payment of Gratuity under NPS) [Difficulty: Hard]
+Consider the following statements regarding the counting of periods spent on leave for qualifying service towards gratuity:
+1. All leave during service for which leave salary is payable counts as qualifying service.
+2. Extraordinary leave granted without a medical certificate always counts as qualifying service.
+3. Extraordinary leave granted on a medical certificate counts as qualifying service.
+Which of the statements is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Answer: B
+[cite_start]Explanation: All leave for which leave salary is payable and all extraordinary leave granted on medical certificate count as qualifying service[cite: 3478, 3479]. EOL without a medical certificate counts only under specific discretionary exceptions.
+Source: National_Pension_System_2021.pdf – Page 42 – Rule 12
+
+Q39. (CCS Payment of Gratuity under NPS) [Difficulty: Easy]
+What is the effect of the dismissal or removal of a Government servant on their past service for the purpose of gratuity?
+A. Past service is counted partially based on the President's discretion.
+B. Past service is reduced by 50%.
+C. It entails forfeiture of past service.
+D. Past service remains fully qualifying.
+Answer: C
+[cite_start]Explanation: Dismissal or removal of a Government servant from a service or post entails forfeiture of his past service[cite: 3498].
+Source: National_Pension_System_2021.pdf – Page 43 – Rule 15
+
+Q40. (CCS Payment of Gratuity under NPS) [Difficulty: Moderate]
+A resignation shall NOT entail forfeiture of past service under which of the following circumstances?
+A. If it is submitted to avoid departmental action.
+B. If it is allowed to be withdrawn due to personal hardship.
+C. If it has been submitted to take up, with proper permission, another appointment under the Government where service qualifies.
+D. If the resignation is submitted after completing 5 years of service.
+Answer: C
+[cite_start]Explanation: A resignation shall not entail forfeiture of past service if it has been submitted to take up, with proper permission, another appointment under the Government where service qualifies[cite: 3506].
+Source: National_Pension_System_2021.pdf – Page 43 – Rule 17
+
+Q41. (CCS Payment of Gratuity under NPS) [Difficulty: Moderate]
+When is the Head of Office required to verify the qualifying service of a Government servant and communicate it to them in Form 1?
+A. Every 5 years of service.
+B. On completion of 10 years of service and at retirement.
+C. On each occasion after completing 18 years of service, and on being left with 5 years of service before superannuation.
+D. Only on the date of superannuation.
+Answer: C
+[cite_start]Explanation: Verification must occur after a Government servant has completed eighteen years of service and on his being left with five years of service before the date of superannuation[cite: 3532].
+Source: National_Pension_System_2021.pdf – Page 44 – Rule 21
+
+Q42. (CCS Payment of Gratuity under NPS) [Difficulty: Hard]
+A Government servant retiring on superannuation with completed qualifying service is granted retirement gratuity. The gratuity is equal to what fraction of their emoluments for each completed six-monthly period of qualifying service, and what is the maximum multiplier?
+A. One-half; maximum 16.5 times the emoluments.
+B. One-fourth; maximum 16.5 times the emoluments.
+C. One-half; maximum 33 times the emoluments.
+D. One-third; maximum 16.5 times the emoluments.
+Answer: B
+[cite_start]Explanation: Retirement gratuity is equal to one-fourth of the emoluments for each completed six-monthly period of qualifying service, subject to a maximum of 16.5 times the emoluments. [cite: 3557]. 
+Source: National_Pension_System_2021.pdf – Page 45 – Rule 22
+
+Q43. (CCS Payment of Gratuity under NPS) [Difficulty: Hard]
+If a Government servant dies while in service and has less than 1 year of qualifying service, what is the rate of death gratuity payable to the family?
+A. Two times of emoluments
+B. Six times of emoluments
+C. Twelve times of emoluments
+D. Half of emoluments
+Answer: A
+[cite_start]Explanation: According to the table for death gratuity, for a length of qualifying service of "Less than 1 year", the rate is "Two times of emoluments"[cite: 3552].
+Source: National_Pension_System_2021.pdf – Page 45 – Rule 22 Table
+
+Q44. (CCS Payment of Gratuity under NPS) [Difficulty: Moderate]
+As per the revisions effective from 01.01.2024, what is the maximum absolute monetary limit for retirement gratuity or death gratuity payable under these rules?
+A. Ten lakh rupees
+B. Twenty lakh rupees
+C. Twenty-five lakh rupees
+D. Thirty lakh rupees
+Answer: C
+Explanation: The amount of retirement gratuity or death gratuity payable under this rule shall in no case exceed twenty-five lakh rupees w.e.f. [cite_start]01.01.2024[cite: 3569].
+Source: National_Pension_System_2021.pdf – Page 46 – Rule 22
+
+Q45. (CCS Payment of Gratuity under NPS) [Difficulty: Hard]
+Under the definition of "family" for the purpose of gratuity, up to what age are brothers (including stepbrothers) considered part of the family?
+A. Below 18 years
+B. Below 21 years
+C. Below 25 years
+D. There is no age limit if they are dependent.
+Answer: A
+[cite_start]Explanation: The definition of 'family' includes brothers below the age of eighteen years including stepbrothers[cite: 3583].
+Source: National_Pension_System_2021.pdf – Page 46 – Rule 22
+
+Q46. (CCS Payment of Gratuity under NPS) [Difficulty: Easy]
+Is death gratuity admissible in the case of a Government servant who commits suicide?
+A. Yes, fully admissible.
+B. No, it is strictly prohibited.
+C. Admissible only if the service exceeded 10 years.
+D. Admissible only at a reduced rate of 50%.
+Answer: A
+[cite_start]Explanation: Death gratuity shall also be admissible in the case of a Government servant who commits suicide[cite: 3588].
+Source: National_Pension_System_2021.pdf – Page 46 – Rule 22
+
+Q47. (CCS Payment of Gratuity under NPS) [Difficulty: Moderate]
+If a Government servant dies without receiving the gratuity, leaves behind no family, and has no subsisting nomination, the gratuity lapses to the Government. However, it can still be paid to a person who produces:
+A. An affidavit from a Class-I Magistrate.
+B. A Succession Certificate granted by a Court of Law.
+C. A legal heir certificate from the Tehsildar.
+D. A No-Objection Certificate from the Department.
+Answer: B
+[cite_start]Explanation: The amount shall lapse to the Government [cite: 3606][cite_start], provided that it shall be payable to the person in whose favour a Succession Certificate in respect of the gratuity has been granted by a Court of Law[cite: 3608].
+Source: National_Pension_System_2021.pdf – Page 47 – Rule 26
+
+Q48. (CCS Payment of Gratuity under NPS) [Difficulty: Moderate]
+When a Government servant is compulsorily retired from service as a penalty, the competent authority may grant gratuity at a rate not less than what fraction of the gratuity normally admissible?
+A. One-half
+B. One-third
+C. Two-thirds
+D. Three-fourths
+Answer: C
+[cite_start]Explanation: The competent authority may grant gratuity at a rate not less than two-thirds of the gratuity admissible to him on the date of his compulsory retirement[cite: 3630].
+Source: National_Pension_System_2021.pdf – Page 48 – Rule 30
+
+Q49. (CCS Payment of Gratuity under NPS) [Difficulty: Hard]
+A Government servant who is dismissed or removed from service normally forfeits his gratuity. However, if the case is deserving of special consideration, the competent authority may sanction a compassionate gratuity. What is the maximum limit for this compassionate gratuity?
+A. One-half of the retirement gratuity.
+B. Two-thirds of the retirement gratuity.
+C. Three-fourths of the retirement gratuity.
+D. Full retirement gratuity without DA allowance.
+Answer: B
+[cite_start]Explanation: The authority competent to dismiss or remove him may, if deserving, sanction a compassionate gratuity not exceeding two-thirds of the retirement gratuity[cite: 3633].
+Source: National_Pension_System_2021.pdf – Page 48 – Rule 31
+
+Q50. (CCS Payment of Gratuity under NPS) [Difficulty: Moderate]
+In the case of a missing Government servant, after how many months of lodging the police complaint can the family apply for the grant of retirement gratuity?
+A. Three months
+B. Six months
+C. Twelve months
+D. Seven years
+Answer: B
+[cite_start]Explanation: The family, after six months of lodging a police complaint, may apply in Form 4 for the grant of retirement gratuity to the Head of Office[cite: 3649].
+Source: National_Pension_System_2021.pdf – Page 49 – Rule 33

@@ -1,0 +1,984 @@
+# CCS (Commutation of Pension) Rules, 1981 — Rich MCQs
+
+
+
+---
+
+Q1. From which date did the Central Civil Services (Commutation of Pension) Rules come into force?
+
+A. 1st April, 1981
+B. 1st July, 1981
+C. 1st January, 1982
+D. 1st June, 1981
+
+Correct Answer: B. 1st July, 1981
+
+Explanation: Rule 1 fixes commencement at 1st July, 1981, even though the rules bear "1981" in their short title. 1st April is a financial-year trap; 1st January 1982 and 1st June are fabricated distractors.
+
+---
+
+Q2. The CCS (Commutation of Pension) Rules, 1981 apply to Government servants appointed on or before:
+
+A. 31.12.2003
+B. 31.03.2004
+C. 01.01.2004
+D. 31.12.2004
+
+Correct Answer: A. 31.12.2003
+
+Explanation: Rule 2 confines the rules to pre-NPS recruits — those appointed on or before 31.12.2003. 01.01.2004 is the date NPS started (not the cut-off) and is the principal trap; 31.03.2004 confuses with the financial-year end.
+
+---
+
+Q3. Which of the following correctly defines the term "Pension" under the CCS (Commutation of Pension) Rules, 1981?
+
+A. Only superannuation pension and retiring pension under the Pension Rules, 2021
+B. Any class of pension excluding compassionate allowance
+C. Any class of pension including compassionate allowance under the Pension Rules, 2021
+D. Pension drawn only from the Consolidated Fund of India
+
+Correct Answer: C. Any class of pension including compassionate allowance under the Pension Rules, 2021
+
+Explanation: Rule 3(h) deliberately includes compassionate allowance within "pension" so that even employees compulsorily retired as a penalty but granted compassionate allowance retain commutation rights. Option B is the principal trap — exclusion of compassionate allowance is precisely what the rule denies.
+
+---
+
+Q4. Under the CCS (Commutation of Pension) Rules, 1981, the term "Provisional Pension" refers to pension sanctioned under:
+
+A. Rule 8 of the Pension Rules, 2021 only
+B. Rule 62 of the Pension Rules, 2021 only
+C. Rule 8 or Rule 62 of the Pension Rules, 2021, as the case may be
+D. Rule 33 of the Pension Rules, 2021
+
+Correct Answer: C. Rule 8 or Rule 62 of the Pension Rules, 2021, as the case may be
+
+Explanation: Rule 3(j) covers both flavours of provisional pension — Rule 8 (during pendency of departmental/judicial proceedings) and Rule 62 (pending finalisation of regular pension). Options A and B each capture only one limb; Rule 33 is superannuation pension, which is final, not provisional.
+
+---
+
+Q5. "Retirement gratuity" for the purpose of the Commutation Rules is defined with reference to:
+
+A. Sub-rule (1) of Rule 44 of the Pension Rules, 2021
+B. Sub-rule (1) of Rule 45 of the Pension Rules, 2021
+C. Rule 41 of the Pension Rules, 2021
+D. Rule 50 of the Pension Rules, 2021
+
+Correct Answer: B. Sub-rule (1) of Rule 45 of the Pension Rules, 2021
+
+Explanation: Rule 3(f) anchors retirement gratuity in Rule 45(1) of the CCS (Pension) Rules, 2021. Rules 44, 41 and 50 are adjacent-rule traps — Rule 41 deals with compassionate allowance, Rules 44 and 50 are unrelated.
+
+---
+
+Q6. In the context of the CCS (Commutation of Pension) Rules, 1981, an "Applicant" means:
+
+A. Only a serving Government servant who applies for commutation before retirement
+B. Only a retired Government servant who applies after retirement
+C. A Government servant, including a retired Government servant, who applies for commutation in the prescribed form
+D. Any pensioner, including those drawing family pension, who applies for commutation
+
+Correct Answer: C. A Government servant, including a retired Government servant, who applies for commutation in the prescribed form
+
+Explanation: Rule 3(d) is wide enough to include both pre-retirement (Form 1-A) and post-retirement (Form 1/Form 2) applicants. Option D is the trap — family pension is not commutable, so family pensioners are not "applicants" under these rules.
+
+---
+
+Q7. Consider the following statements regarding the bar on commutation of pension:
+
+1. A Government servant against whom departmental or judicial proceedings are pending under Rule 8 of the Pension Rules, 2021 is ineligible.
+2. A Government servant to whom provisional pension has been authorised under Rule 8 of the Pension Rules during the pendency of such proceedings is ineligible.
+3. The bar applies only after the proceedings end in penalty.
+
+Which of the above statements is/are correct?
+
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+Correct Answer: B. 1 and 2 only
+
+Explanation: Rule 4 imposes a *suspensive* bar that operates during pendency of proceedings, irrespective of outcome. Statement 3 inverts this — the bar is during pendency, not contingent on penalty. Hence 1 and 2 alone are correct.
+
+---
+
+Q8. The "Chief Administrative Medical Authority" under the Commutation Rules refers to:
+
+A. The Director General of Health Services, Government of India
+B. The medical authority of the State or Union Territory as specified
+C. The Chief Medical Officer of CGHS in Delhi
+D. The Medical Board constituted under the Pension Rules, 2021
+
+Correct Answer: B. The medical authority of the State or Union Territory as specified
+
+Explanation: Rule 3(e) places this authority at the State/UT level so that retiring Government servants are examined locally rather than centrally. DGHS, CGHS Delhi, and the Pension Rules' Medical Board are higher or unrelated bodies offered as confusions.
+
+---
+
+Q9. Which of the following persons is NOT eligible to commute a percentage of pension under the CCS (Commutation of Pension) Rules, 1981?
+
+A. A Government servant retiring on superannuation pension
+B. A Government servant against whom departmental proceedings are pending under Rule 8 of the Pension Rules, 2021
+C. A Government servant retiring on invalid pension after medical examination
+D. A Government servant in receipt of compassionate allowance
+
+Correct Answer: B. A Government servant against whom departmental proceedings are pending under Rule 8 of the Pension Rules, 2021
+
+Explanation: Rule 4 expressly bars commutation during pendency of disciplinary or judicial proceedings — a protective measure since pension itself may be reduced as a penalty. Superannuation, invalid pension and compassionate-allowance recipients are all within the eligible pool.
+
+---
+
+Q10. A Government servant appointed on 15.06.2004 retires on superannuation in 2034. Can he commute his pension under the CCS (Commutation of Pension) Rules, 1981?
+
+A. Yes, all Government servants are entitled to commute pension regardless of date of appointment
+B. Yes, provided he completes 20 years of service
+C. No, because the rules apply only to those appointed on or before 31.12.2003
+D. No, because commutation has been abolished after 2004
+
+Correct Answer: C. No, because the rules apply only to those appointed on or before 31.12.2003
+
+Explanation: A 15.06.2004 appointee is a post-cutoff (NPS) recruit and is outside the scope of Rule 2. Option D is the principal trap — commutation has *not* been abolished; it simply does not apply to NPS entrants. Service-length conditions (Option B) are fabricated.
+
+---
+
+| PART 2: Limits, Absoluteness, Nominations and Calculation — Rules 5 to 8 |
+|---|
+| Source Pages: 3–4 |
+| Important Points Identified: 9 |
+| MCQs Generated in this Part: 12 |
+
+---
+
+Q11. The maximum percentage of pension that a Government servant is entitled to commute for a lump sum payment is:
+
+A. One-third
+B. 40%
+C. 50%
+D. Two-thirds
+
+Correct Answer: B. 40%
+
+Explanation: Rule 5(1) caps commutation at 40% of pension. One-third was the *pre-1996* limit and remains the most popular trap in this question; 50% is the family pension fraction (unrelated); two-thirds is fabricated.
+
+---
+
+Q12. While computing the lump sum payable on commutation, the amount of commuted value should be:
+
+A. Rounded off to the nearest rupee
+B. Rounded down to the lower rupee
+C. Rounded off to the next higher rupee
+D. Paid in paise without rounding
+
+Correct Answer: C. Rounded off to the next higher rupee
+
+Explanation: Rule 5(3) builds in pensioner-friendly rounding — fractions are rounded *upwards*. "Nearest rupee" (the conventional accounting rule elsewhere) is the prime trap; "lower rupee" would prejudice the pensioner.
+
+---
+
+Q13. In which of the following cases does commutation of pension become absolute on the date following the date of retirement?
+
+A. Where the application is received by the Head of Office only after retirement
+B. Where the medical authority signs the medical report in Part III of Form 4
+C. Where the Government servant has applied in Form 1-A before retirement and commuted value is to be paid on the day after superannuation
+D. Where the Government servant withdraws his application before medical examination
+
+Correct Answer: C. Where the Government servant has applied in Form 1-A before retirement and commuted value is to be paid on the day after superannuation
+
+Explanation: Rule 6(1) sets three triggering events for absoluteness, each tied to the procedural route. For pre-retirement Form 1-A applicants, absoluteness attaches the day *following* retirement so that pension reduction begins from the very inception of pension. Option A relates to Form 1 (post-retirement) — different trigger; B is the medical-exam route.
+
+---
+
+Q14. For an applicant drawing pension from a treasury or Accounts Officer, the reduction in pension on account of commutation becomes operative from:
+
+A. The date of receipt of the commuted value of pension or the end of three months after issue of authority by the Accounts Officer, whichever is earlier
+B. The date of receipt of the commuted value of pension or the end of three months after issue of authority by the Accounts Officer, whichever is later
+C. The date of issue of authority by the Accounts Officer in all cases
+D. The date of retirement, irrespective of when payment is received
+
+Correct Answer: A. The date of receipt of the commuted value of pension or the end of three months after issue of authority by the Accounts Officer, whichever is earlier
+
+Explanation: The proviso to Rule 6(1) prevents an applicant from drawing both full pension and commuted value indefinitely. The "whichever is earlier" formula triggers reduction at the earliest legitimate point. Option B inverts the rule and is the principal trap.
+
+---
+
+Q15. Where the commuted value is paid in two or more stages (Rule 9 or Rule 10 cases), the reduction in the amount of pension shall be made:
+
+A. From the date of the first payment, applied retrospectively to all stages
+B. From the date of the last payment only
+C. From the respective dates of the payments
+D. From the date of issue of the original authority by the Accounts Officer
+
+Correct Answer: C. From the respective dates of the payments
+
+Explanation: Commutation is functionally an exchange of monthly pension flow for a lump sum; under Rule 6(2) where the lump sum is paid in tranches, the corresponding reduction must mirror each tranche's date. Options A and B violate this date-matching principle.
+
+---
+
+Q16. The date of payment or credit of commuted value of pension is to be entered in:
+
+A. The first half of the PPO only, by the disbursing authority
+B. The second half of the PPO only, retained by the pensioner
+C. Both halves of the PPO, by the disbursing authority
+D. The Service Book of the pensioner, by the Head of Office
+
+Correct Answer: C. Both halves of the PPO, by the disbursing authority
+
+Explanation: Rule 6(3) requires the date in both halves of the PPO. This synchronised record is critical for restoration of commuted pension after 15 years under Rule 10-A. Service Book entries (Option D) are irrelevant since the employee has already retired.
+
+---
+
+Q17. A nomination for receiving the commuted value of pension is made in:
+
+A. Form 1
+B. Form 2
+C. Form 4
+D. Form 5
+
+Correct Answer: D. Form 5
+
+Explanation: Rule 7(1) prescribes Form 5 for nominations. Form 1/1-A is for application without medical exam, Form 2 is for application with medical exam, Form 4 is for medical examination — each form's role must be remembered separately.
+
+---
+
+Q18. If an applicant dies after commutation has become absolute but before receiving the commuted value, and there is no subsisting nomination, the commuted value shall be:
+
+A. Lapsed to the Government
+B. Paid to the family in the manner indicated in the Pension Rules
+C. Paid only to the legal heir certified by a civil court
+D. Paid to the residuary legatee under the applicant's will
+
+Correct Answer: B. Paid to the family in the manner indicated in the Pension Rules
+
+Explanation: Rule 7(2) provides that absent a subsisting nomination the commuted value falls to the family per the Pension Rules. Only if such payment fails too does Rule 7(3) push it to the heirs. Option A (lapse) is wrong — Government does not retain the amount.
+
+---
+
+Q19. The lump sum payable on commutation of pension is calculated using the formula:
+
+A. Commuted portion of pension × 12 × Commutation factor for age next birthday
+B. Commuted portion of pension × 10 × Commutation factor for age last birthday
+C. Basic pension × Commutation factor for age next birthday
+D. Commuted portion of pension × 12 × Commutation factor for age last birthday
+
+Correct Answer: A. Commuted portion of pension × 12 × Commutation factor for age next birthday
+
+Explanation: Three elements drive the lump sum: monthly commuted amount, the multiplier 12 (annualisation), and the factor against age next birthday (not age last birthday). The "age next birthday" hook is the favourite trap — Option D swaps it.
+
+---
+
+Q20. A Government servant retires on 30th September 2023 with a basic pension of ₹33,000 and opts to commute the maximum permissible percentage. His age next birthday is 61 years (commutation factor 8.194). The lump sum payable to him is:
+
+A. ₹2,70,402
+B. ₹12,97,930
+C. ₹13,20,000
+D. ₹2,16,322
+
+Correct Answer: B. ₹12,97,930
+
+Explanation: Maximum commutation = 40% × ₹33,000 = ₹13,200/month. Lump sum = ₹13,200 × 12 × 8.194 = ₹12,97,929.60, rounded up to ₹12,97,930 under Rule 5(3). Option A omits the factor 12; Option D omits both the 12 and uses incorrect arithmetic.
+
+---
+
+Q21. The commutation factor used in the lump sum formula represents:
+
+A. The number of years for which the commuted portion of pension is given up
+B. The commutation value expressed as number of years' purchase
+C. The discount rate applied to the present value of pension
+D. The percentage of pension that may be commuted
+
+Correct Answer: B. The commutation value expressed as number of years' purchase
+
+Explanation: The factor represents the commutation value as number of years' purchase, computed actuarially. Option A confuses it with the 15-year restoration period under Rule 10-A; Option D confuses it with the 40% ceiling.
+
+---
+
+Q22. Match the age next birthday with the corresponding commutation factor and identify the correctly arranged set:
+
+1. 60 years — 8.287
+2. 61 years — 8.194
+3. 65 years — 7.731
+4. 70 years — 6.897
+
+A. 1, 2 and 3 only
+B. 2, 3 and 4 only
+C. 1, 3 and 4 only
+D. 1, 2, 3 and 4
+
+Correct Answer: D. 1, 2, 3 and 4
+
+Explanation: All four pairings are correct as per the Commutation Factor Table appended to the Rules. The factor declines with advancing age because actuarial residual life shortens — a useful concept anchor for elimination on more difficult variants of this question.
+
+---
+
+| PART 3: Provisional Pension, Retrospective Revision and Restoration — Rules 9, 10 and 10-A |
+|---|
+| Source Pages: 4–5 |
+| Important Points Identified: 6 |
+| MCQs Generated in this Part: 8 |
+
+---
+
+Q23. A Government servant in receipt of provisional pension under Rule 62 of the Pension Rules, 2021 may commute a fraction of such provisional pension subject to the limit specified in:
+
+A. Rule 4 of the Commutation Rules
+B. Rule 5 of the Commutation Rules
+C. Rule 8 of the Commutation Rules
+D. Rule 12 of the Commutation Rules
+
+Correct Answer: B. Rule 5 of the Commutation Rules
+
+Explanation: Rule 9(1) cross-refers to Rule 5 for the 40% ceiling — provisional pension does not loosen the cap. Rule 4 deals with disqualification, Rule 8 with calculation, and Rule 12 with eligibility for commutation without medical exam — all are adjacent-rule traps.
+
+---
+
+Q24. Where an applicant commutes a percentage of provisional pension that works out to not exceeding ₹6,000 per month and on determination of final pension he becomes entitled to commute up to ₹6,000 per month, then for payment of the difference:
+
+A. He must apply afresh in Form 1
+B. He must apply afresh in Form 2 and undergo medical examination
+C. He shall not be required to undergo medical examination
+D. He must apply through the Chief Administrative Medical Authority
+
+Correct Answer: C. He shall not be required to undergo medical examination
+
+Explanation: Rule 9(2)(b) waives the medical examination requirement where the differential remains within the ₹6,000-per-month threshold. The earlier examination already covers the actuarial risk. A fresh Form 2 with medical examination is required only when the increment crosses the threshold (Rule 9(2)(c)).
+
+---
+
+Q25. If, on determination of final pension, the applicant becomes entitled to commute a sum exceeding ₹6,000 (and exceeding ₹100), he is required to apply afresh in:
+
+A. Form 1
+B. Form 1-A
+C. Form 2
+D. Form 5
+
+Correct Answer: C. Form 2
+
+Explanation: Rule 9(2)(c) requires a fresh application in Form 2 because crossing the ₹6,000 threshold reopens the medical-examination route. Form 1/1-A is the without-medical-exam track; Form 5 is for nominations.
+
+---
+
+Q26. Under Rule 10, where an applicant has commuted a percentage of his final pension and that pension is later revised and enhanced retrospectively as a result of a Government decision:
+
+A. The applicant must apply afresh for commutation of the differential pension
+B. The applicant shall be paid the difference between the commuted value on enhanced pension and that already authorised, without applying afresh
+C. Only fresh commutation is permitted, with reference to the original commutation factor
+D. No further commutation is allowed once final pension has been commuted
+
+Correct Answer: B. The applicant shall be paid the difference between the commuted value on enhanced pension and that already authorised, without applying afresh
+
+Explanation: Rule 10 is a relief provision — retrospective enhancement of pension automatically generates an additional commuted-value entitlement, paid suo motu without a fresh application. Option D is the principal trap; A and C wrongly impose procedural steps the rule expressly waives.
+
+---
+
+Q27. The commuted amount of pension shall be restored on completion of:
+
+A. 10 years from the date of commutation becoming absolute
+B. 12 years from the date of payment of commuted value
+C. 15 years from the date the reduction of pension becomes operative
+D. 20 years from the date of retirement
+
+Correct Answer: C. 15 years from the date the reduction of pension becomes operative
+
+Explanation: Rule 10-A fixes restoration at 15 years from the date the reduction of pension becomes operative under Rule 6 — not from the date of commutation absolute or date of retirement. The starting trigger is the favourite trap; aspirants commonly pick "10 years" or "from commutation absolute".
+
+---
+
+Q28. A pensioner draws his commuted value on 1st July 2010, but the reduction in his pension becomes operative from 1st October 2010 (three months after issue of authority by the Accounts Officer, since payment was received earlier). When does restoration of his commuted pension take effect?
+
+A. 1st July 2025
+B. 1st October 2025
+C. 1st July 2020
+D. 1st October 2030
+
+Correct Answer: A. 1st July 2025
+
+Explanation: Restoration runs 15 years from the date reduction of pension becomes operative, which under the proviso to Rule 6(1) is the *earlier* of (i) receipt of commuted value (1.7.2010) or (ii) end of three months after authority. Since 1.7.2010 is earlier, that becomes the trigger date — 15 years on, restoration falls on 1.7.2025.
+
+---
+
+Q29. Consider the following statements about restoration of commuted pension under Rule 10-A:
+
+1. The full original pension is restored after 15 years.
+2. The 15-year period is reckoned from the date of retirement of the Government servant.
+3. The lump sum already paid is recovered from the pensioner before restoration.
+
+Which of the above statements is/are correct?
+
+A. 1 only
+B. 1 and 2 only
+C. 1 and 3 only
+D. 1, 2 and 3
+
+Correct Answer: A. 1 only
+
+Explanation: Only Statement 1 correctly captures Rule 10-A. The 15-year period runs from when the reduction of pension becomes operative, not from retirement (Statement 2 is wrong). No recovery of the lump sum is made — it is treated as actuarially exhausted by 15 years (Statement 3 is wrong).
+
+---
+
+Q30. Which one of the following statements regarding Rule 10 (Retrospective Revision) is correct?
+
+A. The applicant must undergo a fresh medical examination for the differential commuted value
+B. The applicant must apply afresh in Form 2 within one year of revision
+C. The applicant is paid the difference between the commuted value on the enhanced pension and the commuted value already authorised, without fresh application
+D. The applicant is barred from receiving any additional commuted value after the original commutation
+
+Correct Answer: C. The applicant is paid the difference between the commuted value on the enhanced pension and the commuted value already authorised, without fresh application
+
+Explanation: Rule 10 dispenses with both the fresh application and the medical examination — recognising that retrospective pay/pension revisions are administrative in origin and should not impose procedural burdens on the pensioner. Options A, B and D each impose conditions that the rule expressly waives or contradicts.
+
+---
+
+| PART 4: Commutation WITHOUT Medical Examination — Rules 11 to 16 |
+|---|
+| Source Pages: 5–7 |
+| Important Points Identified: 9 |
+| MCQs Generated in this Part: 11 |
+
+---
+
+Q31. Which of the following classes of pensioners is NOT eligible to commute pension *without* medical examination?
+
+A. A pensioner authorised superannuation pension under Rule 33 of the Pension Rules
+B. A pensioner authorised retiring pension under Rule 34 of the Pension Rules
+C. A pensioner authorised invalid pension under Rule 39 of the Pension Rules
+D. A pensioner authorised compensation pension on abolition of permanent post under the Pension Rules
+
+Correct Answer: C. A pensioner authorised invalid pension under Rule 39 of the Pension Rules
+
+Explanation: Invalid pensioners (Rule 39) must always be examined by a Medical Board — invalidation itself is medical in origin, so commutation cannot proceed on the without-exam track. Superannuation, retiring and compensation pensioners may commute without medical examination under Rule 12, provided they apply within one year (Rule 13).
+
+---
+
+Q32. A pensioner who desires commutation without medical examination must ensure that his application in Form 1 is delivered to the Head of Office:
+
+A. Within six months of the date of retirement
+B. Within one year of the date of retirement
+C. Within two years of the date of retirement
+D. At any time during the lifetime of the pensioner
+
+Correct Answer: B. Within one year of the date of retirement
+
+Explanation: Rule 13(1)(b) makes the one-year window from retirement the bright line — applications received later forfeit the without-medical-exam concession (Rule 14). Six months is fabricated; "any time" applies only to the with-medical-examination track.
+
+---
+
+Q33. In the case of a pensioner whose pension is finalised consequent to departmental or judicial proceedings, the period of one year for application without medical examination shall reckon from:
+
+A. The date of retirement of the Government servant
+B. The date of the original charge memorandum
+C. The date of issue of orders consequent on finalisation of the proceedings
+D. The date of receipt of pension payment order
+
+Correct Answer: C. The date of issue of orders consequent on finalisation of the proceedings
+
+Explanation: Rule 13(1)(c) anchors the one-year clock to the finalisation order, not retirement. This is necessary because Rule 4 bars commutation during pendency — without this special trigger, a pensioner whose proceedings dragged beyond one year past retirement would be forced into medical examination through no fault of his own.
+
+---
+
+Q34. A Government servant applies for commutation of pension within one year of retirement, but his application in Form 1 is received by the Head of Office after one year of retirement. He shall:
+
+A. Be eligible to commute pension without medical examination
+B. Be deemed to have applied on the date of dispatch of his application
+C. Not be eligible to commute pension without medical examination
+D. Be required to apply afresh in Form 1-A
+
+Correct Answer: C. Not be eligible to commute pension without medical examination
+
+Explanation: Rule 13(2) operates on receipt at the Head of Office, not date of dispatch by the applicant. Even a within-time application loses the without-medical-exam concession if it reaches the Head of Office late. He must apply afresh in Form 2 (Rule 14) — Form 1-A in Option D is wrong (that is the pre-retirement form).
+
+---
+
+Q35. A Government servant who is due to retire on superannuation and desires that the commuted value of pension be authorised at the time of issue of the pension payment order shall apply in:
+
+A. Form 1, after the date of retirement
+B. Form 1-A, so as to reach the Head of Office not later than 3 months before the date of superannuation
+C. Form 2, along with pension papers
+D. Form 5, before the date of superannuation
+
+Correct Answer: B. Form 1-A, so as to reach the Head of Office not later than 3 months before the date of superannuation
+
+Explanation: Rule 13(3) creates a pre-retirement track via Form 1-A so that commuted value can be paid on the day after retirement itself (linking to Rule 6(1)(b)). The three-month minimum allows the Accounts Officer time to verify and authorise. Form 1 is the post-retirement form; Form 2 is for medical-exam route; Form 5 is for nomination.
+
+---
+
+Q36. If a Government servant who has applied in Form 1-A dies before the date of superannuation, the Government's liability for payment of the commuted value is:
+
+A. Discharged in full to the family in terms of nomination
+B. Limited to 50% of the commuted value
+C. Nil — the Government has no liability
+D. Liability vests in the Accounts Officer for resolution
+
+Correct Answer: C. Nil — the Government has no liability
+
+Explanation: Rule 13(3)(b) makes the position absolute — death (or forfeiture of pension claim) before superannuation extinguishes commutation rights, because commutation can attach only when there is a pension to commute. The pensionary entitlement converts to family pension/death gratuity through different rules.
+
+---
+
+Q37. Where an application in Form 1 is received by the Head of Office *after* one year of the date of retirement, the Head of Office shall advise the applicant to:
+
+A. Apply afresh in Form 1-A for medical examination
+B. Apply afresh in Form 2 so that arrangements for medical examination can be made
+C. Apply afresh in Form 5 for nomination
+D. Forgo commutation as no remedy is available
+
+Correct Answer: B. Apply afresh in Form 2 so that arrangements for medical examination can be made
+
+Explanation: Rule 14 routes late applicants into the with-medical-examination track via Form 2 — the substantive right to commute is preserved, but the actuarial risk is mitigated by a medical opinion. Form 1-A is for pre-retirement applicants only; Form 5 is for nomination; "no remedy" is wrong because the with-exam route remains open.
+
+---
+
+Q38. After verifying the information furnished in Form 1, the Accounts Officer shall:
+
+A. Pay the commuted value directly into the applicant's bank account
+B. Issue authority for payment of commuted value of pension to the disbursing authority concerned
+C. Forward Form 1 to the Chief Administrative Medical Authority
+D. Return Form 1 to the applicant for signature
+
+Correct Answer: B. Issue authority for payment of commuted value of pension to the disbursing authority concerned
+
+Explanation: Rule 15(1) confines the Accounts Officer to issuing authority — actual disbursement is by the disbursing authority (treasury/bank). The Accounts Officer also requests the Head of Office to intimate the date of handover of cheque/draft, which is critical for fixing the operative date of pension reduction under the proviso to Rule 6(1).
+
+---
+
+Q39. In the case of commutation of provisional pension sanctioned under Rule 62 of the Pension Rules, 2021 in Form 1, the route is:
+
+A. Head of Office → Accounts Officer; the Accounts Officer issues authority for payment to the Head of Office for disbursement
+B. Head of Office → Chief Administrative Medical Authority → Accounts Officer
+C. Applicant → Accounts Officer directly, bypassing the Head of Office
+D. Accounts Officer → applicant directly through ECS, without involving the Head of Office
+
+Correct Answer: A. Head of Office → Accounts Officer; the Accounts Officer issues authority for payment to the Head of Office for disbursement
+
+Explanation: Rule 16 places the Head of Office at the centre of provisional-pension commutation: the Head of Office sanctions provisional pension under Rule 62, forwards Form 1 to the Accounts Officer, and disburses the commuted value upon receiving authority back. The Chief Administrative Medical Authority does not enter the loop because the without-medical-exam track applies.
+
+---
+
+Q40. Consider the following statements about commutation without medical examination:
+
+1. A retiring pensioner under Rule 34 of the Pension Rules is eligible to commute without medical examination if Form 1 is delivered to the Head of Office within one year of retirement.
+2. The cut-off for receipt of Form 1-A in pre-retirement cases is three months before the date of superannuation.
+3. A pensioner authorised compassionate allowance under Rule 41 of the Pension Rules is eligible to commute without medical examination.
+
+Which of the above statements is/are correct?
+
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+Correct Answer: A. 1 and 2 only
+
+Explanation: Statements 1 (Rule 13) and 2 (Rule 13(3)(a)) are correct. Statement 3 is wrong — compassionate allowance (Rule 41 of the Pension Rules) is recovered through the with-medical-examination route under Rule 18(c), not without examination.
+
+---
+
+Q41. A Government servant retiring on 30.06.2026 wishes to receive his commuted value on 01.07.2026 itself. He must submit Form 1-A to the Head of Office not later than:
+
+A. 31.12.2025
+B. 31.03.2026
+C. 30.04.2026
+D. 31.05.2026
+
+Correct Answer: B. 31.03.2026
+
+Explanation: Rule 13(3)(a) requires Form 1-A to reach the Head of Office at least three months before the date of superannuation. Counting back from 30.06.2026 gives 31.03.2026. Earlier dates are permissible, but later than 31.03.2026 disqualifies the pre-retirement track and forces the applicant onto the post-retirement Form 1.
+
+---
+
+| PART 5: Commutation AFTER Medical Examination — Rules 17 to 24 |
+|---|
+| Source Pages: 7–8 |
+| Important Points Identified: 9 |
+| MCQs Generated in this Part: 11 |
+
+---
+
+Q42. Which of the following pensioners is required to commute pension only after medical examination?
+
+A. A pensioner authorised superannuation pension under Rule 33 who applied in Form 1 within one year
+B. A pensioner authorised retiring pension under Rule 34 who applied in Form 1-A before retirement
+C. A pensioner who retires on invalid pension under Rule 39 of the Pension Rules
+D. A pensioner authorised compensation pension on abolition of permanent post who applied within one year
+
+Correct Answer: C. A pensioner who retires on invalid pension under Rule 39 of the Pension Rules
+
+Explanation: Rule 18(a) places invalid pensioners squarely on the medical-examination track because their very entitlement arose from a finding of invalidation. Rule 22(1) further mandates that the medical authority in such cases must be a Medical Board (not a single Medical Officer).
+
+---
+
+Q43. The medical authority for an applicant applying for commutation of *invalid* pension shall be:
+
+A. A Medical Officer not lower in status than a Civil Surgeon or District Medical Officer
+B. A Medical Board
+C. The Chief Administrative Medical Authority himself
+D. The Director General of Health Services
+
+Correct Answer: B. A Medical Board
+
+Explanation: Rule 22(1) elevates the standard of scrutiny for invalid pensioners by requiring a Medical Board. In all other cases under Chapter III (Rule 22(2)), a Medical Officer not lower in status than a Civil Surgeon or District Medical Officer suffices.
+
+---
+
+Q44. An applicant who has not submitted his application for commutation to the Head of Office within one year of his retirement shall:
+
+A. Lose his right to commutation forever
+B. Be eligible to commute his pension only after medical examination, subject to the limit specified in Rule 5
+C. Be eligible to commute his pension on the original without-medical-examination terms
+D. Be required to apply through a court of law
+
+Correct Answer: B. Be eligible to commute his pension only after medical examination, subject to the limit specified in Rule 5
+
+Explanation: Rule 18(d) preserves the substantive right to commute even after one year, but conditions it on a fresh fitness opinion through medical examination. The 40% ceiling under Rule 5 continues to apply.
+
+---
+
+Q45. Arrange the following procedural steps in the correct sequence in a commutation case requiring medical examination:
+
+1. Head of Office addresses Form 3 to the Chief Administrative Medical Authority
+2. Applicant submits Form 2 to the Head of Office
+3. Accounts Officer completes Part IV of Form 2 and transmits it back to the Head of Office
+4. Head of Office forwards Form 2 to the Accounts Officer for completion of Part IV
+
+A. 2 → 4 → 3 → 1
+B. 2 → 1 → 4 → 3
+C. 4 → 2 → 1 → 3
+D. 1 → 2 → 4 → 3
+
+Correct Answer: A. 2 → 4 → 3 → 1
+
+Explanation: Rule 19 and Rule 20 lay down the sequence: applicant submits Form 2 to Head of Office → Head of Office forwards to Accounts Officer for completion of Part IV → Accounts Officer transmits it back → Head of Office addresses Form 3 to the CAMA. Skipping the Accounts Officer's verification before reaching the medical authority would expose the system to data errors.
+
+---
+
+Q46. A copy of the letter in Form 3 addressed to the Chief Administrative Medical Authority is endorsed to:
+
+A. The applicant only
+B. The applicant and the Accounts Officer
+C. The applicant and the Medical Board
+D. The disbursing authority and the Pension Sanctioning Authority
+
+Correct Answer: B. The applicant and the Accounts Officer
+
+Explanation: Rule 20(4) requires endorsement to both the applicant (so he knows the medical examination has been initiated) and the Accounts Officer (so its records remain synchronous). The disbursing authority is not in the loop until the medical examination concludes.
+
+---
+
+Q47. The Chief Administrative Medical Authority shall ensure that the medical examination of the applicant is held, as far as possible:
+
+A. Within 30 days of receipt of documents
+B. Before the date of the applicant's next birthday
+C. Within 90 days of receipt of documents
+D. On any date convenient to the applicant within six months
+
+Correct Answer: B. Before the date of the applicant's next birthday
+
+Explanation: Rule 21(3) ties timing to the next birthday because the commutation factor is fixed by reference to age next birthday — an examination conducted after the next birthday would shift the applicant into a less favourable factor. The rule therefore protects the applicant's pecuniary interest.
+
+---
+
+Q48. If the applicant fails to appear before the medical authority on the date and time communicated to him without reasonable ground:
+
+A. The application shall be deemed to have been rejected and a fresh application is barred for one year
+B. The medical authority shall report the fact to the Head of Office and return the documents; the application shall be treated as having been withdrawn
+C. The medical authority shall fix a fresh date suo motu
+D. The applicant shall be liable for the entire fee for medical examination as a penalty
+
+Correct Answer: B. The medical authority shall report the fact to the Head of Office and return the documents; the application shall be treated as having been withdrawn
+
+Explanation: Rule 24 treats a no-show without reasonable ground as a constructive withdrawal — a balanced consequence that neither punishes the applicant permanently nor allows indefinite latitude. He may apply afresh thereafter; there is no statutory bar of one year (Option A) or fee penalty (Option D).
+
+---
+
+Q49. The fee for medical examination for commutation of pension shall be borne by:
+
+A. The Accounts Officer
+B. The Head of Office
+C. The applicant himself
+D. The Government, as part of post-retirement benefits
+
+Correct Answer: C. The applicant himself
+
+Explanation: Rule 23 places the cost on the applicant, with the quantum specified by the Central Government. The rationale is that medical examination is a personal pre-condition serving the applicant's pecuniary interest in a discounted lump sum. Re-examination by a Medical Board (Rule 26) is also at the applicant's expense.
+
+---
+
+Q50. The medical authority for commutation cases under Chapter III, *other than* invalid pension cases, shall be a Medical Officer not lower in status than that of:
+
+A. A Medical Officer in charge of a CGHS dispensary
+B. A Civil Surgeon or a District Medical Officer
+C. A Director of Health Services
+D. The Chief Administrative Medical Authority of the State
+
+Correct Answer: B. A Civil Surgeon or a District Medical Officer
+
+Explanation: Rule 22(2) sets the bar at Civil Surgeon / District Medical Officer level. CGHS dispensary in-charges are at a lower rung; Director of Health Services is higher than required. The two-tier scheme — Medical Board for invalid pension and Civil Surgeon-level officer otherwise — is core exam material.
+
+---
+
+Q51. A Government servant retires on superannuation on 30.04.2026. He submits Form 1 on 25.04.2027 — one year is set to expire on 30.04.2027. The Form is, however, received by the Head of Office on 05.05.2027. Which of the following is correct?
+
+A. He may commute pension without medical examination since he applied within one year
+B. He must apply afresh in Form 2 and undergo medical examination, since Form 1 was received after one year
+C. He must apply afresh in Form 1-A
+D. The application is barred altogether and no commutation is possible
+
+Correct Answer: B. He must apply afresh in Form 2 and undergo medical examination, since Form 1 was received after one year
+
+Explanation: Rule 13(2) read with Rule 14 turns on date of receipt at the Head of Office, not date of dispatch by the applicant. Receipt on 05.05.2027 is beyond the one-year cut-off (30.04.2027), so the without-medical-exam concession lapses; Form 2 with medical examination is the only available track.
+
+---
+
+Q52. Consider the following statements about the medical examination procedure for commutation:
+
+1. The applicant must pay for his own medical examination.
+2. The medical examination should, as far as possible, be held before the applicant's next birthday.
+3. For invalid pensioners, the medical authority is a single Medical Officer.
+
+Which of the above statements is/are correct?
+
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+
+Correct Answer: A. 1 and 2 only
+
+Explanation: Statements 1 (Rule 23) and 2 (Rule 21(3)) are correct. Statement 3 is wrong — for invalid pensioners the medical authority is a Medical Board under Rule 22(1); the single-officer route applies only in non-invalid cases.
+
+---
+
+| PART 6: Re-examination, Appeal, Withdrawal, Authorisation and Final Assessment — Rules 26 to 31 |
+|---|
+| Source Pages: 9 |
+| Important Points Identified: 7 |
+| MCQs Generated in this Part: 9 |
+
+---
+
+Q53. Under Rule 26, a second medical examination shall take place after the expiry of a period of:
+
+A. Not less than three months from the first medical examination
+B. Not less than six months from the first medical examination
+C. Not less than one year from the first medical examination
+D. Not less than two years from the first medical examination
+
+Correct Answer: C. Not less than one year from the first medical examination
+
+Explanation: Rule 26(1) imposes a one-year cooling period — short enough to permit reasonable re-evaluation, long enough to ensure the second opinion is not a mere mirror of the first. The shorter periods (3 or 6 months) are the standard traps.
+
+---
+
+Q54. If an applicant desires to be re-examined after the one-year period under Rule 26, the second examination shall be:
+
+A. By the same medical authority, free of cost
+B. By the Chief Administrative Medical Authority himself
+C. By a Medical Board, at the applicant's own expense
+D. By a Medical Board, at Government expense
+
+Correct Answer: C. By a Medical Board, at the applicant's own expense
+
+Explanation: Rule 26(2) elevates the second examination to a Medical Board (regardless of whether the first was by a single officer) and places the cost on the applicant — a deterrent against frivolous re-examination requests, while preserving access for those genuinely aggrieved.
+
+---
+
+Q55. An applicant who wishes to challenge the findings of the medical authority must prefer an appeal addressed to the Head of Office within:
+
+A. One week of receipt of the certified copy
+B. 14 days of receipt of the certified copy
+C. One month of receipt of the certified copy
+D. Three months of receipt of the certified copy
+
+Correct Answer: C. One month of receipt of the certified copy
+
+Explanation: Rule 27 fixes a one-month appeal window from receipt of the certified copy. Note the 14-day window in Option B is the *withdrawal* timeline under Rule 28(2), a closely adjacent provision designed precisely to confuse aspirants.
+
+---
+
+Q56. An applicant may withdraw his application for commutation:
+
+A. At any time, including after appearing before the medical authority
+B. Only before the issue of authority by the Accounts Officer
+C. At any time before subjecting himself to medical examination, but in no case after he has appeared before such authority
+D. Only with the prior written approval of the Pension Sanctioning Authority
+
+Correct Answer: C. At any time before subjecting himself to medical examination, but in no case after he has appeared before such authority
+
+Explanation: Rule 28(1) cuts off the right of withdrawal precisely at the point of appearing before the medical authority — once a medical opinion has been generated, the applicant cannot retreat strategically based on its tenor. This safeguards the integrity of the actuarial process.
+
+---
+
+Q57. Where the medical authority directs that the applicant's age for the purpose of commutation shall be assumed to be greater than his actual age, the applicant may withdraw his application by giving notice in writing to the Head of Office within:
+
+A. 7 days from the date of receipt of information from the Accounts Officer
+B. 14 days from the date of receipt of information from the Accounts Officer
+C. One month from the date of the medical certificate
+D. 14 days from the date of the medical certificate
+
+Correct Answer: B. 14 days from the date of receipt of information from the Accounts Officer
+
+Explanation: Rule 28(2) creates a narrow 14-day window — and importantly counts it from receipt of information from the Accounts Officer, not from the medical certificate itself. This is because the financial impact of the age loading becomes clear only after the Accounts Officer recomputes the commuted value at the loaded age.
+
+---
+
+Q58. On receipt of documents from the medical authority, the Accounts Officer is required to:
+
+A. Forward the documents to the Pension Sanctioning Authority for confirmation
+B. Without delay, issue an order of commutation of pension for payment with the residual amount of pension to the disbursing authority concerned
+C. Refer the case back to the Head of Office for revalidation
+D. Wait for the next financial year to authorise payment
+
+Correct Answer: B. Without delay, issue an order of commutation of pension for payment with the residual amount of pension to the disbursing authority concerned
+
+Explanation: Rule 30 is built around a "without delay" obligation on the Accounts Officer. The order also captures the residual pension (i.e. pension *after* deduction of the commuted portion), so that the disbursing authority operates on a single composite instruction rather than two streams.
+
+---
+
+Q59. A Government servant has been paid the commuted value of a percentage of his provisional pension under Rule 62 of the Pension Rules, 2021 by the Head of Office. On final assessment of the pension, the Accounts Officer shall:
+
+A. Recover the entire commuted value paid earlier and re-issue afresh
+B. Pay the difference between the commuted value so determined and the commuted value already paid
+C. Authorise no further payment, since the matter has already been concluded
+D. Forward the case for medical re-examination
+
+Correct Answer: B. Pay the difference between the commuted value so determined and the commuted value already paid
+
+Explanation: Rule 31 closes the loop opened by Rule 9 — once provisional pension converts into final pension, the higher commuted entitlement on the final figure is paid as a *differential*, not by recovery and reissue. Recovery (Option A) would create avoidable hardship, especially given the pensioner has already deployed the lump sum.
+
+---
+
+Q60. Consider the following statements about Rules 26 to 28:
+
+1. A second medical examination on the applicant's request, after one year from the first, must be conducted by a Medical Board.
+2. The cost of the second medical examination is borne by the Government.
+3. An appeal against the findings of the medical authority must be filed within one month of receipt of the certified copy.
+
+Which of the above statements is/are correct?
+
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+
+Correct Answer: B. 1 and 3 only
+
+Explanation: Statements 1 (Rule 26(2)) and 3 (Rule 27) are correct. Statement 2 is wrong — Rule 26(2) explicitly places the cost of the second examination on the applicant, mirroring the principle in Rule 23 for the first examination.
+
+---
+
+Q61. An applicant in a medical-examination case has appeared before the medical authority on 10.03.2026 and the medical certificate is received by him on 25.03.2026, prescribing a higher assumed age. The Accounts Officer's communication on the recomputed commuted value reaches him on 05.04.2026. By when must he give written notice of withdrawal under Rule 28(2)?
+
+A. 09.04.2026
+B. 19.04.2026
+C. 25.04.2026
+D. 05.05.2026
+
+Correct Answer: B. 19.04.2026
+
+Explanation: Rule 28(2) gives a 14-day window from the date of receipt of information from the Accounts Officer. Counting from 05.04.2026, the 14th day falls on 19.04.2026. Option A erroneously uses a 4-day window; C and D fabricate longer periods.
+
+---
+
+| PART 7: Commutation Factor Table — Application of the Schedule |
+|---|
+| Source Pages: 10–11 |
+| Important Points Identified: 5 |
+| MCQs Generated in this Part: 7 |
+
+---
+
+Q62. As per the Commutation Factor Table appended to the Rules, the commutation factor for a Government servant whose age next birthday is 60 years is:
+
+A. 8.371
+B. 8.287
+C. 8.194
+D. 8.093
+
+Correct Answer: B. 8.287
+
+Explanation: The table fixes 8.287 against age next birthday 60. The neighbouring values — 8.371 (age 59), 8.194 (age 61) and 8.093 (age 62) — are deliberate adjacent-row traps for those who confuse "age next birthday" with "age last birthday".
+
+---
+
+Q63. Which of the following correctly states the commutation factor at age next birthday 61 — the typical case of a Government servant retiring on superannuation at 60?
+
+A. 8.287
+B. 8.194
+C. 8.093
+D. 7.982
+
+Correct Answer: B. 8.194
+
+Explanation: A Government servant retiring at 60 has age next birthday = 61, attracting the factor 8.194. This is the most frequently quoted figure in commutation problems and the one to memorise. 8.287 corresponds to age 60, 8.093 to age 62, and 7.982 to age 63.
+
+---
+
+Q64. As age next birthday increases, the commutation factor:
+
+A. Increases proportionately
+B. Decreases
+C. Remains constant
+D. First increases and then decreases
+
+Correct Answer: B. Decreases
+
+Explanation: The factor reflects the actuarial number of years' purchase — the older the applicant, the shorter the residual life expectancy, hence the smaller the factor. A factor of 9.188 at age 20 falls to 4.611 at age 81, confirming the monotonic decline.
+
+---
+
+Q65. Consider the following pairs from the Commutation Factor Table:
+
+1. Age next birthday 50 — 8.846
+2. Age next birthday 65 — 7.731
+3. Age next birthday 70 — 6.897
+4. Age next birthday 80 — 4.812
+
+Which of the pairs are correctly matched?
+
+A. 1 and 2 only
+B. 1, 2 and 3 only
+C. 2, 3 and 4 only
+D. 1, 2, 3 and 4
+
+Correct Answer: D. 1, 2, 3 and 4
+
+Explanation: All four pairings are correctly stated. The cluster (50, 65, 70, 80) represents the most exam-relevant age points — voluntary retirement (age 50), normal superannuation outcomes (age 65 and onwards) and longevity scenarios (age 80).
+
+---
+
+Q66. A Government servant retires on voluntary basis at age 49. His age next birthday is 50. He wishes to commute 40% of his pension of ₹40,000. The lump sum payable to him, at the applicable commutation factor of 8.846, is:
+
+A. ₹14,15,360
+B. ₹16,98,432
+C. ₹3,53,840
+D. ₹17,69,200
+
+Correct Answer: B. ₹16,98,432
+
+Explanation: Commuted portion = 40% × ₹40,000 = ₹16,000/month. Lump sum = ₹16,000 × 12 × 8.846 = ₹16,98,432. Option A omits one multiplier; Option C drops the ×12 factor; Option D uses an inflated factor. The full Rule 8 formula must always be applied.
+
+---
+
+Q67. A pensioner retires at the end of the month in which he attains age 60. For the purpose of computing the lump sum on commutation, his commutation factor will be drawn against:
+
+A. Age 60 (age last birthday)
+B. Age 61 (age next birthday)
+C. The mean of ages 60 and 61
+D. Age 60 reduced by 0.5 actuarially
+
+Correct Answer: B. Age 61 (age next birthday)
+
+Explanation: Rule 8 read with the table mandates use of age next birthday. The convention errs in favour of conservative actuarial valuation — the factor for age 61 (8.194) is lower than for age 60 (8.287), giving a marginally smaller lump sum but a more sustainable scheme. Mean and reduced-age computations are fabricated.
+
+---
+
+Q68. Two Government servants A and B retire on the same date with identical basic pensions of ₹50,000 each. A's age next birthday is 61 (factor 8.194); B's age next birthday is 65 (factor 7.731). Both commute the maximum permissible 40%. The difference in lump sum payable to A over B is approximately:
+
+A. ₹1,11,120
+B. ₹2,77,800
+C. ₹4,44,480
+D. ₹5,55,600
+
+Correct Answer: A. ₹1,11,120
+
+Explanation: Commuted amount = 40% × ₹50,000 = ₹20,000/month for each. Lump sum A = ₹20,000 × 12 × 8.194 = ₹19,66,560. Lump sum B = ₹20,000 × 12 × 7.731 = ₹18,55,440. Difference = ₹1,11,120. The other options are common arithmetic-error traps (omitted ×12, doubled difference, wrong factor pairing).
+
+---
