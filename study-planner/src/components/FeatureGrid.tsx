@@ -90,13 +90,12 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
         className?: string;
         customBadge?: number;
     }[] = [
-            { title: "Syllabus", desc: "Detailed Course Map", color: "text-orange-600", bg: "bg-orange-50 dark:bg-orange-900/20", border: "group-hover:border-orange-500", shadow: "group-hover:shadow-orange-500/20", icon: BookOpen, link: "/syllabus", badge: "Free" },
-            { title: "Study Planner", desc: "Organize Learning", color: "text-violet-600", bg: "bg-violet-50 dark:bg-violet-900/20", border: "group-hover:border-violet-500", shadow: "group-hover:shadow-violet-500/20", icon: Layout, link: "/planner", badge: "Free" },
+            { title: "Syllabus", desc: "Detailed Official Syllabus", color: "text-orange-600", bg: "bg-orange-50 dark:bg-orange-900/20", border: "group-hover:border-orange-500", shadow: "group-hover:shadow-orange-500/20", icon: BookOpen, link: "/syllabus", badge: "Free" },
+            { title: "Dak Sutra", desc: "Postal Rules Simplified", color: "text-blue-700", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-600", shadow: "group-hover:shadow-blue-600/20", icon: Newspaper, link: "/dak-sutra", badge: "Free" },
             { title: "PDF Notes", desc: "Downloadable Content", color: "text-rose-600", bg: "bg-rose-50 dark:bg-rose-900/20", border: "group-hover:border-rose-500", shadow: "group-hover:shadow-rose-500/20", icon: FileText, link: "/notes", badge: "Gold" },
             { title: "MCQs", desc: "Practice Questions", color: "text-emerald-600", bg: "bg-emerald-50 dark:bg-emerald-900/20", border: "group-hover:border-emerald-500", shadow: "group-hover:shadow-emerald-500/20", icon: CheckCircle2, link: "/quiz", badge: "Silver" },
             { title: "Flash Cards", desc: "Quick Revision", color: "text-amber-600", bg: "bg-amber-50 dark:bg-amber-900/20", border: "group-hover:border-amber-500", shadow: "group-hover:shadow-amber-500/20", icon: Zap, link: "/flashcards", badge: "Gold" },
-            { title: "Web Guide", desc: "Comprehensive Resources", color: "text-blue-600", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-500", shadow: "group-hover:shadow-blue-500/20", icon: BookOpen, link: "/guide", badge: "Silver" },
-            { title: "Dak Sutra", desc: "Postal Rules Simplified", color: "text-blue-700", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-600", shadow: "group-hover:shadow-blue-600/20", icon: Newspaper, link: "/dak-sutra", badge: "Free" },
+            { title: "Study Planner", desc: "Organize Learning", color: "text-violet-600", bg: "bg-violet-50 dark:bg-violet-900/20", border: "group-hover:border-violet-500", shadow: "group-hover:shadow-violet-500/20", icon: Layout, link: "/planner", badge: "Free" },
             { title: "Previous Year Questions", desc: "Previous Years", color: "text-cyan-600", bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "group-hover:border-cyan-500", shadow: "group-hover:shadow-cyan-500/20", icon: FileQuestion, link: "/pyq", badge: "Silver" },
             { title: "Current Affairs", desc: "Daily News & Updates", color: "text-indigo-600", bg: "bg-indigo-50 dark:bg-indigo-900/20", border: "group-hover:border-indigo-500", shadow: "group-hover:shadow-indigo-500/20", icon: Newspaper, link: "/current-affairs", badge: "Silver" },
             {

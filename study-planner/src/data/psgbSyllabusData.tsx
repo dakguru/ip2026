@@ -108,7 +108,7 @@ export const psgbSyllabusData = {
           { name: "Postal Manual Volume II Chapter VI (Stock), VIII (Printing), IX(Contracts), XII (Budget Estimates and control)", link: null },
           { name: "Chapter 6 of General Financial Rules, 2017", link: null },
           { name: "CVC guidelines on Public procurement, guide-lines and instructions on e-procurement.", link: null },
-          { name: "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.", link: null }
+          { name: "Manual for Procurement of Goods & Services", link: null }
         ]
       },
       {

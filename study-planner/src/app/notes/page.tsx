@@ -535,8 +535,8 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Procurement Manual Part I, II & III",
             filename: "Manual_for_Procurement_of_Goods_and_Services.pdf",
             path: "/notes/paper-3/Manual_for_Procurement_of_Goods_and_Services.pdf",
-            size: "0.6 MB",
-            color: "slate",
+            size: "4.3 MB",
+            color: "purple",
             topic: "Financial & Procurement"
         },
 

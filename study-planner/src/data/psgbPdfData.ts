@@ -225,12 +225,12 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "topic": "Financial & Procurement"
         },
         {
-            "title": "Manual on policies and procedure for purchase of goods and services available on website of Ministry of Finance.",
-            "description": "Manual for Procurement of Goods & Services",
+            "title": "Manual for Procurement of Goods & Services",
+            "description": "Procurement Manual Part I, II & III",
             "filename": "Manual_Procurement_Goods_Services.pdf",
             "path": "/notes/paper-1/Manual_Procurement_Goods_Services.pdf",
-            "size": "0.6 MB",
-            "color": "blue",
+            "size": "4.3 MB",
+            "color": "purple",
             "topic": "Financial & Procurement"
         },
         {

@@ -16,6 +16,86 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "10.05.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: Manual for Procurement of Goods & Services",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the highly requested <strong>Manual for Procurement of Goods & Services (Part I, II & III)</strong> in the PDF Notes section.</p>
+                        
+                        <div className="bg-purple-50/50 dark:bg-purple-900/10 p-3 rounded-xl border border-purple-100 dark:border-purple-800/50">
+                            <ul className="space-y-1.5 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                <li className="flex items-start gap-2">
+                                    <span className="text-purple-500 mt-0.5">✅</span>
+                                    <span><strong>Complete Coverage:</strong> Includes all three essential parts of the procurement manual.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-purple-500 mt-0.5">✅</span>
+                                    <span><strong>Exam Focused:</strong> Crucial for the Financial & Procurement syllabus of both LDCE IP & PS Group B.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-purple-600 dark:text-purple-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head over to the PDF Notes section to download it now!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "⚖️ Dak Sutra: CCS (Leave) Rules 1972 Master Guide (Part 1 & 2)",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have added a comprehensive, colourful, and interactive <strong>Dak Sutra Master Guide</strong> for the <strong>Central Civil Services (Leave) Rules, 1972</strong> in two extensive parts!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide mb-2">Part 1: Core Rules & Encashment</p>
+                                <ul className="space-y-1.5 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">✅</span>
+                                        <span><strong>Official Provisions & Encashment Formulas:</strong> Learn all formulas with clear explanations.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">✅</span>
+                                        <span><strong>Dies-Non Penalties & Practical Examples:</strong> Clear breakdown of leave deductions and calculation examples.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-emerald-500 mt-0.5">✅</span>
+                                        <span><strong>Maternity, Paternity & CCL:</strong> Key Distinctions, Facilities, Eligibility and Conditions.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="bg-teal-50/50 dark:bg-teal-900/10 p-3 rounded-xl border border-teal-100 dark:border-teal-800/50">
+                                <p className="font-bold text-teal-700 dark:text-teal-300 text-[10px] uppercase tracking-wide mb-2">Part 2: Study Leave & WRIIL</p>
+                                <ul className="space-y-1.5 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-teal-500 mt-0.5">✅</span>
+                                        <span><strong>WRIIL & Study Leave:</strong> Rules, Eligibility, and Max Limits.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-teal-500 mt-0.5">✅</span>
+                                        <span><strong>Departmental Leave Process:</strong> Step-by-step breakdown.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-teal-500 mt-0.5">✅</span>
+                                        <span><strong>Death Encashment Preference:</strong> Rule 39-C beneficiary sequence simplified.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-teal-600 dark:text-teal-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access both parts now in the Dak Sutra section!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "09.05.2026",
         items: [
             {
