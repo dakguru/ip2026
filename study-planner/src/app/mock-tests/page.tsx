@@ -569,47 +569,44 @@ export default function MockTestsPage() {
                             </div>
                         )}
 
-                        <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-2 md:mb-4 leading-tight">
-                            All India Mock Tests <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                {isPsGroupB ? "PS Group B 2026" : "LDCE IP 2026"}
-                            </span>
+                        <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-2 leading-tight">
+                            All India Mock Tests
                         </h1>
+                        <h2 className="text-xl md:text-3xl font-bold text-blue-400 mb-4">
+                            {isPsGroupB ? "PS Group B 2026" : "LDCE IP 2026"}
+                        </h2>
 
-                        <p className="text-[13px] md:text-xl text-zinc-400 max-w-2xl mx-auto mb-6 md:mb-8 px-2 leading-relaxed">
+                        <p className="text-[13px] md:text-base text-zinc-300 max-w-2xl mx-auto mb-8 px-4 opacity-90">
                             Compete globally. Real-time ranking.
                         </p>
 
-                        <div className="flex justify-center mb-6 w-full animate-in zoom-in duration-500 px-2">
-                            <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-[2px] overflow-hidden text-sm font-medium rounded-xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 w-full sm:w-auto">
-                                <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
-                                <span className="relative w-full sm:w-auto px-4 py-3 md:px-8 md:py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[10px] group-hover:bg-opacity-0 flex items-center justify-center gap-2 md:gap-3">
-                                    <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3 shrink-0">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-red-500"></span>
-                                    </span>
-                                    <span className="text-sm md:text-xl font-bold bg-clip-text text-white truncate">Attempt Live Sample Test</span>
-                                    <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-white rotate-180 shrink-0 group-hover:translate-x-1 transition-transform" />
+                        <div className="flex justify-center mb-8 w-full px-4">
+                            <Link href="/mock-tests/live" className="group relative flex items-center justify-center w-full sm:w-auto px-6 py-4 bg-white rounded-full shadow-[0_4px_14px_0_rgba(255,255,255,0.25)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.23)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
+                                <span className="relative flex h-3 w-3 shrink-0 mr-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                                 </span>
+                                <span className="text-base sm:text-lg font-bold text-zinc-900">Attempt Live Sample Test</span>
+                                <ArrowLeft className="w-5 h-5 text-zinc-900 rotate-180 ml-2 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
 
-                        {/* Feature Badges */}
-                        <div className="flex justify-center gap-2 sm:gap-4 mb-4">
-                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-zinc-900/60 backdrop-blur-sm rounded-xl border border-zinc-800/80 shadow-inner w-28 sm:w-32">
-                                <Users className="w-5 h-5 text-blue-400 mb-1.5" />
-                                <span className="text-[11px] sm:text-xs font-bold text-white">1000+</span>
-                                <span className="text-[9px] sm:text-[10px] text-zinc-500 uppercase tracking-wider">Aspirants</span>
+                        {/* Feature Badges - Material Tonal Style */}
+                        <div className="flex justify-center gap-3 sm:gap-4 mb-2 px-2">
+                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-blue-500/10 rounded-[20px] w-28 sm:w-32 border border-blue-500/20">
+                                <Users className="w-6 h-6 text-blue-300 mb-2" />
+                                <span className="text-xs sm:text-sm font-bold text-blue-100">1000+</span>
+                                <span className="text-[10px] sm:text-xs text-blue-200/70">Aspirants</span>
                             </div>
-                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-zinc-900/60 backdrop-blur-sm rounded-xl border border-zinc-800/80 shadow-inner w-28 sm:w-32">
-                                <Trophy className="w-5 h-5 text-yellow-400 mb-1.5" />
-                                <span className="text-[11px] sm:text-xs font-bold text-white">Rank</span>
-                                <span className="text-[9px] sm:text-[10px] text-zinc-500 uppercase tracking-wider">All India</span>
+                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-amber-500/10 rounded-[20px] w-28 sm:w-32 border border-amber-500/20">
+                                <Trophy className="w-6 h-6 text-amber-300 mb-2" />
+                                <span className="text-xs sm:text-sm font-bold text-amber-100">Rank</span>
+                                <span className="text-[10px] sm:text-xs text-amber-200/70">All India</span>
                             </div>
-                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-zinc-900/60 backdrop-blur-sm rounded-xl border border-zinc-800/80 shadow-inner w-28 sm:w-32">
-                                <Clock className="w-5 h-5 text-green-400 mb-1.5" />
-                                <span className="text-[11px] sm:text-xs font-bold text-white">Latest</span>
-                                <span className="text-[9px] sm:text-[10px] text-zinc-500 uppercase tracking-wider">Pattern</span>
+                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-emerald-500/10 rounded-[20px] w-28 sm:w-32 border border-emerald-500/20">
+                                <Clock className="w-6 h-6 text-emerald-300 mb-2" />
+                                <span className="text-xs sm:text-sm font-bold text-emerald-100">Latest</span>
+                                <span className="text-[10px] sm:text-xs text-emerald-200/70">Pattern</span>
                             </div>
                         </div>
                     </div>
@@ -654,31 +651,19 @@ export default function MockTestsPage() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 relative z-20">
+                    {/* Native Segmented Control for Series Selection */}
+                    <div className="relative z-20 mb-6 bg-zinc-100 dark:bg-zinc-800/80 p-1.5 rounded-[20px] flex items-center justify-between shadow-inner max-w-[400px] mx-auto w-full">
                         <button 
                             onClick={() => setActiveSeriesTab('series1')}
-                            className={`p-5 sm:p-6 rounded-[24px] border-[1.5px] transition-all duration-300 flex items-center justify-between group ${activeSeriesTab === 'series1' ? 'border-amber-500 bg-gradient-to-br from-blue-50/80 to-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:bg-gradient-to-br dark:from-blue-900/20 dark:to-zinc-900 dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)]' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm hover:border-zinc-300 dark:hover:border-zinc-700 active:scale-[0.98]'}`}
+                            className={`flex-1 py-3 px-2 rounded-[16px] text-sm sm:text-base font-bold transition-all duration-300 relative ${activeSeriesTab === 'series1' ? 'bg-white dark:bg-zinc-700 text-[#1860FF] dark:text-blue-400 shadow-md scale-[1.02]' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300 bg-transparent'}`}
                         >
-                            <div className="text-left flex-1 pr-4">
-                                <h3 className={`text-lg sm:text-xl font-bold tracking-tight ${activeSeriesTab === 'series1' ? 'text-blue-700 dark:text-blue-400' : 'text-zinc-800 dark:text-zinc-200'}`}>LDCE IP - Mock Test Series - I</h3>
-                                <p className="text-[13px] sm:text-sm text-zinc-500 font-medium mt-1.5">17 Weekly Tests (Ends May 2026)</p>
-                            </div>
-                            <div className={`w-11 h-11 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${activeSeriesTab === 'series1' ? 'bg-[#1860FF] text-white shadow-lg shadow-blue-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400'}`}>
-                                 <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeSeriesTab === 'series1' ? 'rotate-90' : ''}`} />
-                            </div>
+                            Series - I
                         </button>
-
                         <button 
                             onClick={() => setActiveSeriesTab('series2')}
-                            className={`p-5 sm:p-6 rounded-[24px] border-[1.5px] transition-all duration-300 flex items-center justify-between group ${activeSeriesTab === 'series2' ? 'border-amber-500 bg-gradient-to-br from-blue-50/80 to-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:bg-gradient-to-br dark:from-purple-900/20 dark:to-zinc-900 dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)]' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm hover:border-zinc-300 dark:hover:border-zinc-700 active:scale-[0.98]'}`}
+                            className={`flex-1 py-3 px-2 rounded-[16px] text-sm sm:text-base font-bold transition-all duration-300 relative ${activeSeriesTab === 'series2' ? 'bg-white dark:bg-zinc-700 text-[#1860FF] dark:text-blue-400 shadow-md scale-[1.02]' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300 bg-transparent'}`}
                         >
-                            <div className="text-left flex-1 pr-4">
-                                <h3 className={`text-lg sm:text-xl font-bold tracking-tight ${activeSeriesTab === 'series2' ? 'text-zinc-900 dark:text-zinc-100' : 'text-zinc-800 dark:text-zinc-200'}`}>LDCE IP - Mock Test Series - II</h3>
-                                <p className="text-[13px] sm:text-sm text-zinc-500 font-medium mt-1.5">15 Weekly Tests (Starts May 30, 2026)</p>
-                            </div>
-                            <div className={`w-11 h-11 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${activeSeriesTab === 'series2' ? 'bg-[#1860FF] text-white shadow-lg shadow-blue-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400'}`}>
-                                 <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeSeriesTab === 'series2' ? 'rotate-90' : ''}`} />
-                            </div>
+                            Series - II
                         </button>
                     </div>
 
