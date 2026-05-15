@@ -70,7 +70,7 @@ export const PSGB_FULL_SCHEDULE: PsgbScheduleItem[] = [
     { date: "13-05-2026", day: "Wednesday", week: "Week 7",  paper: "Paper I", topic: "Estt & Admin", subTopic: "Postal Manual Vol II Ch VI, VIII, IX, XII", duration: "1 Day" },
     { date: "14-05-2026", day: "Thursday",  week: "Week 7",  paper: "Paper I", topic: "Estt & Admin", subTopic: "Schedule of Financial Powers", duration: "1 Day" },
     { date: "15-05-2026", day: "Friday",    week: "Week 7",  paper: "Paper I", topic: "Estt & Admin", subTopic: "Instructions on Estt. & Admin", duration: "1 Day" },
-    { date: "16-05-2026", day: "Saturday",  week: "Week 7",  paper: "Paper I", topic: "Estt & Admin", subTopic: "Brochure on Reservation & Compassionate Appt.", duration: "1 Day" },
+    { date: "16-05-2026", day: "Saturday",  week: "Week 7",  paper: "Paper I", topic: "REVISION", subTopic: "Revision of Week 7 Topics", duration: "1 Day" },
     { date: "17-05-2026", day: "Sunday",    week: "Week 7",  paper: "Revision", topic: "REVISION", subTopic: "Weekly Revision & Mock Test 7", duration: "-" },
 
     // ===== WEEK 8 =====
@@ -176,7 +176,7 @@ export const PSGB_FLEXIBLE_TOPICS: PsgbFlexibleTopic[] = [
     { id: "psgb-p1-26", paper: "Paper I", category: "Estt & Admin", title: "Postal Manual Vol II Ch VI, VIII, IX, XII", daysAllotted: 1 },
     { id: "psgb-p1-27", paper: "Paper I", category: "Estt & Admin", title: "Schedule of Financial Powers", daysAllotted: 1 },
     { id: "psgb-p1-28", paper: "Paper I", category: "Estt & Admin", title: "Instructions on Estt. & Admin", daysAllotted: 1 },
-    { id: "psgb-p1-29", paper: "Paper I", category: "Estt & Admin", title: "Brochure on Reservation & Compassionate Appt.", daysAllotted: 1 },
+
     { id: "psgb-p1-30", paper: "Paper I", category: "Estt & Admin", title: "Recruitment Rules for various cadres", daysAllotted: 1 },
     { id: "psgb-p1-31", paper: "Paper I", category: "Estt & Admin", title: "Establishment Norms", daysAllotted: 1 },
 

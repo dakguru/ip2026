@@ -1821,6 +1821,8 @@ function PsgbMockTestPage({
             const isWeek03 = week.week === 3;
             const isWeek04 = week.week === 4;
             const isWeek05 = week.week === 5;
+            const isWeek06 = week.week === 6;
+            const isWeek07 = week.week === 7;
 
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
             const isPublicLive = now >= satDate && now <= sunDate;
@@ -1828,7 +1830,7 @@ function PsgbMockTestPage({
 
             if (isPast) {
                 status = 'completed';
-            } else if (isPublicLive || (isAdmin && (isWeek01 || isWeek02 || isWeek03 || isWeek04 || isWeek05))) {
+            } else if (isPublicLive || (isAdmin && (isWeek01 || isWeek02 || isWeek03 || isWeek04 || isWeek05 || isWeek06 || isWeek07))) {
                 status = 'live';
             }
 

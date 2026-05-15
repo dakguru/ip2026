@@ -39,7 +39,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-35', "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.", 'Paper I', [170, 171, 172, 173, 174]),
   createTopic('psgb-36', "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", 'Paper I', []),
   createTopic('psgb-37', "DoP&T instructions issued from time to time on Establishment and administration.", 'Paper I', []),
-  createTopic('psgb-38', "Brochure on reservation, instructions regarding sports person reservation, compassionate appointment guidelines issued by DoP and DoP&T from time to time.", 'Paper I', []),
+
   createTopic('psgb-39', "Recruitment Rules relating to various cadres in D/o Posts", 'Paper I', []),
   createTopic('psgb-40', "Establishment Norms", 'Paper I', [205]),
   createTopic('psgb-43', "Central Civil Services (Conduct) Rules, 1964", 'Paper II', [54, 55]),

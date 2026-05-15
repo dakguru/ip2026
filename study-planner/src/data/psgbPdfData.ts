@@ -278,13 +278,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "sky",
             "topic": "Reports & Misc"
         },
-        {
-            "title": "Brochure on reservation, instructions regarding sports person reservation, compassionate appointment guidelines issued by DoP and DoP&T from time to time.",
-            "description": "Materials will be uploaded soon.",
-            "color": "indigo",
-            "comingSoon": true,
-            "topic": "Reports & Misc"
-        },
+
         {
             "title": "Recruitment Rules relating to various cadres in D/o Posts",
             "description": "Comprehensive notes covering the Recruitment Rules relating to various cadres in D/o Posts.",

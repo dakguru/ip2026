@@ -81,8 +81,7 @@ export const PSGB_MOCK_SCHEDULE: PsgbMockTestWeek[] = [
             "Welfare Measures (Employees & GDS)",
             "Postal Manual Vol II Ch VI, VIII, IX, XII",
             "Schedule of Financial Powers",
-            "Instructions on Estt. & Admin",
-            "Brochure on Reservation & Compassionate Appt."
+            "Instructions on Estt. & Admin"
         ],
         saturdayDate: "2026-05-16",
         sundayDate: "2026-05-17"
