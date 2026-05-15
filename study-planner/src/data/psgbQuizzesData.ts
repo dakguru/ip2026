@@ -37,7 +37,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-33', "Postal Manual Volume IV.", 'Paper I', [59]),
   createTopic('psgb-34', "Instructions issued by Directorate and DoP&T on maintenance of APAR.", 'Paper I', [177, 178]),
   createTopic('psgb-35', "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.", 'Paper I', [170, 171, 172, 173, 174]),
-  createTopic('psgb-36', "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", 'Paper I', []),
+  createTopic('psgb-36', "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", 'Paper I', [223, 224, 225]),
   createTopic('psgb-37', "DoP&T instructions issued from time to time on Establishment and administration.", 'Paper I', []),
 
   createTopic('psgb-39', "Recruitment Rules relating to various cadres in D/o Posts", 'Paper I', []),

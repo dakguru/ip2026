@@ -24,6 +24,7 @@ import { complaint_grievance_set1 } from './flashcards/complaintGrievanceHandlin
 import { establishment_norms_set1 } from './flashcards/establishmentNorms';
 import { cvc_procurement_set1, cvc_procurement_set2, cvc_procurement_set3, cvc_procurement_set4, cvc_procurement_set5 } from './flashcards/cvcProcurement';
 import { manual_procurement_set1, manual_procurement_set2, manual_procurement_set3, manual_procurement_set4 } from './flashcards/manualProcurementGoods';
+import { welfare_measures_set1, welfare_measures_set2, welfare_measures_set3 } from './flashcards/welfareMeasures';
 
 
 // ----- EXISTING QUESTION DATA -----
@@ -8290,6 +8291,9 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
     { q: "Which of the following Finacle commands are used for account modification in CBS?\n(i) SB — CASBAM  (ii) RD — CRDACM  (iii) SSA/PPF — CPPFAM  (iv) TD/MIS/SCSS/KVP/NSC — CMISAM", o: ["(i) and (ii) only", "(i), (ii) and (iii) only", "(i), (iii) and (iv) only", "All (i), (ii), (iii) and (iv)"], a: 3, e: "All four are correct: SB uses CASBAM, RD uses CRDACM, SSA/PPF uses CPPFAM, and TD/MIS/SCSS/KVP/NSC uses CMISAM." },
     { q: "For Agent Modification or Renewal in CBS, what specific change is made in HDSAMM?", o: ["DSA turnover Frequency is changed from Daily to Monthly", "The license expiry date is modified in the General Tab and Commission Parameter Tab Fixed commission start date is updated", "The Scheme Code is changed to the new scheme", "The Tax Code is updated from TDSAG to TDSRD"], a: 1, e: "For Agent Modification or Renewal using HDSAMM (Function Modify): Go to General Tab > For renewal modify the license expiry date > click on Commission Parameter Tab > Fixed commission start date - Give Next date > submit > OK. Verified with same command." },
   ],
+  223: welfare_measures_set1,
+  224: welfare_measures_set2,
+  225: welfare_measures_set3,
 };
 
 export interface RawQuestion {
@@ -8404,7 +8408,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-25', 'Maintenance of APAR', 'Paper III', [177, 178]),
   createTopic('p3-21', 'Service Discharge Benefit Scheme', 'Paper III', [65]),
   createTopic('p3-26', 'Schedule of Financial Powers', 'Paper III', [170, 171, 172, 173, 174]),
-  createTopic('p3-27', 'Welfare measures for Employees/GDS', 'Paper III'),
+  createTopic('p3-27', 'Welfare measures for Employees/GDS', 'Paper III', [223, 224, 225]),
   createTopic('p3-28', 'P&T FHB Volume I', 'Paper III', [141, 142, 143, 144, 145]),
   createTopic('p3-29', 'Postal FHB Volume II', 'Paper III', [146, 147]),
 
