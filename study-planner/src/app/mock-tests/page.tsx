@@ -569,29 +569,48 @@ export default function MockTestsPage() {
                             </div>
                         )}
 
-                        <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight">
-                            Mock Test Series <br />
+                        <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-2 md:mb-4 leading-tight">
+                            All India Mock Tests <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                {isPsGroupB ? "for PS Group B 2026" : "for LDCE IP 2026"}
+                                {isPsGroupB ? "PS Group B 2026" : "LDCE IP 2026"}
                             </span>
                         </h1>
 
-                        <p className="text-base md:text-xl text-zinc-400 max-w-2xl mx-auto mb-6 md:mb-8 px-2 leading-relaxed">
-                            Compete with aspirants across India. Real-time ranking, detailed analysis, and exam-like environment.
+                        <p className="text-[13px] md:text-xl text-zinc-400 max-w-2xl mx-auto mb-6 md:mb-8 px-2 leading-relaxed">
+                            Compete globally. Real-time ranking.
                         </p>
 
                         <div className="flex justify-center mb-6 w-full animate-in zoom-in duration-500 px-2">
-                            <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-[2px] mb-2 overflow-hidden text-sm font-medium rounded-xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 w-full sm:w-auto">
+                            <Link href="/mock-tests/live" className="group relative inline-flex items-center justify-center p-[2px] overflow-hidden text-sm font-medium rounded-xl hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 w-full sm:w-auto">
                                 <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white transition-all duration-300"></span>
                                 <span className="relative w-full sm:w-auto px-4 py-3 md:px-8 md:py-4 transition-all ease-in duration-75 bg-zinc-900 rounded-[10px] group-hover:bg-opacity-0 flex items-center justify-center gap-2 md:gap-3">
                                     <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3 shrink-0">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-red-500"></span>
                                     </span>
-                                    <span className="text-sm md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 group-hover:text-white truncate">Attempt Free Sample Test</span>
+                                    <span className="text-sm md:text-xl font-bold bg-clip-text text-white truncate">Attempt Live Sample Test</span>
                                     <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-white rotate-180 shrink-0 group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Link>
+                        </div>
+
+                        {/* Feature Badges */}
+                        <div className="flex justify-center gap-2 sm:gap-4 mb-4">
+                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-zinc-900/60 backdrop-blur-sm rounded-xl border border-zinc-800/80 shadow-inner w-28 sm:w-32">
+                                <Users className="w-5 h-5 text-blue-400 mb-1.5" />
+                                <span className="text-[11px] sm:text-xs font-bold text-white">1000+</span>
+                                <span className="text-[9px] sm:text-[10px] text-zinc-500 uppercase tracking-wider">Aspirants</span>
+                            </div>
+                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-zinc-900/60 backdrop-blur-sm rounded-xl border border-zinc-800/80 shadow-inner w-28 sm:w-32">
+                                <Trophy className="w-5 h-5 text-yellow-400 mb-1.5" />
+                                <span className="text-[11px] sm:text-xs font-bold text-white">Rank</span>
+                                <span className="text-[9px] sm:text-[10px] text-zinc-500 uppercase tracking-wider">All India</span>
+                            </div>
+                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-zinc-900/60 backdrop-blur-sm rounded-xl border border-zinc-800/80 shadow-inner w-28 sm:w-32">
+                                <Clock className="w-5 h-5 text-green-400 mb-1.5" />
+                                <span className="text-[11px] sm:text-xs font-bold text-white">Latest</span>
+                                <span className="text-[9px] sm:text-[10px] text-zinc-500 uppercase tracking-wider">Pattern</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -635,45 +654,46 @@ export default function MockTestsPage() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 relative z-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 relative z-20">
                         <button 
                             onClick={() => setActiveSeriesTab('series1')}
-                            className={`p-6 rounded-2xl border-2 transition-all flex items-center justify-between group ${activeSeriesTab === 'series1' ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-md' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-blue-300 dark:hover:border-blue-700'}`}
+                            className={`p-5 sm:p-6 rounded-[24px] border-[1.5px] transition-all duration-300 flex items-center justify-between group ${activeSeriesTab === 'series1' ? 'border-amber-500 bg-gradient-to-br from-blue-50/80 to-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:bg-gradient-to-br dark:from-blue-900/20 dark:to-zinc-900 dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)]' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm hover:border-zinc-300 dark:hover:border-zinc-700 active:scale-[0.98]'}`}
                         >
-                            <div className="text-left">
-                                <h3 className={`text-xl font-black ${activeSeriesTab === 'series1' ? 'text-blue-700 dark:text-blue-400' : 'text-zinc-700 dark:text-zinc-300'}`}>LDCE IP - Mock Test Series - I</h3>
-                                <p className="text-sm text-zinc-500 font-medium mt-1">17 Weekly Tests (Ends May 2026)</p>
+                            <div className="text-left flex-1 pr-4">
+                                <h3 className={`text-lg sm:text-xl font-bold tracking-tight ${activeSeriesTab === 'series1' ? 'text-blue-700 dark:text-blue-400' : 'text-zinc-800 dark:text-zinc-200'}`}>LDCE IP - Mock Test Series - I</h3>
+                                <p className="text-[13px] sm:text-sm text-zinc-500 font-medium mt-1.5">17 Weekly Tests (Ends May 2026)</p>
                             </div>
-                            <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${activeSeriesTab === 'series1' ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 group-hover:bg-blue-100 group-hover:text-blue-500'}`}>
-                                 <ChevronRight className={`w-5 h-5 transition-transform ${activeSeriesTab === 'series1' ? 'rotate-90' : ''}`} />
+                            <div className={`w-11 h-11 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${activeSeriesTab === 'series1' ? 'bg-[#1860FF] text-white shadow-lg shadow-blue-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400'}`}>
+                                 <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeSeriesTab === 'series1' ? 'rotate-90' : ''}`} />
                             </div>
                         </button>
+
                         <button 
                             onClick={() => setActiveSeriesTab('series2')}
-                            className={`p-6 rounded-2xl border-2 transition-all flex items-center justify-between group ${activeSeriesTab === 'series2' ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 shadow-md' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-purple-300 dark:hover:border-purple-700'}`}
+                            className={`p-5 sm:p-6 rounded-[24px] border-[1.5px] transition-all duration-300 flex items-center justify-between group ${activeSeriesTab === 'series2' ? 'border-amber-500 bg-gradient-to-br from-blue-50/80 to-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:bg-gradient-to-br dark:from-purple-900/20 dark:to-zinc-900 dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)]' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm hover:border-zinc-300 dark:hover:border-zinc-700 active:scale-[0.98]'}`}
                         >
-                            <div className="text-left">
-                                <h3 className={`text-xl font-black ${activeSeriesTab === 'series2' ? 'text-purple-700 dark:text-purple-400' : 'text-zinc-700 dark:text-zinc-300'}`}>LDCE IP - Mock Test Series - II</h3>
-                                <p className="text-sm text-zinc-500 font-medium mt-1">15 Weekly Tests (Starts May 30, 2026)</p>
+                            <div className="text-left flex-1 pr-4">
+                                <h3 className={`text-lg sm:text-xl font-bold tracking-tight ${activeSeriesTab === 'series2' ? 'text-zinc-900 dark:text-zinc-100' : 'text-zinc-800 dark:text-zinc-200'}`}>LDCE IP - Mock Test Series - II</h3>
+                                <p className="text-[13px] sm:text-sm text-zinc-500 font-medium mt-1.5">15 Weekly Tests (Starts May 30, 2026)</p>
                             </div>
-                            <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${activeSeriesTab === 'series2' ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 group-hover:bg-purple-100 group-hover:text-purple-500'}`}>
-                                 <ChevronRight className={`w-5 h-5 transition-transform ${activeSeriesTab === 'series2' ? 'rotate-90' : ''}`} />
+                            <div className={`w-11 h-11 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${activeSeriesTab === 'series2' ? 'bg-[#1860FF] text-white shadow-lg shadow-blue-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400'}`}>
+                                 <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeSeriesTab === 'series2' ? 'rotate-90' : ''}`} />
                             </div>
                         </button>
                     </div>
 
                     {currentCompletedMocks.length > 0 && (
-                        <div className="flex justify-center -mt-2 mb-4 relative z-20 w-full px-1">
+                        <div className="flex justify-center -mt-1 mb-6 relative z-20 w-full">
                             <a
                                 href="#previous-tests"
-                                className="group inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-[14px] sm:rounded-full shadow border border-zinc-200 dark:border-zinc-700 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all active:scale-95 text-[11px] sm:text-sm font-bold w-full sm:w-auto overflow-hidden"
+                                className="group inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 bg-white dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 rounded-[20px] sm:rounded-full shadow-sm border border-zinc-200 dark:border-zinc-800 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all active:scale-[0.98] text-[12px] sm:text-sm font-bold w-full sm:w-auto"
                             >
-                                <span className="flex h-2 w-2 relative shrink-0">
+                                <span className="flex h-2.5 w-2.5 relative shrink-0">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1860FF]"></span>
                                 </span>
-                                <span className="truncate">Looking for Previous Mock Tests? Click Here</span>
-                                <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 rotate-[270deg] shrink-0 group-hover:translate-y-1 transition-transform" />
+                                <span>Looking for Previous Mock Tests? Click Here</span>
+                                <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 rotate-[270deg] shrink-0 text-zinc-400 group-hover:text-blue-500 group-hover:translate-y-1 transition-all" />
                             </a>
                         </div>
                     )}
@@ -705,28 +725,28 @@ export default function MockTestsPage() {
 
 
                     {/* Revamped Schedule Section */}
-                    <div className="relative group">
-                        {/* Animated Gradient Border Effect */}
-                        <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-[2rem] opacity-30 blur-md group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    <div className="relative group mt-2">
+                        {/* Soft Gradient Shadow for Complete Schedule */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 rounded-[32px] opacity-40 blur-lg transition duration-1000 group-hover:opacity-60 animate-tilt"></div>
 
-                        <div className="relative bg-white dark:bg-zinc-950 rounded-[1.9rem] p-6 md:p-10 shadow-2xl overflow-hidden ring-1 ring-zinc-900/5 dark:ring-white/10">
+                        <div className="relative bg-white/95 backdrop-blur-xl dark:bg-zinc-950/95 rounded-[28px] p-6 sm:p-8 md:p-10 shadow-sm overflow-hidden border border-zinc-100 dark:border-zinc-800">
 
-                            {/* Decorative Background Blobs */}
-                            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
-                            <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+                            {/* Decorative Background Soft Blobs */}
+                            <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-purple-200/40 dark:bg-purple-900/20 rounded-full blur-3xl"></div>
+                            <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-pink-200/40 dark:bg-pink-900/20 rounded-full blur-3xl"></div>
 
                             <div className="relative z-10">
                                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-                                    <div>
-                                        <h2 className="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-zinc-800 to-zinc-600 dark:from-white dark:to-zinc-400 flex items-center gap-3">
-                                            <Calendar className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                                    <div className="text-left">
+                                        <h2 className="text-[22px] sm:text-3xl font-black text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
+                                            <Calendar className="w-7 h-7 sm:w-8 sm:h-8 text-purple-600 dark:text-purple-400" />
                                             Complete Schedule
                                         </h2>
-                                        <p className="mt-2 text-zinc-500 dark:text-zinc-400 font-medium">
+                                        <p className="mt-2 text-sm sm:text-base text-zinc-500 dark:text-zinc-400 font-medium pl-10">
                                             Your roadmap to success. Stay consistent and track your progress.
                                         </p>
                                     </div>
-                                    <div className="flex items-center gap-2 px-4 py-2 bg-zinc-100 dark:bg-zinc-800/80 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">
+                                    <div className="hidden md:flex items-center gap-2 px-4 py-2 bg-zinc-100 dark:bg-zinc-800/80 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">
                                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                                         <span className="font-bold text-zinc-700 dark:text-zinc-300 text-sm">
                                             {currentUpcomingMocks.length} Upcoming Tests
