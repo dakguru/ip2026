@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight, History } from "lucide-react";
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
+import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
 import { getDisplayMembership } from "@/lib/membership-utils";
 import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval, endOfDay } from "date-fns";
 import { useMemo, useState, useEffect } from "react";
@@ -47,6 +48,7 @@ export default function MockTestsPage() {
     const [userName, setUserName] = useState<string>("Aspirant");
     const [role, setRole] = useState<string>("user");
     const [processingId, setProcessingId] = useState<string | null>(null);
+    const [activeSeriesTab, setActiveSeriesTab] = useState<'series1' | 'series2'>('series2');
 
     // Admin Enrollment View State
     const [enrollmentModalOpen, setEnrollmentModalOpen] = useState(false);
@@ -214,9 +216,47 @@ export default function MockTestsPage() {
         return mocks;
     }, [role]);
 
+    const seriesIIMockTests = useMemo(() => {
+        return SERIES_II_MOCK_SCHEDULE.map(test => {
+            const startDate = new Date(test.startDate + "T00:00:00+05:30");
+            const endDate = new Date(test.endDate + "T23:59:59+05:30");
+            
+            let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
+            const now = new Date();
+
+            if (now > endDate) {
+                status = 'completed';
+            } else if (now >= startDate) {
+                status = 'live';
+            } else {
+                status = 'upcoming';
+            }
+
+            return {
+                id: test.id,
+                title: test.title,
+                topics: test.topics,
+                startDate,
+                endDate,
+                status,
+                questionCount: test.questionCount,
+                marks: test.marks,
+                duration: test.duration,
+            } as MockTest;
+        });
+    }, [role]);
+
     const activeMocks = mockTests.filter(m => m.status === 'live');
     const upcomingMocks = mockTests.filter(m => m.status === 'upcoming');
     const completedMocks = mockTests.filter(m => m.status === 'completed').reverse();
+
+    const activeMocksSeriesII = seriesIIMockTests.filter(m => m.status === 'live');
+    const upcomingMocksSeriesII = seriesIIMockTests.filter(m => m.status === 'upcoming');
+    const completedMocksSeriesII = seriesIIMockTests.filter(m => m.status === 'completed').reverse();
+
+    const currentActiveMocks = activeSeriesTab === 'series1' ? activeMocks : activeMocksSeriesII;
+    const currentUpcomingMocks = activeSeriesTab === 'series1' ? upcomingMocks : upcomingMocksSeriesII;
+    const currentCompletedMocks = activeSeriesTab === 'series1' ? completedMocks : completedMocksSeriesII;
 
     // Dialog State
     const [selectedMock, setSelectedMock] = useState<MockTest | null>(null);
@@ -530,7 +570,7 @@ export default function MockTestsPage() {
                         )}
 
                         <h1 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight mb-4 md:mb-6 leading-tight">
-                            All India Mock Tests <br />
+                            Mock Test Series <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                                 {isPsGroupB ? "for PS Group B 2026" : "for LDCE IP 2026"}
                             </span>
@@ -595,7 +635,34 @@ export default function MockTestsPage() {
                         </div>
                     </div>
 
-                    {completedMocks.length > 0 && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 relative z-20">
+                        <button 
+                            onClick={() => setActiveSeriesTab('series1')}
+                            className={`p-6 rounded-2xl border-2 transition-all flex items-center justify-between group ${activeSeriesTab === 'series1' ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-md' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-blue-300 dark:hover:border-blue-700'}`}
+                        >
+                            <div className="text-left">
+                                <h3 className={`text-xl font-black ${activeSeriesTab === 'series1' ? 'text-blue-700 dark:text-blue-400' : 'text-zinc-700 dark:text-zinc-300'}`}>LDCE IP - Mock Test Series - I</h3>
+                                <p className="text-sm text-zinc-500 font-medium mt-1">17 Weekly Tests (Ends May 2026)</p>
+                            </div>
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${activeSeriesTab === 'series1' ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 group-hover:bg-blue-100 group-hover:text-blue-500'}`}>
+                                 <ChevronRight className={`w-5 h-5 transition-transform ${activeSeriesTab === 'series1' ? 'rotate-90' : ''}`} />
+                            </div>
+                        </button>
+                        <button 
+                            onClick={() => setActiveSeriesTab('series2')}
+                            className={`p-6 rounded-2xl border-2 transition-all flex items-center justify-between group ${activeSeriesTab === 'series2' ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 shadow-md' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-purple-300 dark:hover:border-purple-700'}`}
+                        >
+                            <div className="text-left">
+                                <h3 className={`text-xl font-black ${activeSeriesTab === 'series2' ? 'text-purple-700 dark:text-purple-400' : 'text-zinc-700 dark:text-zinc-300'}`}>LDCE IP - Mock Test Series - II</h3>
+                                <p className="text-sm text-zinc-500 font-medium mt-1">15 Weekly Tests (Starts May 30, 2026)</p>
+                            </div>
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${activeSeriesTab === 'series2' ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 group-hover:bg-purple-100 group-hover:text-purple-500'}`}>
+                                 <ChevronRight className={`w-5 h-5 transition-transform ${activeSeriesTab === 'series2' ? 'rotate-90' : ''}`} />
+                            </div>
+                        </button>
+                    </div>
+
+                    {currentCompletedMocks.length > 0 && (
                         <div className="flex justify-center -mt-2 mb-4 relative z-20 w-full px-1">
                             <a
                                 href="#previous-tests"
@@ -611,9 +678,9 @@ export default function MockTestsPage() {
                         </div>
                     )}
 
-                    {activeMocks.length > 0 && (
+                    {currentActiveMocks.length > 0 && (
                         <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                            {activeMocks.map(mock => (
+                            {currentActiveMocks.map(mock => (
                                 <MockTestCard
                                     key={mock.id}
                                     mock={mock}
@@ -662,13 +729,13 @@ export default function MockTestsPage() {
                                     <div className="flex items-center gap-2 px-4 py-2 bg-zinc-100 dark:bg-zinc-800/80 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">
                                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                                         <span className="font-bold text-zinc-700 dark:text-zinc-300 text-sm">
-                                            {upcomingMocks.length} Upcoming Tests
+                                            {currentUpcomingMocks.length} Upcoming Tests
                                         </span>
                                     </div>
                                 </div>
 
                                 <div className="grid gap-5 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                                    {upcomingMocks.map(mock => (
+                                    {currentUpcomingMocks.map(mock => (
                                         <MockTestCard
                                             key={mock.id}
                                             mock={mock}
@@ -688,14 +755,14 @@ export default function MockTestsPage() {
                         </div>
                     </div>
 
-                    {completedMocks.length > 0 && (
+                    {currentCompletedMocks.length > 0 && (
                         <div id="previous-tests" className="opacity-100 mb-12 scroll-mt-24">
                             <h2 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 px-4 md:px-8 flex items-center gap-3">
                                 <History className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
                                 Previous Tests
                             </h2>
                             <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-8">
-                                {completedMocks.map(mock => (
+                                {currentCompletedMocks.map(mock => (
                                     <MockTestCard
                                         key={mock.id}
                                         mock={mock}

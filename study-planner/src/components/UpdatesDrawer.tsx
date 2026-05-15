@@ -16,6 +16,38 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "15.05.2026",
+        items: [
+            {
+                title: "🎯 LDCE IP Mock Test Series - II Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We are excited to announce the full schedule integration for the <strong>LDCE IP Mock Test Series - II</strong>!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-purple-50/50 dark:bg-purple-900/10 p-3 rounded-xl border border-purple-100 dark:border-purple-800/50">
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-purple-500 mt-0.5">🗓️</span>
+                                        <span><strong>15 Weekly Tests:</strong> A comprehensive new schedule starting from May 30, 2026.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-purple-500 mt-0.5">📚</span>
+                                        <span><strong>Categorized View:</strong> Seamlessly switch between Series I and Series II mock tests directly from the dashboard.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-purple-600 dark:text-purple-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head over to the Mock Tests section to view the upcoming schedule!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "10.05.2026",
         items: [
             {
