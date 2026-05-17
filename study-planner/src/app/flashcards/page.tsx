@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useCourse } from "@/contexts/CourseContext";
+import PremiumLoader from "@/components/PremiumLoader";
 import { pmlaFlashcards } from "./pmla_data";
 import { poGuide1Flashcards } from "./po_guide1_data";
 import {
@@ -131,7 +132,7 @@ const deckData: Record<string, UnifiedFlashcard[]> = {
 
 export default function FlashcardsPage() {
     return (
-        <React.Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-zinc-950"><Loader2 className="w-8 h-8 animate-spin text-blue-600" /></div>}>
+        <React.Suspense fallback={<PremiumLoader message="Loading flashcards..." />}>
             <FlashcardsContent />
         </React.Suspense>
     );

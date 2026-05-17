@@ -4,6 +4,7 @@ import { useState, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Lock, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import PremiumLoader from "@/components/PremiumLoader";
 
 function ResetPasswordForm() {
     const router = useRouter();
@@ -158,7 +159,7 @@ function ResetPasswordForm() {
 
 export default function ResetPasswordPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Loader2 className="w-8 h-8 animate-spin text-blue-600" /></div>}>
+        <Suspense fallback={<PremiumLoader />}>
             <ResetPasswordForm />
         </Suspense>
     );

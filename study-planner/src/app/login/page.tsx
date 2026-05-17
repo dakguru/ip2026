@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useCourse } from "@/contexts/CourseContext";
 import Turnstile from "react-turnstile";
+import PremiumLoader from "@/components/PremiumLoader";
 
 /* ─────────────────────────────────────────
    Global styles
@@ -453,11 +454,7 @@ function AuthForm() {
 
 export default function AuthPage() {
     return (
-        <Suspense fallback={
-            <div className="min-h-screen flex items-center justify-center bg-amber-50">
-                <Loader2 className="w-8 h-8 animate-spin text-orange-500" />
-            </div>
-        }>
+        <Suspense fallback={<PremiumLoader />}>
             <AuthForm />
         </Suspense>
     );

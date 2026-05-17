@@ -5,6 +5,7 @@ import { pdfjs } from 'react-pdf';
 import { Loader2, AlertCircle, BookOpen, Quote, List, Settings, Type, X, Palette, Check, FileText, RefreshCw } from 'lucide-react';
 import { Capacitor } from '@capacitor/core';
 import { motion, AnimatePresence } from 'framer-motion';
+import PremiumLoader from '@/components/PremiumLoader';
 
 // Helper: yield to main thread to prevent UI hang on mobile
 const yieldToMain = () => new Promise<void>(resolve => {
@@ -551,12 +552,12 @@ export default function LiquidReader({ url, onLoadComplete, onFallbackToPdf }: L
 
     if (loading) {
         return (
-            <div className="flex flex-col items-center justify-center p-12 space-y-6 min-h-[60vh] bg-white dark:bg-zinc-950">
-                <Loader2 className="w-12 h-12 animate-spin text-blue-600" />
-                <div className="text-center">
-                    <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200">Optimizing Reading Experience</h3>
-                    <p className="text-slate-500 text-sm mt-1">Reflowing text, fixing splits, and applying academic styling...</p>
-                    <div className="mt-4 text-xs font-mono text-blue-600">{progress}%</div>
+            <div className="flex flex-col items-center justify-center p-12 space-y-4 min-h-[60vh] bg-white dark:bg-zinc-950">
+                <PremiumLoader fullPage={false} size="lg" />
+                <div className="text-center mt-2">
+                    <h3 className="text-sm font-bold text-slate-700 dark:text-slate-300">Optimizing Reading Experience</h3>
+                    <p className="text-zinc-400 text-xs mt-1">Reflowing text and applying styling...</p>
+                    <div className="mt-3 text-[10px] font-bold text-blue-500 tracking-wider">{progress}%</div>
                 </div>
             </div>
         );

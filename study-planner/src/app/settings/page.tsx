@@ -12,6 +12,7 @@ import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useBetaAccess } from "@/hooks/useBetaAccess";
 import { useCourse } from "@/contexts/CourseContext";
 import { getDisplayMembership } from "@/lib/membership-utils";
+import PremiumLoader from "@/components/PremiumLoader";
 
 const DESIGNATION_OPTIONS = [
     "Assistant Superintendent of Posts (ASP)",
@@ -249,9 +250,7 @@ export default function SettingsPage() {
 
     if (!initialData) {
         return (
-            <div className="min-h-screen flex items-center justify-center">
-                <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-            </div>
+            <PremiumLoader message="Loading profile..." />
         );
     }
 

@@ -15,6 +15,7 @@ import AppScreenWrapper from "@/components/AppScreenWrapper";
 import HomeHeader from "@/components/HomeHeader";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { motion } from "framer-motion";
+import PremiumLoader from "@/components/PremiumLoader";
 
 export default function MembershipPage() {
     const router = useRouter();
@@ -54,9 +55,7 @@ export default function MembershipPage() {
 
     if (isLoading) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-950">
-                <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-            </div>
+            <PremiumLoader message="Loading membership..." />
         );
     }
 

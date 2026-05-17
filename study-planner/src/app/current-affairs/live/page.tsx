@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import AppScreenWrapper from "@/components/AppScreenWrapper";
 import HomeHeader from "@/components/HomeHeader";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
+import PremiumLoader from "@/components/PremiumLoader";
 
 // --- Types ---
 interface NewsItem {
@@ -53,9 +54,9 @@ function NewsList({ type }: { type: "recent" | "international" | "sports" }) {
     useEffect(() => { fetchData(); }, [type]);
 
     if (loading) return (
-        <div className="flex flex-col items-center justify-center py-20 gap-4">
-            <Loader2 className="animate-spin text-blue-500 w-10 h-10" />
-            <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest">Fetching Latest Updates...</p>
+        <div className="flex flex-col items-center justify-center py-16 gap-3">
+            <PremiumLoader fullPage={false} size="md" />
+            <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mt-2">Fetching Latest Updates...</p>
         </div>
     );
 
@@ -139,7 +140,7 @@ function HistorySection() {
 
     useEffect(() => { fetchData(); }, []);
 
-    if (loading) return <div className="flex justify-center p-20"><Loader2 className="animate-spin text-zinc-400 w-8 h-8" /></div>;
+    if (loading) return <div className="flex justify-center p-16"><PremiumLoader fullPage={false} size="md" /></div>;
     if (error) return <ErrorDisplay message={error} retry={fetchData} />;
 
     return (
@@ -413,7 +414,7 @@ function NewsListMobile({ type }: { type: "recent" | "international" | "sports" 
 
     if (loading) return (
         <div className="flex flex-col items-center justify-center py-10 gap-2">
-            <Loader2 className="animate-spin text-blue-500 w-6 h-6" />
+            <PremiumLoader fullPage={false} size="sm" />
         </div>
     );
 

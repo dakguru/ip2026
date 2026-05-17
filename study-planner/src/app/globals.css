@@ -289,3 +289,24 @@ textarea {
   background: var(--surface);
   border-color: var(--outline);
 }
+
+/* ── Premium Logo Loader ── */
+@keyframes loader-orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes loader-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.92);
+    opacity: 0.8;
+  }
+}
