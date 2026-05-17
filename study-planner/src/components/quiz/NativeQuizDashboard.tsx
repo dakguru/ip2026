@@ -82,29 +82,24 @@ export default function NativeQuizDashboard({
                 <AppScreenWrapper hideStatusBarPadding={true}>
                     <div className="bg-slate-50 dark:bg-zinc-950 h-full flex flex-col font-sans text-slate-800 dark:text-zinc-200">
                         {/* Immersive Hero Bar (Fixed) */}
-                        <div className={`shrink-0 relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-8 shadow-md
-                            ${isPS ? 'bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 border-b border-teal-700/50' : 'bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 border-b border-purple-700/50'}
+                        <div className={`shrink-0 relative w-full overflow-hidden transition-all duration-500 pt-[max(12px,calc(env(safe-area-inset-top,0px)+6px))] pb-3 shadow-md border-b
+                            ${isPS ? 'bg-gradient-to-r from-teal-950 to-cyan-950 border-teal-900/50 text-white' : 'bg-gradient-to-r from-indigo-950 to-purple-950 border-purple-900/50 text-white'}
                         `}>
                             {/* Glow Effects */}
-                            <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none mix-blend-screen">
-                                <div className={`absolute -top-12 -right-12 w-64 h-64 blur-[80px] rounded-full ${isPS ? 'bg-cyan-500/40' : 'bg-pink-500/40'}`}></div>
-                                <div className={`absolute bottom-0 -left-12 w-48 h-48 blur-[60px] rounded-full ${isPS ? 'bg-emerald-500/40' : 'bg-blue-500/40'}`}></div>
-                                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdi0xSDB2MXptMCAyMGg0MHYtMUgwdjF6TTEwIDB2NDBoLTFWMGgxeptMTAgMHY0MGgtMVYwaDF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+                            <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none mix-blend-screen">
+                                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdi0xSDB2MXptMCAyMGg0MHYtMUgwdjF6TTEwIDB2NDBoLTFWMGgxeptMTAgMHY0MGgtMVYwaDF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')]"></div>
                             </div>
                             
-                            <div className="max-w-4xl mx-auto px-6 relative z-10 flex flex-col gap-2 mt-2">
-                                <button onClick={() => setShowTopics(false)} className="flex items-center gap-2 max-w-fit px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md transition-colors text-white text-xs font-semibold mb-2 shadow-sm border border-white/10">
-                                    <ArrowLeft className="w-4 h-4 text-white" /> Back to Practice
+                            <div className="max-w-4xl mx-auto px-4 relative z-10 flex items-center gap-2.5">
+                                <button onClick={() => setShowTopics(false)} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 active:bg-white/20 transition-colors border border-white/10 shrink-0">
+                                    <ArrowLeft className="w-4 h-4 text-white" />
                                 </button>
-                                
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white shadow-lg shadow-black/10">
-                                        <BrainCircuit className="w-5 h-5 text-white" />
-                                    </div>
-                                    <div>
-                                        <h1 className="text-xl md:text-3xl font-extrabold text-white leading-tight drop-shadow-sm">Topic-wise Quiz</h1>
-                                        <p className="text-white/80 text-[10px] font-medium uppercase tracking-widest mt-0.5 drop-shadow">Select a topic to start</p>
-                                    </div>
+                                <div>
+                                    <h1 className="text-lg font-black tracking-tight leading-none flex items-center gap-1.5 animate-in fade-in slide-in-from-left-4 duration-300">
+                                        Topic Quizzes
+                                        <span className={`text-[9px] font-extrabold px-1.5 py-0.5 rounded ${isPS ? 'bg-teal-500/20 text-teal-300 border border-teal-500/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'}`}>STUDY MODE</span>
+                                    </h1>
+                                    <p className="text-[10px] text-white/60 font-medium mt-0.5">Select a topic to start practice</p>
                                 </div>
                             </div>
                         </div>
@@ -186,32 +181,27 @@ export default function NativeQuizDashboard({
         <AppScreenWrapper hideStatusBarPadding={true}>
             <div className="bg-slate-50 dark:bg-zinc-950 h-full flex flex-col font-sans text-slate-800 dark:text-zinc-200">
                 {/* Immersive Hero Bar (Fixed) */}
-                <div className={`shrink-0 relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-8 shadow-md
-                    ${isPS ? 'bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 border-b border-teal-700/50' : 'bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 border-b border-purple-700/50'}
+                <div className={`shrink-0 relative w-full overflow-hidden transition-all duration-500 pt-[max(12px,calc(env(safe-area-inset-top,0px)+6px))] pb-3 shadow-md border-b
+                    ${isPS ? 'bg-gradient-to-r from-teal-950 to-cyan-950 border-teal-900/50 text-white' : 'bg-gradient-to-r from-indigo-950 to-purple-950 border-purple-900/50 text-white'}
                 `}>
                     {/* Glow Effects */}
-                    <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none mix-blend-screen">
-                        <div className={`absolute -top-12 -right-12 w-64 h-64 blur-[80px] rounded-full ${isPS ? 'bg-cyan-500/50' : 'bg-pink-500/50'}`}></div>
-                        <div className={`absolute bottom-0 -left-12 w-48 h-48 blur-[60px] rounded-full ${isPS ? 'bg-emerald-500/50' : 'bg-blue-500/50'}`}></div>
-                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdi0xSDB2MXptMCAyMGg0MHYtMUgwdjF6TTEwIDB2NDBoLTFWMGgxeptMTAgMHY0MGgtMVYwaDF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+                    <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none mix-blend-screen">
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwdi0xSDB2MXptMCAyMGg0MHYtMUgwdjF6TTEwIDB2NDBoLTFWMGgxeptMTAgMHY0MGgtMVYwaDF6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=')]"></div>
                     </div>
                     
-                    <div className="max-w-4xl mx-auto px-6 relative z-10">
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-3 mt-4">
-                                <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white shadow-xl shadow-black/10">
-                                    <Trophy className="w-6 h-6 text-white" />
-                                </div>
-                                <div className="flex flex-col gap-1">
-                                    <span className={`text-[10px] md:text-xs font-black uppercase tracking-widest px-2 py-0.5 rounded shadow-[0_2px_10px_rgba(0,0,0,0.1)] inline-block border border-white/20 w-max
-                                        ${isPS ? 'bg-teal-500/30 text-teal-100' : 'bg-purple-500/30 text-purple-100'}
-                                    `}>
-                                        {isPS ? 'PS Gr B Course' : 'LDCE IP Course'}
+                    <div className="max-w-4xl mx-auto px-4 relative z-10 flex items-center justify-between">
+                        <div className="flex items-center gap-2.5">
+                            <Link href="/" className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 active:bg-white/20 transition-colors border border-white/10 shrink-0">
+                                <ArrowLeft className="w-4 h-4 text-white" />
+                            </Link>
+                            <div>
+                                <h1 className="text-lg font-black tracking-tight leading-none flex items-center gap-1.5 animate-in fade-in slide-in-from-left-4 duration-300">
+                                    Practice Zone
+                                    <span className={`text-[9px] font-extrabold px-1.5 py-0.5 rounded ${isPS ? 'bg-teal-500/20 text-teal-300 border border-teal-500/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'}`}>
+                                        {isPS ? 'PS Gr B' : 'LDCE IP'}
                                     </span>
-                                    <h1 className="text-2xl md:text-3xl font-extrabold text-white leading-tight drop-shadow-sm">
-                                        Practice Zone
-                                    </h1>
-                                </div>
+                                </h1>
+                                <p className="text-[10px] text-white/60 font-medium mt-0.5">Master Postal Syllabus via Active Recall</p>
                             </div>
                         </div>
                     </div>

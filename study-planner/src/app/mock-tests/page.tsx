@@ -473,86 +473,28 @@ export default function MockTestsPage() {
 
             {/* Hero Section */}
             {isMobileApp ? (
-                // Mobile App — Native Android Material 3 Inspired (Sticky)
-                <div className="sticky top-0 z-10 shrink-0 relative w-full bg-white dark:bg-zinc-950">
-                    {/* M3 Top App Bar */}
-                    <div className="px-4 pt-3 pb-2 flex items-center gap-3">
-                        <Link href="/" className="w-10 h-10 rounded-full flex items-center justify-center active:bg-zinc-100 dark:active:bg-zinc-800 transition-colors -ml-1">
-                            <ArrowLeft className="w-5 h-5 text-zinc-800 dark:text-zinc-200" />
+                // Mobile App — Native Android Material 3 Inspired Compact Top App Bar
+                <div className="sticky top-0 z-20 shrink-0 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800/80 shadow-sm">
+                    <div className="px-4 pt-[max(12px,calc(env(safe-area-inset-top,0px)+6px))] pb-3 flex items-center gap-3">
+                        <Link href="/" className="w-8 h-8 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 transition-colors -ml-1">
+                            <ArrowLeft className="w-4 h-4 text-zinc-800 dark:text-zinc-200" />
                         </Link>
                         <div className="flex-1">
-                            <h1 className="text-[18px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight tracking-tight">Mock Test Series</h1>
-                            <p className="text-[12px] text-indigo-600 dark:text-indigo-400 font-semibold">LDCE IP 2026</p>
+                            <h1 className="text-[17px] font-black text-zinc-900 dark:text-zinc-100 leading-none tracking-tight flex items-center gap-1.5 animate-in fade-in slide-in-from-left-4 duration-300">
+                                Mock Tests
+                                <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">LDCE IP</span>
+                            </h1>
+                            <p className="text-[10px] text-zinc-500 dark:text-zinc-400 font-medium mt-0.5">All India Test Series &amp; Rankings</p>
                         </div>
                         {activeMocks.length > 0 && (
-                            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-50 dark:bg-red-900/20">
+                            <Link href="/mock-tests/live" className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-red-50 dark:bg-red-950/20 border border-red-100 dark:border-red-950/30 active:scale-95 transition-transform">
                                 <span className="relative flex h-1.5 w-1.5">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
                                 </span>
-                                <span className="text-red-600 dark:text-red-400 font-bold text-[10px] uppercase">Live</span>
-                            </div>
+                                <span className="text-red-600 dark:text-red-400 font-bold text-[9px] uppercase tracking-wider">Live Test</span>
+                            </Link>
                         )}
-                    </div>
-
-                    {/* M3 Surface Card — Hero Content */}
-                    <div className="mx-4 mt-1 mb-4 rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 p-[1px]">
-                        <div className="rounded-[23px] bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 px-5 py-6 relative overflow-hidden">
-                            {/* Subtle pattern */}
-                            <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '20px 20px' }}></div>
-                            
-                            <div className="relative z-10 flex flex-col items-center text-center">
-                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 mb-4">
-                                    <Trophy className="w-3 h-3 text-amber-300" />
-                                    <span className="text-[10px] font-bold text-white/90 tracking-wider uppercase">All India Ranking</span>
-                                </div>
-
-                                <p className="text-[13px] text-indigo-100 max-w-[240px] mb-5 leading-relaxed">
-                                    Compete nationally · Real-time ranking · Detailed analytics
-                                </p>
-
-                                {/* CTA — M3 Filled Button */}
-                                <Link href="/mock-tests/live" className="w-full max-w-[260px] flex items-center justify-center gap-2.5 py-3 px-5 bg-white rounded-2xl active:scale-[0.97] transition-transform shadow-lg shadow-black/10">
-                                    <span className="relative flex h-2 w-2 shrink-0">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                                    </span>
-                                    <span className="font-bold text-indigo-700 text-[13px]">Attempt Live Sample Test</span>
-                                    <ArrowLeft className="w-4 h-4 text-indigo-700 rotate-180" />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* M3 Stat Chips Row */}
-                    <div className="flex gap-2 px-4 pb-4 overflow-x-auto no-scrollbar">
-                        <div className="flex items-center gap-2 px-3.5 py-2.5 bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl border border-indigo-100 dark:border-indigo-800/30 min-w-0 flex-1">
-                            <div className="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-800/40 flex items-center justify-center shrink-0">
-                                <Users className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-                            </div>
-                            <div className="min-w-0">
-                                <span className="text-[12px] font-extrabold text-indigo-900 dark:text-indigo-100 block leading-tight">1000+</span>
-                                <span className="text-[10px] text-indigo-600/70 dark:text-indigo-400/70 font-medium">Aspirants</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 px-3.5 py-2.5 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-100 dark:border-amber-800/30 min-w-0 flex-1">
-                            <div className="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-800/40 flex items-center justify-center shrink-0">
-                                <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                            </div>
-                            <div className="min-w-0">
-                                <span className="text-[12px] font-extrabold text-amber-900 dark:text-amber-100 block leading-tight">Rank</span>
-                                <span className="text-[10px] text-amber-600/70 dark:text-amber-400/70 font-medium">All India</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 px-3.5 py-2.5 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border border-emerald-100 dark:border-emerald-800/30 min-w-0 flex-1">
-                            <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-800/40 flex items-center justify-center shrink-0">
-                                <Clock className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                            </div>
-                            <div className="min-w-0">
-                                <span className="text-[12px] font-extrabold text-emerald-900 dark:text-emerald-100 block leading-tight">Latest</span>
-                                <span className="text-[10px] text-emerald-600/70 dark:text-emerald-400/70 font-medium">Pattern</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             ) : (
@@ -2096,60 +2038,26 @@ function PsgbMockTestPage({
 
             {/* ===== HERO ===== */}
             {isMobileApp ? (
-                <div className="sticky top-0 z-10 shrink-0 relative w-full overflow-x-hidden bg-zinc-950 border-b border-zinc-900 pb-8">
-                    <div className="absolute inset-0 opacity-15">
-                        <div className="absolute top-10 right-0 w-40 h-40 bg-violet-600 rounded-full mix-blend-screen filter blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 w-40 h-40 bg-fuchsia-600 rounded-full mix-blend-screen filter blur-3xl"></div>
-                    </div>
-                    <div className="relative z-10 px-5">
-                        <Link href="/" className="inline-flex items-center text-zinc-500 hover:text-zinc-300 mb-4 transition-colors">
-                            <ArrowLeft className="w-5 h-5" />
-                            <span className="ml-1 text-sm font-medium">Back</span>
+                // Mobile App — Native Android Material 3 Inspired Compact Top App Bar
+                <div className="sticky top-0 z-20 shrink-0 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800/80 shadow-sm">
+                    <div className="px-4 pt-[max(12px,calc(env(safe-area-inset-top,0px)+6px))] pb-3 flex items-center gap-3">
+                        <Link href="/" className="w-8 h-8 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 transition-colors -ml-1">
+                            <ArrowLeft className="w-4 h-4 text-zinc-800 dark:text-zinc-200" />
                         </Link>
-                        <div className="flex flex-col items-center text-center">
-                            {activeMocks.length > 0 && (
-                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[10px] mb-4">
-                                    <span className="relative flex h-1.5 w-1.5">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-                                    </span>
-                                    LIVE NOW
-                                </div>
-                            )}
-                            <h1 className="text-3xl font-black text-white leading-tight mb-2">
-                                Mock Test Series
-                                <span className="block text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">
-                                    PS Group B 2026
-                                </span>
+                        <div className="flex-1">
+                            <h1 className="text-[17px] font-black text-zinc-900 dark:text-zinc-100 leading-none tracking-tight flex items-center gap-1.5 animate-in fade-in slide-in-from-left-4 duration-300">
+                                Mock Tests
+                                <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20">PSGB 2026</span>
                             </h1>
-                            <p className="text-sm text-zinc-400 max-w-xs mx-auto mb-5 leading-relaxed">
-                                14-week structured test series. Compete & track your progress.
-                            </p>
-                            <button
-                                onClick={onSwitchToLdceIp}
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-xs font-bold mb-4"
-                            >
-                                <Sparkles className="w-3.5 h-3.5" />
-                                Switch to LDCE IP Mock Tests
-                            </button>
-                            <div className="grid grid-cols-3 gap-2 w-full max-w-[320px] px-2 mb-2">
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
-                                    <Calendar className="w-4 h-4 text-violet-400 mb-1 shrink-0" />
-                                    <span className="text-[10px] font-bold text-white truncate w-full">14 Weeks</span>
-                                    <span className="text-[9px] text-zinc-500 truncate w-full">Schedule</span>
-                                </div>
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
-                                    <Trophy className="w-4 h-4 text-yellow-400 mb-1 shrink-0" />
-                                    <span className="text-[10px] font-bold text-white truncate w-full">Rank</span>
-                                    <span className="text-[9px] text-zinc-500 truncate w-full">All India</span>
-                                </div>
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
-                                    <Clock className="w-4 h-4 text-green-400 mb-1 shrink-0" />
-                                    <span className="text-[10px] font-bold text-white truncate w-full">60 Min</span>
-                                    <span className="text-[9px] text-zinc-500 truncate w-full">Per Test</span>
-                                </div>
-                            </div>
+                            <p className="text-[10px] text-zinc-500 dark:text-zinc-400 font-medium mt-0.5">PS Group B Structured Series</p>
                         </div>
+                        <button
+                            onClick={onSwitchToLdceIp}
+                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-violet-50 dark:bg-violet-900/30 border border-violet-100 dark:border-violet-800/80 text-violet-600 dark:text-violet-400 text-[10px] font-extrabold active:scale-95 transition-transform"
+                        >
+                            <Sparkles className="w-3 h-3" />
+                            Switch
+                        </button>
                     </div>
                 </div>
             ) : (

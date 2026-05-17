@@ -4,7 +4,7 @@ import { useEffect, useState, useMemo } from "react";
 import {
     Search, BookOpen, ChevronRight,
     Calendar, Scale, Mail, Lightbulb,
-    Gavel, Sparkles, TrendingUp, GraduationCap
+    Gavel, Sparkles, TrendingUp, GraduationCap, ArrowLeft
 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -161,56 +161,73 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
 
             <AppScreenWrapper hideStatusBarPadding={true}>
                 {/* Hero */}
-                <div className={`${isMobileApp ? 'sticky top-0 z-20 shadow-md' : 'relative'} shrink-0 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white`}>
-                    <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
-                    <div className="absolute top-0 left-0 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl" />
-                    <div className="absolute bottom-0 right-0 w-60 h-60 bg-violet-500/20 rounded-full blur-3xl" />
-
-                    <div className="relative w-full px-4 md:max-w-7xl md:mx-auto md:px-6 pb-6 md:pb-8 pt-[max(20px,calc(env(safe-area-inset-top,0px)+8px))] md:pt-8">
-                        {/* Wordmark */}
-                        <div className="flex items-center gap-2.5 mb-2 md:mb-4">
-                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
-                                <BookOpen className="w-4 h-4 md:w-5 md:h-5 text-white" />
-                            </div>
-                            <h1 className="text-2xl md:text-4xl font-black tracking-tight leading-none">
-                                <span className="bg-gradient-to-r from-white via-blue-100 to-violet-200 bg-clip-text text-transparent">
+                {isMobileApp ? (
+                    <div className="sticky top-0 z-20 shrink-0 bg-gradient-to-r from-slate-900 via-blue-950 to-violet-950 text-white px-4 pt-[max(12px,calc(env(safe-area-inset-top,0px)+6px))] pb-3 shadow-md border-b border-white/5">
+                        <div className="flex items-center gap-2.5">
+                            <Link href="/" className="w-8 h-8 rounded-full flex items-center justify-center bg-white/5 active:bg-white/10 border border-white/10 transition-colors">
+                                <ArrowLeft className="w-4 h-4 text-white" />
+                            </Link>
+                            <div>
+                                <h1 className="text-lg font-black tracking-tight leading-none flex items-center gap-1.5">
                                     Dak Sutra
-                                </span>
-                            </h1>
-                        </div>
-
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-200 mb-3 md:mb-3 backdrop-blur-sm">
-                            <Sparkles className="w-2.5 h-2.5 md:w-3 md:h-3" />
-                            Postal Laws Decoded for LDCE IP &amp; PS Group B
-                        </div>
-
-                        <h2 className="text-[22px] sm:text-3xl md:text-5xl font-black leading-tight mb-1.5 md:mb-2">
-                            Postal Rules,{" "}
-                            <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
-                                Simplified.
-                            </span>
-                        </h2>
-
-                        <p className="text-blue-200/80 text-[12px] md:text-base leading-relaxed mb-4 md:mb-4 max-w-xs md:max-w-xl">
-                            Official provisions broken down with plain-language explanations, real-life examples, and exam-focused insights.
-                        </p>
-
-                        <div className="flex flex-wrap gap-2 md:gap-4">
-                            <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
-                                <GraduationCap className="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-300" />
-                                <span className="text-[11px] md:text-sm font-bold text-white">{entries.length}+ Rules</span>
-                            </div>
-                            <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
-                                <TrendingUp className="w-3.5 h-3.5 md:w-4 md:h-4 text-violet-300" />
-                                <span className="text-[11px] md:text-sm font-bold text-white">Exam-Focused</span>
-                            </div>
-                            <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
-                                <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-300" />
-                                <span className="text-[11px] md:text-sm font-bold text-white">Guru Explained</span>
+                                    <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">ACTS & RULES</span>
+                                </h1>
+                                <p className="text-[10px] text-blue-200/60 font-medium mt-0.5">Postal Laws Decoded &amp; Simplified</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                ) : (
+                    <div className="relative shrink-0 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white">
+                        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+                        <div className="absolute top-0 left-0 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl" />
+                        <div className="absolute bottom-0 right-0 w-60 h-60 bg-violet-500/20 rounded-full blur-3xl" />
+
+                        <div className="relative w-full px-4 md:max-w-7xl md:mx-auto md:px-6 pb-6 md:pb-8 pt-[max(20px,calc(env(safe-area-inset-top,0px)+8px))] md:pt-8">
+                            {/* Wordmark */}
+                            <div className="flex items-center gap-2.5 mb-2 md:mb-4">
+                                <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                                    <BookOpen className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                                </div>
+                                <h1 className="text-2xl md:text-4xl font-black tracking-tight leading-none">
+                                    <span className="bg-gradient-to-r from-white via-blue-100 to-violet-200 bg-clip-text text-transparent">
+                                        Dak Sutra
+                                    </span>
+                                </h1>
+                            </div>
+
+                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-200 mb-3 md:mb-3 backdrop-blur-sm">
+                                <Sparkles className="w-2.5 h-2.5 md:w-3 md:h-3" />
+                                Postal Laws Decoded for LDCE IP &amp; PS Group B
+                            </div>
+
+                            <h2 className="text-[22px] sm:text-3xl md:text-5xl font-black leading-tight mb-1.5 md:mb-2">
+                                Postal Rules,{" "}
+                                <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+                                    Simplified.
+                                </span>
+                            </h2>
+
+                            <p className="text-blue-200/80 text-[12px] md:text-base leading-relaxed mb-4 md:mb-4 max-w-xs md:max-w-xl">
+                                Official provisions broken down with plain-language explanations, real-life examples, and exam-focused insights.
+                            </p>
+
+                            <div className="flex flex-wrap gap-2 md:gap-4">
+                                <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
+                                    <GraduationCap className="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-300" />
+                                    <span className="text-[11px] md:text-sm font-bold text-white">{entries.length}+ Rules</span>
+                                </div>
+                                <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
+                                    <TrendingUp className="w-3.5 h-3.5 md:w-4 md:h-4 text-violet-300" />
+                                    <span className="text-[11px] md:text-sm font-bold text-white">Exam-Focused</span>
+                                </div>
+                                <div className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 md:px-4 md:py-2.5">
+                                    <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-amber-300" />
+                                    <span className="text-[11px] md:text-sm font-bold text-white">Guru Explained</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 {/* Search + Filter + Cards */}
                 <div className="w-full md:max-w-7xl md:mx-auto px-3 md:px-6 pt-4 md:pt-8 pb-[max(32px,calc(env(safe-area-inset-bottom,0px)+24px))]">

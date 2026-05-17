@@ -50,26 +50,24 @@ export default function NativeFlashcardsHomeV2({
         <div className="h-[100dvh] overflow-hidden flex flex-col bg-[#f8f9fb] dark:bg-[#0a0a0a] text-slate-900 dark:text-white font-sans selection:bg-indigo-500/30 transition-colors duration-300">
 
             {/* 1. HERO HEADER (Fixed) */}
-            <div className="shrink-0 relative pt-[max(2rem,env(safe-area-inset-top))] pb-4 px-6 overflow-hidden">
+            <div className="shrink-0 relative pt-[max(12px,calc(env(safe-area-inset-top)+4px))] pb-2 px-6 overflow-hidden">
                 {/* Background Ambient Gradients */}
                 <div className="absolute top-[-50%] left-[-20%] w-[80%] h-[80%] rounded-full bg-indigo-600/10 blur-[100px] pointer-events-none" />
                 <div className="absolute top-[0%] right-[-20%] w-[60%] h-[60%] rounded-full bg-violet-600/5 blur-[80px] pointer-events-none" />
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="relative z-10"
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="relative z-10 flex items-center justify-between"
                 >
-                    <h1 className="text-3xl font-extrabold tracking-tight mb-1 text-slate-900 dark:text-white">
-                        Flashcards
-                    </h1>
-                    <h2 className="text-sm font-medium text-slate-500 dark:text-zinc-400 mb-2">
-                        Master Postal Laws Through Smart Revision
-                    </h2>
-                    <p className="text-[10px] font-bold text-slate-400 dark:text-zinc-600 uppercase tracking-[0.2em]">
-                        Prepare Faster • Recall Better
-                    </p>
+                    <div>
+                        <h1 className="text-xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+                            Flashcards
+                            <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 border border-indigo-500/20 uppercase tracking-wider">ACTIVE RECALL</span>
+                        </h1>
+                        <p className="text-[10px] text-slate-500 dark:text-zinc-400 font-medium mt-0.5">Master Postal Laws Through Smart Revision</p>
+                    </div>
                 </motion.div>
             </div>
 
