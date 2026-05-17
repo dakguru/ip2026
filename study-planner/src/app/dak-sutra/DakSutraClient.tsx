@@ -161,7 +161,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
 
             <AppScreenWrapper hideStatusBarPadding={true}>
                 {/* Hero */}
-                <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white">
+                <div className="sticky top-0 z-20 shrink-0 relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white shadow-md">
                     <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
                     <div className="absolute top-0 left-0 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl" />
                     <div className="absolute bottom-0 right-0 w-60 h-60 bg-violet-500/20 rounded-full blur-3xl" />

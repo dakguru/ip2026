@@ -190,7 +190,7 @@ function DakSutraDetailClientInner({ id, isLoggedIn, membershipLevel }: DakSutra
                 <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
                 {/* Nav bar */}
-                <div className="relative max-w-4xl mx-auto px-4 pt-2 md:pt-4 pb-0 flex items-center justify-between">
+                <div className="relative max-w-4xl mx-auto px-4 pt-[max(16px,env(safe-area-inset-top,0px))] md:pt-4 pb-0 flex items-center justify-between">
                     <Link
                         href="/dak-sutra"
                         className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-sm font-semibold min-h-[44px] touch-manipulation"
