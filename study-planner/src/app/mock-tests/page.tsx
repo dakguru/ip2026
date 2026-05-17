@@ -473,195 +473,242 @@ export default function MockTestsPage() {
 
             {/* Hero Section */}
             {isMobileApp ? (
-                // Mobile App Optimized Hero (Compact & Beautiful)
-                <div className="relative w-full overflow-x-hidden bg-zinc-950 border-b border-zinc-900 pb-8">
-                    <div className="absolute inset-0 opacity-10">
-                        <div className="absolute top-10 right-0 w-40 h-40 bg-purple-600 rounded-full mix-blend-screen filter blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl"></div>
+                // Mobile App — Native Android Material 3 Inspired
+                <div className="relative w-full bg-white dark:bg-zinc-950">
+                    {/* M3 Top App Bar */}
+                    <div className="px-4 pt-3 pb-2 flex items-center gap-3">
+                        <Link href="/" className="w-10 h-10 rounded-full flex items-center justify-center active:bg-zinc-100 dark:active:bg-zinc-800 transition-colors -ml-1">
+                            <ArrowLeft className="w-5 h-5 text-zinc-800 dark:text-zinc-200" />
+                        </Link>
+                        <div className="flex-1">
+                            <h1 className="text-[18px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight tracking-tight">Mock Test Series</h1>
+                            <p className="text-[12px] text-indigo-600 dark:text-indigo-400 font-semibold">LDCE IP 2026</p>
+                        </div>
+                        {activeMocks.length > 0 && (
+                            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-50 dark:bg-red-900/20">
+                                <span className="relative flex h-1.5 w-1.5">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
+                                </span>
+                                <span className="text-red-600 dark:text-red-400 font-bold text-[10px] uppercase">Live</span>
+                            </div>
+                        )}
                     </div>
 
-                    <div className="relative z-10 px-5">
-                        <Link href="/" className="inline-flex items-center text-zinc-500 hover:text-zinc-300 mb-4 transition-colors">
-                            <ArrowLeft className="w-5 h-5" />
-                            <span className="ml-1 text-sm font-medium">Back</span>
-                        </Link>
-
-                        <div className="flex flex-col items-center text-center">
-                            {/* Live Badge */}
-                            {activeMocks.length > 0 && (
-                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[10px] mb-4">
-                                    <span className="relative flex h-1.5 w-1.5">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-                                    </span>
-                                    LIVE NOW
+                    {/* M3 Surface Card — Hero Content */}
+                    <div className="mx-4 mt-1 mb-4 rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 p-[1px]">
+                        <div className="rounded-[23px] bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 px-5 py-6 relative overflow-hidden">
+                            {/* Subtle pattern */}
+                            <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '20px 20px' }}></div>
+                            
+                            <div className="relative z-10 flex flex-col items-center text-center">
+                                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 mb-4">
+                                    <Trophy className="w-3 h-3 text-amber-300" />
+                                    <span className="text-[10px] font-bold text-white/90 tracking-wider uppercase">All India Ranking</span>
                                 </div>
-                            )}
 
-                            <h1 className="text-3xl font-black text-white leading-tight mb-2">
-                                All India Mock Tests
-                                <span className="block text-2xl mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                    {isPsGroupB ? "PS Group B 2026" : "LDCE IP 2026"}
-                                </span>
-                            </h1>
+                                <p className="text-[13px] text-indigo-100 max-w-[240px] mb-5 leading-relaxed">
+                                    Compete nationally · Real-time ranking · Detailed analytics
+                                </p>
 
-                            <p className="text-sm text-zinc-400 max-w-xs mx-auto mb-6 leading-relaxed">
-                                Compete globally. Real-time ranking.
-                            </p>
-
-                            {/* CTA Button - Enhanced */}
-                            <Link href="/mock-tests/live" className="w-full max-w-[280px] group relative inline-flex items-center justify-center p-[1px] mb-6 overflow-hidden rounded-xl">
-                                <span className="absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-500 opacity-70 group-hover:opacity-100 transition-opacity"></span>
-                                <span className="relative w-full py-3 bg-zinc-900 rounded-[11px] flex items-center justify-center gap-2 group-hover:bg-opacity-0 transition-all">
-                                    <span className="relative flex h-2 w-2">
+                                {/* CTA — M3 Filled Button */}
+                                <Link href="/mock-tests/live" className="w-full max-w-[260px] flex items-center justify-center gap-2.5 py-3 px-5 bg-white rounded-2xl active:scale-[0.97] transition-transform shadow-lg shadow-black/10">
+                                    <span className="relative flex h-2 w-2 shrink-0">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                                     </span>
-                                    <span className="font-bold text-white text-sm">Attempt Live Sample Test</span>
-                                    <ArrowLeft className="w-4 h-4 text-white rotate-180" />
-                                </span>
-                            </Link>
+                                    <span className="font-bold text-indigo-700 text-[13px]">Attempt Live Sample Test</span>
+                                    <ArrowLeft className="w-4 h-4 text-indigo-700 rotate-180" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
 
-                            {/* Stats Grid - Compact */}
-                            <div className="grid grid-cols-3 gap-2 w-full max-w-[320px] px-2 mb-2">
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
-                                    <Users className="w-4 h-4 text-blue-400 mb-1 shrink-0" />
-                                    <span className="text-[10px] font-bold text-white truncate w-full">1000+</span>
-                                    <span className="text-[9px] text-zinc-500 truncate w-full">Aspirants</span>
-                                </div>
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
-                                    <Trophy className="w-4 h-4 text-yellow-400 mb-1 shrink-0" />
-                                    <span className="text-[10px] font-bold text-white truncate w-full">Rank</span>
-                                    <span className="text-[9px] text-zinc-500 truncate w-full">All India</span>
-                                </div>
-                                <div className="flex flex-col items-center justify-center p-2 bg-zinc-900/50 rounded-lg border border-zinc-800 min-w-0">
-                                    <Clock className="w-4 h-4 text-green-400 mb-1 shrink-0" />
-                                    <span className="text-[10px] font-bold text-white truncate w-full">Latest</span>
-                                    <span className="text-[9px] text-zinc-500 truncate w-full">Pattern</span>
-                                </div>
+                    {/* M3 Stat Chips Row */}
+                    <div className="flex gap-2 px-4 pb-4 overflow-x-auto no-scrollbar">
+                        <div className="flex items-center gap-2 px-3.5 py-2.5 bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl border border-indigo-100 dark:border-indigo-800/30 min-w-0 flex-1">
+                            <div className="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-800/40 flex items-center justify-center shrink-0">
+                                <Users className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                            </div>
+                            <div className="min-w-0">
+                                <span className="text-[12px] font-extrabold text-indigo-900 dark:text-indigo-100 block leading-tight">1000+</span>
+                                <span className="text-[10px] text-indigo-600/70 dark:text-indigo-400/70 font-medium">Aspirants</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-2 px-3.5 py-2.5 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-100 dark:border-amber-800/30 min-w-0 flex-1">
+                            <div className="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-800/40 flex items-center justify-center shrink-0">
+                                <Trophy className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                            </div>
+                            <div className="min-w-0">
+                                <span className="text-[12px] font-extrabold text-amber-900 dark:text-amber-100 block leading-tight">Rank</span>
+                                <span className="text-[10px] text-amber-600/70 dark:text-amber-400/70 font-medium">All India</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-2 px-3.5 py-2.5 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border border-emerald-100 dark:border-emerald-800/30 min-w-0 flex-1">
+                            <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-800/40 flex items-center justify-center shrink-0">
+                                <Clock className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                            </div>
+                            <div className="min-w-0">
+                                <span className="text-[12px] font-extrabold text-emerald-900 dark:text-emerald-100 block leading-tight">Latest</span>
+                                <span className="text-[10px] text-emerald-600/70 dark:text-emerald-400/70 font-medium">Pattern</span>
                             </div>
                         </div>
                     </div>
                 </div>
             ) : (
-                // Original Desktop/Web Hero
-                <div className="relative bg-zinc-900 border-b border-zinc-800 overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-                        <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-                        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+                // Desktop/Web — Premium Hero (matching PS Group B style)
+                <div className="relative min-h-[280px] md:min-h-[360px] bg-[#0a0a0f] overflow-hidden isolate">
+                    {/* Animated gradient mesh background */}
+                    <div className="absolute inset-0">
+                        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-indigo-600/30 via-blue-500/20 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }}></div>
+                        <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-tl from-purple-500/25 via-indigo-500/15 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
+                        <div className="absolute top-[30%] right-[20%] w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-transparent rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '4s' }}></div>
                     </div>
 
-                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-14 text-center">
+                    {/* Grid overlay */}
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.015)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+
+                    {/* Floating accent orbs */}
+                    <div className="absolute top-20 left-[10%] w-2 h-2 bg-indigo-400 rounded-full shadow-[0_0_15px_5px_rgba(99,102,241,0.4)] animate-bounce" style={{ animationDuration: '3s' }}></div>
+                    <div className="absolute top-32 right-[15%] w-1.5 h-1.5 bg-blue-400 rounded-full shadow-[0_0_12px_4px_rgba(96,165,250,0.4)] animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
+                    <div className="absolute bottom-24 left-[25%] w-1 h-1 bg-purple-400 rounded-full shadow-[0_0_10px_3px_rgba(192,132,252,0.4)] animate-bounce" style={{ animationDuration: '5s', animationDelay: '2s' }}></div>
+                    <div className="absolute bottom-16 right-[30%] w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_15px_5px_rgba(34,211,238,0.3)] animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
+
+                    {/* Content */}
+                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10 md:pt-8 md:pb-12 text-center">
+                        {/* Back button - glass style */}
                         <div className="flex justify-center w-full mb-4 md:mb-6">
-                            <Link href="/" className="inline-flex items-center text-zinc-400 hover:text-white transition-colors text-sm md:text-base">
-                                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+                            <Link href="/" className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300 text-sm backdrop-blur-sm">
+                                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
+                                <span className="font-medium">Back to Home</span>
                             </Link>
                         </div>
 
+                        {/* Live badge */}
                         {activeMocks.length > 0 && (
-                            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-xs md:text-sm mb-6 animate-pulse">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                                </span>
-                                LIVE NOW
+                            <div className="mb-3">
+                                <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-sm backdrop-blur-sm shadow-[0_0_30px_rgba(239,68,68,0.15)]">
+                                    <span className="relative flex h-2.5 w-2.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                                    </span>
+                                    LIVE NOW
+                                </div>
                             </div>
                         )}
 
-                        <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-2 leading-tight">
-                            All India Mock Tests
-                        </h1>
-                        <h2 className="text-xl md:text-3xl font-bold text-blue-400 mb-4">
-                            {isPsGroupB ? "PS Group B 2026" : "LDCE IP 2026"}
-                        </h2>
+                        {/* Subtitle badge */}
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-500 text-xs font-semibold tracking-widest uppercase mb-3 backdrop-blur-sm">
+                            <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-400 to-blue-400"></span>
+                            All India Weekly Mock Test Series
+                        </div>
 
-                        <p className="text-[13px] md:text-base text-zinc-300 max-w-2xl mx-auto mb-8 px-4 opacity-90">
-                            Compete globally. Real-time ranking.
+                        {/* Title */}
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white tracking-tight mb-2 md:mb-3 leading-[1.05]">
+                            <span className="block">Mock Test Series</span>
+                            <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400" style={{ WebkitBackgroundClip: 'text' }}>
+                                for LDCE IP 2026
+                            </span>
+                        </h1>
+
+                        {/* Description */}
+                        <p className="text-sm md:text-base text-zinc-400/90 max-w-xl mx-auto mb-6 leading-relaxed font-medium">
+                            Compete nationally with real-time ranking and detailed analytics.
                         </p>
 
-                        <div className="flex justify-center mb-8 w-full px-4">
-                            <Link href="/mock-tests/live" className="group relative flex items-center justify-center w-full sm:w-auto px-6 py-4 bg-white rounded-full shadow-[0_4px_14px_0_rgba(255,255,255,0.25)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.23)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
-                                <span className="relative flex h-3 w-3 shrink-0 mr-3">
+                        {/* CTA Button */}
+                        <div className="flex justify-center mb-6">
+                            <Link href="/mock-tests/live" className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-bold text-sm shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
+                                <span className="relative flex h-2.5 w-2.5 shrink-0">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
                                 </span>
-                                <span className="text-base sm:text-lg font-bold text-zinc-900">Attempt Live Sample Test</span>
-                                <ArrowLeft className="w-5 h-5 text-zinc-900 rotate-180 ml-2 group-hover:translate-x-1 transition-transform" />
+                                Attempt Live Sample Test
+                                <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
 
-                        {/* Feature Badges - Material Tonal Style */}
-                        <div className="flex justify-center gap-3 sm:gap-4 mb-2 px-2">
-                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-blue-500/10 rounded-[20px] w-28 sm:w-32 border border-blue-500/20">
-                                <Users className="w-6 h-6 text-blue-300 mb-2" />
-                                <span className="text-xs sm:text-sm font-bold text-blue-100">1000+</span>
-                                <span className="text-[10px] sm:text-xs text-blue-200/70">Aspirants</span>
-                            </div>
-                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-amber-500/10 rounded-[20px] w-28 sm:w-32 border border-amber-500/20">
-                                <Trophy className="w-6 h-6 text-amber-300 mb-2" />
-                                <span className="text-xs sm:text-sm font-bold text-amber-100">Rank</span>
-                                <span className="text-[10px] sm:text-xs text-amber-200/70">All India</span>
-                            </div>
-                            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-emerald-500/10 rounded-[20px] w-28 sm:w-32 border border-emerald-500/20">
-                                <Clock className="w-6 h-6 text-emerald-300 mb-2" />
-                                <span className="text-xs sm:text-sm font-bold text-emerald-100">Latest</span>
-                                <span className="text-[10px] sm:text-xs text-emerald-200/70">Pattern</span>
-                            </div>
+                        {/* Stats row */}
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                            {[
+                                { icon: <Users className="w-5 h-5" />, label: '1000+', sub: 'Aspirants', color: 'from-indigo-500/20 to-indigo-500/5', iconColor: 'text-indigo-400', borderColor: 'border-indigo-500/20' },
+                                { icon: <Trophy className="w-5 h-5" />, label: 'Rank', sub: 'All India', color: 'from-amber-500/20 to-amber-500/5', iconColor: 'text-amber-400', borderColor: 'border-amber-500/20' },
+                                { icon: <Clock className="w-5 h-5" />, label: '60 Min', sub: 'Per Test', color: 'from-emerald-500/20 to-emerald-500/5', iconColor: 'text-emerald-400', borderColor: 'border-emerald-500/20' },
+                                { icon: <CheckCircle2 className="w-5 h-5" />, label: '100 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
+                            ].map((stat, idx) => (
+                                <div key={idx} className={`flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-gradient-to-br ${stat.color} border ${stat.borderColor} backdrop-blur-md hover:scale-105 transition-transform duration-300 min-w-[130px]`}>
+                                    <div className={`${stat.iconColor} shrink-0`}>{stat.icon}</div>
+                                    <div className="text-left">
+                                        <div className="text-sm font-black text-white leading-tight">{stat.label}</div>
+                                        <div className="text-[10px] text-zinc-500 font-semibold uppercase tracking-wider">{stat.sub}</div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
+
+                    {/* Bottom gradient border */}
+                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/[0.02] to-transparent pointer-events-none"></div>
                 </div>
             )}
 
             {/* Test Cards Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10 w-full overflow-x-hidden">
-                <div className="space-y-12 w-full">
+            <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${isMobileApp ? 'mt-0' : '-mt-10'} relative z-10 w-full overflow-x-hidden`}>
+                <div className={`${isMobileApp ? 'space-y-4' : 'space-y-12'} w-full`}>
 
-                    {/* Attractive Marquee Notification */}
-                    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white shadow-lg rounded-xl sm:rounded-2xl border border-white/10 mb-4 mx-0 sm:mx-0 w-full max-w-full">
-                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
-                        <div className="w-full flex items-center h-[2.75rem] sm:h-12 relative z-10 overflow-hidden">
-                            <div className="flex-shrink-0 w-auto bg-white/20 backdrop-blur-md px-3 sm:px-4 h-full flex items-center justify-center z-20 shadow-xl border-r border-white/10">
-                                <span className="font-black text-[10px] sm:text-sm tracking-wider uppercase flex items-center gap-1.5 whitespace-nowrap">
-                                    <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-yellow-400"></span>
-                                    </span>
-                                    Why Top 7?
-                                </span>
+                    {/* Info Banner — Native M3 style on mobile, gradient on desktop */}
+                    {isMobileApp ? (
+                        <div className="flex items-start gap-3 p-3.5 bg-indigo-50 dark:bg-indigo-900/15 rounded-2xl border border-indigo-100 dark:border-indigo-800/30">
+                            <div className="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-800/40 flex items-center justify-center shrink-0 mt-0.5">
+                                <span className="text-sm">💡</span>
                             </div>
-                            <div className="flex-1 min-w-0 overflow-hidden h-full flex items-center group cursor-default ml-2 sm:ml-4">
-                                <div className="animate-scroll-mobile sm:animate-scroll flex items-center whitespace-nowrap min-w-max">
-                                    {/* Block 1 */}
-                                    <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 font-medium text-[11px] sm:text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors">
-                                        <span className="inline-block mx-2 sm:mx-4 shrink-0">★</span>
-                                        <span className="shrink-0">To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
-                                    </div>
-                                    {/* Block 2 (Duplicate for Seamless Loop) */}
-                                    <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 font-medium text-[11px] sm:text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors">
-                                        <span className="inline-block mx-2 sm:mx-4 shrink-0">★</span>
-                                        <span className="shrink-0">To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
-                                    </div>
+                            <p className="text-[11.5px] text-indigo-900 dark:text-indigo-200 leading-relaxed font-medium flex-1">
+                                To simulate a real LDCE vacancy scenario, only <span className="font-bold">Top 7 ranks</span> are published. Assume 7 vacancies and prepare to secure your place.
+                            </p>
+                        </div>
+                    ) : (
+                        <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white shadow-lg rounded-xl sm:rounded-2xl border border-white/10 mb-4 mx-0 sm:mx-0 w-full max-w-full">
+                            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+                            <div className="w-full flex items-center h-[2.75rem] sm:h-12 relative z-10 overflow-hidden">
+                                <div className="flex-shrink-0 w-auto bg-white/20 backdrop-blur-md px-3 sm:px-4 h-full flex items-center justify-center z-20 shadow-xl border-r border-white/10">
+                                    <span className="font-black text-[10px] sm:text-sm tracking-wider uppercase flex items-center gap-1.5 whitespace-nowrap">
+                                        <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-yellow-400"></span>
+                                        </span>
+                                        Why Top 7?
+                                    </span>
                                 </div>
-
-                                {/* Gradient Overlays for Smooth Fade Effect */}
-                                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-indigo-600 to-transparent z-10 pointer-events-none"></div>
-                                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-indigo-600 to-transparent z-10 pointer-events-none"></div>
+                                <div className="flex-1 min-w-0 overflow-hidden h-full flex items-center group cursor-default ml-2 sm:ml-4">
+                                    <div className="animate-scroll-mobile sm:animate-scroll flex items-center whitespace-nowrap min-w-max">
+                                        <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 font-medium text-[11px] sm:text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors">
+                                            <span className="inline-block mx-2 sm:mx-4 shrink-0">★</span>
+                                            <span className="shrink-0">To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 font-medium text-[11px] sm:text-xs md:text-base tracking-wide text-white/95 group-hover:text-white transition-colors">
+                                            <span className="inline-block mx-2 sm:mx-4 shrink-0">★</span>
+                                            <span className="shrink-0">To simulate a real LDCE vacancy scenario, only Top 7 ranks are published. Assume 7 vacancies and prepare to secure your place. Best Wishes ~ Team Dak Guru</span>
+                                        </div>
+                                    </div>
+                                    <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-indigo-600 to-transparent z-10 pointer-events-none"></div>
+                                    <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-indigo-600 to-transparent z-10 pointer-events-none"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )}
 
-                    {/* Native Segmented Control for Series Selection */}
-                    <div className="relative z-20 mb-6 bg-zinc-100 dark:bg-zinc-800/80 p-1.5 rounded-[20px] flex items-center justify-between shadow-inner max-w-[400px] mx-auto w-full">
+                    {/* Segmented Tab — Clearly visible */}
+                    <div className={`relative z-20 ${isMobileApp ? 'mb-3' : 'mb-6'} bg-zinc-200/80 dark:bg-zinc-800 p-1.5 rounded-2xl flex items-center justify-between border border-zinc-300 dark:border-zinc-700 shadow-md max-w-[420px] mx-auto w-full`}>
                         <button 
                             onClick={() => setActiveSeriesTab('series1')}
-                            className={`flex-1 py-3 px-2 rounded-[16px] text-sm sm:text-base font-bold transition-all duration-300 relative ${activeSeriesTab === 'series1' ? 'bg-white dark:bg-zinc-700 text-[#1860FF] dark:text-blue-400 shadow-md scale-[1.02]' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300 bg-transparent'}`}
+                            className={`flex-1 py-3 px-3 rounded-xl text-sm sm:text-base font-extrabold transition-all duration-200 relative ${activeSeriesTab === 'series1' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/25' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-zinc-100/50 dark:hover:bg-zinc-700/50'}`}
                         >
                             Series - I
                         </button>
                         <button 
                             onClick={() => setActiveSeriesTab('series2')}
-                            className={`flex-1 py-3 px-2 rounded-[16px] text-sm sm:text-base font-bold transition-all duration-300 relative ${activeSeriesTab === 'series2' ? 'bg-white dark:bg-zinc-700 text-[#1860FF] dark:text-blue-400 shadow-md scale-[1.02]' : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300 bg-transparent'}`}
+                            className={`flex-1 py-3 px-3 rounded-xl text-sm sm:text-base font-extrabold transition-all duration-200 relative ${activeSeriesTab === 'series2' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/25' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-zinc-100/50 dark:hover:bg-zinc-700/50'}`}
                         >
                             Series - II
                         </button>
@@ -710,15 +757,15 @@ export default function MockTestsPage() {
 
 
                     {/* Revamped Schedule Section */}
-                    <div className="relative group mt-2">
-                        {/* Soft Gradient Shadow for Complete Schedule */}
-                        <div className="absolute -inset-1 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 rounded-[32px] opacity-40 blur-lg transition duration-1000 group-hover:opacity-60 animate-tilt"></div>
+                    <div className={`relative ${isMobileApp ? '' : 'group'} mt-2`}>
+                        {/* Soft Gradient Shadow for Complete Schedule — Desktop only */}
+                        {!isMobileApp && <div className="absolute -inset-1 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 rounded-[32px] opacity-40 blur-lg transition duration-1000 group-hover:opacity-60 animate-tilt"></div>}
 
-                        <div className="relative bg-white/95 backdrop-blur-xl dark:bg-zinc-950/95 rounded-[28px] p-6 sm:p-8 md:p-10 shadow-sm overflow-hidden border border-zinc-100 dark:border-zinc-800">
+                        <div className={`relative ${isMobileApp ? 'bg-white dark:bg-zinc-900 rounded-2xl p-4 border border-zinc-100 dark:border-zinc-800' : 'bg-white/95 backdrop-blur-xl dark:bg-zinc-950/95 rounded-[28px] p-6 sm:p-8 md:p-10 shadow-sm border border-zinc-100 dark:border-zinc-800'} overflow-hidden`}>
 
-                            {/* Decorative Background Soft Blobs */}
-                            <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-purple-200/40 dark:bg-purple-900/20 rounded-full blur-3xl"></div>
-                            <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-pink-200/40 dark:bg-pink-900/20 rounded-full blur-3xl"></div>
+                            {/* Decorative Background Soft Blobs — Desktop only */}
+                            {!isMobileApp && <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-purple-200/40 dark:bg-purple-900/20 rounded-full blur-3xl"></div>}
+                            {!isMobileApp && <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-pink-200/40 dark:bg-pink-900/20 rounded-full blur-3xl"></div>}
 
                             <div className="relative z-10">
                                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
