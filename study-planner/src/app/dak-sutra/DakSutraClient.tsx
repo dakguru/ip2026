@@ -161,12 +161,12 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
 
             <AppScreenWrapper hideStatusBarPadding={true}>
                 {/* Hero */}
-                <div className="sticky top-0 z-20 shrink-0 relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white shadow-md">
+                <div className={`${isMobileApp ? 'sticky top-0 z-20 shadow-md' : 'relative'} shrink-0 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 text-white`}>
                     <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
                     <div className="absolute top-0 left-0 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl" />
                     <div className="absolute bottom-0 right-0 w-60 h-60 bg-violet-500/20 rounded-full blur-3xl" />
 
-                    <div className="relative w-full px-4 md:max-w-7xl md:mx-auto md:px-6 pb-6 md:pb-16 pt-[max(20px,calc(env(safe-area-inset-top,0px)+8px))] md:pt-16">
+                    <div className="relative w-full px-4 md:max-w-7xl md:mx-auto md:px-6 pb-6 md:pb-8 pt-[max(20px,calc(env(safe-area-inset-top,0px)+8px))] md:pt-8">
                         {/* Wordmark */}
                         <div className="flex items-center gap-2.5 mb-2 md:mb-4">
                             <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
@@ -179,19 +179,19 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                             </h1>
                         </div>
 
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-200 mb-3 md:mb-6 backdrop-blur-sm">
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-200 mb-3 md:mb-3 backdrop-blur-sm">
                             <Sparkles className="w-2.5 h-2.5 md:w-3 md:h-3" />
                             Postal Laws Decoded for LDCE IP &amp; PS Group B
                         </div>
 
-                        <h2 className="text-[22px] sm:text-3xl md:text-5xl font-black leading-tight mb-1.5 md:mb-4">
+                        <h2 className="text-[22px] sm:text-3xl md:text-5xl font-black leading-tight mb-1.5 md:mb-2">
                             Postal Rules,{" "}
                             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                                 Simplified.
                             </span>
                         </h2>
 
-                        <p className="text-blue-200/80 text-[12px] md:text-base leading-relaxed mb-4 md:mb-8 max-w-xs md:max-w-xl">
+                        <p className="text-blue-200/80 text-[12px] md:text-base leading-relaxed mb-4 md:mb-4 max-w-xs md:max-w-xl">
                             Official provisions broken down with plain-language explanations, real-life examples, and exam-focused insights.
                         </p>
 

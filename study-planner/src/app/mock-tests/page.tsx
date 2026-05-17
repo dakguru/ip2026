@@ -575,9 +575,9 @@ export default function MockTestsPage() {
                     <div className="absolute bottom-16 right-[30%] w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_15px_5px_rgba(34,211,238,0.3)] animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
 
                     {/* Content */}
-                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10 md:pt-8 md:pb-12 text-center">
+                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 md:pt-6 md:pb-8 text-center">
                         {/* Back button - glass style */}
-                        <div className="flex justify-center w-full mb-4 md:mb-6">
+                        <div className="flex justify-center w-full mb-3 md:mb-4">
                             <Link href="/" className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300 text-sm backdrop-blur-sm">
                                 <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
                                 <span className="font-medium">Back to Home</span>
@@ -2172,9 +2172,9 @@ function PsgbMockTestPage({
                     <div className="absolute bottom-16 right-[30%] w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_15px_5px_rgba(34,211,238,0.3)] animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
 
                     {/* Content */}
-                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 md:pt-10 md:pb-14 text-center">
+                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 md:pt-6 md:pb-8 text-center">
                         {/* Back button - glass style */}
-                        <div className="flex justify-center w-full mb-6 md:mb-8">
+                        <div className="flex justify-center w-full mb-4 md:mb-4">
                             <Link href="/" className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300 text-sm backdrop-blur-sm">
                                 <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
                                 <span className="font-medium">Back to Home</span>
@@ -2209,13 +2209,13 @@ function PsgbMockTestPage({
                         </h1>
 
                         {/* Description */}
-                        <p className="text-base md:text-lg text-zinc-400/90 max-w-xl mx-auto mb-8 leading-relaxed font-medium">
+                        <p className="text-base md:text-lg text-zinc-400/90 max-w-xl mx-auto mb-4 leading-relaxed font-medium">
                             14-week structured test series aligned with the official study plan.
                             <span className="text-zinc-500 block mt-1">Compete with aspirants across India & track your progress.</span>
                         </p>
 
                         {/* Stats row */}
-                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6">
                             {[
                                 { icon: <Calendar className="w-5 h-5" />, label: '14 Weeks', sub: 'Schedule', color: 'from-violet-500/20 to-violet-500/5', iconColor: 'text-violet-400', borderColor: 'border-violet-500/20' },
                                 { icon: <AlertCircle className="w-5 h-5" />, label: '50 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
