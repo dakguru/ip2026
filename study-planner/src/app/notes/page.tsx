@@ -49,9 +49,7 @@ const SCHEDULE_MAPPING: Record<string, string> = {
     "Postal Manual Volume III": "16-02-2026",
     "Postal Manual Volume IV": "16-02-2026",
     "Postal Manual Volume V": "16-02-2026",
-    "Postal Manual Volume VI, Part-I": "16-02-2026",
-    "Postal Manual Volume VI, Part-II": "16-02-2026",
-    "Postal Manual Volume VI, Part-III": "16-02-2026",
+    "Postal Manual Volume VI": "16-02-2026",
     "Postal Manual Volume VII": "18-02-2026",
     "Postal Manual Volume VIII": "18-02-2026",
 
@@ -251,29 +249,12 @@ const PDF_DATA: Record<string, Note[]> = {
             topic: "Postal Manuals"
         },
         {
-            title: "Postal Manual Volume VI, Part-I",
-            description: "Chapter-1 details.",
-            filename: "postal-manual-vol-vi-part-1.pdf",
-            path: "/notes/paper-1/postal-manual-vol-vi-part-1.pdf",
-            size: "0.8 MB",
-            color: "amber",
-            topic: "Postal Manuals"
-        },
-        {
-            title: "Postal Manual Volume VI, Part-II",
-            description: "Except telegraphic money orders.",
-            filename: "postal-manual-vol-vi-part-2.pdf",
-            path: "/notes/paper-1/postal-manual-vol-vi-part-2.pdf",
-            size: "0.3 MB",
-            color: "amber",
-            topic: "Postal Manuals"
-        },
-        {
-            title: "Postal Manual Volume VI, Part-III",
-            description: "Except Appendices.",
-            filename: "postal-manual-vol-vi-part-3.pdf",
-            path: "/notes/paper-1/postal-manual-vol-vi-part-3.pdf",
-            size: "0.7 MB",
+            title: "Postal Manual Volume VI",
+            subtitle: "Part-I, II & III",
+            description: "Rules relating to Postal Manual Volume VI Parts I, II & III.",
+            filename: "Postal_Manual_Vol_VI.pdf",
+            path: "/notes/paper-1/Postal_Manual_Vol_VI.pdf",
+            size: "4.6 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
