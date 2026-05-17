@@ -468,7 +468,7 @@ export default function MockTestsPage() {
     }
 
     return (
-        <AppScreenWrapper hideStatusBarPadding={true}>
+        <AppScreenWrapper hideStatusBarPadding={true} scrollableContent={false}>
             <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
 
             {/* Hero Section */}
@@ -2033,7 +2033,7 @@ function PsgbMockTestPage({
     };
 
     return (
-        <AppScreenWrapper hideStatusBarPadding={true}>
+        <AppScreenWrapper hideStatusBarPadding={true} scrollableContent={false}>
             <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
 
             {/* ===== HERO ===== */}
