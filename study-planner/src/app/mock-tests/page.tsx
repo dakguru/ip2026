@@ -474,7 +474,7 @@ export default function MockTestsPage() {
             {/* Hero Section */}
             {isMobileApp ? (
                 // Mobile App — Native Android Material 3 Inspired (Sticky)
-                <div className="sticky top-0 z-10 relative w-full bg-white dark:bg-zinc-950">
+                <div className="sticky top-0 z-10 shrink-0 relative w-full bg-white dark:bg-zinc-950">
                     {/* M3 Top App Bar */}
                     <div className="px-4 pt-3 pb-2 flex items-center gap-3">
                         <Link href="/" className="w-10 h-10 rounded-full flex items-center justify-center active:bg-zinc-100 dark:active:bg-zinc-800 transition-colors -ml-1">
@@ -557,7 +557,7 @@ export default function MockTestsPage() {
                 </div>
             ) : (
                 // Desktop/Web — Premium Hero (matching PS Group B style)
-                <div className="relative min-h-[280px] md:min-h-[360px] bg-[#0a0a0f] overflow-hidden isolate">
+                <div className="relative shrink-0 min-h-[280px] md:min-h-[360px] bg-[#0a0a0f] overflow-hidden isolate">
                     {/* Animated gradient mesh background */}
                     <div className="absolute inset-0">
                         <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-indigo-600/30 via-blue-500/20 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }}></div>
@@ -2096,7 +2096,7 @@ function PsgbMockTestPage({
 
             {/* ===== HERO ===== */}
             {isMobileApp ? (
-                <div className="sticky top-0 z-10 relative w-full overflow-x-hidden bg-zinc-950 border-b border-zinc-900 pb-8">
+                <div className="sticky top-0 z-10 shrink-0 relative w-full overflow-x-hidden bg-zinc-950 border-b border-zinc-900 pb-8">
                     <div className="absolute inset-0 opacity-15">
                         <div className="absolute top-10 right-0 w-40 h-40 bg-violet-600 rounded-full mix-blend-screen filter blur-3xl"></div>
                         <div className="absolute bottom-0 left-0 w-40 h-40 bg-fuchsia-600 rounded-full mix-blend-screen filter blur-3xl"></div>
@@ -2153,7 +2153,7 @@ function PsgbMockTestPage({
                     </div>
                 </div>
             ) : (
-                <div className="relative min-h-[320px] md:min-h-[400px] bg-[#0a0a0f] overflow-hidden isolate">
+                <div className="relative shrink-0 min-h-[320px] md:min-h-[400px] bg-[#0a0a0f] overflow-hidden isolate">
                     {/* Animated gradient mesh background */}
                     <div className="absolute inset-0">
                         <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-violet-600/30 via-fuchsia-500/20 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }}></div>
