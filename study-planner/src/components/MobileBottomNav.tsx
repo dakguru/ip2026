@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookOpen, Trophy, Users, User, LayoutDashboard, Crown } from "lucide-react";
+import { Home, BookOpen, Trophy, Users, User, Crown } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function MobileBottomNav() {
@@ -53,36 +53,46 @@ export default function MobileBottomNav() {
     ];
 
     return (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-lg border-t border-zinc-200 dark:border-zinc-800 pb-[env(safe-area-inset-bottom)] z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
-            <div className="flex items-center justify-between px-2 sm:px-6 h-16">
-                {navItems.map((item) => {
-                    const isActive = pathname === item.href;
-                    return (
-                        <Link
-                            key={item.label}
-                            href={item.href}
-                            className={`flex flex-col items-center justify-center w-full h-full gap-1 active:scale-95 transition-all duration-200 group relative`}
-                        >
-                            {/* Active Indicator */}
-                            {isActive && (
-                                <span className="absolute -top-[1px] w-8 h-1 bg-blue-600 rounded-b-full shadow-blue-500/50 shadow-sm" />
-                            )}
+        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50">
+            {/* Frosted glass navigation bar */}
+            <div className="bg-white/95 dark:bg-[#141414]/95 backdrop-blur-2xl border-t border-zinc-200/60 dark:border-zinc-800/60 pb-[env(safe-area-inset-bottom)]">
+                <div className="flex items-center justify-around px-2 h-[64px]">
+                    {navItems.map((item) => {
+                        const isActive = pathname === item.href;
+                        return (
+                            <Link
+                                key={item.label}
+                                href={item.href}
+                                className="flex flex-col items-center justify-center min-w-[56px] h-full gap-0.5 active:scale-90 transition-all duration-150 group relative"
+                            >
+                                {/* Material 3 Pill Indicator */}
+                                <div className={`relative flex items-center justify-center w-16 h-8 rounded-full transition-all duration-300 ${
+                                    isActive
+                                        ? "bg-blue-100 dark:bg-blue-900/30 m3-nav-indicator"
+                                        : "bg-transparent"
+                                }`}>
+                                    <item.icon
+                                        className={`w-[22px] h-[22px] transition-all duration-200 ${
+                                            isActive
+                                                ? "text-blue-600 dark:text-blue-400"
+                                                : "text-zinc-400 dark:text-zinc-500"
+                                        }`}
+                                        strokeWidth={isActive ? 2.2 : 1.8}
+                                        fill={isActive ? "currentColor" : "none"}
+                                    />
+                                </div>
 
-                            <div className={`p-1.5 rounded-xl transition-colors ${isActive
-                                ? "text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10"
-                                : "text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300"
+                                <span className={`text-[10px] font-semibold tracking-tight leading-none transition-colors duration-200 ${
+                                    isActive
+                                        ? "text-blue-600 dark:text-blue-400 font-bold"
+                                        : "text-zinc-400 dark:text-zinc-500"
                                 }`}>
-                                <item.icon className={`w-6 h-6 ${isActive ? "fill-current" : "stroke-[1.5px]"}`} />
-                            </div>
-                            <span className={`text-[10px] font-medium tracking-tight ${isActive
-                                ? "text-blue-600 dark:text-blue-400"
-                                : "text-zinc-400 dark:text-zinc-500"
-                                }`}>
-                                {item.label}
-                            </span>
-                        </Link>
-                    );
-                })}
+                                    {item.label}
+                                </span>
+                            </Link>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );

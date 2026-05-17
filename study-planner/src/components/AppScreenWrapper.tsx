@@ -22,7 +22,7 @@ export default function AppScreenWrapper({
 
     return (
         <div className={cn(
-            "min-h-screen w-full overflow-x-hidden bg-zinc-50 dark:bg-zinc-950 flex flex-col transition-colors",
+            "min-h-screen w-full overflow-x-hidden bg-[#f8f9fb] dark:bg-[#0a0a0a] flex flex-col transition-colors duration-200",
             className
         )}>
             {/* Status Bar / Safe Area Top Padding - Only applied if there is no header or explicitly requested */}
@@ -33,7 +33,7 @@ export default function AppScreenWrapper({
 
             {/* Sticky Header with Safe Area Padding */}
             {header && (
-                <div className="sticky top-0 z-30 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl border-b border-zinc-100 dark:border-zinc-800 pt-[max(24px,env(safe-area-inset-top,0px))] px-5 py-3.5">
+                <div className="sticky top-0 z-30 bg-white/95 dark:bg-[#141414]/95 backdrop-blur-2xl border-b border-zinc-200/60 dark:border-zinc-800/60 pt-[max(24px,env(safe-area-inset-top,0px))] px-5 py-3.5">
                     {header}
                 </div>
             )}

@@ -35,42 +35,42 @@ export default function NativeQuizDashboard({
             <button
                 key={topic.id}
                 onClick={() => onSelectTopic(topic)}
-                className={`group relative flex flex-col items-start p-5 rounded-3xl transition-all w-full text-left
+                className={`group relative flex flex-col items-start p-4 rounded-2xl transition-all w-full text-left active:scale-[0.97]
                     ${locked
-                        ? 'bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800'
-                        : 'bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 shadow-sm shadow-zinc-200/50 dark:shadow-black/50'
+                        ? 'bg-zinc-100 dark:bg-zinc-800/40 border border-zinc-200/80 dark:border-zinc-800'
+                        : 'bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 shadow-sm'
                     }
                 `}
             >
-                <div className="flex justify-between w-full mb-3">
-                    <div className={`w-10 h-10 rounded-2xl flex items-center justify-center
+                <div className="flex justify-between w-full mb-2.5">
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center
                         ${locked
                             ? 'bg-zinc-200 dark:bg-zinc-700 text-zinc-400'
-                            : 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
+                            : 'bg-blue-50 dark:bg-blue-900/25 text-blue-600 dark:text-blue-400'
                         }
                     `}>
-                        {locked ? <Lock className="w-5 h-5" /> : <BrainCircuit className="w-5 h-5" />}
+                        {locked ? <Lock className="w-4 h-4" /> : <BrainCircuit className="w-4 h-4" />}
                     </div>
                     {locked && (
-                        <span className="px-2 py-1 rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold uppercase tracking-wide">
+                        <span className="px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[9px] font-bold uppercase tracking-wide">
                             Upgrade
                         </span>
                     )}
                 </div>
 
-                <h3 className={`font-bold text-base mb-1 line-clamp-2 leading-tight
-                    ${locked ? 'text-zinc-500 dark:text-zinc-500' : 'text-zinc-900 dark:text-zinc-100'}
+                <h3 className={`font-semibold text-[13px] mb-1.5 line-clamp-2 leading-snug
+                    ${locked ? 'text-zinc-400 dark:text-zinc-500' : 'text-zinc-800 dark:text-zinc-100'}
                 `}>
                     {topic.title}
                 </h3>
 
-                <p className="text-xs font-medium text-zinc-400 mt-auto">
-                    {qCount} Questions
+                <p className="text-[11px] font-medium text-zinc-400 mt-auto">
+                    {qCount} Qs
                 </p>
 
                 {!locked && (
-                    <div className="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <Play className="w-8 h-8 text-blue-500 fill-current opacity-20" />
+                    <div className="absolute bottom-4 right-4 w-7 h-7 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center opacity-0 group-active:opacity-100 transition-opacity">
+                        <Play className="w-3.5 h-3.5 text-blue-500 fill-current" />
                     </div>
                 )}
             </button>
@@ -110,14 +110,13 @@ export default function NativeQuizDashboard({
                         </div>
 
                         {/* Content */}
-                        <div className="p-4 sm:p-6 space-y-8 pb-32 max-w-4xl mx-auto w-full relative z-20">
+                        <div className="p-4 sm:p-6 space-y-6 pb-32 max-w-4xl mx-auto w-full relative z-20">
                             {/* Search Bar */}
                             <div className="relative">
-                                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 opacity-60 blur-sm" />
-                                <div className="relative flex items-center bg-white dark:bg-zinc-900 rounded-2xl shadow-lg overflow-hidden border border-white/20">
-                                    <div className="flex items-center justify-center pl-3.5 pr-1 shrink-0">
-                                        <svg className="w-4 h-4 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+                                <div className="flex items-center bg-white dark:bg-zinc-900 rounded-2xl shadow-sm overflow-hidden border border-zinc-200/80 dark:border-zinc-800">
+                                    <div className="flex items-center justify-center pl-4 pr-1 shrink-0">
+                                        <svg className="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
                                         </svg>
                                     </div>
                                     <input
@@ -125,26 +124,18 @@ export default function NativeQuizDashboard({
                                         value={nativeSearch}
                                         onChange={e => setNativeSearch(e.target.value)}
                                         placeholder="Search quiz topics..."
-                                        className="flex-1 bg-transparent py-2.5 px-2 text-xs text-slate-700 dark:text-zinc-200 placeholder-slate-400 dark:placeholder-zinc-500 outline-none min-w-0"
+                                        className="flex-1 bg-transparent py-3 px-2 text-sm text-zinc-700 dark:text-zinc-200 placeholder-zinc-400 dark:placeholder-zinc-500 outline-none min-w-0"
                                     />
                                     {nativeSearch && (
-                                        <button onClick={() => setNativeSearch('')} className="flex items-center justify-center w-7 h-7 mr-1 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-400 dark:text-zinc-500 transition-colors shrink-0">
+                                        <button onClick={() => setNativeSearch('')} className="flex items-center justify-center w-8 h-8 mr-1.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 dark:text-zinc-500 transition-colors shrink-0">
                                             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                                             </svg>
                                         </button>
                                     )}
-                                    <div className="flex items-center gap-1 mr-3 px-2 py-1 rounded-lg bg-gradient-to-r from-violet-100 to-fuchsia-100 dark:from-violet-900/40 dark:to-fuchsia-900/40 shrink-0">
-                                        <span className="text-[10px] font-semibold text-violet-600 dark:text-violet-300 whitespace-nowrap">Quick Find</span>
-                                    </div>
-                                </div>
-                                <div className="absolute right-3 -top-1 flex gap-0.5 pointer-events-none">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-violet-400 opacity-70" />
-                                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-70" />
-                                    <span className="w-1.5 h-1.5 rounded-full bg-pink-400 opacity-70" />
                                 </div>
                                 {nativeSearch && (
-                                    <p className="text-center text-[11px] text-slate-400 dark:text-zinc-500 mt-1.5">
+                                    <p className="text-center text-[11px] text-zinc-400 dark:text-zinc-500 mt-2">
                                         {(() => {
                                             const q = nativeSearch.toLowerCase();
                                             const c = [...group1Topics, ...group2Topics].filter(t => t.title.toLowerCase().includes(q)).length;

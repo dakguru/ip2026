@@ -3,13 +3,20 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #f8f9fb;
   --foreground: #171717;
+  --surface: #ffffff;
+  --surface-dim: #f1f3f5;
+  --outline: #e2e5ea;
+  --nav-height: 64px;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --surface: #141414;
+  --surface-dim: #1a1a1a;
+  --outline: #262626;
 }
 
 @theme inline {
@@ -31,6 +38,10 @@ body {
   /* Premium app launch fade-in */
   opacity: 0;
   transition: opacity 400ms ease-out;
+  /* Native Android text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html {
@@ -42,6 +53,60 @@ html {
 
 body.app-ready {
   opacity: 1;
+}
+
+/* ── Native Android Ripple Effect ── */
+@keyframes ripple-effect {
+  0% {
+    transform: scale(0);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.native-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.native-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 150ms ease;
+  pointer-events: none;
+}
+
+.native-ripple:active::after {
+  opacity: 1;
+}
+
+/* ── Material 3 Elevation Levels ── */
+.elevation-0 {
+  box-shadow: none;
+}
+.elevation-1 {
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.04);
+}
+.elevation-2 {
+  box-shadow: 0 2px 6px 2px rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.04);
+}
+.elevation-3 {
+  box-shadow: 0 4px 8px 3px rgba(0,0,0,0.06), 0 1px 3px 0 rgba(0,0,0,0.04);
+}
+
+/* ── Native-feel active states for touchable elements ── */
+.touch-feedback {
+  transition: transform 100ms ease, opacity 100ms ease;
+}
+.touch-feedback:active {
+  transform: scale(0.97);
+  opacity: 0.85;
 }
 
 /* Optimize clicks for interactive elements */
@@ -186,4 +251,41 @@ textarea {
     transparent 80%
   );
   animation: gold-shimmer 2.2s ease-in-out infinite;
+}
+
+/* ── Material 3 Bottom Navigation ── */
+@keyframes m3-indicator-in {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.m3-nav-indicator {
+  animation: m3-indicator-in 250ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ── Hide scrollbar utility ── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Native surface card ── */
+.native-card {
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: 16px;
+}
+
+.dark .native-card {
+  background: var(--surface);
+  border-color: var(--outline);
 }

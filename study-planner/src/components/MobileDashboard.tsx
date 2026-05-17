@@ -122,7 +122,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     return (
         <div
-            className="min-h-screen bg-slate-50 dark:bg-black pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900"
+            className="min-h-screen bg-[#f8f9fb] dark:bg-[#0a0a0a] pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
@@ -130,9 +130,9 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
             {/* --- ROYAL HEADER --- */}
 
-            <header className="sticky top-0 z-40 bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#0f172a] dark:from-[#020617] dark:via-[#0f172a] dark:to-[#020617] px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] shadow-xl shadow-blue-900/20 relative">
-                {/* Rainbow gradient bottom border - matching desktop */}
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-orange-500 opacity-80"></div>
+            <header className="sticky top-0 z-40 bg-gradient-to-br from-[#0c1631] via-[#162044] to-[#0f172a] dark:from-[#020617] dark:via-[#0a1128] dark:to-[#020617] px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] shadow-xl shadow-slate-900/30 relative">
+                {/* Subtle accent bottom border */}
+                <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-blue-500/60 via-indigo-400/80 to-purple-500/60"></div>
                 <div className="flex items-center justify-between">
                     {/* Left: Hamburger + Brand */}
                     <div className="flex items-center gap-3">
@@ -321,8 +321,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 {/* User Greeting - Inside Header for Royal Feel */}
                 <div className="mt-5 mb-1 flex items-center justify-between">
                     <div>
-                        <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Hello,</p>
-                        <h1 className="text-xl font-bold text-white flex items-center gap-2">
+                        <p className="text-indigo-300/70 text-[11px] font-semibold tracking-wide">Welcome back,</p>
+                        <h1 className="text-[22px] font-extrabold text-white flex items-center gap-2 tracking-tight">
                             {displayName} <span className="text-lg">👋</span>
                         </h1>
                     </div>
@@ -343,18 +343,18 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
                 {/* --- QUICK ACTIONS (NOW SECOND) --- */}
                 <div className="px-5">
-                    <div className="flex items-center gap-2 mb-4">
-                        <div className="h-4 w-1 bg-blue-600 rounded-full"></div>
-                        <h3 className="text-xs font-black text-slate-800 dark:text-zinc-300 uppercase tracking-widest">
-                            Quick Study Tools
+                    <div className="flex items-center gap-2.5 mb-4">
+                        <div className="h-5 w-1.5 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full"></div>
+                        <h3 className="text-[11px] font-extrabold text-slate-700 dark:text-zinc-300 uppercase tracking-[0.08em]">
+                            Study Tools
                         </h3>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-x-4 gap-y-6">
+                    <div className="grid grid-cols-4 gap-x-2 gap-y-5">
                         {mainFeatures
                             .filter(item => {
                                 if ((item as any).adminOnly) return isAdmin;
-                                if (item.label === "Dak Sutra") return false; // shown as dedicated bar below
+                                if (item.label === "Dak Sutra") return false;
                                 return true;
                             })
 
@@ -364,13 +364,12 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                     href={item.href}
                                     target={item.href.startsWith("http") ? "_blank" : undefined}
                                     rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                                    className="flex flex-col items-center gap-2.5 group active:scale-95 transition-transform"
+                                    className="flex flex-col items-center gap-2 group active:scale-90 transition-all duration-150"
                                 >
-                                    <div className={`w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] rounded-[20px] flex items-center justify-center ${item.bg} text-slate-700 dark:text-slate-200 shadow-sm border border-slate-100 dark:border-zinc-800 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 relative overflow-hidden backdrop-blur-sm`}>
-                                        <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                        <item.icon className={`w-7 h-7 ${item.color} drop-shadow-sm`} strokeWidth={2} />
+                                    <div className={`w-[56px] h-[56px] rounded-2xl flex items-center justify-center ${item.bg} shadow-sm border border-black/[0.04] dark:border-white/[0.06] transition-all duration-200 relative overflow-hidden`}>
+                                        <item.icon className={`w-6 h-6 ${item.color}`} strokeWidth={1.8} />
                                     </div>
-                                    <span className="text-[10px] font-black text-center text-slate-500 dark:text-zinc-400 leading-tight uppercase tracking-tight">
+                                    <span className="text-[10px] font-bold text-center text-slate-600 dark:text-zinc-400 leading-tight tracking-tight max-w-[64px]">
                                         {item.label}
                                     </span>
                                 </Link>

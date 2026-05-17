@@ -47,38 +47,38 @@ export default function NativeFlashcardsHomeV2({
     // And "Floating Filter Chips".
 
     return (
-        <div className="min-h-[100dvh] bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-white pb-[max(6rem,env(safe-area-inset-bottom))] font-sans selection:bg-indigo-500/30 transition-colors duration-500">
+        <div className="min-h-[100dvh] bg-[#f8f9fb] dark:bg-[#0a0a0a] text-slate-900 dark:text-white pb-[max(6rem,env(safe-area-inset-bottom))] font-sans selection:bg-indigo-500/30 transition-colors duration-300">
 
             {/* 1. HERO HEADER (Top 35% ish visually, simplified for scroll) */}
             <div className="relative pt-[max(2rem,env(safe-area-inset-top))] pb-4 px-6 overflow-hidden">
                 {/* Background Ambient Gradients */}
-                <div className="absolute top-[-50%] left-[-20%] w-[80%] h-[80%] rounded-full bg-indigo-600/20 blur-[100px] pointer-events-none" />
-                <div className="absolute top-[0%] right-[-20%] w-[60%] h-[60%] rounded-full bg-violet-600/10 blur-[80px] pointer-events-none" />
+                <div className="absolute top-[-50%] left-[-20%] w-[80%] h-[80%] rounded-full bg-indigo-600/10 blur-[100px] pointer-events-none" />
+                <div className="absolute top-[0%] right-[-20%] w-[60%] h-[60%] rounded-full bg-violet-600/5 blur-[80px] pointer-events-none" />
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                     className="relative z-10"
                 >
-                    <h1 className="text-4xl font-black tracking-tighter mb-1 text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 via-violet-600 to-indigo-600 dark:from-white dark:via-indigo-100 dark:to-indigo-200 drop-shadow-sm pb-1 pr-1">
-                        FLASHCARDS
+                    <h1 className="text-3xl font-extrabold tracking-tight mb-1 text-slate-900 dark:text-white">
+                        Flashcards
                     </h1>
-                    <h2 className="text-lg font-medium text-slate-600 dark:text-indigo-200/80 mb-2 tracking-tight">
+                    <h2 className="text-sm font-medium text-slate-500 dark:text-zinc-400 mb-2">
                         Master Postal Laws Through Smart Revision
                     </h2>
-                    <p className="text-[10px] font-bold text-slate-400 dark:text-zinc-500 uppercase tracking-[0.25em]">
+                    <p className="text-[10px] font-bold text-slate-400 dark:text-zinc-600 uppercase tracking-[0.2em]">
                         Prepare Faster • Recall Better
                     </p>
                 </motion.div>
             </div>
 
             {/* 2. FLOATING SEARCH BAR & FILTERS */}
-            <div className="sticky top-0 z-50 px-6 py-2 bg-slate-50/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-slate-200 dark:border-white/5 transition-all">
+            <div className="sticky top-0 z-50 px-6 py-2 bg-[#f8f9fb]/90 dark:bg-[#0a0a0a]/90 backdrop-blur-2xl border-b border-zinc-200/60 dark:border-zinc-800/60 transition-all">
                 <motion.div
                     initial={{ scale: 0.95, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className={`relative flex items-center bg-white/80 dark:bg-zinc-900/80 border ${isSearchFocused ? 'border-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.15)] ring-1 ring-indigo-500' : 'border-slate-200 dark:border-white/10'} rounded-2xl h-12 px-4 mb-4 transition-all duration-300 shadow-sm`}
+                    className={`relative flex items-center bg-white dark:bg-zinc-900 border ${isSearchFocused ? 'border-indigo-400 shadow-sm ring-1 ring-indigo-400/30' : 'border-zinc-200 dark:border-zinc-800'} rounded-2xl h-12 px-4 mb-4 transition-all duration-200`}
                 >
                     <Search className={`w-4 h-4 mr-3 transition-colors ${isSearchFocused ? 'text-indigo-500' : 'text-slate-400 dark:text-zinc-500'}`} />
                     <input
@@ -122,7 +122,7 @@ export default function NativeFlashcardsHomeV2({
             <div className="mt-4 mb-8 px-6">
                 <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide -mx-6 px-6">
                     {/* Total Cards */}
-                    <div className="flex-shrink-0 w-32 bg-white/60 dark:bg-zinc-900/50 border border-slate-100 dark:border-white/5 rounded-[18px] p-3 flex flex-col justify-between h-24 backdrop-blur-md shadow-sm dark:shadow-none">
+                    <div className="flex-shrink-0 w-32 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-2xl p-3 flex flex-col justify-between h-24">
                         <Layers className="w-5 h-5 text-emerald-500 mb-2" />
                         <div>
                             <div className="text-2xl font-bold text-slate-900 dark:text-white leading-none">{totalCards}</div>
@@ -130,7 +130,7 @@ export default function NativeFlashcardsHomeV2({
                         </div>
                     </div>
                     {/* Recently Studied */}
-                    <div className="flex-shrink-0 w-32 bg-white/60 dark:bg-zinc-900/50 border border-slate-100 dark:border-white/5 rounded-[18px] p-3 flex flex-col justify-between h-24 backdrop-blur-md shadow-sm dark:shadow-none">
+                    <div className="flex-shrink-0 w-32 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-2xl p-3 flex flex-col justify-between h-24">
                         <Clock className="w-5 h-5 text-blue-500 mb-2" />
                         <div>
                             <div className="text-2xl font-bold text-slate-900 dark:text-white leading-none">{studiedCount}</div>
@@ -140,7 +140,7 @@ export default function NativeFlashcardsHomeV2({
                     {/* Bookmarked */}
                     <div
                         onClick={() => bookmarks.size > 0 && onDeckSelect('bookmarks')}
-                        className={`flex-shrink-0 w-32 bg-white/60 dark:bg-zinc-900/50 border border-slate-100 dark:border-white/5 rounded-[18px] p-3 flex flex-col justify-between h-24 backdrop-blur-md transition-opacity shadow-sm dark:shadow-none ${bookmarks.size === 0 ? 'opacity-50' : 'active:scale-95'}`}
+                        className={`flex-shrink-0 w-32 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-2xl p-3 flex flex-col justify-between h-24 transition-opacity ${bookmarks.size === 0 ? 'opacity-50' : 'active:scale-95'}`}
                     >
                         <Bookmark className="w-5 h-5 text-amber-500 mb-2" />
                         <div>
