@@ -19,6 +19,33 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "17.05.2026",
         items: [
             {
+                title: "📚 PDF Notes: Brochure on Reservation, Sports Person Reservation & Compassionate Appointment",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the highly requested <strong>Brochure on Reservation, Instructions Regarding Sports Person Reservation, and Compassionate Appointment Guidelines</strong> PDF notes under <strong>Paper I</strong>!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-rose-50/50 dark:bg-rose-900/10 p-3 rounded-xl border border-rose-100 dark:border-rose-800/50">
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-rose-500 mt-0.5">✅</span>
+                                        <span><strong>Comprehensive Compilation:</strong> Covers Brochure on Reservation, Sports Person Reservation instructions, and Compassionate Appointment guidelines.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-rose-500 mt-0.5">📂</span>
+                                        <span><strong>Official Guidance:</strong> Complete and structured directives issued by the Department of Posts and DoP&T.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-rose-600 dark:text-rose-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head over to the PDF Notes section to download it now!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "📚 PDF Notes: Postal Manual Volume VI (Part I, II & III) Consolidated",
                 desc: (
                     <div className="space-y-4">

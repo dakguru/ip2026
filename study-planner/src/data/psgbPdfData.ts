@@ -297,6 +297,15 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "emerald",
             "topic": "Reports & Misc"
         },
+        {
+            "title": "Brochure on Reservation, Sports Person Reservation & Compassionate Appointment",
+            "description": "Brochure on Reservation, Instructions Regarding Sports Person Reservation, and Compassionate Appointment Guidelines Issued by Department of Posts and DoP&T.",
+            "filename": "Reservation_Sports_Compassionate_Guidelines.pdf",
+            "path": "/notes/paper-1/Reservation_Sports_Compassionate_Guidelines.pdf",
+            "size": "0.8 MB",
+            "color": "rose",
+            "topic": "CCS Rules & Establishment"
+        },
     ],
     "Paper II": [
         {
