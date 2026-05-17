@@ -473,8 +473,8 @@ export default function MockTestsPage() {
 
             {/* Hero Section */}
             {isMobileApp ? (
-                // Mobile App — Native Android Material 3 Inspired
-                <div className="relative w-full bg-white dark:bg-zinc-950">
+                // Mobile App — Native Android Material 3 Inspired (Sticky)
+                <div className="sticky top-0 z-10 relative w-full bg-white dark:bg-zinc-950">
                     {/* M3 Top App Bar */}
                     <div className="px-4 pt-3 pb-2 flex items-center gap-3">
                         <Link href="/" className="w-10 h-10 rounded-full flex items-center justify-center active:bg-zinc-100 dark:active:bg-zinc-800 transition-colors -ml-1">
@@ -2096,7 +2096,7 @@ function PsgbMockTestPage({
 
             {/* ===== HERO ===== */}
             {isMobileApp ? (
-                <div className="relative w-full overflow-x-hidden bg-zinc-950 border-b border-zinc-900 pb-8">
+                <div className="sticky top-0 z-10 relative w-full overflow-x-hidden bg-zinc-950 border-b border-zinc-900 pb-8">
                     <div className="absolute inset-0 opacity-15">
                         <div className="absolute top-10 right-0 w-40 h-40 bg-violet-600 rounded-full mix-blend-screen filter blur-3xl"></div>
                         <div className="absolute bottom-0 left-0 w-40 h-40 bg-fuchsia-600 rounded-full mix-blend-screen filter blur-3xl"></div>

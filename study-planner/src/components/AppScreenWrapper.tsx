@@ -10,36 +10,43 @@ interface AppScreenWrapperProps {
     className?: string;
     showBottomNav?: boolean;
     hideStatusBarPadding?: boolean;
+    /** If false, content won't auto-scroll (used by Notes/PDF pages). Default: true */
+    scrollableContent?: boolean;
 }
 
 export default function AppScreenWrapper({
     children,
     header,
     className,
-    hideStatusBarPadding = false
+    hideStatusBarPadding = false,
+    scrollableContent = true
 }: AppScreenWrapperProps) {
     const isMobileApp = useIsMobileApp();
 
     return (
         <div className={cn(
-            "min-h-screen w-full overflow-x-hidden bg-[#f8f9fb] dark:bg-[#0a0a0a] flex flex-col transition-colors duration-200",
+            "w-full overflow-x-hidden bg-[#f8f9fb] dark:bg-[#0a0a0a] flex flex-col transition-colors duration-200",
+            scrollableContent ? "h-[100dvh] overflow-hidden" : "min-h-screen",
             className
         )}>
             {/* Status Bar / Safe Area Top Padding - Only applied if there is no header or explicitly requested */}
             {/* Status Bar Spacer (when no header is provided) */}
             {!header && !hideStatusBarPadding && (
-                <div className="h-[max(24px,env(safe-area-inset-top,0px))] bg-inherit sticky top-0 z-30" />
+                <div className="h-[max(24px,env(safe-area-inset-top,0px))] bg-inherit shrink-0 z-30" />
             )}
 
-            {/* Sticky Header with Safe Area Padding */}
+            {/* Fixed Header with Safe Area Padding */}
             {header && (
-                <div className="sticky top-0 z-30 bg-white/95 dark:bg-[#141414]/95 backdrop-blur-2xl border-b border-zinc-200/60 dark:border-zinc-800/60 pt-[max(24px,env(safe-area-inset-top,0px))] px-5 py-3.5">
+                <div className="shrink-0 z-30 bg-white/95 dark:bg-[#141414]/95 backdrop-blur-2xl border-b border-zinc-200/60 dark:border-zinc-800/60 pt-[max(24px,env(safe-area-inset-top,0px))] px-5 py-3.5">
                     {header}
                 </div>
             )}
 
-            {/* Page Content */}
-            <main className="flex-1 flex flex-col">
+            {/* Page Content — scrollable by default */}
+            <main className={cn(
+                "flex-1 flex flex-col",
+                scrollableContent && "overflow-y-auto overscroll-contain"
+            )}>
                 {children}
             </main>
         </div>

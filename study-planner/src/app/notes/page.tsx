@@ -1100,7 +1100,7 @@ export default function NotesPage() {
         : membershipLevel === 'gold';
 
     return (
-        <AppScreenWrapper hideStatusBarPadding={true}>
+        <AppScreenWrapper hideStatusBarPadding={true} scrollableContent={false}>
             <div className="bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200">
                 <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel} />
 

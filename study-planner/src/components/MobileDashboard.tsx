@@ -122,15 +122,15 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     return (
         <div
-            className="min-h-screen bg-[#f8f9fb] dark:bg-[#0a0a0a] pb-32 font-sans selection:bg-blue-100 dark:selection:bg-blue-900"
+            className="h-[100dvh] overflow-hidden bg-[#f8f9fb] dark:bg-[#0a0a0a] flex flex-col font-sans selection:bg-blue-100 dark:selection:bg-blue-900"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
         >
 
-            {/* --- ROYAL HEADER --- */}
+            {/* --- ROYAL HEADER (Fixed) --- */}
 
-            <header className="sticky top-0 z-40 bg-gradient-to-br from-[#0c1631] via-[#162044] to-[#0f172a] dark:from-[#020617] dark:via-[#0a1128] dark:to-[#020617] px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] shadow-xl shadow-slate-900/30 relative">
+            <header className="shrink-0 z-40 bg-gradient-to-br from-[#0c1631] via-[#162044] to-[#0f172a] dark:from-[#020617] dark:via-[#0a1128] dark:to-[#020617] px-5 py-4 pt-[max(16px,env(safe-area-inset-top))] shadow-xl shadow-slate-900/30 relative">
                 {/* Subtle accent bottom border */}
                 <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-blue-500/60 via-indigo-400/80 to-purple-500/60"></div>
                 <div className="flex items-center justify-between">
@@ -330,6 +330,8 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                 </div>
             </header>
 
+            {/* --- SCROLLABLE BODY --- */}
+            <div className="flex-1 overflow-y-auto overscroll-contain pb-32">
             <div className="space-y-6 pt-5">
                 {/* Android App Payment Announcement */}
 
@@ -470,6 +472,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                     </div>
                 </div>
             </div>
+            </div>{/* end scrollable body */}
 
             {/* What's New Drawer Component */}
             <UpdatesDrawer isOpen={updatesOpen} onClose={() => setUpdatesOpen(false)} />

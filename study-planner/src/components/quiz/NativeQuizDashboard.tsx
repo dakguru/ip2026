@@ -80,9 +80,9 @@ export default function NativeQuizDashboard({
         if (showTopics) {
             return (
                 <AppScreenWrapper hideStatusBarPadding={true}>
-                    <div className="bg-slate-50 dark:bg-zinc-950 min-h-screen font-sans text-slate-800 dark:text-zinc-200">
-                        {/* Immersive Hero Bar */}
-                        <div className={`relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-8 shadow-md
+                    <div className="bg-slate-50 dark:bg-zinc-950 h-full flex flex-col font-sans text-slate-800 dark:text-zinc-200">
+                        {/* Immersive Hero Bar (Fixed) */}
+                        <div className={`shrink-0 relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-8 shadow-md
                             ${isPS ? 'bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 border-b border-teal-700/50' : 'bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 border-b border-purple-700/50'}
                         `}>
                             {/* Glow Effects */}
@@ -109,8 +109,8 @@ export default function NativeQuizDashboard({
                             </div>
                         </div>
 
-                        {/* Content */}
-                        <div className="p-4 sm:p-6 space-y-6 pb-32 max-w-4xl mx-auto w-full relative z-20">
+                        {/* Scrollable Content */}
+                        <div className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 space-y-6 pb-32 max-w-4xl mx-auto w-full relative z-20">
                             {/* Search Bar */}
                             <div className="relative">
                                 <div className="flex items-center bg-white dark:bg-zinc-900 rounded-2xl shadow-sm overflow-hidden border border-zinc-200/80 dark:border-zinc-800">
@@ -184,9 +184,9 @@ export default function NativeQuizDashboard({
 
     return (
         <AppScreenWrapper hideStatusBarPadding={true}>
-            <div className="bg-slate-50 dark:bg-zinc-950 min-h-screen font-sans text-slate-800 dark:text-zinc-200">
-                {/* Immersive Hero Bar */}
-                <div className={`relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-8 shadow-md
+            <div className="bg-slate-50 dark:bg-zinc-950 h-full flex flex-col font-sans text-slate-800 dark:text-zinc-200">
+                {/* Immersive Hero Bar (Fixed) */}
+                <div className={`shrink-0 relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-8 shadow-md
                     ${isPS ? 'bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 border-b border-teal-700/50' : 'bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 border-b border-purple-700/50'}
                 `}>
                     {/* Glow Effects */}
@@ -217,7 +217,8 @@ export default function NativeQuizDashboard({
                     </div>
                 </div>
 
-                <div className="p-4 sm:p-6 pb-32 space-y-6 max-w-4xl mx-auto w-full relative z-20">
+                {/* Scrollable Content */}
+                <div className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 pb-32 space-y-6 max-w-4xl mx-auto w-full relative z-20">
                     <div className="flex flex-col gap-4 w-full">
                         {/* 1. All India Mock Test Banner */}
                         <Link href="/mock-tests" className="w-full flex flex-col group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white shadow-xl shadow-indigo-500/20 active:scale-[0.98] transition-transform">

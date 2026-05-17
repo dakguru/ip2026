@@ -47,10 +47,10 @@ export default function NativeFlashcardsHomeV2({
     // And "Floating Filter Chips".
 
     return (
-        <div className="min-h-[100dvh] bg-[#f8f9fb] dark:bg-[#0a0a0a] text-slate-900 dark:text-white pb-[max(6rem,env(safe-area-inset-bottom))] font-sans selection:bg-indigo-500/30 transition-colors duration-300">
+        <div className="h-[100dvh] overflow-hidden flex flex-col bg-[#f8f9fb] dark:bg-[#0a0a0a] text-slate-900 dark:text-white font-sans selection:bg-indigo-500/30 transition-colors duration-300">
 
-            {/* 1. HERO HEADER (Top 35% ish visually, simplified for scroll) */}
-            <div className="relative pt-[max(2rem,env(safe-area-inset-top))] pb-4 px-6 overflow-hidden">
+            {/* 1. HERO HEADER (Fixed) */}
+            <div className="shrink-0 relative pt-[max(2rem,env(safe-area-inset-top))] pb-4 px-6 overflow-hidden">
                 {/* Background Ambient Gradients */}
                 <div className="absolute top-[-50%] left-[-20%] w-[80%] h-[80%] rounded-full bg-indigo-600/10 blur-[100px] pointer-events-none" />
                 <div className="absolute top-[0%] right-[-20%] w-[60%] h-[60%] rounded-full bg-violet-600/5 blur-[80px] pointer-events-none" />
@@ -73,8 +73,8 @@ export default function NativeFlashcardsHomeV2({
                 </motion.div>
             </div>
 
-            {/* 2. FLOATING SEARCH BAR & FILTERS */}
-            <div className="sticky top-0 z-50 px-6 py-2 bg-[#f8f9fb]/90 dark:bg-[#0a0a0a]/90 backdrop-blur-2xl border-b border-zinc-200/60 dark:border-zinc-800/60 transition-all">
+            {/* 2. FLOATING SEARCH BAR & FILTERS (Fixed) */}
+            <div className="shrink-0 z-50 px-6 py-2 bg-[#f8f9fb]/90 dark:bg-[#0a0a0a]/90 backdrop-blur-2xl border-b border-zinc-200/60 dark:border-zinc-800/60 transition-all">
                 <motion.div
                     initial={{ scale: 0.95, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -118,6 +118,8 @@ export default function NativeFlashcardsHomeV2({
                 </div>
             </div>
 
+            {/* SCROLLABLE BODY */}
+            <div className="flex-1 overflow-y-auto overscroll-contain pb-[max(6rem,env(safe-area-inset-bottom))]">
             {/* 3. COMPACT STATS ROW (Horizontal Scroll) */}
             <div className="mt-4 mb-8 px-6">
                 <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide -mx-6 px-6">
@@ -216,6 +218,7 @@ export default function NativeFlashcardsHomeV2({
                 )}
             </div>
 
+            </div>{/* end scrollable body */}
         </div>
     );
 }

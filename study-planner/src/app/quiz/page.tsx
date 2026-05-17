@@ -355,7 +355,7 @@ export default function QuizDashboard() {
         }
 
         return (
-            <AppScreenWrapper hideStatusBarPadding={true}>
+            <AppScreenWrapper hideStatusBarPadding={true} scrollableContent={false}>
                 <div className="bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200 min-h-screen">
                     <div className={`relative w-full overflow-hidden transition-all duration-500 pt-[max(24px,env(safe-area-inset-top,0px))] pb-16 shadow-lg
                         ${isPS 
@@ -581,6 +581,7 @@ export default function QuizDashboard() {
             <>
                 <style dangerouslySetInnerHTML={{ __html: getSliderStyles(isPS) }} />
                 <AppScreenWrapper
+                    scrollableContent={false}
                     header={
                         <div className="flex items-center gap-3">
                             <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 p-1.5 -ml-1.5 rounded-xl transition-colors">
@@ -852,7 +853,7 @@ export default function QuizDashboard() {
     }
 
     return (
-        <AppScreenWrapper hideStatusBarPadding={true}>
+        <AppScreenWrapper hideStatusBarPadding={true} scrollableContent={false}>
             <div className="bg-slate-50 dark:bg-zinc-950 font-sans text-slate-800 dark:text-zinc-200 min-h-screen pb-20">
                 <HomeHeader isLoggedIn={true} membershipLevel={membershipLevel as any} />
                 
