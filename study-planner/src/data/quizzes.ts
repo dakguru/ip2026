@@ -25,6 +25,8 @@ import { establishment_norms_set1 } from './flashcards/establishmentNorms';
 import { cvc_procurement_set1, cvc_procurement_set2, cvc_procurement_set3, cvc_procurement_set4, cvc_procurement_set5 } from './flashcards/cvcProcurement';
 import { manual_procurement_set1, manual_procurement_set2, manual_procurement_set3, manual_procurement_set4 } from './flashcards/manualProcurementGoods';
 import { welfare_measures_set1, welfare_measures_set2, welfare_measures_set3 } from './flashcards/welfareMeasures';
+import { gfr_2017_set1, gfr_2017_set2, gfr_2017_set3, gfr_2017_set4, gfr_2017_set5 } from './flashcards/generalFinancialRules2017';
+
 
 
 // ----- EXISTING QUESTION DATA -----
@@ -8294,7 +8296,13 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   223: welfare_measures_set1,
   224: welfare_measures_set2,
   225: welfare_measures_set3,
+  350: gfr_2017_set1,
+  351: gfr_2017_set2,
+  352: gfr_2017_set3,
+  353: gfr_2017_set4,
+  354: gfr_2017_set5,
 };
+
 
 export interface RawQuestion {
   q: string;
@@ -8390,7 +8398,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-9', 'CCS (Commutation of Pension) Rules 1981', 'Paper III', [194, 195]),
   createTopic('p3-10', 'Sexual Harassment at Work place (Prevention, prohibition & Redressal) Act, 2013', 'Paper III', [139, 140]),
   createTopic('p3-11', 'Central Civil Services (Implementation of NPS) Rules, 2021', 'Paper III', [73]),
-  createTopic('p3-12', 'General Financial Rules 2017', 'Paper III'),
+  createTopic('p3-12', 'Chapter 2 & 6 of General Financial Rules, 2017', 'Paper III', [350, 351, 352, 353, 354]),
   createTopic('p3-13', 'CCS (LTC) Rules 1988', 'Paper III', [119, 120, 121]),
   createTopic('p3-14', 'CCS (Leave) Rules, 1972', 'Paper III', [125, 126, 127, 128, 206, 207]),
 
