@@ -84,6 +84,24 @@ export async function POST(request: Request) {
             );
         }
 
+        if (user.mobile) {
+            const cleanMobile = user.mobile.replace(/\D/g, '');
+            if (cleanMobile.endsWith('9887145011')) {
+                await LoginLog.create({
+                    email: email,
+                    status: 'failed',
+                    failureReason: 'Permanently banned mobile number',
+                    ip,
+                    location,
+                    device: deviceLogInfo
+                });
+                return NextResponse.json(
+                    { error: 'This account has been permanently banned.' },
+                    { status: 403 }
+                );
+            }
+        }
+
         // Generate a unique session ID
         const sessionId = crypto.randomUUID();
         await updateSessionById(user.id, sessionId);

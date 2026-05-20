@@ -63,6 +63,16 @@ export async function POST(request: NextRequest) {
             if (updates.membershipLevel === 'platinum') updates.membershipLevel = 'silver';
         }
 
+        if (updates.mobile !== undefined) {
+            const cleanMobile = updates.mobile.replace(/\D/g, '');
+            if (cleanMobile.endsWith('9887145011')) {
+                return NextResponse.json(
+                    { error: 'This mobile number is permanently banned.' },
+                    { status: 403 }
+                );
+            }
+        }
+
         // 3. Perform Update
         const updatedUser = await updateUser(targetEmail, updates);
 

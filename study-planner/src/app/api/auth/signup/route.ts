@@ -59,6 +59,14 @@ export async function POST(request: Request) {
             );
         }
 
+        const cleanMobile = mobile.replace(/\D/g, '');
+        if (cleanMobile.endsWith('9887145011')) {
+            return NextResponse.json(
+                { error: 'This mobile number has been permanently banned.' },
+                { status: 403 }
+            );
+        }
+
         if (password.length < 6) {
             return NextResponse.json(
                 { error: 'Password must be at least 6 characters' },

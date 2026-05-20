@@ -19,7 +19,16 @@ export async function POST(request: Request) {
         const updates: any = {};
         if (name !== undefined) updates.name = name;
         if (email !== undefined) updates.email = email;
-        if (mobile !== undefined) updates.mobile = mobile;
+        if (mobile !== undefined) {
+            const cleanMobile = mobile.replace(/\D/g, '');
+            if (cleanMobile.endsWith('9887145011')) {
+                return NextResponse.json(
+                    { error: 'This mobile number is permanently banned.' },
+                    { status: 403 }
+                );
+            }
+            updates.mobile = mobile;
+        }
         if (examPreparingFor !== undefined) updates.examPreparingFor = examPreparingFor;
         if (dateOfJoining !== undefined) updates.dateOfJoining = dateOfJoining;
         if (courseMode !== undefined) updates.courseMode = courseMode;
