@@ -17,7 +17,6 @@ export async function middleware(request: NextRequest) {
         pathname === '/terms' ||
         pathname === '/disclaimer' ||
         pathname === '/refund-policy' ||
-        pathname.startsWith('/dak-sutra') ||
         pathname === '/mock-tests';
 
     const isLogout = request.nextUrl.searchParams.get('logout') === 'true';
@@ -51,7 +50,9 @@ export async function middleware(request: NextRequest) {
     if (isProtectedRoute) {
         if (!token) {
             // Use 303 to force a GET request to the login page, even if the current request is a POST (e.g. from Razorpay)
-            return NextResponse.redirect(new URL('/login', request.url), 303);
+            const redirectUrl = new URL('/login', request.url);
+            redirectUrl.searchParams.set('redirect', request.nextUrl.pathname + request.nextUrl.search);
+            return NextResponse.redirect(redirectUrl, 303);
         }
 
         // Parse token safely

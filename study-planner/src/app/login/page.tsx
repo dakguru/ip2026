@@ -137,7 +137,8 @@ function AuthForm() {
                 }
                 if (data.user?.hasSeenCoursePrompt)
                     localStorage.setItem("dg_course_mode_prompt_seen", "true");
-                router.push("/");
+                const redirectUrl = searchParams.get("redirect") || "/";
+                router.push(redirectUrl);
                 router.refresh();
             } else {
                 if (formData.courseMode) {

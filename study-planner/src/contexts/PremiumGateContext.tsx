@@ -2,12 +2,12 @@
 
 import { createContext, useContext, useEffect, useRef, useState, useCallback, ReactNode } from "react";
 
-const TIMER_DURATION = 90; // seconds free access per window
-const REFRESH_WINDOW_MS = 60 * 60 * 1000; // 60 minutes in ms
+const TIMER_DURATION = 30; // seconds free access per window
+const REFRESH_WINDOW_MS = 90 * 60 * 1000; // 90 minutes in ms
 const STORAGE_KEY = "dak_sutra_gate";
 
 // Stored shape: { epoch: number; start: number }
-// epoch  — which 5-hr window this entry belongs to
+// epoch  — which 90-min window this entry belongs to
 // start  — timestamp when the user first opened a detail page in this window
 
 function getCurrentEpoch(): number {
@@ -25,7 +25,7 @@ function loadGate(): StoredGate | null {
         const raw = localStorage.getItem(STORAGE_KEY);
         if (!raw) return null;
         const parsed: StoredGate = JSON.parse(raw);
-        // Discard if it belongs to a previous 60-min window
+        // Discard if it belongs to a previous 90-min window
         if (parsed.epoch !== getCurrentEpoch()) return null;
         return parsed;
     } catch {
@@ -41,7 +41,7 @@ function saveGate(start: number): void {
 interface PremiumGateContextType {
     isLocked: boolean;
     remainingTime: number;   // seconds left in free window
-    nextRefreshAt: number;   // timestamp (ms) when next 60-min window opens
+    nextRefreshAt: number;   // timestamp (ms) when next 90-min window opens
     isPremium: boolean;
 }
 
@@ -93,7 +93,7 @@ export function PremiumGateProvider({
             return;
         }
 
-        // Load (or create) gate entry for the current 60-min window
+        // Load (or create) gate entry for the current 90-min window
         let gate = loadGate();
         if (!gate) {
             const start = Date.now();
@@ -104,7 +104,7 @@ export function PremiumGateProvider({
         const startTime = gate.start;
 
         const tick = () => {
-            // Check if a new 60-min window has started since we began
+            // Check if a new 90-min window has started since we began
             const freshGate = loadGate();
             if (!freshGate) {
                 // Window rolled over — reset
