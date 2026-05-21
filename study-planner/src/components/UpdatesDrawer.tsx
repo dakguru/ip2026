@@ -19,6 +19,25 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "21.05.2026",
         items: [
             {
+                title: "📚 PDF Notes: Schedule of Financial Powers Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>Schedule of Financial Powers</strong> PDF notes for both <strong>PS Group B</strong> and <strong>LDCE IP</strong> Course modes!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide">Financial & Procurement</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Comprehensive notes covering the latest Schedule of Financial Powers of Divisional Heads, Heads of Circle, etc.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "📚 PDF Notes: Recruitment Rules Updated",
                 desc: (
                     <div className="space-y-4">

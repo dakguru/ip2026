@@ -20,7 +20,8 @@
       "Bash(find 'd:/IP 2026/study-planner' -type f \\\\\\(-name *.json -o -name *.ts -o -name *.js \\\\\\))",
       "Bash(xargs grep:*)",
       "Bash(find 'd:/IP 2026/study-planner/src' -type f -name *.ts -o -name *.tsx -o -name *.json)",
-      "Bash(cd /d/IP 2026/study-planner)"
+      "Bash(cd /d/IP 2026/study-planner)",
+      "Bash(node -e \"const f = require\\('fs'\\); const s = f.readFileSync\\('./scripts/seed-dak-sutra-gfr-2017-goods.js', 'utf8'\\); console.log\\('Lines:', s.split\\('\\\\n'\\).length, '| Size:', \\(s.length/1024\\).toFixed\\(1\\), 'KB'\\);\")"
     ]
   }
 }

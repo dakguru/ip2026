@@ -678,7 +678,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Divisional Heads, Heads of Circle.",
             filename: "Schedule_of_Financial_Powers.pdf",
             path: "/notes/paper-3/Schedule_of_Financial_Powers.pdf",
-            size: "1.2 MB",
+            size: "4.7 MB",
             color: "blue",
             topic: "Financial & Procurement"
         },
