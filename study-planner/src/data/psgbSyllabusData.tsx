@@ -121,7 +121,7 @@ export const psgbSyllabusData = {
           { name: "Welfare measures available to Departmental Employees and Gramin Dak Sevak of DoP.", link: null, pdfs: [{ title: "Welfare Measures", path: "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf" }] },
           { name: "DoP&T instructions issued from time to time on Establishment and administration.", link: null, pdfs: [{ title: "DoP&T instructions on Establishment and administration", path: "/notes/paper-1/DoPT_Instructions.pdf" }] },
 
-          { name: "Recruitment Rules relating to various cadres in D/o Posts", link: null, pdfs: [{ title: "Recruitment Rules relating to various cadres in D/o Posts", path: "/notes/paper-1/Rectt Rules of DOP.pdf" }] },
+          { name: "Recruitment Rules relating to various cadres in D/o Posts", link: null, pdfs: [{ title: "Recruitment Rules relating to various cadres in D/o Posts", path: "/notes/paper-1/RR_DoP_Cadres_Corrected.pdf" }] },
           { name: "Establishment Norms", link: null }
         ]
       },
