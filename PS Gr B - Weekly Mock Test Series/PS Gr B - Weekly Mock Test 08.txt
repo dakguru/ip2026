@@ -1,0 +1,454 @@
+Q1. Which constitutional provision serves as the statutory foundation for framing Recruitment Rules for various posts under the Central Government?
+A. Article 309
+B. Article 311
+C. Article 312
+D. Article 315
+Answer: A
+Explanation: Recruitment Rules are statutory rules framed under the proviso to Article 309 of the Constitution of India, regulating the recruitment and conditions of service for public services.
+
+Q2. According to the Department of Posts (Multi Tasking Staff) Recruitment (Amendment) Rules, 2023, what is the correct GDS quota structure for MTS recruitment?
+A. 50% by Seniority-cum-Fitness (5 years service) and 50% by Competitive Examination (3 years service)
+B. 25% by Seniority-cum-Fitness and 75% by Competitive Examination
+C. 100% Direct Recruitment from the open market
+D. 50% by Limited Departmental Competitive Examination and 50% Direct Recruitment
+Answer: A
+Explanation: The 2023 amendment introduced a 50% quota by Seniority-cum-Fitness from GDS with 5 years of regular service, and 50% by Competitive Examination from GDS with 3 years of service.
+
+Q3. Consider the following statements regarding the Postman and Mail Guard Recruitment Rules, 2023:
+
+1. A valid driving licence for a two-wheeler or light motor vehicle is mandatory for both Postman and Mail Guard.
+2. The recruitment ratio is 50% by LDCE from MTS and 50% by Competitive Examination limited to GDS.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: The driving licence requirement is unique to the Postman cadre and is not applicable to Mail Guards. The recruitment ratio was substituted in 2023 to 50% LDCE from MTS and 50% competitive exam limited to GDS.
+
+
+
+Q4. An official in the Department of Posts received a financial upgradation under MACP to Level 6. The substantive post held by the official is Lower Selection Grade (Level 5). Under the recruitment rules, for which promotional grade is the official eligible to be considered?
+A. Inspector of Posts
+B. Higher Selection Grade-II (HSG-II)
+C. Higher Selection Grade-I (HSG-I)
+D. Postal Service Group B
+Answer: B
+Explanation: Eligibility for promotion is determined with respect to the post held substantively and its relevant pay level, not the upgraded pay level attained via MACP. The official remains in LSG (Level 5) substantively, making them eligible for HSG-II.
+
+Q5. What is the mandatory induction training requirement and probation period for a Direct Recruit Postal Assistant under the PA/SA Recruitment Rules, 2022?
+A. One year probation with successful completion of training within one year
+B. Two years probation with successful completion of Induction Training within two years of appointment
+C. Two years probation with no mandatory training requirement
+D. Three years probation with successful completion of Induction Training within one year
+Answer: B
+Explanation: Direct Recruits have a probation period of two years and must successfully complete Induction Training at a Postal Training Centre within 2 years of appointment.
+
+Q6. What is the maximum age limit for an official appearing in the Limited Departmental Competitive Examination (LDCE) for the Inspector of Posts cadre?
+A. Not exceeding 30 years
+B. Not exceeding 35 years
+C. Not exceeding 40 years
+D. Not exceeding 45 years
+Answer: D
+Explanation: The age limit for LDCE IP is not exceeding 45 years as on the crucial date of eligibility, which is distinct from the 30-year limit applicable to Direct Recruitment.
+
+Q7. Under the Department of Posts (Inspector Posts) Recruitment Rules, 2019, what is the required qualifying service for an official to be eligible to appear in the LDCE for Inspector of Posts?
+A. 3 years
+B. 5 years
+C. 8 years
+D. 10 years
+Answer: C
+Explanation: Officials of various feeder grades require eight years of regular qualifying service as on the crucial date to be eligible for appearing in the LDCE IP.
+
+Q8. Consider the following statements regarding the Draft Postal Service Group B (PS Gr.B) Recruitment Rules 2024 compared to the operative 1987 RR:
+
+1. The Draft RR 2024 proposes to completely remove the 6% Clerical Line LDCE quota.
+2. The Draft RR 2024 proposes a 100% promotion pathway from the Inspector of Posts cadre.
+3. The operative 1987 RR allows promotion via a 75% seniority quota and 25% LDCE quota (19% IP + 6% Clerical).
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The 1987 RR operates on a 75% promotion + 19% LDCE (IP) + 6% LDCE (Clerical) split. The Draft 2024 RR proposes 100% promotion from the IP cadre, removing all LDCE components including the clerical line.
+
+
+
+Q9. An official working in Level 4 of the Pay Matrix wishes to appear for the SAS examination to become an Assistant Accounts Officer (AAO). What is the minimum qualifying service required for this official under the AAO Recruitment Rules, 2018?
+A. 4 years
+B. 7 years
+C. 9 years
+D. 11 years
+Answer: C
+Explanation: According to the multi-level qualifying service structure for the AAO cadre, Group C employees in Level 4 require 9 years of qualifying service.
+
+Q10. Which of the following clauses is a standard, verbatim provision found across all cadre Recruitment Rules in the Department of Posts?
+A. Liability to serve in Army Postal Services
+B. Disqualification regarding bigamy
+C. Mandatory induction training within one year
+D. Exemption from typing test for PwBD candidates
+Answer: B
+Explanation: Every RR contains a standard disqualification (bigamy) clause stating no person who has a spouse living and enters into a marriage shall be eligible, subject to Central Government exemption.
+
+Q11. According to the CCS (CCA) Rules, 1965, the term "Appointing Authority" in relation to a Government servant includes which of the following?
+A. Only the authority empowered to make appointments to the Service
+B. Only the authority which appointed the Government servant to such Service, grade or post
+C. The authority empowered to make appointments or the authority which actually appointed the servant, whichever is the highest authority
+D. The Head of the Office exclusively
+Answer: C
+Explanation: The "Appointing authority" means the authority empowered to make appointments to the Service/post, or the authority which appointed the Government servant, whichever authority is the highest.
+
+Q12. The CCS (CCA) Rules, 1965, are NOT applicable to which of the following categories of employees?
+
+1. A member of the All India Services
+2. Extra-Departmental Agents (Gramin Dak Sevaks)
+3. Civilian Government servants in the Defence Services
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: The rules apply to civilian Government servants in the Defence Services , but do not apply to members of All India Services, Extra-Departmental Agents, Railway servants, and casual employees.
+
+
+
+Q13. Under Rule 10 of the CCS (CCA) Rules, 1965, a Government servant shall be deemed to have been placed under suspension if detained in custody on a criminal charge for a period exceeding:
+A. 24 hours
+B. 48 hours
+C. 72 hours
+D. 90 days
+Answer: B
+Explanation: A Government servant is deemed to have been placed under suspension with effect from the date of detention if detained in custody for a period exceeding 48 hours.
+
+Q14. What is the maximum duration for which an order of suspension can be extended at a time, upon review by the competent authority before the expiry of 90 days?
+A. 60 days
+B. 90 days
+C. 120 days
+D. 180 days
+Answer: D
+Explanation: An order of suspension shall be reviewed before the expiry of 90 days. The extension of suspension shall not be for a period exceeding 180 days at a time.
+
+Q15. Which of the following is strictly classified as a "Minor Penalty" under Rule 11 of the CCS (CCA) Rules, 1965?
+A. Withholding of increments of pay
+B. Compulsory retirement
+C. Reduction to a lower time-scale of pay for a specified period
+D. Warning
+Answer: A
+Explanation: Withholding of increments is a minor penalty under Rule 11(iv). Compulsory retirement and reduction to lower time-scale are major penalties. A 'warning' is not a penalty.
+
+Q16. Under the CCS (CCA) Rules, what is the maximum number of disciplinary cases a serving official (like an IP/ASP) can act as an Inquiry Officer for in a year?
+A. 4 cases in a year
+B. 8 cases in a year
+C. 10 cases in a year
+D. 12 cases in a year
+Answer: C
+Explanation: A serving official acting as an Inquiry Officer has a ceiling of 10 cases in a year, and not more than 2 cases at a time.
+
+Q17. A disciplinary authority intends to impose a major penalty. According to Rule 14 of the CCS (CCA) Rules, what must the inquiry report prepared after the conclusion of the inquiry contain?
+
+1. The article of charge and the statement of the imputations
+2. Defence of the Government servant in respect of each article
+3. An assessment of the evidence and the findings on each article of charge
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The inquiry report shall contain the article of charge, the defence of the Government servant, an assessment of the evidence, and the findings on each article along with the reasons.
+
+
+
+Q18. According to Rule 15 of the CCS (CCA) Rules, how many days must a Government servant be given to submit a written representation upon receiving a copy of the inquiry report and the disciplinary authority's tentative reasons for disagreement?
+A. 7 days
+B. 10 days
+C. 15 days
+D. 30 days
+Answer: C
+Explanation: The Government servant shall be required to submit his written representation or submission to the disciplinary authority within fifteen days.
+
+Q19. Under Rule 25 of the CCS (CCA) Rules, 1965, what is the period of limitation for preferring an appeal against an order imposing a penalty?
+A. 30 days from the date the order was signed
+B. 45 days from the date the copy of the order is delivered to the appellant
+C. 60 days from the date of the incident
+D. 90 days from the date the copy of the order is delivered
+Answer: B
+Explanation: No appeal shall be entertained unless it is preferred within a period of 45 days from the date on which a copy of the order appealed against is delivered to the appellant.
+
+Q20. Consider the following statements regarding the Revision of orders under Rule 29 of the CCS (CCA) Rules:
+
+1. The power of revision may be exercised suo motu or on application.
+2. The authority who decided the appeal can revise his own order.
+3. An appellate authority can revise the order within six months of the date of the order proposed to be revised.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Revision can be exercised suo motu or on application. The authority who decided the appeal cannot revise his own order; a higher authority must do so. The appellate authority can revise an order within six months.
+
+
+
+Q21. According to the CCS (Conduct) Rules, 1964, what is the required course of action for a Government servant when an oral direction is received from an official superior?
+A. Comply immediately without questioning and document it in the annual appraisal.
+B. Refuse to execute the task until written orders are provided.
+C. Seek confirmation of the direction in writing as early as possible.
+D. Escalate the matter to the Head of Department.
+Answer: C
+Explanation: A Government servant who has received oral direction from his official superior shall seek confirmation of the same in writing as early as possible, and it is the superior's duty to confirm it.
+
+Q22. Under Rule 3(C) of the CCS (Conduct) Rules, which of the following actions is prohibited?
+A. Undertaking honorary work of a charitable nature
+B. Indulging in any act of sexual harassment of any woman at any workplace
+C. Occasional work of a literary character
+D. Giving evidence in a judicial enquiry
+Answer: B
+Explanation: Rule 3-C explicitly prohibits any Government servant from indulging in any act of sexual harassment of any woman at any workplace.
+
+Q23. According to Government decisions under the CCS (Conduct) Rules, what is the time limit for acknowledging a communication received from a Member of Parliament?
+A. 5 days
+B. 10 days
+C. 15 days
+D. 30 days
+Answer: C
+Explanation: Each communication received from an MP must be acknowledged within 15 days, followed by a reply within the next 15 days.
+
+Q24. Consider the following activities related to strikes under Rule 7 of the CCS (Conduct) Rules:
+
+1. Mass abstention from work without permission
+2. Refusal to work overtime where such work is necessary in the public interest
+3. 'Pen down' or 'stay-in' strikes
+Which of the above are defined as participating in a strike?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The definition of 'strike' includes mass abstention, refusal to work overtime when necessary, and practices like 'go slow', 'sit-down', 'pen down', and 'token' strikes.
+
+
+
+Q25. Under the CCS (Conduct) Rules, what is the financial limit beyond which a Group 'B' officer must report the acceptance of a gift from near relatives on occasions such as weddings?
+A. Rs. 2,000
+B. Rs. 7,500
+C. Rs. 15,000
+D. Rs. 25,000
+Answer: C
+Explanation: A Group 'B' officer may accept gifts from near relatives on weddings or similar functions but must make a report to the Government if the value exceeds Rs. 15,000.
+
+Q26. Which of the following is an accurate statement regarding Rule 15-A (Sub-letting and vacation of Government accommodation) of the CCS (Conduct) Rules?
+A. A Government servant can sublet accommodation if they do not charge rent.
+B. Subletting is permitted with prior approval from the Head of Office.
+C. Subletting of Government accommodation is a grave misconduct that warrants initiating disciplinary proceedings under Rule 14 of CCS (CCA) Rules.
+D. An official has up to one year to vacate cancelled accommodation.
+Answer: C
+Explanation: Subletting Government accommodation is explicitly prohibited and deemed a grave misconduct, for which disciplinary proceedings under Rule 14 of the CCS (CCA) Rules, 1965, are to be initiated.
+
+Q27. When must a Government servant report a transaction of movable property (such as purchasing a car) to the prescribed authority under Rule 18?
+A. If the value exceeds one month's basic pay, within 15 days
+B. If the value exceeds two months' basic pay, within one month
+C. If the value exceeds three months' basic pay, within two months
+D. All movable property transactions must be reported regardless of value
+Answer: B
+Explanation: A transaction in movable property must be reported within one month from the date of the transaction if the value exceeds two months' basic pay of the Government servant.
+
+Q28. Under the CCS (Conduct) Rules, what is the time limit for the competent authority to grant permission for transactions in immovable property outside India, beyond which permission may be assumed?
+A. 15 days
+B. 30 days
+C. 45 days
+D. 60 days
+Answer: D
+Explanation: The time limit for assuming permission for transactions in immovable property outside India (Rule 18-A) is 60 days in the absence of any communication.
+
+Q29. According to the CCS (Conduct) Rules, 1964, can a Government servant accept a part-time lectureship after office hours?
+A. Yes, without any restriction as it is an academic activity.
+B. Yes, provided they inform the Head of Office.
+C. No, part-time lectureship amounts to a regular remunerative occupation requiring sanction, and after office hours part-time jobs are not allowed.
+D. Yes, if the remuneration is donated to a charitable organization.
+Answer: C
+Explanation: Government decisions clarify that part-time lectureship amounts to regular remunerative occupation attracting the need for sanction, and part-time jobs after office hours are generally not allowed.
+
+Q30. Under Rule 22-A of the CCS (Conduct) Rules, 1964, what is the minimum legal age below which a Government servant is prohibited from employing a child to work?
+A. 12 years
+B. 14 years
+C. 16 years
+D. 18 years
+Answer: B
+Explanation: Rule 22-A explicitly prohibits Government servants from employing any child below the age of 14 years to work.
+
+Q31. According to the CCS (Temporary Service) Rules, 1965, what is the required notice period for the termination of a temporary Government servant's services?
+A. 14 days
+B. One month
+C. Three months
+D. Six months
+Answer: B
+Explanation: The services of a temporary Government servant are liable to termination at any time by a notice in writing, and the period of such notice shall be one month.
+
+Q32. Under the CCS (Temporary Service) Rules, if notice sent by registered post to terminate an employee is returned unserved, what is the procedurally correct next step?
+A. Send the notice again via regular post
+B. Publish it in the Official Gazette, upon which it is deemed personally served
+C. Deliver the notice to a family member at the address
+D. Suspend the employee immediately
+Answer: B
+Explanation: If the notice sent by registered post is returned unserved, it shall be published in the Official Gazette and deemed to have been personally served on the date it was published.
+
+Q33. A temporary Government servant with 22 years of service seeks voluntary retirement. What terminal benefit is the official eligible for, assuming they give three months' notice?
+A. Terminal gratuity capped at two-thirds of the standard amount
+B. Retiring pension and retirement gratuity as per CCS (Pension) Rules
+C. No pensionary benefits, only encashment of leave
+D. A lump sum ex-gratia payment equal to 10 months' pay
+Answer: B
+Explanation: A temporary Government servant who seeks voluntary retirement after 20 years of service is eligible for retiring pension and retirement gratuity under the provisions of the CCS (Pension) Rules, 2021.
+
+Q34. Consider the following scenarios involving the terminal gratuity of a temporary Government servant:
+
+1. The servant is discharged due to physical unfitness.
+2. The servant is compulsorily retired as a disciplinary measure.
+3. The servant resigns from the post unconditionally.
+In which of the scenarios is the servant NOT eligible for ANY gratuity under Rule 10?
+A. 1 only
+B. 2 only
+C. 3 only
+D. 2 and 3 only
+Answer: C
+Explanation: No gratuity is admissible to a Government servant who resigns their post (unless taking up an appointment in a Govt company with prior permission) or is dismissed/removed. A compulsorily retired official gets a reduced gratuity (minimum two-thirds).
+
+
+
+Q35. Under the CCS (Temporary Service) Rules, on the termination of service or death, what is the maximum number of days for which payment of the cash equivalent of leave salary can be made?
+A. 150 days of EL only
+B. 240 days of EL and HPL
+C. 300 days of EL and HPL
+D. 300 days of EL only
+Answer: C
+Explanation: On termination of service or death, the payment of cash equivalent of leave salary is subject to a maximum of 300 days of Earned Leave (EL) and Half Pay Leave (HPL) combined.
+
+Q36. Which of the following conditions allows an appointing authority to terminate the services of a temporary Government servant without providing the standard one-month notice?
+A. When the official attains the age of 50 years
+B. When the official is declared physically unfit for continuance in service by a competent medical authority
+C. When a disciplinary inquiry is initiated
+D. When the official is placed under suspension
+Answer: B
+Explanation: Under Rule 6, services may be terminated without notice on the official being declared physically unfit by an authority competent to declare permanent incapacitation.
+
+Q37. An order of termination was issued to a temporary Government servant. Within what period can the Head of Department (as the higher authority) reopen the case to review the termination?
+A. Within one month of the notice date
+B. Within three months from the date of termination (or notice date if notice was given)
+C. Within six months from the date of the incident
+D. Within one year of the termination
+Answer: B
+Explanation: The Head of Department may reopen the case, provided that except in special circumstances, no case shall be reopened after the expiry of three months from the date of notice or termination.
+
+Q38. For calculating the terminal/death gratuity of a temporary Government servant, an increment earned during the currency of Earned Leave (EL) forms part of the pay if the EL does not exceed:
+A. 30 days
+B. 60 days
+C. 90 days
+D. 120 days
+Answer: D
+Explanation: An increment earned during the currency of earned leave not exceeding 120 days expiring on the date of retirement forms part of the pay for calculating terminal/death gratuity.
+
+Q39. Under the CCS (Temporary Service) Rules, what is the definition of "Temporary service"?
+A. Service under a daily wage contract
+B. The service of a temporary Government servant in a temporary post or officiating service in a permanent post under the Government of India
+C. Service rendered by a person employed through an outsourced agency
+D. Employment strictly limited to seasonal activities
+Answer: B
+Explanation: Temporary service is defined as the service of a temporary Government servant in a temporary post or officiating service in a permanent post under the Government of India.
+
+Q40. Does the CCS (Temporary Service) Rules, 1965 apply to civilian employees paid from defence services estimates?
+A. Yes, provided they do not hold a lien on any post under the Government
+B. No, defence civilians are covered exclusively by Army Rules
+C. Yes, but only to Group A officers
+D. No, it strictly applies only to Ministerial civil servants
+Answer: A
+Explanation: The rules apply to all persons holding a civil post, including civilians paid from defence services estimates under the Government of India, provided they do not hold a lien on any post.
+
+Q41. According to the Casual Labourers (Grant of Temporary Status and Regularization) Scheme 1993, what is the minimum continuous service required for a casual labourer in a 5-day week office to be conferred temporary status?
+A. 180 days
+B. 206 days
+C. 240 days
+D. 300 days
+Answer: B
+Explanation: Temporary status is conferred on those who have rendered continuous service of at least one year, which means engagement for at least 240 days, but 206 days in the case of offices observing a 5-day week.
+
+Q42. Which of the following benefits is NOT granted to a casual labourer upon conferment of temporary status?
+A. Wages at daily rates with reference to the minimum of the pay scale for a corresponding regular MTS
+B. Benefit of increments calculated on a pro-rata basis
+C. Automatic and immediate permanent establishment placement without a selection process
+D. Pro-rata leave entitlement at the rate of one day for every 10 days of work
+Answer: C
+Explanation: Conferment of temporary status does not automatically bring casual labourers onto the permanent establishment unless they are selected through a regular selection process for MTS posts. Options A, B, and D are valid benefits.
+
+Q43. Consider the following statements about leave entitlements for casual labourers with temporary status:
+
+1. They are entitled to pro-rata leave at the rate of one day for every 10 days of work.
+2. They can accumulate leave up to a maximum of 300 days.
+3. They are entitled to encashment of leave upon quitting service.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Casual labourers with temporary status are entitled to pro-rata leave (1 day per 10 days) and can accumulate up to 300 days. However, they are not entitled to encashment of leave on termination or quitting.
+
+
+
+Q44. What percentage of the service rendered under temporary status by a casual labourer is counted for the purpose of retirement benefits after their subsequent regularization?
+A. 25%
+B. 33%
+C. 50%
+D. 100%
+Answer: C
+Explanation: 50% of the service rendered under temporary status is counted for the purpose of retirement benefits after their regularization.
+
+Q45. After acquiring temporary status, what is the eligibility condition for a casual labourer to be treated on par with temporary MTS employees for the purpose of GPF contribution and Festival Advance?
+A. Immediately upon conferment of temporary status
+B. After completing one year of continuous service
+C. After rendering three years of continuous service post-conferment
+D. Only after regularization as an MTS
+Answer: C
+Explanation: After rendering three years' continuous service after conferment of temporary status, the casual labourer is treated on par with temporary MTS employees for GPF contribution and Festival Advance.
+
+Q46. According to the DoP&T instructions, if the nature of work entrusted to a casual worker is the same as that of a regular employee, how should the casual worker be paid?
+A. A consolidated monthly salary decided by the Head of Office
+B. At the rate of 1/30th of the pay at the minimum of the relevant pay scale plus dearness allowance for 8 hours of work
+C. Minimum wages as prescribed by the respective State Government
+D. A fixed hourly rate exclusive of dearness allowance
+Answer: B
+Explanation: Where the nature of work is the same, casual workers are paid at the rate of 1/30th of the pay at the minimum of the relevant pay scale plus dearness allowance for work of 8 hours a day.
+
+Q47. Under the 1993 Scheme, what is the prescribed procedure for filling up Multi Tasking Staff (MTS) posts using casual labourers with temporary status?
+A. All MTS vacancies are exclusively filled by casual workers with temporary status.
+B. Two out of every three vacancies in MTS cadres are filled from amongst casual workers with temporary status.
+C. One out of every four vacancies is reserved for them.
+D. Vacancies are filled purely on a rotational basis with GDS staff.
+Answer: B
+Explanation: Procedure dictates that two out of every three vacancies in MTS cadres in respective offices would be filled up from amongst casual workers with temporary status as per extant rules.
+
+Q48. A physically handicapped casual labourer possessing temporary status is entitled to Transport Allowance at what rate?
+A. Normal rate applicable to MTS
+B. Half the normal rate
+C. Double the normal rate
+D. Exempt from transport allowance
+Answer: C
+Explanation: Physically handicapped casual labourers having temporary status were entitled to transport allowance at double the normal rate, subject to terms and conditions.
+
+Q49. A casual labourer with temporary status wishes to quit service. What is the required notice period?
+A. No notice period is required
+B. One week in writing
+C. One month in writing
+D. Three months in writing
+Answer: C
+Explanation: A casual labourer with temporary status can quit service by giving a written notice of one month.
+
+Q50. Under the Casual Labourers scheme, what is the maximum duration of Paternity Leave granted to a male casual labourer with temporary status (who has less than two surviving children) during his wife's confinement?
+A. 7 days
+B. 10 days
+C. 15 days
+D. 30 days
+Answer: C
+Explanation: Paternity leave as admissible to regular Government employees was extended to casual labourers with temporary status for a period of 15 days.
