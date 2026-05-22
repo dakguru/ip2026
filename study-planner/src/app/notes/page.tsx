@@ -254,7 +254,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Rules relating to Postal Manual Volume VI Parts I, II & III.",
             filename: "Postal_Manual_Vol_VI.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_VI.pdf",
-            size: "4.6 MB",
+            size: "4.7 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
