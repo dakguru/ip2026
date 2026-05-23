@@ -4,6 +4,7 @@ export interface PaperInfo {
     topicId: string | null;
     subjects: string;
     type?: 'mcq' | 'descriptive';
+    pdfPath?: string;
 }
 
 export interface YearInfo {
@@ -35,90 +36,90 @@ export const IP_PYQ_YEARS: YearInfo[] = [
         year: '2024',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2024/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2024/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2024/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2024/paper-4.pdf' },
         ],
     },
     {
         year: '2023',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2023/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2023/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2023/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2023/paper-4.pdf' },
         ],
     },
     {
         year: '2021',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2021/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2021/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2021/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2021/paper-4.pdf' },
         ],
     },
     {
         year: '2019',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2019/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2019/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2019/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2019/paper-4.pdf' },
         ],
     },
     {
         year: '2016',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2016/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2016/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2016/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2016/paper-4.pdf' },
         ],
     },
     {
         year: '2014',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2014/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2014/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2014/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2014/paper-4.pdf' },
         ],
     },
     {
         year: '2013',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2013/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2013/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2013/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2013/paper-4.pdf' },
         ],
     },
     {
         year: '2012',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2012/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2012/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2012/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2012/paper-4.pdf' },
         ],
     },
     {
         year: '2011',
         pattern: 'old',
         papers: [
-            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals' },
-            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects' },
-            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations' },
-            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning' },
+            { num: 1, label: 'Paper I', topicId: null, subjects: 'Post Office Acts, Rules & Manuals', pdfPath: '/pyq/ldce-ip/2011/paper-1.pdf' },
+            { num: 2, label: 'Paper II', topicId: null, subjects: 'SB/SC Schemes, POLI & Allied Subjects', pdfPath: '/pyq/ldce-ip/2011/paper-2.pdf' },
+            { num: 3, label: 'Paper III', topicId: null, subjects: 'General English & Service Regulations', pdfPath: '/pyq/ldce-ip/2011/paper-3.pdf' },
+            { num: 4, label: 'Paper IV', topicId: null, subjects: 'GK, Current Affairs, Aptitude & Reasoning', pdfPath: '/pyq/ldce-ip/2011/paper-4.pdf' },
         ],
     },
 ];
