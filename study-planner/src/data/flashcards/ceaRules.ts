@@ -35,7 +35,7 @@ export const cea_rules_set1: RawQuestion[] = [
         q: "What is the current monthly ceiling for Hostel Subsidy effective from 01.01.2024?",
         o: ["Rs. 6,750", "Rs. 8,100", "Rs. 8,437.50", "Rs. 10,125"],
         a: 2,
-        e: "• The Hostel Subsidy ceiling increased by 25% due to the DA reaching 50%. The new rate is Rs. 8,437.50 per month (81,000 + 25%)."
+        e: "• The Hostel Subsidy ceiling increased by 25% due to DA reaching 50% w.e.f. 01.01.2024. The old monthly rate of Rs. 6,750 increased by 25% to Rs. 8,437.50 per month (Rs. 6,750 × 1.25 = Rs. 8,437.50)."
     },
     {
         q: "What is the total annual ceiling for Hostel Subsidy per child effective from 01.01.2024?",
@@ -44,10 +44,10 @@ export const cea_rules_set1: RawQuestion[] = [
         e: "• The revised annual ceiling for Hostel Subsidy is Rs. 1,01,250 per child (Rs. 8,437.50 × 12)."
     },
     {
-        q: "In the case of a Divyang child, what is the monthly ceiling for Special Allowance for Child Care for women with disabilities effective from 01.01.2024?",
+        q: "For a female government servant who herself has a benchmark disability, what is the revised monthly ceiling for Special Allowance for Child Care effective from 01.01.2024?",
         o: ["Rs. 3,000", "Rs. 3,750", "Rs. 4,500", "Rs. 5,000"],
         a: 1,
-        e: "• The Special Allowance for Child Care for women with disabilities also increased by 25% (from Rs. 3,000 to Rs. 3,750) w.e.f. 01.01.2024."
+        e: "• The Special Allowance for Child Care is payable to female government employees who themselves have benchmark disabilities (not related to whether the child is Divyang). It increased by 25% from Rs. 3,000 to Rs. 3,750 per month w.e.f. 01.01.2024, following DA reaching 50%."
     },
     {
         q: "What is the maximum age limit for a normal child to be eligible for Children Education Allowance?",
@@ -161,7 +161,7 @@ export const cea_rules_set1: RawQuestion[] = [
         q: "If a government servant is on 'Extraordinary Leave' (EOL) without medical certificate, is CEA admissible?",
         o: ["No", "Yes, it is admissible.", "Only for the first 30 days.", "Only if sanctioned by the Head of Department."],
         a: 1,
-        e: "• Admissible during EOL."
+        e: "• CEA is admissible during EOL (with or without medical certificate). Since CEA is an annual reimbursement for the child's actual educational expenditure — not a monthly pay component — it is not suspended during EOL. The child's education is uninterrupted regardless of the parent's leave status. (DoPT has clarified this position consistent with the 7th CPC CEA framework.)"
     },
     {
         q: "What is the rule for CEA in respect of 'Step-children'?",
