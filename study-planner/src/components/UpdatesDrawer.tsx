@@ -16,6 +16,34 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "25.05.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: CCS (Conduct) & GDS (C&E) Rules Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>CCS (Conduct) Rules, 1964</strong> and <strong>GDS (Conduct & Engagement) Rules, 2020</strong> PDF notes to the latest editions for both <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes!</p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-red-50/50 dark:bg-red-900/10 p-3 rounded-xl border border-red-100 dark:border-red-800/50">
+                                <p className="font-bold text-red-700 dark:text-red-300 text-[10px] uppercase tracking-wide">CCS (Conduct) Rules, 1964</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Comprehensive official guide with updated rules and code of conduct for central civil services (updated file size: 4.5 MB).</p>
+                            </div>
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">GDS (C&E) Rules, 2020</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Revised and corrected rules and general conditions for Gramin Dak Sevaks (updated file size: 0.8 MB).</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-red-600 dark:text-red-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access the updated notes now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "22.05.2026",
         items: [
             {

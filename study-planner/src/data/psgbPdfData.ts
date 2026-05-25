@@ -313,7 +313,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Central Civil Services (Conduct) Rules, 1964",
             "filename": "CCS_Conduct_Rules_1965.pdf",
             "path": "/notes/paper-1/CCS_Conduct_Rules_1965.pdf",
-            "size": "0.6 MB",
+            "size": "4.5 MB",
             "color": "red",
             "topic": "CCS Rules & Establishment"
         },
@@ -574,7 +574,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Rules related to Gramin Dak Sevaks.",
             "filename": "GDS_CE_Rules_2020.pdf",
             "path": "/notes/paper-1/GDS_CE_Rules_2020.pdf",
-            "size": "4.4 MB",
+            "size": "0.8 MB",
             "color": "red",
             "topic": "Rules"
         },
