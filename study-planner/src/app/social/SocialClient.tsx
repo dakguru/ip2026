@@ -259,6 +259,20 @@ export default function SocialClient({ initialPosts }: SocialClientProps) {
                     }
                 };
             }
+            if ((post.title?.toLowerCase().includes("cheque validity") || post.id === 1779723788769) && !post.answer) {
+                return {
+                    ...post,
+                    answer: {
+                        author: "Dak Guru Team",
+                        role: "Official Admin",
+                        level: "Admin",
+                        avatar: "DG",
+                        content: "Hi Sam, 👋\n\nTo answer your question directly: ❌ **No, that interpretation is not correct for standard banking purposes.**\n\nWhile specific organizational manuals or older editions of a Financial Handbook (FHB) might contain outdated or highly specific phrasing for internal treasury matters, they do not override standard national banking regulations.\n\nHere is how cheque validity actually works:\n\n📅 **The Standard Rule:**\nAs per the Reserve Bank of India (RBI) mandate effective April 1, 2012, cheques, drafts, and pay orders are valid for exactly **3 months from the date of issue** (the specific date written on the instrument).\n\n✍️ **Correcting your example:**\nIt is calculated from the *exact date*, not the end of the month. If a cheque is dated **January 15th**, it is valid only up to **April 14th**. It will not be payable up to April 30th.\n\n⚠️ **Important Note:**\nEven if a government or departmental cheque is issued under an older FHB rule, the receiving bank clearing the cheque will strictly apply the RBI's standard 3-months-from-date rule. It is always safest to deposit cheques well within 3 months of the written date to avoid them becoming stale.",
+                        upvotes: 48,
+                        comments: 0
+                    }
+                };
+            }
             return post;
         });
     };
