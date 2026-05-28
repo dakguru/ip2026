@@ -358,7 +358,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "National Pension System implementation.",
             "filename": "CCS_Implementation_of_NPS_Rules_2021.pdf",
             "path": "/notes/paper-3/CCS_Implementation_of_NPS_Rules_2021.pdf",
-            "size": "0.6 MB",
+            "size": "0.7 MB",
             "color": "emerald",
             "topic": "CCS Rules & Establishment"
         },
@@ -367,7 +367,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Gratuity rules for NPS employees.",
             "filename": "CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
             "path": "/notes/paper-3/CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
-            "size": "4.1 MB",
+            "size": "0.7 MB",
             "color": "emerald",
             "topic": "CCS Rules & Establishment"
         },

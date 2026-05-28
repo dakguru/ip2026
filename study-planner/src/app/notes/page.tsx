@@ -84,8 +84,8 @@ const SCHEDULE_MAPPING: Record<string, string> = {
     "CCS (Pension) Rules, 2021": "16-04-2026",
     "CCS (Commutation of Pension) Rules, 1981": "18-04-2026",
     "Sexual Harassment of Women at Workplace Act, 2013": "20-04-2026",
-    "CCS (Implementation of NPS) Rules, 2021": "21-04-2026",
-    "CCS (Payment of Gratuity under NPS) Rules, 2021": "22-04-2026",
+    "CCS (Implementation of NPS) Rules, 2021": "28-05-2026",
+    "CCS (Payment of Gratuity under NPS) Rules, 2021": "28-05-2026",
     "General Financial Rules, 2017": "23-04-2026",
     "Fundamental Rules (FR) and Supplementary Rules (SR)": "25-04-2026",
     "Brochure on Casual Labourers": "28-04-2026",
@@ -576,7 +576,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "National Pension System implementation.",
             filename: "CCS_Implementation_of_NPS_Rules_2021.pdf",
             path: "/notes/paper-3/CCS_Implementation_of_NPS_Rules_2021.pdf",
-            size: "0.6 MB",
+            size: "0.7 MB",
             color: "emerald",
             topic: "CCS Rules & Establishment"
         },
@@ -585,7 +585,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Gratuity rules for NPS employees.",
             filename: "CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
             path: "/notes/paper-3/CCS_Payment_of_Gratuity_under_NPS_Rules_2021.pdf",
-            size: "4.1 MB",
+            size: "0.7 MB",
             color: "emerald",
             topic: "CCS Rules & Establishment"
         },

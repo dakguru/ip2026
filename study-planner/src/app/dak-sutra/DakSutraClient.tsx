@@ -36,45 +36,45 @@ const CATEGORY_CONFIG: Record<string, {
 }> = {
     Rule: {
         gradient: "from-blue-600/10 via-blue-500/5 to-transparent",
-        border: "border-blue-200 ",
-        badge: "bg-blue-50  text-blue-700 ",
-        badgeText: "text-blue-600 ",
+        border: "border-blue-200 dark:border-blue-900/50",
+        badge: "bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300",
+        badgeText: "text-blue-600 dark:text-blue-400",
         icon: <Gavel className="w-3.5 h-3.5" />,
         glow: "shadow-blue-500/10",
         stripe: "from-blue-500 to-blue-400",
     },
     Section: {
         gradient: "from-violet-600/10 via-violet-500/5 to-transparent",
-        border: "border-violet-200 ",
-        badge: "bg-violet-50  text-violet-700 ",
-        badgeText: "text-violet-600 ",
+        border: "border-violet-200 dark:border-violet-900/50",
+        badge: "bg-violet-50 dark:bg-violet-950/40 text-violet-700 dark:text-violet-300",
+        badgeText: "text-violet-600 dark:text-violet-400",
         icon: <BookOpen className="w-3.5 h-3.5" />,
         glow: "shadow-violet-500/10",
         stripe: "from-violet-500 to-violet-400",
     },
     Regulation: {
         gradient: "from-emerald-600/10 via-emerald-500/5 to-transparent",
-        border: "border-emerald-200 ",
-        badge: "bg-emerald-50  text-emerald-700 ",
-        badgeText: "text-emerald-600 ",
+        border: "border-emerald-200 dark:border-emerald-900/50",
+        badge: "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300",
+        badgeText: "text-emerald-600 dark:text-emerald-400",
         icon: <Scale className="w-3.5 h-3.5" />,
         glow: "shadow-emerald-500/10",
         stripe: "from-emerald-500 to-emerald-400",
     },
     Circular: {
         gradient: "from-amber-600/10 via-amber-500/5 to-transparent",
-        border: "border-amber-200 ",
-        badge: "bg-amber-50  text-amber-700 ",
-        badgeText: "text-amber-600 ",
+        border: "border-amber-200 dark:border-amber-900/50",
+        badge: "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300",
+        badgeText: "text-amber-600 dark:text-amber-400",
         icon: <Mail className="w-3.5 h-3.5" />,
         glow: "shadow-amber-500/10",
         stripe: "from-amber-500 to-amber-400",
     },
     Explanation: {
         gradient: "from-indigo-600/10 via-indigo-500/5 to-transparent",
-        border: "border-indigo-200 ",
-        badge: "bg-indigo-50  text-indigo-700 ",
-        badgeText: "text-indigo-600 ",
+        border: "border-indigo-200 dark:border-indigo-900/50",
+        badge: "bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300",
+        badgeText: "text-indigo-600 dark:text-indigo-400",
         icon: <Lightbulb className="w-3.5 h-3.5" />,
         glow: "shadow-indigo-500/10",
         stripe: "from-indigo-500 to-indigo-400",
@@ -84,9 +84,9 @@ const CATEGORY_CONFIG: Record<string, {
 const DEFAULT_CONFIG = CATEGORY_CONFIG.Rule;
 
 const TAG_COLORS: Record<string, string> = {
-    "LDCE IP": "bg-blue-50  text-blue-600  border-blue-200 ",
-    "PS Group B": "bg-purple-50  text-purple-600  border-purple-200 ",
-    "GDS": "bg-emerald-50  text-emerald-600  border-emerald-200 ",
+    "LDCE IP": "bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-900/50",
+    "PS Group B": "bg-purple-50 dark:bg-purple-950/30 text-purple-600 dark:text-purple-400 border-purple-200 dark:border-purple-900/50",
+    "GDS": "bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-900/50",
 };
 
 interface DakSutraClientProps {
@@ -153,7 +153,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
     const categories = ["all", "Rule", "Section", "Regulation", "Circular", "Explanation"];
 
     return (
-        <div className="min-h-screen bg-[#f5f6fa] overflow-x-hidden">
+        <div className="min-h-screen bg-[#f5f6fa] dark:bg-zinc-950 overflow-x-hidden">
             {/* Rich Header */}
             {!isMobileApp && (
                 <HomeHeader isLoggedIn={isLoggedIn} membershipLevel={membershipLevel as any} />
@@ -241,24 +241,24 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                                 placeholder="Search rules, sections, acts..."
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
-                                className="w-full pl-10 pr-4 py-3 bg-white border border-zinc-200 rounded-2xl text-[13px] md:text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all font-medium shadow-sm h-12 md:h-14"
+                                className="w-full pl-10 pr-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl text-[13px] md:text-sm text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all font-medium shadow-sm h-12 md:h-14"
                             />
                         </div>
                         <div className="w-full sm:w-64 shrink-0">
                             <select
                                 value={topicFilter}
                                 onChange={(e) => setTopicFilter(e.target.value)}
-                                className="w-full h-12 md:h-14 px-3.5 bg-white border border-zinc-200 rounded-2xl text-[13px] md:text-sm outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all font-medium shadow-sm appearance-none cursor-pointer"
+                                className="w-full h-12 md:h-14 px-3.5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl text-[13px] md:text-sm text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 transition-all font-medium shadow-sm appearance-none cursor-pointer"
                                 style={{
-                                    backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+                                    backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'right 1rem center',
                                     backgroundSize: '1.25rem'
                                 }}
                             >
-                                <option value="all">All Topics</option>
+                                <option value="all" className="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">All Topics</option>
                                 {allTopics.map(topic => (
-                                    <option key={topic} value={topic}>{topic}</option>
+                                    <option key={topic} value={topic} className="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">{topic}</option>
                                 ))}
                             </select>
                         </div>
@@ -277,9 +277,9 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                                         className={`flex items-center gap-1.5 whitespace-nowrap px-3.5 py-2 rounded-xl text-[11px] font-bold border transition-all shrink-0 touch-manipulation ${
                                             isActive
                                                 ? cat === "all"
-                                                    ? "bg-zinc-900 text-white border-transparent shadow-md"
+                                                    ? "bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-950 border-transparent shadow-md"
                                                     : `${cfg?.badge} border-transparent shadow-md`
-                                                : "bg-white border-zinc-200 text-zinc-500"
+                                                : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400"
                                         }`}
                                     >
                                         {cfg?.icon}
@@ -296,11 +296,11 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                     {/* Results count */}
                     {!isLoading && filteredEntries.length > 0 && (
                         <div className="flex items-center gap-2 mb-3">
-                            <div className="h-px flex-1 bg-zinc-200" />
-                            <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest px-1">
+                            <div className="h-px flex-1 bg-zinc-200 dark:bg-zinc-800" />
+                            <span className="text-[9px] font-black text-zinc-400 dark:text-zinc-500 uppercase tracking-widest px-1">
                                 {filteredEntries.length} {filteredEntries.length === 1 ? "entry" : "entries"}
                             </span>
-                            <div className="h-px flex-1 bg-zinc-200" />
+                            <div className="h-px flex-1 bg-zinc-200 dark:bg-zinc-800" />
                         </div>
                     )}
 
@@ -315,7 +315,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                                     <Link
                                         key={entry._id}
                                         href={`/dak-sutra/${entry.slug || entry._id}`}
-                                        className="group block w-full bg-white rounded-2xl overflow-hidden border border-zinc-100 shadow-[0_1px_6px_rgba(0,0,0,0.06)] active:scale-[0.98] active:shadow-none hover:shadow-[0_4px_20px_rgba(0,0,0,0.10)] transition-all duration-150 touch-manipulation"
+                                        className="group block w-full bg-white dark:bg-zinc-900/60 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-[0_1px_6px_rgba(0,0,0,0.06)] dark:shadow-none active:scale-[0.98] active:shadow-none hover:shadow-[0_4px_20px_rgba(0,0,0,0.10)] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.30)] transition-all duration-150 touch-manipulation"
                                     >
                                         {/* Top gradient stripe */}
                                         <div className={`h-[3px] w-full bg-gradient-to-r ${cfg.stripe}`} />
@@ -328,7 +328,7 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                                                     {entry.category}
                                                 </span>
                                                 {entry.effective_date && (
-                                                    <span className="text-[10px] font-semibold text-zinc-400 tabular-nums shrink-0">
+                                                    <span className="text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 tabular-nums shrink-0">
                                                         {format(new Date(entry.effective_date), 'MMM yyyy')}
                                                     </span>
                                                 )}
@@ -341,29 +341,29 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
 
                                             {/* Rule reference */}
                                             {entry.rule_number && (
-                                                <p className="text-[9.5px] text-zinc-400 font-medium mb-3 line-clamp-1">
+                                                <p className="text-[9.5px] text-zinc-400 dark:text-zinc-500 font-medium mb-3 line-clamp-1">
                                                     {entry.rule_number}
                                                 </p>
                                             )}
 
                                             {/* Title — hero text */}
-                                            <h3 className={`text-[15px] font-extrabold text-zinc-900 leading-snug line-clamp-2 mb-4 group-hover:${cfg.badgeText} transition-colors`}>
+                                            <h3 className={`text-[15px] font-extrabold text-zinc-900 dark:text-zinc-100 leading-snug line-clamp-2 mb-4 group-hover:${cfg.badgeText} transition-colors`}>
                                                 {entry.title}
                                             </h3>
 
                                             {/* Footer — tags + read arrow */}
-                                            <div className="flex items-center justify-between gap-2 pt-3 border-t border-zinc-100">
+                                            <div className="flex items-center justify-between gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800">
                                                 <div className="flex items-center gap-1.5 flex-wrap min-w-0">
                                                     {entry.exam_tags?.slice(0, 2).map(tag => (
                                                         <span
                                                             key={tag}
-                                                            className={`text-[9px] font-bold px-2 py-0.5 rounded-lg border ${TAG_COLORS[tag] || "bg-zinc-50 text-zinc-400 border-zinc-200"}`}
+                                                            className={`text-[9px] font-bold px-2 py-0.5 rounded-lg border ${TAG_COLORS[tag] || "bg-zinc-50 dark:bg-zinc-900 text-zinc-400 dark:text-zinc-500 border-zinc-200 dark:border-zinc-800"}`}
                                                         >
                                                             {tag}
                                                         </span>
                                                     ))}
                                                     {(entry.exam_tags?.length ?? 0) > 2 && (
-                                                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-lg border bg-zinc-50 text-zinc-400 border-zinc-200">
+                                                        <span className="text-[9px] font-bold px-2 py-0.5 rounded-lg border bg-zinc-50 dark:bg-zinc-900 text-zinc-400 dark:text-zinc-500 border-zinc-200 dark:border-zinc-800">
                                                             +{entry.exam_tags.length - 2}
                                                         </span>
                                                     )}
@@ -379,12 +379,12 @@ export default function DakSutraClient({ isLoggedIn, membershipLevel }: DakSutra
                             })}
                         </div>
                     ) : (
-                        <div className="text-center py-16 md:py-24 rounded-2xl border border-zinc-100 bg-white">
-                            <div className="w-12 h-12 rounded-xl bg-zinc-100 flex items-center justify-center mx-auto mb-3">
-                                <Search className="w-5 h-5 text-zinc-300" />
+                        <div className="text-center py-16 md:py-24 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900/60">
+                            <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mx-auto mb-3">
+                                <Search className="w-5 h-5 text-zinc-300 dark:text-zinc-600" />
                             </div>
-                            <p className="text-sm font-bold text-zinc-700 mb-1">No matches found</p>
-                            <p className="text-zinc-400 text-xs">Try different filters or search terms.</p>
+                            <p className="text-sm font-bold text-zinc-700 dark:text-zinc-200 mb-1">No matches found</p>
+                            <p className="text-zinc-400 dark:text-zinc-500 text-xs">Try different filters or search terms.</p>
                         </div>
                     )}
                 </div>

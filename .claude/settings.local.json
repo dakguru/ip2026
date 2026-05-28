@@ -25,7 +25,8 @@
       "Bash(node -e \"const { MongoClient } = require\\('mongodb'\\); const client = new MongoClient\\('mongodb+srv://admin_db_user:fnu7IX85OAV5EFpk@cluster0.jawkuep.mongodb.net/?appName=Cluster0'\\); client.connect\\(\\).then\\(\\(\\) => { return client.db\\(\\).admin\\(\\).listDatabases\\(\\); }\\).then\\(dbs => { console.log\\(JSON.stringify\\(dbs.databases.map\\(d => d.name\\)\\)\\); return client.close\\(\\); }\\).catch\\(e => console.error\\(e.message\\)\\);\")",
       "Bash(findstr \"package\")",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(node scripts/seed-dak-sutra-po-act-2023-rules-2024.js)"
     ]
   }
 }

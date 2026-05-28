@@ -16,6 +16,34 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "28.05.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: CCS NPS & Gratuity Rules Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>CCS (Implementation of NPS) Rules, 2021</strong> and <strong>CCS (Payment of Gratuity under NPS) Rules, 2021</strong> PDF notes for both <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes to reflect the latest guidelines and statutory amendments!</p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">CCS (Implementation of NPS) Rules, 2021</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Comprehensive coverage of National Pension System implementation, rules, and procedures (updated file size: 0.7 MB).</p>
+                            </div>
+                            <div className="bg-teal-50/50 dark:bg-teal-900/10 p-3 rounded-xl border border-teal-100 dark:border-teal-800/50">
+                                <p className="font-bold text-teal-700 dark:text-teal-300 text-[10px] uppercase tracking-wide">CCS (Gratuity under NPS) Rules, 2021</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Detailed notes on retirement and death gratuity rules under NPS, including the latest interest rate revisions (updated file size: 0.7 MB).</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head over to the Digital Library to access the updated PDF notes!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "25.05.2026",
         items: [
             {

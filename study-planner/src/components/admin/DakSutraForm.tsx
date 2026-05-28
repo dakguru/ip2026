@@ -25,6 +25,7 @@ const ACT_NAMES = [
     "Postal Manual Volume VII",
     "SB Orders",
     "Post Office Act 2023",
+    "The Post Office Rules, 2024",
     "PMLA Act",
     "GDS Conduct & Engagement Rules",
     "DFPR 2024"
