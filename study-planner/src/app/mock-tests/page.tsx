@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight, History } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, Play, AlertCircle, CheckCircle2, Timer, Lock, X, Info, Sparkles, Loader2, ChevronRight, History } from "lucide-react";
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
 import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
@@ -16,6 +16,7 @@ import { generateMockTestAnswerSheetPDF } from "@/lib/pdf-generator-mocks";
 import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { FileDown } from "lucide-react";
 import AppScreenWrapper from "@/components/AppScreenWrapper";
+import HomeHeader from "@/components/HomeHeader";
 
 
 // Mock Test Interface
@@ -239,7 +240,7 @@ export default function MockTestsPage() {
                 startDate,
                 endDate,
                 status,
-                questionCount: test.questionCount,
+                questionCount: 100,
                 marks: test.marks,
                 duration: test.duration,
             } as MockTest;
@@ -328,7 +329,7 @@ export default function MockTestsPage() {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    amount: 49,
+                    amount: mock.id.startsWith("mock-s2-") ? 99 : 49,
                     email: userEmail,
                     plan: { id: mock.id, name: mock.title, type: 'mock_test' }
                 })
@@ -470,6 +471,10 @@ export default function MockTestsPage() {
     return (
         <AppScreenWrapper hideStatusBarPadding={true} scrollableContent={false}>
             <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+
+            {!isMobileApp && (
+                <HomeHeader isLoggedIn={!!userEmail} membershipLevel={membershipLevel as any} />
+            )}
 
             {/* Hero Section */}
             {isMobileApp ? (
@@ -1105,9 +1110,12 @@ function MockTestDetail({
                             <Link
                                 href={`/mock-tests/weekly/${mock.id}`}
                                 onClick={() => { if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20); }}
-                                className="w-full py-4.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-black text-base md:text-lg shadow-xl shadow-zinc-900/10 dark:shadow-none transition-all flex items-center justify-center gap-3 hover:scale-[1.01] active:scale-[0.98]"
+                                className="w-full py-4 bg-emerald-800 hover:bg-emerald-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-emerald-800/10 hover:shadow-emerald-800/20 transition-all flex items-center justify-center gap-3 hover:scale-[1.01] active:scale-[0.98]"
                             >
-                                <PlayCircle className="w-6 h-6 fill-current" /> Start Assessment Now
+                                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm shadow-inner shrink-0">
+                                    <Play className="w-4 h-4 text-white fill-white ml-0.5" />
+                                </div>
+                                Start Assessment Now
                             </Link>
                         )
                     ) : (
@@ -1121,7 +1129,7 @@ function MockTestDetail({
                             className="w-full py-4.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-red-500/40 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98] animate-pulse-slow"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Enroll Now for Rs.49/-
+                            Enroll Now for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-
                         </button>
                     )
                 ) : mock.status === 'completed' ? (
@@ -1184,7 +1192,7 @@ function MockTestDetail({
                             className="w-full py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-indigo-500/30 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98]"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Enroll Now for Rs.49/-
+                            Enroll Now for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-
                         </button>
                     )
                 ) : (
@@ -1485,7 +1493,7 @@ function MockTestCard({
                             className="flex-1 py-2 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0 w-full"
                         >
                             {isProcessing ? <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll for Rs.49/-</span>
+                            <span className="text-center">Enroll for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-</span>
                         </button>
                 )
                     ) : isLive ? (
@@ -1531,7 +1539,7 @@ function MockTestCard({
                             className="flex-1 py-2.5 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0"
                         >
                             {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll for Rs.49/-</span>
+                            <span className="text-center">Enroll for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-</span>
                         </button>
                     )
                 )
@@ -1546,7 +1554,7 @@ function MockTestCard({
                     className="flex-1 py-2 sm:py-3 w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/30 transition-all transform hover:scale-[1.01] active:scale-[0.97] px-2 min-w-0"
                 >
                     {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-300 fill-current shrink-0" />}
-                    <span className="text-center">Enroll for Rs.49/-</span>
+                    <span className="text-center">Enroll for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-</span>
                 </button>
             ) : (
                 <button
@@ -1895,6 +1903,7 @@ function PsgbMockTestPage({
                 status = 'live';
             }
 
+            const isSelectedMock = week.week >= 9 && week.week <= 14;
             return {
                 id: testId,
                 title: `PS Gr B - Weekly Mock Test ${week.week.toString().padStart(2, '0')}`,
@@ -1902,8 +1911,8 @@ function PsgbMockTestPage({
                 startDate: satDate,
                 endDate: sunDate,
                 status,
-                questionCount: 50,
-                marks: 100,
+                questionCount: isSelectedMock ? 100 : 50,
+                marks: isSelectedMock ? 200 : 100,
                 duration: 60
             } as MockTest;
         });
@@ -2035,6 +2044,10 @@ function PsgbMockTestPage({
     return (
         <AppScreenWrapper hideStatusBarPadding={true} scrollableContent={false}>
             <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+
+            {!isMobileApp && (
+                <HomeHeader isLoggedIn={!!userEmail} membershipLevel={membershipLevel as any} />
+            )}
 
             {/* ===== HERO ===== */}
             {isMobileApp ? (

@@ -26,7 +26,10 @@
       "Bash(findstr \"package\")",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(node scripts/seed-dak-sutra-po-act-2023-rules-2024.js)"
+      "Bash(node scripts/seed-dak-sutra-po-act-2023-rules-2024.js)",
+      "Bash(node -e ' *)",
+      "Bash(git add *)",
+      "Bash(node scripts/seed-dak-sutra-pmla-v2.js)"
     ]
   }
 }

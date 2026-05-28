@@ -1,0 +1,871 @@
+Q1. When did the Prevention of Money Laundering Act, 2002, come into force?
+A. 17th January 2003
+B. 1st April 2004
+C. 1st July 2005
+D. 31st March 2005
+Answer: C
+Explanation: The Prevention of Money Laundering Act (Act 15 of 2003) was enacted on 17th January 2003, but it officially came into force on 1st July 2005. The other dates reflect enactment or incorrect financial year timelines.
+
+Q2. What is the standard punishment prescribed for the offence of money-laundering under Section 4 of the PMLA, 2002?
+A. Imprisonment for 3 to 5 years and a fine
+B. Rigorous imprisonment for 3 to 7 years and a fine
+C. Rigorous imprisonment for 5 to 10 years and a fine
+D. Imprisonment up to 7 years without any fine
+Answer: B
+Explanation: Section 4 prescribes rigorous imprisonment for a term not less than 3 years but extending to 7 years, along with a fine. The penalty extends to 10 years only if the offence involves narcotics or drugs.
+
+Q3. Under the PMLA, 2002, what is the maximum period for which a property can be provisionally attached by the Director?
+A. 90 days from the date of order
+B. 180 days from the date of order
+C. 365 days from the date of order
+D. 60 days from the date of order
+Answer: B
+Explanation: Under Section 5 of the Act, if the Director has reason to believe proceeds of crime are likely to be concealed, he may provisionally attach the property for a period not exceeding 180 days.
+
+Q4. Which of the following correctly describes the term of office for the Chairperson or a Member of an Adjudicating Authority under PMLA?
+A. 3 years or until attaining 60 years of age
+B. 5 years or until attaining 65 years of age
+C. 5 years or until attaining 70 years of age
+D. 4 years or until attaining 62 years of age
+Answer: B
+Explanation: According to Section 6 of the PMLA, the Chairperson and every Member shall hold office for a term of 5 years from the date of entering the office, or until attaining 65 years of age, whichever is earlier.
+
+Q5. How long is a reporting entity required to maintain records of transactions after a transaction is completed under PMLA obligations?
+A. 3 years from the date of transaction
+B. 5 years from the date of transaction
+C. 7 years from the date of transaction
+D. 10 years from the date of transaction
+Answer: B
+Explanation: Section 12 of the PMLA mandates that every reporting entity must maintain a record of all transactions for a period of five years from the date of the transaction.
+
+Q6. What is the maximum monetary penalty the Director can impose on a reporting entity for failure to comply with obligations under Chapter IV of PMLA?
+A. Rs. 50,000 for each failure
+B. Rs. 1,00,000 for each failure
+C. Rs. 5,00,000 for each failure
+D. Rs. 10,000 for each failure
+Answer: B
+Explanation: Under Section 13, the Director can impose a monetary penalty that shall not be less than Rs. 10,000 but may extend to Rs. 1,00,000 for each failure to comply with obligations.
+
+Q7. Within what time frame must a person arrested under PMLA be taken to a Special Court or Judicial Magistrate?
+A. 12 hours, excluding journey time
+B. 24 hours, excluding journey time
+C. 48 hours, including journey time
+D. 72 hours, excluding journey time
+Answer: B
+Explanation: Section 19 specifies that every arrested person must be taken to a Special Court or Magistrate having jurisdiction within 24 hours, excluding the time necessary for the journey from the place of arrest.
+
+Q8. Which authority designates a Court of Session as a Special Court for trial of PMLA offences?
+A. State Government in consultation with the High Court
+B. Central Government in consultation with the Chief Justice of the High Court
+C. Supreme Court of India
+D. Adjudicating Authority
+Answer: B
+Explanation: Under Section 43 of the PMLA, the Central Government, in consultation with the Chief Justice of the High Court, designates one or more Courts of Session as Special Courts by notification.
+
+Q9. Consider the following statements regarding the Adjudicating Authority under the PMLA:
+
+1. It is bound by the procedure laid down by the Code of Civil Procedure, 1908.
+2. It shall be guided by the principles of natural justice.
+3. It has powers to regulate its own procedure.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: The Adjudicating Authority shall not be bound by the Code of Civil Procedure, 1908, but is guided by the principles of natural justice. It also possesses the power to regulate its own procedure.
+
+
+
+Q10. Under the Department of Posts AML/CFT norms, what is the risk categorization for an account where the balance or maturity value exceeds Rs. 10 lakh?
+A. Low Risk
+B. Medium Risk
+C. High Risk
+D. Special Risk
+Answer: C
+Explanation: Under the Post Office KYC policy, accounts where the balance or maturity value exceeds Rs. 10 lakh fall under the High Risk category. Proof of source of funds is mandatory for this category.
+
+Q11. A post office customer wishes to deposit cash amounting to Rs. 12 lakh in a single transaction. According to AML/CFT norms, what specific action must the Post Office take?
+A. Generate a Suspicious Transaction Report (STR) within 3 days
+B. Maintain a record of the transaction and include it in the Cash Transaction Report (CTR)
+C. Reject the transaction as it exceeds Rs. 10 lakh
+D. Freeze the account immediately
+Answer: B
+Explanation: All cash transactions of the value of more than Rs. 10 Lakh must be recorded and reported in the Cash Transaction Report (CTR). Refusing the transaction outright is not prescribed; it must be monitored and reported.
+
+Q12. What is the required frequency for reviewing Customer Due Diligence (CDD) documents for a Low Risk category customer in the Post Office?
+A. Every 2 years
+B. Every 5 years
+C. Every 7 years
+D. Every 10 years
+Answer: C
+Explanation: According to the Review of CDD/Re-KYC norms, documents for the Low Risk category should be reviewed every 7 years. Medium risk requires a 5-year review, and high risk requires a 2-year review.
+
+Q13. Consider the following statements regarding "Politically Exposed Persons" (PEPs) under POSB KYC policy:
+
+1. They include heads of state, senior politicians, and senior military officers.
+2. An account related to a PEP residing outside India is categorized as Medium Risk.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Statement 1 is correct as PEPs include senior politicians, government officials, etc.. Statement 2 is incorrect because the policy states accounts related to PEPs residing outside India fall under the High Risk Category.
+
+
+
+Q14. An officer conducts a search under PMLA and seizes records. What is the maximum initial period these records can be retained without permission from the Adjudicating Authority?
+A. 90 days from the day of seizure
+B. 180 days from the day of seizure
+C. 365 days from the day of seizure
+D. 30 days from the day of seizure
+Answer: B
+Explanation: Under Sections 20 & 21 of the PMLA, property or records seized or frozen may be retained for a period not exceeding 180 days from the day of seizure, after which Adjudicating Authority permission is needed.
+
+Q15. In an ongoing PMLA investigation, the Special Court finds a person guilty. What happens to the property involved in money laundering?
+A. It is returned to the original owner with a penalty.
+B. It is auctioned by the Adjudicating Authority.
+C. It shall stand confiscated to the Central Government.
+D. It vests in the State Government where the crime occurred.
+Answer: C
+Explanation: Section 8 states that where the Special Court finds the offence of money-laundering has been committed, it shall order that such property involved shall stand confiscated to the Central Government.
+
+Q16. Who manages the properties confiscated by the Central Government under Chapter III of the PMLA?
+A. The Director of the Enforcement Directorate
+B. An Administrator appointed by the Central Government
+C. The Adjudicating Authority
+D. A Court Receiver appointed by the High Court
+Answer: B
+Explanation: Under Section 10, the Central Government appoints an officer (not below the rank of a Joint Secretary) to perform the functions of an Administrator to receive and manage the confiscated property.
+
+Q17. Which of the following best defines "Suspicious Transaction" under POSB AML rules?
+A. Any cash transaction exceeding Rs. 50,000
+B. Any transaction appearing to have no economic rationale, regardless of value
+C. Only international money transfers
+D. Any withdrawal from a High Risk account
+Answer: B
+Explanation: A suspicious transaction is one that gives rise to a reasonable ground of suspicion, appears unusually complex, or has no economic rationale or bona fide purpose, regardless of the value involved.
+
+Q18. According to PLI retention policies under AML norms, how long must records be kept for policies where less than 3 years of premia are paid and the policy has lapsed?
+A. 3 years after the date of lapse
+B. 5 years after the date of lapse
+C. 5 years after the date of maturity
+D. 10 years after the date of maturity
+Answer: C
+Explanation: The Record Retention Policy for PLI/RPLI specifies that for policies where less than 3 years of premia are paid and the policy is lapsed, the schedule for retention is "5 years after date of Maturity".
+
+Q19. Under PMLA POSB KYC norms, if a depositor fails to submit required KYC documents despite notices, at which transaction stage will they be stopped?
+A. 2nd next transaction
+B. 3rd next transaction
+C. 4th transaction
+D. 5th transaction
+Answer: C
+Explanation: The guidelines specify that a notice is issued at the time of the next transaction. If the depositor fails to submit KYC up to the 3rd next transaction, the 4th transaction will not be allowed.
+
+Q20. Consider the following statements regarding appeals under PMLA:
+
+1. An appeal against the Adjudicating Authority's order can be filed to the Appellate Tribunal within 45 days.
+2. Any person aggrieved by a decision of the Appellate Tribunal may file an appeal to the Supreme Court directly within 60 days.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Statement 1 is correct (appeal within 45 days). Statement 2 is incorrect because Section 42 states that appeals against the Appellate Tribunal's decision are filed to the High Court, not the Supreme Court, within 60 days.
+
+
+
+Q21. Under the PMLA, what is the penalty for an authority who vexatiously and without recorded reasons detains or arrests any person?
+A. Dismissal from service only
+B. Imprisonment up to 2 years or a fine up to Rs. 50,000, or both
+C. Imprisonment up to 1 year or a fine up to Rs. 1,00,000, or both
+D. Imprisonment up to 3 years without any fine
+Answer: B
+Explanation: Section 62 states that any authority conducting a vexatious search or arrest without recorded reasons is liable for imprisonment up to 2 years, or a fine up to Rs. 50,000, or both.
+
+Q22. In the context of PMLA, what constitutes the "Burden of Proof" when a person is charged with the offence of money-laundering?
+A. The prosecution must prove beyond reasonable doubt that the proceeds are involved.
+B. The Authority or Court shall presume that the proceeds of crime are involved, unless the contrary is proved.
+C. The burden lies solely on the reporting entity to prove compliance.
+D. The Adjudicating Authority must establish the crime without presumptions.
+Answer: B
+Explanation: Section 24 dictates that in the case of a person charged with money-laundering, the Authority or Court shall presume that such proceeds of crime are involved in money-laundering unless the contrary is proved by the accused.
+
+Q23. Which entity is responsible for generating the Cash Transaction Report (CTR) centrally for POSB on a pan-India basis?
+A. Division Office
+B. Circle Office
+C. CEPT CBS-Reports Team
+D. PLI-CEPT Team
+Answer: C
+Explanation: The CEPT CBS-Reports Team is responsible for the generation and preparation of the CTR for POSB centrally for pan-India and sending it to DDG (PCO/PMLA) by the 6th working day of the subsequent month.
+
+Q24. A customer requests the cancellation of three PLI policies during the free look period within a single calendar month, and the total refund requested is Rs. 1.2 lakh. What action is required?
+A. Process the refund immediately without reporting.
+B. Report the transaction to the PCO/PMLA Section through proper channels.
+C. Withhold the refund for 90 days.
+D. Classify the customer as Medium Risk.
+Answer: B
+Explanation: POSB AML standards require reporting to PCO/PMLA when 3 or more free look cancellation requests are received from a single policyholder in a calendar month, putting together an amount exceeding Rs. 1 lakh.
+
+Q25. Which of the following is NOT an "officially valid document" for opening a Post Office account?
+A. Passport
+B. Job card issued by MGNREGA duly signed by a State Government officer
+C. Letter issued by the National Population Register containing name and address
+D. A property tax receipt older than six months
+Answer: D
+Explanation: While passports, MGNREGA job cards, and NPR letters are explicitly defined as officially valid documents, a property tax receipt is considered a valid document for limited purpose of proof of address, but only if it's not outdated (utility bills must be <2 months, property tax receipts are acceptable but a 6-month old one without PAN/Aadhaar limits its standalone OVD status). More directly, under PMLA standard definitions and POSB rules, utility bills must be recent.
+
+Q26. Consider the following statements regarding the Post Office Act, 2023:
+
+1. It repealed the Indian Post Office Act, 1898.
+2. It received official gazette publication on 24th December 2023.
+3. The Post Office no longer has the exclusive privilege of issuing postage stamps under this Act.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Answer: A
+Explanation: The Post Office Act, 2023 repealed the 1898 Act (Section 16) and was published on 24th Dec 2023. Statement 3 is incorrect because Section 4 explicitly states the Post Office maintains the exclusive privilege of issuing postage stamps.
+
+
+
+Q27. Under the Post Office Act, 2023, who is empowered to make regulations to fix charges for services provided by the Post Office?
+A. The Central Government
+B. The Director General of Postal Services
+C. The Postal Services Board
+D. The Ministry of Communications
+Answer: B
+Explanation: Section 3(2)(b) of the Post Office Act, 2023 explicitly empowers the Director General to make regulations to fix charges for, and the terms and conditions in respect of, services provided by the Post Office.
+
+Q28. If a person refuses to pay the charges due for a service provided by the Post Office under the PO Act 2023, how shall the amount be recovered?
+A. As a deduction from the person's bank account
+B. As an arrear of land revenue due from him
+C. Through a civil suit in the High Court
+D. By confiscating the item
+Answer: B
+Explanation: Section 7(2) of the Act states that if any person refuses or neglects to pay the charges, such amount shall be recoverable as if it were an arrear of land revenue due from him.
+
+Q29. According to Section 9 of the PO Act, 2023, interception of an item in the course of transmission may be ordered on which of the following grounds?
+A. Commercial disputes between sender and addressee
+B. Public safety or interest of the security of the State
+C. Suspected copyright infringement
+D. Delay in postage payment
+Answer: B
+Explanation: Section 9(1) empowers the Central Government to intercept items in the interest of the security of the State, friendly relations with foreign states, public order, emergency, or public safety.
+
+Q30. Consider the following statements regarding the definitions outlined in Section 2 and Section 4 of the Act:
+I. An "item" refers to any article, whether divisible or indivisible, accepted by the Post Office for providing a service.
+II. A "postage stamp" is strictly defined as a physical stamp provided by the Central Government and explicitly excludes digital forms.
+III. "Postal stationery" includes items such as envelopes and postcards bearing imprinted stamps or inscriptions indicating that the sum payable for a service has been prepaid.
+Which of the statements given above is/are correct?
+A) I and II only
+B) III only
+C) II and III only
+D) I, II, and III
+
+Answer: B  
+Explanation: Statement I is incorrect because Section 2(b) defines an item as an "indivisible article". Statement II is incorrect because Section 4(3)(a) explicitly states a postage stamp can be in "any form, physical or digital". Statement III is correct per Section 4(3)(b).
+
+Q31. According to Section 13, what is the mandatory statutory requirement for the Director General to make "regulations" for carrying out the provisions of the Act?
+A) Consultation with the Ministry of Finance.
+B) Notification in the Official Gazette with the prior approval of the Central Government.
+C) Laying the draft regulations before Parliament for thirty days prior to notification.
+D) Independent notification under the exclusive administrative powers of the Director General.
+
+Answer: B
+Explanation: Section 13 states that the Director General may make regulations "with the prior approval of the Central Government, by notification"
+
+
+Q32. Under Section 15 ("Power to remove difficulties"), the Central Government may make orders to remove difficulties in giving effect to the Act. What is the statutory limitation placed on this power?
+A) No such order can be made after the expiry of one year from the date of commencement.
+B) No such order can be made after the expiry of two years from the date of commencement of the Act.
+C) Such orders must be approved by a special majority of both Houses of Parliament before implementation.
+D) The power to remove difficulties is exclusively delegated to the Director General without a time limit.
+Answer: B
+Explanation: Section 15(1) contains a proviso stating that "no order shall be made under this section after the expiry of two years from the date of commencement of this Act."
+
+Q33. According to Section 9(3), if an item received from beyond the limits of India is suspected to contain anything liable to duty or prohibited, how must the empowered officer of the Post Office proceed?
+A) They must immediately destroy the item in the presence of a gazetted officer.
+B) They can independently confiscate the item and auction it to recover the statutory dues.
+C) They shall deliver the item to such customs authority or any other specified authority to be dealt with under the law.
+D) They must return the item to the sender overseas, levying a penalty recoverable as land revenue.
+
+Answer: C
+Explanation: Section 9(3) dictates that such an item shall be delivered to "such customs authority or any other authority as may be specified" to deal with the item in accordance with the law.
+
+Q34. Under Section 8, what is the precise legal evidentiary value of the conditions prescribed by the Central Government for denoting official marks on items?
+A) They serve as conclusive proof of the facts so denoted.
+B) They are to be used as prima facie evidence of the facts so denoted.
+C) They require independent verification by a judicial magistrate to be admissible.
+D) They serve purely as administrative tracking tools with no statutory evidentiary value.
+
+Answer: B
+Explanation: Section 8 states that official marks on items are to be used as "prima facie evidence of the facts so denoted".
+
+Q35. A sender drops an item in a post box but it gets damaged due to a natural flood (force majeure). The sender claims compensation under the Post Office Act, 2023. What is the correct legal position?
+A. Compensation is payable regardless of the cause.
+B. No liability is incurred for damage arising from force majeure.
+C. The Postmaster is personally liable for the loss.
+D. The sender is entitled to double the postage paid.
+Answer: B
+Explanation: Rule 19(2) explicitly states that compensation shall not be paid on prohibited items, or loss or damage caused by the fault or negligence of the sender, or arising from force majeure. Furthermore, Section 10 exempts the Post Office from liability except as prescribed.
+
+Q36. Under Section 6, the legal mechanism to give effect to postal arrangements made with a foreign country or territory is strictly executed through: 
+A) Regulations made by the Director General of Postal Services.
+B) Bilateral treaties ratified independently by Parliament.
+C) Rules made by the Central Government.
+D) Executive orders issued by the Ministry of External Affairs.
+
+Answer: C
+Explanation: Section 6 explicitly states that "The Central Government may make rules to give effect to arrangements made with any foreign country or territory".
+
+Q37. Section 5(2) defines a "postcode" comprehensively. Based on the strict statutory text, which of the following is NOT explicitly mentioned as a valid component or function of a postcode?  
+A) A series of digits or letters.
+B) A digital code.
+C) A mechanism specifically designed for tracking the real-time financial value of an item.
+D) A tool used to identify a geographic area or location to ease the sorting process.
+
+Answer: C
+Explanation: Section 5(2) states a postcode can be digits, letters, or a digital code used to identify a geographic area or location and ease sorting/delivery. It does not mention tracking the financial value of an item.
+
+Q38. What evidentiary value does an official mark on a postal item hold under the Post Office Act, 2023?
+A. Conclusive proof of delivery
+B. Prima facie evidence of the facts so denoted
+C. Hearsay evidence only
+D. No legal value in civil courts
+Answer: B
+Explanation: Section 8 of the Act states that the Central Government may prescribe conditions for denoting official marks on items to be used as prima facie evidence of the facts so denoted.
+
+Q39. Under the Post Office Rules 2024, if a post office officer intercepts an item suspected of containing a prohibited drug, to whom must the item be handed over?
+A. Returned to the sender
+B. The Adjudicating Authority under PMLA
+C. Law enforcement authority in whose presence it must be opened
+D. The Postal Services Board
+Answer: C
+Explanation: Rule 16(8) states that no authorized officer shall open any intercepted item except in the presence of the concerned law enforcement authority, and it ultimately gets handed to them.
+
+Q40. In the context of the exclusive privilege in respect of postage stamps, which of the following mechanisms of denoting a sum payable on an item is NOT explicitly included in the definition of a "postage stamp" under Section 4(3)(a)?  
+A) Embossed stamps
+B) Embedded stamps
+C) Impressed stamps
+D) Watermarked security threads
+
+Answer: D
+Explanation: Section 4(3)(a) defines a postage stamp as including stamps affixed, printed, embossed, embedded, impressed, or otherwise indicated on an item. Watermarked security threads are not mentioned in this definition.  
+
+Q41. If Parliament agrees to modify or annul a rule or regulation laid before it under Section 14, what is the legal effect on actions already taken under that rule prior to the modification or annulment?  
+A) All previous actions are deemed retroactively null and void.
+B) The modification or annulment shall be without prejudice to the validity of anything previously done under that rule or regulation.
+C) Previous actions must be reviewed and re-authorized by the Director General within 30 days.
+D) The Central Government must compensate any individual adversely affected by the previously valid rule.
+Answer: B
+Explanation: Section 14 mandates that if both Houses modify or annul a rule, such modification or annulment "shall be without prejudice to the validity of anything previously done under that rule or regulation".
+
+Q42. According to Section 2(d), the statutory definition of "Post Office" extends beyond the Department of Posts itself to explicitly include which of the following?  
+A) All commercial vehicles operated by third-party mail contractors.
+B) Every house, building, room, place or any other asset used by the Post Office for providing any service.
+C) Any private residence where a postal employee temporarily stores mail.
+D) State Government offices that incidentally sell postal stationery.
+
+Answer: B
+Explanation: Section 2(d) precisely defines "Post Office" as the Department of Posts and includes "every house, building, room, place or any other asset used by the Post Office for providing any service"
+
+Q43. Which of the following is defined as a "Non-resident Indian" under the Government Savings Promotion General Rules, 2018?
+A. A person living in India for less than 365 days
+B. An individual being a citizen of India or a person of Indian origin who is not a 'resident' as per the Income Tax Act, 1961
+C. Any foreign citizen residing in India
+D. An Indian citizen who has gone abroad for a 2-week vacation
+Answer: B
+Explanation: Rule 3(1)(g) of the GSP Rules, 2018 defines a Non-resident Indian as an individual being a citizen of India or a person of Indian origin who is not a 'resident' as per the provisions of the Income Tax Act, 1961.
+
+Q44. What is the minimum age for a minor to independently open and operate a government savings account?
+A. 7 years
+B. 10 years
+C. 12 years
+D. 15 years
+Answer: B
+Explanation: Rule 4(2) of the GSP Rules, 2018 states that a minor who has attained the age of ten years may open and operate an account in accordance with the provisions of a Savings Scheme.
+
+Q45. A single account holder of a Post Office Savings Scheme becomes a Non-Resident Indian (NRI) during the operation of the account. Which of the following is correct regarding the account?
+A. The account must be closed immediately.
+B. The account earns no interest from the date the status changes.
+C. The account may continue till maturity but on a non-repatriation basis, and cannot be extended beyond maturity.
+D. The account gets converted into a Joint Account automatically.
+Answer: C
+Explanation: Rule 4(3) stipulates that if a depositor becomes an NRI, the account may be continued till its maturity on a non-repatriation basis, shall not be extended beyond maturity, and no interest is payable after the date of maturity.
+
+Q46. If a depositor in a GSP account ceases to be a citizen of India, from when is the account deemed to be closed?
+A. The exact date citizenship is renounced
+B. The last day of the month preceding the month in which the depositor ceases to be a citizen
+C. The end of the current financial year
+D. The maturity date of the account
+Answer: B
+Explanation: Rule 4(4) mandates that if a depositor ceases to be a citizen of India, the account shall be closed or deemed to be closed from the last day of the month preceding the month in which the depositor ceases to be a citizen.
+
+Q47. Consider the following statements regarding the submission of a Permanent Account Number (PAN) while opening a GSP account:
+
+1. PAN must be submitted at the time of opening the account, with no exceptions.
+2. If PAN is not submitted initially, Form 60 must be provided.
+3. An account ceases to be operational if PAN is not submitted within two months of the balance exceeding Rs. 50,000.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Rule 6(1)(b) allows submission of Form 60 if PAN is not available initially. However, PAN must be submitted within two months if the balance exceeds Rs. 50,000, aggregate deposits exceed Rs. 1,00,000, or monthly withdrawals exceed Rs. 10,000, failing which the account ceases to be operational. Therefore, statement 1 is incorrect, making B the right answer.
+
+
+
+Q48. An illiterate person wishes to open a savings account under GSP Rules 2018. Which of the following conditions must be met?
+A. They cannot open an account without a legal guardian.
+B. They must personally visit the Accounts Office accompanied by a known person, and thumb impression witnessed on each withdrawal.
+C. They can open the account online using biometric authentication.
+D. They can only open a Joint 'B' type account.
+Answer: B
+Explanation: Rule 5(3) and (4) state that an illiterate depositor must visit personally, accompanied by a known person, and their thumb impression must be witnessed by an independent witness on each occasion of withdrawal.
+
+Q49. In a Joint 'B' type account under the GSP Rules, 2018, the account is operated by:
+A. All the depositors jointly
+B. The primary depositor only
+C. Any of the depositors or the surviving depositors severally
+D. The nominee appointed by the depositors
+Answer: C
+Explanation: Rule 8(2)(ii) defines a Joint 'B' type account as one to be operated by any of the depositors or the surviving depositors severally.
+
+Q50. A depositor holds a Single Account and wishes to add his wife's name to convert it into a Joint Account. Under GSP Rules, 2018, is this permitted?
+A. Yes, by submitting a revised application form
+B. Yes, but only after paying a conversion fee of Rs. 100
+C. No, an account opened as a Single Account cannot be subsequently converted into a Joint Account.
+D. No, unless the account has matured
+Answer: C
+Explanation: Rule 8(3) explicitly prohibits this: "An account opened as a Single Account cannot be subsequently converted into a Joint Account or vice versa" (except in the case of a single surviving joint account holder converting to a single account).
+
+Q51. What happens to the interest of an account that has matured but remains unclosed under GSP Rules?
+A. It earns no interest after maturity.
+B. It continues to earn interest at the original scheme rate until closed.
+C. The eligible balance continues to earn interest at the rate applicable to the Post Office Savings Account.
+D. The interest is compounded quarterly for a maximum of 5 years.
+Answer: C
+Explanation: Rule 9(6) provides that for an account which has matured but is not closed, the eligible balance shall continue to earn interest at the rate applicable to the Post Office Savings Account, till its closure.
+
+Q52. A minor's account is opened by a guardian. The minor turns 18. What procedural step is required for the new major to operate the account?
+A. The account is automatically converted; no action is required.
+B. The depositor must submit a revised application where their signature is attested by the guardian who opened the account.
+C. The account must be closed, and a new account opened.
+D. A court order must be presented to transfer operation rights.
+Answer: B
+Explanation: Rule 10(2) states that when the minor attains majority, the depositor shall submit a revised application, and the signature of the depositor who has become major shall be attested by the guardian who opened the account.
+
+Q53. Under GSP Rules, 2018, what is the maximum number of individuals that can be nominated as nominees in a single account?
+A. 1
+B. 2
+C. 3
+D. 4
+Answer: D
+Explanation: Rule 14(1) specifies that a depositor may nominate one or more individuals as nominee, but not exceeding four individuals.
+
+Q54. If a nominee under a GSP account is a minor, what additional step must the depositor take?
+A. No nomination of a minor is allowed.
+B. Appoint an individual to receive payment of the eligible balance in the event of the depositor's death during the minority of the nominee.
+C. Provide the minor's PAN card.
+D. Create a trust deed for the minor.
+Answer: B
+Explanation: Rule 14(2) states that where the nominee is a minor, the depositors shall appoint an individual to receive payment of the eligible balance in the event of the death of the depositor during the minority of the nominee.
+
+Q55. Consider the following statements about nomination in GSP accounts:
+
+1. An NRI cannot be nominated as a nominee under any circumstances.
+2. In accounts opened on behalf of a minor, the guardian can nominate himself.
+3. The thumb impression of an illiterate depositor making a nomination must be attested by two witnesses.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Rule 14(9) states that an NRI *is* eligible to be nominated (payment on non-repatriation basis). Rule 14(5) allows a guardian to nominate himself. Rule 14(8) requires two witnesses for an illiterate depositor's thumb impression. Thus, only 2 and 3 are correct.
+
+
+
+Q56. What happens to a nomination if the GSP account is transferred as a pledge or security?
+A. The nomination remains unaffected.
+B. The pledgee becomes the new nominee.
+C. The nomination stands cancelled.
+D. The nomination is suspended until the pledge is released.
+Answer: C
+Explanation: Rule 14(6)(ii) explicitly states that any nomination made shall stand cancelled under circumstances including the transfer of the account as security under rule 16.
+
+Q57. A depositor of a single account dies without leaving a nomination. The eligible amount in the account is Rs. 3 lakhs. What is the procedure for payment under GSP Rules?
+A. The amount must be forfeited to the government.
+B. A succession certificate from a court is mandatory regardless of the amount.
+C. The authorized officer may pay the claimant without a succession certificate upon production of specific documents like an affidavit and indemnity bond after 6 months.
+D. The amount is paid immediately to anyone claiming to be a relative.
+Answer: C
+Explanation: Rule 15(6)(i) states that if the amount does not exceed Rs. 5 lakh and no probate/succession certificate is produced within six months, the authorized officer may pay the rightful claimant upon submission of death certificate, affidavit, letter of disclaimer, and bond of indemnity.
+
+Q58. If a depositor dies without a nomination and the eligible balance is Rs. 8 lakhs, which document is strictly mandatory for the claimant to receive payment?
+A. Letter of disclaimer
+B. Indemnity Bond in Form 15
+C. Succession certificate or legal heir certificate
+D. Approval from the District Magistrate
+Answer: C
+Explanation: Rule 15(6)(ii) states that if the eligible amount is above Rupees five lakh, it shall be paid to the claimant on submission of the probate of will, letters of administration, a succession certificate, or legal heir certificate.
+
+Q59. Under GSP Rules, an account opened on behalf of a minor may be transferred as security (pledged) only if:
+A. The minor agrees in writing.
+B. The guardian certifies in writing that the transfer is for the benefit of the minor.
+C. The pledgee is a scheduled commercial bank.
+D. It is strictly prohibited and cannot be pledged.
+Answer: B
+Explanation: The proviso to Rule 16(2) allows the transfer of a minor's account as security provided the guardian certifies in writing that the minor is alive and that the transfer is for the benefit of the minor.
+
+Q60. According to GSP Rules 2018, what is the prescribed fee for the transfer of an account from one Accounts Office to another?
+A. Rs. 50
+B. Rs. 100
+C. Rs. 20
+D. Free of cost
+Answer: B
+Explanation: Schedule II of the GSP Rules, 2018 states that the fee charged for the transfer of an account is Rs. 100.
+
+Q61. What is the prescribed fee for the issue of a duplicate passbook under the GSP Rules, 2018?
+A. Rs. 10
+B. Rs. 20
+C. Rs. 50
+D. Rs. 100
+Answer: C
+Explanation: Schedule II, Item (a)(i) of the GSP Rules, 2018 prescribes a fee of Rs. 50 for the issue of a duplicate pass book.
+
+Q62. Under the POSB KYC norms, if an Aadhaar card submitted by a customer does not contain the current address, what is the time limit for submitting the updated document?
+A. 1 month
+B. 3 months
+C. 6 months
+D. 1 year
+Answer: B
+Explanation: The KYC guidelines state that a depositor using a limited-purpose document for address proof shall submit Aadhaar or PAN, or a certified copy of an OVD containing updated current address within a period of three months.
+
+Q63. Consider the following statements regarding the reporting of counterfeit currency in POSB transactions:
+
+1. It is reported only if the counterfeit amount exceeds Rs. 10 lakh.
+2. It must be reported regardless of the amount of the transaction.
+3. Attempted transactions involving counterfeit currency are also reportable.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 2 only
+Answer: B
+Explanation: The Monitoring of Transactions guidelines explicitly state that any transaction (or attempted transaction) where forged or counterfeit currency notes are used must be reported, irrespective of the amount involved.
+
+
+
+Q64. In POSB AML guidelines, an integrally connected series of cash transactions must be reported in the CTR if they are carried out within what timeframe and exceed what limit?
+A. Within one week and exceed Rs. 5 lakh
+B. Within one month and totally exceed Rs. 10 lakh
+C. Within one financial year and exceed Rs. 10 lakh
+D. Within 15 days and exceed Rs. 2 lakh
+Answer: B
+Explanation: The reporting guidelines mandate reporting "all series of cash transactions which are less than Rs. 10 lakh but are integrally connected and are carried out within one month period and totally exceed Rs.10 Lakh".
+
+Q65. To whom does a Division Office forward the Suspected Transaction Report (STR) under POSB AML guidelines?
+A. CEPT CBS-Reports Team
+B. FIU-IND directly
+C. Circle Office, which then forwards to DDG (PCO/PMLA)
+D. The local Police Station
+Answer: C
+Explanation: The reporting flow for STRs is: Post Office (same day) -> Division Office (same day) -> Circle Office -> DDG (CPO), PMLA.
+
+Q66. What is the maximum sum assured allowed under Postal Life Insurance (PLI) for all policies put together, for an entrant aged 35?
+A. Rs. 10 lakh
+B. Rs. 20 lakh
+C. Rs. 50 lakh
+D. Rs. 1 crore
+Answer: C
+Explanation: The Customer Acceptance Policy sets the maximum sum assured under PLI at Rs. 50 lakhs for all policies, subject to 10 times annual income till the age of entry of 40 years.
+
+Q67. Under RPLI, what is the maximum sum assured of all policies put together?
+A. Rs. 5 lakh
+B. Rs. 10 lakh
+C. Rs. 20 lakh
+D. Rs. 50 lakh
+Answer: B
+Explanation: For RPLI, the maximum sum assured of all policies put together is Rs. 10 lakhs, subject to similar income multipliers as PLI.
+
+Q68. A customer requests a change of address on his PLI policy for the 4th time in a single financial year. According to AML/CFT norms, what should the Post Office do?
+A. Process the request with an extra fee.
+B. Deny the request immediately.
+C. Report the transaction to the PCO/PMLA section.
+D. Confiscate the policy.
+Answer: C
+Explanation: POSB AML norms require reporting the receipt of request for change of addresses 3 or more times from the same policyholder in a Financial Year, excluding correction in addresses without change.
+
+Q69. How long must PLI policy documents be retained after the final clearance from litigation or arbitration?
+A. 1 year
+B. 3 years
+C. 5 years
+D. 7 years
+Answer: B
+Explanation: The Record Retention Policy for PLI/RPLI requires policies subject to a court case to be retained for "3 years after final clearance from arbitration, litigation, enquiry or audit" or till the prescribed retention period, whichever is later.
+
+Q70. If an account is erroneously credited with interest, what action is mandated by the GSP Rules, 2018?
+A. The depositor keeps the interest as a penalty on the bank.
+B. It shall be reversed immediately on detection by the Accounts Office under written intimation to the depositor.
+C. It is adjusted against the next year's interest without intimation.
+D. The account is immediately frozen and reported as STR.
+Answer: B
+Explanation: Rule 9(7) of the GSP Rules states that any interest credited erroneously to an account shall be reversed immediately on detection by the Accounts Office under written intimation to the depositor.
+
+Q71. Consider the following scenario: A serving army soldier dies, and his commanding officer requisitions the balance of his GSP account under the Army and Air Force (Disposal of Private Property) Act, 1950. The soldier had a valid nominee. Who receives the payment?
+A. The nominee, as nomination supersedes the requisition.
+B. The Commanding Officer or Committee of adjustment.
+C. Half to the nominee, half to the Commanding Officer.
+D. The legal heirs via a court succession certificate.
+Answer: B
+Explanation: Rule 17(3) explicitly states that the authorized officer shall be bound to comply with such requisition even though there is in force at the time of death a nomination in favor of any person.
+
+Q72. What is the fee for the cancellation or change of a nomination under the GSP Rules, 2018?
+A. Free
+B. Rs. 10
+C. Rs. 20
+D. Free
+Answer: D
+Explanation: Fee for the cancellation or change of nomination is Free.
+
+Q73. What is the GST applicable on the service charges prescribed under Schedule II of the GSP Rules, 2018?
+A. 5%
+B. 12%
+C. 18%
+D. No GST is applicable
+Answer: C
+Explanation: Schedule II (g) explicitly states that "GST 18% on the above service charges shall also be payable".
+
+Q74. Under the GSP Rules, 2018, which form is utilized for the application for premature closure of an account?
+A. GSPR-1
+B. GSPR-5
+C. GSPR-8 (SB-7B)
+D. GSPR-11
+Answer: C
+Explanation: Schedule I lists the forms for operation of an account, where GSPR-8 (SB-7B) is specifically the "Application for Premature closure of Account".
+
+Q75. Which form is used for making a claim for a deceased account under GSP Rules, 2018?
+A. Form 7
+B. Form 10
+C. Form 11
+D. Form 14
+Answer: C
+Explanation: Rule 15(2) and Schedule I specify that the nominee or claimant must make an application in Form 11 (Claim Form - Deceased) to the Accounts Office for payment of the eligible balance.
+
+Q76. When an account is pledged as security under GSP Rules, 2018, what specific endorsement is made in the record of the account by the authorized officer?
+A. "Pledged to [Name]"
+B. "Transferred as security to [Name]"
+C. "Account Frozen for [Name]"
+D. "Lien marked by [Name]"
+Answer: B
+Explanation: Rule 16(3) mandates that when any account is transferred as security, the authorized officer shall make the endorsement: "Transferred as security to .....".
+
+Q77. According to the Post Office Rules 2024, if a sender drops an item with a fake official mark to evade postage, what can the official mark on an item prove in recovery proceedings?
+A. It cannot be used as proof.
+B. It denotes the item is unclaimed.
+C. The mark shall be proof to denote that the said sum is due.
+D. It transfers liability to the addressee.
+Answer: C
+Explanation: Rule 15(b) specifies that the official mark on an item denoting any postage due shall be the proof to denote that the said sum is so due.
+
+Q78. In the context of PMLA, what constitutes an "offence of cross border implications"?
+A. Any offence committed entirely outside India with no link to India.
+B. Conduct outside India constituting a scheduled offence if committed in India, transferring proceeds to India.
+C. A scheduled offence in India where proceeds remain in India.
+D. Only terrorism financing.
+Answer: B
+Explanation: Section 2 defines an "offence of cross border implications" as conduct outside India which would constitute a scheduled offence if committed in India, where proceeds are transferred to India (or vice versa).
+
+Q79. Which schedule of the PMLA contains offences where the total value involved must be one crore rupees or more to be a "scheduled offence"?
+A. Part A
+B. Part B
+C. Part C
+D. Part D
+Answer: B
+Explanation: The definition of "scheduled offence" under Section 2 includes offences specified under Part B of the Schedule only if the total value involved is one crore rupees or more.
+
+Q80. Under Section 18 of the PMLA, if an authority searches a person, the person has the right to be taken to a Gazetted Officer or Magistrate within:
+A. 12 hours
+B. 24 hours (excluding journey time)
+C. 48 hours
+D. 7 days
+Answer: B
+Explanation: Section 18 stipulates that a person about to be searched can require the authority to take them to the nearest Gazetted Officer or Magistrate within twenty-four hours, excluding journey time.
+
+Q81. Can a person accused of an offence under PMLA be released on bail easily?
+A. Yes, it is a bailable offence.
+B. No, the Public Prosecutor must be given an opportunity to oppose it, and the court must be satisfied of reasonable grounds of not guilty.
+C. Yes, if the amount involved is more than 1 Crore rupees.
+D. No, under no circumstances can bail be granted.
+Answer: B
+Explanation: Section 45 outlines that offences are non-bailable. A person can be released only if the Public Prosecutor is given a chance to oppose, and the court is satisfied there are reasonable grounds believing the person is not guilty and not likely to commit offence while on bail.
+
+Q82. Under Section 45 of PMLA, an exception to the strict bail conditions is made for which of the following groups, if the money laundering sum is less than 1 Crore rupees?
+A. Persons above 60 years of age
+B. Women, sick, infirm, or persons under the age of 16 years
+C. Only women
+D. First-time offenders
+Answer: B
+Explanation: Section 45 provides an exception that a person under 16, a woman, sick, or infirm, accused of money laundering a sum of less than 1 Crore rupees, may be released on bail if the special court so directs.
+
+Q83. Who is legally qualified to be appointed as a Public Prosecutor or Special Public Prosecutor for a Special Court under PMLA?
+A. Any advocate with 5 years of practice
+B. An advocate with not less than 7 years of practice under the union or state, requiring special knowledge of law
+C. Any retired District Judge
+D. An advocate with 10 years of practice specifically in corporate law
+Answer: B
+Explanation: Section 46 requires that a person appointed as a public prosecutor or special public prosecutor under this section must have been in practice as an advocate for not less than 7 years requiring special knowledge of law.
+
+Q84. Under the PMLA (Section 63), what is the penalty for a person who willfully and maliciously gives false information causing an arrest or a search?
+A. A warning in writing
+B. Penalty of Rs. 10,000
+C. Imprisonment up to two years or fine up to Rs. 50,000 or both
+D. Life imprisonment
+Answer: C
+Explanation: Section 63(1) states that willfully giving false information causing an arrest/search makes the person liable for imprisonment up to two years or a fine up to Rs. 50,000 or both.
+
+Q85. Can a civil court modify an order made by an Adjudicating Authority under the PMLA?
+A. Yes, if the amount exceeds Rs. 10 Lakhs.
+B. No, Section 67 bars civil courts from setting aside or modifying any proceeding or order under this Act.
+C. Yes, but only the High Court exercising civil jurisdiction.
+D. Yes, through a writ petition under CPC.
+Answer: B
+Explanation: Section 67 explicitly bars civil courts from having jurisdiction to entertain any suit or proceeding to set aside or modify any order made under the PMLA.
+
+Q86. Under Section 58A of the PMLA, what happens to property in India if a criminal court outside India concludes that money laundering has not taken place?
+A. The property is confiscated by the Indian Government.
+B. The Special Court may order the release of such property on an application moved by the concerned person or Director.
+C. The property is sold, and proceeds are shared with the foreign country.
+D. The property remains attached indefinitely.
+Answer: B
+Explanation: Section 58A specifies that if a trial outside India concludes no money-laundering took place, the Special Court may order release of the property to the entitled person after notice to the other party.
+
+Q87. According to Post Office AML norms, what does the abbreviation FIU-IND stand for?
+A. Financial Investigation Unit - India
+B. Financial Intelligence Unit - India
+C. Fraud Investigation Union - India
+D. Federal Intelligence Unit - India
+Answer: B
+Explanation: The POSB AML standards list FIU-IND as the abbreviation for "Financial Intelligence Unit-India".
+
+Q88. Under POSB KYC policies, which of the following scenarios absolutely prohibits the opening of a savings account?
+A. The customer is illiterate.
+B. The customer is a minor aged 12.
+C. The account is to be opened in a fictitious name or benami.
+D. The customer is a Non-Resident Indian (NRI) on a brief visit.
+Answer: C
+Explanation: The Customer Acceptance Policy clearly states "No account is opened in anonymous or fictitious name/benami".
+
+Q89. In a situation where a Post Office Savings Bank is unable to apply appropriate Customer Due Diligence measures due to non-cooperation of an existing customer, who holds the authority to decide to close the account?
+A. The Sub-Postmaster
+B. Head of the Postal Division
+C. Circle Head
+D. Director General of Posts
+Answer: B
+Explanation: The Customer Acceptance Policy states that any decision to close the account in such scenarios should be taken by the head of the Postal Division by giving suitable notice to the customer.
+
+Q90. What is the fee for the issue of a cheque book in a Savings Bank Account under GSP Rules 2018 if the customer requests 15 leaves in a calendar year?
+A. Rs. 10
+B. Rs. 30
+C. Rs. 15
+D. No fee
+Answer: A
+Explanation: Schedule II states there is no fee for up to 10 leaves in a calendar year, and thereafter Rs. 2 per cheque leaf. For 15 leaves, the extra 5 leaves will cost 5 * 2 = Rs. 10.
+
+Q91. Consider the following statements regarding the recovery of an erroneously paid excess amount under GSP Rules 2018:
+
+1. The amount can be recovered directly from the depositor's other bank accounts without notice.
+2. The amount is recoverable in the same manner as arrears of land revenue.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Rule 21 states that any amount not due but erroneously paid shall be recoverable by the Government in the same manner as the arrears of land revenue. Deducting directly without process is not supported by this specific rule.
+
+
+
+Q92. Under the GSP Rules, 2018, what is the charge for non-maintenance of minimum balance?
+A. Rs. 20 (exclusive GST)
+B. Rs. 50 (inclusive GST)
+C. Rs. 100 (inclusive GST)
+D. Rs. 50 (exclusive GST)
+Answer: B
+Explanation: Schedule II clearly states the charge for non-maintenance of Minimum balance is Rs. 50 (inclusive GST).
+
+Q93. A joint account is held by three individuals. They wish to nominate a beneficiary. Under GSP Rules, 2018, who signs the nomination form (Form 10)?
+A. The primary account holder only
+B. Any one of the depositors
+C. All the depositors in the joint account
+D. The guardian of the depositors
+Answer: C
+Explanation: Rule 14(1) requires "the depositors in a joint account" to nominate, meaning it is a collective action by the depositors opening the account jointly, reflecting mutual consent in Joint Accounts.
+
+Q94. If a Post Office Savings Certificate (issued prior to 2018 rules) is lost or mutilated, what is issued in its place under the current GSP Rules 2018?
+A. A new identical certificate
+B. A duplicate in the form of a passbook
+C. A digital certificate only
+D. An indemnity bond as proof
+Answer: B
+Explanation: Rule 18(4) states that if a savings certificate issued prior to these rules is lost or mutilated, a duplicate in the form of a passbook shall be issued on payment of fee and submission of Indemnity bond.
+
+Q95. Consider the following statements regarding PMLA Section 23 (Presumption in inter-connected transactions):
+
+1. It applies when money-laundering involves two or more interconnected transactions.
+2. If one transaction is proved to be money laundering, the remaining transactions are presumed to be interconnected unless proved otherwise.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 23 establishes that where money laundering involves interconnected transactions, proving one or more are involved in money laundering leads to the presumption that the remaining transactions form part of the interconnected transactions.
+
+
+
+Q96. Under the Post Office Act, 2023, if an item cannot be delivered and bears an official mark denoting it is refused or unclaimed, what legal status does this mark have?
+A. It is conclusive evidence of the sender's guilt.
+B. It is sufficient proof of the fact indicated.
+C. It requires corroboration by two witnesses.
+D. It has no legal standing without a court order.
+Answer: B
+Explanation: Rule 13(a) of the PO Rules 2024 states that the official mark denoting an item has been refused, rejected, or unclaimed shall be sufficient proof of the fact indicated.
+
+Q97. Which of the following best describes the mandate of "Universal Postal Service" as defined in the Post Office Rules, 2024?
+A. Postal services exclusively for government use.
+B. Provision of postal services which are affordable and made available to all users, within and outside the country.
+C. Services providing 24-hour delivery guarantees globally.
+D. Free postal services for rural areas.
+Answer: B
+Explanation: Rule 2(1)(j) defines "universal postal service" as the provision of such postal services which are affordable and made available to all users, within and outside the country.
+
+Q98. A person refuses to answer questions and sign a statement during a PMLA search. What penalty is applicable under Section 63 of PMLA?
+A. Imprisonment up to 1 year
+B. Penalty sum not less than Rs. 500 but extending to Rs. 10,000
+C. Fine of exactly Rs. 50,000
+D. Forfeiture of all bank accounts
+Answer: B
+Explanation: Section 63(2) states that if a person refuses to answer any question, sign a statement, or attend after receiving a summons, they shall pay a penalty of not less than Rs. 500 but extending to Rs. 10,000.
+
+Q99. Under GSP Rules 2018, which form is required to be submitted along with a claim form if the eligible amount in a deceased account (without nomination) does not exceed Rs. 5 Lakhs?
+A. Form 14 (Letter of disclaimer)
+B. Form 7 (Pledging of Account)
+C. Form 5 (Transfer of Account)
+D. Form 1 (Opening of Account)
+Answer: A
+Explanation: Rule 15(6)(i) outlines the required documents for claims under Rs. 5 Lakh without succession certificate, which include Death certificate, Passbook, Affidavit (Form 13), Letter of disclaimer (Form 14), Bond of Indemnity (Form 15), and ID proof.
+
+Q100. According to PO AML standards, what must a Post Office do if a premium payment for a Postal Life Insurance policy exceeds Rs. 5 Lakhs in a month?
+A. Reject the transaction as it breaches limits.
+B. Report it to the PCO/PMLA Section of Dak Bhawan through proper channel.
+C. Ask for a succession certificate.
+D. Open a separate High-Risk savings account for the customer.
+Answer: B
+Explanation: The POSB AML standards require reporting to PCO/PMLA for "Premium payments for more than 5 Lacs a month in one or more transactions".

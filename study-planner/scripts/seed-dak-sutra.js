@@ -24,66 +24,6 @@ const now = new Date();
 const entries = [
 
     // ─────────────────────────────────────────────────────────────────────────
-    // 1. POST OFFICE ACT, 2023
-    // ─────────────────────────────────────────────────────────────────────────
-    {
-        title: "Post Office Act, 2023 — Key Provisions at a Glance",
-        rule_number: "Sections 1–28",
-        act_name: "Post Office Act, 2023",
-        category: "Section",
-        effective_date: new Date("2024-12-16"),
-        exam_tags: ["LDCE IP", "PS Group B"],
-        official_text: `<p>The Post Office Act, 2023 received Presidential assent on <strong>18 December 2023</strong> and came into force on <strong>16 December 2024</strong>, replacing the Indian Post Office Act, 1898.</p>
-<h4>Key Definitions</h4>
-<ul>
-  <li><strong>Section 2(j) – "Postal article":</strong> Includes any article (letter, postcard, parcel, newspaper, book-packet, etc.) transmissible by post.</li>
-  <li><strong>Section 2(k) – "Postal services":</strong> Services rendered by the Post Office including collection, processing, transmission, and delivery of postal articles.</li>
-  <li><strong>Section 2(l) – "Post Office":</strong> The Department of Posts and includes any entity or person authorised by the Central Government to provide services through its network.</li>
-</ul>
-<h4>Exclusive Privilege (Section 3)</h4>
-<p>The Central Government shall have the exclusive privilege of conveying by post, from one place to another, all letters including express delivery of letters, except where it otherwise provides.</p>
-<h4>Exemptions (Section 4)</h4>
-<p>The exclusive privilege shall not apply to: (a) a letter sent by a private person by private hand or by a special messenger; (b) a letter sent to a courier by a telegraph office.</p>
-<h4>Interception of Postal Articles (Section 9)</h4>
-<p>The Central Government or any officer specially authorised by it may direct interception, opening or detention of any postal article in the interest of — (i) sovereignty and integrity of India; (ii) security of the State; (iii) friendly relations with foreign states; (iv) public order, decency or morality; (v) prevention of cognisable offences.</p>
-<h4>Liability of the Post Office (Section 10)</h4>
-<p>The Post Office shall not incur any liability in respect of — (a) loss, misdelivery, delay or damage to any postal article in the course of transmission, except as otherwise provided under this Act; (b) money orders or electronic money orders. However, the Central Government may, by rules, provide for compensation for loss or damage.</p>`,
-        guru_explanation: `<p>The Post Office Act, 2023 is a landmark reform — the first complete overhaul since the British-era <strong>Indian Post Office Act, 1898</strong>. Here's what you must understand for the exam:</p>
-<h4>The Big Changes from 1898 Act</h4>
-<ul>
-  <li>The old Act had <strong>criminal penalties</strong> for misusing postal services. The 2023 Act removes criminal provisions — it is a civil legislation now.</li>
-  <li>The definition of "Post Office" is <strong>broader</strong> — any authorised entity can act as a post office, enabling partnerships with private players and CSCs.</li>
-  <li>The <strong>exclusive privilege</strong> of conveying letters remains, but exemptions are clearer.</li>
-</ul>
-<h4>Section 9 — The Interception Power (Very Important!)</h4>
-<p>The government can open your mail — but only on <strong>5 grounds</strong>: sovereignty, security, foreign relations, public order, and prevention of cognisable offences. This power is similar to phone tapping powers under IT Act.</p>
-<h4>Section 10 — No Liability by Default</h4>
-<p>The Post Office is <strong>NOT liable</strong> for loss or damage by default. This is unchanged from 1898. Compensation is only as per rules notified by the Central Government.</p>`,
-        practical_example: `<p><strong>Scenario:</strong> A customer files a complaint saying his Speed Post parcel (booked with insurance) was lost in transit. He asks for compensation under the Post Office Act, 2023.</p>
-<p><strong>Application of Law:</strong></p>
-<ul>
-  <li>Under <strong>Section 10</strong>, the Post Office is not liable for loss by default.</li>
-  <li>However, since the article was <strong>insured</strong>, the Central Government rules (under Section 10) provide for compensation up to the insured value.</li>
-  <li>The postmaster must process the claim as per the Compensation Rules, not as a direct right under the Act.</li>
-</ul>
-<p><strong>Key takeaway:</strong> Insurance is the route to compensation — the Act itself provides no automatic remedy.</p>`,
-        exam_insight: `<p><strong>Top MCQ Facts to Remember:</strong></p>
-<ul>
-  <li>Post Office Act, 2023 came into force: <strong>16 December 2024</strong></li>
-  <li>Replaced: <strong>Indian Post Office Act, 1898</strong></li>
-  <li>Grounds for interception (Section 9): <strong>5 grounds</strong></li>
-  <li>Post Office's default liability for loss/damage: <strong>Nil</strong> (Section 10)</li>
-  <li>The 2023 Act is a <strong>civil legislation</strong> (no criminal provisions)</li>
-  <li>Exclusive privilege: conveying <strong>letters</strong> (not parcels)</li>
-</ul>
-<p><strong>Likely Question Format:</strong> "Which of the following is NOT a ground for interception of postal articles under Section 9 of the Post Office Act, 2023?" — The answer would be something like "Tax evasion" which is not listed.</p>`,
-        status: "published",
-        created_by: "system_admin",
-        createdAt: now,
-        updatedAt: now
-    },
-
-    // ─────────────────────────────────────────────────────────────────────────
     // 2. CCS (LEAVE) RULES, 1972 – EARNED LEAVE
     // ─────────────────────────────────────────────────────────────────────────
     {
@@ -741,22 +681,6 @@ const entries = [
         practical_example: `<p>If Ramesh joined as GDS on <strong>1 January 2024</strong>, by 30 June 2024, he will have <strong>10 days of paid leave</strong> credited to his account. If he takes 2 days leave in July, he will have <strong>8 days remaining</strong> plus the next 10 days added on 31 December 2024.</p>`,
         exam_insight: `<p><strong>Frequent LDCE IP question:</strong> "What is the maximum accumulation limit for GDS Paid Leave?" Answer: <strong>180 days</strong>.</p>
 <p>Also note: There is <strong>no provision for Half Pay Leave</strong> for GDS.</p>`,
-        status: "published",
-        created_by: "system_admin",
-        createdAt: now,
-        updatedAt: now
-    },
-    {
-        title: "Section 4: Meaning of 'Post Office' under the 2023 Act",
-        rule_number: "Section 4",
-        act_name: "Post Office Act 2023",
-        category: "Section",
-        effective_date: new Date("2024-12-16"),
-        exam_tags: ["LDCE IP", "PS Group B"],
-        official_text: `<p><strong>Section 4.</strong> The Central Government may, by notification, provide for the delivery of any service through the Post Office as it may deem fit. The 'Post Office' means the Department of Posts and includes any entity or person authorized by the Central Government to provide service through its network.</p>`,
-        guru_explanation: `<p>This is a major change in the 2023 Act. The definition of Post Office is now <strong>much broader</strong>! It's no longer just a physical building but can be any 'entity or person' authorised by the Ministry. This opens the door for private partnerships and digital-only post offices.</p>`,
-        practical_example: `<p>Imagine a <strong>CSC (Common Service Center)</strong> in a village being authorized to accept Speed Post parcels. Under Section 4, that CSC effectively becomes a 'Post Office' for that service.</p>`,
-        exam_insight: `<p>Watch out for the date! The Post Office Act 2023 came into force on <strong>16th December 2024</strong>. This is a highly probable MCQ for all upcoming postal exams.</p>`,
         status: "published",
         created_by: "system_admin",
         createdAt: now,

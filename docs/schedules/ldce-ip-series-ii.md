@@ -4,7 +4,7 @@
 **Total Tests:** 17  
 **Date Range:** 30.05.2026 – 20.09.2026  
 **Tier:** Diamond Access  
-**Format:** 50 Questions · 60 Minutes · Sat–Sun window  
+**Format:** 100 Questions · 60 Minutes · Sat–Sun window  
 **Syllabus Coverage:** Full LDCE IP Paper I + Paper III curriculum (mirrors Series-I topic sequence)
 
 ---
