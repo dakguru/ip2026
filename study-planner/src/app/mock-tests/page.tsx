@@ -1413,7 +1413,7 @@ function MockTestCard({
 
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
-                {onShowRankList && (
+                {onShowRankList && (role === 'admin' || new Date() > mock.endDate) && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         disabled={role !== 'admin' && (new Date() >= mock.startDate && new Date() <= mock.endDate)}

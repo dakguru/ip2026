@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     ArrowLeft, FileText, ChevronRight, BarChart3, Clock, Loader2, Download,
-    BookOpen, GraduationCap, CalendarDays, CheckCircle2, Circle, Zap
+    BookOpen, GraduationCap, CalendarDays, CheckCircle2, Circle, Zap, Trophy, Shield
 } from "lucide-react";
 import Link from "next/link";
 import { addDays, format, isBefore, isAfter, startOfDay, isSameDay } from "date-fns";
 import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { getMockTestAnswerSheetPDFBlob } from "@/lib/pdf-generator-mocks";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
+import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
 
 interface MockTestEntry {
     id: string;
@@ -21,7 +22,41 @@ interface MockTestEntry {
 }
 
 export default function MockResultsDashboard() {
+    const [isAdmin, setIsAdmin] = useState(false);
+    const [isSessionLoading, setIsSessionLoading] = useState(true);
+
+    useEffect(() => {
+        const checkAdmin = () => {
+            const cookie = document.cookie.split('; ').find(row => row.startsWith('user_session='));
+            if (cookie) {
+                try {
+                    const session = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
+                    if (session.role === 'admin') {
+                        setIsAdmin(true);
+                    }
+                } catch (e) {
+                    console.error('Session parse error', e);
+                }
+            }
+            setIsSessionLoading(false);
+        };
+        checkAdmin();
+    }, []);
+
     const today = startOfDay(new Date());
+
+    const generateSeriesIITests = (): MockTestEntry[] => {
+        return SERIES_II_MOCK_SCHEDULE.map((test) => {
+            return {
+                id: test.id,
+                title: test.title,
+                date: format(new Date(test.startDate + "T00:00:00+05:30"), 'MMM dd, yyyy'),
+                status: 'Scheduled',
+                type: 'weekly',
+                hasData: test.id in TEST_QUESTIONS_MAP
+            };
+        });
+    };
 
     const generateLdceIpTests = (): MockTestEntry[] => {
         const tests: MockTestEntry[] = [
@@ -71,7 +106,8 @@ export default function MockResultsDashboard() {
 
     const ldceIpTests = generateLdceIpTests();
     const psgbTests = generatePsgbTests();
-    const allTests = [...ldceIpTests, ...psgbTests];
+    const seriesIITests = generateSeriesIITests();
+    const allTests = [...ldceIpTests, ...psgbTests, ...seriesIITests];
 
     const [searchTerm, setSearchTerm] = useState("");
     const [isGlobalDownloading, setIsGlobalDownloading] = useState(false);
@@ -303,6 +339,27 @@ export default function MockResultsDashboard() {
         );
     };
 
+    if (isSessionLoading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-950">
+                <Loader2 className="w-8 h-8 animate-spin text-indigo-600" />
+            </div>
+        );
+    }
+
+    if (!isAdmin) {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950 p-4">
+                <Shield className="w-16 h-16 text-red-500 mb-4" />
+                <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Access Restricted</h1>
+                <p className="text-zinc-500 dark:text-zinc-400 mb-8">Access Denied: You need admin privileges to view mock test results.</p>
+                <Link href="/" className="px-6 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-medium">
+                    Return to Home
+                </Link>
+            </div>
+        );
+    }
+
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 transition-colors">
             <div className="max-w-5xl mx-auto">
@@ -454,8 +511,89 @@ export default function MockResultsDashboard() {
                         </section>
                     )}
 
+                    {/* ── LDCE IP Mock Test Series II Leaderboard Cards (15 cards) ── */}
+                    {seriesIITests.length > 0 && (
+                        <section className="mt-10">
+                            <div className="flex items-center justify-between mb-6 pb-3 border-b-2 border-purple-200 dark:border-purple-900">
+                                <div className="flex items-center gap-3">
+                                    <Trophy className="w-5 h-5 text-purple-600" />
+                                    <div>
+                                        <h2 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+                                            LDCE IP Mock Test Series II Leaderboard Cards
+                                        </h2>
+                                        <p className="text-xs text-zinc-400">15 Weekly Mock Test Leaderboards for Series II</p>
+                                    </div>
+                                </div>
+                                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800">
+                                    {seriesIITests.length} cards
+                                </span>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                                {seriesIITests
+                                    .filter(test => test.title.toLowerCase().includes(searchTerm.toLowerCase()))
+                                    .map((test) => {
+                                        const dateStatus = getDateStatus(test);
+                                        const isTestLive = dateStatus === 'live';
+                                        const isTestCompleted = dateStatus === 'completed';
+
+                                        return (
+                                            <Link
+                                                key={test.id}
+                                                href={`/developer/mock-results/${test.id}`}
+                                                className={`group relative flex flex-col justify-between p-5 rounded-2xl border transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden
+                                                    ${isTestLive 
+                                                        ? 'bg-gradient-to-br from-red-500/10 to-transparent border-red-500/30 dark:border-red-500/20 shadow-md shadow-red-500/5' 
+                                                        : isTestCompleted 
+                                                            ? 'bg-zinc-50 dark:bg-zinc-800/40 border-zinc-200 dark:border-zinc-800' 
+                                                            : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800'
+                                                    }`}
+                                            >
+                                                <div className="relative z-10">
+                                                    <div className="flex items-center justify-between gap-2 mb-3">
+                                                        <span className="text-[10px] font-black tracking-widest text-zinc-400 uppercase">Series II Mock</span>
+                                                        
+                                                        {isTestLive ? (
+                                                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300 border border-red-200 dark:border-red-800 animate-pulse">
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-red-500"></span> Live
+                                                            </span>
+                                                        ) : isTestCompleted ? (
+                                                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-700">
+                                                                Completed
+                                                            </span>
+                                                        ) : (
+                                                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-zinc-100 text-zinc-400 dark:bg-zinc-800 dark:text-zinc-500">
+                                                                Upcoming
+                                                            </span>
+                                                        )}
+                                                    </div>
+
+                                                    <h3 className="text-base font-extrabold text-zinc-900 dark:text-zinc-50 mb-1 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                                        {test.title}
+                                                    </h3>
+                                                    <p className="text-[11px] text-zinc-400 font-medium mb-4 flex items-center gap-1.5">
+                                                        <CalendarDays className="w-3.5 h-3.5" />
+                                                        {test.date}
+                                                    </p>
+                                                </div>
+
+                                                <div className="mt-4 pt-3 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-xs font-semibold">
+                                                    <span className="text-zinc-400 dark:text-zinc-500">
+                                                        {test.hasData ? "✓ Configured" : "Upcoming setup"}
+                                                    </span>
+                                                    <span className="text-purple-600 dark:text-purple-400 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                                                        View Results <ChevronRight className="w-3.5 h-3.5" />
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                        );
+                                    })}
+                            </div>
+                        </section>
+                    )}
+
                     {/* Empty state */}
-                    {totalLive === 0 && ldceNonLive.length === 0 && psgbNonLive.length === 0 && searchTerm && (
+                    {totalLive === 0 && ldceNonLive.length === 0 && psgbNonLive.length === 0 && seriesIITests.filter(test => test.title.toLowerCase().includes(searchTerm.toLowerCase())).length === 0 && searchTerm && (
                         <div className="text-center py-20">
                             <FileText className="w-12 h-12 text-zinc-200 dark:text-zinc-700 mx-auto mb-4" />
                             <p className="text-zinc-400 font-medium">No tests match "{searchTerm}"</p>

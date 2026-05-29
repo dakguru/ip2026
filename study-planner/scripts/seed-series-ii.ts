@@ -36,7 +36,7 @@ async function seed() {
         console.log("Connected to MongoDB.");
 
         // Idempotency guard: skip entire series if already seeded
-        const existing = await MockSeriesSchedule.findOne({ seriesId: SERIES_II_ID });
+        const existing = await MockSeriesSchedule.findOne({ seriesId: SERIES_II_ID } as any);
         if (existing) {
             console.log(`Series-II already seeded (found: ${existing.id}). Skipping.`);
             return;
@@ -44,7 +44,7 @@ async function seed() {
 
         let inserted = 0;
         for (const test of SERIES_II_MOCK_SCHEDULE) {
-            const exists = await MockSeriesSchedule.findOne({ id: test.id });
+            const exists = await MockSeriesSchedule.findOne({ id: test.id } as any);
             if (!exists) {
                 await MockSeriesSchedule.create(test);
                 console.log(`  Inserted: ${test.title} (${test.startDate} – ${test.endDate})`);

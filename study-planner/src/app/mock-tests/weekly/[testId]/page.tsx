@@ -4,6 +4,7 @@ import { useState, useEffect, use, useCallback, memo, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Trophy, Loader2, Clock, HelpCircle, CheckCircle2, AlertCircle, History, FileDown, Home, ChevronLeft, ChevronRight, Send, Bookmark, XCircle, Flag, X, Lock as LockIcon, Sparkles, ArrowLeft, LayoutGrid, Timer, Save } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { Question } from "@/data/live_mock_data";
@@ -189,6 +190,16 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-05-23T00:00:00+05:30"),
         endDate: new Date("2026-05-24T23:59:59+05:30"),
         title: "PS Gr B - Weekly Mock Test 08"
+    },
+    "psgb-mock-2026-05-31": {
+        startDate: new Date("2026-05-30T00:00:00+05:30"),
+        endDate: new Date("2026-05-31T23:59:59+05:30"),
+        title: "PS Gr B - Weekly Mock Test 09"
+    },
+    "mock-s2-2026-05-30": {
+        startDate: new Date("2026-05-30T00:00:00+05:30"),
+        endDate: new Date("2026-05-31T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-01"
     }
 };
 
@@ -403,6 +414,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     const [currentQIndex, setCurrentQIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [markedForReview, setMarkedForReview] = useState<string[]>([]);
+    const [visitedQuestions, setVisitedQuestions] = useState<string[]>([]);
+    const [showSubmitModal, setShowSubmitModal] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [score, setScore] = useState(0);
 
@@ -672,8 +685,41 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         });
     }, [currentQIndex, questions, vibrate]);
 
-    const handleSubmit = useCallback(async () => {
-        if (timeLeft > 0 && !confirm("Are you sure you want to submit the test?")) return;
+    // Desktop-only: clear the selected answer for the current question
+    const handleClearResponse = useCallback(() => {
+        vibrate(10);
+        setAnswers(prev => {
+            const currentQ = questions[currentQIndex];
+            if (!currentQ) return prev;
+            if (prev[currentQ.id] === undefined) return prev;
+            const next = { ...prev };
+            delete next[currentQ.id];
+            return next;
+        });
+    }, [currentQIndex, questions, vibrate]);
+
+    // Desktop-only: mark current question for review and advance
+    const handleMarkAndNext = useCallback(() => {
+        vibrate(10);
+        setMarkedForReview(prev => {
+            const currentQ = questions[currentQIndex];
+            if (!currentQ) return prev;
+            return prev.includes(currentQ.id) ? prev : [...prev, currentQ.id];
+        });
+        setCurrentQIndex(prev => Math.min(questions.length - 1, prev + 1));
+    }, [currentQIndex, questions, vibrate]);
+
+    // Track which questions have been visited (drives the "Not Answered" red state).
+    // State-only — does not affect the unchanged mobile UI.
+    useEffect(() => {
+        const currentQ = questions[currentQIndex];
+        if (!currentQ) return;
+        setVisitedQuestions(prev => prev.includes(currentQ.id) ? prev : [...prev, currentQ.id]);
+    }, [currentQIndex, questions]);
+
+    // Core submission logic (no confirmation prompt)
+    const doSubmit = useCallback(async () => {
+        setShowSubmitModal(false);
         vibrate(30);
 
         let correctCount = 0;
@@ -686,9 +732,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         setScore(marks);
 
         // Submit to Server
-        // Submit to Server
         if (userEmail && !isReattempt && !isAdmin) { // Skip server submission for reattempts AND Admins
-            // I need to move userEmail to state to access it here.
             try {
                 await fetch('/api/mock-test/live/submit', {
                     method: 'POST',
@@ -709,7 +753,13 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
         setIsSubmitted(true);
         window.scrollTo(0, 0);
-    }, [timeLeft, questions, answers, vibrate, userEmail, testId]);
+    }, [questions, answers, vibrate, userEmail, isReattempt, isAdmin, testId]);
+
+    // Mobile / timeout / back-button path: keeps the lightweight native confirm
+    const handleSubmit = useCallback(async () => {
+        if (timeLeft > 0 && !confirm("Are you sure you want to submit the test?")) return;
+        await doSubmit();
+    }, [timeLeft, doSubmit]);
 
     // Refs for stable access inside event listeners
     const handleSubmitRef = useRef(handleSubmit);
@@ -918,16 +968,31 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
     const currentQ = questions[currentQIndex];
 
+    // Desktop palette: 5-state styling (Not Visited / Not Answered / Answered / Marked / Answered & Marked)
     const getStatusColor = (qId: string, idx: number) => {
-        const ans = answers[qId];
-        const isMarked = markedForReview.includes(qId);
+        const answered = answers[qId] !== undefined;
+        const marked = markedForReview.includes(qId);
+        const visited = visitedQuestions.includes(qId);
         const isCurrent = questions[idx].id === currentQ.id;
 
-        if (isCurrent) return "border-2 border-blue-600 ring-2 ring-blue-100 dark:ring-blue-900";
-        if (isMarked) return "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border-purple-300 dark:border-purple-800";
-        if (ans !== undefined) return "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border-green-300 dark:border-green-800";
-        return "bg-zinc-50 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 border-zinc-200 dark:border-zinc-700";
+        const ring = isCurrent ? " ring-2 ring-offset-2 ring-blue-500 dark:ring-offset-zinc-900 scale-110 z-10" : "";
+
+        if (answered && marked) {
+            // Marked for review WITH an answer — purple with a green corner dot
+            return "bg-purple-600 text-white border-purple-600 relative after:content-[''] after:absolute after:-bottom-1 after:-right-1 after:w-3 after:h-3 after:bg-green-500 after:rounded-full after:border-2 after:border-white dark:after:border-zinc-900" + ring;
+        }
+        if (marked) return "bg-purple-600 text-white border-purple-600" + ring;
+        if (answered) return "bg-green-600 text-white border-green-600" + ring;
+        if (visited) return "bg-red-500 text-white border-red-500" + ring;
+        return "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700" + ring;
     };
+
+    // Desktop status summary counts (mutually exclusive categories)
+    const cAnsweredMarked = questions.filter(q => answers[q.id] !== undefined && markedForReview.includes(q.id)).length;
+    const cMarked = questions.filter(q => answers[q.id] === undefined && markedForReview.includes(q.id)).length;
+    const cAnswered = questions.filter(q => answers[q.id] !== undefined && !markedForReview.includes(q.id)).length;
+    const cNotAnswered = questions.filter(q => answers[q.id] === undefined && !markedForReview.includes(q.id) && visitedQuestions.includes(q.id)).length;
+    const cNotVisited = questions.length - cAnswered - cNotAnswered - cMarked - cAnsweredMarked;
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans selection:bg-purple-500/30">
@@ -986,24 +1051,52 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
             {/* DESKTOP VIEW (Hidden on Mobile UNLESS Submitted) */}
             <div className={isSubmitted ? "w-full" : "hidden lg:block pb-20"}>
-                <header className="sticky top-0 z-30 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-300">
-                    <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                            <Link href="/mock-tests" className="p-2 -ml-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors active:scale-95">
+                <header className="sticky top-0 z-30 bg-white/85 dark:bg-zinc-950/85 backdrop-blur-xl border-b border-zinc-200/70 dark:border-zinc-800 shadow-[0_2px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+                    {/* Premium gradient hairline */}
+                    <div className="h-[3px] w-full bg-gradient-to-r from-indigo-600 via-purple-500 to-amber-400" />
+                    <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-2.5 min-w-0">
+                            <Link href="/mock-tests" className="p-2 -ml-1 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors active:scale-95 shrink-0">
                                 <ArrowLeft className="w-5 h-5 text-zinc-700 dark:text-zinc-300" />
                             </Link>
-                            <div>
-                                <h1 className="font-bold text-lg leading-tight">{TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test"}</h1>
+
+                            {/* Premium Brand Lockup */}
+                            <div className="flex items-center gap-3 min-w-0">
+                                <div className="relative shrink-0">
+                                    <div className="w-11 h-11 rounded-xl overflow-hidden bg-white ring-2 ring-indigo-500/25 shadow-lg shadow-indigo-500/20">
+                                        <Image src="/dak-guru-round.png" alt="Dak Guru" width={44} height={44} className="w-full h-full object-cover" />
+                                    </div>
+                                    <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-gradient-to-br from-amber-400 to-amber-500 ring-2 ring-white dark:ring-zinc-950 flex items-center justify-center shadow-sm">
+                                        <Sparkles className="w-2.5 h-2.5 text-white" fill="currentColor" />
+                                    </span>
+                                </div>
+                                <div className="min-w-0">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-lg md:text-xl font-black tracking-tight bg-gradient-to-r from-indigo-700 via-purple-600 to-indigo-700 dark:from-indigo-300 dark:via-purple-300 dark:to-indigo-300 bg-clip-text text-transparent leading-none">
+                                            DAK GURU
+                                        </span>
+                                        <span className="text-[9px] font-black uppercase tracking-[0.15em] text-amber-700 dark:text-amber-300 bg-gradient-to-r from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-900/10 px-2 py-0.5 rounded-full ring-1 ring-amber-300/60 dark:ring-amber-800/60 shadow-sm">
+                                            Mock Test
+                                        </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5 mt-0.5">
+                                        <span className="w-1 h-1 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 shrink-0" />
+                                        <h1 className="text-[11px] md:text-xs font-semibold text-zinc-500 dark:text-zinc-400 truncate leading-tight tracking-wide">
+                                            {TEST_CONFIG_MAP[testId]?.title || "Weekly Mock Test"}
+                                        </h1>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         {!isSubmitted && (
-                            <div className="flex items-center gap-3">
-                                <div className={`flex items-center gap-2 px-4 py-2 rounded-lg border font-mono font-bold text-lg transition-colors
+                            <div className="flex items-center gap-2.5 shrink-0">
+                                <span className="hidden md:block text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500">Time Left</span>
+                                <div className={`flex items-center gap-2 px-4 py-2 rounded-xl border font-mono font-bold text-lg tabular-nums transition-colors
                                 ${timeLeft < 300 ? 'bg-red-50 text-red-600 border-red-200 dark:bg-red-900/20 dark:text-red-400 dark:border-red-900/30 animate-pulse'
-                                        : 'bg-zinc-100/50 text-zinc-700 border-zinc-200 dark:bg-zinc-800/50 dark:text-zinc-300 dark:border-zinc-700'
+                                        : 'bg-gradient-to-br from-zinc-50 to-zinc-100 text-zinc-800 border-zinc-200 dark:from-zinc-800/60 dark:to-zinc-800/30 dark:text-zinc-200 dark:border-zinc-700 shadow-sm'
                                     }`}>
-                                    <Timer className="w-5 h-5" />
+                                    <Timer className={`w-5 h-5 ${timeLeft < 300 ? 'text-red-500' : 'text-indigo-500'}`} />
                                     {formatTime(timeLeft)}
                                 </div>
                             </div>
@@ -1011,8 +1104,9 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                     </div>
                 </header>
 
-                <main className={`max-w-7xl mx-auto px-4 py-8`}>
+                <main className={`max-w-7xl mx-auto px-4 pt-8 ${!isSubmitted ? 'pb-28' : 'pb-8'}`}>
                     {!isSubmitted ? (
+                      <>
                         <div className="grid grid-cols-12 gap-8">
                             {/* Question Area */}
                             <div className="col-span-8 space-y-6">
@@ -1025,10 +1119,18 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                 </div>
 
                                 <div className="bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200/60 dark:border-zinc-800 shadow-sm min-h-[50vh] flex flex-col">
-                                    <div className="flex justify-between items-start mb-6">
-                                        <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest bg-zinc-100 dark:bg-zinc-800 px-3 py-1 rounded-full">
-                                            Question {currentQIndex + 1} / {questions.length}
-                                        </span>
+                                    <div className="flex justify-between items-start mb-6 gap-3">
+                                        <div className="flex flex-wrap items-center gap-2">
+                                            <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest bg-zinc-100 dark:bg-zinc-800 px-3 py-1 rounded-full">
+                                                Question {currentQIndex + 1} / {questions.length}
+                                            </span>
+                                            <span className="text-xs font-bold text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/20 ring-1 ring-green-200 dark:ring-green-900/30 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
+                                                <span className="text-green-600 dark:text-green-400">+2</span>
+                                                <span className="text-zinc-300 dark:text-zinc-600">/</span>
+                                                <span className="text-zinc-500 dark:text-zinc-400">0</span>
+                                                <span className="hidden xl:inline text-zinc-400 dark:text-zinc-500 font-medium normal-case tracking-normal">· No negative marking</span>
+                                            </span>
+                                        </div>
                                         <button
                                             onClick={toggleMarkReview}
                                             className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full transition-all active:scale-95 ${markedForReview.includes(currentQ.id) ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 ring-1 ring-amber-200 dark:ring-amber-800' : 'text-zinc-400 bg-zinc-50 dark:bg-zinc-800/50 hover:bg-zinc-100 dark:hover:bg-zinc-800'}`}
@@ -1091,75 +1193,218 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                         })}
                                     </div>
                                 </div>
-                                <div className="flex gap-4 pt-4">
-                                    <button
-                                        onClick={() => setCurrentQIndex(prev => Math.max(0, prev - 1))}
-                                        disabled={currentQIndex === 0}
-                                        className="flex-1 py-4 rounded-xl font-bold bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors flex items-center justify-center gap-2 active:scale-95"
-                                    >
-                                        <ChevronLeft className="w-5 h-5" /> Previous
-                                    </button>
-                                    <button
-                                        onClick={() => {
-                                            if (currentQIndex < questions.length - 1) {
-                                                setCurrentQIndex(prev => prev + 1);
-                                            } else {
-                                                handleSubmit();
-                                            }
-                                        }}
-                                        className={`flex-[2] py-4 rounded-xl font-bold text-white shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95
-                                        ${currentQIndex === questions.length - 1
-                                                ? 'bg-green-600 hover:bg-green-700 shadow-green-500/20'
-                                                : 'bg-zinc-900 dark:bg-white dark:text-zinc-900 hover:opacity-90 shadow-zinc-500/10'}`}
-                                    >
-                                        {currentQIndex === questions.length - 1 ? 'Submit Test' : 'Next Question'}
-                                        {currentQIndex !== questions.length - 1 && <ChevronRight className="w-5 h-5" />}
-                                    </button>
-                                </div>
                             </div>
 
-                            {/* Question Palette (Desktop) */}
-                            <div className="col-span-4 space-y-6">
+                            {/* Candidate + Question Palette (Desktop) */}
+                            <div className="col-span-4 space-y-4">
+                                {/* Candidate panel */}
+                                <div className="bg-white dark:bg-zinc-900 rounded-3xl p-4 border border-zinc-200 dark:border-zinc-800 shadow-sm flex items-center gap-3">
+                                    <div className="w-12 h-12 rounded-2xl overflow-hidden bg-white ring-1 ring-zinc-200 dark:ring-zinc-700 flex items-center justify-center shrink-0 shadow-md shadow-indigo-500/10">
+                                        <Image src="/dak-guru-round.png" alt="Dak Guru" width={48} height={48} className="w-full h-full object-cover" />
+                                    </div>
+                                    <div className="min-w-0">
+                                        <div className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider leading-none mb-1">Candidate</div>
+                                        <div className="font-bold text-zinc-900 dark:text-zinc-100 leading-tight truncate">{userName}</div>
+                                        <div className="text-[11px] font-semibold text-zinc-500 dark:text-zinc-400 mt-0.5">+2 marks each · No negative marking</div>
+                                    </div>
+                                </div>
+
                                 <div className="bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm sticky top-24">
-                                    <div className="flex items-center justify-between mb-6">
+                                    <div className="flex items-center justify-between mb-5">
                                         <h3 className="font-bold text-zinc-900 dark:text-zinc-100">Question Palette</h3>
                                         <span className="text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded text-zinc-500">{questions.length} Questions</span>
                                     </div>
-                                    <div className="grid grid-cols-5 gap-2.5 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
+
+                                    {/* Live status summary */}
+                                    <div className="grid grid-cols-2 gap-2 mb-5 text-xs font-semibold">
+                                        <div className="flex items-center gap-2 bg-zinc-50 dark:bg-zinc-800/40 rounded-lg px-2.5 py-2">
+                                            <span className="w-5 h-5 rounded-md bg-green-600 text-white flex items-center justify-center text-[11px] font-bold shrink-0">{cAnswered}</span>
+                                            <span className="text-zinc-600 dark:text-zinc-300">Answered</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 bg-zinc-50 dark:bg-zinc-800/40 rounded-lg px-2.5 py-2">
+                                            <span className="w-5 h-5 rounded-md bg-red-500 text-white flex items-center justify-center text-[11px] font-bold shrink-0">{cNotAnswered}</span>
+                                            <span className="text-zinc-600 dark:text-zinc-300">Not Answered</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 bg-zinc-50 dark:bg-zinc-800/40 rounded-lg px-2.5 py-2">
+                                            <span className="w-5 h-5 rounded-md bg-purple-600 text-white flex items-center justify-center text-[11px] font-bold shrink-0">{cMarked}</span>
+                                            <span className="text-zinc-600 dark:text-zinc-300">Marked</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 bg-zinc-50 dark:bg-zinc-800/40 rounded-lg px-2.5 py-2">
+                                            <span className="w-5 h-5 rounded-md bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300 flex items-center justify-center text-[11px] font-bold shrink-0">{cNotVisited}</span>
+                                            <span className="text-zinc-600 dark:text-zinc-300">Not Visited</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 bg-zinc-50 dark:bg-zinc-800/40 rounded-lg px-2.5 py-2 col-span-2">
+                                            <span className="relative w-5 h-5 rounded-md bg-purple-600 text-white flex items-center justify-center text-[11px] font-bold shrink-0">
+                                                {cAnsweredMarked}
+                                                <span className="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white dark:border-zinc-900" />
+                                            </span>
+                                            <span className="text-zinc-600 dark:text-zinc-300">Answered &amp; Marked for Review</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-5 gap-2.5 max-h-[340px] overflow-y-auto custom-scrollbar pr-2 py-1">
                                         {questions.map((q, idx) => (
                                             <button
                                                 key={idx}
                                                 onClick={() => setCurrentQIndex(idx)}
-                                                className={`aspect-square rounded-xl text-sm transition-all hover:scale-110 active:scale-95 border ${getStatusColor(q.id, idx)}`}
+                                                className={`aspect-square rounded-xl text-sm font-bold transition-all hover:scale-110 active:scale-95 border ${getStatusColor(q.id, idx)}`}
                                             >
                                                 {idx + 1}
                                             </button>
                                         ))}
                                     </div>
-
-                                    <div className="mt-6 pt-6 border-t border-zinc-100 dark:border-zinc-800 grid grid-cols-2 gap-y-3 text-xs font-medium text-zinc-500 dark:text-zinc-400">
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div> Answered
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-2.5 h-2.5 rounded-full bg-amber-500"></div> Review
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700"></div> Unvisited
-                                        </div>
-                                    </div>
-
-                                    <div className="mt-8">
-                                        <button
-                                            onClick={handleSubmit}
-                                            className="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-2xl font-bold transition-all shadow-xl shadow-green-500/20 active:scale-95 flex items-center justify-center gap-2"
-                                        >
-                                            <Save className="w-5 h-5" /> Submit Assessment
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        {/* Fixed bottom action bar (Testbook-style) */}
+                        <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md border-t border-zinc-200 dark:border-zinc-800 shadow-[0_-4px_20px_rgba(0,0,0,0.06)]">
+                            <div className="max-w-7xl mx-auto px-4 py-3 grid grid-cols-12 gap-8 items-center">
+                                <div className="col-span-8 flex items-center justify-between gap-3">
+                                    <div className="flex items-center gap-3">
+                                        <button
+                                            onClick={handleMarkAndNext}
+                                            className="py-3 px-5 rounded-xl font-bold text-sm bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 ring-1 ring-purple-200 dark:ring-purple-800 hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors flex items-center justify-center gap-2 active:scale-95"
+                                        >
+                                            <Flag className="w-4 h-4" /> Mark for Review &amp; Next
+                                        </button>
+                                        <button
+                                            onClick={handleClearResponse}
+                                            disabled={answers[currentQ.id] === undefined}
+                                            className="py-3 px-5 rounded-xl font-bold text-sm bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors flex items-center justify-center gap-2 active:scale-95"
+                                        >
+                                            <XCircle className="w-4 h-4" /> Clear Response
+                                        </button>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <button
+                                            onClick={() => setCurrentQIndex(prev => Math.max(0, prev - 1))}
+                                            disabled={currentQIndex === 0}
+                                            className="py-3 px-5 rounded-xl font-bold text-sm bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors flex items-center justify-center gap-2 active:scale-95"
+                                        >
+                                            <ChevronLeft className="w-5 h-5" /> Previous
+                                        </button>
+                                        <button
+                                            onClick={() => setCurrentQIndex(prev => Math.min(questions.length - 1, prev + 1))}
+                                            disabled={currentQIndex === questions.length - 1}
+                                            className="py-3 px-7 rounded-xl font-bold text-sm text-white bg-zinc-900 dark:bg-white dark:text-zinc-900 hover:opacity-90 shadow-lg shadow-zinc-500/10 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-all active:scale-95"
+                                        >
+                                            Save &amp; Next <ChevronRight className="w-5 h-5" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="col-span-4">
+                                    <button
+                                        onClick={() => setShowSubmitModal(true)}
+                                        className="w-full py-3.5 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-green-500/20 active:scale-95 flex items-center justify-center gap-2"
+                                    >
+                                        <Save className="w-5 h-5" /> Submit Test
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Submit confirmation modal (desktop) */}
+                        <AnimatePresence>
+                            {showSubmitModal && (
+                                <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        className="absolute inset-0 bg-zinc-900/50 backdrop-blur-sm"
+                                        onClick={() => setShowSubmitModal(false)}
+                                    />
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.94, y: 16 }}
+                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                        exit={{ opacity: 0, scale: 0.96, y: 8 }}
+                                        transition={{ type: "spring", damping: 24, stiffness: 280 }}
+                                        className="relative w-full max-w-lg bg-white dark:bg-zinc-900 rounded-[1.75rem] shadow-2xl border border-zinc-200/70 dark:border-zinc-800 overflow-hidden"
+                                    >
+                                        {/* Premium gradient header */}
+                                        <div className="relative px-7 pt-7 pb-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-white dark:from-indigo-950/40 dark:via-purple-950/20 dark:to-zinc-900 border-b border-zinc-100 dark:border-zinc-800">
+                                            <div className="h-[3px] w-full absolute top-0 left-0 bg-gradient-to-r from-indigo-600 via-purple-500 to-amber-400" />
+                                            <button onClick={() => setShowSubmitModal(false)} className="absolute top-5 right-5 p-1.5 rounded-full text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                                                <X className="w-5 h-5" />
+                                            </button>
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 shrink-0">
+                                                    <Send className="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <h2 className="text-xl font-black text-zinc-900 dark:text-white tracking-tight">Submit Assessment?</h2>
+                                                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Review your attempt summary before you finish.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="px-7 py-6">
+                                            {/* Headline progress */}
+                                            <div className="flex items-center justify-between mb-5">
+                                                <div>
+                                                    <div className="text-3xl font-black text-zinc-900 dark:text-white tabular-nums">
+                                                        {cAnswered + cAnsweredMarked}<span className="text-zinc-300 dark:text-zinc-600 text-2xl"> / {questions.length}</span>
+                                                    </div>
+                                                    <div className="text-xs font-bold uppercase tracking-wider text-zinc-400 mt-0.5">Questions Attempted</div>
+                                                </div>
+                                                <div className="w-16 h-16 rounded-full grid place-items-center shrink-0"
+                                                    style={{ background: `conic-gradient(#16a34a ${((cAnswered + cAnsweredMarked) / questions.length) * 360}deg, rgb(228 228 231) 0deg)` }}>
+                                                    <div className="w-12 h-12 rounded-full bg-white dark:bg-zinc-900 grid place-items-center text-sm font-black text-green-600">
+                                                        {Math.round(((cAnswered + cAnsweredMarked) / questions.length) * 100)}%
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Breakdown grid */}
+                                            <div className="grid grid-cols-2 gap-2.5">
+                                                <div className="flex items-center gap-3 bg-green-50 dark:bg-green-900/15 rounded-xl px-3.5 py-3 ring-1 ring-green-100 dark:ring-green-900/30">
+                                                    <span className="w-8 h-8 rounded-lg bg-green-600 text-white grid place-items-center font-black text-sm shrink-0">{cAnswered + cAnsweredMarked}</span>
+                                                    <span className="text-sm font-bold text-zinc-700 dark:text-zinc-200">Answered</span>
+                                                </div>
+                                                <div className="flex items-center gap-3 bg-red-50 dark:bg-red-900/15 rounded-xl px-3.5 py-3 ring-1 ring-red-100 dark:ring-red-900/30">
+                                                    <span className="w-8 h-8 rounded-lg bg-red-500 text-white grid place-items-center font-black text-sm shrink-0">{cNotAnswered}</span>
+                                                    <span className="text-sm font-bold text-zinc-700 dark:text-zinc-200">Not Answered</span>
+                                                </div>
+                                                <div className="flex items-center gap-3 bg-purple-50 dark:bg-purple-900/15 rounded-xl px-3.5 py-3 ring-1 ring-purple-100 dark:ring-purple-900/30">
+                                                    <span className="w-8 h-8 rounded-lg bg-purple-600 text-white grid place-items-center font-black text-sm shrink-0">{cMarked + cAnsweredMarked}</span>
+                                                    <span className="text-sm font-bold text-zinc-700 dark:text-zinc-200">Marked</span>
+                                                </div>
+                                                <div className="flex items-center gap-3 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl px-3.5 py-3 ring-1 ring-zinc-100 dark:ring-zinc-800">
+                                                    <span className="w-8 h-8 rounded-lg bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-200 grid place-items-center font-black text-sm shrink-0">{cNotVisited}</span>
+                                                    <span className="text-sm font-bold text-zinc-700 dark:text-zinc-200">Not Visited</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Warning */}
+                                            <div className="mt-5 flex items-start gap-2.5 bg-amber-50 dark:bg-amber-900/10 rounded-xl px-4 py-3 ring-1 ring-amber-100 dark:ring-amber-900/30">
+                                                <AlertCircle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
+                                                <p className="text-xs font-medium text-amber-800 dark:text-amber-300 leading-relaxed">
+                                                    Once submitted, your responses are final and cannot be changed.
+                                                </p>
+                                            </div>
+
+                                            {/* Actions */}
+                                            <div className="mt-6 flex items-center gap-3">
+                                                <button
+                                                    onClick={() => setShowSubmitModal(false)}
+                                                    className="flex-1 py-3.5 rounded-xl font-bold text-sm bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-200 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors active:scale-95"
+                                                >
+                                                    Resume Test
+                                                </button>
+                                                <button
+                                                    onClick={doSubmit}
+                                                    className="flex-[1.4] py-3.5 rounded-xl font-bold text-sm text-white bg-green-600 hover:bg-green-700 shadow-lg shadow-green-500/25 transition-all active:scale-95 flex items-center justify-center gap-2"
+                                                >
+                                                    <CheckCircle2 className="w-5 h-5" /> Confirm &amp; Submit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </div>
+                            )}
+                        </AnimatePresence>
+                      </>
                     ) : (
                         // Results View - Shared
                         <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-500 py-12">
