@@ -37,7 +37,7 @@ const DakSutraSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 // Auto-generate slug on new documents
-DakSutraSchema.pre('save', function (next) {
+DakSutraSchema.pre('save', function (this: any, next: any) {
     if (!this.slug) {
         this.slug = generateSlug();
     }

@@ -11,6 +11,7 @@ export interface Question {
     correctAnswer: number; // 0-based index
     explanation: string;
     table?: TableData;
+    difficulty?: string;
 }
 
 export const LIVE_MOCK_QUESTIONS: Question[] = [

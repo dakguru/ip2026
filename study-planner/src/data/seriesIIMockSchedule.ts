@@ -21,7 +21,7 @@ export interface SeriesIIMockTest {
     note?: string;
 }
 
-export const SERIES_II_MOCK_SCHEDULE: SeriesIIMockTest[] = [
+const INTERNAL_SERIES_II_MOCK_SCHEDULE: SeriesIIMockTest[] = [
     {
         id: "mock-s2-2026-05-30",
         seriesId: SERIES_II_ID,
@@ -317,3 +317,9 @@ export const SERIES_II_MOCK_SCHEDULE: SeriesIIMockTest[] = [
         status: "upcoming",
     },
 ];
+
+export const SERIES_II_MOCK_SCHEDULE: SeriesIIMockTest[] = INTERNAL_SERIES_II_MOCK_SCHEDULE.map(test => ({
+    ...test,
+    duration: 120
+}));
+

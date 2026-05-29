@@ -1913,7 +1913,7 @@ function PsgbMockTestPage({
                 status,
                 questionCount: isSelectedMock ? 100 : 50,
                 marks: isSelectedMock ? 200 : 100,
-                duration: 60
+                duration: isSelectedMock ? 120 : 60
             } as MockTest;
         });
     }, [role]);
@@ -2139,8 +2139,8 @@ function PsgbMockTestPage({
                         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6">
                             {[
                                 { icon: <Calendar className="w-5 h-5" />, label: '14 Weeks', sub: 'Schedule', color: 'from-violet-500/20 to-violet-500/5', iconColor: 'text-violet-400', borderColor: 'border-violet-500/20' },
-                                { icon: <AlertCircle className="w-5 h-5" />, label: '50 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
-                                { icon: <Clock className="w-5 h-5" />, label: '60 Min', sub: 'Duration', color: 'from-emerald-500/20 to-emerald-500/5', iconColor: 'text-emerald-400', borderColor: 'border-emerald-500/20' },
+                                { icon: <AlertCircle className="w-5 h-5" />, label: '50-100 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
+                                { icon: <Clock className="w-5 h-5" />, label: '60-120 Min', sub: 'Duration', color: 'from-emerald-500/20 to-emerald-500/5', iconColor: 'text-emerald-400', borderColor: 'border-emerald-500/20' },
                                 { icon: <Trophy className="w-5 h-5" />, label: 'Top 7', sub: 'All India Rank', color: 'from-amber-500/20 to-amber-500/5', iconColor: 'text-amber-400', borderColor: 'border-amber-500/20' },
                             ].map((stat, idx) => (
                                 <div key={idx} className={`flex items-center gap-3 px-4 py-3 rounded-2xl bg-gradient-to-br ${stat.color} border ${stat.borderColor} backdrop-blur-md hover:scale-105 transition-transform duration-300 min-w-[140px]`}>

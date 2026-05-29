@@ -406,10 +406,18 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [score, setScore] = useState(0);
 
-    // User State
+    const isPsgbSelectedMock = (() => {
+        if (!testId.startsWith('psgb-mock-')) return false;
+        const datePart = testId.replace('psgb-mock-', '');
+        const psgbWeek = PSGB_MOCK_SCHEDULE.find(w => w.sundayDate === datePart);
+        return psgbWeek ? (psgbWeek.week >= 9 && psgbWeek.week <= 14) : false;
+    })();
+
+    const is120MinTest = isPsgbSelectedMock || testId.startsWith('mock-s2-');
+
     const [isAuthorized, setIsAuthorized] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    const [timeLeft, setTimeLeft] = useState(3600); // 60 mins
+    const [timeLeft, setTimeLeft] = useState(is120MinTest ? 7200 : 3600); // 120 mins for PSGB Mock 09-14 and Series II, else 60 mins
     const [isAdmin, setIsAdmin] = useState(false);
     const [userName, setUserName] = useState("Aspirant");
     const [userEmail, setUserEmail] = useState("");
@@ -850,7 +858,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                         <div className="grid grid-cols-3 gap-2 md:gap-4">
                             <div className="bg-zinc-50 dark:bg-zinc-800/50 p-2.5 md:p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
                                 <Clock className="w-5 h-5 md:w-6 md:h-6 mx-auto mb-1.5 md:mb-2 text-blue-600" />
-                                <div className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100">60 Min</div>
+                                <div className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100">{is120MinTest ? 120 : 60} Min</div>
                                 <div className="text-[10px] md:text-xs text-zinc-500">Duration</div>
                             </div>
                             <div className="bg-zinc-50 dark:bg-zinc-800/50 p-2.5 md:p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
@@ -860,7 +868,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                             </div>
                             <div className="bg-zinc-50 dark:bg-zinc-800/50 p-2.5 md:p-4 rounded-2xl text-center border border-zinc-100 dark:border-zinc-800">
                                 <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 mx-auto mb-1.5 md:mb-2 text-green-600" />
-                                <div className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100">100 Marks</div>
+                                <div className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100">{questions.length * 2} Marks</div>
                                 <div className="text-[10px] md:text-xs text-zinc-500">Marks</div>
                             </div>
                         </div>
