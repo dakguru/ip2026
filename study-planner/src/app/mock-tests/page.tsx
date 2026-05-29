@@ -580,7 +580,7 @@ export default function MockTestsPage() {
                             {[
                                 { icon: <Users className="w-5 h-5" />, label: '1000+', sub: 'Aspirants', color: 'from-indigo-500/20 to-indigo-500/5', iconColor: 'text-indigo-400', borderColor: 'border-indigo-500/20' },
                                 { icon: <Trophy className="w-5 h-5" />, label: 'Rank', sub: 'All India', color: 'from-amber-500/20 to-amber-500/5', iconColor: 'text-amber-400', borderColor: 'border-amber-500/20' },
-                                { icon: <Clock className="w-5 h-5" />, label: '60 Min', sub: 'Per Test', color: 'from-emerald-500/20 to-emerald-500/5', iconColor: 'text-emerald-400', borderColor: 'border-emerald-500/20' },
+                                { icon: <Clock className="w-5 h-5" />, label: activeSeriesTab === 'series2' ? '120 Min' : '60 Min', sub: 'Per Test', color: 'from-emerald-500/20 to-emerald-500/5', iconColor: 'text-emerald-400', borderColor: 'border-emerald-500/20' },
                                 { icon: <CheckCircle2 className="w-5 h-5" />, label: '100 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
                             ].map((stat, idx) => (
                                 <div key={idx} className={`flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-gradient-to-br ${stat.color} border ${stat.borderColor} backdrop-blur-md hover:scale-105 transition-transform duration-300 min-w-[130px]`}>
