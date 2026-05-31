@@ -1681,9 +1681,6 @@ function RankListModal({ mock, isOpen, onClose, role }: { mock: MockTest | null,
                                         <h4 className="font-bold text-sm md:text-base text-zinc-900 dark:text-zinc-100 truncate">
                                             {user.userName}
                                         </h4>
-                                        <p className="text-[10px] text-zinc-400 dark:text-zinc-500 truncate font-mono mt-0.5">
-                                            {maskEmail(user.userEmail)}
-                                        </p>
                                     </div>
                                     <div className="text-right">
                                         <div className="font-black text-indigo-600 dark:text-indigo-400 text-base md:text-lg">{user.score}</div>
