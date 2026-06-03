@@ -442,7 +442,7 @@ const PDF_DATA: Record<string, Note[]> = {
             topic: "Rules"
         },
     ],
-    "Paper II": [
+    "Paper III": [
         // 1-8. Constitution
         // 1. Constitution
         {
@@ -871,7 +871,7 @@ const PDF_DATA: Record<string, Note[]> = {
 export default function NotesPage() {
     const { course } = useCourse();
     const isPS = course === 'PS_GR_B';
-    const TABS = ["Paper I", "Paper II", "SB Orders"];
+    const TABS = isPS ? ["Paper I", "Paper II", "SB Orders"] : ["Paper I", "Paper III", "SB Orders"];
 
     const [activeTab, setActiveTab] = useState(TABS[0]);
     const [searchQuery, setSearchQuery] = useState('');

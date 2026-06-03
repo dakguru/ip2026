@@ -284,7 +284,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Comprehensive notes covering the Recruitment Rules relating to various cadres in D/o Posts.",
             "filename": "RR_DoP_Cadres_Corrected.pdf",
             "path": "/notes/paper-1/RR_DoP_Cadres_Corrected.pdf",
-            "size": "0.5 MB",
+            "size": "0.8 MB",
             "color": "gray",
             "topic": "Reports & Misc"
         },

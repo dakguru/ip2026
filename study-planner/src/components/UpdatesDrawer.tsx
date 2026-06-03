@@ -16,6 +16,42 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "03.06.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: Recruitment Rules Updated (PS Group B)",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>Recruitment Rules relating to various cadres in D/o Posts</strong> PDF notes for the <strong>PS Group B</strong> course mode!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-sky-50/50 dark:bg-sky-900/10 p-3 rounded-xl border border-sky-100 dark:border-sky-800/50">
+                                <p className="font-bold text-sky-700 dark:text-sky-300 text-[10px] uppercase tracking-wide">Recruitment Rules (Paper I)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The notes have been updated to the latest corrected version. The file size is now 0.8 MB.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-sky-600 dark:text-sky-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "🖥️ UI: Paper III Tab Renamed (LDCE IP)",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have renamed the <strong>Paper II</strong> tab to <strong>Paper III</strong> in the Digital Library for <strong>LDCE IP</strong> course mode to align perfectly with the syllabus structure!</p>
+
+                        <p className="pt-1 text-[11px] text-purple-600 dark:text-purple-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Explore the Digital Library under the updated tab name!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "28.05.2026",
         items: [
             {
