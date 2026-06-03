@@ -80,7 +80,7 @@ const SCHEDULE_MAPPING: Record<string, string> = {
     "Prevention of Corruption Act, 1988": "03-04-2026",
     "RTI Act, 2005 and RTI Rules, 2012": "06-04-2026",
     "Manual for Procurement of Goods & Services": "08-04-2026",
-    "CCS (GPF) Rules, 1961": "15-04-2026",
+    "CCS (GPF) Rules, 1960": "15-04-2026",
     "CCS (Pension) Rules, 2021": "16-04-2026",
     "CCS (Commutation of Pension) Rules, 1981": "18-04-2026",
     "Sexual Harassment of Women at Workplace Act, 2013": "20-04-2026",
@@ -532,10 +532,10 @@ const PDF_DATA: Record<string, Note[]> = {
             topic: "CCS Rules & Establishment"
         },
         {
-            title: "CCS (GPF) Rules, 1961",
+            title: "CCS (GPF) Rules, 1960",
             description: "General Provident Fund rules.",
-            filename: "CCS_GPF_Rules_1961.pdf",
-            path: "/notes/paper-3/CCS_GPF_Rules_1961.pdf",
+            filename: "CCS_GPF_Rules_1960.pdf",
+            path: "/notes/paper-3/CCS_GPF_Rules_1960.pdf",
             size: "0.8 MB",
             color: "teal",
             topic: "CCS Rules & Establishment"

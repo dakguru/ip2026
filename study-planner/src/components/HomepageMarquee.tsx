@@ -1,16 +1,21 @@
 import React from 'react';
+import { LATEST_UPDATE_DATE, LATEST_UPDATE_TITLES } from './UpdatesDrawer';
 
 export default function HomepageMarquee() {
-    // Content with colored accents for an immersive feel
     const content = (
         <>
-            <span className="text-yellow-300">🚀</span> It is proudly announced that <span className="text-cyan-200 font-extrabold">DAK GURU</span> IS THE FIRST & ONLY PORTAL IN INDIA FOR LDCE PREPARATION PROVIDING <span className="mx-2 text-indigo-300">•</span>
-            📚 MCQs with <span className="text-green-300">Instant Answer & Explanation</span> <span className="mx-2 text-indigo-300">•</span>
-            🧠 <span className="text-pink-300">Smart Flashcards</span> for Rapid Revision <span className="mx-2 text-indigo-300">•</span>
-            📖 Smart PDF Reader for All Topics <span className="mx-2 text-indigo-300">•</span>
-            🎯 Structured, Rule-Based, Exam-Oriented Learning <span className="mx-2 text-indigo-300">•</span>
-            🏆 All India Weekly <span className="text-orange-300">Live Mock Tests</span> with Answer Sheets in PDF for detailed analysis <span className="mx-2 text-indigo-300">•</span>
-            <span className="italic text-yellow-200">Prepare Smarter</span> • <span className="italic text-yellow-200">Revise Faster</span> • <span className="italic text-yellow-200">Succeed Confidently</span> 🚀
+            <span className="text-yellow-300 font-bold uppercase tracking-widest text-[10px] mr-2">✨ What&apos;s New</span>
+            {LATEST_UPDATE_DATE && (
+                <span className="text-indigo-200 text-[10px] mr-2">({LATEST_UPDATE_DATE})</span>
+            )}
+            {LATEST_UPDATE_TITLES.map((title, i) => (
+                <React.Fragment key={i}>
+                    <span className="text-white/90">{title}</span>
+                    {i < LATEST_UPDATE_TITLES.length - 1 && (
+                        <span className="mx-2 text-indigo-300">•</span>
+                    )}
+                </React.Fragment>
+            ))}
         </>
     );
 
@@ -26,7 +31,7 @@ export default function HomepageMarquee() {
 
             <div
                 className="flex animate-scroll hover:[animation-play-state:paused] w-max items-center"
-                style={{ animationDuration: '80s' }} // Slower speed
+                style={{ animationDuration: '80s' }}
             >
                 {/* Original Content */}
                 <div className="flex items-center px-8">

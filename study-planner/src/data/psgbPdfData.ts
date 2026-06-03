@@ -399,10 +399,10 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "topic": "CCS Rules & Establishment"
         },
         {
-            "title": "CCS (GPF) Rules, 1961",
+            "title": "CCS (GPF) Rules, 1960",
             "description": "General Provident Fund (Central Service) Rules, 1960",
-            "filename": "CCS_GPF_Rules_1961.pdf",
-            "path": "/notes/paper-3/CCS_GPF_Rules_1961.pdf",
+            "filename": "CCS_GPF_Rules_1960.pdf",
+            "path": "/notes/paper-3/CCS_GPF_Rules_1960.pdf",
             "size": "0.8 MB",
             "color": "teal",
             "topic": "CCS Rules & Establishment"

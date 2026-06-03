@@ -120,7 +120,7 @@ export const SYLLABUS_DATA: Topic[] = [
     { id: 'p3-fin-4-2', title: 'Postal FHB Volume II', category: 'Paper III', type: 'heavy', duration: 2, tips: ["Cash handling", "Accounting at HO/SO", "Treasury business."] },
 
     // Establishment & Pensions
-    { id: 'p3-est-1', title: 'CCS (GPF) Rules 1961', category: 'Paper III', type: 'light', duration: 1, tips: ["Subscription", "Advances", "Withdrawals."] },
+    { id: 'p3-est-1', title: 'CCS (GPF) Rules 1960', category: 'Paper III', type: 'light', duration: 1, tips: ["Subscription", "Advances", "Withdrawals."] },
     { id: 'p3-est-2', title: 'CCS (Pension) Rules 2021', category: 'Paper III', type: 'heavy', duration: 3, tips: ["Qualifying service", "Superannuation", "Family Pension."] },
     { id: 'p3-est-3', title: 'CCS (Commutation of Pension) Rules 1981', category: 'Paper III', type: 'light', duration: 1, tips: ["Table of commutation", "Restoration after 15 yrs."] },
     { id: 'p3-est-4', title: 'NPS Rules 2021 & Gratuity Rules', category: 'Paper III', type: 'heavy', duration: 2, tips: ["Govt contribution (14%)", "Exit options."] },

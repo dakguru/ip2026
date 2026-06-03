@@ -19,6 +19,14 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "03.06.2026",
         items: [
             {
+                title: "📝 Corrected the Typo, CCS GPF Rules, 1960",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have corrected the typographical error where the rules were mistakenly referred to as 1961 instead of 1960. All occurrences in the study planner, mock test schedules, and PDF file names have been updated accordingly.</p>
+                    </div>
+                )
+            },
+            {
                 title: "📚 PDF Notes: Recruitment Rules Updated (PS Group B)",
                 desc: (
                     <div className="space-y-4">
@@ -1735,7 +1743,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                         <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
                             <li>CCS (Pension) Rules, 2021</li>
                             <li>Financial Hand Book (FHB) Vol - I & II</li>
-                            <li>CCS (GPF) Rules, 1961</li>
+                            <li>CCS (GPF) Rules, 1960</li>
                             <li>Brochure on Casual Labourers</li>
                             <li>CCS (Commutation of Pension) Rules, 1981</li>
                             <li>Service Discharge Benefit Scheme</li>
@@ -1805,6 +1813,11 @@ interface UpdatesDrawerProps {
     isOpen: boolean;
     onClose: () => void;
 }
+
+// Exported for use in HomepageMarquee — titles from the latest update group
+export const LATEST_UPDATE_DATE: string = UPDATES_DATA[0]?.date ?? "";
+export const LATEST_UPDATE_TITLES: string[] =
+    UPDATES_DATA[0]?.items.map((item) => item.title) ?? [];
 
 export default function UpdatesDrawer({ isOpen, onClose }: UpdatesDrawerProps) {
     const [mounted, setMounted] = useState(false);

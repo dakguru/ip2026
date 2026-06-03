@@ -113,7 +113,7 @@ export const PSGB_MOCK_SCHEDULE: PsgbMockTestWeek[] = [
     {
         week: 10,
         topics: [
-            "CCS (GPF) Rules, 1961",
+            "CCS (GPF) Rules, 1960",
             "CS (Medical Attendance) Rules, 1944",
             "FR & SR - General Rules",
             "FR & SR - TA Rules",

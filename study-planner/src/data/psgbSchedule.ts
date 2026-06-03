@@ -92,7 +92,7 @@ export const PSGB_FULL_SCHEDULE: PsgbScheduleItem[] = [
     { date: "31-05-2026", day: "Sunday",    week: "Week 9",  paper: "Revision", topic: "REVISION", subTopic: "Weekly Revision & Mock Test 9", duration: "-" },
 
     // ===== WEEK 10 =====
-    { date: "01-06-2026", day: "Monday",    week: "Week 10", paper: "Paper II", topic: "CCS Rules", subTopic: "CCS (GPF) Rules, 1961", duration: "1 Day" },
+    { date: "01-06-2026", day: "Monday",    week: "Week 10", paper: "Paper II", topic: "CCS Rules", subTopic: "CCS (GPF) Rules, 1960", duration: "1 Day" },
     { date: "02-06-2026", day: "Tuesday",   week: "Week 10", paper: "Paper II", topic: "CCS Rules", subTopic: "CS (Medical Attendance) Rules, 1944", duration: "1 Day" },
     { date: "03-06-2026", day: "Wednesday", week: "Week 10", paper: "Paper II", topic: "FR & SR", subTopic: "FR & SR - General Rules (Part 1)", duration: "Day 1 of 2" },
     { date: "04-06-2026", day: "Thursday",  week: "Week 10", paper: "Paper II", topic: "FR & SR", subTopic: "FR & SR - General Rules (Part 2)", duration: "Day 2 of 2" },
@@ -190,7 +190,7 @@ export const PSGB_FLEXIBLE_TOPICS: PsgbFlexibleTopic[] = [
     { id: "psgb-p2-07", paper: "Paper II", category: "CCS NPS", title: "CCS (Gratuity under NPS) Rules, 2021", daysAllotted: 1 },
     { id: "psgb-p2-08", paper: "Paper II", category: "CCS Pension", title: "CCS (Commutation of Pension) Rules, 1981", daysAllotted: 1 },
     { id: "psgb-p2-09", paper: "Paper II", category: "CCS Rules", title: "CCS (Leave) Rules, 1972", daysAllotted: 1 },
-    { id: "psgb-p2-10", paper: "Paper II", category: "CCS Rules", title: "CCS (GPF) Rules, 1961", daysAllotted: 1 },
+    { id: "psgb-p2-10", paper: "Paper II", category: "CCS Rules", title: "CCS (GPF) Rules, 1960", daysAllotted: 1 },
     { id: "psgb-p2-11", paper: "Paper II", category: "CCS Rules", title: "CS (Medical Attendance) Rules, 1944", daysAllotted: 1 },
     { id: "psgb-p2-12", paper: "Paper II", category: "FR & SR", title: "FR & SR - General Rules", daysAllotted: 2 },
     { id: "psgb-p2-13", paper: "Paper II", category: "FR & SR", title: "FR & SR - TA Rules", daysAllotted: 1 },
