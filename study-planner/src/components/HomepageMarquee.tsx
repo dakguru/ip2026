@@ -1,18 +1,23 @@
 import React from 'react';
-import { LATEST_UPDATE_DATE, LATEST_UPDATE_TITLES } from './UpdatesDrawer';
+import { LATEST_2_DAYS_UPDATES } from './UpdatesDrawer';
 
 export default function HomepageMarquee() {
     const content = (
         <>
             <span className="text-yellow-300 font-bold uppercase tracking-widest text-[10px] mr-2">✨ What&apos;s New</span>
-            {LATEST_UPDATE_DATE && (
-                <span className="text-indigo-200 text-[10px] mr-2">({LATEST_UPDATE_DATE})</span>
-            )}
-            {LATEST_UPDATE_TITLES.map((title, i) => (
-                <React.Fragment key={i}>
-                    <span className="text-white/90">{title}</span>
-                    {i < LATEST_UPDATE_TITLES.length - 1 && (
-                        <span className="mx-2 text-indigo-300">•</span>
+            {LATEST_2_DAYS_UPDATES.map((day, dayIdx) => (
+                <React.Fragment key={dayIdx}>
+                    <span className="text-indigo-200 text-[10px] mr-2">({day.date})</span>
+                    {day.titles.map((title, titleIdx) => (
+                        <React.Fragment key={titleIdx}>
+                            <span className="text-white/90">{title}</span>
+                            {titleIdx < day.titles.length - 1 && (
+                                <span className="mx-2 text-indigo-300">•</span>
+                            )}
+                        </React.Fragment>
+                    ))}
+                    {dayIdx < LATEST_2_DAYS_UPDATES.length - 1 && (
+                        <span className="mx-4 text-yellow-300">★</span>
                     )}
                 </React.Fragment>
             ))}

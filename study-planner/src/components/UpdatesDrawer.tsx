@@ -16,6 +16,49 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "04.06.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: Consumer Protection Act, 2019 Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>Consumer Protection Act, 2019</strong> PDF notes for both <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes to the latest official version!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide">Consumer Protection Act, 2019</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The notes have been updated to include latest references. File size is now 4.4 MB.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📚 PDF Notes: FR & SR - DA, DR & HRA Rules Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>FR & SR - DA, DR & HRA Rules</strong> PDF notes for both <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-indigo-50/50 dark:bg-indigo-900/10 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/50">
+                                <p className="font-bold text-indigo-700 dark:text-indigo-300 text-[10px] uppercase tracking-wide">FR & SR - DA, DR & HRA Rules</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The notes now reflect the latest corrected guidelines. File size is now 4.1 MB.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "03.06.2026",
         items: [
             {
@@ -1814,10 +1857,15 @@ interface UpdatesDrawerProps {
     onClose: () => void;
 }
 
-// Exported for use in HomepageMarquee — titles from the latest update group
-export const LATEST_UPDATE_DATE: string = UPDATES_DATA[0]?.date ?? "";
-export const LATEST_UPDATE_TITLES: string[] =
-    UPDATES_DATA[0]?.items.map((item) => item.title) ?? [];
+// Exported for use in HomepageMarquee — updates from the last 2 days
+export interface UpdateMarqueeItem {
+    date: string;
+    titles: string[];
+}
+export const LATEST_2_DAYS_UPDATES: UpdateMarqueeItem[] = UPDATES_DATA.slice(0, 2).map((group) => ({
+    date: group.date,
+    titles: group.items.map((item) => item.title)
+}));
 
 export default function UpdatesDrawer({ isOpen, onClose }: UpdatesDrawerProps) {
     const [mounted, setMounted] = useState(false);

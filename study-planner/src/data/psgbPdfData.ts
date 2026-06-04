@@ -18,7 +18,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Consumer Protection Act, 2019",
             "filename": "Consumer_Protection_Act_2019.pdf",
             "path": "/notes/paper-1/Consumer_Protection_Act_2019.pdf",
-            "size": "0.7 MB",
+            "size": "4.4 MB",
             "color": "blue",
             "isFree": true,
             "topic": "Acts"
@@ -439,7 +439,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "FR & SR - Dearness Allowance (DA), Dearness Relief (DR) and House Rent Allowance (HRA) Rules.",
             "filename": "FR_SR_DA_DR_HRA.pdf",
             "path": "/notes/paper-3/FR_SR_DA_DR_HRA.pdf",
-            "size": "4.3 MB",
+            "size": "4.1 MB",
             "color": "indigo",
             "topic": "CCS Rules & Establishment"
         },
