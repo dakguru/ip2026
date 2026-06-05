@@ -329,7 +329,7 @@ export default function MockTestsPage() {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    amount: mock.id.startsWith("mock-s2-") ? 99 : 49,
+                    amount: (mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? 99 : 49,
                     email: userEmail,
                     plan: { id: mock.id, name: mock.title, type: 'mock_test' }
                 })
@@ -1129,7 +1129,7 @@ function MockTestDetail({
                             className="w-full py-4.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-red-500/40 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98] animate-pulse-slow"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Enroll Now for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-
+                            Enroll Now for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-
                         </button>
                     )
                 ) : mock.status === 'completed' ? (
@@ -1182,7 +1182,7 @@ function MockTestDetail({
                             className="w-full py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-indigo-500/30 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98]"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Enroll Now for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-
+                            Enroll Now for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-
                         </button>
                     )
                 ) : (
@@ -1470,7 +1470,7 @@ function MockTestCard({
                             className="flex-1 py-2 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0 w-full"
                         >
                             {isProcessing ? <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-</span>
+                            <span className="text-center">Enroll for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-</span>
                         </button>
                 )
                     ) : isLive ? (
@@ -1516,7 +1516,7 @@ function MockTestCard({
                             className="flex-1 py-2.5 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0"
                         >
                             {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-</span>
+                            <span className="text-center">Enroll for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-</span>
                         </button>
                     )
                 )
@@ -1531,7 +1531,7 @@ function MockTestCard({
                     className="flex-1 py-2 sm:py-3 w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/30 transition-all transform hover:scale-[1.01] active:scale-[0.97] px-2 min-w-0"
                 >
                     {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-300 fill-current shrink-0" />}
-                    <span className="text-center">Enroll for Rs.{mock.id.startsWith("mock-s2-") ? '99' : '49'}/-</span>
+                    <span className="text-center">Enroll for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-</span>
                 </button>
             ) : (
                 <button
@@ -1933,7 +1933,7 @@ function PsgbMockTestPage({
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    amount: 49,
+                    amount: 99,
                     email: userEmail,
                     plan: { id: mock.id, name: mock.title, type: 'mock_test' }
                 })

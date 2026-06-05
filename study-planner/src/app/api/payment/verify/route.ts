@@ -72,7 +72,7 @@ export async function POST(request: Request) {
                         testTitle: plan.name,
                         paymentId: razorpay_payment_id || 'GENERAL_VERIFY',
                         orderId: razorpay_order_id || 'GENERAL_VERIFY',
-                        amount: 49, // Standard price for individual mocks
+                        amount: (plan.id.startsWith("mock-s2-") || plan.id.startsWith("psgb-mock-")) ? 99 : 49, // Standard price for individual mocks
                         status: 'completed',
                         enrolledAt: new Date()
                     },

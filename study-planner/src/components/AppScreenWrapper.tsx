@@ -37,7 +37,7 @@ export default function AppScreenWrapper({
 
             {/* Fixed Header with Safe Area Padding */}
             {header && (
-                <div className="shrink-0 z-30 bg-white/95 dark:bg-[#141414]/95 backdrop-blur-2xl border-b border-zinc-200/60 dark:border-zinc-800/60 pt-[max(24px,env(safe-area-inset-top,0px))] px-5 py-3.5">
+                <div className="shrink-0 z-30 bg-white/95 dark:bg-[#141414]/95 backdrop-blur-2xl border-b border-zinc-200/60 dark:border-zinc-800/60 pt-[max(44px,calc(env(safe-area-inset-top,24px)+14px))] px-5 pb-3.5">
                     {header}
                 </div>
             )}
