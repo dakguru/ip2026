@@ -1,0 +1,959 @@
+Q1. When did the provisions relating to the Central Consumer Protection Authority under Chapter III of the Consumer Protection Act, 2019 come into force?
+A. 09 August 2019
+B. 20 July 2020
+C. 24 July 2020
+D. 17 October 2000
+Answer: C
+Explanation: The provisions under Chapter III containing Sections 10 to 27 regarding the Central Consumer Protection Authority came into force on 24th July 2020.
+
+Q2. Under the Consumer Protection Act, 2019, which of the following is NOT explicitly included in the definition of a "complainant"?
+A. A voluntary consumer association registered under any law
+B. A person who buys goods for commercial resale
+C. The Central Authority
+D. In case of a minor consumer, their legal guardian
+Answer: B
+Explanation: A person who obtains goods for resale or for any commercial purpose is explicitly excluded from the definition of a "consumer", and therefore cannot be a complainant.
+
+Q3. What is the pecuniary jurisdiction limit for entertaining complaints by the District Commission?
+A. Exceeds Rs. 50 Lakhs but does not exceed Rs. 2 Crore
+B. Does not exceed Rs. 50 Lakhs
+C. Does not exceed Rs. 1 Crore
+D. Exceeds Rs. 2 Crore
+Answer: B
+Explanation: The District Commission has the jurisdiction to entertain complaints where the value of the goods or services paid as consideration does not exceed 50 Lakh Rupees.
+
+Q4. What is the prescribed limitation period for filing a complaint before the District, State, or National Commission?
+A. 1 year from the date the cause of action arises
+B. 2 years from the date the cause of action arises
+C. 3 years from the date the cause of action arises
+D. 5 years from the date the cause of action arises
+Answer: B
+Explanation: The District, State, or National Commission shall not admit a complaint unless it is filed within 2 years from the date on which the cause of action has arisen.
+
+Q5. What is the maximum age limit specified for holding the office of the President of the National Consumer Disputes Redressal Commission?
+A. 65 years
+B. 67 years
+C. 70 years
+D. 75 years
+Answer: C
+Explanation: No President of the National Commission shall hold office after attaining the age of 70 years. Any other member shall not hold office beyond 67 years.
+
+Q6. Unless extended by the Consumer Commission, mediation proceedings shall stand terminated on the expiry of what period from the date of first appearance before the mediator?
+A. 30 days
+B. 45 days
+C. 3 months
+D. 6 months
+Answer: C
+Explanation: The mediation shall stand terminated on the expiry of three months from the date of first appearance before the mediator unless the time for completion is formally extended by the Consumer Commission.
+
+Q7. Which of the following statements regarding Consumer Protection Councils is/are correct?
+
+1. The Central Consumer Protection Council must meet at least twice during the year.
+2. The State Consumer Protection Council is chaired by the Collector of the District.
+3. The District Consumer Protection Council must meet at least twice during the year.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: The Central Consumer Protection Council meets at least once during the year. The State Consumer Protection Council is chaired by the Minister-In-Charge of Consumer Affairs in the State, not the District Collector. The District Council meets at least twice a year.
+
+
+
+Q8. Which authority has the power to transfer a pending complaint from a District Commission in one State to a District Commission in another State?
+A. The Central Consumer Protection Authority
+B. The Supreme Court of India
+C. The State Commission
+D. The National Commission
+Answer: D
+Explanation: On the application of the complainant or of its own motion, the National Commission may transfer any complaint pending before a District Commission of one State to a District Commission of another State.
+
+Q9. What is the time limit for the District Commission to exercise its power to review an order if there is an error apparent on the face of the record?
+A. Within 15 days of such order
+B. Within 21 days of such order
+C. Within 30 days of such order
+D. Within 45 days of such order
+Answer: C
+Explanation: The District Commission has the power to review any of its orders either of its own motion or on an application made by any party within 30 days of such order.
+
+Q10. What is the mandatory pre-deposit requirement for entertaining an appeal by the State Commission against an order of the District Commission?
+A. 25 percent of the amount ordered
+B. 30 percent of the amount ordered
+C. 50 percent of the amount ordered
+D. 100 percent of the amount ordered
+Answer: C
+Explanation: No appeal by a person required to pay any amount in terms of an order of the District Commission shall be entertained by the State Commission unless the appellant has deposited 50% of that amount.
+
+Q11. In a product liability action, under which circumstance can a product seller (who is not the manufacturer) be held directly liable?
+A. The seller passed on the manufacturer's exact warnings without modifications.
+B. The seller altered or modified the product and this alteration was a substantial factor in causing harm.
+C. The seller merely acted in a financial capacity with respect to the sale.
+D. The product was sold completely assembled with the manufacturer's seal intact.
+Answer: B
+Explanation: A product seller who is not a manufacturer is liable if they altered or modified the product and such alteration was the substantial factor in causing the harm.
+
+Q12. A platform adds a charity donation automatically into a user's travel booking cart and uses the phrase "charity is for the rich, I don't care" if the user attempts to uncheck the box. Which Dark Pattern does this represent?
+A. Basket sneaking
+B. Bait and switch
+C. Confirm shaming
+D. Nagging
+Answer: C
+Explanation: "Confirm shaming" is a dark pattern that uses phrases like "charity is for rich, I don't care" when a user prefers to opt out of contributing towards charity or a service.
+
+Q13. What is the maximum punishment for a second or subsequent conviction for publishing a false or misleading advertisement?
+A. Imprisonment up to 2 years and a fine up to Rs. 10 Lakhs
+B. Imprisonment up to 3 years and a fine up to Rs. 20 Lakhs
+C. Imprisonment up to 5 years and a fine up to Rs. 50 Lakhs
+D. Life imprisonment and a fine up to Rs. 1 Crore
+Answer: C
+Explanation: For a false or misleading advertisement, the punishment for a subsequent offence can extend to 5 years imprisonment and a fine up to 50 Lakh Rupees.
+
+Q14. Consider the following statements regarding the term "consumer":
+
+1. It includes an individual buying goods for self-employment to earn a livelihood.
+2. It includes a person obtaining goods exclusively for commercial resale.
+3. It covers offline transactions but excludes teleshopping.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: A consumer excludes a person buying for commercial resale. The definition explicitly includes offline, online, electronic, teleshopping, direct selling, or multi-level marketing transactions. Purchases for self-employment livelihood are strictly protected.
+
+
+
+Q15. Consider the following statements regarding the National Commission:
+
+1. It is established by the Central Government.
+2. It shall consist of a President and not less than 4 members.
+3. Members can hold office for a term not exceeding 5 years and are eligible for re-appointment.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The National Commission is established by the Central Government, consists of a President and not less than 4 members, and members hold office for up to 5 years with eligibility for re-appointment.
+
+
+
+Q16. Under the Consumer Protection Act, a product manufacturer shall NOT be liable for failure to provide adequate warnings if:
+A. The product deviated from manufacturing specifications.
+B. The product did not conform to the express warranty.
+C. The complainant was using the product under the influence of alcohol not prescribed by a medical practitioner.
+D. The product failed to contain instructions for correct usage.
+Answer: C
+Explanation: A manufacturer is not liable for failure to provide adequate warnings if the complainant, while using the product, was under the influence of alcohol or any prescription drug not prescribed by a medical practitioner.
+
+Q17. A user attempts to read an article online but the interface uses a deceptive design, making the "No" option for a popup nearly invisible due to light text on a white background. This dark pattern is explicitly categorized as:
+A. False Urgency
+B. Interface interference
+C. Forced action
+D. Drip pricing
+Answer: B
+Explanation: "Interface interference" involves designing a light-colored option for selecting "No" or concealing cancellation symbols in tiny fonts to mislead users.
+
+Q18. If a mediation proceeding before the Consumer Commission ends unsuccessfully, what portion of the consolidated fee is paid to the mediator?
+A. No fee is paid
+B. One-fourth of the fee
+C. Half of the fee
+D. The full fee
+Answer: C
+Explanation: In an unsuccessful mediation, half of the consolidated fee will be paid to the mediator.
+
+Q19. Which of the following statements regarding the Central Consumer Protection Authority (CCPA) is/are correct?
+
+1. It has an Investigative Wing headed by a Director General.
+2. It cannot file complaints suo motu; it requires a directive from the Central Government.
+3. It has the power to issue safety notices to alert consumers against hazardous goods.
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: The CCPA can inquire or investigate either suo motu, on a complaint, or on directions from the Central Government. It has an Investigative Wing headed by a Director General and can issue safety notices.
+
+
+
+Q20. What is the penalty for manufacturing or selling spurious goods that result in the death of a consumer?
+A. Imprisonment up to 5 years and a fine up to Rs. 5 Lakhs
+B. Imprisonment up to 7 years and a fine up to Rs. 10 Lakhs
+C. Imprisonment not less than 7 years, extending to life, and a fine not less than Rs. 10 Lakhs
+D. Imprisonment not less than 10 years and a fine up to Rs. 50 Lakhs
+Answer: C
+Explanation: If manufacturing or selling spurious goods results in the death of a consumer, the punishment is imprisonment of not less than 7 years (extendable to life time) and a fine not less than 10 Lakh Rupees.
+
+Q21. An employer purchases specialized heavy machinery for the workplace. The manufacturer provided extensive safety warnings directly to the employer. An employee gets injured because the employer failed to relay these warnings. Can the employee hold the product manufacturer liable for failure to provide adequate warnings?
+A. Yes, the manufacturer must warn every individual user directly.
+B. No, because the product was purchased by an employer for use at the workplace and warnings were provided to the employer.
+C. Yes, because it is a strict liability offence under all circumstances.
+D. No, because workplace injuries are solely covered by the State Commission.
+Answer: B
+Explanation: In a product liability action based on failure to provide adequate warnings, the manufacturer is not liable if the product was purchased by an employer for the workplace and warnings were provided to that employer.
+
+Q22. Consider the following matters:
+
+1. Proceedings involving serious and specific allegations of fraud and forgery.
+2. Proceedings relating to medical negligence resulting in grievous injury or death.
+3. Cases involving public interest or numerous persons not parties before the Commission.
+Which of the above matters shall NOT be referred to mediation?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Matters relating to medical negligence causing death/grievous injury, serious allegations of fraud/forgery, and cases involving public interest or numerous non-parties cannot be referred to mediation.
+
+
+
+Q23. A consumer wishes to file a complaint in the State Commission where the value of the goods and services paid as consideration is Rs. 1.5 Crore. What is the prescribed court fee for this complaint?
+A. Rs. 2,000/-
+B. Rs. 2,500/-
+C. Rs. 3,000/-
+D. Rs. 4,000/-
+Answer: B
+Explanation: The court fee for filing a complaint in the State Commission where the value is above 1 Crore up to 2 Crore is Rs. 2,500/-.
+
+Q24. Any person aggrieved by an order of the National Commission may appeal to the Supreme Court within what period from the date of the order?
+A. 30 days
+B. 45 days
+C. 60 days
+D. 90 days
+Answer: A
+Explanation: Any person aggrieved by an order made by the National Commission may prefer an appeal against such order to the Supreme Court of India within a period of 30 days from the date of the order.
+
+Q25. Which of the following statements best describes the "SaaS billing" dark pattern?
+A. Forcing a user to upgrade to a higher rate to continue using a service.
+B. Generating and collecting recurring payments by exploiting positive acquisition loops without notifying users of auto-renewals.
+C. Automatically adding travel insurance to a cart.
+D. Using scareware to convince a user to pay for a fake malware removal tool.
+Answer: B
+Explanation: "SaaS billing" refers to exploiting recurring subscriptions to silently debit a user's account without notification, such as auto-renewing monthly subscriptions without telling users.
+
+Q26. When did the Information Technology Act, 2000 come into force?
+A. 09 June 2000
+B. 17 October 2000
+C. 30 January 1997
+D. 24 July 2020
+Answer: B
+Explanation: The Information Technology Act, 2000 was enacted on 09th June 2000 and came into force on 17th October 2000.
+
+Q27. Under the IT Act 2000, which of the following creates a digital signature in an Asymmetric Crypto System?
+A. Hash Function
+B. Public Key
+C. Private Key
+D. Intermediary
+Answer: C
+Explanation: "Asymmetric Crypto System" means a system of a secure key pair consisting of a private key for creating a digital signature and a public key to verify the digital signature.
+
+Q28. For what maximum period can a Certifying Authority suspend a Digital Signature Certificate without giving the subscriber an opportunity of being heard?
+A. 7 days
+B. 10 days
+C. 15 days
+D. 30 days
+Answer: C
+Explanation: A digital signature certificate shall not be suspended for a period exceeding 15 days unless the subscriber has been given an opportunity of being heard in the matter.
+
+Q29. What is the pecuniary jurisdiction limit for an adjudicating officer (rank of Director) to adjudicate claims for injury or damage under the IT Act?
+A. Up to Rupees One Crore
+B. Up to Rupees Five Crore
+C. Up to Rupees Ten Crore
+D. Unlimited
+Answer: B
+Explanation: The adjudicating officer exercises jurisdiction to adjudicate matters in which the claim for injury or damage does not exceed rupees five crore. Claims exceeding this vest with the competent court.
+
+Q30. Any person aggrieved by a decision of the Appellate Tribunal under the IT Act may file an appeal to the High Court within what period?
+A. 30 days
+B. 45 days
+C. 60 days
+D. 90 days
+Answer: C
+Explanation: An appeal to the High Court from the Appellate Tribunal must be filed within 60 days from the date of communication of the decision or order.
+
+Q31. Which of the following is NOT exempt from the applicability of the IT Act, 2000 as per the First Schedule?
+A. A negotiable instrument other than a cheque
+B. A power-of-attorney
+C. An electronic record used for e-authentication via Aadhaar e-KYC
+D. A trust as defined in the Indian Trust Act, 1882
+Answer: C
+Explanation: Schedule I lists documents to which the Act shall not apply: negotiable instruments (other than cheques), power-of-attorney, trusts, wills, and real estate contracts. e-authentication via Aadhaar is legally recognized under the Second Schedule.
+
+Q32. Which of the following statements regarding a "Hash Function" is/are correct?
+
+1. It translates a sequence of bits into a generally smaller set known as a Hash result.
+2. It is computationally feasible to reconstruct the original electronic record from the hash result.
+3. Two different electronic records always produce the same hash result.
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: A Hash Function maps bits to a smaller "Hash result". It makes it computationally infeasible to derive the original record from the hash result, and computationally infeasible that two electronic records can produce the same hash result.
+
+
+
+Q33. A Certifying Authority may revoke a Digital Signature Certificate under which of the following circumstances?
+
+1. Upon the death of the subscriber.
+2. Upon a request made by the subscriber.
+3. Upon the dissolution of a firm where the subscriber is a firm.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: A Certifying Authority may revoke a DSC on request of the subscriber, upon death of the subscriber, or upon dissolution of the firm/winding up of the company.
+
+
+
+Q34. Under Section 44 of the IT Act, failing to furnish any document, return, or report to the controller or certifying authority invites a maximum penalty of:
+A. Rs. 1,00,000
+B. Rs. 5,00,000
+C. Rs. 10,00,000
+D. Rs. 15,00,000
+Answer: D
+Explanation: Failure to furnish any document, return, or report to the controller or certifying authority makes a person liable to a penalty not exceeding Rs. 15,00,000.
+
+Q35. What is the punishment for "identity theft" (fraudulently making use of another's electronic signature or password) under Section 66C?
+A. Imprisonment up to 1 year and a fine up to Rs. 50,000
+B. Imprisonment up to 2 years and a fine up to Rs. 1 Lakh
+C. Imprisonment up to 3 years and a fine up to Rs. 1 Lakh
+D. Imprisonment up to 5 years and a fine up to Rs. 5 Lakhs
+Answer: C
+Explanation: Identity theft under Section 66C is punishable with imprisonment up to 3 years and a fine which may extend to rupees one lakh.
+
+Q36. Under Section 67C, an intermediary who intentionally or knowingly contravenes the rules for preservation and retention of information is liable to a maximum penalty of:
+A. Rs. 5 Lakhs
+B. Rs. 10 Lakhs
+C. Rs. 25 Lakhs
+D. Rs. 1 Crore
+Answer: C
+Explanation: Any intermediary who intentionally or knowingly contravenes the provisions of Section 67C (preservation and retention of information) shall be liable to a penalty which may extend to Rs. 25,00,000.
+
+Q37. An application for a license to issue electronic signature certificates must be accompanied by a fee not exceeding:
+A. Rs. 5,000
+B. Rs. 10,000
+C. Rs. 25,000
+D. Rs. 50,000
+Answer: C
+Explanation: Under Section 22, the application for a license to issue electronic signature certificates requires payment of fees not exceeding Rs. 25,000.
+
+Q38. Which of the following acts as the Appellate Tribunal for the purposes of the IT Act, 2000?
+A. National Company Law Appellate Tribunal
+B. Cyber Appellate Tribunal exclusively established under IT Act
+C. Telecom Disputes Settlement and Appellate Tribunal
+D. Central Administrative Tribunal
+Answer: C
+Explanation: Section 48 specifies that the Telecom Disputes Settlement and Appellate Tribunal (TDSAT) established under the TRAI Act, 1997, functions as the Appellate Tribunal for the IT Act.
+
+Q39. An IT administrator intentionally alters the computer source code required to be maintained by law. What punishment is applicable under Section 65 of the IT Act?
+A. Imprisonment up to 2 years, or fine up to Rs. 1 lakh, or both
+B. Imprisonment up to 3 years, or fine up to Rs. 2 lakhs, or both
+C. Imprisonment up to 5 years, or fine up to Rs. 5 lakhs, or both
+D. Life imprisonment
+Answer: B
+Explanation: Tampering with computer source documents (Section 65) is punishable with imprisonment up to 3 years, or with a fine which may extend to two lakh rupees, or with both.
+
+Q40. Consider the following statements regarding Section 66F (Cyber terrorism):
+
+1. It covers anyone who commits or conspires to commit cyber terrorism.
+2. The punishment can extend to imprisonment for life.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 66F states that whoever commits or conspires to commit cyber terrorism shall be punishable with imprisonment which may extend to imprisonment for life. Both statements are correct.
+
+
+
+Q41. Consider the following statements regarding the Certifying Authority:
+
+1. No license to issue electronic signature certificates shall be suspended for a period exceeding 10 days without showing reasonable opportunity.
+2. Renewal of a license requires an application at least 45 days before expiry.
+3. Failing to surrender a suspended license attracts a penalty up to Rs. 5,00,000.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Section 25 specifies a 10-day limit for suspension without opportunity. Section 23 specifies renewal 45 days prior. Section 33 mandates a penalty up to Rs. 5,00,000 for failing to surrender a suspended/revoked license.
+
+
+
+Q42. A person is convicted for the second time for publishing material depicting children in a sexually explicit act in electronic form (Section 67B). What is the maximum statutory punishment?
+A. Imprisonment up to 3 years and a fine up to Rs. 5 Lakhs
+B. Imprisonment up to 5 years and a fine up to Rs. 10 Lakhs
+C. Imprisonment up to 7 years and a fine up to Rs. 10 Lakhs
+D. Imprisonment up to 10 years and a fine up to Rs. 25 Lakhs
+Answer: C
+Explanation: For publishing child sexually explicit material, the second or subsequent conviction is punishable with imprisonment up to 7 years and a fine extending to ten lakh rupees.
+
+Q43. Which of the following documents is subject to the provisions of the Information Technology Act, 2000?
+A. A will as defined in the Indian Succession Act, 1925
+B. A contract for the sale of immovable property
+C. A cheque
+D. A power-of-attorney
+Answer: C
+Explanation: Schedule I states the IT Act does not apply to a negotiable instrument (other than a cheque), power-of-attorney, trusts, wills, and contracts for immovable property. The Act applies to cheques.
+
+Q44. Which of the following is NOT a designated function of the Indian Computer Emergency Response Team (CERT-In) under Section 70B?
+A. Collection, analysis, and dissemination of information on cyber incidents
+B. Adjudication of compensation claims exceeding rupees five crore
+C. Forecast and alerts of cyber security incidents
+D. Coordination of cyber incidents response activities
+Answer: B
+Explanation: Adjudication of claims exceeding rupees five crore vests with the competent civil court, not CERT-In. CERT-In handles incident response, forecasting, coordination, and emergency measures.
+
+Q45. Consider the following penalties under the IT Act:
+
+1. Breach of confidentiality and privacy by an empowered official (Section 72) attracts a penalty up to Rs. 5 Lakhs.
+2. Disclosure of personal information in breach of a lawful contract by an intermediary (Section 72A) attracts a penalty up to Rs. 25 Lakhs.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 72 prescribes liability up to five lakh rupees for a breach of confidentiality by an official. Section 72A prescribes a penalty up to twenty-five lakh rupees for disclosure in breach of lawful contract.
+
+
+
+Q46. Consider the following statements regarding the appellate mechanism under the IT Act:
+
+1. An appeal to the Appellate Tribunal must be filed within 45 days from receiving the Controller's order.
+2. The Appellate Tribunal shall endeavor to dispose of the appeal finally within six months.
+3. An appeal against the Appellate Tribunal's order lies with the Supreme Court.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Appeals to the Appellate Tribunal are filed within 45 days and disposal is expected within 6 months. However, appeals against the Tribunal's decision lie to the High Court (within 60 days), not the Supreme Court.
+
+
+
+Q47. Under Section 45 (Residuary penalty), what is the maximum penalty payable by a corporate body for contravening rules where no separate penalty is provided?
+A. Rs. 1 Lakh
+B. Rs. 5 Lakhs
+C. Rs. 10 Lakhs
+D. Rs. 25 Lakhs
+Answer: C
+Explanation: Under Section 45, for a residuary contravention, an intermediary, company, or body corporate is liable to a penalty not exceeding Rs. 10,00,000 (Ten Lakhs).
+
+Q48. A person publishes an electronic signature certificate knowing that the subscriber has not accepted it. Under Section 73, what is the maximum punishment for this fraudulent publication?
+A. Imprisonment up to 1 year or a fine up to Rs. 50,000
+B. Imprisonment up to 2 years or a fine up to Rs. 1 Lakh, or both
+C. Imprisonment up to 3 years or a fine up to Rs. 5 Lakhs, or both
+D. Imprisonment up to 5 years or a fine up to Rs. 10 Lakhs, or both
+Answer: B
+Explanation: Publishing an ESC knowing it was not accepted or issued properly is punishable with imprisonment up to 2 years, or with a fine extending to one lakh rupees, or with both.
+
+Q49. Consider the following statements about encryption under the IT Act:
+
+1. The Public Key is used to create the digital signature.
+2. The Private Key is used by anyone to verify the electronic record.
+3. The signature is valid only when the hash values derived during verification are equal.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: The Private Key creates the digital signature, and the Public Key is used by anyone to verify it. The signature is valid when hash values are equal.
+
+
+
+Q50. Under the IT Act, which section deals with cheating by personation by using a computer resource, and what is its maximum fine?
+A. Section 66C; Fine up to Rs. 1 Lakh
+B. Section 66D; Fine up to Rs. 1 Lakh
+C. Section 66E; Fine up to Rs. 2 Lakhs
+D. Section 66F; Fine up to Rs. 5 Lakhs
+Answer: B
+Explanation: Section 66D deals with cheating by personation by using a computer resource, punishable with imprisonment up to 3 years and a fine extending to one lakh rupees.
+
+Q51. According to the Post Office Regulations 2024, what is the maximum working hours limit for a Branch Post Office in a day?
+A. 4 hours
+B. 5 hours
+C. 6 hours
+D. 8 hours
+Answer: B
+Explanation: Regulation 3(2) states that Branch post offices shall be kept open for a maximum period of five hours in a day.
+
+Q52. How long shall an undelivered unaccountable item (e.g., standard ordinary letter) be detained at the Returned Letter Office (RLO)?
+A. 7 days
+B. 15 days
+C. 30 days
+D. 60 days
+Answer: B
+Explanation: Under Regulation 67, undelivered items are detained at the RLO for a period of 15 days when they are unaccountable, and 30 days when they are accountable.
+
+Q53. A resident submits a written intimation regarding a change in their residential address for the redirection of mail. For what maximum period shall this intimation remain valid?
+A. 1 month
+B. 3 months
+C. 6 months
+D. 12 months
+Answer: B
+Explanation: Under Regulation 69(2), a written intimation regarding a change in residential or official address shall remain valid for a period not exceeding three months.
+
+Q54. What is the fee structure for availing the Cash on Delivery (COD) service for an amount to be recovered exceeding Rs. 6,500?
+A. 1.6% of the amount recovered
+B. Rs. 50 + 1% of the amount exceeding Rs. 6,500
+C. Rs. 100 + 1% of the amount exceeding Rs. 6,500
+D. Rs. 100 flat fee
+Answer: C
+Explanation: For COD above Rs. 6,500/-, the fee is Rs. 100/- plus 1% of the amount exceeding Rs. 6,500/-.
+
+Q55. What is the minimum and maximum permissible weight for a packet booked under "Gyan Post"?
+A. Minimum 100 gms; Maximum 2 kg
+B. Minimum 300 gms; Maximum 5 kg
+C. Minimum 500 gms; Maximum 10 kg
+D. Minimum 1 kg; Maximum 20 kg
+Answer: B
+Explanation: Under Regulation 92A(9), the minimum weight for booking a packet under "Gyan Post" is 300 grams, and the maximum weight is 5 kg.
+
+Q56. What is the maximum gross weight limit for a domestic Speed Post item (Document or Parcel) including volumetric weight?
+A. 500 grams for Document; 35 kg for Parcel
+B. 2 kg for Document; 20 kg for Parcel
+C. 500 grams for Document; 20 kg for Parcel
+D. 5 kg for Document; 35 kg for Parcel
+Answer: A
+Explanation: A Speed Post Document shall not exceed 500 grams. A Speed Post Parcel follows the India Post Parcel weight limits, which have a maximum gross weight of 35 kg.
+
+Q57. Consider the following statements regarding the Post Box facility:
+
+1. Renting a Post Box and Bag combined together for a full financial year costs Rs. 250.
+2. In case of change in business address, the customer must inform the Postmaster within 7 days.
+3. The customer can adjust the security deposit against the renewal fee of the Post Box.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: A combined Post Box and Bag costs Rs. 250 for a full financial year. The customer must report a change in address within 7 days. However, the security deposit cannot be adjusted in whole or in part against the deposit or fee due.
+
+
+
+Q58. A damaged accountable item arrives at the delivery post office. What is the prescribed notice period for the addressee to attend the post office to take delivery for domestic and international items, respectively?
+A. 7 days for domestic; 7 days for international
+B. 7 days for domestic; 15 days for international
+C. 15 days for domestic; 15 days for international
+D. 15 days for domestic; 30 days for international
+Answer: B
+Explanation: Regulation 52 specifies that a notice is sent requesting the addressee to attend the post office within 7 days in the case of a domestic item and 15 days in the case of an international item to take delivery.
+
+Q59. Which of the following conditions violates the rules for transmission under "Gyan Post"?
+A. The packet is booked as a trackable item.
+B. The item is transmitted through surface mode.
+C. The packet contains a periodical publication issued at regular intervals.
+D. The packet weighs 4 kilograms.
+Answer: C
+Explanation: Under Regulation 92A, Gyan Post packets shall not contain any publication published at regular intervals (like magazines or journals).
+
+Q60. A sender wants to recall an accountable domestic item before it reaches the addressee. What is the postal fee applicable for the redirection/recall of this item?
+A. Free of charge
+B. Rs. 5 per article
+C. Rs. 6 per article
+D. Rs. 10 per article
+Answer: C
+Explanation: Regulation 55(1) states that the sender can recall the item or alter the address by paying a postal fee of Rs. 6/-.
+
+Q61. In the event of loss or total damage of an India Post Parcel (Retail), what is the maximum compensation payable by the Department of Posts?
+A. Rs. 100 or actual value, whichever is less
+B. Rs. 500 or actual value, whichever is less
+C. Rs. 1000 or actual value, whichever is less
+D. Double the Speed Post postage
+Answer: A
+Explanation: Under Regulation 73(3), the compensation for loss/damage of an India Post Parcel (Retail) is Rs. 100 or the actual value of the lost or damaged contents, whichever is less.
+
+Q62. Consider the following conditions for a publication to be transmitted as "Magazine Post":
+
+1. It must have a bona fide list of at least 500 subscribers.
+2. It must be posted with a minimum of 500 copies at a time.
+3. Volume discounts under the BNPL scheme are applicable.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Magazine post requires at least 500 subscribers and a minimum posting of 500 copies. However, no volume discount under BNPL or advance payment scheme is admissible for Magazine post.
+
+
+
+Q63. What is the required distance of the left edge of a window from the left edge of an envelope for it to conform to standard letter dimensions?
+A. Minimum 10 mm
+B. Minimum 15 mm
+C. Minimum 35 mm
+D. Minimum 40 mm
+Answer: B
+Explanation: Regulation 88(10) mandates that the distance of the left edge of the window from the left edge of the envelope shall be a minimum of 15 mm.
+
+Q64. Consider the following statements regarding the disposal of undelivered items at the Returned Letter Office (RLO):
+
+1. Items without intrinsic value are disposed of forthwith by selling as waste paper or destroyed.
+2. Accountable items are detained for 30 days before disposal.
+3. Items with intrinsic value are disposed of through auction.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Unaccountable items are detained for 15 days, accountable for 30 days. Items without intrinsic value are destroyed/sold as waste, and those with intrinsic value are auctioned.
+
+
+
+Q65. Which of the following is an accurate rule regarding intercepted and prohibited items under the PO Regulations 2024?
+
+1. Battery and other items prohibited by air must be sent to the addressee through surface mode only.
+2. No person has a right to compensation if their item is destroyed because it contains prohibited narcotics.
+3. Any item containing explosive material must be immediately returned to the sender without police notification.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Batteries prohibited by air must be sent via surface mode. There is no compensation for confiscated/destroyed prohibited items. Items with explosives must be detained and the police must be informed immediately.
+
+
+
+Q66. For International Tracked Packet Service (ITPS), what is the maximum compensation paid in the event of loss or damage?
+A. 30 SDR plus postage paid
+B. 40 SDR plus 4.5 SDR per kg
+C. Rs. 1000 or the actual declared value of the contents, whichever is less
+D. 130 SDR
+Answer: C
+Explanation: For International Tracked Packet Service (ITPS), compensation is restricted to Rs. 1000/- or the actual declared value of the contents damaged or lost, whichever is less.
+
+Q67. Consider the business hours specified for normal weekdays in a Post Office:
+
+1. Savings Bank transactions are available for 6 hours.
+2. Money remittance services are available for 6 hours.
+3. Inquiries and references are available during the entire working hours of the office.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Regulation 3 specifies 6 hours for Counter services, Money remittance, and Savings Bank, while references and inquiries are available during entire working hours.
+
+
+
+Q68. An ordinary domestic letter weighing 15 grams is posted completely unpaid. What will be the postage charged upon delivery?
+A. Rs. 5
+B. Rs. 10
+C. Rs. 15
+D. Rs. 20
+Answer: B
+Explanation: The prepaid rate for a letter not exceeding 20 grams is Rs. 5/-. For an unpaid item, the charge on delivery is double the prepaid rate, which is 2 x 5 = Rs. 10/-.
+
+Q69. Which of the following is a prohibited condition for a "Book Post" item?
+A. It exceeds 2 kilograms in weight.
+B. It contains an unobliterated postage stamp or a cheque.
+C. It is posted without a cover.
+D. It contains a single stamped envelope bearing the sender's address.
+Answer: B
+Explanation: A book post shall not exceed 5 kilograms. It can be posted without a cover. It may contain a stamped envelope addressed to the sender. However, it must NOT contain "paper money" like unobliterated stamps or cheques.
+
+Q70. A corporate customer utilizing the e-Post service fails to pay their generated bill within the specified time. What is the applicable penalty?
+A. 10% per annum on the outstanding amount
+B. 12% per annum on the outstanding amount, subject to a minimum of Rs. 100/-
+C. 15% per annum on the outstanding amount
+D. Immediate forfeiture of the security deposit without notice
+Answer: B
+Explanation: The penalty for a corporate e-Post customer if the bill is not paid within the specified time is 12% per annum on the outstanding amount subject to a minimum of Rs. 100/-.
+
+Q71. Consider the following rules for "Logistics Post":
+
+1. Each consignment is charged for a minimum weight of 50 kg.
+2. An article of 10 Cubic feet volume is treated as equivalent to 50 kg.
+3. The limit of insurance liability per transit is Rs. 1 crore.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: In Logistics Post, minimum weight charged is 50 kg. Volume of 10 cubic feet equals 50 kg. The limit of liability per transit under third-party insurance arrangements is Rs. 1 crore.
+
+
+
+Q72. A contractual customer books Speed Post Documents generating a monthly revenue of Rs. 25 Lakhs and uses the advance deposit facility. What is the total discount (NTD) applicable for this customer?
+A. 20%
+B. 21%
+C. 22%
+D. 25%
+Answer: C
+Explanation: For monthly revenue up to 45 Lakhs, the base NTD discount is 20%. Since the customer generates over Rs. 25 lakhs and uses advance deposit, an additional 2% discount applies. Total discount = 22%.
+
+Q73. Which of the following statements regarding "Periodical Post" is NOT correct?
+A. It must be registered with the Press Registrar General of India.
+B. It requires a separate postal registration specifically for transmission by post.
+C. It must be brought out, printed, or published in India only.
+D. It must bear the superscription of the Press Registrar General of India on the first or last page.
+Answer: B
+Explanation: Regulation 94(2) explicitly states, "No separate postal registration shall be required for transmission of periodicals by post." (Unlike Registered Newspapers which require it for concessional rates).
+
+Q74. Which of the following statements concerning the demurrage charges for an International Air Parcel is correct?
+A. Demurrage charges commence from the third day after presentation.
+B. The charge is Rs. 10 per day for an International Air Parcel addressed to a specific residence.
+C. The charge is Re. 1 per day, subject to a maximum of Rs. 24.50 for a standard air parcel.
+D. Poste Restante air parcels are completely exempt from demurrage charges.
+Answer: C
+Explanation: For an international air parcel, demurrage charges commence from the eighth day at Rupee 1 per day, subject to a maximum of Rs. 24.50. For Poste Restante air parcels, the maximum is Rs. 40.
+
+Q75. Who acts as the licensing authority for the issuance of a Remotely Managed Franking Machine (RMFM) license?
+A. The Director General of Posts exclusively
+B. The Circle Head or Regional Postmaster General
+C. The Divisional Head or independent Gazetted Postmaster
+D. The Sub-Divisional Inspector
+Answer: C
+Explanation: Regulation 176(4) states that the Divisional Head or independent Gazetted Postmaster of the Post Office shall be the licensing authority for the issuance of a license for using a franking machine.
+
+Q76. Under the Remotely Managed Franking System (RMFS), what is the validity period of the franking machine license?
+A. 1 Year
+B. 3 Years
+C. 5 Years
+D. 10 Years
+Answer: C
+Explanation: The license of RMFS is valid for 5 Years.
+
+Q77. What is the maximum permissible weight for a "Blind Literature Packet" in the foreign letter post?
+A. 2 Kg
+B. 5 Kg
+C. 7 Kg
+D. 10 Kg
+Answer: C
+Explanation: The maximum weight for literature for the blind in international post is 7 kilograms.
+
+Q78. What is the maximum total amount that can be remitted through retail money orders to a single payee in a month?
+A. Rs. 10,000
+B. Rs. 25,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: B
+Explanation: The maximum amount for a single money order is Rs. 10,000. Provided that the total amount remitted through retail money order to a person in a month shall not exceed Rs. 25,000.
+
+Q79. A Cash on Delivery (COD) article marked "Poste Restante" is kept in the post office of delivery for a maximum period of:
+A. 7 days
+B. 15 days
+C. 30 days
+D. 3 months
+Answer: A
+Explanation: A Poste Restante article (except COD) is kept for up to 15 days. A COD Post article marked "Poste Restante" is kept in the post office for a period of 7 days.
+
+Q80. When was the First Stamp of Independent India issued?
+A. 15 August 1947
+B. 01 October 1947
+C. 21 November 1947
+D. 26 January 1950
+Answer: C
+Explanation: The First Stamp of Independent India was issued on 21 November 1947. It depicts the Indian Flag with the slogan Jai Hind.
+
+Q81. What is the maximum permissible weight of a foreign M-Bag (Bulk bag)?
+A. 10 kg
+B. 20 kg
+C. 30 kg
+D. 35 kg
+Answer: C
+Explanation: The maximum permissible weight of an M-bag is 30 kg.
+
+Q82. According to international customs declarations, which form must be provided if the declared value of an international item is greater than 300 Special Drawing Rights (SDR)?
+A. CN 22 only
+B. CN 23 only
+C. Both CN 22 and CN 23
+D. A CN 23 must be provided
+Answer: D
+Explanation: If the declared value is less than or equal to 300 SDR, CN 22 is used. If it is greater than 300 SDR, a CN 23 shall be provided.
+
+Q83. Consider the following statements regarding the Remotely Managed Franking System (RMFS):
+
+1. The first recharge of the machine must be a minimum of Rs. 2000.
+2. Subsequent recharges must be a minimum of Rs. 1000 and in multiples of Rs. 100.
+3. If the RMFS does not dial the server within 30 days, it is permanently cancelled and cannot be unblocked.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: First recharge is Rs. 2000. Subsequent is minimum Rs. 1000 in multiples of Rs. 100. If it doesn't dial within 30 days, it gets blocked, but this is a reversible process (it unblocks when it dials). Meter cancellation is non-reversible.
+
+
+
+Q84. An owner holding a valid 'Licensed to post without prepayment' (WPP) posts Registered Newspapers between the 1st and 15th of the month. On which date will the bill be generated?
+A. 15th day of the current month
+B. 16th day of the current month
+C. 1st day of the next month
+D. 7th day of the next month
+Answer: B
+Explanation: The bill for WPP for postings between the 1st to 15th is generated on the 16th day of the month.
+
+Q85. After how many months from its issue does an unpaid money order become treated as void by the office of issue?
+A. End of the first month following the month of issue
+B. End of the second month following the month of issue
+C. End of the sixth month following the month of issue
+D. Three years from the date of booking
+Answer: B
+Explanation: A money order remaining unpaid at the end of the second month following the month of its issue is treated as void by the office of issue. (Note: forfeiture happens after 3 years).
+
+Q86. What is the mandatory minimum quantity of 'My Stamp' sheets that corporate customers must order for customized printing?
+A. 100 sheets
+B. 500 sheets
+C. 1,000 sheets
+D. 5,000 sheets
+Answer: D
+Explanation: For Customized My Stamp (CMS), an Institute/Organization is required to get at least 5000 sheets printed. (Regular 'My Stamp' applications from corporate customers require a minimum of 100 sheets, but customized printed sheets require 5000).
+
+Q87. What is the compensation payable for the loss or total theft of an International Air Parcel?
+A. 30 SDR plus postage paid
+B. 40 SDR plus 4.5 SDR per kg, subject to an upper ceiling of 130 SDR, plus postage paid
+C. Declared value of contents up to 130 SDR, with no postage refund
+D. Flat Rs. 1000
+Answer: B
+Explanation: For loss/total theft/total damage of International Parcels, the compensation is 40 SDR plus 4.5 SDR per kg or the value of contents, whichever is less, subject to an upper ceiling of 130 SDR, plus postage paid.
+
+Q88. Which of the following statements regarding an Aerogramme is/are correct?
+
+1. Its maximum size when folded is 110 mm x 220 mm.
+2. The ratio between length and breadth must be more than 1.41 (√2).
+3. The weight must not exceed 5 grams.
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Maximum size folded is 110 x 220 mm. The length to breadth ratio must be more than √2. However, the weight of an aerogramme should not be more than 3 grams.
+
+
+
+Q89. An outward international letter item is found to be unpaid. How will the post office treat this item?
+A. Forward it to destination and tax the addressee.
+B. Deliver it to the sender without any charge, not forwarding it to destination.
+C. Forward it to destination by surface mail instead of air mail.
+D. Detain it at the RLO for 30 days.
+Answer: B
+Explanation: Any outward international item on which the postage or airmail fee is not prepaid or insufficiently prepaid shall not be forwarded to the destination but delivered to the sender without any charge.
+
+Q90. Consider the following statements regarding Night Post Offices:
+
+1. They may transact business on Sundays and Postal Holidays as authorized.
+2. The maximum working hours for these offices on Sundays are exclusively 5 hours.
+3. Registered newspapers can be accepted on Sundays at Night Post Offices.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Night post offices can transact authorized business on Sundays/Holidays. Registered newspapers are accepted on Sundays at Night POs. However, the exact working hours on Sundays are specified by the Head of Circle/Region based on necessity, not fixed strictly to 5 hours (Branch POs have a 5-hour limit).
+
+
+
+Q91. Consider the following rules concerning Registered Newspapers (RNP):
+
+1. Postal registration must be renewed within 15 days of receiving the application form.
+2. First registration is valid till 31st December of the third calendar year following the year of registration.
+3. Renewal application received after the expiry date incurs a late fee of Rs. 50/-.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Postal registration is renewed within 15 days of receiving the application. First registration is valid till Dec 31st of the third year following the year of registration. However, applications received *after* the expiry date incur a late fee of Rs. 100/- (Rs. 50 is for late applications received between Oct 1 and Dec 31).
+
+
+
+Q92. A 10 kg Parcel is booked as a "Camp Article" for the DG Posts. Which of the following is true regarding its postage?
+A. It is totally exempt from postage and incidental charges.
+B. Postage is payable on the 10 kg parcel using Service Stamps, plus an incidental charge of Rs. 16/-.
+C. It incurs no registration charge but full incidental charges.
+D. It must be prepaid in cash, not Service Stamps.
+Answer: B
+Explanation: For a Camp Bag Parcel (Max 10 kg), postage is payable on the 10 kg parcel, prepaid using Service Stamps, plus an incidental charge of Rs. 16/-, and Registration charges as applicable.
+
+Q93. Which of the following conditions applies to the "Deen Dayal SPARSH Yojana" Philately Promotion Scheme?
+A. It awards scholarships to students studying in class IX to XII.
+B. The scholarship amount is Rs. 12,000/- per annum.
+C. The student must secure 60% marks in the recent final exam, with a 5% relaxation for SC/ST students.
+D. The scholarship is paid as a one-time yearly grant.
+Answer: C
+Explanation: The scheme targets students in standard VI, VII, VIII, IX. The scholarship is Rs. 6000/- per annum paid quarterly (Rs. 1500 per quarter). The student needs 60% marks with a 5% relaxation for SC/ST.
+
+Q94. A private party wishes to issue a Special Cover with a special cancellation on a Sunday at the proponent's premises. What is the total combined Departmental Fee payable?
+A. Rs. 1,00,000/-
+B. Rs. 2,00,000/-
+C. Rs. 3,00,000/-
+D. Rs. 4,00,000/-
+Answer: C
+Explanation: For a Sunday/Holiday at proponent's premises: Special Cover fee is Rs. 2,00,000/-. Special Cancellation fee is Rs. 1,00,000/-. Total combined fee = Rs. 3,00,000/-.
+
+Q95. Under the Electronic Advance Data (EAD) requirement for international mails containing goods, which of the following is NOT part of the mandatory "7+1 dataset"?
+A. Consignor address
+B. Total gross weight
+C. Mobile number of the consignee
+D. Brief merchandise or cargo description
+Answer: C
+Explanation: The 7+1 dataset elements are: Consignor name, Consignor address, Consignee name, Consignee address, Number of packages, Total gross weight, Brief merchandise or cargo description, and Identifier. Mobile number is not part of the mandatory 7+1 dataset.
+
+Q96. Consider the following regarding the loss of an international registered item:
+
+1. The post office liability is limited to the value of contents or 30 SDR, whichever is less, plus postage paid.
+2. If the lost article is subsequently recovered, the person who received indemnity must accept it back.
+3. No liability is payable if an enquiry is not made within 6 months.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Liability is 30 SDR or value of contents (whichever is less) plus postage. No liability if inquiry is outside 6 months. However, upon recovery, the person has the *option* of taking delivery in repayment of indemnity, they are not forced. If they don't exercise the option, the article becomes property of the Post Office.
+
+
+
+Q97. An international airmail letter is prepaid less than 75% of the required air surcharge and also less than the standard surface postage charge. How will this item be transmitted?
+A. It will be forwarded by air after taxing the addressee 50% of the combined charge.
+B. It will be forwarded by surface after taxing the addressee less 50% of the combined charge.
+C. It will be forwarded by surface and taxed as per standard surface articles.
+D. It will not be forwarded to the destination.
+Answer: D
+Explanation: According to the matrix for unpaid/insufficiently paid airmail: If the prepaid amount is less than both 75% of Air Surcharge and the Postage charge, the item is "Not Forwarded".
+
+Q98. Which of the following live animals is NOT permitted to be imported into India by international letter post under standard exemptions?
+A. Bees
+B. Silkworms
+C. Leeches
+D. Live poultry
+Answer: D
+Explanation: Live animals are generally prohibited. Exemptions under letter post (other than insured) include bees, leeches, silkworms, parasites/destroyers of noxious insects, and Drosophilidae flies for biomedical research. Poultry is not permitted.
+
+Q99. Consider the following facts about postal unions:
+
+1. Universal Postal Union (UPU) is headquartered in Berne, Switzerland.
+2. Asian Pacific Postal Union (APPU) was established on 1st April 1962 and is headquartered in Bangkok.
+3. India does not exchange parcel post with Pakistan as it relies entirely on the UPU agreement without any bilateral treaty.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: UPU is in Berne. APPU was established April 1, 1962, in Bangkok. However, exchange of parcels with Pakistan is regulated by means of a special bilateral agreement, not solely the standard UPU.
+
+
+
+Q100. In case of loss of an International Express Mail Service (EMS) Document, what is the maximum compensation paid by the Department of Posts?
+A. 30 SDR
+B. 130 SDR
+C. Limited only to the postage paid
+D. Rs. 1000
+Answer: C
+Explanation: For EMS (Document), compensation in case of loss is limited to the Postage Paid. (Merchandise is value or 130 SDR, whichever is less, plus postage).

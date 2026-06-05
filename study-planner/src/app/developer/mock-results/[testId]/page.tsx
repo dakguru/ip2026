@@ -10,6 +10,7 @@ import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { generateMockTestAnswerSheetPDF, getMockTestAnswerSheetPDFBlob } from "@/lib/pdf-generator-mocks";
 import { FULL_SCHEDULE, ScheduleItem } from "@/data/schedule";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
+import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
 
 
 interface MockResult {
@@ -54,6 +55,11 @@ const getTopicsForMock = (saturdayDate: Date, testId?: string): string[] => {
     if (testId && testId.startsWith('psgb-mock-')) {
         const psgbWeek = PSGB_MOCK_SCHEDULE.find(w => "psgb-mock-" + w.sundayDate === testId);
         if (psgbWeek) return psgbWeek.topics;
+    }
+
+    if (testId && testId.startsWith('mock-s2-')) {
+        const s2Week = SERIES_II_MOCK_SCHEDULE.find(w => w.id === testId);
+        if (s2Week) return s2Week.topics;
     }
 
     if (!saturdayDate || saturdayDate.getTime() === 0) return ["Sample Mock Test Topics"];

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Users, FileText, Settings, Shield, Plus, Database, UserPlus, FileSignature, LayoutDashboard } from "lucide-react";
+import { ArrowLeft, Users, FileText, Settings, Shield, Plus, Database, UserPlus, FileSignature, LayoutDashboard, MessageSquare } from "lucide-react";
 
 export default function DeveloperPage() {
     return (
@@ -148,6 +148,23 @@ export default function DeveloperPage() {
                         <div className="flex flex-col gap-2">
                             <Link href="/developer/analytics" className="w-full py-2 px-4 rounded-lg bg-cyan-50 dark:bg-cyan-900/10 text-cyan-600 dark:text-cyan-400 font-medium hover:bg-cyan-100 dark:hover:bg-cyan-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
                                 <LayoutDashboard className="w-4 h-4" /> View Analytics
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* 8. Mock Test Feedback */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
+                        <div className="flex items-start justify-between mb-4">
+                            <div className="p-3 bg-amber-50 dark:bg-amber-900/30 rounded-xl text-amber-600 dark:text-amber-400 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                                <MessageSquare className="w-6 h-6" />
+                            </div>
+                            <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-amber-100 dark:bg-zinc-800 text-amber-700 dark:text-amber-400 rounded-md">Reviews</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Mock Test Feedback</h3>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">View aspirant ratings, reviews & suggestions for mock tests.</p>
+                        <div className="flex flex-col gap-2">
+                            <Link href="/developer/mock-feedback" className="w-full py-2 px-4 rounded-lg bg-amber-50 dark:bg-amber-900/10 text-amber-600 dark:text-amber-400 font-medium hover:bg-amber-100 dark:hover:bg-amber-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
+                                <MessageSquare className="w-4 h-4" /> View Feedback
                             </Link>
                         </div>
                     </div>

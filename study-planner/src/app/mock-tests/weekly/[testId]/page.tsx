@@ -2,7 +2,7 @@
 
 import { useState, useEffect, use, useCallback, memo, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { Trophy, Loader2, Clock, HelpCircle, CheckCircle2, AlertCircle, History, FileDown, Home, ChevronLeft, ChevronRight, Send, Bookmark, XCircle, Flag, X, Lock as LockIcon, Sparkles, ArrowLeft, LayoutGrid, Timer, Save } from "lucide-react";
+import { Trophy, Loader2, Clock, HelpCircle, CheckCircle2, AlertCircle, History, FileDown, Home, ChevronLeft, ChevronRight, Send, Bookmark, XCircle, Flag, X, Lock as LockIcon, Sparkles, ArrowLeft, LayoutGrid, Timer, Save, Star, ThumbsUp } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
@@ -14,6 +14,7 @@ import { FULL_SCHEDULE } from "@/data/schedule";
 import { format, eachDayOfInterval, addDays } from "date-fns";
 import FormattedQuestionText from "@/components/quiz/FormattedQuestionText";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
+import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
 
 
 const getTopicsForMock = (saturdayDate: Date, testId?: string): string[] => {
@@ -22,6 +23,11 @@ const getTopicsForMock = (saturdayDate: Date, testId?: string): string[] => {
         // Compare testId against sundayDate in schedule (consistent with ID generation)
         const psgbWeek = PSGB_MOCK_SCHEDULE.find(w => "psgb-mock-" + w.sundayDate === testId);
         if (psgbWeek) return psgbWeek.topics;
+    }
+
+    if (testId && testId.startsWith('mock-s2-')) {
+        const s2Week = SERIES_II_MOCK_SCHEDULE.find(w => w.id === testId);
+        if (s2Week) return s2Week.topics;
     }
 
     const mondayDate = addDays(saturdayDate, -5);
@@ -442,6 +448,15 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [isFetchingLeaderboard, setIsFetchingLeaderboard] = useState(false);
 
+    // Feedback State
+    const [showFeedbackModal, setShowFeedbackModal] = useState(false);
+    const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
+    const [feedbackData, setFeedbackData] = useState({
+        overallRating: 0, difficultyRating: 0, contentQuality: 0,
+        explanationQuality: 0, favoriteTopics: [] as string[],
+        suggestions: '', wouldRecommend: true
+    });
+
     // Live Window Logic
     const testConfig = TEST_CONFIG_MAP[testId];
     const isLiveWindow = testConfig?.startDate && testConfig?.endDate 
@@ -753,6 +768,25 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
         setIsSubmitted(true);
         window.scrollTo(0, 0);
+
+        // Show feedback modal for eligible tests
+        const isEligibleSeriesII = testId.startsWith('mock-s2-') && testId >= 'mock-s2-2026-06-06';
+        const isEligiblePSGB = testId.startsWith('psgb-mock-') && testId >= 'psgb-mock-2026-06-07';
+        
+        if ((isEligibleSeriesII || isEligiblePSGB) && userEmail && (!isReattempt || isAdmin)) {
+            try {
+                const res = await fetch('/api/mock-test/feedback/check', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ testId, userEmail })
+                });
+                const data = await res.json();
+                if (!data.hasSubmitted || isAdmin) {
+                    setShowFeedbackModal(true);
+                }
+            } catch (e) { console.error(e); }
+        }
+
     }, [questions, answers, vibrate, userEmail, isReattempt, isAdmin, testId]);
 
     // Mobile / timeout / back-button path: keeps the lightweight native confirm
@@ -1659,6 +1693,143 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                     )}
                 </main>
             </div>
+
+            {/* Immersive Feedback Modal */}
+            <AnimatePresence>
+                {showFeedbackModal && (
+                    <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center sm:p-6 bg-indigo-950/40 dark:bg-zinc-950/80 backdrop-blur-md transition-all">
+                        <motion.div 
+                            initial={{ y: "100%", opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: "100%", opacity: 0 }}
+                            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                            className="bg-white dark:bg-zinc-900 w-full max-w-2xl rounded-t-[2rem] rounded-b-none sm:rounded-[2rem] shadow-2xl flex flex-col max-h-[95vh] sm:max-h-[85vh] overflow-hidden relative"
+                        >
+                            {/* Watermark Logo */}
+                            <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-[0.03] dark:opacity-[0.05]">
+                                <Image src="/dak-guru-logo.png" alt="Dak Guru Watermark" width={300} height={300} className="object-contain" />
+                            </div>
+                            
+                            {/* Android-style pull indicator */}
+                            <div className="w-full flex justify-center pt-4 pb-2 sm:hidden flex-shrink-0 bg-transparent z-10 relative">
+                                <div className="w-12 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full" />
+                            </div>
+                            <div className="px-6 pb-8 pt-2 sm:p-8 overflow-y-auto custom-scrollbar flex-grow relative z-10">
+                                {feedbackSubmitted ? (
+                                    <div className="text-center py-12">
+                                        <div className="w-20 h-20 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                                            <CheckCircle2 className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
+                                        </div>
+                                        <h2 className="text-3xl font-black text-zinc-900 dark:text-white mb-2">Thank You!</h2>
+                                        <p className="text-zinc-500 dark:text-zinc-400">Your feedback helps us improve future tests.</p>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <div className="flex justify-between items-center mb-6">
+                                            <h2 className="text-2xl font-black text-zinc-900 dark:text-white">How was the test?</h2>
+                                            <button onClick={() => setShowFeedbackModal(false)} className="text-sm font-bold text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300">
+                                                Skip
+                                            </button>
+                                        </div>
+
+                                        <div className="space-y-8">
+                                            {/* Overall Rating */}
+                                            <div>
+                                                <label className="text-sm font-bold text-zinc-500 dark:text-zinc-400 block mb-3 text-center uppercase tracking-wider">Overall Experience</label>
+                                                <div className="flex justify-center gap-3 sm:gap-4">
+                                                    {[1, 2, 3, 4, 5].map((star) => (
+                                                        <button 
+                                                            key={star}
+                                                            onClick={() => { vibrate(20); setFeedbackData(p => ({ ...p, overallRating: star })); }}
+                                                            className="transition-transform hover:scale-110 active:scale-90"
+                                                        >
+                                                            <Star className={`w-10 h-10 sm:w-12 sm:h-12 ${star <= feedbackData.overallRating ? 'text-amber-400 fill-amber-400' : 'text-zinc-200 dark:text-zinc-800'}`} />
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            {/* Quality Ratings */}
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-2xl border border-zinc-100 dark:border-zinc-800 text-center">
+                                                    <label className="text-xs font-bold text-zinc-500 block mb-2 uppercase">Content Quality</label>
+                                                    <div className="flex justify-center gap-1">
+                                                        {[1,2,3,4,5].map(s => <button key={s} onClick={() => setFeedbackData(p => ({...p, contentQuality: s}))}><Star className={`w-5 h-5 ${s <= feedbackData.contentQuality ? 'text-blue-500 fill-blue-500' : 'text-zinc-200 dark:text-zinc-700'}`} /></button>)}
+                                                    </div>
+                                                </div>
+                                                <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-2xl border border-zinc-100 dark:border-zinc-800 text-center">
+                                                    <label className="text-xs font-bold text-zinc-500 block mb-2 uppercase">Explanations</label>
+                                                    <div className="flex justify-center gap-1">
+                                                        {[1,2,3,4,5].map(s => <button key={s} onClick={() => setFeedbackData(p => ({...p, explanationQuality: s}))}><Star className={`w-5 h-5 ${s <= feedbackData.explanationQuality ? 'text-indigo-500 fill-indigo-500' : 'text-zinc-200 dark:text-zinc-700'}`} /></button>)}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Difficulty */}
+                                            <div>
+                                                <label className="text-sm font-bold text-zinc-500 dark:text-zinc-400 block mb-3">Difficulty Level</label>
+                                                <div className="flex bg-zinc-100 dark:bg-zinc-800 rounded-xl p-1">
+                                                    {['Very Easy', 'Easy', 'Moderate', 'Hard', 'Very Hard'].map((level, idx) => (
+                                                        <button 
+                                                            key={level}
+                                                            onClick={() => setFeedbackData(p => ({ ...p, difficultyRating: idx + 1 }))}
+                                                            className={`flex-1 py-2 text-[10px] sm:text-xs font-bold rounded-lg transition-colors leading-tight px-1 ${feedbackData.difficultyRating === idx + 1 ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-white shadow-sm' : 'text-zinc-400 hover:text-zinc-600'}`}
+                                                        >
+                                                            {level}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            {/* Suggestions */}
+                                            <div>
+                                                <label className="text-sm font-bold text-zinc-500 dark:text-zinc-400 block mb-3">Any Suggestions? (Optional)</label>
+                                                <textarea 
+                                                    value={feedbackData.suggestions}
+                                                    onChange={e => setFeedbackData(p => ({ ...p, suggestions: e.target.value }))}
+                                                    placeholder="Tell us what we can improve..."
+                                                    className="w-full h-24 bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 text-sm text-zinc-900 dark:text-zinc-100 outline-none focus:border-amber-500 resize-none"
+                                                />
+                                            </div>
+
+                                            {/* Recommend */}
+                                            <div className="flex items-center justify-between bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800">
+                                                <span className="text-sm font-bold text-zinc-700 dark:text-zinc-300">Would you recommend our mock tests?</span>
+                                                <div className="flex gap-2">
+                                                    <button onClick={() => setFeedbackData(p => ({...p, wouldRecommend: true}))} className={`p-2 rounded-lg ${feedbackData.wouldRecommend ? 'bg-emerald-100 text-emerald-600' : 'bg-zinc-200 text-zinc-400'}`}><ThumbsUp className="w-4 h-4" /></button>
+                                                    <button onClick={() => setFeedbackData(p => ({...p, wouldRecommend: false}))} className={`p-2 rounded-lg ${!feedbackData.wouldRecommend ? 'bg-red-100 text-red-600' : 'bg-zinc-200 text-zinc-400'}`}><ThumbsUp className="w-4 h-4 rotate-180" /></button>
+                                                </div>
+                                            </div>
+
+                                            <button 
+                                                onClick={async () => {
+                                                    if (!feedbackData.overallRating || !feedbackData.difficultyRating || !feedbackData.contentQuality || !feedbackData.explanationQuality) {
+                                                        alert("Please select all ratings before submitting.");
+                                                        return;
+                                                    }
+                                                    vibrate(30);
+                                                    await fetch('/api/mock-test/feedback', {
+                                                        method: 'POST',
+                                                        headers: { 'Content-Type': 'application/json' },
+                                                        body: JSON.stringify({
+                                                            testId, userEmail, userName, ...feedbackData
+                                                        })
+                                                    });
+                                                    setFeedbackSubmitted(true);
+                                                    setTimeout(() => setShowFeedbackModal(false), 2000);
+                                                }}
+                                                className="w-full py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white rounded-xl font-black text-lg shadow-lg shadow-amber-500/30 transition-transform active:scale-95"
+                                            >
+                                                Submit Feedback
+                                            </button>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

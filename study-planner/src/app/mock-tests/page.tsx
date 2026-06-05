@@ -1159,26 +1159,16 @@ function MockTestDetail({
                                 >
                                     <History className="w-4 h-4 shrink-0" /> <span className="truncate">Reattempt</span>
                                 </Link>
-                                {userResult ? (
-                                    <button
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
-                                            onViewSheets?.();
-                                        }}
-                                        className="py-3 sm:py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all active:scale-[0.97] px-1"
-                                    >
-                                        <FileDown className="w-4 h-4 shrink-0" /> <span className="truncate">Answer Sheet</span>
-                                    </button>
-                                ) : (
-                                    <Link
-                                        href={`/mock-tests/weekly/${mock.id}`}
-                                        onClick={() => { if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(20); }}
-                                        className="py-3 sm:py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all active:scale-[0.97] px-1"
-                                    >
-                                        <PlayCircle className="w-4 h-4 shrink-0" /> <span className="truncate">Practice Now</span>
-                                    </Link>
-                                )}
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                        onViewSheets?.();
+                                    }}
+                                    className="py-3 sm:py-4 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-lg shadow-zinc-950/20 flex items-center justify-center gap-1.5 sm:gap-2 transition-all active:scale-[0.97] px-1"
+                                >
+                                    <FileTextIcon className="w-4 h-4 shrink-0" /> <span className="truncate">Attempts</span>
+                                </button>
                             </div>
                         </div>
                     ) : (
@@ -1457,29 +1447,16 @@ function MockTestCard({
                                     >
                                         <History className="w-3.5 h-3.5 shrink-0" /> <span>Reattempt</span>
                                     </Link>
-                                    {hasAttempted ? (
-                                        <button
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
-                                                onViewSheets?.();
-                                            }}
-                                            className="flex-1 py-2 sm:py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[10px] sm:text-xs flex items-center justify-center gap-1 sm:gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97] px-1 sm:px-2 min-w-0"
-                                        >
-                                            <FileDown className="w-3.5 h-3.5 shrink-0" /> <span>Answer Sheet</span>
-                                        </button>
-                                    ) : (
-                                        <Link
-                                            href={`/mock-tests/weekly/${mock.id}`}
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
-                                            }}
-                                            className="flex-1 py-2 sm:py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[10px] sm:text-xs flex items-center justify-center gap-1 sm:gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97] px-1 sm:px-2 min-w-0"
-                                        >
-                                            <PlayCircle className="w-3.5 h-3.5 shrink-0" /> <span>Practice</span>
-                                        </Link>
-                                    )}
+                                    <button
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                            onViewSheets?.();
+                                        }}
+                                        className="flex-1 py-2 sm:py-3 bg-zinc-900 dark:bg-zinc-800 text-white rounded-xl sm:rounded-2xl font-bold text-[10px] sm:text-xs flex items-center justify-center gap-1 sm:gap-2 transition-all hover:bg-zinc-800/90 active:scale-[0.97] px-1 sm:px-2 min-w-0"
+                                    >
+                                        <FileTextIcon className="w-3.5 h-3.5 shrink-0" /> <span>Attempts</span>
+                                    </button>
                         </div>
                     </div>
                 ) : (
@@ -1513,7 +1490,7 @@ function MockTestCard({
                                     }}
                                     className="flex-1 py-2.5 sm:py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-xs flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/25 transition-all active:scale-[0.97] px-1 sm:px-2 min-w-0"
                                 >
-                                    <FileDown className="w-3.5 h-3.5 shrink-0" /> <span>Answer Sheet</span>
+                                    <FileTextIcon className="w-3.5 h-3.5 shrink-0" /> <span>Attempts</span>
                                 </button>
                             </div>
                 ) : (
@@ -1717,7 +1694,7 @@ function AnswerSheetModal({ mock, attempts, isOpen, onClose, onDownload, isDownl
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-20"></div>
                     <FileDown className="w-12 h-12 mb-3 text-white drop-shadow-md mx-auto" />
                     <DialogTitle className="text-2xl font-black uppercase tracking-tight text-white drop-shadow-sm text-center relative z-10">
-                        Download Answer Sheet
+                        Your Attempts
                     </DialogTitle>
                     <p className="text-indigo-100 font-medium text-sm text-center relative z-10 border-t border-white/20 pt-2 mt-2">
                         {mock?.title}
@@ -1726,8 +1703,18 @@ function AnswerSheetModal({ mock, attempts, isOpen, onClose, onDownload, isDownl
 
                 <div className="p-4 max-h-[60vh] overflow-y-auto">
                     {attempts.length === 0 ? (
-                        <div className="py-12 text-center text-zinc-500">
-                            No attempts found.
+                        <div className="py-12 flex flex-col items-center text-center px-4">
+                            <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center mb-4">
+                                <History className="w-8 h-8 text-zinc-400" />
+                            </div>
+                            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-1">No Previous Attempts</h3>
+                            <p className="text-sm text-zinc-500 mb-6">You haven't attempted this mock test yet.</p>
+                            <Link 
+                                href={`/mock-tests/weekly/${mock?.id}`}
+                                className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl flex items-center gap-2 transition-all shadow-md shadow-indigo-600/20"
+                            >
+                                <PlayCircle className="w-5 h-5" /> Attempt Now
+                            </Link>
                         </div>
                     ) : (
                         <div className="space-y-3">

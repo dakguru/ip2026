@@ -1,0 +1,902 @@
+Q1. Under the Supplementary Rules governing Travelling Allowance, which of the following is not included in the definition of 'family' for the purpose of T.A. on transfer?
+A. Legitimate children residing with and wholly dependent on the Government servant
+B. Stepfather residing with and wholly dependent on the Government servant
+C. Widowed daughters residing with and wholly dependent on the parent
+D. Stepmother wholly dependent upon the Government servant
+Answer: B
+Explanation: The scope of the term 'family' explicitly excludes a stepfather for the purpose of T.A. on transfer, although a stepfather is included as a member of the family for Leave Travel Concession (LTC) purposes.
+
+Q2. What is the fraction used to calculate the deduction of a permanent travelling allowance for each day of absence from duty?
+A. 1/15 of permanent travelling allowance
+B. 1/20 of permanent travelling allowance
+C. 1/30 of permanent travelling allowance
+D. 1/10 of permanent travelling allowance
+Answer: C
+Explanation: According to SR-23, permanent travelling allowance calculation involves deducting 1/30 of the permanent travelling allowance for each day of absence when a Government servant is on leave, temporary transfer, or joining time.
+
+Q3. What is the maximum period for which a Conveyance Allowance can be sanctioned by the competent authority at one time?
+A. Six months
+B. One year
+C. Two years
+D. Three years
+Answer: C
+Explanation: Under the conditions for the grant of Conveyance Allowance, it is specified that the allowance shall be granted for a period not exceeding two years at a time.
+
+Q4. Upon which of the following components is the Composite Transfer Grant (CTG) calculated for a transfer involving a change of station of more than 20 kilometers?
+A. 80% of last basic pay including NPA and MSP
+B. 80% of last basic pay excluding NPA and MSP
+C. 100% of last basic pay excluding NPA and MSP
+D. 50% of last basic pay plus DA
+Answer: B
+Explanation: CTG is paid at 80% of the last basic pay for transfers exceeding 20 kms. Non-Practicing Allowance (NPA) and Military Service Pay (MSP) are strictly not included in the calculation of CTG.
+
+Q5. For computing Dearness Allowance (DA), which of the following elements are taken into account?
+A. Basic Pay only
+B. Basic Pay plus Transport Allowance
+C. Basic Pay plus Non-Practicing Allowance (NPA)
+D. Basic Pay plus House Rent Allowance (HRA)
+Answer: C
+Explanation: Dearness Allowance is calculated on the total of Basic Pay plus Non-Practicing Allowance (NPA), where applicable. Allowances like Transport Allowance or HRA are not included in the DA calculation base.
+
+Q6. What is the minimum rate of House Rent Allowance (HRA) applicable to 'X' class cities as per the 7th CPC recommendations?
+A. Rs. 1800/-
+B. Rs. 3600/-
+C. Rs. 5400/-
+D. Rs. 7200/-
+Answer: C
+Explanation: The rules stipulate that the rates of HRA will not be less than Rs. 5400/-, Rs. 3600/-, and Rs. 1800/- for 'X', 'Y', and 'Z' class cities respectively, protecting minimum HRA levels.
+
+Q7. In the event of an enforced halt on tour due to a bandh or landslide, how is the Daily Allowance (DA) regulated?
+A. Special leave may be granted, and the official is entitled to Daily Allowance
+B. The period is treated as extraordinary leave without DA
+C. The official receives half DA for the duration of the halt
+D. DA is completely denied as the halt is not official duty
+Answer: A
+Explanation: Government decisions state that for an enforced halt at a tour station or en route due to curfew, bandh, or natural roadblocks, special leave may be granted and the official is entitled to daily allowance.
+
+Q8. What is the minimum daily distance required to be eligible for a Cycle Allowance?
+A. 10 kilometers
+B. 16 kilometers
+C. 20 kilometers
+D. 30 kilometers
+Answer: B
+Explanation: The Cycle Allowance is sanctioned by Divisional heads at Rs. 180/- per month, requiring a minimum daily distance of 16 km. For ABPM/BPM/DS, the minimum distance is 10 km.
+
+Q9. What is the entitlement for Air Travel on tour or training within the country for an officer drawing pay in Level 12 of the Pay Matrix?
+A. First Class by Air
+B. Business / Club Class by Air
+C. Economy Class by Air
+D. Premium Economy Class by Air
+Answer: C
+Explanation: Under the travel entitlements effective from 01.07.2017, an officer drawing pay in Level 12 or 13 is entitled to travel by Economy class by air within the country.
+
+Q10. What is the Daily Allowance admissibility percentage for a local journey resulting in an absence from the Head Quarters for 8 hours?
+A. 15%
+B. 35%
+C. 50%
+D. 70%
+Answer: B
+Explanation: For a local journey with an absence of 6 hours to up to 12 hours, the Daily Allowance admissible is 35% (which is half of the normal 70% rate for regular tours).
+
+Q11. A Government servant residing in an 'X' class city is offered Government accommodation but refuses it. How is their House Rent Allowance (HRA) regulated?
+A. HRA is reduced to 50% from the date of refusal
+B. HRA continues but no future allotment is allowed
+C. HRA shall cease to be admissible from the date of allotment and the servant is debarred for one year
+D. HRA ceases permanently for the rest of the service
+Answer: C
+Explanation: If an official refuses offered Government accommodation, HRA shall not be admissible from the date of allotment. Additionally, the official shall be debarred from further allotment for a period of one year.
+
+Q12. Consider the following statements regarding HRA during leave:
+
+1. HRA is admissible during total leave of all kinds up to 180 days.
+2. If an employee suffers from Cancer, this limit can be extended to 8 months.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: HRA is drawn at the same rates during leave not exceeding 180 days. This limit is extended to 8 months if the Government servant is suffering from TB, cancer, or other specific ailments.
+
+
+
+Q13. How is Transport Allowance (TPA) regulated during a calendar month wholly covered by suspension?
+A. Admissible at a proportionate rate
+B. Admissible at 50% of the normal rate
+C. Not admissible
+D. Fully admissible
+Answer: C
+Explanation: Transport Allowance is not admissible during suspension where the suspension covers full calendar month(s). If it covers a month partially, TPA is payable and reduced proportionately.
+
+Q14. Which of the following statements is not correct regarding the grant of Travelling Allowance advance to the family of a deceased Government servant?
+A. Advance is limited to 3/4 of the probable amount.
+B. Advance is admissible to only one member of the family.
+C. The journey must be completed within 3 years of the employee's death.
+D. A bond executed by the receiving person must be preserved for 7 years.
+Answer: C
+Explanation: The journey by the family of a deceased Government servant must be completed within one year after the death of the Government servant, not three years, though this can be extended by the FA.
+
+Q15. Consider the following scenarios for a Government servant under suspension:
+
+1. Headquarters changed by the competent authority in public interest.
+2. Continues to receive a subsistence allowance.
+Which of the following is correct regarding HRA in this context?
+A. HRA ceases immediately upon suspension
+B. HRA is calculated on the basic pay prior to suspension
+C. HRA is regulated with reference to the subsistence allowance, and is admissible at the new station if headquarters is changed
+D. HRA is completely withheld until exoneration
+Answer: C
+Explanation: During suspension, HRA is regulated based on the subsistence allowance. If the headquarters is changed in public interest by the competent authority, the official is entitled to HRA of the new station.
+
+
+
+Q16. Consider the following statements regarding Composite Transfer Grant (CTG) upon retirement:
+
+1. CTG is paid at 80% if settling at a place other than the last station of duty.
+2. CTG is paid at 100% for settlement to and from Lakshadweep.
+3. Transfer incidentals are separately payable in addition to CTG.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: CTG on retirement is 80% generally, and 100% for island territories like Lakshadweep. However, transfer incidentals and road mileage between residence and railway station are already subsumed in CTG and are not paid separately.
+
+
+
+Q17. A Government servant was recalled to duty from leave, curtailing the leave by 20 days. Under SR-142, what is the rule regarding mileage allowance for the return journey?
+A. Entitled as a matter of right under all circumstances
+B. Entitled only if the journey involves travelling by sea
+C. Admissible at the discretion of the recalling authority
+D. Strictly prohibited
+Answer: C
+Explanation: SR-142 stipulates that if the period by which the leave is curtailed is less than a month (e.g., 20 days), mileage allowance may be allowed entirely at the discretion of the authority recalling the Government servant.
+
+Q18. A Government servant is transferred. He leaves his family at the old station because he has not secured rented accommodation at the new station. For how long can he draw HRA at the rate drawn at the old station after joining the new station?
+A. For the first two months
+B. For the first four months
+C. For the first six months
+D. Until he is allotted Government accommodation
+Answer: C
+Explanation: As per the consolidated DoE/DoPT instructions on grant of HRA (para 4.7), a Government servant who was not in occupation of Government accommodation at the old station and who, on transfer, leaves his family behind at the old station because of non-availability of suitable accommodation at the new station, is eligible to draw HRA at the rate applicable to the old station for a period of six months from the date of assumption of charge at the new station.
+
+Q19. Which of the following is correct regarding T.A. for a journey to obtain a medical certificate?
+A. T.A. is admissible for obtaining an original grant of leave and for an extension of leave.
+B. T.A. is admissible for obtaining a fitness certificate.
+C. T.A. is admissible for an original grant of leave but not for an extension of leave.
+D. T.A. is admissible for procuring a health certificate on first appointment.
+Answer: C
+Explanation: According to SR-157, Travelling allowance is admissible for a journey to obtain a medical certificate in support of an application for an original grant of leave, but not for an extension of leave, nor for fitness/first appointment.
+
+Q20. Consider the following statements regarding a Government servant summoned to give evidence in a court:
+
+1. If giving evidence regarding facts known in official capacity, the absence is treated as duty.
+2. He may retain any subsistence allowance paid by the court along with T.A.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: When drawing travelling allowance for giving evidence in an official capacity (treated as duty), the Government servant may not accept payment of expenses from the court; any such deposited fees must be credited to Government.
+
+
+
+Q21. An employee in Pay Level 6 is travelling by road at a place where no specific rates have been prescribed. What is the mileage allowance admissible for journey by own car w.e.f. 01.01.2024?
+A. Rs. 15 per KM
+B. Rs. 24 per KM
+C. Rs. 30 per KM
+D. Rs. 62.50 per KM
+Answer: C
+Explanation: For road journeys where specific rates are not prescribed, the rate for journey performed by own car/taxi was increased to Rs. 30 per KM w.e.f. 01.01.2024.
+
+Q22. Consider the following statements regarding HRA when husband and wife are both Central Government servants posted in the same station:
+
+1. They are eligible for HRA separately if they live in hired accommodation.
+2. They are eligible for separate HRA even if they share Government accommodation allotted to one of them.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Both husband and wife are entitled to HRA separately if living in hired/owned accommodation. However, HRA is not admissible if a Government servant resides in Government accommodation allotted to their spouse.
+
+
+
+Q23. What is the time limit for the submission of claims for Travelling Allowance on Tour without advance?
+A. 15 days
+B. 30 days
+C. 60 days
+D. 180 days
+Answer: C
+Explanation: The right to travelling allowance is forfeited if the claim is not preferred within 60 days from the date it became due. The time limit for TA without advance on Tour, Transfer, and Training is 60 days.
+
+Q24. A pensioner drawing pension in foreign currency and residing abroad seeks Dearness Relief (DR). Which of the following rules applies?
+A. Not eligible for DR as they reside abroad
+B. Eligible for DR subject to Indian Embassy certification
+C. Eligible for DR
+D. Eligible for 50% DR
+Answer: C
+Explanation: Pensioners residing abroad and drawing pension in foreign currency are explicitly eligible for Dearness Relief according to the FRSR Part IV DA/DR rules.
+
+Q25. Which authority scrutinizes the necessity, frequency, and duration of journeys and halts before signing a travelling allowance bill?
+A. Head of Office
+B. Controlling Officer
+C. Accounts Officer
+D. Financial Adviser
+Answer: B
+Explanation: SR-195 dictates that it is the specific duty of a Controlling Officer, before signing or countersigning a travelling allowance bill, to scrutinize the necessity, frequency, and duration of journeys and halts.
+
+Q26. Under FR-9, which of the following is defined as a recurring or non-recurring payment granted from the Consolidated Fund of India as remuneration for special work?
+A. Fee
+B. Honorarium
+C. Special Pay
+D. Personal Pay
+Answer: B
+Explanation: Honorarium is defined under FR-9(9) as a payment granted to a government servant from the Consolidated Fund of India or a State/UT as remuneration for special work of an occasional character.
+
+Q27. How does FR-9 define the right/title of a Government servant to hold a regular post?
+A. Cadre
+B. Tenure
+C. Lien
+D. Substantive capacity
+Answer: C
+Explanation: Under FR-9(13), 'Lien' represents the title of a government servant to hold on a regular basis, a post, including a tenure post, to which he has been appointed on a regular basis.
+
+Q28. What is the age of superannuation for a Government servant whose date of birth is the first of a month?
+A. Afternoon of the first day of that month
+B. Afternoon of the last day of that month
+C. Afternoon of the last day of the preceding month
+D. Forenoon of the first day of that month
+Answer: C
+Explanation: Under FR-56(a), a Government servant whose date of birth is the first of a month shall retire from service on the afternoon of the last day of the preceding month on attaining 60 years.
+
+Q29. What is the maximum joining time admissible for a transfer involving a change of station where the distance is more than 2000 km by air?
+A. 10 days
+B. 12 days
+C. 15 days
+D. 30 days
+Answer: B
+Explanation: According to the CCS (Joining Time) Rules 1979, for a distance of more than 2000 km, the standard joining time is 15 days, but if the journey is performed by air, it is restricted to 12 days.
+
+Q30. What is the maximum period a Central Government officer can remain on deputation/foreign service in one stretch?
+A. 3 years
+B. 5 years
+C. 7 years
+D. 10 years
+Answer: B
+Explanation: As per FR-110 rules regarding foreign service, the maximum deputation/foreign service in one stretch is 5 years, while the maximum in an entire service career is 7 years.
+
+Q31. Under FR-56(j), an Appropriate Authority has the absolute right to prematurely retire a Group 'A' Government servant (who entered service before age 35) by giving three months' notice after he attains the age of:
+A. 45 years
+B. 50 years
+C. 55 years
+D. 58 years
+Answer: B
+Explanation: FR-56(j) states that an Appropriate Authority may retire Group 'A' & 'B' officers who entered service before age 35, after they have attained the age of 50 years, in the public interest.
+
+Q32. When an official is placed under suspension and subsequently reinstated after being fully exonerated, how is their pay for the suspension period regulated?
+A. They receive 50% of the pay
+B. They receive the subsistence allowance only
+C. They receive full pay and allowances to which they would have been entitled
+D. They receive full pay but no allowances
+Answer: C
+Explanation: Under FR-54(2), if the competent authority opines the servant has been fully exonerated, the servant shall be paid full pay and allowances for the period, and the period is treated as duty.
+
+Q33. What is the rate of Pension Contribution in foreign service for an employee governed by the National Pension System (NPS) w.e.f. 01.04.2019?
+A. 18% of Basic Pay + DA
+B. 24% of Basic Pay + DA
+C. 28% of Basic Pay + DA
+D. 10% of Basic Pay + DA
+Answer: C
+Explanation: Rule FR-116 specifies that the rate of pension contribution for an NPS employee during foreign service is 28% of Basic pay + DA (14% employer + 10% employee + 4% gratuity).
+
+Q34. Consider the following statements regarding the combination of appointments under FR-49:
+
+1. When formally appointed to hold dual charges of two posts in the same cadre/office with identical pay scales, no additional pay is admissible.
+2. When appointed to hold charge of another post in a different office for a period exceeding 45 days, 10% of presumptive pay is allowed.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Both are correct under FR-49. Dual charges of identical posts in the same office yield no additional pay. Additional charge of a different office exceeding 45 days but not exceeding 3 months yields 10% of the presumptive pay.
+
+
+
+Q35. In the case of an official who chooses pay fixation from the Date of Next Increment (DNI) upon promotion, how is the pay fixed?
+A. One increment on the old level pay and equal/next cell
+B. Two increments on old level pay and place equal and next cell of the concerned level
+C. Place directly at the minimum of the new level
+D. 12.5% of basic pay added
+Answer: B
+Explanation: Under FR-22(I)(a)(1), if an official opts for pay fixation from the DNI, they receive two increments on the old level pay and are placed at the equal or next cell of the concerned higher level.
+
+Q36. What is the maximum amount of Deputation Allowance per month involving a change in station w.e.f. 01.01.2024?
+A. Rs. 4500/-
+B. Rs. 5625/-
+C. Rs. 9000/-
+D. Rs. 11250/-
+Answer: D
+Explanation: The rate of Deputation Allowance involving a change in station is 10% of Basic Pay, with a maximum limit revised to Rs. 11250/- per month w.e.f. 01.01.2024.
+
+Q37. Consider the following statements regarding joining time under CCS (Joining Time) Rules, 1979:
+
+1. Joining time is admissible in case of temporary transfer not exceeding 180 days.
+2. Unutilized joining time will be credited as earned leave subject to a maximum accumulation of 300 days.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Statement 1 is incorrect. Rule 5 states no joining time is admissible for temporary transfers not exceeding 180 days; only actual transit time is allowed. Statement 2 is factually correct.
+
+
+
+Q38. Under FR-17(A), an individual employee remaining absent unauthorizedly will face an interruption or break in service affecting which of the following?
+A. Eligibility for medical reimbursement
+B. Eligibility for GPF advances
+C. Eligibility for appearing in departmental examinations
+D. Retaining of Government accommodation
+Answer: C
+Explanation: FR-17(A) dictates that unauthorized absence causes a break in service which impacts Leave Travel Concession and eligibility for appearing in departmental examinations, unless regularized by a competent authority.
+
+Q39. If a Government servant earns a fee of Rs. 8,000 in a financial year from a source other than the Consolidated Fund of India, how much of it must be credited to the Consolidated Fund of India?
+A. Rs. 1,000
+B. Rs. 2,666
+C. Rs. 3,000
+D. Rs. 8,000
+Answer: A
+Explanation: According to SR-12, one-third of any fee in excess of Rs. 5,000 must be credited to the Consolidated Fund. Calculation: (8000 - 5000) / 3 = 3000 / 3 = Rs. 1,000.
+
+Q40. Consider the following statements regarding the stepping up of pay:
+
+1. Both the junior and senior Government servants should belong to the same cadre.
+2. The anomaly must directly result from the application of FR 22(I)(a)(1).
+3. The stepping up is effective from the date of the senior's appointment.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Stepping up is effective from the date of promotion or appointment of the *junior* Government servant, not the senior. Both must belong to the same cadre and the anomaly must result from FR 22(I)(a)(1).
+
+
+
+Q41. What is the time limit for a Government servant to hand over their service book to the office for updating in January each year, and for the office to return it?
+A. Within 15 days
+B. Within 30 days
+C. Within 45 days
+D. Within 60 days
+Answer: B
+Explanation: Government decisions state that the office shall update the service book and return it to the Government employee within 30 days of its receipt in January each year.
+
+Q42. How much is the Honorarium payable to a serving Presenting Officer in a departmental inquiry per case?
+A. Equal to 15% of Basic pay drawn
+B. Equal to 10% of Basic pay drawn
+C. Rs. 30,000 per case
+D. 60% of monthly basic pension
+Answer: B
+Explanation: The revised rate of honorarium payable to a serving Presenting Officer in a departmental proceeding is equal to 10% of their Basic pay drawn.
+
+Q43. Consider the following statements regarding retention of Government accommodation after retirement:
+
+1. Allowed for 6 months on normal license fee.
+2. Allowed for an additional 6 months on double license fee.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Under Rule 40(1)(ii) of the Central Government General Pool Residential Accommodation (CGGPRA) Rules, 2017, on retirement (superannuation) an allottee is permitted to retain General Pool accommodation for a maximum period of six months on payment of normal licence fee. The current rules do not provide for a further automatic six-month retention on payment of double licence fee; Statement 2 reflects the superseded pre-2017 framework and is therefore not correct. (Beyond the permissible period, continued occupation attracts penal/market damages, not a regular concessional retention.)
+
+
+
+Q44. What is the fee to be paid by a Government servant for replacing a lost copy of their Service Book?
+A. Rs. 100/-
+B. Rs. 250/-
+C. Rs. 500/-
+D. Rs. 1000/-
+Answer: C
+Explanation: According to the government decisions regarding service books, if the Government servant's copy is lost by them, it shall be replaced on payment of Rs. 500/-.
+
+Q45. If a foreign employer delays the payment of pension contributions beyond 15 days from the end of the financial year, what interest rate is charged under SR-307?
+A. 2 paise per day per Rs. 100
+B. 5 paise per day per Rs. 100
+C. 10 paise per day per Rs. 100
+D. 2.5% above the GPF rate
+Answer: A
+Explanation: SR-307(2) stipulates that if payment of overdue contributions is not made within the period, interest must be paid at the rate of 2 paise per day per Rs. 100.
+
+Q46. Which of the following periods is NOT treated as 'duty' under FR-9(6)?
+A. Joining time
+B. Period of waiting for posting orders after returning from leave
+C. Period spent on extraordinary leave without medical certificate
+D. Attending obligatory departmental Hindi examinations
+Answer: C
+Explanation: Extraordinary leave is explicitly a type of leave and is not classified as 'duty' under FR-9(6). Joining time, waiting for posting, and obligatory exams are treated as duty.
+
+Q47. Consider the following statements concerning Voluntary Retirement (FR 56(k)):
+
+1. A Group 'A' officer may retire after attaining 50 years if he entered service before age 35.
+2. The authority can withhold permission if a charge sheet has been issued and disciplinary proceedings are pending.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: FR-56(k) allows VRS for Group A/B officers at 50 if entered before 35. The authority explicitly holds the right to withhold permission if disciplinary or judicial proceedings for grave misconduct are pending.
+
+
+
+Q48. Which authority is empowered to grant an extension of joining time beyond 30 days?
+A. Head of Office
+B. Head of Department
+C. Department of the Government of India
+D. Directorate of Estates
+Answer: C
+Explanation: The Head of Department can extend joining time up to a maximum of 30 days. Extension beyond 30 days can only be granted by the Department of the Government of India.
+
+Q49. A temporary government servant with less than 3 years of continuous service requests a conversion of a break in service into joining time without pay. Who is the competent authority to decide?
+A. Head of Office
+B. Head of Department
+C. No authority can convert it
+D. Central Government
+Answer: C
+Explanation: Under CCS (Joining Time) Rules 1979, the period of break may be converted into joining time without pay by the Head of Department ONLY provided the servant has rendered *not less than 3 years* continuous service.
+
+Q50. Under FR-15(a), a President may transfer a Government servant to a post carrying less pay than the post on which he holds a lien under which exception?
+A. On grounds of public interest
+B. On account of inefficiency or misbehaviour
+C. During foreign deputation
+D. While clearing departmental exams
+Answer: B
+Explanation: FR-15(a) states a servant shall not be transferred to a post carrying less pay than the lien post *except* on account of inefficiency/misbehaviour, or on their own written request.
+
+Q51. The General Provident Fund (Central Services) Rules, 1960 shall not apply to Government servants appointed on or after which of the following dates?
+A. 1st April 2004
+B. 1st January 2004
+C. 31st December 2003
+D. 1st July 2004
+Answer: B
+Explanation: Rule 4(2) states that the GPF (CS) Rules, 1960 shall not apply to Government servants appointed on or after the 1st day of January, 2004 (who fall under the NPS).
+
+Q52. What is the minimum allowable rate of monthly subscription to the General Provident Fund?
+A. 5 per cent of emoluments
+B. 6 per cent of emoluments
+C. 10 per cent of emoluments
+D. Rs. 500 per month
+Answer: B
+Explanation: Under Rule 8, a subscriber may fix any sum not less than 6 per cent of his emoluments as the monthly subscription to the GPF.
+
+Q53. What is the maximum limit for GPF subscription in a financial year applicable from 2022-2023?
+A. Basic Pay of the employee
+B. Rs. 2,50,000
+C. Rs. 5,00,000
+D. Rs. 7,50,000
+Answer: C
+Explanation: Rule 8(1)(b) restricts the maximum GPF subscription to the total emoluments subject to a maximum of five lakhs (Rs. 5,00,000) in a financial year, effective from 2022-2023.
+
+Q54. How many times can a GPF subscriber reduce their subscription amount during the course of a year?
+A. Once
+B. Twice
+C. Three times
+D. At any time
+Answer: A
+Explanation: Under Rule 8(3), the amount of subscription fixed by the subscriber may be reduced once at any time during the course of the year, while it can be enhanced twice.
+
+Q55. What is the penalty for drawing an amount from the GPF in excess of the credit balance?
+A. Forfeiture of GPF account
+B. Recovery with normal GPF interest
+C. Recovery with interest of 2.5% above the GPF rate of interest
+D. Recovery with an immediate block on future withdrawals
+Answer: C
+Explanation: Rule 11(6) states that if a subscriber draws in excess of their credit, the recovery will be made with an interest penalty of 2.5% above the prevailing GPF interest rate.
+
+Q56. Consider the following statements regarding GPF withdrawals for illness:
+
+1. Withdrawal can be allowed up to 12 months' pay or 3/4th of the credit, whichever is less.
+2. For illness specifically, withdrawal may be allowed up to 90% of the amount standing at credit.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: While general withdrawals are limited to 12 months' pay or 3/4th of credit (whichever is less), an exception is made for illness where withdrawal is allowed up to 90% of the credit balance.
+
+
+
+Q57. In normal conditions, what is the maximum time limit for the sanction of a GPF Advance?
+A. 7 days
+B. 15 days
+C. 30 days
+D. 45 days
+Answer: B
+Explanation: The normal maximum time limit prescribed for the sanction of a GPF Advance is 15 Days. In case of emergencies like illness, it may be restricted to 7 Days.
+
+Q58. Under GPF Rules, when a subscriber leaves no family and no nomination exists, to whom shall the amount become payable upon death?
+A. It is forfeited to the Government
+B. It is transferred to the Prime Minister's Relief Fund
+C. It is payable to the legal heirs
+D. It is transferred to the GPF Welfare Fund
+Answer: C
+Explanation: Although Rule 33(ii) specifically talks about valid nominations, by operation of law regarding Provident Funds, if there is no family and no valid nomination, the amount becomes payable to the legal heirs producing succession certificates.
+
+Q59. Within what timeframe must a subscriber bring errors in the GPF Annual Statement of Accounts to the notice of the Accounts Officer?
+A. Within one month
+B. Within three months
+C. Within six months
+D. Within twelve months
+Answer: B
+Explanation: Rule 39(2) mandates that subscribers should satisfy themselves as to the correctness of the annual statement and report errors to the Accounts Officer within three months from receipt.
+
+Q60. A subscriber in Pay Level 6 dies while in service. What is the minimum balance required in the GPF account during the preceding 3 years to be eligible for the Deposit-Linked Insurance Scheme (DLIS) maximum benefit?
+A. Rs. 6,000/-
+B. Rs. 10,000/-
+C. Rs. 15,000/-
+D. Rs. 25,000/-
+Answer: C
+Explanation: For an employee in Pay Level 6 to 7 (Grade Pay 4200 but less than 4800), the GPF balance must not have fallen below Rs. 15,000/- at any time during the 3 years preceding the month of death to be eligible for DLIS.
+
+Q61. Consider the following statements regarding GPF subscriptions:
+
+1. Subscription is compulsorily discontinued during the last 3 months of service on superannuation.
+2. A subscriber on suspension must continue to subscribe to the GPF from their subsistence allowance.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Statement 2 is not correct. Rule 7(1) explicitly states that a subscriber shall subscribe monthly except during the period when he is under suspension. Statement 1 is correct.
+
+
+
+Q62. What is the maximum number of installments in which a GPF Advance shall normally be recovered?
+A. 24 installments
+B. 36 installments
+C. 48 installments
+D. 60 installments
+Answer: D
+Explanation: Rule 13(1) states that an advance from the GPF shall be recovered in not more than 60 installments, commencing from the month following the drawl.
+
+Q63. If a GPF subscriber is found to have utilized an advance for a purpose other than sanctioned, and fails to provide a satisfactory explanation within 15 days, what action is taken?
+A. Disciplinary proceedings for major penalty are initiated
+B. Advance is written off but future advances are barred
+C. The amount is recovered in one sum or in monthly installments
+D. Interest penalty of 5% is added to the balance
+Answer: C
+Explanation: Under Rule 14 (Wrongful use of Advance), the sanctioning authority shall direct the repayment of the amount, ordering recovery in one sum (if not exceeding 50% of emoluments) or in monthly installments.
+
+Q64. Consider the following scenarios for GPF withdrawal:
+
+1. Purchase of a motor car
+2. Constructing a house
+3. Illness of a family member
+Which of the above permits a withdrawal of up to 90% of the amount standing to the credit?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Withdrawals up to 90% are permitted for housing (constructing a house) and illness. For the purchase of a motor car, the limit is three-fourths (75%) of the amount at credit or the cost of the vehicle, whichever is less.
+
+
+
+Q65. After what duration of being untraceable can the benefit of the Deposit-Linked Insurance Scheme (DLIS) be paid to the successors of a missing GPF subscriber?
+A. 1 year
+B. 3 years
+C. 5 years
+D. 7 years
+Answer: D
+Explanation: Note (ii) under Rule 33-B explicitly states that the benefit of the Deposit-Linked Insurance Scheme to the successor of an untraceable subscriber is to be made only after a lapse of 7 years.
+
+Q66. Which of the following conditions correctly identifies who shall receive the GPF amount when a subscriber dies leaving a family but no valid nomination?
+A. The eldest surviving child only
+B. The widow(s) and children in equal shares, including married daughters whose husbands are alive
+C. The members of the family in equal shares, excluding sons who have attained majority and married daughters whose husbands are alive
+D. The parents of the subscriber only
+Answer: C
+Explanation: Rule 33(i)(b) dictates that if no nomination subsists, the amount is payable to family members in equal shares, but explicitly excludes sons who attained majority and married daughters whose husbands are alive.
+
+Q67. A GPF account statement must be mandatorily provided to every subscriber how long before their date of retirement?
+A. Six months before
+B. One year before
+C. Two years before, and thereafter one year before
+D. Only on the day of retirement
+Answer: C
+Explanation: Recent amendments require a complete statement of all credits, debits, and interest to be provided mandatorily two years before the date of retirement and thereafter one year before the date of retirement.
+
+Q68. A subscriber wants to convert an already drawn GPF advance into a final withdrawal. Who must the written request be addressed to?
+A. Head of Office
+B. The Accounts Officer through the sanctioning authority
+C. The Financial Adviser
+D. The Drawing and Disbursing Officer
+Answer: B
+Explanation: Rule 16-A specifies that a subscriber may convert an advance into a withdrawal by a written request addressed to the Accounts Officer through the sanctioning authority.
+
+Q69. Is documentary proof required for taking a GPF advance for education?
+A. Yes, fee receipts must be attached
+B. Yes, an admission letter is required
+C. No, a simple declaration explaining the reasons is sufficient
+D. Yes, both fee receipts and admission letter
+Answer: C
+Explanation: For GPF advances, no documentary proof is required. A simple declaration by the subscriber explaining the reasons for the advance is considered sufficient.
+
+Q70. If a GPF subscriber is on departmental leave from the Survey of India, what is the rule regarding their GPF subscription?
+A. Subscription is compulsory at 6%
+B. Subscription is compulsory at 10%
+C. Group 'C' and 'D' employees need not subscribe during such leave
+D. The department pays the subscription on their behalf
+Answer: C
+Explanation: Rule 7(4) specifically provides that Group 'C' and Group 'D' employees of the Survey of India who are sent on departmental leave need not subscribe to the Fund during that period.
+
+Q71. Under CS (MA) Rules 1944, what is the time limit for submitting a Medical Reimbursement Claim (MRC) after discharge from the hospital?
+A. 1 month
+B. 3 months
+C. 6 months
+D. 12 months
+Answer: C
+Explanation: The time-limit for submission of medical claims (both completion of out-door treatment and discharge from hospital) has been standardized to 6 months.
+
+Q72. What is the Ward Entitlement in a CGHS-empanelled Private Hospital for an official drawing a Basic Pay of Rs. 45,000 per month (7th CPC)?
+A. General Ward
+B. Semi-Private Ward
+C. Private Ward
+D. VIP Suite
+Answer: B
+Explanation: As per the revised slabs effective 28.10.2022, an official with Basic Pay between Rs. 36,501 and Rs. 50,500 is entitled to a Semi-Private Ward.
+
+Q73. What is the maximum age limit up to which dependent unmarried, divorced, abandoned, separated, or widowed sisters are included in the definition of "Family" for CS(MA) Rules?
+A. 18 years
+B. 25 years
+C. 30 years
+D. Irrespective of age limit
+Answer: D
+Explanation: For medical reimbursement purposes, dependent divorced, abandoned, separated, or widowed daughters and dependent unmarried/divorced/abandoned/separated/widowed sisters are included irrespective of their age limit.
+
+Q74. Under CS(MA) Rules, what is the ceiling for the reimbursement of a Coronary Stent?
+A. Rs. 30,000 per stent
+B. Rs. 60,000 per stent
+C. Actual cost subject to a maximum of Rs. 2,00,000
+D. Capped as per NPPA notifications, subject to a maximum of two stents
+Answer: D
+Explanation: The earlier ceiling of Rs. 60,000 has been superseded. Stent reimbursement is now capped per National Pharmaceutical Pricing Authority (NPPA) notifications, with a maximum of two stents per patient or actual cost, whichever is lower.
+
+Q75. How many consultations/visits to an Authorized Medical Attendant (AMA) within 10 days generally constitute "non-prolonged" allopathic treatment?
+A. Up to 2 consultations
+B. Up to 4 consultations
+C. Up to 6 consultations
+D. Up to 10 consultations
+Answer: B
+Explanation: Treatment exceeding 4 consultations/visits within 10 days from commencement, or more than 15 injections, qualifies as "prolonged treatment" requiring referral to an OPD of a Government hospital.
+
+Q76. Consider the following statements regarding the Fixed Medical Allowance (FMA):
+
+1. It is currently granted at Rs. 1,000/- per month.
+2. It has been extended to Central Government Pensioners who retired under the National Pension System (NPS).
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: FMA is granted at Rs. 1,000/- per month to pensioners residing in non-CGHS areas. Vide a recent 2025 order, it has also been formally extended to NPS pensioners.
+
+
+
+Q77. What is the fee prescribed for an intramuscular/subcutaneous injection administered by an AMA at their consulting room?
+A. Rs. 10/-
+B. Rs. 20/-
+C. Rs. 40/-
+D. Rs. 70/-
+Answer: B
+Explanation: The prescribed fee for an intramuscular or subcutaneous injection administered by the AMA is Rs. 20/-, whereas an intravenous injection fee is Rs. 40/-.
+
+Q78. In the context of CS(MA) Rules, which of the following is correct regarding TA for a kidney donor who is a private person?
+A. No TA is admissible to a private donor.
+B. TA is admissible at a flat rate of 2nd Class Train fare.
+C. TA is admissible at the rates applicable to the recipient Government servant.
+D. TA is admissible at the highest grade rate.
+Answer: C
+Explanation: If the kidney donor is a private person, TA is admissible at the rates applicable to the recipient Government servant.
+
+Q79. What is the limit on the number of fresh cycles allowed for reimbursement of In-Vitro Fertilization (IVF) treatment under CS(MA)/CGHS rules?
+A. 1 cycle
+B. 2 cycles
+C. 3 cycles
+D. 5 cycles
+Answer: C
+Explanation: Reimbursement for IVF treatment is allowed up to a maximum of 3 fresh cycles, with an amount not exceeding Rs. 65,000/- per cycle.
+
+Q80. Under the 2025 CGHS Reforms, if a beneficiary undergoes multiple procedures in a single session, how is the reimbursement calculated for the second procedure?
+A. 100% of the package rate
+B. 75% of the package rate
+C. 50% of the package rate
+D. 25% of the package rate
+Answer: C
+Explanation: Under the Multiple Procedure Reimbursement Rule effective 13.10.2025, in a single session, the first procedure is reimbursed at 100%, the second at 50%, and each subsequent procedure at 25%.
+
+Q81. Consider the following statements regarding the option for declaring dependents under CGHS:
+
+1. Only female employees have the option to include their parents-in-law instead of their own parents.
+2. Both male and female employees can exercise a one-time option to include either their parents or parents-in-law.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: The discriminatory provision was corrected in 2017. Both male and female Central Government employees may exercise a one-time option to include either their own parents or parents-in-law as beneficiaries.
+
+
+
+Q82. According to CS(MA) Rules, the upper gestational limit for Medical Termination of Pregnancy (MTP) for special categories of women is up to:
+A. 12 weeks
+B. 20 weeks
+C. 24 weeks
+D. 28 weeks
+Answer: C
+Explanation: As amended by the MTP (Amendment) Act, 2021, the upper limit for termination of pregnancy is 24 weeks for special categories of women, which applies to CS(MA)/CGHS reimbursement.
+
+Q83. A prescription for tests/investigations at empanelled private hospitals on the recommendation of an AMA is valid for single use within how many days?
+A. 15 days
+B. 30 days
+C. 45 days
+D. 90 days
+Answer: B
+Explanation: Prescriptions for tests/investigations at empanelled private hospitals on AMA recommendation are valid for single use within 30 days. Revalidation is required after expiry.
+
+Q84. Which of the following is NOT a recognized physical disability listed under the Rights of Persons with Disabilities (RPwD) Act, 2016 for CGHS dependent considerations?
+A. Acid Attack Victims
+B. Locomotor Disability
+C. General Ageing Weakness
+D. Dwarfism
+Answer: C
+Explanation: The RPwD Act 2016 recognizes 21 disabilities including Acid Attack Victims, Locomotor Disability, and Dwarfism. General ageing weakness is not a specified disability.
+
+Q85. Consider the following statements regarding Treatment Outside India under CS(MA) Rules:
+
+1. It is allowed for complex high-risk Cardio-Vascular Surgery.
+2. The Standing Committee recommending the case is convened by the Director-General of Health Services.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Statement 1 is correct. Statement 2 is incorrect because the Convener of the Standing Committee is the Joint Secretary in the Ministry of Health and Family Welfare, not the DGHS.
+
+
+
+Q86. What is the monetary ceiling of basic pay/pension for free diet admissibility for CGHS beneficiaries suffering from Tuberculosis or Mental disease?
+A. Rs. 36,500/- per month
+B. Rs. 44,900/- per month
+C. Rs. 50,500/- per month
+D. Rs. 69,700/- per month
+Answer: D
+Explanation: The normal ceiling for free diet is Rs. 44,900/-. However, for beneficiaries suffering from TB or Mental disease, the ceiling is raised to a pay/pension of Rs. 69,700/- per month.
+
+Q87. What color CGHS card is issued to serving Government employees?
+A. Green
+B. Red
+C. Blue
+D. Yellow
+Answer: C
+Explanation: According to the CGHS Card Colour Scheme, serving Government employees are issued Blue cards, whereas pensioners get Green, sitting MPs get Red, and journalists get Yellow.
+
+Q88. Which of the following is a condition for an individual to be treated as a dependent family member under CS(MA) Rules?
+A. Must have an income less than Rs. 5,000/- per month from all sources
+B. Must have an income less than Rs. 9,000/- plus DA thereon from all sources
+C. Must have no income source whatsoever
+D. Must be living in the same city as the employee
+Answer: B
+Explanation: A family member is treated as dependent if his/her income from all sources (including pension) is less than Rs. 9,000/- plus Dearness Relief (DA) thereon.
+
+Q89. In a situation where a CGHS beneficiary requires emergency hospitalization in a non-empanelled hospital, how is the reimbursement processed?
+A. The hospital provides free cashless treatment
+B. The beneficiary is denied reimbursement
+C. The beneficiary must submit a Medical Reimbursement Claim (MRC) restricted to CGHS rates
+D. Full actual cost is automatically reimbursed without limits
+Answer: C
+Explanation: In an emergency at a non-empanelled hospital, the beneficiary must submit an MRC. Reimbursement is strictly limited to CGHS rates, unless the Technical Standing Committee recommends full reimbursement in specific cases.
+
+Q90. Under the new 2025 Tier-Based City Classification for CGHS, the UTs of Jammu & Kashmir and Ladakh follow which tier's package rates?
+A. Tier I
+B. Tier II
+C. Tier III
+D. Special Metro Tier
+Answer: B
+Explanation: As per the 2025 CGHS reforms, North-Eastern States and the UTs of Jammu & Kashmir and Ladakh follow Tier II rates for differential package purposes.
+
+Q91. What is the limit on medical advance granted for major illnesses like Bypass surgery or Kidney transplant?
+A. 50% of the estimated cost
+B. 80% of the estimated cost
+C. 90% of the package deal
+D. Rs. 2,00,000 fixed limit
+Answer: C
+Explanation: For major illnesses such as Bypass surgery and Kidney transplant, an advance up to 90% of the package deal (wherever it exists) is granted directly to the hospital.
+
+Q92. What is the ceiling for reimbursement of a digital hearing aid (Digital BTE) according to the recent CGHS revisions?
+A. Rs. 3,000/-
+B. Rs. 7,000/-
+C. Rs. 8,000/-
+D. Rs. 15,000/-
+Answer: C
+Explanation: The ceiling for reimbursement of a Digital BTE (Behind-The-Ear) hearing aid is Rs. 8,000/-, scaling down from earlier interim rates, as per the final notifications.
+
+Q93. An official journey by train of a Government servant is cancelled in the public interest. Under which head should the cancellation and reservation charges be reimbursed in the T.A. bill?
+A. Incidental Expenses
+B. Travel Expenses
+C. Daily Allowance
+D. Special Conveyance
+Answer: B
+Explanation: According to Government Decisions under TA rules, when an official train journey is cancelled in the public interest, the cancellation charges should be claimed under the head "Travel expenses".
+
+Q94. Under FR-17, when an officer is absent from duty without any authority, what is the consequence regarding pay and allowances?
+A. Entitled to 50% pay
+B. Entitled to full pay but no allowances
+C. Not entitled to any pay and allowances during the period of such absence
+D. Pay is converted to a loan
+Answer: C
+Explanation: FR-17 explicitly states that an officer who is absent from duty without any authority shall not be entitled to any pay and allowances during the period of such absence.
+
+Q95. What is the rate of additional pay admissible to a Government servant formally appointed to hold current charge of the routine duties of another post?
+A. 5% of presumptive pay
+B. 10% of presumptive pay
+C. 12.5% of basic pay
+D. No additional pay is admissible
+Answer: D
+Explanation: Under FR-49(v), no additional pay shall be admissible to a Government servant appointed to hold the current charge of the routine duties of another post, irrespective of the duration.
+
+Q96. A temporary Government servant requires how many years of continuous service on the date of discharge to be eligible for conversion of break into joining time?
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+Answer: C
+Explanation: Under joining time rules, a break can be converted into joining time without pay by the HoD provided the break does not exceed 30 days and the servant has rendered not less than 3 years of continuous service.
+
+Q97. What is the limit of ex-gratia GPF advances permitted for extensive repairs or overhauling of a motor car?
+A. Three-fourths of the amount standing at credit or cost, whichever is less
+B. 90% of the amount standing at credit
+C. Rs. 50,000/-
+D. Six months' basic pay
+Answer: A
+Explanation: Under Rule 15, for extensive repairs/overhauling of a motor car, a subscriber is permitted to withdraw three-fourths (75%) of the amount standing at credit or the cost of repairs, whichever is less.
+
+Q98. During a period of suspension, which of the following deductions should NOT be recovered from the subsistence allowance?
+A. Income tax
+B. House rent and allied charges
+C. Contribution under CGHS
+D. Subscription to GPF
+Answer: D
+Explanation: While income tax, house rent, and CGHS contributions are compulsory deductions from subsistence allowance, subscription to the General Provident Fund (GPF) should strictly not be recovered during suspension.
+
+Q99. For which of the following diseases is prophylactic treatment reimbursable under CS(MA) Rules?
+A. Hypertension
+B. Diabetes
+C. Diphtheria
+D. Asthma
+Answer: C
+Explanation: Treatment for immunizing and prophylactic purposes is reimbursable for communicable diseases only, which includes Cholera, Typhoid, Plague, Diphtheria, Whooping cough, Tetanus, and Poliomyelitis.
+
+Q100. Consider the following statements regarding Cycle Allowance:
+
+1. It is admissible during a calendar month wholly covered by leave.
+2. It shall be granted by the sanctioning authority not exceeding two years at a time.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Cycle allowance is not admissible for a calendar month wholly covered by leave, training, or temporary transfer. It is granted for a period not exceeding two years at a time, requiring review.
