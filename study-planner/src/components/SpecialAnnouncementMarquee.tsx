@@ -1,12 +1,12 @@
 "use client";
 import React from 'react';
-import { LATEST_2_DAYS_UPDATES } from './UpdatesDrawer';
+import { LATEST_3_DAYS_UPDATES } from './UpdatesDrawer';
 
 export default function SpecialAnnouncementMarquee() {
     const content = (
         <>
             <span className="text-amber-300 font-bold uppercase tracking-widest text-[10px] mr-2">✨ What&apos;s New</span>
-            {LATEST_2_DAYS_UPDATES.map((day, dayIdx) => (
+            {LATEST_3_DAYS_UPDATES.map((day, dayIdx) => (
                 <React.Fragment key={dayIdx}>
                     <span className="text-cyan-200 text-[10px] mr-2 font-semibold">({day.date})</span>
                     {day.titles.map((title, titleIdx) => (
@@ -17,7 +17,7 @@ export default function SpecialAnnouncementMarquee() {
                             )}
                         </React.Fragment>
                     ))}
-                    {dayIdx < LATEST_2_DAYS_UPDATES.length - 1 && (
+                    {dayIdx < LATEST_3_DAYS_UPDATES.length - 1 && (
                         <span className="mx-4 text-amber-300">★</span>
                     )}
                 </React.Fragment>

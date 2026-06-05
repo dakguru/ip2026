@@ -220,7 +220,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Central Vigilance Commission (CVC) guidelines on public procurement and e-procurement.",
             "filename": "CVC_Guidelines_Public_Procurement.pdf",
             "path": "/notes/paper-1/CVC_Guidelines_Public_Procurement.pdf",
-            "size": "4.6 MB",
+            "size": "4.2 MB",
             "color": "emerald",
             "topic": "Financial & Procurement"
         },
