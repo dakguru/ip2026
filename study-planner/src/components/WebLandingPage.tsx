@@ -9,7 +9,7 @@ import FeatureGrid from "@/components/FeatureGrid";
 import WelcomeSection from "@/components/WelcomeSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import MockTestAnnouncementPopup from "@/components/MockTestAnnouncementPopup";
-import SpecialAnnouncementPopup from "@/components/SpecialAnnouncementPopup";
+// import SpecialAnnouncementPopup from "@/components/SpecialAnnouncementPopup";
 import StoreButton from "@/components/StoreButton";
 import HomepageMarquee from "@/components/HomepageMarquee";
 import { useCourse } from "@/contexts/CourseContext";
@@ -44,7 +44,7 @@ export default function WebLandingPage({ displayName, membershipLevel, role, isL
             {/* <MockTestAnnouncementPopup /> */}
 
             {/* 1.7. MCQ Curation Announcement Popup */}
-            <SpecialAnnouncementPopup />
+            {/* <SpecialAnnouncementPopup /> */}
 
             {/* 2. Hero Section */}
             <WelcomeSection displayName={displayName} isLoggedIn={isLoggedIn} />
