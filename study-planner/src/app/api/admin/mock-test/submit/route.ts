@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "@/lib/mongoose";
 import MockResult from "@/models/MockResult";
 import User from "@/models/User";
+import { createNotification } from "@/lib/notifications";
 
 export async function POST(req: NextRequest) {
     try {
@@ -33,6 +34,13 @@ export async function POST(req: NextRequest) {
         });
 
         await newResult.save();
+
+        await createNotification(
+            'mock_test',
+            `Admin Mock Test Submitted`,
+            `${user.name} (${user.email}) submitted an admin mock test scoring ${score}/${totalQuestions}.`,
+            { userId: user._id.toString(), email: user.email, score }
+        );
 
         return NextResponse.json({ message: "Result saved successfully" }, { status: 201 });
 

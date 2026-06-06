@@ -633,20 +633,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "topic": "Constitution & Laws"
         },
         {
-            "title": "Goods and Services Tax (GST) Act, 2017 (Detailed Notes)",
-            "description": "Comprehensive notes for covering Goods and Services Tax (GST) Act, 2017.",
-            "filename": "GST_Act_2017_Detailed_Notes.pdf",
-            "path": "/notes/paper-2/GST_Act_2017_Detailed_Notes.pdf",
-            "size": "5.7 MB",
-            "color": "gray",
-            "topic": "Acts"
-        },
-        {
             "title": "Goods and Services Tax (GST) Act, 2017 (Brief Notes)",
             "description": "Brief notes for quick revision of Goods and Services Tax (GST) Act, 2017.",
             "filename": "GST_Act_2017_Brief_Notes.pdf",
             "path": "/notes/paper-2/GST_Act_2017_Brief_Notes.pdf",
-            "size": "1.2 MB",
+            "size": "0.8 MB",
             "color": "amber",
             "topic": "Acts"
         }

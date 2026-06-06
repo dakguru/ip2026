@@ -461,7 +461,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Detailed analysis of the BNSS, 2023 replacing the CrPC.",
             filename: "BNSS_2023.pdf",
             path: "/notes/paper-3/BNSS_2023.pdf",
-            size: "8.7 MB",
+            size: "8.3 MB",
             color: "purple",
             topic: "Constitution & Laws"
         },

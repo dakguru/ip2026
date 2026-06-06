@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import MessageModel from '@/models/Message';
+import { createNotification } from '@/lib/notifications';
 
 export async function POST(req: Request) {
     try {
@@ -27,6 +28,13 @@ export async function POST(req: Request) {
             senderEmail: userEmail,
             message: message.trim()
         });
+
+        await createNotification(
+            'admin_message',
+            `New Admin Message from ${userName || 'Anonymous'}`,
+            message.trim().substring(0, 150) + (message.trim().length > 150 ? '...' : ''),
+            { email: userEmail }
+        );
 
         return NextResponse.json({ success: true, message: 'Message sent successfully' });
 
