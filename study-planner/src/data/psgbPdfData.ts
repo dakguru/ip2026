@@ -527,9 +527,9 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "General Financial Rules 2017 other than public procurement",
             "description": "General Financial Rules 2017 other than public procurement",
-            "filename": "General_Financial_Rules_2017.pdf",
-            "path": "/notes/paper-3/General_Financial_Rules_2017.pdf",
-            "size": "4.2 MB",
+            "filename": "GFR_2017_Other_than_Procurement_PSGB_Paper_II_Notes.pdf",
+            "path": "/notes/paper-2/GFR_2017_Other_than_Procurement_PSGB_Paper_II_Notes.pdf",
+            "size": "0.6 MB",
             "color": "gray",
             "topic": "Financial & Procurement"
         },

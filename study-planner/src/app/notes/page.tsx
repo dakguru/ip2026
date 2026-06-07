@@ -938,8 +938,8 @@ export default function NotesPage() {
     };
 
     const handleActionRequest = (type: 'view' | 'download', url: string, title: string, filename?: string) => {
-        // Skip advisory for SB Orders
-        if (activeTab === "SB Orders") {
+        // Skip advisory for SB Orders or Android App
+        if (activeTab === "SB Orders" || Capacitor.isNativePlatform()) {
             if (type === 'view') {
                 setSelectedPdf({ url, title });
             } else if (type === 'download' && filename) {
