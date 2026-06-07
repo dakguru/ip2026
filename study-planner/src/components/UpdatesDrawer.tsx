@@ -19,6 +19,41 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "07.06.2026",
         items: [
             {
+                title: "🃏 April 2026 Current Affairs Flashcards Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated <strong>400 new flashcards</strong> for <strong>April 2026</strong> across all <strong>8 categories</strong> (50 cards each):</p>
+
+                        <div className="grid grid-cols-2 gap-2 text-[11px]">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-2 rounded border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300">Most Important & National</p>
+                                <p className="text-zinc-500">100 Cards</p>
+                            </div>
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-2 rounded border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300">Banking & Govt Schemes</p>
+                                <p className="text-zinc-500">100 Cards</p>
+                            </div>
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-2 rounded border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300">Sports & Sci-Tech</p>
+                                <p className="text-zinc-500">100 Cards</p>
+                            </div>
+                            <div className="bg-purple-50/50 dark:bg-purple-900/10 p-2 rounded border border-purple-100 dark:border-purple-800/50">
+                                <p className="font-bold text-purple-700 dark:text-purple-300">MoUs & International</p>
+                                <p className="text-zinc-500">100 Cards</p>
+                            </div>
+                        </div>
+
+                        <p className="text-[11px] text-zinc-600 dark:text-zinc-400">
+                            Highlights: <strong>Census 2027</strong>, <strong>India Semiconductor Mission 2.0</strong>, <strong>Kaynes Semicon Plant</strong>, and record <strong>UPI transactions</strong>.
+                        </p>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Check them out in the Flashcards → Current Affairs section!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "📑 Current Affairs May 2026 PDF Integrated",
                 desc: (
                     <div className="space-y-4">

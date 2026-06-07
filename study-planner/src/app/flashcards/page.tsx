@@ -62,7 +62,15 @@ import {
     mar2026Sports,
     mar2026MoU,
     mar2026International,
-    mar2026ScienceTech
+    mar2026ScienceTech,
+    apr2026MostImportant,
+    apr2026Banking,
+    apr2026GovtSchemes,
+    apr2026NationalNews,
+    apr2026Sports,
+    apr2026MoU,
+    apr2026International,
+    apr2026ScienceTech
 } from "../../data/flashcards";
 import { QUIZ_DATA } from "@/data/quizzes";
 import { PSGB_QUIZ_DATA } from "@/data/psgbQuizzesData";
@@ -459,6 +467,16 @@ function FlashcardsContent() {
                 case 'ca-mar26-6': manualContent = mar2026MoU; break;
                 case 'ca-mar26-7': manualContent = mar2026International; break;
                 case 'ca-mar26-8': manualContent = mar2026ScienceTech; break;
+
+                // Current Affairs - Apr 2026
+                case 'ca-apr26-1': manualContent = apr2026MostImportant; break;
+                case 'ca-apr26-2': manualContent = apr2026Banking; break;
+                case 'ca-apr26-3': manualContent = apr2026GovtSchemes; break;
+                case 'ca-apr26-4': manualContent = apr2026NationalNews; break;
+                case 'ca-apr26-5': manualContent = apr2026Sports; break;
+                case 'ca-apr26-6': manualContent = apr2026MoU; break;
+                case 'ca-apr26-7': manualContent = apr2026International; break;
+                case 'ca-apr26-8': manualContent = apr2026ScienceTech; break;
 
                 default: manualContent = [];
             }

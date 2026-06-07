@@ -8542,5 +8542,14 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('ca-mar26-7', 'International Affairs (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
   createTopic('ca-mar26-8', 'Science and Tech (Mar 2026)', 'Current Affairs', [], 'March - 2026'),
 
+  createTopic('ca-apr26-1', 'Most Important Current Affairs (Apr 2026)', 'Current Affairs', [], 'April - 2026'),
+  createTopic('ca-apr26-2', 'Banking, Economy, Business & Finance (Apr 2026)', 'Current Affairs', [], 'April - 2026'),
+  createTopic('ca-apr26-3', 'Government Schemes (Apr 2026)', 'Current Affairs', [], 'April - 2026'),
+  createTopic('ca-apr26-4', 'National News (Apr 2026)', 'Current Affairs', [], 'April - 2026'),
+  createTopic('ca-apr26-5', 'Sports (Apr 2026)', 'Current Affairs', [], 'April - 2026'),
+  createTopic('ca-apr26-6', 'MoU\'s & AGREEMENTS (Apr 2026)', 'Current Affairs', [], 'April - 2026'),
+  createTopic('ca-apr26-7', 'International Affairs (Apr 2026)', 'Current Affairs', [], 'April - 2026'),
+  createTopic('ca-apr26-8', 'Science and Tech (Apr 2026)', 'Current Affairs', [], 'April - 2026'),
+
 ];
 
