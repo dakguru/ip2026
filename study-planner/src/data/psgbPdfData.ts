@@ -493,7 +493,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Postal Manual Volume III",
             "filename": "Postal_Manual_Vol_III.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_III.pdf",
-            "size": "0.7 MB",
+            "size": "4.2 MB",
             "color": "amber",
             "topic": "Postal Manuals"
         },

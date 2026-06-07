@@ -16,6 +16,49 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "07.06.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: Postal Manual Vol III Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>Replaced the older version of the <strong>Postal Manual Vol III</strong> PDF with the new 4.2 MB version for both the <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes.</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Postal Manuals</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The notes have been updated to the latest revision. File size is now 4.2 MB.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-amber-600 dark:text-amber-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📚 PDF Notes: GFR 2017 Notes Uploaded",
+                desc: (
+                    <div className="space-y-4">
+                        <p>Added PDF Notes for <strong>General Financial Rules 2017 other than public procurement</strong> under <strong>Paper II</strong> of the <strong>PS Group B</strong> PDF Notes section.</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-slate-50/50 dark:bg-slate-900/10 p-3 rounded-xl border border-slate-200 dark:border-slate-800/50">
+                                <p className="font-bold text-slate-700 dark:text-slate-300 text-[10px] uppercase tracking-wide">Financial & Procurement</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">New PDF notes added to enhance your preparation.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-slate-600 dark:text-slate-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "06.06.2026",
         items: [
             {
