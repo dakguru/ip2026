@@ -16,9 +16,11 @@ interface NativeQuizRunnerProps {
     onExit: () => void;
     mode?: 'practice' | 'exam';
     aspirantName?: string;
+    bookmarkedIds?: Set<string>;
+    onToggleBookmark?: (questionId: string) => void;
 }
 
-export default function NativeQuizRunner({ quizTitle, questions, onComplete, onExit, mode = 'practice', aspirantName = "Aspirant" }: NativeQuizRunnerProps) {
+export default function NativeQuizRunner({ quizTitle, questions, onComplete, onExit, mode = 'practice', aspirantName = "Aspirant", bookmarkedIds, onToggleBookmark }: NativeQuizRunnerProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [markedForReview, setMarkedForReview] = useState<Set<string>>(new Set());
@@ -250,8 +252,22 @@ export default function NativeQuizRunner({ quizTitle, questions, onComplete, onE
                                 />
 
                                 <div className="relative z-10">
-                                    <FormattedQuestionText 
-                                        text={currentQ.text} 
+                                    {onToggleBookmark && (
+                                        <div className="flex justify-end mb-2">
+                                            <button
+                                                onClick={() => { vibrate(10); onToggleBookmark(currentQ.id); }}
+                                                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold border transition-colors
+                                                    ${bookmarkedIds?.has(currentQ.id)
+                                                        ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300'
+                                                        : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400'}`}
+                                            >
+                                                <Bookmark className={`w-3.5 h-3.5 ${bookmarkedIds?.has(currentQ.id) ? 'fill-current' : ''}`} />
+                                                {bookmarkedIds?.has(currentQ.id) ? 'Bookmarked' : 'Bookmark'}
+                                            </button>
+                                        </div>
+                                    )}
+                                    <FormattedQuestionText
+                                        text={currentQ.text}
                                         className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed font-sans"
                                     />
 

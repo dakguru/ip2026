@@ -6,7 +6,7 @@ import { Filesystem, Directory } from "@capacitor/filesystem";
 import { Toast } from "@capacitor/toast";
 import { FileOpener } from '@capacitor-community/file-opener';
 
-interface Question {
+export interface Question {
     id: string;
     text: string;
     options: string[];
@@ -17,6 +17,62 @@ interface Question {
         rows: string[][];
     };
 }
+
+// Shared logo loader — returns a PNG data URL (or "" on failure). Reused by the
+// MCQ answer sheet. Pass a different `filename` to swap the header logo
+// (defaults to the Mock Test logo so existing callers are unaffected).
+export const loadDakGuruLogo = async (filename: string = 'dak-guru-new-logo.png'): Promise<string> => {
+    const logoUrl = (typeof window !== 'undefined' && (window as any).Capacitor?.isNativePlatform?.())
+        ? `https://dakguru.com/${filename}`
+        : `/${filename}`;
+    try {
+        return await new Promise<string>((resolve, reject) => {
+            const img = new Image();
+            img.src = logoUrl;
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext('2d');
+                if (ctx) {
+                    ctx.drawImage(img, 0, 0);
+                    resolve(canvas.toDataURL('image/png'));
+                } else {
+                    reject('Canvas context failed');
+                }
+            };
+            img.onerror = (e) => reject(e);
+        });
+    } catch (e) {
+        console.error('Logo load failed', e);
+        return '';
+    }
+};
+
+// Clean text and fix encoding issues so jsPDF (helvetica) renders correctly.
+export const cleanText = (text: string) => {
+    if (!text) return '';
+    return text
+        .replace(/₹/g, 'Rs. ')
+        .replace(/\t/g, ' ')
+        .replace(/⅓/g, '1/3')
+        .replace(/⅔/g, '2/3')
+        .replace(/¼/g, '1/4')
+        .replace(/½/g, '1/2')
+        .replace(/¾/g, '3/4')
+        .replace(/[“”]/g, '"')
+        .replace(/[‘’]/g, "'")
+        .replace(/—/g, '-')
+        .replace(/–/g, '-')
+        .replace(/→/g, '->')
+        .replace(/←/g, '<-')
+        .replace(/↔/g, '<->')
+        .replace(/⇒/g, '=>')
+        .replace(/⇐/g, '<=')
+        .replace(/•/g, '-')
+        .replace(/✓/g, '[v]')
+        .replace(/…/g, '...');
+};
 
 interface GeneratePDFParams {
     userName: string;
@@ -30,7 +86,7 @@ interface GeneratePDFParams {
     testTopics?: string[];
 }
 
-function tryParseMatchTheFollowing(text: string) {
+export function tryParseMatchTheFollowing(text: string) {
     const col1Pattern = "Service|List-I(?: \\([^)]+\\))?|List I|Column I|Column A|Category I|Category|List 1|File Head|Form|Initiative";
     const col2Pattern = "Time|List-II(?: \\([^)]+\\))?|List II|Column II|Column B|Category II|List 2|Correspondence|Context|Detail";
     const regex = new RegExp(`^([\\s\\S]*?)\\s*(${col1Pattern}):\\s*(P\\.\\s+[\\s\\S]+?)\\s*(${col2Pattern}):\\s*(1\\.\\s+[\\s\\S]+?)\\s*(Codes:[\\s\\S]*|Which\\s+of[\\s\\S]*|Choose[\\s\\S]*|Select[\\s\\S]*|$)`, "i");
@@ -59,7 +115,7 @@ function tryParseMatchTheFollowing(text: string) {
     return { intro: intro.trim(), col1Title: col1Title.trim(), col1Items, col2Title: col2Title.trim(), col2Items, closing: closing.trim() };
 }
 
-function tryParseNumberedList(text: string) {
+export function tryParseNumberedList(text: string) {
     const pattern = /(?<=[\s:])(\d+)\.\s/g;
     const allMatches = [...text.matchAll(pattern)];
     if (allMatches.length < 2) return null;
@@ -99,199 +155,28 @@ function tryParseNumberedList(text: string) {
     return { intro, items, closing };
 }
 
-export const createMockTestAnswerSheetPDFDoc = async ({
-    userName,
-    score,
-    totalQuestions,
-    questions,
-    answers,
-    testName,
-    submittedAt,
-    testSchedule,
-    testTopics
-}: GeneratePDFParams) => {
-    const doc = new jsPDF();
+interface RenderQuestionsOpts {
+    startY: number;
+    margin: number;
+    contentWidth: number;
+    pageHeight: number;
+    addWatermark: () => void;
+}
 
-    const pageHeight = doc.internal.pageSize.height;
-    const pageWidth = doc.internal.pageSize.width;
-    const margin = 14;
-    const contentWidth = 180;
+/**
+ * Renders the question-wise review block (question text, tables, options with
+ * correct/your-answer labels, and explanations) onto the jsPDF doc, handling
+ * page breaks and watermarks. Shared by the Mock Test and MCQ answer sheets so
+ * both use an identical layout. Returns the final y position.
+ */
+export const renderAnswerSheetQuestions = (
+    doc: jsPDF,
+    questions: Question[],
+    answers: Record<string, number>,
+    { startY, margin, contentWidth, pageHeight, addWatermark }: RenderQuestionsOpts
+): number => {
+    let yPos = startY;
 
-    // Use absolute URL on native platform to avoid relative URL resolution failures
-    const logoUrl = (typeof window !== 'undefined' && (window as any).Capacitor?.isNativePlatform?.())
-        ? 'https://dakguru.com/dak-guru-new-logo.png'
-        : '/dak-guru-new-logo.png';
-    let logoData = "";
-    try {
-        logoData = await new Promise((resolve, reject) => {
-            const img = new Image();
-            img.src = logoUrl;
-            img.onload = () => {
-                const canvas = document.createElement('canvas');
-                canvas.width = img.width;
-                canvas.height = img.height;
-                const ctx = canvas.getContext('2d');
-                if (ctx) {
-                    ctx.drawImage(img, 0, 0);
-                    resolve(canvas.toDataURL('image/png'));
-                } else {
-                    reject("Canvas context failed");
-                }
-            };
-            img.onerror = (e) => reject(e);
-        });
-    } catch (e) {
-        console.error("Logo load failed", e);
-    }
-
-    const addWatermark = () => {
-        if (logoData) {
-            const wmWidth = 100;
-            const wmHeight = 100;
-            const wmX = (pageWidth - wmWidth) / 2;
-            const wmY = (pageHeight - wmHeight) / 2;
-            try {
-                if ((doc as any).GState) {
-                    doc.setGState(new (doc as any).GState({ opacity: 0.1 }));
-                    doc.addImage(logoData, 'PNG', wmX, wmY, wmWidth, wmHeight);
-                    doc.setGState(new (doc as any).GState({ opacity: 1.0 }));
-                }
-            } catch (e) {
-                console.warn("Watermark opacity failed", e);
-            }
-        }
-    };
-
-    // --- HEADER BLOCK ---
-    const boxWidth = pageWidth - (margin * 2);
-    const logoSize = 35;
-
-    let topicsText = testTopics && testTopics.length > 0 ? testTopics.join(", ") : "";
-    let splitTopics: string[] = [];
-    if (topicsText) {
-        doc.setFont("helvetica", "normal");
-        doc.setFontSize(10);
-        splitTopics = doc.splitTextToSize(topicsText, contentWidth - logoSize - 35);
-    }
-    
-    let boxHeight = 45;
-    if (testSchedule) boxHeight += 8;
-    if (topicsText) boxHeight += Math.max(8, (splitTopics.length * 5) + 3);
-
-    doc.setDrawColor(200, 200, 200);
-    doc.setLineWidth(0.5);
-    doc.rect(margin, 15, boxWidth, boxHeight);
-
-    if (logoData) {
-        doc.addImage(logoData, 'PNG', margin + 5, 20, logoSize, logoSize);
-    }
-
-    // Main Title
-    doc.setFontSize(22);
-    doc.setFont("helvetica", "bold");
-    doc.setTextColor(0, 0, 128);
-    doc.text("DAK GURU", margin + logoSize + 15, 28);
-
-    // Sub Title
-    doc.setFontSize(14);
-    doc.setTextColor(60, 60, 60);
-    doc.text(testName, margin + logoSize + 15, 36);
-
-    // Separator
-    doc.setDrawColor(230, 230, 230);
-    doc.line(margin + logoSize + 10, 42, margin + boxWidth - 5, 42);
-
-    // Details Line
-    doc.setFontSize(10);
-    doc.setFont("helvetica", "bold");
-    doc.setTextColor(100, 100, 100);
-    doc.text("Candidate Name:", margin + logoSize + 15, 52);
-
-    doc.setFont("helvetica", "normal");
-    doc.setTextColor(0, 0, 0);
-    doc.text(userName, margin + logoSize + 50, 52);
-
-    doc.setFont("helvetica", "bold");
-    doc.setTextColor(100, 100, 100);
-    doc.text("Date:", margin + logoSize + 110, 52);
-
-    doc.setFont("helvetica", "normal");
-    doc.setTextColor(0, 0, 0);
-    // Format date properly
-    const dateObj = new Date(submittedAt);
-    const dateStr = !isNaN(dateObj.getTime())
-        ? `${dateObj.getDate().toString().padStart(2, '0')}-${(dateObj.getMonth() + 1).toString().padStart(2, '0')}-${dateObj.getFullYear()}`
-        : submittedAt;
-    doc.text(dateStr, margin + logoSize + 122, 52);
-
-    let infoY = 60;
-    
-    if (testSchedule) {
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(100, 100, 100);
-        doc.text("Schedule:", margin + logoSize + 15, infoY);
-
-        doc.setFont("helvetica", "normal");
-        doc.setTextColor(0, 0, 0);
-        doc.text(testSchedule, margin + logoSize + 35, infoY);
-        infoY += 8;
-    }
-
-    if (topicsText) {
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(100, 100, 100);
-        doc.text("Topics:", margin + logoSize + 15, infoY);
-
-        doc.setFont("helvetica", "normal");
-        doc.setTextColor(0, 0, 0);
-        doc.text(splitTopics, margin + logoSize + 35, infoY);
-        infoY += (splitTopics.length * 5) + 2;
-    }
-
-    // Score Box
-    const percentage = ((score / (totalQuestions * 2)) * 100).toFixed(1);
-    doc.setFillColor(245, 245, 245);
-    doc.roundedRect(pageWidth - margin - 45, 20, 40, 18, 2, 2, 'F');
-
-    doc.setFontSize(14);
-    doc.setFont("helvetica", "bold");
-    doc.setTextColor(220, 38, 38);
-    doc.text(`${score} / ${totalQuestions * 2}`, pageWidth - margin - 25, 28, { align: "center" });
-
-    doc.setFontSize(9);
-    doc.setTextColor(80, 80, 80);
-    doc.text(`Score (${percentage}%)`, pageWidth - margin - 25, 34, { align: "center" });
-
-    addWatermark();
-
-    let yPos = 15 + boxHeight + 15;
-
-    // Helper to clean text and fix encoding issues
-    const cleanText = (text: string) => {
-        if (!text) return "";
-        return text
-            .replace(/₹/g, "Rs. ")
-            .replace(/\t/g, " ")
-            .replace(/⅓/g, "1/3")
-            .replace(/⅔/g, "2/3")
-            .replace(/¼/g, "1/4")
-            .replace(/½/g, "1/2")
-            .replace(/¾/g, "3/4")
-            .replace(/[“”]/g, '"')
-            .replace(/[‘’]/g, "'")
-            .replace(/—/g, "-")
-            .replace(/–/g, "-")
-            .replace(/→/g, "->")
-            .replace(/←/g, "<-")
-            .replace(/↔/g, "<->")
-            .replace(/⇒/g, "=>")
-            .replace(/⇐/g, "<=")
-            .replace(/•/g, "-")
-            .replace(/✓/g, "[v]")
-            .replace(/…/g, "...");
-    };
-
-    // --- QUESTIONS LOOP ---
     questions.forEach((q, index) => {
         // Reset potentially polluted state
         doc.setCharSpace(0);
@@ -490,6 +375,159 @@ export const createMockTestAnswerSheetPDFDoc = async ({
         // Separator Line
         doc.setDrawColor(240, 240, 240);
         doc.line(margin, yPos - 5, margin + contentWidth, yPos - 5);
+    });
+
+    return yPos;
+};
+
+export const createMockTestAnswerSheetPDFDoc = async ({
+    userName,
+    score,
+    totalQuestions,
+    questions,
+    answers,
+    testName,
+    submittedAt,
+    testSchedule,
+    testTopics
+}: GeneratePDFParams) => {
+    const doc = new jsPDF();
+
+    const pageHeight = doc.internal.pageSize.height;
+    const pageWidth = doc.internal.pageSize.width;
+    const margin = 14;
+    const contentWidth = 180;
+
+    const logoData = await loadDakGuruLogo();
+
+    const addWatermark = () => {
+        if (logoData) {
+            const wmWidth = 100;
+            const wmHeight = 100;
+            const wmX = (pageWidth - wmWidth) / 2;
+            const wmY = (pageHeight - wmHeight) / 2;
+            try {
+                if ((doc as any).GState) {
+                    doc.setGState(new (doc as any).GState({ opacity: 0.1 }));
+                    doc.addImage(logoData, 'PNG', wmX, wmY, wmWidth, wmHeight);
+                    doc.setGState(new (doc as any).GState({ opacity: 1.0 }));
+                }
+            } catch (e) {
+                console.warn("Watermark opacity failed", e);
+            }
+        }
+    };
+
+    // --- HEADER BLOCK ---
+    const boxWidth = pageWidth - (margin * 2);
+    const logoSize = 35;
+
+    let topicsText = testTopics && testTopics.length > 0 ? testTopics.join(", ") : "";
+    let splitTopics: string[] = [];
+    if (topicsText) {
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10);
+        splitTopics = doc.splitTextToSize(topicsText, contentWidth - logoSize - 35);
+    }
+    
+    let boxHeight = 45;
+    if (testSchedule) boxHeight += 8;
+    if (topicsText) boxHeight += Math.max(8, (splitTopics.length * 5) + 3);
+
+    doc.setDrawColor(200, 200, 200);
+    doc.setLineWidth(0.5);
+    doc.rect(margin, 15, boxWidth, boxHeight);
+
+    if (logoData) {
+        doc.addImage(logoData, 'PNG', margin + 5, 20, logoSize, logoSize);
+    }
+
+    // Main Title
+    doc.setFontSize(22);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(0, 0, 128);
+    doc.text("DAK GURU", margin + logoSize + 15, 28);
+
+    // Sub Title
+    doc.setFontSize(14);
+    doc.setTextColor(60, 60, 60);
+    doc.text(testName, margin + logoSize + 15, 36);
+
+    // Separator
+    doc.setDrawColor(230, 230, 230);
+    doc.line(margin + logoSize + 10, 42, margin + boxWidth - 5, 42);
+
+    // Details Line
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(100, 100, 100);
+    doc.text("Candidate Name:", margin + logoSize + 15, 52);
+
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(0, 0, 0);
+    doc.text(userName, margin + logoSize + 50, 52);
+
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(100, 100, 100);
+    doc.text("Date:", margin + logoSize + 110, 52);
+
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(0, 0, 0);
+    // Format date properly
+    const dateObj = new Date(submittedAt);
+    const dateStr = !isNaN(dateObj.getTime())
+        ? `${dateObj.getDate().toString().padStart(2, '0')}-${(dateObj.getMonth() + 1).toString().padStart(2, '0')}-${dateObj.getFullYear()}`
+        : submittedAt;
+    doc.text(dateStr, margin + logoSize + 122, 52);
+
+    let infoY = 60;
+    
+    if (testSchedule) {
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(100, 100, 100);
+        doc.text("Schedule:", margin + logoSize + 15, infoY);
+
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(0, 0, 0);
+        doc.text(testSchedule, margin + logoSize + 35, infoY);
+        infoY += 8;
+    }
+
+    if (topicsText) {
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(100, 100, 100);
+        doc.text("Topics:", margin + logoSize + 15, infoY);
+
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(0, 0, 0);
+        doc.text(splitTopics, margin + logoSize + 35, infoY);
+        infoY += (splitTopics.length * 5) + 2;
+    }
+
+    // Score Box
+    const percentage = ((score / (totalQuestions * 2)) * 100).toFixed(1);
+    doc.setFillColor(245, 245, 245);
+    doc.roundedRect(pageWidth - margin - 45, 20, 40, 18, 2, 2, 'F');
+
+    doc.setFontSize(14);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(220, 38, 38);
+    doc.text(`${score} / ${totalQuestions * 2}`, pageWidth - margin - 25, 28, { align: "center" });
+
+    doc.setFontSize(9);
+    doc.setTextColor(80, 80, 80);
+    doc.text(`Score (${percentage}%)`, pageWidth - margin - 25, 34, { align: "center" });
+
+    addWatermark();
+
+    const yPos = 15 + boxHeight + 15;
+
+    renderAnswerSheetQuestions(doc, questions, answers, {
+        startY: yPos,
+        margin,
+        contentWidth,
+        pageHeight,
+        addWatermark,
     });
 
     return doc;

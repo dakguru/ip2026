@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart as ReBarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
-import { ArrowLeft, Share2, Award, TrendingUp, Target, Clock, CheckCircle2, XCircle } from 'lucide-react';
+import { ArrowLeft, Share2, Award, TrendingUp, Target, Clock, CheckCircle2, XCircle, Download, Loader2, Bookmark } from 'lucide-react';
 import { QuizSet, Question } from "@/lib/quizTypes";
 import FormattedQuestionText from "./FormattedQuestionText";
 
@@ -13,9 +13,13 @@ interface NativeResultScreenProps {
     answers: Record<string, number>;
     timeTaken: number; // in seconds
     onBack: () => void;
+    onDownloadPdf?: () => void;
+    pdfBusy?: boolean;
+    bookmarkedIds?: Set<string>;
+    onToggleBookmark?: (questionId: string) => void;
 }
 
-export default function NativeResultScreen({ score, totalQuestions, questions, answers, timeTaken, onBack }: NativeResultScreenProps) {
+export default function NativeResultScreen({ score, totalQuestions, questions, answers, timeTaken, onBack, onDownloadPdf, pdfBusy, bookmarkedIds, onToggleBookmark }: NativeResultScreenProps) {
     const [showSolutions, setShowSolutions] = useState(false);
 
     const percentage = Math.round((score / totalQuestions) * 100);
@@ -85,10 +89,17 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
                                         {idx + 1}
                                     </span>
                                     <div className="flex-1">
-                                        <FormattedQuestionText 
-                                            text={q.text} 
-                                            className="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-2"
-                                        />
+                                        <div className="flex items-start justify-between gap-2">
+                                            <FormattedQuestionText
+                                                text={q.text}
+                                                className="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-2 flex-1"
+                                            />
+                                            {onToggleBookmark && (
+                                                <button onClick={() => onToggleBookmark(q.id)} className={`p-1 shrink-0 rounded-lg transition-colors ${bookmarkedIds?.has(q.id) ? 'text-amber-500' : 'text-zinc-300 dark:text-zinc-600'}`}>
+                                                    <Bookmark className={`w-4 h-4 ${bookmarkedIds?.has(q.id) ? 'fill-current' : ''}`} />
+                                                </button>
+                                            )}
+                                        </div>
                                         <div className="space-y-1.5">
                                             {q.options.map((opt, oIdx) => {
                                                 const isOptCorrect = oIdx === q.correctAnswer;
@@ -250,7 +261,17 @@ export default function NativeResultScreen({ score, totalQuestions, questions, a
                 </div>
 
                 {/* 4. Action Buttons */}
-                <div className="flex gap-4 pt-4">
+                {onDownloadPdf && (
+                    <button
+                        onClick={onDownloadPdf}
+                        disabled={pdfBusy}
+                        className="w-full py-3 mt-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/20 active:scale-95 transition-transform flex items-center justify-center gap-2 disabled:opacity-60"
+                    >
+                        {pdfBusy ? <Loader2 className="w-5 h-5 animate-spin" /> : <Download className="w-5 h-5" />}
+                        {pdfBusy ? 'Generating PDF…' : 'Download PDF Answer Sheet'}
+                    </button>
+                )}
+                <div className="flex gap-4 pt-2">
                     <button onClick={onBack} className="flex-1 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-bold rounded-xl active:scale-95 transition-transform">
                         Go Dashboard
                     </button>

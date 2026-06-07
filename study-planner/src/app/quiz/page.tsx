@@ -2,10 +2,17 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock, ChevronRight, ArrowRight } from 'lucide-react';
+import { ArrowLeft, BrainCircuit, PlayCircle, Trophy, CheckCircle2, XCircle, Timer, Settings, AlertCircle, Lock, ChevronRight, ArrowRight, Bookmark, Download, RotateCcw, Loader2, GraduationCap, ClipboardCheck, RefreshCw, Home } from 'lucide-react';
 import { QUIZ_DATA } from '@/data/quizzes';
 import { PSGB_QUIZ_DATA } from '@/data/psgbQuizzesData';
-import { QuizSet, QuizTopic } from '@/lib/quizTypes';
+import { QuizSet, QuizTopic, Question } from '@/lib/quizTypes';
+import QuizModeCards, { PracticeMode } from '@/components/quiz/QuizModeCards';
+import QuizPreviousAttempts from '@/components/quiz/QuizPreviousAttempts';
+import {
+    fetchAttempts, fetchBookmarks, fetchRevisionIds, toggleBookmarkApi, submitAttempt,
+    loadAttemptForPdf, rangeLabel, McqAttemptSummary
+} from '@/lib/quiz-client';
+import { downloadMcqAnswerSheetPDF } from '@/lib/pdf-generator-mcq';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 import { useIsMobile } from '@/hooks/use-is-mobile';
 import NativeQuizRunner from '@/components/quiz/NativeQuizRunner';
@@ -114,6 +121,19 @@ export default function QuizDashboard() {
     // Config State
     const [quizRange, setQuizRange] = useState<{ start: number; end: number }>({ start: 1, end: 10 });
 
+    // --- MCQ Enhancements State ---
+    const [practiceMode, setPracticeMode] = useState<PracticeMode | null>('practice');
+    const [attempts, setAttempts] = useState<McqAttemptSummary[]>([]);
+    const [attemptsLoading, setAttemptsLoading] = useState(false);
+    const [bookmarkedIds, setBookmarkedIds] = useState<Set<string>>(new Set());
+    const [revisionIds, setRevisionIds] = useState<string[]>([]);
+    const [revisionLoading, setRevisionLoading] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [lastAttempt, setLastAttempt] = useState<McqAttemptSummary | null>(null);
+    const [pdfBusy, setPdfBusy] = useState(false);
+    const [downloadingId, setDownloadingId] = useState<string | null>(null);
+    const startTimeRef = useRef<number>(0);
+
     // Quiz Session State
     const [currentQIndex, setCurrentQIndex] = useState(0);
     const [answers, setAnswers] = useState<Record<string, number>>({}); // qId -> optionIndex
@@ -177,7 +197,30 @@ export default function QuizDashboard() {
         setAnswers({});
         setIsSubmitted(false);
         setCurrentQIndex(0);
+        setPracticeMode('practice');
+        setLastAttempt(null);
         setView('topics');
+    };
+
+    // Load user-specific attempts, bookmarks and revision availability for a topic.
+    const loadTopicData = async (topicId: string) => {
+        setAttemptsLoading(true);
+        setRevisionLoading(true);
+        try {
+            const [att, bms, rev] = await Promise.all([
+                fetchAttempts(topicId),
+                fetchBookmarks(topicId),
+                fetchRevisionIds(topicId),
+            ]);
+            setAttempts(att);
+            setBookmarkedIds(new Set(bms));
+            setRevisionIds(rev.questionIds || []);
+        } catch (e) {
+            console.error('Failed to load topic data', e);
+        } finally {
+            setAttemptsLoading(false);
+            setRevisionLoading(false);
+        }
     };
 
     const handleTopicSelect = (topic: QuizTopic) => {
@@ -190,55 +233,170 @@ export default function QuizDashboard() {
         }
 
         setSelectedTopic(topic);
+        setPracticeMode('practice');
+        setLastAttempt(null);
+        setAttempts([]);
+        setBookmarkedIds(new Set());
+        setRevisionIds([]);
         setView('config');
         // Reset range to default 1-10 or max available
         const total = topic.sets.reduce((acc, s) => acc + s.questions.length, 0);
         setQuizRange({ start: 1, end: Math.min(10, total) });
+        loadTopicData(topic.id);
+    };
+
+    const paperName = selectedTopic?.category || '';
+
+    // Re-enter the config screen for the already-selected topic (used by "Retry Topic").
+    const retryTopic = () => {
+        if (!selectedTopic) return;
+        setGeneratedSet(null);
+        setAnswers({});
+        setIsSubmitted(false);
+        setCurrentQIndex(0);
+        setPracticeMode('practice');
+        setLastAttempt(null);
+        setView('config');
+        loadTopicData(selectedTopic.id);
+    };
+
+    // Toggle a bookmark for a question (optimistic, persisted server-side).
+    const toggleBookmark = async (questionId: string) => {
+        if (!selectedTopic) return;
+        const willBookmark = !bookmarkedIds.has(questionId);
+        setBookmarkedIds(prev => {
+            const next = new Set(prev);
+            if (willBookmark) next.add(questionId); else next.delete(questionId);
+            return next;
+        });
+        const ok = await toggleBookmarkApi({
+            topicId: selectedTopic.id,
+            paperId: paperName,
+            questionId,
+            bookmarked: willBookmark,
+        });
+        if (!ok) {
+            // revert on failure
+            setBookmarkedIds(prev => {
+                const next = new Set(prev);
+                if (willBookmark) next.delete(questionId); else next.add(questionId);
+                return next;
+            });
+        }
+    };
+
+    // Build the current attempt's question-range label for PDFs.
+    const currentRangeLabel = () => {
+        if (practiceMode === 'revision') return 'Revision Set';
+        return `${quizRange.start}-${quizRange.end}`;
+    };
+
+    // Download PDF for the just-completed attempt (uses in-memory questions/answers).
+    const downloadCurrentPdf = async () => {
+        if (!generatedSet || !selectedTopic) return;
+        setPdfBusy(true);
+        try {
+            await downloadMcqAnswerSheetPDF({
+                userName,
+                paperName,
+                topicName: selectedTopic.title,
+                mode: practiceMode || 'practice',
+                questionRange: currentRangeLabel(),
+                submittedAt: new Date().toISOString(),
+                timeTakenSeconds: timeTaken,
+                questions: generatedSet.questions,
+                answers,
+            });
+        } catch (e) {
+            console.error('PDF generation failed', e);
+            alert('PDF is being generated. Please try again after a few seconds.');
+        } finally {
+            setPdfBusy(false);
+        }
+    };
+
+    // Download PDF for any previous attempt (rebuilds from saved snapshots).
+    const downloadPreviousPdf = async (attempt: McqAttemptSummary) => {
+        setDownloadingId(attempt._id);
+        try {
+            const data = await loadAttemptForPdf(attempt._id);
+            if (!data || data.questions.length === 0) {
+                alert('PDF not available for this attempt.');
+                return;
+            }
+            await downloadMcqAnswerSheetPDF({
+                userName,
+                paperName: attempt.paperId || paperName,
+                topicName: attempt.topicTitle || selectedTopic?.title || 'Topic',
+                mode: attempt.mode,
+                questionRange: rangeLabel(attempt),
+                submittedAt: attempt.createdAt,
+                timeTakenSeconds: attempt.timeTakenSeconds,
+                questions: data.questions,
+                answers: data.answers,
+            });
+        } catch (e) {
+            console.error('Previous PDF generation failed', e);
+            alert('PDF is being generated. Please try again after a few seconds.');
+        } finally {
+            setDownloadingId(null);
+        }
     };
 
     const startQuiz = () => {
-        if (!selectedTopic) return;
+        if (!selectedTopic || !practiceMode) return;
 
-        // 1. Gather all questions
-        let allQuestions = selectedTopic.sets.flatMap(s => s.questions);
+        const allQuestions = selectedTopic.sets.flatMap(s => s.questions);
+        let selectedQuestions: Question[];
 
-        // 2. Select Range (1-based inputs converted to 0-based indices)
-        const startIdx = Math.max(0, quizRange.start - 1);
-        const endIdx = Math.min(allQuestions.length, quizRange.end);
+        if (practiceMode === 'revision') {
+            // Only previously-wrong or bookmarked questions (already de-duplicated server-side).
+            const idSet = new Set(revisionIds);
+            selectedQuestions = allQuestions.filter(q => idSet.has(q.id));
+            if (selectedQuestions.length === 0) return;
+        } else {
+            // Range-based selection (1-based inputs -> 0-based indices).
+            const startIdx = Math.max(0, quizRange.start - 1);
+            const endIdx = Math.min(allQuestions.length, quizRange.end);
+            selectedQuestions = allQuestions.slice(startIdx, endIdx);
+            if (selectedQuestions.length === 0) return;
+        }
 
-        const selectedQuestions = allQuestions.slice(startIdx, endIdx);
+        // Shuffle for quiz feel
+        const finalQuestions = [...selectedQuestions].sort(() => Math.random() - 0.5);
 
-        if (selectedQuestions.length === 0) return;
-
-        // 3. Shuffle SELECTED questions (Optional, but good for quiz feel)
-        const finalQuestions = selectedQuestions.sort(() => Math.random() - 0.5);
-
-        // 4. Create a temporary set
         const tempSet: QuizSet = {
             id: `practice-${Date.now()}`,
             title: `Study: ${selectedTopic.title}`,
             questions: finalQuestions
         };
 
+        startTimeRef.current = Date.now();
         setGeneratedSet(tempSet);
         setCurrentQIndex(0);
         setAnswers({});
+        setTimeTaken(0);
         setIsSubmitted(false);
+        setLastAttempt(null);
         setView('quiz');
     };
 
     const handleOptionSelect = (qId: string, idx: number) => {
-        if (isSubmitted || answers[qId] !== undefined) return;
+        if (isSubmitted) return;
+        // Practice/Revision: lock answer once chosen (instant feedback).
+        // Exam: allow changing the selection until final submission.
+        if (practiceMode !== 'exam' && answers[qId] !== undefined) return;
         setAnswers(prev => ({ ...prev, [qId]: idx }));
     };
 
-    const submitQuizResults = async (finalAnswers: Record<string, number>, finalScore: number, correct: number, wrong: number) => {
+    const submitQuizResults = async (finalAnswers: Record<string, number>, finalScore: number, correct: number, wrong: number, timeTakenSeconds: number) => {
+        // Prevent duplicate submission from double-clicking.
+        if (isSubmitting || isSubmitted) return;
+        setIsSubmitting(true);
         setIsSubmitted(true);
-        // Update local state to show results (if we are in web mode OR if we want to show shared result view)
-        // For native mode, we might want to stay in native result view or just use the same result view.
-        // Let's reuse the existing result view infrastructure by syncing the answers up.
         setAnswers(finalAnswers);
 
+        // Legacy progress save (kept for backward compatibility / existing dashboards).
         try {
             await fetch('/api/quiz/result', {
                 method: 'POST',
@@ -255,47 +413,59 @@ export default function QuizDashboard() {
         } catch (err) {
             console.error('Failed to save progress:', err);
         }
+
+        // New: persist full attempt + per-question snapshots.
+        try {
+            if (selectedTopic && generatedSet) {
+                const saved = await submitAttempt({
+                    topicId: selectedTopic.id,
+                    topicTitle: selectedTopic.title,
+                    paperId: paperName,
+                    mode: practiceMode || 'practice',
+                    startQuestionNo: practiceMode === 'revision' ? undefined : quizRange.start,
+                    endQuestionNo: practiceMode === 'revision' ? undefined : quizRange.end,
+                    selectedBatch: '',
+                    timeTakenSeconds,
+                    questions: generatedSet.questions,
+                    answers: finalAnswers,
+                    bookmarkedIds: Array.from(bookmarkedIds),
+                });
+                if (saved) {
+                    setLastAttempt(saved);
+                    setAttempts(prev => [saved, ...prev]);
+                }
+            }
+        } catch (err) {
+            console.error('Failed to save attempt:', err);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const computeTally = (finalAnswers: Record<string, number>) => {
+        let score = 0, correct = 0, wrong = 0;
+        generatedSet?.questions.forEach(q => {
+            const ans = finalAnswers[q.id];
+            if (ans === q.correctAnswer) { score++; correct++; }
+            else if (ans !== undefined && ans >= 0) { wrong++; }
+        });
+        return { score, correct, wrong };
     };
 
     const handleSubmit = async () => {
         if (!generatedSet) return;
-
-        let score = 0;
-        let correct = 0;
-        let wrong = 0;
-        generatedSet.questions.forEach(q => {
-            const ans = answers[q.id];
-            if (ans === q.correctAnswer) {
-                score++;
-                correct++;
-            } else if (ans !== undefined) {
-                wrong++;
-            }
-        });
-
-        await submitQuizResults(answers, score, correct, wrong);
+        const elapsed = startTimeRef.current ? Math.round((Date.now() - startTimeRef.current) / 1000) : 0;
+        setTimeTaken(elapsed);
+        const { score, correct, wrong } = computeTally(answers);
+        await submitQuizResults(answers, score, correct, wrong, elapsed);
     };
 
-    const handleNativeComplete = async (finalAnswers: Record<string, number>, timeTaken: number) => {
+    const handleNativeComplete = async (finalAnswers: Record<string, number>, nativeTimeTaken: number) => {
         if (!generatedSet) return;
-
-        let score = 0;
-        let correct = 0;
-        let wrong = 0;
-        generatedSet.questions.forEach(q => {
-            const ans = finalAnswers[q.id];
-            if (ans === q.correctAnswer) {
-                score++;
-                correct++;
-            } else if (ans !== undefined) {
-                wrong++;
-            }
-        });
-
-        // Sync state back to parent so we can show result screen
         setAnswers(finalAnswers);
-        setTimeTaken(timeTaken);
-        await submitQuizResults(finalAnswers, score, correct, wrong);
+        setTimeTaken(nativeTimeTaken);
+        const { score, correct, wrong } = computeTally(finalAnswers);
+        await submitQuizResults(finalAnswers, score, correct, wrong, nativeTimeTaken);
     };
 
     const calculateScore = () => {
@@ -320,6 +490,9 @@ export default function QuizDashboard() {
                     onComplete={handleNativeComplete}
                     onExit={resetToDashboard}
                     aspirantName={userName}
+                    mode={practiceMode === 'exam' ? 'exam' : 'practice'}
+                    bookmarkedIds={bookmarkedIds}
+                    onToggleBookmark={toggleBookmark}
                 />
             );
         }
@@ -333,6 +506,10 @@ export default function QuizDashboard() {
                     answers={answers}
                     timeTaken={timeTaken}
                     onBack={resetToDashboard}
+                    onDownloadPdf={downloadCurrentPdf}
+                    pdfBusy={pdfBusy}
+                    bookmarkedIds={bookmarkedIds}
+                    onToggleBookmark={toggleBookmark}
                 />
             );
         }
@@ -340,6 +517,8 @@ export default function QuizDashboard() {
         const total = generatedSet.questions.length;
         const score = calculateScore();
         const isAnswered = answers[currentQ.id] !== undefined;
+        const isExam = practiceMode === 'exam';
+        const isQBookmarked = bookmarkedIds.has(currentQ.id);
 
         if (total === 0) {
             return (
@@ -422,6 +601,20 @@ export default function QuizDashboard() {
                                 />
 
                                 <div className="relative z-10">
+                                    {/* Bookmark for Revision */}
+                                    <div className="flex justify-end mb-2">
+                                        <button
+                                            onClick={() => toggleBookmark(currentQ.id)}
+                                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold border transition-colors
+                                                ${isQBookmarked
+                                                    ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300'
+                                                    : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400 hover:border-amber-300'}`}
+                                        >
+                                            <Bookmark className={`w-3.5 h-3.5 ${isQBookmarked ? 'fill-current' : ''}`} />
+                                            {isQBookmarked ? 'Bookmarked' : 'Bookmark for Revision'}
+                                        </button>
+                                    </div>
+
                                     <FormattedQuestionText
                                         text={currentQ.text}
                                         className="text-lg md:text-xl font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed md:mb-8"
@@ -431,13 +624,11 @@ export default function QuizDashboard() {
                                             const isSelected = answers[currentQ.id] === idx;
                                             const isAnsweredAlready = answers[currentQ.id] !== undefined;
 
-                                            // Visual Feedback Logic
-                                            // If answered: show correctness immediately if that's the desired UX (Instant Feedback)
-                                            // Based on existing code, it does show instant feedback.
-
+                                            // In Exam Mode we never reveal correctness during the attempt —
+                                            // only the user's current selection is highlighted.
                                             const isCorrect = idx === currentQ.correctAnswer;
-                                            const showCorrect = isAnsweredAlready && isCorrect;
-                                            const showWrong = isAnsweredAlready && isSelected && !isCorrect;
+                                            const showCorrect = !isExam && isAnsweredAlready && isCorrect;
+                                            const showWrong = !isExam && isAnsweredAlready && isSelected && !isCorrect;
 
                                             let buttonStyle = "border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 text-zinc-700 dark:text-zinc-300";
                                             let iconStyle = "border-zinc-300 dark:border-zinc-600";
@@ -448,7 +639,11 @@ export default function QuizDashboard() {
                                             } else if (showWrong) {
                                                 buttonStyle = "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 font-medium";
                                                 iconStyle = "border-red-500 bg-red-500 text-white";
-                                            } else if (isAnsweredAlready) {
+                                            } else if (isExam && isSelected) {
+                                                // Exam mode selected state (neutral blue, no correctness hint)
+                                                buttonStyle = "border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 font-medium";
+                                                iconStyle = "border-blue-500 bg-blue-500 text-white";
+                                            } else if (!isExam && isAnsweredAlready) {
                                                 buttonStyle = "border-zinc-100 dark:border-zinc-800 opacity-50 dark:text-zinc-500";
                                             }
 
@@ -456,12 +651,13 @@ export default function QuizDashboard() {
                                                 <button
                                                     key={idx}
                                                     onClick={() => handleOptionSelect(currentQ.id, idx)}
-                                                    disabled={isAnsweredAlready}
+                                                    disabled={!isExam && isAnsweredAlready}
                                                     className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-center gap-4 ${buttonStyle}`}
                                                 >
                                                     <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors ${iconStyle}`}>
                                                         {showCorrect && <CheckCircle2 className="w-4 h-4 text-white" />}
                                                         {showWrong && <XCircle className="w-4 h-4 text-white" />}
+                                                        {isExam && isSelected && <div className="w-2.5 h-2.5 rounded-full bg-white" />}
                                                     </div>
                                                     {opt}
                                                 </button>
@@ -469,7 +665,8 @@ export default function QuizDashboard() {
                                         })}
                                     </div>
 
-                                    {isAnswered && (
+                                    {/* Instant explanation (Practice/Revision only) */}
+                                    {!isExam && isAnswered && (
                                         <div className="mt-8 animate-in fade-in slide-in-from-top-4 duration-300">
                                             <div className={`p-4 rounded-xl border-l-4 ${answers[currentQ.id] === currentQ.correctAnswer ? 'bg-green-50 dark:bg-green-900/10 border-green-500' : 'bg-red-50 dark:bg-red-900/10 border-red-500'}`}>
                                                 <p className="font-bold text-sm mb-1 uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Explanation</p>
@@ -509,25 +706,86 @@ export default function QuizDashboard() {
                         </div>
                     ) : (
                         // RESULTS VIEW
+                        (() => {
+                            const attemptedCount = generatedSet.questions.filter(q => answers[q.id] !== undefined && answers[q.id] >= 0).length;
+                            const correctCount = score;
+                            const wrongCount = attemptedCount - correctCount;
+                            const unattemptedCount = total - attemptedCount;
+                            const pct = total > 0 ? Math.round((score / total) * 100) : 0;
+                            const mm = Math.floor(timeTaken / 60);
+                            const ss = timeTaken % 60;
+                            return (
                         <div className="animate-in fade-in slide-in-from-bottom-8 duration-500 pb-12">
-                            <div className="text-center mb-10">
-                                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-tr from-yellow-400 to-orange-500 text-white rounded-full shadow-lg mb-6">
-                                    <Trophy className="w-12 h-12" />
+                            <div className="text-center mb-8">
+                                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-tr from-yellow-400 to-orange-500 text-white rounded-full shadow-lg mb-4">
+                                    <Trophy className="w-10 h-10" />
                                 </div>
-                                <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100 mb-2">Study Completed!</h2>
-                                <p className="text-zinc-500 dark:text-zinc-400 text-lg">
-                                    You scored <span className="text-zinc-900 dark:text-zinc-100 font-bold">{score} / {total} {total > 0 && `(${Math.round(score / total * 100)}%)`}</span>
-                                </p>
+                                <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">Practice Completed!</h2>
+                            </div>
+
+                            {/* Score Summary Card */}
+                            <div className="bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 mb-6">
+                                <div className="flex items-center justify-center gap-2 mb-5">
+                                    <span className="text-4xl font-extrabold text-zinc-900 dark:text-zinc-100">{score}<span className="text-xl text-zinc-400 font-medium">/{total}</span></span>
+                                    <span className="ml-2 px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold rounded-full">{pct}%</span>
+                                </div>
+                                <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 text-center">
+                                    {[
+                                        { l: 'Total', v: total, c: 'text-zinc-700 dark:text-zinc-300' },
+                                        { l: 'Correct', v: correctCount, c: 'text-green-600 dark:text-green-400' },
+                                        { l: 'Wrong', v: wrongCount, c: 'text-red-500 dark:text-red-400' },
+                                        { l: 'Unattempted', v: unattemptedCount, c: 'text-amber-500 dark:text-amber-400' },
+                                        { l: 'Time', v: `${mm}m ${ss}s`, c: 'text-blue-600 dark:text-blue-400' },
+                                    ].map((s) => (
+                                        <div key={s.l} className="bg-zinc-50 dark:bg-zinc-800/40 rounded-xl py-3">
+                                            <div className={`text-lg font-extrabold ${s.c}`}>{s.v}</div>
+                                            <div className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider mt-0.5">{s.l}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Action Buttons */}
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                                <button onClick={downloadCurrentPdf} disabled={pdfBusy} className={`flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold text-white disabled:opacity-60 ${isPS ? 'bg-teal-600 hover:bg-teal-700' : 'bg-purple-600 hover:bg-purple-700'} transition-colors`}>
+                                    {pdfBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />} PDF Sheet
+                                </button>
+                                <button onClick={retryTopic} className="flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+                                    <RotateCcw className="w-4 h-4" /> Retry Topic
+                                </button>
+                                <button onClick={resetToDashboard} className="flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+                                    <BrainCircuit className="w-4 h-4" /> Topics
+                                </button>
+                                <Link href="/" className="flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+                                    <Home className="w-4 h-4" /> Home
+                                </Link>
+                            </div>
+
+                            <div className="flex items-center gap-2 mb-4">
+                                <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Question Review</span>
+                                <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
                             </div>
 
                             <div className="space-y-6">
                                 {generatedSet.questions.map((q, idx) => {
                                     const userAnswer = answers[q.id];
+                                    const isUnattempted = userAnswer === undefined || userAnswer < 0;
                                     const isCorrect = userAnswer === q.correctAnswer;
+                                    const qBookmarked = bookmarkedIds.has(q.id);
 
                                     return (
-                                        <div key={q.id} className={`p-6 rounded-2xl border ${isCorrect ? 'border-green-100 dark:border-green-900 bg-green-50/30 dark:bg-green-900/10' : 'border-red-100 dark:border-red-900 bg-red-50/30 dark:bg-red-900/10'}`}>
-                                            <p className="font-semibold text-zinc-900 dark:text-zinc-100 mb-4">{idx + 1}. {q.text}</p>
+                                        <div key={q.id} className={`p-6 rounded-2xl border ${isUnattempted ? 'border-zinc-200 dark:border-zinc-800 bg-zinc-50/40 dark:bg-zinc-900/40' : isCorrect ? 'border-green-100 dark:border-green-900 bg-green-50/30 dark:bg-green-900/10' : 'border-red-100 dark:border-red-900 bg-red-50/30 dark:bg-red-900/10'}`}>
+                                            <div className="flex items-start justify-between gap-3 mb-4">
+                                                <p className="font-semibold text-zinc-900 dark:text-zinc-100 flex-1">{idx + 1}. {q.text}</p>
+                                                <div className="flex items-center gap-2 shrink-0">
+                                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${isUnattempted ? 'bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300' : isCorrect ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'}`}>
+                                                        {isUnattempted ? 'Unattempted' : isCorrect ? 'Correct' : 'Wrong'}
+                                                    </span>
+                                                    <button onClick={() => toggleBookmark(q.id)} className={`p-1 rounded-lg transition-colors ${qBookmarked ? 'text-amber-500' : 'text-zinc-300 dark:text-zinc-600 hover:text-amber-400'}`} title="Bookmark for Revision">
+                                                        <Bookmark className={`w-4 h-4 ${qBookmarked ? 'fill-current' : ''}`} />
+                                                    </button>
+                                                </div>
+                                            </div>
 
                                             <div className="space-y-2 mb-4">
                                                 {q.options.map((opt, oIdx) => (
@@ -551,13 +809,9 @@ export default function QuizDashboard() {
                                     );
                                 })}
                             </div>
-
-                            <div className="flex justify-center mt-12">
-                                <Link href="/" className="px-8 py-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-xl font-bold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors">
-                                    Back to Home
-                                </Link>
-                            </div>
                         </div>
+                            );
+                        })()
                     )}
                 </div>
                 </div>
@@ -577,6 +831,26 @@ export default function QuizDashboard() {
             return { start, end };
         }).filter(c => c.start <= availableQuestions);
 
+        // Aggregate progress across this user's attempts for the topic.
+        const agg = attempts.reduce((a, x) => ({
+            attempted: a.attempted + x.attemptedCount,
+            correct: a.correct + x.correctCount,
+            wrong: a.wrong + x.wrongCount,
+            unattempted: a.unattempted + x.unattemptedCount,
+        }), { attempted: 0, correct: 0, wrong: 0, unattempted: 0 });
+        const aggAccuracy = agg.attempted > 0 ? Math.round((agg.correct / agg.attempted) * 100) : 0;
+
+        // Validation for enabling the dynamic start button.
+        const rangeValid = quizRange.start >= 1 && quizRange.end >= quizRange.start && quizRange.end <= availableQuestions;
+        const revisionReady = revisionIds.length > 0;
+        const canStart = !!practiceMode && (
+            practiceMode === 'revision' ? revisionReady : rangeValid
+        );
+        const startLabel = practiceMode === 'exam' ? 'Start Exam Mode'
+            : practiceMode === 'revision' ? 'Start Revision'
+            : practiceMode === 'practice' ? 'Start Practice Mode'
+            : 'Select a Mode to Start';
+
         return (
             <>
                 <style dangerouslySetInnerHTML={{ __html: getSliderStyles(isPS) }} />
@@ -591,25 +865,84 @@ export default function QuizDashboard() {
                         </div>
                     }
                 >
-                    <div className="flex-1 flex items-center justify-center p-6 md:p-8">
-                        <div className="w-full max-w-lg bg-white dark:bg-zinc-900 rounded-3xl shadow-xl dark:shadow-purple-900/10 border border-zinc-100 dark:border-zinc-800 p-8">
-                            <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex items-center gap-2 mb-6">
+                    <div className="flex-1 overflow-y-auto p-3 sm:p-6 md:p-8 pb-[max(1.5rem,env(safe-area-inset-bottom))] flex justify-center">
+                        <div className="w-full max-w-2xl bg-white dark:bg-zinc-900 rounded-2xl sm:rounded-3xl shadow-sm sm:shadow-xl dark:shadow-purple-900/10 border border-zinc-100 dark:border-zinc-800 p-4 sm:p-6 md:p-8 h-fit">
+                            <button onClick={() => setView('topics')} className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 hidden sm:flex items-center gap-2 mb-6">
                                 <ArrowLeft className="w-4 h-4" /> Change Topic
                             </button>
 
-                            <div className="mb-8">
-                                <span className={`font-bold uppercase text-xs tracking-wider ${isPS ? 'text-teal-600 dark:text-teal-400' : 'text-purple-600 dark:text-purple-400'}`}>{selectedTopic.category}</span>
-                                <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100 mt-2">{selectedTopic.title}</h2>
-                                <p className="text-zinc-500 dark:text-zinc-400 mt-2 flex items-center gap-2">
-                                    <BrainCircuit className="w-4 h-4" />
+                            <div className="mb-6 sm:mb-8">
+                                <span className={`font-bold uppercase text-[11px] sm:text-xs tracking-wider ${isPS ? 'text-teal-600 dark:text-teal-400' : 'text-purple-600 dark:text-purple-400'}`}>{selectedTopic.category}</span>
+                                <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-900 dark:text-zinc-100 mt-1.5 sm:mt-2 leading-tight">{selectedTopic.title}</h2>
+                                <p className="text-sm sm:text-base text-zinc-500 dark:text-zinc-400 mt-1.5 sm:mt-2 flex items-center gap-2">
+                                    <BrainCircuit className="w-4 h-4 shrink-0" />
                                     {availableQuestions} Questions available
                                 </p>
                             </div>
 
+                            {/* FEATURE 1: Practice Mode Selection */}
+                            <QuizModeCards
+                                selectedMode={practiceMode}
+                                onSelect={setPracticeMode}
+                                isPS={isPS}
+                                revisionCount={revisionIds.length}
+                                revisionLoading={revisionLoading}
+                            />
+
+                            {/* Progress summary (shown when the user has prior attempts) */}
+                            {attempts.length > 0 && (
+                                <div className="mb-8">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Your Progress</span>
+                                        <div className="h-px bg-zinc-200 dark:bg-zinc-800 flex-1"></div>
+                                    </div>
+                                    <div className="grid grid-cols-5 gap-2 text-center">
+                                        {[
+                                            { l: 'Attempted', v: agg.attempted, c: 'text-zinc-700 dark:text-zinc-300' },
+                                            { l: 'Correct', v: agg.correct, c: 'text-green-600 dark:text-green-400' },
+                                            { l: 'Wrong', v: agg.wrong, c: 'text-red-500 dark:text-red-400' },
+                                            { l: 'Pending', v: agg.unattempted, c: 'text-amber-500 dark:text-amber-400' },
+                                            { l: 'Accuracy', v: `${aggAccuracy}%`, c: isPS ? 'text-teal-600 dark:text-teal-400' : 'text-purple-600 dark:text-purple-400' },
+                                        ].map((s) => (
+                                            <div key={s.l} className="bg-zinc-50 dark:bg-zinc-800/40 rounded-xl py-2.5">
+                                                <div className={`text-base font-extrabold ${s.c}`}>{s.v}</div>
+                                                <div className="text-[9px] uppercase font-bold text-zinc-400 tracking-wider mt-0.5">{s.l}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
                             {availableQuestions > 0 ? (
                                 <>
-                                    <div className="mb-8">
-                                        <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-6">How many questions do you want to attempt?</label>
+                                    {/* Revision Mode panel (range selection hidden / not applicable) */}
+                                    {practiceMode === 'revision' && (
+                                        <div className="mb-8">
+                                            {revisionLoading ? (
+                                                <div className="flex items-center justify-center gap-2 py-8 text-zinc-400 text-sm">
+                                                    <Loader2 className="w-4 h-4 animate-spin" /> Loading revision questions…
+                                                </div>
+                                            ) : revisionIds.length > 0 ? (
+                                                <div className={`p-4 rounded-2xl border flex items-start gap-3 ${isPS ? 'bg-teal-50 dark:bg-teal-900/20 border-teal-200 dark:border-teal-800' : 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'}`}>
+                                                    <RefreshCw className={`w-5 h-5 shrink-0 mt-0.5 ${isPS ? 'text-teal-600 dark:text-teal-400' : 'text-purple-600 dark:text-purple-400'}`} />
+                                                    <div>
+                                                        <p className="font-bold text-sm text-zinc-800 dark:text-zinc-100">{revisionIds.length} Revision Questions Ready</p>
+                                                        <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Your previously wrong and bookmarked questions for this topic. Question range & batch selection are not applicable in Revision Mode.</p>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <div className="text-center py-8 px-4 bg-zinc-50 dark:bg-zinc-800/40 rounded-2xl border border-dashed border-zinc-200 dark:border-zinc-700">
+                                                    <RefreshCw className="w-8 h-8 text-zinc-300 dark:text-zinc-600 mx-auto mb-3" />
+                                                    <p className="font-bold text-sm text-zinc-700 dark:text-zinc-300">No Revision Questions Available</p>
+                                                    <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-1 max-w-xs mx-auto">Wrong and bookmarked questions will appear here after you complete practice attempts.</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {practiceMode !== 'revision' && (
+                                    <div className="mb-6 sm:mb-8">
+                                        <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-5 sm:mb-6">How many questions do you want to attempt?</label>
 
                                         {/* Slider and Input Container */}
                                         <div className="space-y-6">
@@ -806,12 +1139,23 @@ export default function QuizDashboard() {
                                             </div>
                                         </div>
                                     </div>
+                                    )}
 
+                                    {/* Validation hint */}
+                                    {!practiceMode && (
+                                        <p className="text-center text-xs text-amber-600 dark:text-amber-400 mb-3 flex items-center justify-center gap-1.5">
+                                            <AlertCircle className="w-3.5 h-3.5" /> Please select a practice mode to continue.
+                                        </p>
+                                    )}
+
+                                    {/* FEATURE 8: Dynamic start button */}
                                     <button
                                         onClick={startQuiz}
-                                        className={`w-full py-4 text-white rounded-xl font-bold text-lg shadow-lg ${isPS ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-purple-200 dark:shadow-purple-900/20'} transition-all active:scale-95 flex items-center justify-center gap-2`}
+                                        disabled={!canStart}
+                                        className={`w-full py-3.5 sm:py-4 text-white rounded-xl font-bold text-base sm:text-lg shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100 ${isPS ? 'bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 shadow-teal-200 dark:shadow-teal-900/20' : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-purple-200 dark:shadow-purple-900/20'}`}
                                     >
-                                        <PlayCircle className="w-5 h-5" /> Start Practicing
+                                        {practiceMode === 'revision' ? <RefreshCw className="w-5 h-5" /> : practiceMode === 'exam' ? <ClipboardCheck className="w-5 h-5" /> : <PlayCircle className="w-5 h-5" />}
+                                        {startLabel}
                                     </button>
                                 </>
                             ) : (
@@ -820,6 +1164,17 @@ export default function QuizDashboard() {
                                     <p>We are currently updating the question bank for this topic. Please check back later or try another topic.</p>
                                 </div>
                             )}
+
+                            {/* FEATURE 2: Previous Attempts */}
+                            <div className="mt-8 pt-2 border-t border-zinc-100 dark:border-zinc-800">
+                                <QuizPreviousAttempts
+                                    attempts={attempts}
+                                    loading={attemptsLoading}
+                                    isPS={isPS}
+                                    onDownload={downloadPreviousPdf}
+                                    downloadingId={downloadingId}
+                                />
+                            </div>
                         </div>
                     </div>
                 </AppScreenWrapper>
