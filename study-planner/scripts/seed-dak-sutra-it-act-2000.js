@@ -196,53 +196,73 @@ const entries = [
                 <tbody>
                     <tr style="background:#fff;">
                         <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#1a5276;">I</td>
-                        <td style="padding:10px; border:1px solid #e0e0e0;">Preliminary (Definitions & Extent)</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Preliminary (Extent & Definitions)</td>
                         <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">1–2</td>
                     </tr>
                     <tr style="background:#eaf4fb;">
                         <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#6c3483;">II</td>
-                        <td style="padding:10px; border:1px solid #e0e0e0;">Authentication of Electronic Records</td>
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">3–10</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Digital Signature & Electronic Signature</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">3–3A</td>
                     </tr>
                     <tr style="background:#fff;">
                         <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#1e8449;">III</td>
                         <td style="padding:10px; border:1px solid #e0e0e0;">Electronic Governance</td>
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">11–14</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">4–10A</td>
                     </tr>
                     <tr style="background:#eaf4fb;">
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#784212;">IV–VI</td>
-                        <td style="padding:10px; border:1px solid #e0e0e0;">Attribution, Acknowledgement, Dispatch of Electronic Records</td>
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">15–19</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#784212;">IV</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Attribution, Acknowledgement & Despatch of Electronic Records</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">11–13</td>
                     </tr>
                     <tr style="background:#fff;">
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#0e6655;">VII–X</td>
-                        <td style="padding:10px; border:1px solid #e0e0e0;">Certifying Authorities — Regulation & Licensing</td>
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">17–42</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#117864;">V</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Secure Electronic Records & Secure Electronic Signatures</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">14–16</td>
                     </tr>
                     <tr style="background:#eaf4fb;">
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#922b21;">XI</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#0e6655;">VI</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Regulation of Certifying Authorities</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">17–34</td>
+                    </tr>
+                    <tr style="background:#fff;">
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#2471a3;">VII</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Electronic Signature Certificates</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">35–39</td>
+                    </tr>
+                    <tr style="background:#eaf4fb;">
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#6c3483;">VIII</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Duties of Subscribers</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">40–42</td>
+                    </tr>
+                    <tr style="background:#fff;">
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#922b21;">IX</td>
                         <td style="padding:10px; border:1px solid #e0e0e0;">Penalties, Compensation & Adjudication</td>
                         <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">43–47</td>
                     </tr>
-                    <tr style="background:#fff;">
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#c0392b;">XII</td>
-                        <td style="padding:10px; border:1px solid #e0e0e0;">Appellate Tribunal (TDSAT)</td>
+                    <tr style="background:#eaf4fb;">
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#c0392b;">X</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">The Appellate Tribunal (TDSAT)</td>
                         <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">48–64</td>
                     </tr>
-                    <tr style="background:#eaf4fb;">
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#d35400;">XIII</td>
-                        <td style="padding:10px; border:1px solid #e0e0e0;">Offenses (Cybercrimes)</td>
+                    <tr style="background:#fff;">
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#d35400;">XI</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Offences (Cybercrimes)</td>
                         <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">65–78</td>
                     </tr>
+                    <tr style="background:#eaf4fb;">
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#7d6608;">XII</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Intermediaries Not Liable in Certain Cases</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">79</td>
+                    </tr>
                     <tr style="background:#fff;">
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#7d6608;">XIV</td>
-                        <td style="padding:10px; border:1px solid #e0e0e0;">Due Diligence, Role of Intermediaries & CERT-In</td>
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">79–81</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#1f618d;">XIIA</td>
+                        <td style="padding:10px; border:1px solid #e0e0e0;">Examiner of Electronic Evidence</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">79A</td>
                     </tr>
                     <tr style="background:#eaf4fb;">
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#1a5276;">XV</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0; font-weight:bold; color:#1a5276;">XIII</td>
                         <td style="padding:10px; border:1px solid #e0e0e0;">Miscellaneous</td>
-                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">84–94</td>
+                        <td style="padding:10px; text-align:center; border:1px solid #e0e0e0;">80–94</td>
                     </tr>
                 </tbody>
             </table>
@@ -272,7 +292,7 @@ const entries = [
 
         <div style="background:#fdfefe; border:1px solid #d5d8dc; border-radius:12px; overflow:hidden; margin-bottom:22px;">
             <div style="background:linear-gradient(90deg,#1a5276,#2980b9); padding:12px 16px;">
-                <h3 style="color:#fff; margin:0; font-size:1em;">📬 Receipt of Electronic Record — Section 12</h3>
+                <h3 style="color:#fff; margin:0; font-size:1em;">📬 Time of Receipt of Electronic Record — Section 13</h3>
             </div>
             <div style="padding:14px;">
                 <table style="width:100%; border-collapse:collapse; font-size:0.9em;">
@@ -420,17 +440,17 @@ const entries = [
                     <tr style="background:#fff;">
                         <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold; color:#0e6655;">44(a)</td>
                         <td style="padding:10px 14px; border:1px solid #e0e0e0;">Failure to furnish documents/report to Controller or CA</td>
-                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Up to Rs. 1,50,000/-</td>
+                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Up to Rs. 15,00,000/-</td>
                     </tr>
                     <tr style="background:#e8f8f5;">
                         <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold; color:#0e6655;">44(b)</td>
                         <td style="padding:10px 14px; border:1px solid #e0e0e0;">Failure to file return</td>
-                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Rs. 5,000/- per day</td>
+                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Rs. 50,000/- per day</td>
                     </tr>
                     <tr style="background:#fff;">
                         <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold; color:#0e6655;">44(c)</td>
                         <td style="padding:10px 14px; border:1px solid #e0e0e0;">Failure to maintain books of account/records</td>
-                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Rs. 10,000/- per day</td>
+                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Rs. 1,00,000/- per day</td>
                     </tr>
                     <tr style="background:#fef9e7;">
                         <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold; color:#7d6608;">45</td>
@@ -688,7 +708,7 @@ const entries = [
                 </div>
                 <div style="background:#fff; border:2px solid #27ae60; border-radius:10px; padding:12px;">
                     <div style="font-weight:bold; color:#1e8449; margin-bottom:6px;">⚖️ Adjudicating Officer</div>
-                    <p style="margin:0;">Appointed under <strong>Section 46</strong>. Decides cases of civil liability (compensation). Must be IT Secretary rank or above.</p>
+                    <p style="margin:0;">Appointed under <strong>Section 46</strong>. Decides cases of civil liability (compensation). Must be an officer not below the rank of <strong>Director to the Govt of India</strong> (or equivalent State Govt officer).</p>
                 </div>
                 <div style="background:#fff; border:2px solid #e67e22; border-radius:10px; padding:12px;">
                     <div style="font-weight:bold; color:#d35400; margin-bottom:6px;">📡 CERT-In</div>
@@ -711,7 +731,7 @@ const entries = [
                         <strong style="color:#1a5276;">Jurisdiction Limit</strong><br/>Cases where claim does NOT exceed <strong>Rs. 5 Crores</strong>. Above Rs. 5 Crores → Civil Court jurisdiction.
                     </div>
                     <div style="background:#eafaf1; border-radius:8px; padding:12px; border-left:4px solid #27ae60;">
-                        <strong style="color:#1e8449;">Who is Adjudicating Officer?</strong><br/>An officer not below the rank of <strong>Director/Additional Secretary</strong> to Government of India (IT Secretary equivalent) with IT expertise.
+                        <strong style="color:#1e8449;">Who is Adjudicating Officer?</strong><br/>An officer not below the rank of <strong>Director to the Government of India</strong> (or an equivalent officer of a State Government) with IT expertise.
                     </div>
                 </div>
                 <div style="background:#fef9e7; border-radius:8px; padding:12px; border-left:4px solid #f39c12; font-size:0.9em; color:#784212;">
@@ -735,7 +755,7 @@ const entries = [
                 </div>
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:0.9em;">
                     <div style="background:#fff; border:1px solid #f1948a; border-radius:8px; padding:12px;">
-                        <strong style="color:#922b21;">Failure to assist in decryption:</strong><br/>Punishment up to <strong>7 years</strong> imprisonment (no fine specified separately)
+                        <strong style="color:#922b21;">Failure to assist in decryption:</strong><br/>Punishment up to <strong>7 years</strong> imprisonment <em>and</em> shall also be liable to fine (Section 69(4))
                     </div>
                     <div style="background:#fff; border:1px solid #f1948a; border-radius:8px; padding:12px;">
                         <strong style="color:#922b21;">Section 69A — Block Websites:</strong><br/>Central Govt can block public access to any information in any computer resource (upheld in Shreya Singhal vs Union of India as valid with safeguards)
@@ -751,7 +771,7 @@ const entries = [
             <div style="padding:14px; background:#e8f8f5;">
                 <p style="margin:0 0 10px 0; font-size:0.92em;">The <strong>Central Government</strong> may declare any computer resource to be a <strong>"Protected System"</strong> if it is essential to the Govt's security, public safety, or national critical infrastructure.</p>
                 <div style="background:#fff; border:1px solid #a9dfbf; border-radius:8px; padding:10px; font-size:0.9em; color:#0e6655;">
-                    <strong>Punishment for unauthorized access to Protected System:</strong> Imprisonment up to <strong>10 years</strong> and fine (Section 70(2) — this is NOT covered under normal Section 66 rules).
+                    <strong>Punishment for unauthorized access to Protected System:</strong> Imprisonment up to <strong>10 years</strong> and fine (Section 70(3) — this is NOT covered under normal Section 66 rules).
                 </div>
             </div>
         </div>
