@@ -440,17 +440,17 @@ const entries = [
                     <tr style="background:#fff;">
                         <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold; color:#0e6655;">44(a)</td>
                         <td style="padding:10px 14px; border:1px solid #e0e0e0;">Failure to furnish documents/report to Controller or CA</td>
-                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Up to Rs. 15,00,000/-</td>
+                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Up to Rs. 1,50,000/-</td>
                     </tr>
                     <tr style="background:#e8f8f5;">
                         <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold; color:#0e6655;">44(b)</td>
                         <td style="padding:10px 14px; border:1px solid #e0e0e0;">Failure to file return</td>
-                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Rs. 50,000/- per day</td>
+                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Rs. 5,000/- per day</td>
                     </tr>
                     <tr style="background:#fff;">
                         <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold; color:#0e6655;">44(c)</td>
                         <td style="padding:10px 14px; border:1px solid #e0e0e0;">Failure to maintain books of account/records</td>
-                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Rs. 1,00,000/- per day</td>
+                        <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold;">Rs. 10,000/- per day</td>
                     </tr>
                     <tr style="background:#fef9e7;">
                         <td style="padding:10px 14px; border:1px solid #e0e0e0; font-weight:bold; color:#7d6608;">45</td>
