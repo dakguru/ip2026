@@ -1,0 +1,1154 @@
+═══════════════════════════════════════════
+PART 1: TRCA, Fixation, and Productivity Linked Bonus
+Importance Tags Inside: 🔴 ×3 · 🟡 ×0 · 🟢 ×0 · ⚪ ×0
+Coverage Map Nodes: 1.1, 1.2, 1.3
+Total MCQs in this Part: 8
+═══════════════════════════════════════════
+
+── Sub-Section 1.1: TRCA Wage Scales and Fixation · 🔴 CRITICAL · MCQs Q1–Q5 ──
+
+Q1. What is the revised minimum Time Related Continuity Allowance (TRCA) for a Branch Postmaster (BPM) working for 5 Hours (Level 2)?
+A. Rs. 10,000/-
+B. Rs. 12,000/-
+C. Rs. 14,500/-
+D. Rs. 16,000/-
+Correct Answer: C
+Explanation:
+
+* The revised minimum TRCA for a BPM for 5 Hours/Level 2 is Rs. 14,500/-.
+
+
+
+Q2. Under the revised TRCA matrix, Wage Scale-2 corresponds to which of the following categories of Gramin Dak Sevaks?
+A. ABPM/Dak Sevak (Level-1) only
+B. ABPM/Dak Sevak (Level-2) and BPM (Level-1)
+C. BPM (Level-2) only
+D. ABPM/Dak Sevak (Level-1) and BPM (Level-1)
+Correct Answer: B
+Explanation:
+
+* Wage Scale-2 corresponds to ABPM/Dak Sevak (Level-2) and BPM (Level-1), both of which share a minimum TRCA of Rs. 12,000/-.
+
+
+
+Q3. Which of the following statements regarding the annual increase in TRCA is/are correct?
+
+1. The annual increase of TRCA is fixed at 3%.
+2. A GDS is entitled to an annual increase on both 1st July and 1st January of every year.
+3. For GDS engaged on or after 01.07.2018, initial fixation is done on the first stage of Level 1 of the respective category.
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+
+* The annual increase of TRCA is 3%.
+
+
+* Initial fixation for GDS engaged on or after 01.07.2018 is done on the first stage of Level 1 of the respective category.
+
+
+* There are two dates of annual increase (1st July and 1st January), but a GDS is entitled to only one annual increase on either of these dates depending on the date of engagement.
+
+
+
+Q4. What is the prescribed multiplication factor used for the fixation formula of the revised TRCA?
+A. 2.50
+B. 2.57
+C. 2.65
+D. 2.81
+Correct Answer: B
+Explanation:
+
+* The fixation formula for the revised TRCA involves multiplying by a factor of 2.57.
+
+
+
+Q5. The revised TRCA matrix for all Gramin Dak Sevaks, along with the revised rates of other allowances, came into effect from which date?
+A. 01.01.2016
+B. 01.01.2018
+C. 01.07.2018
+D. 01.10.2018
+Correct Answer: C
+Explanation:
+
+* The revised TRCA as per the matrix and the revised rates of other allowances took effect from 01.07.2018.
+
+
+
+── Sub-Section 1.2: Productivity Linked Bonus · 🔴 CRITICAL · MCQs Q6–Q8 ──
+
+Q6. For the calculation of the Ex-gratia Productivity Linked Bonus for Gramin Dak Sevaks, what is the present calculation ceiling applied?
+A. Rs. 3,500/-
+B. Rs. 7,000/-
+C. Rs. 10,000/-
+D. Rs. 12,000/-
+Correct Answer: B
+Explanation:
+
+* The present calculation of Ex-gratia bonus applies a calculation ceiling of Rs. 7,000/-.
+
+
+
+Q7. In calculating the Ex-gratia bonus for a GDS, the Rs. 7,000/- ceiling limit applies to which specific components of their compensation?
+A. Basic TRCA only
+B. Basic TRCA plus Dearness Allowance (DA)
+C. Basic TRCA plus Office Maintenance Allowance
+D. Maximum TRCA of Level 2
+Correct Answer: B
+Explanation:
+
+* The calculation ceiling of Rs. 7,000/- for Ex-gratia bonus is applied to the basic TRCA + DA.
+
+
+
+Q8. Consider the following limits and percentages associated with TRCA and bonuses. Which of the following is NOT correctly matched?
+A. Annual Increase of TRCA : 3%
+B. TRCA multiplication factor : 2.57
+C. Minimum TRCA for ABPM Level 1 : Rs. 10,000/-
+D. Calculation ceiling for Ex-gratia Bonus : Rs. 10,000/-
+Correct Answer: D
+Explanation:
+
+* The calculation ceiling for Ex-gratia bonus is Rs. 7,000/-, not Rs. 10,000/-.
+
+
+* The annual increase of TRCA is 3%.
+
+
+* The TRCA multiplication factor is 2.57.
+
+
+* The minimum TRCA for ABPM Level 1 is Rs. 10,000/-.
+
+
+
+✅ Part 1 closure: 8 MCQs · Nodes 1.1, 1.2, 1.3 covered · Self-check passed.
+
+═══════════════════════════════════════════
+PART 2: Allowances and Accommodation
+Importance Tags Inside: 🔴 ×1 · 🟡 ×1 · 🟢 ×0 · ⚪ ×0
+Coverage Map Nodes: 2.1, 2.2
+Total MCQs in this Part: 8
+═══════════════════════════════════════════
+
+── Sub-Section 2.1: Allowances Matrix · 🔴 CRITICAL · MCQs Q9–Q14 ──
+
+Q9. What is the Office Maintenance Allowance (OMA) payable to a Branch Postmaster for maintaining standard accommodation?
+A. Rs. 250/- per month
+B. Rs. 500/- per month
+C. Rs. 750/- per month
+D. Rs. 1000/- per month
+Correct Answer: B
+Explanation:
+
+* The Office Maintenance Allowance for standard accommodation is Rs. 500/- per month.
+
+
+* For non-standard accommodation, the rate is Rs. 250/- per month.
+
+
+
+Q10. Which of the following allowances is payable on an incident basis and is NOT structured as a fixed monthly allowance?
+A. Fixed Stationary Charge
+B. Cycle Maintenance Allowance
+C. Cash Conveyance Allowance
+D. Risk & Hardship Allowance
+Correct Answer: C
+Explanation:
+
+* Cash Conveyance Allowance is not a fixed allowance and is payable on an incident basis.
+
+
+
+Q11. A Gramin Dak Sevak conveys cash of Rs. 1,50,000. What is the allowable Cash Conveyance Allowance for this incident, excluding actual public bus fare?
+A. Rs. 30/-
+B. Rs. 50/-
+C. Rs. 115/-
+D. Rs. 180/-
+Correct Answer: B
+Explanation:
+
+* For cash conveyance above 1 Lakh, the allowance is Rs. 50/- plus actual conveyance charges subject to the maximum fare of a public bus.
+
+
+* For amounts up to 1 Lakh, the rate is Rs. 30/- plus actual conveyance.
+
+
+
+Q12. An Assistant Branch Postmaster (ABPM) is assigned to perform the duties of a BPM. What is the Combined Duty Allowance payable per day for this work?
+A. Rs. 45/- per day
+B. Rs. 75/- per day
+C. Rs. 90/- per day
+D. Rs. 115/- per day
+Correct Answer: B
+Explanation:
+
+* An ABPM performing BPM work is entitled to a Combined Duty Allowance of Rs. 75/- per day, subject to a maximum of Rs. 1950/- per month.
+
+
+
+Q13. Consider the following statements regarding the Combined Duty Allowance (CDA):
+
+1. A BPM performing Delivery PLUS mail conveyance is entitled to Rs. 90/- per day.
+2. An ABPM performing additional work of another ABPM/GDS is entitled to Rs. 45/- per day.
+3. A BPM performing only Delivery or Mail Conveyance is entitled to Rs. 45/- per day.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: D
+Explanation:
+
+* A BPM performing Delivery PLUS mail conveyance receives Rs. 90/- per day (max Rs. 2340/month).
+
+
+* An ABPM/GDS doing additional work of another ABPM/GDS receives Rs. 45/- per day (max Rs. 1170/month).
+
+
+* A BPM performing Delivery or Mail Conveyance receives Rs. 45/- per day (max Rs. 1170/month).
+
+
+
+Q14. What is the fixed monthly rate for the Cycle Maintenance Allowance granted to Gramin Dak Sevaks?
+A. Rs. 115/-
+B. Rs. 180/-
+C. Rs. 250/-
+D. Rs. 500/-
+Correct Answer: B
+Explanation:
+
+* The Cycle Maintenance Allowance is fixed at Rs. 180/- per month.
+
+
+
+── Sub-Section 2.2: Standard Accommodation Rules · 🟡 HIGH · MCQs Q15–Q16 ──
+
+Q15. Regarding the standard accommodation of a GDS Post Office, which of the following locations or structures is NOT permissible for housing the office room?
+A. A building owned by the Gram Panchayat
+B. A brick mortar structure properly ventilated and lighted
+C. A veranda or kitchen in a makeshift arrangement
+D. The front portion of a building with direct access from the village road
+Correct Answer: C
+Explanation:
+
+* The GDS post room/offices should not be housed in verandas, courtyards, kitchens, under the stairs, bed damaged rooms, makeshift arrangements, or isolated buildings outside the village.
+
+
+
+Q16. What is the prescribed minimum preferred size for a GDS Post Office accommodation?
+A. 50 sq. Feet in dimensions of 5x10
+B. 100 sq. Feet in dimensions of 10x10
+C. 150 sq. Feet in dimensions of 10x15
+D. 200 sq. Feet in dimensions of 10x20
+Correct Answer: B
+Explanation:
+
+* The minimum size of a GDS post office should be preferably in 10x10 dimensions and on the ground floor, not being less than 100 sq. Feet.
+
+
+
+✅ Part 2 closure: 8 MCQs · Nodes 2.1, 2.2 covered · Self-check passed.
+
+═══════════════════════════════════════════
+PART 3: Children Education Facilitation Allowance (CEFA)
+Importance Tags Inside: 🔴 ×1 · 🟡 ×1 · 🟢 ×0 · ⚪ ×0
+Coverage Map Nodes: 3.1, 3.2
+Total MCQs in this Part: 6
+═══════════════════════════════════════════
+
+── Sub-Section 3.1 & 3.2: CEFA Conditions, Amounts, and Limits · 🔴 CRITICAL · MCQs Q17–Q22 ──
+
+Q17. What is the fixed annual amount of reimbursement under the Children Education Facilitation Allowance (CEFA) per eligible child for a Gramin Dak Sevak?
+A. Rs. 4,000/-
+B. Rs. 5,000/-
+C. Rs. 6,000/-
+D. Rs. 7,000/-
+Correct Answer: C
+Explanation:
+
+* The amount of reimbursement of CEFA is Rs. 6,000/- per annum (fixed) per child.
+
+
+* This amount is fixed irrespective of the actual expenses incurred by the GDS.
+
+
+
+Q18. What are the respective upper age limits for claiming CEFA for a Divyaang child and a normal child?
+A. 20 years for Divyaang children; 18 years for other children
+B. 22 years for Divyaang children; 20 years or till passing 12th class (whichever is earlier) for other children
+C. 25 years for Divyaang children; 21 years for other children
+D. No upper age limit for Divyaang children; 20 years for other children
+Correct Answer: B
+Explanation:
+
+* The upper age limit for Divyaang children has been set at 22 years.
+
+
+* For other children, the age limit will be 20 years or till the time of passing 12th class whichever is earlier.
+
+
+* There shall be no minimum age.
+
+
+
+Q19. A Gramin Dak Sevak claims CEFA for a child who subsequently fails in the 9th standard. For the next academic year, the child is admitted to the 9th standard in a *different* school. What is the status of the CEFA reimbursement?
+A. The allowance will continue to be paid at 50% of the normal rate.
+B. The allowance will be reimbursed as usual because failure does not stop the benefit.
+C. The allowance shall not be reimbursable for that year.
+D. The allowance will be held in abeyance until the child passes the 9th standard.
+Correct Answer: C
+Explanation:
+
+* The reimbursement has no nexus with the performance of the child; however, if the child fails and is admitted in the same class in *another* school, CEFA shall not be reimbursable.
+
+
+
+Q20. Under which of the following conditions can CEFA be claimed for a diploma/certificate course at a Polytechnic or ITI?
+A. For the full three years of the diploma course, provided it is taken after the 10th standard.
+B. For the initial two years of the course, if pursued after the 10th standard and no CEFA was granted for the 11th and 12th standards.
+C. CEFA is strictly limited to classes up to the 12th standard and cannot be claimed for ITI courses.
+D. For the final year of the diploma course only.
+Correct Answer: B
+Explanation:
+
+* CEFA is admissible for the initial two years of a diploma/certificate course from Polytechnic/ITI/Engineering College if the child pursues the course after passing 10th standard and the GDS has not been granted CEFA for studies in 11th and 12th standards.
+
+
+
+Q21. During which of the following duty statuses is a Gramin Dak Sevak NOT eligible to accrue/receive the Children Education Facilitation Allowance?
+A. While on paid leave
+B. While under put off duty
+C. During any period treated as 'non counted for duty'
+D. While actively performing regular duty
+Correct Answer: C
+Explanation:
+
+* CEFA is admissible to a GDS while he/she is on duty, under put off duty, or on leave, provided that during any period which is treated as 'non counted for duty', the GDS shall not be eligible for the allowance.
+
+
+
+Q22. Consider the following statements regarding the Children Education Facilitation Allowance (CEFA):
+
+1. CEFA is allowed for children studying through "Correspondence or Distance Learning".
+2. The allowance strictly covers studies from class nursery to the twelfth standard.
+3. Reimbursement can only be claimed for the two eldest surviving children, with no exceptions whatsoever.
+Which of the above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: A
+Explanation:
+
+* CEFA is applicable for children from class nursery to twelfth.
+
+
+* It is allowed for children studying through correspondence or distance learning.
+
+
+* While it is generally for the two eldest surviving children, exceptions exist for twin/multiple births from a second childbirth and for children born out of the failure of a sterilization operation.
+
+
+
+✅ Part 3 closure: 6 MCQs · Nodes 3.1, 3.2 covered · Self-check passed.
+
+═══════════════════════════════════════════
+PART 4: Leaves, Insurance, and Identity Cards
+Importance Tags Inside: 🔴 ×2 · 🟡 ×3 · 🟢 ×0 · ⚪ ×0
+Coverage Map Nodes: 4.1, 4.2, 4.3, 4.4, 4.5
+Total MCQs in this Part: 8
+═══════════════════════════════════════════
+
+── Sub-Section 4.1 & 4.2: Emergency Leave and Paid Leave · 🔴 CRITICAL · MCQs Q23–Q26 ──
+
+Q23. What is the maximum number of days of Emergency Leave that can be granted to a GDS in a completed calendar year?
+A. 2 days
+B. 5 days
+C. 10 days
+D. 20 days
+Correct Answer: B
+Explanation:
+
+* Emergency leave will be granted for a maximum of 5 days in a completed calendar year of the engagement period.
+
+
+
+Q24. A Branch Postmaster (BPM) requires Emergency Leave. Who is the competent authority to sanction this leave prior to the BPM proceeding on leave?
+A. Sub Divisional Head
+B. Inspector Posts
+C. Divisional Head
+D. Regional PMG
+Correct Answer: C
+Explanation:
+
+* Prior sanction for Emergency Leave for a BPM is required from the Divisional Head.
+
+
+* For an ABPM/GDS, the Sub Division Head/Sr. PM/Unit Head is the sanctioning authority.
+
+
+
+Q25. An ABPM stays for 3 continuous days on emergency leave at one time. How will this period be treated under the GDS leave rules?
+A. The third day will be treated as Leave Without Allowance (LWA).
+B. All 3 days will be debited against his/her paid leave account due.
+C. The third day will be treated as unauthorized absence unconditionally.
+D. It will be sanctioned as a special case by the Sub Divisional Head.
+Correct Answer: B
+Explanation:
+
+* When a GDS stays beyond two days of emergency leave at a time, the whole period shall be debited against his/her paid leave account due.
+
+
+* In case he/she is not having paid leave, the excess period is treated as unauthorized absence and the GDS shall not be entitled to any TRCA.
+
+
+
+Q26. Which of the following statements regarding the calculation and combination of Emergency Leave is correct?
+A. Emergency leave can be seamlessly combined with paid leave.
+B. Half-day emergency leave may be granted in urgent situations.
+C. Sundays and Postal holidays falling during the period of emergency leave are not counted as part of the leave.
+D. Unused emergency leave can be carried forward or encashed in the next calendar year.
+Correct Answer: C
+Explanation:
+
+* Sundays and Postal holidays falling during the period of emergency leave are not counted as part of emergency leave.
+
+
+* Emergency leave cannot be carried forward, encashed, combined with paid leave, or granted for a half day.
+
+
+
+── Sub-Section 4.3 & 4.4: Group Insurance Scheme and ID Cards · 🟡 HIGH · MCQs Q27–Q28 ──
+
+Q27. From 01 Oct 2021, the Rs. 50/- subscription for the GDS Group Insurance Scheme is divided into a Savings fund and an Insurance fund in what ratio?
+A. 50:50 (Rs. 25 & Rs. 25)
+B. 65:35 (Rs. 32.50 Savings & Rs. 17.50 Insurance)
+C. 35:65 (Rs. 17.50 Savings & Rs. 32.50 Insurance)
+D. 70:30 (Rs. 35 Savings & Rs. 15 Insurance)
+Correct Answer: B
+Explanation:
+
+* From 01 Oct 2021, the subscription of Rs. 50 comprises a Savings fund of Rs. 32.50 and an Insurance Fund of Rs. 17.50, representing a ratio of 65:35.
+
+
+
+Q28. Consider the following statements regarding the issuance of Identity Cards to GDS:
+
+1. Duplicate identity cards are issued free of cost in case of loss or invisibility.
+2. Identity cards are valid for five years or till the date of discharge, whichever is earlier.
+3. Identity cards must mandatorily mention the unique employee identity numbers assigned in CSI.
+Which of the above statements are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+
+* Identity cards are valid for five years or till discharge.
+
+
+* The unique CSI employee identity number must mandatorily be mentioned.
+
+
+* A duplicate card requires a fee of Rs. 50/-; it is not issued free of cost.
+
+
+
+── Sub-Section 4.5: Leave Without Allowance (LWA) · 🔴 CRITICAL · MCQs Q29–Q30 ──
+
+Q29. An Assistant Branch Postmaster (ABPM) requires Leave Without Allowance (LWA) for a period of 120 days. Who is the competent authority to sanction this leave?
+A. Sub Divisional Head
+B. Divisional Head
+C. Regional PMG / DPS
+D. Head of the Circle (CPMG)
+Correct Answer: B
+Explanation:
+
+* For an ABPM/Dak Sevak, a period of LWA greater than 90 days and less than 180 days is sanctioned by the Divisional Head.
+
+
+
+Q30. Which of the following authorities is empowered to sanction Leave Without Allowance (LWA) beyond 180 days for all categories of Gramin Dak Sevaks?
+A. Sub Divisional Head
+B. Divisional Head
+C. Regional PMG/DPS
+D. Director General Posts
+Correct Answer: C
+Explanation:
+
+* For all GDS categories, the sanctioning authority for Leave Without Allowance (LWA) beyond 180 days is the Regional PMG/DPS.
+
+
+
+═══════════════════════════════════════════
+PART 5: Limited Transfer Facility (LTF)
+Importance Tags Inside: 🔴 ×3 · 🟡 ×2 · 🟢 ×0 · ⚪ ×0
+Coverage Map Nodes: 5.1, 5.2, 5.3, 5.4, 5.5
+Total MCQs in this Part: 18
+═══════════════════════════════════════════
+
+── Sub-Section 5.1: Eligibility and Transfer Conditions · 🔴 CRITICAL · MCQs Q31–Q36 ──
+
+Q31. What is the minimum continuous engagement period required for a Gramin Dak Sevak to become eligible to seek a transfer under the Limited Transfer Facility (LTF)?
+A. One year from the date of regular engagement
+B. Two years from the date of regular engagement
+C. Three years from the date of regular engagement
+D. Five years from the date of regular engagement
+Correct Answer: B
+Explanation:
+
+* The minimum engagement condition for transfer of a GDS under LTF is two years of continuous engagement from the date of regular engagement.
+
+
+
+Q32. Under the Mutual Exchange facility, what is the minimum period of continuous engagement required for all GDS from the date of regular engagement?
+A. Six months
+B. One year
+C. Two years
+D. Three years
+Correct Answer: B
+Explanation:
+
+* The Mutual Exchange facility can be provided to all GDS on completion of 1 (one) year from the date of regular engagement.
+
+
+
+Q33. What is the maximum number of chances provided to a female GDS to avail the Limited Transfer Facility during her entire career?
+A. One chance
+B. Two chances
+C. Three chances
+D. Unlimited chances
+Correct Answer: C
+Explanation:
+
+* A female GDS will get three chances under the Limited Transfer Facility during her entire career.
+
+
+* A male GDS is provided two chances during his entire career.
+
+
+
+Q34. If a Gramin Dak Sevak applies for a transfer but withdraws the application within the available window period, how is this action treated regarding their transfer chances?
+A. It is counted as one chance availed under the facility.
+B. It is counted as half a chance availed.
+C. The chance shall not be counted as a chance availed under the facility.
+D. The GDS is permanently barred from applying for LTF again.
+Correct Answer: C
+Explanation:
+
+* If an application for transfer is withdrawn by the GDS within the window period available, the chance shall not be counted as a chance availed under the Limited Transfer Facility.
+
+
+* Conversely, refusal to accept the issued Limited Transfer Order shall be counted as one chance availed.
+
+
+
+Q35. A GDS completes their first transfer and immediately applies for a second transfer under the LTF. What is the minimum required 'cooling off' period between two successive transfers?
+A. Six months of continuous engagement
+B. One year of continuous engagement
+C. Two years of continuous engagement
+D. Three years of continuous engagement
+Correct Answer: B
+Explanation:
+
+* There is a mandatory 'cooling off' period of one year of continuous engagement required between two successive transfers.
+
+
+
+Q36. Consider the following statements regarding the conditions of transfer for a GDS:
+
+1. Past engagement period is counted for assessing eligibility for departmental examinations.
+2. A GDS retains the right to claim a return to their previous recruitment Division if they are dissatisfied with the new posting.
+3. Transfer requests from GDS against whom a police case is pending will not be entertained.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+
+* Past engagement period is counted for assessing eligibility for departmental examinations and annual increments.
+
+
+* Transfer requests of GDS who are under put off duty, or against whom disciplinary action, a police case, or a court case is pending will not be entertained.
+
+
+* A GDS will have no claim to go back to the previous engagement/recruitment Unit/Division under any circumstances.
+
+
+
+── Sub-Section 5.2: Competent Authorities and Seniority · 🔴 CRITICAL · MCQs Q37–Q41 ──
+
+Q37. Who is the Competent Authority to approve a transfer request from a GDS seeking to transfer outside their Division but within the same Region?
+A. Divisional Head
+B. Regional Head (PMG)
+C. Circle Head (CPMG)
+D. Director General Postal Services
+Correct Answer: B
+Explanation:
+
+* For a transfer requested outside the Division but within the same Region, the Competent Authority is the Regional Head (PMG).
+
+
+
+Q38. A GDS applies for a transfer to a Division located completely outside their current Circle. Who is the Competent Authority to approve this request?
+A. The Regional Head (PMG) of the destination region
+B. The Circle Head (CPMG) of the parent circle only
+C. The Circle Heads of both the parent and destination Circles
+D. The Divisional Heads of both divisions
+Correct Answer: C
+Explanation:
+
+* For a transfer outside the Circle, the request must be approved by the Circle Head of both the Circles.
+
+
+
+Q39. When a GDS is transferred at their own request to a new Sub Division (different from their recruitment Sub Division), how is their seniority determined in the new unit?
+A. They carry forward their past seniority and rank above all newly recruited GDS.
+B. They will rank junior in the seniority list of the new unit to all GDS of that unit existing on the date the transfer is ordered.
+C. Their seniority is determined by a proportional formula based on past service years.
+D. They will rank senior to all GDS in the new unit if their TRCA slab is higher.
+Correct Answer: B
+Explanation:
+
+* When a GDS is transferred at his own request, he/she will rank junior in the seniority list of the new unit to all the GDS of that unit who exist in the seniority list on the date the transfer is ordered.
+
+
+* The only exception is in case of a transfer within the same engagement/recruitment Sub Division/Unit/Division.
+
+
+
+Q40. What is the exception to the rule that a transferred GDS ranks junior to all existing GDS in the new unit?
+A. If the GDS is transferred outside the Circle, they retain seniority.
+B. If the transfer is ordered on administrative grounds.
+C. If the transfer occurs strictly within the same engagement/recruitment Sub Division/Unit/Division.
+D. If the GDS has more than 15 years of continuous service.
+Correct Answer: C
+Explanation:
+
+* A transferred GDS ranks junior in the new unit, *except* in the case of transfer within the same engagement/recruitment Sub Division/Unit/Division.
+
+
+
+Q41. If two or more GDS are transferred to the same Sub Division/Division in the same transfer cycle, how is their inter-se seniority decided?
+A. Based on the distance of their transfer
+B. Based on their TRCA level
+C. Based on their date of joining in the Department
+D. Based on their date of birth
+Correct Answer: C
+Explanation:
+
+* The inter-se seniority of two or more GDS transferred to the same Sub Division/Division in the same cycle is decided on the basis of their date of joining in the Department (i.e., the one joining earlier ranks senior).
+
+
+
+── Sub-Section 5.3: Order of Priority · 🟡 HIGH · MCQs Q42–Q43 ──
+
+Q42. In the event of receiving two or more transfer applications for the same vacant GDS post, which category of applicant is given the absolute first preference in the online processing order?
+A. Female GDS applying on spouse ground
+B. Male GDS applying on spouse ground
+C. GDS with PwD (having benchmark disabilities)
+D. GDS who submitted the application at a prior date and time
+Correct Answer: C
+Explanation:
+
+* The first priority for transfer processing is given to GDS with PwD (having benchmark disabilities).
+
+
+
+Q43. Arrange the following categories of GDS transfer applicants in the correct order of priority from highest to lowest:
+
+1. Female GDS (other than spouse ground)
+2. Male GDS on spouse ground
+3. Female GDS on spouse ground
+4. Date of engagement (prior date joining)
+A. 3, 2, 4, 1
+B. 3, 4, 2, 1
+C. 2, 3, 1, 4
+D. 4, 3, 2, 1
+Correct Answer: A
+Explanation:
+
+* The correct order of priority is: (ii) Female GDS on spouse ground, (iii) Male GDS on spouse ground, (iv) Date of engagement, and (v) Female (other than spouse ground).
+
+
+
+── Sub-Section 5.4: Transfer on Vigilance/Administrative Grounds · 🟡 HIGH · MCQs Q44–Q46 ──
+
+Q44. A GDS is revoked from put-off duty following an inquiry. According to the transfer guidelines on vigilance grounds, where should this GDS ordinarily be posted?
+A. They must invariably be posted back to their original post.
+B. They should be transferred to the nearest Head Post Office.
+C. They should not ordinarily be posted on the same post and should be transferred to any other vacant post.
+D. They should be kept on a supernumerary post until retirement.
+Correct Answer: C
+Explanation:
+
+* GDS revoked from put-off duty should not ordinarily be posted on the same post and should be transferred to any other vacant post.
+
+
+
+Q45. Under the condition of transfer on administrative grounds, an ABPM/Dak Sevak (Level-2) can be transferred to a BPM (Level-1) post in the same TRCA slab. However, this specific provision is NOT permitted under which circumstance?
+A. Transfer outside the Region
+B. Transfer within the same Division
+C. Transfer on vigilance grounds
+D. Transfer on medical grounds
+Correct Answer: C
+Explanation:
+
+* The transfer of ABPM/Dak Sevak to BPM (Level-1) is permitted only on administrative grounds and strictly not on vigilance grounds.
+
+
+
+Q46. Before ordering a transfer of a GDS on administrative grounds due to non-improvement in delivery of services, what mandatory step must the engaging authority ensure?
+A. The matter must be referred to a judicial magistrate.
+B. Sufficient opportunity has been given in writing to the GDS to improve.
+C. The TRCA of the GDS must be reduced by one slab.
+D. The GDS must be given three months of paid leave for training.
+Correct Answer: B
+Explanation:
+
+* Before applying the condition of non-improvement in service for an administrative transfer, the engaging authority shall ensure that sufficient opportunity has been given in writing to the GDS to improve.
+
+
+
+── Sub-Section 5.5: Transfer Committees and Process · 🔴 CRITICAL · MCQs Q47–Q48 ──
+
+Q47. A committee is formed to consider the transfer of a GDS within a Division. Which of the following correctly describes the composition of this committee?
+A. Head of Division, and the Sub Divisional Head where the GDS is currently working.
+B. Head of Division, ASP (HQ)/Office Superintendent, and the Sub Divisional heads of both the current and transferred Sub Divisions.
+C. Regional PMG, Head of Division, and ASP (HQ).
+D. Head of Division, Postmaster of the Head Office, and the Inspector of Posts.
+Correct Answer: B
+Explanation:
+
+* The committee for transfer within the Division comprises the Head of Division, ASP (HQ)/Office Superintendent of Divisional office, and the concerned Sub Divisional heads of both the Sub Division where the GDS is working and where he/she is being transferred.
+
+
+
+Q48. Even when a Transfer and Placement Committee recommends a transfer of a GDS *within a Division or subdivision*, the Divisional Head is prohibited from issuing the transfer order until they receive prior approval from which authority?
+A. The Sub Divisional Head
+B. The Chief Postmaster General
+C. The Regional PMG
+D. The Director of Postal Services (HQ)
+Correct Answer: C
+Explanation:
+
+* In the case of a transfer of a GDS within a Division or within a subdivision, prior approval of the Regional PMG should be taken by the Divisional Head.
+
+
+* The Divisional Head shall order the transfer only after approval of the minutes of the Transfer and Placement Committee by the Regional PMG.
+
+
+
+✅ Part 5 closure: 18 MCQs · Nodes 5.1, 5.2, 5.3, 5.4, 5.5 covered · Self-check passed.
+
+═══════════════════════════════════════════
+PART 6: Gratuity, Severance, and SDBS
+Importance Tags Inside: 🔴 ×2 · 🟡 ×0 · 🟢 ×0 · ⚪ ×0
+Coverage Map Nodes: 6.1, 6.2
+Total MCQs in this Part: 12
+═══════════════════════════════════════════
+
+── Sub-Section 6.1: GDS Gratuity and Severance Amount Rules · 🔴 CRITICAL · MCQs Q49–Q54 ──
+
+Q49. What is the maximum monetary limit up to which GDS Gratuity (formerly Ex-gratia Gratuity) is payable subject to completion of the minimum qualifying service?
+A. Rs. 60,000/-
+B. Rs. 1,00,000/-
+C. Rs. 1,50,000/-
+D. Rs. 2,00,000/-
+Correct Answer: C
+Explanation:
+
+* The GDS Gratuity is granted subject to a maximum of Rupees one lakh fifty thousand (Rs. 1,50,000/-) with effect from 01.01.2016.
+
+
+
+Q50. Under the revised benefits, what is the required minimum continuous service for a Gramin Dak Sevak to be eligible for GDS Gratuity?
+A. 5 Years
+B. 10 Years
+C. 15 Years
+D. 20 Years
+Correct Answer: B
+Explanation:
+
+* The minimum service required for the eligibility of GDS Gratuity is 10 Years.
+
+
+
+Q51. What is the revised rate of the Severance Amount payable per completed year of continuous service for a GDS with effect from 01.01.2016?
+A. Rs. 1,500/-
+B. Rs. 2,000/-
+C. Rs. 3,000/-
+D. Rs. 4,000/-
+Correct Answer: D
+Explanation:
+
+* The revised Severance Amount is Rs. 4,000/- per completed year for those who did not shift to SDBS, effective from 01.01.2016.
+
+
+
+Q52. In calculating the total years of qualifying service for GDS Gratuity or Severance Amount, how is a fraction of a year measuring 6 months treated?
+A. It is ignored entirely.
+B. It is calculated proportionally based on the exact number of days.
+C. It is counted as one full year.
+D. It is counted as half a year.
+Correct Answer: C
+Explanation:
+
+* 6 months and above will be counted as one year and less than 6 months are ignored in the calculation of total years for GDS Gratuity or Severance Amount.
+
+
+
+Q53. A GDS who had completed 12 years of continuous engagement is absorbed on a regular post in the Department as a Postman. Regarding their eligibility for GDS Gratuity, which of the following is correct as per the Directorate clarification dated 26.11.2024?
+A. They will receive the full GDS Gratuity up to Rs. 1,50,000/- immediately.
+B. The Gratuity amount will be transferred to their NPS Tier-I account.
+C. They are not eligible for GDS Gratuity.
+D. They will receive 50% of the Gratuity in cash and 50% in their PF account.
+Correct Answer: C
+Explanation:
+
+* As per the latest clarification from the Directorate vide order dated 26.11.2024, "the GDS who are absorbed on a regular post in Department is not eligible for Gratuity".
+
+
+
+Q54. Consider the following statements regarding the Severance Amount:
+
+1. It is applicable only to those GDS who opted to remain with the Severance amount and have not shifted to SDBS.
+2. The maximum ceiling for the Severance Amount is Rs. 1,50,000/-.
+3. In case of death of a GDS who did not join SDBS, the Severance Amount is not paid to the nominee even if 10 years of service is complete.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: A
+Explanation:
+
+* The Severance amount is applicable only to those GDS who have opted to remain with it and not shifted to SDBS.
+
+
+* The maximum limit is Rs. 1,50,000/-.
+
+
+* In the case of death, if the GDS completed 10 years of continuous engagement, the Severance amount and Gratuity will be paid to the nominee.
+
+
+
+── Sub-Section 6.2: Service Discharge Benefit Scheme (SDBS) 2011 · 🔴 CRITICAL · MCQs Q55–Q60 ──
+
+Q55. To be eligible for Scheme-1 of the Voluntary Discharge Scheme for GDS, what is the minimum qualifying engagement period required?
+A. 10 Years
+B. 15 Years
+C. 20 Years
+D. 25 Years
+Correct Answer: C
+Explanation:
+
+* Scheme-1 (On completion of 20 years of period) requires a minimum qualifying engagement period of 20 Years.
+
+
+* Scheme-2 (On medical ground) requires a minimum of 10 Years.
+
+
+
+Q56. When did the Service Discharge Benefit Scheme (SDBS) officially come into existence for Gramin Dak Sevaks?
+A. 01.10.2009
+B. 01.04.2011
+C. 01.01.2016
+D. 01.07.2018
+Correct Answer: B
+Explanation:
+
+* The Service Discharge Benefit Scheme (SDBS) came into existence on 01.04.2011.
+
+
+
+Q57. With effect from 01.07.2018, what is the revised monthly subscription amount contributed by the Department and the GDS respectively towards the SDBS?
+A. Rs. 200/- by Department, zero by GDS
+B. Rs. 300/- by Department, zero by GDS
+C. Rs. 300/- by Department, Rs. 300/- by GDS
+D. Rs. 500/- by Department, Rs. 500/- by GDS
+Correct Answer: C
+Explanation:
+
+* W.e.f. 01.07.2018, the department shall subscribe @ Rs. 300/- per month and the same amount shall be contributed by the GDS also.
+
+
+* Prior to this, the Government subscribed Rs. 200/- and the GDS was not required to contribute.
+
+
+
+Q58. A GDS opts for a premature exit from the SDBS after attaining the age of 58 years but before reaching 65 years. What percentage of the accumulated fund must be mandatorily utilized for the purchase of an annuity?
+A. 20%
+B. 40%
+C. 60%
+D. 80%
+Correct Answer: D
+Explanation:
+
+* For premature exit "After the age of 58 years and before 65 years", 20% is available for lump sum withdrawal, and 80% must be used for the purchase of an annuity.
+
+
+
+Q59. In the event of an exit from SDBS due to resignation from service, what percentage of the accumulation is allowed as a lump sum withdrawal?
+A. 15%
+B. 20%
+C. 40%
+D. 0% (Forfeited completely)
+Correct Answer: A
+Explanation:
+
+* In the event of Resignation from Service, the lump sum withdrawal limit is 15%, and 85% goes for the purchase of an annuity.
+
+
+* In cases of dismissal or removal, the account is closed and all accumulation is forfeited.
+
+
+
+Q60. Which of the following conditions strictly pauses the departmental contribution/subscription towards a GDS's SDBS account?
+A. When the GDS takes regular paid leave.
+B. When the GDS takes emergency leave.
+C. When the GDS is placed on "Put off duty" or remains on unauthorized absence.
+D. When the GDS works in a supernumerary post.
+Correct Answer: C
+Explanation:
+
+* No contribution/subscription shall be made by the department in respect of GDS during the period they are placed on "Put off duty" or remain on unauthorized absence.
+
+
+
+✅ Part 6 closure: 12 MCQs · Nodes 6.1, 6.2 covered · Self-check passed.
+
+═══════════════════════════════════════════
+PART 7: Financial Upgradation and Substitute Arrangements
+Importance Tags Inside: 🔴 ×1 · 🟡 ×1 · 🟢 ×0 · ⚪ ×0
+Coverage Map Nodes: 7.1, 7.2
+Total MCQs in this Part: 8
+═══════════════════════════════════════════
+
+── Sub-Section 7.1: GDS (Grant of Financial Upgradation) Scheme, 2024 · 🔴 CRITICAL · MCQs Q61–Q64 ──
+
+Q61. Under the GDS (Grant of Financial Upgradation) Scheme, 2024, what is the fixed monthly addition to the TRCA for a GDS who has completed exactly 24 years of continuous engagement?
+A. Rs. 360/-
+B. Rs. 460/-
+C. Rs. 820/-
+D. Rs. 1420/-
+Correct Answer: C
+Explanation:
+
+* A GDS completing 24 years of continuous engagement is entitled to a fixed addition of Rs. 820/- (i.e. Rs. 360 for the first 12 years + Rs. 460 for the 24th year) per month.
+
+
+
+Q62. How does the grant of financial upgradation under the GDSFU Scheme, 2024 interact with Dearness Allowance (DA) and the annual increase of TRCA?
+A. DA is paid on the fixed addition, and it counts towards the 3% annual TRCA increase.
+B. DA is NOT paid on the fixed addition, and it does NOT count for the grant of annual increase of TRCA.
+C. DA is paid, but it does not count for the annual TRCA increase.
+D. DA is not paid, but it is factored into the TRCA annual increase.
+Correct Answer: B
+Explanation:
+
+* Dearness Allowance will not be paid on this fixed addition, and this will also not count for the grant of annual increase of TRCA.
+
+
+
+Q63. The Screening Committee constituted to consider cases of financial upgradation meets twice a year. During which specific weeks does this committee hold its meetings?
+A. 1st week of January and 1st week of July
+B. 15th of June and 15th of December
+C. 1st week of April and 1st week of October
+D. 31st January and 31st July
+Correct Answer: A
+Explanation:
+
+* The screening committee shall meet twice a year, i.e., in the first week of January and the first week of July.
+
+
+* Orders are issued on the 15th of January and the 15th of July.
+
+
+
+Q64. In determining the period of continuous engagement for GDSFU, which of the following periods will be treated as a break in engagement, unless explicitly condoned by the competent authority?
+A. Approved leave without allowance
+B. Emergency leave
+C. Paid leave
+D. Put off Duty Period
+Correct Answer: D
+Explanation:
+
+* Unauthorized absence and Put off Duty Period will be treated as a break in engagement unless condoned by the competent authority.
+
+
+
+── Sub-Section 7.2: Substitute Arrangement Rules · 🟡 HIGH · MCQs Q65–Q68 ──
+
+Q65. What is the maximum duration for which a vacancy is classified as a "Short Term Vacancy" allowing for substitute arrangements to be approved by the Sub Division Head?
+A. Up to 15 days
+B. Up to 30 days
+C. Up to 45 days
+D. Up to 90 days
+Correct Answer: C
+Explanation:
+
+* Vacancies arising due to leave, medical condition, etc., up to 45 days are treated as Short Term Vacancies.
+
+
+* The Sub Division Head (SDH) is authorized to approve substitute arrangements up to a period of 45 days.
+
+
+
+Q66. Continuation of substitute arrangements against any vacant GDS post beyond 45 days and up to a period of one year at a stretch may only be allowed by which authority?
+A. Sub Divisional Head
+B. Divisional Head
+C. Regional PMG
+D. Chief Postmaster General
+Correct Answer: B
+Explanation:
+
+* Continuation of substitute arrangements beyond 45 days and up to a period of one year at a stretch may only be allowed by the Divisional Head.
+
+
+
+Q67. If a substitute arrangement is required to be continued beyond one year, the Divisional Head must submit a proposal to the Head of Region (HoR) or Head of Circle (HoC). What happens if no communication is received from the HoR/HoC within the stipulated time?
+A. The substitute arrangement must be terminated immediately.
+B. The proposal is deemed to be rejected.
+C. The approval shall be deemed to have been granted.
+D. The Divisional Head can grant a temporary extension of only 30 days.
+Correct Answer: C
+Explanation:
+
+* In the event that no communication (approval or observations) is received from the HoR/HoC within the stipulated time, the approval shall be deemed to have been granted.
+
+
+
+Q68. Regarding the remuneration of persons working as substitutes for GDS, which of the following statements is correct?
+A. Substitutes are paid TRCA for Sundays only if they continuously work for 6 days.
+B. Substitutes are paid extra remuneration for National Holidays equivalent to a regular GDS.
+C. Substitutes are entitled to a prorated amount of the GDS Gratuity based on days worked.
+D. Substitutes are authorized to claim Risk & Hardship Allowance directly.
+Correct Answer: A
+Explanation:
+
+* Persons working as substitutes of GDS may be paid TRCA for Sunday if he/she continuously works for 6 days.
+
+
+* However, no extra payment on account of National Holidays will be made to substitutes.
+
+
+
+✅ Part 7 closure: 8 MCQs · Nodes 7.1, 7.2 covered · Self-check passed.
+
+═══════════════════════════════════════════
+PART 8: Compassionate Engagement Scheme 2023
+Importance Tags Inside: 🔴 ×2 · 🟡 ×1 · 🟢 ×0 · ⚪ ×0
+Coverage Map Nodes: 8.1, 8.2, 8.3
+Total MCQs in this Part: 8
+═══════════════════════════════════════════
+
+── Sub-Section 8.1 & 8.2: Objective, Eligibility, and CCE Timelines · 🔴 CRITICAL · MCQs Q69–Q72 ──
+
+Q69. According to the Order of Priority under the GDS Compassionate Engagement Scheme 2023, which dependent family member is granted the absolute first priority for engagement?
+A. Unmarried brother or sister
+B. Son or unmarried daughter
+C. Spouse of the deceased GDS
+D. Widowed daughter-in-law
+Correct Answer: C
+Explanation:
+
+* First priority will be given to the spouse of the deceased GDS.
+
+
+* Second priority is given to the dependent nominated by the spouse.
+
+
+
+Q70. What is the maximum time limit prescribed for an eligible family member to submit an application for compassionate engagement following the death of a GDS?
+A. Within 6 months
+B. Within 1 year
+C. Within 2 years
+D. Within 3 years
+Correct Answer: C
+Explanation:
+
+* The application must be submitted at the earliest possible opportunity but not later than two years from the date of the death of the GDS.
+
+
+
+Q71. The Committee on Compassionate Engagement (CCE) holds its meetings to consider applications on a quarterly basis. Which of the following accurately represents the four months designated for these meetings?
+A. January, April, July, and October
+B. March, June, September, and December
+C. February, May, August, and November
+D. January, June, September, and December
+Correct Answer: A
+Explanation:
+
+* The CCE meets quarterly, i.e., in April, July, October, and January to consider the cases arising during the previous quarter.
+
+
+
+Q72. Who is the Competent Authority to make the final compassionate engagements on vacant GDS posts on the basis of the CCE's recommendations?
+A. Sub Divisional Head independently
+B. Divisional Head/Head of Unit, with the prior approval of the Regional Director or DPS (HQ)
+C. Sub Divisional Head, with the prior approval of the Divisional Head
+D. Director General Posts
+Correct Answer: B
+Explanation:
+
+* The Divisional Head/Head of Unit is competent to make Compassionate engagements on the basis of the recommendations of the CCE and prior approval of the Regional Director or DPS [HQ] as the case may be.
+
+
+
+── Sub-Section 8.3: Relaxed Criteria and Missing GDS Provisions · 🟡 HIGH · MCQs Q73–Q76 ──
+
+Q73. If a dependent is engaged on compassionate grounds under the relaxed criteria without possessing the requisite educational qualification, how much maximum time is granted to acquire this qualification?
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+Correct Answer: C
+Explanation:
+
+* The dependent will be given up to a maximum of 3 years to acquire the minimum required educational qualification for regular GDS engagement.
+
+
+
+Q74. During the provisional engagement of a Dak Sevak who has not yet acquired the minimum educational qualification, what is the policy regarding their Time Related Continuity Allowance (TRCA)?
+A. They are paid 50% of the Level-1 TRCA.
+B. They are paid the minimum TRCA (Level-1) and are entitled to the annual 3% increment.
+C. They are paid the minimum TRCA (Level-1) but will not be entitled to the annual increment till the requisite qualification is acquired.
+D. They are paid a fixed daily wage equivalent to a substitute.
+Correct Answer: C
+Explanation:
+
+* During provisional engagement, he/she will be given only the minimum of the TRCA (level-1) and will not be entitled to the annual increment till he/she attains the requisite educational qualification.
+
+
+
+Q75. In the case of a missing GDS, after what minimum period of time from the date the GDS went missing can a request for compassionate engagement be considered?
+A. 6 months
+B. 1 year
+C. 2 years
+D. 3 years
+Correct Answer: C
+Explanation:
+
+* A request for grant of compassionate engagement in the case of a missing GDS can be considered only after a lapse of at least 2 years from the date from which the GDS has been missing.
+
+
+
+Q76. Under the Missing Gramin Dak Sevak provisions, the benefit of compassionate engagement will NOT be applicable if the missing GDS had less than how much time remaining for normal discharge from service on the date they went missing?
+A. Less than six months
+B. Less than one year
+C. Less than two years
+D. Less than three years
+Correct Answer: C
+Explanation:
+
+* The benefit will not be applicable to a GDS who had less than two years for normal discharge from service on the date from which he/she has been missing.
+
+
+
