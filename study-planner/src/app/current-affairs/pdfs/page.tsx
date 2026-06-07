@@ -14,7 +14,8 @@ import HomeHeader from '@/components/HomeHeader';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 
 const MONTHLY_PDFS = [
-    { title: "April 2026", file: "April-2026.pdf", isNew: true },
+    { title: "May 2026", file: "May-2026.pdf", isNew: true },
+    { title: "April 2026", file: "April-2026.pdf" },
     { title: "March 2026", file: "March-2026.pdf" },
     { title: "February 2026", file: "February-2026.pdf" },
     { title: "January 2026", file: "January-2026.pdf" },

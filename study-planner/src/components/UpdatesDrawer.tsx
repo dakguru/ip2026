@@ -19,6 +19,25 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "07.06.2026",
         items: [
             {
+                title: "📑 Current Affairs May 2026 PDF Integrated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>May 2026 Current Affairs Monthly Digest</strong> PDF sourced from Adda247!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-rose-50/50 dark:bg-rose-900/10 p-3 rounded-xl border border-rose-100 dark:border-rose-800/50">
+                                <p className="font-bold text-rose-700 dark:text-rose-300 text-[10px] uppercase tracking-wide">Current Affairs Section</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Structured monthly summary of national and international events to streamline your preparation.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-rose-600 dark:text-rose-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Monthly Digests archive!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "📚 PDF Notes: Postal Manual Vol III Updated",
                 desc: (
                     <div className="space-y-4">
