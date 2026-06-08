@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion, Shield, Bell } from "lucide-react";
+import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion, Shield, Bell, FileDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useState, useEffect } from "react";
@@ -169,6 +169,18 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                 shadow: "group-hover:shadow-violet-500/20",
                 icon: Mail,
                 link: "/admin/messages",
+                badge: "Admin",
+                className: "col-span-1 aspect-square"
+            },
+            {
+                title: "Question Paper PDF",
+                desc: "Generate MCQ Question Papers",
+                color: "text-blue-700",
+                bg: "bg-blue-50 dark:bg-blue-900/20",
+                border: "group-hover:border-blue-600",
+                shadow: "group-hover:shadow-blue-600/20",
+                icon: FileDown,
+                link: "/admin/question-paper-pdf",
                 badge: "Admin",
                 className: "col-span-1 aspect-square"
             },
