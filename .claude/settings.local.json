@@ -30,7 +30,10 @@
       "Bash(node -e ' *)",
       "Bash(git add *)",
       "Bash(node scripts/seed-dak-sutra-pmla-v2.js)",
-      "Bash(ls .env.local .env)"
+      "Bash(ls .env.local .env)",
+      "Bash(python -c \"import docx; print\\('ok'\\)\")",
+      "Bash(ls src/models)",
+      "Bash(ls src/lib/models)"
     ]
   }
 }

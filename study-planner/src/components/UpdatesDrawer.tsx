@@ -19,6 +19,25 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "09.06.2026",
         items: [
             {
+                title: "📚 PDF Notes: CCS Pension Rules 2021 Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>CCS (Pension) Rules, 2021</strong> PDF notes for both <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-sky-50/50 dark:bg-sky-900/10 p-3 rounded-xl border border-sky-100 dark:border-sky-800/50">
+                                <p className="font-bold text-sky-700 dark:text-sky-300 text-[10px] uppercase tracking-wide">CCS Pension Rules</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The notes now reflect the latest rules and amendments. Available in both course modes.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-sky-600 dark:text-sky-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "🔁 Course Mode Switch Now Requires Admin Approval",
                 desc: (
                     <div className="space-y-4">
