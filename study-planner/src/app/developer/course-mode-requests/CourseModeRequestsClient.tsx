@@ -5,8 +5,9 @@ import Link from "next/link";
 import { format } from "date-fns";
 import {
     ArrowLeft, Repeat, Loader2, Check, X, ArrowRight, Mail, Phone,
-    CheckCircle2, XCircle, Clock, AlertTriangle,
+    CheckCircle2, XCircle, Clock, AlertTriangle, Crown,
 } from "lucide-react";
+import { getDisplayMembership, type MembershipTier } from "@/lib/membership-utils";
 
 type Status = "pending" | "approved" | "rejected";
 
@@ -16,6 +17,8 @@ interface CourseModeRequestItem {
     userName: string;
     userEmail: string;
     userMobile: string | null;
+    membershipLevel: string;
+    planName: string | null;
     currentCourseMode: "LDCE_IP" | "PS_GR_B";
     requestedCourseMode: "LDCE_IP" | "PS_GR_B";
     status: Status;
@@ -23,6 +26,31 @@ interface CourseModeRequestItem {
     reviewedAt: string | null;
     reviewedBy: string | null;
     adminRemarks: string | null;
+}
+
+// Membership tag identifies which course the user actually paid for:
+// Gold/Silver = LDCE IP, Diamond/Platinum = PS Group B, Free = base tier.
+const PLAN_BADGE: Record<MembershipTier, { cls: string; paidFor: string | null }> = {
+    free: { cls: "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300", paidFor: null },
+    silver: { cls: "bg-slate-100 text-slate-700 dark:bg-slate-700/40 dark:text-slate-200", paidFor: "LDCE IP" },
+    gold: { cls: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400", paidFor: "LDCE IP" },
+    platinum: { cls: "bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300", paidFor: "PS Group B" },
+    diamond: { cls: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300", paidFor: "PS Group B" },
+};
+
+function PlanBadge({ membershipLevel, planName }: { membershipLevel: string; planName: string | null }) {
+    const tier = getDisplayMembership(membershipLevel, planName);
+    const { cls, paidFor } = PLAN_BADGE[tier];
+    const label = tier.charAt(0).toUpperCase() + tier.slice(1);
+    return (
+        <span
+            className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wide ${cls}`}
+            title={paidFor ? `Paid plan for ${paidFor}` : "Free tier"}
+        >
+            <Crown className="w-3 h-3" /> {label}
+            {paidFor && <span className="font-semibold normal-case opacity-70">· {paidFor}</span>}
+        </span>
+    );
 }
 
 const MODE_LABEL: Record<string, string> = {
@@ -189,7 +217,10 @@ export default function CourseModeRequestsClient() {
                                                 {req.userName?.charAt(0)?.toUpperCase() || "U"}
                                             </div>
                                             <div className="min-w-0">
-                                                <p className="font-bold text-zinc-900 dark:text-zinc-100 truncate">{req.userName}</p>
+                                                <div className="flex items-center gap-2 flex-wrap">
+                                                    <p className="font-bold text-zinc-900 dark:text-zinc-100 truncate">{req.userName}</p>
+                                                    <PlanBadge membershipLevel={req.membershipLevel} planName={req.planName} />
+                                                </div>
                                                 <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-zinc-500 dark:text-zinc-400">
                                                     <span className="inline-flex items-center gap-1"><Mail className="w-3 h-3" /> {req.userEmail}</span>
                                                     {req.userMobile && <span className="inline-flex items-center gap-1"><Phone className="w-3 h-3" /> {req.userMobile}</span>}

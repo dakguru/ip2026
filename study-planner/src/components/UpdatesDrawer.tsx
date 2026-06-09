@@ -16,6 +16,42 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "09.06.2026",
+        items: [
+            {
+                title: "🔁 Course Mode Switch Now Requires Admin Approval",
+                desc: (
+                    <div className="space-y-4">
+                        <p>You can now switch your course mode between <strong>LDCE IP</strong> and <strong>PS Group B</strong> only after approval of the <strong>Dak Guru Admin</strong>.</p>
+
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-violet-50/50 dark:bg-violet-900/10 p-3 rounded-xl border border-violet-100 dark:border-violet-800/50">
+                                <ul className="space-y-2 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-violet-500 mt-0.5">📝</span>
+                                        <span><strong>Raise a Request:</strong> From Settings → Course Mode, choose your desired mode and submit a switch request.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-violet-500 mt-0.5">⏳</span>
+                                        <span><strong>Stay Active Until Approved:</strong> Your current course mode continues unchanged while the request is pending.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-violet-500 mt-0.5">✅</span>
+                                        <span><strong>Auto-Switch on Approval:</strong> Once the Admin approves, your course mode changes automatically.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-violet-600 dark:text-violet-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head to Settings → Course Mode to raise your request!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "07.06.2026",
         items: [
             {
