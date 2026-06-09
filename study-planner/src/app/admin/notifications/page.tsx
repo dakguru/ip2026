@@ -29,7 +29,7 @@ interface Notification {
     };
 }
 
-type FilterType = 'all' | 'users' | 'system' | 'membership' | 'mock_tests' | 'community';
+type FilterType = 'all' | 'users' | 'system' | 'membership' | 'mock_tests' | 'community' | 'course_mode';
 
 // Helper: group notifications by date
 function groupByDate(notifications: Notification[]): { label: string; date: string; items: Notification[] }[] {
@@ -175,6 +175,30 @@ const TYPE_CONFIG: Record<string, { icon: any; color: string; bg: string; darkBg
         border: 'border-indigo-100 dark:border-indigo-500/20',
         label: 'Mock Test',
     },
+    course_mode_request: {
+        icon: RefreshCw,
+        color: 'text-violet-600 dark:text-violet-400',
+        bg: 'bg-violet-50',
+        darkBg: 'dark:bg-violet-500/10',
+        border: 'border-violet-100 dark:border-violet-500/20',
+        label: 'Course Switch',
+    },
+    course_mode_approved: {
+        icon: RefreshCw,
+        color: 'text-green-600 dark:text-green-400',
+        bg: 'bg-green-50',
+        darkBg: 'dark:bg-green-500/10',
+        border: 'border-green-100 dark:border-green-500/20',
+        label: 'Course Approved',
+    },
+    course_mode_rejected: {
+        icon: RefreshCw,
+        color: 'text-red-600 dark:text-red-400',
+        bg: 'bg-red-50',
+        darkBg: 'dark:bg-red-500/10',
+        border: 'border-red-100 dark:border-red-500/20',
+        label: 'Course Rejected',
+    },
 };
 
 const DEFAULT_TYPE_CONFIG = {
@@ -212,8 +236,11 @@ const FILTER_TABS: { id: FilterType; label: string; icon: any; count?: (n: Notif
     { id: 'community', label: 'Community', icon: MessageSquare },
     { id: 'membership', label: 'Membership', icon: IndianRupee },
     { id: 'mock_tests', label: 'Mock Tests', icon: FileText },
+    { id: 'course_mode', label: 'Course Switch', icon: RefreshCw },
     { id: 'system', label: 'System', icon: Server },
 ];
+
+const COURSE_MODE_TYPES = ['course_mode_request', 'course_mode_approved', 'course_mode_rejected'];
 
 export default function AdminNotificationsPage() {
     const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -342,6 +369,7 @@ export default function AdminNotificationsPage() {
         if (filterType === 'system') return ['deployment', 'system', 'alert', 'admin_message'].includes(n.type);
         if (filterType === 'mock_tests') return n.type === 'mock_test' || (n.type === 'purchase' && n.title.toLowerCase().includes('mock test'));
         if (filterType === 'membership') return n.type === 'purchase' || ['coupon_claim', 'coupon_redeem', 'membership_upgrade'].includes(n.type);
+        if (filterType === 'course_mode') return COURSE_MODE_TYPES.includes(n.type);
         return true;
     }, [filterType, searchQuery, showUnreadOnly]);
 
@@ -361,6 +389,7 @@ export default function AdminNotificationsPage() {
                 if (tab.id === 'system') return !n.isRead && ['deployment', 'system', 'alert', 'admin_message'].includes(n.type);
                 if (tab.id === 'mock_tests') return !n.isRead && (n.type === 'mock_test' || (n.type === 'purchase' && n.title.toLowerCase().includes('mock test')));
                 if (tab.id === 'membership') return !n.isRead && (n.type === 'purchase' || ['coupon_claim', 'coupon_redeem', 'membership_upgrade'].includes(n.type));
+                if (tab.id === 'course_mode') return !n.isRead && COURSE_MODE_TYPES.includes(n.type);
                 return false;
             }).length;
         });
@@ -685,6 +714,16 @@ export default function AdminNotificationsPage() {
                                                                     <p className={`text-[13px] mt-1 leading-relaxed ${notif.isRead ? 'text-zinc-500 dark:text-zinc-400' : 'text-zinc-700 dark:text-zinc-300'} ${isExpanded ? '' : 'line-clamp-1'}`}>
                                                                         {notif.message}
                                                                     </p>
+                                                                    {COURSE_MODE_TYPES.includes(notif.type) && (
+                                                                        <Link
+                                                                            href="/developer/course-mode-requests"
+                                                                            onClick={(e) => e.stopPropagation()}
+                                                                            className="inline-flex items-center gap-1.5 mt-2.5 px-3 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-[12px] font-semibold transition-colors"
+                                                                        >
+                                                                            <RefreshCw className="w-3.5 h-3.5" /> Review Request
+                                                                            <ChevronRight className="w-3.5 h-3.5" />
+                                                                        </Link>
+                                                                    )}
                                                                 </div>
 
                                                                 {/* Time */}

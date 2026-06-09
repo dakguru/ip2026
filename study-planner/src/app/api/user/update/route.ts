@@ -15,6 +15,18 @@ export async function POST(request: Request) {
 
         const oldUser = await getUserByEmail(currentEmail);
 
+        // SECURITY: Normal users may not change their own course mode directly —
+        // that requires admin approval via /api/course-mode-requests. Only admin /
+        // super_admin can flip course mode straight from Settings. We silently drop
+        // an unauthorised courseMode change so the rest of the profile still saves.
+        const isPrivileged = oldUser?.role === 'admin' || oldUser?.role === 'super_admin';
+        const courseModeChangeBlocked =
+            courseMode !== undefined &&
+            !isPrivileged &&
+            oldUser?.courseMode !== undefined &&
+            courseMode !== oldUser.courseMode;
+        const effectiveCourseMode = courseModeChangeBlocked ? undefined : courseMode;
+
         // Filter undefined values to support partial updates
         const updates: any = {};
         if (name !== undefined) updates.name = name;
@@ -31,7 +43,7 @@ export async function POST(request: Request) {
         }
         if (examPreparingFor !== undefined) updates.examPreparingFor = examPreparingFor;
         if (dateOfJoining !== undefined) updates.dateOfJoining = dateOfJoining;
-        if (courseMode !== undefined) updates.courseMode = courseMode;
+        if (effectiveCourseMode !== undefined) updates.courseMode = effectiveCourseMode;
         if (hasSeenCoursePrompt !== undefined) updates.hasSeenCoursePrompt = hasSeenCoursePrompt;
 
         const updatedUser = await updateUser(currentEmail, updates);

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { format } from "date-fns";
-import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight, Target, Bell, MessageSquare, Send, ExternalLink } from "lucide-react";
+import { User, Mail, Save, Loader2, ArrowLeft, Phone, MapPin, Building, Briefcase, Hash, Calendar, Shield, Crown, LogOut, ChevronRight, Target, Bell, MessageSquare, Send, ExternalLink, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import UpdatesDrawer from "@/components/UpdatesDrawer";
@@ -33,6 +33,79 @@ const DESIGNATION_OPTIONS = [
     "Assistant Branch Postmaster (ABPM)",
     "Dak Sevak"
 ];
+
+const COURSE_MODE_LABEL: Record<string, string> = {
+    LDCE_IP: "LDCE IP",
+    PS_GR_B: "PS Group B",
+};
+
+interface CourseModeRequestItem {
+    id: string;
+    currentCourseMode: "LDCE_IP" | "PS_GR_B";
+    requestedCourseMode: "LDCE_IP" | "PS_GR_B";
+    status: "pending" | "approved" | "rejected";
+    requestedAt: string;
+    adminRemarks: string | null;
+}
+
+// Confirmation popup shown to normal users before a switch request is created.
+function CourseModeApprovalModal({ open, fromMode, toMode, submitting, onCancel, onConfirm }: {
+    open: boolean; fromMode: string; toMode: string; submitting: boolean;
+    onCancel: () => void; onConfirm: () => void;
+}) {
+    if (!open) return null;
+    return (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] flex items-center justify-center p-4 animate-in fade-in duration-200">
+            <div className="bg-white dark:bg-zinc-900 w-full max-w-md rounded-2xl p-6 shadow-2xl animate-in zoom-in-95 duration-200">
+                <div className="w-12 h-12 bg-violet-100 dark:bg-violet-900/30 rounded-full flex items-center justify-center text-violet-600 mb-4">
+                    <Shield className="w-6 h-6" />
+                </div>
+                <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2">Admin Approval Required</h2>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
+                    Switching Course Mode requires Admin Approval. Your current course mode will continue until your request is approved by the Admin.
+                </p>
+                <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-5">
+                    Switch from <span className="font-semibold">{COURSE_MODE_LABEL[fromMode]}</span> to{" "}
+                    <span className="font-semibold">{COURSE_MODE_LABEL[toMode]}</span>. Do you want to proceed?
+                </p>
+                <div className="flex gap-3">
+                    <button
+                        onClick={onCancel}
+                        disabled={submitting}
+                        className="flex-1 py-2.5 rounded-xl font-semibold border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors disabled:opacity-50"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        onClick={onConfirm}
+                        disabled={submitting}
+                        className="flex-1 py-2.5 rounded-xl font-semibold bg-violet-600 hover:bg-violet-700 text-white transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                    >
+                        {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : null} Yes, Submit Request
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+// Status box shown on Settings while a request is pending Admin Approval.
+function PendingRequestBox({ pending }: { pending: CourseModeRequestItem }) {
+    return (
+        <div className="mt-5 rounded-2xl border border-amber-200 dark:border-amber-900/40 bg-amber-50 dark:bg-amber-900/15 p-4">
+            <div className="flex items-center gap-2 mb-3">
+                <Clock className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <h3 className="font-bold text-amber-800 dark:text-amber-300 text-sm">Course Mode Switch Request Pending</h3>
+            </div>
+            <div className="space-y-1 text-sm text-amber-900/80 dark:text-amber-200/80">
+                <p><span className="font-semibold">Current Course Mode:</span> {COURSE_MODE_LABEL[pending.currentCourseMode]}</p>
+                <p><span className="font-semibold">Requested Course Mode:</span> {COURSE_MODE_LABEL[pending.requestedCourseMode]}</p>
+                <p><span className="font-semibold">Submitted On:</span> {pending.requestedAt ? format(new Date(pending.requestedAt), "dd.MM.yyyy") : "—"}</p>
+            </div>
+            <p className="text-xs text-amber-700/80 dark:text-amber-300/70 mt-3">Your course mode will be changed only after Admin Approval.</p>
+        </div>
+    );
+}
 
 export default function SettingsPage() {
     const router = useRouter();
@@ -69,6 +142,18 @@ export default function SettingsPage() {
     const isMobileApp = useIsMobileApp();
     const hasBetaAccess = useBetaAccess();
     const { course, setCourse } = useCourse();
+
+    // ---- Course Mode Switch Approval state ----
+    const [userRole, setUserRole] = useState<string>("user");
+    const [selectedCourseMode, setSelectedCourseMode] = useState<"LDCE_IP" | "PS_GR_B">("LDCE_IP");
+    const [pendingRequest, setPendingRequest] = useState<CourseModeRequestItem | null>(null);
+    const [latestRequest, setLatestRequest] = useState<CourseModeRequestItem | null>(null);
+    const [showApprovalModal, setShowApprovalModal] = useState(false);
+    const [submittingRequest, setSubmittingRequest] = useState(false);
+    const [courseModeMsg, setCourseModeMsg] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+
+    const isPrivileged = userRole === 'admin' || userRole === 'super_admin';
+
     const [activeSection, setActiveSection] = useState<string | null>(null);
     const [isMobileView, setIsMobileView] = useState(false);
     const [showUpdates, setShowUpdates] = useState(false);
@@ -79,6 +164,7 @@ export default function SettingsPage() {
 
     useEffect(() => {
         fetchProfile();
+        fetchCourseModeRequest();
     }, []);
 
     useEffect(() => {
@@ -118,12 +204,95 @@ export default function SettingsPage() {
                 };
                 setFormData(userData as any);
                 setInitialData(userData);
+                setUserRole(user.role || "user");
+                setSelectedCourseMode((user.courseMode as "LDCE_IP" | "PS_GR_B") || "LDCE_IP");
             } else {
                 // If fetching profile fails (likely auth error or manual cookie edit), redirect to login
                 // router.push("/login");
             }
         } catch (error) {
             console.error(error);
+        }
+    };
+
+    const fetchCourseModeRequest = async () => {
+        try {
+            const res = await fetch("/api/course-mode-requests");
+            if (res.ok) {
+                const data = await res.json();
+                setPendingRequest(data.pending || null);
+                setLatestRequest(data.latest || null);
+            }
+        } catch {
+            // Silently fail — the switcher still works, just without pending state.
+        }
+    };
+
+    // Called when a user taps a course mode card.
+    const handleSelectCourseMode = async (mode: "LDCE_IP" | "PS_GR_B") => {
+        setCourseModeMsg(null);
+        if (isPrivileged) {
+            // Admin / super_admin switch instantly (existing behaviour).
+            setCourse(mode);
+            setSelectedCourseMode(mode);
+            setFormData(prev => ({ ...prev, courseMode: mode }));
+            await fetch("/api/user/update", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ currentEmail: initialData.email, courseMode: mode }),
+            });
+            return;
+        }
+        // Normal users: selection only — nothing changes until Admin approval.
+        if (pendingRequest) return; // locked while a request is pending
+        setSelectedCourseMode(mode);
+    };
+
+    // Called by the "Change Course Mode & Go to Home" button.
+    const handleChangeCourseMode = () => {
+        setCourseModeMsg(null);
+        if (isPrivileged) {
+            router.push('/');
+            return;
+        }
+        if (pendingRequest) {
+            setCourseModeMsg({ type: 'error', text: 'You already have a pending Course Mode Switch Request. Please wait for Admin Approval.' });
+            return;
+        }
+        if (selectedCourseMode === course) {
+            setCourseModeMsg({ type: 'error', text: 'You are already using this course mode.' });
+            return;
+        }
+        setShowApprovalModal(true);
+    };
+
+    const submitCourseModeRequest = async () => {
+        setSubmittingRequest(true);
+        setCourseModeMsg(null);
+        try {
+            const res = await fetch("/api/course-mode-requests", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ requestedCourseMode: selectedCourseMode }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                setShowApprovalModal(false);
+                setPendingRequest(data.request || null);
+                setCourseModeMsg({ type: 'success', text: data.message });
+            } else if (res.status === 409 && data.pending) {
+                setShowApprovalModal(false);
+                setPendingRequest(data.pending);
+                setCourseModeMsg({ type: 'error', text: data.error });
+            } else {
+                setShowApprovalModal(false);
+                setCourseModeMsg({ type: 'error', text: data.error || 'Failed to submit request.' });
+            }
+        } catch {
+            setShowApprovalModal(false);
+            setCourseModeMsg({ type: 'error', text: 'Something went wrong. Please try again.' });
+        } finally {
+            setSubmittingRequest(false);
         }
     };
 
@@ -401,48 +570,56 @@ export default function SettingsPage() {
                         {activeSection === 'course' && (
                             <div className="space-y-4">
                                 <p className="text-sm text-zinc-500 dark:text-zinc-400">Switch between exam categories. This changes the content across the app.</p>
+                                {!isPrivileged && (
+                                    <div className="flex items-start gap-2 text-xs text-violet-700 dark:text-violet-300 bg-violet-50 dark:bg-violet-900/15 border border-violet-100 dark:border-violet-900/30 rounded-xl p-3">
+                                        <Shield className="w-4 h-4 shrink-0 mt-0.5" />
+                                        <span>Switching course mode requires Admin Approval. Your current mode stays active until approved.</span>
+                                    </div>
+                                )}
                                 <div className="grid grid-cols-2 gap-3">
-                                    <button onClick={async () => {
-                                        setCourse('LDCE_IP');
-                                        setFormData(prev => ({ ...prev, courseMode: 'LDCE_IP' }));
-                                        // Immediately update DB to ensure admin sees the change
-                                        await fetch("/api/user/update", {
-                                            method: "POST",
-                                            headers: { "Content-Type": "application/json" },
-                                            body: JSON.stringify({ currentEmail: initialData.email, courseMode: 'LDCE_IP' }),
-                                        });
-                                    }}
-                                        className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'LDCE_IP'
+                                    <button onClick={() => handleSelectCourseMode('LDCE_IP')} disabled={!!pendingRequest && !isPrivileged}
+                                        className={`relative p-4 rounded-2xl border-2 transition-all text-left disabled:opacity-60 disabled:cursor-not-allowed ${selectedCourseMode === 'LDCE_IP'
                                             ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500/20'
                                             : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
-                                        {course === 'LDCE_IP' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>}
+                                        {selectedCourseMode === 'LDCE_IP' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>}
                                         <p className="font-bold text-zinc-900 dark:text-zinc-100">LDCE IP</p>
                                         <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Inspector Posts 2026</p>
                                     </button>
-                                    <button onClick={async () => {
-                                        setCourse('PS_GR_B');
-                                        setFormData(prev => ({ ...prev, courseMode: 'PS_GR_B' }));
-                                        // Immediately update DB to ensure admin sees the change
-                                        await fetch("/api/user/update", {
-                                            method: "POST",
-                                            headers: { "Content-Type": "application/json" },
-                                            body: JSON.stringify({ currentEmail: initialData.email, courseMode: 'PS_GR_B' }),
-                                        });
-                                    }}
-                                        className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'PS_GR_B'
+                                    <button onClick={() => handleSelectCourseMode('PS_GR_B')} disabled={!!pendingRequest && !isPrivileged}
+                                        className={`relative p-4 rounded-2xl border-2 transition-all text-left disabled:opacity-60 disabled:cursor-not-allowed ${selectedCourseMode === 'PS_GR_B'
                                             ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 ring-2 ring-purple-500/20'
                                             : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300'}`}>
-                                        {course === 'PS_GR_B' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>}
+                                        {selectedCourseMode === 'PS_GR_B' && <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>}
                                         <p className="font-bold text-zinc-900 dark:text-zinc-100">PS Group B</p>
                                         <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">PS Group B Exam</p>
                                     </button>
                                 </div>
+                                {courseModeMsg && (
+                                    <div className={`text-sm py-3 px-4 rounded-xl ${courseModeMsg.type === 'success' ? 'bg-green-50 dark:bg-green-900/20 text-green-600' : 'bg-red-50 dark:bg-red-900/20 text-red-500'}`}>
+                                        {courseModeMsg.text}
+                                    </div>
+                                )}
+                                {pendingRequest && <PendingRequestBox pending={pendingRequest} />}
+                                {!pendingRequest && latestRequest?.status === 'rejected' && (
+                                    <div className="text-xs text-red-500 bg-red-50 dark:bg-red-900/15 border border-red-100 dark:border-red-900/30 rounded-xl p-3">
+                                        Your previous request was rejected{latestRequest.adminRemarks ? `: ${latestRequest.adminRemarks}` : '.'} You can submit a fresh request.
+                                    </div>
+                                )}
                                 <button
-                                    onClick={() => router.push('/')}
-                                    className="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 mt-6"
+                                    onClick={handleChangeCourseMode}
+                                    disabled={!!pendingRequest && !isPrivileged}
+                                    className="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Change Course Mode & Go to Home
+                                    {isPrivileged ? 'Change Course Mode & Go to Home' : 'Request Course Mode Switch'}
                                 </button>
+                                <CourseModeApprovalModal
+                                    open={showApprovalModal}
+                                    fromMode={course}
+                                    toMode={selectedCourseMode}
+                                    submitting={submittingRequest}
+                                    onCancel={() => setShowApprovalModal(false)}
+                                    onConfirm={submitCourseModeRequest}
+                                />
                             </div>
                         )}
 
@@ -782,23 +959,23 @@ export default function SettingsPage() {
                             </div>
                         </div>
 
+                        {!isPrivileged && (
+                            <div className="flex items-start gap-2.5 text-sm text-violet-700 dark:text-violet-300 bg-violet-50 dark:bg-violet-900/15 border border-violet-100 dark:border-violet-900/30 rounded-xl p-3.5 mb-4">
+                                <Shield className="w-4 h-4 shrink-0 mt-0.5" />
+                                <span>Switching course mode requires Admin Approval. Your current mode stays active until the request is approved.</span>
+                            </div>
+                        )}
+
                         <div className="grid grid-cols-2 gap-3">
                             <button
-                                onClick={async () => {
-                                    setCourse('LDCE_IP');
-                                    setFormData(prev => ({ ...prev, courseMode: 'LDCE_IP' }));
-                                    await fetch("/api/user/update", {
-                                        method: "POST",
-                                        headers: { "Content-Type": "application/json" },
-                                        body: JSON.stringify({ currentEmail: initialData.email, courseMode: 'LDCE_IP' }),
-                                    });
-                                }}
-                                className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'LDCE_IP'
+                                onClick={() => handleSelectCourseMode('LDCE_IP')}
+                                disabled={!!pendingRequest && !isPrivileged}
+                                className={`relative p-4 rounded-2xl border-2 transition-all text-left disabled:opacity-60 disabled:cursor-not-allowed ${selectedCourseMode === 'LDCE_IP'
                                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500/20'
                                     : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600'
                                     }`}
                             >
-                                {course === 'LDCE_IP' && (
+                                {selectedCourseMode === 'LDCE_IP' && (
                                     <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50"></span>
                                 )}
                                 <p className="font-bold text-zinc-900 dark:text-zinc-100">LDCE IP</p>
@@ -806,21 +983,14 @@ export default function SettingsPage() {
                             </button>
 
                             <button
-                                onClick={async () => {
-                                    setCourse('PS_GR_B');
-                                    setFormData(prev => ({ ...prev, courseMode: 'PS_GR_B' }));
-                                    await fetch("/api/user/update", {
-                                        method: "POST",
-                                        headers: { "Content-Type": "application/json" },
-                                        body: JSON.stringify({ currentEmail: initialData.email, courseMode: 'PS_GR_B' }),
-                                    });
-                                }}
-                                className={`relative p-4 rounded-2xl border-2 transition-all text-left ${course === 'PS_GR_B'
+                                onClick={() => handleSelectCourseMode('PS_GR_B')}
+                                disabled={!!pendingRequest && !isPrivileged}
+                                className={`relative p-4 rounded-2xl border-2 transition-all text-left disabled:opacity-60 disabled:cursor-not-allowed ${selectedCourseMode === 'PS_GR_B'
                                     ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20 ring-2 ring-purple-500/20'
                                     : 'border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600'
                                     }`}
                             >
-                                {course === 'PS_GR_B' && (
+                                {selectedCourseMode === 'PS_GR_B' && (
                                     <span className="absolute top-3 right-3 w-3 h-3 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>
                                 )}
                                 <p className="font-bold text-zinc-900 dark:text-zinc-100">PS Group B</p>
@@ -828,14 +998,37 @@ export default function SettingsPage() {
                             </button>
                         </div>
 
+                        {courseModeMsg && (
+                            <div className={`mt-4 text-sm py-3 px-4 rounded-xl ${courseModeMsg.type === 'success' ? 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400' : 'bg-red-50 dark:bg-red-900/20 text-red-500'}`}>
+                                {courseModeMsg.text}
+                            </div>
+                        )}
+
+                        {pendingRequest && <PendingRequestBox pending={pendingRequest} />}
+                        {!pendingRequest && latestRequest?.status === 'rejected' && (
+                            <div className="mt-4 text-xs text-red-500 bg-red-50 dark:bg-red-900/15 border border-red-100 dark:border-red-900/30 rounded-xl p-3">
+                                Your previous request was rejected{latestRequest.adminRemarks ? `: ${latestRequest.adminRemarks}` : '.'} You can submit a fresh request.
+                            </div>
+                        )}
+
                         <div className="mt-6">
                             <button
-                                onClick={() => router.push('/')}
-                                className="w-full sm:w-auto px-8 py-3.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-bold rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2"
+                                onClick={handleChangeCourseMode}
+                                disabled={!!pendingRequest && !isPrivileged}
+                                className="w-full sm:w-auto px-8 py-3.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-bold rounded-xl shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                Change Course Mode & Go to Home
+                                {isPrivileged ? 'Change Course Mode & Go to Home' : 'Request Course Mode Switch'}
                             </button>
                         </div>
+
+                        <CourseModeApprovalModal
+                            open={showApprovalModal}
+                            fromMode={course}
+                            toMode={selectedCourseMode}
+                            submitting={submittingRequest}
+                            onCancel={() => setShowApprovalModal(false)}
+                            onConfirm={submitCourseModeRequest}
+                        />
                     </div>
                 }
 

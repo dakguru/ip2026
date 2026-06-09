@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Users, FileText, Settings, Shield, Plus, Database, UserPlus, FileSignature, LayoutDashboard, MessageSquare } from "lucide-react";
+import { ArrowLeft, Users, FileText, Settings, Shield, Plus, Database, UserPlus, FileSignature, LayoutDashboard, MessageSquare, Repeat } from "lucide-react";
 
 export default function DeveloperPage() {
     return (
@@ -20,46 +20,6 @@ export default function DeveloperPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                    {/* 1. Manage Developers */}
-                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
-                        <div className="flex items-start justify-between mb-4">
-                            <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                <Users className="w-6 h-6" />
-                            </div>
-                            <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-zinc-100 dark:bg-zinc-800 text-zinc-500 rounded-md">Admin</span>
-                        </div>
-                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Manage Developers</h3>
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">Create and manage accounts with developer access privileges.</p>
-                        <div className="flex flex-col gap-2">
-                            <button className="w-full py-2 px-4 rounded-lg bg-blue-50 dark:bg-blue-900/10 text-blue-600 dark:text-blue-400 font-medium hover:bg-blue-100 dark:hover:bg-blue-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
-                                <UserPlus className="w-4 h-4" /> Create Developer
-                            </button>
-                            <Link href="/admin" className="w-full py-2 px-4 rounded-lg border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 text-sm flex items-center justify-center gap-2 transition-colors">
-                                View List
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* 2. Manage Content Creators */}
-                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
-                        <div className="flex items-start justify-between mb-4">
-                            <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-xl text-purple-600 dark:text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                                <FileSignature className="w-6 h-6" />
-                            </div>
-                            <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-zinc-100 dark:bg-zinc-800 text-zinc-500 rounded-md">Content</span>
-                        </div>
-                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Manage Creators</h3>
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">Authorize users to create and publish study materials.</p>
-                        <div className="flex flex-col gap-2">
-                            <button className="w-full py-2 px-4 rounded-lg bg-purple-50 dark:bg-purple-900/10 text-purple-600 dark:text-purple-400 font-medium hover:bg-purple-100 dark:hover:bg-purple-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
-                                <Plus className="w-4 h-4" /> Add Creator
-                            </button>
-                            <button className="w-full py-2 px-4 rounded-lg border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 text-sm flex items-center justify-center gap-2 transition-colors">
-                                View Creators
-                            </button>
-                        </div>
-                    </div>
 
                     {/* 3. Postal Documentation (New) */}
                     <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
@@ -111,6 +71,23 @@ export default function DeveloperPage() {
                         <div className="flex flex-col gap-2">
                             <Link href="/admin" className="w-full py-2 px-4 rounded-lg bg-orange-50 dark:bg-orange-900/10 text-orange-600 dark:text-orange-400 font-medium hover:bg-orange-100 dark:hover:bg-orange-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
                                 <Settings className="w-4 h-4" /> Go to Panel
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Course Mode Requests (Approvals) */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
+                        <div className="flex items-start justify-between mb-4">
+                            <div className="p-3 bg-violet-100 dark:bg-violet-900/30 rounded-xl text-violet-600 dark:text-violet-400 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                                <Repeat className="w-6 h-6" />
+                            </div>
+                            <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-violet-100 dark:bg-zinc-800 text-violet-700 dark:text-violet-400 rounded-md">Approvals</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Course Mode Requests</h3>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">Review and approve user requests for switching between LDCE IP and PS Group B course modes.</p>
+                        <div className="flex flex-col gap-2">
+                            <Link href="/developer/course-mode-requests" className="w-full py-2 px-4 rounded-lg bg-violet-50 dark:bg-violet-900/10 text-violet-600 dark:text-violet-400 font-medium hover:bg-violet-100 dark:hover:bg-violet-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
+                                <Shield className="w-4 h-4" /> View Requests
                             </Link>
                         </div>
                     </div>

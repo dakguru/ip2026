@@ -14,7 +14,7 @@ export interface User {
     lastPlatform?: 'desktop' | 'mobile_browser' | 'app';
     hasSeenCoursePrompt?: boolean;
     passwordHash?: string; // Optional in interface, but mostly present
-    role?: 'user' | 'admin';
+    role?: 'user' | 'admin' | 'super_admin';
     membershipLevel?: 'free' | 'silver' | 'gold' | 'diamond' | 'platinum';
     membershipValidity?: string;
     planId?: string;

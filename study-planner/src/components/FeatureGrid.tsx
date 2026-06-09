@@ -23,7 +23,8 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
         users: 0,
         membership: 0,
         mockTests: 0,
-        system: 0
+        system: 0,
+        courseMode: 0
     });
 
     useEffect(() => {
@@ -44,7 +45,8 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                             users: unread.filter((n: any) => ['enrollment', 'community_post', 'new_user', 'user_register'].includes(n.type)).length,
                             mockTests: unread.filter((n: any) => n.type === 'purchase' && n.title.toLowerCase().includes('mock test')).length,
                             membership: unread.filter((n: any) => n.type === 'purchase' && !n.title.toLowerCase().includes('mock test')).length,
-                            system: unread.filter((n: any) => ['deployment', 'system', 'alert'].includes(n.type)).length
+                            system: unread.filter((n: any) => ['deployment', 'system', 'alert'].includes(n.type)).length,
+                            courseMode: unread.filter((n: any) => n.type === 'course_mode_request').length
                         });
                     }
                 } catch (e: any) {
@@ -291,6 +293,10 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                                         <div className="flex justify-between items-center text-[10px] p-1 px-2 bg-zinc-50 dark:bg-zinc-800/50 rounded border border-zinc-100 dark:border-zinc-800">
                                             <span className="text-zinc-500 font-semibold uppercase tracking-wide">System</span>
                                             <span className={`font-bold ${unreadDetails.system > 0 ? 'text-red-600' : 'text-zinc-400'}`}>{unreadDetails.system}</span>
+                                        </div>
+                                        <div className="flex justify-between items-center text-[10px] p-1 px-2 bg-zinc-50 dark:bg-zinc-800/50 rounded border border-zinc-100 dark:border-zinc-800">
+                                            <span className="text-zinc-500 font-semibold uppercase tracking-wide">Course Switch</span>
+                                            <span className={`font-bold ${unreadDetails.courseMode > 0 ? 'text-violet-600' : 'text-zinc-400'}`}>{unreadDetails.courseMode}</span>
                                         </div>
                                     </div>
                                 </div>

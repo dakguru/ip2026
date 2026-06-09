@@ -1,7 +1,7 @@
 
 import Notification from '@/models/Notification';
 
-export type NotificationType = 'system' | 'enrollment' | 'purchase' | 'coupon_claim' | 'coupon_redeem' | 'membership_upgrade' | 'community_post' | 'community_comment' | 'admin_message' | 'deployment' | 'new_user' | 'user_register' | 'mock_test';
+export type NotificationType = 'system' | 'enrollment' | 'purchase' | 'coupon_claim' | 'coupon_redeem' | 'membership_upgrade' | 'community_post' | 'community_comment' | 'admin_message' | 'deployment' | 'new_user' | 'user_register' | 'mock_test' | 'course_mode_request' | 'course_mode_approved' | 'course_mode_rejected';
 
 export async function createNotification(
     type: NotificationType,

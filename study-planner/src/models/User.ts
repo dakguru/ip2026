@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
     gender: { type: String },
     courseMode: { type: String, enum: ['LDCE_IP', 'PS_GR_B'], default: 'LDCE_IP' },
     hasSeenCoursePrompt: { type: Boolean, default: false },
-    role: { type: String, default: 'user', enum: ['user', 'admin'] },
+    role: { type: String, default: 'user', enum: ['user', 'admin', 'super_admin'] },
     membershipLevel: { type: String, default: 'free', enum: ['free', 'silver', 'gold', 'diamond', 'platinum'] },
     membershipValidity: { type: Date }, // Date when membership expires
     planId: { type: String }, // ID of the plan purchased
