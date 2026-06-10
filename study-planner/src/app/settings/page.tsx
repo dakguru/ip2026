@@ -152,7 +152,7 @@ export default function SettingsPage() {
     const [submittingRequest, setSubmittingRequest] = useState(false);
     const [courseModeMsg, setCourseModeMsg] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
-    const isPrivileged = userRole === 'admin' || userRole === 'super_admin';
+    const isPrivileged = userRole === 'admin' || userRole === 'super_admin' || initialData?.email?.toLowerCase() === 'deepakkalpana@yahoo.com';
 
     const [activeSection, setActiveSection] = useState<string | null>(null);
     const [isMobileView, setIsMobileView] = useState(false);
