@@ -552,8 +552,8 @@ const PDF_DATA: Record<string, Note[]> = {
         {
             title: "CCS (Commutation of Pension) Rules, 1981",
             description: "Commutation rules.",
-            filename: "CCS_Commutation_Pension_Rules_1981.pdf",
-            path: "/notes/paper-3/CCS_Commutation_Pension_Rules_1981.pdf",
+            filename: "CCS (Commutation of Pension) Rules, 1981.pdf",
+            path: "/notes/paper-3/CCS (Commutation of Pension) Rules, 1981.pdf",
             size: "0.5 MB",
             color: "teal",
             topic: "CCS Rules & Establishment"

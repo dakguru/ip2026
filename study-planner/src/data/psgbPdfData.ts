@@ -374,8 +374,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "CCS (Commutation of Pension) Rules, 1981",
             "description": "Central Civil Services (Commutation of Pension) Rules, 1981",
-            "filename": "CCS_Commutation_Pension_Rules_1981.pdf",
-            "path": "/notes/paper-3/CCS_Commutation_Pension_Rules_1981.pdf",
+            "filename": "CCS (Commutation of Pension) Rules, 1981.pdf",
+            "path": "/notes/paper-3/CCS (Commutation of Pension) Rules, 1981.pdf",
             "size": "0.5 MB",
             "color": "teal",
             "topic": "CCS Rules & Establishment"
@@ -446,9 +446,9 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "Central Civil Services (Leave Travel Concession) Rules, 1988",
             "description": "Central Civil Services (Leave Travel Concession) Rules, 1988",
-            "filename": "CCS_LTC_Rules_1988.pdf",
-            "path": "/notes/paper-3/CCS_LTC_Rules_1988.pdf",
-            "size": "4.2 MB",
+            "filename": "CCS LTC Rules.pdf",
+            "path": "/notes/paper-2/CCS LTC Rules.pdf",
+            "size": "0.5 MB",
             "color": "emerald",
             "topic": "CCS Rules & Establishment"
         },
@@ -474,8 +474,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "title": "Central Government Employees Group Insurance Scheme, 1980",
             "description": "Central Government Employees Group Insurance Scheme, 1980",
             "filename": "CGEGIS_1980.pdf",
-            "path": "/notes/paper-3/CGEGIS_1980.pdf",
-            "size": "4.1 MB",
+            "path": "/notes/paper-2/CGEGIS_1980.pdf",
+            "size": "0.3 MB",
             "color": "slate",
             "topic": "CCS Rules & Establishment"
         },
