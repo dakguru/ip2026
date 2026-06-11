@@ -129,8 +129,7 @@ export const PSGB_MOCK_SCHEDULE: PsgbMockTestWeek[] = [
             "CCS (Revised Pay) Rules, 2016",
             "CEA & Hostel Subsidy Rules",
             "CGEGIS, 1980",
-            "Postal Manual Volume III",
-            "P&T FHB Vol I (Part 1)"
+            "Postal Manual Volume III"
         ],
         saturdayDate: "2026-06-13",
         sundayDate: "2026-06-14"
