@@ -137,7 +137,7 @@ export const PSGB_MOCK_SCHEDULE: PsgbMockTestWeek[] = [
     {
         week: 12,
         topics: [
-            "P&T FHB Vol I (Part 2)",
+            "P&T FHB Vol I",
             "Postal FHB Vol II",
             "Interface with IPPB",
             "Preservation of Records",
