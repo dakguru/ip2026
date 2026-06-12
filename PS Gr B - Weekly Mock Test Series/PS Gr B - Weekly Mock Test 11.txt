@@ -1,0 +1,899 @@
+Q1. Which of the following categories of employees is covered under the Central Government Employees Group Insurance Scheme (CGEGIS), 1980?
+A. Persons recruited in the Central Government after attaining the age of 50 years
+B. Civilian employees paid from the Defence Services Estimates
+C. Persons on deputation to the Central Government from State Governments
+D. Part-time and ad hoc employees
+Answer: B
+Explanation: Civilian employees paid from the Defence Services Estimates are covered under the Scheme. The Scheme does not apply to persons recruited after attaining 50 years of age, persons on deputation from State Governments, or part-time and ad hoc employees.
+
+Q2. Consider the following statements regarding the Central Government Employees Group Insurance Scheme (CGEGIS):
+
+1. The scheme is compulsory for all regular employees, including canteen employees who were conferred the status of Government employees w.e.f. 01-10-1991.
+2. The Scheme funds are apportioned in the ratio of 31.25% for the Insurance Fund and 68.75% for the Savings Fund w.e.f. 01-01-1988 onwards.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: The scheme is compulsory for regular employees including canteen employees. Statement 2 is not correct because the apportionment w.e.f. 01-01-1988 onwards is Insurance Fund 30% and Savings Fund 70%.
+
+
+
+Q3. A Group 'C' employee is promoted to Group 'B' on a regular basis on 15th July 2025. What will be his CGEGIS monthly subscription for the month of November 2025?
+A. Rs. 30
+B. Rs. 60
+C. Rs. 120
+D. Rs. 15
+Answer: A
+Explanation: On regular promotion from one Group to another after 1st January in any year, the enhanced subscription is raised only from the 1st January of the next year. The Group 'C' rate of subscription is Rs. 30 per month (w.e.f. 01.01.2020). Therefore, his subscription remains Rs. 30 (the current Group 'C' rate) till the end of December 2025, and rises to the Group 'B' rate of Rs. 60 only from 01.01.2026.
+
+Q4. In the event a Government servant disappears and remains untraceable, after what period can the insurance cover be paid to the nominee or heirs?
+A. After a period of one year following the month of disappearance
+B. After a period of three years following the month of disappearance
+C. After a period of seven years following the month of disappearance
+D. Immediately upon lodging an FIR
+Answer: C
+Explanation: The insurance cover may be paid to the nominee or heirs of the missing employee after a period of seven years following the month of disappearance.
+
+Q5. Which of the following statements is/are not correct regarding the recovery of CGEGIS subscriptions?
+
+1. Subscription is recoverable whether the member is on duty, on leave, or under suspension.
+2. If an employee is on extraordinary leave (EOL), no arrears of subscription are recovered.
+3. No interest is levied on arrears of subscription if the non-recovery is due to delayed payment of salary.
+A. 1 only
+B. 2 only
+C. 1 and 3 only
+D. 2 and 3 only
+Answer: B
+Explanation: If the employee is on extraordinary leave (EOL), the arrears of subscription are recovered with interest in not more than three instalments upon resuming duty. Thus, statement 2 is not correct.
+
+
+
+Q6. Consider the following statements regarding the CGEGIS subscription:
+
+1. The first subscription falls due from the date of joining Central Government service.
+2. Under the new tax regime u/s 115BAC, deduction under Section 80C is fully admissible for the CGEGIS subscription.
+3. Transactions under the Scheme are booked in the Public Account of India under Major Head 8011.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Answer: B
+Explanation: The first subscription falls due from the date of joining. Transactions are booked under Major Head 8011. Statement 2 is incorrect because under the new tax regime u/s 115BAC, Chapter VI-A deductions such as 80C are not available.
+
+
+
+Q7. A Government servant dies while in service in November, before he could become a member of the CGEGIS Scheme on 1st January of the following year. During this pre-enrolment period, what benefits are payable to his family?
+A. The appropriate insurance cover and the accumulated Savings Fund
+B. The accumulated Savings Fund only
+C. The appropriate insurance cover only
+D. No benefits are payable as he was not formally enrolled
+Answer: C
+Explanation: If an employee dies while in service before becoming a member of the Scheme, his family/nominee is entitled to payment of the appropriate insurance cover only; no benefit is payable from the Savings Fund.
+
+Q8. Which of the following best describes the CGEGIS 'Family' definition for a male subscriber?
+A. Wife or wives, parents, children, minor brothers, unmarried sisters, deceased son's widow and children
+B. Wife (only one legally wedded), children, and dependent parents only
+C. Wife, major brothers, married sisters, and parents
+D. Wife, children, and parents-in-law
+Answer: A
+Explanation: For a male subscriber, 'Family' includes wife or wives, parents, children, minor brothers, unmarried sisters, deceased son’s widow and children, and paternal grandparent if no parent is alive.
+
+Q9. Which form is used by a Government servant who has a family and wishes to make a nomination under the CGEGIS rules?
+A. Form 7
+B. Form 8
+C. Form 11
+D. Form 13
+Answer: B
+Explanation: Form 8 is the nomination form when the Government servant has a family and wishes to nominate one member or more than one member thereof.
+
+Q10. An employee absconds and remains missing. What is the rule regarding the payment of CGEGIS subscriptions during the disappearance?
+A. No premium is payable from the month of disappearance.
+B. Full subscription is payable for one year following the month of disappearance, and thereafter premium for the insurance cover is payable for the next six years.
+C. Premium for the insurance cover only is payable for the first three years.
+D. Full subscription is payable for seven years.
+Answer: B
+Explanation: If an employee disappears, full subscription is payable for one year following the month of disappearance; thereafter, premium for the insurance cover is payable for the next six years.
+
+Q11. Consider the following statements about CGEGIS:
+
+1. Financing CGEGIS subscriptions from GPF/CPF is strictly not permissible under any circumstances.
+2. The working of the Scheme is reviewed every three years to ensure it remains self-financing.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Financing from GPF/CPF is permissible in exceptional cases where the employee's financial position does not permit contributing to both, allowing a non-refundable withdrawal equivalent to one year's subscription. The working of the scheme is reviewed every three years.
+
+
+
+Q12. What is the monthly subscription and insurance cover for a Group 'B' employee under CGEGIS?
+A. Rs. 30 per month / Rs. 30,000 cover
+B. Rs. 60 per month / Rs. 60,000 cover
+C. Rs. 120 per month / Rs. 1,20,000 cover
+D. Rs. 90 per month / Rs. 90,000 cover
+Answer: B
+Explanation: For Group 'B', the monthly subscription is Rs. 60 and the insurance cover is Rs. 60,000.
+
+Q13. In case a person eligible to receive the CGEGIS insurance amounts is charged with murdering the employee, which of the following is correct?
+A. The insurance amount is paid immediately to the legal heirs.
+B. The insurance amount shall not be paid to him/her until the conclusion of the criminal proceedings.
+C. The insurance amount is paid to him/her, but the savings fund is withheld.
+D. The insurance amount is paid into a court escrow account with penal interest.
+Answer: B
+Explanation: If a person eligible is charged with the offence of murdering the employee, the insurance amount shall not be paid to him/her until the conclusion of the criminal proceedings. No interest is payable on account of the resulting delay.
+
+Q14. Which of the following statements is not correct regarding the CGEGIS Savings Fund Tables of Benefits?
+A. They are issued by the Department of Expenditure on a quarterly basis from 01-01-2017 onwards.
+B. They are worked out by IRDAI on the basis of the interest rate notified by the Department of Economic Affairs.
+C. The interest is compounded annually.
+D. The rate remains aligned with the GPF interest rate.
+Answer: C
+Explanation: The interest rate is compounded quarterly, not annually.
+
+Q15. Can an employee assign their CGEGIS insurance cover and Savings Fund accumulation?
+A. No, assignment is strictly prohibited.
+B. Yes, in favour of a recognised financial institution as security for loans for the construction/purchase of a house/flat.
+C. Yes, to any private money lender.
+D. Yes, but only the Insurance Cover can be assigned, not the Savings Fund.
+Answer: B
+Explanation: Employees may assign their insurance cover and accumulations in the Savings Fund in favour of a recognised financial institution as security for loans for the construction/purchase of a house/flat.
+
+Q16. If there is no valid nomination for CGEGIS and no valid nomination under GPF/CPF, how is the payment made?
+A. It is forfeited to the Government.
+B. It is paid to the oldest surviving member of the family.
+C. It is paid in equal shares to the widow(s), minor sons, and unmarried daughters.
+D. It requires a mandatory succession certificate regardless of family composition.
+Answer: C
+Explanation: If there is no valid nomination even for GPF/CPF, payment is made in equal shares to the widow(s), minor sons, and unmarried daughters.
+
+Q17. Under CGEGIS, Form 11 is used for:
+A. Nomination when the Government servant has no family.
+B. Request for assignment of the insurance cover/Savings Fund in favour of a recognised financial institution.
+C. Permission for assignment by the Head of Department.
+D. Group-wise register of members.
+Answer: B
+Explanation: Form 11 is the request for assignment of the insurance cover/Savings Fund in favour of a recognised financial institution.
+
+Q18. According to the CGEGIS rules, Erstwhile Group 'D' employees placed in PB-1 with Grade Pay Rs. 1,800 and classified as Group 'C' subscribe at what rate per month?
+A. Rs. 15
+B. Rs. 30
+C. Rs. 60
+D. Rs. 120
+Answer: B
+Explanation: Erstwhile Group 'D' employees placed in PB-1 and classified as Group 'C' subscribe @ Rs. 30 per month from 1 January 2011.
+
+Q19. Consider the following statements regarding recovery of CGEGIS Government Dues:
+
+1. No loans or advances are permissible against the accumulations in the Insurance Fund/Savings Fund.
+2. Government dues can be heavily recovered from the amounts payable under the Scheme without the employee's authorization.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: No loans or advances are permissible against the accumulations. No recovery can be made from the amounts payable except dues under the Scheme itself, or as specially authorised by the employee.
+
+
+
+Q20. From which date are employees enrolled as members of the CGEGIS Scheme?
+A. The exact date of joining service
+B. The 1st day of the month following their joining
+C. The 1st January every year
+D. The 1st April every year
+Answer: C
+Explanation: Employees are enrolled as members of the Scheme only from 1st January every year.
+
+Q21. According to the CCS (LTC) Rules, 1988, which of the following is NOT covered in the definition of "family"?
+A. Unmarried children wholly dependent on the Government servant
+B. Parents wholly dependent on the Government servant
+C. Parents-in-law wholly dependent on the Government servant
+D. Unmarried minor brothers wholly dependent on the Government servant
+Answer: C
+Explanation: Parents-in-law, grandparents, and children of divorced/abandoned sisters are NOT covered in the definition of family.
+
+Q22. Consider the following statements regarding LTC entitlement:
+
+1. LTC is admissible during maternity leave, child adoption leave, and study leave.
+2. Leave is not necessary for a Government servant to travel on LTC if the journey falls on a weekend holiday.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: LTC is admissible during maternity leave, child adoption leave, and study leave. Statement 2 is incorrect because LTC is NOT admissible for journeys during weekend holidays without availing any leave; leave is necessary for the Government servant.
+
+
+
+Q23. An official appointed to the Central Government as a fresh recruit completes one year of service on 15.05.2025. Which of the following is correct regarding his/her LTC entitlement in the first 4-year block?
+A. He/she is entitled to All India LTC on all four occasions.
+B. He/she may travel to home town on three occasions and to any place in India on the fourth occasion.
+C. Unused annual LTC can be carried forward to the next year.
+D. He/she is entitled to only Home Town LTC for the first eight years.
+Answer: B
+Explanation: Fresh recruits may travel to their home town on three occasions in a block of four years and to any place in India on the fourth occasion. The annual LTC of a fresh recruit lapses if not availed in that year; there is no carry-forward.
+
+Q24. A Government servant in Pay Level 6 wishes to travel by air on LTC. Under normal entitlements, which of the following statements is correct?
+A. The official is entitled to Economy class air travel on LTC.
+B. Air travel is allowed for LTC only for officials in Pay Level 9 and above.
+C. The official is entitled to Business class air travel.
+D. The official can travel by air, but must book through unauthorized travel agents.
+Answer: B
+Explanation: For LTC, air travel is admissible only to officials in Pay Level 9 and above. Officials in Level 6 to 8 are entitled to air travel for TA (official tour) only, not for LTC.
+
+Q25. An eligible Government servant wishes to change their declared Home Town. What is the statutory rule governing this?
+A. It can be changed once every four years.
+B. It can be changed twice during the entire service.
+C. It can be changed only once during the entire service of the Government servant in exceptional circumstances.
+D. It cannot be changed under any circumstances.
+Answer: C
+Explanation: In exceptional circumstances, a change in the declaration may be made only once during the entire service of the Government servant, authorized by the Head of the Department.
+
+Q26. For a dependent family member to be eligible for LTC, what is the income dependency criterion as per the 7th CPC position?
+A. Income from all sources does not exceed Rs. 3,500 per month.
+B. Income from all sources does not exceed Rs. 9,000 per month plus Dearness Relief thereon.
+C. Income from all sources does not exceed Rs. 15,000 per month.
+D. There is no income dependency criterion for parents.
+Answer: B
+Explanation: A family member is deemed wholly dependent only if his/her income from all sources does not exceed the minimum family pension of Rs. 9,000 per month plus Dearness Relief thereon.
+
+Q27. Consider the following statements regarding LTC advance and claim time limits:
+
+1. If an advance is drawn, the claim must be submitted within one month of completion of the return journey.
+2. If no advance is drawn, the claim must be submitted within three months after completion of the return journey.
+3. If an advance was drawn and the claim is delayed, relaxation up to three months is permissible provided the employee refunds only the unutilised portion.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Answer: A
+Explanation: Claims must be submitted within 1 month if an advance is drawn, and 3 months if no advance is drawn. Statement 3 is incorrect because the operative condition for the relaxation is the refund of the ENTIRE amount of advance (not merely the unutilised portion) in one lump sum with penal interest.
+
+
+
+Q28. A Government servant travelling by own car on LTC claims road mileage where no specific rates are prescribed. What is the applicable rate w.e.f. 01.01.2024?
+A. Rs. 24 per km
+B. Rs. 12 per km
+C. Rs. 30 per km
+D. Rs. 15 per km
+Answer: C
+Explanation: Where no specific rates are prescribed, the rate for own car/taxi rises by 25% w.e.f 01.01.2024 (as DA reached 50%) to Rs. 30 per km.
+
+Q29. According to DoP&T guidelines on booking of air tickets on LTC, which of the following is NOT an Authorised Travel Agent (ATA)?
+A. M/s Balmer Lawrie & Company Limited
+B. MakeMyTrip
+C. IRCTC
+D. M/s Ashok Travels & Tours
+Answer: B
+Explanation: Tickets must be purchased only from the three ATAs: Balmer Lawrie, Ashok Travels & Tours, and IRCTC.
+
+Q30. A Government servant whose Home Town and Headquarters are the same location wants to avail the Special Dispensation Scheme (SDS) for NER/J&K/Ladakh/A&N. What is the applicable provision?
+A. They can convert their Home Town LTC to visit these regions.
+B. They are not allowed the conversion as they are not eligible for Home Town LTC, but they may use their All India LTC.
+C. They can avail SDS by converting the All India LTC.
+D. They are completely barred from visiting NER under any LTC.
+Answer: B
+Explanation: Government servants whose home town and headquarters are the same are not allowed the conversion (they are not eligible for Home Town LTC); they may, however, use their All India LTC for these regions.
+
+Q31. Consider the following statements about leave encashment with LTC:
+
+1. Encashment of Earned Leave up to 10 days at a time is permissible while availing LTC.
+2. A balance of at least 30 days EL must remain after the encashment.
+3. Such encashment is deducted from the quantum of leave encashable at retirement.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. 3 only
+D. 1 and 2 only
+Answer: C
+Explanation: Encashment of EL up to 10 days is allowed and at least 30 days must remain. Statement 3 is incorrect because such encashment is NOT deducted from the quantum of leave encashable at retirement.
+
+
+
+Q32. If disciplinary proceedings initiated against a Government servant for preferring a fraudulent LTC claim result in the imposition of a penalty, what is the consequence on future LTC?
+A. The Government servant is debarred from LTC for life.
+B. The Government servant shall not be allowed the next two sets of LTC, in addition to the sets already withheld.
+C. The Government servant loses only the carried forward LTC.
+D. Only the Home Town LTC is withheld.
+Answer: B
+Explanation: If the proceedings result in the imposition of any penalty specified in Rule 11 of the CCS (CCA) Rules, 1965, the Government servant shall not be allowed the next two sets of LTC, in addition to the sets already withheld.
+
+Q33. A 6-year-old child travels with the Government servant on a train under LTC, and a separate berth is sought for the child. What is the reimbursement entitlement?
+A. Half adult fare
+B. Full adult fare
+C. Nil
+D. Actual fare paid, up to a maximum of 10% of adult fare
+Answer: B
+Explanation: For a child 5 years and under 12 years, if a separate berth/seat is sought, the full adult fare is reimbursed (actual fare as per the ticket option is reimbursed).
+
+Q34. Regarding the carryover of LTC, which of the following statements is correct for a block of four years?
+A. A Government servant can carry forward the All India LTC only if he has carried forward the Home Town LTC in respect of the second two-year sub-block.
+B. LTC can be carried forward up to the second year of the next block.
+C. Carryover is strictly prohibited for All India LTC.
+D. Fresh recruits can carry forward their unused annual LTC.
+Answer: A
+Explanation: A Government servant can carry forward the All India LTC for a block of four years only if he has carried forward the Home Town LTC in respect of the second two-year sub-block within that four-year block.
+
+Q35. Can a Government servant under suspension avail LTC for himself?
+A. Yes, but only with the permission of the Disciplinary Authority.
+B. Yes, for Home Town LTC only.
+C. No, a Government servant under suspension cannot avail LTC for self, but the members of his family are entitled to it.
+D. No, neither the Government servant nor his family can avail LTC during his suspension.
+Answer: C
+Explanation: A Government servant under suspension cannot avail LTC for self, but the members of his family are entitled to it.
+
+Q36. Which of the following trains are allowed for LTC travel under the DoP&T OM dated 14.01.2025?
+A. Rajdhani and Shatabdi only
+B. Tejas Express, Vande Bharat Express, and Humsafar Express only
+C. Rajdhani, Shatabdi, Duronto, Tejas Express, Vande Bharat Express, and Humsafar Express
+D. Only non-premium express trains
+Answer: C
+Explanation: Apart from the existing Rajdhani, Shatabdi and Duronto trains, travel by Tejas Express, Vande Bharat Express and Humsafar Express is also allowed under LTC.
+
+Q37. A non-air-entitled Government servant wishes to travel to Port Blair (A&N) under the Special Dispensation Scheme. From which notified rail-head is air travel allowed for reimbursement?
+A. Kolkata or Guwahati
+B. Kolkata, Chennai, or Visakhapatnam
+C. Delhi or Amritsar
+D. Mumbai or Chennai
+Answer: B
+Explanation: For Port Blair (A&N), the notified rail-heads from where air travel is allowed are Kolkata, Chennai, or Visakhapatnam.
+
+Q38. Consider the following statements regarding LTC advances:
+
+1. Advance may be granted up to 90% of the estimated fare for the journey both ways.
+2. For journeys by train, advance may be drawn up to 125 days before the proposed date of the journey.
+3. The Government servant must produce the outward journey tickets within 30 days of the drawal of the advance.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Answer: B
+Explanation: Advance may be granted up to 90% of the estimated fare. Train advance can be drawn up to 125 days before. Statement 3 is incorrect because the outward journey tickets must be produced within 10 days of the drawal of the advance.
+
+
+
+Q39. If an employee books an air ticket through an unauthorized travel agent and seeks relaxation, whose approval is required?
+A. Secretary, DoP&T
+B. The Financial Adviser of the Ministry/Department (or HoD of Joint Secretary level for attached/subordinate offices)
+C. The Drawing and Disbursing Officer (DDO)
+D. Under Secretary level officer
+Answer: B
+Explanation: In unavoidable circumstances, the Financial Adviser of the Ministry/Department (or HoD of Joint Secretary level for attached/subordinate offices) may grant relaxation.
+
+Q40. Under Rule 38-A of the CCS (Leave) Rules, 1972, what is the maximum number of days of Earned Leave a Government servant may encash while availing LTC over the entire service career?
+A. 30 days
+B. 60 days
+C. 180 days
+D. 300 days
+Answer: B
+Explanation: A Government servant may encash Earned Leave up to 10 days at a time while availing LTC, subject to a ceiling of 60 days in the entire career. As clarified by DoP&T O.M. No. 31011/06/2023-Estt.(A-IV) dated 29.03.2023, the leave so encashed at the time of LTC is NOT deducted from the maximum (300 days) encashable at the time of retirement; the two limits are separate (i.e., a total of 300 + 60 days over the career).
+
+Q41. What is the fixed amount for reimbursement of Children Education Allowance (CEA) per month per child w.e.f. 01.01.2024?
+A. Rs. 2250
+B. Rs. 2812.50
+C. Rs. 4500
+D. Rs. 5625
+Answer: B
+Explanation: The amount for reimbursement of Children Education Allowance will be Rs. 2812.50/- from 01.01.2024 per month (Fixed) per Child.
+
+Q42. For how many children can the reimbursement of Children Education Allowance/Hostel subsidy normally be claimed?
+A. Only for the eldest surviving child
+B. For the two eldest surviving children
+C. For up to three children
+D. For any number of children
+Answer: B
+Explanation: The reimbursement of Children Education Allowance/Hostel subsidy can be claimed only for the two eldest surviving children, with exceptions like multiple births on the second child-birth.
+
+Q43. Consider the following statements regarding Hostel Subsidy:
+
+1. The ceiling of Hostel subsidy is Rs. 8437.50/- from 01.01.2024 for an academic year.
+2. Hostel Subsidy is applicable only if the residential educational institution is located at least 50 KM from the residence of the Government servant.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Statement 1 is incorrect because Rs. 8437.50 is the revised Hostel Subsidy ceiling per month, not per academic year. Hostel Subsidy is applicable only in respect of a child studying in a residential education institution located at least 50 KM from the residence.
+
+
+
+Q44. What is the upper age limit for claiming CEA/Hostel Subsidy for a Divyang (Differently Abled) child?
+A. 20 years
+B. 22 years
+C. 25 years
+D. No age limit
+Answer: B
+Explanation: The upper age limit for Divyang children has been set at 22 years.
+
+Q45. If a child fails in a particular class, what happens to the reimbursement of CEA/Hostel Subsidy?
+A. It is permanently stopped for that child.
+B. It is stopped until the child passes the class.
+C. It shall not be stopped, as it has no nexus with the performance of the child.
+D. It is reduced by 50%.
+Answer: C
+Explanation: The reimbursement of CEA and Hostel Subsidy shall have no nexus with the performance of the child in his class. If a child fails, the reimbursement shall not be stopped.
+
+Q46. Both spouses are Government Servants. How can they claim the Children Education Allowance and Hostel Subsidy?
+A. Both can claim it concurrently for different children.
+B. Only one of them can avail reimbursement under Children Education Allowance and Hostel Subsidy.
+C. They can split the amount 50-50.
+D. They can both claim the full amount, effectively doubling the allowance.
+Answer: B
+Explanation: In case both the spouses are Govt. Servants, only one of them can avail reimbursement under Children Education Allowance and Hostel Subsidy.
+
+Q47. If the required certificate from the Head of the Institution is not obtained, what alternative document can a Government servant produce to claim CEA?
+A. A self-attested copy of the child's birth certificate
+B. A letter from the local municipal council
+C. A self-attested copy of the report card or self-attested receipt(s) including e-receipt(s)
+D. An affidavit from a notary public
+Answer: C
+Explanation: If Certificate is not obtained, the Govt. servant can produce Self-Attested copy of the report card or self-attested receipt(s) including e-receipt(s) confirming the fee deposited.
+
+Q48. Consider the following statements regarding the rate enhancements of CEA and Hostel Subsidy:
+
+1. The rate/ceiling automatically rises by 25% every time the Dearness Allowance goes up to 50%
+2. The fixed rate for Divyang Children is Rs. 5625/- per month from 01.01.2024.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: The rate/ceiling automatically raises by 25% every time the Dearness allowance goes up to 50%. The reimbursement for Divyang Children is double the normal rate, i.e., Rs. 5625/- from 01.01.2024.
+
+
+
+Q49. Which of the following is true regarding the admissibility of CEA for children studying through distance learning?
+A. CEA is strictly not allowed for correspondence or distance learning.
+B. CEA is allowed for distance learning only if the child is Divyang.
+C. CEA is allowed in case of children studying through "Correspondence or Distance Learning" subject to laid down conditions.
+D. Only Hostel Subsidy is allowed for distance learning.
+Answer: C
+Explanation: CEA is allowed in case of children studying through "Correspondence or Distance Learning" subject to conditions laid down.
+
+Q50. A Government servant is suspended from duty for six months. What is the status of their Children Education Allowance during this period?
+A. The allowance is suspended.
+B. The allowance is paid at half the normal rate.
+C. The allowance is admissible.
+D. The allowance is forfeited and cannot be claimed even after reinstatement.
+Answer: C
+Explanation: The Children Education Allowance or Hostel Subsidy shall be admissible to a Govt. Servant while he/she is on duty or is under suspension or is on leave.
+
+Q51. What is the rule for claiming CEA for the initial two years of a diploma/certificate course from a Polytechnic/ITI?
+A. It is never allowed.
+B. It is allowed irrespective of whether the child passed the 10th standard.
+C. It is allowed if the child pursues the course after passing 10th standard and the Govt servant has not been granted CEA for studies in 11th and 12th standards.
+D. It is allowed simultaneously with studies in the 11th standard.
+Answer: C
+Explanation: CEA is admissible for the initial two years of a diploma course if the child pursues it after passing 10th standard and the Govt servant has not been granted CEA in respect of the child for studies in 11th and 12th standards.
+
+Q52. A Government servant retires in November during an academic session. How is the CEA/Hostel Subsidy handled?
+A. It stops immediately in November.
+B. It is admissible till the end of the academic year in which the Govt. Servant ceases to be in service.
+C. It is converted to a pension benefit.
+D. It is only admissible if the child is in the 12th standard.
+Answer: B
+Explanation: In case of retirement, CEA/Hostel Subsidy shall be admissible till the end of the academic year in which the Govt. Servant ceases to be in service.
+
+Q53. Are the Hostel Subsidy and Children Education Allowance mutually exclusive?
+A. Yes, an employee can claim only one of them.
+B. No, the Hostel Subsidy and Children Education Allowance can be claimed concurrently.
+C. Yes, except for Divyang children.
+D. No, but the Hostel Subsidy is deducted from the CEA.
+Answer: B
+Explanation: The Hostel Subsidy and Children Education allowance can be claimed concurrently.
+
+Q54. If a child completes 20 years of age half way through the academic session, what is the status of the CEA claim?
+A. The claim is rejected for the entire year.
+B. The allowance is prorated up to the month the child turns 20.
+C. The CEA is admissible till the end of the academic session.
+D. The allowance must be refunded.
+Answer: C
+Explanation: If a child completes 20/22 years half way through the academic session, the CEA/ Hostel Subsidy is admissible till the end the academic session.
+
+Q55. In case of a failure of sterilization operation, how does the two-children norm apply for CEA?
+A. The CEA is strictly limited to the first two children only.
+B. The CEA would be admissible in respect of children born out of the first instance of such failure beyond the usual two children norm.
+C. The allowance is given but at a 50% reduced rate for the third child.
+D. The employee loses the allowance for all children.
+Answer: B
+Explanation: In case of failure of sterilization operation, the CEA/Hostel Subsidy would be admissible in respect of children born out of the first instance of such failure beyond the usual two children norm.
+
+Q56. What happens if a child is admitted in the same class in another school after passing out of that class in the previous school?
+A. CEA shall be reimbursable normally.
+B. CEA shall be reimbursable at half rate.
+C. CEA shall not be reimbursable.
+D. Only Hostel Subsidy is allowed.
+Answer: C
+Explanation: If the child is admitted in the same class in another school, although the child has passed out the same class in previous school or in the mid-session, CEA shall not be reimbursable.
+
+Q57. For schools not affiliated to any board at the nursery/primary level, what is the criteria for CEA reimbursement?
+A. The school must be an English-medium school.
+B. The reimbursement is allowed for children studying in a recognized school/institution.
+C. Reimbursement is not possible for unaffiliated schools.
+D. The school must charge fees above a certain threshold.
+Answer: B
+Explanation: For unaffiliated schools at the nursery/primary level, the reimbursement may be allowed for children studying in a recognized school/institution (recognized by the Central/State Govt. or UT).
+
+Q58. What is the frequency of reimbursement for CEA and Hostel Subsidy?
+A. Monthly
+B. Quarterly
+C. Once in a financial year after completion of the financial year
+D. Once at the end of the child's schooling
+Answer: C
+Explanation: The reimbursement of CEA and Hostel subsidy will be done just once in a financial year after completion of the financial year.
+
+Q59. If a Government servant takes Extra Ordinary Leave (EOL) which is later treated as "dies non", how does it affect CEA?
+A. The CEA is paid in full regardless.
+B. The Govt. servant shall not be eligible for the CEA/Hostel Subsidy for that period.
+C. The CEA is paid, but Hostel subsidy is not.
+D. The leave balance is adjusted instead of stopping the allowance.
+Answer: B
+Explanation: Any period which is treated as "dies non", the Govt. servant shall not be eligible for the CEA/Hostel Subsidy for that period.
+
+Q60. Which of the following conditions allows CEA for an unrecognised institution?
+A. If the child studies in a private school in a foreign country.
+B. If the child is Divyang and studying in an institution aided or approved by the Central/State Govt.
+C. If the school is in a rural area.
+D. It is never allowed for unrecognised institutions.
+Answer: B
+Explanation: In case of a Divyang child studying in an institution aided or approved by the Central/State Govt. or whose fees are approved by these authorities, CEA shall be reimbursed irrespective of whether the institution is 'Recognized' or not.
+
+Q61. Under the CCS (Revised Pay) Rules, 2016, what is the definition of "existing basic pay"?
+A. Pay drawn in the prescribed existing Pay Band and Grade Pay or Pay in the existing scale
+B. Pay drawn including House Rent Allowance
+C. The sum of existing pay, dearness allowance, and transport allowance
+D. Pay drawn only in a substantive capacity, excluding officiating capacity
+Answer: A
+Explanation: "Existing basic pay" means pay drawn in the prescribed existing Pay Band and Grade Pay or Pay in the existing scale.
+
+Q62. What fitment factor was used to multiply the existing basic pay to arrive at the pay in the applicable Level in the Pay Matrix under the CCS (Revised Pay) Rules, 2016?
+A. 2.25
+B. 2.57
+C. 2.67
+D. 2.81
+Answer: B
+Explanation: The pay in the applicable Level in the Pay Matrix shall be the pay obtained by multiplying the existing basic pay by a factor of 2.57.
+
+Q63. Consider the following statements regarding the date of next increment in the revised pay structure:
+
+1. There shall be two dates for the grant of increment, namely 1st January and 1st July of every year.
+2. An employee shall be entitled to both annual increments on 1st January and 1st July of the same year.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: There shall be two dates for grant of increment (1st January and 1st July), but an employee shall be entitled to only one annual increment depending on the date of appointment, promotion, etc.
+
+
+
+Q64. A Government servant gets promoted to a higher level. How is the pay fixed in the revised pay structure?
+A. Two increments are given in the Level from which the employee is promoted.
+B. One increment is given in the Level from which the employee is promoted, and he is placed at a Cell equal to or next higher in the Level of the post to which promoted.
+C. The pay remains the same, but the grade pay is added.
+D. The pay is fixed at the lowest cell of the new level regardless of current pay.
+Answer: B
+Explanation: Fixation involves giving one increment in the Level from which the employee is promoted and placing him at a Cell equal to the figure so arrived at in the Level to which promoted (or the next higher Cell if an exact match is not available).
+
+Q65. Within what time limit must a Government servant exercise the option to retain the existing pay structure from the date of notification of the CCS (Revised Pay) Rules, 2016?
+A. One month
+B. Three months
+C. Six months
+D. One year
+Answer: B
+Explanation: The option shall be exercised in writing so as to reach the authority within three months of the date of notification of these rules.
+
+Q66. What happens if the intimation regarding the pay structure option is not received by the authority within the specified time?
+A. The employee's pay is frozen.
+B. The employee is deemed to have elected to be governed by the revised pay structure with effect from 1st January, 2016.
+C. The employee remains in the pre-revised scale indefinitely.
+D. A disciplinary proceeding is automatically initiated.
+Answer: B
+Explanation: If intimation is not received within the time specified, the Government servant shall be deemed to have elected to be governed by the revised pay structure w.e.f. 1st day of January, 2016.
+
+Q67. Under the CCS (Revised Pay) Rules, 2016, if the existing emoluments exceed the revised emoluments, how is the difference treated?
+A. It is recovered from the employee.
+B. It is allowed as personal pay to be absorbed in future increases in pay.
+C. It is ignored and the pay is fixed at the revised scale.
+D. It is paid as a one-time lump sum bonus.
+Answer: B
+Explanation: Where the existing emoluments exceed the revised emoluments, the difference shall be allowed as personal pay to be absorbed in future increases in pay.
+
+Q68. Which of the following categories of employees are NOT governed by the CCS (Revised Pay) Rules, 2016?
+A. Persons serving in the Indian Audit and Accounts Department
+B. Persons paid out of contingencies
+C. Regular civil service employees whose pay is debitable to Civil Estimates
+D. Employees who were on study leave on 1st January 2016
+Answer: B
+Explanation: The rules shall not apply to persons paid out of contingencies, persons not in whole-time employment, etc.
+
+Q69. A senior Government servant promoted before 1st January 2016 draws less pay in the revised pay structure than his junior promoted after 1st January 2016. Under what condition is the senior's pay stepped up?
+A. The senior must have a better APAR grading.
+B. The anomaly must be directly as a result of the application of FR 22 or any other rule regulating pay fixation on promotion in the revised pay structure.
+C. The junior officer was drawing more pay in the existing pay structure by virtue of advance increments.
+D. Stepping up is not allowed under the 2016 rules.
+Answer: B
+Explanation: The pay is stepped up subject to conditions, one being that the anomaly is directly as a result of the application of FR 22 or any other rule regulating pay fixation. If the junior had advance increments, stepping up is not invoked.
+
+Q70. For medical officers, how is the Non-Practicing Allowance (NPA) treated during the initial fixation of pay under the revised pay structure?
+A. NPA is abolished.
+B. The pre-revised NPA and DA thereon are ignored.
+C. The existing basic pay is multiplied by 2.57, and DA on pre-revised NPA as on 01.01.2006 is added to locate the cell; the pre-revised NPA is then added to the revised basic pay.
+D. The basic pay and NPA are clubbed and multiplied by 2.57.
+Answer: C
+Explanation: For medical officers, existing basic pay is multiplied by 2.57, the DA on pre-revised NPA (as on 01.01.2006) is added to locate the cell. Then the pre-revised NPA is added to the fixed pay until revised NPA rates are decided.
+
+Q71. Consider the following statements about the maximum limit for Basic Pay plus Non-Practicing Allowance (NPA):
+
+1. The basic pay plus NPA shall not exceed Rs. 2,37,500.
+2. This limit is the average of basic pay of the revised scale applicable to the Apex Level and the Level of the Cabinet Secretary.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: The basic pay plus NPA shall not exceed the average of basic pay of the revised scale applicable to the Apex Level (2,25,000) and the Cabinet Secretary (2,50,000), which is Rs. 2,37,500.
+
+
+
+Q72. If an employee is appointed or promoted under MACPS between 2nd day of January 2016 and 1st day of July 2016, when will their next increment accrue?
+A. 1st day of January 2017
+B. 1st day of July 2017
+C. 1st day of July 2016
+D. 1st day of January 2016
+Answer: A
+Explanation: For an employee appointed/promoted between 2nd Jan and 1st July, who did not draw any increment on 1st July 2016, the next increment shall accrue on 1st day of January 2017.
+
+Q73. A Government servant is under suspension on 1st January 2016. How is their pay in the revised pay structure regulated?
+A. They are immediately given the revised pay.
+B. They shall continue to draw subsistence allowance based on the existing pay structure, and revised pay shall be subject to the final order.
+C. They are barred from the 2016 pay revision entirely.
+D. The subsistence allowance is calculated on the revised pay immediately.
+Answer: B
+Explanation: A Government servant under suspension shall continue to draw subsistence allowance based on existing pay structure and his pay in the revised pay structure shall be subject to the final order.
+
+Q74. For employees appointed by direct recruitment on or after 1st January 2016, how is their pay fixed?
+A. At the maximum cell of the Level.
+B. At the minimum pay or the first Cell in the Level, applicable to the post.
+C. Using the 2.57 multiplier on the pre-revised minimum pay.
+D. By granting one advance increment.
+Answer: B
+Explanation: The pay of employees appointed by direct recruitment on or after 1st day of January, 2016 shall be fixed at the minimum pay or the first Cell in the Level.
+
+Q75. In cases where two existing Grades in hierarchy are merged, what is the provision if a junior draws more pay in the revised pay structure than a senior?
+A. The senior's pay is frozen.
+B. The junior's pay is reduced to match the senior.
+C. The pay of the senior government servant shall be stepped up to that of his junior from the same date.
+D. Both are granted advance increments.
+Answer: C
+Explanation: Where two existing Grades are merged and the junior happens to draw more pay in the revised pay structure, the pay of the senior shall be stepped up to that of his junior.
+
+Q76. How is the option to retain the existing pay structure treated if the person died on or after 1st January 2016 and could not exercise it?
+A. They are deemed to have opted for the existing pay structure.
+B. They are deemed to have opted for the revised pay structure or such later date as is most beneficial to their dependents.
+C. The dependent loses all arrears.
+D. The Head of Office arbitrarily fixes the pay.
+Answer: B
+Explanation: Persons who died on or after 1st Jan 2016 and could not exercise the option are deemed to have opted for the revised pay structure or such later date as is most beneficial to their dependents.
+
+Q77. Officers posted on deputation to the Central Government under the Central Staffing Scheme face a situation where their revised pay happens to be lower than what they would draw in their parent cadre. How is this resolved?
+A. They must return to their parent cadre.
+B. Such difference in the pay shall be protected in the form of Personal Pay.
+C. They are paid a lump sum compensation.
+D. They draw the lower pay without protection.
+Answer: B
+Explanation: Such difference in the pay shall be protected in the form of Personal Pay with effect from the date of notification of these rules.
+
+Q78. In case a post was upgraded as a result of the 7th CPC recommendations, how is the existing basic pay arrived at before applying the 2.57 multiplier?
+A. By taking the old Pay Band and old Grade Pay.
+B. By adding the Pay drawn in the existing Pay Band plus the Grade Pay corresponding to the Level to which the post has been upgraded.
+C. By multiplying only the Pay Band by 2.57.
+D. By fixing the pay at the maximum of the upgraded level.
+Answer: B
+Explanation: The existing basic pay will be arrived at by adding the Pay drawn in the existing Pay Band plus the Grade Pay corresponding to the Level to which the post has been upgraded.
+
+Q79. Who holds the power to relax the provisions of the CCS (Revised Pay) Rules, 2016 in cases of undue hardship?
+A. The Prime Minister
+B. The Secretary, Department of Expenditure
+C. The President
+D. The Head of the Department
+Answer: C
+Explanation: Where the President is satisfied that the operation of all or any of the provisions causes undue hardship, he may, by order, dispense with or relax the requirements.
+
+Q80. An employee has an existing basic pay of Rs. 12,560 (Pay in PB Rs. 10,160 + Grade Pay Rs. 2,400). When multiplied by 2.57, the result is Rs. 32,279.20. How is this located in the Pay Matrix (Level 4)?
+A. It is rounded to 32,279 and if no identical cell is found, placed at the lower cell.
+B. It is rounded to 32,279 and if no identical cell is found, placed at the immediate next higher Cell.
+C. It is placed at Rs. 32,000.
+D. It is placed at Rs. 32,279 exactly as a special cell.
+Answer: B
+Explanation: The figure is rounded off to the nearest rupee, and if no identical cell is available, the pay shall be fixed at the immediate next higher Cell in that applicable Level.
+
+Q81. Under the Postal Manual Vol. III / CCS (CCA) Rules, which of the following scenarios mandates a formal inquiry (Rule 14 procedure) even when it is proposed to impose a minor penalty under Rule 16?
+A. Withholding increment of pay for a period of 1 year without cumulative effect
+B. Censure
+C. Withholding increment of pay for a period exceeding 3 years
+D. Recovery of pecuniary loss of Rs. 500
+Answer: C
+Explanation: A formal inquiry in the manner of Rule 14 must be held if it is proposed to withhold increment of pay for a period exceeding 3 years, or with cumulative effect, or if it adversely affects pension.
+
+Q82. According to Rule 10(2) of the CCS (CCA) Rules, a Government servant is placed under "deemed suspension" if he/she is detained in custody for a period exceeding:
+A. 12 hours
+B. 24 hours
+C. 48 hours
+D. 90 days
+Answer: C
+Explanation: A Government servant is deemed to be under suspension if he is detained in custody for a period exceeding 48 hours.
+
+Q83. Consider the following statements regarding the review of suspension under CCS (CCA) Rule 10:
+
+1. An order of suspension must be reviewed before the expiry of 90 days from the effective date.
+2. If review/extension is not done within 90 days, the suspension lapses automatically.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: A suspension order is reviewed before expiry of 90 days, and if not extended after review within this period, it is not valid (lapses automatically) based on R.10(7) and related case law.
+
+
+
+Q84. An official is placed under suspension during major-penalty proceedings. Ultimately, the proceedings end in the imposition of a minor penalty. How is the period of suspension generally treated under FR 54-B?
+A. As dies non
+B. As wholly unjustified, and the official is normally paid full pay and allowances for the period.
+C. As unauthorized absence
+D. As leave without pay
+Answer: B
+Explanation: Where proceedings instituted for a major penalty finally end in a minor penalty, the suspension is generally treated as wholly unjustified, entailing full pay and allowances for the period under FR 54-B.
+
+Q85. Which of the following deductions from the subsistence allowance of a suspended Government servant is strictly PROHIBITED?
+A. Income tax
+B. House rent for Government accommodation
+C. Subscription to the General Provident Fund (GPF)
+D. Recovery of CGHS subscription
+Answer: C
+Explanation: Subscription to GPF and amounts due on court attachments are prohibited deductions from subsistence allowance.
+
+Q86. An Enquiry Officer (EO) is appointed to conduct a formal inquiry under Rule 14. Which of the following statements about the EO is correct?
+A. The EO can be the officer who held the preliminary enquiry and expressed a definite adverse opinion.
+B. The EO must be an official who is a material witness in the case.
+C. The EO should not be lower in status than the accused officer.
+D. The EO must always be a retired judge.
+Answer: C
+Explanation: The EO should not be lower in status than the accused officer and should not be the officer who held the preliminary enquiry expressing a definite adverse opinion, nor a material witness.
+
+Q87. A serving Government servant wishes to act as a Defence Assistant (DA) for his colleague. What is the maximum limit of pending disciplinary cases he can have in hand at a time?
+A. Seven
+B. Five
+C. Three
+D. One
+Answer: C
+Explanation: A serving Government servant may not act as DA if he already has three (3) pending disciplinary cases in hand.
+
+Q88. Regarding the consultation with the Central Vigilance Commission (CVC), in a major penalty vigilance case, when is the "second-stage advice" sought?
+A. Before issuing the charge sheet
+B. After the Enquiry Officer submits the report and full records, but before a final decision by the Disciplinary Authority
+C. When the official files the first written statement of defence
+D. After the penalty is imposed and the official appeals
+Answer: B
+Explanation: In a major penalty case, the EO's report and full records are referred for second-stage advice before a final decision.
+
+Q89. What happens to a departmental disciplinary proceeding if the accused official dies while the inquiry is pending?
+A. It proceeds ex-parte against the legal heirs.
+B. It continues to determine the recovery from death gratuity.
+C. The proceedings abate immediately on the death of the alleged offender.
+D. The Enquiry Officer issues a final finding of guilt to close the file.
+Answer: C
+Explanation: Disciplinary proceedings abate immediately on the death of the alleged offender; no proceedings under the CCS (CCA) Rules, 1965 can continue thereafter.
+
+Q90. Consider the following statements regarding the "Sealed Cover" procedure:
+
+1. An official facing formal disciplinary proceedings cannot be given effect to a promotion.
+2. The recommendation for promotion is kept in a sealed cover until the case concludes.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Promotion cannot be given effect while the official is under suspension or facing formal disciplinary proceedings; the recommendation is kept in a sealed cover.
+
+
+
+Q91. Under Section 60(1) of the Code of Civil Procedure, 1908, what is the status of court attachments against the subsistence allowance of a suspended Government servant?
+A. Up to 50% can be attached.
+B. It is fully attachable if the decree is for maintenance.
+C. It is exempt from attachment in execution of a court decree, and any order purporting to attach it is void to that extent.
+D. Only the PAO can authorize the attachment.
+Answer: C
+Explanation: Under Section 60(1) of the CPC, subsistence allowance is exempt from attachment in execution of a court decree.
+
+Q92. An official under suspension vacates the rent-free accommodation. On what basis is the House Rent Allowance (HRA) calculated during suspension?
+A. On the reduced subsistence allowance drawn during suspension
+B. On the pay drawn immediately before suspension
+C. Fixed at 10% of the basic pay regardless of location
+D. HRA is strictly not admissible during suspension
+Answer: B
+Explanation: If the official vacates, HRA is calculated on the pay drawn immediately before suspension (not on the reduced subsistence allowance).
+
+Q93. Where two or more Government servants belonging to different grades are concerned in the same misconduct, under which rule can "Common Proceedings" be initiated?
+A. Rule 14
+B. Rule 16
+C. Rule 18
+D. Rule 10
+Answer: C
+Explanation: Common Proceedings are governed by Rule 18 of the CCS (CCA) Rules, 1965.
+
+Q94. If the disciplinary authority disagrees with any finding of the Enquiry Officer in the inquiry report, what is the mandatory procedural step before passing final orders?
+A. Appoint a new Enquiry Officer.
+B. Send the report directly to CVC without informing the charged officer.
+C. Record its own findings with reasons and supply a copy of the report (with its tentative reasons for disagreement) to the charged officer for representation.
+D. Order an immediate major penalty.
+Answer: C
+Explanation: If the disciplinary authority disagrees with any finding, it must record its own findings and supporting reasons, and supply a copy to the charged officer for representation.
+
+Q95. In which of the following circumstances can an authority revise or cancel its OWN punishment order?
+A. Whenever the official submits a well-reasoned petition.
+B. When the appellate authority verbally advises it.
+C. Where the order is inoperative (e.g., withholding the increment of an official already at the maximum of the scale) or rested on a criminal conviction since set aside.
+D. An authority can never revise its own order under any circumstances.
+Answer: C
+Explanation: A punishing authority generally cannot cancel or revise its own order. Exceptions exist where the order is inoperative or where the punishment rested on a criminal conviction since set aside.
+
+Q96. What is the correct procedure for handling an absconding official who fails to rejoin duty?
+A. Dismiss the official immediately without a charge sheet.
+B. Issue a charge sheet under Rule 14 by Registered A.D. to the last known address, and hold an ex-parte inquiry if it is returned undelivered.
+C. Wait indefinitely for the official to return.
+D. Deduct from GPF balance without formal proceedings.
+Answer: B
+Explanation: Issue the charge sheet under R.14 by Registered A.D. to the last known address; if returned undelivered, the enquiring authority may hold an ex-parte inquiry.
+
+Q97. A retired Government servant acting as a Defence Assistant under Rule 14(8)(b) cannot have more than how many cases in hand at a time?
+A. Three
+B. Five
+C. Seven
+D. Ten
+Answer: C
+Explanation: A retired Government servant must not have more than seven (7) cases in hand at a time.
+
+Q98. Consider the following statements about the Disciplinary Authority:
+
+1. An appellate authority can exercise concurrent original disciplinary jurisdiction along with the disciplinary authority.
+2. The disciplinary authority is determined by the official's posting at the time of the disciplinary case, not at the time the offence was committed.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: An appellate or higher authority cannot exercise concurrent original disciplinary jurisdiction. The disciplinary authority is determined by the official's posting at the time of the disciplinary case.
+
+
+
+Q99. For which of the following purposes may past service records be used during major penalty proceedings?
+A. To establish the current charge against the accused.
+B. Only at the stage of deciding the quantum of penalty, once charges are held established.
+C. As primary evidence before framing the charge sheet.
+D. To override the findings of the Enquiry Officer.
+Answer: B
+Explanation: A bad service record unconnected with the inquiry must not be used to establish a charge; past record may be considered only at the stage of deciding the quantum of penalty.
+
+Q100. If the prescribed Disciplinary Authority cannot function (e.g., being personally concerned or a material witness), who appoints an Ad-hoc Disciplinary Authority?
+A. The Head of the Office
+B. The Chief Vigilance Commissioner
+C. The President of India
+D. The Enquiry Officer
+Answer: C
+Explanation: Where the prescribed authority cannot function, the matter is reported to the Postal Directorate for appointment of an Ad-hoc Disciplinary Authority by the President.
