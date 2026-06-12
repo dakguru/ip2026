@@ -531,7 +531,7 @@ export default function MockTestsPage() {
                     <div className="absolute bottom-16 right-[30%] w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_15px_5px_rgba(34,211,238,0.3)] animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
 
                     {/* Content */}
-                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 md:pt-8 md:pb-10 text-center">
+                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10 md:pt-8 md:pb-12 text-center">
                         {/* Back button - glass style */}
                         <div className="flex justify-center w-full mb-4 md:mb-5">
                             <Link href="/" className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300 text-sm backdrop-blur-sm">
@@ -619,7 +619,7 @@ export default function MockTestsPage() {
             )}
 
             {/* Test Cards Section */}
-            <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${isMobileApp ? 'mt-0' : '-mt-10'} relative z-10 w-full overflow-x-hidden`}>
+            <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${isMobileApp ? 'mt-0' : '-mt-4 md:-mt-10'} relative z-10 w-full overflow-x-hidden`}>
                 <div className={`${isMobileApp ? 'space-y-4' : 'space-y-12'} w-full`}>
 
                     {/* Info Banner — Native M3 style on mobile, gradient on desktop */}
