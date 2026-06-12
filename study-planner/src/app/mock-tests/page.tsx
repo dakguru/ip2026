@@ -42,6 +42,7 @@ export default function MockTestsPage() {
     const isMobileApp = useIsMobileApp();
     const { course } = useCourse();
     const [forceLdceIp, setForceLdceIp] = useState(false);
+    const [forcePsgb, setForcePsgb] = useState(false);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
     const [planName, setPlanName] = useState<string | null>(null);
     const [paidTests, setPaidTests] = useState<string[]>([]);
@@ -450,7 +451,7 @@ export default function MockTestsPage() {
         }
     };
 
-    const isPsGroupB = course === 'PS_GR_B' && !forceLdceIp;
+    const isPsGroupB = (course === 'PS_GR_B' && !forceLdceIp) || forcePsgb;
 
     // ===== PS GROUP B MOCK TESTS (Full Schedule) =====
     if (isPsGroupB) {
@@ -463,7 +464,7 @@ export default function MockTestsPage() {
                 userEmail={userEmail}
                 userName={userName}
                 role={role}
-                onSwitchToLdceIp={() => setForceLdceIp(true)}
+                onSwitchToLdceIp={() => { setForcePsgb(false); setForceLdceIp(true); }}
             />
         );
     }
@@ -491,6 +492,13 @@ export default function MockTestsPage() {
                             </h1>
                             <p className="text-[10px] text-zinc-500 dark:text-zinc-400 font-medium mt-0.5">All India Test Series &amp; Rankings</p>
                         </div>
+                        <button
+                            onClick={() => setForcePsgb(true)}
+                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800/80 text-indigo-600 dark:text-indigo-400 text-[10px] font-extrabold active:scale-95 transition-transform"
+                        >
+                            <Sparkles className="w-3 h-3" />
+                            PS Gr B
+                        </button>
                         {activeMocks.length > 0 && (
                             <Link href="/mock-tests/live" className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-red-50 dark:bg-red-950/20 border border-red-100 dark:border-red-950/30 active:scale-95 transition-transform">
                                 <span className="relative flex h-1.5 w-1.5">
@@ -504,12 +512,13 @@ export default function MockTestsPage() {
                 </div>
             ) : (
                 // Desktop/Web — Premium Hero (matching PS Group B style)
-                <div className="relative shrink-0 min-h-[280px] md:min-h-[360px] bg-[#0a0a0f] overflow-hidden isolate">
-                    {/* Animated gradient mesh background */}
+                <div className="relative shrink-0 min-h-[320px] md:min-h-[400px] bg-[#0a0a0f] overflow-hidden isolate">
+                    {/* Animated gradient mesh background — 4 blobs */}
                     <div className="absolute inset-0">
                         <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-indigo-600/30 via-blue-500/20 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '6s' }}></div>
                         <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-tl from-purple-500/25 via-indigo-500/15 to-transparent rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
                         <div className="absolute top-[30%] right-[20%] w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-transparent rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '4s' }}></div>
+                        <div className="absolute bottom-[10%] left-[15%] w-[300px] h-[300px] bg-gradient-to-tr from-teal-500/10 to-transparent rounded-full blur-[80px] animate-pulse" style={{ animationDuration: '7s', animationDelay: '1s' }}></div>
                     </div>
 
                     {/* Grid overlay */}
@@ -522,9 +531,9 @@ export default function MockTestsPage() {
                     <div className="absolute bottom-16 right-[30%] w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_15px_5px_rgba(34,211,238,0.3)] animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
 
                     {/* Content */}
-                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 md:pt-6 md:pb-8 text-center">
+                    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 md:pt-8 md:pb-10 text-center">
                         {/* Back button - glass style */}
-                        <div className="flex justify-center w-full mb-3 md:mb-4">
+                        <div className="flex justify-center w-full mb-4 md:mb-5">
                             <Link href="/" className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300 text-sm backdrop-blur-sm">
                                 <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
                                 <span className="font-medium">Back to Home</span>
@@ -533,7 +542,7 @@ export default function MockTestsPage() {
 
                         {/* Live badge */}
                         {activeMocks.length > 0 && (
-                            <div className="mb-3">
+                            <div className="mb-4">
                                 <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-sm backdrop-blur-sm shadow-[0_0_30px_rgba(239,68,68,0.15)]">
                                     <span className="relative flex h-2.5 w-2.5">
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -545,45 +554,34 @@ export default function MockTestsPage() {
                         )}
 
                         {/* Subtitle badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-500 text-xs font-semibold tracking-widest uppercase mb-3 backdrop-blur-sm">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-500 text-xs font-semibold tracking-widest uppercase mb-4 backdrop-blur-sm">
                             <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-400 to-blue-400"></span>
                             All India Weekly Mock Test Series
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white tracking-tight mb-2 md:mb-3 leading-[1.05]">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight mb-3 md:mb-4 leading-[1.05]">
                             <span className="block">Mock Test Series</span>
-                            <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400" style={{ WebkitBackgroundClip: 'text' }}>
-                                for LDCE IP 2026
+                            <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400" style={{ WebkitBackgroundClip: 'text' }}>
+                                LDCE IP 2026
                             </span>
                         </h1>
 
                         {/* Description */}
-                        <p className="text-sm md:text-base text-zinc-400/90 max-w-xl mx-auto mb-6 leading-relaxed font-medium">
+                        <p className="text-base md:text-lg text-zinc-400/90 max-w-xl mx-auto mb-5 leading-relaxed font-medium">
                             Compete nationally with real-time ranking and detailed analytics.
+                            <span className="text-zinc-500 block mt-1">Weekly tests with All India ranking &amp; comprehensive answer sheets.</span>
                         </p>
 
-                        {/* CTA Button */}
-                        <div className="flex justify-center mb-6">
-                            <Link href="/mock-tests/live" className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-bold text-sm shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:shadow-[0_0_40px_rgba(99,102,241,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
-                                <span className="relative flex h-2.5 w-2.5 shrink-0">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
-                                </span>
-                                Attempt Live Sample Test
-                                <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
-                            </Link>
-                        </div>
-
                         {/* Stats row */}
-                        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-7">
                             {[
                                 { icon: <Users className="w-5 h-5" />, label: '1000+', sub: 'Aspirants', color: 'from-indigo-500/20 to-indigo-500/5', iconColor: 'text-indigo-400', borderColor: 'border-indigo-500/20' },
                                 { icon: <Trophy className="w-5 h-5" />, label: 'Rank', sub: 'All India', color: 'from-amber-500/20 to-amber-500/5', iconColor: 'text-amber-400', borderColor: 'border-amber-500/20' },
                                 { icon: <Clock className="w-5 h-5" />, label: activeSeriesTab === 'series2' ? '120 Min' : '60 Min', sub: 'Per Test', color: 'from-emerald-500/20 to-emerald-500/5', iconColor: 'text-emerald-400', borderColor: 'border-emerald-500/20' },
                                 { icon: <CheckCircle2 className="w-5 h-5" />, label: '100 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
                             ].map((stat, idx) => (
-                                <div key={idx} className={`flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-gradient-to-br ${stat.color} border ${stat.borderColor} backdrop-blur-md hover:scale-105 transition-transform duration-300 min-w-[130px]`}>
+                                <div key={idx} className={`flex items-center gap-3 px-4 py-3 rounded-2xl bg-gradient-to-br ${stat.color} border ${stat.borderColor} backdrop-blur-md hover:scale-105 transition-transform duration-300 min-w-[140px]`}>
                                     <div className={`${stat.iconColor} shrink-0`}>{stat.icon}</div>
                                     <div className="text-left">
                                         <div className="text-sm font-black text-white leading-tight">{stat.label}</div>
@@ -592,6 +590,26 @@ export default function MockTestsPage() {
                                 </div>
                             ))}
                         </div>
+
+                        {/* Switch to PS Group B — Animated border-glow button */}
+                        <button
+                            onClick={() => setForcePsgb(true)}
+                            className="group relative inline-flex items-center gap-3 px-8 py-3.5 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
+                        >
+                            {/* Animated gradient border */}
+                            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-400 to-cyan-400 p-[2px] animate-[spin_4s_linear_infinite] bg-[length:200%_200%] animate-[gradient-shift_3s_ease_infinite]" style={{ backgroundSize: '200% 200%', animation: 'gradient-shift 3s ease infinite' }}>
+                                <span className="flex h-full w-full rounded-full bg-[#0e0e18] group-hover:bg-[#151525] transition-colors duration-300"></span>
+                            </span>
+                            {/* Glow */}
+                            <span className="absolute inset-0 rounded-full shadow-[0_0_20px_rgba(139,92,246,0.25),0_0_40px_rgba(139,92,246,0.1)] group-hover:shadow-[0_0_25px_rgba(139,92,246,0.4),0_0_50px_rgba(139,92,246,0.15)] transition-shadow duration-300"></span>
+                            {/* Content */}
+                            <span className="relative flex h-2 w-2 shrink-0">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-60"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-400"></span>
+                            </span>
+                            <span className="relative text-sm font-bold text-zinc-200 group-hover:text-white transition-colors">Switch to PS Group B Mock Tests</span>
+                            <ChevronRight className="w-4 h-4 relative text-zinc-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                        </button>
                     </div>
 
                     {/* Bottom gradient border */}
@@ -2050,10 +2068,10 @@ function PsgbMockTestPage({
                         </div>
                         <button
                             onClick={onSwitchToLdceIp}
-                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-violet-50 dark:bg-violet-900/30 border border-violet-100 dark:border-violet-800/80 text-violet-600 dark:text-violet-400 text-[10px] font-extrabold active:scale-95 transition-transform"
+                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800/80 text-indigo-600 dark:text-indigo-400 text-[10px] font-extrabold active:scale-95 transition-transform"
                         >
                             <Sparkles className="w-3 h-3" />
-                            Switch
+                            LDCE IP
                         </button>
                     </div>
                 </div>
@@ -2137,13 +2155,24 @@ function PsgbMockTestPage({
                             ))}
                         </div>
 
-                        {/* Switch button */}
+                        {/* Switch button — Animated border-glow */}
                         <button
                             onClick={onSwitchToLdceIp}
-                            className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400 hover:text-white hover:bg-white/[0.08] hover:border-violet-500/30 transition-all duration-300 text-sm font-bold backdrop-blur-sm hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]"
+                            className="group relative inline-flex items-center gap-3 px-8 py-3.5 rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
                         >
-                            <Sparkles className="w-4 h-4 text-violet-400 group-hover:text-violet-300 transition-colors" />
-                            Switch to LDCE IP Mock Tests
+                            {/* Animated gradient border */}
+                            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 p-[2px]" style={{ backgroundSize: '200% 200%', animation: 'gradient-shift 3s ease infinite' }}>
+                                <span className="flex h-full w-full rounded-full bg-[#0e0e18] group-hover:bg-[#151525] transition-colors duration-300"></span>
+                            </span>
+                            {/* Glow */}
+                            <span className="absolute inset-0 rounded-full shadow-[0_0_20px_rgba(56,189,248,0.25),0_0_40px_rgba(56,189,248,0.1)] group-hover:shadow-[0_0_25px_rgba(56,189,248,0.4),0_0_50px_rgba(56,189,248,0.15)] transition-shadow duration-300"></span>
+                            {/* Content */}
+                            <span className="relative flex h-2 w-2 shrink-0">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-60"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+                            </span>
+                            <span className="relative text-sm font-bold text-zinc-200 group-hover:text-white transition-colors">Switch to LDCE IP Mock Tests</span>
+                            <ChevronRight className="w-4 h-4 relative text-zinc-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
                         </button>
                     </div>
 
