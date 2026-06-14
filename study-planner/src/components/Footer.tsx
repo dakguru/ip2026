@@ -1,33 +1,27 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Youtube, MapPin, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
-    const pathname = usePathname();
-
-    if (pathname?.startsWith("/quiz")) {
-        return (
-            <footer className="bg-zinc-950 text-white py-6 border-t border-zinc-900 mt-auto">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <p className="text-zinc-500 text-sm">
-                        &copy; {new Date().getFullYear()} Dak Guru InfoTech. All rights reserved.
-                    </p>
-                </div>
-            </footer>
-        );
-    }
-
     return (
-        <footer className="bg-zinc-950 text-white py-8 border-t border-zinc-900">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-zinc-500 text-sm text-center md:text-left">
+        <footer className="bg-zinc-950 text-white py-8 border-t border-zinc-900 mt-auto">
+            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+                    {/* Left: Logo */}
+                    <div className="flex items-center shrink-0">
+                        <div className="w-8 h-8 rounded-full border border-zinc-700 flex items-center justify-center overflow-hidden bg-black">
+                            <Image src="/dak-guru-round.png" alt="Dak Guru Logo" width={32} height={32} />
+                        </div>
+                    </div>
+
+                    {/* Middle: Copyright */}
+                    <div className="text-zinc-500 text-sm text-center">
                         &copy; {new Date().getFullYear()} Dak Guru InfoTech. All rights reserved.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-zinc-500">
+                    </div>
+
+                    {/* Right: Links */}
+                    <div className="flex flex-wrap justify-center lg:justify-end gap-x-6 gap-y-2 text-sm font-medium text-zinc-500">
                         <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
                         <Link href="/privacypolicy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>

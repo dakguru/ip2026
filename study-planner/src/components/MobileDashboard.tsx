@@ -181,6 +181,10 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
                                             { href: "/current-affairs", icon: Globe, label: "Current Affairs", color: "text-emerald-600" },
                                             { href: "/notes", icon: FileText, label: "PDF Notes", color: "text-rose-600" },
                                             { href: "/about", icon: Info, label: "About Us", color: "text-slate-500" },
+                                            { href: "/privacypolicy", icon: Shield, label: "Privacy Policy", color: "text-slate-500" },
+                                            { href: "/terms", icon: FileText, label: "Terms & Conditions", color: "text-slate-500" },
+                                            { href: "/disclaimer", icon: AlertCircle, label: "Disclaimer", color: "text-slate-500" },
+                                            { href: "/refund-policy", icon: Info, label: "Refund Policy", color: "text-slate-500" },
                                             ...(isAdmin ? [{ href: "/admin", icon: Shield, label: "Admin Panel", color: "text-red-600" }] : []),
                                         ].map((item) => (
                                             <Link

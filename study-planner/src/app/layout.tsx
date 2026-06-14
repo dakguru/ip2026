@@ -65,9 +65,7 @@ export default function RootLayout({
             <GlobalNavigation />
             <NativeMobileSpacer>
               {children}
-              <div className="hidden md:block">
-                <Footer />
-              </div>
+              <Footer />
             </NativeMobileSpacer>
             <MobileBottomNav />
 
