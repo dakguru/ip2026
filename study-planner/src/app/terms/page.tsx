@@ -133,8 +133,39 @@ export default function TermsPage() {
                     {/* Section 7 */}
                     <section>
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center text-teal-600 dark:text-teal-400 font-bold shrink-0">
+                            <div className="w-8 h-8 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-pink-600 dark:text-pink-400 font-bold shrink-0">
                                 7
+                            </div>
+                            <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Copyright Takedown Policy (Safe Harbor Notice)</h2>
+                        </div>
+                        <div className="pl-11 text-zinc-600 dark:text-zinc-300 leading-relaxed space-y-4">
+                            <p>
+                                Dak Guru InfoTech respects the intellectual property rights of others. If you are a copyright owner or a legally authorized representative thereof, and you believe in good faith that any content, graphics, or materials hosted on our website or mobile application infringe upon your exclusive copyright, please notify us immediately via email.
+                            </p>
+                            
+                            <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200 mt-6 mb-2">How to Report a Claim:</h3>
+                            <p>
+                                Please send an email to our administrative team at <strong className="text-zinc-900 dark:text-zinc-100">admin@dakguru.com</strong> with the subject line <strong className="text-zinc-900 dark:text-zinc-100">"Copyright Clarification Request"</strong>. To help us resolve the matter swiftly, please include:
+                            </p>
+                            <ol className="list-decimal pl-5 space-y-2">
+                                <li>Your name, organization, and official contact information.</li>
+                                <li>Clear identification of the specific copyrighted work claimed to have been infringed.</li>
+                                <li>The exact URL, page number, or module within the Dak Guru platform where the disputed content is located.</li>
+                                <li>A brief statement demonstrating your ownership or rights over the material.</li>
+                            </ol>
+                            
+                            <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200 mt-6 mb-2">Our Commitment:</h3>
+                            <p>
+                                Upon receipt of a valid and detailed notification, our administrative team will immediately review the disputed material. If any technical oversight or unintentional similarity to copyrighted third-party expressions is verified, <strong className="text-zinc-900 dark:text-zinc-100">we commit to removing, rewriting, or modifying the content within 48 to 72 business hours</strong> to ensure absolute legal compliance.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Section 8 */}
+                    <section>
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center text-teal-600 dark:text-teal-400 font-bold shrink-0">
+                                8
                             </div>
                             <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Branding Clarification</h2>
                         </div>
@@ -145,11 +176,11 @@ export default function TermsPage() {
                         </div>
                     </section>
 
-                    {/* Section 8 */}
+                    {/* Section 9 */}
                     <section>
                         <div className="flex items-center gap-3 mb-4">
                             <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 font-bold shrink-0">
-                                8
+                                9
                             </div>
                             <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Acceptance of Terms</h2>
                         </div>

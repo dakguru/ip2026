@@ -878,6 +878,7 @@ export default function NotesPage() {
     const [selectedPdf, setSelectedPdf] = useState<{ url: string, title: string } | null>(null);
     const [membershipLevel, setMembershipLevel] = useState<'free' | 'silver' | 'gold'>('free');
     const [planId, setPlanId] = useState<string>('');
+    const [isAdmin, setIsAdmin] = useState(false);
     const [showExitConfirm, setShowExitConfirm] = useState(false);
 
     // Advisory Modal State
@@ -976,6 +977,8 @@ export default function NotesPage() {
                         setMembershipLevel(session.membershipLevel);
                         if (session.planId) setPlanId(session.planId);
                     }
+                    const userRole = session.user?.role || session.role;
+                    if (userRole === 'admin') setIsAdmin(true);
                 } catch (e) {
                     console.error("Failed to parse session", e);
                 }
@@ -1322,6 +1325,11 @@ export default function NotesPage() {
                                         {file.subtitle && (
                                             <span className="block text-[10px] md:text-sm font-normal italic text-slate-500 dark:text-zinc-500 mt-1">
                                                 {file.subtitle}
+                                            </span>
+                                        )}
+                                        {isAdmin && (
+                                            <span className="block text-[10px] md:text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+                                                Date: {getReleaseDate(file.title)}
                                             </span>
                                         )}
                                     </h3>

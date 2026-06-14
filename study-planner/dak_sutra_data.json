@@ -1,66 +1,6 @@
 {
     "entries": [
         {
-            "_id": "6a0c93ecc4d0af046a6ac1dc",
-            "title": "GFR 2017 â ULTRA MEMORY GUIDE: All Important Rule Numbers of Chapter 2 & 6 (Serial Order)",
-            "rule_number": "Chapter 2 (Rules 18â41) & Chapter 6 (Rules 143â205)",
-            "act_name": "General Financial Rules, 2017",
-            "category": "Explanation",
-            "effective_date": "2017-03-07T00:00:00.000Z",
-            "exam_tags": [
-                "LDCE IP",
-                "PS Group B"
-            ]
-        },
-        {
-            "_id": "6a0c9098d415c0e002d1c300",
-            "title": "GFR 2017: Financial Management, E-Procurement & Integrity â Rules 23, 24, 28, 29, 159, 160, 185 (Part 4 â Final)",
-            "rule_number": "Rules 23, 24, 28, 29, 159, 160, 185 of GFR 2017",
-            "act_name": "General Financial Rules, 2017",
-            "category": "Rule",
-            "effective_date": "2017-03-07T00:00:00.000Z",
-            "exam_tags": [
-                "LDCE IP",
-                "PS Group B"
-            ]
-        },
-        {
-            "_id": "6a0c9094f76930e9163f9069",
-            "title": "GFR 2017: Revenue, Audits & Special Procurements â Rules 18, 19, 41, 173, 193 & Service Selection Methods",
-            "rule_number": "Rules 18, 19, 41, 173, 193 of GFR 2017",
-            "act_name": "General Financial Rules, 2017",
-            "category": "Rule",
-            "effective_date": "2017-03-07T00:00:00.000Z",
-            "exam_tags": [
-                "LDCE IP",
-                "PS Group B"
-            ]
-        },
-        {
-            "_id": "6a0c909030e0d20dcdd418e6",
-            "title": "GFR 2017: Procurement of Goods â Rules 142 to 176 (GeM, Tendering, Security & Bidding)",
-            "rule_number": "Rules 142â176 of GFR 2017",
-            "act_name": "General Financial Rules, 2017",
-            "category": "Rule",
-            "effective_date": "2017-03-07T00:00:00.000Z",
-            "exam_tags": [
-                "LDCE IP",
-                "PS Group B"
-            ]
-        },
-        {
-            "_id": "6a0c9060809a067889fa7a45",
-            "title": "General Financial Rules (GFR) 2017 â Chapter 2 & 6: Procurement, Losses & Financial Propriety",
-            "rule_number": "Rules 21, 33, 143, 164, 177, 197 of GFR 2017",
-            "act_name": "General Financial Rules, 2017",
-            "category": "Rule",
-            "effective_date": "2017-03-07T00:00:00.000Z",
-            "exam_tags": [
-                "LDCE IP",
-                "PS Group B"
-            ]
-        },
-        {
             "_id": "6a00b31668a9068ff2d7fccc",
             "title": "CCS (Leave) Rules, 1972 â Part 2: Study Leave & WRIIL",
             "rule_number": "Various Rules",
@@ -1202,18 +1142,6 @@
             "act_name": "CCS (CCA) Rules, 1965",
             "category": "Rule",
             "effective_date": "1965-12-01T00:00:00.000Z",
-            "exam_tags": [
-                "PS Group B",
-                "LDCE IP"
-            ]
-        },
-        {
-            "_id": "69c95096a60b6cd0039e0bc1",
-            "title": "Proprietary Article Certificate â GFR 2017",
-            "rule_number": "Rule 166",
-            "act_name": "General Financial Rules, 2017",
-            "category": "Rule",
-            "effective_date": "2017-03-07T00:00:00.000Z",
             "exam_tags": [
                 "PS Group B",
                 "LDCE IP"
