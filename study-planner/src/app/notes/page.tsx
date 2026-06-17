@@ -154,7 +154,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Legal framework for electronic governance and cyber crimes.",
             filename: "IT_Act_2000.pdf",
             path: "/notes/paper-1/IT_Act_2000.pdf",
-            size: "0.3 MB",
+            size: "4.4 MB",
             color: "blue",
             topic: "Acts"
         },
