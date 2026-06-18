@@ -317,7 +317,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Mail & Parcel Network Optimization Projects.",
             filename: "MNOP_PNOP.pdf",
             path: "/notes/paper-1/MNOP_PNOP.pdf",
-            size: "0.7 MB",
+            size: "1.0 MB",
             color: "fuchsia",
             topic: "Operations"
         },

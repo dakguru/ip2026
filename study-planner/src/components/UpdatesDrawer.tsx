@@ -16,6 +16,34 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "18.06.2026",
+        items: [
+            {
+                title: "📚 Important PDF Notes Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated several important PDF notes across both <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes to their latest versions!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-fuchsia-50/50 dark:bg-fuchsia-900/10 p-3 rounded-xl border border-fuchsia-100 dark:border-fuchsia-800/50">
+                                <p className="font-bold text-fuchsia-700 dark:text-fuchsia-300 text-[10px] uppercase tracking-wide">Operations & Savings</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Updated the <strong>MNOP & PNOP Guidelines</strong> and <strong>POSB (CBS) Manual</strong>.</p>
+                            </div>
+                            <div className="bg-violet-50/50 dark:bg-violet-900/10 p-3 rounded-xl border border-violet-100 dark:border-violet-800/50">
+                                <p className="font-bold text-violet-700 dark:text-violet-300 text-[10px] uppercase tracking-wide">Financial Rules</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Updated the <strong>P&T FHB Vol I</strong> to the latest official version.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "17.06.2026",
         items: [
             {

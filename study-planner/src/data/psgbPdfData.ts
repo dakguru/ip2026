@@ -101,7 +101,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Guidelines issued by Directorate from time to time on Mail Network optimization Project/PNOP / Business Development",
             "filename": "MNOP_PNOP.pdf",
             "path": "/notes/paper-1/MNOP_PNOP.pdf",
-            "size": "0.7 MB",
+            "size": "1.0 MB",
             "color": "fuchsia",
             "topic": "Operations"
         },
