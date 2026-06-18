@@ -601,31 +601,12 @@ const PDF_DATA: Record<string, Note[]> = {
             topic: "Financial & Procurement"
         },
 
-        // 26. FR & SR
         {
-            title: "FR & SR - General Rules",
-            description: "Fundamental Rules (FR) and Supplementary Rules (SR) - General Rules.",
-            filename: "FR_SR_General_Rules.pdf",
-            path: "/notes/paper-3/FR_SR_General_Rules.pdf",
-            size: "4.4 MB",
-            color: "indigo",
-            topic: "CCS Rules & Establishment"
-        },
-        {
-            title: "FR & SR - TA Rules",
-            description: "FR & SR - Traveling Allowance (TA) Rules.",
-            filename: "FR_SR_TA_Rules.pdf",
-            path: "/notes/paper-3/FR_SR_TA_Rules.pdf",
-            size: "4.4 MB",
-            color: "indigo",
-            topic: "CCS Rules & Establishment"
-        },
-        {
-            title: "FR & SR - DA, DR & HRA Rules",
-            description: "FR & SR - Dearness Allowance (DA), Dearness Relief (DR) and House Rent Allowance (HRA) Rules.",
-            filename: "FR_SR_DA_DR_HRA.pdf",
-            path: "/notes/paper-3/FR_SR_DA_DR_HRA.pdf",
-            size: "4.1 MB",
+            title: "Fundamental Rules (FR) and Supplementary Rules (SR)",
+            description: "General Rules  •  Travelling Allowance  •  DA, DR & HRA",
+            filename: "FR_SR_Combined.pdf",
+            path: "/notes/paper-3/FR_SR_Combined.pdf",
+            size: "0.7 MB",
             color: "indigo",
             topic: "CCS Rules & Establishment"
         },
