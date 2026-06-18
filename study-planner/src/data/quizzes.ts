@@ -1,4 +1,29 @@
 import { QuizTopic, QuizSet } from "@/lib/quizTypes";
+import { gfr_non_proc_set1 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set2 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set3 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set4 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set5 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set6 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set7 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set8 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set9 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set10 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set11 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set12 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set13 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set14 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set15 } from './flashcards/gfrNonProcurement';
+import { gfr_non_proc_set16 } from './flashcards/gfrNonProcurement';
+import { gfr_chap6_set1 } from './flashcards/gfrChapter6';
+import { gfr_chap6_set2 } from './flashcards/gfrChapter6';
+import { gfr_chap6_set3 } from './flashcards/gfrChapter6';
+import { gfr_chap6_set4 } from './flashcards/gfrChapter6';
+import { gfr_chap6_set5 } from './flashcards/gfrChapter6';
+import { gfr_chap6_set6 } from './flashcards/gfrChapter6';
+import { gfr_chap6_set7 } from './flashcards/gfrChapter6';
+import { gfr_chap6_set8 } from './flashcards/gfrChapter6';
+import { gfr_chap6_set9 } from './flashcards/gfrChapter6';
 import { ccs_pension_2021_set1, ccs_pension_2021_set2, ccs_pension_2021_set3 } from './flashcards/ccsPension2021';
 import { ltc_set1, ltc_set2, ltc_set3, ltc_set4, ltc_set5, ltc_set6 } from './flashcards/ccsLtc1988';
 import { cs_ma_set1, cs_ma_set2, cs_ma_set3 } from './flashcards/csMa1944';
@@ -31,6 +56,33 @@ import { gfr_2017_set1, gfr_2017_set2, gfr_2017_set3, gfr_2017_set4, gfr_2017_se
 
 // ----- EXISTING QUESTION DATA -----
 export const ALL_SETS_DATA: Record<number, any[]> = {
+  368: gfr_non_proc_set1,
+  369: gfr_non_proc_set2,
+  370: gfr_non_proc_set3,
+  371: gfr_non_proc_set4,
+  372: gfr_non_proc_set5,
+  373: gfr_non_proc_set6,
+  374: gfr_non_proc_set7,
+  375: gfr_non_proc_set8,
+  376: gfr_non_proc_set9,
+  377: gfr_non_proc_set10,
+  378: gfr_non_proc_set11,
+  379: gfr_non_proc_set12,
+  380: gfr_non_proc_set13,
+  381: gfr_non_proc_set14,
+  382: gfr_non_proc_set15,
+  383: gfr_non_proc_set16,
+
+  359: gfr_chap6_set1,
+  360: gfr_chap6_set2,
+  361: gfr_chap6_set3,
+  362: gfr_chap6_set4,
+  363: gfr_chap6_set5,
+  364: gfr_chap6_set6,
+  365: gfr_chap6_set7,
+  366: gfr_chap6_set8,
+  367: gfr_chap6_set9,
+
   1: [
     { q: "On which date did the Post Office Act, 2023 come into force?", o: ["1st Jan 2024", "24th Dec 2023", "18th June 2024", "1st April 2023"], a: 2, e: "The Post Office Act, 2023 came into force on 18th June 2024." },
     { q: "According to Section 2(b), what is an 'item'?", o: ["Any letter", "An indivisible article accepted for service", "A parcel > 10kg", "Government document"], a: 1 },
