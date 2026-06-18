@@ -1845,15 +1845,13 @@ const UPDATES_DATA: UpdateGroup[] = [
                 title: "New PDF Notes Integrated",
                 desc: (
                     <div className="space-y-4">
-                        <p>We have integrated 4 new PDF Notes across course modes:</p>
+                        <p>We have integrated new PDF Notes across course modes:</p>
 
                         <div className="space-y-2">
                             <p className="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wide">1. LDCE IP Course Mode</p>
                             <p className="text-[11px] text-zinc-500">New tiles in Paper III:</p>
                             <ul className="list-disc pl-4 space-y-1">
-                                <li>FR & SR - General Rules</li>
-                                <li>FR & SR - TA Rules</li>
-                                <li>FR & SR - DA, DR & HRA Rules</li>
+                                <li>Fundamental Rules (FR) and Supplementary Rules (SR)</li>
                             </ul>
                         </div>
 
@@ -1861,9 +1859,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                             <p className="font-bold text-zinc-900 dark:text-zinc-100 text-xs uppercase tracking-wide">2. PS Group B Course Mode</p>
                             <p className="text-[11px] text-zinc-500">New tiles in Paper II:</p>
                             <ul className="list-disc pl-4 space-y-1">
-                                <li>FR & SR - General Rules</li>
-                                <li>FR & SR - TA Rules</li>
-                                <li>FR & SR - DA, DR & HRA Rules</li>
+                                <li>Fundamental Rules (FR) and Supplementary Rules (SR)</li>
                                 <li>CCS (Revised Pay) Rules, 2016</li>
                             </ul>
                         </div>
