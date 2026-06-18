@@ -56,7 +56,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Post Office Guide Part I",
             "filename": "PO_Guide_Part_I.pdf",
             "path": "/notes/paper-1/PO_Guide_Part_I.pdf",
-            "size": "0.4 MB",
+            "size": "0.6 MB",
             "color": "cyan",
             "topic": "Postal Manuals"
         },

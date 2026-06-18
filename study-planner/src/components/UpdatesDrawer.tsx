@@ -19,6 +19,48 @@ const UPDATES_DATA: UpdateGroup[] = [
         date: "18.06.2026",
         items: [
             {
+                title: "📚 MCQs & Notes: General Financial Rules 2017 Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated massive new MCQ banks and PDF notes for <strong>General Financial Rules (GFR), 2017</strong> in the <strong>PS Group B</strong> course mode!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Chapter 6 (Procurement of Goods & Services)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Added <strong>90 high-yield MCQs</strong> and fully updated the PDF notes.</p>
+                            </div>
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">Other than Public Procurement</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Integrated a fresh set of <strong>103 questions</strong> and complete PDF notes.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-amber-600 dark:text-amber-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head to the Quiz section to test your knowledge!
+                        </p>
+                    </div>
+                )
+            },
+            {
+                title: "📚 PDF Notes: Post Office Guide Part-I Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have uploaded the latest version of the <strong>Post Office Guide Part-I</strong> PDF notes for both <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes.</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide">Inland Post Rules</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The notes now reflect the latest rules and amendments.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            },
+            {
                 title: "📚 Important PDF Notes Updated",
                 desc: (
                     <div className="space-y-4">
