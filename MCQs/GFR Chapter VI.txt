@@ -1,0 +1,841 @@
+General Financial Rules, 2017 - Master MCQ Bank (Chapters II & VI)
+
+Q1. Under Rule 143 of the General Financial Rules, 2017, which of the following is strictly EXCLUDED from the definition of 'Goods'?
+A. Intangible products like software and technology transfer
+B. Books, publications, and periodicals for a library
+C. Transportation, insurance, and installation services associated with equipment
+D. Patents and other intellectual properties acquired for Government use
+Correct Answer: B
+Explanation:
+• Rule 143 explicitly defines 'goods' to include all tangible and intangible products, including software, patents, and associated services like transportation and installation, but excludes books, publications, periodicals, etc., meant for a library[cite: 1].
+
+Q2. Which of the following statements correctly interprets the inclusion of "services" within the definition of 'Goods' under Rule 143?
+A. Only consulting services are treated as goods.
+B. No services of any kind can be classified as goods.
+C. 'Goods' covers works and services such as transportation, insurance, installation, commissioning, training, and maintenance.
+D. Outsourced manpower services are universally classified as goods.
+Correct Answer: C
+Explanation:
+• According to the definition under Rule 143, the term 'Goods' covers works and services that are incidental to the procurement, explicitly listing transportation, insurance, installation, commissioning, training, and maintenance[cite: 1].
+
+Q3. Consider the following statements regarding the term 'Goods' as per GFR 2017:
+1. It includes intangible products like software and licenses.
+2. It excludes patents and intellectual properties.
+3. It excludes books and periodicals purchased for a library.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+• Statement 1 is correct as software and licenses are included[cite: 1]. Statement 2 is incorrect because patents and intellectual properties are explicitly included in the definition[cite: 1]. Statement 3 is correct as library books and periodicals are excluded[cite: 1].
+
+Q4. As per the fundamental principles of public buying (Rule 144), within how many days of Budget approval must Ministries/Departments project their Annual Procurement Plan of goods and services on the GeM portal?
+A. 15 days
+B. 30 days
+C. 45 days
+D. 60 days
+Correct Answer: B
+Explanation:
+• Rule 149(iv) mandates that Ministries/Departments shall project their Annual Procurement Plan on the GeM portal within 30 days of Budget approval[cite: 1].
+
+Q5. Based on the verified amendments to Rule 149, up to what monetary limit can a Ministry/Department procure goods through ANY of the available suppliers on GeM, provided they meet the requisite quality and delivery period?
+A. Rs. 25,000/-
+B. Rs. 50,000/-
+C. Rs. 5,00,000/-
+D. Rs. 10,00,000/-
+Correct Answer: B
+Explanation:
+• As per the DoE O.M. F.1/3/2024-PPD dated 10.07.2024, the ceiling for procuring from any available supplier on GeM has been raised to Rs. 50,000/-[cite: 1].
+
+Q6. An office needs to procure standard desktop computers worth Rs. 6,00,000/- through GeM. Under Rule 149(ii), which of the following represents the correct procurement procedure?
+A. Direct purchase from any single supplier of choice.
+B. Purchase from the GeM Seller having the lowest price amongst available sellers of at least three different manufacturers.
+C. Mandatorily obtaining bids using the online bidding or reverse auction tool provided on GeM.
+D. Constitution of a Local Purchase Committee to finalize the vendor offline before placing the order on GeM.
+Correct Answer: B
+Explanation:
+• For procurements above Rs. 50,000/- and up to Rs. 10,00,000/- (as amended), the procurement must be done through the GeM Seller having the lowest price amongst available sellers of at least three different manufacturers[cite: 1].
+
+Q7. What is the ceiling limit for the direct procurement of automobiles under sub-rule (i) of Rule 149 through GeM?
+A. Rs. 50,000/-
+B. Rs. 10,00,000/-
+C. Rs. 30 Lakhs
+D. There is no ceiling limit
+Correct Answer: D
+Explanation:
+• The note under Rule 149(i) explicitly states that in the case of automobiles, procurement under this sub-rule is permitted without any ceiling limit[cite: 1].
+
+Q8. Consider the following statements regarding procurement through GeM:
+1. Online bidding or reverse auction is mandatory for procurements above Rs. 10,00,000/-.
+2. Business Analytics (BA) tools on GeM cannot be used for procurements below Rs. 10,00,000/-.
+3. A demand for goods shall not be divided into small quantities to avoid procurement through GeM bidding.
+Which of the above statements is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+• Statement 1 is correct as per the amended Slab 3 threshold[cite: 1]. Statement 2 is incorrect because Rule 149(ii) states BA tools can be used even for procurements less than Rs. 10,00,000/- if decided by the competent authority[cite: 1]. Statement 3 is explicitly correct per Rule 149(vi) to prevent piecemeal purchases[cite: 1].
+
+Q9. When a Ministry/Department registers suppliers for goods and services not available on GeM under Rule 150, for what fixed period are these suppliers typically registered before requiring renewal?
+A. 1 to 2 years
+B. 1 to 3 years
+C. 3 to 5 years
+D. 5 years
+Correct Answer: B
+Explanation:
+• Rule 150(3) states that the supplier(s) will be registered for a fixed period between 1 to 3 years, after which they must apply afresh for renewal[cite: 1].
+
+Q10. What is the maximum period of debarment for a bidder convicted of an offence under the Prevention of Corruption Act, 1988, for causing loss of life or property?
+A. One year
+B. Two years
+C. Three years
+D. Five years
+Correct Answer: C
+Explanation:
+• Under Rule 151(1), a bidder convicted under the Prevention of Corruption Act or IPC/BNS for causing loss of life/property can be debarred for a period not exceeding three years[cite: 1].
+
+Q11. If a procuring entity determines that a bidder has breached the "code of integrity", what is the maximum period for which the bidder can be debarred under Rule 151(2)?
+A. One year
+B. Two years
+C. Three years
+D. Five years
+Correct Answer: B
+Explanation:
+• Rule 151(2) specifies that a procuring entity may debar a bidder for a period not exceeding two years if it determines that the bidder has breached the code of integrity[cite: 1].
+
+Q12. Which of the following statements correctly differentiates between 'Registration of Suppliers' and 'Enlistment of Indian Agents' as per GFR 2017?
+A. They are identical processes managed by the Khadi Village Industries Commission.
+B. Enlistment of Indian Agents is compulsory for those quoting on behalf of foreign principals and is not equivalent to the registration of suppliers under Rule 150.
+C. Registration is done by the Ministry of Finance, whereas Enlistment is done by individual Head of Departments.
+D. Both Registration and Enlistment carry a maximum fixed validity of 2 years.
+Correct Answer: B
+Explanation:
+• Rule 152 clarifies that it is compulsory for Indian agents desiring to quote directly on behalf of foreign principals to get enlisted with GeM, but such enlistment is explicitly not equivalent to the registration of suppliers mentioned under Rule 150[cite: 1].
+
+Q13. According to the Purchase Preference Policy under Rule 153, what minimum percentage of textiles required by the Central Government MUST be procured from amongst items of handloom origin?
+A. 10%
+B. 15%
+C. 20%
+D. 25%
+Correct Answer: C
+Explanation:
+• Rule 153 mandates the procurement of at least 20% from amongst items of handloom origin for exclusive purchase from KVIC, handloom clusters, etc.[cite: 1].
+
+Q14. Following the July 2024 amendments to Rule 154, what is the maximum value up to which purchase of goods on each occasion may be made WITHOUT inviting quotations or bids?
+A. Rs. 25,000/-
+B. Rs. 50,000/-
+C. Rs. 1,00,000/-
+D. Rs. 2,50,000/-
+Correct Answer: B
+Explanation:
+• The threshold for purchase without quotation was substituted and verified against DoE O.M. dated 10.07.2024, raising the limit from Rs. 25,000 to Rs. 50,000/-[cite: 1].
+
+Q15. Under Rule 155, purchase of goods not available on the GeM portal can be made on the recommendations of a duly constituted Local Purchase Committee. What is the amended financial slab and the composition requirement for this committee?
+A. Rs. 25,000 to Rs. 2,50,000; consisting of two members
+B. Rs. 50,000 to Rs. 2,50,000; consisting of three members
+C. Rs. 50,000 to Rs. 5,00,000; consisting of three members
+D. Rs. 1,00,000 to Rs. 10,00,000; consisting of five members
+Correct Answer: C
+Explanation:
+• As per the DoE O.M. dated 10.07.2024 amendment, the Local Purchase Committee can recommend purchases costing above Rs. 50,000/- and up to Rs. 5,00,000/-. Rule 155 also specifies the committee must consist of three members of an appropriate level[cite: 1].
+
+Q16. Consider the following statements regarding direct purchases:
+1. A demand for goods should not be divided into small quantities to make piecemeal purchases to avoid higher authority sanctions.
+2. The Local Purchase Committee must contain a minimum of five members.
+3. All items of hand-spun and hand-woven textiles (khadi goods) are reserved for exclusive purchase from KVIC.
+Which of the above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+• Statement 1 is correct per Rule 157[cite: 1]. Statement 2 is incorrect as Rule 155 mandates a three-member committee[cite: 1]. Statement 3 is correct per Rule 153[cite: 1].
+
+Q17. Based on the 2024 verified amendments, what is the estimated value threshold beyond which an invitation to tenders by advertisement (Advertised Tender Enquiry) should ordinarily be used?
+A. Rs. 25 lakhs
+B. Rs. 50 lakhs
+C. Rs. 1 crore
+D. Rs. 200 crores
+Correct Answer: B
+Explanation:
+• Per the DoE O.M. dated 10.07.2024, the threshold for Advertised Tender Enquiry under Rule 161(i) was raised to Rs. 50 lakhs and above[cite: 1].
+
+Q18. In an Advertised Tender Enquiry, what is the minimum time that should ordinarily be allowed for the submission of bids from the date of publication of the tender notice for domestic bidders?
+A. Two weeks
+B. Three weeks
+C. Four weeks
+D. Six weeks
+Correct Answer: B
+Explanation:
+• Rule 161(ii) specifies that ordinarily, the minimum time allowed for the submission of bids should be three weeks from the date of publication[cite: 1].
+
+Q19. Under what monetary limit is the Limited Tender Enquiry method primarily adopted, and what is the minimum required number of supplier firms that should be approached?
+A. Up to Rs. 25 lakhs; more than two firms
+B. Up to Rs. 50 lakhs; more than three firms
+C. Up to Rs. 1 crore; more than three firms
+D. Up to Rs. 50 lakhs; exactly three firms
+Correct Answer: B
+Explanation:
+• Following the July 2024 amendment, Limited Tender Enquiry (Rule 162) is adopted for estimated values up to Rs. 50 lakhs, and the rule specifies the number of supplier firms approached should be "more than three"[cite: 1].
+
+Q20. What is the monetary ceiling up to which a Global Tender Enquiry (GTE) shall NOT be invited, subject to exemptions granted by the competent authority?
+A. Rs. 50 lakhs
+B. Rs. 10 crores
+C. Rs. 100 crores
+D. Rs. 200 crores
+Correct Answer: D
+Explanation:
+• Rule 161(iv)(b) states that a Global Tender Enquiry shall not be invited for procurement of value up to Rs. 200 crore[cite: 1].
+
+Q21. Which of the following categories of bidders is NOT automatically exempt from submitting a Bid Security (Earnest Money) under Rule 170?
+A. Bidders registered with GeM
+B. Bidders having a turnover of Rs. 100 crore in the preceding financial year
+C. Micro and Small Enterprises (MSEs)
+D. Bidders having a Startup certificate
+Correct Answer: B
+Explanation:
+• Under Rule 170, exemptions are provided to MSEs, GeM registered bidders, bidders having Vendor Assessment, Startups, bidders with BIS certification, and bidders having a turnover of more than Rs. 500 crore (not Rs. 100 crore)[cite: 1].
+
+Q22. What is the standard prescribed range for the amount of Bid Security (Earnest Money) as a percentage of the estimated value of the goods to be procured?
+A. 1% to 3%
+B. 2% to 5%
+C. 3% to 10%
+D. 5% to 10%
+Correct Answer: B
+Explanation:
+• Rule 170 states that the amount of bid security should ordinarily range between 2% to 5% of the estimated value of the goods[cite: 1].
+
+Q23. According to the Finmin O.M. dated 01.01.2024 amending Rule 171(i), what is the revised range for Performance Security?
+A. 2% to 5% of the value of the contract
+B. 3% to 5% of the value of the contract
+C. 3% to 10% of the value of the contract
+D. 5% to 10% of the value of the contract
+Correct Answer: B
+Explanation:
+• The amendment verified against Finmin O.M. dated 01.01.2024 substituted the old range with a requirement that Performance Security should be for an amount of 3% to 5% of the value of the contract[cite: 1].
+
+Q24. Consider the validity periods for securities under GFR 2017:
+1. Bid security should normally remain valid for a period of 45 days beyond the final bid validity period.
+2. Performance Security should remain valid for a period of 30 days beyond the date of completion of all contractual obligations.
+3. Bid securities of unsuccessful bidders must be returned latest by the 30th day after the award of the contract.
+Which of the above statements is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+• Statement 1 is correct per Rule 170(i)[cite: 1]. Statement 2 is incorrect because Rule 171(ii) dictates Performance Security must remain valid for sixty (60) days, not 30 days[cite: 1]. Statement 3 is correct per Rule 170(ii)[cite: 1].
+
+Q25. Under Rule 172 regarding advance payment to suppliers, what is the maximum permissible advance limit allowed for a private firm and a State/Central Government agency, respectively?
+A. 20% to private firms; 30% to Government agencies
+B. 30% to private firms; 40% to Government agencies
+C. 40% to private firms; 50% to Government agencies
+D. 50% to private firms; 100% to Government agencies
+Correct Answer: B
+Explanation:
+• Rule 172(1) stipulates that advance payments should not exceed 30% of the contract value for private firms and 40% for a State/Central Government agency or PSU[cite: 1].
+
+Q26. Which of the following clauses MUST be included in the Bidding Documents to ensure transparency and eliminate arbitrariness as per Rule 173(1)?
+A. "Bids from Startups shall be given a 10% price preference automatically."
+B. "If a firm quotes NIL charges/consideration, the bid shall be treated as unresponsive and will not be considered."
+C. "The buyer reserves the right to negotiate the final price with the lowest three bidders simultaneously."
+D. "Electrical appliances below 3-star BEE rating are subject to a 5% penalty."
+Correct Answer: B
+Explanation:
+• Rule 173(1) explicitly states that bidding documents should include a clause that "if a firm quotes NIL charges/consideration, the bid shall be treated as unresponsive and will not be considered"[cite: 1].
+
+Q27. As per Rule 177, the term 'Consulting Service' includes professional, intellectual, training, and advisory services. However, which of the following is strictly EXCLUDED from this definition?
+A. Services involving satellite imagery mapping
+B. Outsourcing of building facilities management
+C. Direct engagement of a retired Government servant
+D. Advisory services rendered by an Association of consultancy firms
+Correct Answer: C
+Explanation:
+• The definition of Consulting Service under Rule 177 explicitly states that it does not include the direct engagement of a retired Government servant[cite: 1].
+
+Q28. What is the amended monetary threshold for consulting services up to which the preparation of a long list of potential consultants may be done merely on the basis of formal or informal enquiries, without publishing an 'Expression of Interest' on the CPPP?
+A. Up to Rs. 10 lakhs
+B. Up to Rs. 25 lakhs
+C. Up to Rs. 50 lakhs
+D. Up to Rs. 1 crore
+Correct Answer: C
+Explanation:
+• Verified against the DoE O.M. dated 10.07.2024, Rule 183(i) permits informal/formal enquiries for estimating potential sources when the estimated cost is up to Rs. 50 lakhs[cite: 1].
+
+Q29. For a consultancy assignment with an estimated cost of Rs. 75 lakhs, what is the mandatory requirement for the identification of likely sources under Rule 183(ii)?
+A. Direct nomination of a single source consultant
+B. Only informal enquiries from the Chamber of Commerce
+C. Publication of an enquiry seeking 'Expression of Interest' from consultants on the Central Public Procurement Portal (CPPP)
+D. Mandatory execution through the Government e-Marketplace (GeM) using the OPEX model
+Correct Answer: C
+Explanation:
+• Rule 183(ii) requires that where the estimated cost is above Rs. 50 lakhs (amended limit), an enquiry seeking 'Expression of Interest' must be published on the CPPP at www.eprocure.gov.in[cite: 1].
+
+Q30. Under Rule 184 regarding the shortlisting of consultants following the receipt of 'Expression of Interest', what is the minimum prescribed number of short-listed consultants?
+A. Two
+B. Three
+C. Four
+D. Five
+Correct Answer: B
+Explanation:
+• Rule 184 clearly dictates that the number of short-listed consultants should not be less than three[cite: 1].
+
+Q31. In the Quality and Cost Based Selection (QCBS) method for procuring consultancy services (Rule 192), what is the maximum permissible weightage that can be assigned to technical (non-financial) parameters?
+A. 50 percent
+B. 60 percent
+C. 70 percent
+D. 80 percent
+Correct Answer: D
+Explanation:
+• Rule 192(ii) strictly prohibits the weightage of the technical (i.e., non-financial) parameters from exceeding 80 percent in any case[cite: 1].
+
+Q32. In a QCBS evaluation using a 70:30 (Technical:Financial) ratio, a bidder receives a 'Very Good' technical grade (score = 80). The lowest financial bid in the pool is Rs. 1,00,000, and this bidder's quoted financial bid is Rs. 1,25,000. What is the bidder's final Combined Technical & Financial Score (CTFS)?
+A. 56.00
+B. 80.00
+C. 83.33
+D. 88.00
+Correct Answer: B
+Explanation:
+• Technical Score = 80. Applying 70% weight = 80 × (70/100) = 56.
+Financial Score = (LFB / F) × 100 = (1,00,000 / 1,25,000) × 100 = 80.
+Applying 30% financial weight = 80 × (30/100) = 24.
+Combined CTFS = 56 + 24 = 80[cite: 1].
+
+Q33. Under the Stage 1 QCBS Grading System illustration provided in the GFR rules, what range of technical marks corresponds to an 'Excellent' grade yielding a score of 90?
+A. 91-100
+B. 81-90
+C. 71-80
+D. 61-70
+Correct Answer: B
+Explanation:
+• According to the QCBS Grading System table under Rule 192, an 'Excellent' grade, which grants 90 marks, maps to the mark range of 81-90. (Outstanding is 91-100)[cite: 1].
+
+Q34. Consider the following statements regarding evaluation methods for consulting proposals:
+1. Under QCBS, the proposal with the highest weighted combined score (quality and cost) shall be selected.
+2. Under the Least Cost System (LCS), technical score carries a mandatory 20% weightage in the final evaluation.
+3. Single Source Selection (Nomination) is permissible if only one consultant has the requisite expertise.
+Which of the above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+• Statement 1 is correct per Rule 192(i)[cite: 1]. Statement 2 is incorrect because Rule 193 defines the Least Cost System (LCS) as having "no weightage for technical score in the final evaluation"[cite: 1]. Statement 3 is correct per Rule 194(iii)[cite: 1].
+
+Q35. Which of the following is classified as a 'Non-Consulting Service' under Rule 197?
+A. Software technology transfer
+B. Training and advisory services
+C. Professional intellectual services
+D. Outsourcing of building facilities management and security
+Correct Answer: D
+Explanation:
+• Rule 197 defines Non-Consulting Services as those involving physical, measurable deliverables, explicitly listing maintenance, hiring of vehicles, outsourcing of building facilities management, security, janitorial services, etc.[cite: 1].
+
+Q36. As per the amended Rule 201, what is the maximum estimated value up to which a Ministry/Department can procure non-consulting services by issuing a limited tender enquiry to prima facie eligible contractors?
+A. Up to Rs. 10 lakhs
+B. Up to Rs. 25 lakhs
+C. Up to Rs. 50 lakhs
+D. Up to Rs. 1 crore
+Correct Answer: C
+Explanation:
+• The threshold for issuing a limited tender enquiry for non-consulting services was amended to "up to Rupees 50 lakhs or less" as verified against the DoE O.M. dated 10.07.2024[cite: 1].
+
+Q37. When executing a limited tender enquiry for non-consulting services under Rule 201(i), what is the minimum required number of identified contractors to whom the enquiry must be issued?
+A. Exactly two
+B. Exactly three
+C. More than three
+D. Minimum of five
+Correct Answer: C
+Explanation:
+• Rule 201(i) explicitly mandates that the number of contractors identified for issuing the limited tender enquiry should be "more than three"[cite: 1].
+
+Q38. For an estimated non-consulting service contract valued at Rs. 80 lakhs, what is the mandatory procurement process under Rule 201(ii)?
+A. Issuing a limited tender to a long-list of at least 5 local vendors.
+B. Procuring directly from any GeM supplier of choice.
+C. Issuing an advertisement on the Central Public Procurement Portal (CPPP) and on GeM.
+D. Direct nomination of the contractor with the approval of the Financial Adviser.
+Correct Answer: C
+Explanation:
+• For values above Rs. 50 lakhs (amended limit), Rule 201(ii) dictates that the Ministry/Department must issue an advertisement on the Central Public Procurement Portal (CPPP) and on GeM[cite: 1].
+
+Q39. Under Rule 204, if a non-consulting service must be procured from a specifically chosen contractor by nomination (in exceptional situations), with whom MUST the Competent Authority consult?
+A. The Khadi Village Industries Commission
+B. The Local Purchase Committee
+C. The Financial Adviser
+D. The Audit Officer and the Accounts Officer
+Correct Answer: C
+Explanation:
+• Rule 204 states that in an exceptional situation requiring procurement by nomination, the Competent Authority may do so in consultation with the Financial Adviser[cite: 1].
+
+Q40. Under Rule 159 regarding E-Publishing, where is it mandatory for all Ministries/Departments to publish their tender enquiries, corrigenda, and details of bid awards?
+A. Only on the Government e-Marketplace (GeM)
+B. Exclusively on the internal website of the procuring Ministry/Department
+C. On the Central Public Procurement Portal (CPPP)
+D. On both GeM and the Ministry of Finance notice board
+Correct Answer: C
+Explanation:
+• Rule 159 makes it mandatory for all Central Government Ministries/Departments and attached offices to publish their tender enquiries, corrigenda, and bid awards on the Central Public Procurement Portal (CPPP)[cite: 1].
+
+Q41. Which of the following statements correctly represents the mandate for E-Procurement under Rule 160?
+A. Ministries must exclusively use the e-procurement solution developed by NIC; no other service provider is allowed.
+B. Ministries may receive bids manually for procurements below Rs. 5 Lakhs.
+C. It is mandatory for Ministries to receive all bids through e-procurement portals, using either the NIC solution or another engaged service provider.
+D. E-procurement is optional but highly recommended for all attached and subordinate offices.
+Correct Answer: C
+Explanation:
+• Rule 160 mandates that all bids in respect of all procurements must be received through e-procurement portals. Ministries may use the NIC solution or engage any other service provider following due process[cite: 1].
+
+Q42. When procuring high-value plant or machinery of a complex and technical nature using the 'Two bid system' (Rule 163), what is the correct procedural sequence for opening the bids?
+A. Both technical and financial bids are opened simultaneously by the purchasing Ministry.
+B. Financial bids are opened first to ensure budget compliance, followed by technical bids.
+C. Technical bids are opened first; financial bids of only those technically acceptable offers are opened later.
+D. The financial bid is opened first, and if it exceeds the estimated cost, the technical bid is returned unopened.
+Correct Answer: C
+Explanation:
+• Under the Two bid system, Rule 163(1)(c) dictates that technical bids are opened and evaluated first. At the second stage, financial bids of only the technically acceptable offers are opened after intimating the date and time to the bidders[cite: 1].
+
+Q43. Which of the following best differentiates 'Two-Stage Bidding' (Rule 164) from the 'Two bid system' (Rule 163)?
+A. Two-Stage Bidding is used only for non-consulting services, whereas the Two bid system is for consulting services.
+B. In Two-Stage Bidding, the first stage involves submitting technical aspects without a bid price, leading to a revised set of terms for the final financial bid in the second stage.
+C. The Two bid system allows manual submission of documents, whereas Two-Stage Bidding is strictly via e-procurement.
+D. Two-Stage Bidding requires the approval of the Ministry of Finance, whereas the Two bid system does not.
+Correct Answer: B
+Explanation:
+• Rule 164 describes Two-Stage Bidding as inviting technical aspects without a bid price in the first stage. After evaluating these, bids for prices are invited in the second stage based on a revised set of terms and conditions, unlike the Two bid system where both technical and financial bids are submitted simultaneously in separate envelopes[cite: 1].
+
+Q44. What is the standard operating procedure regarding 'Late Bids' (bids received after the specified date and time) under Rule 165 for an advertised or limited tender enquiry?
+A. They may be considered if accompanied by a late fee.
+B. They should not be considered under any circumstances.
+C. They may be considered with the specific approval of the Financial Adviser.
+D. They can be accepted if the delay is proven to be caused by postal transit.
+Correct Answer: B
+Explanation:
+• Rule 165 strictly mandates that in the case of an advertised or limited tender enquiry, late bids should not be considered[cite: 1].
+
+Q45. Under Rule 166, which of the following is NOT a valid recognized condition for resorting to a Single Tender Enquiry?
+A. It is in the knowledge of the user department that only a particular firm manufactures the goods.
+B. The required goods are needed in an emergency and must be purchased from a particular source.
+C. The Local Purchase Committee determines that inviting multiple bids is too time-consuming.
+D. The required item is to be purchased only from a selected firm.
+Correct Answer: C
+Explanation:
+• Rule 166 outlines only three specific exceptional circumstances for a Single Tender Enquiry: knowledge of a sole manufacturer, emergency requirements from a particular source, and the necessity to purchase only from a selected firm. Avoiding the time taken to invite multiple bids is not a valid condition[cite: 1].
+
+Q46. Regarding Maintenance Contracts for sophisticated and costly equipment (Rule 169), when should the paid maintenance under the contract commence?
+A. Immediately upon installation of the equipment.
+B. Only after the equipment has completed 3 years of satisfactory operation.
+C. Only after the expiry of the warranty period or extended free maintenance periods provided by the supplier.
+D. Concurrently with the warranty period to ensure dual coverage.
+Correct Answer: C
+Explanation:
+• Rule 169 emphasizes that the equipment is maintained free of charge by the supplier during its warranty period (or extended periods), and paid maintenance should commence only thereafter[cite: 1].
+
+Q47. Under the 'Code of Integrity' (Rule 175), a bidder is required to disclose previous transgressions involving bribery or material benefits given in exchange for unfair advantages. What is the look-back period for this mandatory disclosure?
+A. The last financial year
+B. The last two years
+C. The last three years
+D. The last five years
+Correct Answer: C
+Explanation:
+• Rule 175(1)(ii) requires the disclosure by the bidder of any previous transgressions made in respect of prohibited practices with any entity in any country during the last three years[cite: 1].
+
+Q48. When preparing the Terms of Reference (TOR) for a consultancy assignment under Rule 185, which of the following is NOT explicitly required to be included?
+A. A precise statement of objectives
+B. The schedule for completion of tasks
+C. The final outputs required of the Consultant
+D. The exact organizational chart of the Consultant's parent company
+Correct Answer: D
+Explanation:
+• Rule 185 dictates that the TOR must include objectives, tasks outline, completion schedule, inputs/support provided by the Ministry, and the final required outputs. It does not require the consultant's organizational chart[cite: 1].
+
+Q49. Under Rule 187, how should proposals ordinarily be asked for from shortlisted consultants?
+A. In a 'Single bid' system focusing purely on financial quotes.
+B. In a 'Two bid' system with technical and financial bids sealed separately and placed in a bigger sealed envelope.
+C. In an open forum presentation followed by public price negotiation.
+D. Exclusively via an Electronic Reverse Auction (ERA).
+Correct Answer: B
+Explanation:
+• Rule 187 specifies that proposals should ordinarily be asked for in a 'Two bid' system with technical and financial bids sealed separately, put in a bigger envelope, and sealed[cite: 1].
+
+Q50. Under Rule 194, single source selection (Consultancy by Nomination) is considered appropriate under exceptional circumstances. Which of the following is one such recognized circumstance?
+A. When the estimated cost of the consultancy is below Rs. 10 lakhs.
+B. When it is a continuation of previous work carried out by the firm.
+C. When the Ministry decides to support a newly registered Startup.
+D. When the required consultant is a retired Government servant.
+Correct Answer: B
+Explanation:
+• Rule 194 lists continuation of previous work carried out by the firm, emergency situations/natural disasters, and when only one consultant has the requisite expertise as the exceptional circumstances justifying single source selection[cite: 1].
+
+Q51. What is the fundamental mandate under Rule 196 when a Ministry wishes to procure a public design for symbols or logos?
+A. It must be outsourced to the National Institute of Design.
+B. A design competition should be conducted in a transparent, fair, and objective manner with wide publicity on CPPP.
+C. It must be procured using the Quality and Cost Based Selection (QCBS) method with an 80:20 ratio.
+D. The design should be selected by the Head of the Department without open competition to preserve secrecy.
+Correct Answer: B
+Explanation:
+• Rule 196 states that public competition for the design of symbols/logos should be conducted in a transparent, fair, and objective manner, ensuring wide accessibility and publicity on the CPPP[cite: 1].
+
+Q52. According to Rule 200, which of the following elements MUST be included in the preparation of a Tender Enquiry for outsourcing a non-consulting service?
+A. A clause mandating the engagement of retired departmental personnel.
+B. The statutory and contractual obligations to be complied with by the contractor.
+C. The methodology for Quality and Cost Based Selection (QCBS).
+D. The curriculum vitae of the contractor's entire field staff.
+Correct Answer: B
+Explanation:
+• Rule 200 specifies that the Tender Enquiry for non-consulting services must detail the work, facilities provided, eligibility criteria, and the statutory and contractual obligations to be complied with by the contractor[cite: 1].
+
+Q53. Rule 206 provides a fallback directive for procuring non-consulting services if specific circumstances arise that are not covered in Rules 198 to 205. In such a scenario, what should the procuring entity refer to?
+A. The rules pertaining to the procurement of consulting services (Rules 177 to 196).
+B. The rules pertaining to the procurement of goods (Rules 135 to 176).
+C. The rules governing the Public Account and Revenues (Rules 8 to 19).
+D. The Delegation of Financial Powers Rules, exclusively.
+Correct Answer: B
+Explanation:
+• Rule 206 explicitly directs that for circumstances not covered under the non-consulting services section, the procuring entity may refer to the rules pertaining to the procurement of goods (Rules 135 to 176), and NOT to the procurement of consulting services[cite: 1].
+
+Q54. Consider the following statements regarding the structural differentiation between consulting and non-consulting services under GFR 2017:
+1. Non-consulting services involve physical, measurable deliverables with clearly identified performance standards.
+2. The direct engagement of a retired Government servant is excluded from the definition of a Consulting Service.
+3. If non-consulting service procurement rules lack a specific provision, authorities must refer to consulting service rules to resolve the gap.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+• Statement 1 is correct as per the definition in Rule 197[cite: 1]. Statement 2 is correct per the exclusions listed in Rule 177[cite: 1]. Statement 3 is incorrect because Rule 206 mandates referring to the procurement of goods (Rules 135-176) to resolve gaps, not consulting rules[cite: 1].
+
+Q55. Under Article 284 of the Constitution, as cited in Rule 8, all moneys received by or deposited with any officer employed in connection with the affairs of the Union, other than revenues or public moneys raised or received by Government, shall be paid into the —
+A. Consolidated Fund of India
+B. Contingency Fund of India
+C. Public Account
+D. Departmental Revenue Account
+Correct Answer: C
+Explanation:
+• Rule 8(1)(i) explicitly states that under Article 284 of the Constitution, all such moneys received by or deposited with any officer (other than revenues) shall be paid into the Public Account[cite: 1].
+
+Q56. As per Rule 11, in Departments where officers are required to receive moneys on behalf of the Government, they must issue receipts for the same in which of the following prescribed forms?
+A. Form GAR-6
+B. Form GAR-14
+C. Form TR-5
+D. Form GFR-12
+Correct Answer: A
+Explanation:
+• Rule 11 mandates that officers receiving moneys on behalf of the Government and issuing receipts therefor must do so in Form GAR-6[cite: 1].
+
+Q57. Rule 19 requires Government Departments to submit an annual statement of remissions of revenue and abandonment of claims to the Audit and Accounts Officers. Individual remissions below what financial threshold need NOT be included in this statement?
+A. Rupees five hundred
+B. Rupees one thousand
+C. Rupees five thousand
+D. Rupees ten thousand
+Correct Answer: B
+Explanation:
+• Rule 19(1) specifies that individual remissions below Rupees one thousand need not be included in the annual statement submitted on the 1st of June[cite: 1].
+
+Q58. Rule 21 lays down the 'Standards of Financial Propriety'. Which of the following violates these fundamental principles?
+A. Exercising the same vigilance in respect of public moneys as a person of ordinary prudence would for their own money.
+B. Incurring expenditure that is not prima-facie more than the occasion demands.
+C. Sanctioning expenditure from public moneys for the exclusive benefit of a particular section of the people.
+D. Refusing to exercise sanctioning powers to pass an order that directly or indirectly advantages the sanctioning authority.
+Correct Answer: C
+Explanation:
+• Rule 21(iv) strictly states that expenditure from public moneys should NOT be incurred for the benefit of a particular person or a section of the people. Doing so is a violation of financial propriety[cite: 1].
+
+Q59. Under Rule 30, what is the standard validity period after which a financial sanction lapses if no payment in whole or in part has been made?
+A. Three months from the date of issue
+B. Six months from the date of issue
+C. Twelve months from the date of issue
+D. Until the end of the current financial year
+Correct Answer: C
+Explanation:
+• Rule 30 dictates that a sanction lapses if no payment in whole or in part has been made during a period of twelve months from the date of issue of such sanction[cite: 1].
+
+Q60. Which of the following is an exception to the general rule of lapse of sanctions, meaning it does NOT lapse within 12 months even if not drawn by the concerned officer?
+A. A sanction for the purchase of common-use goods.
+B. An allowance sanctioned for a post or for a class of Government servants.
+C. A sanction for the creation of a temporary post.
+D. A sanction for contingent expenditure.
+Correct Answer: B
+Explanation:
+• Rule 31 explicitly provides an exception: An allowance sanctioned for a post or for a class of Government servants, but not drawn by the officer(s) concerned, shall not lapse within 12 months from the sanction date[cite: 1].
+
+Q61. Rule 29 specifies that copies of all financial sanctions issued by a competent authority must be communicated to the Audit Officer, with certain exceptions. Which of the following sanctions must STILL be endorsed to the Audit Officer?
+A. Sanctions relating to the grant of advances to Central Government employees.
+B. Sanctions relating to the appointment, promotion, or transfer of Gazetted and non-Gazetted Officers.
+C. Sanctions relating to the payment or withdrawal of GPF advances.
+D. Sanctions for a major procurement contract exceeding Rs. 50 Lakhs.
+Correct Answer: D
+Explanation:
+• Rule 29 lists seven types of routine and personal-claim sanctions that do not need to be endorsed to Audit Officers (options A, B, and C are among these exceptions). Major procurement sanctions do not fall under these exceptions and must be communicated[cite: 1].
+
+Q62. Under Rule 33 regarding the report of losses of public moneys or property, 'petty losses' are exempted from being reported to the next higher authority. What is the maximum value of a loss to be considered 'petty' under this rule?
+A. Rupees two thousand
+B. Rupees five thousand
+C. Rupees ten thousand
+D. Rupees twenty-five thousand
+Correct Answer: C
+Explanation:
+• Rule 33(1)(ii) states that petty losses of value not exceeding Rupees ten thousand need not be reported[cite: 1].
+
+Q63. A loss of Government property occurs due to suspected theft or fraud. According to Rule 34, above what financial threshold is it mandatory to invariably report the matter to the Police for investigation?
+A. Rs. 10,000/-
+B. Rs. 25,000/-
+C. Rs. 50,000/-
+D. Rs. 1,00,000/-
+Correct Answer: C
+Explanation:
+• Rule 34 mandates that all losses above the value of Rs. 50,000/- (Fifty thousand) due to suspected fire, theft, fraud, etc., shall be invariably reported to the Police as early as possible[cite: 1].
+
+Q64. In cases involving a material loss of immovable property caused by natural causes like floods or earthquakes, what is the financial threshold exceeding which the subordinate authority must report the loss to the Government through the usual channel?
+A. Rs. 10,000/-
+B. Rs. 50,000/-
+C. Rs. 1,00,000/-
+D. Rs. 5,00,000/-
+Correct Answer: B
+Explanation:
+• Rule 35 dictates that all loss of immovable property exceeding Rupees 50,000/- (fifty thousand) caused by fire, flood, cyclone, earthquake, or natural cause shall be reported at once to the Government[cite: 1].
+
+Q65. If an Audit Officer requests access to a file that is officially categorized as 'Secret' or 'Top Secret' (Rule 41), what is the prescribed procedure for furnishing this information?
+A. The file must be scanned and sent exclusively via the e-procurement portal.
+B. The file must be sent through registered post with an insured value.
+C. The file may be sent personally to the Head of the Audit Office specifying the classification.
+D. The file cannot be shared under any circumstances, and the Audit Officer must be denied access.
+Correct Answer: C
+Explanation:
+• Rule 41 explicitly states that if the contents are 'Secret' or 'Top Secret', the file may be sent personally to the Head of the Audit Office, who will then handle it according to standing instructions for classified documents[cite: 1].
+
+Q66. Which of the following is NOT recognized as one of the standard methods of obtaining bids under Rule 158?
+A. Two-Stage Bidding
+B. Advertised Tender Enquiry
+C. Closed-Door Price Negotiation
+D. Electronic Reverse Auctions
+Correct Answer: C
+Explanation:
+• Rule 158 lists exactly five standard methods for obtaining bids: Advertised Tender Enquiry, Limited Tender Enquiry, Two-Stage Bidding, Single Tender Enquiry, and Electronic Reverse Auctions. Closed-Door Price Negotiation is not among them[cite: 1].
+
+Q67. Under Rule 168 outlining the required contents of a Bidding Document, which of the following forms the core financial response mechanism for the bidder?
+A. Schedule of Requirements
+B. Instructions to Bidders
+C. Price Schedule
+D. Conditions of Contract
+Correct Answer: C
+Explanation:
+• Rule 168(e) lists the "Price Schedule" as the specific component to be utilized by the bidders for quoting their prices[cite: 1].
+
+Q68. Under Rule 176, when an existing old item is being replaced with a new and better version, what action is the purchasing department permitted to take with the approval of the competent authority?
+A. Mandatory destruction of the old item to prevent resale.
+B. Trade the existing old item using a Buy-Back offer while purchasing the new one.
+C. Transfer the old item exclusively to a scrap dealer registered on GeM.
+D. Retain the old item permanently in a suspense account.
+Correct Answer: B
+Explanation:
+• Rule 176 (Buy-Back Offer) states that when replacing an existing old item with a new version, the department may trade the existing old item while purchasing the new one, subject to competent authority approval[cite: 1].
+
+Q69. In the procurement of consulting services, which specific authority or body is mandated under Rule 189 to analyze and evaluate the technical bids?
+A. The Financial Adviser of the Ministry
+B. The Local Purchase Committee (LPC)
+C. The Consultancy Evaluation Committee (CEC)
+D. The Central Public Procurement Portal (CPPP) Administrator
+Correct Answer: C
+Explanation:
+• Rule 189 specifies that technical bids should be analyzed and evaluated by a Consultancy Evaluation Committee (CEC) constituted by the Ministry or Department[cite: 1].
+
+Q70. Under Rule 7, all moneys received by or on behalf of the Government shall be brought into Government Account without delay. This mandate is driven by which Articles of the Constitution?
+A. Articles 110 and 112
+B. Articles 150 and 283(1)
+C. Articles 266 and 267
+D. Articles 148 and 149
+Correct Answer: B
+Explanation:
+• Rule 7 explicitly states that such moneys shall be brought into Government Account without delay under Articles 150 and 283(1) of the Constitution[cite: 1].
+
+Q71. According to Rule 9, whose primary duty is it to ensure that the receipts and dues of the Government are correctly and promptly assessed, collected, and duly credited?
+A. The Comptroller and Auditor General of India
+B. The Department of the Central Government concerned
+C. The Ministry of Finance
+D. The Reserve Bank of India
+Correct Answer: B
+Explanation:
+• Rule 9 places the duty to ensure correct assessment, collection, and crediting of receipts and dues squarely on the Department of the Central Government concerned[cite: 1].
+
+Q72. Under Rule 10, who is responsible for arranging to obtain monthly accounts and returns in suitable form from subordinate officers?
+A. The Audit Officer
+B. The Pay and Accounts Officer
+C. The Controlling Officer
+D. The Chief Accounting Authority
+Correct Answer: C
+Explanation:
+• Rule 10 dictates that the Controlling Officer shall arrange to obtain monthly accounts and returns from his subordinate officers[cite: 1].
+
+Q73. Which of the following is the correct procedural action under Rule 12 when amounts due to the Government appear to be irrecoverable?
+A. The amounts should be written off immediately by the Head of Office.
+B. The amounts must be left outstanding indefinitely until recovered.
+C. The orders of the competent authority shall be obtained for their adjustment.
+D. The matter must be referred to the Police for investigation.
+Correct Answer: C
+Explanation:
+• Rule 12 states that amounts due to Government shall not be left outstanding without sufficient reasons, and if irrecoverable, the orders of the competent authority shall be obtained for their adjustment[cite: 1].
+
+Q74. Under Rule 15(1), if the maintenance of a rentable building is entrusted to a civil department other than the Central Public Works Department (CPWD), who holds the responsibility for the due recovery of its rent?
+A. The Director General of CPWD
+B. The Administrator or the Head of the Department concerned
+C. The Estate Officer of the Ministry of Urban Development
+D. The Financial Adviser of the respective Ministry
+Correct Answer: B
+Explanation:
+• Rule 15(1) specifies that when entrusted to a civil department other than CPWD, the Administrator or the Head of the Department concerned is responsible for rent recovery[cite: 1].
+
+Q75. What specific safeguard must an authority having the power to refund fines ensure, as per Rule 16(2)?
+A. That fines are only refunded via direct bank transfer.
+B. That no double refunds of amounts are made, and no refunds are made for fines not actually paid into a treasury or bank.
+C. That the Audit Officer pre-approves all refunds exceeding Rupees one thousand.
+D. That fines are refunded within 30 days of the appellate order.
+Correct Answer: B
+Explanation:
+• Rule 16(2) explicitly requires authorities to ensure that refunds are checked, no double refunds are made, and no refunds are issued for fines not actually deposited[cite: 1].
+
+Q76. Under Rule 17, who is tasked with watching the realization of miscellaneous demands of Government (e.g., contributions from State Governments or contractors) that do not fall under ordinary revenue administration?
+A. The Controlling Officer
+B. The Head of the Department
+C. Accounts Officers
+D. The Audit Officer
+Correct Answer: C
+Explanation:
+• Rule 17 mandates that Accounts Officers shall watch the realization of miscellaneous demands of Government[cite: 1].
+
+Q77. According to Rule 18, a claim to revenue shall not be remitted or abandoned EXCEPT with the sanction of:
+A. The Parliament
+B. The Ministry of Finance
+C. The Competent Authority
+D. The Comptroller and Auditor General
+Correct Answer: C
+Explanation:
+• Rule 18 states plainly that a claim to revenue shall not be remitted or abandoned save with the sanction of the competent authority[cite: 1].
+
+Q78. As per Rule 23 regarding the Delegation of Financial Powers, where do the financial powers of the Government vest if they have NOT been delegated to a subordinate authority?
+A. The Parliament
+B. The Prime Minister's Office
+C. The Finance Ministry
+D. The Controller General of Accounts
+Correct Answer: C
+Explanation:
+• Rule 23 states that the financial powers of the Government, which have not been delegated to a subordinate authority, shall vest in the Finance Ministry[cite: 1].
+
+Q79. According to Rule 24, what mandatory step must Departments and Ministries take before incurring any expenditure?
+A. Publish the requirement on the Central Public Procurement Portal.
+B. Consult with the Financial Adviser.
+C. Obtain a No Objection Certificate from Audit.
+D. Issue an Advertised Tender Enquiry.
+Correct Answer: B
+Explanation:
+• Rule 24 requires that before incurring any expenditure, Departments and Ministries will consult with the Financial Adviser[cite: 1].
+
+Q80. Rule 26 lays down three primary responsibilities of a Controlling Officer in respect of budget allocation. Which of the following is NOT one of them?
+A. Ensuring the expenditure does not exceed the budget allocation.
+B. Ensuring the expenditure is incurred for the purpose for which funds have been provided.
+C. Ensuring adequate control is exercised to guard against waste and loss.
+D. Ensuring that no single procurement contract exceeds 10% of the total budget.
+Correct Answer: D
+Explanation:
+• Rule 26 lists three duties: avoiding budget overruns, ensuring funds are used for their intended purpose, and exercising control against waste and loss. It does not mention a 10% procurement cap[cite: 1].
+
+Q81. Unless another date is explicitly specified within the order itself, from which date do all rules, sanctions, or orders come into force under Rule 27?
+A. The first day of the next month
+B. The first day of the financial year
+C. The date of issue
+D. The date of receipt by the subordinate office
+Correct Answer: C
+Explanation:
+• Rule 27 stipulates that all rules, sanctions, or orders shall come into force from the date of issue unless any other date is specified therein[cite: 1].
+
+Q82. Under Rule 28, which of the following actions STRICTLY requires the previous consent of the Finance Ministry?
+A. Relinquishment of revenue in any way.
+B. Creation of a temporary Group C post.
+C. Sanctioning an advance to a Central Government employee.
+D. Procuring common-use goods via GeM.
+Correct Answer: A
+Explanation:
+• Rule 28 lists specific scenarios requiring previous Finance Ministry consent, including grants of land, concessions, and the "relinquishment of revenue in any way"[cite: 1].
+
+Q83. Consider the following statements regarding sanctions:
+1. All sanctions to expenditure must indicate the details of the provisions in the relevant grant or appropriation.
+2. The writing off of overpayments made to Government servants requires the previous consent of the Finance Ministry.
+Which of the above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Correct Answer: A
+Explanation:
+• Statement 1 is correct per Rule 25[cite: 1]. Statement 2 is incorrect because Rule 32 states that the writing off of overpayments to Government servants is done by competent authorities according to their Delegation of Financial Power rules, not necessarily the Finance Ministry[cite: 1].
+
+Q84. After a full enquiry into a loss of Government property is completed, to whom must a copy of the final report be forwarded under Rule 36?
+A. The Finance Secretary only
+B. The Police Department only
+C. The Audit Officer and the Pay and Accounts Officer
+D. The Controller General of Accounts exclusively
+Correct Answer: C
+Explanation:
+• Rule 36 requires that after a full enquiry of the loss, a copy of the report is forwarded to the Audit Officer and the Pay and Accounts Officer[cite: 1].
+
+Q85. Under Rule 37, what is the standard of liability for an officer regarding losses sustained by the Government?
+A. The officer is immune from financial liability if acting in an official capacity.
+B. The officer shall be held personally responsible for any loss sustained through fraud or negligence on his part.
+C. Liability is strictly shared equally among all members of the Local Purchase Committee.
+D. The officer is liable only if the loss exceeds Rupees fifty thousand.
+Correct Answer: B
+Explanation:
+• Rule 37 establishes that an officer shall be held personally responsible for any loss sustained by the Government through fraud or negligence on his part[cite: 1].
+
+Q86. According to Rule 38 regarding the disposal of cases of loss, special attention should be given to which two specific elements?
+A. Media management and police liaison
+B. Action against delinquents and remedial measures
+C. Writing off the amount and notifying Audit
+D. Suspension of the Controlling Officer and external enquiry
+Correct Answer: B
+Explanation:
+• Rule 38 emphasizes that action at each stage of a loss case should be completed promptly, with "special attention to action against delinquents and remedial measures"[cite: 1].
+
+Q87. Under Rules 39 and 40, what is the stance on a subordinate authority withholding information or documents required by the Audit Officer or Accounts Officer?
+A. It is permitted if the Head of Office deems the document irrelevant.
+B. It is strictly prohibited; the authority shall not withhold any required information, books, or documents.
+C. It is allowed only for files older than three financial years.
+D. It is permitted if the information relates to minor procurement below Rs. 25,000.
+Correct Answer: B
+Explanation:
+• Rule 40 clearly states that a subordinate authority shall not withhold any information, books, or other documents required by the Audit Officer or Accounts Officer[cite: 1].
+
+Q88. Which authority is held "fully responsible" under Rule 39 for furnishing any information required by Audit or the PAO for internal audit or official accounts?
+A. The Chief Accounting Authority
+B. The Subordinate Authority
+C. The Financial Adviser
+D. The Ministry of Finance
+Correct Answer: B
+Explanation:
+• Rule 39 states that a subordinate authority is fully responsible for furnishing any information required by Audit or the PAO[cite: 1].
+
+Q89. According to the Appendix of the provided document, Rule 144(xi) imposes restrictions on bidders from which specific category?
+A. Bidders who have failed to register on GeM.
+B. Bidders lacking an Import Export Code (IEC).
+C. Bidders from countries sharing a land border with India.
+D. Bidders who have breached the Code of Integrity in the last five years.
+Correct Answer: C
+Explanation:
+• The Appendix note explicitly mentions that Rule 144(xi) places a restriction on bidders from countries sharing a land border with India[cite: 1].
+
+Q90. Which of the following statements is true regarding Rule 144(xi) based on the provided text?
+A. It has been repealed by the DoE O.M. dated 10.07.2024.
+B. It is currently in force but falls outside the scope of the two-chapter booklet.
+C. It applies exclusively to the procurement of consulting services.
+D. It prohibits domestic bidders from quoting prices in foreign currency.
+Correct Answer: B
+Explanation:
+• The Appendix notes that Rule 144(xi) is "in force but outside the scope of this two-chapter booklet"[cite: 1].

@@ -67,7 +67,7 @@ export const PSGB_QUIZ_DATA: QuizTopic[] = [
   createTopic('psgb-64', "Interface with India Post Payment Bank", 'Paper II', [107, 108, 109]),
   createTopic('psgb-65', "Preservation and Disposal of Postal Records", 'Paper II', [179, 180]),
   createTopic('psgb-66', "Swatchh Bharat", 'Paper II', [181, 182, 183]),
-  createTopic('psgb-67', "Inspection questionnaires.", 'Paper II', []),
+  createTopic('psgb-67', "Inspection questionnaires.", 'Paper II', [460, 461, 462]),
   createTopic('psgb-68', "CSI Operating Manuals.", 'Paper II', []),
   createTopic('psgb-69', "Gramin Dak Sevak (Conduct and Engagement) Rules, 2011.", 'Paper II', [113, 114, 115]),
   createTopic('psgb-70', "Central Administrative Tribunal Act, 1985 and its Rules", 'Paper II', [67]),

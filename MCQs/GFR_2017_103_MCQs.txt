@@ -1,0 +1,1051 @@
+🎯  MASTER PROMPT v3.0 - EXECUTED (DEPARTMENTAL / LDCE + 💎 RICHNESS MODE)
+RICH, HIGH-QUALITY MCQ GENERATOR - 100+ MCQs EDITION
+Subject: General Financial Rules, 2017 (Other than Public Procurement)
+Based on: DAK GURU Notes (Updated up to 31.07.2024)
+
+═══════════════════════════════════════════
+📋  COVERAGE MAP (Top-to-Bottom Traversal)
+═══════════════════════════════════════════
+Level 1: Major Chapters
+  [✓] Part 1: Chapter 1 — Introduction
+  [✓] Part 2: Chapter 2 — General System of Financial Management
+  [✓] Part 3: Chapter 3 — Budget Formulation & Implementation
+  [✓] Part 4: Chapter 4 — Government Accounts
+  [✓] Part 5: Chapter 5 — Works
+  [✓] Part 6: Chapter 9 — Grants-in-Aid and Loans
+  [✓] Part 7: Chapter 10 & 11 — Externally Aided Projects & Govt Guarantees
+  [✓] Part 8: Chapter 12 — Miscellaneous Subjects
+
+═══════════════════════════════════════════
+PART 1: Chapter 1 — Introduction
+Source Pages: Document Rules 1–6
+Total MCQs in this Part: 5
+═══════════════════════════════════════════
+
+── Sub-Section 1.1: Rule 1-6 (Definitions & Basics) · 🔴 CRITICAL · MCQs Q1–Q5 ──
+
+Q1. Under Rule 2 of the GFR 2017, which of the following best defines "Appropriation"?
+A. The transfer of funds from one minor head to another
+B. The assignment of funds in a primary unit of appropriation to meet specified expenditure
+C. An advance granted from the Contingency Fund of India
+D. The expenditure charged directly on the Consolidated Fund
+Correct Answer: B
+Explanation:
+• Rule 2 defines Appropriation strictly as the assignment of funds in a primary unit of appropriation to meet specified expenditure.
+
+Q2. As per GFR 2017, an authority declared as a "Head of Department" to exercise delegated financial powers must NOT be below the rank of:
+A. Under Secretary
+B. Deputy Secretary
+C. Director
+D. Joint Secretary
+Correct Answer: B
+Explanation:
+• Rule 2 stipulates that a Head of Department is an authority not below the rank of Deputy Secretary, declared as such to exercise delegated financial powers.
+
+Q3. Consider the following statements regarding procurement models defined under GFR 2017:
+1. Under the CAPEX model, the seller supplies and maintains the asset while the buyer pays in a staggered manner.
+2. Under the OPEX model, the buyer purchases, maintains, and disposes of the asset.
+Which of the above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Correct Answer: D
+Explanation:
+• Both definitions are reversed. Rule 2 defines CAPEX as the model where the buyer purchases, maintains, and disposes of the asset. OPEX is where the seller supplies, maintains, and takes back the asset against staggered payments.
+
+Q4. Who among the following is designated as a "Drawing & Disbursing Officer (DDO)"?
+A. Any Group A officer in the Ministry
+B. The Principal Accounts Officer
+C. A Head of Office or other Gazetted Officer designated to draw bills and make payments
+D. The Controlling Officer responsible for budget allocation
+Correct Answer: C
+Explanation:
+• Rule 2 defines a DDO as a Head of Office or other Gazetted Officer specifically designated to draw bills and make payments.
+
+Q5. If any doubts arise regarding the interpretation of the General Financial Rules, to whom are they referred for a final decision?
+A. The Comptroller and Auditor General of India
+B. The Ministry of Law and Justice
+C. The Ministry of Finance
+D. The Department of Personnel and Training
+Correct Answer: C
+Explanation:
+• Rule 5 specifies that doubts on the interpretation of these Rules are referred directly to the Ministry of Finance for decision.
+
+═══════════════════════════════════════════
+PART 2: Chapter 2 — General System of Financial Management
+Source Pages: Document Rules 7–41
+Total MCQs in this Part: 20
+═══════════════════════════════════════════
+
+── Sub-Section 2.1: Receipts (Rules 7-20) · 🟡 HIGH · MCQs Q6–Q11 ──
+
+Q6. Moneys received by any Union officer (other than Government revenue), such as deposits or remittances, are paid into which of the following accounts under Article 284?
+A. The Consolidated Fund of India
+B. The Contingency Fund of India
+C. The Public Account
+D. The Personal Deposit Account
+Correct Answer: C
+Explanation:
+• Rule 8 states that moneys received by any Union officer (other than Government revenue) and moneys with courts (other than a High Court in a UT) are paid into the Public Account.
+
+Q7. Under Rule 19, Departments must submit an annual statement of remissions and abandonments of revenue to the Audit & Accounts Officers. Individual remissions below what monetary threshold need NOT be included in this statement?
+A. ₹500
+B. ₹1,000
+C. ₹5,000
+D. ₹10,000
+Correct Answer: B
+Explanation:
+• Rule 19(1) specifies that individual remissions below ₹1,000 need not be included in the annual statement of remissions.
+
+Q8. Which of the following practices regarding the crediting of revenue is strictly prohibited under Rule 13?
+A. Crediting revenue directly into the Public Account
+B. Crediting sums as revenue by debit to a suspense head before actual realization
+C. Remitting revenue through online e-Receipts portals
+D. Consolidating miscellaneous demands into a single minor head
+Correct Answer: B
+Explanation:
+• Rule 13 states that sums shall not be credited as revenue by debit to a suspense head (unless specially authorised); the credit must follow, not precede, actual realization.
+
+Q9. Where a civil department (other than CPWD) maintains a rentable building, who is responsible for the due assessment and realization of rent?
+A. The Principal Accounts Officer
+B. The Head of Department
+C. The Central Public Works Department
+D. The Drawing and Disbursing Officer
+Correct Answer: B
+Explanation:
+• Rule 15 designates the Head of Department as the authority responsible for the due assessment and realization of rent per CPWD-aligned rules.
+
+Q10. By which date must the annual statement of remissions and abandonments of revenue be submitted to the Audit & Accounts Officers each year?
+A. 1st April
+B. 30th April
+C. 1st June
+D. 31st December
+Correct Answer: C
+Explanation:
+• Rule 19(1) states that Departments/Administrators/Heads of Departments submit this statement by 1st June each year.
+
+Q11. A claim to revenue shall not be remitted or abandoned except with the sanction of:
+A. The Finance Ministry exclusively
+B. The Competent Authority
+C. The Head of Office
+D. The Comptroller and Auditor General
+Correct Answer: B
+Explanation:
+• Rule 18 mandates that a claim to revenue shall not be remitted or abandoned except with the sanction of the competent authority.
+
+── Sub-Section 2.2: General Principles of Expenditure (Rules 21-32) · 🔴 CRITICAL · MCQs Q12–Q20 ──
+
+Q12. Every officer incurring expenditure must observe the standards of financial propriety. Which of the following violates these standards?
+A. Exercising the same vigilance as a person of ordinary prudence
+B. Sanctioning expenditure that is prima facie no more than the occasion demands
+C. Authorizing expenditure to fulfill a claim enforceable in a Court of Law
+D. Sanctioning an allowance that directly benefits the sanctioning authority itself
+Correct Answer: D
+Explanation:
+• Rule 21(iii) explicitly prohibits any authority from sanctioning expenditure that benefits itself directly or indirectly.
+
+Q13. An order sanctioning the creation of a temporary post must specifically state:
+A. The name of the person appointed to the post
+B. The date of creation and the sanctioned duration
+C. The exact object head from which the salary will be drawn
+D. The prior approval of the Parliament
+Correct Answer: B
+Explanation:
+• Rule 27(2) requires that temporary-post creation orders specify the date of creation and the sanctioned duration.
+
+Q14. As a general rule under Rule 30, a sanction for a fresh charge lapses if no payment is made within what period from the date of issue?
+A. 6 months
+B. 12 months
+C. 24 months
+D. At the close of the financial year
+Correct Answer: B
+Explanation:
+• Rule 30 states that a sanction for a fresh charge lapses, unless specifically renewed, if no payment (whole or part) is made within twelve months from the date of issue.
+
+Q15. Under which of the following circumstances does a sanction NOT lapse even if no payment is made within 12 months?
+A. A sanction for the grant of a Personal Pay allowance
+B. A sanction for the purchase of stores where tenders have been accepted within one year of issue
+C. A sanction for the construction of a minor work
+D. A sanction endorsed to the Internal Finance Wing
+Correct Answer: B
+Explanation:
+• Rule 30, Proviso (iii), explicitly states that for the purchase of stores, the sanction does not lapse if tenders are accepted or the indent is placed on the Central Purchase Organization within one year of issue.
+
+Q16. A sanction issued on 10th August specifies that the expenditure is to be met from the budget provision of the current financial year. If no payment is made, when will this sanction lapse?
+A. 9th August of the next year
+B. 31st March of the current financial year
+C. 31st December of the current year
+D. It will not lapse until payment is made
+Correct Answer: B
+Explanation:
+• Rule 30, Proviso (ii), states that if a sanction specifies the expenditure is to be met from a particular financial year's budget, it lapses at the close of that year.
+
+Q17. Which of the following routine sanctions must STILL be endorsed to the Audit Officer?
+A. Creation or continuation of temporary posts
+B. Grant of GPF advances to employees
+C. Handing and taking over charge reports
+D. Grants of land or alienation of land revenue
+Correct Answer: D
+Explanation:
+• Under Rule 29(xi), routine staff sanctions are exempt. However, Rule 29(xii) requires that grants of land/alienation of land revenue must be reported to Audit/Accounts in a consolidated monthly return.
+
+Q18. Consider the following statements regarding the communication of sanctions:
+1. Sanctions on which the Accounts Officer is to make payment are addressed directly to him.
+2. Orders sanctioning a definite amount must express it only in figures to avoid clerical errors.
+Which of the above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Correct Answer: A
+Explanation:
+• Statement 1 is correct per Rule 29(i). Statement 2 is incorrect because Rule 29(vi) strictly requires that orders sanctioning a definite amount express it in BOTH words and figures.
+
+Q19. Without the prior consent of the Finance Ministry, a subordinate authority shall NOT:
+A. Sanction contingent expenditure under Head of Office powers
+B. Grant a concession, lease, or licence of mineral, forest, or water rights
+C. Communicate a sanction directly to the Principal Accounts Officer
+D. Process scheme-related estimates
+Correct Answer: B
+Explanation:
+• Rule 28 strictly bars subordinate authorities from granting land, assigning revenue, or granting leases/licences of mineral, forest, water, or power rights without prior Finance Ministry consent.
+
+Q20. Which of the following types of sanctions do NOT lapse under any general time limits?
+A. Sanctions for non-recurring capital expenditure
+B. Sanctions for fresh contingent charges
+C. Year-to-year additions to a permanent establishment under a general scheme
+D. Sanctions for advances to Government Pleaders
+Correct Answer: C
+Explanation:
+• Rule 31 explicitly lists year-to-year additions to a permanent establishment under a general scheme, and allowances sanctioned but not drawn, as sanctions that do not lapse.
+
+── Sub-Section 2.3: Defalcation & Losses (Rules 33-38) · 🔴 CRITICAL · MCQs Q21–Q25 ──
+
+Q21. Any loss or shortage of public money or departmental revenue must be reported immediately. However, petty losses are exempt. What is the monetary threshold for a petty loss?
+A. Up to ₹2,000
+B. Up to ₹5,000
+C. Up to ₹10,000
+D. Up to ₹25,000
+Correct Answer: C
+Explanation:
+• Rule 33(1) exempts petty losses up to ₹10,000 from the mandatory immediate reporting requirement.
+
+Q22. Which of the following revenue losses must be reported to the next higher authority and the Statutory Audit Officer?
+A. A loss arising from an assessment mistake discovered too late for a supplementary claim
+B. A refund allowed on the grounds that the claim was time-barred
+C. A loss arising from the embezzlement of stamp duties by a clerk
+D. An under-assessment where the law's interpretation was overruled after the time-limit
+Correct Answer: C
+Explanation:
+• Rule 33(1) explicitly exempts assessment mistakes, overruled interpretations, and time-barred refunds. Embezzlement/defalcation, however, must be reported regardless of the amount.
+
+Q23. The reporting of a severe loss due to fraud involves a two-stage process. When must the initial report be submitted?
+A. Only after the police have filed an FIR
+B. As soon as a loss is suspected
+C. After the departmental inquiry is fully concluded
+D. At the close of the financial year
+Correct Answer: B
+Explanation:
+• Rule 33(3) mandates that the initial report be submitted as soon as a loss is suspected, followed by a final report after investigation.
+
+Q24. In the event of a material loss of immovable property (such as buildings) by fire, flood, or cyclone, the loss must be reported if it exceeds:
+A. ₹10,000
+B. ₹25,000
+C. ₹50,000
+D. ₹1,00,000
+Correct Answer: C
+Explanation:
+• Rule 35 states that all loss of immovable property exceeding ₹50,000 by natural cause must be reported as prescribed.
+
+Q25. An amount lost by misappropriation or embezzlement may be redrawn on a simple receipt pending investigation or recovery. Whose prior approval is required for this redrawal?
+A. The Comptroller and Auditor General
+B. The Principal Accounts Officer
+C. The authority competent to write-off the loss
+D. The Drawing and Disbursing Officer
+Correct Answer: C
+Explanation:
+• Rule 33(5) allows an amount lost by misappropriation to be redrawn on a simple receipt with the approval of the write-off authority.
+
+═══════════════════════════════════════════
+PART 3: Chapter 3 — Budget Formulation & Implementation
+Source Pages: Document Rules 42–70
+Total MCQs in this Part: 15
+═══════════════════════════════════════════
+
+── Sub-Section 3.1: Budget Preparation (Rules 42-56) · 🟡 HIGH · MCQs Q26–Q31 ──
+
+Q26. Under which Article of the Constitution does the Finance Minister lay the Annual Financial Statement (Budget) before Parliament?
+A. Article 110
+B. Article 112
+C. Article 114
+D. Article 266
+Correct Answer: B
+Explanation:
+• Rule 43(1) states that the Annual Financial Statement is laid under Article 112.
+
+Q27. When fixing User Charges for Government services, which of the following principles must be followed?
+A. They must be fixed exclusively by Acts of Parliament.
+B. They are linked to appropriate price indices and reviewed at least every three years.
+C. Any deviation resulting in charges below cost-recovery requires no special justification.
+D. They must be reviewed monthly.
+Correct Answer: B
+Explanation:
+• Rule 47 specifies that user charges must be linked to appropriate price indices and reviewed at least every three years, and any deviation must be specifically recorded with justifying reasons.
+
+Q28. Expenditure that is NOT subject to the vote of the legislature is known as:
+A. Voted expenditure
+B. Capital expenditure
+C. Charged expenditure
+D. Contingency expenditure
+Correct Answer: C
+Explanation:
+• Rule 50(1) and Rule 83 define expenditure under Article 112(3) as Charged on the Consolidated Fund, which is not subject to a vote.
+
+Q29. Detailed Demands for Grants of a Ministry are laid before which of the following bodies?
+A. The Comptroller and Auditor General
+B. The Departmentally-Related Standing Committee (DRSC)
+C. The Public Accounts Committee
+D. The NITI Aayog
+Correct Answer: B
+Explanation:
+• Rule 51(3) specifies that Detailed Demands for Grants are laid before the Departmentally-Related Standing Committee (DRSC).
+
+Q30. To meet expenditure before the Appropriation Bill is passed after the year begins, an interim grant is taken. What is this grant called and under which Article is it provided?
+A. Supplementary Grant under Article 115
+B. Vote on Account under Article 116
+C. Contingency Advance under Article 267
+D. Charged Appropriation under Article 112
+Correct Answer: B
+Explanation:
+• Rule 55 states that an interim grant (Vote on Account) under Article 116 meets expenditure until the Appropriation Bill passes.
+
+Q31. The Department of Expenditure, in consultation with NITI Aayog, prepares a specific budget linking scheme outlays to measurable outputs. What is this budget called?
+A. The Performance Budget
+B. The Outcome Budget
+C. The Zero-Based Budget
+D. The Capital Budget
+Correct Answer: B
+Explanation:
+• Rule 54 defines the Outcome Budget, which links scheme outlays to measurable outputs and outcomes.
+
+── Sub-Section 3.2: Control & Re-appropriation (Rules 57-70) · 🔴 CRITICAL · MCQs Q32–Q40 ──
+
+Q32. To control expenditure and avoid a rush in March, the Controlling Officer obtains monthly liability statements (Form GFR 3A) from spending authorities starting from which month each year?
+A. April
+B. July
+C. October
+D. January
+Correct Answer: C
+Explanation:
+• Rule 58 specifies that the liability statements are obtained from October each year.
+
+Q33. Which of the following best defines a "New Service" expenditure under Rule 63?
+A. Expenditure on an existing scheme exceeding the budget by 10%
+B. Expenditure not contemplated in the Annual Budget, requiring a supplementary grant or Contingency Fund advance
+C. Expenditure met through re-appropriation of anticipated savings
+D. Any capital expenditure on infrastructure
+Correct Answer: B
+Explanation:
+• Rule 63 states that no expenditure on a 'New Service' not contemplated in the Annual Budget can be incurred without a supplementary grant or CF advance.
+
+Q34. Re-appropriation is the transfer of funds between primary units of appropriation. Which of the following is an ABSOLUTE bar on re-appropriation?
+A. Transferring funds from a Revenue head to a Capital head
+B. Transferring funds between two Minor Heads within the same grant
+C. Transferring funds from Voted expenditure to Charged expenditure
+D. Transferring funds in the last month of the financial year
+Correct Answer: C
+Explanation:
+• Rule 65 explicitly bars re-appropriation from Voted to Charged (or vice versa), to a New Service, or to unsanctioned expenditure.
+
+Q35. A re-appropriation order must explicitly state the reasons for any saving and excess if the amount transferred is:
+A. ₹10,000 or more
+B. ₹50,000 or more
+C. ₹1,00,000 or more
+D. ₹5,00,000 or more
+Correct Answer: C
+Explanation:
+• Rule 65(4) dictates that the order must state reasons for saving and excess of ₹1 lakh or more.
+
+Q36. Consider the following statements regarding re-appropriation:
+1. Funds can be re-appropriated from a unit even if there is an intention to restore the amount later from other savings.
+2. The application for re-appropriation must be supported by a statement in Form GFR 1.
+Which of the above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Correct Answer: B
+Explanation:
+• Statement 1 is strictly prohibited under Rule 65(3). Statement 2 is correct per Rule 65(4).
+
+Q37. If savings are NOT available within the grant, and expenditure on a New Service must be incurred, what must be obtained before authorizing payment?
+A. An intra-departmental re-appropriation order
+B. A Supplementary Grant or Appropriation under Article 115(1)
+C. A Vote on Account under Article 116
+D. A special waiver from the C&AG
+Correct Answer: B
+Explanation:
+• Rule 66 requires a Supplementary Grant or Appropriation under Article 115(1) if savings are unavailable or for a New Service.
+
+Q38. When there is not enough time to pass a supplementary appropriation before year-end for unforeseen expenditure, an advance is taken from the Contingency Fund. When must this advance be taken?
+A. BEFORE incurring the expenditure
+B. SIMULTANEOUSLY while paying the bill
+C. AFTER the expenditure is incurred but before the year closes
+D. In the next financial year as a regularizing measure
+Correct Answer: A
+Explanation:
+• Rule 67(1) mandates that the advance from the Contingency Fund is taken BEFORE incurring the expenditure.
+
+Q39. Who is designated as the Chief Accounting Authority of a Ministry/Department, responsible for its financial management?
+A. The Financial Adviser
+B. The Principal Accounts Officer
+C. The Secretary of the Ministry/Department
+D. The Head of Department
+Correct Answer: C
+Explanation:
+• Rule 70 declares the Secretary of a Ministry/Department as its Chief Accounting Authority.
+
+Q40. A Disbursing Officer realizes he does not have sufficient allotted funds to pass a bill. Under Rule 64, what action is he authorized to take on his own authority?
+A. Pass the bill and adjust it against next year's budget
+B. Pay the bill by diverting funds from a suspense head
+C. He may not pay in excess of funds on his own authority; he must take the administrative authority's orders
+D. Write directly to the Ministry of Finance for an immediate grant
+Correct Answer: C
+Explanation:
+• Rule 64(2) explicitly states a Disbursing Officer may not, on his own authority, pay in excess of funds; he must take the administrative authority's orders to provide funds.
+
+═══════════════════════════════════════════
+PART 4: Chapter 4 — Government Accounts
+Source Pages: Document Rules 71–129
+Total MCQs in this Part: 15
+═══════════════════════════════════════════
+
+── Sub-Section 4.1: General Principles (Rules 71-97) · 🟡 HIGH · MCQs Q41–Q48 ──
+
+Q41. Government accounts are kept primarily on what basis?
+A. Accrual basis
+B. Cash basis
+C. Hybrid basis
+D. Double-entry commercial basis
+Correct Answer: B
+Explanation:
+• Rule 74 states that Government accounts are kept on a cash basis, except for specific authorized book adjustments.
+
+Q42. The accounts of the Government are kept in three main parts. Part-III relates to:
+A. The Consolidated Fund
+B. The Contingency Fund
+C. The Public Account
+D. The External Aided Projects Fund
+Correct Answer: C
+Explanation:
+• Rule 77 outlines the three parts: Part-I (Consolidated Fund), Part-II (Contingency Fund), and Part-III (Public Account).
+
+Q43. The structure of Government accounts relies on a 6-tier classification system. Which tier represents the "primary unit of appropriation" showing the economic nature of the expenditure (e.g., salaries, travel)?
+A. Major Head
+B. Minor Head
+C. Sub Head
+D. Object Head
+Correct Answer: D
+Explanation:
+• Rule 78 defines the Object Head as the primary unit of appropriation indicating the economic nature of the expenditure.
+
+Q44. The six tiers of classification in Government accounts are represented by a unique numeric code of how many digits?
+A. 10 digits
+B. 12 digits
+C. 15 digits
+D. 16 digits
+Correct Answer: C
+Explanation:
+• Rule 78 specifies that these six tiers are represented by a unique 15-digit numeric code.
+
+Q45. Significant expenditure incurred to acquire permanent tangible assets or to enhance the utility of existing assets is classified as:
+A. Revenue Expenditure
+B. Capital Expenditure
+C. Charged Expenditure
+D. Suspense Expenditure
+Correct Answer: B
+Explanation:
+• Rule 84 defines Capital expenditure as significant expenditure to acquire permanent tangible assets or enhance their utility.
+
+Q46. Under the Direct Benefit Transfer (DBT) framework, implementing agencies generate Electronic Utilisation Certificates (e-UCs) to remove the need for physical UCs. On which platform are these generated?
+A. GeM (Government e-Marketplace)
+B. PFMS (Public Financial Management System)
+C. NITI Aayog Darpan
+D. e-Lekha
+Correct Answer: B
+Explanation:
+• Rule 87(6) states that implementing agencies generate e-UCs on the PFMS platform.
+
+Q47. An account that lets a Designated Officer credit receipts into, and withdraw directly from it, subject to an overall bank check, is called a:
+A. Consolidated Account
+B. Personal Deposit (PD) Account
+C. Suspense Account
+D. Imprest Account
+Correct Answer: B
+Explanation:
+• Rule 96 defines a Personal Deposit (PD) Account, which allows direct crediting and withdrawing.
+
+Q48. Who prepares the Annual Finance Accounts of the Government of India, showing receipts and disbursements?
+A. The Ministry of Finance
+B. The Comptroller and Auditor General
+C. The Controller General of Accounts
+D. The Principal Accounts Officers
+Correct Answer: C
+Explanation:
+• Rule 89 states that the Annual Finance Accounts are prepared each year (coordinated by the CGA, though PAOs prepare appropriation accounts per Rule 88).
+
+── Sub-Section 4.2: Capital, Revenue & Adjustments (Rules 98-129) · 🔴 CRITICAL · MCQs Q49–Q55 ──
+
+Q49. For renewals and replacements of an asset, how is the expenditure allocated between Capital and Revenue?
+A. The entire cost is charged to Capital.
+B. The entire cost is charged to Revenue.
+C. Revenue funds the replacement of depreciation, while only genuine life-enhancing improvements are charged to Capital.
+D. It is charged to the Public Account until the asset is fully depreciated.
+Correct Answer: C
+Explanation:
+• Rule 99(c) clearly dictates that Revenue bears the replacement of wastage/depreciation, and Capital bears only genuine improvements.
+
+Q50. Capital receipts that accrue during the construction phase of a Capital project are used to:
+A. Increase the revenue surplus of the Government
+B. Reduce the capital expenditure of the project
+C. Pay the interest on the specific loans raised for the project
+D. Fund the administrative expenses of the executing agency
+Correct Answer: B
+Explanation:
+• Rule 101 specifies that capital receipts accruing during construction are used to reduce capital expenditure.
+
+Q51. By convention, what is the accepted time period for the re-audit of past transactions involving classification errors?
+A. One year
+B. Three years
+C. Five years
+D. Ten years
+Correct Answer: B
+Explanation:
+• Rule 109 establishes that a period of three years is accepted for the re-audit of past transactions.
+
+Q52. To facilitate inter-Governmental adjustments before the financial year closes, the RBI books for March remain open up to a crucial date. What is this date as per the amended Rule 117?
+A. 31st March
+B. 10th April
+C. 30th April
+D. 31st May
+Correct Answer: B
+Explanation:
+• The amended Rule 117 specifies that inter-Governmental adjustments may be carried out up to 10th April (or the date specified by the CGA).
+
+Q53. Are Service Departments permitted to charge other Departments for services rendered within their normal duties?
+A. Yes, to ensure cost-recovery is maintained
+B. Yes, but only at a subsidized rate
+C. No, except as expressly provided otherwise
+D. No, unless the service is rendered to a Commercial Department
+Correct Answer: C
+Explanation:
+• Rule 123 dictates that a Service Department does not charge other Departments for services within its normal duties, except as expressly provided.
+
+Q54. Inter-departmental claims must ordinarily be preferred within the same financial year. What is the absolute maximum time-limit from the date of transaction beyond which they cannot be preferred?
+A. One year
+B. Two years
+C. Three years
+D. Five years
+Correct Answer: C
+Explanation:
+• Rule 125 states that inter-departmental claims are not preferred beyond three years from the date of the transaction.
+
+Q55. The pensionary liability of commercial departments (that maintain proforma accounts) is adjusted by charging what rate?
+A. A flat fee of ₹10,000 per employee
+B. The average or prescribed contribution rate
+C. 10% of the departmental revenue
+D. It is not charged to the commercial department at all
+Correct Answer: B
+Explanation:
+• Rule 128 & 129 state that pensionary liability is assessed and adjusted on a contribution basis at the average/prescribed rate.
+
+═══════════════════════════════════════════
+PART 5: Chapter 5 — Works
+Source Pages: Document Rules 130–141
+Total MCQs in this Part: 10
+═══════════════════════════════════════════
+
+── Sub-Section 5.1: Execution of Works (Rules 130-141) · 🔴 CRITICAL · MCQs Q56–Q65 ──
+
+Q56. Under Rule 130, works that add capital value to an existing asset but do not create a new asset are defined as:
+A. Original works
+B. Minor works
+C. Repair works
+D. Maintenance works
+Correct Answer: B
+Explanation:
+• Rule 130 defines minor works as those that add capital value but do not create a new asset. Original works create new assets or involve special repairs adding value.
+
+Q57. A Ministry wishes to execute a repair work directly under its own arrangements. Following the 2024 amendment to Rule 133, what is the maximum estimated value of repair work it can execute directly?
+A. Up to ₹10 lakh
+B. Up to ₹30 lakh
+C. Up to ₹60 lakh
+D. Up to ₹5 crore
+Correct Answer: C
+Explanation:
+• Amended Rule 133(1) allows a Ministry/Department to directly execute repair works estimated up to ₹60 lakh.
+
+Q58. A Scientific Ministry needs to urgently assign a repair work on a nomination basis to a Public Works Organisation. Until 31.03.2025, it may do so for repair works up to what value?
+A. ₹60 lakh
+B. ₹1 crore
+C. ₹5 crore
+D. ₹10 crore
+Correct Answer: C
+Explanation:
+• The notes to Rule 133 highlight a special provision allowing Scientific Ministries to assign repair works up to ₹5 crore on a nomination basis.
+
+Q59. If a Ministry has an original civil work of ₹20 lakh to execute, how MUST it be handled under Rule 133?
+A. It can be executed directly by the Ministry since it is below ₹60 lakh.
+B. It must be assigned to a Public Works Organisation or an eligible PSU.
+C. It must be executed directly after obtaining Finance Ministry approval.
+D. It must be split into two minor works of ₹10 lakh each.
+Correct Answer: B
+Explanation:
+• Rule 133 allows direct execution ONLY for repair works up to ₹60 lakh. Original works of ANY value must be assigned to a PWO or eligible PSU.
+
+Q60. When executing works directly under its own arrangements, a Ministry must call for open tenders if the work costs between:
+A. ₹1 lakh to ₹5 lakh
+B. ₹5 lakh to ₹10 lakh
+C. ₹10 lakh to ₹60 lakh
+D. ₹60 lakh to ₹1 crore
+Correct Answer: C
+Explanation:
+• Rule 139(iv) sets the threshold for open tenders for works executed directly at ₹10 lakh to ₹60 lakh.
+
+Q61. For works executed directly by a Ministry costing less than ₹10 lakh, what method of tendering is prescribed?
+A. Open tenders
+B. Limited tenders
+C. Single tender (nomination)
+D. Global tenders
+Correct Answer: B
+Explanation:
+• Rule 139(v) specifies limited tenders for works costing less than ₹10 lakh.
+
+Q62. Under Rule 136, work may commence in certain circumstances prior to the regular sanction, subject to subsequent regularization. What is the accepted ground for this?
+A. Availability of excess funds at year-end
+B. Direct orders from the internal finance wing
+C. Grounds of urgency
+D. The work value is below ₹1 lakh
+Correct Answer: C
+Explanation:
+• Rule 136(2) allows work to begin prior to regular administrative approval and expenditure sanction strictly on grounds of urgency.
+
+Q63. Which of the following statements regarding the splitting of works is correct under Rule 137?
+A. A group of works forming one project must be treated as one work, and splitting to avoid higher-authority approval is prohibited.
+B. Large works must be split into components below ₹60 lakh to allow direct departmental execution.
+C. Splitting of works is permitted if different contractors are required for civil and electrical components.
+D. A project can be split into minor works if it crosses multiple financial years.
+Correct Answer: A
+Explanation:
+• Rule 137 explicitly treats a group of works forming one project as one work, strictly prohibiting splitting to avoid higher-authority approval.
+
+Q64. For works executed under a Ministry's own arrangements, when is the final payment made to the contractor?
+A. Upon completion of 90% of the physical progress
+B. Only after a third-party audit report is received
+C. Only on the Officer-in-charge's personal certificate that the work meets contract specifications and industry standards
+D. Immediately after the defect liability period begins
+Correct Answer: C
+Explanation:
+• Rule 139(vii) mandates that final payment is made only on the Officer-in-charge's personal certificate regarding specifications and workmanship.
+
+Q65. A Ministry sanctions a project costing ₹150 crore. Under Rule 141, a Review Committee is set up. What maximum variation from the approved estimate can this Committee accept?
+A. 5%
+B. 10%
+C. 15%
+D. 20%
+Correct Answer: B
+Explanation:
+• Rule 141 states that for projects costing ₹100 crore or above, the Review Committee may accept variation strictly within 10% of the approved estimate.
+
+═══════════════════════════════════════════
+PART 6: Chapter 9 — Grants-in-Aid and Loans
+Source Pages: Document Rules 228–263
+Total MCQs in this Part: 20
+═══════════════════════════════════════════
+
+── Sub-Section 6.1: Grants-in-Aid (Rules 228-245) · 🔴 CRITICAL · MCQs Q66–Q75 ──
+
+Q66. Under Rule 229, who has the authority to approve the setting up of a new autonomous institution by a Ministry/Department?
+A. The Head of Department
+B. The Secretary of the Ministry
+C. The Ministry of Finance
+D. The Cabinet
+Correct Answer: D
+Explanation:
+• Rule 229(i) explicitly states that no new autonomous institution is created without Cabinet approval.
+
+Q67. When Grants-in-Aid (GIA) are provided to voluntary organizations towards administrative expenditure, it ordinarily should NOT exceed what percentage of the approved administrative expenditure on pay and allowances?
+A. 10%
+B. 25%
+C. 50%
+D. 75%
+Correct Answer: B
+Explanation:
+• Rule 231(1) restricts GIA for administrative expenditure to voluntary organizations to a maximum of 25% of the approved administrative expenditure on pay and allowances.
+
+Q68. Before releasing a grant to a voluntary organization, the Executive Committee members must execute a Bond binding themselves jointly and severally. What is the penal interest rate specified in the Bond for breach of conditions?
+A. 8% p.a.
+B. 10% p.a.
+C. 12% p.a.
+D. 18% p.a.
+Correct Answer: B
+Explanation:
+• Rule 231(2) states the Bond binds them to refund the grant with 10% p.a. interest on breach.
+
+Q69. Which of the following bodies is EXEMPTED from the requirement of executing a Bond before the release of Grants-in-Aid?
+A. NGOs promoting welfare schemes
+B. Private educational institutions receiving scholarships
+C. Central Autonomous Organisations
+D. Societies of Government servants for sports activities
+Correct Answer: C
+Explanation:
+• Rule 231(3) exempts Quasi-Government Institutions, Central Autonomous Organisations, and institutions whose budget is approved by Government from the Bond requirement.
+
+Q70. Grantee bodies must provide SC/ST/OBC reservation if they have 20+ regular staff and draw more than 50% of their recurring expenditure from Central grants. For registered societies/co-operatives, what is the annual general-purpose grant threshold that triggers this reservation rule?
+A. ₹5 lakh
+B. ₹10 lakh
+C. ₹20 lakh
+D. ₹50 lakh
+Correct Answer: C
+Explanation:
+• Rule 230(17) triggers the reservation policy for registered societies receiving ₹20 lakh+ general-purpose annual grant.
+
+Q71. Under Rule 236, the C&AG audits a grantee institution under Section 14 if the grants/loans in a year meet which condition?
+A. ≥ ₹10 lakh AND ≥ 50% of total expenditure
+B. ≥ ₹25 lakh AND ≥ 75% of total expenditure, OR ≥ ₹1 crore independently
+C. ≥ ₹50 lakh independently
+D. ≥ ₹5 crore independently
+Correct Answer: B
+Explanation:
+• Rule 236(2)(i) stipulates Section 14 audit if grants/loans are ≥ ₹25 lakh AND ≥ 75% of total expenditure, or independently ≥ ₹1 crore.
+
+Q72. A non-recurring grant is sanctioned to an institution. What is the prescribed time-limit to submit the Utilization Certificate (UC) in Form GFR 12-A?
+A. Within 6 months of the close of the financial year
+B. Within 9 months of the close of the financial year
+C. Within 12 months of the close of the financial year
+D. Within 18 months of the close of the financial year
+Correct Answer: C
+Explanation:
+• Rule 238(1) requires the UC for a non-recurring grant to be submitted within 12 months of the close of the financial year.
+
+Q73. To release an amount beyond 75% of the next year's sanction for a RECURRING grant, what documents MUST the grantee submit?
+A. Only a provisional UC for the preceding year
+B. The UC AND the annual audited statement of the preceding year
+C. A fresh Bond executed by the Executive Committee
+D. A third-party evaluation report
+Correct Answer: B
+Explanation:
+• Rule 238(2) states that release beyond 75% requires the UC and the annual audited statement of the preceding year.
+
+Q74. In which case is a Utilization Certificate (UC) strictly NOT required to be submitted?
+A. For recurring grants to Scientific Departments
+B. For non-recurring grants below ₹5 lakh
+C. Where the grant/CFA is a reimbursement of already-incurred, duly audited expenditure
+D. Where the grant is given to an Urban Local Body
+Correct Answer: C
+Explanation:
+• Rule 238(3) clearly exempts grants released on a reimbursement basis against audited proof from the UC requirement.
+
+Q75. The sanctioning authority maintains a record of grants to regulate subsequent releases. What is the prescribed form for the Register of Grants?
+A. Form GFR 12-A
+B. Form GFR 16
+C. Form GFR 19
+D. Form GFR 21
+Correct Answer: D
+Explanation:
+• Rule 234 specifies that the Register of Grants is maintained in Form GFR 21.
+
+── Sub-Section 6.2: Loans (Rules 246-263) · 🔴 CRITICAL · MCQs Q76–Q85 ──
+
+Q76. When an instalment of a loan is paid 10 days before its due date, how is the interest for that instalment period calculated under Rule 250?
+A. Interest is calculated strictly up to the actual date of payment (the 10th day prior).
+B. Interest for the full period (up to the due date) is still payable.
+C. Interest is waived as a bonus for early repayment.
+D. The prepayment is adjusted against the principal without touching the interest.
+Correct Answer: B
+Explanation:
+• Rule 250(iv) specifies that if paid 14 days or less before the due date, interest for the full period is still payable.
+
+Q77. If a borrower pays a loan instalment early (more than 14 days before the due date), how is this advance payment applied?
+A. Entirely to the principal amount.
+B. To the principal only if accompanied by interest up to the date of payment; otherwise first to interest, then principal.
+C. Held in a suspense account until the due date.
+D. Rejected and returned to the borrower.
+Correct Answer: B
+Explanation:
+• Rule 250(iv) mandates that early payment applies to principal only if accompanied by interest to date; otherwise, it adjusts interest first.
+
+Q78. Loans to private parties (other than States, wholly-owned Govt companies, etc.) are sanctioned only against adequate security. Ordinarily, the security value must be at least what percentage above the loan amount?
+A. 10%
+B. 25%
+C. 33⅓%
+D. 50%
+Correct Answer: C
+Explanation:
+• Rule 255 and 250(3) state that security must ordinarily be at least 33⅓% more than the loan.
+
+Q79. If the due date for a loan repayment falls on a Sunday, which of the following statements is true regarding the payment date?
+A. Payment on the next working day counts as on-time.
+B. Payment must be made on the preceding working day, without exception.
+C. A penalty is levied automatically if not paid by the preceding Friday.
+D. The due date is pushed to the first day of the next month.
+Correct Answer: A
+Explanation:
+• Rule 250(v) provides that if a due date falls on a Sunday/holiday, payment on the next working day is on-time (except for a 31st-March due date, which uses the preceding working day).
+
+Q80. In calculating interest for a part-year on a Government loan, what divisor is used to represent the number of days in a standard (non-leap) year?
+A. 360
+B. 364
+C. 365
+D. 366
+Correct Answer: C
+Explanation:
+• Rule 251(2) details the formula: interest for a part-year = (number of days × yearly rate) ÷ 365 (or 366 in a leap year).
+
+Q81. Does a Government loan bear interest for the day of repayment?
+A. Yes, always
+B. Yes, unless the payment is made before noon
+C. No, it bears interest for the day of payment (disbursement) but NOT for the day of repayment
+D. No, interest is calculated on a monthly basis, ignoring specific days
+Correct Answer: C
+Explanation:
+• Rule 251(2) explicitly states a loan bears interest for the day of payment (when the borrower receives it) but NOT for the day of repayment.
+
+Q82. When granting a loan to a wholly-owned Government Company, what specific undertaking must be obtained?
+A. An undertaking that the company will privatize within 5 years.
+B. An undertaking that fixed assets will not be hypothecated without prior Government approval.
+C. An undertaking to deposit 50% of the loan in a Public Account.
+D. An undertaking to waive all future subsidies.
+Correct Answer: B
+Explanation:
+• Rule 254 mandates a written undertaking from Government Companies that fixed assets will not be hypothecated without prior approval.
+
+Q83. Who has the authority to remit or write off irrecoverable loans?
+A. The Head of Department independently
+B. A competent authority, with prior Finance Ministry approval
+C. The Principal Accounts Officer
+D. The Reserve Bank of India
+Correct Answer: B
+Explanation:
+• Rule 259 states a competent authority, with prior Finance Ministry approval, may remit or write off irrecoverable loans.
+
+Q84. Each Principal Accounts Officer must submit an annual statement of outstanding Central loans as on 31st March. What is the prescribed form for this statement?
+A. Form GFR 9
+B. Form GFR 12-A
+C. Form GFR 13
+D. Form GFR 20
+Correct Answer: C
+Explanation:
+• Rule 262 specifies the statement is submitted in Form GFR 13.
+
+Q85. Which of the following is an explicit requirement in all loan sanctions/agreements under Rule 258?
+A. A clause for a compulsory moratorium of two years
+B. A provision for penal interest on default
+C. A condition requiring international arbitration for disputes
+D. A waiver of audit rights by the C&AG
+Correct Answer: B
+Explanation:
+• Rule 258(1) requires that loan sanctions/agreements include a provision for penal interest on default.
+
+═══════════════════════════════════════════
+PART 7: Chapter 10 & 11 — Ext. Aided Projects & Guarantees
+Source Pages: Document Rules 264–283
+Total MCQs in this Part: 6
+═══════════════════════════════════════════
+
+── Sub-Section 7.1: Externally Aided Projects & Guarantees · 🔴 CRITICAL · MCQs Q86–Q91 ──
+
+Q86. Which department acts as the nodal department for projects implemented through external multilateral/bilateral aid?
+A. Department of Expenditure (DoE)
+B. Department of Economic Affairs (DEA)
+C. Ministry of External Affairs (MEA)
+D. NITI Aayog
+Correct Answer: B
+Explanation:
+• Rule 264(1) identifies the DEA as the nodal department for externally aided projects.
+
+Q87. External aid flows from the funding agency in foreign currency or rupees. Which entity receives it and remits the rupee equivalent to the Controller, Aid Accounts & Audit (CAAA)?
+A. The State Bank of India, New Delhi
+B. The Reserve Bank of India, Mumbai
+C. The World Bank local office
+D. The Principal Accounts Office of DEA
+Correct Answer: B
+Explanation:
+• Rule 265 states that aid is received by RBI Mumbai, which remits the rupee equivalent to the CAAA, DEA.
+
+Q88. The Central Government's power to give guarantees flows from Article 292. This power is subject to limits prescribed under which Act?
+A. The Contingency Fund of India Act, 1950
+B. The FRBM Act and Rules
+C. The Reserve Bank of India Act, 1934
+D. The CAG (DPC) Act, 1971
+Correct Answer: B
+Explanation:
+• Rule 275(1) notes that the power to give guarantees is subject to the limits under the FRBM Act and Rules.
+
+Q89. Guarantee fees levied by the Government on guarantees are applied on the outstanding amount and levied on which date every year?
+A. 1st January
+B. 31st March
+C. 1st April
+D. 30th September
+Correct Answer: C
+Explanation:
+• Rule 279(2) dictates that the fee is levied before the guarantee is given, and thereafter on 1st April each year.
+
+Q90. If the guarantee fee is unpaid on the due date, what is the consequence under Rule 279?
+A. The guarantee is immediately invoked and canceled.
+B. The fee is charged at double the normal rate for the default period.
+C. A flat penalty of ₹1,00,000 is imposed on the borrowing entity.
+D. The administrative ministry pays the fee from its budget.
+Correct Answer: B
+Explanation:
+• Rule 279(3) specifies that if unpaid on the due date, the fee is charged at double the normal rate for the default period.
+
+Q91. To incentivize rigorous risk assessment by lenders, Government ordinarily limits its guarantee to what percentage of a project loan?
+A. 50%
+B. 75%
+C. 80%
+D. 100%
+Correct Answer: C
+Explanation:
+• Rule 279(4) states Government ordinarily guarantees no more than 80% of a project loan, leaving at least 20% risk with the lenders.
+
+═══════════════════════════════════════════
+PART 8: Chapter 12 — Miscellaneous Subjects
+Source Pages: Document Rules 284–324
+Total MCQs in this Part: 12
+═══════════════════════════════════════════
+
+── Sub-Section 8.1: Service & Time-Limits (Rules 284-301) · 🔴 CRITICAL · MCQs Q92–Q97 ──
+
+Q92. A Gazetted servant transfers charge to a relieving officer. In which Form is the report of transfer sent to the HoD/Controlling Officer?
+A. Form GFR 14
+B. Form GFR 16
+C. Form GFR 17
+D. Form GFR 21
+Correct Answer: B
+Explanation:
+• Rule 286 states that the report of transfer of a Gazetted servant is made in Form GFR 16.
+
+Q93. A Government servant completes a journey on tour on 5th September. By which date must the Traveling Allowance (TA) claim be submitted to avoid forfeiture?
+A. Within 30 days of 6th September
+B. Within 45 days of 6th September
+C. Within 60 days of 6th September
+D. By 31st March of that financial year
+Correct Answer: C
+Explanation:
+• Rule 290 mandates that a TA claim falls due the day after the journey ends and must be submitted within 60 days, else forfeited.
+
+Q94. An Overtime Allowance (OTA) claim falls due on the first day of the month following the month it relates to. What is the time-limit for its submission before it stands forfeited?
+A. 15 days
+B. 30 days
+C. 60 days
+D. 90 days
+Correct Answer: C
+Explanation:
+• Rule 293 specifies an OTA claim stands forfeited if not submitted within 60 days of falling due.
+
+Q95. An arrear claim preferred by a Government servant can be settled directly by the DDO/Accounts Officer after usual checks, provided it is submitted within what time-limit of becoming due?
+A. 6 months
+B. 1 year
+C. 2 years
+D. 3 years
+Correct Answer: C
+Explanation:
+• Rule 295(1) allows DDOs to settle arrear claims preferred within two years of becoming due. Claims older than two years require HoD investigation.
+
+Q96. A lost Service Book of a Government servant (the servant's copy) can be replaced upon payment of what fee?
+A. ₹100
+B. ₹250
+C. ₹500
+D. ₹1,000
+Correct Answer: C
+Explanation:
+• Rule 288(4) states a lost servant's copy of the Service Book is replaced on payment of ₹500.
+
+Q97. A time-barred claim of a Government servant may still be paid if the claimant was prevented from claiming in time by causes beyond his control. Whose express sanction is required for this?
+A. The Head of Department
+B. The Principal Accounts Officer
+C. The Government, with prior consent of the Internal Finance Wing
+D. The DDO
+Correct Answer: C
+Explanation:
+• Rule 296(2) specifies that a time-barred claim is paid with the express sanction of Government, issued with the prior consent of the Internal Finance Wing.
+
+── Sub-Section 8.2: Security & Advances (Rules 302-324) · 🔴 CRITICAL · MCQs Q98–Q103 ──
+
+Q98. A Government servant handling cash must furnish security. In what form is this security generally provided under Rule 306?
+A. Cash deposited in the Public Account
+B. A fixed deposit receipt pledged to the President
+C. A Fidelity Bond in Form GFR 17 and a security bond in Form GFR 14
+D. A personal guarantee from a Group A officer
+Correct Answer: C
+Explanation:
+• Rule 306(3) requires security as a Fidelity Bond in Form GFR 17 with a security bond in Form GFR 14.
+
+Q99. After a Government servant vacates a cash-handling post, for what minimum period must his security deposit be retained?
+A. 1 month
+B. 3 months
+C. 6 months
+D. 12 months
+Correct Answer: C
+Explanation:
+• Rule 308 states the security deposit is retained for at least six months from the date the post is vacated.
+
+Q100. A Head of Department grants a permanent advance/imprest to a servant for day-to-day contingent expenditure. Whose consultation is required for this grant?
+A. The C&AG
+B. The Internal Finance Wing (IFW)
+C. The Treasury Officer
+D. The DDO
+Correct Answer: B
+Explanation:
+• Rule 322 specifies the HoD grants a permanent advance in consultation with the Internal Finance Wing.
+
+Q101. A Head of Office sanctions an advance for a special office contingent purpose. Within how many days of drawal must the adjustment bill be submitted by the servant?
+A. 7 days
+B. 15 days
+C. 30 days
+D. 45 days
+Correct Answer: B
+Explanation:
+• Rule 323(2) mandates that the adjustment bill be submitted within 15 days of drawal, failing which it is recovered from the next salary.
+
+Q102. Under the amended Rule 324 (July 2024), what is the maximum amount a Ministry/Department may sanction at a time as an advance to a Government Pleader in a law suit?
+A. ₹10,000
+B. ₹20,000
+C. ₹25,000
+D. ₹50,000
+Correct Answer: C
+Explanation:
+• Amended Rule 324 caps the advance to a Government Pleader at ₹25,000 at a time.
+
+Q103. Consider the following statements regarding the ₹25,000 ceiling for an advance to a Government Pleader:
+1. It is a superseding limit set by the July 2024 procurement amendments that doubled all limits.
+2. The advance is adjusted when the counsel's fee bill is finally settled.
+Which of the above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Correct Answer: B
+Explanation:
+• Statement 1 is incorrect because the notes explicitly state that this limit was NOT touched by the separate procurement-limit OM; ₹25,000 is the direct post-amendment figure set on 12.07.2024. Statement 2 is correct per Rule 324.
+
+✅ Part 8 closure: 12 MCQs.
+
+═══════════════════════════════════════════
+📊  FINAL DELIVERABLE SUMMARY
+═══════════════════════════════════════════
+(a) Part-Wise Coverage Summary
+Part No. | Part Title | MCQs Generated
+1 | Chapter 1 — Introduction | 5
+2 | Chapter 2 — Gen System of Fin Management | 20
+3 | Chapter 3 — Budget Formulation | 15
+4 | Chapter 4 — Government Accounts | 15
+5 | Chapter 5 — Works | 10
+6 | Chapter 9 — Grants-in-Aid and Loans | 20
+7 | Chapter 10 & 11 — Ext. Aid & Guarantees | 6
+8 | Chapter 12 — Miscellaneous Subjects | 12
+TOTAL | 103 MCQs
+
+✅ Forensic Audit Passed: Over 100 rich MCQs successfully generated strictly top-to-bottom across all chapters.

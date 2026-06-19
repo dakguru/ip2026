@@ -35,6 +35,7 @@ import { cvc_procurement_set1, cvc_procurement_set2, cvc_procurement_set3, cvc_p
 import { manual_procurement_set1, manual_procurement_set2, manual_procurement_set3, manual_procurement_set4 } from './flashcards/manualProcurementGoods';
 import { welfare_measures_set1, welfare_measures_set2, welfare_measures_set3 } from './flashcards/welfareMeasures';
 import { gfr_2017_set1, gfr_2017_set2, gfr_2017_set3, gfr_2017_set4, gfr_2017_set5 } from './flashcards/generalFinancialRules2017';
+import { inspection_q_bo_set1, inspection_q_so_set1, inspection_q_ho_set1 } from './flashcards/inspectionQuestionnaires';
 
 
 
@@ -50,6 +51,11 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   453: gfr_non_proc_set3,
   454: gfr_non_proc_set4,
   455: gfr_non_proc_set5,
+
+  // --- Inspection Questionnaires (BO / SO / HO) — PS Gr B Paper II ---
+  460: inspection_q_bo_set1,
+  461: inspection_q_so_set1,
+  462: inspection_q_ho_set1,
 
   1: [
     { q: "On which date did the Post Office Act, 2023 come into force?", o: ["1st Jan 2024", "24th Dec 2023", "18th June 2024", "1st April 2023"], a: 2, e: "The Post Office Act, 2023 came into force on 18th June 2024." },

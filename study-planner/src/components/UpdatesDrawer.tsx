@@ -36,6 +36,25 @@ const UPDATES_DATA: UpdateGroup[] = [
                         </p>
                     </div>
                 )
+            },
+            {
+                title: "📚 PDF Notes: GST Act, 2017 Exam Edition Added",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have added new comprehensive exam-oriented PDF notes for the <strong>Goods and Services Tax (GST) Act, 2017</strong> in the <strong>PS Group B</strong> course mode!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-teal-50/50 dark:bg-teal-900/10 p-3 rounded-xl border border-teal-100 dark:border-teal-800/50">
+                                <p className="font-bold text-teal-700 dark:text-teal-300 text-[10px] uppercase tracking-wide">GST Act, 2017</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The new <strong>Exam Edition</strong> notes are now available under Paper II.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-teal-600 dark:text-teal-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
             }
         ]
     },

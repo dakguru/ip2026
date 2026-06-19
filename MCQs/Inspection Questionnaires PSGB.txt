@@ -1,0 +1,625 @@
+INSPECTION QUESTIONNAIRES — MCQ BANK
+PS Group B · Paper II · Subjects
+Source: Inspection Questionnaires booklet (issued by the Inspection Division, Department of Posts)
+Total: 75 MCQs (3 sets — BO / SO / HO, 25 each)
+======================================================================
+
+══════════════════════════════════════════════════════════════════════
+BRANCH POST OFFICE (BO) INSPECTION QUESTIONNAIRE  (25 MCQs)
+══════════════════════════════════════════════════════════════════════
+
+Q1. Under which File No. is the Branch Post Office Inspection Questionnaire issued by the Inspection Division, Department of Posts?
+   A. 16-02/2017-Inspn.
+   B. 16-03/2019-Inspn.
+   C. 17-31/2016-GDS
+   D. 24-3/2012/PO
+   Correct Answer: B
+   Explanation: The Branch Post Office Inspection Questionnaire is issued by the Inspection Division of the Directorate under File No. 16-03/2019-Inspn., which is the governing file for the current questionnaire.
+
+Q2. The revised Branch Office Inspection Questionnaire forming the current base document was issued vide Letter No. 16-03/2019-Inspn. dated which date?
+   A. 09.08.2019
+   B. 24.09.2020
+   C. 15.04.2021
+   D. 07.02.2022
+   Correct Answer: A
+   Explanation: The revised BO Inspection Questionnaire (current base document, 20 pages, Sections A to K) was issued vide Letter No. 16-03/2019-Inspn. dated 09.08.2019.
+
+Q3. The current base Branch Office Inspection Questionnaire comprises how many pages and is organised into which range of sections?
+   A. 18 pages, Sections A to J
+   B. 25 pages, Sections A to L
+   C. 20 pages, Sections A to K
+   D. 20 pages, Sections A to H
+   Correct Answer: C
+   Explanation: The revised questionnaire issued vide Letter No. 16-03/2019-Inspn. dated 09.08.2019 is the current base document running to 20 pages and organised into Sections A to K.
+
+Q4. Consider the following statements regarding revisions to Q. No. 36 (Passbook Verification) of the BO Inspection Questionnaire: 1. The original frequency was one passbook per month. 2. The revision dated 15.04.2021 changed the collection frequency to one passbook for every two months. 3. The revision dated 07.02.2022 added Note 2 regarding repeated passbook verification. Which of the above is/are correct?
+   A. 2 and 3 only
+   B. 1 and 2 only
+   C. 1 and 3 only
+   D. 1, 2 and 3
+   Correct Answer: A
+   Explanation: The latest consolidated position is that Q.36 was revised on 15.04.2021 (frequency changed to 1 passbook per 2 months) and on 07.02.2022 (Note 2 added). Statement 1 is incorrect because the original 2019 requirement was 5 passbooks per scheme, not one per month.
+
+Q5. Under the latest position of Q. No. 36 (w.e.f. 07.02.2022), how many passbooks are to be collected and verified for each scheme since the last inspection at a Branch Office?
+   A. 5 passbooks per scheme
+   B. 12 passbooks per scheme
+   C. 6 passbooks per scheme
+   D. 10 passbooks per scheme
+   Correct Answer: C
+   Explanation: Following the revision to 1 passbook for every two months, the current requirement under Q.36 is 6 passbooks for each scheme since the last inspection (one for each of the six bi-monthly periods).
+
+Q6. As per the technical norms for a Branch Post Office, the prescribed working hours of the BO should be:
+   A. Minimum 3 hours and maximum 4 hours
+   B. Minimum 5 hours and maximum 6 hours
+   C. Minimum 4 hours and maximum 6 hours
+   D. Minimum 4 hours and maximum 5 hours
+   Correct Answer: D
+   Explanation: While verifying technical information of the BO, the inspecting officer must check that the BO functions as per the norm of a minimum of 4 hours and a maximum of 5 hours.
+
+Q7. In Section A (Administration) of the BO Inspection Questionnaire, the prescribed frequency of Mail Overseer visits to a Branch Office is:
+   A. Once per month
+   B. Once per fortnight
+   C. Once per quarter
+   D. Twice per quarter
+   Correct Answer: C
+   Explanation: Q.7 requires the inspecting officer to check the effectiveness of Mail Overseer visits, which are prescribed once per quarter, and whether the MO has verified accounts and noted the results in the order book.
+
+Q8. To obtain the Facility ID and Profit/Cost Centre of a Branch Office in SAP, which T-code is used by inputting the office type as 'BO' and the receiver PINCODE?
+   A. ZFID
+   B. MB52
+   C. FAGLL03
+   D. HACLI
+   Correct Answer: A
+   Explanation: For the Facility ID and Profit/Cost Centre ID of the BO, the inspecting officer uses T-code ZFID in SAP, entering the office type as 'BO' and the receiver PINCODE, then clicking Execute.
+
+Q9. Regarding records at a Branch Office, which of the following is to be preserved as a permanent record and must NOT be weeded out?
+   A. Error Book
+   B. Village Sorting List
+   C. BO Order Books
+   D. Route List and Beat Map
+   Correct Answer: C
+   Explanation: While weeding out old records, the inspecting officer must ensure that BO Order Books are preserved as permanent records and not weeded out, even though other records may be disposed of.
+
+Q10. When operating the DARPAN device, from which power source must the Main Computing Device (MCD) always be powered?
+   A. From the battery cradles
+   B. Directly from the Solar UPS
+   C. Directly from the Electricity Supply
+   D. From an external generator
+   Correct Answer: A
+   Explanation: Q.15 requires that the DARPAN MCD is always powered from the batteries (using both battery cradles alternately) and is NOT directly connected to the Solar UPS or Electricity Supply.
+
+Q11. In the context of network checks at a Branch Office, the abbreviation 'CSQ' noted for each Business Client Application stands for:
+   A. Cellular Service Quotient
+   B. Check Signal Strength Quality
+   C. Connectivity Status Quality
+   D. Customer Service Queue
+   Correct Answer: B
+   Explanation: Q.16.4 requires the inspecting officer to note the CSQ (Check Signal Strength Quality) value, which reflects the network connectivity availability inside the BO for each Business Client Application.
+
+Q12. What type of login access do Inspecting Persons (IPs) have on the DARPAN device for inspection purposes?
+   A. Full administrative login
+   B. BPM-level login
+   C. Read-only login
+   D. Substitute login with Aadhaar
+   Correct Answer: C
+   Explanation: Q.16.3 notes that IPs have a 'Read-only' login; access for inspection is obtained via 'Edit RICT Admin details' in the RICT Admin Management Menu.
+
+Q13. For verifying VP/COD articles against which VPMOs have been booked since the Date of Last Inspection, which application reference is prescribed in Section C?
+   A. FAGLL03 – GL Head 4200030002
+   B. MB51 – GL Head 4200030002
+   C. ZFID – GL Head 4200030001
+   D. HACLI – GL Head 4200030002
+   Correct Answer: A
+   Explanation: Q.20 prescribes the use of FAGLL03 with GL Head 4200030002 to check whether VPMOs have been booked against the VP articles delivered since the Date of Last Inspection (DLI).
+
+Q14. Working hours of a Branch Office in respect of business, receipt and despatch of mails are required to be fixed as per which order?
+   A. OM No. 17-31/2016-GDS dated 25.06.2018
+   B. OM No. 16-03/2019-Inspn. dated 09.08.2019
+   C. DG Letter No. 24-3/2012/PO dated 01.10.2018
+   D. DG Letter No. 6-18/2010-PE-II dated 07.05.2010
+   Correct Answer: A
+   Explanation: Q.22 requires that working hours of the BO be fixed as per OM No. 17-31/2016-GDS dated 25.06.2018, keeping in view mode of transport, distance from the Account Office and workload.
+
+Q15. During inspection of the Branch Office, the wallet balance is verified against the physical cash in hand. Which application/path is prescribed to ascertain the wallet balance?
+   A. Delivery App → Inventory Report
+   B. DEMO Booking App → Wallet Balance
+   C. MB52 in SAP with Plant ID
+   D. Postinfo mobile app → Balance
+   Correct Answer: B
+   Explanation: Q.25 prescribes asking the BPM to login to the DEMO Booking App, click the navigation icon (three vertical lines) and then Wallet Balance; alternatively, a DTR of the previous day may be generated from SAP.
+
+Q16. Under Section D (Finance and Accounting), the balances of the BO account are required to be checked for a randomly selected day at what interval since the last inspection?
+   A. Weekly
+   B. Monthly
+   C. Bi-monthly
+   D. Quarterly
+   Correct Answer: C
+   Explanation: Q.27 requires checking the balances of the BO account for one day selected at random, bi-monthly, since the last inspection, by comparison with the balances noted by the Account Office on the BO slips.
+
+Q17. Remittance norms for a Branch Office (relating to retention and exchange of cash) are governed by which Directorate Letter?
+   A. Letter No. 24-3/2012/PO dated 01.10.2018
+   B. Letter No. 17-31/2016-GDS dated 25.06.2018
+   C. Letter No. 6-18/2010-PE-II dated 07.05.2010
+   D. Letter No. 16-02/2017-Inspn. dated 24.09.2020
+   Correct Answer: A
+   Explanation: Q.28 requires the inspecting officer to verify whether norms for remittances have been followed as mentioned in Directorate Letter No. 24-3/2012/PO dated 01.10.2018 while examining cash retention at the BO.
+
+Q18. While checking SB-26 receipts at a Branch Office, the inspecting officer must ensure that the PR Book (SB-26 receipt books) are maintained in:
+   A. Duplicate
+   B. Triplicate
+   C. Quadruplicate
+   D. Single copy
+   Correct Answer: B
+   Explanation: While checking all SB-26 issued since the last inspection, the officer must ensure that PR Books (i.e., SB-26 receipt books) are maintained in triplicate, with original receipts pasted along with office copies.
+
+Q19. After the close of which date of every financial year must the BPM collect all SB and SSA passbooks (irrespective of presentation for transaction) and send them to the Account Office for entry of interest, as per Rule 49(6) of the POSB (CBS) Manual?
+   A. 31st December
+   B. 31st January
+   C. 31st March
+   D. 30th June
+   Correct Answer: C
+   Explanation: As per Rule 49(6) of the POSB (CBS) Manual referred to in Q.38, after 31st March of every financial year the BPM must collect all SB and SSA passbooks and send them to the Account Office for entry of interest, issuing SB-28 receipts to depositors.
+
+Q20. Consider the following regarding Section E (Savings Bank) checks in the BO Inspection Questionnaire: 1. Collection of all TD passbooks since DLI stands deleted in the 2020 revision. 2. Five passbooks of RD discontinued accounts are to be collected and verified. 3. SB-28 depositor's receipts are issued for reasons other than interest posting. Which of the above is/are correct?
+   A. 1 and 2 only
+   B. 2 and 3 only
+   C. 1 and 3 only
+   D. 1, 2 and 3
+   Correct Answer: D
+   Explanation: All three are correct: Q.41(i) (collection of all TD passbooks since DLI) was deleted in the 2020 revision, Q.41(ii) requires collecting five RD discontinued account passbooks, and Q.37(i) deals with SB-28 receipts issued for reasons other than interest posting.
+
+Q21. The Supplementary Questions on Financial Services require the GDS BO to maintain a manual cheque register following the procedure prescribed in which SB Orders?
+   A. SB Order 22/2020 and SB Order 27/2020
+   B. SB Order 18/2020 and SB Order 23/2020
+   C. SB Order 22/2020 and SB Order 25/2021
+   D. SB Order 27/2020 and SB Order 36/2021
+   Correct Answer: A
+   Explanation: Supplementary Q.1 (added vide Letter No. 16-02/2017-Inspn. dated 24.09.2020) requires the BO to maintain a manual cheque register as per SB Order 22/2020 dated 18.06.2020 and SB Order 27/2020 dated 23.07.2020.
+
+Q22. Under Section F (PLI/RPLI), what is the minimum number of Premium Receipt Books (PRBs) to be collected for two days of a month to compare credit entries?
+   A. Three
+   B. Two
+   C. Ten
+   D. Five
+   Correct Answer: D
+   Explanation: Q.49.11 requires collecting a few PRBs, minimum five, for two days of a month, and comparing the credit entries with the Day Collection Report and Cash Book Report to ensure correct accounting.
+
+Q23. For checking PLI/RPLI Day End and Summary Reports, the inspection covers 10 days since the last inspection. How are these 10 days to be distributed across the four quarters?
+   A. 3 + 3 + 2 + 2 days
+   B. 2 + 3 + 3 + 2 days
+   C. 4 + 3 + 2 + 1 days
+   D. 2 + 2 + 3 + 3 days
+   Correct Answer: A
+   Explanation: Q.49.10 specifies that the 10 days are to be checked taking 3 days in the first quarter, 3 days in the second quarter, and 2 days each in the third and fourth quarters.
+
+Q24. A distinguishing operational feature of India Post Payments Bank (IPPB) transactions at a Branch Office, as noted in Section J, is that they are:
+   A. Recorded through physical transaction vouchers retained at the BO
+   B. Entered in a manual log of transactions maintained by the end-user
+   C. Completely online with biometric authentication and no physical signatures or passbooks
+   D. Authenticated only through the DARPAN booking application
+   Correct Answer: C
+   Explanation: Section J notes that IPPB operations are completely online with biometric authentication without physical signatures, so there are no transaction vouchers, passbooks or transaction logs at the end-user/post office level; the inspecting officer accesses the IPPB system log in real time.
+
+Q25. In the inspection scoring (Section K), the maximum weightage of 40 marks out of 100 is allotted to which parameter?
+   A. Business Development and attitude of BPM
+   B. Service Standards (delivery, booking, MO, SB, Insurance)
+   C. IPPB (micro-ATM/Accounts Processing/Accounts Servicing)
+   D. Use of RICT Application (CBS/CIS/Delivery App/Booking App)
+   Correct Answer: D
+   Explanation: Q.59 awards a maximum of 40 marks to the Use of RICT Application (CBS/CIS/Delivery App/Booking App), the highest single weightage, reflecting the Department's emphasis on technology adoption. Business Development and Service Standards carry 20 each, IPPB 10, and Records and Hardware 5 each.
+
+══════════════════════════════════════════════════════════════════════
+SUB POST OFFICE (SO) INSPECTION QUESTIONNAIRE  (25 MCQs)
+══════════════════════════════════════════════════════════════════════
+
+Q26. Under the Sub Office Inspection Questionnaire framework, the Supplementary Questions for Sub Post Offices (S1–S18) were introduced vide which Directorate communication?
+   A. File No. 16-02/2017-Inspn. dated 24.09.2020
+   B. File No. 17-01/2018-Inspn. dated 05.10.2018
+   C. File No. 29-1/85-Inspn. dated 13.05.1986
+   D. File No. 27-1/77-Inspn. dated 01.12.1977
+   Correct Answer: A
+   Explanation: The 18 Supplementary Questions for Sub Post Offices were added vide Directorate File No. 16-02/2017-Inspn. dated 24.09.2020 and came into force with immediate effect from that date.
+
+Q27. As per the prescribed inspection time schedule, the number of days allowed for the Annual Inspection of an HSG I/HSG II Sub Post Office is:
+   A. 2 days
+   B. 3 days
+   C. 4 days
+   D. 8 days
+   Correct Answer: C
+   Explanation: Sub Post Offices in HSG I and HSG II are allowed 4 days for Annual Inspection. LSG offices get 3 days, Time Scale offices 2 days, and single-handed non-delivery SPOs / Branch Offices 1 day.
+
+Q28. According to the prescribed quarterly time schedule for inspections, the maximum proportion of inspections is to be completed in which quarter?
+   A. 2nd Quarter (April–June)
+   B. 1st Quarter (January–March)
+   C. 3rd Quarter (July–September)
+   D. 4th Quarter (October–December)
+   Correct Answer: A
+   Explanation: The prescribed distribution is 15% (Q1), 35% (Q2), 30% (Q3) and 20% (Q4); the 2nd Quarter (April–June) carries the highest share at 35%.
+
+Q29. Where the duration of an inspection is 2 days and below 8 days, the Inspection Report (IR) must be issued within how many days from commencement?
+   A. 15 days
+   B. 30 days
+   C. 45 days
+   D. 60 days
+   Correct Answer: B
+   Explanation: Per Directorate Order No. 17-01/2018-Inspn. dt. 05.10.2018, the IR issue deadline is 15 days for a 1-day inspection, 30 days for 2 days and below 8 days, and 45 days for inspections of 8 days and above.
+
+Q30. The complete cycle of an inspection, including compliance, should be completed within what period from the date of commencement?
+   A. 3 months
+   B. 4 months
+   C. 4½ months
+   D. 6 months
+   Correct Answer: C
+   Explanation: The questionnaire mandates that the full inspection cycle, including compliance, be completed within 4½ months from the date of commencement.
+
+Q31. For an inspection conducted by an Inspector of Posts (IP), the Inspection Report is to be reviewed by the next higher authority within how many days?
+   A. 30 days
+   B. 45 days
+   C. 60 days
+   D. 90 days
+   Correct Answer: C
+   Explanation: An IP's inspection report is reviewed by the next higher authority (ASP(Dn)/ASP(HQ)/Dy. Suptd./Divisional Head) within 60 days.
+
+Q32. After review intimation, the compliance period prescribed for offices other than HO/GPO is:
+   A. 15 days
+   B. 30 days
+   C. 45 days
+   D. 60 days
+   Correct Answer: B
+   Explanation: The compliance period is 45 days for HO/GPO and 30 days for all other offices, reckoned from the date of review intimation.
+
+Q33. Inspections mandated for more than one day are required to be:
+   A. Completed in one spell and not staggered over days
+   B. Split equally across two convenient spells
+   C. Conducted only during the first quarter of the year
+   D. Staggered so as not to disrupt counter operations
+   Correct Answer: A
+   Explanation: The questionnaire specifically directs that inspections of more than one day be completed in ONE SPELL and not staggered over days.
+
+Q34. Records relating to the Half Yearly Enumeration of Unregistered Postal Articles are conducted in which two months each year, with records maintained for the latest how many years?
+   A. August and February; latest 3 years
+   B. June and December; latest 3 years
+   C. August and February; latest 5 years
+   D. April and October; latest 2 years
+   Correct Answer: A
+   Explanation: Q.15(d) requires that records for the Half Yearly Enumeration of Unregistered Postal Articles (held in August and February each year) be maintained for the latest 3 years.
+
+Q35. Under the International Money Transfer Service (IMTS), the maximum number of transactions that may be paid to a single beneficiary in a calendar year is:
+   A. 12
+   B. 30
+   C. 50
+   D. Unlimited subject to KYC
+   Correct Answer: B
+   Explanation: As per RBI guidelines applied in IMTS checks, a maximum of 30 transactions per beneficiary is permitted in a calendar year.
+
+Q36. In IMTS, an amount exceeding Rs. 50,000 paid to a beneficiary must be disbursed:
+   A. Only in cash after enhanced KYC
+   B. By cheque or by direct credit to the SB account
+   C. Only through an India Post Payments Bank account
+   D. By demand draft drawn on the Head Office
+   Correct Answer: B
+   Explanation: For IMTS, amounts exceeding Rs. 50,000 are required to be paid by cheque or by direct credit to the beneficiary's SB account, not in cash.
+
+Q37. For the India Post Payments Bank (IPPB), the inspecting officer is required to randomly check accounts where the end-of-day balance exceeds:
+   A. Rs. 25,000
+   B. Rs. 50,000
+   C. Rs. 1 lakh
+   D. Rs. 2 lakh
+   Correct Answer: C
+   Explanation: An IPPB account balance should not exceed Rs. 1 lakh at the end of the day; accounts breaching this limit must be randomly checked during inspection [Q.46(C)(n)].
+
+Q38. After GL Integration, the inspecting officer verifies that the POS Cash Balance in CSI is zero using which transaction code?
+   A. ZFSI_ERROR
+   B. FAGLL03
+   C. HACLINQ
+   D. zfi_receipt
+   Correct Answer: B
+   Explanation: Tcode FAGLL03 (General Ledger Line Items Report) is used to confirm that the POS Cash Balance is 0 in CSI from the last DLI; ZFSI_ERROR is the report for entries not posted automatically.
+
+Q39. During inspection, the office account bearing SOL ID + 0382 (used for new account opening and subsequent deposits) must show what balance at End of Day?
+   A. A credit balance equal to the day's deposits
+   B. Always a debit (Dr.) balance
+   C. Zero
+   D. A balance not exceeding Rs. 1 lakh
+   Correct Answer: C
+   Explanation: Per Supplementary Question S3, the office account SOL ID + 0382 used for new account opening and subsequent deposits must be ZERO at the time of EoD.
+
+Q40. The ATM Cash Account, identified by SOL ID + 0006, should always reflect which balance, and is checked through which Finacle menu?
+   A. Debit (Dr.) balance; HACLINQ menu
+   B. Credit (Cr.) balance; CCMM menu
+   C. Zero balance; HAFI menu
+   D. Debit (Dr.) balance; CDEDUP menu
+   Correct Answer: A
+   Explanation: The ATM cash account (SOL ID + 0006) is treated as cash of the SOL and should always be in Debit (Dr.) balance; it is verified through the HACLINQ menu [Q.60(b)].
+
+Q41. During inspection of a CBS Post Office, the inspecting officer should verify at least how many RD loan accounts opened since the last inspection?
+   A. 3
+   B. 5
+   C. 10
+   D. All RD loan accounts irrespective of number
+   Correct Answer: B
+   Explanation: Q.52(c), added in 2022, requires verification of at least five RD loan accounts opened since the last inspection; if fewer than five exist, all are to be verified.
+
+Q42. Procedures for transfer of accounts, issue of duplicate passbooks, and revival of silent accounts where the office lacks two supervisors are governed by which reference?
+   A. SB Order 5/2016 dated 21.06.2016
+   B. SB Order 04/2016 dated 01.07.2016
+   C. SB Order 22/2020 dated 18.06.2020
+   D. SB Order 8/2019
+   Correct Answer: A
+   Explanation: SB Order 5/2016 dated 21.06.2016 lays down procedures for transfers, duplicate passbooks, revival of silent accounts, and pledge/release of pledge, with such actions handled by Head Office supervisors.
+
+Q43. Consider the following statements regarding savings-bank thresholds in the SO inspection: 1. In iMO, Customer Due Diligence is required if the amount exceeds Rs. 50,000 in a month. 2. For high-value PLI/RPLI policies above Rs. 20 lakhs, all financial underwriting entries must be checked. 3. Verification memos are required for POSB withdrawals of Rs. 10,000 or above from single-handed SOs and BOs. Which of the above is/are correct?
+   A. 1 and 2 only
+   B. 2 and 3 only
+   C. 1 and 3 only
+   D. 1, 2 and 3
+   Correct Answer: D
+   Explanation: All three are correct: iMO CDD applies above Rs. 50,000/month; PLI/RPLI underwriting is fully checked for policies above Rs. 20 lakhs; and Rule 59 of the POSB (CBS) Manual prescribes verification memos for withdrawals of Rs. 10,000 or above from single-handed SOs and BOs.
+
+Q44. For accounts not seeded with a mobile number, transactions beyond which amount must be verified through the PRI/SDI?
+   A. Rs. 10,000
+   B. Rs. 25,000
+   C. Rs. 50,000
+   D. Rs. 1 lakh
+   Correct Answer: B
+   Explanation: Per Q.98(i), in non-seeded accounts (no mobile number), any transaction beyond Rs. 25,000 must be verified through the PRI/SDI.
+
+Q45. Before opening a new account for an existing customer holding multiple CIFs, the de-duplication check is carried out through which Finacle menu?
+   A. HFTI
+   B. HAFI
+   C. CDEDUP
+   D. CCMM
+   Correct Answer: C
+   Explanation: Q.58(h) requires de-duplication through the CDEDUP menu before opening new accounts for existing customers with multiple CIFs; HFTI is used by the supervisor for transaction verification.
+
+Q46. For a Non-CBS single/double-handed SO selected for complete verification, the SPM must prepare a list of passbooks not received for interest posting within what period, and issue which notice?
+   A. Within 3 months (by 30 June); SB-46
+   B. Within 6 months (by 30 September); SB-45
+   C. Within 1 month (by 30 April); SB-28
+   D. Within 3 months (by 30 June); SB-44
+   Correct Answer: A
+   Explanation: Per Supplementary Question S18, the SPM must list passbooks not received within 3 months (i.e. by 30 June) for interest posting and issue SB-46 notices to those depositors.
+
+Q47. The procedure for handling cheques received from Branch Offices for new account opening / subsequent deposits in POSB schemes is prescribed in which SB Orders?
+   A. SB Order 04/2016 and SB Order 07/2015
+   B. SB Order 5/2016 and SB Order 8/2019
+   C. SB Order 22/2020 dated 18.06.2020 and SB Order 27/2020 dated 23.07.2020
+   D. SB Order 22/2020 dated 18.06.2020 and SB Order 8/2019
+   Correct Answer: C
+   Explanation: Supplementary Question S17 requires the SO to maintain a manual cheque register for BO cheques following the procedure in SB Order 22/2020 (dt. 18.06.2020) and SB Order 27/2020 (dt. 23.07.2020).
+
+Q48. For the Bill Mail Service, the minimum number of articles required to be posted at one time is:
+   A. 1,000 articles (2,000 for NBMS)
+   B. 2,000 articles (5,000 for NBMS)
+   C. 10,000 articles (5,000 for NBMS)
+   D. 5,000 articles (10,000 for NBMS)
+   Correct Answer: D
+   Explanation: Q.86 prescribes a minimum of 5,000 articles at a time for the Bill Mail Service, and 10,000 articles for the National Bill Mail Service (NBMS).
+
+Q49. While verifying cash and stamp balances, the inspecting officer generates the daily account and the DOP/POS cash balance report. Which transaction codes are used, and what should the POS cash balance be at end of day?
+   A. zfr_day_new and zfbl3n; POS cash should be zero
+   B. fagll03 and MB52; POS cash should equal counter receipts
+   C. zfi_receipt and MB5B; POS cash should be in debit balance
+   D. zfbl3n and HACLINQ; POS cash should not exceed Rs. 1 lakh
+   Correct Answer: A
+   Explanation: Q.90 uses tcode zfr_day_new to generate the daily account and zfbl3n for the cash balance report (DOP and POS cash); the POS cash balance should be ZERO at end of day.
+
+Q50. Complaints pending against the India Post Call Centre are reviewed during grievance inspection. The toll-free number of the India Post Call Centre is:
+   A. 1800 266 6868
+   B. 1800 425 2440
+   C. 1924
+   D. 155261
+   Correct Answer: A
+   Explanation: Q.99(a) directs review of complaints pending on the CCC portal and the India Post Call Centre, whose toll-free number is 1800 266 6868.
+
+══════════════════════════════════════════════════════════════════════
+HEAD POST OFFICE (HO) INSPECTION QUESTIONNAIRE  (25 MCQs)
+══════════════════════════════════════════════════════════════════════
+
+Q51. The Revised Inspection Questionnaire for Head Post Office was issued under which Directorate letter?
+   A. Dte. letter No. 16-1/2017-Inspn dated 26.06.2018
+   B. Dte. letter No. 16-02/2017-Inspn dated 24.09.2020
+   C. Dte. letter No. 29-1/85-Inspn dated 13.05.1986
+   D. Dte. letter No. 27-1/77-Inspn dated 01.12.1977
+   Correct Answer: A
+   Explanation: The Revised Inspection Questionnaire for Head Post Office was issued vide Dte. letter No. 16-1/2017-Inspn dated 26.06.2018, made effective from 01.07.2018.
+
+Q52. From which date did the Supplementary Inspection Questionnaire & Modifications (File No. 16-02/2017-Inspn) take effect?
+   A. 01.07.2018
+   B. 26.06.2018
+   C. 24.09.2020
+   D. 21.06.2016
+   Correct Answer: C
+   Explanation: The Supplementary Inspection Questionnaire & Modifications were issued vide File No. 16-02/2017-Inspn dated 24.09.2020 and were made effective immediately, i.e., from 24.09.2020.
+
+Q53. As per the prescribed inspection norms, how many days are allowed for the Annual Inspection cum Verification of a Head Post Office?
+   A. 4 days
+   B. 6 days
+   C. 8 days
+   D. 10 days
+   Correct Answer: C
+   Explanation: Under the inspection frequency norms (authority: Dte. letter No. 29-1/85-Inspn dated 13.05.1986), the Annual Inspection cum Verification of a Head Post Office is allotted 8 days, while a separate HO Verification is allotted 4 days.
+
+Q54. Under the quarterly time schedule prescribed for inspections, which quarter is allotted the highest percentage of inspection work?
+   A. 1st Quarter (January to March) — 15%
+   B. 2nd Quarter (April to June) — 35%
+   C. 3rd Quarter (July to September) — 30%
+   D. 4th Quarter (October to December) — 20%
+   Correct Answer: B
+   Explanation: Per the time schedule (authority: Dte. letter No. 27-1/77-Inspn dated 01.12.1977), the distribution is 15%, 35%, 30% and 20% respectively, so the 2nd Quarter (April to June) carries the highest share at 35%.
+
+Q55. In the HO Inspection Questionnaire, Section 3 (Financial Services Operations) covers which range of question numbers?
+   A. Q.25 to Q.44
+   B. Q.109 to Q.114
+   C. Q.115 to Q.133
+   D. Q.45 to Q.108
+   Correct Answer: D
+   Explanation: Section 3 (Financial Services Operations) spans Q.45 to Q.108, comprising remittance services, CBS counter operations & ATM management, and PLI/RPLI & CPC.
+
+Q56. Within the CBS sub-section of the HO questionnaire, CBS counter operations and ATM management (including AML & DBT) are covered under which question range?
+   A. Q.45 to Q.50
+   B. Q.51 to Q.98
+   C. Q.99 to Q.108
+   D. Q.109 to Q.114
+   Correct Answer: B
+   Explanation: Sub-section 3(b) — CBS counter operations and ATM management (including AML & DBT) — covers Q.51 to Q.98; remittance services occupy Q.45 to Q.50 and PLI/RPLI & CPC occupy Q.99 to Q.108.
+
+Q57. Which single question constitutes the entire Section 6 (Technology Management) of the HO Inspection Questionnaire?
+   A. Q.108
+   B. Q.114
+   C. Q.134
+   D. Q.141
+   Correct Answer: C
+   Explanation: Section 6 (Technology Management) consists solely of Q.134, which covers hardware/peripherals/software & layout, networking environment and support systems.
+
+Q58. Section 7 (Grievance Handling and Public Relations) of the HO questionnaire spans which range of question numbers?
+   A. Q.128 to Q.133
+   B. Q.134 only
+   C. Q.135 to Q.141
+   D. Q.115 to Q.127
+   Correct Answer: C
+   Explanation: Section 7 (Grievance Handling and Public Relations) covers Q.135 to Q.141, dealing with complaints review, social media feedback, Citizens Charter, web-based CCC and Post Forum meetings.
+
+Q59. Consider the following statements regarding the two annual visits to a Head Post Office:
+1. One verification is to be conducted in the first half of the year.
+2. One verification cum inspection is to be conducted in the second half of the year.
+3. Wherever the number of days for a check is not specified, checks may be done for four different dates, one for each month.
+Which of the statements is/are correct?
+   A. 1 and 2 only
+   B. 1 and 3 only
+   C. 2 and 3 only
+   D. 1, 2 and 3
+   Correct Answer: D
+   Explanation: The Note for Inspecting Officers prescribes two inspections per year (verification in the first half, verification cum inspection in the second half) and a default check period of four different dates (one per month) where days are not specified — all three statements are correct.
+
+Q60. How long before the inspection should the Inspecting Officer send the Postmaster a list of additional questions decided by him?
+   A. One week before inspection
+   B. Fifteen days before inspection
+   C. One month before inspection
+   D. Two months before inspection
+   Correct Answer: C
+   Explanation: Per the Note for Inspecting Officers, one month before inspection the IO should send the Postmaster a list of additional questions, and the Postmaster should be asked to send a list of cases and proposals on which the IO may take decisions during inspection.
+
+Q61. In the HO Inspection Questionnaire, Section 4 (Business Development) covers which range of question numbers?
+   A. Q.109 to Q.114
+   B. Q.99 to Q.108
+   C. Q.115 to Q.127
+   D. Q.128 to Q.133
+   Correct Answer: A
+   Explanation: Section 4 (Business Development) covers Q.109 to Q.114, including general business, Speed Post, Bill Mail Service, e-Payment, e-Post and Business Post.
+
+Q62. Under the HO questionnaire, while checking taxed postage during inspection of delivery (Q.28), beyond what percentage of difference from past collections must the Inspecting Officer probe reasons and counsel the supervisor/staff?
+   A. 20%
+   B. 25%
+   C. 30%
+   D. 50%
+   Correct Answer: C
+   Explanation: If the tax due for the day differs by more than 30% from past collections, the Inspecting Officer is required to probe the reasons and counsel the supervisor/staff, as prescribed in Q.28(b).
+
+Q63. For verification of high-value withdrawals from single-handed SOs and BOs, verification memos are to be sent to Field Officers when the withdrawal amount is:
+   A. Rs. 5,000/- or above
+   B. Rs. 20,000/- or above
+   C. Rs. 50,000/- or above
+   D. Rs. 10,000/- or above
+   Correct Answer: D
+   Explanation: As per revised Q.68 (read with Rule 59 of POSB (CBS) Manual), verification memos for withdrawals of Rs. 10,000/- or above from single-handed SOs and BOs must be sent to Field Officers for verification.
+
+Q64. The quarterly report on high-value withdrawals must be furnished to the Divisional Head by which date following each quarter?
+   A. 5th of the month following each quarter
+   B. 10th of the month following each quarter
+   C. 15th of the month following each quarter
+   D. Last day of the quarter
+   Correct Answer: A
+   Explanation: Revised Q.68(b) requires the report on high-value withdrawals to be furnished quarterly to the Divisional Head by the 5th of the month following each quarter (i.e., by 5th January, April, July and October).
+
+Q65. Under the IMTS (Western Union) AML norms, what is the maximum number of transactions that may be paid to a single customer in a calendar year as per RBI guidelines?
+   A. 12 transactions
+   B. 20 transactions
+   C. 30 transactions
+   D. 50 transactions
+   Correct Answer: C
+   Explanation: Per the RBI guidelines reflected in Q.50, not more than 30 transactions may be paid to a customer in a calendar year under the International Money Transfer Service (Western Union).
+
+Q66. Under both the iMO and IMTS provisions of the HO questionnaire, which monetary figure is the key threshold for enhanced compliance (CDD in a month for iMO, and payment by cheque/SB credit for IMTS)?
+   A. Rs. 10,000/-
+   B. Rs. 25,000/-
+   C. Rs. 50,000/-
+   D. Rs. 1,00,000/-
+   Correct Answer: C
+   Explanation: Rs. 50,000/- is the common threshold: for iMO, CDD is required if the amount exceeds Rs. 50,000 in a month per customer; for IMTS, amounts exceeding Rs. 50,000 must be paid by cheque or direct credit to the SB account.
+
+Q67. Which question in the HO questionnaire was DELETED by the 2020 Supplementary Questionnaire because physical certificates (KVP/NSC) were discontinued w.e.f. 01.07.2016 vide SB Order 04/2016?
+   A. Q.50
+   B. Q.85
+   C. Q.96
+   D. Q.51
+   Correct Answer: D
+   Explanation: Q.51 (KVP and NSC Issue/Purchase) was deleted by the 2020 Supplementary Questionnaire because, vide SB Order 04/2016, physical certificates were discontinued w.e.f. 01.07.2016 with a single passbook issued against one account.
+
+Q68. In Section 5, what is the prescribed preservation period for AML/KYC/CFT transaction records?
+   A. 3 years
+   B. 5 years
+   C. 7 years
+   D. 10 years
+   Correct Answer: B
+   Explanation: Per the key monetary thresholds and AML compliance provisions of the questionnaire, AML/KYC/CFT transaction records are to be preserved for 5 years.
+
+Q69. Under Q.126 (GST), by which date of every month must the GSTR-1 (statement of outward supplies) be filed?
+   A. 10th of every month
+   B. 15th of every month
+   C. 20th of every month
+   D. Last day of every month
+   Correct Answer: A
+   Explanation: Q.126 prescribes GSTR-1 (outward supplies) by the 10th, GSTR-2 (inward supplies) by the 15th, and GSTR-3 (consolidated return) by the 20th of every month.
+
+Q70. Which office account (SOL ID + code) is designated as the DBT Upload Account in the HO questionnaire's quick reference?
+   A. 0408
+   B. 0409
+   C. 0385
+   D. 0410
+   Correct Answer: D
+   Explanation: In the key office accounts reference, 0408 is the Pension Upload Account, 0409 is the Salary Upload Account, 0410 is the DBT Upload Account and 0385 is the Money Order Upload Account.
+
+Q71. Under revised Q.96, the ATM Cash Account (SOL ID + 0006) checked in Finacle through the HACLINQ menu should always carry which type of balance?
+   A. Credit (Cr.) balance
+   B. Debit (Dr.) balance
+   C. Nil/zero balance
+   D. Minus balance
+   Correct Answer: B
+   Explanation: Revised Q.96(b) provides that the ATM cash account (SOL ID + 0006), checked through HACLINQ, should always be in Debit (Dr.) balance, since post-GL integration ATM cash is treated as cash of the concerned SOL.
+
+Q72. Under Q.100, PLI/RPLI proposals exceeding which amount must be accepted by the authorized authority?
+   A. Rs. 5 lakhs
+   B. Rs. 1 lakh
+   C. Rs. 10 lakhs
+   D. Rs. 20 lakhs
+   Correct Answer: A
+   Explanation: Q.100 requires that PLI/RPLI proposals exceeding Rs. 5 lakhs be accepted by the authorized authority, whereas Rs. 20 lakhs is the threshold for checking financial underwriting entries of high-value policies.
+
+Q73. Which Finacle/CSI menu is used to verify whether any withdrawals were effected before supervisor verification?
+   A. HAFI
+   B. HFTI
+   C. HACLINQ
+   D. IES
+   Correct Answer: B
+   Explanation: Per Q.56 and the menu-code reference, the HFTI menu is used to cross-check whether any withdrawals were effected before supervisor verification; HAFI is for non-financial transaction/duplicate passbook checks and IES for signature scanning/upload.
+
+Q74. Consider the following statements about the 2020 Supplementary Questionnaire (Part D) for Head Post Offices:
+1. It introduces additional questions over and above the existing Inspection Questionnaire.
+2. Supplementary Q.2 directs checking of unverified non-financial transactions by invoking the HAFI menu.
+3. Supplementary Q.14 concerns SBCO tallying 100% of vouchers with LOTs and recording objections.
+Which of the statements is/are correct?
+   A. 1 and 2 only
+   B. 2 and 3 only
+   C. 1 and 3 only
+   D. 1, 2 and 3
+   Correct Answer: D
+   Explanation: The Part D Supplementary Questionnaire (effective 24.09.2020) is expressly in addition to the existing questionnaire; its Q.2 uses the HAFI menu for unverified non-financial transactions and its Q.14 covers 100% SBCO tallying of vouchers with LOTs and recording of objections — all three statements are correct.
+
+Q75. Under Q.44, within how many days must a publisher pay a Registered Newspaper postage bill where posting is allowed without prepayment?
+   A. 3 days
+   B. 15 days
+   C. 30 days
+   D. 7 days
+   Correct Answer: D
+   Explanation: Q.44(c) requires that bills for recovery be paid by the publisher within 7 days, with the payment reflected in the deposit account and adequate security obtained.

@@ -33,7 +33,11 @@
       "Bash(ls .env.local .env)",
       "Bash(python -c \"import docx; print\\('ok'\\)\")",
       "Bash(ls src/models)",
-      "Bash(ls src/lib/models)"
+      "Bash(ls src/lib/models)",
+      "Bash(python -c ' *)",
+      "Bash(echo \"---EXIT:$?---\")",
+      "Skill(run)",
+      "Skill(run:*)"
     ]
   }
 }

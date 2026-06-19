@@ -622,6 +622,15 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "size": "0.8 MB",
             "color": "amber",
             "topic": "Acts"
+        },
+        {
+            "title": "GST Act, 2017 - Exam Edition",
+            "description": "Comprehensive exam-oriented notes on the Goods and Services Tax Act, 2017.",
+            "filename": "GST_Act_2017_Exam_Edition.pdf",
+            "path": "/notes/paper-2/GST_Act_2017_Exam_Edition.pdf",
+            "size": "0.5 MB",
+            "color": "teal",
+            "topic": "Acts"
         }
     ]
 };

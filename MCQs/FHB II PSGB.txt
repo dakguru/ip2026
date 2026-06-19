@@ -1,0 +1,646 @@
+Q1. Under the classification of transactions for the Department of Posts, what is the correct digit allocation for the Sub-Major Head and the Minor Head, respectively?
+A. 4 digits and 2 digits
+B. 2 digits and 3 digits
+C. 3 digits and 2 digits
+D. 2 digits and 2 digits
+Correct Answer: B
+Explanation:
+•	The classification of transactions into the 15-digit Head of Account allocates 4 digits for Major heads, 2 digits for Sub-Major Heads, and 3 digits for Minor Heads. 
+Q2. Which of the following offices is accurately classified as a Non-Cheque Drawing DDO (NCDDO)?
+A. Any General Post Office (GPO)
+B. Head Record Office (HRO) in the Railway Mail Service
+C. Sorting Mail Office (SMO)
+D. Sub-Foreign Post Office
+Correct Answer: B
+Explanation:
+•	Non-Cheque Drawing DDOs (NCDDOs) are DDOs which have not been vested with cheque drawing powers. 
+•	Examples of NCDDOs include the Regional Office (RO), Circle Office (CO), PLI Directorate, and HRO in RMS. 
+Q3. Consider the following statements regarding the Head of Postal Accounts Office:
+1.	It is subordinate to the Head of Circle.
+2.	It is responsible for the scrutiny, review, and reconciliation of e-accounts rendered by DDOs.
+3.	It is responsible for submitting compiled accounts to the Controller General of Accounts (CGA).
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: D
+Explanation:
+•	The Head of Postal Accounts Office is subordinate to the Head of Circle. 
+•	The office is responsible for the scrutiny, review, monitoring, and reconciliation of e-accounts rendered by DDOs/NCDDOs. 
+•	It is also responsible for the submission of these accounts to the CGA. 
+Q4. Which of the following correctly defines a Corporate Mail Office (Bulk Mail Centre)?
+A. A mail office capable of receiving closed bags without sorting them.
+B. An office opened in big cities for bulk mailers capable of posting at least 5000 unregistered articles or 250 registered articles at a time.
+C. A transcription center situated at the Headquarters of a Circle for bulk processing.
+D. A stationary office of the RMS where the work-papers of attached sections are placed on record.
+Correct Answer: B
+Explanation:
+•	Corporate Mail Offices or Bulk Mail Centres (CMO/BMC) are opened in big cities. 
+•	A bulk mailer is defined as a firm capable of posting 5000 unregistered articles or 250 registered articles at a time. 
+Q5. In the context of Post Office bags, which of the following is NOT categorized as a "due bag"?
+A. Branch office bag
+B. Account bag from a Sub Office to a Head Office
+C. Cash bag
+D. Account bag from a Head Office to a Sub Office
+Correct Answer: C
+Explanation:
+•	An account bag is used between a sub-office and its Head Office and is a due bag. 
+•	A branch office bag is used between a branch office and its account office and is also a due bag. 
+•	A cash bag is used to enclose remittances of cash between Post Offices and is explicitly defined as not a due bag. 
+Q6. What is the designated role of a Mass Mailing Centre (MMC)?
+A. To independently assess customs duty on foreign bulk mails.
+B. To process closed bags on lines of through mail communication without opening them.
+C. To receive loose letters and circulars from customers, write addresses, enclose letters, and affix postage on hourly payment basis.
+D. To maintain the work-papers of Railway Mail Service sections for record-keeping.
+Correct Answer: C
+Explanation:
+•	A Mass Mailing Centre receives loose letters, circulars, and blank envelopes from customers. 
+•	It helps customers by writing addresses, enclosing circulars inside envelopes, and affixing postage stamps or franking the mail. 
+•	The MMC may engage college students, housewives, or pensioners on an hourly basis for this assistance. 
+Q7. Which of the following digital payment mechanisms mentioned under the Department's definitions relies on Unstructured Supplementary Service Data?
+A. BHIM Aadhaar (AEPS)
+B. Bharat QR Code
+C. USSD
+D. IMPS
+Correct Answer: C
+Explanation:
+•	Digital Payment transactions include USSD, which stands for Unstructured Supplementary Service Data. 
+•	Funds flow directly from one account to another and are faceless, paperless, and cashless. 
+Q8. Differentiate between a Transit Office and a Transit Mail Office (TMO) by identifying the correct statement below:
+A. A Transit Office assesses customs duty, whereas a TMO prepares salary bills for the RMS Division.
+B. A Transit Office receives and sorts bags without opening them, whereas a TMO is a branch of RMS that receives and dispatches closed bags without sorting letters.
+C. A Transit Office is overseen by a Head Record Assistant, whereas a TMO is overseen by a Sub-Record Officer.
+D. A Transit Office can process registered bulk articles, whereas a TMO is restricted to only unregistered mail processing.
+Correct Answer: B
+Explanation:
+•	A Transit Office is situated on a line of through mail communication and receives and sorts bags intended for offices in advance without opening them. 
+•	A Transit Mail Office (TMO) is a branch of RMS where closed bags are received and dispatched; sorting of letters is not done in this unit. 
+Q9. Consider the following statements regarding Railway Mail Service (RMS) stationary offices:
+1.	A Sorting Mail Office (SMO) is in the charge of a Head Sorting Assistant (HSA).
+2.	A Transit Mail Office (TMO) is in the charge of a Mail Agent or Mail Guard.
+3.	The preparation of salary and contingent bills for an entire RMS Division is done at the Sub-Record Office (SRO).
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: A
+Explanation:
+•	Mail Offices are stationary offices of the RMS. A Sorting Mail Office (SMO) is overseen by an HSA, and a Transit Mail Office (TMO) is overseen by a Mail Agent. 
+•	The preparation of salary and contingent bills for the entire Division is executed at the Head Record Office (HRO) level, not the Sub-Record Office. 
+Q10. Who is the designated authority for fixing the minimum and maximum stock of stamps for a Group 'B' Postmaster?
+A. The Divisional Head
+B. The Director of Postal Services (DPS)
+C. The Chief Postmaster General (CPMG)
+D. The Head Record Officer (HRO)
+Correct Answer: B
+Explanation:
+•	The minimum and maximum stock of stamps is fixed by the Divisional Head for Non-Gazetted Postmasters. 
+•	For Group 'B' Postmasters, it is fixed by the DPS. 
+•	For Group 'A' Postmasters, it is fixed by the CPMG/PMG. 
+Q11. According to the end-to-end electronic process of procurement, from where do Head Post Offices obtain their requirement of Revenue stamps?
+A. From the Postal Stores Depot (PSD) on payment of cash
+B. From the Nasik Security Press directly
+C. From Treasuries on payment of cash
+D. From the Circle Postal Accounts Office (CPAO)
+Correct Answer: C
+Explanation:
+•	While Head Post Offices obtain supplies of Postage Stamps and Postal Stationery from the PSD, they must obtain their requirement of Revenue stamps from Treasuries on payment of cash. 
+Q12. What is the prescribed time-limit for a Head Postmaster to check, verify, and return one copy of the invoice to the Postal Stores Depot (PSD) after receiving a supply of stamps?
+A. Not later than the close of the same business day
+B. Not later than 3 days of the receipt of the supply
+C. Not later than 7 days of the receipt of the supply
+D. Not later than the 16th of the respective month
+Correct Answer: B
+Explanation:
+•	On receipt of stamps and Postal Stationery from the PSD, the Head Postmaster or authorized person must check and verify the articles with the invoice. 
+•	One copy of the invoice must be returned to the PSD not later than 3 days of the receipt of the supply. 
+Q13. In the event that postage stamps become obsolete or are damaged, whose orders are required to write off the value of the stamps?
+A. The Head of the Postal Accounts Office
+B. The Competent Authority
+C. The Director General of Posts
+D. The Postal Stores Depot (PSD) In-charge
+Correct Answer: B
+Explanation:
+•	When postage stamps and stationery are lost, damaged, useless, or obsolete, their value should be written off under the orders of the competent authority. 
+•	Following the write-off, the stock account is updated and a copy of the order is communicated to the PAO and PSD. 
+Q14. Consider the following statements regarding the supply of commemorative stamps:
+1.	Nasik Security Press dispatches commemorative stamps to certain Philatelic Bureaus accompanied by an invoice in duplicate.
+2.	Two acknowledged copies of the invoice (marked first and second copy) must be returned to the Nasik Press immediately upon verifying the supplies.
+3.	The Nasik Press directly forwards one copy of the invoice to the Postal Accounts Office of the Post Office.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+•	Nasik Security Press dispatches supplies accompanied by an invoice in triplicate, not duplicate. 
+•	One copy is forwarded directly to the Postal Accounts Office by the press. 
+•	Two acknowledged copies (marked first copy and second copy) must be returned to Nasik Press immediately on opening and verifying the supplies. 
+Q15. What is the mandated security deposit amount required to open a Philately Deposit Account?
+A. Rs. 100
+B. Rs. 200
+C. Rs. 375
+D. Rs. 500
+Correct Answer: B
+Explanation:
+•	A Philately Deposit Account scheme can be opened at a Philatelic Bureau or Philatelic counter of a Head Office. 
+•	An amount of Rs. 200 has been prescribed as the Security deposit for a Philatelic Deposit Account. 
+Q16. Which of the following accurately differentiates "Definitive Stamps" from "Commemorative Stamps"?
+A. Definitive stamps are issued for specific national events and are not reprinted, whereas Commemorative stamps are for day-to-day use.
+B. Definitive stamps are used for assessing customs duty on foreign mail, whereas Commemorative stamps are solely for Philatelic Deposit Accounts.
+C. Definitive stamps are issued for day-to-day use and are reprinted when exhausted, whereas Commemorative stamps commemorate specific themes/events and are not reprinted when stock is exhausted.
+D. Definitive stamps can be personalized with a thumbnail photograph of the customer, whereas Commemorative stamps cannot.
+Correct Answer: C
+Explanation:
+•	Definitive stamps are issued for day-to-day use as postage and are reprinted when exhausted. 
+•	Commemorative stamps are issued to commemorate certain events, personalities, themes, etc., and they are not reprinted when the stock is exhausted. 
+Q17. Under the Department's definitions, what is the brand name designated for personalized sheets of commemorative postage stamps allowing thumbnail photographs or logos?
+A. My Stamp
+B. Greeting Post
+C. Special Cover
+D. Premium Post
+Correct Answer: A
+Explanation:
+•	"My Stamps" is the brand name for personalized sheets of commemorative postage stamps of India Post. 
+•	Personalization is achieved by printing a thumbnail photograph of the customer, institutional logos, historical cities, wildlife, etc.. 
+Q18. When an event is deemed not nationally important enough to warrant the issue of a Commemorative stamp, what alternative does the Department provide?
+A. A customized Definitive stamp
+B. A My Stamp sheet exclusively
+C. A Special Cover which can be cancelled with a special cancellation
+D. A Franking Machine impression
+Correct Answer: C
+Explanation:
+•	For an event which is not nationally important enough to be commemorated by the issue of a Commemorative/Special stamp, the Department will issue Special Covers. 
+•	These Special Covers can be cancelled with a special cancellation at the post office. 
+Q19. Who is responsible for countersigning the receipt granted by a Mail Office, SRO, or HRO when they receive an advance supply of stamps?
+A. The Head of the Circle (CPMG)
+B. The Superintendent, Railway Mail Service
+C. The Sub-Record Officer
+D. The Postal Stores Depot In-charge
+Correct Answer: B
+Explanation:
+•	The supply of required stamps as an advance supply to a mail office of the RMS, SRO, or HRO requires a receipt. 
+•	This receipt must be countersigned by the Superintendent, RMS for the value of the stamps supplied, and it must be renewed on the 1st of April every year. 
+Q20. When an organization utilizes the facility of posting Registered Newspapers without prepayment of postage, on which specific dates must the office of posting present the fortnightly bills to the newspaper?
+A. On the 1st and 15th of each month
+B. On the 7th and 21st of each month
+C. On the 16th and 1st of each month
+D. On the 15th and the last day of each month
+Correct Answer: C
+Explanation:
+•	The office of posting will prepare fortnightly bills (for the 1st to 15th and 16th to the end of each month) in form MS-98. 
+•	The bill must be presented to the newspaper on the 16th and 1st of each month. 
+Q21. Under the rules for Registered Newspapers without prepayment of postage, what triggers the deemed cancellation of the license?
+A. If the organization fails to renew the license by the 10th of the month.
+B. If the bill remains unpaid by the end of the fortnight following the fortnight to which it relates.
+C. If the organization fails to provide Rs. 10,000 worth of business in a calendar month.
+D. If the bill is not paid within 3 days of presentation.
+Correct Answer: B
+Explanation:
+•	The license granted for posting Registered Newspapers without prepayment of postage should be deemed to have been cancelled if the bill remains unpaid by the end of the fortnight following the fortnight to which it relates. 
+Q22. What are the prescribed fees for applying for a new Franking Machine license and for the renewal of an expired license, respectively?
+A. Rs. 200 for a new license, Rs. 375 for renewal
+B. Rs. 375 for a new license, Rs. 475 for renewal
+C. Rs. 475 for a new license, Rs. 500 for renewal
+D. Rs. 500 for a new license, Rs. 575 for renewal
+Correct Answer: B
+Explanation:
+•	Under Franking services, the fee for applying for a new license is Rs. 375. 
+•	The renewal fee for an expired license is Rs. 475. 
+•	This revenue is credited to the specific Head of Account 1201-00-800-42-35-00. 
+Q23. To be classified as a "Bulk Customer" eligible for the Book Now Pay Later (BNPL) credit facility, what is the minimum required value of business that must be provided in a calendar month?
+A. Rs. 5,000 worth of business
+B. Rs. 10,000 worth of business
+C. Rs. 25,000 worth of business
+D. Rs. 50,000 worth of business
+Correct Answer: B
+Explanation:
+•	A Bulk customer is eligible for the BNPL credit facility to avail Speed post and Business Post facility. 
+•	It is defined as anyone who provides Rs. 10,000 worth of speed post business, business post, or a combination of both in a calendar month at a Speed Post booking office. 
+Q24. In the Book Now Pay Later (BNPL) system, if a bulk customer fails to make the full payment by the due date, what is the applicable penalty imposed from the bill date?
+A. 5% per annum on the bill amount
+B. 10% per annum on the bill amount
+C. 12% per annum on the bill amount
+D. 18% per annum on the bill amount
+Correct Answer: C
+Explanation:
+•	The bulk customer must pay the bill amount in full on or before the last day of the month in which the bill is raised. 
+•	In case the customer fails to make the payment by the due date, a penalty at the rate of 12% per annum on the bill amount shall be imposed from the bill date. 
+Q25. Consider the following statements regarding the BNPL (Book Now Pay Later) Facility:
+1.	The BNPL contract is applicable for a period of one year and must be renewed on an annual basis.
+2.	The office of posting will raise the monthly BNPL bill by the 15th day of the following month.
+3.	The bulk customer must pay the bill in full on or before the last day of the month in which the bill is raised.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: C
+Explanation:
+•	The contract will be applicable for a period of one year and the approving authority shall renew the contract on an annual basis. 
+•	The BNPL bill is raised by the 7th day of the following month (bill date), not the 15th. 
+•	The bulk customer must pay the bill amount in full on or before the last day of the month in which the bill is raised. 
+Q26. Unpaid and insufficiently paid letters and newspapers are taxed by the Postmaster. Under which specific accounting head are these realized amounts credited in the office of delivery?
+A. Major Head 3201 - Working Expenses
+B. Unclassified Receipts
+C. 1201-00-101-01-01-00 - Postage realized in cash for ordinary services
+D. Major Head 8782 - RSAO
+Correct Answer: C
+Explanation:
+•	Unpaid and insufficiently paid letters and newspapers are taxed by the Postmaster. 
+•	The amounts so realized are credited in the accounts of the offices of the delivery under the head - Postage realized in cash for ordinary services (1201-00-101-01-01-00). 
+
+
+… continued — PART 4 · Sub-Section 4.1 resuming at Q27
+Q27. Consider the following statements regarding the duties and responsibilities of the Treasurer in a Post Office:
+1.	The Treasurer is solely responsible for the safe custody of cash kept in the reserve safe.
+2.	The Treasurer is strictly prohibited from keeping running accounts with Postal Assistants and Postmen.
+3.	The Treasurer must obtain the initials of the Head Postmaster before giving cash to any official.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+•	The Treasurer is solely responsible for the safe custody of money in the office safe from which current transactions are carried on. However, they are jointly responsible with the Postmaster for the cash kept in the reserve safe.
+•	The Treasurer is strictly prohibited from keeping running accounts with PAs, Postmen, and GDS.
+•	Before giving cash to any official, the Treasurer must obtain the initials of the Head Postmaster (or authorized officer).
+Q28. Which of the following transactions should NOT be entered into the e-Treasurer's Cash Book (Form ACG-2)?
+A. The supply of funds from the office cash to subordinate branch offices.
+B. Payments and receipts affected by book transfer.
+C. E-stamp balance register entries for definitive stamps.
+D. Drawals from the bank in cash.
+Correct Answer: B
+Explanation:
+•	Actual cash transactions only will be entered in the Treasurer's Cash Book.
+•	Receipts and payments by book transfer should not be entered.
+Q29. In the event the Head Postmaster is away from the office during office hours, who is empowered to sign payment orders on bills or other claims for money?
+A. The Treasurer
+B. The Accountant
+C. The Deputy Postmaster
+D. The Inspector of Post Offices
+Correct Answer: C
+Explanation:
+•	Under the rules for the Payment of Money, Deputy Postmasters are authorized to sign payment orders on occasions when the Head Postmaster is away from the office during office hours.
+Q30. According to the procedures for RMS disbursements, when is the Head Record Officer (HRO) required to present the system-processed salary details for online transfer of disbursements at the Head Post office?
+A. On the first working day of each month
+B. By the 15th of the month
+C. Two or three days before the close of each month (except March)
+D. On the 5th of the subsequent month
+Correct Answer: C
+Explanation:
+•	To ensure disbursement on the last working day of each month (except March), the HRO will present the system-processed salary details two or three days before the close of the month at the Head Post Office.
+Q31. When the duty of verifying the Daily Transaction Report (DTR) is delegated by the Head Postmaster to a subordinate, what minimum personal check must the Head Postmaster still perform?
+A. Check the transit cash entries only.
+B. Check at least two totals under each of the heads (receipts and payments) and mark them "Examined".
+C. Check all transactions related to statutory taxes.
+D. Verify the entire Unpaid Postal Abstract.
+Correct Answer: B
+Explanation:
+•	When the verification duty is delegated, the Head Postmaster must still personally check at least two totals under each of the heads (receipts and payments) in the DTR.
+•	The two entries so examined should be marked "Examined" before signing the DTR.
+Q32. How are unpaid and insufficiently paid articles handled if they are intercepted under the orders of a District Magistrate?
+A. They are returned to the sender with double the postage due.
+B. They are handed over to the authority concerned without realization of the postage due.
+C. The postage due is recovered from the District Magistrate's office via book transfer.
+D. They are kept in deposit at the RLO until the postage is paid.
+Correct Answer: B
+Explanation:
+•	Unpaid and insufficiently paid articles intercepted under the orders of a District Magistrate are handed over to the authority concerned without realization of the postage due.
+Q33. What is the deadline for submitting the Head Office classified Cash Account for the previous month to the Postal Accounts Office?
+A. The 1st of each month
+B. The 5th of each month
+C. The 10th of each month
+D. The 15th of each month
+Correct Answer: B
+Explanation:
+•	The Head office classified Cash Account of the Head Office for the previous month will be submitted by the 5th of each month to the Postal Accounts Office.
+Q34. The actual balances held in cash and stock of postage at the close of each day must be entered in a weekly statement of balances. On which specific dates must this statement be punctually submitted to the SPOs/SSPOs?
+A. 1st, 7th, 14th, and 21st of every month
+B. 1st, 8th, 16th, and 24th of every month
+C. 5th, 10th, 15th, and 20th of every month
+D. 7th, 15th, 22nd, and the last day of every month
+Correct Answer: B
+Explanation:
+•	The actual balances held in cash and stock of postage must be entered in a weekly statement of balances.
+•	This statement must be submitted punctually on the 1st, 8th, 16th, and 24th of every month to the SPO's or SSPO's.
+Q35. Consider the following statements regarding the schedules of payments on account of PLI and RPLI:
+1.	They must be submitted to the Circle PAO once at the end of the month.
+2.	The schedule for the period of the 1st to the 15th is submitted on the 16th of the same month.
+3.	The schedule for the period of the 16th to the last day is submitted on the 1st of the following month.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. All of the above
+Correct Answer: B
+Explanation:
+•	Schedules relating to PLI/RPLI payments should be submitted twice a month.
+•	The period of 1st to 15th is submitted on the 16th of the same month, and the period of 16th to the last day is submitted on the 1st of the following month.
+Q36. During the verification of balances, what is the prescribed procedure for handling unused loose service postage stamps found in a letter box?
+A. They are immediately taken into the stock of the Post Office and accounted as miscellaneous receipts.
+B. They are kept out of the accounts of the Post office till the end of the month following that in which they were found.
+C. They are destroyed after 7 days if no claim is made.
+D. They are sent directly to the Postal Accounts Office.
+Correct Answer: B
+Explanation:
+•	Loose service postage stamps and stationery found in letter boxes are kept out of the accounts of the Post office but retained till the end of the month following that in which they were found.
+•	If no claim is made within this period, they are then taken to the stock.
+Q37. For supplementary accounts of the financial year in March, by which date must all reversals, transfer entries, and transaction inclusions be completed in the system?
+A. 31st March
+B. 1st April
+C. 5th April
+D. 10th April
+Correct Answer: A
+Explanation:
+•	Before the closure of the March Month, all reversals, transfer entries, modification etc., must be done in the system against 31st March, ensuring inclusion by that date.
+Q38. Which of the following statements concerning the correction of errors in accounting is NOT correct?
+A. Any transaction not posted to a correct head of account needs to be posted via transfer entries.
+B. The Drawing and Disbursing Officer (DDO) is authorized to make corrections based on requests from subordinate units.
+C. Posting or reversal of errors is permitted in the accounts of prior periods even if they have already been finalized.
+D. An e-report of reversals and corrections done by the DDO is made available to the Circle Postal Accounts Office.
+Correct Answer: C
+Explanation:
+•	The rule strictly mandates that reversals or posting of documents must be done on the current date, and no posting or reversal is allowed for prior period/date accounts that have already been submitted and finalized. Statements A, B, and D are factually correct.
+Q39. In a Railway Mail Service division, who shares joint custody of the contents of the Head Record Office (HRO) safe alongside the Head Record Officer?
+A. The Superintendent of RMS
+B. The Accountant selected from among the sorters
+C. The Head Postmaster of the linked DDO
+D. The Mail Guard
+Correct Answer: B
+Explanation:
+•	All contents of the HRO office safe are held in the joint custody of the Head Record Officer and the Accountant.
+•	The Accountant is selected by the Superintendent from among the sorters to assist the HRO.
+Q40. Which specific form is maintained by each Head Record and Sub-Record office to record the money transactions of the office itself?
+A. Form ACG-2
+B. Form ACG-4
+C. Form ACG-33
+D. Form ACG-40
+Correct Answer: C
+Explanation:
+•	A Cash abstract (ACG-33) is kept by each Head Record and sub-record office in which the money transactions of the office itself are recorded.
+Q41. All miscellaneous sums received by officials of the Railway Mail Service from various sources should initially be entered into the "Treasurer cash book" designated by which form number?
+A. Form ACG-33
+B. Form ACG-40
+C. Form ACG-45
+D. Form ACG-67
+Correct Answer: B
+Explanation:
+•	The receipt and disposal of all miscellaneous sums received by RMS officials should be entered in a register Treasurer cash book (Form ACG-40).
+Q42. How frequently should an extract from the RMS Treasurer cash book (Form ACG-40) be forwarded to the Superintendent of the Railway Mail Service Division?
+A. Daily at the close of business
+B. Weekly
+C. At the close of each month
+D. Quarterly
+Correct Answer: C
+Explanation:
+•	At the close of each month, an extract from this register should be forwarded to the Superintendent of the Railway Mail Service Division concerned for information.
+Q43. Which of the following specific heads is used for the collection of Income Tax from the salaries of Central Government Employees (other than Union Government)?
+A. TDS-192
+B. TDS-194C
+C. TDS-194A
+D. TDS-193
+Correct Answer: A
+Explanation:
+•	Under the TDS classifications, TDS-192 denotes Deduction from Govt. Emp Other than Union Government employees. TDS-194C is for contractors, TDS-194A is for interest, and TDS-193 is for securities.
+Q44. Which statutory form must an employer issue as a certificate to an employee for the amount of income tax deducted at source from their salary?
+A. Form 12BB
+B. Form 16
+C. Form 24Q
+D. Form 26Q
+Correct Answer: B
+Explanation:
+•	Under section 192, the DDO has to issue a certificate of the amount of tax so deducted to his employees in Form no. 16.
+Q45. A salaried employee wishing to claim deductions under Chapter VIA or report income/loss from house property must furnish a statement to their employer using which form?
+A. Form 16
+B. Form 12BB
+C. Form 24G
+D. Form 26Q
+Correct Answer: B
+Explanation:
+•	A salaried employee may furnish a statement in Form 12BB duly verified, giving details of his other income, loss under house property, or claims of deductions under Chapter VIA, to his employer.
+Q46. Which of the following is strictly exempt from Tax Deduction at Source (TDS) according to the FHB Volume-II rules?
+A. Any arrears of salary paid in the previous year
+B. Disability Pension to ex-servicemen
+C. Income Tax on rent under Section 194 I
+D. Brokerage and Commission under Section 194H
+Correct Answer: B
+Explanation:
+•	The rules explicitly state that no TDS is to be deducted on disability Pension to ex-servicemen. Arrears of salary are taxable in the year of payment if not taxed earlier.
+Q47. If the value of service or goods supplied exceeds Rs. 2.5 Lakhs, what is the prescribed rate of TDS on GST that must be deducted?
+A. 1% (0.5% CGST & 0.5% SGST)
+B. 2% (1% CGST & 1% SGST)
+C. 5% (2.5% CGST & 2.5% SGST)
+D. 18% overall
+Correct Answer: B
+Explanation:
+•	TDS on GST is 2% (1% TDS on CGST & 1% on SGST) where the value of service or Goods exceeds Rs. 2.5 Lakhs.
+Q48. A taxpayer fails to file their monthly GST returns on time. According to the rules, what is the total fine amount per day and the maximum limit of this fine?
+A. Rs. 100 per day; Maximum Rs. 5,000
+B. Rs. 200 per day; Maximum Rs. 5,000
+C. Rs. 200 per day; Maximum Rs. 10,000
+D. Rs. 500 per day; Maximum Rs. 5,000
+Correct Answer: B
+Explanation:
+•	The late fee is Rs. 100 for each day for each CGST and SGST, thus the total fine amount will be Rs. 200 per day.
+•	The maximum amount of fine that can be levied is Rs. 5,000.
+Q49. Consider the following statements regarding Goods and Services Tax (GST) rules for Post Offices:
+1.	GST is a destination-based tax where revenue accrues to the place where goods/services are consumed.
+2.	Under B2C (Business to Consumer) supply, the Input Tax Credit is allowed to the final consumer.
+3.	Every registered taxable person must maintain accounts books and records for at least 72 months.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation:
+•	GST is a destination-based/consumption-based tax.
+•	For B2C supply, the Recipient is the final consumer and no credit is allowed to the final consumer. Statement 2 is false.
+•	Accounts books and records must be maintained for at least 72 months.
+Q50. When discharging tax liability under GST, which ledger specifically displays the total amount deposited by the taxpayer towards tax liability, interest, late fee, or penalty?
+A. Electronic Liability Ledger
+B. Electronic Input Ledger
+C. Electronic Cash Ledger
+D. Electronic TDS Ledger
+Correct Answer: C
+Explanation:
+•	The Electronic Cash Ledger displays the total amount deposited by the taxpayer towards the discharge of his tax liability, interest, late fee, penalty, or any other amounts. The Electronic Liability Ledger shows the total tax liability at any point.
+Q51. What percentage of reduction is applied when sanctioning the refund of the face value of unused but spoilt postal stationery?
+A. 5%
+B. 6.25%
+C. 10%
+D. 20%
+Correct Answer: D
+Explanation:
+•	Refunds for unused but spoilt Postal stationery are subject to a reduction of 20%. (Note: Spoilt postage stamps have a 6.25% reduction).
+Q52. Which authority is competent to sanction the refund of postage on account of impressions of a franking machine made in error?
+A. The Head Postmaster
+B. The Senior Superintendent of Post Offices (SSP)
+C. The Postmaster General (PMG)
+D. The Postal Accounts Office
+Correct Answer: B
+Explanation:
+•	The refund of postage on account of impressions of the franking machine made in error (after a deduction of 5% face value) is sanctioned by the SSP.
+Q53. Under Rule 105, what is the deduction rate applied to the face value when refunding unused but spoilt ordinary and service postage stamps?
+A. 5%
+B. 6.25%
+C. 10%
+D. 20%
+Correct Answer: B
+Explanation:
+•	The refund of the face value of unused but spoilt postage stamps, both ordinary and service, is subject to a reduction of 6.25%.
+Q54. In which of the following scenarios is a claim for the refund of postage stamps strictly NOT considered?
+A. For impressions made in error by a franking machine.
+B. For the value of postage stamps found loose in letter boxes.
+C. For any complete sheets of stamps.
+D. For unused but spoilt ordinary postage stamps.
+Correct Answer: C
+Explanation:
+•	The rules explicitly state: "No claim to refund is considered in respect of any complete sheets of stamps". Furthermore, refunds shall not be granted for unused and serviceable postage stamps.
+Q55. In cases where both halves of a Pension Payment Order (PPO) are reported lost in transit due to floods before commencing payment, what specific action must the Director of Accounts take regarding the newly issued PPO?
+A. It must be marked "Provisional" in blue ink.
+B. It must be prominently marked as "Duplicate - No payment to be made against original PPO".
+C. It must be stamped with a 5% deduction caveat.
+D. It must be re-routed through the District Magistrate.
+Correct Answer: B
+Explanation:
+•	If both halves are reported lost in transit due to floods etc., the Directors / Dy. Director of Accounts (Postal)/GM (PAF) will issue a duplicate PPO which would be prominently marked as "-Duplicate No payment to be made against original PPO".
+Q56. What is the stipulated timeframe for the restoration of the commuted value of a Pension authorized by Head Postmasters?
+A. After 10 years from the date of retirement
+B. After 12 years from the date of payment
+C. After 15 years from the date of payment
+D. After 20 years from the date of payment
+Correct Answer: C
+Explanation:
+•	Restoration of the commuted value of Pension will be authorized by Head Postmasters after 15 years from the date of payment.
+Q57. While service pensions are disbursed by Head Post Offices, who is responsible for drawing a Provisional Pension or Provisional Gratuity?
+A. The Postal Accounts Office solely.
+B. The Head of Office where the Government servant served immediately prior to retirement.
+C. The General Post Office (GPO) of the respective Circle.
+D. The Chief Postmaster General (CPMG).
+Correct Answer: B
+Explanation:
+•	Provisional Pension, provisional Family pension, and provisional Gratuity shall be drawn by the head of office where the Government servant served immediately prior to his retirement.
+Q58. Consider the following statements about the Postmaster's duties regarding Pension Payment Orders (PPO):
+1.	The Postmaster's half of the PPO is kept in separate files for each class of pension, prominently marked in red ink.
+2.	The pensioner's half of the PPO is made over under receipt to the pensioner when they appear to receive their pension for the first time.
+3.	If a PPO is completely filled up, the Head Postmaster must send it to the Postal Accounts Office for renewal and cannot renew it locally.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: A
+Explanation:
+•	Postmaster's half is kept in separate files prominently marking in red ink.
+•	Pensioner's half is made over, under receipt, after proper identification upon first payment.
+•	Statement 3 is incorrect because Head Postmasters are authorized to renew PPOs without reference to the Postal Accounts Office in cases where it is completely filled up, torn, or lost.
+Q59. A pensioner who is exempted from personal appearance may draw their pension through a representative. Which of the following authorities is NOT explicitly authorized to sign the required life certificate under Rule 135?
+A. A Block Development Officer
+B. A Sub-Inspector-in-charge of a police station
+C. A notary public licensed by the State Government
+D. A Registrar appointed under the Indian Registration Act
+Correct Answer: C
+Explanation:
+•	Rule 135 provides a specific list of persons authorized to sign life certificates: Magistrate, Registrar, Group A/B Govt servant, Sub-Inspector in charge of a police station, Postmaster/SPM/Inspector, pensioned officer with magisterial powers, BDO/Munsif/Tahsildar, and Head of Village Panchayat. A Notary public is not listed.
+Q60. When must the pension payment for the month of March be disbursed to pensioners?
+A. On the last working day of March
+B. On the first working day of April
+C. On the 15th of April
+D. On the 31st of March
+Correct Answer: B
+Explanation:
+•	Pensions fixed at monthly rates are payable monthly on or after the last working day of the month, except the pension payment for the month of March, which shall be paid on the first working day of April.
+Q61. Under which specific section of the Indian Income Tax Act, 1961 is the death-cum-retirement gratuity paid under the CCS (Pension) Rules exempted from income-tax?
+A. Section 10(10)
+B. Section 10(14)
+C. Section 80C
+D. Section 192
+Correct Answer: A
+Explanation:
+•	Under Section 10(10) of the Indian IT Act, 1961, the death-cum-retirement gratuity paid under the CCS (Pension) Rules 2021 has been exempted from income-tax.
+Q62. If the payment of a pensioner's gratuity is delayed due to an administrative lapse, after what period of time does the pensioner become entitled to receive interest on the delayed payment?
+A. Beyond 1 month from the date it became due
+B. Beyond 3 months from the date it became due
+C. Beyond 6 months from the date it became due
+D. Beyond 1 year from the date it became due
+Correct Answer: B
+Explanation:
+•	In case of delay in payment of gratuities beyond 3 months of the date they become due on account of administrative lapse, interest shall be paid to the Pensioner.
+Q63. If a service pension remains undrawn for a period exceeding three years, whose authority is required before the arrears can be paid?
+A. The Head Postmaster of the concerned HO
+B. The Chief Postmaster General (CPMG)
+C. The Postal Accounts Office (PAO) or CCA
+D. The Director General of Posts
+Correct Answer: C
+Explanation:
+•	If a service pension remains undrawn for three years, it cannot be paid without the authority of the PAO or CCA concerned. (Note: Undrawn for more than 1 year but less than 3 requires previous sanction through the Head of Postal Accounts office).
+Q64. In the event of a pensioner's death, if the gross amount of arrears of pension claimed by the heirs is Rs. 1,50,000, what is the required procedural authority/document for the payment to be made?
+A. The Accounting Authority may authorize payment on his own authority without any bond.
+B. Payment is authorized under the orders of the Head of the Department upon production of an Indemnity Bond in form TR-14.
+C. Payment can only be made to persons producing a strict legal succession certificate.
+D. The Head Postmaster can disburse it based on an Aadhaar-verified affidavit.
+Correct Answer: B
+Explanation:
+•	If the gross amount of arrears does not exceed Rs. 50,000, the accounting authority can authorize payment on his own authority.
+•	If the amount exceeds Rs. 50,000 but does not exceed Rs. 2,50,000, payment is under orders of the Head of the Department upon production of an Indemnity Bond in form TR-14 duly stamped. (Over Rs. 2,50,000 requires legal authority). Rs. 1,50,000 falls in the TR-14 bond category.
+Q65. A transfer of payment of pension from one Post Office to another within the jurisdiction of the same Postal Accounts Office is authorized by the Head Postmaster. If the transfer is to a Post Office within the jurisdiction of another Postal Accounts Office, what action must the transferring Head Postmaster take?
+A. Forward the PPO directly to the destination Head Post Office via insured mail.
+B. Return both halves of the Pension Payment Order to the Director of Accounts Postal who issued the original order.
+C. Cancel the PPO and instruct the pensioner to apply afresh in the new Circle.
+D. Authorize the transfer locally and send an intimation to both Postal Accounts Offices.
+Correct Answer: B
+Explanation:
+•	For transfers within the same PAO jurisdiction, the Head Postmaster authorizes it.
+•	In case of transfer of payment of pensions from one Post Office to another within the jurisdiction of another Postal Accounts Office, the Postmaster of the Head Office from which payment is transferred should return both halves of the PPO to the Director of Accounts Postal who issued the original order.
+Q66. Under which Major Head of Account do Non-Cheque Drawing and Disbursing (NCDDO) units, such as Postal Training Centers and Circle Offices, show the remittances they obtain through the application workflow?
+A. Major Head 0021
+B. Major Head 1201
+C. Major Head 3201
+D. Major Head 8782 RSAO
+Correct Answer: D
+Explanation:
+•	NCDDO units obtain funds (cash & cheque) through workflow in the application and show such remittances under the major Head 8782 RSAO.
+Q67. In the context of Railway Mail Service Vans, how many berths is an "S.H- Half Van" configured to accommodate?
+A. 18 berths
+B. 36 berths
+C. 54 berths
+D. 72 berths
+Correct Answer: B
+Explanation:
+•	An "S.H- Half Van" (utilizing more than 1/4 up to 1/2 of the coach) accommodates 36 berths.
+Q68. According to the haulage charges for the period 2023-24, what is the prescribed payment rate per berth per kilometer for a distance slab of 0-500 kms?
+A. Rs. 0.61
+B. Rs. 0.73
+C. Rs. 1.15
+D. Rs. 1.25
+Correct Answer: C
+Explanation:
+•	For the distance slab of 0-500 kms, the charge is Rs. 1.15 per berth per km.
+Q69. Match the correct Form Number with its designated description regarding Post Office accounting:
+A. Form ACG-4 is the e-Treasurer Cash book
+B. Form ACG-2 is the Head office classified Cash Book
+C. Form ACG-45 is the Unpaid postal abstract Register
+D. Form ACG-33 is the Register of cheques received and cleared
+Correct Answer: C
+Explanation:
+•	Form ACG-45 is the Unpaid postal abstract Register. Form ACG-2 is the e-Treasurer Cash book. Form ACG-4 is the Head office classified Cash Book. Form ACG-33 is the Cash Abstract at RMS offices.
+Q70. Consider the following statements regarding the payment of haulage charges to the Railways:
+1.	The Capital cost of the Railway Mail Service Vans is maintained in a register in Form ACG-69.
+2.	The billing for haulage charges is done on a monthly basis.
+3.	The bills must be cleared by the 10th of the following month to which they pertain.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: D
+Explanation:
+•	The Capital cost of the Railway Mail Service Vans is maintained in the register of Railway Vans in Form A.C.G.-69.
+•	The billing is done on a monthly basis.
+•	The bills are submitted by the 10th of the following month to which the bills pertain.

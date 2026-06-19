@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Users, FileText, Settings, Shield, Plus, Database, UserPlus, FileSignature, LayoutDashboard, MessageSquare, Repeat } from "lucide-react";
+import { ArrowLeft, Users, FileText, Settings, Shield, Plus, Database, UserPlus, FileSignature, LayoutDashboard, MessageSquare, Repeat, Mail } from "lucide-react";
 
 export default function DeveloperPage() {
     return (
@@ -142,6 +142,23 @@ export default function DeveloperPage() {
                         <div className="flex flex-col gap-2">
                             <Link href="/developer/mock-feedback" className="w-full py-2 px-4 rounded-lg bg-amber-50 dark:bg-amber-900/10 text-amber-600 dark:text-amber-400 font-medium hover:bg-amber-100 dark:hover:bg-amber-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
                                 <MessageSquare className="w-4 h-4" /> View Feedback
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Email Composer */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
+                        <div className="flex items-start justify-between mb-4">
+                            <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <Mail className="w-6 h-6" />
+                            </div>
+                            <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-blue-100 dark:bg-zinc-800 text-blue-700 dark:text-blue-400 rounded-md">Email</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Email Composer</h3>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">Compose and send emails to all users as admin@dakguru.com.</p>
+                        <div className="flex flex-col gap-2">
+                            <Link href="/developer/email" className="w-full py-2 px-4 rounded-lg bg-blue-50 dark:bg-blue-900/10 text-blue-600 dark:text-blue-400 font-medium hover:bg-blue-100 dark:hover:bg-blue-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
+                                <Mail className="w-4 h-4" /> Compose Email
                             </Link>
                         </div>
                     </div>
