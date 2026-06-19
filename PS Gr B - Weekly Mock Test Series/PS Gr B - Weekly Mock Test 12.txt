@@ -1,0 +1,968 @@
+================================================================================
+DAK GURU — PS GROUP B MOCK TEST SERIES
+Paper III (Accounts & Rules) Pattern | Mock Test 12 (Revised Edition v2)
+100 Questions | Subjects: FHB Vol-I & II, IPPB, Records Preservation, Swachh Bharat
+================================================================================
+
+NOTES ON THIS REVISED EDITION
+- Answer key rebalanced to near-even distribution (A/B/C/D each ~25).
+- Where applicable, explanations carry an effective/currency date or a
+  verification flag for revision-prone figures.
+- Ten former pure-recall items have been converted into application/case-let
+  questions requiring computation or multi-rule synthesis.
+- Negative-framed ("which is NOT correct") items increased for rank discrimination.
+- Distractors tightened to plausible near-misses rather than obviously-wrong values.
+
+
+================================================================================
+SECTION A — FINANCIAL HAND BOOK VOLUME I (Q1–Q20)
+================================================================================
+
+Q1. Which of the following statements regarding the definition of 'cash' under Rule 100 of FHB Vol-I is/are correct?
+
+1. It includes legal-tender coins, currency notes, and cheques payable on demand.
+2. It includes Government Securities and Bank deposit receipts accepted as security deposit.
+3. It excludes postage stamps, stationery, and reply coupons.
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Under Rule 100, FHB Vol-I, 'cash' includes legal tender and demand cheques and explicitly EXCLUDES Government Securities, Bank deposit receipts, and stamps (treated as inventory). Statements 1 and 3 are correct; statement 2 is wrong because securities/deposit receipts are specifically outside the definition.
+
+Q2. According to Rules 24 and 27 of FHB Vol-I, what is the time-bar limit for preferring a general arrear claim without requiring authority from the Circle Accounts Officer?
+A. 6 months
+B. 1 year
+C. 3 years
+D. 2 years
+Answer: D
+Explanation: Under Rules 24 and 27, FHB Vol-I, a general arrear claim not preferred within 2 years of becoming due requires the authority of the Circle Accounts Officer for investigation before payment.
+
+Q3. A Government servant in receipt of pay dies in harness. The Head of Office proposes to make an anticipatory payment of the dues to the legal heirs WITHOUT obtaining the usual legal authority (succession certificate). The gross claim works out to Rs. 6,40,000. Under Rule 189 of FHB Vol-I, which course of action is correct?
+A. The Head of Office may pay the full Rs. 6,40,000 on a simple receipt.
+B. The Head of Office may pay up to Rs. 5,00,000 on a receipt; the balance requires a duly stamped Indemnity Bond in Form T.R. 14 with sureties.
+C. The entire amount requires a stamped Indemnity Bond in Form T.R. 14, since the gross claim exceeds Rs. 5,00,000.
+D. No payment is permissible without a succession certificate, regardless of amount.
+Answer: C
+Explanation: Under Rule 189, FHB Vol-I, anticipatory payment WITHOUT legal authority is permitted up to Rs. 5,00,000. Where the GROSS claim exceeds Rs. 5,00,000, the payment of the whole amount is regulated by obtaining a duly stamped Indemnity Bond in Form T.R. 14 with sureties — the limit is not a "first slice free" device but a threshold that pulls the entire claim into the indemnity-bond procedure. Hence C, not B.
+
+Q4. Under Rule 48 of FHB Vol-I, a receipt acknowledging a sum is required to be stamped under the Indian Stamp Act, 1899 only if the sum EXCEEDS a prescribed amount. Identify that amount.
+A. Rs. 500
+B. Rs. 5,000
+C. Rs. 1,000
+D. Rs. 10,000
+Answer: B
+Explanation: Rule 48, FHB Vol-I requires receipts for sums exceeding Rs. 5,000 to bear a one-rupee revenue stamp under the Indian Stamp Act, 1899 (Article 53, Schedule I). The Rs. 5,000 threshold is the statutory line under the Stamp Act.
+
+Q5. Which of the following statements regarding the correction of errors in a Cash Book (Rule 115) is/are NOT correct?
+
+1. Erasures and overwriting are permitted if attested by the Disbursing Officer.
+2. Pre-closure corrections are made by striking out the wrong entry and inserting the correct one in red ink.
+3. Post-closure corrections require the sanction of the authority to whom accounts are submitted.
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Under Rules 115 and 63, FHB Vol-I, erasures and overwriting in the Cash Book are ABSOLUTELY FORBIDDEN — no attestation can validate them; corrections are by neat cancellation in red ink with attestation. So statement 1 is the only incorrect one; statements 2 and 3 correctly state the procedure.
+
+Q6. A temporary misappropriation of Rs. 1,85,000 is detected in a sub office. The Divisional Head wishes to entrust the fact-finding investigation to an Inspector of Posts. Up to what principal amount is an IP/ASP authorised to investigate loss/fraud cases, and does this case qualify?
+A. Up to Rs. 1 Lakh — case does NOT qualify
+B. Up to Rs. 5 Lakhs — case qualifies
+C. Up to Rs. 10 Lakhs — case qualifies
+D. Up to Rs. 2 Lakhs — case qualifies
+Answer: D
+Explanation: As per the consolidated DoP guidelines (OM dated 23.09.2021), IPs/ASPs may investigate loss or fraud (including temporary misappropriation) up to a principal amount of Rs. 2 Lakhs. Rs. 1,85,000 is below the ceiling, so the case qualifies for IP/ASP investigation.
+
+Q7. Consider the following statements about TDS under Section 194-C for payments to contractors (FY 2025-26):
+
+1. The rate is 1% for Individual/HUF and 2% for any other person.
+2. TDS is attracted if a single payment exceeds Rs. 30,000 OR the aggregate in a financial year exceeds Rs. 1,00,000.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 194-C mandates 1% TDS for Individuals/HUFs and 2% for others, triggered when a single payment exceeds Rs. 30,000 OR the aggregate to one contractor exceeds Rs. 1,00,000 in the FY. Both thresholds are current for FY 2025-26 (AY 2026-27).
+
+Q8. The Department of Posts records its Capital Outlay on Postal Services OUTSIDE the Revenue Account. Three of the four heads below are revenue or other heads; identify the correct CAPITAL major head.
+A. 3201 (Postal Services — Revenue)
+B. 7201 (Loans for Postal Services)
+C. 5201 (Capital Outlay on Postal Services)
+D. 8553 (Postal Deposits)
+Answer: C
+Explanation: As a commercial department, DoP records plant and equipment under Major Head 5201 — Capital Outlay on Postal Services — and pays notional interest on this capital. Note the near-miss distractors: 3201 is the revenue head, 7201 is the loan head, 8553 is a deposit head.
+
+Q9. A cheque is drawn by a cheque-drawing DDO and dated 14 January 2026. Under Rule 156 of FHB Vol-I, up to which date is it payable, and on what principle?
+A. Up to 13 April 2026 — three months from the exact date of issue
+B. Up to 30 April 2026 — three months after the month of issue
+C. Up to 14 July 2026 — six months after the month of issue
+D. Up to 14 February 2026 — one month from the date of issue
+Answer: B
+Explanation: Rule 156 (mirroring the Central Government Account (Receipts and Payments) Rules) provides that a Government cheque is payable within three months AFTER the month of issue. A cheque dated any day in January is therefore valid up to 30 April. The "after the month of issue" rule differs from the ordinary RBI 3-months-from-date rule. Rules, Rule on currency of cheques; FHB Vol-V Sec. V.)
+
+Q10. A Government servant's monthly emoluments, after deducting exempt allowances, come to Rs. 42,000. A Civil Court attaches the salary under a decree OTHER than maintenance (Rule 175, based on CPC Section 60). Compute the maximum amount attachable in a month.
+A. Rs. 13,667
+B. Rs. 14,000
+C. Rs. 41,000
+D. Rs. 21,000
+Answer: A
+Explanation: Under CPC Section 60(1)(i)/Rule 175, for a non-maintenance decree the first Rs. 1,000 plus two-thirds of the remainder is EXEMPT; only one-third of the remainder is attachable. Remainder = 42,000 − 1,000 = 41,000; attachable = 41,000 ÷ 3 = Rs. 13,666.67 ≈ Rs. 13,667. The near-miss distractors: Rs. 14,000 wrongly takes one-third of the whole emoluments; Rs. 41,000 treats almost the entire salary as attachable; Rs. 21,000 wrongly attaches one-half of the remainder.(i).)
+
+Q11. Under Rule 52 of FHB Vol-I, petty losses of Government property need NOT be reported to the Audit/Accounting Authority if each loss does not exceed a prescribed ceiling. Identify the ceiling.
+A. Rs. 10,000
+B. Rs. 2,000
+C. Rs. 5,000
+D. Rs. 50,000
+Answer: A
+Explanation: Rule 52, FHB Vol-I exempts petty cases: losses not exceeding Rs. 10,000 each need not be reported to the Audit or Accounting Authority.
+
+Q12. Consider the following statements regarding the Personal Computer Advance (GAR-27):
+
+1. The maximum limit is Rs. 50,000 or the actual price, whichever is lower.
+2. It can be drawn a maximum of five times in an entire service career.
+3. The minimum gap between two advances is 3 years.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The PC advance rules stipulate a maximum of Rs. 50,000 (or actual price, whichever is lower), a career limit of five occasions, and a minimum gap of 3 years between successive advances. All three are correct.
+
+Q13. A Government servant's claim for Travelling Allowance becomes due on 1 March 2026 but is not preferred. Under Rule 25, the right to TA is forfeited if the claim is not preferred within a fixed period. By which date must the claim be submitted to avoid forfeiture?
+A. By 31 March 2026 (30 days)
+B. By 30 April 2026 (60 days)
+C. By 30 May 2026 (90 days)
+D. By 28 August 2026 (180 days)
+Answer: B
+Explanation: Under Rule 25, the right to Travelling Allowance (including DA on tour) is forfeited if the claim is not preferred within 60 days of becoming due. 1 March + 60 days ≈ 30 April 2026.
+
+Q14. In the three-part structure of the Audit Inspection Report (Rule 95), which part contains the important irregularities (recoveries, breaches of principle, losses) that are likely to mature into draft paras for the Audit Report?
+A. Part-I
+B. Part-II Section-A
+C. Part-II Section-B
+D. Part-III
+Answer: B
+Explanation: Under Rule 95, Part-II Section-A carries the important irregularities likely to become draft paragraphs for the Audit Report; Part-I covers outstanding paras of earlier reports, Part-II Section-B carries minor irregularities, and Part-III is the test-audit/schedule of persistent irregularities.
+
+Q15. Which of the following statements regarding the verification of the Service Book is/are NOT correct?
+
+1. All service must be verified after 18 years of appointment or 5 years before retirement, whichever is earlier.
+2. The descriptive particulars on the first page must be re-attested every 10 years.
+3. The Head of Office must inspect and initial at least 10% of the total Service Books annually.
+A. 1 only
+B. 2 only
+C. 1 and 3 only
+D. 2 and 3 only
+Answer: B
+Explanation: Statement 2 is the incorrect one: Rule 210 requires the descriptive particulars on the first page to be re-attested every 5 YEARS, not 10. Statements 1 and 3 correctly state the verification regime.
+
+Q16. An official can state only his approximate age (in completed years) at the time of appointment. Under Rule 208, how is his date of birth fixed?
+A. 1st July of the derived year
+B. 16th of the month of appointment
+C. 31st December of the derived year
+D. The corresponding date arrived at by deducting his age in years from the date of appointment
+Answer: D
+Explanation: Under Rule 208, FHB Vol-I, where only approximate age is known, the DOB is fixed by deducting the stated age (in years) from the date of appointment. The "1st July" convention applies to a different situation (year of birth known but not the date).
+
+Q17. Consider the following statements regarding the attachment of a Government servant's pay for court decrees under Rules 174 and 175 of FHB Vol-I:
+
+1. For a maintenance decree, after removing fully exempt allowances, the first Rs. 1,000 is exempted before calculating the attachable one-third.
+2. Allowances such as House Rent Allowance (HRA) and Dearness Allowance (DA) are fully exempt from attachment for both maintenance and non-maintenance decrees.
+3. For non-maintenance decrees, the maximum attachable amount is calculated by subtracting exempt allowances, then subtracting Rs. 1,000, and taking one-third of the remainder.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 is incorrect because the Rs. 1,000 "first-slab" exemption does not apply to maintenance decrees; only the flat one-third exemption of Basic Pay operates. Statements 2 and 3 correctly describe the exemptions and the specific formula for non-maintenance decrees.
+
+
+Q18. A general sanction for expenditure (not involving budget provision or GPF) is accorded but not acted upon. Under Rule 324, after what period does it lapse?
+A. 3 months
+B. 6 months
+C. 2 years
+D. 1 year
+Answer: D
+Explanation: Rule 324, FHB Vol-I: a general sanction not acted upon for ONE YEAR lapses. Contrast the near-miss alternatives: GPF-advance sanctions lapse in 3 months and budget-linked sanctions lapse at the close of the financial year — but the GENERAL sanction here lapses in one year.
+
+Q19. A 30-year-old resident gets her biometrics updated at a Post Office Aadhaar centre. Under the UIDAI rates effective 1 October 2025, what is the charge, and how does it compare with a demographic update?
+A. Free; demographic update Rs. 50
+B. Rs. 75; demographic update Rs. 50
+C. Rs. 125; demographic update Rs. 75
+D. Rs. 150; demographic update Rs. 90
+Answer: C
+Explanation: Under the UIDAI Office Memorandum dated 19.09.2025 (effective 01.10.2025 to 30.09.2028), an adult biometric update is Rs. 125 and a demographic update is Rs. 75; new enrolment remains free. The Rs. 150/Rs. 90 option is the NEXT cycle's rate, scheduled from 01.10.2028.
+
+Q20. Consider the following statements about the "Rounding Off" rules (Rule 47):
+
+1. Fractions of 50 paise and above are rounded up to the next rupee.
+2. For TA bills, rounding off is done on each individual item before totalling.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Statement 1 is correct. Statement 2 is a trap: under Rule 47, for TA bills rounding is done only at the LAST stage (the final figure), never item-by-item, to avoid cumulative rounding gain.
+
+================================================================================
+SECTION B — FHB VOLUME II, RMS, PSD, BNPL & GST (Q21–Q40)
+================================================================================
+
+Q21. According to Rule 2 of FHB Vol-II, who is designated as the Head of the Department for the Department of Posts?
+A. The Secretary, Department of Posts
+B. The Director-General, Department of Posts
+C. The Chief Postmaster General
+D. The Member (Finance), Postal Services Board
+Answer: B
+Explanation: Rule 2(10), FHB Vol-II: the President has declared the Director-General, Department of Posts, to be the Head of the Department under SR 2(10)..)
+
+Q22. In the 15-digit Head of Account classification of the Department of Posts, the segments are Major, Sub-Major, Minor, Sub-Head, Detailed Head, and Object Head. How many digits represent the MINOR head?
+A. 3 digits
+B. 2 digits
+C. 4 digits
+D. 6 digits
+Answer: A
+Explanation: In the 15-digit structure (Major 4 + Sub-Major 2 + Minor 3 + Sub-Head 2 + Detailed 2 + Object 2), the Minor head is 3 digits.
+
+Q23. Which authority is responsible for the scrutiny, review, monitoring, and reconciliation of e-accounts rendered by DDOs/NCDDOs?
+A. Head of Postal Accounts Office
+B. Circle Office
+C. General Post Office
+D. Postal Directorate
+Answer: A
+Explanation: Rule 2(3), FHB Vol-II defines the Head of Postal Accounts Office — subordinate to the Head of Circle — as responsible for scrutiny, monitoring, and reconciliation of e-accounts submitted by DDOs/NCDDOs..)
+
+Q24. Consider the following statements regarding the Head Office Classified Cash Book (ACG-4):
+
+1. It records transactions of the head office including its subordinate offices.
+2. Its balance is shown in the Postmaster's Balance Sheet.
+3. It reflects ONLY offline transactions of the GPO.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Rule 46, FHB Vol-II: ACG-4 records head office and subordinate office transactions and its balance composes the Postmaster's Balance Sheet. Statement 3 is wrong — it captures both offline and incorporated online transactions.
+
+Q25. The Head Office classified Cash Account for the previous month must reach the Postal Accounts Office by a fixed date each month. Identify it.
+A. 1st of each month
+B. 10th of each month
+C. 15th of each month
+D. 5th of each month
+Answer: D
+Explanation: Rule 49, FHB Vol-II: the Head Office classified Cash Account for the previous month is submitted by the 5th of each month to the Postal Accounts Office.
+
+Q26. Under Rule 25 of FHB Vol-II, in an office where multiple treasurers exist, which of the following is NOT inherently a joint custodian of the physical cash in the reserve safe?
+A. The Postmaster
+B. The Treasurer
+C. The Assistant Postmaster (Accounts)
+D. The official holding the second key as joint custodian with the Treasurer
+Answer: C
+Explanation: Rule 25(a), FHB Vol-II: the treasurer is jointly responsible with the postmaster for safe custody of cash in the reserve safe. The APM (Accounts) is not, by virtue of office, the joint custodian of the physical cash safe..)
+
+Q27. A Railway Mail Service Van travels 800 km, falling in the 501–1000 km distance slab. Under Rule 171 (rates for 2023-24), the haulage charge is levied per berth per km, subject to a per-km-per-berth minimum. Identify the per-berth-per-km rate for this slab.
+A. Rs. 0.73 per berth per km
+B. Rs. 1.15 per berth per km
+C. Rs. 0.61 per berth per km
+D. Rs. 1.50 per berth per km
+Answer: A
+Explanation: For the 501–1000 km slab, the haulage charge is Rs. 0.73 per berth per km (subject to a minimum) as per Rule 171 for 2023-24. NOTE: RMS haulage rates are revised periodically; confirm the rate for the current year against the live order before publishing.
+
+Q28. In Railway Mail Service Vans, a "Half Van" (S.H.) accommodates how many berths?
+A. 72 berths
+B. 36 berths
+C. 54 berths
+D. 18 berths
+Answer: B
+Explanation: Per the RMS Vans accommodation table, an S.H. (Half Van) accommodates 36 berths, occupying more than 1/4 and up to 1/2 of the coach.
+
+Q29. Consider the following statements regarding the supply of stamps from a Postal Stores Depot (PSD) under Rule 6:
+
+1. The Postmaster must verify the received articles and return one copy of the invoice to the PSD within 7 days.
+2. The face value of articles received must be entered in the Stock register.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Statement 1 is wrong — the invoice copy must be returned within 3 days of receipt of supply, not 7. Statement 2 is correct: face value of articles received is entered in the Stock register.
+
+Q30. A firm wishes to avail the Book Now Pay Later (BNPL) facility. Under Rule 22, it qualifies as a "bulk customer" only if its speed post / business post business at a booking office is at least a prescribed monthly value. Identify it.
+A. Rs. 5,000 per month
+B. Rs. 50,000 per month
+C. Rs. 10,000 per month
+D. Rs. 1,00,000 per month
+Answer: C
+Explanation: Rule 22, FHB Vol-II defines a BNPL bulk customer as one providing at least Rs. 10,000 worth of speed post, business post, or a combination in a calendar month at a booking office.
+
+Q31. A BNPL bulk customer fails to pay the bill by the due date. Under Rule 22, what penal interest is imposed and from which date?
+A. 10% per annum from the due date
+B. 12% per annum from the bill date
+C. 15% per annum from the bill date
+D. 18% per annum from the due date
+Answer: B
+Explanation: Rule 22, FHB Vol-II: on default, a penalty at 12% per annum on the bill amount is charged from the BILL date (not merely the due date).
+
+Q32. Under the GST provisions referenced in FHB Vol-II, what is the late fee for not filing a GST return on time?
+A. Rs. 100 per day each for CGST and SGST (total Rs. 200/day, max Rs. 5,000)
+B. Rs. 50 per day (max Rs. 2,500)
+C. Rs. 500 per day (max Rs. 10,000)
+D. 1% of the tax due per day
+Answer: A
+Explanation: Rule 103 (as referenced): the late fee is Rs. 100 each under CGST and SGST (total Rs. 200 per day), capped at Rs. 5,000, with interest at 18% p.a. on the tax also payable. NOTE: CGST late-fee structures have been amended several times by notification; confirm the current cap before use.
+
+Q33. Which of the following is NOT categorised as a "Non-Cheque Drawing and Disbursing Officer" (NCDDO)?
+A. Regional Office (RO)
+B. Head Post Office (HPO)
+C. Postal Training Centre (PTC)
+D. Head Record Office (HRO) in RMS
+Answer: B
+Explanation: Rules 2(2) and 168, FHB Vol-II list NCDDOs (no cheque-drawing power) such as RO, CO, PLI Dte, HRO, PTC. A Head Post Office is a primary DDO and generally possesses drawing powers, so it is NOT an NCDDO. & 168.)
+
+Q34. Consider the following statements regarding the payment of arrears of pension of a deceased pensioner (Rule 154):
+
+1. Pension can be drawn for the full day of the pensioner's death, regardless of the hour of death.
+2. If the gross arrears exceed Rs. 50,000 but not Rs. 2,50,000, payment requires an Indemnity Bond (TR-14).
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Rule 154, FHB Vol-II: pension is drawn for the day of death regardless of the hour; and arrears above Rs. 50,000 up to Rs. 2,50,000 require an Indemnity Bond (TR-14) under HoD orders. Both correct.
+
+Q35. A counter clerk returns spoilt but unused postal STATIONERY (e.g., embossed envelopes) for refund, and separately a customer returns spoilt postage STAMPS. Under Rule 105, what reductions apply, respectively?
+A. 6.25% on stationery; 20% on stamps
+B. 20% on stationery; 6.25% on stamps
+C. 10% on both
+D. 5% on stationery; 10% on stamps
+Answer: B
+Explanation: Rule 105, FHB Vol-II: refund of unused but spoilt postal stationery suffers a 20% reduction, whereas spoilt postage stamps suffer a 6.25% reduction. Matching the two rates to the two articles is the discrimination being tested.
+
+Q36. For how long must the schedules of pension payments be preserved by a Head Post Office?
+A. 3 years
+B. 5 years
+C. Permanently
+D. 10 years
+Answer: D
+Explanation: Rule 159, FHB Vol-II: schedules of pension payments made by Head Post Offices are preserved for ten years.
+
+Q37. Which form is used to maintain the Cash Abstract at Head Record and Sub Record Offices of the RMS?
+A. ACG-2
+B. ACG-33
+C. ACG-4
+D. ACG-40
+Answer: B
+Explanation: Rule 61, FHB Vol-II: a Cash Abstract in Form ACG-33 is kept by each Head Record and Sub Record office to record the office's own money transactions.
+
+Q38. Under the GST-TDS provisions (Rule 92, read with the CGST Act), TDS on GST is deducted where the value of a supply under a contract exceeds Rs. 2.5 Lakhs. At what rate?
+A. 1% (0.5% CGST + 0.5% SGST)
+B. 2% (1% CGST + 1% SGST)
+C. 5% (2.5% CGST + 2.5% SGST)
+D. 18% flat
+Answer: B
+Explanation: Under Section 51 of the CGST Act (referenced as Rule 92), a notified deductor must deduct GST-TDS at 2% (1% CGST + 1% SGST, or 2% IGST) where the contract value of taxable supply exceeds Rs. 2,50,000. This is distinct from income-tax TDS under 194-C.
+
+Q39. Consider the following statements about Philately Deposit Accounts (Rule 15):
+
+1. They can be opened at any Branch Post Office.
+2. An amount of Rs. 200 is prescribed as a security deposit for opening the account.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Rule 15, FHB Vol-II: Philately Deposit Accounts are opened at a Philatelic Bureau or a Philatelic counter of an HO — NOT at Branch Post Offices — so statement 1 is wrong. The Rs. 200 security deposit (statement 2) is correct.
+
+Q40. What is the penalty for not submitting the TDS RETURN on GST?
+A. Rs. 50 per day (max Rs. 2,000)
+B. Rs. 200 per day (max Rs. 10,000)
+C. Rs. 100 per day (max Rs. 5,000)
+D. Rs. 500 per day (no maximum)
+Answer: C
+Explanation: Rule 92 (as referenced): the penalty for non-submission of the GST-TDS return is Rs. 100 per day, subject to a maximum of Rs. 5,000.
+
+================================================================================
+SECTION C — INDIA POST PAYMENTS BANK (IPPB) PRODUCTS & SERVICES (Q41–Q60)
+================================================================================
+
+Q41. In which two cities was the India Post Payments Bank (IPPB) initially launched as a pilot project on 30 January 2017?
+A. New Delhi and Mumbai
+B. Patna and Lucknow
+C. Ranchi and Raipur
+D. Bhopal and Jaipur
+Answer: C
+Explanation: IPPB was launched as a pilot on 30 January 2017 in Ranchi (Jharkhand) and Raipur (Chhattisgarh).
+
+Q42. Consider the following statements regarding the IPPB Premium Aarogya Savings Account:
+
+1. It provides unlimited tele/video consultations with General Practitioners.
+2. The annual renewal subscription fee is Rs. 149 + GST.
+3. It waives the initial waiting period and the pre-existing disease (PED) waiting period.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct (unlimited tele/video GP consultations; no PED waiting period — Niva Bupa). Statement 2 is wrong: the one-time account-OPENING charge is Rs. 149 + GST, but the ANNUAL RENEWAL fee is Rs. 99 + GST.
+
+Q43. Under the IPPB Premium Khata (Savings Account), what interest rate applies to end-of-day balances ABOVE Rs. 1 Lakh and up to Rs. 2 Lakh?
+A. 2.25% (quarterly)
+B. 2.00% (quarterly)
+C. 2.50% (quarterly)
+D. 3.00% (quarterly)
+Answer: A
+Explanation: Per the Premium Khata features, interest is 2.00% for balances up to Rs. 1 Lakh and 2.25% (paid quarterly) for balances above Rs. 1 Lakh up to Rs. 2 Lakh.
+
+Q44. A Basic Savings Account holder makes cash withdrawals at access points. Under the IPPB charge schedule, what is the cash-withdrawal charge per month?
+A. Completely free with no limits
+B. Free up to Rs. 25,000 per month; thereafter 0.50% of the value
+C. Flat Rs. 20 per withdrawal
+D. Free up to 4 withdrawals per month; thereafter 0.50% of the value (minimum Rs. 25)
+Answer: D
+Explanation: For a Basic Savings Account, cash withdrawals are free up to 4 per month; beyond the free limit the charge is 0.50% of the transaction value, minimum Rs. 25 per transaction.
+
+Q45. Consider the following statements about the DigiSmart Savings Account:
+
+1. A customer must complete full biometric KYC within 12 months of opening.
+2. The account can be opened by anyone above 10 years of age.
+3. Failure to complete KYC within 12 months results in account closure with a charge of Rs. 150 + GST.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statement 2 is wrong: DigiSmart is for individuals aged 18 and above holding Aadhaar and PAN. Statements 1 and 3 are correct.
+
+Q46. What is the minimum balance required to be maintained in an IPPB Current Account?
+A. Rs. 500
+B. Rs. 1,000
+C. NIL
+D. Rs. 2,000
+Answer: C
+Explanation: IPPB accounts, including the Current Account, carry NO monthly average balance requirement — the minimum balance is NIL.
+
+Q47. An IPPB customer links her Post Office Savings Account (POSA) with her IPPB account. A credit pushes her IPPB end-of-day balance to Rs. 2,15,000. What happens to the excess over Rs. 2,00,000?
+A. The transaction causing the excess is rejected.
+B. The excess Rs. 15,000 is automatically swept into the linked POSA.
+C. The excess is held in a suspense account without interest.
+D. A penalty of Rs. 100 is charged and the balance is capped.
+Answer: B
+Explanation: Under the Sweep-in/Sweep-out facility, when the day-end balance exceeds the Rs. 2 Lakh ceiling, the excess is automatically swept out to the linked POSA (here Rs. 15,000).
+
+Q48. Which of the following is NOT covered under the TATA AIG Group Accident Guard (GAG) Insurance (Option 1 — Sum Assured Rs. 10 Lakhs)?
+A. Accidental Death
+B. Permanent Partial Disability
+C. Evacuation Benefit
+D. Suicide
+Answer: D
+Explanation: Under the GAG policy exclusions, suicide, war, military operations, illegal acts, and bacterial infections are excluded; accidental death, permanent partial disability, and evacuation benefit are covered.
+
+Q49. What fee is charged for issuing a Digital Life Certificate (DLC / Jeevan Pramaan) through IPPB, inclusive of GST?
+A. Rs. 50
+B. Rs. 100
+C. Rs. 150
+D. Rs. 70
+Answer: D
+Explanation: For every successful DLC generation a nominal fee of Rs. 70 (inclusive of GST/cess) is charged, with no additional doorstep charge.
+
+Q50. Consider the following limits on money transfers via the IPPB Mobile Banking App:
+
+1. The per-day maximum limit for NEFT (Outward) is Rs. 5,00,000.
+2. The maximum amount per transaction for IMPS (Outward) is Rs. 2,00,000.
+3. The per-day maximum count for UPI (Outward) is 20.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is wrong: the maximum amount PER TRANSACTION for IMPS is Rs. 50,000; Rs. 2,00,000 is the per-DAY limit.
+
+Q51. What are the Doorstep Banking (DSB) charges when an IPPB customer uses the Child Enrolment Lite Client (CELC) for Aadhaar enrolment of a child?
+A. NIL
+B. Rs. 20 plus GST
+C. Rs. 50 plus GST
+D. Rs. 70 plus GST
+Answer: A
+Explanation: The product-wise DSB schedule provides NO DSB charges for CELC (child Aadhaar enrolment) and DLC.
+
+Q52. For updating a MOBILE NUMBER in Aadhaar through the CELC service via IPPB, what is the charge to the customer?
+A. Rs. 50 (inclusive of GST)
+B. Free
+C. Rs. 25
+D. Rs. 75
+Answer: A
+Explanation: Under CELC services, mobile-number updation in Aadhaar costs Rs. 50 inclusive of GST, whereas child enrolment itself is free.
+
+Q53. A customer wishes to deposit cash into his IPPB account through the Branch Post Office channel. What is the maximum cash deposit per customer per day at a Branch Post Office?
+A. Rs. 10,000
+B. Rs. 50,000
+C. Rs. 2,00,000
+D. Rs. 25,000
+Answer: D
+Explanation: At a Branch Post Office (and via GDS at doorstep), the cash deposit/withdrawal limit is Rs. 25,000 per customer per day; Head and Sub Post Offices have a Rs. 2,00,000 limit.
+
+Q54. Consider the following statements regarding SMS Banking provided by IPPB:
+
+1. A customer registers by sending "REGISTER" to 9910228664 from the registered mobile number.
+2. To freeze an account, the customer SMSes "FREEZE<12-digit IPPB a/c number>".
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Both are correct: registration is by SMS "REGISTER" to 9910228664 (or 7669034700); account freeze is by "FREEZE<12-digit account number>".
+
+Q55. What is the charge for an NEFT (Outward) transaction of amount above Rs. 10,000 and up to Rs. 1 Lakh executed at an IPPB access point?
+A. Rs. 4.75
+B. Rs. 2.25
+C. Rs. 14.75
+D. Rs. 24.75
+Answer: A
+Explanation: Per the remittances schedule, NEFT from Rs. 10,001 to Rs. 1 Lakh at an access point/doorstep is charged Rs. 4.75.
+
+Q56. What incentive is provided to an End User (L0) for opening a Premium Account with Aadhaar seeding and a Virtual Debit Card (VDC)?
+A. Rs. 26.00
+B. Rs. 33.90
+C. Rs. 52.00
+D. Rs. 48.30
+Answer: D
+Explanation: The End-User incentive schedule provides Rs. 48.30 to the End User (L0) for a Premium Account with Aadhaar seeding and VDC.
+
+Q57. In the Finacle CBS menu used by IPPB, which command is used for "Account Aadhaar Seeding / Inquiry"?
+A. CAACLM
+B. CKYCACOP
+C. HCHBI
+D. CAAS
+Answer: D
+Explanation: The Finacle menu maps "Account Aadhaar Seeding / Inquiry" to CAAS (under CNFTM).
+
+Q58. Consider the following statements about IPPB's Antyodaya Shramik Suraksha Yojana (ASSY):
+
+1. Plan A provides accidental insurance cover of Rs. 10 Lakhs at an annual premium of Rs. 499.
+2. The risk commencement date starts immediately on receipt of premium.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Statement 1 is correct (Plan A: Rs. 10 Lakhs cover for Rs. 499). Statement 2 is wrong: risk commences 15 days after receipt of premium, to curb fraud.
+
+Q59. Under the IPPB Premium Khata, what is the account-closure charge if the account is closed AFTER 3 months of opening/upgradation?
+A. NIL
+B. Rs. 50 + GST
+C. Rs. 100 + GST
+D. Rs. 150 + GST
+Answer: B
+Explanation: The Premium Saving Account charges specify a closure charge of Rs. 50 + GST if closed after 3 months of opening or upgradation.
+
+Q60. For an IPPB Salary Account (for DoP staff), what monthly average balance (MAB) must be maintained?
+A. Rs. 500
+B. Rs. 1,000
+C. NIL
+D. Rs. 2,000
+Answer: C
+Explanation: All IPPB savings accounts, including the Salary Account, have NIL MAB requirement.
+
+================================================================================
+SECTION D — PRESERVATION OF RECORDS (Q61–Q80)
+================================================================================
+
+Q61. What is the preservation period for Head Office Summaries, Sub Office Accounts, and Branch Office Accounts?
+A. 18 months
+B. 2 years
+C. 5 years
+D. 3 years
+Answer: D
+Explanation: Per the Preservation of Records schedule, Head Office Summaries, Sub Office Accounts, and Branch Office Accounts are preserved for 3 years.
+
+Q62. Consider the following statements regarding the preservation of Savings Bank (SB) records:
+
+1. Specimen signature books of a Head Office are destroyed forthwith after ensuring no pending accounts exist.
+2. Specimen signature books of a Sub Office are preserved for 5 years after all accounts they cover are closed or transferred.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: HO specimen signature books are destroyed immediately once pending accounts are cleared; SO specimen signature books are kept 5 years after closure/transfer. Both correct.
+
+Q63. A non-Gazetted postal servant belonging to the regular establishment is currently on deputation to the Army Postal Service (APS) and is officiating as a Gazetted officer. According to Rule 211 of FHB Vol-I, where must his Service Book be maintained and kept? 
+A. With the Head of Office of his parent postal division 
+B. Centrally at the Director of Postal Accounts, Nagpur (APS section) 
+C. With the immediate superior officer in the APS command structure 
+D. In the Circle Accounts Office of his parent Postal Circle 
+Answer: B 
+Explanation: Under Rule 211, while Service Books are generally kept by the Head of Office, the Service Books of non-Gazetted postal servants on deputation to APS who are officiating as Gazetted officers are kept centrally at the Director of Postal Accounts, Nagpur (APS section).
+
+
+Q64. For how long must the confidential records / character sheets of officials who RETIRED ON AN INVALID PENSION be preserved?
+A. 5 years after retirement
+B. 10 years
+C. 25 years or 3 years after death, whichever is earlier
+D. Permanently
+Answer: C
+Explanation: Confidential records of officials retiring on invalid pension are preserved for 25 years or 3 years after death, whichever is earlier (kept with pension cases).
+
+Q65. Consider the following statements about the preservation of Service Books / Service Rolls:
+
+1. Service Books (with leave account) are preserved for 3 years after death/retirement or final sanction of pension.
+2. Service Rolls are preserved for 5 years after death, resignation, discharge, or retirement.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Service Books: 3 years (post death/retirement/pension sanction); Service Rolls: 5 years. Both correct.
+
+Q66. What is the preservation period for Sub Office Daily Accounts and Branch Office Summaries?
+A. 1 year
+B. 2 years
+C. 18 months
+D. 3 years
+Answer: C
+Explanation: Sub Office daily accounts, SO summaries, BO summaries, and SO slips are preserved for 18 months.
+
+Q67. For how many years should the nominal roll kept in SB and Savings Certificates branches be preserved?
+A. 3 years
+B. 5 years
+C. 10 years
+D. Permanently
+Answer: C
+Explanation: The nominal roll in SB and Savings Certificates branches is preserved for 10 years.
+
+Q68. For how long must correspondence relating to robberies, thefts, frauds, and tampering with registered articles be preserved?
+A. 1 year after the cases are closed
+B. 18 months after final orders are passed
+C. 3 years after the cases are closed
+D. 5 years after the cases are closed
+Answer: A
+Explanation: Correspondence relating to robberies, thefts, frauds, etc. is preserved for 1 year after the cases are closed.
+
+Q69. Which of the following records is preserved PERMANENTLY (while the others carry a 35-year period)?
+A. Annual establishment return (Book of Establishment)
+B. Pay Bill Register
+C. Letter of authority for payment to another person
+D. Runner's appointment certificates
+Answer: D
+Explanation: Runner's appointment certificates, the Register of Destruction of records, and Ledger Cards of silent accounts are preserved permanently. The other three carry a 35-year period.
+
+Q70. Consider the following statements regarding the preservation of Franking Machine records:
+
+1. The Franking Machine Record Book (FM.4) is preserved for 2 years after the expiry of the validity date of the licence.
+2. The register maintained by the counter PA operating a Multi-Value Franking Machine (FM.1) is preserved for 3 years from the date of the last entry.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: FM.4 (Record Book) and FM.7 (Licence): 2 years post-expiry; FM.1 (counter PA register): 3 years from last entry. Both correct.
+
+Q71. What is the preservation period for records of DISCIPLINARY proceedings?
+A. 3 years from disposal
+B. 10 years from disposal
+C. 5 years from disposal
+D. 7 years from disposal
+Answer: B
+Explanation: Records of disciplinary proceedings fall under "Ten Years," preserved for 10 years from the date of disposal of the case.
+
+Q72. According to the retention schedules, how long are records of APPELLATE proceedings preserved?
+A. 3 years
+B. 5 years
+C. 10 years
+D. 7 years
+Answer: D
+Explanation: Records of appellate proceedings fall uniquely under "Seven Years," preserved 7 years from disposal of the appeal.
+
+Q73. What is the preservation period for the Register of Refunds (ACG-27) and the Register of Budget Grants?
+A. 5 years
+B. 3 years
+C. 4 years
+D. 10 years
+Answer: A
+Explanation: Both the Register of Refunds (ACG-27) and the Register of Budget Grants fall under "Five Years."
+
+Q74. Consider the following statements:
+
+1. The Day Bag book in UBOS/DBOS is preserved for 2 years.
+2. The Day Bag book in CBOS is preserved for 10 years.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Day Bag book in UBOS/DBOS: 2 years; in CBOS: 10 years. Both correct.
+
+Q75. For how long must the confidential records / character sheets of officials who have been DISMISSED, REMOVED, or COMPULSORILY RETIRED be preserved?
+A. 3 years after the event
+B. 5 years after the event
+C. 10 years
+D. 6 years (with disciplinary proceedings)
+Answer: D
+Explanation: Under "Six Years," confidential records of officials dismissed, removed, or compulsorily retired are preserved for 6 years alongside disciplinary proceedings.
+
+Q76. What is the preservation period for the Treasurer's Cash Book?
+A. 3 years
+B. 10 years
+C. 5 years
+D. 25 years
+Answer: B
+Explanation: While a Head Office Cash Book is preserved for 3 years, the Treasurer's Cash Book is listed under "Ten Years" in the Sub Accounts section.
+
+Q77. Consider the following statements regarding the preservation of SB claims:
+
+1. The Register of deceased depositor's claim cases is generally preserved for 3 years after the accounts are closed.
+2. Where SB withdrawals are allowed on an indemnity bond, the claim records are preserved for 6 years.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Deceased-depositor claim cases: 3 years (except where allowed on indemnity bond, which is 6 years). Both correct.
+
+Q78. What is the preservation period for the Pay Bill Register?
+A. 3 years
+B. 10 years
+C. 25 years
+D. 35 years
+Answer: D
+Explanation: The Pay Bill Register, Annual establishment return, and office copies of establishment pay bills are preserved for 35 years.
+
+Q79. For how long are Bonds of Indemnity obtained for the issue of DUPLICATE 5-year National Savings Certificates (NSCs) preserved?
+A. 23 years
+B. 5 years
+C. 10 years
+D. 25 years
+Answer: A
+Explanation: Bonds of Indemnity for duplicate 5-year NSCs are preserved for 23 years from the date of issue.
+
+Q80. What is the preservation period for the Register of Sanctioned Establishment?
+A. 3 years after a new one has been prepared
+B. 5 years after a new one has been prepared
+C. Permanently
+D. 1 year after a new one has been prepared
+Answer: D
+Explanation: The Register of Sanctioned Establishment is preserved until the end of 1 year after a new register has been prepared.
+
+================================================================================
+SECTION E — SWACHH BHARAT & SPECIAL CAMPAIGNS (Q81–Q100)
+================================================================================
+
+Q81. During which period is the 'Swachhta Pakhwada' observed annually in the Department of Posts?
+A. 1st to 15th October
+B. 16th to 30th November
+C. 1st to 15th January
+D. 16th to 31st December
+Answer: B
+Explanation: Swachhta Pakhwada is observed in the second fortnight of November (16th–30th November).
+
+Q82. Consider the following statements regarding Special Campaign 1.0 (2021-2022):
+
+1. It was launched by the Department of Administrative Reforms and Public Grievances (DARPG).
+2. Its primary focus was solid and liquid waste management in rural branch offices.
+3. It targeted weeding out of physical files, closing dormant e-files, and rapid liquidation of public grievances.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is wrong: SLWM was the focus of the Phase-II national mission, whereas Special Campaign 1.0 (DARPG) targeted administrative pendency, file-weeding, and physical clutter.
+
+Q83. During Special Campaign 3.0 (October 2023), how much revenue was generated from the disposal of administrative scrap within the 30-day primary window?
+A. Rs. 69 Lakh
+B. Rs. 0.92 Crore
+C. Rs. 1.02 Crore
+D. Rs. 1.51 Crore
+Answer: D
+Explanation: DoP generated Rs. 1.51 Crore from scrap disposal during the primary SC 3.0 window in October 2023. (Note: Rs. 0.92 Crore is the FOLLOW-UP figure — see Q99 — and is a deliberate near-miss here.)
+
+Q84. Under the Swachhta Action Plan, from which fund head should perishable or consumable items be purchased?
+A. Office Expenses (OE — Non-scheme)
+B. Swachh Bharat Mission (SBM) Fund
+C. Swachhta Action Plan (SAP) Fund
+D. Corporate Social Responsibility (CSR) Fund
+Answer: A
+Explanation: The Fund Utilization guidelines prohibit purchase of perishable/consumable items from the SAP Fund; they must be bought under OE (Non-scheme).
+
+Q85. Consider the following statements about Special Campaign 4.0 (2024-2025):
+
+1. It integrated an afforestation drive called #EkPedMaaKeNaam, planting over 36,000 trees.
+2. It mandated the organisation of Safai Mitra Suraksha Shivirs for sanitation workers.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: SC 4.0 expanded to ecological sustainability (#EkPedMaaKeNaam, 36,000+ trees) and sanitation-worker welfare (Safai Mitra Suraksha Shivirs). Both correct.
+
+Q86. What is the designated 15-digit General Ledger (GL) code for the Head of the Swachhta Action Plan?
+A. 5201.00.101.02.96.53
+B. 1201.00.101.01.00.00
+C. 3201.00.101.01.96.53
+D. 8553.00.101.02.00.00
+Answer: A
+Explanation: The Swachh Bharat notes identify the Head of the Swachhta Action Plan as 5201.00.101.02.96.53 (GL 5101029653). NOTE: GL codes are revision-prone; confirm against the current classification before publishing.
+
+Q87. Who among the postal workforce is specifically designated as a 'Swachhta Doot' / 'Swachhta Ambassador' during the Swachhta Pakhwada, to generate awareness among customers?
+A. Branch Postmaster (BPM)
+B. Postmen / Postwomen
+C. Mail Overseer
+D. Public Grievance Officer
+Answer: B
+Explanation: Postmen/Postwomen may be designated Swachhta Doot/Swachhta Ambassador during the Pakhwada to generate awareness at customers' doorsteps.
+
+Q88. Which three Postal Circles were awarded the 1st, 2nd, and 3rd prizes for extraordinary work during the major Swachhta Pakhwada of 16–30 November 2018?
+A. Gujarat, Rajasthan, and Punjab
+B. Uttar Pradesh, Bihar, and West Bengal
+C. Karnataka, Andhra Pradesh, and Telangana
+D. Maharashtra, Tamil Nadu, and Kerala
+Answer: D
+Explanation: Maharashtra, Tamil Nadu, and Kerala Circles were awarded the 1st, 2nd, and 3rd prizes respectively.
+
+Q89. Consider the following parameters said to assess the best Circles during Swachhta Pakhwada:
+
+1. Weeding out of old records that have outlived their preservation period.
+2. Number of stamps affixed on postal articles to curb single-use plastic.
+3. Number of solar panels installed in Branch Post Offices.
+Which of the statements above is/are among the ten official assessment parameters?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Parameters 4 and 9 of the "Ten Parameters" cover weeding out old records and affixing stamps to curb single-use plastics. Solar-panel installation, though a department achievement, is NOT one of the ten Pakhwada evaluation parameters.
+
+Q90. During the pandemic era (2020-2021), the postal network supported safe financial interventions. Approximately how many Aadhaar Enabled Payment System (AEPS) transactions were executed during this overarching period?
+A. Over 1362.59 crore
+B. 500.50 crore
+C. 850.25 crore
+D. 1000.00 crore
+Answer: A
+Explanation: The pandemic-era notes cite over 1362.59 crore successful AEPS transactions delivered through doorstep banking under biosecurity protocols.
+
+Q91. What was the central focus of the "saturation approach" adopted during Special Campaign 2.0 (2022-2023)?
+A. Concentrating all cleanliness funds at Dak Bhawan headquarters.
+B. Solely digitising rural postal life insurance records.
+C. Targeting outstation, subordinate, and remote field offices where public interface is highest.
+D. Constructing large-scale solar farms at regional centres.
+Answer: C
+Explanation: SC 2.0 moved away from concentrating on ministerial headquarters and adopted a "saturation approach" targeting outstation, subordinate, and remote field offices down to rural BOs.
+
+Q92. During Special Campaign 2.0 in the Chennai City Central Division, the freed-up 1,000 sq ft of office space was strategically repurposed for:
+A. Employee welfare — staff retiring rooms and recreation facilities
+B. Expanding sorting-hub machinery
+C. Renting to private fintech startups
+D. VIP customer lounges
+Answer: A
+Explanation: The Chennai regional data shows the 1,000 sq ft of freed space was repurposed for employee welfare (staff retiring rooms and recreation facilities).
+
+Q93. Which slogan is prescribed for the Swachhta stamp affixed on postal articles during Swachhta Pakhwada?
+A. 'Clean India, Green India'
+B. 'Swachh Dak, Swachh Bharat'
+C. 'Ek Kadam Swachhata Ki Ore'
+D. 'Say No To Plastic Carry Bags'
+Answer: D
+Explanation: The prescribed activities specify a Swachhta stamp bearing 'Say No To Plastic Carry Bags' to be affixed on postal articles.
+
+Q94. Consider the following statements regarding the "Special Campaign 5.0 & Disposal of Pending Matters (SCDPM)":
+
+1. It freed up 45,000 sq ft of office space nationwide.
+2. It generated Rs. 1.02 crore from the sale of scrap.
+3. It disposed of over one lakh public grievances.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: SC 5.0 freed up 45,000 sq ft, generated Rs. 1.02 crore from scrap, weeded out 17,352 files, and disposed of over one lakh public grievances. All three correct.
+
+Q95. The 'Five Star Villages Scheme' inauguration was highlighted as environmentally friendly during the pandemic because:
+A. It was conducted entirely through Video Conference (VC), bypassing physical travel and paper-based event management.
+B. It used 100% recycled paper.
+C. It mandated planting five trees in every participating village.
+D. It replaced all diesel mail vans with electric vehicles in the selected villages.
+Answer: A
+Explanation: The inauguration was conducted entirely via VC, bypassing physical travel and paper-based event management and thereby reducing the environmental footprint.
+
+Q96. Under the Swachhta Action Plan, what specific infrastructure upgrade is mandated for Post Office courtyards?
+A. Putting interlock tiles
+B. Automatic sanitiser dispensers
+C. Native medicinal shrubs
+D. Concrete rainwater-harvesting pits
+Answer: A
+Explanation: Activity (b) under the Swachhta Action Plan mandates "Putting interlock tiles in Post Office Courtyards."
+
+Q97. During the Swachhta drives of 2018-2019, which organisation recognised Kolkata GPO for conservation of its Heritage Building?
+A. UNESCO
+B. Archaeological Survey of India (ASI)
+C. INTACH
+D. Ministry of Culture
+Answer: C
+Explanation: Kolkata GPO was recognised by INTACH (Indian National Trust for Art and Cultural Heritage) for conservation of the Heritage Building.
+
+Q98. Consider the following steps mandated during the financial year 2019-20 Swachhta initiatives:
+
+1. Nomination of Nodal officers in all 23 Circles.
+2. Facilitation of 2 hours of voluntary "Shram Daan" per week for each employee.
+3. Creation of task forces strictly at the National Directorate level only.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is wrong: task forces were created at Circle/Division levels, not only at the National Directorate.
+
+Q99. Under Special Campaign 3.0 (2023-2024), what follow-up action sustained momentum between November 2023 and August 2024?
+A. Hiring 10,000 new custodial staff
+B. Deep cleaning of an additional 15,931 sites and generating Rs. 0.92 Crore from scrap
+C. Suspending operations in all old, cluttered buildings
+D. Mandatory shift to 100% solar power for all Head Post Offices
+Answer: B
+Explanation: SC 3.0 follow-up actions included cleaning 15,931 additional sites and generating a further Rs. 0.92 Crore from scrap between November 2023 and August 2024. (Contrast Q83: Rs. 1.51 Crore was the PRIMARY-window figure.)
+
+Q100. The decluttered space achieved during Special Campaign 3.0 was strategically used to expand which hubs designed for MSME commercial exports?
+A. Post Office Passport Seva Kendras
+B. Aadhaar Seva Kendras
+C. Dak Ghar Niryat Kendras
+D. Common Service Centres (CSCs)
+Answer: C
+Explanation: Uncluttered spaces facilitated the establishment of Dak Ghar Niryat Kendras — specialised hubs to facilitate commercial exports for MSMEs.
+
+================================================================================
+ANSWER KEY (QUICK REFERENCE)
+================================================================================
+1-B     2-D     3-C     4-B     5-A     6-D     7-C     8-C     9-B     10-A
+11-A    12-D    13-B    14-B    15-B    16-D    17-D    18-D    19-C    20-A
+21-B    22-A    23-A    24-A    25-D    26-C    27-A    28-B    29-B    30-C
+31-B    32-A    33-B    34-C    35-B    36-D    37-B    38-B    39-B    40-C
+41-C    42-B    43-A    44-D    45-C    46-C    47-B    48-D    49-D    50-B
+51-A    52-A    53-D    54-C    55-A    56-D    57-D    58-A    59-B    60-C
+61-D    62-C    63-D    64-C    65-C    66-C    67-C    68-A    69-D    70-C
+71-B    72-D    73-A    74-C    75-D    76-B    77-C    78-D    79-A    80-D
+81-B    82-B    83-D    84-A    85-C    86-A    87-B    88-D    89-A    90-A
+91-C    92-A    93-D    94-D    95-A    96-A    97-C    98-A    99-B    100-C
+================================================================================
+END OF MOCK TEST 1 (REVISED EDITION v2)
+================================================================================

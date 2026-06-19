@@ -1,0 +1,1157 @@
+Q1. What is the minimum and maximum deposit limit for the National Savings Certificate (VIII Issue) Scheme, 2019?
+A. Minimum Rs. 500, Maximum Rs. 1,50,000
+B. Minimum Rs. 1,000, Maximum No limit
+C. Minimum Rs. 1,000, Maximum Rs. 1,50,000
+D. Minimum Rs. 500, Maximum No limit
+Answer: B
+Explanation: A minimum of Rs. 1000 and any sum in multiples of Rs. 100 may be deposited in an NSC account, and there is no maximum limit for deposit.
+
+Q2. What is the maturity period of a Kisan Vikas Patra (KVP) account opened on or after July 1, 2023?
+A. 115 months
+B. 120 months
+C. 124 months
+D. 112 months
+Answer: A
+Explanation: The maturity period of a KVP account opened on or after the first day of July 2023 shall be 115 months, and the deposit shall double on maturity.
+
+Q3. Consider the following statements regarding the premature closure of an NSC (VIII Issue) account:
+
+1. It can be closed prematurely on the death of any or all account holders in a joint account.
+2. It can be closed prematurely on forfeiture by a pledgee being a Gazetted Officer.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Premature closure of an NSC account is permitted on the death of the account holder in a single account or any/all holders in a joint account, or on forfeiture by a pledgee being a Gazetted Officer.
+
+
+
+Q4. Consider the following statements regarding the types of accounts under the KVP Scheme, 2019:
+
+1. A Joint A-Type Account can be opened by up to three adults payable to all.
+2. A Joint B-Type Account can be opened by up to three adults payable to any.
+3. A minor who has attained the age of eight years can open an account in his own name.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: A minor can open a KVP account in their own name only after attaining the age of ten years, making statement 3 incorrect. Joint A and Joint B accounts can be opened by up to three adults.
+
+
+
+Q5. Consider the following statements regarding the transfer of an NSC account:
+
+1. In the event of the death of any of the account holders in a joint account, the account shall be transferred in the name of the surviving account holder(s).
+2. On the order of a court, the account can be transferred to any other individual.
+3. An account cannot be transferred on pledging.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 3 only
+C. 2 and 3 only
+D. 1 and 2 only
+Answer: B
+Explanation: An NSC account shall be transferred on pledging, making statement 3 incorrect. Transfers are also allowed on death of a joint holder or by court order.
+
+
+
+Q6. Consider the following statements regarding the premature closure of a KVP account:
+
+1. The account may be prematurely closed at any time before maturity when ordered by a court.
+2. If closed after the expiry of two years and six months from the date of opening, the amount inclusive of interest shall be payable.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: A KVP account may be closed before maturity by court order, and if closed after two years and six months, the amount inclusive of interest shall be payable.
+
+
+
+Q7. Consider the following statements regarding interest payable on premature closure of NSC:
+
+1. If closed before one year, only the principal amount is payable.
+2. If closed after one year but before three years, the NSC interest rate on the principal is payable.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: If an NSC is closed after one year but before three years, the ROI of POSA (Post Office Savings Account) on the principal amount is payable, not the NSC rate.
+
+
+
+Q8. Mr. A and Mr. B hold a Joint A-Type KVP account. Mr. A dies before maturity. Which of the following is the correct administrative action?
+A. The account must be closed immediately and paid to Mr. B.
+B. The account shall be transferred in the name of the surviving account holder, Mr. B.
+C. The account shall be transferred to the legal heirs of Mr. A.
+D. The account shall be frozen until maturity.
+Answer: B
+Explanation: In the event of the death of any of the account holders in a joint KVP account, the account shall be transferred in the name of the surviving account holder or holders.
+
+Q9. Consider the following statements regarding the regularization of two NSS-87 accounts opened by an individual prior to 02.04.1990:
+
+1. The first account will earn the prevailing scheme rate.
+2. The second account will earn the POSA rate plus 200 bps on the outstanding balance until 30 September 2024.
+3. If cumulative deposits in both accounts exceed the applicable limit, the excess shall be refunded with POSA interest.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: According to Ministry of Finance guidelines (SB Order 05/2024), excess deposits in irregular NSS-87 accounts shall be refunded to the investor without any interest, making statement 3 incorrect. Statements 1 and 2 are correct.
+
+Q10. What is the minimum denomination required for deposits in an NSC account?
+A. Multiples of Rs. 10
+B. Multiples of Rs. 50
+C. Multiples of Rs. 100
+D. Multiples of Rs. 500
+Answer: C
+Explanation: A minimum of Rs. 1000 and any sum in multiples of Rs. 100 may be deposited in an NSC account.
+
+Q11. Consider the following statements regarding tax benefits under the NSC Scheme:
+
+1. Deposits in NSC qualify for deduction under Section 80-C of the Income Tax Act.
+2. The interest earned on NSC is strictly tax-free under Section 10 of the IT Act.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Deposits in NSC qualify for deduction u/s 80-C of the Income Tax Act. The PDF does not state that NSC interest is tax-free under Section 10; that applies to PPF.
+
+
+
+Q12. Consider the following statements about KVP and NSC:
+
+1. Both schemes allow a minor who has attained the age of ten years to open an account in his own name.
+2. Both schemes have a maximum deposit limit of Rs. 1,50,000 per financial year.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: A minor who has attained 10 years can open an account in their own name in both schemes. However, neither scheme has a maximum deposit limit.
+
+
+
+Q13. Consider the following statements about pledging an NSC account:
+
+1. An NSC account can be prematurely closed on forfeiture by a pledgee being a Gazetted Officer.
+2. Upon pledging, the NSC account shall be transferred.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: NSC accounts can be closed prematurely on forfeiture by a pledgee (Gazetted Officer), and the account shall be transferred on pledging.
+
+
+
+Q14. Who among the following is NOT eligible to open a Single Holder Type Account under the KVP Scheme, 2019?
+A. An adult
+B. A minor aged 8 years in his own name
+C. A guardian on behalf of a minor
+D. A guardian on behalf of a person with mental illness
+Answer: B
+Explanation: Under KVP, a minor can open an account in his own name only if he has attained the age of ten years.
+
+Q15. In what multiples can deposits be made in a KVP account after the minimum initial deposit of Rs. 1000?
+A. Rs. 50
+B. Rs. 100
+C. Rs. 500
+D. Rs. 1000
+Answer: B
+Explanation: A minimum of Rs. 1000 and any sum in multiples of Rs. 100 may be deposited in a KVP account.
+
+Q16. Mr. C wishes to open an NSC account jointly with three of his friends (Total 4 adults). Is this permitted under the NSC Scheme, 2019?
+A. Yes, as a Joint B-Type account.
+B. Yes, as a Joint A-Type account.
+C. No, maximum of three adults can open a joint account.
+D. No, maximum of two adults can open a joint account.
+Answer: C
+Explanation: Joint A-Type and Joint B-Type accounts in NSC can be opened by up to a maximum of three adults only.
+
+Q17. Mr. Sharma opened a Public Provident Fund (PPF) account in the financial year 2020-21. In October 2026 (FY 2026-27), he applies for his first partial withdrawal. According to the PPF Scheme 2019, what will be the maximum permissible withdrawal amount?
+A. 50% of the balance at the end of FY 2025-26 or FY 2022-23, whichever is lower.
+B. 50% of the balance at the end of FY 2025-26 or FY 2021-22, whichever is lower.
+C. 50% of the balance at the end of FY 2024-25 or FY 2021-22, whichever is lower.
+D. 50% of the balance at the end of FY 2025-26 or FY 2023-24, whichever is lower.
+Answer: A
+Explanation: Under Paragraph 10(1) of the PPF Scheme 2019, a withdrawal is allowed up to 50% of the balance at credit at the end of the fourth year immediately preceding the year of withdrawal (FY 2022-23) or at the end of the preceding year (FY 2025-26), whichever is lower.
+
+
+
+Q18. Consider the following statements regarding transfer of KVP accounts:
+
+1. On the death of all account holders in a joint account, the amount shall be transferred to the legal heirs or nominees.
+2. A KVP account cannot be transferred from one individual to another under any circumstances before maturity.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Statement 2 is incorrect because a KVP account may be transferred from one individual to another in specific cases, such as by order of the court, pledging, or death.
+
+
+
+Q19. Consider the following statements regarding KVP premature closure due to account holder's death:
+
+1. Simple interest at the POSA rate for complete months is payable.
+2. The principal amount is forfeited.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: On closure of a KVP account due to the death of the account holder, the principal amount along with simple interest calculated at the POSA rate for complete months is payable.
+
+
+
+Q20. An individual wants to prematurely close his KVP account 1 year after opening due to financial needs (not involving death, forfeiture, or court order). What is the consequence?
+A. He will receive the principal amount only.
+B. He will receive the principal amount plus POSA interest.
+C. The account cannot be prematurely closed for this reason before 2 years and 6 months.
+D. He will receive the principal minus a 2% deduction.
+Answer: C
+Explanation: KVP accounts can only be closed before maturity on death, forfeiture by a Gazetted Officer, or court order. Voluntary closure is only permitted after 2 years and 6 months.
+
+Q21. Consider the following statements regarding NSC deposits:
+
+1. An individual may open any number of accounts.
+2. There is no maximum limit for deposit in an account.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Under the NSC Scheme 2019, there is no maximum limit for deposit in an account, and an individual may open any number of accounts.
+
+
+
+Q22. A Gazetted Officer acting as a pledgee orders the forfeiture of a KVP account 18 months after its opening. How will the interest be calculated?
+A. No interest is payable.
+B. Simple interest at POSA rate for complete months held.
+C. Compound interest at NSC rate.
+D. Simple interest at KVP rate.
+Answer: B
+Explanation: On closure due to forfeiture by a Gazetted Officer pledgee, the principal amount along with simple interest at the POSA rate for the complete months held shall be payable.
+
+Q23. What is the number of adults who can jointly open a Joint B-Type KVP account payable to any of them?
+A. Up to two adults
+B. Up to three adults
+C. Up to four adults
+D. Unlimited adults
+Answer: B
+Explanation: A Joint B-Type Account can be opened by up to three adults, payable to any of the account holders.
+
+Q24. Consider the following statements regarding the NSC (VIII Issue) Scheme:
+
+1. It permits a guardian to open an account on behalf of a person with mental illness.
+2. Joint accounts can only be opened by spouses.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: A guardian can open a Single Holder Type Account on behalf of a person with mental illness. Joint accounts can be opened by up to three adults, not restricted to spouses.
+
+
+
+Q25. Consider the following statements regarding the transfer of a KVP account from one individual to another:
+
+1. It is subject to the condition that the transferee is eligible to open an account under the Scheme.
+2. It can be done under the order of the court.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Transfer of a KVP account from one individual to another is permitted subject to the transferee's eligibility, and it can occur under court orders.
+
+
+
+Q26. What is the maximum deposit allowed in a Sukanya Samriddhi Account (SSA) in a single financial year?
+A. Rs. 1,00,000
+B. Rs. 1,50,000
+C. Rs. 2,00,000
+D. No limit
+Answer: B
+Explanation: The total amount deposited in an SSA account shall not exceed Rs. 1,50,000 in a financial year.
+
+Q27. What is the minimum annual deposit required to keep a Public Provident Fund (PPF) account active?
+A. Rs. 250
+B. Rs. 500
+C. Rs. 1,000
+D. Rs. 1,500
+Answer: B
+Explanation: A PPF account must be opened with a minimum initial deposit of Rs. 500, and the account holder must deposit a minimum of Rs. 500 in subsequent years to avoid discontinuation.
+
+Q28. Consider the following statements regarding a discontinued PPF account:
+
+1. It may be revived during its maturity period on payment of a fee of Rs. 50 along with arrears of Rs. 500 for each year of default.
+2. The facility of loan and partial withdrawal is allowed in a discontinued account.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: A discontinued PPF account can be revived with a Rs. 50 fee and Rs. 500 arrears per default year. Facility of loan and partial withdrawal shall not be allowed in such an account.
+
+
+
+Q29. Consider the following statements regarding opening of Sukanya Samriddhi Accounts:
+
+1. It can be opened for a maximum of two girl children in one family.
+2. More than two accounts may be opened if the first order of birth results in surviving triplets.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: SSA is normally limited to two girls per family, but more accounts can be opened if multiple girl children (twins/triplets) are born in the first or second order of birth.
+
+
+
+Q30. A depositor opened a PPF account in the financial year 2021-22. In which financial year does he become eligible to apply for his first loan?
+A. 2022-23
+B. 2023-24
+C. 2024-25
+D. 2026-27
+Answer: B
+Explanation: Loan facility is available at any time after the expiry of one year from the end of the year in which the initial subscription was made, which is from the 3rd financial year (2023-24).
+
+Q31. Consider the following statements regarding the premature closure of a PPF account:
+
+1. It can be closed after 3 years for higher education of the account holder.
+2. It can be closed on change in residency status of the account holder.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Premature closure of a PPF account is permitted for higher education or change in residency, but it shall not be closed before the expiry of five years from the end of the opening year.
+
+
+
+Q32. If a PPF loan is not repaid within the stipulated 36 months, what interest rate shall be charged on the outstanding loan amount?
+A. 1% per annum
+B. 2% per annum
+C. 6% per annum
+D. POSA rate
+Answer: C
+Explanation: If a PPF loan is not repaid within 36 months, interest on the outstanding amount shall be charged at 6% per annum instead of 1% per annum.
+
+Q33. Consider the following statements regarding the extension of a PPF account after maturity:
+
+1. The account holder can extend the account with deposits for a further block period of five years.
+2. The option to extend must be exercised before the expiry of one year from the maturity of the account.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: A PPF account can be extended for a block of five years with deposits, and the option must be exercised before the expiry of one year from maturity.
+
+
+
+Q34. An account holder wishes to make a partial withdrawal from an extended PPF account (with deposits) during a 5-year block period. What is the maximum withdrawal limit?
+A. 50% of the balance at the end of the fourth year.
+B. 60% of the balance at credit at the commencement of the block period.
+C. 50% of the current balance.
+D. No withdrawal is allowed during the extended block period.
+Answer: B
+Explanation: For a PPF account extended with deposits, partial withdrawal is available subject to the condition that total withdrawal during the 5-year block shall not exceed 60% of the balance at the commencement of the block.
+
+Q35. A Sukanya Samriddhi Account (SSA) was opened under the guardianship of a grandfather (who is not the legal guardian). Later, it was found that the family has three surviving girl children (born from three separate single pregnancies), and an SSA was opened for each of them. As per SB Order 05/2024, what will be the regularization action?
+A. All three accounts will be regularized by transferring guardianship to the natural or legal guardian.
+B. The third account will be closed as irregular, and guardianship of the first two accounts will be transferred to the natural or legal guardian.
+C. The first two accounts will earn the POSA rate, and the third will be refunded without interest.
+D. All three accounts will be closed since grandparents are completely barred from opening SSA accounts.
+Answer: B
+Explanation: SB Order 05/2024 directs that guardianship must be transferred to the natural or legal guardian. Furthermore, since SSA allows a maximum of two girls per family (unless twins/triplets apply), the third account violates Para 3 and must be closed as irregular.
+
+
+
+Q36. Consider the following statements regarding PPF interest calculation:
+
+1. Interest is eligible on the lowest balance between the close of the fifth day and the end of the month.
+2. Interest is credited to the account at the end of each quarter.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: PPF interest is calculated on the lowest balance between the 5th day and the end of the month. However, it is credited to the account at the end of each year, not each quarter.
+
+
+
+Q37. Consider the following statements regarding SSA deposits:
+
+1. An account in which minimum Rs. 250 is not deposited in a financial year is considered under default.
+2. Defaulted accounts cannot be regularized after 10 years from the date of opening.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: An SSA under default may be regularized any time till the completion of 15 years from the date of opening on payment of a penalty of Rs. 50 for each default year plus minimum deposits, making statement 2 incorrect.
+
+
+
+Q38. An account holder requests premature closure of their SSA on the ground of extreme compassionate grounds (death of the guardian) after 4 years of account opening. What is the consequence?
+A. The account will be closed immediately with POSA interest.
+B. The account will be closed with scheme interest.
+C. Premature closure is not permitted before completion of 5 years from opening.
+D. Only the principal is refunded.
+Answer: C
+Explanation: Premature closure of an SSA on compassionate grounds is permitted, provided that no such closure shall be made before the completion of 5 years from the date of opening.
+
+Q39. Consider the following statements regarding SSA withdrawal for education:
+
+1. Withdrawal up to a maximum of 50% of the amount at the end of the preceding financial year is allowed.
+2. Withdrawal is allowed only after the account holder attains 18 years or has passed the tenth standard, whichever is earlier.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: SSA rules allow a maximum 50% withdrawal for education after the account holder attains 18 years of age or passes the 10th standard, whichever is earlier.
+
+
+
+Q40. What is the standard maturity period of a Sukanya Samriddhi Account (SSA)?
+A. 15 years from the date of opening
+B. 18 years from the date of opening
+C. 21 years from the date of opening
+D. When the girl child attains 21 years of age
+Answer: C
+Explanation: The Sukanya Samriddhi Account shall mature on completion of a period of 21 years from the date of its opening.
+
+Q41. Consider the following statements regarding the closure of an SSA before maturity due to the intended marriage of the account holder:
+
+1. The closure request must confirm the applicant is not less than 18 years of age on the date of marriage.
+2. The closure shall be allowed any time within 6 months before the intended marriage.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Closure for marriage requires the girl to be 18, but no closure shall be allowed before 1 month from the intended marriage date or after 3 months from the date of marriage, making statement 2 incorrect.
+
+
+
+Q42. Consider the following statements regarding the death of a PPF account holder:
+
+1. The account shall be closed, and the nominee cannot continue the account.
+2. The balance earns interest till the end of the month preceding the month of payment to the nominee.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: In the event of a PPF account holder's death, the account shall be closed. The nominee cannot continue it, and interest is paid till the end of the month preceding payment.
+
+
+
+Q43. A court issues a decree to attach the credit balance of Mr. X's PPF account to settle his debts. What is the legal provision regarding this under the PPF Scheme, 2019?
+A. The amount can be attached up to 50% of the balance.
+B. The amount can be fully attached by court order.
+C. The amount is protected and shall not be liable to attachment under any court decree.
+D. Attachment is permitted only if the account has matured.
+Answer: C
+Explanation: Under the PPF Scheme 2019, the amount standing to the credit of any account holder shall not be liable to attachment under any order or decree of any court in respect of any debt or liability.
+
+Q44. Consider the following statements comparing the premature closure of National Savings Certificate (VIII Issue) and Kisan Vikas Patra (KVP):
+
+1.Both NSC and KVP can be prematurely closed at any time on the death of the account holder or on order by a court.
+
+2.KVP allows voluntary premature closure without specifying a reason after the expiry of two years and six months, whereas NSC cannot be voluntarily closed before maturity.
+
+3.If an NSC is prematurely closed after 3 years, simple interest at the POSA rate is paid on the principal.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because if an NSC is closed after 3 years, the ROI of NSC (not POSA) on the principal amount is payable; the POSA rate only applies if closed after 1 year but before 3 years.
+
+
+Q45. Consider the following statements regarding PPF accounts:
+
+1. Joint accounts can be opened by up to three adults.
+2. An individual may open one account on behalf of each minor of whom he is the guardian.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Under the PPF Scheme 2019, joint accounts shall not be opened. An individual may open one account on behalf of each minor for whom he is the guardian.
+
+
+
+Q46. In a PPF account, how many monthly instalments are permitted for the repayment of interest after the principal loan amount is fully repaid?
+A. Not more than two monthly instalments
+B. Not more than three monthly instalments
+C. Not more than six monthly instalments
+D. Single lump sum only
+Answer: A
+Explanation: After the principal amount of the loan is fully repaid, the account holder shall pay interest thereon in not more than two monthly instalments at 1% per annum.
+
+Q47. Consider the following statements regarding PPF withdrawals:
+
+1. Facility of withdrawal can be availed twice in a financial year.
+2. Withdrawal is permissible from the 7th financial year from the opening year.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: The facility of withdrawal in PPF may be availed only once in a financial year. Withdrawal is permissible after the expiry of five years from the end of the year the account was opened (i.e., 7th financial year).
+
+
+
+Q48. Consider the following statements regarding the Tax Deduction at Source (TDS) on Mahila Samman Savings Certificate (MSSC) under Section 194A:
+
+1.For the financial year 2024-25, the TDS threshold limit for an individual aged 65 years is Rs. 50,000.
+
+2.From the financial year 2025-26, the TDS threshold limit for an individual aged 45 years has been revised to Rs. 50,000.
+
+3.According to SB Order 16/2025, from 01.12.2025, TDS deductions under Section 194A on periodical interest credits will be accounted at CPRC, Chennai.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct. The senior citizen threshold is Rs. 50,000. The threshold for "Others" (non-senior) increases from Rs. 40,000 to Rs. 50,000 starting FY 2025-26 (Finance Act 2025). SB Order 16/2025 centralized TDS accounting for periodical interest to CPRC, Chennai.
+
+
+Q49. Consider the following statements regarding the tax benefits of SSA:
+
+1. Withdrawals from SSA are not included in the total income for calculating Income Tax under Section 10.
+2. The legal guardian can claim income tax benefits under Section 80C.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Withdrawals from SSA are exempt from Income Tax under Section 10(11A), and deposits qualify for tax benefit under Section 80C for the legal guardian.
+
+
+
+Q50. Due to a system error, an SSA accepts a deposit of Rs. 1,60,000 in a single financial year. What action must the Post Office take regarding the excess Rs. 10,000?
+A. It shall earn interest at the POSA rate.
+B. It shall be returned immediately to the depositor and is not eligible for any interest.
+C. It will be carried forward to the next financial year's limit.
+D. It shall earn the scheme rate but no Section 80C benefit applies.
+Answer: B
+Explanation: Any SSA deposit in excess of Rs. 1,50,000 accepted due to accounting error shall not be eligible for any interest and must be returned immediately to the depositor.
+
+Q51. Consider the following statements regarding the Mahila Samman Savings Certificate (MSSC) Scheme:
+
+1. Premature closure is permitted anytime after six months of opening for any reason, with an interest rate applied that is 2% less than the specified scheme rate.
+
+2. If a depositor withdraws 40% of the eligible balance after one year, the withdrawal is treated internally as a part closure.
+
+3. The interest on MSSC is compounded quarterly and credited to the account.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct. MSSC can be closed after 6 months with a 2% penalty. SB Order 02/2025 specifies that the 40% withdrawal is functionally treated as a part closure. The interest (7.5%) is compounded quarterly and credited to the account.
+
+Q52. What is the maturity period of an MSSC account?
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+Answer: B
+Explanation: The Mahila Samman Savings Certificate account shall mature on completion of two years from the date of the account opening.
+
+Q53. Consider the following statements regarding interest in MSSC:
+
+1. The interest rate is 7.5% per annum.
+2. The interest is compounded annually and credited to the account.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: The interest rate for MSSC is 7.5% per annum, but it is compounded on a quarterly basis, not annually.
+
+
+
+Q54. Consider the following statements regarding the PM CARES for Children Scheme, 2021:
+
+1. The upfront lumpsum contribution is made from the PM CARES Fund.
+2. The lumpsum contribution becomes Rs. 10 lakhs when the account holder attains 18 years of age.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Under PM CARES, the upfront lumpsum contribution from the PM CARES Fund is calculated such that it becomes Rs. 10 lakhs when the eligible beneficiary attains 18 years of age.
+
+
+
+Q55. A woman opens her first MSSC account on 01.12.2023. What is the earliest date she can open a second MSSC account?
+A. 01.01.2024
+B. 01.03.2024
+C. 01.06.2024
+D. 01.12.2024
+Answer: B
+Explanation: Under MSSC, an individual may open another account subject to a time gap of three months between the existing account and the opening of another account.
+
+Q56. Consider the following statements regarding the operation of a PM CARES for Children account for a minor:
+
+1. It operates as a joint account with the account holder and the concerned District Magistrate.
+2. Premature withdrawal or closure of the account by the minor is fully permitted.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Premature withdrawal or closure of the PM CARES account is not allowed, making statement 2 incorrect. It operates as a joint account with the District Magistrate for minors.
+
+
+
+Q57. Consider the following statements regarding premature closure of an MSSC account:
+
+1. It can be closed prematurely on the death of the account holder.
+2. If prematurely closed after 6 months for any other reason, the account earns an interest rate less by two percent points than the specified rate.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: MSSC can be closed on death, or after 6 months for any other reason, in which case the interest payable is less by 2% points (i.e., 5.5%).
+
+
+
+Q58. An MSSC account holder wishes to withdraw funds before maturity. What is the maximum percentage of the eligible balance she can withdraw after expiry of one year?
+A. 25%
+B. 30%
+C. 40%
+D. 50%
+Answer: C
+Explanation: Under MSSC, the account holder is eligible to withdraw a maximum up to 40 per cent of the eligible balance once after the expiry of one year from the opening date.
+
+Q59. Consider the following statements regarding the PM CARES account after the holder attains 18 years of age:
+
+1. The account becomes a single account of the account holder.
+2. It bears the interest rate applicable to the Public Provident Fund (PPF) Scheme.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: When the PM CARES account holder attains 18 years, it becomes a single account and bears the interest rate applicable to the National Savings (Monthly Income Account) Scheme, not PPF.
+
+
+
+Q60. In the event of the death of a minor PM CARES account holder, what happens to the upfront lump sum contribution?
+A. It is paid to the legal heirs of the minor.
+B. It is paid to the joint account holder for further transmission to the PM CARES Fund.
+C. It is transferred to the state government.
+D. It continues to earn interest until the original maturity date.
+Answer: B
+Explanation: On the death of a minor PM CARES account holder, the account is closed and the lump sum upfront contribution is paid to the joint account holder (District Magistrate) for transmission to the PM CARES Fund.
+
+Q61. Consider the following statements regarding TDS on Mahila Samman Savings Certificate (MSSC):
+
+1. TDS threshold limit for senior citizens for the financial year 2024-25 is Rs. 50,000.
+2. The investment under MSSC qualifies for rebate under 80C of the Income Tax Act.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: TDS threshold for senior citizens in 2024-25 is Rs. 50,000. However, investments under MSSC do not qualify for a rebate under Section 80C of the Income Tax Act.
+
+
+
+Q62. Consider the following statements regarding PM CARES for Children Scheme eligibility:
+
+1. The child must not have attained the age of 18 years on the date of the event (11.03.2020 to 28.02.2022).
+2. A single account may be opened if the eligible beneficiary turned 18 or more on the date of opening the account.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Eligible children are those under 18 on the date of the COVID-19 event. If they are already 18 on the account opening date, a single account can be opened directly.
+
+
+
+Q63. At what age of the PM CARES account holder is the eligible balance disbursed and the account closed?
+A. 18 years
+B. 21 years
+C. 23 years
+D. 25 years
+Answer: C
+Explanation: The scheme envisions closing the account and disbursing the eligible balance to the account holder when they attain the age of 23 years.
+
+Q64. Consider the following statements regarding Mahila Samman Savings Certificate (MSSC):
+
+1. An account can be opened on or before 31.03.2025.
+2. Subsequent deposits are allowed in the account up to Rs. 2,00,000.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: An MSSC account may be opened on or before 31.03.2025. However, no subsequent deposit shall be allowed in the account after the initial deposit.
+
+
+
+Q65. Consider the following statements regarding PM CARES for Children accounts at Post Offices:
+
+1. A Basic Savings Account with zero balance is opened alongside the PM CARES account.
+2. For beneficiaries 18 years and above, the account uses scheme code 'PCMIS'.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Two accounts are opened: a zero balance Basic Savings Account and the PM CARES account. For beneficiaries 18+, the PM CARES account is a single account under scheme code 'PCMIS'.
+
+
+
+Q66. The post office permits premature closure of an MSSC account on extreme compassionate grounds. What interest rate is applicable in this case?
+A. The MSSC scheme rate (7.5%)
+B. The MSSC rate minus 2% (5.5%)
+C. The POSA rate
+D. Zero interest
+Answer: A
+Explanation: In cases of extreme compassionate grounds (e.g., life-threatening disease or guardian death), the account may be closed, and interest is paid at the scheme rate, without the 2% deduction.
+
+Q67. Consider the following statements about the PM CARES upfront lumpsum contribution:
+
+1. A 4-month-old beneficiary receives the contribution amount specified for a one-year-old.
+2. A 12 years 9 months old beneficiary receives the amount specified for a 13-year-old.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: For computing lumpsum contribution under PM CARES, the age is the number of completed years on the upcoming date of birth. Any months/days are rounded off to the next complete year.
+
+
+
+Q68. Consider the following statements regarding MSSC premature closure without citing compassionate grounds:
+
+1. It is permitted anytime after 6 months from opening.
+2. The interest rate applied will be 5.5% (scheme rate less 2%).
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: D
+Explanation: Both statements are correct. Premature closure for any other reason is permitted after 6 months, and the interest rate payable is 2% less than the scheme rate.
+
+
+
+Q69. What is the minimum deposit amount allowed in the Mahila Samman Savings Certificate (MSSC) scheme?
+A. Rs. 250
+B. Rs. 500
+C. Rs. 1000
+D. Rs. 2000
+Answer: C
+Explanation: A minimum of Rs. 1000 and any sum in multiples of Rs. 1000 may be deposited in an MSSC account.
+
+Q70. Consider the following statements regarding the Nodal Office for the PM CARES for Children Scheme 2021:
+
+1. Chennai GPO is the nodal office for crediting NACH credits in the Basic Savings Accounts.
+2. No transfer fee is applicable when Chennai GPO transfers these accounts to respective SOLs.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Chennai GPO is the nodal office for crediting NACH credits centrally. Upon opening the PM CARES accounts, they are transferred to respective SOLs without transfer fees as it is for administrative reasons.
+
+
+
+Q71. Consider the following statements regarding funding PM CARES for Children accounts:
+
+1. Nodal Ministry transfers funds via NPCI using NACH for all Basic Savings Accounts.
+2. The PM CARES account is opened by crediting cash directly at the local sub-post office.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Funds are transferred via NACH to Basic Savings Accounts. The PM CARES account is opened centrally at Chennai GPO by debiting the Basic Savings Account, not via cash at sub-post offices.
+
+
+
+Q72. What will be the TDS threshold limit for MSSC for individuals other than senior citizens from the financial year 2025-26?
+A. Rs. 40,000
+B. Rs. 50,000
+C. Rs. 1,00,000
+D. Rs. 2,00,000
+Answer: B
+Explanation: The TDS threshold limit for "Others" (non-senior citizens) for MSSC is revised from Rs. 40,000 in 2024-25 to Rs. 50,000 from 2025-26.
+
+Q73. When an account holder under the PM CARES scheme turns 23, what is the consequence on interest?
+A. Interest increases by 1%.
+B. No interest shall be paid once the account holder attains the age of 23 years.
+C. It continues to earn MIS rates for another 5 years.
+D. It earns POSA interest rates.
+Answer: B
+Explanation: Under the PM CARES for Children Scheme 2021, no interest shall be paid once the account holder attains the age of 23 years.
+
+Q74. Consider the following statements regarding Mahila Samman Savings Certificate (MSSC):
+
+1. MSSC can be opened by a woman for herself.
+2. The scheme allows partial withdrawals without any time restriction.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: MSSC can be opened by a woman for herself. However, partial withdrawals are only permitted once after the expiry of one year from the date of opening.
+
+
+
+Q75. Under the PM CARES for Children Scheme, what is the specified "date of event" during which the children must have lost their parent(s) to COVID-19?
+A. 01.01.2020 to 31.12.2021
+B. 11.03.2020 to 28.02.2022
+C. 01.04.2020 to 31.03.2022
+D. 11.03.2020 to 31.12.2022
+Answer: B
+Explanation: The "date of event" means the period between 11.03.2020 to 28.02.2022 during which children lost their parents to the COVID-19 pandemic.
+
+Q76. Consider the following statements regarding the e-KYC (Aadhaar Authentication) processes introduced via SB Order 01/2025:
+
+1.A Single Type POSA can be opened via Aadhaar e-KYC without the physical presence of the customer if the account is opened by an MPKBY agent.
+
+2.For an Aadhaar Authenticated POSA withdrawal, no voucher (pay-in-slip) is required if the withdrawal amount is Rs. 5,000 or less.
+
+3.If a customer's Date of Birth is not fully fetched from UIDAI during e-KYC CIF creation, the system will prompt manual entry of the DOB to proceed.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Only statement 2 is correct. Statement 1 is incorrect because biometric authentication requires physical presence. Statement 3 is incorrect because if the full DOB is not received from UIDAI, the system throws an error and terminates the CIF creation process; manual entry is not allowed.
+
+Q77. Consider the following statements regarding 40% withdrawal from MSSC (SB Order 2A/2025):
+
+1. Withdrawal can be paid in cash within prescribed limits.
+2. Withdrawal can be paid via ECS to other bank accounts.
+3. Withdrawal is processed using the HCAACTD menu.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Under SB Order 2A/2025, MSSC withdrawals can be paid in cash, credit to POSA, Postmaster Cheque, or through ECS to other bank accounts. The withdrawal uses the HCAACTD menu.
+
+
+
+Q78. As per SB Order 03/2024, if a principal balance difference occurs due to fraud, how must the restoration of the principal amount be posted in Finacle?
+A. By adjusting the principal amount via the HIARM menu.
+B. By relaxing the back value date parameter and crediting the account directly.
+C. By executing a regular cash deposit using the CTM menu.
+D. By using the HACINT menu.
+Answer: B
+Explanation: The HIARM menu must strictly be used for interest adjustments only. Principal restorations must be done by relaxing the back value date parameter.
+
+Q79. Which office handles the accounting of TDS deductions under Section 194N and Section 194A on periodical interest credits w.e.f. 01.12.2025?
+A. The local Head Post Office
+B. Centralized Processing and Reconciliation Centre (CPRC), Chennai
+C. Nodal Office Sansad Marg HO
+D. Bengaluru GPO
+Answer: B
+Explanation: Per SB Order 16/2025, TDS deductions under Section 194N and periodical interest credits under 194A are accounted at CPRC, Chennai w.e.f. 01.12.2025.
+
+Q80. Consider the following statements regarding POSB accounting changes in APT 2.0 (SB Order 12/2025):
+
+1. All counter transactions are accounted at the Transaction SOL.
+2. ATM transactions and Internet Banking transactions are accounted at CPRC, Chennai.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Under APT 2.0, POSB counter transactions are accounted at the Transaction SOL, while channel transactions (ATM, e-banking) are accounted at CPRC, Chennai.
+
+
+
+Q81. Consider the following statements regarding the SOP to rectify non-migrated pre-CBS transactions (SB Order 15/2025):
+
+1. The SOP applies to all POSB schemes, including Time Deposits and NSC.
+2. The back value dated transaction must be approved by CPRC, Chennai.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: The SOP strictly applies only to POSA, PPF, and SSA accounts where the customer requests to continue the account, making statement 1 incorrect. The back value date parameter relaxation is approved by CPRC, Chennai.
+
+
+
+Q82. Consider the following statements regarding NSS-87 accounts (SB Order 07/2024):
+
+1. Balances in NSS-87 accounts shall bear zero percent interest from 1st October 2024.
+2. NSS-87 accounts opened before 02.04.1990 are exempt from the zero interest rule.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Per SB Order 07/2024, all balances in NSS-87 and NSS-92 accounts bear no interest on or after 1st October 2024. There is no exemption based on opening date.
+
+
+
+Q83. An NRI extended a PPF account using Form H which did not ask for residency status. Under SB Order 05/2024, what interest rate will this account earn from 1st October 2024?
+A. Prevailing PPF rate
+B. POSA rate
+C. Zero percent rate of interest
+D. POSA rate plus 200 bps
+Answer: C
+Explanation: Such active NRI PPF accounts received POSA interest till 30th September 2024. From 1st October 2024, these accounts earn a zero percent rate of interest.
+
+Q84. Consider the following statements regarding regularization of two NSS-87 accounts opened prior to 02.04.1990:
+
+1. The first account gets the prevailing scheme rate.
+2. The second account gets the prevailing POSA rate plus 200 bps on the outstanding balance until 30 Sept 2024.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: For two NSS-87 accounts opened prior to 02.04.1990, the first gets the scheme rate and the second gets the POSA rate plus 200 bps till 30 Sept 2024.
+
+
+
+Q85. As per the amendment notified in SB Order 06/2023, what is the revised maximum investment limit in the Senior Citizen Savings Scheme (SCSS)?
+A. Rs. 15 lakh
+B. Rs. 20 lakh
+C. Rs. 25 lakh
+D. Rs. 30 lakh
+Answer: D
+Explanation: SB Order 06/2023 revised the maximum limit for investment in the Senior Citizen Savings Scheme from fifteen lakh to thirty lakh rupees.
+
+Q86. Consider the following statements regarding the maximum deposit limit for the Monthly Income Account Scheme (MIS) updated in SB Order 07/2023:
+
+1. The single account limit was revised to Rs. 9 lakh.
+2. The joint account limit was revised to Rs. 15 lakh.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: The National Savings (Monthly Income Account) Scheme was amended to revise the maximum limit from 4.5 lakh to 9 lakh for single accounts, and from 9 lakh to 15 lakh for joint accounts.
+
+
+
+Q87. Consider the following statements regarding the withdrawal of Rs. 2000 denomination notes (SB Order 11/2023):
+
+1. Post offices were instructed not to accept Rs. 2000 notes for exchange, but could accept them for postal transactions.
+2. ATMs were allowed to continue dispensing Rs. 2000 notes until stock depletion.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: ATMs were strictly instructed not to be replenished with Rs. 2000 notes and existing ones were to be replaced, making statement 2 incorrect. Statement 1 is correct.
+
+
+
+Q88. An account holder wishes to close their Senior Citizen Savings Scheme (SCSS) account via DOP Internet Banking. When was this facility introduced?
+A. 17.08.2024
+B. 20.04.2024
+C. 01.04.2023
+D. Closure via Internet Banking is prohibited.
+Answer: A
+Explanation: SB Order 06/2024 introduced the facility for the closure and extension of SCSS accounts through DOP Internet Banking effective from 17.08.2024.
+
+Q89. Consider the following statements regarding Aadhaar submission rules (SB Order 08/2023):
+
+1. If an individual does not have Aadhaar, they must furnish proof of application of enrollment.
+2. The depositor must submit the Aadhaar number within six months, failing which the account ceases to be operational.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: The amended rules require proof of Aadhaar enrollment if unassigned, and mandatory submission within six months to keep the account operational.
+
+
+
+Q90. What is the TDS threshold limit on interest income for non-senior citizens under SCSS and MSSC for the FY 2023-24 (SB Order 13/2023)?
+A. Rs. 20,000
+B. Rs. 40,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: B
+Explanation: The TDS threshold limit for payees other than senior citizens under SCSS and MSSC schemes for the FY 2023-24 was Rs. 40,000.
+
+Q91. Consider the following statements regarding freezing of matured accounts (SB Order 10/2025):
+
+1. The freezing applies to MIS, SCSS, TD, KVP, NSC, RD, and PPF accounts matured but not closed after 3 years.
+2. The freezing activity is conducted once a year on 1st July.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Freezing applies to the listed accounts matured and not closed after 3 years. However, the activity is conducted twice a year (commencing 1st July and 1st January), making statement 2 incorrect.
+
+
+
+Q92. Under the online PAN verification functionality (SB Order 02/2024), what must the Counter PA do if the PAN status from Protean is 'E' (Existing and Valid) but the Date of Birth status is 'N' (Not Matched)?
+A. Accept the PAN after obtaining a self-declaration.
+B. Send the physical PAN copy to the Income Tax Department.
+C. The PAN shall not be accepted as a valid PAN.
+D. Accept the PAN but mark the account as high risk.
+Answer: C
+Explanation: If the PAN status is 'E' but the Date of Birth or Name status is 'N - Not Matched', the PAN shall not be accepted as a valid PAN.
+
+Q93. Consider the following statements regarding Aadhaar Authenticated Transactions in POSA (SB Order 01/2025):
+
+1. A pay-in-slip is not required for any amount of deposit.
+2. A paper withdrawal form is required for Aadhaar authenticated withdrawals exceeding Rs. 5,000.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: No voucher is collected for any deposit, and none for withdrawals up to Rs. 5,000 via Aadhaar Authentication. Withdrawals over Rs. 5,000 currently require a paper-based form.
+
+
+
+Q94. A claimant approaches a Post Office for a deceased claim settlement with a valid nomination. What is the prescribed timeline for settlement?
+A. One working day
+B. Three working days
+C. Seven working days
+D. Thirty working days
+Answer: A
+Explanation: Post offices must settle deceased claim cases within one working day where a nomination exists, and seven working days in other cases.
+
+Q95. Consider the following statements regarding the terminology change per SB Order 11/2025:
+
+1. The term "persons with unsound mind" has been replaced.
+2. The new accepted terminology is "Persons with mental illness or intellectual disability".
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: To address depositors appropriately, "persons with unsound mind" is replaced with "Persons with mental illness or intellectual disability" across all forms, stationery, and software.
+
+
+
+Q96. What is the revised rate of Tax Deduction at Source (TDS) for Agent's Commission under Section 194H w.e.f. 01.10.2024 (SB Order 09/2024)?
+A. 1%
+B. 2%
+C. 5%
+D. 10%
+Answer: B
+Explanation: The TDS rate for Agent's Commission under Section 194H of the Income Tax Act was reduced from 5% to 2% with effect from 01.10.2024.
+
+Q97. Consider the following statements regarding the Jan Suraksha Schemes (JSS):
+
+1. Nodal operations for PMSBY, PMJJBY, and APY shifted to CPRC, Chennai w.e.f. 01.09.2025.
+2. Claim forms must now be directly sent by customers to CPRC, Chennai.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Nodal operations shifted to CPRC, Chennai. However, claim forms must be submitted to the CPRC through the Divisional Head concerned, not directly by customers.
+
+
+
+Q98. Consider the following statements regarding the revised APY Subscriber Registration Form (SB Order 13/2025):
+
+1. It incorporates a mandatory FATCA/CRS declaration.
+2. Subscribers choosing 'Yes' for US Person status can still be enrolled through the POSA channel if they provide a TIN.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: The form has a mandatory FATCA/CRS declaration. Any subscriber selecting 'Yes' for FATCA/CRS (US Person etc.) cannot be enrolled through the POSA channel.
+
+
+
+Q99. After the suspension of ATM operations (SB Order on ATM Suspension), what limit was placed on manual withdrawals at Post Offices due to ATM non-functionality?
+A. Up to Rs. 20,000 per day
+B. Up to Rs. 25,000 per transaction
+C. Standard withdrawal rules apply without special restrictions.
+D. Withdrawals were completely halted.
+Answer: C
+Explanation: Customers were requested to visit the nearest Post Office for transactions due to ATM suspension, and POs were directed to ensure sufficient funds subject to the maximum standard limits.
+
+Q100. Consider the following statements regarding the premature closure of an NSC pledged to a nationalized bank (SB Order 03/2023):
+
+1. It is not permissible since banks are not Gazetted Officers.
+2. The DEA clarified that premature closure is permissible under paragraph 7(1) of the NSS Rules, 2019.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: The Department of Economic Affairs clarified that premature closure of an NSC pledged in favor of banks is permissible under paragraph 7(1) of the National Savings Scheme, 2019.
