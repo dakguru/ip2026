@@ -16,6 +16,30 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "19.06.2026",
+        items: [
+            {
+                title: "📚 MCQs: Postal Financial Handbook Volume II Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the MCQs for <strong>Postal Financial Handbook Volume II</strong> in the <strong>PS Group B</strong> course mode!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Postal Financial Handbook Volume II</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Replaced the existing questions with a fresh set of <strong>70 high-yield MCQs</strong>.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-amber-600 dark:text-amber-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Head to the Quiz section to test your knowledge!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "18.06.2026",
         items: [
             {
