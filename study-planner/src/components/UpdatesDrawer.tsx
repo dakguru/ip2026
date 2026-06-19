@@ -22,7 +22,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                 title: "📚 MCQs: Postal Financial Handbook Volume II Updated",
                 desc: (
                     <div className="space-y-4">
-                        <p>We have updated the MCQs for <strong>Postal Financial Handbook Volume II</strong> in the <strong>PS Group B</strong> course mode!</p>
+                        <p>We have updated the MCQs for <strong>Postal Financial Handbook Volume II</strong> for both <strong>LDCE IP</strong> and <strong>PS Group B</strong> course modes!</p>
                         
                         <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
                             <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
