@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import HomeHeader from '@/components/HomeHeader';
-import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check, Loader2 } from 'lucide-react';
+import { FileText, Download, Eye, BookOpen, Layers, Clock, Sparkles, Lock, Check, Loader2, Scale } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
@@ -21,6 +21,7 @@ import AppScreenWrapper from '@/components/AppScreenWrapper';
 import { ShieldAlert, Info } from 'lucide-react';
 import { App } from '@capacitor/app';
 import ConfirmExitModal from '@/components/ConfirmExitModal';
+import LegalNoticeModal from '@/components/LegalNoticeModal';
 
 // --- DATA ---
 interface Note {
@@ -865,6 +866,7 @@ export default function NotesPage() {
     // Advisory Modal State
     const [showAdvisory, setShowAdvisory] = useState(false);
     const [showAccuracyAdvisory, setShowAccuracyAdvisory] = useState(false);
+    const [showLegalNotice, setShowLegalNotice] = useState(false);
     const [advisoryAgreed, setAdvisoryAgreed] = useState(false);
     const [pendingAction, setPendingAction] = useState<{ type: 'view' | 'download', url: string, title: string, filename?: string } | null>(null);
 
@@ -872,14 +874,16 @@ export default function NotesPage() {
     const selectedPdfRef = useRef(selectedPdf);
     const showAdvisoryRef = useRef(showAdvisory);
     const showAccuracyAdvisoryRef = useRef(showAccuracyAdvisory);
+    const showLegalNoticeRef = useRef(showLegalNotice);
     const showExitConfirmRef = useRef(showExitConfirm);
 
     useEffect(() => {
         selectedPdfRef.current = selectedPdf;
         showAdvisoryRef.current = showAdvisory;
         showAccuracyAdvisoryRef.current = showAccuracyAdvisory;
+        showLegalNoticeRef.current = showLegalNotice;
         showExitConfirmRef.current = showExitConfirm;
-    }, [selectedPdf, showAdvisory, showAccuracyAdvisory, showExitConfirm]);
+    }, [selectedPdf, showAdvisory, showAccuracyAdvisory, showLegalNotice, showExitConfirm]);
 
     useEffect(() => {
         if (!Capacitor.isNativePlatform()) return;
@@ -889,9 +893,10 @@ export default function NotesPage() {
                 setShowExitConfirm(false);
             } else if (selectedPdfRef.current) {
                 setShowExitConfirm(true);
-            } else if (showAdvisoryRef.current || showAccuracyAdvisoryRef.current) {
+            } else if (showAdvisoryRef.current || showAccuracyAdvisoryRef.current || showLegalNoticeRef.current) {
                 setShowAdvisory(false);
                 setShowAccuracyAdvisory(false);
+                setShowLegalNotice(false);
             } else {
                 if (data.canGoBack) {
                     window.history.back();
@@ -1111,6 +1116,14 @@ export default function NotesPage() {
                             className="text-white/60 hover:text-white text-xs underline decoration-white/30 underline-offset-4 transition-colors font-medium"
                         >
                             Accuracy & Reference Advisory
+                        </button>
+                        <span className="text-white/30 mx-1.5">·</span>
+                        <button
+                            onClick={() => setShowLegalNotice(true)}
+                            className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs underline decoration-white/30 underline-offset-4 transition-colors font-medium"
+                        >
+                            <Scale className="w-3 h-3" />
+                            Legal Notice, Copyright & Disclaimer
                         </button>
                     </div>
                 </div>
@@ -1462,21 +1475,19 @@ export default function NotesPage() {
                             </div>
 
                             <div className="p-5 sm:p-6 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 shrink-0">
-                                <label className="flex items-start gap-3 cursor-pointer group mb-5 select-none">
-                                    <div className="relative flex items-center mt-0.5">
+                                <div className="flex items-start gap-3 cursor-pointer group mb-5 select-none">
+                                    <div className="relative flex items-center mt-0.5" onClick={() => setAdvisoryAgreed(!advisoryAgreed)}>
                                         <input
                                             type="checkbox"
                                             className="peer sr-only"
                                             checked={advisoryAgreed}
-                                            onChange={(e) => setAdvisoryAgreed(e.target.checked)}
+                                            readOnly
                                         />
                                         <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-zinc-300 rounded transition-colors peer-checked:bg-red-600 peer-checked:border-red-600 dark:border-zinc-600"></div>
                                         <Check className="absolute w-3.5 h-3.5 sm:w-4 sm:h-4 text-white left-1 top-0.5 sm:left-1 sm:top-1 opacity-0 peer-checked:opacity-100 transition-opacity" strokeWidth={3} />
                                     </div>
-                                    <span className="text-xs sm:text-sm font-medium text-zinc-700 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors leading-snug">
-                                        I have read the advisory and agree to use these materials ethically for my personal use only.
-                                    </span>
-                                </label>
+                                    <span className="text-[11px] sm:text-xs font-bold italic text-zinc-700 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors leading-relaxed text-left" onClick={() => setAdvisoryAgreed(!advisoryAgreed)}>I have read and understood the <button type="button" onClick={(e) => { e.stopPropagation(); setShowLegalNotice(true); }} className="inline text-[11px] sm:text-xs text-left text-red-600 dark:text-red-400 font-bold italic underline underline-offset-2 decoration-red-300 dark:decoration-red-700 hover:text-red-700 dark:hover:text-red-300 transition-colors">Legal Notice, Copyright, Source Acknowledgment and Disclaimer</button>.<br />I understand that the material is an independent and unofficial examination-preparation resource; that official sources shall prevail; and that my access is limited to personal, non-transferable study use.</span>
+                                </div>
 
                                 <div className="flex gap-3">
                                     <button
@@ -1537,6 +1548,13 @@ export default function NotesPage() {
                         </div>
                     </div>
                 )}
+                {/* --- LEGAL NOTICE MODAL --- */}
+                <LegalNoticeModal
+                    isOpen={showLegalNotice}
+                    onClose={() => setShowLegalNotice(false)}
+                    courseMode={course}
+                />
+
                 {/* --- DOWNLOAD TOAST --- */}
                 {showDownloadToast && (
                     <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[60] bg-zinc-900 dark:bg-zinc-800 dark:border dark:border-zinc-700 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 animate-in slide-in-from-bottom-5 fade-in duration-300">
