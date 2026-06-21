@@ -1,0 +1,1099 @@
+### NATIONAL SMALL SAVINGS SCHEMES & POSB REGULATORY MASTER COMPENDIUM
+
+#### Complete Question Bank (Q1 to Q125) — Text Document Format (Part 1 of 2)
+
+═══════════════════════════════════════════
+PART 1: SB Orders 2024–2025 (Administrative & Rate Revisions, Terminology, e-KYC)
+═══════════════════════════════════════════
+
+Q1. In respect of the 5 Years Recurring Deposit (RD) scheme, what is the prescribed compounding frequency for interest calculations?
+A. Annually
+B. Half-yearly
+C. Quarterly
+D. Monthly
+Correct Answer: C
+Explanation: Under the revised interest rates for Small Savings Schemes, the interest for a 5 Years Recurring Deposit is compounded on a quarterly basis.
+
+Q2. The maturity value of a Kisan Vikas Patra (KVP) account opened on or after 01.01.2026 will double in exactly —
+A. 113 months
+B. 115 months
+C. 118 months
+D. 120 months
+Correct Answer: B
+Explanation: The doubling period for Kisan Vikas Patra (KVP) investments is statutorily prescribed as 115 months for the specified period.
+
+Q3. With the establishment of the Centralized Processing & Reconciliation Centre (CPRC) at Chennai, which of the following Nodal Offices' POSB operations are being discontinued in a phased manner?
+A. Mumbai GPO and PAO Chennai
+B. Bengaluru GPO, PAO Delhi, and Sansad Marg HO
+C. Kolkata GPO and Sansad Marg HO
+D. Chennai GPO and PAO Delhi
+Correct Answer: B
+Explanation: The Nodal Office activities for POSB Operations previously carried out by Bengaluru GPO, PAO Delhi, and Sansad Marg HO stand discontinued as they are migrated entirely to CPRC, Chennai.
+
+Q4. Which of the following transactions is NOT centralized and accounted for at the CPRC, Chennai?
+A. Internet Banking & Mobile Banking Transactions
+B. Outward Debits through NEFT & RTGS at Post Offices
+C. ATM transactions including ATM charges and related GST
+D. APY/PMJJBY/PMSBY auto debit transactions
+Correct Answer: B
+Explanation: CPRC Chennai accounts for inward credits through NEFT & RTGS and outward debits through NEFT & RTGS strictly (other than at Post Offices), meaning transactions initiated physically at the Post Office counter are not accounted there.
+
+Q5. Consider the following statements regarding the accounting of POSB transactions at CPRC, Chennai:
+
+1. TDS deductions under Section 194N and 194A of the Income Tax Act are accounted at CPRC.
+2. Interest corrections (HIARM entries) are processed and accounted at CPRC.
+3. Transactions between PLI & POSB (Credits and Debits) are handled by CPRC.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: D
+Explanation: All three statements are correct. CPRC Chennai is designated to account for TDS deductions, HIARM interest corrections, and PLI-POSB transactions to centralize the reconciliation process.
+
+
+
+Q6. In official POSB Scheme documentation, the terminology "Person with unsound mind" has been explicitly replaced with which of the following phrases?
+A. Person with cognitive impairment
+B. Person with mental illness or intellectual disability
+C. Person requiring special guardianship
+D. Person with developmental disability
+Correct Answer: B
+Explanation: The updated terminology to be used across all POSB Schemes is "Person with mental illness or intellectual disability," replacing outdated phrasing.
+
+Q7. Under Section 194-A of the Income Tax Act, the TDS threshold limit for Senior Citizens (individuals resident in India aged 60 years or more) for the financial year 2025-26 has been revised to —
+A. Rs. 40,000
+B. Rs. 50,000
+C. Rs. 75,000
+D. Rs. 1,00,000
+Correct Answer: D
+Explanation: The threshold limit for Senior Citizens under Sec 194-A is enhanced from Rs. 50,000 to Rs. 1 Lakh starting from the financial year 2025-26.
+
+Q8. For payees other than Senior Citizens, what is the threshold limit for TDS deduction under Section 194-A of the IT Act from the financial year 2025-26?
+A. Rs. 40,000
+B. Rs. 50,000
+C. Rs. 60,000
+D. Rs. 1,00,000
+Correct Answer: B
+Explanation: For "Others" (non-senior citizens), the Sec 194-A threshold limit has been increased from Rs. 40,000 to Rs. 50,000 from the 2025-26 financial year.
+
+Q9. In accordance with Section 194-H of the Income Tax Act, the applicable rate of TDS deducted at source from the commission paid to POSB agents with effect from 1st October 2024 is —
+A. 1%
+B. 2%
+C. 5%
+D. 10%
+Correct Answer: B
+Explanation: The rate of tax deducted at source on commission paid to POSB agents was revised downward to 2% (from the previous 5%) effective October 1, 2024.
+
+Q10. What is the threshold limit for the deduction of TDS on POSB Agent Commission under Section 194-H for the financial year 2025-26?
+A. Rs. 10,000
+B. Rs. 15,000
+C. Rs. 20,000
+D. Rs. 50,000
+Correct Answer: C
+Explanation: The threshold limit for agent commission TDS (Sec 194-H) is revised to Rs. 20,000 (up from Rs. 15,000) for the financial year 2025-26.
+
+Q11. Under the phased rollout of paperless transactions through the Aadhaar Based Authentication Process (e-KYC), Phase I is restricted exclusively to the opening of —
+A. All types of Post Office Savings Accounts (POSA)
+B. Single (Adult) POSA only
+C. Joint A and Joint B POSA
+D. POSA and 1-Year Time Deposits
+Correct Answer: B
+Explanation: Phase I of the e-KYC rollout is limited strictly to POSA, and specifically only for the New Account Opening of Single (Adult) accounts.
+
+Q12. What is the maximum transaction limit up to which no pay-in-slip or withdrawal form is required, and supervisor verification is bypassed, when a transaction is created through Aadhaar Authentication?
+A. Rs. 2,000
+B. Rs. 5,000
+C. Rs. 10,000
+D. Rs. 20,000
+Correct Answer: B
+Explanation: For deposits and withdrawals up to Rs. 5,000 created via Aadhaar Authentication, no paper form is required and supervisor verification is waived, ensuring rapid processing.
+
+Q13. In Finacle CBS, which menu must be invoked for the creation of an e-KYC CIF and for changing an existing CIF to an e-KYC CIF through the Re-KYC process?
+A. ECMRC
+B. ECCRC
+C. CASBAO
+D. CTM
+Correct Answer: B
+Explanation: The ECCRC menu is specifically designated for e-KYC CIF Creation and changing an existing CIF to e-KYC through Re-KYC.
+
+Q14. When mandatory data is fetched through Aadhaar Authentication during e-KYC, which of the following fields remains editable by the operating staff?
+A. Date of Birth
+B. Gender
+C. Name of Customer
+D. C/o Father/Husband Name
+Correct Answer: D
+Explanation: While Name, Date of Birth, Gender, and Address with Pin Code are locked and non-editable because they are hard-fetched from UIDAI, the C/o Father/Husband Name can be modified or corrected.
+
+Q15. Consider the following statements regarding the SOP for CBS e-KYC:
+
+1. In Phase II, the e-KYC process is extended to MIS, TD, NSC, KVP, RD, and PPF.
+2. The system automatically displays the full 12-digit Aadhaar number for the e-KYC CIF in the CICD menu.
+3. If the Aadhaar number is not masked on the e-KYC form or Aadhaar copy, it must be struck out using a black pen by the Post Office/CPC.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect because Finacle displays a masked Aadhaar (XXXX-XXXX-1234) for e-KYC CIFs to comply with privacy rules, not the full number.
+
+
+
+═══════════════════════════════════════════
+PART 2: SB Orders 2023–2024 (Internet Banking, NSS Interest, & Statutory KYC)
+═══════════════════════════════════════════
+
+Q16. The balances at the credit of a subscriber in the National Savings Scheme (NSS-87 & NSS-92) shall bear no interest on or after —
+A. 01st April 2024
+B. 31st March 2024
+C. 01st October 2024
+D. 31st December 2024
+Correct Answer: C
+Explanation: As per statutory orders, all balances residing in NSS-87 and NSS-92 accounts cease to earn any interest effective 01st October 2024.
+
+Q17. Which of the following Small Savings Schemes can be opened through DOP Internet Banking but CANNOT be closed through the same platform?
+A. Public Provident Fund (PPF)
+B. Senior Citizen Savings Scheme (SCSS)
+C. National Savings Certificate (NSC)
+D. Mahila Samman Savings Certificate (MSSC)
+Correct Answer: D
+Explanation: While the opening of Mahila Samman Savings Certificate (MSSC) accounts is permitted via DOP Internet Banking, the facility for closure through this digital channel is not provided.
+
+Q18. Consider the following statements regarding the operation of POSB schemes via DOP Internet Banking:
+
+1. Monthly Income Scheme (MIS) accounts can be both opened and closed via Internet Banking.
+2. The extension of SCSS accounts is permitted through Internet Banking.
+3. The premature or maturity closure of MSSC is allowed through Internet Banking.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation: Statements 1 and 2 are correct. MIS accounts can be closed online (w.e.f. 20.04.2024), and SCSS extension is allowed (w.e.f. 17.08.2024). Statement 3 is incorrect because the closure of MSSC is not supported via Internet Banking.
+
+
+
+Q19. Under the Government Savings Promotion General (Amendment) Rules, 2023, if an individual opens an account without submitting an Aadhaar number, within what maximum period from the date of opening must the Aadhaar be submitted to the Account office?
+A. One month
+B. Two months
+C. Three months
+D. Six months
+Correct Answer: D
+Explanation: Statutory rules require the Aadhaar number or enrolment slip to be furnished at the time of opening. If not, it must strictly be submitted within six months from the date of opening.
+
+Q20. An individual who has not submitted a PAN at the time of opening a POSB account must submit the same within a period of two months if the balance in the account at any point in time exceeds —
+A. Rs. 40,000
+B. Rs. 50,000
+C. Rs. 1,00,000
+D. Rs. 2,00,000
+Correct Answer: B
+Explanation: A threshold trigger for mandatory PAN or Form 60 submission within two months is when the account balance exceeds Rs. 50,000 at any point.
+
+Q21. The submission of a PAN or Form 60 becomes mandatory within two months if the aggregate of all withdrawals and transfers from a POSB account in a single month exceeds —
+A. Rs. 10,000
+B. Rs. 20,000
+C. Rs. 25,000
+D. Rs. 50,000
+Correct Answer: A
+Explanation: Another statutory trigger requiring PAN submission within two months is when the aggregate of all withdrawals and transfers in a single month surpasses Rs. 10,000.
+
+Q22. What is the administrative consequence if a depositor fails to submit the mandatory PAN or Aadhaar document within the specified grace period?
+A. The account shall be permanently closed and funds transferred to SCWF.
+B. The account shall cease to be operational till the document is submitted.
+C. A penalty of Rs. 50 per month shall be deducted from the balance.
+D. The interest rate shall be downgraded to the standard POSA rate.
+Correct Answer: B
+Explanation: Failure to submit Aadhaar (within six months) or PAN (within two months of trigger events) results in a freeze on operations; the account ceases to be operational until compliance is met.
+
+Q23. The maximum investment limit for a Joint Account under the National Savings (Monthly Income Account) Scheme, 2019 has been enhanced to —
+A. Rs. 9 lakh
+B. Rs. 12 lakh
+C. Rs. 15 lakh
+D. Rs. 30 lakh
+Correct Answer: C
+Explanation: The maximum deposit ceiling for a Joint MIS account was enhanced from Rs. 9 lakh to Rs. 15 lakh.
+
+Q24. What is the revised maximum investment limit for an individual in the Senior Citizen Savings Scheme (SCSS), 2019?
+A. Rs. 15 lakh
+B. Rs. 20 lakh
+C. Rs. 25 lakh
+D. Rs. 30 lakh
+Correct Answer: D
+Explanation: The maximum investment threshold for SCSS was revised upward from Rs. 15 lakh to Rs. 30 lakh.
+
+═══════════════════════════════════════════
+PART 3: Regularization & Operational SOPs (SB Order 05/2024 & Claims)
+═══════════════════════════════════════════
+
+Q25. For an irregular opening of two NSS-87 accounts PRIOR to the DG Post's Order dated 02.04.1990, the second account will earn interest at —
+A. The prevailing POSA rate
+B. The prevailing scheme rate
+C. The prevailing POSA rate plus 200 bps (2%)
+D. Zero percent interest
+Correct Answer: C
+Explanation: For two NSS-87 accounts opened prior to 02.04.1990, the first account gets the scheme rate, while the second account earns the prevailing POSA rate plus 200 bps (2%) on the outstanding balance, subject to ceiling limits.
+
+Q26. If a depositor holds two NSS-87 accounts opened AFTER 02.04.1990, what is the correct interest treatment for the second account?
+A. Prevailing POSA rate plus 200 bps
+B. Prevailing POSA rate on the outstanding balance
+C. Prevailing scheme rate
+D. No interest; principal refunded
+Correct Answer: B
+Explanation: For irregular multiple accounts opened after 02.04.1990, the penal regularization mandates that the second account will only earn the prevailing POSA rate without the 200 bps premium.
+
+Q27. In the case of an individual irregularly holding more than two NSS-87 accounts, what action is prescribed for the third or any subsequent accounts?
+A. They will earn the POSA rate.
+B. They will earn POSA rate minus 2%.
+C. No interest shall be paid and the principal amount shall be refunded.
+D. The balance shall be merged with the primary account.
+Correct Answer: C
+Explanation: For a third account or more irregular NSS-87 accounts, the rules explicitly dictate that no interest shall be paid and only the principal amount is refunded to the investor.
+
+Q28. When a Public Provident Fund (PPF) account is irregularly opened under the name of a minor, what rate of interest is applicable to the account until the individual attains 18 years of age?
+A. POSA interest rate
+B. PPF scheme interest rate
+C. Zero percent interest
+D. POSA rate plus 1%
+Correct Answer: A
+Explanation: Irregular PPF accounts opened for a minor earn only the POSA rate of interest until the individual attains majority (18 years), after which the applicable PPF interest rate is paid.
+
+Q29. An individual operates two PPF accounts. As per regularization guidelines, the balance in the second account is merged with the primary account. What happens to any excess balance in the second account that breaches the applicable investment ceiling?
+A. It earns the POSA rate of interest.
+B. It is carried forward to the next financial year's limit.
+C. It is refunded with a zero percent rate of interest.
+D. It is transferred to the Senior Citizen Welfare Fund.
+Correct Answer: C
+Explanation: Upon merging, if the combined funds exceed the primary account's applicable investment ceiling for the year, the excess balance from the second account is refunded with a zero percent rate of interest.
+
+Q30. Under what condition does an active NRI’s PPF account (where Form H did not specifically ask for residency status) start earning a zero percentage rate of interest?
+A. From the exact date the citizen became an NRI.
+B. On or after 01st October 2024.
+C. On or after the maturity of the initial 15-year block.
+D. Upon the total balance exceeding Rs. 15 Lakh.
+Correct Answer: B
+Explanation: For Indian citizens who became NRIs during the currency of the account (where Form H lacked residency questions), the POSA rate of interest is given until 30th September 2024, after which it drops to a zero percentage rate of interest.
+
+Q31. If more than two Sukanya Samriddhi Accounts (SSA) are opened in a family in violation of Para 3 of the Scheme guidelines, the irregular accounts shall be —
+A. Merged with the primary SSA account
+B. Regularized with POSA interest rate
+C. Allowed to continue without further deposits
+D. Closed by treating them as opened in contravention to scheme guidelines
+Correct Answer: D
+Explanation: Irregular SSAs exceeding the family limit (beyond two, barring valid twin exceptions) cannot be merged or regularized; they must be closed outright as contraventions of scheme guidelines.
+
+Q32. Consider the following statements regarding the regularization of a Sukanya Samriddhi Account (SSA) irregularly opened under the guardianship of grandparents (who are not legal guardians):
+
+1. The account must be immediately closed without interest.
+2. The guardianship shall be transferred to a natural guardian (alive parents) or Legal Guardian.
+3. The account will earn the POSA rate until the girl child attains 18 years of age.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. 1 and 3 only
+D. 2 and 3 only
+Correct Answer: B
+Explanation: Statement 2 is correct. The regularization process specifically dictates that guardianship must be transferred to a person entitled under the law (natural or legal guardian). The account is not closed or downgraded to POSA rate simply due to the original grandparent guardianship error.
+
+
+
+Q33. In Finacle CBS, which menu is exclusively used by the Supervisor SBCO for the adjustment of an interest entry after receiving an order for correction?
+A. HCCA
+B. HAALM
+C. HIARM
+D. HACINT
+Correct Answer: C
+Explanation: The HIARM menu is explicitly prescribed for the adjustment of interest entries. Following its execution, the CPC (CBS) uses HACINT.
+
+Q34. What is the financial sanctioning limit for a Head of Division or Group "A" Postmaster regarding the settlement of fraud-related claims, provided there has been no negligence on the part of the defrauded person?
+A. Up to Rs. 10,000
+B. Up to Rs. 25,000
+C. Up to Rs. 50,000
+D. Up to Rs. 1,00,000
+Correct Answer: B
+Explanation: A Head of Division or Group "A" Postmaster holds the delegated power to sanction claims up to Rs. 25,000 in each case, regardless of the aspect of recovery of loss, given no contributory negligence exists.
+
+Q35. As per the guidelines for the timely settlement of deceased claim cases in National Savings Schemes, a claim where a valid nomination exists must be settled within —
+A. One working day
+B. Three working days
+C. Seven working days
+D. Fifteen working days
+Correct Answer: A
+Explanation: Post offices are mandated to settle deceased claim cases where a valid nomination exists within a stringent timeline of one working day.
+
+Q36. A deceased claim case for an NSC account is submitted to a Sub Post Office. Which of the following procedural actions is STRICTLY PROHIBITED according to SB Order 01/2023?
+A. Verifying the claimant's KYC document with the original.
+B. Obtaining the claimant's PO Savings Account details for payment transfer.
+C. Issuing a separate sanction memo for the settlement of the claim.
+D. The SPM sanctioning the claim on the second part of Form-11.
+Correct Answer: C
+Explanation: The issuance of a separate sanction memo by a Sub Post Office/Head Post Office is explicitly prohibited to prevent delays. The SPM/PM must sanction the claim directly on the 'For Office Use Only' portion of Form-11.
+
+═══════════════════════════════════════════
+PART 4: Fraud Prevention, Facility SOPs, & SCWF Rules (2019-2022)
+═══════════════════════════════════════════
+
+Q37. Under the guidelines for Small Savings Schemes, accounts such as MIS, SCSS, TD, and KVP that have matured but remain unclosed are frozen to ensure depositor safety. What is the prescribed timeframe after maturity for this freeze to occur?
+A. After 1 year of maturity
+B. After 2 years of maturity
+C. After 3 years of maturity
+D. After 5 years of maturity
+Correct Answer: C
+Explanation: Accounts under specified schemes that have matured but are not closed after 3 years of maturity are frozen by the competent authority to ensure effective KYC compliance and fraud prevention.
+
+Q38. Small Savings Scheme accounts identified as inoperative (INOP) for more than 3 years, which originally matured on the 30th of June or 31st of December, will be systematically frozen on which of the following dates respectively?
+A. 1st July and 1st January
+B. 31st July and 31st January
+C. 1st April and 1st October
+D. 30th September and 31st March
+Correct Answer: A
+Explanation: Accounts matured on 30th June and 31st December but not closed after 3 years will be frozen on the 1st of July and the 1st of January of each year.
+
+Q39. Which of the following reason codes is exclusively used by the system when freezing an account that has been matured but unclosed for the prescribed 3-year period?
+A. SCWFR
+B. INOP
+C. FRZMAT
+D. KYCFR
+Correct Answer: B
+Explanation: The designated freeze reason code for accounts inoperative for more than 3 years post-maturity is 'INOP'.
+
+Q40. To prevent fraud and ensure smooth POSB operations, a single mobile number can be linked to a maximum of how many CIF IDs?
+A. 1 CIF
+B. 3 CIFs
+C. 5 CIFs
+D. 10 CIFs
+Correct Answer: C
+Explanation: A mobile number is restricted to being linked with a maximum of 5 CIFs through the CCRC/CMRC menu. Exceeding this limit triggers a system error.
+
+Q41. Before initiating any financial transaction at a CBS post office, the counter PA must invoke the CICD menu and update the mobile number if the transaction amount is of or exceeding —
+A. Rs. 10,000
+B. Rs. 20,000
+C. Rs. 40,000
+D. Rs. 50,000
+Correct Answer: B
+Explanation: For any transaction (deposit, withdrawal, loan, closure) of Rs. 20,000 and above, the mobile number must be checked and updated before initiation.
+
+Q42. The mandatory requirement to check and update the PAN of an account holder before initiating a financial transaction is triggered when the transaction amount reaches or exceeds —
+A. Rs. 20,000
+B. Rs. 25,000
+C. Rs. 49,999
+D. Rs. 50,000
+Correct Answer: D
+Explanation: If a financial transaction is Rs. 50,000 and above, the PAN must be checked and updated before initiating the transaction in the Finacle CBS.
+
+Q43. A transaction of Rs. 65,000 is presented at a counter. The counter PA notices the PAN is not updated in the account. What is the correct procedural action?
+A. Reject the transaction immediately and ask the customer to return with a newly issued PAN.
+B. Process the transaction but place a system lien on the account.
+C. Obtain the PAN on the voucher (SB-103/SB-7, etc.) from the account holder before initiating the transaction.
+D. Deduct a 20% penal TDS from the transaction amount.
+Correct Answer: C
+Explanation: If the PAN (or mobile number) is not updated for transactions above their respective thresholds, the counter PA must obtain it on the relevant voucher from the account holder/authorized person before processing.
+
+Q44. Which of the following correctly maps the authorized agent to the specific receipt book or card supplied to them for accepting investments?
+A. SAS Agents use ASLAAS-5 Cards; MPKBY Agents use AAR Books.
+B. SAS Agents use AAR Books; MPKBY Agents use ASLAAS-5 Cards.
+C. Both agents exclusively use the POSB CTS Cheque Books.
+D. MPKBY Agents use AAR Books; SAS Agents use PR-11 forms.
+Correct Answer: B
+Explanation: Authorized Agents Receipt (AAR) Books are utilized by SAS Agents, whereas ASLAAS-5 cards are exclusively used by MPKBY Agents for Recurring Deposit Scheme investments.
+
+Q45. Indents for POSB Cheque books from the Divisional Office must reach the identified Postal Store Depot (PSD) on or before which dates for the first and second half-yearly cycles, respectively?
+A. 15th January and 15th July
+B. 1st January and 1st July
+C. 1st April and 1st October
+D. 31st March and 30th September
+Correct Answer: B
+Explanation: The timeline for indenting POSB Cheque books requires the Divisional Office to submit indents by 1st January (first half-yearly) and 1st July (second half-yearly).
+
+Q46. Under the Senior Citizen Welfare Fund (SCWF) Rules 2016, an unextended Time Deposit (TD) account is identified as unclaimed and eligible for transfer to the fund after the expiry of what period?
+A. 5 years from the date of maturity
+B. 7 years from the date of maturity
+C. 10 years from the date of maturity
+D. 15 years from the date of maturity
+Correct Answer: C
+Explanation: For 1, 2, 3, 5 TD, MIS, NSC, KVP, and SSA accounts, the period defining them as unclaimed is 10 years from the date of maturity.
+
+Q47. For any Post Office Savings Account (POSA), what is the specific timeframe after which the balance is transferred to the SCWF?
+A. 10 years from the date of account opening
+B. 7 years from the date the account was treated as Silent
+C. 10 years from the date the account was treated as Silent
+D. 3 years from the date of the last transaction
+Correct Answer: B
+Explanation: A Savings Account is identified for the SCWF 7 years from the date it is treated as Silent, which functionally equates to 10 years from the last transaction financial year.
+
+Q48. The batch job designed to centrally mark unclaimed Small Savings Scheme accounts with the freeze code "SCWFR" is executed annually on —
+A. 31st March
+B. 30th June
+C. 30th September
+D. 31st December
+Correct Answer: C
+Explanation: To implement SCWF provisions, a central batch job marks unclaimed accounts with the freeze code "SCWFR" on 30th September every year.
+
+Q49. A customer approaches a Sub Post Office with a passbook frozen under the "SCWFR" code. What is the strictly mandated procedure for closing this unclaimed account?
+A. The Sub Postmaster unfreezes the account locally upon receipt of Aadhaar.
+B. The closure is exclusively performed at a Head Post Office after verification of the account holder's KYC and two witnesses.
+C. The account must be revived first by depositing Rs. 500, after which it can be closed at any CBS branch.
+D. The account cannot be closed, and the customer must apply directly to the Ministry of Finance.
+Correct Answer: B
+Explanation: Accounts frozen under "SCWFR" cannot be revived and are only allowed to be closed. This closure must strictly take place at a Head Post Office, requiring fresh self-attested KYC documents of the account holder and 2 witnesses.
+
+Q50. Consider the following statements regarding the handling of SCWFR-frozen accounts:
+
+1. "SCWFR" can be manually applied as a freeze code by any Postmaster if an account is dormant.
+2. The Head Postmaster must record "CLOSURE ALLOWED" under their dated signature on the Account Closure Form.
+3. Once unfreezing is verified by the HO Supervisor, the Counter PA enters the details in a manual "Register for Closure of Unclaimed Accounts/Certificates".
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation: Statements 2 and 3 outline the exact standard operating procedure at the Head Office for closing SCWF accounts. Statement 1 is incorrect because the rules explicitly state, "No post office shall use SCWFR as freeze code for freezing any account manually."
+
+
+
+═══════════════════════════════════════════
+PART 5: Scheme-Specific Rules (2019 Statutes & PM CARES)
+═══════════════════════════════════════════
+
+Q51. What is the prescribed account maintenance fee deducted on the last working day of each financial year if a Post Office Savings Account (POSA) holder fails to maintain the minimum balance of Rs. 500?
+A. Rs. 20/-
+B. Rs. 50/- (inclusive of GST)
+C. Rs. 100/- (exclusive of GST)
+D. Rs. 118/-
+Correct Answer: B
+Explanation: If the account holder fails to maintain the Rs. 500 minimum balance, an account maintenance fee of Rs. 50/- (inclusive of Goods and Service Tax) is deducted at the end of the financial year.
+
+Q52. For the purpose of calculating the 4.0% per annum interest on a Post Office Savings Account, the system considers the lowest balance at credit between —
+A. The close of the first day and the end of the month
+B. The close of the tenth day and the end of the month
+C. The close of the fifteenth day and the end of the month
+D. The average daily balance over the calendar month
+Correct Answer: B
+Explanation: Interest on POSA is calculated based on the lowest balance at the credit of an account between the close of the tenth day and the end of the month.
+
+Q53. What is the prescribed daily ATM cash withdrawal limit and the maximum cash withdrawal limit per transaction for DoP Debit cards?
+A. Daily: Rs. 10,000 | Per transaction: Rs. 5,000
+B. Daily: Rs. 20,000 | Per transaction: Rs. 10,000
+C. Daily: Rs. 25,000 | Per transaction: Rs. 10,000
+D. Daily: Rs. 50,000 | Per transaction: Rs. 25,000
+Correct Answer: C
+Explanation: The daily ATM cash withdrawal limit is capped at Rs. 25,000, with a per-transaction withdrawal limit of Rs. 10,000.
+
+Q54. An RD account becomes a "discontinued account" after how many defaults, and what is the prescribed revival fee per 100-rupee denomination?
+A. 3 defaults; Revival fee Rs. 10 per month
+B. 4 defaults; Revival fee Rs. 1 per month
+C. 5 defaults; Revival fee Rs. 5 per month
+D. 6 defaults; Revival fee Rs. 2 per month
+Correct Answer: B
+Explanation: If the defaults exceed 4, the account becomes discontinued. It can be revived within two months of the fourth default by paying a revival fee of Rs. 1 per month for every Rs. 100 defaulted instalment.
+
+Q55. An account holder of a 5-Year Recurring Deposit of Rs. 100 denomination makes 12 advance deposits in a single calendar month. What is the statutorily prescribed rebate for this transaction?
+A. Rs. 10
+B. Rs. 20
+C. Rs. 40
+D. Rs. 50
+Correct Answer: C
+Explanation: For a denomination of Rs. 100, depositing 6 advance instalments yields a rebate of Rs. 10, whereas depositing 12 advance instalments yields a rebate of Rs. 40.
+
+Q56. Under the Protected Savings Scheme for RD accounts, in the event of the death of the account holder, the payment of the full maturity value is restricted to a maximum account denomination of —
+A. Rs. 50
+B. Rs. 100
+C. Rs. 500
+D. Rs. 1000
+Correct Answer: B
+Explanation: To qualify for the payment of the full maturity value under the Protected Savings Scheme without completing all deposits, the benefit is strictly restricted to an account with a maximum denomination of Rs. 100.
+
+Q57. When is an RD account holder eligible to apply for a loan of up to 50% of the balance, and what is the required interest rate for repayment?
+A. After 6 months; POSA rate + 1%
+B. After 1 year (12 deposits); RD interest rate + 2%
+C. After 2 years (24 deposits); RD interest rate + 1%
+D. After 3 years (36 deposits); Fixed 10%
+Correct Answer: B
+Explanation: A loan up to 50% of the deposit is permitted after the account has been in operation for one year (12 deposits). It carries a simple interest rate of two percentage points over and above the RD interest rate applicable to the account.
+
+Q58. Within what period from the date of repayment must an account holder exercise the option to extend a 3-Year Time Deposit (TD) account to earn the scheme interest rate for the extended period?
+A. Six months
+B. Twelve months
+C. Eighteen months
+D. Twenty-four months
+Correct Answer: C
+Explanation: The option for extending a 3-Year (and 5-Year) Time Deposit must be exercised within eighteen months from the date of repayment. For a 1-Year TD, it is six months; for a 2-Year TD, it is twelve months.
+
+Q59. According to the Public Provident Fund (PPF) Scheme, 2019, an account holder may apply for a loan consisting of a sum not exceeding 25% of the balance at credit. During which specific timeframe is this loan facility available?
+A. From the 1st financial year up to the 3rd financial year
+B. From the 3rd financial year up to the 6th financial year
+C. From the 5th financial year up to the 10th financial year
+D. Any time before the 15th year maturity
+Correct Answer: B
+Explanation: A PPF loan can be taken at any time after the expiry of one year from the end of the year in which the initial subscription was made, but before the expiry of five years. This effectively means the loan facility is available from the 3rd financial year up to the 6th financial year.
+
+Q60. Any time after the expiry of five years from the end of the year in which a PPF account was opened (i.e., from the 7th financial year), the maximum permissible withdrawal is —
+A. 25% of the total balance at the time of application
+B. 50% of the amount standing to credit at the end of the fourth year immediately preceding the year of withdrawal, or at the end of the preceding year, whichever is lower
+C. 60% of the principal amount deposited to date
+D. 50% of the amount standing to credit at the end of the immediately preceding financial year only
+Correct Answer: B
+Explanation: Withdrawal is capped at 50% of the balance at the end of the fourth year immediately preceding the year of withdrawal, or at the end of the preceding year, whichever is LOWER.
+
+⏸ Continued in next response — currently on Part 5, Sub-Section [5.5], MCQ Q60. Coverage Map status: 14 of 24 nodes complete.
+
+#### Complete Question Bank (Q1 to Q125) — Text Document Format (Part 2 of 2)
+
+Q61. For a Sukanya Samriddhi Account (SSA), a withdrawal of up to a maximum of 50% of the account balance is allowed strictly for the purpose of the girl child's education. What is the statutory trigger for this withdrawal?
+A. The girl child has attained 15 years of age.
+B. The account has completed 10 years from the date of opening.
+C. The girl child has passed the 10th standard or attained the age of 18 years, whichever is earlier.
+D. The girl child is admitted to an undergraduate degree program.
+Correct Answer: C
+Explanation: Such educational withdrawal is allowed only after the account holder attains the age of eighteen years or has passed the tenth standard, whichever is earlier.
+
+Q62. Under the PM CARES for Children Scheme, 2021, the account operates as a joint account between the minor beneficiary and which designated authority?
+A. The Chief Postmaster General
+B. The District Magistrate
+C. The Nodal Officer of MoWCD
+D. The Sub-Divisional Magistrate
+Correct Answer: B
+Explanation: For beneficiaries below eighteen years, the account operates as a joint account between the account holder and the concerned District Magistrate.
+
+Q63. The upfront lumpsum contribution deposited into a PM CARES scheme account is calculated to ensure the corpus reaches exactly what amount when the account holder attains 18 years of age?
+A. Rs. 5 Lakhs
+B. Rs. 10 Lakhs
+C. Rs. 15 Lakhs
+D. Rs. 20 Lakhs
+Correct Answer: B
+Explanation: The age-based upfront contribution is designed and deposited such that it becomes exactly Rs. 10 Lakhs when the eligible beneficiary attains 18 years of age.
+
+Q64. Upon the PM CARES account holder attaining the age of 18 years, the Rs. 10 Lakh corpus becomes a single account. For the duration between 18 and 23 years of age, this corpus bears interest at the rate applicable to which POSB scheme?
+A. Senior Citizen Savings Scheme (SCSS)
+B. 5-Year Time Deposit (TD)
+C. National Savings (Monthly Income Account) Scheme, 2019
+D. Public Provident Fund (PPF)
+Correct Answer: C
+Explanation: Between the ages of 18 and 23, the single account corpus bears the rate of interest applicable to the National Savings (Monthly Income Account) Scheme, 2019, and operates as a monthly interest scheme.
+
+Q65. Consider the following statements regarding the PM CARES for Children Scheme, 2021:
+
+1. Beneficiaries' funds from the Nodal Ministry are initially credited to a Basic Savings Account with zero balance.
+2. The PM CARES for Children Scheme account is opened by debiting this linked Basic Savings Account.
+3. Premature withdrawal or closure of the PM CARES account is freely allowed for educational purposes after the age of 15.
+Which of the above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2, and 3
+Correct Answer: A
+Explanation: Statements 1 and 2 correctly describe the mechanical flow of funds via Chennai GPO from the Basic Savings Account to the PM CARES account. Statement 3 is incorrect because the scheme explicitly states that "Premature withdrawal or closure of the account shall not be allowed."
+
+
+
+═══════════════════════════════════════════
+PART 6: Advanced Technical Configurations, GDS Incentives, and Transaction Fees
+═══════════════════════════════════════════
+
+Q66. Under the amended procedural rules for POSB operations, an incentive is payable to a GDS Branch Postmaster (BPM) of a delivery office subject to which of the following conditions?
+A. The total monthly deposits in the BO must exceed Rs. 2 Lakhs.
+B. The address of any one of the depositors falls within the delivery jurisdiction of the respective GDS Post Office.
+C. The account must be opened exclusively through an interactive mobile application.
+D. The depositor must maintain an active standard savings account balance of at least Rs. 10,000.
+Correct Answer: B
+Explanation: For a GDS Branch Post Office operating as a delivery office, the incentive is payable if the address of at least one depositor falls within the delivery jurisdiction of that specific GDS Post Office.
+
+Q67. If a GDS Branch Post Office is a non-delivery office in account with a delivery post office, what condition must be satisfied for the BPM to receive an incentive?
+A. The depositor's address must fall within the delivery jurisdiction of the account office, provided it does not fall within the delivery jurisdiction of any other BO in account with the same account office.
+B. The depositor must physically execute all withdrawals at the Head Post Office.
+C. The transactions must be routed through an authorized SAS agent.
+D. The address of all joint holders must belong to the same municipal ward.
+Correct Answer: A
+Explanation: According to the updated SB rules, the incentive for a non-delivery BO linked to a delivery account office requires the depositor's address to fall within the delivery jurisdiction of the account office, ensuring it does not overlap with another BO under that same account office.
+
+Q68. For a GDS Branch Post Office operating as a non-delivery office in account with a non-delivery post office, the depositor's address must fall within:
+A. The delivery jurisdiction of the nearest transit mail office.
+B. The specific administrative district of the Head Post Office.
+C. The area covered by the pincode of the branch post office concerned, provided it does not fall within the delivery jurisdiction of any other BO having the same pincode.
+D. A 5-kilometer radius from the physical branch post office counter.
+Correct Answer: C
+Explanation: When both the BO and its account office are non-delivery offices, the eligibility is anchored to the area covered by the specific branch post office's pincode, barring any jurisdictional conflict with another BO using that same pincode.
+
+Q69. When an SCSS account holder who is less than 60 years old submits Form 15G, what is the required configuration to be made in the CIF level (CMRC menu) and the account level (CSCAM menu) to ensure no tax is deducted?
+A. CIF: TDSNS | Account: 15G or 15H
+B. CIF: TDSNR | Account: 15G or 15H
+C. CIF: NOPAN | Account: TDS
+D. CIF: TDSNR | Account: TDS
+Correct Answer: B
+Explanation: For an SCSS account holder under 60 years who files Form 15G, the correct technical configuration in Finacle is 'TDSNR' at the CIF level via CMRC, and '15G or 15H' at the account level via CSCAM.
+
+Q70. If an SCSS account holder is more than 60 years old, has not submitted Form 15H, and has provided an invalid or wrong PAN, what configuration applies, and what is the resulting TDS rate?
+A. CIF: TDSNS | Account: 15G or 15H | Rate: 10%
+B. CIF: NOPAN | Account: TDS | Rate: 10%
+C. CIF: NOPNS | Account: TDS | Rate: 20%
+D. CIF: TDSNS | Account: TDS | Rate: 20%
+Correct Answer: C
+Explanation: For senior citizens over 60 who fail to submit Form 15H and have no PAN/wrong PAN, the system must be configured with 'NOPNS' at the CIF level and 'TDS' at the account level, which automatically enforces a penal TDS rate of 20%.
+
+Q71. Under the automated rules for SCSS accounts, a 10% TDS rate is dynamically applied to a senior citizen (over 60 years) who has not submitted Form 15H under which condition?
+A. If the annual interest paid across all SCSS accounts of the holder exceeds Rs. 40,000.
+B. If the annual interest paid across all SCSS accounts of the holder exceeds Rs. 50,000.
+C. If the single account balance crosses Rs. 15 Lakhs.
+D. If the total interest paid in a financial year exceeds Rs. 1,00,000.
+Correct Answer: B
+Explanation: Tax deduction at source at the standard rate of 10% is triggered for senior citizen SCSS holders if the aggregate annual interest across all their SCSS accounts exceeds Rs. 50,000 in a financial year.
+
+Q72. Under Section 194N of the Income Tax Act, 1961, if an account holder has not filed their income tax returns for the preceding three years, what is the TDS rate for aggregate cash withdrawals between Rs. 20 Lakhs and Rs. 1 Crore?
+A. Nil
+B. 1%
+C. 2%
+D. 5%
+Correct Answer: C
+Explanation: For a non-ITR filer, cash withdrawals stretching from Rs. 20 Lakhs up to Rs. 1 Crore attract a mandatory 2% TDS rate at source.
+
+Q73. What is the maximum penal TDS rate applied under Section 194N for a non-ITR filer whose aggregate cash withdrawals cross Rs. 1 Crore in a financial year?
+A. 2%
+B. 3%
+C. 5%
+D. 10%
+Correct Answer: C
+Explanation: If a non-filer's aggregate cash withdrawals exceed the high threshold of Rs. 1 Crore, the applicable TDS rate scales up to 5%.
+
+Q74. For an account holder who is a regular ITR filer ("Other persons"), what is the TDS rate applied under Section 194N for aggregate cash withdrawals up to Rs. 1 Crore?
+A. Nil
+B. 1%
+C. 2%
+D. 5%
+Correct Answer: A
+Explanation: Regular tax filers enjoy a 'Nil' TDS threshold under Section 194N for all cash withdrawals up to Rs. 1 Crore within a single financial year.
+
+Q75. What are the formal service charges prescribed for a duplicate PIN regeneration through a post office branch and for a Debit Card replacement, respectively?
+A. Duplicate PIN: Free | Replacement: Rs. 100/- + GST
+B. Duplicate PIN: Rs. 20/- + GST | Replacement: Rs. 150/- + GST
+C. Duplicate PIN: Rs. 50/- + GST | Replacement: Rs. 300/- + GST
+D. Duplicate PIN: Rs. 100/- + GST | Replacement: Rs. 500/- + GST
+Correct Answer: C
+Explanation: As per the official POSB fee schedule, card replacement is priced at Rs. 300/- + GST, while a branch-assisted duplicate PIN regeneration costs Rs. 50/- + GST.
+
+Q76. The annual debit card maintenance charges of Rs. 125/- + GST and the annual SMS alert charges of Rs. 12/- (incl. GST) are systematically collected from cardholders at the end of each cycle on —
+A. 31st March
+B. 30th June
+C. 30th September
+D. 31st December
+Correct Answer: C
+Explanation: These annual debit card fees operate on a specific cycle running from 1st October to 30th September, with the system collecting the charges at the close of the cycle on 30th September.
+
+Q77. An illiterate depositor desires to open a Joint Post Office Savings Account. Which of the following digital/card configurations is structurally PERMISSIBLE?
+A. The illiterate depositor can avail of Internet Banking if a joint literate holder signs an indemnity.
+B. Joint "A" account type can be issued an ATM card under joint signatures.
+C. An ATM card can be issued to an illiterate or old depositor if an explicit request is received.
+D. A minor through a guardian can freely operate a standard DoP ATM card.
+Correct Answer: C
+Explanation: The rules explicitly clarify that an ATM Card can be issued to an illiterate or elderly depositor if such a specific request is received, whereas Joint A type accounts and minors/illiterate accounts are barred from internet banking.
+
+Q78. Under the PM CARES for Children Scheme, 2021, a child's age is calculated as 12 years and 9 months at the time of account processing. What is the exact upfront contribution required from the PM CARES Fund based on rounding rules?
+A. Rs. 6,44,360 (for 12 years)
+B. Rs. 6,93,330 (for 13 years)
+C. Rs. 7,46,030 (for 14 years)
+D. Rs. 10,00,000 (Flat corpus)
+Correct Answer: B
+Explanation: For the computation of the lump sum contribution under this scheme, any fractional year (months and days) is rounded off to the next complete year. Thus, 12 years 9 months is rounded to 13 years, requiring a contribution of Rs. 6,93,330.
+
+Q79. Which Finacle scheme codes are mapped for a PM CARES for Children account when the beneficiary is a minor versus when the beneficiary is 18 years or older on the date of account opening?
+A. Minor: PCMIS | Adult: PCFTD
+B. Minor: PCFTD | Adult: PCMIS
+C. Minor: POSA | Adult: MIS
+D. Minor: PCGEN | Adult: PCSIL
+Correct Answer: B
+Explanation: If the age of the beneficiary is a minor, the account is opened under the scheme code 'PCFTD' as a joint account with the DM. If the beneficiary is 18 years or older at opening, it uses scheme code 'PCMIS' as a single holder account.
+
+Q80. A beneficiary under a Government Welfare Scheme operates a Zero Balance "Basic Savings Account". To gain access to optional facilities like a Cheque Book or an ATM card, what condition must be fulfilled?
+A. The account holder must pay a one-time activation levy of Rs. 100.
+B. The account must maintain a minimum balance of Rs. 500 and be converted into a standard PO Savings Account.
+C. The account holder must provide a secondary commercial bank statement.
+D. The account must complete three full financial years as an active operational node.
+Correct Answer: B
+Explanation: While the Basic Savings Account is inherently a zero-balance account, upgrading it to enjoy standard commercial tools like cheque books or ATM cards requires maintaining a minimum balance of Rs. 500, which converts it structurally into a standard PO Savings Account.
+
+═══════════════════════════════════════════
+PART 7: Deceased Claims, Finacle Operations, Passbook Standards & Penalty Tariffs
+═══════════════════════════════════════════
+
+Q81. In cases where no nomination exists or no legal evidence is available, what is the revised sanction limit for a Sub-Postmaster of a Time Scale Departmental SO regarding deceased claims in National Savings Schemes?
+A. Rs. 10,000
+B. Rs. 25,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Correct Answer: C
+Explanation: For Time Scale SOs and LSG Post Offices, the limit for sanctioning deceased claims without legal evidence/nomination is Rs. 50,000, above which the cases are sent to the Divisional Office.
+
+Q82. Which of the following authorities is empowered to sanction a deceased claim of Rs. 3,50,000 where no nomination or legal evidence exists?
+A. Sub-Postmaster of a Higher Selection Grade (HSG) SO
+B. Senior Postmaster/Superintendent of Post Offices (Gazetted Group-B)
+C. Sub-Postmaster of a Time Scale SO
+D. Head Postman of the respective delivery office
+Correct Answer: B
+Explanation: Gazetted Group-B officers (Senior Postmasters, Deputy Chief Postmasters, SPOs) have a revised sanction limit up to Rs. 5,00,000 for cases lacking nomination or legal evidence.
+
+Q83. Under the guidelines for deceased claim settlements where a valid nomination exists, what is the maximum financial limit up to which a Chief Postmaster (Gazetted Group-A) can sanction the claim?
+A. Rs. 1,00,000
+B. Rs. 5,00,000
+C. Rs. 10,00,000
+D. No Limit
+Correct Answer: D
+Explanation: Where a clear, valid nomination or legal evidence exists, there is no financial limit for sanctioning across any authority level from Time Scale SOs to Chief Postmasters.
+
+Q84. If an indemnity bond accepting authority is not satisfied with the solvency of a surety during a claim settlement, the solvency may be ascertained through which of the following alternative methods?
+A. A self-declaration signed by a Gazetted Officer.
+B. The salary slip of the surety for the last 3 months, irrespective of employer.
+C. The annual income mentioned in the Income Tax Return (ITR) of the last financial year of the surety.
+D. The balance sheet of the surety's primary savings account.
+Correct Answer: C
+Explanation: The amended Rule 43(2)(vi) allows solvency to be ascertained via the surety's ITR of the last financial year, a revenue authority solvency certificate, or salary spanning 12 months (excluding allowances) for government/PSU employees.
+
+Q85. What is the prescribed physical structure of the SB-5A passbook used for Time Deposit (TD), KVP, and NSC accounts in CBS and non-CBS Post Offices?
+A. 12 pages + Cover page
+B. 8 pages + Cover page
+C. 4 pages + Cover page
+D. 2 pages + Cover page
+Correct Answer: C
+Explanation: The SB-5A passbook designed for 1/2/3/5 yr TD, KVP, and NSC consists of 4 pages plus a cover page. In contrast, the standard SB-5 passbook for SB/RD/MIS/SCSS/PPF/SSA comprises 12 pages plus a cover page.
+
+Q86. What is the prescribed fee for the issuance of a duplicate passbook for a KVP/NSC certificate that was originally issued on or after 01.07.2016?
+A. Rs. 10/- + GST
+B. Rs. 20/- + GST
+C. Rs. 50/- + GST
+D. Rs. 100/- + GST
+Correct Answer: C
+Explanation: For certificates issued in the shape of a Passbook on or after 01.07.2016, the fee for issuing a duplicate passbook is Rs. 50/- + GST. (Pre-2016 printed certificates incur a fee of Rs. 10/- + GST per registration).
+
+Q87. In the CBS environment, which menu must be invoked for adjusting interest during the premature closure of a PPF account or the deceased claim closure of an SCSS/SSA account?
+A. HAALM
+B. HCCA
+C. HINTTM
+D. HFINRPT
+Correct Answer: C
+Explanation: The HINTTM menu is explicitly prescribed for the adjustment of interest in specific scenarios like PPF premature closure, SCSS/SSA deceased claims, and adjusting excess deposits in MIS joint accounts.
+
+Q88. A customer presents a POSB cheque issued by a CBS Post Office at a different CBS Post Office for a cash withdrawal. What is the maximum daily limit up to which this cheque can be accepted for cash withdrawal?
+A. Rs. 20,000
+B. Rs. 25,000
+C. Rs. 50,000
+D. No limit
+Correct Answer: C
+Explanation: While POSB cheques can be accepted without limit for credit into POSB/RD/PPF/SSA accounts, they are strictly restricted to a maximum of Rs. 50,000 for cash withdrawals at Other SOLs in a single day.
+
+Q89. Which of the following transactions is explicitly EXCLUDED from the common List of Transactions (LOT) generated for Small Savings Schemes in CBS Post Offices?
+A. Cash deposits made at the counter
+B. Standing Instruction (SI) entries, such as automatic transfers from MIS to SB
+C. A single entry encompassing an MPKBY Agent's Lot
+D. Cheque deposits cleared within the same SOL
+Correct Answer: B
+Explanation: System-generated transactions like SI entries (automatic transfers from SB to RD or MIS/TD/SCSS to SB) are not included in the common LOT. Instead, SI failure reports are shared separately by CEPT.
+
+Q90. Under the SAS / MPKBY Agency System, an agent attempts to facilitate a new investment into a National Savings Scheme using a withdrawal form (SB-7). What is the correct procedural stance on this action?
+A. It is permitted if the withdrawal amount is less than Rs. 50,000.
+B. It is permitted only if accompanied by an ASLAAS-5 card.
+C. It is strictly not allowed; new investments under SAS agency rules are allowed only via Cash (up to Rs. 20,000) or Cheque.
+D. It is allowed exclusively for Senior Citizen Savings Scheme (SCSS) investments.
+Correct Answer: C
+Explanation: Post offices cannot accept new investments through a withdrawal form (SB-7) under the SAS/MPKBY Agency System. Agents may only use Cash (subject to limits) or Cheques for new business.
+
+Q91. When an ATM/POS transaction experiences a technical decline specifically attributable to the customer (e.g., lack of balance in the account), what charge is levied?
+A. Rs. 5/- + GST
+B. Rs. 10/- + GST
+C. Rs. 20/- + GST
+D. Rs. 50/- + GST
+Correct Answer: C
+Explanation: A charge of Rs. 20/- + GST is levied for ATM/POS technical declines attributable to the customer, such as insufficient funds.
+
+Q92. An account holder prematurely closes a 5-Year Time Deposit (TD) account after completing exactly 4 years and 2 months. According to the revised rules, what interest rate will be applied to the principal for the period the deposit was held?
+A. Prevailing POSA rate
+B. ROI of 1-Year TD minus 2%
+C. ROI of 3-Years TD
+D. ROI of 5-Years TD minus 1%
+Correct Answer: C
+Explanation: For a 5-Year TD closed after 4 years, the applicable interest rate paid on the principal is the ROI of the 3-Year TD.
+
+Q93. An MIS (Monthly Income Scheme) account is prematurely closed after the expiry of three years from its opening date. What is the statutory deduction applied to the principal amount?
+A. 1% of the deposit
+B. 1.5% of the deposit
+C. 2% of the deposit
+D. No deduction; only interest is adjusted
+Correct Answer: A
+Explanation: If an MIS account is closed after the expiry of 3 years, a penalty equating to 1% of the principal deposit is deducted before repayment.
+
+Q94. Under the Senior Citizen Savings Scheme (SCSS), if an account is closed prematurely after the expiry of one year but before the expiry of two years, what deduction is made from the principal?
+A. 1% of the deposit
+B. 1.5% of the deposit
+C. 2% of the deposit
+D. The entire interest paid is recovered
+Correct Answer: B
+Explanation: SCSS rules specify that if closed between 1 and 2 years, 1.5% of the deposit is deducted. If closed before 1 year, the interest paid is recovered. If closed after 2 years, 1% is deducted.
+
+Q95. Consider the following statements regarding the Mahila Samman Savings Certificate (MSSC), 2023:
+
+1. The scheme is covered under the MPKBY/SAS agency for commission purposes.
+2. The investment qualifies for a rebate under Section 80C of the Income Tax Act.
+3. Premature closure permitted for reasons other than death/extreme compassion (after 6 months) results in an interest rate of 5.5%.
+Which of the statements given above is/are NOT correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation: Statements 1 and 2 are incorrect. The MSSC is NOT covered under the MPKBY/SAS agency, and the investment does NOT qualify for Section 80C rebates. Statement 3 is correct: a 2% penalty drops the 7.5% rate to 5.5%.
+
+
+
+═══════════════════════════════════════════
+PART 8: Advanced Operational Limits, Account Transfers & Scheme Extensions
+═══════════════════════════════════════════
+
+Q96. To regulate cash handling at GDS Branch Post Offices, the competent authority has capped the maximum cash deposit transaction limit per account in a single day at —
+A. Rs. 20,000
+B. Rs. 25,000
+C. Rs. 49,999
+D. Rs. 50,000
+Correct Answer: D
+Explanation: According to revised operating procedures, no Branch Postmaster (BPM) is permitted to accept a cash deposit transaction exceeding Rs. 50,000 in an account in a single day.
+
+Q97. What is the enhanced limit for cash withdrawals per individual at GDS Branch Post Offices that can be executed without obtaining prior sanction or approval from the respective Account Office?
+A. Rs. 5,000
+B. Rs. 10,000
+C. Rs. 20,000
+D. Rs. 25,000
+Correct Answer: C
+Explanation: The competent authority enhanced the withdrawal limit at BOs from the previous Rs. 5,000 to Rs. 20,000 per individual without requiring Account Office sanction.
+
+Q98. The BO settlement account (SOL-ID+0339) in all CBS Post offices was systematically blocked with effect from 1st August 2021. Following this restriction, where must BOs attached to CBS Post offices exclusively perform their POSB transactions?
+A. Through manual ledger entries verified by the Account Office.
+B. Using the RICT CBS application only.
+C. Exclusively through the Finacle web portal.
+D. By generating a physical daily consolidated journal for the HO.
+Correct Answer: B
+Explanation: To restrict manual POSB transactions, the settlement account was blocked, mandating that all BOs must perform POSB transactions exclusively within the RICT CBS application.
+
+Q99. Which of the following statements correctly describes the minimum balance requirement and account holding permissions for a "Basic Savings Account" opened by a beneficiary of a Government Welfare Scheme?
+A. The minimum balance is Rs. 500, and the holder cannot open any other savings account.
+B. The minimum balance is Nil, but the holder is strictly prohibited from holding a standard POSA Single account.
+C. The minimum balance is Nil, and the individual may open a standard PO Savings Single Account in addition to the Basic Savings Account.
+D. The minimum balance is Rs. 50, and the account must be closed once welfare benefits cease.
+Correct Answer: C
+Explanation: A Basic Savings Account can be opened with a zero (Nil) balance. Furthermore, an individual is explicitly permitted to open a PO Savings Single Account in addition to their Basic Savings Account (and vice versa).
+
+Q100. If an account holder wishes to execute a direct re-investment of the maturity value of a National Savings Scheme without routing it through an agent, they must submit the account closure form (SB-7A) along with —
+A. The passbook and a fresh account opening form (Form-1) only.
+B. The passbook and a withdrawal form (SB-7) or POSB cheque.
+C. An ASLAAS-5 card and a cash deposit slip.
+D. The original certificate and an indemnity bond.
+Correct Answer: B
+Explanation: For direct re-investment, the account holder must submit the matured account's closure form (SB-7A), the passbook, and a withdrawal form (SB-7) or POSB cheque of their Post Office Savings Account.
+
+Q101. In the context of transferring an account of National Small Savings Schemes (such as a PPF or NSC), which office is exclusively authorized to perform the actual account transfer process in the system?
+A. Any CBS-enabled Sub Post Office.
+B. Only the Sub Post Office where the account currently stands.
+C. The Head Post Office (HPO) only.
+D. The Circle Processing Centre (CPC) at the Regional level.
+Correct Answer: C
+Explanation: The transfer of an account must be executed by the HPO only. Even if the application is received at an SO, it must be routed through the account bag to the respective HPO for processing.
+
+Q102. An account holder wishes to extend their Public Provident Fund (PPF) account with deposits after the initial 15-year maturity. What is the prescribed block period for this extension, and which form must be submitted?
+A. 3 years; Form-1
+B. 5 years; SB-EXT1
+C. 5 years; SB-7A
+D. 10 years; SB-103
+Correct Answer: B
+Explanation: A PPF account can be extended with deposits for a further block period of five years by applying to the accounts office using form SB-EXT1.
+
+Q103. If a PPF account holder fails to submit the option to continue the account with deposits within one year from the date of maturity but continues to make deposits, how are these fresh deposits treated?
+A. They are accepted but do not qualify for Section 80C deductions.
+B. They are held in a suspense account until the form is submitted.
+C. They are treated as irregular and refunded immediately without any interest.
+D. They automatically trigger a 5-year block extension with a penal fee.
+Correct Answer: C
+Explanation: If the option for extension is not given within one year of maturity, any subsequent deposits are treated as irregular and must be refunded by the accounts office immediately without earning any interest.
+
+Q104. During an extended 5-year block period of a PPF account (with deposits), what is the maximum permissible limit for partial withdrawals?
+A. 50% of the balance at credit at the end of the preceding financial year.
+B. 60% of the balance at credit at the commencement of the block period.
+C. 100% of the interest earned during the extended block.
+D. Only one withdrawal per year up to Rs. 1,50,000.
+Correct Answer: B
+Explanation: During a 5-year extended block with deposits, the total withdrawal is capped at 60% of the balance that was at credit at the commencement of that specific block period.
+
+Q105. Premature closure of a PPF account is permitted on specific compassionate grounds (e.g., life-threatening disease). What is the mandatory minimum period the account must have been active before this facility can be utilized?
+A. Three years from the date of opening.
+B. Five years from the end of the year in which the account was opened.
+C. Seven years from the date of initial deposit.
+D. Ten years from the end of the year in which the account was opened.
+Correct Answer: B
+Explanation: A PPF account cannot be prematurely closed on any permissible grounds before the expiry of five years from the end of the year in which the account was opened.
+
+Q106. In the case of an NSC (VIII Issue) account, what amount is payable if the account is prematurely closed after the expiry of one year but before the expiry of three years from the date of deposit?
+A. Only the Principal amount is payable.
+B. The Principal amount along with the ROI of POSA is payable.
+C. The Principal amount along with the ROI of NSC is payable.
+D. The Principal amount minus a 2% penal deduction is payable.
+Correct Answer: B
+Explanation: If an NSC is closed after one year but before three years (under permitted exceptions like death or court order), the account holder/nominee is paid the principal amount along with interest calculated at the prevailing POSA rate.
+
+Q107. The standard "at any time" premature closure privilege for a Kisan Vikas Patra (KVP) account by the account holder without citing special circumstances (like death or court order) is available only after the expiry of what period from the date of opening?
+A. 1 year
+B. 2 years and 6 months
+C. 3 years
+D. 5 years
+Correct Answer: B
+Explanation: While closure due to exceptions (e.g., death of a holder) can occur "at any time," a standard voluntary premature closure by the account holder is only permitted after the expiry of two years and six months from the date of opening.
+
+Q108. Consider the following statements regarding the premature closure rules of Small Savings Schemes:
+
+1. An NSC closed before the expiry of one year yields only the principal amount without any interest.
+2. An MIS account closed before the expiry of one year requires a 2% deduction from the principal.
+3. In the event of a valid premature closure of a PPF account (after 5 years), the interest is recalculated at a rate lower by 1% than the rate originally credited.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2, and 3
+Correct Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect because an MIS account cannot be prematurely closed at all before the expiry of one year from the date of opening; the 2% deduction applies only for closures between 1 and 3 years.
+
+
+
+Q109. The closure of an SSA account before its standard 21-year maturity is permitted for the intended marriage of the account holder. This closure is allowed strictly within which of the following time windows?
+A. Not before 6 months from the intended marriage, or after 6 months from the marriage.
+B. Not before 1 month from the date of intended marriage, or after 3 months from the date of marriage.
+C. Anytime within the financial year the marriage takes place.
+D. Exactly on the date the account holder turns 18 years of age.
+Correct Answer: B
+Explanation: For the reason of intended marriage, closure is permitted provided it is not requested before 1 month from the date of the intended marriage or after 3 months from the date of marriage.
+
+Q110. To facilitate an SSA premature closure due to intended marriage, the account holder must furnish a declaration signed on non-judicial stamp paper attested by a notary. What critical fact must this declaration establish?
+A. That the account holder has passed the 10th standard.
+B. That the funds will be exclusively used for wedding expenses.
+C. That the applicant will not be less than eighteen years of age on the date of marriage.
+D. That no partial withdrawal has been made in the preceding 5 years.
+Correct Answer: C
+Explanation: The declaration, supported by proof of age, must explicitly confirm that the account holder will not be less than eighteen years of age on the date of the intended marriage.
+
+═══════════════════════════════════════════
+PART 9: Deep-Dive on Joint Accounts, Minors, and Statutory Calculation Anchors
+═══════════════════════════════════════════
+
+Q111. Under the National Savings (Monthly Income Account) Scheme, 2019, if a joint account is opened and operated by three adults, how is each individual holder's share calculated to determine the maximum deposit ceiling?
+A. The share is taken as one-half of the total balance.
+B. The share is calculated dynamically based on initial contributions.
+C. The share is taken as one-third of the total balance.
+D. The entire balance is counted fully against each holder's individual limit.
+Correct Answer: C
+Explanation: For the purpose of calculating maximum deposit limits in an MIS account, the account holder's share in the balance of a joint account is split equally as one-half or one-third, depending on whether it is held by two or three adults.
+
+Q112. Under the Senior Citizen Savings Scheme (SCSS), 2019, the spouse of a deceased government employee who died in harness is allowed to open an account irrespective of age, subject to the condition that the deceased employee had attained what minimum age at the time of death?
+A. 45 years
+B. 50 years
+C. 55 years
+D. 60 years
+Correct Answer: B
+Explanation: The spouse of a government employee who died in harness can open an SCSS account regardless of their own age, provided the deceased employee had attained the age of 50 years and met the other specified criteria.
+
+Q113. Where both spouses have opened separate independent accounts under the Senior Citizen Savings Scheme and one of the spouses dies during the currency of the accounts, what is the prescribed treatment for the deceased holder's account?
+A. The surviving spouse can automatically merge the balance into their own account.
+B. The account can be continued by the surviving spouse as a sole nominee on the same terms.
+C. The account cannot be continued by the surviving spouse and must be closed.
+D. The account automatically converts into a standard Post Office Savings Account.
+Correct Answer: C
+Explanation: If both spouses maintain separate independent accounts under SCSS and one dies, the account standing in the name of the deceased holder cannot be continued by the surviving spouse and must be closed.
+
+Q114. If a Public Provident Fund (PPF) account holder fails to deposit the minimum subscription of Rs. 500 in a financial year, the account is treated as discontinued. What interest treatment applies to the balance of such a discontinued account if it remains unrevived?
+A. The balance stops earning interest immediately from the date of default.
+B. The balance earns interest at the standard Post Office Savings Account (POSA) rate.
+C. The balance continues to earn interest at the rate applicable to the PPF Scheme from time to time.
+D. The balance earns interest at the scheme rate minus a 2% penalty.
+Correct Answer: C
+Explanation: Statutory PPF rules state that the balance in a discontinued account that is not revived by the holder before its maturity will continue to earn interest at the standard rate applicable to the PPF Scheme from time to time.
+
+Q115. A depositor operates a PPF account that has been treated as discontinued due to a subscription default. Which of the following operational options is legally open to the account holder?
+A. The holder can apply for a partial withdrawal up to 25% of the balance.
+B. The holder can open a new regular PPF account under their name in a different branch.
+C. The holder can revive the account during its maturity period by paying a fee of Rs. 50 along with the arrears of minimum deposit for each year of default.
+D. The holder can avail of a loan facility up to 50% of the standing balance.
+Correct Answer: C
+Explanation: A discontinued PPF account can be revived during its maturity period by paying a default fee of Rs. 50 along with the Rs. 500 minimum deposit arrears per year. While discontinued, the holder is strictly barred from opening a new account, taking loans, or taking partial withdrawals.
+
+Q116. Under the Public Provident Fund Scheme, 2019, the total amount deposited into an account during a financial year, inclusive of any arrears paid to regularize years of default, must adhere to which structural limit?
+A. The total must not exceed Rs. 1,50,000, excluding the default fee.
+B. The total must not exceed Rs. 1,50,000, including the default fee.
+C. The total can go up to Rs. 3,00,000 if clearing past defaults.
+D. There is no maximum ceiling if deposits are made to clear long-standing defaults.
+Correct Answer: A
+Explanation: The total deposit made in a single year can include regularizations for past default years, but the aggregate amount must remain within the annual ceiling of Rs. 1,50,000, explicitly excluding the default fee itself.
+
+Q117. If a deposit exceeding Rs. 1,50,000 is accepted into a Sukanya Samriddhi Account (SSA) in a single financial year due to an accounting error, how is the excess amount treated?
+A. The excess amount is regularized and earns interest at the standard POSA rate.
+B. The excess amount is carried forward to the next financial year's limit automatically.
+C. The excess amount is not eligible for any interest and must be returned immediately to the depositor.
+D. The excess amount is forfeited and transferred to the Senior Citizen Welfare Fund.
+Correct Answer: C
+Explanation: Any deposit in excess of Rs. 1,50,000 in an SSA in a single financial year accepted due to an accounting error is completely ineligible for interest and must be returned immediately to the depositor.
+
+Q118. Until what specific age milestone must a Sukanya Samriddhi Account be operated exclusively by the guardian on behalf of the minor girl child?
+A. Until the girl child attains 10 years of age.
+B. Until the girl child passes the 10th standard.
+C. Until the girl child attains 15 years of age.
+D. Until the girl child attains 18 years of age.
+Correct Answer: D
+Explanation: An SSA account must be operated by the guardian until the account holder (girl child) attains the age of eighteen years, after which she can operate the account herself by submitting the necessary documents.
+
+Q119. A guardian wishes to regularize a Sukanya Samriddhi Account that has fallen under default. What is the prescribed penalty and deposit requirement for regularization?
+A. A penalty of Rs. 20 per year of default plus a deposit of Rs. 500 per year.
+B. A penalty of Rs. 50 for each year of default along with the minimum annual deposit of Rs. 250 for each defaulted year.
+C. A penalty of Rs. 100 flat plus a standard deposit of Rs. 1,000.
+D. No penalty is levied if the child is still under 10 years of age.
+Correct Answer: B
+Explanation: Regularization of a defaulted SSA account requires a penalty payment of fifty rupees (Rs. 50) for each year of default along with the minimum annual deposit requirement of Rs. 250 for each defaulted year.
+
+Q120. Under the National Savings Certificate (VIII Issue) Scheme, 2019, how are Joint A-Type Accounts and Joint B-Type Accounts functionally differentiated at the time of maturity payout?
+A. Joint A is payable to the first survivor only; Joint B is payable to all holders jointly.
+B. Joint A is payable to up to two adults; Joint B is payable to up to three adults.
+C. Joint A is payable to all holders jointly; Joint B is payable to any of the depositors or survivors.
+D. Joint A requires a nominee signature; Joint B bypasses nomination rules.
+Correct Answer: C
+Explanation: For both NSC and KVP schemes, a Joint A-Type account is payable to all adults jointly, whereas a Joint B-Type account is payable to any of the depositors or the survivors.
+
+Q121. Under the Kisan Vikas Patra (KVP) Scheme, 2019, if an account is prematurely closed after the expiry of two years and six months from its opening, what is the structure of the payout?
+A. Only the principal amount is paid without interest.
+B. The principal amount along with simple interest calculated at the POSA rate is paid.
+C. The principal amount inclusive of a predefined interest amount fixed for that specific holding period is paid.
+D. The principal amount minus a 1% management fee is paid.
+Correct Answer: C
+Explanation: KVP rules state that if an account is closed any time after the expiry of two years and six months from the date of opening, the amount payable is inclusive of interest defined for that block period in the scheme schedules.
+
+Q122. Under what condition can a Kisan Vikas Patra (KVP) or National Savings Certificate (NSC) account be transferred from one individual to another individual before maturity?
+A. Upon the request of the account holder to any family member after 1 year.
+B. On the order of a court or on pledging the account to a Gazetted Officer.
+C. Automatically when the holder changes their city of residence.
+D. Only if the transferee pays a premium fee equal to 5% of the certificate value.
+Correct Answer: B
+Explanation: Certificate transfers from one individual to another are strictly limited to cases involving the death of the holder, court orders, or when the account is officially pledged to an authorized entity like a Gazetted Officer.
+
+Q123. In the event of the death of a Post Office Savings Account (POSA) holder, interest on the accumulated deposits in the account is legally paid up to which point?
+A. Till the exact date of death of the account holder.
+B. Till the end of the financial year in which the death occurred.
+C. Till the end of the month preceding the month in which the account is finally closed.
+D. No interest is paid post the date of death.
+Correct Answer: C
+Explanation: In the event of a POSA holder's death, the interest on the account deposits is paid only till the end of the month preceding the month in which the account is closed.
+
+Q124. What statutory protection does the Public Provident Fund Scheme, 2019 afford to the credit balance of an account holder against legal liabilities?
+A. Up to 50% of the balance can be attached by a court order.
+B. The balance is completely immune and shall not be liable to attachment under any order or decree of any court in respect of any debt or liability.
+C. The balance is protected only if it is less than Rs. 1,50,000.
+D. The protection applies only to accounts opened on behalf of minors.
+Correct Answer: B
+Explanation: The PPF scheme provides legal protection stating that the amount standing to the credit of an account holder shall not be liable to attachment under any order or decree of any court in respect of any debt or liability incurred by the holder.
+
+Q125. If a PPF loan is availed by an account holder who subsequently passes away before fully repaying the principal and interest, how is the outstanding amount recovered?
+A. The amount is recovered directly from the legal heir's personal savings account.
+B. The outstanding loan and due interest are adjusted from the balance at the time of the final closure of the account.
+C. The outstanding loan interest is waived, and only the principal is recovered.
+D. The account is frozen and balances are permanently transferred to the government.
+Correct Answer: B
+Explanation: In case of the death of the account holder, the nominee or legal heir is liable to clear the interest on the loan, and such outstanding due interest and principal are adjusted at the time of final account closure.
