@@ -30,12 +30,12 @@ export const PSGB_MOCK_12_QUESTIONS: Question[] = [
         "text": "A Government servant in receipt of pay dies in harness. The Head of Office proposes to make an anticipatory payment of the dues to the legal heirs WITHOUT obtaining the usual legal authority (succession certificate). The gross claim works out to Rs. 6,40,000. Under Rule 189 of FHB Vol-I, which course of action is correct?",
         "options": [
             "The Head of Office may pay the full Rs. 6,40,000 on a simple receipt.",
-            "The Head of Office may pay up to Rs. 5,00,000 on a receipt; the balance requires a duly stamped Indemnity Bond in Form T.R. 14 with sureties.",
-            "The entire amount requires a stamped Indemnity Bond in Form T.R. 14, since the gross claim exceeds Rs. 5,00,000.",
+            "The Head of Office may pay up to Rs. 50,000 on a receipt; the balance requires a duly stamped Indemnity Bond in Form T.R. 14 with sureties.",
+            "The entire amount requires a stamped Indemnity Bond in Form T.R. 14, since the gross claim exceeds Rs. 50,000.",
             "No payment is permissible without a succession certificate, regardless of amount."
         ],
         "correctAnswer": 2,
-        "explanation": "Under Rule 189, FHB Vol-I, anticipatory payment WITHOUT legal authority is permitted up to Rs. 5,00,000. Where the GROSS claim exceeds Rs. 5,00,000, the payment of the whole amount is regulated by obtaining a duly stamped Indemnity Bond in Form T.R. 14 with sureties — the limit is not a \"first slice free\" device but a threshold that pulls the entire claim into the indemnity-bond procedure. Hence C, not B."
+        "explanation": "Under Rule 189, FHB Vol-I, anticipatory payment WITHOUT legal authority and without an Indemnity Bond is permitted only up to Rs. 50,000. Where the GROSS claim exceeds Rs. 50,000, the payment of the whole amount is regulated by obtaining a duly stamped Indemnity Bond in Form T.R. 14 with sureties — the limit is not a \"first slice free\" device but a threshold that pulls the entire claim into the indemnity-bond procedure. Hence C, not B."
     },
     {
         "id": "psgb-12-4",

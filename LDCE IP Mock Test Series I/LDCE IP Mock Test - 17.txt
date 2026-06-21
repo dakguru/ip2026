@@ -191,8 +191,8 @@ A. Rs. 5,000
 B. Rs. 10,000
 C. Rs. 50,000
 D. Rs. 1,00,000
-Answer: B
-Explanation: Under Rule 189(a) of FHB Volume I, the Head of Office may make an anticipatory payment of an amount not exceeding Rs. 10,000 without a legal authority. For amounts between Rs. 10,000 and the specified upper limit, an Indemnity Bond (Form T.R. 14) is required.
+Answer: C
+Explanation: As per the Subsidiary Instructions to the Central Government Account (Receipts and Payments) Rules, 2022, the Head of Office may make an anticipatory payment of an amount not exceeding Rs. 50,000 without legal authority and without an Indemnity Bond. For amounts above Rs. 50,000, a stamped Indemnity Bond (Form T.R. 14) is required.
 
 Q24. In the classification of departmental receipts and expenditure, which Major Head corresponds to "Postal Receipts"?
 A. Major Head 0049

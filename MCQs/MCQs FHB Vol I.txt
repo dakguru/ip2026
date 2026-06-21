@@ -321,21 +321,21 @@ D) Non-Practicing Allowance only
 Correct Answer: A
 Explanation: Subsistence allowance, HRA, TPA, CEA, Uniform allowance, DA, TA, etc., are fully exempt from attachment.
 
-41. What is the prescribed maximum limit for anticipatory payment of a deceased official's pay and allowances to heirs without the production of a legal authority?
+41. What is the prescribed maximum limit up to which the Head of Office may make an anticipatory payment of a deceased official's pay and allowances to the heirs without the production of legal authority and without an Indemnity Bond?
 A) Rs. 50,000
 B) Rs. 1,00,000
 C) Rs. 2,50,000
 D) Rs. 5,00,000
-Correct Answer: D
-Explanation: The Head of Office may sanction the anticipatory payment of an amount not exceeding Rs. 5,00,000 without the production of usual legal authority.
+Correct Answer: A
+Explanation: As per the Subsidiary Instructions to the Central Government Account (Receipts and Payments) Rules, 2022, the Head of Office may make an anticipatory payment up to Rs. 50,000 to the heirs without the production of usual legal authority and without an Indemnity Bond. Above Rs. 50,000, a stamped Indemnity Bond in Form T.R. 14 is required.
 
-42. If the gross amount of a deceased official's claim exceeds Rs. 5,00,000, what mandatory document must the claimant execute if payment is made without a legal representation certificate?
+42. If the gross amount of a deceased official's claim exceeds Rs. 50,000, what mandatory document must the claimant execute if payment is made without a legal representation certificate?
 A) A sworn affidavit certified by a First-Class Magistrate
 B) An Indemnity Bond in Form T.R. 14 duly stamped
 C) A registered Will
 D) A declaration witnessed by two Gazetted Officers
 Correct Answer: B
-Explanation: In cases where the gross amount exceeds Rs. 5,00,000, payment will be made only on the execution of an Indemnity Bond in Form T.R. 14 duly stamped.
+Explanation: In cases where the gross amount exceeds Rs. 50,000, payment will be made only on the execution of an Indemnity Bond in Form T.R. 14 duly stamped.
 
 43. Which of the following is NOT an acceptable criterion for altering a Government servant's recorded Date of Birth?
 A) The request is made within 5 years of his entry into Government service.

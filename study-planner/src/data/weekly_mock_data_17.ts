@@ -159,8 +159,8 @@ export const WEEKLY_MOCK_17_QUESTIONS: Question[] = [
         id: "weekly-17-23",
         text: "In the event of the death of a Government servant, what is the maximum gross amount of pay and allowances claimable that the Head of Office can pay anticipatorily to the heirs without the production of usual legal authority and without an Indemnity Bond?",
         options: ["Rs. 5,000", "Rs. 10,000", "Rs. 50,000", "Rs. 1,00,000"],
-        correctAnswer: 1,
-        explanation: "Under Rule 189(a) of FHB Volume I, the Head of Office may make an anticipatory payment of an amount not exceeding Rs. 10,000 without a legal authority. For amounts between Rs. 10,000 and the specified upper limit, an Indemnity Bond (Form T.R. 14) is required."
+        correctAnswer: 2,
+        explanation: "As per the Subsidiary Instructions to the Central Government Account (Receipts and Payments) Rules, 2022, the Head of Office may make an anticipatory payment of an amount not exceeding Rs. 50,000 without legal authority and without an Indemnity Bond. For amounts above Rs. 50,000, a stamped Indemnity Bond (Form T.R. 14) is required."
     },
     {
         id: "weekly-17-24",
