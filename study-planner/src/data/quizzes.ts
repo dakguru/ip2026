@@ -32,7 +32,7 @@ import { fr_sr_set1, fr_sr_set2, fr_sr_set3 } from './flashcards/fundamentalSupp
 import { complaint_grievance_set1 } from './flashcards/complaintGrievanceHandling';
 import { establishment_norms_set1 } from './flashcards/establishmentNorms';
 import { cvc_procurement_set1, cvc_procurement_set2, cvc_procurement_set3, cvc_procurement_set4, cvc_procurement_set5 } from './flashcards/cvcProcurement';
-import { manual_procurement_set1, manual_procurement_set2, manual_procurement_set3, manual_procurement_set4 } from './flashcards/manualProcurementGoods';
+import { manual_procurement_set1, manual_procurement_set2, manual_procurement_set3, manual_procurement_set4, manual_procurement_set5, manual_procurement_set6, manual_procurement_set7, manual_procurement_set8, manual_procurement_set9, manual_procurement_set10 } from './flashcards/manualProcurementGoods';
 import { welfare_measures_set1, welfare_measures_set2, welfare_measures_set3 } from './flashcards/welfareMeasures';
 import { gfr_2017_set1, gfr_2017_set2, gfr_2017_set3, gfr_2017_set4, gfr_2017_set5 } from './flashcards/generalFinancialRules2017';
 import { inspection_q_bo_set1, inspection_q_so_set1, inspection_q_ho_set1 } from './flashcards/inspectionQuestionnaires';
@@ -8317,11 +8317,17 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   211: cvc_procurement_set4,
   212: cvc_procurement_set5,
 
-  // --- MANUAL ON POLICIES AND PROCEDURES FOR PURCHASE OF GOODS & SERVICES (PS Gr. B) ---
+  // --- MANUAL FOR PROCUREMENT OF GOODS, WORKS & SERVICES (LDCE IP p3-6 + PS Gr. B psgb-32) ---
   213: manual_procurement_set1,
   214: manual_procurement_set2,
   215: manual_procurement_set3,
   216: manual_procurement_set4,
+  226: manual_procurement_set5,
+  227: manual_procurement_set6,
+  228: manual_procurement_set7,
+  229: manual_procurement_set8,
+  230: manual_procurement_set9,
+  231: manual_procurement_set10,
 
   187: [
     { q: "Which Finacle command is used for CIF Creation in CBS?", o: ["CMRC", "CCRC", "CICD", "CCIFINQ"], a: 1, e: "CIF Creation is done by invoking CCRC (Customer Creation). The supervisor verifies by also invoking CCRC. After successful creation, the CIF No. is noted." },
@@ -8595,7 +8601,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p3-3', 'Revenue Recovery Act, 1890', 'Paper III', [71]),
   createTopic('p3-4', 'The Prevention of Corruption, Act 1988', 'Paper III', [70]),
   createTopic('p3-5', 'RTI Act 2005 & RTI Rules 2012', 'Paper III', [68]),
-  createTopic('p3-6', 'MANUAL ON POLICIES AND PROCEDURES FOR PURCHASE OF GOODS AND SERVICES', 'Paper III'),
+  createTopic('p3-6', 'Manual for Procurement of Goods, Works & Services', 'Paper III', [213, 214, 215, 216, 226, 227, 228, 229, 230, 231]),
   createTopic('p3-7', 'GPF (CS) Rules 1960', 'Paper III', [72]),
   createTopic('p3-8', 'CCS (Pension) Rules 2021', 'Paper III', [116, 117, 118]),
   createTopic('p3-9', 'CCS (Commutation of Pension) Rules 1981', 'Paper III', [194, 195]),
