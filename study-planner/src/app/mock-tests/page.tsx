@@ -2133,14 +2133,14 @@ function PsgbMockTestPage({
 
                         {/* Description */}
                         <p className="text-base md:text-lg text-zinc-400/90 max-w-xl mx-auto mb-4 leading-relaxed font-medium">
-                            14-week structured test series aligned with the official study plan.
+                            16-week structured test series aligned with the official study plan.
                             <span className="text-zinc-500 block mt-1">Compete with aspirants across India & track your progress.</span>
                         </p>
 
                         {/* Stats row */}
                         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6">
                             {[
-                                { icon: <Calendar className="w-5 h-5" />, label: '14 Weeks', sub: 'Schedule', color: 'from-violet-500/20 to-violet-500/5', iconColor: 'text-violet-400', borderColor: 'border-violet-500/20' },
+                                { icon: <Calendar className="w-5 h-5" />, label: '16 Weeks', sub: 'Schedule', color: 'from-violet-500/20 to-violet-500/5', iconColor: 'text-violet-400', borderColor: 'border-violet-500/20' },
                                 { icon: <AlertCircle className="w-5 h-5" />, label: '50-100 MCQs', sub: 'Per Test', color: 'from-blue-500/20 to-blue-500/5', iconColor: 'text-blue-400', borderColor: 'border-blue-500/20' },
                                 { icon: <Clock className="w-5 h-5" />, label: '60-120 Min', sub: 'Duration', color: 'from-emerald-500/20 to-emerald-500/5', iconColor: 'text-emerald-400', borderColor: 'border-emerald-500/20' },
                                 { icon: <Trophy className="w-5 h-5" />, label: 'Top 7', sub: 'All India Rank', color: 'from-amber-500/20 to-amber-500/5', iconColor: 'text-amber-400', borderColor: 'border-amber-500/20' },
@@ -2286,7 +2286,7 @@ function PsgbMockTestPage({
                                                 Complete Schedule
                                             </h2>
                                             <p className="mt-2 text-zinc-500 dark:text-zinc-400 font-medium">
-                                                14-week weekly test schedule aligned with the PS Gr B study plan.
+                                                16-week weekly test schedule aligned with the PS Gr B study plan.
                                             </p>
                                         </div>
                                         <div className="flex items-center gap-2 px-4 py-2 bg-zinc-100 dark:bg-zinc-800/80 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">

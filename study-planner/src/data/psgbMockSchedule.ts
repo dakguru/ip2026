@@ -151,10 +151,7 @@ export const PSGB_MOCK_SCHEDULE: PsgbMockTestWeek[] = [
         topics: [
             "GDS (Conduct & Engagement) Rules, 2020",
             "CAT Act, 1985 & Rules",
-            "RTI Act, 2005 & Rules 2012",
-            "Sexual Harassment (POSH) Act, 2013",
-            "Public Accountants Default Act, 1850",
-            "Revenue Recovery Act, 1890"
+            "RTI Act, 2005 & Rules 2012"
         ],
         saturdayDate: "2026-06-27",
         sundayDate: "2026-06-28"
@@ -164,12 +161,29 @@ export const PSGB_MOCK_SCHEDULE: PsgbMockTestWeek[] = [
         topics: [
             "Prevention of Corruption Act, 1988",
             "CCS (Joining Time) Rules, 1979",
-            "CCS (Recognition of Service Assn) Rules, 1993",
+            "CCS (Recognition of Service Assn) Rules, 1993"
+        ],
+        saturdayDate: "2026-07-04",
+        sundayDate: "2026-07-05"
+    },
+    {
+        week: 15,
+        topics: [
+            "Sexual Harassment (POSH) Act, 2013",
+            "Public Accountants Default Act, 1850",
+            "Revenue Recovery Act, 1890"
+        ],
+        saturdayDate: "2026-07-11",
+        sundayDate: "2026-07-12"
+    },
+    {
+        week: 16,
+        topics: [
             "Postal Manual Vol II: Ch III, IV, V, VII",
             "Inspection Questionnaires",
             "Goods and Services Tax (GST) Act, 2017"
         ],
-        saturdayDate: "2026-07-04",
-        sundayDate: "2026-07-05"
+        saturdayDate: "2026-07-18",
+        sundayDate: "2026-07-19"
     }
 ];

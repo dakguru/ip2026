@@ -1822,7 +1822,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                 title: "📅 PS Group B Study Planner",
                 desc: (
                     <div className="space-y-2">
-                        <p>A brand new <strong>14-week Study Planner</strong> for <strong>PS Group B</strong> is now live!</p>
+                        <p>A brand new <strong>16-week Study Planner</strong> for <strong>PS Group B</strong> is now live!</p>
                         <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
                             <li>Aligned with the official PS Gr B exam syllabus</li>
                             <li>Flexible study tracking — mark topics as complete at your own pace</li>
@@ -1835,10 +1835,10 @@ const UPDATES_DATA: UpdateGroup[] = [
                 )
             },
             {
-                title: "📝 PS Group B Mock Test Series (14 Weeks)",
+                title: "📝 PS Group B Mock Test Series (16 Weeks)",
                 desc: (
                     <div className="space-y-2">
-                        <p>Introducing <strong>14 weekly Mock Tests</strong> for <strong>PS Group B</strong> — covering all topics week by week!</p>
+                        <p>Introducing <strong>16 weekly Mock Tests</strong> for <strong>PS Group B</strong> — covering all topics week by week!</p>
                         <ul className="list-disc pl-4 space-y-1 text-zinc-600 dark:text-zinc-400">
                             <li>50 MCQs per test • 60 minutes duration</li>
                             <li>Every Sunday with topics from that week&apos;s study plan</li>

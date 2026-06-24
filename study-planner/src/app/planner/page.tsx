@@ -502,7 +502,7 @@ function PsgbWebPlanner() {
     const today = new Date();
     const startDate = new Date(2026, 2, 30); // Mar 30, 2026
     const daysElapsed = Math.max(0, Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)));
-    const totalDuration = 98; // 14 weeks
+    const totalDuration = 112; // 16 weeks
 
     const scrollToToday = () => {
         const firstUncompleted = filteredSchedule.find(item => !completedDays[item.date] && item.paper !== 'Revision');

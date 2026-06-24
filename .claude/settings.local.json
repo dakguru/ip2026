@@ -37,7 +37,9 @@
       "Bash(python -c ' *)",
       "Bash(echo \"---EXIT:$?---\")",
       "Skill(run)",
-      "Skill(run:*)"
+      "Skill(run:*)",
+      "mcp__visualize__read_me",
+      "mcp__Claude_in_Chrome__list_connected_browsers"
     ]
   }
 }
