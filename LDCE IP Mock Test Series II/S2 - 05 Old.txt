@@ -1,0 +1,1019 @@
+Q1. Postal Life Insurance (PLI), the oldest life insurer in India, was originally introduced on which of the following dates?
+A. 1st February 1881
+B. 12th October 1884
+C. 1st February 1884
+D. 24th March 1895
+Answer: C
+Explanation: Postal Life Insurance was introduced on 1st February 1884 with the approval of the Secretary of State for India, making it the oldest life insurer in the country. 12th October is celebrated as PLI Day.
+
+Q2. Consider the following statements regarding Whole Life Assurance (Suraksha):
+
+1. The minimum entry age is 19 years and the maximum entry age is 55 years.
+2. A loan facility is available after the completion of 3 policy years.
+3. It can be surrendered after 3 years, but no bonus is payable if surrendered before 5 years.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 and 3 are correct under Rule 7(A). Statement 2 is incorrect because the loan facility for a Whole Life Assurance (Suraksha) policy is available only after 4 years, not 3 years.
+
+Q3. Which of the following statements is/are correct regarding Convertible Whole Life Assurance (Suvidha)?
+
+1. The maximum entry age for a proposer is 50 years.
+2. The policyholder can exercise the option to convert the policy into an Endowment Assurance within a window of 5 to 6 years from the date of taking the policy.
+3. If the option to convert is not exercised within the stipulated window, the policy is automatically terminated.
+Select the correct answer using the code given below:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct under Rule 7(B). Statement 3 is incorrect because if the conversion option is not exercised within 6 years, the policy continues as a Whole Life Assurance (Suraksha) policy, rather than being terminated.
+
+Q4. What are the maximum sum assured limits permitted under the Children Policy (Bal Jivan Bima) and Gram Bal Jivan Bima respectively?
+A. Rs. 3 Lakhs and Rs. 3 Lakhs
+B. Rs. 1 Lakh and Rs. 1 Lakh
+C. Rs. 3 Lakhs and Rs. 1 Lakh
+D. Rs. 5 Lakhs and Rs. 2 Lakhs
+Answer: C
+Explanation: Under Rule 7(F) and Rule 4(F), the maximum sum assured for a PLI Children Policy (Bal Jivan Bima) is Rs. 3 Lakhs, while for an RPLI Children Policy (Gram Bal Jivan Bima) it is capped at Rs. 1 Lakh.
+
+Q5. An individual aged 42 years wants to take an Anticipated Endowment Assurance (Sumangal) policy for a term of 20 years. Based on the PO Life Insurance Rules, 2011, which of the following is correct?
+A. The policy can be issued since the maximum entry age for Sumangal is 45 years for any term.
+B. The policy cannot be issued because the maximum entry age for a 20-year term is 40 years.
+C. The policy can be issued provided the sum assured does not exceed Rs. 10 Lakhs.
+D. The policy cannot be issued because the minimum entry age for Sumangal is 45 years.
+Answer: B
+Explanation: Under Rule 7(E), the entry age limits for Anticipated Endowment Assurance (Sumangal) specify a maximum entry age of 40 years for the 20-year term and 45 years for the 15-year term. Hence, a 42-year-old is ineligible for the 20-year term.
+
+Q6. Consider the following statements regarding Joint Life Assurance (Yugal Suraksha):
+
+1. Both spouses must independently meet the professional or employment eligibility criteria of PLI.
+2. The maximum entry age for the elder spouse must not be more than 45 years.
+3. The policy term can range from a minimum of 5 years to a maximum of 20 years.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct under Rule 7(D). Statement 1 is incorrect because only one of the spouses needs to be eligible for PLI to cover both spouses under a single premium.
+
+Q7. What is the declared bonus rate per Rs. 1,000 Sum Assured for Whole Life Assurance (Suraksha) and Endowment Assurance (Santosh) respectively for the Financial Year 2025-26?
+A. Rs. 76 and Rs. 52
+B. Rs. 60 and Rs. 48
+C. Rs. 76 and Rs. 48
+D. Rs. 52 and Rs. 48
+Answer: A
+Explanation: As per the Directorate of Postal Life Insurance gazette notification for FY 2025-26, the bonus rate for PLI Whole Life Assurance (Suraksha) is Rs. 76 and for Endowment Assurance (Santosh) is Rs. 52 per Rs. 1,000 Sum Assured.
+
+Q8. Which of the following statements best describes an 'Auto Paid-up' policy under the PO Life Insurance Rules, 2011?
+A. A policy where the insurant submits a written application to stop paying premiums after 3 years.
+B. A policy of less than 3 years' duration where the policyholder defaults on premium payments.
+C. A policy where 36 or more premiums have been paid and 3 years have completed, but the insurant discontinues further premiums without intimation.
+D. A policy that is immediately cancelled due to an insufficiency of balance during an auto-debit process.
+Answer: C
+Explanation: According to Rule 5, an Auto Paid-up policy is a policy for which 36 or more premiums have been paid and which has completed 3 years or more, where the policyholder discontinues payments without formal intimation.
+
+Q9. Under the Post Office Life Insurance Rules, 2011, which authority reserves the absolute right to make additions, alterations, or modifications to the rules from time to time?
+A. The Director General of Posts
+B. The Minister of Communications
+C. The Postal Services Board
+D. The President of India
+Answer: D
+Explanation: Rule 2 explicitly states that the President reserves the right to make, from time to time, such additions, alterations, or modifications in these rules as may be considered necessary.
+
+Q10. Consider the following statements regarding Rural Postal Life Insurance (RPLI) schemes:
+
+1. RPLI was introduced on 24th March 1995 based on the Malhotra Committee recommendations.
+2. Gram Suraksha policies can be converted into Gram Santosh up to the age of 59 years.
+3. The minimum sum assured for any RPLI policy is Rs. 20,000.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because the minimum sum assured limit for RPLI policies is Rs. 10,000 (in multiples of Rs. 5,000), not Rs. 20,000.
+
+Q11. What is the specific pattern of survival benefits payable under the 10-Year Rural PLI (Gram Priya) scheme?
+A. 20% at the end of 3 years, 20% at the end of 6 years, and 60% with accrued bonus at 10 years.
+B. 20% at the end of 4 years, 20% at the end of 7 years, and 60% with accrued bonus at 10 years.
+C. 25% at the end of 4 years, 25% at the end of 8 years, and 50% with accrued bonus at 10 years.
+D. 30% at the end of 5 years, 30% at the end of 8 years, and 40% with accrued bonus at 10 years.
+Answer: B
+Explanation: Under the Gram Priya scheme, survival benefits are paid at fixed intervals: 20% at the end of 4 years, 20% at the end of 7 years, and the remaining 60% along with accrued bonus at the end of 10 years.
+
+Q12. A rural proposer submits a non-standard age proof for a Gram Santosh policy with a sum assured of Rs. 60,000. Which of the following conditions must be strictly applied under the RPLI operational guidelines?
+A. The proposer cannot be older than 50 years, and a 10% extra premium loading is applied.
+B. The proposer cannot be older than 45 years, and a 5% extra premium loading is applied.
+C. The policy is treated under the non-medical scheme automatically since the sum assured is below Rs. 1 Lakh.
+D. The proposal must be rejected as non-standard age proof is restricted to a maximum sum assured of Rs. 25,000.
+Answer: B
+Explanation: As per RPLI guidelines, for policies with non-standard age proof, the maximum sum assured allowed is Rs. 1 Lakh with a 5% extra premium loading. Additionally, the proposer must not be older than 45 years for sums assured of Rs. 25,000 or more.
+
+Q13. Consider the following statements regarding the 'Void' and 'Lapsed' status of a discontinued PLI policy:
+
+1. A policy of less than 3 years' duration becomes void if a due premium is not paid within the period of grace.
+2. A policy of less than 3 years' duration lapses if more than 6 premiums remain unpaid.
+3. A policy of more than 3 years' duration lapses if more than 12 premiums remain unpaid.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements accurately reflect the definitions and rules under Rule 5. A policy less than 3 years duration becomes void immediately if premium is unpaid within the grace period, and officially lapses if more than 6 premiums are unpaid. For policies over 3 years, the lapse threshold is 12 unpaid premiums.
+
+Q14. Which of the following conditions allows for the 'Automatic Reinstatement' of a discontinued PLI/RPLI policy?
+
+1. The policy has completed 3 years and not more than 12 months' premium is unpaid.
+2. The policy has completed 3 years and not more than 6 months' premium is unpaid.
+3. The policy has not completed 3 years and not more than 6 months' premium is unpaid.
+Select the correct answer using the code given below:
+A. 1 only
+B. 2 only
+C. 1 and 3 only
+D. 2 and 3 only
+Answer: C
+Explanation: Under Rule 5 (Reinstatement), automatic reinstatement is permissible if the policy has completed 3 years and ≤ 12 months' premium is unpaid, OR if the policy has not completed 3 years and ≤ 6 months' premium is unpaid.
+
+Q15. In which authority is the administrative control of the Post Office Life Insurance Fund (POLIF) and the Rural Post Office Life Insurance Fund (RPOLIF) statutorily vested?
+A. Director, Postal Life Insurance, Kolkata
+B. Chairman, Postal Services Board
+C. Director General of Posts
+D. Secretary, Ministry of Finance
+Answer: C
+Explanation: Rule 3 specifies that the administration of both the Post Office Life Insurance Fund (POLIF) and the Rural Post Office Life Insurance Fund (RPOLIF) is vested in the Director General of Posts.
+
+Q16. Which of the following statements is/are correct regarding the entry age and sum assured parameters of Rural Postal Life Insurance (RPLI)?
+
+1. The maximum entry age for Gram Suraksha and Gram Santosh is 55 years.
+2. The maximum sum assured allowed across all combined RPLI policies for an individual is Rs. 10 Lakhs.
+3. Sums assured must always be taken in multiples of Rs. 10,000.
+Select the correct answer using the code given below:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because the sum assured under RPLI schemes can be taken in multiples of Rs. 5,000, not strictly Rs. 10,000.
+
+Q17. What is the declared bonus rate per Rs. 1,000 Sum Assured for Gram Suraksha (WLA) and Gram Priya (10-Year Rural PLI) respectively for the Financial Year 2025-26?
+A. Rs. 60 and Rs. 45
+B. Rs. 60 and Rs. 48
+C. Rs. 48 and Rs. 45
+D. Rs. 76 and Rs. 48
+Answer: A
+Explanation: According to the official RPLI bonus notification for FY 2025-26, the bonus rate for Gram Suraksha (WLA) is Rs. 60 and for Gram Priya (10-Year Rural PLI) is Rs. 45 per Rs. 1,000 Sum Assured.
+
+Q18. A parent who holds a valid PLI policy wants to insure three of his children under the Bal Jivan Bima scheme. Which of the following is correct regarding this scenario?
+A. All three children can be insured provided the total sum assured for all three combined does not exceed Rs. 3 Lakhs.
+B. Only a maximum of two children of the policyholder can be covered under the Bal Jivan Bima scheme.
+C. The scheme can cover any number of children as long as the parent is not over 50 years of age.
+D. The application must be rejected because the Bal Jivan Bima scheme is only applicable under RPLI, not PLI.
+Answer: B
+Explanation: Under Rule 7(F), eligibility for the Children Policy (Bal Jivan Bima) is strictly restricted to a maximum of 2 children of the policyholder. Therefore, insuring three children under the scheme is not permitted.
+
+Q19. Consider the following statements regarding eligibility for purchasing a Postal Life Insurance (PLI) policy under Rule 6:
+
+1. Employees of companies listed on both the National Stock Exchange (NSE) and Bombay Stock Exchange (BSE) are eligible.
+2. Any person holding a graduate degree or diploma from a recognized Indian or foreign institution is eligible.
+3. A provisional certificate or a final-year marksheet can be accepted as valid proof of the qualification.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct as per Rule 6 and its operational clarifications. Eligibility covers NSE/BSE listed company employees, graduate degree/diploma holders, and allows provisional certificates/final-year marksheets as proof.
+
+Q20. What are the statutory minimum and maximum sum assured limits permitted for a single proposer combining all PLI policies?
+A. Minimum Rs. 10,000; Maximum Rs. 10 Lakhs
+B. Minimum Rs. 20,000; Maximum Rs. 20 Lakhs
+C. Minimum Rs. 20,000; Maximum Rs. 50 Lakhs
+D. Minimum Rs. 10,000; Maximum Rs. 50 Lakhs
+Answer: C
+Explanation: As per Rule 7 and subsequent amendments (Directorate order dated 05.07.2016), the statutory minimum sum assured for PLI is Rs. 20,000 and the maximum aggregate sum assured is Rs. 50 Lakhs.
+
+Q21. Consider the following statements regarding the legal and regulatory status of Postal Life Insurance (PLI):
+
+1. PLI operates as an exempted insurer under Section 118(c) of the Insurance Act, 1938.
+2. PLI is fully exempted under Section 44(d) of the Life Insurance Corporation (LIC) Act, 1956.
+3. PLI is directly regulated and monitored by the Insurance Regulatory and Development Authority of India (IRDAI).
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because PLI is outside the purview of IRDAI regulations due to its statutory exemptions and is governed by its own rules and Directorate orders.
+
+Q22. A 48-year-old individual wishes to purchase a Suvidha (Convertible Whole Life Assurance) policy under PLI. Analyze the admissibility of this proposal.
+A. The proposal is admissible because the maximum entry age for Suvidha is 55 years.
+B. The proposal is admissible provided the individual chooses to cease premiums at age 50.
+C. The proposal is inadmissible because the maximum entry age for Suvidha is capped at 50 years.
+D. The proposal is inadmissible because conversion policies are restricted to individuals below 40 years.
+Answer: C
+Explanation: Under Rule 7(B), the entry age parameters for Convertible Whole Life Assurance (Suvidha) state that the minimum entry age is 19 years and the maximum entry age is 50 years. A 48-year-old is therefore eligible, making option C correct in identifying the cap but the option text needs precise evaluation. Let's re-read carefully: "is inadmissible because max entry age is 50". Wait, 48 is less than 50. So it is admissible! Let's correct the distractor setup or selection. The question asks to analyze admissibility. Since 48 is under 50, it is admissible. Let's look at option B: "admissible provided..." No, max entry age is 50, so 48 is directly admissible. Let's verify standard rules. Maximum entry age is 50. Thus, a 48-year-old is fully eligible. Let's frame the question for an age above 50, say 52 years.
+Let's modify the scenario: A 52-year-old individual wishes to purchase a Suvidha policy.
+Then it is inadmissible because the max entry age is 50 years. Let's keep the question text as a 52-year-old.
+Q22. A 52-year-old individual wishes to purchase a Suvidha (Convertible Whole Life Assurance) policy under PLI. Analyze the admissibility of this proposal.
+A. The proposal is admissible because the maximum entry age for Suvidha is 55 years.
+B. The proposal is admissible provided the individual chooses to cease premiums at age 60.
+C. The proposal is inadmissible because the maximum entry age for Suvidha is capped at 50 years.
+D. The proposal is inadmissible because conversion policies are restricted to individuals below 45 years.
+Answer: C
+Explanation: Under Rule 7(B), the maximum entry age for Convertible Whole Life Assurance (Suvidha) is strictly 50 years. Therefore, a 52-year-old proposer is inadmissible.
+
+Q23. Which of the following statements is/are correct regarding the premium waiver benefit under the Bal Jivan Bima (Children Policy) scheme?
+
+1. On the death of the main policyholder (parent), future premiums on the Children Policy are fully waived.
+2. The full sum assured and accrued bonus are paid to the child immediately upon the death of the parent.
+3. The policy attracts the bonus rate applicable to the Endowment Assurance (Santosh) policy.
+Select the correct answer using the code given below:
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct under Rule 7(F). Statement 2 is incorrect because upon the death of the parent, premiums are waived, but the full sum assured and accrued bonus are paid only on the completion of the original term, not immediately.
+
+Q24. What are the specific policy terms available for the Gram Priya and Gram Sumangal (RPLI) policies respectively?
+A. Gram Priya: 10 years only; Gram Sumangal: 15 years or 20 years.
+B. Gram Priya: 5 years or 10 years; Gram Sumangal: 10 years or 20 years.
+C. Gram Priya: 10 years only; Gram Sumangal: 20 years only.
+D. Gram Priya: 15 years only; Gram Sumangal: 15 years or 20 years.
+Answer: A
+Explanation: Under the RPLI operational guidelines, Gram Priya is a fixed short-term 10-year money-back policy. Gram Sumangal (Anticipated Endowment Assurance) is available for two terms: 15 years or 20 years.
+
+Q25. Which of the following statements is/are correct regarding the conversion of a Whole Life Assurance (Suraksha) policy into an Endowment Assurance policy?
+
+1. Conversion is permitted up to a maximum age of 59 years.
+2. Conversion is not allowed within one year of the date of cessation of premium or the date of maturity.
+3. The bonus rate applicable after conversion will be that of the Endowment Assurance policy.
+Select the correct answer using the code given below:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct under the conversion guidelines of Rule 7(A). Conversion is allowed up to age 59, cannot be done within one year of premium cessation/maturity, and shifts to the Endowment bonus rate post-conversion.
+
+Q26. What is the exact duration of the 'Free Look Period' available to an insurant from the date of delivery of the PLI/RPLI policy bond at their address?
+A. 10 days
+B. 15 days
+C. 30 days
+D. 7 days
+Answer: B
+Explanation: According to Rule 5, the Free Look Period is a period of 15 days from the date of delivery of the policy bond at the insurant's address, during which they can request cancellation and refund.
+
+Q27. What are the general advance premium rebate rates applicable to PLI and RPLI policies when premiums are paid in advance?
+A. 12 months: 2%; 6 months: 1%; 3 months: 0.5% (RPLI only)
+B. 12 months: 5%; 6 months: 2.5%; 3 months: 1%
+C. 12 months: 1%; 6 months: 0.5%; 3 months: 0.25%
+D. 12 months: 2%; 6 months: 1%; 3 months: 0.5% (PLI only)
+Answer: A
+Explanation: Under the rebates structure, a general rebate of 2% is given for 12 months advance, 1% for 6 months advance, and a 0.5% rebate is exclusively available for 3 months advance in RPLI only.
+
+Q28. Consider the following statements regarding the major GST 2.0 reform on PLI/RPLI premiums effective from 22nd September 2025:
+
+1. GST on individual life insurance premiums, including PLI and RPLI, has been reduced to NIL.
+2. Group life insurance contracts under the Department of Posts also enjoy the NIL GST exemption.
+3. GST still applies on premiums that were due up to September 2025 but paid on or after 22.09.2025.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect because the NIL GST exemption under Notification No. 16/2025-Central Tax (Rate) applies only to individual policies; group insurance contracts continue to attract 18% GST.
+
+Q29. Which of the following is correct regarding the Input Tax Credit (ITC) on the GST paid under the Reverse Charge Mechanism (RCM) for sales-force incentives effective from 22.09.2025?
+A. Post Offices can claim full ITC on RCM-GST paid for incentives.
+B. ITC is available only for PLI incentives and completely blocked for RPLI incentives.
+C. Input Tax Credit (ITC) is not available to Post Offices because the underlying insurance supply is now exempt.
+D. ITC can be claimed up to a maximum cap of 5% of the total incentive value.
+Answer: C
+Explanation: Due to the GST 2.0 reform making individual life insurance premiums exempt (NIL rate), Input Tax Credit (ITC) on the GST paid under RCM on sales-force incentives is no longer available to Post Offices w.e.f. 22.09.2025.
+
+Q30. Consider the following statements regarding the Income-Tax TDS framework on PLI/RPLI sales-force incentives effective from 01.04.2025:
+
+1. TDS is deducted under Section 194D of the Income Tax Act, 1961.
+2. The TDS rate has been reduced from 5% to 2% with effect from 01.04.2025.
+3. The tax deduction threshold is fixed at Rs. 20,000 per financial year.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct under the statutory tax updates effective 01.04.2025. Section 194D governs insurance commission TDS, which is now 2% with an enhanced threshold of Rs. 20,000 per financial year.
+
+Q31. A Direct Agent earns a gross procurement incentive of Rs. 10,000 in a month. Calculate the net amount payable to the agent and the GST liability to be discharged by the Department under RCM respectively.
+A. Net Payable: Rs. 9,500; RCM GST: Rs. 1,800
+B. Net Payable: Rs. 9,800; RCM GST: Rs. 1,800
+C. Net Payable: Rs. 9,800; RCM GST: NIL
+D. Net Payable: Rs. 10,000; RCM GST: Rs. 450
+Answer: B
+Explanation: TDS under Section 194D is 2% of Rs. 10,000 = Rs. 200, making the net payable Rs. 9,800. The incentive attracts 18% GST which must be paid by the Department under RCM = Rs. 1,800.
+
+Q32. Consider the following statements regarding the PLI procurement incentive structure for a sales force:
+
+1. For policies with a premium paying term of up to 15 years, the incentive is 4% of the 1st-year premium.
+2. For policies with a premium paying term of more than 25 years, the incentive is 20% of the 1st-year premium.
+3. For Anticipated Endowment Assurance (AEA) with a term beyond 15 years, the incentive is 7% of the 1st-year premium.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are factually correct according to the PLI Procurement Incentive schedule for WLA, EA, CWLA, and AEA policies.
+
+Q33. What is the fixed procurement incentive percentage allowed for all categories of the sales force on procurement of Rural Postal Life Insurance (RPLI) policies?
+A. 4% of the procurement premium
+B. 5% of the procurement premium
+C. 10% of the procurement premium
+D. 2.5% of the procurement premium
+Answer: C
+Explanation: Under the procurement incentive rules, the incentive for procuring any type of RPLI policy is uniformly fixed at 10% of the procurement premium for every category of the sales force.
+
+Q34. Which of the following statements is/are correct regarding the age eligibility limits for the PLI/RPLI sales force?
+
+1. The maximum age limit for a Gramin Dak Sevak (GDS) acting as an agent is 65 years.
+2. The maximum age limit for a Departmental Employee (DE) procuring business is 60 years.
+3. There is no maximum age limit for Direct Agents and Field Officers.
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct. GDS can act as agents up to 65 years, Departmental Employees up to superannuation (60 years), while Direct Agents and Field Officers have no maximum age restriction.
+
+Q35. Which of the following represents a critical operational change introduced in the PLI/RPLI sales-force guidelines effective from 01.04.2025?
+A. Direct Agents must mandatory procure at least 12 policies per financial year.
+B. The condition of procuring a minimum of 4 policies per financial year has been completely abolished.
+C. Departmental Employees are banned from earning renewal incentives.
+D. Renewal incentives for RPLI have been reduced from 2.5% to 1%.
+Answer: B
+Explanation: Vide latest legislative and operational updates effective 01.04.2025, the earlier condition of procuring a minimum of 4 PLI/RPLI policies per financial year has been done away with. There is now no minimum business requirement.
+
+Q36. An agent who worked continuously for 3 years dies, leaving 10 policies on different lives in force immediately before death. Can their nominee receive incentives?
+A. No, incentives cease immediately upon the death of the agent.
+B. Yes, the nominee can receive incentives and also continue to procure new business on that agency.
+C. Yes, the nominee can receive incentives on the policies procured before death, provided the nominee does not procure new business.
+D. No, because the agent must complete at least 5 years of service for the nomination facility to activate.
+Answer: C
+Explanation: As per rules, a nominee can receive incentives on the death of a sales-force member if the agent worked continuously for ≥ 2 years and ≥ 8 policies were in force. The nominee cannot procure new business.
+
+Q37. Consider the following statements regarding the incentive structure for Monitoring Staff effective from 01.04.2025:
+
+1. The Divisional Head is entitled to a 0.20% incentive on business procured by all sales forces.
+2. The Sub-Divisional Head earns a 0.60% incentive on business procured by GDS under their Sub-Division.
+3. Monitoring staff are also entitled to a 0.5% renewal incentive.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because there is a strict restriction that no renewal incentive is paid to any member of the monitoring staff (Divisional Heads, ASPs, DOs, etc.).
+
+Q38. Match the license fees and security deposit required for a Direct Agent under the PLI/RPLI operational guidelines:
+A. Security Deposit: Rs. 5,000; Permanent License: Rs. 100; Renewal Fee: Rs. 50
+B. Security Deposit: Rs. 2,000; Permanent License: Rs. 50; Renewal Fee: Rs. 20
+C. Security Deposit: Rs. 5,000; Permanent License: Rs. 200; Renewal Fee: Rs. 100
+D. Security Deposit: Rs. 10,000; Permanent License: Rs. 100; Renewal Fee: Free
+Answer: A
+Explanation: Under the licensing rules, a Direct Agent must provide a security deposit of Rs. 5,000 pledged to the President of India. The permanent license fee is Rs. 100, and the duplicate or renewal fee is Rs. 50.
+
+Q39. Consider the following statements regarding Non-Medical Schemes in PLI and RPLI:
+
+1. The maximum sum assured allowed under the PLI Non-Medical scheme is Rs. 5 Lakhs.
+2. The maximum sum assured allowed under the RPLI Non-Medical scheme is Rs. 1 Lakh.
+3. The maximum entry age for a Non-Medical policy in RPLI is 35 years.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct under the non-medical policy parameters. PLI allows up to Rs. 5 Lakhs, RPLI up to Rs. 1 Lakh, and the age limit for RPLI non-medical is 35 years.
+
+Q40. If a PLI Non-Medical policy becomes a death claim 18 months after the date of acceptance, what percentage of the Sum Assured plus accrued bonus is payable to the nominee?
+A. 35%
+B. 60%
+C. 90%
+D. 100%
+Answer: B
+Explanation: Under the scaled death-claim rules for non-medical policies, if death occurs after 1 year but before 2 years from acceptance, the amount payable is 60% of the Sum Assured plus accrued bonus.
+
+Q41. Which of the following statements is/are correct regarding the competency of Authorised Medical Officers for examining PLI/RPLI proposals?
+
+1. For a sum assured up to Rs. 5 Lakhs, a Registered Medical Practitioner (Allopathic) appointed by the Head of Division is competent.
+2. For a sum assured above Rs. 5 Lakhs up to Rs. 10 Lakhs, a Deputy Civil Surgeon or a Medical Officer with a minimum of 10 years experience is required.
+3. For a sum assured above Rs. 10 Lakhs, a Civil Surgeon or Chief Medical Officer (CMO) is mandatory.
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements accurately represent the threshold limits and competency guidelines for examining Medical Officers based on the policy's sum assured.
+
+Q42. What is the medical examination fee prescribed for a proposal with a sum assured of Rs. 15 Lakhs?
+A. Rs. 50
+B. Rs. 70
+C. Rs. 120
+D. Rs. 150
+Answer: B
+Explanation: According to the medical fee structure, the fee for a sum assured up to Rs. 10 Lakhs is Rs. 50; for a sum assured above Rs. 10 Lakhs up to Rs. 20 Lakhs, it is Rs. 70.
+
+Q43. If a PLI proposal is not accepted within 60 days after the first medical examination, a second medical certificate is required. Who bears the fee for the second medical opinion if the delay is on account of the Department?
+A. The Proposer
+B. The Examining Medical Officer
+C. The Insurance Fund (POLIF/RPOLIF)
+D. Paid equally by the Proposer and the Agent
+Answer: C
+Explanation: Rules for a Second Medical Opinion state that if the delay is on account of the proposer, the proposer pays the fee; otherwise, it is met directly from the Insurance Fund.
+
+Q44. Consider the following statements regarding the post of Development Officer (formerly Group Leader):
+
+1. PA, LSG, and HSG officials are eligible for selection.
+2. The minimum age limit is 25 years and the maximum age limit is 55 years on the date of calling applications.
+3. A minimum of 3 years continuous service in the PA cadre is required.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because the eligibility criteria require a minimum of 5 years of continuous service in the Department of Posts in the PA cadre, not 3 years.
+
+Q45. Under the PLI Mobile Training App (PMTA) framework, what are the mandatory training hours and passing marks required for the Licentiate Examination?
+A. 15 hours of training; 35% passing marks (out of 25 questions)
+B. 20 hours of training; 50% passing marks (out of 50 questions)
+C. 10 hours of training; 40% passing marks (out of 25 questions)
+D. 15 hours of training; 45% passing marks (out of 30 questions)
+Answer: A
+Explanation: PMTA guidelines require 15 hours of mandatory online training within a 30-day window. The Licentiate Examination consists of 25 questions, and the passing mark is 35%.
+
+Q46. Which of the following is correct regarding the post-retirement incentive for a Departmental Employee (DE) or GDS who superannuates or is discharged?
+A. They lose all rights to renewal incentives immediately upon retirement.
+B. They continue to earn renewal incentives if they enroll as a Field Officer within 3 months of leaving service.
+C. They are automatically converted into a Direct Agent with a permanent license without any timeline restriction.
+D. They receive a lump-sum settlement of Rs. 10,000 in lieu of all future renewal incentives.
+Answer: B
+Explanation: Guidelines specify that a retired DE/GDS continues to earn renewal incentives after superannuation or discharge if they enroll as a Field Officer within 3 months of leaving service.
+
+Q47. What is the prescribed fee under the Schedule of Fees for obtaining a 'Duplicate Policy Bond' and a 'Conversion Charge' respectively?
+A. Rs. 50 and Rs. 20
+B. Rs. 100 and Rs. 20
+C. Rs. 100 and Rs. 50
+D. Rs. 20 and Rs. 5
+Answer: B
+Explanation: Under the official Schedule of Fees for PLI/RPLI services, the fee for a Duplicate Policy Bond is Rs. 100 and the fee for a Conversion Charge is Rs. 20.
+
+Q48. Which of the following statements is correct regarding the disqualification of a nominee or legal heir under the policy servicing guidelines?
+A. If a nominee is convicted of any minor traffic offense, the policy money is withheld.
+B. If a nominee is charged with the murder of the policyholder, the money is not paid unless they are honourably acquitted by a competent court.
+C. A nominee is disqualified if they fail to submit an Aadhaar card within 30 days of the policyholder's death.
+D. Disqualification is only applicable if the nominee resides outside India.
+Answer: B
+Explanation: Under the policy maintenance rules, if a nominee or legal heir is charged with the murder of the policyholder, payment is suspended and cannot be made unless they receive an honourable acquittal from a competent court.
+
+Q49. A customer uses the IPPB Mobile App to pay a PLI renewal premium online, and a Merchant Discount Rate (MDR) charge is levied. Who is responsible for bearing this MDR charge?
+A. The Department of Posts
+B. The Insurance Fund
+C. The Customer
+D. Split equally between the Customer and IPPB
+Answer: C
+Explanation: Operational guidelines state that w.e.f. 17.01.2022, Merchant Discount Rate (MDR) charges on online transactions for PLI/RPLI premium payments are to be fully borne by the customer.
+
+Q50. What is the total consolidated honorarium paid per new proposal to the CPC staff across all activities (Indexing, Scanning, Data Entry, QC, Approver, and Bond Issuance)?
+A. Rs. 6
+B. Rs. 10
+C. Rs. 12
+D. Rs. 15
+Answer: C
+Explanation: The honorarium schedule allocates Rs. 2 for each of the six distinct activities (Indexing, Scanning, Data Entry, QC, Approver, Bond Issuance), totaling Rs. 12 per new proposal.
+
+Q51. The three social-security schemes known collectively as the Jan Suraksha Schemes (PMJJBY, PMSBY, APY) were formally launched by the Prime Minister on which date?
+A. 1st June 2015
+B. 9th May 2015
+C. 2nd October 2014
+D. 15th August 2015
+Answer: B
+Explanation: The Jan Suraksha Schemes were officially launched by the Prime Minister in Kolkata on 9th May 2015 to build a universal social-security system.
+
+Q52. Consider the following statements comparing PMJJBY and PMSBY:
+
+1. PMJJBY covers death due to any cause, whereas PMSBY covers death or disability due to an accident only.
+2. The entry age group for PMJJBY is 18–50 years, while for PMSBY it is 18–70 years.
+3. PMJJBY has a 30-day lien period for non-accidental death, while PMSBY has no lien period.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct. PMJJBY is life insurance (18-50 years, 30-day lien for natural death), and PMSBY is accident insurance (18-70 years, no lien period).
+
+Q53. What are the revised annual premium rates for PMJJBY and PMSBY respectively, effective from 1st June 2022?
+A. Rs. 330 and Rs. 12
+B. Rs. 436 and Rs. 20
+C. Rs. 436 and Rs. 12
+D. Rs. 330 and Rs. 20
+Answer: B
+Explanation: Vide notification dated 31.05.2022 by the Department of Financial Services, the annual premiums were revised from Rs. 330 to Rs. 436 for PMJJBY, and from Rs. 12 to Rs. 20 for PMSBY w.e.f. 01.06.2022.
+
+Q54. Consider the following statements regarding the pro-rata premium slabs for fresh enrolments under PMJJBY:
+
+1. Enrolment in the 2nd quarter (September, October, November) requires a premium of Rs. 342.
+2. Enrolment in the 4th quarter (March, April, May) requires a premium of Rs. 114.
+3. Pro-rata premiums apply to both fresh enrolments and annual renewals.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because pro-rata premiums apply strictly to first-time/fresh enrolments; renewals always require the full annual premium of Rs. 436.
+
+Q55. A fresh subscriber enrolls in PMJJBY on 15th October and the premium is deducted. On 5th November, the subscriber dies due to an illness. Analyze the admissibility of the claim.
+A. The claim is admissible for the full Rs. 2 Lakhs because risk commences on the date of auto-debit.
+B. The claim is inadmissible because death occurred within the 30-day lien period and was not caused by an accident.
+C. The claim is partially admissible for 50% of the sum assured.
+D. The claim is inadmissible because fresh enrolments can only take place in May.
+Answer: B
+Explanation: For fresh PMJJBY entrants, a 30-day lien clause applies for non-accidental death. Since the subscriber died within 21 days due to an illness, no claim is admissible. Accidental deaths are exempt from this lien.
+
+Q56. Under which of the following events will the assurance on a member's life terminate under the PMJJBY scheme rules?
+
+1. On the member attaining the age of 55 years.
+2. Insufficiency of balance in the bank/Post Office account to keep the insurance in force.
+3. If the member is found to be covered through more than one account inadvertently.
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Under PMJJBY rules, cover terminates at age 55, or upon account closure/insufficient balance. If duplicate accounts exist, cover is restricted to one account and the other is terminated/premium forfeited.
+
+Q57. What is the correct appropriation breakdown of the full annual PMJJBY premium of Rs. 436?
+A. Insurance premium to insurer: Rs. 395; Agent Commission: Rs. 30; Bank/PO Admin Expense: Rs. 11
+B. Insurance premium to insurer: Rs. 400; Agent Commission: Rs. 25; Bank/PO Admin Expense: Rs. 11
+C. Insurance premium to insurer: Rs. 395; Agent Commission: Rs. 25; Bank/PO Admin Expense: Rs. 16
+D. Insurance premium to insurer: Rs. 366; Agent Commission: Rs. 50; Bank/PO Admin Expense: Rs. 20
+Answer: A
+Explanation: The statutory appropriation of the Rs. 436 premium breaks down exactly into Rs. 395 as core insurance premium, Rs. 30 as commission to agents/BCs, and Rs. 11 as administrative expenses to the bank/PO.
+
+Q58. Consider the following table of benefits under the Pradhan Mantri Suraksha Bima Yojana (PMSBY):
+
+1. Death due to accident: Rs. 2 Lakhs.
+2. Total and irrecoverable loss of sight of one eye: Rs. 2 Lakhs.
+3. Total and irrecoverable loss of use of one hand or one foot: Rs. 1 Lakh.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect because the loss of sight of a single eye fetches a partial disability benefit of Rs. 1 Lakh, not the full Rs. 2 Lakhs.
+
+Q59. A PMSBY subscriber suffers a sudden natural cardiac arrest while walking and passes away. The nominee files an insurance claim under PMSBY. Analyze the admissibility of this claim.
+A. The claim is admissible for Rs. 2 Lakhs because death occurred during the policy period.
+B. The claim is inadmissible because PMSBY strictly covers death or disability caused by an accident only.
+C. The claim is admissible for a reduced amount of Rs. 1 Lakh as a natural death benefit.
+D. The claim is admissible provided a medical certificate is submitted within 24 hours.
+Answer: B
+Explanation: PMSBY is strictly an accident-insurance scheme. It defines an accident as a violent, external, and visible event. A natural death from a cardiac arrest is completely excluded from PMSBY coverage.
+
+Q60. Which of the following statements is/are correct regarding the termination of cover under the PMSBY scheme?
+
+1. The accident insurance cover terminates automatically upon the subscriber attaining 70 years of age.
+2. Cover terminates if the underlying savings account is closed.
+3. If a subscriber is covered through multiple accounts, the total payout can double to Rs. 4 Lakhs.
+Select the correct answer using the code given below:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because of the strict "one-account rule"; coverage and claim payouts are capped at a single account (Rs. 2 Lakhs) across all banks/POs.
+
+Q61. Consider the following statements regarding the critical "Income-Tax Payer" eligibility amendment introduced in the Atal Pension Yojana (APY) effective from 1st October 2022:
+
+1. Any citizen who is or has been an income-tax payer is ineligible to join APY.
+2. If an income-tax payer joins after 01.10.2022 and is detected later, their account is frozen indefinitely but not closed.
+3. On detection of a violation, the account is closed and the accumulated pension wealth till date is returned to the subscriber.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect because the rule mandates that the account of such an ineligible tax-paying subscriber must be closed completely, and the wealth returned.
+
+Q62. Which statutory authority is responsible for the overall administration and regulation of the Atal Pension Yojana (APY) in India?
+A. Insurance Regulatory and Development Authority of India (IRDAI)
+B. Pension Fund Regulatory and Development Authority (PFRDA)
+C. Reserve Bank of India (RBI)
+D. Ministry of Finance, Government of India
+Answer: B
+Explanation: The Atal Pension Yojana (APY) is directly administered and regulated by the Pension Fund Regulatory and Development Authority (PFRDA) as India's flagship unorganised-sector pension scheme.
+
+Q63. Consider the following statements regarding the contribution framework of the Atal Pension Yojana (APY):
+
+1. Subscribers can choose to make contributions on a Monthly, Quarterly, or Half-yearly basis.
+2. Contributions are collected exclusively via the auto-debit facility from the savings account.
+3. The monthly contribution remains constant from the age of entry until the subscriber reaches 60 years.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct under the APY operational guidelines. Frequencies can be monthly/quarterly/half-yearly, collected via auto-debit, and the premium amount is fixed based on entry age until 60.
+
+Q64. If an APY subscriber defaults on their contribution, additional penalty amounts are collected. Match the monthly contribution slabs with their correct penalties:
+
+1. Up to Rs. 100: Re. 1 per month
+2. Above Rs. 100 up to Rs. 500: Rs. 2 per month
+3. Above Rs. 500 up to Rs. 1,000: Rs. 5 per month
+4. Above Rs. 1,000: Rs. 10 per month
+Which of the pairs given above are correctly matched?
+A. 1 and 2 only
+B. 3 and 4 only
+C. 1, 2 and 3 only
+D. 1, 2, 3 and 4
+Answer: D
+Explanation: All four penalty pairings are strictly accurate according to the statutory APY table for delayed payments and account maintenance.
+
+Q65. What are the specific timelines under the APY dormancy rules for an account to be sequentially frozen, deactivated, and closed due to non-payment of contributions?
+A. 3 months (Frozen), 6 months (Deactivated), 12 months (Closed)
+B. 6 months (Frozen), 12 months (Deactivated), 24 months (Closed)
+C. 6 months (Frozen), 18 months (Deactivated), 36 months (Closed)
+D. 12 months (Frozen), 24 months (Deactivated), 48 months (Closed)
+Answer: B
+Explanation: The APY dormancy framework follows a clean doubling sequence: after 6 months of non-payment, the account is frozen; after 12 months, it is deactivated; and after 24 months, it is closed.
+
+Q66. Which of the following statements is/are correct regarding the Exit and Withdrawal rules of APY?
+
+1. Upon attaining 60 years, the subscriber draws the guaranteed minimum monthly pension.
+2. On voluntary exit before 60 years, the subscriber receives a full refund of their own contributions plus interest, but forfeits any Government co-contribution.
+3. On the death of both the subscriber and spouse, the accumulated pension wealth is forfeited to the state.
+Select the correct answer using the code given below:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because upon the death of both the subscriber and the spouse, the accumulated pension corpus is fully returned to the designated nominee.
+
+Q67. An APY subscriber dies at the age of 45 years. Which of the following options is/are available to the surviving spouse under the scheme rules?
+
+1. The spouse can choose to continue the APY account in their own name and contribute for the remaining 15 years.
+2. The spouse can exit immediately and receive the entire accumulated corpus (contributions plus interest).
+3. The spouse can claim an immediate monthly pension starting from the date of the subscriber's death.
+Select the correct answer using the code given below:
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 represent the two valid statutory options available to a spouse if the subscriber dies before age 60. Statement 3 is incorrect because a pension is never triggered before the target maturity age of 60.
+
+Q68. What is the exact 'Indicative Corpus' returnable to the nominee after the death of both the subscriber and the spouse for the Rs. 3,000 and Rs. 5,000 monthly pension slabs respectively?
+A. Rs. 3.4 Lakhs and Rs. 5.1 Lakhs
+B. Rs. 5.1 Lakhs and Rs. 8.5 Lakhs
+C. Rs. 5.1 Lakhs and Rs. 10.0 Lakhs
+D. Rs. 3.0 Lakhs and Rs. 5.0 Lakhs
+Answer: B
+Explanation: The APY indicative corpus returned to the nominee is mathematically derived as the monthly pension multiplied by 170. Thus, for a Rs. 3,000 pension it is Rs. 5.1 Lakhs, and for a Rs. 5,000 pension it is Rs. 8.5 Lakhs.
+
+Q69. Which entity acts as the designated Central Recordkeeping Agency (CRA) for handling grievances and account maintenance under the Atal Pension Yojana (APY)?
+A. National Securities Depository Limited (NSDL)
+B. Protean eGov Technologies Limited
+C. Centre for Excellence in Postal Technology (CEPT)
+D. State Bank of India (SBI)
+Answer: B
+Explanation: Protean eGov Technologies Limited (formerly known as NSDL e-Gov) serves as the Central Recordkeeping Agency (CRA) responsible for managing APY subscriber records and systems.
+
+Q70. An individual holds savings accounts in both a commercial bank and a first-class Head Post Office. They attempt to register and pay premiums for PMJJBY through both accounts. What is the structural outcome?
+A. They will receive a double life cover benefit of Rs. 4 Lakhs on death.
+B. Both accounts will be cancelled and the subscriber will be permanently blacklisted.
+C. The insurance cover is strictly restricted to one account (Rs. 2 Lakhs), and the premium paid via the duplicate account is liable to be forfeited.
+D. The system will automatically merge the accounts into a joint commercial-postal account.
+Answer: C
+Explanation: Under the strict "one-account rule" common to Jan Suraksha insurance schemes, an individual can hold cover through one account only. Duplicate premiums are forfeited and total liability is limited to Rs. 2 Lakhs.
+
+Q71. Consider the following statements regarding the Know Your Customer (KYC) requirements for the Jan Suraksha schemes:
+
+1. Aadhaar is the primary and mandatory KYC document for enrolling in PMJJBY and PMSBY.
+2. For APY, Aadhaar and a mobile number are highly recommended (desirable) but not statutory.
+3. APY has been formally included under Section 7 of the Aadhaar Act.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect because APY's inclusion under Section 7 of the Aadhaar Act makes Aadhaar integration a structural baseline for verifying target subsidies/benefits, making it more than a simple "desirable choice."
+
+Q72. What is the latest timeline extension approved by the Union Cabinet for the continuation of funding and promotional support for the Atal Pension Yojana (APY)?
+A. Continues up to 2027-28
+B. Continues up to 2029-30
+C. Continues up to 2030-31
+D. Permanent continuation with no target window
+Answer: C
+Explanation: According to the latest Union Cabinet update, the government approved the continuation of the Atal Pension Yojana (APY) framework along with extended promotional and developmental funding support up to 2030-31.
+
+Q73. Which of the following conditions is completely exempt from the 30-day lien clause under the Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)?
+A. Death due to a sudden heart attack
+B. Death occurring due to a confirmed accident
+C. Death caused by an infectious pandemic disease
+D. No condition is exempt; the 30-day lien applies uniformly to all causes of death
+Answer: B
+Explanation: PMJJBY guidelines specify that death due to an accident is completely exempt from the 30-day lien period. An accidental-death claim is fully payable even if it occurs within the first 30 days of fresh enrolment.
+
+Q74. A subscriber who joined APY in November 2022 is discovered during an audit in 2026 to have been an active income-tax payer during the year of application. What immediate action must be taken?
+A. A penalty of Rs. 10 per month is levied retroactively.
+B. The APY account must be closed immediately, and the accumulated pension wealth till date is returned to the subscriber.
+C. The account is frozen until the subscriber turns 60, and no pension is paid.
+D. The account is allowed to continue, but the guaranteed minimum pension is halved.
+Answer: B
+Explanation: Under the income-tax payer exclusion amendment effective 01.10.2022, any account opened by a tax payer after this date must be closed upon identification, and their accumulated pension wealth returned.
+
+Q75. Consider the following statements regarding the definition of an "Accident" for admissibility of claims under the Pradhan Mantri Suraksha Bima Yojana (PMSBY):
+
+1. The event must be sudden, unforeseen, and involuntary.
+2. It must be caused exclusively by external, visible, and violent means.
+3. Deaths due to suicide, alcohol abuse, or self-inflicted injuries are fully covered.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct as they capture the strict legal and insurance definition of an accident under PMSBY. Statement 3 is incorrect because suicide and self-inflicted injuries are standard exclusions under accident policies.
+
+Q76. On which date did the Department of Posts, Ministry of Communications, officially launch the 'Know Your DIGIPIN' and 'Know Your PIN Code' public web portals?
+A. 19th July 2024
+B. 22nd September 2024
+C. 27th May 2025
+D. 16th December 2024
+Answer: C
+Explanation: The official launch of the public web applications 'Know Your DIGIPIN' and 'Know Your PIN Code' took place on 27th May 2025, marking the deployment of the digital address grid infrastructure.
+
+Q77. Consider the following statements regarding the core design principles of DIGIPIN (Digital Postal Index Number):
+
+1. It converts latitude and longitude into a permanent, unique 10-character alphanumeric code.
+2. It features 'privacy by design' as it encodes only a location and contains no personal identity data.
+3. It is fully offline-capable; a GNSS-enabled device can compute the code without an internet connection.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct. DIGIPIN is a 10-character geo-coded grid system (~4m x 4m) that protects privacy by ignoring names/details and functions entirely via mathematical coordinates offline.
+
+Q78. What are the exact Coordinate Reference System (CRS) and bounding box specifications defining the national DIGIPIN grid for India?
+A. CRS: EPSG:4326 (WGS 84); Extent: Longitude 63.5°–99.5°E, Latitude 2.5°–38.5°N
+B. CRS: EPSG:3857 (Web Mercator); Extent: Longitude 60.0°–100.0°E, Latitude 5.0°–40.0°N
+C. CRS: EPSG:4326 (WGS 84); Extent: Longitude 63.5°–99.0°E, Latitude 1.5°–39.0°N
+D. CRS: EPSG:4444 (India Geodetic); Extent: Longitude 65.5°–95.5°E, Latitude 8.0°–36.0°N
+Answer: A
+Explanation: DIGIPIN utilizes the standard global WGS 84 coordinate system (EPSG:4326) with a fixed bounding box spanning 36° x 36° from 63.5° to 99.5° East longitude and 2.5° to 38.5° North latitude.
+
+Q79. DIGIPIN uses a sequence of exactly 16 symbols. Which of the following characters from the initial beta version were replaced in the final technical document to enhance phonetic and visual clarity?
+A. The digits 0 and 1 were replaced by O and I.
+B. The characters G, W, and X were replaced by C, F, and T respectively.
+C. The characters A, E, and I were replaced by 2, 3, and 4.
+D. The characters B, D, and V were replaced by J, K, and L.
+Answer: B
+Explanation: Based on stakeholder feedback on the July 2024 beta version, the final March 2025 DIGIPIN document replaced the confusable characters G, W, and X with C, F, and T to enhance clarity.
+
+Q80. Consider the following statements regarding the 10-level hierarchical partition and grid sizes of DIGIPIN:
+
+1. Level-1 splits the primary national bounding box into a 4x4 grid of 16 regions, each measuring 9° x 9° (≈1000 km).
+2. Level-6 narrows the resolution down to a grid cell measuring approximately 1 km x 1 km.
+3. Level-10 provides the ultimate doorstep precision of an approximate 3.8 m x 3.8 m square.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements accurately reflect the geometric grid specifications of DIGIPIN. Each level divides the preceding bounding box dimension by 4, tapering from a 1000 km region to a 3.8 m doorstep cell.
+
+Q81. During the generation of a DIGIPIN, a specific location's coordinates fall exactly on a vertical (north-south) grid line. What is the standard tie-breaking rule applied by the algorithm?
+A. The point is assigned the code of the adjoining left-side (westward) grid cell.
+B. The point is assigned the code of the adjoining right-side (eastward) grid cell.
+C. The algorithm rejects the coordinate and throws a vertical ambiguity error.
+D. The point is split into both cells and generates a dual-hyphenated DIGIPIN.
+Answer: B
+Explanation: The technical document specifies that if a point lies precisely on a vertical grid line, the tie-breaking convention automatically assigns it the DIGIPIN of the adjoining right-side (eastward) grid cell.
+
+Q82. Consider the following statements regarding the DHRUVA (Digital Hub for Reference & Unique Virtual Address) ecosystem:
+
+1. DHRUVA is the comprehensive DPI framework, while DIGIPIN serves as its foundational addressing layer.
+2. The Central Mapper (CM) is the primary authority managing the grid and translating DIGIPIN into other formats.
+3. It allows users to create a virtual handle like name@dhruva to mask their underlying physical coordinates.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct. DHRUVA acts as the overarching consent-based, secure addressing DPI ecosystem (similar to UPI for payments), with the Central Mapper managing virtual handles linked to DIGIPIN.
+
+Q83. An individual generates a DIGIPIN for their house (39J49LL8T4) and attempts to use it at a post office counter to book a registered article. What is the current operational position?
+A. The counter official must accept it as a valid standalone address under the Post Office Rules, 2024.
+B. The booking is rejected because counter booking using DIGIPIN is not yet operationalized in the Department's systems.
+C. The system accepts it provided a 10% premium tariff is paid for digital addressing.
+D. The official can accept it only if it is written in the legacy 3-3-4 hyphenated display format.
+Answer: B
+Explanation: Per the official India Post FAQ, while the DIGIPIN portal is live, citizens cannot yet quote a DIGIPIN for booking articles at counter systems until the Department announces its full operational integration.
+
+Q84. Consider the following statements regarding the sweeping legal transformations introduced by the Post Office Act, 2023, which repealed the colonial Indian Post Office Act, 1898:
+
+1. It completely abolishes the exclusive privilege (monopoly) of the Central Government over conveying letters.
+2. Private couriers are now legally permitted to convey letters.
+3. The Post Office retains one exclusive privilege: the sole right to issue postage stamps.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct. The 2023 Act removed the historical government monopoly on letters, giving legal clarity to private couriers, while preserving stamp issuance as India Post's lone privilege under Section 4.
+
+Q85. Which of the following statements is/are correct regarding the Remotely Managed Franking System (RMFS) "Digifrank Plus" governed by Regulation 176 of the Post Office Regulations, 2024?
+
+1. The license fee is Rs. 375 for a duration of five years.
+2. The first setting (advance upload) requires a minimum of Rs. 2,000.
+3. The machine uses inkjets to imprint a secure blue impression on the top-right corner of the address side.
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct. RMFS Digifrank Plus operates with a Rs. 375 five-year fee, a Rs. 2,000 minimum initial load, and prints a secure blue digital impression with a 2-D barcode.
+
+Q86. Under the RMFS guidelines, what are the standard consumption rebate rules and the timeframe for claiming a refund on an erroneous franking impression?
+A. 3% standard rebate (min Rs. 5,000 consumption); refund claim within 1 month (with a 5% deduction).
+B. 5% standard rebate (min Rs. 10,000 consumption); refund claim within 15 days (with no deduction).
+C. 2% standard rebate (min Rs. 5,000 consumption); refund claim within 3 months (with a 10% deduction).
+D. 3% standard rebate (no minimum consumption); refund claim within 1 month (with a 2% deduction).
+Answer: A
+Explanation: Regulation 176 provides a 3% rebate on credit uploads for a minimum consumption of Rs. 5,000. Erroneous impressions are refunded at face value minus a 5% administrative deduction if claimed within 1 month.
+
+Q87. Consider the following operational distinctions between the 'Suspension' and 'Cancellation' of an RMFS franking machine license:
+
+1. Suspension is a temporary, reversible status where the meter is blocked until re-activated by the Licensing Authority.
+2. Cancellation is a non-reversible status where the machine prints an "Uninstalled/VOID" impression and can never be re-credited.
+3. Both actions can be performed exclusively by the Original Equipment Manufacturer (OEM).
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct as they mark the distinct administrative boundaries of suspension vs cancellation. Statement 3 is incorrect because these enforcement actions are executed by the postal Licensing Authority, not the OEM.
+
+Q88. An RMFS machine fails to dial into the central server for a continuous period of 35 days due to a localized network issue. What is the status of the machine under the server discipline rules?
+A. The license is permanently cancelled and the security deposit is forfeited.
+B. The machine is placed under a temporary block and will unblock automatically when it next successfully dials in and uploads data.
+C. The machine continues to operate normally as offline mode is permitted for up to 90 days.
+D. The machine is blacklisted and must be physically brought to the Head Post Office for a manual reset.
+Answer: B
+Explanation: RMFS rules mandate that a machine must dial the server at least once every 30 days. If it defaults, a reversible block is triggered. It is unblocked as soon as it successfully connects and synchronizes data.
+
+Q89. Consider the following statements regarding postal registration of newspapers under the Press and Registration of Periodicals Act, 2023 (PRP Act):
+
+1. Title registration must be done online with the Press Registrar General of India (PRGI), which replaces the old RNI.
+2. A valid PRGI certificate is a mandatory pre-condition for obtaining postal registration.
+3. Postal registration is granted by the Head of the Postal Division within 30 days of a complete application.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct. The PRP Act 2023 modernised the process, placing title authority with the PRGI, which issues certificates required by the SSPO/SPO to grant postal registration within 30 days.
+
+Q90. What is the statutory validity period of a newspaper's postal registration, and what are the late fees if renewal applications miss the three-month advance window?
+A. Valid for 3 calendar years; Late fee is Rs. 50 (before expiry) and Rs. 100 (after expiry).
+B. Valid for 5 calendar years; Late fee is Rs. 100 (before expiry) and Rs. 200 (after expiry).
+C. Valid for 2 calendar years; Late fee is Rs. 50 uniformly.
+D. Valid for 3 calendar years; Late fee is Rs. 20 (before expiry) and Rs. 50 (after expiry).
+Answer: A
+Explanation: Postal registration of a newspaper runs for 3 calendar years. Renewal must be filed 3 months in advance (by 30 September). Late submissions attract a Rs. 50 fee, which rises to Rs. 100 after the registration expires.
+
+Q91. Which of the following statements is/are correct regarding the Posting Without Prepayment (WPP) license for registered newspapers?
+
+1. The publisher must post a minimum of 500 copies at a time to qualify for a WPP license.
+2. The competent authority to grant or cancel a WPP license is the Head of the Circle or Region.
+3. WPP bills are raised twice a month and must be paid within 7 days of issue.
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct. WPP requires >500 copies, falls under CPMG/PMG jurisdiction, and operates on a fortnightly billing cycle (1st and 16th) with a strict 7-day payment window.
+
+Q92. A registered newspaper publisher voluntarily decides to discontinue publication and submits a written request to cancel both their postal registration and their WPP license. Identify the competent authorities.
+A. Head of Division cancels the postal registration; Head of Circle/Region cancels the WPP license.
+B. Head of Circle cancels both the postal registration and the WPP license.
+C. Head of Division cancels both the postal registration and the WPP license.
+D. Press Registrar General of India (PRGI) must cancel both directly.
+Answer: A
+Explanation: Under recent administrative updates (PO Division order dated 14.11.2025), voluntary cancellations on customer requests are split by operational competency: the SSPO/SPO cancels postal registration, while the CPMG/PMG cancels the WPP license.
+
+Q93. Consider the following statements regarding the Post Box and Post Bag facilities governed by the Post Office Regulations, 2024:
+
+1. The allotment fee paid in advance is non-refundable and cannot be adjusted under any circumstances.
+2. Any change in the customer's business address must be formally intimated within 7 days.
+3. If the customer does not clear the box for a week, a notice is sent by registered post.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct under Chapter 10 guidelines. Fees are non-refundable, address shifts require a 7-day notification to prevent withdrawal, and a 1-week clearance default triggers a registered notice.
+
+Q94. What is the maximum value permitted for a single electronic Money Order (eMO) and the maximum aggregate retail remittance allowed to a single person in a month under the 2024 Regulations?
+A. Single eMO: Rs. 5,000; Monthly Aggregate: Rs. 25,000
+B. Single eMO: Rs. 10,000; Monthly Aggregate: Rs. 25,000
+C. Single eMO: Rs. 10,000; Monthly Aggregate: Rs. 50,000
+D. Single eMO: Rs. 5,000; Monthly Aggregate: Rs. 10,000
+Answer: B
+Explanation: The Post Office Regulations, 2024 cap a single ordinary eMO at Rs. 10,000 (superseding the old Rs. 5,000 limit) and restrict the total aggregate remittance to a single payee to Rs. 25,000 per month.
+
+Q95. An eMO arrives for payment to a payee who is temporarily physically incapable of signing due to a severe medical condition. How should the postman execute payment under Regulation 150(2)?
+A. The money order must be marked undeliverable and returned to the remitter immediately.
+B. Payment can be made to any neighbor who agrees to sign the receipt.
+C. A responsible person with whom the payee resides signs the receipt in the presence of an attesting resident witness.
+D. Payment is deferred until the payee completely recovers and can sign independently.
+Answer: C
+Explanation: For physically incapable payees, Regulation 150(2) permits a responsible co-resident to sign the receipt on their behalf, provided the transaction is explicitly witnessed and attested by an independent resident.
+
+Q96. What are the standard denominations available for Indian Postal Orders (IPOs) and the maximum validity period allowed for encashment without a second commission?
+A. Denominations: Rs. 10, 20, 50, 100; Validity: 24 months from the month of issue.
+B. Denominations: Rs. 5, 10, 20, 50, 100; Validity: 36 months from the month of issue.
+C. Denominations: Rs. 10, 50, 100, 500; Validity: 24 months from the month of issue.
+D. Denominations: Rs. 10, 20, 50, 100; Validity: 12 months from the month of issue.
+Answer: A
+Explanation: IPOs are issued in denominations of Rs. 10, 20, 50, and 100. They are valid for encashment without any extra commission for 24 months. Between 24 and 36 months, a second commission is required.
+
+Q97. Consider the following statements regarding the Philatelic Deposit Account (PDA) policy:
+
+1. The minimum opening balance for a domestic PDA is Rs. 200.
+2. The minimum opening balance for a foreign PDA is Rs. 1,000.
+3. Foreign transactions incur a handling charge of 2% subject to a minimum of Rs. 5.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All three statements are correct under Chapter 14. Domestic accounts open at Rs. 200, foreign accounts at Rs. 1,000, and foreign dispatches carry a mandatory 2% (min Rs. 5) handling fee.
+
+Q98. Which of the following represents the correct eligibility and scholarship framework under the Deen Dayal SPARSH Yojana?
+A. Classes VI to IX; minimum 60% marks (5% relaxation for SC/ST); scholarship of Rs. 6,000 per annum.
+B. Classes V to VIII; minimum 50% marks (no relaxation); scholarship of Rs. 3,000 per annum.
+C. Classes VI to XII; minimum 60% marks (5% relaxation for SC/ST); scholarship of Rs. 12,000 per annum.
+D. Classes IX to XII; minimum 75% marks (10% relaxation for SC/ST); scholarship of Rs. 5,000 per annum.
+Answer: A
+Explanation: SPARSH targets students from classes VI to IX with at least 60% marks (55% for SC/ST). It awards a scholarship of Rs. 6,000 per annum (Rs. 500/month) to promote philately as a hobby.
+
+Q99. What is the retail cost of a single 'My Stamp' personalized sheet, and what is the minimum order volume required for corporate clients to avail of a 20% discount under 'Customized My Stamp' (CMS)?
+A. Retail cost: Rs. 300; Minimum corporate order: 1,000 sheets.
+B. Retail cost: Rs. 200; Minimum corporate order: 5,000 sheets.
+C. Retail cost: Rs. 300; Minimum corporate order: 5,000 sheets.
+D. Retail cost: Rs. 500; Minimum corporate order: 10,000 sheets.
+Answer: C
+Explanation: A retail My Stamp sheet costs Rs. 300 (containing 12 stamps of Rs. 5 face value). For corporate Customized My Stamp (CMS), the minimum order threshold is 5,000 sheets to secure the flat 20% discount channel.
+
+Q100. Consider the following statements regarding the Interception of postal items under Section 9 of the Post Office Act, 2023 and official mail charging rules:
+
+1. Interception is permitted on the grounds of public safety, public order, emergency, or security of the State.
+2. Unpaid official ("On India Government Service") letters are charged double the deficiency upon delivery.
+3. Insufficiently paid official articles are charged only the exact single deficiency, not double.
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect because unlike private mail (which is charged double), unpaid or insufficiently paid official service mail is only ever charged the exact single deficiency or single prepaid rate upon delivery.

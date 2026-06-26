@@ -222,6 +222,11 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         endDate: new Date("2026-06-21T23:59:59+05:30"),
         title: "Weekly Mock Test - S2-04"
     },
+    "mock-s2-2026-06-27": {
+        startDate: new Date("2026-06-27T00:00:00+05:30"),
+        endDate: new Date("2026-06-28T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-05"
+    },
 
     "psgb-mock-2026-06-07": {
         startDate: new Date("2026-06-06T00:00:00+05:30"),
@@ -237,6 +242,11 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-06-20T00:00:00+05:30"),
         endDate: new Date("2026-06-21T23:59:59+05:30"),
         title: "PS Gr B - Weekly Mock Test 12"
+    },
+    "psgb-mock-2026-06-28": {
+        startDate: new Date("2026-06-27T00:00:00+05:30"),
+        endDate: new Date("2026-06-28T23:59:59+05:30"),
+        title: "PS Gr B - Weekly Mock Test 13"
     }
 };
 
@@ -1060,7 +1070,11 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     const cNotVisited = questions.length - cAnswered - cNotAnswered - cMarked - cAnsweredMarked;
 
     return (
-        <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans selection:bg-purple-500/30">
+        <div 
+            className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans selection:bg-purple-500/30 select-none"
+            onContextMenu={(e) => e.preventDefault()}
+            onCopy={(e) => e.preventDefault()}
+        >
             {/* RENDER MOBILE VIEW IF NOT SUBMITTED */}
             {!isSubmitted && (
                 <div className="fixed inset-0 z-[100] bg-[#F8F9FB] dark:bg-black flex flex-col font-sans lg:hidden">

@@ -522,13 +522,54 @@ export const createMockTestAnswerSheetPDFDoc = async ({
 
     const yPos = 15 + boxHeight + 15;
 
-    renderAnswerSheetQuestions(doc, questions, answers, {
+    const finalY = renderAnswerSheetQuestions(doc, questions, answers, {
         startY: yPos,
         margin,
         contentWidth,
         pageHeight,
         addWatermark,
     });
+
+    // End of Answer Sheet text
+    let endY = finalY + 15;
+    if (endY > pageHeight - 30) {
+        doc.addPage();
+        addWatermark();
+        endY = 20;
+    }
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "bolditalic");
+    doc.setTextColor(100, 100, 100);
+    doc.text("-- End of Answer Sheet -- visit www.dakguru.com for more mock tests.", pageWidth / 2, endY, { align: "center" });
+    doc.text("Best wishes for your preparation.", pageWidth / 2, endY + 6, { align: "center" });
+
+    // Add Header and Footer to all pages
+    const pageCount = typeof (doc as any).getNumberOfPages === 'function' 
+        ? (doc as any).getNumberOfPages() 
+        : (doc.internal as any).getNumberOfPages();
+        
+    for (let i = 1; i <= pageCount; i++) {
+        doc.setPage(i);
+        doc.setDrawColor(220, 220, 220);
+        doc.setLineWidth(0.5);
+
+        // Header (Page 2 onwards)
+        if (i > 1) {
+            doc.setFontSize(9);
+            doc.setFont("helvetica", "italic");
+            doc.setTextColor(150, 150, 150);
+            doc.text(`${testName} - Answer Sheet`, margin, 10);
+            doc.line(margin, 12, pageWidth - margin, 12);
+        }
+
+        // Footer (All pages)
+        doc.line(margin, pageHeight - 12, pageWidth - margin, pageHeight - 12);
+        doc.setFontSize(9);
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(150, 150, 150);
+        doc.text("www.dakguru.com", margin, pageHeight - 7);
+        doc.text(`Page ${i} of ${pageCount}`, pageWidth - margin, pageHeight - 7, { align: "right" });
+    }
 
     return doc;
 };
