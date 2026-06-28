@@ -16,6 +16,34 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "28.06.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: Paper I & Paper III Updates",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated multiple important PDF notes across both <strong>Paper I</strong> and <strong>Paper III</strong> in the Digital Library!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-3 rounded-xl border border-blue-100 dark:border-blue-800/50">
+                                <p className="font-bold text-blue-700 dark:text-blue-300 text-[10px] uppercase tracking-wide">Paper I Notes</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Updated <strong>APT Knowledge (IT 2.0)</strong>, <strong>Core Banking Solutions (CBS)</strong>, and <strong>India Post Payments Bank (IPPB)</strong>.</p>
+                            </div>
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Paper III Notes</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Updated <strong>Brochure on Casual Labourers</strong>, <strong>Maintenance of APAR</strong>, <strong>CCS (GPF) Rules 1960</strong>, <strong>Service Discharge Benefit Scheme 2010</strong>, and <strong>Prevention of Corruption Act 1988</strong>.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "21.06.2026",
         items: [
             {
