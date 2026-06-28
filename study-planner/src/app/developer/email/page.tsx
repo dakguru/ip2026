@@ -15,6 +15,8 @@ import {
     Sparkles,
     FlaskConical,
     X,
+    Save,
+    Trash2,
 } from "lucide-react";
 
 // ----- Email Templates -----
@@ -160,6 +162,55 @@ export default function EmailComposePage() {
     const [showPreview, setShowPreview] = useState(false);
     const [showConfirm, setShowConfirm] = useState(false);
     const [selectedTemplate, setSelectedTemplate] = useState("blank");
+    const [draftSaved, setDraftSaved] = useState(false);
+    const [savedDrafts, setSavedDrafts] = useState<{ id: string, subject: string, html: string, timestamp: number }[]>([]);
+
+    // Load draft on mount
+    useEffect(() => {
+        try {
+            const draftsStr = localStorage.getItem("email_drafts_list");
+            if (draftsStr) {
+                setSavedDrafts(JSON.parse(draftsStr));
+            } else {
+                // Migrate old draft if exists
+                const oldSub = localStorage.getItem("email_draft_subject");
+                const oldBody = localStorage.getItem("email_draft_body");
+                if (oldSub || oldBody) {
+                    const migrated = [{ id: Date.now().toString(), subject: oldSub || "", html: oldBody || "", timestamp: Date.now() }];
+                    setSavedDrafts(migrated);
+                    localStorage.setItem("email_drafts_list", JSON.stringify(migrated));
+                    localStorage.removeItem("email_draft_subject");
+                    localStorage.removeItem("email_draft_body");
+                }
+            }
+        } catch (e) {
+            console.error("Failed to load drafts", e);
+        }
+    }, []);
+
+    // Save draft
+    const handleSaveDraft = () => {
+        if (!subject && !htmlBody) return;
+        const newDraft = { id: Date.now().toString(), subject, html: htmlBody, timestamp: Date.now() };
+        const updatedDrafts = [newDraft, ...savedDrafts].slice(0, 10);
+        setSavedDrafts(updatedDrafts);
+        localStorage.setItem("email_drafts_list", JSON.stringify(updatedDrafts));
+        setDraftSaved(true);
+        setTimeout(() => setDraftSaved(false), 2000);
+    };
+
+    const loadDraft = (draft: { subject: string, html: string }) => {
+        setSubject(draft.subject);
+        setHtmlBody(draft.html);
+        setSelectedTemplate("draft");
+    };
+
+    const deleteDraft = (id: string, e: React.MouseEvent) => {
+        e.stopPropagation();
+        const updatedDrafts = savedDrafts.filter((d) => d.id !== id);
+        setSavedDrafts(updatedDrafts);
+        localStorage.setItem("email_drafts_list", JSON.stringify(updatedDrafts));
+    };
 
     // Fetch recipient count on filter change
     const fetchRecipientCount = useCallback(async () => {
@@ -304,6 +355,41 @@ export default function EmailComposePage() {
                                 ))}
                             </div>
                         </div>
+
+                        {/* Saved Drafts */}
+                        {savedDrafts.length > 0 && (
+                            <div className="bg-white dark:bg-zinc-900 rounded-2xl p-5 border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                                <label className="block text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3">
+                                    <Save className="w-3.5 h-3.5 inline mr-1 -mt-0.5" />
+                                    Saved Drafts
+                                </label>
+                                <div className="space-y-2 max-h-48 overflow-y-auto pr-1 custom-scrollbar">
+                                    {savedDrafts.map((draft) => (
+                                        <div
+                                            key={draft.id}
+                                            onClick={() => loadDraft(draft)}
+                                            className="flex items-center justify-between p-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-200 dark:hover:border-blue-800 cursor-pointer transition-all group"
+                                        >
+                                            <div className="overflow-hidden mr-3">
+                                                <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 truncate">
+                                                    {draft.subject || "Untitled Draft"}
+                                                </div>
+                                                <div className="text-[10px] font-medium text-zinc-500 dark:text-zinc-400 mt-0.5">
+                                                    {new Date(draft.timestamp).toLocaleString()}
+                                                </div>
+                                            </div>
+                                            <button
+                                                onClick={(e) => deleteDraft(draft.id, e)}
+                                                className="p-1.5 text-zinc-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-md transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0"
+                                                title="Delete Draft"
+                                            >
+                                                <Trash2 className="w-4 h-4" />
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
 
                         {/* Subject */}
                         <div className="bg-white dark:bg-zinc-900 rounded-2xl p-5 border border-zinc-200 dark:border-zinc-800 shadow-sm">
@@ -483,8 +569,15 @@ export default function EmailComposePage() {
                             </button>
                         </div>
 
-                        {/* Send to All Button */}
-                        <div className="bg-white dark:bg-zinc-900 rounded-2xl p-5 border border-zinc-200 dark:border-zinc-800 shadow-sm">
+                        {/* Action Buttons */}
+                        <div className="bg-white dark:bg-zinc-900 rounded-2xl p-5 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-3">
+                            <button
+                                onClick={handleSaveDraft}
+                                className="w-full py-2.5 px-4 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-semibold text-sm transition-all flex items-center justify-center gap-2"
+                            >
+                                {draftSaved ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <Save className="w-4 h-4" />}
+                                {draftSaved ? "Draft Saved!" : "Save Draft"}
+                            </button>
                             <button
                                 onClick={() => setShowConfirm(true)}
                                 disabled={sending || !subject || !htmlBody || !recipientCount}
