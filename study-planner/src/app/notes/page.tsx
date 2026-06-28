@@ -682,7 +682,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "P&T Financial Hand Book Volume I.",
             filename: "FHB_Vol_I.pdf",
             path: "/notes/paper-3/FHB_Vol_I.pdf",
-            size: "0.9 MB",
+            size: "0.8 MB",
             color: "violet",
             topic: "Financial & Procurement"
         },
@@ -691,7 +691,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Postal Financial Hand Book Volume II.",
             filename: "FHB_Vol_II.pdf",
             path: "/notes/paper-3/FHB_Vol_II.pdf",
-            size: "0.8 MB",
+            size: "4.3 MB",
             color: "violet",
             topic: "Financial & Procurement"
         },
