@@ -83,7 +83,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Postal Manual Volume V",
             "filename": "Postal_Manual_Vol_V.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_V.pdf",
-            "size": "0.7 MB",
+            "size": "0.5 MB",
             "color": "amber",
             "topic": "Postal Manuals"
         },
@@ -92,7 +92,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Revised comprehensive notes covering Organization and General Regulations.",
             "filename": "Postal_Manual_Vol_II.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_II.pdf",
-            "size": "4.2 MB",
+            "size": "0.6 MB",
             "color": "amber",
             "topic": "Postal Manuals"
         },
@@ -238,7 +238,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Postal Manual Volume IV.",
             "filename": "Postal_Manual_Vol_IV.pdf",
             "path": "/notes/paper-1/Postal_Manual_Vol_IV.pdf",
-            "size": "4.1 MB",
+            "size": "0.4 MB",
             "color": "amber",
             "topic": "Postal Manuals"
         },
@@ -331,7 +331,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Central Civil Services (Temporary Service Rules), 1965",
             "filename": "CCS_Temporary_Services_Rules_1965.pdf",
             "path": "/notes/paper-1/CCS_Temporary_Services_Rules_1965.pdf",
-            "size": "0.2 MB",
+            "size": "4.2 MB",
             "color": "red",
             "topic": "CCS Rules & Establishment"
         },
@@ -385,7 +385,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Central Civil Services (Leave) Rules, 1972",
             "filename": "CCS_Leave_Rules_1972.pdf",
             "path": "/notes/paper-3/CCS_Leave_Rules_1972.pdf",
-            "size": "0.3 MB",
+            "size": "0.5 MB",
             "color": "teal",
             "topic": "CCS Rules & Establishment"
         },
@@ -394,7 +394,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Rules governing joining time on transfer, etc.",
             "filename": "CCS Joining Time Rules.pdf",
             "path": "/notes/paper-2/CCS Joining Time Rules.pdf",
-            "size": "4.1 MB",
+            "size": "0.4 MB",
             "color": "sky",
             "topic": "CCS Rules & Establishment"
         },
@@ -448,7 +448,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Rules relating to Children Education allowance and reimbursement of Hostel Subsidy",
             "filename": "CEA_and_Hostel_Subsidy.pdf",
             "path": "/notes/paper-3/CEA_and_Hostel_Subsidy.pdf",
-            "size": "4.1 MB",
+            "size": "0.5 MB",
             "color": "violet",
             "topic": "CCS Rules & Establishment"
         },
@@ -574,7 +574,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Right to Information Act 2005 and RTI Rules 2012",
             "filename": "RTI_Act_2005_and_RTI_Rules_2012.pdf",
             "path": "/notes/paper-3/RTI_Act_2005_and_RTI_Rules_2012.pdf",
-            "size": "0.7 MB",
+            "size": "0.5 MB",
             "color": "cyan",
             "topic": "Constitution & Laws"
         },
@@ -583,7 +583,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
             "filename": "POSH_Rules_2013.pdf",
             "path": "/notes/paper-3/POSH_Rules_2013.pdf",
-            "size": "0.2 MB",
+            "size": "0.5 MB",
             "color": "pink",
             "topic": "Constitution & Laws"
         },
@@ -601,7 +601,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Revenue Recovery Act, 1890",
             "filename": "Revenue_Recovery_Act_1890.pdf",
             "path": "/notes/paper-3/Revenue_Recovery_Act_1890.pdf",
-            "size": "0.4 MB",
+            "size": "0.5 MB",
             "color": "blue",
             "topic": "Constitution & Laws"
         },

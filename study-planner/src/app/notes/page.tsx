@@ -208,7 +208,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Revised comprehensive notes covering Organization and General Regulations.",
             filename: "Postal_Manual_Vol_II.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_II.pdf",
-            size: "4.2 MB",
+            size: "0.6 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
@@ -226,7 +226,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Leave, pension, gratuities, and establishment rules.",
             filename: "Postal_Manual_Vol_IV.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_IV.pdf",
-            size: "4.1 MB",
+            size: "0.4 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
@@ -235,7 +235,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Manual for various postal operations.",
             filename: "Postal_Manual_Vol_VIII.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_VIII.pdf",
-            size: "0.2 MB",
+            size: "0.9 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
@@ -245,7 +245,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Except Appendix-1.",
             filename: "Postal_Manual_Vol_V.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_V.pdf",
-            size: "0.7 MB",
+            size: "0.5 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
@@ -264,7 +264,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "RMS work and innovative guidelines.",
             filename: "postal-manual-vol-vii.pdf",
             path: "/notes/paper-1/postal-manual-vol-vii.pdf",
-            size: "0.8 MB",
+            size: "0.7 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
@@ -307,7 +307,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Basic understanding of Digital Personal Identification Number.",
             filename: "DIGIPIN.pdf",
             path: "/notes/paper-1/DIGIPIN.pdf",
-            size: "0.5 MB",
+            size: "4.4 MB",
             color: "violet",
             topic: "Operations"
         },
@@ -336,7 +336,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Guidelines for export centers.",
             filename: "Dak_Ghar_Niryat_Kendra.pdf",
             path: "/notes/paper-1/Dak_Ghar_Niryat_Kendra.pdf",
-            size: "4.2 MB",
+            size: "0.5 MB",
             color: "fuchsia",
             topic: "Operations"
         },
@@ -429,7 +429,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Rules for temporary service.",
             filename: "CCS_Temporary_Services_Rules_1965.pdf",
             path: "/notes/paper-1/CCS_Temporary_Services_Rules_1965.pdf",
-            size: "0.2 MB",
+            size: "4.2 MB",
             color: "red",
             topic: "Rules"
         },
@@ -484,7 +484,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Act for recovery of public revenue.",
             filename: "Revenue_Recovery_Act_1890.pdf",
             path: "/notes/paper-3/Revenue_Recovery_Act_1890.pdf",
-            size: "0.4 MB",
+            size: "0.5 MB",
             color: "blue",
             topic: "Constitution & Laws"
         },
@@ -506,7 +506,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Right to Information framework.",
             filename: "RTI_Act_2005_and_RTI_Rules_2012.pdf",
             path: "/notes/paper-3/RTI_Act_2005_and_RTI_Rules_2012.pdf",
-            size: "0.7 MB",
+            size: "0.5 MB",
             color: "cyan",
             topic: "Constitution & Laws"
         },
@@ -528,7 +528,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Central Civil Services (Leave) Rules, 1972.",
             filename: "CCS_Leave_Rules_1972.pdf",
             path: "/notes/paper-3/CCS_Leave_Rules_1972.pdf",
-            size: "0.3 MB",
+            size: "0.5 MB",
             color: "teal",
             topic: "CCS Rules & Establishment"
         },
@@ -566,7 +566,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Prevention, Prohibition and Redressal.",
             filename: "POSH_Rules_2013.pdf",
             path: "/notes/paper-3/POSH_Rules_2013.pdf",
-            size: "0.2 MB",
+            size: "0.5 MB",
             color: "pink",
             topic: "Constitution & Laws"
         },
