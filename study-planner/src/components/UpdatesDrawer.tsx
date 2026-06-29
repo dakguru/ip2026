@@ -16,6 +16,30 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "29.06.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: Postal Manual Vol V & CCS RSA Rules Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the PDF notes for <strong>Postal Manual Volume V</strong> and <strong>CCS (RSA) Rules, 1993</strong> to their latest <strong>Exam Edition</strong> versions!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Updated Notes</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The notes now reflect the comprehensive <strong>Exam Edition</strong> to help you prepare better for both LDCE IP and PS Group B modes.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "28.06.2026",
         items: [
             {

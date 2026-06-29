@@ -243,9 +243,9 @@ const PDF_DATA: Record<string, Note[]> = {
         {
             title: "Postal Manual Volume V",
             description: "Except Appendix-1.",
-            filename: "Postal_Manual_Vol_V.pdf",
-            path: "/notes/paper-1/Postal_Manual_Vol_V.pdf",
-            size: "0.5 MB",
+            filename: "Postal_Manual_Vol_V_Exam_Edition.pdf",
+            path: "/notes/paper-1/Postal_Manual_Vol_V_Exam_Edition.pdf",
+            size: "0.6 MB",
             color: "amber",
             topic: "Postal Manuals"
         },

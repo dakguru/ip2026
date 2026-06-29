@@ -81,9 +81,9 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "Postal Manual Volume V",
             "description": "Postal Manual Volume V",
-            "filename": "Postal_Manual_Vol_V.pdf",
-            "path": "/notes/paper-1/Postal_Manual_Vol_V.pdf",
-            "size": "0.5 MB",
+            "filename": "Postal_Manual_Vol_V_Exam_Edition.pdf",
+            "path": "/notes/paper-1/Postal_Manual_Vol_V_Exam_Edition.pdf",
+            "size": "0.6 MB",
             "color": "amber",
             "topic": "Postal Manuals"
         },
@@ -464,8 +464,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "Central Civil Services (Recognition of Service Association) Rules, 1993",
             "description": "Rules for recognition of service associations of central government employees.",
-            "filename": "CCS RSA Rules.pdf",
-            "path": "/notes/paper-2/CCS RSA Rules.pdf",
+            "filename": "CCS RSA Rules_Exam Edition.pdf",
+            "path": "/notes/paper-2/CCS RSA Rules_Exam Edition.pdf",
             "size": "0.5 MB",
             "color": "sky",
             "topic": "CCS Rules & Establishment"
