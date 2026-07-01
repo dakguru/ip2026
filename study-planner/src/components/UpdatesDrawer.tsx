@@ -16,6 +16,37 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "01.07.2026",
+        items: [
+            {
+                title: "🚀 Major Updates: Postal Manual Vol VI, Vol VII & Preservation of Records",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have significantly upgraded our study materials and MCQ banks with fresh, high-yield content!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                                <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">Postal Manual Vol VI & VII</p>
+                                <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400 mt-1 text-[11px] space-y-1">
+                                    <li><strong>Volume VI:</strong> Replaced the old 48 questions with a new set of <strong>135 critical MCQs</strong>.</li>
+                                    <li><strong>Volume VII:</strong> Replaced the old 43 questions with a new set of <strong>75 most important MCQs</strong>.</li>
+                                </ul>
+                            </div>
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">PDF Notes Updated</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The <strong>Preservation of Records</strong> PDF notes have been updated to the latest version.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Check out the new materials today!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "29.06.2026",
         items: [
             {

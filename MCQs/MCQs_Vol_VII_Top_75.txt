@@ -1,0 +1,772 @@
+================================================================
+POSTAL MANUAL VOLUME VII  (RAILWAY MAIL SERVICE)
+MOST IMPORTANT 75 MCQs  —  Q1 to Q75
+================================================================
+
+SELECTION BASIS
+All 75 questions below are drawn from the CRITICAL-tier items of the
+source set of 161 MCQs. The CRITICAL pool held 97 questions, so it was
+trimmed to 75 by dropping only the lowest-yield items first: the composite
+"consider the following statements" review questions, and the
+scenario/sequence/match questions that merely re-test a fact already
+covered by a single-fact question in the same topic. All pure factual
+recall (forms, page counts, time thresholds, penalties, custody rules,
+definitions) has been retained.
+
+NOTE ON FIDELITY
+Question stems, options, answer keys and explanations are reproduced from
+the source file as-is (plain-text formatting normalised only). This was a
+curation + renumbering pass, NOT a fresh primary-source re-verification
+against Postal Manual Volume VII. If you want the selected 75 run through a
+primary-source accuracy audit, that is a separate task.
+
+================================================================
+
+
+================================================================
+TOPIC 1 — DEPARTMENTS OF A SET   (Q1-Q7)
+================================================================
+
+Q1. Which of the following correctly defines the "Set" of a Sorting Mail Office under the Railway Mail Service?
+A. A group of railway officials managing mail transit.
+B. A team of officials working a section or office together during a fixed period.
+C. A collection of sorting bags assigned to a specific station.
+D. The geographical jurisdiction of a Railway Mail Division.
+Correct Answer: B
+Explanation:
+• Under the definitions in Rule 1, a 'set' refers to the team of officials working together in a section or office, divided into departments for the distribution of work and responsibility.
+
+Q2. In a full-set Sorting Mail Office, how many distinct departments are established for the distribution of work?
+A. Two
+B. Three
+C. Four
+D. Six
+Correct Answer: C
+Explanation:
+• As per Rule 1(1), each set of a Sorting Mail Office is divided into four departments: Mail, Sorting, Registration, and Parcel.
+
+Q3. Who is the official in charge of the Mail Department in a Sorting Mail Office?
+A. Sorting Assistant
+B. Registration Sorting Assistant
+C. Parcel Sorting Assistant
+D. Head Sorting Assistant
+Correct Answer: D
+Explanation:
+• According to Rule 1, the Head Sorting Assistant (HSA) is the official in charge of the Mail Department and is overall responsible for the set.
+
+Q4. In a set where only two Sorting Assistants are employed, what is the prescribed arrangement for the distribution of work?
+A. One Assistant handles Mail/Sorting while the other handles Registration/Parcel.
+B. One Assistant handles all departments while the other remains in reserve.
+C. The Head Sorting Assistant handles all four departments.
+D. Both Assistants work jointly across all four departments.
+Correct Answer: A
+Explanation:
+• Rule 1(3) mandates that in a set of only two SAs, the HSA handles the sorting-department work in addition to his own, while the other SA handles both registration and parcel work.
+
+Q5. Which official is designated as the "Mail Sorting Assistant" in sets headed by a selection-grade Head Sorting Assistant?
+A. The most junior Sorting Assistant.
+B. A senior Sorting Assistant responsible for receipt and dispatch of mails.
+C. The Record Officer on special duty.
+D. The Registration Sorting Assistant.
+Correct Answer: B
+Explanation:
+• Rule 1(4) specifies that in selection-grade sets, the receipt/dispatch of mails and opening/closing of bags is assigned to a senior SA designated as the Mail Sorting Assistant.
+
+Q6. A Sorting Mail Office set has three sanctioned Sorting Assistants. Due to staff shortage, the separate Parcel Sorting Assistant is not employed. What is the correct procedural disposal of parcel duties?
+A. The duties are kept in abeyance.
+B. The HSA must handle the parcel work.
+C. The parcel duties go to the Registration Sorting Assistant.
+D. The parcel work is transferred to the nearest Head Post Office.
+Correct Answer: C
+Explanation:
+• Under Rule 1(3), where no separate Parcel Sorting Assistant is employed, the parcel duties are assigned to the Registration Sorting Assistant.
+
+Q7. Which of the following statements regarding the departmental structure of an RMS set is correct?
+A. Running sorting sections currently perform sorting work inside trains.
+B. The HSA handles the Registration Department directly in all sets.
+C. Duties of two or more departments can be combined based on sanctioned establishment.
+D. The Mail Sorting Assistant is always the junior-most official in a set.
+Correct Answer: C
+Explanation:
+• Rule 1(2) allows for the combination of department duties when the number of Sorting Assistants is less than the number of departments. Note that sorting work in trains has been abolished.
+
+
+================================================================
+TOPIC 2 — LATE-FEE POSTING   (Q8-Q13)
+================================================================
+
+Q8. What is the mandatory requirement for an unregistered article posted in a train letter-box at any time?
+A. It must carry double postage.
+B. It must carry the prescribed late fee in addition to postage.
+C. It must be registered.
+D. No extra fee is required.
+Correct Answer: B
+Explanation:
+• Rule 2(1) states that unregistered articles posted in train letter-boxes must carry the prescribed late fee in addition to the postage.
+
+Q9. Which specific stamp is impressed on an unregistered letter (other than a postcard) posted in a van letter-box without the prepayment of a late fee?
+A. "Unpaid — Return to Sender"
+B. "Postage Due"
+C. "Detained — Late Fee Not Paid"
+D. "Late Fee Collected"
+Correct Answer: C
+Explanation:
+• Under Rule 2(2), articles (except postcards) where the late fee has not been prepaid are impressed with the 'Detained — Late Fee Not Paid' stamp.
+
+Q10. How are articles treated if they are posted in a van letter-box but do not have the late fee prepaid?
+A. They are delivered to the addressee with a penalty.
+B. They are returned to the sender immediately.
+C. They are made over loose to the first mail office for disposal.
+D. They are destroyed after 24 hours.
+Correct Answer: C
+Explanation:
+• Rule 2(2) stipulates that such articles are made over loose to the first mail office (or a Post Office acting as one) for disposal as though posted there.
+
+Q11. Which of the following articles is EXEMPT from the application of the 'Detained — Late Fee Not Paid' stamp even if the late fee is not prepaid?
+A. Inland Letter Cards
+B. Envelopes
+C. Packets
+D. Postcards
+Correct Answer: D
+Explanation:
+• Rule 2(2) explicitly excludes postcards from the detention rule when the late fee is not prepaid.
+
+Q12. Under what specific condition may an RMS section receive an article by hand?
+A. If the sender is a government official.
+B. If the van has no letter-box or the article is too large for the box.
+C. During the last 5 minutes before train departure.
+D. Hand-to-hand receipt is strictly prohibited without exception.
+Correct Answer: B
+Explanation:
+• Rule 2(3) provides a narrow exception: articles are received by hand only if the van has no letter-box or if the article is too large for the existing box.
+
+Q13. Which of the following statements about late-fee posting is correct?
+A. Late-fee notices on mail vans are optional.
+B. Stamps on articles in the van box are obliterated before the train leaves the station.
+C. Articles with paid late fees are forwarded by the nearest route.
+D. RMS offices do not have a prescribed late-fee period.
+Correct Answer: C
+Explanation:
+• Rule 2(2) confirms that articles with the late fee paid are forwarded by the nearest route. Rule 2(4) requires a painted notice on vans, and stamps are obliterated after departure.
+
+
+================================================================
+TOPIC 3 — INTERRUPTIONS TO MAIL MOVEMENT   (Q14-Q18)
+================================================================
+
+Q14. In the event of an interruption due to floods or accidents, to whom does the HSA report if the detention is likely to be less than 6 hours?
+A. Superintendent and Record Office.
+B. Only the Superintendent.
+C. Only the Record Office.
+D. Head of the Circle.
+Correct Answer: C
+Explanation:
+• Rule 7 states that for detentions not exceeding 6 hours, the report (by fax/telegraph) goes only to the Record Office.
+
+Q15. If a detention due to a railway breach is expected to exceed 6 hours, who must receive the immediate fax/telegraph report?
+A. The Superintendent and the Record Office.
+B. The Superintendent and the Head of Circle.
+C. The Inspector and the Superintendent.
+D. The Railway Guard and the Record Office.
+Correct Answer: A
+Explanation:
+• Rule 7 requires that if detention likely exceeds 6 hours, it is reported at once to the Superintendent and the Record Office.
+
+Q16. Who is responsible for reporting interruptions to mail movement while a set is on duty?
+A. The Mail Guard
+B. The Record Officer
+C. The Head Sorting Assistant
+D. The Divisional Superintendent
+Correct Answer: C
+Explanation:
+• Rule 7 assigns the responsibility of reporting interruptions to the Head Sorting Assistant of the set on duty.
+
+Q17. Which of the following is NOT a mandatory recipient of a standard (non-telegraphic) interruption report by the HSA?
+A. The Superintendent
+B. The Inspector
+C. The Record Office
+D. The Director-General
+Correct Answer: D
+Explanation:
+• Rule 7 specifies the Superintendent, Inspector, and Record Office as recipients of the report. The DG is not mentioned for standard interruptions.
+
+Q18. Which of the following correctly distinguishes the reporting threshold for mail interruptions?
+A. 3 hours: Report to Superintendent; 6 hours: Report to DG.
+B. 6 hours: Threshold for reporting to the Superintendent in addition to the Record Office.
+C. 12 hours: Threshold for reporting to the Head of Circle.
+D. 24 hours: Threshold for cancelling the set.
+Correct Answer: B
+Explanation:
+• The critical distinction in Rule 7 is the 6-hour mark, which triggers the requirement to include the Superintendent in the immediate telegraphic/fax report.
+
+
+================================================================
+TOPIC 4 — METAL TOKENS   (Q19-Q24)
+================================================================
+
+Q19. Which of the following correctly defines the status and purpose of an RMS Metal Token?
+A. It is personal property used for identification at banks.
+B. It is Government property used to authorize travel and platform entry.
+C. It is a reward for senior Sorting Assistants.
+D. It is a key used to open the mail van.
+Correct Answer: B
+Explanation:
+• Rule 14 defines tokens as Government property that must be shown to railway authorities and carried by all RMS officials on duty.
+
+Q20. Before which event must an RMS official produce their metal token for inspection?
+A. Before starting the out-trip.
+B. Before monthly salary is disbursed.
+C. Before entering the Head Record Office.
+D. Before signing the Order Book.
+Correct Answer: B
+Explanation:
+• Rule 14(2) mandates that every holder must produce the token before his monthly salary is disbursed.
+
+Q21. To whom must the loss of a metal token be reported immediately?
+A. The Superintendent
+B. The Railway Police
+C. The Record Officer
+D. The Head of the Circle
+Correct Answer: C
+Explanation:
+• Rule 14(4) states that on loss, the holder reports at once to the Record Officer.
+
+Q22. Which RMS official is EXEMPT from carrying a metal token?
+A. A Sorting Assistant traveling in a mail van.
+B. A Supervising Officer traveling in a reserved vehicle on duty.
+C. A Mail Guard of a transit section.
+D. A newly appointed MTS official.
+Correct Answer: B
+Explanation:
+• Rule 14(1) exempts Supervising Officers who travel on duty in a reserved vehicle/compartment.
+
+Q23. A Sorting Assistant is transferring from one Record Office to another. What is the correct protocol regarding his metal token?
+A. He carries the token to the new office.
+B. He returns the token in exchange for his receipt.
+C. He must destroy the token.
+D. He hands it over to his successor in the set.
+Correct Answer: B
+Explanation:
+• Rule 14(3) requires the holder to return the token in exchange for his receipt when transferring or quitting service.
+
+Q24. Which of the following is NOT a characteristic of an RMS metal token?
+A. It bears the Division name.
+B. It bears a serial number.
+C. It bears the name of the official.
+D. It is treated as part of Record Office stock.
+Correct Answer: C
+Explanation:
+• Rule 14(2) mentions the Division name and serial number but not the official's name.
+
+
+================================================================
+TOPIC 5 — DISPOSAL OF RECORDS   (Q25-Q30)
+================================================================
+
+Q25. What is the preservation period for work papers of RMS offices and sections?
+A. 1 year
+B. 18 months
+C. 3 years
+D. 10 years
+Correct Answer: B
+Explanation:
+• Rule 17(1) lists work papers as having a preservation period of 18 months.
+
+Q26. How many years must correspondence relating to personal files (pensions, punishments) be preserved after the official ceases to belong to the Department?
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+Correct Answer: C
+Explanation:
+• Rule 17(1) prescribes 3 years after the official ceased to belong to the Department.
+
+Q27. Whose special permission is required to destroy the Order Book of a Record Office?
+A. The Superintendent
+B. The Inspector
+C. The Head of the Circle
+D. The Director-General
+Correct Answer: C
+Explanation:
+• Rule 17(2) lists the Order Book of a Record Office as an item requiring the Head of Circle's permission for destruction.
+
+Q28. Which of the following is NOT permitted to be destroyed while an enquiry is in progress?
+A. Blank registered lists.
+B. Old sorting lists.
+C. Any work-papers relating to the enquiry.
+D. Daily Reports from 5 years ago.
+Correct Answer: C
+Explanation:
+• Rule 17(2) prohibits the destruction of any documents relating to an enquiry in progress or a case not finally closed.
+
+Q29. A Record Officer wishes to dispose of the Nominal Roll of token-holders which is 10 years old. What is the correct action?
+A. Tear and sell it as waste paper immediately.
+B. Wait for another 5 years.
+C. Seek special permission from the Head of the Circle.
+D. Seek permission from the Divisional Superintendent.
+Correct Answer: C
+Explanation:
+• Rule 17(2) explicitly includes the Nominal Roll of token-holders in the list of records requiring Head of Circle permission for destruction.
+
+Q30. Which of the following has a preservation period of 3 years?
+A. Arrangement Register
+B. Attendance Register
+C. Invoices of stock articles
+D. Registered article disposal correspondence
+Correct Answer: C
+Explanation:
+• Invoices of articles from Stock Depot are preserved for 3 years (Rule 17). The others listed are 18 months.
+
+
+================================================================
+TOPIC 6 — CUSTODY OF GOVERNMENT MONEY   (Q31-Q37)
+================================================================
+
+Q31. In a Record Office with one or more Sorting Assistants, who are the joint custodians of the keys to the safe?
+A. Record Officer and the Superintendent.
+B. Record Officer and a nominated Sorting Assistant.
+C. Two Sorting Assistants.
+D. Record Officer and the local Postmaster.
+Correct Answer: B
+Explanation:
+• Rule 19(4) states that in a Record/Sub-Record office, keys are held by the Record/Sub-Record Officer and a nominated SA as joint custodian.
+
+Q32. How many locks must secure the safe in a Head Record Office beyond working hours?
+A. One lock
+B. Two locks
+C. Three locks
+D. No locks, only a seal
+Correct Answer: B
+Explanation:
+• Rule 19(6) requires the safe to be secured with both locks beyond working hours.
+
+Q33. Who holds the keys of the safe in a Head Record Office?
+A. Head Record Officer and the Inspector.
+B. Head Record Officer and the Accountant.
+C. Accountant and the Superintendent.
+D. Head Record Officer and the senior-most SA.
+Correct Answer: B
+Explanation:
+• Rule 19(3) specifies that in an HRO, one key is held by the HRO and the other by the Accountant.
+
+Q34. During working hours, how many locks are typically used to secure the safe in a Record Office?
+A. One lock
+B. Two locks
+C. No locks
+D. Four locks
+Correct Answer: A
+Explanation:
+• Rule 19(5) allows the safe to be secured with one lock during working hours.
+
+Q35. An RMS office is required to keep cash in a safe embedded in a Police Station. What is the prescribed equipment for this purpose?
+A. One large cash chest with three locks.
+B. Two safes — one for working hours and one for after hours.
+C. A portable cash box.
+D. No safe is needed; the Police take responsibility.
+Correct Answer: B
+Explanation:
+• Rule 19(7) mandates two safes in such cases — one (single lock) for working hours and one (double locks) for after hours.
+
+Q36. Which of the following is strictly prohibited from being kept in the Government cash safe?
+A. Postage stamps
+B. Valuables
+C. Private money or property
+D. Permanent advance vouchers
+Correct Answer: C
+Explanation:
+• Rule 19(1) strictly prohibits private money or property from being kept in the cash safe.
+
+Q37. In a single-handed Record Office, how are the keys to the cash safe managed?
+A. One key is given to the local station master.
+B. Both keys are held by the Record/Sub-Record Officer.
+C. One key is sent to the Divisional office daily.
+D. The office is not allowed to have a safe.
+Correct Answer: B
+Explanation:
+• Rule 19(4) specifies that in a single-handed office, both keys are held by the Record/Sub-Record Officer.
+
+
+================================================================
+TOPIC 7 — BOOKS SUPPLIED TO A SET: PAGE COUNTS & MANUALS   (Q38-Q43)
+================================================================
+
+Q38. How many serially numbered pages does an RMS Order Book contain?
+A. 50 pages
+B. 100 pages
+C. 150 pages
+D. 200 pages
+Correct Answer: D
+Explanation:
+• Rule 21(2) explicitly states that each Order Book has 200 serially numbered pages.
+
+Q39. What is the prescribed number of pages in the Guidance Book supplied to an RMS set?
+A. 50 pages
+B. 100 pages
+C. 200 pages
+D. 300 pages
+Correct Answer: B
+Explanation:
+• Rule 21(2) prescribes that each Guidance Book has exactly 100 serially numbered pages.
+
+Q40. What is the statutory penalty for an official found guilty of the wilful removal of a page from the Order Book or Guidance Book?
+A. A fine of ₹500.
+B. Suspension for three months.
+C. Liability to dismissal.
+D. Transfer to a non-sorting duty.
+Correct Answer: C
+Explanation:
+• Rule 21(2) declares that wilful removal of a page is a serious offence rendering the offender liable to dismissal.
+
+Q41. Which of the following reference books is EXPLICITLY NOT supplied to transit sections?
+A. The Order Book
+B. The Book of Service Message Forms
+C. The Due Mail List
+D. The PIN Code Directory
+Correct Answer: D
+Explanation:
+• Under Rule 21(1), the PIN Code Directory, MMS/Air schedules, Post Office Guide Parts I & II, and the Guidance Book are not supplied to transit sections/offices.
+
+Q42. Which book, supplied to the set, simultaneously contains the sorting list?
+A. The Classified List of Post Offices
+B. The Due Mail List
+C. The Order Book
+D. The Guidance Book
+Correct Answer: B
+Explanation:
+• Rule 21(1) lists the Due Mail List and notes parenthetically that it "(which also contains the sorting list)".
+
+Q43. Where are the Financial Hand Book Volumes I & II maintained for reference purposes?
+A. In the mail van of every sorting section.
+B. In the portfolio of the Head Sorting Assistant.
+C. In every Sub-Record Office.
+D. In Head Record Offices.
+Correct Answer: D
+Explanation:
+• The note to Rule 21 specifies that Branch Office Rules and the Financial Hand Book Vols I & II are kept at Head Record Offices.
+
+
+================================================================
+TOPIC 8 — PORTFOLIO CONTENTS & CUSTODY   (Q44-Q48)
+================================================================
+
+Q44. Who maintains the personal custody of the portfolio in an RMS section?
+A. The Van Attendant
+B. The Record Officer
+C. The Head Sorting Assistant or Mail Guard
+D. The Mail Sorting Assistant
+Correct Answer: C
+Explanation:
+• Rule 22(3) mandates that the portfolio always remains in the personal custody of the Head Sorting Assistant or Mail Guard, who is responsible for its safety.
+
+Q45. What identifying information must be painted on the outside of the portfolio supplied to a section?
+A. The Division name and the Superintendent's signature.
+B. The section's designation and the set number.
+C. The train number and the terminal station.
+D. The total weight of the portfolio.
+Correct Answer: B
+Explanation:
+• Rule 22(1) dictates that each locked case (portfolio) must bear the section's designation and set number painted on it.
+
+Q46. Which of the following items is carried in a separate sealed bag rather than inside the main locked portfolio?
+A. The Order Book
+B. Safety matches
+C. A first-aid box
+D. The sweeping brush
+Correct Answer: D
+Explanation:
+• Rule 22(4) specifies that a separate sealed bag carries the sweeping brush, late-fee notice board, twine, sealing wax, stamp brush, seal holders and blocks, labels, and covers.
+
+Q47. All of the following operational items are kept INSIDE the portfolio EXCEPT:
+A. The Telegraph Message Code
+B. Carbolic soap
+C. Sealing wax
+D. A duster
+Correct Answer: C
+Explanation:
+• Under Rule 22(2) and 22(4), sealing wax is kept in the separate sealed bag, while the Telegraph Message Code, carbolic soap, and a duster are kept inside the portfolio itself.
+
+Q48. Under what condition does a section carry its type boxes and type stamps inside the portfolio?
+A. Only during night trips.
+B. When the section is exempt from Record Office attendance.
+C. When authorized by the Railway Guard.
+D. Type boxes are never carried in the portfolio.
+Correct Answer: B
+Explanation:
+• Rule 22(2) parenthetically notes that type boxes and type stamps are carried only by sections that are exempt from RO attendance.
+
+
+================================================================
+TOPIC 9 — HAND-BAGS & BEDDING LIMITS   (Q49-Q53)
+================================================================
+
+Q49. What are the ONLY personal articles an official is permitted to take into the mail van?
+A. A hand-bag, a bedding roll, and a tiffin box.
+B. A hand-bag and a roll of bedding.
+C. A suitcase and a water cooler.
+D. A portfolio and personal cash.
+Correct Answer: B
+Explanation:
+• Rule 24 strictly limits personal items in the van to a hand-bag and a roll of bedding. Anything else is irregular.
+
+Q50. What is the maximum permitted dimension for the roll of bedding taken into a mail van?
+A. Not exceeding 1 meter in length.
+B. Not exceeding 1 m × 1.2 m in girth.
+C. Not exceeding 2 meters in length.
+D. Not exceeding 1.5 m × 1.5 m in girth.
+Correct Answer: B
+Explanation:
+• Rule 24 specifies that the roll of bedding must not exceed 1 m × 1.2 m in girth.
+
+Q51. Who holds the authority to require an official to open his hand-bag or bedding for examination while in the mail van?
+A. Only the Divisional Superintendent.
+B. The Railway Police Force.
+C. Any Inspecting Officer.
+D. The Train Guard.
+Correct Answer: C
+Explanation:
+• Rule 24 explicitly states that any Inspecting Officer may require the official to open his hand-bag or bedding for examination.
+
+Q52. Does the restriction on personal luggage size apply to the Van Attendant of a section?
+A. No, it applies only to Sorting Assistants.
+B. No, Van Attendants may carry extra cleaning equipment as luggage.
+C. Yes, a hand-bag is supplied to the Van Attendant, and the same limits apply.
+D. Yes, but Van Attendants cannot carry bedding.
+Correct Answer: C
+Explanation:
+• Rule 24 states that a hand-bag is supplied to each Sorting Assistant, Mail Guard, and Van Attendant for personal luggage, making the limits universally applicable to the staff in the van.
+
+Q53. Which of the following officials is granted a hand-bag for personal luggage under Rule 24?
+A. The Record Officer
+B. The Head of the Circle
+C. The Mail Guard
+D. The Railway Ticket Examiner
+Correct Answer: C
+Explanation:
+• Rule 24 specifically lists each Sorting Assistant, Mail Guard, and Van Attendant of a section as the recipients of a hand-bag.
+
+
+================================================================
+TOPIC 10 — PREPARATION OF DAILY REPORT (M.S. 83)   (Q54-Q60)
+================================================================
+
+Q54. What is the official form number for the Daily Report prepared by the Head Sorting Assistant?
+A. M-42
+B. M-43
+C. MS-28
+D. M.S. 83
+Correct Answer: D
+Explanation:
+• Rule 28 establishes that the daily report is prepared on form M.S. 83.
+
+Q55. To whom is the HSA's daily report finally submitted, and through whom does it pass?
+A. Submitted to the Head of Circle through the Inspector.
+B. Submitted to the Superintendent through the Record Officer.
+C. Submitted to the Record Officer through the Inspector.
+D. Submitted directly to the Director-General.
+Correct Answer: B
+Explanation:
+• Rule 28(1) states the HSA submits the daily report to the Superintendent, through the Record Officer.
+
+Q56. When making an entry in the daily report from the rough notebooks, what information must be named FIRST?
+A. The date of the occurrence.
+B. The specific rule violated.
+C. The office or official at fault.
+D. The time of the incident.
+Correct Answer: C
+Explanation:
+• Rule 28(1) requires that each entry names first the office/official at fault, followed by a concise statement of the occurrence.
+
+Q57. Which other official uses the same M.S. 83 form to report to their respective Manager?
+A. The Supervisor of a Speed Post Centre.
+B. The Mail Guard of a transit section.
+C. The Record Officer of a District Bag Office.
+D. The Sub-Postmaster of a Class I office.
+Correct Answer: A
+Explanation:
+• Rule 28(4) notes that the Supervisor of a Speed Post Centre also uses form MS-83 to report to the Manager, Speed Post.
+
+Q58. How are faxes and telegraphs handled within the daily report submission?
+A. They are summarized in a single paragraph.
+B. Those sent are copied into the report; those received are attached in original.
+C. They are destroyed after reading.
+D. They are filed separately in the Guidance Book.
+Correct Answer: B
+Explanation:
+• Rule 28(1) dictates that every fax/telegraph sent is copied into the report, while those received are attached in original.
+
+Q59. What is the correct procedure for numbering entries in the daily report?
+A. Numbered randomly based on severity.
+B. Numbered in one consecutive series, each copied into an extract report bearing the same number.
+C. Numbered based on the time they occurred.
+D. Numbering is not required if there are fewer than five entries.
+Correct Answer: B
+Explanation:
+• Rule 28(2) specifies that entries are numbered in one consecutive series, and each is copied into an extract report bearing that identical number.
+
+Q60. Where Lower Selection Grade (LSG) Supervisors are sanctioned within a set, how do they contribute to the daily reporting?
+A. They send a separate MS-83 to the Superintendent directly.
+B. They submit a daily note to the HSA for onward transmission.
+C. They are exempt from reporting irregularities.
+D. They verbally brief the Record Officer.
+Correct Answer: B
+Explanation:
+• Rule 28(3) dictates that each LSG Supervisor submits a daily note to the HSA for onward transmission.
+
+
+================================================================
+TOPIC 11 — PLATFORM ATTENDANCE   (Q61-Q63)
+================================================================
+
+Q61. At intermediate stations where trains are made up (not changing stations), how early must the set proceeding on a trip be present on the railway platform?
+A. Exactly when the train arrives.
+B. 15 minutes before departure.
+C. At least half an hour before departure.
+D. One hour before departure.
+Correct Answer: C
+Explanation:
+• Rule 33 states the set must be present at the hour fixed by the Superintendent — at least half an hour before departure.
+
+Q62. Whose approval is required if regular platform attendance is fixed earlier than half an hour before departure?
+A. The Divisional Superintendent
+B. The Record Officer
+C. The Head of the Circle
+D. The Station Master
+Correct Answer: C
+Explanation:
+• Rule 33 explicitly states that earlier regular attendance needs the Head of the Circle's approval.
+
+Q63. What is the attendance requirement for a relieving set at a changing station?
+A. They must arrive just as the train departs.
+B. They must be on the platform before the train arrives.
+C. They must wait in the Record Office until called.
+D. They board the train at the next station.
+Correct Answer: B
+Explanation:
+• Rule 33 mandates that at changing stations, the relieving set must be on the platform before the train arrives.
+
+
+================================================================
+TOPIC 12 — MAIL ABSTRACT STRUCTURE (M-42 / M-43)   (Q64-Q67)
+================================================================
+
+Q64. Which forms are designated as the mail abstract for sections and mail offices, respectively?
+A. M-42 for sections; M-43 for mail offices.
+B. M-43 for sections; M-42 for mail offices.
+C. MS-83 for sections; MS-28 for mail offices.
+D. M-42 for both sections and mail offices.
+Correct Answer: A
+Explanation:
+• Rule 39 specifically labels the mail abstract as M-42 for sections and M-43 for mail offices.
+
+Q65. What are the two main parts into which the mail abstract is divided?
+A. "Receipts" and "Issues"
+B. "Mails" and "Bags"
+C. "Registered" and "Unregistered"
+D. "Due" and "Unusual"
+Correct Answer: B
+Explanation:
+• Rule 39(1) explicitly states that the mail abstract has two parts — "Mails" and "Bags".
+
+Q66. In the "Mails" part of the abstract, which of the following MUST agree between the receipt side and the dispatch side?
+A. The total number of unusual mails.
+B. The forward-bag totals.
+C. The number of empty bags.
+D. The number of station bundles.
+Correct Answer: B
+Explanation:
+• Rule 39(2) mandates that the forward-bag totals on both sides (receipts and dispatches) must agree.
+
+Q67. How are the entries for out-trips and in-trips handled in the mail abstract for sections?
+A. They are combined into a single total.
+B. They are shown separately in the mail abstract.
+C. Only the out-trip is entered; the in-trip requires a new abstract.
+D. They are only recorded in the Due Mail List.
+Correct Answer: B
+Explanation:
+• Note 2 to Rule 39 states that for sections, the entries for the out-trip and in-trip are shown separately in the mail abstract.
+
+
+================================================================
+TOPIC 13 — EXCHANGE OF MAILS: SEQUENCE & ENTRY   (Q68-Q72)
+================================================================
+
+Q68. Upon arrival at a station, what is the prescribed sequence for the exchange of mails by a transit section?
+A. It first gives out bags for dispatch, then takes delivery.
+B. It takes delivery of the mails for the set before giving out those for dispatch.
+C. Both occur simultaneously through two different windows.
+D. The Mail Guard decides the sequence based on load.
+Correct Answer: B
+Explanation:
+• Rule 40(2) dictates that the Mail Agent/Mail Guard of a section takes delivery of the mails before giving out those for dispatch.
+
+Q69. In contrast to a section, what is the correct sequence of mail exchange for a Mail Office?
+A. It takes delivery first, then dispatches.
+B. It first gives out the bags for dispatch, then takes delivery.
+C. It only dispatches mails; it receives mails at the Record Office.
+D. Exchange happens inside the mail office by the carrier.
+Correct Answer: B
+Explanation:
+• Rule 40(2) states that the Mail Agent/Mail Guard of a mail office first gives out the bags for dispatch and then takes delivery.
+
+Q70. At important stations with heavy exchange, who may grant an exception allowing a section to deliver its mails before receiving onward mails to make room in the van?
+A. The Train Guard
+B. The Divisional Superintendent
+C. The Head of the Circle
+D. The Station Master
+Correct Answer: C
+Explanation:
+• The exception to Rule 40(2) specifies that the Head of Circle may let a section deliver its mails first to make room in the van.
+
+Q71. Which form is signed by the carrier to grant a receipt where no mail list is used during the exchange of mails?
+A. Form M-42
+B. Form MS-83
+C. Form MS-28 (Mail Peon's Book)
+D. Form MO-75
+Correct Answer: C
+Explanation:
+• Rule 40(4) dictates that where no mail list is used, the carrier signs the Mail Peon's Book (Form MS-28).
+
+Q72. What is the strict rule regarding a mail carrier entering a mail van or mail office to exchange mails?
+A. The carrier may enter only if the bags exceed 20 kg.
+B. The carrier is not permitted to enter; exchange is at the door/window.
+C. The carrier must enter the van to verify the mail list.
+D. The carrier can enter a mail office but not a van.
+Correct Answer: B
+Explanation:
+• Rule 40(3) explicitly prohibits the carrier from entering either the van or the mail office; exchange takes place at the door or window.
+
+
+================================================================
+TOPIC 14 — CLOSING OF TRANSIT BAGS & SUPERVISION   (Q73-Q75)
+================================================================
+
+Q73. Under whose direct supervision must transit bags ALWAYS be closed and sealed?
+A. The Inspector.
+B. The Van Attendant.
+C. The HSA, Head Mail Guard, or Mail Agent.
+D. The Record Officer.
+Correct Answer: C
+Explanation:
+• Rule 45(2) mandates that transit bags must always be closed and sealed in the presence, and under the direct supervision, of the HSA / Head Mail Guard / Mail Agent.
+
+Q74. Before a transit bag is made up, what is the HSA/Mail Guard required to examine on the bags placed inside?
+A. Only the weight of each bag.
+B. The contents of each bag.
+C. The condition, cord, label, and seal of each bag.
+D. The postage stamps on the letters inside.
+Correct Answer: C
+Explanation:
+• Rule 45(1) states that the condition, cord, label, and seal of each bag are examined before they are placed in the transit bag.
+
+Q75. Which of the following is placed inside the transit bag along with the forward bags?
+A. The Mail Peon's Book
+B. The mail list
+C. The empty bags for the Record Office
+D. The Guidance Book
+Correct Answer: B
+Explanation:
+• Rule 45(1) notes that the bags are checked against the mail list, which is then placed with them in the transit bag.
+
+================================================================
+END OF SET  —  75 MCQs
+================================================================

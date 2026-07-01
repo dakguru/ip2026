@@ -1,0 +1,1224 @@
+==========================================================================
+                   MCQ SET  —  POSTAL MANUAL VOLUME VI                    
+     (Post Office Manual: Operations, Money Orders & Postman Duties)      
+==========================================================================
+
+Total questions : 135
+Part 1 — General Postal Operations ................ Q1 – Q81
+Part 2 — Money Orders, Postal Orders & Remittance . Q82 – Q101
+Part 3 — Duties of Postmen, GDS & Letter-Box ..... Q102 – Q135
+
+Each item shows four options, the correct answer, and a short
+explanation. Content reproduced from the source document as-is.
+
+
+==========================================================================
+PART 1  —  GENERAL POSTAL OPERATIONS (CHAPTER 1 — MISCELLANEOUS RULES)
+==========================================================================
+
+[ Rule 1 to Rule 2-A (Gratuities & Business Hours) ]
+--------------------------------------------------------------------------
+
+Q1. Under the rules governing post office operations, which of the following actions is strictly prohibited for postal officials assisting illiterate persons?
+     A. Filling up Money-Order forms on their behalf.
+     B. Accepting a fee or gratuity for rendering such assistance.
+     C. Allowing professional letter-writers to work outside the premises.
+     D. Directing the illiterate person to the Postmaster for identification.
+     Ans: B
+     Exp: The Postmaster must ensure officials assist illiterate persons in filling up forms, but must strictly enforce the rule prohibiting the acceptance of any fee or gratuity for such assistance.
+
+Q2. Under Regulation 5 of the Post Office Regulations, 2024, who among the following is NOT expressly empowered to fix the business hours of a post office within their jurisdiction?
+     A. The Head of the Circle
+     B. The Head of the Region
+     C. The Head of the Division
+     D. The Head Postmaster of a General Post Office (GPO)
+     Ans: D
+     Exp: Regulation 5 empowers the Circle Head, Regional Head, and Divisional Head to fix the business hours of every post office in their jurisdiction, including working on Sundays and holidays.
+
+Q3. What is the maximum time up to which the Director-General may extend the working hours of a Night Post Office?
+     A. 6:00 P.M.
+     B. 7:30 P.M.
+     C. 8:30 P.M.
+     D. 9:00 P.M.
+     Ans: C
+     Exp: The Director-General may extend the working hours of a post office up to 8:30 P.M. and keep it open on Sundays, terming them Night Post Offices.
+
+Q4. A customer visits a Night Post Office at 7:45 P.M. on a regular working day. Which of the following transactions will the customer NOT be permitted to perform?
+     A. Booking a Speed Post Document
+     B. Purchasing a Rs. 50 Indian Postal Order
+     C. Opening a new Savings Bank account
+     D. Issuing a Money Order
+     Ans: C
+     Exp: In Night Post Offices, Savings Bank related work is normally undertaken only up to 7:30 P.M. Transactions attempted at 7:45 P.M. would therefore not be permitted.
+
+Q5. Regarding the services available during extended hours at Night Post Offices, what is the prescribed time limit for wire money payments?
+     A. Up to 5:00 P.M.
+     B. Up to 6:00 P.M.
+     C. Up to 7:30 P.M.
+     D. Up to 8:30 P.M.
+     Ans: B
+     Exp: The transaction limit for wire money payments during extended hours at Night Post Offices is strictly up to 6:00 P.M.
+
+Q6. Consider the following statements regarding Night Post Offices:
+     1. Working hours of post offices are fixed by the Head of the Circle.
+     2. The Director-General may extend the working hours up to 8:30 P.M.
+     3. India Post Parcels cannot be booked during the extended hours.
+     4. Wire money payments are restricted up to 7:30 P.M.
+     Which of the statements given above are correct?
+     A. 1 and 2 only
+     B. 2 and 3 only
+     C. 1, 3 and 4 only
+     D. 1, 2, 3 and 4
+     Ans: A
+     Exp: Statement 1 and 2 are correct. Statement 3 is incorrect because Speed Post Document/Parcel and India Post Parcel may be booked in extended hours. Statement 4 is incorrect because wire money payments are allowed only up to 6:00 P.M., not 7:30 P.M.
+
+[ Rule 3 to 6 (Departments, Distribution of Work & Returns) ]
+--------------------------------------------------------------------------
+
+Q7. In an office where there is one or more Postal Assistant (PA), the Memorandum of Distribution of Work showing the duties assigned to each official is maintained in which of the following forms?
+     A. Form MS-11
+     B. Form MS-12
+     C. Form M-52
+     D. Form S-37
+     Ans: A
+     Exp: The Postmaster maintains a Memorandum of Distribution of Work in Form MS-11, which shows the duties assigned to each official.
+
+Q8. According to the rules governing the distribution of work in a post office, which of the following combinations of duties is strictly prohibited for a Postal Assistant (PA)?
+     A. Discharging duties of the Mail department and the Sorting department.
+     B. Acting as the Treasurer while discharging duties connected with the Money Order department.
+     C. Handling the delivery of mails while managing the Sub-Account department.
+     D. Maintaining the Attendance Register while holding charge of the Parcel department.
+     Ans: B
+     Exp: In no case may the PA who discharges the duties connected with money order, saving bank, or sub-account department be the Treasurer of the office.
+
+Q9. In post offices where the strength of Postmen and Village Postmen is more than 25, a nominal roll is maintained. What is the prescribed form for this nominal roll?
+     A. Form MS-11
+     B. Form MS-12
+     C. Form S-37
+     D. Form M-53
+     Ans: B
+     Exp: A nominal roll in Form MS-12 is maintained for Postmen and Village Postmen in offices where their strength is more than 25.
+
+Q10. The Yearly Village Return, showing the number of articles of every class received for delivery in each village, must be maintained during which of the following periods?
+     A. 1st to 15th of January
+     B. 1st to 14th of March
+     C. 15th to 31st of March
+     D. 1st to 30th of April
+     Ans: B
+     Exp: During the first 14 days of March (1st to 14th, both inclusive) in each year, a return is kept by the Sub-Account PA.
+
+[ Rule 11 to 23 (Customs, Secrecy, Interception & Custody) ]
+--------------------------------------------------------------------------
+
+Q11. Inward foreign articles are subject to customs duty. Which of the following statements correctly distinguishes the responsibilities regarding this duty?
+     A. The Post Office assesses the duty and the Customs Authorities realize it.
+     B. The Customs Authorities assess the duty and the Post Office realizes it.
+     C. The Post Office both assesses and realizes the duty.
+     D. The Customs Authorities both assess and realize the duty directly from the addressee.
+     Ans: B
+     Exp: Assessment of customs duty on inward foreign articles is the duty of the Customs Authorities; realization of the duty is the duty of the Post Office.
+
+Q12. Under Section 9 of the Post Office Act, 2023, the Central Government may empower an officer to intercept or detain any postal item. Which of the following is NOT listed as a valid ground for such interception?
+     A. In the interest of public safety or tranquility.
+     B. On grounds of the security of the State.
+     C. For the prevention of ordinary civil disputes between citizens.
+     D. For preventing incitement to the commission of any offence.
+     Ans: C
+     Exp: Valid grounds include public emergency, public safety or tranquility, security of the State, friendly relations with foreign States, public order, or preventing incitement to an offence. Civil disputes are not covered.
+
+Q13. The MO Oblong Stamp and the Insurance Stamp must be kept in the personal custody of which of the following officials?
+     A. The Money-Order PA
+     B. The Treasurer
+     C. The Postmaster
+     D. The Sub-Divisional Inspector
+     Ans: C
+     Exp: The MO Oblong Stamp and Insurance Stamp are kept in the personal custody of the Postmaster to prevent misuse.
+
+Q14. An iron chest supplied for the custody of Government money is equipped with only 1 hasp. According to the prescribed rules, what type of lock must be used for this chest?
+     A. A standard padlock
+     B. A sparling lock
+     C. Two padlocks
+     D. A combination lock
+     Ans: B
+     Exp: Where the iron chest has 1 hasp, a sparling lock shall be used. Where the chest has 2 hasps, one padlock and one sparling lock should be used.
+
+[ Rule 25 to 54 (Preservation of Records & Returns) ]
+--------------------------------------------------------------------------
+
+Q15. What is the prescribed preservation period for the special error book maintained in the savings bank department?
+     A. 2 years
+     B. 3 years
+     C. 5 years
+     D. 10 years
+     Ans: B
+     Exp: The preservation period for the special error book maintained in the saving bank dept. is 3 years.
+
+Q16. The Character Sheet and confidential records of an official who has been dismissed, removed, or compulsorily retired as a disciplinary measure must be preserved for how many years?
+     A. 2 years
+     B. 3 years
+     C. 5 years
+     D. 6 years
+     Ans: D
+     Exp: Confidential Records and Character Sheet of an official must be preserved after 6 years for officials who have been dismissed, removed or compulsorily retired from service as a disciplinary measure.
+
+Q17. Which of the following records is required to be preserved permanently?
+     A. Postmaster's Order Book
+     B. Registered list and Parcel list
+     C. List of silent Accounts received from SBCO
+     D. Stock Book of a Post Office
+     Ans: C
+     Exp: The List of silent Accounts received from SBCO is required to be preserved permanently. The Postmaster's Order Book is preserved for 3 years, and the Stock Book for 10 years after replacement.
+
+Q18. According to the rules on remittances by post, cash must ordinarily be enclosed in a cash bag when it exceeds what minimum amount?
+     A. Rs. 100
+     B. Rs. 250
+     C. Rs. 500
+     D. Rs. 1,000
+     Ans: B
+     Exp: Ordinarily, cash in excess of Rs. 250 should be enclosed in a cash bag.
+
+[ Rule 57 to 61 (Mail Department & Rationalised Products) ]
+--------------------------------------------------------------------------
+
+Q19. Under the procedures for clearance of letter boxes, what is the mandatory requirement for a Letter-Box Peon who discovers a defect in the lock of a pillar box during his rounds?
+     A. He must repair the lock on the spot using his tool kit.
+     B. He must immediately report the defect to the Postmaster before proceeding.
+     C. He must seal the box and paste a public notice on it.
+     D. He must wait for the Head Postman to authorize the clearance of that specific box.
+     Ans: B
+     Exp: The official clearing a letter box is required to verify that the lock is in good order and report any defect immediately to the Postmaster.
+
+Q20. As per the rationalised mail products under the Post Office Regulations, 2024, what is the maximum weight ceiling fixed for the "Letter" category?
+     A. 200 grams
+     B. 500 grams
+     C. 1000 grams
+     D. 2 kilograms
+     Ans: B
+     Exp: The weight ceiling for the Letter product has been fixed at 500 grams under the rationalisation of mail products.
+
+Q21. The new "Book Post" product introduced under the Post Office Regulations, 2024 subsumes which of the following legacy categories?
+     A. Book Packets, Pattern and Sample Packets, and Blind Literature
+     B. Book Packets, Book Packets containing Printed Books, and Pattern and Sample Packets
+     C. Periodical Post, Registered Newspapers, and Book Packets
+     D. Printed-Communication Postcards, Competition Postcards, and Book Packets
+     Ans: B
+     Exp: The new Book Post product subsumes Book Packets, Book Packets containing Printed Books, and Pattern and Sample Packets.
+
+Q22. Consider the following statements regarding the rationalisation of mail products:
+     1. Business Reply Envelopes and Cards have been entirely omitted as a product.
+     2. The registration facility can now be availed for Post Cards on payment of a prescribed fee.
+     3. Newspapers with a periodicity longer than a week must migrate to the Periodical Post category.
+     Which of the statements given above is/are correct?
+     A. 1 only
+     B. 1 and 2 only
+     C. 2 and 3 only
+     D. 1, 2 and 3
+     Ans: D
+     Exp: All statements are correct. Business Reply products are omitted, Post Cards may now be registered, and Registered Newspapers must have a periodicity of at least once a week as per the Press & Registration of Periodicals Act, 2023.
+
+Q23. Which of the following accurately describes the process of "Facing" in the sorting of articles cleared from letter boxes?
+     A. Defacing the postage stamps with the date-stamp.
+     B. Arranging articles with the address side upwards and all addresses turned in the same direction.
+     C. Segregating accountable items from the ordinary letter mail.
+     D. Sorting articles geographically into the appropriate pigeon-holes of a sorting case.
+     Ans: B
+     Exp: Facing means arranging articles with the address side upwards and all addresses turned in the same direction.
+
+Q24. An ordinary letter is tendered at the counter with a postage stamp that has a clear cut across it. Under Regulation 7 of the Post Office Regulations, 2024, how must this article be treated?
+     A. It must be accepted provided the face value of the stamp is fully visible.
+     B. It must be treated as an unpaid article because the postage is deemed not prepaid.
+     C. It must be returned to the sender with a warning regarding damaged stamps.
+     D. It must be forwarded to the Returned Letter Office (RLO) immediately.
+     Ans: B
+     Exp: Postage shall not be deemed to be prepaid if the stamp has been obliterated, defaced, torn, cut, or otherwise rendered imperfect.
+
+[ Rule 64 to 85 (Sorting Department & Gyan Post) ]
+--------------------------------------------------------------------------
+
+Q25. What is the minimum number of Letter Mail articles (excluding accountable articles) addressed to a single post office required to form a "Station Bundle"?
+     A. More than 10
+     B. More than 14
+     C. More than 20
+     D. More than 50
+     Ans: B
+     Exp: When the number of articles of the Letter Mail for any post office or mail office exceeds 14, they are formed into a separate Station Bundle.
+
+Q26. A Direct Mail Bag is closed by a post office for another office with which it is not in direct communication. What condition triggers the mandatory preparation of a Direct Mail Bag?
+     A. When the number of articles exceeds 100.
+     B. When the number of articles exceeds 200.
+     C. When it contains three or more registered bundles.
+     D. When it contains articles addressed exclusively to a Head Post Office.
+     Ans: B
+     Exp: A direct mail bag should be closed when the number of articles for a particular office exceeds 200, or when the articles are sufficiently bulky.
+
+Q27. Under the Post Office (Second Amendment) Regulations, 2025, which of the following items is strictly INELIGIBLE to be transmitted as "Gyan Post"?
+     A. A textbook prescribed in the syllabus of a recognized university.
+     B. A book of a cultural and religious nature.
+     C. A weekly magazine published at regular intervals containing educational essays.
+     D. A textbook meant for competitive examinations.
+     Ans: C
+     Exp: Periodicals (magazines/journals published at regular intervals) are not eligible for transmission under the Gyan Post category.
+
+Q28. What are the prescribed weight limits for booking a packet under the "Gyan Post" service?
+     A. Minimum 100 grams, Maximum 2 kilograms
+     B. Minimum 300 grams, Maximum 5 kilograms
+     C. Minimum 500 grams, Maximum 10 kilograms
+     D. Minimum 1 kilogram, Maximum 20 kilograms
+     Ans: B
+     Exp: The minimum weight for Gyan Post is 300 grams, and the maximum weight is 5 kilograms.
+
+Q29. A sorter erroneously forwards a bundle of letters to Salem instead of Erode. Upon receiving these "Missent Articles", what is the primary procedural requirement for the Salem post office?
+     A. Stamp them as "Missent", forward to the correct destination by the first available mail, and report in the Error Book.
+     B. Redirect them to the sender and charge half the postage as a redirection fee.
+     C. Send them to the Returned Letter Office (RLO) with the remark "Unsorted".
+     D. Keep them in deposit for 7 days before forwarding them to the destination.
+     Ans: A
+     Exp: Missent articles must be stamped "Missent", forwarded to the correct destination by the first available mail, and a report made to the Superintendent using the Error Book.
+
+[ Rule 98 to 134 (Delivery of Mails & Accountable Items) ]
+--------------------------------------------------------------------------
+
+Q30. A customer wishes to avail the OTP-based delivery service for a regular Speed Post Document. As per the Post Office (Fourth Amendment) Regulations, 2025, what is the prescribed fee for this value-added service?
+     A. Rs. 5 inclusive of GST
+     B. Rs. 5 + applicable GST
+     C. Rs. 10 + applicable GST
+     D. Free of charge for all Speed Post items
+     Ans: B
+     Exp: OTP-based delivery is offered as a value-added service for Speed Post Document and Parcel at a fee of Rs. 5 + GST per item.
+
+Q31. Which of the following articles is NOT automatically entitled to "Window Delivery" at a post office?
+     A. An article bearing the superscription "To be kept till called for".
+     B. An article addressed to "Poste Restante".
+     C. An ordinary Letter Mail article addressed to a resident living within the post town limits.
+     D. A Money Order exceeding the cash limit entrusted to a single postman.
+     Ans: C
+     Exp: No person living within the limits of the post town is entitled to receive his letters at the window unless he rents a Post Box or the article cannot be delivered by a postman.
+
+Q32. Consider the following statements regarding the delivery of accountable items under Regulation 18 of the Post Office Regulations, 2024:
+     1. For address-specific delivery, the item may be delivered to any adult member of the family at the address.
+     2. Addressee-specific delivery is a default service provided free of charge for all India Post Parcels.
+     3. The addressee can lodge a specific objection to prevent address-specific delivery to other family members.
+     Which of the statements given above is/are correct?
+     A. 1 only
+     B. 1 and 3 only
+     C. 2 and 3 only
+     D. 1, 2 and 3
+     Ans: B
+     Exp: Statements 1 and 3 are correct. Statement 2 is incorrect because addressee-specific delivery is a value-added service requiring a fee of Rs. 5 + GST, not a default free service.
+
+Q33. The Post Box facility of a renter may be withdrawn by the Postmaster if the renter fails to clear the box for a continuous period of how many days, despite being given notice?
+     A. 7 days
+     B. 14 days
+     C. 21 days
+     D. 30 days
+     Ans: A
+     Exp: The Postmaster may withdraw the Post Box facility if the renter fails to clear the box for 7 days despite notice, per Regulation 47.
+
+Q34. An India Post Parcel cannot be delivered on the first attempt, and a digital intimation is sent via SMS. What is the maximum total duration the parcel can be retained at the post office if the addressee makes a written request for an extension?
+     A. 7 days
+     B. 10 days
+     C. 14 days
+     D. 30 days
+     Ans: C
+     Exp: Undelivered parcels are initially retained for 7 days. The addressee may request an extension for up to 7 additional days, making the maximum total retention period 14 days.
+
+Q35. A postman attempts to deliver a parcel on which customs duty is assessed. The addressee agrees to sign the delivery slip but explicitly refuses to pay the customs duty. What is the correct course of action for the postman?
+     A. Deliver the parcel and report the unpaid duty to the Customs Authorities for direct recovery.
+     B. Detain the parcel at the post office for 14 days to allow the addressee time to arrange funds.
+     C. Treat the article as entirely "Refused" and return it to the sender immediately.
+     D. Open the parcel to allow the addressee to examine the contents before deciding on payment.
+     Ans: C
+     Exp: An addressee cannot accept the article while refusing to pay customs duty; he must either accept it with all charges or refuse it entirely. If refused, it is returned immediately.
+
+Q36. Under the standardized retention rules of Regulation 43, what is the action taken when an addressee explicitly refuses an accountable item on the first day of presentation?
+     A. The item is kept in the Deposit Department for 7 days.
+     B. An intimation is served and the item is retained for 7 days.
+     C. The item is returned immediately with no detention period.
+     D. The item is forwarded to the Returned Letter Office (RLO) the same day.
+     Ans: C
+     Exp: If the addressee refuses, the item is returned immediately, with no detention period.
+
+Q37. Which form is used by the post office to notify an addressee regarding the arrival of an accountable, insured, or COD article when it cannot be delivered by the postman?
+     A. Form MS-11
+     B. Form RP-53
+     C. Form M-52
+     D. Form ACG-90
+     Ans: B
+     Exp: An Intimation in Form RP-53 is delivered to the addressee when an accountable, insured, or COD article cannot be delivered by the postman.
+
+[ Rule 137 to 138 (Deposit Department) ]
+--------------------------------------------------------------------------
+
+Q38. Under what circumstances may the Postmaster deliver an ordinary article addressed to a deceased person to a near relative, without requiring a legal succession certificate?
+     A. Under no circumstances; it must always be returned to the sender.
+     B. If the relative agrees to pay double the deficiency in postage.
+     C. If there is no doubt as to the relative's title, and they grant a receipt indemnifying the Post Office.
+     D. Only if the article has been retained for a full period of one month as Poste Restante.
+     Ans: C
+     Exp: Where the title is clear, the Postmaster may deliver the article to a near relative on his granting a receipt and indemnifying the Post Office against future claims.
+
+Q39. An insured article addressed to a deceased person cannot be delivered to a claimant without the specific orders of the Head of the Circle, EXCEPT when the claimant produces which of the following?
+     A. A written consent from the sender
+     B. An indemnity bond signed by the village headman
+     C. A legal succession certificate
+     D. A valid Aadhaar card of the deceased
+     Ans: C
+     Exp: Insured or COD articles addressed to a deceased person must not be delivered without specific orders unless the claimant produces a legal succession certificate.
+
+Q40. What is the maximum duration for which a "Poste Restante" article may be kept in deposit at the post office before being treated as unclaimed?
+     A. 7 days
+     B. 14 days
+     C. One month
+     D. Three months
+     Ans: C
+     Exp: "Poste Restante" articles are kept for one month.
+
+[ Rule 156 to 174 (Registration & Accountable Items) ]
+--------------------------------------------------------------------------
+
+Q41. Registration as a value-added service is legally compulsory for which of the following items tendered for transmission?
+     A. A parcel weighing 3.5 kilograms.
+     B. A Book Post packet containing an uncrossed postal order.
+     C. Any article containing a cheque, hundi, or banknote.
+     D. A Periodical Post packet bearing the word "Important" on the cover.
+     Ans: C
+     Exp: Registration is compulsory for any parcel exceeding 4 kilograms, any insured article, any article containing a cheque, hundi, banknote or postage stamps, or any article bearing the word "Registered" on the cover.
+
+Q42. A Registration Assistant is preparing to dispatch accountable articles to a specific sorting office. What is the minimum number of accountable articles required to mandate the formation of a "Registered Bundle"?
+     A. Exceeds 2
+     B. Exceeds 5
+     C. Exceeds 14
+     D. Exceeds 50
+     Ans: A
+     Exp: When the number of accountable articles for despatch to any office or section exceeds 2, they are formed into a Registered Bundle.
+
+Q43. When a large or bulky number of accountable articles are enclosed in a special bag for dispatch, what distinguishing colour and symbol must the bag bear?
+     A. Red bag with symbol "A"
+     B. Blue bag with symbol "R"
+     C. Green bag with symbol "P"
+     D. Yellow bag with symbol "S"
+     Ans: B
+     Exp: If the number of accountable articles is large or bulky, they are enclosed in a Blue Registered Bag bearing the symbol "R".
+
+Q44. What is the prescribed time limit within which an application for compensation for the loss or damage of an accountable article must be made to the Post Office?
+     A. 1 month from the date of posting
+     B. 3 months from the date of posting
+     C. 6 months from the date of posting
+     D. 12 months from the date of posting
+     Ans: B
+     Exp: The application for compensation must be made within 3 months of the date of posting.
+
+Q45. Consider the following statements regarding the Post Office's liability for compensation:
+     1. No compensation is payable if the loss is due to the insecure packing of the article by the sender.
+     2. Compensation is always payable for the loss of currency notes enclosed in an ordinary registered article.
+     3. The Director-General may grant compensation for loss or damage in transmission by post.
+     Which of the statements given above is/are correct?
+     A. 1 and 2 only
+     B. 2 and 3 only
+     C. 1 and 3 only
+     D. 1, 2 and 3
+     Ans: C
+     Exp: Statements 1 and 3 are correct. Statement 2 is incorrect because no compensation is payable for the loss of currency notes unless they are insured.
+
+Q46. What is the maximum compensation payable for the loss of a Speed Post Document or Speed Post Parcel in transit?
+     A. Fixed at Rs. 500 for all articles.
+     B. Double the Speed Post charges, or Rs. 1,000, whichever is less.
+     C. Equal to the declared value of the contents up to Rs. 10,000.
+     D. Rs. 1,000 flat, irrespective of the postage paid.
+     Ans: B
+     Exp: According to the current DoP compensation schedule, the compensation for Speed Post Document / Parcel is double the Speed Post charges, or Rs. 1,000, whichever is less.
+
+Q47. Regarding the compensation for the loss of an International Tracked Packet Service (ITPS) or international accountable item, what is the correct legally applicable limit for customer payouts in India?
+     A. 10 SDR
+     B. 30 SDR
+     C. ₹500
+     D. ₹1,000
+     Ans: D
+     Exp: While standard UPU conventions mention 30 SDR, the specific compensation for customer payouts in India is ₹1,000 as per the applicable India Post regulations.
+
+Q48. An accountable article is to be delivered to an illiterate addressee. The postman takes the addressee's thumb-impression on the receipt. Who is authorised to attest this mark?
+     A. The postman executing the delivery.
+     B. Any member of the public, even if unknown to the postman.
+     C. A respectable witness personally known to the postman, other than the postman himself.
+     D. Only the local Village Headman or a Gazetted Officer.
+     Ans: C
+     Exp: The mark must be attested by a respectable witness (other than the postman) personally known to the postman or the Postmaster.
+
+[ Rule 179 to 193 (Parcel Department & India Post Parcel) ]
+--------------------------------------------------------------------------
+
+Q49. Under the revised Parcel rules (India Post Parcel), what is the absolute maximum weight limit permitted for a parcel?
+     A. 4 kilograms
+     B. 10 kilograms
+     C. 20 kilograms
+     D. 35 kilograms
+     Ans: C
+     Exp: Every parcel must be weighed, and if the weight exceeds the prescribed limit of 20 kilograms for India Post Parcel, it must be returned to the sender.
+
+Q50. A customer wishes to send a lightweight but highly voluminous parcel. The dimensions of the parcel are 100 cm in length, 50 cm in width, and 40 cm in height. What is the "volumetric weight" upon which postage will be charged?
+     A. 2 kg
+     B. 4 kg
+     C. 10 kg
+     D. 40 kg
+     Ans: D
+     Exp: Volumetric weight is calculated as Length × Width × Height ÷ 5000 (in cm). (100 × 50 × 40) ÷ 5000 = 200,000 ÷ 5000 = 40 kg.
+
+Q51. What is the maximum permissible combined length and girth of an India Post Parcel?
+     A. 1.0 metre
+     B. 1.5 metres
+     C. 2.0 metres
+     D. 3.0 metres
+     Ans: D
+     Exp: The maximum length allowed is 1.5 metres, and the maximum combined length + girth is 3 metres.
+
+Q52. A regular surface parcel weighs 4.5 kilograms. What mandatory condition applies to the transmission of this parcel?
+     A. It must be diverted to the air mail network.
+     B. It must be booked exclusively as a Cash on Delivery (COD) article.
+     C. It must be booked as an accountable item (India Post Parcel).
+     D. It must be split into two separate parcels by the sender.
+     Ans: C
+     Exp: Parcels weighing more than 4 kilograms must be booked as accountable items (India Post Parcel).
+
+Q53. A parcel originally addressed to an office in Chennai is redirected to another address in Madurai (outside the original delivery area). What redirection fee is chargeable on this parcel?
+     A. A flat fee of Rs. 20.
+     B. Half the prepaid postage.
+     C. Full prepaid postage.
+     D. Redirection is free of charge anywhere within India.
+     Ans: B
+     Exp: A parcel redirected to any place served by the Inland Post is chargeable with a redirection fee equal to half the prepaid postage.
+
+Q54. Under what circumstance is the redirection fee for a parcel completely waived?
+     A. If the revised address is within the same delivery area or post town.
+     B. If the addressee is a Government official in Camp.
+     C. If the parcel weighs less than 500 grams.
+     D. If the sender submits a written request for free redirection.
+     Ans: A
+     Exp: No redirection fee is charged if the revised address is within the same delivery area or post town.
+
+[ Rule 196 to 203 (Insured Articles) ]
+--------------------------------------------------------------------------
+
+Q55. Under Section 10 of the Post Office Act, 2023, the Government’s liability for the loss, mis-delivery, or delay of a postal item is defined as:
+     A. Absolute liability for all registered articles.
+     B. Liability incurred only where expressly provided for in the Act or regulations.
+     C. Full statutory liability for all ordinary and accountable mail items.
+     D. Liability capped at Rs. 50,000 for any postal article.
+     Ans: B
+     Exp: Section 10 of the Post Office Act, 2023 states that the Government incurs liability only where expressly provided for in the Act or regulations, and there is no general right of action.
+
+Q56. Which of the following conditions correctly applies to the private seal used on an article tendered for insurance?
+     A. The seal must be the impression of a current coin to ensure standardization.
+     B. The seal may consist merely of a series of straight or crossed lines.
+     C. The seals must be distinct impressions of the same private seal of the sender.
+     D. The seal must be stamped using the post office's official date-stamp.
+     Ans: C
+     Exp: The seals must be distinct and must be impressions of the same private seal of the sender, and the device must NOT be that of a current coin or merely crossed lines.
+
+Q57. An envelope tendered for insurance must strictly AVOID which of the following features?
+     A. Being non-transparent
+     B. Bearing a black or coloured border
+     C. Having the insured value written in words and figures
+     D. Using strong, durable paper
+     Ans: B
+     Exp: The envelope must be strong, non-transparent and must have NO black or coloured border.
+
+Q58. What is the maximum limit up to which a Speed Post article can be insured at an authorised Head Post Office?
+     A. Rs. 50,000
+     B. Rs. 1,00,000
+     C. Rs. 5,00,000
+     D. Rs. 10,00,000
+     Ans: D
+     Exp: The maximum insurance limit is up to Rs. 10,00,000 (Ten Lakh) for Speed Post articles at authorised Head Offices.
+
+Q59. A customer at a Branch Post Office (BO) wishes to book an insured article. What is the maximum insurance limit permissible at the BO?
+     A. Rs. 500
+     B. Rs. 600
+     C. Rs. 1,000
+     D. Rs. 10,000
+     Ans: B
+     Exp: The limit for booking insured articles at Branch Post Offices remains Rs. 600.
+
+Q60. A customer intends to remit physical currency notes via Insured Post. What is the maximum transmission limit for currency notes under this service?
+     A. Rs. 10,000
+     B. Rs. 20,000
+     C. Rs. 50,000
+     D. Rs. 1,00,000
+     Ans: B
+     Exp: Transmission of currency notes by Insured Post is strictly limited to Rs. 20,000.
+
+Q61. As per the examination-standard rules in the Postal Manual, what is the maximum value of an insured article that a postman is authorized to deliver at the doorstep?
+     A. Rs. 250
+     B. Rs. 500
+     C. Rs. 1,000
+     D. Rs. 5,000
+     Ans: B
+     Exp: An insured article may be delivered by the postman if the value insured does not exceed Rs. 500. Values exceeding this must be delivered at the window.
+
+[ Rule 236 to 281 (Money Order Department) ]
+--------------------------------------------------------------------------
+
+Q62. Under the Post Office Regulations, 2024, what is the maximum amount for which a single Money Order can be issued?
+     A. Rs. 5,000
+     B. Rs. 10,000
+     C. Rs. 20,000
+     D. Rs. 25,000
+     Ans: B
+     Exp: The limit of a single Money Order was raised from Rs. 5,000 to Rs. 10,000 under the new PO Regulations, 2024.
+
+Q63. A customer uses the Retail Money Order service to send funds to his relative. What is the maximum total amount he is permitted to remit to this single person within a calendar month?
+     A. Rs. 10,000
+     B. Rs. 25,000
+     C. Rs. 50,000
+     D. Unlimited, subject to the single MO limit.
+     Ans: B
+     Exp: For a retail MO, the amount of remittance to a person in a calendar month is restricted to a maximum of Rs. 25,000.
+
+Q64. A Money Order is issued on 15 October 2026. If it remains unpaid, on what date does its period of currency officially expire, rendering it a Void MO?
+     A. 15 November 2026
+     B. 30 November 2026
+     C. 15 December 2026
+     D. 31 December 2026
+     Ans: D
+     Exp: The currency period expires with the close of the last day of the second month following the month of issue. Since it was issued in October, the second following month is December, making it valid until 31 December 2026.
+
+Q65. According to the rules governing Money Orders, which of the following alterations requested by the remitter strictly requires the payment of a second commission?
+     A. Alteration of the payee's name to correct a minor spelling error.
+     B. Alteration of the payee's name to that of an entirely different person.
+     C. Alteration of the payee's address within the same delivery post office.
+     D. Redirection of the Money Order to another state within India.
+     Ans: B
+     Exp: If the name of the payee is to be changed to that of another person, a second commission (equal to the first) is payable. Alteration of address within India is free.
+
+Q66. Which category of Money Order is completely exempt from the payment of commission?
+     A. Retail MO exceeding Rs. 5,000
+     B. Bulk MO sent to rural areas
+     C. Service MO issued for departmental or official purposes
+     D. Family Allotment MO
+     Ans: C
+     Exp: Service Money Orders, issued for departmental or official purposes, are exempt from commission.
+
+Q67. Consider the following statements regarding the forfeiture and audit of Money Orders:
+     1. An unpaid Money Order is forfeited and treated as Government revenue 3 years from the date of booking.
+     2. A complaint relating to a Money Order must be preferred by the public within 12 months from the date of issue.
+     3. No inland MO claim can be adjusted after 6 months without consulting the PAO.
+     Which of the statements given above is/are correct?
+     A. 1 only
+     B. 1 and 2 only
+     C. 2 and 3 only
+     D. 1, 2 and 3
+     Ans: B
+     Exp: Statements 1 and 2 are correct. Statement 3 is incorrect because the PAO consultation rule applies after the expiry of 1 year (12 months), not 6 months.
+
+[ Rule 290 to 298 (Cash on Delivery) ]
+--------------------------------------------------------------------------
+
+Q68. Under the rationalized framework of the Post Office Regulations, 2024, the legacy Value Payable Post (VPP) system has been formally merged into which service?
+     A. Speed Post Parcel
+     B. Business Parcel
+     C. Cash on Delivery (COD)
+     D. Insured Tracked Post
+     Ans: C
+     Exp: Per the DO Letter dated 20.12.2024, Value Payable Post (VPP) has been merged with Cash on Delivery (COD).
+
+Q69. What is the maximum COD amount that can be declared for recovery from the addressee per single article?
+     A. Rs. 10,000
+     B. Rs. 20,000
+     C. Rs. 50,000
+     D. Rs. 1,00,000
+     Ans: C
+     Exp: The maximum COD amount per article is Rs. 50,000.
+
+Q70. If an addressee submits a written request to detain a COD parcel beyond the initial 7-day retention period, up to how many additional days may the post office grant?
+     A. 3 additional days
+     B. 7 additional days
+     C. 10 additional days
+     D. 14 additional days
+     Ans: B
+     Exp: On written request, the article may be detained for a further period not exceeding 7 days, making the maximum total retention period 14 days.
+
+Q71. What is the prescribed Demurrage (Warehousing Charge) recovered per day from the addressee for the extended detention of a COD Parcel (from day 8 to 14)?
+     A. Rs. 2.00 per day
+     B. Rs. 3.00 per day
+     C. Rs. 5.00 per day
+     D. Rs. 10.00 per day
+     Ans: C
+     Exp: The Warehousing charge for COD Parcels is Rs. 5.00 per day. For COD Letters/Packets, it is Rs. 3.00 per day.
+
+[ Chapters 11, 12, 13 (Official Articles, ID Cards, Franking) ]
+--------------------------------------------------------------------------
+
+Q72. Official postal articles posted by authorised government officials must bear which of the following superscriptions?
+     A. "Government Mail Only"
+     B. "On India Government Service" (O.I.G.S.) or "On Service"
+     C. "State Postal Service"
+     D. "Service Postage Prepaid"
+     Ans: B
+     Exp: Official postal articles must bear the superscription "On India Government Service" (O.I.G.S.) or "On Service".
+
+Q73. When an official article is found to be insufficiently paid, what is the penalty applied before delivery?
+     A. It is taxed with double the deficiency.
+     B. It is charged with the single deficiency (actual amount due) only.
+     C. It is returned to the sender without delivery.
+     D. A flat fee of Rs. 10 is charged in addition to the deficiency.
+     Ans: B
+     Exp: Official articles which are unpaid or insufficiently paid are not taxed with the usual double-deficiency penalty; they are charged with the single deficiency only.
+
+Q74. What is the prescribed fee and validity period for an Identification Card issued by the Head Postmaster?
+     A. Fee Rs. 50; Validity 1 year
+     B. Fee Rs. 100; Validity 3 years
+     C. Fee Rs. 200; Validity 5 years
+     D. Fee Rs. 500; Lifetime Validity
+     Ans: B
+     Exp: The fee for an Identification Card is Rs. 100, and its validity is 3 years from the date of issue.
+
+Q75. Under the mandatory migration to Remotely Managed Franking Machines (RMFM), how does a user reset or recharge the machine with funds?
+     A. By carrying the machine physically to the Head Post Office.
+     B. By purchasing franking stamps from the Treasury.
+     C. By depositing money in the designated account, allowing credit to download remotely via a secure server.
+     D. By adjusting the mechanical meter inside the machine using a Postmaster's key.
+     Ans: C
+     Exp: For RMFM, physical movement of the machine is not required: the user deposits money in the designated bank/post office account and the credit is downloaded via the modem/internet connection (Credifon server).
+
+Q76. A commercial firm utilizing an RMFM consumes Rs. 12,000 worth of postage in a month. What rate of rebate is the firm entitled to receive on this consumption?
+     A. 1% on the amount exceeding Rs. 5,000.
+     B. 3% on the entire amount consumed.
+     C. 5% on the entire amount consumed.
+     D. Nil, as rebate is only for consumption above Rs. 20,000.
+     Ans: B
+     Exp: For consumption of Rs. 5,001 and above, a 3% rebate is granted on the entire amount.
+
+[ Rule 340 to 370 (Post Office Savings Bank) ]
+--------------------------------------------------------------------------
+
+Q77. What is the prescribed minimum balance required to be maintained in a standard Post Office Savings Bank account that operates WITH a cheque facility?
+     A. Rs. 50
+     B. Rs. 100
+     C. Rs. 500
+     D. Nil (Zero balance)
+     Ans: C
+     Exp: The minimum balance for an ordinary Savings Account with cheque facility is Rs. 500.
+
+Q78. In contrast to standard savings accounts, what is the prescribed minimum balance for a "Basic Savings Account" in the Post Office?
+     A. Rs. 50
+     B. Rs. 100
+     C. Rs. 250
+     D. Nil (Zero)
+     Ans: D
+     Exp: The minimum balance for a Basic Savings Account is Zero (Nil).
+
+Q79. If the minimum balance in a standard savings account is not maintained for one complete financial year, what is the consequence?
+     A. The account is immediately closed and the remaining balance forfeited.
+     B. An account maintenance fee of Rs. 50 is deducted.
+     C. A penalty of Rs. 100 is levied.
+     D. The account is marked as a Silent Account and interest is frozen.
+     Ans: B
+     Exp: If the minimum balance is not maintained for one financial year, an account maintenance fee of Rs. 50 is deducted.
+
+Q80. An account is officially classified as an "Inoperative Account" (formerly Silent Account) if no deposit or withdrawal has taken place for what continuous period?
+     A. 1 financial year
+     B. 2 complete financial years
+     C. 3 complete financial years
+     D. 5 complete financial years
+     Ans: C
+     Exp: An account in which no deposit or withdrawal has taken place for three complete financial years is treated as an Inoperative Account.
+
+Q81. A depositor dies without leaving a valid nomination for his SB account, which holds a balance of Rs. 4,50,000. According to the sanction limits for deceased claims, who is the competent authority to settle this claim?
+     A. Sub-Postmaster
+     B. Head Postmaster
+     C. Superintendent
+     D. Regional / Circle Head
+     Ans: B
+     Exp: The Head Postmaster has the authority to sanction deceased claims without nomination up to Rs. 5,00,000. The Sub-Postmaster limit is Rs. 50,000, and the Superintendent limit is Rs. 10,00,000.
+
+==========================================================================
+PART 2  —  MONEY ORDERS, POSTAL ORDERS & ALLIED REMITTANCE SERVICES
+==========================================================================
+
+[ Chapter I (Issue of Money Orders) ]
+--------------------------------------------------------------------------
+
+Q82. Money Order forms (M.O.-8) are supplied to post offices in bound books. What is the standard number of forms in each book, and what is the maximum number of such books a Branch Office (BO) should keep?
+     A. Books of 20 forms; BO keeps 5 books.
+     B. Books of 50 forms; BO keeps 2 books.
+     C. Books of 100 forms; BO keeps 1 book.
+     D. Books of 50 forms; BO keeps 5 books.
+     Ans: B
+     Exp: Money Order forms are available in books of 50 forms each, and each Branch Office should keep only 2 books.
+
+Q83. In the context of Money Order (MO) accounting, what specific date must the Oblong MO stamp reflect when impressed on an MO?
+     A. The date on which the remitter presented the form at the counter.
+     B. The date on which payment is actually authorized by the postmaster.
+     C. The date on which the amount paid is actually entered in the accounts of the office.
+     D. The date on which the destination office receives the electronic advice.
+     Ans: C
+     Exp: The date of the oblong MO stamp is the date on which the amount paid is actually entered in the accounts of the office, whereas the round MO stamp reflects the date payment is authorized.
+
+Q84. A remitter presents used, undamaged postage stamps equivalent to the commission amount while booking a Money Order. How must the counter assistant handle this tender?
+     A. Accept the stamps, as they represent pre-paid government revenue.
+     B. Accept the stamps only if they are affixed to the coupon portion of the M.O.-8 form.
+     C. Reject the stamps, as postage stamps cannot be accepted in payment of the MO amount or commission.
+     D. Accept the stamps but charge an additional handling fee of Rs. 5.
+     Ans: C
+     Exp: Under Regulation 9(2) of the Post Office Regulations, 2024 and Rule 11, postage stamps (used or otherwise) are strictly invalid for paying Money-Order commission or value; only cash, cheque, or digital modes are accepted.
+
+Q85. Consider the following statements regarding the current framework of Money Orders under the Post Office Regulations, 2024:
+     1. The maximum limit for a single Money Order is Rs. 10,000.
+     2. The "Family Allotment Money Order" service remains available exclusively for defense personnel.
+     3. Contributions to the PM CARES Fund remitted via Money Order are completely free of commission.
+     Which of the statements given above is/are correct?
+     A. 1 only
+     B. 1 and 3 only
+     C. 2 and 3 only
+     D. 1, 2 and 3
+     Ans: B
+     Exp: Statements 1 and 3 are correct. Statement 2 is incorrect because the Family Allotment Money Order service has been omitted entirely under the new regulations.
+
+Q86. Under the Retail Money Order service, what is the maximum cumulative amount a remitter is permitted to send to a single specific person in a single calendar month?
+     A. Rs. 10,000
+     B. Rs. 25,000
+     C. Rs. 50,000
+     D. Rs. 1,00,000
+     Ans: B
+     Exp: The proviso to Regulation 147 restricts the amount of remittance through retail money order to a person in a calendar month to Rs. 25,000.
+
+[ Chapter III (Payment of Money Orders) ]
+--------------------------------------------------------------------------
+
+Q87. A Postman (doing normal delivery work in an urban area) is preparing for his beat. What is the maximum aggregate cash limit he can carry for single-payment Money Orders without invoking any enhanced powers of the Division Head?
+     A. Rs. 15,000
+     B. Rs. 30,000
+     C. Rs. 40,000
+     D. Rs. 80,000
+     Ans: C
+     Exp: For a Postman/MTS doing delivery work in a normal urban area, the cash carrying limit is Rs. 40,000.
+
+Q88. A Money Order is payable to a minor who does not live with his father or lawful guardian. To whom is the post office authorized to pay this Money Order?
+     A. The minor himself in all cases.
+     B. The Village Headman or local Sarpanch.
+     C. The person in whose care and custody the minor is for the time being, on signing an indemnity bond.
+     D. The amount must be retained in deposit until the minor attains majority.
+     Ans: C
+     Exp: If the minor has no father or lawful guardian living with him, the Money Order may be paid to the person in whose care and custody the minor is for the time being, on signing an indemnity bond in the prescribed form.
+
+Q89. If a Money Order is inadvertently paid to the wrong person, what is the correct procedural accounting workflow to rectify the error?
+     A. The amount is recovered and immediately handed over as cash to the correct payee without any ledger entry.
+     B. The amount is recovered, credited to Unclassified Receipts (UCR), and then paid to the right person, debiting Unclassified Payments (UCP).
+     C. The Postmaster pays the correct person from his personal pocket and recovers it from the postman's salary.
+     D. The MO is treated as Void, and the correct person is asked to apply for a fresh MO from the remitter.
+     Ans: B
+     Exp: The amount must be recovered from the wrong person and credited to UCR, and then paid to the right person and debited to UCP, showing the recovery in schedule Form ACG-6(a).
+
+Q90. When the number of Money Orders to be paid to a single payee at one time is 4 or more, which payment mechanism should generally be adopted?
+     A. Payment by cash directly from the Postmaster's personal custody.
+     B. Payment under the pay-order system using Form MO-20.
+     C. Payment strictly by Cheque through the Head Post Office.
+     D. Direct transfer to the payee's POSB account automatically.
+     Ans: B
+     Exp: As a general rule, when the number of MOs is 4 or more, the Pay Order system will be adopted, and MOs to be paid to each payee should be entered in a triplicate list in form MO-20.
+
+[ Chapter V to VII (Alterations & Stoppage) ]
+--------------------------------------------------------------------------
+
+Q91. A remitter books a Money Order but realizes he entered the payee's address incorrectly. He subsequently applies to alter the address within India. What is the fee charged for this service?
+     A. Half the original commission.
+     B. A second commission equal to the first.
+     C. Free of charge.
+     D. A flat fee of Rs. 10.
+     Ans: C
+     Exp: No additional fee is charged where the alteration is only in the address of the payee within India.
+
+Q92. A remitter issues a Money Order but immediately afterwards requests the post office to alter the name of the payee to a completely different person. Which of the following conditions applies to this request?
+     A. It is not permitted under any circumstances; the MO must be cancelled.
+     B. It is permitted free of charge if the MO has not yet left the office of issue.
+     C. It requires the payment of a second commission equal to the first.
+     D. It requires an authorization letter from the original payee.
+     Ans: C
+     Exp: If the name of the payee is to be changed to that of another person, a second commission (equal to the first) is payable.
+
+Q93. A remitter requests stoppage of payment for a Money Order, but the stop-payment instructions reach the destination office after the postman has already paid the payee. What is the liability of the Post Office?
+     A. The Postmaster must recover the amount from the postman.
+     B. The Government incurs no liability for the payment, as the request was not received in time.
+     C. The remitter is entitled to a full refund including commission.
+     D. The Post Office must initiate police action to recover the money.
+     Ans: B
+     Exp: Under Section 10 of the Post Office Act 2023, the Government incurs no liability for the payment of a Money Order to the payee if the stop-payment request was not received in time to prevent such payment.
+
+[ Chapter VIII (Indian Postal Orders & e-IPO) ]
+--------------------------------------------------------------------------
+
+Q94. An Indian Postal Order (IPO) is issued to a customer. To make up a broken amount, the customer wishes to affix unused postage stamps to the order. What is the maximum number of stamps that can be affixed for this purpose?
+     A. 2 stamps
+     B. 3 stamps
+     C. 4 stamps
+     D. 5 stamps
+     Ans: C
+     Exp: A remitter may make up a broken amount by affixing unused postage stamps, but the number of stamps affixed must not exceed 4.
+
+Q95. An Indian Postal Order is purchased on 10 August 2024. If it is presented for payment on 15 September 2026, which of the following conditions applies?
+     A. It is paid at face value without any deduction.
+     B. It is paid only on payment of a second commission, as it falls between 24 and 36 months from the last day of the month of issue.
+     C. It is time-barred and forfeited.
+     D. It is returned to the purchaser for revalidation by the Head Postmaster.
+     Ans: B
+     Exp: The "last day of the month of issue" is 31 August 2024. 24 months from this date is 31 August 2026. Since it is presented on 15 September 2026, it falls in the 24-36 month window, requiring a second commission.
+
+Q96. What is the only denomination available for Electronic Indian Postal Orders (e-IPO) under the Post Office Regulations, 2024?
+     A. Rs. 10
+     B. Rs. 20
+     C. Rs. 50
+     D. Rs. 100
+     Ans: A
+     Exp: The e-IPO is available in a single denomination of Rs. 10, primarily used for paying fees under the Right to Information Act, 2005.
+
+Q97. A purchaser of an Indian Postal Order wishes to obtain repayment of its value instead of sending it to a payee. What mandatory document must he present along with the IPO at the office of issue to secure this repayment?
+     A. An identity card
+     B. A valid Aadhaar card
+     C. The counterfoil of the IPO
+     D. A written indemnity bond
+     Ans: C
+     Exp: The purchaser may obtain repayment by presenting the order and the counterfoil at the office of issue, and must sign the receipt adding the word "Purchaser".
+
+[ Chapter IX (Void Orders & Records) ]
+--------------------------------------------------------------------------
+
+Q98. A Money Order is booked on 5 May 2026. If it remains unpaid, on what exact date does it become a Void MO?
+     A. 5 July 2026
+     B. 31 July 2026
+     C. 1 August 2026
+     D. 31 August 2026
+     Ans: C
+     Exp: The currency period expires with the close of the last day of the second month following the month of issue (i.e., July 31). Therefore, it becomes a Void MO starting 1 August 2026.
+
+Q99. Under the rules governing the forfeiture of Money Orders, what is the maximum time limit beyond which an unpaid Money Order is treated as Government revenue and forfeited?
+     A. 12 months from the date of issue
+     B. 24 months from the date of booking
+     C. 3 years from the date of booking
+     D. 5 years from the date of issue
+     Ans: C
+     Exp: The amount or value of a Money Order unpaid beyond three years from the date of booking shall be forfeited and treated as revenue to the Government of India.
+
+Q100. On which date of the month must the Head Office prepare and send the list of Void Orders (Form MO-19) to the Postal Accounts Office (PAO)?
+     A. 1st of each month
+     B. 5th of each month
+     C. 16th of each month
+     D. 20th of each month
+     Ans: C
+     Exp: The list of void orders (MO-19) is prepared month-wise and sent to the PAO on the 16th of each month.
+
+Q101. What is the prescribed preservation period for the "Journal of MOs Paid" (MO-4) and the "Register of MOs Received" (MO-3)?
+     A. 6 months
+     B. 12 months
+     C. 18 months
+     D. 3 years
+     Ans: C
+     Exp: According to Annexure I on Essential Registers & Journals, the preservation period for MO-2, MO-3, and MO-4 is 18 months.
+
+==========================================================================
+PART 3  —  DUTIES OF POSTMEN, GDS & LETTER-BOX ATTENDANTS
+==========================================================================
+
+[ Chapter 1 (Duties of Postmen - General) ]
+--------------------------------------------------------------------------
+
+Q102. Which of the following forms represents the "Postman's Book" in which the particulars of all accountable, insured, COD articles, and Money Orders entrusted for delivery are entered?
+     A. Form MS-11
+     B. Form MS-27
+     C. Form RP-53
+     D. Form M-52
+     Ans: B
+     Exp: Every postman is supplied with a book in Form MS-27, which is examined and initialled by the Postmaster or Head Postman daily.
+
+Q103. When a postman delivers an intimation regarding a Cash-on-Delivery (COD) article to an addressee, in which specific record must he obtain the addressee's signature?
+     A. Form MS-27 (Postman's Book)
+     B. Form RP-54 (COD Intimation)
+     C. Form RP-53 (Book of Receipts for Intimations and Notices Delivered)
+     D. The Daily Docket register
+     Ans: C
+     Exp: When a postman delivers an intimation regarding a COD or Insured article exceeding the limit, he must obtain the signature of the addressee in his book of receipts, Form RP-53.
+
+Q104. A postman attempts to deliver an article on which postage deficiency is due, but the addressee refuses to pay the required amount. What is the strictly prescribed action for the postman?
+     A. He must deliver the article and recover the amount on his next beat.
+     B. He must deliver the article and report the non-payment to the Postmaster.
+     C. He must take the article back to the post office and treat it as refused.
+     D. He must open the article to determine if the contents justify the deficiency.
+     Ans: C
+     Exp: A postman is forbidden to deliver any article on which postage is due until the full amount has been realised; if the addressee refuses to pay, the article is taken back to the post office and treated as refused.
+
+Q105. Under the general duties prescribed for postmen, which of the following items are they explicitly required to carry a small stock of for sale to the public during their rounds?
+     A. Postal Life Insurance (PLI) proposal forms
+     B. Postage stamps and stationery
+     C. Uncrossed Indian Postal Orders (IPOs)
+     D. National Savings Certificates (NSCs)
+     Ans: B
+     Exp: A postman should carry a small stock of postage stamps and stationery for sale to the public, in addition to standard forms.
+
+Q106. A postman notices that a registered parcel entrusted to him appears to have been tampered with before he leaves the post office. What is his immediate duty?
+     A. Note the damage in his Postman's Book and proceed with the delivery.
+     B. Show the article immediately to the Postmaster or the officer-in-charge of the delivery department.
+     C. Repack the parcel securely using departmental sealing wax.
+     D. Deliver the article but request the addressee to sign an indemnity bond.
+     Ans: B
+     Exp: If he detects any injury to an article after it has been made over to him, he must immediately show it to the Postmaster without receiving it for delivery.
+
+[ Chapter 2 (Delivery of Special Articles) ]
+--------------------------------------------------------------------------
+
+Q107. An insured article valued at Rs. 2,000 is received at a delivery post office. According to the examination-standard Manual rules, how should this article be delivered?
+     A. It must be delivered by the postman at the doorstep since it is below Rs. 5,000.
+     B. The postman must deliver it, provided he is escorted by a Head Postman.
+     C. It must not be delivered by the postman; an intimation must be delivered instead for window delivery.
+     D. It can only be delivered if the addressee pays a special handling fee of Rs. 10.
+     Ans: C
+     Exp: Insured articles exceeding the value of Rs. 500 (Manual limit) must not be delivered by the postman: an intimation is delivered instead.
+
+Q108. A Speed Post Document is addressed to a minor who is not living with his parent or guardian. Under what condition may the postman deliver the article directly to the minor?
+     A. Only if the minor is accompanied by a gazetted officer.
+     B. Only if the minor pays a verification fee.
+     C. Provided the postman is satisfied that the minor is able to understand the nature of the transaction.
+     D. Under no circumstances; it must always be returned to the sender.
+     Ans: C
+     Exp: If the minor is not living with his parent or guardian, the article may be delivered to the minor himself, provided the postman is satisfied that the minor is able to understand the nature of the transaction.
+
+Q109. An accountable parcel assessed with customs duty is presented for delivery. The addressee insists on opening the parcel to examine its contents before paying the customs duty. What is the correct rule?
+     A. The postman may allow examination if the addressee is personally known to him.
+     B. The postman is not authorised to open the article to allow examination before payment of the duty.
+     C. The postman must return the parcel to the Customs Authorities for re-assessment.
+     D. The postman may open it provided he takes a photograph of the contents.
+     Ans: B
+     Exp: The postman is not authorised to open the article to allow the addressee to examine the contents before payment of the duty.
+
+Q110. What specific form is prepared and made over to the postman to notify an addressee regarding the arrival of a Cash-on-Delivery (COD) article that exceeds the limit prescribed for single-postman delivery?
+     A. Form MS-27
+     B. Form RP-54
+     C. Form PA-11
+     D. Form M-53
+     Ans: B
+     Exp: When a COD article exceeds the limit, it is not sent out for delivery; an intimation in Form RP-54 is prepared and delivered by the postman.
+
+Q111. Consider the following statements regarding the delivery of accountable items to illiterate addressees:
+     1. The postman must obtain the addressee's thumb-impression on the receipt and acknowledgement.
+     2. The thumb-impression must be attested by a respectable witness personally known to the postman.
+     3. If no witness is available, the postman himself is legally authorized to attest the thumb-impression.
+     Which of the statements given above is/are correct?
+     A. 1 only
+     B. 1 and 2 only
+     C. 2 and 3 only
+     D. 1, 2 and 3
+     Ans: B
+     Exp: Statements 1 and 2 are correct. Statement 3 is strictly incorrect because the postman himself cannot attest the mark/impression.
+
+[ Chapter 3 (Payment of MO by Postmen) ]
+--------------------------------------------------------------------------
+
+Q112. A Money Order is payable to a purdah-nashin woman who has no authorized agent. How must the postman execute this payment?
+     A. He must hand over the cash directly to any male member of the household.
+     B. He must pay her in the presence of a witness who can identify her, obtaining her attested mark if she is illiterate.
+     C. He must return the Money Order to the post office for mandatory window delivery.
+     D. He must request the Village Headman to execute the payment on his behalf.
+     Ans: B
+     Exp: The Money Order is paid to a purdah-nashin woman in the presence of a witness who can identify her, and her mark must be attested if she is illiterate.
+
+Q113. What is the absolute maximum duration a postman is permitted to keep an undelivered article or unpaid Money Order in his personal possession?
+     A. 8 hours
+     B. 12 hours
+     C. 24 hours
+     D. 48 hours
+     Ans: C
+     Exp: A postman may in no circumstances keep an article in his possession for more than 24 hours.
+
+Q114. A Money Order is payable to a person of unsound mind (lunatic). To whom MUST the payment be made?
+     A. To the lunatic himself, provided he signs the receipt.
+     B. To any adult relative present at the address.
+     C. Only to the Manager of the estate or the legally appointed guardian.
+     D. To the local police inspector.
+     Ans: C
+     Exp: Money Orders payable to persons of unsound mind are paid only to the Manager of the estate or the legally appointed guardian, and never to the lunatic himself.
+
+Q115. A postman attempts to pay a Money Order, but the payee cannot be found. The postman notes "Left" on the MO. What further action is required?
+     A. He must attempt delivery every day for the next 7 days.
+     B. He must bring the Money Order back to the post office within 24 hours.
+     C. He must leave the cash with a trusted neighbor.
+     D. He must redirect the Money Order back to the remitter on his own authority.
+     Ans: B
+     Exp: If the payee cannot be found, the Money Order is brought back to the post office and the reason noted. A postman cannot keep it for more than 24 hours.
+
+Q116. A Village Postman is entrusted with cash for paying Money Orders on his beat. Under normal circumstances (without Division-Head powers), what is the aggregate cash limit for payment by a Village Postman?
+     A. Rs. 10,000
+     B. Rs. 15,000
+     C. Rs. 25,000
+     D. Rs. 40,000
+     Ans: B
+     Exp: The limit of cash entrusted to a Village Postman for payment at one time under normal circumstances is Rs. 15,000.
+
+[ Chapter 4 (Cash Conveyance & Sub-Accounts) ]
+--------------------------------------------------------------------------
+
+Q117. What is the maximum limit for conveying loose cash through a single departmental employee without any escort?
+     A. Rs. 1,00,000
+     B. Rs. 2,00,000
+     C. Rs. 5,00,000
+     D. Rs. 10,00,000
+     Ans: C
+     Exp: The maximum amount for conveying loose cash through a Departmental Employee is Rs. 5,00,000.
+
+Q118. A Branch Postmaster (BPM) is required to convey cash to the account office. What is the maximum cash limit he can carry when accompanied by another GDS?
+     A. Rs. 40,000
+     B. Rs. 1,00,000
+     C. Rs. 2,00,000
+     D. Rs. 5,00,000
+     Ans: C
+     Exp: Cash through BPM/ABPM/GDS accompanied by another BPM or GDS has a maximum limit of Rs. 2,00,000. (If alone, the limit is Rs. 1,00,000).
+
+Q119. During the closing of account bags in a Head Office, which official is explicitly responsible for placing the cash bag inside the account bag and sealing it with the cash seal?
+     A. The Mail Assistant
+     B. The Sub-Account Assistant
+     C. The Treasurer
+     D. The Head Postmaster
+     Ans: C
+     Exp: The cash, stamps, or reply coupons must be enclosed in a cash bag by the Treasurer in the presence of the Sub-Account PA, and sealed by the Treasurer.
+
+Q120. Remittance at night on foot lines ordinarily requires the authorization of the Head of the Circle. What are the prescribed hours defining "night" for this purpose during the summer season?
+     A. 06:00 PM to 06:00 AM
+     B. 06:30 PM to 06:00 AM
+     C. 07:00 PM to 05:30 AM
+     D. 08:00 PM to 05:00 AM
+     Ans: C
+     Exp: Night, for this purpose, ordinarily means 07:00 PM to 05:30 AM in summer.
+
+Q121. What is the preservation period for a Sub-Office Daily Account (Form ACG-22) and a Branch Office Daily Account (Form ACG-22(B)) respectively?
+     A. Both are preserved for 18 months.
+     B. Both are preserved for 2 years.
+     C. Sub-Office Daily Account for 18 months; Branch Office Daily Account for 2 years.
+     D. Sub-Office Daily Account for 2 years; Branch Office Daily Account for 3 years.
+     Ans: C
+     Exp: The Sub-Office Daily Account (ACG-22) is preserved for 18 months, whereas the Branch Office Daily Account (ACG-22(B)) is preserved for 2 years.
+
+Q122. In the Visit Book (Form MS-86) maintained by the Sub-Account PA, what does a village marked with Red ink entries indicate?
+     A. The village must be visited on a daily basis.
+     B. The ABPM is not obliged to visit on every trip, but only on marked trips.
+     C. The village is classified as a containment zone and must not be visited.
+     D. The village is outside the authorized beat map of the postman.
+     Ans: B
+     Exp: Red ink used by Sub-Account PA in MS-86 means the ABPM is not obliged to be visited on every trip but has to be visited in the village marked in red entries. Black ink denotes villages that must be visited regularly.
+
+Q123. A Sub-Account PA receives an account bag from a Sub-Office and finds that an account item is incorrectly entered in the SO daily account. What is the correct procedure for adjustment?
+     A. Return the daily account to the SPM for correction and resubmission.
+     B. Strike out the SPM's figures and overwrite the correct amount.
+     C. Enter the correct amount in the account of the HO, but do not correct or alter the SPM's figures in the daily accounts.
+     D. Halt all transactions with the SO until a written explanation is received.
+     Ans: C
+     Exp: If an account item is wrong, the correct amount should be entered in the account of the HO, but the SPM's figures in the daily accounts should not be corrected or altered, and it should never be returned for correction.
+
+Q124. Consider the following statements regarding the Sub-Account Portfolio carried by a Village Postman:
+     1. It contains the Sub-Account (Form PA-11), the cash bag, and accountable articles.
+     2. The Village Postman checks the contents of the portfolio in the presence of the SPM/BPM before leaving the office.
+     3. The Village Postman is permitted to leave the portfolio unattended while clearing letter boxes.
+     Which of the statements given above is/are correct?
+     A. 1 only
+     B. 1 and 2 only
+     C. 2 and 3 only
+     D. 1, 2 and 3
+     Ans: B
+     Exp: Statements 1 and 2 are correct. Statement 3 is incorrect because the Village Postman is responsible for the safe custody of the portfolio and its contents while on his beat.
+
+[ Chapters 5 & 6 (Head Postmen & Letter-Box Attendants) ]
+--------------------------------------------------------------------------
+
+Q125. Which of the following is a specific duty assigned to a Head Postman to ensure the punctuality of letter box clearances?
+     A. He must clear all letter boxes in the post town personally.
+     B. He drops test letters into the letter boxes at different times and watches for their arrival at the post office.
+     C. He issues the route list (M-53) to the letter-box peons.
+     D. He maintains the keys to all the letter boxes permanently.
+     Ans: B
+     Exp: The Head Postman is required to test the letter boxes by dropping test letters at different times and watching for their arrival at the post office to ensure punctual clearance.
+
+Q126. A Letter-Box Peon finds a street letter box completely damaged and insecure. What is his immediate required action?
+     A. Clear the contents and bring the damaged box to the post office.
+     B. Tape the box shut and proceed to the next letter box.
+     C. He must not clear it, but must guard it and send word to the post office for assistance.
+     D. Hand over the key to a local police officer and leave the scene.
+     Ans: C
+     Exp: If he finds a letter box damaged or insecure, he must not clear it but must guard it and send word to the post office for assistance, reporting immediately to the Postmaster.
+
+Q127. What procedural action must a Letter-Box Peon strictly perform immediately after emptying the contents of a letter box?
+     A. Wait 5 minutes for late-arriving customers.
+     B. Change the hour-plate or adjust the movable indicator to show the time of the next clearance.
+     C. Apply departmental sealing wax to the lock hole.
+     D. Count the total number of letters recovered.
+     Ans: B
+     Exp: At each clearance, the Letter-Box Peon must change the hour-plate to show the time of the next clearance, and failure to do so is a serious irregularity.
+
+Q128. With the modern implementation of "Smart Letter Boxes" (Nanyatha), what must the attendant use to electronically log the clearance time and GPS location?
+     A. A digital hour-plate.
+     B. The Point of Sale (POS) machine.
+     C. The Nanyatha App on his mobile device to scan the barcode sticker inside.
+     D. A biometric thumb scanner attached to the box.
+     Ans: C
+     Exp: For Smart Letter Boxes (Nanyatha), the attendant must scan the barcode sticker inside using the Nanyatha App on his mobile device to log the clearance time and location.
+
+[ Chapters 7 & 8 (Uniforms, Prohibitions & GDS) ]
+--------------------------------------------------------------------------
+
+Q129. Under the 7th Central Pay Commission (CPC) recommendations, what is the current annual Dress Allowance provided to eligible postal employees, replacing the physical supply of uniforms?
+     A. Rs. 2,000 per annum
+     B. Rs. 5,000 per annum
+     C. Rs. 10,000 per annum
+     D. Rs. 15,000 per annum
+     Ans: B
+     Exp: The 7th CPC Dress Allowance has replaced the physical supply of uniforms, with eligible employees receiving Rs. 5,000 per annum credited to their salary in July.
+
+Q130. A postman is requested by an illiterate person on his beat to assist in writing a letter, and the person offers him Rs. 20 for his time. According to the prohibitions for postmen, what must he do?
+     A. Accept the money as it is a voluntary tip for extra service.
+     B. Refuse the money, as he is forbidden to act as a professional letter-writer and may only assist gratuitously.
+     C. Accept the money but credit it to the UCR account at the post office.
+     D. Refuse to write the letter entirely, as any assistance is strictly prohibited.
+     Ans: B
+     Exp: A postman is forbidden to act as a professional letter-writer. He may assist illiterate persons gratuitously (without payment) provided it doesn't interfere with his duties.
+
+Q131. Which of the following acts by a postman constitutes an offence punishable under the rules of the Post Office Act?
+     A. Demanding exactly the amount of postage due marked on an unpaid article.
+     B. Assisting a customer in filling out a Money Order form free of charge.
+     C. Falsely noting "Addressee not found" on an article to save time.
+     D. Reporting a damaged letter box to the Postmaster.
+     Ans: C
+     Exp: Falsely noting "Refused", "Addressee not found" or "Left" on an article is explicitly listed as a punishable offence.
+
+Q132. A Village Postman's beat map requires him to visit three villages. The route is too large to complete in a single day. What is the prescribed procedure for overnight halts?
+     A. He may return home and resume the beat the next day.
+     B. He must sleep at a secure place (e.g., school or headman's house) approved by the Postmaster, ensuring safety of cash and mails.
+     C. He must deposit the cash bag at the nearest police station for the night.
+     D. Overnight halts are strictly prohibited; the beat must be divided between two postmen.
+     Ans: B
+     Exp: If the beat is too large, he may be required to halt overnight at a specified secure place approved by the Postmaster, and is responsible for the safety of cash and mails.
+
+Q133. While on his beat, a Village Postman is approached by a customer wanting to hand over letters for dispatch. What types of articles is the Village Postman authorized to receive from the public for dispatch?
+     A. Only Insured Tracked items.
+     B. Fully prepaid unregistered letters and postcards.
+     C. Accountable parcels up to 4 kg.
+     D. Value Payable (COD) articles.
+     Ans: B
+     Exp: The Village Postman is authorised to receive unregistered letters and postcards from the public for despatch, provided they are fully prepaid with postage stamps.
+
+Q134. If a Village Postman is aware that a dangerous infectious disease (such as a severe pandemic outbreak resulting in a containment zone) exists in a village on his beat, what is his mandated course of action?
+     A. Enter the village but wear protective gear supplied by the Postmaster.
+     B. Leave the mails at the boundary of the village unattended.
+     C. He must not enter the village, must report the fact to the Postmaster immediately, and detain the articles.
+     D. He must deliver the mail only to the local hospital authorities.
+     Ans: C
+     Exp: If a specific danger like an infectious disease exists, he must not enter that village, must report immediately to the Postmaster, and articles are detained until it is safe.
+
+Q135. Consider the following statements regarding the duties of Gramin Dak Sevaks (GDS) under the DARPAN 2.0 implementation:
+     1. GDS (BPMs/ABPMs) provided with mobile devices can book Speed Post (Document and Parcel) while on the beat.
+     2. GDS can accept Money Orders and generate digital receipts on the spot.
+     3. GDS are legally exempt from the Rs. 5,000 dress allowance since they receive liveries manually.
+     Which of the statements given above are correct?
+     A. 1 and 2 only
+     B. 2 and 3 only
+     C. 1 and 3 only
+     D. 1, 2 and 3
+     Ans: A
+     Exp: Statements 1 and 2 are correct as per DARPAN 2.0 implementations. Statement 3 is incorrect because GDS are generally subject to allowances or specific departmental provisions for uniform upkeep, not legally exempt to receive manual liveries under CPC rules.
+
+==========================================================================
+                         END OF SET  —  135 MCQs                          
+==========================================================================
