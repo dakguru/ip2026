@@ -1,0 +1,1094 @@
+Q1. What is the maximum prescribed weight limit for an air-mail bag or air Transit Bag (TB)?
+A. 10 kg
+B. 14 kg
+C. 28 kg
+D. 30 kg
+Answer: D
+Explanation: Under Rule 26-A of Postal Manual Volume V, the weight of an air-mail bag or air Transit Bag (TB) should not exceed 30 kg.
+
+Q2. Who is the designated officer in charge of a Transit Mail Office (TMO)?
+A. Head Record Officer
+B. Head Sorting Assistant
+C. Mail Agent or Mail Guard
+D. Sub Record Officer
+Answer: C
+Explanation: Per Rule 9-B, a TMO is a stationary branch dealing exclusively with closed bags. A Mail Agent or Mail Guard is in charge, whereas a Head Sorting Assistant heads a Sorting Mail Office.
+
+Q3. Which distinguishing mark must precede the number on a Postal Service registered article?
+A. Ins
+B. V.P.
+C. Cipher O
+D. R.B.
+Answer: C
+Explanation: Rule 85 mandates distinguishing marks to prevent misidentification. Postal Service registered articles must bear the Cipher "O", distinguishing them from insured (Ins) or V.P. items.
+
+Q4. Consider the following statements regarding the Returned Letter Office (RLO):
+
+1. The rationalised network consists of exactly four Zonal RLOs across India.
+2. Letters are retained for one year in anticipation of a claim before destruction.
+3. The Delhi RLO work is mapped to the Northern Zone RLO at Lucknow.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct per Rule 12 (RLO Rationalisation). Statement 2 is incorrect; letters are retained for three months, whereas parcels and articles of value are held up to one year.
+
+Q5. Which of the following statements is/are correct regarding International Mails and Exchange Offices?
+
+1. A Foreign Post Office (FPO) assesses customs duty only for articles delivered within its own jurisdiction.
+2. An Office of Exchange of Transit directly conducts customs examination for closed transit bags.
+3. A Sub-Foreign Post Office lacking customs assessment facilities functions as an International Business Centre (IBC).
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct per Rule 13. Statement 2 is incorrect because an Office of Exchange of Transit only handles foreign-origin bags in closed transit without customs examination.
+
+Q6. Consider the following statements regarding the preparation of bundles:
+
+1. A Station Bundle is required when there are 15 or more unregistered articles for a particular station.
+2. A Registered Bundle is prepared only when the number of registered articles is exactly 2.
+3. An Insured Bundle is prepared when the number of insured articles is more than 1.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct (Rules 24 and 29). Statement 2 is incorrect; Rule 27 states a registered bundle is prepared when the number of registered articles is greater than 2 (minimum 3 articles).
+
+Q7. Which of the following statements is/are not correct regarding Check Slips?
+
+1. A pink check-slip is used for Ordinary Station Paid and Unpaid bundles.
+2. Yellow strips on a check-slip indicate a Metro bundle.
+3. An Express Bundle utilizes a white slip marked with two diagonal blue pencil lines.
+A. 1 only
+B. 2 only
+C. 1 and 3 only
+D. 2 and 3 only
+Answer: B
+Explanation: Statement 2 is not correct per Rule 25; yellow strips indicate Rajdhani bundles, while blue strips indicate Metro bundles. Statements 1 and 3 accurately reflect the color codes for check-slips.
+
+Q8. Consider the following statements regarding bags:
+
+1. An air-mail bag containing air parcels must bear the superscription "C.A.P" on its label.
+2. Registered articles can be enclosed loose in an air-mail bag if their number exceeds 25.
+3. A Cash Bag inside a Mail Bag is indicated by the symbol 'F' on the label.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct. Rule 26-A requires "C.A.P" for air parcels and allows registered articles loose if they exceed 25. Rule 26 specifies the symbol 'F' when a Cash Bag is inside.
+
+Q9. Which of the following statements is/are correct regarding Record Offices?
+
+1. A Head Record Office (HRO) is strictly located at the headquarters of an RMS Division.
+2. A Sub-Record Office (SRO) is commanded by an HSG-I officer.
+3. The Record Officer in a standalone Record Office (RO) is generally a Sorting Assistant.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct per Rules 15 & 18. Statement 2 is incorrect; an SRO is in-charge of an LSG official, whereas an HRO is in-charge of an HSG-I officer.
+
+Q10. Consider the following statements regarding weight limits for mails:
+
+1. A Postman or Village Postman is permitted to carry a maximum of 14 kg.
+2. A Letter Mail Runner on the main line carries a maximum weight of 14 kg.
+3. A Special Parcel Runner can carry a maximum of 28 kg per man.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statements 2 and 3 are correct per Rule 135. Statement 1 is incorrect; the maximum weight limit for a Postman/Village Postman is 10 kg (including parcels and cash), not 14 kg.
+
+
+Q11. Which of the following statements is/are correct regarding late letters under the current framework?
+
+1.The special late fee for window posting has been retained under the Post Office Regulations, 2024.
+2.Any article presented at the window during prescribed hours is accepted for dispatch without a separate late fee.
+3."Too Late" letters are dispatched with double the late fee.
+
+A. 1 only  
+B. 2 only  
+C. 2 and 3 only  
+D. 1, 2 and 3
+Answer: B
+Explanation: Only statement 2 is correct. There is no separate "late fee" for window posting. It was removed when G.S.R. 912(E) dated 29.12.2022 substituted Rule 196 of the Indian Post Office Rules, 1933 — the substituted rule simply provides that any article presented at the window during the hours the PMG prescribes is accepted for dispatch. The 1933 Rules were themselves superseded on 16.12.2024 by the Post Office Rules, 2024 (G.S.R. 767(E)) and Regulations, 2024 (S.O. 5440(E)), but the same position carries forward, so statement 1 (fee "retained") is wrong. Statement 3 is wrong because the "Too Late" category turned entirely on non-payment of that late fee and is now of historical interest only — there is no "double late fee.
+
+
+Q12. Consider the following statements regarding half-yearly returns and weighment:
+
+1. The half-yearly enumeration returns are conducted from the 8th to the 21st of February and August.
+2. The half-yearly weighment of bags is conducted on the 21st of January and 21st of July.
+3. The statement for the weighment of bags is prepared in quadruplicate.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct. Rule 155 specifies the enumeration dates (8-21 Feb/Aug), and Rule 234 specifies the weighment dates (21 Jan/Jul) and requires Form M-105 in quadruplicate.
+
+Q13. Which of the following statements is/are not correct regarding investigation limits?
+1.An Inspector of Posts can investigate loss/fraud cases involving principal amounts up to ₹2 lakh.
+2.A Divisional Head investigates cases above ₹2 lakh up to ₹10 lakh.
+3.All loss/fraud cases above ₹5 lakh must be reported to the Directorate.
+
+A. 1 and 2 only 
+B. 2 and 3 only 
+C. 1 and 3 only 
+D. 1, 2 and 3
+
+Answer: B
+Explanation: Statements 2 and 3 are the incorrect ones. Under Rule 175, Vol V (limits notified by the Directorate w.e.f. 23/24.09.2021), the investigating authority by principal amount is: Inspector/ASPOs — up to ₹2 lakh; Divisional Head/Chief or Sr. PM — above ₹2 lakh to ₹5 lakh; AD/APMG (Region/Circle) — above ₹5 lakh to ₹10 lakh; Director Postal Services & above — above ₹10 lakh. So statement 2 is wrong (the DH is capped at ₹5 lakh; ₹5–10 lakh is the AD/APMG's range), and statement 3 is wrong (only cases exceeding ₹10 lakh, raised from the earlier ₹5 lakh, are reported by the Circle to the Directorate). Statement 1 is correct. Separately, under Rule 34, GFR 2017, all losses above ₹50,000 from suspected fire/theft/fraud are reported to the Police. 
+
+
+Q14. Consider the following statements regarding the new statutory framework:
+
+1. The Post Office Act, 2023 replaces the Indian Post Office Act, 1898.
+2. Postal Manual Volume V continues as administrative practice via the saving clause in Section 16(2) of the new Act.
+3. The exclusive privilege of the Government on letters was retained under the Post Office Act, 2023.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect; the 2023 Act abolished the exclusive privilege (monopoly) on letters, legally recognizing private couriers.
+
+Q15. Which of the following statements is/are correct regarding the interception of letters?
+
+1. Interception under the Post Office Rules, 2024 remains valid indefinitely until revoked.
+2. Statutory interception can remain in force for up to 30 days, extendable up to a maximum of 90 days.
+3. A Divisional Head ordering interception in an emergency must inform the competent authority within 7 days.
+A. 1 and 2 only
+B. 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 2 is correct per Rule 16(11) of the Post Office Rules, 2024. Statement 1 is incorrect due to the 90-day cap. Statement 3 is incorrect; Rule 147 requires informing the authority within 3 days.
+
+Q16. Consider the following statements regarding bag classifications:
+
+1. A Transit Bag is classified as a Due Bag.
+2. A Plural Mail Bag is treated as an Unusual Bag and used for unregistered items.
+3. An Extra Mail Bag is used as an Unregistered bag.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 2 is not correct; Rule 74 specifies a Plural Mail Bag is a Due Bag used as a Registered bag. Statements 1 and 3 are correct per Rules 30-37A and 75.
+
+Q17. Which of the following statements is/are correct regarding Trial Cards?
+
+1. Trial cards are service post cards used to determine alternative mail routes or trace detentions.
+2. They must be included in station bundles to test sorting efficiency.
+3. The card carries columns for manner of disposal and date stamp.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct per Rule 57-A. Statement 2 is incorrect; the rule explicitly mandates that a trial card should not be included in any station bundle.
+
+Q18. Consider the following statements regarding the Central Bagging Unit (KBU):
+
+1. It is a branch of the RMS Office handling bundles prepared by Post Offices.
+2. It opens L Bags or R Bags and groups bundles by destination.
+3. It performs detailed sorting of individual unregistered letters.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Rule 11-B. Statement 3 is incorrect; a KBU deals with grouped bundles for direct bagging, not the detailed sorting of individual unregistered letters.
+
+Q19. A sender requests the recall of an inland registered letter without the addressee's consent. What is the correct procedural fee application as per the Post Office Regulations, 2024?
+A. A fee of Rs. 30 must be recovered from the sender.
+B. A fee of Rs. 6 must be paid by the sender.
+C. Recall without the addressee's consent is strictly prohibited.
+D. The facility is provided free of charge for inland articles.
+Answer: B
+Explanation: Per Rule 148 and Regulation 57 of the PO Regulations 2024, the sender may recall a domestic accountable item without the addressee's consent upon payment of a Rs. 6 fee.
+
+Q20. An air-mail bag is being prepared for dispatch containing exactly 45 unregistered letters. There are no insured articles or air parcels. How should this dispatch strictly be handled?
+A. A blue dosuti bag must be closed regardless of volume.
+B. An air-mail cover of suitable size must be used instead of a bag.
+C. The articles must be diverted to surface mail due to insufficient volume.
+D. A standard canvas mail bag must be substituted for the dosuti bag.
+Answer: B
+Explanation: Per Rule 26-A, if the number of articles is less than 50 and there are no insured articles or air parcels, an air-mail cover of suitable size is used instead of a bag.
+
+Q21. A Sorting Assistant discovers a non-cognizable offence (e.g., forgery) involving postal records. According to the updated legal framework under the Bharatiya Nagarik Suraksha Sanhita, 2023, what is the immediate required action?
+A. Suspend departmental investigation and file an FIR under Section 173 BNSS.
+B. Wait for Police instructions under Section 154 CrPC.
+C. Begin departmental investigation immediately and approach a Magistrate under Section 174 BNSS if police aid is required.
+D. Transfer the case directly to the Directorate.
+Answer: C
+Explanation: Per Rule 172-A updated for new criminal laws, departmental investigation for non-cognizable cases begins immediately. If police aid is required, the matter is placed before a Magistrate under Section 174 BNSS.
+
+Q22. A transit section connects immediately with another train containing a different RMS section. The beats join at this specific point. What is the correct terminology for these two elements?
+A. The point is a Connecting Station and the section is a Changing Section.
+B. The point is a Changing Station and the section is a Connecting Section.
+C. The point is a Terminal Station and the section is a Forwarding Section.
+D. The point is a Transit Station and the section is a Plural Section.
+Answer: B
+Explanation: Rules 40 & 41 define a Changing Station as the point where beats of two Transit Sections join, and a Connecting Section as one working in immediate connection with another train's section.
+
+Q23. What is the maximum weight permissible for a Parcel Bag carried on an RMS Trolly?
+A. 14 kg
+B. 28 kg
+C. 30 kg
+D. 37 kg
+Answer: D
+Explanation: Rule 135 stipulates weight limits for various mail conveyances. The maximum weight for a Parcel Bag carried on an RMS Trolly is strictly 37 kg.
+
+Q24. Under GFR, 2017 provisions referenced in Postal Manual Volume V, what is the minimum monetary threshold of loss due to suspected theft that mandates reporting to the Police?
+A. Above Rs. 10,000
+B. Above Rs. 50,000
+C. Above Rs. 1,00,000
+D. Above Rs. 2,00,000
+Answer: B
+Explanation: The Currency Update to Rule 175 notes that under Rule 34 of GFR, 2017, all losses above Rs. 50,000 due to suspected fire, theft, or fraud must be reported to the Police.
+
+Q25. How many copies of the inland air-mail delivery bills must be prepared for each port of call?
+A. 3 copies
+B. 4 copies
+C. 5 copies
+D. 6 copies
+Answer: D
+Explanation: Rule 76/2 mandates that exactly six copies of the inland air-mail delivery bills [M-57, M-57(a), M-57(b)] must be prepared for each port of call.
+
+Q26. What is the maximum prescribed weight ceiling for a Letter under the Post Office Regulations, 2024?
+A. 250 grams
+B. 500 grams
+C. 1000 grams
+D. 2000 grams
+Answer: B
+Explanation: Per the DO Letter dated 20.12.2024 (Statutory Update in Vol VI), the Letter Post products have been rationalised, with the weight ceiling for a "Letter" firmly fixed at 500 grams.
+
+Q27. Which new accountable parcel product has subsumed the legacy Ordinary Parcel and Business Parcel services?
+A. Express Parcel
+B. Gyan Post Parcel
+C. India Post Parcel
+D. Speed Post Parcel
+Answer: C
+Explanation: According to the statutory updates for Chapter 7 (Vol VI), Ordinary Parcel and Business Parcel have been subsumed into "India Post Parcel", a new accountable product.
+
+Q28. What is the maximum single remittance limit for a retail Money Order under the updated framework?
+A. Rs. 5,000
+B. Rs. 10,000
+C. Rs. 20,000
+D. Rs. 50,000
+Answer: B
+Explanation: Regulation 147 of the Post Office Regulations, 2024, raises the limit of a single Money Order from Rs. 5,000 to Rs. 10,000.
+
+Q29. What is the maximum limit of currency notes that can be transmitted through Insured Post?
+A. Rs. 10,000
+B. Rs. 20,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: B
+Explanation: Per the statutory update in Chapter 8 (Rule 200), the transmission of currency notes by Insured Post is explicitly limited to Rs. 20,000.
+
+Q30. Which of the following forms is used as the Postman's Book?
+A. MS-14
+B. MS-27
+C. RP-53
+D. PA-11
+Answer: B
+Explanation: Rule 4 of Vol VI, Part III states that every postman is supplied with a book in Form MS-27, where particulars of accountable, insured, COD articles, and Money Orders are entered.
+
+Q31. Consider the following statements regarding the new "Gyan Post" service:
+
+1. It is restricted to books of a social, cultural, or religious nature, or prescribed educational textbooks.
+2. The minimum weight for booking is 300 grams and the maximum is 5 kg.
+3. It can be transmitted via both surface and air modes.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per the PO (Second Amendment) Regulations, 2025. Statement 3 is incorrect because Gyan Post transmission is permitted by surface mode only.
+
+Q32. Which of the following statements is/are correct regarding OTP-based delivery?
+1.It is provided free of charge as a bundled service for "24 Speed Post Parcel" between select metro cities.
+2.It is available as a value-added service for standard Speed Post at a fee of ₹10 plus GST.
+3.The item is handed over to any adult family member if the OTP fails.
+
+A. 1 only 
+B. 1 and 2 only 
+C. 2 and 3 only 
+D. 1, 2 and 3
+Answer: A
+Explanation: Only statement 1 is correct. OTP-based delivery exists in two forms: (a) as a standalone value-added service for Speed Post Document/Parcel at ₹5 + GST per item, introduced by the Post Office (Fourth Amendment) Regulations, 2025 — S.O. 4375(E), effective 1.10.2025; and (b) as a free bundled service with the "24 Speed Post Parcel", introduced by the Post Office (Second Amendment) Regulations, 2026 — S.O. 1329(E), notified 13.03.2026, effective 17.03.2026 (Reg. 100A), available between Delhi, Mumbai, Chennai, Kolkata, Bengaluru and Hyderabad. Statement 2 is wrong — the standalone fee is ₹5 + GST, not ₹10. Statement 3 is wrong — handover requires successful OTP confirmation; the item is not released to a family member on OTP failure. 
+
+Q33. Consider the following statements regarding retention of undeliverable mail:
+
+1. The standard retention period for undelivered India Post Parcels is 7 days from the last delivery attempt.
+2. The addressee can request a further retention of up to 7 additional days in writing.
+3. "Poste Restante" articles are retained for exactly 14 days.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Regulation 43 and digital intimation instructions. Statement 3 is incorrect; Rule 138 states "Poste Restante" articles are kept for one month.
+
+Q34. Which of the following statements is/are correct regarding Franking Machines?
+1.All Electronic Franking Machines (EFMs) remain valid alongside Remotely Managed Franking Machines (RMFM).
+2.Franked articles posted in letter boxes are treated as unpaid.
+3.Users consuming above ₹5,000 monthly receive a 3% rebate on the entire amount.
+A. 1 and 2 only 
+B. 2 and 3 only 
+C. 1 and 3 only 
+D. 1, 2 and 3
+
+Answer: B
+Explanation: Statements 2 and 3 are correct. Under Rule 328, Vol VI, franked articles must be tendered at the counter of the designated post office; if found in a letter box they are treated as unpaid (2 ✓). Under Rule 329, Vol VI, the RMFM rebate is nil up to ₹5,000 monthly consumption and 3% on the entire amount for ₹5,001 and above (3 ✓). Statement 1 is wrong: older EFMs have been phased out; only RMFMs are permitted for new licences/renewals (funds reset remotely via the Credifon server).
+
+
+Q35. Consider the following statements regarding the void status and forfeiture of Money Orders:
+
+1. An MO remains current up to the last day of the second month following the month of issue.
+2. An MO unpaid beyond 12 months from the date of booking is automatically forfeited to the Government.
+3. Adjustments for an MO claim cannot be made after 1 year without consulting the PAO.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect; Regulation 155 states forfeiture occurs when a Money Order remains unpaid beyond three years from the date of booking, not 12 months.
+
+Q36. Which of the following statements is/are correct regarding Cash on Delivery (COD)?
+
+1. VPP has been merged with COD, which is now extended to retail customers.
+2. The maximum COD amount per article is Rs. 50,000.
+3. COD remittances are strictly sent via physical Money Orders to the sender.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect; COD remittance directly transfers into the sender's bank account via ECS/NEFT, bypassing the traditional VPP Money-Order route.
+
+Q37. Consider the following statements regarding the Post Office Savings Bank:
+
+1. Aadhaar Number and PAN are mandatory for opening any new account.
+2. An account is classified as inoperative if there is no transaction for three complete financial years.
+3. Interest ceases to accrue on an account once it is classified as inoperative.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect; under the POSB Rules 2019, interest continues to be credited to Inoperative Accounts.
+
+Q38. Which of the following statements is/are correct regarding Indian Postal Orders (IPOs)?
+
+1. E-IPOs are available in multiple denominations ranging from Rs. 10 to Rs. 100.
+2. An IPO is valid for 24 months without a second commission.
+3. A maximum of 4 unused postage stamps may be affixed to make up broken amounts.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct (Rule 180-D and 180-B). Statement 1 is incorrect; while physical IPOs come in 10, 20, 50, 100 denominations, e-IPOs are available only in a single Rs. 10 denomination.
+
+Q39. Consider the following statements regarding Cash Conveyance limits by modes:
+
+1. The limit for loose cash conveyed through a Departmental Employee alone is Rs. 5,00,000.
+2. The limit for a cash bag enclosed in an account bag through an RMS Section is Rs. 2,00,000.
+3. An ABPM can independently carry up to Rs. 2,00,000 cash.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per the Security-Branch instructions. Statement 3 is incorrect; a BPM/ABPM/GDS alone is limited to Rs. 1,00,000 (Rs. 2,00,000 requires accompaniment by another GDS).
+
+Q40. Which of the following statements is/are correct regarding the preservation of records?
+
+1. The Postmaster's Order Book is preserved permanently.
+2. Nominal Rolls are preserved permanently.
+3. Character sheets in invalid pension cases are preserved for 25 years or 3 years after death, whichever is earlier.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct. Statement 1 is incorrect; Rule 25 mandates that the Postmaster's Order Book is preserved for exactly 3 years, not permanently.
+
+Q41. Consider the following statements regarding redirection of parcels:
+
+1. Redirection within the same delivery area is free of charge.
+2. Redirection to another post town attracts a fee equal to the prepaid postage.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Statement 1 is correct. Statement 2 is incorrect; Rule 193 stipulates the redirection fee for a parcel to another post town is half the prepaid postage, not the full amount.
+
+Q42. Which of the following statements is/are correct regarding official postal articles?
+
+1. Unpaid official articles are taxed with the single deficiency amount only.
+2. Ordinary postage stamps must always be used alongside "O.I.G.S" superscriptions.
+3. Camp Bags are reserved for high-ranking officers listed in the DG's Camp List.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect; Rule 305 specifies Service Postage Stamps must be used, and ordinary stamps should not be used unless service stamps are unavailable.
+
+Q43. Consider the following statements regarding the closing of account bags in a Head Office:
+
+1. The Sub-Account assistant personally seals the cash bag using the cash seal.
+2. The Sub-Account assistant weighs the closed cash bag and enters the weight on the label.
+3. Black sealing wax is mandatory for sealing the cash bag.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct. Statement 1 is incorrect; Rule 27 states the cash bag must be packed, closed, and sealed by the treasurer personally, not the Sub-Account assistant.
+
+Q44. Which of the following statements is/are correct regarding Money Order limits and rules?
+
+1. The total amount remitted via Retail MO to a single person in a month cannot exceed Rs. 25,000.
+2. Service MOs are exempt from commission.
+3. Postage stamps can be accepted for payment of MO commission up to Rs. 10.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Reg 147 & Rule 14). Statement 3 is incorrect; Regulation 9(2) explicitly invalidates postage stamps for paying Money-Order commission or value.
+
+Q45. Consider the following statements regarding delivery of accountable articles:
+
+1. The signature of an illiterate addressee must be attested by the postman delivering the article.
+2. For address-specific delivery, the item can be delivered to any adult family member unless objected to.
+3. Addressee-specific delivery is a value-added service carrying a fee of Rs. 5 + GST.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct under Regulation 18. Statement 1 is incorrect; Rule 12 strictly forbids the postman from acting as the witness to attest the mark of an illiterate addressee.
+
+Q46. Which of the following statements is/are not correct regarding MO alterations?
+
+1. The address of the payee can be altered free of charge within India.
+2. The name of the payee can be altered to another person free of charge if requested within 24 hours.
+3. Stoppage of payment refunds the commission but not the principal.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are incorrect. Changing the payee's name requires a second commission (Rule 245). Stoppage of payment refunds the principal, but the commission is not refunded (Rule 44). Statement 1 is correct.
+
+Q47. Consider the following statements regarding the handling of defective articles:
+
+1. A postman discovering an injured article after receipt must immediately show it to the Postmaster.
+2. An addressee refusing to pay customs duty can still accept the article while appealing the duty.
+3. A postman cannot keep an undelivered article in his possession for more than 24 hours.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect; Rule 134 mandates that an addressee must either accept the article with all charges (including customs duty) or refuse it entirely.
+
+Q48. Which of the following statements is/are correct regarding Village Postmen / GDS duties?
+
+1. A Village Postman is authorised to receive unregistered letters and postcards from the public for dispatch.
+2. A Village Postman can accept Speed Post parcels on the beat without specific authorization.
+3. They are prohibited from selling stamps on credit.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct. Statement 2 is incorrect; Rule 67 states they cannot accept accountable articles for booking unless specifically authorised (e.g., equipped with DARPAN 2.0).
+
+Q49. Consider the following statements regarding the duties of Head Postmen:
+
+1. They are employed to verify the payment of Money Orders.
+2. They test street letter boxes by dropping test letters to ensure punctual clearance.
+3. They are not authorised to conduct enquiries into minor public complaints.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Rules 37 and 38. Statement 3 is incorrect; Rule 39 explicitly states that minor complaints may be made over to the Head Postman for enquiry.
+
+Q50. Which of the following statements is/are correct concerning the Sub-Account System?
+
+1. A Village Postman carrying cash and stamps must carry a Sub-Account Portfolio.
+2. BO Slips (PA-4) are prepared in triplicate.
+3. The amount collected for letter postage by a Village Postman must be paid to the Sub-Postmaster.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct (Rules 32 and 83). Statement 2 is incorrect; Rule 63 states BO Slips are prepared in duplicate using double-side carbonic paper, not triplicate.
+
+Q51. Consider the following statements regarding liability and compensation:
+
+1. Maximum compensation for loss of an international accountable item is 30 SDR.
+2. Compensation for a Speed Post Document is double the charges or Rs. 1,000, whichever is less.
+3. The Government bears unconditional liability for mis-delivery of any postal article.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect; Section 10 of the Post Office Act, 2023 limits Government liability, specifically stating no liability for mis-delivery executed in good faith.
+
+Q52. Which of the following statements is/are correct regarding the Visit Book (MS-86)?
+
+1. Entries in red ink indicate the ABPM is not obliged to visit the village on every trip.
+2. Entries in black ink indicate villages that must be visited regularly.
+3. The Postmaster exclusively writes the entries in the Visit Book.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Rule 77. Statement 3 is incorrect; the rule specifies that the Sub-Account PA himself should enter the details in the Visit Book.
+
+Q53. Consider the following statements regarding the disposal of undelivered articles:
+
+1. Articles addressed to deceased persons where title is in dispute are returned to the RLO with the remark "Deceased".
+2. An ordinary letter for a person temporarily absent can be retained up to 30 days.
+3. Unclaimed station articles are returned to the RLO after 7 days.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct (Rules 137 and 138). Statement 2 is incorrect; ordinary articles for temporarily absent persons are kept for up to 7 days, not 30 days.
+
+Q54. Which of the following statements is/are correct regarding Franking Machines?
+1.Only the Director-General may authorise the use of franking machines.
+2.The license is issued by the Head of the Postal Division.
+3.Franking impressions must be in Blue color ink.
+A. 1 and 2 only 
+B. 2 and 3 only 
+C. 1 and 3 only 
+D. 1, 2 and 3
+
+Answer: D
+Explanation: All three are correct. Under Rule 322, Vol VI, the Director-General authorises the use of franking machines, and no machine may be used without a Licence issued by the Head of the Postal Division (Superintendent of Post Offices) (1 and 2 ✓). The franking impression must be in Blue color ink, showing the postage value, office of posting and date (3 ✓). This does not contradict Q34: Rule 322's licensing framework remains in force, while Q34 reflects the RMFM migration and posting/rebate rules — different facets of the same current regime. 
+
+Q55. Consider the following statements regarding the delivery of insured articles:
+
+1. They can only be delivered to the addressee or an authorised agent.
+2. The manual limit for postman doorstep delivery of an insured article is Rs. 500.
+3. If damaged, delivery is made in the presence of the Postmaster and noted in the Error Book.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct as per Rule 203. Insured articles > Rs. 500 (manual limit) require window delivery, and damaged items demand the Postmaster's presence with an Error Book entry.
+
+Q56. Which of the following statements is/are correct regarding registered articles?
+
+1. A reef knot is used to tie a Registered Bundle.
+2. A Registered List (Form RP-32) is placed inside the bundle.
+3. Registration is mandatory for any parcel exceeding 4 kilograms.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct. Rule 163 specifies the use of a reef knot and Form RP-32 for Registered Bundles. Rule 156 mandates registration for parcels exceeding 4 kg.
+
+Q57. Which of the following is/are grounds for statutory interception under Section 9 of the Post Office Act, 2023?
+
+1. Public order
+2. Security of the State
+3. Recovery of civil debt
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect; Section 9 permits interception for state security, friendly relations, public order, and emergency, but not for recovery of civil debts.
+
+Q58. Consider the following statements regarding Money Order payments by Postmen:
+
+1. A single Postman (Urban) can carry up to Rs. 40,000 normally.
+2. The Division Head can enhance the urban limit to Rs. 80,000 with prior police consultation.
+3. A GDS is strictly limited to Rs. 10,000 under all circumstances.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Rule 26). Statement 3 is incorrect; the normal limit for a GDS is Rs. 15,000, which can be enhanced to Rs. 25,000 by the Division Head.
+
+Q59. Which of the following statements is/are correct concerning the payment of MOs to special categories?
+
+1. A MO payable to a minor must always be paid to the lawful guardian, even if the minor lives apart and is of sufficient age.
+2. Payment to a purdah-nashin woman requires attestation by a known witness.
+3. Payment to a lunatic is strictly made to the manager of his estate, never to the lunatic himself.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct (Rules 37 & 27). Statement 1 is incorrect; Rule 26 of Part III explicitly allows payment directly to a minor if living apart and of sufficient discretion.
+
+Q60. Consider the following statements regarding the settlement of POSB deceased claims without nomination:
+
+1. A Sub-Postmaster can sanction up to Rs. 50,000.
+2. A Head Postmaster can sanction up to Rs. 5,00,000.
+3. The Regional Head can sanction claims above Rs. 10,00,000.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: All statements are correct. According to the updated SB Order sanction limits, SPM = Rs. 50,000; HPM = Rs. 5,00,000; Superintendent = Rs. 10,00,000; and Regional/Circle Head = Above Rs. 10 Lakh.
+
+Q61. An addressee requests the extension of detention for a COD Parcel for an additional 4 days beyond the initial 7-day period. What demurrage charge is applicable for this extended period?
+A. Rs. 3 per day
+B. Rs. 5 per day
+C. Rs. 15 for the whole period
+D. No charge if requested in writing
+Answer: B
+Explanation: Under Rule 296 statutory updates, the Warehousing Charge (Demurrage) for COD Parcels during the extended detention period is Rs. 5.00 per day.
+
+Q62. A sender books a bulk consignment of printed periodicals under the new product structure. Which class of mail subsumes the legacy "Book Packets containing periodicals"?
+A. Book Post
+B. Gyan Post
+C. Periodical Post
+D. Registered Newspaper
+Answer: C
+Explanation: Per the DO Letter dated 20.12.2024, "Book Packets containing periodicals" has been specifically renamed to "Periodical Post" retaining its original features and conditions.
+
+Q63. A postmaster receives an application for a deceased claim where a valid nomination is registered. The claim amount is Rs. 15,00,000. Who is the competent authority to settle this claim?
+A. The Sub-Postmaster
+B. The Postmaster of the office where the account stands
+C. The Superintendent of Post Offices
+D. The Regional/Circle Head
+Answer: B
+Explanation: Under the statutory update to Rule 370, if a valid nomination exists, the Postmaster of the office where the account stands can settle the claim irrespective of the amount.
+
+Q64. A post office receives an India Post Parcel measuring 1.2 metres in length and having a total length plus girth of 3.2 metres. Should the parcel be accepted?
+A. Yes, because length is within 1.5 metres.
+B. Yes, subject to volumetric weight charges.
+C. No, because the length plus girth exceeds 3 metres.
+D. No, because India Post Parcel maximum length is 1 metre.
+Answer: C
+Explanation: The parcel must be refused. The statutory update for volumetric dimensions explicitly restricts maximum length to 1.5 metres and maximum length + girth to exactly 3.0 metres.
+
+Q65. A money order bearing the month-stamp impression of May 2026 is unpaid. At the close of which exact date will this Money Order be treated as a Void MO?
+A. 30 June 2026
+B. 31 July 2026
+C. 31 August 2026
+D. 31 December 2026
+Answer: B
+Explanation: Per Rule 276, the currency period expires with the close of the last day of the second month following the month of issue. For May 2026, the second month is July. Hence, 31 July 2026.
+
+Q66. An official is dismissed from service as a disciplinary measure. How long must the confidential records and character sheet of this official be preserved?
+A. 3 years
+B. 5 years
+C. 6 years
+D. Permanently
+Answer: C
+Explanation: Rule 25(A) mandates that the confidential records and character sheet of officials dismissed, removed, or compulsorily retired as a disciplinary measure must be preserved for exactly 6 years.
+
+Q67. A customer wishes to remit Rs. 35,000 via Retail Money Order to a single relative in a single calendar month. What is the correct protocol?
+A. Accept all MOs as they fall under the bulk category limit.
+B. Accept up to Rs. 25,000 only and refuse the remaining amount.
+C. Book one MO of Rs. 25,000 and another of Rs. 10,000 with Superintendent approval.
+D. Divert the entire amount through India Post Payments Bank only.
+Answer: B
+Explanation: Under the proviso to Regulation 147, the amount of remittance to a single person in a calendar month via Retail Money Order is strictly restricted to a maximum of Rs. 25,000.
+
+Q68. What is the fee for an Identification Card and its validity period?
+A. Rs. 50, valid for 2 years
+B. Rs. 100, valid for 3 years
+C. Rs. 200, valid for 5 years
+D. Free of charge, valid for 3 years
+Answer: B
+Explanation: Per the statutory update in Chapter 12 (Rule 319), the fee for an Identification Card is Rs. 100 and it remains valid for 3 years from the date of issue.
+
+Q69. At what minimum balance threshold is an account maintenance fee of Rs. 50 deducted if the account has cheque facility?
+A. Below Rs. 50
+B. Below Rs. 100
+C. Below Rs. 500
+D. Below Rs. 1000
+Answer: C
+Explanation: The POSB statutory update specifies a minimum balance of Rs. 500 for accounts with cheque facility. Falling below this incurs an annual account maintenance fee of Rs. 50.
+
+Q70. What is the preservation period for a Stock Book of a Post Office?
+A. 3 years
+B. 5 years
+C. 10 years after the year it is replaced
+D. Permanent
+Answer: C
+Explanation: According to the disposal of records schedule in Rule 25, the Stock Book of a Post Office is preserved for exactly 10 years after the year in which it is replaced by a fresh stock book.
+
+Q71. By what dates must the Schedule of UCR (Unclassified Receipts) be submitted by Head Offices to the Audit office?
+A. 2nd and 16th of the month
+B. 1st and 11th of the month
+C. 5th and 20th of the month
+D. 6th of the next month
+Answer: B
+Explanation: Rule 29 stipulates that the Schedule of UCR must be submitted by Head Offices to the Audit office on the 1st and 11th of the month.
+
+Q72. An Indian Postal Order (IPO) is issued on 10 April 2026. Until what date can it be encashed without paying a second commission?
+A. 10 April 2028
+B. 30 April 2028
+C. 30 April 2029
+D. 10 April 2029
+Answer: B
+Explanation: Rule 180-D states IPOs are valid without a second commission for 24 months from the last day of the month of issue. The last day of the issue month is 30 April 2026, making it valid until 30 April 2028.
+
+Q73. What is the maximum cash limit that can be conveyed through a hired MMS with an MTS (in addition to the driver) outside city limits?
+A. Rs. 2,00,000
+B. Rs. 4,00,000
+C. Rs. 5,00,000
+D. Rs. 20,00,000
+Answer: A
+Explanation: As per Rule 9 in Vol VI Part III, cash conveyance through a hired MMS with an MTS outside city limits is restricted to a maximum of Rs. 2,00,000.
+
+Q74. For the preparation of the Yearly Village Return, what specific period is tracked by the Sub-Account PA?
+A. 1st to 15th of January
+B. 1st to 14th of March
+C. 8th to 21st of February
+D. 1st to 31st of March
+Answer: B
+Explanation: Rule 6 explicitly states that the Yearly Village Return is kept during the first 14 days of March (1st to 14th, both inclusive) showing articles received for delivery.
+
+Q75. How many copies are required for the BO Slips (PA-4)?
+A. Single copy
+B. Duplicate by double-side carbonic paper
+C. Triplicate
+D. Quadruplicate
+Answer: B
+Explanation: Rule 63 (Part III) mandates that BO Slips are to be prepared in duplicate by means of double-side carbonic paper, with the pencil copy retained in record.
+
+Q76. Which official is in overall charge of a Sorting Mail Office set?
+A. Record Officer
+B. Mail Guard
+C. Head Sorting Assistant
+D. Mail Agent
+Answer: C
+Explanation: Rule 1 of Vol VII specifies that the Head Sorting Assistant (HSA) is in overall charge of a sorting mail office set and the Mail Department within it.
+
+Q77. What is the primary operational distinction between a Sorting Mail Office and a Transit Mail Office (TMO)?
+A. TMOs process registered letters, while Sorting Offices do not.
+B. Sorting Offices sort individual articles, while TMOs handle only closed bags.
+C. TMOs are always located on moving trains.
+D. Sorting Offices cannot issue certificates of posting.
+Answer: B
+Explanation: As highlighted in Chapter 4, a Transit Mail Office deals exclusively with closed bags and performs no detailed sorting of contents, unlike a Sorting Mail Office.
+
+Q78. Consider the following statements regarding the handling of late fee letters in trains:
+
+1. Unregistered articles posted in the van without a late fee (except postcards) are stamped "Detained — Late Fee Not Paid".
+2. Such detained articles are made over loose to the first mail office for disposal.
+3. RMS sections freely accept articles by hand from the public if the van letter-box is full.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Rule 2. Statement 3 is incorrect; Rule 2(3) explicitly prohibits receiving articles by hand, with only a very narrow exception if the van has no box.
+
+Q79. Which of the following statements is/are correct regarding interruptions to mail movement?
+
+1. Interruptions exceeding 6 hours must be reported by fax/telegraph to both the Superintendent and the Record Office.
+2. Interruptions less than 6 hours are reported by fax/telegraph only to the Record Office.
+3. The Mail Guard is solely responsible for submitting these reports, superseding the Head Sorting Assistant.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Rule 7). Statement 3 is incorrect because the rule assigns the responsibility of reporting interruptions to the Head Sorting Assistant of the set on duty.
+
+Q80. Consider the following statements regarding Metal Tokens:
+
+1. They must be produced before the monthly salary is disbursed.
+2. Loss of a token must be reported directly to the Superintendent by the holder.
+3. The nominal roll of token-holders cannot be destroyed without the Head of the Circle's permission.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct (Rules 14 and 17). Statement 2 is incorrect; the holder must report the loss to the Record Officer, who in turn reports to the Superintendent.
+
+Q81. Which of the following statements is/are correct regarding the preservation of records in a Record Office?
+
+1. The Order Book of a mail office is preserved for 3 years.
+2. Work papers of RMS offices are preserved for 18 months.
+3. The Order Book of a Record Office can be destroyed after 3 years autonomously by the Record Officer.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Rule 17. Statement 3 is incorrect; the Order Book of a Record Office may not be destroyed without the special permission of the Head of the Circle.
+
+Q82. Consider the following statements regarding the custody of Government money in Record Offices:
+
+1. In a Head Record Office (HRO), the two keys are held by the Head Record Officer and the Accountant.
+2. In a Sub-Record Office, the two keys are held by the Sub-Record Officer and a nominated Sorting Assistant.
+3. During working hours, the safe must strictly remain secured with both locks.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Rule 19). Statement 3 is incorrect; during working hours, the safe may be secured with only one lock, whereas beyond working hours it requires both locks.
+
+Q83. Which of the following statements is/are correct regarding books supplied to sets?
+
+1. The Order Book contains exactly 100 pages.
+2. The Guidance Book contains exactly 100 pages.
+3. Wilful removal of a page from the Order Book renders the offender liable to dismissal.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct per Rule 21. Statement 1 is incorrect; the Order Book has 200 serially numbered pages, not 100.
+
+Q84. Consider the following statements regarding personal luggage in a mail van:
+
+1. A hand-bag is permitted for each Sorting Assistant.
+2. A bedding roll not exceeding 1 m × 1.2 m in girth is allowed.
+3. Stoves or private lamps can be carried at the discretion of the Head Sorting Assistant.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Rule 24). Statement 3 is incorrect; Rule 37 strictly prohibits stoves or lamps except with the written authority of the Divisional Superintendent.
+
+Q85. Which of the following statements is/are correct regarding the Daily Report (Form M.S. 83)?
+
+1. It is submitted directly to the Head of Circle by the Head Sorting Assistant.
+2. It must include all irregularities reported by telegraph/fax.
+3. The Supervisor of a Speed Post Centre uses this same form to report to the Manager, Speed Post.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct (Rule 28). Statement 1 is incorrect; the report is submitted to the Superintendent through the Record Officer, not directly to the Head of Circle.
+
+Q86. Consider the following statements regarding the exchange of mails:
+
+1. In a section, the Mail Agent takes delivery of mails before giving out those for dispatch.
+2. In a mail office, the Mail Agent gives out the bags for dispatch before taking delivery.
+3. At an intermediate station, the carrier exchanging mails is permitted to enter the van to retrieve bags.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Rule 40. Statement 3 is incorrect; the carrier is strictly not permitted to enter the van, and bags must pass through the door/window.
+
+Q87. Which of the following statements is/are correct regarding the Mail Abstract?
+
+1. Form M-42 is used for sections and M-43 for mail offices.
+2. It consists of three parts: Mails, Bags, and Articles.
+3. For sections, the entries for out-trip and in-trip are shown separately.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct (Rule 39). Statement 2 is incorrect; the mail abstract has exactly two parts: "Mails" and "Bags".
+
+Q88. Consider the following statements regarding insured bags in a sorting mail office:
+
+1. An insured bag must be weighed by the Parcel Sorting Assistant in the Head Sorting Assistant's presence.
+2. The number of insured parcels inside must be verified in the HSA's presence.
+3. An insured parcel addressed to a non-insurance office must be detained and returned.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Rule 56). Statement 3 is incorrect; Rule 101 dictates that an insured parcel addressed to a non-insurance office is nevertheless forwarded to it.
+
+Q89. Which of the following statements is/are correct regarding Automatic Mail Processing Centres (AMPC)?
+
+1. The Advanced Compact Suite (ACS) imprints a red bar-code below the PIN code.
+2. Letter Sorting Machines (LSM) can sort bar-coded mail at 30,000 articles or more per hour.
+3. Culling is the final stage where machinable mail is merged with non-machinable mail.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Rule 79-A). Statement 3 is incorrect; Culling is the preliminary operation separating machinable from non-machinable mail.
+
+Q90. Consider the following statements regarding the Record Officer (RO):
+
+1. The RO can order Sorting Assistants to do overtime.
+2. The RO has the authority to permanently transfer Sorting Assistants between Divisions.
+3. The RO must personally examine the sweepings of mail vans returned by the Mail Guard.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 3 are correct (Rules 116 and 135). Statement 2 is incorrect; the RO can only make temporary transfers within his attached sets in urgent cases.
+
+Q91. Which of the following statements is/are correct regarding B and T.B. Orders?
+
+1. B orders are copied into each set's guidance book.
+2. T.B. orders (Tour orders) are filed separately in a guard file.
+3. When an order becomes obsolete, it is simply discarded without documentation.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Rule 137). Statement 3 is incorrect; an obsolete order must have a prescribed "Cancelled by..." remark written across it under the Record Officer's signature.
+
+Q92. Consider the following statements regarding Bag Accounting:
+
+1. Every Post Office functions as a Unit Bag Office (UBO).
+2. A District Bag Office redistributes deficiencies among UBOs in its district.
+3. The Authorised Bag Balance is fixed exclusively by the Head of the Circle.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (Rule 161). Statement 3 is incorrect; the Memorandum of Authorised Bag Balance is issued by the Senior Superintendent / Superintendent of Post Offices or RMS.
+
+Q93. The Mail Guard of a transit section finds that the regular accommodation in the train is inadequate for all the mails. What is the procedurally correct action?
+A. Leave the excess bags at the station master's office.
+B. Apply to the railway authorities for extra reserved accommodation using a 4-part requisition.
+C. Demand a new train compartment and halt the train until provided.
+D. Divert the excess mail to surface road transport immediately.
+Answer: B
+Explanation: Rule 8 authorizes the Mail Guard/Agent to apply for extra accommodation. The Record Officer or HSA prepares the requisition in four parts for the exclusive use of the Post Office.
+
+Q94. A Sorting Assistant in a mail office continuously and habitually mis-sends clearly addressed articles. Under the rules, what is the specified consequence for this failure?
+A. A flat fine of Rs. 500 per article.
+B. Mandatory retraining at the Circle Training Centre.
+C. He is deemed unfit and liable to removal or reduction to a lower grade.
+D. Suspension of his metal token for 30 days.
+Answer: C
+Explanation: Rule 68 strictly stipulates that a Sorting Assistant who habitually mis-sends clearly-addressed articles is unfit for his post and liable to removal or reduction to a lower grade.
+
+Q95. The Record Officer fails to properly examine and file the work-papers of a set, leading to missing documents. What is the statutory penalty explicitly cited in the manual for this negligence?
+A. Forfeiture of one month's salary.
+B. Withholding of increment for one year.
+C. Liability to dismissal or other statutory penalty.
+D. Transfer to a non-administrative post.
+Answer: C
+Explanation: Rule 127 declares that examining work-papers is the Record Officer's most important duty. Neglect renders him liable to dismissal or other statutory penalty.
+
+Q96. High dignitaries are on tour. Their mail is handled differently from ordinary mail. Which specific appendix governs this procedure, and what is the rule regarding interception?
+A. Appendix A; it completely overrides the Rule 4 prohibition on interception.
+B. Appendix B; it requires the DG to intercept all items.
+C. Appendix C; interception remains strictly prohibited.
+D. Appendix A; Rule 4 still strictly applies with no exceptions.
+Answer: A
+Explanation: Appendix A governs Camp Articles for high officers on tour. The note to Rule 4 explicitly states that the restriction on interception/redirection does not apply to camp articles dealt with under Appendix A.
+
+Q97. What is the accepted norm for the maximum number of handlings an article should undergo within the entire postal system?
+A. 1.6
+B. 1.8
+C. 2.0
+D. 3.0
+Answer: D
+Explanation: Rule 153 states that while the average rehandling across the system should not exceed 1.8, the absolute maximum number of handlings for an article is 3.
+
+Q98. To ensure proper detailed sorting, at what mail volume threshold is a full sorting case (Circle level) provided for a destination?
+A. Above 500 articles
+B. Above 1,500 articles
+C. Above 3,000 articles
+D. Above 6,000 articles
+Answer: D
+Explanation: According to Rule 154, detailed sorting on a full sorting case for a Circle is done if its mail exceeds 6,000 articles.
+
+Q99. By what date each month must the Head Record Officer submit the monthly account bundle (including contingent bills and acquittance rolls) to the Head of Circle and Superintendent?
+A. By the 3rd of the month
+B. By the 5th of the month
+C. By the 10th of the month
+D. By the 15th of the month
+Answer: B
+Explanation: Rule 145 explicitly directs that on the 5th of every month, the Head Record Officer must submit the monthly account bundle under a service-registered cover.
+
+Q100. How early must the set proceeding on a trip at a non-changing station (where the train is made up) be present on the railway platform?
+A. 10 minutes before departure
+B. At least half an hour before departure
+C. Exactly 1 hour before departure
+D. 15 minutes before departure
+Answer: B
+Explanation: Rule 33 requires that at stations where trains are made up, the set must be present at the hour fixed by the Superintendent, which is at least half an hour before departure.
