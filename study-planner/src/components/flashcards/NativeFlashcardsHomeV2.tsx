@@ -19,6 +19,7 @@ interface NativeFlashcardsHomeProps {
     userStreak?: number; // Optional
     hasAccess?: boolean;
     course?: string;
+    lastStudiedDeckInfo?: { id: string; title: string; category: string; cardCount: number; lastIndex: number } | null;
 }
 
 export default function NativeFlashcardsHomeV2({
@@ -32,7 +33,8 @@ export default function NativeFlashcardsHomeV2({
     bookmarks,
     userStreak = 0,
     hasAccess = true,
-    course
+    course,
+    lastStudiedDeckInfo
 }: NativeFlashcardsHomeProps) {
     const { theme } = useTheme();
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -118,6 +120,50 @@ export default function NativeFlashcardsHomeV2({
 
             {/* SCROLLABLE BODY */}
             <div className="flex-1 overflow-y-auto overscroll-contain pb-[max(6rem,env(safe-area-inset-bottom))]">
+
+            {/* CONTINUE WHERE YOU LEFT OFF — MOBILE BANNER */}
+            {lastStudiedDeckInfo && (
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, ease: 'easeOut' }}
+                    className="mt-4 mb-2 px-4"
+                >
+                    <button
+                        onClick={() => onDeckSelect(lastStudiedDeckInfo.id, lastStudiedDeckInfo.lastIndex, false)}
+                        className="w-full relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-600 p-4 text-left group active:scale-[0.98] transition-transform shadow-lg shadow-indigo-500/20"
+                    >
+                        {/* Ambient elements */}
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl -mr-6 -mt-6 pointer-events-none" />
+                        <div className="absolute bottom-0 left-0 w-16 h-16 bg-violet-400/20 rounded-full blur-2xl -ml-4 -mb-4 pointer-events-none" />
+
+                        <div className="relative z-10 flex items-center gap-3">
+                            <div className="shrink-0 w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+                                <BookOpen className="w-5 h-5 text-white" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                                <p className="text-[9px] font-bold uppercase tracking-wider text-white/60 mb-0.5">Continue Where You Left Off</p>
+                                <h3 className="text-sm font-bold text-white truncate">{lastStudiedDeckInfo.title}</h3>
+                                <div className="flex items-center gap-2 mt-1.5">
+                                    <span className="text-[10px] font-semibold text-white/70">Card {lastStudiedDeckInfo.lastIndex + 1} of {lastStudiedDeckInfo.cardCount}</span>
+                                    <span className="text-[10px] font-bold text-white/90">{Math.round(((lastStudiedDeckInfo.lastIndex + 1) / lastStudiedDeckInfo.cardCount) * 100)}%</span>
+                                </div>
+                                {/* Progress bar */}
+                                <div className="mt-2 h-1 w-full bg-white/20 rounded-full overflow-hidden">
+                                    <div
+                                        className="h-full bg-white rounded-full transition-all duration-700"
+                                        style={{ width: `${((lastStudiedDeckInfo.lastIndex + 1) / lastStudiedDeckInfo.cardCount) * 100}%` }}
+                                    />
+                                </div>
+                            </div>
+                            <div className="shrink-0 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-active:bg-white/30 transition-colors">
+                                <ArrowRight className="w-4 h-4 text-white" />
+                            </div>
+                        </div>
+                    </button>
+                </motion.div>
+            )}
+
             {/* 3. COMPACT STATS ROW (Horizontal Scroll) */}
             <div className="mt-4 mb-8 px-6">
                 <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide -mx-6 px-6">

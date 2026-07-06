@@ -217,6 +217,7 @@ function FlashcardsContent() {
     const [isInitiallyShuffled, setIsInitiallyShuffled] = useState(false);
     const [deckProgress, setDeckProgress] = useState<Record<string, number>>({});
     const [bookmarks, setBookmarks] = useState<Set<string | number>>(new Set());
+    const [lastStudiedDeckId, setLastStudiedDeckId] = useState<string | null>(null);
 
     const router = useRouter();
 
@@ -275,6 +276,12 @@ function FlashcardsContent() {
             }
         }
 
+        // Load last studied deck for "Continue Where You Left Off"
+        const savedLastStudied = localStorage.getItem('flashcards_last_studied');
+        if (savedLastStudied) {
+            setLastStudiedDeckId(savedLastStudied);
+        }
+
         // Load bookmarks
         const savedBookmarks = localStorage.getItem('flashcards_bookmarks');
         if (savedBookmarks) {
@@ -323,6 +330,11 @@ function FlashcardsContent() {
         setSelectedDeckId(id);
         setCurrentCardIndex(startIdx);
         setIsInitiallyShuffled(shuffle);
+        // Track last studied deck for "Continue Where You Left Off"
+        if (id !== 'bookmarks') {
+            setLastStudiedDeckId(id);
+            localStorage.setItem('flashcards_last_studied', id);
+        }
     };
 
     const handleBookmarkToggle = (id: string | number) => {
@@ -584,6 +596,23 @@ function FlashcardsContent() {
     const caDecks = finalDecks.filter(d => d.category === 'Current Affairs');
     const otherDecks = finalDecks.filter(d => !['Paper I', 'Paper II', 'Paper III', 'PYQ', 'Current Affairs'].includes(d.category));
 
+    // Continue Where You Left Off — resolve last studied deck info
+    const lastStudiedDeckInfo = (() => {
+        if (!lastStudiedDeckId || deckProgress[lastStudiedDeckId] == null) return null;
+        const activeData = course === 'PS_GR_B' ? PSGB_QUIZ_DATA : QUIZ_DATA;
+        const topic = activeData.find(t => t.id === lastStudiedDeckId);
+        if (!topic) return null;
+        const deck = getDeckFromId(lastStudiedDeckId);
+        if (!deck || deck.length === 0) return null;
+        return {
+            id: lastStudiedDeckId,
+            title: topic.title,
+            category: topic.category,
+            cardCount: deck.length,
+            lastIndex: deckProgress[lastStudiedDeckId],
+        };
+    })();
+
 
     if (!mounted) return null;
 
@@ -610,6 +639,7 @@ function FlashcardsContent() {
                     bookmarks={bookmarks}
                     hasAccess={hasAccess}
                     course={course}
+                    lastStudiedDeckInfo={lastStudiedDeckInfo}
                 />
                 </>
             );
@@ -686,7 +716,9 @@ function FlashcardsContent() {
                                 <div className={`w-1.5 h-1.5 rounded-full ${activeFilter === 'Recently Studied' ? 'bg-indigo-500' : 'bg-slate-200 dark:bg-zinc-700'}`} />
                                 Recently Studied
                             </div>
-                            <span className="text-indigo-600 dark:text-indigo-400 flex items-center gap-1 cursor-pointer hover:underline">Continue Learning <ChevronRight className="w-3 h-3" /></span>
+                            {lastStudiedDeckInfo && (
+                                <span onClick={() => handleSelectDeck(lastStudiedDeckInfo.id, lastStudiedDeckInfo.lastIndex, false)} className="text-indigo-600 dark:text-indigo-400 flex items-center gap-1 cursor-pointer hover:underline">Continue Learning <ChevronRight className="w-3 h-3" /></span>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -758,6 +790,62 @@ function FlashcardsContent() {
 
                 {/* 3. GRID SYSTEM & 4. ACADEMIC SECTION HEADERS */}
                 <main className="relative z-10 px-4 md:px-[8vw] max-w-[1400px] mx-auto pb-20 md:pb-32 space-y-12 md:space-y-16 pt-8 md:pt-12">
+
+                    {/* CONTINUE WHERE YOU LEFT OFF — DESKTOP BANNER */}
+                    {lastStudiedDeckInfo && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, ease: 'easeOut' }}
+                            className="-mt-4 mb-2"
+                        >
+                            <div
+                                onClick={() => handleSelectDeck(lastStudiedDeckInfo.id, lastStudiedDeckInfo.lastIndex, false)}
+                                className={`group relative overflow-hidden rounded-2xl border cursor-pointer transition-all duration-300 hover:shadow-xl ${
+                                    course === 'PS_GR_B'
+                                        ? 'bg-gradient-to-r from-teal-50 via-white to-indigo-50 dark:from-teal-950/40 dark:via-zinc-900 dark:to-indigo-950/40 border-teal-200/60 dark:border-teal-800/40 hover:border-teal-400/60 hover:shadow-teal-500/10'
+                                        : 'bg-gradient-to-r from-indigo-50 via-white to-violet-50 dark:from-indigo-950/40 dark:via-zinc-900 dark:to-violet-950/40 border-indigo-200/60 dark:border-indigo-800/40 hover:border-indigo-400/60 hover:shadow-indigo-500/10'
+                                }`}
+                            >
+                                {/* Ambient glow */}
+                                <div className={`absolute -right-10 -top-10 w-40 h-40 rounded-full blur-3xl opacity-30 ${course === 'PS_GR_B' ? 'bg-teal-400' : 'bg-indigo-400'}`} />
+
+                                <div className="relative z-10 flex items-center justify-between p-5 md:p-6">
+                                    <div className="flex items-center gap-4 md:gap-5 flex-1 min-w-0">
+                                        <div className={`shrink-0 w-12 h-12 rounded-xl flex items-center justify-center ${
+                                            course === 'PS_GR_B'
+                                                ? 'bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400'
+                                                : 'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400'
+                                        }`}>
+                                            <BookOpen className="w-6 h-6" />
+                                        </div>
+                                        <div className="min-w-0 flex-1">
+                                            <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-500 mb-1">Continue Where You Left Off</p>
+                                            <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white truncate">{lastStudiedDeckInfo.title}</h3>
+                                            <div className="flex items-center gap-3 mt-2">
+                                                <span className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-md bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-zinc-400">{lastStudiedDeckInfo.category}</span>
+                                                <span className="text-xs font-semibold text-slate-500 dark:text-zinc-400">Card {lastStudiedDeckInfo.lastIndex + 1} of {lastStudiedDeckInfo.cardCount}</span>
+                                            </div>
+                                            {/* Progress bar */}
+                                            <div className="mt-2.5 h-1.5 w-full max-w-xs bg-slate-100 dark:bg-white/10 rounded-full overflow-hidden">
+                                                <div
+                                                    className={`h-full rounded-full transition-all duration-700 ${course === 'PS_GR_B' ? 'bg-gradient-to-r from-teal-500 to-indigo-500' : 'bg-gradient-to-r from-indigo-500 to-violet-500'}`}
+                                                    style={{ width: `${((lastStudiedDeckInfo.lastIndex + 1) / lastStudiedDeckInfo.cardCount) * 100}%` }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={`shrink-0 ml-4 hidden md:flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all group-hover:scale-105 group-hover:shadow-lg ${
+                                        course === 'PS_GR_B'
+                                            ? 'bg-gradient-to-r from-teal-600 to-indigo-600 group-hover:shadow-teal-500/25'
+                                            : 'bg-gradient-to-r from-indigo-600 to-violet-600 group-hover:shadow-indigo-500/25'
+                                    }`}>
+                                        Continue <ArrowRight className="w-4 h-4" />
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
 
                     {/* CATEGORY LANDING VIEW */}
                     {showCategories ? (
