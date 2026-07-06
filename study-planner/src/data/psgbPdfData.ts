@@ -592,7 +592,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Public Accountants Default Act, 1850",
             "filename": "Public_Accountants_Default_Act_1850.pdf",
             "path": "/notes/paper-3/Public_Accountants_Default_Act_1850.pdf",
-            "size": "0.3 MB",
+            "size": "0.4 MB",
             "color": "indigo",
             "topic": "Constitution & Laws"
         },

@@ -16,6 +16,29 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "06.07.2026",
+        items: [
+            {
+                title: "📚 PDF Notes Updated: Public Accountants Default Act, 1850",
+                desc: (
+                    <div className="space-y-4">
+                        <p>Updated PDF Notes on <strong>Public Accountants Default Act, 1850</strong>.</p>
+
+                        <div className="bg-amber-50/50 dark:bg-amber-900/10 p-3 rounded-xl border border-amber-100 dark:border-amber-800/50">
+                            <p className="font-bold text-amber-700 dark:text-amber-300 text-[10px] uppercase tracking-wide">⚠️ Important Note</p>
+                            <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px] leading-relaxed">
+                                This Act stands repealed by the <strong>Repealing and Amending Act, 2019</strong> (Act 31 of 2019), w.e.f. assent dated 08.08.2019, but continues to appear in the PS Group &apos;B&apos; syllabus (Paper II, Sl. No. 24, Dte. letter dated 05.09.2019), which predates departmental cognisance of the repeal.
+                            </p>
+                            <p className="text-zinc-600 dark:text-zinc-400 mt-2 text-[11px] leading-relaxed font-semibold">
+                                Study both the historical provisions and the repeal — questions may be asked on either. <span className="text-amber-600 dark:text-amber-400">Syllabus inclusion ≠ in force.</span>
+                            </p>
+                        </div>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "01.07.2026",
         items: [
             {
