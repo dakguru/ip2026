@@ -152,6 +152,7 @@ const INTERNAL_SERIES_II_MOCK_SCHEDULE: SeriesIIMockTest[] = [
             "Postal Manual Vol - II",
             "Postal Manual Vol - III",
             "Postal Manual Vol - IV",
+            "Postal Manual Vol - VIII",
         ],
         startDate: "2026-07-11",
         endDate: "2026-07-12",
