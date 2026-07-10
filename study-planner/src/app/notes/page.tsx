@@ -226,7 +226,7 @@ const PDF_DATA: Record<string, Note[]> = {
             description: "Leave, pension, gratuities, and establishment rules.",
             filename: "Postal_Manual_Vol_IV.pdf",
             path: "/notes/paper-1/Postal_Manual_Vol_IV.pdf",
-            size: "0.4 MB",
+            size: "0.6 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
