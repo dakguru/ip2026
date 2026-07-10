@@ -247,6 +247,26 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-06-27T00:00:00+05:30"),
         endDate: new Date("2026-06-28T23:59:59+05:30"),
         title: "PS Gr B - Weekly Mock Test 13"
+    },
+    "mock-s2-2026-07-04": {
+        startDate: new Date("2026-07-04T00:00:00+05:30"),
+        endDate: new Date("2026-07-05T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-06"
+    },
+    "mock-s2-2026-07-11": {
+        startDate: new Date("2026-07-11T00:00:00+05:30"),
+        endDate: new Date("2026-07-12T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-07"
+    },
+    "psgb-mock-2026-07-05": {
+        startDate: new Date("2026-07-04T00:00:00+05:30"),
+        endDate: new Date("2026-07-05T23:59:59+05:30"),
+        title: "PS Gr B - Weekly Mock Test 14"
+    },
+    "psgb-mock-2026-07-12": {
+        startDate: new Date("2026-07-11T00:00:00+05:30"),
+        endDate: new Date("2026-07-12T23:59:59+05:30"),
+        title: "PS Gr B - Weekly Mock Test 15"
     }
 };
 
@@ -453,8 +473,6 @@ const MemoizedMobileContent = memo(({
 export default function WeeklyMockTestRunner({ params, searchParams }: PageProps) {
     // Unwrap params using React.use()
     const { testId } = use(params);
-    const query = use(searchParams);
-    const isReattempt = query?.reattempt === 'true';
     const router = useRouter();
 
     const [questions, setQuestions] = useState<Question[]>([]);
@@ -544,8 +562,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                     if (email) setUserEmail(email);
                     if (session.name) setUserName(session.name);
 
-                    // Check for previous submission (Skip if reattempting)
-                    if (email && !isReattempt) {
+                    // Check for previous submission (Strictly single attempt)
+                    if (email) {
                         try {
                             const statusRes = await fetch('/api/mock-test/live/status', {
                                 method: 'POST',
@@ -590,14 +608,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             if (userRole === 'admin') {
                 setIsAuthorized(true); // Admins bypass everything
             } else {
-                if (!isStarted) {
-                    setIsLoading(false);
-                    return; // Will show "not active" screen
-                }
-
-                // BLOCK RE-ATTEMPTS DURING LIVE WINDOW
-                if (!isEnded && isReattempt) {
-                    alert("Re-attempts are not allowed during the live test period. You can reattempt after the test window closes.");
+                if (!isLiveWindow) {
+                    alert("This mock test is only accessible during its live schedule.");
                     router.push("/mock-tests");
                     return;
                 }
@@ -788,7 +800,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         setScore(marks);
 
         // Submit to Server
-        if (userEmail && !isReattempt && !isAdmin) { // Skip server submission for reattempts AND Admins
+        if (userEmail && !isAdmin) { // Admins skip server submission
             try {
                 await fetch('/api/mock-test/live/submit', {
                     method: 'POST',
@@ -814,7 +826,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         const isEligibleSeriesII = testId.startsWith('mock-s2-') && testId >= 'mock-s2-2026-06-06';
         const isEligiblePSGB = testId.startsWith('psgb-mock-') && testId >= 'psgb-mock-2026-06-07';
         
-        if ((isEligibleSeriesII || isEligiblePSGB) && userEmail && (!isReattempt || isAdmin)) {
+        if ((isEligibleSeriesII || isEligiblePSGB) && userEmail) {
             try {
                 const res = await fetch('/api/mock-test/feedback/check', {
                     method: 'POST',
@@ -828,13 +840,36 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             } catch (e) { console.error(e); }
         }
 
-    }, [questions, answers, vibrate, userEmail, isReattempt, isAdmin, testId]);
+    }, [questions, answers, vibrate, userEmail, isAdmin, testId]);
 
     // Mobile / timeout / back-button path: keeps the lightweight native confirm
     const handleSubmit = useCallback(async () => {
         if (timeLeft > 0 && !confirm("Are you sure you want to submit the test?")) return;
         await doSubmit();
     }, [timeLeft, doSubmit]);
+
+    // Back Button Protection
+    useEffect(() => {
+        if (!hasStarted || isSubmitted) return;
+
+        const handlePopState = (e: PopStateEvent) => {
+            e.preventDefault();
+            const wantToSubmit = confirm("Are you sure you want to exit? Click OK to submit the test or Cancel to resume.");
+            if (wantToSubmit) {
+                handleSubmit();
+            } else {
+                // User cancelled, push state again to stay on page
+                window.history.pushState(null, "", window.location.href);
+            }
+        };
+
+        window.history.pushState(null, "", window.location.href);
+        window.addEventListener('popstate', handlePopState);
+
+        return () => {
+            window.removeEventListener('popstate', handlePopState);
+        };
+    }, [hasStarted, isSubmitted, handleSubmit]);
 
     // Refs for stable access inside event listeners
     const handleSubmitRef = useRef(handleSubmit);
@@ -1813,14 +1848,20 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                             {/* Difficulty */}
                                             <div>
                                                 <label className="text-sm font-bold text-zinc-500 dark:text-zinc-400 block mb-3">Difficulty Level</label>
-                                                <div className="flex bg-zinc-100 dark:bg-zinc-800 rounded-xl p-1">
-                                                    {['Very Easy', 'Easy', 'Moderate', 'Hard', 'Very Hard'].map((level, idx) => (
+                                                <div className="flex bg-zinc-100 dark:bg-zinc-800 rounded-xl p-1 gap-1">
+                                                    {([
+                                                        { label: 'Very Easy', selected: 'bg-green-700 text-white shadow-sm ring-1 ring-green-800', unselected: 'text-green-700 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/20' },
+                                                        { label: 'Easy', selected: 'bg-green-500 text-white shadow-sm ring-1 ring-green-600', unselected: 'text-green-500 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/20' },
+                                                        { label: 'Moderate', selected: 'bg-amber-500 text-white shadow-sm ring-1 ring-amber-600', unselected: 'text-amber-500 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20' },
+                                                        { label: 'Hard', selected: 'bg-orange-600 text-white shadow-sm ring-1 ring-orange-700', unselected: 'text-orange-600 dark:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/20' },
+                                                        { label: 'Very Hard', selected: 'bg-red-700 text-white shadow-sm ring-1 ring-red-800', unselected: 'text-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20' },
+                                                    ]).map((level, idx) => (
                                                         <button 
-                                                            key={level}
+                                                            key={level.label}
                                                             onClick={() => setFeedbackData(p => ({ ...p, difficultyRating: idx + 1 }))}
-                                                            className={`flex-1 py-2 text-[10px] sm:text-xs font-bold rounded-lg transition-colors leading-tight px-1 ${feedbackData.difficultyRating === idx + 1 ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-white shadow-sm' : 'text-zinc-400 hover:text-zinc-600'}`}
+                                                            className={`flex-1 py-2 text-[10px] sm:text-xs font-bold rounded-lg transition-all leading-tight px-1 ${feedbackData.difficultyRating === idx + 1 ? level.selected : level.unselected}`}
                                                         >
-                                                            {level}
+                                                            {level.label}
                                                         </button>
                                                     ))}
                                                 </div>

@@ -530,18 +530,59 @@ export const createMockTestAnswerSheetPDFDoc = async ({
         addWatermark,
     });
 
-    // End of Answer Sheet text
+    // --- CLOSING BLOCK (premium styled sign-off) ---
+    const centerX = pageWidth / 2;
     let endY = finalY + 15;
-    if (endY > pageHeight - 30) {
+    if (endY > pageHeight - 50) {
         doc.addPage();
         addWatermark();
-        endY = 20;
+        endY = 30;
+    } else {
+        endY += 4;
     }
-    doc.setFontSize(10);
+
+    // Decorative divider with the "End of Answer Sheet" pill
+    doc.setDrawColor(0, 0, 128);
+    doc.setLineWidth(0.4);
+    doc.line(margin + 20, endY, pageWidth - margin - 20, endY);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(12);
+    doc.setTextColor(0, 0, 128);
+    doc.setFillColor(255, 255, 255);
+    const endText = '\u2014  End of Answer Sheet  \u2014';
+    const endW = doc.getTextWidth(endText) + 6;
+    doc.rect(centerX - endW / 2, endY - 3.5, endW, 7, 'F');
+    doc.text(endText, centerX, endY + 1.5, { align: "center" });
+
+    // Motivational tagline
+    endY += 12;
     doc.setFont("helvetica", "bolditalic");
+    doc.setFontSize(10.5);
+    doc.setTextColor(0, 0, 128);
+    doc.text("Your preparation. Your progress. Your success \u2014 powered by Dak Guru.", centerX, endY, { align: "center" });
+
+    // Copyright line (mixed colours: gray text + navy website)
+    endY += 8;
+    const year = new Date().getFullYear();
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(8.5);
+    const copyPart = `\u00A9 ${year} Dak Guru. All rights reserved.  `;
+    const sitePart = "www.dakguru.com";
+    const copyW = doc.getTextWidth(copyPart);
+    const siteW = doc.getTextWidth(sitePart);
+    const startX = centerX - (copyW + siteW) / 2;
+    doc.setTextColor(120, 120, 120);
+    doc.text(copyPart, startX, endY, { align: "left" });
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(0, 0, 128);
+    doc.text(sitePart, startX + copyW, endY, { align: "left" });
+
+    // Best wishes line
+    endY += 7;
+    doc.setFont("helvetica", "italic");
+    doc.setFontSize(9);
     doc.setTextColor(100, 100, 100);
-    doc.text("-- End of Answer Sheet -- visit www.dakguru.com for more mock tests.", pageWidth / 2, endY, { align: "center" });
-    doc.text("Best wishes for your preparation.", pageWidth / 2, endY + 6, { align: "center" });
+    doc.text("Best wishes for your preparation.", centerX, endY, { align: "center" });
 
     // Add Header and Footer to all pages
     const pageCount = typeof (doc as any).getNumberOfPages === 'function' 
@@ -550,11 +591,11 @@ export const createMockTestAnswerSheetPDFDoc = async ({
         
     for (let i = 1; i <= pageCount; i++) {
         doc.setPage(i);
-        doc.setDrawColor(220, 220, 220);
-        doc.setLineWidth(0.5);
 
         // Header (Page 2 onwards)
         if (i > 1) {
+            doc.setDrawColor(220, 220, 220);
+            doc.setLineWidth(0.5);
             doc.setFontSize(9);
             doc.setFont("helvetica", "italic");
             doc.setTextColor(150, 150, 150);
@@ -562,12 +603,17 @@ export const createMockTestAnswerSheetPDFDoc = async ({
             doc.line(margin, 12, pageWidth - margin, 12);
         }
 
-        // Footer (All pages)
+        // Footer (All pages) — matching premium MCQ style
+        doc.setDrawColor(230, 230, 230);
+        doc.setLineWidth(0.5);
         doc.line(margin, pageHeight - 12, pageWidth - margin, pageHeight - 12);
-        doc.setFontSize(9);
         doc.setFont("helvetica", "normal");
-        doc.setTextColor(150, 150, 150);
-        doc.text("www.dakguru.com", margin, pageHeight - 7);
+        doc.setFontSize(7.5);
+        doc.setTextColor(130, 130, 130);
+        doc.text("Dak Guru - Self Learning Portal", margin, pageHeight - 7);
+        doc.setTextColor(0, 0, 128);
+        doc.text("www.dakguru.com", pageWidth / 2, pageHeight - 7, { align: "center" });
+        doc.setTextColor(130, 130, 130);
         doc.text(`Page ${i} of ${pageCount}`, pageWidth - margin, pageHeight - 7, { align: "right" });
     }
 

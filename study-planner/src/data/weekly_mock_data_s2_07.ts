@@ -1,0 +1,1204 @@
+import { Question } from "./live_mock_data";
+
+export const WEEKLY_MOCK_S2_07_QUESTIONS: Question[] = [
+    {
+        "id": "mock-s2-07-1",
+        "text": "A Divisional Head proposes to keep a Branch Post Office open for six hours a day so that its counter timings match those of its Account Office. Which of the following is correct?",
+        "options": [
+            "Valid, provided the Regional Head records his concurrence in the order in writing.",
+            "Invalid — the power to specify business hours vests solely in the Circle Head.",
+            "Valid — the Divisional Head is empowered to specify hours for offices under him.",
+            "Invalid — a Branch Post Office may be kept open for a maximum of five hours a day."
+        ],
+        "correctAnswer": 3,
+        "explanation": "Under the Post Office Regulations, 2024 a Branch Post Office may be kept open for a maximum of five hours a day, while a departmental Post Office observes six business hours. The Circle, Regional and Divisional Heads are each empowered to specify the exact business hours of offices under their jurisdiction, but that power operates inside the five-hour cap. [Post Office Regulations, 2024, in force 16.12.2024; Book of BO Rules, Rule 5.]"
+    },
+    {
+        "id": "mock-s2-07-2",
+        "text": "Consider the following statements regarding the office notices, lists and maps of a Branch Office:  1. The Notice of Hours of Business (Form M-6(c)) is supplied to the Branch Office by the Sub-Divisional Inspector. 2. The Village Sorting List (Form M-52) shows, in alphabetical order, the villages served by each ABPM, whether a letter box exists there, and whether that box carries a changeable plate. 3. The Route List (Form M-53) is accompanied by a map of the beat and specifies the days fixed for departure from and return to the Post Office, and the villages where the ABPM may halt. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "2 and 3 only",
+            "1 and 2 only",
+            "1, 2 and 3"
+        ],
+        "correctAnswer": 3,
+        "explanation": "All three are correct. M-6(c) is supplied by the SDI, not by the Head or Account Office. The changeable plate is a feature of the letter box recorded in the M-52 — it is not a separate register. [Book of BO Rules, Rules 5 and 7.]"
+    },
+    {
+        "id": "mock-s2-07-3",
+        "text": "Branch Office X exchanges mail bags directly with an RMS section working on a mail train. Branch Office Y neither exchanges with RMS nor is in direct communication with it; it merely acts as a transit and sorting office for neighbouring post offices. Who supplies the due mail and sorting list to X and to Y respectively?",
+        "options": [
+            "Superintendent, RMS to X; Superintendent of Post Offices to Y",
+            "Superintendent of Post Offices to X; Superintendent, RMS to Y",
+            "The Sub-Divisional Inspector to both X and Y",
+            "The Head of the Circle to both X and Y"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A Branch Office in direct communication with the RMS is part of the RMS network, so its due mail and sorting list is supplied by the Superintendent, RMS. A Branch Office acting as a transit or sorting office sits within the postal network and is supplied by the Superintendent of Post Offices. Swapping the two authorities is the classic trap. [Book of BO Rules, Rule 8.]"
+    },
+    {
+        "id": "mock-s2-07-4",
+        "text": "Consider the following statements about the records through which a Branch Postmaster supervises his delivery staff:  1. The Postman Book (Form MS-27) records the articles and e-Money Orders received by the Postman from the BPM for delivery. 2. The Village Postman Register is Form MS-85. 3. In the Village Postman Visit Book (Form MS-86), a village to be visited on one specific trip is written by the BPM in black ink, while villages visited regularly are written in red ink. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1 and 2 only",
+            "1, 2 and 3",
+            "2 and 3 only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 inverts the ink convention: red ink marks a village to be visited on that specific trip (for example, because a registered article or money order has arrived for it), and black ink marks the standing, regular visits. [Book of BO Rules, Rule 9.]"
+    },
+    {
+        "id": "mock-s2-07-5",
+        "text": "A customer tenders a parcel weighing 15 kg for booking at a Branch Office, pointing out that the Post Office Regulations, 2024 permit parcels of much greater weight. What is the correct course?",
+        "options": [
+            "Decline; parcels of any weight are booked only at departmental offices, never a BO.",
+            "Book it; 35 kg is the maximum weight permitted for a parcel under the Regulations.",
+            "Decline; a Branch Office may itself book a parcel only up to 10 kg in weight.",
+            "Book it after re-weighing; the registered-parcel maximum of 20 kg is not exceeded."
+        ],
+        "correctAnswer": 2,
+        "explanation": "The 10 kg figure has two faces — it is both the manual-carriage limit for a village postman or delivery agent and the maximum weight of a parcel that a Branch Office may itself book. The customer-side network maxima (registered parcel around 20 kg, Speed Post or Business Parcel up to 35 kg) apply at departmental offices, not at a BO. [Book of BO Rules, Rule 9 and Note thereto; Post Office Regulations, 2024.]"
+    },
+    {
+        "id": "mock-s2-07-6",
+        "text": "Which of the following correctly states the position on the supply of a cash safe to an extra-departmental Branch Office?",
+        "options": [
+            "A safe must be supplied to every Branch Office which handles cash of any amount.",
+            "A safe is supplied by the Head of the Circle on the Superintendent's recommendation.",
+            "A safe is discretionary with the Superintendent, on a report supported by the SDI.",
+            "A safe is supplied by the Account Office on the Branch Postmaster's own application."
+        ],
+        "correctAnswer": 2,
+        "explanation": "It is not mandatory to supply a safe to every extra-departmental Branch Office. The decision is evidence-based: the SDI, who inspects the office, reports on the cash actually handled and the security of the premises, and the Superintendent of Post Offices decides. [Book of BO Rules, Rule 11.]"
+    },
+    {
+        "id": "mock-s2-07-7",
+        "text": "Consider the following statements regarding cash handling at a Branch Office:  1. No Branch Postmaster may accept a cash deposit of more than Rs. 50,000 in one account in a day; cheque transactions and withdrawals are not capped by this rule. 2. The line limit of remittance is a single national figure fixed by the Directorate and applies uniformly to every Branch Office. 3. Conveyance of surplus cash is reimbursed at Rs. 30 per occasion where the amount is below Rs. 1 lakh, and Rs. 50 per occasion where it is Rs. 1 lakh and above, plus the actual public-transport fare. Which of the statements given above are correct?",
+        "options": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1, 2 and 3",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Statements 1 and 3 are correct. Statement 2 is incorrect: the line limit of remittance is fixed locally, per Branch Office, by the Division — it is not a single national figure. There is also no fixed monthly cash-conveyance allowance; reimbursement is per occasion plus actual fare. [Book of BO Rules, Rules 11 and 130; SB Order revising para 18 of SB Order 05/2016; GDS pay and allowances order dated 25.06.2018.]"
+    },
+    {
+        "id": "mock-s2-07-8",
+        "text": "A Branch Office despatches mail in one direction more than once a day. What follows for its date stamps?",
+        "options": [
+            "Date-stamps containing hour type, so that the hour of despatch can be fixed.",
+            "A postage-due stamp fitted with movable hour type for the second despatch.",
+            "A number-slip name-stamp in place of the combined name-and-date stamp.",
+            "An ordinary date stamp, hour type being supplied only to Head Post Offices."
+        ],
+        "correctAnswer": 0,
+        "explanation": "A Branch Office that despatches mail in one direction more than once a day is supplied with date-stamps containing hour type, so that the time of handling can be fixed when more than one despatch occurs in a day. A single-despatch Branch Office receives an ordinary date stamp. [Book of BO Rules, Rule 19.]"
+    },
+    {
+        "id": "mock-s2-07-9",
+        "text": "Which statement correctly describes the maintenance of the Book of Postmarks (Form MS-18) at a Branch Office?",
+        "options": [
+            "Impressions are taken only when a stamp or seal is replaced, repaired or reset.",
+            "Impressions of all stamps holding date or movable type are taken daily before use.",
+            "Impressions are taken once a week after the day's work and initialled by the SDI.",
+            "Impressions are taken daily, and the book is preserved permanently as an accountable record."
+        ],
+        "correctAnswer": 1,
+        "explanation": "The daily impression, taken before the day's work begins, proves that the stamp was legible and correctly set. The BPM verifies that the impressions are distinct and clear and initials the book every day. The MS-18 is not a permanent record — it is destroyed by shredding under Rule 21. [Book of BO Rules, Rules 20 and 21.]"
+    },
+    {
+        "id": "mock-s2-07-10",
+        "text": "Consider the following statements regarding the preservation of books and forms at a Branch Office:  1. The BO Account (PA-6) and the BO Journal (PA-5) are preserved for 3 years. 2. The Book of Receipts (MS-87(a)), registered lists, parcel lists and mail lists are preserved for 2 years. 3. The Postman's Book of Receipts (MS-87), the Book of Postmarks (MS-18) and the Registered Journal (RP-51) are destroyed by shredding in the presence of the Branch Postmaster. Which of the statements given above are correct?",
+        "options": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+        ],
+        "correctAnswer": 3,
+        "explanation": "All three are correct. The core money records (PA-6, PA-5) are kept for 3 years and the receipt book and lists for 2 years. MS-87, MS-18 and RP-51 carry pre-printed serial numbers, so they are shredded in the BPM's presence to prevent a discarded but intact book being used to fabricate receipts. [Book of BO Rules, Rule 21.]"
+    },
+    {
+        "id": "mock-s2-07-11",
+        "text": "A receipt for which of the following is NOT issued from the Branch Office's general Book of Receipts (Form MS-87(a))?",
+        "options": [
+            "A policy-holder paying a PLI premium in cash",
+            "The remitter of an inland money order",
+            "The sender of an ordinary registered letter",
+            "The sender of an insured or value-payable parcel"
+        ],
+        "correctAnswer": 2,
+        "explanation": "MS-87(a) covers four classes of payer: senders of insured or V.P. articles, remitters of money orders, PLI premium payers and payers of telegraph charges realised in cash. Receipts for ordinary registered articles — excluding V.P. and insured — are issued from the Registered Journal (Form RP-51). [Book of BO Rules, Rules 22 and 77.]"
+    },
+    {
+        "id": "mock-s2-07-12",
+        "text": "Consider the following statements about the Error Book (Form MS-2):  1. It records irregularities committed by the office's own staff as well as those noticed from other offices or sections, such as the misdirection of articles received from elsewhere. 2. Being a record of petty errors, it is destroyed after three years along with the BO Journal. Which of the statements given above is/are correct?",
+        "options": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Statement 1 is correct. Statement 2 is incorrect: the Error Book is a permanent record of all irregularities, whether serious or petty, and is never routinely destroyed. It serves as a standing learning and accountability record for inspecting officers. [Book of BO Rules, Rule 36.]"
+    },
+    {
+        "id": "mock-s2-07-13",
+        "text": "Which of the following correctly describes the Suggestion / Complaint Book (Form MS-94) at a Branch Post Office?",
+        "options": [
+            "Entries are made by the public in a single copy and countersigned by the BPM.",
+            "It is kept where the public can reach it unasked, entries being made in duplicate.",
+            "It is maintained only at Sub Offices and at offices above that status.",
+            "It is kept in the Branch Postmaster's personal custody and produced to the public on demand."
+        ],
+        "correctAnswer": 1,
+        "explanation": "The public must never have to request the book from the very official they may wish to complain about, hence the conspicuous placement. The duplicate carbonic design means a complaint cannot later be altered or removed without the discrepancy showing against the citizen's retained copy. [Book of BO Rules, Rule 37-A.]"
+    },
+    {
+        "id": "mock-s2-07-14",
+        "text": "A Branch Postmaster tears out a page of the Post Office Order Book (Form MS-8) in order to remove an adverse remark recorded by an inspecting officer. Which of the following is correct?",
+        "options": [
+            "Permissible once the inspecting officer's remark has been fully complied with.",
+            "A minor irregularity, to be recorded in the Error Book and reported to the Superintendent.",
+            "Permissible; the book has 100 pages and the entry survives in the guidance book.",
+            "A serious offence liable to removal from service; the book has 200 numbered pages."
+        ],
+        "correctAnswer": 3,
+        "explanation": "The Order Book is the audit trail of supervision. Its 200 serially numbered pages make any missing page obvious, and the sanction of removal from service exists precisely because a dishonest official's incentive is to make an adverse remark disappear. [Book of BO Rules, Rule 42.]"
+    },
+    {
+        "id": "mock-s2-07-15",
+        "text": "A Branch Office circular is issued by the Head of the Circle in October 2022, that is, during the official year 2022-23. Applying the rule for destruction of Branch Office circulars, from what point may it be destroyed?",
+        "options": [
+            "April 2026",
+            "March 2026",
+            "October 2025",
+            "April 2025"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Branch Office circulars are destroyed 3 years from the month of April following the close of the official year in which they were issued. The official year 2022-23 closes on 31.03.2023; the April following is April 2023; three years from that point is April 2026. The clock does not run from the date of issue. [Book of BO Rules, Rule 44.]"
+    },
+    {
+        "id": "mock-s2-07-16",
+        "text": "Consider the following statements regarding the periodical returns of a Branch Office:  1. The Half-Yearly Enumeration Return (Form MS-6) is taken in the second week of February and August each year. 2. The Yearly Village Return (Form MS-88) is maintained during the first fourteen days of March and records all articles, including money orders, received daily for delivery in each village. 3. In the MS-6 enumeration, service (official) articles are counted together with the public traffic to arrive at the office's total load. Which of the statements given above are correct?",
+        "options": [
+            "1 and 2 only",
+            "1, 2 and 3",
+            "1 and 3 only",
+            "2 and 3 only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: service articles are counted separately from the public traffic, precisely so that the public-traffic figure used to assess workload and establishment is not inflated by the office's own mail. [Book of BO Rules, Rules 45 and 46.]"
+    },
+    {
+        "id": "mock-s2-07-17",
+        "text": "An application for leave by an extra-departmental Branch Postmaster is prepared in Form App-45. In how many copies is it prepared, and for how long is it preserved?",
+        "options": [
+            "4 copies; preserved for 5 years after his service ends",
+            "3 copies; preserved for 2 years after his service ends",
+            "4 copies; preserved for 3 years after his service ends",
+            "2 copies; preserved for 1 year after his service ends"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Form App-45 is prepared in four copies and submitted to the ASPOs / SDI, the four copies allowing the application to move through the approving and record-keeping channels while a copy remains traceable at each level. Preservation is for 3 years after the BPM's service ends. Conditions of engagement and leave of GDS are now governed by the GDS (Conduct and Engagement) Rules, 2020. [Book of BO Rules, Rule 50.]"
+    },
+    {
+        "id": "mock-s2-07-18",
+        "text": "A Branch Postmaster receives a mail bag from the Account Office and finds the cord and seal bearing clear signs of tampering. What is the correct course of action?",
+        "options": [
+            "Open the bag before two witnesses and record the shortage in the BO Journal.",
+            "Preserve the bag and label with the seal and cord intact, mark them, and report.",
+            "Detach the seal, inspect the contents, list the shortage and report to the SDI.",
+            "Forward the bag unopened to the Account Office with a note recording the suspicion."
+        ],
+        "correctAnswer": 1,
+        "explanation": "The seal and cord are the physical evidence of how and where the bag was interfered with. Detaching or opening them destroys the proof and could shift suspicion onto the receiving office. The correct sequence is preserve, then mark, then report — to both the Superintendent and the despatching office — and then record in the Error Book (MS-2). [Book of BO Rules, Rule 53.]"
+    },
+    {
+        "id": "mock-s2-07-19",
+        "text": "Which of the following correctly states the position on clearance of letter-boxes at a Branch Office?",
+        "options": [
+            "Unregistered articles received in sorting for onward despatch are not stamped at the BO.",
+            "Every article cleared from the letter box is date-stamped before it is sorted there.",
+            "The Branch Postmaster fixes the clearance hours to suit local convenience and mail volume.",
+            "Non-Indian postage stamps may be accepted, but must be defaced before despatch."
+        ],
+        "correctAnswer": 0,
+        "explanation": "The office of posting or first sorting office stamps unregistered articles received for despatch, so that double or wrong-office postmarks are avoided. Non-Indian postage stamps cannot be accepted and must not be defaced, since defacing would wrongly suggest they had been recognised as valid Indian postage. [Book of BO Rules, Rule 59.]"
+    },
+    {
+        "id": "mock-s2-07-20",
+        "text": "Consider the following statements regarding the taxing of unpaid articles at a Branch Office:  1. Where an unpaid inland article is found in the letter-box for onward despatch, it is taxed and the amount due is credited in the BO Journal (PA-5) at once. 2. Postage due on unpaid articles received at the Branch Office for local delivery is entered in the BO Journal (PA-5). Which of the statements given above is/are NOT correct?",
+        "options": [
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2",
+            "1 only"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Statement 1 is not correct. For an article meant for onward despatch, 'Postage Due' is a marking, not a credit — the amount is realised at the delivery office and is not booked as cash collected at the despatching Branch Office. Statement 2 is correct, because in local delivery this office is the one that actually collects the charge. [Book of BO Rules, Rules 62 and 66.]"
+    },
+    {
+        "id": "mock-s2-07-21",
+        "text": "In the colour-coded check slips (Form MS-10) tied to labelled bundles, which slip denotes an Express bundle?",
+        "options": [
+            "A blue slip bearing the words 'Air Mail'",
+            "A plain white slip with no distinguishing mark",
+            "A pink slip bearing two diagonal blue lines",
+            "A white slip bearing two diagonal blue lines"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Pink denotes an Ordinary Station Paid and Unpaid bundle; a plain white slip denotes an Ordinary Sorting bundle, used for both Express and Deferred; blue with 'Air Mail' denotes foreign air-mail bundles. Two diagonal blue lines on the white slip mark the bundle as Express. [Book of BO Rules, Rule 64.]"
+    },
+    {
+        "id": "mock-s2-07-22",
+        "text": "On a given day a Branch Office has, for despatch, 18 unregistered articles for one particular station and 22 unregistered articles for a particular State. Which bundles must be made up?",
+        "options": [
+            "A station bundle for the 22 articles; a territorial bundle for the 18.",
+            "A station bundle for the 18 articles; the 22 go in the sorting bundle.",
+            "Both a station bundle and a territorial bundle, both thresholds being met.",
+            "A territorial bundle only, the State total being the larger of the two."
+        ],
+        "correctAnswer": 1,
+        "explanation": "A station bundle is prepared at 15 or more articles for one station, so 18 articles qualify. A territorial bundle is prepared at 25 or more articles for a specific State or tract, so 22 articles fall short and travel in the general sorting bundle. [Book of BO Rules, Rule 65.]"
+    },
+    {
+        "id": "mock-s2-07-23",
+        "text": "An inland article clearly marked 'Registered' is found in the letter-box of a Branch Office and is not fully prepaid. What is charged on it?",
+        "options": [
+            "Nothing; it is despatched as an ordinary unregistered article",
+            "Only the deficient postage; no penalty is leviable",
+            "Double the usual registration fee, plus the postage due",
+            "The usual registration fee, plus double the postage due"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The article is registered immediately, so that the sender's evident intention to register is honoured and the article is protected. But since dropping it in the box bypasses the counter and the receipt, a penalty of double the usual registration fee plus the normal postage due is charged. [Book of BO Rules, Rule 85.]"
+    },
+    {
+        "id": "mock-s2-07-24",
+        "text": "Consider the following statements regarding Branch Office accounts:  1. Cash realised from postage collections is excluded from 'Cash collected' in the BO Account (Form PA-6). 2. Amounts recovered on V.P. articles delivered are credited in the PA-6 under 'Money orders issued'. 3. The BO Slip (Form PA-4) travels from the Branch Office to the Account Office, while the BO Daily Account (Form ACG-22(a)) travels from the Account Office to the Branch Office. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1 and 2 only",
+            "1, 2 and 3",
+            "2 and 3 only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 reverses both directions: the BO Slip (PA-4) is the accounting communication sent from the Account Office to the Branch Office, while the BO Daily Account (ACG-22(a)) is the Branch Office's daily submission to the Account Office. On a day with no monetary transaction, Form ACG-22(c) is submitted instead. [Book of BO Rules, Rules 124 and 134.]"
+    },
+    {
+        "id": "mock-s2-07-25",
+        "text": "Rule 1 of Postal Manual Volume IV provides that the general rules of Chapter I apply equally to officers of all the different branches unless a rule is otherwise expressly specified. Where are the special rules applicable to particular branches laid down?",
+        "options": [
+            "In Appendix No. 3 to the Compilation of the FRs and SRs",
+            "In Chapters V to XVIII of Volume IV",
+            "In Postal Manual Volume III, Schedule of powers",
+            "In Chapters II to IV of Volume IV"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rule 1 expressly states that special rules applicable to particular branches are laid down in Chapters V to XVIII of the Volume. Postal Manual Volume III carries the Schedule of administrative powers (Rule 2), not the branch-specific rules. [Postal Manual Vol IV, Rules 1 and 2.]"
+    },
+    {
+        "id": "mock-s2-07-26",
+        "text": "Consider the following statements regarding the verification of character and antecedents under Rule 3:  1. No person who has been dismissed for misconduct from any Government post may be employed in the Department. 2. For candidates not yet permanently appointed, the enquiry papers may be kept by the recruiting officer in a special guard book, arranged in the order of entries in the gradation list of such candidates. 3. For Gramin Dak Sevaks, the enquiry papers are kept with their confidential records. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1, 2 and 3",
+            "1 and 2 only",
+            "2 and 3 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: for Gramin Dak Sevaks the enquiry papers are kept with their security bonds, with the necessary remarks in the register of security bonds. Where a GDS is exempted from furnishing a bond, the papers are kept in the order of entries in that register. [Postal Manual Vol IV, Rule 3.]"
+    },
+    {
+        "id": "mock-s2-07-27",
+        "text": "Under the Note to Rule 3, a statement containing marks of identification and descriptive particulars, including thumb and finger impressions, is filed with the enquiry papers. In the case of a GDS Branch Postmaster, by whom is that statement attested?",
+        "options": [
+            "The Divisional Head of the Division",
+            "The Postal Accounts Officer concerned",
+            "The Inspector of Post Offices",
+            "The Superintendent of Post Offices"
+        ],
+        "correctAnswer": 2,
+        "explanation": "A similar attested statement is obtained for all GDS; in the case of GDS Branch Postmasters, the statement is attested by the Inspector of Post Offices. For departmental officials the statement is attested by the appointing officer. [Postal Manual Vol IV, Rule 3, Note.]"
+    },
+    {
+        "id": "mock-s2-07-28",
+        "text": "An applicant who had earlier resigned from the Department in order to avoid dismissal now seeks re-employment. Separately, a pensioner is proposed to be re-employed in a non-gazetted post. Which of the following is correct?",
+        "options": [
+            "The first requires the Head of the Circle; the second, the Director-General.",
+            "The first requires the Director-General; the second, the Head of the Circle.",
+            "Both require the previous approval of the Director-General before sanction.",
+            "Both may be sanctioned by the Head of the Circle under Article 520(iii)."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rule 4 requires that applications from persons dismissed, who resigned to avoid dismissal, or who absconded be usually rejected, the previous approval of the Director-General always being obtained where re-employment is considered necessary. Rule 5 empowers the Head of the Circle to sanction re-employment of pensioners in non-gazetted posts, subject to the suitability test of past records and financial solvency. [Postal Manual Vol IV, Rules 4 and 5.]"
+    },
+    {
+        "id": "mock-s2-07-29",
+        "text": "Consider the following statements on the Manual's definitions of establishment:  1. 'Office establishment' includes all non-gazetted servants engaged on clerical duties and MTS employed in offices, but excepts sweepers. 2. The definition of 'petty establishment' in Rule 12 applies to the Post Office. Which of the statements given above is/are correct?",
+        "options": [
+            "2 only",
+            "1 only",
+            "Neither 1 nor 2",
+            "Both 1 and 2"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Statement 1 is correct. Statement 2 is incorrect: the Note to Rule 12 expressly states that the definition of petty establishment — store-keepers, artificers, guards, watchmen, messengers and MTS not attached to offices, whose salaries are not provided for in any estimate for a work — does not apply to the Post Office. Rules 13 and 14 stand deleted. [Postal Manual Vol IV, Rules 11 and 12.]"
+    },
+    {
+        "id": "mock-s2-07-30",
+        "text": "Under Rule 16, a declaration of having read the amended Rule 103 of Postal Manual Volume II, and of agreeing to abide by its terms, is obtained from all officials and GDS with one exception. Which category is excepted?",
+        "options": [
+            "GDS mail carriers and delivery agents not handling accountable articles",
+            "All Multi-Tasking Staff employed in offices and administrative offices",
+            "All Group 'C' officials who are not required to furnish any security",
+            "Postal signallers and others handling secret official communications"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The exception is confined to GDS mail carriers and GDS delivery agents who neither handle accountable articles nor furnish security. Officials handling secret communications are, on the contrary, required to give an additional declaration relating to the Indian Official Secrets Act and the CCS (Conduct) Rules, 1964. [Postal Manual Vol IV, Rule 16.]"
+    },
+    {
+        "id": "mock-s2-07-31",
+        "text": "An outsider is newly appointed to a permanent post in which security has to be furnished, and a clerk is simultaneously engaged. What must the appointing officer state, respectively?",
+        "options": [
+            "Whether security has been furnished; and eligibility for compensatory allowance",
+            "The particulars of the bank guarantee; and the clerk's leave entitlement",
+            "The names of the two sureties furnished; and the clerk's date of joining duty",
+            "The exact monetary limit of the security; and the pay scale offered to the clerk"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rule 17 requires the order of appointment to state specifically whether the person appointed has furnished security or not. Rule 18 requires a clear understanding at the time a clerk is engaged on his eligibility for compensatory allowance, noted in the letter and orders of appointment. [Postal Manual Vol IV, Rules 17 and 18.]"
+    },
+    {
+        "id": "mock-s2-07-32",
+        "text": "Consider the following statements regarding the leave reserve under Rules 18/1 and 18/2:  1. A staff of clerks not exceeding 14 per cent of the operative clerical staff is sanctioned as a leave reserve for administrative offices. 2. Where the number of absentees on leave equals or exceeds the reserve, the grant of further leave is subject to the condition that no extra expenditure is caused to the State. 3. Where leave on medical certificate must nevertheless be granted, outsiders may be employed in the resulting vacancies, but must be discharged as soon as the total number of absentees is brought within the sanctioned reserve. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1, 2 and 3",
+            "1 and 2 only",
+            "2 and 3 only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "All three are correct. Note the companion figure: the 14 per cent reserve of Rule 18/1 attaches to administrative offices, whereas the establishment-review norms provide a 10 per cent leave reserve for operative offices. The context — administrative or operative — decides which figure applies. [Postal Manual Vol IV, Rules 18/1 and 18/2.]"
+    },
+    {
+        "id": "mock-s2-07-33",
+        "text": "Three officials of the clerical cadre are considered for a selection grade filled by seniority subject to the rejection of the unfit. The first is 'good', the second 'better' and the third 'best'; all three are fit. Who must be promoted, and for how long may an officiating appointment be made against a post outside the approved DPC list?",
+        "options": [
+            "The first man, being senior and fit; and for not more than 6 months",
+            "The first man, being senior and fit; and for not more than 3 months",
+            "The third man, being the most meritorious; and for not more than 3 months",
+            "The second man, balancing merit and seniority; and for not more than 4 months"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rule 27-B illustrates that promotion to selection grades of the clerical cadre is normally in order of seniority; where the first three are all fit, the senior-most fit official is promoted regardless of the third being 'best'. Rule 27 caps officiating appointments outside the approved DPC list at 3 months. [Postal Manual Vol IV, Rules 27 and 27-B.]"
+    },
+    {
+        "id": "mock-s2-07-34",
+        "text": "Which of the following correctly describes the form and maintenance of gradation lists under Rule 32-C?",
+        "options": [
+            "Form S.R.-1; the list is maintained by the Director-General for the Department",
+            "Form App. 45; officials of the same name distinguished by their fathers' names",
+            "Form App. 44; each class entered separately in strict order of seniority",
+            "Form App. 44; the list must be printed and may not be kept in manuscript"
+        ],
+        "correctAnswer": 2,
+        "explanation": "All gradation lists are maintained in Form App. 44, in strict order of seniority within each class, with blank pages left after each class for updates. The list may be kept in print or in manuscript at the discretion of the authority required to maintain it. [Postal Manual Vol IV, Rule 32-C.]"
+    },
+    {
+        "id": "mock-s2-07-35",
+        "text": "An official discovers that his name is wrongly entered in a Circle Gradation List issued on 01.07.2024. Separately, his seniority is altered to his disadvantage by an order communicated to him on 01.09.2024. What are the respective time limits?",
+        "options": [
+            "1 year to point out the mistake; 6 months to appeal against the alteration",
+            "6 months to point out the mistake; 1 year to appeal against the alteration",
+            "1 year to point out the mistake; 1 year to appeal against the alteration",
+            "3 months to point out the mistake; 3 months to appeal against the alteration"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Under Rule 32-D, a mistake in a gradation list must be pointed out within one year of the date of issue of the list, failing which the petition is time-barred. No appeal lies against an adverse alteration of seniority unless submitted within the usual time-limit of six months from the date of communication of the order appealed against. [Postal Manual Vol IV, Rule 32-D.]"
+    },
+    {
+        "id": "mock-s2-07-36",
+        "text": "Two officials are appointed to the same cadre on the same date. Recruitment was by a competitive examination in which some vacancies were filled from departmental candidates and some from outsiders. How is their inter se seniority fixed?",
+        "options": [
+            "By position on the waiting list drawn up after the examination",
+            "By age; the older of the two officials ranks senior",
+            "By order of merit; departmental candidates rank senior to outsiders",
+            "By the order of preference recorded by the Departmental Promotion Committee"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Rule 32-E fixes seniority by the date of permanent appointment to the cadre; where that date is the same, the tie-breaker follows the mode of recruitment. For a competitive examination it is the order of merit, with the express rider that departmental candidates always rank senior to outsiders. Waiting-list position applies to a qualifying examination, and order of preference to promotion by pure selection. [Postal Manual Vol IV, Rule 32-E(a)(i).]"
+    },
+    {
+        "id": "mock-s2-07-37",
+        "text": "According to the officially uploaded text of Rule 32-A, the Circle Gradation List is published —",
+        "options": [
+            "once in three years, corrected up to the 1st of April",
+            "once in six years, corrected up to the 1st of July",
+            "once a year, corrected up to the 1st of January",
+            "once in two years, corrected up to the 1st of July"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The official text of Rule 32-A prescribes publication once in two years, corrected up to the 1st of July, with copies to all offices concerned and to the Director-General. NOTE FOR THE CANDIDATE: later administrative practice and some secondary compilations cite revised periodicities (for example, six years for the Circle list and three years for the Divisional list), and no single consolidated amendment can be verified from primary sources. For the examination the Manual text above is the safe answer; for official work, confirm the current Circle instruction. [Postal Manual Vol IV, Rule 32-A; conflict noted.]"
+    },
+    {
+        "id": "mock-s2-07-38",
+        "text": "A permanent Postal Assistant of Division X is transferred to Division Y by mutual exchange. Had he been originally recruited in Division Y he would have stood at serial 12 in its gradation list; the official with whom he exchanges stood at serial 9. Where is he placed in Division Y's gradation list?",
+        "options": [
+            "At the bottom of the list, below all officials of Division Y",
+            "At his original seniority position carried over from Division X",
+            "At serial 12, being the lower of the two possible places",
+            "At serial 9, being the place vacated by the exchanging official"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Rule 38(1) provides that an official brought in by mutual exchange takes, in the new gradation list, the place he would have been assigned had he been originally recruited in that unit, or the place vacated by the official with whom he exchanges, whichever is the lower. Serial 12 is lower in the list than serial 9. Bottom seniority applies only where there is no mutual exchange, under Rule 38(2). [Postal Manual Vol IV, Rule 38(1) and 38(2).]"
+    },
+    {
+        "id": "mock-s2-07-39",
+        "text": "Consider the following statements regarding transfer at one's own request:  1. An official transferred at his own request without arranging a mutual exchange ranks junior in the gradation list of the new unit to all officials of that unit on the date on which the transfer order issued, including all persons already approved for appointment to that grade as on that date. 2. A permanent official so transferred retains his lien in the old unit until he can be accommodated in the new unit, but has no claim to go back to the old unit. 3. Any special privilege to which he was entitled by virtue of his position in the old gradation list is ordinarily retained on transfer. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1 and 2 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: any special privilege attaching to his position in the gradation list of the unit from which he is transferred is ordinarily forfeited on his transfer to a new gradation list. Before transfer, a declaration is obtained that he accepts the seniority consequences and has no claim to go back. [Postal Manual Vol IV, Rules 38(2) and 38(4).]"
+    },
+    {
+        "id": "mock-s2-07-40",
+        "text": "A Government medical officer, having examined an official, wishes to recommend that he be transferred away from a particular station on the score of health. What is the correct position under Rule 39?",
+        "options": [
+            "He may so recommend, and the Head of the Circle must consider the recommendation.",
+            "He may direct the Head of the Circle to cancel a transfer on medical grounds.",
+            "He may so recommend only where the official has completed his prescribed tenure.",
+            "He is prohibited from recommending transfer or excusal on the score of health."
+        ],
+        "correctAnswer": 3,
+        "explanation": "Rule 39 places a clear prohibition on the Government medical officer, both as to recommending transfer or excusal on health grounds and as to volunteering an opinion on duties or place of employment. The opinion may be offered only when the official's superior requests it. [Postal Manual Vol IV, Rule 39.]"
+    },
+    {
+        "id": "mock-s2-07-41",
+        "text": "Consider the following statements regarding charge reports:  1. Reports of transfers of charge of gazetted officers are sent by telegraph to the Director-General. 2. The relieved head of an office forwards one copy of the Form A.C.G.-61 receipts to the Head of the Circle, one to the Postal Accounts Office, and retains a third in his own possession. 3. The transit memo is Form A.C.G.-76; it is examined with reference to the officer's travelling-allowance bill and the joining time is checked. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3",
+            "1 and 2 only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Statements 2 and 3 are correct. Statement 1 is incorrect: Rule 48 expressly requires such reports to be sent by post, and not by telegraph, in Form A.C.G.-61, to the next higher authority, the Accounts Officer concerned and the Director-General. [Postal Manual Vol IV, Rules 48, 51 and 75.]"
+    },
+    {
+        "id": "mock-s2-07-42",
+        "text": "A vacancy of exactly three months' duration arises in a cadre which is promoted from officials working in different stations, sub-divisions or divisions of a Circle. To whom may the officiating arrangement be confined?",
+        "options": [
+            "To the officials in the Office, Sub-division or Division of the vacancy",
+            "Strictly to the section or branch of the office where the vacancy occurs",
+            "To no one; an outsider must be recruited temporarily for the period",
+            "Strictly to the officials at the station where the vacancy occurs"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rule 50(2) distinguishes vacancies of not more than one month, where the arrangement may be confined to the station, from vacancies of more than one month but not more than four months, where it may be confined to the Office, Sub-division or Division. A three-month vacancy falls in the latter class, and supersession of seniors elsewhere is expressly tolerated. [Postal Manual Vol IV, Rule 50(2).]"
+    },
+    {
+        "id": "mock-s2-07-43",
+        "text": "Under the tenure table of Rule 60, what are the maximum periods for which the same official may ordinarily hold, respectively, (i) charge of the Savings Bank and sub-accounts departments, (ii) a post office clerkship handling cash or valuables, and (iii) a sorting clerkship in the office of a Superintendent, RMS?",
+        "options": [
+            "1 year / 6 months / 4 years",
+            "6 months / 1 year / 5 years",
+            "1 year / 1 year / 4 years",
+            "6 months / 4 years / 5 years"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Item 11 of the Rule 60 table prescribes 6 months for clerks in charge of Savings Bank and sub-accounts departments; item 10 prescribes 1 year for other post office clerks, including LSG and HSG, who handle cash or valuables; item 12 prescribes 5 years for sorting clerks in the offices of Superintendents, RMS. [Postal Manual Vol IV, Rule 60, items 10, 11 and 12.]"
+    },
+    {
+        "id": "mock-s2-07-44",
+        "text": "Consider the following statements regarding rotation of charges:  1. The Divisional authorities may, in their discretion, extend the tenure up to two years for staff working in the Savings Bank branch of head offices and sub-offices whose status is not lower than LSG. 2. A clerk in a Circle or Administrative office should not ordinarily remain in the same section for more than four years, except in the mail and sorting section and the PLI section, where the ceiling is five years. 3. An officer should not ordinarily be brought back to the same Division, Sub-division or post until the lapse of an interval equivalent to the maximum period for which the post may be held. Which of the statements given above are correct?",
+        "options": [
+            "1, 2 and 3",
+            "2 and 3 only",
+            "1 and 2 only",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "All three are correct — the Note to item 11 of Rule 60, Rule 60-A, and Rule 61 respectively. Rule 62 adds that these rotation orders must be followed strictly, deviation being allowed only where the Head of the Circle is personally and fully satisfied of the need. [Postal Manual Vol IV, Rules 60 (Note to item 11), 60-A, 61 and 62.]"
+    },
+    {
+        "id": "mock-s2-07-45",
+        "text": "An official completed five years in the Savings Bank branch of a First Class Head Office and was posted out with effect from 01.04.2024. Assuming no special contingency order of the Head of the Circle, from when is he eligible for posting back to that same branch?",
+        "options": [
+            "On or after 01.04.2027",
+            "On or after 01.04.2026",
+            "On or after 01.04.2029",
+            "On or after 01.04.2025"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rule 61-A provides that no official shall be retained in the same branch of a First Class Head Office (or the same office, in the case of other post offices) for more than 5 years, and that he shall not be eligible for posting back to the same branch or office until after three years from the date of his last posting there. Three years from 01.04.2024 is 01.04.2027. [Postal Manual Vol IV, Rule 61-A.]"
+    },
+    {
+        "id": "mock-s2-07-46",
+        "text": "Consider the following statements regarding the consolidated sensitive-post regime introduced by Order No. 4-7/2009-Vig. dated 02.04.2025:  1. All posts of SPM / PA in single-handed and double-handed post offices are classified as Most-Sensitive. 2. The deputation period or local arrangement of an official posted on a Most-Sensitive post is excluded when computing his prescribed tenure. 3. Periodic rotation of officers and officials posted on sensitive posts is to be ensured every three years. Which of the statements given above are correct?",
+        "options": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1, 2 and 3",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Statements 1 and 3 are correct — paragraph 4(i) and paragraph 5 of the Order, the latter rooted in the CVC's instructions. Statement 2 is incorrect: paragraph 4.1 provides that the deputation period or local arrangement of officials on Most-Sensitive posts is also counted towards their prescribed tenure, and no relaxation whatsoever over the prescribed tenure is allowed. [DoP Order No. 4-7/2009-Vig. dated 02.04.2025, paras 4, 4.1 and 5; CVC Circular No. 22/10/22 dated 22.10.2022.]"
+    },
+    {
+        "id": "mock-s2-07-47",
+        "text": "Consider the following statements regarding the Directorate's enforcement letters of 11.12.2025 and 23.06.2026 on rotational transfers and sensitive posts:  1. Circles must furnish the details of officers and officials posted in the same branch for more than 3 years or at the same station for more than 6 years. 2. Where no such officials exist, the Circle is relieved of the obligation to submit a report. 3. The review of the period of posting of all officers and officials is to be reported to the SPN Branch within a fortnight, and thereafter on a quarterly basis. Which of the statements given above are correct?",
+        "options": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statements 1 and 3 are correct. Statement 2 is incorrect: a 'Nil' report is expressly required even where no officials are found to be overstaying. [DoP letter F. No. X-20/39/2023-SPN-II-DOP dated 11.12.2025 and reiteration of even number dated 23.06.2026.]"
+    },
+    {
+        "id": "mock-s2-07-48",
+        "text": "Consider the following statements regarding Chapter III (Leave) of Postal Manual Volume IV:  1. An application for leave is submitted in Form S.R.-1; that of a GDS Sub-Postmaster is prepared in Form App. 45 and preserved for three years after his connection with the Department ceases. 2. An application for leave must ordinarily be submitted one month in advance; where it is not, the leave applied for is liable to be refused or postponed in the absence of adequate reasons for the delay. 3. Casual leave is not a recognised form of leave and is not subject to any rules made by the Government of India; an official on casual leave is treated as on duty. Which of the statements given above are correct?",
+        "options": [
+            "1, 2 and 3",
+            "1 and 2 only",
+            "1 and 3 only",
+            "2 and 3 only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "All three are correct. Rules 94, 95, 96 and 98 of Chapter III stand deleted in the official text; the Chapter prescribes the departmental machinery for leave, the entitlements themselves flowing from the CCS (Leave) Rules, 1972. [Postal Manual Vol IV, Rules 91 (and Note), 92 and 99.]"
+    },
+    {
+        "id": "mock-s2-07-49",
+        "text": "A Government servant is arrested and detained in police custody on a criminal charge. From what point, and after what minimum period of detention, is he deemed to have been placed under suspension?",
+        "options": [
+            "From the date of the suspension order, if detention exceeds twenty-four hours",
+            "From the date of his detention, if detention exceeds forty-eight hours",
+            "From the date of his release, if the detention has exceeded ninety days",
+            "From the date of the charge-sheet, if detention exceeds seventy-two hours"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rule 10(2)(a) provides that a Government servant shall be deemed to have been placed under suspension by an order of the appointing authority with effect from the date of his detention, if he is detained in custody, whether on a criminal charge or otherwise, for a period exceeding forty-eight hours. No separate suspension order is needed for the deeming to operate. [CCS (CCA) Rules, 1965, Rule 10(2)(a).]"
+    },
+    {
+        "id": "mock-s2-07-50",
+        "text": "Consider the following statements regarding the review of suspension:  1. An order of suspension must be reviewed by the competent authority, on the recommendation of the Review Committee, before the expiry of ninety days from the effective date of suspension. 2. An order of suspension shall not be valid after a period of ninety days unless it is extended after review, for a further period, before the expiry of ninety days. 3. Any subsequent extension of suspension may be for a period not exceeding three hundred and sixty-five days at a time. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1 and 3 only",
+            "1 and 2 only",
+            "1, 2 and 3"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statements 1 and 2 are correct, being Rules 10(6) and 10(7) respectively. Statement 3 is incorrect: extension of suspension shall not be for a period exceeding one hundred and eighty days at a time. Note also the proviso to Rule 10(7) for deemed suspension under sub-rule (2). [CCS (CCA) Rules, 1965, Rules 10(6) and 10(7).]"
+    },
+    {
+        "id": "mock-s2-07-51",
+        "text": "In a minor-penalty proceeding under Rule 16, in which of the following circumstances is an inquiry in the manner laid down in sub-rules (3) to (24) of Rule 14 legally obligatory before the penalty is imposed?",
+        "options": [
+            "Where the penalty proposed to be imposed on the Government servant is censure",
+            "Where it is proposed to withhold the promotion of the official for a stated period",
+            "Where it is proposed to recover pecuniary loss caused by negligence from pay",
+            "Where it is proposed to withhold increments for a period exceeding three years"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Rule 16(1-A) makes an inquiry mandatory, notwithstanding the discretion in Rule 16(1)(b), in exactly those three situations. The reference to 'sub-rules (3) to (24) of Rule 14' was substituted for 'sub-rules (3) to (23)' by Notification G.S.R. 548(E) dated 02.06.2017. [CCS (CCA) Rules, 1965, Rule 16(1-A).]"
+    },
+    {
+        "id": "mock-s2-07-52",
+        "text": "Consider the following statements regarding deductions from the subsistence allowance of a suspended Government servant:  1. Income tax and house rent and allied charges are compulsory deductions. 2. Subscription to the General Provident Fund is a deduction that shall not be made. 3. Recovery of loss to Government for which the officer is held responsible may be made compulsorily from the subsistence allowance. Which of the statements given above are correct?",
+        "options": [
+            "1, 2 and 3",
+            "2 and 3 only",
+            "1 and 2 only",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: recovery of loss to Government for which the officer is responsible falls in the prohibited class, along with subscription to the General Provident Fund and amounts due on court attachments. Premia on Postal or State Life Insurance policies and refund of advances taken from the GPF are optional deductions, requiring the officer's written consent. [Instructions on subsistence allowance read with FR 53.]"
+    },
+    {
+        "id": "mock-s2-07-53",
+        "text": "Under what specific condition does an accused Government servant acquire the right to be represented by a legal practitioner in a departmental inquiry?",
+        "options": [
+            "Whenever a major penalty is proposed to be imposed on the Government servant",
+            "Where the inquiry involves misappropriation of funds exceeding Rs. 1 lakh",
+            "Where the accused Government servant holds a post in Group 'A' service",
+            "Where the Presenting Officer appointed is a legal practitioner or law officer"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Ordinarily, the accused is not entitled to engage a legal practitioner. Under Rule 14(8), that right arises where the disciplinary authority has itself appointed a legal practitioner, or a Government law officer or prosecutor, as the Presenting Officer — otherwise the accused must obtain the permission of the disciplinary authority. [CCS (CCA) Rules, 1965, Rule 14(8).]"
+    },
+    {
+        "id": "mock-s2-07-54",
+        "text": "Consider the following statements about a retired Government servant acting as a Defence Assistant in a major-penalty inquiry:  1. He must have retired from service under the Central Government. 2. He must not, in any manner, have been associated with the case at the investigation stage or otherwise in his official capacity. 3. He may act as Defence Assistant in not more than ten cases at a time. Which of the statements given above are correct?",
+        "options": [
+            "1 and 2 only",
+            "1 and 3 only",
+            "2 and 3 only",
+            "1, 2 and 3"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: the retired Government servant should not act as a Defence Assistant in more than seven cases at a time, and must satisfy the Inquiring Officer that he does not have more than seven cases in hand including the case in question. Where the retired servant is also a legal practitioner, the Rule 14(8) restrictions on engaging a legal practitioner apply. [CCS (CCA) Rules, 1965, Rule 14(8)(b), read with DoPT consolidated instructions, O.M. dated 21.12.2022.]"
+    },
+    {
+        "id": "mock-s2-07-55",
+        "text": "Consider the following statements regarding the action taken on the Inquiring Authority's report:  1. A bad service record, unconnected with the matters inquired into, may properly be relied upon to establish a charge against the Government servant. 2. Where the disciplinary authority disagrees with any finding of the Inquiring Authority, it must record its reasons for the disagreement and give the charged officer an opportunity to represent against the tentative reasons before a final decision is taken. Which of the statements given above is/are correct?",
+        "options": [
+            "Neither 1 nor 2",
+            "1 only",
+            "Both 1 and 2",
+            "2 only"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Statement 1 is incorrect: extraneous material such as a bad past record may not be used to establish a charge; it is relevant only, if at all, to the quantum of penalty once a charge stands proved. Statement 2 is correct and follows both the rule and the principles of natural justice. [CCS (CCA) Rules, 1965, Rule 15.]"
+    },
+    {
+        "id": "mock-s2-07-56",
+        "text": "Consider the following statements regarding consultation with the Central Vigilance Commission:  1. Consultation with the Commission is required in every case of an administrative or technical lapse by a Government servant. 2. In a major-penalty case with a vigilance angle, the Inquiring Authority's report and the records are referred to the Commission for its second-stage advice before a final decision is taken. Which of the statements given above is/are correct?",
+        "options": [
+            "2 only",
+            "Both 1 and 2",
+            "1 only",
+            "Neither 1 nor 2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Statement 1 is incorrect: consultation with the Commission is required where there is a vigilance angle — an allegation of corruption or of improper motive — and not for purely administrative or technical lapses. Statement 2 correctly describes second-stage advice. [CVC consultation framework read with the CCS (CCA) Rules, 1965.]"
+    },
+    {
+        "id": "mock-s2-07-57",
+        "text": "A punishing authority passes an order withholding an increment of an official who is already drawing pay at the maximum of his pay scale. Which of the following is correct?",
+        "options": [
+            "The order may be revised by the punishing authority, being inoperative.",
+            "The order may be cancelled if the Head of the Circle suggests leniency.",
+            "The order stands; a punishing authority may never revise its own order.",
+            "The order may be cancelled if the official petitions within thirty days."
+        ],
+        "correctAnswer": 0,
+        "explanation": "As a general rule, a punishing authority cannot revise its own order; revision lies with the appellate or revising authority. A recognised exception arises where the order is inherently inoperative — for example, withholding an increment of an official already at the maximum of the scale — in which case the authority may cancel or revise it. [Principles governing disciplinary orders under the CCS (CCA) Rules, 1965.]"
+    },
+    {
+        "id": "mock-s2-07-58",
+        "text": "Where an appellate authority sets aside a punishment and remits the case for a de-novo inquiry, what is the status of the original charge sheet?",
+        "options": [
+            "It is placed permanently in the official's service book as an adverse entry against him.",
+            "It must be referred to the Central Vigilance Commission for re-validation.",
+            "It remains valid, and the inquiry resumes from the defence stage onward.",
+            "It stands quashed, unless the appellate order specifies the stage of re-trial."
+        ],
+        "correctAnswer": 3,
+        "explanation": "On a remit for de-novo inquiry, the original proceedings — including the charge sheet — are deemed quashed, unless the appellate order expressly specifies the stage from which the re-trial should commence. The disciplinary authority must therefore ordinarily begin afresh. [Principles governing appeals under the CCS (CCA) Rules, 1965.]"
+    },
+    {
+        "id": "mock-s2-07-59",
+        "text": "Consider the following statements regarding common proceedings under Rule 18:  1. Where two or more Government servants are concerned in a case, the proceedings should be conducted by a single authority, ordinarily the highest among the authorities competent to impose penalties on them. 2. Where the Government servants belong to different disciplinary jurisdictions, an order of the President is necessary to specify the authority which will function as the disciplinary authority and the procedure to be observed. Which of the statements given above is/are correct?",
+        "options": [
+            "Neither 1 nor 2",
+            "2 only",
+            "1 only",
+            "Both 1 and 2"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Both statements are correct. Rule 18 exists so that a single set of facts is not tried piecemeal by several authorities on different records, and so that the President's order settles which authority and which rules govern where jurisdictions differ. [CCS (CCA) Rules, 1965, Rule 18.]"
+    },
+    {
+        "id": "mock-s2-07-60",
+        "text": "Consider the following statements regarding the right of the charged officer to inspect documents during an inquiry:  1. The right of access to official records is unlimited and absolute. 2. Access may be refused where the records are not relevant to the case, or where their disclosure would be against the public interest or the security of the State. 3. In a minor-penalty case where no formal inquiry is held, there is no statutory obligation to allow inspection of documents. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1, 2 and 3",
+            "2 and 3 only",
+            "1 and 2 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statements 2 and 3 are correct. Statement 1 is incorrect: the right of access is not unlimited. The disciplinary authority may refuse access for cogent reasons recorded in writing, such as irrelevance to the case or public interest. [CCS (CCA) Rules, 1965, Rule 14, and the DoPT instructions thereunder.]"
+    },
+    {
+        "id": "mock-s2-07-61",
+        "text": "Consider the following statements regarding bid security and performance security in Government procurement:  1. The amount of bid security should ordinarily range between two per cent and five per cent of the estimated value of the goods to be procured. 2. Micro and Small Enterprises as defined in the MSE Procurement Policy, and Startups recognised by DPIIT, are exempt from furnishing bid security. 3. Performance security for goods currently stands at ten to fifteen per cent of the value of the contract. Which of the statements given above are correct?",
+        "options": [
+            "1, 2 and 3",
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Statements 1 and 2 are correct, being Rule 170(i) of the General Financial Rules, 2017. Statement 3 is incorrect: the amount of performance security under Rule 171(i) of the GFRs stood modified from 5-10 per cent to 3-10 per cent by the Department of Expenditure (Procurement Policy Division) O.M. No. F.1/2/2023-PPD. [GFR, 2017, Rules 170(i) and 171(i), as amended.]"
+    },
+    {
+        "id": "mock-s2-07-62",
+        "text": "Which of the following most accurately states the restriction on the appointment of an Inquiry Officer in a departmental proceeding?",
+        "options": [
+            "He must belong to the Vigilance Division of the Department of Posts.",
+            "He must be a legal practitioner or a Government law officer by qualification.",
+            "He must not be lower in status than the accused, and must be disinterested.",
+            "He must be drawn from a Postal Circle other than that of the accused officer."
+        ],
+        "correctAnswer": 2,
+        "explanation": "The Inquiry Officer must not be lower in status than the charged officer, and it should be ensured that he has no interest in, or preconceived view of, the case. He may not be a witness, nor the officer who conducted the preliminary enquiry and there expressed an adverse opinion, since that would compromise the appearance of impartiality. [CCS (CCA) Rules, 1965, Rule 14(2), and the instructions thereunder.]"
+    },
+    {
+        "id": "mock-s2-07-63",
+        "text": "Consider the following statements regarding the inspection of the Stock Depot:  1. The first inspection, for the half-year ending 30th September, is carried out by the Head of the Circle or the Director Postal Services, together with the physical verification of all articles of stores and stock. 2. The second inspection, for the half-year ending 31st March, is carried out by the Assistant Postmaster-General or Assistant Director in charge of the Stock Depot. 3. For the three Central Forms Stores, the physical verification of forms is done during the first (September) inspection each year. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1 and 2 only",
+            "1 and 3 only",
+            "1, 2 and 3"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: for the three Central Forms Stores — PSD Aligarh, PSD Kolkata and PSD Nasik Road — the physical verification of forms is done during the second (March) inspection each year. [Postal Manual Vol VIII, Rule 2 and Chapter 8.]"
+    },
+    {
+        "id": "mock-s2-07-64",
+        "text": "How often, and to whom, does the Head of the Circle report the inspection of his own office?",
+        "options": [
+            "Twice a year, to the Postal Services Board through the Circle Office concerned",
+            "Once in two years, to the Postmaster-General of the Region concerned",
+            "Once a year, to the Director General, Posts, with a six-month action report",
+            "Once a year, to the Postal Accounts Office and the Director General"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Rule 2-A requires the Head of the Circle to inspect his own office once a year and to submit the Inspection Report to the Director General, Posts, with a further complete report on the action taken being sent to the Directorate after six months. [Postal Manual Vol VIII, Rule 2-A.]"
+    },
+    {
+        "id": "mock-s2-07-65",
+        "text": "How often, and by whom, are the balances of the Mumbai, Kolkata and Chennai GPOs and the Delhi Head Office verified?",
+        "options": [
+            "Four times a year — one by the Director Postal Services, three by the City SP",
+            "Twice a year — once by the Director Postal Services and once by the City SP",
+            "Once a year, by the Head of the Circle or the Director Postal Services himself",
+            "Four times a year — two by the Head of the Circle and two by the City SP"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rule 10 prescribes four verifications a year, split as one by the Director Postal Services and three by the City Superintendent of Post Offices. The common error is to state 'twice a year' — that figure belongs to the Presidency Postmaster's twice-yearly verification of GPO branches under Rule 21, not to this rule. [Postal Manual Vol VIII, Rule 10.]"
+    },
+    {
+        "id": "mock-s2-07-66",
+        "text": "Consider the following statements regarding the complaints machinery in a Circle Office:  1. A statement of the receipt, disposal and pendency of complaints for each quarter must reach the Directorate by the 20th of the following month. 2. The Head of the Circle takes serious notice of complaint cases pending over six months. 3. Complaint branches of divisional and gazetted-postmaster offices are inspected once a fortnight against the prescribed questionnaire. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1, 2 and 3",
+            "1 and 2 only",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statements 1 and 2 are correct — Rules 14-A and 14 respectively. Statement 3 is incorrect: under Rule 14-B, complaint branches of divisional and gazetted-postmaster offices are inspected once a year. (The Inspector's own inspection of the complaints branch, under Rule 260-C, is once a fortnight — do not conflate the two.) [Postal Manual Vol VIII, Rules 14, 14-A, 14-B and 260-C.]"
+    },
+    {
+        "id": "mock-s2-07-67",
+        "text": "Under the record-preservation periods of Rule 16, which of the following is preserved permanently?",
+        "options": [
+            "Diaries of Superintendents",
+            "Rulings on all subjects",
+            "Contracts and leases for mails",
+            "The Director-General's Circulars"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rulings on all subjects, and establishment cases relating to creation, revision or abolition of posts in foreign territory, are preserved permanently. Superintendents' diaries are kept for 1 year after the month to which they relate; DG's Circulars and General Orders for 3 years after the close of the year of issue; and contracts and leases for 12 years after termination. [Postal Manual Vol VIII, Rule 16.]"
+    },
+    {
+        "id": "mock-s2-07-68",
+        "text": "Consider the following statements regarding the periodicity of inspections under Rule 21:  1. A first-class Head Office, other than a Presidency office, is inspected once in 12 months. 2. A second-class Head Office is inspected twice in 12 months. 3. All sub and branch offices are inspected twice in 12 months, this duty being divided between the Superintendent and the Inspectors. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1, 2 and 3",
+            "1 and 2 only",
+            "2 and 3 only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "All three are correct. The trap in this rule is to assume a uniform periodicity: the first-class Head Office is inspected once a year, while second-class Head Offices, sub and branch offices, and mail and record offices and sections are all inspected twice a year, the duty being divided among the supervising officers. [Postal Manual Vol VIII, Rule 21.]"
+    },
+    {
+        "id": "mock-s2-07-69",
+        "text": "A Head of Circle receives an application to intercept an article passing through a sorting office. In which circumstance must the application never be granted?",
+        "options": [
+            "Where the application is not accompanied by the fee prescribed for the purpose",
+            "Where the office of posting is not named in the application for interception",
+            "Where the article in question is addressed to a place in a foreign country",
+            "Where the article is known to contain valuable or insured property"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rule 25 provides that applications for interception are refused except in very special cases, and are never granted if the office of posting is not named or if the article is expected by more than one mail. Disposal of such applications rests with the Head of the Circle. [Postal Manual Vol VIII, Rule 25.]"
+    },
+    {
+        "id": "mock-s2-07-70",
+        "text": "Consider the following statements about circulars:  1. The Director-General's circulars are issued once a week. 2. A Head of Circle's orders for general guidance are published as a monthly circular with a consecutive annual series of numbers. 3. Circulars are destroyed after 3 years, counted from the April following the close of the year of issue. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1 and 2 only",
+            "2 and 3 only",
+            "1, 2 and 3"
+        ],
+        "correctAnswer": 3,
+        "explanation": "All three are correct. Circulars of the Head of the Circle need not go to branch offices; matters concerning them are put into Branch Office Circulars in the local language. Tour movements are issued as 'Tour Orders', not as circulars. [Postal Manual Vol VIII, Rules 23, 295 and 296.]"
+    },
+    {
+        "id": "mock-s2-07-71",
+        "text": "The Head of the Circle submits a monthly statement of ordinary, registered, insured and value-payable articles to the Director General. Which form is used, from what is it compiled, and by when must it reach the Directorate?",
+        "options": [
+            "Ms-14(a), compiled from Ms-14(b); to reach the DG by the 10th of next month",
+            "Ms-14(c), compiled from MS-6; to reach the DG by the 5th of the next month",
+            "Pa-19, compiled from MS-6; to reach the DG by the 1st of the next month",
+            "Ms-14(c), compiled from Ms-14(a); to reach the DG by the 20th of next month"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Rule 28 prescribes Form Ms-14(c), compiled from Form Ms-14(a) received from head offices, separating Posts service articles from other articles, and reaching the Director General by the 20th of the following month. Separate statements are submitted for Kolkata, Mumbai and Chennai. Form Pa-19 is the half-yearly enumeration report under Rule 31. [Postal Manual Vol VIII, Rules 28 and 31.]"
+    },
+    {
+        "id": "mock-s2-07-72",
+        "text": "Under Rule 31, the result of the half-yearly enumeration is reported by the Head of the Circle to the Director General. On which form, and by what dates?",
+        "options": [
+            "Form Pa-19; not later than 1st April and 1st October respectively",
+            "Form Ms-14(c); not later than 20th March and 20th September respectively",
+            "Form MS-6; not later than 15th February and 15th August respectively",
+            "Form Pa-14; not later than 1st March and 1st September respectively"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The enumeration itself is made during the second week of February and August, the returns being taken on Form MS-6 and personally counted and signed by supervising officers. The Head of the Circle then reports the result to the Director General on Form Pa-19, not later than 1st April and 1st October respectively. [Postal Manual Vol VIII, Rule 31.]"
+    },
+    {
+        "id": "mock-s2-07-73",
+        "text": "Consider the following statements regarding thresholds in the due mail and sorting lists prepared by the Head of the Circle (Form M-9):  1. Direct parcel communication is ordinarily not prescribed where the daily average is fewer than 4 articles. 2. A direct parcel bag is ordered when the daily average exceeds 5 registered parcels. 3. A direct mail bag may be closed when unregistered articles sent to an office or section in advance exceed 200 per day. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1 and 2 only",
+            "1, 2 and 3",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "All three thresholds are correct. The lists themselves are prepared by the Head of the Circle for offices and sections communicating across more than one RMS division, per Rule 136 of Postal Manual Volume V. [Postal Manual Vol VIII, Rule 39.]"
+    },
+    {
+        "id": "mock-s2-07-74",
+        "text": "Consider the following statements regarding cash balances of post offices:  1. The maximum cash balance of an office is fixed with reference to its daily payments, and the minimum with reference to its daily receipts. 2. The difference between the maximum and the minimum cash balance must in no case be less than half the minimum cash balance. 3. The minimum and maximum cash balance of a first-class Head Office is fixed by the Head of the Circle. Which of the statements given above are correct?",
+        "options": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "1, 2 and 3",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Statements 1 and 2 are correct, being Rules 138 and 139. Statement 3 is incorrect: under Rule 141 the cash balances of a first-class Head Office are fixed by the Senior Superintendent of Post Offices — not by the Head of the Circle, and not by the Postmaster himself. [Postal Manual Vol VIII, Rules 138, 139 and 141.]"
+    },
+    {
+        "id": "mock-s2-07-75",
+        "text": "The minimum cash balance of a post office is fixed at Rs. 10,000. Applying Rule 139, what is the least permissible maximum cash balance?",
+        "options": [
+            "Rs. 15,000",
+            "Rs. 12,500",
+            "Rs. 20,000",
+            "Rs. 30,000"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rule 139 requires that the difference between the maximum and the minimum cash balance must in no case be less than half the minimum. Half of Rs. 10,000 is Rs. 5,000, so the maximum must be at least Rs. 15,000. This guarantees a working cushion between two remittances. [Postal Manual Vol VIII, Rule 139.]"
+    },
+    {
+        "id": "mock-s2-07-76",
+        "text": "Which form is the consolidated memorandum of authorised balances supplied by the Superintendent to each Head Office, showing the authorised balances and drawing limits for all sub-offices in account with that Head Office?",
+        "options": [
+            "Form Pa-14",
+            "Form Pa-17(a)",
+            "Form Pa-14(s)",
+            "Form Pa-15(s)"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Sub Offices are supplied Form Pa-14 or Pa-14(s), and Branch Offices Form Pa-14(s). The consolidated memorandum supplied to each Head Office, covering all post offices in account with it, is Form Pa-15(s). Form Pa-17(a) is the monthly copy of sub-office accounts scrutinised under Rule 136. [Postal Manual Vol VIII, Rules 136, 143 and 144.]"
+    },
+    {
+        "id": "mock-s2-07-77",
+        "text": "Consider the following statements about sorting and guidance orders issued by a Superintendent:  1. An 'A' Order is issued for any change in a sorting list, and a copy of every such order must be furnished to the Head of the Circle. 2. A 'B' Order is issued for the general guidance of subordinates, and a copy is likewise furnished to the Head of the Circle. Which of the statements given above is/are correct?",
+        "options": [
+            "Neither 1 nor 2",
+            "Both 1 and 2",
+            "1 only",
+            "2 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statement 1 is correct. Statement 2 is incorrect: a copy of a 'B' Order is NOT furnished to the Head of the Circle. Where a 'B' Order concerns the disposal of camp articles or bags for high officials on tour, the letter 'T' is prefixed and a separate serial number is given. [Postal Manual Vol VIII, Rule 162.]"
+    },
+    {
+        "id": "mock-s2-07-78",
+        "text": "Consider the following statements regarding the examination of Inspectors' diaries by their Superintendents:  1. A Superintendent, RMS receives a copy of each sub-divisional Inspector's diary [Genl-2(S)] weekly — on the 1st, 8th, 16th and 24th — with a monthly work-summary in Form Inspn-9 attached to the last diary of the month. 2. A Superintendent of Post Offices receives a copy of each sub-divisional Inspector's diary [Genl-2] fortnightly — on the 1st and 16th — with a monthly work-summary in Form Inspn-3. Which of the statements given above is/are correct?",
+        "options": [
+            "Both 1 and 2",
+            "2 only",
+            "Neither 1 nor 2",
+            "1 only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Both statements are correct. The Railway Mail Service reports more frequently because mail in motion is time-critical. Compare the Superintendent's own diary, Form Genl-1, submitted fortnightly on the 1st and 16th to the Head of the Circle. [Postal Manual Vol VIII, Rules 164 and 195.]"
+    },
+    {
+        "id": "mock-s2-07-79",
+        "text": "Consider the following statements regarding the duties of Overseers:  1. Overseers are employed for the supervision of runner lines and of village postmen, postmen and ABPMs serving in villages. 2. An Overseer must verify the payment of at least 25 money orders per month. 3. Where the Head of the Circle so prescribes, the Overseer conveys or escorts cash remittances from one office to another. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1, 2 and 3",
+            "1 and 3 only",
+            "1 and 2 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statements 1 and 3 are correct. Statement 2 is incorrect: the Overseer — like the Town Inspector and the Overseer-Postman — must verify payment of at least 50 money orders per month. The figure of 25 per month applies to an Inspector of Posts. [Postal Manual Vol VIII, Rules 168, 343 and 309; Rule 49-A.]"
+    },
+    {
+        "id": "mock-s2-07-80",
+        "text": "Consider the following statements regarding the Haulage and Weighment Statement:  1. It is submitted by the Superintendent to the Head of the Circle on or before 1st February and 1st August each year. 2. It shows the regular accommodation provided on each railway in the Division on 21st January and 21st July respectively. Which of the statements given above is/are correct?",
+        "options": [
+            "1 only",
+            "Neither 1 nor 2",
+            "2 only",
+            "Both 1 and 2"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Both statements are correct. The statement is submitted in Form MS-60(a). The reporting dates (1 February and 1 August) and the reference dates on which accommodation is measured (21 January and 21 July) are distinct, and both are examined. [Postal Manual Vol VIII, Rule 184.]"
+    },
+    {
+        "id": "mock-s2-07-81",
+        "text": "On the loss of an original key, the Superintendent authorises the issue of a duplicate. How is the duplicate key transmitted?",
+        "options": [
+            "By service registered post, without insurance cover",
+            "By insured letter mail, insured for a sum of Rs. 500",
+            "By special messenger under the Superintendent's seal",
+            "By parcel post, registered and insured for Rs. 100"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Under Rule 212/1, entries relating to the duplicate key are made by the Stock Clerk and attested by the Superintendent, and the key is sent by parcel post, registered and insured for Rs. 100. [Postal Manual Vol VIII, Rule 212/1.]"
+    },
+    {
+        "id": "mock-s2-07-82",
+        "text": "A Superintendent prescribes a beat-instruction register for communicating addressees' instructions to the postman, and separately tests the punctual clearance of letter boxes. Which forms are used, respectively, for the register and for the test postcards?",
+        "options": [
+            "Form M-52 and Form M-26",
+            "Form M-29 and Form M-32",
+            "Form M-32 and Form M-29",
+            "Form M-32 and Form M-26"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Rule 222 permits the Superintendent to prescribe a beat-instruction register in Form M-32 in any Head or Sub Office. Under Rule 231 he tests punctual clearance of letter boxes by posting Test Letters (Form M-29) or Test Postcards (Form M-26) addressed to himself. [Postal Manual Vol VIII, Rules 222 and 231.]"
+    },
+    {
+        "id": "mock-s2-07-83",
+        "text": "Under the Standard Schedule for Inspection, what durations are prescribed for the annual inspection of, respectively, (i) a Postal Store Depot, (ii) a Head Post Office or GPO on annual inspection-cum-verification, and (iii) a Branch Post Office?",
+        "options": [
+            "4 days / 3 days / 2 days",
+            "4 days / 6 days / 1 day",
+            "6 days / 4 days / 2 days",
+            "3 days / 6 days / 1 day"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The Rule 238 schedule prescribes 4 days for a Postal Store Depot, 6 days for the annual inspection-cum-verification of a Head Post Office or GPO (3 days for its half-yearly verification), and 1 day for a Branch Post Office. A Division Office and a Circle or Regional Office are each allotted 3 days. [Postal Manual Vol VIII, Rule 238.]"
+    },
+    {
+        "id": "mock-s2-07-84",
+        "text": "Consider the following statements regarding the mandatory checks during a Superintendent's verification of Head Office balances:  1. The Treasurer's Cash Book (ACG-2) must be checked for at least 4 dates in different months. 2. Service Books must be checked to the extent of at least 15 per cent, taken at random. Which of the statements given above is/are correct?",
+        "options": [
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Statement 1 is correct. Statement 2 is incorrect: the prescribed sample for Service Books is at least 5 per cent, taken at random. The '4 dates' sample applies also to the HO Summary (ACG-1), the Register of Cheques, and the SO and BO Summaries checked against the Daily Accounts. [Postal Manual Vol VIII, Rule 239.]"
+    },
+    {
+        "id": "mock-s2-07-85",
+        "text": "An inspection of a post office lasts five days. Within what period must the inspection report be issued?",
+        "options": [
+            "15 days",
+            "30 days",
+            "60 days",
+            "45 days"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The prescribed timeline is: an inspection of 1 day — report within 15 days; of 2 days to less than 8 days — within 30 days; of 8 days and above — within 45 days. A five-day inspection therefore attracts the 30-day deadline. [Postal Manual Vol VIII, Rule 239.]"
+    },
+    {
+        "id": "mock-s2-07-86",
+        "text": "An Inspector of Post Offices takes charge of routine office work while the Superintendent is on tour. Which of the following is he NOT permitted to do?",
+        "options": [
+            "Open and distribute the dak received from the Head of the Circle",
+            "Pass the TA bills of assistants, postmen and lower-grade staff",
+            "Grant casual leave to the staff of the divisional office on tour days",
+            "Sign routine drafts and dispose of cases not needing sanction"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rule 260-B expressly excludes from the Inspector's routine duties the opening of dak received from the Head of the Circle, and the disposal of personal cases of staff involving departmental policy. Everything else listed is within his routine competence when the Superintendent is on tour. [Postal Manual Vol VIII, Rule 260-B.]"
+    },
+    {
+        "id": "mock-s2-07-87",
+        "text": "What are the limits of the Inspector's power to grant leave to Gramin Dak Sevaks in his sub-division, and how often does he inspect the complaints branch?",
+        "options": [
+            "90 days to a BPM, 60 days to other GDS; complaints branch once a month",
+            "90 days to all GDS alike; the complaints branch inspected once a quarter",
+            "60 days to a BPM, 90 days to other GDS; complaints branch once a fortnight",
+            "60 days to all GDS alike; the complaints branch inspected once every year"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Rule 261 empowers the Inspector to grant leave up to 60 days to a Branch Postmaster and up to 90 days to other GDS in his sub-division — the Branch Postmaster attracting the smaller figure. Under Rule 260-C, he inspects the complaints branch once a fortnight. [Postal Manual Vol VIII, Rules 260-C and 261.]"
+    },
+    {
+        "id": "mock-s2-07-88",
+        "text": "Which form is used by the Inspector to supply the Village Sorting List to head, sub and branch offices in his sub-division, and what does it show?",
+        "options": [
+            "Form MS-88, showing the daily receipt of articles for each village served",
+            "Form M-52, showing villages served alphabetically and letter-box sites",
+            "Form M-40, showing the lines and stages within the sub-division",
+            "Form M-53, showing the route, halts and days of the ABPM's beat map"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rule 276 requires the Inspector to supply the Village Sorting List in Form M-52. Form M-53 is the Route List with the beat map (Rule 273); Form MS-88 is the Village Return (Rule 277); Form M-40 is the Register of Lines and Stages maintained by the Inspector, RMS. [Postal Manual Vol VIII, Rules 273, 276 and 277.]"
+    },
+    {
+        "id": "mock-s2-07-89",
+        "text": "Consider the following statements regarding the Village Return submitted by Branch Offices:  1. It is kept for the first 14 days of March, showing the daily receipt of articles, including money orders, for delivery. 2. The Inspector examines the returns and forwards them to the Superintendent with his remarks. 3. The returns must reach the Superintendent not later than 1st April. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1 and 2 only",
+            "1, 2 and 3",
+            "1 and 3 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "All three are correct. The Superintendent studies the yearly Village Return (Form MS-88) under Rule 134 to decide whether the work justifies a post or whether it can be handled by an Assistant Branch Postmaster. [Postal Manual Vol VIII, Rules 134 and 277.]"
+    },
+    {
+        "id": "mock-s2-07-90",
+        "text": "Consider the following statements about the forms an Overseer submits to the Inspector, and their onward movement:  1. The Overseer submits a weekly diary in Form Genl-4 and a work summary in Form Genl-12. 2. The monthly list of money orders verified is Form Genl-6. 3. The monthly list of verified money orders, with the Inspector's summary, is submitted to the Superintendent by the 8th of the month. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1, 2 and 3",
+            "2 and 3 only",
+            "1 and 2 only"
+        ],
+        "correctAnswer": 1,
+        "explanation": "All three are correct. Note the contrast with the Town Inspector and Overseer-Postman, whose own Genl-6 accompanies the diary of the last working day of the month and reaches the Superintendent by the 5th of the following month. [Postal Manual Vol VIII, Rules 282, 311-313.]"
+    },
+    {
+        "id": "mock-s2-07-91",
+        "text": "Consider the following statements regarding the order book:  1. The Inspector records the results of his inspections and verifications in an order book in Form MS-8, each book containing 200 serially numbered pages. 2. The related guidance book contains 100 pages. 3. A copy of the order-book remarks is sent to the Head of the Circle. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1, 2 and 3",
+            "2 and 3 only",
+            "1 and 2 only"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: under Rule 298 a copy of the Inspector's order-book remarks is sent to the Superintendent. (It is the Superintendent, under Rule 167, who forwards a copy of the order-book remarks on his inspection of the Inspector's own office to the Head of the Circle.) [Postal Manual Vol VIII, Rules 167 and 298.]"
+    },
+    {
+        "id": "mock-s2-07-92",
+        "text": "Under Rule 300, what must an Inspector of Post Offices inspect, and how often?",
+        "options": [
+            "Every sub-office and branch office in the Division, twice in 12 months",
+            "Assigned sub-offices once in 12 months; and all BOs not inspected by the SP",
+            "Every head office in his sub-division, once in every 12 months",
+            "Only those branch offices which have reported a loss or fraud in the year"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rule 300 requires the Inspector to inspect sub-offices assigned to him by the Superintendent once every 12 months, and all Branch Offices in his sub-division other than those the Superintendent inspects himself. Inspections follow the prescribed BO/SO Inspection Questionnaire and the results are entered in the order book (MS-8). [Postal Manual Vol VIII, Rule 300.]"
+    },
+    {
+        "id": "mock-s2-07-93",
+        "text": "Consider the following statements about Town Inspectors:  1. A Town Inspector is appointed in large town or city offices to supervise the delivery and conveyance of mails within the town, under the orders of the Postmaster, his jurisdiction being fixed by the Head of the Circle. 2. He tests the delivery work of postmen, for example by noting articles before they are handed over and later enquiring of the addressees whether delivery was made. 3. The monthly list of money orders verified (Form Genl-6) must reach the Superintendent by the 15th of the following month. Which of the statements given above are correct?",
+        "options": [
+            "1 and 3 only",
+            "1, 2 and 3",
+            "1 and 2 only",
+            "2 and 3 only"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: the Genl-6 accompanies the diary of the last working day of the month and is submitted to the Superintendent of Post Offices by the 5th of the following month. [Postal Manual Vol VIII, Rules 303, 305-307 and 311-313.]"
+    },
+    {
+        "id": "mock-s2-07-94",
+        "text": "When an Assistant Superintendent or Inspector, RMS is attached to the office of a Head of a Circle, what designation does he hold?",
+        "options": [
+            "Town Inspector",
+            "Investigating Inspector",
+            "Mail Agent",
+            "Sorting Inspector"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Rule 320 provides that an Assistant Superintendent or Inspector RMS, entrusted mainly with checking sorting work and investigating important cases of loss and fraud, is designated a 'Sorting Inspector' when attached to the office of a Head of a Circle. [Postal Manual Vol VIII, Rule 320.]"
+    },
+    {
+        "id": "mock-s2-07-95",
+        "text": "Who is required to communicate irregularities noticed in the course of his duties, and the results of investigations entrusted to him, to the Superintendent DAILY?",
+        "options": [
+            "An Inspector of Post Offices in charge of a sub-division",
+            "A Town Inspector attached to a city head office",
+            "A Sub-divisional Inspector, Railway Mail Service",
+            "A Mail Overseer supervising the runner lines"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Rule 326 requires a Sub-divisional Inspector, RMS to communicate both irregularities noticed and the results of any investigation entrusted to him to the Superintendent daily, so that prompt orders can follow. This daily cycle distinguishes RMS supervision from the slower Posts reporting cycle. [Postal Manual Vol VIII, Rule 326.]"
+    },
+    {
+        "id": "mock-s2-07-96",
+        "text": "Consider the following statements about the disposal and despatch of stock:  1. Obsolete and unserviceable stamps and seals may be sold as scrap at the Circle Office in order to realise revenue. 2. Stock articles weighing over 10 kg are sent by rail, steamer or other suitable conveyance as goods. 3. Forms weighing over 5 kg are enclosed in a bag and sent as goods by rail or steamer. Which of the statements given above are correct?",
+        "options": [
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3",
+            "1 and 2 only"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Statements 2 and 3 are correct — Rules 380 and 381 respectively. Statement 1 is incorrect: Rule 374 provides that obsolete and unserviceable stamps and seals must never be sold; they are sent to the Postal Workshop at Aligarh for disposal or destruction under proper supervision. [Postal Manual Vol VIII, Rules 374, 380 and 381.]"
+    },
+    {
+        "id": "mock-s2-07-97",
+        "text": "Consider the following statements regarding the Returned Letter Office:  1. An RLO is established at the Headquarters of each Postal Circle and functions under the direct control and supervision of the Chief Postmaster General. 2. An unclaimed or refused letter-mail article which does not bear the sender's full address, and which has been opened, is forwarded enclosed in an RLO envelope, RLO(s). 3. Unclaimed magazines are despatched to the publisher daily. Which of the statements given above are correct?",
+        "options": [
+            "1, 2 and 3",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1 and 2 only"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: under Rule 433, unclaimed newspapers, magazines and periodicals are returned to the publisher, distributor or agent monthly; where there are fewer than five copies, despatch may be deferred to the end of the second month, by the end of which they must in any case be sent. An unopened article bearing the sender's full name and address is redirected by pasting the RLO label, RLO 10. [Postal Manual Vol VIII, Rules 389, 414 and 433.]"
+    },
+    {
+        "id": "mock-s2-07-98",
+        "text": "Under Rule 434, how must the Returned Letter Office keep registered articles containing valuable property?",
+        "options": [
+            "Shredded at once if the addressee cannot be traced within one month",
+            "Forwarded to the Postal Workshop at Aligarh for safe custody there",
+            "In a separate, strong, secured almirah, arranged by date of receipt",
+            "In the general sorting case of the RLO, marked with a red check slip"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The register is Form RLO 3. Custody is in a separate, strong, secured almirah with compartments, the articles arranged chronologically by date of receipt, and an index maintained alphabetically by the names of addressees so that a claim can be met quickly. [Postal Manual Vol VIII, Rule 434.]"
+    },
+    {
+        "id": "mock-s2-07-99",
+        "text": "Lottery tickets detected in postal transmission are sent to the Returned Letter Office. Under whose personal supervision must they be destroyed?",
+        "options": [
+            "The Assistant Superintendent in charge of the RLO",
+            "An officer not below the rank of Director",
+            "The Head Postmaster of the Circle headquarters",
+            "The Manager (Returned Letters) of the RLO"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rule 406 requires that lottery tickets detected in transmission be destroyed under the personal supervision of an officer not below the rank of Director. [Postal Manual Vol VIII, Rule 406.]"
+    },
+    {
+        "id": "mock-s2-07-100",
+        "text": "Consider the following statements regarding breaks and accidents:  1. Where the detention to mails is likely to exceed 6 hours, the interruption is reported at once to the Superintendent; where it is less, the report goes only to the Record Office. 2. In any accident, the immediate priority is to restore communication by an alternative arrangement, after which the registered, insured and value-payable mail and cash are secured. Which of the statements given above is/are NOT correct?",
+        "options": [
+            "1 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2",
+            "2 only"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Statement 1 is correct. Statement 2 is NOT correct: the immediate priority in an accident is the safety and security of the mail bags — particularly registered, insured and value-payable articles and any cash — before other concerns. Restoring communication by diversion or alternative conveyance follows. [Postal Manual Vol VIII, Chapter 10.]"
+    }
+];

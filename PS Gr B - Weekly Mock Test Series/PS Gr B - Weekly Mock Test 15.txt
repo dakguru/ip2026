@@ -1,0 +1,904 @@
+Q1. Under the POSH Act, 2013, which of the following is correct regarding the definition of an "aggrieved woman"?
+A. She must be an employee of the workplace where the incident occurred.
+B. She must be above 18 years of age.
+C. She can be a woman of any age, whether employed or not, who alleges sexual harassment.
+D. She applies only to women working in the organised sector.
+Answer: C
+Explanation: Section 2(a) defines an "aggrieved woman" as a woman of any age, whether employed or not, who alleges to have been subjected to any act of sexual harassment by the respondent.
+
+Q2. Consider the following statements regarding the constitution of the Internal Committee (IC) under Section 4 of the POSH Act, 2013:
+
+1. It must be constituted at all administrative units if offices are located at different places.
+2. The Presiding Officer must always be a woman employed at a senior level.
+3. The external member's fees are paid by the appropriate Government.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Section 4(1) and 4(2). Statement 3 is incorrect because Rule 3 of POSH Rules specifies that the external member's fees are paid by the employer, not the Government.
+
+Q3. What is the maximum tenure for the Presiding Officer and Members of the Internal Committee under the POSH Act, 2013?
+A. Two years from the date of nomination
+B. Three years from the date of nomination
+C. Five years from the date of nomination
+D. Until their superannuation from service
+Answer: B
+Explanation: Section 4(4) specifies that the Presiding Officer and every Member of the Internal Committee shall hold office for a period not exceeding three years from the date of their nomination.
+
+Q4. Which of the following statements is/are correct concerning the Local Committee (LC) under the POSH Act, 2013?
+
+1. It receives complaints from establishments having fewer than ten workers.
+2. It receives complaints where the allegation is against the employer himself.
+3. The Chairperson is nominated from among the women employees of the District Magistrate's office.
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 1 and 2 are correct under Section 6(1). Statement 3 is incorrect; Section 7(1)(a) requires the Chairperson to be an eminent woman in the field of social work, not a DM's employee.
+
+Q5. Under Section 9 of the POSH Act, 2013, an aggrieved woman must make a complaint within what time frame from the date of the incident?
+A. One month
+B. Three months
+C. Six months
+D. One year
+Answer: B
+Explanation: Section 9(1) mandates that the complaint must be made within three months from the date of the incident, or within three months from the date of the last incident in case of a series of incidents.
+
+Q6. Consider the following statements regarding the conciliation process under the POSH Act, 2013:
+
+1. The Internal Committee can initiate conciliation on its own motion.
+2. No monetary settlement shall be made as a basis of conciliation.
+3. If conciliation fails, the inquiry must proceed.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 is incorrect; Section 10(1) states conciliation is initiated only "at the request of the aggrieved woman". Statements 2 and 3 are correct per Section 10.
+
+Q7. An aggrieved woman files a complaint against a co-worker. During the pendency of the inquiry, she requests a transfer. What is the maximum period of additional leave the Internal Committee can recommend for her under Section 12?
+A. One month
+B. Two months
+C. Three months
+D. Six months
+Answer: C
+Explanation: Section 12(1)(b) allows the Internal Committee to recommend granting leave to the aggrieved woman up to three months, which is in addition to the leave she is otherwise entitled to.
+
+Q8. Which of the following statements is/are not correct regarding the inquiry process under Section 11 of the POSH Act, 2013?
+
+1. The inquiry must be completed within 60 days.
+2. The Committee possesses the same powers as a civil court for summoning witnesses.
+3. In case of a domestic worker, the LC forwards the complaint to the police within 7 days.
+A. 1 only
+B. 2 only
+C. 1 and 3 only
+D. 2 and 3 only
+Answer: A
+Explanation: Statement 1 is not correct; Section 11(5) mandates that the inquiry shall be completed within 90 days, not 60 days. Statements 2 and 3 are correct per Section 11(3) and 11(1).
+
+Q9. In the event an Internal Committee arrives at a finding that the respondent is guilty of sexual harassment, within how many days must the employer act upon the Committee's recommendations?
+A. 10 days
+B. 30 days
+C. 60 days
+D. 90 days
+Answer: C
+Explanation: Section 13(4) explicitly requires the employer or the District Officer to act upon the recommendations of the Committee within sixty (60) days of receipt of the inquiry report.
+
+Q10. Consider the following statements about the penalty for a false or malicious complaint under Section 14 of the POSH Act, 2013:
+
+1. Mere inability to substantiate a complaint attracts a penalty for malicious intent.
+2. A separate inquiry must establish the malicious intent before recommending action.
+3. The penalty is identical to the one prescribed for the act of sexual harassment.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 2 is correct per Section 14 rules. Statement 1 is incorrect; mere inability to prove does not attract penalty. Statement 3 is incorrect; penalties vary based on service rules.
+
+Q11. When determining the compensation payable to the aggrieved woman under Section 15 of the POSH Act, which factor is NOT statutorily required to be considered by the Committee?
+A. The mental trauma and emotional distress caused
+B. The loss in career opportunity due to the incident
+C. The number of dependents in the respondent's family
+D. The income and financial status of the respondent
+Answer: C
+Explanation: Section 15 lists specific factors (trauma, career loss, medical expenses, respondent's income, and payment feasibility). The number of dependents in the respondent's family is not a statutory parameter.
+
+Q12. Section 16 of the POSH Act, 2013 overrides which of the following legislations to prohibit the publication of the identity of the aggrieved woman, respondent, and witnesses?
+A. The Indian Evidence Act, 1872
+B. The Right to Information Act, 2005
+C. The Information Technology Act, 2000
+D. The Whistle Blowers Protection Act, 2014
+Answer: B
+Explanation: Section 16 explicitly begins with "Notwithstanding anything contained in the Right to Information Act, 2005," barring the publication or public communication of identities and inquiry proceedings.
+
+Q13. Under the POSH Rules, 2013, what is the maximum penalty prescribed for contravening the confidentiality provisions of Section 16, where no service rules exist?
+A. Rs. 2,000
+B. Rs. 5,000
+C. Rs. 10,000
+D. Rs. 50,000
+Answer: B
+Explanation: Under Section 17 read with the Rules, where no applicable service rules exist, a penalty up to Rs. 5,000 may be recovered from the person who breached confidentiality.
+
+Q14. Any person aggrieved by the recommendations made by the Internal Committee under Section 13 may prefer an appeal within what period?
+A. 30 days
+B. 45 days
+C. 60 days
+D. 90 days
+Answer: D
+Explanation: Section 18(2) strictly states that the appeal against the recommendations of the Committee shall be preferred within ninety (90) days of the recommendations.
+
+Q15. Which of the following statements is/are correct regarding the employer's duties under Section 19 of the POSH Act, 2013?
+
+1. The employer must organize regular awareness programs for employees.
+2. The employer must display the penal consequences of sexual harassment conspicuously.
+3. The employer is exempt from initiating criminal action unless the IC recommends it.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct per Section 19(c) and 19(b). Statement 3 is incorrect; Section 19(h) requires the employer to cause to initiate legal action if the aggrieved woman desires it, regardless of the IC.
+
+Q16. If an employer fails to constitute an Internal Committee as required under Section 4(1), what is the maximum fine that can be imposed upon first conviction?
+A. Rs. 10,000
+B. Rs. 25,000
+C. Rs. 50,000
+D. Rs. 1,00,000
+Answer: C
+Explanation: Section 26(1) provides that if the employer fails to constitute an Internal Committee, they shall be punishable with a fine which may extend to Rs. 50,000.
+
+Q17. Under the POSH Act, 2013, which court is competent to try an offence punishable under this Act?
+A. Any Civil Court
+B. Executive Magistrate
+C. No court inferior to a Metropolitan Magistrate or a Judicial Magistrate of the First Class
+D. District and Sessions Court only
+Answer: C
+Explanation: Section 27(2) specifically provides that no court inferior to a Metropolitan Magistrate or a Judicial Magistrate of the First Class shall try any offence punishable under this Act.
+
+Q18. According to the POSH Rules, 2013, within how many working days must the Internal Committee send a copy of the received complaint to the respondent?
+A. 3 working days
+B. 5 working days
+C. 7 working days
+D. 10 working days
+Answer: C
+Explanation: Rule 7 requires that on receipt of the complaint (submitted in six copies), the Committee shall send one copy to the respondent within seven working days.
+
+Q19. An inquiry under the POSH Act, 2013 is being conducted. The respondent fails to attend three consecutive hearings without sufficient cause. What procedural step must the Committee take before passing an ex-parte order?
+A. Give a 7 days' written notice to the respondent
+B. Give a 10 days' written notice to the respondent
+C. Give a 15 days' written notice to the respondent
+D. Publish a notice in a local newspaper
+Answer: C
+Explanation: Under Rule 7, the Committee cannot pass an ex-parte order or terminate proceedings unless a 15 days' written notice is given in advance to the defaulting party.
+
+Q20. Which of the following statements is/are correct regarding the representation of parties during an IC inquiry under Rule 7?
+
+1. The aggrieved woman can be represented by a legal practitioner.
+2. The respondent can be represented by a legal practitioner.
+3. No legal practitioner may represent any party at any stage.
+A. 1 only
+B. 2 only
+C. 3 only
+D. 1 and 2 only
+Answer: C
+Explanation: Rule 7 explicitly states that no legal practitioner may represent any party at any stage of the proceedings before the Committee.
+
+Q21. Due to the enactment of the Bharatiya Nyaya Sanhita, 2023 (BNS), any FIR for insulting the modesty of a woman registered on or after 1 July 2024 (previously Section 509 IPC) will now fall under which section?
+A. Section 75 BNS
+B. Section 79 BNS
+C. Section 354A BNS
+D. Section 509 BNS
+Answer: B
+Explanation: The statutory update notes that the offence of insulting the modesty of a woman, formerly under Section 509 IPC referenced in the POSH Act, now corresponds to Section 79 of the BNS, 2023.
+
+Q22. Consider the following statements about the POSH Act's annual report mechanism:
+
+1. The IC must submit an annual report to the employer and the District Officer.
+2. The employer must include the number of sexual harassment cases in their organisation's annual report.
+3. The District Officer forwards a brief report to the Central Government.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. 3 only
+D. 1 and 3 only
+Answer: C
+Explanation: Statement 3 is not correct; Section 21(2) states the District Officer shall forward a brief report on the annual reports received to the State Government, not the Central Government.
+
+Q23. In a Local Committee constituted under Section 6 of the POSH Act, 2013, the ex officio member shall be:
+A. The Superintendent of Police of the district
+B. The Chief Medical Officer of the district
+C. The concerned officer dealing with social welfare or women and child development in the district
+D. A Judicial Magistrate nominated by the High Court
+Answer: C
+Explanation: Section 7(1)(d) designates the concerned officer dealing with social welfare or women and child development in the district as an ex officio Member of the Local Committee.
+
+Q24. A nodal officer designated by the District Officer under Section 6(2) of the POSH Act receives a complaint in a rural tehsil. Within what time frame must this officer forward it to the Local Committee?
+A. 3 days
+B. 7 days
+C. 10 days
+D. 15 days
+Answer: B
+Explanation: Section 6(2) requires the nodal officer to receive complaints and forward them to the concerned Local Committee within seven days of receipt.
+
+Q25. Which of the following situations may NOT amount to sexual harassment under the contextual definitions provided in Section 3 of the POSH Act, 2013?
+A. Implied threat about present or future employment status
+B. Honest performance feedback documented in official appraisals without any sexual undertone
+C. Interference with work creating an intimidating work environment
+D. Humiliating treatment likely to affect the woman's health or safety in connection with sexual behavior
+Answer: B
+Explanation: Section 3(2) lists specific circumstances connected with sexual acts (preferential/detrimental treatment, threats, hostile environment). Honest, non-sexual performance feedback does not constitute sexual harassment.
+
+Q26. If a respondent is found guilty of sexual harassment and the IC recommends a monetary deduction from his salary under Section 13, but the deduction is not possible, what is the alternative recovery method?
+A. Imprisonment for up to 6 months
+B. Recovery of the sum as an arrear of land revenue
+C. Forfeiture of his personal immovable property directly by the IC
+D. Withholding of his entire provident fund
+Answer: B
+Explanation: Under Section 13(3), if salary deduction is not possible, the respondent may be directed to pay. On his failure to pay, the sum may be recovered as an arrear of land revenue.
+
+Q27. Consider the following statements regarding a repeat offence under Section 26 of the POSH Act, 2013:
+
+1. The employer is liable for twice the punishment imposed on the first conviction.
+2. The Government can cancel or withdraw the employer's business license.
+3. The employer is immune if the second offence happens after 5 years.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct as per Section 26(2). Statement 3 is incorrect; the Act specifies no such 5-year immunity clause for subsequent convictions.
+
+Q28. Under the POSH Act, 2013, what is the required quorum for conducting an inquiry by the Internal or Local Committee according to Rule 7?
+A. Minimum of two members
+B. Minimum of three members, including the Presiding Officer/Chairperson
+C. The Presiding Officer and the external member only
+D. All nominated members must be present
+Answer: B
+Explanation: Rule 7 requires a minimum of three Members of the Committee, including the Presiding Officer or the Chairperson, to be present to conduct the inquiry.
+
+Q29. A domestic worker faces sexual harassment at a dwelling place. According to Section 11(1) of the POSH Act, 2013, what is the mandated action by the Local Committee if a prima facie case exists?
+A. Initiate departmental inquiry against the head of the household
+B. Forward the complaint to the police within seven days for registering a case
+C. Negotiate a mandatory monetary settlement between the parties
+D. Refer the matter to a civil court for compensation
+Answer: B
+Explanation: Section 11(1) states that for a domestic worker, the Local Committee shall, if a prima facie case exists, forward the complaint to the police within seven days for registering a case.
+
+Q30. Which of the following best describes the "unorganised sector" as defined under Section 2(p) of the POSH Act, 2013?
+A. An enterprise employing fewer than ten workers
+B. An enterprise employing fewer than twenty workers
+C. Any private venture not registered under the Companies Act
+D. Any workplace without a recognised trade union
+Answer: A
+Explanation: Section 2(p) defines the "unorganised sector" as an enterprise owned by individuals or self-employed workers that employs fewer than ten workers.
+
+Q31. Consider the following regarding the SHe-Box portal launched by the Ministry of Women and Child Development:
+
+1. It is exclusively for women in the organised sector.
+2. It automatically routes complaints to the relevant Internal or Local Committee.
+3. It serves as a centralised digital platform for monitoring cases.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct. Statement 1 is incorrect because SHe-Box is accessible to any woman, whether in the organised or unorganised, public or private sector.
+
+Q32. During an IC inquiry, the respondent provides his reply to the complaint. Within how many days of receiving the copy of the complaint must he file this reply with supporting documents?
+A. 7 days
+B. 10 days
+C. 15 days
+D. 30 days
+Answer: B
+Explanation: Rule 7 mandates that the respondent shall file his reply, along with a list of documents and witnesses, within ten days of receiving the copy of the complaint.
+
+Q33. A Member of the Internal Committee is found guilty of a disciplinary offence. Which of the following is the correct action per Section 4(5) of the POSH Act?
+A. The Member is suspended until an appeal is resolved.
+B. The Member shall be removed and the vacancy filled by fresh nomination.
+C. The Member continues but loses voting rights.
+D. The employer must seek District Officer approval to remove the Member.
+Answer: B
+Explanation: Section 4(5) states that any Member found guilty of an offence or against whom proceedings are pending shall be removed, and the vacancy filled by fresh nomination.
+
+Q34. Are offences under the POSH Act, 2013 cognizable or non-cognizable?
+A. Cognizable and bailable
+B. Cognizable and non-bailable
+C. Non-cognizable
+D. Compoundable at the discretion of the police
+Answer: C
+Explanation: Section 27(3) explicitly declares that every offence under the POSH Act, 2013 shall be non-cognizable.
+
+Q35. What is the current statutory status of the Public Accountants' Defaults Act, 1850?
+A. It remains fully in force for Central Government employees.
+B. It was struck down by the Supreme Court in 2019.
+C. It was repealed by the Repealing and Amending Act, 2019.
+D. It was absorbed into the General Financial Rules, 2017.
+Answer: C
+Explanation: The Act stands repealed by the Repealing and Amending Act, 2019 (Act No. 31 of 2019), w.e.f. 8 August 2019, forming the first entry in its First Schedule.
+
+Q36. Consider the following statements regarding the repeal of the Public Accountants' Defaults Act, 1850:
+
+1. Fresh recovery proceedings can be initiated under this Act after 8 August 2019.
+2. Recovery proceedings validly initiated before the repeal are saved by Section 4 of the 2019 Act.
+3. The repeal revived older provincial rules regarding public accountants.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 2 is correct per Section 4 of the 2019 Act (Savings). Statement 1 is incorrect (no fresh proceedings post-repeal). Statement 3 is incorrect as the Act explicitly prohibits reviving anything not in force.
+
+Q37. Under Section 1 of the Public Accountants' Defaults Act, 1850, furnishing security for the due discharge of the office's trusts was:
+A. Discretionary for the appointing authority
+B. Mandatory for every public accountant
+C. Mandatory only for officials handling more than Rs. 1,00,000
+D. Applicable only to State Government servants
+Answer: B
+Explanation: Section 1 imposed a mandatory obligation ("Every public accountant shall give security") for the due discharge of trusts and due account of all moneys.
+
+Q38. According to Section 2 of the 1850 Act, if no special Act governed an office, who fixed the amount and kind of security to be furnished?
+A. The District Magistrate
+B. The Head of the Office
+C. The appointing authority of the public accountant
+D. The Accountant General of the State
+Answer: C
+Explanation: Section 2 stated that the security amount and kind shall be required by rules made "by the authority by which each public accountant is appointed to his office."
+
+Q39. Section 3 of the 1850 Act defined "public accountant" in two limbs. The second limb (for Sections 4 and 5) expressly included:
+A. Any person managing private lands for an Official Assignee
+B. Only treasury officers in Presidency towns
+C. Every person holding office in Central/State Government entrusted with Government money
+D. Chartered Accountants conducting statutory audits
+Answer: C
+Explanation: The second limb included any person who, by reason of an office held in Central or State Government service, was entrusted with receipt, custody, or control of Government money.
+
+Q40. Under Section 4 of the Public Accountants' Defaults Act, 1850, a loss or defalcation could be recovered summarily as if it were:
+A. An arrear of land revenue due to Government
+B. A fine imposed by a Judicial Magistrate
+C. An uncollateralized bank loan
+D. A default under the Indian Penal Code
+Answer: A
+Explanation: Section 4 allowed the head of the office to proceed against the accountant and sureties for any defalcation as if the amount were an arrear of land revenue due to Government.
+
+Q41. Consider the following statements about Section 4 of the 1850 Act:
+
+1. Only the public accountant could be proceeded against.
+2. The head of the office was competent to initiate the recovery.
+3. A regular civil suit was mandatory before declaring the loss as an arrear.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 2 is correct. Statement 1 is incorrect because proceedings could be against the accountant "and his sureties". Statement 3 is incorrect because the mechanism bypassed regular civil suits.
+
+Q42. What was the purpose of Section 5 of the Public Accountants' Defaults Act, 1850?
+A. To define the penalties for false accounting
+B. To validate all security rules made before 1850
+C. To apply land-revenue recovery laws to proceedings against the accountant and provide remedies for wrongful recovery
+D. To mandate the registration of all public accountants with the District Collector
+Answer: C
+Explanation: Section 5 applied all current and future land-revenue recovery enactments to these proceedings, including remedies for persons wrongfully proceeded against to recover damages.
+
+Q43. Following the repeal of the 1850 Act, which of the following is currently used by the Department of Posts to order recovery of pecuniary loss from a serving official?
+A. Section 6 of the 1850 Act
+B. Rule 11(iii) of the CCS (CCA) Rules, 1965
+C. The unamended Revenue Recovery Act, 1890 working in isolation
+D. Section 4 of the Repealing and Amending Act, 2019
+Answer: B
+Explanation: After the repeal, the Department relies on Rule 11(iii) of the CCS (CCA) Rules, 1965, which prescribes recovery from pay as a minor penalty for pecuniary loss caused by negligence.
+
+Q44. Which of the following best describes the core legal fiction created by the Public Accountants' Defaults Act, 1850?
+A. Treating a government employee as a civil court
+B. Treating departmental losses as arrears of land revenue for fast recovery
+C. Treating sureties as principal offenders under criminal law
+D. Treating defalcation as a non-cognizable offence
+Answer: B
+Explanation: The Act's power rested on the legal fiction in Section 4, treating departmental loss/defalcation as an "arrear of land revenue," thereby unlocking summary revenue-recovery machinery.
+
+Q45. Consider the following statements regarding the savings clause of the Repealing and Amending Act, 2019:
+
+1. It nullifies all recoveries completed under the 1850 Act prior to 2019.
+2. It saves liabilities that had already accrued under the repealed Act.
+3. It permits the initiation of new recovery proceedings under the 1850 Act for defalcations discovered in 2024.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 only
+C. 2 and 3 only
+D. 3 only
+Answer: B
+Explanation: Statement 2 is correct; Section 4 of the 2019 Act saves accrued liabilities and pending remedies. Statements 1 and 3 are incorrect; past acts are protected, but no fresh proceedings can be initiated.
+
+Q46. Section 6 of the Public Accountants' Defaults Act, 1850 dealt with the validation of former rules. What happened to this section?
+A. It was repealed in 2019 along with the rest of the Act.
+B. It was struck down by the High Court in 2002.
+C. It was repealed early by the Repealing Act, 1870.
+D. It was absorbed into the Constitution of India in 1950.
+Answer: C
+Explanation: Section 6, having served its transitional purpose of validating pre-1850 rules, was repealed long ago by the Repealing Act, 1870, leaving the Act effectively with five sections.
+
+Q47. If a postal pensioner is found guilty of grave misconduct leading to defalcation, under which current provision can recovery of the pecuniary loss be ordered from their pension?
+A. Rule 8 of the CCS (Pension) Rules, 2021
+B. Section 4 of the Public Accountants' Defaults Act, 1850
+C. The Laws Local Extent Act, 1874
+D. Section 11 of the POSH Act, 2013
+Answer: A
+Explanation: With the 1850 Act gone, Rule 8 of the CCS (Pension) Rules, 2021 permits withholding pension and ordering recovery of pecuniary loss where the pensioner is found guilty of grave misconduct.
+
+Q48. The phrase "mutatis mutandis" as applied conceptually to Section 5 of the 1850 Act meant that:
+A. Proceedings must be held in the local language.
+B. Land-revenue laws apply with necessary changes in forms of procedure.
+C. Sureties must be prosecuted before the principal accountant.
+D. A criminal FIR is a mandatory prerequisite to recovery.
+Answer: B
+Explanation: Section 5 applied land-revenue recovery laws "with such changes in the forms of procedure as are necessary to make them applicable to the case," effectively meaning mutatis mutandis.
+
+Q49. Consider the following regarding the pre-repeal application of the 1850 Act:
+
+1. The Head of Division (e.g., Superintendent of Post Offices) usually acted as the head of the office.
+2. Proper quantification of the amount was required before proceeding with revenue recovery.
+3. The official had no remedy if wrongfully proceeded against.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct (supported by case law like Sajeesh G.). Statement 3 is incorrect because Section 5 explicitly applied laws allowing recovery of damages by a person wrongfully proceeded against.
+
+Q50. Does the Revenue Recovery Act, 1890, standing alone, convert a postal official's defalcation into an "arrear of land revenue" today?
+A. Yes, Section 3 of the 1890 Act explicitly defines it so.
+B. Yes, by order of the District Magistrate.
+C. No, because the 1890 Act is merely a recovery machinery and requires another law to classify the due as an arrear.
+D. No, because the 1890 Act was repealed in 2019.
+Answer: C
+Explanation: The 1890 Act is a machinery law for Collectors. Since the repeal of the 1850 Act, there is no general statutory provision converting postal defalcation into an arrear; hence the 1890 Act cannot be used by itself for this.
+
+Q51. What specific date did the Repealing and Amending Act, 2019 receive the assent of the President?
+A. 22 March 1850
+B. 14 February 1890
+C. 8 August 2019
+D. 31 October 2019
+Answer: C
+Explanation: The Repealing and Amending Act, 2019 (Act No. 31 of 2019) received the assent of the President on 8 August 2019.
+
+Q52. Under the historical scheme of the 1850 Act, what types of security could the appointing authority demand from a public accountant?
+A. Only personal sureties
+B. Only real (immovable) property
+C. Real or personal, or both
+D. Only cash deposits
+Answer: C
+Explanation: Section 2 explicitly provided that the security given shall be of such amount and kind, "real or personal, or both", and with such sureties as required by rules.
+
+Q53. A Head of Office uncovers a defalcation committed by a Sub Postmaster in 1848. Why was the 1850 Act's Section 6 significant at that time?
+A. It exempted pre-1850 frauds.
+B. It validated security-related rules made prior to the enactment of the 1850 Act.
+C. It introduced a statute of limitations for recoveries.
+D. It defined the term "defalcation".
+Answer: B
+Explanation: Section 6 originally validated security-related rules made before 1850, serving a transitional purpose before being repealed in 1870.
+
+Q54. Consider the following statement: "The Repealing and Amending Act, 2019 sweeps away dead statutes without disturbing things already done under them." Which section of the 2019 Act provides this legal cover?
+A. Section 1
+B. Section 2
+C. Section 4
+D. The First Schedule
+Answer: C
+Explanation: Section 4 of the Repealing and Amending Act, 2019 is the savings clause that expressly saves past acts, accrued liabilities, and pending remedies.
+
+Q55. Which of the following High Court judgments affirmed that recovery proceedings under the 1850 Act against a postal employee could be pursued via the State revenue recovery machinery?
+A. Vishaka v. State of Rajasthan
+B. Superintendent of Post Offices v. Annie Mathew
+C. Aureliano Fernandes v. State of Goa
+D. Sajeesh G. v. Union of India
+Answer: B
+Explanation: In Superintendent of Post Offices v. Annie Mathew, the Kerala HC held that defalcated amounts were recoverable as arrears of land revenue under the 1850 Act using State machinery.
+
+Q56. Under the first limb of Section 3 of the 1850 Act (relevant for Sections 1 and 2), which of the following designations was specifically mentioned?
+A. District Collector
+B. Official Assignee or sarbarahkar
+C. Postmaster General
+D. Superintendent of Police
+Answer: B
+Explanation: The first limb of Section 3 defined a public accountant as any person who as "Official Assignee or Trustee, or as sarbarahkar," is entrusted with money/property belonging to others.
+
+Q57. A public accountant under the 1850 Act was defined primarily by:
+A. Having a degree in chartered accountancy
+B. Being appointed directly by the Governor-General
+C. Being entrusted with receipt, custody, or control of moneys or securities
+D. Working exclusively in a Presidency-town
+Answer: C
+Explanation: The Act defined a public accountant not by qualification but by the function of being entrusted with the receipt, custody, or control of money, securities, or land.
+
+Q58. Which of the following statements is/are correct regarding the forms of security historical postal officials provided?
+
+1. The 1850 Act itself listed the exact monetary limits for postal securities.
+2. Departmental rules and codal provisions fixed the quantum of security.
+3. Security bonds and fidelity guarantees are still required by current departmental instructions.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 2 and 3 are correct. Statement 1 is incorrect; Section 2 of the 1850 Act left the amount and kind to be fixed by rules made by the appointing authority, not by the Act itself.
+
+Q59. If a Government servant caused a loss but the 1850 Act was repealed, which action remains legally viable for recovery today?
+A. Civil suit for recovery
+B. Criminal prosecution under Prevention of Corruption Act
+C. Enforcing a security bond as a contract
+D. All of the above
+Answer: D
+Explanation: Even with the 1850 Act repealed, civil suits, criminal action, enforcing security/fidelity bonds, and CCS Rules remain currently in-force routes for recovery.
+
+Q60. Why is the 1850 Act still studied in departmental examinations despite its repeal?
+A. It still governs the recovery of municipal taxes.
+B. Its savings clause permits new cases to be filed under it until 2030.
+C. It holds historical importance, is referenced in older departmental instructions and case law, and tests awareness of statutory status.
+D. It was revived by the Supreme Court in 2023.
+Answer: C
+Explanation: The study notes state the Act is covered for its historical importance, understanding older instructions/case law, and because questions on the status of statutes (repealed vs active) frequently appear in exams.
+
+Q61. Under the second limb of Section 3 of the 1850 Act, the words "Central Government or the Government of a State" were:
+A. Present in the original 1850 bare text
+B. Adaptations made after 1947/1950
+C. Inserted by the POSH Act, 2013
+D. Inserted by the Repealing Act, 1870
+Answer: B
+Explanation: The words "Central Government or the Government of a State" reflect adaptations made after 1947/1950 to the original 1850 text to align with the post-independence constitutional structure.
+
+Q62. Consider the following statements about "defalcation" as used in Section 4 of the 1850 Act:
+
+1. It refers strictly to late attendance by the accountant.
+2. It encompasses embezzlement or misappropriation of accounts.
+3. It required a prior conviction by a criminal court before Section 4 could be invoked.
+Which of the statements given above is/are not correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statements 1 and 3 are not correct. Defalcation means embezzlement/misappropriation. The summary procedure of Section 4 did not wait for a criminal conviction; it treated the loss directly as a revenue arrear.
+
+Q63. The object of the Public Accountants' Defaults Act, 1850, as stated in its preamble, was:
+A. For better calculation of land revenue
+B. For better avoidance of loss through the default of public accountants
+C. For standardizing accounting practices in the Provinces
+D. For exempting public accountants from civil liability
+Answer: B
+Explanation: The preamble plainly states: "For better avoidance of loss through the default of public accountants."
+
+Q64. According to the Laws Local Extent Act, 1874, the 1850 Act originally extended to all Provinces of India EXCEPT:
+A. Presidency of Madras
+B. Presidency of Bombay
+C. The Scheduled Districts
+D. United Provinces
+Answer: C
+Explanation: The Act was declared to be in force in all Provinces of India except the Scheduled Districts by the Laws Local Extent Act, 1874 (though later extended to some via notifications).
+
+Q65. If a modern examination asks for the legislative authority of the Repealing and Amending Act, 2019, how many total Acts did it repeal?
+A. 12
+B. 31
+C. 58
+D. 1850
+Answer: C
+Explanation: The study notes explicitly state that the Repealing and Amending Act, 2019 repealed 58 Acts in all and made minor amendments to two others.
+
+Q66. Under the 1850 Act, who among the following could face recovery proceedings alongside the defaulting public accountant?
+A. His immediate supervisor
+B. His family members
+C. His sureties
+D. The appointing authority
+Answer: C
+Explanation: Section 4 empowered the head of the office to proceed against both "such public accountant and his sureties".
+
+Q67. Under the Repealing and Amending Act, 2019, if an old rule referenced the 1850 Act, what is the effect of the repeal?
+A. The rule becomes entirely void.
+B. The repeal does not affect any other enactment in which the repealed Act has been applied or referred to.
+C. The rule must be re-published within 30 days.
+D. All proceedings under that rule must be immediately dropped.
+Answer: B
+Explanation: Section 4 of the 2019 Act (Savings) clarifies that the repeal does not affect any other enactment in which the repealed Act has been applied, incorporated, or referred to.
+
+Q68. What is the current territorial extent of the Revenue Recovery Act, 1890?
+A. Whole of India except the State of Jammu and Kashmir
+B. Whole of India, as it was made applicable to UTs of J&K and Ladakh w.e.f. 31-10-2019
+C. Only the territories that were part of British India in 1890
+D. Whole of India except the North-Eastern States
+Answer: B
+Explanation: While the bare Act text still reads "except the State of Jammu and Kashmir," Notification S.O. 3912(E) dated 30-10-2019 extended it to the UTs of J&K and Ladakh, covering the whole of India.
+
+Q69. Under Section 2(3) of the Revenue Recovery Act, 1890, the definition of a "defaulter" explicitly includes:
+A. The legal heir of the principal debtor
+B. The District Collector
+C. A surety for the payment of the arrear
+D. A public accountant only
+Answer: C
+Explanation: Section 2(3) states that "defaulter" means a person from whom an arrear is due, and "includes a person who is responsible as surety for the payment of any such arrear."
+
+Q70. Which of the following is correct regarding the definition of "District" under Section 2(1) of the RRA, 1890?
+A. It excludes urban municipalities.
+B. It is limited strictly to rural land-revenue divisions.
+C. It includes a presidency-town.
+D. It applies only to areas governed by a District Magistrate.
+Answer: C
+Explanation: Section 2(1) clearly specifies that "district" includes a presidency-town (e.g., historical Calcutta, Madras, Bombay).
+
+Q71. Consider the following statements about the Certificate mechanism under Section 3 of the RRA, 1890:
+
+1. It allows a Collector to recover dues from a defaulter located in another district.
+2. The receiving Collector treats the certificate as if the arrear accrued in his own district.
+3. The certificate is merely advisory and requires a fresh investigation by the receiving Collector.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Statement 3 is incorrect because Section 3(2) mandates that the certificate is "conclusive proof" of the matters stated, preventing the receiving Collector from investigating.
+
+Q72. Who is authorized to sign the recovery certificate under Section 3(2) of the Revenue Recovery Act, 1890?
+A. Only the Collector personally
+B. The Collector or any officer to whom he delegates this duty by order in writing
+C. The District Judge
+D. The Chief Secretary of the State
+Answer: B
+Explanation: Section 3(2) provides that the certificate may be signed by the Collector making it, or by any officer to whom he delegates this duty by order in writing.
+
+Q73. If a person faces recovery under a Section 3 certificate and denies his liability, what must he do to maintain a civil suit for refund under Section 4?
+A. File a police complaint against the Collector
+B. Pay the amount under written protest made at the time of payment
+C. Obtain a stay order from the High Court within 7 days
+D. Refuse to pay and wait for property attachment
+Answer: B
+Explanation: Section 4(1) states that the defaulter must pay the amount under written protest, made at the time of payment and signed by him, to maintain a suit for repayment.
+
+Q74. Under Section 4 of the RRA, 1890, in which court must the defaulter file the suit for repayment?
+A. A Civil Court having jurisdiction in the local area where the recovering Collector's office is situated
+B. A Civil Court having jurisdiction in the local area where the office of the Collector who made the certificate is situated
+C. The High Court of the State where property was attached
+D. The Supreme Court of India
+Answer: B
+Explanation: Section 4(2) dictates that the suit must be instituted in a Civil Court having jurisdiction in the local area where the office of the Collector who made the certificate is situated.
+
+Q75. Consider the following statements about Section 4(3) of the RRA, 1890:
+
+1. The plaintiff cannot give evidence contradicting the certificate.
+2. The plaintiff may give evidence on any matter stated in the certificate despite the "conclusive proof" rule.
+3. The suit is decided according to the law of the place where the arrear accrued.
+Which of the statements given above is/are correct?
+A. 1 and 3 only
+B. 2 and 3 only
+C. 2 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct. Section 4(3) allows the plaintiff to give evidence on any matter in the certificate in the civil suit, notwithstanding the "conclusive proof" rule binding the Collector.
+
+Q76. Section 5 of the RRA, 1890 allows which of the following entities to "borrow" the Collector's recovery powers?
+A. Only private banks
+B. Any public officer or local authority seeking to recover a sum recoverable as an arrear of land revenue
+C. Non-Governmental Organizations (NGOs)
+D. Private landlords
+Answer: B
+Explanation: Section 5 empowers the Collector, on the request of any public officer (other than a Collector) or local authority, to recover sums recoverable as land revenue.
+
+Q77. Under Section 6 of the RRA, 1890, what is the effect of the Collector issuing a proclamation on the defaulter's immovable property?
+A. It immediately transfers ownership to the Government.
+B. It prohibits the transfer or charging of the property.
+C. It forces the defaulter to vacate the premises within 24 hours.
+D. It cancels all pre-existing mortgages unconditionally.
+Answer: B
+Explanation: Section 6(1) states that the Collector may issue a proclamation prohibiting the transfer or charging of any immovable property of the defaulter in the district.
+
+Q78. According to Section 6(3) of the RRA, 1890, any private alienation of the property made after the proclamation and before its withdrawal is:
+A. Valid if registered
+B. Voidable at the option of the defaulter
+C. Void as against the Government and any purchaser at the recovery sale
+D. Valid if made to a family member
+Answer: C
+Explanation: Section 6(3) explicitly dictates that any private alienation made after the proclamation and before withdrawal is void as against the Government and the recovery sale purchaser.
+
+Q79. Consider the following regarding Section 6(4) of the RRA, 1890:
+
+1. Only the interest of the defaulter alone may be proceeded against.
+2. Encumbrances created in good faith by the defaulter are automatically invalidated.
+3. Good faith contracts are protected despite proceedings against the defaulter's interest.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 3 only
+Answer: B
+Explanation: Statements 1 and 3 are correct. Section 6(4) limits proceedings to the defaulter's interest and explicitly saves encumbrances/grants/contracts entered into in good faith.
+
+Q80. How must a proclamation under Section 6 of the RRA, 1890 be publicized?
+A. By publishing in the Official Gazette only
+B. By sending an SMS to the defaulter
+C. By beat of drum (or customary method) and posting a copy at a conspicuous place in/near the property
+D. By national television broadcast
+Answer: C
+Explanation: Section 6(5) requires the proclamation to be made by beat of drum or other customary method, and by posting a copy at a conspicuous place in or near the property.
+
+Q81. Which of the following actions is strictly prohibited by Section 7(b) of the Revenue Recovery Act, 1890?
+A. Recovery of arrears from a surety
+B. Issuing a certificate to a Collector in another State
+C. Arrest of any person for the recovery of any tax payable to a municipal corporation or local board
+D. Withdrawing a property proclamation
+Answer: C
+Explanation: Section 7(b) is a vital saving clause that states nothing in the Act shall authorize the arrest of any person for the recovery of any municipal or local-body tax.
+
+Q82. Sections 8 and 9 of the Revenue Recovery Act, 1890 contain historical/reciprocity provisions regarding recovery of demands arising in:
+A. Sri Lanka and Nepal
+B. Areas outside India, Burma, and Pakistan
+C. The United Kingdom
+D. The Princely States only
+Answer: B
+Explanation: Section 8 deals with areas under Central Government administration outside India, and Section 9 (read with 9(3)) deals specifically with reciprocal recovery arrangements with Burma and Pakistan.
+
+Q83. Under Section 10 of the RRA, 1890, what must the recovering Collector do with the recovered money?
+A. Retain it in his district's treasury permanently
+B. Remit it to the issuing Collector after deducting his expenses
+C. Send it directly to the Consolidated Fund of India
+D. Distribute it among the local panchayats
+Answer: B
+Explanation: Section 10 mandates that the recovering Collector shall remit the sum recovered to the issuing Collector, after deducting his expenses in connection with the matter.
+
+Q84. What essential details must the Section 3 certificate (per the Schedule) contain?
+A. The defaulter's name, the amount payable, and the account on which it is due
+B. The defaulter's entire employment history
+C. The biometric data of the surety
+D. A copy of the original contract
+Answer: A
+Explanation: Section 3(1) and the Schedule form require the certificate to state the name of the defaulter, particulars to identify him, the amount payable, and the account on which it is due.
+
+Q85. Consider the following statements regarding the application of the RRA, 1890:
+
+1. State amendments to the Act alter the Central text across the whole of India.
+2. The Act serves as a procedural machinery, not a charging statute.
+3. The certificate restricts the recovering Collector from questioning the debt's validity.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statements 2 and 3 are correct. Statement 1 is incorrect because State amendments operate only within that specific State and do not alter the Central text applied elsewhere.
+
+Q86. A certificate is issued by the Collector of Erode to the Collector of Chennai under Section 3. Under the RRA, 1890, what is the status of the Collector of Chennai?
+A. An appellate authority
+B. A reviewing officer who determines if the debt is genuine
+C. A collecting agent who proceeds as if the arrear accrued in Chennai
+D. A judicial magistrate holding a trial
+Answer: C
+Explanation: Section 3(3) and Section 10 make the receiving Collector a collecting agent who recovers the amount as if the arrear accrued in his own district, without questioning it.
+
+Q87. A person pays a recovered amount but merely expresses oral dissatisfaction to the Collector. Can he subsequently maintain a civil suit under Section 4 of the RRA, 1890?
+A. Yes, oral protest is sufficient if recorded on video.
+B. No, the protest must be in writing, made at the time of payment, and signed.
+C. Yes, if he files the suit within 3 days.
+D. No, because civil suits are completely barred under the Act.
+Answer: B
+Explanation: Section 4(1) strictly requires that the person must pay the amount under written protest, made at the time of payment and signed by him, to institute a suit.
+
+Q88. Which of the following triggers the deemed withdrawal of a proclamation under Section 6(2) of the RRA, 1890?
+A. The expiry of 30 days from the date of proclamation
+B. A verbal request by the defaulter
+C. Recovery of the certificate amount, or sale of the property for that recovery
+D. The transfer of the recovering Collector
+Answer: C
+Explanation: Section 6(2) states the proclamation is deemed withdrawn once either the certificate amount is recovered, or the property is sold for that recovery.
+
+Q89. Consider the following statements regarding Section 7(a) of the RRA, 1890:
+
+1. It overrides all other revenue-recovery laws in force.
+2. It explicitly states the Act does not impair any security provided by other revenue laws.
+3. It limits recovery strictly to immovable property.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 2 is correct. Section 7(a) is a saving clause declaring that nothing in the Act shall impair any security or affect provisions of any other land-revenue recovery enactment.
+
+Q90. Which statutory requirement must be met before the Central Government directs recovery of Burma revenue arrears in India under Section 9(1)?
+A. Approval of the United Nations
+B. Satisfaction that a reciprocal remedy is available to a person under Burma law
+C. Payment of an advance fee by the Burma government
+D. Sanction of the Supreme Court of India
+Answer: B
+Explanation: The proviso to Section 9(1) mandates that such direction shall not be given unless the Central Government is satisfied that a reciprocal remedy is available under Burma law.
+
+Q91. What is the date of enactment (assent) of the Revenue Recovery Act, 1890?
+A. 14 February 1890
+B. 22 March 1850
+C. 1 January 1891
+D. 31 October 2019
+Answer: A
+Explanation: The date in square brackets in the bare act preamble, which is the date of assent/enactment, is 14th February 1890. (It does not have a separate commencement section).
+
+Q92. If a local authority in a district requests the Collector to recover a sum as an arrear of land revenue under Section 5, what must the Collector do?
+A. Reject it unless approved by the State Government
+B. Proceed to recover the sum as if it were an arrear of land revenue accrued in his own district
+C. Conduct a civil trial to verify the local authority's claim
+D. Advise the local authority to use its own recovery officers
+Answer: B
+Explanation: Section 5 directs that the Collector "shall", on the request of the local authority, proceed to recover the sum as if it were an arrear of land-revenue accrued in his own district.
+
+Q93. A defaulter owes money in District X but only has property in District Y. Which section of the RRA, 1890 empowers the Collector of X to send a certificate to District Y?
+A. Section 2
+B. Section 3
+C. Section 5
+D. Section 7
+Answer: B
+Explanation: Section 3 is the core provision that creates the certificate mechanism for recovering public demands in districts other than those in which they become payable.
+
+Q94. Consider the following regarding the liability of a surety under the RRA, 1890:
+
+1. The surety is legally treated as a defaulter.
+2. Recovery can be initiated against the surety's property in another district.
+3. The surety is immune if the primary debtor is deceased.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statements 1 and 2 are correct. Section 2(3) explicitly includes a surety in the definition of "defaulter", making them subject to the cross-district recovery mechanism of Section 3.
+
+Q95. The historical "presidency-towns" (Calcutta, Madras, Bombay) are treated as what under the Revenue Recovery Act, 1890?
+A. Independent States
+B. Scheduled Districts
+C. Districts
+D. Foreign territories
+Answer: C
+Explanation: Under Section 2(1), the definition of "District" explicitly includes a presidency-town.
+
+Q96. A certificate sent under Section 3 of the RRA, 1890 must be formatted:
+A. Exactly as determined by the receiving Collector
+B. As nearly as may be in the form given in the Schedule to the Act
+C. As a sworn affidavit notarized by a Magistrate
+D. Only as an electronic PDF document
+Answer: B
+Explanation: Section 3(1) states the Collector may send a certificate "in the form as nearly as may be of the Schedule" to the other Collector.
+
+Q97. An Assistant Collector in Uttar Pradesh exercises the powers of a Collector under the RRA, 1890 due to U.P. Act 11 of 1965. Does this State amendment grant Assistant Collectors in Tamil Nadu the same power?
+A. Yes, because it modifies the Central Act everywhere.
+B. No, State amendments operate only within that specific State.
+C. Yes, if the President approves it.
+D. No, unless the Central Government issues a Gazette notification.
+Answer: B
+Explanation: As clarified in the study notes, State amendments operate only within that State and do not alter the Central Act's application elsewhere.
+
+Q98. During a recovery proceeding under the RRA, 1890, an aggrieved person pays without any written protest, assuming he can file a suit later. Under Section 4, what is the consequence?
+A. He can file the suit within 3 years.
+B. He loses the statutory right to institute a suit for repayment under this Act.
+C. He must appeal to the District Collector.
+D. He can file a suit but must pay a penalty.
+Answer: B
+Explanation: The right to sue for repayment under Section 4(1) strictly requires that the person "pays the amount under protest... made at the time of payment". Failure extinguishes this specific statutory remedy.
+
+Q99. Which of the following officials is designated to administer the land-revenue machinery at the district level under Section 2(2) of the RRA, 1890?
+A. District Judge
+B. Superintendent of Police
+C. Collector
+D. Sub-Divisional Magistrate
+Answer: C
+Explanation: Section 2(2) defines "Collector" as the chief officer in charge of the land-revenue administration of a district.
+
+Q100. A public officer (other than a Collector) needs to recover a sum as an arrear of land revenue from a defaulter in a different district. According to Section 5, what is the correct procedure?
+A. The officer issues a certificate directly to the other district's Collector.
+B. The officer requests his local Collector, who then forwards a Section 3 certificate to the other district's Collector.
+C. The officer files a civil suit in the other district.
+D. The officer requests the local police to arrest the defaulter.
+Answer: B
+Explanation: Section 5 states the local Collector acts on the officer's request and may forward a certificate to the Collector of another district under Section 3, as if the sum were payable to himself.

@@ -92,6 +92,23 @@ export default function DeveloperPage() {
                         </div>
                     </div>
 
+                    {/* Switch Course Modes (Direct Admin Action) */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
+                        <div className="flex items-start justify-between mb-4">
+                            <div className="p-3 bg-pink-100 dark:bg-pink-900/30 rounded-xl text-pink-600 dark:text-pink-400 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                                <Repeat className="w-6 h-6" />
+                            </div>
+                            <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-pink-100 dark:bg-zinc-800 text-pink-700 dark:text-pink-400 rounded-md">Actions</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Switch Course Modes</h3>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">Directly switch the course mode of paid users.</p>
+                        <div className="flex flex-col gap-2">
+                            <Link href="/developer/switch-course" className="w-full py-2 px-4 rounded-lg bg-pink-50 dark:bg-pink-900/10 text-pink-600 dark:text-pink-400 font-medium hover:bg-pink-100 dark:hover:bg-pink-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
+                                <Repeat className="w-4 h-4" /> Manage Courses
+                            </Link>
+                        </div>
+                    </div>
+
                     {/* 3. Manage System/Things */}
                     <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
                         <div className="flex items-start justify-between mb-4">
