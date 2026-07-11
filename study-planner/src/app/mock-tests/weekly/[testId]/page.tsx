@@ -473,6 +473,8 @@ const MemoizedMobileContent = memo(({
 export default function WeeklyMockTestRunner({ params, searchParams }: PageProps) {
     // Unwrap params using React.use()
     const { testId } = use(params);
+    const resolvedSearchParams = use(searchParams);
+    const isReattempt = resolvedSearchParams?.reattempt === 'true';
     const router = useRouter();
 
     const [questions, setQuestions] = useState<Question[]>([]);
@@ -563,7 +565,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                     if (session.name) setUserName(session.name);
 
                     // Check for previous submission (Strictly single attempt)
-                    if (email) {
+                    // Skip this check in reattempt mode so the user gets a fresh test
+                    if (email && !isReattempt) {
                         try {
                             const statusRes = await fetch('/api/mock-test/live/status', {
                                 method: 'POST',
@@ -608,8 +611,16 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             if (userRole === 'admin') {
                 setIsAuthorized(true); // Admins bypass everything
             } else {
-                if (!isLiveWindow) {
+                if (!isLiveWindow && !isReattempt) {
+                    // Block access if test is not live AND this is not a reattempt
                     alert("This mock test is only accessible during its live schedule.");
+                    router.push("/mock-tests");
+                    return;
+                }
+
+                // For reattempts, ensure the test has actually ended (not upcoming)
+                if (isReattempt && !isEnded) {
+                    alert("Reattempts are only available after the test window has ended.");
                     router.push("/mock-tests");
                     return;
                 }
@@ -655,7 +666,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         };
 
         loadTest();
-    }, [testId, router]);
+    }, [testId, router, isReattempt]);
 
     // OPTIMIZED Timer Logic - prevents constant re-subscriptions
     useEffect(() => {
