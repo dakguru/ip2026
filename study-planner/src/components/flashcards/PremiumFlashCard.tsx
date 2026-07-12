@@ -18,6 +18,17 @@ interface PremiumFlashCardProps {
     onBookmarkToggle?: () => void;
 }
 
+// Scale the type down as the text grows so long questions/answers still fit the card.
+// Normal-length questions keep the original size; only genuinely long ones shrink.
+const getTextSizeClass = (text: string): string => {
+    const len = text.length;
+    if (len > 550) return "text-xs md:text-sm leading-snug";
+    if (len > 380) return "text-sm md:text-base leading-snug";
+    if (len > 240) return "text-base md:text-lg leading-snug";
+    if (len > 130) return "text-lg md:text-xl leading-tight";
+    return "text-xl md:text-2xl leading-tight";
+};
+
 export default function PremiumFlashCard({
     question,
     answer,
@@ -67,33 +78,33 @@ export default function PremiumFlashCard({
         >
             <div className={styles.flashcardInner}>
                 {/* FRONT SIDE */}
-                <div className={clsx(styles.flashcardFront, getThemeClass(), "dark:!bg-[#0a0a0a] dark:!bg-none dark:border-white/5 dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]")}>
+                <div className={clsx(styles.flashcardFront, getThemeClass())}>
                     <div className={clsx(styles.watermark, "dark:opacity-10 dark:invert")} />
 
-                    <div className={styles.contentContainer}>
-                        <div className={styles.header}>
-                            <div className={clsx(styles.tag, "dark:bg-white/5")}>{category || theme}</div>
-                            <button
-                                className={clsx(styles.iconButton, isBookmarked && styles.active, "active:scale-90 transition-transform")}
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    onBookmarkToggle?.();
-                                }}
-                                onPointerDown={(e) => e.stopPropagation()}
-                                onTouchStart={(e) => e.stopPropagation()}
-                                aria-label="Mark for revision"
-                            >
-                                <Bookmark className={clsx("w-5 h-5", isBookmarked && "fill-current")} />
-                            </button>
-                        </div>
+                    <div className={styles.header}>
+                        <div className={clsx(styles.tag, "dark:bg-white/5")}>{category || theme}</div>
+                        <button
+                            className={clsx(styles.iconButton, isBookmarked && styles.active, "active:scale-90 transition-transform")}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                onBookmarkToggle?.();
+                            }}
+                            onPointerDown={(e) => e.stopPropagation()}
+                            onTouchStart={(e) => e.stopPropagation()}
+                            aria-label="Mark for revision"
+                        >
+                            <Bookmark className={clsx("w-5 h-5", isBookmarked && "fill-current")} />
+                        </button>
+                    </div>
 
+                    <div className={clsx(styles.contentContainer, styles.backScroll)}>
                         <div className={clsx(styles.questionText, "dark:text-slate-50")}>
-                            <FormattedQuestionText text={question} className="text-xl md:text-2xl font-black text-slate-800 dark:text-white leading-tight" />
+                            <FormattedQuestionText text={question} className={clsx(getTextSizeClass(question), "font-black text-slate-800 dark:text-white")} />
                         </div>
                     </div>
 
                     <div className={clsx(styles.footer, "dark:border-white/5")}>
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Question</span>
+                        <span className={styles.footerLabel}>Question</span>
                         <div className={styles.iconButton}>
                             <RotateCcw className="w-4 h-4" />
                         </div>
@@ -101,50 +112,48 @@ export default function PremiumFlashCard({
                 </div>
 
                 {/* BACK SIDE */}
-                <div className={clsx(styles.flashcardBack, getThemeClass(), "dark:!bg-[#0a0a0a] dark:!bg-none dark:border-white/5 dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]")}>
+                <div className={clsx(styles.flashcardBack, getThemeClass())}>
                     <div className={clsx(styles.watermark, "dark:opacity-10 dark:invert")} />
 
-                    <div className={styles.contentContainer}>
-                        <div className={styles.header}>
-                            <div className={clsx(styles.tag, "dark:bg-white/5")}>{category || theme}</div>
-                            <button
-                                className={clsx(styles.iconButton, isBookmarked && styles.active, "active:scale-90 transition-transform")}
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    onBookmarkToggle?.();
-                                }}
-                                onPointerDown={(e) => e.stopPropagation()}
-                                onTouchStart={(e) => e.stopPropagation()}
-                                aria-label="Mark for revision"
-                            >
-                                <Bookmark className={clsx("w-5 h-5", isBookmarked && "fill-current")} />
-                            </button>
-                        </div>
+                    <div className={styles.header}>
+                        <div className={clsx(styles.tag, "dark:bg-white/5")}>{category || theme}</div>
+                        <button
+                            className={clsx(styles.iconButton, isBookmarked && styles.active, "active:scale-90 transition-transform")}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                onBookmarkToggle?.();
+                            }}
+                            onPointerDown={(e) => e.stopPropagation()}
+                            onTouchStart={(e) => e.stopPropagation()}
+                            aria-label="Mark for revision"
+                        >
+                            <Bookmark className={clsx("w-5 h-5", isBookmarked && "fill-current")} />
+                        </button>
+                    </div>
 
-                        <div className={clsx(styles.answerText, "dark:text-blue-400")}>
-                            <FormattedQuestionText text={answer} className="text-xl md:text-2xl font-black text-indigo-900 dark:text-blue-400 leading-tight" />
-                        </div>
+                    <div className={clsx(styles.contentContainer, styles.backScroll)}>
+                        <div className={styles.backCenter}>
+                            <div className={clsx(styles.answerText, "dark:text-blue-400")}>
+                                <FormattedQuestionText text={answer} className={clsx(getTextSizeClass(answer), "font-black text-indigo-900 dark:text-blue-400")} />
+                            </div>
 
-                        {explanation && (
-                            <div className={clsx(styles.explanationBox, "dark:!bg-white/10 dark:!border-white/10")} onClick={(e) => e.stopPropagation()}>
-                                <div className="flex items-center gap-2 mb-1.5 font-black text-[9px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-300">
-                                    <Info className="w-3 h-3" /> Explanation
-                                </div>
-                                <div
-                                    className={clsx(styles.explanationContent, "dark:[&::-webkit-scrollbar-thumb]:bg-slate-600")}
-                                    onPointerDown={(e) => e.stopPropagation()}
-                                    onTouchStart={(e) => e.stopPropagation()}
-                                >
-                                    <div className="text-[12px] md:text-[13px] font-medium text-slate-600 dark:text-slate-100 leading-snug">
-                                        <FormattedQuestionText text={explanation} className="space-y-2 dark:text-slate-100 text-slate-600" />
+                            {explanation && (
+                                <div className={styles.explanationBox} onClick={(e) => e.stopPropagation()}>
+                                    <div className={clsx(styles.explLabel, "flex items-center gap-2 mb-1.5 font-black text-[9px] uppercase tracking-[0.2em]")}>
+                                        <Info className="w-3 h-3" /> Explanation
+                                    </div>
+                                    <div className={styles.explanationContent}>
+                                        <div className="text-[12px] md:text-[13px] font-medium text-slate-600 dark:text-slate-100 leading-snug">
+                                            <FormattedQuestionText text={explanation} className="space-y-2 dark:text-slate-100 text-slate-600" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
 
                     <div className={clsx(styles.footer, "dark:border-white/5")}>
-                        <span className="text-[10px] font-bold text-blue-500/70 uppercase tracking-widest">Correct Answer</span>
+                        <span className={styles.footerLabel}>Correct Answer</span>
                         <div className={styles.iconButton}>
                             <RotateCcw className="w-4 h-4" />
                         </div>

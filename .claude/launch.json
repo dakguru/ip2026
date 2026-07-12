@@ -5,7 +5,8 @@
       "name": "study-planner",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--prefix", "study-planner"],
-      "port": 3000
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }

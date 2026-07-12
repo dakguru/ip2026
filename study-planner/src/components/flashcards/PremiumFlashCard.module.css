@@ -2,9 +2,9 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5.5;
-  perspective: 1200px;
+  perspective: 1600px;
   cursor: pointer;
-  border-radius: 24px;
+  border-radius: 26px;
   outline: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
@@ -14,8 +14,9 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.62s cubic-bezier(0.45, 0.05, 0.18, 1);
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .flipped .flashcardInner {
@@ -27,19 +28,67 @@
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
-  border-radius: 24px;
+  -webkit-backface-visibility: hidden;
+  border-radius: 26px;
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 1.35rem;
   overflow: hidden;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--card-border, rgba(15, 23, 42, 0.06));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 22px 48px -22px var(--glow, rgba(2, 6, 23, 0.22)),
+    0 6px 16px -10px rgba(2, 6, 23, 0.08);
 }
 
 .flashcardBack {
   transform: rotateY(180deg);
-  background: #fdfdfd;
+}
+
+/* Safari/WebKit fix + buttery flip: backface-visibility is unreliable when a face
+   contains a scrollable container, letting the hidden side bleed through mirrored.
+   Instead, cross-fade the faces in sync with the 0.62s rotation:
+   - outgoing face fades out fully BEFORE the card reaches edge-on (~0.31s),
+   - incoming face only starts appearing AFTER edge-on,
+   so a mirrored face can never be visible in either direction, even for a frame. */
+.flashcardFront {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s cubic-bezier(0.3, 0, 0.2, 1) 0.24s, visibility 0s linear 0.24s;
+  will-change: opacity;
+}
+
+.flipped .flashcardFront {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.7, 1), visibility 0s linear 0.2s;
+}
+
+.flashcardBack {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.7, 1), visibility 0s linear 0.2s;
+  will-change: opacity;
+}
+
+.flipped .flashcardBack {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s cubic-bezier(0.3, 0, 0.2, 1) 0.24s, visibility 0s linear 0.24s;
+}
+
+/* Premium accent bar along the top edge (theme-coloured) */
+.flashcardFront::after,
+.flashcardBack::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent, #6366f1), var(--accent-2, #a855f7));
+  z-index: 4;
 }
 
 /* Watermark */
@@ -48,36 +97,107 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
+  width: 72%;
+  height: 72%;
   background-image: url('/dak-guru-round.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.04;
+  opacity: 0.05;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Themes */
+/* ==================== THEMES — light, rich, premium ==================== */
 .themePostalLaw {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+  --accent: #4f46e5;
+  --accent-2: #6366f1;
+  --tag-bg: rgba(79, 70, 229, 0.10);
+  --tag-fg: #4338ca;
+  --glow: rgba(79, 70, 229, 0.30);
+  --card-border: rgba(79, 70, 229, 0.16);
+  --expl-bg: rgba(238, 242, 255, 0.66);
+  --dark-bg: radial-gradient(140% 120% at 0% 0%, rgba(99, 102, 241, 0.22) 0%, rgba(99, 102, 241, 0) 55%), linear-gradient(160deg, #12131f 0%, #0a0a10 100%);
+  --dark-border: rgba(99, 102, 241, 0.24);
+  background:
+    radial-gradient(135% 115% at 0% 0%, #eef2ff 0%, rgba(238, 242, 255, 0) 55%),
+    radial-gradient(140% 130% at 100% 100%, #dbeafe 0%, rgba(219, 234, 254, 0) 55%),
+    linear-gradient(140deg, #ffffff 0%, #f5f7ff 100%);
 }
 
 .themeAccounts {
-  background: linear-gradient(135deg, #ffffff 0%, #f0fff4 100%);
+  --accent: #059669;
+  --accent-2: #10b981;
+  --tag-bg: rgba(5, 150, 105, 0.10);
+  --tag-fg: #047857;
+  --glow: rgba(5, 150, 105, 0.28);
+  --card-border: rgba(5, 150, 105, 0.16);
+  --expl-bg: rgba(236, 253, 245, 0.7);
+  --dark-bg: radial-gradient(140% 120% at 0% 0%, rgba(16, 185, 129, 0.20) 0%, rgba(16, 185, 129, 0) 55%), linear-gradient(160deg, #0c1815 0%, #08100d 100%);
+  --dark-border: rgba(16, 185, 129, 0.24);
+  background:
+    radial-gradient(135% 115% at 0% 0%, #ecfdf5 0%, rgba(236, 253, 245, 0) 55%),
+    radial-gradient(140% 130% at 100% 100%, #d1fae5 0%, rgba(209, 250, 229, 0) 55%),
+    linear-gradient(140deg, #ffffff 0%, #f3fdf8 100%);
 }
 
 .themeConductRules {
-  background: linear-gradient(135deg, #ffffff 0%, #fffaf0 100%);
+  --accent: #d97706;
+  --accent-2: #f59e0b;
+  --tag-bg: rgba(217, 119, 6, 0.10);
+  --tag-fg: #b45309;
+  --glow: rgba(217, 119, 6, 0.26);
+  --card-border: rgba(217, 119, 6, 0.16);
+  --expl-bg: rgba(255, 251, 235, 0.72);
+  --dark-bg: radial-gradient(140% 120% at 0% 0%, rgba(245, 158, 11, 0.20) 0%, rgba(245, 158, 11, 0) 55%), linear-gradient(160deg, #1a140a 0%, #100c06 100%);
+  --dark-border: rgba(245, 158, 11, 0.24);
+  background:
+    radial-gradient(135% 115% at 0% 0%, #fffbeb 0%, rgba(255, 251, 235, 0) 55%),
+    radial-gradient(140% 130% at 100% 100%, #fef3c7 0%, rgba(254, 243, 199, 0) 55%),
+    linear-gradient(140deg, #ffffff 0%, #fffdf5 100%);
 }
 
 .themeCurrentAffairs {
-  background: linear-gradient(135deg, #ffffff 0%, #fcf5ff 100%);
+  --accent: #c026d3;
+  --accent-2: #a855f7;
+  --tag-bg: rgba(192, 38, 211, 0.09);
+  --tag-fg: #a21caf;
+  --glow: rgba(168, 85, 247, 0.28);
+  --card-border: rgba(192, 38, 211, 0.15);
+  --expl-bg: rgba(253, 244, 255, 0.7);
+  --dark-bg: radial-gradient(140% 120% at 0% 0%, rgba(168, 85, 247, 0.22) 0%, rgba(168, 85, 247, 0) 55%), linear-gradient(160deg, #17101d 0%, #0e0a12 100%);
+  --dark-border: rgba(168, 85, 247, 0.24);
+  background:
+    radial-gradient(135% 115% at 0% 0%, #fdf4ff 0%, rgba(253, 244, 255, 0) 55%),
+    radial-gradient(140% 130% at 100% 100%, #f3e8ff 0%, rgba(243, 232, 255, 0) 55%),
+    linear-gradient(140deg, #ffffff 0%, #fdf7ff 100%);
 }
 
 .themeGeneral {
-  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  --accent: #0284c7;
+  --accent-2: #0ea5e9;
+  --tag-bg: rgba(2, 132, 199, 0.10);
+  --tag-fg: #0369a1;
+  --glow: rgba(2, 132, 199, 0.26);
+  --card-border: rgba(2, 132, 199, 0.15);
+  --expl-bg: rgba(240, 249, 255, 0.7);
+  --dark-bg: radial-gradient(140% 120% at 0% 0%, rgba(14, 165, 233, 0.20) 0%, rgba(14, 165, 233, 0) 55%), linear-gradient(160deg, #0b1620 0%, #080f16 100%);
+  --dark-border: rgba(14, 165, 233, 0.24);
+  background:
+    radial-gradient(135% 115% at 0% 0%, #f0f9ff 0%, rgba(240, 249, 255, 0) 55%),
+    radial-gradient(140% 130% at 100% 100%, #e0f2fe 0%, rgba(224, 242, 254, 0) 55%),
+    linear-gradient(140deg, #ffffff 0%, #f4fbff 100%);
+}
+
+/* ==================== DARK MODE ==================== */
+:global(.dark) .flashcardFront,
+:global(.dark) .flashcardBack {
+  background: var(--dark-bg, linear-gradient(160deg, #101014 0%, #0a0a0c 100%));
+  border-color: var(--dark-border, rgba(255, 255, 255, 0.08));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 24px 50px -22px rgba(0, 0, 0, 0.78),
+    0 0 34px -14px var(--glow, rgba(99, 102, 241, 0.3));
 }
 
 .contentContainer {
@@ -87,9 +207,48 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  min-height: 0;
+}
+
+/* Back face: let the whole answer + explanation area scroll as one column so long
+   content is fully readable, rather than trapping it in a tiny fixed sub-window. */
+.backScroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 0.25rem;
+}
+
+.backScroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.backScroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+}
+
+.backScroll::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Groups the answer + explanation: vertical auto-margins centre the pair when the
+   content is shorter than the card, and collapse to 0 (normal top-anchored scrolling)
+   when the content overflows. */
+.backCenter {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .header {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,11 +259,18 @@
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #64748b;
-  background: rgba(0, 0, 0, 0.04);
-  padding: 4px 10px;
-  border-radius: 20px;
+  letter-spacing: 0.06em;
+  color: var(--tag-fg, #475569);
+  background: var(--tag-bg, rgba(15, 23, 42, 0.05));
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.05));
+}
+
+:global(.dark) .tag {
+  color: var(--accent-2, #c7d2fe);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .questionText {
@@ -125,51 +291,42 @@
   line-height: 1.3;
   color: #2563eb;
   text-align: center;
-  margin-top: auto;
-  margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 
 .explanationBox {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
-  padding: 0.75rem 1rem;
+  background: var(--expl-bg, rgba(255, 255, 255, 0.7));
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-left: 3px solid var(--accent, #94a3b8);
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
   font-size: 12px;
   color: #475569;
   line-height: 1.5;
   transition: all 0.3s ease;
-  margin-bottom: auto;
+  margin-bottom: 0.25rem;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
+:global(.dark) .explanationBox {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--accent-2, #818cf8);
+}
+
+.explLabel {
+  color: var(--accent, #64748b);
+}
+
+/* No inner cap/scroll — the whole back face (.backScroll) scrolls as one, so the full
+   explanation is always reachable regardless of length. */
 .explanationContent {
-  overflow-y: auto;
-  padding-right: 0.5rem;
-  max-height: 140px;
-  overscroll-behavior: contain;
-  touch-action: pan-y;
-}
-
-@media (min-width: 768px) {
-  .explanationContent {
-    max-height: 200px;
-  }
-}
-
-.explanationContent::-webkit-scrollbar {
-  width: 4px;
-}
-
-.explanationContent::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.02);
-  border-radius: 10px;
-}
-
-.explanationContent::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1;
-  border-radius: 10px;
+  padding-right: 0.25rem;
 }
 
 .footer {
@@ -178,8 +335,20 @@
   align-items: center;
   margin-top: 1rem;
   padding-top: 0.75rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   z-index: 1;
+}
+
+:global(.dark) .footer {
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+.footerLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent, #94a3b8);
 }
 
 .iconButton {
@@ -193,11 +362,10 @@
 }
 
 .iconButton:hover {
-  color: #2563eb;
-  background: rgba(37, 99, 235, 0.05);
+  color: var(--accent, #2563eb);
+  background: var(--tag-bg, rgba(37, 99, 235, 0.05));
 }
 
 .iconButton.active {
   color: #f59e0b;
 }
-

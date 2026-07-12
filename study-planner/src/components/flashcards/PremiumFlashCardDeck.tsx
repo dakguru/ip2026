@@ -112,9 +112,11 @@ export default function PremiumFlashCardDeck({
 
     const handleDragEnd = (event: any, info: any) => {
         const swipeThreshold = 50;
-        if (info.offset.x < -swipeThreshold) {
+        const velocityThreshold = 400;
+        // Distance OR a quick flick both advance — feels much more responsive
+        if (info.offset.x < -swipeThreshold || info.velocity.x < -velocityThreshold) {
             handleNext();
-        } else if (info.offset.x > swipeThreshold) {
+        } else if (info.offset.x > swipeThreshold || info.velocity.x > velocityThreshold) {
             handlePrev();
         }
     };
@@ -196,10 +198,19 @@ export default function PremiumFlashCardDeck({
                     <motion.div
                         key={currentCard.id}
                         custom={direction}
-                        initial={{ x: direction * 50, opacity: 0, scale: 0.98 }}
+                        initial={{ x: direction * 70, opacity: 0, scale: 0.97 }}
                         animate={{ x: 0, opacity: 1, scale: 1 }}
-                        exit={{ x: -direction * 50, opacity: 0, scale: 0.98 }}
-                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        exit={{
+                            x: -direction * 70,
+                            opacity: 0,
+                            scale: 0.97,
+                            transition: { duration: 0.16, ease: [0.4, 0, 1, 1] }
+                        }}
+                        transition={{
+                            x: { type: "spring", stiffness: 320, damping: 32, mass: 0.9 },
+                            opacity: { duration: 0.22, ease: "easeOut" },
+                            scale: { type: "spring", stiffness: 320, damping: 32, mass: 0.9 }
+                        }}
                         drag="x"
                         dragConstraints={{ left: 0, right: 0 }}
                         dragElastic={0.4}
