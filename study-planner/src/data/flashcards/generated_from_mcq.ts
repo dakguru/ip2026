@@ -19771,9 +19771,9 @@ export const p1_31: FlashCard[] = [
         "pdf_title": "CCS (CCA) Rules, 1965",
         "topic": "Paper I",
         "card_no": 10,
-        "question": "What is defined as Compensation awarded on the recommendation of the Complaints Committee regarding sexual harassment constitutes?",
-        "answer": "A penalty under Rule 11",
-        "explanation": "Any compensation awarded on the recommendation of the Complaints Committee regarding sexual harassment is considered a penalty under Rule 11(ix).",
+        "question": "Under the Explanation to Rule 11 of the CCS (CCA) Rules, 1965, does compensation awarded on the recommendation of the Complaints Committee / Internal Committee on a complaint of sexual harassment amount to a penalty?",
+        "answer": "No — it does NOT amount to a penalty within the meaning of Rule 11",
+        "explanation": "The Explanation below Rule 11 of the CCS (CCA) Rules, 1965 lists actions that do NOT amount to a penalty. Compensation awarded on the recommendation of the Complaints Committee / Internal Committee on a complaint of sexual harassment under Rule 3-C of the CCS (Conduct) Rules, 1964 is expressly one such action.",
         "exam_weight": "Medium",
         "keywords": [
             "defined",
@@ -20181,7 +20181,7 @@ export const p1_31: FlashCard[] = [
         "card_no": 34,
         "question": "Which committee's recommendations regarding sexual harassment are significant in the context of Rule 11?",
         "answer": "Complaints Committee",
-        "explanation": "Rule 11(ix) refers to the \"Complaints Committee\" inquiring into sexual harassment.",
+        "explanation": "The Complaints Committee / Internal Committee inquires into complaints of sexual harassment; under the proviso to Rule 14(2) its report may be treated as the inquiry report, and its recommended compensation is dealt with under the Explanation to Rule 11 (an action that does not amount to a penalty).",
         "exam_weight": "Medium",
         "keywords": [
             "which",
