@@ -36,6 +36,7 @@ import { manual_procurement_set1, manual_procurement_set2, manual_procurement_se
 import { welfare_measures_set1, welfare_measures_set2, welfare_measures_set3 } from './flashcards/welfareMeasures';
 import { gfr_2017_set1, gfr_2017_set2, gfr_2017_set3, gfr_2017_set4, gfr_2017_set5 } from './flashcards/generalFinancialRules2017';
 import { inspection_q_bo_set1, inspection_q_so_set1, inspection_q_ho_set1 } from './flashcards/inspectionQuestionnaires';
+import { pm_vol8_set1, pm_vol8_set2, pm_vol8_set3, pm_vol8_set4, pm_vol8_set5, pm_vol8_set6, pm_vol8_set7, pm_vol8_set8, pm_vol8_set9, pm_vol8_set10 } from './flashcards/postalManualVolVIIIMcqs';
 
 
 
@@ -56,6 +57,18 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
   460: inspection_q_bo_set1,
   461: inspection_q_so_set1,
   462: inspection_q_ho_set1,
+
+  // --- Postal Manual Volume VIII (Inspection & Administrative Standards) — LDCE IP Paper I, topic p1-13 ---
+  471: pm_vol8_set1,
+  472: pm_vol8_set2,
+  473: pm_vol8_set3,
+  474: pm_vol8_set4,
+  475: pm_vol8_set5,
+  476: pm_vol8_set6,
+  477: pm_vol8_set7,
+  478: pm_vol8_set8,
+  479: pm_vol8_set9,
+  480: pm_vol8_set10,
 
   1: [
     { q: "On which date did the Post Office Act, 2023 come into force?", o: ["1st Jan 2024", "24th Dec 2023", "18th June 2024", "1st April 2023"], a: 2, e: "The Post Office Act, 2023 came into force on 18th June 2024." },
@@ -8813,7 +8826,7 @@ export const QUIZ_DATA: QuizTopic[] = [
   createTopic('p1-10', 'Book of BO Rules', 'Paper I', [43, 44, 45]),
   createTopic('p1-11', 'Postal Manual Volume II', 'Paper I', [58]),
   createTopic('p1-12', 'Postal Volume IV-Establishment and Recruitments', 'Paper I', [59]),
-  createTopic('p1-13', 'Postal Manual Volume VIII', 'Paper I'),
+  createTopic('p1-13', 'Postal Manual Volume VIII', 'Paper I', [471, 472, 473, 474, 475, 476, 477, 478, 479, 480]),
   createTopic('p1-14', 'Postal Manual Volume V', 'Paper I', [61]),
   createTopic('p1-15', 'Postal Manual Volume VI', 'Paper I', [359, 360, 361, 362, 363, 364]),
   createTopic('p1-16', 'Postal Manual Volume VII', 'Paper I', [365, 366, 367]),
