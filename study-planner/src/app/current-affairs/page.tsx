@@ -121,11 +121,15 @@ export default function CurrentAffairsHub() {
 
     // Default Desktop View
     return (
-        <AppScreenWrapper hideStatusBarPadding={true}>
+        <AppScreenWrapper hideStatusBarPadding={true} scrollableContent={false}>
             <HomeHeader isLoggedIn={true} />
-            
-            <div className="flex-1 bg-white dark:bg-zinc-950 pb-20">
-                <div className="max-w-7xl mx-auto px-6">
+
+            <div className="flex-1 relative bg-white dark:bg-zinc-950 pb-20 overflow-hidden">
+                {/* Soft backdrop behind the hero */}
+                <div className="absolute inset-x-0 top-0 h-96 pointer-events-none bg-gradient-to-b from-blue-50 via-indigo-50/40 to-transparent dark:from-blue-950/25 dark:via-indigo-950/10 dark:to-transparent" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[42rem] h-64 pointer-events-none bg-blue-200/30 dark:bg-blue-500/10 rounded-full blur-3xl" />
+
+                <div className="max-w-7xl mx-auto px-6 pt-6 md:pt-8 relative">
                     {/* Hero Section */}
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
