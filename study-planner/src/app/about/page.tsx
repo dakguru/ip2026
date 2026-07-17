@@ -1,29 +1,100 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Target, Lightbulb, CheckCircle2, Award, Zap, Layout, FileText, Smartphone } from "lucide-react";
+import Image from "next/image";
+import { BookOpen, Target, Lightbulb, CheckCircle2, Award, Zap, Layout, FileText, ShieldCheck, GraduationCap, Sparkles, ArrowRight } from "lucide-react";
 import AppScreenWrapper from "@/components/AppScreenWrapper";
+import { UserMenu } from "@/components/UserMenu";
 
 export default function AboutPage() {
     return (
-        <AppScreenWrapper>
-            {/* Header / Hero Section */}
-            <div className="relative bg-gradient-to-br from-indigo-900 to-blue-900 dark:from-black dark:to-zinc-900 py-20 px-4 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                    <div className="absolute top-10 right-10 w-64 h-64 bg-blue-400 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        <AppScreenWrapper scrollableContent={false} hideStatusBarPadding>
+            {/* Hero Section with integrated header bar */}
+            <div className="relative shrink-0 bg-gradient-to-br from-indigo-950 via-blue-900 to-indigo-900 dark:from-black dark:via-zinc-950 dark:to-indigo-950 overflow-hidden">
+                {/* Decorative background */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] [background-size:56px_56px]" />
+                    <div className="absolute -top-24 right-0 w-[28rem] h-[28rem] bg-blue-500/30 rounded-full blur-3xl animate-hero-float" />
+                    <div className="absolute -bottom-32 -left-20 w-[32rem] h-[32rem] bg-purple-600/25 rounded-full blur-3xl animate-hero-float [animation-delay:-4s]" />
+                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[40rem] h-64 bg-indigo-400/20 rounded-full blur-3xl" />
                 </div>
 
-                <div className="max-w-7xl mx-auto relative z-10 text-center">
-                    <Link href="/" className="inline-flex items-center gap-2 text-blue-200 hover:text-white mb-8 transition-colors">
-                        <ArrowLeft className="w-5 h-5" /> Back to Home
-                    </Link>
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white mb-6 animate-fade-in-up">
-                        About <span className="text-yellow-400">Dak Guru</span>
+                {/* Header Bar */}
+                <header className="relative z-20 border-b border-white/10 bg-white/5 backdrop-blur-xl pt-[max(12px,env(safe-area-inset-top))]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+                        <Link href="/" className="flex items-center gap-2.5">
+                            <div className="relative w-9 h-9 rounded-full overflow-hidden border border-white/60 shadow-[0_0_18px_rgba(96,165,250,0.55)]">
+                                <Image src="/dak-guru-new-logo.png" alt="Dak Guru" fill className="object-cover scale-110" />
+                            </div>
+                            <span className="text-xl font-bold text-white tracking-tight">
+                                Dak <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-400">Guru</span>
+                            </span>
+                        </Link>
+
+                        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-blue-100/90">
+                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                            <Link href="/mock-tests" className="hover:text-white transition-colors">Mock Tests</Link>
+                            <Link href="/flashcards" className="hover:text-white transition-colors">Flash Cards</Link>
+                            <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
+                        </nav>
+
+                        <div className="flex items-center gap-3">
+                            <Link
+                                href="/"
+                                className="md:hidden text-sm font-medium text-blue-100/90 hover:text-white transition-colors"
+                            >
+                                Home
+                            </Link>
+                            <UserMenu />
+                        </div>
+                    </div>
+                </header>
+
+                {/* Hero Content */}
+                <div className="max-w-7xl mx-auto relative z-10 text-center px-4 pt-16 pb-24 md:pt-24 md:pb-32">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md text-sm text-blue-100 mb-8 animate-fade-in-up">
+                        <Sparkles className="w-4 h-4 text-amber-300" />
+                        <span>A Smart Self Preparation Portal for LDCE Aspirants</span>
+                    </div>
+
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-blue-100 to-blue-300 mb-6 animate-fade-in-up [animation-delay:0.1s]">
+                        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300">Dak Guru</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                        Dedicated learning platform for Limited Departmental Competitive Examinations (LDCE) of the Department of Posts.
+
+                    <p className="text-lg md:text-xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed mb-10 animate-fade-in-up [animation-delay:0.2s]">
+                        The dedicated learning platform for Limited Departmental Competitive Examinations (LDCE) of the Department of Posts — built to turn your syllabus into success.
                     </p>
+
+                    <div className="flex flex-wrap items-center justify-center gap-4 mb-14 animate-fade-in-up [animation-delay:0.3s]">
+                        <Link
+                            href="/"
+                            className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 to-yellow-500 text-blue-950 px-7 py-3 rounded-full font-bold shadow-lg shadow-amber-500/25 hover:shadow-amber-400/40 hover:scale-105 transition-all"
+                        >
+                            Start Learning <ArrowRight className="w-4 h-4" />
+                        </Link>
+                        <Link
+                            href="/mock-tests"
+                            className="inline-flex items-center gap-2 px-7 py-3 rounded-full font-semibold text-white bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/20 transition-all"
+                        >
+                            Explore Mock Tests
+                        </Link>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto animate-fade-in-up [animation-delay:0.4s]">
+                        {[
+                            { icon: ShieldCheck, label: "MSME Registered", sub: "Govt. of India" },
+                            { icon: GraduationCap, label: "Expert Mentorship", sub: "Retired Postal Officers" },
+                            { icon: Target, label: "LDCE Focused", sub: "IP & Departmental Cadres" }
+                        ].map((item, idx) => (
+                            <div key={idx} className="flex items-center gap-3 px-5 py-4 rounded-2xl bg-white/[0.07] border border-white/10 backdrop-blur-md text-left">
+                                <item.icon className="w-7 h-7 text-amber-300 shrink-0" />
+                                <div>
+                                    <p className="text-sm font-bold text-white leading-tight">{item.label}</p>
+                                    <p className="text-xs text-blue-200/80 mt-0.5">{item.sub}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 

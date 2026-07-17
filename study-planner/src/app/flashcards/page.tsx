@@ -109,6 +109,41 @@ const convertToUnified = (data: any[], tagPrefix: string, uniqueContext?: string
     }));
 };
 
+// A flashcard shows only a question and its answer — there are no lettered options.
+// MCQ-style stems that depend on a list of choices ("which of the following", "match the
+// following", assertion-reason, statement-based, etc.) make no sense as flashcards, so we
+// drop them. This applies to every deck source: manual, generated-from-MCQ, and the
+// dynamic MCQ fallback that turns raw quiz questions into cards.
+const UNSUITABLE_FLASHCARD_PATTERNS: RegExp[] = [
+    /which of the following/i,
+    /which of these/i,
+    /which of the above/i,
+    /which one of the following/i,
+    /which of the given/i,
+    /which (of the )?pairs?\b/i,
+    /match the following/i,
+    /match list/i,
+    /list[\s-]*i+\b[\s\S]*list[\s-]*i+/i, // Match List-I with List-II
+    /consider the following/i,
+    /arrange the following/i,
+    /following statements?\b/i,
+    /statements? given below/i,
+    /given below[\s\S]*statements?/i,
+    /how many of the (above|following)/i,
+    /all of the above/i,
+    /none of the above/i,
+    /select the (correct|right)/i,
+    /choose the (correct|right)/i,
+    /\bcodes?\s*:/i,
+    /\bassertion\b/i,
+    /identify the (correct|incorrect)/i,
+];
+
+const isSuitableForFlashcard = (question?: string): boolean => {
+    if (!question || !question.trim()) return false;
+    return !UNSUITABLE_FLASHCARD_PATTERNS.some((re) => re.test(question));
+};
+
 // --- DATA ---
 const generatedDecksMapping = Object.entries(GeneratedCards).reduce((acc, [key, data]) => {
     const firstCard = (data as any[])[0];
@@ -519,7 +554,8 @@ function FlashcardsContent() {
 
         // Merge: Manual first, then Generated
         // Filter duplicates if necessary? For now, we assume distinct sets or acceptable overlap
-        return [...unifiedManual, ...generatedContent];
+        // Drop MCQ-style questions that don't work as flashcards (option-dependent stems).
+        return [...unifiedManual, ...generatedContent].filter(c => isSuitableForFlashcard(c.question));
     };
 
     // Filter and Organize Decks
