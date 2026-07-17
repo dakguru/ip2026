@@ -71,7 +71,8 @@ export const cleanText = (text: string) => {
         .replace(/⇐/g, '<=')
         .replace(/•/g, '-')
         .replace(/✓/g, '[v]')
-        .replace(/…/g, '...');
+        .replace(/…/g, '...')
+        .replace(/≈/g, '~');
 };
 
 interface GeneratePDFParams {

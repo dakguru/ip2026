@@ -1,0 +1,1107 @@
+Q1. Under the Postal Manual Vol II, any representation made by a Government servant that is not technically an appeal is classified as what?
+A. Memorial
+B. Petition
+C. Revision
+D. Review
+Answer: B
+Explanation: Any representation made by a Government servant that is not technically an appeal is classified as a petition. An appeal is a formal challenge to a specific order under a defined rule, while a petition is the residuary category.
+
+Q2. Which of the following statements regarding the submission of petitions under the Postal Manual Vol II is/are correct?
+
+1. Joint petitions are strictly inadmissible.
+2. Identical petitions are permitted only if the circumstances represented apply personally to each individual submitting them.
+3. A petition to a higher authority must carry a copy of the order challenged and be routed through the officer who passed it.
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Every employee must petition separately, making joint petitions inadmissible. Identical petitions require circumstances to apply personally to each individual. A petition to a higher authority must carry a copy of the order challenged and be routed through the officer who passed it.
+
+
+
+Q3. Consider the following statements regarding the withholding of petitions addressed to the Director General:
+
+1. A petition can be withheld if it relates to a transfer ordered in the interest of service, unless the officer is transferred frequently at short intervals.
+2. A petition cannot be withheld if it is premature and the lower competent authority has not yet been approached.
+3. A list of all withheld petitions must be forwarded quarterly to the Director General.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: A petition can be withheld if it relates to transfers ordered in the interest of service. It can also be withheld if it is premature. A list of all withheld petitions is forwarded quarterly to the Director General.
+
+
+
+Q4. An Inspector of Posts issued a penalty order to a Gramin Dak Sevak (GDS) on 15 January. The GDS submitted a petition against this order on 20 August of the same year without citing any reasonable cause for the delay. According to the Postal Manual Vol II, what is the most likely consequence?
+A. The petition must be entertained because the limitation period is one year.
+B. The petition is liable to be rejected without investigation as it is time-barred.
+C. The petition will be automatically forwarded to the President.
+D. The limitation period restarts because the GDS filed a fresh representation.
+Answer: B
+Explanation: A petition is liable to be rejected without investigation if submitted more than 6 months after the date the petitioner was informed of the order. The 6 months are counted from the original order date, and a fresh representation does not restart the clock.
+
+Q5. Which of the following statements is/are correct regarding petitions to the President under the Postal Manual Vol II?
+
+1. They are forwarded to the Director General by the Head of Circle with a concise statement of facts and an expression of opinion.
+2. Petitions merely addressed to the "Chairman" or a "Member" of the Postal Services Board are treated as petitions to the President.
+3. A review petition under Rule 29-A of the CCS (CCA) Rules is submitted to the President.
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Petitions to the President are forwarded to the DG by the Head of Circle with a statement of facts and opinion. Petitions merely addressed to the "Chairman" or a "Member" of the PSB are not petitions to the President and are returned. A review petition under Rule 29-A is submitted to the President.
+
+
+
+Q6. Under the Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023, what is the maximum number of charges of the same kind, committed within 12 months, that an accused may be tried for at a single trial?
+A. Three charges
+B. Four charges
+C. Five charges
+D. Six charges
+Answer: C
+Explanation: Rule 138 originally mirrored the old CrPC limiting trials to three charges. Under the successor joinder-of-charges provision of the BNSS, 2023, the ceiling has been raised to five offences of the same kind within a twelve-month window.
+
+Q7. Which of the following statements regarding the institution of civil and criminal proceedings is/are correct?
+
+1. The Head of Circle must obtain the Director General's orders before instituting a civil suit, subject to exceptions like security bonds.
+2. In non-cognizable cases, no prosecution can be instituted without the previous sanction of the Head of Circle.
+3. In emergencies where delay would let the accused escape, sanction for prosecution may be anticipated but must be reported immediately.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The Head of Circle generally requires DG's orders for civil suits, excluding exceptions like security bonds. For non-cognizable cases, previous sanction of the Head of Circle is mandatory, except in emergencies where it can be anticipated but must be reported immediately.
+
+
+
+Q8. Under current law and the provisions of the Postal Manual Vol II, what is the status of exemption from jury service for persons employed in the Department of Posts?
+A. Exempted only if they hold a Gazetted rank.
+B. Exempted from liability to serve as jurors, although jury trials have been abolished in India.
+C. Liable to serve as jurors if summoned by a District Magistrate.
+D. Exempted only for a period of 5 years from the date of joining service.
+Answer: B
+Explanation: Rule 152 states that all persons employed in the Department of Posts are exempt from liability to serve as jurors or assessors. However, jury trials were abolished in India, and current criminal codes do not provide for juries.
+
+Q9. Consider the following statements regarding Security Deposits under the Postal Manual Vol II:
+
+1. Acting Postmen and Village Postmen must always furnish a Personal Bond.
+2. A Personal Bond cannot be replaced by cash or Government security under any circumstances.
+3. Stamp Vendors must furnish security equal to 20 times their pay, subject to a prescribed maximum.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Acting Postmen and Village Postmen must always furnish a Personal Bond. Stamp Vendors furnish security equal to 20 times their pay. A Personal Bond may be replaced by cash or Government security at any time.
+
+
+
+Q10. According to the Postal Manual Vol II, what is the initial time limit for an official appointed to a permanent post to furnish security, assuming no extension is granted by the Divisional Head?
+A. One month
+B. Two months
+C. Three months
+D. Six months
+Answer: C
+Explanation: For a temporary post, the time limit to furnish security is one month, and for a permanent post, it is three months. The Head of Division may extend these to three and six months respectively.
+
+Q11. Which of the following statements regarding the verification of security bonds is/are not correct?
+
+1. Security bonds must be verified semi-annually.
+2. If an office has fewer than 40 bonds, at least one bond must be verified.
+3. Fresh security must be furnished if a surety dies and the principal has less than 10 years' service.
+A. 1 only
+B. 2 only
+C. 1 and 3 only
+D. 2 and 3 only
+Answer: A
+Explanation: Security bonds must be verified annually, not semi-annually. For offices with fewer than 40 bonds, at least one must be verified, and fresh security is required if a surety dies and the principal has less than 10 years' service.
+
+
+
+Q12. Under the Postal Manual Vol II, for how many years must an expired or replaced security bond be preserved before destruction?
+A. 1 year
+B. 3 years
+C. 5 years
+D. 10 years
+Answer: C
+Explanation: Expired or replaced security bonds must be preserved for 5 years. The limitation period for a breach is 30 years. Unclaimed deposits are credited to the Government after 3 years.
+
+Q13. A suspected counterfeit stamp is detected on an article at a post office situated at the district headquarters. According to the Postal Manual Vol II, what immediate action should the officer-in-charge take?
+A. Deliver the article immediately to the nearest Magistrate.
+B. Detain the article and at once lay information before a Magistrate to obtain an order for possession.
+C. Send the article in a service registered cover to the Head of Circle.
+D. Deliver the article to the local police station immediately.
+Answer: B
+Explanation: If detected at a district headquarters, the officer-in-charge must detain the article and lay information before a Magistrate to obtain an order for possession. The article is never delivered directly to the Magistrate or police pending orders.
+
+Q14. Under Rule 387 of the Postal Manual Vol II, which of the following scenarios is expressly stated as NOT constituting an offence?
+A. Affixing a fictitious stamp deliberately to cause annoyance to an innocent person.
+B. An official entrusted with service stamps erasing the marks upon them.
+C. A previously used postage stamp from which no attempt has been made to remove the marks of obliteration.
+D. Using a Government stamp known to be counterfeit for any postal purpose.
+Answer: C
+Explanation: Rule 387 expressly states that a previously used postage stamp from which no attempt has been made to remove the marks of obliteration, detected on a posted article, is not an offence. The stamp is ignored and the article charged.
+
+Q15. Consider the following mappings of offences related to stamps to the new Bharatiya Nyaya Sanhita (BNS), 2023 provisions:
+
+1. Counterfeiting a Government stamp is covered under BNS 178.
+2. Using as genuine a Government stamp known to be counterfeit is covered under BNS 179.
+3. Criminal breach of trust by a public servant erasing marks on service stamps is covered under BNS 316(5).
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: BNS 178 consolidates the offence of counterfeiting a Government stamp. Using it as genuine is covered under BNS 179. Criminal breach of trust by a public servant erasing marks on service stamps maps to BNS 316(5).
+
+
+
+Q16. Which of the following statements regarding the Post Office Act, 2023 and forged stamps is/are correct?
+
+1. Section 17 of the Indian Post Office Act, 1898 deeming postage stamps as revenue stamps has been explicitly re-enacted in the 2023 Act.
+2. The Post Office Act, 2023 contains no offences or penalties.
+3. Counterfeiting a postage stamp remains an offence under BNS 178 despite the repeal of the 1898 Act.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: The Post Office Act, 2023 contains no offences or penalties and did not re-enact the Section 17 deeming provision. However, counterfeiting remains a direct offence under BNS 178 as it criminalises counterfeiting a "Government stamp".
+
+
+
+Q17. Which of the following statements is/are correct regarding the treatment of inward foreign mail suspected of bearing counterfeit stamps?
+
+1. The addressee must be served with a notice inviting him to attend within 48 hours to receive delivery.
+2. The article is delivered only if the addressee pays postage due, discloses the sender, and surrenders the stamped portion.
+3. Form FMS-21 is submitted to the Head of Circle if the addressee refuses to disclose the sender.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The addressee is served a notice to attend within 48 hours. Delivery requires paying postage, disclosing the sender, and surrendering the stamped portion. If the addressee refuses, Form FMS-21 is prepared and submitted to the Head of Circle.
+
+
+
+Q18. A private letter is posted bearing India Government Service stamps. The letter is certified by a Government official to be "On Service." According to the Postal Manual Vol II, what is the correct course of action?
+A. Prosecute the official for criminal breach of trust under BNS 316(5).
+B. Treat it as a criminal offence and lay information before a Magistrate.
+C. It is not a criminal offence, but steps should be taken to deal with the matter departmentally.
+D. Ignore the stamp, charge double postage, and forward it to the destination.
+Answer: C
+Explanation: Rule 388 states that prepayment by service stamps of a private letter certified by a Government official to be "On Service" is not a criminal offence, but steps should be taken to have the matter dealt with departmentally.
+
+Q19. Consider the following statements regarding spoilt and defaced postage stamps:
+
+1. Postage stamps perforated with initials traced in minute holes are not recognized in payment of postage.
+2. An article bearing a defaced stamp must have a remark written on it stating why the stamp has been ignored, but the stamp itself is not defaced by the post office.
+3. Embossed envelopes may be used as wrappers for newspapers.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Stamps perforated with initials in minute holes are perfectly valid and there is no prohibition against their use. Defaced stamps are ignored with a remark, but not defaced again. Embossed envelopes may be used as newspaper wrappers.
+
+
+
+Q20. Under the Coinage Act, 2011 and Postal Manual Vol II, which of the following statements is/are correct regarding counterfeit coins presented over the counter?
+
+1. The tenderer shall bear the loss caused by the cutting or breaking of a suspected counterfeit coin.
+2. If satisfied a coin is counterfeit, the postmaster must return it immediately if pressed by the presenter.
+3. The official responsible for accepting counterfeit coins from the public must generally make good their value if accepted negligently.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Under Section 10 of the Coinage Act 2011, the tenderer bears the loss of cutting. The postmaster must not return the coin even if pressed to do so. The accepting official must make good the value if there was negligence.
+
+
+
+Q21. According to the current RBI Master Direction on Counterfeit Notes (01.04.2026), what must immediately be done with counterfeit notes presented at a post office bank counter?
+A. They must be cut and returned to the tenderer.
+B. They must be impounded, stamped "COUNTERFEIT NOTE", and an acknowledgement receipt issued to the tenderer.
+C. They must be destroyed immediately in the presence of the tenderer.
+D. They must be provisionally accepted and credited to the depositor's account pending verification.
+Answer: B
+Explanation: The RBI Master Direction mandates that counterfeit notes must be impounded, stamped "COUNTERFEIT NOTE", and an acknowledgement receipt must be issued to the tenderer. They must in no case be returned to the tenderer or destroyed.
+
+Q22. A customer tenders 6 suspected counterfeit currency notes in a single transaction at an IPPB counter. According to the RBI Master Direction (01.04.2026), what is the immediate required action by the post office?
+A. Forward the details immediately for the registration of an FIR.
+B. Include the transaction in a consolidated monthly statement to the Nodal Police Station at month end.
+C. Cut the notes and return them to the customer without police intimation.
+D. Return the notes to the customer and refuse the transaction.
+Answer: A
+Explanation: Under the RBI Master Direction, detection of 5 or more counterfeit pieces in a single transaction must be forwarded immediately for an FIR. Detection of up to 4 pieces requires only a consolidated monthly statement.
+
+Q23. According to the RBI Master Direction on Counterfeit Notes (01.04.2026), how many counterfeit notes detected in a single transaction mandate the filing of a consolidated monthly statement to the Nodal Police Station rather than an immediate FIR?
+A. Up to 2 pieces
+B. Up to 3 pieces
+C. Up to 4 pieces
+D. Up to 5 pieces
+Answer: C
+Explanation: The RBI Master Direction specifies that up to 4 pieces detected in a single transaction require reporting via a consolidated monthly statement to the Nodal Police Station at month end. Five or more pieces require an immediate FIR.
+
+Q24. Which of the following statements regarding the leniency rule for defaced stamps (Rule 403) is/are correct?
+
+1. An embossed stamp on a registration envelope should be recognized even if the sender's seal extends over a small part of it.
+2. A stamp on an article presented for despatch with a slight, obviously accidental tear should not be ignored.
+3. The postmaster's personal duties under this rule cannot be delegated under any circumstances.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Leniency applies to accidental seal overlap on a registration envelope and slight accidental tears. The postmaster's duties under this rule may be delegated to the deputy or assistant postmaster under the orders of the Head of Circle.
+
+
+
+Q25. Consider the following statements regarding appeals and petitions:
+
+1. No petition lies to a higher authority unless the next lower competent authority has already been addressed.
+2. Petitions bypassing the proper channel are liable to be filed without notice.
+3. A regional-language petition does not require an English translation when forwarded to higher authorities.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: No petition lies to a higher authority unless the next lower authority is addressed. Direct submissions bypassing proper channels are liable to be filed. A regional-language petition requires an English translation appended.
+
+
+
+Q26. What is the maximum prescribed end-of-day balance limit for an India Post Payments Bank (IPPB) account at a Branch Post Office?
+A. Rs. 50,000
+B. Rs. 1,000,000
+C. Rs. 1,00,000
+D. Rs. 2,00,000
+Answer: C
+Explanation: As per the IPPB operating guidelines and Inspection Questionnaire Q.46(C)(n), the IPPB account limit at the end of the day is Rs. 1 Lakh. Amounts exceeding this must be managed as per POSB interoperability guidelines.
+
+Q27. According to the latest revision (07.02.2022) of the Branch Post Office Inspection Questionnaire (Q.36), what is the correct frequency and volume for passbook verification by the inspecting officer?
+A. 5 passbooks per scheme in total since last inspection.
+B. 1 passbook per month (total 12 per scheme) since last inspection.
+C. 1 passbook for every two months (total 6 per scheme) since last inspection.
+D. All available passbooks in the Branch Post Office.
+Answer: C
+Explanation: Under the latest 07.02.2022 revision of Q.36, the inspecting officer must collect 1 passbook for every two months, totaling 6 passbooks for each scheme since the last inspection.
+
+Q28. Which of the following statements regarding the checking of DARPAN devices and hardware at a Branch Post Office is/are correct?
+
+1. The DARPAN Main Computing Device (MCD) should be directly connected to the Electricity Supply for operations to save battery.
+2. The BPM should alternately use both battery cradles, keeping one connected to the device and the other charging.
+3. The inspecting officer must check the CSQ (Check Signal Strength Quality) value inside the BO.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: The BPM should use both battery cradles alternately. The DARPAN MCD must always be powered from batteries and NEVER directly connected to Solar UPS or Electricity Supply. The inspecting officer must check the CSQ value.
+
+
+
+Q29. During an inspection of a Branch Post Office, the inspecting officer finds that certain accounting entries were not posted automatically in the GL Integration. Which SAP transaction code (tcode) or report should the officer use to check these unposted entries?
+A. FAGLL03
+B. ZFBL3N
+C. ZFSI_ERROR
+D. MB52
+Answer: C
+Explanation: According to Q.48(b) of the Inspection Questionnaire, post GL integration, accounting entries which were not posted automatically must be checked for those dates which are in the ERROR report ZFSI_ERROR.
+
+Q30. According to the latest revision (07.02.2022) of the Branch Post Office Inspection Questionnaire (Q.36), what action must the inspecting officer take if a passbook verified in the last year's inspection is verified again during the current year's inspection?
+A. Confiscate the passbook for detailed audit.
+B. Issue an SB-46 notice immediately.
+C. Mention the reason(s) for the verification of the same passbook in the Inspection Report.
+D. No specific action is required if the balance matches Finacle.
+Answer: C
+Explanation: Note 2 of the 07.02.2022 revision of Q.36 explicitly states that if any passbook verified in the last year's inspection is verified again during the current year, the reason(s) for this repeated verification must be mentioned in the Inspection Report.
+
+Q31. Which of the following statements regarding mail operations at a Branch Post Office is/are correct?
+
+1. Articles in deposit should be compared between the DARPAN CSI app and the physical number of articles available.
+2. The BPM must issue accountable articles using the DARPAN CSI app.
+3. Unregistered articles posted in the BO meant for delivery through the same BO must always be routed through the Account Office.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Articles in deposit must be compared between the DARPAN app and physical availability. Accountable articles are issued via the DARPAN app. Unregistered articles posted in the BO for local delivery must be disposed of without routing them through the Account Office.
+
+
+
+Q32. Consider the following statements regarding IMTS (International Money Transfer Service) checks at a Sub Post Office:
+
+1. A maximum of 30 IMTS transactions can be paid to a single customer in a calendar year.
+2. Amounts exceeding Rs. 50,000 must be paid by cheque or direct credit to the SB account.
+3. "To Receive Money" (TRM) forms are optional if the customer provides a valid Aadhaar card.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Under IMTS, a maximum of 30 transactions are allowed per customer per calendar year. Amounts exceeding Rs. 50,000 must be paid by cheque or SB credit. TRM forms must be completely filled and attached to records; they are never optional.
+
+
+
+Q33. Which of the following parameters is evaluated to check the network connectivity availability inside the Branch Post Office for each Business Client Application?
+A. Facility ID
+B. MAC Address
+C. CSQ (Check Signal Strength Quality) value
+D. IMEI Number
+Answer: C
+Explanation: Q.16.4 of the BO Inspection Questionnaire mandates checking the network connectivity availability inside the BO for each Business Client Application and noting down the CSQ (Check Signal Strength Quality) value.
+
+Q34. To verify PLI/RPLI premium collection at a Branch Post Office, the inspecting officer is required to check Day End Reports and Summary Reports for how many days since the last inspection?
+A. 5 days taking into account 1 day per quarter.
+B. 10 days taking into account 3 days in Q1, 3 days in Q2, and 2 days each in Q3 and Q4.
+C. 12 days taking into account 1 day per month.
+D. 14 days taking into account 2 days per week.
+Answer: B
+Explanation: Q.49.10 of the BO Inspection Questionnaire states that PLI/RPLI premium collection must be checked for 10 days since the last inspection, taking into account 3 days in Q1, 3 days in Q2, and 2 days each in Q3 and Q4.
+
+Q35. Under Section K (Conclusion) of the Branch Post Office Inspection Questionnaire, what is the maximum points weightage allocated to the "Use of RICT Application (CBS/CIS/Del App/Booking App)"?
+A. 5 points
+B. 10 points
+C. 20 points
+D. 40 points
+Answer: D
+Explanation: The maximum weightage in the BO inspection scoring is 40 points for the "Use of RICT Application (CBS/CIS/Del App/Booking App)", reflecting the Department's emphasis on technology adoption.
+
+Q36. A Sub Post Office receives a cheque from a Branch Post Office for opening a new POSB account. According to the Supplementary Questionnaire (S17) and relevant SB Orders, what must the Sub Post Office maintain?
+A. An electronic ledger entry in the DARPAN app exclusively.
+B. A manual cheque register for cheques received from BOs.
+C. A suspense account under SOL ID 0339.
+D. A daily physical transfer log sent to the Head Office.
+Answer: B
+Explanation: According to Supplementary Question S17 and SB Orders 22/2020 & 27/2020, the Sub Post Office must maintain a manual cheque register for cheques received from BOs for new account openings or subsequent deposits.
+
+Q37. Which of the following statements regarding the retention of undelivered passbooks at a Sub Post Office is/are correct?
+
+1. The register for passbook retention is maintained in form SB-44.
+2. Undelivered passbooks can be retained indefinitely if the customer cannot be contacted.
+3. No passbook should generally be retained in the post office after a transaction.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: The passbook retention register is SB-44. Passbooks must not be unnecessarily detained and should not be retained after transactions. Educating BPMs that no passbook should be retained is a required inspection check.
+
+
+
+Q38. Consider the following statements regarding ATM cash management at a Sub Post Office:
+
+1. Post GL Integration, ATM cash is considered as Cash of the concerned SOL.
+2. The ATM cash account (SOL ID + 0006) should always be in a Credit (Cr.) Balance.
+3. ATM cash loading entries must be reflected in the Daily Account in CSI on the day of loading.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: ATM cash is considered cash of the concerned SOL and cash loading entries must be reflected in the Daily Account. However, the ATM cash account (SOL ID + 0006) must always be in a Debit (Dr.) Balance, not Credit.
+
+
+
+Q39. According to the 2022 revised Q.52(c) of the Sub Post Office Inspection Questionnaire, how many RD Loan accounts opened since the last inspection must be verified by the inspecting officer?
+A. At least two RD Loan accounts
+B. At least five RD Loan accounts, or all if fewer than five were opened
+C. Exactly ten RD Loan accounts
+D. One RD Loan account per quarter
+Answer: B
+Explanation: Q.52(c) requires the inspecting officer to verify at least five RD loan accounts opened since the last inspection. If the number of RD Loan accounts opened is less than 5, all must be verified.
+
+Q40. Which of the following statements regarding the handling of cheques at a Sub Post Office is/are correct?
+
+1. The inward and outward clearing report for 4 days should be generated from Finacle and tallied with the SO Daily Account (zfr-day-new).
+2. The office account SOL ID + 0382 used for new account opening must show a credit balance at the End of Day (EoD).
+3. Non-DOP cheques must be lodged to SOL ID + 0017.
+A. 1 and 3 only
+B. 2 and 3 only
+C. 1 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Inward/outward clearing reports must tally with the SO Daily Account. Non-DOP cheques are lodged to SOL ID + 0017. The office account SOL ID + 0382 must be ZERO at the End of Day, not a credit balance.
+
+
+
+Q41. Which of the following statements regarding Instant ATM Debit Card Kits is/are not correct?
+
+1. The ATM card issue register must be checked along with pending stock.
+2. The inspecting officer must test check 5 cases to ensure they were issued to genuine customers.
+3. The Inquire function under the HFINRPT menu is used to verify issued ATM cards.
+A. 1 only
+B. 2 only
+C. 3 only
+D. 1 and 3 only
+Answer: C
+Explanation: The register and stock must be checked, and 5 cases verified for genuine customers. However, the Inquire function under the CCMM Menu (not HFINRPT) is used to verify issued ATM cards. HFINRPT is for user profiles.
+
+
+
+Q42. Consider the following statements regarding AML/CFT compliance for PLI/RPLI at a Sub Post Office:
+
+1. Revised PLI/RPLI proposal forms with KYC norms must be used.
+2. For proposals above Rs. 10 lakhs, documentary support for identity, address, and PAN must be thoroughly checked.
+3. The inspecting officer must test check 5 such high-value cases.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Revised KYC forms must be used. For PLI/RPLI, the threshold for checking comprehensive documentary support (financial underwriting) for high-value policies is Rs. 20 Lakhs, not Rs. 10 Lakhs. The inspecting officer must test check 5 cases.
+
+
+
+Q43. During an inspection of a Sub Post Office, the inspecting officer needs to verify the cash and stamp balances. Which of the following SAP transaction codes (tcodes) must be used to generate the cash balance report for DOP cash?
+A. FAGLL03
+B. zfbl3n
+C. zfr_day_new
+D. MB52
+Answer: B
+Explanation: To generate the cash balance report for DOP cash, the tcode zfbl3n is used. FAGLL03 is for GL line items, zfr_day_new is for the daily account, and MB52 is for inventory in main stock.
+
+Q44. Which of the following statements regarding Pension Payments at a Sub Post Office is/are correct?
+
+1. The inspecting officer must check whether the Life Certificate (Jeevan Pramaan) is on record.
+2. Pension payments must be effected on scheduled dates.
+3. Reports for Railways and BSNL pension payments must be properly submitted.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The inspecting officer must check that the Life Certificate (Jeevan Pramaan) is on record, pension payments are effected on scheduled dates, and reports for Railways and BSNL pension payments are properly submitted.
+
+
+
+Q45. Consider the following statements regarding Technology Management checks at a Sub Post Office:
+
+1. LaserJet printers must be connected directly to the power supply, not through the UPS.
+2. Staff must use their own India Post ID for domain login, which can be checked using the User Login Report in Finacle.
+3. The POS database server C drive must have adequate space.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: LaserJet printers must be on direct power, not UPS. Staff must use their own India Post IDs, verifiable via Finacle. The POS database server C drive must have adequate space. All statements are correct.
+
+
+
+Q46. For a Sub Post Office, the office account SOL ID + 0382 is used for which of the following purposes?
+A. Money Order Upload Account
+B. New Account Opening and subsequent deposits
+C. Branch Office Settlement Account
+D. ATM Cash Account
+Answer: B
+Explanation: The office account SOL ID + 0382 is used for New Account Opening and subsequent deposits, and it must be ZERO at the End of Day (EoD).
+
+Q47. Which of the following statements regarding the inspection frequency and time schedule for a Head Post Office (HPO) is/are correct?
+
+1. The Annual Inspection cum Verification is allocated 8 days.
+2. A separate Verification inspection is allocated 4 days.
+3. Inspections mandated for more than one day can be staggered over multiple days at the inspecting officer's convenience.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: The Annual Inspection cum Verification for an HPO is 8 days, and a separate Verification is 4 days. Inspections mandated for more than one day must be completed in ONE SPELL and should NOT be staggered over days.
+
+
+
+Q48. Which of the following checks is specifically earmarked for Verification at a Head Post Office regarding Bag Receipt?
+
+1. Checking if bags are received in good condition.
+2. Checking if bags are received as per the Due Mail Sorting List.
+3. Submitting error extracts to the Divisional Office for all RMFM cancellations.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Checking if bags are received in good condition and as per the Due Mail Sorting List are earmarked for Verification under Q.27. RMFM cancellation error extracts (Q.26) are part of counter operations, not Bag Receipt Verification.
+
+
+
+Q49. During the inspection of a Head Post Office, the inspecting officer discovers that the postage taxed and realized shows a difference of 35% compared to past collections. According to the Inspection Questionnaire, what should the officer do?
+A. Immediately suspend the delivery staff.
+B. Probe the reasons for the difference and counsel the supervisor/staff.
+C. Report the matter to the police for potential embezzlement.
+D. Ignore the difference if it is less than 50%.
+Answer: B
+Explanation: Under Q.28 (Mail Receipt), if the tax due for the day compared with past collections shows a difference of over 30%, the inspecting officer must probe the reasons and counsel the supervisor/staff.
+
+Q50. According to the GST provisions in the Head Post Office Inspection Questionnaire, what is the due date for filing GSTR-1 (Statement of outward supplies)?
+A. By the 10th of every month
+B. By the 15th of every month
+C. By the 20th of every month
+D. By the 24th of every month
+Answer: A
+Explanation: Under Q.126 (GST) of the HO Questionnaire, all GST returns must be filed on due dates: GSTR-1 by the 10th of every month, GSTR-2 by the 15th, and GSTR-3 by the 20th.
+
+Q51. Consider the following statements regarding Letter Box clearance at a Head Post Office:
+
+1. Letter Box plates (A & B) must exist.
+2. The checking of LB clearance by posting test letters must be done exclusively by the Divisional Head.
+3. Sorting assistants must clear the letter box in time.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Letter Box plates (A & B) must exist, and sorting assistants must clear the box in time. Checking of LB clearance by posting test letters is to be done by the PRI/Postmaster, not exclusively the Divisional Head.
+
+
+
+Q52. Which of the following statements regarding the posting of Registered Newspapers at a Head Post Office is/are correct?
+
+1. The deposit account for posting without prepayment must be regularly updated.
+2. Bills for recovery must be paid by the publisher within 7 days.
+3. Supplements are the only permissible enclosures with registered newspapers.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The deposit account must be updated, bills paid by the publisher within 7 days, and no enclosures except supplements are allowed with registered newspapers. All statements are correct.
+
+
+
+Q53. Consider the following statements regarding International Money Transfer Service (IMTS/WUMT) at a Head Post Office:
+
+1. A valid ID proof, such as an Aadhaar or a Loyalty Card issued by the Post Office, must be checked.
+2. Amounts exceeding Rs. 50,000 must be paid by cheque or direct credit to the SB account.
+3. The message "WILL CALL MONEY TRANSFER PAID" must be generated on the payment screen.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Valid ID proofs include Aadhaar and PO Loyalty Cards. Amounts over Rs. 50,000 must be paid by cheque/SB credit. The system must generate the "WILL CALL MONEY TRANSFER PAID" message. All are correct.
+
+
+
+Q54. Under the Head Post Office Inspection Questionnaire, what is the monetary threshold for High Value Withdrawals from single-handed SOs and BOs that require verification memos to be sent to Field Officers?
+A. Rs. 10,000/- or above
+B. Rs. 20,000/- or above
+C. Rs. 25,000/- or above
+D. Rs. 50,000/- or above
+Answer: A
+Explanation: According to Q.68 of the HO Questionnaire and Rule 59 of the POSB (CBS) Manual, verification memos for withdrawals of Rs. 10,000/- or above from single-handed SOs and BOs must be sent to Field Officers for verification.
+
+Q55. A Postmaster at a Head Post Office receives an application to discharge a KVP certificate issued before 01.07.2016. According to the Inspection Questionnaire, what specific verification check must the inspecting officer perform?
+A. Ensure the physical certificate is forwarded to the local police station for anti-money laundering checks.
+B. Ensure a monthly return of discharge of certificates is sent to the DAP within the time limit.
+C. Ensure the amount is cross-checked exclusively with the manual Treasurer's Cash Book.
+D. Ensure the physical certificate is returned to the customer after invalidation.
+Answer: B
+Explanation: For certificates issued before 01.07.2016, Q.76(a) requires the officer to check that the monthly return of discharge is sent to the DAP within the time limit and cross-check the amount with Finacle and GLs in CSI.
+
+Q56. Match the following Office Account SOL IDs at a Head Post Office with their correct purposes, and identify the INCORRECT pairing.
+A. SOL ID + 0340 : Postmaster Cheque Account
+B. SOL ID + 0409 : Salary Upload Account
+C. SOL ID + 0339 : Money Order Upload Account
+D. SOL ID + 0104 : McCamish Account
+Answer: C
+Explanation: SOL ID + 0339 is the Branch Office Settlement Account, not the Money Order Upload Account. The Money Order Upload Account is SOL ID + 0385.
+
+Q57. Which of the following statements regarding the processing of PLI/RPLI proposals at a Head Post Office is/are correct?
+
+1. Proposals exceeding Rs. 5 lakhs must be accepted by the authorized authority.
+2. The latest proposal forms (LI-24/LI-1) must include mobile, email, and Aadhaar details.
+3. If a proposal is rejected, the provisional premium cannot be refunded.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Proposals > Rs. 5 lakhs must be accepted by the authorized authority, and forms must include mobile/email/Aadhaar. For rejected proposals, the proposer must be informed and the provisional premium refunded.
+
+
+
+Q58. Under the Head Post Office Inspection Questionnaire, what action is mandated during a CIS downtime in the CPC (PLI)?
+A. Stop all transactions until network restoration.
+B. Adopt the Business Continuity Plan (BCP) and upload transactions upon restoration.
+C. Route all proposals immediately to the nearest Branch Post Office.
+D. Issue manual receipts and destroy them after network restoration.
+Answer: B
+Explanation: Q.107 (Technology - PLI/CPC) mandates that during CIS downtime, the Business Continuity Plan (BCP) must be adopted, and transactions uploaded on restoration, which must be test-checked for accuracy.
+
+Q59. Consider the following statements regarding the maintenance of Pension Records at a Head Post Office:
+
+1. Disburser's halves of PPOs must be kept serially per the register of PPOs.
+2. Independent enquiries must be made for MO pensions to ensure pensioners are actually alive.
+3. Due returns must be submitted to the PAO on due dates.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Disburser's halves are kept serially, independent enquiries are required for MO pensions to verify life, and due returns must be submitted to the PAO on schedule. All statements are correct.
+
+
+
+Q60. According to the Head Post Office Inspection Questionnaire, the service books of newly appointed officials and those retiring within what time frame must be properly written and completely verified?
+A. Retiring within 6 months
+B. Retiring within 1 year
+C. Retiring within 2 years
+D. Retiring within 5 years
+Answer: C
+Explanation: Q.131(a) (Service Verification) specifies that the service books/rolls of newly appointed officials and those retiring within 2 years must be properly written and complete.
+
+Q61. Which of the following checks is NOT specifically listed under the Swachh Bharat Abhiyan daily checks by the Postmaster at a Head Post Office?
+A. Toilets scrubbed and vitreous fixtures disinfected.
+B. Dustbins emptied and cleaned.
+C. Roof Top Rain Water Harvesting facility dismantled during monsoon.
+D. Accessibility provisions like Ramps/Elevators/Chairs for persons with disabilities provided.
+Answer: C
+Explanation: Roof Top Rain Water Harvesting facilities must be constructed and well maintained, not dismantled during monsoon. The other options are mandatory daily checks under Q.18 (Swachh Bharat Abhiyan).
+
+Q62. Under Official Language Implementation at a Head Post Office, how should rubber stamps be formatted?
+A. Only in English for international uniformity.
+B. Only in Hindi to promote the official language.
+C. Bilingual, with letters in Hindi having a point size greater than 2 as compared to the English letters.
+D. Bilingual, with letters in English having a point size greater than 2 as compared to the Hindi letters.
+Answer: C
+Explanation: According to Q.17(ii), in rubber stamps, the letters in Hindi should have a point size greater than 2 as compared to the English letters to ensure prominence.
+
+Q63. A Head Post Office has a departmental Remotely Managed Franking Machine (RMFM) operating on a click-charge basis. What specific check must the inspecting officer perform regarding this?
+A. Ensure the machine is disconnected from the network daily at 5 PM.
+B. Ensure that the minimum transactions are achieved to justify the click-charge expenditure.
+C. Ensure the machine is used only for private un-registered mail.
+D. Verify that no notional credit is claimed for departmental RMFMs.
+Answer: B
+Explanation: For departmental RMFMs on a click-charge basis, Q.26(a) requires the inspecting officer to check if the minimum transactions are achieved. Notional credit must be checked for departmental RMFMs (Q.26(l)).
+
+Q64. Which of the following statements regarding the handling of Non-DOP Cheques (Bank Cheques) at a Head Post Office is/are correct?
+
+1. All non-DOP cheques must be lodged to respective SOs (SOL ID + 0382) for RD accounts.
+2. Posting of PPF and SSA cheques must be done at the BO level.
+3. Subsequent credit posting must be done on a regular basis immediately on crediting.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Non-DOP cheques for RD are lodged to SOs (SOL ID + 0382). However, the posting of PPF and SSA must be done at the HO itself for all cheques (HO SOL ID + 00382), not at the BO level. Subsequent credits must be posted regularly.
+
+
+
+Q65. According to the Head Post Office Inspection Questionnaire, what is the AML/CFT due diligence requirement for an iMO transaction if the amount exceeds Rs. 50,000 in a month?
+A. It must be paid strictly in cash.
+B. Customer Due Diligence (CDD) must be conducted.
+C. The transaction must be immediately aborted and reported as an STR.
+D. The amount must be split into two separate transactions.
+Answer: B
+Explanation: For iMO services, if the amount exceeds Rs. 50,000 in a month, Customer Due Diligence (CDD) must be conducted. Splitting amounts to avoid thresholds is prohibited.
+
+Q66. Consider the following statements regarding the ECS Account (SOL ID + 0098) at a Head Post Office:
+
+1. Entries for 4 selected dates must be cross-verified with ECS Debit & Credit lists of HOs.
+2. The account is exclusively used for tracking manual MO payments.
+3. ECS failure cases must be paid by debiting this office account.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: The ECS account (SOL ID + 0098) entries must be cross-verified with ECS lists, and ECS failure cases involve amounts paid by debiting this office account. It is not used for tracking manual MO payments.
+
+
+
+Q67. Which of the following statements regarding MGNREGA/DBT transactions at a Head Post Office is/are correct?
+
+1. Payments should strictly follow the online mode where mandated.
+2. For FTO checks, the total amount must be transferred correctly to the Postmaster's account before affording credits.
+3. Suspicious deletions or corrections in the LOT are permitted if initialed by the APM.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Payments follow the online mode, and FTO checks ensure amounts are transferred to the PM's account before crediting. There must be absolutely no suspicious deletions or corrections in the LOT.
+
+
+
+Q68. Under the Business Development section of the Head Post Office Inspection Questionnaire, what must the inspecting officer check regarding e-Post?
+A. That all e-Post traffic is sent exclusively through physically printed postcards.
+B. That e-Post messages are downloaded twice daily.
+C. That e-Post revenue is excluded from the PO Account to prevent double counting.
+D. That e-Post is restricted to corporate customers only.
+Answer: B
+Explanation: For e-Post, Q.113 mandates checking that arrangements/facilities are adequate, messages are transmitted on time, and they are downloaded twice daily. Revenue must be checked in the MIS and PO Account.
+
+Q69. During the inspection of Bank Transactions at a Head Post Office, the inspecting officer finds unpaired or unlinked cheques pending for more than 6 months. What action is required?
+A. Credit the amounts to the Unclaimed Deposit account immediately.
+B. Ascertain the reasons for the delay and ensure action is taken.
+C. Return the cheques to the respective drawers without inquiry.
+D. Delete the entries from the BRS module to clear the backlog.
+Answer: B
+Explanation: Under Q.118(f), if unpaired/unlinked cheques are pending for more than 6 months, the reasons must be ascertained and appropriate action taken. Deleting entries or returning without inquiry is illegal.
+
+Q70. Which of the following statements regarding Finance Checks (Q.125) at a Head Post Office is/are correct?
+
+1. The prescribed procedure for the exchange of remittances with SOs and BOs must be strictly followed.
+2. The maximum and minimum cash balances of SOs must be reviewed.
+3. Salary and wages can exceed sanctioned establishments if approved by the local PRI.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Remittance procedures must be strictly followed, and SO balances reviewed. Salary and wages must strictly be as per sanctioned establishments, and cannot be arbitrarily exceeded by the PRI.
+
+
+
+Q71. Consider the following statements regarding the Technology Environment checks at a Head Post Office:
+
+1. In the CSI environment, the POS database server C drive must have adequate space.
+2. SIFY routers and switches must be placed properly in a rack.
+3. Network connectivity failures should be checked using e-health reports.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: The POS db server C drive must have adequate space. Routers/switches must be in racks, and NSP1/NSP2 working should be checked via e-health reports. All statements are correct.
+
+
+
+Q72. In the CSI Environment at a Head Post Office, which transaction code (tcode) is used to generate the General Ledger Line Items Report for verifying SB/SC transactions?
+A. MB52
+B. FAGLL03
+C. ZFSI_ERROR
+D. HFINRPT
+Answer: B
+Explanation: The tcode FAGLL03 is used to generate the General Ledger Line Items Report in SAP for verifying SB/SC transactions, POS cash balances, VP clearing, etc..
+
+Q73. Which of the following statements regarding the verification of Cash and Stamp balances at a Head Post Office in the CSI environment is/are correct?
+
+1. The DOP cash balance is verified using the tcode ZFBL3N.
+2. The POS cash balance must be ZERO at the end of the day.
+3. The inventory in main stock is checked using the tcode MB51 exclusively.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: DOP cash is checked using ZFBL3N, and the POS cash balance must be ZERO at the end of the day. Inventory in main stock is checked using MB52, whereas MB51 is used for inventory movement/invoicing.
+
+
+
+Q74. Consider the following statements regarding Pension Payment checks (Q.128) at a Head Post Office:
+
+1. The inspecting officer must check HO & SO pension schedules with reverse entries on disburser's halves of PPOs for about 10 days at random.
+2. The total pension amount must agree with the HO cash book aggregate.
+3. Pensioners' original PPOs must be retained by the Postmaster permanently after the pensioner's death.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Pension schedules and reverse entries on disburser's halves are checked for 10 days, and the total must agree with the HO cash book aggregate. PPOs are not permanently retained post-death; death reports are noted and family pension scrutinized per rules.
+
+
+
+Q75. Under the Business Post checks at a Head Post Office, what is the minimum number of articles required to be posted at a time for the Bill Mail Service?
+A. 1,000 articles
+B. 2,000 articles
+C. 5,000 articles
+D. 10,000 articles
+Answer: C
+Explanation: According to Q.86 (Bill Mail Service) of the Business Development checks, a minimum of 5,000 articles must be posted at a time for Bill Mail Service (and 10,000 for National Bill Mail Service).
+
+Q76. Under the Goods and Services Tax (GST) Act, 2017 framework, what is the statutory ceiling for the combined (CGST + SGST) standard tax rate?
+A. 18%
+B. 20%
+C. 28%
+D. 40%
+Answer: D
+Explanation: Section 9(1) of the CGST Act sets the statutory ceiling for the CGST rate at 20%. Consequently, the combined maximum standard rate (CGST + SGST) is capped at 40%.
+
+Q77. Which of the following components is/are EXCLUDED from the definition of "Aggregate turnover" under Section 2(6) of the CGST Act?
+
+1. Value of exempt supplies.
+2. Value of inward supplies on which tax is payable under reverse charge mechanism (RCM).
+3. Central tax, State tax, Union territory tax, and Integrated tax.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Aggregate turnover includes taxable supplies, exempt supplies, exports, and inter-State supplies. It specifically excludes the value of inward supplies on which tax is payable under reverse charge, as well as all GST taxes.
+
+
+
+Q78. Consider the following statements regarding the GST Composition Scheme:
+
+1. A manufacturer of notified goods such as ice-cream and tobacco is eligible for the composition scheme if turnover is below Rs. 1.5 crore.
+2. A composition dealer cannot collect tax or claim input tax credit (ITC).
+3. Service providers with a turnover up to Rs. 50 lakh can opt for a 6% composition rate.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Manufacturers of notified goods (ice-cream, pan masala, tobacco) are explicitly barred from the composition scheme. Composition dealers cannot collect tax or claim ITC, and service providers up to Rs. 50 lakh can opt for the 6% scheme.
+
+
+
+Q79. A supplier offers a post-supply discount to a recipient. According to the amendment by the Finance Act, 2026, which of the following conditions must be met to deduct this discount from the value of taxable supply?
+A. The discount must be established through a pre-existing agreement linked to specific invoices.
+B. The discount is given through a credit note, and the recipient reverses the proportionate ITC.
+C. The discount must be declared in the GSTR-1 prior to the actual supply.
+D. Post-supply discounts are strictly disallowed under the amended Section 15(3)(b).
+Answer: B
+Explanation: The Finance Act, 2026 amended Section 15(3)(b) to remove the requirement for a pre-existing agreement. A post-supply discount is now deductible if given through a credit note under Section 34 and the recipient reverses the proportionate ITC.
+
+Q80. Which of the following is/are mandatory conditions for a registered person to claim Input Tax Credit (ITC) under Section 16(2) of the CGST Act?
+
+1. The invoice/debit note is furnished by the supplier and communicated to the recipient in GSTR-2B.
+2. The ITC is not restricted in the Section 38 auto-communicated statement.
+3. The recipient has paid the supplier within 30 days of the invoice issuance.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Mandatory conditions for ITC include communication of the invoice in GSTR-2B and the ITC not being restricted under Section 38. The recipient must pay the supplier within 180 days, not 30 days, failing which ITC is added to output liability.
+
+
+
+Q81. Consider the following scenarios involving Input Tax Credit (ITC). In which case is the ITC NOT blocked under Section 17(5) of the CGST Act?
+A. ITC on motor vehicles with a seating capacity of 10 persons used for executive transport.
+B. ITC on outdoor catering services used by a company for its annual employee gathering.
+C. ITC on plant and machinery constructed by a taxable person on their own account.
+D. ITC on goods written off or given as free samples.
+Answer: C
+Explanation: Under Section 17(5), ITC is blocked for motor vehicles (seating ≤ 13, general use), outdoor catering (unless used for making outward taxable supply of same category), and goods written off/free samples. However, ITC is allowed on plant and machinery constructed on own account.
+
+Q82. Under Section 19 of the CGST Act, what is the maximum time limit for capital goods (other than moulds, dies, jigs, fixtures, tools) sent for job work to be returned to the principal without being deemed a supply?
+A. 180 days
+B. 1 year
+C. 3 years
+D. 5 years
+Answer: C
+Explanation: Section 19 stipulates that inputs sent for job work must return within 1 year, and capital goods must return within 3 years. If they do not return within this period, it is deemed a supply on the date they were sent.
+
+Q83. Which of the following persons is/are subject to compulsory registration under Section 24 of the CGST Act, irrespective of their aggregate turnover?
+
+1. Persons making inter-State taxable supplies (subject to notified exceptions).
+2. Casual taxable persons and non-resident taxable persons.
+3. Agriculturists supplying produce cultivated out of their own land.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Inter-State suppliers (with some exceptions) and casual/non-resident taxable persons are subject to compulsory registration regardless of turnover under Section 24. Agriculturists are not liable to register to the extent of produce from land under Section 23.
+
+
+
+Q84. A registered supplier discovers that the tax charged in a tax invoice is less than the correct tax payable. According to Section 34 of the CGST Act, what document should the supplier issue?
+A. A Credit Note
+B. A Debit Note
+C. A revised Bill of Supply
+D. A Payment Voucher
+Answer: B
+Explanation: A debit note is issued where the taxable value or tax in the invoice is less than the correct amount. A credit note is issued when the value or tax charged exceeds the correct amount, or for returned/deficient goods.
+
+Q85. Consider the following statements regarding the three-year filing bar for GST returns:
+
+1. The bar applies to GSTR-1, GSTR-3B, the annual return, and the TCS statement.
+2. A return for a tax period cannot be furnished after the expiry of 3 years from its due date.
+3. The three-year filing bar is enforced by the GST portal with effect from 1 October 2025.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Introduced by the Finance Act 2023, the three-year filing bar prevents the furnishing of returns (GSTR-1, GSTR-3B, annual return, TCS statement) after 3 years from their due date. This is portal-enforced from 1 October 2025.
+
+
+
+Q86. Which of the following represents the correct mandatory order for the utilisation of Input Tax Credit (ITC) under Sections 49A/49B of the CGST Act?
+A. CGST credit must be fully utilised first, followed by SGST, and finally IGST.
+B. IGST credit must be fully utilised first before CGST or SGST credit can be used.
+C. SGST credit can be freely used to pay off CGST liability.
+D. IGST credit can only be used to pay IGST liability, and cannot be set off against CGST or SGST.
+Answer: B
+Explanation: Under Section 49A/49B and Rule 88A, IGST credit must be fully utilised first against IGST, then CGST/SGST in any order. Furthermore, CGST credit cannot be used to pay SGST and vice versa.
+
+Q87. Consider the following statements regarding the refund of unutilised Input Tax Credit (ITC) under Section 54 of the CGST Act:
+
+1. Refund of unutilised ITC is generally allowed only for zero-rated supplies without payment of tax and inverted duty structure cases.
+2. Refund amounts up to Rs. 2 lakh require a self-declaration that the incidence of tax was not passed on.
+3. The Finance Act, 2026 extended the facility of 90% provisional refund to inverted-duty-structure cases.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Refund of unutilised ITC is restricted to zero-rated supplies and inverted duty structures. Claims up to Rs. 2 lakh need only a self-declaration. The Finance Act, 2026 extended the 90% provisional refund to inverted-duty cases.
+
+
+
+Q88. Under the Tax Deduction at Source (TDS) and Tax Collection at Source (TCS) provisions of the CGST Act, what are the respective prescribed rates (CGST + SGST combined)?
+A. TDS at 1% and TCS at 0.5%
+B. TDS at 2% and TCS at 1%
+C. TDS at 2% and TCS at 0.5%
+D. TDS at 5% and TCS at 2%
+Answer: C
+Explanation: Section 51 mandates TDS at 2% (1% CGST + 1% SGST) for contracts exceeding Rs. 2.5 lakh. Section 52 mandates e-commerce operators to collect TCS at 0.5% (0.25% CGST + 0.25% SGST).
+
+Q89. Which of the following statements regarding the common demand framework under Section 74A of the CGST Act is/are correct?
+
+1. It applies to demands from FY 2024-25 onward, merging the earlier non-fraud and fraud timelines into one.
+2. The order time-limit is 12 months from the due date of issue of the order, extendable by 6 months.
+3. No Show Cause Notice (SCN) is issued where the amount is less than Rs. 1,000.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Section 74A, inserted by the Finance (No. 7) Act, 2025, merges the fraud and non-fraud timelines for FY 2024-25 onwards. It limits orders to 12 months (extendable by 6 months) and establishes a Rs. 1,000 threshold for issuing SCNs.
+
+
+
+Q90. According to the Finance Act, 2026 amendment, which body has been empowered to act as the interim National Appellate Authority for Advance Ruling (NAAAR)?
+A. The Central Board of Indirect Taxes and Customs (CBIC)
+B. The Principal Bench of the GST Appellate Tribunal (GSTAT)
+C. The Supreme Court of India
+D. The Competition Commission of India (CCI)
+Answer: B
+Explanation: Because the full NAAAR was not constituted, Section 101A(1A) was inserted by the Finance Act, 2026, empowering the Principal Bench of the GST Appellate Tribunal (GSTAT) to function as the interim NAAAR to resolve conflicting State AAAR rulings.
+
+Q91. A registered taxpayer wishes to file a first appeal against an assessment order before the Appellate Authority under Section 107. Assuming the dispute involves only tax, what is the mandatory pre-deposit required (effective 1 Nov 2024)?
+A. Full admitted amount + 10% of the disputed tax (capped at Rs. 20 crore each for CGST and SGST).
+B. Full admitted amount + 20% of the disputed tax.
+C. 100% of the disputed tax.
+D. 10% of the admitted amount + 100% of the disputed tax.
+Answer: A
+Explanation: Under Section 107, the pre-deposit required is the full admitted amount plus 10% of the disputed tax, with the cap reduced to Rs. 20 crore each of CGST and SGST effective 1 Nov 2024.
+
+Q92. Under Section 132 of the CGST Act, what is the monetary threshold of tax evaded above which the offence becomes cognizable and non-bailable?
+A. Above Rs. 1 crore
+B. Above Rs. 2 crore
+C. Above Rs. 5 crore
+D. Above Rs. 10 crore
+Answer: C
+Explanation: Under Section 132, if the tax evaded exceeds Rs. 5 crore, the offence is punishable with up to 5 years imprisonment and fine, and is classified as cognizable and non-bailable. Below this threshold, offences are generally non-cognizable and bailable.
+
+Q93. Consider the following statements regarding the track-and-trace mechanism introduced by the Finance (No. 7) Act, 2025:
+
+1. Section 148A empowers the Government to notify a unique identification marking (digital stamp/mark) for specified evasion-prone goods.
+2. Contravening the track-and-trace mechanism under Section 122B attracts a penalty of Rs. 1 lakh or 10% of the tax payable on such goods, whichever is higher.
+3. The track-and-trace provisions apply to all manufactured goods uniformly.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Section 148A enables a unique identification marking for track-and-trace, backed by penalties under Section 122B (Rs. 1 lakh or 10% of tax, whichever is higher). These provisions apply only to specified evasion-prone goods like tobacco and pan masala, not all goods.
+
+
+
+Q94. Which of the following activities is treated as "Neither a supply of goods nor a supply of services" (Negative list) under Schedule III of the CGST Act?
+
+1. Services by an employee to the employer in the course of employment.
+2. Permanent transfer or disposal of business assets where ITC has been availed.
+3. Services by courts or tribunals.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Schedule III (Negative List) covers employee-to-employer services, and services by courts/tribunals. Permanent transfer of business assets where ITC was availed is deemed a supply under Schedule I, not Schedule III.
+
+
+
+Q95. The GST Amnesty Scheme introduced by the Finance (No. 2) Act, 2024 (Section 128A) provides a conditional waiver of interest and penalty for non-fraud demands under Section 73. This waiver applies to demands for which of the following financial years?
+A. FY 2017-18, 2018-19, and 2019-20
+B. FY 2020-21, 2021-22, and 2022-23
+C. FY 2023-24 and 2024-25 only
+D. All financial years up to 2023-24
+Answer: A
+Explanation: The amnesty scheme under Section 128A provides a conditional waiver of interest and penalty for Section 73 demands relating specifically to the initial implementation years: FY 2017-18, 2018-19, and 2019-20, provided full tax was paid by 31 March 2025.
+
+Q96. A principal sends raw materials (inputs) to a job worker without payment of tax. Due to unforeseen production delays, the inputs are not returned to the principal within 1 year. Under the CGST Act, what is the consequence?
+A. A penalty of Rs. 10,000 is automatically levied.
+B. The principal must write off the value of the goods and reverse ITC immediately.
+C. The inputs are deemed to be a supply by the principal to the job worker on the date they were sent.
+D. The job worker is prosecuted under Section 132.
+Answer: C
+Explanation: Under Section 143, inputs sent for job work must return within 1 year. If they fail to return within this period, it is deemed a supply from the principal to the job worker on the date they were originally sent out.
+
+Q97. Which of the following statements regarding the cross-empowerment of SGST/UTGST officers under Section 6 of the CGST Act is/are correct?
+
+1. SGST/UTGST officers are treated as proper officers for CGST subject to conditions.
+2. If an SGST officer initiates proceedings on a subject matter, a CGST officer can concurrently initiate proceedings on the exact same subject matter to ensure compliance.
+3. The cross-empowerment provides a safeguard against double jeopardy on the same subject matter.
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: SGST/UTGST officers are proper officers for CGST. A key safeguard against double jeopardy states that once one tax authority initiates proceedings on a subject matter, the other shall not initiate on the same subject matter.
+
+
+
+Q98. Under Section 36 of the CGST Act, for how many months from the due date of furnishing the annual return for the year must a registered person generally retain accounts and records?
+A. 36 months (3 years)
+B. 48 months (4 years)
+C. 60 months (5 years)
+D. 72 months (6 years)
+Answer: D
+Explanation: Section 36 mandates that accounts and records must be retained for 72 months (6 years) from the due date of furnishing the annual return for the respective year.
+
+Q99. Consider the following statements regarding the Time of Supply under Sections 12 and 13 of the CGST Act:
+
+1. For goods under forward charge, it is the earlier of the date of issue of invoice or the date of receipt of payment.
+2. For services under reverse charge, it is the earlier of the date of payment or the 61st day from the supplier's invoice.
+3. The special time-of-supply rule for vouchers remains unchanged after the Finance (No. 7) Act, 2025.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Time of supply for goods (forward) is earlier of invoice or payment. For services (reverse), it is earlier of payment or the 61st day from invoice. The special rule for vouchers was omitted w.e.f. 1 October 2025 by the Finance (No. 7) Act, 2025.
+
+
+
+Q100. Which of the following is explicitly included within the scope of "supply" under Section 7 of the CGST Act, even if made without consideration?
+A. Import of services, whether or not in the course of business.
+B. Activities specified in Schedule I.
+C. Activities specified in Schedule III.
+D. Any transfer of title in goods to an unrelated person.
+Answer: B
+Explanation: Section 7 includes activities specified in Schedule I (such as supplies between related persons, or permanent transfer of business assets where ITC was availed) as supply, even if made without consideration. Import of services requires consideration to be a supply unless covered by Schedule I.

@@ -27,7 +27,9 @@ const PSGB_TESTS = [
     { id: 'psgb-mock-2026-06-14', title: "PS Gr B - Weekly Mock Test 11", date: "Jun 13-14, 2026" },
     { id: 'psgb-mock-2026-06-21', title: "PS Gr B - Weekly Mock Test 12", date: "Jun 20-21, 2026" },
     { id: 'psgb-mock-2026-06-28', title: "PS Gr B - Weekly Mock Test 13", date: "Jun 27-28, 2026" },
-    { id: 'psgb-mock-2026-07-05', title: "PS Gr B - Weekly Mock Test 14", date: "Jul 4-5, 2026" }
+    { id: 'psgb-mock-2026-07-05', title: "PS Gr B - Weekly Mock Test 14", date: "Jul 4-5, 2026" },
+    { id: 'psgb-mock-2026-07-12', title: "PS Gr B - Weekly Mock Test 15", date: "Jul 11-12, 2026" },
+    { id: 'psgb-mock-2026-07-19', title: "PS Gr B - Weekly Mock Test 16", date: "Jul 18-19, 2026" }
 ];
 
 export default function MockFeedbackDashboard() {
