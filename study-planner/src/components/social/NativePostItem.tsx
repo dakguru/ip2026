@@ -322,7 +322,7 @@ export const NativePostItem = ({ post, onSave, isSaved, currentUser, onDelete, o
                                         {comment.author ? comment.author[0] : 'U'}
                                     </div>
                                     <div className="flex-1">
-                                        <div className="bg-white dark:bg-zinc-800 rounded-2xl rounded-tl-none p-3 shadow-sm border border-zinc-100 dark:border-zinc-800/50">
+                                        <div className={`rounded-2xl rounded-tl-none p-3 shadow-sm border ${comment.author === 'Admin' ? 'bg-indigo-50/50 dark:bg-indigo-900/10 border-indigo-200 dark:border-indigo-800/50' : 'bg-white dark:bg-zinc-800 border-zinc-100 dark:border-zinc-800/50'}`}>
                                             <div className="flex justify-between items-center mb-1">
                                                 <span className="font-bold text-xs text-zinc-900 dark:text-zinc-100">{comment.author}</span>
                                                 {isAdmin(comment.role, comment.author) && <AdminBadge />}
@@ -341,7 +341,13 @@ export const NativePostItem = ({ post, onSave, isSaved, currentUser, onDelete, o
                                                     <button onClick={cancelEditComment} className="text-red-600"><X className="w-3 h-3" /></button>
                                                 </div>
                                             ) : (
-                                                <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-snug">{comment.text}</p>
+                                                <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-snug whitespace-pre-wrap">
+                                                    {comment.text.split(/(\*\*.*?\*\*)/g).map((part: string, i: number) => 
+                                                        part.startsWith('**') && part.endsWith('**') 
+                                                            ? <strong key={i} className="text-indigo-700 dark:text-indigo-400">{part.slice(2, -2)}</strong> 
+                                                            : part
+                                                    )}
+                                                </p>
                                             )}
                                         </div>
                                         {(currentUser?.role === 'admin' || currentUser?.name === comment.author) && !editingCommentId && (

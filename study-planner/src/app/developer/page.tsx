@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Users, FileText, Settings, Shield, Plus, Database, UserPlus, FileSignature, LayoutDashboard, MessageSquare, Repeat, Mail } from "lucide-react";
+import { ArrowLeft, Users, FileText, Settings, Shield, Plus, Database, UserPlus, FileSignature, LayoutDashboard, MessageSquare, Repeat, Mail, Crown } from "lucide-react";
 
 export default function DeveloperPage() {
     return (
@@ -176,6 +176,23 @@ export default function DeveloperPage() {
                         <div className="flex flex-col gap-2">
                             <Link href="/developer/email" className="w-full py-2 px-4 rounded-lg bg-blue-50 dark:bg-blue-900/10 text-blue-600 dark:text-blue-400 font-medium hover:bg-blue-100 dark:hover:bg-blue-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
                                 <Mail className="w-4 h-4" /> Compose Email
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* User Membership Details */}
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-all group">
+                        <div className="flex items-start justify-between mb-4">
+                            <div className="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-xl text-teal-600 dark:text-teal-400 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                                <Crown className="w-6 h-6" />
+                            </div>
+                            <span className="px-2 py-1 text-xs font-bold uppercase tracking-wider bg-teal-100 dark:bg-zinc-800 text-teal-700 dark:text-teal-400 rounded-md">Members</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">User Membership</h3>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">View paid members, membership categories & validity details.</p>
+                        <div className="flex flex-col gap-2">
+                            <Link href="/developer/membership" className="w-full py-2 px-4 rounded-lg bg-teal-50 dark:bg-teal-900/10 text-teal-600 dark:text-teal-400 font-medium hover:bg-teal-100 dark:hover:bg-teal-900/20 text-sm flex items-center justify-center gap-2 transition-colors">
+                                <Crown className="w-4 h-4" /> View Members
                             </Link>
                         </div>
                     </div>
