@@ -6,6 +6,15 @@ import { MessageSquare, ThumbsUp, Bookmark, Trash2, Pencil, Check, X, Clock, Sen
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
 
+// Helper to render **bold** markdown in admin comments
+function renderBold(text: string) {
+    return text.split(/(\*\*.*?\*\*)/g).map((part: string, i: number) =>
+        part.startsWith('**') && part.endsWith('**')
+            ? <strong key={i} className="font-bold text-indigo-700 dark:text-indigo-300">{part.slice(2, -2)}</strong>
+            : part
+    );
+}
+
 export const NativePostItem = ({ post, onSave, isSaved, currentUser, onDelete, onRefresh }: { post: any, onSave?: (id: number) => void, isSaved?: boolean, currentUser?: any, onDelete?: (id: number) => void, onRefresh?: () => void }) => {
     const [showCommentBox, setShowCommentBox] = useState(false);
     const [showCommentsList, setShowCommentsList] = useState(false);
@@ -315,41 +324,98 @@ export const NativePostItem = ({ post, onSave, isSaved, currentUser, onDelete, o
                     </div>
 
                     {displayComments.length > 0 && (
-                        <div className="space-y-4 max-h-60 overflow-y-auto pr-2">
-                            {displayComments.map((comment: any) => (
+                        <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                            {displayComments.map((comment: any) => {
+                                const isAdminComment = comment.author === 'Admin';
+                                return (
                                 <div key={comment.id} className="flex gap-2.5">
-                                    <div className="w-7 h-7 rounded-full bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center text-[10px] font-bold text-zinc-600 dark:text-zinc-300 shrink-0">
+                                    <div className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 ${isAdminComment ? 'bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-md shadow-indigo-500/20' : 'bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300'}`}>
                                         {comment.author ? comment.author[0] : 'U'}
                                     </div>
                                     <div className="flex-1">
-                                        <div className={`rounded-2xl rounded-tl-none p-3 shadow-sm border ${comment.author === 'Admin' ? 'bg-indigo-50/50 dark:bg-indigo-900/10 border-indigo-200 dark:border-indigo-800/50' : 'bg-white dark:bg-zinc-800 border-zinc-100 dark:border-zinc-800/50'}`}>
-                                            <div className="flex justify-between items-center mb-1">
-                                                <span className="font-bold text-xs text-zinc-900 dark:text-zinc-100">{comment.author}</span>
-                                                {isAdmin(comment.role, comment.author) && <AdminBadge />}
-                                                <UserBadge role={comment.role} />
-                                                <span className="text-[10px] text-zinc-400">{comment.timestamp}</span>
-                                            </div>
-                                            {editingCommentId === comment.id ? (
-                                                <div className="flex gap-2 items-center">
-                                                    <input
-                                                        type="text"
-                                                        value={editingText}
-                                                        onChange={(e) => setEditingText(e.target.value)}
-                                                        className="flex-1 text-xs border border-zinc-300 dark:border-zinc-700 rounded px-2 py-1"
-                                                    />
-                                                    <button onClick={() => saveEditComment(comment.id)} className="text-green-600"><Check className="w-3 h-3" /></button>
-                                                    <button onClick={cancelEditComment} className="text-red-600"><X className="w-3 h-3" /></button>
+                                        {isAdminComment ? (
+                                            /* ====== ADMIN COMMENT - RICH FORMATTED ====== */
+                                            <div className="relative rounded-2xl rounded-tl-none overflow-hidden shadow-md border border-indigo-200 dark:border-indigo-700/50">
+                                                {/* Gradient accent bar */}
+                                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+                                                {/* Header */}
+                                                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/30 px-4 pt-3 pb-2 flex justify-between items-center">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="font-extrabold text-sm text-indigo-900 dark:text-indigo-200">Admin</span>
+                                                        {isAdmin(comment.role, comment.author) && <AdminBadge />}
+                                                        <span className="px-2 py-0.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-[9px] font-bold text-white uppercase tracking-wider">Official Reply</span>
+                                                    </div>
+                                                    <span className="text-[10px] text-indigo-400 dark:text-indigo-500">{comment.timestamp}</span>
                                                 </div>
-                                            ) : (
-                                                <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-snug whitespace-pre-wrap">
-                                                    {comment.text.split(/(\*\*.*?\*\*)/g).map((part: string, i: number) => 
-                                                        part.startsWith('**') && part.endsWith('**') 
-                                                            ? <strong key={i} className="text-indigo-700 dark:text-indigo-400">{part.slice(2, -2)}</strong> 
-                                                            : part
+                                                {/* Body */}
+                                                <div className="bg-white/80 dark:bg-zinc-900/80 px-4 py-3">
+                                                    {editingCommentId === comment.id ? (
+                                                        <div className="flex gap-2 items-center">
+                                                            <input type="text" value={editingText} onChange={(e) => setEditingText(e.target.value)} className="flex-1 text-xs border border-zinc-300 dark:border-zinc-700 rounded px-2 py-1" />
+                                                            <button onClick={() => saveEditComment(comment.id)} className="text-green-600"><Check className="w-3 h-3" /></button>
+                                                            <button onClick={cancelEditComment} className="text-red-600"><X className="w-3 h-3" /></button>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="space-y-2.5 text-[13px] text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                                                            {comment.text.split('\n').reduce((acc: string[][], line: string) => {
+                                                                // Group consecutive non-empty lines into paragraphs
+                                                                if (line.trim() === '') {
+                                                                    acc.push([]);
+                                                                } else {
+                                                                    if (acc.length === 0) acc.push([]);
+                                                                    acc[acc.length - 1].push(line);
+                                                                }
+                                                                return acc;
+                                                            }, [] as string[][]).map((group: string[], gi: number) => {
+                                                                if (group.length === 0) return null;
+                                                                // Check if this group contains bullet points
+                                                                const hasBullets = group.some((l: string) => l.trim().startsWith('•') || l.trim().startsWith('- '));
+                                                                if (hasBullets) {
+                                                                    return (
+                                                                        <div key={gi} className="space-y-1.5 pl-1">
+                                                                            {group.map((line: string, li: number) => {
+                                                                                const isBullet = line.trim().startsWith('•') || line.trim().startsWith('- ');
+                                                                                const bulletText = isBullet ? line.trim().replace(/^[•\-]\s*/, '') : line;
+                                                                                return isBullet ? (
+                                                                                    <div key={li} className="flex gap-2 items-start">
+                                                                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 shrink-0" />
+                                                                                        <span>{renderBold(bulletText)}</span>
+                                                                                    </div>
+                                                                                ) : (
+                                                                                    <p key={li}>{renderBold(line)}</p>
+                                                                                );
+                                                                            })}
+                                                                        </div>
+                                                                    );
+                                                                }
+                                                                return (
+                                                                    <p key={gi}>{renderBold(group.join('\n'))}</p>
+                                                                );
+                                                            })}
+                                                        </div>
                                                     )}
-                                                </p>
-                                            )}
-                                        </div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            /* ====== REGULAR USER COMMENT ====== */
+                                            <div className="bg-white dark:bg-zinc-800 rounded-2xl rounded-tl-none p-3 shadow-sm border border-zinc-100 dark:border-zinc-800/50">
+                                                <div className="flex justify-between items-center mb-1">
+                                                    <span className="font-bold text-xs text-zinc-900 dark:text-zinc-100">{comment.author}</span>
+                                                    {isAdmin(comment.role, comment.author) && <AdminBadge />}
+                                                    <UserBadge role={comment.role} />
+                                                    <span className="text-[10px] text-zinc-400">{comment.timestamp}</span>
+                                                </div>
+                                                {editingCommentId === comment.id ? (
+                                                    <div className="flex gap-2 items-center">
+                                                        <input type="text" value={editingText} onChange={(e) => setEditingText(e.target.value)} className="flex-1 text-xs border border-zinc-300 dark:border-zinc-700 rounded px-2 py-1" />
+                                                        <button onClick={() => saveEditComment(comment.id)} className="text-green-600"><Check className="w-3 h-3" /></button>
+                                                        <button onClick={cancelEditComment} className="text-red-600"><X className="w-3 h-3" /></button>
+                                                    </div>
+                                                ) : (
+                                                    <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-snug whitespace-pre-wrap">{comment.text}</p>
+                                                )}
+                                            </div>
+                                        )}
                                         {(currentUser?.role === 'admin' || currentUser?.name === comment.author) && !editingCommentId && (
                                             <div className="flex gap-3 px-2 mt-1">
                                                 <button onClick={() => startEditComment(comment)} className="text-[10px] font-medium text-zinc-400 hover:text-blue-600">Edit</button>
@@ -358,7 +424,9 @@ export const NativePostItem = ({ post, onSave, isSaved, currentUser, onDelete, o
                                         )}
                                     </div>
                                 </div>
-                            ))}
+                                );
+                            })}
+
                         </div>
                     )}
                 </div>
