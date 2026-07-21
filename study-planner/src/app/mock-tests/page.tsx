@@ -1905,7 +1905,7 @@ function PsgbMockTestPage({
                 status = 'live';
             }
 
-            const isSelectedMock = week.week >= 9 && week.week <= 14;
+            const isSelectedMock = week.week >= 9 && week.week <= 16;
             return {
                 id: testId,
                 title: `PS Gr B - Weekly Mock Test ${week.week.toString().padStart(2, '0')}`,

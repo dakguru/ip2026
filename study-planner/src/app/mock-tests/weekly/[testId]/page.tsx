@@ -500,7 +500,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         if (!testId.startsWith('psgb-mock-')) return false;
         const datePart = testId.replace('psgb-mock-', '');
         const psgbWeek = PSGB_MOCK_SCHEDULE.find(w => w.sundayDate === datePart);
-        return psgbWeek ? (psgbWeek.week >= 9 && psgbWeek.week <= 14) : false;
+        return psgbWeek ? (psgbWeek.week >= 9 && psgbWeek.week <= 16) : false;
     })();
 
     const is120MinTest = isPsgbSelectedMock || testId.startsWith('mock-s2-');

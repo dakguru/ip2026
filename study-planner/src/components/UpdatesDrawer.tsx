@@ -16,6 +16,23 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "21.07.2026",
+        items: [
+            {
+                title: "📚 Postal Manual Vol II Notes & Mock Test Updates",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the <strong>Postal Manual Volume II</strong> PDF notes for both <strong>PS Group B Paper I</strong> and <strong>Paper II</strong> courses.</p>
+                        <p>Also, <strong>PS Gr B - Weekly Mock Tests 15 & 16</strong> have been updated to follow the standard format: <strong>120 Minutes, 100 Questions, 200 Marks</strong>.</p>
+                        <p className="pt-1 text-[11px] text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Check out the Notes & Mock Tests sections!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "10.07.2026",
         items: [
             {

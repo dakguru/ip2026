@@ -88,11 +88,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "topic": "Postal Manuals"
         },
         {
-            "title": "Postal Manual Volume II",
-            "description": "Revised comprehensive notes covering Organization and General Regulations.",
-            "filename": "Postal_Manual_Vol_II.pdf",
-            "path": "/notes/paper-1/Postal_Manual_Vol_II.pdf",
-            "size": "0.6 MB",
+            "title": "Postal Manual Vol - II",
+            "description": "Chapters I  •  VI  •  VIII  •  IX  •  XI  •  XII",
+            "filename": "PM_Vol_II_for_Paper_I.pdf",
+            "path": "/notes/paper-1/PM_Vol_II_for_Paper_I.pdf",
+            "size": "0.5 MB",
             "color": "amber",
             "topic": "Postal Manuals"
         },
@@ -170,15 +170,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "topic": "Reports & Misc"
         },
 
-        {
-            "title": "Postal Manual Volume II - Chapter XI - Misc. Rules",
-            "description": "Postal Manual Volume II - Chapter XI - Miscellaneous Rules",
-            "filename": "Postal_Manual_Vol_II_Chapter_XI.pdf",
-            "path": "/notes/paper-1/Postal_Manual_Vol_II_Chapter_XI.pdf",
-            "size": "4.6 MB",
-            "color": "violet",
-            "topic": "Postal Manuals"
-        },
+
         {
             "title": "Manual of Office Procedure",
             "description": "Manual of Office Procedure",
@@ -197,15 +189,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "color": "sky",
             "topic": "Reports & Misc"
         },
-        {
-            "title": "Postal Manual Volume II Chapter VI (Stock), VIII (Printing), IX(Contracts), XII (Budget Estimates and control)",
-            "description": "Comprehensive notes covering Stock, Printing, Contracts, and Budget Estimates (control).",
-            "filename": "Postal_Manual_Vol_II_Chapters.pdf",
-            "path": "/notes/paper-1/Postal_Manual_Vol_II_Chapters.pdf",
-            "size": "0.7 MB",
-            "color": "indigo",
-            "topic": "Postal Manuals"
-        },
+
         {
             "title": "Chapter 6 of General Financial Rules, 2017",
             "description": "Chapter 6 of GFR 2017",
@@ -480,11 +464,11 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "topic": "Postal Manuals"
         },
         {
-            "title": "Postal Manual Volume II: Chapter III - Appeals and Petitions, Chapter IV-Personal matters, Chapter V-Security Deposits, Chapter VII - Forged counterfeit stamps and defaced postage stamps, coins and currency notes.",
-            "description": "Comprehensive notes covering Chapters III to VII of Postal Manual Vol II.",
-            "filename": "Postal_Manual_Vol_II_Personal_Matters.pdf",
-            "path": "/notes/paper-3/Postal_Manual_Vol_II_Personal_Matters.pdf",
-            "size": "4.6 MB",
+            "title": "Postal Manual Vol - II",
+            "description": "Chapters III  •  IV  •  V  •  VII",
+            "filename": "PM_Vol_II_for_Paper_II.pdf",
+            "path": "/notes/paper-3/PM_Vol_II_for_Paper_II.pdf",
+            "size": "0.5 MB",
             "color": "indigo",
             "topic": "Postal Manuals"
         },

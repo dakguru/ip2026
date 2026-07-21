@@ -204,11 +204,11 @@ const PDF_DATA: Record<string, Note[]> = {
             topic: "Postal Manuals"
         },
         {
-            title: "Postal Manual Volume II",
-            description: "Revised comprehensive notes covering Organization and General Regulations.",
-            filename: "Postal_Manual_Vol_II.pdf",
-            path: "/notes/paper-1/Postal_Manual_Vol_II.pdf",
-            size: "0.6 MB",
+            title: "Postal Manual Vol - II",
+            description: "Chapters I  •  VI  •  VIII  •  IX  •  XI  •  XII",
+            filename: "PM_Vol_II_for_Paper_I.pdf",
+            path: "/notes/paper-1/PM_Vol_II_for_Paper_I.pdf",
+            size: "0.5 MB",
             color: "amber",
             topic: "Postal Manuals"
         },
