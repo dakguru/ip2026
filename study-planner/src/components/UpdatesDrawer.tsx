@@ -29,6 +29,18 @@ const UPDATES_DATA: UpdateGroup[] = [
                         </p>
                     </div>
                 )
+            },
+            {
+                title: "📬 Handbook on Philately & MCQ Corrections",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have integrated the updated <strong>Handbook on Philately</strong> PDF notes for the <strong>PS Group B Paper I</strong> course.</p>
+                        <p>Additionally, corrected the answer for the Domestic Money Transfer Limits MCQ (Low KYC customers) to <strong>₹25,000</strong>.</p>
+                        <p className="pt-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Notes and Quiz sections!
+                        </p>
+                    </div>
+                )
             }
         ]
     },

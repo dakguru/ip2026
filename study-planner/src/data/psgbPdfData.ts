@@ -165,7 +165,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "description": "Comprehensive guide on Philately services and products.",
             "filename": "Handbook_on_Philately.pdf",
             "path": "/notes/paper-1/Handbook_on_Philately.pdf",
-            "size": "0.6 MB",
+            "size": "0.5 MB",
             "color": "emerald",
             "topic": "Reports & Misc"
         },

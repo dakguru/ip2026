@@ -18526,8 +18526,8 @@ export const p1_28: FlashCard[] = [
         "topic": "Paper I",
         "card_no": 21,
         "question": "According to the \"Domestic Money Transfer Limits\" for Low KYC customers, what is the maximum cumulative amount allowed per day?",
-        "answer": "₹5,000",
-        "explanation": "For Low KYC customers, the Domestic Money Transfer limit is ₹5,000 per transaction and per day (cumulative).",
+        "answer": "₹25,000",
+        "explanation": "For Low KYC customers, the Domestic Money Transfer limit is ₹25,000 per day (cumulative).",
         "exam_weight": "Medium",
         "keywords": [
             "according",
