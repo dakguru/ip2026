@@ -279,6 +279,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "path": "/notes/paper-1/Establishment_Norms.pdf",
             "size": "4.4 MB",
             "color": "emerald",
+            "subtitle": "Date: or before 31.03.2026",
             "topic": "Reports & Misc"
         },
         {

@@ -16,6 +16,30 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "22.07.2026",
+        items: [
+            {
+                title: "📚 PDF Notes: Establishment Norms Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>We have updated the <strong>Establishment Norms</strong> PDF notes for the <strong>PS Group B</strong> course mode!</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-xl border border-emerald-100 dark:border-emerald-800/50">
+                                <p className="font-bold text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wide">Establishment Norms</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">The notes have been updated to the latest revision.</p>
+                            </div>
+                        </div>
+
+                        <p className="pt-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                            <span>🚀</span> Access now in the Digital Library!
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "21.07.2026",
         items: [
             {
