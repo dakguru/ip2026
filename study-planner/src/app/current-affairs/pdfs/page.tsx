@@ -14,7 +14,8 @@ import HomeHeader from '@/components/HomeHeader';
 import { useIsMobileApp } from '@/hooks/use-mobile-app';
 
 const MONTHLY_PDFS = [
-    { title: "May 2026", file: "May-2026.pdf", isNew: true },
+    { title: "June 2026", file: "June-2026.pdf", isNew: true },
+    { title: "May 2026", file: "May-2026.pdf" },
     { title: "April 2026", file: "April-2026.pdf" },
     { title: "March 2026", file: "March-2026.pdf" },
     { title: "February 2026", file: "February-2026.pdf" },
@@ -245,7 +246,7 @@ export default function CurrentAffairsPDFs() {
                                     </div>
 
                                     <div className="pt-4 border-t border-zinc-200/50 dark:border-zinc-700/50 w-full">
-                                        <p className="text-[9px] font-black text-zinc-400 dark:text-zinc-600 uppercase tracking-[0.2em] mb-2">In Collaboration With</p>
+                                        <p className="text-[9px] font-black text-zinc-400 dark:text-zinc-600 uppercase tracking-[0.2em] mb-2">Thanks To</p>
                                         <a 
                                             href="https://www.adda247.com" 
                                             target="_blank" 

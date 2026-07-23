@@ -672,7 +672,7 @@ const PDF_DATA: Record<string, Note[]> = {
             filename: "Welfare_Measures_Employees_GDS.pdf",
             path: "/notes/paper-3/Welfare_Measures_Employees_GDS.pdf",
             size: "0.5 MB",
-            color: "green",
+            color: "purple",
             topic: "Welfare & Pension"
         },
 
