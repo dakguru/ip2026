@@ -449,8 +449,8 @@ const PDF_DATA: Record<string, Note[]> = {
         {
             title: "Constitution of India",
             description: "Comprehensive notes on the Preamble, Fundamental Rights, Fundamental Duties, and key Constitutional Articles.",
-            filename: "Constitution_of_India.pdf",
-            path: "/notes/paper-3/Constitution_of_India.pdf",
+            filename: "Constitution_of_India_UPDATED.pdf",
+            path: "/notes/paper-3/Constitution_of_India_UPDATED.pdf",
             size: "59.7 MB",
             color: "amber",
             topic: "Constitution & Laws"
