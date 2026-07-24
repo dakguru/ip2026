@@ -17,7 +17,7 @@ import PdfBookmarkOverlay from './PdfBookmarkOverlay';
 import LiquidReader from '../LiquidReader';
 
 // Configure worker
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
 const pdfOptions = {
     cMapUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,

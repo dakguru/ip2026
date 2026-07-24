@@ -2,6 +2,9 @@
 
 import React, { useEffect, useState, useRef, useMemo, useCallback } from 'react';
 import { pdfjs } from 'react-pdf';
+
+// Configure worker
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 import { Loader2, AlertCircle, BookOpen, Quote, List, Settings, Type, X, Palette, Check, FileText, RefreshCw } from 'lucide-react';
 import { Capacitor } from '@capacitor/core';
 import { motion, AnimatePresence } from 'framer-motion';
